@@ -727,7 +727,7 @@ class lk implements WidgetPainter, pm {
     final static void a(PlatformTaskService param0, int param1, MusicCrossfadeStream param2, byte param3, boolean param4, java.awt.Component param5) {
         try {
           int var6_int = -98 / ((param3 + 3) / 46);
-          TileMetadata.a(param5, 1024, param0, param4, -115, param2, param1, param1);
+          TileMetadata.initializeAudioPlayers(param5, 1024, param0, param4, -115, param2, param1, param1);
         } catch (RuntimeException runtimeException) {
           throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "lk.W(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ')');
         }

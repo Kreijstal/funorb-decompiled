@@ -255,14 +255,14 @@ final class BufferedSocket implements Runnable {
 
     final static void b(boolean param0) {
         int var1 = 0;
-        if (ResourceProtocolClient.field_e <= 32) {
-          mh.a(0, (byte) -109);
+        if (ResourceProtocolClient.effectsGain <= 32) {
+          mh.setEffectsGain(0, (byte) -109);
         } else {
-          var1 = ResourceProtocolClient.field_e % 32;
+          var1 = ResourceProtocolClient.effectsGain % 32;
           if (var1 == 0) {
             var1 = 32;
           }
-          mh.a(ResourceProtocolClient.field_e - var1, (byte) -109);
+          mh.setEffectsGain(ResourceProtocolClient.effectsGain - var1, (byte) -109);
         }
         if (param0) {
           BufferedSocket.b((byte) -114);

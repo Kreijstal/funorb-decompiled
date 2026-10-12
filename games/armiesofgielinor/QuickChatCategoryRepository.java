@@ -4,7 +4,7 @@
 final class QuickChatCategoryRepository {
     static String field_a;
     private WeightedLruCache categories;
-    static NodeDeque field_h;
+    static NodeDeque soundHandles;
     static boolean field_f;
     private ResourceArchive globalArchive;
     private ResourceArchive localArchive;
@@ -50,7 +50,7 @@ final class QuickChatCategoryRepository {
         field_g = null;
         int var1 = 69 / ((-73 - param0) / 51);
         field_a = null;
-        field_h = null;
+        soundHandles = null;
     }
 
     final static void processLobbyUpdate(byte obfuscationGuard) {
@@ -562,7 +562,7 @@ final class QuickChatCategoryRepository {
 
     static {
         field_a = "Talons and hooks with which to swipe from above, improving aerial attacks.";
-        field_h = new NodeDeque();
+        soundHandles = new NodeDeque();
         field_g = "Not yet achieved";
         field_b = true;
     }

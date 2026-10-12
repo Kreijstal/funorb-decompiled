@@ -18,12 +18,12 @@ final class MusicPatchEnvelope {
     static String field_k;
     int releaseKeyScaling;
 
-    final static PcmStreamMixer a(int param0) {
-        if (param0 != 18757) {
+    final static PcmStreamMixer getEffectsMixer(int obfuscationGuard) {
+        if (obfuscationGuard != 18757) {
           MusicPatchEnvelope.a((byte) 23, -125L);
-          return AnimationSkeleton.field_n;
+          return AnimationSkeleton.effectsMixer;
         }
-        return AnimationSkeleton.field_n;
+        return AnimationSkeleton.effectsMixer;
     }
 
     public static void a(byte param0) {

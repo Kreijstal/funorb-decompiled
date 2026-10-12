@@ -1049,7 +1049,7 @@ final class CampaignUnitOverride {
                 }
                 var2 = NodeIterator.a(50, "toserverlist");
                 if (var2 != null) {
-                  te.field_m = uu.a(var2, (byte) -126);
+                  SoundPlaybackHandle.field_m = uu.a(var2, (byte) -126);
                 }
                 var2 = NodeIterator.a(50, "tocustomersupport");
                 if (null != var2) {

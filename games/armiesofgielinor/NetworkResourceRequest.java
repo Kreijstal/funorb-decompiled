@@ -44,7 +44,7 @@ final class NetworkResourceRequest extends ResourceRequest {
     }
 
     final static void b(int param0, int param1) {
-        te.field_n = param0;
+        SoundPlaybackHandle.musicGain = param0;
         if (param1 >= 83) {
           if (null != LobbyRoom.directMusicSequencer) {
             LobbyRoom.directMusicSequencer.setMasterVolume(-122, param0);

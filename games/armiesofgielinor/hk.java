@@ -8,7 +8,7 @@ final class hk extends ClientUiComponent {
 
     final boolean a(byte param0, boolean param1) {
         if (param0 != 102) {
-          hk.k(-40);
+          hk.pumpAudioAndPruneSounds(-40);
           this.updateInput(true, true);
           if (DeployEvent.pointerPressButton == 0) {
             return this.field_Kb.pressedButton != 0 ? true : false;
@@ -31,43 +31,43 @@ final class hk extends ClientUiComponent {
         return true;
     }
 
-    final static void k(int param0) {
-        te var1 = null;
-        int var2 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
-        te var1Lifetime1;
+    final static void pumpAudioAndPruneSounds(int obfuscationGuard) {
+        SoundPlaybackHandle handle = null;
+        int obfuscationControl = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        SoundPlaybackHandle additionalHandle;
         try {
           l.musicPlayer.pump();
-          TextCursor.field_e.pump();
-          DelayedPacket.field_p = DelayedPacket.field_p - 1;
-          if (param0 != 128) {
-            hk.k(94);
+          TextCursor.effectsPlayer.pump();
+          DelayedPacket.soundHandleCleanupCountdown = DelayedPacket.soundHandleCleanupCountdown - 1;
+          if (obfuscationGuard != 128) {
+            hk.pumpAudioAndPruneSounds(94);
           }
-          if (DelayedPacket.field_p == 0) {
-            DelayedPacket.field_p = 200;
-            var1 = (te) (QuickChatCategoryRepository.field_h.first((byte) 118));
-            while (var1 != null) {
-              if (!var1.field_k.c(param0 ^ 65408)) {
-                var1.unlink(param0 ^ 247);
+          if (DelayedPacket.soundHandleCleanupCountdown == 0) {
+            DelayedPacket.soundHandleCleanupCountdown = 200;
+            handle = (SoundPlaybackHandle) (QuickChatCategoryRepository.soundHandles.first((byte) 118));
+            while (handle != null) {
+              if (!handle.lifetimeNode.isLinked(obfuscationGuard ^ 65408)) {
+                handle.unlink(obfuscationGuard ^ 247);
               }
-              var1 = (te) (QuickChatCategoryRepository.field_h.next((byte) 123));
+              handle = (SoundPlaybackHandle) (QuickChatCategoryRepository.soundHandles.next((byte) 123));
             }
-            if (null != ts.field_e) {
-              var1Lifetime1 = (te) (ts.field_e.first((byte) 120));
-              while (var1Lifetime1 != null) {
-                if (!var1Lifetime1.field_k.c(65280)) {
-                  var1Lifetime1.unlink(-126);
+            if (null != ts.additionalSoundHandles) {
+              additionalHandle = (SoundPlaybackHandle) (ts.additionalSoundHandles.first((byte) 120));
+              while (additionalHandle != null) {
+                if (!additionalHandle.lifetimeNode.isLinked(65280)) {
+                  additionalHandle.unlink(-126);
                 }
-                var1Lifetime1 = (te) (ts.field_e.next((byte) 123));
+                additionalHandle = (SoundPlaybackHandle) (ts.additionalSoundHandles.next((byte) 123));
               }
             }
           }
           if (LobbyRoom.directMusicSequencer != null &&
-            !LobbyRoom.directMusicSequencer.isPlaying(param0 + 11771)) {
+            !LobbyRoom.directMusicSequencer.isPlaying(obfuscationGuard + 11771)) {
             MapLayout.currentDirectMusicTrack = null;
             return;
           }
         } catch (RuntimeException runtimeException) {
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "hk.A(" + param0 + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "hk.A(" + obfuscationGuard + ')');
         }
     }
 

@@ -5,7 +5,7 @@ final class TextCursor {
     static String field_g;
     static boolean field_f;
     private int length;
-    static PcmPlayer field_e;
+    static PcmPlayer effectsPlayer;
     static int field_d;
     private String text;
     int position;
@@ -31,7 +31,7 @@ final class TextCursor {
     }
 
     public static void a(int param0) {
-        field_e = null;
+        effectsPlayer = null;
         field_g = null;
         if (param0 > -116) {
           CipherPacketBuffer var2 = (CipherPacketBuffer) null;

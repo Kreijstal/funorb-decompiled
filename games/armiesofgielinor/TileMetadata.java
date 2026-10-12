@@ -92,22 +92,22 @@ final class TileMetadata implements TaggedFieldReader {
         }
     }
 
-    final static void a(java.awt.Component param0, int param1, PlatformTaskService param2, boolean param3, int param4, MusicCrossfadeStream param5, int param6, int param7) {
+    final static void initializeAudioPlayers(java.awt.Component component, int effectsLatencyFrames, PlatformTaskService platformTasks, boolean stereo, int obfuscationGuard, MusicCrossfadeStream musicStream, int musicLatencyFrames, int sampleRate) {
         try {
-          PcmPlayer.configureOutput(param7, param3, 10);
-          l.musicPlayer = PcmPlayer.create(param2, param0, 0, param6);
-          TextCursor.field_e = PcmPlayer.create(param2, param0, 1, param1);
-          AnimationSkeleton.field_n = new PcmStreamMixer();
-          ku.field_K = param1;
-          if (param4 >= -38) {
+          PcmPlayer.configureOutput(sampleRate, stereo, 10);
+          l.musicPlayer = PcmPlayer.create(platformTasks, component, 0, musicLatencyFrames);
+          TextCursor.effectsPlayer = PcmPlayer.create(platformTasks, component, 1, effectsLatencyFrames);
+          AnimationSkeleton.effectsMixer = new PcmStreamMixer();
+          ku.field_K = effectsLatencyFrames;
+          if (obfuscationGuard >= -38) {
             field_a = (int[]) null;
           }
-          TextCursor.field_e.setStream(AnimationSkeleton.field_n);
-          lk.musicCrossfadeStream = param5;
-          lk.musicCrossfadeStream.setMasterGain(te.field_n, -120);
+          TextCursor.effectsPlayer.setStream(AnimationSkeleton.effectsMixer);
+          lk.musicCrossfadeStream = musicStream;
+          lk.musicCrossfadeStream.setMasterGain(SoundPlaybackHandle.musicGain, -120);
           l.musicPlayer.setStream(lk.musicCrossfadeStream);
         } catch (RuntimeException runtimeException) {
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "ca.F(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ',' + param6 + ',' + param7 + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "ca.F(" + (component != null ? "{...}" : "null") + ',' + effectsLatencyFrames + ',' + (platformTasks != null ? "{...}" : "null") + ',' + stereo + ',' + obfuscationGuard + ',' + (musicStream != null ? "{...}" : "null") + ',' + musicLatencyFrames + ',' + sampleRate + ')');
         }
     }
 

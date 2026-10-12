@@ -5,7 +5,7 @@ abstract class ResourceProtocolClient {
     static String field_m;
     static RgbSprite[] field_d;
     static ClientUiComponent[] field_j;
-    static int field_e;
+    static int effectsGain;
     static String field_k;
     DualNodeDeque queuedPriority;
     static int field_c;
@@ -145,7 +145,7 @@ abstract class ResourceProtocolClient {
     }
 
     static {
-        field_e = 256;
+        effectsGain = 256;
         field_m = "Unfortunately you are not eligible to create an account.";
         field_k = "Waiting for sound effects";
         field_c = -1;

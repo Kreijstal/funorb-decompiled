@@ -150,7 +150,7 @@ final class oe extends ro implements he {
               var5.a(ro.field_kb, (qo) (this), (byte) 110);
             }
             if (param2.field_d == 3) {
-              var5.a(te.field_m, 7, 1);
+              var5.a(SoundPlaybackHandle.field_m, 7, 1);
             } else {
               if (6 == param2.field_d) {
                 var5.a(CombatEvent.field_O, 9, 1);

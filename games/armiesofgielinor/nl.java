@@ -320,7 +320,7 @@ abstract class nl extends Widget implements gw {
           ResourceRequest.field_u[0] = AttackEvent.field_D;
           ResourceRequest.field_u[4] = MusicPatch.field_p;
           IconTextComponent.field_Kb = new ClientUiComponent(0L, (ClientUiComponent) null);
-          rj.field_F = new ClientUiComponent(0L, te.field_p, su.field_b);
+          rj.field_F = new ClientUiComponent(0L, SoundPlaybackHandle.field_p, su.field_b);
           CampaignProgress.field_a = new ClientUiComponent(0L, br.field_e, PcmPlayerService.ratingLabel);
           MapTile.field_f = new ScrollContainer(0L, new ClientUiComponent(0L, (ClientUiComponent) null), cb.field_c, WeightedLruCache.field_b);
           IconTextComponent.field_Kb.addChild(rj.field_F, 79);
@@ -338,7 +338,7 @@ abstract class nl extends Widget implements gw {
           cp.field_d = new ClientUiComponent(0L, kd.field_M, eq.field_e.toUpperCase());
           ClientContextMenu.field_n = new ClientUiComponent(0L, SummonAction.field_y, nr.field_d.toUpperCase());
           LobbyPlayer.field_Lb = new ClientUiComponent(0L, sh.field_m);
-          r.field_v = new ClientUiComponent(0L, te.field_p, IntrusiveNode.field_a);
+          r.field_v = new ClientUiComponent(0L, SoundPlaybackHandle.field_p, IntrusiveNode.field_a);
           ek.field_c = new ClientUiComponent(0L, CampaignResult.field_a, wb.field_c);
           CombatViewTransition.field_p = new ClientUiComponent(0L, CampaignResult.field_a, fk.field_g);
           bs.field_a = new ClientUiComponent(0L, CampaignResult.field_a, fw.field_H);
@@ -392,7 +392,7 @@ abstract class nl extends Widget implements gw {
           eb.field_c = new ClientUiComponent(0L, (ClientUiComponent) null);
           gg.field_E = new ClientUiComponent(0L, eq.field_h);
           gg.field_E.horizontalAlignment = 1;
-          di.field_l = new ClientUiComponent(0L, te.field_p, su.field_b);
+          di.field_l = new ClientUiComponent(0L, SoundPlaybackHandle.field_p, su.field_b);
           SpellCastEvent.field_D = new ClientUiComponent(0L, br.field_e, PcmPlayerService.ratingLabel);
           bu.field_a = new ScrollContainer(0L, new ClientUiComponent(0L, (ClientUiComponent) null), cb.field_c, WeightedLruCache.field_b);
           eb.field_c.addChild(gg.field_E, 72);

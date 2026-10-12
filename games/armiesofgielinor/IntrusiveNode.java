@@ -181,11 +181,11 @@ class IntrusiveNode {
         }
     }
 
-    final boolean c(int param0) {
+    final boolean isLinked(int obfuscationGuard) {
         if (this.previous == null) {
           return false;
         }
-        if (param0 != 65280) {
+        if (obfuscationGuard != 65280) {
           this.key = -90L;
           return true;
         }

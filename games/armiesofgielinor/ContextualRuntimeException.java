@@ -51,7 +51,7 @@ final class ContextualRuntimeException extends RuntimeException {
           su.field_d = new ClientUiComponent(0L, (ClientUiComponent) null);
           bn.field_c = new ClientUiComponent(0L, eq.field_h);
           bn.field_c.horizontalAlignment = 1;
-          AdaptiveMidiPcmStream.field_kb = new ClientUiComponent(0L, te.field_p, su.field_b);
+          AdaptiveMidiPcmStream.field_kb = new ClientUiComponent(0L, SoundPlaybackHandle.field_p, su.field_b);
           ek.field_a = new ClientUiComponent(0L, br.field_e, nl.field_C);
           PlayerProfile.field_f = new ClientUiComponent(0L, DualLinkedNode.field_k);
           su.field_d.addChild(bn.field_c, 49);

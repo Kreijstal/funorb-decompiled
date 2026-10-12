@@ -8,7 +8,7 @@ abstract class MeshObject {
     static String field_c;
 
     final static void a(int param0, int param1, int param2) {
-        te.field_l = param1;
+        SoundPlaybackHandle.field_l = param1;
         if (param0 != -8994) {
           return;
         }

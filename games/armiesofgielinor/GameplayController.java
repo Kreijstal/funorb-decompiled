@@ -3266,7 +3266,7 @@ final class GameplayController {
               return;
             }
             if (this.field_kc != null && (this.field_kc.removedFromActivePlay ||
-              !this.field_kc.c(65280) ||
+              !this.field_kc.isLinked(65280) ||
               this.field_kc.ownerPlayer != var2_int)) {
               this.field_kc = null;
             }
@@ -4106,7 +4106,7 @@ final class GameplayController {
           var2_int = -58 % ((param0 - 85) / 39);
           if (this.remainingTurnTicks <= 500 &&
             this.remainingTurnTicks % 50 == 0) {
-            RadialSummonMenu.$cfr$intArgs$a$6d836999ad61(76, ClientUiNode.field_v[16]);
+            RadialSummonMenu.playDefaultSoundWithIntGuard(76, ClientUiNode.field_v[16]);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -4369,7 +4369,7 @@ final class GameplayController {
             this.a(param2, TeamRoster.field_c[var4_int], (byte) -124);
             return;
           }
-          RadialSummonMenu.$cfr$intArgs$a$6d836999ad61(109, ClientUiNode.field_v[12]);
+          RadialSummonMenu.playDefaultSoundWithIntGuard(109, ClientUiNode.field_v[12]);
           boolean decompiledSharedTail0 = !(this.field_lb);
           if (!decompiledSharedTail0) {
             vl.outgoingPacket.writeCipheredOpcode(32161, 65);
@@ -4446,7 +4446,7 @@ final class GameplayController {
             return (Unit) (stackIn_3_0);
           }
           if (null != param2 && (param2.removedFromActivePlay ||
-            !param2.c(param0 + 65281))) {
+            !param2.isLinked(param0 + 65281))) {
             param2 = null;
           }
           var5 = new NodeIterator(this.battlefield.unitsByPlayer[param1]);
@@ -4874,7 +4874,7 @@ final class GameplayController {
           if (param2 >= -117) {
             return;
           }
-          RadialSummonMenu.$cfr$intArgs$a$6d836999ad61(109, ClientUiNode.field_v[5]);
+          RadialSummonMenu.playDefaultSoundWithIntGuard(109, ClientUiNode.field_v[5]);
           this.field_S = param0;
           this.field_yb = 50;
           this.field_wb = param1;
@@ -5892,7 +5892,7 @@ final class GameplayController {
 
     final void f(int param0, int param1, int param2) {
         this.battlefield.applyTurnChange(true, param1, param0);
-        RadialSummonMenu.$cfr$intArgs$a$6d836999ad61(43, ClientUiNode.field_v[17]);
+        RadialSummonMenu.playDefaultSoundWithIntGuard(43, ClientUiNode.field_v[17]);
         if (param2 != 0) {
           return;
         }
@@ -7791,7 +7791,7 @@ final class GameplayController {
             field_f = 79;
           }
           if (this.field_kb == 0) {
-            RadialSummonMenu.$cfr$intArgs$a$6d836999ad61(127, UnitLossCondition.battlefieldThemes[this.battlefield.mapTheme].chooseAmbientSound(param0 - 74));
+            RadialSummonMenu.playDefaultSoundWithIntGuard(127, UnitLossCondition.battlefieldThemes[this.battlefield.mapTheme].chooseAmbientSound(param0 - 74));
           }
           if (0 >= this.field_kb) {
             this.field_kb = 50 + AttackEvent.nextBoundedInt(false, 200, vv.field_b);
@@ -8259,7 +8259,7 @@ final class GameplayController {
                     this.field_e[this.field_Ob] = var13;
                     this.field_dc[this.field_Ob] = 0;
                     this.field_Ob = this.field_Ob + 1;
-                    RadialSummonMenu.$cfr$intArgs$a$6d836999ad61(37, ClientUiNode.field_v[15]);
+                    RadialSummonMenu.playDefaultSoundWithIntGuard(37, ClientUiNode.field_v[15]);
                     if (var16 == 0) {
                       return;
                     }
@@ -8320,7 +8320,7 @@ final class GameplayController {
               this.battlefield.mapSizeSetting != 4) {
               stackIn_336_1 = !(this.field_tb);
               this.field_tb = stackIn_336_1;
-              RadialSummonMenu.$cfr$intArgs$a$6d836999ad61(63, ClientUiNode.field_v[18]);
+              RadialSummonMenu.playDefaultSoundWithIntGuard(63, ClientUiNode.field_v[18]);
               return;
             }
             if (param0 == 23) {
@@ -8612,7 +8612,7 @@ final class GameplayController {
                 if (-1 < var13Lifetime1Lifetime1) {
                   this.a(11, -119);
                   this.field_y = var13Lifetime1Lifetime1;
-                  RadialSummonMenu.$cfr$intArgs$a$6d836999ad61(103, ClientUiNode.field_v[11]);
+                  RadialSummonMenu.playDefaultSoundWithIntGuard(103, ClientUiNode.field_v[11]);
                   return;
                 }
               }
@@ -8719,13 +8719,13 @@ final class GameplayController {
                   this.field_Pb = false;
                   this.field_Xb = true;
                   this.a(10, -122);
-                  RadialSummonMenu.$cfr$intArgs$a$6d836999ad61(101, ClientUiNode.field_v[11]);
+                  RadialSummonMenu.playDefaultSoundWithIntGuard(101, ClientUiNode.field_v[11]);
                   decompiledFrameRemainder12 = (var16 != 0);
                 }
                 if (decompiledFrameRemainder12) {
                   this.field_sb = this.field_sb + 1;
                   var10Lifetime1Lifetime3 = this.battlefield.mapWidth * var9Lifetime1 + var8Lifetime2;
-                  RadialSummonMenu.$cfr$intArgs$a$6d836999ad61(38, ClientUiNode.field_v[5]);
+                  RadialSummonMenu.playDefaultSoundWithIntGuard(38, ClientUiNode.field_v[5]);
                   if (~this.field_nb != ~var10Lifetime1Lifetime3) {
                     this.field_sb = 1;
                     this.field_nb = var10Lifetime1Lifetime3;
@@ -9050,7 +9050,7 @@ final class GameplayController {
               this.field_V) {
               this.field_V = false;
             }
-            RadialSummonMenu.$cfr$intArgs$a$6d836999ad61(126, ClientUiNode.field_v[17]);
+            RadialSummonMenu.playDefaultSoundWithIntGuard(126, ClientUiNode.field_v[17]);
           }
           wt.field_G = false;
           ep.field_f = false;

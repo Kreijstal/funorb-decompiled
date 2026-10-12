@@ -23,7 +23,7 @@ final class wt extends dr {
             var4 = (nd[]) null;
             this.a(-63, (nd[]) null);
           }
-          stackIn_3_0 = new nd(te.b(128, param1[0].a(2)));
+          stackIn_3_0 = new nd(SoundPlaybackHandle.b(128, param1[0].a(2)));
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

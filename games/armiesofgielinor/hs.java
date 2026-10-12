@@ -742,7 +742,7 @@ abstract class hs extends Widget implements gw {
         PcmSample var3 = MoveAttackRequest.field_v[param1];
         if (var3 != null &&
           0 != var3.samples.length) {
-          RadialSummonMenu.$cfr$intArgs$a$6d836999ad61(127, var3);
+          RadialSummonMenu.playDefaultSoundWithIntGuard(127, var3);
         }
     }
 
@@ -1020,11 +1020,11 @@ abstract class hs extends Widget implements gw {
 
     final static void a(int param0) {
         int var1 = 0;
-        if (ResourceProtocolClient.field_e >= 224) {
-          mh.a(256, (byte) -60);
+        if (ResourceProtocolClient.effectsGain >= 224) {
+          mh.setEffectsGain(256, (byte) -60);
         } else {
-          var1 = ResourceProtocolClient.field_e % 32;
-          mh.a(ResourceProtocolClient.field_e + 32 - var1, (byte) -36);
+          var1 = ResourceProtocolClient.effectsGain % 32;
+          mh.setEffectsGain(ResourceProtocolClient.effectsGain + 32 - var1, (byte) -36);
         }
         if (param0 != 30) {
           field_H = (IconLabelControl) null;

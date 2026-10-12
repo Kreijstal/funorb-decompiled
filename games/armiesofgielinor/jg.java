@@ -28,7 +28,7 @@ final class jg extends IntrusiveNode {
             param0 = 512 - (param0 - 800);
             param1 = 512 + (param1 <= 512 ? param1 < -512 ? -512 : param1 : 512) >> 2;
             param0 = ((param0 <= 512 ? param0 : 512) >> 2) + 120;
-            jv.a(td.field_d[var5][var6], param1, param0, (byte) 87);
+            jv.playSoundWithPan(td.field_d[var5][var6], param1, param0, (byte) 87);
           }
         }
     }

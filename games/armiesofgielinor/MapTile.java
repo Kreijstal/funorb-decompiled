@@ -59,7 +59,7 @@ final class MapTile implements TaggedFieldReader {
           }
           if (!param2) {
             var5 = (RawPcmStream) null;
-            MapTile.a(-21, (RawPcmStream) null);
+            MapTile.playRawSound(-21, (RawPcmStream) null);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
@@ -653,36 +653,36 @@ final class MapTile implements TaggedFieldReader {
         }
     }
 
-    final static te a(int param0, RawPcmStream param1) {
-        te var2 = null;
-        RuntimeException var2_ref = null;
-        te stackIn_2_0 = null;
-        te stackIn_4_0 = null;
-        RuntimeException stackIn_7_0 = null;
-        StringBuilder stackIn_7_1 = null;
-        String stackIn_8_2 = null;
-        RuntimeException decompiledCaughtException = null;
+    final static SoundPlaybackHandle playRawSound(int obfuscationGuard, RawPcmStream stream) {
+        SoundPlaybackHandle handle = null;
+        RuntimeException failure = null;
+        SoundPlaybackHandle rejectedHandle = null;
+        SoundPlaybackHandle registeredHandle = null;
+        RuntimeException failureForContext = null;
+        StringBuilder errorContext = null;
+        String streamDescription = null;
+        RuntimeException caughtFailure = null;
         try {
-          var2 = new te(param1, param1);
-          QuickChatCategoryRepository.field_h.addLast((byte) -119, (IntrusiveNode) (var2));
-          if (param0 > -35) {
-            stackIn_2_0 = (te) null;
-            return stackIn_2_0;
+          handle = new SoundPlaybackHandle(stream, stream);
+          QuickChatCategoryRepository.soundHandles.addLast((byte) -119, (IntrusiveNode) (handle));
+          if (obfuscationGuard > -35) {
+            rejectedHandle = (SoundPlaybackHandle) null;
+            return rejectedHandle;
           }
-          AnimationSkeleton.field_n.addSubStream(param1);
-          stackIn_4_0 = var2;
-          return stackIn_4_0;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var2_ref = decompiledCaughtException;
-          stackIn_7_0 = var2_ref;
-          stackIn_7_1 = new StringBuilder().append("ne.Q(").append(param0).append(',');
-          if (param1 == null) {
-            stackIn_8_2 = "null";
+          AnimationSkeleton.effectsMixer.addSubStream(stream);
+          registeredHandle = handle;
+          return registeredHandle;
+        } catch (java.lang.RuntimeException caughtParameter) {
+          caughtFailure = caughtParameter;
+          failure = caughtFailure;
+          failureForContext = failure;
+          errorContext = new StringBuilder().append("ne.Q(").append(obfuscationGuard).append(',');
+          if (stream == null) {
+            streamDescription = "null";
           } else {
-            stackIn_8_2 = "{...}";
+            streamDescription = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) failureForContext), ((StringBuilder) (Object) errorContext).append(streamDescription).append(')').toString());
         }
     }
 

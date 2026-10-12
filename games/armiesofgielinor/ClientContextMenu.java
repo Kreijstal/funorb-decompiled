@@ -44,7 +44,7 @@ final class ClientContextMenu {
               }
             }
           } else {
-            te.writePlayerAdmissionCancellation(packetOpcode, this.accountId, (byte) 108);
+            SoundPlaybackHandle.writePlayerAdmissionCancellation(packetOpcode, this.accountId, (byte) 108);
           }
         } else {
           ActionSpell.writePlayerAdmissionRequest(this.accountId, packetOpcode, 6);

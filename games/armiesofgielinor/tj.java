@@ -217,7 +217,7 @@ class tj extends Widget implements gw {
           var8 = new NodeIterator(this.field_D);
           var9 = (Widget) (var8.first(50));
           while (var9 != null) {
-            if (var9.c(65280)) {
+            if (var9.isLinked(65280)) {
               if (var9.a(false) &&
                 var9.a(param0, param1, param2, param3, param4, 94, param6)) {
                 return true;
@@ -293,7 +293,7 @@ class tj extends Widget implements gw {
           var8 = new NodeIterator(this.field_D);
           var9 = (Widget) (var8.first(50));
           while (var9 != null) {
-            if (var9.c(65280)) {
+            if (var9.isLinked(65280)) {
               if (var9.a(param0, this.x + param1, this.y + param2, 107, param4, param5, param6)) {
                 return true;
               }
@@ -439,7 +439,7 @@ class tj extends Widget implements gw {
           var8 = -73 / ((-58 - param3) / 53);
           var9 = (Widget) (var7.first(50));
           while (var9 != null) {
-            if (var9.c(65280)) {
+            if (var9.isLinked(65280)) {
               var9.a(this.y + param0, param1, param2, (byte) -112, param4, param5 + this.x);
               var9 = (Widget) (var7.next(50));
               continue;
@@ -477,7 +477,7 @@ class tj extends Widget implements gw {
           var9 = new NodeIterator(this.field_D);
           var8 = (Widget) (var9.first(50));
           while (var8 != null) {
-            if (var8.c(65280)) {
+            if (var8.isLinked(65280)) {
               if (var8.a(false) &&
                 var8.a(param0, param1, param2, -12215)) {
                 return true;
@@ -530,7 +530,7 @@ class tj extends Widget implements gw {
           var5 = new NodeIterator(this.field_D);
           var6 = (Widget) (var5.first(50));
           while (var6 != null) {
-            if (var6.c(param0 + 32558)) {
+            if (var6.isLinked(param0 + 32558)) {
               var6.a(32722, this.x + param1, param2 + this.y, param3);
               var6 = (Widget) (var5.next(50));
               continue;

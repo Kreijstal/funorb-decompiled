@@ -78,7 +78,7 @@ public final class ArmiesOfGielinor extends wf {
         try {
           bs.a((byte) -127);
           r.field_u = MusicPatchPcmStream.getPointerIdleTicks(4);
-          hk.k(128);
+          hk.pumpAudioAndPruneSounds(128);
           if (FixedQuaternion.field_a != null &&
             FixedQuaternion.field_a.field_k) {
             ck.b(-127);
@@ -636,7 +636,7 @@ public final class ArmiesOfGielinor extends wf {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         try {
-          mj.b((byte) -82);
+          mj.shutdownAudioPlayers((byte) -82);
           if (null != FixedQuaternion.field_a) {
             ck.b(-116);
           }
@@ -1519,7 +1519,7 @@ public final class ArmiesOfGielinor extends wf {
           ko.a(false);
           nt.a((byte) 97);
           ChannelGainProfile.a(-4740);
-          te.a((byte) -75);
+          SoundPlaybackHandle.a((byte) -75);
           CampaignDefinition.a((byte) 9);
           CampaignParticipant.a((byte) -95);
           CampaignUnitOverride.a(param0 ^ -10);

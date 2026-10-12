@@ -6,7 +6,7 @@ final class ts {
     static String field_a;
     static boolean field_m;
     static String field_g;
-    static NodeDeque field_e;
+    static NodeDeque additionalSoundHandles;
     int field_n;
     int[] field_i;
     static long field_h;
@@ -238,7 +238,7 @@ final class ts {
     }
 
     public static void b(int param0) {
-        field_e = null;
+        additionalSoundHandles = null;
         currentSpellMenu = null;
         field_k = null;
         if (param0 == -26908) {
@@ -265,7 +265,7 @@ final class ts {
 
     static {
         field_a = null;
-        field_e = null;
+        additionalSoundHandles = null;
         field_k = "<%0> is already on your ignore list.";
         field_f = "to return to the normal view.";
         field_g = "Won";

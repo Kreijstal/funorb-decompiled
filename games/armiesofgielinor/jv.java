@@ -46,34 +46,34 @@ final class jv {
         field_e = null;
         if (param0 != 36) {
           PcmSample var2 = (PcmSample) null;
-          jv.a((PcmSample) null, -72, 76, (byte) 115);
+          jv.playSoundWithPan((PcmSample) null, -72, 76, (byte) 115);
         }
     }
 
-    final static te a(PcmSample param0, int param1, int param2, byte param3) {
-        RuntimeException var4 = null;
-        te stackIn_3_0 = null;
-        RuntimeException stackIn_6_0 = null;
-        StringBuilder stackIn_6_1 = null;
-        String stackIn_7_2 = null;
-        RuntimeException decompiledCaughtException = null;
+    final static SoundPlaybackHandle playSoundWithPan(PcmSample sample, int pan, int volume, byte obfuscationGuard) {
+        RuntimeException failure = null;
+        SoundPlaybackHandle handle = null;
+        RuntimeException failureForContext = null;
+        StringBuilder errorContext = null;
+        String sampleDescription = null;
+        RuntimeException caughtFailure = null;
         try {
-          if (param3 <= 26) {
+          if (obfuscationGuard <= 26) {
             field_b = (RgbSprite[]) null;
           }
-          stackIn_3_0 = MapTile.a(-92, RawPcmStream.createAtRateAndPan(param0, 100, param2, param1));
-          return stackIn_3_0;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var4 = decompiledCaughtException;
-          stackIn_6_0 = var4;
-          stackIn_6_1 = new StringBuilder().append("jv.C(");
-          if (param0 == null) {
-            stackIn_7_2 = "null";
+          handle = MapTile.playRawSound(-92, RawPcmStream.createAtRateAndPan(sample, 100, volume, pan));
+          return handle;
+        } catch (java.lang.RuntimeException caughtParameter) {
+          caughtFailure = caughtParameter;
+          failure = caughtFailure;
+          failureForContext = failure;
+          errorContext = new StringBuilder().append("jv.C(");
+          if (sample == null) {
+            sampleDescription = "null";
           } else {
-            stackIn_7_2 = "{...}";
+            sampleDescription = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) failureForContext), ((StringBuilder) (Object) errorContext).append(sampleDescription).append(',').append(pan).append(',').append(volume).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 

@@ -308,7 +308,7 @@ final class EffectPresentation implements EventPresentation {
                   this.battlefield.a(obfuscationGuard ^ 57, var24, event);
                   return false;
                 }
-                RadialSummonMenu.$cfr$intArgs$a$6d836999ad61(91, ClientUiNode.field_v[8]);
+                RadialSummonMenu.playDefaultSoundWithIntGuard(91, ClientUiNode.field_v[8]);
                 var23_ref.unit.modelAnimationIndex = 5;
                 var23_ref.claimUnitModel(var23_ref.unit, 12);
                 this.advanceFrame(var23_ref, (byte) -95);

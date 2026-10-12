@@ -401,7 +401,7 @@ class ro extends pt implements he {
             }
           }
           if (param0 == 3) {
-            var6.a(te.field_m, 7, 1);
+            var6.a(SoundPlaybackHandle.field_m, 7, 1);
           } else {
             if (param0 != 4) {
               if (param0 != 6) {

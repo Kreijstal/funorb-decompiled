@@ -61,32 +61,32 @@ final class we {
         return null;
     }
 
-    final static te a(int param0, int param1, PcmSample param2) {
-        RuntimeException var3 = null;
-        te stackIn_2_0 = null;
-        te stackIn_4_0 = null;
-        RuntimeException stackIn_7_0 = null;
-        StringBuilder stackIn_7_1 = null;
-        String stackIn_8_2 = null;
-        RuntimeException decompiledCaughtException = null;
+    final static SoundPlaybackHandle playSoundAtVolume(int obfuscationGuard, int volume, PcmSample sample) {
+        RuntimeException failure = null;
+        SoundPlaybackHandle rejectedHandle = null;
+        SoundPlaybackHandle registeredHandle = null;
+        RuntimeException failureForContext = null;
+        StringBuilder errorContext = null;
+        String sampleDescription = null;
+        RuntimeException caughtFailure = null;
         try {
-          if (param0 == 100) {
-            stackIn_4_0 = MapTile.a(param0 - 145, RawPcmStream.createAtRate(param2, 100, param1));
-            return stackIn_4_0;
+          if (obfuscationGuard == 100) {
+            registeredHandle = MapTile.playRawSound(obfuscationGuard - 145, RawPcmStream.createAtRate(sample, 100, volume));
+            return registeredHandle;
           }
-          stackIn_2_0 = (te) null;
-          return stackIn_2_0;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var3 = decompiledCaughtException;
-          stackIn_7_0 = var3;
-          stackIn_7_1 = new StringBuilder().append("we.A(").append(param0).append(',').append(param1).append(',');
-          if (param2 == null) {
-            stackIn_8_2 = "null";
+          rejectedHandle = (SoundPlaybackHandle) null;
+          return rejectedHandle;
+        } catch (java.lang.RuntimeException caughtParameter) {
+          caughtFailure = caughtParameter;
+          failure = caughtFailure;
+          failureForContext = failure;
+          errorContext = new StringBuilder().append("we.A(").append(obfuscationGuard).append(',').append(volume).append(',');
+          if (sample == null) {
+            sampleDescription = "null";
           } else {
-            stackIn_8_2 = "{...}";
+            sampleDescription = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) failureForContext), ((StringBuilder) (Object) errorContext).append(sampleDescription).append(')').toString());
         }
     }
 

@@ -309,7 +309,7 @@ final class VertexNormal {
                 if (0 == var12.cancelRejectButton.pressedButton) {
                   bk.a(false, 0, BattleTutorial.pointerPressX, 0, var12, param4, TeleportAction.pointerPressY);
                 } else {
-                  te.writePlayerAdmissionCancellation(param3, var12.accountId, (byte) 97);
+                  SoundPlaybackHandle.writePlayerAdmissionCancellation(param3, var12.accountId, (byte) 97);
                 }
               }
             }

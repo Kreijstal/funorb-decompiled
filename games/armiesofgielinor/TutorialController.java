@@ -82,9 +82,9 @@ final class TutorialController {
           var10 = var10 + wd.field_b;
           kt.field_o[0].g(var10, var9 + 5);
           if (17 == var4_int) {
-            stackIn_53_0 = 100 * ResourceProtocolClient.field_e / 256;
+            stackIn_53_0 = 100 * ResourceProtocolClient.effectsGain / 256;
           } else {
-            stackIn_53_0 = te.field_n * 100 / 256;
+            stackIn_53_0 = SoundPlaybackHandle.musicGain * 100 / 256;
           }
           var13 = stackIn_53_0;
           SoftwareRaster.setClip(var10, 5 + var9, var10 + var13, var9 + 19);
@@ -212,11 +212,11 @@ final class TutorialController {
                 ts.currentSpellMenu = MidiPcmStream.field_p;
                 wj.field_q = 0;
               }
-              RadialSummonMenu.$cfr$intArgs$a$6d836999ad61(123, ClientUiNode.field_v[2]);
+              RadialSummonMenu.playDefaultSoundWithIntGuard(123, ClientUiNode.field_v[2]);
             }
             if (IterableDualNodeDeque.isPointerInBounds(-33, db.a(true, 171), db.a(true, 286), MatchConditionEntry.a(384, (byte) 94), MatchConditionEntry.a(416, (byte) 94))) {
               ClientContextMenu.field_k = 0;
-              RadialSummonMenu.$cfr$intArgs$a$6d836999ad61(121, ClientUiNode.field_v[2]);
+              RadialSummonMenu.playDefaultSoundWithIntGuard(121, ClientUiNode.field_v[2]);
             }
           }
           if (KingBlackDragonEvent.field_A == 0) {
@@ -236,7 +236,7 @@ final class TutorialController {
                       pg.playerProfile.equippedSpellIds[var2_int] > -1) {
                       pg.playerProfile.equippedSpellIds[var2_int] = -1;
                       AttackEvent.b(false);
-                      RadialSummonMenu.$cfr$intArgs$a$6d836999ad61(101, MoveAttackRequest.field_v[45]);
+                      RadialSummonMenu.playDefaultSoundWithIntGuard(101, MoveAttackRequest.field_v[45]);
                     }
                     if (pg.playerProfile.equippedSpellIds[var2_int] > -1) {
                       if (BufferedSocket.field_j >= 2 &&
@@ -257,10 +257,10 @@ final class TutorialController {
                       MidiPcmStream.field_p = ct.spellMenuById[ev.field_d];
                       this.a((byte) 88, ev.field_d, (SpellMenuGroup) null);
                       if (ts.currentSpellMenu != MidiPcmStream.field_p) {
-                        RadialSummonMenu.$cfr$intArgs$a$6d836999ad61(127, MoveAttackRequest.field_v[44]);
+                        RadialSummonMenu.playDefaultSoundWithIntGuard(127, MoveAttackRequest.field_v[44]);
                         return;
                       }
-                      RadialSummonMenu.$cfr$intArgs$a$6d836999ad61(31, MoveAttackRequest.field_v[42]);
+                      RadialSummonMenu.playDefaultSoundWithIntGuard(31, MoveAttackRequest.field_v[42]);
                     }
                     return;
                   }
@@ -279,7 +279,7 @@ final class TutorialController {
               }
               if (IterableDualNodeDeque.isPointerInBounds(stackIn_70_0, stackIn_70_1, stackIn_70_2, stackIn_70_3, MatchConditionEntry.a(e.field_b[0].pixelHeight + 19, (byte) 94))) {
                 CipherPacketBuffer.a(true, -9, 1, 0);
-                RadialSummonMenu.$cfr$intArgs$a$6d836999ad61(91, ClientUiNode.field_v[2]);
+                RadialSummonMenu.playDefaultSoundWithIntGuard(91, ClientUiNode.field_v[2]);
                 return;
               }
               if (ClientContextMenu.field_k == 0) {
@@ -292,7 +292,7 @@ final class TutorialController {
                     vl.outgoingPacket.writeShort(true, ev.field_d + 2000);
                     pg.playerProfile.spellQuantities[ev.field_d] = pg.playerProfile.spellQuantities[ev.field_d] + 1;
                     this.a((byte) 48, ev.field_d, (SpellMenuGroup) null);
-                    RadialSummonMenu.$cfr$intArgs$a$6d836999ad61(58, ClientUiNode.field_v[2]);
+                    RadialSummonMenu.playDefaultSoundWithIntGuard(58, ClientUiNode.field_v[2]);
                   }
                   return;
                 }
@@ -303,7 +303,7 @@ final class TutorialController {
                     KingBlackDragonEvent.field_A = -248;
                     ts.currentSpellMenu = ts.currentSpellMenu.parent;
                     this.a((byte) 51, -1, ts.currentSpellMenu);
-                    RadialSummonMenu.$cfr$intArgs$a$6d836999ad61(118, MoveAttackRequest.field_v[43]);
+                    RadialSummonMenu.playDefaultSoundWithIntGuard(118, MoveAttackRequest.field_v[43]);
                     ab.field_a = ev.field_d;
                     ev.field_d = -1;
                   }
@@ -331,7 +331,7 @@ final class TutorialController {
                       wj.field_q = 248;
                       KingBlackDragonEvent.field_A = 248;
                       this.a((byte) 92, -1, ts.currentSpellMenu);
-                      RadialSummonMenu.$cfr$intArgs$a$6d836999ad61(79, MoveAttackRequest.field_v[42]);
+                      RadialSummonMenu.playDefaultSoundWithIntGuard(79, MoveAttackRequest.field_v[42]);
                       ab.field_a = ev.field_d;
                       ev.field_d = -1;
                       return;
@@ -366,8 +366,8 @@ final class TutorialController {
                     wj.field_q = 248;
                     TelepopEvent.field_D = true;
                     this.a((byte) 90, ev.field_d, (SpellMenuGroup) null);
-                    RadialSummonMenu.$cfr$intArgs$a$6d836999ad61(113, MoveAttackRequest.field_v[45]);
-                    RadialSummonMenu.$cfr$intArgs$a$6d836999ad61(124, ClientUiNode.field_v[12]);
+                    RadialSummonMenu.playDefaultSoundWithIntGuard(113, MoveAttackRequest.field_v[45]);
+                    RadialSummonMenu.playDefaultSoundWithIntGuard(124, ClientUiNode.field_v[12]);
                     return;
                   }
                 }
@@ -976,8 +976,8 @@ final class TutorialController {
               TelepopEvent.field_D = true;
               ts.currentSpellMenu = param0;
               this.a((byte) 62, ev.field_d, (SpellMenuGroup) null);
-              RadialSummonMenu.$cfr$intArgs$a$6d836999ad61(59, MoveAttackRequest.field_v[45]);
-              RadialSummonMenu.$cfr$intArgs$a$6d836999ad61(38, ClientUiNode.field_v[12]);
+              RadialSummonMenu.playDefaultSoundWithIntGuard(59, MoveAttackRequest.field_v[45]);
+              RadialSummonMenu.playDefaultSoundWithIntGuard(38, ClientUiNode.field_v[12]);
               stackIn_42_0 = -1;
               return stackIn_42_0;
             }
@@ -1028,7 +1028,7 @@ final class TutorialController {
         try {
           var4_int = MoveEvent.tutorialStageItems[this.tutorialStage][param2];
           if (this.selectionState.hasActivationInput((byte) 124)) {
-            RadialSummonMenu.$cfr$intArgs$a$6d836999ad61(64, ClientUiNode.field_v[2]);
+            RadialSummonMenu.playDefaultSoundWithIntGuard(64, ClientUiNode.field_v[2]);
           }
           if (param1 != 0) {
             this.b(false);
@@ -1785,48 +1785,48 @@ final class TutorialController {
                                                                     }
                                                                     var5 = 0;
                                                                     if (this.selectionState.e(94) &&
-                                                                      0 < ResourceProtocolClient.field_e) {
+                                                                      0 < ResourceProtocolClient.effectsGain) {
                                                                       var5 = 1;
-                                                                      mh.a(0, (byte) -35);
+                                                                      mh.setEffectsGain(0, (byte) -35);
                                                                     }
                                                                     if (this.selectionState.b(96) &&
-                                                                      256 > ResourceProtocolClient.field_e) {
+                                                                      256 > ResourceProtocolClient.effectsGain) {
                                                                       var5 = 1;
-                                                                      mh.a(256, (byte) -96);
+                                                                      mh.setEffectsGain(256, (byte) -96);
                                                                     }
                                                                     if (this.selectionState.isPointerPressed(false)) {
                                                                       var6 = -100 + this.getItemLeftX(true, param2) - (-this.getItemRightX(param2, param1 - 3858) - wd.field_b) >> 1;
                                                                       var7Lifetime2 = AiPlanningStrategy.pointerX - var6;
                                                                       var8 = 256 * var7Lifetime2 / 100;
                                                                       if (var8 <= 0) {
-                                                                        mh.a(0, (byte) -118);
+                                                                        mh.setEffectsGain(0, (byte) -118);
                                                                         if (var9 != 0) {
                                                                           if (var8 >= 256) {
-                                                                            mh.a(256, (byte) -98);
-                                                                            mh.a(var8, (byte) -86);
+                                                                            mh.setEffectsGain(256, (byte) -98);
+                                                                            mh.setEffectsGain(var8, (byte) -86);
                                                                           } else {
-                                                                            mh.a(var8, (byte) -86);
+                                                                            mh.setEffectsGain(var8, (byte) -86);
                                                                           }
                                                                         }
                                                                       } else {
                                                                         if (var8 >= 256) {
-                                                                          mh.a(256, (byte) -98);
+                                                                          mh.setEffectsGain(256, (byte) -98);
                                                                           if (var9 != 0) {
-                                                                            mh.a(var8, (byte) -86);
+                                                                            mh.setEffectsGain(var8, (byte) -86);
                                                                           }
                                                                         } else {
-                                                                          mh.a(var8, (byte) -86);
+                                                                          mh.setEffectsGain(var8, (byte) -86);
                                                                         }
                                                                       }
                                                                       var5 = 1;
                                                                     }
                                                                     if (this.selectionState.isDecrementKeyPressed((byte) -67) &&
-                                                                      ResourceProtocolClient.field_e > 0) {
+                                                                      ResourceProtocolClient.effectsGain > 0) {
                                                                       BufferedSocket.b(false);
                                                                       var5 = 1;
                                                                     }
                                                                     if (this.selectionState.isIncrementKeyPressed(-98) &&
-                                                                      ResourceProtocolClient.field_e < 256) {
+                                                                      ResourceProtocolClient.effectsGain < 256) {
                                                                       hs.a(30);
                                                                       var5 = 1;
                                                                     }
@@ -1837,7 +1837,7 @@ final class TutorialController {
                                                                       uk.field_n <= pn.field_h) {
                                                                       return;
                                                                     }
-                                                                    RadialSummonMenu.$cfr$intArgs$a$6d836999ad61(33, ClientUiNode.field_v[0]);
+                                                                    RadialSummonMenu.playDefaultSoundWithIntGuard(33, ClientUiNode.field_v[0]);
                                                                     pn.field_h = 20 + uk.field_n;
                                                                     if (var9 == 0) {
                                                                       return;
@@ -2437,7 +2437,7 @@ final class TutorialController {
             ko.pointerY > MatchConditionEntry.a(330, (byte) 94) &&
             ko.pointerY < MatchConditionEntry.a(414, (byte) 94)) {
             ah.localCoat.setColour(wh.field_a, (AiPlanningStrategy.pointerX - db.a(true, 40)) / 21 + 16 * ((ko.pointerY - MatchConditionEntry.a(330, (byte) 94)) / 42), (byte) -110);
-            RadialSummonMenu.$cfr$intArgs$a$6d836999ad61(62, ClientUiNode.field_v[10]);
+            RadialSummonMenu.playDefaultSoundWithIntGuard(62, ClientUiNode.field_v[10]);
             return;
           }
           var2_int = fs.a(ko.pointerY, 24340, db.a(true, 380), MatchConditionEntry.a(60, (byte) 94), AiPlanningStrategy.pointerX, 224, 352);
@@ -2450,12 +2450,12 @@ final class TutorialController {
             stackIn_26_2 = !(BufferedSocket.field_j < 2);
             if (BufferedFile.a(stackIn_25_0, stackIn_25_1, stackIn_26_2, var2_int, -1208926000, BoundedFile.field_e[0])) {
               ah.localCoat.setPart(73, var2_int, wh.field_a);
-              RadialSummonMenu.$cfr$intArgs$a$6d836999ad61(121, ClientUiNode.field_v[9]);
+              RadialSummonMenu.playDefaultSoundWithIntGuard(121, ClientUiNode.field_v[9]);
               if (var5 == 0) {
                 return;
               }
             }
-            RadialSummonMenu.$cfr$intArgs$a$6d836999ad61(62, ClientUiNode.field_v[5]);
+            RadialSummonMenu.playDefaultSoundWithIntGuard(62, ClientUiNode.field_v[5]);
             return;
           }
           if (-3 == var2_int) {
@@ -2482,7 +2482,7 @@ final class TutorialController {
                   kd.field_X = wh.field_a;
                   BattleGraphicsAssets.b((byte) -61);
                 }
-                RadialSummonMenu.$cfr$intArgs$a$6d836999ad61(33, ClientUiNode.field_v[2]);
+                RadialSummonMenu.playDefaultSoundWithIntGuard(33, ClientUiNode.field_v[2]);
                 return;
               }
               var4++;
@@ -2501,7 +2501,7 @@ final class TutorialController {
               dd.field_e = 0;
               BattleGraphicsAssets.b((byte) -61);
             }
-            RadialSummonMenu.$cfr$intArgs$a$6d836999ad61(68, ClientUiNode.field_v[2]);
+            RadialSummonMenu.playDefaultSoundWithIntGuard(68, ClientUiNode.field_v[2]);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -3953,7 +3953,7 @@ final class TutorialController {
                 vs.field_f = tf.field_k;
                 li.field_q = -1 + var2_int;
                 tf.field_k = 256;
-                RadialSummonMenu.$cfr$intArgs$a$6d836999ad61(91, ClientUiNode.field_v[11]);
+                RadialSummonMenu.playDefaultSoundWithIntGuard(91, ClientUiNode.field_v[11]);
                 vf.field_f = jq.field_F;
                 kq.field_L = 0;
                 jq.field_F = -1;
@@ -4012,7 +4012,7 @@ final class TutorialController {
               } else {
                 this.a((String) null, -1, ve.a((byte) 13, wf.field_q[li.field_q + 1]), (String) null, (byte) -55, GlobalSpell.field_l[li.field_q + 1]);
               }
-              RadialSummonMenu.$cfr$intArgs$a$6d836999ad61(100, ClientUiNode.field_v[12]);
+              RadialSummonMenu.playDefaultSoundWithIntGuard(100, ClientUiNode.field_v[12]);
               return;
             }
           }
@@ -4044,14 +4044,14 @@ final class TutorialController {
                   }
                   break;
                 }
-                RadialSummonMenu.$cfr$intArgs$a$6d836999ad61(stackIn_72_0, ClientUiNode.field_v[14]);
+                RadialSummonMenu.playDefaultSoundWithIntGuard(stackIn_72_0, ClientUiNode.field_v[14]);
                 if ((var8 != 0) && (jq.field_F > -1 &&
                   0 < pg.playerProfile.unitUnlockMasks[li.field_q + 1] &&
                   0 == (pg.playerProfile.unitUnlockMasks[1 + li.field_q] & 1 << jq.field_F) &&
                   pg.playerProfile.getAvailableRunes((byte) 91) >= bw.unitDefinitions[jq.field_F][11])) {
                   vl.outgoingPacket.writeCipheredOpcode(32161, 70);
                   vl.outgoingPacket.writeShort(true, AnimationFrameSet.unitUnlockGroups[1 + li.field_q][jq.field_F]);
-                  RadialSummonMenu.$cfr$intArgs$a$6d836999ad61(62, ClientUiNode.field_v[14]);
+                  RadialSummonMenu.playDefaultSoundWithIntGuard(62, ClientUiNode.field_v[14]);
                   pg.playerProfile.unitUnlockMasks[1 + li.field_q] = oe.bitwiseOr(pg.playerProfile.unitUnlockMasks[1 + li.field_q], 1 << jq.field_F);
                 }
               }
@@ -4062,7 +4062,7 @@ final class TutorialController {
                 pg.playerProfile.getAvailableRunes((byte) 91) >= bw.unitDefinitions[jq.field_F][11]) {
                 vl.outgoingPacket.writeCipheredOpcode(32161, 70);
                 vl.outgoingPacket.writeShort(true, AnimationFrameSet.unitUnlockGroups[1 + li.field_q][jq.field_F]);
-                RadialSummonMenu.$cfr$intArgs$a$6d836999ad61(62, ClientUiNode.field_v[14]);
+                RadialSummonMenu.playDefaultSoundWithIntGuard(62, ClientUiNode.field_v[14]);
                 pg.playerProfile.unitUnlockMasks[1 + li.field_q] = oe.bitwiseOr(pg.playerProfile.unitUnlockMasks[1 + li.field_q], 1 << jq.field_F);
               }
             }
@@ -4692,7 +4692,7 @@ final class TutorialController {
                   if (li.field_q == 6) {
                     li.field_q = -1;
                   }
-                  RadialSummonMenu.$cfr$intArgs$a$6d836999ad61(126, ClientUiNode.field_v[11]);
+                  RadialSummonMenu.playDefaultSoundWithIntGuard(126, ClientUiNode.field_v[11]);
                   if (var4 == 0) {
                     continue;
                   }
@@ -4710,7 +4710,7 @@ final class TutorialController {
                 this.selectionState.updatePointerSelection(0, this.b(TeleportAction.pointerPressY, BattleTutorial.pointerPressX, 31), ac.field_p);
               }
               if (~pn.field_m != ~ac.field_p) {
-                RadialSummonMenu.$cfr$intArgs$a$6d836999ad61(90, ClientUiNode.field_v[1]);
+                RadialSummonMenu.playDefaultSoundWithIntGuard(90, ClientUiNode.field_v[1]);
                 pn.field_m = ac.field_p;
               }
               if (this.selectionState.selectedIndex != -1) {
@@ -4753,7 +4753,7 @@ final class TutorialController {
                   this.tutorialStage != 21) {
                   if (this.tutorialStage == 18) {
                     if (GameplayController.field_J != na.field_F) {
-                      RadialSummonMenu.$cfr$intArgs$a$6d836999ad61(37, ClientUiNode.field_v[1]);
+                      RadialSummonMenu.playDefaultSoundWithIntGuard(37, ClientUiNode.field_v[1]);
                       GameplayController.field_J = na.field_F;
                     }
                     if (KingBlackDragonEvent.field_A > 0) {
@@ -4816,13 +4816,13 @@ final class TutorialController {
                             }
                             if (decompiledFrameRemainder1) {
                               if (stackIn_284_0 != stackIn_284_1) {
-                                RadialSummonMenu.$cfr$intArgs$a$6d836999ad61(98, MoveAttackRequest.field_v[44]);
+                                RadialSummonMenu.playDefaultSoundWithIntGuard(98, MoveAttackRequest.field_v[44]);
                                 if (var4 == 0) {
                                   break;
                                 }
                               }
                               MidiPcmStream.field_p = null;
-                              RadialSummonMenu.$cfr$intArgs$a$6d836999ad61(83, MoveAttackRequest.field_v[42]);
+                              RadialSummonMenu.playDefaultSoundWithIntGuard(83, MoveAttackRequest.field_v[42]);
                               if (var4 == 0) {
                                 break;
                               }
@@ -4830,7 +4830,7 @@ final class TutorialController {
                             vu.field_O = ts.currentSpellMenu;
                             ts.currentSpellMenu = ts.currentSpellMenu.parent;
                             KingBlackDragonEvent.field_A = -240;
-                            RadialSummonMenu.$cfr$intArgs$a$6d836999ad61(41, MoveAttackRequest.field_v[45]);
+                            RadialSummonMenu.playDefaultSoundWithIntGuard(41, MoveAttackRequest.field_v[45]);
                             break;
                           }
                         }
@@ -4852,7 +4852,7 @@ final class TutorialController {
                       if ((decompiledFrameRemainder3) &&
                         (decompiledFrameRemainder3 = (this.tutorialStage == 13))) {
                         if (na.field_F != GameplayController.field_J) {
-                          RadialSummonMenu.$cfr$intArgs$a$6d836999ad61(65, ClientUiNode.field_v[1]);
+                          RadialSummonMenu.playDefaultSoundWithIntGuard(65, ClientUiNode.field_v[1]);
                           GameplayController.field_J = na.field_F;
                         }
                         LineOfSightGrid.a((byte) -102, 224, db.a(true, 380), ro.pointerButton, ko.pointerY, 352, AiPlanningStrategy.pointerX, MatchConditionEntry.a(60, (byte) 94));
@@ -4877,7 +4877,7 @@ final class TutorialController {
                         GlobalSpell.field_h = GlobalSpell.field_h - var3;
                       }
                       if (GameplayController.field_J != na.field_F) {
-                        RadialSummonMenu.$cfr$intArgs$a$6d836999ad61(116, ClientUiNode.field_v[1]);
+                        RadialSummonMenu.playDefaultSoundWithIntGuard(116, ClientUiNode.field_v[1]);
                         GameplayController.field_J = na.field_F;
                       }
                       decompiledFrameRemainder3 = (var4 != 0);
@@ -5367,7 +5367,7 @@ final class TutorialController {
         try {
           lm.field_c = this.d(AiPlanningStrategy.pointerX, -1, ko.pointerY);
           if (1 == DeployEvent.pointerPressButton) {
-            RadialSummonMenu.$cfr$intArgs$a$6d836999ad61(94, ClientUiNode.field_v[2]);
+            RadialSummonMenu.playDefaultSoundWithIntGuard(94, ClientUiNode.field_v[2]);
             var2_int = this.d(BattleTutorial.pointerPressX, -1, TeleportAction.pointerPressY);
             if (vs.field_a == var2_int) {
               vs.field_a = -1;
@@ -5899,7 +5899,7 @@ final class TutorialController {
             }
             if (TabbedPanel.a(MatchConditionEntry.a(98, (byte) 94), db.a(true, 350 + 55 * var2_int), 22, false)) {
               pg.playerProfile.equippedSpellIds[var2_int] = ev.field_d;
-              RadialSummonMenu.$cfr$intArgs$a$6d836999ad61(51, MoveAttackRequest.field_v[44]);
+              RadialSummonMenu.playDefaultSoundWithIntGuard(51, MoveAttackRequest.field_v[44]);
               AttackEvent.b(false);
               return;
             }

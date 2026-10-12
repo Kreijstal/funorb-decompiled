@@ -16,30 +16,30 @@ final class mj {
         field_b = -104;
     }
 
-    final static void b(byte param0) {
+    final static void shutdownAudioPlayers(byte obfuscationGuard) {
         if (l.musicPlayer != null) {
           l.musicPlayer.shutdown();
-          if (TextCursor.field_e != null) {
-            TextCursor.field_e.shutdown();
+          if (TextCursor.effectsPlayer != null) {
+            TextCursor.effectsPlayer.shutdown();
           }
-          if (param0 > -79) {
-            mj.b((byte) 93);
+          if (obfuscationGuard > -79) {
+            mj.shutdownAudioPlayers((byte) 93);
             return;
           }
           return;
         }
-        if (TextCursor.field_e != null) {
-          TextCursor.field_e.shutdown();
+        if (TextCursor.effectsPlayer != null) {
+          TextCursor.effectsPlayer.shutdown();
         }
-        if (param0 <= -79) {
+        if (obfuscationGuard <= -79) {
           return;
         }
-        mj.b((byte) 93);
+        mj.shutdownAudioPlayers((byte) 93);
     }
 
     public static void c(byte param0) {
         if (param0 >= -23) {
-          mj.b((byte) 115);
+          mj.shutdownAudioPlayers((byte) 115);
           field_a = null;
           return;
         }

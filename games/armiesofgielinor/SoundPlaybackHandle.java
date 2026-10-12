@@ -1,14 +1,14 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class te extends IntrusiveNode {
+final class SoundPlaybackHandle extends IntrusiveNode {
     static ClientUiComponent field_p;
     static String field_m;
-    static int field_n;
+    static int musicGain;
     static int field_l;
-    int field_o;
-    IntrusiveNode field_k;
-    RawPcmStream field_q;
+    int unscaledVolume;
+    IntrusiveNode lifetimeNode;
+    RawPcmStream stream;
 
     final static void writePlayerAdmissionCancellation(int packetOpcode, long accountId, byte obfuscationGuard) {
         int var5 = 0;
@@ -23,7 +23,7 @@ final class te extends IntrusiveNode {
           var4.writeByteLengthPrefix(-var5 + var4.position, 5930);
           return;
         }
-        te.b(-87, -88);
+        SoundPlaybackHandle.b(-87, -88);
         var4.writeCipheredOpcode(32161, packetOpcode);
         var4.position = var4.position + 1;
         var5Lifetime1 = var4.position;
@@ -87,7 +87,7 @@ final class te extends IntrusiveNode {
         field_p = null;
         if (param0 >= -33) {
           bj var2 = (bj) null;
-          te.a(54, (bj) null, -6);
+          SoundPlaybackHandle.a(54, (bj) null, -6);
         }
     }
 
@@ -106,7 +106,7 @@ final class te extends IntrusiveNode {
           if (param2 == -17006) {
             return;
           }
-          te.writePlayerAdmissionCancellation(102, 77L, (byte) -50);
+          SoundPlaybackHandle.writePlayerAdmissionCancellation(102, 77L, (byte) -50);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -122,19 +122,19 @@ final class te extends IntrusiveNode {
         }
     }
 
-    te(RawPcmStream param0, IntrusiveNode param1) {
+    SoundPlaybackHandle(RawPcmStream stream, IntrusiveNode lifetimeNode) {
         try {
-          this.field_q = param0;
-          this.field_o = param0.getTargetVolume();
-          this.field_k = param1;
-          this.field_q.setVolume(128 + ResourceProtocolClient.field_e * this.field_o >> 8);
+          this.stream = stream;
+          this.unscaledVolume = stream.getTargetVolume();
+          this.lifetimeNode = lifetimeNode;
+          this.stream.setVolume(128 + ResourceProtocolClient.effectsGain * this.unscaledVolume >> 8);
         } catch (RuntimeException runtimeException) {
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "te.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "te.<init>(" + (stream != null ? "{...}" : "null") + ',' + (lifetimeNode != null ? "{...}" : "null") + ')');
         }
     }
 
     static {
-        field_n = 256;
+        musicGain = 256;
         field_m = "To server list";
         field_l = 640;
     }

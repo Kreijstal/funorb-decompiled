@@ -55,7 +55,7 @@ abstract class wl extends tj {
         if (param1 < 95) {
           field_K = (ClientUiComponent) null;
         }
-        this.setBounds(te.field_l - param0 >> 1, param0, ij.field_x - param2 >> 1, 8192, param2);
+        this.setBounds(SoundPlaybackHandle.field_l - param0 >> 1, param0, ij.field_x - param2 >> 1, 8192, param2);
     }
 
     public static void f(byte param0) {
@@ -218,7 +218,7 @@ abstract class wl extends tj {
     abstract void b(int param0, int param1, int param2);
 
     wl(gk param0, int param1, int param2) {
-        super(te.field_l - param1 >> 1, ij.field_x - param2 >> 1, param1, param2, (WidgetPainter) null);
+        super(SoundPlaybackHandle.field_l - param1 >> 1, ij.field_x - param2 >> 1, param1, param2, (WidgetPainter) null);
         try {
           this.field_G = param0;
           this.field_L = false;

@@ -19,11 +19,11 @@ final class vv {
 
     final static void a(int param0) {
         int var1 = 0;
-        if (224 <= te.field_n) {
+        if (224 <= SoundPlaybackHandle.musicGain) {
           NetworkResourceRequest.b(256, param0 ^ -30690);
         } else {
-          var1 = te.field_n % 32;
-          NetworkResourceRequest.b(32 + (te.field_n - var1), 84);
+          var1 = SoundPlaybackHandle.musicGain % 32;
+          NetworkResourceRequest.b(32 + (SoundPlaybackHandle.musicGain - var1), 84);
         }
         if (param0 == -30647) {
           return;

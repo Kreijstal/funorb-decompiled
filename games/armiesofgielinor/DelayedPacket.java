@@ -5,7 +5,7 @@ final class DelayedPacket extends IntrusiveNode {
     static String field_r;
     static String field_n;
     static IndexedSprite[] field_k;
-    static int field_p;
+    static int soundHandleCleanupCountdown;
     byte[] payload;
     int opcode;
     static boolean field_q;
@@ -302,6 +302,6 @@ final class DelayedPacket extends IntrusiveNode {
         field_n = "Armour will help protect your units from damage, but each unit can only wear one type of armour at a time. Equipping a unit with new armour will cause whatever armour that unit is currently wearing to be discarded.";
         field_r = "Most victimised";
         field_s = new String[]{"By rating", "By win percentage"};
-        field_p = 200;
+        soundHandleCleanupCountdown = 200;
     }
 }

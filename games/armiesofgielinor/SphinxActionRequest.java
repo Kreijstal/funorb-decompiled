@@ -18,7 +18,7 @@ final class SphinxActionRequest extends ActionRequest {
         try {
           var4 = (bj) (ArchiveIndex.field_o.first((byte) 121));
           while (var4 != null) {
-            te.a(param0, var4, -17006);
+            SoundPlaybackHandle.a(param0, var4, -17006);
             var4 = (bj) (ArchiveIndex.field_o.next((byte) 123));
           }
           if (param1 <= 33) {
@@ -151,9 +151,9 @@ final class SphinxActionRequest extends ActionRequest {
           uc.field_b.matchedButtonSprite = GameplayController.a("closebutton_mouseover", (byte) 51, "lobby", param1);
           rn.field_a = new ClientUiComponent(0L, var8);
           rn.field_a.skinSprites = jq.a(true, 2039583, -20600, 40, true, 3815994);
-          te.field_p = new ClientUiComponent(0L, var10);
-          te.field_p.textHorizontalPadding = 2;
-          te.field_p.skinSprites = jq.a(true, 2039583, -20600, 30, false, 3815994);
+          SoundPlaybackHandle.field_p = new ClientUiComponent(0L, var10);
+          SoundPlaybackHandle.field_p.textHorizontalPadding = 2;
+          SoundPlaybackHandle.field_p.skinSprites = jq.a(true, 2039583, -20600, 30, false, 3815994);
           CampaignResult.field_a = new ClientUiComponent(0L, var10);
           CampaignResult.field_a.textHorizontalPadding = 2;
           CampaignResult.field_a.skinSprites = jq.a(false, 2039583, -20600, 30, false, 3815994);

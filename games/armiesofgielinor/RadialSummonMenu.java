@@ -9,32 +9,32 @@ final class RadialSummonMenu {
     private int layoutRadius;
     static int field_d;
 
-    final static te a(byte param0, PcmSample param1) {
-        RuntimeException var2 = null;
-        te stackIn_2_0 = null;
-        te stackIn_4_0 = null;
-        RuntimeException stackIn_7_0 = null;
-        StringBuilder stackIn_7_1 = null;
-        String stackIn_8_2 = null;
-        RuntimeException decompiledCaughtException = null;
+    final static SoundPlaybackHandle playDefaultSound(byte obfuscationGuard, PcmSample sample) {
+        RuntimeException failure = null;
+        SoundPlaybackHandle rejectedHandle = null;
+        SoundPlaybackHandle registeredHandle = null;
+        RuntimeException failureForContext = null;
+        StringBuilder errorContext = null;
+        String sampleDescription = null;
+        RuntimeException caughtFailure = null;
         try {
-          if (param0 > 24) {
-            stackIn_4_0 = MapTile.a(-69, RawPcmStream.createAtRate(param1, 100, 96));
-            return stackIn_4_0;
+          if (obfuscationGuard > 24) {
+            registeredHandle = MapTile.playRawSound(-69, RawPcmStream.createAtRate(sample, 100, 96));
+            return registeredHandle;
           }
-          stackIn_2_0 = (te) null;
-          return stackIn_2_0;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var2 = decompiledCaughtException;
-          stackIn_7_0 = var2;
-          stackIn_7_1 = new StringBuilder().append("ub.F(").append(param0).append(',');
-          if (param1 == null) {
-            stackIn_8_2 = "null";
+          rejectedHandle = (SoundPlaybackHandle) null;
+          return rejectedHandle;
+        } catch (java.lang.RuntimeException caughtParameter) {
+          caughtFailure = caughtParameter;
+          failure = caughtFailure;
+          failureForContext = failure;
+          errorContext = new StringBuilder().append("ub.F(").append(obfuscationGuard).append(',');
+          if (sample == null) {
+            sampleDescription = "null";
           } else {
-            stackIn_8_2 = "{...}";
+            sampleDescription = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) failureForContext), ((StringBuilder) (Object) errorContext).append(sampleDescription).append(')').toString());
         }
     }
 
@@ -43,7 +43,7 @@ final class RadialSummonMenu {
         int var6 = 0;
         if (obfuscationGuard != 117) {
           PcmSample var8 = (PcmSample) null;
-          RadialSummonMenu.$cfr$intArgs$a$6d836999ad61(7, (PcmSample) null);
+          RadialSummonMenu.playDefaultSoundWithIntGuard(7, (PcmSample) null);
         }
         while (this.itemCount > var6) {
           if (this.items[var6].containsPoint(42, pointerX, originY, originX, pointerY)) {
@@ -279,32 +279,32 @@ final class RadialSummonMenu {
     }
 
     /* Full JVM integer arguments; original narrow signature preserved. */
-    final static te $cfr$intArgs$a$6d836999ad61(int param0, PcmSample param1) {
-        RuntimeException var2 = null;
-        te stackIn_2_0 = null;
-        te stackIn_4_0 = null;
-        RuntimeException stackIn_7_0 = null;
-        StringBuilder stackIn_7_1 = null;
-        String stackIn_8_2 = null;
-        RuntimeException decompiledCaughtException = null;
+    final static SoundPlaybackHandle playDefaultSoundWithIntGuard(int obfuscationGuard, PcmSample sample) {
+        RuntimeException failure = null;
+        SoundPlaybackHandle rejectedHandle = null;
+        SoundPlaybackHandle registeredHandle = null;
+        RuntimeException failureForContext = null;
+        StringBuilder errorContext = null;
+        String sampleDescription = null;
+        RuntimeException caughtFailure = null;
         try {
-          if (param0 > 24) {
-            stackIn_4_0 = MapTile.a(-69, RawPcmStream.createAtRate(param1, 100, 96));
-            return stackIn_4_0;
+          if (obfuscationGuard > 24) {
+            registeredHandle = MapTile.playRawSound(-69, RawPcmStream.createAtRate(sample, 100, 96));
+            return registeredHandle;
           }
-          stackIn_2_0 = (te) null;
-          return stackIn_2_0;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var2 = decompiledCaughtException;
-          stackIn_7_0 = var2;
-          stackIn_7_1 = new StringBuilder().append("ub.F(").append(param0).append(',');
-          if (param1 == null) {
-            stackIn_8_2 = "null";
+          rejectedHandle = (SoundPlaybackHandle) null;
+          return rejectedHandle;
+        } catch (java.lang.RuntimeException caughtParameter) {
+          caughtFailure = caughtParameter;
+          failure = caughtFailure;
+          failureForContext = failure;
+          errorContext = new StringBuilder().append("ub.F(").append(obfuscationGuard).append(',');
+          if (sample == null) {
+            sampleDescription = "null";
           } else {
-            stackIn_8_2 = "{...}";
+            sampleDescription = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) failureForContext), ((StringBuilder) (Object) errorContext).append(sampleDescription).append(')').toString());
         }
     }
 }

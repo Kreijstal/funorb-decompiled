@@ -288,14 +288,14 @@ final class AdaptiveMidiPcmStream extends MidiPcmStream {
 
     final static void a(boolean param0) {
         int var1 = 0;
-        if (32 >= te.field_n) {
+        if (32 >= SoundPlaybackHandle.musicGain) {
           NetworkResourceRequest.b(0, 99);
         } else {
-          var1 = te.field_n % 32;
+          var1 = SoundPlaybackHandle.musicGain % 32;
           if (var1 == 0) {
             var1 = 32;
           }
-          NetworkResourceRequest.b(te.field_n - var1, 108);
+          NetworkResourceRequest.b(SoundPlaybackHandle.musicGain - var1, 108);
         }
         if (!param0) {
           defaultQuickChatMenu = (QuickChatMenu) null;

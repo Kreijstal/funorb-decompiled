@@ -672,7 +672,7 @@ abstract class wf extends iv {
             di.c((byte) -128);
           }
           if (null == pt.field_eb) {
-            pt.field_eb = MusicPatchEnvelope.a(18757);
+            pt.field_eb = MusicPatchEnvelope.getEffectsMixer(18757);
             ko.field_e = nb.c((byte) 111);
           }
           qd.a(h.field_g, (byte) 76, pt.field_eb, ko.field_e);

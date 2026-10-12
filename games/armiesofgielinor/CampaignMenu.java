@@ -391,7 +391,7 @@ final class CampaignMenu {
               }
               stackIn_53_0 = 55;
             }
-            RadialSummonMenu.$cfr$intArgs$a$6d836999ad61(stackIn_53_0, ClientUiNode.field_v[1]);
+            RadialSummonMenu.playDefaultSoundWithIntGuard(stackIn_53_0, ClientUiNode.field_v[1]);
             break;
           }
           this.hoveredEntry = (CampaignMenuEntry) (var2);
@@ -1630,11 +1630,11 @@ final class CampaignMenu {
                       if (!(this.selectedMissionEntry.selectionAge >= 20)) {
                         this.selectMissionOrQuicksaveDialog((byte) 72);
                         if (var7 != 0) {
-                          RadialSummonMenu.$cfr$intArgs$a$6d836999ad61(80, ClientUiNode.field_v[11]);
+                          RadialSummonMenu.playDefaultSoundWithIntGuard(80, ClientUiNode.field_v[11]);
                         }
                       }
                     } else {
-                      RadialSummonMenu.$cfr$intArgs$a$6d836999ad61(80, ClientUiNode.field_v[11]);
+                      RadialSummonMenu.playDefaultSoundWithIntGuard(80, ClientUiNode.field_v[11]);
                     }
                     this.selectedMissionEntry = (CampaignMenuEntry) (var3);
                     this.selectedMissionEntry.selectionAge = 0;
@@ -1751,7 +1751,7 @@ final class CampaignMenu {
                 return;
               }
               if (this.selectedCampaignEntry != var2) {
-                RadialSummonMenu.$cfr$intArgs$a$6d836999ad61(98, ClientUiNode.field_v[11]);
+                RadialSummonMenu.playDefaultSoundWithIntGuard(98, ClientUiNode.field_v[11]);
               }
               this.selectedCampaignEntry = (CampaignMenuEntry) (var2);
               if (this.selectedCampaignEntry.selectionAge < 20) {
@@ -2281,7 +2281,7 @@ final class CampaignMenu {
                 fe.c(qf.field_a, db.a(true, ((CampaignMenuEntry) (var3)).left), MatchConditionEntry.a(((CampaignMenuEntry) (var3)).top + 10, (byte) 94), nd.field_b, true);
               }
               if (this.hoveredEntry != var3) {
-                RadialSummonMenu.$cfr$intArgs$a$6d836999ad61(127, ClientUiNode.field_v[1]);
+                RadialSummonMenu.playDefaultSoundWithIntGuard(127, ClientUiNode.field_v[1]);
               }
             }
             this.hoveredEntry = (CampaignMenuEntry) (var3);

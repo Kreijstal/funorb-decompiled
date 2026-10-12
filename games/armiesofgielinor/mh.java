@@ -7,44 +7,44 @@ final class mh {
     static wm field_b;
     static int field_c;
 
-    final static void a(int param0, byte param1) {
-        te var2 = null;
-        int var3 = 0;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException var2_ref = null;
-        te var2Lifetime1;
-        var3 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+    final static void setEffectsGain(int gain, byte obfuscationGuard) {
+        SoundPlaybackHandle handle = null;
+        int obfuscationControl = 0;
+        RuntimeException caughtFailure = null;
+        RuntimeException failure = null;
+        SoundPlaybackHandle additionalHandle;
+        obfuscationControl = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          ResourceProtocolClient.field_e = param0;
-          var2 = (te) (QuickChatCategoryRepository.field_h.first((byte) 110));
-          while (var2 != null) {
-            if (!var2.field_k.c(65280)) {
-              var2.unlink(-110);
+          ResourceProtocolClient.effectsGain = gain;
+          handle = (SoundPlaybackHandle) (QuickChatCategoryRepository.soundHandles.first((byte) 110));
+          while (handle != null) {
+            if (!handle.lifetimeNode.isLinked(65280)) {
+              handle.unlink(-110);
             } else {
-              var2.field_q.setVolume(var2.field_o * ResourceProtocolClient.field_e + 128 >> 8);
+              handle.stream.setVolume(handle.unscaledVolume * ResourceProtocolClient.effectsGain + 128 >> 8);
             }
-            var2 = (te) (QuickChatCategoryRepository.field_h.next((byte) 123));
+            handle = (SoundPlaybackHandle) (QuickChatCategoryRepository.soundHandles.next((byte) 123));
           }
-          if (ts.field_e != null) {
-            var2Lifetime1 = (te) (ts.field_e.first((byte) 95));
-            while (var2Lifetime1 != null) {
-              if (!var2Lifetime1.field_k.c(65280)) {
-                var2Lifetime1.unlink(47);
+          if (ts.additionalSoundHandles != null) {
+            additionalHandle = (SoundPlaybackHandle) (ts.additionalSoundHandles.first((byte) 95));
+            while (additionalHandle != null) {
+              if (!additionalHandle.lifetimeNode.isLinked(65280)) {
+                additionalHandle.unlink(47);
               } else {
-                var2Lifetime1.field_q.setVolume(128 + ResourceProtocolClient.field_e * var2Lifetime1.field_o >> 8);
+                additionalHandle.stream.setVolume(128 + ResourceProtocolClient.effectsGain * additionalHandle.unscaledVolume >> 8);
               }
-              var2Lifetime1 = (te) (ts.field_e.next((byte) 123));
+              additionalHandle = (SoundPlaybackHandle) (ts.additionalSoundHandles.next((byte) 123));
             }
           }
-          if (param1 < -26) {
+          if (obfuscationGuard < -26) {
             return;
           }
           field_d = (String) null;
           return;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var2_ref = decompiledCaughtException;
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) var2_ref), "mh.A(" + param0 + ',' + param1 + ')');
+        } catch (java.lang.RuntimeException caughtParameter) {
+          caughtFailure = caughtParameter;
+          failure = caughtFailure;
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) failure), "mh.A(" + gain + ',' + obfuscationGuard + ')');
         }
     }
 
