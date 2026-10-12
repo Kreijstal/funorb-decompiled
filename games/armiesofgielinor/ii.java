@@ -3,7 +3,7 @@
  */
 final class ii {
     static RgbSprite[] field_a;
-    static int field_b;
+    static int campaignPacketWord1;
     static String field_c;
 
     public static void a(byte param0) {

@@ -10,7 +10,7 @@ final class CampaignResult {
     final static void a(int param0) {
         int var1 = 20 % ((param0 + 6) / 45);
         ud.field_X = null;
-        MoveEvent.field_C.releaseCampaignResources(123);
+        MoveEvent.campaignMenu.releaseCampaignResources(123);
     }
 
     public final String toString() {

@@ -8,7 +8,7 @@ final class kw extends fw {
     static String field_Q;
     private int field_L;
     static int[] field_M;
-    static int field_R;
+    static int campaignPacketWord0;
 
     final boolean a(int param0, kb param1) {
         RuntimeException var3 = null;

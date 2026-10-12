@@ -609,11 +609,11 @@ class PacketBuffer extends IntrusiveNode {
         return this.payload[fieldTemp$0] & 255;
     }
 
-    final void e(int param0, int param1) {
-        if (param1 != 5930) {
+    final void writeByteLengthPrefix(int length, int obfuscationGuard) {
+        if (obfuscationGuard != 5930) {
           return;
         }
-        this.payload[this.position - (param0 + 1)] = (byte)param0;
+        this.payload[this.position - (length + 1)] = (byte)length;
     }
 
     final void a(String param0, int param1) {

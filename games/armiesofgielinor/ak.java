@@ -396,7 +396,7 @@ final class ak extends ju {
           vl.outgoingPacket.position = vl.outgoingPacket.position + 1;
           var4 = fieldTemp$0;
           vl.outgoingPacket.writeBytes(vd.field_b.payload, 0, vd.field_b.position, param3 + 69);
-          vl.outgoingPacket.e(-var4 + vl.outgoingPacket.position, param3 + 5900);
+          vl.outgoingPacket.writeByteLengthPrefix(-var4 + vl.outgoingPacket.position, param3 + 5900);
           return;
         }
         kl var5 = (kl) null;
@@ -410,7 +410,7 @@ final class ak extends ju {
         vl.outgoingPacket.position = vl.outgoingPacket.position + 1;
         var4Lifetime1 = fieldTemp$1;
         vl.outgoingPacket.writeBytes(vd.field_b.payload, 0, vd.field_b.position, param3 + 69);
-        vl.outgoingPacket.e(-var4Lifetime1 + vl.outgoingPacket.position, param3 + 5900);
+        vl.outgoingPacket.writeByteLengthPrefix(-var4Lifetime1 + vl.outgoingPacket.position, param3 + 5900);
     }
 
     final static RgbSprite[] b(int param0, int param1) {

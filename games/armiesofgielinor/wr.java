@@ -4,7 +4,7 @@
 final class wr extends hs implements he {
     static int field_J;
     private no field_M;
-    static int field_L;
+    static int campaignPacketWord3;
     private fw field_K;
 
     final void a(int param0, int param1, byte param2, int param3) {
@@ -120,7 +120,7 @@ final class wr extends hs implements he {
             wr.a((byte) -126, (aj) null, 112);
           }
           var9.b((byte) -39, var4);
-          var9.e(var9.position - var4, 5930);
+          var9.writeByteLengthPrefix(var9.position - var4, 5930);
         } catch (RuntimeException runtimeException) {
           throw ig.addExceptionContext((Throwable) ((Object) runtimeException), "wr.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }

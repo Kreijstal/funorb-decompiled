@@ -131,7 +131,7 @@ final class it {
           } else {
             var9.writeShort(true, param0);
           }
-          var9.e(-var7 + var9.position, 5930);
+          var9.writeByteLengthPrefix(-var7 + var9.position, 5930);
         } catch (RuntimeException runtimeException) {
           throw ig.addExceptionContext((Throwable) ((Object) runtimeException), "it.E(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ')');
         }

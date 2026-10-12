@@ -75,7 +75,7 @@ final class ActionSpell extends Spell {
         }
     }
 
-    final static void a(int param0, int param1, CampaignMission param2, boolean param3, int param4, int param5) {
+    final static void submitCampaignResult(int obfuscationGuard, int damageTaken, CampaignMission mission, boolean hasLostUnit, int candidateScore, int turnsTaken) {
         CipherPacketBuffer stackIn_32_0 = null;
         int stackIn_32_1 = 0;
         int stackIn_33_2 = 0;
@@ -83,91 +83,91 @@ final class ActionSpell extends Spell {
         StringBuilder stackIn_39_1 = null;
         String stackIn_40_2 = null;
         RuntimeException decompiledCaughtException = null;
-        int var6_int = 0;
+        int campaignIndex = 0;
         RuntimeException var6 = null;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
+        int missionId = 0;
+        int mutationSelector = 0;
+        int mutationVariant = 0;
         int var10 = 0;
         var10 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           if (DamageEvent.g(117)) {
             return;
           }
-          var6_int = param2.campaign.campaignIndex;
-          var7 = param2.missionId;
-          MoveEvent.field_C.updateMissionScore(var7, (byte) 33, param4);
-          if (!(pg.playerProfile.campaignProgress.getMissionScore(var6_int, -63, var7) >= param4) ||
-            param4 == 1) {
-            if (1 < param4) {
+          campaignIndex = mission.campaign.campaignIndex;
+          missionId = mission.missionId;
+          MoveEvent.campaignMenu.updateMissionScore(missionId, (byte) 33, candidateScore);
+          if (!(pg.playerProfile.campaignProgress.getMissionScore(campaignIndex, -63, missionId) >= candidateScore) ||
+            candidateScore == 1) {
+            if (1 < candidateScore) {
               hc.field_b = hc.field_b + 1;
               hc.field_b = hc.field_b + (ko.field_b ^ AiPlanningStrategy.field_d);
               hc.field_b = Math.abs(hc.field_b);
-              var8 = hc.field_b % 8;
-              var9 = var8;
-              if (0 == var9) {
-                cg.field_j = cg.field_j + 1;
-                kw.field_R = kw.field_R - wr.field_L;
+              mutationSelector = hc.field_b % 8;
+              mutationVariant = mutationSelector;
+              if (0 == mutationVariant) {
+                cg.campaignPacketWord2 = cg.campaignPacketWord2 + 1;
+                kw.campaignPacketWord0 = kw.campaignPacketWord0 - wr.campaignPacketWord3;
               } else {
-                if (1 == var9) {
-                  wr.field_L = wr.field_L + 1;
-                  ii.field_b = ii.field_b + cg.field_j;
+                if (1 == mutationVariant) {
+                  wr.campaignPacketWord3 = wr.campaignPacketWord3 + 1;
+                  ii.campaignPacketWord1 = ii.campaignPacketWord1 + cg.campaignPacketWord2;
                 } else {
-                  if (var9 == 2) {
-                    ii.field_b = ii.field_b + 1;
-                    kw.field_R = kw.field_R + 1;
+                  if (mutationVariant == 2) {
+                    ii.campaignPacketWord1 = ii.campaignPacketWord1 + 1;
+                    kw.campaignPacketWord0 = kw.campaignPacketWord0 + 1;
                   } else {
-                    if (var9 != 3) {
-                      if (var9 != 4) {
-                        if (5 != var9) {
-                          if (var9 != 6) {
-                            if (7 != var9) {
+                    if (mutationVariant != 3) {
+                      if (mutationVariant != 4) {
+                        if (5 != mutationVariant) {
+                          if (mutationVariant != 6) {
+                            if (7 != mutationVariant) {
                               throw new IllegalStateException("");
                             }
-                            ii.field_b = ii.field_b - cg.field_j;
-                            wr.field_L = wr.field_L - 1;
+                            ii.campaignPacketWord1 = ii.campaignPacketWord1 - cg.campaignPacketWord2;
+                            wr.campaignPacketWord3 = wr.campaignPacketWord3 - 1;
                           } else {
-                            kw.field_R = kw.field_R + wr.field_L;
-                            cg.field_j = cg.field_j - 1;
+                            kw.campaignPacketWord0 = kw.campaignPacketWord0 + wr.campaignPacketWord3;
+                            cg.campaignPacketWord2 = cg.campaignPacketWord2 - 1;
                           }
                         } else {
-                          cg.field_j = cg.field_j + 1;
-                          kw.field_R = kw.field_R - wr.field_L;
+                          cg.campaignPacketWord2 = cg.campaignPacketWord2 + 1;
+                          kw.campaignPacketWord0 = kw.campaignPacketWord0 - wr.campaignPacketWord3;
                         }
                       } else {
-                        ii.field_b = ii.field_b + cg.field_j;
-                        wr.field_L = wr.field_L + 1;
+                        ii.campaignPacketWord1 = ii.campaignPacketWord1 + cg.campaignPacketWord2;
+                        wr.campaignPacketWord3 = wr.campaignPacketWord3 + 1;
                       }
                     } else {
-                      kw.field_R = kw.field_R + iu.field_t;
-                      ii.field_b = ii.field_b + iu.field_t;
+                      kw.campaignPacketWord0 = kw.campaignPacketWord0 + iu.field_t;
+                      ii.campaignPacketWord1 = ii.campaignPacketWord1 + iu.field_t;
                     }
                   }
                 }
               }
             }
-            pg.playerProfile.campaignProgress.setResult(65535, var7, param5, var6_int, param1);
+            pg.playerProfile.campaignProgress.setResult(65535, missionId, turnsTaken, campaignIndex, damageTaken);
             vl.outgoingPacket.writeCipheredOpcode(32161, 79);
-            vl.outgoingPacket.writeByte(param0 - 3, var6_int);
-            vl.outgoingPacket.writeByte(1, var7);
-            vl.outgoingPacket.writeShort(true, param4);
-            vl.outgoingPacket.writeShort(true, param5);
-            vl.outgoingPacket.writeShort(true, param1);
+            vl.outgoingPacket.writeByte(obfuscationGuard - 3, campaignIndex);
+            vl.outgoingPacket.writeByte(1, missionId);
+            vl.outgoingPacket.writeShort(true, candidateScore);
+            vl.outgoingPacket.writeShort(true, turnsTaken);
+            vl.outgoingPacket.writeShort(true, damageTaken);
             stackIn_32_0 = vl.outgoingPacket;
             stackIn_32_1 = 1;
-            if (!param3) {
+            if (!hasLostUnit) {
               stackIn_33_2 = 0;
             } else {
               stackIn_33_2 = 1;
             }
             ((CipherPacketBuffer) (Object) stackIn_32_0).writeByte(stackIn_32_1, stackIn_33_2);
-            vl.outgoingPacket.writeInt((byte) -108, km.a(-59));
-            vl.outgoingPacket.writeInt((byte) -124, oq.a(false));
-            vl.outgoingPacket.writeInt((byte) -59, jr.a(false));
-            vl.outgoingPacket.writeInt((byte) -50, RevivalEvent.g(0));
+            vl.outgoingPacket.writeInt((byte) -108, km.getCampaignPacketWord0(-59));
+            vl.outgoingPacket.writeInt((byte) -124, oq.getCampaignPacketWord1(false));
+            vl.outgoingPacket.writeInt((byte) -59, jr.getCampaignPacketWord2(false));
+            vl.outgoingPacket.writeInt((byte) -50, RevivalEvent.getCampaignPacketWord3(0));
           }
           qh.requestDeleteQuicksave((byte) 27);
-          if (param0 == 4) {
+          if (obfuscationGuard == 4) {
             return;
           }
           ActionSpell.b(true);
@@ -176,13 +176,13 @@ final class ActionSpell extends Spell {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = decompiledCaughtException;
           stackIn_39_0 = var6;
-          stackIn_39_1 = new StringBuilder().append("ra.N(").append(param0).append(',').append(param1).append(',');
-          if (param2 == null) {
+          stackIn_39_1 = new StringBuilder().append("ra.N(").append(obfuscationGuard).append(',').append(damageTaken).append(',');
+          if (mission == null) {
             stackIn_40_2 = "null";
           } else {
             stackIn_40_2 = "{...}";
           }
-          throw ig.addExceptionContext((Throwable) ((Object) stackIn_39_0), ((StringBuilder) (Object) stackIn_39_1).append(stackIn_40_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw ig.addExceptionContext((Throwable) ((Object) stackIn_39_0), ((StringBuilder) (Object) stackIn_39_1).append(stackIn_40_2).append(',').append(hasLostUnit).append(',').append(candidateScore).append(',').append(turnsTaken).append(')').toString());
         }
     }
 
@@ -259,7 +259,7 @@ final class ActionSpell extends Spell {
             return;
           }
           var4 = (CampaignMission) null;
-          ActionSpell.a(112, -111, (CampaignMission) null, true, 116, 78);
+          ActionSpell.submitCampaignResult(112, -111, (CampaignMission) null, true, 116, 78);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -305,7 +305,7 @@ final class ActionSpell extends Spell {
         int var5 = var4.position;
         var4.writeByte(1, param2);
         var4.a(param0, param2 ^ 38359638);
-        var4.e(-var5 + var4.position, 5930);
+        var4.writeByteLengthPrefix(-var5 + var4.position, 5930);
     }
 
     final static int b(boolean param0) {

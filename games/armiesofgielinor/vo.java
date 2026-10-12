@@ -246,21 +246,21 @@ final class vo implements Runnable {
         ef.a(param2, (byte) 46, param3, param6, param4, param0, param5, var7);
     }
 
-    final static void a(boolean param0, int param1, int param2, CampaignMission param3) {
-        int var6 = 0;
-        int var4_int = param3.campaign.campaignIndex;
-        int var5 = param3.missionId;
-        if (param1 != 1) {
+    final static void reportCampaignTurn(boolean isLocalTurn, int obfuscationGuard, int turnsTaken, CampaignMission mission) {
+        int localTurnFlag = 0;
+        int campaignIndex = mission.campaign.campaignIndex;
+        int missionId = mission.missionId;
+        if (obfuscationGuard != 1) {
           field_e = (String) null;
         }
         if (DamageEvent.g(76)) {
           return;
         }
         try {
-          var6 = param0 ? 1 : 0;
-          StateChangeEvent.a((byte) 6, var5 + var4_int * 1000, var6, param2);
+          localTurnFlag = isLocalTurn ? 1 : 0;
+          StateChangeEvent.sendProgressRecord((byte) 6, missionId + campaignIndex * 1000, localTurnFlag, turnsTaken);
         } catch (RuntimeException runtimeException) {
-          throw ig.addExceptionContext((Throwable) ((Object) runtimeException), "vo.E(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) runtimeException), "vo.E(" + isLocalTurn + ',' + obfuscationGuard + ',' + turnsTaken + ',' + (mission != null ? "{...}" : "null") + ')');
         }
     }
 

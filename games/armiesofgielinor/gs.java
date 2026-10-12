@@ -43,7 +43,7 @@ final class gs implements kh {
         if (param1 != -8006) {
           field_b = -111;
         }
-        var2.e(-var3 + var2.position, 5930);
+        var2.writeByteLengthPrefix(-var3 + var2.position, 5930);
     }
 
     final static void a(int param0) {

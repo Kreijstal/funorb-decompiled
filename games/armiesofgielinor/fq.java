@@ -173,7 +173,7 @@ final class fq {
             return stackIn_13_0;
           }
           var5.b(param3, 13851);
-          var5.e(var5.position - var6, 5930);
+          var5.writeByteLengthPrefix(var5.position - var6, 5930);
           stackIn_15_0 = null;
           return (String) (stackIn_15_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

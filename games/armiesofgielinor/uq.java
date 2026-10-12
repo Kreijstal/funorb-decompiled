@@ -102,7 +102,7 @@ abstract class uq extends ms {
               vl.outgoingPacket.position = vl.outgoingPacket.position + 1;
               var9 = vl.outgoingPacket.position;
               fp.a(mu.field_c, cs.field_cb, (byte) 26, vd.field_b, vl.outgoingPacket);
-              vl.outgoingPacket.e(vl.outgoingPacket.position - var9, 5930);
+              vl.outgoingPacket.writeByteLengthPrefix(vl.outgoingPacket.position - var9, 5930);
             }
             hb.$cfr$intArgs$a$e9dea5688aa5(54, -1);
             ov.field_g = cj.field_m;

@@ -27,7 +27,7 @@ final class ot extends dr {
           var6.writeInt((byte) -86, param2.field_t);
           var6.writeInt((byte) -60, param2.field_s);
           var6.b((byte) -39, var4);
-          var6.e(var6.position - var4, 5930);
+          var6.writeByteLengthPrefix(var6.position - var4, 5930);
         } catch (RuntimeException runtimeException) {
           throw ig.addExceptionContext((Throwable) ((Object) runtimeException), "ot.D(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }

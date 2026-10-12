@@ -86,7 +86,7 @@ final class RevivalEvent extends GameEvent {
 
     public static void e(byte param0) {
         if (param0 < 78) {
-          RevivalEvent.g(98);
+          RevivalEvent.getCampaignPacketWord3(98);
           field_B = null;
           return;
         }
@@ -156,11 +156,11 @@ final class RevivalEvent extends GameEvent {
         }
     }
 
-    final static int g(int param0) {
-        if (param0 != 0) {
+    final static int getCampaignPacketWord3(int obfuscationGuard) {
+        if (obfuscationGuard != 0) {
           return 45;
         }
-        return wr.field_L;
+        return wr.campaignPacketWord3;
     }
 
     final void applyToBattlefield(Battlefield battlefield, int obfuscationGuard) {

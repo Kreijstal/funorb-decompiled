@@ -12,12 +12,12 @@ final class jr {
     int field_i;
     static vg field_f;
 
-    final static int a(boolean param0) {
-        if (param0) {
+    final static int getCampaignPacketWord2(boolean obfuscationGuard) {
+        if (obfuscationGuard) {
           field_e = (String) null;
-          return cg.field_j;
+          return cg.campaignPacketWord2;
         }
-        return cg.field_j;
+        return cg.campaignPacketWord2;
     }
 
     final static String a(int param0) {
@@ -46,7 +46,7 @@ final class jr {
         int var6;
         var6 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         if (param2) {
-          jr.a(false);
+          jr.getCampaignPacketWord2(false);
         }
         if (!this.field_a) {
           if (param0 > 0) {

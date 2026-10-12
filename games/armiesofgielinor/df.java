@@ -325,7 +325,7 @@ final class df extends tj implements fb, he {
           String var2 = (String) null;
           df.a((String) null, -20, (kl) null, -114, (String) null);
         }
-        MoveEvent.field_C = new CampaignMenu();
+        MoveEvent.campaignMenu = new CampaignMenu();
         gb.configureTutorialStage(30, 21, 220, 420, 440, 470, new int[]{7}, -121);
         gb.configureTutorialStage(30, 22, 490, 610, 20, 50, new int[]{47}, param0 - 55);
     }

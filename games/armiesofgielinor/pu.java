@@ -207,7 +207,7 @@ final class pu {
             var1.position = var1.position + 1;
             var2 = fieldTemp$0;
             fg.a(param0 ^ 28704, var1);
-            vl.outgoingPacket.e(-var2 + var1.position, param0 - 22774);
+            vl.outgoingPacket.writeByteLengthPrefix(-var2 + var1.position, param0 - 22774);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

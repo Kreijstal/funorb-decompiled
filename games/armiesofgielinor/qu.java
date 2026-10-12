@@ -41,10 +41,10 @@ final class qu extends IntrusiveNode {
           return "Please choose a player, 0-based.";
         }
         var11.battlefield.eliminatePlayer(10001, param0, false);
-        kw.field_R = 2297;
-        cg.field_j = 72584621;
-        wr.field_L = 224;
-        ii.field_b = 4452;
+        kw.campaignPacketWord0 = 2297;
+        cg.campaignPacketWord2 = 72584621;
+        wr.campaignPacketWord3 = 224;
+        ii.campaignPacketWord1 = 4452;
         int var3 = var10.battlefield.playerTurnCounts[var10.field_q];
         int var4 = var10.battlefield.damageTakenByPlayer[var10.field_q];
         hc.field_b = hc.field_b + 1;
@@ -58,23 +58,23 @@ final class qu extends IntrusiveNode {
         int var7 = hc.field_b % 4;
         int var8 = var7;
         if (0 == var8) {
-          kw.field_R = kw.field_R - var6;
-          ii.field_b = ii.field_b - var5;
+          kw.campaignPacketWord0 = kw.campaignPacketWord0 - var6;
+          ii.campaignPacketWord1 = ii.campaignPacketWord1 - var5;
           return "Done.";
         }
         if (var8 != 1) {
           if (var8 == 2) {
-            kw.field_R = kw.field_R + (var5 - var6);
+            kw.campaignPacketWord0 = kw.campaignPacketWord0 + (var5 - var6);
             return "Done.";
           }
           if (var8 != 3) {
             throw new IllegalStateException("");
           }
-          ii.field_b = ii.field_b - (-var6 + var5);
+          ii.campaignPacketWord1 = ii.campaignPacketWord1 - (-var6 + var5);
           return "Done.";
         }
-        ii.field_b = ii.field_b + var6;
-        kw.field_R = kw.field_R + var5;
+        ii.campaignPacketWord1 = ii.campaignPacketWord1 + var6;
+        kw.campaignPacketWord0 = kw.campaignPacketWord0 + var5;
         return "Done.";
     }
 

@@ -16,11 +16,11 @@ final class km {
     private AnimationPlayer field_i;
     static String[] field_j;
 
-    final static int a(int param0) {
-        if (param0 > -46) {
+    final static int getCampaignPacketWord0(int obfuscationGuard) {
+        if (obfuscationGuard > -46) {
           field_j = (String[]) null;
         }
-        return kw.field_R;
+        return kw.campaignPacketWord0;
     }
 
     final static je c(int param0) {
@@ -205,7 +205,7 @@ final class km {
         int var8;
         var8 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         if (param0 != 6) {
-          km.a(52);
+          km.getCampaignPacketWord0(52);
         }
         for (var7 = 0; var7 < 6; var7++) {
           if (20 * var7 < this.field_f) {

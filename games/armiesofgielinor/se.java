@@ -62,7 +62,7 @@ final class se {
           var4 = var5.position;
           var5.writeByte(1, 2);
           var5.b(param0, 13851);
-          var5.e(var5.position - var4, 5930);
+          var5.writeByteLengthPrefix(var5.position - var4, 5930);
           stackIn_22_0 = null;
           return (String) (stackIn_22_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -67,7 +67,7 @@ final class MovementPresentation implements EventPresentation {
           }
           var6.writeByte(1, var8);
           var6.writeBytes(param4, 0, param4.length, 102);
-          var6.e(var6.position - var7, 5930);
+          var6.writeByteLengthPrefix(var6.position - var7, 5930);
         } catch (RuntimeException runtimeException) {
           throw ig.addExceptionContext((Throwable) ((Object) runtimeException), "qv.B(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ')');
         }

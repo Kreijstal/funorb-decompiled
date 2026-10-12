@@ -147,7 +147,7 @@ final class ts {
         var7 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           regionExit1: {
-            l.field_c = mission;
+            l.activeCampaignMission = mission;
             pq.field_f = null;
             var8 = mission.getParticipantNames(-23209);
             var3 = var8;

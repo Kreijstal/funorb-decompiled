@@ -304,7 +304,7 @@ final class DamageEvent extends GameEvent {
           var5 = var9.position;
           var9.writeByte(1, 1);
           var9.b(param0, 13851);
-          var9.e(var9.position - var5, 5930);
+          var9.writeByteLengthPrefix(var9.position - var5, 5930);
           stackIn_17_0 = null;
           return (String) (stackIn_17_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

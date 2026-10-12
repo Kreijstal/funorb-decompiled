@@ -31,7 +31,7 @@ final class DeathEvent extends GameEvent {
           var5.b((byte) -39, var4);
           var5.position = var5.position - 4;
           param0.field_o = var5.readInt(param2 ^ 25523);
-          var5.e(-var4 + var5.position, 5930);
+          var5.writeByteLengthPrefix(-var4 + var5.position, 5930);
           if (param2 == 25522) {
             return;
           }

@@ -80,7 +80,7 @@ final class CampaignMenu {
           var4 = var3.playerSlot;
           var5 = rd.field_j.battlefield.playerTurnCounts[var4];
           if (~var5 < obfuscationGuard) {
-            vo.a(false, 1, var5, var3);
+            vo.reportCampaignTurn(false, 1, var5, var3);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -1470,7 +1470,7 @@ final class CampaignMenu {
             }
             this.rebuildMissionEntries(var2.campaignIndex, 53);
             var3 = ar.getCampaignMission(var2.campaignIndex, var2.missionId, 0);
-            l.field_c = var3;
+            l.activeCampaignMission = var3;
             CipherPacketBuffer.a(true, -11, obfuscationGuard + 1, 0);
             if (ArmiesOfGielinor.obfuscationControl) {
               this.openCampaign(this.selectedCampaignEntry.entryId, true);
@@ -1513,16 +1513,16 @@ final class CampaignMenu {
           if (2 <= hi.field_j &&
             br.field_f[5] &&
             br.field_f[81]) {
-            kw.field_R = 2297;
-            cg.field_j = 72584621;
-            wr.field_L = 224;
-            ii.field_b = 4452;
+            kw.campaignPacketWord0 = 2297;
+            cg.campaignPacketWord2 = 72584621;
+            wr.campaignPacketWord3 = 224;
+            ii.campaignPacketWord1 = 4452;
             var2 = br.getCampaign(this.campaignIndex, (byte) -125).missions;
             var3_int = 0;
             while (true) {
               if (java.lang.reflect.Array.getLength(var2) > var3_int) {
                 var4 = ((Object[]) (var2))[var3_int];
-                ActionSpell.a(4, -1, (CampaignMission) (var4), true, 1, -1);
+                ActionSpell.submitCampaignResult(4, -1, (CampaignMission) (var4), true, 1, -1);
                 var3_int++;
                 if (var7 == 0) {
                   continue;
@@ -1573,10 +1573,10 @@ final class CampaignMenu {
                   if (hi.field_j >= 2) {
                     boolean decompiledSharedTail0 = !(br.field_f[81]);
                     if (!decompiledSharedTail0) {
-                      cg.field_j = 72584621;
-                      ii.field_b = 4452;
-                      wr.field_L = 224;
-                      kw.field_R = 2297;
+                      cg.campaignPacketWord2 = 72584621;
+                      ii.campaignPacketWord1 = 4452;
+                      wr.campaignPacketWord3 = 224;
+                      kw.campaignPacketWord0 = 2297;
                       hc.field_b = hc.field_b + 1;
                       hc.field_b = hc.field_b + (ko.field_b ^ AiPlanningStrategy.field_d);
                       hc.field_b = Math.abs(hc.field_b);
@@ -1587,24 +1587,24 @@ final class CampaignMenu {
                         || var6 == 3
                         ) ? var6 : -1) {
                         case 0:
-                          ii.field_b = ii.field_b - 12;
-                          kw.field_R = kw.field_R - 3;
+                          ii.campaignPacketWord1 = ii.campaignPacketWord1 - 12;
+                          kw.campaignPacketWord0 = kw.campaignPacketWord0 - 3;
                           if (var7 == 0) {
                             break;
                           }
                         case 1:
-                          ii.field_b = ii.field_b + 3;
-                          kw.field_R = kw.field_R + 12;
+                          ii.campaignPacketWord1 = ii.campaignPacketWord1 + 3;
+                          kw.campaignPacketWord0 = kw.campaignPacketWord0 + 12;
                           if (var7 == 0) {
                             break;
                           }
                         case 2:
-                          kw.field_R = kw.field_R + 9;
+                          kw.campaignPacketWord0 = kw.campaignPacketWord0 + 9;
                           if (var7 == 0) {
                             break;
                           }
                         case 3:
-                          ii.field_b = ii.field_b - 9;
+                          ii.campaignPacketWord1 = ii.campaignPacketWord1 - 9;
                           if (var7 == 0) {
                             break;
                           }
@@ -1612,7 +1612,7 @@ final class CampaignMenu {
                           throw new IllegalStateException("");
                       }
                       var5 = b.calculateMissionScore(2, 10, 12, (byte) 25, 3);
-                      ActionSpell.a(4, 12, ((CampaignMenuEntry) (var3)).mission, true, var5, 3);
+                      ActionSpell.submitCampaignResult(4, 12, ((CampaignMenuEntry) (var3)).mission, true, var5, 3);
                       this.openCampaign(((CampaignMenuEntry) (var3)).mission.campaign.campaignIndex, true);
                       System.out.println("m  id " + ((CampaignMenuEntry) (var3)).entryId + " " + ((CampaignMenuEntry) (var3)).title);
                       var4_int = 1;
@@ -1621,7 +1621,7 @@ final class CampaignMenu {
                     if ((decompiledSharedTail0) &&
                       (br.field_f[82])) {
                       var4_int = 1;
-                      ActionSpell.a(4, -1, ((CampaignMenuEntry) (var3)).mission, true, 1, -1);
+                      ActionSpell.submitCampaignResult(4, -1, ((CampaignMenuEntry) (var3)).mission, true, 1, -1);
                       this.openCampaign(((CampaignMenuEntry) (var3)).mission.campaign.campaignIndex, true);
                     }
                   }
@@ -1657,14 +1657,14 @@ final class CampaignMenu {
                   this.field_c.containsPointer((byte) -49)) {
                   var2 = ku.getStoredQuicksave(86);
                   var3 = ar.getCampaignMission(((CampaignQuicksave) (var2)).campaignIndex, ((CampaignQuicksave) (var2)).missionId, 0);
-                  l.field_c = (CampaignMission) (var3);
+                  l.activeCampaignMission = (CampaignMission) (var3);
                   CipherPacketBuffer.a(true, -11, 1, 0);
                 }
                 if (DeployEvent.field_A == 1 &&
                   null != this.field_j &&
                   this.field_j.containsPointer((byte) 121)) {
                   this.resumeQuicksave(-2);
-                  l.field_c = this.selectedMissionEntry.mission;
+                  l.activeCampaignMission = this.selectedMissionEntry.mission;
                   CipherPacketBuffer.a(true, -10, 1, 0);
                 }
                 if (DeployEvent.field_A == 1 &&
@@ -1679,7 +1679,7 @@ final class CampaignMenu {
                   null != this.field_h &&
                   this.field_h.containsPointer((byte) 86)) {
                   this.resumeQuicksave(-2);
-                  l.field_c = this.selectedMissionEntry.mission;
+                  l.activeCampaignMission = this.selectedMissionEntry.mission;
                   CipherPacketBuffer.a(true, -10, 1, 0);
                 }
                 if (DeployEvent.field_A == 1 &&
@@ -1779,7 +1779,7 @@ final class CampaignMenu {
         try {
           var2 = ku.getStoredQuicksave(91);
           if (null == var2) {
-            l.field_c = this.selectedMissionEntry.mission;
+            l.activeCampaignMission = this.selectedMissionEntry.mission;
             CipherPacketBuffer.a(true, -10, 1, 0);
             if (var4 != 0) {
               if (this.selectedMissionEntry.entryId == var2.missionId &&

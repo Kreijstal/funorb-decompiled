@@ -30,11 +30,11 @@ final class oq extends wv {
         return MovementPresentation.field_l;
     }
 
-    final static int a(boolean param0) {
-        if (param0) {
+    final static int getCampaignPacketWord1(boolean obfuscationGuard) {
+        if (obfuscationGuard) {
           return -112;
         }
-        return ii.field_b;
+        return ii.campaignPacketWord1;
     }
 
     final static void a(int param0, java.awt.Component param1) {

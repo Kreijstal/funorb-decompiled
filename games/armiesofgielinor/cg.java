@@ -13,7 +13,7 @@ final class cg {
     static String field_i;
     private int field_f;
     private byte[] field_d;
-    static int field_j;
+    static int campaignPacketWord2;
     static boolean[] field_m;
 
     private final void a(int param0) {

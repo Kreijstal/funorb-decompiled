@@ -47,7 +47,7 @@ final class CampaignRewardPreview {
           vl.outgoingPacket.b(param0, param3 ^ 17460);
           vl.outgoingPacket.writeByte(1, param1);
           vl.outgoingPacket.writeByte(param3 - 29230, param4 ? 1 : 0);
-          vl.outgoingPacket.e(-var7_int + vl.outgoingPacket.position, 5930);
+          vl.outgoingPacket.writeByteLengthPrefix(-var7_int + vl.outgoingPacket.position, 5930);
         } catch (RuntimeException runtimeException) {
           throw ig.addExceptionContext((Throwable) ((Object) runtimeException), "fu.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }

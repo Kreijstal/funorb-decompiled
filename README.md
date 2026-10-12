@@ -33,7 +33,10 @@ also have reviewed names and pixel fixtures; signed-index failures and original
 mask-extraction bounds remain unchanged. CampaignQuicksave adds versioned
 header/chunk names and explicit upload/delete/restore paths; codec probes verify
 wire bytes and guarded deletion without claiming full gameplay restoration.
-Its raw/named core probe checks map lookups, alliances, status packing, damage, equipment/ranges,
+Campaign completion also names score submission, turn records and XOR metric
+checkpoints, with fixtures for score gates and all eight shared-word mutations.
+The four packet-word names describe serialization positions; server semantics
+remain unresolved. Its raw/named core probe checks map lookups, alliances, status packing, damage, equipment/ranges,
 spell payload bytes and queued combat consequences under a controlled headless
 boundary. SpellCastEvent corrects the earlier trinket label from actual spell-table
 dispatch. Candidate selection/recycling and presentation acknowledgement are

@@ -211,7 +211,7 @@ class IntrusiveNode {
           var5.writeInt((byte) -63, param1.field_s);
           var5.writeInt((byte) -109, param1.field_u);
           var5.b((byte) -39, var4);
-          var5.e(-var4 + var5.position, param2 + 5825);
+          var5.writeByteLengthPrefix(-var4 + var5.position, param2 + 5825);
         } catch (RuntimeException runtimeException) {
           throw ig.addExceptionContext((Throwable) ((Object) runtimeException), "tc.OB(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }

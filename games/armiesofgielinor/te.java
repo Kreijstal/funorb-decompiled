@@ -20,7 +20,7 @@ final class te extends IntrusiveNode {
           var5 = var4.position;
           var4.writeByte(1, 7);
           var4.a(param1, 38359632);
-          var4.e(-var5 + var4.position, 5930);
+          var4.writeByteLengthPrefix(-var5 + var4.position, 5930);
           return;
         }
         te.b(-87, -88);
@@ -29,7 +29,7 @@ final class te extends IntrusiveNode {
         var5Lifetime1 = var4.position;
         var4.writeByte(1, 7);
         var4.a(param1, 38359632);
-        var4.e(-var5Lifetime1 + var4.position, 5930);
+        var4.writeByteLengthPrefix(-var5Lifetime1 + var4.position, 5930);
     }
 
     final static String b(int param0, int param1) {

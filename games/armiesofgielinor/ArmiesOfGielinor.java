@@ -322,7 +322,7 @@ public final class ArmiesOfGielinor extends wf {
                     }
                     var10_int++;
                   }
-                  l.field_c = null;
+                  l.activeCampaignMission = null;
                   qa.field_F = false;
                   pq.field_f = null;
                   stackIn_194_0 = null;
@@ -493,7 +493,7 @@ public final class ArmiesOfGielinor extends wf {
                     } else {
                       ((GameplayController) (var2)).field_Gb = 0;
                     }
-                    ((GameplayController) (var2)).d(true);
+                    ((GameplayController) (var2)).prepareMatchResults(true);
                     continue;
                   }
                   if (nm.field_o == 70) {
@@ -948,7 +948,7 @@ public final class ArmiesOfGielinor extends wf {
           }
           if (jt.field_a == -10 ||
             jt.field_a == -11) {
-            stackIn_196_0 = l.field_c;
+            stackIn_196_0 = l.activeCampaignMission;
             stackIn_196_1 = -1;
             if (jt.field_a != -11) {
               stackIn_197_2 = null;
@@ -1799,7 +1799,7 @@ public final class ArmiesOfGielinor extends wf {
         var6 = obfuscationControl ? 1 : 0;
         try {
           boolean decompiledFrameCompleted0 = true;
-          l.field_c = null;
+          l.activeCampaignMission = null;
           pq.field_f = null;
           if (!param0) {
             var3 = new String[r.field_B];

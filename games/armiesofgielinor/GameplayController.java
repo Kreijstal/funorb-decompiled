@@ -45,7 +45,7 @@ final class GameplayController {
     private iu field_s;
     private boolean field_tb;
     NodeDeque eventPresenters;
-    private boolean field_jb;
+    private boolean campaignMode;
     static int field_J;
     int field_hb;
     private boolean field_mb;
@@ -77,7 +77,7 @@ final class GameplayController {
     int field_Gb;
     NodeDeque field_Nb;
     private int field_Zb;
-    private int field_I;
+    private int encodedTurnCheckpoint;
     private int field_Ob;
     private int field_nc;
     private boolean field_bb;
@@ -98,7 +98,7 @@ final class GameplayController {
     dg field_Ib;
     private NodeDeque field_cb;
     private int field_Kb;
-    private int field_G;
+    private int encodedDamageCheckpoint;
     int field_y;
     int field_h;
     private int field_C;
@@ -399,7 +399,7 @@ final class GameplayController {
             if (this.battlefield.currentPlayer == -1) {
               stackIn_33_0 = r.field_J;
             } else {
-              if (l.field_c == null &&
+              if (l.activeCampaignMission == null &&
                 this.field_q > -1 &&
                 ~var2_int == ~this.battlefield.getPlayerTeamIndex(this.field_q, -1)) {
                 stackIn_33_0 = DeployEvent.field_y;
@@ -1428,7 +1428,7 @@ final class GameplayController {
           }
           var2_int = 0;
           var3 = new jr[wp.unitUnlockGroups[0].length - 1];
-          if (l.field_c != null) {
+          if (l.activeCampaignMission != null) {
             var3 = new jr[eb.a((byte) -107, 1 | this.field_Y[0])];
           }
           var4 = 0;
@@ -1436,7 +1436,7 @@ final class GameplayController {
           while (!(decompiledNaturalLoopExit0 = (!(-1 + wp.unitUnlockGroups[0].length > var4)))) {
             var5 = wp.unitUnlockGroups[0][var4];
             if (var7 == 0) {
-              if (l.field_c == null ||
+              if (l.activeCampaignMission == null ||
                 (1 << var4 & this.field_Y[0]) != 0) {
                 if (4 == var5 &&
                   !this.battlefield.kingBlackDragonSummoned) {
@@ -1493,7 +1493,7 @@ final class GameplayController {
         }
     }
 
-    final void d(boolean param0) {
+    final void prepareMatchResults(boolean obfuscationGuard) {
         int stackIn_5_0 = 0;
         int stackIn_15_0 = 0;
         int stackIn_20_0 = 0;
@@ -1503,39 +1503,39 @@ final class GameplayController {
         int stackIn_74_0 = 0;
         int stackIn_74_1 = 0;
         RuntimeException decompiledCaughtException = null;
-        int var2_int = 0;
+        int localTurn = 0;
         RuntimeException var2 = null;
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8_int = 0;
-        NodeDeque var8 = null;
-        int var9_int = 0;
-        Unit var9 = null;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
-        int var13 = 0;
-        int var14 = 0;
+        int turnsTaken = 0;
+        int hasLostUnit = 0;
+        int damageTaken = 0;
+        int candidateScore = 0;
+        int currentDamageThenSpecialUnitCount = 0;
+        int currentTurns = 0;
+        NodeDeque localUnits = null;
+        int previousDamage = 0;
+        Unit unit = null;
+        int previousTurns = 0;
+        int damageDelta = 0;
+        int turnDelta = 0;
+        int mutationSelector = 0;
+        int mutationVariant = 0;
         int var15 = 0;
         var15 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           this.field_j = 0;
           this.field_Sb = 250;
           stackIn_5_0 = (~this.battlefield.currentPlayer != ~this.field_q) ? 0 : 1;
-          var2_int = stackIn_5_0;
-          if (!param0) {
+          localTurn = stackIn_5_0;
+          if (!obfuscationGuard) {
             this.field_db = -124;
           }
-          if (null != l.field_c) {
-            stackIn_15_0 = (~l.field_c.playerSlot != ~this.battlefield.currentPlayer) ? 0 : 1;
-            var2_int = stackIn_15_0;
+          if (null != l.activeCampaignMission) {
+            stackIn_15_0 = (~l.activeCampaignMission.playerSlot != ~this.battlefield.currentPlayer) ? 0 : 1;
+            localTurn = stackIn_15_0;
           }
           stackIn_20_0 = -16147;
           stackIn_20_1 = 50;
-          if (var2_int == 0 &&
+          if (localTurn == 0 &&
             -1 != this.field_q) {
             stackIn_23_2 = se.field_h;
           } else {
@@ -1543,76 +1543,76 @@ final class GameplayController {
           }
           TrianglePulse.a(stackIn_20_0, stackIn_20_1, stackIn_23_2, false);
           this.field_s = null;
-          if (l.field_c != null) {
-            var3 = this.battlefield.playerTurnCounts[l.field_c.playerSlot];
-            vo.a(var2_int != 0, 1, var3, l.field_c);
-            if (var2_int != 0) {
-              stackIn_31_0 = (this.battlefield.unitLossCounts[l.field_c.playerSlot] <= 0) ? 0 : 1;
-              var4 = stackIn_31_0;
-              var5 = this.battlefield.damageTakenByPlayer[l.field_c.playerSlot];
-              var6 = b.calculateMissionScore(l.field_c.scoreTurnTarget, l.field_c.scoreDamageTarget, var5, (byte) 25, var3);
-              var7 = var5;
-              var8_int = var3;
-              var9_int = 996394 ^ this.field_G;
-              var10 = this.field_I ^ 996394;
+          if (l.activeCampaignMission != null) {
+            turnsTaken = this.battlefield.playerTurnCounts[l.activeCampaignMission.playerSlot];
+            vo.reportCampaignTurn(localTurn != 0, 1, turnsTaken, l.activeCampaignMission);
+            if (localTurn != 0) {
+              stackIn_31_0 = (this.battlefield.unitLossCounts[l.activeCampaignMission.playerSlot] <= 0) ? 0 : 1;
+              hasLostUnit = stackIn_31_0;
+              damageTaken = this.battlefield.damageTakenByPlayer[l.activeCampaignMission.playerSlot];
+              candidateScore = b.calculateMissionScore(l.activeCampaignMission.scoreTurnTarget, l.activeCampaignMission.scoreDamageTarget, damageTaken, (byte) 25, turnsTaken);
+              currentDamageThenSpecialUnitCount = damageTaken;
+              currentTurns = turnsTaken;
+              previousDamage = 996394 ^ this.encodedDamageCheckpoint;
+              previousTurns = this.encodedTurnCheckpoint ^ 996394;
               hc.field_b = hc.field_b + 1;
               hc.field_b = hc.field_b + (AiPlanningStrategy.field_d ^ ko.field_b);
               hc.field_b = Math.abs(hc.field_b);
-              var11 = -var9_int + var7;
-              var12 = -var10 + var8_int;
-              var13 = hc.field_b % 4;
-              var14 = var13;
+              damageDelta = -previousDamage + currentDamageThenSpecialUnitCount;
+              turnDelta = -previousTurns + currentTurns;
+              mutationSelector = hc.field_b % 4;
+              mutationVariant = mutationSelector;
               switch ((var15 == 0
-                || var14 == 0
-                || var14 == 2
-                || var14 == 3
-                ) ? var14 : -1) {
+                || mutationVariant == 0
+                || mutationVariant == 2
+                || mutationVariant == 3
+                ) ? mutationVariant : -1) {
                 case 0:
-                  kw.field_R = kw.field_R - var12;
-                  ii.field_b = ii.field_b - var11;
+                  kw.campaignPacketWord0 = kw.campaignPacketWord0 - turnDelta;
+                  ii.campaignPacketWord1 = ii.campaignPacketWord1 - damageDelta;
                   if (var15 == 0) {
                     break;
                   }
                 case 1:
-                  ii.field_b = ii.field_b + var12;
-                  kw.field_R = kw.field_R + var11;
+                  ii.campaignPacketWord1 = ii.campaignPacketWord1 + turnDelta;
+                  kw.campaignPacketWord0 = kw.campaignPacketWord0 + damageDelta;
                   if (var15 == 0) {
                     break;
                   }
                 case 2:
-                  kw.field_R = kw.field_R + (-var12 + var11);
+                  kw.campaignPacketWord0 = kw.campaignPacketWord0 + (-turnDelta + damageDelta);
                   if (var15 == 0) {
                     break;
                   }
                 case 3:
-                  ii.field_b = ii.field_b - (var11 - var12);
+                  ii.campaignPacketWord1 = ii.campaignPacketWord1 - (damageDelta - turnDelta);
                   if (var15 == 0) {
                     break;
                   }
                 default:
                   throw new IllegalStateException("");
               }
-              ActionSpell.a(4, var5, l.field_c, var4 != 0, var6, var3);
-              if (1 == l.field_c.campaign.campaignIndex &&
-                l.field_c.missionId == 3) {
-                var7 = 0;
-                var8 = this.battlefield.unitsByPlayer[l.field_c.playerSlot];
-                var9 = (Unit) (var8.first((byte) 106));
+              ActionSpell.submitCampaignResult(4, damageTaken, l.activeCampaignMission, hasLostUnit != 0, candidateScore, turnsTaken);
+              if (1 == l.activeCampaignMission.campaign.campaignIndex &&
+                l.activeCampaignMission.missionId == 3) {
+                currentDamageThenSpecialUnitCount = 0;
+                localUnits = this.battlefield.unitsByPlayer[l.activeCampaignMission.playerSlot];
+                unit = (Unit) (localUnits.first((byte) 106));
                 boolean decompiledNaturalLoopExit0 = false;
-                while (!(decompiledNaturalLoopExit0 = (null == var9))) {
+                while (!(decompiledNaturalLoopExit0 = (null == unit))) {
                   stackIn_74_0 = -34;
-                  stackIn_74_1 = ~var9.unitType;
+                  stackIn_74_1 = ~unit.unitType;
                   if (var15 == 0) {
                     if (stackIn_74_0 == stackIn_74_1) {
-                      var7++;
+                      currentDamageThenSpecialUnitCount++;
                     }
-                    var9 = (Unit) (var8.next((byte) 123));
+                    unit = (Unit) (localUnits.next((byte) 123));
                     continue;
                   }
                   break;
                 }
                 if (decompiledNaturalLoopExit0) {
-                  stackIn_74_0 = ~var7;
+                  stackIn_74_0 = ~currentDamageThenSpecialUnitCount;
                   stackIn_74_1 = -4;
                 }
                 if (stackIn_74_0 > stackIn_74_1) {
@@ -1627,7 +1627,7 @@ final class GameplayController {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ig.addExceptionContext((Throwable) ((Object) var2), "ic.I(" + param0 + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) var2), "ic.I(" + obfuscationGuard + ')');
         }
     }
 
@@ -2231,7 +2231,7 @@ final class GameplayController {
           if (mu.field_a == null &&
             0 >= this.field_j &&
             this.field_Sb <= 0) {
-            this.j(param0);
+            this.trackCampaignMetrics(param0);
             if (this.field_V) {
               stackIn_19_0 = -1;
               return stackIn_19_0;
@@ -2267,7 +2267,7 @@ final class GameplayController {
               var7 = rs.field_k;
               var8_ref_String = IntrusiveNode.field_g;
               if (!this.field_lb) {
-                if (null != l.field_c) {
+                if (null != l.activeCampaignMission) {
                   stackIn_60_0 = pv.field_d;
                 } else {
                   stackIn_60_0 = vq.field_f;
@@ -3549,7 +3549,7 @@ final class GameplayController {
             this.movementPlanner = new MovementPlanner(this.battlefield);
           }
           boolean decompiledFrameRemainder4 = true;
-          this.j(true);
+          this.trackCampaignMetrics(true);
           if (this.battlefield.field_X) {
             this.k(true);
             decompiledFrameRemainder4 = (var10 != 0);
@@ -3809,13 +3809,13 @@ final class GameplayController {
                     (decompiledFrameCompleted0)) {
                     this.field_Q = ((GameEvent) (var3)).a(this.eventPresenters, (byte) -127, this);
                     this.field_O = this.a(false, (GameEvent) (var3));
-                    if (l.field_c != null && (((GameEvent) (var3)).eventKind == 0 ||
+                    if (l.activeCampaignMission != null && (((GameEvent) (var3)).eventKind == 0 ||
                       ((GameEvent) (var3)).eventKind == 21 ||
                       ((GameEvent) (var3)).eventKind == 27 ||
                       8 == ((GameEvent) (var3)).eventKind)) {
                       var4_ref_jd = ((GameEvent) (var3)).unit;
                       if (var4_ref_jd != null &&
-                        var4_ref_jd.ownerPlayer == l.field_c.playerSlot) {
+                        var4_ref_jd.ownerPlayer == l.activeCampaignMission.playerSlot) {
                         this.field_a = true;
                       }
                     }
@@ -3941,7 +3941,7 @@ final class GameplayController {
             if (!decompiledSharedTail1) {
               this.battlefield.updateMatchOutcome(1);
               this.battlefield.applyMatchOutcome(this.battlefield.winnerCount, true, this.battlefield.rankedParticipants);
-              this.d(true);
+              this.prepareMatchResults(true);
               decompiledSharedTail1 = (var10 != 0);
             }
             if ((decompiledSharedTail1) && (!this.field_lb &&
@@ -5257,7 +5257,7 @@ final class GameplayController {
           if (rs.field_q == 13 &&
             mu.field_a == null) {
             var2_int = 1;
-            if (this.field_jb) {
+            if (this.campaignMode) {
               var2_int = 24;
             }
             if (this.field_lb) {
@@ -7527,7 +7527,7 @@ final class GameplayController {
               var3_int = se.field_a - 40;
               var4_ref_String = IntrusiveNode.field_g;
               if (!this.field_lb) {
-                if (null != l.field_c) {
+                if (null != l.activeCampaignMission) {
                   stackIn_25_0 = pv.field_d;
                 } else {
                   stackIn_25_0 = vq.field_f;
@@ -8167,7 +8167,7 @@ final class GameplayController {
           if (var7Lifetime1 != 0) {
             var8Lifetime2 = iu.field_t;
             var9Lifetime1 = TeleportAction.field_z;
-            this.j(true);
+            this.trackCampaignMetrics(true);
             if (this.field_V) {
               this.field_j = 0;
               this.field_V = false;
@@ -8746,7 +8746,7 @@ final class GameplayController {
             }
           }
           if (DeployEvent.field_A == 2) {
-            this.j(true);
+            this.trackCampaignMetrics(true);
             this.field_U = TeleportAction.field_z;
             this.field_t = iu.field_t;
           }
@@ -9309,94 +9309,94 @@ final class GameplayController {
         }
     }
 
-    final void j(boolean param0) {
+    final void trackCampaignMetrics(boolean obfuscationGuard) {
         RuntimeException decompiledCaughtException = null;
-        int var2_int = 0;
+        int damageTaken = 0;
         RuntimeException var2 = null;
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
-        int var13 = 0;
+        int turnsTaken = 0;
+        int previousDamage = 0;
+        int previousTurns = 0;
+        int currentDamageThenMutationSelector = 0;
+        int currentTurnsThenMutationVariant = 0;
+        int damageCheckpoint = 0;
+        int turnCheckpoint = 0;
+        int damageDelta = 0;
+        int turnDelta = 0;
+        int deltaMutationSelector = 0;
+        int deltaMutationVariant = 0;
         int var14 = 0;
         var14 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          var2_int = 0;
-          if (!param0) {
+          damageTaken = 0;
+          if (!obfuscationGuard) {
             return;
           }
-          var3 = 0;
-          if (this.field_jb) {
+          turnsTaken = 0;
+          if (this.campaignMode) {
             boolean decompiledFrameRemainder5 = true;
-            var3 = this.battlefield.playerTurnCounts[l.field_c.playerSlot];
-            var2_int = this.battlefield.damageTakenByPlayer[l.field_c.playerSlot];
-            var4 = this.field_G ^ 996394;
-            var5 = 996394 ^ this.field_I;
-            if (var5 != var3 ||
-              ~var4 != ~var2_int) {
-              if (var4 <= var2_int &&
-                var5 <= var3) {
+            turnsTaken = this.battlefield.playerTurnCounts[l.activeCampaignMission.playerSlot];
+            damageTaken = this.battlefield.damageTakenByPlayer[l.activeCampaignMission.playerSlot];
+            previousDamage = this.encodedDamageCheckpoint ^ 996394;
+            previousTurns = 996394 ^ this.encodedTurnCheckpoint;
+            if (previousTurns != turnsTaken ||
+              ~previousDamage != ~damageTaken) {
+              if (previousDamage <= damageTaken &&
+                previousTurns <= turnsTaken) {
                 boolean decompiledFrameRemainder4 = true;
                 boolean decompiledFrameRemainder3 = true;
                 boolean decompiledFrameRemainder2 = true;
                 boolean decompiledFrameRemainder1 = true;
                 boolean decompiledFrameRemainder0 = true;
-                var6 = var2_int;
-                var7 = var3;
-                var8 = var4;
-                var9 = var5;
+                currentDamageThenMutationSelector = damageTaken;
+                currentTurnsThenMutationVariant = turnsTaken;
+                damageCheckpoint = previousDamage;
+                turnCheckpoint = previousTurns;
                 hc.field_b = hc.field_b + 1;
                 hc.field_b = hc.field_b + (ko.field_b ^ AiPlanningStrategy.field_d);
                 hc.field_b = Math.abs(hc.field_b);
-                var10 = -var8 + var6;
-                var11 = -var9 + var7;
-                var12 = hc.field_b % 4;
-                var13 = var12;
-                if ((var13 != 0 ||
+                damageDelta = -damageCheckpoint + currentDamageThenMutationSelector;
+                turnDelta = -turnCheckpoint + currentTurnsThenMutationVariant;
+                deltaMutationSelector = hc.field_b % 4;
+                deltaMutationVariant = deltaMutationSelector;
+                if ((deltaMutationVariant != 0 ||
                   var14 != 0) &&
-                  (decompiledFrameRemainder0 = (var13 != 1 ||
+                  (decompiledFrameRemainder0 = (deltaMutationVariant != 1 ||
                   var14 != 0)) &&
-                  (decompiledFrameRemainder1 = (2 != var13 ||
+                  (decompiledFrameRemainder1 = (2 != deltaMutationVariant ||
                   var14 != 0)) &&
-                  (decompiledFrameRemainder4 = (var13 == 3))) {
+                  (decompiledFrameRemainder4 = (deltaMutationVariant == 3))) {
                   decompiledFrameRemainder2 = (var14 != 0);
                 }
                 if ((decompiledFrameRemainder4) &&
                   (decompiledFrameRemainder2) &&
                   (decompiledFrameRemainder1) &&
                   (decompiledFrameRemainder0)) {
-                  ii.field_b = ii.field_b - var10;
-                  kw.field_R = kw.field_R - var11;
+                  ii.campaignPacketWord1 = ii.campaignPacketWord1 - damageDelta;
+                  kw.campaignPacketWord0 = kw.campaignPacketWord0 - turnDelta;
                   decompiledFrameRemainder3 = (var14 != 0);
                 }
                 if ((decompiledFrameRemainder4) &&
                   (decompiledFrameRemainder3) &&
                   (decompiledFrameRemainder2) &&
                   (decompiledFrameRemainder1)) {
-                  kw.field_R = kw.field_R + var10;
-                  ii.field_b = ii.field_b + var11;
+                  kw.campaignPacketWord0 = kw.campaignPacketWord0 + damageDelta;
+                  ii.campaignPacketWord1 = ii.campaignPacketWord1 + turnDelta;
                   decompiledFrameRemainder3 = (var14 != 0);
                 }
                 if ((decompiledFrameRemainder4) &&
                   (decompiledFrameRemainder3) &&
                   (decompiledFrameRemainder2)) {
-                  kw.field_R = kw.field_R + (-var11 + var10);
+                  kw.campaignPacketWord0 = kw.campaignPacketWord0 + (-turnDelta + damageDelta);
                   decompiledFrameRemainder3 = (var14 != 0);
                 }
                 if ((decompiledFrameRemainder4) &&
                   (decompiledFrameRemainder3)) {
-                  ii.field_b = ii.field_b - (var10 - var11);
+                  ii.campaignPacketWord1 = ii.campaignPacketWord1 - (damageDelta - turnDelta);
                   decompiledFrameRemainder4 = (var14 == 0);
                 }
                 if (decompiledFrameRemainder4) {
-                  this.field_G = 996394 ^ var2_int;
-                  this.field_I = var3 ^ 996394;
+                  this.encodedDamageCheckpoint = 996394 ^ damageTaken;
+                  this.encodedTurnCheckpoint = turnsTaken ^ 996394;
                   decompiledFrameRemainder5 = false;
                 }
                 if (decompiledFrameRemainder5) {
@@ -9410,60 +9410,60 @@ final class GameplayController {
             hc.field_b = hc.field_b + 1;
             hc.field_b = hc.field_b + (ko.field_b ^ AiPlanningStrategy.field_d);
             hc.field_b = Math.abs(hc.field_b);
-            var6 = hc.field_b % 8;
-            var7 = var6;
+            currentDamageThenMutationSelector = hc.field_b % 8;
+            currentTurnsThenMutationVariant = currentDamageThenMutationSelector;
             switch ((var14 == 0
-              || var7 == 0
-              || var7 == 1
-              || var7 == 3
-              || var7 == 4
-              || var7 == 7
-              ) ? var7 : -1) {
+              || currentTurnsThenMutationVariant == 0
+              || currentTurnsThenMutationVariant == 1
+              || currentTurnsThenMutationVariant == 3
+              || currentTurnsThenMutationVariant == 4
+              || currentTurnsThenMutationVariant == 7
+              ) ? currentTurnsThenMutationVariant : -1) {
               case 0:
-                kw.field_R = kw.field_R - wr.field_L;
-                cg.field_j = cg.field_j + 1;
+                kw.campaignPacketWord0 = kw.campaignPacketWord0 - wr.campaignPacketWord3;
+                cg.campaignPacketWord2 = cg.campaignPacketWord2 + 1;
                 if (var14 == 0) {
                   return;
                 }
               case 1:
-                wr.field_L = wr.field_L + 1;
-                ii.field_b = ii.field_b + cg.field_j;
+                wr.campaignPacketWord3 = wr.campaignPacketWord3 + 1;
+                ii.campaignPacketWord1 = ii.campaignPacketWord1 + cg.campaignPacketWord2;
                 if (var14 == 0) {
                   return;
                 }
               case 2:
-                ii.field_b = ii.field_b + 1;
-                kw.field_R = kw.field_R + 1;
+                ii.campaignPacketWord1 = ii.campaignPacketWord1 + 1;
+                kw.campaignPacketWord0 = kw.campaignPacketWord0 + 1;
                 if (var14 == 0) {
                   return;
                 }
               case 3:
-                ii.field_b = ii.field_b + iu.field_t;
-                kw.field_R = kw.field_R + iu.field_t;
+                ii.campaignPacketWord1 = ii.campaignPacketWord1 + iu.field_t;
+                kw.campaignPacketWord0 = kw.campaignPacketWord0 + iu.field_t;
                 if (var14 == 0) {
                   return;
                 }
               case 4:
-                wr.field_L = wr.field_L + 1;
-                ii.field_b = ii.field_b + cg.field_j;
+                wr.campaignPacketWord3 = wr.campaignPacketWord3 + 1;
+                ii.campaignPacketWord1 = ii.campaignPacketWord1 + cg.campaignPacketWord2;
                 if (var14 == 0) {
                   return;
                 }
               case 5:
-                kw.field_R = kw.field_R - wr.field_L;
-                cg.field_j = cg.field_j + 1;
+                kw.campaignPacketWord0 = kw.campaignPacketWord0 - wr.campaignPacketWord3;
+                cg.campaignPacketWord2 = cg.campaignPacketWord2 + 1;
                 if (var14 == 0) {
                   return;
                 }
               case 6:
-                kw.field_R = kw.field_R + wr.field_L;
-                cg.field_j = cg.field_j - 1;
+                kw.campaignPacketWord0 = kw.campaignPacketWord0 + wr.campaignPacketWord3;
+                cg.campaignPacketWord2 = cg.campaignPacketWord2 - 1;
                 if (var14 == 0) {
                   return;
                 }
               case 7:
-                ii.field_b = ii.field_b - cg.field_j;
-                wr.field_L = wr.field_L - 1;
+                ii.campaignPacketWord1 = ii.campaignPacketWord1 - cg.campaignPacketWord2;
+                wr.campaignPacketWord3 = wr.campaignPacketWord3 - 1;
                 if (var14 == 0) {
                   return;
                 }
@@ -9476,7 +9476,7 @@ final class GameplayController {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ig.addExceptionContext((Throwable) ((Object) var2), "ic.MB(" + param0 + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) var2), "ic.MB(" + obfuscationGuard + ')');
         }
     }
 
@@ -11992,7 +11992,7 @@ final class GameplayController {
           boolean decompiledFrameRemainder0 = true;
           this.field_s = null;
           if (!this.field_lb) {
-            if (l.field_c == null) {
+            if (l.activeCampaignMission == null) {
               var3_int = 0;
               if (!DamageEvent.g(124)) {
                 stackIn_12_0 = (this.field_Yb != 2) ? var3_int : 18;
@@ -12035,11 +12035,11 @@ final class GameplayController {
                 qh.requestDeleteQuicksave((byte) 27);
                 decompiledSharedTail0 = (var6 != 0);
               }
-              if ((decompiledSharedTail0) && (this.battlefield.currentPlayer == l.field_c.playerSlot &&
+              if ((decompiledSharedTail0) && (this.battlefield.currentPlayer == l.activeCampaignMission.playerSlot &&
                 this.field_a)) {
                 this.saveCampaignQuicksave((byte) -79);
               }
-              MoveEvent.field_C.openCampaign(l.field_c.campaign.campaignIndex, true);
+              MoveEvent.campaignMenu.openCampaign(l.activeCampaignMission.campaign.campaignIndex, true);
             }
           }
           du.field_h = false;
@@ -12187,15 +12187,15 @@ final class GameplayController {
         this.movementPlanner = null;
         try {
           vv.field_b = new Random(vi.b(95));
-          this.field_G = 996394;
+          this.encodedDamageCheckpoint = 996394;
           stackIn_4_1 = !(hi.field_j < 2);
           this.field_E = stackIn_4_1;
           pc.field_j = null;
-          this.field_I = 996394;
-          ii.field_b = 4452;
-          kw.field_R = 2297;
-          cg.field_j = 72584621;
-          wr.field_L = 224;
+          this.encodedTurnCheckpoint = 996394;
+          ii.campaignPacketWord1 = 4452;
+          kw.campaignPacketWord0 = 2297;
+          cg.campaignPacketWord2 = 72584621;
+          wr.campaignPacketWord3 = 224;
           this.field_Ub = new NodeDeque();
           this.field_o = new NodeDeque();
           this.field_Nb = new NodeDeque();
@@ -12239,7 +12239,7 @@ final class GameplayController {
           AnimationSequence.b(-8);
           var17 = 1.0f;
           if (param13 != null) {
-            this.field_jb = true;
+            this.campaignMode = true;
             ml.a(param13, (byte) -26);
             var16 = new int[param2.length][7];
             var15_array = new int[param2.length][];
@@ -12364,7 +12364,7 @@ final class GameplayController {
               this.movementPlanner = new MovementPlanner(this.battlefield);
             }
             this.field_v = new sj(ce.field_O[this.battlefield.field_ib]);
-            if (l.field_c != null) {
+            if (l.activeCampaignMission != null) {
               this.f(true);
               this.field_V = true;
               this.battlefield.applyTurnChange(true, 0, 0);
@@ -12546,8 +12546,8 @@ final class GameplayController {
                 } else {
                   this.field_s = new iu(this, 4);
                 }
-                if (l.field_c.musicId != -1) {
-                  this.field_d = fh.field_b[l.field_c.musicId];
+                if (l.activeCampaignMission.musicId != -1) {
+                  this.field_d = fh.field_b[l.activeCampaignMission.musicId];
                 }
                 if (var26 == 0) {
                   decompiledFrameCompleted1 = false;

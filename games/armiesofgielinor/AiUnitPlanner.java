@@ -524,7 +524,7 @@ final class AiUnitPlanner extends IntrusiveNode {
         int var4 = (vu.field_M.field_ac << 6) + vu.field_M.field_Tb;
         var2.writeByte(1, var4);
         var2.writeBytes(vu.field_M.field_pc, 0, vu.field_M.field_pc.length, -38);
-        var2.e(var2.position - var3, param0 ^ 5935);
+        var2.writeByteLengthPrefix(var2.position - var3, param0 ^ 5935);
     }
 
     public static void a(int param0) {

@@ -7,7 +7,7 @@ final class MoveEvent extends GameEvent {
     static RgbSprite field_z;
     static int[][] tutorialStageItems;
     int[] pathDirections;
-    static CampaignMenu field_C;
+    static CampaignMenu campaignMenu;
     static InstructionsPanel instructionsPanel;
     static TutorialLayout tutorialLayout;
     int startY;
@@ -478,7 +478,7 @@ final class MoveEvent extends GameEvent {
           if (param0 != 29333) {
             MoveEvent.g(-45);
           }
-          field_C = null;
+          campaignMenu = null;
           tutorialLayout = null;
           tutorialStageItems = (int[][]) null;
           return;

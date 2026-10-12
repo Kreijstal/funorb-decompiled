@@ -170,7 +170,7 @@ final class StateChangeEvent extends GameEvent {
             }
           }
           if (param1 >= -84) {
-            StateChangeEvent.a((byte) -37, 26, -64, -50);
+            StateChangeEvent.sendProgressRecord((byte) -37, 26, -64, -50);
           }
           this.applyToBattlefield(param2.battlefield, -26661);
           stackIn_104_0 = var4_int;
@@ -340,7 +340,7 @@ final class StateChangeEvent extends GameEvent {
         }
     }
 
-    final static void a(byte param0, int param1, int param2, int param3) {
+    final static void sendProgressRecord(byte obfuscationGuard, int recordId, int flag, int counter) {
         if (DamageEvent.g(98)) {
           return;
         }
@@ -348,14 +348,14 @@ final class StateChangeEvent extends GameEvent {
         var4.writeCipheredOpcode(32161, 16);
         var4.position = var4.position + 1;
         int var5 = var4.position;
-        var4.writeByte(param0 ^ 7, 0);
-        var4.writeShort(true, param1);
-        var4.writeByte(1, param2);
-        var4.writeShort(true, param3);
-        if (param0 != 6) {
+        var4.writeByte(obfuscationGuard ^ 7, 0);
+        var4.writeShort(true, recordId);
+        var4.writeByte(1, flag);
+        var4.writeShort(true, counter);
+        if (obfuscationGuard != 6) {
           StateChangeEvent.a(-60, -103, 22, 28, -21);
         }
-        var4.e(-var5 + var4.position, 5930);
+        var4.writeByteLengthPrefix(-var5 + var4.position, 5930);
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4) {
