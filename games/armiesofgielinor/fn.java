@@ -407,7 +407,7 @@ class fn extends fw {
                 if (255 < var14) {
                   var14 = 255;
                 }
-                param3.pixels[var4_int] = oe.c(oe.c(var12, var13), var14);
+                param3.pixels[var4_int] = oe.bitwiseOr(oe.bitwiseOr(var12, var13), var14);
               }
               var4_int++;
             }

@@ -216,7 +216,7 @@ abstract class vf {
           }
           if ((decompiledFrameRemainder1) &&
             (decompiledFrameRemainder0)) {
-            CoatOfArms.field_d[var7 / 8] = (byte)oe.c((int) CoatOfArms.field_d[var7 / 8], 1 << var7 % 8);
+            CoatOfArms.field_d[var7 / 8] = (byte)oe.bitwiseOr((int) CoatOfArms.field_d[var7 / 8], 1 << var7 % 8);
           }
           if (decompiledFrameRemainder1) {
             stackIn_64_0 = (param1) ? -1 : 0;
@@ -242,7 +242,7 @@ abstract class vf {
                         CoatOfArms.field_d[var9] = (byte) 0;
                       }
                     } else {
-                      CoatOfArms.field_d[var7 / 8] = (byte)GrowthEvent.b((int) CoatOfArms.field_d[var7 / 8], 1 << rn.a(var7, 7));
+                      CoatOfArms.field_d[var7 / 8] = (byte)GrowthEvent.bitwiseXor((int) CoatOfArms.field_d[var7 / 8], 1 << rn.bitwiseAnd(var7, 7));
                     }
                   }
                 }
@@ -461,16 +461,16 @@ abstract class vf {
                 } else {
                   if (var9 == -1) {
                     for (var18 = var6Lifetime3; var18 < var30.length + var6Lifetime3 - 1; var18++) {
-                      ClientContextMenu.field_d[var18 / 8] = (byte)rn.a((int) ClientContextMenu.field_d[var18 / 8], ~(1 << rn.a(7, var18)));
+                      ClientContextMenu.field_d[var18 / 8] = (byte)rn.bitwiseAnd((int) ClientContextMenu.field_d[var18 / 8], ~(1 << rn.bitwiseAnd(7, var18)));
                     }
                   } else {
-                    ClientContextMenu.field_d[(var6Lifetime3 + var9) / 8] = (byte)GrowthEvent.b((int) ClientContextMenu.field_d[(var6Lifetime3 + var9) / 8], 1 << rn.a(var9 + var6Lifetime3, 7));
+                    ClientContextMenu.field_d[(var6Lifetime3 + var9) / 8] = (byte)GrowthEvent.bitwiseXor((int) ClientContextMenu.field_d[(var6Lifetime3 + var9) / 8], 1 << rn.bitwiseAnd(var9 + var6Lifetime3, 7));
                   }
                 }
               }
               if (param1 &&
                 var16Lifetime1 != 0) {
-                ClientContextMenu.field_d[(var6Lifetime3 + var9) / 8] = (byte)rn.a((int) ClientContextMenu.field_d[(var6Lifetime3 + var9) / 8], ~(1 << rn.a(var9 + var6Lifetime3, 7)));
+                ClientContextMenu.field_d[(var6Lifetime3 + var9) / 8] = (byte)rn.bitwiseAnd((int) ClientContextMenu.field_d[(var6Lifetime3 + var9) / 8], ~(1 << rn.bitwiseAnd(var9 + var6Lifetime3, 7)));
               }
               if (var9 >= 0 &&
                 var17.hovered) {

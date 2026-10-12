@@ -376,7 +376,7 @@ final class AiInfluenceMap {
               for (var8 = this.minimumX; this.maximumX >= var8; var8++) {
                 var9 = 2147483647;
                 if (var8 > 0) {
-                  var10 = this.packedCosts[-1 + var12] + SpellCastEvent.a(this.mapWidth, this.tiles, false, var12, param0.ownerPlayer, this.mapHeight, -1, param0, var12 - 1, false, true);
+                  var10 = this.packedCosts[-1 + var12] + SpellCastEvent.computeMovementStepCost(this.mapWidth, this.tiles, false, var12, param0.ownerPlayer, this.mapHeight, -1, param0, var12 - 1, false, true);
                   if (var3_intLifetime1 < (65535 & var10)) {
                     var10 = -var3_intLifetime1 + (((var10 >> 16) + 1 << 16) + (65535 & var10));
                   }
@@ -385,7 +385,7 @@ final class AiInfluenceMap {
                   }
                 }
                 if (var7 > 0) {
-                  var10Lifetime1 = this.packedCosts[var12 - this.mapWidth] + SpellCastEvent.a(this.mapWidth, this.tiles, false, var12, param0.ownerPlayer, this.mapHeight, -1, param0, var12 - this.mapWidth, false, true);
+                  var10Lifetime1 = this.packedCosts[var12 - this.mapWidth] + SpellCastEvent.computeMovementStepCost(this.mapWidth, this.tiles, false, var12, param0.ownerPlayer, this.mapHeight, -1, param0, var12 - this.mapWidth, false, true);
                   if (var3_intLifetime1 < (var10Lifetime1 & 65535)) {
                     var10Lifetime1 = (65535 & var10Lifetime1) + ((1 + (var10Lifetime1 >> 16) << 16) - var3_intLifetime1);
                   }
@@ -394,7 +394,7 @@ final class AiInfluenceMap {
                   }
                 }
                 if (-1 + this.mapWidth > var8) {
-                  var10Lifetime2 = this.packedCosts[1 + var12] + SpellCastEvent.a(this.mapWidth, this.tiles, false, var12, param0.ownerPlayer, this.mapHeight, -1, param0, var12 + 1, false, true);
+                  var10Lifetime2 = this.packedCosts[1 + var12] + SpellCastEvent.computeMovementStepCost(this.mapWidth, this.tiles, false, var12, param0.ownerPlayer, this.mapHeight, -1, param0, var12 + 1, false, true);
                   if ((var10Lifetime2 & 65535) > var3_intLifetime1) {
                     var10Lifetime2 = (1 + (var10Lifetime2 >> 16) << 16) + (var10Lifetime2 & 65535) - var3_intLifetime1;
                   }
@@ -403,7 +403,7 @@ final class AiInfluenceMap {
                   }
                 }
                 if (-1 + this.mapHeight > var7) {
-                  var10Lifetime3 = this.packedCosts[this.mapWidth + var12] + SpellCastEvent.a(this.mapWidth, this.tiles, false, var12, param0.ownerPlayer, this.mapHeight, -1, param0, var12 + this.mapWidth, false, true);
+                  var10Lifetime3 = this.packedCosts[this.mapWidth + var12] + SpellCastEvent.computeMovementStepCost(this.mapWidth, this.tiles, false, var12, param0.ownerPlayer, this.mapHeight, -1, param0, var12 + this.mapWidth, false, true);
                   if ((var10Lifetime3 & 65535) > var3_intLifetime1) {
                     var10Lifetime3 = -var3_intLifetime1 + ((var10Lifetime3 >> 16) + 1 << 16) + (65535 & var10Lifetime3);
                   }

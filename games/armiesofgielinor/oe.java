@@ -182,8 +182,8 @@ final class oe extends ro implements he {
         }
     }
 
-    static int c(int param0, int param1) {
-        return param0 | param1;
+    static int bitwiseOr(int left, int right) {
+        return left | right;
     }
 
     final static void a(byte[] param0, int param1) {

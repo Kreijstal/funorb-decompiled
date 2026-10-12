@@ -243,7 +243,7 @@ final class DropdownSelector extends tj implements he {
               var1 = var5;
               var16 = gu.field_b.field_l;
               for (var3 = 0; var3 < 8; var3++) {
-                var5[var3] = oe.c(var12[var3], var16[var3]);
+                var5[var3] = oe.bitwiseOr(var12[var3], var16[var3]);
               }
               var13 = ReportAbuseDialog.field_Nb;
               var11 = var13;
@@ -253,7 +253,7 @@ final class DropdownSelector extends tj implements he {
               var9 = 0;
               var3Lifetime1 = var9;
               while (var9 < 8) {
-                var7[var9] = rn.a(var13[var9], ~var17[var9]);
+                var7[var9] = rn.bitwiseAnd(var13[var9], ~var17[var9]);
                 var9++;
               }
               gu.field_b = null;

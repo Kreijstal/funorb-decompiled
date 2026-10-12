@@ -60,7 +60,7 @@ final class TurnTimerDial {
                   var8 = var8 + var10;
                   var8 = var8 & -16711936;
                   var9 = var9 & 16711680;
-                  SoftwareRaster.pixels[var5] = oe.c(var9, var8) >>> 8;
+                  SoftwareRaster.pixels[var5] = oe.bitwiseOr(var9, var8) >>> 8;
                 }
               }
               var4++;

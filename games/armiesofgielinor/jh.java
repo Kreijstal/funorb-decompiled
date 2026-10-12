@@ -67,7 +67,7 @@ final class jh extends mk {
                     var9 = param0.readUnsignedByte(0);
                     var10 = new String[var9];
                     for (var11_int = 0; var9 > var11_int; var11_int++) {
-                      var10[var11_int] = param0.readNullTerminatedString(GrowthEvent.b(param3, -2));
+                      var10[var11_int] = param0.readNullTerminatedString(GrowthEvent.bitwiseXor(param3, -2));
                     }
                     var22 = new byte[var9][];
                     var19 = var22;

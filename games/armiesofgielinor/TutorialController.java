@@ -471,7 +471,7 @@ final class TutorialController {
             ud.field_X = new RgbSprite[pc.field_k.length];
             var2_int = 0;
             while (!(pc.field_k.length <= var2_int)) {
-              ud.field_X[var2_int] = DeathEvent.a(ah.localCoat.colourIndices, pc.field_k[var2_int], mv.localAccountName, GrowthEvent.b(param0, -6583));
+              ud.field_X[var2_int] = DeathEvent.a(ah.localCoat.colourIndices, pc.field_k[var2_int], mv.localAccountName, GrowthEvent.bitwiseXor(param0, -6583));
               var2_int++;
               if (var4 != 0) {
                 decompiledFrameCompleted0 = false;
@@ -4034,7 +4034,7 @@ final class TutorialController {
                     stackIn_72_0 = bw.unitDefinitions[AnimationFrameSet.unitUnlockGroups[li.field_q + 1][var2_intLifetime2]][11];
                     if (var8 == 0) {
                       if (stackIn_72_0 == 0) {
-                        pg.playerProfile.unitUnlockMasks[li.field_q] = oe.c(pg.playerProfile.unitUnlockMasks[li.field_q], 1 << var2_intLifetime2);
+                        pg.playerProfile.unitUnlockMasks[li.field_q] = oe.bitwiseOr(pg.playerProfile.unitUnlockMasks[li.field_q], 1 << var2_intLifetime2);
                       }
                       var2_intLifetime2++;
                       continue;
@@ -4052,7 +4052,7 @@ final class TutorialController {
                   vl.outgoingPacket.writeCipheredOpcode(32161, 70);
                   vl.outgoingPacket.writeShort(true, AnimationFrameSet.unitUnlockGroups[1 + li.field_q][jq.field_F]);
                   RadialSummonMenu.$cfr$intArgs$a$6d836999ad61(62, ClientUiNode.field_v[14]);
-                  pg.playerProfile.unitUnlockMasks[1 + li.field_q] = oe.c(pg.playerProfile.unitUnlockMasks[1 + li.field_q], 1 << jq.field_F);
+                  pg.playerProfile.unitUnlockMasks[1 + li.field_q] = oe.bitwiseOr(pg.playerProfile.unitUnlockMasks[1 + li.field_q], 1 << jq.field_F);
                 }
               }
             } else {
@@ -4063,7 +4063,7 @@ final class TutorialController {
                 vl.outgoingPacket.writeCipheredOpcode(32161, 70);
                 vl.outgoingPacket.writeShort(true, AnimationFrameSet.unitUnlockGroups[1 + li.field_q][jq.field_F]);
                 RadialSummonMenu.$cfr$intArgs$a$6d836999ad61(62, ClientUiNode.field_v[14]);
-                pg.playerProfile.unitUnlockMasks[1 + li.field_q] = oe.c(pg.playerProfile.unitUnlockMasks[1 + li.field_q], 1 << jq.field_F);
+                pg.playerProfile.unitUnlockMasks[1 + li.field_q] = oe.bitwiseOr(pg.playerProfile.unitUnlockMasks[1 + li.field_q], 1 << jq.field_F);
               }
             }
           }
@@ -4618,7 +4618,7 @@ final class TutorialController {
                   br.field_f[82]) {
                   RevivalEvent.d((byte) 122);
                   var3_ref_int__ = BoundedFile.field_e;
-                  var3_ref_int__[0] = oe.c(var3_ref_int__[0], 2);
+                  var3_ref_int__[0] = oe.bitwiseOr(var3_ref_int__[0], 2);
                   ai.field_P.addLast((byte) -119, (IntrusiveNode) (new jg(0)));
                   UnitInfoPopup.field_u.addLast((byte) -119, (IntrusiveNode) (new iw(0, 255, 0, 0, 0, 0)));
                 }

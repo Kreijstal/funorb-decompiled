@@ -1004,7 +1004,7 @@ final class Unit extends IntrusiveNode implements TaggedFieldReader {
           var1 = var6;
           var24 = BoundedFile.field_e;
           for (var3 = 0; var3 < 8; var3++) {
-            var6[var3] = rn.a(var17[var3], ~var24[var3]);
+            var6[var3] = rn.bitwiseAnd(var17[var3], ~var24[var3]);
           }
           for (var1_int = 0; var1_int < so.field_a.length; var1_int++) {
             if (rb.a(var1_int, rq.field_n, 1)) {
@@ -1017,7 +1017,7 @@ final class Unit extends IntrusiveNode implements TaggedFieldReader {
           var1Lifetime1 = var8;
           var25 = rq.field_n;
           for (var3Lifetime1 = 0; var3Lifetime1 < 8; var3Lifetime1++) {
-            var8[var3Lifetime1] = oe.c(var18[var3Lifetime1], var25[var3Lifetime1]);
+            var8[var3Lifetime1] = oe.bitwiseOr(var18[var3Lifetime1], var25[var3Lifetime1]);
           }
           var19 = ReportAbuseDialog.field_Nb;
           var15 = var19;
@@ -1027,7 +1027,7 @@ final class Unit extends IntrusiveNode implements TaggedFieldReader {
           var3Lifetime2 = 0;
           var4 = 124 % ((-63 - param0) / 63);
           while (var3Lifetime2 < 8) {
-            var10[var3Lifetime2] = oe.c(var19[var3Lifetime2], var26[var3Lifetime2]);
+            var10[var3Lifetime2] = oe.bitwiseOr(var19[var3Lifetime2], var26[var3Lifetime2]);
             var3Lifetime2++;
           }
           var20 = rq.field_n;

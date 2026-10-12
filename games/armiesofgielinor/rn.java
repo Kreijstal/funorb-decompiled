@@ -19,8 +19,8 @@ final class rn {
         }
     }
 
-    static int a(int param0, int param1) {
-        return param0 & param1;
+    static int bitwiseAnd(int left, int right) {
+        return left & right;
     }
 
     final static String b(boolean param0) {

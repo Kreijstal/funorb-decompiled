@@ -137,8 +137,18 @@ installation names. Native fixtures compare nine theme/seed combinations,
 repeat each seed and independently check the fixed arena's full terrain and
 leader positions. LineOfSightGrid exposes terrain occlusion and the retained
 local mask, including original coordinate-edge quirks. Bounded random values,
-draw counts and scatter thresholds have independent expectations. Full game
-setup, rendered attack previews and target-mask merging remain unverified.
+draw counts and scatter thresholds have independent expectations. Target-mask
+merging now has native fixtures. Full game setup and rendered attack previews
+remain unverified.
+
+MovementPlanner now names attack-mask, selection and alternate cost-grid state.
+The guide explains mask bits 1/2/4, occupancy rules and predecessor tie order.
+Independent native fixtures cover target eligibility, mask footprints, terrain
+costs/overrides, both cost wrappers and forward path reconstruction. Complete
+preparation on controlled square boards agrees with breadth-first distances
+for the two occupancy rules, attack footprints and other-player selection state.
+Rectangular terrain-effect lookup retains its original mapHeight divisor; production maps,
+long paths and rendered path palettes remain unverified.
 
 Camera overview grouping, centroid bounds, hold state and explicit tile focus
 now have reviewed names, alongside directional panning, dragging and velocity

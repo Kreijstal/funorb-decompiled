@@ -1645,7 +1645,7 @@ public final class ArmiesOfGielinor extends wf {
                     stackIn_10_0 = ~bw.unitDefinitions[AnimationFrameSet.unitUnlockGroups[var5][var6]][11];
                     stackIn_10_1 = -1;
                     if (stackIn_10_0 == stackIn_10_1) {
-                      Widget.field_o[var5] = oe.c(Widget.field_o[var5], 1 << var6);
+                      Widget.field_o[var5] = oe.bitwiseOr(Widget.field_o[var5], 1 << var6);
                     }
                     var6++;
                   }

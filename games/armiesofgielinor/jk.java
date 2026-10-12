@@ -57,7 +57,7 @@ abstract class jk {
               var13 = 16711680 & (-var12 + param0) * var6 / param0 + var12 * var9 / param0;
               var14 = 65280 & var10 * var12 / param0 + (-var12 + param0) * var7 / param0;
               var15 = var12 * var11 / param0 + (-var12 + param0) * var8 / param0 & 255;
-              var4[param0 * var5 + var12] = oe.c(oe.c(var15, var13), var14);
+              var4[param0 * var5 + var12] = oe.bitwiseOr(oe.bitwiseOr(var15, var13), var14);
             }
           }
           if (param2 < 122) {

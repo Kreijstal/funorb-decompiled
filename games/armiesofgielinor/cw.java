@@ -82,7 +82,7 @@ final class cw {
               stackIn_38_0 = (NetworkResourceRequest.field_C.selectedUnit.movementSpent) ? 1 : 3;
               var7Lifetime1 = stackIn_38_0;
               var8Lifetime1 = NetworkResourceRequest.field_C.movementPlanner.getMovementBudget(27732);
-              if ((NetworkResourceRequest.field_C.movementPlanner.field_e[param0] & var7Lifetime1) != 0) {
+              if ((NetworkResourceRequest.field_C.movementPlanner.attackTargetMask[param0] & var7Lifetime1) != 0) {
                 if (!NetworkResourceRequest.field_C.selectedUnit.movementSpent &&
                   NetworkResourceRequest.field_C.movementPlanner.movementCosts[param0] <= var8Lifetime1) {
                   return;
@@ -90,19 +90,19 @@ final class cw {
                 if (param5 == 0 ||
                   (!(var8Lifetime1 >= NetworkResourceRequest.field_C.movementPlanner.movementCosts[-CipherPacketBuffer.currentBattlefield.mapWidth + param0]) ||
                   NetworkResourceRequest.field_C.selectedUnit.movementSpent) &&
-                  (var7Lifetime1 & NetworkResourceRequest.field_C.movementPlanner.field_e[param0 - ResourceRequest.field_y]) == 0) {
+                  (var7Lifetime1 & NetworkResourceRequest.field_C.movementPlanner.attackTargetMask[param0 - ResourceRequest.field_y]) == 0) {
                   SoftwareRaster.d(-40 + param2, param1, param2, -20 + param1, 16711680, var6_int);
                 }
                 if (param5 == -1 + ef.field_c ||
                   (!(var8Lifetime1 >= NetworkResourceRequest.field_C.movementPlanner.movementCosts[ResourceRequest.field_y + param0]) ||
                   NetworkResourceRequest.field_C.selectedUnit.movementSpent) &&
-                  (NetworkResourceRequest.field_C.movementPlanner.field_e[ResourceRequest.field_y + param0] & var7Lifetime1) == 0) {
+                  (NetworkResourceRequest.field_C.movementPlanner.attackTargetMask[ResourceRequest.field_y + param0] & var7Lifetime1) == 0) {
                   SoftwareRaster.d(40 + param2, param1, param2, param1 + 20, 16711680, var6_int);
                 }
                 if (0 == param4 ||
                   (!(NetworkResourceRequest.field_C.movementPlanner.movementCosts[-1 + param0] <= var8Lifetime1) ||
                   NetworkResourceRequest.field_C.selectedUnit.movementSpent) &&
-                  (var7Lifetime1 & NetworkResourceRequest.field_C.movementPlanner.field_e[param0 - 1]) == 0) {
+                  (var7Lifetime1 & NetworkResourceRequest.field_C.movementPlanner.attackTargetMask[param0 - 1]) == 0) {
                   SoftwareRaster.d(param2 - 40, param1, param2, 20 + param1, 16711680, var6_int);
                 }
                 if (param4 != -1 + ResourceRequest.field_y) {
@@ -110,7 +110,7 @@ final class cw {
                     !NetworkResourceRequest.field_C.selectedUnit.movementSpent) {
                     return;
                   }
-                  if ((var7Lifetime1 & NetworkResourceRequest.field_C.movementPlanner.field_e[param0 + 1]) != 0) {
+                  if ((var7Lifetime1 & NetworkResourceRequest.field_C.movementPlanner.attackTargetMask[param0 + 1]) != 0) {
                     return;
                   }
                 }

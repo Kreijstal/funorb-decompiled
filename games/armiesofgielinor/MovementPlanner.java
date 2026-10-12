@@ -6,31 +6,31 @@ import java.util.*;
 final class MovementPlanner {
     private int mapWidth;
     static QuickChatCommandDefinition field_c;
-    private boolean field_g;
+    private boolean showMovementPath;
     private int[] pathDirections;
     int targetX;
     private boolean directAction;
     static String field_s;
     int[] movementCosts;
-    int field_y;
+    int selectionMode;
     private Battlefield battlefield;
-    int[] field_e;
+    int[] attackTargetMask;
     int targetY;
-    boolean field_f;
+    boolean selectionActive;
     Unit unit;
     int targetDeltaX;
     int targetDeltaY;
-    boolean field_a;
+    boolean controlsOtherPlayerUnit;
     private int actingPlayer;
     int spellId;
     int pathLength;
     boolean actionAllowed;
-    int[] field_k;
+    int[] movementCostsThroughOwnUnits;
     private int mapHeight;
     private int unitType;
     static UiSelectionState field_z;
     static String field_v;
-    boolean field_w;
+    boolean otherPlayerPreview;
 
     final int writeAttackMovementPacket(CipherPacketBuffer packet, byte obfuscationGuard, Unit attackedUnit) {
         int stackIn_3_0 = 0;
@@ -118,77 +118,77 @@ final class MovementPlanner {
         }
     }
 
-    private final void a(boolean param0, int param1, int param2) {
-        int var4;
-        int var5;
-        MapTile var6;
-        int var6_int;
-        MapTile var7;
-        int var8;
-        Unit var9;
-        int var10;
-        var8 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+    private final void fillDirectRangeCosts(boolean allowOccupiedTiles, int range, int obfuscationGuard) {
+        int tileXOrDeltaX;
+        int tileYOrDeltaY;
+        MapTile scannedTile;
+        int manhattanDistance;
+        MapTile targetTile;
+        int obfuscationControl;
+        Unit discardedUnit;
+        int scanY;
+        obfuscationControl = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         if (0 != (4 & this.battlefield.getTileEffects(31, this.unit.tileY, this.unit.tileX, this.unit.ownerPlayer))) {
-          param1 = 0;
+          range = 0;
         }
-        if (param1 < 0) {
-          for (var4 = 0; var4 < this.mapWidth; var4++) {
-            var10 = 0;
-            var5 = var10;
-            while (this.mapHeight > var10) {
-              var6 = this.battlefield.tiles[var4 + var10 * this.mapWidth];
-              if (var6.terrainType != 2 &&
-                7 != var6.terrainType &&
-                var6.terrainType != 11 &&
-                var6.terrainType != 4 &&
-                6 != var6.terrainType && (var6.occupant == null ||
-                param0)) {
-                this.movementCosts[var4 + this.mapWidth * var10] = 0;
+        if (range < 0) {
+          for (tileXOrDeltaX = 0; tileXOrDeltaX < this.mapWidth; tileXOrDeltaX++) {
+            scanY = 0;
+            tileYOrDeltaY = scanY;
+            while (this.mapHeight > scanY) {
+              scannedTile = this.battlefield.tiles[tileXOrDeltaX + scanY * this.mapWidth];
+              if (scannedTile.terrainType != 2 &&
+                7 != scannedTile.terrainType &&
+                scannedTile.terrainType != 11 &&
+                scannedTile.terrainType != 4 &&
+                6 != scannedTile.terrainType && (scannedTile.occupant == null ||
+                allowOccupiedTiles)) {
+                this.movementCosts[tileXOrDeltaX + this.mapWidth * scanY] = 0;
               }
-              var10++;
+              scanY++;
             }
           }
         } else {
-          if (param0) {
+          if (allowOccupiedTiles) {
             if (this.unit.statusEffectType == 7) {
-              param1 = param1 >> 1;
+              range = range >> 1;
             } else {
               if (this.unit.statusEffectType == 8) {
-                param1 = 0;
+                range = 0;
               }
             }
           }
-          for (var4 = -param1; var4 <= param1; var4++) {
-            for (var5 = -param1; var5 <= param1; var5++) {
-              var6_int = Math.abs(var4) + Math.abs(var5);
-              if (var4 + this.unit.tileX > -1 &&
-                var4 + this.unit.tileX < this.mapWidth &&
-                this.unit.tileY + var5 > -1 &&
-                var5 + this.unit.tileY < this.mapHeight) {
-                var7 = this.battlefield.tiles[this.mapWidth * (this.unit.tileY + var5) + (this.unit.tileX + var4)];
-                if (2 != var7.terrainType && (var7.terrainType != 7 &&
-                  var7.terrainType != 11 ||
-                  param0) && (4 != var7.terrainType &&
-                  6 != var7.terrainType &&
-                  var6_int <= param1) && (null == var7.occupant ||
-                  param0)) {
-                  this.movementCosts[this.mapWidth * (var5 + this.unit.tileY) + (var4 + this.unit.tileX)] = 0;
+          for (tileXOrDeltaX = -range; tileXOrDeltaX <= range; tileXOrDeltaX++) {
+            for (tileYOrDeltaY = -range; tileYOrDeltaY <= range; tileYOrDeltaY++) {
+              manhattanDistance = Math.abs(tileXOrDeltaX) + Math.abs(tileYOrDeltaY);
+              if (tileXOrDeltaX + this.unit.tileX > -1 &&
+                tileXOrDeltaX + this.unit.tileX < this.mapWidth &&
+                this.unit.tileY + tileYOrDeltaY > -1 &&
+                tileYOrDeltaY + this.unit.tileY < this.mapHeight) {
+                targetTile = this.battlefield.tiles[this.mapWidth * (this.unit.tileY + tileYOrDeltaY) + (this.unit.tileX + tileXOrDeltaX)];
+                if (2 != targetTile.terrainType && (targetTile.terrainType != 7 &&
+                  targetTile.terrainType != 11 ||
+                  allowOccupiedTiles) && (4 != targetTile.terrainType &&
+                  6 != targetTile.terrainType &&
+                  manhattanDistance <= range) && (null == targetTile.occupant ||
+                  allowOccupiedTiles)) {
+                  this.movementCosts[this.mapWidth * (tileYOrDeltaY + this.unit.tileY) + (tileXOrDeltaX + this.unit.tileX)] = 0;
                 }
               }
             }
           }
         }
-        if (param2 <= 65) {
-          var9 = (Unit) null;
+        if (obfuscationGuard <= 65) {
+          discardedUnit = (Unit) null;
           this.prepareForUnit(true, 39, -101, (Unit) null, -116, -60);
         }
     }
 
     final void selectTarget(int targetY, boolean allowOtherPlayer, int targetX, byte obfuscationGuard) {
-        int var5;
-        Unit var6;
-        int var7;
-        var7 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        int guardQuotient;
+        Unit targetUnit;
+        int obfuscationControl;
+        obfuscationControl = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         if (this.unit == null) {
           return;
         }
@@ -201,27 +201,27 @@ final class MovementPlanner {
           0 <= targetX &&
           this.mapWidth > targetX &&
           targetY < this.mapHeight) {
-          this.field_g = false;
+          this.showMovementPath = false;
           this.actionAllowed = false;
           this.targetY = targetY;
           this.targetDeltaY = 0;
           this.directAction = false;
-          var5 = -124 / ((-19 - obfuscationGuard) / 60);
+          guardQuotient = -124 / ((-19 - obfuscationGuard) / 60);
           this.pathDirections = null;
           this.targetDeltaX = 0;
           this.targetX = targetX;
           if (this.unit.unitType != 51 && (this.spellId <= -1 ||
             uc.spellDefinitions[this.spellId][5] != 24)) {
-            var6 = this.battlefield.getUnitAt(targetY, true, targetX);
-            if (var6 == null) {
+            targetUnit = this.battlefield.getUnitAt(targetY, true, targetX);
+            if (targetUnit == null) {
               this.reconstructPath(targetY, (byte) -116, targetX);
               return;
             }
-            if (var6.ownerPlayer == this.actingPlayer &&
-              !this.field_a) {
+            if (targetUnit.ownerPlayer == this.actingPlayer &&
+              !this.controlsOtherPlayerUnit) {
               return;
             }
-            this.a(targetY, targetX, (byte) -120);
+            this.selectAttackTarget(targetY, targetX, (byte) -120);
             return;
           }
           this.selectDirectAction(targetY, targetX, 0);
@@ -231,204 +231,204 @@ final class MovementPlanner {
     }
 
     final void reconstructPath(int targetY, byte obfuscationGuard, int targetX) {
-        boolean stackIn_43_1 = false;
-        int var4;
-        int var5;
-        int var6;
-        int var7;
-        int var8;
-        int var9;
-        int var10;
-        int var11;
-        int var9Lifetime1;
-        int var10Lifetime1;
-        var11 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
-        var4 = targetY * this.mapWidth + targetX;
-        var5 = var4;
-        var6 = targetX;
-        var7 = targetY;
+        boolean movementAvailable = false;
+        int targetIndex;
+        int pathTileIndex;
+        int pathTileX;
+        int pathTileY;
+        int pathStepIndex;
+        int predecessorDirection;
+        int directionBranch;
+        int obfuscationControl;
+        int storedPredecessorDirection;
+        int storedDirectionBranch;
+        obfuscationControl = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        targetIndex = targetY * this.mapWidth + targetX;
+        pathTileIndex = targetIndex;
+        pathTileX = targetX;
+        pathTileY = targetY;
         if (this.unit.packedFlag8 &&
           this.unit.unitType != 0) {
         }
-        var8 = 0;
-        this.field_g = true;
+        pathStepIndex = 0;
+        this.showMovementPath = true;
         if (-1 < this.spellId &&
           uc.spellDefinitions[this.spellId][5] == 18) {
         }
         while (true) {
-          if (this.movementCosts[var5] > 0) {
-            var9 = this.a(var5, (byte) 84, var6, var7);
-            var10 = var9;
-            if (var10 == 1) {
-              var7--;
-              var5 = var5 - this.mapWidth;
+          if (this.movementCosts[pathTileIndex] > 0) {
+            predecessorDirection = this.choosePredecessorDirection(pathTileIndex, (byte) 84, pathTileX, pathTileY);
+            directionBranch = predecessorDirection;
+            if (directionBranch == 1) {
+              pathTileY--;
+              pathTileIndex = pathTileIndex - this.mapWidth;
             } else {
-              if (var10 != 0) {
-                if (2 != var10) {
-                  if (3 == var10) {
-                    var6--;
-                    var5--;
+              if (directionBranch != 0) {
+                if (2 != directionBranch) {
+                  if (3 == directionBranch) {
+                    pathTileX--;
+                    pathTileIndex--;
                   }
                 } else {
-                  var7++;
-                  var5 = var5 + this.mapWidth;
+                  pathTileY++;
+                  pathTileIndex = pathTileIndex + this.mapWidth;
                 }
               } else {
-                var6++;
-                var5++;
+                pathTileX++;
+                pathTileIndex++;
               }
             }
-            var8++;
-            if (99 >= var8) {
+            pathStepIndex++;
+            if (99 >= pathStepIndex) {
               continue;
             }
             this.pathDirections = null;
             break;
           }
-          var7 = targetY;
-          var6 = targetX;
-          var5 = var4;
-          this.pathDirections = new int[var8];
-          var8--;
-          while (0 < this.movementCosts[var5]) {
-            var9Lifetime1 = this.a(var5, (byte) 39, var6, var7);
-            this.pathDirections[var8] = GrowthEvent.b(3, var9Lifetime1);
-            var10Lifetime1 = var9Lifetime1;
-            if (1 == var10Lifetime1) {
-              var5 = var5 - this.mapWidth;
-              var7--;
+          pathTileY = targetY;
+          pathTileX = targetX;
+          pathTileIndex = targetIndex;
+          this.pathDirections = new int[pathStepIndex];
+          pathStepIndex--;
+          while (0 < this.movementCosts[pathTileIndex]) {
+            storedPredecessorDirection = this.choosePredecessorDirection(pathTileIndex, (byte) 39, pathTileX, pathTileY);
+            this.pathDirections[pathStepIndex] = GrowthEvent.bitwiseXor(3, storedPredecessorDirection);
+            storedDirectionBranch = storedPredecessorDirection;
+            if (1 == storedDirectionBranch) {
+              pathTileIndex = pathTileIndex - this.mapWidth;
+              pathTileY--;
             } else {
-              if (var10Lifetime1 != 0) {
-                if (var10Lifetime1 != 2) {
-                  if (var10Lifetime1 == 3) {
-                    var6--;
-                    var5--;
+              if (storedDirectionBranch != 0) {
+                if (storedDirectionBranch != 2) {
+                  if (storedDirectionBranch == 3) {
+                    pathTileX--;
+                    pathTileIndex--;
                   }
                 } else {
-                  var5 = var5 + this.mapWidth;
-                  var7++;
+                  pathTileIndex = pathTileIndex + this.mapWidth;
+                  pathTileY++;
                 }
               } else {
-                var5++;
-                var6++;
+                pathTileIndex++;
+                pathTileX++;
               }
             }
-            var8--;
+            pathStepIndex--;
           }
           this.pathLength = this.pathDirections.length;
-          stackIn_43_1 = !(this.unit.movementSpent);
-          this.actionAllowed = stackIn_43_1;
+          movementAvailable = !(this.unit.movementSpent);
+          this.actionAllowed = movementAvailable;
           break;
         }
-        this.field_f = true;
+        this.selectionActive = true;
         if (obfuscationGuard != -116) {
-          this.field_w = false;
+          this.otherPlayerPreview = false;
         }
         return;
     }
 
-    private final void a(int param0, int param1, byte param2) {
-        int var9 = 0;
-        int var10 = 0;
-        boolean stackIn_32_1 = false;
-        LineOfSightGrid stackIn_74_0;
-        int stackIn_74_1;
-        int stackIn_74_2;
-        int stackIn_74_3;
-        boolean stackIn_75_4 = false;
-        int var4;
-        int var5;
-        int var6;
-        int var7;
-        int var8;
-        int var11;
-        int var12;
-        var12 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
-        if (this.unit.tileX == param1 &&
-          param0 == this.unit.tileY) {
+    private final void selectAttackTarget(int targetY, int targetX, byte obfuscationGuard) {
+        int deltaX = 0;
+        int deltaY = 0;
+        boolean attackAvailable = false;
+        LineOfSightGrid visibilityGrid;
+        int visibilityOriginY;
+        int visibilityTargetX;
+        int visibilityOriginX;
+        boolean category4Visibility = false;
+        int maximumAttackRange;
+        int minimumAttackRange;
+        int bestMovementCost;
+        int selectedOriginX;
+        int selectedOriginY;
+        int manhattanDistance;
+        int obfuscationControl;
+        obfuscationControl = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        if (this.unit.tileX == targetX &&
+          targetY == this.unit.tileY) {
           return;
         }
-        if ((4 & this.field_e[param1 + param0 * this.mapWidth]) == 0) {
+        if ((4 & this.attackTargetMask[targetX + targetY * this.mapWidth]) == 0) {
           this.actionAllowed = false;
           return;
         }
-        var4 = bw.unitDefinitions[this.unit.unitType][7];
-        var5 = bw.unitDefinitions[this.unit.unitType][6];
-        if (param2 != -120) {
+        maximumAttackRange = bw.unitDefinitions[this.unit.unitType][7];
+        minimumAttackRange = bw.unitDefinitions[this.unit.unitType][6];
+        if (obfuscationGuard != -120) {
           this.mapHeight = 82;
         }
         if (this.unit.packedFlag8 &&
           this.unit.unitType == 34) {
-          var4 = 7;
-          var5 = 2;
+          maximumAttackRange = 7;
+          minimumAttackRange = 2;
           if (3 == this.unit.getEquipmentCategory(20640)) {
-            var4 = var4 + this.unit.getEquipmentProperty(1, 115);
+            maximumAttackRange = maximumAttackRange + this.unit.getEquipmentProperty(1, 115);
           }
         }
         if ((this.unit.unitType == 81 ||
           4 == this.unit.unitType ||
           74 == this.unit.unitType) &&
           this.unit.getEquipmentCategory(20640) == 3) {
-          var4 = var4 + this.unit.getEquipmentProperty(1, param2 ^ 21);
+          maximumAttackRange = maximumAttackRange + this.unit.getEquipmentProperty(1, obfuscationGuard ^ 21);
         } else if (3 == this.unit.getUnitCategory(0) &&
-          this.unit.getEquipmentCategory(param2 ^ -20696) == 2) {
-          var4 = var4 + this.unit.getEquipmentProperty(1, -87);
+          this.unit.getEquipmentCategory(obfuscationGuard ^ -20696) == 2) {
+          maximumAttackRange = maximumAttackRange + this.unit.getEquipmentProperty(1, -87);
         } else {
           if (this.unit.getUnitCategory(0) == 2 &&
             this.unit.getEquipmentCategory(20640) == 1) {
-            var4 = var4 + this.unit.getEquipmentProperty(1, param2 ^ 41);
+            maximumAttackRange = maximumAttackRange + this.unit.getEquipmentProperty(1, obfuscationGuard ^ 41);
           }
         }
-        if ((1 & this.field_e[param0 * this.mapWidth + param1]) != 1) {
-          var6 = 3 * bw.unitDefinitions[this.unit.unitType][3];
+        if ((1 & this.attackTargetMask[targetY * this.mapWidth + targetX]) != 1) {
+          bestMovementCost = 3 * bw.unitDefinitions[this.unit.unitType][3];
           if (this.unit.packedFlag8 &&
             this.unit.unitType != 0) {
-            var6 = 0;
+            bestMovementCost = 0;
           }
           if (this.spellId > -1 &&
             uc.spellDefinitions[this.spellId][5] == 18) {
-            var6 = var6 << 1;
+            bestMovementCost = bestMovementCost << 1;
           }
-          var7 = this.unit.tileX;
-          this.field_g = true;
-          var8 = this.unit.tileY;
-          for (var9 = -var4; var4 >= var9; var9++) {
-            for (var10 = -var4; var4 >= var10; var10++) {
-              var11 = Math.abs(var9) + Math.abs(var10);
-              if (-1 < var9 + param1 &&
-                this.mapWidth > var9 + param1 &&
-                param0 + var10 > -1 &&
-                this.mapHeight > param0 + var10 &&
-                var11 <= var4 &&
-                var5 <= var11 && (1 == var11 ||
-                (2 & this.battlefield.getTileEffects(31, var10 + param0, param1 + var9, this.unit.ownerPlayer)) == 0 &&
-                0 == (this.battlefield.getTileEffects(31, param0, param1, this.unit.ownerPlayer) & 2)) && this.movementCosts[param1 + (var9 + this.mapWidth * (param0 + var10))] <= var6) {
-                stackIn_74_0 = this.battlefield.lineOfSightGrid;
-                stackIn_74_1 = var10 + param0;
-                stackIn_74_2 = param1;
-                stackIn_74_3 = param1 + var9;
-                stackIn_75_4 = (this.unit.getUnitCategory(0) == 4);
-                if (((LineOfSightGrid) (Object) stackIn_74_0).computeVisibility(stackIn_74_1, stackIn_74_2, stackIn_74_3, stackIn_75_4, var4, param0, (byte) 86)) {
-                  var6 = this.movementCosts[param1 + var9 + this.mapWidth * (param0 + var10)];
-                  var8 = var10 + param0;
-                  var7 = var9 + param1;
+          selectedOriginX = this.unit.tileX;
+          this.showMovementPath = true;
+          selectedOriginY = this.unit.tileY;
+          for (deltaX = -maximumAttackRange; maximumAttackRange >= deltaX; deltaX++) {
+            for (deltaY = -maximumAttackRange; maximumAttackRange >= deltaY; deltaY++) {
+              manhattanDistance = Math.abs(deltaX) + Math.abs(deltaY);
+              if (-1 < deltaX + targetX &&
+                this.mapWidth > deltaX + targetX &&
+                targetY + deltaY > -1 &&
+                this.mapHeight > targetY + deltaY &&
+                manhattanDistance <= maximumAttackRange &&
+                minimumAttackRange <= manhattanDistance && (1 == manhattanDistance ||
+                (2 & this.battlefield.getTileEffects(31, deltaY + targetY, targetX + deltaX, this.unit.ownerPlayer)) == 0 &&
+                0 == (this.battlefield.getTileEffects(31, targetY, targetX, this.unit.ownerPlayer) & 2)) && this.movementCosts[targetX + (deltaX + this.mapWidth * (targetY + deltaY))] <= bestMovementCost) {
+                visibilityGrid = this.battlefield.lineOfSightGrid;
+                visibilityOriginY = deltaY + targetY;
+                visibilityTargetX = targetX;
+                visibilityOriginX = targetX + deltaX;
+                category4Visibility = (this.unit.getUnitCategory(0) == 4);
+                if (((LineOfSightGrid) (Object) visibilityGrid).computeVisibility(visibilityOriginY, visibilityTargetX, visibilityOriginX, category4Visibility, maximumAttackRange, targetY, (byte) 86)) {
+                  bestMovementCost = this.movementCosts[targetX + deltaX + this.mapWidth * (targetY + deltaY)];
+                  selectedOriginY = deltaY + targetY;
+                  selectedOriginX = deltaX + targetX;
                   this.actionAllowed = true;
                 }
               }
             }
           }
           if (this.actionAllowed) {
-            this.reconstructPath(var8, (byte) -116, var7);
-            this.targetDeltaX = -var7 + param1;
-            this.targetDeltaY = param0 - var8;
+            this.reconstructPath(selectedOriginY, (byte) -116, selectedOriginX);
+            this.targetDeltaX = -selectedOriginX + targetX;
+            this.targetDeltaY = targetY - selectedOriginY;
           }
         } else {
-          stackIn_32_1 = !(this.unit.attacksRemaining <= 0);
-          this.actionAllowed = stackIn_32_1;
-          this.targetDeltaY = param0 - this.unit.tileY;
-          this.targetDeltaX = param1 - this.unit.tileX;
+          attackAvailable = !(this.unit.attacksRemaining <= 0);
+          this.actionAllowed = attackAvailable;
+          this.targetDeltaY = targetY - this.unit.tileY;
+          this.targetDeltaX = targetX - this.unit.tileX;
         }
-        this.field_f = true;
+        this.selectionActive = true;
         return;
     }
 
@@ -441,11 +441,11 @@ final class MovementPlanner {
         } else {
           this.actionAllowed = false;
         }
-        this.field_f = true;
+        this.selectionActive = true;
         this.actionAllowed = this.actionAllowed & (!this.unit.movementSpent ? true : false);
     }
 
-    final void a(BattleCamera param0, int param1) {
+    final void drawSelectedPath(BattleCamera camera, int obfuscationGuard) {
         int var10 = 0;
         RgbSprite[] stackIn_6_0 = null;
         int stackIn_6_1 = 0;
@@ -468,24 +468,24 @@ final class MovementPlanner {
         int var14 = 0;
         var14 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          param0.gridPosition[0] = this.unit.tileX;
-          param0.gridPosition[1] = this.unit.tileY;
-          param0.projectModelAnchor(9470337);
-          if (param1 != -4) {
+          camera.gridPosition[0] = this.unit.tileX;
+          camera.gridPosition[1] = this.unit.tileY;
+          camera.projectModelAnchor(9470337);
+          if (obfuscationGuard != -4) {
             field_v = (String) null;
           }
-          var3_int = param0.screenPosition[0];
-          var4 = param0.screenPosition[1];
+          var3_int = camera.screenPosition[0];
+          var4 = camera.screenPosition[1];
           TaggedMapData.field_f[10].g(var3_int, var4);
-          param0.gridPosition[1] = this.targetY;
-          param0.gridPosition[0] = this.targetX;
-          param0.projectModelAnchor(param1 + 9470341);
-          var5 = param0.screenPosition[0];
-          var6 = param0.screenPosition[1];
+          camera.gridPosition[1] = this.targetY;
+          camera.gridPosition[0] = this.targetX;
+          camera.projectModelAnchor(obfuscationGuard + 9470341);
+          var5 = camera.screenPosition[0];
+          var6 = camera.screenPosition[1];
           var7 = this.getMovementBudget(27732);
           var8 = 0;
           if (!this.directAction) {
-            if (this.field_g) {
+            if (this.showMovementPath) {
               var9 = 0;
               if (this.actionAllowed &&
                 this.actingPlayer == this.battlefield.currentPlayer) {
@@ -525,11 +525,11 @@ final class MovementPlanner {
                   var4 = var4 + (var12 << 2);
                   var3_int = var3_int + (var11 << 2);
                   if (var8 == 0) {
-                    param0.screenPosition[1] = var12 + 16 + var4;
-                    param0.screenPosition[0] = 32 + var3_int + var11;
-                    param0.screenToGrid(false);
+                    camera.screenPosition[1] = var12 + 16 + var4;
+                    camera.screenPosition[0] = 32 + var3_int + var11;
+                    camera.screenToGrid(false);
                     if (this.actionAllowed &&
-                      this.movementCosts[param0.gridPosition[0] + param0.gridPosition[1] * this.mapWidth] > var7) {
+                      this.movementCosts[camera.gridPosition[0] + camera.gridPosition[1] * this.mapWidth] > var7) {
                       var9 = 0;
                       var8 = 1;
                     }
@@ -554,12 +554,12 @@ final class MovementPlanner {
           var3 = decompiledCaughtException;
           stackIn_44_0 = var3;
           stackIn_44_1 = new StringBuilder().append("nn.O(");
-          if (param0 == null) {
+          if (camera == null) {
             stackIn_45_2 = "null";
           } else {
             stackIn_45_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_44_0), ((StringBuilder) (Object) stackIn_44_1).append(stackIn_45_2).append(',').append(param1).append(')').toString());
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_44_0), ((StringBuilder) (Object) stackIn_44_1).append(stackIn_45_2).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 
@@ -575,48 +575,48 @@ final class MovementPlanner {
 
     final void clearPath(int obfuscationGuard) {
         int var2 = -37 / ((obfuscationGuard - 49) / 52);
-        this.field_f = false;
+        this.selectionActive = false;
         this.pathDirections = null;
     }
 
-    private final int a(int param0, byte param1, int param2, int param3) {
-        int var5;
-        int var6;
-        int var7;
-        var5 = this.movementCosts[param0];
-        var7 = 30 % ((-18 - param1) / 38);
-        var6 = -1;
-        if (param2 > 0 &&
-          this.movementCosts[-1 + param0] < var5 &&
-          this.battlefield.a(param0 - 1, -16, param0, this.unit.ownerPlayer, this.unit, true) == this.movementCosts[param0] - this.movementCosts[param0 - 1]) {
-          var6 = 3;
-          var5 = this.movementCosts[param0 - 1];
+    private final int choosePredecessorDirection(int tileIndex, byte obfuscationGuard, int tileX, int tileY) {
+        int bestCost;
+        int predecessorDirection;
+        int guardRemainder;
+        bestCost = this.movementCosts[tileIndex];
+        guardRemainder = 30 % ((-18 - obfuscationGuard) / 38);
+        predecessorDirection = -1;
+        if (tileX > 0 &&
+          this.movementCosts[-1 + tileIndex] < bestCost &&
+          this.battlefield.getMovementStepCost(tileIndex - 1, -16, tileIndex, this.unit.ownerPlayer, this.unit, true) == this.movementCosts[tileIndex] - this.movementCosts[tileIndex - 1]) {
+          predecessorDirection = 3;
+          bestCost = this.movementCosts[tileIndex - 1];
         }
-        if (param2 < -1 + this.mapWidth &&
-          this.movementCosts[1 + param0] < var5 &&
-          this.battlefield.a(1 + param0, -16, param0, this.unit.ownerPlayer, this.unit, true) == -this.movementCosts[1 + param0] + this.movementCosts[param0]) {
-          var6 = 0;
-          var5 = this.movementCosts[1 + param0];
+        if (tileX < -1 + this.mapWidth &&
+          this.movementCosts[1 + tileIndex] < bestCost &&
+          this.battlefield.getMovementStepCost(1 + tileIndex, -16, tileIndex, this.unit.ownerPlayer, this.unit, true) == -this.movementCosts[1 + tileIndex] + this.movementCosts[tileIndex]) {
+          predecessorDirection = 0;
+          bestCost = this.movementCosts[1 + tileIndex];
         }
-        if (param3 > 0 &&
-          var5 > this.movementCosts[param0 - this.mapWidth] &&
-          this.battlefield.a(-this.mapWidth + param0, -16, param0, this.unit.ownerPlayer, this.unit, true) == -this.movementCosts[param0 - this.mapWidth] + this.movementCosts[param0]) {
-          var6 = 1;
-          var5 = this.movementCosts[param0 - this.mapWidth];
+        if (tileY > 0 &&
+          bestCost > this.movementCosts[tileIndex - this.mapWidth] &&
+          this.battlefield.getMovementStepCost(-this.mapWidth + tileIndex, -16, tileIndex, this.unit.ownerPlayer, this.unit, true) == -this.movementCosts[tileIndex - this.mapWidth] + this.movementCosts[tileIndex]) {
+          predecessorDirection = 1;
+          bestCost = this.movementCosts[tileIndex - this.mapWidth];
         }
-        if (this.mapWidth - 1 > param3 &&
-          var5 > this.movementCosts[param0 + this.mapWidth] &&
-          this.battlefield.a(param0 + this.mapWidth, -16, param0, this.unit.ownerPlayer, this.unit, true) == -this.movementCosts[param0 + this.mapWidth] + this.movementCosts[param0]) {
-          var6 = 2;
-          var5 = this.movementCosts[this.mapWidth + param0];
+        if (this.mapWidth - 1 > tileY &&
+          bestCost > this.movementCosts[tileIndex + this.mapWidth] &&
+          this.battlefield.getMovementStepCost(tileIndex + this.mapWidth, -16, tileIndex, this.unit.ownerPlayer, this.unit, true) == -this.movementCosts[tileIndex + this.mapWidth] + this.movementCosts[tileIndex]) {
+          predecessorDirection = 2;
+          bestCost = this.movementCosts[this.mapWidth + tileIndex];
         }
-        return var6;
+        return predecessorDirection;
     }
 
     final int getMovementBudget(int obfuscationGuard) {
         int discarded$0 = 0;
         if (obfuscationGuard != 27732) {
-          discarded$0 = this.a(-31, (byte) 81, -84, 42);
+          discarded$0 = this.choosePredecessorDirection(-31, (byte) 81, -84, 42);
         }
         int var2 = 3 * bw.unitDefinitions[this.unitType][3];
         if (this.spellId > -1 &&
@@ -649,158 +649,158 @@ final class MovementPlanner {
     }
 
     final void prepareForUnit(boolean allowOtherPlayer, int obfuscationGuard, int actingPlayer, Unit unit, int selectionMode, int spellId) {
-        int var17 = 0;
-        int var18 = 0;
-        int var19 = 0;
-        boolean stackIn_4_1 = false;
-        boolean stackIn_8_1 = false;
-        int[] stackIn_32_0 = null;
-        int stackIn_35_0 = 0;
-        int stackIn_75_0 = 0;
-        int stackIn_78_0 = 0;
+        int scanY = 0;
+        int scanX = 0;
+        int costGridVariant = 0;
+        boolean otherPlayerUnit = false;
+        boolean previewOtherPlayer = false;
+        int[] selectedCostGrid = null;
+        int ownOccupantsAllowed = 0;
+        int category4Visibility = 0;
+        int category4TargetsAllowed = 0;
         RuntimeException stackIn_84_0 = null;
         StringBuilder stackIn_84_1 = null;
         String stackIn_85_2 = null;
         RuntimeException decompiledCaughtException = null;
-        int var7_int = 0;
+        int maximumAttackRange = 0;
         RuntimeException var7 = null;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
-        int var13 = 0;
-        int var14 = 0;
-        int var15 = 0;
-        int var16 = 0;
-        int[] var20 = null;
-        int var21 = 0;
-        int var22 = 0;
-        int var23 = 0;
-        int var24 = 0;
+        int minimumAttackRange = 0;
+        int movementBudget = 0;
+        int minimumX = 0;
+        int maximumX = 0;
+        int minimumY = 0;
+        int maximumY = 0;
+        int relaxationPass = 0;
+        int greatestUpdatedCost = 0;
+        int tileIndex = 0;
+        int[] costGrid = null;
+        int allowUnmovedOwnUnits = 0;
+        int candidateCost = 0;
+        int leftStepCost = 0;
+        int obfuscationControl = 0;
         CipherPacketBuffer var25 = null;
-        int[] var26 = null;
-        int[] var27 = null;
-        int var14Lifetime1;
-        int var15Lifetime1;
-        int var23Lifetime1;
-        int var23Lifetime2;
-        int var23Lifetime3;
-        var24 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        int[] costGridAlias = null;
+        int[] mutableCostGrid = null;
+        int ignoreBlockingTerrain;
+        int allowCategory4Targets;
+        int upStepCost;
+        int rightStepCost;
+        int downStepCost;
+        obfuscationControl = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           this.actingPlayer = actingPlayer;
           this.spellId = spellId;
-          this.field_f = false;
-          this.field_y = selectionMode;
-          stackIn_4_1 = (this.actingPlayer != unit.ownerPlayer);
-          this.field_a = stackIn_4_1;
+          this.selectionActive = false;
+          this.selectionMode = selectionMode;
+          otherPlayerUnit = (this.actingPlayer != unit.ownerPlayer);
+          this.controlsOtherPlayerUnit = otherPlayerUnit;
           this.unit = unit;
-          stackIn_8_1 = (allowOtherPlayer) && (this.field_a);
-          this.field_w = stackIn_8_1;
+          previewOtherPlayer = (allowOtherPlayer) && (this.controlsOtherPlayerUnit);
+          this.otherPlayerPreview = previewOtherPlayer;
           if (obfuscationGuard <= 10) {
             var25 = (CipherPacketBuffer) null;
             this.writeMovementPacket(true, (CipherPacketBuffer) null);
           }
           this.unitType = this.unit.unitType;
-          var7_int = this.unit.getMaximumAttackRange(3257);
-          var8 = this.unit.getMinimumAttackRange((byte) -79);
+          maximumAttackRange = this.unit.getMaximumAttackRange(3257);
+          minimumAttackRange = this.unit.getMinimumAttackRange((byte) -79);
           this.resetCosts(0);
           if (this.spellId > -1 &&
             24 == uc.spellDefinitions[this.spellId][5]) {
-            this.a(false, uc.spellDefinitions[this.spellId][6], 93);
+            this.fillDirectRangeCosts(false, uc.spellDefinitions[this.spellId][6], 93);
             return;
           }
           if (this.unitType == 51) {
-            this.a(true, bw.unitDefinitions[this.unitType][3], 112);
+            this.fillDirectRangeCosts(true, bw.unitDefinitions[this.unitType][3], 112);
             return;
           }
-          var9 = this.getMovementBudget(27732);
-          var10 = this.unit.tileX;
-          var11 = this.unit.tileX;
-          var12 = this.unit.tileY;
-          var13 = this.unit.tileY;
+          movementBudget = this.getMovementBudget(27732);
+          minimumX = this.unit.tileX;
+          maximumX = this.unit.tileX;
+          minimumY = this.unit.tileY;
+          maximumY = this.unit.tileY;
           this.movementCosts[this.unit.tileX + this.mapWidth * this.unit.tileY] = 0;
-          this.field_k[this.unit.tileX + this.mapWidth * this.unit.tileY] = 0;
+          this.movementCostsThroughOwnUnits[this.unit.tileX + this.mapWidth * this.unit.tileY] = 0;
           if (!this.unit.packedFlag8 ||
             this.unit.unitType == 0) {
-            for (var14 = 0; var14 < 500; var14++) {
-              var15 = 0;
-              var16 = 0;
-              for (var17 = 0; var17 < this.mapWidth; var17++) {
-                for (var18 = 0; var18 < this.mapHeight; var18++) {
-                  for (var19 = 0; var19 < 2; var19++) {
-                    if (var19 == 0) {
-                      stackIn_32_0 = this.movementCosts;
+            for (relaxationPass = 0; relaxationPass < 500; relaxationPass++) {
+              greatestUpdatedCost = 0;
+              tileIndex = 0;
+              for (scanY = 0; scanY < this.mapWidth; scanY++) {
+                for (scanX = 0; scanX < this.mapHeight; scanX++) {
+                  for (costGridVariant = 0; costGridVariant < 2; costGridVariant++) {
+                    if (costGridVariant == 0) {
+                      selectedCostGrid = this.movementCosts;
                     } else {
-                      stackIn_32_0 = this.field_k;
+                      selectedCostGrid = this.movementCostsThroughOwnUnits;
                     }
-                    var27 = stackIn_32_0;
-                    var26 = var27;
-                    var20 = var26;
-                    stackIn_35_0 = (var19 != 1) ? 0 : 1;
-                    var21 = stackIn_35_0;
-                    var22 = 1000000;
-                    if (var18 > 0) {
-                      var23 = this.battlefield.a(this.unit, var21 != 0, 14336, true, var16, -1 + var16, this.unit.ownerPlayer);
-                      if (var22 > var23 + var20[-1 + var16]) {
-                        var22 = var23 + var20[-1 + var16];
-                        if (var11 < var18 &&
-                          var9 >= var22) {
-                          var11 = var18;
+                    mutableCostGrid = selectedCostGrid;
+                    costGridAlias = mutableCostGrid;
+                    costGrid = costGridAlias;
+                    ownOccupantsAllowed = (costGridVariant != 1) ? 0 : 1;
+                    allowUnmovedOwnUnits = ownOccupantsAllowed;
+                    candidateCost = 1000000;
+                    if (scanX > 0) {
+                      leftStepCost = this.battlefield.getMovementStepCost(this.unit, allowUnmovedOwnUnits != 0, 14336, true, tileIndex, -1 + tileIndex, this.unit.ownerPlayer);
+                      if (candidateCost > leftStepCost + costGrid[-1 + tileIndex]) {
+                        candidateCost = leftStepCost + costGrid[-1 + tileIndex];
+                        if (maximumX < scanX &&
+                          movementBudget >= candidateCost) {
+                          maximumX = scanX;
                         }
                       }
                     }
-                    if (var17 > 0) {
-                      var23Lifetime1 = this.battlefield.a(this.unit, var21 != 0, 14336, true, var16, -this.mapWidth + var16, this.unit.ownerPlayer);
-                      if (var17 > 0 &&
-                        var20[var16 - this.mapWidth] + var23Lifetime1 < var22) {
-                        var22 = var20[var16 - this.mapWidth] + var23Lifetime1;
+                    if (scanY > 0) {
+                      upStepCost = this.battlefield.getMovementStepCost(this.unit, allowUnmovedOwnUnits != 0, 14336, true, tileIndex, -this.mapWidth + tileIndex, this.unit.ownerPlayer);
+                      if (scanY > 0 &&
+                        costGrid[tileIndex - this.mapWidth] + upStepCost < candidateCost) {
+                        candidateCost = costGrid[tileIndex - this.mapWidth] + upStepCost;
                       }
                     }
-                    if (var18 < -1 + this.mapWidth) {
-                      var23Lifetime2 = this.battlefield.a(this.unit, var21 != 0, 14336, true, var16, var16 + 1, this.unit.ownerPlayer);
-                      if (var22 > var20[var16 + 1] + var23Lifetime2) {
-                        var22 = var20[var16 + 1] + var23Lifetime2;
+                    if (scanX < -1 + this.mapWidth) {
+                      rightStepCost = this.battlefield.getMovementStepCost(this.unit, allowUnmovedOwnUnits != 0, 14336, true, tileIndex, tileIndex + 1, this.unit.ownerPlayer);
+                      if (candidateCost > costGrid[tileIndex + 1] + rightStepCost) {
+                        candidateCost = costGrid[tileIndex + 1] + rightStepCost;
                       }
                     }
-                    if (var17 < this.mapHeight - 1) {
-                      var23Lifetime3 = this.battlefield.a(this.unit, var21 != 0, 14336, true, var16, var16 + this.mapWidth, this.unit.ownerPlayer);
-                      if (var20[this.mapWidth + var16] + var23Lifetime3 < var22) {
-                        var22 = var20[var16 + this.mapWidth] + var23Lifetime3;
+                    if (scanY < this.mapHeight - 1) {
+                      downStepCost = this.battlefield.getMovementStepCost(this.unit, allowUnmovedOwnUnits != 0, 14336, true, tileIndex, tileIndex + this.mapWidth, this.unit.ownerPlayer);
+                      if (costGrid[this.mapWidth + tileIndex] + downStepCost < candidateCost) {
+                        candidateCost = costGrid[tileIndex + this.mapWidth] + downStepCost;
                       }
                     }
-                    if (var22 < var27[var16]) {
-                      if (var10 > var18) {
-                        var10 = var18;
+                    if (candidateCost < mutableCostGrid[tileIndex]) {
+                      if (minimumX > scanX) {
+                        minimumX = scanX;
                       }
-                      if (var18 > var11) {
-                        var11 = var18;
+                      if (scanX > maximumX) {
+                        maximumX = scanX;
                       }
-                      if (var15 < var22) {
-                        var15 = var22;
+                      if (greatestUpdatedCost < candidateCost) {
+                        greatestUpdatedCost = candidateCost;
                       }
-                      if (var17 > var13) {
-                        var13 = var17;
+                      if (scanY > maximumY) {
+                        maximumY = scanY;
                       }
-                      var27[var16] = var22;
-                      if (var12 > var17) {
-                        var12 = var17;
+                      mutableCostGrid[tileIndex] = candidateCost;
+                      if (minimumY > scanY) {
+                        minimumY = scanY;
                       }
                     }
                   }
-                  var16++;
+                  tileIndex++;
                 }
               }
-              if (0 == var15) {
+              if (0 == greatestUpdatedCost) {
                 break;
               }
             }
           }
-          stackIn_75_0 = (4 != bw.unitDefinitions[unit.unitType][0]) ? 0 : 1;
-          var14Lifetime1 = stackIn_75_0;
-          stackIn_78_0 = (!this.unit.canAttackFlying((byte) 102)) ? 0 : 1;
-          var15Lifetime1 = stackIn_78_0;
-          this.battlefield.lineOfSightGrid.mergeAttackTargetMask(var8, var15Lifetime1 != 0, -1, var10, var13, this.unit.ownerPlayer, this.field_a, this.movementCosts, var7_int, var11, var14Lifetime1 != 0, this.field_e, var9, var12);
+          category4Visibility = (4 != bw.unitDefinitions[unit.unitType][0]) ? 0 : 1;
+          ignoreBlockingTerrain = category4Visibility;
+          category4TargetsAllowed = (!this.unit.canAttackFlying((byte) 102)) ? 0 : 1;
+          allowCategory4Targets = category4TargetsAllowed;
+          this.battlefield.lineOfSightGrid.mergeAttackTargetMask(minimumAttackRange, allowCategory4Targets != 0, -1, minimumX, maximumY, this.unit.ownerPlayer, this.controlsOtherPlayerUnit, this.movementCosts, maximumAttackRange, maximumX, ignoreBlockingTerrain != 0, this.attackTargetMask, movementBudget, minimumY);
           if (this.unit.packedFlag8 &&
             this.unit.unitType != 0) {
             this.movementCosts[this.unit.tileX + this.unit.tileY * this.mapWidth] = 1000000;
@@ -844,7 +844,7 @@ final class MovementPlanner {
           return (ActionRequest) ((Object) var4);
         }
         this.battlefield.field_J = true;
-        return (ActionRequest) ((Object) new SpellCastRequest(new ActionSpell(this.spellId, var4), this.field_y, actingPlayer));
+        return (ActionRequest) ((Object) new SpellCastRequest(new ActionSpell(this.spellId, var4), this.selectionMode, actingPlayer));
     }
 
     final static void generateProceduralMap(byte obfuscationGuard, Battlefield battlefield) {
@@ -1155,7 +1155,7 @@ final class MovementPlanner {
               packet.writeCipheredOpcode(32161, 65);
               packet.writeByte(1, var3_int + 4);
               packet.writeByte(1, 160);
-              packet.writeByte(1, this.field_y);
+              packet.writeByte(1, this.selectionMode);
               packet.writeShort(true, this.spellId);
             }
             packet.writeByte(1, 0);
@@ -1178,7 +1178,7 @@ final class MovementPlanner {
             packet.writeCipheredOpcode(32161, 65);
             packet.writeByte(1, 4 + var3_intLifetime1);
             packet.writeByte(1, 160);
-            packet.writeByte(1, this.field_y);
+            packet.writeByte(1, this.selectionMode);
             packet.writeShort(true, this.spellId);
             this.battlefield.field_J = true;
           }
@@ -1212,21 +1212,21 @@ final class MovementPlanner {
         int var3 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         for (var2 = startIndex; this.movementCosts.length > var2; var2++) {
           this.movementCosts[var2] = 1000000;
-          this.field_k[var2] = 1000000;
-          this.field_e[var2] = 0;
+          this.movementCostsThroughOwnUnits[var2] = 1000000;
+          this.attackTargetMask[var2] = 0;
         }
     }
 
     MovementPlanner(Battlefield battlefield) {
-        this.field_y = -1;
+        this.selectionMode = -1;
         this.spellId = -1;
         try {
           this.battlefield = battlefield;
           this.mapHeight = this.battlefield.mapHeight;
           this.mapWidth = this.battlefield.mapWidth;
           this.movementCosts = new int[this.mapHeight * this.mapWidth];
-          this.field_k = new int[this.mapWidth * this.mapHeight];
-          this.field_e = new int[this.mapWidth * this.mapHeight];
+          this.movementCostsThroughOwnUnits = new int[this.mapWidth * this.mapHeight];
+          this.attackTargetMask = new int[this.mapWidth * this.mapHeight];
           this.resetCosts(0);
         } catch (RuntimeException runtimeException) {
           throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "nn.<init>(" + (battlefield != null ? "{...}" : "null") + ')');

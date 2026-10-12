@@ -28,7 +28,7 @@ final class kv extends tj implements he {
             var3_int = param1.length;
             this.field_H = new String[var3_int];
             for (var4_int = 0; var4_int < var3_int; var4_int++) {
-              this.field_H[var4_int] = ug.a(GrowthEvent.b(param0, 116), (CharSequence) ((Object) param1[var4_int])).replace(' ', ' ');
+              this.field_H[var4_int] = ug.a(GrowthEvent.bitwiseXor(param0, 116), (CharSequence) ((Object) param1[var4_int])).replace(' ', ' ');
             }
             var4 = new td(ArmiesOfGielinor.field_J, 0, 1);
             this.field_E = new fw[var3_int + 1];

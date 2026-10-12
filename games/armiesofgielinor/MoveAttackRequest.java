@@ -259,7 +259,7 @@ final class MoveAttackRequest extends ActionRequest {
                 0 <= var6 &&
                 battlefield.mapWidth > var5 &&
                 battlefield.mapHeight > var6) {
-                var9Lifetime2 = battlefield.a(var8_int, -16, var5 + battlefield.mapWidth * var6, var17.ownerPlayer, var17, true);
+                var9Lifetime2 = battlefield.getMovementStepCost(var8_int, -16, var5 + battlefield.mapWidth * var6, var17.ownerPlayer, var17, true);
                 if (var9Lifetime2 <= var4) {
                   var4 = var4 - var9Lifetime2;
                   var7++;
@@ -452,7 +452,7 @@ final class MoveAttackRequest extends ActionRequest {
             if (0 == pathIndex % 4) {
               packedDirections = packet.readUnsignedByte(0);
             }
-            this.pathDirections[pathIndex] = rn.a(3, packedDirections);
+            this.pathDirections[pathIndex] = rn.bitwiseAnd(3, packedDirections);
             packedDirections = packedDirections >> 2;
           }
           packedTargetDelta = packet.readUnsignedShort((byte) -104);

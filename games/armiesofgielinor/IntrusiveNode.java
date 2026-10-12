@@ -38,7 +38,7 @@ class IntrusiveNode {
         if (NetworkResourceRequest.field_C.selectedUnit != null &&
           CipherPacketBuffer.currentBattlefield.currentPlayer == NetworkResourceRequest.field_C.controlledPlayerId &&
           !NetworkResourceRequest.field_C.selectedUnit.movementSpent && (NetworkResourceRequest.field_C.selectedUnit.ownerPlayer == NetworkResourceRequest.field_C.controlledPlayerId ||
-          !NetworkResourceRequest.field_C.movementPlanner.field_w) && !NetworkResourceRequest.field_C.selectedUnit.h(-13494)) {
+          !NetworkResourceRequest.field_C.movementPlanner.otherPlayerPreview) && !NetworkResourceRequest.field_C.selectedUnit.h(-13494)) {
           var9 = NetworkResourceRequest.field_C.movementPlanner.getMovementBudget(27732);
           if (var9 < var14[param4]) {
             return;

@@ -229,7 +229,7 @@ final class da {
               var5 = var11.length << 2;
             }
             for (var7 = 0; var5 > var7; var7++) {
-              var6[var7 >> 2] = var6[var7 >> 2] + (var9.readUnsignedByte(0) << rn.a(var7 << 8, 768));
+              var6[var7 >> 2] = var6[var7 >> 2] + (var9.readUnsignedByte(0) << rn.bitwiseAnd(var7 << 8, 768));
             }
             var4.unlink(-116);
             return;

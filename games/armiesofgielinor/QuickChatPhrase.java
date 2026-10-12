@@ -29,7 +29,7 @@ final class QuickChatPhrase extends DualLinkedNode {
         int var3 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         if (this.linkedPhraseIds != null) {
           for (var2 = 0; this.linkedPhraseIds.length > var2; var2++) {
-            this.linkedPhraseIds[var2] = oe.c(this.linkedPhraseIds[var2], 32768);
+            this.linkedPhraseIds[var2] = oe.bitwiseOr(this.linkedPhraseIds[var2], 32768);
           }
         }
         if (!obfuscationGuard) {

@@ -148,7 +148,7 @@ final class HuffmanCodec {
             lastOutputByte = outputByteIndex + (codeLength + (bitShift - 1) >> 3);
             outputBitPosition = outputBitPosition + codeLength;
             bitShift += 24;
-            dupTemp$0 = oe.c(outputWord, symbolCode >>> bitShift);
+            dupTemp$0 = oe.bitwiseOr(outputWord, symbolCode >>> bitShift);
             outputWord = dupTemp$0;
             output[outputByteIndex] = (byte)dupTemp$0;
             if (outputByteIndex < lastOutputByte) {
@@ -255,7 +255,7 @@ final class HuffmanCodec {
                     decompiledFrameCompleted0 = false;
                     break;
                   }
-                  codeFrontier[shorterLength] = oe.c(shorterCode, shorterStep);
+                  codeFrontier[shorterLength] = oe.bitwiseOr(shorterCode, shorterStep);
                   shorterLength--;
                 }
                 if (decompiledFrameCompleted1) {

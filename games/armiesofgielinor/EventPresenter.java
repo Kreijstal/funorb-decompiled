@@ -244,7 +244,7 @@ final class EventPresenter extends IntrusiveNode {
           if (null != this.controller.selectedUnit) {
             stackIn_17_0 = this.controller.movementPlanner;
             stackIn_18_1 = (null != this.controller.field_oc) ? false : true;
-            ((MovementPlanner) (Object) stackIn_17_0).prepareForUnit(stackIn_18_1, obfuscationGuard + 19769, this.controller.controlledPlayerId, this.controller.selectedUnit, this.controller.movementPlanner.field_y, this.controller.movementPlanner.spellId);
+            ((MovementPlanner) (Object) stackIn_17_0).prepareForUnit(stackIn_18_1, obfuscationGuard + 19769, this.controller.controlledPlayerId, this.controller.selectedUnit, this.controller.movementPlanner.selectionMode, this.controller.movementPlanner.spellId);
           }
           this.presentation = (EventPresentation) ((Object) new MovementPresentation(this.battlefield, this.controller.camera, this));
           stackIn_22_0 = (!this.presentation.initialize(this.event, (byte) 57)) ? 0 : 1;

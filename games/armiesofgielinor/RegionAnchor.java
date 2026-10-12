@@ -41,12 +41,12 @@ final class RegionAnchor extends IntrusiveNode {
             if (param2 == ResourceRequest.field_y * NetworkResourceRequest.field_C.selectedUnit.tileY + NetworkResourceRequest.field_C.selectedUnit.tileX) {
               var4_int = 16777215 | var5;
             } else {
-              if (!NetworkResourceRequest.field_C.movementPlanner.field_w) {
+              if (!NetworkResourceRequest.field_C.movementPlanner.otherPlayerPreview) {
                 var6 = NetworkResourceRequest.field_C.movementPlanner.getMovementBudget(27732);
                 if (!NetworkResourceRequest.field_C.selectedUnit.movementSpent) {
                   if (CipherPacketBuffer.currentBattlefield.currentPlayer != NetworkResourceRequest.field_C.controlledPlayerId) {
                     if (var6 <= NetworkResourceRequest.field_C.movementPlanner.movementCosts[param2]) {
-                      if ((NetworkResourceRequest.field_C.movementPlanner.field_e[param2] & 2) != 0) {
+                      if ((NetworkResourceRequest.field_C.movementPlanner.attackTargetMask[param2] & 2) != 0) {
                         var4_int = var5 | 5570560;
                       }
                     } else {
@@ -56,8 +56,8 @@ final class RegionAnchor extends IntrusiveNode {
                     if (NetworkResourceRequest.field_C.movementPlanner.movementCosts[param2] <= var6) {
                       var4_int = var5 | 43264;
                     } else {
-                      if (0 == (NetworkResourceRequest.field_C.movementPlanner.field_e[param2] & 2)) {
-                        if (NetworkResourceRequest.field_C.movementPlanner.field_k[param2] < var6) {
+                      if (0 == (NetworkResourceRequest.field_C.movementPlanner.attackTargetMask[param2] & 2)) {
+                        if (NetworkResourceRequest.field_C.movementPlanner.movementCostsThroughOwnUnits[param2] < var6) {
                           var4_int = 11118848 | var5;
                         }
                       } else {
@@ -68,14 +68,14 @@ final class RegionAnchor extends IntrusiveNode {
                 } else {
                   if (NetworkResourceRequest.field_C.selectedUnit.attacksRemaining == 0) {
                     if (var6 < NetworkResourceRequest.field_C.movementPlanner.movementCosts[param2]) {
-                      if ((2 & NetworkResourceRequest.field_C.movementPlanner.field_e[param2]) != 0) {
+                      if ((2 & NetworkResourceRequest.field_C.movementPlanner.attackTargetMask[param2]) != 0) {
                         var4_int = var5 | 5570560;
                       }
                     } else {
                       var4_int = var5 | 21760;
                     }
                   } else {
-                    if ((1 & NetworkResourceRequest.field_C.movementPlanner.field_e[param2]) != 0) {
+                    if ((1 & NetworkResourceRequest.field_C.movementPlanner.attackTargetMask[param2]) != 0) {
                       var4_int = var5 | 5570560;
                     }
                   }
@@ -83,11 +83,11 @@ final class RegionAnchor extends IntrusiveNode {
               } else {
                 if (NetworkResourceRequest.field_C.selectedUnit.attacksRemaining > 0) {
                   if (!NetworkResourceRequest.field_C.selectedUnit.movementSpent) {
-                    if ((NetworkResourceRequest.field_C.movementPlanner.field_e[param2] & 2) != 0) {
+                    if ((NetworkResourceRequest.field_C.movementPlanner.attackTargetMask[param2] & 2) != 0) {
                       var4_int = var5 | 16711680;
                     }
                   } else {
-                    if ((1 & NetworkResourceRequest.field_C.movementPlanner.field_e[param2]) != 0) {
+                    if ((1 & NetworkResourceRequest.field_C.movementPlanner.attackTargetMask[param2]) != 0) {
                       var4_int = var5 | 16711680;
                     }
                   }

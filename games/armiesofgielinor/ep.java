@@ -156,7 +156,7 @@ final class ep {
             ck.field_c = new RgbSprite[16];
             try {
               for (var2 = 0; var2 < 16; var2++) {
-                ck.field_c[var2] = this.b(GrowthEvent.b(param0, -383), var2);
+                ck.field_c[var2] = this.b(GrowthEvent.bitwiseXor(param0, -383), var2);
               }
             } catch (java.lang.OutOfMemoryError decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;

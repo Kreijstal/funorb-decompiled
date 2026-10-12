@@ -255,10 +255,10 @@ final class rj extends Widget {
         var2[param0] = (byte)(ek.field_d << 2);
         var2[0] = (byte) 1;
         if (uc.field_a) {
-          var2[1] = (byte)oe.c((int) var2[1], 2);
+          var2[1] = (byte)oe.bitwiseOr((int) var2[1], 2);
         }
         if (cu.field_a) {
-          var2[1] = (byte)oe.c((int) var2[1], 1);
+          var2[1] = (byte)oe.bitwiseOr((int) var2[1], 1);
         }
         nm.a(0, 6, var2);
         ps.field_v = false;

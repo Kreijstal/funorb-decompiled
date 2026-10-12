@@ -151,11 +151,11 @@ final class LineOfSightGrid {
     }
 
     final void mergeAttackTargetMask(int minimumRange, boolean allowCategory4, int obfuscationGuard, int minimumX, int maximumY, int playerId, boolean includeAllies, int[] movementCosts, int maximumRange, int maximumX, boolean ignoreBlockingTerrain, int[] targetMask, int maximumMovementCost, int minimumY) {
-        int var15_int = 0;
-        int var16 = 0;
-        int var19 = 0;
-        int var20 = 0;
-        int stackIn_12_0 = 0;
+        int candidateOriginY = 0;
+        int candidateOriginX = 0;
+        int rayDeltaY = 0;
+        int rayDeltaX = 0;
+        int availableTargetBits = 0;
         RuntimeException stackIn_60_0 = null;
         StringBuilder stackIn_60_1 = null;
         String stackIn_61_2 = null;
@@ -163,61 +163,61 @@ final class LineOfSightGrid {
         String stackIn_64_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var15 = null;
-        int var17 = 0;
-        int var18 = 0;
-        int var21 = 0;
-        int var22 = 0;
-        var22 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        int originMovementCost = 0;
+        int originTargetBits = 0;
+        int manhattanDistance = 0;
+        int obfuscationControl = 0;
+        obfuscationControl = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           if (obfuscationGuard != -1) {
             this.originX = 124;
           }
-          for (var15_int = minimumY; var15_int <= maximumY; var15_int++) {
-            for (var16 = minimumX; maximumX >= var16; var16++) {
-              var17 = movementCosts[this.mapWidth * var15_int + var16];
-              if (var17 <= maximumMovementCost) {
-                stackIn_12_0 = (var17 != 0) ? 6 : 7;
-                var18 = stackIn_12_0;
+          for (candidateOriginY = minimumY; candidateOriginY <= maximumY; candidateOriginY++) {
+            for (candidateOriginX = minimumX; maximumX >= candidateOriginX; candidateOriginX++) {
+              originMovementCost = movementCosts[this.mapWidth * candidateOriginY + candidateOriginX];
+              if (originMovementCost <= maximumMovementCost) {
+                availableTargetBits = (originMovementCost != 0) ? 6 : 7;
+                originTargetBits = availableTargetBits;
                 this.resetVisibility((byte) -108);
-                this.originX = var16;
+                this.originX = candidateOriginX;
                 this.maximumRange = maximumRange;
-                this.originY = var15_int;
-                for (var19 = this.maximumRange; var19 >= 0; var19--) {
-                  for (var20 = -var19; var20 < var19; var20++) {
-                    var21 = var19 + Math.abs(var20);
-                    if (minimumRange <= var21 &&
-                      var21 <= maximumRange) {
-                      if (this.originX + var20 > -1 &&
-                        this.mapWidth > this.originX + var20 &&
-                        this.originY + var19 > -1 &&
-                        this.mapHeight > var19 + this.originY && (7 == var18 ||
-                        targetMask[(var19 + this.originY) * this.mapWidth + var20 + this.originX] == 0)) {
-                        this.traceVisibilityRay(25, var19, this.originY, var20, this.originX, ignoreBlockingTerrain);
-                        targetMask[var20 + (this.originX + (var19 + this.originY) * this.mapWidth)] = oe.c(targetMask[var20 + (this.originX + (var19 + this.originY) * this.mapWidth)], rn.a(this.getTargetFlags((byte) 114, playerId, this.originY + var19, includeAllies, var20 + this.originX, var21, ignoreBlockingTerrain, allowCategory4), var18));
+                this.originY = candidateOriginY;
+                for (rayDeltaY = this.maximumRange; rayDeltaY >= 0; rayDeltaY--) {
+                  for (rayDeltaX = -rayDeltaY; rayDeltaX < rayDeltaY; rayDeltaX++) {
+                    manhattanDistance = rayDeltaY + Math.abs(rayDeltaX);
+                    if (minimumRange <= manhattanDistance &&
+                      manhattanDistance <= maximumRange) {
+                      if (this.originX + rayDeltaX > -1 &&
+                        this.mapWidth > this.originX + rayDeltaX &&
+                        this.originY + rayDeltaY > -1 &&
+                        this.mapHeight > rayDeltaY + this.originY && (7 == originTargetBits ||
+                        targetMask[(rayDeltaY + this.originY) * this.mapWidth + rayDeltaX + this.originX] == 0)) {
+                        this.traceVisibilityRay(25, rayDeltaY, this.originY, rayDeltaX, this.originX, ignoreBlockingTerrain);
+                        targetMask[rayDeltaX + (this.originX + (rayDeltaY + this.originY) * this.mapWidth)] = oe.bitwiseOr(targetMask[rayDeltaX + (this.originX + (rayDeltaY + this.originY) * this.mapWidth)], rn.bitwiseAnd(this.getTargetFlags((byte) 114, playerId, this.originY + rayDeltaY, includeAllies, rayDeltaX + this.originX, manhattanDistance, ignoreBlockingTerrain, allowCategory4), originTargetBits));
                       }
-                      if (-var20 + this.originX > -1 &&
-                        this.mapWidth > -var20 + this.originX &&
-                        this.originY - var19 > -1 &&
-                        this.originY - var19 < this.mapHeight && (7 == var18 ||
-                        targetMask[(-var19 + this.originY) * this.mapWidth + (-var20 + this.originX)] == 0)) {
-                        this.traceVisibilityRay(obfuscationGuard + 26, -var19, this.originY, -var20, this.originX, ignoreBlockingTerrain);
-                        targetMask[this.originX - var20 + (-var19 + this.originY) * this.mapWidth] = oe.c(targetMask[this.originX - var20 + (-var19 + this.originY) * this.mapWidth], rn.a(this.getTargetFlags((byte) 114, playerId, -var19 + this.originY, includeAllies, -var20 + this.originX, var21, ignoreBlockingTerrain, allowCategory4), var18));
+                      if (-rayDeltaX + this.originX > -1 &&
+                        this.mapWidth > -rayDeltaX + this.originX &&
+                        this.originY - rayDeltaY > -1 &&
+                        this.originY - rayDeltaY < this.mapHeight && (7 == originTargetBits ||
+                        targetMask[(-rayDeltaY + this.originY) * this.mapWidth + (-rayDeltaX + this.originX)] == 0)) {
+                        this.traceVisibilityRay(obfuscationGuard + 26, -rayDeltaY, this.originY, -rayDeltaX, this.originX, ignoreBlockingTerrain);
+                        targetMask[this.originX - rayDeltaX + (-rayDeltaY + this.originY) * this.mapWidth] = oe.bitwiseOr(targetMask[this.originX - rayDeltaX + (-rayDeltaY + this.originY) * this.mapWidth], rn.bitwiseAnd(this.getTargetFlags((byte) 114, playerId, -rayDeltaY + this.originY, includeAllies, -rayDeltaX + this.originX, manhattanDistance, ignoreBlockingTerrain, allowCategory4), originTargetBits));
                       }
-                      if (-var19 + this.originX > -1 &&
-                        this.mapWidth > -var19 + this.originX &&
-                        this.originY + var20 > -1 &&
-                        this.originY + var20 < this.mapHeight && (7 == var18 ||
-                        targetMask[-var19 + this.originX + (var20 + this.originY) * this.mapWidth] == 0)) {
-                        this.traceVisibilityRay(obfuscationGuard + 26, var20, this.originY, -var19, this.originX, ignoreBlockingTerrain);
-                        targetMask[this.originX - var19 + this.mapWidth * (var20 + this.originY)] = oe.c(targetMask[this.originX - var19 + this.mapWidth * (var20 + this.originY)], rn.a(var18, this.getTargetFlags((byte) 114, playerId, this.originY + var20, includeAllies, this.originX - var19, var21, ignoreBlockingTerrain, allowCategory4)));
+                      if (-rayDeltaY + this.originX > -1 &&
+                        this.mapWidth > -rayDeltaY + this.originX &&
+                        this.originY + rayDeltaX > -1 &&
+                        this.originY + rayDeltaX < this.mapHeight && (7 == originTargetBits ||
+                        targetMask[-rayDeltaY + this.originX + (rayDeltaX + this.originY) * this.mapWidth] == 0)) {
+                        this.traceVisibilityRay(obfuscationGuard + 26, rayDeltaX, this.originY, -rayDeltaY, this.originX, ignoreBlockingTerrain);
+                        targetMask[this.originX - rayDeltaY + this.mapWidth * (rayDeltaX + this.originY)] = oe.bitwiseOr(targetMask[this.originX - rayDeltaY + this.mapWidth * (rayDeltaX + this.originY)], rn.bitwiseAnd(originTargetBits, this.getTargetFlags((byte) 114, playerId, this.originY + rayDeltaX, includeAllies, this.originX - rayDeltaY, manhattanDistance, ignoreBlockingTerrain, allowCategory4)));
                       }
-                      if (this.originX + var19 > -1 &&
-                        this.mapWidth > this.originX + var19 &&
-                        this.originY - var20 > -1 &&
-                        -var20 + this.originY < this.mapHeight && (var18 == 7 ||
-                        targetMask[var19 + (this.originX + (this.originY - var20) * this.mapWidth)] == 0)) {
-                        this.traceVisibilityRay(obfuscationGuard + 26, -var20, this.originY, var19, this.originX, ignoreBlockingTerrain);
-                        targetMask[(this.originY - var20) * this.mapWidth + var19 + this.originX] = oe.c(targetMask[(this.originY - var20) * this.mapWidth + var19 + this.originX], rn.a(var18, this.getTargetFlags((byte) 114, playerId, -var20 + this.originY, includeAllies, this.originX + var19, var21, ignoreBlockingTerrain, allowCategory4)));
+                      if (this.originX + rayDeltaY > -1 &&
+                        this.mapWidth > this.originX + rayDeltaY &&
+                        this.originY - rayDeltaX > -1 &&
+                        -rayDeltaX + this.originY < this.mapHeight && (originTargetBits == 7 ||
+                        targetMask[rayDeltaY + (this.originX + (this.originY - rayDeltaX) * this.mapWidth)] == 0)) {
+                        this.traceVisibilityRay(obfuscationGuard + 26, -rayDeltaX, this.originY, rayDeltaY, this.originX, ignoreBlockingTerrain);
+                        targetMask[(this.originY - rayDeltaX) * this.mapWidth + rayDeltaY + this.originX] = oe.bitwiseOr(targetMask[(this.originY - rayDeltaX) * this.mapWidth + rayDeltaY + this.originX], rn.bitwiseAnd(originTargetBits, this.getTargetFlags((byte) 114, playerId, -rayDeltaX + this.originY, includeAllies, this.originX + rayDeltaY, manhattanDistance, ignoreBlockingTerrain, allowCategory4)));
                       }
                     }
                   }
@@ -247,8 +247,8 @@ final class LineOfSightGrid {
     }
 
     private final int getTargetFlags(byte obfuscationGuard, int playerId, int tileY, boolean includeAllies, int tileX, int distance, boolean ignoreBlockingTerrain, boolean allowCategory4) {
-        int var9 = 0;
-        Unit var10 = null;
+        int targetFlags = 0;
+        Unit targetUnit = null;
         if (obfuscationGuard != 114) {
           field_j = (String) null;
         }
@@ -261,14 +261,14 @@ final class LineOfSightGrid {
               return 0;
             }
           }
-          var9 = 3;
-          var10 = this.tiles[tileX + tileY * this.mapWidth].occupant;
-          if (var10 != null &&
-            (!this.battlefield.arePlayersAllied(var10.ownerPlayer, -16985, playerId) || includeAllies) &&
-            (var10.getUnitCategory(0) != 4 || ignoreBlockingTerrain || allowCategory4)) {
-            var9 = var9 | 4;
+          targetFlags = 3;
+          targetUnit = this.tiles[tileX + tileY * this.mapWidth].occupant;
+          if (targetUnit != null &&
+            (!this.battlefield.arePlayersAllied(targetUnit.ownerPlayer, -16985, playerId) || includeAllies) &&
+            (targetUnit.getUnitCategory(0) != 4 || ignoreBlockingTerrain || allowCategory4)) {
+            targetFlags = targetFlags | 4;
           }
-          return var9;
+          return targetFlags;
         }
         return 0;
     }

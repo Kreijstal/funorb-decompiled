@@ -79,7 +79,7 @@ final class DeathEvent extends GameEvent {
           if (param2.selectedUnit != null) {
             stackIn_6_0 = param2.movementPlanner;
             stackIn_7_1 = (null == param2.field_oc);
-            ((MovementPlanner) (Object) stackIn_6_0).prepareForUnit(stackIn_7_1, 32, param2.controlledPlayerId, param2.selectedUnit, param2.movementPlanner.field_y, param2.movementPlanner.spellId);
+            ((MovementPlanner) (Object) stackIn_6_0).prepareForUnit(stackIn_7_1, 32, param2.controlledPlayerId, param2.selectedUnit, param2.movementPlanner.selectionMode, param2.movementPlanner.spellId);
           }
           stackIn_9_0 = this.a((byte) -39, param2, param0, true);
           return stackIn_9_0;

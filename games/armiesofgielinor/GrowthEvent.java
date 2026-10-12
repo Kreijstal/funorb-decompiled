@@ -26,8 +26,8 @@ final class GrowthEvent extends GameEvent {
         field_B = null;
     }
 
-    static int b(int param0, int param1) {
-        return param0 ^ param1;
+    static int bitwiseXor(int left, int right) {
+        return left ^ right;
     }
 
     final void applyToBattlefield(Battlefield battlefield, int obfuscationGuard) {

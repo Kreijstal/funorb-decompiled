@@ -338,7 +338,7 @@ abstract class rb implements n {
                     } else {
                       var18 = SoftwareRaster.pixels[var8];
                       var19 = (var17 & 16711935) * var15 + (16711935 & var18) * var16 >> 8 & 16711935;
-                      SoftwareRaster.pixels[var8] = var19 + rn.a(65280, rn.a(var17, 65280) * var15 + rn.a(var18, 65280) * var16 >> 8);
+                      SoftwareRaster.pixels[var8] = var19 + rn.bitwiseAnd(65280, rn.bitwiseAnd(var17, 65280) * var15 + rn.bitwiseAnd(var18, 65280) * var16 >> 8);
                     }
                   }
                   var8++;

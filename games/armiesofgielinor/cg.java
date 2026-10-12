@@ -61,7 +61,7 @@ final class cg {
                 var7 = SoftwareRaster.pixels[var6];
                 var8 = this.field_e[var5];
                 var9 = (-param1 + this.field_d[var5]) * 256 / 8;
-                SoftwareRaster.pixels[var6] = oe.c(oe.c(var9 * rn.a(var8, 255) + rn.a(var7, 255) * (-var9 + 256) >> 8, rn.a(var9 * (rn.a(var8, 65280) >> 8) + (-var9 + 256) * (rn.a(var7, 65280) >> 8), 65280)), rn.a((rn.a(var7, 16711680) >> 16) * (256 - var9) + (rn.a(var8, 16711680) >> 16) * var9 << 8, 16711851));
+                SoftwareRaster.pixels[var6] = oe.bitwiseOr(oe.bitwiseOr(var9 * rn.bitwiseAnd(var8, 255) + rn.bitwiseAnd(var7, 255) * (-var9 + 256) >> 8, rn.bitwiseAnd(var9 * (rn.bitwiseAnd(var8, 65280) >> 8) + (-var9 + 256) * (rn.bitwiseAnd(var7, 65280) >> 8), 65280)), rn.bitwiseAnd((rn.bitwiseAnd(var7, 16711680) >> 16) * (256 - var9) + (rn.bitwiseAnd(var8, 16711680) >> 16) * var9 << 8, 16711851));
               } else {
                 SoftwareRaster.pixels[var6] = this.field_e[var5];
               }

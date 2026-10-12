@@ -175,10 +175,10 @@ final class DropdownArrowPainter implements WidgetPainter {
             if (var9 >= SoftwareRaster.clipTop &&
               SoftwareRaster.clipBottom > var9) {
               if (SoftwareRaster.clipLeft < var7Lifetime1) {
-                SoftwareRaster.pixels[var9 * SoftwareRaster.width - (-var7Lifetime1 + 1)] = rn.a(SoftwareRaster.pixels[-1 + (var7Lifetime1 + SoftwareRaster.width * var9)], 16711422) >> 1;
+                SoftwareRaster.pixels[var9 * SoftwareRaster.width - (-var7Lifetime1 + 1)] = rn.bitwiseAnd(SoftwareRaster.pixels[-1 + (var7Lifetime1 + SoftwareRaster.width * var9)], 16711422) >> 1;
               }
               if (var8Lifetime1 + var7Lifetime1 < SoftwareRaster.clipRight) {
-                SoftwareRaster.pixels[SoftwareRaster.width * var9 + (var7Lifetime1 + var8Lifetime1)] = rn.a(16711422, SoftwareRaster.pixels[SoftwareRaster.width * var9 + var7Lifetime1 + var8Lifetime1]) >> 1;
+                SoftwareRaster.pixels[SoftwareRaster.width * var9 + (var7Lifetime1 + var8Lifetime1)] = rn.bitwiseAnd(16711422, SoftwareRaster.pixels[SoftwareRaster.width * var9 + var7Lifetime1 + var8Lifetime1]) >> 1;
               }
             }
             SoftwareRaster.e(var7Lifetime1, var9, var8Lifetime1, 0);

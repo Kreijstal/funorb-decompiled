@@ -90,7 +90,7 @@ final class bw {
             var8 = param2[var5_int] << var6 & 255 | (255 & param2[1 + var5_int]) >>> -var6 + 8;
             if (0 <= var8 &&
               var8 < 256) {
-              this.field_i[this.field_d] = (byte)oe.c((int) this.field_i[this.field_d], var8 >>> var7);
+              this.field_i[this.field_d] = (byte)oe.bitwiseOr((int) this.field_i[this.field_d], var8 >>> var7);
               this.field_d = this.field_d + 1;
               this.field_c = this.field_c + (8 - var7);
               if (this.field_c == 512) {
@@ -98,7 +98,7 @@ final class bw {
                 this.field_c = 0;
                 this.field_d = 0;
               }
-              this.field_i[this.field_d] = (byte)rn.a(255, var8 << -var7 + 8);
+              this.field_i[this.field_d] = (byte)rn.bitwiseAnd(255, var8 << -var7 + 8);
               var5_int++;
               this.field_c = this.field_c + var7;
               param1 = param1 - 8L;
@@ -110,7 +110,7 @@ final class bw {
             var8Lifetime1 = 0;
           } else {
             var8Lifetime1 = param2[var5_int] << var6 & 255;
-            this.field_i[this.field_d] = (byte)oe.c((int) this.field_i[this.field_d], var8Lifetime1 >>> var7);
+            this.field_i[this.field_d] = (byte)oe.bitwiseOr((int) this.field_i[this.field_d], var8Lifetime1 >>> var7);
           }
           if (param1 + (long)var7 >= 8L) {
             this.field_c = this.field_c + (8 - var7);
@@ -121,7 +121,7 @@ final class bw {
               this.field_c = 0;
               this.field_d = 0;
             }
-            this.field_i[this.field_d] = (byte)rn.a(255, var8Lifetime1 << -var7 + 8);
+            this.field_i[this.field_d] = (byte)rn.bitwiseAnd(255, var8Lifetime1 << -var7 + 8);
             this.field_c = this.field_c + (int)param1;
           } else {
             this.field_c = (int)((long)this.field_c + param1);
@@ -257,7 +257,7 @@ final class bw {
             var4 = 0;
             var5 = 56;
             while (var4 < 8) {
-              this.field_e[var3Lifetime1] = BufferedFile.a(this.field_e[var3Lifetime1], ClientConnectionState.field_g[var4][rn.a(255, (int)(this.field_j[rn.a(7, var3Lifetime1 - var4)] >>> var5))]);
+              this.field_e[var3Lifetime1] = BufferedFile.a(this.field_e[var3Lifetime1], ClientConnectionState.field_g[var4][rn.bitwiseAnd(255, (int)(this.field_j[rn.bitwiseAnd(7, var3Lifetime1 - var4)] >>> var5))]);
               var5 -= 8;
               var4++;
             }
@@ -272,7 +272,7 @@ final class bw {
             var4Lifetime1 = var7;
             var5Lifetime1 = 56;
             while (var7 < 8) {
-              this.field_e[var3Lifetime1Lifetime2] = BufferedFile.a(this.field_e[var3Lifetime1Lifetime2], ClientConnectionState.field_g[var7][rn.a((int)(this.field_k[rn.a(var3Lifetime1Lifetime2 - var7, 7)] >>> var5Lifetime1), 255)]);
+              this.field_e[var3Lifetime1Lifetime2] = BufferedFile.a(this.field_e[var3Lifetime1Lifetime2], ClientConnectionState.field_g[var7][rn.bitwiseAnd((int)(this.field_k[rn.bitwiseAnd(var3Lifetime1Lifetime2 - var7, 7)] >>> var5Lifetime1), 255)]);
               var5Lifetime1 -= 8;
               var7++;
             }
@@ -315,7 +315,7 @@ final class bw {
         int var8 = 0;
         var8 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          this.field_i[this.field_d] = (byte)oe.c((int) this.field_i[this.field_d], 128 >>> rn.a(this.field_c, 7));
+          this.field_i[this.field_d] = (byte)oe.bitwiseOr((int) this.field_i[this.field_d], 128 >>> rn.bitwiseAnd(this.field_c, 7));
           this.field_d = this.field_d + 1;
           if (32 < this.field_d) {
             while (64 > this.field_d) {

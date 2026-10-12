@@ -8,7 +8,7 @@ final class LeaderEscortCondition implements MatchCondition {
     private Unit[] leaders;
     static String field_e;
     static int field_d;
-    static int[][] field_h;
+    static int[][] baseTerrainMovementCosts;
     static int field_i;
     static String field_g;
 
@@ -140,7 +140,7 @@ final class LeaderEscortCondition implements MatchCondition {
     public static void e(int param0) {
         field_a = null;
         field_b = null;
-        field_h = (int[][]) null;
+        baseTerrainMovementCosts = (int[][]) null;
         field_e = null;
         field_f = null;
         field_g = null;
@@ -266,7 +266,7 @@ final class LeaderEscortCondition implements MatchCondition {
                     for (var25Lifetime1 = 0; var7 > var25Lifetime1; var25Lifetime1++) {
                       incrementValue$3 = var16;
                       var16++;
-                      var11[1][incrementValue$3] = var27.readInt(GrowthEvent.b(param0, 8));
+                      var11[1][incrementValue$3] = var27.readInt(GrowthEvent.bitwiseXor(param0, 8));
                     }
                   }
                   if (var6 > var14 &&
@@ -338,6 +338,6 @@ final class LeaderEscortCondition implements MatchCondition {
         field_b = "Loads more Achievements in Rated games.";
         field_e = "No";
         field_g = "Accept";
-        field_h = new int[][]{new int[]{3, 2, -1, 6, 9, 9, -1, 3, 3, 3, 2, 3, -1, 3, 3, -1}, new int[]{3, 2, -1, 6, -1, 9, -1, 3, 3, 3, 2, 3, -1, 3, 3, -1}, new int[]{3, 2, -1, 6, -1, 9, -1, 3, 3, 3, 2, 3, -1, 3, 3, -1}, new int[]{3, 2, -1, 6, -1, 9, -1, 3, 3, 3, 2, 3, -1, 3, 3, -1}, new int[]{3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3}, new int[]{3, 2, -1, 6, -1, 9, -1, 3, 3, 3, 2, 3, -1, 3, 3, -1}, new int[]{3, 3, -1, 3, -1, 3, -1, 3, 3, 3, 3, 3, -1, 3, 3, -1}, new int[]{3, 3, -1, 3, 3, 3, -1, 3, 3, 3, 3, 3, -1, 3, 3, -1}};
+        baseTerrainMovementCosts = new int[][]{new int[]{3, 2, -1, 6, 9, 9, -1, 3, 3, 3, 2, 3, -1, 3, 3, -1}, new int[]{3, 2, -1, 6, -1, 9, -1, 3, 3, 3, 2, 3, -1, 3, 3, -1}, new int[]{3, 2, -1, 6, -1, 9, -1, 3, 3, 3, 2, 3, -1, 3, 3, -1}, new int[]{3, 2, -1, 6, -1, 9, -1, 3, 3, 3, 2, 3, -1, 3, 3, -1}, new int[]{3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3}, new int[]{3, 2, -1, 6, -1, 9, -1, 3, 3, 3, 2, 3, -1, 3, 3, -1}, new int[]{3, 3, -1, 3, -1, 3, -1, 3, 3, 3, 3, 3, -1, 3, 3, -1}, new int[]{3, 3, -1, 3, 3, 3, -1, 3, 3, 3, 3, 3, -1, 3, 3, -1}};
     }
 }

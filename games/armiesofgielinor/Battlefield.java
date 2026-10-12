@@ -159,7 +159,7 @@ final class Battlefield {
         }
     }
 
-    final int a(int param0, int param1, int param2, int param3, Unit param4, boolean param5) {
+    final int getMovementStepCost(int sourceIndex, int obfuscationGuard, int destinationIndex, int playerId, Unit unit, boolean checkOccupancy) {
         RuntimeException var7 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;
@@ -167,22 +167,22 @@ final class Battlefield {
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param1 != -16) {
+          if (obfuscationGuard != -16) {
             this.teams = (TeamRoster[]) null;
           }
-          stackIn_3_0 = SpellCastEvent.a(this.mapWidth, this.tiles, param5, param2, param3, this.mapHeight, this.getPlayerTeamIndex(param3, param1 ^ 15), param4, param0, false, true);
+          stackIn_3_0 = SpellCastEvent.computeMovementStepCost(this.mapWidth, this.tiles, checkOccupancy, destinationIndex, playerId, this.mapHeight, this.getPlayerTeamIndex(playerId, obfuscationGuard ^ 15), unit, sourceIndex, false, true);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var7 = decompiledCaughtException;
           stackIn_6_0 = var7;
-          stackIn_6_1 = new StringBuilder().append("ha.VD(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
-          if (param4 == null) {
+          stackIn_6_1 = new StringBuilder().append("ha.VD(").append(sourceIndex).append(',').append(obfuscationGuard).append(',').append(destinationIndex).append(',').append(playerId).append(',');
+          if (unit == null) {
             stackIn_7_2 = "null";
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param5).append(')').toString());
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(checkOccupancy).append(')').toString());
         }
     }
 
@@ -873,7 +873,7 @@ final class Battlefield {
           (var13 != -1 ||
           var16 != 0)) {
           boolean decompiledFrameCompleted0 = true;
-          this.field_U[param5] = oe.c(this.field_U[param5], 1 << var13);
+          this.field_U[param5] = oe.bitwiseOr(this.field_U[param5], 1 << var13);
           if (7 == var14.terrainType &&
             var12Lifetime1 == this.godFavourLevels[param5][var13]) {
             var15 = 0;
@@ -1300,7 +1300,7 @@ final class Battlefield {
                     if (var8.unitType == 59) {
                       stackIn_26_0 = (!var8.packedFlag32) ? 0 : 1;
                       if (stackIn_26_0 + ps.field_C[2] >= var7) {
-                        param0[var9] = oe.c(param0[var9], 4);
+                        param0[var9] = oe.bitwiseOr(param0[var9], 4);
                       }
                     }
                     if (var8.unitType == 53) {
@@ -1311,7 +1311,7 @@ final class Battlefield {
                         stackIn_32_1 = 0;
                       }
                       if (stackIn_31_0 >= ~(stackIn_32_1 + ps.field_C[3])) {
-                        param0[var9] = oe.c(param0[var9], 8);
+                        param0[var9] = oe.bitwiseOr(param0[var9], 8);
                       }
                     }
                     if (var8.unitType == 43) {
@@ -1323,7 +1323,7 @@ final class Battlefield {
                       }
                       if (stackIn_38_0 <= stackIn_39_1 + ps.field_C[4] &&
                         0 < var7) {
-                        param0[var9] = oe.c(param0[var9], 16);
+                        param0[var9] = oe.bitwiseOr(param0[var9], 16);
                       }
                     }
                     if (var8.unitType == 63) {
@@ -1334,7 +1334,7 @@ final class Battlefield {
                         stackIn_46_1 = 0;
                       }
                       if ((stackIn_45_0 + stackIn_46_1) >= var7) {
-                        param0[var9] = oe.c(param0[var9], 1);
+                        param0[var9] = oe.bitwiseOr(param0[var9], 1);
                       }
                     }
                     if (58 == var8.unitType) {
@@ -1345,7 +1345,7 @@ final class Battlefield {
                         stackIn_52_1 = 1;
                       }
                       if ((stackIn_51_0 + stackIn_52_1) >= var7) {
-                        param0[var9] = oe.c(param0[var9], 2);
+                        param0[var9] = oe.bitwiseOr(param0[var9], 2);
                       }
                     }
                   }
@@ -2268,12 +2268,12 @@ final class Battlefield {
               if (var23.bonusStrength + var23.strength <= attackerDamage &&
                 attacker.statusEffectType != 7 &&
                 attacker.statusEffectType != 8) {
-                combatPrediction[2] = oe.c(combatPrediction[2], 1);
+                combatPrediction[2] = oe.bitwiseOr(combatPrediction[2], 1);
               }
               if (defenderDamage >= defenderUnit.strength + defenderUnit.bonusStrength &&
                 7 != defender.statusEffectType &&
                 defender.statusEffectType != 8) {
-                combatPrediction[2] = oe.c(combatPrediction[2], 2);
+                combatPrediction[2] = oe.bitwiseOr(combatPrediction[2], 2);
               }
               stackIn_133_0 = combatPrediction;
               return stackIn_133_0;
@@ -3084,7 +3084,7 @@ final class Battlefield {
                   if (stackIn_38_0 <= stackIn_38_1) {
                     this.chosenGods[this.localPlayer][var6] = -1;
                   } else {
-                    this.godFavourLevels[this.localPlayer][this.chosenGods[this.localPlayer][var6]] = rn.a(15, var7);
+                    this.godFavourLevels[this.localPlayer][this.chosenGods[this.localPlayer][var6]] = rn.bitwiseAnd(15, var7);
                     this.field_D = this.field_D + 1;
                     if (var6 == 2) {
                       this.field_Cb = true;
@@ -4439,7 +4439,7 @@ final class Battlefield {
         }
     }
 
-    final int a(Unit param0, boolean param1, int param2, boolean param3, int param4, int param5, int param6) {
+    final int getMovementStepCost(Unit unit, boolean allowUnmovedOwnUnits, int obfuscationGuard, boolean checkOccupancy, int destinationIndex, int sourceIndex, int playerId) {
         RuntimeException var8 = null;
         int stackIn_2_0 = 0;
         int stackIn_4_0 = 0;
@@ -4448,8 +4448,8 @@ final class Battlefield {
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param2 == 14336) {
-            stackIn_4_0 = SpellCastEvent.a(this.mapWidth, this.tiles, param3, param4, param6, this.mapHeight, this.getPlayerTeamIndex(param6, -1), param0, param5, param1, true);
+          if (obfuscationGuard == 14336) {
+            stackIn_4_0 = SpellCastEvent.computeMovementStepCost(this.mapWidth, this.tiles, checkOccupancy, destinationIndex, playerId, this.mapHeight, this.getPlayerTeamIndex(playerId, -1), unit, sourceIndex, allowUnmovedOwnUnits, true);
             return stackIn_4_0;
           }
           stackIn_2_0 = 112;
@@ -4459,12 +4459,12 @@ final class Battlefield {
           var8 = decompiledCaughtException;
           stackIn_7_0 = var8;
           stackIn_7_1 = new StringBuilder().append("ha.HC(");
-          if (param0 == null) {
+          if (unit == null) {
             stackIn_8_2 = "null";
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(allowUnmovedOwnUnits).append(',').append(obfuscationGuard).append(',').append(checkOccupancy).append(',').append(destinationIndex).append(',').append(sourceIndex).append(',').append(playerId).append(')').toString());
         }
     }
 
@@ -5288,7 +5288,7 @@ final class Battlefield {
               while (stepsInByte < 4) {
                 stackIn_3_0 = stepsRemaining;
                 if (stackIn_3_0 > 0) {
-                  directions[stepIndex] = rn.a(3, packedDirections);
+                  directions[stepIndex] = rn.bitwiseAnd(3, packedDirections);
                   packedDirections = packedDirections >> 2;
                   stepIndex++;
                   stepsRemaining--;

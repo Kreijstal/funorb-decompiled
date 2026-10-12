@@ -50,7 +50,7 @@ final class jn {
             var13 = param6;
             var14 = param0;
             var15 = (16711422 & var17[var11]) >> 1;
-            var10[var11] = var15 + (rn.a(33423424, var13) >> 9) + (rn.a(33423360, var12) >> 1) + (rn.a(33544325, var14) >> 17);
+            var10[var11] = var15 + (rn.bitwiseAnd(33423424, var13) >> 9) + (rn.bitwiseAnd(33423360, var12) >> 1) + (rn.bitwiseAnd(33544325, var14) >> 17);
             param0 = param0 + param9;
             param1 = param1 + param2;
             param4++;

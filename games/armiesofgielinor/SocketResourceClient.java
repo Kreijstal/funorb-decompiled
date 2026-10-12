@@ -248,7 +248,7 @@ final class SocketResourceClient extends ResourceProtocolClient {
                   this.socket.readFully(0, this.incomingHeader.position, availableThenResponseLength, this.incomingHeader.payload);
                   if (0 != this.xorByte) {
                     for (readCountThenArchiveId = 0; readCountThenArchiveId < availableThenResponseLength; readCountThenArchiveId++) {
-                      this.incomingHeader.payload[this.incomingHeader.position + readCountThenArchiveId] = (byte)GrowthEvent.b((int) this.incomingHeader.payload[this.incomingHeader.position + readCountThenArchiveId], (int) this.xorByte);
+                      this.incomingHeader.payload[this.incomingHeader.position + readCountThenArchiveId] = (byte)GrowthEvent.bitwiseXor((int) this.incomingHeader.payload[this.incomingHeader.position + readCountThenArchiveId], (int) this.xorByte);
                     }
                   }
                   this.incomingHeader.position = this.incomingHeader.position + availableThenResponseLength;
@@ -322,7 +322,7 @@ final class SocketResourceClient extends ResourceProtocolClient {
                   this.socket.readFully(0, this.activeResponse.responseBuffer.position, readCountThenArchiveId, this.activeResponse.responseBuffer.payload);
                   if (0 != this.xorByte) {
                     for (groupIdThenByteIndex = 0; readCountThenArchiveId > groupIdThenByteIndex; groupIdThenByteIndex++) {
-                      this.activeResponse.responseBuffer.payload[this.activeResponse.responseBuffer.position + groupIdThenByteIndex] = (byte)GrowthEvent.b((int) this.activeResponse.responseBuffer.payload[this.activeResponse.responseBuffer.position + groupIdThenByteIndex], (int) this.xorByte);
+                      this.activeResponse.responseBuffer.payload[this.activeResponse.responseBuffer.position + groupIdThenByteIndex] = (byte)GrowthEvent.bitwiseXor((int) this.activeResponse.responseBuffer.payload[this.activeResponse.responseBuffer.position + groupIdThenByteIndex], (int) this.xorByte);
                     }
                   }
                   this.activeResponse.blockPosition = this.activeResponse.blockPosition + readCountThenArchiveId;

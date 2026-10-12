@@ -34,7 +34,7 @@ final class tf extends IntrusiveNode {
             var5 = var9;
             var6 = param0;
             var7 = param4;
-            var9[var6] = var7 + rn.a(var9[var6] >> 1, 8355711);
+            var9[var6] = var7 + rn.bitwiseAnd(var9[var6] >> 1, 8355711);
             param0++;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

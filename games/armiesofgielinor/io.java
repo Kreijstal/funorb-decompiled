@@ -427,7 +427,7 @@ final class io extends IntrusiveNode {
               }
               var22 = var38.h(110);
             }
-            this.field_r[var23] = (short)(this.field_r[var23] + (rn.a(-1 + var22, 2) << 14));
+            this.field_r[var23] = (short)(this.field_r[var23] + (rn.bitwiseAnd(-1 + var22, 2) << 14));
             this.field_q[var23] = var22;
             var20Lifetime2--;
           }

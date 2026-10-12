@@ -178,7 +178,7 @@ final class SpellCastEvent extends GameEvent {
         field_D = null;
     }
 
-    final static int a(int param0, MapTile[] param1, boolean param2, int param3, int param4, int param5, int param6, Unit param7, int param8, boolean param9, boolean param10) {
+    final static int computeMovementStepCost(int mapWidth, MapTile[] tiles, boolean checkOccupancy, int destinationIndex, int playerId, int mapHeight, int teamIndex, Unit unit, int sourceIndex, boolean allowUnmovedOwnUnits, boolean obfuscationGuard) {
         int stackIn_8_0 = 0;
         int stackIn_12_0 = 0;
         int stackIn_15_0 = 0;
@@ -192,137 +192,137 @@ final class SpellCastEvent extends GameEvent {
         String stackIn_85_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var11 = null;
-        int var12 = 0;
-        int var13 = 0;
-        int var14 = 0;
+        int unitCategory = 0;
+        int sourceTerrain = 0;
+        int destinationTerrain = 0;
         int var15 = 0;
         int var16 = 0;
-        int var17 = 0;
-        int var18 = 0;
-        int var19 = 0;
-        int var20 = 0;
-        int var21 = 0;
-        int var22 = 0;
-        Unit var23 = null;
-        int var15Lifetime1;
-        int var16Lifetime1;
-        int var21Lifetime1;
-        var22 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        int kind2Override = 0;
+        int costThreeOverride = 0;
+        int costOneOverride = 0;
+        int category4 = 0;
+        int sourceEffects = 0;
+        int obfuscationControl = 0;
+        Unit destinationOccupant = null;
+        int sourceCost;
+        int destinationCost;
+        int destinationEffects;
+        obfuscationControl = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          var23 = param1[param3].occupant;
-          if (param2 &&
-            var23 != null && (!param9 ||
-            var23.movementSpent ||
-            param4 != var23.ownerPlayer)) {
+          destinationOccupant = tiles[destinationIndex].occupant;
+          if (checkOccupancy &&
+            destinationOccupant != null && (!allowUnmovedOwnUnits ||
+            destinationOccupant.movementSpent ||
+            playerId != destinationOccupant.ownerPlayer)) {
             stackIn_8_0 = 1000000;
             return stackIn_8_0;
           }
-          var12 = param7.getUnitCategory(0);
-          var13 = param1[param8].terrainType;
-          var14 = param1[param3].terrainType;
+          unitCategory = unit.getUnitCategory(0);
+          sourceTerrain = tiles[sourceIndex].terrainType;
+          destinationTerrain = tiles[destinationIndex].terrainType;
           var15 = 0;
           var16 = 0;
-          stackIn_12_0 = (bw.unitDefinitions[param7.unitType][1] != 2) ? 0 : 1;
-          var17 = stackIn_12_0;
-          var18 = param7.r((byte) 55) ? 1 : 0;
-          var19 = param7.o((byte) 98) ? 1 : 0;
-          stackIn_15_0 = (var12 != 4) ? 0 : 1;
-          var20 = stackIn_15_0;
-          var15Lifetime1 = LeaderEscortCondition.field_h[var12][var13];
-          if (!param10) {
+          stackIn_12_0 = (bw.unitDefinitions[unit.unitType][1] != 2) ? 0 : 1;
+          kind2Override = stackIn_12_0;
+          costThreeOverride = unit.r((byte) 55) ? 1 : 0;
+          costOneOverride = unit.o((byte) 98) ? 1 : 0;
+          stackIn_15_0 = (unitCategory != 4) ? 0 : 1;
+          category4 = stackIn_15_0;
+          sourceCost = LeaderEscortCondition.baseTerrainMovementCosts[unitCategory][sourceTerrain];
+          if (!obfuscationGuard) {
             stackIn_17_0 = 20;
             return stackIn_17_0;
           }
-          if (var17 != 0 &&
-            var13 == 3) {
-            var15Lifetime1 = 3;
-          } else if (var13 != 4 &&
-            var13 != 6) {
-            if (var13 == 5 && (var18 != 0 ||
-              var19 != 0)) {
-              var15Lifetime1 = 3;
+          if (kind2Override != 0 &&
+            sourceTerrain == 3) {
+            sourceCost = 3;
+          } else if (sourceTerrain != 4 &&
+            sourceTerrain != 6) {
+            if (sourceTerrain == 5 && (costThreeOverride != 0 ||
+              costOneOverride != 0)) {
+              sourceCost = 3;
             }
           } else {
-            if (var19 != 0) {
-              var15Lifetime1 = 1;
+            if (costOneOverride != 0) {
+              sourceCost = 1;
             } else {
-              if (var18 != 0) {
-                var15Lifetime1 = 3;
+              if (costThreeOverride != 0) {
+                sourceCost = 3;
               }
             }
           }
-          if (var15Lifetime1 < 0) {
-            var15Lifetime1 = 6;
+          if (sourceCost < 0) {
+            sourceCost = 6;
           }
-          var16Lifetime1 = LeaderEscortCondition.field_h[var12][var14];
-          if (var17 != 0 &&
-            var14 == 3) {
-            var16Lifetime1 = 3;
-          } else if (var14 != 4 &&
-            6 != var14) {
-            if (var14 == 5 && (var18 != 0 ||
-              var19 != 0)) {
-              var16Lifetime1 = 3;
+          destinationCost = LeaderEscortCondition.baseTerrainMovementCosts[unitCategory][destinationTerrain];
+          if (kind2Override != 0 &&
+            destinationTerrain == 3) {
+            destinationCost = 3;
+          } else if (destinationTerrain != 4 &&
+            6 != destinationTerrain) {
+            if (destinationTerrain == 5 && (costThreeOverride != 0 ||
+              costOneOverride != 0)) {
+              destinationCost = 3;
             }
           } else {
-            if (var19 != 0) {
-              var16Lifetime1 = 1;
+            if (costOneOverride != 0) {
+              destinationCost = 1;
             } else {
-              if (var18 != 0) {
-                var16Lifetime1 = 3;
+              if (costThreeOverride != 0) {
+                destinationCost = 3;
               }
             }
           }
-          if (var16Lifetime1 < 0) {
-            var16Lifetime1 = 1000000;
+          if (destinationCost < 0) {
+            destinationCost = 1000000;
           }
-          var21 = param1[param8 % param0 + param8 / param5 * param0].getEffectsForPlayer((byte) 97, param4, param6);
-          if (var20 == 0 &&
-            (1 & var21) != 0 &&
-            var13 != 4 &&
-            6 != var13 &&
-            var13 != 2 &&
-            12 != var13 &&
-            15 != var13) {
-            var15Lifetime1 = 9;
+          sourceEffects = tiles[sourceIndex % mapWidth + sourceIndex / mapHeight * mapWidth].getEffectsForPlayer((byte) 97, playerId, teamIndex);
+          if (category4 == 0 &&
+            (1 & sourceEffects) != 0 &&
+            sourceTerrain != 4 &&
+            6 != sourceTerrain &&
+            sourceTerrain != 2 &&
+            12 != sourceTerrain &&
+            15 != sourceTerrain) {
+            sourceCost = 9;
           }
-          var21Lifetime1 = param1[param3 % param0 + param0 * (param3 / param5)].getEffectsForPlayer((byte) 97, param4, param6);
-          if (var20 == 0 &&
-            (1 & var21Lifetime1) != 0 &&
-            var14 != 4 &&
-            var14 != 6 &&
-            var14 != 2 &&
-            var14 != 12 &&
-            var14 != 15) {
-            var16Lifetime1 = 9;
+          destinationEffects = tiles[destinationIndex % mapWidth + mapWidth * (destinationIndex / mapHeight)].getEffectsForPlayer((byte) 97, playerId, teamIndex);
+          if (category4 == 0 &&
+            (1 & destinationEffects) != 0 &&
+            destinationTerrain != 4 &&
+            destinationTerrain != 6 &&
+            destinationTerrain != 2 &&
+            destinationTerrain != 12 &&
+            destinationTerrain != 15) {
+            destinationCost = 9;
           }
-          if (2 == var14 &&
-            param7.unitType == 62) {
-            var16Lifetime1 = 3 * bw.unitDefinitions[62][3];
+          if (2 == destinationTerrain &&
+            unit.unitType == 62) {
+            destinationCost = 3 * bw.unitDefinitions[62][3];
           }
-          if (var16Lifetime1 >= var15Lifetime1) {
-            stackIn_78_0 = var16Lifetime1;
+          if (destinationCost >= sourceCost) {
+            stackIn_78_0 = destinationCost;
             return stackIn_78_0;
           }
-          stackIn_76_0 = var15Lifetime1;
+          stackIn_76_0 = sourceCost;
           return stackIn_76_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var11 = decompiledCaughtException;
           stackIn_81_0 = var11;
-          stackIn_81_1 = new StringBuilder().append("pj.E(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_81_1 = new StringBuilder().append("pj.E(").append(mapWidth).append(',');
+          if (tiles == null) {
             stackIn_82_2 = "null";
           } else {
             stackIn_82_2 = "{...}";
           }
-          stackIn_84_1 = ((StringBuilder) (Object) stackIn_81_1).append(stackIn_82_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',');
-          if (param7 == null) {
+          stackIn_84_1 = ((StringBuilder) (Object) stackIn_81_1).append(stackIn_82_2).append(',').append(checkOccupancy).append(',').append(destinationIndex).append(',').append(playerId).append(',').append(mapHeight).append(',').append(teamIndex).append(',');
+          if (unit == null) {
             stackIn_85_2 = "null";
           } else {
             stackIn_85_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_81_0), ((StringBuilder) (Object) stackIn_84_1).append(stackIn_85_2).append(',').append(param8).append(',').append(param9).append(',').append(param10).append(')').toString());
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_81_0), ((StringBuilder) (Object) stackIn_84_1).append(stackIn_85_2).append(',').append(sourceIndex).append(',').append(allowUnmovedOwnUnits).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 
@@ -457,7 +457,7 @@ final class SpellCastEvent extends GameEvent {
         try {
           if (param0 != 593277313) {
             var3 = (Unit) null;
-            SpellCastEvent.a(73, (MapTile[]) null, true, -35, 53, 62, 17, (Unit) null, 87, false, false);
+            SpellCastEvent.computeMovementStepCost(73, (MapTile[]) null, true, -35, 53, 62, 17, (Unit) null, 87, false, false);
           }
           stackIn_3_0 = TrianglePulse.a(param1, 0, param1.length, 0);
           return stackIn_3_0;

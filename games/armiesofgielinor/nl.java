@@ -434,7 +434,7 @@ abstract class nl extends Widget implements gw {
           }
           for (var17_intLifetime3 = 0; param1 > var17_intLifetime3; var17_intLifetime3++) {
             KingBlackDragonEvent.field_z[var17_intLifetime3 + 4] = new ClientUiComponent(0L, IconLabelControl.field_Lb, ob.field_M[var17_intLifetime3]);
-            array$2 = new IconTextComponent[rn.a(255, (int) mi.field_r[var17_intLifetime3]) + 1];
+            array$2 = new IconTextComponent[rn.bitwiseAnd(255, (int) mi.field_r[var17_intLifetime3]) + 1];
             pu.field_k[var17_intLifetime3 + 4] = array$2;
             pu.field_k[var17_intLifetime3 + 4][0] = new IconTextComponent(0L, eb.field_a, (ClientUiComponent) null, DualLinkedNode.field_k, (RgbSprite) null, ki.field_a);
             for (var18 = 0; var18 < (mi.field_r[var17_intLifetime3] & 255); var18++) {

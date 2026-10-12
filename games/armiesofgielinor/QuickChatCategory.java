@@ -101,14 +101,14 @@ final class QuickChatCategory extends DualLinkedNode {
         int var2Lifetime1;
         if (null != this.phraseIds) {
           for (var2 = 0; var2 < this.phraseIds.length; var2++) {
-            this.phraseIds[var2] = oe.c(this.phraseIds[var2], 32768);
+            this.phraseIds[var2] = oe.bitwiseOr(this.phraseIds[var2], 32768);
           }
         }
         if (this.subcategoryIds != null) {
           var5 = 0;
           var2Lifetime1 = var5;
           while (var5 < this.subcategoryIds.length) {
-            this.subcategoryIds[var5] = oe.c(this.subcategoryIds[var5], 32768);
+            this.subcategoryIds[var5] = oe.bitwiseOr(this.subcategoryIds[var5], 32768);
             var5++;
           }
         }

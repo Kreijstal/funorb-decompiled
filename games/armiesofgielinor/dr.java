@@ -148,8 +148,8 @@ abstract class dr extends DualLinkedNode {
         field_z = new int[16];
         for (var0 = 0; field_z.length > var0; var0++) {
           var1 = var0 + 1;
-          field_z[var0] = Math.min(oe.c(oe.c(rn.a(var1 << 16, 16729482), rn.a(-2046820097, var1) << 8), rn.a(var1 << 2, 252)), 267583488);
-          field_z[var0] = oe.c(rn.a(16515326, field_z[var0]), rn.a(32512, field_z[var0] >> 1));
+          field_z[var0] = Math.min(oe.bitwiseOr(oe.bitwiseOr(rn.bitwiseAnd(var1 << 16, 16729482), rn.bitwiseAnd(-2046820097, var1) << 8), rn.bitwiseAnd(var1 << 2, 252)), 267583488);
+          field_z[var0] = oe.bitwiseOr(rn.bitwiseAnd(16515326, field_z[var0]), rn.bitwiseAnd(32512, field_z[var0] >> 1));
           var2 = gq.a(field_z[var0]);
           var2 = var2 & 655359;
           var3 = 255 & var2;

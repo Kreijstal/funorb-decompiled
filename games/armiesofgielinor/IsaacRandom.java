@@ -180,10 +180,10 @@ final class IsaacRandom {
             }
           }
           this.accumulator = this.accumulator + this.memory[var2 + 128 & 255];
-          dupTemp$1 = this.lastResult + (this.memory[rn.a(255, var3 >> 2)] + this.accumulator);
+          dupTemp$1 = this.lastResult + (this.memory[rn.bitwiseAnd(255, var3 >> 2)] + this.accumulator);
           var4 = dupTemp$1;
           this.memory[var2] = dupTemp$1;
-          dupTemp$2 = this.memory[rn.a(var4 >> 8, 1020) >> 2] + var3;
+          dupTemp$2 = this.memory[rn.bitwiseAnd(var4 >> 8, 1020) >> 2] + var3;
           this.lastResult = dupTemp$2;
           this.results[var2] = dupTemp$2;
         }

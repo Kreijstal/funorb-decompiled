@@ -1189,7 +1189,7 @@ final class BattleCamera {
         byte[] var3 = new cn(AttackEvent.nextBoundedInt(false, 2147483647, li.field_n), 4, this.mapWidth / 5, this.mapHeight / 5, 7, 0.5f, true).a(this.mapHeight, (byte) 93, this.mapWidth);
         this.overlayValues = new int[var3.length];
         for (var4 = 0; var3.length > var4; var4++) {
-          this.overlayValues[var4] = 256 - rn.a((int) var3[var4], 255);
+          this.overlayValues[var4] = 256 - rn.bitwiseAnd((int) var3[var4], 255);
         }
     }
 

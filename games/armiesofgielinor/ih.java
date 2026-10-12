@@ -285,7 +285,7 @@ class ih extends hn {
 
     private final void a(int param0, int param1, boolean param2) {
         this.field_P[param1] = param0;
-        this.field_D[param1] = rn.a(-128, param0);
+        this.field_D[param1] = rn.bitwiseAnd(-128, param0);
         this.a(param1, (byte) 114, param0);
         if (!param2) {
           this.field_z = -32L;
@@ -952,67 +952,67 @@ class ih extends hn {
         var5Lifetime4 = (param1 & 32599) >> 8;
         var6Lifetime3 = 127 & param1 >> 16;
         if (0 == var5Lifetime4) {
-          this.field_D[var4Lifetime4] = rn.a(-2080769, this.field_D[var4Lifetime4]) + (var6Lifetime3 << 14);
+          this.field_D[var4Lifetime4] = rn.bitwiseAnd(-2080769, this.field_D[var4Lifetime4]) + (var6Lifetime3 << 14);
         }
         if (var5Lifetime4 == 32) {
-          this.field_D[var4Lifetime4] = (var6Lifetime3 << 7) + rn.a(this.field_D[var4Lifetime4], -16257);
+          this.field_D[var4Lifetime4] = (var6Lifetime3 << 7) + rn.bitwiseAnd(this.field_D[var4Lifetime4], -16257);
         }
         if (var5Lifetime4 == 1) {
-          this.field_u[var4Lifetime4] = rn.a(this.field_u[var4Lifetime4], -16257) + (var6Lifetime3 << 7);
+          this.field_u[var4Lifetime4] = rn.bitwiseAnd(this.field_u[var4Lifetime4], -16257) + (var6Lifetime3 << 7);
         }
         if (var5Lifetime4 == 33) {
-          this.field_u[var4Lifetime4] = rn.a(this.field_u[var4Lifetime4], -128) + var6Lifetime3;
+          this.field_u[var4Lifetime4] = rn.bitwiseAnd(this.field_u[var4Lifetime4], -128) + var6Lifetime3;
         }
         if (5 == var5Lifetime4) {
-          this.field_F[var4Lifetime4] = rn.a(-16257, this.field_F[var4Lifetime4]) + (var6Lifetime3 << 7);
+          this.field_F[var4Lifetime4] = rn.bitwiseAnd(-16257, this.field_F[var4Lifetime4]) + (var6Lifetime3 << 7);
         }
         if (37 == var5Lifetime4) {
-          this.field_F[var4Lifetime4] = var6Lifetime3 + rn.a(this.field_F[var4Lifetime4], -128);
+          this.field_F[var4Lifetime4] = var6Lifetime3 + rn.bitwiseAnd(this.field_F[var4Lifetime4], -128);
         }
         if (7 == var5Lifetime4) {
-          this.field_N[var4Lifetime4] = (var6Lifetime3 << 7) + rn.a(-16257, this.field_N[var4Lifetime4]);
+          this.field_N[var4Lifetime4] = (var6Lifetime3 << 7) + rn.bitwiseAnd(-16257, this.field_N[var4Lifetime4]);
         }
         if (var5Lifetime4 == 39) {
-          this.field_N[var4Lifetime4] = var6Lifetime3 + rn.a(-128, this.field_N[var4Lifetime4]);
+          this.field_N[var4Lifetime4] = var6Lifetime3 + rn.bitwiseAnd(-128, this.field_N[var4Lifetime4]);
         }
         if (10 == var5Lifetime4) {
-          this.field_V[var4Lifetime4] = rn.a(-16257, this.field_V[var4Lifetime4]) + (var6Lifetime3 << 7);
+          this.field_V[var4Lifetime4] = rn.bitwiseAnd(-16257, this.field_V[var4Lifetime4]) + (var6Lifetime3 << 7);
         }
         if (var5Lifetime4 == 42) {
-          this.field_V[var4Lifetime4] = var6Lifetime3 + rn.a(this.field_V[var4Lifetime4], -128);
+          this.field_V[var4Lifetime4] = var6Lifetime3 + rn.bitwiseAnd(this.field_V[var4Lifetime4], -128);
         }
         if (var5Lifetime4 == 11) {
-          this.field_A[var4Lifetime4] = rn.a(this.field_A[var4Lifetime4], -16257) + (var6Lifetime3 << 7);
+          this.field_A[var4Lifetime4] = rn.bitwiseAnd(this.field_A[var4Lifetime4], -16257) + (var6Lifetime3 << 7);
         }
         if (var5Lifetime4 == 43) {
-          this.field_A[var4Lifetime4] = rn.a(-128, this.field_A[var4Lifetime4]) + var6Lifetime3;
+          this.field_A[var4Lifetime4] = rn.bitwiseAnd(-128, this.field_A[var4Lifetime4]) + var6Lifetime3;
         }
         if (var5Lifetime4 == 64) {
           if (var6Lifetime3 >= 64) {
-            this.field_o[var4Lifetime4] = oe.c(this.field_o[var4Lifetime4], 1);
+            this.field_o[var4Lifetime4] = oe.bitwiseOr(this.field_o[var4Lifetime4], 1);
           } else {
-            this.field_o[var4Lifetime4] = rn.a(this.field_o[var4Lifetime4], -2);
+            this.field_o[var4Lifetime4] = rn.bitwiseAnd(this.field_o[var4Lifetime4], -2);
           }
         }
         if (var5Lifetime4 == 65) {
           if (var6Lifetime3 < 64) {
             this.b(false, var4Lifetime4);
-            this.field_o[var4Lifetime4] = rn.a(this.field_o[var4Lifetime4], -3);
+            this.field_o[var4Lifetime4] = rn.bitwiseAnd(this.field_o[var4Lifetime4], -3);
           } else {
-            this.field_o[var4Lifetime4] = oe.c(this.field_o[var4Lifetime4], 2);
+            this.field_o[var4Lifetime4] = oe.bitwiseOr(this.field_o[var4Lifetime4], 2);
           }
         }
         if (var5Lifetime4 == 99) {
-          this.field_J[var4Lifetime4] = rn.a(127, this.field_J[var4Lifetime4]) + (var6Lifetime3 << 7);
+          this.field_J[var4Lifetime4] = rn.bitwiseAnd(127, this.field_J[var4Lifetime4]) + (var6Lifetime3 << 7);
         }
         if (var5Lifetime4 == 98) {
-          this.field_J[var4Lifetime4] = rn.a(16256, this.field_J[var4Lifetime4]) + var6Lifetime3;
+          this.field_J[var4Lifetime4] = rn.bitwiseAnd(16256, this.field_J[var4Lifetime4]) + var6Lifetime3;
         }
         if (var5Lifetime4 == 101) {
-          this.field_J[var4Lifetime4] = 16384 - (-rn.a(127, this.field_J[var4Lifetime4]) - (var6Lifetime3 << 7));
+          this.field_J[var4Lifetime4] = 16384 - (-rn.bitwiseAnd(127, this.field_J[var4Lifetime4]) - (var6Lifetime3 << 7));
         }
         if (var5Lifetime4 == 100) {
-          this.field_J[var4Lifetime4] = var6Lifetime3 + (rn.a(this.field_J[var4Lifetime4], 16256) + 16384);
+          this.field_J[var4Lifetime4] = var6Lifetime3 + (rn.bitwiseAnd(this.field_J[var4Lifetime4], 16256) + 16384);
         }
         if (var5Lifetime4 == 120) {
           this.e(-23024, var4Lifetime4);
@@ -1026,27 +1026,27 @@ class ih extends hn {
         if (var5Lifetime4 == 6) {
           var7 = this.field_J[var4Lifetime4];
           if (16384 == var7) {
-            this.field_x[var4Lifetime4] = rn.a(-16257, this.field_x[var4Lifetime4]) + (var6Lifetime3 << 7);
+            this.field_x[var4Lifetime4] = rn.bitwiseAnd(-16257, this.field_x[var4Lifetime4]) + (var6Lifetime3 << 7);
           }
         }
         if (38 == var5Lifetime4) {
           var7Lifetime1 = this.field_J[var4Lifetime4];
           if (var7Lifetime1 == 16384) {
-            this.field_x[var4Lifetime4] = var6Lifetime3 + rn.a(-128, this.field_x[var4Lifetime4]);
+            this.field_x[var4Lifetime4] = var6Lifetime3 + rn.bitwiseAnd(-128, this.field_x[var4Lifetime4]);
           }
         }
         if (16 == var5Lifetime4) {
-          this.field_W[var4Lifetime4] = rn.a(-16257, this.field_W[var4Lifetime4]) + (var6Lifetime3 << 7);
+          this.field_W[var4Lifetime4] = rn.bitwiseAnd(-16257, this.field_W[var4Lifetime4]) + (var6Lifetime3 << 7);
         }
         if (var5Lifetime4 == 48) {
-          this.field_W[var4Lifetime4] = var6Lifetime3 + rn.a(this.field_W[var4Lifetime4], -128);
+          this.field_W[var4Lifetime4] = var6Lifetime3 + rn.bitwiseAnd(this.field_W[var4Lifetime4], -128);
         }
         if (var5Lifetime4 == 81) {
           if (var6Lifetime3 < 64) {
             this.a(var4Lifetime4, (byte) -66);
-            this.field_o[var4Lifetime4] = rn.a(this.field_o[var4Lifetime4], -5);
+            this.field_o[var4Lifetime4] = rn.bitwiseAnd(this.field_o[var4Lifetime4], -5);
           } else {
-            this.field_o[var4Lifetime4] = oe.c(this.field_o[var4Lifetime4], 4);
+            this.field_o[var4Lifetime4] = oe.bitwiseOr(this.field_o[var4Lifetime4], 4);
           }
         }
         if (var5Lifetime4 == 17) {
@@ -1312,7 +1312,7 @@ class ih extends hn {
         int var5 = 0;
         var3Lifetime1 = var5;
         while (var5 < 16) {
-          this.field_D[var5] = rn.a(this.field_P[var5], -128);
+          this.field_D[var5] = rn.bitwiseAnd(this.field_P[var5], -128);
           var5++;
         }
     }

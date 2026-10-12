@@ -594,7 +594,7 @@ final class GameplayController {
             initialUnitType = initialUnits[initialUnitIndex];
             initialUnlockGroup = jv.getUnitUnlockGroup(false, initialUnitType);
             initialUnlockOrdinal = b.getUnitUnlockOrdinal(false, initialUnitType);
-            unitUnlockMasks[initialUnlockGroup] = oe.c(unitUnlockMasks[initialUnlockGroup], 1 << initialUnlockOrdinal);
+            unitUnlockMasks[initialUnlockGroup] = oe.bitwiseOr(unitUnlockMasks[initialUnlockGroup], 1 << initialUnlockOrdinal);
             initialUnitIndex++;
             if (var15 == 0) {
               continue;
@@ -618,7 +618,7 @@ final class GameplayController {
                     rewardUnitType = rewardUnits[rewardUnitIndex];
                     rewardUnlockGroup = jv.getUnitUnlockGroup(false, rewardUnitType);
                     rewardUnlockOrdinal = b.getUnitUnlockOrdinal(false, rewardUnitType);
-                    unitUnlockMasks[rewardUnlockGroup] = oe.c(unitUnlockMasks[rewardUnlockGroup], 1 << rewardUnlockOrdinal);
+                    unitUnlockMasks[rewardUnlockGroup] = oe.bitwiseOr(unitUnlockMasks[rewardUnlockGroup], 1 << rewardUnlockOrdinal);
                     rewardUnitIndex++;
                     if (var15 != 0) {
                       decompiledFrameCompleted0 = false;
@@ -2089,8 +2089,8 @@ final class GameplayController {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         try {
-          if (this.movementPlanner.field_f) {
-            this.movementPlanner.a(this.camera, -4);
+          if (this.movementPlanner.selectionActive) {
+            this.movementPlanner.drawSelectedPath(this.camera, -4);
           }
           var2_int = 8 % ((-60 - param0) / 56);
           return;
@@ -3452,7 +3452,7 @@ final class GameplayController {
               stackIn_38_0 = this.movementPlanner;
               stackIn_39_1 = (null == this.field_oc);
               ((MovementPlanner) (Object) stackIn_38_0).prepareForUnit(stackIn_39_1, 92, this.battlefield.localPlayer, (Unit) (var3), -1, -1);
-              var5 = this.movementPlanner.field_e;
+              var5 = this.movementPlanner.attackTargetMask;
               var6 = 0;
               var7 = 0;
               while (true) {
@@ -3482,7 +3482,7 @@ final class GameplayController {
                 }
                 stackIn_59_0 = this.movementPlanner;
                 stackIn_60_1 = (this.field_oc == null);
-                ((MovementPlanner) (Object) stackIn_59_0).prepareForUnit(stackIn_60_1, 33, this.battlefield.localPlayer, var4, this.movementPlanner.field_y, this.movementPlanner.spellId);
+                ((MovementPlanner) (Object) stackIn_59_0).prepareForUnit(stackIn_60_1, 33, this.battlefield.localPlayer, var4, this.movementPlanner.selectionMode, this.movementPlanner.spellId);
                 break;
               }
             }
@@ -3639,7 +3639,7 @@ final class GameplayController {
                 if (this.selectedUnit != null) {
                   stackIn_104_0 = this.movementPlanner;
                   stackIn_105_1 = (null == this.field_oc);
-                  ((MovementPlanner) (Object) stackIn_104_0).prepareForUnit(stackIn_105_1, 14, this.controlledPlayerId, this.selectedUnit, this.movementPlanner.field_y, this.movementPlanner.spellId);
+                  ((MovementPlanner) (Object) stackIn_104_0).prepareForUnit(stackIn_105_1, 14, this.controlledPlayerId, this.selectedUnit, this.movementPlanner.selectionMode, this.movementPlanner.spellId);
                 }
                 if (((EventPresenter) (var3)).event.eventKind == 2) {
                   var4_ref_mb = (SummonEvent) (((EventPresenter) (var3)).event);
@@ -7069,22 +7069,22 @@ final class GameplayController {
                   -1 < var14 &&
                   var14 < this.battlefield.mapHeight) {
                   if (this.selectedUnit != null &&
-                    !this.movementPlanner.field_w) {
+                    !this.movementPlanner.otherPlayerPreview) {
                     if (!this.battlefield.a(this.selectedUnit, var13, var14, -128)) {
                       if ((!this.battlefield.a(var14, -26633, var13, this.selectedUnit)) &&
-                        (decompiledFrameRemainder13 = !(this.movementPlanner.field_w))) {
-                        decompiledFrameRemainder13 = !(!this.movementPlanner.field_a);
+                        (decompiledFrameRemainder13 = !(this.movementPlanner.otherPlayerPreview))) {
+                        decompiledFrameRemainder13 = !(!this.movementPlanner.controlsOtherPlayerUnit);
                       }
                       if (decompiledFrameRemainder13) {
                         var2 = DualNodeDeque.field_a;
-                        if ((0 == (4 & this.movementPlanner.field_e[var16])) &&
+                        if ((0 == (4 & this.movementPlanner.attackTargetMask[var16])) &&
                           (decompiledFrameRemainder13 = (var17 != 0))) {
                           var2 = ContextActionMenu.field_Ob;
                           decompiledFrameRemainder13 = (var20 != 0);
                         }
                         if ((decompiledFrameRemainder13) &&
                           (decompiledFrameRemainder13 = (!(this.selectedUnit.movementSpent) ||
-                          (1 & this.movementPlanner.field_e[var16]) != 0))) {
+                          (1 & this.movementPlanner.attackTargetMask[var16]) != 0))) {
                           var2 = wf.field_A;
                           decompiledFrameRemainder13 = (var20 != 0);
                         }
@@ -7094,7 +7094,7 @@ final class GameplayController {
                       var2 = wn.field_gb;
                       if (this.battlefield.tiles[var16].occupant == null ||
                         ~this.battlefield.tiles[var16].occupant.ownerPlayer != ~this.controlledPlayerId ||
-                        this.movementPlanner.field_a) {
+                        this.movementPlanner.controlsOtherPlayerUnit) {
                         if (this.selectedUnit.h(-13494)) {
                           var2 = DualNodeDeque.field_k;
                           decompiledFrameRemainder13 = (var20 != 0);
@@ -7106,7 +7106,7 @@ final class GameplayController {
                           }
                           if ((decompiledFrameRemainder13) &&
                             (decompiledFrameRemainder13 = !(bw.unitDefinitions[this.selectedUnit.unitType][3] * 3 >= this.movementPlanner.movementCosts[var16]))) {
-                            if (this.movementPlanner.field_k[var16] <= bw.unitDefinitions[this.selectedUnit.unitType][3] * 3) {
+                            if (this.movementPlanner.movementCostsThroughOwnUnits[var16] <= bw.unitDefinitions[this.selectedUnit.unitType][3] * 3) {
                               var2 = op.field_g;
                               decompiledFrameRemainder13 = (var20 != 0);
                             }
@@ -7958,7 +7958,7 @@ final class GameplayController {
           var4 = so.field_b.field_g;
           var5 = null;
           if (this.selectedUnit != null && (~this.controlledPlayerId == ~this.selectedUnit.ownerPlayer ||
-            !this.movementPlanner.field_w) && (!this.field_m &&
+            !this.movementPlanner.otherPlayerPreview) && (!this.field_m &&
             !this.field_F)) {
             stackIn_19_0 = 1;
             decompiledFrameRemainder8 = false;
@@ -8651,7 +8651,7 @@ final class GameplayController {
                 stackIn_600_2 = (this.selectedUnit == null) || (this.selectedUnit.ownerPlayer != this.controlledPlayerId) || (this.field_lc);
                 if (((Battlefield) (Object) stackIn_597_0).a(stackIn_597_1, stackIn_600_2, var8Lifetime2, var9Lifetime1, this.controlledPlayerId) && (this.selectedUnit == null ||
                   this.controlledPlayerId == this.selectedUnit.ownerPlayer ||
-                  this.movementPlanner.field_w)) {
+                  this.movementPlanner.otherPlayerPreview)) {
                   var10_ref_jd = this.battlefield.getUnitAt(var9Lifetime1, true, var8Lifetime2);
                   if (null != this.selectedUnit &&
                     Math.abs(-var8Lifetime2 + this.selectedUnit.tileX) + Math.abs(this.selectedUnit.tileY - var9Lifetime1) == 1 &&
@@ -8667,7 +8667,7 @@ final class GameplayController {
                 }
                 if (var6 != 0) {
                   if (this.controlledPlayerId != this.battlefield.currentPlayer ||
-                    !this.movementPlanner.field_f ||
+                    !this.movementPlanner.selectionActive ||
                     this.movementPlanner.targetX != var8Lifetime2 ||
                     this.movementPlanner.targetY != var9Lifetime1) {
                     if (this.field_lc) {
@@ -8692,7 +8692,7 @@ final class GameplayController {
                   var10Lifetime1Lifetime3 = var8Lifetime2 + var9Lifetime1 * this.battlefield.mapWidth;
                   if (this.selectedUnit.movementSpent ||
                     !(this.movementPlanner.movementCosts[var10Lifetime1Lifetime3] > this.movementPlanner.getMovementBudget(27732)) ||
-                    (this.movementPlanner.field_e[var10Lifetime1Lifetime3] & 3) == 0 ||
+                    (this.movementPlanner.attackTargetMask[var10Lifetime1Lifetime3] & 3) == 0 ||
                     null != this.battlefield.tiles[var10Lifetime1Lifetime3].occupant) {
                     this.f((byte) 77);
                   }
@@ -8912,7 +8912,7 @@ final class GameplayController {
           }
           if (this.movementPlanner.actionAllowed) {
             boolean decompiledFrameRemainder0 = true;
-            this.movementPlanner.field_f = false;
+            this.movementPlanner.selectionActive = false;
             if (this.field_lb) {
               if (this.field_oc == null) {
                 this.movementPlanner.writeMovementPacket(true, vl.outgoingPacket);
@@ -11344,10 +11344,10 @@ final class GameplayController {
           }
           var4 = BoundedFile.field_e;
           var5 = param0;
-          var4[var5 >> 5] = oe.c(var4[var5 >> 5], 1 << rn.a(var5, 31));
+          var4[var5 >> 5] = oe.bitwiseOr(var4[var5 >> 5], 1 << rn.bitwiseAnd(var5, 31));
           var4Lifetime1 = ReportAbuseDialog.field_Nb;
           var5Lifetime1 = param0;
-          var4Lifetime1[var5Lifetime1 >> 5] = oe.c(var4Lifetime1[var5Lifetime1 >> 5], 1 << rn.a(31, var5Lifetime1));
+          var4Lifetime1[var5Lifetime1 >> 5] = oe.bitwiseOr(var4Lifetime1[var5Lifetime1 >> 5], 1 << rn.bitwiseAnd(31, var5Lifetime1));
           ai.field_P.addLast((byte) -119, (IntrusiveNode) (new jg(param0)));
           if (!this.field_R) {
             UnitInfoPopup.field_u.addLast((byte) -119, (IntrusiveNode) (new iw(param0, param2, -1, -1, -1, -1)));
@@ -12268,7 +12268,7 @@ final class GameplayController {
                   while (var22_ref_int__.length > var23) {
                     var24 = var22_ref_int__[var23];
                     var25_int = jv.getUnitUnlockGroup(false, var24);
-                    var19_ref_int__[var25_int] = oe.c(var19_ref_int__[var25_int], 1 << b.getUnitUnlockOrdinal(false, var24));
+                    var19_ref_int__[var25_int] = oe.bitwiseOr(var19_ref_int__[var25_int], 1 << b.getUnitUnlockOrdinal(false, var24));
                     var23++;
                   }
                 }

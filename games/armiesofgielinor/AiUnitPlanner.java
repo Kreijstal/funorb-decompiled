@@ -130,7 +130,7 @@ final class AiUnitPlanner extends IntrusiveNode {
               var11 = 1;
             }
             movementPlanner.selectTarget(tileY, false, tileX, (byte) 93);
-            if ((4 & movementPlanner.field_e[tileIndex]) == 0 &&
+            if ((4 & movementPlanner.attackTargetMask[tileIndex]) == 0 &&
               var11 != 0) {
               stackIn_26_0 = -3.4028234663852886e+38f;
               return stackIn_26_0;
@@ -149,7 +149,7 @@ final class AiUnitPlanner extends IntrusiveNode {
             var6Lifetime1 = 0.0f;
             var16 = 0.0f;
             if (occupant != null) {
-              if ((movementPlanner.field_e[tileIndex] & 4) == 0) {
+              if ((movementPlanner.attackTargetMask[tileIndex] & 4) == 0) {
                 stackIn_41_0 = -3.4028234663852886e+38f;
                 return stackIn_41_0;
               }
@@ -491,7 +491,7 @@ final class AiUnitPlanner extends IntrusiveNode {
         if (param1) {
           stackIn_3_0 = var8.movementCosts;
         } else {
-          stackIn_3_0 = var8.field_k;
+          stackIn_3_0 = var8.movementCostsThroughOwnUnits;
         }
         var10 = stackIn_3_0;
         var9 = var10;
