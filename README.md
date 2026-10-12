@@ -23,7 +23,7 @@ by default for every game. Semantic game-specific names use explicit naming
 rules. Deko's numbered structural-category and type-based names identify
 unresolved purposes honestly; they are not complete semantic deobfuscation.
 
-Armies has 213 reviewed class names, not a complete semantic map. Shared widget
+Armies has 216 reviewed class names, not a complete semantic map. Shared widget
 bounds, dropdown options/prefix selection, painter dispatch and expansion now
 have reviewed names with pointer, selection and arrow-pixel fixtures. Campaign
 loadouts now name unit/spell rewards, equipped slots and cumulative mana bonuses;
@@ -176,7 +176,11 @@ JPEG loading, live audio and complete rendering remain unverified.
 SoundCache, SynthesizedSoundEffect and VorbisSample expose cache ownership,
 effect mixing and budgeted music conversion. Fixtures cover signed cache keys,
 exhausted-budget hits, named lookup, empty effects, packet headers and completed
-output transfer. Full synthesis/codec math and live playback remain unverified.
+output transfer. SynthesizerVoice, SoundEnvelope and SoundFilter name all owned
+fields/methods and synthesis/filter loop locals. Waveform, clipping, gating, echo,
+filter and nonempty PCM fixtures verify budget overshoot and scratch ownership.
+Production assets, nonzero modulation, general filters, full Vorbis math and live
+playback remain unverified.
 
 Camera overview grouping, centroid bounds, hold state and explicit tile focus
 now have reviewed names, alongside directional panning, dragging and velocity

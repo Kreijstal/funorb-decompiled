@@ -1439,7 +1439,7 @@ public final class ArmiesOfGielinor extends wf {
           ug.a(16);
           uk.d(0);
           dh.c(-117);
-          hu.a();
+          SynthesizerVoice.releaseScratch();
           vc.a(-119);
           AiInfluenceMap.a(61);
           AiPlanningStrategy.a(-1);
@@ -1510,7 +1510,7 @@ public final class ArmiesOfGielinor extends wf {
           QuickChatCommandDefinition.a((byte) -36);
           StrongCacheEntry.c(true);
           pc.d(35);
-          lc.a();
+          SoundFilter.releaseScratch();
           mu.a(0);
           NodeHashIterator.a((byte) 100);
           DualNodeIterator.a((byte) -121);

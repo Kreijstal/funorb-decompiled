@@ -3,7 +3,7 @@
  */
 final class SynthesizedSoundEffect {
     private int loopEndMilliseconds;
-    private hu[] voices;
+    private SynthesizerVoice[] voices;
     private int loopStartMilliseconds;
 
     final PcmSample toPcmSample() {
@@ -33,8 +33,8 @@ final class SynthesizedSoundEffect {
         durationMilliseconds = 0;
         for (durationVoiceIndex = 0; durationVoiceIndex < 10; durationVoiceIndex++) {
           if (this.voices[durationVoiceIndex] != null &&
-            this.voices[durationVoiceIndex].field_r + this.voices[durationVoiceIndex].field_e > durationMilliseconds) {
-            durationMilliseconds = this.voices[durationVoiceIndex].field_r + this.voices[durationVoiceIndex].field_e;
+            this.voices[durationVoiceIndex].durationMilliseconds + this.voices[durationVoiceIndex].offsetMilliseconds > durationMilliseconds) {
+            durationMilliseconds = this.voices[durationVoiceIndex].durationMilliseconds + this.voices[durationVoiceIndex].offsetMilliseconds;
           }
         }
         if (durationMilliseconds == 0) {
@@ -44,9 +44,9 @@ final class SynthesizedSoundEffect {
         samples = new byte[sampleCount];
         for (voiceIndex = 0; voiceIndex < 10; voiceIndex++) {
           if (this.voices[voiceIndex] != null) {
-            voiceSampleCount = this.voices[voiceIndex].field_r * 22050 / 1000;
-            voiceSampleOffset = this.voices[voiceIndex].field_e * 22050 / 1000;
-            voiceSamples = this.voices[voiceIndex].a(voiceSampleCount, this.voices[voiceIndex].field_r);
+            voiceSampleCount = this.voices[voiceIndex].durationMilliseconds * 22050 / 1000;
+            voiceSampleOffset = this.voices[voiceIndex].offsetMilliseconds * 22050 / 1000;
+            voiceSamples = this.voices[voiceIndex].synthesize(voiceSampleCount, this.voices[voiceIndex].durationMilliseconds);
             for (sampleIndex = 0; sampleIndex < voiceSampleCount; sampleIndex++) {
               mixedSample = samples[sampleIndex + voiceSampleOffset] + (voiceSamples[sampleIndex] >> 8);
               if ((mixedSample + 128 & -256) != 0) {
@@ -62,13 +62,13 @@ final class SynthesizedSoundEffect {
     private SynthesizedSoundEffect(PacketBuffer buffer) {
         int voiceIndex = 0;
         int voiceMarker;
-        this.voices = new hu[10];
+        this.voices = new SynthesizerVoice[10];
         for (voiceIndex = 0; voiceIndex < 10; voiceIndex++) {
           voiceMarker = buffer.readUnsignedByte(0);
           if (voiceMarker != 0) {
             buffer.position = buffer.position - 1;
-            this.voices[voiceIndex] = new hu();
-            this.voices[voiceIndex].a(buffer);
+            this.voices[voiceIndex] = new SynthesizerVoice();
+            this.voices[voiceIndex].decode(buffer);
           }
         }
         this.loopStartMilliseconds = buffer.readUnsignedShort((byte) -104);
