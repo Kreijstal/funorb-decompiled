@@ -7,19 +7,19 @@ final class UnitSpell extends Spell {
     int targetY;
     int targetX;
 
-    private final void a(int param0, Battlefield param1) {
-        Unit var5 = null;
+    private final void applyStatusEffect(int obfuscationGuard, Battlefield battlefield) {
+        Unit targetUnit = null;
         try {
-          var5 = param1.getUnitAt(this.targetY, true, this.targetX);
-          Unit var3 = var5;
-          if (param0 != 0) {
-            Battlefield var4 = (Battlefield) null;
-            this.b((byte) 119, (Battlefield) null);
+          targetUnit = battlefield.getUnitAt(this.targetY, true, this.targetX);
+          Unit targetAlias = targetUnit;
+          if (obfuscationGuard != 0) {
+            Battlefield discardedBattlefield = (Battlefield) null;
+            this.applyAccessoryEffect((byte) 119, (Battlefield) null);
           }
-          var5.statusEffectType = uc.spellDefinitions[this.spellId][5];
-          var5.statusEffectValue = uc.spellDefinitions[this.spellId][6];
+          targetUnit.statusEffectType = uc.spellDefinitions[this.spellId][5];
+          targetUnit.statusEffectValue = uc.spellDefinitions[this.spellId][6];
         } catch (RuntimeException runtimeException) {
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "wa.S(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "wa.S(" + obfuscationGuard + ',' + (battlefield != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -36,37 +36,37 @@ final class UnitSpell extends Spell {
         }
     }
 
-    private final void d(byte param0, Battlefield param1) {
-        int var4 = 0;
-        Unit var5 = null;
-        Unit var6 = null;
+    private final void applyPoisonOrTurnRefresh(byte obfuscationGuard, Battlefield battlefield) {
+        int obfuscationControl = 0;
+        Unit targetUnit = null;
+        Unit refreshTarget = null;
         RuntimeException stackIn_19_0 = null;
         StringBuilder stackIn_19_1 = null;
         String stackIn_20_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
-        var4 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        obfuscationControl = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          if (param0 >= -100) {
+          if (obfuscationGuard >= -100) {
             this.targetY = 58;
           }
-          var5 = param1.getUnitAt(this.targetY, true, this.targetX);
-          var6 = var5;
+          targetUnit = battlefield.getUnitAt(this.targetY, true, this.targetX);
+          refreshTarget = targetUnit;
           if (uc.spellDefinitions[this.spellId][6] == 7) {
-            var5.poisoned = true;
+            targetUnit.poisoned = true;
           }
           if (uc.spellDefinitions[this.spellId][6] == 16) {
-            if (var6.immobilizedTurns > 0) {
-              var6.immobilizedTurns = var6.immobilizedTurns - 1;
+            if (refreshTarget.immobilizedTurns > 0) {
+              refreshTarget.immobilizedTurns = refreshTarget.immobilizedTurns - 1;
             } else {
-              if (34 != var6.unitType ||
-                !var6.packedFlag8) {
-                var6.movementSpent = false;
+              if (34 != refreshTarget.unitType ||
+                !refreshTarget.packedFlag8) {
+                refreshTarget.movementSpent = false;
               }
-              if (74 != var6.unitType) {
-                var6.attacksRemaining = 1;
+              if (74 != refreshTarget.unitType) {
+                refreshTarget.attacksRemaining = 1;
               } else {
-                var6.attacksRemaining = 2;
+                refreshTarget.attacksRemaining = 2;
               }
             }
           }
@@ -75,8 +75,8 @@ final class UnitSpell extends Spell {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
           stackIn_19_0 = var3;
-          stackIn_19_1 = new StringBuilder().append("wa.R(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_19_1 = new StringBuilder().append("wa.R(").append(obfuscationGuard).append(',');
+          if (battlefield == null) {
             stackIn_20_2 = "null";
           } else {
             stackIn_20_2 = "{...}";
@@ -85,38 +85,38 @@ final class UnitSpell extends Spell {
         }
     }
 
-    private final void a(boolean param0, Battlefield param1) {
-        int var3_int = 0;
-        int var4 = 0;
-        Battlefield var5 = null;
+    private final void applyAreaEffect(boolean obfuscationGuard, Battlefield battlefield) {
+        int effectCode = 0;
+        int obfuscationControl = 0;
+        Battlefield discardedBattlefield = null;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
         String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
-        var4 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        obfuscationControl = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          if (!param0) {
-            var5 = (Battlefield) null;
-            this.a((Battlefield) null, false);
+          if (!obfuscationGuard) {
+            discardedBattlefield = (Battlefield) null;
+            this.applyUnitFlagsAndImmobilize((Battlefield) null, false);
           }
-          var3_int = uc.spellDefinitions[this.spellId][5];
-          if (var3_int != 0) {
-            if (var3_int != 64) {
-              this.b(true, param1);
+          effectCode = uc.spellDefinitions[this.spellId][5];
+          if (effectCode != 0) {
+            if (effectCode != 64) {
+              this.queueAreaDamageOrHealing(true, battlefield);
             } else {
-              this.c((byte) 78, param1);
+              this.queueAreaStrengthCapacityChanges((byte) 78, battlefield);
             }
           } else {
-            this.d((byte) -106, param1);
+            this.applyPoisonOrTurnRefresh((byte) -106, battlefield);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
           stackIn_13_0 = var3;
-          stackIn_13_1 = new StringBuilder().append("wa.M(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_13_1 = new StringBuilder().append("wa.M(").append(obfuscationGuard).append(',');
+          if (battlefield == null) {
             stackIn_14_2 = "null";
           } else {
             stackIn_14_2 = "{...}";
@@ -125,49 +125,49 @@ final class UnitSpell extends Spell {
         }
     }
 
-    private final void b(int param0, Battlefield param1) {
-        Unit var5 = null;
+    private final void applyEquipmentEffect(int obfuscationGuard, Battlefield battlefield) {
+        Unit targetUnit = null;
         try {
-          if (param0 <= 80) {
-            Battlefield var4 = (Battlefield) null;
+          if (obfuscationGuard <= 80) {
+            Battlefield discardedBattlefield = (Battlefield) null;
             this.finishEffect((Battlefield) null, 28);
           }
-          var5 = param1.getUnitAt(this.targetY, true, this.targetX);
-          Unit var3 = var5;
-          var5.equipmentDescriptor = uc.spellDefinitions[this.spellId][6] | uc.spellDefinitions[this.spellId][5] << 5;
+          targetUnit = battlefield.getUnitAt(this.targetY, true, this.targetX);
+          Unit targetAlias = targetUnit;
+          targetUnit.equipmentDescriptor = uc.spellDefinitions[this.spellId][6] | uc.spellDefinitions[this.spellId][5] << 5;
         } catch (RuntimeException runtimeException) {
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "wa.I(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "wa.I(" + obfuscationGuard + ',' + (battlefield != null ? "{...}" : "null") + ')');
         }
     }
 
-    private final void c(byte param0, Battlefield param1) {
-        int var4 = 0;
-        int var5 = 0;
+    private final void queueAreaStrengthCapacityChanges(byte obfuscationGuard, Battlefield battlefield) {
+        int tileX = 0;
+        int tileY = 0;
         RuntimeException stackIn_20_0 = null;
         StringBuilder stackIn_20_1 = null;
         String stackIn_21_2 = null;
         RuntimeException decompiledCaughtException = null;
-        int var3_int = 0;
+        int radius = 0;
         RuntimeException var3 = null;
-        Unit var6 = null;
-        int var7 = 0;
-        int var8 = 0;
-        int var7Lifetime1;
-        var8 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        Unit targetUnit = null;
+        int shrinkIndex = 0;
+        int obfuscationControl = 0;
+        int growIndex;
+        obfuscationControl = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          if (param0 != 78) {
+          if (obfuscationGuard != 78) {
             field_h = (String) null;
           }
-          var3_int = uc.spellDefinitions[this.spellId][7];
-          for (var4 = this.targetX - var3_int; var4 <= var3_int + this.targetX; var4++) {
-            for (var5 = -var3_int + this.targetY; this.targetY + var3_int >= var5; var5++) {
-              var6 = param1.getUnitAt(var5, true, var4);
-              if (var6 != null) {
-                for (var7 = 0; uc.spellDefinitions[this.spellId][6] > var7; var7++) {
-                  param1.pendingEvents.addFirst(750, new TurnEffectEvent(var6, 6));
+          radius = uc.spellDefinitions[this.spellId][7];
+          for (tileX = this.targetX - radius; tileX <= radius + this.targetX; tileX++) {
+            for (tileY = -radius + this.targetY; this.targetY + radius >= tileY; tileY++) {
+              targetUnit = battlefield.getUnitAt(tileY, true, tileX);
+              if (targetUnit != null) {
+                for (shrinkIndex = 0; uc.spellDefinitions[this.spellId][6] > shrinkIndex; shrinkIndex++) {
+                  battlefield.pendingEvents.addFirst(750, new TurnEffectEvent(targetUnit, 6));
                 }
-                for (var7Lifetime1 = 0; uc.spellDefinitions[this.spellId][6] < var7Lifetime1; var7Lifetime1--) {
-                  param1.pendingEvents.addFirst(750, new TurnEffectEvent(var6, 4));
+                for (growIndex = 0; uc.spellDefinitions[this.spellId][6] < growIndex; growIndex--) {
+                  battlefield.pendingEvents.addFirst(750, new TurnEffectEvent(targetUnit, 4));
                 }
               }
             }
@@ -177,8 +177,8 @@ final class UnitSpell extends Spell {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
           stackIn_20_0 = var3;
-          stackIn_20_1 = new StringBuilder().append("wa.N(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_20_1 = new StringBuilder().append("wa.N(").append(obfuscationGuard).append(',');
+          if (battlefield == null) {
             stackIn_21_2 = "null";
           } else {
             stackIn_21_2 = "{...}";
@@ -187,34 +187,34 @@ final class UnitSpell extends Spell {
         }
     }
 
-    private final void b(boolean param0, Battlefield param1) {
-        int var4 = 0;
-        int var5 = 0;
-        int var7 = 0;
+    private final void queueAreaDamageOrHealing(boolean obfuscationGuard, Battlefield battlefield) {
+        int tileX = 0;
+        int tileY = 0;
+        int healIndex = 0;
         RuntimeException stackIn_18_0 = null;
         StringBuilder stackIn_18_1 = null;
         String stackIn_19_2 = null;
         RuntimeException decompiledCaughtException = null;
-        int var3_int = 0;
+        int radius = 0;
         RuntimeException var3 = null;
-        Unit var6 = null;
-        int var8 = 0;
-        var8 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        Unit targetUnit = null;
+        int obfuscationControl = 0;
+        obfuscationControl = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          var3_int = uc.spellDefinitions[this.spellId][7];
-          if (!param0) {
+          radius = uc.spellDefinitions[this.spellId][7];
+          if (!obfuscationGuard) {
             this.targetX = -123;
           }
-          for (var4 = this.targetX - var3_int; var3_int + this.targetX >= var4; var4++) {
-            for (var5 = this.targetY - var3_int; var3_int + this.targetY >= var5; var5++) {
-              var6 = param1.getUnitAt(var5, true, var4);
-              if (var6 != null) {
+          for (tileX = this.targetX - radius; radius + this.targetX >= tileX; tileX++) {
+            for (tileY = this.targetY - radius; radius + this.targetY >= tileY; tileY++) {
+              targetUnit = battlefield.getUnitAt(tileY, true, tileX);
+              if (targetUnit != null) {
                 if (uc.spellDefinitions[this.spellId][6] <= 0) {
-                  for (var7 = 0; var7 > uc.spellDefinitions[this.spellId][6]; var7--) {
-                    param1.pendingEvents.addFirst(750, new TurnEffectEvent(var6, 1));
+                  for (healIndex = 0; healIndex > uc.spellDefinitions[this.spellId][6]; healIndex--) {
+                    battlefield.pendingEvents.addFirst(750, new TurnEffectEvent(targetUnit, 1));
                   }
                 } else {
-                  param1.pendingEvents.addFirst(750, new DamageEvent(var6, param1.scaleIncomingDamage(var6, (byte) -128, uc.spellDefinitions[this.spellId][5], uc.spellDefinitions[this.spellId][6]), false));
+                  battlefield.pendingEvents.addFirst(750, new DamageEvent(targetUnit, battlefield.scaleIncomingDamage(targetUnit, (byte) -128, uc.spellDefinitions[this.spellId][5], uc.spellDefinitions[this.spellId][6]), false));
                 }
               }
             }
@@ -224,8 +224,8 @@ final class UnitSpell extends Spell {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
           stackIn_18_0 = var3;
-          stackIn_18_1 = new StringBuilder().append("wa.O(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_18_1 = new StringBuilder().append("wa.O(").append(obfuscationGuard).append(',');
+          if (battlefield == null) {
             stackIn_19_2 = "null";
           } else {
             stackIn_19_2 = "{...}";
@@ -245,48 +245,48 @@ final class UnitSpell extends Spell {
         }
     }
 
-    private final void a(byte param0, int param1, Battlefield param2) {
+    private final void applyTerrainEffect(byte obfuscationGuard, int castingPlayer, Battlefield battlefield) {
         RuntimeException stackIn_63_0 = null;
         StringBuilder stackIn_63_1 = null;
         String stackIn_64_2 = null;
         RuntimeException decompiledCaughtException = null;
-        int var4_int = 0;
+        int ownershipRadius = 0;
         RuntimeException var4 = null;
-        int var5 = 0;
-        int var6 = 0;
-        MapTile var7_ref_ne = null;
-        int var7 = 0;
+        int ownershipTileX = 0;
+        int ownershipTileY = 0;
+        MapTile ownedTile = null;
+        int crossingTileY = 0;
         int var8 = 0;
         int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        int var4_intLifetime1;
-        int var4_intLifetime2;
-        int var5Lifetime1;
-        int var5Lifetime2;
-        int var6Lifetime1;
-        int var6Lifetime2;
-        int var8Lifetime1;
-        int var9Lifetime1;
-        int var4_intLifetime1Lifetime1;
-        int var5Lifetime1Lifetime1;
-        int var6Lifetime1Lifetime1;
-        var11 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        int directionBranch = 0;
+        int obfuscationControl = 0;
+        int skeletonRadius;
+        int crossingDirection;
+        int skeletonTileX;
+        int crossingTerrain;
+        int skeletonTileY;
+        int crossingTileX;
+        int crossingDeltaX;
+        int crossingDeltaY;
+        int terrainRadius;
+        int terrainTileX;
+        int terrainTileY;
+        obfuscationControl = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           if (uc.spellDefinitions[this.spellId][5] == 5) {
-            var4_int = uc.spellDefinitions[this.spellId][7];
-            for (var5 = this.targetX - var4_int; var4_int + this.targetX >= var5; var5++) {
-              if (var5 >= 0) {
-                if (param2.mapWidth <= var5) {
+            ownershipRadius = uc.spellDefinitions[this.spellId][7];
+            for (ownershipTileX = this.targetX - ownershipRadius; ownershipRadius + this.targetX >= ownershipTileX; ownershipTileX++) {
+              if (ownershipTileX >= 0) {
+                if (battlefield.mapWidth <= ownershipTileX) {
                   break;
                 }
-                for (var6 = -var4_int + this.targetY; var6 <= this.targetY + var4_int; var6++) {
-                  if (var6 >= 0) {
-                    if (var6 >= param2.mapHeight) {
+                for (ownershipTileY = -ownershipRadius + this.targetY; ownershipTileY <= this.targetY + ownershipRadius; ownershipTileY++) {
+                  if (ownershipTileY >= 0) {
+                    if (ownershipTileY >= battlefield.mapHeight) {
                       break;
                     }
-                    var7_ref_ne = param2.tiles[var5 + param2.mapWidth * var6];
-                    var7_ref_ne.setExplicitOwner(true, param2.getPlayerTeamIndex(param1, -1));
+                    ownedTile = battlefield.tiles[ownershipTileX + battlefield.mapWidth * ownershipTileY];
+                    ownedTile.setExplicitOwner(true, battlefield.getPlayerTeamIndex(castingPlayer, -1));
                   }
                 }
               }
@@ -295,19 +295,19 @@ final class UnitSpell extends Spell {
           boolean decompiledFrameRemainder0 = true;
           boolean decompiledFrameCompleted0 = true;
           if (uc.spellDefinitions[this.spellId][5] == 6) {
-            var4_intLifetime1 = uc.spellDefinitions[this.spellId][7];
-            for (var5Lifetime1 = this.targetX - var4_intLifetime1; this.targetX + var4_intLifetime1 >= var5Lifetime1; var5Lifetime1++) {
-              if (0 <= var5Lifetime1) {
-                if (param2.mapWidth <= var5Lifetime1) {
+            skeletonRadius = uc.spellDefinitions[this.spellId][7];
+            for (skeletonTileX = this.targetX - skeletonRadius; this.targetX + skeletonRadius >= skeletonTileX; skeletonTileX++) {
+              if (0 <= skeletonTileX) {
+                if (battlefield.mapWidth <= skeletonTileX) {
                   decompiledFrameCompleted0 = false;
                   break;
                 }
-                for (var6Lifetime1 = this.targetY - var4_intLifetime1; this.targetY + var4_intLifetime1 >= var6Lifetime1; var6Lifetime1++) {
-                  if (var6Lifetime1 >= 0) {
-                    if (param2.mapHeight <= var6Lifetime1) {
+                for (skeletonTileY = this.targetY - skeletonRadius; this.targetY + skeletonRadius >= skeletonTileY; skeletonTileY++) {
+                  if (skeletonTileY >= 0) {
+                    if (battlefield.mapHeight <= skeletonTileY) {
                       break;
                     }
-                    param2.healOrRaiseSkeletonAt((byte) 86, param1, var6Lifetime1, var5Lifetime1);
+                    battlefield.healOrRaiseSkeletonAt((byte) 86, castingPlayer, skeletonTileY, skeletonTileX);
                   }
                 }
               }
@@ -317,64 +317,64 @@ final class UnitSpell extends Spell {
           if ((decompiledFrameRemainder0) &&
             (decompiledFrameCompleted0) &&
             (uc.spellDefinitions[this.spellId][5] == 3)) {
-            var4_intLifetime1Lifetime1 = uc.spellDefinitions[this.spellId][7];
-            for (var5Lifetime1Lifetime1 = -var4_intLifetime1Lifetime1 + this.targetX; var4_intLifetime1Lifetime1 + this.targetX >= var5Lifetime1Lifetime1; var5Lifetime1Lifetime1++) {
-              for (var6Lifetime1Lifetime1 = this.targetY - var4_intLifetime1Lifetime1; var4_intLifetime1Lifetime1 + this.targetY >= var6Lifetime1Lifetime1; var6Lifetime1Lifetime1++) {
-                param2.b(var5Lifetime1Lifetime1, true, uc.spellDefinitions[this.spellId][6], param1, var6Lifetime1Lifetime1);
+            terrainRadius = uc.spellDefinitions[this.spellId][7];
+            for (terrainTileX = -terrainRadius + this.targetX; terrainRadius + this.targetX >= terrainTileX; terrainTileX++) {
+              for (terrainTileY = this.targetY - terrainRadius; terrainRadius + this.targetY >= terrainTileY; terrainTileY++) {
+                battlefield.applyTerrainChange(terrainTileX, true, uc.spellDefinitions[this.spellId][6], castingPlayer, terrainTileY);
               }
             }
           }
           if (uc.spellDefinitions[this.spellId][5] == 4) {
-            var4_intLifetime2 = param2.a(this.targetY, 2056, this.targetX);
-            var5Lifetime2 = param2.g(this.targetY, -85, this.targetX);
-            var6Lifetime2 = this.targetX;
-            var7 = this.targetY;
+            crossingDirection = battlefield.getTerrainCrossingDirection(this.targetY, 2056, this.targetX);
+            crossingTerrain = battlefield.getNormalizedTerrainAt(this.targetY, -85, this.targetX);
+            crossingTileX = this.targetX;
+            crossingTileY = this.targetY;
             var8 = 0;
             var9 = 0;
-            var10 = var4_intLifetime2;
-            if (1 != var10) {
-              if (2 == var10) {
-                var8Lifetime1 = 0;
-                var9Lifetime1 = 1;
+            directionBranch = crossingDirection;
+            if (1 != directionBranch) {
+              if (2 == directionBranch) {
+                crossingDeltaX = 0;
+                crossingDeltaY = 1;
               } else {
-                if (var10 == 3) {
-                  var9Lifetime1 = 0;
-                  var8Lifetime1 = -1;
+                if (directionBranch == 3) {
+                  crossingDeltaY = 0;
+                  crossingDeltaX = -1;
                 } else {
-                  if (var10 != 0) {
+                  if (directionBranch != 0) {
                     return;
                   }
-                  var9Lifetime1 = 0;
-                  var8Lifetime1 = 1;
+                  crossingDeltaY = 0;
+                  crossingDeltaX = 1;
                 }
               }
             } else {
-              var9Lifetime1 = -1;
-              var8Lifetime1 = 0;
+              crossingDeltaY = -1;
+              crossingDeltaX = 0;
             }
-            while (param2.g(var7, -85, var6Lifetime2) == var5Lifetime2) {
-              param2.b(var6Lifetime2, true, 10, param1, var7);
-              var7 = var7 + var9Lifetime1;
-              var6Lifetime2 = var6Lifetime2 + var8Lifetime1;
+            while (battlefield.getNormalizedTerrainAt(crossingTileY, -85, crossingTileX) == crossingTerrain) {
+              battlefield.applyTerrainChange(crossingTileX, true, 10, castingPlayer, crossingTileY);
+              crossingTileY = crossingTileY + crossingDeltaY;
+              crossingTileX = crossingTileX + crossingDeltaX;
             }
-            param2.b(var6Lifetime2, true, 1, param1, var7);
-            param2.b(this.targetX - var8Lifetime1, true, 1, param1, this.targetY - var9Lifetime1);
+            battlefield.applyTerrainChange(crossingTileX, true, 1, castingPlayer, crossingTileY);
+            battlefield.applyTerrainChange(this.targetX - crossingDeltaX, true, 1, castingPlayer, this.targetY - crossingDeltaY);
           }
-          if (param0 != -100) {
+          if (obfuscationGuard != -100) {
             return;
           }
           if (uc.spellDefinitions[this.spellId][5] == 7) {
-            param2.tiles[this.targetY * param2.mapWidth + this.targetX].ownerPlayer = -1;
-            param2.recountMapStructures(-2);
-            param2.recountStructures(param0 ^ -98);
+            battlefield.tiles[this.targetY * battlefield.mapWidth + this.targetX].ownerPlayer = -1;
+            battlefield.recountMapStructures(-2);
+            battlefield.recountStructures(obfuscationGuard ^ -98);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
           stackIn_63_0 = var4;
-          stackIn_63_1 = new StringBuilder().append("wa.J(").append(param0).append(',').append(param1).append(',');
-          if (param2 == null) {
+          stackIn_63_1 = new StringBuilder().append("wa.J(").append(obfuscationGuard).append(',').append(castingPlayer).append(',');
+          if (battlefield == null) {
             stackIn_64_2 = "null";
           } else {
             stackIn_64_2 = "{...}";
@@ -417,46 +417,46 @@ final class UnitSpell extends Spell {
         StringBuilder stackIn_26_1 = null;
         String stackIn_27_2 = null;
         RuntimeException decompiledCaughtException = null;
-        Unit var4 = null;
-        int var4_int = 0;
+        Unit markedTarget = null;
+        int handlerKind = 0;
         RuntimeException var4_ref = null;
-        int var5 = 0;
-        int var6 = 0;
-        var6 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        int dispatchKind = 0;
+        int obfuscationControl = 0;
+        obfuscationControl = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           if (uc.spellDefinitions[this.spellId][3] == 0) {
-            var4 = battlefield.getUnitAt(this.targetY, true, this.targetX);
-            if (var4 != null) {
-              var4.packedFlag512 = true;
+            markedTarget = battlefield.getUnitAt(this.targetY, true, this.targetX);
+            if (markedTarget != null) {
+              markedTarget.packedFlag512 = true;
             }
           }
-          var4_int = uc.spellDefinitions[this.spellId][4];
+          handlerKind = uc.spellDefinitions[this.spellId][4];
           if (obfuscationGuard != 26123) {
             return;
           }
-          var5 = var4_int;
-          if (var5 != 4) {
-            if (var5 != 6) {
-              if (var5 != 0) {
-                if (var5 != 1) {
-                  if (var5 == 3) {
-                    this.b((byte) 51, battlefield);
+          dispatchKind = handlerKind;
+          if (dispatchKind != 4) {
+            if (dispatchKind != 6) {
+              if (dispatchKind != 0) {
+                if (dispatchKind != 1) {
+                  if (dispatchKind == 3) {
+                    this.applyAccessoryEffect((byte) 51, battlefield);
                   } else {
-                    if (var5 == 2) {
-                      this.a(battlefield, true);
+                    if (dispatchKind == 2) {
+                      this.applyUnitFlagsAndImmobilize(battlefield, true);
                     }
                   }
                 } else {
-                  this.b(95, battlefield);
+                  this.applyEquipmentEffect(95, battlefield);
                 }
               } else {
-                this.a(0, battlefield);
+                this.applyStatusEffect(0, battlefield);
               }
             } else {
-              this.a((byte) -100, castingPlayer, battlefield);
+              this.applyTerrainEffect((byte) -100, castingPlayer, battlefield);
             }
           } else {
-            this.a(true, battlefield);
+            this.applyAreaEffect(true, battlefield);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -493,30 +493,30 @@ final class UnitSpell extends Spell {
         }
     }
 
-    private final void b(byte param0, Battlefield param1) {
-        Unit var3 = null;
-        Unit var4 = null;
+    private final void applyAccessoryEffect(byte obfuscationGuard, Battlefield battlefield) {
+        Unit accessoryTarget = null;
+        Unit targetUnit = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3_ref = null;
         try {
-          var4 = param1.getUnitAt(this.targetY, true, this.targetX);
-          var3 = var4;
-          if (param0 != 51) {
+          targetUnit = battlefield.getUnitAt(this.targetY, true, this.targetX);
+          accessoryTarget = targetUnit;
+          if (obfuscationGuard != 51) {
             field_h = (String) null;
           }
-          if (var3 != null) {
-            var4.accessoryType = uc.spellDefinitions[this.spellId][5];
+          if (accessoryTarget != null) {
+            targetUnit.accessoryType = uc.spellDefinitions[this.spellId][5];
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3_ref = decompiledCaughtException;
           stackIn_8_0 = var3_ref;
-          stackIn_8_1 = new StringBuilder().append("wa.K(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_8_1 = new StringBuilder().append("wa.K(").append(obfuscationGuard).append(',');
+          if (battlefield == null) {
             stackIn_9_2 = "null";
           } else {
             stackIn_9_2 = "{...}";
@@ -535,44 +535,44 @@ final class UnitSpell extends Spell {
         }
     }
 
-    private final void a(Battlefield param0, boolean param1) {
+    private final void applyUnitFlagsAndImmobilize(Battlefield battlefield, boolean obfuscationGuard) {
         RuntimeException stackIn_28_0 = null;
         StringBuilder stackIn_28_1 = null;
         String stackIn_29_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
-        Unit var4 = null;
-        Unit var5 = null;
+        Unit targetUnit = null;
+        Unit flagTarget = null;
         try {
-          var4 = param0.getUnitAt(this.targetY, param1, this.targetX);
-          var5 = var4;
+          targetUnit = battlefield.getUnitAt(this.targetY, obfuscationGuard, this.targetX);
+          flagTarget = targetUnit;
           if (115 == this.spellId &&
-            var5.unitType == 63 ||
+            flagTarget.unitType == 63 ||
             119 == this.spellId &&
-            43 == var5.unitType ||
+            43 == flagTarget.unitType ||
             this.spellId == 118 &&
-            var5.unitType == 59 ||
+            flagTarget.unitType == 59 ||
             this.spellId == 116 &&
-            var5.unitType == 58 ||
+            flagTarget.unitType == 58 ||
             this.spellId == 117 &&
-            var5.unitType == 53) {
-            var5.packedFlag32 = true;
-            param0.a(this.targetY, this.targetX, 0, 3);
+            flagTarget.unitType == 53) {
+            flagTarget.packedFlag32 = true;
+            battlefield.refreshTileEffectsNear(this.targetY, this.targetX, 0, 3);
           }
           if (this.spellId == 120) {
-            var4.meleeLifeSteal = true;
+            targetUnit.meleeLifeSteal = true;
           }
           if (19 == uc.spellDefinitions[this.spellId][5]) {
-            var5.packedFlag256 = true;
+            flagTarget.packedFlag256 = true;
           }
           if (uc.spellDefinitions[this.spellId][5] == 21) {
-            var4.immobilizedTurns = var4.immobilizedTurns + uc.spellDefinitions[this.spellId][6];
-            var5.movementSpent = true;
-            var5.attacksRemaining = 0;
-            if (var5.immobilizedTurns <= 100) {
+            targetUnit.immobilizedTurns = targetUnit.immobilizedTurns + uc.spellDefinitions[this.spellId][6];
+            flagTarget.movementSpent = true;
+            flagTarget.attacksRemaining = 0;
+            if (flagTarget.immobilizedTurns <= 100) {
               return;
             }
-            var5.immobilizedTurns = 100;
+            flagTarget.immobilizedTurns = 100;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -580,12 +580,12 @@ final class UnitSpell extends Spell {
           var3 = decompiledCaughtException;
           stackIn_28_0 = var3;
           stackIn_28_1 = new StringBuilder().append("wa.P(");
-          if (param0 == null) {
+          if (battlefield == null) {
             stackIn_29_2 = "null";
           } else {
             stackIn_29_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_28_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(',').append(param1).append(')').toString());
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_28_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 

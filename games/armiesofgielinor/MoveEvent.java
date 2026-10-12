@@ -413,7 +413,7 @@ final class MoveEvent extends GameEvent {
                 ~var10.ownerPlayer != ~this.unit.ownerPlayer) {
                 var10.occupant = this.unit;
                 if (!(0 >= var7)) {
-                  battlefield.a(var4, var3_int, 0, var7);
+                  battlefield.refreshTileEffectsNear(var4, var3_int, 0, var7);
                   if (var12 != 0) {
                     this.unit.escortComplete = true;
                     this.unit.removedFromActivePlay = true;
@@ -428,7 +428,7 @@ final class MoveEvent extends GameEvent {
                 battlefield.checkPlayerVictory(0, this.unit.ownerPlayer);
               }
               if (var7 > 0) {
-                battlefield.a(this.startY, this.startX, obfuscationGuard + 26661, var7);
+                battlefield.refreshTileEffectsNear(this.startY, this.startX, obfuscationGuard + 26661, var7);
                 nk.a((byte) 101);
               }
               if (var12 != 0) {

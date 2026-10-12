@@ -150,6 +150,15 @@ for the two occupancy rules, attack footprints and other-player selection state.
 Rectangular terrain-effect lookup retains its original mapHeight divisor; production maps,
 long paths and rendered path palettes remain unverified.
 
+UnitSpell now names targeted status/equipment/accessory handlers, flags and
+immobilization, immediate poison/refresh and queued area effects. The guide
+records definition-column dispatch, missing-target behavior, guard ordering and
+exact event ordering. Terrain helpers and MapTile.terrainChanged have names and
+native fixtures for square boundaries, crossings, normalization, skeleton
+restoration/registration, village upgrades and owner-removal recounts. Loaded
+spell tables, casting eligibility, rendered effects and complex match endings
+remain unverified.
+
 Camera overview grouping, centroid bounds, hold state and explicit tile focus
 now have reviewed names, alongside directional panning, dragging and velocity
 smoothing. Native fixtures preserve integer truncation/overflow and the speed-1

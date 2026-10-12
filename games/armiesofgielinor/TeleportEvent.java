@@ -92,7 +92,7 @@ final class TeleportEvent extends GameEvent {
             var3.occupant = null;
             var3.captureStrength = var4.getDefaultCaptureStrength(10);
             if (this.unit.p(-43)) {
-              battlefield.a(this.sourceY, this.sourceX, obfuscationGuard + 26661, 3);
+              battlefield.refreshTileEffectsNear(this.sourceY, this.sourceX, obfuscationGuard + 26661, 3);
             }
           }
           this.unit.movementSpent = true;
@@ -104,7 +104,7 @@ final class TeleportEvent extends GameEvent {
           if (!this.skipDestinationPlacement) {
             battlefield.tiles[battlefield.mapWidth * this.unit.tileY + this.unit.tileX].occupant = this.unit;
             if (this.unit.p(-70)) {
-              battlefield.a(this.unit.tileY, this.unit.tileX, 0, 3);
+              battlefield.refreshTileEffectsNear(this.unit.tileY, this.unit.tileX, 0, 3);
             }
           }
           fl.a(battlefield, -124);

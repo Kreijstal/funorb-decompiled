@@ -376,8 +376,8 @@ final class SpellCastEvent extends GameEvent {
                 }
               }
             } else {
-              var7 = param2.battlefield.a(var6, 2056, var5);
-              var8 = param2.battlefield.g(var6, -90, var5);
+              var7 = param2.battlefield.getTerrainCrossingDirection(var6, 2056, var5);
+              var8 = param2.battlefield.getNormalizedTerrainAt(var6, -90, var5);
               var9 = var5;
               var10 = var6;
               var11 = 0;
@@ -403,7 +403,7 @@ final class SpellCastEvent extends GameEvent {
                 var11Lifetime1 = 0;
                 var12Lifetime1 = -1;
               }
-              while (var8 == param2.battlefield.g(var10, -94, var9)) {
+              while (var8 == param2.battlefield.getNormalizedTerrainAt(var10, -94, var9)) {
                 var4_int = var4_int != 0 | this.a(var10, 15, param2, param0, var9) ? 1 : 0;
                 var9 = var9 + var11Lifetime1;
                 var10 = var10 + var12Lifetime1;

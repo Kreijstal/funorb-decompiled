@@ -8026,17 +8026,17 @@ final class GameplayController {
                 if (this.field_gc != 44) {
                   this.field_Cb = -1;
                   if (var16 != 0) {
-                    this.field_Cb = this.battlefield.a(this.field_eb, 2056, this.field_cc);
+                    this.field_Cb = this.battlefield.getTerrainCrossingDirection(this.field_eb, 2056, this.field_cc);
                   }
                 } else {
-                  this.field_Cb = this.battlefield.a(this.field_eb, 2056, this.field_cc);
+                  this.field_Cb = this.battlefield.getTerrainCrossingDirection(this.field_eb, 2056, this.field_cc);
                 }
                 if (this.field_Cb == -1) {
                   this.field_ic = uc.spellDefinitions[this.field_gc][7];
                   decompiledFrameRemainder5 = (var16 != 0);
                 }
                 if (decompiledFrameRemainder5) {
-                  var9Lifetime3 = this.battlefield.g(this.field_eb, -101, this.field_cc);
+                  var9Lifetime3 = this.battlefield.getNormalizedTerrainAt(this.field_eb, -101, this.field_cc);
                   var10 = this.field_cc;
                   var11 = this.field_eb;
                   if (var9Lifetime3 == -1) {
@@ -8046,7 +8046,7 @@ final class GameplayController {
                   if (var9Lifetime3 != -1 ||
                     var16 != 0) {
                     this.field_ic = -1;
-                    while (var9Lifetime3 == this.battlefield.g(var11, -76, var10)) {
+                    while (var9Lifetime3 == this.battlefield.getNormalizedTerrainAt(var11, -76, var10)) {
                       if (var16 != 0) {
                         break;
                       }

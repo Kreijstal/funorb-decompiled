@@ -521,7 +521,7 @@ final class Unit extends IntrusiveNode implements TaggedFieldReader {
     final void removeFromBattlefield(int obfuscationGuard) {
         this.battlefield.tiles[this.battlefield.mapWidth * this.tileY + this.tileX].occupant = null;
         this.unlink(-100);
-        this.battlefield.a(this.tileY, this.tileX, 0, 3);
+        this.battlefield.refreshTileEffectsNear(this.tileY, this.tileX, 0, 3);
         if (obfuscationGuard > -82) {
           field_y = (String) null;
         }
@@ -702,7 +702,7 @@ final class Unit extends IntrusiveNode implements TaggedFieldReader {
         var4 = this.unitType;
         switch (var4) {
           case 53:
-            this.battlefield.a(this.tileY, this.tileX, 0, 1);
+            this.battlefield.refreshTileEffectsNear(this.tileY, this.tileX, 0, 1);
             if (this.v(10)) {
               break;
             }
@@ -712,7 +712,7 @@ final class Unit extends IntrusiveNode implements TaggedFieldReader {
             var6.a(106);
             break;
           case 59:
-            this.battlefield.a(this.tileY, this.tileX, 0, 1);
+            this.battlefield.refreshTileEffectsNear(this.tileY, this.tileX, 0, 1);
             if (this.v(10)) {
               break;
             }
@@ -731,7 +731,7 @@ final class Unit extends IntrusiveNode implements TaggedFieldReader {
             var6.a(106);
             break;
           case 63:
-            this.battlefield.a(this.tileY, this.tileX, 0, 1);
+            this.battlefield.refreshTileEffectsNear(this.tileY, this.tileX, 0, 1);
             if (this.v(10)) {
               break;
             }
@@ -742,7 +742,7 @@ final class Unit extends IntrusiveNode implements TaggedFieldReader {
             break;
           case 43:
           case 58:
-            this.battlefield.a(this.tileY, this.tileX, 0, 1);
+            this.battlefield.refreshTileEffectsNear(this.tileY, this.tileX, 0, 1);
             if (!this.v(10) &&
               param0) {
               var6.a(106);
@@ -756,7 +756,7 @@ final class Unit extends IntrusiveNode implements TaggedFieldReader {
         if (param1 != 105) {
           this.field_X = false;
         }
-        this.battlefield.a(this.tileY, this.tileX, 0, 3);
+        this.battlefield.refreshTileEffectsNear(this.tileY, this.tileX, 0, 3);
         if (this.hasMovementFlag1(false)) {
           this.battlefield.eliminatePlayerTeam((byte) 89, this.ownerPlayer);
         }

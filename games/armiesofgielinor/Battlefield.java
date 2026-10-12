@@ -238,7 +238,7 @@ final class Battlefield {
 
     final void setTerrainType(byte obfuscationGuard, int terrainType, int tileX, int tileY) {
         this.tiles[tileX + tileY * this.mapWidth].terrainType = terrainType;
-        this.tiles[tileY * this.mapWidth + tileX].field_b = true;
+        this.tiles[tileY * this.mapWidth + tileX].terrainChanged = true;
         int var5 = 96 % ((59 - obfuscationGuard) / 34);
     }
 
@@ -850,7 +850,7 @@ final class Battlefield {
           var8 = 1;
         }
         if (var8 > 0) {
-          this.a(param3, param1, 0, 3);
+          this.refreshTileEffectsNear(param3, param1, 0, 3);
         }
         if (param0) {
           return;
@@ -1080,7 +1080,7 @@ final class Battlefield {
         return var3;
     }
 
-    final void b(int param0, boolean param1, int param2, int param3, int param4) {
+    final void applyTerrainChange(int tileX, boolean tileChangeFlag, int requestedTerrain, int castingPlayer, int tileY) {
         MapTile stackIn_8_0 = null;
         boolean stackIn_9_1 = false;
         MapTile var6;
@@ -1088,24 +1088,24 @@ final class Battlefield {
         int var8;
         MapTile var9;
         var8 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
-        if (param4 < 0) {
+        if (tileY < 0) {
           return;
         }
-        if (param4 < this.mapHeight &&
-          param0 >= 0 &&
-          this.mapWidth > param0) {
-          var9 = this.tiles[param0 + this.mapWidth * param4];
+        if (tileY < this.mapHeight &&
+          tileX >= 0 &&
+          this.mapWidth > tileX) {
+          var9 = this.tiles[tileX + this.mapWidth * tileY];
           var6 = var9;
           stackIn_8_0 = var6;
-          stackIn_9_1 = (!param1) ? false : true;
+          stackIn_9_1 = (!tileChangeFlag) ? false : true;
           regionExit1: {
             regionExit2: {
               regionExit3: {
                 regionExit4: {
                   boolean decompiledFrameRemainder1 = true;
                   boolean decompiledFrameRemainder0 = true;
-                  stackIn_8_0.field_b = stackIn_9_1;
-                  var7 = param2;
+                  stackIn_8_0.terrainChanged = stackIn_9_1;
+                  var7 = requestedTerrain;
                   if (((14 != var7 ||
                     var8 != 0) && (var7 != 9 ||
                     var8 != 0)) &&
@@ -1130,11 +1130,11 @@ final class Battlefield {
                     if (8 != var9.terrainType) {
                       return;
                     }
-                    if (!this.arePlayersAllied(var9.ownerPlayer, -16985, param3)) {
+                    if (!this.arePlayersAllied(var9.ownerPlayer, -16985, castingPlayer)) {
                       return;
                     }
                     var7 = var9.getDefaultCaptureStrength(10);
-                    var6.terrainType = param2;
+                    var6.terrainType = requestedTerrain;
                     var9.captureStrength = var9.captureStrength + (-var7 + var9.getDefaultCaptureStrength(10));
                     this.recountMapStructures(-2);
                     this.recountStructures(2);
@@ -1412,7 +1412,7 @@ final class Battlefield {
             var5_int = 0;
           }
           if (param0 != -49) {
-            this.b(-42, true, -106, -92, 114);
+            this.applyTerrainChange(-42, true, -106, -92, 114);
           }
           if (var5_int != 0) {
             this.equippedSpellIds[param3][param2] = -1;
@@ -3193,7 +3193,7 @@ final class Battlefield {
                 }
                 if ((var9Lifetime2 & 2) > 0) {
                   var10_ref_ne.terrainType = packet.readUnsignedByte(0);
-                  var10_ref_ne.field_b = true;
+                  var10_ref_ne.terrainChanged = true;
                   if (var10_ref_ne.terrainType == 11) {
                     var11Lifetime2 = packet.readUnsignedByte(0);
                     var10_ref_ne.godId = var11Lifetime2 >> 4 & 15;
@@ -3247,7 +3247,7 @@ final class Battlefield {
           this.recountMapStructures(-2);
           this.collectedManaTarget = this.f((byte) -82);
           this.recountStructures(obfuscationGuard ^ 2);
-          this.a(0, 0, obfuscationGuard + 0, -1);
+          this.refreshTileEffectsNear(0, 0, obfuscationGuard + 0, -1);
           fl.a(this, -118);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -3378,7 +3378,7 @@ final class Battlefield {
         return 0;
     }
 
-    final void a(int param0, int param1, int param2, int param3) {
+    final void refreshTileEffectsNear(int tileY, int tileX, int scopeSelector, int radius) {
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
@@ -3391,7 +3391,7 @@ final class Battlefield {
         regionExit1: {
           boolean decompiledFrameCompleted0 = true;
           var11 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
-          if (param2 > param3) {
+          if (scopeSelector > radius) {
             var5 = 0;
             while (this.mapWidth > var5) {
               if (var11 != 0) {
@@ -3410,12 +3410,12 @@ final class Battlefield {
             }
           }
           if ((decompiledFrameCompleted0) &&
-            (param2 <= param3 ||
+            (scopeSelector <= radius ||
             var11 != 0)) {
-            var5Lifetime1 = param1 - param3;
-            var6Lifetime1 = param3 + param1;
-            var7 = param0 - param3;
-            var8 = param0 + param3;
+            var5Lifetime1 = tileX - radius;
+            var6Lifetime1 = radius + tileX;
+            var7 = tileY - radius;
+            var8 = tileY + radius;
             if (var5Lifetime1 < 0) {
               var5Lifetime1 = 0;
             }
@@ -3782,7 +3782,7 @@ final class Battlefield {
                   stackIn_50_0 = 0;
                   stackIn_50_1 = ~var9_ref_ne.ownerPlayer;
                   if (stackIn_50_0 > stackIn_50_1 ||
-                    var9_ref_ne.field_b ||
+                    var9_ref_ne.terrainChanged ||
                     null != var9_ref_ne.occupant &&
                     var9_ref_ne.l(obfuscationGuard ^ 25770) ||
                     (var9_ref_ne.hasCorpse(67) ||
@@ -3821,7 +3821,7 @@ final class Battlefield {
                 if (var13.hasCorpse(obfuscationGuard ^ 25807)) {
                   var9 = var9 | 1;
                 }
-                if (var13.field_b) {
+                if (var13.terrainChanged) {
                   var9 = var9 | 2;
                 }
                 if (var13.ownerPlayer > -1) {
@@ -4155,7 +4155,7 @@ final class Battlefield {
                   }
                   var17 = new Unit(stackIn_53_2, stackIn_53_3, stackIn_53_4, stackIn_53_5, stackIn_53_6, stackIn_53_7, stackIn_54_8 | 1, 0, 0, this, 0, 0, -1, false, 0);
                   if (var17.p(-43)) {
-                    this.a(var11, var10, 0, 3);
+                    this.refreshTileEffectsNear(var11, var10, 0, 3);
                   }
                   if (var16 != 0) {
                     var17.z(10);
@@ -4274,7 +4274,7 @@ final class Battlefield {
           if (!this.a(param0, param1, param2 ^ -88)) {
             return;
           }
-          if (!param1.field_b &&
+          if (!param1.terrainChanged &&
             !param1.hasCorpse(param2 - 35) &&
             !param1.hasExplicitOwner((byte) -79) &&
             -1 == param1.ownerPlayer) {
@@ -4282,7 +4282,7 @@ final class Battlefield {
           }
           param4.a(new String[]{"cell at ", TutorialController.formatCoordinatePair(param5, 0, param3), ": "}, (byte) -95);
           param4.a(0, 2);
-          if (param1.field_b) {
+          if (param1.terrainChanged) {
             param4.a(new String[]{"changed type: ", Integer.toString(param1.terrainType)}, (byte) -106);
           }
           if (param1.hasCorpse(125)) {
@@ -5214,16 +5214,16 @@ final class Battlefield {
         return 115;
     }
 
-    final int g(int param0, int param1, int param2) {
+    final int getNormalizedTerrainAt(int tileY, int obfuscationGuard, int tileX) {
         int var4;
-        if (param2 >= 0 &&
-          param0 >= 0 &&
-          param2 < this.mapWidth &&
-          this.mapWidth > param0) {
-          if (param1 > -28) {
+        if (tileX >= 0 &&
+          tileY >= 0 &&
+          tileX < this.mapWidth &&
+          this.mapWidth > tileY) {
+          if (obfuscationGuard > -28) {
             this.field_Fb = false;
           }
-          var4 = this.tiles[param2 + this.mapWidth * param0].terrainType;
+          var4 = this.tiles[tileX + this.mapWidth * tileY].terrainType;
           if (6 == var4) {
             var4 = 4;
           }
@@ -5892,23 +5892,23 @@ final class Battlefield {
         return ~this.eliminatedPlayerMask & (1 << this.playerCount) - 1;
     }
 
-    final int a(int param0, int param1, int param2) {
+    final int getTerrainCrossingDirection(int tileY, int obfuscationGuard, int tileX) {
         int var4;
         int var5;
         var4 = 0;
-        var5 = this.g(param0, param1 - 2101, param2);
+        var5 = this.getNormalizedTerrainAt(tileY, obfuscationGuard - 2101, tileX);
         if (var5 == 4 ||
           5 == var5) {
-          if (~this.g(param0 - 1, param1 - 2139, param2) != ~var5) {
+          if (~this.getNormalizedTerrainAt(tileY - 1, obfuscationGuard - 2139, tileX) != ~var5) {
             var4 = var4 | 2;
           }
-          if (~var5 != ~this.g(param0, -37, param2 + 1)) {
+          if (~var5 != ~this.getNormalizedTerrainAt(tileY, -37, tileX + 1)) {
             var4 = var4 | 1;
           }
-          if (~var5 != ~this.g(param0, -43, -1 + param2)) {
+          if (~var5 != ~this.getNormalizedTerrainAt(tileY, -43, -1 + tileX)) {
             var4 = var4 | 8;
           }
-          if (~var5 != ~this.g(1 + param0, -63, param2)) {
+          if (~var5 != ~this.getNormalizedTerrainAt(1 + tileY, -63, tileX)) {
             var4 = var4 | 4;
           }
         }
@@ -5921,7 +5921,7 @@ final class Battlefield {
         if (var4 == 2) {
           return 2;
         }
-        if (param1 != 2056) {
+        if (obfuscationGuard != 2056) {
           return -23;
         }
         if (var4 == 4) {

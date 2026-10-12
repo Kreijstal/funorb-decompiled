@@ -173,7 +173,7 @@ final class de {
                 }
                 if (var8Lifetime1 != 8) {
                   if (var8Lifetime1 == 6) {
-                    if (-1 == battlefield.a(tileY, 2056, tileX)) {
+                    if (-1 == battlefield.getTerrainCrossingDirection(tileY, 2056, tileX)) {
                       stackIn_308_0 = qt.field_d;
                       return stackIn_308_0;
                     }

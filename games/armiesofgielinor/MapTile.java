@@ -6,7 +6,7 @@ final class MapTile implements TaggedFieldReader {
     private Battlefield battlefield;
     static ScrollContainer field_f;
     Unit occupant;
-    boolean field_b;
+    boolean terrainChanged;
     int godId;
     boolean field_l;
     int ownerPlayer;
@@ -599,7 +599,7 @@ final class MapTile implements TaggedFieldReader {
         }
         effectTeamIndex = 0;
         if (obfuscationGuard != 97) {
-          this.field_b = false;
+          this.terrainChanged = false;
         }
         while (this.teamEffectFlags.length > effectTeamIndex) {
           if (playerId < 0) {
@@ -719,7 +719,7 @@ final class MapTile implements TaggedFieldReader {
           this.ownerPlayer = param1;
         } else {
           if (null != this.battlefield.campaignMission) {
-            this.field_b = true;
+            this.terrainChanged = true;
           }
           this.ownerPlayer = -1;
           this.terrainType = 0;
@@ -744,7 +744,7 @@ final class MapTile implements TaggedFieldReader {
 
     MapTile() {
         this.field_l = false;
-        this.field_b = false;
+        this.terrainChanged = false;
         this.ownerPlayer = -1;
         this.captureStrength = 10;
         this.occupant = null;
