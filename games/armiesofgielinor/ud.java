@@ -19,25 +19,25 @@ final class ud extends sf implements he {
                   cd.field_c != param0) {
                   cd.field_c = param0;
                   MoveEvent.field_J = true;
-                  ae.a(896, param3);
+                  SocketResourceClient.a(896, param3);
                 }
                 return;
               }
               va.field_D = param0;
               MoveEvent.field_J = true;
-              ae.a(896, param3);
+              SocketResourceClient.a(896, param3);
             }
           } else {
             if (param0 != ol.field_B) {
               ol.field_B = param0;
               MoveEvent.field_J = true;
-              ae.a(896, param3);
+              SocketResourceClient.a(896, param3);
             }
             if (param2 == 1 &&
               va.field_D != param0) {
               va.field_D = param0;
               MoveEvent.field_J = true;
-              ae.a(896, param3);
+              SocketResourceClient.a(896, param3);
             }
           }
         } else {
@@ -45,13 +45,13 @@ final class ud extends sf implements he {
             param0 != ol.field_B) {
             ol.field_B = param0;
             MoveEvent.field_J = true;
-            ae.a(896, param3);
+            SocketResourceClient.a(896, param3);
           }
           if (param2 == 1 &&
             va.field_D != param0) {
             va.field_D = param0;
             MoveEvent.field_J = true;
-            ae.a(896, param3);
+            SocketResourceClient.a(896, param3);
           }
         }
         if (2 != param2) {
@@ -62,7 +62,7 @@ final class ud extends sf implements he {
         }
         cd.field_c = param0;
         MoveEvent.field_J = true;
-        ae.a(896, param3);
+        SocketResourceClient.a(896, param3);
     }
 
     private final fw a(String param0, qo param1, int param2) {

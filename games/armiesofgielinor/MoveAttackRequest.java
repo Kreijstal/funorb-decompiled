@@ -4,7 +4,7 @@
 final class MoveAttackRequest extends ActionRequest {
     private int startX;
     private int targetDeltaY;
-    static hi field_z;
+    static BufferedSocket field_z;
     private int[] pathDirections;
     static RgbSprite field_A;
     static String field_y;
@@ -28,7 +28,7 @@ final class MoveAttackRequest extends ActionRequest {
         RuntimeException decompiledCaughtException = null;
         try {
           if (obfuscationGuard != 0) {
-            field_z = (hi) null;
+            field_z = (BufferedSocket) null;
           }
           stackIn_3_0 = this.formatIllegalMove(118, messageParts, "move");
           return stackIn_3_0;

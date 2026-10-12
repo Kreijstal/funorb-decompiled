@@ -585,7 +585,7 @@ final class ul {
 
     final static void a(IndexedSprite[] param0, byte param1, ArmiesOfGielinor param2) {
         try {
-          br.field_a = new oo(param2, bi.field_c, param0, new String[]{hi.field_a, LeaderEscortCondition.field_b, IntPair.field_o, pp.field_S, bj.field_q});
+          br.field_a = new oo(param2, bi.field_c, param0, new String[]{BufferedSocket.field_a, LeaderEscortCondition.field_b, IntPair.field_o, pp.field_S, bj.field_q});
           if (param1 <= 56) {
             field_g = (RgbSprite) null;
           }

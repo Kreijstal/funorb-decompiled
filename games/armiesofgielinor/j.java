@@ -321,7 +321,7 @@ final class j {
                   var13++;
                 }
                 es.a(0, tq.field_b, no.field_K, -1, true, -1, (byte) 89, -1);
-                if (!(hi.field_j < 2) &&
+                if (!(BufferedSocket.field_j < 2) &&
                   br.field_f[12]) {
                   fc.field_a = true;
                 }

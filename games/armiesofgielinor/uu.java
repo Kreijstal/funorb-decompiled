@@ -222,7 +222,7 @@ final class uu {
                       continue;
                     }
                   }
-                  stackIn_73_0 = ~hi.field_j;
+                  stackIn_73_0 = ~BufferedSocket.field_j;
                   break;
                 }
                 if (stackIn_73_0 <= -3 &&
@@ -332,7 +332,7 @@ final class uu {
                       continue;
                     }
                   }
-                  stackIn_132_0 = ~hi.field_j;
+                  stackIn_132_0 = ~BufferedSocket.field_j;
                   break;
                 }
                 if (stackIn_132_0 <= -3 &&

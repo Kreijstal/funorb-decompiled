@@ -31,7 +31,7 @@ final class TutorialController {
           }
           var4_int = MoveEvent.tutorialStageItems[this.tutorialStage][itemIndex];
           if ((var4_int == 32 ||
-            var4_int == 31) && hi.field_j < 2) {
+            var4_int == 31) && BufferedSocket.field_j < 2) {
             return;
           }
           var5 = this.getItemText(var4_int, 29);
@@ -82,7 +82,7 @@ final class TutorialController {
           var10 = var10 + wd.field_b;
           kt.field_o[0].g(var10, var9 + 5);
           if (17 == var4_int) {
-            stackIn_53_0 = 100 * bp.field_e / 256;
+            stackIn_53_0 = 100 * ResourceProtocolClient.field_e / 256;
           } else {
             stackIn_53_0 = te.field_n * 100 / 256;
           }
@@ -239,7 +239,7 @@ final class TutorialController {
                       ub.$cfr$intArgs$a$6d836999ad61(101, MoveAttackRequest.field_v[45]);
                     }
                     if (pg.playerProfile.equippedSpellIds[var2_int] > -1) {
-                      if (hi.field_j >= 2 &&
+                      if (BufferedSocket.field_j >= 2 &&
                         br.field_f[82]) {
                         hs.b(119, pg.playerProfile.equippedSpellIds[var2_int]);
                         return;
@@ -532,7 +532,7 @@ final class TutorialController {
           fe.b(db.a(true, 320), MatchConditionEntry.a(370, (byte) 94), 125, 42, EffectPresentation.field_j, jh.field_k, 0, 0);
           fe.c(ov.field_f, db.a(true, 382), MatchConditionEntry.a(366, (byte) 94), nd.field_b, true);
           fe.c(dd.a(pg.playerProfile.getAvailableRunes((byte) 45), param0 ^ -23666), db.a(true, 382), MatchConditionEntry.a(406, (byte) 94), nd.field_b, true);
-          if (hi.field_j >= 2) {
+          if (BufferedSocket.field_j >= 2) {
             rs.field_n.c(pg.playerProfile.getAvailableRunes((byte) 127) + "", db.a(true, 382), MatchConditionEntry.a(369, (byte) 94), 16777215, 0);
           }
           fe.b(db.a(true, 465), MatchConditionEntry.a(330, (byte) 94), 145, 40, EffectPresentation.field_j, jh.field_k, 0, 128);
@@ -871,10 +871,10 @@ final class TutorialController {
                 break;
               }
               if (var13 != 0) {
-                var7 = ae.field_s;
+                var7 = SocketResourceClient.field_s;
               }
             } else {
-              var7 = ae.field_s;
+              var7 = SocketResourceClient.field_s;
             }
           }
           var4Lifetime1 = 275 + (rs.field_n.field_H + 110);
@@ -1785,12 +1785,12 @@ final class TutorialController {
                                                                     }
                                                                     var5 = 0;
                                                                     if (this.selectionState.e(94) &&
-                                                                      0 < bp.field_e) {
+                                                                      0 < ResourceProtocolClient.field_e) {
                                                                       var5 = 1;
                                                                       mh.a(0, (byte) -35);
                                                                     }
                                                                     if (this.selectionState.b(96) &&
-                                                                      256 > bp.field_e) {
+                                                                      256 > ResourceProtocolClient.field_e) {
                                                                       var5 = 1;
                                                                       mh.a(256, (byte) -96);
                                                                     }
@@ -1821,12 +1821,12 @@ final class TutorialController {
                                                                       var5 = 1;
                                                                     }
                                                                     if (this.selectionState.isDecrementKeyPressed((byte) -67) &&
-                                                                      bp.field_e > 0) {
-                                                                      hi.b(false);
+                                                                      ResourceProtocolClient.field_e > 0) {
+                                                                      BufferedSocket.b(false);
                                                                       var5 = 1;
                                                                     }
                                                                     if (this.selectionState.isIncrementKeyPressed(-98) &&
-                                                                      bp.field_e < 256) {
+                                                                      ResourceProtocolClient.field_e < 256) {
                                                                       hs.a(30);
                                                                       var5 = 1;
                                                                     }
@@ -1844,33 +1844,33 @@ final class TutorialController {
                                                                     }
                                                                   }
                                                                   if (this.selectionState.e(-100)) {
-                                                                    jf.b(0, 123);
+                                                                    NetworkResourceRequest.b(0, 123);
                                                                   }
                                                                   if (this.selectionState.b(param1 + 96)) {
-                                                                    jf.b(256, param1 + 89);
+                                                                    NetworkResourceRequest.b(256, param1 + 89);
                                                                   }
                                                                   if (this.selectionState.isPointerPressed(false)) {
                                                                     var6 = -100 + (this.getItemLeftX(true, param2) + this.getItemRightX(param2, -3858) + wd.field_b) >> 1;
                                                                     var7Lifetime1 = -var6 + AiPlanningStrategy.field_d;
                                                                     var8Lifetime1 = 256 * var7Lifetime1 / 100;
                                                                     if (var8Lifetime1 <= 0) {
-                                                                      jf.b(0, 94);
+                                                                      NetworkResourceRequest.b(0, 94);
                                                                       if (var9 != 0) {
                                                                         if (var8Lifetime1 >= 256) {
-                                                                          jf.b(256, 105);
-                                                                          jf.b(var8Lifetime1, 107);
+                                                                          NetworkResourceRequest.b(256, 105);
+                                                                          NetworkResourceRequest.b(var8Lifetime1, 107);
                                                                         } else {
-                                                                          jf.b(var8Lifetime1, 107);
+                                                                          NetworkResourceRequest.b(var8Lifetime1, 107);
                                                                         }
                                                                       }
                                                                     } else {
                                                                       if (var8Lifetime1 >= 256) {
-                                                                        jf.b(256, 105);
+                                                                        NetworkResourceRequest.b(256, 105);
                                                                         if (var9 != 0) {
-                                                                          jf.b(var8Lifetime1, 107);
+                                                                          NetworkResourceRequest.b(var8Lifetime1, 107);
                                                                         }
                                                                       } else {
-                                                                        jf.b(var8Lifetime1, 107);
+                                                                        NetworkResourceRequest.b(var8Lifetime1, 107);
                                                                       }
                                                                     }
                                                                   }
@@ -2389,7 +2389,7 @@ final class TutorialController {
           }
           ((tu) (Object) stackIn_24_0).a(stackIn_24_1, stackIn_24_2, stackIn_24_3 - (stackIn_24_4 - stackIn_25_5), -20 + var8, var13, var14, var15, var16, var17, var9);
           if (var7 == 0) {
-            en.field_E.a(fo.a(4800, ae.field_w, new String[]{Integer.toString(1 + uc.spellDefinitions[param1][1])}), 10, var11 + (52 - (-30 - var10)), var8 - 20, var13, var14, var15, var16, var17, var9);
+            en.field_E.a(fo.a(4800, SocketResourceClient.field_w, new String[]{Integer.toString(1 + uc.spellDefinitions[param1][1])}), 10, var11 + (52 - (-30 - var10)), var8 - 20, var13, var14, var15, var16, var17, var9);
           }
           fe.a(var4, var8 >> 1, 35, -45 + var8, nd.field_b, true);
           BattleCharacter.field_h[var6].g(-20 + (var8 >> 1), 12 + var11);
@@ -2447,7 +2447,7 @@ final class TutorialController {
           if (var2_int > -2) {
             stackIn_25_0 = wh.field_a;
             stackIn_25_1 = pg.playerProfile.getUnlockLevel(0);
-            stackIn_26_2 = !(hi.field_j < 2);
+            stackIn_26_2 = !(BufferedSocket.field_j < 2);
             if (BufferedFile.a(stackIn_25_0, stackIn_25_1, stackIn_26_2, var2_int, -1208926000, BoundedFile.field_e[0])) {
               ah.localCoat.setPart(73, var2_int, wh.field_a);
               ub.$cfr$intArgs$a$6d836999ad61(121, im.field_v[9]);
@@ -3001,7 +3001,7 @@ final class TutorialController {
                 param0 < this.getItemHeight(12, var4_int) + var5) {
                 var6 = MoveEvent.tutorialStageItems[this.tutorialStage][var4_int];
                 if ((var6 == 32 ||
-                  var6 == 31) && hi.field_j < 2) {
+                  var6 == 31) && BufferedSocket.field_j < 2) {
                   stackIn_31_0 = -1;
                   return stackIn_31_0;
                 }
@@ -3090,7 +3090,7 @@ final class TutorialController {
           en.field_E.a(param3, 0, 30, var7_int, var17, var18, var19, var20, var21, var22);
           if (-1 < param1) {
             ro.field_rb[param1].draw(0, var14 + 25);
-            en.field_E.b(hi.field_m[param1], 23, 30 + var14 + 8, var18, var19);
+            en.field_E.b(BufferedSocket.field_m[param1], 23, 30 + var14 + 8, var18, var19);
           }
           en.field_E.a(param0, 0, var14 + (30 + var9), var7_int, var17, var18, var19, var20, var21, var22);
           en.field_E.a(param5, 0, var15 + (var14 + 30) + var9, var7_int, var17, var18, var19, var20, var21, var22);
@@ -3531,11 +3531,11 @@ final class TutorialController {
                   this.a((byte) 63, -1, pg.playerProfile.campaignProgress.getCampaignScore(false, var4) / IntrusiveNode.a(108, var4), var5Lifetime1, var6Lifetime1Lifetime1, mv.field_d);
                 }
                 if (var13 != 0) {
-                  var7 = ae.field_s;
+                  var7 = SocketResourceClient.field_s;
                 }
               }
             } else {
-              var7 = ae.field_s;
+              var7 = SocketResourceClient.field_s;
             }
           }
           if ((decompiledFrameCompleted0) &&
@@ -3770,13 +3770,13 @@ final class TutorialController {
           }
           if ((stackIn_111_0 != 0 ||
             br.field_f[82] &&
-            !(2 > hi.field_j)) && tg.field_k == 0) {
+            !(2 > BufferedSocket.field_j)) && tg.field_k == 0) {
             if (null == ts.currentSpellMenu.parent) {
-              rs.field_n.a(ae.field_x, db.a(true, 40), MatchConditionEntry.a(284, (byte) 94), 250, 55, 16777215, -1, var2_int + 256, 1, 1, 0);
+              rs.field_n.a(SocketResourceClient.field_x, db.a(true, 40), MatchConditionEntry.a(284, (byte) 94), 250, 55, 16777215, -1, var2_int + 256, 1, 1, 0);
             }
             if (null != vu.field_O &&
               vu.field_O.parent == null) {
-              rs.field_n.a(ae.field_x, db.a(true, 40), MatchConditionEntry.a(284, (byte) 94), 250, 55, 16777215, -1, var2_int, 1, 1, 0);
+              rs.field_n.a(SocketResourceClient.field_x, db.a(true, 40), MatchConditionEntry.a(284, (byte) 94), 250, 55, 16777215, -1, var2_int, 1, 1, 0);
             }
           }
           fe.b(cp.field_c, db.a(true, 460), MatchConditionEntry.a(76, (byte) 94), true);
@@ -3786,7 +3786,7 @@ final class TutorialController {
           fe.b(db.a(true, 320), MatchConditionEntry.a(370, (byte) 94), 125, 42, EffectPresentation.field_j, jh.field_k, 0, 0);
           fe.c(ov.field_f, db.a(true, 382), MatchConditionEntry.a(366, (byte) 94), nd.field_b, true);
           fe.c(dd.a(pg.playerProfile.getAvailableRunes((byte) 48), 82), db.a(true, 382), MatchConditionEntry.a(406, (byte) 94), nd.field_b, true);
-          if (2 <= hi.field_j &&
+          if (2 <= BufferedSocket.field_j &&
             CoatOfArms.field_e) {
             rs.field_n.c(pg.playerProfile.getAvailableRunes((byte) 114) + "", db.a(true, 382), MatchConditionEntry.a(369, (byte) 94), 16777215, 0);
           }
@@ -4323,7 +4323,7 @@ final class TutorialController {
             fe.b(db.a(true, 320), MatchConditionEntry.a(370, (byte) 94), 125, 42, EffectPresentation.field_j, jh.field_k, 0, 0);
             fe.c(ov.field_f, db.a(true, 382), MatchConditionEntry.a(366, (byte) 94), nd.field_b, true);
             fe.c(dd.a(pg.playerProfile.getAvailableRunes((byte) 55), 82), db.a(true, 382), MatchConditionEntry.a(406, (byte) 94), nd.field_b, true);
-            stackIn_71_0 = hi.field_j;
+            stackIn_71_0 = BufferedSocket.field_j;
             break;
           }
           if (stackIn_71_0 >= 2 &&
@@ -4613,7 +4613,7 @@ final class TutorialController {
                   var4 == 0) {
                   continue;
                 }
-                if (2 <= hi.field_j &&
+                if (2 <= BufferedSocket.field_j &&
                   rs.field_q == 1 &&
                   br.field_f[82]) {
                   RevivalEvent.d((byte) 122);
@@ -4638,7 +4638,7 @@ final class TutorialController {
                   }
                 }
                 if (rs.field_q == 11 &&
-                  2 <= hi.field_j) {
+                  2 <= BufferedSocket.field_j) {
                   stackIn_86_0 = !(jv.field_a);
                   jv.field_a = stackIn_86_0;
                   return;
@@ -4648,29 +4648,29 @@ final class TutorialController {
                   CoatOfArms.field_e = stackIn_95_0;
                 }
                 if (11 == rs.field_q &&
-                  2 <= hi.field_j) {
+                  2 <= BufferedSocket.field_j) {
                   stackIn_106_0 = !(jv.field_a);
                   jv.field_a = stackIn_106_0;
                   return;
                 }
                 if (12 == rs.field_q &&
-                  hi.field_j >= 2) {
+                  BufferedSocket.field_j >= 2) {
                   stackIn_118_0 = !(CoatOfArms.field_e);
                   CoatOfArms.field_e = stackIn_118_0;
                 }
                 if (rs.field_q == 11 &&
-                  hi.field_j >= 2) {
+                  BufferedSocket.field_j >= 2) {
                   stackIn_129_0 = !(jv.field_a);
                   jv.field_a = stackIn_129_0;
                   return;
                 }
                 if (12 == rs.field_q &&
-                  hi.field_j >= 2) {
+                  BufferedSocket.field_j >= 2) {
                   stackIn_141_0 = !(CoatOfArms.field_e);
                   CoatOfArms.field_e = stackIn_141_0;
                 }
                 if (rs.field_q == 11 &&
-                  hi.field_j >= 2) {
+                  BufferedSocket.field_j >= 2) {
                   stackIn_152_0 = !(jv.field_a);
                   jv.field_a = stackIn_152_0;
                   return;
@@ -4888,8 +4888,8 @@ final class TutorialController {
                   MoveEvent.campaignMenu.handleInput((byte) 124);
                   if (var4 != 0) {
                     this.c((byte) -120);
-                    if (hi.field_i != null) {
-                      hi.field_i.a(false);
+                    if (BufferedSocket.field_i != null) {
+                      BufferedSocket.field_i.a(false);
                     }
                   }
                 }
@@ -4897,13 +4897,13 @@ final class TutorialController {
             } else {
               this.c((byte) -120);
               if ((var4 != 0) &&
-                (hi.field_i != null)) {
-                hi.field_i.a(false);
+                (BufferedSocket.field_i != null)) {
+                BufferedSocket.field_i.a(false);
               }
             }
           } else {
-            if (hi.field_i != null) {
-              hi.field_i.a(false);
+            if (BufferedSocket.field_i != null) {
+              BufferedSocket.field_i.a(false);
             }
           }
           if (2 == this.tutorialStage &&
@@ -5130,7 +5130,7 @@ final class TutorialController {
             var2_intLifetime1 != 31) {
             return;
           }
-          if (2 > hi.field_j) {
+          if (2 > BufferedSocket.field_j) {
             if (rs.field_q == 98) {
               this.selectionState.selectedIndex = -1 + this.selectionState.itemCount;
             }
@@ -5602,7 +5602,7 @@ final class TutorialController {
                               }
                               if (decompiledFrameRemainder0) {
                                 if (this.tutorialStage == 16) {
-                                  hi.field_i.a(256);
+                                  BufferedSocket.field_i.a(256);
                                   fe.b(-3 + MoveEvent.tutorialLayout.getLeftX(16, 29), MoveEvent.tutorialLayout.getTopY(16, (byte) -118) - 3, 6 + (MoveEvent.tutorialLayout.getRightX((byte) -83, 16) - MoveEvent.tutorialLayout.getLeftX(16, 29)), 6 + this.getItemHeight(12, 0), io.field_m, nd.field_b, 0, 128);
                                   decompiledFrameRemainder0 = (var4 != 0);
                                 }

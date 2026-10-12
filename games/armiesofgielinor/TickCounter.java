@@ -1327,7 +1327,7 @@ final class TickCounter {
                 }
                 var2 = fk.a(false, "OVERWRITE");
                 if (var2 != null) {
-                  hi.field_h = uu.a(var2, (byte) -106);
+                  BufferedSocket.field_h = uu.a(var2, (byte) -106);
                 }
                 var2 = fk.a(false, "HAVEONGOINGMISSION");
                 if (null != var2) {
@@ -1789,35 +1789,35 @@ final class TickCounter {
                 }
                 var2 = fk.a(false, "CLASSES,0");
                 if (null != var2) {
-                  hi.field_m[0] = uu.a(var2, (byte) 65);
+                  BufferedSocket.field_m[0] = uu.a(var2, (byte) 65);
                 }
                 var2 = fk.a(false, "CLASSES,1");
                 if (null != var2) {
-                  hi.field_m[1] = uu.a(var2, (byte) 36);
+                  BufferedSocket.field_m[1] = uu.a(var2, (byte) 36);
                 }
                 var2 = fk.a(false, "CLASSES,2");
                 if (null != var2) {
-                  hi.field_m[2] = uu.a(var2, (byte) -103);
+                  BufferedSocket.field_m[2] = uu.a(var2, (byte) -103);
                 }
                 var2 = fk.a(false, "CLASSES,3");
                 if (null != var2) {
-                  hi.field_m[3] = uu.a(var2, (byte) 117);
+                  BufferedSocket.field_m[3] = uu.a(var2, (byte) 117);
                 }
                 var2 = fk.a(false, "CLASSES,4");
                 if (null != var2) {
-                  hi.field_m[4] = uu.a(var2, (byte) 53);
+                  BufferedSocket.field_m[4] = uu.a(var2, (byte) 53);
                 }
                 var2 = fk.a(false, "CLASSES,5");
                 if (null != var2) {
-                  hi.field_m[5] = uu.a(var2, (byte) -115);
+                  BufferedSocket.field_m[5] = uu.a(var2, (byte) -115);
                 }
                 var2 = fk.a(false, "CLASSES,6");
                 if (var2 != null) {
-                  hi.field_m[6] = uu.a(var2, (byte) -94);
+                  BufferedSocket.field_m[6] = uu.a(var2, (byte) -94);
                 }
                 var2 = fk.a(false, "CLASSES,7");
                 if (null != var2) {
-                  hi.field_m[7] = uu.a(var2, (byte) -95);
+                  BufferedSocket.field_m[7] = uu.a(var2, (byte) -95);
                 }
                 var2 = fk.a(false, "BARBARIAN_CHIEF");
                 if (null != var2) {
@@ -5472,7 +5472,7 @@ final class TickCounter {
                 }
                 var2 = fk.a(false, "LABEL_EQUIPMENTNAVIGATE");
                 if (var2 != null) {
-                  ae.field_x = uu.a(var2, (byte) 109);
+                  SocketResourceClient.field_x = uu.a(var2, (byte) 109);
                 }
                 var2 = fk.a(false, "LABEL_EQUIPMENTSTOCK");
                 if (var2 != null) {
@@ -5508,7 +5508,7 @@ final class TickCounter {
                 }
                 var2 = fk.a(false, "caption1");
                 if (null != var2) {
-                  hi.field_a = uu.a(var2, (byte) -109);
+                  BufferedSocket.field_a = uu.a(var2, (byte) -109);
                 }
                 var2 = fk.a(false, "caption2");
                 if (var2 != null) {
@@ -5564,7 +5564,7 @@ final class TickCounter {
                 }
                 var2 = fk.a(false, "TRINKET_TURN_LIMIT");
                 if (var2 != null) {
-                  ae.field_w = uu.a(var2, (byte) 118);
+                  SocketResourceClient.field_w = uu.a(var2, (byte) 118);
                 }
                 var2 = fk.a(false, "TRINKET_EMPTY");
                 if (null != var2) {

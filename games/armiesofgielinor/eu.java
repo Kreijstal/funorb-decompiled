@@ -109,7 +109,7 @@ final class eu {
             var15Lifetime1 = var11Lifetime1;
             var15Lifetime1 = var15Lifetime1 + var11Lifetime1 >> 1 << 8;
             var16Lifetime1 = (var13Lifetime1 << 8) / 6;
-            var17Lifetime1 = var15Lifetime1 - (-(var16Lifetime1 / 2) - (4 * ae.b(var8Lifetime1 + param2 << 4, 100) >> 8));
+            var17Lifetime1 = var15Lifetime1 - (-(var16Lifetime1 / 2) - (4 * SocketResourceClient.b(var8Lifetime1 + param2 << 4, 100) >> 8));
             var18Lifetime1 = var9Lifetime1 >> 4;
             for (var19Lifetime1 = 0; 3 > var19Lifetime1; var19Lifetime1++) {
               SoftwareRaster.c(var17Lifetime1 >> 8, var12Lifetime1, var16Lifetime1 >> 8, var5_int, var18Lifetime1);

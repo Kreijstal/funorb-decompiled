@@ -423,7 +423,7 @@ final class jg extends IntrusiveNode {
                 var34_int = var34_int + (var52_ref.canvasWidth + io.field_n);
               }
               if ((1 << uj.field_j & var14Lifetime1) != 0) {
-                stackIn_93_0 = bp.field_d;
+                stackIn_93_0 = ResourceProtocolClient.field_d;
                 if (!var12.field_vc) {
                   stackIn_94_1 = 0;
                 } else {

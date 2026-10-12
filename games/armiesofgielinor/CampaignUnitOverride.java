@@ -87,7 +87,7 @@ final class CampaignUnitOverride {
                 }
                 var2 = NodeIterator.a(50, "create_ineligible");
                 if (null != var2) {
-                  bp.field_m = uu.a(var2, (byte) 76);
+                  ResourceProtocolClient.field_m = uu.a(var2, (byte) 76);
                 }
                 var2 = NodeIterator.a(param0 ^ -100, "usernameprompt");
                 if (null != var2) {
@@ -455,7 +455,7 @@ final class CampaignUnitOverride {
                 }
                 var2 = NodeIterator.a(50, "mu_chat_pm_show_all");
                 if (var2 != null) {
-                  ae.field_v = uu.a(var2, (byte) 93);
+                  SocketResourceClient.field_v = uu.a(var2, (byte) 93);
                 }
                 var2 = NodeIterator.a(50, "mu_chat_pm_friends_only");
                 if (var2 != null) {
@@ -1777,7 +1777,7 @@ final class CampaignUnitOverride {
                 }
                 var2 = NodeIterator.a(50, "waitingfor_soundeffects");
                 if (var2 != null) {
-                  bp.field_k = uu.a(var2, (byte) -121);
+                  ResourceProtocolClient.field_k = uu.a(var2, (byte) -121);
                 }
                 var2 = NodeIterator.a(param0 ^ -100, "waitingfor_music");
                 if (var2 != null) {
@@ -1991,7 +1991,7 @@ final class CampaignUnitOverride {
                 }
                 var2 = NodeIterator.a(50, "newgame");
                 if (null != var2) {
-                  jf.field_G = uu.a(var2, (byte) -112);
+                  NetworkResourceRequest.field_G = uu.a(var2, (byte) -112);
                 }
                 var2 = NodeIterator.a(50, "resumegame");
                 if (var2 != null) {
@@ -2832,7 +2832,7 @@ final class CampaignUnitOverride {
                 }
                 var2 = NodeIterator.a(50, "serviceunavailable");
                 if (var2 != null) {
-                  ae.field_s = uu.a(var2, (byte) 15);
+                  SocketResourceClient.field_s = uu.a(var2, (byte) 15);
                 }
                 var2 = NodeIterator.a(50, "createtouse");
                 if (null != var2) {

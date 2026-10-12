@@ -58,7 +58,7 @@ final class mw extends dr {
                 gt.field_b[var12].a(var7Lifetime1, param5 ^ -20499, var8, var13, var6_int);
                 jj.field_i[var12].a(var7Lifetime1, -20500, -param2 + var9, 0, param2);
                 we.field_g[var12].a(-param3 + (var7Lifetime1 - param3), -20500, param0, param3, var9);
-                bp.field_j[var12].a(-param3 + (-param3 + var7Lifetime1), param5 - 20501, -var10 + (-param2 + var8), param3, var10);
+                ResourceProtocolClient.field_j[var12].a(-param3 + (-param3 + var7Lifetime1), param5 - 20501, -var10 + (-param2 + var8), param3, var10);
               }
             }
           }

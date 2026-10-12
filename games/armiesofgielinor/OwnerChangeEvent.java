@@ -53,18 +53,18 @@ final class OwnerChangeEvent extends GameEvent {
         jj.field_g = null;
         int var2 = LeaderEscortCondition.field_i;
         LeaderEscortCondition.field_i = er.field_a;
-        ai.field_T.field_q = ai.field_T.field_q + 1;
+        ai.field_T.errorCount = ai.field_T.errorCount + 1;
         if (param1 != 101) {
           OwnerChangeEvent.a(-88, (byte) -45);
           if (param0 == 51) {
-            ai.field_T.field_p = 2;
+            ai.field_T.errorCode = 2;
             er.field_a = var2;
-            if (2 > ai.field_T.field_q) {
-              if (2 <= ai.field_T.field_q &&
+            if (2 > ai.field_T.errorCount) {
+              if (2 <= ai.field_T.errorCount &&
                 param0 == 50) {
                 return 5;
               }
-              if (ai.field_T.field_q < 4) {
+              if (ai.field_T.errorCount < 4) {
                 return -1;
               }
               return 1;
@@ -72,8 +72,8 @@ final class OwnerChangeEvent extends GameEvent {
             if (51 == param0) {
               return 2;
             }
-            if (2 > ai.field_T.field_q) {
-              if (ai.field_T.field_q < 4) {
+            if (2 > ai.field_T.errorCount) {
+              if (ai.field_T.errorCount < 4) {
                 return -1;
               }
               return 1;
@@ -81,20 +81,20 @@ final class OwnerChangeEvent extends GameEvent {
             if (param0 == 50) {
               return 5;
             }
-            if (ai.field_T.field_q < 4) {
+            if (ai.field_T.errorCount < 4) {
               return -1;
             }
             return 1;
           }
           if (param0 != 50) {
-            ai.field_T.field_p = 1;
+            ai.field_T.errorCode = 1;
             er.field_a = var2;
-            if (2 > ai.field_T.field_q) {
-              if (2 <= ai.field_T.field_q &&
+            if (2 > ai.field_T.errorCount) {
+              if (2 <= ai.field_T.errorCount &&
                 param0 == 50) {
                 return 5;
               }
-              if (ai.field_T.field_q < 4) {
+              if (ai.field_T.errorCount < 4) {
                 return -1;
               }
               return 1;
@@ -102,8 +102,8 @@ final class OwnerChangeEvent extends GameEvent {
             if (51 == param0) {
               return 2;
             }
-            if (2 > ai.field_T.field_q) {
-              if (ai.field_T.field_q < 4) {
+            if (2 > ai.field_T.errorCount) {
+              if (ai.field_T.errorCount < 4) {
                 return -1;
               }
               return 1;
@@ -111,19 +111,19 @@ final class OwnerChangeEvent extends GameEvent {
             if (param0 == 50) {
               return 5;
             }
-            if (ai.field_T.field_q < 4) {
+            if (ai.field_T.errorCount < 4) {
               return -1;
             }
             return 1;
           }
-          ai.field_T.field_p = 5;
+          ai.field_T.errorCode = 5;
           er.field_a = var2;
-          if (2 > ai.field_T.field_q) {
-            if (2 <= ai.field_T.field_q &&
+          if (2 > ai.field_T.errorCount) {
+            if (2 <= ai.field_T.errorCount &&
               param0 == 50) {
               return 5;
             }
-            if (ai.field_T.field_q >= 4) {
+            if (ai.field_T.errorCount >= 4) {
               return 1;
             }
             return -1;
@@ -131,8 +131,8 @@ final class OwnerChangeEvent extends GameEvent {
           if (51 == param0) {
             return 2;
           }
-          if (2 > ai.field_T.field_q) {
-            if (ai.field_T.field_q >= 4) {
+          if (2 > ai.field_T.errorCount) {
+            if (ai.field_T.errorCount >= 4) {
               return 1;
             }
             return -1;
@@ -140,24 +140,24 @@ final class OwnerChangeEvent extends GameEvent {
           if (param0 == 50) {
             return 5;
           }
-          if (ai.field_T.field_q >= 4) {
+          if (ai.field_T.errorCount >= 4) {
             return 1;
           }
           return -1;
         }
         if (param0 == 51) {
-          ai.field_T.field_p = 2;
+          ai.field_T.errorCode = 2;
           er.field_a = var2;
-          if (2 <= ai.field_T.field_q) {
+          if (2 <= ai.field_T.errorCount) {
             if (51 != param0) {
-              if (2 > ai.field_T.field_q) {
-                if (ai.field_T.field_q >= 4) {
+              if (2 > ai.field_T.errorCount) {
+                if (ai.field_T.errorCount >= 4) {
                   return 1;
                 }
                 return -1;
               }
               if (param0 != 50) {
-                if (ai.field_T.field_q >= 4) {
+                if (ai.field_T.errorCount >= 4) {
                   return 1;
                 }
                 return -1;
@@ -166,60 +166,60 @@ final class OwnerChangeEvent extends GameEvent {
             }
             return 2;
           }
-          if (2 <= ai.field_T.field_q &&
+          if (2 <= ai.field_T.errorCount &&
             param0 == 50) {
             return 5;
           }
-          if (ai.field_T.field_q >= 4) {
+          if (ai.field_T.errorCount >= 4) {
             return 1;
           }
           return -1;
         }
         if (param0 != 50) {
-          ai.field_T.field_p = 1;
+          ai.field_T.errorCode = 1;
           er.field_a = var2;
-          if (2 <= ai.field_T.field_q) {
+          if (2 <= ai.field_T.errorCount) {
             if (51 != param0) {
-              if (2 <= ai.field_T.field_q &&
+              if (2 <= ai.field_T.errorCount &&
                 param0 == 50) {
                 return 5;
               }
-              if (ai.field_T.field_q >= 4) {
+              if (ai.field_T.errorCount >= 4) {
                 return 1;
               }
               return -1;
             }
             return 2;
           }
-          if (2 <= ai.field_T.field_q &&
+          if (2 <= ai.field_T.errorCount &&
             param0 == 50) {
             return 5;
           }
-          if (ai.field_T.field_q >= 4) {
+          if (ai.field_T.errorCount >= 4) {
             return 1;
           }
           return -1;
         }
-        ai.field_T.field_p = 5;
+        ai.field_T.errorCode = 5;
         er.field_a = var2;
-        if (2 <= ai.field_T.field_q) {
+        if (2 <= ai.field_T.errorCount) {
           if (51 != param0) {
-            if (2 <= ai.field_T.field_q &&
+            if (2 <= ai.field_T.errorCount &&
               param0 == 50) {
               return 5;
             }
-            if (ai.field_T.field_q >= 4) {
+            if (ai.field_T.errorCount >= 4) {
               return 1;
             }
             return -1;
           }
           return 2;
         }
-        if (2 <= ai.field_T.field_q &&
+        if (2 <= ai.field_T.errorCount &&
           param0 == 50) {
           return 5;
         }
-        if (ai.field_T.field_q >= 4) {
+        if (ai.field_T.errorCount >= 4) {
           return 1;
         }
         return -1;

@@ -20,10 +20,10 @@ final class vv {
     final static void a(int param0) {
         int var1 = 0;
         if (224 <= te.field_n) {
-          jf.b(256, param0 ^ -30690);
+          NetworkResourceRequest.b(256, param0 ^ -30690);
         } else {
           var1 = te.field_n % 32;
-          jf.b(32 + (te.field_n - var1), 84);
+          NetworkResourceRequest.b(32 + (te.field_n - var1), 84);
         }
         if (param0 == -30647) {
           return;
@@ -193,7 +193,7 @@ final class vv {
         if (var7 == 0) {
           return;
         }
-        var8 = jf.field_C.field_q;
+        var8 = NetworkResourceRequest.field_C.field_q;
         if (0 > var8) {
           var8 = CipherPacketBuffer.currentBattlefield.currentPlayer;
         }
@@ -215,9 +215,9 @@ final class vv {
             if (var12.field_x != null) {
               if (var12.ownerPlayer == MapTile.field_i &&
                 !var12.movementSpent &&
-                jf.field_C.field_L > 0) {
-                TeamRoster.field_g.f(10 + param0, param5 + 5, (int)(256.0 * Math.sin((double)jf.field_C.field_L * 3.141592653589793 / 200.0)));
-                TeamRoster.field_g.f(10 + param0, 5 + param5, (int)(256.0 * Math.sin((double)jf.field_C.field_L * 3.141592653589793 / 200.0)));
+                NetworkResourceRequest.field_C.field_L > 0) {
+                TeamRoster.field_g.f(10 + param0, param5 + 5, (int)(256.0 * Math.sin((double)NetworkResourceRequest.field_C.field_L * 3.141592653589793 / 200.0)));
+                TeamRoster.field_g.f(10 + param0, 5 + param5, (int)(256.0 * Math.sin((double)NetworkResourceRequest.field_C.field_L * 3.141592653589793 / 200.0)));
               }
               if (var9.isStructure(false) &&
                 !CipherPacketBuffer.currentBattlefield.arePlayersAllied(var9.ownerPlayer, -16985, var12.ownerPlayer) &&
@@ -271,9 +271,9 @@ final class vv {
               if (var12.field_x != null) {
                 if (var12.ownerPlayer == MapTile.field_i &&
                   !var12.movementSpent &&
-                  jf.field_C.field_L > 0) {
-                  TeamRoster.field_g.f(10 + param0, param5 + 5, (int)(256.0 * Math.sin((double)jf.field_C.field_L * 3.141592653589793 / 200.0)));
-                  TeamRoster.field_g.f(10 + param0, 5 + param5, (int)(256.0 * Math.sin((double)jf.field_C.field_L * 3.141592653589793 / 200.0)));
+                  NetworkResourceRequest.field_C.field_L > 0) {
+                  TeamRoster.field_g.f(10 + param0, param5 + 5, (int)(256.0 * Math.sin((double)NetworkResourceRequest.field_C.field_L * 3.141592653589793 / 200.0)));
+                  TeamRoster.field_g.f(10 + param0, 5 + param5, (int)(256.0 * Math.sin((double)NetworkResourceRequest.field_C.field_L * 3.141592653589793 / 200.0)));
                 }
                 if (var9.isStructure(false) &&
                   !CipherPacketBuffer.currentBattlefield.arePlayersAllied(var9.ownerPlayer, -16985, var12.ownerPlayer) &&
@@ -326,9 +326,9 @@ final class vv {
               if (var12.field_x != null) {
                 if (var12.ownerPlayer == MapTile.field_i &&
                   !var12.movementSpent &&
-                  jf.field_C.field_L > 0) {
-                  TeamRoster.field_g.f(10 + param0, param5 + 5, (int)(256.0 * Math.sin((double)jf.field_C.field_L * 3.141592653589793 / 200.0)));
-                  TeamRoster.field_g.f(10 + param0, 5 + param5, (int)(256.0 * Math.sin((double)jf.field_C.field_L * 3.141592653589793 / 200.0)));
+                  NetworkResourceRequest.field_C.field_L > 0) {
+                  TeamRoster.field_g.f(10 + param0, param5 + 5, (int)(256.0 * Math.sin((double)NetworkResourceRequest.field_C.field_L * 3.141592653589793 / 200.0)));
+                  TeamRoster.field_g.f(10 + param0, 5 + param5, (int)(256.0 * Math.sin((double)NetworkResourceRequest.field_C.field_L * 3.141592653589793 / 200.0)));
                 }
                 if (var9.isStructure(false) &&
                   !CipherPacketBuffer.currentBattlefield.arePlayersAllied(var9.ownerPlayer, -16985, var12.ownerPlayer) &&
@@ -461,7 +461,7 @@ final class vv {
           }
           return;
         }
-        if (jf.field_C.field_L <= 0) {
+        if (NetworkResourceRequest.field_C.field_L <= 0) {
           if (var9.isStructure(false) &&
             !CipherPacketBuffer.currentBattlefield.arePlayersAllied(var9.ownerPlayer, -16985, var12.ownerPlayer) &&
             var12.canCaptureStructures(-21428)) {
@@ -500,8 +500,8 @@ final class vv {
           }
           return;
         }
-        TeamRoster.field_g.f(10 + param0, param5 + 5, (int)(256.0 * Math.sin((double)jf.field_C.field_L * 3.141592653589793 / 200.0)));
-        TeamRoster.field_g.f(10 + param0, 5 + param5, (int)(256.0 * Math.sin((double)jf.field_C.field_L * 3.141592653589793 / 200.0)));
+        TeamRoster.field_g.f(10 + param0, param5 + 5, (int)(256.0 * Math.sin((double)NetworkResourceRequest.field_C.field_L * 3.141592653589793 / 200.0)));
+        TeamRoster.field_g.f(10 + param0, 5 + param5, (int)(256.0 * Math.sin((double)NetworkResourceRequest.field_C.field_L * 3.141592653589793 / 200.0)));
         if (!var9.isStructure(false)) {
           if (param4 <= 0) {
             return;

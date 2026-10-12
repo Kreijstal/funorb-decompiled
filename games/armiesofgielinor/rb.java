@@ -191,7 +191,7 @@ abstract class rb implements n {
           var5Lifetime1 = ActionRequest.field_t[11] >> 8;
           var6Lifetime1 = ib.field_j << 4;
           var7Lifetime1 = 0;
-          var8Lifetime1 = ae.b(var6Lifetime1, 100) >> 8;
+          var8Lifetime1 = SocketResourceClient.b(var6Lifetime1, 100) >> 8;
           var9Lifetime1 = ContextualRuntimeException.a(param0 - 10, var6Lifetime1) >> 8;
           if (AiPlanningStrategy.field_d != -1 &&
             ko.field_b != -1) {

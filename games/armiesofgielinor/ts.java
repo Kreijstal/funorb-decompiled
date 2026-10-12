@@ -172,7 +172,7 @@ final class ts {
             if (!rf.a(27875)) {
               stackIn_4_0Lifetime1 = null;
               stackIn_4_1Lifetime1 = null;
-              if (hi.field_j >= 2) {
+              if (BufferedSocket.field_j >= 2) {
                 stackIn_5_0 = null;
                 stackIn_5_1 = null;
                 stackIn_5_14 = true;

@@ -2380,10 +2380,10 @@ final class InstructionsPanel {
               ts.field_h = mg.field_e.j((byte) -2);
               mg.field_e.position = 0;
               bk.a(param2, param5, CampaignRewardPreview.field_g, 0, param1);
-              ov.field_g = jf.field_D;
+              ov.field_g = NetworkResourceRequest.field_D;
             }
             boolean decompiledFrameRemainder0 = true;
-            if (ov.field_g == jf.field_D &&
+            if (ov.field_g == NetworkResourceRequest.field_D &&
               es.a(-90, 1)) {
               var6_intLifetime1 = mg.field_e.readUnsignedByte(param0 + 53);
               mg.field_e.position = 0;
@@ -2416,7 +2416,7 @@ final class InstructionsPanel {
               jh.g(2)) {
               dc.field_o = mg.field_e.j((byte) -2);
               wl.field_I = param3;
-              hi.field_j = mg.field_e.readUnsignedByte(0);
+              BufferedSocket.field_j = mg.field_e.readUnsignedByte(0);
               tf.field_l = mg.field_e.readUnsignedByte(0);
               df.field_M = mg.field_e.readUnsignedShort((byte) -104);
               var6 = mg.field_e.c((byte) -125);

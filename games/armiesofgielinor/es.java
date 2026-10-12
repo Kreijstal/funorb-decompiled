@@ -43,12 +43,12 @@ final class es {
             return false;
           }
           try {
-            var2_int = MoveAttackRequest.field_z.d((byte) 43);
+            var2_int = MoveAttackRequest.field_z.available((byte) 43);
             if (var2_int > 0) {
               if (param1 - mg.field_e.position < var2_int) {
                 var2_int = -mg.field_e.position + param1;
               }
-              MoveAttackRequest.field_z.a(0, mg.field_e.position, var2_int, mg.field_e.payload);
+              MoveAttackRequest.field_z.readFully(0, mg.field_e.position, var2_int, mg.field_e.payload);
               CampaignMenuButton.field_h = vi.b(46);
               mg.field_e.position = mg.field_e.position + var2_int;
               if (mg.field_e.position < param1) {

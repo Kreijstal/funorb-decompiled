@@ -38,7 +38,7 @@ final class dj {
 
     final static void a(byte param0) {
         if (null != MoveAttackRequest.field_z) {
-          MoveAttackRequest.field_z.c((byte) -45);
+          MoveAttackRequest.field_z.close((byte) -45);
           MoveAttackRequest.field_z = null;
         }
         if (param0 > -123) {

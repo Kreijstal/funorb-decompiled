@@ -116,7 +116,7 @@ final class bn {
               if (df.field_M > 0) {
                 gu.a(-61, param3);
               } else {
-                if (2 <= hi.field_j &&
+                if (2 <= BufferedSocket.field_j &&
                   br.field_f[12]) {
                   gu.a(-61, param3);
                 } else {
@@ -153,7 +153,7 @@ final class bn {
               if (df.field_M > 0) {
                 gu.a(-61, param3);
               } else {
-                if (2 <= hi.field_j) {
+                if (2 <= BufferedSocket.field_j) {
                   if (br.field_f[12]) {
                     gu.a(-61, param3);
                   } else {

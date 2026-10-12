@@ -165,7 +165,7 @@ final class bk {
           rb.field_b.field_G = var16;
           we.field_f.a(rb.field_b, 99);
           jj.field_i = new je[5];
-          bp.field_j = new je[5];
+          ResourceProtocolClient.field_j = new je[5];
           we.field_g = new je[5];
           gt.field_b = new je[5];
           var19 = 0;
@@ -195,11 +195,11 @@ final class bk {
                 jj.field_i[var19] = new je(0L, uf.field_i, var20);
                 we.field_g[var19] = new je(0L, (je) null);
                 we.field_g[var19].field_Fb = 1;
-                bp.field_j[var19] = new je(0L, uf.field_i);
-                bp.field_j[var19].field_Fb = 1;
+                ResourceProtocolClient.field_j[var19] = new je(0L, uf.field_i);
+                ResourceProtocolClient.field_j[var19].field_Fb = 1;
                 gt.field_b[var19].a(jj.field_i[var19], 107);
                 gt.field_b[var19].a(we.field_g[var19], 45);
-                gt.field_b[var19].a(bp.field_j[var19], 85);
+                gt.field_b[var19].a(ResourceProtocolClient.field_j[var19], 85);
                 gt.field_b[var19].i(-10027);
                 CombatEvent.field_I.a(gt.field_b[var19], 121);
                 se.field_d = se.field_d + 1;

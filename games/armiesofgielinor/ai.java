@@ -6,7 +6,7 @@ final class ai extends hs {
     private nv field_Q;
     static String field_U;
     qm field_S;
-    static bp field_T;
+    static ResourceProtocolClient field_T;
     static String field_J;
     static NodeDeque field_P;
     static String field_V;
@@ -81,7 +81,7 @@ final class ai extends hs {
             return true;
           }
           if (param5 <= 93) {
-            field_T = (bp) null;
+            field_T = (ResourceProtocolClient) null;
           }
           stackIn_9_0 = (this.a(false)) && (this.c(param4, 959449104));
           return stackIn_9_0;

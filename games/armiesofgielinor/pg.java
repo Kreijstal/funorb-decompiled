@@ -55,7 +55,7 @@ final class pg {
         if (IndexedSpriteBase.field_b != null) {
           dt.a(IndexedSpriteBase.field_b, 23678);
         }
-        hi.a((byte) 41);
+        BufferedSocket.a((byte) 41);
         pf.a(-15291);
         tj.j(-118);
         if (fh.b((byte) -88)) {

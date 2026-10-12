@@ -1,11 +1,11 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class jf extends ResourceRequest {
+final class NetworkResourceRequest extends ResourceRequest {
     static sa field_D;
-    byte field_B;
-    PacketBuffer field_E;
-    int field_F;
+    byte paddingBytes;
+    PacketBuffer responseBuffer;
+    int blockPosition;
     static GameplayController field_C;
     static String field_G;
 
@@ -20,25 +20,25 @@ final class jf extends ResourceRequest {
 
     final int getProgress(int obfuscationGuard) {
         if (obfuscationGuard != 0) {
-          jf.b(-42, -14);
-          if (null == this.field_E) {
+          NetworkResourceRequest.b(-42, -14);
+          if (null == this.responseBuffer) {
             return 0;
           }
-          return this.field_E.position * 100 / (-this.field_B + this.field_E.payload.length);
+          return this.responseBuffer.position * 100 / (-this.paddingBytes + this.responseBuffer.payload.length);
         }
-        if (null == this.field_E) {
+        if (null == this.responseBuffer) {
           return 0;
         }
-        return this.field_E.position * 100 / (-this.field_B + this.field_E.payload.length);
+        return this.responseBuffer.position * 100 / (-this.paddingBytes + this.responseBuffer.payload.length);
     }
 
     final byte[] getBytes(byte obfuscationGuard) {
         if (this.pending) {
           throw new RuntimeException();
         }
-        if (this.field_E.position >= this.field_E.payload.length - this.field_B) {
+        if (this.responseBuffer.position >= this.responseBuffer.payload.length - this.paddingBytes) {
           int var2 = -74 / ((-35 - obfuscationGuard) / 45);
-          return this.field_E.payload;
+          return this.responseBuffer.payload;
         }
         throw new RuntimeException();
     }
@@ -63,7 +63,7 @@ final class jf extends ResourceRequest {
         }
     }
 
-    jf() {
+    NetworkResourceRequest() {
     }
 
     final static String a(String[][] param0, int param1, String param2, int param3, byte param4) {

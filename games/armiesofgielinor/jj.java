@@ -10,7 +10,7 @@ final class jj {
     static String field_e;
     static kl field_c;
     static je[] field_i;
-    static hi field_g;
+    static BufferedSocket field_g;
 
     public static void a(byte param0) {
         field_g = null;

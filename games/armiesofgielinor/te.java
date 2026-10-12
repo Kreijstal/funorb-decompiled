@@ -127,7 +127,7 @@ final class te extends IntrusiveNode {
           this.field_q = param0;
           this.field_o = param0.l();
           this.field_k = param1;
-          this.field_q.i(128 + bp.field_e * this.field_o >> 8);
+          this.field_q.i(128 + ResourceProtocolClient.field_e * this.field_o >> 8);
         } catch (RuntimeException runtimeException) {
           throw ig.addExceptionContext((Throwable) ((Object) runtimeException), "te.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

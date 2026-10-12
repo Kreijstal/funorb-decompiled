@@ -235,7 +235,7 @@ final class CampaignMenu {
           var3 = ar.getCampaignMission(var2.campaignIndex, var2.missionId, 0);
           var4 = Battlefield.a(var3.participantIds.length, var2.snapshotBytes, false);
           var5 = fo.a(4800, wd.field_e, new String[]{var3.name, Integer.toString(var4)});
-          var6 = fo.a(4800, hi.field_h, new String[]{var5});
+          var6 = fo.a(4800, BufferedSocket.field_h, new String[]{var5});
           if (this.field_h == null) {
             var7 = 164;
             var8 = nr.field_e.a(qf.field_c) / 2 + 26;
@@ -619,7 +619,7 @@ final class CampaignMenu {
                 param3.highlightSprite = param3.previewSprite.g();
                 param3.highlightSprite.c(228, 130, 4);
               }
-              param3.highlightSprite.e(db.a(true, 0), MatchConditionEntry.a(0, (byte) 94), (ae.b(uk.field_n << 6, 100) >> 12) + 22);
+              param3.highlightSprite.e(db.a(true, 0), MatchConditionEntry.a(0, (byte) 94), (SocketResourceClient.b(uk.field_n << 6, 100) >> 12) + 22);
             }
             if (!param2 ||
               var13 != 0) {
@@ -1510,7 +1510,7 @@ final class CampaignMenu {
           if (obfuscationGuard < 114) {
             return;
           }
-          if (2 <= hi.field_j &&
+          if (2 <= BufferedSocket.field_j &&
             br.field_f[5] &&
             br.field_f[81]) {
             kw.campaignPacketWord0 = 2297;
@@ -1570,7 +1570,7 @@ final class CampaignMenu {
                   (var3 != null &&
                   ((CampaignMenuEntry) (var3)).selectable)) {
                   var4_int = 0;
-                  if (hi.field_j >= 2) {
+                  if (BufferedSocket.field_j >= 2) {
                     boolean decompiledSharedTail0 = !(br.field_f[81]);
                     if (!decompiledSharedTail0) {
                       cg.campaignPacketWord2 = 72584621;
@@ -1735,7 +1735,7 @@ final class CampaignMenu {
                 return;
               }
               if (this.viewMode == 1) {
-                if (hi.field_j < 2) {
+                if (BufferedSocket.field_j < 2) {
                   return;
                 }
                 if (!br.field_f[81]) {
@@ -1842,7 +1842,7 @@ final class CampaignMenu {
           var3.godId = campaign.localGodId;
           var3.description = campaign.description;
           stackIn_11_0 = var3;
-          stackIn_14_1 = (campaign.c((byte) -45)) || !(0 >= df.field_M) || !(hi.field_j < 2);
+          stackIn_14_1 = (campaign.c((byte) -45)) || !(0 >= df.field_M) || !(BufferedSocket.field_j < 2);
           boolean decompiledFrameCompleted0 = true;
           stackIn_11_0.selectable = stackIn_14_1;
           if (var3.selectable) {
@@ -2085,7 +2085,7 @@ final class CampaignMenu {
               this.setViewMode(0, (byte) 42);
             }
           }
-          if (param2 <= hi.field_j) {
+          if (param2 <= BufferedSocket.field_j) {
             var4_int = -2;
             var5 = 256;
             if (param0 < 16 ||

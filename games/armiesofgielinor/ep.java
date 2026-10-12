@@ -213,23 +213,23 @@ final class ep {
               CipherPacketBuffer.a(false, 0, 1, jt.field_a);
             }
           } else {
-            SoftwareRaster.a((int)(16.0 * (-var3 + (double)this.a(1105, param0 + 4336))), this.a((byte) -73, 119) << 4, 480, (ae.b(var6Lifetime1, 100) >> 13) + 32, fe.field_o[1]);
-            SoftwareRaster.a((int)(16.0 * (-var3 + (double)this.a(1068, 4592))), this.a((byte) -42, 219) << 4, 480, 32 + (ae.b(800 + var6Lifetime1, 100) >> 13), fe.field_o[2]);
-            SoftwareRaster.a((int)(16.0 * ((double)this.a(1105, 4592) - var3)), this.a((byte) -39, 286) << 4, 480, (ae.b(var6Lifetime1 + 1600, param0 - 156) >> 13) + 32, fe.field_o[3]);
-            SoftwareRaster.a((int)(16.0 * (-var3 + (double)this.a(1443, 4592))), this.a((byte) -89, 116) << 4, 480, 32 + (ae.b(2400 + var6Lifetime1, 100) >> 13), fe.field_o[4]);
-            SoftwareRaster.a((int)((-var3 + (double)this.a(1478, 4592)) * 16.0), this.a((byte) -62, 207) << 4, 480, 32 + (ae.b(var6Lifetime1 + 3200, param0 ^ 356) >> 13), fe.field_o[5]);
-            SoftwareRaster.a((int)(16.0 * (-var3 + (double)this.a(1446, 4592))), this.a((byte) -103, 295) << 4, 480, 32 + (ae.b(4000 + var6Lifetime1, 100) >> 13), fe.field_o[6]);
-            SoftwareRaster.b((int)(this.a(1890.0 - this.field_k, 16) * 16.0), this.a((byte) -78, 160) << 4, 1600, 32 + (ae.b(150 + (var6Lifetime1 >> 1), 100) >> 14), fe.field_o[0]);
-            SoftwareRaster.a((int)(16.0 * (-var3 + (double)this.a(2614, 4592))), this.a((byte) -74, 219) << 4, 80, (ae.b(var6Lifetime1, 100) >> 13) + 32 >> 2, fe.field_o[1]);
-            var7 = 256 + (ae.b(var6Lifetime1 / 4, 100) - 65536);
+            SoftwareRaster.a((int)(16.0 * (-var3 + (double)this.a(1105, param0 + 4336))), this.a((byte) -73, 119) << 4, 480, (SocketResourceClient.b(var6Lifetime1, 100) >> 13) + 32, fe.field_o[1]);
+            SoftwareRaster.a((int)(16.0 * (-var3 + (double)this.a(1068, 4592))), this.a((byte) -42, 219) << 4, 480, 32 + (SocketResourceClient.b(800 + var6Lifetime1, 100) >> 13), fe.field_o[2]);
+            SoftwareRaster.a((int)(16.0 * ((double)this.a(1105, 4592) - var3)), this.a((byte) -39, 286) << 4, 480, (SocketResourceClient.b(var6Lifetime1 + 1600, param0 - 156) >> 13) + 32, fe.field_o[3]);
+            SoftwareRaster.a((int)(16.0 * (-var3 + (double)this.a(1443, 4592))), this.a((byte) -89, 116) << 4, 480, 32 + (SocketResourceClient.b(2400 + var6Lifetime1, 100) >> 13), fe.field_o[4]);
+            SoftwareRaster.a((int)((-var3 + (double)this.a(1478, 4592)) * 16.0), this.a((byte) -62, 207) << 4, 480, 32 + (SocketResourceClient.b(var6Lifetime1 + 3200, param0 ^ 356) >> 13), fe.field_o[5]);
+            SoftwareRaster.a((int)(16.0 * (-var3 + (double)this.a(1446, 4592))), this.a((byte) -103, 295) << 4, 480, 32 + (SocketResourceClient.b(4000 + var6Lifetime1, 100) >> 13), fe.field_o[6]);
+            SoftwareRaster.b((int)(this.a(1890.0 - this.field_k, 16) * 16.0), this.a((byte) -78, 160) << 4, 1600, 32 + (SocketResourceClient.b(150 + (var6Lifetime1 >> 1), 100) >> 14), fe.field_o[0]);
+            SoftwareRaster.a((int)(16.0 * (-var3 + (double)this.a(2614, 4592))), this.a((byte) -74, 219) << 4, 80, (SocketResourceClient.b(var6Lifetime1, 100) >> 13) + 32 >> 2, fe.field_o[1]);
+            var7 = 256 + (SocketResourceClient.b(var6Lifetime1 / 4, 100) - 65536);
             if (var7 > 0) {
               ih.field_H.e((int)(-var3 + (double)this.a(2568, 4592)), this.a((byte) -29, 141), var7);
             }
-            var7 = 256 + (ae.b(var6Lifetime1 / 2, 100) - 65536);
+            var7 = 256 + (SocketResourceClient.b(var6Lifetime1 / 2, 100) - 65536);
             if (var7 > 0) {
               ih.field_H.e((int)((double)this.a(2516, 4592) - var3), this.a((byte) -119, 206), var7);
             }
-            var7 = -65536 + ae.b(var6Lifetime1 / 3, 100) + 256;
+            var7 = -65536 + SocketResourceClient.b(var6Lifetime1 / 3, 100) + 256;
             if (var7 > 0) {
               ih.field_H.e((int)((double)this.a(2665, param0 + 4336) - var3), this.a((byte) -53, 168), var7);
             }
@@ -338,11 +338,11 @@ final class ep {
           int var1_int = 0;
           IOException var1 = null;
           PacketBuffer var2 = null;
-          if (ai.field_T.field_q >= 4) {
-            if (-1 == ai.field_T.field_p) {
+          if (ai.field_T.errorCount >= 4) {
+            if (-1 == ai.field_T.errorCode) {
               return 3;
             }
-            if (ai.field_T.field_p == -2) {
+            if (ai.field_T.errorCode == -2) {
               return 4;
             }
             return 1;
@@ -362,23 +362,23 @@ final class ep {
               }
             }
             if (ta.field_N == 2) {
-              jj.field_g = new hi((java.net.Socket) (kd.field_R.field_f), vq.field_c);
+              jj.field_g = new BufferedSocket((java.net.Socket) (kd.field_R.field_f), vq.field_c);
               var2 = new PacketBuffer(13);
               it.a(hq.field_e, false, MoveAttackRequest.field_x, var2, ek.field_e);
               var2.writeByte(1, 15);
               var2.writeInt((byte) -124, vq.field_d);
-              jj.field_g.a(var2.payload, (byte) 20, 0, 13);
+              jj.field_g.write(var2.payload, (byte) 20, 0, 13);
               ta.field_N = ta.field_N + 1;
               UnitInfoPopup.field_s = 30000L + vi.b(103);
             }
             if (3 == ta.field_N) {
-              if (jj.field_g.d((byte) 43) <= 0) {
+              if (jj.field_g.available((byte) 43) <= 0) {
                 if (vi.b(97) > UnitInfoPopup.field_s) {
                   stackIn_30_0 = OwnerChangeEvent.a(-2, (byte) 101);
                   return stackIn_30_0;
                 }
               } else {
-                var1_int = jj.field_g.a(70);
+                var1_int = jj.field_g.readByte(70);
                 if (var1_int != 0) {
                   stackIn_25_0 = OwnerChangeEvent.a(var1_int, (byte) 101);
                   return stackIn_25_0;
@@ -387,7 +387,7 @@ final class ep {
               }
             }
             if (4 == ta.field_N) {
-              ai.field_T.a(jj.field_g, ts.field_m, -68);
+              ai.field_T.attachTransport(jj.field_g, ts.field_m, -68);
               kd.field_R = null;
               ta.field_N = 0;
               jj.field_g = null;

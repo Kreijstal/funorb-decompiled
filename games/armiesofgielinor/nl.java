@@ -310,7 +310,7 @@ abstract class nl extends kb implements gw {
           ju.field_a = param9;
           TextCursor.field_d = param2;
           rs.field_p = fk.a("gameprivacy", (byte) -128, param7, "lobby");
-          bp.field_d = fk.a("ratedgame", (byte) -125, param7, "lobby");
+          ResourceProtocolClient.field_d = fk.a("ratedgame", (byte) -125, param7, "lobby");
           mo.field_g = fk.a("opentome", (byte) -124, param7, "lobby");
           lm.field_h = fk.a("allowspectators", (byte) -125, param7, "lobby");
           ResourceRequest.field_u = new String[5];
@@ -354,7 +354,7 @@ abstract class nl extends kb implements gw {
           if (!fh.field_c) {
             stackIn_6_0 = null;
             stackIn_6_1 = null;
-            stackIn_6_4 = jf.field_G;
+            stackIn_6_4 = NetworkResourceRequest.field_G;
           } else {
             stackIn_6_0 = null;
             stackIn_6_1 = null;

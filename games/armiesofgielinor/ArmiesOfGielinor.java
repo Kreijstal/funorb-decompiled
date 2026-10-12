@@ -339,7 +339,7 @@ public final class ArmiesOfGielinor extends wf {
                   stackIn_194_11 = var5_intLifetime1;
                   stackIn_194_12 = var6;
                   stackIn_194_13 = var7;
-                  if (2 > hi.field_j) {
+                  if (2 > BufferedSocket.field_j) {
                     stackIn_195_0 = null;
                     stackIn_195_1 = null;
                     stackIn_195_14 = false;
@@ -1087,7 +1087,7 @@ public final class ArmiesOfGielinor extends wf {
               SoftwareRaster.b(0, 0, SoftwareRaster.width, SoftwareRaster.height, 0, var4);
             }
           }
-          if (hi.field_j >= 2 &&
+          if (BufferedSocket.field_j >= 2 &&
             CoatOfArms.field_e) {
             rs.field_n.b(Integer.toString(UnitModelPreview.field_i), 8, 23, 16777215, 1);
             rs.field_n.a((Runtime.getRuntime().totalMemory() - Runtime.getRuntime().freeMemory()) / 1024L + "kB", 500, 100, 16777215, 1);
@@ -1188,11 +1188,11 @@ public final class ArmiesOfGielinor extends wf {
           lb.a(param0 + 13988);
           CampaignMission.f(0);
           ij.c(param0 ^ 3);
-          bp.c((byte) 35);
+          ResourceProtocolClient.c((byte) 35);
           DiskCacheWorker.a(true);
           dd.b(-56);
           BufferedFile.b((byte) 78);
-          hi.b((byte) 99);
+          BufferedSocket.b((byte) 99);
           Unit.q(-9480);
           Battlefield.c(-1);
           BitmapFont.a();
@@ -1406,8 +1406,8 @@ public final class ArmiesOfGielinor extends wf {
           VineGrowthAction.a((byte) 119);
           MoveAttackAction.e(param0 + 4);
           TeleportAction.a(false);
-          ae.e(param0 - 4024);
-          jf.h(param0 ^ 29322);
+          SocketResourceClient.e(param0 - 4024);
+          NetworkResourceRequest.h(param0 ^ 29322);
           SectorCacheStore.b(1);
           DiskCacheRequest.h(param0 ^ -61);
           bm.e(param0 - 56);
@@ -1859,7 +1859,7 @@ public final class ArmiesOfGielinor extends wf {
             if (!rf.a(27875)) {
               stackIn_21_0Lifetime1Lifetime1 = null;
               stackIn_21_1Lifetime1Lifetime1 = null;
-              if (hi.field_j >= 2) {
+              if (BufferedSocket.field_j >= 2) {
                 stackIn_25_0 = null;
                 stackIn_25_1 = null;
                 stackIn_25_14 = true;
@@ -2051,10 +2051,10 @@ public final class ArmiesOfGielinor extends wf {
                           bn.a((byte) -24, 33.0f, df.a(is.field_d, 0, ep.field_b, -27638, PacketBuffer.field_m));
                           return false;
                         }
-                        bn.a((byte) -24, 28.0f, vl.a(uf.field_f, 0, ds.field_b, "", bp.field_k));
+                        bn.a((byte) -24, 28.0f, vl.a(uf.field_f, 0, ds.field_b, "", ResourceProtocolClient.field_k));
                         return false;
                       }
-                      bn.a((byte) -24, 23.0f, vl.a(br.field_d, 0, ds.field_b, "", bp.field_k));
+                      bn.a((byte) -24, 23.0f, vl.a(br.field_d, 0, ds.field_b, "", ResourceProtocolClient.field_k));
                       return false;
                     }
                     bn.a((byte) -24, 21.0f, vl.a(ResourceRequest.field_A, 0, rf.field_a, "lobby", is.field_f));
@@ -2253,7 +2253,7 @@ public final class ArmiesOfGielinor extends wf {
           var7_int = 0;
           do {
             if (var6_array.length <= var7_int) {
-              hi.field_i = new ep(vc.field_m);
+              BufferedSocket.field_i = new ep(vc.field_m);
               dq.field_i = CampaignMission.a((byte) -125, "frame_outer", "basic", iw.field_l);
               io.field_m = CampaignMission.a((byte) 83, "frame_inner", "basic", iw.field_l);
               oh.field_J = CampaignMission.a((byte) 83, "frame_ingame", "basic", iw.field_l);
@@ -2281,7 +2281,7 @@ public final class ArmiesOfGielinor extends wf {
           var15 = new int[]{4456448};
           dh.field_l = jk.a(100, var15, 123, var14);
           fe.a(0, 0, 640, 480, oh.field_J, nd.field_b);
-          ae.a((byte) 125, ac.a(iw.field_l, "dials", (byte) -4, "basic"), GameplayController.a("hand", (byte) 51, "basic", iw.field_l));
+          SocketResourceClient.a((byte) 125, ac.a(iw.field_l, "dials", (byte) -4, "basic"), GameplayController.a("hand", (byte) 51, "basic", iw.field_l));
           IsaacRandom.field_k = fk.a("arrows", (byte) -124, iw.field_l, "basic");
           pi.field_T = GameplayController.a("isocrosshair", (byte) 51, "basic", iw.field_l);
           ng.a(GameplayController.a("glowray", (byte) 51, "basic", iw.field_l), 0, GameplayController.a("glowspark", (byte) 51, "basic", iw.field_l));
@@ -2323,7 +2323,7 @@ public final class ArmiesOfGielinor extends wf {
           var17 = 0;
           do {
             if (var17 >= 64) {
-              if (hi.field_j >= 2) {
+              if (BufferedSocket.field_j >= 2) {
                 oa.field_I = new ij(hg.a(101), rs.field_n, IntPair.field_m);
               }
               break;

@@ -221,7 +221,7 @@ final class co {
 
     final void a(kl param0, int param1, kl param2) {
         try {
-          ae.field_u = param2;
+          SocketResourceClient.field_u = param2;
           fd.field_m = param0;
           if (param1 != 0) {
             this.field_a = (String) null;
@@ -252,16 +252,16 @@ final class co {
         if (this.field_b != null) {
           return;
         }
-        this.field_w = MapLayout.a(this.field_a, -28106, "basic", ae.field_u);
-        this.field_m = MapLayout.a(this.field_v, -28106, "basic", ae.field_u);
-        this.field_g = MapLayout.a(this.field_q, -28106, "basic", ae.field_u);
-        this.field_u = fk.a(this.field_e, (byte) -128, ae.field_u, "basic");
+        this.field_w = MapLayout.a(this.field_a, -28106, "basic", SocketResourceClient.field_u);
+        this.field_m = MapLayout.a(this.field_v, -28106, "basic", SocketResourceClient.field_u);
+        this.field_g = MapLayout.a(this.field_q, -28106, "basic", SocketResourceClient.field_u);
+        this.field_u = fk.a(this.field_e, (byte) -128, SocketResourceClient.field_u, "basic");
         if (param0 > -63) {
           this.field_u = (RgbSprite[]) null;
-          this.field_b = fk.a(this.field_c, (byte) -127, ae.field_u, "basic");
+          this.field_b = fk.a(this.field_c, (byte) -127, SocketResourceClient.field_u, "basic");
           return;
         }
-        this.field_b = fk.a(this.field_c, (byte) -127, ae.field_u, "basic");
+        this.field_b = fk.a(this.field_c, (byte) -127, SocketResourceClient.field_u, "basic");
     }
 
     final void a(int param0) {

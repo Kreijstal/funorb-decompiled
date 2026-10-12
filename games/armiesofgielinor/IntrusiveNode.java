@@ -31,15 +31,15 @@ class IntrusiveNode {
         int[] var14;
         var12 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         var6 = 50 + GameplayController.field_f;
-        var14 = jf.field_C.movementPlanner.movementCosts;
+        var14 = NetworkResourceRequest.field_C.movementPlanner.movementCosts;
         var13 = var14;
         var7 = var13;
         var8 = 43 % ((-48 - param0) / 51);
-        if (jf.field_C.selectedUnit != null &&
-          CipherPacketBuffer.currentBattlefield.currentPlayer == jf.field_C.field_q &&
-          !jf.field_C.selectedUnit.movementSpent && (jf.field_C.selectedUnit.ownerPlayer == jf.field_C.field_q ||
-          !jf.field_C.movementPlanner.field_w) && !jf.field_C.selectedUnit.h(-13494)) {
-          var9 = jf.field_C.movementPlanner.getMovementBudget(27732);
+        if (NetworkResourceRequest.field_C.selectedUnit != null &&
+          CipherPacketBuffer.currentBattlefield.currentPlayer == NetworkResourceRequest.field_C.field_q &&
+          !NetworkResourceRequest.field_C.selectedUnit.movementSpent && (NetworkResourceRequest.field_C.selectedUnit.ownerPlayer == NetworkResourceRequest.field_C.field_q ||
+          !NetworkResourceRequest.field_C.movementPlanner.field_w) && !NetworkResourceRequest.field_C.selectedUnit.h(-13494)) {
+          var9 = NetworkResourceRequest.field_C.movementPlanner.getMovementBudget(27732);
           if (var9 < var14[param4]) {
             return;
           }
@@ -60,69 +60,69 @@ class IntrusiveNode {
             SoftwareRaster.d(param5 + 40, param3, param5, -20 + param3, 65280, var6);
           }
         }
-        if (jf.field_C.field_gc <= -1) {
+        if (NetworkResourceRequest.field_C.field_gc <= -1) {
           return;
         }
         regionExit1: {
-          if (jf.field_C.field_q == jf.field_C.battlefield.currentPlayer) {
-            if (jf.field_C.field_gc == 44 &&
-              jf.field_C.field_rb &&
-              -1 < jf.field_C.field_Cb) {
-              var9 = jf.field_C.field_Cb;
+          if (NetworkResourceRequest.field_C.field_q == NetworkResourceRequest.field_C.battlefield.currentPlayer) {
+            if (NetworkResourceRequest.field_C.field_gc == 44 &&
+              NetworkResourceRequest.field_C.field_rb &&
+              -1 < NetworkResourceRequest.field_C.field_Cb) {
+              var9 = NetworkResourceRequest.field_C.field_Cb;
               switch (var9) {
                 case 1:
-                  if (jf.field_C.field_cc != param1) {
+                  if (NetworkResourceRequest.field_C.field_cc != param1) {
                     break regionExit1;
                   }
-                  if (param2 > jf.field_C.field_eb) {
+                  if (param2 > NetworkResourceRequest.field_C.field_eb) {
                     break regionExit1;
                   }
-                  if (param2 < -jf.field_C.field_ic + jf.field_C.field_eb) {
+                  if (param2 < -NetworkResourceRequest.field_C.field_ic + NetworkResourceRequest.field_C.field_eb) {
                     break regionExit1;
                   }
-                  if (param2 == jf.field_C.field_eb - jf.field_C.field_ic) {
+                  if (param2 == NetworkResourceRequest.field_C.field_eb - NetworkResourceRequest.field_C.field_ic) {
                     SoftwareRaster.d(param5 - 40, param3, param5, param3 - 20, 65280, var6);
                   }
-                  if (param2 == jf.field_C.field_eb) {
+                  if (param2 == NetworkResourceRequest.field_C.field_eb) {
                     SoftwareRaster.d(40 + param5, param3, param5, param3 + 20, 65280, var6);
                   }
                   SoftwareRaster.d(param5 - 40, param3, param5, 20 + param3, 65280, var6);
                   SoftwareRaster.d(40 + param5, param3, param5, param3 - 20, 65280, var6);
                   break regionExit1;
                 case 0:
-                  if (param2 != jf.field_C.field_eb) {
+                  if (param2 != NetworkResourceRequest.field_C.field_eb) {
                     break regionExit1;
                   }
-                  if (param1 < jf.field_C.field_cc) {
+                  if (param1 < NetworkResourceRequest.field_C.field_cc) {
                     break regionExit1;
                   }
-                  if (jf.field_C.field_cc + jf.field_C.field_ic < param1) {
+                  if (NetworkResourceRequest.field_C.field_cc + NetworkResourceRequest.field_C.field_ic < param1) {
                     break regionExit1;
                   }
                   SoftwareRaster.d(param5 - 40, param3, param5, param3 - 20, 65280, var6);
                   SoftwareRaster.d(40 + param5, param3, param5, 20 + param3, 65280, var6);
-                  if (jf.field_C.field_cc == param1) {
+                  if (NetworkResourceRequest.field_C.field_cc == param1) {
                     SoftwareRaster.d(-40 + param5, param3, param5, 20 + param3, 65280, var6);
                   }
-                  if (jf.field_C.field_cc + jf.field_C.field_ic != param1) {
+                  if (NetworkResourceRequest.field_C.field_cc + NetworkResourceRequest.field_C.field_ic != param1) {
                     break regionExit1;
                   }
                   SoftwareRaster.d(param5 + 40, param3, param5, param3 - 20, 65280, var6);
                   break regionExit1;
                 case 2:
-                  if (jf.field_C.field_cc != param1) {
+                  if (NetworkResourceRequest.field_C.field_cc != param1) {
                     break regionExit1;
                   }
-                  if (jf.field_C.field_eb > param2) {
+                  if (NetworkResourceRequest.field_C.field_eb > param2) {
                     break regionExit1;
                   }
-                  if (param2 > jf.field_C.field_ic + jf.field_C.field_eb) {
+                  if (param2 > NetworkResourceRequest.field_C.field_ic + NetworkResourceRequest.field_C.field_eb) {
                     break regionExit1;
                   }
-                  if (param2 == jf.field_C.field_eb) {
+                  if (param2 == NetworkResourceRequest.field_C.field_eb) {
                     SoftwareRaster.d(param5 - 40, param3, param5, param3 - 20, 65280, var6);
                   }
-                  if (param2 == jf.field_C.field_ic + jf.field_C.field_eb) {
+                  if (param2 == NetworkResourceRequest.field_C.field_ic + NetworkResourceRequest.field_C.field_eb) {
                     SoftwareRaster.d(param5 + 40, param3, param5, 20 + param3, 65280, var6);
                   }
                   SoftwareRaster.d(param5 - 40, param3, param5, param3 + 20, 65280, var6);
@@ -131,47 +131,47 @@ class IntrusiveNode {
                 default:
                   break regionExit1;
                 case 3:
-                  if (jf.field_C.field_eb != param2) {
+                  if (NetworkResourceRequest.field_C.field_eb != param2) {
                     break regionExit1;
                   }
-                  if (jf.field_C.field_cc < param1) {
+                  if (NetworkResourceRequest.field_C.field_cc < param1) {
                     break regionExit1;
                   }
-                  if (param1 < -jf.field_C.field_ic + jf.field_C.field_cc) {
+                  if (param1 < -NetworkResourceRequest.field_C.field_ic + NetworkResourceRequest.field_C.field_cc) {
                     break regionExit1;
                   }
                   SoftwareRaster.d(-40 + param5, param3, param5, param3 - 20, 65280, var6);
                   SoftwareRaster.d(40 + param5, param3, param5, param3 + 20, 65280, var6);
-                  if (-jf.field_C.field_ic + jf.field_C.field_cc == param1) {
+                  if (-NetworkResourceRequest.field_C.field_ic + NetworkResourceRequest.field_C.field_cc == param1) {
                     SoftwareRaster.d(-40 + param5, param3, param5, 20 + param3, 65280, var6);
                   }
-                  if (param1 != jf.field_C.field_cc) {
+                  if (param1 != NetworkResourceRequest.field_C.field_cc) {
                     break regionExit1;
                   }
                   SoftwareRaster.d(40 + param5, param3, param5, -20 + param3, 65280, var6);
                   break regionExit1;
               }
             }
-            stackIn_38_0 = (!jf.field_C.field_rb) ? 16711680 : 65280;
+            stackIn_38_0 = (!NetworkResourceRequest.field_C.field_rb) ? 16711680 : 65280;
             var9 = stackIn_38_0;
-            var10 = jf.field_C.field_cc - param1;
-            var11 = jf.field_C.field_eb - param2;
-            if (Math.abs(var10) <= jf.field_C.field_ic &&
-              Math.abs(var11) <= jf.field_C.field_ic) {
+            var10 = NetworkResourceRequest.field_C.field_cc - param1;
+            var11 = NetworkResourceRequest.field_C.field_eb - param2;
+            if (Math.abs(var10) <= NetworkResourceRequest.field_C.field_ic &&
+              Math.abs(var11) <= NetworkResourceRequest.field_C.field_ic) {
               if (param2 == 0 ||
-                var11 == jf.field_C.field_ic) {
+                var11 == NetworkResourceRequest.field_C.field_ic) {
                 SoftwareRaster.d(-40 + param5, param3, param5, param3 - 20, var9, var6);
               }
               if (param2 == -1 + ef.field_c ||
-                -var11 == jf.field_C.field_ic) {
+                -var11 == NetworkResourceRequest.field_C.field_ic) {
                 SoftwareRaster.d(param5 + 40, param3, param5, param3 + 20, var9, var6);
               }
               if (param1 == 0 ||
-                var10 == jf.field_C.field_ic) {
+                var10 == NetworkResourceRequest.field_C.field_ic) {
                 SoftwareRaster.d(-40 + param5, param3, param5, 20 + param3, var9, var6);
               }
               if ((param1 == -1 + ResourceRequest.field_y ||
-                -var10 == jf.field_C.field_ic)) {
+                -var10 == NetworkResourceRequest.field_C.field_ic)) {
                 SoftwareRaster.d(40 + param5, param3, param5, -20 + param3, var9, var6);
               }
               break regionExit1;
@@ -321,7 +321,7 @@ class IntrusiveNode {
 
     final static int b(int param0) {
         oi.field_c.a(18199);
-        if (!ai.field_T.a(true)) {
+        if (!ai.field_T.poll(true)) {
           return ep.b((byte) -120);
         }
         if (param0 >= 68) {

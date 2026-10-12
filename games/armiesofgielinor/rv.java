@@ -168,12 +168,12 @@ final class rv {
               }
             }
             vv.a(param2, -96, false, param3, us.a(param3, (byte) 87), param1);
-            var4 = (EventPresenter) (jf.field_C.eventPresenters.first((byte) 125));
+            var4 = (EventPresenter) (NetworkResourceRequest.field_C.eventPresenters.first((byte) 125));
             while (var4 != null) {
               if (param3 == var4.tileIndex) {
                 var4.draw(ug.field_b, 31785, true);
               }
-              var4 = (EventPresenter) (jf.field_C.eventPresenters.next((byte) 123));
+              var4 = (EventPresenter) (NetworkResourceRequest.field_C.eventPresenters.next((byte) 123));
             }
             return;
           }

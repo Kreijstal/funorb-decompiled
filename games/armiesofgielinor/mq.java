@@ -341,7 +341,7 @@ final class mq extends je {
           if (param1 == 2) {
             var26 = tn.field_Z;
             var28Lifetime2 = dh.field_n[0];
-            var27 = ae.field_v;
+            var27 = SocketResourceClient.field_v;
             var26.field_i.a(param2, var27, 11, var28Lifetime2);
             var29 = tn.field_Z;
             var31 = dh.field_n[1];

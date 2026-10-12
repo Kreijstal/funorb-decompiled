@@ -15,13 +15,13 @@ final class mh {
         te var2Lifetime1;
         var3 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          bp.field_e = param0;
+          ResourceProtocolClient.field_e = param0;
           var2 = (te) (bl.field_h.first((byte) 110));
           while (var2 != null) {
             if (!var2.field_k.c(65280)) {
               var2.unlink(-110);
             } else {
-              var2.field_q.i(var2.field_o * bp.field_e + 128 >> 8);
+              var2.field_q.i(var2.field_o * ResourceProtocolClient.field_e + 128 >> 8);
             }
             var2 = (te) (bl.field_h.next((byte) 123));
           }
@@ -31,7 +31,7 @@ final class mh {
               if (!var2Lifetime1.field_k.c(65280)) {
                 var2Lifetime1.unlink(47);
               } else {
-                var2Lifetime1.field_q.i(128 + bp.field_e * var2Lifetime1.field_o >> 8);
+                var2Lifetime1.field_q.i(128 + ResourceProtocolClient.field_e * var2Lifetime1.field_o >> 8);
               }
               var2Lifetime1 = (te) (ts.field_e.next((byte) 123));
             }

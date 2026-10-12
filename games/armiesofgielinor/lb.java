@@ -9,8 +9,8 @@ final class lb {
     static String field_b;
 
     final static void a(byte param0) {
-        ai.field_T.field_q = 0;
-        ai.field_T.field_p = 0;
+        ai.field_T.errorCount = 0;
+        ai.field_T.errorCode = 0;
         if (param0 != -8) {
           field_b = (String) null;
         }

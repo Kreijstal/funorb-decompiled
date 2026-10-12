@@ -7,8 +7,8 @@ final class dd {
     static String field_g;
     static RgbSprite field_k;
     private bm[] field_i;
-    private bp field_d;
-    private jf field_c;
+    private ResourceProtocolClient field_d;
+    private NetworkResourceRequest field_c;
     private PacketBuffer field_f;
     private java.math.BigInteger field_j;
     static boolean field_a;
@@ -173,7 +173,7 @@ final class dd {
         return;
     }
 
-    dd(bp param0, DiskCacheWorker param1) {
+    dd(ResourceProtocolClient param0, DiskCacheWorker param1) {
         this(param0, param1, (java.math.BigInteger) null, (java.math.BigInteger) null);
     }
 
@@ -202,10 +202,10 @@ final class dd {
           return true;
         }
         if (null == this.field_c) {
-          if (this.field_d.d(param0 + 86)) {
+          if (this.field_d.isPriorityFull(param0 + 86)) {
             return false;
           }
-          this.field_c = this.field_d.a(255, false, 255, (byte) 0, true);
+          this.field_c = this.field_d.request(255, false, 255, (byte) 0, true);
         }
         if (this.field_c.pending) {
           return false;
@@ -243,14 +243,14 @@ final class dd {
         return true;
     }
 
-    private dd(bp param0, DiskCacheWorker param1, java.math.BigInteger param2, java.math.BigInteger param3) {
+    private dd(ResourceProtocolClient param0, DiskCacheWorker param1, java.math.BigInteger param2, java.math.BigInteger param3) {
         try {
           this.field_d = param0;
           this.field_b = param1;
           this.field_h = param2;
           this.field_j = param3;
-          if (!this.field_d.d(119)) {
-            this.field_c = this.field_d.a(255, false, 255, (byte) 0, true);
+          if (!this.field_d.isPriorityFull(119)) {
+            this.field_c = this.field_d.request(255, false, 255, (byte) 0, true);
           }
         } catch (RuntimeException runtimeException) {
           throw ig.addExceptionContext((Throwable) ((Object) runtimeException), "dd.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');

@@ -606,7 +606,7 @@ class tj extends kb implements gw {
           var4 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
           try {
             if (ai.field_T != null) {
-              ai.field_T.c(-5758);
+              ai.field_T.close(-5758);
             }
             if (ou.field_h != null) {
               ou.field_h.stop((byte) -117);

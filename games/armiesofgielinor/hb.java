@@ -54,7 +54,7 @@ final class hb {
               }
               if (vl.outgoingPacket.position > 0) {
                 try {
-                  MoveAttackRequest.field_z.a(vl.outgoingPacket.payload, (byte) 20, 0, vl.outgoingPacket.position);
+                  MoveAttackRequest.field_z.write(vl.outgoingPacket.payload, (byte) 20, 0, vl.outgoingPacket.position);
                   SummonEvent.field_G = vi.b(51);
                 } catch (java.io.IOException decompiledCaughtParameter0) {
                   decompiledCaughtException = decompiledCaughtParameter0;
@@ -104,7 +104,7 @@ final class hb {
               }
               if (vl.outgoingPacket.position > 0) {
                 try {
-                  MoveAttackRequest.field_z.a(vl.outgoingPacket.payload, (byte) 20, 0, vl.outgoingPacket.position);
+                  MoveAttackRequest.field_z.write(vl.outgoingPacket.payload, (byte) 20, 0, vl.outgoingPacket.position);
                   SummonEvent.field_G = vi.b(51);
                 } catch (java.io.IOException decompiledCaughtParameter0) {
                   decompiledCaughtException = decompiledCaughtParameter0;

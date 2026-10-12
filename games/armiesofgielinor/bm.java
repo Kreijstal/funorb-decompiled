@@ -11,7 +11,7 @@ final class bm extends ew {
     private int field_B;
     private byte[] field_C;
     static SpellMenuGroup spellMenuRoot;
-    private bp field_x;
+    private ResourceProtocolClient field_x;
     static String field_k;
     static int field_h;
     static int[][] field_y;
@@ -118,7 +118,7 @@ final class bm extends ew {
                 scanLoop1: while (true) {
                   if (this.field_q.field_p.length > this.field_s) {
                     if (0 != this.field_q.field_p[this.field_s]) {
-                      if (this.field_x.a((byte) 51)) {
+                      if (this.field_x.isNormalFull((byte) 51)) {
                         var2_intLifetime1 = 0;
                         break scanLoop1;
                       }
@@ -197,11 +197,11 @@ final class bm extends ew {
             return stackIn_3_0;
           }
           if (null == this.field_n) {
-            if (this.field_x.d(101)) {
+            if (this.field_x.isPriorityFull(101)) {
               stackIn_9_0 = null;
               return (jm) (stackIn_9_0);
             }
-            this.field_n = (ResourceRequest) ((Object) this.field_x.a(this.field_r, false, 255, (byte) 0, true));
+            this.field_n = (ResourceRequest) ((Object) this.field_x.request(this.field_r, false, 255, (byte) 0, true));
           }
           if (this.field_n.pending) {
             return null;
@@ -219,12 +219,12 @@ final class bm extends ew {
             } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var3 = decompiledCaughtException;
-              this.field_x.b((byte) 4);
+              this.field_x.invalidateTransport((byte) 4);
               this.field_q = null;
-              if (this.field_x.d(param0 - 20152)) {
+              if (this.field_x.isPriorityFull(param0 - 20152)) {
                 this.field_n = null;
               } else {
-                this.field_n = (ResourceRequest) ((Object) this.field_x.a(this.field_r, false, 255, (byte) 0, true));
+                this.field_n = (ResourceRequest) ((Object) this.field_x.request(this.field_r, false, 255, (byte) 0, true));
               }
               stackIn_41_0 = null;
               return (jm) (stackIn_41_0);
@@ -245,8 +245,8 @@ final class bm extends ew {
               decompiledCaughtException = decompiledCaughtParameter1;
               var3 = decompiledCaughtException;
               this.field_q = null;
-              if (!this.field_x.d(92)) {
-                this.field_n = (ResourceRequest) ((Object) this.field_x.a(this.field_r, false, 255, (byte) 0, true));
+              if (!this.field_x.isPriorityFull(92)) {
+                this.field_n = (ResourceRequest) ((Object) this.field_x.request(this.field_r, false, 255, (byte) 0, true));
               } else {
                 this.field_n = null;
               }
@@ -314,10 +314,10 @@ final class bm extends ew {
                 this.field_C[param1] != -1) {
                 var4 = this.field_A.readNow(param1, this.field_w, 86);
               } else {
-                if (this.field_x.d(64)) {
+                if (this.field_x.isPriorityFull(64)) {
                   return null;
                 }
-                var4 = this.field_x.a(param1, false, this.field_r, (byte) 2, true);
+                var4 = this.field_x.request(param1, false, this.field_r, (byte) 2, true);
               }
             } else {
               if (1 != param2) {
@@ -330,10 +330,10 @@ final class bm extends ew {
                 if (this.field_C[param1] != -1) {
                   throw new RuntimeException();
                 }
-                if (this.field_x.a((byte) 51)) {
+                if (this.field_x.isNormalFull((byte) 51)) {
                   return null;
                 }
-                var4 = this.field_x.a(param1, false, this.field_r, (byte) 2, false);
+                var4 = this.field_x.request(param1, false, this.field_r, (byte) 2, false);
               } else {
                 if (this.field_w == null) {
                   throw new RuntimeException();
@@ -391,10 +391,10 @@ final class bm extends ew {
               this.field_C[param1] = (byte)-1;
               ((ResourceRequest) (var4)).unlink(116);
               if (((ResourceRequest) (var4)).requestFlag) {
-                if (this.field_x.d(18)) {
+                if (this.field_x.isPriorityFull(18)) {
                   return null;
                 }
-                var4 = this.field_x.a(param1, false, this.field_r, (byte) 2, true);
+                var4 = this.field_x.request(param1, false, this.field_r, (byte) 2, true);
                 this.field_t.put((IntrusiveNode) (var4), (long)param1, 98);
               }
               stackIn_84_0 = null;
@@ -423,19 +423,19 @@ final class bm extends ew {
                   var11++;
                 }
               }
-              this.field_x.field_q = 0;
-              this.field_x.field_p = 0;
+              this.field_x.errorCount = 0;
+              this.field_x.errorCode = 0;
             } else {
               throw new RuntimeException();
             }
           } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
             var6 = (RuntimeException) (Object) decompiledCaughtException;
-            this.field_x.b((byte) 4);
+            this.field_x.invalidateTransport((byte) 4);
             ((ResourceRequest) (var4)).unlink(-109);
             if (((ResourceRequest) (var4)).requestFlag &&
-              !this.field_x.d(59)) {
-              var4 = this.field_x.a(param1, false, this.field_r, (byte) 2, true);
+              !this.field_x.isPriorityFull(59)) {
+              var4 = this.field_x.request(param1, false, this.field_r, (byte) 2, true);
               this.field_t.put((IntrusiveNode) (var4), (long)param1, 120);
             }
             stackIn_112_0 = null;
@@ -612,7 +612,7 @@ final class bm extends ew {
         }
     }
 
-    bm(int param0, SectorCacheStore param1, SectorCacheStore param2, bp param3, DiskCacheWorker param4, int param5, byte[] param6, int param7, boolean param8) {
+    bm(int param0, SectorCacheStore param1, SectorCacheStore param2, ResourceProtocolClient param3, DiskCacheWorker param4, int param5, byte[] param6, int param7, boolean param8) {
         boolean stackIn_7_1 = false;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;

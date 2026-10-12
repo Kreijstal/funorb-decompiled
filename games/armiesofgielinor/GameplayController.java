@@ -6437,7 +6437,7 @@ final class GameplayController {
                   wg.a(-33, 387, 517, 39, 39 + 30 * var15)))) {
                   var2 = "";
                   if (wg.a(-33, 260, 285, 12, 44)) {
-                    var2 = hi.field_m[this.selectedUnit.getUnitCategory(0)];
+                    var2 = BufferedSocket.field_m[this.selectedUnit.getUnitCategory(0)];
                   }
                   if (wg.a(-33, 502, 550, 12, 32)) {
                     if (0 < this.selectedUnit.bonusStrength) {
@@ -9206,7 +9206,7 @@ final class GameplayController {
                     var7 = stackIn_73_0[stackIn_74_1][this.battlefield.tiles[var2_int].occupant.ownerPlayer];
                     AttackEvent.field_y[this.battlefield.mapSizeSetting + 4].b(var8, var9, var7);
                     if (this.battlefield.tiles[var2_int].occupant.hasMovementFlag1(false)) {
-                      var10 = -(80 * ae.b(uk.field_n << 8, 100) >> 16) + 255;
+                      var10 = -(80 * SocketResourceClient.b(uk.field_n << 8, 100) >> 16) + 255;
                       AttackEvent.field_y[4 + this.battlefield.mapSizeSetting].f(var8, var9, var10);
                     }
                   }
@@ -11579,7 +11579,7 @@ final class GameplayController {
                     var11 = stackIn_105_0[stackIn_106_1][this.battlefield.tiles[var2_int].occupant.ownerPlayer];
                     SkeletonLimitMarker.field_s[this.battlefield.mapSizeSetting + 4].b(var12, var13, var11);
                     if (this.battlefield.tiles[var2_int].occupant.hasMovementFlag1(false)) {
-                      var14 = 255 - (80 * ae.b(uk.field_n << 8, 100) >> 16);
+                      var14 = 255 - (80 * SocketResourceClient.b(uk.field_n << 8, 100) >> 16);
                       SkeletonLimitMarker.field_s[4 + this.battlefield.mapSizeSetting].f(var12, var13, var14);
                     }
                   }
@@ -12188,7 +12188,7 @@ final class GameplayController {
         try {
           vv.field_b = new Random(vi.b(95));
           this.encodedDamageCheckpoint = 996394;
-          stackIn_4_1 = !(hi.field_j < 2);
+          stackIn_4_1 = !(BufferedSocket.field_j < 2);
           this.field_E = stackIn_4_1;
           pc.field_j = null;
           this.encodedTurnCheckpoint = 996394;

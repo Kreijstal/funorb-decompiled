@@ -158,14 +158,14 @@ abstract class vf {
             decompiledFrameRemainder1 = !(lm.field_e.length < 2);
             if (decompiledFrameRemainder1) {
               if (param1) {
-                stackIn_22_0 = (-1 != bp.field_c) ? 1 : 0;
+                stackIn_22_0 = (-1 != ResourceProtocolClient.field_c) ? 1 : 0;
               } else {
                 stackIn_22_0 = 0;
               }
               var6 = stackIn_22_0;
               decompiledFrameRemainder0 = (var6 != 0);
               if (decompiledFrameRemainder0) {
-                var7 = bp.field_c;
+                var7 = ResourceProtocolClient.field_c;
                 for (var8_int = 0; var8_int < CoatOfArms.field_d.length; var8_int++) {
                   CoatOfArms.field_d[var8_int] = (byte) 0;
                 }
@@ -200,14 +200,14 @@ abstract class vf {
             decompiledFrameRemainder1 = !(lm.field_e.length < 2);
             if (decompiledFrameRemainder1) {
               if (param1) {
-                stackIn_55_0 = (-1 != bp.field_c) ? 1 : 0;
+                stackIn_55_0 = (-1 != ResourceProtocolClient.field_c) ? 1 : 0;
               } else {
                 stackIn_55_0 = 0;
               }
               var6 = stackIn_55_0;
               decompiledFrameRemainder0 = (var6 != 0);
               if (decompiledFrameRemainder0) {
-                var7 = bp.field_c;
+                var7 = ResourceProtocolClient.field_c;
                 for (var8_int = 0; var8_int < CoatOfArms.field_d.length; var8_int++) {
                   CoatOfArms.field_d[var8_int] = (byte) 0;
                 }
@@ -222,7 +222,7 @@ abstract class vf {
             stackIn_64_0 = (param1) ? -1 : 0;
             for (var7 = stackIn_64_0; var7 < lm.field_e.length; var7++) {
               if (var6 != 0) {
-                stackIn_72_0 = (bp.field_c != var7) ? 1 : 0;
+                stackIn_72_0 = (ResourceProtocolClient.field_c != var7) ? 1 : 0;
               } else {
                 stackIn_72_0 = 0;
               }
@@ -408,7 +408,7 @@ abstract class vf {
                 }
                 var13 = stackIn_217_0;
               }
-              if (hi.field_j >= 2 &&
+              if (BufferedSocket.field_j >= 2 &&
                 br.field_f[12]) {
                 var11 = 0;
                 var12 = 0;
@@ -441,7 +441,7 @@ abstract class vf {
                   dt.field_d[var17_int] = false;
                 }
                 es.a(0, var7, param3, -1, param1, var9, (byte) 103, -1);
-                if (hi.field_j >= 2 &&
+                if (BufferedSocket.field_j >= 2 &&
                   br.field_f[12]) {
                   fc.field_a = true;
                 }

@@ -211,7 +211,7 @@ final class CipherPacketBuffer extends PacketBuffer {
         if (param1 == jt.field_a) {
           return;
         }
-        hi.field_i = null;
+        BufferedSocket.field_i = null;
         CampaignResult.a(73);
         DualNodeDeque.field_c = param3;
         if (0 != param1) {

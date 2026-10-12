@@ -50,7 +50,7 @@ final class oe extends ro implements he {
     }
 
     final void k(byte param0) {
-        this.a(true, (byte) -103, DisplacedUnitMarker.a(-1, 248, bp.field_m));
+        this.a(true, (byte) -103, DisplacedUnitMarker.a(-1, 248, ResourceProtocolClient.field_m));
         if (param0 >= -81) {
           this.field_Ab = false;
         }
@@ -116,7 +116,7 @@ final class oe extends ro implements he {
                 if (!param0) {
                   no.b(false);
                 }
-                var4 = bp.field_m;
+                var4 = ResourceProtocolClient.field_m;
                 this.field_yb = true;
               }
             } else {

@@ -346,11 +346,11 @@ abstract class sf extends wl {
             }
             rs.a(26449, param3, param4, param5);
           }
-          var7 = (EventPresenter) (jf.field_C.eventPresenters.first((byte) 106));
+          var7 = (EventPresenter) (NetworkResourceRequest.field_C.eventPresenters.first((byte) 106));
           while (var7 != null) {
             if (var7.tileIndex == param4) {
               if (var7.presentationActive) {
-                var7 = (EventPresenter) (jf.field_C.eventPresenters.next((byte) 123));
+                var7 = (EventPresenter) (NetworkResourceRequest.field_C.eventPresenters.next((byte) 123));
                 continue;
               }
               if (null != var7.event.unit &&
@@ -372,7 +372,7 @@ abstract class sf extends wl {
                 wl.field_N.b(var8Lifetime1 - 40, -20 + var9Lifetime1);
               }
             }
-            var7 = (EventPresenter) (jf.field_C.eventPresenters.next((byte) 123));
+            var7 = (EventPresenter) (NetworkResourceRequest.field_C.eventPresenters.next((byte) 123));
           }
           if (vs.field_e[param4].occupant != null) {
             if (vs.field_e[param4].occupant.field_u) {

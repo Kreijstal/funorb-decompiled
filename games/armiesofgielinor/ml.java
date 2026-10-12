@@ -109,7 +109,7 @@ final class ml extends je {
         try {
           ng.a(CipherPacketBuffer.field_x, param1, (int[]) null, (String) null, param1.d((byte) -84), 92, -1, (String) null, 0L);
           if (param1.field_kc && (2 == param1.field_ac ||
-            !(hi.field_j < 2))) {
+            !(BufferedSocket.field_j < 2))) {
             var8 = tn.field_Z;
             var9 = fo.a(4800, SectorCacheStore.field_k, new String[]{param3});
             var8.field_i.a(10, var9, (byte) -118);
@@ -216,7 +216,7 @@ final class ml extends je {
           }
           while (var7 < op.field_c[0].length) {
             ActionRequest.unitModels[76][var7] = WeightedScoreStrategy.b(op.field_c[0][var7], -20849);
-            bp.a(var7, op.field_c[0][var7], param1 - 100);
+            ResourceProtocolClient.a(var7, op.field_c[0][var7], param1 - 100);
             var7++;
           }
           return;

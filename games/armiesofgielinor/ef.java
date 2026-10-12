@@ -12,7 +12,7 @@ final class ef extends Exception {
         CipherPacketBuffer.currentBattlefield = null;
         og.field_p = null;
         vs.field_e = null;
-        jf.field_C = null;
+        NetworkResourceRequest.field_C = null;
         PaletteRegionMap.field_g = null;
         kl.field_a = null;
         CampaignMenuEntry.field_u = null;

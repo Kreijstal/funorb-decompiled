@@ -237,7 +237,7 @@ final class ib extends mk {
                 if (var9_int == var11) {
                   stackIn_40_0 = kd.field_X;
                   stackIn_40_1 = pg.playerProfile.getUnlockLevel(param7 ^ -40);
-                  stackIn_41_2 = !(2 > hi.field_j);
+                  stackIn_41_2 = !(2 > BufferedSocket.field_j);
                   if (!BufferedFile.a(stackIn_40_0, stackIn_40_1, stackIn_41_2, var11, -1208926000, BoundedFile.field_e[0])) {
                     fe.a(var13, var14, (param5 >> 1) - 9, 78, io.field_m, MoveAttackAction.field_x, 0, 128, false);
                   } else {
@@ -246,7 +246,7 @@ final class ib extends mk {
                 } else {
                   stackIn_34_0 = kd.field_X;
                   stackIn_34_1 = pg.playerProfile.getUnlockLevel(0);
-                  stackIn_35_2 = !(hi.field_j < 2);
+                  stackIn_35_2 = !(BufferedSocket.field_j < 2);
                   if (!BufferedFile.a(stackIn_34_0, stackIn_34_1, stackIn_35_2, var11, -1208926000, BoundedFile.field_e[0])) {
                     fe.a(var13, var14, (param5 >> 1) - 9, 78, io.field_m, dh.field_l, 0, 128, false);
                   } else {
@@ -345,7 +345,7 @@ final class ib extends mk {
           if (kd.field_X > -1) {
             stackIn_87_0 = kd.field_X;
             stackIn_87_1 = pg.playerProfile.getUnlockLevel(0);
-            stackIn_88_2 = !(hi.field_j < 2);
+            stackIn_88_2 = !(BufferedSocket.field_j < 2);
             if (!BufferedFile.a(stackIn_87_0, stackIn_87_1, stackIn_88_2, var9_int, -1208926000, BoundedFile.field_e[0])) {
               param4 += 10;
               param3 += 30;

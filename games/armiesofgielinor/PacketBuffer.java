@@ -75,25 +75,25 @@ class PacketBuffer extends IntrusiveNode {
         }
     }
 
-    final void a(boolean param0, long param1) {
+    final void writeLong40(boolean obfuscationGuard, long value) {
         int fieldTemp$0 = this.position;
         this.position = this.position + 1;
-        this.payload[fieldTemp$0] = (byte)(int)(param1 >> 32);
+        this.payload[fieldTemp$0] = (byte)(int)(value >> 32);
         int fieldTemp$1 = this.position;
         this.position = this.position + 1;
-        this.payload[fieldTemp$1] = (byte)(int)(param1 >> 24);
+        this.payload[fieldTemp$1] = (byte)(int)(value >> 24);
         int fieldTemp$2 = this.position;
         this.position = this.position + 1;
-        this.payload[fieldTemp$2] = (byte)(int)(param1 >> 16);
-        if (!param0) {
+        this.payload[fieldTemp$2] = (byte)(int)(value >> 16);
+        if (!obfuscationGuard) {
           field_n = -23;
         }
         int fieldTemp$3 = this.position;
         this.position = this.position + 1;
-        this.payload[fieldTemp$3] = (byte)(int)(param1 >> 8);
+        this.payload[fieldTemp$3] = (byte)(int)(value >> 8);
         int fieldTemp$4 = this.position;
         this.position = this.position + 1;
-        this.payload[fieldTemp$4] = (byte)(int)param1;
+        this.payload[fieldTemp$4] = (byte)(int)value;
     }
 
     final void a(long param0, int param1) {

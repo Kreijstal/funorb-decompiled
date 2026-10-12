@@ -289,13 +289,13 @@ final class wn extends ih {
     final static void a(boolean param0) {
         int var1 = 0;
         if (32 >= te.field_n) {
-          jf.b(0, 99);
+          NetworkResourceRequest.b(0, 99);
         } else {
           var1 = te.field_n % 32;
           if (var1 == 0) {
             var1 = 32;
           }
-          jf.b(te.field_n - var1, 108);
+          NetworkResourceRequest.b(te.field_n - var1, 108);
         }
         if (!param0) {
           field_jb = (mq) null;

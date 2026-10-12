@@ -34,7 +34,7 @@ final class qf {
         try {
           er.field_a = param6;
           LeaderEscortCondition.field_i = param7;
-          ai.field_T = (bp) ((Object) new ae());
+          ai.field_T = (ResourceProtocolClient) ((Object) new SocketResourceClient());
           ou.field_h = new DiskCacheWorker(param8);
           oi.field_c = new dd(ai.field_T, ou.field_h);
         } catch (RuntimeException runtimeException) {

@@ -108,11 +108,11 @@ final class ot extends dr {
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          jf.field_C = param3;
+          NetworkResourceRequest.field_C = param3;
           CipherPacketBuffer.currentBattlefield = param0;
           PaletteRegionMap.field_g = new AnimationPlayer(param2);
           PaletteRegionMap.field_g.selectSequence(-1, ck.field_e[sf.field_P[76]][0]);
-          kl.field_a = jf.field_C.camera;
+          kl.field_a = NetworkResourceRequest.field_C.camera;
           discarded$1 = new RgbSprite(80, 40);
           ef.field_c = CipherPacketBuffer.currentBattlefield.mapHeight;
           ResourceRequest.field_y = CipherPacketBuffer.currentBattlefield.mapWidth;

@@ -450,7 +450,7 @@ final class i extends je {
             this.field_Tb.a(this.field_Rb, 63);
             this.field_Rb.field_I = "|";
             if (!(tf.field_l < 5) ||
-              !(hi.field_j < 2)) {
+              !(BufferedSocket.field_j < 2)) {
               regionExit1: {
                 stackIn_6_0 = this;
                 stackIn_6_1 = null;
@@ -460,7 +460,7 @@ final class i extends je {
                 if (tf.field_l < 7) {
                   stackIn_7_0 = this;
                   stackIn_6_0Lifetime1 = stackIn_7_0;
-                  if (hi.field_j < 2) {
+                  if (BufferedSocket.field_j < 2) {
                     stackIn_8_0 = this;
                     stackIn_8_1 = null;
                     stackIn_8_2 = null;

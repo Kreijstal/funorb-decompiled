@@ -529,7 +529,7 @@ final class kl {
             if (rs.field_q != 11) {
               continue;
             }
-            if (hi.field_j < 2) {
+            if (BufferedSocket.field_j < 2) {
               continue;
             }
             break;

@@ -1020,11 +1020,11 @@ abstract class hs extends kb implements gw {
 
     final static void a(int param0) {
         int var1 = 0;
-        if (bp.field_e >= 224) {
+        if (ResourceProtocolClient.field_e >= 224) {
           mh.a(256, (byte) -60);
         } else {
-          var1 = bp.field_e % 32;
-          mh.a(bp.field_e + 32 - var1, (byte) -36);
+          var1 = ResourceProtocolClient.field_e % 32;
+          mh.a(ResourceProtocolClient.field_e + 32 - var1, (byte) -36);
         }
         if (param0 != 30) {
           field_H = (fp) null;

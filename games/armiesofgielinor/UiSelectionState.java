@@ -199,7 +199,7 @@ final class UiSelectionState {
               }
               var6 = kp.a(var4_int, -119);
               we.field_g[var4_int].field_cb = dh.field_n[var6];
-              bp.field_j[var4_int].field_X = co.field_k[var6];
+              ResourceProtocolClient.field_j[var4_int].field_X = co.field_k[var6];
             }
           }
           if (UnitLossCondition.field_f.field_yb != 0) {

@@ -131,10 +131,10 @@ final class nu extends lk {
           return;
         }
         if (param0 % 10L == 0L) {
-          ae.a(-1L + param0, 116);
-          ae.a(1L, param1 ^ 125);
+          SocketResourceClient.a(-1L + param0, 116);
+          SocketResourceClient.a(1L, param1 ^ 125);
         } else {
-          ae.a(param0, 53);
+          SocketResourceClient.a(param0, 53);
         }
     }
 

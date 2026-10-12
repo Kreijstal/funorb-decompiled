@@ -400,7 +400,7 @@ abstract class GameEvent extends IntrusiveNode {
             var13 = stackIn_14_0;
             var12 = var13;
             var10 = var12;
-            SoftwareRaster.a((-6 + param4 << 4) + (var7 * ae.b(param2 + var5_int << 4, 100) >> 12), -4 + (param0 + var5_int) << 4, var8 << 4, var9, var13);
+            SoftwareRaster.a((-6 + param4 << 4) + (var7 * SocketResourceClient.b(param2 + var5_int << 4, 100) >> 12), -4 + (param0 + var5_int) << 4, var8 << 4, var9, var13);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
