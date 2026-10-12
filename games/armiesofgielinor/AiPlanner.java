@@ -414,7 +414,7 @@ final class AiPlanner extends IntrusiveNode implements UnitObserver {
           this.b(param1 ? 5 : 8, 4);
           return;
         }
-        this.a(param1, this.field_L, 23);
+        this.considerEquippedSpell(param1, this.field_L, 23);
         if (param0 > -89) {
           this.field_H = (NodeDeque) null;
         }
@@ -973,459 +973,208 @@ final class AiPlanner extends IntrusiveNode implements UnitObserver {
         }
     }
 
-    private final void a(boolean param0, int param1, int param2) {
-        int statePc = 0;
-        int var4 = 0;
-        AiPlanningStrategy var5 = null;
-        int var6 = 0;
-        AiActionCandidate var7 = null;
-        int var8_int = 0;
-        UnitSpell var8 = null;
-        int var9_int = 0;
-        SpellCastRequest var9 = null;
-        float var10 = 0.0f;
-        int var11 = 0;
-        int var12 = 0;
-        int var13 = 0;
-        scanLoop1: while (true) {
-            switch (statePc) {
-                case 0: {
-                    var13 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
-                    if (this.battlefield == null) {
-                        statePc = 70;
-                    } else {
-                        statePc = 1;
-                    }
-                    continue scanLoop1;
-                }
-                case 1: {
-                    if (this.battlefield.equippedSpellIds[this.playerId] == null) {
-                        /* Inlined CFG state: 3. */
-                        {
-                            return;
-                        }
-                    } else {
-                        /* Inlined CFG state: 4. */
-                        {
-                            if (param2 == 23) {
-                                /* Inlined CFG state: 6. */
-                                {
-                                    var4 = this.battlefield.equippedSpellIds[this.playerId][param1];
-                                    if (var4 != -1) {
-                                        statePc = 8;
-                                    } else {
-                                        statePc = 7;
-                                    }
-                                    continue scanLoop1;
-                                }
-                            } else {
-                                /* Inlined CFG state: 5. */
-                                {
-                                    return;
-                                }
-                            }
-                        }
-                    }
-                }
-                case 7: {
-                    return;
-                }
-                case 8: {
-                    var5 = this.weightedScoreStrategy;
-                    var5.reset((byte) -120);
-                    if (!param0) {
-                        statePc = 10;
-                    } else {
-                        statePc = 69;
-                    }
-                    continue scanLoop1;
-                }
-                case 10: {
+    private final void considerEquippedSpell(boolean skipEvaluation, int equippedSlot, int obfuscationGuard) {
+        int var4;
+        AiPlanningStrategy var5;
+        int var6;
+        AiActionCandidate var7;
+        int var8_int;
+        UnitSpell var8;
+        int var9_int;
+        SpellCastRequest var9;
+        float var10;
+        int var11;
+        int var12;
+        int var13;
+        int var9_intLifetime1;
+        float var10Lifetime1;
+        int var11Lifetime1;
+        int var12Lifetime1;
+        int var11Lifetime2;
+        int var12Lifetime2;
+        int var12Lifetime3;
+        var13 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        if (this.battlefield == null) {
+          return;
+        }
+        if (this.battlefield.equippedSpellIds[this.playerId] == null) {
+          return;
+        }
+        if (obfuscationGuard != 23) {
+          return;
+        }
+        var4 = this.battlefield.equippedSpellIds[this.playerId][equippedSlot];
+        if (var4 == -1) {
+          return;
+        }
+        var5 = this.weightedScoreStrategy;
+        var5.reset((byte) -120);
+        if (!skipEvaluation) {
+          regionExit1: {
+            regionExit2: {
+              regionExit3: {
+                regionExit4: {
+                  regionExit5: {
                     var8_int = var4;
                     if (var8_int != 29) {
-                        statePc = 18;
-                    } else {
-                        statePc = 11;
+                      if (var8_int != 30 &&
+                        31 != var8_int &&
+                        var8_int != 32 &&
+                        33 != var8_int &&
+                        var8_int != 23 &&
+                        var8_int != 24 &&
+                        var8_int != 47 &&
+                        48 != var8_int) {
+                        if (49 == var8_int) {
+                          var6 = uc.spellDefinitions[var4][7];
+                          var8_int = var6;
+                          if (-var6 + this.battlefield.mapHeight <= var8_int) {
+                            break regionExit1;
+                          }
+                          var9_int = var6;
+                          if (this.battlefield.mapWidth - var6 <= var9_int) {
+                            var8_int++;
+                            break regionExit2;
+                          }
+                          var10 = 0.0f;
+                          var11 = -var6 + var8_int;
+                          if (var8_int + var6 < var11) {
+                            break regionExit3;
+                          }
+                          var12 = -var6 + var9_int;
+                          if (var9_int + var6 < var12) {
+                            var11++;
+                            break regionExit4;
+                          }
+                          var10 = var10 + this.scoreSpellAtTile(var12, var4, var11, (byte) -90);
+                          var12++;
+                          break regionExit5;
+                        }
+                        if (50 == var8_int) {
+                          var6 = uc.spellDefinitions[var4][7];
+                          var8_int = var6;
+                          if (-var6 + this.battlefield.mapHeight <= var8_int) {
+                            break regionExit1;
+                          }
+                          var9_int = var6;
+                          if (this.battlefield.mapWidth - var6 <= var9_int) {
+                            var8_int++;
+                            break regionExit2;
+                          }
+                          var10 = 0.0f;
+                          var11 = -var6 + var8_int;
+                          if (var8_int + var6 < var11) {
+                            break regionExit3;
+                          }
+                          var12 = -var6 + var9_int;
+                          break regionExit5;
+                        }
+                        if (var8_int != 51 &&
+                          52 != var8_int &&
+                          var8_int != 53) {
+                          return;
+                        }
+                      }
+                      var6 = uc.spellDefinitions[var4][7];
+                      var8_int = var6;
+                      break regionExit2;
                     }
-                    continue scanLoop1;
-                }
-                case 11: {
                     var6 = uc.spellDefinitions[var4][7];
                     var8_int = var6;
                     if (-var6 + this.battlefield.mapHeight <= var8_int) {
-                        statePc = 67;
-                    } else {
-                        statePc = 12;
+                      break regionExit1;
                     }
-                    continue scanLoop1;
-                }
-                case 12: {
                     var9_int = var6;
-                    if (this.battlefield.mapWidth - var6 > var9_int) {
-                        statePc = 14;
-                    } else {
-                        statePc = 13;
+                    if (this.battlefield.mapWidth - var6 <= var9_int) {
+                      var8_int++;
+                      break regionExit2;
                     }
-                    continue scanLoop1;
-                }
-                case 13: {
-                    var8_int++;
-                    statePc = 50;
-                    continue scanLoop1;
-                }
-                case 14: {
                     var10 = 0.0f;
                     var11 = -var6 + var8_int;
                     if (var8_int + var6 < var11) {
-                        statePc = 61;
-                    } else {
-                        statePc = 15;
+                      break regionExit3;
                     }
-                    continue scanLoop1;
-                }
-                case 15: {
                     var12 = -var6 + var9_int;
-                    if (var9_int + var6 >= var12) {
-                        statePc = 17;
-                    } else {
-                        statePc = 16;
+                    if (var9_int + var6 < var12) {
+                      var11++;
+                      break regionExit4;
                     }
-                    continue scanLoop1;
-                }
-                case 16: {
-                    var11++;
-                    statePc = 55;
-                    continue scanLoop1;
-                }
-                case 17: {
                     var10 = var10 + this.scoreSpellAtTile(var12, var4, var11, (byte) -90);
                     var12++;
-                    statePc = 42;
-                    continue scanLoop1;
+                  }
+                  while (var9_int + var6 >= var12) {
+                    var10 = var10 + this.scoreSpellAtTile(var12, var4, var11, (byte) -90);
+                    var12++;
+                  }
+                  var11++;
                 }
-                case 18: {
-                    if (var8_int == 30) {
-                        statePc = 49;
-                        continue scanLoop1;
-                    } else {
-                        /* Inlined CFG state: 19. */
-                        {
-                            if (31 == var8_int) {
-                                statePc = 49;
-                                continue scanLoop1;
-                            } else {
-                                /* Inlined CFG state: 20. */
-                                {
-                                    if (var8_int == 32) {
-                                        statePc = 49;
-                                        continue scanLoop1;
-                                    } else {
-                                        /* Inlined CFG state: 21. */
-                                        {
-                                            if (33 == var8_int) {
-                                                statePc = 49;
-                                                continue scanLoop1;
-                                            } else {
-                                                /* Inlined CFG state: 22. */
-                                                {
-                                                    if (var8_int == 23) {
-                                                        statePc = 49;
-                                                    } else {
-                                                        statePc = 23;
-                                                    }
-                                                    continue scanLoop1;
-                                                }
-                                            }
-                                        }
-                                    }
-                                }
-                            }
-                        }
+                while (true) {
+                  if (var8_int + var6 >= var11) {
+                    for (var12Lifetime3 = -var6 + var9_int; var9_int + var6 >= var12Lifetime3; var12Lifetime3++) {
+                      var10 = var10 + this.scoreSpellAtTile(var12Lifetime3, var4, var11, (byte) -90);
                     }
-                }
-                case 23: {
-                    if (var8_int != 24) {
-                        /* Inlined CFG state: 25. */
-                        {
-                            if (var8_int != 47) {
-                                /* Inlined CFG state: 27. */
-                                {
-                                    if (48 == var8_int) {
-                                        statePc = 49;
-                                        continue scanLoop1;
-                                    } else {
-                                        /* Inlined CFG state: 28. */
-                                        {
-                                            if (49 != var8_int) {
-                                                /* Inlined CFG state: 36. */
-                                                {
-                                                    if (50 != var8_int) {
-                                                        statePc = 45;
-                                                    } else {
-                                                        statePc = 37;
-                                                    }
-                                                    continue scanLoop1;
-                                                }
-                                            } else {
-                                                /* Inlined CFG state: 29. */
-                                                {
-                                                    var6 = uc.spellDefinitions[var4][7];
-                                                    var8_int = var6;
-                                                    if (-var6 + this.battlefield.mapHeight <= var8_int) {
-                                                        statePc = 67;
-                                                    } else {
-                                                        statePc = 30;
-                                                    }
-                                                    continue scanLoop1;
-                                                }
-                                            }
-                                        }
-                                    }
-                                }
-                            } else {
-                                statePc = 49;
-                                continue scanLoop1;
-                            }
-                        }
-                    } else {
-                        statePc = 49;
-                        continue scanLoop1;
+                    var11++;
+                    continue;
+                  }
+                  if (var10 != 0.0f) {
+                    var5.submitSpellCandidate(equippedSlot, var9_int, var8_int, var10, (byte) 71, this.playerId);
+                  }
+                  var9_int++;
+                  while (this.battlefield.mapWidth - var6 <= var9_int) {
+                    var8_int++;
+                    if (-var6 + this.battlefield.mapHeight <= var8_int) {
+                      break regionExit1;
                     }
-                }
-                case 30: {
                     var9_int = var6;
-                    if (this.battlefield.mapWidth - var6 > var9_int) {
-                        /* Inlined CFG state: 32. */
-                        {
-                            var10 = 0.0f;
-                            var11 = -var6 + var8_int;
-                            if (var8_int + var6 < var11) {
-                                statePc = 61;
-                                continue scanLoop1;
-                            } else {
-                                /* Inlined CFG state: 33. */
-                                {
-                                    var12 = -var6 + var9_int;
-                                    if (var9_int + var6 >= var12) {
-                                        /* Inlined CFG state: 35. */
-                                        {
-                                            var10 = var10 + this.scoreSpellAtTile(var12, var4, var11, (byte) -90);
-                                            var12++;
-                                            statePc = 42;
-                                            continue scanLoop1;
-                                        }
-                                    } else {
-                                        /* Inlined CFG state: 34. */
-                                        {
-                                            var11++;
-                                            statePc = 55;
-                                            continue scanLoop1;
-                                        }
-                                    }
-                                }
-                            }
-                        }
-                    } else {
-                        /* Inlined CFG state: 31. */
-                        {
-                            var8_int++;
-                            statePc = 50;
-                            continue scanLoop1;
-                        }
-                    }
+                  }
+                  var10 = 0.0f;
+                  var11 = -var6 + var8_int;
                 }
-                case 37: {
-                    var6 = uc.spellDefinitions[var4][7];
-                    var8_int = var6;
-                    if (-var6 + this.battlefield.mapHeight <= var8_int) {
-                        statePc = 67;
-                        continue scanLoop1;
-                    } else {
-                        /* Inlined CFG state: 38. */
-                        {
-                            var9_int = var6;
-                            if (this.battlefield.mapWidth - var6 > var9_int) {
-                                /* Inlined CFG state: 40. */
-                                {
-                                    var10 = 0.0f;
-                                    var11 = -var6 + var8_int;
-                                    if (var8_int + var6 < var11) {
-                                        statePc = 61;
-                                        continue scanLoop1;
-                                    } else {
-                                        /* Inlined CFG state: 41. */
-                                        {
-                                            var12 = -var6 + var9_int;
-                                            statePc = 42;
-                                            continue scanLoop1;
-                                        }
-                                    }
-                                }
-                            } else {
-                                /* Inlined CFG state: 39. */
-                                {
-                                    var8_int++;
-                                    statePc = 50;
-                                    continue scanLoop1;
-                                }
-                            }
-                        }
-                    }
+              }
+              while (true) {
+                if (var10 != 0.0f) {
+                  var5.submitSpellCandidate(equippedSlot, var9_int, var8_int, var10, (byte) 71, this.playerId);
                 }
-                case 42: {
-                    if (var9_int + var6 >= var12) {
-                        /* Inlined CFG state: 44. */
-                        {
-                            var10 = var10 + this.scoreSpellAtTile(var12, var4, var11, (byte) -90);
-                            var12++;
-                            statePc = 42;
-                            continue scanLoop1;
-                        }
-                    } else {
-                        /* Inlined CFG state: 43. */
-                        {
-                            var11++;
-                            statePc = 55;
-                            continue scanLoop1;
-                        }
-                    }
+                var9_int++;
+                while (this.battlefield.mapWidth - var6 <= var9_int) {
+                  var8_int++;
+                  if (-var6 + this.battlefield.mapHeight <= var8_int) {
+                    break regionExit1;
+                  }
+                  var9_int = var6;
                 }
-                case 45: {
-                    if (var8_int == 51) {
-                        statePc = 49;
-                        continue scanLoop1;
-                    } else {
-                        /* Inlined CFG state: 46. */
-                        {
-                            if (52 == var8_int) {
-                                statePc = 49;
-                                continue scanLoop1;
-                            } else {
-                                /* Inlined CFG state: 47. */
-                                {
-                                    if (var8_int == 53) {
-                                        statePc = 49;
-                                    } else {
-                                        statePc = 69;
-                                    }
-                                    continue scanLoop1;
-                                }
-                            }
-                        }
-                    }
+                var10 = 0.0f;
+                for (var11Lifetime2 = -var6 + var8_int; var8_int + var6 >= var11Lifetime2; var11Lifetime2++) {
+                  for (var12Lifetime2 = -var6 + var9_int; var9_int + var6 >= var12Lifetime2; var12Lifetime2++) {
+                    var10 = var10 + this.scoreSpellAtTile(var12Lifetime2, var4, var11Lifetime2, (byte) -90);
+                  }
                 }
-                case 49: {
-                    var6 = uc.spellDefinitions[var4][7];
-                    var8_int = var6;
-                    statePc = 50;
-                    continue scanLoop1;
-                }
-                case 50: {
-                    if (-var6 + this.battlefield.mapHeight <= var8_int) {
-                        statePc = 67;
-                        continue scanLoop1;
-                    } else {
-                        /* Inlined CFG state: 51. */
-                        {
-                            var9_int = var6;
-                            statePc = 52;
-                            continue scanLoop1;
-                        }
-                    }
-                }
-                case 52: {
-                    if (this.battlefield.mapWidth - var6 > var9_int) {
-                        /* Inlined CFG state: 54. */
-                        {
-                            var10 = 0.0f;
-                            var11 = -var6 + var8_int;
-                            statePc = 55;
-                            continue scanLoop1;
-                        }
-                    } else {
-                        /* Inlined CFG state: 53. */
-                        {
-                            var8_int++;
-                            statePc = 50;
-                            continue scanLoop1;
-                        }
-                    }
-                }
-                case 55: {
-                    if (var8_int + var6 < var11) {
-                        statePc = 61;
-                        continue scanLoop1;
-                    } else {
-                        /* Inlined CFG state: 56. */
-                        {
-                            var12 = -var6 + var9_int;
-                            statePc = 57;
-                            continue scanLoop1;
-                        }
-                    }
-                }
-                case 57: {
-                    if (var9_int + var6 >= var12) {
-                        /* Inlined CFG state: 59. */
-                        {
-                            var10 = var10 + this.scoreSpellAtTile(var12, var4, var11, (byte) -90);
-                            var12++;
-                            statePc = 57;
-                            continue scanLoop1;
-                        }
-                    } else {
-                        /* Inlined CFG state: 58. */
-                        {
-                            var11++;
-                            statePc = 55;
-                            continue scanLoop1;
-                        }
-                    }
-                }
-                case 61: {
-                    if (var10 != 0.0f) {
-                        /* Inlined CFG state: 64. */
-                        {
-                            var5.a(param1, var9_int, var8_int, var10, (byte) 71, this.playerId);
-                            statePc = 65;
-                            continue scanLoop1;
-                        }
-                    } else {
-                        statePc = 65;
-                        continue scanLoop1;
-                    }
-                }
-                case 65: {
-                    var9_int++;
-                    statePc = 52;
-                    continue scanLoop1;
-                }
-                case 67: {
-                    var7 = var5.selectCandidate((byte) -102);
-                    if (var7 == null) {
-                        statePc = 69;
-                    } else {
-                        statePc = 68;
-                    }
-                    continue scanLoop1;
-                }
-                case 68: {
-                    this.battlefield.field_J = true;
-                    var8 = new UnitSpell(var4, var7.destinationX, var7.destinationY);
-                    var9 = new SpellCastRequest(var8, -1, this.playerId);
-                    this.executeActionRequest(var9, -126);
-                    statePc = 69;
-                    continue scanLoop1;
-                }
-                case 69: {
-                    return;
-                }
-                case 70: {
-                    return;
-                }
-                default: throw new IllegalStateException("invalid CFG state " + statePc);
+              }
             }
+            while (-var6 + this.battlefield.mapHeight > var8_int) {
+              for (var9_intLifetime1 = var6; this.battlefield.mapWidth - var6 > var9_intLifetime1; var9_intLifetime1++) {
+                var10Lifetime1 = 0.0f;
+                for (var11Lifetime1 = -var6 + var8_int; var8_int + var6 >= var11Lifetime1; var11Lifetime1++) {
+                  for (var12Lifetime1 = -var6 + var9_intLifetime1; var9_intLifetime1 + var6 >= var12Lifetime1; var12Lifetime1++) {
+                    var10Lifetime1 = var10Lifetime1 + this.scoreSpellAtTile(var12Lifetime1, var4, var11Lifetime1, (byte) -90);
+                  }
+                }
+                if (var10Lifetime1 != 0.0f) {
+                  var5.submitSpellCandidate(equippedSlot, var9_intLifetime1, var8_int, var10Lifetime1, (byte) 71, this.playerId);
+                }
+              }
+              var8_int++;
+            }
+          }
+          var7 = var5.selectCandidate((byte) -102);
+          if (var7 != null) {
+            this.battlefield.field_J = true;
+            var8 = new UnitSpell(var4, var7.destinationX, var7.destinationY);
+            var9 = new SpellCastRequest(var8, -1, this.playerId);
+            this.executeActionRequest(var9, -126);
+          }
         }
+        return;
     }
 
     final void a(int param0, Unit param1) {

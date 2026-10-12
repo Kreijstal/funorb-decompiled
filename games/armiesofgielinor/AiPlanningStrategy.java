@@ -252,25 +252,25 @@ abstract class AiPlanningStrategy {
         }
     }
 
-    final void a(int param0, int param1, int param2, float param3, byte param4, int param5) {
+    final void submitSpellCandidate(int unusedEquippedSlot, int destinationX, int destinationY, float score, byte obfuscationGuard, int actingPlayer) {
         AiActionCandidate var7 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var7_ref = null;
         try {
-          if (param4 != 71) {
+          if (obfuscationGuard != 71) {
             AiPlanningStrategy.a(76, (String[]) null, (String) null, 20);
           }
-          var7 = this.acquireCandidate(param4 ^ 711);
-          var7.score = param3;
-          var7.destinationX = param1;
-          var7.summoningPlayer = param5;
-          var7.destinationY = param2;
+          var7 = this.acquireCandidate(obfuscationGuard ^ 711);
+          var7.score = score;
+          var7.destinationX = destinationX;
+          var7.summoningPlayer = actingPlayer;
+          var7.destinationY = destinationY;
           this.submitCandidate(16777062, var7);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var7_ref = decompiledCaughtException;
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) var7_ref), "sm.K(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) var7_ref), "sm.K(" + unusedEquippedSlot + ',' + destinationX + ',' + destinationY + ',' + score + ',' + obfuscationGuard + ',' + actingPlayer + ')');
         }
     }
 

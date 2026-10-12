@@ -383,23 +383,13 @@ final class Battlefield {
     }
 
     final void eliminatePlayer(int obfuscationGuard, int playerId, boolean removeUnits) {
-        int stackIn_3_0 = 0;
-        int stackIn_3_1 = 0;
-        int stackIn_12_0 = 0;
-        int stackIn_12_1 = 0;
         int stackIn_18_0 = 0;
         int stackIn_18_1 = 0;
-        int stackIn_29_0 = 0;
-        int stackIn_29_1 = 0;
         int stackIn_36_0 = 0;
         int stackIn_36_1 = 0;
-        Object stackIn_38_0 = null;
-        int stackIn_47_0 = 0;
-        int stackIn_47_1 = 0;
         int stackIn_61_0 = 0;
         int stackIn_61_1 = 0;
         Object stackIn_65_0 = null;
-        int statePc = 0;
         int orderIndex = 0;
         int var5 = 0;
         int var6 = 0;
@@ -409,497 +399,136 @@ final class Battlefield {
         int[] receivingPlayers = null;
         Unit unitToRemove = null;
         Unit campaignUnit = null;
-        scanLoop1: while (true) {
-            switch (statePc) {
-                case 0: {
-                    var9 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
-                    this.eliminatedPlayerMask = this.eliminatedPlayerMask | 1 << playerId;
-                    orderIndex = 0;
-                    statePc = 1;
-                    continue scanLoop1;
-                }
-                case 1: {
-                    if (orderIndex >= this.playerCount) {
-                        statePc = 60;
-                        continue scanLoop1;
-                    } else {
-                        /* Inlined CFG state: 2. */
-                        {
-                            stackIn_61_0 = this.eliminationOrder[orderIndex];
-                            stackIn_3_0 = stackIn_61_0;
-                            stackIn_61_1 = playerId;
-                            stackIn_3_1 = stackIn_61_1;
-                            if (var9 != 0) {
-                                statePc = 61;
-                                continue scanLoop1;
-                            } else {
-                                /* Inlined CFG state: 3. */
-                                {
-                                    if (stackIn_3_0 != stackIn_3_1) {
-                                        statePc = 6;
-                                        continue scanLoop1;
-                                    } else {
-                                        /* Inlined CFG state: 4. */
-                                        {
-                                            if (var9 == 0) {
-                                                statePc = 60;
-                                            } else {
-                                                statePc = 6;
-                                            }
-                                            continue scanLoop1;
-                                        }
-                                    }
-                                }
-                            }
-                        }
+        Object stackIn_65_0Lifetime1;
+        int stackIn_18_0Lifetime1;
+        int stackIn_18_1Lifetime1;
+        int stackIn_36_0Lifetime1;
+        int stackIn_36_1Lifetime1;
+        int var7Lifetime1;
+        int var5Lifetime1;
+        var9 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        this.eliminatedPlayerMask = this.eliminatedPlayerMask | 1 << playerId;
+        orderIndex = 0;
+        while (true) {
+          boolean decompiledFrameRemainder0 = true;
+          boolean decompiledFrameRemainder1 = true;
+          if (orderIndex < this.playerCount) {
+            stackIn_61_0 = this.eliminationOrder[orderIndex];
+            stackIn_61_1 = playerId;
+            decompiledFrameRemainder0 = (var9 == 0);
+            if ((decompiledFrameRemainder0) && (stackIn_61_0 != stackIn_61_1 ||
+              var9 != 0)) {
+              if (this.eliminationOrder[orderIndex] < 0) {
+                this.eliminationOrder[orderIndex] = playerId;
+                if (this.teamGame) {
+                  var5 = 0;
+                  var6 = 0;
+                  while (var6 < this.playerCount) {
+                    stackIn_18_0 = ~playerId;
+                    stackIn_18_1 = ~var6;
+                    if (stackIn_18_0 != stackIn_18_1 &&
+                      this.arePlayersAllied(var6, -16985, playerId) &&
+                      0 == (this.eliminatedPlayerMask & 1 << var6)) {
+                      var5++;
                     }
-                }
-                case 6: {
-                    if (this.eliminationOrder[orderIndex] < 0) {
-                        /* Inlined CFG state: 8. */
-                        {
-                            this.eliminationOrder[orderIndex] = playerId;
-                            if (!this.teamGame) {
-                                statePc = 44;
-                                continue scanLoop1;
-                            } else {
-                                /* Inlined CFG state: 9. */
-                                {
-                                    var5 = 0;
-                                    var6 = 0;
-                                    statePc = 10;
-                                    continue scanLoop1;
-                                }
-                            }
-                        }
-                    } else {
-                        statePc = 58;
-                        continue scanLoop1;
-                    }
-                }
-                case 10: {
-                    if (~var6 <= ~this.playerCount) {
-                        statePc = 17;
-                        continue scanLoop1;
-                    } else {
-                        /* Inlined CFG state: 11. */
-                        {
-                            stackIn_18_0 = ~playerId;
-                            stackIn_12_0 = stackIn_18_0;
-                            stackIn_18_1 = ~var6;
-                            stackIn_12_1 = stackIn_18_1;
-                            if (var9 != 0) {
-                                statePc = 18;
-                                continue scanLoop1;
-                            } else {
-                                /* Inlined CFG state: 12. */
-                                {
-                                    if (stackIn_12_0 == stackIn_12_1) {
-                                        statePc = 16;
-                                        continue scanLoop1;
-                                    } else {
-                                        /* Inlined CFG state: 13. */
-                                        {
-                                            if (!this.arePlayersAllied(var6, -16985, playerId)) {
-                                                statePc = 16;
-                                                continue scanLoop1;
-                                            } else {
-                                                /* Inlined CFG state: 14. */
-                                                {
-                                                    if (0 != (this.eliminatedPlayerMask & 1 << var6)) {
-                                                        statePc = 16;
-                                                    } else {
-                                                        statePc = 15;
-                                                    }
-                                                    continue scanLoop1;
-                                                }
-                                            }
-                                        }
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
-                case 15: {
-                    var5++;
-                    statePc = 16;
-                    continue scanLoop1;
-                }
-                case 16: {
                     var6++;
-                    if (var9 == 0) {
-                        statePc = 10;
-                    } else {
-                        statePc = 17;
-                    }
-                    continue scanLoop1;
-                }
-                case 17: {
-                    stackIn_18_0 = ~var5;
-                    stackIn_18_1 = -1;
-                    statePc = 18;
-                    continue scanLoop1;
-                }
-                case 18: {
-                    if (stackIn_18_0 >= stackIn_18_1) {
-                        statePc = 21;
-                        continue scanLoop1;
-                    } else {
-                        /* Inlined CFG state: 19. */
-                        {
-                            if (!removeUnits) {
-                                /* Inlined CFG state: 26. */
-                                {
-                                    receivingPlayers = new int[var5];
-                                    var5 = 0;
-                                    var7 = 0;
-                                    statePc = 27;
-                                    continue scanLoop1;
-                                }
-                            } else {
-                                statePc = 21;
-                                continue scanLoop1;
-                            }
-                        }
-                    }
-                }
-                case 21: {
-                    unitToRemove = (Unit) (this.unitsByPlayer[playerId].first((byte) 87));
-                    statePc = 22;
-                    continue scanLoop1;
-                }
-                case 22: {
-                    if (unitToRemove == null) {
-                        statePc = 43;
-                        continue scanLoop1;
-                    } else {
-                        /* Inlined CFG state: 23. */
-                        {
-                            this.pendingEvents.addLast((byte) -119, (IntrusiveNode) (new DeathEvent(unitToRemove, true)));
-                            unitToRemove = (Unit) (this.unitsByPlayer[playerId].next((byte) 123));
-                            if (var9 != 0) {
-                                statePc = 43;
-                                continue scanLoop1;
-                            } else {
-                                /* Inlined CFG state: 24. */
-                                {
-                                    if (var9 == 0) {
-                                        statePc = 22;
-                                    } else {
-                                        statePc = 43;
-                                    }
-                                    continue scanLoop1;
-                                }
-                            }
-                        }
-                    }
-                }
-                case 27: {
-                    if (~this.playerCount >= ~var7) {
-                        statePc = 34;
-                        continue scanLoop1;
-                    } else {
-                        /* Inlined CFG state: 28. */
-                        {
-                            stackIn_36_0 = ~var7;
-                            stackIn_29_0 = stackIn_36_0;
-                            stackIn_36_1 = ~playerId;
-                            stackIn_29_1 = stackIn_36_1;
-                            if (var9 != 0) {
-                                statePc = 36;
-                                continue scanLoop1;
-                            } else {
-                                /* Inlined CFG state: 29. */
-                                {
-                                    if (stackIn_29_0 == stackIn_29_1) {
-                                        statePc = 33;
-                                        continue scanLoop1;
-                                    } else {
-                                        /* Inlined CFG state: 30. */
-                                        {
-                                            if (!this.arePlayersAllied(var7, obfuscationGuard - 26986, playerId)) {
-                                                statePc = 33;
-                                                continue scanLoop1;
-                                            } else {
-                                                /* Inlined CFG state: 31. */
-                                                {
-                                                    if ((1 << var7 & this.eliminatedPlayerMask) != 0) {
-                                                        statePc = 33;
-                                                    } else {
-                                                        statePc = 32;
-                                                    }
-                                                    continue scanLoop1;
-                                                }
-                                            }
-                                        }
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
-                case 32: {
-                    receivingPlayers[var5] = var7;
-                    var5++;
-                    statePc = 33;
-                    continue scanLoop1;
-                }
-                case 33: {
-                    var7++;
-                    if (var9 == 0) {
-                        statePc = 27;
-                    } else {
-                        statePc = 34;
-                    }
-                    continue scanLoop1;
-                }
-                case 34: {
+                  }
+                  stackIn_18_0Lifetime1 = ~var5;
+                  stackIn_18_1Lifetime1 = -1;
+                  boolean decompiledFrameCompleted0 = true;
+                  if (stackIn_18_0Lifetime1 < stackIn_18_1Lifetime1 &&
+                    !removeUnits) {
+                    receivingPlayers = new int[var5];
                     var5 = 0;
                     var7 = 0;
-                    statePc = 35;
-                    continue scanLoop1;
-                }
-                case 35: {
-                    stackIn_36_0 = ~this.tiles.length;
-                    stackIn_36_1 = ~var7;
-                    statePc = 36;
-                    continue scanLoop1;
-                }
-                case 36: {
-                    if (stackIn_36_0 >= stackIn_36_1) {
-                        statePc = 43;
-                        continue scanLoop1;
-                    } else {
-                        /* Inlined CFG state: 37. */
-                        {
-                            var8 = this.tiles[var7].occupant;
-                            stackIn_65_0 = null;
-                            stackIn_38_0 = stackIn_65_0;
-                            if (var9 != 0) {
-                                statePc = 65;
-                            } else {
-                                statePc = 38;
-                            }
-                            continue scanLoop1;
-                        }
+                    while (this.playerCount > var7) {
+                      stackIn_36_0 = ~var7;
+                      stackIn_36_1 = ~playerId;
+                      if (stackIn_36_0 != stackIn_36_1 &&
+                        this.arePlayersAllied(var7, obfuscationGuard - 26986, playerId) &&
+                        (1 << var7 & this.eliminatedPlayerMask) == 0) {
+                        receivingPlayers[var5] = var7;
+                        var5++;
+                      }
+                      var7++;
                     }
-                }
-                case 38: {
-                    if (stackIn_38_0 == var8) {
-                        statePc = 42;
-                        continue scanLoop1;
-                    } else {
-                        /* Inlined CFG state: 39. */
-                        {
-                            if (playerId == var8.ownerPlayer) {
-                                /* Inlined CFG state: 41. */
-                                {
-                                    this.pendingEvents.addLast((byte) -119, (IntrusiveNode) (new OwnerChangeEvent(var8, receivingPlayers[var5 % receivingPlayers.length], false)));
-                                    var5++;
-                                    statePc = 42;
-                                    continue scanLoop1;
-                                }
-                            } else {
-                                statePc = 42;
-                                continue scanLoop1;
-                            }
-                        }
-                    }
-                }
-                case 42: {
-                    var7++;
-                    if (var9 == 0) {
-                        statePc = 35;
-                    } else {
-                        statePc = 43;
-                    }
-                    continue scanLoop1;
-                }
-                case 43: {
-                    if (var9 == 0) {
-                        statePc = 60;
-                    } else {
-                        statePc = 44;
-                    }
-                    continue scanLoop1;
-                }
-                case 44: {
                     var5 = 0;
-                    statePc = 45;
-                    continue scanLoop1;
-                }
-                case 45: {
-                    if (this.mapHeight * this.mapWidth <= var5) {
-                        statePc = 51;
-                        continue scanLoop1;
-                    } else {
-                        /* Inlined CFG state: 46. */
-                        {
-                            stackIn_61_0 = playerId;
-                            stackIn_47_0 = stackIn_61_0;
-                            stackIn_61_1 = this.tiles[var5].ownerPlayer;
-                            stackIn_47_1 = stackIn_61_1;
-                            if (var9 != 0) {
-                                statePc = 61;
-                                continue scanLoop1;
-                            } else {
-                                /* Inlined CFG state: 47. */
-                                {
-                                    if (stackIn_47_0 != stackIn_47_1) {
-                                        statePc = 50;
-                                        continue scanLoop1;
-                                    } else {
-                                        /* Inlined CFG state: 48. */
-                                        {
-                                            this.tiles[var5].ownerPlayer = -1;
-                                            if (11 != this.tiles[var5].terrainType) {
-                                                statePc = 50;
-                                                continue scanLoop1;
-                                            } else {
-                                                /* Inlined CFG state: 49. */
-                                                {
-                                                    this.tiles[var5].terrainType = 0;
-                                                    statePc = 50;
-                                                    continue scanLoop1;
-                                                }
-                                            }
-                                        }
-                                    }
-                                }
-                            }
-                        }
+                    var7Lifetime1 = 0;
+                    while (true) {
+                      stackIn_36_0Lifetime1 = ~this.tiles.length;
+                      stackIn_36_1Lifetime1 = ~var7Lifetime1;
+                      if (stackIn_36_0Lifetime1 >= stackIn_36_1Lifetime1) {
+                        decompiledFrameCompleted0 = false;
+                        break;
+                      }
+                      var8 = this.tiles[var7Lifetime1].occupant;
+                      stackIn_65_0 = null;
+                      if (stackIn_65_0 != var8 &&
+                        playerId == var8.ownerPlayer) {
+                        this.pendingEvents.addLast((byte) -119, (IntrusiveNode) (new OwnerChangeEvent(var8, receivingPlayers[var5 % receivingPlayers.length], false)));
+                        var5++;
+                      }
+                      var7Lifetime1++;
                     }
-                }
-                case 50: {
-                    var5++;
-                    if (var9 == 0) {
-                        statePc = 45;
-                    } else {
-                        statePc = 51;
+                  }
+                  if (decompiledFrameCompleted0) {
+                    unitToRemove = (Unit) (this.unitsByPlayer[playerId].first((byte) 87));
+                    while (unitToRemove != null) {
+                      this.pendingEvents.addLast((byte) -119, (IntrusiveNode) (new DeathEvent(unitToRemove, true)));
+                      unitToRemove = (Unit) (this.unitsByPlayer[playerId].next((byte) 123));
                     }
-                    continue scanLoop1;
-                }
-                case 51: {
-                    if (null == this.campaignMission) {
-                        statePc = 60;
-                        continue scanLoop1;
-                    } else {
-                        /* Inlined CFG state: 52. */
-                        {
-                            campaignUnit = (Unit) (this.unitsByPlayer[playerId].first((byte) 87));
-                            statePc = 53;
-                            continue scanLoop1;
-                        }
-                    }
-                }
-                case 53: {
-                    if (campaignUnit == null) {
-                        statePc = 57;
-                        continue scanLoop1;
-                    } else {
-                        /* Inlined CFG state: 54. */
-                        {
-                            this.pendingEvents.addLast((byte) -119, (IntrusiveNode) (new DeathEvent(campaignUnit, true)));
-                            campaignUnit = (Unit) (this.unitsByPlayer[playerId].next((byte) 123));
-                            if (var9 != 0) {
-                                statePc = 60;
-                                continue scanLoop1;
-                            } else {
-                                /* Inlined CFG state: 55. */
-                                {
-                                    if (var9 == 0) {
-                                        statePc = 53;
-                                    } else {
-                                        statePc = 57;
-                                    }
-                                    continue scanLoop1;
-                                }
-                            }
-                        }
-                    }
-                }
-                case 57: {
-                    if (var9 == 0) {
-                        statePc = 60;
-                    } else {
-                        statePc = 58;
-                    }
-                    continue scanLoop1;
-                }
-                case 58: {
-                    orderIndex++;
-                    if (var9 == 0) {
-                        statePc = 1;
-                    } else {
-                        statePc = 60;
-                    }
-                    continue scanLoop1;
-                }
-                case 60: {
-                    stackIn_61_0 = obfuscationGuard;
-                    stackIn_61_1 = 10001;
-                    statePc = 61;
-                    continue scanLoop1;
-                }
-                case 61: {
+                  }
+                } else {
+                  var5Lifetime1 = 0;
+                  while (this.mapHeight * this.mapWidth > var5Lifetime1) {
+                    stackIn_61_0 = playerId;
+                    stackIn_61_1 = this.tiles[var5Lifetime1].ownerPlayer;
                     if (stackIn_61_0 == stackIn_61_1) {
-                        /* Inlined CFG state: 63. */
-                        {
-                            if (this.hasSingleSurvivor((byte) -42)) {
-                                statePc = 68;
-                                continue scanLoop1;
-                            } else {
-                                /* Inlined CFG state: 64. */
-                                {
-                                    stackIn_65_0 = null;
-                                    statePc = 65;
-                                    continue scanLoop1;
-                                }
-                            }
-                        }
-                    } else {
-                        /* Inlined CFG state: 62. */
-                        {
-                            return;
-                        }
+                      this.tiles[var5Lifetime1].ownerPlayer = -1;
+                      if (11 == this.tiles[var5Lifetime1].terrainType) {
+                        this.tiles[var5Lifetime1].terrainType = 0;
+                      }
                     }
-                }
-                case 65: {
-                    if (stackIn_65_0 == this.campaignMission) {
-                        statePc = 70;
-                        continue scanLoop1;
-                    } else {
-                        /* Inlined CFG state: 66. */
-                        {
-                            if (~this.campaignMission.playerSlot == ~playerId) {
-                                statePc = 68;
-                            } else {
-                                statePc = 70;
-                            }
-                            continue scanLoop1;
-                        }
+                    var5Lifetime1++;
+                  }
+                  if ((null != this.campaignMission)) {
+                    campaignUnit = (Unit) (this.unitsByPlayer[playerId].first((byte) 87));
+                    while (campaignUnit != null) {
+                      this.pendingEvents.addLast((byte) -119, (IntrusiveNode) (new DeathEvent(campaignUnit, true)));
+                      campaignUnit = (Unit) (this.unitsByPlayer[playerId].next((byte) 123));
                     }
+                  }
                 }
-                case 68: {
-                    if (!this.field_b) {
-                        statePc = 70;
-                        continue scanLoop1;
-                    } else {
-                        /* Inlined CFG state: 69. */
-                        {
-                            this.field_qb = true;
-                            statePc = 70;
-                            continue scanLoop1;
-                        }
-                    }
-                }
-                case 70: {
-                    return;
-                }
-                default: throw new IllegalStateException("invalid CFG state " + statePc);
+                decompiledFrameRemainder1 = false;
+              }
+              else {
+                orderIndex++;
+                continue;
+              }
             }
+          }
+          if (decompiledFrameRemainder0) {
+            stackIn_61_0 = obfuscationGuard;
+            stackIn_61_1 = 10001;
+          }
+          if (stackIn_61_0 != stackIn_61_1) {
+            return;
+          }
+          if (!this.hasSingleSurvivor((byte) -42)) {
+            stackIn_65_0Lifetime1 = null;
+            if (stackIn_65_0Lifetime1 == this.campaignMission) {
+              return;
+            }
+            if (~this.campaignMission.playerSlot != ~playerId) {
+              return;
+            }
+          }
+          break;
         }
+        if (this.field_b) {
+          this.field_qb = true;
+        }
+        return;
     }
 
     final NodeDeque b(boolean param0, boolean param1, int param2) {

@@ -88,7 +88,10 @@ and fixtures, including wrapped interpolation and skeleton identity checks.
 Coordinate and texture-index arrays have separate names. Frame loading, masked
 mesh transforms, decoder cleanup and flat/constant-shade rasterization now have
 reviewed names and fixtures. Matrix-backed rotation/scale and full animation
-rendering remain unverified. Three dispatcher files remain.
+rendering remain unverified. Battlefield elimination and AI equipped-spell
+planning now use reconstructed control flow from the pinned generic compiler.
+Only gs.java retains a dispatcher fallback. AI candidate scoring/window fixtures
+cover damage spells, with selection and live casts still unverified.
 
 Steel has 33 reviewed class names. Its controlled raw/named core checks cover
 module aliases, armour/charge mutations, terrain bounds, recursive part armour
