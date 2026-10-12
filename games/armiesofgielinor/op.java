@@ -97,7 +97,7 @@ final class op {
         try {
           var6 = (CharSequence) ((Object) param1);
           if (!hg.a((byte) -18, var6)) {
-            stackIn_2_0 = bc.field_d;
+            stackIn_2_0 = SectorCacheStore.field_d;
             return stackIn_2_0;
           }
           if (2 != th.field_a) {

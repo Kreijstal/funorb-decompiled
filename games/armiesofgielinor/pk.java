@@ -215,7 +215,7 @@ final class pk extends hv {
         gt.field_i = var8;
         va.field_z = var8;
         int var9 = 0 < param2 ? 1 : 0;
-        int var10 = param2 < ks.field_y - 1 ? 1 : 0;
+        int var10 = param2 < ResourceRequest.field_y - 1 ? 1 : 0;
         if (param1 <= 0) {
           if (var9 != 0) {
             cs.field_Y = CampaignMenuEntry.field_u[-1 + param3];
@@ -225,10 +225,10 @@ final class pk extends hv {
             var8 = var8 * 20;
             if (-1 + ef.field_c > param1) {
               if (var9 != 0) {
-                oh.field_E = CampaignMenuEntry.field_u[-1 + (param3 + ks.field_y)];
+                oh.field_E = CampaignMenuEntry.field_u[-1 + (param3 + ResourceRequest.field_y)];
               }
-              va.field_z = CampaignMenuEntry.field_u[ks.field_y + param3];
-              gt.field_i = CampaignMenuEntry.field_u[1 + (ks.field_y + param3)];
+              va.field_z = CampaignMenuEntry.field_u[ResourceRequest.field_y + param3];
+              gt.field_i = CampaignMenuEntry.field_u[1 + (ResourceRequest.field_y + param3)];
             }
             ac.field_k[ls.a(rq.field_m, j.field_b, pv.field_b, uf.field_e, -83) + (0 + var8)].b(param7, param0, param6, param4);
             ac.field_k[ls.a(np.field_Wb, j.field_b, pv.field_b, cs.field_Y, -85) + (var8 + 1)].b(param7, param0, param6, param4);
@@ -245,15 +245,15 @@ final class pk extends hv {
             return;
           }
           if (var9 != 0) {
-            oh.field_E = CampaignMenuEntry.field_u[-1 + (param3 + ks.field_y)];
-            va.field_z = CampaignMenuEntry.field_u[ks.field_y + param3];
+            oh.field_E = CampaignMenuEntry.field_u[-1 + (param3 + ResourceRequest.field_y)];
+            va.field_z = CampaignMenuEntry.field_u[ResourceRequest.field_y + param3];
             ac.field_k[ls.a(rq.field_m, j.field_b, pv.field_b, uf.field_e, -83) + (0 + var8)].b(param7, param0, param6, param4);
             ac.field_k[ls.a(np.field_Wb, j.field_b, pv.field_b, cs.field_Y, -85) + (var8 + 1)].b(param7, param0, param6, param4);
             ac.field_k[ls.a(gt.field_i, j.field_b, va.field_z, uf.field_e, param5 ^ 29329) + (var8 + 2)].b(param7, param0, param6, param4);
             ac.field_k[ls.a(oh.field_E, j.field_b, va.field_z, cs.field_Y, -22) + 3 + var8].b(param7, param0, param6, param4);
             return;
           }
-          va.field_z = CampaignMenuEntry.field_u[ks.field_y + param3];
+          va.field_z = CampaignMenuEntry.field_u[ResourceRequest.field_y + param3];
           ac.field_k[ls.a(rq.field_m, j.field_b, pv.field_b, uf.field_e, -83) + (0 + var8)].b(param7, param0, param6, param4);
           ac.field_k[ls.a(np.field_Wb, j.field_b, pv.field_b, cs.field_Y, -85) + (var8 + 1)].b(param7, param0, param6, param4);
           ac.field_k[ls.a(gt.field_i, j.field_b, va.field_z, uf.field_e, param5 ^ 29329) + (var8 + 2)].b(param7, param0, param6, param4);
@@ -261,9 +261,9 @@ final class pk extends hv {
           return;
         }
         if (var9 != 0) {
-          np.field_Wb = CampaignMenuEntry.field_u[param3 + (-ks.field_y - 1)];
+          np.field_Wb = CampaignMenuEntry.field_u[param3 + (-ResourceRequest.field_y - 1)];
         }
-        pv.field_b = CampaignMenuEntry.field_u[-ks.field_y + param3];
+        pv.field_b = CampaignMenuEntry.field_u[-ResourceRequest.field_y + param3];
         if (var10 == 0) {
           if (var9 != 0) {
             cs.field_Y = CampaignMenuEntry.field_u[-1 + param3];
@@ -277,22 +277,22 @@ final class pk extends hv {
             return;
           }
           if (var9 != 0) {
-            oh.field_E = CampaignMenuEntry.field_u[-1 + (param3 + ks.field_y)];
-            va.field_z = CampaignMenuEntry.field_u[ks.field_y + param3];
+            oh.field_E = CampaignMenuEntry.field_u[-1 + (param3 + ResourceRequest.field_y)];
+            va.field_z = CampaignMenuEntry.field_u[ResourceRequest.field_y + param3];
             ac.field_k[ls.a(rq.field_m, j.field_b, pv.field_b, uf.field_e, -83) + (0 + var8)].b(param7, param0, param6, param4);
             ac.field_k[ls.a(np.field_Wb, j.field_b, pv.field_b, cs.field_Y, -85) + (var8 + 1)].b(param7, param0, param6, param4);
             ac.field_k[ls.a(gt.field_i, j.field_b, va.field_z, uf.field_e, param5 ^ 29329) + (var8 + 2)].b(param7, param0, param6, param4);
             ac.field_k[ls.a(oh.field_E, j.field_b, va.field_z, cs.field_Y, -22) + 3 + var8].b(param7, param0, param6, param4);
             return;
           }
-          va.field_z = CampaignMenuEntry.field_u[ks.field_y + param3];
+          va.field_z = CampaignMenuEntry.field_u[ResourceRequest.field_y + param3];
           ac.field_k[ls.a(rq.field_m, j.field_b, pv.field_b, uf.field_e, -83) + (0 + var8)].b(param7, param0, param6, param4);
           ac.field_k[ls.a(np.field_Wb, j.field_b, pv.field_b, cs.field_Y, -85) + (var8 + 1)].b(param7, param0, param6, param4);
           ac.field_k[ls.a(gt.field_i, j.field_b, va.field_z, uf.field_e, param5 ^ 29329) + (var8 + 2)].b(param7, param0, param6, param4);
           ac.field_k[ls.a(oh.field_E, j.field_b, va.field_z, cs.field_Y, -22) + 3 + var8].b(param7, param0, param6, param4);
           return;
         }
-        rq.field_m = CampaignMenuEntry.field_u[-ks.field_y + (param3 + 1)];
+        rq.field_m = CampaignMenuEntry.field_u[-ResourceRequest.field_y + (param3 + 1)];
         if (var9 != 0) {
           cs.field_Y = CampaignMenuEntry.field_u[-1 + param3];
         }
@@ -300,10 +300,10 @@ final class pk extends hv {
         var8 = var8 * 20;
         if (-1 + ef.field_c > param1) {
           if (var9 != 0) {
-            oh.field_E = CampaignMenuEntry.field_u[-1 + (param3 + ks.field_y)];
+            oh.field_E = CampaignMenuEntry.field_u[-1 + (param3 + ResourceRequest.field_y)];
           }
-          va.field_z = CampaignMenuEntry.field_u[ks.field_y + param3];
-          gt.field_i = CampaignMenuEntry.field_u[1 + (ks.field_y + param3)];
+          va.field_z = CampaignMenuEntry.field_u[ResourceRequest.field_y + param3];
+          gt.field_i = CampaignMenuEntry.field_u[1 + (ResourceRequest.field_y + param3)];
         }
         ac.field_k[ls.a(rq.field_m, j.field_b, pv.field_b, uf.field_e, -83) + (0 + var8)].b(param7, param0, param6, param4);
         ac.field_k[ls.a(np.field_Wb, j.field_b, pv.field_b, cs.field_Y, -85) + (var8 + 1)].b(param7, param0, param6, param4);

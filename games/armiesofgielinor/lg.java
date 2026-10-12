@@ -56,7 +56,7 @@ final class lg {
         RuntimeException var2_ref = null;
         var5 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          if (nh.field_K == null) {
+          if (DiskCacheRequest.field_K == null) {
             return null;
           }
           if (param0 == null) {
@@ -74,7 +74,7 @@ final class lg {
           if (var2 == null) {
             return null;
           }
-          var3 = (hl) (nh.field_K.a((byte) -27, (long)var2.hashCode()));
+          var3 = (hl) (DiskCacheRequest.field_K.a((byte) -27, (long)var2.hashCode()));
           while (var3 != null) {
             var7 = (CharSequence) ((Object) var3.field_Mb);
             var4 = k.a(var7, false);
@@ -82,7 +82,7 @@ final class lg {
               stackIn_19_0 = var3;
               return stackIn_19_0;
             }
-            var3 = (hl) (nh.field_K.d(-348));
+            var3 = (hl) (DiskCacheRequest.field_K.d(-348));
           }
           return null;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -29,7 +29,7 @@ final class so {
         if (param0 != 25213) {
           return -16;
         }
-        return ms.field_r;
+        return DualLinkedNode.field_r;
     }
 
     final static int a(int param0, int param1) {

@@ -33,7 +33,7 @@ final class se {
           }
           var6 = (CharSequence) ((Object) param0);
           if (!hg.a((byte) -90, var6)) {
-            stackIn_5_0 = bc.field_d;
+            stackIn_5_0 = SectorCacheStore.field_d;
             return stackIn_5_0;
           }
           if (gt.a(param0, (byte) -114)) {

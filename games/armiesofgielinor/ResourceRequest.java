@@ -1,13 +1,13 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class ks extends ms {
-    boolean field_z;
+abstract class ResourceRequest extends DualLinkedNode {
+    boolean requestFlag;
     static String[] field_u;
     static String field_v;
     static kl field_A;
     static int field_y;
-    volatile boolean field_x;
+    volatile boolean pending;
     boolean field_w;
 
     public static void e(byte param0) {
@@ -22,9 +22,9 @@ abstract class ks extends ms {
         field_A = null;
     }
 
-    abstract byte[] d(byte param0);
+    abstract byte[] getBytes(byte obfuscationGuard);
 
-    abstract int g(int param0);
+    abstract int getProgress(int obfuscationGuard);
 
     final static CampaignParticipant readCampaignParticipant(int obfuscationGuard, CampaignDefinition campaign, PacketBuffer packet) {
         CampaignParticipant var3 = null;
@@ -38,7 +38,7 @@ abstract class ks extends ms {
         RuntimeException decompiledCaughtException = null;
         try {
           if (obfuscationGuard != 900) {
-            ks.e((byte) 15);
+            ResourceRequest.e((byte) 15);
           }
           var3 = new CampaignParticipant();
           var3.participantId = packet.readUnsignedByte(0);
@@ -144,8 +144,8 @@ abstract class ks extends ms {
         }
     }
 
-    ks() {
-        this.field_x = true;
+    ResourceRequest() {
+        this.pending = true;
     }
 
     static {

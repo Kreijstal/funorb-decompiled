@@ -94,7 +94,7 @@ final class mq extends je {
           e.a((byte) -101);
           return true;
         }
-        int var5 = ui.field_i;
+        int var5 = DualNodeDeque.field_i;
         if (param0) {
           this.a(-72, (byte) -60, -60);
         }
@@ -208,15 +208,15 @@ final class mq extends je {
           oh.field_E = var9;
           stackIn_9_0 = (param3 <= 0) ? 0 : 1;
           var11 = stackIn_9_0;
-          stackIn_12_0 = (param3 >= -1 + ks.field_y) ? 0 : 1;
+          stackIn_12_0 = (param3 >= -1 + ResourceRequest.field_y) ? 0 : 1;
           var12 = stackIn_12_0;
           if (param7 > 0) {
             if (var11 != 0) {
-              np.field_Wb = CampaignMenuEntry.field_u[-1 + (param2 - ks.field_y)];
+              np.field_Wb = CampaignMenuEntry.field_u[-1 + (param2 - ResourceRequest.field_y)];
             }
-            pv.field_b = CampaignMenuEntry.field_u[param2 - ks.field_y];
+            pv.field_b = CampaignMenuEntry.field_u[param2 - ResourceRequest.field_y];
             if (var12 != 0) {
-              rq.field_m = CampaignMenuEntry.field_u[-ks.field_y + (param2 + 1)];
+              rq.field_m = CampaignMenuEntry.field_u[-ResourceRequest.field_y + (param2 + 1)];
             }
           }
           if (var11 != 0) {
@@ -228,11 +228,11 @@ final class mq extends je {
           var9 = var9 * 20;
           if (param7 < -1 + ef.field_c) {
             if (var11 != 0) {
-              oh.field_E = CampaignMenuEntry.field_u[-1 + param2 + ks.field_y];
+              oh.field_E = CampaignMenuEntry.field_u[-1 + param2 + ResourceRequest.field_y];
             }
-            va.field_z = CampaignMenuEntry.field_u[param2 + ks.field_y];
+            va.field_z = CampaignMenuEntry.field_u[param2 + ResourceRequest.field_y];
             if (var12 != 0) {
-              gt.field_i = CampaignMenuEntry.field_u[param2 + ks.field_y + 1];
+              gt.field_i = CampaignMenuEntry.field_u[param2 + ResourceRequest.field_y + 1];
             }
           }
           ac.field_k[ls.a(rq.field_m, j.field_b, pv.field_b, uf.field_e, -26) + (0 + var9)].b(param0, param4, param5, param1);

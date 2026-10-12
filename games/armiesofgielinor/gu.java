@@ -8,7 +8,7 @@ final class gu {
     final static boolean a(int param0) {
         int var1 = -61 / ((-54 - param0) / 62);
         if (oa.field_I != null) {
-          return oa.field_I.a(-30847, ui.field_i, rs.field_q);
+          return oa.field_I.a(-30847, DualNodeDeque.field_i, rs.field_q);
         }
         return false;
     }

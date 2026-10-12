@@ -53,7 +53,7 @@ final class ContextualRuntimeException extends RuntimeException {
           bn.field_c.field_Eb = 1;
           wn.field_kb = new je(0L, te.field_p, su.field_b);
           ek.field_a = new je(0L, br.field_e, nl.field_C);
-          PlayerProfile.field_f = new je(0L, ms.field_k);
+          PlayerProfile.field_f = new je(0L, DualLinkedNode.field_k);
           su.field_d.a(bn.field_c, 49);
           su.field_d.a(wn.field_kb, 109);
           su.field_d.a(ek.field_a, 49);

@@ -154,7 +154,7 @@ final class la {
           param0 = 77;
         }
         this.field_c = (ModelMesh) (ActionRequest.unitModels[param0][0]);
-        this.field_h = nh.unitProjectionVariants[param0];
+        this.field_h = DiskCacheRequest.unitProjectionVariants[param0];
         this.field_b = 0;
         this.c(0);
     }

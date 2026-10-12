@@ -23,14 +23,14 @@ final class ds {
         synchronized (var1) {
           ro.field_ub = ob.field_J;
           av.field_a = av.field_a + 1;
-          AiPlanningStrategy.field_d = nh.field_B;
+          AiPlanningStrategy.field_d = DiskCacheRequest.field_B;
           ko.field_b = kl.field_i;
           lk.field_f = ku.field_I;
           var2 = 48 / ((36 - param0) / 56);
           ku.field_I = false;
           DeployEvent.field_A = jm.field_k;
           iu.field_t = mq.field_Xb;
-          TeleportAction.field_z = ei.field_d;
+          TeleportAction.field_z = BoundedFile.field_d;
           jm.field_k = 0;
           eq.field_l = EffectPresentation.field_g;
         }

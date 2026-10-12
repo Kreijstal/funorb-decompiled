@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class RgbSpriteBase extends ms {
+abstract class RgbSpriteBase extends DualLinkedNode {
     int pixelWidth;
     int canvasHeight;
     int offsetY;

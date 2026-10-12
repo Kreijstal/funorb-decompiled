@@ -83,7 +83,7 @@ final class ea {
         var2 = var8;
         var3 = var8.readUnsignedByte(0);
         stackIn_3_0 = (0 != (var3 & 128));
-        ui.field_b = stackIn_3_0;
+        DualNodeDeque.field_b = stackIn_3_0;
         MatchConditionEntry.field_k = var3 & 127;
         hc.field_e = var8.readUnsignedByte(0);
         gk.field_I = var8.j((byte) -2);
@@ -249,7 +249,7 @@ final class ea {
         var2 = var8;
         var3 = var8.readUnsignedByte(0);
         stackIn_3_0 = (0 != (var3 & 128));
-        ui.field_b = stackIn_3_0;
+        DualNodeDeque.field_b = stackIn_3_0;
         MatchConditionEntry.field_k = var3 & 127;
         hc.field_e = var8.readUnsignedByte(0);
         gk.field_I = var8.j((byte) -2);

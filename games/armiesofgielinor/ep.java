@@ -245,8 +245,8 @@ final class ep {
           if (null == param0.field_fb) {
             param0.field_fb = new NodeDeque();
           }
-          if (null == nh.field_K) {
-            nh.field_K = new tp(64);
+          if (null == DiskCacheRequest.field_K) {
+            DiskCacheRequest.field_K = new tp(64);
           }
           if (param1 > -20) {
             field_o = -46;

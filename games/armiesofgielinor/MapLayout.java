@@ -45,7 +45,7 @@ final class MapLayout extends IntrusiveNode {
             WeightedScoreStrategy.field_h = param0.field_m;
             no.field_S = param0.field_b;
           }
-          bc.a(3208, param0);
+          SectorCacheStore.a(3208, param0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

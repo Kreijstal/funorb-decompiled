@@ -68,46 +68,46 @@ final class UnitModelPreview {
           this.unitType = 0;
           if (obfuscationGuard >= 42) {
             this.model = (ModelMesh) (ActionRequest.unitModels[this.unitType][0]);
-            this.projectionVariant = nh.unitProjectionVariants[this.unitType];
+            this.projectionVariant = DiskCacheRequest.unitProjectionVariants[this.unitType];
             return;
           }
           this.setScreenPosition(54, 25, (byte) -41);
           this.model = (ModelMesh) (ActionRequest.unitModels[this.unitType][0]);
-          this.projectionVariant = nh.unitProjectionVariants[this.unitType];
+          this.projectionVariant = DiskCacheRequest.unitProjectionVariants[this.unitType];
           return;
         }
         if (ActionRequest.unitModels.length <= this.unitType) {
           this.unitType = 0;
           if (obfuscationGuard >= 42) {
             this.model = (ModelMesh) (ActionRequest.unitModels[this.unitType][0]);
-            this.projectionVariant = nh.unitProjectionVariants[this.unitType];
+            this.projectionVariant = DiskCacheRequest.unitProjectionVariants[this.unitType];
             return;
           }
           this.setScreenPosition(54, 25, (byte) -41);
           this.model = (ModelMesh) (ActionRequest.unitModels[this.unitType][0]);
-          this.projectionVariant = nh.unitProjectionVariants[this.unitType];
+          this.projectionVariant = DiskCacheRequest.unitProjectionVariants[this.unitType];
           return;
         }
         if (ActionRequest.unitModels[this.unitType] == null) {
           this.unitType = 0;
           if (obfuscationGuard >= 42) {
             this.model = (ModelMesh) (ActionRequest.unitModels[this.unitType][0]);
-            this.projectionVariant = nh.unitProjectionVariants[this.unitType];
+            this.projectionVariant = DiskCacheRequest.unitProjectionVariants[this.unitType];
             return;
           }
           this.setScreenPosition(54, 25, (byte) -41);
           this.model = (ModelMesh) (ActionRequest.unitModels[this.unitType][0]);
-          this.projectionVariant = nh.unitProjectionVariants[this.unitType];
+          this.projectionVariant = DiskCacheRequest.unitProjectionVariants[this.unitType];
           return;
         }
         if (obfuscationGuard >= 42) {
           this.model = (ModelMesh) (ActionRequest.unitModels[this.unitType][0]);
-          this.projectionVariant = nh.unitProjectionVariants[this.unitType];
+          this.projectionVariant = DiskCacheRequest.unitProjectionVariants[this.unitType];
           return;
         }
         this.setScreenPosition(54, 25, (byte) -41);
         this.model = (ModelMesh) (ActionRequest.unitModels[this.unitType][0]);
-        this.projectionVariant = nh.unitProjectionVariants[this.unitType];
+        this.projectionVariant = DiskCacheRequest.unitProjectionVariants[this.unitType];
     }
 
     final void selectAnimationAndAdvance(int animationIndex, byte obfuscationGuard) {

@@ -241,7 +241,7 @@ final class bw {
         var2 = 0;
         var3 = 0;
         while (var2 < 8) {
-          this.field_a[var2] = ue.a(we.a((long)this.field_i[7 + var3], 255L), ue.a(we.a((long)this.field_i[var3 + 6], 255L) << 8, ue.a(ue.a(ue.a(ue.a(ue.a((long)this.field_i[var3] << 56, we.a((long)this.field_i[var3 + 1] << 48, 71776119061217280L)), we.a((long)this.field_i[var3 + 2], 255L) << 40), we.a((long)this.field_i[3 + var3], 255L) << 32), we.a(255L, (long)this.field_i[4 + var3]) << 24), we.a((long)this.field_i[var3 + 5], 255L) << 16)));
+          this.field_a[var2] = BufferedFile.a(we.a((long)this.field_i[7 + var3], 255L), BufferedFile.a(we.a((long)this.field_i[var3 + 6], 255L) << 8, BufferedFile.a(BufferedFile.a(BufferedFile.a(BufferedFile.a(BufferedFile.a((long)this.field_i[var3] << 56, we.a((long)this.field_i[var3 + 1] << 48, 71776119061217280L)), we.a((long)this.field_i[var3 + 2], 255L) << 40), we.a((long)this.field_i[3 + var3], 255L) << 32), we.a(255L, (long)this.field_i[4 + var3]) << 24), we.a((long)this.field_i[var3 + 5], 255L) << 16)));
           var2++;
           var3 += 8;
         }
@@ -249,7 +249,7 @@ final class bw {
           dupTemp$0 = this.field_l[var2Lifetime1];
           arrayValue$1 = this.field_a[var2Lifetime1];
           this.field_j[var2Lifetime1] = dupTemp$0;
-          this.field_k[var2Lifetime1] = ue.a(arrayValue$1, dupTemp$0);
+          this.field_k[var2Lifetime1] = BufferedFile.a(arrayValue$1, dupTemp$0);
         }
         for (var2Lifetime2 = 1; var2Lifetime2 <= 10; var2Lifetime2++) {
           for (var3Lifetime1 = 0; 8 > var3Lifetime1; var3Lifetime1++) {
@@ -257,7 +257,7 @@ final class bw {
             var4 = 0;
             var5 = 56;
             while (var4 < 8) {
-              this.field_e[var3Lifetime1] = ue.a(this.field_e[var3Lifetime1], sa.field_g[var4][rn.a(255, (int)(this.field_j[rn.a(7, var3Lifetime1 - var4)] >>> var5))]);
+              this.field_e[var3Lifetime1] = BufferedFile.a(this.field_e[var3Lifetime1], sa.field_g[var4][rn.a(255, (int)(this.field_j[rn.a(7, var3Lifetime1 - var4)] >>> var5))]);
               var5 -= 8;
               var4++;
             }
@@ -265,14 +265,14 @@ final class bw {
           for (var3Lifetime1Lifetime1 = 0; var3Lifetime1Lifetime1 < 8; var3Lifetime1Lifetime1++) {
             this.field_j[var3Lifetime1Lifetime1] = this.field_e[var3Lifetime1Lifetime1];
           }
-          this.field_j[0] = ue.a(this.field_j[0], sa.field_h[var2Lifetime2]);
+          this.field_j[0] = BufferedFile.a(this.field_j[0], sa.field_h[var2Lifetime2]);
           for (var3Lifetime1Lifetime2 = 0; var3Lifetime1Lifetime2 < 8; var3Lifetime1Lifetime2++) {
             this.field_e[var3Lifetime1Lifetime2] = this.field_j[var3Lifetime1Lifetime2];
             var7 = 0;
             var4Lifetime1 = var7;
             var5Lifetime1 = 56;
             while (var7 < 8) {
-              this.field_e[var3Lifetime1Lifetime2] = ue.a(this.field_e[var3Lifetime1Lifetime2], sa.field_g[var7][rn.a((int)(this.field_k[rn.a(var3Lifetime1Lifetime2 - var7, 7)] >>> var5Lifetime1), 255)]);
+              this.field_e[var3Lifetime1Lifetime2] = BufferedFile.a(this.field_e[var3Lifetime1Lifetime2], sa.field_g[var7][rn.a((int)(this.field_k[rn.a(var3Lifetime1Lifetime2 - var7, 7)] >>> var5Lifetime1), 255)]);
               var5Lifetime1 -= 8;
               var7++;
             }
@@ -285,7 +285,7 @@ final class bw {
           this.b(65);
         }
         for (var2Lifetime3 = 0; var2Lifetime3 < 8; var2Lifetime3++) {
-          this.field_l[var2Lifetime3] = ue.a(this.field_l[var2Lifetime3], ue.a(this.field_a[var2Lifetime3], this.field_k[var2Lifetime3]));
+          this.field_l[var2Lifetime3] = BufferedFile.a(this.field_l[var2Lifetime3], BufferedFile.a(this.field_a[var2Lifetime3], this.field_k[var2Lifetime3]));
         }
     }
 

@@ -165,16 +165,16 @@ final class SphinxActionRequest extends ActionRequest {
           eq.field_h.field_pb = jn.field_d;
           eq.field_h.field_Fb = 1;
           eq.field_h.field_N = 13421772;
-          ms.field_k = new je(0L, eq.field_h);
-          ms.field_k.field_wb = 16777215;
-          ms.field_k.field_L = 8421504;
-          ms.field_k.field_N = 16764006;
-          ms.field_k.field_T = 16777215;
+          DualLinkedNode.field_k = new je(0L, eq.field_h);
+          DualLinkedNode.field_k.field_wb = 16777215;
+          DualLinkedNode.field_k.field_L = 8421504;
+          DualLinkedNode.field_k.field_N = 16764006;
+          DualLinkedNode.field_k.field_T = 16777215;
           if (param2 >= -38) {
             field_v = (gk) null;
           }
-          ms.field_k.field_W = 16777215;
-          var15 = new je(0L, ms.field_k);
+          DualLinkedNode.field_k.field_W = 16777215;
+          var15 = new je(0L, DualLinkedNode.field_k);
           var15.field_pb = jn.field_d;
           var15.field_N = 16777215;
           var15.field_Z = (BitmapFont) ((Object) var7);
@@ -185,12 +185,12 @@ final class SphinxActionRequest extends ActionRequest {
           fp.field_Lb.field_G = jq.a(false, 1513239, -20600, 16, false, 1513239);
           fp.field_Lb.field_O = 2;
           ws.field_P = new je(0L, ke.field_e);
-          ws.field_P.a(0, ms.field_k);
+          ws.field_P.a(0, DualLinkedNode.field_k);
           IsaacRandom.field_i = new je(0L, fp.field_Lb);
-          IsaacRandom.field_i.a(0, ms.field_k);
+          IsaacRandom.field_i.a(0, DualLinkedNode.field_k);
           var16 = fk.a("button_mouseover", (byte) -128, param1, "lobby");
-          AnimationSequence.field_h = new np(kq.field_N, var12, eq.field_h, ms.field_k, 3, 2, io.field_n, 3, jn.field_d);
-          lu.field_u = new je(0L, ms.field_k);
+          AnimationSequence.field_h = new np(kq.field_N, var12, eq.field_h, DualLinkedNode.field_k, 3, 2, io.field_n, 3, jn.field_d);
+          lu.field_u = new je(0L, DualLinkedNode.field_k);
           lu.field_u.field_G = var13;
           lu.field_u.field_Bb = 1;
           lu.field_u.field_tb = 1;
@@ -201,7 +201,7 @@ final class SphinxActionRequest extends ActionRequest {
           lu.field_u.field_H = fk.a("button_active", (byte) -124, param1, "lobby");
           lu.field_u.field_A = fk.a("button_disabled", (byte) -126, param1, "lobby");
           lu.field_u.field_Eb = 1;
-          h.field_d = new je(0L, ms.field_k);
+          h.field_d = new je(0L, DualLinkedNode.field_k);
           h.field_d.field_Eb = 1;
           h.field_d.field_G = wj.a(-12310, fk.a("tab_inactive", (byte) -127, param1, "lobby"));
           h.field_d.field_mb = wj.a(-12310, fk.a("tab_mouseover", (byte) -124, param1, "lobby"));
@@ -217,7 +217,7 @@ final class SphinxActionRequest extends ActionRequest {
           nd.field_a.field_R = 1;
           nd.field_a.field_tb = 1;
           bw.field_h = new je(0L, nd.field_a);
-          je.field_Q = new je(0L, ms.field_k);
+          je.field_Q = new je(0L, DualLinkedNode.field_k);
           je.field_Q.field_R = 1;
           je.field_Q.field_Bb = 1;
           je.field_Q.field_tb = 1;
@@ -269,7 +269,7 @@ final class SphinxActionRequest extends ActionRequest {
           PreparedAction.field_o.field_H = dupTemp$3;
           PreparedAction.field_o.field_U = dupTemp$3;
           var17 = fk.a("checkbox", (byte) -124, param1, "lobby");
-          hs.field_H = new fp(0L, var17[1], var17[0], 1, ms.field_k, (String) null);
+          hs.field_H = new fp(0L, var17[1], var17[0], 1, DualLinkedNode.field_k, (String) null);
           oe.field_Cb = new je(0L, (je) null);
           oe.field_Cb.field_G = it.a(17, GameplayController.a("slideregion", (byte) 51, "lobby", param1));
           oe.field_Cb.field_mb = it.a(17, GameplayController.a("slideregion_mouseover", (byte) 51, "lobby", param1));

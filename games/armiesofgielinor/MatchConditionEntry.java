@@ -123,8 +123,8 @@ final class MatchConditionEntry extends IntrusiveNode {
             im.b(var4, param0 - 27499);
             return;
           }
-          if (nh.field_K == null) {
-            nh.field_K = new tp(128);
+          if (DiskCacheRequest.field_K == null) {
+            DiskCacheRequest.field_K = new tp(128);
             dj.field_a = 0;
           }
           var3Lifetime1 = var1.g(1);
@@ -137,12 +137,12 @@ final class MatchConditionEntry extends IntrusiveNode {
           if (null == var6Lifetime1) {
             var6Lifetime1 = lg.a(var5Lifetime1, (byte) -34);
             if (null != var6Lifetime1) {
-              nh.field_K.a(-1, (long)k.a((CharSequence) ((Object) var4_ref_StringLifetime1), false).hashCode(), var6Lifetime1);
+              DiskCacheRequest.field_K.a(-1, (long)k.a((CharSequence) ((Object) var4_ref_StringLifetime1), false).hashCode(), var6Lifetime1);
             }
           }
           if (var6Lifetime1 == null) {
             var6Lifetime1 = new hl();
-            nh.field_K.a(-1, (long)k.a((CharSequence) ((Object) var4_ref_StringLifetime1), false).hashCode(), var6Lifetime1);
+            DiskCacheRequest.field_K.a(-1, (long)k.a((CharSequence) ((Object) var4_ref_StringLifetime1), false).hashCode(), var6Lifetime1);
             fieldTemp$0 = dj.field_a;
             dj.field_a = dj.field_a + 1;
             var6Lifetime1.field_Ob = fieldTemp$0;

@@ -7,7 +7,7 @@ final class wg implements Iterable {
     static String field_a;
     static String field_e;
     static String field_c;
-    ms field_f;
+    DualLinkedNode field_f;
     static String field_d;
     static Unit[] field_b;
 
@@ -43,30 +43,30 @@ final class wg implements Iterable {
         return false;
     }
 
-    final ms a(boolean param0) {
-        ms var2 = this.field_f.field_s;
+    final DualLinkedNode a(boolean param0) {
+        DualLinkedNode var2 = this.field_f.secondaryNext;
         if (this.field_f == var2) {
           return null;
         }
         if (!param0) {
-          var2.c((byte) -76);
+          var2.unlinkSecondary((byte) -76);
           return var2;
         }
-        return (ms) null;
+        return (DualLinkedNode) null;
     }
 
-    final void a(int param0, ms param1) {
+    final void a(int param0, DualLinkedNode param1) {
         try {
-          if (null != param1.field_l) {
-            param1.c((byte) -76);
+          if (null != param1.secondaryPrevious) {
+            param1.unlinkSecondary((byte) -76);
           }
-          param1.field_l = this.field_f.field_l;
+          param1.secondaryPrevious = this.field_f.secondaryPrevious;
           if (param0 != -96) {
             field_a = (String) null;
           }
-          param1.field_s = this.field_f;
-          param1.field_l.field_s = param1;
-          param1.field_s.field_l = param1;
+          param1.secondaryNext = this.field_f;
+          param1.secondaryPrevious.secondaryNext = param1;
+          param1.secondaryNext.secondaryPrevious = param1;
         } catch (RuntimeException runtimeException) {
           throw ig.addExceptionContext((Throwable) ((Object) runtimeException), "wg.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -113,9 +113,9 @@ final class wg implements Iterable {
     }
 
     wg() {
-        this.field_f = new ms();
-        this.field_f.field_l = this.field_f;
-        this.field_f.field_s = this.field_f;
+        this.field_f = new DualLinkedNode();
+        this.field_f.secondaryPrevious = this.field_f;
+        this.field_f.secondaryNext = this.field_f;
     }
 
     public static void a(int param0) {

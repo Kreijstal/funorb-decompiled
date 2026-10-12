@@ -9,7 +9,7 @@ abstract class vt extends IntrusiveNode {
 
     final static boolean a(int param0, int param1, int param2, byte param3) {
         if (NodeIterator.field_a) {
-          return BestScoreStrategy.field_i.a(rs.field_q, ui.field_i, 80);
+          return BestScoreStrategy.field_i.a(rs.field_q, DualNodeDeque.field_i, 80);
         }
         if (iu.field_h) {
           return cd.a(param2, param0, false);

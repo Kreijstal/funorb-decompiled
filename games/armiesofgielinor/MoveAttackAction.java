@@ -43,7 +43,7 @@ final class MoveAttackAction extends PreparedAction {
         var10 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           jm.field_g = true;
-          ui.field_f = param0;
+          DualNodeDeque.field_f = param0;
           var11 = param1;
           if (!param4) {
             stackIn_4_0 = tg.field_j;
@@ -51,7 +51,7 @@ final class MoveAttackAction extends PreparedAction {
             stackIn_4_0 = tl.field_h;
           }
           var6 = stackIn_4_0;
-          if (ui.field_f == 0) {
+          if (DualNodeDeque.field_f == 0) {
             var7 = iu.a(480, var11, param3 ^ 7444, AiPlanner.field_G, fs.field_c);
             var8 = 3 + var7;
             cj.field_k = new int[var8];
@@ -71,7 +71,7 @@ final class MoveAttackAction extends PreparedAction {
             cj.field_k[var8 - 1] = 1;
             SpellMenuGroup.field_m[1] = 2;
           } else {
-            if (ui.field_f != 1) {
+            if (DualNodeDeque.field_f != 1) {
               throw new IllegalArgumentException();
             }
             var7 = iu.a(480, var11, param3 + 7412, AiPlanner.field_G, fs.field_c);
@@ -105,24 +105,24 @@ final class MoveAttackAction extends PreparedAction {
           }
           bm.field_h = var7Lifetime1 + bt.field_g - (var7Lifetime1 >> 1);
           co.field_f = bt.field_g - (var7Lifetime1 >> 1);
-          ms.field_r = (ar.field_w + rd.field_b << 1) * MovementPlanner.field_z.itemCount;
+          DualLinkedNode.field_r = (ar.field_w + rd.field_b << 1) * MovementPlanner.field_z.itemCount;
           var8Lifetime2 = 0;
           while (nb.field_h.length > var8Lifetime2) {
-            stackIn_38_0 = ms.field_r;
+            stackIn_38_0 = DualLinkedNode.field_r;
             stackIn_38_1 = ~cj.field_k[var8Lifetime2];
             if (stackIn_38_1 <= -1) {
               stackIn_41_1 = jg.field_k;
             } else {
               stackIn_41_1 = cn.field_o;
             }
-            ms.field_r = stackIn_38_0 + stackIn_41_1;
+            DualLinkedNode.field_r = stackIn_38_0 + stackIn_41_1;
             var8Lifetime2++;
           }
           if (param3 != 90) {
             field_x = (int[]) null;
           }
-          InstructionsPanel.field_r = -(ms.field_r >> 1) + lm.field_g;
-          MovementPlanner.field_z.restoreSelection(0, param2, vo.a((byte) -73, ko.field_b, AiPlanningStrategy.field_d), 0);
+          InstructionsPanel.field_r = -(DualLinkedNode.field_r >> 1) + lm.field_g;
+          MovementPlanner.field_z.restoreSelection(0, param2, DiskCacheWorker.a((byte) -73, ko.field_b, AiPlanningStrategy.field_d), 0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

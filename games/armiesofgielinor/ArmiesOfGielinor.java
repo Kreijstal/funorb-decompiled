@@ -244,8 +244,8 @@ public final class ArmiesOfGielinor extends wf {
                     if (null != rd.field_j) {
                       NodeHashTable.a(-1, rd.field_j.battlefield.a(((mo) (var2)).field_q, (byte) -64));
                     }
-                    if (bc.field_a != null) {
-                      NodeHashTable.a(-1, bc.field_a.battlefield.a(((mo) (var2)).field_q, (byte) -64));
+                    if (SectorCacheStore.field_a != null) {
+                      NodeHashTable.a(-1, SectorCacheStore.field_a.battlefield.a(((mo) (var2)).field_q, (byte) -64));
                     }
                   }
                   MapLayout.a((mo) (var2), -1);
@@ -350,7 +350,7 @@ public final class ArmiesOfGielinor extends wf {
                   }
                   var10 = new GameplayController(stackIn_194_2, stackIn_194_3, stackIn_194_4, stackIn_194_5, stackIn_194_6 != 0, stackIn_194_7, stackIn_194_8, stackIn_194_9, stackIn_194_10, stackIn_194_11 != 0, stackIn_194_12, stackIn_194_13, stackIn_195_14, (CampaignMission) null);
                   if (nm.field_o != 64) {
-                    bc.field_a = var10;
+                    SectorCacheStore.field_a = var10;
                     gk.field_H = true;
                   } else {
                     fj.field_c = true;
@@ -387,7 +387,7 @@ public final class ArmiesOfGielinor extends wf {
                 var2 = null;
                 if (!fj.field_c) {
                   if (gk.field_H) {
-                    var2 = bc.field_a;
+                    var2 = SectorCacheStore.field_a;
                   }
                 } else {
                   var2 = rd.field_j;
@@ -807,7 +807,7 @@ public final class ArmiesOfGielinor extends wf {
               }
               wt.a(73, var3_int != 0);
               if (gk.field_H) {
-                bc.field_a.a(109, var4 != 0);
+                SectorCacheStore.field_a.a(109, var4 != 0);
               }
               if (fj.field_c) {
                 PaletteRegionMap.a(320, 180, var4 != 0, 0);
@@ -843,7 +843,7 @@ public final class ArmiesOfGielinor extends wf {
                   }
                 }
                 if (gk.field_H) {
-                  bc.field_a.g(false);
+                  SectorCacheStore.field_a.g(false);
                 }
                 if (!fj.field_c) {
                   continue;
@@ -1029,13 +1029,13 @@ public final class ArmiesOfGielinor extends wf {
             return;
           }
           stackIn_21_0 = ((rd.field_j != null ||
-            null != bc.field_a) &&
+            null != SectorCacheStore.field_a) &&
             jt.field_a == 7);
           io.field_w = stackIn_21_0;
           if (param0 > ~AiPlanningStrategy.field_d &&
             -1 < ko.field_b) {
           }
-          ei.a(jt.field_a, true, io.field_w, false);
+          BoundedFile.a(jt.field_a, true, io.field_w, false);
           if (null != mu.field_a) {
             mu.field_a.a(param0 ^ 8, qc.field_j);
             qc.field_j = qc.field_j + 1;
@@ -1049,7 +1049,7 @@ public final class ArmiesOfGielinor extends wf {
           }
           var3 = rd.field_j;
           if (gk.field_H) {
-            var3 = bc.field_a;
+            var3 = SectorCacheStore.field_a;
           }
           if (var3 != null &&
             null == var3.movementPlanner) {
@@ -1189,9 +1189,9 @@ public final class ArmiesOfGielinor extends wf {
           CampaignMission.f(0);
           ij.c(param0 ^ 3);
           bp.c((byte) 35);
-          vo.a(true);
+          DiskCacheWorker.a(true);
           dd.b(-56);
-          ue.b((byte) 78);
+          BufferedFile.b((byte) 78);
           hi.b((byte) 99);
           Unit.q(-9480);
           Battlefield.c(-1);
@@ -1286,7 +1286,7 @@ public final class ArmiesOfGielinor extends wf {
           CombatPresentation.c(-128);
           AnimationPlayer.b(-106);
           ModelMesh.c();
-          ms.f(param0 ^ 71);
+          DualLinkedNode.f(param0 ^ 71);
           ac.a((byte) 71);
           PopupPresentation.d((byte) 109);
           po.a(true);
@@ -1318,7 +1318,7 @@ public final class ArmiesOfGielinor extends wf {
           h.a(-25764);
           af.b((byte) -120);
           uh.a(param0 + 20115);
-          ui.d(125);
+          DualNodeDeque.d(125);
           dv.c((byte) -109);
           rq.a(-22823);
           cp.a(false);
@@ -1367,7 +1367,7 @@ public final class ArmiesOfGielinor extends wf {
           pb.a();
           nk.b((byte) 75);
           dc.a(540);
-          ei.a(-98);
+          BoundedFile.a(-98);
           tk.a((byte) -100);
           ao.b((byte) -120);
           or.a(false);
@@ -1408,11 +1408,11 @@ public final class ArmiesOfGielinor extends wf {
           TeleportAction.a(false);
           ae.e(param0 - 4024);
           jf.h(param0 ^ 29322);
-          bc.b(1);
-          nh.h(param0 ^ -61);
+          SectorCacheStore.b(1);
+          DiskCacheRequest.h(param0 ^ -61);
           bm.e(param0 - 56);
           ek.a(236611664);
-          ks.e((byte) -126);
+          ResourceRequest.e((byte) -126);
           is.a((byte) -5);
           qs.b();
           bq.a(30156);
@@ -1819,7 +1819,7 @@ public final class ArmiesOfGielinor extends wf {
               var4_ref_String = mv.field_d;
               var3 = new String[2];
               if (var4_ref_String == null) {
-                var4_ref_String = ei.field_i;
+                var4_ref_String = BoundedFile.field_i;
               }
               var3[1] = vs.field_b;
               var3[0] = var4_ref_String;
@@ -1932,12 +1932,12 @@ public final class ArmiesOfGielinor extends wf {
               gg.field_K.a(28979, "basic")) {
               if (gg.field_K.a((byte) 82) &&
                 gg.field_K.a(28979, var4)) {
-                if (ks.field_A.a((byte) 82) &&
-                  ks.field_A.a(28979, var4)) {
+                if (ResourceRequest.field_A.a((byte) 82) &&
+                  ResourceRequest.field_A.a(28979, var4)) {
                   if (gg.field_K.a((byte) 82) &&
                     gg.field_K.a(28979, "lobby")) {
-                    if (ks.field_A.a((byte) 82) &&
-                      ks.field_A.a(28979, "lobby")) {
+                    if (ResourceRequest.field_A.a((byte) 82) &&
+                      ResourceRequest.field_A.a(28979, "lobby")) {
                       if (br.field_d.a((byte) 82) &&
                         br.field_d.d(-27927)) {
                         if (uf.field_f.a((byte) 82) &&
@@ -2057,13 +2057,13 @@ public final class ArmiesOfGielinor extends wf {
                       bn.a((byte) -24, 23.0f, vl.a(br.field_d, 0, ds.field_b, "", bp.field_k));
                       return false;
                     }
-                    bn.a((byte) -24, 21.0f, vl.a(ks.field_A, 0, rf.field_a, "lobby", is.field_f));
+                    bn.a((byte) -24, 21.0f, vl.a(ResourceRequest.field_A, 0, rf.field_a, "lobby", is.field_f));
                     return false;
                   }
                   bn.a((byte) -24, 18.0f, vl.a(gg.field_K, 0, Battlefield.field_nb, "lobby", TileMetadata.field_i));
                   return false;
                 }
-                bn.a((byte) -24, 16.0f, vl.a(ks.field_A, 0, rf.field_a, var4, is.field_f));
+                bn.a((byte) -24, 16.0f, vl.a(ResourceRequest.field_A, 0, rf.field_a, var4, is.field_f));
                 return false;
               }
               bn.a((byte) -24, 13.0f, vl.a(gg.field_K, 0, Battlefield.field_nb, var4, TileMetadata.field_i));
@@ -2168,9 +2168,9 @@ public final class ArmiesOfGielinor extends wf {
             wl.a(0);
             return true;
           }
-          bn.a((byte) -24, 90.0f, bc.field_i);
+          bn.a((byte) -24, 90.0f, SectorCacheStore.field_i);
           this.a(0);
-          rs.field_n = gs.a(var4, gg.field_K, ks.field_A, (byte) -53, "");
+          rs.field_n = gs.a(var4, gg.field_K, ResourceRequest.field_A, (byte) -53, "");
           en.field_E = gs.a("basic", iw.field_l, sh.field_j, (byte) -53, "smallfont");
           TrianglePulse.field_i = it.a("introfont", iw.field_l, sh.field_j, (byte) -87, "basic");
           nr.field_e = TurnEffectEvent.a("runewarsfont", sh.field_j, iw.field_l, "basic", -2088);
@@ -2185,26 +2185,26 @@ public final class ArmiesOfGielinor extends wf {
           MapLayout.a("armouricons", -28106, "basic", iw.field_l);
           lb.field_e = MapLayout.a("special_icons", -28106, "basic", iw.field_l);
           TrianglePulse.field_d = GameplayController.a("godspark", (byte) 51, "basic", iw.field_l);
-          gh.field_M = nh.a("mapbutton", "basic", iw.field_l, false);
-          nh.a("endturnbutton", "basic", iw.field_l, false);
-          ul.field_g = nh.a("buttonring", "basic", iw.field_l, false);
+          gh.field_M = DiskCacheRequest.a("mapbutton", "basic", iw.field_l, false);
+          DiskCacheRequest.a("endturnbutton", "basic", iw.field_l, false);
+          ul.field_g = DiskCacheRequest.a("buttonring", "basic", iw.field_l, false);
           e.field_b = ac.a(iw.field_l, "lozenge", (byte) -4, "basic");
           bu.field_c = fk.a("endturnlozenge", (byte) -127, iw.field_l, "basic");
           jh.field_l = ac.a(iw.field_l, "summonframe", (byte) -4, "basic");
-          EventPresenter.field_t = nh.a("bubblepoint", "basic", iw.field_l, false);
+          EventPresenter.field_t = DiskCacheRequest.a("bubblepoint", "basic", iw.field_l, false);
           ii.field_a = ac.a(iw.field_l, "actionbuttons", (byte) -4, "basic");
           od.field_a = ac.a(iw.field_l, "info_icons", (byte) -4, "basic");
           ro.field_rb = MapLayout.a("trait_icons", -28106, "basic", iw.field_l);
           lp.field_b = MapLayout.a("terrain_icons", -28106, "basic", iw.field_l);
           sg.field_b = MapLayout.a("compare_icons", -28106, "basic", iw.field_l);
-          CampaignRewardPreview.field_e = nh.a("mapf", "basic", iw.field_l, false);
-          io.field_z = nh.a("mapi", "basic", iw.field_l, false);
+          CampaignRewardPreview.field_e = DiskCacheRequest.a("mapf", "basic", iw.field_l, false);
+          io.field_z = DiskCacheRequest.a("mapi", "basic", iw.field_l, false);
           ig.field_t = pv.a("basic", "turn", iw.field_l, 24914);
           AttackEvent.field_y = fk.a("mapsquares", (byte) -127, iw.field_l, "basic");
           SkeletonLimitMarker.field_s = fk.a("isomapsquares", (byte) -127, iw.field_l, "basic");
           SpellMenuGroup.field_h = fk.a("maprotbutton", (byte) -128, iw.field_l, "basic");
           TeleportAction.field_w = fk.a("placeicons", (byte) -124, iw.field_l, "basic");
-          mp.field_Jb = nh.a("slider", "basic", iw.field_l, false);
+          mp.field_Jb = DiskCacheRequest.a("slider", "basic", iw.field_l, false);
           MoveEvent.field_z = GameplayController.a("bcarrow", (byte) 51, "basic", iw.field_l);
           BestScoreStrategy.field_m = GameplayController.a("goldiv", (byte) 51, "basic", iw.field_l);
           wc.field_Q = fk.a("silverbar", (byte) -125, iw.field_l, "basic");
@@ -2214,24 +2214,24 @@ public final class ArmiesOfGielinor extends wf {
           UpkeepEvent.a(iw.field_l, 116);
           hs.field_F = fk.a("fireball", (byte) -128, iw.field_l, "basic");
           MatchConditionRegistry.field_d = fk.a("fortcontrols", (byte) -124, iw.field_l, "basic");
-          lw.field_ob = nh.a("smallorb", "basic", iw.field_l, false);
-          wc.field_J = nh.a("bigorb", "basic", iw.field_l, false);
-          pg.field_c = nh.a("bigorbring", "basic", iw.field_l, false);
+          lw.field_ob = DiskCacheRequest.a("smallorb", "basic", iw.field_l, false);
+          wc.field_J = DiskCacheRequest.a("bigorb", "basic", iw.field_l, false);
+          pg.field_c = DiskCacheRequest.a("bigorbring", "basic", iw.field_l, false);
           UnitModelPreview.field_d = ac.a(iw.field_l, "godorbs", (byte) -4, "basic");
           gt.field_c = ac.a(iw.field_l, "godframes", (byte) -4, "basic");
           ce.field_F = ac.a(iw.field_l, "godglows", (byte) -4, "basic");
-          ue.field_k = ac.a(iw.field_l, "godframeglows", (byte) -4, "basic");
+          BufferedFile.field_k = ac.a(iw.field_l, "godframeglows", (byte) -4, "basic");
           tn.a((byte) 80, UnitModelPreview.field_d);
           hf.a(128, ce.field_F, 0);
           TeamRoster.field_e = new RgbSprite(71, 71);
           fn.a(8678, 256, 15, TeamRoster.field_e);
           tn.a((byte) 105, ce.field_F);
-          tn.a((byte) 124, ue.field_k);
-          ol.field_y = nh.a("logo", "basic", iw.field_l, false);
+          tn.a((byte) 124, BufferedFile.field_k);
+          ol.field_y = DiskCacheRequest.a("logo", "basic", iw.field_l, false);
           km.field_h = ac.a(iw.field_l, "summonrings", (byte) -4, "basic");
           jv.field_b = fk.a("chatbubbles", (byte) -128, iw.field_l, "basic");
           AttackEvent.field_O = GameplayController.a("results_award_badge", (byte) 51, "basic", iw.field_l);
-          ih.field_H = (nj) (nh.a("shine", "basic", iw.field_l, false));
+          ih.field_H = (nj) (DiskCacheRequest.a("shine", "basic", iw.field_l, false));
           CampaignDefinition.field_t = pv.a("basic", "statboxbg", iw.field_l, 24914);
           qt.field_e = pv.a("basic", "popupbg", iw.field_l, 24914);
           vq.field_b = pv.a("basic", "gameinfobg", iw.field_l, 24914);
@@ -2243,7 +2243,7 @@ public final class ArmiesOfGielinor extends wf {
           rq.field_k = fk.a("results_mini_button_silver", (byte) -124, iw.field_l, "basic");
           IsaacRandom.field_a = fk.a("results_mini_button_gold", (byte) -127, iw.field_l, "basic");
           BattleCharacter.field_h = ac.a(iw.field_l, "trinketicons", (byte) -4, "basic");
-          AttackEvent.field_E = nh.a("eye", "basic", iw.field_l, false);
+          AttackEvent.field_E = DiskCacheRequest.a("eye", "basic", iw.field_l, false);
           cu.field_d = ac.a(iw.field_l, "trinketbuttons", (byte) -4, "basic");
           mo.field_s = GameplayController.a("wait_icon", (byte) 51, "basic", iw.field_l);
           mo.field_s.a();
@@ -2286,9 +2286,9 @@ public final class ArmiesOfGielinor extends wf {
           pi.field_T = GameplayController.a("isocrosshair", (byte) 51, "basic", iw.field_l);
           ng.a(GameplayController.a("glowray", (byte) 51, "basic", iw.field_l), 0, GameplayController.a("glowspark", (byte) 51, "basic", iw.field_l));
           MoveAttackRequest.field_C = fk.a("medals", (byte) -127, iw.field_l, "campaign");
-          ps.field_w[0] = nh.a("campaign_1_glow", "campaign", iw.field_l, false);
-          ps.field_w[1] = nh.a("campaign_2_glow", "campaign", iw.field_l, false);
-          ps.field_w[2] = nh.a("campaign_3_glow", "campaign", iw.field_l, false);
+          ps.field_w[0] = DiskCacheRequest.a("campaign_1_glow", "campaign", iw.field_l, false);
+          ps.field_w[1] = DiskCacheRequest.a("campaign_2_glow", "campaign", iw.field_l, false);
+          ps.field_w[2] = DiskCacheRequest.a("campaign_3_glow", "campaign", iw.field_l, false);
           qu.field_k = MapLayout.a("achievements_large", -28106, "basic", iw.field_l);
           MoveAttackRequest.field_A = GameplayController.a("unachieved", (byte) 51, "basic", gg.field_K);
           DeathEvent.field_A = GameplayController.a("locked", (byte) 51, "basic", gg.field_K);
@@ -2312,12 +2312,12 @@ public final class ArmiesOfGielinor extends wf {
           } while (var18 == 0);
           if (!ta.field_L) {
             dh.field_k = GameplayController.a("lobby_game_logo", (byte) 51, "basic", iw.field_l);
-            ar.a(var16, bs.field_b, (byte) 53, MoveAttackRequest.field_B, 4, gg.field_K, ks.field_A, CipherPacketBuffer.field_A, pf.field_a, new int[]{10, 10, 10, 10, 10, 10, 10, 10, 10, 10}, true, pf.field_a.length, ku.field_L, km.field_c, CorpseConditionMarker.field_w, ki.field_d, var16);
+            ar.a(var16, bs.field_b, (byte) 53, MoveAttackRequest.field_B, 4, gg.field_K, ResourceRequest.field_A, CipherPacketBuffer.field_A, pf.field_a, new int[]{10, 10, 10, 10, 10, 10, 10, 10, 10, 10}, true, pf.field_a.length, ku.field_L, km.field_c, CorpseConditionMarker.field_w, ki.field_d, var16);
             la.b((byte) 30, 200);
-            ps.a(124, ks.field_A, gg.field_K);
+            ps.a(124, ResourceRequest.field_A, gg.field_K);
           }
           sh.field_j = null;
-          ks.field_A = null;
+          ResourceRequest.field_A = null;
           wl.a(0);
           fe.field_o = new int[7][64];
           var17 = 0;

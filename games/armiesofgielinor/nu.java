@@ -69,7 +69,7 @@ final class nu extends lk {
           campaign.participants = new CampaignParticipant[participantCount];
           for (participantIndexThenOverrideCount = 0; participantCount > participantIndexThenOverrideCount; participantIndexThenOverrideCount++) {
             try {
-              decodedParticipant = ks.readCampaignParticipant(900, campaign, packet);
+              decodedParticipant = ResourceRequest.readCampaignParticipant(900, campaign, packet);
               campaign.participants[decodedParticipant.participantId] = decodedParticipant;
             } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
               decompiledCaughtException = decompiledCaughtParameter1;

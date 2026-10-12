@@ -180,13 +180,13 @@ abstract class bi {
         if (0 > param5) {
           return;
         }
-        if (ks.field_y <= param4) {
+        if (ResourceRequest.field_y <= param4) {
           return;
         }
         if (!(ef.field_c > param5)) {
           return;
         }
-        int var6 = param4 + param5 * ks.field_y;
+        int var6 = param4 + param5 * ResourceRequest.field_y;
         int var7 = RegionAnchor.a(16711680, param5, var6, param4);
         int var8 = 255 - (var7 >>> 24 & 220487423);
         var7 = var7 & 16777215;

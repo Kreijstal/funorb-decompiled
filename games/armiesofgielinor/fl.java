@@ -250,9 +250,9 @@ final class fl {
           this.field_v = 15658734;
           this.field_r = 3;
           var4.field_o = 15658734;
-          var4.a(0, (byte) -102).a(15658734, (byte) -108).a(ue.a(10066329, 8947848, 1, 7829367), 53);
-          var4.a(1, (byte) -119).a(ue.a(10066329, 11184810, 1, 13421772), 31);
-          var4.a(3, (byte) -128).a(ue.a(7829367, 8947848, 1, 10066329), -128).a(1, 1).a((byte) 81, 1);
+          var4.a(0, (byte) -102).a(15658734, (byte) -108).a(BufferedFile.a(10066329, 8947848, 1, 7829367), 53);
+          var4.a(1, (byte) -119).a(BufferedFile.a(10066329, 11184810, 1, 13421772), 31);
+          var4.a(3, (byte) -128).a(BufferedFile.a(7829367, 8947848, 1, 10066329), -128).a(1, 1).a((byte) 81, 1);
           var5 = new RgbSprite[9];
           var16 = new nj(32, 32);
           var18 = var16;
@@ -274,7 +274,7 @@ final class fl {
           discarded$1 = new kp(param1, 16777215, -1, 125269879, 4473924, 3, 268435455);
           var8 = new ao();
           var17.a(var8, param0 ^ 13413726);
-          var8.a(0, (byte) -128).a(ue.a(7829367, 15658734, param0 ^ 13421773, 10066329), 36).a(1118481, (byte) 27).b(-1, param0 ^ 13421751);
+          var8.a(0, (byte) -128).a(BufferedFile.a(7829367, 15658734, param0 ^ 13421773, 10066329), 36).a(1118481, (byte) 27).b(-1, param0 ^ 13421751);
           var8.a(4, (byte) -108).a(true, (byte) 104).a(var5, -126);
           this.field_w = (kh) ((Object) var8);
           var9 = new RgbSprite[9];

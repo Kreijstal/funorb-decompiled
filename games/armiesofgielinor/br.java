@@ -74,7 +74,7 @@ final class br {
     }
 
     final static void a(byte param0) {
-        vo.a(-10232);
+        DiskCacheWorker.a(-10232);
         ContextualRuntimeException.b(-6145);
         if (param0 != -97) {
           field_e = (je) null;

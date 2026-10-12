@@ -60,7 +60,7 @@ final class it {
           if (param3 != -87) {
             field_a = (RgbSprite) null;
           }
-          stackIn_3_0 = ue.a(param1, var5_int, param2, (byte) -118, var6);
+          stackIn_3_0 = BufferedFile.a(param1, var5_int, param2, (byte) -118, var6);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

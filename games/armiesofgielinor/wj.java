@@ -71,8 +71,8 @@ final class wj extends IntrusiveNode {
           Throwable decompiledCaughtException = null;
           if (null != le.field_d) {
             try {
-              le.field_d.a(-1, 0L);
-              le.field_d.a(24, mg.field_e.position, (byte) 46, mg.field_e.payload);
+              le.field_d.seek(-1, 0L);
+              le.field_d.write(24, mg.field_e.position, (byte) 46, mg.field_e.payload);
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var1 = (Exception) (Object) decompiledCaughtException;

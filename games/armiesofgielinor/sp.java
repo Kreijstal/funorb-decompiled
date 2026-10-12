@@ -5,11 +5,11 @@ import java.util.*;
 
 final class sp implements Iterator {
     static String field_d;
-    private ms field_a;
+    private DualLinkedNode field_a;
     private wg field_c;
     static String field_g;
     static int field_b;
-    private ms field_f;
+    private DualLinkedNode field_f;
     static double field_e;
 
     final static java.awt.Container a(int param0) {
@@ -65,7 +65,7 @@ final class sp implements Iterator {
         if (null == this.field_a) {
           throw new IllegalStateException();
         }
-        this.field_a.c((byte) -76);
+        this.field_a.unlinkSecondary((byte) -76);
         this.field_a = null;
     }
 
@@ -94,12 +94,12 @@ final class sp implements Iterator {
     public final Object next() {
         Object var1 = this.field_f;
         if (this.field_c.field_f != var1) {
-          this.field_f = ((ms) (var1)).field_s;
+          this.field_f = ((DualLinkedNode) (var1)).secondaryNext;
         } else {
           var1 = null;
           this.field_f = null;
         }
-        this.field_a = (ms) (var1);
+        this.field_a = (DualLinkedNode) (var1);
         return var1;
     }
 
@@ -108,7 +108,7 @@ final class sp implements Iterator {
         try {
           this.field_c = param0;
           this.field_a = null;
-          this.field_f = this.field_c.field_f.field_s;
+          this.field_f = this.field_c.field_f.secondaryNext;
         } catch (RuntimeException runtimeException) {
           throw ig.addExceptionContext((Throwable) ((Object) runtimeException), "sp.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }

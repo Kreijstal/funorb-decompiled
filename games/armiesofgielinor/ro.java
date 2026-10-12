@@ -234,7 +234,7 @@ class ro extends pt implements he {
           PortalLossCondition.a(' ', -1 + UpkeepEvent.field_C.length(), UpkeepEvent.field_C, true);
           return true;
         }
-        var4 = ui.field_i;
+        var4 = DualNodeDeque.field_i;
         if (!uu.a(true, (char) var4)) {
           if (param1 == -59) {
           }

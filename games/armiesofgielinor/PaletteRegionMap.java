@@ -81,8 +81,8 @@ final class PaletteRegionMap {
             var2 = var7;
             if (le.field_d != null) {
               try {
-                le.field_d.a(-1, 0L);
-                le.field_d.a(0, var7);
+                le.field_d.seek(-1, 0L);
+                le.field_d.readArray(0, var7);
                 for (var3_int = 0; var3_int < 24; var3_int++) {
                   if (var2[var3_int] == 0) {
                     continue;
@@ -251,7 +251,7 @@ final class PaletteRegionMap {
         if (param3 != 0) {
           PaletteRegionMap.b(-81);
         }
-        vo.a(mi.field_l, 2, jn.field_d, param0, gl.field_c, param1, param2);
+        DiskCacheWorker.a(mi.field_l, 2, jn.field_d, param0, gl.field_c, param1, param2);
     }
 
     PaletteRegionMap(IndexedSprite sourceImage, int ignoredColour, int anchorColour) {

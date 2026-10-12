@@ -5,7 +5,7 @@ final class ou {
     static int field_c;
     static String field_f;
     static char[] field_a;
-    static vo field_h;
+    static DiskCacheWorker field_h;
     private NodeDeque[][] field_i;
     private MapLayout[] field_b;
     static String field_g;
@@ -639,7 +639,7 @@ final class ou {
           }
           var3 = lp.field_a[param1];
           if (param0) {
-            field_h = (vo) null;
+            field_h = (DiskCacheWorker) null;
           }
           var4 = 0;
           while (var4 < var3.length) {

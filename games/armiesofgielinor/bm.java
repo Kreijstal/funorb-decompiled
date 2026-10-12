@@ -6,7 +6,7 @@ final class bm extends ew {
     private int field_j;
     static String field_z;
     static int field_p;
-    private bc field_w;
+    private SectorCacheStore field_w;
     private NodeHashTable field_t;
     private int field_B;
     private byte[] field_C;
@@ -15,11 +15,11 @@ final class bm extends ew {
     static String field_k;
     static int field_h;
     static int[][] field_y;
-    private bc field_f;
+    private SectorCacheStore field_f;
     private byte[] field_g;
     private jm field_q;
-    private ks field_n;
-    private vo field_A;
+    private ResourceRequest field_n;
+    private DiskCacheWorker field_A;
     private int field_s;
     private NodeDeque field_i;
     private boolean field_o;
@@ -29,14 +29,14 @@ final class bm extends ew {
     private long field_v;
 
     final void b(int param0) {
-        ks discarded$3 = null;
-        ks discarded$2 = null;
-        ks discarded$1 = null;
-        ks discarded$0 = null;
+        ResourceRequest discarded$3 = null;
+        ResourceRequest discarded$2 = null;
+        ResourceRequest discarded$1 = null;
+        ResourceRequest discarded$0 = null;
         RuntimeException decompiledCaughtException = null;
         Object var2 = null;
         int var2_int = 0;
-        ks var2_ref = null;
+        ResourceRequest var2_ref = null;
         RuntimeException var2_ref2 = null;
         IntrusiveNode var3 = null;
         int var4 = 0;
@@ -77,7 +77,7 @@ final class bm extends ew {
                   this.field_s = this.field_s + 1;
                   continue;
                 }
-                if (250 > this.field_A.field_b) {
+                if (250 > this.field_A.queuedCount) {
                   if (this.field_C[this.field_s] == 0) {
                     discarded$2 = this.a(1, this.field_s, 1);
                   }
@@ -152,11 +152,11 @@ final class bm extends ew {
             if (this.field_v > vi.b(param0 + 26060)) {
               return;
             }
-            var2_ref = (ks) (this.field_t.first(1));
+            var2_ref = (ResourceRequest) (this.field_t.first(1));
             while (var2_ref != null) {
-              if (!var2_ref.field_x) {
+              if (!var2_ref.pending) {
                 if (var2_ref.field_w) {
-                  if (!var2_ref.field_z) {
+                  if (!var2_ref.requestFlag) {
                     throw new RuntimeException();
                   }
                   var2_ref.unlink(-128);
@@ -164,7 +164,7 @@ final class bm extends ew {
                   var2_ref.field_w = true;
                 }
               }
-              var2_ref = (ks) (this.field_t.next((byte) 127));
+              var2_ref = (ResourceRequest) (this.field_t.next((byte) 127));
             }
             this.field_v = 1000L + vi.b(65);
           }
@@ -201,16 +201,16 @@ final class bm extends ew {
               stackIn_9_0 = null;
               return (jm) (stackIn_9_0);
             }
-            this.field_n = (ks) ((Object) this.field_x.a(this.field_r, false, 255, (byte) 0, true));
+            this.field_n = (ResourceRequest) ((Object) this.field_x.a(this.field_r, false, 255, (byte) 0, true));
           }
-          if (this.field_n.field_x) {
+          if (this.field_n.pending) {
             return null;
           }
-          var7 = this.field_n.d((byte) -119);
+          var7 = this.field_n.getBytes((byte) -119);
           var6 = var7;
           var5 = var6;
           var2 = var5;
-          if (!(this.field_n instanceof nh)) {
+          if (!(this.field_n instanceof DiskCacheRequest)) {
             try {
               if (var5 == null) {
                 throw new RuntimeException();
@@ -224,13 +224,13 @@ final class bm extends ew {
               if (this.field_x.d(param0 - 20152)) {
                 this.field_n = null;
               } else {
-                this.field_n = (ks) ((Object) this.field_x.a(this.field_r, false, 255, (byte) 0, true));
+                this.field_n = (ResourceRequest) ((Object) this.field_x.a(this.field_r, false, 255, (byte) 0, true));
               }
               stackIn_41_0 = null;
               return (jm) (stackIn_41_0);
             }
             if (null != this.field_f) {
-              this.field_A.a(this.field_r, this.field_f, false, var7);
+              this.field_A.queueWrite(this.field_r, this.field_f, false, var7);
             }
           } else {
             try {
@@ -246,7 +246,7 @@ final class bm extends ew {
               var3 = decompiledCaughtException;
               this.field_q = null;
               if (!this.field_x.d(92)) {
-                this.field_n = (ks) ((Object) this.field_x.a(this.field_r, false, 255, (byte) 0, true));
+                this.field_n = (ResourceRequest) ((Object) this.field_x.a(this.field_r, false, 255, (byte) 0, true));
               } else {
                 this.field_n = null;
               }
@@ -270,8 +270,8 @@ final class bm extends ew {
         }
     }
 
-    private final ks a(int param0, int param1, int param2) {
-        ks stackIn_3_0 = null;
+    private final ResourceRequest a(int param0, int param1, int param2) {
+        ResourceRequest stackIn_3_0 = null;
         Object stackIn_76_0 = null;
         Object stackIn_84_0 = null;
         Object stackIn_112_0 = null;
@@ -286,7 +286,7 @@ final class bm extends ew {
         int var9 = 0;
         int var10 = 0;
         int var11 = 0;
-        ks var12 = null;
+        ResourceRequest var12 = null;
         byte[] var13 = null;
         byte[] var18 = null;
         byte[] var27 = null;
@@ -296,15 +296,15 @@ final class bm extends ew {
         var10 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           if (param0 != 1) {
-            stackIn_3_0 = (ks) null;
+            stackIn_3_0 = (ResourceRequest) null;
             return stackIn_3_0;
           }
-          var12 = (ks) (this.field_t.get(-67, (long)param1));
+          var12 = (ResourceRequest) (this.field_t.get(-67, (long)param1));
           var4 = var12;
           if (var12 != null &&
             0 == param2 &&
-            !var12.field_z &&
-            var12.field_x) {
+            !var12.requestFlag &&
+            var12.pending) {
             var12.unlink(35);
             var4 = null;
           }
@@ -312,7 +312,7 @@ final class bm extends ew {
             if (param2 == 0) {
               if (null != this.field_w &&
                 this.field_C[param1] != -1) {
-                var4 = this.field_A.a(param1, this.field_w, 86);
+                var4 = this.field_A.readNow(param1, this.field_w, 86);
               } else {
                 if (this.field_x.d(64)) {
                   return null;
@@ -338,18 +338,18 @@ final class bm extends ew {
                 if (this.field_w == null) {
                   throw new RuntimeException();
                 }
-                var4 = this.field_A.a((byte) 56, param1, this.field_w);
+                var4 = this.field_A.queueRead((byte) 56, param1, this.field_w);
               }
             }
             this.field_t.put((IntrusiveNode) (var4), (long)param1, 108);
           }
-          if (((ks) (var4)).field_x) {
+          if (((ResourceRequest) (var4)).pending) {
             return null;
           }
-          var18 = ((ks) (var4)).d((byte) -86);
+          var18 = ((ResourceRequest) (var4)).getBytes((byte) -86);
           var13 = var18;
           var5 = var13;
-          if (var4 instanceof nh) {
+          if (var4 instanceof DiskCacheRequest) {
             try {
               if (var5 != null &&
                 var18.length > 2) {
@@ -378,19 +378,19 @@ final class bm extends ew {
                   }
                   this.field_C[param1] = (byte) 1;
                 }
-                if (!((ks) (var4)).field_z) {
-                  ((ks) (var4)).unlink(param0 ^ -99);
+                if (!((ResourceRequest) (var4)).requestFlag) {
+                  ((ResourceRequest) (var4)).unlink(param0 ^ -99);
                 }
                 stackIn_76_0 = var4;
-                return (ks) (stackIn_76_0);
+                return (ResourceRequest) (stackIn_76_0);
               }
               throw new RuntimeException();
             } catch (java.lang.Exception decompiledCaughtParameter1) {
               decompiledCaughtException = decompiledCaughtParameter1;
               var6_ref = (Exception) (Object) decompiledCaughtException;
               this.field_C[param1] = (byte)-1;
-              ((ks) (var4)).unlink(116);
-              if (((ks) (var4)).field_z) {
+              ((ResourceRequest) (var4)).unlink(116);
+              if (((ResourceRequest) (var4)).requestFlag) {
                 if (this.field_x.d(18)) {
                   return null;
                 }
@@ -398,7 +398,7 @@ final class bm extends ew {
                 this.field_t.put((IntrusiveNode) (var4), (long)param1, 98);
               }
               stackIn_84_0 = null;
-              return (ks) (stackIn_84_0);
+              return (ResourceRequest) (stackIn_84_0);
             }
           }
           try {
@@ -432,28 +432,28 @@ final class bm extends ew {
             decompiledCaughtException = decompiledCaughtParameter0;
             var6 = (RuntimeException) (Object) decompiledCaughtException;
             this.field_x.b((byte) 4);
-            ((ks) (var4)).unlink(-109);
-            if (((ks) (var4)).field_z &&
+            ((ResourceRequest) (var4)).unlink(-109);
+            if (((ResourceRequest) (var4)).requestFlag &&
               !this.field_x.d(59)) {
               var4 = this.field_x.a(param1, false, this.field_r, (byte) 2, true);
               this.field_t.put((IntrusiveNode) (var4), (long)param1, 120);
             }
             stackIn_112_0 = null;
-            return (ks) (stackIn_112_0);
+            return (ResourceRequest) (stackIn_112_0);
           }
           var5[-2 + var18.length] = (byte)(this.field_q.field_t[param1] >>> 8);
           var5[-1 + var18.length] = (byte)this.field_q.field_t[param1];
           if (null != this.field_w) {
-            this.field_A.a(param1, this.field_w, false, var18);
+            this.field_A.queueWrite(param1, this.field_w, false, var18);
             if (this.field_C[param1] != 1) {
               this.field_C[param1] = (byte) 1;
             }
           }
-          if (!((ks) (var4)).field_z) {
-            ((ks) (var4)).unlink(105);
+          if (!((ResourceRequest) (var4)).requestFlag) {
+            ((ResourceRequest) (var4)).unlink(105);
           }
           stackIn_120_0 = var4;
-          return (ks) (stackIn_120_0);
+          return (ResourceRequest) (stackIn_120_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter2) {
           decompiledCaughtException = decompiledCaughtParameter2;
           var4 = (RuntimeException) (Object) decompiledCaughtException;
@@ -472,7 +472,7 @@ final class bm extends ew {
     }
 
     final byte[] a(int param0, int param1) {
-        ks var3 = null;
+        ResourceRequest var3 = null;
         RuntimeException var3_ref = null;
         byte[] var4 = null;
         Object stackIn_2_0 = null;
@@ -487,7 +487,7 @@ final class bm extends ew {
           if (param1 != 4) {
             this.b(-9);
           }
-          var4 = var3.d((byte) -113);
+          var4 = var3.getBytes((byte) -113);
           var3.unlink(121);
           stackIn_6_0 = var4;
           return stackIn_6_0;
@@ -499,16 +499,16 @@ final class bm extends ew {
     }
 
     final int b(int param0, int param1) {
-        ks var3 = null;
+        ResourceRequest var3 = null;
         RuntimeException var3_ref = null;
         int stackIn_2_0 = 0;
         int stackIn_5_0 = 0;
         int stackIn_7_0 = 0;
         RuntimeException decompiledCaughtException = null;
         try {
-          var3 = (ks) (this.field_t.get(param0 - 5958, (long)param1));
+          var3 = (ResourceRequest) (this.field_t.get(param0 - 5958, (long)param1));
           if (var3 != null) {
-            stackIn_2_0 = var3.g(0);
+            stackIn_2_0 = var3.getProgress(0);
             return stackIn_2_0;
           }
           if (param0 == 5926) {
@@ -561,8 +561,8 @@ final class bm extends ew {
     }
 
     final void d(int param0) {
-        ks discarded$0 = null;
-        ks discarded$1 = null;
+        ResourceRequest discarded$0 = null;
+        ResourceRequest discarded$1 = null;
         RuntimeException decompiledCaughtException = null;
         IntrusiveNode var2 = null;
         RuntimeException var2_ref = null;
@@ -612,7 +612,7 @@ final class bm extends ew {
         }
     }
 
-    bm(int param0, bc param1, bc param2, bp param3, vo param4, int param5, byte[] param6, int param7, boolean param8) {
+    bm(int param0, SectorCacheStore param1, SectorCacheStore param2, bp param3, DiskCacheWorker param4, int param5, byte[] param6, int param7, boolean param8) {
         boolean stackIn_7_1 = false;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
@@ -657,7 +657,7 @@ final class bm extends ew {
           this.field_x = param3;
           this.field_A = param4;
           if (null != this.field_f) {
-            this.field_n = (ks) ((Object) this.field_A.a(this.field_r, this.field_f, 114));
+            this.field_n = (ResourceRequest) ((Object) this.field_A.readNow(this.field_r, this.field_f, 114));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

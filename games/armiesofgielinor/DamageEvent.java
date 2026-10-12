@@ -271,7 +271,7 @@ final class DamageEvent extends GameEvent {
         try {
           var10 = (CharSequence) ((Object) param0);
           if (!hg.a((byte) -31, var10)) {
-            stackIn_3_0 = bc.field_d;
+            stackIn_3_0 = SectorCacheStore.field_d;
             return stackIn_3_0;
           }
           if (th.field_a != 2) {
@@ -296,7 +296,7 @@ final class DamageEvent extends GameEvent {
           if (param1 != -27) {
             field_y = (String) null;
           }
-          var8.c((byte) -76);
+          var8.unlinkSecondary((byte) -76);
           dj.field_a = dj.field_a - 1;
           var9 = vl.outgoingPacket;
           var9.writeCipheredOpcode(32161, param2);

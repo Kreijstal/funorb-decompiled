@@ -764,13 +764,13 @@ final class ng {
         try {
           ds.field_a = new RgbSprite[op.field_c[param1].length];
           le.field_c = new RgbSprite[op.field_c[0].length];
-          vo.field_d = param0;
+          DiskCacheWorker.field_d = param0;
           im.field_y = param2;
           for (var3_int = 0; op.field_c[0].length > var3_int; var3_int++) {
-            ds.field_a[var3_int] = new RgbSprite(vo.field_d.pixelWidth, vo.field_d.pixelHeight);
+            ds.field_a[var3_int] = new RgbSprite(DiskCacheWorker.field_d.pixelWidth, DiskCacheWorker.field_d.pixelHeight);
             le.field_c[var3_int] = new RgbSprite(im.field_y.pixelWidth, im.field_y.pixelHeight);
             ds.field_a[var3_int].b();
-            vo.field_d.d(0, 0, op.field_c[0][var3_int]);
+            DiskCacheWorker.field_d.d(0, 0, op.field_c[0][var3_int]);
             le.field_c[var3_int].b();
             im.field_y.b(0, 0, op.field_c[0][var3_int]);
           }

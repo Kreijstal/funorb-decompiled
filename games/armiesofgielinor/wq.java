@@ -101,20 +101,20 @@ final class wq {
         int var2 = Spell.a((long)this.field_b, (long)this.field_b, -1700635440) + Spell.a((long)this.field_f, (long)this.field_f, -1700635440) + (Spell.a((long)this.field_d, (long)this.field_d, -1700635440) + Spell.a((long)this.field_e, (long)this.field_e, -1700635440));
         if (var2 < 65535) {
           var2 = so.a(var2, -129);
-          this.field_b = ue.a((long)this.field_b, (long)var2, (byte) 97);
-          this.field_f = ue.a((long)this.field_f, (long)var2, (byte) 97);
-          this.field_d = ue.a((long)this.field_d, (long)var2, (byte) 97);
-          this.field_e = ue.a((long)this.field_e, (long)var2, (byte) 97);
+          this.field_b = BufferedFile.a((long)this.field_b, (long)var2, (byte) 97);
+          this.field_f = BufferedFile.a((long)this.field_f, (long)var2, (byte) 97);
+          this.field_d = BufferedFile.a((long)this.field_d, (long)var2, (byte) 97);
+          this.field_e = BufferedFile.a((long)this.field_e, (long)var2, (byte) 97);
           return;
         }
         if (var2 <= 65537) {
           return;
         }
         var2 = so.a(var2, -129);
-        this.field_b = ue.a((long)this.field_b, (long)var2, (byte) 97);
-        this.field_f = ue.a((long)this.field_f, (long)var2, (byte) 97);
-        this.field_d = ue.a((long)this.field_d, (long)var2, (byte) 97);
-        this.field_e = ue.a((long)this.field_e, (long)var2, (byte) 97);
+        this.field_b = BufferedFile.a((long)this.field_b, (long)var2, (byte) 97);
+        this.field_f = BufferedFile.a((long)this.field_f, (long)var2, (byte) 97);
+        this.field_d = BufferedFile.a((long)this.field_d, (long)var2, (byte) 97);
+        this.field_e = BufferedFile.a((long)this.field_e, (long)var2, (byte) 97);
     }
 
     final void a(byte param0, int param1, int param2, int param3, int param4) {

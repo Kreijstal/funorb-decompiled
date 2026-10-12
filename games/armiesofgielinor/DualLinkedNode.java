@@ -1,40 +1,40 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class ms extends IntrusiveNode {
+class DualLinkedNode extends IntrusiveNode {
     static String field_m;
-    ms field_l;
+    DualLinkedNode secondaryPrevious;
     static int field_t;
     static boolean field_o;
-    long field_q;
+    long secondaryKey;
     static je field_k;
-    ms field_s;
+    DualLinkedNode secondaryNext;
     static int field_r;
     static String field_n;
     static String field_p;
 
-    final boolean a(byte param0) {
-        if (this.field_l == null) {
+    final boolean isSecondaryLinked(byte obfuscationGuard) {
+        if (this.secondaryPrevious == null) {
           return false;
         }
-        int var2 = 106 / ((10 - param0) / 60);
+        int var2 = 106 / ((10 - obfuscationGuard) / 60);
         return true;
     }
 
-    final void c(byte param0) {
-        if (this.field_l == null) {
+    final void unlinkSecondary(byte obfuscationGuard) {
+        if (this.secondaryPrevious == null) {
           return;
         }
-        this.field_l.field_s = this.field_s;
-        this.field_s.field_l = this.field_l;
-        if (param0 == -76) {
-          this.field_s = null;
-          this.field_l = null;
+        this.secondaryPrevious.secondaryNext = this.secondaryNext;
+        this.secondaryNext.secondaryPrevious = this.secondaryPrevious;
+        if (obfuscationGuard == -76) {
+          this.secondaryNext = null;
+          this.secondaryPrevious = null;
           return;
         }
-        this.a(true, -70L);
-        this.field_s = null;
-        this.field_l = null;
+        this.setSecondaryKey(true, -70L);
+        this.secondaryNext = null;
+        this.secondaryPrevious = null;
     }
 
     final static int a(int param0, og[] param1, int param2) {
@@ -92,24 +92,24 @@ class ms extends IntrusiveNode {
         field_m = null;
     }
 
-    final long a(int param0) {
-        if (param0 < 101) {
+    final long getSecondaryKey(int obfuscationGuard) {
+        if (obfuscationGuard < 101) {
           field_o = true;
-          return this.field_q;
+          return this.secondaryKey;
         }
-        return this.field_q;
+        return this.secondaryKey;
     }
 
-    final void a(boolean param0, long param1) {
-        if (this.field_l != null) {
+    final void setSecondaryKey(boolean obfuscationGuard, long key) {
+        if (this.secondaryPrevious != null) {
           throw new RuntimeException();
         }
-        if (param0) {
-          this.field_q = param1;
+        if (obfuscationGuard) {
+          this.secondaryKey = key;
           return;
         }
-        this.field_l = (ms) null;
-        this.field_q = param1;
+        this.secondaryPrevious = (DualLinkedNode) null;
+        this.secondaryKey = key;
     }
 
     final static void e(int param0) {
@@ -136,7 +136,7 @@ class ms extends IntrusiveNode {
           qf.a(56);
           return;
         }
-        ms.e(75);
+        DualLinkedNode.e(75);
         ac.field_n = false;
         BestScoreStrategy.field_h = null;
         if (fh.field_i) {
@@ -156,7 +156,7 @@ class ms extends IntrusiveNode {
         }
     }
 
-    protected ms() {
+    protected DualLinkedNode() {
     }
 
     static {

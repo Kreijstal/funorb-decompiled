@@ -325,7 +325,7 @@ abstract class AiPlanningStrategy {
               param3 <= 105) {
               var4 = param1;
               fw.a(-1, var4);
-              vl.field_k = ei.a(2, param1);
+              vl.field_k = BoundedFile.a(2, param1);
               if (var5 != 0) {
                 vl.field_k = DisplacedUnitMarker.a(-1, param3, param2);
                 stackIn_18_0 = !(nm.field_z >= 13);

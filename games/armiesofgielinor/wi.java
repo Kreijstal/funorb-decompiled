@@ -453,7 +453,7 @@ final class wi {
                   }
                 } else {
                   if (var26Lifetime1 == 0) {
-                    var24Lifetime2 = var34 + "<br>" + fo.a(4800, ue.field_e, new String[]{(String) (var25)});
+                    var24Lifetime2 = var34 + "<br>" + fo.a(4800, BufferedFile.field_e, new String[]{(String) (var25)});
                   } else {
                     var24Lifetime2 = var34 + "<br>" + nm.field_u + (String) (var25);
                   }

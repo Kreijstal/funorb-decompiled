@@ -89,11 +89,11 @@ final class gb extends iu {
         try {
           var5_int = 0;
           if (param1 >= -1 &&
-            ks.field_y >= param1 &&
+            ResourceRequest.field_y >= param1 &&
             param0 >= -1 &&
             param0 <= ef.field_c) {
             if (param1 == -1 ||
-              param1 == ks.field_y) {
+              param1 == ResourceRequest.field_y) {
               var5_int += 2;
             }
             if (param0 == -1 ||
@@ -101,7 +101,7 @@ final class gb extends iu {
               var5_int++;
             }
             if (param0 == -1 &&
-              ~param1 == ~ks.field_y) {
+              ~param1 == ~ResourceRequest.field_y) {
               var5_int++;
             }
             if (var5_int > 0) {
@@ -111,7 +111,7 @@ final class gb extends iu {
                 decompiledSharedTail0 = (ArmiesOfGielinor.obfuscationControl);
               }
               if (decompiledSharedTail0) {
-                hq.field_a[(og.field_p[th.a(param1, 1, ks.field_y) + th.a(param0, 1, ef.field_c) * ks.field_y] % 6 + 1 << 2) - 1 + var5_int].draw(param2, param3);
+                hq.field_a[(og.field_p[th.a(param1, 1, ResourceRequest.field_y) + th.a(param0, 1, ef.field_c) * ResourceRequest.field_y] % 6 + 1 << 2) - 1 + var5_int].draw(param2, param3);
               }
             }
             var6 = 88 / ((-21 - param4) / 46);

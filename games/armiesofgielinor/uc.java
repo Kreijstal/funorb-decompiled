@@ -20,7 +20,7 @@ final class uc {
         if (param0 != 0) {
           return;
         }
-        bc.a(2858);
+        SectorCacheStore.a(2858);
     }
 
     final static void a(dq param0, int param1) {

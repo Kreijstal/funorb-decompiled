@@ -48,14 +48,14 @@ class IntrusiveNode {
             SoftwareRaster.d(-40 + param5, param3, param5, param3 - 20, 65280, var6);
           }
           if (-1 + ef.field_c == param2 ||
-            var7[param4 + ks.field_y] > var9) {
+            var7[param4 + ResourceRequest.field_y] > var9) {
             SoftwareRaster.d(40 + param5, param3, param5, param3 + 20, 65280, var6);
           }
           if (0 == param1 ||
             var7[param4 - 1] > var9) {
             SoftwareRaster.d(-40 + param5, param3, param5, param3 + 20, 65280, var6);
           }
-          if (ks.field_y - 1 == param1 ||
+          if (ResourceRequest.field_y - 1 == param1 ||
             var9 < var7[param4 + 1]) {
             SoftwareRaster.d(param5 + 40, param3, param5, -20 + param3, 65280, var6);
           }
@@ -170,7 +170,7 @@ class IntrusiveNode {
                 var10 == jf.field_C.field_ic) {
                 SoftwareRaster.d(-40 + param5, param3, param5, 20 + param3, var9, var6);
               }
-              if ((param1 == -1 + ks.field_y ||
+              if ((param1 == -1 + ResourceRequest.field_y ||
                 -var10 == jf.field_C.field_ic)) {
                 SoftwareRaster.d(40 + param5, param3, param5, -20 + param3, var9, var6);
               }

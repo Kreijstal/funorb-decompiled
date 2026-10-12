@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class jf extends ks {
+final class jf extends ResourceRequest {
     static sa field_D;
     byte field_B;
     PacketBuffer field_E;
@@ -18,8 +18,8 @@ final class jf extends ks {
         field_C = null;
     }
 
-    final int g(int param0) {
-        if (param0 != 0) {
+    final int getProgress(int obfuscationGuard) {
+        if (obfuscationGuard != 0) {
           jf.b(-42, -14);
           if (null == this.field_E) {
             return 0;
@@ -32,12 +32,12 @@ final class jf extends ks {
         return this.field_E.position * 100 / (-this.field_B + this.field_E.payload.length);
     }
 
-    final byte[] d(byte param0) {
-        if (this.field_x) {
+    final byte[] getBytes(byte obfuscationGuard) {
+        if (this.pending) {
           throw new RuntimeException();
         }
         if (this.field_E.position >= this.field_E.payload.length - this.field_B) {
-          int var2 = -74 / ((-35 - param0) / 45);
+          int var2 = -74 / ((-35 - obfuscationGuard) / 45);
           return this.field_E.payload;
         }
         throw new RuntimeException();

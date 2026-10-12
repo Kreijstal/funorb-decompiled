@@ -22,7 +22,7 @@ final class dg {
         }
         if (param0 == -61) {
           var1 = 352;
-          stackIn_12_0 = bc.field_j[kd.field_X].length;
+          stackIn_12_0 = SectorCacheStore.field_j[kd.field_X].length;
           stackIn_13_1 = (od.field_c[kd.field_X]) ? 1 : 0;
           var2 = stackIn_12_0 + stackIn_13_1;
           var2 = (var2 / 2 + var2 % 2) * 80;
@@ -35,7 +35,7 @@ final class dg {
         }
         dg.a(38);
         var1Lifetime1 = 352;
-        stackIn_5_0 = bc.field_j[kd.field_X].length;
+        stackIn_5_0 = SectorCacheStore.field_j[kd.field_X].length;
         stackIn_6_1 = (od.field_c[kd.field_X]) ? 1 : 0;
         var2Lifetime1 = stackIn_5_0 + stackIn_6_1;
         var2Lifetime1 = (var2Lifetime1 / 2 + var2Lifetime1 % 2) * 80;
@@ -119,7 +119,7 @@ final class dg {
         }
         es.field_d = MapLayout.a("bones", param0 - 28106, "basic", this.field_d);
         wf.field_B = fk.a("boneshadows", (byte) -124, this.field_d, "basic");
-        TeamRoster.field_g = nh.a("player_ring", "basic", this.field_d, false);
+        TeamRoster.field_g = DiskCacheRequest.a("player_ring", "basic", this.field_d, false);
         wl.field_N = fk.a("shadows", (byte) -128, this.field_d, "basic")[0];
     }
 

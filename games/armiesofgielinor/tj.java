@@ -609,11 +609,11 @@ class tj extends kb implements gw {
               ai.field_T.c(-5758);
             }
             if (ou.field_h != null) {
-              ou.field_h.a((byte) -117);
+              ou.field_h.stop((byte) -117);
             }
             if (null != SpellMenuGroup.field_b) {
               try {
-                SpellMenuGroup.field_b.c((byte) 81);
+                SpellMenuGroup.field_b.close((byte) 81);
               } catch (java.io.IOException decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
                 iOException = (IOException) (Object) decompiledCaughtException;
@@ -624,7 +624,7 @@ class tj extends kb implements gw {
               for (var2 = 0; var2 < mu.field_b.length; var2++) {
                 if (null != mu.field_b[var2]) {
                   try {
-                    mu.field_b[var2].c((byte) 81);
+                    mu.field_b[var2].close((byte) 81);
                   } catch (java.io.IOException decompiledCaughtParameter1) {
                     decompiledCaughtException = decompiledCaughtParameter1;
                     var3 = (IOException) (Object) decompiledCaughtException;

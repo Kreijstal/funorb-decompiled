@@ -53,15 +53,15 @@ final class au extends je {
 
     final boolean k(int param0) {
         if (param0 == -7) {
-          return !this.a((byte) 90) ? true : false;
+          return !this.isSecondaryLinked((byte) 90) ? true : false;
         }
         this.d((byte) -65);
-        return !this.a((byte) 90) ? true : false;
+        return !this.isSecondaryLinked((byte) 90) ? true : false;
     }
 
     final int d(byte param0) {
         int var2 = -52 / ((35 - param0) / 38);
-        return (int)this.a(116);
+        return (int)this.getSecondaryKey(116);
     }
 
     au(int param0) {

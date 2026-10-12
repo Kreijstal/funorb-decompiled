@@ -82,7 +82,7 @@ final class sh {
           this.field_c = 24;
         }
         this.field_e = (ModelMesh) (ActionRequest.unitModels[this.field_c][param0]);
-        this.field_q = nh.unitProjectionVariants[this.field_c];
+        this.field_q = DiskCacheRequest.unitProjectionVariants[this.field_c];
     }
 
     final void e(byte param0) {

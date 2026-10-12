@@ -20,35 +20,35 @@ final class ri {
         Object var5 = var7.b(false);
         if (var5 == null) {
           var7.unlink(123);
-          var7.c((byte) -76);
+          var7.unlinkSecondary((byte) -76);
           this.field_a = this.field_a + var7.field_z;
           return null;
         }
         if (param1 > 121) {
           if (!var7.a(true)) {
             this.field_e.a(-96, var7);
-            var7.field_q = 0L;
+            var7.secondaryKey = 0L;
           } else {
             var6 = new f(var5, var7.field_z);
             this.field_g.a(var6, false, var7.key);
             this.field_e.a(-96, var6);
-            ((uq) ((Object) var6)).field_q = 0L;
+            ((uq) ((Object) var6)).secondaryKey = 0L;
             var7.unlink(97);
-            var7.c((byte) -76);
+            var7.unlinkSecondary((byte) -76);
           }
           return var5;
         }
         this.a(-102L, 20);
         if (!var7.a(true)) {
           this.field_e.a(-96, var7);
-          var7.field_q = 0L;
+          var7.secondaryKey = 0L;
         } else {
           var6Lifetime1 = new f(var5, var7.field_z);
           this.field_g.a(var6Lifetime1, false, var7.key);
           this.field_e.a(-96, var6Lifetime1);
-          ((uq) ((Object) var6Lifetime1)).field_q = 0L;
+          ((uq) ((Object) var6Lifetime1)).secondaryKey = 0L;
           var7.unlink(97);
-          var7.c((byte) -76);
+          var7.unlinkSecondary((byte) -76);
         }
         return var5;
     }
@@ -62,7 +62,7 @@ final class ri {
         try {
           if (param0 != null) {
             param0.unlink(param1 ^ -115);
-            param0.c((byte) -76);
+            param0.unlinkSecondary((byte) -76);
             this.field_a = this.field_a + param0.field_z;
           }
           if (param1 == 0) {
@@ -102,7 +102,7 @@ final class ri {
           var7 = new f(param0, param2);
           this.field_g.a(var7, false, param3);
           this.field_e.a(-96, var7);
-          ((uq) ((Object) var7)).field_q = 0L;
+          ((uq) ((Object) var7)).secondaryKey = 0L;
         } catch (RuntimeException runtimeException) {
           throw ig.addExceptionContext((Throwable) ((Object) runtimeException), "ri.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }

@@ -68,19 +68,19 @@ final class oc extends je {
             this.field_Qb.length() > 0) {
             PortalLossCondition.a(' ', -1 + this.field_Qb.length(), this.field_Qb, true);
           }
-          if (kv.a(false, (CharSequence) ((Object) this.field_Qb), ui.field_i)) {
-            discarded$1 = this.field_Qb.append(ui.field_i);
+          if (kv.a(false, (CharSequence) ((Object) this.field_Qb), DualNodeDeque.field_i)) {
+            discarded$1 = this.field_Qb.append(DualNodeDeque.field_i);
           } else {
             if (this.field_Qb.length() == 0 &&
-              91 == ui.field_i) {
-              discarded$2 = this.field_Qb.append(ui.field_i);
+              91 == DualNodeDeque.field_i) {
+              discarded$2 = this.field_Qb.append(DualNodeDeque.field_i);
             } else {
               if (this.field_Qb.length() == 1 &&
-                ui.field_i == 35) {
-                discarded$3 = this.field_Qb.append(ui.field_i);
+                DualNodeDeque.field_i == 35) {
+                discarded$3 = this.field_Qb.append(DualNodeDeque.field_i);
               } else {
-                if (ui.field_i == 93) {
-                  discarded$4 = this.field_Qb.append(ui.field_i);
+                if (DualNodeDeque.field_i == 93) {
+                  discarded$4 = this.field_Qb.append(DualNodeDeque.field_i);
                 }
               }
             }
@@ -137,7 +137,7 @@ final class oc extends je {
             }
             return true;
           }
-          var2 = Character.toLowerCase(ui.field_i);
+          var2 = Character.toLowerCase(DualNodeDeque.field_i);
           if (var2 == 32) {
             var2 = 95;
             if (var2 == 95 &&
@@ -220,7 +220,7 @@ final class oc extends je {
             }
             return false;
           }
-          var2Lifetime1 = Character.toLowerCase(ui.field_i);
+          var2Lifetime1 = Character.toLowerCase(DualNodeDeque.field_i);
           if (var2Lifetime1 == 32) {
             var2Lifetime1 = 95;
             if (var2Lifetime1 == 95 &&
@@ -303,7 +303,7 @@ final class oc extends je {
           }
           return false;
         }
-        var2Lifetime2 = Character.toLowerCase(ui.field_i);
+        var2Lifetime2 = Character.toLowerCase(DualNodeDeque.field_i);
         if (var2Lifetime2 == 32) {
           var2Lifetime2 = 95;
           if (var2Lifetime2 == 95 &&

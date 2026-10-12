@@ -6,26 +6,26 @@ final class da {
     static int[][][] instructionIllustrationArguments;
 
     final static void c(int param0) {
-        ms var1 = null;
+        DualLinkedNode var1 = null;
         int var2 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
-        ms var1Lifetime1;
+        DualLinkedNode var1Lifetime1;
         try {
           vl.field_p = null;
           dj.field_a = 0;
           vg.field_p = 0;
           wh.field_c.b(126);
           ot.field_E.b(81);
-          var1 = nh.field_K.a((byte) 66);
+          var1 = DiskCacheRequest.field_K.a((byte) 66);
           while (var1 != null) {
-            var1.c((byte) -76);
-            var1 = nh.field_K.c(1);
+            var1.unlinkSecondary((byte) -76);
+            var1 = DiskCacheRequest.field_K.c(1);
           }
           if (param0 > -112) {
             da.a(89, true);
           }
           var1Lifetime1 = bk.field_a.a((byte) 66);
           while (var1Lifetime1 != null) {
-            var1Lifetime1.c((byte) -76);
+            var1Lifetime1.unlinkSecondary((byte) -76);
             var1Lifetime1 = bk.field_a.c(1);
           }
           th.field_a = 0;

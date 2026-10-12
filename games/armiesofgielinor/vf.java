@@ -311,12 +311,12 @@ abstract class vf {
             }
           }
           if (param1 &&
-            ei.field_h > 1) {
-            for (var6Lifetime2 = 0; 1 + ei.field_h > var6Lifetime2; var6Lifetime2++) {
+            BoundedFile.field_h > 1) {
+            for (var6Lifetime2 = 0; 1 + BoundedFile.field_h > var6Lifetime2; var6Lifetime2++) {
               var29 = pu.field_k[3][var6Lifetime2];
               if (var4_int != 0 &&
                 var29.field_yb != 0) {
-                nh.field_E = var6Lifetime2;
+                DiskCacheRequest.field_E = var6Lifetime2;
               }
               if (var29.field_jb &&
                 0 < var6Lifetime2) {
@@ -331,7 +331,7 @@ abstract class vf {
                 }
               }
               stackIn_158_0 = var29;
-              stackIn_159_1 = (var6Lifetime2 == nh.field_E);
+              stackIn_159_1 = (var6Lifetime2 == DiskCacheRequest.field_E);
               stackIn_158_0.field_rb = stackIn_159_1;
               stackIn_161_0 = var29;
               stackIn_162_1 = (var4_int != 0);
@@ -357,9 +357,9 @@ abstract class vf {
                 var9 >= 0) {
                 if (CombatPresentation.field_j != null &&
                   CombatPresentation.field_j[var7] != null &&
-                  (~ei.field_a & CombatPresentation.field_j[var7][var9]) > 0) {
+                  (~BoundedFile.field_a & CombatPresentation.field_j[var7][var9]) > 0) {
                   var14 = 1;
-                  var15 = fd.a(true, CombatPresentation.field_j[var7][var9] & ~ei.field_a);
+                  var15 = fd.a(true, CombatPresentation.field_j[var7][var9] & ~BoundedFile.field_a);
                 }
                 if (ep.field_p != null &&
                   null != ep.field_p[var7] &&

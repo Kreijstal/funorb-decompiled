@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class va extends ms {
+final class va extends DualLinkedNode {
     int[] field_C;
     static String field_F;
     char[] field_v;

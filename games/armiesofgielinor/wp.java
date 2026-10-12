@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class wp extends ms {
+final class wp extends DualLinkedNode {
     private byte[][] field_x;
     static int[][] unitUnlockGroups;
     static int[] field_w;

@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class dd {
-    private vo field_b;
+    private DiskCacheWorker field_b;
     private java.math.BigInteger field_h;
     static String field_g;
     static RgbSprite field_k;
@@ -14,7 +14,7 @@ final class dd {
     static boolean field_a;
     static int field_e;
 
-    final bm a(boolean param0, bc param1, int param2, int param3, bc param4) {
+    final bm a(boolean param0, SectorCacheStore param1, int param2, int param3, SectorCacheStore param4) {
         int var6_int = 0;
         RuntimeException var6 = null;
         int var7 = 0;
@@ -173,7 +173,7 @@ final class dd {
         return;
     }
 
-    dd(bp param0, vo param1) {
+    dd(bp param0, DiskCacheWorker param1) {
         this(param0, param1, (java.math.BigInteger) null, (java.math.BigInteger) null);
     }
 
@@ -207,10 +207,10 @@ final class dd {
           }
           this.field_c = this.field_d.a(255, false, 255, (byte) 0, true);
         }
-        if (this.field_c.field_x) {
+        if (this.field_c.pending) {
           return false;
         }
-        var10 = new PacketBuffer(this.field_c.d((byte) 43));
+        var10 = new PacketBuffer(this.field_c.getBytes((byte) 43));
         if (param0 != 14) {
           return true;
         }
@@ -243,7 +243,7 @@ final class dd {
         return true;
     }
 
-    private dd(bp param0, vo param1, java.math.BigInteger param2, java.math.BigInteger param3) {
+    private dd(bp param0, DiskCacheWorker param1, java.math.BigInteger param2, java.math.BigInteger param3) {
         try {
           this.field_d = param0;
           this.field_b = param1;

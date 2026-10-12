@@ -34,10 +34,10 @@ final class fg extends IntrusiveNode {
         int var11;
         int var12;
         var12 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
-        var7 = param1 + ks.field_y * param0;
+        var7 = param1 + ResourceRequest.field_y * param0;
         if (param1 >= 0 &&
           param0 >= 0 &&
-          param1 < ks.field_y &&
+          param1 < ResourceRequest.field_y &&
           ef.field_c > param0) {
           if (param4 <= 64) {
             field_l = (String) null;

@@ -421,9 +421,9 @@ final class oo {
             mg.field_d = GameplayController.a("arrow", (byte) 51, "members_expansion_screen", iw.field_p);
             ll.field_Sb = gs.a("arialish12", iw.field_p, bh.field_H, (byte) -53, "");
             kt.field_n = it.a("", iw.field_p, bh.field_H, (byte) -87, "pump32");
-            UnitModelPreview.field_b = nh.a("benefit_orbs", "members_expansion_screen", iw.field_p, false);
-            ar.field_D = nh.a("button_text", "members_expansion_screen", iw.field_p, false);
-            nh.field_G = ac.a(iw.field_p, "button_highlights", (byte) -4, "members_expansion_screen");
+            UnitModelPreview.field_b = DiskCacheRequest.a("benefit_orbs", "members_expansion_screen", iw.field_p, false);
+            ar.field_D = DiskCacheRequest.a("button_text", "members_expansion_screen", iw.field_p, false);
+            DiskCacheRequest.field_G = ac.a(iw.field_p, "button_highlights", (byte) -4, "members_expansion_screen");
             bh.field_H = null;
             iw.field_p = null;
           }
@@ -470,10 +470,10 @@ final class oo {
           ar.field_D.g((127 - ar.field_D.canvasWidth) / 2 + 508, 315);
           if (0 != this.field_h.selectedIndex) {
             if (this.field_h.selectedIndex == 1) {
-              nh.field_G[1].g(508, 387);
+              DiskCacheRequest.field_G[1].g(508, 387);
             }
           } else {
-            nh.field_G[0].g(508, 299);
+            DiskCacheRequest.field_G[0].g(508, 299);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -743,8 +743,8 @@ final class oo {
           if (rd.field_j != null) {
             oa.a(90, rd.field_j.field_d);
           } else {
-            if (bc.field_a != null) {
-              oa.a(102, bc.field_a.field_d);
+            if (SectorCacheStore.field_a != null) {
+              oa.a(102, SectorCacheStore.field_a.field_d);
             }
           }
           if (param0 != -387) {

@@ -82,7 +82,7 @@ final class df extends tj implements fb, he {
           this.field_Q = (fn) ((Object) new ma(param0, (qo) (this), 100));
           this.field_S = (fn) ((Object) new ma("", (qo) (this), 20));
           if (!this.field_P) {
-            this.field_O = new fw(ks.field_v, (qo) null);
+            this.field_O = new fw(ResourceRequest.field_v, (qo) null);
             stackIn_18_1 = null;
             stackIn_18_2 = null;
             if (!this.field_F) {
@@ -136,7 +136,7 @@ final class df extends tj implements fb, he {
           var9 = ea.a(0, CombatEvent.d((byte) 34));
           if (var9 != CombatSandbox.field_j) {
             if (var9 == ps.field_y) {
-              var8 = ui.field_h;
+              var8 = DualNodeDeque.field_h;
             }
           } else {
             var8 = DeployAction.field_t;

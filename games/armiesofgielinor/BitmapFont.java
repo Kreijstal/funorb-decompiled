@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class BitmapFont extends ms {
+abstract class BitmapFont extends DualLinkedNode {
     private int[] field_A;
     private int[] field_F;
     private IndexedSpriteBase[] field_E;

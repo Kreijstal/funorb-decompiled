@@ -224,7 +224,7 @@ final class ib extends mk {
           var12_int = 0;
           scanLoop1: while (true) {
             stackIn_25_0 = (!od.field_c[kd.field_X]) ? 0 : 1;
-            if (stackIn_25_0 + bc.field_j[kd.field_X].length > var12_int) {
+            if (stackIn_25_0 + SectorCacheStore.field_j[kd.field_X].length > var12_int) {
               SoftwareRaster.f(8 + param2, 44 + param8, param2 + param5 - 8, param1 + (param8 - 40 - 4));
               if (var12_int % 2 != 1) {
                 stackIn_29_0 = 0;
@@ -238,7 +238,7 @@ final class ib extends mk {
                   stackIn_40_0 = kd.field_X;
                   stackIn_40_1 = pg.playerProfile.getUnlockLevel(param7 ^ -40);
                   stackIn_41_2 = !(2 > hi.field_j);
-                  if (!ue.a(stackIn_40_0, stackIn_40_1, stackIn_41_2, var11, -1208926000, ei.field_e[0])) {
+                  if (!BufferedFile.a(stackIn_40_0, stackIn_40_1, stackIn_41_2, var11, -1208926000, BoundedFile.field_e[0])) {
                     fe.a(var13, var14, (param5 >> 1) - 9, 78, io.field_m, MoveAttackAction.field_x, 0, 128, false);
                   } else {
                     fe.a(var13, var14, -9 + (param5 >> 1), 78, io.field_m, TutorialController.field_e, 0, 128, false);
@@ -247,7 +247,7 @@ final class ib extends mk {
                   stackIn_34_0 = kd.field_X;
                   stackIn_34_1 = pg.playerProfile.getUnlockLevel(0);
                   stackIn_35_2 = !(hi.field_j < 2);
-                  if (!ue.a(stackIn_34_0, stackIn_34_1, stackIn_35_2, var11, -1208926000, ei.field_e[0])) {
+                  if (!BufferedFile.a(stackIn_34_0, stackIn_34_1, stackIn_35_2, var11, -1208926000, BoundedFile.field_e[0])) {
                     fe.a(var13, var14, (param5 >> 1) - 9, 78, io.field_m, dh.field_l, 0, 128, false);
                   } else {
                     fe.a(var13, var14, -9 + (param5 >> 1), 78, io.field_m, jh.field_k, 0, 128, false);
@@ -281,7 +281,7 @@ final class ib extends mk {
                 if (var11 > -1) {
                   if (kd.field_X != 1) {
                     if (kd.field_X == 2) {
-                      stackIn_76_0 = bc.field_j[2][var11];
+                      stackIn_76_0 = SectorCacheStore.field_j[2][var11];
                       if (var12_int % 2 == 0) {
                         stackIn_77_1 = 0;
                       } else {
@@ -290,7 +290,7 @@ final class ib extends mk {
                       ((IndexedSprite) (Object) stackIn_76_0).c(stackIn_77_1 + (param5 / 4 + param2) - (uh.field_e[2][0] >> 3), 40 + (var10 - (uh.field_e[2][1] >> 3)));
                     } else {
                       if (kd.field_X == 3) {
-                        stackIn_72_0 = bc.field_j[3][var11];
+                        stackIn_72_0 = SectorCacheStore.field_j[3][var11];
                         if (var12_int % 2 != 0) {
                           stackIn_73_1 = param5 / 2;
                         } else {
@@ -298,7 +298,7 @@ final class ib extends mk {
                         }
                         ((IndexedSprite) (Object) stackIn_72_0).draw(stackIn_73_1 - (uh.field_e[3][0] >> 3) + param2 + param5 / 4, -(uh.field_e[3][1] >> 1) + (40 + var10));
                       } else {
-                        stackIn_68_0 = bc.field_j[kd.field_X][var11];
+                        stackIn_68_0 = SectorCacheStore.field_j[kd.field_X][var11];
                         stackIn_68_1 = param5 / 4 + param2;
                         stackIn_68_2 = uh.field_e[kd.field_X][0] / 4;
                         if (var12_int % 2 != 0) {
@@ -310,7 +310,7 @@ final class ib extends mk {
                       }
                     }
                   } else {
-                    stackIn_62_0 = bc.field_j[1][var11];
+                    stackIn_62_0 = SectorCacheStore.field_j[1][var11];
                     stackIn_62_1 = param2;
                     stackIn_62_2 = param5 / 4;
                     stackIn_62_3 = uh.field_e[1][0] >> 3;
@@ -346,7 +346,7 @@ final class ib extends mk {
             stackIn_87_0 = kd.field_X;
             stackIn_87_1 = pg.playerProfile.getUnlockLevel(0);
             stackIn_88_2 = !(hi.field_j < 2);
-            if (!ue.a(stackIn_87_0, stackIn_87_1, stackIn_88_2, var9_int, -1208926000, ei.field_e[0])) {
+            if (!BufferedFile.a(stackIn_87_0, stackIn_87_1, stackIn_88_2, var9_int, -1208926000, BoundedFile.field_e[0])) {
               param4 += 10;
               param3 += 30;
               var12 = null;

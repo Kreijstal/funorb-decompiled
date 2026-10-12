@@ -409,7 +409,7 @@ final class Unit extends IntrusiveNode implements TaggedFieldReader {
             return false;
           }
           rs.field_q = gt.field_d[SummonAction.field_E];
-          ui.field_i = SpellCastAction.field_u[SummonAction.field_E];
+          DualNodeDeque.field_i = SpellCastAction.field_u[SummonAction.field_E];
           var2 = 86 % ((param0 - 0) / 48);
           SummonAction.field_E = 127 & SummonAction.field_E + 1;
           stackIn_6_0 = true;
@@ -1002,7 +1002,7 @@ final class Unit extends IntrusiveNode implements TaggedFieldReader {
           var13 = var17;
           var6 = var13;
           var1 = var6;
-          var24 = ei.field_e;
+          var24 = BoundedFile.field_e;
           for (var3 = 0; var3 < 8; var3++) {
             var6[var3] = rn.a(var17[var3], ~var24[var3]);
           }
@@ -1011,7 +1011,7 @@ final class Unit extends IntrusiveNode implements TaggedFieldReader {
               ai.field_P.addLast((byte) -119, (IntrusiveNode) (new jg(var1_int)));
             }
           }
-          var18 = ei.field_e;
+          var18 = BoundedFile.field_e;
           var14 = var18;
           var8 = var14;
           var1Lifetime1 = var8;

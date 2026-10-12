@@ -195,7 +195,7 @@ final class et {
               }
               break;
             }
-            KingBlackDragonEvent.field_C.a(rs.field_q, ui.field_i, 80);
+            KingBlackDragonEvent.field_C.a(rs.field_q, DualNodeDeque.field_i, 80);
           } while (var2 == 0);
           var1_int = cn.field_r;
           gl.a(param0 ^ -127, -1);

@@ -63,17 +63,17 @@ final class ae extends bp {
             var4_int = -66 / ((param2 - 25) / 57);
             this.field_h.position = 0;
             while (true) {
-              var5 = (jf) (this.field_n.b(11));
+              var5 = (jf) (this.field_n.popFirst(11));
               if (var5 != null) {
-                this.field_b.a(var5, false);
+                this.field_b.addLast(var5, false);
                 continue;
               }
               break;
             }
             while (true) {
-              var5Lifetime1 = (jf) (this.field_g.b(11));
+              var5Lifetime1 = (jf) (this.field_g.popFirst(11));
               if (var5Lifetime1 != null) {
-                this.field_f.a(var5Lifetime1, false);
+                this.field_f.addLast(var5Lifetime1, false);
                 continue;
               }
               break;
@@ -207,23 +207,23 @@ final class ae extends bp {
           }
           try {
             this.field_t.a(param0);
-            var2 = (jf) (this.field_b.a((byte) -117));
+            var2 = (jf) (this.field_b.first((byte) -117));
             while (var2 != null) {
               this.field_o.position = 0;
               this.field_o.writeByte(1, 1);
-              this.field_o.a(true, var2.field_q);
+              this.field_o.a(true, var2.secondaryKey);
               this.field_t.a(this.field_o.payload, (byte) 20, 0, this.field_o.payload.length);
-              this.field_n.a(var2, false);
-              var2 = (jf) (this.field_b.c(24));
+              this.field_n.addLast(var2, false);
+              var2 = (jf) (this.field_b.next(24));
             }
-            var2Lifetime1 = (jf) (this.field_f.a((byte) -123));
+            var2Lifetime1 = (jf) (this.field_f.first((byte) -123));
             while (var2Lifetime1 != null) {
               this.field_o.position = 0;
               this.field_o.writeByte(1, 0);
-              this.field_o.a(true, var2Lifetime1.field_q);
+              this.field_o.a(true, var2Lifetime1.secondaryKey);
               this.field_t.a(this.field_o.payload, (byte) 20, 0, this.field_o.payload.length);
-              this.field_g.a(var2Lifetime1, false);
-              var2Lifetime1 = (jf) (this.field_f.c(24));
+              this.field_g.addLast(var2Lifetime1, false);
+              var2Lifetime1 = (jf) (this.field_f.next(24));
             }
             for (var2_int = 0; var2_int < 100; var2_int++) {
               var3_int = this.field_t.d((byte) 43);
@@ -267,24 +267,24 @@ final class ae extends bp {
                       var12 = (long)var7 + ((long)var6 << 32);
                       var14 = null;
                       if (var11 != 0) {
-                        var14_ref = (jf) (this.field_g.a((byte) -110));
+                        var14_ref = (jf) (this.field_g.first((byte) -110));
                         while (var14_ref != null) {
-                          if (var12 == var14_ref.field_q) {
+                          if (var12 == var14_ref.secondaryKey) {
                             decompiledFrameCompleted0 = false;
                             break;
                           }
-                          var14_ref = (jf) (this.field_g.c(24));
+                          var14_ref = (jf) (this.field_g.next(24));
                         }
                         decompiledFrameRemainder0 = !(decompiledFrameCompleted0);
                       }
                       if ((decompiledFrameRemainder0) &&
                         (decompiledFrameCompleted0)) {
-                        var14_ref = (jf) (this.field_n.a((byte) -106));
+                        var14_ref = (jf) (this.field_n.first((byte) -106));
                         while (var14_ref != null) {
-                          if (var12 == var14_ref.field_q) {
+                          if (var12 == var14_ref.secondaryKey) {
                             break;
                           }
-                          var14_ref = (jf) (this.field_n.c(24));
+                          var14_ref = (jf) (this.field_n.next(24));
                         }
                       }
                       if (var14_ref == null) {
@@ -328,8 +328,8 @@ final class ae extends bp {
                   this.field_a.field_F = this.field_a.field_F + var6;
                   this.field_a.field_E.position = this.field_a.field_E.position + var6;
                   if (this.field_a.field_E.position == var5) {
-                    this.field_a.c((byte) -76);
-                    this.field_a.field_x = false;
+                    this.field_a.unlinkSecondary((byte) -76);
+                    this.field_a.pending = false;
                     this.field_a = null;
                   } else {
                     if (this.field_a.field_F == 512) {

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class uq extends ms {
+abstract class uq extends DualLinkedNode {
     static int[] field_u;
     static String field_v;
     static String field_w;

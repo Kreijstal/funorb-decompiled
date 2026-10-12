@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class im extends ms {
+class im extends DualLinkedNode {
     private static int[] field_u;
     static sn[] field_v;
     static je field_x;

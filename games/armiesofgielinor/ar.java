@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ar extends ms {
+final class ar extends DualLinkedNode {
     static int field_w;
     static String field_v;
     int[] field_A;

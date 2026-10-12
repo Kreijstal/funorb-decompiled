@@ -187,7 +187,7 @@ final class sa {
         var0 = var15;
         while (var15 <= 10) {
             var1 = -8 + var15 * 8;
-            field_h[var15] = ue.a(we.a(field_g[7][7 + var1], 255L), ue.a(we.a(65280L, field_g[6][var1 + 6]), ue.a(we.a(field_g[5][var1 + 5], 16711680L), ue.a(we.a(4278190080L, field_g[4][var1 + 4]), ue.a(we.a(field_g[3][var1 + 3], 1095216660480L), ue.a(we.a(280375465082880L, field_g[2][var1 + 2]), ue.a(we.a(71776119061217280L, field_g[1][1 + var1]), we.a(-72057594037927936L, field_g[0][var1]))))))));
+            field_h[var15] = BufferedFile.a(we.a(field_g[7][7 + var1], 255L), BufferedFile.a(we.a(65280L, field_g[6][var1 + 6]), BufferedFile.a(we.a(field_g[5][var1 + 5], 16711680L), BufferedFile.a(we.a(4278190080L, field_g[4][var1 + 4]), BufferedFile.a(we.a(field_g[3][var1 + 3], 1095216660480L), BufferedFile.a(we.a(280375465082880L, field_g[2][var1 + 2]), BufferedFile.a(we.a(71776119061217280L, field_g[1][1 + var1]), we.a(-72057594037927936L, field_g[0][var1]))))))));
             var15++;
         }
     }

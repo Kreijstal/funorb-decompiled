@@ -1700,7 +1700,7 @@ class iu {
             }
             if (decompiledFrameRemainder0) {
               if (this.field_w == 2) {
-                fe.c(bc.field_f, -120 + var2 - 10, -16 + var3, 0, true);
+                fe.c(SectorCacheStore.field_f, -120 + var2 - 10, -16 + var3, 0, true);
                 decompiledFrameRemainder0 = (var5 != 0);
               }
               if (decompiledFrameRemainder0) {

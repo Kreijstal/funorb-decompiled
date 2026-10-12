@@ -222,7 +222,7 @@ final class hc {
         SoftwareRaster.b();
         this.field_n.a(71);
         this.field_u.a(45);
-        this.field_l.c("shift: " + nh.unitProjectionVariants[this.field_a], 480, 230, 16777215, -1);
+        this.field_l.c("shift: " + DiskCacheRequest.unitProjectionVariants[this.field_a], 480, 230, 16777215, -1);
         this.field_l.c("model ID: " + sf.field_P[this.field_a], 480, 242, 16777215, -1);
         this.a(false);
         this.e((byte) -25);

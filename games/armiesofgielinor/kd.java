@@ -182,7 +182,7 @@ final class kd extends tj implements nq, he, mf {
         this.field_ab = new vu("", (qo) null, var1 != 0);
         this.field_bb = new fw(ed.field_c, (qo) null);
         this.field_G = new fw(pt.field_Y, (qo) null);
-        this.field_O.field_s = ms.field_m;
+        this.field_O.field_s = DualLinkedNode.field_m;
         this.field_I.field_s = NodeIterator.field_d;
         this.field_H.field_s = oc.field_Jb;
         this.field_V.field_s = bm.field_k;
@@ -221,8 +221,8 @@ final class kd extends tj implements nq, he, mf {
         lk var5 = new lk(ArmiesOfGielinor.field_J, 0, 0, 0, 0, 16777215, -1, 0, 0, ArmiesOfGielinor.field_J.field_H, -1, 2147483647, true);
         this.field_W = new hv(var2, var5);
         this.field_W.field_s = "";
-        this.field_W.a(nh.field_I, false, 0);
-        this.field_W.a(nh.field_I, false, 1);
+        this.field_W.a(DiskCacheRequest.field_I, false, 0);
+        this.field_W.a(DiskCacheRequest.field_I, false, 1);
         this.field_W.field_x = (qo) (this);
         this.field_W.a(this.field_l - 90, 9567, 46, var3);
         var3 = var3 + (this.field_W.field_w + 15);

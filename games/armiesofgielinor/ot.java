@@ -115,7 +115,7 @@ final class ot extends dr {
           kl.field_a = jf.field_C.camera;
           discarded$1 = new RgbSprite(80, 40);
           ef.field_c = CipherPacketBuffer.currentBattlefield.mapHeight;
-          ks.field_y = CipherPacketBuffer.currentBattlefield.mapWidth;
+          ResourceRequest.field_y = CipherPacketBuffer.currentBattlefield.mapWidth;
           og.field_p = kl.field_a.field_o;
           vs.field_e = CipherPacketBuffer.currentBattlefield.tiles;
           bt.field_f = CipherPacketBuffer.currentBattlefield.mapTheme;

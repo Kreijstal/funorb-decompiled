@@ -64,30 +64,30 @@ final class nk {
             nk.a((byte) 84);
           }
           for (var1_intLifetime1 = 0; var1_intLifetime1 < ef.field_c; var1_intLifetime1++) {
-            for (var2 = 0; ks.field_y > var2; var2++) {
-              var3 = CampaignMenuEntry.field_u[var1_intLifetime1 * ks.field_y + var2];
+            for (var2 = 0; ResourceRequest.field_y > var2; var2++) {
+              var3 = CampaignMenuEntry.field_u[var1_intLifetime1 * ResourceRequest.field_y + var2];
               if (1 == var3) {
                 var3 = 7;
                 if (ta.field_L) {
                   var3 = 4;
                 }
                 if (0 == var2 ||
-                  CampaignMenuEntry.field_u[-1 + (var2 + var1_intLifetime1 * ks.field_y)] == 1) {
+                  CampaignMenuEntry.field_u[-1 + (var2 + var1_intLifetime1 * ResourceRequest.field_y)] == 1) {
                   var3 = 1;
                 }
-                if (-1 + ks.field_y == var2 ||
-                  1 == CampaignMenuEntry.field_u[1 + var2 + var1_intLifetime1 * ks.field_y]) {
+                if (-1 + ResourceRequest.field_y == var2 ||
+                  1 == CampaignMenuEntry.field_u[1 + var2 + var1_intLifetime1 * ResourceRequest.field_y]) {
                   var3 = 1;
                 }
                 if (var1_intLifetime1 == 0 ||
-                  CampaignMenuEntry.field_u[var2 + ks.field_y * (var1_intLifetime1 - 1)] == 1) {
+                  CampaignMenuEntry.field_u[var2 + ResourceRequest.field_y * (var1_intLifetime1 - 1)] == 1) {
                   var3 = 1;
                 }
                 if (-1 + ef.field_c == var1_intLifetime1 ||
-                  CampaignMenuEntry.field_u[(var1_intLifetime1 + 1) * ks.field_y + var2] == 1) {
+                  CampaignMenuEntry.field_u[(var1_intLifetime1 + 1) * ResourceRequest.field_y + var2] == 1) {
                   var3 = 1;
                 }
-                CampaignMenuEntry.field_u[var1_intLifetime1 * ks.field_y + var2] = var3;
+                CampaignMenuEntry.field_u[var1_intLifetime1 * ResourceRequest.field_y + var2] = var3;
               }
             }
           }

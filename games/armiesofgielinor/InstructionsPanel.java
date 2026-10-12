@@ -489,7 +489,7 @@ final class InstructionsPanel {
                   mv.a(db.a(true, 20 + param0), (byte) -70, var7, param2, MatchConditionEntry.a(param1, (byte) 94));
                 }
                 if (-1 < param2) {
-                  ks.a(ActionRequest.unitModels[76][param2], false, MatchConditionEntry.a(-40 + param1, (byte) 94), this.illustrationAnimation, 128, 150, db.a(true, param0), (js) null, -10374);
+                  ResourceRequest.a(ActionRequest.unitModels[76][param2], false, MatchConditionEntry.a(-40 + param1, (byte) 94), this.illustrationAnimation, 128, 150, db.a(true, param0), (js) null, -10374);
                 }
                 l.field_b[16].draw(db.a(true, param0), MatchConditionEntry.a(param1 - 40, (byte) 94));
                 return;
@@ -1054,7 +1054,7 @@ final class InstructionsPanel {
         var27 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           if (param1 >= 0 &&
-            param1 < ue.field_k.length &&
+            param1 < BufferedFile.field_k.length &&
             UnitModelPreview.field_d.length > param1 + 1 &&
             gt.field_c.length > param1) {
             if (param3 != null &&
@@ -1078,7 +1078,7 @@ final class InstructionsPanel {
               var16 = stackIn_18_0;
               var17 = -19;
               var18 = -22;
-              var19 = ue.field_k[1 + param1];
+              var19 = BufferedFile.field_k[1 + param1];
               if (var15 != param1) {
                 if (param1 == var16) {
                   var19.f(0, 0, -var14 + var9);
@@ -2635,14 +2635,14 @@ final class InstructionsPanel {
         var4 = new IntPair(-1, -1);
         var3 = var4;
         if (0 <= param0 &&
-          param0 < ue.field_k.length &&
+          param0 < BufferedFile.field_k.length &&
           1 + param0 < UnitModelPreview.field_d.length &&
           gt.field_c.length > param0) {
           if (param1 != 1) {
             this.previousEnabled = false;
           }
-          var4.first = ue.field_k[param0].canvasWidth;
-          var4.second = ue.field_k[param0].canvasHeight;
+          var4.first = BufferedFile.field_k[param0].canvasWidth;
+          var4.second = BufferedFile.field_k[param0].canvasHeight;
           return var3;
         }
         return var3;

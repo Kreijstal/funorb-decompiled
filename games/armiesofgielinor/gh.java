@@ -237,7 +237,7 @@ final class gh extends tj implements he {
               gu.field_b = DeployRequest.b(-1, 4);
             }
             if (gu.field_b.field_m) {
-              var12 = ei.field_e;
+              var12 = BoundedFile.field_e;
               var10 = var12;
               var5 = var10;
               var1 = var5;
@@ -259,7 +259,7 @@ final class gh extends tj implements he {
               gu.field_b = null;
               OwnerChangeEvent.field_B = true;
               Unit.m(77);
-              if (rb.a(0, ei.field_e, 1)) {
+              if (rb.a(0, BoundedFile.field_e, 1)) {
                 RevivalEvent.d((byte) 125);
               }
             }

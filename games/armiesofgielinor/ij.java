@@ -222,7 +222,7 @@ final class ij extends dv {
     }
 
     final String[] b(boolean param0) {
-        ui discarded$0 = null;
+        DualNodeDeque discarded$0 = null;
         int incrementValue$1 = 0;
         String[] stackIn_27_0 = null;
         RuntimeException decompiledCaughtException = null;
@@ -240,7 +240,7 @@ final class ij extends dv {
         String var12 = null;
         String var13 = null;
         og var14 = null;
-        ui var15 = null;
+        DualNodeDeque var15 = null;
         String var6Lifetime1;
         String var6Lifetime2;
         int var9Lifetime1;
@@ -251,7 +251,7 @@ final class ij extends dv {
           var6Lifetime1 = var13;
           var3 = this.field_o.o(95);
           var4 = vv.a(var13, 114);
-          var5 = ms.a(var3, var4, -122);
+          var5 = DualLinkedNode.a(var3, var4, -122);
           this.field_s.field_S = 0;
           var6Lifetime2 = "";
           if (0 <= var5) {
@@ -285,9 +285,9 @@ final class ij extends dv {
             }
           }
           var15 = this.a((byte) -75, var6Lifetime2);
-          var8 = new String[var15.a(30578)];
+          var8 = new String[var15.size(30578)];
           var9Lifetime1 = 0;
-          var10 = (dr) (var15.a((byte) 43));
+          var10 = (dr) (var15.first((byte) 43));
           if (!param0) {
             var12 = (String) null;
             discarded$0 = this.a((byte) 83, (String) null);
@@ -296,7 +296,7 @@ final class ij extends dv {
             incrementValue$1 = var9Lifetime1;
             var9Lifetime1++;
             var8[incrementValue$1] = var10.field_A;
-            var10 = (dr) (var15.c(24));
+            var10 = (dr) (var15.next(24));
           }
           stackIn_27_0 = var8;
           return stackIn_27_0;
@@ -309,7 +309,7 @@ final class ij extends dv {
 
     final static au b(byte param0, int param1) {
         au stackIn_2_0 = null;
-        ms stackIn_7_0 = null;
+        DualLinkedNode stackIn_7_0 = null;
         au stackIn_8_0 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
@@ -354,7 +354,7 @@ final class ij extends dv {
         int var14 = 0;
         String var15 = null;
         og var16 = null;
-        ui var17 = null;
+        DualNodeDeque var17 = null;
         String var6Lifetime1;
         String var6Lifetime2;
         int var12Lifetime1;
@@ -365,7 +365,7 @@ final class ij extends dv {
           var6Lifetime1 = var15;
           var3 = this.field_o.o(-105);
           var4 = vv.a(var15, param0 - 11);
-          var5 = ms.a(var3, var4, -126);
+          var5 = DualLinkedNode.a(var3, var4, -126);
           var6Lifetime2 = "";
           if (0 <= var5) {
             var16 = var4[var5];
@@ -377,7 +377,7 @@ final class ij extends dv {
             }
           }
           var17 = this.a((byte) -75, var6Lifetime2);
-          if (0 == var17.a(30578)) {
+          if (0 == var17.size(30578)) {
             return;
           }
           if (param0 != 122) {
@@ -387,17 +387,17 @@ final class ij extends dv {
           var9 = var6Lifetime2.length();
           var10 = 1;
           var11 = 2147483647;
-          var12_ref_dr = (dr) (var17.a((byte) -110));
+          var12_ref_dr = (dr) (var17.first((byte) -110));
           while (var12_ref_dr != null) {
             if (var11 > var12_ref_dr.field_B.length()) {
               var11 = var12_ref_dr.field_B.length();
             }
-            var12_ref_dr = (dr) (var17.c(24));
+            var12_ref_dr = (dr) (var17.next(24));
           }
           while (var10 != 0) {
             if (var11 > var9) {
-              var12 = ((dr) (var17.a((byte) -112))).field_B.charAt(var9);
-              var13 = (dr) (var17.c(24));
+              var12 = ((dr) (var17.first((byte) -112))).field_B.charAt(var9);
+              var13 = (dr) (var17.next(24));
               while (var13 != null) {
                 stackIn_26_0 = var10;
                 if (~var12 != ~var13.field_B.charAt(var9)) {
@@ -406,7 +406,7 @@ final class ij extends dv {
                   stackIn_27_1 = 1;
                 }
                 var10 = stackIn_26_0 & stackIn_27_1;
-                var13 = (dr) (var17.c(24));
+                var13 = (dr) (var17.next(24));
               }
               var9++;
               if (var10 == 0) {
@@ -421,8 +421,8 @@ final class ij extends dv {
           if (var6Lifetime2.length() + var8.length() == var11) {
             var12Lifetime1++;
             discarded$1 = var8.append("()");
-            if (var17.a(30578) == 1 &&
-              ((dr) (var17.a((byte) 44))).field_u.length == 0) {
+            if (var17.size(30578) == 1 &&
+              ((dr) (var17.first((byte) 44))).field_u.length == 0) {
               var12Lifetime1++;
             }
             this.field_o.a(var15.substring(0, var3) + var8.toString() + var15.substring(var3), (byte) 45);
@@ -439,13 +439,13 @@ final class ij extends dv {
         }
     }
 
-    private final ui a(byte param0, String param1) {
+    private final DualNodeDeque a(byte param0, String param1) {
         int var4 = 0;
-        ui var3 = null;
+        DualNodeDeque var3 = null;
         int var5 = 0;
-        ui var6 = null;
-        ui stackIn_3_0 = null;
-        ui stackIn_12_0 = null;
+        DualNodeDeque var6 = null;
+        DualNodeDeque stackIn_3_0 = null;
+        DualNodeDeque stackIn_12_0 = null;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
         String stackIn_17_2 = null;
@@ -454,15 +454,15 @@ final class ij extends dv {
         var5 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           if (param0 != -75) {
-            stackIn_3_0 = (ui) null;
+            stackIn_3_0 = (DualNodeDeque) null;
             return stackIn_3_0;
           }
-          var6 = new ui();
+          var6 = new DualNodeDeque();
           var3 = var6;
           for (var4 = 0; var4 < this.field_z.length; var4++) {
             if (this.field_z[var4].field_B.startsWith(param1)) {
-              this.field_z[var4].c((byte) -76);
-              var6.a(this.field_z[var4], false);
+              this.field_z[var4].unlinkSecondary((byte) -76);
+              var6.addLast(this.field_z[var4], false);
             }
           }
           stackIn_12_0 = var3;

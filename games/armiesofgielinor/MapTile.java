@@ -124,7 +124,7 @@ final class MapTile implements TaggedFieldReader {
               if (!fieldName.equals("type")) {
                 if (fieldName.equals("mod") &&
                   encodedLength > 0) {
-                  this.metadata = ui.readTaggedTileMetadata(packet, encodedLength, 80);
+                  this.metadata = DualNodeDeque.readTaggedTileMetadata(packet, encodedLength, 80);
                 }
               } else {
                 if (encodedLength > 0) {

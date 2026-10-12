@@ -26,9 +26,9 @@ final class CampaignDefinition extends IntrusiveNode {
     final boolean c(byte param0) {
         if (param0 != -45) {
           this.localGodId = 54;
-          return ei.a(this.campaignIndex, 11906);
+          return BoundedFile.a(this.campaignIndex, 11906);
         }
-        return ei.a(this.campaignIndex, 11906);
+        return BoundedFile.a(this.campaignIndex, 11906);
     }
 
     CampaignDefinition(String name) {

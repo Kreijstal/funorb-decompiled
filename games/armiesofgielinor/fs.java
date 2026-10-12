@@ -60,15 +60,15 @@ final class fs {
               var11 = var11 | 1;
             }
             if (param8 == 0 ||
-              vs.field_e[param5 - ks.field_y].getExplicitOwner((byte) -22) != var10) {
+              vs.field_e[param5 - ResourceRequest.field_y].getExplicitOwner((byte) -22) != var10) {
               var11 = var11 | 2;
             }
-            if (-1 + ks.field_y == param6 ||
+            if (-1 + ResourceRequest.field_y == param6 ||
               var10 != vs.field_e[param5 + 1].getExplicitOwner((byte) -90)) {
               var11 = var11 | 4;
             }
             if (param8 == -1 + ef.field_c ||
-              var10 != vs.field_e[param5 + ks.field_y].getExplicitOwner((byte) -75)) {
+              var10 != vs.field_e[param5 + ResourceRequest.field_y].getExplicitOwner((byte) -75)) {
               var11 = var11 | 8;
             }
             MatchSetupPanel.a(var10, false, param0 + 20, param4 + 40, var11, false);
@@ -161,7 +161,7 @@ final class fs {
           }
           var9 = var9 + (od.field_c[kd.field_X] ? -1 : 0);
           if (var9 > -2 &&
-            var9 < bc.field_j[kd.field_X].length) {
+            var9 < SectorCacheStore.field_j[kd.field_X].length) {
             return var9;
           }
           return -3;
@@ -177,7 +177,7 @@ final class fs {
         }
         var9Lifetime1 = var9Lifetime1 + (od.field_c[kd.field_X] ? -1 : 0);
         if (var9Lifetime1 > -2 &&
-          var9Lifetime1 < bc.field_j[kd.field_X].length) {
+          var9Lifetime1 < SectorCacheStore.field_j[kd.field_X].length) {
           return var9Lifetime1;
         }
         return -3;

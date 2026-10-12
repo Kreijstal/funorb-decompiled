@@ -55,7 +55,7 @@ final class mi extends IntrusiveNode {
 
     final static void a(int param0, int param1, int param2, int param3) {
         jv.field_c = param2;
-        ui.field_g = param1;
+        DualNodeDeque.field_g = param1;
         ActionRequest.field_n = param0;
         if (param3 != 3815) {
           mi.a(-70, -81, 66, 75);
@@ -65,10 +65,10 @@ final class mi extends IntrusiveNode {
     final static void f(int param0) {
         if (param0 != -28093) {
           mi.a(38);
-          ue.a((byte) 102);
+          BufferedFile.a((byte) 102);
           return;
         }
-        ue.a((byte) 102);
+        BufferedFile.a((byte) 102);
     }
 
     mi() {

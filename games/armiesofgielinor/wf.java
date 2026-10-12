@@ -42,7 +42,7 @@ abstract class wf extends iv {
         on.field_n = param5;
         lk.field_p = param0;
         wl.field_E = param1;
-        ms.field_t = param4;
+        DualLinkedNode.field_t = param4;
         this.f((byte) -51);
         df.l(0);
     }
@@ -110,7 +110,7 @@ abstract class wf extends iv {
           if (gk.field_K != 0) {
             return var2;
           }
-          ms.e(116);
+          DualLinkedNode.e(116);
           return var2;
         }
         if (var2 != 1) {
@@ -124,7 +124,7 @@ abstract class wf extends iv {
         } else {
           if (p.field_b == 11 &&
             gk.field_K == 0) {
-            ms.e(116);
+            DualLinkedNode.e(116);
           }
         }
         return var2;
@@ -231,7 +231,7 @@ abstract class wf extends iv {
             }
           }
           if (2 == var4) {
-            var5_intLifetime1 = vo.a((byte) -46, CombatPresentation.i(-4938), cn.e(488997228), lb.b(0), this.field_n, qp.e((byte) -127), jr.a(-1));
+            var5_intLifetime1 = DiskCacheWorker.a((byte) -46, CombatPresentation.i(-4938), cn.e(488997228), lb.b(0), this.field_n, qp.e((byte) -127), jr.a(-1));
             if (var5_intLifetime1 != -1) {
               CampaignMenuEntry.a(lk.field_r, -14, br.field_b, var5_intLifetime1);
               lk.field_r = null;
@@ -254,7 +254,7 @@ abstract class wf extends iv {
                   lk.field_r = null;
                 } else {
                   ck.field_b = dc.field_o;
-                  ms.e(112);
+                  DualLinkedNode.e(112);
                   bl.field_b = false;
                   p.field_b = 10;
                 }
@@ -554,7 +554,7 @@ abstract class wf extends iv {
             gk.field_K == 0 &&
             11 == p.field_b &&
             !MovementPresentation.j(-11)) {
-            ms.e(112);
+            DualLinkedNode.e(112);
           }
           if (gk.field_K != -1 &&
             gk.field_K != 0) {
@@ -630,10 +630,10 @@ abstract class wf extends iv {
           }
           ps.field_u = DamageEvent.a(1, mo.field_c, (byte) 119, false, true);
           CombatPresentation.field_M = DamageEvent.a(1, wl.field_E, (byte) 122, false, true);
-          h.field_g = DamageEvent.a(1, ms.field_t, (byte) 127, false, true);
+          h.field_g = DamageEvent.a(1, DualLinkedNode.field_t, (byte) 127, false, true);
           gg.field_K = ps.field_u;
           f.field_E = 2;
-          ks.field_A = CombatPresentation.field_M;
+          ResourceRequest.field_A = CombatPresentation.field_M;
         }
         if (f.field_E == 2) {
           if (null != nf.field_Nb &&

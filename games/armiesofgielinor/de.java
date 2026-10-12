@@ -390,7 +390,7 @@ final class de {
                     return stackIn_209_0;
                   }
                   if (var7.getUnitCategory(0) != 4) {
-                    stackIn_212_0 = bc.field_h;
+                    stackIn_212_0 = SectorCacheStore.field_h;
                     return stackIn_212_0;
                   }
                 }

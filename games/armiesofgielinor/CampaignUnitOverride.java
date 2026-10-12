@@ -659,7 +659,7 @@ final class CampaignUnitOverride {
                 }
                 var2 = NodeIterator.a(50, "spectate_xs_game");
                 if (null != var2) {
-                  bc.field_k = uu.a(var2, (byte) -94);
+                  SectorCacheStore.field_k = uu.a(var2, (byte) -94);
                 }
                 var2 = NodeIterator.a(50, "hide_players_in_xs_game");
                 if (null != var2) {
@@ -759,7 +759,7 @@ final class CampaignUnitOverride {
                 }
                 var2 = NodeIterator.a(50, "privatechat_friend_notlisted");
                 if (var2 != null) {
-                  vo.field_h = uu.a(var2, (byte) 28);
+                  DiskCacheWorker.field_h = uu.a(var2, (byte) 28);
                 }
                 var2 = NodeIterator.a(param0 ^ -100, "chatviewscrolledup");
                 if (var2 != null) {
@@ -863,7 +863,7 @@ final class CampaignUnitOverride {
                 }
                 var2 = NodeIterator.a(param0 + 132, "gameopt_needchanging1");
                 if (null != var2) {
-                  ue.field_e = uu.a(var2, (byte) 41);
+                  BufferedFile.field_e = uu.a(var2, (byte) 41);
                 }
                 var2 = NodeIterator.a(param0 + 132, "gameopt_needchanging2");
                 if (null != var2) {
@@ -1073,7 +1073,7 @@ final class CampaignUnitOverride {
                 }
                 var2 = NodeIterator.a(50, "login");
                 if (null != var2) {
-                  ks.field_v = uu.a(var2, (byte) -124);
+                  ResourceRequest.field_v = uu.a(var2, (byte) -124);
                 }
                 var2 = NodeIterator.a(param0 + 132, "goback");
                 if (null != var2) {
@@ -1293,7 +1293,7 @@ final class CampaignUnitOverride {
                 }
                 var2 = NodeIterator.a(50, "openinpopupwindow");
                 if (var2 != null) {
-                  nh.field_I = uu.a(var2, (byte) -104);
+                  DiskCacheRequest.field_I = uu.a(var2, (byte) -104);
                 }
                 var2 = NodeIterator.a(50, "create");
                 if (null != var2) {
@@ -1481,7 +1481,7 @@ final class CampaignUnitOverride {
                 }
                 var2 = NodeIterator.a(50, "login_username");
                 if (null != var2) {
-                  ui.field_h = uu.a(var2, (byte) 22);
+                  DualNodeDeque.field_h = uu.a(var2, (byte) 22);
                 }
                 var2 = NodeIterator.a(50, "login_email");
                 if (var2 != null) {
@@ -1525,7 +1525,7 @@ final class CampaignUnitOverride {
                 }
                 var2 = NodeIterator.a(50, "create_displayname_tooltip");
                 if (var2 != null) {
-                  ms.field_m = uu.a(var2, (byte) 60);
+                  DualLinkedNode.field_m = uu.a(var2, (byte) 60);
                 }
                 var2 = NodeIterator.a(50, "create_displayname_hint");
                 if (var2 != null) {
@@ -1673,7 +1673,7 @@ final class CampaignUnitOverride {
                 }
                 var2 = NodeIterator.a(50, "invalid_name");
                 if (null != var2) {
-                  bc.field_d = uu.a(var2, (byte) 56);
+                  SectorCacheStore.field_d = uu.a(var2, (byte) 56);
                 }
                 var2 = NodeIterator.a(50, "cannot_add_yourself");
                 if (null != var2) {
@@ -1855,7 +1855,7 @@ final class CampaignUnitOverride {
                 }
                 var2 = NodeIterator.a(50, "unpacking_graphics");
                 if (var2 != null) {
-                  bc.field_i = uu.a(var2, (byte) 74);
+                  SectorCacheStore.field_i = uu.a(var2, (byte) 74);
                 }
                 var2 = NodeIterator.a(50, "unpacking_models");
                 if (null != var2) {
@@ -2290,7 +2290,7 @@ final class CampaignUnitOverride {
                 }
                 var2 = NodeIterator.a(param0 ^ -100, "orbcoins_colon");
                 if (null != var2) {
-                  vo.field_e = uu.a(var2, (byte) 113);
+                  DiskCacheWorker.field_e = uu.a(var2, (byte) 113);
                 }
                 var2 = NodeIterator.a(param0 ^ -100, "achieved_colon_description");
                 if (null != var2) {
@@ -2658,7 +2658,7 @@ final class CampaignUnitOverride {
                 }
                 var2 = NodeIterator.a(50, "fs_button_accept");
                 if (null != var2) {
-                  ui.field_e = uu.a(var2, (byte) 5);
+                  DualNodeDeque.field_e = uu.a(var2, (byte) 5);
                 }
                 var2 = NodeIterator.a(param0 ^ -100, "fs_accept_afteraccept");
                 if (null != var2) {

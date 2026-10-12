@@ -100,11 +100,11 @@ final class MatchConditionRegistry {
             244 >= param0) {
             for (var4_int = 5; var4_int >= 0; var4_int--) {
               var5 = nd.field_d[var4_int];
-              if (bc.field_j[var5].length <= param2[var5]) {
+              if (SectorCacheStore.field_j[var5].length <= param2[var5]) {
                 param2[var5] = 0;
               }
               if (param2[var5] > -1) {
-                if (bc.field_j[var5][param2[var5]].containsOpaquePixel(dp.field_Vb[var5][0], dp.field_Vb[var5][1], param1, param0)) {
+                if (SectorCacheStore.field_j[var5][param2[var5]].containsOpaquePixel(dp.field_Vb[var5][0], dp.field_Vb[var5][1], param1, param0)) {
                   stackIn_19_0 = var5;
                   return stackIn_19_0;
                 }

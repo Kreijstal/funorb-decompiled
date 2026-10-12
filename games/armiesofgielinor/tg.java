@@ -174,7 +174,7 @@ final class tg {
 
     final static void a(kl param0, int param1, boolean param2, kl param3) {
         try {
-          bk.a(param2, fp.field_Lb, eq.field_h, LeaderEscortCondition.field_f, ms.field_k, -106, ke.field_e, im.field_x, qc.field_e, ri.field_b, PreparedAction.field_o, rd.field_e);
+          bk.a(param2, fp.field_Lb, eq.field_h, LeaderEscortCondition.field_f, DualLinkedNode.field_k, -106, ke.field_e, im.field_x, qc.field_e, ri.field_b, PreparedAction.field_o, rd.field_e);
           dh.field_n = fk.a("chatfilter", (byte) -125, param3, "lobby");
           co.field_k[0] = ar.field_v;
           co.field_k[1] = wg.field_a;
@@ -468,13 +468,13 @@ final class tg {
         if (param1 <= 38) {
           tg.a(-18);
           if (param0 == 17) {
-            Spell.field_b = new i(this.field_g.field_V, this.field_g.field_D, this.field_g.field_gb, this.field_g.field_ob, param2, jm.field_b, UnitModelPreview.field_m, uc.field_b, eq.field_h, hs.field_H, ms.field_k, this.field_m, this.field_f);
+            Spell.field_b = new i(this.field_g.field_V, this.field_g.field_D, this.field_g.field_gb, this.field_g.field_ob, param2, jm.field_b, UnitModelPreview.field_m, uc.field_b, eq.field_h, hs.field_H, DualLinkedNode.field_k, this.field_m, this.field_f);
             return true;
           }
           return false;
         }
         if (param0 == 17) {
-          Spell.field_b = new i(this.field_g.field_V, this.field_g.field_D, this.field_g.field_gb, this.field_g.field_ob, param2, jm.field_b, UnitModelPreview.field_m, uc.field_b, eq.field_h, hs.field_H, ms.field_k, this.field_m, this.field_f);
+          Spell.field_b = new i(this.field_g.field_V, this.field_g.field_D, this.field_g.field_gb, this.field_g.field_ob, param2, jm.field_b, UnitModelPreview.field_m, uc.field_b, eq.field_h, hs.field_H, DualLinkedNode.field_k, this.field_m, this.field_f);
           return true;
         }
         return false;

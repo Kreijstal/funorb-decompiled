@@ -304,7 +304,7 @@ abstract class nl extends kb implements gw {
           wb.field_a = param4;
           cj.field_j = param3;
           gt.field_f = param12;
-          ei.field_h = param14;
+          BoundedFile.field_h = param14;
           mi.field_r = param0;
           jn.field_b = param8;
           ju.field_a = param9;
@@ -313,12 +313,12 @@ abstract class nl extends kb implements gw {
           bp.field_d = fk.a("ratedgame", (byte) -125, param7, "lobby");
           mo.field_g = fk.a("opentome", (byte) -124, param7, "lobby");
           lm.field_h = fk.a("allowspectators", (byte) -125, param7, "lobby");
-          ks.field_u = new String[5];
-          ks.field_u[1] = pc.field_i;
-          ks.field_u[3] = ek.field_f;
-          ks.field_u[2] = kd.field_L;
-          ks.field_u[0] = AttackEvent.field_D;
-          ks.field_u[4] = io.field_p;
+          ResourceRequest.field_u = new String[5];
+          ResourceRequest.field_u[1] = pc.field_i;
+          ResourceRequest.field_u[3] = ek.field_f;
+          ResourceRequest.field_u[2] = kd.field_L;
+          ResourceRequest.field_u[0] = AttackEvent.field_D;
+          ResourceRequest.field_u[4] = io.field_p;
           nf.field_Kb = new je(0L, (je) null);
           rj.field_F = new je(0L, te.field_p, su.field_b);
           CampaignProgress.field_a = new je(0L, br.field_e, rh.field_g);
@@ -410,33 +410,33 @@ abstract class nl extends kb implements gw {
           KingBlackDragonEvent.field_z[0] = new je(0L, fp.field_Lb, et.field_c);
           pu.field_k[0] = new nf[6];
           for (var17_int = 0; var17_int < 5; var17_int++) {
-            pu.field_k[0][var17_int + 1] = new nf(0L, eb.field_a, (je) null, ms.field_k, rs.field_p[var17_int], ks.field_u[var17_int]);
+            pu.field_k[0][var17_int + 1] = new nf(0L, eb.field_a, (je) null, DualLinkedNode.field_k, rs.field_p[var17_int], ResourceRequest.field_u[var17_int]);
           }
           if (lm.field_e.length >= 2) {
             KingBlackDragonEvent.field_z[1] = new je(0L, fp.field_Lb, ep.field_h);
             array$0 = new nf[1 + lm.field_e.length];
             pu.field_k[1] = array$0;
-            pu.field_k[1][0] = new nf(0L, eb.field_a, (je) null, ms.field_k, (RgbSprite) null, ki.field_a);
+            pu.field_k[1][0] = new nf(0L, eb.field_a, (je) null, DualLinkedNode.field_k, (RgbSprite) null, ki.field_a);
             for (var17_intLifetime1 = 0; lm.field_e.length > var17_intLifetime1; var17_intLifetime1++) {
-              pu.field_k[1][var17_intLifetime1 + 1] = new nf(0L, eb.field_a, (je) null, ms.field_k, (RgbSprite) null, Integer.toString(lm.field_e[var17_intLifetime1]));
+              pu.field_k[1][var17_intLifetime1 + 1] = new nf(0L, eb.field_a, (je) null, DualLinkedNode.field_k, (RgbSprite) null, Integer.toString(lm.field_e[var17_intLifetime1]));
             }
           }
           KingBlackDragonEvent.field_z[2] = new je(0L, fp.field_Lb, GameEvent.field_p);
-          pu.field_k[2] = new nf[]{new nf(0L, eb.field_a, (je) null, ms.field_k, (RgbSprite) null, ki.field_a), new nf(0L, eb.field_a, (je) null, ms.field_k, lm.field_h[0], LeaderEscortCondition.field_e), new nf(0L, eb.field_a, (je) null, ms.field_k, lm.field_h[1], po.field_b)};
-          if (ei.field_h > 1) {
+          pu.field_k[2] = new nf[]{new nf(0L, eb.field_a, (je) null, DualLinkedNode.field_k, (RgbSprite) null, ki.field_a), new nf(0L, eb.field_a, (je) null, DualLinkedNode.field_k, lm.field_h[0], LeaderEscortCondition.field_e), new nf(0L, eb.field_a, (je) null, DualLinkedNode.field_k, lm.field_h[1], po.field_b)};
+          if (BoundedFile.field_h > 1) {
             KingBlackDragonEvent.field_z[3] = new je(0L, fp.field_Lb, wp.field_u);
-            array$1 = new nf[1 + ei.field_h];
+            array$1 = new nf[1 + BoundedFile.field_h];
             pu.field_k[3] = array$1;
-            pu.field_k[3][0] = new nf(0L, eb.field_a, (je) null, ms.field_k, (RgbSprite) null, ki.field_a);
-            for (var17_intLifetime2 = 0; var17_intLifetime2 < ei.field_h; var17_intLifetime2++) {
-              pu.field_k[3][1 + var17_intLifetime2] = new nf(0L, eb.field_a, (je) null, ms.field_k, (RgbSprite) null, gt.field_f[var17_intLifetime2]);
+            pu.field_k[3][0] = new nf(0L, eb.field_a, (je) null, DualLinkedNode.field_k, (RgbSprite) null, ki.field_a);
+            for (var17_intLifetime2 = 0; var17_intLifetime2 < BoundedFile.field_h; var17_intLifetime2++) {
+              pu.field_k[3][1 + var17_intLifetime2] = new nf(0L, eb.field_a, (je) null, DualLinkedNode.field_k, (RgbSprite) null, gt.field_f[var17_intLifetime2]);
             }
           }
           for (var17_intLifetime3 = 0; param1 > var17_intLifetime3; var17_intLifetime3++) {
             KingBlackDragonEvent.field_z[var17_intLifetime3 + 4] = new je(0L, fp.field_Lb, ob.field_M[var17_intLifetime3]);
             array$2 = new nf[rn.a(255, (int) mi.field_r[var17_intLifetime3]) + 1];
             pu.field_k[var17_intLifetime3 + 4] = array$2;
-            pu.field_k[var17_intLifetime3 + 4][0] = new nf(0L, eb.field_a, (je) null, ms.field_k, (RgbSprite) null, ki.field_a);
+            pu.field_k[var17_intLifetime3 + 4][0] = new nf(0L, eb.field_a, (je) null, DualLinkedNode.field_k, (RgbSprite) null, ki.field_a);
             for (var18 = 0; var18 < (mi.field_r[var17_intLifetime3] & 255); var18++) {
               if (jn.field_b == null) {
                 var19_ref = null;
@@ -456,7 +456,7 @@ abstract class nl extends kb implements gw {
               } else {
                 var20 = null;
               }
-              pu.field_k[var17_intLifetime3 + 4][1 + var18] = new nf(0L, eb.field_a, (je) null, ms.field_k, (RgbSprite) (var19_ref), (String) (var20));
+              pu.field_k[var17_intLifetime3 + 4][1 + var18] = new nf(0L, eb.field_a, (je) null, DualLinkedNode.field_k, (RgbSprite) (var19_ref), (String) (var20));
             }
           }
           for (var17_intLifetime4 = 0; param1 + 4 > var17_intLifetime4; var17_intLifetime4++) {
@@ -490,7 +490,7 @@ abstract class nl extends kb implements gw {
           for (var18Lifetime2 = 0; var18Lifetime2 < param1 + 4; var18Lifetime2++) {
             if ((var18Lifetime2 != 1 ||
               !(2 > lm.field_e.length)) && (var18Lifetime2 != 3 ||
-              !(ei.field_h <= 1))) {
+              !(BoundedFile.field_h <= 1))) {
               vc.field_l.a(KingBlackDragonEvent.field_z[var18Lifetime2], 86);
               for (var19 = 0; var19 < pu.field_k[var18Lifetime2].length; var19++) {
                 if (pu.field_k[var18Lifetime2][var19] != null) {

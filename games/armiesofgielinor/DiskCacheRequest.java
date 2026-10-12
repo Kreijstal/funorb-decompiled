@@ -1,16 +1,16 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class nh extends ks {
+final class DiskCacheRequest extends ResourceRequest {
     static String field_H;
     static boolean[] unitProjectionVariants;
-    byte[] field_F;
+    byte[] bytes;
     static RgbSprite[] field_G;
     static String field_J;
     static String field_I;
     static volatile int field_B;
-    int field_L;
-    bc field_C;
+    int operation;
+    SectorCacheStore store;
     static int field_E;
     static tp field_K;
 
@@ -61,12 +61,12 @@ final class nh extends ks {
         }
     }
 
-    final byte[] d(byte param0) {
-        int var2 = 125 / ((param0 + 35) / 45);
-        if (this.field_x) {
+    final byte[] getBytes(byte obfuscationGuard) {
+        int var2 = 125 / ((obfuscationGuard + 35) / 45);
+        if (this.pending) {
           throw new RuntimeException();
         }
-        return this.field_F;
+        return this.bytes;
     }
 
     public static void h(int param0) {
@@ -81,14 +81,14 @@ final class nh extends ks {
         field_K = null;
     }
 
-    nh() {
+    DiskCacheRequest() {
     }
 
-    final int g(int param0) {
-        if (this.field_x) {
+    final int getProgress(int obfuscationGuard) {
+        if (this.pending) {
           return 0;
         }
-        if (param0 != 0) {
+        if (obfuscationGuard != 0) {
           field_J = (String) null;
           return 100;
         }

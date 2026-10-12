@@ -21,7 +21,7 @@ final class na extends tj implements mf, he {
         kb var2 = new kb(iu.field_u, var1, (qo) null);
         this.field_O = new fw(ul.field_f, (qo) null);
         this.field_L = new fw(ac.field_s, (qo) null);
-        this.field_P.field_s = ms.field_m;
+        this.field_P.field_s = DualLinkedNode.field_m;
         this.field_P.a((byte) 16, new uj(this.field_P));
         this.field_O.field_I = false;
         this.field_O.field_k = (kh) ((Object) new nu());

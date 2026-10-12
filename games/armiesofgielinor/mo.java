@@ -87,7 +87,7 @@ final class mo {
         this.field_a = rh.field_e;
         this.field_b = MatchConditionEntry.field_k;
         this.field_k = BestScoreStrategy.field_k;
-        this.field_f = ui.field_b;
+        this.field_f = DualNodeDeque.field_b;
         this.field_m = gp.field_b;
         this.field_q = qd.field_L;
         this.field_v = ut.field_eb;

@@ -26,7 +26,7 @@ final class pf {
           SphinxActionRequest.field_v.a(true, -6226, en.field_F, AiUnitPlanner.field_s);
           SphinxActionRequest.field_v.d((byte) -117);
           while (Unit.i((byte) 107)) {
-            SphinxActionRequest.field_v.a(rs.field_q, ui.field_i, 80);
+            SphinxActionRequest.field_v.a(rs.field_q, DualNodeDeque.field_i, 80);
           }
           if (param0 >= 10) {
             return;

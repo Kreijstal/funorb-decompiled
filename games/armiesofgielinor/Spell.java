@@ -19,8 +19,8 @@ abstract class Spell {
           if (null != rd.field_j) {
             rd.field_j.eventPresenters.b(87);
           }
-          if (null != bc.field_a) {
-            bc.field_a.eventPresenters.b(93);
+          if (null != SectorCacheStore.field_a) {
+            SectorCacheStore.field_a.eventPresenters.b(93);
           }
           Throwable var3 = (Throwable) null;
           af.a((Throwable) null, -63, param0);

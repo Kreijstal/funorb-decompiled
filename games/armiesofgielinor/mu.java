@@ -8,7 +8,7 @@ final class mu {
     static int field_d;
     static String field_e;
     static int field_f;
-    static ue[] field_b;
+    static BufferedFile[] field_b;
 
     final static boolean a(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
         if (param4 != 5138823) {

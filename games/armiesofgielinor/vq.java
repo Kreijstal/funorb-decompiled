@@ -206,7 +206,7 @@ final class vq {
             TileMetadata.field_h[1] = 0;
             mi.field_G = new int[2];
             wp.field_v[0] = c.field_d;
-            wp.field_v[1] = ui.field_e;
+            wp.field_v[1] = DualNodeDeque.field_e;
             mi.field_G[1] = 2;
             wp.field_v[5] = "";
             mi.field_G[0] = 5;

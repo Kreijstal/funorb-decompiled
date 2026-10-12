@@ -148,7 +148,7 @@ final class fq {
         try {
           var8 = (CharSequence) ((Object) param3);
           if (!hg.a((byte) -113, var8)) {
-            stackIn_3_0 = bc.field_d;
+            stackIn_3_0 = SectorCacheStore.field_d;
             return stackIn_3_0;
           }
           if (th.field_a != 2) {
@@ -161,7 +161,7 @@ final class fq {
             return stackIn_10_0;
           }
           var7.unlink(-124);
-          var7.c((byte) -76);
+          var7.unlinkSecondary((byte) -76);
           vg.field_p = vg.field_p - 1;
           var5 = vl.outgoingPacket;
           var5.writeCipheredOpcode(32161, param0);

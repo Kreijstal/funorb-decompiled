@@ -4,7 +4,7 @@
 final class le extends java.awt.Canvas {
     static cg field_b;
     static RgbSprite[] field_c;
-    static ue field_d;
+    static BufferedFile field_d;
     private java.awt.Component field_a;
 
     public static void a(int param0) {

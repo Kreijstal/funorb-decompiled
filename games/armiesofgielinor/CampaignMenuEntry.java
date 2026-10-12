@@ -124,7 +124,7 @@ final class CampaignMenuEntry extends IntrusiveNode {
           } else {
             if (param3 >= 100 &&
               param3 <= 105) {
-              p.field_a = ei.a(2, param2);
+              p.field_a = BoundedFile.a(2, param2);
               return;
             }
             p.field_a = DisplacedUnitMarker.a(-1, param3, param0);

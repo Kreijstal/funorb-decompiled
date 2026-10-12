@@ -164,7 +164,7 @@ final class qd extends tj implements nq, he {
     final static void a(kl param0, byte param1, uv param2, int param3) {
         try {
           fw.field_C = tp.b(-74) * param3 / 1000;
-          ui.a((byte) -124, param0);
+          DualNodeDeque.a((byte) -124, param0);
           jj.a(-93, param0);
           lg.a(32381, param0);
           gs.a(54);
@@ -195,8 +195,8 @@ final class qd extends tj implements nq, he {
           var4 = new lk(ArmiesOfGielinor.field_J, 0, 0, 0, 0, 16777215, -1, 3, 0, ArmiesOfGielinor.field_J.field_H, -1, 2147483647, true);
           this.field_F = new hv(var7, var4);
           this.field_F.field_s = "";
-          this.field_F.a(nh.field_I, false, 0);
-          this.field_F.a(nh.field_I, false, 1);
+          this.field_F.a(DiskCacheRequest.field_I, false, 0);
+          this.field_F.a(DiskCacheRequest.field_I, false, 1);
           this.field_F.field_l = -40 + this.field_l;
           this.field_F.field_x = (qo) (this);
           this.field_F.a(this.field_l - 40, 9567, 26, var3);

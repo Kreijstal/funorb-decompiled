@@ -10,7 +10,7 @@ final class SpellMenuGroup {
     String label;
     SpellMenuGroup parent;
     String description;
-    static ue field_b;
+    static BufferedFile field_b;
     SpellMenuGroup[] children;
     static String field_l;
     static String field_d;
@@ -180,7 +180,7 @@ final class SpellMenuGroup {
         field_d = null;
         field_b = null;
         if (param0 > -57) {
-          field_b = (ue) null;
+          field_b = (BufferedFile) null;
         }
     }
 

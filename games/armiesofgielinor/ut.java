@@ -457,13 +457,13 @@ final class ut extends sf implements he {
           if (vs.field_j) {
             rd.field_j = null;
             vs.field_j = false;
-            bc.field_a = null;
+            SectorCacheStore.field_a = null;
             ef.b(-1);
           }
           if (pv.field_c) {
             pq.field_f = null;
             UnitInfoPopup.field_u = new NodeDeque();
-            var10 = ei.field_e;
+            var10 = BoundedFile.field_e;
             var7 = var10;
             var4 = var7;
             var1 = var4;

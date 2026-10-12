@@ -245,9 +245,9 @@ final class jg extends IntrusiveNode {
               var12.field_Rb.field_Eb = 2;
               var12.field_Pb = new je(0L, IsaacRandom.field_i);
               var12.a(var12.field_Pb, 85);
-              var12.field_Ib = new je(0L, ms.field_k);
+              var12.field_Ib = new je(0L, DualLinkedNode.field_k);
               var12.a(var12.field_Ib, 78);
-              var12.field_sc = new je(0L, ms.field_k);
+              var12.field_sc = new je(0L, DualLinkedNode.field_k);
               var12.a(var12.field_sc, param0 ^ 47);
               var12.field_Wb = new je(0L, eq.field_h);
               var12.a(var12.field_Wb, 51);
@@ -537,7 +537,7 @@ final class jg extends IntrusiveNode {
               if (1 == var12.field_Tb) {
                 var34 = AiInfluenceMap.field_j;
               } else {
-                var34 = ks.field_u[var12.field_Tb];
+                var34 = ResourceRequest.field_u[var12.field_Tb];
               }
               ad.field_I = vu.field_P + " - " + var34;
             }

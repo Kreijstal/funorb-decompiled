@@ -43,9 +43,9 @@ final class wd {
         try {
           if (param5 >= 0 &&
             param3 >= 0 &&
-            param5 < ks.field_y &&
+            param5 < ResourceRequest.field_y &&
             param3 < ef.field_c) {
-            var6_int = ks.field_y * param3 + param5;
+            var6_int = ResourceRequest.field_y * param3 + param5;
             var7 = vs.field_e[var6_int];
             var8 = RegionAnchor.a(16711680, param3, var6_int, param5);
             if (param2 != -128) {
@@ -170,7 +170,7 @@ final class wd {
           if (rs.field_t == 2 &&
             !vu.j(6)) {
             if (!jj.a(62, wm.field_b)) {
-              var2 = fo.a(4800, vo.field_h, new String[]{qd.field_G});
+              var2 = fo.a(4800, DiskCacheWorker.field_h, new String[]{qd.field_G});
               if (var10 != 0) {
                 var2 = fo.a(4800, pt.field_gb, new String[]{qd.field_G});
               }

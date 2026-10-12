@@ -58,7 +58,7 @@ final class ta extends nl {
         RuntimeException decompiledCaughtException = null;
         try {
           var6 = new mo(param1, param3, param5, param0, param4);
-          bc.a(param2 ^ -19023, var6);
+          SectorCacheStore.a(param2 ^ -19023, var6);
           if (param2 == -18119) {
             return;
           }

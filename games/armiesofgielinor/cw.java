@@ -90,13 +90,13 @@ final class cw {
                 if (param5 == 0 ||
                   (!(var8Lifetime1 >= jf.field_C.movementPlanner.movementCosts[-CipherPacketBuffer.currentBattlefield.mapWidth + param0]) ||
                   jf.field_C.selectedUnit.movementSpent) &&
-                  (var7Lifetime1 & jf.field_C.movementPlanner.field_e[param0 - ks.field_y]) == 0) {
+                  (var7Lifetime1 & jf.field_C.movementPlanner.field_e[param0 - ResourceRequest.field_y]) == 0) {
                   SoftwareRaster.d(-40 + param2, param1, param2, -20 + param1, 16711680, var6_int);
                 }
                 if (param5 == -1 + ef.field_c ||
-                  (!(var8Lifetime1 >= jf.field_C.movementPlanner.movementCosts[ks.field_y + param0]) ||
+                  (!(var8Lifetime1 >= jf.field_C.movementPlanner.movementCosts[ResourceRequest.field_y + param0]) ||
                   jf.field_C.selectedUnit.movementSpent) &&
-                  (jf.field_C.movementPlanner.field_e[ks.field_y + param0] & var7Lifetime1) == 0) {
+                  (jf.field_C.movementPlanner.field_e[ResourceRequest.field_y + param0] & var7Lifetime1) == 0) {
                   SoftwareRaster.d(40 + param2, param1, param2, param1 + 20, 16711680, var6_int);
                 }
                 if (0 == param4 ||
@@ -105,7 +105,7 @@ final class cw {
                   (var7Lifetime1 & jf.field_C.movementPlanner.field_e[param0 - 1]) == 0) {
                   SoftwareRaster.d(param2 - 40, param1, param2, 20 + param1, 16711680, var6_int);
                 }
-                if (param4 != -1 + ks.field_y) {
+                if (param4 != -1 + ResourceRequest.field_y) {
                   if (var8Lifetime1 >= jf.field_C.movementPlanner.movementCosts[1 + param0] &&
                     !jf.field_C.selectedUnit.movementSpent) {
                     return;

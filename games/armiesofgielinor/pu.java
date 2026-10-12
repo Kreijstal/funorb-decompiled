@@ -94,7 +94,7 @@ final class pu {
           if (null != oi.field_d) {
             var3 = (of) (oi.field_d.a((byte) 66));
             while (var3 != null) {
-              var3.c((byte) -76);
+              var3.unlinkSecondary((byte) -76);
               var3 = (of) (oi.field_d.c(1));
             }
             oi.field_d = null;

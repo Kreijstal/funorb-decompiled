@@ -2676,7 +2676,7 @@ final class CombatPresentation implements EventPresentation {
             field_N = (String) null;
           }
           if (du.field_d == oh.field_L) {
-            stackIn_5_0 = ue.field_a;
+            stackIn_5_0 = BufferedFile.field_a;
             return stackIn_5_0;
           }
           if (du.field_d == mh.field_b) {

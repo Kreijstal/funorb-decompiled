@@ -7,11 +7,11 @@ abstract class bp {
     static je[] field_j;
     static int field_e;
     static String field_k;
-    ui field_b;
+    DualNodeDeque field_b;
     static int field_c;
-    ui field_n;
-    ui field_f;
-    ui field_g;
+    DualNodeDeque field_n;
+    DualNodeDeque field_f;
+    DualNodeDeque field_g;
     PacketBuffer field_o;
     int field_l;
     long field_r;
@@ -31,22 +31,22 @@ abstract class bp {
     final jf a(int param0, boolean param1, int param2, byte param3, boolean param4) {
         long var6 = ((long)param2 << 32) + (long)param0;
         jf var8 = new jf();
-        var8.field_q = var6;
+        var8.secondaryKey = var6;
         var8.field_B = param3;
         if (param1) {
           field_c = 46;
         }
-        var8.field_z = param4 ? true : false;
+        var8.requestFlag = param4 ? true : false;
         if (!param4) {
           if (!(this.b(-120) < 20)) {
             throw new RuntimeException();
           }
-          this.field_f.a(var8, false);
+          this.field_f.addLast(var8, false);
         } else {
           if (this.a(116) >= 20) {
             throw new RuntimeException();
           }
-          this.field_b.a(var8, false);
+          this.field_b.addLast(var8, false);
         }
         return var8;
     }
@@ -74,14 +74,14 @@ abstract class bp {
         if (param0 >= -105) {
           return -114;
         }
-        return this.field_f.a(30578) + this.field_g.a(30578);
+        return this.field_f.size(30578) + this.field_g.size(30578);
     }
 
     final int a(int param0) {
         if (param0 < 84) {
           return 64;
         }
-        return this.field_b.a(30578) + this.field_n.a(30578);
+        return this.field_b.size(30578) + this.field_n.size(30578);
     }
 
     final static void a(int param0, int param1, int param2) {
@@ -133,10 +133,10 @@ abstract class bp {
     abstract void a(Object param0, boolean param1, int param2);
 
     bp() {
-        this.field_b = new ui();
-        this.field_n = new ui();
-        this.field_f = new ui();
-        this.field_g = new ui();
+        this.field_b = new DualNodeDeque();
+        this.field_n = new DualNodeDeque();
+        this.field_f = new DualNodeDeque();
+        this.field_g = new DualNodeDeque();
         this.field_o = new PacketBuffer(6);
         this.field_q = 0;
         this.field_p = 0;

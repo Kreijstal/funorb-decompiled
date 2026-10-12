@@ -59,12 +59,12 @@ final class dq {
             no.field_P.pixelHeight = SoftwareRaster.height;
             ku.field_J.b();
             SoftwareRaster.b();
-            gq.b(bc.field_j[3][0], 0, 0, param1);
+            gq.b(SectorCacheStore.field_j[3][0], 0, 0, param1);
             fe.c(DeployRequest.a(param2, (byte) 42), uh.field_e[3][0] >> 1, 20 + (uh.field_e[3][1] >> 1), 2, true);
             no.field_P.b();
             ku.field_J.h(param0, param5);
           } else {
-            gq.b(bc.field_j[3][0], param0, param5, param1);
+            gq.b(SectorCacheStore.field_j[3][0], param0, param5, param1);
             fe.c(DeployRequest.a(param2, (byte) 42), (uh.field_e[3][0] >> 1) + param0, 20 + (uh.field_e[3][1] >> 1) + param5, 2, true);
           }
           int var6_int = 67 % ((param4 - 48) / 53);

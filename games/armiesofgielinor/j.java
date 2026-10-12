@@ -138,7 +138,7 @@ final class j {
           wb.field_b[7] = kw.field_N;
           wb.field_b[8] = pu.field_h;
           wb.field_b[3] = l.field_g;
-          wb.field_b[11] = nh.field_J;
+          wb.field_b[11] = DiskCacheRequest.field_J;
           wb.field_b[19] = PlayerProfile.field_e;
           wb.field_b[9] = jn.field_e;
           wb.field_b[20] = CorpseConditionMarker.field_x;

@@ -26,14 +26,14 @@ final class CombatViewTransition {
         if (0 > param1) {
           return param2;
         }
-        if (ks.field_y <= param0) {
+        if (ResourceRequest.field_y <= param0) {
           return param2;
         }
         if (param1 >= ef.field_c) {
           return param2;
         }
         if (param3 < -91) {
-          return CampaignMenuEntry.field_u[param0 + ks.field_y * param1];
+          return CampaignMenuEntry.field_u[param0 + ResourceRequest.field_y * param1];
         }
         return -54;
     }

@@ -1714,7 +1714,7 @@ final class TutorialController {
                                                                                     eo.field_a = null;
                                                                                     b.field_n = null;
                                                                                   }
-                                                                                  var6 = ui.field_c;
+                                                                                  var6 = DualNodeDeque.field_c;
                                                                                   var7 = param0 ? 1 : 0;
                                                                                   CipherPacketBuffer.a(var7 != 0, var6, 1, jt.field_a);
                                                                                   if (var9 == 0) {
@@ -2448,7 +2448,7 @@ final class TutorialController {
             stackIn_25_0 = wh.field_a;
             stackIn_25_1 = pg.playerProfile.getUnlockLevel(0);
             stackIn_26_2 = !(hi.field_j < 2);
-            if (ue.a(stackIn_25_0, stackIn_25_1, stackIn_26_2, var2_int, -1208926000, ei.field_e[0])) {
+            if (BufferedFile.a(stackIn_25_0, stackIn_25_1, stackIn_26_2, var2_int, -1208926000, BoundedFile.field_e[0])) {
               ah.localCoat.setPart(73, var2_int, wh.field_a);
               ub.$cfr$intArgs$a$6d836999ad61(121, im.field_v[9]);
               if (var5 == 0) {
@@ -2779,7 +2779,7 @@ final class TutorialController {
           if (param0) {
             stackIn_8_0 = i.field_Nb;
           } else {
-            stackIn_8_0 = ei.field_e;
+            stackIn_8_0 = BoundedFile.field_e;
           }
           var5 = stackIn_8_0;
           var6 = 0;
@@ -2890,8 +2890,8 @@ final class TutorialController {
             if (var14 >= var13) {
               var10 = MatchConditionEntry.a(385, (byte) 94);
               rs.field_n.b(rd.field_h + ps.field_D[var6], db.a(true, 272), var10, 16777215, -1);
-              rs.field_n.b(vo.field_e, db.a(true, 392), var10, 16777215, -1);
-              var14 = db.a(true, rs.field_n.a(vo.field_e) + 392);
+              rs.field_n.b(DiskCacheWorker.field_e, db.a(true, 392), var10, 16777215, -1);
+              var14 = db.a(true, rs.field_n.a(DiskCacheWorker.field_e) + 392);
               break;
             }
             rs.field_n.b(var11[var14], db.a(true, 272), var10, 16777215, -1);
@@ -3135,22 +3135,22 @@ final class TutorialController {
         Object var2 = null;
         try {
           var2 = null;
-          if (0 != ui.field_c &&
+          if (0 != DualNodeDeque.field_c &&
             0 != jt.field_a &&
-            ui.field_c != 15 &&
+            DualNodeDeque.field_c != 15 &&
             15 != jt.field_a) {
-            if (ui.field_c != 1 &&
+            if (DualNodeDeque.field_c != 1 &&
               jt.field_a != 1 &&
-              ui.field_c != 24 &&
+              DualNodeDeque.field_c != 24 &&
               jt.field_a != 24) {
-              if (ui.field_c != 2 &&
+              if (DualNodeDeque.field_c != 2 &&
                 2 != jt.field_a &&
-                ui.field_c != 3 &&
+                DualNodeDeque.field_c != 3 &&
                 3 != jt.field_a &&
-                4 != ui.field_c &&
+                4 != DualNodeDeque.field_c &&
                 jt.field_a != 4) {
-                if (ui.field_c == 21 ||
-                  ui.field_c == 23) {
+                if (DualNodeDeque.field_c == 21 ||
+                  DualNodeDeque.field_c == 23) {
                   var2 = lb.field_c;
                 }
               } else {
@@ -4207,16 +4207,16 @@ final class TutorialController {
             stackIn_4_0 = stackOut_3_0;
             if (var10 == 0) {
               if (stackIn_4_0) {
-                ue.field_k[var7].f(db.a(true, var8 - 19), MatchConditionEntry.a(-22 + var9, (byte) 94), 128);
+                BufferedFile.field_k[var7].f(db.a(true, var8 - 19), MatchConditionEntry.a(-22 + var9, (byte) 94), 128);
                 na.field_F = 2 + var7;
               }
               if (~li.field_q == ~(var7 - 1)) {
-                ue.field_k[var7].f(db.a(true, var8 - 19), MatchConditionEntry.a(var9 - 22, (byte) 94), 256 - var4);
-                ue.field_k[var7].f(db.a(true, -19 + var8), MatchConditionEntry.a(-22 + var9, (byte) 94), 256 - var4);
+                BufferedFile.field_k[var7].f(db.a(true, var8 - 19), MatchConditionEntry.a(var9 - 22, (byte) 94), 256 - var4);
+                BufferedFile.field_k[var7].f(db.a(true, -19 + var8), MatchConditionEntry.a(-22 + var9, (byte) 94), 256 - var4);
               }
               if (~(var7 - 1) == ~MoveAttackAction.field_s) {
-                ue.field_k[var7].f(db.a(true, -19 + var8), MatchConditionEntry.a(var9 - 22, (byte) 94), 256 - var5);
-                ue.field_k[var7].f(db.a(true, -19 + var8), MatchConditionEntry.a(var9 - 22, (byte) 94), 256 - var5);
+                BufferedFile.field_k[var7].f(db.a(true, -19 + var8), MatchConditionEntry.a(var9 - 22, (byte) 94), 256 - var5);
+                BufferedFile.field_k[var7].f(db.a(true, -19 + var8), MatchConditionEntry.a(var9 - 22, (byte) 94), 256 - var5);
               }
               UnitModelPreview.field_d[var7].g(db.a(true, var8), MatchConditionEntry.a(var9, (byte) 94));
               gt.field_c[var7].g(db.a(true, -12 + var8), MatchConditionEntry.a(-17 + var9, (byte) 94));
@@ -4617,7 +4617,7 @@ final class TutorialController {
                   rs.field_q == 1 &&
                   br.field_f[82]) {
                   RevivalEvent.d((byte) 122);
-                  var3_ref_int__ = ei.field_e;
+                  var3_ref_int__ = BoundedFile.field_e;
                   var3_ref_int__[0] = oe.c(var3_ref_int__[0], 2);
                   ai.field_P.addLast((byte) -119, (IntrusiveNode) (new jg(0)));
                   UnitInfoPopup.field_u.addLast((byte) -119, (IntrusiveNode) (new iw(0, 255, 0, 0, 0, 0)));
@@ -4634,7 +4634,7 @@ final class TutorialController {
                   }
                   if ((decompiledSharedTail0) && (jt.field_a != 10 &&
                     22 != jt.field_a)) {
-                    CipherPacketBuffer.a(false, ui.field_c, 1, ui.field_c);
+                    CipherPacketBuffer.a(false, DualNodeDeque.field_c, 1, DualNodeDeque.field_c);
                   }
                 }
                 if (rs.field_q == 11 &&
@@ -5083,7 +5083,7 @@ final class TutorialController {
           if (jt.field_a != 7) {
             if (jt.field_a == 22 ||
               this.tutorialStage == 21) {
-              MoveEvent.campaignMenu.a(rs.field_q, (int) ui.field_i, 2);
+              MoveEvent.campaignMenu.a(rs.field_q, (int) DualNodeDeque.field_i, 2);
               decompiledFrameRemainder0 = (var3 != 0);
             }
             if (decompiledFrameRemainder0) {
@@ -5403,7 +5403,7 @@ final class TutorialController {
             this.selectionState = (UiSelectionState) null;
           }
           if (this.tutorialStage != 9) {
-            stackIn_7_0 = ei.field_e;
+            stackIn_7_0 = BoundedFile.field_e;
           } else {
             stackIn_7_0 = i.field_Nb;
           }

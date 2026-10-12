@@ -249,7 +249,7 @@ final class OwnerChangeEvent extends GameEvent {
             decompiledFrameRemainder0 = !(param1.equals(ts.field_a));
           }
           if (decompiledFrameRemainder0) {
-            if (!ei.field_b) {
+            if (!BoundedFile.field_b) {
               if (NodeIterator.field_c <= ev.field_a) {
                 stackIn_17_0 = (NodeIterator.field_c + ps.field_E > ev.field_a) ? 1 : 0;
               } else {
@@ -262,7 +262,7 @@ final class OwnerChangeEvent extends GameEvent {
             if (param1 == null) {
               ev.field_a = 0;
             } else {
-              if (ei.field_b) {
+              if (BoundedFile.field_b) {
                 ev.field_a = NodeIterator.field_c;
               } else {
                 if (var2_int != 0) {
@@ -274,15 +274,15 @@ final class OwnerChangeEvent extends GameEvent {
             }
             cc.field_b = of.field_Ib;
             if (param1 != null) {
-              ei.field_b = false;
+              BoundedFile.field_b = false;
             } else {
               if (var2_int != 0) {
-                ei.field_b = true;
+                BoundedFile.field_b = true;
               }
             }
             lq.field_e = me.field_e;
           }
-          if (!ei.field_b &&
+          if (!BoundedFile.field_b &&
             ev.field_a < NodeIterator.field_c &&
             lk.field_f) {
             cc.field_b = of.field_Ib;
@@ -292,9 +292,9 @@ final class OwnerChangeEvent extends GameEvent {
           ts.field_a = param1;
           me.field_e = param0;
           of.field_Ib = -1;
-          if (ei.field_b &&
+          if (BoundedFile.field_b &&
             ce.field_J == ev.field_a) {
-            ei.field_b = false;
+            BoundedFile.field_b = false;
             ev.field_a = 0;
             return;
           }

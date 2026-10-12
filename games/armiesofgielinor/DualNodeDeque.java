@@ -1,30 +1,30 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ui {
+final class DualNodeDeque {
     static int field_g;
     static String field_e;
     static String field_k;
     static int field_c;
     static char field_i;
     static String field_h;
-    private ms field_d;
+    private DualLinkedNode sentinel;
     static int field_f;
     static boolean field_b;
     static String field_a;
-    private ms field_j;
+    private DualLinkedNode traversalCursor;
 
-    final ms c(int param0) {
-        ms var2 = this.field_j;
-        if (var2 == this.field_d) {
-          this.field_j = null;
+    final DualLinkedNode next(int obfuscationGuard) {
+        DualLinkedNode var2 = this.traversalCursor;
+        if (var2 == this.sentinel) {
+          this.traversalCursor = null;
           return null;
         }
-        this.field_j = var2.field_s;
-        if (param0 == 24) {
+        this.traversalCursor = var2.secondaryNext;
+        if (obfuscationGuard == 24) {
           return var2;
         }
-        return (ms) null;
+        return (DualLinkedNode) null;
     }
 
     final static TileMetadata readTaggedTileMetadata(CipherPacketBuffer packet, int recordBitLength, int obfuscationGuard) {
@@ -61,13 +61,13 @@ final class ui {
         }
     }
 
-    final ms b(int param0) {
-        ms var2 = this.field_d.field_s;
-        if (param0 != 11) {
-          return (ms) null;
+    final DualLinkedNode popFirst(int obfuscationGuard) {
+        DualLinkedNode var2 = this.sentinel.secondaryNext;
+        if (obfuscationGuard != 11) {
+          return (DualLinkedNode) null;
         }
-        if (this.field_d != var2) {
-          var2.c((byte) -76);
+        if (this.sentinel != var2) {
+          var2.unlinkSecondary((byte) -76);
           return var2;
         }
         return null;
@@ -83,53 +83,53 @@ final class ui {
         field_h = null;
     }
 
-    final int a(int param0) {
-        ms var3 = null;
+    final int size(int obfuscationGuard) {
+        DualLinkedNode var3 = null;
         int var4 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         int var2 = 0;
-        ms var3Lifetime1;
-        if (param0 == 30578) {
-          var3 = this.field_d.field_s;
-          while (this.field_d != var3) {
-            var3 = var3.field_s;
+        DualLinkedNode var3Lifetime1;
+        if (obfuscationGuard == 30578) {
+          var3 = this.sentinel.secondaryNext;
+          while (this.sentinel != var3) {
+            var3 = var3.secondaryNext;
             var2++;
           }
           return var2;
         }
         field_k = (String) null;
-        var3Lifetime1 = this.field_d.field_s;
-        while (this.field_d != var3Lifetime1) {
-          var3Lifetime1 = var3Lifetime1.field_s;
+        var3Lifetime1 = this.sentinel.secondaryNext;
+        while (this.sentinel != var3Lifetime1) {
+          var3Lifetime1 = var3Lifetime1.secondaryNext;
           var2++;
         }
         return var2;
     }
 
-    final void a(ms param0, boolean param1) {
+    final void addLast(DualLinkedNode node, boolean obfuscationGuard) {
         try {
-          if (null != param0.field_l) {
-            param0.c((byte) -76);
+          if (null != node.secondaryPrevious) {
+            node.unlinkSecondary((byte) -76);
           }
-          param0.field_s = this.field_d;
-          if (param1) {
+          node.secondaryNext = this.sentinel;
+          if (obfuscationGuard) {
             field_i = '￠';
           }
-          param0.field_l = this.field_d.field_l;
-          param0.field_l.field_s = param0;
-          param0.field_s.field_l = param0;
+          node.secondaryPrevious = this.sentinel.secondaryPrevious;
+          node.secondaryPrevious.secondaryNext = node;
+          node.secondaryNext.secondaryPrevious = node;
         } catch (RuntimeException runtimeException) {
-          throw ig.addExceptionContext((Throwable) ((Object) runtimeException), "ui.I(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) runtimeException), "ui.I(" + (node != null ? "{...}" : "null") + ',' + obfuscationGuard + ')');
         }
     }
 
-    final ms a(byte param0) {
-        ms var2 = this.field_d.field_s;
-        int var3 = 125 / ((param0 + 44) / 59);
-        if (var2 != this.field_d) {
-          this.field_j = var2.field_s;
+    final DualLinkedNode first(byte obfuscationGuard) {
+        DualLinkedNode var2 = this.sentinel.secondaryNext;
+        int var3 = 125 / ((obfuscationGuard + 44) / 59);
+        if (var2 != this.sentinel) {
+          this.traversalCursor = var2.secondaryNext;
           return var2;
         }
-        this.field_j = null;
+        this.traversalCursor = null;
         return null;
     }
 
@@ -314,7 +314,7 @@ final class ui {
           qs.a(param1.a("", 96, "headers.packvorbis"));
           var2 = qs.a(param1, "jagex logo2.packvorbis", "");
           if (param0 >= -102) {
-            ui.a(-11, -82, (byte) 79, 117, -17);
+            DualNodeDeque.a(-11, -82, (byte) 79, 117, -17);
           }
           var2.c();
         } catch (RuntimeException runtimeException) {
@@ -322,10 +322,10 @@ final class ui {
         }
     }
 
-    public ui() {
-        this.field_d = new ms();
-        this.field_d.field_l = this.field_d;
-        this.field_d.field_s = this.field_d;
+    public DualNodeDeque() {
+        this.sentinel = new DualLinkedNode();
+        this.sentinel.secondaryPrevious = this.sentinel;
+        this.sentinel.secondaryNext = this.sentinel;
     }
 
     static {

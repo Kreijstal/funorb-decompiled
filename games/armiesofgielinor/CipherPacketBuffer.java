@@ -213,10 +213,10 @@ final class CipherPacketBuffer extends PacketBuffer {
         }
         hi.field_i = null;
         CampaignResult.a(73);
-        ui.field_c = param3;
+        DualNodeDeque.field_c = param3;
         if (0 != param1) {
           if (param1 == 23) {
-            ui.field_c = 0;
+            DualNodeDeque.field_c = 0;
           }
           if (param1 != -10) {
             mu.field_a = new cg();
@@ -226,7 +226,7 @@ final class CipherPacketBuffer extends PacketBuffer {
             rq.field_p[jt.field_a].clearSelectionResources(true);
           }
         } else {
-          ui.field_c = 0;
+          DualNodeDeque.field_c = 0;
           TrianglePulse.a(-16147, 50, mp.field_Ob, true);
           if (param1 != 23) {
             if (param1 != -10) {
@@ -237,7 +237,7 @@ final class CipherPacketBuffer extends PacketBuffer {
               rq.field_p[jt.field_a].clearSelectionResources(true);
             }
           } else {
-            ui.field_c = 0;
+            DualNodeDeque.field_c = 0;
             if (param1 != -10) {
               mu.field_a = new cg();
               qc.field_j = 0;

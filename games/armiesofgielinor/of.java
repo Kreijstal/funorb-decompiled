@@ -29,11 +29,11 @@ final class of extends je {
 
     final boolean k(int param0) {
         if (param0 == 0) {
-          return !this.a((byte) -70) ? true : false;
+          return !this.isSecondaryLinked((byte) -70) ? true : false;
         }
         of var3 = (of) null;
         this.a(-15, (of) null);
-        return !this.a((byte) -70) ? true : false;
+        return !this.isSecondaryLinked((byte) -70) ? true : false;
     }
 
     final void a(byte param0, String param1, String param2) {

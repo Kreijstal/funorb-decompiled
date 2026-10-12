@@ -22,7 +22,7 @@ final class bl {
         if (param0 != 2) {
           field_f = false;
         }
-        if (ei.field_b) {
+        if (BoundedFile.field_b) {
           return null;
         }
         if (ev.field_a < NodeIterator.field_c) {
@@ -157,14 +157,14 @@ final class bl {
                     var23.field_Rb = qd.field_K;
                     var23.field_Kb = var5;
                   }
-                  var23.c((byte) -76);
+                  var23.unlinkSecondary((byte) -76);
                 }
               } else {
                 if (var2 == 7) {
                   var31 = (of) (SummonAction.field_u.first((byte) 106));
                   while (var31 != null) {
                     var31.unlink(122);
-                    var31.c((byte) -76);
+                    var31.unlinkSecondary((byte) -76);
                     var31 = (of) (SummonAction.field_u.next((byte) 123));
                   }
                   AnimationPlayer.field_a = 0;
@@ -190,14 +190,14 @@ final class bl {
                         } else {
                           var32.unlink(118);
                         }
-                        var32.c((byte) -76);
+                        var32.unlinkSecondary((byte) -76);
                       }
                     } else {
                       if (var2 == 10) {
                         var33 = (au) (qc.field_g.first((byte) 105));
                         while (var33 != null) {
                           var33.unlink(-112);
-                          var33.c((byte) -76);
+                          var33.unlinkSecondary((byte) -76);
                           var33 = (au) (qc.field_g.next((byte) 123));
                         }
                       } else {
@@ -258,7 +258,7 @@ final class bl {
                                       var14.field_Rb = qd.field_K;
                                       var14.field_Kb = var5;
                                     }
-                                    var29.c((byte) -76);
+                                    var29.unlinkSecondary((byte) -76);
                                     vu.field_M.field_Ub = vu.field_M.field_Ub - 1;
                                     break regionExit1;
                                   case 20:
@@ -343,7 +343,7 @@ final class bl {
             var3_ref_of = (of) (wl.field_F.first((byte) 93));
             while (var3_ref_of != null) {
               var3_ref_of.unlink(99);
-              var3_ref_of.c((byte) -76);
+              var3_ref_of.unlinkSecondary((byte) -76);
               var3_ref_of = (of) (wl.field_F.next((byte) 123));
             }
             var3_ref_of = (of) (oi.field_d.a((byte) 66));
@@ -366,7 +366,7 @@ final class bl {
             if (4 == var2) {
               var3 = ((PacketBuffer) ((Object) var1)).readUnsignedShort((byte) -104);
               vu.field_M = new au(tq.field_b);
-              vu.field_M.a(true, (long)var3);
+              vu.field_M.setSecondaryKey(true, (long)var3);
               TrianglePulse.a(vu.field_M, false, var1, 97);
               ph.field_d = 0L;
             } else {
@@ -387,7 +387,7 @@ final class bl {
               for (var3 = 0; var3 < CoatOfArms.field_d.length; var3++) {
                 CoatOfArms.field_d[var3] = ((PacketBuffer) ((Object) var1)).readByte((byte) -1);
               }
-              nh.field_E = ((PacketBuffer) ((Object) var1)).readUnsignedByte(0);
+              DiskCacheRequest.field_E = ((PacketBuffer) ((Object) var1)).readUnsignedByte(0);
               AiPlanningStrategy.field_b = ((PacketBuffer) ((Object) var1)).readUnsignedByte(0);
               for (var3 = 0; tg.field_d.length > var3; var3++) {
                 tg.field_d[var3] = ((PacketBuffer) ((Object) var1)).readByte((byte) -106);
@@ -455,11 +455,11 @@ final class bl {
         try {
           SummonEvent.field_B = param1;
           var9 = "";
-          nh.unitProjectionVariants = new boolean[ActionRequest.field_m.length];
+          DiskCacheRequest.unitProjectionVariants = new boolean[ActionRequest.field_m.length];
           for (var3 = param0; ActionRequest.field_m.length > var3; var3++) {
             array$0 = new kk[ActionRequest.field_m[var3].length];
             ActionRequest.unitModels[var3] = array$0;
-            nh.unitProjectionVariants[var3] = false;
+            DiskCacheRequest.unitProjectionVariants[var3] = false;
             var8 = ActionRequest.field_m[var3][0];
             var10 = hs.a(var8, 235, var9);
             var5 = var10;
@@ -468,7 +468,7 @@ final class bl {
                 pd.field_d = var10;
               }
               if (th.a(var10, -17900)) {
-                nh.unitProjectionVariants[var3] = true;
+                DiskCacheRequest.unitProjectionVariants[var3] = true;
               }
               if (null != var10.field_p) {
                 for (var6 = 0; var6 < var10.field_O; var6++) {

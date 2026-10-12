@@ -5,20 +5,20 @@ import java.io.*;
 
 final class hd implements Runnable {
     private boolean field_h;
-    ei field_r;
+    BoundedFile field_r;
     static String field_t;
     private hj field_l;
     private wo field_w;
     boolean field_e;
-    ei field_m;
+    BoundedFile field_m;
     private Object field_b;
-    ei[] field_c;
+    BoundedFile[] field_c;
     private static int field_k;
     private static String field_f;
     private fv field_q;
     private static String field_a;
     static String field_n;
-    ei field_d;
+    BoundedFile field_d;
     private Thread field_v;
     private static String field_i;
     private static volatile long field_p;
@@ -38,7 +38,7 @@ final class hd implements Runnable {
 
     final wo a(boolean param0, int param1, int param2, int param3, int param4) {
         if (!param0) {
-          this.field_c = (ei[]) null;
+          this.field_c = (BoundedFile[]) null;
         }
         return this.a((param4 << 16) + param3, (param2 << 16) + param1, (Object) null, (byte) 81, 6);
     }
@@ -57,15 +57,15 @@ final class hd implements Runnable {
         return this.a(0, 0, param0, (byte) 102, 19);
     }
 
-    private final static ei a(boolean param0, String param1, int param2, String param3) {
+    private final static BoundedFile a(boolean param0, String param1, int param2, String param3) {
         try {
           int var6 = 0;
-          ei stackIn_12_0 = null;
+          BoundedFile stackIn_12_0 = null;
           Throwable decompiledCaughtException = null;
           String var4 = null;
           String[] var5 = null;
           String var7 = null;
-          ei var8 = null;
+          BoundedFile var8 = null;
           Exception var8_ref = null;
           if (33 != param2) {
             if (34 != param2) {
@@ -82,7 +82,7 @@ final class hd implements Runnable {
             if (!(var7.length() > 0) ||
               new File(var7).exists()) {
               try {
-                var8 = new ei(new File(var7, var4), "rw", 10000L);
+                var8 = new BoundedFile(new File(var7, var4), "rw", 10000L);
                 stackIn_12_0 = var8;
                 return stackIn_12_0;
               } catch (java.lang.Exception decompiledCaughtParameter0) {
@@ -147,7 +147,7 @@ final class hd implements Runnable {
           }
           if (null != this.field_r) {
             try {
-              this.field_r.b(783);
+              this.field_r.close(783);
             } catch (java.io.IOException decompiledCaughtParameter1) {
               decompiledCaughtException = decompiledCaughtParameter1;
               var2_ref2 = (IOException) (Object) decompiledCaughtException;
@@ -155,7 +155,7 @@ final class hd implements Runnable {
           }
           if (this.field_d != null) {
             try {
-              this.field_d.b(783);
+              this.field_d.close(783);
             } catch (java.io.IOException decompiledCaughtParameter2) {
               decompiledCaughtException = decompiledCaughtParameter2;
               var2_ref2 = (IOException) (Object) decompiledCaughtException;
@@ -165,7 +165,7 @@ final class hd implements Runnable {
             for (var2_int = 0; this.field_c.length > var2_int; var2_int++) {
               if (this.field_c[var2_int] != null) {
                 try {
-                  this.field_c[var2_int].b(783);
+                  this.field_c[var2_int].close(783);
                 } catch (java.io.IOException decompiledCaughtParameter3) {
                   decompiledCaughtException = decompiledCaughtParameter3;
                   var3 = (IOException) (Object) decompiledCaughtException;
@@ -175,7 +175,7 @@ final class hd implements Runnable {
           }
           if (this.field_m != null) {
             try {
-              this.field_m.b(783);
+              this.field_m.close(783);
             } catch (java.io.IOException decompiledCaughtParameter4) {
               decompiledCaughtException = decompiledCaughtParameter4;
               var2_ref2 = (IOException) (Object) decompiledCaughtException;
@@ -235,7 +235,7 @@ final class hd implements Runnable {
           ThreadDeath var2_ref = null;
           Throwable var2_ref2 = null;
           InterruptedException var3 = null;
-          ei var3_ref = null;
+          BoundedFile var3_ref = null;
           int var3_int = 0;
           Exception var3_ref2 = null;
           ug var3_ref3 = null;
@@ -588,12 +588,12 @@ final class hd implements Runnable {
         }
         qi.a(field_k, field_i, 1);
         if (this.field_e) {
-          this.field_m = new ei(qi.a("random.dat", field_k, 39, (String) null), "rw", 25L);
-          this.field_r = new ei(qi.a(true, "main_file_cache.dat2"), "rw", 314572800L);
-          this.field_d = new ei(qi.a(true, "main_file_cache.idx255"), "rw", 1048576L);
-          this.field_c = new ei[param2];
+          this.field_m = new BoundedFile(qi.a("random.dat", field_k, 39, (String) null), "rw", 25L);
+          this.field_r = new BoundedFile(qi.a(true, "main_file_cache.dat2"), "rw", 314572800L);
+          this.field_d = new BoundedFile(qi.a(true, "main_file_cache.idx255"), "rw", 1048576L);
+          this.field_c = new BoundedFile[param2];
           for (var5_int = 0; param2 > var5_int; var5_int++) {
-            this.field_c[var5_int] = new ei(qi.a(true, "main_file_cache.idx" + var5_int), "rw", 1048576L);
+            this.field_c[var5_int] = new BoundedFile(qi.a(true, "main_file_cache.idx" + var5_int), "rw", 1048576L);
           }
           if (this.field_h) {
             try {

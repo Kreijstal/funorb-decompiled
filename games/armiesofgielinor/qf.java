@@ -35,7 +35,7 @@ final class qf {
           er.field_a = param6;
           LeaderEscortCondition.field_i = param7;
           ai.field_T = (bp) ((Object) new ae());
-          ou.field_h = new vo(param8);
+          ou.field_h = new DiskCacheWorker(param8);
           oi.field_c = new dd(ai.field_T, ou.field_h);
         } catch (RuntimeException runtimeException) {
           throw ig.addExceptionContext((Throwable) ((Object) runtimeException), "qf.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + (param8 != null ? "{...}" : "null") + ')');

@@ -181,8 +181,8 @@ abstract class wl extends tj {
         if (null != rd.field_j) {
           rd.field_j.b(0, param1);
         }
-        if (null != bc.field_a) {
-          bc.field_a.b(0, param1);
+        if (null != SectorCacheStore.field_a) {
+          SectorCacheStore.field_a.b(0, param1);
         }
         fe.b(0, 0, so.field_b.field_a, so.field_b.field_g, dq.field_i, nd.field_b, 0, 0);
         if (var2 != 0) {

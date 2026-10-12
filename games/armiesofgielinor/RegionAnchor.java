@@ -38,7 +38,7 @@ final class RegionAnchor extends IntrusiveNode {
             var4_int = TutorialLayout.field_g[1 + var6] | -2147483648;
           }
           if (jf.field_C.selectedUnit != null) {
-            if (param2 == ks.field_y * jf.field_C.selectedUnit.tileY + jf.field_C.selectedUnit.tileX) {
+            if (param2 == ResourceRequest.field_y * jf.field_C.selectedUnit.tileY + jf.field_C.selectedUnit.tileX) {
               var4_int = 16777215 | var5;
             } else {
               if (!jf.field_C.movementPlanner.field_w) {
@@ -132,9 +132,9 @@ final class RegionAnchor extends IntrusiveNode {
               }
             }
             if (jf.field_C.field_lc) {
-              var6 = -jf.field_C.selectedUnit.tileX - ks.field_y * jf.field_C.selectedUnit.tileY + param2;
-              if (var6 == ks.field_y ||
-                -ks.field_y == var6 ||
+              var6 = -jf.field_C.selectedUnit.tileX - ResourceRequest.field_y * jf.field_C.selectedUnit.tileY + param2;
+              if (var6 == ResourceRequest.field_y ||
+                -ResourceRequest.field_y == var6 ||
                 1 == var6 ||
                 var6 == -1) {
                 var4_int = var5 | 16777215;

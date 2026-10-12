@@ -80,7 +80,7 @@ final class CampaignMenu {
           var4 = var3.playerSlot;
           var5 = rd.field_j.battlefield.playerTurnCounts[var4];
           if (~var5 < obfuscationGuard) {
-            vo.reportCampaignTurn(false, 1, var5, var3);
+            DiskCacheWorker.reportCampaignTurn(false, 1, var5, var3);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -145,11 +145,11 @@ final class CampaignMenu {
           if (rd.field_j != null) {
             rd.field_j.A(111);
           }
-          if (null != bc.field_a) {
-            bc.field_a.A(111);
+          if (null != SectorCacheStore.field_a) {
+            SectorCacheStore.field_a.A(111);
           }
           rd.field_j = null;
-          bc.field_a = null;
+          SectorCacheStore.field_a = null;
           System.gc();
           vk.field_e[0] = new RgbSprite(vc.field_m.a("campaign_1.jpg", -105, ""), (java.awt.Component) ((Object) ll.p(0)));
           vk.field_e[1] = new RgbSprite(vc.field_m.a("campaign_2.jpg", 13, ""), (java.awt.Component) ((Object) ll.p(0)));
@@ -170,9 +170,9 @@ final class CampaignMenu {
             CampaignMenu.d((byte) -46);
           }
           DeployAction.field_D = new RgbSprite[3];
-          DeployAction.field_D[0] = nh.a("takenicon_zamorak", "campaign", iw.field_l, false);
-          DeployAction.field_D[1] = nh.a("takenicon_saradomin", "campaign", iw.field_l, false);
-          DeployAction.field_D[2] = nh.a("takenicon_guthix", "campaign", iw.field_l, false);
+          DeployAction.field_D[0] = DiskCacheRequest.a("takenicon_zamorak", "campaign", iw.field_l, false);
+          DeployAction.field_D[1] = DiskCacheRequest.a("takenicon_saradomin", "campaign", iw.field_l, false);
+          DeployAction.field_D[2] = DiskCacheRequest.a("takenicon_guthix", "campaign", iw.field_l, false);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -1462,7 +1462,7 @@ final class CampaignMenu {
           this.selectedMissionEntry = null;
           if (this.selectedCampaignEntry.entryId == -1) {
             var2 = ku.getStoredQuicksave(obfuscationGuard + 86);
-            if (!ei.a(var2.campaignIndex, obfuscationGuard + 11906) &&
+            if (!BoundedFile.a(var2.campaignIndex, obfuscationGuard + 11906) &&
               rf.a(27875)) {
               PaletteRegionMap.field_i = bn.field_g;
               CipherPacketBuffer.a(false, 11, obfuscationGuard ^ 1, jt.field_a);
@@ -2031,7 +2031,7 @@ final class CampaignMenu {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
         try {
-          if (!ei.a(campaignIndex, 11906) &&
+          if (!BoundedFile.a(campaignIndex, 11906) &&
             rf.a(27875)) {
             PaletteRegionMap.field_i = bn.field_g;
             CipherPacketBuffer.a(false, 11, 1, jt.field_a);

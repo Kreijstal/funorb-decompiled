@@ -416,7 +416,7 @@ class je extends im {
         var11 = SoftwareRaster.clipBottom;
         SoftwareRaster.b(this.field_V, this.field_D, this.field_V + this.field_gb, this.field_D + this.field_ob);
         var12 = param1 ? 1 : 0;
-        if (!bc.field_e &&
+        if (!SectorCacheStore.field_e &&
           param0 &&
           DeployEvent.field_A != 0 &&
           SoftwareRaster.clipLeft <= iu.field_t &&
@@ -449,7 +449,7 @@ class je extends im {
           }
         }
         if (var12 != 0) {
-          bc.field_e = true;
+          SectorCacheStore.field_e = true;
         }
         if (this.field_jb) {
           bl.field_f = true;
@@ -598,7 +598,7 @@ class je extends im {
           for (var6 = 0; 4 + tq.field_b > var6; var6++) {
             if ((var6 != 1 ||
               !(lm.field_e.length < 2)) && (3 != var6 ||
-              !(1 >= ei.field_h))) {
+              !(1 >= BoundedFile.field_h))) {
               if (!param1 &&
                 var6 == 3) {
                 var7 = KingBlackDragonEvent.field_z[var6];
@@ -690,7 +690,7 @@ class je extends im {
     }
 
     final void a(boolean param0, boolean param1) {
-        bc.field_e = !param1 ? true : false;
+        SectorCacheStore.field_e = !param1 ? true : false;
         bl.field_f = !param1 ? true : false;
         this.a(param0, false, 0, SoftwareRaster.height, SoftwareRaster.width, 0);
     }

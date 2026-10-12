@@ -835,7 +835,7 @@ final class BattleCharacter {
         if (null == this.model) {
           af.a((Throwable) null, 100, "BattleCharacter: no model found - model_index: " + this.modelIndex + " variation: " + var7);
         }
-        this.field_n = nh.unitProjectionVariants[this.modelIndex];
+        this.field_n = DiskCacheRequest.unitProjectionVariants[this.modelIndex];
         this.destinationX = param2 + param5;
         this.field_z = new int[lb.field_a];
         this.field_k = new int[lb.field_a];

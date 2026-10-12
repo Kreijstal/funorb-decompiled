@@ -1130,7 +1130,7 @@ final class MatchSetupPanel {
           }
           while (6 > var13) {
             var14 = nd.field_d[var13];
-            if (param2[var14] >= bc.field_j[var14].length) {
+            if (param2[var14] >= SectorCacheStore.field_j[var14].length) {
               param2[var14] = 0;
             }
             if (param2[var14] <= -1) {
@@ -1148,15 +1148,15 @@ final class MatchSetupPanel {
             } else {
               if (var14 != param3) {
                 if (var12_int == var14) {
-                  eo.a(dp.field_Vb[var14][0] + param8, 7829367, (byte) -80, bc.field_j[var14][param2[var14]], param10 + dp.field_Vb[var14][1]);
+                  eo.a(dp.field_Vb[var14][0] + param8, 7829367, (byte) -80, SectorCacheStore.field_j[var14][param2[var14]], param10 + dp.field_Vb[var14][1]);
                 }
               } else {
-                eo.a(dp.field_Vb[var14][0] + param8, 16777215, (byte) -88, bc.field_j[var14][param2[var14]], dp.field_Vb[var14][1] + param10);
+                eo.a(dp.field_Vb[var14][0] + param8, 16777215, (byte) -88, SectorCacheStore.field_j[var14][param2[var14]], dp.field_Vb[var14][1] + param10);
               }
               if (!param4) {
-                gq.b(bc.field_j[var14][param2[var14]], dp.field_Vb[var14][0] + param8, param10 + dp.field_Vb[var14][1], PreparedAction.field_q[param5[var14]]);
+                gq.b(SectorCacheStore.field_j[var14][param2[var14]], dp.field_Vb[var14][0] + param8, param10 + dp.field_Vb[var14][1], PreparedAction.field_q[param5[var14]]);
               } else {
-                gq.a(bc.field_j[var14][param2[var14]], dp.field_Vb[var14][0] + param8, param10 + dp.field_Vb[var14][1], 1);
+                gq.a(SectorCacheStore.field_j[var14][param2[var14]], dp.field_Vb[var14][0] + param8, param10 + dp.field_Vb[var14][1], 1);
               }
               if (var14 == 3 &&
                 !param4) {

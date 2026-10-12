@@ -1545,7 +1545,7 @@ final class GameplayController {
           this.field_s = null;
           if (l.activeCampaignMission != null) {
             turnsTaken = this.battlefield.playerTurnCounts[l.activeCampaignMission.playerSlot];
-            vo.reportCampaignTurn(localTurn != 0, 1, turnsTaken, l.activeCampaignMission);
+            DiskCacheWorker.reportCampaignTurn(localTurn != 0, 1, turnsTaken, l.activeCampaignMission);
             if (localTurn != 0) {
               stackIn_31_0 = (this.battlefield.unitLossCounts[l.activeCampaignMission.playerSlot] <= 0) ? 0 : 1;
               hasLostUnit = stackIn_31_0;
@@ -3588,7 +3588,7 @@ final class GameplayController {
             if (!jj.b((byte) -73)) {
               this.b(this.b(true), 123);
               if (null == rd.field_j &&
-                bc.field_a == null) {
+                SectorCacheStore.field_a == null) {
                 return;
               }
             }
@@ -6349,11 +6349,11 @@ final class GameplayController {
                     }
                     boolean decompiledSharedTail5 = (var9 != 0);
                     if (!decompiledSharedTail5) {
-                      var2 = fo.a(param0 ^ 4792, vo.field_f[0], new String[]{Integer.toString(1 + this.battlefield.playerTurnCounts[this.battlefield.currentPlayer]), Integer.toString(this.battlefield.turnLimit)});
+                      var2 = fo.a(param0 ^ 4792, DiskCacheWorker.field_f[0], new String[]{Integer.toString(1 + this.battlefield.playerTurnCounts[this.battlefield.currentPlayer]), Integer.toString(this.battlefield.turnLimit)});
                       decompiledSharedTail5 = (var20 != 0);
                     }
                     if (decompiledSharedTail5) {
-                      var2 = fo.a(param0 ^ 4792, vo.field_f[var9], new String[]{Integer.toString(this.battlefield.teamStructureCounts[this.battlefield.getPlayerTeamIndex(this.battlefield.currentPlayer, -1)][-1 + var9]), Integer.toString(this.battlefield.field_s[-1 + var9])});
+                      var2 = fo.a(param0 ^ 4792, DiskCacheWorker.field_f[var9], new String[]{Integer.toString(this.battlefield.teamStructureCounts[this.battlefield.getPlayerTeamIndex(this.battlefield.currentPlayer, -1)][-1 + var9]), Integer.toString(this.battlefield.field_s[-1 + var9])});
                     }
                   }
                   decompiledFrameRemainder10 = (~this.battlefield.rankedParticipants[0] != ~this.battlefield.currentPlayer);
@@ -6366,7 +6366,7 @@ final class GameplayController {
                     }
                     decompiledFrameRemainder10 = !(var9 <= 0);
                     if (decompiledFrameRemainder10) {
-                      var2 = fo.a(param0 ^ 4792, vo.field_f[var9 + 4], new String[]{Integer.toString(this.battlefield.teamStructureCounts[this.battlefield.rankedParticipants[0]][-1 + var9]), Integer.toString(this.battlefield.field_s[-1 + var9]), this.battlefield.teams[this.battlefield.rankedParticipants[0]].getTeamName(param0 ^ 123)});
+                      var2 = fo.a(param0 ^ 4792, DiskCacheWorker.field_f[var9 + 4], new String[]{Integer.toString(this.battlefield.teamStructureCounts[this.battlefield.rankedParticipants[0]][-1 + var9]), Integer.toString(this.battlefield.field_s[-1 + var9]), this.battlefield.teams[this.battlefield.rankedParticipants[0]].getTeamName(param0 ^ 123)});
                       decompiledFrameRemainder10 = (var20 != 0);
                     }
                   }
@@ -6379,11 +6379,11 @@ final class GameplayController {
                     }
                     boolean decompiledSharedTail4 = (var9 != 0);
                     if (!decompiledSharedTail4) {
-                      var2 = fo.a(4800, vo.field_f[0], new String[]{Integer.toString(1 + this.battlefield.playerTurnCounts[this.field_q]), Integer.toString(this.battlefield.turnLimit)});
+                      var2 = fo.a(4800, DiskCacheWorker.field_f[0], new String[]{Integer.toString(1 + this.battlefield.playerTurnCounts[this.field_q]), Integer.toString(this.battlefield.turnLimit)});
                       decompiledSharedTail4 = (var20 != 0);
                     }
                     if (decompiledSharedTail4) {
-                      var2 = fo.a(4800, vo.field_f[var9], new String[]{Integer.toString(this.battlefield.teamStructureCounts[this.battlefield.getPlayerTeamIndex(this.field_q, -1)][var9 - 1]), Integer.toString(this.battlefield.field_s[var9 - 1])});
+                      var2 = fo.a(4800, DiskCacheWorker.field_f[var9], new String[]{Integer.toString(this.battlefield.teamStructureCounts[this.battlefield.getPlayerTeamIndex(this.field_q, -1)][var9 - 1]), Integer.toString(this.battlefield.field_s[var9 - 1])});
                     }
                   }
                   if (this.battlefield.rankedParticipants[0] != this.battlefield.getPlayerTeamIndex(this.field_q, param0 - 121) &&
@@ -6394,7 +6394,7 @@ final class GameplayController {
                       var9++;
                     }
                     if (0 < var9) {
-                      var2 = fo.a(param0 ^ 4792, vo.field_f[4 + var9], new String[]{Integer.toString(this.battlefield.teamStructureCounts[this.battlefield.rankedParticipants[0]][-1 + var9]), Integer.toString(this.battlefield.field_s[var9 - 1]), this.battlefield.teams[this.battlefield.rankedParticipants[0]].getTeamName(3)});
+                      var2 = fo.a(param0 ^ 4792, DiskCacheWorker.field_f[4 + var9], new String[]{Integer.toString(this.battlefield.teamStructureCounts[this.battlefield.rankedParticipants[0]][-1 + var9]), Integer.toString(this.battlefield.field_s[var9 - 1]), this.battlefield.teams[this.battlefield.rankedParticipants[0]].getTeamName(3)});
                     }
                   }
                 }
@@ -6409,9 +6409,9 @@ final class GameplayController {
                 var14 = this.battlefield.collectedManaTarget;
                 var15_ref_String = Integer.toString(var13);
                 var16_ref_String = Integer.toString(var14);
-                if (null != vo.field_f ||
-                  !(vo.field_f.length <= 8)) {
-                  var2 = fo.a(param0 ^ 4792, vo.field_f[8], new String[]{var15_ref_String, var16_ref_String});
+                if (null != DiskCacheWorker.field_f ||
+                  !(DiskCacheWorker.field_f.length <= 8)) {
+                  var2 = fo.a(param0 ^ 4792, DiskCacheWorker.field_f[8], new String[]{var15_ref_String, var16_ref_String});
                   if (var20 != 0) {
                     var2 = null;
                   }
@@ -6650,7 +6650,7 @@ final class GameplayController {
                     if (!this.selectedUnit.movementSpent &&
                       0 != this.selectedUnit.attacksRemaining) {
                       if (this.selectedUnit.h(-13494)) {
-                        var2 = ui.field_k;
+                        var2 = DualNodeDeque.field_k;
                         if (var20 != 0) {
                           var2 = j.field_d;
                           var2 = kv.field_J;
@@ -7076,7 +7076,7 @@ final class GameplayController {
                         decompiledFrameRemainder13 = !(!this.movementPlanner.field_a);
                       }
                       if (decompiledFrameRemainder13) {
-                        var2 = ui.field_a;
+                        var2 = DualNodeDeque.field_a;
                         if ((0 == (4 & this.movementPlanner.field_e[var16])) &&
                           (decompiledFrameRemainder13 = (var17 != 0))) {
                           var2 = np.field_Ob;
@@ -7096,7 +7096,7 @@ final class GameplayController {
                         ~this.battlefield.tiles[var16].occupant.ownerPlayer != ~this.field_q ||
                         this.movementPlanner.field_a) {
                         if (this.selectedUnit.h(-13494)) {
-                          var2 = ui.field_k;
+                          var2 = DualNodeDeque.field_k;
                           decompiledFrameRemainder13 = (var20 != 0);
                         }
                         if (decompiledFrameRemainder13) {
@@ -8159,7 +8159,7 @@ final class GameplayController {
             break;
           }
           var7Lifetime1 = stackIn_195_0;
-          if (ms.field_o) {
+          if (DualLinkedNode.field_o) {
             param0 = 4;
             var7Lifetime1 = 1;
           }
@@ -11305,10 +11305,10 @@ final class GameplayController {
           if (!DamageEvent.g(79)) {
             this.battlefield.playerNames[0] = mv.field_d;
             if (var3 != 0) {
-              this.battlefield.playerNames[0] = ei.field_i;
+              this.battlefield.playerNames[0] = BoundedFile.field_i;
             }
           } else {
-            this.battlefield.playerNames[0] = ei.field_i;
+            this.battlefield.playerNames[0] = BoundedFile.field_i;
           }
           this.battlefield.playerNames[1] = vs.field_b;
           this.battlefield.playerCoats = new CoatOfArms[2];
@@ -11336,13 +11336,13 @@ final class GameplayController {
         int[] var4Lifetime1;
         int var5Lifetime1;
         try {
-          if (rb.a(param0, ei.field_e, 1)) {
+          if (rb.a(param0, BoundedFile.field_e, 1)) {
             return;
           }
           if (param1 != 30) {
             this.field_Rb = 37;
           }
-          var4 = ei.field_e;
+          var4 = BoundedFile.field_e;
           var5 = param0;
           var4[var5 >> 5] = oe.c(var4[var5 >> 5], 1 << rn.a(var5, 31));
           var4Lifetime1 = i.field_Nb;
@@ -11956,10 +11956,10 @@ final class GameplayController {
           if (!DamageEvent.g(76)) {
             this.battlefield.playerNames[0] = mv.field_d;
             if (var3 != 0) {
-              this.battlefield.playerNames[0] = ei.field_i;
+              this.battlefield.playerNames[0] = BoundedFile.field_i;
             }
           } else {
-            this.battlefield.playerNames[0] = ei.field_i;
+            this.battlefield.playerNames[0] = BoundedFile.field_i;
           }
           this.battlefield.playerNames[1] = vs.field_b;
           this.battlefield.playerCoats = new CoatOfArms[2];

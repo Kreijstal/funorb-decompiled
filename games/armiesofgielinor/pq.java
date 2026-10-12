@@ -20,7 +20,7 @@ final class pq implements java.awt.event.MouseListener, java.awt.event.MouseMoti
             return;
           }
           av.field_a = 0;
-          nh.field_B = -1;
+          DiskCacheRequest.field_B = -1;
           kl.field_i = -1;
           ku.field_I = true;
           return;
@@ -58,7 +58,7 @@ final class pq implements java.awt.event.MouseListener, java.awt.event.MouseMoti
           if (BattleCharacter.field_q != null) {
             av.field_a = 0;
             mq.field_Xb = param0.getX();
-            ei.field_d = param0.getY();
+            BoundedFile.field_d = param0.getY();
             vi.b(-112);
             if (javax.swing.SwingUtilities.isRightMouseButton(param0)) {
               jm.field_k = 2;
@@ -109,7 +109,7 @@ final class pq implements java.awt.event.MouseListener, java.awt.event.MouseMoti
             return;
           }
           av.field_a = 0;
-          nh.field_B = param0.getX();
+          DiskCacheRequest.field_B = param0.getX();
           kl.field_i = param0.getY();
           ku.field_I = true;
           return;
@@ -159,7 +159,7 @@ final class pq implements java.awt.event.MouseListener, java.awt.event.MouseMoti
             return;
           }
           av.field_a = 0;
-          nh.field_B = param0.getX();
+          DiskCacheRequest.field_B = param0.getX();
           kl.field_i = param0.getY();
           ku.field_I = true;
           return;
@@ -196,7 +196,7 @@ final class pq implements java.awt.event.MouseListener, java.awt.event.MouseMoti
         try {
           if (BattleCharacter.field_q != null) {
             av.field_a = 0;
-            nh.field_B = param0.getX();
+            DiskCacheRequest.field_B = param0.getX();
             kl.field_i = param0.getY();
             ku.field_I = true;
           }

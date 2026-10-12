@@ -111,7 +111,7 @@ final class ml extends je {
           if (param1.field_kc && (2 == param1.field_ac ||
             !(hi.field_j < 2))) {
             var8 = tn.field_Z;
-            var9 = fo.a(4800, bc.field_k, new String[]{param3});
+            var9 = fo.a(4800, SectorCacheStore.field_k, new String[]{param3});
             var8.field_i.a(10, var9, (byte) -118);
           }
           tn.field_Z.a((byte) 96);

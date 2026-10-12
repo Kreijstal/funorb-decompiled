@@ -186,7 +186,7 @@ class fn extends fw {
               var6 = hs.a(var5, param2 ^ -32697, var9);
               if (var6 != null) {
                 if (th.a(var6, -17900)) {
-                  nh.unitProjectionVariants[param1] = true;
+                  DiskCacheRequest.unitProjectionVariants[param1] = true;
                 }
                 if (null != var6.field_p) {
                   for (var7 = 0; var7 < var6.field_O; var7++) {

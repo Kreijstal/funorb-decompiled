@@ -248,7 +248,7 @@ final class eo {
           if (!ig.a(-8327)) {
             cd.field_e = param3;
             p.field_a = null;
-            ue.field_a = param6;
+            BufferedFile.field_a = param6;
             nm.field_z = param4;
             oh.field_L = du.field_d;
             ub.field_e = param0;

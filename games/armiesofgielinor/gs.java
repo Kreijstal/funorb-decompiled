@@ -17,10 +17,10 @@ final class gs implements kh {
           le.field_c = new RgbSprite[op.field_c[0].length];
           rq.a((byte) -56);
           for (var1_int = 0; var1_int < op.field_c[0].length; var1_int++) {
-            ds.field_a[var1_int] = new RgbSprite(vo.field_d.pixelWidth, vo.field_d.pixelHeight);
+            ds.field_a[var1_int] = new RgbSprite(DiskCacheWorker.field_d.pixelWidth, DiskCacheWorker.field_d.pixelHeight);
             le.field_c[var1_int] = new RgbSprite(im.field_y.pixelWidth, im.field_y.pixelHeight);
             ds.field_a[var1_int].b();
-            vo.field_d.d(0, 0, op.field_c[0][var1_int]);
+            DiskCacheWorker.field_d.d(0, 0, op.field_c[0][var1_int]);
             le.field_c[var1_int].b();
             im.field_y.b(0, 0, op.field_c[0][var1_int]);
           }
@@ -37,7 +37,7 @@ final class gs implements kh {
         int var3 = var2.position;
         var2.writeByte(1, 2);
         var2.writeBytes(CoatOfArms.field_d, 0, CoatOfArms.field_d.length, 113);
-        var2.writeByte(1, nh.field_E);
+        var2.writeByte(1, DiskCacheRequest.field_E);
         var2.writeByte(1, AiPlanningStrategy.field_b);
         var2.writeBytes(tg.field_d, 0, tg.field_d.length, -72);
         if (param1 != -8006) {

@@ -27,13 +27,13 @@ abstract class ActionRequest extends IntrusiveNode {
         if (param4 < 0) {
           return;
         }
-        if (param1 >= ks.field_y) {
+        if (param1 >= ResourceRequest.field_y) {
           return;
         }
         if (!(param4 < ef.field_c)) {
           return;
         }
-        int var6 = param4 * ks.field_y + param1;
+        int var6 = param4 * ResourceRequest.field_y + param1;
         rv.a(false, param5, param2, var6);
     }
 

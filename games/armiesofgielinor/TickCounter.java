@@ -1463,7 +1463,7 @@ final class TickCounter {
                 }
                 var2 = fk.a(false, "ACTION_NOATTACK");
                 if (var2 != null) {
-                  ui.field_a = uu.a(var2, (byte) 94);
+                  DualNodeDeque.field_a = uu.a(var2, (byte) 94);
                 }
                 var2 = fk.a(false, "ACTION_SUMMON");
                 if (null != var2) {
@@ -1483,7 +1483,7 @@ final class TickCounter {
                 }
                 var2 = fk.a(false, "ACTION_FIXED");
                 if (null != var2) {
-                  ui.field_k = uu.a(var2, (byte) -97);
+                  DualNodeDeque.field_k = uu.a(var2, (byte) -97);
                 }
                 var2 = fk.a(false, "WRONG_GROUND_PORTAL");
                 if (var2 != null) {
@@ -1737,35 +1737,35 @@ final class TickCounter {
                 }
                 var2 = fk.a(false, "GAME_STATS,0");
                 if (null != var2) {
-                  vo.field_f[0] = uu.a(var2, (byte) 42);
+                  DiskCacheWorker.field_f[0] = uu.a(var2, (byte) 42);
                 }
                 var2 = fk.a(false, "GAME_STATS,1");
                 if (null != var2) {
-                  vo.field_f[1] = uu.a(var2, (byte) -112);
+                  DiskCacheWorker.field_f[1] = uu.a(var2, (byte) -112);
                 }
                 var2 = fk.a(false, "GAME_STATS,2");
                 if (null != var2) {
-                  vo.field_f[2] = uu.a(var2, (byte) 48);
+                  DiskCacheWorker.field_f[2] = uu.a(var2, (byte) 48);
                 }
                 var2 = fk.a(false, "GAME_STATS,3");
                 if (var2 != null) {
-                  vo.field_f[3] = uu.a(var2, (byte) 97);
+                  DiskCacheWorker.field_f[3] = uu.a(var2, (byte) 97);
                 }
                 var2 = fk.a(false, "GAME_STATS,5");
                 if (var2 != null) {
-                  vo.field_f[5] = uu.a(var2, (byte) 88);
+                  DiskCacheWorker.field_f[5] = uu.a(var2, (byte) 88);
                 }
                 var2 = fk.a(false, "GAME_STATS,6");
                 if (null != var2) {
-                  vo.field_f[6] = uu.a(var2, (byte) -123);
+                  DiskCacheWorker.field_f[6] = uu.a(var2, (byte) -123);
                 }
                 var2 = fk.a(false, "GAME_STATS,7");
                 if (var2 != null) {
-                  vo.field_f[7] = uu.a(var2, (byte) -122);
+                  DiskCacheWorker.field_f[7] = uu.a(var2, (byte) -122);
                 }
                 var2 = fk.a(false, "GAME_STATS,8");
                 if (null != var2) {
-                  vo.field_f[8] = uu.a(var2, (byte) 57);
+                  DiskCacheWorker.field_f[8] = uu.a(var2, (byte) 57);
                 }
                 var2 = fk.a(false, "MANA_INCREASE");
                 if (null != var2) {
@@ -2501,7 +2501,7 @@ final class TickCounter {
                 }
                 var2 = fk.a(false, "TUT_PLAYER");
                 if (var2 != null) {
-                  ei.field_i = uu.a(var2, (byte) 4);
+                  BoundedFile.field_i = uu.a(var2, (byte) 4);
                 }
                 var2 = fk.a(false, "TUT_ENEMY");
                 if (null != var2) {
@@ -3315,7 +3315,7 @@ final class TickCounter {
                 }
                 var2 = fk.a(false, "LABEL_ERROR");
                 if (var2 != null) {
-                  nh.field_J = uu.a(var2, (byte) -123);
+                  DiskCacheRequest.field_J = uu.a(var2, (byte) -123);
                 }
                 var2 = fk.a(false, "LABEL_SPELLBOOK");
                 if (null != var2) {
@@ -3597,7 +3597,7 @@ final class TickCounter {
                 }
                 var2 = fk.a(false, "TUTWAIT");
                 if (null != var2) {
-                  bc.field_f = uu.a(var2, (byte) 82);
+                  SectorCacheStore.field_f = uu.a(var2, (byte) 82);
                 }
                 var2 = fk.a(false, "TUTEND");
                 if (var2 != null) {
@@ -4787,7 +4787,7 @@ final class TickCounter {
                 }
                 var2 = fk.a(false, "TTREEN_CAMOUFLAGE");
                 if (null != var2) {
-                  ms.field_p = uu.a(var2, (byte) -112);
+                  DualLinkedNode.field_p = uu.a(var2, (byte) -112);
                 }
                 var2 = fk.a(false, "TTREEN_RUNIC");
                 if (var2 != null) {
@@ -4811,7 +4811,7 @@ final class TickCounter {
                 }
                 var2 = fk.a(false, "TTREEN_AERIAL");
                 if (null != var2) {
-                  ms.field_n = uu.a(var2, (byte) 59);
+                  DualLinkedNode.field_n = uu.a(var2, (byte) 59);
                 }
                 var2 = fk.a(false, "TTREEN_FLAME");
                 if (var2 != null) {
@@ -4923,7 +4923,7 @@ final class TickCounter {
                 }
                 var2 = fk.a(false, "TTREED_ENCHANTED");
                 if (var2 != null) {
-                  nh.field_H = uu.a(var2, (byte) -126);
+                  DiskCacheRequest.field_H = uu.a(var2, (byte) -126);
                 }
                 var2 = fk.a(false, "TTREED_DRAGONSCALE");
                 if (null != var2) {
@@ -5189,7 +5189,7 @@ final class TickCounter {
                 }
                 var2 = fk.a(false, "TERROR_TALONSGROUNDED");
                 if (var2 != null) {
-                  bc.field_h = uu.a(var2, (byte) 22);
+                  SectorCacheStore.field_h = uu.a(var2, (byte) 22);
                 }
                 var2 = fk.a(false, "TERROR_FIRENOFLAME");
                 if (var2 != null) {
@@ -5707,15 +5707,15 @@ final class TickCounter {
                 var11 = var11 | 1;
               }
               if (0 == param2 ||
-                vs.field_e[-ks.field_y + param4].getExplicitOwner((byte) -96) != var10) {
+                vs.field_e[-ResourceRequest.field_y + param4].getExplicitOwner((byte) -96) != var10) {
                 var11 = var11 | 2;
               }
-              if (param6 == -1 + ks.field_y ||
+              if (param6 == -1 + ResourceRequest.field_y ||
                 ~vs.field_e[param4 + 1].getExplicitOwner((byte) -95) != ~var10) {
                 var11 = var11 | 4;
               }
               if (~(ef.field_c - 1) == ~param2 ||
-                vs.field_e[ks.field_y + param4].getExplicitOwner((byte) -55) != var10) {
+                vs.field_e[ResourceRequest.field_y + param4].getExplicitOwner((byte) -55) != var10) {
                 var11 = var11 | 8;
               }
               MatchSetupPanel.a(var10, false, 20 + param3, param7 + 40, var11, true);
@@ -5731,7 +5731,7 @@ final class TickCounter {
                   l.field_b[17].b(param7, -40 + param3, param0, param8);
                   mv.a(param7 + 20, (byte) -95, ug.field_b + param4, var11, param3);
                   if (var11 > -1) {
-                    ks.a(ActionRequest.unitModels[76][var11], false, -40 + param3, PaletteRegionMap.field_g, 128, 150, param7, (js) null, -10374);
+                    ResourceRequest.a(ActionRequest.unitModels[76][var11], false, -40 + param3, PaletteRegionMap.field_g, 128, 150, param7, (js) null, -10374);
                   }
                   l.field_b[16].b(param7, -40 + param3, param0, param8);
                 }
@@ -5739,7 +5739,7 @@ final class TickCounter {
                   if (var11 > -1) {
                     mv.a(param7 + 20, (byte) -74, param4 + ug.field_b, var11, param3);
                   }
-                  ks.a(ActionRequest.unitModels[76][var11], false, param3 - 40, PaletteRegionMap.field_g, 128, 150, param7, (js) null, -10374);
+                  ResourceRequest.a(ActionRequest.unitModels[76][var11], false, param3 - 40, PaletteRegionMap.field_g, 128, 150, param7, (js) null, -10374);
                 }
                 if ((var10 != 3 ||
                   var13 != 0) &&
@@ -5779,7 +5779,7 @@ final class TickCounter {
                         default:
                           break regionExit1;
                         case 6:
-                          ui.a(param2, param7, (byte) -107, param6, param3);
+                          DualNodeDeque.a(param2, param7, (byte) -107, param6, param3);
                           if (var13 == 0) {
                             break regionExit1;
                           }
