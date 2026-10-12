@@ -27,7 +27,7 @@ final class MatchConditionRegistry {
         var2 = initialCount;
         var3 = new String[this.conditionsByPlayer.length][];
         for (var4_int = 0; this.conditionsByPlayer.length > var4_int; var4_int++) {
-          array$2 = new String[this.conditionsByPlayer[var4_int].b(false)];
+          array$2 = new String[this.conditionsByPlayer[var4_int].size(false)];
           var3[var4_int] = array$2;
           var5_ref_bb = new NodeIterator(this.conditionsByPlayer[var4_int]);
           var6 = 0;

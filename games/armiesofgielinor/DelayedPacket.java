@@ -48,7 +48,7 @@ final class DelayedPacket extends IntrusiveNode {
         int var3 = var10.battlefield.playerTurnCounts[var10.controlledPlayerId];
         int var4 = var10.battlefield.damageTakenByPlayer[var10.controlledPlayerId];
         hc.field_b = hc.field_b + 1;
-        hc.field_b = hc.field_b + (ko.field_b ^ AiPlanningStrategy.field_d);
+        hc.field_b = hc.field_b + (ko.pointerY ^ AiPlanningStrategy.pointerX);
         if (param1 <= 31) {
           DelayedPacket.a(-2, (byte) 45);
         }

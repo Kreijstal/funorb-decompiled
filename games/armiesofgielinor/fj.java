@@ -228,10 +228,10 @@ final class fj {
           return;
         }
         if (bn.field_b < this.field_m) {
-          sp.field_b = (this.field_m - bn.field_b) / 2;
+          DualNodeIterator.field_b = (this.field_m - bn.field_b) / 2;
         } else {
           if (this.field_m > 0) {
-            sp.field_b = 0;
+            DualNodeIterator.field_b = 0;
           }
         }
         if (bn.field_b == this.field_t &&
@@ -337,7 +337,7 @@ final class fj {
           if (this.field_m <= 0) {
             return;
           }
-          sp.field_b = (-bn.field_b + this.field_m) / 2;
+          DualNodeIterator.field_b = (-bn.field_b + this.field_m) / 2;
           return;
         }
         this.field_n = 17;
@@ -372,7 +372,7 @@ final class fj {
           if (this.field_m <= 0) {
             return;
           }
-          sp.field_b = (-bn.field_b + this.field_m) / 2;
+          DualNodeIterator.field_b = (-bn.field_b + this.field_m) / 2;
           return;
         }
         if (this.field_i > var3Lifetime1) {
@@ -389,7 +389,7 @@ final class fj {
           if (this.field_m <= 0) {
             return;
           }
-          sp.field_b = (-bn.field_b + this.field_m) / 2;
+          DualNodeIterator.field_b = (-bn.field_b + this.field_m) / 2;
           return;
         }
         var4Lifetime2 = (int)(this.field_v * (float)var3Lifetime1 + 0.5f);
@@ -410,7 +410,7 @@ final class fj {
         if (this.field_m <= 0) {
           return;
         }
-        sp.field_b = (-bn.field_b + this.field_m) / 2;
+        DualNodeIterator.field_b = (-bn.field_b + this.field_m) / 2;
         return;
     }
 

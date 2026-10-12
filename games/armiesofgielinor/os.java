@@ -103,7 +103,7 @@ final class os extends hn {
         if (param0 != 4) {
           return 68;
         }
-        return av.field_a;
+        return av.pointerIdleTicks;
     }
 
     final void a(int param0) {

@@ -10,7 +10,7 @@ final class hk extends je {
         if (param0 != 102) {
           hk.k(-40);
           this.a(true, true);
-          if (DeployEvent.field_A == 0) {
+          if (DeployEvent.pointerPressButton == 0) {
             return this.field_Kb.field_yb != 0 ? true : false;
           }
           if (this.field_yb != 0) {
@@ -19,7 +19,7 @@ final class hk extends je {
           return true;
         }
         this.a(true, true);
-        if (DeployEvent.field_A != 0) {
+        if (DeployEvent.pointerPressButton != 0) {
           if (this.field_yb == 0) {
             return true;
           }

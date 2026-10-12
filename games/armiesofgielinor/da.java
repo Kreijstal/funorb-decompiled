@@ -13,8 +13,8 @@ final class da {
           vl.field_p = null;
           dj.field_a = 0;
           vg.field_p = 0;
-          wh.field_c.b(126);
-          ot.field_E.b(81);
+          wh.field_c.clear(126);
+          ot.field_E.clear(81);
           var1 = DiskCacheRequest.field_K.a((byte) 66);
           while (var1 != null) {
             var1.unlinkSecondary((byte) -76);

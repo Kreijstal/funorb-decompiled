@@ -27,7 +27,7 @@ final class tg {
               CombatEvent.a(param2, -48, this.field_c);
             } else {
               if (param0 == 3) {
-                pq.a(-119, this.field_c, param2);
+                PointerInputHandler.a(-119, this.field_c, param2);
               } else {
                 if (param0 == 10) {
                   ov.a(param2, 3, this.field_c);
@@ -177,7 +177,7 @@ final class tg {
           bk.a(param2, fp.field_Lb, eq.field_h, LeaderEscortCondition.field_f, DualLinkedNode.field_k, -106, ke.field_e, im.field_x, qc.field_e, ri.field_b, PreparedAction.field_o, rd.field_e);
           dh.field_n = fk.a("chatfilter", (byte) -125, param3, "lobby");
           co.field_k[0] = ar.field_v;
-          co.field_k[1] = wg.field_a;
+          co.field_k[1] = IterableDualNodeDeque.field_a;
           co.field_k[param1] = cd.field_d;
           mu.a(t.field_a, param1 - 2, param0);
         } catch (RuntimeException runtimeException) {
@@ -580,7 +580,7 @@ final class tg {
           ~this.field_f != ~oh.field_H) {
           var3 = this.b(96);
           String var2 = var3;
-          this.field_i.a(17, fo.a(4800, wg.field_e, new String[]{var3}), (byte) -127);
+          this.field_i.a(17, fo.a(4800, IterableDualNodeDeque.field_e, new String[]{var3}), (byte) -127);
         }
         if (param0 >= 42) {
           return;

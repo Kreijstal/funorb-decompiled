@@ -157,7 +157,7 @@ final class rf {
         fg var1_refLifetime1;
         if (param0 != -18862) {
           field_a = (String) null;
-          var1_ref = (fg) (ParasiteEvent.field_y.c((byte) -125));
+          var1_ref = (fg) (ParasiteEvent.field_y.popLast((byte) -125));
           if (var1_ref == null) {
             throw new IllegalStateException();
           }
@@ -167,7 +167,7 @@ final class rf {
           EventPresenter.field_q.addLast((byte) -119, (IntrusiveNode) (var1_ref));
           return;
         }
-        var1_refLifetime1 = (fg) (ParasiteEvent.field_y.c((byte) -125));
+        var1_refLifetime1 = (fg) (ParasiteEvent.field_y.popLast((byte) -125));
         if (var1_refLifetime1 == null) {
           throw new IllegalStateException();
         }

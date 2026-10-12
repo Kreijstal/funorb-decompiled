@@ -23,7 +23,7 @@ by default for every game. Semantic game-specific names use explicit naming
 rules. Deko's numbered structural-category and type-based names identify
 unresolved purposes honestly; they are not complete semantic deobfuscation.
 
-Armies has 167 reviewed class names, not a complete semantic map. Shared widget
+Armies has 170 reviewed class names, not a complete semantic map. Shared widget
 bounds, dropdown options/prefix selection, painter dispatch and expansion now
 have reviewed names with pointer, selection and arrow-pixel fixtures. Campaign
 loadouts now name unit/spell rewards, equipped slots and cumulative mana bonuses;
@@ -51,6 +51,12 @@ controlled archive provider. The mode-two empty-file null result is preserved.
 Portal summon menus, unit cycling, the turn timer, spell confirmations, battle
 tutorial hints and visible unit-model refresh now have reviewed names. Focused
 menu/cycle/timer/pointer/hint fixtures retain the existing edge behavior.
+
+Intrusive deque transfers, independent traversal and removable secondary-link
+iteration now have reviewed names. PointerInputHandler and the synchronized
+input snapshot expose live/held/pressed mouse state, button masks and inclusive
+hit bounds. Native models and AWT events verify ordering, removal and the
+original partial-failure/exhaustion behavior.
 
 Camera overview grouping, centroid bounds, hold state and explicit tile focus
 now have reviewed names, alongside directional panning, dragging and velocity

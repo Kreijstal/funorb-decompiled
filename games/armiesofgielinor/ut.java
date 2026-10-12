@@ -461,7 +461,7 @@ final class ut extends sf implements he {
             ef.b(-1);
           }
           if (pv.field_c) {
-            pq.field_f = null;
+            PointerInputHandler.field_f = null;
             UnitInfoPopup.field_u = new NodeDeque();
             var10 = BoundedFile.field_e;
             var7 = var10;
@@ -618,7 +618,7 @@ final class ut extends sf implements he {
         var8 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           super.a(param0, param1, param2, param3);
-          if (lk.field_f) {
+          if (lk.pointerChangedSnapshot) {
             param3.f(1);
             var9 = this.field_kb;
             var5 = var9;

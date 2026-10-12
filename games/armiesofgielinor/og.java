@@ -115,7 +115,7 @@ final class og extends IntrusiveNode {
               og.a(64, true);
             }
             if (this.field_q == rn.field_c) {
-              var7 = new nd[this.field_k.b(false)];
+              var7 = new nd[this.field_k.size(false)];
               var8 = var7;
               var4 = 0;
               var5 = (og) (this.field_k.first((byte) 106));

@@ -1683,7 +1683,7 @@ final class TickCounter {
                 }
                 var2 = fk.a(false, "BUTTON_CHATTAB");
                 if (null != var2) {
-                  pq.field_e = uu.a(var2, (byte) -121);
+                  PointerInputHandler.field_e = uu.a(var2, (byte) -121);
                 }
                 var2 = fk.a(false, "BUTTON_ENDTURN");
                 if (null != var2) {
@@ -1713,7 +1713,7 @@ final class TickCounter {
                 }
                 var2 = fk.a(false, "HOVER_GOD");
                 if (var2 != null) {
-                  pq.field_c = uu.a(var2, (byte) 82);
+                  PointerInputHandler.field_c = uu.a(var2, (byte) 82);
                 }
                 var2 = fk.a(false, "HOVER_ANNOUNCE");
                 if (null != var2) {
@@ -3127,7 +3127,7 @@ final class TickCounter {
                 }
                 var2 = fk.a(false, "placedrawn");
                 if (null != var2) {
-                  sp.field_g = uu.a(var2, (byte) -116);
+                  DualNodeIterator.field_g = uu.a(var2, (byte) -116);
                 }
                 var2 = fk.a(false, "placenames,0");
                 if (var2 != null) {
@@ -5153,7 +5153,7 @@ final class TickCounter {
             void runChunk6() throws java.lang.RuntimeException {
                 var2 = fk.a(false, "TERROR_ACCESSORYFAIL");
                 if (var2 != null) {
-                  sp.field_d = uu.a(var2, (byte) 44);
+                  DualNodeIterator.field_d = uu.a(var2, (byte) 44);
                 }
                 var2 = fk.a(false, "TERROR_IRREGULARMOVE");
                 if (var2 != null) {

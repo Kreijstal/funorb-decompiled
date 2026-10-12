@@ -3,72 +3,72 @@
  */
 import java.util.*;
 
-final class wg implements Iterable {
+final class IterableDualNodeDeque implements Iterable {
     static String field_a;
     static String field_e;
     static String field_c;
-    DualLinkedNode field_f;
+    DualLinkedNode sentinel;
     static String field_d;
     static Unit[] field_b;
 
-    final static boolean a(int param0, int param1, int param2, int param3, int param4) {
-        if (param0 != -33) {
-          wg.a(-108);
-          if (AiPlanningStrategy.field_d < param1) {
+    final static boolean isPointerInBounds(int obfuscationGuard, int minimumX, int maximumX, int minimumY, int maximumY) {
+        if (obfuscationGuard != -33) {
+          IterableDualNodeDeque.a(-108);
+          if (AiPlanningStrategy.pointerX < minimumX) {
             return false;
           }
-          if (AiPlanningStrategy.field_d > param2) {
+          if (AiPlanningStrategy.pointerX > maximumX) {
             return false;
           }
-          if (param3 > ko.field_b) {
+          if (minimumY > ko.pointerY) {
             return false;
           }
-          if (param4 >= ko.field_b) {
+          if (maximumY >= ko.pointerY) {
             return true;
           }
           return false;
         }
-        if (AiPlanningStrategy.field_d < param1) {
+        if (AiPlanningStrategy.pointerX < minimumX) {
           return false;
         }
-        if (AiPlanningStrategy.field_d > param2) {
+        if (AiPlanningStrategy.pointerX > maximumX) {
           return false;
         }
-        if (param3 > ko.field_b) {
+        if (minimumY > ko.pointerY) {
           return false;
         }
-        if (param4 >= ko.field_b) {
+        if (maximumY >= ko.pointerY) {
           return true;
         }
         return false;
     }
 
-    final DualLinkedNode a(boolean param0) {
-        DualLinkedNode var2 = this.field_f.secondaryNext;
-        if (this.field_f == var2) {
+    final DualLinkedNode popFirst(boolean obfuscationGuard) {
+        DualLinkedNode firstNode = this.sentinel.secondaryNext;
+        if (this.sentinel == firstNode) {
           return null;
         }
-        if (!param0) {
-          var2.unlinkSecondary((byte) -76);
-          return var2;
+        if (!obfuscationGuard) {
+          firstNode.unlinkSecondary((byte) -76);
+          return firstNode;
         }
         return (DualLinkedNode) null;
     }
 
-    final void a(int param0, DualLinkedNode param1) {
+    final void addLast(int obfuscationGuard, DualLinkedNode node) {
         try {
-          if (null != param1.secondaryPrevious) {
-            param1.unlinkSecondary((byte) -76);
+          if (null != node.secondaryPrevious) {
+            node.unlinkSecondary((byte) -76);
           }
-          param1.secondaryPrevious = this.field_f.secondaryPrevious;
-          if (param0 != -96) {
+          node.secondaryPrevious = this.sentinel.secondaryPrevious;
+          if (obfuscationGuard != -96) {
             field_a = (String) null;
           }
-          param1.secondaryNext = this.field_f;
-          param1.secondaryPrevious.secondaryNext = param1;
-          param1.secondaryNext.secondaryPrevious = param1;
+          node.secondaryNext = this.sentinel;
+          node.secondaryPrevious.secondaryNext = node;
+          node.secondaryNext.secondaryPrevious = node;
         } catch (RuntimeException runtimeException) {
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "wg.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "wg.C(" + obfuscationGuard + ',' + (node != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -109,13 +109,13 @@ final class wg implements Iterable {
     }
 
     public final Iterator iterator() {
-        return (Iterator) ((Object) new sp(this));
+        return (Iterator) ((Object) new DualNodeIterator(this));
     }
 
-    wg() {
-        this.field_f = new DualLinkedNode();
-        this.field_f.secondaryPrevious = this.field_f;
-        this.field_f.secondaryNext = this.field_f;
+    IterableDualNodeDeque() {
+        this.sentinel = new DualLinkedNode();
+        this.sentinel.secondaryPrevious = this.sentinel;
+        this.sentinel.secondaryNext = this.sentinel;
     }
 
     public static void a(int param0) {
@@ -125,7 +125,7 @@ final class wg implements Iterable {
         field_a = null;
         field_c = null;
         if (param0 != 19345) {
-          wg.a('`', -95);
+          IterableDualNodeDeque.a('`', -95);
         }
     }
 

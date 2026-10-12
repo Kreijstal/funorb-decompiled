@@ -63,7 +63,7 @@ final class wt extends dr {
             return false;
           }
           for (var4 = 0; var4 < param0.length(); var4++) {
-            if (!wg.a(param0.charAt(var4), -3904)) {
+            if (!IterableDualNodeDeque.a(param0.charAt(var4), -3904)) {
               return false;
             }
           }

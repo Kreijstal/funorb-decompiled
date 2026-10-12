@@ -289,7 +289,7 @@ final class i extends je {
           return -1;
         }
         if (param0 &&
-          0 != DeployEvent.field_A &&
+          0 != DeployEvent.pointerPressButton &&
           this.field_yb == 0) {
           return -1;
         }

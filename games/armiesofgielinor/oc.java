@@ -36,7 +36,7 @@ final class oc extends je {
         if (!param1) {
           this.field_Mb.field_X = this.field_Qb.toString();
           if (param1 &&
-            0 != DeployEvent.field_A &&
+            0 != DeployEvent.pointerPressButton &&
             this.field_yb == 0) {
             this.field_Kb = 1;
           }
@@ -49,7 +49,7 @@ final class oc extends je {
           if (!Unit.i((byte) -51)) {
             this.field_Mb.field_X = this.field_Qb.toString();
             if (param1 &&
-              0 != DeployEvent.field_A &&
+              0 != DeployEvent.pointerPressButton &&
               this.field_yb == 0) {
               this.field_Kb = 1;
               if (param0) {

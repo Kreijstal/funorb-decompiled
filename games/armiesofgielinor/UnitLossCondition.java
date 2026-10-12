@@ -54,7 +54,7 @@ final class UnitLossCondition implements MatchCondition {
             this.battlefield.arePlayersAllied(this.playerId, -16985, var2)) {
             var3 = this.battlefield.getUnitsForPlayer(var2, 0);
             if (var3 != null &&
-              var3.b(false) > 0) {
+              var3.size(false) > 0) {
               return false;
             }
           }

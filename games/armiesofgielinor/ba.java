@@ -70,7 +70,7 @@ final class ba extends dr {
             }
             var1_int = 1;
           }
-          MovementPlanner.field_z.updatePointerSelection(0, DiskCacheWorker.a((byte) -47, TeleportAction.field_z, BattleTutorial.field_t), DiskCacheWorker.a((byte) 93, ko.field_b, AiPlanningStrategy.field_d));
+          MovementPlanner.field_z.updatePointerSelection(0, DiskCacheWorker.a((byte) -47, TeleportAction.pointerPressY, BattleTutorial.pointerPressX), DiskCacheWorker.a((byte) 93, ko.pointerY, AiPlanningStrategy.pointerX));
           if (MovementPlanner.field_z.hasActivationInput((byte) 46)) {
             var1_int = 1;
           }

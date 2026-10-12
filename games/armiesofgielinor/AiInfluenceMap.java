@@ -38,7 +38,7 @@ final class AiInfluenceMap {
           if (param4 != -4) {
             this.minimumY = 94;
           }
-          var18 = wg.field_b[param3];
+          var18 = IterableDualNodeDeque.field_b[param3];
           var19 = var18;
           var19.tileX = param7;
           var19.tileY = param6;
@@ -699,9 +699,9 @@ final class AiInfluenceMap {
           this.mapHeight = mapHeight;
           this.tiles = tiles;
           this.packedCosts = new int[this.tiles.length];
-          if (null == wg.field_b) {
-            wg.field_b = new Unit[8];
-            var12 = new int[wg.field_b.length];
+          if (null == IterableDualNodeDeque.field_b) {
+            IterableDualNodeDeque.field_b = new Unit[8];
+            var12 = new int[IterableDualNodeDeque.field_b.length];
             var11 = var12;
             var9 = var11;
             var4 = var9;
@@ -715,8 +715,8 @@ final class AiInfluenceMap {
             }
             var10 = 0;
             var5Lifetime1 = var10;
-            while (wg.field_b.length > var10) {
-              wg.field_b[var10] = new Unit(0, 0, var12[var10]);
+            while (IterableDualNodeDeque.field_b.length > var10) {
+              IterableDualNodeDeque.field_b[var10] = new Unit(0, 0, var12[var10]);
               var10++;
             }
             return;

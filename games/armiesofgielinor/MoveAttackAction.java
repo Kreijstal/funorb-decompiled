@@ -122,7 +122,7 @@ final class MoveAttackAction extends PreparedAction {
             field_x = (int[]) null;
           }
           InstructionsPanel.field_r = -(DualLinkedNode.field_r >> 1) + lm.field_g;
-          MovementPlanner.field_z.restoreSelection(0, param2, DiskCacheWorker.a((byte) -73, ko.field_b, AiPlanningStrategy.field_d), 0);
+          MovementPlanner.field_z.restoreSelection(0, param2, DiskCacheWorker.a((byte) -73, ko.pointerY, AiPlanningStrategy.pointerX), 0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

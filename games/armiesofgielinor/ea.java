@@ -209,7 +209,7 @@ final class ea {
         String[] var3 = null;
         je[] var4 = null;
         try {
-          var3 = new String[]{param0, wg.field_a, op.field_e};
+          var3 = new String[]{param0, IterableDualNodeDeque.field_a, op.field_e};
           var4 = new je[]{param1, su.field_d, (je) ((Object) TaggedMapData.field_g)};
           this.field_a = new ml(0L, h.field_d, var3, wm.field_c, var4, 0);
         } catch (RuntimeException runtimeException) {

@@ -54,7 +54,7 @@ final class BestScoreStrategy extends AiPlanningStrategy {
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var3 = (AiActionCandidate) (this.candidates.a(0));
+          var3 = (AiActionCandidate) (this.candidates.popFirst(0));
           if (obfuscationGuard != 16777062) {
             var4 = (AiActionCandidate) null;
             this.submitCandidate(64, (AiActionCandidate) null);
@@ -83,11 +83,11 @@ final class BestScoreStrategy extends AiPlanningStrategy {
         AiActionCandidate var2 = null;
         AiActionCandidate var2Lifetime1;
         if (obfuscationGuard <= -28) {
-          var2 = (AiActionCandidate) (this.candidates.a(0));
+          var2 = (AiActionCandidate) (this.candidates.popFirst(0));
           return var2;
         }
         this.selectCandidate((byte) -5);
-        var2Lifetime1 = (AiActionCandidate) (this.candidates.a(0));
+        var2Lifetime1 = (AiActionCandidate) (this.candidates.popFirst(0));
         return var2Lifetime1;
     }
 

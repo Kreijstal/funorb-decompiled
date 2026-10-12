@@ -113,7 +113,7 @@ final class wm {
         int var8Lifetime1;
         int var9Lifetime1Lifetime1;
         var13 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
-        vq.field_a.field_Jb.field_fb.b(108);
+        vq.field_a.field_Jb.field_fb.clear(108);
         var4 = null;
         var5 = 0;
         var6 = 0;

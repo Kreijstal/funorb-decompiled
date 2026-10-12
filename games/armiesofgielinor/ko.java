@@ -7,7 +7,7 @@ final class ko {
     boolean field_d;
     String field_c;
     static RgbSprite field_g;
-    static int field_b;
+    static int pointerY;
     static String field_a;
 
     public static void a(boolean param0) {
@@ -72,7 +72,7 @@ final class ko {
 
     static {
         field_g = new RgbSprite(56, 56);
-        field_b = 0;
+        pointerY = 0;
         field_a = "Player";
     }
 }

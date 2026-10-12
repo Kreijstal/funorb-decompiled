@@ -197,7 +197,7 @@ final class np extends je {
           }
           var3++;
         }
-        if (DeployEvent.field_A != 0) {
+        if (DeployEvent.pointerPressButton != 0) {
           return -1;
         }
         return this.field_Kb;

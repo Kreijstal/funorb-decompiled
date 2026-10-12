@@ -7,7 +7,7 @@ final class EffectPresentation implements EventPresentation {
     static String field_d;
     private int[] field_k;
     private int mapWidth;
-    static volatile int field_g;
+    static volatile int livePointerButtonMask;
     private Battlefield battlefield;
     static oc field_e;
     static int[] field_h;
@@ -81,7 +81,7 @@ final class EffectPresentation implements EventPresentation {
           if (param5 != -1 &&
             param5 != 255) {
             if (param4 != -33) {
-              field_g = 60;
+              livePointerButtonMask = 60;
             }
             stackIn_10_0 = (param2) ? 1 : -1;
             var6_int = stackIn_10_0;
@@ -533,7 +533,7 @@ final class EffectPresentation implements EventPresentation {
 
     static {
         field_d = "Game options";
-        field_g = 0;
+        livePointerButtonMask = 0;
         field_b = "Asking for or providing contact information";
         field_a = "Unable to delete name - system busy";
     }

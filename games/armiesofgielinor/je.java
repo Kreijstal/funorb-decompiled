@@ -418,34 +418,34 @@ class je extends im {
         var12 = param1 ? 1 : 0;
         if (!SectorCacheStore.field_e &&
           param0 &&
-          DeployEvent.field_A != 0 &&
-          SoftwareRaster.clipLeft <= BattleTutorial.field_t &&
-          BattleTutorial.field_t < SoftwareRaster.clipRight &&
-          TeleportAction.field_z >= SoftwareRaster.clipTop &&
-          TeleportAction.field_z < SoftwareRaster.clipBottom) {
-          this.field_yb = DeployEvent.field_A;
-          this.field_hb = DeployEvent.field_A;
-          this.field_bb = -this.field_V + BattleTutorial.field_t;
+          DeployEvent.pointerPressButton != 0 &&
+          SoftwareRaster.clipLeft <= BattleTutorial.pointerPressX &&
+          BattleTutorial.pointerPressX < SoftwareRaster.clipRight &&
+          TeleportAction.pointerPressY >= SoftwareRaster.clipTop &&
+          TeleportAction.pointerPressY < SoftwareRaster.clipBottom) {
+          this.field_yb = DeployEvent.pointerPressButton;
+          this.field_hb = DeployEvent.pointerPressButton;
+          this.field_bb = -this.field_V + BattleTutorial.pointerPressX;
           var12 = 1;
-          this.field_Ab = -this.field_D + TeleportAction.field_z;
+          this.field_Ab = -this.field_D + TeleportAction.pointerPressY;
         } else {
           this.field_yb = 0;
-          if (DeployEvent.field_A != 0) {
+          if (DeployEvent.pointerPressButton != 0) {
             this.field_hb = 0;
           }
         }
-        stackIn_30_1 = (!bl.field_f) && (SoftwareRaster.clipLeft <= AiPlanningStrategy.field_d) && (SoftwareRaster.clipRight > AiPlanningStrategy.field_d) && (SoftwareRaster.clipTop <= ko.field_b) && (SoftwareRaster.clipBottom > ko.field_b);
+        stackIn_30_1 = (!bl.field_f) && (SoftwareRaster.clipLeft <= AiPlanningStrategy.pointerX) && (SoftwareRaster.clipRight > AiPlanningStrategy.pointerX) && (SoftwareRaster.clipTop <= ko.pointerY) && (SoftwareRaster.clipBottom > ko.pointerY);
         this.field_jb = stackIn_30_1;
-        if (ro.field_ub == 0) {
+        if (ro.pointerButton == 0) {
           this.field_hb = 0;
         }
-        stackIn_38_1 = (this.field_jb) && (ro.field_ub == this.field_hb) && (param0);
+        stackIn_38_1 = (this.field_jb) && (ro.pointerButton == this.field_hb) && (param0);
         this.field_eb = stackIn_38_1;
         if (null != this.field_fb) {
-          var13 = (je) (this.field_fb.d((byte) -82));
+          var13 = (je) (this.field_fb.last((byte) -82));
           while (var13 != null) {
             var13.a(param0, param1, this.field_D, this.field_ob, this.field_gb, this.field_V);
-            var13 = (je) (this.field_fb.b((byte) 88));
+            var13 = (je) (this.field_fb.previous((byte) 88));
           }
         }
         if (var12 != 0) {
@@ -457,8 +457,8 @@ class je extends im {
         SoftwareRaster.f(var8, var9, var10, var11);
         if (this.field_hb != 0 &&
           this.field_Gb) {
-          this.field_S = -this.field_bb + AiPlanningStrategy.field_d - param5;
-          this.field_ab = -this.field_Ab + ko.field_b - param2;
+          this.field_S = -this.field_bb + AiPlanningStrategy.pointerX - param5;
+          this.field_ab = -this.field_Ab + ko.pointerY - param2;
           if (0 > this.field_S) {
             this.field_S = 0;
           }
@@ -703,11 +703,11 @@ class je extends im {
         je var4 = null;
         int var3 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         if (null != this.field_fb) {
-          var4 = (je) (this.field_fb.d((byte) -112));
+          var4 = (je) (this.field_fb.last((byte) -112));
           while (var4 != null) {
             var4.field_Cb = true;
             var4.i(-10027);
-            var4 = (je) (this.field_fb.b((byte) -104));
+            var4 = (je) (this.field_fb.previous((byte) -104));
           }
         }
         if (param0 != -10027) {

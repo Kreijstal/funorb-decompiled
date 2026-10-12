@@ -41,7 +41,7 @@ final class WeightedScoreStrategy extends AiPlanningStrategy {
           if (bk.field_e == null) {
             return false;
           }
-          if (param0 == bk.field_e.b(false)) {
+          if (param0 == bk.field_e.size(false)) {
             return false;
           }
           var2 = (fd) (bk.field_e.first((byte) 111));
@@ -83,7 +83,7 @@ final class WeightedScoreStrategy extends AiPlanningStrategy {
         AiActionCandidate var2_ref_jbLifetime1;
         var2_ref = null;
         var4 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
-        if (this.candidates.a(false)) {
+        if (this.candidates.isEmpty(false)) {
           return null;
         }
         this.totalWeight = 0.0f;

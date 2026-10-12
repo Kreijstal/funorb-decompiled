@@ -76,7 +76,7 @@ class fn extends fw {
           if (1 == this.field_q) {
             if (this.painter instanceof pm) {
               var5 = (pm) ((Object) this.painter);
-              var6 = var5.a((Widget) (this), AiPlanningStrategy.field_d, 113, param2, ko.field_b, param1);
+              var6 = var5.a((Widget) (this), AiPlanningStrategy.pointerX, 113, param2, ko.pointerY, param1);
               if (var6 != -1) {
                 if (this.field_P &&
                   this.field_V > var6 &&
@@ -549,7 +549,7 @@ class fn extends fw {
           if (!(this.painter instanceof pm)) {
             return false;
           }
-          var8_int = ((pm) ((Object) this.painter)).a((Widget) (this), AiPlanningStrategy.field_d, 87, param2, ko.field_b, param1);
+          var8_int = ((pm) ((Object) this.painter)).a((Widget) (this), AiPlanningStrategy.pointerX, 87, param2, ko.pointerY, param1);
           if (var8_int != -1) {
             stackIn_9_1 = var8_int;
           } else {

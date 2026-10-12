@@ -8,7 +8,7 @@ final class DiskCacheRequest extends ResourceRequest {
     static RgbSprite[] field_G;
     static String field_J;
     static String field_I;
-    static volatile int field_B;
+    static volatile int livePointerX;
     int operation;
     SectorCacheStore store;
     static int field_E;
@@ -96,7 +96,7 @@ final class DiskCacheRequest extends ResourceRequest {
     }
 
     static {
-        field_B = -1;
+        livePointerX = -1;
         field_I = "Open in popup window";
         field_H = "Magic robes help to protect against magic damage.";
         field_J = "Error";

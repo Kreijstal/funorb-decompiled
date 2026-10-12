@@ -211,7 +211,7 @@ public abstract class iv extends java.applet.Applet implements Runnable, java.aw
               mh.field_c = 0;
               bn.field_b = param0;
               ce.field_N = param0;
-              sp.field_b = 0;
+              DualNodeIterator.field_b = 0;
               SummonRequest.field_B = param4;
               dt.field_a = param6;
               MatchSetupPanel.field_D = param6;
@@ -802,12 +802,12 @@ public abstract class iv extends java.applet.Applet implements Runnable, java.aw
             if (null != ContextualRuntimeException.field_f &&
               cs.field_bb == null) {
               var6 = ContextualRuntimeException.field_f.getInsets();
-              IndexedSpriteBase.field_b.setLocation(sp.field_b + var6.left, mh.field_c + var6.top);
+              IndexedSpriteBase.field_b.setLocation(DualNodeIterator.field_b + var6.left, mh.field_c + var6.top);
               if (ArmiesOfGielinor.obfuscationControl) {
-                IndexedSpriteBase.field_b.setLocation(sp.field_b, mh.field_c);
+                IndexedSpriteBase.field_b.setLocation(DualNodeIterator.field_b, mh.field_c);
               }
             } else {
-              IndexedSpriteBase.field_b.setLocation(sp.field_b, mh.field_c);
+              IndexedSpriteBase.field_b.setLocation(DualNodeIterator.field_b, mh.field_c);
             }
           }
           if (param0 != -11) {
@@ -874,12 +874,12 @@ public abstract class iv extends java.applet.Applet implements Runnable, java.aw
           IndexedSpriteBase.field_b.setVisible(true);
           boolean decompiledSharedTail0 = (var2 == ContextualRuntimeException.field_f);
           if (!decompiledSharedTail0) {
-            IndexedSpriteBase.field_b.setLocation(sp.field_b, mh.field_c);
+            IndexedSpriteBase.field_b.setLocation(DualNodeIterator.field_b, mh.field_c);
             decompiledSharedTail0 = (var4 != 0);
           }
           if (decompiledSharedTail0) {
             var3 = ContextualRuntimeException.field_f.getInsets();
-            IndexedSpriteBase.field_b.setLocation(var3.left + sp.field_b, var3.top + mh.field_c);
+            IndexedSpriteBase.field_b.setLocation(var3.left + DualNodeIterator.field_b, var3.top + mh.field_c);
           }
           IndexedSpriteBase.field_b.addFocusListener((java.awt.event.FocusListener) (this));
           IndexedSpriteBase.field_b.requestFocus();

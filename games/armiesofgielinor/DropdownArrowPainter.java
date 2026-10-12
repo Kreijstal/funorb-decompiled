@@ -276,8 +276,8 @@ final class DropdownArrowPainter implements WidgetPainter {
               return true;
             }
             var4 = dq.packetDelayMillis;
-            if (0.0 != sp.packetJitterMillis) {
-              var4 = (int)((double)var4 + CampaignMenuButton.connectionRandom.nextGaussian() * sp.packetJitterMillis);
+            if (0.0 != DualNodeIterator.packetJitterMillis) {
+              var4 = (int)((double)var4 + CampaignMenuButton.connectionRandom.nextGaussian() * DualNodeIterator.packetJitterMillis);
               if (0 > var4) {
                 var4 = 0;
               }

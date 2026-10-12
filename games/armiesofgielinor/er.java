@@ -108,8 +108,8 @@ final class er {
         if (null != KingBlackDragonEvent.field_C) {
           KingBlackDragonEvent.field_C.k(0);
         }
-        if (pq.field_a != null) {
-          pq.field_a.i((byte) 2);
+        if (PointerInputHandler.field_a != null) {
+          PointerInputHandler.field_a.i((byte) 2);
         }
         qh.a((byte) 124);
     }

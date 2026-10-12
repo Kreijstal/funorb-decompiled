@@ -127,8 +127,8 @@ final class ml extends je {
             }
           }
           var14 = tn.field_Z;
-          var5 = BattleTutorial.field_t;
-          var6 = TeleportAction.field_z;
+          var5 = BattleTutorial.pointerPressX;
+          var6 = TeleportAction.pointerPressY;
           var7 = 125 / ((22 - param0) / 38);
           var14.field_i.a(0, var6, 0, (byte) -118, var5);
           return;
@@ -286,7 +286,7 @@ final class ml extends je {
         if (param3) {
           return true;
         }
-        return (ko.field_b - param0) * (-param0 + ko.field_b) + (-param1 + AiPlanningStrategy.field_d) * (-param1 + AiPlanningStrategy.field_d) < param2 * param2 ? true : false;
+        return (ko.pointerY - param0) * (-param0 + ko.pointerY) + (-param1 + AiPlanningStrategy.pointerX) * (-param1 + AiPlanningStrategy.pointerX) < param2 * param2 ? true : false;
     }
 
     ml(long param0, je param1, String[] param2, je param3, je[] param4, int param5) {

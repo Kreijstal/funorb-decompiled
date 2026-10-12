@@ -83,8 +83,8 @@ final class la {
           var5_ref_String = AnimationFrameSet.field_y;
           var4.field_i.a(5, var5_ref_String, (byte) -109);
           var4Lifetime1 = tn.field_Z;
-          var5 = BattleTutorial.field_t;
-          var6 = TeleportAction.field_z;
+          var5 = BattleTutorial.pointerPressX;
+          var6 = TeleportAction.pointerPressY;
           var4Lifetime1.field_i.a(0, var6, 0, (byte) -118, var5);
         }
         DeployEvent.a(-115, param0, param1);

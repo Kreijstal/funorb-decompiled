@@ -355,7 +355,7 @@ final class ll extends je {
         if (this.field_Ob != 0) {
           return false;
         }
-        if (this.field_Ub.field_db + this.field_Ub.field_D <= ko.field_b) {
+        if (this.field_Ub.field_db + this.field_Ub.field_D <= ko.pointerY) {
           return false;
         }
         this.field_Ob = 3;
@@ -378,7 +378,7 @@ final class ll extends je {
           this.field_Ob = this.field_Ob - 1;
         }
         if (0 == this.field_Ob) {
-          if (ko.field_b >= this.field_Ub.field_nb + (this.field_Ub.field_ob + this.field_Ub.field_db + this.field_Ub.field_D)) {
+          if (ko.pointerY >= this.field_Ub.field_nb + (this.field_Ub.field_ob + this.field_Ub.field_db + this.field_Ub.field_D)) {
             this.field_Ob = 3;
             return true;
           }

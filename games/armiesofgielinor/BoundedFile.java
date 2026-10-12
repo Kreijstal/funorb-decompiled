@@ -12,7 +12,7 @@ final class BoundedFile {
     static boolean field_b;
     static int field_a;
     private long position;
-    static volatile int field_d;
+    static volatile int lastPointerPressY;
 
     final int read(int length, int obfuscationGuard, byte[] destination, int destinationOffset) throws IOException {
         int var5_int = 0;
@@ -219,14 +219,14 @@ final class BoundedFile {
         this.file.seek(position);
         this.position = position;
         if (obfuscationGuard < 102) {
-          field_d = -103;
+          lastPointerPressY = -103;
           return;
         }
     }
 
     final long length(boolean obfuscationGuard) throws IOException {
         if (!obfuscationGuard) {
-          field_d = 51;
+          lastPointerPressY = 51;
           return this.file.length();
         }
         return this.file.length();
@@ -260,6 +260,6 @@ final class BoundedFile {
         field_i = "Allies";
         field_b = false;
         field_e = ce.a(-104);
-        field_d = 0;
+        lastPointerPressY = 0;
     }
 }

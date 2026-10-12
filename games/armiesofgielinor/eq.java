@@ -6,7 +6,7 @@ final class eq extends af {
     private String field_d;
     static je field_h;
     static String field_k;
-    static int field_l;
+    static int pointerButtonMask;
     static String field_e;
     static String field_g;
     static String[] field_m;
@@ -99,7 +99,7 @@ final class eq extends af {
 
     static {
         field_n = "Create a free account to start using this feature";
-        field_l = 0;
+        pointerButtonMask = 0;
         field_e = "Return to Main Menu";
         field_k = "This item can only be used on a Kalphite Queen.";
         field_m = new String[]{"Waiting for text", "Warte auf Text", "En attente du texte", "Aguardando textos", "Op tekst wachten", "Esperando a texto"};

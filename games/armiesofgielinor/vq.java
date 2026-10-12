@@ -302,7 +302,7 @@ final class vq {
             var4Lifetime3++;
           }
           if (no.field_J != 2) {
-            ug.field_c.restoreSelection(0, param1, TeleportEvent.a(AiPlanningStrategy.field_d, 120, ko.field_b), 0);
+            ug.field_c.restoreSelection(0, param1, TeleportEvent.a(AiPlanningStrategy.pointerX, 120, ko.pointerY), 0);
           } else {
             ug.field_c.restoreSelection(-1, param1, -1, 0);
           }

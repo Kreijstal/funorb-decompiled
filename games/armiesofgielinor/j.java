@@ -63,7 +63,7 @@ final class j {
           DisplacedUnitMarker.field_t[4] = el.field_a;
           DisplacedUnitMarker.field_t[54] = mh.field_d;
           DisplacedUnitMarker.field_t[2] = ClientConnectionState.field_b;
-          DisplacedUnitMarker.field_t[5] = pq.field_d;
+          DisplacedUnitMarker.field_t[5] = PointerInputHandler.field_d;
           DisplacedUnitMarker.field_t[25] = AnimationSkeleton.field_m;
           DisplacedUnitMarker.field_t[22] = hq.field_d;
           DisplacedUnitMarker.field_t[16] = InstructionsPanel.field_y;

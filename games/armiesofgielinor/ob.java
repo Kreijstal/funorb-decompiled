@@ -10,13 +10,13 @@ final class ob extends hs {
     private int[] field_K;
     private int field_N;
     int field_Q;
-    static volatile int field_J;
+    static volatile int heldPointerButton;
     static String[] field_M;
     static String field_O;
 
     final void setBounds(int x, int width, int y, int obfuscationGuard, int height) {
         if (obfuscationGuard != 8192) {
-          field_J = 99;
+          heldPointerButton = 99;
         }
         super.setBounds(x, width, y, obfuscationGuard + 0, height);
     }
@@ -275,7 +275,7 @@ final class ob extends hs {
 
     private final void a(byte param0, int param1, int param2) {
         if (param0 < 23) {
-          field_J = -52;
+          heldPointerButton = -52;
         }
         int var4 = this.field_K == null ? 0 : this.field_K.length;
         Widget[] var5 = new Widget[param2 * var4];
@@ -509,14 +509,14 @@ final class ob extends hs {
 
     final static String j(int param0) {
         if (param0 != -129) {
-          field_J = -78;
+          heldPointerButton = -78;
         }
         return mk.field_f;
     }
 
     static {
         field_P = "Holding your chosen god's standard high, order your forces into battle. For here, upon these bloodstained battlefields, will the armies of Gielinor wage war.";
-        field_J = 0;
+        heldPointerButton = 0;
         field_O = "Game";
     }
 }

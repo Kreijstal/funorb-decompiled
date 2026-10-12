@@ -1119,10 +1119,10 @@ final class BattleCamera {
         int var7 = 0;
         var7 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          var3 = (EventPresenter) (presenters.d((byte) -77));
+          var3 = (EventPresenter) (presenters.last((byte) -77));
           while (var3 != null) {
             if (var3.tileIndex <= -1) {
-              var3 = (EventPresenter) (presenters.b((byte) 73));
+              var3 = (EventPresenter) (presenters.previous((byte) 73));
               continue;
             }
             stackIn_7_0 = (var3 != this.focusedPresenter) ? 0 : 1;

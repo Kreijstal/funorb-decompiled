@@ -1106,7 +1106,7 @@ class ih extends hn {
         var9 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         this.a(param0, param1, -44, param3);
         if ((2 & this.field_o[param3]) != 0) {
-          var5 = (mi) (this.field_Q.field_p.d((byte) -83));
+          var5 = (mi) (this.field_Q.field_p.last((byte) -83));
           while (var5 != null) {
             if (var5.field_m == param3 &&
               var5.field_x < 0) {
@@ -1119,7 +1119,7 @@ class ih extends hn {
               var5.field_n = 4096;
               return;
             }
-            var5 = (mi) (this.field_Q.field_p.b((byte) 60));
+            var5 = (mi) (this.field_Q.field_p.previous((byte) 60));
           }
         }
         var10 = (io) (this.field_T.get(-22, (long)this.field_O[param3]));

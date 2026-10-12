@@ -424,14 +424,14 @@ final class de {
                   var7.o((byte) 98) ||
                   var7.unitType == 39 ||
                   var7.unitType == 51)) {
-                  stackIn_245_0 = sp.field_d;
+                  stackIn_245_0 = DualNodeIterator.field_d;
                   return stackIn_245_0;
                 }
                 if (uc.spellDefinitions[spellId][5] == 4 && (var7.getUnitCategory(0) == 4 ||
                   var7.o((byte) 98) ||
                   var7.unitType == 39 ||
                   var7.unitType == 51)) {
-                  stackIn_253_0 = sp.field_d;
+                  stackIn_253_0 = DualNodeIterator.field_d;
                   return stackIn_253_0;
                 }
                 boolean decompiledFrameRemainder0 = true;
@@ -453,13 +453,13 @@ final class de {
                     decompiledFrameRemainder0 = ((stackIn_262_0 | stackIn_265_1) != 0);
                   }
                   if (decompiledFrameRemainder0) {
-                    stackIn_267_0 = sp.field_d;
+                    stackIn_267_0 = DualNodeIterator.field_d;
                     return stackIn_267_0;
                   }
                 }
                 if (uc.spellDefinitions[spellId][5] == 1 &&
                   var7.canCaptureStructures(-21428)) {
-                  stackIn_271_0 = sp.field_d;
+                  stackIn_271_0 = DualNodeIterator.field_d;
                   return stackIn_271_0;
                 }
                 if (uc.spellDefinitions[spellId][5] == 5 &&

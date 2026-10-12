@@ -22,7 +22,7 @@ final class kv extends tj implements he {
         int var6 = 0;
         var6 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          this.field_D.b(param0 - 11);
+          this.field_D.clear(param0 - 11);
           if (param1 != null &&
             param1.length != 0) {
             var3_int = param1.length;

@@ -13,8 +13,8 @@ final class op {
     final static void a(int param0, String param1) {
         int var7 = 0;
         int var8 = 0;
-        int var2_int = AiPlanningStrategy.field_d;
-        int var3 = ko.field_b;
+        int var2_int = AiPlanningStrategy.pointerX;
+        int var3 = ko.pointerY;
         int var4 = eq.field_h.field_Z.c(param1, 500);
         int var5 = 6 + eq.field_h.field_Z.a(param1, 500);
         int var6 = 2 + var4 * jn.field_d;

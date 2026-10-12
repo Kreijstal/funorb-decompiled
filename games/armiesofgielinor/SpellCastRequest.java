@@ -91,11 +91,11 @@ final class SpellCastRequest extends ActionRequest {
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (pq.field_a == null) {
-            pq.field_a = new cr(KingBlackDragonEvent.field_C, BestScoreStrategy.field_h);
-            KingBlackDragonEvent.field_C.a(pq.field_a, param3 + 1);
+          if (PointerInputHandler.field_a == null) {
+            PointerInputHandler.field_a = new cr(KingBlackDragonEvent.field_C, BestScoreStrategy.field_h);
+            KingBlackDragonEvent.field_C.a(PointerInputHandler.field_a, param3 + 1);
           }
-          pq.field_a.a(param1, 30, param0, param2);
+          PointerInputHandler.field_a.a(param1, 30, param0, param2);
           SoftwareRaster.b();
           DamageEvent.b((byte) 92, true);
           if (param3 == -1) {

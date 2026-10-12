@@ -3,7 +3,7 @@
  */
 final class ku extends nl {
     static String[][] field_L;
-    static volatile boolean field_I;
+    static volatile boolean pointerChanged;
     static int field_K;
     static RgbSprite field_J;
 
@@ -75,7 +75,7 @@ final class ku extends nl {
     }
 
     static {
-        field_I = false;
+        pointerChanged = false;
         field_L = new String[][]{new String[]{"240", "180", "150", "120", "90", "60", "30"}, new String[]{"Small", "Medium", "Large", "Epic"}, new String[]{"Regular", "Double", "Triple", "Quadruple"}, new String[]{null, null, null, null, null}, new String[]{"Free For All", "Team Game"}, new String[]{"Off", "25", "75", "150", "No limit"}};
         field_J = new RgbSprite(224, 224);
     }

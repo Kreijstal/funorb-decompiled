@@ -454,8 +454,8 @@ final class nv extends hs implements he {
             this.field_P.field_G == 1) {
             if (this.field_M) {
               if (this.field_V) {
-                var5_intLifetime1 = -this.x - param1 + (AiPlanningStrategy.field_d - (this.field_O.x + (this.field_O.width >> 1)));
-                var6 = -param2 + ko.field_b - (this.y + this.field_O.y + (this.field_O.height >> 1));
+                var5_intLifetime1 = -this.x - param1 + (AiPlanningStrategy.pointerX - (this.field_O.x + (this.field_O.width >> 1)));
+                var6 = -param2 + ko.pointerY - (this.y + this.field_O.y + (this.field_O.height >> 1));
                 if (Math.abs(var6) > Math.abs(var5_intLifetime1)) {
                   if (0 < var6) {
                     this.d(this.field_R + this.field_W, param0 ^ 32722);
@@ -470,7 +470,7 @@ final class nv extends hs implements he {
                   }
                 }
               } else {
-                if ((this.field_O.height >> 1) + (param2 + this.field_O.y) >= ko.field_b) {
+                if ((this.field_O.height >> 1) + (param2 + this.field_O.y) >= ko.pointerY) {
                   this.d(-this.field_R + this.field_W, param0 ^ 32722);
                 } else {
                   this.d(this.field_R + this.field_W, 0);
@@ -478,7 +478,7 @@ final class nv extends hs implements he {
               }
             } else {
               if (this.field_V) {
-                if (param1 + (this.field_O.x + (this.field_O.width >> 1)) >= AiPlanningStrategy.field_d) {
+                if (param1 + (this.field_O.x + (this.field_O.width >> 1)) >= AiPlanningStrategy.pointerX) {
                   this.a(this.field_T - this.field_S, (byte) 84);
                 } else {
                   this.a(this.field_T + this.field_S, (byte) 110);

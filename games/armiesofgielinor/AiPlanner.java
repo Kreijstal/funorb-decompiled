@@ -294,7 +294,7 @@ final class AiPlanner extends IntrusiveNode implements UnitObserver {
         int var6;
         var6 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         this.field_t = this.field_t + 1;
-        if (this.battlefield.pendingEvents.b(false) > 0) {
+        if (this.battlefield.pendingEvents.size(false) > 0) {
           return false;
         }
         if (this.field_w) {
@@ -316,7 +316,7 @@ final class AiPlanner extends IntrusiveNode implements UnitObserver {
         boolean decompiledFrameCompleted0 = true;
         if (1 == var2) {
           if (this.field_t == 0) {
-            if (0 == this.battlefield.unitsByPlayer[this.playerId].b(false) &&
+            if (0 == this.battlefield.unitsByPlayer[this.playerId].size(false) &&
               null != this.battlefield.campaignMission) {
               var2 = 0;
               var3_ref_ne__ = this.battlefield.tiles;
@@ -1203,7 +1203,7 @@ final class AiPlanner extends IntrusiveNode implements UnitObserver {
           this.influenceMap.a(this.field_A, 1, param0 ^ -19465, var3.unit);
           if (6 == this.field_k) {
             this.b(3, 4);
-            this.field_M = (AiUnitPlanner) (this.unitPlanners.a(true, var3));
+            this.field_M = (AiUnitPlanner) (this.unitPlanners.startForwardAt(true, var3));
             this.field_t = 2;
           }
           return;
@@ -1317,8 +1317,8 @@ final class AiPlanner extends IntrusiveNode implements UnitObserver {
         var4 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         this.b(0, param0 + 127);
         this.field_q = 0;
-        this.field_H.b(param0 ^ -28);
-        this.field_O.b(param0 ^ -42);
+        this.field_H.clear(param0 ^ -28);
+        this.field_O.clear(param0 ^ -42);
         for (var2_int = 0; var2_int < this.battlefield.unitsByPlayer.length; var2_int++) {
           var3 = (Unit) (this.battlefield.unitsByPlayer[var2_int].first((byte) 112));
           while (var3 != null) {

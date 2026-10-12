@@ -513,14 +513,14 @@ abstract class wf extends iv {
         var5 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         if (null != ActionSpell.field_e) {
           if (null == FixedQuaternion.field_a) {
-            var6 = sp.a(0);
+            var6 = DualNodeIterator.a(0);
             var4 = var6.getSize();
             ActionSpell.field_e.b(var4.height, var4.width, -30514);
           }
           ActionSpell.field_e.a(0);
         }
         r.c(true);
-        ds.a((byte) 118);
+        ds.capturePointerInput((byte) 118);
         if (param0 <= 124) {
           return;
         }

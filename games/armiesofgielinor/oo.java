@@ -184,17 +184,17 @@ final class oo {
           }
           if (null != ByteStorage.field_d) {
             var4 = 0;
-            if (DeployEvent.field_A != 0 &&
-              TeleportAction.field_z > 257 &&
-              290 > TeleportAction.field_z) {
-              if (9 < BattleTutorial.field_t &&
-                82 > BattleTutorial.field_t) {
+            if (DeployEvent.pointerPressButton != 0 &&
+              TeleportAction.pointerPressY > 257 &&
+              290 > TeleportAction.pointerPressY) {
+              if (9 < BattleTutorial.pointerPressX &&
+                82 > BattleTutorial.pointerPressX) {
                 var4 = 1;
                 this.field_p = qk.field_c;
                 this.field_s = false;
               }
-              if (558 < BattleTutorial.field_t &&
-                631 > BattleTutorial.field_t) {
+              if (558 < BattleTutorial.pointerPressX &&
+                631 > BattleTutorial.pointerPressX) {
                 var4 = 1;
                 this.field_p = qk.field_c;
                 this.field_s = true;
@@ -202,20 +202,20 @@ final class oo {
             }
             if (var4 == 0 &&
               this.field_p > qk.field_a &&
-              257 < TeleportAction.field_z &&
-              290 > TeleportAction.field_z) {
-              if (AiPlanningStrategy.field_d > 9 &&
-                AiPlanningStrategy.field_d < 82) {
+              257 < TeleportAction.pointerPressY &&
+              290 > TeleportAction.pointerPressY) {
+              if (AiPlanningStrategy.pointerX > 9 &&
+                AiPlanningStrategy.pointerX < 82) {
                 this.field_p = qk.field_a;
               }
-              if (558 < AiPlanningStrategy.field_d &&
-                631 > AiPlanningStrategy.field_d) {
+              if (558 < AiPlanningStrategy.pointerX &&
+                631 > AiPlanningStrategy.pointerX) {
                 this.field_p = qk.field_a;
               }
             }
           }
           if (param0) {
-            this.field_h.updatePointerSelection(0, this.a(BattleTutorial.field_t, TeleportAction.field_z, -387), this.a(AiPlanningStrategy.field_d, ko.field_b, -387));
+            this.field_h.updatePointerSelection(0, this.a(BattleTutorial.pointerPressX, TeleportAction.pointerPressY, -387), this.a(AiPlanningStrategy.pointerX, ko.pointerY, -387));
             var4Lifetime1 = 0;
             if (this.field_h.hasActivationInput((byte) 96)) {
               if (0 == this.field_h.selectedIndex) {
@@ -437,19 +437,19 @@ final class oo {
           if (ByteStorage.field_d != null) {
             ByteStorage.field_d.g(9, 257);
             ByteStorage.field_d.d(558, 257);
-            if (ko.field_b > 257 &&
-              ko.field_b < 290) {
+            if (ko.pointerY > 257 &&
+              ko.pointerY < 290) {
               var2_intLifetime2 = (40 * CombatViewTransition.c(this.field_f << 4, 127) >> 16) + 40;
               if (var2_intLifetime2 > 0) {
-                if (AiPlanningStrategy.field_d > 9 &&
-                  AiPlanningStrategy.field_d < 82) {
+                if (AiPlanningStrategy.pointerX > 9 &&
+                  AiPlanningStrategy.pointerX < 82) {
                   ByteStorage.field_d.f(8, 256, var2_intLifetime2);
                   ByteStorage.field_d.f(10, 256, var2_intLifetime2);
                   ByteStorage.field_d.f(8, 258, var2_intLifetime2);
                   ByteStorage.field_d.f(10, 258, var2_intLifetime2);
                 } else {
-                  if (AiPlanningStrategy.field_d > 558 &&
-                    AiPlanningStrategy.field_d < 631) {
+                  if (AiPlanningStrategy.pointerX > 558 &&
+                    AiPlanningStrategy.pointerX < 631) {
                     ByteStorage.field_d.h();
                     ByteStorage.field_d.f(557, 256, var2_intLifetime2);
                     ByteStorage.field_d.f(559, 256, var2_intLifetime2);

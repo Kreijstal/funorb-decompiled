@@ -91,14 +91,14 @@ class fw extends Widget {
             field_C = -124;
           }
           if (this.field_q != 0) {
-            if (this.field_q == ro.field_ub) {
+            if (this.field_q == ro.pointerButton) {
               return;
             }
-            if (this.containsPointer(param0 - 32721, param1, ko.field_b, AiPlanningStrategy.field_d, param2) &&
-              ro.field_ub == 0) {
-              this.a(this.field_q, AiPlanningStrategy.field_d - param1, ko.field_b - param2, true);
+            if (this.containsPointer(param0 - 32721, param1, ko.pointerY, AiPlanningStrategy.pointerX, param2) &&
+              ro.pointerButton == 0) {
+              this.a(this.field_q, AiPlanningStrategy.pointerX - param1, ko.pointerY - param2, true);
             }
-            this.a(param2, param3, AiPlanningStrategy.field_d, (byte) -118, ko.field_b, param1);
+            this.a(param2, param3, AiPlanningStrategy.pointerX, (byte) -118, ko.pointerY, param1);
           }
         } catch (RuntimeException runtimeException) {
           throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "fw.P(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');

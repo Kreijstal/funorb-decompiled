@@ -358,7 +358,7 @@ final class TurnEffectEvent extends GameEvent {
           }
           var5_int = param2.getGroupId(param3, param4 ^ -2139);
           var6 = param2.getFileId((byte) 120, var5_int, param0);
-          stackIn_4_0 = sp.a(param2, var6, 0, var5_int, param1);
+          stackIn_4_0 = DualNodeIterator.a(param2, var6, 0, var5_int, param1);
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

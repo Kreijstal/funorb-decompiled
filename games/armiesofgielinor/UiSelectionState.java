@@ -230,26 +230,26 @@ final class UiSelectionState {
         }
         this.buttonPress = 0;
         this.keyCode = 0;
-        if (previousButton != DeployEvent.field_A) {
-          this.pressedPointerButton = DeployEvent.field_A;
-          this.buttonPress = DeployEvent.field_A;
+        if (previousButton != DeployEvent.pointerPressButton) {
+          this.pressedPointerButton = DeployEvent.pointerPressButton;
+          this.buttonPress = DeployEvent.pointerPressButton;
           this.pointerDrivenSelection = true;
           this.selectedIndex = pressedIndex;
           this.repeatCountdown = UnitCycler.field_a;
         }
         if (this.pressedPointerButton != 0 &&
-          0 != ro.field_ub) {
+          0 != ro.pointerButton) {
           if (this.repeatCountdown <= 0) {
             this.repeatCountdown = GameEvent.field_k;
           }
           this.repeatCountdown = this.repeatCountdown - 1;
         }
-        if (DeployEvent.field_A == 0 &&
-          ro.field_ub == 0) {
+        if (DeployEvent.pointerPressButton == 0 &&
+          ro.pointerButton == 0) {
           this.pressedPointerButton = 0;
         }
         if (this.pressedPointerButton == 0 && (this.pointerDrivenSelection ||
-          lk.field_f)) {
+          lk.pointerChangedSnapshot)) {
           if (0 > hoverIndex) {
             if (this.pointerDrivenSelection) {
               this.selectedIndex = -1;

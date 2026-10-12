@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class pq implements java.awt.event.MouseListener, java.awt.event.MouseMotionListener, java.awt.event.FocusListener {
+final class PointerInputHandler implements java.awt.event.MouseListener, java.awt.event.MouseMotionListener, java.awt.event.FocusListener {
     static cr field_a;
     static aj field_f;
     static String field_e;
@@ -9,27 +9,27 @@ final class pq implements java.awt.event.MouseListener, java.awt.event.MouseMoti
     static String field_d;
     static String field_c;
 
-    public final synchronized void mouseExited(java.awt.event.MouseEvent param0) {
+    public final synchronized void mouseExited(java.awt.event.MouseEvent event) {
         RuntimeException var2 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (BattleCharacter.field_q == null) {
+          if (BattleCharacter.pointerInputHandler == null) {
             return;
           }
-          av.field_a = 0;
-          DiskCacheRequest.field_B = -1;
-          ResourceArchive.field_i = -1;
-          ku.field_I = true;
+          av.pointerIdleTicks = 0;
+          DiskCacheRequest.livePointerX = -1;
+          ResourceArchive.livePointerY = -1;
+          ku.pointerChanged = true;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
           stackIn_6_0 = var2;
           stackIn_6_1 = new StringBuilder().append("pq.mouseExited(");
-          if (param0 == null) {
+          if (event == null) {
             stackIn_7_2 = "null";
           } else {
             stackIn_7_2 = "{...}";
@@ -47,7 +47,7 @@ final class pq implements java.awt.event.MouseListener, java.awt.event.MouseMoti
         var3.writeShort(true, param1);
     }
 
-    public final synchronized void mousePressed(java.awt.event.MouseEvent param0) {
+    public final synchronized void mousePressed(java.awt.event.MouseEvent event) {
         int var2_int = 0;
         RuntimeException var2 = null;
         RuntimeException stackIn_21_0 = null;
@@ -55,41 +55,41 @@ final class pq implements java.awt.event.MouseListener, java.awt.event.MouseMoti
         String stackIn_22_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (BattleCharacter.field_q != null) {
-            av.field_a = 0;
-            mq.field_Xb = param0.getX();
-            BoundedFile.field_d = param0.getY();
+          if (BattleCharacter.pointerInputHandler != null) {
+            av.pointerIdleTicks = 0;
+            mq.lastPointerPressX = event.getX();
+            BoundedFile.lastPointerPressY = event.getY();
             vi.monotonicMillis(-112);
-            if (javax.swing.SwingUtilities.isRightMouseButton(param0)) {
-              ArchiveIndex.field_k = 2;
-              ob.field_J = 2;
+            if (javax.swing.SwingUtilities.isRightMouseButton(event)) {
+              ArchiveIndex.pressedPointerButton = 2;
+              ob.heldPointerButton = 2;
             } else {
-              ArchiveIndex.field_k = 1;
-              ob.field_J = 1;
+              ArchiveIndex.pressedPointerButton = 1;
+              ob.heldPointerButton = 1;
             }
-            var2_int = param0.getModifiers();
+            var2_int = event.getModifiers();
             if ((var2_int & 16) != 0) {
-              EffectPresentation.field_g = EffectPresentation.field_g | 1;
+              EffectPresentation.livePointerButtonMask = EffectPresentation.livePointerButtonMask | 1;
             }
             if ((var2_int & 8) != 0) {
-              EffectPresentation.field_g = EffectPresentation.field_g | 2;
+              EffectPresentation.livePointerButtonMask = EffectPresentation.livePointerButtonMask | 2;
             }
             if ((4 & var2_int) != 0) {
-              EffectPresentation.field_g = EffectPresentation.field_g | 4;
+              EffectPresentation.livePointerButtonMask = EffectPresentation.livePointerButtonMask | 4;
             }
-            ku.field_I = true;
+            ku.pointerChanged = true;
           }
-          if (!param0.isPopupTrigger()) {
+          if (!event.isPopupTrigger()) {
             return;
           }
-          param0.consume();
+          event.consume();
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
           stackIn_21_0 = var2;
           stackIn_21_1 = new StringBuilder().append("pq.mousePressed(");
-          if (param0 == null) {
+          if (event == null) {
             stackIn_22_2 = "null";
           } else {
             stackIn_22_2 = "{...}";
@@ -98,27 +98,27 @@ final class pq implements java.awt.event.MouseListener, java.awt.event.MouseMoti
         }
     }
 
-    public final synchronized void mouseMoved(java.awt.event.MouseEvent param0) {
+    public final synchronized void mouseMoved(java.awt.event.MouseEvent event) {
         RuntimeException var2 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (BattleCharacter.field_q == null) {
+          if (BattleCharacter.pointerInputHandler == null) {
             return;
           }
-          av.field_a = 0;
-          DiskCacheRequest.field_B = param0.getX();
-          ResourceArchive.field_i = param0.getY();
-          ku.field_I = true;
+          av.pointerIdleTicks = 0;
+          DiskCacheRequest.livePointerX = event.getX();
+          ResourceArchive.livePointerY = event.getY();
+          ku.pointerChanged = true;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
           stackIn_6_0 = var2;
           stackIn_6_1 = new StringBuilder().append("pq.mouseMoved(");
-          if (param0 == null) {
+          if (event == null) {
             stackIn_7_2 = "null";
           } else {
             stackIn_7_2 = "{...}";
@@ -127,13 +127,13 @@ final class pq implements java.awt.event.MouseListener, java.awt.event.MouseMoti
         }
     }
 
-    public final void mouseClicked(java.awt.event.MouseEvent param0) {
+    public final void mouseClicked(java.awt.event.MouseEvent event) {
         try {
-          if (param0.isPopupTrigger()) {
-            param0.consume();
+          if (event.isPopupTrigger()) {
+            event.consume();
           }
         } catch (RuntimeException runtimeException) {
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "pq.mouseClicked(" + (param0 != null ? "{...}" : "null") + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "pq.mouseClicked(" + (event != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -148,27 +148,27 @@ final class pq implements java.awt.event.MouseListener, java.awt.event.MouseMoti
         ug.field_b = ug.field_b + 1;
     }
 
-    public final synchronized void mouseDragged(java.awt.event.MouseEvent param0) {
+    public final synchronized void mouseDragged(java.awt.event.MouseEvent event) {
         RuntimeException var2 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (BattleCharacter.field_q == null) {
+          if (BattleCharacter.pointerInputHandler == null) {
             return;
           }
-          av.field_a = 0;
-          DiskCacheRequest.field_B = param0.getX();
-          ResourceArchive.field_i = param0.getY();
-          ku.field_I = true;
+          av.pointerIdleTicks = 0;
+          DiskCacheRequest.livePointerX = event.getX();
+          ResourceArchive.livePointerY = event.getY();
+          ku.pointerChanged = true;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
           stackIn_6_0 = var2;
           stackIn_6_1 = new StringBuilder().append("pq.mouseDragged(");
-          if (param0 == null) {
+          if (event == null) {
             stackIn_7_2 = "null";
           } else {
             stackIn_7_2 = "{...}";
@@ -177,7 +177,7 @@ final class pq implements java.awt.event.MouseListener, java.awt.event.MouseMoti
         }
     }
 
-    public final void focusGained(java.awt.event.FocusEvent param0) {
+    public final void focusGained(java.awt.event.FocusEvent event) {
     }
 
     public static void a(byte param0) {
@@ -192,30 +192,30 @@ final class pq implements java.awt.event.MouseListener, java.awt.event.MouseMoti
         field_a = null;
     }
 
-    public final synchronized void mouseEntered(java.awt.event.MouseEvent param0) {
+    public final synchronized void mouseEntered(java.awt.event.MouseEvent event) {
         try {
-          if (BattleCharacter.field_q != null) {
-            av.field_a = 0;
-            DiskCacheRequest.field_B = param0.getX();
-            ResourceArchive.field_i = param0.getY();
-            ku.field_I = true;
+          if (BattleCharacter.pointerInputHandler != null) {
+            av.pointerIdleTicks = 0;
+            DiskCacheRequest.livePointerX = event.getX();
+            ResourceArchive.livePointerY = event.getY();
+            ku.pointerChanged = true;
           }
         } catch (RuntimeException runtimeException) {
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "pq.mouseEntered(" + (param0 != null ? "{...}" : "null") + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "pq.mouseEntered(" + (event != null ? "{...}" : "null") + ')');
         }
     }
 
-    public final synchronized void focusLost(java.awt.event.FocusEvent param0) {
+    public final synchronized void focusLost(java.awt.event.FocusEvent event) {
         try {
-          if (BattleCharacter.field_q != null) {
-            ob.field_J = 0;
+          if (BattleCharacter.pointerInputHandler != null) {
+            ob.heldPointerButton = 0;
           }
         } catch (RuntimeException runtimeException) {
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "pq.focusLost(" + (param0 != null ? "{...}" : "null") + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "pq.focusLost(" + (event != null ? "{...}" : "null") + ')');
         }
     }
 
-    public final synchronized void mouseReleased(java.awt.event.MouseEvent param0) {
+    public final synchronized void mouseReleased(java.awt.event.MouseEvent event) {
         int var2_int = 0;
         RuntimeException var2 = null;
         RuntimeException stackIn_14_0 = null;
@@ -223,32 +223,32 @@ final class pq implements java.awt.event.MouseListener, java.awt.event.MouseMoti
         String stackIn_15_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (null != BattleCharacter.field_q) {
-            av.field_a = 0;
-            ob.field_J = 0;
-            ku.field_I = true;
-            var2_int = param0.getModifiers();
+          if (null != BattleCharacter.pointerInputHandler) {
+            av.pointerIdleTicks = 0;
+            ob.heldPointerButton = 0;
+            ku.pointerChanged = true;
+            var2_int = event.getModifiers();
             if ((var2_int & 16) != 0) {
-              EffectPresentation.field_g = EffectPresentation.field_g & -2;
+              EffectPresentation.livePointerButtonMask = EffectPresentation.livePointerButtonMask & -2;
             }
             if ((var2_int & 8) != 0) {
-              EffectPresentation.field_g = EffectPresentation.field_g & -3;
+              EffectPresentation.livePointerButtonMask = EffectPresentation.livePointerButtonMask & -3;
             }
             if ((var2_int & 4) != 0) {
-              EffectPresentation.field_g = EffectPresentation.field_g & -5;
+              EffectPresentation.livePointerButtonMask = EffectPresentation.livePointerButtonMask & -5;
             }
           }
-          if (!param0.isPopupTrigger()) {
+          if (!event.isPopupTrigger()) {
             return;
           }
-          param0.consume();
+          event.consume();
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
           stackIn_14_0 = var2;
           stackIn_14_1 = new StringBuilder().append("pq.mouseReleased(");
-          if (param0 == null) {
+          if (event == null) {
             stackIn_15_2 = "null";
           } else {
             stackIn_15_2 = "{...}";

@@ -40,7 +40,7 @@ class tj extends Widget implements gw {
         RuntimeException decompiledCaughtException = null;
         var7 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          if (this.field_D.a(false)) {
+          if (this.field_D.isEmpty(false)) {
             return false;
           }
           var8 = new NodeIterator(this.field_D);
@@ -51,7 +51,7 @@ class tj extends Widget implements gw {
           while (var4 != null) {
             if (var4.a(false)) {
               var5 = new NodeIterator(this.field_D);
-              var5.a(var4, true);
+              var5.startForwardAt(var4, true);
               var6 = (Widget) (var5.next(50));
               while (var6 != null) {
                 if (!var6.a(11, param1)) {
@@ -169,7 +169,7 @@ class tj extends Widget implements gw {
             var8 = (Widget) null;
             this.a((Widget) null, 21, '￘', -49);
           }
-          if (this.field_D.a(param0)) {
+          if (this.field_D.isEmpty(param0)) {
             return false;
           }
           var9 = new NodeIterator(this.field_D);
@@ -177,7 +177,7 @@ class tj extends Widget implements gw {
           while (var4 != null) {
             if (var4.a(false)) {
               var5 = new NodeIterator(this.field_D);
-              var5.a(false, var4);
+              var5.startReverseAt(false, var4);
               var6 = (Widget) (var5.previous((byte) -112));
               while (var6 != null) {
                 if (var6.a(11, param1)) {

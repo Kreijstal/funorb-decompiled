@@ -5,7 +5,7 @@ final class mq extends je {
     private int[] field_Ub;
     private int field_Sb;
     private int field_Yb;
-    static volatile int field_Xb;
+    static volatile int lastPointerPressX;
     private int field_Qb;
     private int field_Pb;
     static String field_Mb;
@@ -526,7 +526,7 @@ final class mq extends je {
 
     static {
         field_Nb = "Please enter your date of birth to enable chat:";
-        field_Xb = 0;
+        lastPointerPressX = 0;
         field_Lb = new String[]{"Connection lost - attempting to reconnect", "Connection lost - attempting to reconnect.", "Connection lost - attempting to reconnect..", "Connection lost - attempting to reconnect..."};
         field_Mb = "<%0> has been defeated";
         field_Wb = 3;

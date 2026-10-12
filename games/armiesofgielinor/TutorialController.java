@@ -107,7 +107,7 @@ final class TutorialController {
         RuntimeException decompiledCaughtException = null;
         try {
           var2_int = io.a(i.field_Nb, (byte) 127) ? 1 : 0;
-          stackIn_4_0 = (pq.field_f == null) ? 0 : 1;
+          stackIn_4_0 = (PointerInputHandler.field_f == null) ? 0 : 1;
           var3 = stackIn_4_0;
           if (var3 == 0 &&
             var2_int == 0) {
@@ -203,8 +203,8 @@ final class TutorialController {
         int var4Lifetime3;
         var7 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          if (1 == DeployEvent.field_A) {
-            if (wg.a(-33, db.a(true, 44), db.a(true, 159), MatchConditionEntry.a(384, (byte) 94), MatchConditionEntry.a(416, (byte) 94))) {
+          if (1 == DeployEvent.pointerPressButton) {
+            if (IterableDualNodeDeque.isPointerInBounds(-33, db.a(true, 44), db.a(true, 159), MatchConditionEntry.a(384, (byte) 94), MatchConditionEntry.a(416, (byte) 94))) {
               tg.field_k = 1;
               if (ih.field_p != null &&
                 tg.field_k == 0) {
@@ -214,7 +214,7 @@ final class TutorialController {
               }
               RadialSummonMenu.$cfr$intArgs$a$6d836999ad61(123, im.field_v[2]);
             }
-            if (wg.a(-33, db.a(true, 171), db.a(true, 286), MatchConditionEntry.a(384, (byte) 94), MatchConditionEntry.a(416, (byte) 94))) {
+            if (IterableDualNodeDeque.isPointerInBounds(-33, db.a(true, 171), db.a(true, 286), MatchConditionEntry.a(384, (byte) 94), MatchConditionEntry.a(416, (byte) 94))) {
               tg.field_k = 0;
               RadialSummonMenu.$cfr$intArgs$a$6d836999ad61(121, im.field_v[2]);
             }
@@ -232,7 +232,7 @@ final class TutorialController {
                 if (var7 == 0) {
                   stackIn_30_3 = !(stackIn_24_3);
                   if (ml.a(stackIn_70_0, stackIn_70_1, stackIn_70_2, stackIn_30_3)) {
-                    if (DeployEvent.field_A == 2 &&
+                    if (DeployEvent.pointerPressButton == 2 &&
                       pg.playerProfile.equippedSpellIds[var2_int] > -1) {
                       pg.playerProfile.equippedSpellIds[var2_int] = -1;
                       AttackEvent.b(false);
@@ -268,7 +268,7 @@ final class TutorialController {
                   continue;
                 }
               } else {
-                if (DeployEvent.field_A == 2) {
+                if (DeployEvent.pointerPressButton == 2) {
                   return;
                 }
                 var2_int = (nr.field_e.a(AnimationSkeleton.field_m) >> 1) + 40;
@@ -277,13 +277,13 @@ final class TutorialController {
                 stackIn_70_2 = db.a(true, 620);
                 stackIn_70_3 = MatchConditionEntry.a(19, (byte) 94);
               }
-              if (wg.a(stackIn_70_0, stackIn_70_1, stackIn_70_2, stackIn_70_3, MatchConditionEntry.a(e.field_b[0].pixelHeight + 19, (byte) 94))) {
+              if (IterableDualNodeDeque.isPointerInBounds(stackIn_70_0, stackIn_70_1, stackIn_70_2, stackIn_70_3, MatchConditionEntry.a(e.field_b[0].pixelHeight + 19, (byte) 94))) {
                 CipherPacketBuffer.a(true, -9, 1, 0);
                 RadialSummonMenu.$cfr$intArgs$a$6d836999ad61(91, im.field_v[2]);
                 return;
               }
               if (tg.field_k == 0) {
-                if (wg.a(-33, db.a(true, 469), db.a(true, 606), MatchConditionEntry.a(384, (byte) 94), MatchConditionEntry.a(416, (byte) 94))) {
+                if (IterableDualNodeDeque.isPointerInBounds(-33, db.a(true, 469), db.a(true, 606), MatchConditionEntry.a(384, (byte) 94), MatchConditionEntry.a(416, (byte) 94))) {
                   if (ev.field_d > -1 &&
                     ev.field_d < 135 &&
                     pg.playerProfile.spellQuantities[ev.field_d] < 250 &&
@@ -386,15 +386,15 @@ final class TutorialController {
               if (TrianglePulse.field_c > 312) {
                 var3Lifetime1 = (TrianglePulse.field_c - 312) * ou.field_c / 291;
               }
-              if (wg.a(-33, db.a(param0, 34), db.a(param0, 292), MatchConditionEntry.a(64, (byte) 94), MatchConditionEntry.a(380, (byte) 94))) {
+              if (IterableDualNodeDeque.isPointerInBounds(-33, db.a(param0, 34), db.a(param0, 292), MatchConditionEntry.a(64, (byte) 94), MatchConditionEntry.a(380, (byte) 94))) {
                 discarded$0 = this.a(CachedArchiveProvider.spellMenuRoot, true, var3Lifetime1, 0, 0, 97);
               }
               if (fa.field_j != 2 &&
-                wg.a(-33, db.a(true, 279), db.a(true, 293), MatchConditionEntry.a(68 + ou.field_c, (byte) 94), MatchConditionEntry.a(60 - (-ou.field_c - 24), (byte) 94))) {
+                IterableDualNodeDeque.isPointerInBounds(-33, db.a(true, 279), db.a(true, 293), MatchConditionEntry.a(68 + ou.field_c, (byte) 94), MatchConditionEntry.a(60 - (-ou.field_c - 24), (byte) 94))) {
                 fa.field_j = 2;
-                RgbSpriteBase.field_u = -ou.field_c + (-68 + ko.field_b);
+                RgbSpriteBase.field_u = -ou.field_c + (-68 + ko.pointerY);
               }
-              if (wg.a(-33, db.a(true, 469), db.a(param0, 606), MatchConditionEntry.a(384, (byte) 94), MatchConditionEntry.a(416, (byte) 94))) {
+              if (IterableDualNodeDeque.isPointerInBounds(-33, db.a(true, 469), db.a(param0, 606), MatchConditionEntry.a(384, (byte) 94), MatchConditionEntry.a(416, (byte) 94))) {
                 var4Lifetime1 = 4;
                 while (var4Lifetime1 >= 0) {
                   if (~pg.playerProfile.equippedSpellIds[var4Lifetime1] == ~ev.field_d) {
@@ -410,7 +410,7 @@ final class TutorialController {
                 }
                 return;
               }
-              if (!wg.a(-33, db.a(param0, 469), db.a(param0, 606), MatchConditionEntry.a(334, (byte) 94), MatchConditionEntry.a(366, (byte) 94))) {
+              if (!IterableDualNodeDeque.isPointerInBounds(-33, db.a(param0, 469), db.a(param0, 606), MatchConditionEntry.a(334, (byte) 94), MatchConditionEntry.a(366, (byte) 94))) {
                 break;
               }
               var4Lifetime2 = 0;
@@ -430,8 +430,8 @@ final class TutorialController {
             }
           }
           if (1 != fa.field_j &&
-            wg.a(-33, db.a(true, 589), db.a(param0, 603), MatchConditionEntry.a(ep.field_o + 158, (byte) 94), MatchConditionEntry.a(150 - (-ep.field_o - 24), (byte) 94))) {
-            RgbSpriteBase.field_u = ko.field_b - (158 + ep.field_o);
+            IterableDualNodeDeque.isPointerInBounds(-33, db.a(true, 589), db.a(param0, 603), MatchConditionEntry.a(ep.field_o + 158, (byte) 94), MatchConditionEntry.a(150 - (-ep.field_o - 24), (byte) 94))) {
+            RgbSpriteBase.field_u = ko.pointerY - (158 + ep.field_o);
             fa.field_j = 1;
           }
           if (!param0) {
@@ -560,7 +560,7 @@ final class TutorialController {
             fe.c(this.c(-38, NodeDeque.unlockLevelCosts[ah.field_b]), db.a(true, 537), MatchConditionEntry.a(366, (byte) 94), nd.field_b, true);
             if (pg.playerProfile.getUnlockLevel(0) == ah.field_b &&
               pg.playerProfile.getAvailableRunes((byte) 123) >= NodeDeque.unlockLevelCosts[pg.playerProfile.getUnlockLevel(0)]) {
-              boolean decompiledSharedTail0 = !(wg.a(-33, db.a(true, 469), db.a(true, 606), MatchConditionEntry.a(384, (byte) 94), MatchConditionEntry.a(416, (byte) 94)));
+              boolean decompiledSharedTail0 = !(IterableDualNodeDeque.isPointerInBounds(-33, db.a(true, 469), db.a(true, 606), MatchConditionEntry.a(384, (byte) 94), MatchConditionEntry.a(416, (byte) 94)));
               if (!decompiledSharedTail0) {
                 fe.a(db.a(true, 469), MatchConditionEntry.a(384, (byte) 94), 137, 32, DisplacedUnitMarker.field_s, field_e, 0, 0);
                 na.field_F = 52;
@@ -629,8 +629,8 @@ final class TutorialController {
             BattleUnitRenderer.field_a.g(db.a(true, 326), MatchConditionEntry.a(-var2_int + 154, (byte) 94));
           }
           if (1 == fa.field_j) {
-            if (ro.field_ub == 1) {
-              var3 = -158 - RgbSpriteBase.field_u + ko.field_b;
+            if (ro.pointerButton == 1) {
+              var3 = -158 - RgbSpriteBase.field_u + ko.pointerY;
               if (0 > var3) {
                 ep.field_o = 0;
                 if (var4 != 0) {
@@ -1796,7 +1796,7 @@ final class TutorialController {
                                                                     }
                                                                     if (this.selectionState.isPointerPressed(false)) {
                                                                       var6 = -100 + this.getItemLeftX(true, param2) - (-this.getItemRightX(param2, param1 - 3858) - wd.field_b) >> 1;
-                                                                      var7Lifetime2 = AiPlanningStrategy.field_d - var6;
+                                                                      var7Lifetime2 = AiPlanningStrategy.pointerX - var6;
                                                                       var8 = 256 * var7Lifetime2 / 100;
                                                                       if (var8 <= 0) {
                                                                         mh.a(0, (byte) -118);
@@ -1851,7 +1851,7 @@ final class TutorialController {
                                                                   }
                                                                   if (this.selectionState.isPointerPressed(false)) {
                                                                     var6 = -100 + (this.getItemLeftX(true, param2) + this.getItemRightX(param2, -3858) + wd.field_b) >> 1;
-                                                                    var7Lifetime1 = -var6 + AiPlanningStrategy.field_d;
+                                                                    var7Lifetime1 = -var6 + AiPlanningStrategy.pointerX;
                                                                     var8Lifetime1 = 256 * var7Lifetime1 / 100;
                                                                     if (var8Lifetime1 <= 0) {
                                                                       NetworkResourceRequest.b(0, 94);
@@ -2117,7 +2117,7 @@ final class TutorialController {
                           return;
                         }
                         stackIn_693_0 = r.field_B;
-                        if (DeployEvent.field_A == 1) {
+                        if (DeployEvent.pointerPressButton == 1) {
                           stackIn_694_1 = 1;
                         } else {
                           stackIn_694_1 = -1;
@@ -2159,7 +2159,7 @@ final class TutorialController {
                         return;
                       }
                       stackIn_740_0 = ByteStorage.field_g;
-                      if (1 == DeployEvent.field_A) {
+                      if (1 == DeployEvent.pointerPressButton) {
                         stackIn_741_1 = 1;
                       } else {
                         stackIn_741_1 = -1;
@@ -2432,15 +2432,15 @@ final class TutorialController {
         var5 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           if (-1 < wh.field_a &&
-            AiPlanningStrategy.field_d > db.a(true, 40) &&
-            AiPlanningStrategy.field_d < db.a(true, 376) &&
-            ko.field_b > MatchConditionEntry.a(330, (byte) 94) &&
-            ko.field_b < MatchConditionEntry.a(414, (byte) 94)) {
-            ah.localCoat.setColour(wh.field_a, (AiPlanningStrategy.field_d - db.a(true, 40)) / 21 + 16 * ((ko.field_b - MatchConditionEntry.a(330, (byte) 94)) / 42), (byte) -110);
+            AiPlanningStrategy.pointerX > db.a(true, 40) &&
+            AiPlanningStrategy.pointerX < db.a(true, 376) &&
+            ko.pointerY > MatchConditionEntry.a(330, (byte) 94) &&
+            ko.pointerY < MatchConditionEntry.a(414, (byte) 94)) {
+            ah.localCoat.setColour(wh.field_a, (AiPlanningStrategy.pointerX - db.a(true, 40)) / 21 + 16 * ((ko.pointerY - MatchConditionEntry.a(330, (byte) 94)) / 42), (byte) -110);
             RadialSummonMenu.$cfr$intArgs$a$6d836999ad61(62, im.field_v[10]);
             return;
           }
-          var2_int = fs.a(ko.field_b, 24340, db.a(true, 380), MatchConditionEntry.a(60, (byte) 94), AiPlanningStrategy.field_d, 224, 352);
+          var2_int = fs.a(ko.pointerY, 24340, db.a(true, 380), MatchConditionEntry.a(60, (byte) 94), AiPlanningStrategy.pointerX, 224, 352);
           if (param0 != 330) {
             discarded$0 = this.f(-6, -35);
           }
@@ -2463,18 +2463,18 @@ final class TutorialController {
           }
           boolean decompiledFrameCompleted0 = true;
           var3 = 44;
-          if (AiPlanningStrategy.field_d > db.a(true, 308) &&
-            AiPlanningStrategy.field_d < db.a(true, 376)) {
+          if (AiPlanningStrategy.pointerX > db.a(true, 308) &&
+            AiPlanningStrategy.pointerX < db.a(true, 376)) {
             var4 = 0;
             while (var4 < 6) {
-              stackIn_58_0 = ~ko.field_b;
+              stackIn_58_0 = ~ko.pointerY;
               stackIn_58_1 = ~MatchConditionEntry.a(var4 * var3 + 60, (byte) 94);
               if (var5 != 0) {
                 decompiledFrameCompleted0 = false;
                 break;
               }
               if (stackIn_58_0 < stackIn_58_1 &&
-                ko.field_b < MatchConditionEntry.a(-4 + (60 + var3 * (var4 + 1)), (byte) 94)) {
+                ko.pointerY < MatchConditionEntry.a(-4 + (60 + var3 * (var4 + 1)), (byte) 94)) {
                 wh.field_a = var4;
                 if (wh.field_a != kd.field_X) {
                   dd.field_e = 0;
@@ -2489,7 +2489,7 @@ final class TutorialController {
             }
           }
           if (decompiledFrameCompleted0) {
-            var2_int = ah.localCoat.a(ko.field_b, param0 ^ 21728, db.a(true, 55), MatchConditionEntry.a(70, (byte) 94), AiPlanningStrategy.field_d);
+            var2_int = ah.localCoat.a(ko.pointerY, param0 ^ 21728, db.a(true, 55), MatchConditionEntry.a(70, (byte) 94), AiPlanningStrategy.pointerX);
             stackIn_58_0 = ~var2_int;
             stackIn_58_1 = 1;
           }
@@ -2929,7 +2929,7 @@ final class TutorialController {
           if (0 == pg.playerProfile.unitUnlockMasks[param1]) {
             fe.c(this.c(-38, 50), db.a(true, 537), MatchConditionEntry.a(366, (byte) 94), nd.field_b, true);
             if (pg.playerProfile.getAvailableRunes((byte) 120) >= 50) {
-              boolean decompiledSharedTail0 = !(wg.a(-33, db.a(true, 469), db.a(true, 606), MatchConditionEntry.a(384, (byte) 94), MatchConditionEntry.a(416, (byte) 94)));
+              boolean decompiledSharedTail0 = !(IterableDualNodeDeque.isPointerInBounds(-33, db.a(true, 469), db.a(true, 606), MatchConditionEntry.a(384, (byte) 94), MatchConditionEntry.a(416, (byte) 94)));
               if (!decompiledSharedTail0) {
                 fe.a(db.a(true, 469), MatchConditionEntry.a(384, (byte) 94), 137, 32, DisplacedUnitMarker.field_s, field_e, 0, 0);
                 na.field_F = 53;
@@ -3616,7 +3616,7 @@ final class TutorialController {
             fe.b(db.a(true, 40), MatchConditionEntry.a(380, (byte) 94), 123, 40, EffectPresentation.field_j, jh.field_k, 0, 128);
             SoftwareRaster.b(db.a(true, 40), MatchConditionEntry.a(380, (byte) 94), 123, 40, 0, 128);
           }
-          boolean decompiledSharedTail2 = !(!wg.a(-33, db.a(true, 171), db.a(true, 286), MatchConditionEntry.a(384, (byte) 94), MatchConditionEntry.a(416, (byte) 94)));
+          boolean decompiledSharedTail2 = !(!IterableDualNodeDeque.isPointerInBounds(-33, db.a(true, 171), db.a(true, 286), MatchConditionEntry.a(384, (byte) 94), MatchConditionEntry.a(416, (byte) 94)));
           if (!decompiledSharedTail2) {
             fe.a(db.a(true, 171), MatchConditionEntry.a(384, (byte) 94), 115, 32, DisplacedUnitMarker.field_s, nd.field_b, 0, 0);
             decompiledSharedTail2 = (var8 != 0);
@@ -3626,7 +3626,7 @@ final class TutorialController {
             na.field_F = 8;
           }
           fe.c(nu.field_w, db.a(true, 228), MatchConditionEntry.a(416, (byte) 94), 0, true);
-          boolean decompiledSharedTail1 = !(wg.a(-33, db.a(true, 44), db.a(true, 159), MatchConditionEntry.a(384, (byte) 94), MatchConditionEntry.a(416, (byte) 94)));
+          boolean decompiledSharedTail1 = !(IterableDualNodeDeque.isPointerInBounds(-33, db.a(true, 44), db.a(true, 159), MatchConditionEntry.a(384, (byte) 94), MatchConditionEntry.a(416, (byte) 94)));
           if (!decompiledSharedTail1) {
             fe.a(db.a(true, 44), MatchConditionEntry.a(384, (byte) 94), 115, 32, DisplacedUnitMarker.field_s, field_e, 0, 0);
             na.field_F = 9;
@@ -3796,12 +3796,12 @@ final class TutorialController {
           var5Lifetime1 = 40 + (nr.field_e.a(AnimationSkeleton.field_m) >> 1);
           fm.a(e.field_b, var5Lifetime1, db.a(true, 620 - var5Lifetime1), MatchConditionEntry.a(19, (byte) 94), -104);
           fe.a(AnimationSkeleton.field_m, db.a(true, 640 - var5Lifetime1), MatchConditionEntry.a(49, (byte) 94), 16777215, true);
-          if (wg.a(-33, db.a(true, 620 - var5Lifetime1), db.a(true, 620), MatchConditionEntry.a(19, (byte) 94), MatchConditionEntry.a(e.field_b[0].pixelHeight + 19, (byte) 94))) {
+          if (IterableDualNodeDeque.isPointerInBounds(-33, db.a(true, 620 - var5Lifetime1), db.a(true, 620), MatchConditionEntry.a(19, (byte) 94), MatchConditionEntry.a(e.field_b[0].pixelHeight + 19, (byte) 94))) {
             na.field_F = 45;
           }
           if (TelepopEvent.field_D) {
-            BattleCharacter.field_h[uc.spellDefinitions[ev.field_d][2]].h(12 + AiPlanningStrategy.field_d, ko.field_b + 12);
-            km.field_h[0].h(AiPlanningStrategy.field_d + 10, 10 + ko.field_b);
+            BattleCharacter.field_h[uc.spellDefinitions[ev.field_d][2]].h(12 + AiPlanningStrategy.pointerX, ko.pointerY + 12);
+            km.field_h[0].h(AiPlanningStrategy.pointerX + 10, 10 + ko.pointerY);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -3969,7 +3969,7 @@ final class TutorialController {
             break;
           }
           if (decompiledNaturalLoopExit0) {
-            stackIn_18_0 = wg.a(-33, db.a(true, 30), db.a(true, 300), MatchConditionEntry.a(150, (byte) 94), MatchConditionEntry.a(420, (byte) 94));
+            stackIn_18_0 = IterableDualNodeDeque.isPointerInBounds(-33, db.a(true, 30), db.a(true, 300), MatchConditionEntry.a(150, (byte) 94), MatchConditionEntry.a(420, (byte) 94));
           }
           boolean decompiledFrameCompleted0 = true;
           if (stackIn_18_0) {
@@ -4017,7 +4017,7 @@ final class TutorialController {
             }
           }
           if (decompiledFrameCompleted0) {
-            stackIn_42_0 = wg.a(param0 - 622, db.a(true, 469), db.a(true, 606), MatchConditionEntry.a(384, (byte) 94), MatchConditionEntry.a(416, (byte) 94));
+            stackIn_42_0 = IterableDualNodeDeque.isPointerInBounds(param0 - 622, db.a(true, 469), db.a(true, 606), MatchConditionEntry.a(384, (byte) 94), MatchConditionEntry.a(416, (byte) 94));
           }
           if (stackIn_42_0) {
             if (jq.field_F <= -1) {
@@ -4068,9 +4068,9 @@ final class TutorialController {
             }
           }
           if (fa.field_j != 1 &&
-            wg.a(-33, db.a(true, 589), db.a(true, 603), MatchConditionEntry.a(158 + ep.field_o, (byte) 94), MatchConditionEntry.a(150 + (ep.field_o + 24), (byte) 94))) {
+            IterableDualNodeDeque.isPointerInBounds(-33, db.a(true, 589), db.a(true, 603), MatchConditionEntry.a(158 + ep.field_o, (byte) 94), MatchConditionEntry.a(150 + (ep.field_o + 24), (byte) 94))) {
             fa.field_j = 1;
-            RgbSpriteBase.field_u = -ep.field_o - (158 - ko.field_b);
+            RgbSpriteBase.field_u = -ep.field_o - (158 - ko.pointerY);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -4094,7 +4094,7 @@ final class TutorialController {
           var2_int = 0;
           boolean decompiledNaturalLoopExit0 = false;
           while (!(decompiledNaturalLoopExit0 = (!(pc.field_k.length > var2_int)))) {
-            stackOut_3_0 = wg.a(param0 + 59, db.a(true, 57 * var2_int + 35), db.a(true, 56 + 57 * var2_int + 35), MatchConditionEntry.a(65, (byte) 94), MatchConditionEntry.a(121, (byte) 94));
+            stackOut_3_0 = IterableDualNodeDeque.isPointerInBounds(param0 + 59, db.a(true, 57 * var2_int + 35), db.a(true, 56 + 57 * var2_int + 35), MatchConditionEntry.a(65, (byte) 94), MatchConditionEntry.a(121, (byte) 94));
             stackIn_11_0 = stackOut_3_0 ? 1 : 0;
             stackIn_4_0 = stackOut_3_0;
             if (var3 == 0) {
@@ -4128,7 +4128,7 @@ final class TutorialController {
           if (this.selectionState.selectedIndex != -1) {
             fallbackIndex = this.selectionState.selectedIndex;
           }
-          this.selectionState.restoreSelection(fallbackIndex, pointerDriven, this.b(ko.field_b, AiPlanningStrategy.field_d, 31), 0);
+          this.selectionState.restoreSelection(fallbackIndex, pointerDriven, this.b(ko.pointerY, AiPlanningStrategy.pointerX, 31), 0);
           vs.field_a = -1;
           lm.field_c = -1;
           ac.field_p = fallbackIndex;
@@ -4493,12 +4493,12 @@ final class TutorialController {
         try {
           boolean decompiledFrameRemainder0 = true;
           if (fa.field_j == 2) {
-            if (ro.field_ub != 1) {
+            if (ro.pointerButton != 1) {
               fa.field_j = -1;
               decompiledFrameRemainder0 = (var3 != 0);
             }
             if (decompiledFrameRemainder0) {
-              var2_int = ko.field_b + (-RgbSpriteBase.field_u - 68);
+              var2_int = ko.pointerY + (-RgbSpriteBase.field_u - 68);
               if (var2_int < 0) {
                 ou.field_c = 0;
                 if (var3 != 0) {
@@ -4706,8 +4706,8 @@ final class TutorialController {
                   continue;
                 }
               } else {
-                ac.field_p = this.b(ko.field_b, AiPlanningStrategy.field_d, 31);
-                this.selectionState.updatePointerSelection(0, this.b(TeleportAction.field_z, BattleTutorial.field_t, 31), ac.field_p);
+                ac.field_p = this.b(ko.pointerY, AiPlanningStrategy.pointerX, 31);
+                this.selectionState.updatePointerSelection(0, this.b(TeleportAction.pointerPressY, BattleTutorial.pointerPressX, 31), ac.field_p);
               }
               if (~pn.field_m != ~ac.field_p) {
                 RadialSummonMenu.$cfr$intArgs$a$6d836999ad61(90, im.field_v[1]);
@@ -4716,20 +4716,20 @@ final class TutorialController {
               if (this.selectionState.selectedIndex != -1) {
                 this.a(true, 0, this.selectionState.selectedIndex);
               }
-              if (DeployEvent.field_A == 1 &&
+              if (DeployEvent.pointerPressButton == 1 &&
                 this.tutorialStage == 12) {
                 this.i(589);
               }
-              if ((DeployEvent.field_A == 1 ||
-                DeployEvent.field_A == 2) &&
+              if ((DeployEvent.pointerPressButton == 1 ||
+                DeployEvent.pointerPressButton == 2) &&
                 this.tutorialStage == 18) {
                 this.c(true);
               }
-              if (DeployEvent.field_A == 1 &&
+              if (DeployEvent.pointerPressButton == 1 &&
                 this.tutorialStage == 20) {
                 this.e((byte) -92);
               }
-              if (DeployEvent.field_A != 1) {
+              if (DeployEvent.pointerPressButton != 1) {
                 break;
               }
               if (this.tutorialStage != 13) {
@@ -4838,7 +4838,7 @@ final class TutorialController {
                     }
                     decompiledFrameRemainder3 = !(!TelepopEvent.field_D);
                     if ((decompiledFrameRemainder3) &&
-                      (decompiledFrameRemainder3 = (ro.field_ub != 1))) {
+                      (decompiledFrameRemainder3 = (ro.pointerButton != 1))) {
                       this.a(false);
                       decompiledFrameRemainder3 = (var4 != 0);
                     }
@@ -4855,7 +4855,7 @@ final class TutorialController {
                           RadialSummonMenu.$cfr$intArgs$a$6d836999ad61(65, im.field_v[1]);
                           GameplayController.field_J = na.field_F;
                         }
-                        ul.a((byte) -102, 224, db.a(true, 380), ro.field_ub, ko.field_b, 352, AiPlanningStrategy.field_d, MatchConditionEntry.a(60, (byte) 94));
+                        ul.a((byte) -102, 224, db.a(true, 380), ro.pointerButton, ko.pointerY, 352, AiPlanningStrategy.pointerX, MatchConditionEntry.a(60, (byte) 94));
                         decompiledFrameRemainder3 = (var4 != 0);
                       }
                     }
@@ -5177,7 +5177,7 @@ final class TutorialController {
             if (pg.playerProfile.getAvailableRunes((byte) 78) < bw.unitDefinitions[var4_int][11]) {
               return;
             }
-            boolean decompiledSharedTail0 = !(wg.a(-33, db.a(true, 469), db.a(true, 606), MatchConditionEntry.a(384, (byte) 94), MatchConditionEntry.a(416, (byte) 94)));
+            boolean decompiledSharedTail0 = !(IterableDualNodeDeque.isPointerInBounds(-33, db.a(true, 469), db.a(true, 606), MatchConditionEntry.a(384, (byte) 94), MatchConditionEntry.a(416, (byte) 94)));
             if (!decompiledSharedTail0) {
               fe.a(db.a(true, 469), MatchConditionEntry.a(384, (byte) 94), 137, 32, DisplacedUnitMarker.field_s, field_e, 0, 0);
               na.field_F = 52;
@@ -5224,7 +5224,7 @@ final class TutorialController {
             if (pg.playerProfile.getAvailableRunes((byte) 125) >= var4 &&
               param0 < pg.playerProfile.spellQuantities.length &&
               pg.playerProfile.spellQuantities[param0] < 250) {
-              boolean decompiledSharedTail2 = !(!wg.a(-33, db.a(true, 469), db.a(true, 606), MatchConditionEntry.a(384, (byte) 94), MatchConditionEntry.a(416, (byte) 94)));
+              boolean decompiledSharedTail2 = !(!IterableDualNodeDeque.isPointerInBounds(-33, db.a(true, 469), db.a(true, 606), MatchConditionEntry.a(384, (byte) 94), MatchConditionEntry.a(416, (byte) 94)));
               if (!decompiledSharedTail2) {
                 fe.a(db.a(true, 469), MatchConditionEntry.a(384, (byte) 94), 137, 32, DisplacedUnitMarker.field_s, nd.field_b, 0, 0);
                 decompiledSharedTail2 = (var7 != 0);
@@ -5256,7 +5256,7 @@ final class TutorialController {
                 }
               } else {
                 if (var5 != 0) {
-                  boolean decompiledSharedTail1 = !(wg.a(-33, db.a(true, 469), db.a(true, 606), MatchConditionEntry.a(334, (byte) 94), MatchConditionEntry.a(366, (byte) 94)));
+                  boolean decompiledSharedTail1 = !(IterableDualNodeDeque.isPointerInBounds(-33, db.a(true, 469), db.a(true, 606), MatchConditionEntry.a(334, (byte) 94), MatchConditionEntry.a(366, (byte) 94)));
                   if (!decompiledSharedTail1) {
                     fe.a(db.a(true, 469), MatchConditionEntry.a(334, (byte) 94), 137, 32, DisplacedUnitMarker.field_s, field_e, 0, 0);
                     na.field_F = 8;
@@ -5275,7 +5275,7 @@ final class TutorialController {
               }
               break;
             }
-            boolean decompiledSharedTail0 = !(wg.a(stackIn_47_0, stackIn_47_1, db.a(true, 606), MatchConditionEntry.a(384, (byte) 94), MatchConditionEntry.a(416, (byte) 94)));
+            boolean decompiledSharedTail0 = !(IterableDualNodeDeque.isPointerInBounds(stackIn_47_0, stackIn_47_1, db.a(true, 606), MatchConditionEntry.a(384, (byte) 94), MatchConditionEntry.a(416, (byte) 94)));
             if (!decompiledSharedTail0) {
               fe.a(db.a(true, 469), MatchConditionEntry.a(384, (byte) 94), 137, 32, DisplacedUnitMarker.field_s, field_e, 0, 0);
               na.field_F = 8;
@@ -5365,10 +5365,10 @@ final class TutorialController {
         int var2_int = 0;
         RuntimeException var2 = null;
         try {
-          lm.field_c = this.d(AiPlanningStrategy.field_d, -1, ko.field_b);
-          if (1 == DeployEvent.field_A) {
+          lm.field_c = this.d(AiPlanningStrategy.pointerX, -1, ko.pointerY);
+          if (1 == DeployEvent.pointerPressButton) {
             RadialSummonMenu.$cfr$intArgs$a$6d836999ad61(94, im.field_v[2]);
-            var2_int = this.d(BattleTutorial.field_t, -1, TeleportAction.field_z);
+            var2_int = this.d(BattleTutorial.pointerPressX, -1, TeleportAction.pointerPressY);
             if (vs.field_a == var2_int) {
               vs.field_a = -1;
               if ((ArmiesOfGielinor.obfuscationControl) &&
@@ -6038,7 +6038,7 @@ final class TutorialController {
         var8 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           fe.a(db.a(true, 40), MatchConditionEntry.a(60, (byte) 94), 264, 260, EffectPresentation.field_j, jh.field_k, 0, 128, false);
-          na.field_F = ah.localCoat.a(db.a(true, 55), 0, AiPlanningStrategy.field_d, wh.field_a, mv.field_d, MatchConditionEntry.a(70, (byte) 94), ko.field_b);
+          na.field_F = ah.localCoat.a(db.a(true, 55), 0, AiPlanningStrategy.pointerX, wh.field_a, mv.field_d, MatchConditionEntry.a(70, (byte) 94), ko.pointerY);
           var2_int = 44;
           var3 = 0;
           boolean decompiledNaturalLoopExit0 = false;
@@ -6046,12 +6046,12 @@ final class TutorialController {
             var4 = db.a(true, 308);
             var5 = MatchConditionEntry.a(60 + var2_int * var3, (byte) 94);
             stackIn_35_0 = ~var4;
-            stackIn_35_1 = ~AiPlanningStrategy.field_d;
+            stackIn_35_1 = ~AiPlanningStrategy.pointerX;
             if (var8 == 0) {
               if (stackIn_35_0 > stackIn_35_1 &&
-                var4 + 68 > AiPlanningStrategy.field_d &&
-                var5 < ko.field_b &&
-                (60 + (var2_int * (1 + var3) - 4)) > ko.field_b) {
+                var4 + 68 > AiPlanningStrategy.pointerX &&
+                var5 < ko.pointerY &&
+                (60 + (var2_int * (1 + var3) - 4)) > ko.pointerY) {
                 if (~var3 != ~wh.field_a) {
                   fe.a(var4, var5, 68, -4 + var2_int, EffectPresentation.field_j, field_e, 0, 128, false);
                 } else {
@@ -6077,11 +6077,11 @@ final class TutorialController {
             na.field_F = na.field_F + 100;
           }
           var3Lifetime1 = -1;
-          if (AiPlanningStrategy.field_d > db.a(true, 40) &&
-            AiPlanningStrategy.field_d < db.a(true, 376) &&
-            ko.field_b > MatchConditionEntry.a(330, (byte) 94) &&
-            ko.field_b < MatchConditionEntry.a(414, (byte) 94)) {
-            var3Lifetime1 = (AiPlanningStrategy.field_d - db.a(true, 40)) / 21 + (ko.field_b - MatchConditionEntry.a(330, (byte) 94)) / 42 * 16;
+          if (AiPlanningStrategy.pointerX > db.a(true, 40) &&
+            AiPlanningStrategy.pointerX < db.a(true, 376) &&
+            ko.pointerY > MatchConditionEntry.a(330, (byte) 94) &&
+            ko.pointerY < MatchConditionEntry.a(414, (byte) 94)) {
+            var3Lifetime1 = (AiPlanningStrategy.pointerX - db.a(true, 40)) / 21 + (ko.pointerY - MatchConditionEntry.a(330, (byte) 94)) / 42 * 16;
           }
           if (na.field_F <= -1) {
             na.field_F = var3Lifetime1;
@@ -6129,15 +6129,15 @@ final class TutorialController {
               stackIn_89_0 = 0;
             }
             if (stackIn_89_0 > ~kd.field_X) {
-              stackIn_96_0 = !(ro.field_ub <= 0);
-              var4Lifetime1 = ib.a(stackIn_96_0, 352, db.a(true, 380), ko.field_b, AiPlanningStrategy.field_d, 224, ah.localCoat.parts[kd.field_X], -40, MatchConditionEntry.a(60, (byte) 94));
+              stackIn_96_0 = !(ro.pointerButton <= 0);
+              var4Lifetime1 = ib.a(stackIn_96_0, 352, db.a(true, 380), ko.pointerY, AiPlanningStrategy.pointerX, 224, ah.localCoat.parts[kd.field_X], -40, MatchConditionEntry.a(60, (byte) 94));
               if (var8 != 0) {
-                stackIn_103_0 = !(ro.field_ub <= 0);
-                var4Lifetime1 = ib.a(stackIn_103_0, 352, db.a(true, 380), ko.field_b, AiPlanningStrategy.field_d, 224, -1, -40, MatchConditionEntry.a(60, (byte) 94));
+                stackIn_103_0 = !(ro.pointerButton <= 0);
+                var4Lifetime1 = ib.a(stackIn_103_0, 352, db.a(true, 380), ko.pointerY, AiPlanningStrategy.pointerX, 224, -1, -40, MatchConditionEntry.a(60, (byte) 94));
               }
             } else {
-              stackIn_103_0 = !(ro.field_ub <= 0);
-              var4Lifetime1 = ib.a(stackIn_103_0, 352, db.a(true, 380), ko.field_b, AiPlanningStrategy.field_d, 224, -1, -40, MatchConditionEntry.a(60, (byte) 94));
+              stackIn_103_0 = !(ro.pointerButton <= 0);
+              var4Lifetime1 = ib.a(stackIn_103_0, 352, db.a(true, 380), ko.pointerY, AiPlanningStrategy.pointerX, 224, -1, -40, MatchConditionEntry.a(60, (byte) 94));
             }
             if (na.field_F > -1) {
               na.field_F = na.field_F + 200;

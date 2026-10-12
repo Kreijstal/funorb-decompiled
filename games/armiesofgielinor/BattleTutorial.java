@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 class BattleTutorial {
-    static int field_t;
+    static int pointerPressX;
     int panelWidth;
     static boolean field_n;
     private int messageId;
@@ -28,7 +28,7 @@ class BattleTutorial {
     static String field_u;
 
     private final boolean isEnemyWaveDefeated(byte obfuscationGuard) {
-        if (this.controller.battlefield.unitsByPlayer[1].b(false) == 0 &&
+        if (this.controller.battlefield.unitsByPlayer[1].size(false) == 0 &&
           this.controller.battlefield.tiles[DeployAction.field_s[0]].ownerPlayer == 0) {
           return true;
         }
@@ -1659,7 +1659,7 @@ class BattleTutorial {
           stackIn_12_3 = 30;
           stackIn_12_4 = DisplacedUnitMarker.field_s;
           if (this.buttonMode != 2 &&
-            wg.a(obfuscationGuard - 54, -5 - this.panelWidth + var2, var2 - 15, -45 + var3, var3 - 15)) {
+            IterableDualNodeDeque.isPointerInBounds(obfuscationGuard - 54, -5 - this.panelWidth + var2, var2 - 15, -45 + var3, var3 - 15)) {
             stackIn_13_5 = TutorialController.field_e;
           } else {
             stackIn_13_5 = nd.field_b;
@@ -2036,7 +2036,7 @@ class BattleTutorial {
     }
 
     static {
-        field_t = 0;
+        pointerPressX = 0;
         field_b = "Change display name";
         field_l = "Year";
         field_i = "Offline";

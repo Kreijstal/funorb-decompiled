@@ -39,21 +39,21 @@ final class ot extends dr {
             tn.field_Z = null;
             if (param0 != 76) {
               ot.e((byte) -104);
-              pq.field_b = null;
+              PointerInputHandler.field_b = null;
               return;
             }
-            pq.field_b = null;
+            PointerInputHandler.field_b = null;
             return;
           }
           tn.field_Z.field_g.field_rb = false;
         }
         tn.field_Z = null;
         if (param0 == 76) {
-          pq.field_b = null;
+          PointerInputHandler.field_b = null;
           return;
         }
         ot.e((byte) -104);
-        pq.field_b = null;
+        PointerInputHandler.field_b = null;
     }
 
     ot(String param0, Class[] param1, String param2) {

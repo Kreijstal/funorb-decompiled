@@ -19,7 +19,7 @@ final class vs {
         }
         try {
           qd.field_I = param1;
-          OwnerChangeEvent.field_E.field_fb.b(75);
+          OwnerChangeEvent.field_E.field_fb.clear(75);
           OwnerChangeEvent.field_E.a(qd.field_I, 105);
           if (param0 != 256) {
             field_j = true;

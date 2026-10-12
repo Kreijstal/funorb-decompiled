@@ -15,24 +15,24 @@ final class ds {
         field_a = null;
     }
 
-    final static void a(byte param0) {
+    final static void capturePointerInput(byte obfuscationGuard) {
         int var2 = 0;
         Throwable decompiledCaughtException = null;
         Object var1 = null;
-        var1 = BattleCharacter.field_q;
+        var1 = BattleCharacter.pointerInputHandler;
         synchronized (var1) {
-          ro.field_ub = ob.field_J;
-          av.field_a = av.field_a + 1;
-          AiPlanningStrategy.field_d = DiskCacheRequest.field_B;
-          ko.field_b = ResourceArchive.field_i;
-          lk.field_f = ku.field_I;
-          var2 = 48 / ((36 - param0) / 56);
-          ku.field_I = false;
-          DeployEvent.field_A = ArchiveIndex.field_k;
-          BattleTutorial.field_t = mq.field_Xb;
-          TeleportAction.field_z = BoundedFile.field_d;
-          ArchiveIndex.field_k = 0;
-          eq.field_l = EffectPresentation.field_g;
+          ro.pointerButton = ob.heldPointerButton;
+          av.pointerIdleTicks = av.pointerIdleTicks + 1;
+          AiPlanningStrategy.pointerX = DiskCacheRequest.livePointerX;
+          ko.pointerY = ResourceArchive.livePointerY;
+          lk.pointerChangedSnapshot = ku.pointerChanged;
+          var2 = 48 / ((36 - obfuscationGuard) / 56);
+          ku.pointerChanged = false;
+          DeployEvent.pointerPressButton = ArchiveIndex.pressedPointerButton;
+          BattleTutorial.pointerPressX = mq.lastPointerPressX;
+          TeleportAction.pointerPressY = BoundedFile.lastPointerPressY;
+          ArchiveIndex.pressedPointerButton = 0;
+          eq.pointerButtonMask = EffectPresentation.livePointerButtonMask;
         }
     }
 

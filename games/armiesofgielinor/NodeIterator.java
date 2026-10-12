@@ -44,7 +44,7 @@ final class NodeIterator {
         field_d = null;
     }
 
-    final IntrusiveNode a(boolean param0, IntrusiveNode param1) {
+    final IntrusiveNode startReverseAt(boolean obfuscationGuard, IntrusiveNode node) {
         IntrusiveNode var3 = null;
         RuntimeException var3_ref = null;
         IntrusiveNode stackIn_2_0 = null;
@@ -55,14 +55,14 @@ final class NodeIterator {
         String stackIn_15_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param0) {
+          if (obfuscationGuard) {
             stackIn_2_0 = (IntrusiveNode) null;
             return stackIn_2_0;
           }
-          if (param1 == null) {
+          if (node == null) {
             var3 = this.deque.sentinel.previous;
           } else {
-            var3 = param1;
+            var3 = node;
           }
           if (this.deque.sentinel == var3) {
             this.cursor = null;
@@ -76,8 +76,8 @@ final class NodeIterator {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3_ref = decompiledCaughtException;
           stackIn_14_0 = var3_ref;
-          stackIn_14_1 = new StringBuilder().append("bb.F(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_14_1 = new StringBuilder().append("bb.F(").append(obfuscationGuard).append(',');
+          if (node == null) {
             stackIn_15_2 = "null";
           } else {
             stackIn_15_2 = "{...}";
@@ -197,7 +197,7 @@ final class NodeIterator {
         return (IntrusiveNode) null;
     }
 
-    final IntrusiveNode a(IntrusiveNode param0, boolean param1) {
+    final IntrusiveNode startForwardAt(IntrusiveNode node, boolean obfuscationGuard) {
         IntrusiveNode var3 = null;
         RuntimeException var3_ref = null;
         IntrusiveNode stackIn_2_0 = null;
@@ -208,12 +208,12 @@ final class NodeIterator {
         String stackIn_15_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (!param1) {
+          if (!obfuscationGuard) {
             stackIn_2_0 = (IntrusiveNode) null;
             return stackIn_2_0;
           }
-          if (param0 != null) {
-            var3 = param0;
+          if (node != null) {
+            var3 = node;
           } else {
             var3 = this.deque.sentinel.next;
           }
@@ -230,12 +230,12 @@ final class NodeIterator {
           var3_ref = decompiledCaughtException;
           stackIn_14_0 = var3_ref;
           stackIn_14_1 = new StringBuilder().append("bb.B(");
-          if (param0 == null) {
+          if (node == null) {
             stackIn_15_2 = "null";
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param1).append(')').toString());
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 

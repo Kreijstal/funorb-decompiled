@@ -101,7 +101,7 @@ final class ActionSpell extends Spell {
             candidateScore == 1) {
             if (1 < candidateScore) {
               hc.field_b = hc.field_b + 1;
-              hc.field_b = hc.field_b + (ko.field_b ^ AiPlanningStrategy.field_d);
+              hc.field_b = hc.field_b + (ko.pointerY ^ AiPlanningStrategy.pointerX);
               hc.field_b = Math.abs(hc.field_b);
               mutationSelector = hc.field_b % 8;
               mutationVariant = mutationSelector;
@@ -139,8 +139,8 @@ final class ActionSpell extends Spell {
                         wr.campaignPacketWord3 = wr.campaignPacketWord3 + 1;
                       }
                     } else {
-                      kw.campaignPacketWord0 = kw.campaignPacketWord0 + BattleTutorial.field_t;
-                      ii.campaignPacketWord1 = ii.campaignPacketWord1 + BattleTutorial.field_t;
+                      kw.campaignPacketWord0 = kw.campaignPacketWord0 + BattleTutorial.pointerPressX;
+                      ii.campaignPacketWord1 = ii.campaignPacketWord1 + BattleTutorial.pointerPressX;
                     }
                   }
                 }

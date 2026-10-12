@@ -128,7 +128,7 @@ final class VertexNormal {
           stackIn_40_1 = param2;
           stackIn_40_2 = param0 * (8 + jn.field_d * 4);
           stackIn_40_3 = jn.field_d * 2 + 4;
-          stackIn_41_4 = (param4 == pq.field_b);
+          stackIn_41_4 = (param4 == PointerInputHandler.field_b);
           stackIn_44_0 = (!((dn) (Object) stackIn_40_0).a(stackIn_40_1, stackIn_40_2, stackIn_40_3, stackIn_41_4, 0, 2)) ? 0 : 1;
           var9Lifetime1 = stackIn_44_0;
           var10 = param4.field_Jb.field_fb;
@@ -307,7 +307,7 @@ final class VertexNormal {
                 ActionSpell.a(var12.field_Pb, param3, 6);
               } else {
                 if (0 == var12.field_ec.field_yb) {
-                  bk.a(false, 0, BattleTutorial.field_t, 0, var12, param4, TeleportAction.field_z);
+                  bk.a(false, 0, BattleTutorial.pointerPressX, 0, var12, param4, TeleportAction.pointerPressY);
                 } else {
                   te.a(param3, var12.field_Pb, (byte) 97);
                 }
@@ -447,7 +447,7 @@ final class VertexNormal {
                 if (param4 == bu.field_a &&
                   vu.b(false)) {
                   if (var26Lifetime1 != 0) {
-                    var24Lifetime2 = var34 + "<br>" + wg.field_d + (String) (var25);
+                    var24Lifetime2 = var34 + "<br>" + IterableDualNodeDeque.field_d + (String) (var25);
                   } else {
                     var24Lifetime2 = var34 + "<br>" + fo.a(4800, tp.field_c, new String[]{(String) (var25)});
                   }

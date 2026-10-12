@@ -2,9 +2,9 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class av {
-    static volatile int field_a;
+    static volatile int pointerIdleTicks;
 
     static {
-        field_a = 0;
+        pointerIdleTicks = 0;
     }
 }

@@ -7,7 +7,7 @@ abstract class AiPlanningStrategy {
     static String field_g;
     static String field_e;
     NodeDeque candidates;
-    static int field_d;
+    static int pointerX;
     private NodeDeque recycledCandidates;
 
     final static hl a(int param0, int param1, boolean param2) {
@@ -49,7 +49,7 @@ abstract class AiPlanningStrategy {
           stackIn_4_1 = param2;
           stackIn_4_2 = (jn.field_d * 3 + 6) * param1;
           stackIn_4_3 = 2 + jn.field_d;
-          stackIn_5_4 = (mw.field_E.field_Kb == pq.field_b);
+          stackIn_5_4 = (mw.field_E.field_Kb == PointerInputHandler.field_b);
           var3_int = ((dn) (Object) stackIn_4_0).a(stackIn_4_1, stackIn_4_2, stackIn_4_3, stackIn_5_4, 0, 2) ? 1 : 0;
           var4 = mw.field_E.field_Nb.field_fb;
           if (param0 <= 20) {
@@ -220,7 +220,7 @@ abstract class AiPlanningStrategy {
             stackIn_2_0 = (AiActionCandidate) null;
             return stackIn_2_0;
           }
-          var2 = (AiActionCandidate) (this.recycledCandidates.a(0));
+          var2 = (AiActionCandidate) (this.recycledCandidates.popFirst(0));
           if (null == var2) {
             var2 = new AiActionCandidate();
           }
@@ -390,7 +390,7 @@ abstract class AiPlanningStrategy {
     void reset(byte obfuscationGuard) {
         try {
           int var2_int = -101 / ((obfuscationGuard + 67) / 49);
-          this.candidates.a(true, this.recycledCandidates);
+          this.candidates.moveAllTo(true, this.recycledCandidates);
         } catch (RuntimeException runtimeException) {
           throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "sm.D(" + obfuscationGuard + ')');
         }
@@ -525,7 +525,7 @@ abstract class AiPlanningStrategy {
 
     static {
         field_g = "Inviting <%0>";
-        field_d = 0;
+        pointerX = 0;
         field_e = "<%0> (<%1>-<%2>)";
     }
 }

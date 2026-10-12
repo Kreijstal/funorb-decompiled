@@ -990,8 +990,8 @@ final class GameplayController {
           }
           if (-1 >= param3 ||
             var11 != 0) {
-            fe.b(sp.field_g, db.a(true, 137 + param4), MatchConditionEntry.a(18 + param1, (byte) 94), true);
-            fe.c(sp.field_g, db.a(true, param4 + 137), MatchConditionEntry.a(18 + param1, (byte) 94), nd.field_b, true);
+            fe.b(DualNodeIterator.field_g, db.a(true, 137 + param4), MatchConditionEntry.a(18 + param1, (byte) 94), true);
+            fe.c(DualNodeIterator.field_g, db.a(true, param4 + 137), MatchConditionEntry.a(18 + param1, (byte) 94), nd.field_b, true);
           }
           var7 = 260 / this.battlefield.c(-9650, param0);
           dq.a(db.a(true, 25 + param4), op.field_c[0][param0], this.battlefield.teams[param0].getTeamName(3), false, (byte) -8, MatchConditionEntry.a(param1 + 5, (byte) 94));
@@ -1135,8 +1135,8 @@ final class GameplayController {
             }
             if (-1 >= param1 ||
               ArmiesOfGielinor.obfuscationControl) {
-              fe.b(sp.field_g, db.a(true, 59 + param0), MatchConditionEntry.a(param3 + 19, (byte) 94), true);
-              stackIn_25_0 = sp.field_g;
+              fe.b(DualNodeIterator.field_g, db.a(true, 59 + param0), MatchConditionEntry.a(param3 + 19, (byte) 94), true);
+              stackIn_25_0 = DualNodeIterator.field_g;
               stackIn_25_1 = db.a(true, 59 + param0);
               stackIn_25_2 = MatchConditionEntry.a(param3 + 19, (byte) 94);
               if (param4 > 2) {
@@ -1556,7 +1556,7 @@ final class GameplayController {
               previousDamage = 996394 ^ this.encodedDamageCheckpoint;
               previousTurns = this.encodedTurnCheckpoint ^ 996394;
               hc.field_b = hc.field_b + 1;
-              hc.field_b = hc.field_b + (AiPlanningStrategy.field_d ^ ko.field_b);
+              hc.field_b = hc.field_b + (AiPlanningStrategy.pointerX ^ ko.pointerY);
               hc.field_b = Math.abs(hc.field_b);
               damageDelta = -previousDamage + currentDamageThenSpecialUnitCount;
               turnDelta = -previousTurns + currentTurns;
@@ -2237,12 +2237,12 @@ final class GameplayController {
               return stackIn_19_0;
             }
             if (null != this.battleTutorial &&
-              wg.a(-33, var2_int - (this.battleTutorial.panelWidth + 5), var2_int - 15, var3 - 45, -15 + var3)) {
+              IterableDualNodeDeque.isPointerInBounds(-33, var2_int - (this.battleTutorial.panelWidth + 5), var2_int - 15, var3 - 45, -15 + var3)) {
               stackIn_27_0 = 1;
               return stackIn_27_0;
             }
             if (this.field_lb &&
-              wg.a(-33, 10, 74, -40 + this.o(126), -10 + this.o(125))) {
+              IterableDualNodeDeque.isPointerInBounds(-33, 10, 74, -40 + this.o(126), -10 + this.o(125))) {
               stackIn_33_0 = 2;
               return stackIn_33_0;
             }
@@ -2259,7 +2259,7 @@ final class GameplayController {
               var5 = var5 - var6;
               var4 = var4 + var6;
             }
-            if (wg.a(-33, 4, 103, var4, var5 + var4)) {
+            if (IterableDualNodeDeque.isPointerInBounds(-33, 4, 103, var4, var5 + var4)) {
               stackIn_49_0 = -1;
               return stackIn_49_0;
             }
@@ -2290,7 +2290,7 @@ final class GameplayController {
               } else {
                 var10 = var10 + this.f(128, db.a(param0, var12));
               }
-              if (wg.a(-33, db.a(true, 0) + var7 - (var9 + 45), var7 + db.a(true, 0) - 15, var10 + MatchConditionEntry.a(0, (byte) 94), 28 + (MatchConditionEntry.a(0, (byte) 94) + var10))) {
+              if (IterableDualNodeDeque.isPointerInBounds(-33, db.a(true, 0) + var7 - (var9 + 45), var7 + db.a(true, 0) - 15, var10 + MatchConditionEntry.a(0, (byte) 94), 28 + (MatchConditionEntry.a(0, (byte) 94) + var10))) {
                 stackIn_68_0 = 19;
                 return stackIn_68_0;
               }
@@ -2298,7 +2298,7 @@ final class GameplayController {
                 this.controlledPlayerId > -1 &&
                 !this.field_bb) {
                 var7 = var7 - (var11 + 40);
-                if (wg.a(-33, db.a(true, 0) + (var7 - var11 - 45), var7 + (db.a(true, 0) - 15), var10 + MatchConditionEntry.a(0, (byte) 94), 28 + var10 + MatchConditionEntry.a(0, (byte) 94))) {
+                if (IterableDualNodeDeque.isPointerInBounds(-33, db.a(true, 0) + (var7 - var11 - 45), var7 + (db.a(true, 0) - 15), var10 + MatchConditionEntry.a(0, (byte) 94), 28 + var10 + MatchConditionEntry.a(0, (byte) 94))) {
                   stackIn_80_0 = 24;
                   return stackIn_80_0;
                 }
@@ -2318,7 +2318,7 @@ final class GameplayController {
               var10Lifetime1 = 35;
               var11Lifetime1 = -var7Lifetime1 + (var2_int - var9Lifetime1);
               var12Lifetime1 = var8 + 0;
-              if (!wg.a(-33, var11Lifetime1, var11Lifetime1 + var9Lifetime1, var12Lifetime1, var12Lifetime1 + var10Lifetime1)) {
+              if (!IterableDualNodeDeque.isPointerInBounds(-33, var11Lifetime1, var11Lifetime1 + var9Lifetime1, var12Lifetime1, var12Lifetime1 + var10Lifetime1)) {
                 BattleTutorial.field_n = false;
                 stackIn_94_0 = -1;
                 return stackIn_94_0;
@@ -2354,13 +2354,13 @@ final class GameplayController {
                     break;
                   }
                   if (stackIn_201_0 != stackIn_201_1) {
-                    if (wg.a(-33, -50 + var2_int, var2_int, var7Lifetime2, 30 + var7Lifetime2)) {
+                    if (IterableDualNodeDeque.isPointerInBounds(-33, -50 + var2_int, var2_int, var7Lifetime2, 30 + var7Lifetime2)) {
                       stackIn_122_0 = 25;
                       return stackIn_122_0;
                     }
                     var7Lifetime2 += 30;
                   } else {
-                    if (wg.a(-33, var2_int - 64, var2_int, var7Lifetime2, 60 + var7Lifetime2)) {
+                    if (IterableDualNodeDeque.isPointerInBounds(-33, var2_int - 64, var2_int, var7Lifetime2, 60 + var7Lifetime2)) {
                       stackIn_128_0 = 25;
                       return stackIn_128_0;
                     }
@@ -2392,7 +2392,7 @@ final class GameplayController {
                       stackIn_155_0 = ~var8Lifetime1Lifetime1;
                       stackIn_155_1 = ~this.battlefield.getPlayerTeamIndex(var10Lifetime2, -1);
                       if (stackIn_155_0 == stackIn_155_1) {
-                        if (wg.a(-33, var9Lifetime2, var9Lifetime2 + 30, var7Lifetime2Lifetime1, 30 + var7Lifetime2Lifetime1)) {
+                        if (IterableDualNodeDeque.isPointerInBounds(-33, var9Lifetime2, var9Lifetime2 + 30, var7Lifetime2Lifetime1, 30 + var7Lifetime2Lifetime1)) {
                           stackIn_151_0 = 25;
                           return stackIn_151_0;
                         }
@@ -2403,7 +2403,7 @@ final class GameplayController {
                     var7Lifetime2Lifetime1 += 35;
                     stackIn_155_0Lifetime1 = -33;
                     stackIn_155_1Lifetime1 = -120 + var2_int;
-                    if (wg.a(stackIn_155_0Lifetime1, stackIn_155_1Lifetime1, var2_int, var7Lifetime2Lifetime1, var7Lifetime2Lifetime1 + 30)) {
+                    if (IterableDualNodeDeque.isPointerInBounds(stackIn_155_0Lifetime1, stackIn_155_1Lifetime1, var2_int, var7Lifetime2Lifetime1, var7Lifetime2Lifetime1 + 30)) {
                       stackIn_157_0 = -1;
                       return stackIn_157_0;
                     }
@@ -2421,14 +2421,14 @@ final class GameplayController {
                         stackIn_188_0 = ~this.battlefield.currentPlayer;
                         stackIn_188_1 = ~var9Lifetime2Lifetime1;
                         if (stackIn_188_0 == stackIn_188_1) {
-                          if (wg.a(-33, -88 + var2_int, -28 + var2_int, var7Lifetime2Lifetime1, var7Lifetime2Lifetime1 + 60)) {
+                          if (IterableDualNodeDeque.isPointerInBounds(-33, -88 + var2_int, -28 + var2_int, var7Lifetime2Lifetime1, var7Lifetime2Lifetime1 + 60)) {
                             stackIn_175_0 = 25;
                             return stackIn_175_0;
                           }
                           var7Lifetime2Lifetime1 += 60;
                         } else {
                           if (~var8Lifetime1Lifetime1 == ~this.battlefield.getPlayerTeamIndex(var9Lifetime2Lifetime1, -1)) {
-                            if (wg.a(-33, var2_int - 60 - 14, -58 + var2_int, var7Lifetime2Lifetime1, var7Lifetime2Lifetime1 + 30)) {
+                            if (IterableDualNodeDeque.isPointerInBounds(-33, var2_int - 60 - 14, -58 + var2_int, var7Lifetime2Lifetime1, var7Lifetime2Lifetime1 + 30)) {
                               stackIn_184_0 = 25;
                               return stackIn_184_0;
                             }
@@ -2441,7 +2441,7 @@ final class GameplayController {
                       var7Lifetime2Lifetime1 += 5;
                       stackIn_188_0Lifetime1 = -33;
                       stackIn_188_1Lifetime1 = -120 + var2_int;
-                      if (wg.a(stackIn_188_0Lifetime1, stackIn_188_1Lifetime1, var2_int, var7Lifetime2Lifetime1, 30 + var7Lifetime2Lifetime1)) {
+                      if (IterableDualNodeDeque.isPointerInBounds(stackIn_188_0Lifetime1, stackIn_188_1Lifetime1, var2_int, var7Lifetime2Lifetime1, 30 + var7Lifetime2Lifetime1)) {
                         stackIn_192_0 = -1;
                         return stackIn_192_0;
                       }
@@ -2467,22 +2467,22 @@ final class GameplayController {
               if (!kt.field_l) {
                 var7Lifetime3 = this.battlefield.mapSizeSetting;
                 if (0 == var7Lifetime3) {
-                  if (SpellMenuGroup.field_h[1].b(210, 100, AiPlanningStrategy.field_d, ko.field_b)) {
+                  if (SpellMenuGroup.field_h[1].b(210, 100, AiPlanningStrategy.pointerX, ko.pointerY)) {
                     stackIn_273_0 = 20;
                     return stackIn_273_0;
                   }
-                  if (wg.a(-33, 0, 251, 100, 347)) {
+                  if (IterableDualNodeDeque.isPointerInBounds(-33, 0, 251, 100, 347)) {
                     stackIn_278_0 = 0;
                     return stackIn_278_0;
                   }
                 } else {
                   if (1 == var7Lifetime3 &&
                     var13 == 0) {
-                    if (SpellMenuGroup.field_h[1].b(215, 95, AiPlanningStrategy.field_d, ko.field_b)) {
+                    if (SpellMenuGroup.field_h[1].b(215, 95, AiPlanningStrategy.pointerX, ko.pointerY)) {
                       stackIn_281_0 = 20;
                       return stackIn_281_0;
                     }
-                    decompiledFrameRemainder4 = !(!wg.a(-33, 0, 255, 95, 355));
+                    decompiledFrameRemainder4 = !(!IterableDualNodeDeque.isPointerInBounds(-33, 0, 255, 95, 355));
                     if (decompiledFrameRemainder4) {
                       stackIn_286_0 = 0;
                       return stackIn_286_0;
@@ -2490,21 +2490,21 @@ final class GameplayController {
                   }
                   if (decompiledFrameRemainder4) {
                     if (var7Lifetime3 == 2) {
-                      if (SpellMenuGroup.field_h[1].b(210, 105, AiPlanningStrategy.field_d, ko.field_b)) {
+                      if (SpellMenuGroup.field_h[1].b(210, 105, AiPlanningStrategy.pointerX, ko.pointerY)) {
                         stackIn_291_0 = 20;
                         return stackIn_291_0;
                       }
-                      if (wg.a(-33, 0, 253, 105, 352)) {
+                      if (IterableDualNodeDeque.isPointerInBounds(-33, 0, 253, 105, 352)) {
                         stackIn_294_0 = 0;
                         return stackIn_294_0;
                       }
                     } else {
                       if (3 == var7Lifetime3) {
-                        if (SpellMenuGroup.field_h[1].b(200, 110, AiPlanningStrategy.field_d, ko.field_b)) {
+                        if (SpellMenuGroup.field_h[1].b(200, 110, AiPlanningStrategy.pointerX, ko.pointerY)) {
                           stackIn_297_0 = 20;
                           return stackIn_297_0;
                         }
-                        if (wg.a(-33, 8, 238, 110, 340)) {
+                        if (IterableDualNodeDeque.isPointerInBounds(-33, 8, 238, 110, 340)) {
                           stackIn_300_0 = 0;
                           return stackIn_300_0;
                         }
@@ -2516,7 +2516,7 @@ final class GameplayController {
                 var7Lifetime3 = this.battlefield.mapSizeSetting;
                 if (var7Lifetime3 == 0 &&
                   var13 == 0) {
-                  if (SpellMenuGroup.field_h[0].b(188, 138, AiPlanningStrategy.field_d, ko.field_b)) {
+                  if (SpellMenuGroup.field_h[0].b(188, 138, AiPlanningStrategy.pointerX, ko.pointerY)) {
                     stackIn_228_0 = 20;
                     return stackIn_228_0;
                   }
@@ -2529,7 +2529,7 @@ final class GameplayController {
                 if (decompiledFrameRemainder4) {
                   if (1 == var7Lifetime3 &&
                     var13 == 0) {
-                    if (SpellMenuGroup.field_h[0].b(190, 128, AiPlanningStrategy.field_d, ko.field_b)) {
+                    if (SpellMenuGroup.field_h[0].b(190, 128, AiPlanningStrategy.pointerX, ko.pointerY)) {
                       stackIn_236_0 = 20;
                       return stackIn_236_0;
                     }
@@ -2542,7 +2542,7 @@ final class GameplayController {
                   if (decompiledFrameRemainder4) {
                     if (var7Lifetime3 == 2 &&
                       var13 == 0) {
-                      if (SpellMenuGroup.field_h[0].b(188, 137, AiPlanningStrategy.field_d, ko.field_b)) {
+                      if (SpellMenuGroup.field_h[0].b(188, 137, AiPlanningStrategy.pointerX, ko.pointerY)) {
                         stackIn_242_0 = 20;
                         return stackIn_242_0;
                       }
@@ -2554,7 +2554,7 @@ final class GameplayController {
                     }
                     if ((decompiledFrameRemainder4) &&
                       (3 == var7Lifetime3)) {
-                      if (SpellMenuGroup.field_h[0].b(188, 95, AiPlanningStrategy.field_d, ko.field_b)) {
+                      if (SpellMenuGroup.field_h[0].b(188, 95, AiPlanningStrategy.pointerX, ko.pointerY)) {
                         stackIn_250_0 = 20;
                         return stackIn_250_0;
                       }
@@ -2627,7 +2627,7 @@ final class GameplayController {
                 return stackIn_347_0;
               }
               if ((this.selectedUnit != null ||
-                this.field_h > -1) && wg.a(-33, 253, var2_int - 78, 0, 75)) {
+                this.field_h > -1) && IterableDualNodeDeque.isPointerInBounds(-33, 253, var2_int - 78, 0, 75)) {
                 stackIn_358_0 = -1;
                 return stackIn_358_0;
               }
@@ -2689,9 +2689,9 @@ final class GameplayController {
               this.camera.projectModelAnchor(9470337);
               var7Lifetime7 = this.camera.screenPosition[0];
               var8Lifetime4 = this.camera.screenPosition[1];
-              if (!wg.a(-33, var7Lifetime7 + 25, var7Lifetime7 + 55, var8Lifetime4 - 8, 7 + var8Lifetime4)) {
-                if (!wg.a(-33, 25 + var7Lifetime7, var7Lifetime7 + 55, 33 + var8Lifetime4, var8Lifetime4 + 48)) {
-                  if (wg.a(-33, var7Lifetime7 - 15, 15 + var7Lifetime7, 13 + var8Lifetime4, var8Lifetime4 + 28)) {
+              if (!IterableDualNodeDeque.isPointerInBounds(-33, var7Lifetime7 + 25, var7Lifetime7 + 55, var8Lifetime4 - 8, 7 + var8Lifetime4)) {
+                if (!IterableDualNodeDeque.isPointerInBounds(-33, 25 + var7Lifetime7, var7Lifetime7 + 55, 33 + var8Lifetime4, var8Lifetime4 + 48)) {
+                  if (IterableDualNodeDeque.isPointerInBounds(-33, var7Lifetime7 - 15, 15 + var7Lifetime7, 13 + var8Lifetime4, var8Lifetime4 + 28)) {
                     var9Lifetime4 = this.d(-59, this.selectedUnit.tileY - 1, -1 + this.selectedUnit.tileX) ? 1 : 0;
                     if (var9Lifetime4 != 0) {
                       stackIn_398_0 = 12;
@@ -2700,7 +2700,7 @@ final class GameplayController {
                     decompiledFrameRemainder2 = (var13 != 0);
                   }
                   if ((decompiledFrameRemainder2) &&
-                    (decompiledFrameRemainder2 = !(!wg.a(-33, 65 + var7Lifetime7, 95 + var7Lifetime7, var8Lifetime4 + 13, var8Lifetime4 + 28)))) {
+                    (decompiledFrameRemainder2 = !(!IterableDualNodeDeque.isPointerInBounds(-33, 65 + var7Lifetime7, 95 + var7Lifetime7, var8Lifetime4 + 13, var8Lifetime4 + 28)))) {
                     var9Lifetime4 = this.d(-103, this.selectedUnit.tileY, this.selectedUnit.tileX) ? 1 : 0;
                     if (var9Lifetime4 != 0) {
                       stackIn_405_0 = 13;
@@ -2734,14 +2734,14 @@ final class GameplayController {
               var8Lifetime5 = this.camera.screenPosition[1];
               var9Lifetime5 = -1;
               if (this.godMenu != null) {
-                var9Lifetime5 = this.godMenu.getChoiceAtPoint((byte) -124, TeleportAction.field_z, var7Lifetime8 + 16, BattleTutorial.field_t, var8Lifetime5 + 16);
+                var9Lifetime5 = this.godMenu.getChoiceAtPoint((byte) -124, TeleportAction.pointerPressY, var7Lifetime8 + 16, BattleTutorial.pointerPressX, var8Lifetime5 + 16);
               }
               if (var9Lifetime5 > -1) {
                 stackIn_425_0 = 14;
                 return stackIn_425_0;
               }
               if (this.field_y != -1) {
-                var9Lifetime5Lifetime1 = this.unitMenus[this.field_y].getChoiceAtPoint((byte) -110, TeleportAction.field_z, var7Lifetime8 + 16, BattleTutorial.field_t, 16 + var8Lifetime5);
+                var9Lifetime5Lifetime1 = this.unitMenus[this.field_y].getChoiceAtPoint((byte) -110, TeleportAction.pointerPressY, var7Lifetime8 + 16, BattleTutorial.pointerPressX, 16 + var8Lifetime5);
                 if (var9Lifetime5Lifetime1 > -1) {
                   stackIn_429_0 = 15;
                   return stackIn_429_0;
@@ -2924,7 +2924,7 @@ final class GameplayController {
             }
             if (-1 != this.field_y) {
               this.unitMenus[this.field_y].draw(this.battlefield.playerMana[this.controlledPlayerId], -23451, this.field_hc, var2_int, var3);
-              var4_int = this.unitMenus[this.field_y].getChoiceAtPoint((byte) -116, ko.field_b, 16 + var2_int, AiPlanningStrategy.field_d, 16 + var3);
+              var4_int = this.unitMenus[this.field_y].getChoiceAtPoint((byte) -116, ko.pointerY, 16 + var2_int, AiPlanningStrategy.pointerX, 16 + var3);
               if (var4_int > -1) {
                 this.c(16 + var3, var4_int, 0, var2_int + 16);
               }
@@ -2937,20 +2937,20 @@ final class GameplayController {
             this.camera.projectModelAnchor(9470337);
             var2_intLifetime1 = this.camera.screenPosition[0];
             var3Lifetime1 = this.camera.screenPosition[1];
-            if (wg.a(-33, 25 + var2_intLifetime1, 55 + var2_intLifetime1, -8 + var3Lifetime1, 7 + var3Lifetime1)) {
+            if (IterableDualNodeDeque.isPointerInBounds(-33, 25 + var2_intLifetime1, 55 + var2_intLifetime1, -8 + var3Lifetime1, 7 + var3Lifetime1)) {
               var4_intLifetime1 = this.d(-92, -1 + this.selectedUnit.tileY, this.selectedUnit.tileX) ? 1 : 0;
               this.a(40, var4_intLifetime1 != 0, var3Lifetime1, 40 + var2_intLifetime1);
               decompiledFrameRemainder0 = (var8 != 0);
             }
             if (decompiledFrameRemainder0) {
-              if (!wg.a(-33, var2_intLifetime1 + 25, 55 + var2_intLifetime1, var3Lifetime1 + 33, 48 + var3Lifetime1)) {
-                if (wg.a(-33, var2_intLifetime1 - 15, 15 + var2_intLifetime1, 13 + var3Lifetime1, var3Lifetime1 + 28)) {
+              if (!IterableDualNodeDeque.isPointerInBounds(-33, var2_intLifetime1 + 25, 55 + var2_intLifetime1, var3Lifetime1 + 33, 48 + var3Lifetime1)) {
+                if (IterableDualNodeDeque.isPointerInBounds(-33, var2_intLifetime1 - 15, 15 + var2_intLifetime1, 13 + var3Lifetime1, var3Lifetime1 + 28)) {
                   var4_intLifetime1Lifetime1 = this.d(-51, this.selectedUnit.tileY - 1, -1 + this.selectedUnit.tileX) ? 1 : 0;
                   this.a(40, var4_intLifetime1Lifetime1 != 0, 20 + var3Lifetime1, var2_intLifetime1);
                   decompiledFrameRemainder0 = (var8 != 0);
                 }
                 if ((decompiledFrameRemainder0) &&
-                  (wg.a(-33, var2_intLifetime1 + 65, 95 + var2_intLifetime1, 13 + var3Lifetime1, var3Lifetime1 + 28))) {
+                  (IterableDualNodeDeque.isPointerInBounds(-33, var2_intLifetime1 + 65, 95 + var2_intLifetime1, 13 + var3Lifetime1, var3Lifetime1 + 28))) {
                   var4_intLifetime1Lifetime1 = this.d(-103, this.selectedUnit.tileY, this.selectedUnit.tileX) ? 1 : 0;
                   this.a(40, var4_intLifetime1Lifetime1 != 0, 20 + var3Lifetime1, 80 + var2_intLifetime1);
                   if (var8 != 0) {
@@ -3261,7 +3261,7 @@ final class GameplayController {
         try {
           var2_int = this.battlefield.localPlayer;
           if (var2_int == this.battlefield.currentPlayer) {
-            if (0 < this.eventPresenters.b(false)) {
+            if (0 < this.eventPresenters.size(false)) {
               this.field_Pb = true;
               return;
             }
@@ -3719,7 +3719,7 @@ final class GameplayController {
             boolean decompiledFrameRemainder6 = true;
             if (var3 != null) {
               stackIn_405_0 = -1;
-              stackIn_405_1 = ~this.field_Ub.b(false);
+              stackIn_405_1 = ~this.field_Ub.size(false);
               if (var10 != 0) {
                 break scanLoop2;
               }
@@ -3860,10 +3860,10 @@ final class GameplayController {
                   continue;
                 }
               }
-              stackIn_288_1 = (this.field_Q) || !(this.eventPresenters.a(false)) || !(this.battlefield.pendingEvents.a(false)) || (this.field_bb);
+              stackIn_288_1 = (this.field_Q) || !(this.eventPresenters.isEmpty(false)) || !(this.battlefield.pendingEvents.isEmpty(false)) || (this.field_bb);
               this.field_mb = stackIn_288_1;
               this.unitRenderer.refreshUnitModels(this.battlefield.mapWidth, (byte) 98, this.battlefield.mapHeight, this.battlefield.tiles);
-              pq.a(4);
+              PointerInputHandler.a(4);
               break;
             }
             if (!this.field_K &&
@@ -4059,7 +4059,7 @@ final class GameplayController {
         RuntimeException var2_ref = null;
         var5 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          this.eventPresenters.b(param0 ^ 7);
+          this.eventPresenters.clear(param0 ^ 7);
           this.camera.followEventPresenters((byte) 118, this.eventPresenters);
           this.battleTutorial = null;
           this.eventPresenters = null;
@@ -4078,7 +4078,7 @@ final class GameplayController {
           var3 = 0;
           while (var2.length > var3) {
             var4 = var2[var3];
-            var4.b(param0 ^ 61);
+            var4.clear(param0 ^ 61);
             var3++;
             if (var5 != 0) {
               return;
@@ -4136,9 +4136,9 @@ final class GameplayController {
             if (!this.battlefield.field_X &&
               ~this.battlefield.currentPlayer == ~this.controlledPlayerId &&
               !this.field_bc &&
-              this.eventPresenters.b(false) == 0 &&
+              this.eventPresenters.size(false) == 0 &&
               this.field_j == 0 &&
-              this.field_Ub.a(false) &&
+              this.field_Ub.isEmpty(false) &&
               !this.field_bb) {
               stackIn_32_0 = 1;
             } else {
@@ -4455,7 +4455,7 @@ final class GameplayController {
           }
           if (!param3 ||
             var7 != 0) {
-            var6 = (Unit) (var5.a(param2, true));
+            var6 = (Unit) (var5.startForwardAt(param2, true));
           }
           while (null != var6) {
             if (var6 != param2 &&
@@ -4535,8 +4535,8 @@ final class GameplayController {
           }
           if (param2 <= -1 ||
             ArmiesOfGielinor.obfuscationControl) {
-            fe.b(sp.field_g, db.a(true, 240), MatchConditionEntry.a(var5_int + 75, (byte) 94), true);
-            fe.c(sp.field_g, db.a(true, 240), MatchConditionEntry.a(75 + var5_int, (byte) 94), nd.field_b, true);
+            fe.b(DualNodeIterator.field_g, db.a(true, 240), MatchConditionEntry.a(var5_int + 75, (byte) 94), true);
+            fe.c(DualNodeIterator.field_g, db.a(true, 240), MatchConditionEntry.a(75 + var5_int, (byte) 94), nd.field_b, true);
           }
           var9 = -26 % ((-25 - param0) / 49);
           stackIn_20_0 = this.battlefield.playerCoats[var6];
@@ -4575,7 +4575,7 @@ final class GameplayController {
           if (!param0) {
             this.field_L = 117;
           }
-          stackIn_25_0 = (!this.battlefield.field_X) && (~this.controlledPlayerId == ~this.battlefield.currentPlayer) && (!this.field_bc) && (this.eventPresenters.b(false) == 0) && (this.field_j == 0) && (this.field_Ub.a(false)) && (!this.field_bb);
+          stackIn_25_0 = (!this.battlefield.field_X) && (~this.controlledPlayerId == ~this.battlefield.currentPlayer) && (!this.field_bc) && (this.eventPresenters.size(false) == 0) && (this.field_j == 0) && (this.field_Ub.isEmpty(false)) && (!this.field_bb);
           return stackIn_25_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -4680,8 +4680,8 @@ final class GameplayController {
           if (!db.a(217 - this.battlefield.mapWidth * var3 + var5 + var3 * 2 * this.battlefield.mapWidth, param0 - (this.battlefield.mapWidth * var3 - var5), this.battlefield.mapWidth * (2 * var2_int) + (-450 + 2 * this.field_H) + var4, 1661761121, 2 * (-225 + this.field_H) + var4)) {
             return false;
           }
-          var6Lifetime1 = -var5 + this.battlefield.mapWidth * var3 - (217 - ko.field_b);
-          var7 = -var4 + (-(2 * (this.field_H - 225)) + AiPlanningStrategy.field_d);
+          var6Lifetime1 = -var5 + this.battlefield.mapWidth * var3 - (217 - ko.pointerY);
+          var7 = -var4 + (-(2 * (this.field_H - 225)) + AiPlanningStrategy.pointerX);
           var8 = var7 * 40 / var2_int;
           var9 = 20 * var6Lifetime1 / var3;
           this.camera.setWorldPosition(var8, var9, (byte) 68);
@@ -6016,8 +6016,8 @@ final class GameplayController {
             this.a(-99, false);
           }
           var4 = this.field_S ? 1 : 0;
-          if (AiPlanningStrategy.field_d >= 0 &&
-            ko.field_b >= 0) {
+          if (AiPlanningStrategy.pointerX >= 0 &&
+            ko.pointerY >= 0) {
             var5 = 0;
             if (0 <= this.controlledPlayerId &&
               0 != this.battlefield.field_Q &&
@@ -6151,10 +6151,10 @@ final class GameplayController {
                 boolean decompiledFrameCompleted2 = true;
                 boolean decompiledFrameRemainder11 = true;
                 if (!this.field_r ||
-                  !wg.a(-33, 150, 227, 15, 15 + e.field_b[0].pixelHeight) ||
+                  !IterableDualNodeDeque.isPointerInBounds(-33, 150, 227, 15, 15 + e.field_b[0].pixelHeight) ||
                   this.controlledPlayerId < 0) {
                   if (!this.field_lb ||
-                    !wg.a(-33, 10, 74, this.o(param0 ^ 5) - 40, -10 + this.o(125))) {
+                    !IterableDualNodeDeque.isPointerInBounds(-33, 10, 74, this.o(param0 ^ 5) - 40, -10 + this.o(125))) {
                     if (this.field_lb &&
                       this.battlefield.teamGame &&
                       ml.a(-40 + this.o(125) + 14, 88, 14, false)) {
@@ -6200,7 +6200,7 @@ final class GameplayController {
                                     stackIn_182_0 = this.battlefield.getPlayerTeamIndex(var9, -1);
                                     stackIn_182_1 = var7;
                                     if (stackIn_182_0 == stackIn_182_1) {
-                                      if (wg.a(-33, var8, var8 + 30, var6, var6 + 30)) {
+                                      if (IterableDualNodeDeque.isPointerInBounds(-33, var8, var8 + 30, var6, var6 + 30)) {
                                         var2 = this.battlefield.playerNames[var9];
                                         var3 = op.field_c[1][var9];
                                       }
@@ -6211,7 +6211,7 @@ final class GameplayController {
                                   var6 += 35;
                                   stackIn_182_0 = param0 ^ -89;
                                   stackIn_182_1 = so.field_b.field_a - 120;
-                                  if (wg.a(stackIn_182_0, stackIn_182_1, so.field_b.field_a, var6, 30 + var6) &&
+                                  if (IterableDualNodeDeque.isPointerInBounds(stackIn_182_0, stackIn_182_1, so.field_b.field_a, var6, 30 + var6) &&
                                     this.battlefield.campaignMission == null) {
                                     var2 = this.battlefield.teams[var7].getTeamName(3);
                                     var2 = this.a((String) (var2), var7, -255069420);
@@ -6228,14 +6228,14 @@ final class GameplayController {
                                       stackIn_215_1 = ~this.battlefield.currentPlayer;
                                       if (stackIn_215_0 != stackIn_215_1) {
                                         if (var7 == this.battlefield.getPlayerTeamIndex(var8, -1)) {
-                                          if (wg.a(-33, so.field_b.field_a - 74, so.field_b.field_a - 58, var6, var6 + 30)) {
+                                          if (IterableDualNodeDeque.isPointerInBounds(-33, so.field_b.field_a - 74, so.field_b.field_a - 58, var6, var6 + 30)) {
                                             var3 = op.field_c[1][var8];
                                             var2 = this.battlefield.playerNames[var8];
                                           }
                                           var6 += 30;
                                         }
                                       } else {
-                                        if (wg.a(-33, -28 + (so.field_b.field_a - 60), -28 + so.field_b.field_a, var6, var6 + 60)) {
+                                        if (IterableDualNodeDeque.isPointerInBounds(-33, -28 + (so.field_b.field_a - 60), -28 + so.field_b.field_a, var6, var6 + 60)) {
                                           var2 = this.battlefield.playerNames[var8];
                                           var3 = op.field_c[1][var8];
                                         }
@@ -6249,7 +6249,7 @@ final class GameplayController {
                                   var6 += 5;
                                   stackIn_215_0 = -33;
                                   stackIn_215_1 = so.field_b.field_a - 120;
-                                  if (wg.a(stackIn_215_0, stackIn_215_1, so.field_b.field_a, var6, 30 + var6) &&
+                                  if (IterableDualNodeDeque.isPointerInBounds(stackIn_215_0, stackIn_215_1, so.field_b.field_a, var6, 30 + var6) &&
                                     this.battlefield.campaignMission == null) {
                                     var2 = this.battlefield.teams[var7].getTeamName(3);
                                     var2 = this.a((String) (var2), var7, -255069420);
@@ -6275,7 +6275,7 @@ final class GameplayController {
                                     break regionExit1;
                                   }
                                   if (stackIn_252_0 == stackIn_252_1) {
-                                    if (wg.a(-33, -64 + so.field_b.field_a, so.field_b.field_a, var6, var6 + 60)) {
+                                    if (IterableDualNodeDeque.isPointerInBounds(-33, -64 + so.field_b.field_a, so.field_b.field_a, var6, var6 + 60)) {
                                       var2 = this.battlefield.playerNames[var7];
                                       var2 = this.a((String) (var2), var7, -255069420);
                                       var4 = 1;
@@ -6284,7 +6284,7 @@ final class GameplayController {
                                     }
                                     var6 += 60;
                                   } else {
-                                    if (wg.a(-33, so.field_b.field_a - 50, so.field_b.field_a, var6, 30 + var6)) {
+                                    if (IterableDualNodeDeque.isPointerInBounds(-33, so.field_b.field_a - 50, so.field_b.field_a, var6, 30 + var6)) {
                                       var2 = this.battlefield.playerNames[var7];
                                       var2 = this.a((String) (var2), var7, -255069420);
                                       var3 = op.field_c[0][var7];
@@ -6300,7 +6300,7 @@ final class GameplayController {
                               }
                               if (var20 != 0) {
                                 var2 = ep.field_a;
-                                var2 = pq.field_e;
+                                var2 = PointerInputHandler.field_e;
                                 var2 = fo.a(4800, vs.field_h, new String[]{Integer.toString(this.battlefield.playerMana[this.controlledPlayerId])});
                               }
                             }
@@ -6308,14 +6308,14 @@ final class GameplayController {
                         } else {
                           var2 = ep.field_a;
                           if (var20 != 0) {
-                            var2 = pq.field_e;
+                            var2 = PointerInputHandler.field_e;
                             var2 = fo.a(4800, vs.field_h, new String[]{Integer.toString(this.battlefield.playerMana[this.controlledPlayerId])});
                           }
                         }
                       }
                     }
                   } else {
-                    var2 = pq.field_e;
+                    var2 = PointerInputHandler.field_e;
                     if (var20 != 0) {
                       var2 = fo.a(4800, vs.field_h, new String[]{Integer.toString(this.battlefield.playerMana[this.controlledPlayerId])});
                     }
@@ -6336,14 +6336,14 @@ final class GameplayController {
                 var6 = var6 + var8;
               }
               boolean decompiledFrameRemainder10 = true;
-              if (wg.a(-33, 0, 103, var6, var7 + var6) &&
+              if (IterableDualNodeDeque.isPointerInBounds(-33, 0, 103, var6, var7 + var6) &&
                 var2 == null) {
                 var2 = "";
                 var9 = -1;
                 if (this.controlledPlayerId < 0) {
-                  if (wg.a(-33, 5, 60, var6 + 4, -4 + var6 + var7) &&
+                  if (IterableDualNodeDeque.isPointerInBounds(-33, 5, 60, var6 + 4, -4 + var6 + var7) &&
                     this.battlefield.currentPlayer >= 0) {
-                    var9 = (-4 + (-var6 + ko.field_b)) / 25;
+                    var9 = (-4 + (-var6 + ko.pointerY)) / 25;
                     if (!this.battlefield.field_V) {
                       var9++;
                     }
@@ -6359,8 +6359,8 @@ final class GameplayController {
                   decompiledFrameRemainder10 = (~this.battlefield.rankedParticipants[0] != ~this.battlefield.currentPlayer);
                   if ((decompiledFrameRemainder10) &&
                     (decompiledFrameRemainder10 = !(this.battlefield.i(this.battlefield.rankedParticipants[0], -12710) <= this.battlefield.i(this.battlefield.getPlayerTeamIndex(this.battlefield.currentPlayer, param0 - 121), -12710))) &&
-                    (decompiledFrameRemainder10 = !(!wg.a(-33, 60, 103, 4 + var6, -4 + (var7 + var6))))) {
-                    var9 = (ko.field_b + (-var6 - 4)) / 25;
+                    (decompiledFrameRemainder10 = !(!IterableDualNodeDeque.isPointerInBounds(-33, 60, 103, 4 + var6, -4 + (var7 + var6))))) {
+                    var9 = (ko.pointerY + (-var6 - 4)) / 25;
                     if (!this.battlefield.field_V) {
                       var9++;
                     }
@@ -6372,8 +6372,8 @@ final class GameplayController {
                   }
                 }
                 if (decompiledFrameRemainder10) {
-                  if (wg.a(-33, 5, 60, var6 + 4, -4 + var6 + var7)) {
-                    var9 = (ko.field_b - var6 - 4) / 25;
+                  if (IterableDualNodeDeque.isPointerInBounds(-33, 5, 60, var6 + 4, -4 + var6 + var7)) {
+                    var9 = (ko.pointerY - var6 - 4) / 25;
                     if (!this.battlefield.field_V) {
                       var9++;
                     }
@@ -6388,8 +6388,8 @@ final class GameplayController {
                   }
                   if (this.battlefield.rankedParticipants[0] != this.battlefield.getPlayerTeamIndex(this.controlledPlayerId, param0 - 121) &&
                     this.battlefield.i(this.battlefield.rankedParticipants[0], param0 - 12830) > this.battlefield.i(this.battlefield.getPlayerTeamIndex(this.controlledPlayerId, -1), -12710) &&
-                    wg.a(param0 ^ -89, 60, 103, var6 + 4, -4 + var6 + var7)) {
-                    var9 = (-4 - var6 + ko.field_b) / 25;
+                    IterableDualNodeDeque.isPointerInBounds(param0 ^ -89, 60, 103, var6 + 4, -4 + var6 + var7)) {
+                    var9 = (-4 - var6 + ko.pointerY) / 25;
                     if (!this.battlefield.field_V) {
                       var9++;
                     }
@@ -6404,7 +6404,7 @@ final class GameplayController {
               var10 = 90 + var9;
               var11 = -133 + this.o(125) + 3 * var8;
               var12 = var8 + var11;
-              if (wg.a(-33, var9, var10, var11, var12)) {
+              if (IterableDualNodeDeque.isPointerInBounds(-33, var9, var10, var11, var12)) {
                 var13 = this.battlefield.i(this.battlefield.getPlayerTeamIndex(this.controlledPlayerId, -1), -12710);
                 var14 = this.battlefield.collectedManaTarget;
                 var15_ref_String = Integer.toString(var13);
@@ -6433,22 +6433,22 @@ final class GameplayController {
                 }
                 var15 = stackIn_335_0 + stackIn_336_1;
                 if ((!ml.a(59, 279, 21, false)) &&
-                  (decompiledFrameRemainder9 = (wg.a(-33, 253, 562, 0, 75) ||
-                  wg.a(-33, 387, 517, 39, 39 + 30 * var15)))) {
+                  (decompiledFrameRemainder9 = (IterableDualNodeDeque.isPointerInBounds(-33, 253, 562, 0, 75) ||
+                  IterableDualNodeDeque.isPointerInBounds(-33, 387, 517, 39, 39 + 30 * var15)))) {
                   var2 = "";
-                  if (wg.a(-33, 260, 285, 12, 44)) {
+                  if (IterableDualNodeDeque.isPointerInBounds(-33, 260, 285, 12, 44)) {
                     var2 = BufferedSocket.field_m[this.selectedUnit.getUnitCategory(0)];
                   }
-                  if (wg.a(-33, 502, 550, 12, 32)) {
+                  if (IterableDualNodeDeque.isPointerInBounds(-33, 502, 550, 12, 32)) {
                     if (0 < this.selectedUnit.bonusStrength) {
                       var2 = fo.a(4800, ki.field_c, new String[]{Integer.toString(this.selectedUnit.strength), Integer.toString(this.selectedUnit.maximumStrength), Integer.toString(this.selectedUnit.bonusStrength)});
                     }
                     var2 = fo.a(param0 ^ 4792, CoatOfArms.field_c, new String[]{Integer.toString(this.selectedUnit.strength), Integer.toString(this.selectedUnit.maximumStrength)});
                   }
-                  if (wg.a(-33, 312, 342, 39, 79)) {
+                  if (IterableDualNodeDeque.isPointerInBounds(-33, 312, 342, 39, 79)) {
                     var2 = fh.field_f[eb.a((byte) -109, 3 & ~var13)];
                   }
-                  if (wg.a(-33, 344, 378, 39, 79)) {
+                  if (IterableDualNodeDeque.isPointerInBounds(-33, 344, 378, 39, 79)) {
                     var16 = this.selectedUnit.unitType;
                     if (this.selectedUnit.packedFlag8 &&
                       var16 == 34) {
@@ -6495,7 +6495,7 @@ final class GameplayController {
                   }
                   var16 = 0;
                   var17 = bw.unitDefinitions[this.selectedUnit.unitType][12];
-                  if (wg.a(-33, 525, 555, 39, 79)) {
+                  if (IterableDualNodeDeque.isPointerInBounds(-33, 525, 555, 39, 79)) {
                     if (var17 == -1) {
                       var2 = du.field_f;
                       if (var20 != 0) {
@@ -6505,7 +6505,7 @@ final class GameplayController {
                       var2 = DirectByteStorage.field_n[var17];
                     }
                   }
-                  if (wg.a(param0 - 153, 387, 517, 39, 39 + var15 * 30)) {
+                  if (IterableDualNodeDeque.isPointerInBounds(param0 - 153, 387, 517, 39, 39 + var15 * 30)) {
                     if (var14 == 0) {
                       var2 = fh.field_f[-1 + fh.field_f.length];
                     }
@@ -6518,7 +6518,7 @@ final class GameplayController {
                           stackIn_424_1 = 1 << var18 & var13;
                           if (var20 == 0) {
                             if (stackIn_424_0 != stackIn_424_1) {
-                              if (wg.a(param0 ^ -89, -((3 & var16) * 30) + 487, 517 - (3 & var16) * 30, 39 + 30 * (var16 >> 2), 79 + 30 * (var16 >> 2))) {
+                              if (IterableDualNodeDeque.isPointerInBounds(param0 ^ -89, -((3 & var16) * 30) + 487, 517 - (3 & var16) * 30, 39 + 30 * (var16 >> 2), 79 + 30 * (var16 >> 2))) {
                                 var2 = fh.field_f[var18 + 1];
                               }
                               var16++;
@@ -6531,25 +6531,25 @@ final class GameplayController {
                           stackIn_424_1 = this.selectedUnit.statusEffectType;
                         }
                         if (stackIn_424_0 != stackIn_424_1) {
-                          if (wg.a(-33, 487 - (var16 & 3) * 30, 517 - (3 & var16) * 30, 30 * (var16 >> 2) + 39, 79 + 30 * (var16 >> 2))) {
+                          if (IterableDualNodeDeque.isPointerInBounds(-33, 487 - (var16 & 3) * 30, 517 - (3 & var16) * 30, 30 * (var16 >> 2) + 39, 79 + 30 * (var16 >> 2))) {
                             var2 = fo.a(param0 + 4680, PaletteRegionMap.field_a[this.selectedUnit.statusEffectType - 1], new String[]{Integer.toString(this.selectedUnit.statusEffectValue)});
                           }
                           var16++;
                         }
                         if (this.selectedUnit.equipmentDescriptor > -1) {
-                          if (wg.a(-33, 487 - 30 * (var16 & 3), 517 - 30 * (var16 & 3), (var16 >> 2) * 30 + 39, 79 + (var16 >> 2) * 30)) {
+                          if (IterableDualNodeDeque.isPointerInBounds(-33, 487 - 30 * (var16 & 3), 517 - 30 * (var16 & 3), (var16 >> 2) * 30 + 39, 79 + (var16 >> 2) * 30)) {
                             var2 = fo.a(4800, ManaEvent.field_y[this.selectedUnit.getEquipmentId((byte) 81)], new String[]{pg.field_b[this.selectedUnit.getEquipmentCategory(20640)]});
                           }
                           var16++;
                         }
                         if (0 < this.selectedUnit.accessoryType) {
-                          if (wg.a(-33, -((var16 & 3) * 30) + 487, 517 - 30 * (3 & var16), 30 * (var16 >> 2) + 39, 30 * (var16 >> 2) + 79)) {
+                          if (IterableDualNodeDeque.isPointerInBounds(-33, -((var16 & 3) * 30) + 487, 517 - 30 * (3 & var16), 30 * (var16 >> 2) + 39, 30 * (var16 >> 2) + 79)) {
                             var2 = DropdownArrowPainter.field_c[this.selectedUnit.accessoryType];
                           }
                           var16++;
                         }
                         if (this.selectedUnit.immobilizedTurns > 0) {
-                          if (wg.a(-33, 487 - 30 * (var16 & 3), 517 - (var16 & 3) * 30, 39 + (var16 >> 2) * 30, 30 * (var16 >> 2) + 79)) {
+                          if (IterableDualNodeDeque.isPointerInBounds(-33, 487 - 30 * (var16 & 3), 517 - (var16 & 3) * 30, 39 + (var16 >> 2) * 30, 30 * (var16 >> 2) + 79)) {
                             if (this.selectedUnit.immobilizedTurns > 1) {
                               stackIn_457_0 = fo.a(4800, ba.field_E[1], new String[]{Integer.toString(this.selectedUnit.immobilizedTurns)});
                             } else {
@@ -6560,13 +6560,13 @@ final class GameplayController {
                           var16++;
                         }
                         if (this.selectedUnit.meleeLifeSteal) {
-                          if (wg.a(-33, -((3 & var16) * 30) + 487, -((var16 & 3) * 30) + 517, 30 * (var16 >> 2) + 39, 30 * (var16 >> 2) + 79)) {
+                          if (IterableDualNodeDeque.isPointerInBounds(-33, -((3 & var16) * 30) + 487, -((var16 & 3) * 30) + 517, 30 * (var16 >> 2) + 39, 30 * (var16 >> 2) + 79)) {
                             var2 = c.field_f;
                           }
                           var16++;
                         }
                         if (this.selectedUnit.packedFlag256) {
-                          if (wg.a(-33, 487 - (3 & var16) * 30, 517 - 30 * (3 & var16), (var16 >> 2) * 30 + 39, (var16 >> 2) * 30 + 79)) {
+                          if (IterableDualNodeDeque.isPointerInBounds(-33, 487 - (3 & var16) * 30, 517 - 30 * (3 & var16), (var16 >> 2) * 30 + 39, (var16 >> 2) * 30 + 79)) {
                             var2 = td.field_h;
                           }
                           var16++;
@@ -6574,7 +6574,7 @@ final class GameplayController {
                         if (!this.selectedUnit.packedFlag32) {
                           break;
                         }
-                        if (wg.a(-33, -(30 * (var16 & 3)) + 487, -(30 * (3 & var16)) + 517, 39 + (var16 >> 2) * 30, 79 + (var16 >> 2) * 30)) {
+                        if (IterableDualNodeDeque.isPointerInBounds(-33, -(30 * (var16 & 3)) + 487, -(30 * (3 & var16)) + 517, 39 + (var16 >> 2) * 30, 79 + (var16 >> 2) * 30)) {
                           var2 = qc.field_f;
                         }
                         var16++;
@@ -6671,11 +6671,11 @@ final class GameplayController {
               }
               if (this.field_fb == 80 &&
                 this.field_h > -1 &&
-                wg.a(-33, 253, 562, 0, 75)) {
+                IterableDualNodeDeque.isPointerInBounds(-33, 253, 562, 0, 75)) {
                 boolean decompiledFrameRemainder7 = true;
                 var2 = "";
                 var13_ref_ne = this.battlefield.tiles[this.field_h];
-                if (wg.a(-33, 260, 285, 12, 44)) {
+                if (IterableDualNodeDeque.isPointerInBounds(-33, 260, 285, 12, 44)) {
                   if (!var13_ref_ne.isStructure(false)) {
                     var2 = GlobalSpell.field_k;
                     decompiledFrameRemainder7 = (var20 != 0);
@@ -6703,10 +6703,10 @@ final class GameplayController {
                     }
                   }
                 }
-                if (wg.a(param0 - 153, 502, 550, 12, 32)) {
+                if (IterableDualNodeDeque.isPointerInBounds(param0 - 153, 502, 550, 12, 32)) {
                   var2 = ek.field_b[0][vg.field_r[var13_ref_ne.terrainType]];
                 }
-                if (wg.a(-33, 260, 318, 39, 79)) {
+                if (IterableDualNodeDeque.isPointerInBounds(-33, 260, 318, 39, 79)) {
                   var14 = 0;
                   if (var13_ref_ne.occupant != null &&
                     !this.battlefield.arePlayersAllied(var13_ref_ne.occupant.ownerPlayer, -16985, var13_ref_ne.ownerPlayer)) {
@@ -6772,7 +6772,7 @@ final class GameplayController {
                 var14 = 23;
                 var15 = 0;
                 if (var13_ref_ne.hasCorpse(105)) {
-                  if (wg.a(-33, var14 * var15 + 325, (var15 + 1) * var14 + 325, 39, 79)) {
+                  if (IterableDualNodeDeque.isPointerInBounds(-33, var14 * var15 + 325, (var15 + 1) * var14 + 325, 39, 79)) {
                     var2 = ek.field_b[0][0];
                   }
                   var15++;
@@ -6799,7 +6799,7 @@ final class GameplayController {
                             break;
                         }
                       }
-                      if (wg.a(param0 ^ -89, var15 * var14 + 325, (var15 + 1) * var14 + 325, 39, 79)) {
+                      if (IterableDualNodeDeque.isPointerInBounds(param0 ^ -89, var15 * var14 + 325, (var15 + 1) * var14 + 325, 39, 79)) {
                         stackIn_671_0 = ek.field_b;
                         if (var13_ref_ne.ownerPlayer > -1 &&
                           ~this.controlledPlayerId == ~var13_ref_ne.ownerPlayer) {
@@ -6814,7 +6814,7 @@ final class GameplayController {
                         break regionExit7;
                       }
                     }
-                    if (wg.a(-33, var14 * var15 + 325, 325 + (1 + var15) * var14, 39, 79)) {
+                    if (IterableDualNodeDeque.isPointerInBounds(-33, var14 * var15 + 325, 325 + (1 + var15) * var14, 39, 79)) {
                       stackIn_682_0 = ek.field_b;
                       if (var13_ref_ne.ownerPlayer != -1) {
                         if (var13_ref_ne.ownerPlayer == this.controlledPlayerId) {
@@ -6832,7 +6832,7 @@ final class GameplayController {
                       break regionExit7;
                     }
                   }
-                  if (wg.a(-33, 325 + var14 * var15, 325 + (1 + var15) * var14, 39, 79)) {
+                  if (IterableDualNodeDeque.isPointerInBounds(-33, 325 + var14 * var15, 325 + (1 + var15) * var14, 39, 79)) {
                     var2 = ek.field_b[0][3];
                   }
                   var15++;
@@ -6845,7 +6845,7 @@ final class GameplayController {
                     stackIn_712_0 = 1 << var18 & var17;
                     if (var20 == 0) {
                       if (stackIn_712_0 != 0) {
-                        if (wg.a(-33, 325 + var15 * var14, (var15 + 1) * var14 + 325, 39, 79)) {
+                        if (IterableDualNodeDeque.isPointerInBounds(-33, 325 + var15 * var14, (var15 + 1) * var14 + 325, 39, 79)) {
                           stackIn_707_0 = ek.field_b;
                           if ((var16 & 1 << var18) != 0) {
                             stackIn_708_1 = 1;
@@ -6864,7 +6864,7 @@ final class GameplayController {
                   }
                   if (stackIn_712_0 != 0) {
                     var18 = var13_ref_ne.getExplicitOwner((byte) -74);
-                    if (wg.a(-33, var14 * var15 + 325, 325 + var14 * (1 + var15), 39, 79)) {
+                    if (IterableDualNodeDeque.isPointerInBounds(-33, var14 * var15 + 325, 325 + var14 * (1 + var15), 39, 79)) {
                       stackIn_721_0 = ek.field_b;
                       if (this.controlledPlayerId > -1 &&
                         this.battlefield.arePlayersAllied(this.controlledPlayerId, -16985, var18)) {
@@ -6883,9 +6883,9 @@ final class GameplayController {
                   return;
                 }
               }
-              if (this.field_H == 240 && (wg.a(-33, 0, 240, 110, 330) &&
+              if (this.field_H == 240 && (IterableDualNodeDeque.isPointerInBounds(-33, 0, 240, 110, 330) &&
                 !kt.field_l ||
-                wg.a(param0 ^ -89, 0, 410, 110, 370) &&
+                IterableDualNodeDeque.isPointerInBounds(param0 ^ -89, 0, 410, 110, 370) &&
                 kt.field_l)) {
                 var2 = "";
               }
@@ -6908,7 +6908,7 @@ final class GameplayController {
                     var19 = var13_ref_int__[var16];
                     var4 = 1;
                     if (var19 > -1) {
-                      var2 = fo.a(param0 + 4680, pq.field_c, new String[]{wf.field_q[var19 + 1], Integer.toString(this.battlefield.godFavourLevels[this.controlledPlayerId][var19])});
+                      var2 = fo.a(param0 + 4680, PointerInputHandler.field_c, new String[]{wf.field_q[var19 + 1], Integer.toString(this.battlefield.godFavourLevels[this.controlledPlayerId][var19])});
                     }
                   }
                   var16++;
@@ -6925,18 +6925,18 @@ final class GameplayController {
                 this.camera.projectModelAnchor(9470337);
                 var13 = this.camera.screenPosition[0];
                 var14 = this.camera.screenPosition[1];
-                if (!wg.a(param0 - 153, 25 + var13, 55 + var13, -8 + var14, 7 + var14)) {
-                  if (wg.a(param0 ^ -89, var13 + 25, var13 + 55, var14 + 33, var14 + 48)) {
+                if (!IterableDualNodeDeque.isPointerInBounds(param0 - 153, 25 + var13, 55 + var13, -8 + var14, 7 + var14)) {
+                  if (IterableDualNodeDeque.isPointerInBounds(param0 ^ -89, var13 + 25, var13 + 55, var14 + 33, var14 + 48)) {
                     var2 = aj.field_p;
                     decompiledFrameRemainder6 = (var20 != 0);
                   }
                   if (decompiledFrameRemainder6) {
-                    if (wg.a(-33, -15 + var13, var13 + 15, var14 + 13, 28 + var14)) {
+                    if (IterableDualNodeDeque.isPointerInBounds(-33, -15 + var13, var13 + 15, var14 + 13, 28 + var14)) {
                       var2 = aj.field_p;
                       decompiledFrameRemainder6 = (var20 != 0);
                     }
                     if ((decompiledFrameRemainder6) &&
-                      (wg.a(-33, var13 + 65, 95 + var13, var14 + 13, 28 + var14))) {
+                      (IterableDualNodeDeque.isPointerInBounds(-33, var13 + 65, 95 + var13, var14 + 13, 28 + var14))) {
                       var2 = aj.field_p;
                       if (var20 != 0) {
                         var2 = aj.field_p;
@@ -7005,7 +7005,7 @@ final class GameplayController {
                 var14 = this.camera.screenPosition[1];
                 var15 = -1;
                 if (this.godMenu != null) {
-                  var15 = this.godMenu.getChoiceAtPoint((byte) -107, ko.field_b, 16 + var13, AiPlanningStrategy.field_d, 16 + var14);
+                  var15 = this.godMenu.getChoiceAtPoint((byte) -107, ko.pointerY, 16 + var13, AiPlanningStrategy.pointerX, 16 + var14);
                 }
                 if (var15 > -1) {
                   if (var15 != 0) {
@@ -7019,8 +7019,8 @@ final class GameplayController {
                 }
                 if (null == var2 &&
                   this.field_y != -1) {
-                  var15 = this.unitMenus[this.field_y].getChoiceAtPoint((byte) -121, ko.field_b, 16 + var13, AiPlanningStrategy.field_d, var14 + 16);
-                  var4 = this.unitMenus[this.field_y].isSecondHalfHit((byte) 117, ko.field_b, 16 + var14, var13 + 16, AiPlanningStrategy.field_d) ? 1 : 0;
+                  var15 = this.unitMenus[this.field_y].getChoiceAtPoint((byte) -121, ko.pointerY, 16 + var13, AiPlanningStrategy.pointerX, var14 + 16);
+                  var4 = this.unitMenus[this.field_y].isSecondHalfHit((byte) 117, ko.pointerY, 16 + var14, var13 + 16, AiPlanningStrategy.pointerX) ? 1 : 0;
                   if (var15 > -1) {
                     var16 = this.battlefield.getSummonFailureFlags(this.controlledPlayerId, 255, var15, this.field_ec, this.field_X);
                     if (var16 > 0) {
@@ -7037,8 +7037,8 @@ final class GameplayController {
               if (null == var2 &&
                 !this.field_m &&
                 !this.field_F) {
-                this.camera.screenPosition[1] = ko.field_b;
-                this.camera.screenPosition[0] = AiPlanningStrategy.field_d;
+                this.camera.screenPosition[1] = ko.pointerY;
+                this.camera.screenPosition[0] = AiPlanningStrategy.pointerX;
                 this.camera.screenToGrid(false);
                 var13 = this.camera.gridPosition[0];
                 var14 = this.camera.gridPosition[1];
@@ -7181,8 +7181,8 @@ final class GameplayController {
             }
             if (null != var2 &&
               ((String) (var2)).length() > 0) {
-              var6 = 10 + AiPlanningStrategy.field_d;
-              var7 = ko.field_b + 30;
+              var6 = 10 + AiPlanningStrategy.pointerX;
+              var7 = ko.pointerY + 30;
               var8 = en.field_E.a((String) (var2));
               if (var4 != 0) {
                 var6 = var6 - (var8 + 12);
@@ -7453,8 +7453,8 @@ final class GameplayController {
           rf.b(-18862);
           fe.b(db.a(true, param1), MatchConditionEntry.a(param0, (byte) 94), 134, 228, io.field_m, var8, 0, 0);
           if (param3 <= -1) {
-            fe.b(sp.field_g, db.a(true, param1 + 67), MatchConditionEntry.a(18 + param0, (byte) 94), true);
-            fe.c(sp.field_g, db.a(true, 67 + param1), MatchConditionEntry.a(param0 + 18, (byte) 94), nd.field_b, true);
+            fe.b(DualNodeIterator.field_g, db.a(true, param1 + 67), MatchConditionEntry.a(18 + param0, (byte) 94), true);
+            fe.c(DualNodeIterator.field_g, db.a(true, 67 + param1), MatchConditionEntry.a(param0 + 18, (byte) 94), nd.field_b, true);
           }
           if (param3 > -1 ||
             ArmiesOfGielinor.obfuscationControl) {
@@ -7705,14 +7705,14 @@ final class GameplayController {
                 this.field_C > -1 &&
                 ~this.controlledPlayerId == ~this.battlefield.currentPlayer &&
                 null == this.spellConfirmation) {
-                BattleCharacter.field_h[uc.spellDefinitions[this.field_gc][2]].h(AiPlanningStrategy.field_d + 12, 12 + ko.field_b);
-                km.field_h[1].h(AiPlanningStrategy.field_d + 10, ko.field_b + 10);
+                BattleCharacter.field_h[uc.spellDefinitions[this.field_gc][2]].h(AiPlanningStrategy.pointerX + 12, 12 + ko.pointerY);
+                km.field_h[1].h(AiPlanningStrategy.pointerX + 10, ko.pointerY + 10);
               }
               if (this.field_mb ||
                 ~this.battlefield.currentPlayer == ~this.controlledPlayerId &&
                 this.remainingTurnTicks <= 0 &&
                 !this.field_z) {
-                mo.field_s.g(8 + AiPlanningStrategy.field_d, ko.field_b + 8);
+                mo.field_s.g(8 + AiPlanningStrategy.pointerX, ko.pointerY + 8);
               }
               this.b((byte) 120);
             }
@@ -7744,7 +7744,7 @@ final class GameplayController {
               if (this.controlledPlayerId > -1) {
                 var4Lifetime1 = 16777215;
                 if (~this.field_Bb != ~this.battlefield.playerMana[this.controlledPlayerId] &&
-                  this.field_Ub.a(false)) {
+                  this.field_Ub.isEmpty(false)) {
                   var4Lifetime1 = 16711680;
                 }
                 en.field_E.c(Integer.toString(this.field_Bb), 180, 3 * en.field_E.field_H + 25, var4Lifetime1, 0);
@@ -7970,8 +7970,8 @@ final class GameplayController {
           var6 = stackIn_19_0;
           if (16 == param0) {
             boolean decompiledFrameRemainder5 = true;
-            this.camera.screenPosition[0] = AiPlanningStrategy.field_d;
-            this.camera.screenPosition[1] = ko.field_b;
+            this.camera.screenPosition[0] = AiPlanningStrategy.pointerX;
+            this.camera.screenPosition[1] = ko.pointerY;
             this.camera.screenToGrid(false);
             this.camera.projectModelAnchor(9470337);
             var7 = this.camera.gridPosition[0];
@@ -7990,8 +7990,8 @@ final class GameplayController {
                   decompiledFrameRemainder4 = (var16 != 0);
                 }
                 if (decompiledFrameRemainder4) {
-                  this.camera.screenPosition[0] = AiPlanningStrategy.field_d;
-                  this.camera.screenPosition[1] = ko.field_b;
+                  this.camera.screenPosition[0] = AiPlanningStrategy.pointerX;
+                  this.camera.screenPosition[1] = ko.pointerY;
                   this.camera.screenToGrid(false);
                   var9 = this.camera.gridPosition[0];
                   var10 = this.camera.gridPosition[1];
@@ -8000,8 +8000,8 @@ final class GameplayController {
                   stackIn_41_2 = (null != this.field_oc);
                   ((MovementPlanner) (Object) stackIn_40_0).selectTarget(stackIn_40_1, stackIn_41_2, var9, (byte) -125);
                 }
-                this.camera.screenPosition[0] = AiPlanningStrategy.field_d;
-                this.camera.screenPosition[1] = ko.field_b;
+                this.camera.screenPosition[0] = AiPlanningStrategy.pointerX;
+                this.camera.screenPosition[1] = ko.pointerY;
                 this.camera.screenToGrid(false);
                 this.camera.projectModelAnchor(9470337);
                 decompiledFrameRemainder5 = (var16 != 0);
@@ -8150,7 +8150,7 @@ final class GameplayController {
                 continue;
               }
             } else {
-              if (1 == DeployEvent.field_A) {
+              if (1 == DeployEvent.pointerPressButton) {
                 stackIn_195_0 = 1;
                 break scanLoop3;
               }
@@ -8165,8 +8165,8 @@ final class GameplayController {
           }
           boolean decompiledFrameRemainder12 = true;
           if (var7Lifetime1 != 0) {
-            var8Lifetime2 = BattleTutorial.field_t;
-            var9Lifetime1 = TeleportAction.field_z;
+            var8Lifetime2 = BattleTutorial.pointerPressX;
+            var9Lifetime1 = TeleportAction.pointerPressY;
             this.trackCampaignMetrics(true);
             if (this.field_V) {
               this.field_j = 0;
@@ -8344,14 +8344,14 @@ final class GameplayController {
                       break;
                     }
                     if (stackIn_413_0 == stackIn_413_1) {
-                      if (wg.a(-33, var3_int - 64, var3_int, var10Lifetime1Lifetime2, 60 + var10Lifetime1Lifetime2)) {
+                      if (IterableDualNodeDeque.isPointerInBounds(-33, var3_int - 64, var3_int, var10Lifetime1Lifetime2, 60 + var10Lifetime1Lifetime2)) {
                         hc.a(var11Lifetime1Lifetime1, false);
                         this.field_Pb = true;
                         return;
                       }
                       var10Lifetime1Lifetime2 += 60;
                     } else {
-                      if (wg.a(-33, -50 + var3_int, var3_int, var10Lifetime1Lifetime2, 30 + var10Lifetime1Lifetime2)) {
+                      if (IterableDualNodeDeque.isPointerInBounds(-33, -50 + var3_int, var3_int, var10Lifetime1Lifetime2, 30 + var10Lifetime1Lifetime2)) {
                         hc.a(var11Lifetime1Lifetime1, false);
                         this.field_Pb = true;
                       }
@@ -8387,7 +8387,7 @@ final class GameplayController {
                         stackIn_367_1Lifetime1 = this.battlefield.currentPlayer;
                         if (stackIn_367_0Lifetime1 != stackIn_367_1Lifetime1) {
                           if (this.battlefield.getPlayerTeamIndex(var12Lifetime1Lifetime1, -1) == var11Lifetime1Lifetime1) {
-                            if (wg.a(-33, var3_int - 60 - 14, var3_int - 58, var10Lifetime1Lifetime2, 30 + var10Lifetime1Lifetime2)) {
+                            if (IterableDualNodeDeque.isPointerInBounds(-33, var3_int - 60 - 14, var3_int - 58, var10Lifetime1Lifetime2, 30 + var10Lifetime1Lifetime2)) {
                               hc.a(var12Lifetime1Lifetime1, false);
                               this.field_Pb = true;
                               return;
@@ -8395,7 +8395,7 @@ final class GameplayController {
                             var10Lifetime1Lifetime2 += 30;
                           }
                         } else {
-                          if (wg.a(-33, var3_int - 60 - 28, -28 + var3_int, var10Lifetime1Lifetime2, 60 + var10Lifetime1Lifetime2)) {
+                          if (IterableDualNodeDeque.isPointerInBounds(-33, var3_int - 60 - 28, -28 + var3_int, var10Lifetime1Lifetime2, 60 + var10Lifetime1Lifetime2)) {
                             hc.a(var12Lifetime1Lifetime1, false);
                             this.field_Pb = true;
                             return;
@@ -8413,7 +8413,7 @@ final class GameplayController {
                         stackIn_367_0Lifetime1 = var11Lifetime1Lifetime1;
                         stackIn_367_1Lifetime1 = this.battlefield.getPlayerTeamIndex(var13Lifetime1, -1);
                         if (stackIn_367_0Lifetime1 == stackIn_367_1Lifetime1) {
-                          if (wg.a(-33, var12Lifetime1Lifetime1, var12Lifetime1Lifetime1 + 30, var10Lifetime1Lifetime2, 30 + var10Lifetime1Lifetime2)) {
+                          if (IterableDualNodeDeque.isPointerInBounds(-33, var12Lifetime1Lifetime1, var12Lifetime1Lifetime1 + 30, var10Lifetime1Lifetime2, 30 + var10Lifetime1Lifetime2)) {
                             hc.a(var13Lifetime1, false);
                             this.field_Pb = true;
                             return;
@@ -8607,7 +8607,7 @@ final class GameplayController {
                 var12Lifetime1Lifetime1 = this.camera.screenPosition[1];
                 var13Lifetime1Lifetime1 = -1;
                 if (this.godMenu != null) {
-                  var13Lifetime1Lifetime1 = this.godMenu.getChoiceAtPoint((byte) -122, TeleportAction.field_z, var11Lifetime1Lifetime1 + 16, BattleTutorial.field_t, var12Lifetime1Lifetime1 + 16);
+                  var13Lifetime1Lifetime1 = this.godMenu.getChoiceAtPoint((byte) -122, TeleportAction.pointerPressY, var11Lifetime1Lifetime1 + 16, BattleTutorial.pointerPressX, var12Lifetime1Lifetime1 + 16);
                 }
                 if (-1 < var13Lifetime1Lifetime1) {
                   this.a(11, -119);
@@ -8622,13 +8622,13 @@ final class GameplayController {
                 this.camera.projectModelAnchor(9470337);
                 var11Lifetime1Lifetime1 = this.camera.screenPosition[0] + 24;
                 var12Lifetime1Lifetime1 = this.camera.screenPosition[1];
-                var13Lifetime1Lifetime2 = this.unitMenus[this.field_y].getChoiceAtPoint((byte) -113, TeleportAction.field_z, var11Lifetime1Lifetime1 + 16, BattleTutorial.field_t, var12Lifetime1Lifetime1 + 16);
+                var13Lifetime1Lifetime2 = this.unitMenus[this.field_y].getChoiceAtPoint((byte) -113, TeleportAction.pointerPressY, var11Lifetime1Lifetime1 + 16, BattleTutorial.pointerPressX, var12Lifetime1Lifetime1 + 16);
                 if (this.field_lb &&
                   ~this.battlefield.localPlayer != ~this.battlefield.currentPlayer) {
                   var13Lifetime1Lifetime2 = -1;
                 }
                 if (var13Lifetime1Lifetime2 > -1) {
-                  this.a(var13Lifetime1Lifetime2, 65, this.unitMenus[this.field_y].isSecondHalfHit((byte) 117, TeleportAction.field_z, var12Lifetime1Lifetime1 + 16, var11Lifetime1Lifetime1 + 16, BattleTutorial.field_t));
+                  this.a(var13Lifetime1Lifetime2, 65, this.unitMenus[this.field_y].isSecondHalfHit((byte) 117, TeleportAction.pointerPressY, var12Lifetime1Lifetime1 + 16, var11Lifetime1Lifetime1 + 16, BattleTutorial.pointerPressX));
                   return;
                 }
               }
@@ -8745,15 +8745,15 @@ final class GameplayController {
               }
             }
           }
-          if (DeployEvent.field_A == 2) {
+          if (DeployEvent.pointerPressButton == 2) {
             this.trackCampaignMetrics(true);
-            this.field_U = TeleportAction.field_z;
-            this.field_t = BattleTutorial.field_t;
+            this.field_U = TeleportAction.pointerPressY;
+            this.field_t = BattleTutorial.pointerPressX;
           }
-          if (0 == (eq.field_l & 4) &&
+          if (0 == (eq.pointerButtonMask & 4) &&
             -1 != this.field_t) {
-            var8Lifetime3 = AiPlanningStrategy.field_d - this.field_t;
-            var9Lifetime2 = -this.field_U + ko.field_b;
+            var8Lifetime3 = AiPlanningStrategy.pointerX - this.field_t;
+            var9Lifetime2 = -this.field_U + ko.pointerY;
             this.field_U = -1;
             this.field_t = -1;
             var10Lifetime2 = var8Lifetime3 * var8Lifetime3 + var9Lifetime2 * var9Lifetime2;
@@ -8781,9 +8781,9 @@ final class GameplayController {
               }
             }
           }
-          if (lk.field_f) {
-            this.field_C = AiPlanningStrategy.field_d;
-            this.field_Zb = ko.field_b;
+          if (lk.pointerChangedSnapshot) {
+            this.field_C = AiPlanningStrategy.pointerX;
+            this.field_Zb = ko.pointerY;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -8846,11 +8846,11 @@ final class GameplayController {
             var3 = 15;
             var2_int = 3;
           }
-          if (!wg.a(-33, var3 + (this.field_H - 220), var2_int * this.battlefield.mapWidth + this.field_H + (-220 + var3), var3 + 120, 120 + var3 + this.battlefield.mapHeight * var2_int)) {
+          if (!IterableDualNodeDeque.isPointerInBounds(-33, var3 + (this.field_H - 220), var2_int * this.battlefield.mapWidth + this.field_H + (-220 + var3), var3 + 120, 120 + var3 + this.battlefield.mapHeight * var2_int)) {
             return false;
           }
-          var4Lifetime1 = -var3 - (120 - ko.field_b);
-          var5 = AiPlanningStrategy.field_d + 220 - var3 - this.field_H;
+          var4Lifetime1 = -var3 - (120 - ko.pointerY);
+          var5 = AiPlanningStrategy.pointerX + 220 - var3 - this.field_H;
           var6 = (var5 + var4Lifetime1) * 40 / var2_int + 0;
           var7 = this.battlefield.mapWidth * 20 + (var4Lifetime1 - var5) * 20 / var2_int;
           this.camera.setWorldPosition(var6, var7, (byte) 68);
@@ -8994,7 +8994,7 @@ final class GameplayController {
           }
           if (decompiledFrameRemainder0) {
             while (true) {
-              if (this.field_Ub.b(false) > 0) {
+              if (this.field_Ub.size(false) > 0) {
                 ((ac) (this.field_Ub.first((byte) 120))).a(this.battlefield, -12614);
                 if (var4 == 0) {
                   continue;
@@ -9297,7 +9297,7 @@ final class GameplayController {
             var9 = var9 - (240 - this.field_H);
             SpellMenuGroup.field_h[1].g(var9, var10);
             if (this.field_H == 240 &&
-              SpellMenuGroup.field_h[1].b(var9, var10, AiPlanningStrategy.field_d, ko.field_b)) {
+              SpellMenuGroup.field_h[1].b(var9, var10, AiPlanningStrategy.pointerX, ko.pointerY)) {
               SpellMenuGroup.field_h[1].f(var9, var10, 200);
             }
             return;
@@ -9352,7 +9352,7 @@ final class GameplayController {
                 damageCheckpoint = previousDamage;
                 turnCheckpoint = previousTurns;
                 hc.field_b = hc.field_b + 1;
-                hc.field_b = hc.field_b + (ko.field_b ^ AiPlanningStrategy.field_d);
+                hc.field_b = hc.field_b + (ko.pointerY ^ AiPlanningStrategy.pointerX);
                 hc.field_b = Math.abs(hc.field_b);
                 damageDelta = -damageCheckpoint + currentDamageThenMutationSelector;
                 turnDelta = -turnCheckpoint + currentTurnsThenMutationVariant;
@@ -9408,7 +9408,7 @@ final class GameplayController {
               }
             }
             hc.field_b = hc.field_b + 1;
-            hc.field_b = hc.field_b + (ko.field_b ^ AiPlanningStrategy.field_d);
+            hc.field_b = hc.field_b + (ko.pointerY ^ AiPlanningStrategy.pointerX);
             hc.field_b = Math.abs(hc.field_b);
             currentDamageThenMutationSelector = hc.field_b % 8;
             currentTurnsThenMutationVariant = currentDamageThenMutationSelector;
@@ -9438,8 +9438,8 @@ final class GameplayController {
                   return;
                 }
               case 3:
-                ii.campaignPacketWord1 = ii.campaignPacketWord1 + BattleTutorial.field_t;
-                kw.campaignPacketWord0 = kw.campaignPacketWord0 + BattleTutorial.field_t;
+                ii.campaignPacketWord1 = ii.campaignPacketWord1 + BattleTutorial.pointerPressX;
+                kw.campaignPacketWord0 = kw.campaignPacketWord0 + BattleTutorial.pointerPressX;
                 if (var14 == 0) {
                   return;
                 }
@@ -9543,7 +9543,7 @@ final class GameplayController {
             stackIn_29_2 = true;
           }
           boolean decompiledFrameRemainder3 = true;
-          stackIn_36_3 = ko.field_b;
+          stackIn_36_3 = ko.pointerY;
           if (!br.field_f[98] && (!br.field_f[33] ||
             directionKeysEnabled == 0)) {
             stackIn_39_4 = false;
@@ -9571,18 +9571,18 @@ final class GameplayController {
             stackIn_59_6 = true;
           }
           stackIn_66_7 = (this.field_Pb) || (this.field_Xb);
-          stackIn_70_8 = (ro.field_ub == 2);
-          manualCameraMovement = ((BattleCamera) (Object) stackIn_26_0).handleInput(stackIn_26_1, stackIn_29_2, stackIn_36_3, stackIn_39_4, stackIn_49_5, stackIn_59_6, stackIn_66_7, stackIn_70_8, AiPlanningStrategy.field_d) ? 1 : 0;
+          stackIn_70_8 = (ro.pointerButton == 2);
+          manualCameraMovement = ((BattleCamera) (Object) stackIn_26_0).handleInput(stackIn_26_1, stackIn_29_2, stackIn_36_3, stackIn_39_4, stackIn_49_5, stackIn_59_6, stackIn_66_7, stackIn_70_8, AiPlanningStrategy.pointerX) ? 1 : 0;
           if (manualCameraMovement != 0) {
             this.field_Pb = false;
             this.field_Xb = false;
             if (null != this.overviewTargets) {
-              this.overviewTargets.b(90);
+              this.overviewTargets.clear(90);
             }
           }
           if (manualCameraMovement == 0 &&
             this.field_H == 240 &&
-            ro.field_ub == 1) {
+            ro.pointerButton == 1) {
             manualCameraMovement = this.m(false) ? 1 : 0;
           }
           if (obfuscationGuard != -42) {
@@ -10154,7 +10154,7 @@ final class GameplayController {
         RuntimeException decompiledCaughtException = null;
         try {
           var2_int = 60 / ((param0 + 17) / 41);
-          stackIn_10_0 = (this.field_Q) || !(this.battlefield.pendingEvents.a(false)) || !(this.field_Ub.a(false));
+          stackIn_10_0 = (this.field_Q) || !(this.battlefield.pendingEvents.isEmpty(false)) || !(this.field_Ub.isEmpty(false));
           return stackIn_10_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -10614,9 +10614,9 @@ final class GameplayController {
             var4 = 217 + var2_int;
             var5 = var3 + 29;
           }
-          if (wg.a(-33, var2_int, var4, var3, var5)) {
+          if (IterableDualNodeDeque.isPointerInBounds(-33, var2_int, var4, var3, var5)) {
             this.field_l = true;
-            if (DeployEvent.field_A != 0) {
+            if (DeployEvent.pointerPressButton != 0) {
               this.field_Rb = this.field_Rb + 1;
               if (this.field_Rb >= var6) {
                 this.field_Rb = 0;
@@ -10624,7 +10624,7 @@ final class GameplayController {
               pc.field_j = null;
             }
           }
-          if (DeployEvent.field_A == 0) {
+          if (DeployEvent.pointerPressButton == 0) {
             return;
           }
           if (!this.battlefield.teamGame) {
@@ -10632,7 +10632,7 @@ final class GameplayController {
             var3Lifetime1 = var7 + 57;
             var4Lifetime1 = 134 + var2_intLifetime1;
             var5Lifetime1 = 228 + var3Lifetime1;
-            if (wg.a(-33, var2_intLifetime1, var4Lifetime1, var3Lifetime1, var5Lifetime1)) {
+            if (IterableDualNodeDeque.isPointerInBounds(-33, var2_intLifetime1, var4Lifetime1, var3Lifetime1, var5Lifetime1)) {
               pc.field_j = null;
               this.field_Rb = 0;
             }
@@ -10649,7 +10649,7 @@ final class GameplayController {
               var4Lifetime1 = var2_intLifetime1 + 184;
               var5Lifetime1 = 111 + var3Lifetime1;
             }
-            if (wg.a(-33, var2_intLifetime1, var4Lifetime1, var3Lifetime1, var5Lifetime1)) {
+            if (IterableDualNodeDeque.isPointerInBounds(-33, var2_intLifetime1, var4Lifetime1, var3Lifetime1, var5Lifetime1)) {
               pc.field_j = null;
               this.field_Rb = 1;
             }
@@ -10658,7 +10658,7 @@ final class GameplayController {
               var2_intLifetime1Lifetime1 = 181;
               var5Lifetime1Lifetime1 = 111 + var3Lifetime1Lifetime1;
               var4Lifetime1Lifetime1 = 184 + var2_intLifetime1Lifetime1;
-              if (wg.a(-33, var2_intLifetime1Lifetime1, var4Lifetime1Lifetime1, var3Lifetime1Lifetime1, var5Lifetime1Lifetime1)) {
+              if (IterableDualNodeDeque.isPointerInBounds(-33, var2_intLifetime1Lifetime1, var4Lifetime1Lifetime1, var3Lifetime1Lifetime1, var5Lifetime1Lifetime1)) {
                 this.field_Rb = 2;
                 pc.field_j = null;
               }
@@ -10673,7 +10673,7 @@ final class GameplayController {
               if (var14 != 0) {
                 return;
               }
-              if (wg.a(-33, var8, var8 + 110, var7, 110 + var7)) {
+              if (IterableDualNodeDeque.isPointerInBounds(-33, var8, var8 + 110, var7, 110 + var7)) {
                 pc.field_j = null;
                 this.field_Rb = var9;
               }
@@ -10700,7 +10700,7 @@ final class GameplayController {
                 }
                 if (stackIn_27_0 == stackIn_27_1 ||
                   var14 != 0) {
-                  if (wg.a(-33, var12, var12 + 67, var9Lifetime1 + 50, 155 + var9Lifetime1)) {
+                  if (IterableDualNodeDeque.isPointerInBounds(-33, var12, var12 + 67, var9Lifetime1 + 50, 155 + var9Lifetime1)) {
                     this.field_Rb = var13;
                     pc.field_j = null;
                     return;
@@ -11234,7 +11234,7 @@ final class GameplayController {
                   fe.c(ph.field_b[param0], db.a(true, var4_int + 98), MatchConditionEntry.a(323, (byte) 94), nd.field_b, true);
                 }
               } else {
-                fe.c(sp.field_g, db.a(true, 98 + var4_int), MatchConditionEntry.a(323, (byte) 94), nd.field_b, true);
+                fe.c(DualNodeIterator.field_g, db.a(true, 98 + var4_int), MatchConditionEntry.a(323, (byte) 94), nd.field_b, true);
               }
               stackIn_25_0 = this.battlefield.playerCoats[var5];
               stackIn_26_1 = (0 != (1 << var5 & this.battlefield.eliminatedPlayerMask));
@@ -11652,7 +11652,7 @@ final class GameplayController {
             var13 = var13 - (480 - (this.field_H << 1));
             SpellMenuGroup.field_h[0].g(var13, var14);
             if (240 == this.field_H &&
-              SpellMenuGroup.field_h[0].b(var13, var14, AiPlanningStrategy.field_d, ko.field_b)) {
+              SpellMenuGroup.field_h[0].b(var13, var14, AiPlanningStrategy.pointerX, ko.pointerY)) {
               SpellMenuGroup.field_h[0].f(var13, var14, 200);
             }
             return;
@@ -11895,13 +11895,13 @@ final class GameplayController {
           if (var7 != 0) {
             var10 = "(+" + Integer.toString(var7) + ")";
             rs.field_n.a(var10, db.a(true, 88 + param3), MatchConditionEntry.a(param4 + 16, (byte) 94), 104342, -1);
-            if (param3 <= AiPlanningStrategy.field_d &&
-              (param3 + var8) > AiPlanningStrategy.field_d &&
-              ko.field_b >= param4 &&
-              ko.field_b <= (24 + param4)) {
+            if (param3 <= AiPlanningStrategy.pointerX &&
+              (param3 + var8) > AiPlanningStrategy.pointerX &&
+              ko.pointerY >= param4 &&
+              ko.pointerY <= (24 + param4)) {
               var11 = fo.a(4800, qf.field_b, new String[]{Integer.toString(var7 + pg.playerProfile.progressionCredit)});
-              var12 = AiPlanningStrategy.field_d;
-              var13 = ko.field_b;
+              var12 = AiPlanningStrategy.pointerX;
+              var13 = ko.pointerY;
               var14 = en.field_E.a(var11, 320);
               var15 = en.field_E.getParagraphHeight(var11, 320, en.field_E.field_H);
               SoftwareRaster.a(db.a(true, var12 - 3), MatchConditionEntry.a(-3 + var13, (byte) 94), var14 + 6, 6 + var15, 5, 0, 192);
@@ -12001,7 +12001,7 @@ final class GameplayController {
                 CipherPacketBuffer.a(var5 != 0, var4, 1, 0);
                 if (var6 != 0) {
                   if (io.a(i.field_Nb, (byte) 124) ||
-                    null != pq.field_f) {
+                    null != PointerInputHandler.field_f) {
                     var4 = param1 ? 1 : 0;
                     CipherPacketBuffer.a(var4 != 0, 10, 1, 0);
                     var4 = var3_int;
@@ -12015,7 +12015,7 @@ final class GameplayController {
                 }
               } else {
                 boolean decompiledSharedTail1 = (!(io.a(i.field_Nb, (byte) 124)) &&
-                  null == pq.field_f);
+                  null == PointerInputHandler.field_f);
                 if (!decompiledSharedTail1) {
                   var4 = param1 ? 1 : 0;
                   CipherPacketBuffer.a(var4 != 0, 10, 1, 0);

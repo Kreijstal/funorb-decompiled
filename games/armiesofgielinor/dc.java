@@ -20,10 +20,10 @@ final class dc extends IntrusiveNode {
           if (param1 > -25) {
             dc.a(false, false);
           }
-          param0.removeMouseListener(BattleCharacter.field_q);
-          param0.removeMouseMotionListener(BattleCharacter.field_q);
-          param0.removeFocusListener(BattleCharacter.field_q);
-          ob.field_J = 0;
+          param0.removeMouseListener(BattleCharacter.pointerInputHandler);
+          param0.removeMouseMotionListener(BattleCharacter.pointerInputHandler);
+          param0.removeFocusListener(BattleCharacter.pointerInputHandler);
+          ob.heldPointerButton = 0;
         } catch (RuntimeException runtimeException) {
           throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "dc.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

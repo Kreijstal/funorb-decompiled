@@ -148,7 +148,7 @@ final class ts {
         try {
           regionExit1: {
             l.activeCampaignMission = mission;
-            pq.field_f = null;
+            PointerInputHandler.field_f = null;
             var8 = mission.getParticipantNames(-23209);
             var3 = var8;
             r.field_B = var8.length;

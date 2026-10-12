@@ -239,8 +239,8 @@ final class OwnerChangeEvent extends GameEvent {
           ev.field_a = ev.field_a + 1;
           if (me.field_e == -1 &&
             of.field_Ib == -1) {
-            of.field_Ib = ko.field_b;
-            me.field_e = AiPlanningStrategy.field_d;
+            of.field_Ib = ko.pointerY;
+            me.field_e = AiPlanningStrategy.pointerX;
           }
           boolean decompiledFrameRemainder0 = true;
           if (param1 == null) {
@@ -284,7 +284,7 @@ final class OwnerChangeEvent extends GameEvent {
           }
           if (!BoundedFile.field_b &&
             ev.field_a < NodeIterator.field_c &&
-            lk.field_f) {
+            lk.pointerChangedSnapshot) {
             cc.field_b = of.field_Ib;
             lq.field_e = me.field_e;
             ev.field_a = 0;

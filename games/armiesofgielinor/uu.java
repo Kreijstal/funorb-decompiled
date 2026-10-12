@@ -434,7 +434,7 @@ final class uu {
           ij.field_w.field_a.l(param3 ^ 10000);
           if (vu.field_M != null) {
             if (mp.field_Lb.field_yb != 0) {
-              pq.a(69, vu.field_M.d((byte) -68), param2);
+              PointerInputHandler.a(69, vu.field_M.d((byte) -68), param2);
             }
             if (lm.field_b.field_yb != 0) {
               vk.field_f = true;

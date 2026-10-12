@@ -165,7 +165,7 @@ final class ij extends dv {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var4 = null;
         try {
-          this.field_z = new dr[param0.b(false)];
+          this.field_z = new dr[param0.size(false)];
           var4_int = 0;
           var5 = (dr) (param0.first((byte) 94));
           while (var5 != null) {
@@ -512,7 +512,7 @@ final class ij extends dv {
               decompiledCaughtException = decompiledCaughtParameter0;
               var3 = (ef) (Object) decompiledCaughtException;
               param0 = "<col=55ff55>" + param0.substring(0, var3.field_b) + "</col>" + param0.substring(var3.field_b);
-              var4 = (je) (this.field_d.field_Jb.field_fb.d((byte) -98));
+              var4 = (je) (this.field_d.field_Jb.field_fb.last((byte) -98));
               var4.field_X = this.field_c + param0;
               return false;
             } catch (cb decompiledCaughtParameter1) {

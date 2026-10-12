@@ -12,7 +12,7 @@ final class ResourceArchive {
     static String field_d;
     static String field_f;
     static BattleCamera field_a;
-    static volatile int field_i;
+    static volatile int livePointerY;
 
     final synchronized int getOverallProgress(int initialProgressWeight) {
         int totalWeight;
@@ -505,14 +505,14 @@ final class ResourceArchive {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
         try {
-          var1_int = AiPlanningStrategy.field_d;
-          var2 = ko.field_b;
+          var1_int = AiPlanningStrategy.pointerX;
+          var2 = ko.pointerY;
           if (param0 != -20193) {
             field_d = (String) null;
           }
-          stackIn_5_0 = (DeployEvent.field_A != 1) ? 0 : 1;
+          stackIn_5_0 = (DeployEvent.pointerPressButton != 1) ? 0 : 1;
           var3 = stackIn_5_0;
-          stackIn_8_0 = (ro.field_ub != 1) ? 0 : 1;
+          stackIn_8_0 = (ro.pointerButton != 1) ? 0 : 1;
           var4 = stackIn_8_0;
           TurnEffectEvent.field_z.a(87, var4 != 0, var3 != 0, var1_int, var2, el.field_d);
           while (true) {
@@ -951,6 +951,6 @@ final class ResourceArchive {
         connectedState = new ClientConnectionState();
         field_d = "Data server full or too many connections from your address. Please try again in a few minutes.";
         field_f = "Some players haven't unlocked the currently selected game options.<br>Please see the player list on the left for details.";
-        field_i = -1;
+        livePointerY = -1;
     }
 }

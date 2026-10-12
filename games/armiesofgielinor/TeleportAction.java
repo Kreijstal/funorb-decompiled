@@ -11,7 +11,7 @@ final class TeleportAction extends PreparedAction {
     static tv field_v;
     private boolean skipDestinationPlacement;
     static String field_C;
-    static int field_z;
+    static int pointerPressY;
     private int targetDeltaX;
 
     final static co[] e(int param0) {
@@ -87,7 +87,7 @@ final class TeleportAction extends PreparedAction {
         try {
           battlefield.pendingEvents.addLast((byte) -119, (IntrusiveNode) (new TeleportEvent(this.unit.tileX, this.unit.tileY, this.targetDeltaX, this.targetDeltaY, this.skipDestinationPlacement)));
           if (obfuscationGuard != 64) {
-            field_z = 2;
+            pointerPressY = 2;
           }
         } catch (RuntimeException runtimeException) {
           throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "ur.C(" + obfuscationGuard + ',' + (battlefield != null ? "{...}" : "null") + ')');
@@ -122,6 +122,6 @@ final class TeleportAction extends PreparedAction {
         field_x = "Tips";
         field_u = "Connecting to<br>friend server...";
         field_v = new tv();
-        field_z = 0;
+        pointerPressY = 0;
     }
 }

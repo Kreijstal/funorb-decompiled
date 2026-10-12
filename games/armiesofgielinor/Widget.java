@@ -316,19 +316,19 @@ class Widget extends IntrusiveNode {
             if (param0) {
               if (el.field_d != 0) {
                 if (var5 == 0) {
-                  if (DeployEvent.field_A != 0) {
-                    if (!this.a(BattleTutorial.field_t, param2, param3, 113, this, TeleportAction.field_z, DeployEvent.field_A)) {
-                      if (ro.field_ub != 0) {
-                        au.field_Ob = ro.field_ub;
+                  if (DeployEvent.pointerPressButton != 0) {
+                    if (!this.a(BattleTutorial.pointerPressX, param2, param3, 113, this, TeleportAction.pointerPressY, DeployEvent.pointerPressButton)) {
+                      if (ro.pointerButton != 0) {
+                        au.field_Ob = ro.pointerButton;
                         OwnerChangeEvent.a(param1 ^ 6225, this.h(21384));
                         return param0;
                       }
                       if (au.field_Ob == 0) {
-                        au.field_Ob = ro.field_ub;
+                        au.field_Ob = ro.pointerButton;
                         OwnerChangeEvent.a(param1 ^ 6225, this.h(21384));
                         return param0;
                       }
-                      this.a(param3, this, AiPlanningStrategy.field_d, (byte) -127, ko.field_b, param2);
+                      this.a(param3, this, AiPlanningStrategy.pointerX, (byte) -127, ko.pointerY, param2);
                       var21 = bn.field_f;
                       if (var21 != null) {
                         if (var21.field_x instanceof ch) {
@@ -338,26 +338,26 @@ class Widget extends IntrusiveNode {
                       }
                       if (var7 != 0 &&
                         var5 != 0 &&
-                        DeployEvent.field_A != 0) {
+                        DeployEvent.pointerPressButton != 0) {
                         this.f(1);
                       }
-                      au.field_Ob = ro.field_ub;
+                      au.field_Ob = ro.pointerButton;
                       OwnerChangeEvent.a(param1 ^ 6225, this.h(21384));
                       return param0;
                     }
                     param0 = false;
                   }
-                  if (ro.field_ub != 0) {
-                    au.field_Ob = ro.field_ub;
+                  if (ro.pointerButton != 0) {
+                    au.field_Ob = ro.pointerButton;
                     OwnerChangeEvent.a(param1 ^ 6225, this.h(21384));
                     return param0;
                   }
                   if (au.field_Ob == 0) {
-                    au.field_Ob = ro.field_ub;
+                    au.field_Ob = ro.pointerButton;
                     OwnerChangeEvent.a(param1 ^ 6225, this.h(21384));
                     return param0;
                   }
-                  this.a(param3, this, AiPlanningStrategy.field_d, (byte) -127, ko.field_b, param2);
+                  this.a(param3, this, AiPlanningStrategy.pointerX, (byte) -127, ko.pointerY, param2);
                   var23 = bn.field_f;
                   if (var23 != null) {
                     if (var23.field_x instanceof ch) {
@@ -366,37 +366,37 @@ class Widget extends IntrusiveNode {
                     bn.field_f = null;
                   }
                   if (var7 == 0) {
-                    au.field_Ob = ro.field_ub;
+                    au.field_Ob = ro.pointerButton;
                     OwnerChangeEvent.a(param1 ^ 6225, this.h(21384));
                     return param0;
                   }
                   if (var5 == 0) {
-                    au.field_Ob = ro.field_ub;
+                    au.field_Ob = ro.pointerButton;
                     OwnerChangeEvent.a(param1 ^ 6225, this.h(21384));
                     return param0;
                   }
-                  if (DeployEvent.field_A == 0) {
-                    au.field_Ob = ro.field_ub;
+                  if (DeployEvent.pointerPressButton == 0) {
+                    au.field_Ob = ro.pointerButton;
                     OwnerChangeEvent.a(param1 ^ 6225, this.h(21384));
                     return param0;
                   }
                   this.f(1);
-                  au.field_Ob = ro.field_ub;
+                  au.field_Ob = ro.pointerButton;
                   OwnerChangeEvent.a(param1 ^ 6225, this.h(21384));
                   return param0;
                 }
-                this.a(AiPlanningStrategy.field_d, param2, param3, ko.field_b, el.field_d, param1 + 6327, this);
+                this.a(AiPlanningStrategy.pointerX, param2, param3, ko.pointerY, el.field_d, param1 + 6327, this);
               }
-              if (DeployEvent.field_A != 0) {
-                if (!this.a(BattleTutorial.field_t, param2, param3, 113, this, TeleportAction.field_z, DeployEvent.field_A)) {
+              if (DeployEvent.pointerPressButton != 0) {
+                if (!this.a(BattleTutorial.pointerPressX, param2, param3, 113, this, TeleportAction.pointerPressY, DeployEvent.pointerPressButton)) {
                   if (var5 == 0) {
-                    if (ro.field_ub == 0) {
+                    if (ro.pointerButton == 0) {
                       if (au.field_Ob == 0) {
-                        au.field_Ob = ro.field_ub;
+                        au.field_Ob = ro.pointerButton;
                         OwnerChangeEvent.a(param1 ^ 6225, this.h(21384));
                         return param0;
                       }
-                      this.a(param3, this, AiPlanningStrategy.field_d, (byte) -127, ko.field_b, param2);
+                      this.a(param3, this, AiPlanningStrategy.pointerX, (byte) -127, ko.pointerY, param2);
                       var27 = bn.field_f;
                       var6 = var27;
                       if (var27 != null) {
@@ -407,14 +407,14 @@ class Widget extends IntrusiveNode {
                       }
                       if (var7 != 0 &&
                         var5 != 0 &&
-                        DeployEvent.field_A != 0) {
+                        DeployEvent.pointerPressButton != 0) {
                         this.f(1);
-                        au.field_Ob = ro.field_ub;
+                        au.field_Ob = ro.pointerButton;
                         OwnerChangeEvent.a(param1 ^ 6225, this.h(21384));
                         return param0;
                       }
                     }
-                    au.field_Ob = ro.field_ub;
+                    au.field_Ob = ro.pointerButton;
                     OwnerChangeEvent.a(param1 ^ 6225, this.h(21384));
                     return param0;
                   }
@@ -426,15 +426,15 @@ class Widget extends IntrusiveNode {
                   param0 = false;
                 }
               }
-              if (ro.field_ub != 0) {
+              if (ro.pointerButton != 0) {
                 break regionExit1;
               }
               if (au.field_Ob == 0) {
-                au.field_Ob = ro.field_ub;
+                au.field_Ob = ro.pointerButton;
                 OwnerChangeEvent.a(param1 ^ 6225, this.h(21384));
                 return param0;
               }
-              this.a(param3, this, AiPlanningStrategy.field_d, (byte) -127, ko.field_b, param2);
+              this.a(param3, this, AiPlanningStrategy.pointerX, (byte) -127, ko.pointerY, param2);
               var28 = bn.field_f;
               if (var28 != null) {
                 if (var28.field_x instanceof ch) {
@@ -447,9 +447,9 @@ class Widget extends IntrusiveNode {
               }
             }
             if (var5 != 0 &&
-              DeployEvent.field_A != 0) {
+              DeployEvent.pointerPressButton != 0) {
               this.f(1);
-              au.field_Ob = ro.field_ub;
+              au.field_Ob = ro.pointerButton;
               OwnerChangeEvent.a(param1 ^ 6225, this.h(21384));
               return param0;
             }
@@ -459,8 +459,8 @@ class Widget extends IntrusiveNode {
           var5 = this.a(false) ? 1 : 0;
           if (param0) {
             if (el.field_d == 0) {
-              if (DeployEvent.field_A != 0) {
-                if (!this.a(BattleTutorial.field_t, param2, param3, 113, this, TeleportAction.field_z, DeployEvent.field_A)) {
+              if (DeployEvent.pointerPressButton != 0) {
+                if (!this.a(BattleTutorial.pointerPressX, param2, param3, 113, this, TeleportAction.pointerPressY, DeployEvent.pointerPressButton)) {
                   if (var5 != 0) {
                     this.f(1);
                     if (var7 != 0) {
@@ -471,17 +471,17 @@ class Widget extends IntrusiveNode {
                   param0 = false;
                 }
               }
-              if (ro.field_ub != 0) {
-                au.field_Ob = ro.field_ub;
+              if (ro.pointerButton != 0) {
+                au.field_Ob = ro.pointerButton;
                 OwnerChangeEvent.a(param1 ^ 6225, this.h(21384));
                 return param0;
               }
               if (au.field_Ob == 0) {
-                au.field_Ob = ro.field_ub;
+                au.field_Ob = ro.pointerButton;
                 OwnerChangeEvent.a(param1 ^ 6225, this.h(21384));
                 return param0;
               }
-              this.a(param3, this, AiPlanningStrategy.field_d, (byte) -127, ko.field_b, param2);
+              this.a(param3, this, AiPlanningStrategy.pointerX, (byte) -127, ko.pointerY, param2);
               var8 = bn.field_f;
               var6 = var8;
               if (var8 != null) {
@@ -492,28 +492,28 @@ class Widget extends IntrusiveNode {
               }
               if (var7 != 0 &&
                 var5 != 0 &&
-                DeployEvent.field_A != 0) {
+                DeployEvent.pointerPressButton != 0) {
                 this.f(1);
               }
-              au.field_Ob = ro.field_ub;
+              au.field_Ob = ro.pointerButton;
               OwnerChangeEvent.a(param1 ^ 6225, this.h(21384));
               return param0;
             }
             if (var5 != 0) {
-              this.a(AiPlanningStrategy.field_d, param2, param3, ko.field_b, el.field_d, param1 + 6327, this);
+              this.a(AiPlanningStrategy.pointerX, param2, param3, ko.pointerY, el.field_d, param1 + 6327, this);
             }
-            if (DeployEvent.field_A == 0) {
-              if (ro.field_ub != 0) {
-                au.field_Ob = ro.field_ub;
+            if (DeployEvent.pointerPressButton == 0) {
+              if (ro.pointerButton != 0) {
+                au.field_Ob = ro.pointerButton;
                 OwnerChangeEvent.a(param1 ^ 6225, this.h(21384));
                 return param0;
               }
               if (au.field_Ob == 0) {
-                au.field_Ob = ro.field_ub;
+                au.field_Ob = ro.pointerButton;
                 OwnerChangeEvent.a(param1 ^ 6225, this.h(21384));
                 return param0;
               }
-              this.a(param3, this, AiPlanningStrategy.field_d, (byte) -127, ko.field_b, param2);
+              this.a(param3, this, AiPlanningStrategy.pointerX, (byte) -127, ko.pointerY, param2);
               var10 = bn.field_f;
               var6 = var10;
               if (var10 != null) {
@@ -524,26 +524,26 @@ class Widget extends IntrusiveNode {
               }
               if (var7 != 0 &&
                 var5 != 0 &&
-                DeployEvent.field_A != 0) {
+                DeployEvent.pointerPressButton != 0) {
                 this.f(1);
               }
-              au.field_Ob = ro.field_ub;
+              au.field_Ob = ro.pointerButton;
               OwnerChangeEvent.a(param1 ^ 6225, this.h(21384));
               return param0;
             }
-            if (!this.a(BattleTutorial.field_t, param2, param3, 113, this, TeleportAction.field_z, DeployEvent.field_A)) {
+            if (!this.a(BattleTutorial.pointerPressX, param2, param3, 113, this, TeleportAction.pointerPressY, DeployEvent.pointerPressButton)) {
               if (var5 == 0) {
-                if (ro.field_ub != 0) {
-                  au.field_Ob = ro.field_ub;
+                if (ro.pointerButton != 0) {
+                  au.field_Ob = ro.pointerButton;
                   OwnerChangeEvent.a(param1 ^ 6225, this.h(21384));
                   return param0;
                 }
                 if (au.field_Ob == 0) {
-                  au.field_Ob = ro.field_ub;
+                  au.field_Ob = ro.pointerButton;
                   OwnerChangeEvent.a(param1 ^ 6225, this.h(21384));
                   return param0;
                 }
-                this.a(param3, this, AiPlanningStrategy.field_d, (byte) -127, ko.field_b, param2);
+                this.a(param3, this, AiPlanningStrategy.pointerX, (byte) -127, ko.pointerY, param2);
                 var15 = bn.field_f;
                 if (var15 != null) {
                   if (var15.field_x instanceof ch) {
@@ -553,10 +553,10 @@ class Widget extends IntrusiveNode {
                 }
                 if (var7 != 0 &&
                   var5 != 0 &&
-                  DeployEvent.field_A != 0) {
+                  DeployEvent.pointerPressButton != 0) {
                   this.f(1);
                 }
-                au.field_Ob = ro.field_ub;
+                au.field_Ob = ro.pointerButton;
                 OwnerChangeEvent.a(param1 ^ 6225, this.h(21384));
                 return param0;
               }
@@ -567,17 +567,17 @@ class Widget extends IntrusiveNode {
             } else {
               param0 = false;
             }
-            if (ro.field_ub != 0) {
-              au.field_Ob = ro.field_ub;
+            if (ro.pointerButton != 0) {
+              au.field_Ob = ro.pointerButton;
               OwnerChangeEvent.a(param1 ^ 6225, this.h(21384));
               return param0;
             }
             if (au.field_Ob == 0) {
-              au.field_Ob = ro.field_ub;
+              au.field_Ob = ro.pointerButton;
               OwnerChangeEvent.a(param1 ^ 6225, this.h(21384));
               return param0;
             }
-            this.a(param3, this, AiPlanningStrategy.field_d, (byte) -127, ko.field_b, param2);
+            this.a(param3, this, AiPlanningStrategy.pointerX, (byte) -127, ko.pointerY, param2);
             var18 = bn.field_f;
             if (var18 != null) {
               if (var18.field_x instanceof ch) {
@@ -586,17 +586,17 @@ class Widget extends IntrusiveNode {
               bn.field_f = null;
             }
             if (var7 == 0) {
-              au.field_Ob = ro.field_ub;
+              au.field_Ob = ro.pointerButton;
               OwnerChangeEvent.a(param1 ^ 6225, this.h(21384));
               return param0;
             }
           }
           if (var5 != 0 &&
-            DeployEvent.field_A != 0) {
+            DeployEvent.pointerPressButton != 0) {
             this.f(1);
           }
         }
-        au.field_Ob = ro.field_ub;
+        au.field_Ob = ro.pointerButton;
         OwnerChangeEvent.a(param1 ^ 6225, this.h(21384));
         return param0;
     }
@@ -742,7 +742,7 @@ class Widget extends IntrusiveNode {
           if (param0 != 32722) {
             return;
           }
-          var5_int = this.containsPointer(param0 - 32721, param1, ko.field_b, AiPlanningStrategy.field_d, param2) ? 1 : 0;
+          var5_int = this.containsPointer(param0 - 32721, param1, ko.pointerY, AiPlanningStrategy.pointerX, param2) ? 1 : 0;
           stackIn_4_0 = var5_int;
           if (this.field_t) {
             stackIn_5_1 = 0;

@@ -935,11 +935,11 @@ final class MatchSetupPanel {
         RuntimeException var1 = null;
         var5 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          var1_int = AiPlanningStrategy.field_d;
-          var2 = ko.field_b;
-          stackIn_4_0 = (DeployEvent.field_A != 1) ? 0 : 1;
+          var1_int = AiPlanningStrategy.pointerX;
+          var2 = ko.pointerY;
+          stackIn_4_0 = (DeployEvent.pointerPressButton != 1) ? 0 : 1;
           var3 = stackIn_4_0;
-          stackIn_7_0 = (ro.field_ub != 1) ? 0 : 1;
+          stackIn_7_0 = (ro.pointerButton != 1) ? 0 : 1;
           var4 = stackIn_7_0;
           ll.field_Rb.advanceFrame(el.field_d, param0 - 56, var2, var3 != 0, var1_int, var4 != 0);
           while (true) {

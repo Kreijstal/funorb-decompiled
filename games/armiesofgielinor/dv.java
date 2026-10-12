@@ -29,8 +29,8 @@ abstract class dv implements ap {
         int var6 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           this.field_d.field_Jb.a(this.a(param0, param1, (byte) -68), param2 + 368);
-          if (~this.field_d.field_Jb.field_fb.b(false) < param2) {
-            this.field_d.field_Jb.field_fb.a(0);
+          if (~this.field_d.field_Jb.field_fb.size(false) < param2) {
+            this.field_d.field_Jb.field_fb.popFirst(0);
           }
           var4_int = 5;
           var5 = (je) (this.field_d.field_Jb.field_fb.first((byte) 107));
@@ -141,8 +141,8 @@ abstract class dv implements ap {
           if (param1 < 37) {
             this.field_d = (dn) null;
           }
-          if (this.field_j.b(false) > 30) {
-            this.field_j.c((byte) -123);
+          if (this.field_j.size(false) > 30) {
+            this.field_j.popLast((byte) -123);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -511,7 +511,7 @@ abstract class dv implements ap {
             return true;
           }
           this.a(this.field_c + var7, 5635925, param0 + 30734);
-          var5 = (je) (this.field_d.field_Jb.field_fb.d((byte) -81));
+          var5 = (je) (this.field_d.field_Jb.field_fb.last((byte) -81));
           if (!this.a(var7, true)) {
             var5.field_N = 16733525;
           }

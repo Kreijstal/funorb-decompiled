@@ -23,7 +23,7 @@ final class ArchiveIndex {
     int[] groupVersions;
     int revision;
     static boolean field_g;
-    static volatile int field_k;
+    static volatile int pressedPointerButton;
     int[] fileCapacities;
 
     private final void decode(byte[] encodedIndex, boolean obfuscationGuard) {
@@ -334,6 +334,6 @@ final class ArchiveIndex {
         field_d = "Accessories";
         field_g = false;
         field_o = new NodeDeque();
-        field_k = 0;
+        pressedPointerButton = 0;
     }
 }

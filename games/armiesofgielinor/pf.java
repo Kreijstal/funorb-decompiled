@@ -180,12 +180,12 @@ final class pf {
         if (param0 != -15291) {
           field_a = (String[]) null;
         }
-        if (null == BattleCharacter.field_q) {
+        if (null == BattleCharacter.pointerInputHandler) {
           return;
         }
-        var1 = BattleCharacter.field_q;
+        var1 = BattleCharacter.pointerInputHandler;
         synchronized (var1) {
-          BattleCharacter.field_q = null;
+          BattleCharacter.pointerInputHandler = null;
         }
     }
 

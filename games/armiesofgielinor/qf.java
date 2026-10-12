@@ -51,18 +51,18 @@ final class qf {
     final static void a(int param0) {
         if (param0 == 56) {
           KingBlackDragonEvent.field_C.j(-114);
-          if (pq.field_a == null) {
-            pq.field_a = new cr(KingBlackDragonEvent.field_C, BestScoreStrategy.field_h);
+          if (PointerInputHandler.field_a == null) {
+            PointerInputHandler.field_a = new cr(KingBlackDragonEvent.field_C, BestScoreStrategy.field_h);
           }
-          KingBlackDragonEvent.field_C.a(pq.field_a, 0);
+          KingBlackDragonEvent.field_C.a(PointerInputHandler.field_a, 0);
           return;
         }
         field_d = (int[]) null;
         KingBlackDragonEvent.field_C.j(-114);
-        if (pq.field_a == null) {
-          pq.field_a = new cr(KingBlackDragonEvent.field_C, BestScoreStrategy.field_h);
+        if (PointerInputHandler.field_a == null) {
+          PointerInputHandler.field_a = new cr(KingBlackDragonEvent.field_C, BestScoreStrategy.field_h);
         }
-        KingBlackDragonEvent.field_C.a(pq.field_a, 0);
+        KingBlackDragonEvent.field_C.a(PointerInputHandler.field_a, 0);
     }
 
     final static void a(nr param0, int param1, int param2, nr param3, int param4, int param5) {

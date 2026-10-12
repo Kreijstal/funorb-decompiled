@@ -74,7 +74,7 @@ final class pu {
           no.field_K = null;
           SpellCastAction.field_s = false;
           if (null != SummonAction.field_u) {
-            SummonAction.field_u.b(76);
+            SummonAction.field_u.clear(76);
             SummonAction.field_u = null;
           }
           oi.field_d = null;
@@ -82,12 +82,12 @@ final class pu {
             return;
           }
           if (null != qc.field_g) {
-            qc.field_g.b(94);
+            qc.field_g.clear(94);
             qc.field_g = null;
           }
           qm.field_J = null;
           if (wl.field_F != null) {
-            wl.field_F.b(87);
+            wl.field_F.clear(87);
             wl.field_F = null;
           }
           UnitCycler.field_e = null;

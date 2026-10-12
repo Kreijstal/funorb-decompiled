@@ -7,7 +7,7 @@ class lk implements WidgetPainter, pm {
     int field_n;
     int field_g;
     static je field_a;
-    static boolean field_f;
+    static boolean pointerChangedSnapshot;
     private boolean field_c;
     int field_d;
     static String field_r;
@@ -36,7 +36,7 @@ class lk implements WidgetPainter, pm {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param2 != 0) {
-            field_f = false;
+            pointerChangedSnapshot = false;
           }
           stackIn_3_0 = param1 + this.field_g + param0.y + (param3 + param0.field_z);
           return stackIn_3_0;
@@ -754,7 +754,7 @@ class lk implements WidgetPainter, pm {
     }
 
     static {
-        field_f = false;
+        pointerChangedSnapshot = false;
         field_s = "Accept rematch";
     }
 }

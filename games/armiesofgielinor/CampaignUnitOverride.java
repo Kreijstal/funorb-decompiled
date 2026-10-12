@@ -131,7 +131,7 @@ final class CampaignUnitOverride {
                 }
                 var2 = NodeIterator.a(50, "mu_chat_friends");
                 if (null != var2) {
-                  wg.field_a = uu.a(var2, (byte) 90);
+                  IterableDualNodeDeque.field_a = uu.a(var2, (byte) 90);
                 }
                 var2 = NodeIterator.a(50, "mu_chat_off");
                 if (var2 != null) {
@@ -411,7 +411,7 @@ final class CampaignUnitOverride {
                 }
                 var2 = NodeIterator.a(50, "report_x_for_abuse");
                 if (var2 != null) {
-                  wg.field_e = uu.a(var2, (byte) -96);
+                  IterableDualNodeDeque.field_e = uu.a(var2, (byte) -96);
                 }
                 var2 = NodeIterator.a(param0 + 132, "unable_to_send_message_password_a");
                 if (null != var2) {
@@ -859,7 +859,7 @@ final class CampaignUnitOverride {
                 }
                 var2 = NodeIterator.a(50, "gameopt_trychanging2");
                 if (var2 != null) {
-                  wg.field_d = uu.a(var2, (byte) -93);
+                  IterableDualNodeDeque.field_d = uu.a(var2, (byte) -93);
                 }
                 var2 = NodeIterator.a(param0 + 132, "gameopt_needchanging1");
                 if (null != var2) {
@@ -1465,7 +1465,7 @@ final class CampaignUnitOverride {
                 }
                 var2 = NodeIterator.a(param0 + 132, "create_optin_news");
                 if (var2 != null) {
-                  wg.field_c = uu.a(var2, (byte) 86);
+                  IterableDualNodeDeque.field_c = uu.a(var2, (byte) 86);
                 }
                 var2 = NodeIterator.a(50, "create_agreeterms");
                 if (null != var2) {
@@ -1887,7 +1887,7 @@ final class CampaignUnitOverride {
                 }
                 var2 = NodeIterator.a(50, "instructions");
                 if (null != var2) {
-                  pq.field_d = uu.a(var2, (byte) -119);
+                  PointerInputHandler.field_d = uu.a(var2, (byte) -119);
                 }
                 var2 = NodeIterator.a(param0 ^ -100, "tutorial");
                 if (var2 != null) {

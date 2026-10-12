@@ -157,7 +157,7 @@ final class jg extends IntrusiveNode {
           stackIn_3_1 = param1;
           stackIn_3_2 = param3 * (8 + 4 * jn.field_d);
           stackIn_3_3 = jn.field_d * 2 + 4;
-          stackIn_4_4 = (CipherPacketBuffer.field_x == pq.field_b);
+          stackIn_4_4 = (CipherPacketBuffer.field_x == PointerInputHandler.field_b);
           var7_int = ((dn) (Object) stackIn_3_0).a(stackIn_3_1, stackIn_3_2, stackIn_3_3, stackIn_4_4, param0, 2) ? 1 : 0;
           var8 = CipherPacketBuffer.field_x.field_Jb.field_fb;
           var9 = vi.monotonicMillis(-118);

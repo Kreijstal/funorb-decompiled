@@ -175,7 +175,7 @@ public final class ArmiesOfGielinor extends wf {
           boolean decompiledFrameCompleted0 = true;
           if (!DamageEvent.g(100)) {
             while (true) {
-              var2 = (iw) (UnitInfoPopup.field_u.a(0));
+              var2 = (iw) (UnitInfoPopup.field_u.popFirst(0));
               if (var2 == null) {
                 break;
               }
@@ -200,7 +200,7 @@ public final class ArmiesOfGielinor extends wf {
                   continue;
                 }
                 if (nm.deliveredOpcode == 14) {
-                  RadialSummonItem.a(rs.a((byte) 76, 8), sp.b((byte) -90), 150, CipherPacketBuffer.field_A, rs.a((byte) 95, 1000), et.b(-1), 1024, 6, -84, sh.d((byte) 81));
+                  RadialSummonItem.a(rs.a((byte) 76, 8), DualNodeIterator.b((byte) -90), 150, CipherPacketBuffer.field_A, rs.a((byte) 95, 1000), et.b(-1), 1024, 6, -84, sh.d((byte) 81));
                   ep.a(lp.b(-126), -72, km.c(0));
                   s.field_d = 0;
                   ma.field_Z = true;
@@ -324,7 +324,7 @@ public final class ArmiesOfGielinor extends wf {
                   }
                   l.activeCampaignMission = null;
                   qa.field_F = false;
-                  pq.field_f = null;
+                  PointerInputHandler.field_f = null;
                   stackIn_194_0 = null;
                   stackIn_194_1 = null;
                   stackIn_194_2 = true;
@@ -883,7 +883,7 @@ public final class ArmiesOfGielinor extends wf {
               lq.field_b = lq.field_b + 1;
               if (fieldTemp$0 == 335) {
                 lq.field_b = 0;
-                ai.field_P.a(0);
+                ai.field_P.popFirst(0);
               }
             }
             decompiledFrameRemainder4 = (var8 != 0);
@@ -916,8 +916,8 @@ public final class ArmiesOfGielinor extends wf {
               }
               if (decompiledFrameRemainder4) {
                 if (!DamageEvent.g(119)) {
-                  if (pq.field_f != null) {
-                    UnitSpell.a(3, 1, pq.field_f);
+                  if (PointerInputHandler.field_f != null) {
+                    UnitSpell.a(3, 1, PointerInputHandler.field_f);
                   }
                   CombatPresentation.n(param0 ^ -110);
                   CipherPacketBuffer.a(false, tg.field_a, 1, 0);
@@ -993,7 +993,7 @@ public final class ArmiesOfGielinor extends wf {
             }
             if ((decompiledSharedTail0) &&
               (fj.field_c)) {
-              pq.a(-81, vu.field_M.d((byte) 117), 11);
+              PointerInputHandler.a(-81, vu.field_M.d((byte) 117), 11);
             }
             dn.field_Qb = true;
           }
@@ -1032,8 +1032,8 @@ public final class ArmiesOfGielinor extends wf {
             null != SectorCacheStore.field_a) &&
             jt.field_a == 7);
           io.field_w = stackIn_21_0;
-          if (param0 > ~AiPlanningStrategy.field_d &&
-            -1 < ko.field_b) {
+          if (param0 > ~AiPlanningStrategy.pointerX &&
+            -1 < ko.pointerY) {
           }
           BoundedFile.a(jt.field_a, true, io.field_w, false);
           if (null != mu.field_a) {
@@ -1156,7 +1156,7 @@ public final class ArmiesOfGielinor extends wf {
           ContextualRuntimeException.c(1);
           iv.d(105);
           fa.a((byte) 100);
-          pq.a((byte) -79);
+          PointerInputHandler.a((byte) -79);
           el.b(-8834);
           SoftwareRaster.d();
           ah.a((byte) 32);
@@ -1505,7 +1505,7 @@ public final class ArmiesOfGielinor extends wf {
           qm.j(param0 + 150);
           nv.l(-24061);
           m.a(false);
-          wg.a(19345);
+          IterableDualNodeDeque.a(19345);
           uq.g(param0 ^ 91);
           me.a((byte) -36);
           f.c(true);
@@ -1513,7 +1513,7 @@ public final class ArmiesOfGielinor extends wf {
           lc.a();
           mu.a(0);
           tl.a((byte) 100);
-          sp.a((byte) -121);
+          DualNodeIterator.a((byte) -121);
           wj.a(true);
           aj.a(param0 + 155);
           ko.a(false);
@@ -1800,7 +1800,7 @@ public final class ArmiesOfGielinor extends wf {
         try {
           boolean decompiledFrameCompleted0 = true;
           l.activeCampaignMission = null;
-          pq.field_f = null;
+          PointerInputHandler.field_f = null;
           if (!param0) {
             var3 = new String[r.field_B];
             var4 = 0;

@@ -50,7 +50,7 @@ final class RadialSummonItem {
         }
         if (!this.unitChoice) {
           if (availability > 0) {
-            if (this.containsPoint(112, AiPlanningStrategy.field_d, originY, originX, ko.field_b)) {
+            if (this.containsPoint(112, AiPlanningStrategy.pointerX, originY, originX, ko.pointerY)) {
               UnitModelPreview.field_d[this.godGroupId].g(this.offsetX + originX - 25, originY + (this.offsetY - 25));
               UnitModelPreview.field_d[0].f(originX + (this.offsetX - 25), -25 + this.offsetY + originY, 256);
               if (var6 != 0) {
@@ -72,7 +72,7 @@ final class RadialSummonItem {
           }
         }
         if (0 < availability) {
-          if (this.containsPoint(31, AiPlanningStrategy.field_d, originY, originX, ko.field_b)) {
+          if (this.containsPoint(31, AiPlanningStrategy.pointerX, originY, originX, ko.pointerY)) {
             lw.field_ob.b(originX - (-this.offsetX + 20), -20 + (this.offsetY + originY), TutorialLayout.field_g[this.godGroupId]);
             if (var6 == 0) {
               if (this.choiceId != 81) {
@@ -222,7 +222,7 @@ final class RadialSummonItem {
             param9.field_fb = new NodeDeque();
           }
           SummonAction.field_u = param9.field_fb;
-          SummonAction.field_u.b(80);
+          SummonAction.field_u.clear(80);
           oi.field_d = new tp(param4);
           AnimationPlayer.field_a = 0;
           SummonAction.field_s = -1;
@@ -232,13 +232,13 @@ final class RadialSummonItem {
             param1.field_fb = new NodeDeque();
           }
           qc.field_g = param1.field_fb;
-          qc.field_g.b(120);
+          qc.field_g.clear(120);
           qm.field_J = new tp(param6);
           if (null == param5.field_fb) {
             param5.field_fb = new NodeDeque();
           }
           wl.field_F = param5.field_fb;
-          wl.field_F.b(122);
+          wl.field_F.clear(122);
           UnitCycler.field_e = new tp(param0);
           qd.field_K = param2;
           ph.field_d = 0L;

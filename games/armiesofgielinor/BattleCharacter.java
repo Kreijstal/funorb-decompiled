@@ -35,7 +35,7 @@ final class BattleCharacter {
     private int[] field_z;
     static String field_v;
     private boolean field_E;
-    static pq field_q;
+    static PointerInputHandler pointerInputHandler;
     static java.awt.Font field_g;
     static NodeDeque field_c;
     static int[] field_i;
@@ -613,7 +613,7 @@ final class BattleCharacter {
     public static void c(int param0) {
         field_i = null;
         field_v = null;
-        field_q = null;
+        pointerInputHandler = null;
         field_c = null;
         field_g = null;
         field_h = null;
@@ -859,7 +859,7 @@ final class BattleCharacter {
     static {
         field_b = Math.atan2(1.0, 0.0);
         field_v = "The magic of creating Mana.";
-        field_q = new pq();
+        pointerInputHandler = new PointerInputHandler();
         field_c = new NodeDeque();
         field_i = new int[]{0, 25, 75, 150, 0};
         field_t = -7;

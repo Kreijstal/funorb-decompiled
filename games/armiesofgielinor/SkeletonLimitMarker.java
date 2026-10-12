@@ -17,7 +17,7 @@ final class SkeletonLimitMarker extends PreparedAction {
 
     final static void a(boolean param0, int param1) {
         qc.field_d = new UiSelectionState(2);
-        qc.field_d.restoreSelection(-1, param0, vf.a(AiPlanningStrategy.field_d, -1, ko.field_b), param1);
+        qc.field_d.restoreSelection(-1, param0, vf.a(AiPlanningStrategy.pointerX, -1, ko.pointerY), param1);
     }
 
     final static byte[] a(byte[] param0, int param1) {

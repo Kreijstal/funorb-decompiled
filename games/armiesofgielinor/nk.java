@@ -125,7 +125,7 @@ final class nk {
             if (var4 >= param1.length()) {
               return null;
             }
-            if (wg.a(param1.charAt(var4), -3904)) {
+            if (IterableDualNodeDeque.a(param1.charAt(var4), -3904)) {
               var4++;
               continue;
             }

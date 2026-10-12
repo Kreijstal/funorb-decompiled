@@ -193,11 +193,11 @@ abstract class rb implements n {
           var7Lifetime1 = 0;
           var8Lifetime1 = SocketResourceClient.b(var6Lifetime1, 100) >> 8;
           var9Lifetime1 = ContextualRuntimeException.a(param0 - 10, var6Lifetime1) >> 8;
-          if (AiPlanningStrategy.field_d != -1 &&
-            ko.field_b != -1) {
+          if (AiPlanningStrategy.pointerX != -1 &&
+            ko.pointerY != -1) {
             var9Lifetime1 = -128;
-            var7Lifetime1 = AiPlanningStrategy.field_d - 320;
-            var8Lifetime1 = -ko.field_b + 240;
+            var7Lifetime1 = AiPlanningStrategy.pointerX - 320;
+            var8Lifetime1 = -ko.pointerY + 240;
           }
           var10 = 256.0 / Math.sqrt((double)(var9Lifetime1 * var9Lifetime1 + (var8Lifetime1 * var8Lifetime1 + var7Lifetime1 * var7Lifetime1)));
           var9Lifetime1 = (int)((double)var9Lifetime1 * var10);

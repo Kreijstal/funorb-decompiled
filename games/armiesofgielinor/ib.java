@@ -468,7 +468,7 @@ final class ib extends mk {
         }
         OwnerChangeEvent.field_E.a(true, param1);
         int var4 = qd.field_I.d((byte) 91) ? 1 : 0;
-        if (DeployEvent.field_A != 0 &&
+        if (DeployEvent.pointerPressButton != 0 &&
           var4 == 0) {
           param1 = false;
           DelayedPacket.e(-3);

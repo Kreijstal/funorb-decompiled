@@ -12,7 +12,7 @@ class ro extends pt implements he {
     static int[] field_lb;
     private boolean field_qb;
     static String field_vb;
-    static int field_ub;
+    static int pointerButton;
     static IndexedSprite[] field_rb;
     private BitmapFont field_nb;
 
@@ -433,6 +433,6 @@ class ro extends pt implements he {
 
     static {
         field_kb = "Continue";
-        field_ub = 0;
+        pointerButton = 0;
     }
 }

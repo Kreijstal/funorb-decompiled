@@ -6,7 +6,7 @@ final class ri {
     private int field_a;
     static int[] terrainDamageTakenPercent;
     static int field_d;
-    private wg field_e;
+    private IterableDualNodeDeque field_e;
     private m field_g;
     static ll field_b;
 
@@ -26,12 +26,12 @@ final class ri {
         }
         if (param1 > 121) {
           if (!var7.a(true)) {
-            this.field_e.a(-96, var7);
+            this.field_e.addLast(-96, var7);
             var7.secondaryKey = 0L;
           } else {
             var6 = new f(var5, var7.field_z);
             this.field_g.a(var6, false, var7.key);
-            this.field_e.a(-96, var6);
+            this.field_e.addLast(-96, var6);
             ((uq) ((Object) var6)).secondaryKey = 0L;
             var7.unlink(97);
             var7.unlinkSecondary((byte) -76);
@@ -40,12 +40,12 @@ final class ri {
         }
         this.a(-102L, 20);
         if (!var7.a(true)) {
-          this.field_e.a(-96, var7);
+          this.field_e.addLast(-96, var7);
           var7.secondaryKey = 0L;
         } else {
           var6Lifetime1 = new f(var5, var7.field_z);
           this.field_g.a(var6Lifetime1, false, var7.key);
-          this.field_e.a(-96, var6Lifetime1);
+          this.field_e.addLast(-96, var6Lifetime1);
           ((uq) ((Object) var6Lifetime1)).secondaryKey = 0L;
           var7.unlink(97);
           var7.unlinkSecondary((byte) -76);
@@ -95,13 +95,13 @@ final class ri {
           this.a(param3, -75);
           this.field_a = this.field_a - param2;
           while (0 > this.field_a) {
-            var9 = (uq) (this.field_e.a(false));
+            var9 = (uq) (this.field_e.popFirst(false));
             this.a(var9, 0);
           }
           int var6_int = 105 % ((4 - param1) / 34);
           var7 = new f(param0, param2);
           this.field_g.a(var7, false, param3);
-          this.field_e.a(-96, var7);
+          this.field_e.addLast(-96, var7);
           ((uq) ((Object) var7)).secondaryKey = 0L;
         } catch (RuntimeException runtimeException) {
           throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "ri.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
@@ -139,7 +139,7 @@ final class ri {
 
     private ri(int param0, int param1) {
         int var3;
-        this.field_e = new wg();
+        this.field_e = new IterableDualNodeDeque();
         this.field_a = param0;
         this.field_f = param0;
         var3 = 1;

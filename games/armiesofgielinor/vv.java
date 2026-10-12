@@ -53,7 +53,7 @@ final class vv {
             return stackIn_4_0;
           }
           var2 = gu.a(false, param0);
-          var3 = new og[var2.b(false)];
+          var3 = new og[var2.size(false)];
           var4 = 0;
           if (param1 <= 109) {
             stackIn_7_0 = (og[]) null;

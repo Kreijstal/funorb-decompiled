@@ -3,13 +3,13 @@
  */
 import java.util.*;
 
-final class sp implements Iterator {
+final class DualNodeIterator implements Iterator {
     static String field_d;
-    private DualLinkedNode field_a;
-    private wg field_c;
+    private DualLinkedNode lastReturned;
+    private IterableDualNodeDeque deque;
     static String field_g;
     static int field_b;
-    private DualLinkedNode field_f;
+    private DualLinkedNode cursor;
     static double packetJitterMillis;
 
     final static java.awt.Container a(int param0) {
@@ -62,29 +62,29 @@ final class sp implements Iterator {
     }
 
     public final void remove() {
-        if (null == this.field_a) {
+        if (null == this.lastReturned) {
           throw new IllegalStateException();
         }
-        this.field_a.unlinkSecondary((byte) -76);
-        this.field_a = null;
+        this.lastReturned.unlinkSecondary((byte) -76);
+        this.lastReturned = null;
     }
 
     final static je b(byte param0) {
         if (param0 >= -80) {
-          sp.b((byte) -47);
+          DualNodeIterator.b((byte) -47);
           return CipherPacketBuffer.field_x.field_Jb;
         }
         return CipherPacketBuffer.field_x.field_Jb;
     }
 
     public final boolean hasNext() {
-        return this.field_f != this.field_c.field_f;
+        return this.cursor != this.deque.sentinel;
     }
 
     public static void a(byte param0) {
         field_d = null;
         if (param0 > -60) {
-          sp.b((byte) -85);
+          DualNodeIterator.b((byte) -85);
           field_g = null;
           return;
         }
@@ -92,25 +92,25 @@ final class sp implements Iterator {
     }
 
     public final Object next() {
-        Object var1 = this.field_f;
-        if (this.field_c.field_f != var1) {
-          this.field_f = ((DualLinkedNode) (var1)).secondaryNext;
+        Object nextNode = this.cursor;
+        if (this.deque.sentinel != nextNode) {
+          this.cursor = ((DualLinkedNode) (nextNode)).secondaryNext;
         } else {
-          var1 = null;
-          this.field_f = null;
+          nextNode = null;
+          this.cursor = null;
         }
-        this.field_a = (DualLinkedNode) (var1);
-        return var1;
+        this.lastReturned = (DualLinkedNode) (nextNode);
+        return nextNode;
     }
 
-    sp(wg param0) {
-        this.field_a = null;
+    DualNodeIterator(IterableDualNodeDeque deque) {
+        this.lastReturned = null;
         try {
-          this.field_c = param0;
-          this.field_a = null;
-          this.field_f = this.field_c.field_f.secondaryNext;
+          this.deque = deque;
+          this.lastReturned = null;
+          this.cursor = this.deque.sentinel.secondaryNext;
         } catch (RuntimeException runtimeException) {
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "sp.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "sp.<init>(" + (deque != null ? "{...}" : "null") + ')');
         }
     }
 

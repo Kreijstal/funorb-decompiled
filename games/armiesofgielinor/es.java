@@ -292,7 +292,7 @@ final class es {
         RuntimeException var2 = null;
         this.field_a = 0;
         try {
-          this.field_e = new og[param0.b(false)];
+          this.field_e = new og[param0.size(false)];
           var2_int = 0;
           var3 = (og) (param0.first((byte) 105));
           while (var3 != null) {

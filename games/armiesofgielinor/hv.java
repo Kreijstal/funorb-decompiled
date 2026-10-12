@@ -145,8 +145,8 @@ class hv extends fw {
           super.a(param0, param1, param2, param3);
           this.field_M = null;
           if (this.field_t) {
-            var5_int = -param1 + (AiPlanningStrategy.field_d - this.x);
-            var6 = -param2 + ko.field_b - this.y;
+            var5_int = -param1 + (AiPlanningStrategy.pointerX - this.x);
+            var6 = -param2 + ko.pointerY - this.y;
             this.field_M = this.a(var6, (byte) -61, var5_int);
           }
         } catch (RuntimeException runtimeException) {

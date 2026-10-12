@@ -10,11 +10,11 @@ final class DeployEvent extends GameEvent {
     static byte[] field_F;
     private int modifiers;
     static int[][] field_C;
-    static int field_A;
+    static int pointerPressButton;
 
     public static void g(int param0) {
         if (param0 > -88) {
-          field_A = 25;
+          pointerPressButton = 25;
         }
         field_z = null;
         field_C = (int[][]) null;
@@ -195,7 +195,7 @@ final class DeployEvent extends GameEvent {
           stackIn_5_1 = param1;
           stackIn_5_2 = (2 + jn.field_d) * (3 * param2);
           stackIn_5_3 = jn.field_d + 2;
-          stackIn_6_4 = (pq.field_b == TaggedMapData.field_g.field_Kb);
+          stackIn_6_4 = (PointerInputHandler.field_b == TaggedMapData.field_g.field_Kb);
           var3_int = ((dn) (Object) stackIn_5_0).a(stackIn_5_1, stackIn_5_2, stackIn_5_3, stackIn_6_4, 0, 2) ? 1 : 0;
           var4 = TaggedMapData.field_g.field_Nb.field_fb;
           if (th.field_a != 2 &&
@@ -266,8 +266,8 @@ final class DeployEvent extends GameEvent {
               var13_ref_String = ArchiveIndex.field_u;
               var16.field_i.a(7, var13_ref_String, (byte) -100);
               var17 = tn.field_Z;
-              var13 = BattleTutorial.field_t;
-              var14 = TeleportAction.field_z;
+              var13 = BattleTutorial.pointerPressX;
+              var14 = TeleportAction.pointerPressY;
               var17.field_i.a(0, var14, 0, (byte) -118, var13);
             }
             var5 = var6;
@@ -300,7 +300,7 @@ final class DeployEvent extends GameEvent {
     static {
         field_G = "<%0> wants to join";
         field_y = "You win!";
-        field_A = 0;
+        pointerPressButton = 0;
         field_C = new int[][]{null, null, null, null, null, null};
     }
 }

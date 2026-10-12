@@ -698,7 +698,7 @@ final class dp extends je {
           var6 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
           try {
             boolean decompiledFrameRemainder0 = true;
-            var2_int = this.c(param0 ^ 48, AiPlanningStrategy.field_d - (this.field_V + this.field_Pb.field_F));
+            var2_int = this.c(param0 ^ 48, AiPlanningStrategy.pointerX - (this.field_V + this.field_Pb.field_F));
             if (this.field_yb == 1) {
               this.b(var2_int, false);
               this.field_Ib = true;
@@ -716,7 +716,7 @@ final class dp extends je {
               }
               this.field_Wb = var3_long;
             } else {
-              if (ro.field_ub == 1 &&
+              if (ro.pointerButton == 1 &&
                 this.field_Ib) {
                 if (!this.field_Nb) {
                   this.field_Qb = var2_int;

@@ -548,7 +548,7 @@ final class ng {
     final static void a(dn param0, je param1, int[] param2, String param3, int param4, int param5, int param6, String param7, long param8) {
         try {
           int var10_int = -119 % ((param5 + 47) / 32);
-          pq.field_b = param0;
+          PointerInputHandler.field_b = param0;
           tn.field_Z = new tg(param1, param8, param7, param3, param4, param6, param2);
         } catch (RuntimeException runtimeException) {
           throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "ng.FA(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ',' + param6 + ',' + (param7 != null ? "{...}" : "null") + ',' + param8 + ')');

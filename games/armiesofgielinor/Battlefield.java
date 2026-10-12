@@ -319,7 +319,7 @@ final class Battlefield {
           this.applyPendingEvents((byte) 108);
           break;
         }
-        var5_ref_jdLifetime1 = (Unit) (this.unitsByPlayer[this.currentPlayer].d((byte) -81));
+        var5_ref_jdLifetime1 = (Unit) (this.unitsByPlayer[this.currentPlayer].last((byte) -81));
         boolean decompiledNaturalLoopExit0 = false;
         while (!(decompiledNaturalLoopExit0 = (var5_ref_jdLifetime1 == null))) {
           stackIn_60_0 = var5_ref_jdLifetime1.removedFromActivePlay;
@@ -342,11 +342,11 @@ final class Battlefield {
               var5_ref_jdLifetime1.queueTurnConsequences(-1);
               if (collectMarkers) {
                 this.applyPendingEvents((byte) 108);
-                this.d(this.currentPlayer, this.unitsByPlayer[this.currentPlayer].b(false), 91, 13);
+                this.d(this.currentPlayer, this.unitsByPlayer[this.currentPlayer].size(false), 91, 13);
                 this.d(this.currentPlayer, this.field_ob[this.currentPlayer], obfuscationGuard ^ 82, 12);
               }
             }
-            var5_ref_jdLifetime1 = (Unit) (this.unitsByPlayer[this.currentPlayer].b((byte) 100));
+            var5_ref_jdLifetime1 = (Unit) (this.unitsByPlayer[this.currentPlayer].previous((byte) 100));
             continue;
           }
           break;
@@ -904,7 +904,7 @@ final class Battlefield {
         }
         if (this.field_b) {
           this.field_Y[param5] = this.field_Y[param5] + 1;
-          this.d(param5, this.unitsByPlayer[param5].b(false), param4 ^ 104, 13);
+          this.d(param5, this.unitsByPlayer[param5].size(false), param4 ^ 104, 13);
           this.d(param5, this.field_Y[param5], 119, 5);
         }
     }
@@ -2660,7 +2660,7 @@ final class Battlefield {
           }
           this.j(7);
           var4 = param1 + "\n" + var4;
-          this.pendingEvents.b(param0 ^ 98);
+          this.pendingEvents.clear(param0 ^ 98);
           Spell.a("Dropping conection: turn: " + this.turnNumber + ", player: " + this.currentPlayer + "\n" + var4, (byte) 40);
         } catch (RuntimeException runtimeException) {
           throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "ha.JC(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
@@ -3145,7 +3145,7 @@ final class Battlefield {
           scanLoop2: while (true) {
             if (var6 < this.playerCount) {
               while (true) {
-                stackIn_69_0 = ~this.unitsByPlayer[var6].b(false);
+                stackIn_69_0 = ~this.unitsByPlayer[var6].size(false);
                 if (var13 != 0) {
                   break scanLoop2;
                 }
@@ -3451,8 +3451,8 @@ final class Battlefield {
         GameEvent var2 = null;
         int var3 = 0;
         var3 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
-        while (this.pendingEvents.b(false) > 0) {
-          var2 = (GameEvent) (this.pendingEvents.a(0));
+        while (this.pendingEvents.size(false) > 0) {
+          var2 = (GameEvent) (this.pendingEvents.popFirst(0));
           var2.applyToBattlefield(this, -26661);
           if (var3 != 0) {
             return;
@@ -3992,7 +3992,7 @@ final class Battlefield {
     }
 
     final GameEvent b(boolean param0) {
-        if (0 == this.pendingEvents.b(param0)) {
+        if (0 == this.pendingEvents.size(param0)) {
           return null;
         }
         GameEvent var2 = (GameEvent) (this.pendingEvents.first((byte) 118));
@@ -4070,7 +4070,7 @@ final class Battlefield {
             var23 = this.unitsByPlayer[var6];
             if (var20 == 0) {
               if (var23 != null &&
-                var23.b(false) != 0) {
+                var23.size(false) != 0) {
                 var24 = new NodeIterator(var23);
                 var9_ref_jd = (Unit) (var24.first(50));
                 while (var9_ref_jd != null) {

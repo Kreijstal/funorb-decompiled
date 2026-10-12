@@ -53,16 +53,16 @@ final class db {
         int var7Lifetime1;
         int var8Lifetime1;
         if (param3 == 1661761121) {
-          if (AiPlanningStrategy.field_d < param4) {
+          if (AiPlanningStrategy.pointerX < param4) {
             return false;
           }
-          if (param2 < AiPlanningStrategy.field_d) {
+          if (param2 < AiPlanningStrategy.pointerX) {
             return false;
           }
-          if (ko.field_b < param1) {
+          if (ko.pointerY < param1) {
             return false;
           }
-          if (ko.field_b > param0) {
+          if (ko.pointerY > param0) {
             return false;
           }
           var5 = param2 + param4 >> 1;
@@ -70,23 +70,23 @@ final class db {
           var7 = -param4 + param2 >> 1;
           var8 = -param1 + param0 >> 1;
           if (var8 < var7) {
-            stackIn_33_0 = !(Math.abs(var5 - AiPlanningStrategy.field_d) + Math.abs(var6 - ko.field_b) * var7 / var8 > var7);
+            stackIn_33_0 = !(Math.abs(var5 - AiPlanningStrategy.pointerX) + Math.abs(var6 - ko.pointerY) * var7 / var8 > var7);
             return stackIn_33_0;
           }
-          stackIn_37_0 = !(Math.abs(var6 - ko.field_b) + Math.abs(var5 - AiPlanningStrategy.field_d) * var8 / var7 > var8);
+          stackIn_37_0 = !(Math.abs(var6 - ko.pointerY) + Math.abs(var5 - AiPlanningStrategy.pointerX) * var8 / var7 > var8);
           return stackIn_37_0;
         }
         field_e = (String[]) null;
-        if (AiPlanningStrategy.field_d < param4) {
+        if (AiPlanningStrategy.pointerX < param4) {
           return false;
         }
-        if (param2 < AiPlanningStrategy.field_d) {
+        if (param2 < AiPlanningStrategy.pointerX) {
           return false;
         }
-        if (ko.field_b < param1) {
+        if (ko.pointerY < param1) {
           return false;
         }
-        if (ko.field_b > param0) {
+        if (ko.pointerY > param0) {
           return false;
         }
         var5Lifetime1 = param2 + param4 >> 1;
@@ -94,10 +94,10 @@ final class db {
         var7Lifetime1 = -param4 + param2 >> 1;
         var8Lifetime1 = -param1 + param0 >> 1;
         if (var8Lifetime1 < var7Lifetime1) {
-          stackIn_15_0 = !(Math.abs(var5Lifetime1 - AiPlanningStrategy.field_d) + Math.abs(var6Lifetime1 - ko.field_b) * var7Lifetime1 / var8Lifetime1 > var7Lifetime1);
+          stackIn_15_0 = !(Math.abs(var5Lifetime1 - AiPlanningStrategy.pointerX) + Math.abs(var6Lifetime1 - ko.pointerY) * var7Lifetime1 / var8Lifetime1 > var7Lifetime1);
           return stackIn_15_0;
         }
-        if (Math.abs(var6Lifetime1 - ko.field_b) + Math.abs(var5Lifetime1 - AiPlanningStrategy.field_d) * var8Lifetime1 / var7Lifetime1 > var8Lifetime1) {
+        if (Math.abs(var6Lifetime1 - ko.pointerY) + Math.abs(var5Lifetime1 - AiPlanningStrategy.pointerX) * var8Lifetime1 / var7Lifetime1 > var8Lifetime1) {
           return false;
         }
         return true;

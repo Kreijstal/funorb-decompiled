@@ -81,9 +81,9 @@ final class DisplacedUnitMarker extends PreparedAction {
     final static void a(java.awt.Component param0, byte param1) {
         try {
           int var2_int = -78 / ((param1 + 46) / 57);
-          param0.addMouseListener(BattleCharacter.field_q);
-          param0.addMouseMotionListener(BattleCharacter.field_q);
-          param0.addFocusListener(BattleCharacter.field_q);
+          param0.addMouseListener(BattleCharacter.pointerInputHandler);
+          param0.addMouseMotionListener(BattleCharacter.pointerInputHandler);
+          param0.addFocusListener(BattleCharacter.pointerInputHandler);
         } catch (RuntimeException runtimeException) {
           throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "il.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

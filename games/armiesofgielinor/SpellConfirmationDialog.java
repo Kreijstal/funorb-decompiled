@@ -62,10 +62,10 @@ final class SpellConfirmationDialog {
         int surfaceWidth = so.field_b.field_a;
         int surfaceHeight = so.field_b.field_g;
         int dialogHeight = 30 + (rs.field_n.getParagraphHeight(this.prompt, 200, 0) + 5);
-        if (wg.a(-33, surfaceWidth / 2 - 100, -2 + surfaceWidth / 2, surfaceHeight / 2 + ((dialogHeight >> 1) - 30), (dialogHeight >> 1) + surfaceHeight / 2)) {
+        if (IterableDualNodeDeque.isPointerInBounds(-33, surfaceWidth / 2 - 100, -2 + surfaceWidth / 2, surfaceHeight / 2 + ((dialogHeight >> 1) - 30), (dialogHeight >> 1) + surfaceHeight / 2)) {
           return confirmAction;
         }
-        if (wg.a(-33, surfaceWidth / 2 + 2, surfaceWidth / 2 + 100, -30 + ((dialogHeight >> 1) + surfaceHeight / 2), surfaceHeight / 2 + (dialogHeight >> 1))) {
+        if (IterableDualNodeDeque.isPointerInBounds(-33, surfaceWidth / 2 + 2, surfaceWidth / 2 + 100, -30 + ((dialogHeight >> 1) + surfaceHeight / 2), surfaceHeight / 2 + (dialogHeight >> 1))) {
           return cancelAction;
         }
         if (obfuscationGuard < 41) {
@@ -95,12 +95,12 @@ final class SpellConfirmationDialog {
         int var4 = 5 + (rs.field_n.getParagraphHeight(this.prompt, 200, 0) + 30);
         fe.b(212, -(var4 >> 1) + (-8 + var3 / 2), 216, 16 + var4, io.field_m, nd.field_b, 0, 128);
         rs.field_n.a(this.prompt, var2 / 2 - 100, -(var4 >> 1) + var3 / 2, 200, var4, 16777215, 0, 1, 0, 0);
-        int[] var10 = wg.a(obfuscationGuard - 1619621026, var2 / 2 - 100, 318, -30 + var3 / 2 + (var4 >> 1), (var4 >> 1) + var3 / 2) ? TutorialController.field_e : nd.field_b;
+        int[] var10 = IterableDualNodeDeque.isPointerInBounds(obfuscationGuard - 1619621026, var2 / 2 - 100, 318, -30 + var3 / 2 + (var4 >> 1), (var4 >> 1) + var3 / 2) ? TutorialController.field_e : nd.field_b;
         int[] var8 = var10;
         int[] var6 = var8;
         int[] var5 = var6;
         fe.a(-100 + var2 / 2, (var4 >> 1) + (var3 / 2 - 30), 98, 30, DisplacedUnitMarker.field_s, var10, 0, 128, true);
-        int[] var11 = wg.a(-33, 2 + var2 / 2, var2 / 2 + 100, var3 / 2 - (-(var4 >> 1) + 30), var3 / 2 + (var4 >> 1)) ? TutorialController.field_e : nd.field_b;
+        int[] var11 = IterableDualNodeDeque.isPointerInBounds(-33, 2 + var2 / 2, var2 / 2 + 100, var3 / 2 - (-(var4 >> 1) + 30), var3 / 2 + (var4 >> 1)) ? TutorialController.field_e : nd.field_b;
         int[] var9 = var11;
         int[] var7 = var9;
         var5 = var7;

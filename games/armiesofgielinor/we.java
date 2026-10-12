@@ -44,7 +44,7 @@ final class we {
         }
         stackIn_5_0 = bk.field_e;
         stackIn_6_1 = (param1) ? false : true;
-        if (((NodeDeque) (Object) stackIn_5_0).b(stackIn_6_1) == 0) {
+        if (((NodeDeque) (Object) stackIn_5_0).size(stackIn_6_1) == 0) {
           return null;
         }
         if (!param1) {

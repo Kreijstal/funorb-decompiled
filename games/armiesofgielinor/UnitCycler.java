@@ -196,7 +196,7 @@ final class UnitCycler {
         }
         this.refreshIteratorIfNeeded(10201);
         if (null != this.selectedNode) {
-          this.iterator.a(this.selectedNode, true);
+          this.iterator.startForwardAt(this.selectedNode, true);
           this.selectedNode = this.iterator.next(50);
         }
         if (this.selectedNode == null) {
@@ -208,7 +208,7 @@ final class UnitCycler {
         if (obfuscationGuard <= 31) {
           this.getUnitCount((byte) 71);
         }
-        return this.units.b(false);
+        return this.units.size(false);
     }
 
     final static void a(int param0, int param1, int param2, Unit param3) {
@@ -224,7 +224,7 @@ final class UnitCycler {
         boolean discarded$0 = false;
         this.refreshIteratorIfNeeded(10201);
         if (null != this.selectedNode) {
-          this.iterator.a(false, this.selectedNode);
+          this.iterator.startReverseAt(false, this.selectedNode);
           this.selectedNode = this.iterator.previous((byte) -112);
         }
         if (obfuscationGuard >= -50) {

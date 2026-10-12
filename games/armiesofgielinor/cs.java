@@ -116,7 +116,7 @@ final class cs extends sf implements he {
         int var7 = 0;
         try {
           super.a(param0, param1, param2, param3);
-          if (lk.field_f) {
+          if (lk.pointerChangedSnapshot) {
             param3.f(param0 - 32721);
           }
           var5_long = vi.monotonicMillis(92) - this.field_fb;

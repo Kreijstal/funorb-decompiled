@@ -325,7 +325,7 @@ final class CampaignMenu {
             stackIn_11_2 = 246;
             stackIn_11_3 = 41;
             stackIn_11_4 = DisplacedUnitMarker.field_s;
-            if (!wg.a(-33, db.a(true, 354), db.a(true, 354) + 246, MatchConditionEntry.a(361, (byte) 94), MatchConditionEntry.a(361, (byte) 94) + 41)) {
+            if (!IterableDualNodeDeque.isPointerInBounds(-33, db.a(true, 354), db.a(true, 354) + 246, MatchConditionEntry.a(361, (byte) 94), MatchConditionEntry.a(361, (byte) 94) + 41)) {
               stackIn_12_5 = nd.field_b;
             } else {
               stackIn_12_5 = TutorialController.field_e;
@@ -366,7 +366,7 @@ final class CampaignMenu {
               stackIn_31_0 = stackOut_30_0;
               if (var8 == 0) {
                 boolean decompiledFrameRemainder0 = true;
-                if (stackIn_31_0 && (var3_ref.containsPoint(AiPlanningStrategy.field_d, ko.field_b, param0 - 275) ||
+                if (stackIn_31_0 && (var3_ref.containsPoint(AiPlanningStrategy.pointerX, ko.pointerY, param0 - 275) ||
                   var3_ref == this.selectedCampaignEntry)) {
                   stackIn_43_0 = 1;
                   decompiledFrameRemainder0 = false;
@@ -1148,9 +1148,9 @@ final class CampaignMenu {
             rs.field_n.a(IntPair.field_l + var23_ref.title, db.a(true, var23_ref.icon.canvasWidth + 31), MatchConditionEntry.a(-10 + var6Lifetime2, (byte) 94), -13 + (-var23_ref.icon.canvasWidth + var4Lifetime1), var23_ref.icon.canvasHeight, 16776960, 0, 0, 1, 0);
             if (null != var19) {
               var25_intLifetime2 = 100;
-              var26Lifetime1 = AiPlanningStrategy.field_d;
+              var26Lifetime1 = AiPlanningStrategy.pointerX;
               var27Lifetime2 = rs.field_n.getParagraphHeight(((CampaignParticipant) (var19)).displayName, var25_intLifetime2, 0);
-              var28Lifetime2 = -(var27Lifetime2 / 2) + (25 + ko.field_b);
+              var28Lifetime2 = -(var27Lifetime2 / 2) + (25 + ko.pointerY);
               SoftwareRaster.b(db.a(true, var26Lifetime1), MatchConditionEntry.a(var28Lifetime2, (byte) 94), var25_intLifetime2, var27Lifetime2 + 2, 0, 255);
               rs.field_n.a(((CampaignParticipant) (var19)).displayName, db.a(true, var26Lifetime1), MatchConditionEntry.a(var28Lifetime2, (byte) 94), var25_intLifetime2, 472, 16777215, 1, 1, 0, 0);
             }
@@ -1539,7 +1539,7 @@ final class CampaignMenu {
               this.selectedMissionEntry.selectionAge = this.selectedMissionEntry.selectionAge + 1;
             }
             boolean decompiledFrameCompleted0 = true;
-            if (DeployEvent.field_A == 1 &&
+            if (DeployEvent.pointerPressButton == 1 &&
               null != this.regionMap) {
               if (null != this.selectedMissionEntry &&
                 this.selectedMissionEntry.selectable &&
@@ -1548,7 +1548,7 @@ final class CampaignMenu {
                 this.selectMissionOrQuicksaveDialog((byte) 107);
                 return;
               }
-              var2_int = this.regionMap.getRegionAt(AiPlanningStrategy.field_d - db.a(true, 0), (byte) -79, ko.field_b - MatchConditionEntry.a(0, (byte) 94));
+              var2_int = this.regionMap.getRegionAt(AiPlanningStrategy.pointerX - db.a(true, 0), (byte) -79, ko.pointerY - MatchConditionEntry.a(0, (byte) 94));
               if (-1 < var2_int) {
                 var3 = null;
                 var4_ref = (CampaignMenuEntry) (this.missionEntries.first(1));
@@ -1578,7 +1578,7 @@ final class CampaignMenu {
                       wr.campaignPacketWord3 = 224;
                       kw.campaignPacketWord0 = 2297;
                       hc.field_b = hc.field_b + 1;
-                      hc.field_b = hc.field_b + (ko.field_b ^ AiPlanningStrategy.field_d);
+                      hc.field_b = hc.field_b + (ko.pointerY ^ AiPlanningStrategy.pointerX);
                       hc.field_b = Math.abs(hc.field_b);
                       var5 = hc.field_b % 4;
                       var6 = var5;
@@ -1644,7 +1644,7 @@ final class CampaignMenu {
             }
             if (decompiledFrameCompleted0) {
               stackIn_189_0 = -3;
-              stackIn_189_1 = ~DeployEvent.field_A;
+              stackIn_189_1 = ~DeployEvent.pointerPressButton;
             }
             if (stackIn_189_0 == stackIn_189_1) {
               this.selectedMissionEntry = null;
@@ -1652,7 +1652,7 @@ final class CampaignMenu {
           } else {
             if (this.viewMode != 0) {
               if (this.viewMode == 3) {
-                if (DeployEvent.field_A == 1 &&
+                if (DeployEvent.pointerPressButton == 1 &&
                   this.field_c != null &&
                   this.field_c.containsPointer((byte) -49)) {
                   var2 = ku.getStoredQuicksave(86);
@@ -1660,14 +1660,14 @@ final class CampaignMenu {
                   l.activeCampaignMission = (CampaignMission) (var3);
                   CipherPacketBuffer.a(true, -11, 1, 0);
                 }
-                if (DeployEvent.field_A == 1 &&
+                if (DeployEvent.pointerPressButton == 1 &&
                   null != this.field_j &&
                   this.field_j.containsPointer((byte) 121)) {
                   this.resumeQuicksave(-2);
                   l.activeCampaignMission = this.selectedMissionEntry.mission;
                   CipherPacketBuffer.a(true, -10, 1, 0);
                 }
-                if (DeployEvent.field_A == 1 &&
+                if (DeployEvent.pointerPressButton == 1 &&
                   this.field_o != null &&
                   this.field_o.containsPointer((byte) -52)) {
                   this.viewMode = 1;
@@ -1675,14 +1675,14 @@ final class CampaignMenu {
                 return;
               }
               if (this.viewMode == 2) {
-                if (DeployEvent.field_A == 1 &&
+                if (DeployEvent.pointerPressButton == 1 &&
                   null != this.field_h &&
                   this.field_h.containsPointer((byte) 86)) {
                   this.resumeQuicksave(-2);
                   l.activeCampaignMission = this.selectedMissionEntry.mission;
                   CipherPacketBuffer.a(true, -10, 1, 0);
                 }
-                if (DeployEvent.field_A == 1 &&
+                if (DeployEvent.pointerPressButton == 1 &&
                   this.field_f != null &&
                   this.field_f.containsPointer((byte) -69)) {
                   this.viewMode = 1;
@@ -1694,18 +1694,18 @@ final class CampaignMenu {
                 this.selectedCampaignEntry.selectionAge = this.selectedCampaignEntry.selectionAge + 1;
               }
               if (null != this.selectedCampaignEntry &&
-                DeployEvent.field_A == 1 &&
-                wg.a(-33, db.a(true, 354), db.a(true, 600), MatchConditionEntry.a(361, (byte) 94), MatchConditionEntry.a(402, (byte) 94))) {
+                DeployEvent.pointerPressButton == 1 &&
+                IterableDualNodeDeque.isPointerInBounds(-33, db.a(true, 354), db.a(true, 600), MatchConditionEntry.a(361, (byte) 94), MatchConditionEntry.a(402, (byte) 94))) {
                 this.openSelectedCampaign(0);
                 return;
               }
             }
           }
-          if (2 == DeployEvent.field_A) {
+          if (2 == DeployEvent.pointerPressButton) {
             this.selectedMissionEntry = null;
             this.selectedCampaignEntry = null;
           }
-          if (DeployEvent.field_A == 1) {
+          if (DeployEvent.pointerPressButton == 1) {
             var2 = null;
             var3 = null;
             var4_int = this.viewMode;
@@ -1723,7 +1723,7 @@ final class CampaignMenu {
                   return;
                 }
                 if (var4_ref.selectable &&
-                  var4_ref.containsPoint(AiPlanningStrategy.field_d, ko.field_b, 122)) {
+                  var4_ref.containsPoint(AiPlanningStrategy.pointerX, ko.pointerY, 122)) {
                   var2 = var4_ref;
                 } else {
                   var4_ref = (CampaignMenuEntry) (((NodeHashTable) (var3)).next((byte) 80));
@@ -2197,10 +2197,10 @@ final class CampaignMenu {
             if (var8 == 0) {
               if (stackIn_96_0 == stackIn_96_1) {
                 if (var5_ref_cq.selectable &&
-                  AiPlanningStrategy.field_d >= db.a(true, var5_ref_cq.left) &&
-                  AiPlanningStrategy.field_d <= db.a(true, var5_ref_cq.left + var5_ref_cq.width) &&
-                  ko.field_b >= MatchConditionEntry.a(var5_ref_cq.top, (byte) 94) &&
-                  ko.field_b <= MatchConditionEntry.a(var5_ref_cq.height + var5_ref_cq.top, (byte) 94)) {
+                  AiPlanningStrategy.pointerX >= db.a(true, var5_ref_cq.left) &&
+                  AiPlanningStrategy.pointerX <= db.a(true, var5_ref_cq.left + var5_ref_cq.width) &&
+                  ko.pointerY >= MatchConditionEntry.a(var5_ref_cq.top, (byte) 94) &&
+                  ko.pointerY <= MatchConditionEntry.a(var5_ref_cq.height + var5_ref_cq.top, (byte) 94)) {
                   stackIn_38_0 = 1;
                 } else {
                   stackIn_38_0 = 0;
@@ -2208,7 +2208,7 @@ final class CampaignMenu {
                 var6Lifetime1 = stackIn_38_0;
                 if (this.regionMap != null) {
                   if (var5_ref_cq.selectable &&
-                    this.regionMap.getRegionAt(AiPlanningStrategy.field_d - db.a(true, 0), (byte) -128, ko.field_b - MatchConditionEntry.a(0, (byte) 94)) == var5_ref_cq.entryId) {
+                    this.regionMap.getRegionAt(AiPlanningStrategy.pointerX - db.a(true, 0), (byte) -128, ko.pointerY - MatchConditionEntry.a(0, (byte) 94)) == var5_ref_cq.entryId) {
                     stackIn_48_0 = 1;
                   } else {
                     stackIn_48_0 = 0;

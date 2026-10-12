@@ -122,7 +122,7 @@ abstract class vt extends IntrusiveNode {
           } else {
             param0 = param0 - var7;
           }
-          stackIn_8_0 = wg.a(-33, -var6_int + param0, var6_int + param0, param2, param3[0].canvasHeight + param2);
+          stackIn_8_0 = IterableDualNodeDeque.isPointerInBounds(-33, -var6_int + param0, var6_int + param0, param2, param3[0].canvasHeight + param2);
           return stackIn_8_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

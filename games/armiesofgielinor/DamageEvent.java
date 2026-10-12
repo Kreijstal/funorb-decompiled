@@ -283,7 +283,7 @@ final class DamageEvent extends GameEvent {
             stackIn_10_0 = fo.a(4800, TaggedMapData.field_d, new String[]{param0});
             return stackIn_10_0;
           }
-          wh.field_c.a(true, var8);
+          wh.field_c.startForwardAt(true, var8);
           while (true) {
             var7 = (hl) (wh.field_c.next((byte) 123));
             if (var7 != null) {
