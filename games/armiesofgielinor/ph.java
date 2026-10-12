@@ -35,7 +35,7 @@ final class ph {
           if (bi.a(param1, -31000)) {
             return true;
           }
-          var12 = ll.field_Nb;
+          var12 = VerticalScrollbar.field_Nb;
           var10 = var12;
           var7 = var10;
           var2 = var7;

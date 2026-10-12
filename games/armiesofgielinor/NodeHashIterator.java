@@ -119,10 +119,10 @@ final class NodeHashIterator implements Iterator {
         SoftwareRaster.b();
         if (param0 != -90) {
           field_i = (QuickChatCommandDefinition) null;
-          ll.field_Rb.draw(2);
+          VerticalScrollbar.field_Rb.draw(2);
           return;
         }
-        ll.field_Rb.draw(2);
+        VerticalScrollbar.field_Rb.draw(2);
     }
 
     public final Object next() {

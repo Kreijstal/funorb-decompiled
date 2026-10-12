@@ -181,12 +181,12 @@ final class dp extends ClientUiComponent {
           this.field_Rb = new StringBuilder(stackIn_4_3);
           this.field_Pb.text = this.field_Rb.toString();
           this.field_Ob.text = "";
-          this.field_Ob.field_I = "|";
+          this.field_Ob.blinkTextSuffix = "|";
           this.children = new NodeDeque();
           this.addChild(this.field_Xb, 48);
           this.addChild(this.field_Pb, 48);
           this.addChild(this.field_Ob, 89);
-          this.field_Y = true;
+          this.focused = true;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -698,7 +698,7 @@ final class dp extends ClientUiComponent {
           var6 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
           try {
             boolean decompiledFrameRemainder0 = true;
-            var2_int = this.c(param0 ^ 48, AiPlanningStrategy.pointerX - (this.screenX + this.field_Pb.field_F));
+            var2_int = this.c(param0 ^ 48, AiPlanningStrategy.pointerX - (this.screenX + this.field_Pb.contentOffsetX));
             if (this.pressedButton == 1) {
               this.b(var2_int, false);
               this.field_Ib = true;
@@ -738,7 +738,7 @@ final class dp extends ClientUiComponent {
                 this.field_Ib = false;
               }
             }
-            if (!this.field_Y) {
+            if (!this.focused) {
               dupTemp$0 = this.field_Rb.length();
               this.field_Jb = dupTemp$0;
               this.field_Qb = dupTemp$0;
@@ -755,7 +755,7 @@ final class dp extends ClientUiComponent {
               }
               var4_int = stackIn_32_0;
               var5 = Math.abs(var3 - this.field_Ob.x);
-              this.field_Xb.setBounds(this.field_Kb, param0 - 20500, var5, 2, var4_int + this.field_Pb.field_F);
+              this.field_Xb.setBounds(this.field_Kb, param0 - 20500, var5, 2, var4_int + this.field_Pb.contentOffsetX);
             }
             if (this.field_Sb != null) {
               if (this.field_Sb.field_g == 0) {

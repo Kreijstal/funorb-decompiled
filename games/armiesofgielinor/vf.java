@@ -474,13 +474,13 @@ abstract class vf {
               }
               if (var9 >= 0 &&
                 var17.hovered) {
-                if (ll.field_Mb == null) {
+                if (VerticalScrollbar.field_Mb == null) {
                   var18_ref = null;
                 } else {
-                  if (ll.field_Mb[var7] == null) {
+                  if (VerticalScrollbar.field_Mb[var7] == null) {
                     var18_ref = null;
                   } else {
-                    var18_ref = ll.field_Mb[var7][var9];
+                    var18_ref = VerticalScrollbar.field_Mb[var7][var9];
                   }
                 }
                 if (wb.field_a == null) {

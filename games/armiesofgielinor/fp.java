@@ -226,7 +226,7 @@ final class fp extends ClientUiComponent {
         this(param0, (ClientUiComponent) null, param4, param5);
         try {
           this.field_Jb.sprite = param2;
-          this.field_Jb.field_P = param1;
+          this.field_Jb.selectedSprite = param1;
           this.field_Jb.verticalAlignment = param3;
         } catch (RuntimeException runtimeException) {
           throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "fp.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ')');
@@ -264,7 +264,7 @@ final class fp extends ClientUiComponent {
           this.field_Kb.text = param3;
           this.addChild(this.field_Jb, 79);
           this.addChild(this.field_Kb, 58);
-          this.useParentClipForDescendants(-10027);
+          this.inheritVisualStateForDescendants(-10027);
         } catch (RuntimeException runtimeException) {
           throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "fp.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');
         }

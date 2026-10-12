@@ -300,7 +300,7 @@ abstract class nl extends Widget implements gw {
           DeployEvent.field_F = param5;
           lm.field_e = param11;
           ob.field_M = param10;
-          ll.field_Mb = param6;
+          VerticalScrollbar.field_Mb = param6;
           wb.field_a = param4;
           DirectByteStorage.field_j = param3;
           gt.field_f = param12;
@@ -322,15 +322,15 @@ abstract class nl extends Widget implements gw {
           IconTextComponent.field_Kb = new ClientUiComponent(0L, (ClientUiComponent) null);
           rj.field_F = new ClientUiComponent(0L, te.field_p, su.field_b);
           CampaignProgress.field_a = new ClientUiComponent(0L, br.field_e, rh.field_g);
-          MapTile.field_f = new dn(0L, new ClientUiComponent(0L, (ClientUiComponent) null), cb.field_c, WeightedLruCache.field_b);
+          MapTile.field_f = new ScrollContainer(0L, new ClientUiComponent(0L, (ClientUiComponent) null), cb.field_c, WeightedLruCache.field_b);
           IconTextComponent.field_Kb.addChild(rj.field_F, 79);
           if (fh.field_c) {
             IconTextComponent.field_Kb.addChild(CampaignProgress.field_a, 69);
           }
           IconTextComponent.field_Kb.addChild(MapTile.field_f, 59);
-          MapTile.field_f.field_Nb.applyStyle(0, eq.field_h);
-          MapTile.field_f.field_Nb.verticalAlignment = 1;
-          var24 = MapTile.field_f.field_Nb;
+          MapTile.field_f.viewport.applyStyle(0, eq.field_h);
+          MapTile.field_f.viewport.verticalAlignment = 1;
+          var24 = MapTile.field_f.viewport;
           var25 = var24;
           var25.horizontalAlignment = 1;
           t.field_g = new ClientUiComponent(0L, eq.field_h);
@@ -344,7 +344,7 @@ abstract class nl extends Widget implements gw {
           bs.field_a = new ClientUiComponent(0L, CampaignResult.field_a, fw.field_H);
           SphinxActionRequest.field_A = new ClientUiComponent(0L, CampaignResult.field_a, hs.field_D);
           wl.field_K = new ClientUiComponent(0L, br.field_e, RevivalEvent.field_B);
-          CipherPacketBuffer.field_x = new dn(0L, new ClientUiComponent(0L, (ClientUiComponent) null), cb.field_c, WeightedLruCache.field_b);
+          CipherPacketBuffer.field_x = new ScrollContainer(0L, new ClientUiComponent(0L, (ClientUiComponent) null), cb.field_c, WeightedLruCache.field_b);
           fj.field_d = new ClientUiComponent(0L, nd.field_a, l.field_f.toUpperCase());
           fj.field_d.inputEnabled = fh.field_c;
           stackIn_5_0 = null;
@@ -394,7 +394,7 @@ abstract class nl extends Widget implements gw {
           gg.field_E.horizontalAlignment = 1;
           di.field_l = new ClientUiComponent(0L, te.field_p, su.field_b);
           SpellCastEvent.field_D = new ClientUiComponent(0L, br.field_e, rh.field_g);
-          bu.field_a = new dn(0L, new ClientUiComponent(0L, (ClientUiComponent) null), cb.field_c, WeightedLruCache.field_b);
+          bu.field_a = new ScrollContainer(0L, new ClientUiComponent(0L, (ClientUiComponent) null), cb.field_c, WeightedLruCache.field_b);
           eb.field_c.addChild(gg.field_E, 72);
           eb.field_c.addChild(di.field_l, 83);
           if (fh.field_c) {
@@ -447,9 +447,9 @@ abstract class nl extends Widget implements gw {
                   var19_ref = null;
                 }
               }
-              if (ll.field_Mb != null) {
-                if (ll.field_Mb[var17_intLifetime3] != null) {
-                  var20 = ll.field_Mb[var17_intLifetime3][var18];
+              if (VerticalScrollbar.field_Mb != null) {
+                if (VerticalScrollbar.field_Mb[var17_intLifetime3] != null) {
+                  var20 = VerticalScrollbar.field_Mb[var17_intLifetime3][var18];
                 } else {
                   var20 = null;
                 }
@@ -461,13 +461,13 @@ abstract class nl extends Widget implements gw {
           }
           for (var17_intLifetime4 = 0; param1 + 4 > var17_intLifetime4; var17_intLifetime4++) {
             if (null != KingBlackDragonEvent.field_z[var17_intLifetime4]) {
-              KingBlackDragonEvent.field_z[var17_intLifetime4].field_pb = 11;
+              KingBlackDragonEvent.field_z[var17_intLifetime4].textLineSpacing = 11;
             }
             if (pu.field_k[var17_intLifetime4] != null) {
               for (var18Lifetime1 = 0; pu.field_k[var17_intLifetime4].length > var18Lifetime1; var18Lifetime1++) {
                 if (pu.field_k[var17_intLifetime4][var18Lifetime1] != null &&
                   null != pu.field_k[var17_intLifetime4][var18Lifetime1].textComponent) {
-                  pu.field_k[var17_intLifetime4][var18Lifetime1].textComponent.field_pb = 11;
+                  pu.field_k[var17_intLifetime4][var18Lifetime1].textComponent.textLineSpacing = 11;
                 }
               }
             }

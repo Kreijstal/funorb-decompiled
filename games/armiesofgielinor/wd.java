@@ -251,7 +251,7 @@ final class wd {
                   }
                 }
                 if (UpkeepEvent.field_z.pressedButton != 0 &&
-                  UpkeepEvent.field_z.field_bb < var9 &&
+                  UpkeepEvent.field_z.dragGrabX < var9 &&
                   !NodeIterator.field_a) {
                   np.k(92);
                 }

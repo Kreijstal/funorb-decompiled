@@ -245,11 +245,11 @@ final class TurnEffectEvent extends GameEvent {
             if (vi.field_d) {
               var5 = ml.field_Lb;
               if (var6 != 0) {
-                var5 = ll.field_Tb;
+                var5 = VerticalScrollbar.field_Tb;
                 var5 = dc.field_l;
               }
             } else {
-              var5 = ll.field_Tb;
+              var5 = VerticalScrollbar.field_Tb;
               if (var6 != 0) {
                 var5 = dc.field_l;
               }
@@ -258,10 +258,10 @@ final class TurnEffectEvent extends GameEvent {
             var5 = dc.field_l;
           }
           fs.a(MeshObject.field_d, (String) null, var5, 112, 0);
-          UpkeepEvent.field_z.field_W = (8355711 & SpellConfirmationDialog.field_i.field_W >> 1) - (MeshObject.field_d >> 1 & 8355711) + MeshObject.field_d;
+          UpkeepEvent.field_z.matchedButtonTextColour = (8355711 & SpellConfirmationDialog.field_i.matchedButtonTextColour >> 1) - (MeshObject.field_d >> 1 & 8355711) + MeshObject.field_d;
           jl.field_b = UpkeepEvent.field_z;
-          UpkeepEvent.field_z.field_T = (8355711 & SpellConfirmationDialog.field_i.field_T >> 1) + (MeshObject.field_d - ((MeshObject.field_d & 16711422) >> 1));
-          UpkeepEvent.field_z.field_wb = -((16711423 & MeshObject.field_d) >> 1) + MeshObject.field_d + ((SpellConfirmationDialog.field_i.field_wb & 16711423) >> 1);
+          UpkeepEvent.field_z.heldPressTextColour = (8355711 & SpellConfirmationDialog.field_i.heldPressTextColour >> 1) + (MeshObject.field_d - ((MeshObject.field_d & 16711422) >> 1));
+          UpkeepEvent.field_z.selectedTextColour = -((16711423 & MeshObject.field_d) >> 1) + MeshObject.field_d + ((SpellConfirmationDialog.field_i.selectedTextColour & 16711423) >> 1);
           ArchiveProvider.field_d = rb.field_b;
           UnitCycler.field_g = new ClientUiComponent(0L, param2);
           sb.field_i = new ClientUiComponent(0L, param4);

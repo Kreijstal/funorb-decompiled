@@ -133,7 +133,7 @@ final class hk extends ClientUiComponent {
           this.field_Kb.setBounds(15, -20500, 15, 5, -20 + var17.width);
           var8.setBounds(-var17.height + this.height, -20500, this.width, var17.height, 0);
           var9.setBounds(15, -20500, this.width, 20, 0);
-          var8.field_G = tq.a(11579568, false, var8.height, 2105376, 3, 8421504);
+          var8.skinSprites = tq.a(11579568, false, var8.height, 2105376, 3, 8421504);
           var17.addChild(this.field_Kb, 64);
           var8.addChild(var9, 111);
           this.addChild(var17, 98);

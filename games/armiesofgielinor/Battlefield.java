@@ -2312,7 +2312,7 @@ final class Battlefield {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var4 = null;
         try {
-          param2.a(new String[]{"unit type: ", dn.unitDisplayNames[param1.unitType].toLowerCase(), " at ", TutorialController.formatCoordinatePair(param1.tileX, 0, param1.tileY)}, (byte) -120);
+          param2.a(new String[]{"unit type: ", ScrollContainer.unitDisplayNames[param1.unitType].toLowerCase(), " at ", TutorialController.formatCoordinatePair(param1.tileX, 0, param1.tileY)}, (byte) -120);
           param2.a(0, 2);
           param2.a(new String[]{"owner: ", this.e(param1.ownerPlayer, -1)}, (byte) -120);
           if (param1.poisoned) {

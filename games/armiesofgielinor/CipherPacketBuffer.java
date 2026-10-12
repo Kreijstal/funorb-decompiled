@@ -7,7 +7,7 @@ final class CipherPacketBuffer extends PacketBuffer {
     static byte[] field_A;
     private int writeBitsRemaining;
     static BitmapFont field_t;
-    static dn field_x;
+    static ScrollContainer field_x;
     private IsaacRandom opcodeCipher;
     static Battlefield currentBattlefield;
 

@@ -213,7 +213,7 @@ final class kd extends tj implements nq, he, mf {
         var3 = var3 + (this.a(false, 170, this.field_H, TrianglePulse.field_j, 20, "", var3) + 5);
         var3 = var3 + this.a(jj.field_h, var3, 170, (byte) 18, this.field_V);
         var3 = var3 + (this.a(TurnEffectEvent.field_B, this.field_K, 170, tf.field_m, 210, var3) + 5);
-        var3 = var3 + (5 + this.a(dn.field_Ob, this.field_O, 170, fq.field_k, 210, var3));
+        var3 = var3 + (5 + this.a(ScrollContainer.field_Ob, this.field_O, 170, fq.field_k, 210, var3));
         var3 = var3 + this.a(var3, this.field_N, 170, field_S, 27270);
         ta var4 = new ta(46, var3, this.width - 90, 25, this.field_ab, true, this.width - 120, 5, gl.field_e, 11579568, IterableDualNodeDeque.field_c);
         this.a((byte) 10, (Widget) (var4));

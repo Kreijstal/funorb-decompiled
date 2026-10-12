@@ -774,7 +774,7 @@ final class AiPlanner extends IntrusiveNode implements UnitObserver {
         var6 = bw.unitDefinitions[unitType][0];
         var4 = var4 + this.weights[43] * (this.field_K[8][tileIndex] * (float)fk.matchupDamagePercent[var6][0]);
         if (var5 != 0) {
-          System.out.println("Analyzing " + dn.unitDisplayNames[unitType] + " base score " + var4);
+          System.out.println("Analyzing " + ScrollContainer.unitDisplayNames[unitType] + " base score " + var4);
         }
         var7 = 0.0f;
         var8 = 0.0f;
@@ -803,7 +803,7 @@ final class AiPlanner extends IntrusiveNode implements UnitObserver {
         }
         var4 = var4 - var8 / var10;
         if (var5 != 0) {
-          System.out.println("Damage-wise: " + dn.unitDisplayNames[unitType] + " score " + var4);
+          System.out.println("Damage-wise: " + ScrollContainer.unitDisplayNames[unitType] + " score " + var4);
         }
         return var4;
     }

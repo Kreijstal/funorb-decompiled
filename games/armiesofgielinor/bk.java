@@ -85,7 +85,7 @@ final class bk {
         }
     }
 
-    final static void a(boolean param0, ClientUiComponent param1, ClientUiComponent param2, BitmapFont param3, ClientUiComponent param4, int param5, ClientUiComponent param6, ClientUiComponent param7, ClientUiComponent param8, ll param9, ClientUiComponent param10, ClientUiComponent param11) {
+    final static void a(boolean param0, ClientUiComponent param1, ClientUiComponent param2, BitmapFont param3, ClientUiComponent param4, int param5, ClientUiComponent param6, ClientUiComponent param7, ClientUiComponent param8, VerticalScrollbar param9, ClientUiComponent param10, ClientUiComponent param11) {
         String stackIn_13_0 = null;
         int stackIn_28_0 = 0;
         RuntimeException stackIn_38_0 = null;
@@ -153,16 +153,16 @@ final class bk {
           CombatEvent.field_I.addChild(mp.field_Qb, 55);
           var18 = new ClientUiComponent(0L, (ClientUiComponent) null);
           var18.children = new NodeDeque();
-          vq.field_a = new dn(0L, var18, param1, param9);
+          vq.field_a = new ScrollContainer(0L, var18, param1, param9);
           mp.field_Qb.addChild(vq.field_a, 126);
           we.field_f = new ClientUiComponent(0L, param6);
           mp.field_Qb.addChild(we.field_f, 110);
           UpkeepEvent.field_z = new ClientUiComponent(0L, param2);
           UpkeepEvent.field_z.font = IntrusiveNode.field_e;
           we.field_f.addChild(UpkeepEvent.field_z, 82);
-          we.field_f.useParentClipForDescendants(-10027);
+          we.field_f.inheritVisualStateForDescendants(-10027);
           rb.field_b = new ClientUiComponent(0L, (ClientUiComponent) null);
-          rb.field_b.field_G = var16;
+          rb.field_b.skinSprites = var16;
           we.field_f.addChild(rb.field_b, 99);
           jj.field_i = new ClientUiComponent[5];
           ResourceProtocolClient.field_j = new ClientUiComponent[5];
@@ -200,7 +200,7 @@ final class bk {
                 gt.field_b[var19].addChild(jj.field_i[var19], 107);
                 gt.field_b[var19].addChild(we.field_g[var19], 45);
                 gt.field_b[var19].addChild(ResourceProtocolClient.field_j[var19], 85);
-                gt.field_b[var19].useParentClipForDescendants(-10027);
+                gt.field_b[var19].inheritVisualStateForDescendants(-10027);
                 CombatEvent.field_I.addChild(gt.field_b[var19], 121);
                 se.field_d = se.field_d + 1;
               }
@@ -339,7 +339,7 @@ final class bk {
         }
     }
 
-    final static void a(boolean param0, int param1, int param2, int param3, of param4, dn param5, int param6) {
+    final static void a(boolean param0, int param1, int param2, int param3, of param4, ScrollContainer param5, int param6) {
         tg var7 = null;
         int var8 = 0;
         int var9 = 0;
@@ -358,7 +358,7 @@ final class bk {
           tn.field_Z.a((int[]) null, 7, 0);
           tn.field_Z.b((byte) 44);
           if (param0) {
-            bk.a(true, (ClientUiComponent) null, (ClientUiComponent) null, (BitmapFont) null, (ClientUiComponent) null, 86, (ClientUiComponent) null, (ClientUiComponent) null, (ClientUiComponent) null, (ll) null, (ClientUiComponent) null, (ClientUiComponent) null);
+            bk.a(true, (ClientUiComponent) null, (ClientUiComponent) null, (BitmapFont) null, (ClientUiComponent) null, 86, (ClientUiComponent) null, (ClientUiComponent) null, (ClientUiComponent) null, (VerticalScrollbar) null, (ClientUiComponent) null, (ClientUiComponent) null);
           }
           var7 = tn.field_Z;
           var8 = param2;

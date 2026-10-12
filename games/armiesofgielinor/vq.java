@@ -4,7 +4,7 @@
 final class vq {
     static int field_d;
     static hd field_c;
-    static dn field_a;
+    static ScrollContainer field_a;
     static String field_g;
     static String field_f;
     static String field_e;

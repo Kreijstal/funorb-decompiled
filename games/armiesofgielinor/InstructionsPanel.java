@@ -651,7 +651,7 @@ final class InstructionsPanel {
         }
         try {
           SoftwareRaster.b(5, 25, 30, 30, 0, 192);
-          en.field_E.b(dn.unitDisplayNames[param5.unitType], 10, 17, op.field_c[0][param5.ownerPlayer], -1);
+          en.field_E.b(ScrollContainer.unitDisplayNames[param5.unitType], 10, 17, op.field_c[0][param5.ownerPlayer], -1);
           en.field_E.a(param5.bonusStrength + param5.strength + "/" + param5.maximumStrength, 126, 18, op.field_c[0][param5.ownerPlayer], -1);
           if (param5.ownerPlayer == param2) {
             SoftwareRaster.b(99, 25, 30, 30, 0, 128);

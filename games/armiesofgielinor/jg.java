@@ -36,7 +36,7 @@ final class jg extends IntrusiveNode {
     final static void a(byte param0) {
         if (BattleTutorial.field_h) {
           SoftwareRaster.d(SoftwareRaster.clipLeft, SoftwareRaster.clipTop, SoftwareRaster.clipRight - SoftwareRaster.clipLeft, SoftwareRaster.clipBottom - SoftwareRaster.clipTop);
-          OwnerChangeEvent.field_E.b(false, 20);
+          OwnerChangeEvent.field_E.draw(false, 20);
         }
         if (param0 != 102) {
           jg.a(-122, true, false, -112, 41, -27, 39);
@@ -55,7 +55,7 @@ final class jg extends IntrusiveNode {
         StringBuilder discarded$2 = null;
         StringBuilder discarded$3 = null;
         StringBuilder discarded$4 = null;
-        dn stackIn_3_0;
+        ScrollContainer stackIn_3_0;
         boolean stackIn_3_1;
         int stackIn_3_2;
         int stackIn_3_3;
@@ -158,8 +158,8 @@ final class jg extends IntrusiveNode {
           stackIn_3_2 = param3 * (8 + 4 * jn.field_d);
           stackIn_3_3 = jn.field_d * 2 + 4;
           stackIn_4_4 = (CipherPacketBuffer.field_x == PointerInputHandler.field_b);
-          var7_int = ((dn) (Object) stackIn_3_0).a(stackIn_3_1, stackIn_3_2, stackIn_3_3, stackIn_4_4, param0, 2) ? 1 : 0;
-          var8 = CipherPacketBuffer.field_x.field_Jb.children;
+          var7_int = ((ScrollContainer) (Object) stackIn_3_0).updateContentLayout(stackIn_3_1, stackIn_3_2, stackIn_3_3, stackIn_4_4, param0, 2) ? 1 : 0;
+          var8 = CipherPacketBuffer.field_x.content.children;
           var9 = vi.monotonicMillis(-118);
           var11 = null;
           var12 = (au) (var8.first((byte) 120));
@@ -174,10 +174,10 @@ final class jg extends IntrusiveNode {
               var12.addChild(var12.field_lc, 102);
               var12.field_cc = new ClientUiComponent(0L, ws.field_P);
               var12.addChild(var12.field_cc, 59);
-              var12.field_cc.field_O = 0;
+              var12.field_cc.textHorizontalPadding = 0;
               var12.field_hc = new ClientUiComponent(0L, ws.field_P);
               var12.addChild(var12.field_hc, 61);
-              var12.field_hc.field_O = 0;
+              var12.field_hc.textHorizontalPadding = 0;
               var12.field_Zb = new ClientUiComponent(0L, IsaacRandom.field_i);
               var12.addChild(var12.field_Zb, 78);
               var12.field_Zb.horizontalAlignment = 2;
@@ -251,7 +251,7 @@ final class jg extends IntrusiveNode {
               var12.addChild(var12.field_sc, param0 ^ 47);
               var12.field_Wb = new ClientUiComponent(0L, eq.field_h);
               var12.addChild(var12.field_Wb, 51);
-              var12.useParentClipForDescendants(param0 ^ -10027);
+              var12.inheritVisualStateForDescendants(param0 ^ -10027);
               var12.field_Yb = new ClientUiComponent(0L, QuickChatPhraseRepository.field_d);
               var12.addChild(var12.field_Yb, 89);
               var13 = 1;
@@ -328,7 +328,7 @@ final class jg extends IntrusiveNode {
             var30 = var12.field_Wb;
             var12.field_Wb.height = 0;
             var30.width = 0;
-            var12.width = CipherPacketBuffer.field_x.field_Jb.width;
+            var12.width = CipherPacketBuffer.field_x.content.width;
             var31 = 0;
             var32 = var12.field_rc;
             if (!var12.k(param0 ^ -7)) {
@@ -486,7 +486,7 @@ final class jg extends IntrusiveNode {
                 }
                 var38 = var37.toString();
                 var12.field_Pb.text = var38;
-                var39Lifetime1 = var12.field_Pb.font.c(var38, var12.width - var12.field_Pb.field_O * 2);
+                var39Lifetime1 = var12.field_Pb.font.c(var38, var12.width - var12.field_Pb.textHorizontalPadding * 2);
                 var12.field_Pb.setBounds(var39Lifetime1 * jn.field_d, -20500, var12.width, var31, 0);
                 var31 = var31 + jn.field_d * var39Lifetime1;
               }
@@ -505,7 +505,7 @@ final class jg extends IntrusiveNode {
             if (var33 != null) {
               var34_intLifetime1 = var12.field_Wb.font.c(var33, var12.width - mi.field_l - mi.field_l);
               var12.field_Wb.text = var33;
-              var12.field_Wb.opacity = var12.field_Lb * 256 / qd.field_K;
+              var12.field_Wb.textOpacity = var12.field_Lb * 256 / qd.field_K;
               var12.field_Wb.setBounds(jn.field_d * var34_intLifetime1, -20500, var12.width - mi.field_l * 2, var31, mi.field_l);
               var31 = var31 + var34_intLifetime1 * jn.field_d;
             }
@@ -513,7 +513,7 @@ final class jg extends IntrusiveNode {
               var12.pendingHeightDelta = var31 - var12.height;
             }
             if (var13 != 0) {
-              CipherPacketBuffer.field_x.field_Jb.a(var12, true, 2, (ClientUiComponent) (var11));
+              CipherPacketBuffer.field_x.content.positionAfter(var12, true, 2, (ClientUiComponent) (var11));
             }
             for (var34_intLifetime2 = 0; var34_intLifetime2 < tq.field_b; var34_intLifetime2++) {
               if (var12.field_Qb[var34_intLifetime2].heldButtonMatches) {

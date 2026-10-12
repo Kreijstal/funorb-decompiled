@@ -2,73 +2,73 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 class ClientUiComponent extends ClientUiNode {
-    private boolean field_Db;
+    private boolean selectWhenFocused;
     int width;
-    int field_L;
-    private int field_ib;
+    int disabledTextColour;
+    private int matchedButtonOffsetX;
     static ClientUiComponent field_Q;
-    boolean field_ub;
-    RgbSprite[] field_A;
+    boolean drawSkinInParentBounds;
+    RgbSprite[] disabledSkinSprites;
     NodeDeque children;
-    RgbSprite[] field_mb;
-    int field_R;
-    int field_N;
+    RgbSprite[] matchedButtonSkinSprites;
+    int heldPressOffsetY;
+    int textColour;
     boolean field_M;
     int heldPressButton;
-    RgbSprite[] field_G;
+    RgbSprite[] skinSprites;
     boolean heldButtonMatches;
-    int field_O;
-    int field_W;
-    private int field_E;
-    private boolean inheritParentClip;
+    int textHorizontalPadding;
+    int matchedButtonTextColour;
+    private int matchedButtonOffsetY;
+    private boolean inheritParentVisualState;
     String text;
     RgbSprite sprite;
-    int field_tb;
+    int selectedOffsetY;
     static String field_zb;
-    String field_I;
+    String blinkTextSuffix;
     int screenX;
     int horizontalAlignment;
     boolean draggable;
-    int field_Bb;
-    int field_pb;
-    RgbSprite[] field_H;
+    int heldPressOffsetX;
+    int textLineSpacing;
+    RgbSprite[] selectedSkinSprites;
     int pendingHeightDelta;
-    int field_F;
+    int contentOffsetX;
     private int pendingXDelta;
-    int opacity;
+    int textOpacity;
     boolean inputEnabled;
     boolean selected;
-    int field_bb;
-    int field_B;
-    int field_T;
+    int dragGrabX;
+    int selectedOffsetX;
+    int heldPressTextColour;
     int pressedButton;
     int x;
     int height;
-    RgbSprite field_P;
-    int field_z;
+    RgbSprite selectedSprite;
+    int contentOffsetY;
     int pendingYDelta;
     static String field_lb;
     private int pendingWidthDelta;
     int screenY;
     boolean hovered;
-    int field_wb;
-    boolean field_Y;
+    int selectedTextColour;
+    boolean focused;
     int verticalAlignment;
-    private int field_Ab;
-    RgbSprite[] field_U;
+    private int dragGrabY;
+    RgbSprite[] heldPressSkinSprites;
     static int[][] field_K;
-    RgbSprite field_sb;
-    private int field_kb;
-    RgbSprite field_vb;
+    RgbSprite disabledSprite;
+    private int spriteOpacity;
+    RgbSprite matchedButtonSprite;
     int y;
-    RgbSprite field_qb;
+    RgbSprite heldPressSprite;
     BitmapFont font;
 
-    final void b(boolean param0, int param1) {
-        this.a((byte) -26, SoftwareRaster.height, param0, SoftwareRaster.width, 0, false, false, false, 0, true, false);
-        if (param1 != 20) {
+    final void draw(boolean blinkOn, int obfuscationGuard) {
+        this.drawTree((byte) -26, SoftwareRaster.height, blinkOn, SoftwareRaster.width, 0, false, false, false, 0, true, false);
+        if (obfuscationGuard != 20) {
           ClientUiComponent var4 = (ClientUiComponent) null;
-          this.a((ClientUiComponent) null, false, 64, (ClientUiComponent) null);
+          this.positionAfter((ClientUiComponent) null, false, 64, (ClientUiComponent) null);
         }
     }
 
@@ -156,50 +156,50 @@ class ClientUiComponent extends ClientUiNode {
         RuntimeException var3 = null;
         try {
           if (style != null) {
-            if (style.field_qb != null) {
-              this.field_qb = style.field_qb;
+            if (style.heldPressSprite != null) {
+              this.heldPressSprite = style.heldPressSprite;
             }
-            if (style.field_N != 0) {
-              this.field_N = style.field_N;
+            if (style.textColour != 0) {
+              this.textColour = style.textColour;
             }
-            if (style.field_ub) {
-              this.field_ub = style.field_ub;
+            if (style.drawSkinInParentBounds) {
+              this.drawSkinInParentBounds = style.drawSkinInParentBounds;
             }
-            if (style.field_sb != null) {
-              this.field_sb = style.field_sb;
+            if (style.disabledSprite != null) {
+              this.disabledSprite = style.disabledSprite;
             }
-            if (style.field_O != 0) {
-              this.field_O = style.field_O;
+            if (style.textHorizontalPadding != 0) {
+              this.textHorizontalPadding = style.textHorizontalPadding;
             }
-            if (style.inheritParentClip) {
-              this.inheritParentClip = style.inheritParentClip;
+            if (style.inheritParentVisualState) {
+              this.inheritParentVisualState = style.inheritParentVisualState;
             }
-            if (null != style.field_mb) {
-              this.field_mb = style.field_mb;
+            if (null != style.matchedButtonSkinSprites) {
+              this.matchedButtonSkinSprites = style.matchedButtonSkinSprites;
             }
             if (style.selected) {
               this.selected = style.selected;
             }
-            if (style.field_A != null) {
-              this.field_A = style.field_A;
+            if (style.disabledSkinSprites != null) {
+              this.disabledSkinSprites = style.disabledSkinSprites;
             }
-            if (style.opacity != 256) {
-              this.opacity = style.opacity;
+            if (style.textOpacity != 256) {
+              this.textOpacity = style.textOpacity;
             }
             if (style.field_M) {
               this.field_M = style.field_M;
             }
-            if (0 != style.field_pb) {
-              this.field_pb = style.field_pb;
+            if (0 != style.textLineSpacing) {
+              this.textLineSpacing = style.textLineSpacing;
             }
-            if (null != style.field_G) {
-              this.field_G = style.field_G;
+            if (null != style.skinSprites) {
+              this.skinSprites = style.skinSprites;
             }
-            if (style.field_I != null) {
-              this.field_I = style.field_I;
+            if (style.blinkTextSuffix != null) {
+              this.blinkTextSuffix = style.blinkTextSuffix;
             }
-            if (style.field_P != null) {
-              this.field_P = style.field_P;
+            if (style.selectedSprite != null) {
+              this.selectedSprite = style.selectedSprite;
             }
             if (null != style.font) {
               this.font = style.font;
@@ -207,11 +207,11 @@ class ClientUiComponent extends ClientUiNode {
             if (null != style.sprite) {
               this.sprite = style.sprite;
             }
-            if (style.field_T >= 0) {
-              this.field_T = style.field_T;
+            if (style.heldPressTextColour >= 0) {
+              this.heldPressTextColour = style.heldPressTextColour;
             }
-            if (style.field_wb >= 0) {
-              this.field_wb = style.field_wb;
+            if (style.selectedTextColour >= 0) {
+              this.selectedTextColour = style.selectedTextColour;
             }
             if (!style.inputEnabled) {
               this.inputEnabled = style.inputEnabled;
@@ -219,56 +219,56 @@ class ClientUiComponent extends ClientUiNode {
             if (null != style.text) {
               this.text = style.text;
             }
-            if (style.field_W >= 0) {
-              this.field_W = style.field_W;
+            if (style.matchedButtonTextColour >= 0) {
+              this.matchedButtonTextColour = style.matchedButtonTextColour;
             }
-            if (0 <= style.field_L) {
-              this.field_L = style.field_L;
+            if (0 <= style.disabledTextColour) {
+              this.disabledTextColour = style.disabledTextColour;
             }
-            if (style.field_H != null) {
-              this.field_H = style.field_H;
+            if (style.selectedSkinSprites != null) {
+              this.selectedSkinSprites = style.selectedSkinSprites;
             }
-            if (style.field_U != null) {
-              this.field_U = style.field_U;
+            if (style.heldPressSkinSprites != null) {
+              this.heldPressSkinSprites = style.heldPressSkinSprites;
             }
-            if (null != style.field_vb) {
-              this.field_vb = style.field_vb;
+            if (null != style.matchedButtonSprite) {
+              this.matchedButtonSprite = style.matchedButtonSprite;
             }
-            if (-2147483648 != style.field_B) {
-              this.field_B = style.field_B;
+            if (-2147483648 != style.selectedOffsetX) {
+              this.selectedOffsetX = style.selectedOffsetX;
             }
-            stackIn_72_1 = (this.field_M) && (style.field_Y);
-            this.field_Y = stackIn_72_1;
-            if (style.field_R != -2147483648) {
-              this.field_R = style.field_R;
+            stackIn_72_1 = (this.field_M) && (style.focused);
+            this.focused = stackIn_72_1;
+            if (style.heldPressOffsetY != -2147483648) {
+              this.heldPressOffsetY = style.heldPressOffsetY;
             }
             if (style.draggable) {
               this.draggable = style.draggable;
             }
-            if (style.field_ib != -2147483648) {
-              this.field_ib = style.field_ib;
+            if (style.matchedButtonOffsetX != -2147483648) {
+              this.matchedButtonOffsetX = style.matchedButtonOffsetX;
             }
-            this.field_Db = style.field_Db;
-            if (style.field_z != 0) {
-              this.field_z = style.field_z;
+            this.selectWhenFocused = style.selectWhenFocused;
+            if (style.contentOffsetY != 0) {
+              this.contentOffsetY = style.contentOffsetY;
             }
             if (0 != style.verticalAlignment) {
               this.verticalAlignment = style.verticalAlignment;
             }
-            if (style.field_E != -2147483648) {
-              this.field_E = style.field_E;
+            if (style.matchedButtonOffsetY != -2147483648) {
+              this.matchedButtonOffsetY = style.matchedButtonOffsetY;
             }
-            if (style.field_Bb != -2147483648) {
-              this.field_Bb = style.field_Bb;
+            if (style.heldPressOffsetX != -2147483648) {
+              this.heldPressOffsetX = style.heldPressOffsetX;
             }
             if (style.horizontalAlignment != 0) {
               this.horizontalAlignment = style.horizontalAlignment;
             }
-            if (style.field_tb != -2147483648) {
-              this.field_tb = style.field_tb;
+            if (style.selectedOffsetY != -2147483648) {
+              this.selectedOffsetY = style.selectedOffsetY;
             }
-            if (style.field_F != 0) {
-              this.field_F = style.field_F;
+            if (style.contentOffsetX != 0) {
+              this.contentOffsetX = style.contentOffsetX;
             }
           }
           if (obfuscationGuard != 0) {
@@ -318,106 +318,106 @@ class ClientUiComponent extends ClientUiNode {
         }
     }
 
-    final void a(boolean param0, int param1, int param2, int param3) {
-        ClientUiComponent var10_ref_je = null;
-        int var9 = 0;
-        int var11 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
-        int var9Lifetime1;
-        if (param3 != -1379) {
+    final void layoutVerticalContent(boolean preserveChildLayout, int viewportHeight, int childSpacing, int obfuscationGuard) {
+        ClientUiComponent child = null;
+        int stackEndY = 0;
+        int obfuscationControl = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        int maximumTargetScroll;
+        if (obfuscationGuard != -1379) {
           return;
         }
-        int var5 = -this.y;
-        int var6 = -this.pendingYDelta + var5;
-        int var7 = this.height;
-        int var8 = this.pendingHeightDelta + var7;
-        if (!param0) {
-          var9 = 0;
-          var10_ref_je = (ClientUiComponent) (this.children.first((byte) 124));
-          while (var10_ref_je != null) {
-            var10_ref_je.pendingYDelta = -var10_ref_je.y + var9;
-            var9 = var9 + (param2 + (var10_ref_je.pendingHeightDelta + var10_ref_je.height));
-            var10_ref_je = (ClientUiComponent) (this.children.next((byte) 123));
+        int currentScroll = -this.y;
+        int targetScroll = -this.pendingYDelta + currentScroll;
+        int currentHeight = this.height;
+        int targetHeight = this.pendingHeightDelta + currentHeight;
+        if (!preserveChildLayout) {
+          stackEndY = 0;
+          child = (ClientUiComponent) (this.children.first((byte) 124));
+          while (child != null) {
+            child.pendingYDelta = -child.y + stackEndY;
+            stackEndY = stackEndY + (childSpacing + (child.pendingHeightDelta + child.height));
+            child = (ClientUiComponent) (this.children.next((byte) 123));
           }
-          var8 = var9 - param2;
+          targetHeight = stackEndY - childSpacing;
         }
-        var9Lifetime1 = -param1 + var8;
-        if (var9Lifetime1 < var6) {
-          var6 = var9Lifetime1;
+        maximumTargetScroll = -viewportHeight + targetHeight;
+        if (maximumTargetScroll < targetScroll) {
+          targetScroll = maximumTargetScroll;
         }
-        if (var6 < 0) {
-          var6 = 0;
+        if (targetScroll < 0) {
+          targetScroll = 0;
         }
-        int var10 = var7 - param1;
-        if (var10 < var5) {
-          var5 = var10;
+        int maximumCurrentScroll = currentHeight - viewportHeight;
+        if (maximumCurrentScroll < currentScroll) {
+          currentScroll = maximumCurrentScroll;
         }
-        if (var5 < 0) {
-          var5 = 0;
+        if (currentScroll < 0) {
+          currentScroll = 0;
         }
-        this.height = var7;
-        this.pendingYDelta = -var6 + var5;
-        this.pendingHeightDelta = -var7 + var8;
-        this.y = -var5;
+        this.height = currentHeight;
+        this.pendingYDelta = -targetScroll + currentScroll;
+        this.pendingHeightDelta = -currentHeight + targetHeight;
+        this.y = -currentScroll;
     }
 
     ClientUiComponent(long key, ClientUiComponent style) {
         this(key, style, 0, 0, 0, 0, (String) null);
     }
 
-    private final void a(boolean param0, boolean param1, int param2, int param3, int param4, int param5) {
-        boolean stackIn_30_1 = false;
-        boolean stackIn_38_1 = false;
-        int var7;
-        int var8;
-        int var9;
-        int var10;
-        int var11;
-        int var12;
-        ClientUiComponent var13;
-        int var14;
-        int var7Lifetime1;
-        int var7Lifetime2;
-        int var7Lifetime3;
-        var14 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+    private final void updateInputTree(boolean inputAllowed, boolean capturePress, int parentY, int parentHeight, int parentWidth, int parentX) {
+        boolean pointerInsideClip = false;
+        boolean buttonMatches = false;
+        int xStep;
+        int savedClipLeft;
+        int savedClipTop;
+        int savedClipRight;
+        int savedClipBottom;
+        int pressCaptured;
+        ClientUiComponent child;
+        int obfuscationControl;
+        int yStep;
+        int widthStep;
+        int heightStep;
+        obfuscationControl = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         if (this.pendingXDelta > 0) {
-          var7 = -(-this.pendingXDelta >> 2);
+          xStep = -(-this.pendingXDelta >> 2);
         } else {
-          var7 = this.pendingXDelta >> 2;
+          xStep = this.pendingXDelta >> 2;
         }
-        this.pendingXDelta = this.pendingXDelta - var7;
-        this.x = this.x + var7;
+        this.pendingXDelta = this.pendingXDelta - xStep;
+        this.x = this.x + xStep;
         if (0 < this.pendingYDelta) {
-          var7Lifetime1 = -(-this.pendingYDelta >> 2);
+          yStep = -(-this.pendingYDelta >> 2);
         } else {
-          var7Lifetime1 = this.pendingYDelta >> 2;
+          yStep = this.pendingYDelta >> 2;
         }
-        this.y = this.y + var7Lifetime1;
-        this.pendingYDelta = this.pendingYDelta - var7Lifetime1;
+        this.y = this.y + yStep;
+        this.pendingYDelta = this.pendingYDelta - yStep;
         if (this.pendingWidthDelta > 0) {
-          var7Lifetime2 = -(-this.pendingWidthDelta >> 2);
+          widthStep = -(-this.pendingWidthDelta >> 2);
         } else {
-          var7Lifetime2 = this.pendingWidthDelta >> 2;
+          widthStep = this.pendingWidthDelta >> 2;
         }
-        this.width = this.width + var7Lifetime2;
-        this.pendingWidthDelta = this.pendingWidthDelta - var7Lifetime2;
+        this.width = this.width + widthStep;
+        this.pendingWidthDelta = this.pendingWidthDelta - widthStep;
         if (this.pendingHeightDelta > 0) {
-          var7Lifetime3 = -(-this.pendingHeightDelta >> 2);
+          heightStep = -(-this.pendingHeightDelta >> 2);
         } else {
-          var7Lifetime3 = this.pendingHeightDelta >> 2;
+          heightStep = this.pendingHeightDelta >> 2;
         }
-        this.screenX = param5 + this.x;
-        param0 = param0 & this.inputEnabled;
-        this.height = this.height + var7Lifetime3;
-        this.pendingHeightDelta = this.pendingHeightDelta - var7Lifetime3;
-        this.screenY = this.y + param2;
-        var8 = SoftwareRaster.clipLeft;
-        var9 = SoftwareRaster.clipTop;
-        var10 = SoftwareRaster.clipRight;
-        var11 = SoftwareRaster.clipBottom;
+        this.screenX = parentX + this.x;
+        inputAllowed = inputAllowed & this.inputEnabled;
+        this.height = this.height + heightStep;
+        this.pendingHeightDelta = this.pendingHeightDelta - heightStep;
+        this.screenY = this.y + parentY;
+        savedClipLeft = SoftwareRaster.clipLeft;
+        savedClipTop = SoftwareRaster.clipTop;
+        savedClipRight = SoftwareRaster.clipRight;
+        savedClipBottom = SoftwareRaster.clipBottom;
         SoftwareRaster.b(this.screenX, this.screenY, this.screenX + this.width, this.screenY + this.height);
-        var12 = param1 ? 1 : 0;
+        pressCaptured = capturePress ? 1 : 0;
         if (!SectorCacheStore.field_e &&
-          param0 &&
+          inputAllowed &&
           DeployEvent.pointerPressButton != 0 &&
           SoftwareRaster.clipLeft <= BattleTutorial.pointerPressX &&
           BattleTutorial.pointerPressX < SoftwareRaster.clipRight &&
@@ -425,60 +425,60 @@ class ClientUiComponent extends ClientUiNode {
           TeleportAction.pointerPressY < SoftwareRaster.clipBottom) {
           this.pressedButton = DeployEvent.pointerPressButton;
           this.heldPressButton = DeployEvent.pointerPressButton;
-          this.field_bb = -this.screenX + BattleTutorial.pointerPressX;
-          var12 = 1;
-          this.field_Ab = -this.screenY + TeleportAction.pointerPressY;
+          this.dragGrabX = -this.screenX + BattleTutorial.pointerPressX;
+          pressCaptured = 1;
+          this.dragGrabY = -this.screenY + TeleportAction.pointerPressY;
         } else {
           this.pressedButton = 0;
           if (DeployEvent.pointerPressButton != 0) {
             this.heldPressButton = 0;
           }
         }
-        stackIn_30_1 = (!QuickChatCategoryRepository.field_f) && (SoftwareRaster.clipLeft <= AiPlanningStrategy.pointerX) && (SoftwareRaster.clipRight > AiPlanningStrategy.pointerX) && (SoftwareRaster.clipTop <= ko.pointerY) && (SoftwareRaster.clipBottom > ko.pointerY);
-        this.hovered = stackIn_30_1;
+        pointerInsideClip = (!QuickChatCategoryRepository.field_f) && (SoftwareRaster.clipLeft <= AiPlanningStrategy.pointerX) && (SoftwareRaster.clipRight > AiPlanningStrategy.pointerX) && (SoftwareRaster.clipTop <= ko.pointerY) && (SoftwareRaster.clipBottom > ko.pointerY);
+        this.hovered = pointerInsideClip;
         if (ro.pointerButton == 0) {
           this.heldPressButton = 0;
         }
-        stackIn_38_1 = (this.hovered) && (ro.pointerButton == this.heldPressButton) && (param0);
-        this.heldButtonMatches = stackIn_38_1;
+        buttonMatches = (this.hovered) && (ro.pointerButton == this.heldPressButton) && (inputAllowed);
+        this.heldButtonMatches = buttonMatches;
         if (null != this.children) {
-          var13 = (ClientUiComponent) (this.children.last((byte) -82));
-          while (var13 != null) {
-            var13.a(param0, param1, this.screenY, this.height, this.width, this.screenX);
-            var13 = (ClientUiComponent) (this.children.previous((byte) 88));
+          child = (ClientUiComponent) (this.children.last((byte) -82));
+          while (child != null) {
+            child.updateInputTree(inputAllowed, capturePress, this.screenY, this.height, this.width, this.screenX);
+            child = (ClientUiComponent) (this.children.previous((byte) 88));
           }
         }
-        if (var12 != 0) {
+        if (pressCaptured != 0) {
           SectorCacheStore.field_e = true;
         }
         if (this.hovered) {
           QuickChatCategoryRepository.field_f = true;
         }
-        SoftwareRaster.f(var8, var9, var10, var11);
+        SoftwareRaster.f(savedClipLeft, savedClipTop, savedClipRight, savedClipBottom);
         if (this.heldPressButton != 0 &&
           this.draggable) {
-          this.x = -this.field_bb + AiPlanningStrategy.pointerX - param5;
-          this.y = -this.field_Ab + ko.pointerY - param2;
+          this.x = -this.dragGrabX + AiPlanningStrategy.pointerX - parentX;
+          this.y = -this.dragGrabY + ko.pointerY - parentY;
           if (0 > this.x) {
             this.x = 0;
           }
           if (this.y < 0) {
             this.y = 0;
           }
-          if (this.x > param4 - this.width) {
-            this.x = -this.width + param4;
+          if (this.x > parentWidth - this.width) {
+            this.x = -this.width + parentWidth;
           }
           this.pendingYDelta = 0;
-          if (this.y > param3 - this.height) {
-            this.y = param3 - this.height;
+          if (this.y > parentHeight - this.height) {
+            this.y = parentHeight - this.height;
           }
-          this.screenX = this.x + param5;
+          this.screenX = this.x + parentX;
           this.pendingXDelta = 0;
-          this.screenY = param2 + this.y;
+          this.screenY = parentY + this.y;
         }
     }
 
-    final void b(int param0, ClientUiComponent param1) {
+    final void setFocusedComponent(int obfuscationGuard, ClientUiComponent focusedComponent) {
         NodeIterator var3 = null;
         ClientUiComponent var4 = null;
         int var5 = 0;
@@ -490,29 +490,29 @@ class ClientUiComponent extends ClientUiNode {
         RuntimeException var3_ref = null;
         var5 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          if (param0 != 3) {
-            this.a(true, 119, -41, -35);
+          if (obfuscationGuard != 3) {
+            this.layoutVerticalContent(true, 119, -41, -35);
           }
           if (null != this.children) {
             var3 = new NodeIterator(this.children);
-            var4 = (ClientUiComponent) (var3.first(param0 + 47));
+            var4 = (ClientUiComponent) (var3.first(obfuscationGuard + 47));
             while (var4 != null) {
-              var4.b(param0 ^ 0, param1);
-              var4 = (ClientUiComponent) (var3.next(param0 + 47));
+              var4.setFocusedComponent(obfuscationGuard ^ 0, focusedComponent);
+              var4 = (ClientUiComponent) (var3.next(obfuscationGuard + 47));
             }
           }
-          stackIn_11_1 = (param1 == this);
-          this.field_Y = stackIn_11_1;
-          if (this.field_Db) {
-            this.selected = this.field_Y;
+          stackIn_11_1 = (focusedComponent == this);
+          this.focused = stackIn_11_1;
+          if (this.selectWhenFocused) {
+            this.selected = this.focused;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3_ref = decompiledCaughtException;
           stackIn_16_0 = var3_ref;
-          stackIn_16_1 = new StringBuilder().append("je.DB(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_16_1 = new StringBuilder().append("je.DB(").append(obfuscationGuard).append(',');
+          if (focusedComponent == null) {
             stackIn_17_2 = "null";
           } else {
             stackIn_17_2 = "{...}";
@@ -571,7 +571,7 @@ class ClientUiComponent extends ClientUiNode {
           }
           ((ClientUiComponent) (Object) stackIn_6_0).setBounds(stackIn_6_1, stackIn_6_2, stackIn_6_3 - stackIn_7_4, 2 + jn.field_d, 0);
           SpellCastEvent.field_D.setBounds(18, -20500, 42 + jn.field_c, 2 + jn.field_d, -40 + (eb.field_c.width - jn.field_c - 2));
-          bu.field_a.a(0, false, eb.field_c.width, 2, jn.field_c, 20 + (2 + jn.field_d), -20 + (-2 + (-jn.field_d + eb.field_c.height)));
+          bu.field_a.setLayout(0, false, eb.field_c.width, 2, jn.field_c, 20 + (2 + jn.field_d), -20 + (-2 + (-jn.field_d + eb.field_c.height)));
           mp.field_Lb.setBounds(40, -20500, lk.field_a.width, lk.field_a.height - 40, 0);
           kd.field_F.setBounds(30, -20500, pd.field_c.width, 0, 0);
           if (param0 < 13) {
@@ -677,7 +677,7 @@ class ClientUiComponent extends ClientUiNode {
           ta.field_R.setBounds(-134 + (SoftwareRaster.height - 10), -20500, 360, 10, SoftwareRaster.width - 360 >> 1);
           bk.field_f.setBounds(24, -20500, ta.field_R.width, 0, 0);
           df.field_K.setBounds(-24 + ta.field_R.height, -20500, ta.field_R.width, 24, 0);
-          df.field_K.field_G = tq.a(11579568, false, df.field_K.height, 1, 3, 8421504);
+          df.field_K.skinSprites = tq.a(11579568, false, df.field_K.height, 1, 3, 8421504);
           IconTextComponent.field_Kb.setBounds(df.field_K.height - 36, -20500, df.field_K.width - 10, 5, 5);
           dv.field_m.setBounds(24, -20500, 80, -24 + df.field_K.height - 5, (df.field_K.width - 80) / 2);
           mj.a((byte) 120);
@@ -692,21 +692,21 @@ class ClientUiComponent extends ClientUiNode {
     final void updateInput(boolean inputAllowed, boolean enableCapture) {
         SectorCacheStore.field_e = !enableCapture ? true : false;
         QuickChatCategoryRepository.field_f = !enableCapture ? true : false;
-        this.a(inputAllowed, false, 0, SoftwareRaster.height, SoftwareRaster.width, 0);
+        this.updateInputTree(inputAllowed, false, 0, SoftwareRaster.height, SoftwareRaster.width, 0);
     }
 
     ClientUiComponent(long key, ClientUiComponent style, String text) {
         this(key, style, 0, 0, 0, 0, text);
     }
 
-    final void useParentClipForDescendants(int obfuscationGuard) {
+    final void inheritVisualStateForDescendants(int obfuscationGuard) {
         ClientUiComponent var4 = null;
         int var3 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         if (null != this.children) {
           var4 = (ClientUiComponent) (this.children.last((byte) -112));
           while (var4 != null) {
-            var4.inheritParentClip = true;
-            var4.useParentClipForDescendants(-10027);
+            var4.inheritParentVisualState = true;
+            var4.inheritVisualStateForDescendants(-10027);
             var4 = (ClientUiComponent) (this.children.previous((byte) -104));
           }
         }
@@ -715,7 +715,7 @@ class ClientUiComponent extends ClientUiNode {
         }
     }
 
-    final void a(ClientUiComponent param0, boolean param1, int param2, ClientUiComponent param3) {
+    final void positionAfter(ClientUiComponent child, boolean obfuscationGuard, int spacing, ClientUiComponent previousSibling) {
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;
@@ -724,15 +724,15 @@ class ClientUiComponent extends ClientUiNode {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var5 = null;
         try {
-          if (!param1) {
+          if (!obfuscationGuard) {
             ClientUiComponent.a(-53, false);
           }
-          if (param3 == null) {
-            param0.pendingYDelta = 0;
-            param0.y = 0;
+          if (previousSibling == null) {
+            child.pendingYDelta = 0;
+            child.y = 0;
           } else {
-            param0.pendingYDelta = param3.pendingHeightDelta + param3.pendingYDelta;
-            param0.y = param3.y - (-param3.height - param2);
+            child.pendingYDelta = previousSibling.pendingHeightDelta + previousSibling.pendingYDelta;
+            child.y = previousSibling.y - (-previousSibling.height - spacing);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -740,13 +740,13 @@ class ClientUiComponent extends ClientUiNode {
           var5 = decompiledCaughtException;
           stackIn_8_0 = var5;
           stackIn_8_1 = new StringBuilder().append("je.PA(");
-          if (param0 == null) {
+          if (child == null) {
             stackIn_9_2 = "null";
           } else {
             stackIn_9_2 = "{...}";
           }
-          stackIn_11_1 = ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(',').append(param2).append(',');
-          if (param3 == null) {
+          stackIn_11_1 = ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(obfuscationGuard).append(',').append(spacing).append(',');
+          if (previousSibling == null) {
             stackIn_12_2 = "null";
           } else {
             stackIn_12_2 = "{...}";
@@ -755,7 +755,7 @@ class ClientUiComponent extends ClientUiNode {
         }
     }
 
-    private final void a(byte param0, int param1, boolean param2, int param3, int param4, boolean param5, boolean param6, boolean param7, int param8, boolean param9, boolean param10) {
+    private final void drawTree(byte obfuscationGuard, int parentHeight, boolean blinkOn, int parentWidth, int parentY, boolean inheritedHeldPress, boolean inheritedFocus, boolean inheritedSelection, int parentX, boolean inputAllowed, boolean inheritedButtonMatch) {
         boolean stackIn_5_0 = false;
         int var12;
         int var13;
@@ -777,94 +777,94 @@ class ClientUiComponent extends ClientUiNode {
         String var23Lifetime1;
         String var23Lifetime2;
         var25 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
-        this.screenX = this.x + param8;
-        this.screenY = this.y + param4;
+        this.screenX = this.x + parentX;
+        this.screenY = this.y + parentY;
         var12 = SoftwareRaster.clipLeft;
         var13 = SoftwareRaster.clipTop;
         var14 = SoftwareRaster.clipRight;
         var15 = SoftwareRaster.clipBottom;
         SoftwareRaster.b(this.screenX, this.screenY, this.width + this.screenX, this.height + this.screenY);
-        param9 = param9 & this.inputEnabled;
-        if (!this.inheritParentClip) {
-          param7 = this.selected;
-          param10 = this.heldButtonMatches;
+        inputAllowed = inputAllowed & this.inputEnabled;
+        if (!this.inheritParentVisualState) {
+          inheritedSelection = this.selected;
+          inheritedButtonMatch = this.heldButtonMatches;
           stackIn_5_0 = (0 != this.heldPressButton);
-          param5 = stackIn_5_0;
+          inheritedHeldPress = stackIn_5_0;
         }
-        if (param0 != -26) {
+        if (obfuscationGuard != -26) {
           return;
         }
-        var16 = this.field_G;
+        var16 = this.skinSprites;
         var17 = this.sprite;
-        var18 = this.field_N;
+        var18 = this.textColour;
         var19 = 0;
-        if (!param9) {
-          if (this.field_L >= 0) {
-            var18 = this.field_L;
+        if (!inputAllowed) {
+          if (this.disabledTextColour >= 0) {
+            var18 = this.disabledTextColour;
           }
-          if (this.field_sb != null) {
-            var17 = this.field_sb;
+          if (this.disabledSprite != null) {
+            var17 = this.disabledSprite;
           }
-          if (null != this.field_A) {
-            var16 = this.field_A;
+          if (null != this.disabledSkinSprites) {
+            var16 = this.disabledSkinSprites;
           }
         }
         var20 = 0;
-        if (param10) {
-          if (null != this.field_mb) {
-            var16 = this.field_mb;
+        if (inheritedButtonMatch) {
+          if (null != this.matchedButtonSkinSprites) {
+            var16 = this.matchedButtonSkinSprites;
           }
-          if (null != this.field_vb) {
-            var17 = this.field_vb;
+          if (null != this.matchedButtonSprite) {
+            var17 = this.matchedButtonSprite;
           }
-          if (-2147483648 != this.field_ib) {
-            var19 = this.field_ib;
+          if (-2147483648 != this.matchedButtonOffsetX) {
+            var19 = this.matchedButtonOffsetX;
           }
-          if (-2147483648 != this.field_E) {
-            var20 = this.field_E;
+          if (-2147483648 != this.matchedButtonOffsetY) {
+            var20 = this.matchedButtonOffsetY;
           }
-          if (this.field_W >= 0) {
-            var18 = this.field_W;
-          }
-        }
-        if (param5) {
-          if (null != this.field_qb) {
-            var17 = this.field_qb;
-          }
-          if (this.field_R != -2147483648) {
-            var20 = this.field_R;
-          }
-          if (null != this.field_U) {
-            var16 = this.field_U;
-          }
-          if (this.field_Bb != -2147483648) {
-            var19 = this.field_Bb;
-          }
-          if (this.field_T >= 0) {
-            var18 = this.field_T;
+          if (this.matchedButtonTextColour >= 0) {
+            var18 = this.matchedButtonTextColour;
           }
         }
-        if (param7) {
-          if (this.field_H != null) {
-            var16 = this.field_H;
+        if (inheritedHeldPress) {
+          if (null != this.heldPressSprite) {
+            var17 = this.heldPressSprite;
           }
-          if (this.field_B != -2147483648) {
-            var19 = this.field_B;
+          if (this.heldPressOffsetY != -2147483648) {
+            var20 = this.heldPressOffsetY;
           }
-          if (-2147483648 != this.field_tb) {
-            var20 = this.field_tb;
+          if (null != this.heldPressSkinSprites) {
+            var16 = this.heldPressSkinSprites;
           }
-          if (null != this.field_P) {
-            var17 = this.field_P;
+          if (this.heldPressOffsetX != -2147483648) {
+            var19 = this.heldPressOffsetX;
           }
-          if (this.field_wb >= 0) {
-            var18 = this.field_wb;
+          if (this.heldPressTextColour >= 0) {
+            var18 = this.heldPressTextColour;
           }
         }
-        var21 = this.field_F + var19;
-        var22 = var20 + this.field_z;
-        if (this.field_ub) {
-          i.a(var16, param1, param8, (byte) -47, param4, param3);
+        if (inheritedSelection) {
+          if (this.selectedSkinSprites != null) {
+            var16 = this.selectedSkinSprites;
+          }
+          if (this.selectedOffsetX != -2147483648) {
+            var19 = this.selectedOffsetX;
+          }
+          if (-2147483648 != this.selectedOffsetY) {
+            var20 = this.selectedOffsetY;
+          }
+          if (null != this.selectedSprite) {
+            var17 = this.selectedSprite;
+          }
+          if (this.selectedTextColour >= 0) {
+            var18 = this.selectedTextColour;
+          }
+        }
+        var21 = this.contentOffsetX + var19;
+        var22 = var20 + this.contentOffsetY;
+        if (this.drawSkinInParentBounds) {
+          i.a(var16, parentHeight, parentX, (byte) -47, parentY, parentWidth);
         } else {
           i.a(var16, this.height, this.screenX, (byte) -47, this.screenY, this.width);
         }
@@ -883,10 +883,10 @@ class ClientUiComponent extends ClientUiNode {
           if (2 == this.verticalAlignment) {
             var24 = var24 + (this.height - var17.canvasHeight);
           }
-          if (256 <= this.field_kb) {
+          if (256 <= this.spriteOpacity) {
             var17.g(var23_int, var24);
           } else {
-            var17.e(var23_int, var24, this.field_kb);
+            var17.e(var23_int, var24, this.spriteOpacity);
           }
         }
         boolean decompiledFrameRemainder0 = true;
@@ -896,11 +896,11 @@ class ClientUiComponent extends ClientUiNode {
           var23 = var26;
           var23Lifetime1 = var26;
           var23Lifetime2 = var26;
-          if (param2 &&
-            null != this.field_I) {
-            var23Lifetime2 = var26 + this.field_I;
+          if (blinkOn &&
+            null != this.blinkTextSuffix) {
+            var23Lifetime2 = var26 + this.blinkTextSuffix;
           }
-          if (this.font.a(var23Lifetime2) <= this.width - 2 * this.field_O &&
+          if (this.font.a(var23Lifetime2) <= this.width - 2 * this.textHorizontalPadding &&
             var23Lifetime2.indexOf("<br>") < 0) {
             if (this.verticalAlignment != 1) {
               if (this.verticalAlignment == 2) {
@@ -910,28 +910,28 @@ class ClientUiComponent extends ClientUiNode {
               var22 = var22 + (-this.font.field_L + this.height - this.font.field_H) / 2;
             }
             if (this.horizontalAlignment == 0) {
-              this.font.b(var23Lifetime2, this.field_O + this.screenX + var21, this.font.field_H + (this.screenY + var22), var18, -1, this.opacity);
+              this.font.b(var23Lifetime2, this.textHorizontalPadding + this.screenX + var21, this.font.field_H + (this.screenY + var22), var18, -1, this.textOpacity);
             } else {
               if (this.horizontalAlignment == 1) {
-                this.font.a(var23Lifetime2, var21 + (this.screenX + this.field_O + (this.width - 2 * this.field_O) / 2), var22 + (this.screenY + this.font.field_H), var18, -1, this.opacity);
+                this.font.a(var23Lifetime2, var21 + (this.screenX + this.textHorizontalPadding + (this.width - 2 * this.textHorizontalPadding) / 2), var22 + (this.screenY + this.font.field_H), var18, -1, this.textOpacity);
               } else {
                 if (2 != this.horizontalAlignment) {
-                  this.font.a(var23Lifetime2, this.screenX + this.field_O + var21, var22 + this.screenY, -(2 * this.field_O) + this.width, this.height, var18, -1, this.opacity, this.horizontalAlignment, this.verticalAlignment, this.field_pb);
+                  this.font.a(var23Lifetime2, this.screenX + this.textHorizontalPadding + var21, var22 + this.screenY, -(2 * this.textHorizontalPadding) + this.width, this.height, var18, -1, this.textOpacity, this.horizontalAlignment, this.verticalAlignment, this.textLineSpacing);
                 } else {
-                  this.font.c(var23Lifetime2, this.screenX + this.field_O + var21 - (-this.width + this.field_O * 2), var22 + this.screenY + this.font.field_H, var18, -1, this.opacity);
+                  this.font.c(var23Lifetime2, this.screenX + this.textHorizontalPadding + var21 - (-this.width + this.textHorizontalPadding * 2), var22 + this.screenY + this.font.field_H, var18, -1, this.textOpacity);
                 }
               }
             }
             decompiledFrameRemainder0 = false;
           }
           else {
-            this.font.a(var23Lifetime2, this.field_O + this.screenX + var21, var22 + this.screenY, -(2 * this.field_O) + this.width, this.height, var18, -1, this.opacity, this.horizontalAlignment, this.verticalAlignment, this.field_pb);
+            this.font.a(var23Lifetime2, this.textHorizontalPadding + this.screenX + var21, var22 + this.screenY, -(2 * this.textHorizontalPadding) + this.width, this.height, var18, -1, this.textOpacity, this.horizontalAlignment, this.verticalAlignment, this.textLineSpacing);
           }
         }
         if (this.children != null) {
           var23_ref = (ClientUiComponent) (this.children.first((byte) 118));
           while (var23_ref != null) {
-            var23_ref.a((byte) -26, this.height, param2, this.width, var20 + this.screenY, param5, this.field_Y, param7, this.screenX + var19, param9, param10);
+            var23_ref.drawTree((byte) -26, this.height, blinkOn, this.width, var20 + this.screenY, inheritedHeldPress, this.focused, inheritedSelection, this.screenX + var19, inputAllowed, inheritedButtonMatch);
             var23_ref = (ClientUiComponent) (this.children.next((byte) 123));
           }
         }
@@ -1003,41 +1003,41 @@ class ClientUiComponent extends ClientUiNode {
     }
 
     public ClientUiComponent() {
-        this.field_L = -1;
-        this.field_Db = false;
-        this.opacity = 256;
-        this.field_ib = -2147483648;
-        this.field_W = -1;
-        this.field_B = -2147483648;
-        this.field_Bb = -2147483648;
+        this.disabledTextColour = -1;
+        this.selectWhenFocused = false;
+        this.textOpacity = 256;
+        this.matchedButtonOffsetX = -2147483648;
+        this.matchedButtonTextColour = -1;
+        this.selectedOffsetX = -2147483648;
+        this.heldPressOffsetX = -2147483648;
         this.field_M = false;
-        this.field_T = -1;
-        this.field_E = -2147483648;
-        this.field_R = -2147483648;
+        this.heldPressTextColour = -1;
+        this.matchedButtonOffsetY = -2147483648;
+        this.heldPressOffsetY = -2147483648;
         this.inputEnabled = true;
-        this.field_Y = false;
-        this.field_kb = 256;
-        this.field_wb = -1;
-        this.field_tb = -2147483648;
+        this.focused = false;
+        this.spriteOpacity = 256;
+        this.selectedTextColour = -1;
+        this.selectedOffsetY = -2147483648;
     }
 
     ClientUiComponent(long key, ClientUiComponent style, int x, int y, int width, int height, String text) {
-        this.field_L = -1;
-        this.field_Db = false;
-        this.opacity = 256;
-        this.field_ib = -2147483648;
-        this.field_W = -1;
-        this.field_B = -2147483648;
-        this.field_Bb = -2147483648;
+        this.disabledTextColour = -1;
+        this.selectWhenFocused = false;
+        this.textOpacity = 256;
+        this.matchedButtonOffsetX = -2147483648;
+        this.matchedButtonTextColour = -1;
+        this.selectedOffsetX = -2147483648;
+        this.heldPressOffsetX = -2147483648;
         this.field_M = false;
-        this.field_T = -1;
-        this.field_E = -2147483648;
-        this.field_R = -2147483648;
+        this.heldPressTextColour = -1;
+        this.matchedButtonOffsetY = -2147483648;
+        this.heldPressOffsetY = -2147483648;
         this.inputEnabled = true;
-        this.field_Y = false;
-        this.field_kb = 256;
-        this.field_wb = -1;
-        this.field_tb = -2147483648;
+        this.focused = false;
+        this.spriteOpacity = 256;
+        this.selectedTextColour = -1;
+        this.selectedOffsetY = -2147483648;
         try {
           this.height = height;
           this.x = x;

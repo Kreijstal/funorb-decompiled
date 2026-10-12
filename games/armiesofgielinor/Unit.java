@@ -1113,8 +1113,8 @@ final class Unit extends IntrusiveNode implements TaggedFieldReader {
             this.displayName = ov.field_a;
             return;
           }
-          if (this.unitType < dn.unitDisplayNames.length) {
-            this.displayName = dn.unitDisplayNames[this.unitType];
+          if (this.unitType < ScrollContainer.unitDisplayNames.length) {
+            this.displayName = ScrollContainer.unitDisplayNames[this.unitType];
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

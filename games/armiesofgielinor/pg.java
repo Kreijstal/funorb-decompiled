@@ -100,7 +100,7 @@ final class pg {
           } else {
             stackIn_3_4 = 0;
           }
-          ng.a((dn) (stackIn_2_0), stackIn_2_1, (int[]) (stackIn_2_2), stackIn_2_3, stackIn_3_4, 1, param1.field_b, param1.field_m, param1.field_n);
+          ng.a((ScrollContainer) (stackIn_2_0), stackIn_2_1, (int[]) (stackIn_2_2), stackIn_2_3, stackIn_3_4, 1, param1.field_b, param1.field_m, param1.field_n);
           if (param1.field_b == 0 &&
             !bn.a(false) &&
             null == vu.field_M &&

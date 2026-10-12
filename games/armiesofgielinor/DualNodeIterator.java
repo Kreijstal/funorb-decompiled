@@ -72,9 +72,9 @@ final class DualNodeIterator implements Iterator {
     final static ClientUiComponent b(byte param0) {
         if (param0 >= -80) {
           DualNodeIterator.b((byte) -47);
-          return CipherPacketBuffer.field_x.field_Jb;
+          return CipherPacketBuffer.field_x.content;
         }
-        return CipherPacketBuffer.field_x.field_Jb;
+        return CipherPacketBuffer.field_x.content;
     }
 
     public final boolean hasNext() {

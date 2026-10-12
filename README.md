@@ -23,7 +23,7 @@ by default for every game. Semantic game-specific names use explicit naming
 rules. Deko's numbered structural-category and type-based names identify
 unresolved purposes honestly; they are not complete semantic deobfuscation.
 
-Armies has 184 reviewed class names, not a complete semantic map. Shared widget
+Armies has 186 reviewed class names, not a complete semantic map. Shared widget
 bounds, dropdown options/prefix selection, painter dispatch and expansion now
 have reviewed names with pointer, selection and arrow-pixel fixtures. Campaign
 loadouts now name unit/spell rewards, equipped slots and cumulative mana bonuses;
@@ -75,6 +75,13 @@ clipped input and icon/text composition. QuickChatMenu exposes shortcut markup,
 row animation and submenu navigation. Real constructor/input fixtures preserve
 zero-button matching and the original shortcut numbering from 2; full rendering
 and message dispatch remain unverified.
+
+VerticalScrollbar and ScrollContainer now name proportional thumb geometry,
+shared held-button repeats, viewport/content and scroll input. Client components
+also name visual-state alternatives, focus, easing and drag grabs. The corrected
+inheritParentVisualState name describes state inheritance; child clipping still
+runs. Native geometry and sprite-pixel fixtures pass; complete interactive
+scrolling and text/skin pixel rendering remain unverified.
 
 Camera overview grouping, centroid bounds, hold state and explicit tile focus
 now have reviewed names, alongside directional panning, dragging and velocity

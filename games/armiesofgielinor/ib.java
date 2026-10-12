@@ -375,7 +375,7 @@ final class ib extends mk {
                   }
                 }
               } else {
-                var12 = fo.a(4800, ll.field_Jb, new String[]{Integer.toString(el.field_f[kd.field_X][var9_int])});
+                var12 = fo.a(4800, VerticalScrollbar.field_Jb, new String[]{Integer.toString(el.field_f[kd.field_X][var9_int])});
               }
               if (var12 != null) {
                 var19 = fo.a(4800, co.field_s, new String[]{(String) (var12)});

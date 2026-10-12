@@ -711,7 +711,7 @@ final class CampaignUnitOverride {
                 }
                 var2 = NodeIterator.a(50, "presstabtochat");
                 if (null != var2) {
-                  ll.field_Tb = uu.a(var2, (byte) -118);
+                  VerticalScrollbar.field_Tb = uu.a(var2, (byte) -118);
                 }
                 var2 = NodeIterator.a(50, "pressf10toquickchat");
                 if (var2 != null) {
@@ -1529,7 +1529,7 @@ final class CampaignUnitOverride {
                 }
                 var2 = NodeIterator.a(50, "create_displayname_hint");
                 if (var2 != null) {
-                  dn.field_Ob = uu.a(var2, (byte) 40);
+                  ScrollContainer.field_Ob = uu.a(var2, (byte) 40);
                 }
                 var2 = NodeIterator.a(50, "create_password_tooltip");
                 if (null != var2) {

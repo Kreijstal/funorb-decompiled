@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 abstract class dv implements ap {
-    dn field_d;
+    ScrollContainer field_d;
     static ClientUiComponent field_m;
     String field_c;
     static RgbSprite field_k;
@@ -28,19 +28,19 @@ abstract class dv implements ap {
         ClientUiComponent var5 = null;
         int var6 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          this.field_d.field_Jb.addChild(this.a(param0, param1, (byte) -68), param2 + 368);
-          if (~this.field_d.field_Jb.children.size(false) < param2) {
-            this.field_d.field_Jb.children.popFirst(0);
+          this.field_d.content.addChild(this.a(param0, param1, (byte) -68), param2 + 368);
+          if (~this.field_d.content.children.size(false) < param2) {
+            this.field_d.content.children.popFirst(0);
           }
           var4_int = 5;
-          var5 = (ClientUiComponent) (this.field_d.field_Jb.children.first((byte) 107));
+          var5 = (ClientUiComponent) (this.field_d.content.children.first((byte) 107));
           while (var5 != null) {
             var5.y = var4_int;
             var4_int = var4_int + this.field_l;
-            var5 = (ClientUiComponent) (this.field_d.field_Jb.children.next((byte) 123));
+            var5 = (ClientUiComponent) (this.field_d.content.children.next((byte) 123));
           }
-          this.field_d.field_Jb.height = var4_int;
-          this.field_d.field_Jb.y = this.field_d.height - var4_int;
+          this.field_d.content.height = var4_int;
+          this.field_d.content.y = this.field_d.height - var4_int;
         } catch (RuntimeException runtimeException) {
           throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "dv.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
@@ -88,14 +88,14 @@ abstract class dv implements ap {
             SoftwareRaster.e(0, var3, bn.field_b, 0, var4 << 5);
             var3--;
           }
-          this.field_q.b(0 == (8 & this.field_n) ? true : false, 20);
+          this.field_q.draw(0 == (8 & this.field_n) ? true : false, 20);
         }
         var2Lifetime1 = 126 / ((13 - param0) / 33);
         if (this.field_e != null &&
           this.field_f) {
           var3Lifetime1 = this.field_q.height + this.field_q.y;
           this.field_s.y = var3Lifetime1;
-          this.field_s.b(false, 20);
+          this.field_s.draw(false, 20);
           var3Lifetime1 = var3Lifetime1 + (this.field_l + 5);
           var6 = 0;
           var4Lifetime1 = var6;
@@ -112,7 +112,7 @@ abstract class dv implements ap {
     private final ClientUiComponent a(byte param0, int param1) {
         int var4 = -63 % ((param0 + 36) / 61);
         ClientUiComponent var3 = new ClientUiComponent(0L, (ClientUiComponent) null);
-        var3.field_G = ak.b(param1, 5);
+        var3.skinSprites = ak.b(param1, 5);
         return var3;
     }
 
@@ -139,7 +139,7 @@ abstract class dv implements ap {
             this.field_j.addFirst(750, new rq(param0));
           }
           if (param1 < 37) {
-            this.field_d = (dn) null;
+            this.field_d = (ScrollContainer) null;
           }
           if (this.field_j.size(false) > 30) {
             this.field_j.popLast((byte) -123);
@@ -201,7 +201,7 @@ abstract class dv implements ap {
           return;
         }
         this.field_q.updateInput(true, param1);
-        this.field_d.a(this.field_l, true, el.field_d * (2 * this.field_l), false);
+        this.field_d.advanceScroll(this.field_l, true, el.field_d * (2 * this.field_l), false);
         this.field_o.m(0);
     }
 
@@ -344,9 +344,9 @@ abstract class dv implements ap {
 
     private final ClientUiComponent a(int param0, int param1, int param2) {
         ClientUiComponent var4 = new ClientUiComponent(0L, (ClientUiComponent) null);
-        var4.field_G = tn.a(true, param1, param2);
+        var4.skinSprites = tn.a(true, param1, param2);
         if (param0 != 5592405) {
-          this.field_d = (dn) null;
+          this.field_d = (ScrollContainer) null;
         }
         return var4;
     }
@@ -373,7 +373,7 @@ abstract class dv implements ap {
             field_k = (RgbSprite) null;
           }
           var4 = new ClientUiComponent(0L, (ClientUiComponent) null, param1);
-          var4.field_N = param0;
+          var4.textColour = param0;
           var4.font = this.field_t;
           var4.setBounds(this.field_l, -20500, this.field_t.a(var4.text), 0, 5);
           stackIn_3_0 = var4;
@@ -418,12 +418,12 @@ abstract class dv implements ap {
         this.field_f = stackIn_3_1;
         if (!this.field_f) {
           if (null != this.field_q) {
-            this.field_q.b(3, (ClientUiComponent) null);
+            this.field_q.setFocusedComponent(3, (ClientUiComponent) null);
           }
         } else {
           this.field_p = 15;
           if (this.field_q != null) {
-            this.field_q.b(~param0, this.field_o);
+            this.field_q.setFocusedComponent(~param0, this.field_o);
           }
         }
         if (param0 != -4) {
@@ -511,9 +511,9 @@ abstract class dv implements ap {
             return true;
           }
           this.a(this.field_c + var7, 5635925, param0 + 30734);
-          var5 = (ClientUiComponent) (this.field_d.field_Jb.children.last((byte) -81));
+          var5 = (ClientUiComponent) (this.field_d.content.children.last((byte) -81));
           if (!this.a(var7, true)) {
-            var5.field_N = 16733525;
+            var5.textColour = 16733525;
           }
           this.field_o.a(true);
           this.a(var7, param0 + 30943);
@@ -524,7 +524,7 @@ abstract class dv implements ap {
 
     private final ClientUiComponent a(boolean param0, int param1) {
         ClientUiComponent var3 = new ClientUiComponent();
-        var3.field_G = tn.a(param0, 0, param1);
+        var3.skinSprites = tn.a(param0, 0, param1);
         return var3;
     }
 
@@ -539,7 +539,7 @@ abstract class dv implements ap {
         ClientUiComponent var10 = null;
         ClientUiComponent var11 = null;
         ClientUiComponent var12 = null;
-        ll var13 = null;
+        VerticalScrollbar var13 = null;
         ClientUiComponent var14 = null;
         ClientUiComponent var15 = null;
         this.field_c = "# ";
@@ -563,18 +563,18 @@ abstract class dv implements ap {
           var12 = this.a(5592405, 2236962, 65793);
           this.field_q = new ClientUiComponent(0L, var5);
           this.field_q.setBounds(200, -20500, bn.field_b, -200, 0);
-          var13 = new ll(0L, var8, var8, var9, var10);
+          var13 = new VerticalScrollbar(0L, var8, var8, var9, var10);
           var14 = new ClientUiComponent();
           var14.children = new NodeDeque();
-          this.field_d = new dn(0L, var14, var6, var13);
-          this.field_d.field_Jb.children = new NodeDeque();
-          this.field_d.a(5, false, this.field_q.width - 10, 0, 15, 5, 185 - var3_int);
+          this.field_d = new ScrollContainer(0L, var14, var6, var13);
+          this.field_d.content.children = new NodeDeque();
+          this.field_d.setLayout(5, false, this.field_q.width - 10, 0, 15, 5, 185 - var3_int);
           this.field_q.addChild(this.field_d, 71);
           var15 = new ClientUiComponent();
           var15.font = this.field_t;
-          var15.field_N = 13421772;
-          var15.field_F = 5;
-          var15.field_z = 2;
+          var15.textColour = 13421772;
+          var15.contentOffsetX = 5;
+          var15.contentOffsetY = 2;
           this.field_o = new dp(0L, var7, var11, var15);
           this.field_o.b(this.field_d.y - (-this.field_d.height - 5), 0, this.field_d.width, var3_int, this.field_d.x);
           this.field_o.a(param1, 176);

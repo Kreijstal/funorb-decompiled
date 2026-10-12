@@ -5,7 +5,7 @@ final class PointerInputHandler implements java.awt.event.MouseListener, java.aw
     static cr field_a;
     static aj field_f;
     static String field_e;
-    static dn field_b;
+    static ScrollContainer field_b;
     static String field_d;
     static String field_c;
 

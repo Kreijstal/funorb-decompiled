@@ -704,7 +704,7 @@ final class MatchSetupPanel {
                 } else {
                   stackIn_15_0 = new StringBuilder().append(param1);
                   if (this.option33Enabled) {
-                    stackIn_16_1 = dn.field_Mb;
+                    stackIn_16_1 = ScrollContainer.field_Mb;
                   } else {
                     stackIn_16_1 = qd.field_J;
                   }
@@ -941,22 +941,22 @@ final class MatchSetupPanel {
           var3 = stackIn_4_0;
           stackIn_7_0 = (ro.pointerButton != 1) ? 0 : 1;
           var4 = stackIn_7_0;
-          ll.field_Rb.advanceFrame(el.field_d, param0 - 56, var2, var3 != 0, var1_int, var4 != 0);
+          VerticalScrollbar.field_Rb.advanceFrame(el.field_d, param0 - 56, var2, var3 != 0, var1_int, var4 != 0);
           while (true) {
             if (!Unit.i((byte) 90)) {
               return;
             }
             if (rs.field_q == 13) {
               CipherPacketBuffer.a(true, 0, 1, jt.field_a);
-              if (null != ll.field_Rb.combatPresentation) {
-                ll.field_Rb.combatPresentation.framebuffer = null;
-                ll.field_Rb.combatPresentation.field_A = null;
+              if (null != VerticalScrollbar.field_Rb.combatPresentation) {
+                VerticalScrollbar.field_Rb.combatPresentation.framebuffer = null;
+                VerticalScrollbar.field_Rb.combatPresentation.field_A = null;
               }
               le.field_b = null;
-              if (ll.field_Rb.combatPresentation != null) {
-                ll.field_Rb.combatPresentation = null;
+              if (VerticalScrollbar.field_Rb.combatPresentation != null) {
+                VerticalScrollbar.field_Rb.combatPresentation = null;
               }
-              ll.field_Rb = null;
+              VerticalScrollbar.field_Rb = null;
             }
             if (rs.field_q == 12) {
               stackIn_20_0 = !(CoatOfArms.field_e);

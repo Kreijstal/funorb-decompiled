@@ -161,7 +161,7 @@ final class DeployEvent extends GameEvent {
     }
 
     final static void a(int param0, boolean param1, int param2) {
-        dn stackIn_5_0;
+        ScrollContainer stackIn_5_0;
         boolean stackIn_5_1;
         int stackIn_5_2;
         int stackIn_5_3;
@@ -196,16 +196,16 @@ final class DeployEvent extends GameEvent {
           stackIn_5_2 = (2 + jn.field_d) * (3 * param2);
           stackIn_5_3 = jn.field_d + 2;
           stackIn_6_4 = (PointerInputHandler.field_b == TaggedMapData.field_g.field_Kb);
-          var3_int = ((dn) (Object) stackIn_5_0).a(stackIn_5_1, stackIn_5_2, stackIn_5_3, stackIn_6_4, 0, 2) ? 1 : 0;
+          var3_int = ((ScrollContainer) (Object) stackIn_5_0).updateContentLayout(stackIn_5_1, stackIn_5_2, stackIn_5_3, stackIn_6_4, 0, 2) ? 1 : 0;
           var4 = TaggedMapData.field_g.field_Nb.children;
           if (th.field_a != 2 &&
             th.field_a != 1) {
-            TaggedMapData.field_g.field_Kb.field_Nb.text = ef.field_a;
+            TaggedMapData.field_g.field_Kb.viewport.text = ef.field_a;
             TaggedMapData.field_g.inputEnabled = false;
             ArchiveIndex.a(TaggedMapData.field_g.field_Nb, -71);
             return;
           }
-          TaggedMapData.field_g.field_Kb.field_Nb.text = null;
+          TaggedMapData.field_g.field_Kb.viewport.text = null;
           TaggedMapData.field_g.inputEnabled = true;
           var5 = null;
           var6 = (hl) (var4.first((byte) 110));
@@ -216,7 +216,7 @@ final class DeployEvent extends GameEvent {
               var6.addChild(var6.field_Qb, 114);
               var6.field_Jb = new ClientUiComponent(0L, IsaacRandom.field_i);
               var6.addChild(var6.field_Jb, 113);
-              var6.useParentClipForDescendants(-10027);
+              var6.inheritVisualStateForDescendants(-10027);
               var7 = 1;
             }
             var6.width = TaggedMapData.field_g.field_Nb.width;
@@ -225,7 +225,7 @@ final class DeployEvent extends GameEvent {
             if (null != var6.field_Nb &&
               !var6.field_Nb.equals("")) {
               var6.field_Jb.sprite = NodeHashIterator.field_e;
-              var6.field_Jb.field_W = 16737894;
+              var6.field_Jb.matchedButtonTextColour = 16737894;
               var6.field_Jb.setBounds(jn.field_d, -20500, NodeHashIterator.field_e.canvasWidth + 3, 0, 0);
               var8 = 1;
             }
@@ -249,7 +249,7 @@ final class DeployEvent extends GameEvent {
               var6.pendingHeightDelta = -var6.height + jn.field_d;
             }
             if (var7 != 0) {
-              TaggedMapData.field_g.field_Nb.a(var6, true, 2, (ClientUiComponent) (var5));
+              TaggedMapData.field_g.field_Nb.positionAfter(var6, true, 2, (ClientUiComponent) (var5));
             }
             if (var6.field_Jb != null &&
               var6.field_Jb.heldButtonMatches) {

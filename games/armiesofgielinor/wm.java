@@ -113,7 +113,7 @@ final class wm {
         int var8Lifetime1;
         int var9Lifetime1Lifetime1;
         var13 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
-        vq.field_a.field_Jb.children.clear(108);
+        vq.field_a.content.children.clear(108);
         var4 = null;
         var5 = 0;
         var6 = 0;
@@ -138,11 +138,11 @@ final class wm {
               var11 = var10 + BitmapFont.c(var8_ref_mo.field_h);
               var12 = PlayerProfile.a(var8_ref_mo, -5);
               var8_ref_mo.field_u = new ClientUiComponent(0L, SpellConfirmationDialog.field_i, var11);
-              var8_ref_mo.field_u.field_T = (SpellConfirmationDialog.field_i.field_T >> 1 & 8355711) + (var12 - ((var12 & 16711423) >> 1));
+              var8_ref_mo.field_u.heldPressTextColour = (SpellConfirmationDialog.field_i.heldPressTextColour >> 1 & 8355711) + (var12 - ((var12 & 16711423) >> 1));
               var8_ref_mo.field_u.font = IntrusiveNode.field_e;
-              var8_ref_mo.field_u.field_W = (SpellConfirmationDialog.field_i.field_W >> 1 & 8355711) + var12 - (8355711 & var12 >> 1);
+              var8_ref_mo.field_u.matchedButtonTextColour = (SpellConfirmationDialog.field_i.matchedButtonTextColour >> 1 & 8355711) + var12 - (8355711 & var12 >> 1);
               var6 = var6 + param0;
-              var8_ref_mo.field_u.field_N = var12;
+              var8_ref_mo.field_u.textColour = var12;
             }
             var5++;
           } else {
@@ -157,7 +157,7 @@ final class wm {
         while (lk.field_h > var8) {
           var9_ref_mo = an.field_F[var8];
           if (null != var9_ref_mo.field_u) {
-            vq.field_a.field_Jb.addChild(var9_ref_mo.field_u, 65);
+            vq.field_a.content.addChild(var9_ref_mo.field_u, 65);
             var9_ref_mo.field_u.setBounds(param0, -20500, var9_ref_mo.field_u.getPreferredWidth(-49), var7Lifetime1, param1);
             if (0 != var9_ref_mo.field_u.pressedButton) {
               var4_ref = var9_ref_mo;
@@ -166,77 +166,77 @@ final class wm {
           }
           var8++;
         }
-        var8Lifetime1 = -var7Lifetime1 + (var6 + (vq.field_a.field_Jb.height + vq.field_a.field_Jb.pendingHeightDelta));
-        vq.field_a.field_Jb.height = vq.field_a.field_Jb.height - var8Lifetime1;
-        vq.field_a.field_Jb.y = vq.field_a.field_Jb.y + var8Lifetime1;
+        var8Lifetime1 = -var7Lifetime1 + (var6 + (vq.field_a.content.height + vq.field_a.content.pendingHeightDelta));
+        vq.field_a.content.height = vq.field_a.content.height - var8Lifetime1;
+        vq.field_a.content.y = vq.field_a.content.y + var8Lifetime1;
         if (MoveEvent.field_J) {
-          vq.field_a.field_Jb.height = var7Lifetime1;
-          vq.field_a.field_Jb.pendingHeightDelta = -vq.field_a.field_Jb.height + var7Lifetime1;
+          vq.field_a.content.height = var7Lifetime1;
+          vq.field_a.content.pendingHeightDelta = -vq.field_a.content.height + var7Lifetime1;
           if (MoveEvent.field_J) {
-            vq.field_a.field_Jb.y = vq.field_a.field_Nb.height - vq.field_a.field_Jb.height;
-            vq.field_a.field_Jb.pendingYDelta = 0;
+            vq.field_a.content.y = vq.field_a.viewport.height - vq.field_a.content.height;
+            vq.field_a.content.pendingYDelta = 0;
             MoveEvent.field_J = false;
             cu.field_c = true;
           }
           if (hf.field_c) {
             if (null == UnitCycler.field_g) {
-              var9Lifetime1 = -vq.field_a.field_Jb.pendingHeightDelta - (vq.field_a.field_Jb.height - vq.field_a.field_Nb.height);
+              var9Lifetime1 = -vq.field_a.content.pendingHeightDelta - (vq.field_a.content.height - vq.field_a.viewport.height);
               if (cu.field_c) {
-                vq.field_a.field_Jb.pendingYDelta = var9Lifetime1 - vq.field_a.field_Jb.y;
+                vq.field_a.content.pendingYDelta = var9Lifetime1 - vq.field_a.content.y;
               }
-              vq.field_a.a(param0, true, 2 * param0 * param3, false);
-              stackIn_45_0 = (vq.field_a.field_Jb.pendingYDelta + vq.field_a.field_Jb.y == var9Lifetime1);
+              vq.field_a.advanceScroll(param0, true, 2 * param0 * param3, false);
+              stackIn_45_0 = (vq.field_a.content.pendingYDelta + vq.field_a.content.y == var9Lifetime1);
               cu.field_c = stackIn_45_0;
               return (mo) (var4);
             }
             cu.field_c = true;
           }
-          var9Lifetime1Lifetime1 = -vq.field_a.field_Jb.pendingHeightDelta - (vq.field_a.field_Jb.height - vq.field_a.field_Nb.height);
+          var9Lifetime1Lifetime1 = -vq.field_a.content.pendingHeightDelta - (vq.field_a.content.height - vq.field_a.viewport.height);
           if (!cu.field_c) {
-            vq.field_a.a(param0, true, 2 * param0 * param3, false);
-            stackIn_51_0 = (vq.field_a.field_Jb.pendingYDelta + vq.field_a.field_Jb.y == var9Lifetime1Lifetime1);
+            vq.field_a.advanceScroll(param0, true, 2 * param0 * param3, false);
+            stackIn_51_0 = (vq.field_a.content.pendingYDelta + vq.field_a.content.y == var9Lifetime1Lifetime1);
             cu.field_c = stackIn_51_0;
           } else {
-            vq.field_a.field_Jb.pendingYDelta = var9Lifetime1Lifetime1 - vq.field_a.field_Jb.y;
-            vq.field_a.a(param0, true, 2 * param0 * param3, false);
-            stackIn_55_0 = (vq.field_a.field_Jb.pendingYDelta + vq.field_a.field_Jb.y == var9Lifetime1Lifetime1);
+            vq.field_a.content.pendingYDelta = var9Lifetime1Lifetime1 - vq.field_a.content.y;
+            vq.field_a.advanceScroll(param0, true, 2 * param0 * param3, false);
+            stackIn_55_0 = (vq.field_a.content.pendingYDelta + vq.field_a.content.y == var9Lifetime1Lifetime1);
             cu.field_c = stackIn_55_0;
           }
           return (mo) (var4);
         }
-        vq.field_a.field_Jb.pendingHeightDelta = -vq.field_a.field_Jb.height + var7Lifetime1;
+        vq.field_a.content.pendingHeightDelta = -vq.field_a.content.height + var7Lifetime1;
         if (MoveEvent.field_J) {
-          vq.field_a.field_Jb.y = vq.field_a.field_Nb.height - vq.field_a.field_Jb.height;
-          vq.field_a.field_Jb.pendingYDelta = 0;
+          vq.field_a.content.y = vq.field_a.viewport.height - vq.field_a.content.height;
+          vq.field_a.content.pendingYDelta = 0;
           MoveEvent.field_J = false;
           cu.field_c = true;
         }
         if (hf.field_c) {
           if (null == UnitCycler.field_g) {
-            var9Lifetime2 = -vq.field_a.field_Jb.pendingHeightDelta - (vq.field_a.field_Jb.height - vq.field_a.field_Nb.height);
+            var9Lifetime2 = -vq.field_a.content.pendingHeightDelta - (vq.field_a.content.height - vq.field_a.viewport.height);
             if (!cu.field_c) {
-              vq.field_a.a(param0, true, 2 * param0 * param3, false);
-              stackIn_66_0 = (vq.field_a.field_Jb.pendingYDelta + vq.field_a.field_Jb.y == var9Lifetime2);
+              vq.field_a.advanceScroll(param0, true, 2 * param0 * param3, false);
+              stackIn_66_0 = (vq.field_a.content.pendingYDelta + vq.field_a.content.y == var9Lifetime2);
               cu.field_c = stackIn_66_0;
             } else {
-              vq.field_a.field_Jb.pendingYDelta = var9Lifetime2 - vq.field_a.field_Jb.y;
-              vq.field_a.a(param0, true, 2 * param0 * param3, false);
-              stackIn_70_0 = (vq.field_a.field_Jb.pendingYDelta + vq.field_a.field_Jb.y == var9Lifetime2);
+              vq.field_a.content.pendingYDelta = var9Lifetime2 - vq.field_a.content.y;
+              vq.field_a.advanceScroll(param0, true, 2 * param0 * param3, false);
+              stackIn_70_0 = (vq.field_a.content.pendingYDelta + vq.field_a.content.y == var9Lifetime2);
               cu.field_c = stackIn_70_0;
             }
             return (mo) (var4);
           }
           cu.field_c = true;
         }
-        var9Lifetime3 = -vq.field_a.field_Jb.pendingHeightDelta - (vq.field_a.field_Jb.height - vq.field_a.field_Nb.height);
+        var9Lifetime3 = -vq.field_a.content.pendingHeightDelta - (vq.field_a.content.height - vq.field_a.viewport.height);
         if (!cu.field_c) {
-          vq.field_a.a(param0, true, 2 * param0 * param3, false);
-          stackIn_77_0 = (vq.field_a.field_Jb.pendingYDelta + vq.field_a.field_Jb.y == var9Lifetime3);
+          vq.field_a.advanceScroll(param0, true, 2 * param0 * param3, false);
+          stackIn_77_0 = (vq.field_a.content.pendingYDelta + vq.field_a.content.y == var9Lifetime3);
           cu.field_c = stackIn_77_0;
         } else {
-          vq.field_a.field_Jb.pendingYDelta = var9Lifetime3 - vq.field_a.field_Jb.y;
-          vq.field_a.a(param0, true, 2 * param0 * param3, false);
-          stackIn_81_0 = (vq.field_a.field_Jb.pendingYDelta + vq.field_a.field_Jb.y == var9Lifetime3);
+          vq.field_a.content.pendingYDelta = var9Lifetime3 - vq.field_a.content.y;
+          vq.field_a.advanceScroll(param0, true, 2 * param0 * param3, false);
+          stackIn_81_0 = (vq.field_a.content.pendingYDelta + vq.field_a.content.y == var9Lifetime3);
           cu.field_c = stackIn_81_0;
         }
         return (mo) (var4);

@@ -4248,7 +4248,7 @@ final class GameplayController {
           fe.a(-50 + var5_int, 35 + var6, 100, 15, jh.field_l, 128);
           SpellConfirmationDialog.field_j.b();
           SoftwareRaster.b();
-          en.field_E.a(dn.unitDisplayNames[param1].toUpperCase(), -47 + param3, param0 - 48, 94, 30, 16763904, -1, 1, 1, 0);
+          en.field_E.a(ScrollContainer.unitDisplayNames[param1].toUpperCase(), -47 + param3, param0 - 48, 94, 30, 16763904, -1, 1, 1, 0);
           en.field_E.b(UiSelectionState.field_d, param3 - 45, -4 + param0, 16777215, -1);
           var7 = (int)(Math.sin((double)uk.field_n / 3.141592653589793 / 2.0) * 64.0 + 128.0);
           var7 = var7 << 16 | 65283 & var7 << 6;

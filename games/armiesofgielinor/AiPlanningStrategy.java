@@ -11,7 +11,7 @@ abstract class AiPlanningStrategy {
     private NodeDeque recycledCandidates;
 
     final static hl a(int param0, int param1, boolean param2) {
-        dn stackIn_4_0;
+        ScrollContainer stackIn_4_0;
         boolean stackIn_4_1;
         int stackIn_4_2;
         int stackIn_4_3;
@@ -50,7 +50,7 @@ abstract class AiPlanningStrategy {
           stackIn_4_2 = (jn.field_d * 3 + 6) * param1;
           stackIn_4_3 = 2 + jn.field_d;
           stackIn_5_4 = (mw.field_E.field_Kb == PointerInputHandler.field_b);
-          var3_int = ((dn) (Object) stackIn_4_0).a(stackIn_4_1, stackIn_4_2, stackIn_4_3, stackIn_5_4, 0, 2) ? 1 : 0;
+          var3_int = ((ScrollContainer) (Object) stackIn_4_0).updateContentLayout(stackIn_4_1, stackIn_4_2, stackIn_4_3, stackIn_5_4, 0, 2) ? 1 : 0;
           var4 = mw.field_E.field_Nb.children;
           if (param0 <= 20) {
             AiPlanningStrategy.a(-8, (String[]) null, (String) null, -108);
@@ -61,12 +61,12 @@ abstract class AiPlanningStrategy {
             su.field_d.inputEnabled = false;
             bn.field_c.text = fm.field_c;
             if (1 != th.field_a) {
-              mw.field_E.field_Kb.field_Nb.text = ef.field_a;
+              mw.field_E.field_Kb.viewport.text = ef.field_a;
               if (var19 != 0) {
-                mw.field_E.field_Kb.field_Nb.text = TeleportAction.field_u;
+                mw.field_E.field_Kb.viewport.text = TeleportAction.field_u;
               }
             } else {
-              mw.field_E.field_Kb.field_Nb.text = TeleportAction.field_u;
+              mw.field_E.field_Kb.viewport.text = TeleportAction.field_u;
             }
             ArchiveIndex.a(mw.field_E.field_Nb, -47);
             decompiledFrameRemainder1 = (var19 != 0);
@@ -74,7 +74,7 @@ abstract class AiPlanningStrategy {
           if (decompiledFrameRemainder1) {
             su.field_d.inputEnabled = true;
             bn.field_c.text = fo.a(4800, ps.field_A, new String[]{vl.field_p});
-            mw.field_E.field_Kb.field_Nb.text = null;
+            mw.field_E.field_Kb.viewport.text = null;
             var6 = null;
             var7 = (hl) (var4.first((byte) 109));
             while (true) {
@@ -90,7 +90,7 @@ abstract class AiPlanningStrategy {
                     var7.field_Jb = new ClientUiComponent(0L, IsaacRandom.field_i);
                     var7.addChild(var7.field_Jb, 69);
                     var7.field_Kb.horizontalAlignment = 2;
-                    var7.useParentClipForDescendants(-10027);
+                    var7.inheritVisualStateForDescendants(-10027);
                     var8 = 1;
                   }
                   var7.width = mw.field_E.field_Nb.width;
@@ -110,19 +110,19 @@ abstract class AiPlanningStrategy {
                   var12 = 0;
                   if (var7.field_Nb != null &&
                     !var7.field_Nb.equals("")) {
-                    var7.field_Jb.field_W = var11;
+                    var7.field_Jb.matchedButtonTextColour = var11;
                     var7.field_Jb.sprite = NodeHashIterator.field_e;
                     var12 = 1;
                     var7.field_Jb.setBounds(jn.field_d, -20500, 3 + NodeHashIterator.field_e.canvasWidth, var9, 0);
                   }
-                  var7.field_Kb.field_wb = var11;
-                  var7.field_Qb.field_wb = var11;
-                  var7.field_Kb.field_N = var10;
-                  var7.field_Qb.field_N = var10;
-                  var7.field_Kb.field_W = var11;
-                  var7.field_Qb.field_W = var11;
-                  var7.field_Kb.field_T = var11;
-                  var7.field_Qb.field_T = var11;
+                  var7.field_Kb.selectedTextColour = var11;
+                  var7.field_Qb.selectedTextColour = var11;
+                  var7.field_Kb.textColour = var10;
+                  var7.field_Qb.textColour = var10;
+                  var7.field_Kb.matchedButtonTextColour = var11;
+                  var7.field_Qb.matchedButtonTextColour = var11;
+                  var7.field_Kb.heldPressTextColour = var11;
+                  var7.field_Qb.heldPressTextColour = var11;
                   var13 = 0;
                   var14 = -82 + var7.width;
                   if (var12 != 0) {
@@ -152,7 +152,7 @@ abstract class AiPlanningStrategy {
                     var7.pendingHeightDelta = var9 - var7.height;
                   }
                   if (var8 != 0) {
-                    mw.field_E.field_Nb.a(var7, true, 2, (ClientUiComponent) (var6));
+                    mw.field_E.field_Nb.positionAfter(var7, true, 2, (ClientUiComponent) (var6));
                   }
                   var6 = var7;
                   if (var7.field_Jb != null &&

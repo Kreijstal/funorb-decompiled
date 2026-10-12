@@ -226,7 +226,7 @@ public final class ArmiesOfGielinor extends wf {
                     uc.a(0);
                   }
                   TrianglePulse.a(-16147, 50, mp.field_Ob, true);
-                  dn.field_Qb = false;
+                  ScrollContainer.field_Qb = false;
                   SpellCastAction.field_t = false;
                   continue;
                 }
@@ -361,7 +361,7 @@ public final class ArmiesOfGielinor extends wf {
                   }
                   SoftwareRaster.b();
                   CipherPacketBuffer.a(false, -1, 1, jt.field_a);
-                  dn.field_Qb = false;
+                  ScrollContainer.field_Qb = false;
                   io.field_w = true;
                   continue;
                 }
@@ -381,7 +381,7 @@ public final class ArmiesOfGielinor extends wf {
                     gk.field_H = false;
                     uc.a(0);
                   }
-                  dn.field_Qb = false;
+                  ScrollContainer.field_Qb = false;
                   continue;
                 }
                 var2 = null;
@@ -591,14 +591,14 @@ public final class ArmiesOfGielinor extends wf {
                   FaceNormal.field_d = false;
                   uc.a(0);
                 }
-                dn.field_Qb = false;
+                ScrollContainer.field_Qb = false;
                 SpellCastAction.field_t = false;
                 if (var11 != 0) {
-                  dn.field_Qb = true;
+                  ScrollContainer.field_Qb = true;
                   SpellCastAction.field_t = true;
                 }
               } else {
-                dn.field_Qb = true;
+                ScrollContainer.field_Qb = true;
                 SpellCastAction.field_t = true;
               }
             }
@@ -611,7 +611,7 @@ public final class ArmiesOfGielinor extends wf {
             }
             if (FaceNormal.field_d ||
               SpellCastAction.field_t ||
-              dn.field_Qb) {
+              ScrollContainer.field_Qb) {
               var4Lifetime1 = 1;
             }
             if (!MovementPresentation.j(-11)) {
@@ -800,7 +800,7 @@ public final class ArmiesOfGielinor extends wf {
             boolean decompiledFrameCompleted0 = true;
             if (FaceNormal.field_d &&
               !SpellCastAction.field_t &&
-              !dn.field_Qb) {
+              !ScrollContainer.field_Qb) {
               if (fj.field_c &&
                 hf.field_c) {
                 var3_int = 0;
@@ -995,7 +995,7 @@ public final class ArmiesOfGielinor extends wf {
               (fj.field_c)) {
               PointerInputHandler.a(-81, vu.field_M.d((byte) 117), 11);
             }
-            dn.field_Qb = true;
+            ScrollContainer.field_Qb = true;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -1014,7 +1014,7 @@ public final class ArmiesOfGielinor extends wf {
         GameplayController var3 = null;
         int var4 = 0;
         try {
-          var2 = ll.p(0);
+          var2 = VerticalScrollbar.p(0);
           if (PopupPresentation.h(param0 ^ 31337)) {
             iv.a(false, fs.a(false), var2);
             return;
@@ -1301,9 +1301,9 @@ public final class ArmiesOfGielinor extends wf {
           bu.a(-128);
           mh.a((byte) -119);
           IconTextComponent.k(param0 ^ -72);
-          dn.k(0);
+          ScrollContainer.k(0);
           fp.k(21755);
-          ll.k(-1);
+          VerticalScrollbar.k(-1);
           ClientUiNode.g(31343);
           np.e((byte) 5);
           mp.l(-8291);
@@ -2248,7 +2248,7 @@ public final class ArmiesOfGielinor extends wf {
           mo.field_s = GameplayController.a("wait_icon", (byte) 51, "basic", iw.field_l);
           mo.field_s.a();
           kt.field_o = fk.a("diamondscale", (byte) -128, iw.field_l, "basic");
-          jg.field_m = new RgbSprite(vc.field_m.getFileByName("menu_background.jpg", -123, ""), (java.awt.Component) ((Object) ll.p(0)));
+          jg.field_m = new RgbSprite(vc.field_m.getFileByName("menu_background.jpg", -123, ""), (java.awt.Component) ((Object) VerticalScrollbar.p(0)));
           var6_array = UnitLossCondition.field_d;
           var7_int = 0;
           do {
@@ -2383,7 +2383,7 @@ public final class ArmiesOfGielinor extends wf {
         wr var2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          CombatEvent.field_I.b(param1, param0 ^ 20);
+          CombatEvent.field_I.draw(param1, param0 ^ 20);
           var2 = BestScoreStrategy.field_i;
           if (null != var2) {
             var2.a(CombatEvent.field_I.screenX, -125, CombatEvent.field_I.screenY);

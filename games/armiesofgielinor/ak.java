@@ -369,7 +369,7 @@ final class ak extends ju {
         int var2 = !fh.field_c ? 200 : 250;
         SphinxActionRequest.field_A.setBounds(30, -20500, -var2 + 363, 5, var2 + 5);
         wl.field_K.setBounds(30, -20500, -370 + (-5 + ov.field_i.width), 5, 370);
-        CipherPacketBuffer.field_x.a(5, param0, of.field_Lb.width - 5 - 5, 2, jn.field_c, 37, -32 + (of.field_Lb.height - 5 - 5));
+        CipherPacketBuffer.field_x.setLayout(5, param0, of.field_Lb.width - 5 - 5, 2, jn.field_c, 37, -32 + (of.field_Lb.height - 5 - 5));
         int var3 = (ov.field_i.width + 2) / 2;
         fj.field_d.setBounds(40, -20500, var3 - 2, ov.field_i.height - 40, 0);
         if (!fh.field_c) {

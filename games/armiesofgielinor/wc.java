@@ -235,7 +235,7 @@ final class wc extends nl {
         }
         SummonRequest.a(param0, (byte) -89);
         if (Spell.field_b != null) {
-          Spell.field_b.b(param0, 20);
+          Spell.field_b.draw(param0, 20);
         }
         qh.a(param0, 0);
     }

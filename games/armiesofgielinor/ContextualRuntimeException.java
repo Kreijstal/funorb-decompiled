@@ -59,18 +59,18 @@ final class ContextualRuntimeException extends RuntimeException {
           su.field_d.addChild(ek.field_a, 49);
           su.field_d.addChild(mw.field_E, 105);
           su.field_d.addChild(PlayerProfile.field_f, 56);
-          mw.field_E.field_Kb.field_Nb.applyStyle(param0 + 6145, eq.field_h);
-          mw.field_E.field_Kb.field_Nb.verticalAlignment = 1;
-          var6 = mw.field_E.field_Kb.field_Nb;
+          mw.field_E.field_Kb.viewport.applyStyle(param0 + 6145, eq.field_h);
+          mw.field_E.field_Kb.viewport.verticalAlignment = 1;
+          var6 = mw.field_E.field_Kb.viewport;
           var7 = var6;
           var7.horizontalAlignment = 1;
-          TaggedMapData.field_g.field_Kb.field_Nb.applyStyle(0, eq.field_h);
+          TaggedMapData.field_g.field_Kb.viewport.applyStyle(0, eq.field_h);
           if (param0 != -6145) {
             ResourceArchive var4 = (ResourceArchive) null;
             ContextualRuntimeException.a(-105, (ResourceArchive) null);
           }
-          TaggedMapData.field_g.field_Kb.field_Nb.verticalAlignment = 1;
-          var3 = TaggedMapData.field_g.field_Kb.field_Nb;
+          TaggedMapData.field_g.field_Kb.viewport.verticalAlignment = 1;
+          var3 = TaggedMapData.field_g.field_Kb.viewport;
           var3.horizontalAlignment = 1;
         } catch (RuntimeException runtimeException) {
           throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "g.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');

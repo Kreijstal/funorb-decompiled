@@ -72,7 +72,7 @@ final class SummonRequest extends ActionRequest {
           field_w = (String) null;
         }
         if (EffectPresentation.field_e != null) {
-          EffectPresentation.field_e.b(param0, 20);
+          EffectPresentation.field_e.draw(param0, 20);
         }
     }
 

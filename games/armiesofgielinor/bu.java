@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class bu {
-    static dn field_a;
+    static ScrollContainer field_a;
     static RgbSprite[] field_c;
     static CampaignQuicksave storedQuicksave;
 
@@ -71,7 +71,7 @@ final class bu {
         storedQuicksave = null;
         field_c = null;
         if (param0 >= -76) {
-          field_a = (dn) null;
+          field_a = (ScrollContainer) null;
         }
     }
 

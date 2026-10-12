@@ -253,9 +253,9 @@ final class sh {
     final static ClientUiComponent d(byte param0) {
         if (param0 < 69) {
           sh.b((byte) 50);
-          return MapTile.field_f.field_Jb;
+          return MapTile.field_f.content;
         }
-        return MapTile.field_f.field_Jb;
+        return MapTile.field_f.content;
     }
 
     private final void c(byte param0) {

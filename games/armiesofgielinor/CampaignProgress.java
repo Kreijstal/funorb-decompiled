@@ -186,7 +186,7 @@ final class CampaignProgress {
         nm.a((byte) 95, param1);
         if (gl.field_b) {
           SoftwareRaster.d(ij.field_w.field_a.x, ij.field_w.field_a.y, ij.field_w.field_a.width, ij.field_w.field_a.height);
-          ij.field_w.field_a.b(param1, 20);
+          ij.field_w.field_a.draw(param1, 20);
         }
         if (param0 != 2000) {
           return;

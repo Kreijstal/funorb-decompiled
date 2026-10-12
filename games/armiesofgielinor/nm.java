@@ -468,10 +468,10 @@ final class nm extends hn {
           }
           stackIn_6_0 = no.field_T;
           stackIn_7_1 = (param1) && (!bw.field_g);
-          ((ClientUiComponent) (Object) stackIn_6_0).b(stackIn_7_1, 20);
+          ((ClientUiComponent) (Object) stackIn_6_0).draw(stackIn_7_1, 20);
           stackIn_10_0 = ov.field_i;
           stackIn_11_1 = (param1) && (!bw.field_g);
-          ((ClientUiComponent) (Object) stackIn_10_0).b(stackIn_11_1, 20);
+          ((ClientUiComponent) (Object) stackIn_10_0).draw(stackIn_11_1, 20);
         }
         if (param0 != 95) {
           return;
@@ -483,10 +483,10 @@ final class nm extends hn {
           }
           stackIn_23_0 = lk.field_a;
           stackIn_24_1 = (param1) && (!vk.field_f);
-          ((ClientUiComponent) (Object) stackIn_23_0).b(stackIn_24_1, 20);
+          ((ClientUiComponent) (Object) stackIn_23_0).draw(stackIn_24_1, 20);
           stackIn_27_0 = pd.field_c;
           stackIn_28_1 = (param1) && (!vk.field_f);
-          ((ClientUiComponent) (Object) stackIn_27_0).b(stackIn_28_1, 20);
+          ((ClientUiComponent) (Object) stackIn_27_0).draw(stackIn_28_1, 20);
         }
         QuickChatPhraseRepository.b(-18862);
     }

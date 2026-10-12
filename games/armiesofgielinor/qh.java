@@ -11,7 +11,7 @@ final class qh {
           if (gk.field_J > 0) {
             bn.a(param0, param9, 117, param5);
           }
-          pi.field_N.field_O = ke.field_e.field_O;
+          pi.field_N.textHorizontalPadding = ke.field_e.textHorizontalPadding;
           pi.field_N.horizontalAlignment = 1;
           if (param7 > ~PreparedAction.field_r) {
             j.a(1, param9, param0, param5);
@@ -21,12 +21,12 @@ final class qh {
           }
           if (vk.field_f &&
             vu.field_M.field_Ub >= vu.field_M.field_nc) {
-            MapTile.field_f.field_Nb.text = TelefragEvent.field_y;
+            MapTile.field_f.viewport.text = TelefragEvent.field_y;
             IconTextComponent.field_Kb.inputEnabled = false;
-            ArchiveIndex.a(MapTile.field_f.field_Jb, param7 - 77);
+            ArchiveIndex.a(MapTile.field_f.content, param7 - 77);
           } else {
             IconTextComponent.field_Kb.inputEnabled = true;
-            MapTile.field_f.field_Nb.text = null;
+            MapTile.field_f.viewport.text = null;
             VertexNormal.a(param1, 255, param3, param5, MapTile.field_f);
           }
         } else {
@@ -38,7 +38,7 @@ final class qh {
               if (gk.field_J > 0) {
                 bn.a(param0, param9, 117, param5);
               }
-              pi.field_N.field_O = ke.field_e.field_O;
+              pi.field_N.textHorizontalPadding = ke.field_e.textHorizontalPadding;
               pi.field_N.horizontalAlignment = 1;
               if (param7 > ~PreparedAction.field_r) {
                 j.a(1, param9, param0, param5);
@@ -48,12 +48,12 @@ final class qh {
               }
               if (vk.field_f &&
                 vu.field_M.field_Ub >= vu.field_M.field_nc) {
-                MapTile.field_f.field_Nb.text = TelefragEvent.field_y;
+                MapTile.field_f.viewport.text = TelefragEvent.field_y;
                 IconTextComponent.field_Kb.inputEnabled = false;
-                ArchiveIndex.a(MapTile.field_f.field_Jb, param7 - 77);
+                ArchiveIndex.a(MapTile.field_f.content, param7 - 77);
               } else {
                 IconTextComponent.field_Kb.inputEnabled = true;
-                MapTile.field_f.field_Nb.text = null;
+                MapTile.field_f.viewport.text = null;
                 VertexNormal.a(param1, 255, param3, param5, MapTile.field_f);
               }
             } else {
@@ -62,7 +62,7 @@ final class qh {
               if (gk.field_J > 0) {
                 bn.a(param0, param9, 117, param5);
               }
-              pi.field_N.field_O = ke.field_e.field_O;
+              pi.field_N.textHorizontalPadding = ke.field_e.textHorizontalPadding;
               pi.field_N.horizontalAlignment = 1;
               if (param7 > ~PreparedAction.field_r) {
                 j.a(1, param9, param0, param5);
@@ -72,12 +72,12 @@ final class qh {
               }
               if (vk.field_f &&
                 vu.field_M.field_Ub >= vu.field_M.field_nc) {
-                MapTile.field_f.field_Nb.text = TelefragEvent.field_y;
+                MapTile.field_f.viewport.text = TelefragEvent.field_y;
                 IconTextComponent.field_Kb.inputEnabled = false;
-                ArchiveIndex.a(MapTile.field_f.field_Jb, param7 - 77);
+                ArchiveIndex.a(MapTile.field_f.content, param7 - 77);
               } else {
                 IconTextComponent.field_Kb.inputEnabled = true;
-                MapTile.field_f.field_Nb.text = null;
+                MapTile.field_f.viewport.text = null;
                 VertexNormal.a(param1, 255, param3, param5, MapTile.field_f);
               }
             }
@@ -99,7 +99,7 @@ final class qh {
               if (gk.field_J > 0) {
                 bn.a(param0, param9, 117, param5);
               }
-              pi.field_N.field_O = ke.field_e.field_O;
+              pi.field_N.textHorizontalPadding = ke.field_e.textHorizontalPadding;
               pi.field_N.horizontalAlignment = 1;
               if (param7 > ~PreparedAction.field_r) {
                 j.a(1, param9, param0, param5);
@@ -109,12 +109,12 @@ final class qh {
               }
               if (vk.field_f &&
                 vu.field_M.field_Ub >= vu.field_M.field_nc) {
-                MapTile.field_f.field_Nb.text = TelefragEvent.field_y;
+                MapTile.field_f.viewport.text = TelefragEvent.field_y;
                 IconTextComponent.field_Kb.inputEnabled = false;
-                ArchiveIndex.a(MapTile.field_f.field_Jb, param7 - 77);
+                ArchiveIndex.a(MapTile.field_f.content, param7 - 77);
               } else {
                 IconTextComponent.field_Kb.inputEnabled = true;
-                MapTile.field_f.field_Nb.text = null;
+                MapTile.field_f.viewport.text = null;
                 VertexNormal.a(param1, 255, param3, param5, MapTile.field_f);
               }
               jg.a(0, param3, param6, param1, param2, param4, param5);
@@ -134,7 +134,7 @@ final class qh {
             if (gk.field_J > 0) {
               bn.a(param0, param9, 117, param5);
             }
-            pi.field_N.field_O = ke.field_e.field_O;
+            pi.field_N.textHorizontalPadding = ke.field_e.textHorizontalPadding;
             pi.field_N.horizontalAlignment = 1;
             if (param7 > ~PreparedAction.field_r) {
               j.a(1, param9, param0, param5);
@@ -144,12 +144,12 @@ final class qh {
             }
             if (vk.field_f &&
               vu.field_M.field_Ub >= vu.field_M.field_nc) {
-              MapTile.field_f.field_Nb.text = TelefragEvent.field_y;
+              MapTile.field_f.viewport.text = TelefragEvent.field_y;
               IconTextComponent.field_Kb.inputEnabled = false;
-              ArchiveIndex.a(MapTile.field_f.field_Jb, param7 - 77);
+              ArchiveIndex.a(MapTile.field_f.content, param7 - 77);
             } else {
               IconTextComponent.field_Kb.inputEnabled = true;
-              MapTile.field_f.field_Nb.text = null;
+              MapTile.field_f.viewport.text = null;
               VertexNormal.a(param1, 255, param3, param5, MapTile.field_f);
             }
           } else {
@@ -157,7 +157,7 @@ final class qh {
             ClientUiComponent.c(param9, -120);
             if (gk.field_J > 0) {
               bn.a(param0, param9, 117, param5);
-              pi.field_N.field_O = ke.field_e.field_O;
+              pi.field_N.textHorizontalPadding = ke.field_e.textHorizontalPadding;
               pi.field_N.horizontalAlignment = 1;
               if (param7 > ~PreparedAction.field_r) {
                 j.a(1, param9, param0, param5);
@@ -167,16 +167,16 @@ final class qh {
               }
               if (vk.field_f &&
                 vu.field_M.field_Ub >= vu.field_M.field_nc) {
-                MapTile.field_f.field_Nb.text = TelefragEvent.field_y;
+                MapTile.field_f.viewport.text = TelefragEvent.field_y;
                 IconTextComponent.field_Kb.inputEnabled = false;
-                ArchiveIndex.a(MapTile.field_f.field_Jb, param7 - 77);
+                ArchiveIndex.a(MapTile.field_f.content, param7 - 77);
               } else {
                 IconTextComponent.field_Kb.inputEnabled = true;
-                MapTile.field_f.field_Nb.text = null;
+                MapTile.field_f.viewport.text = null;
                 VertexNormal.a(param1, 255, param3, param5, MapTile.field_f);
               }
             } else {
-              pi.field_N.field_O = ke.field_e.field_O;
+              pi.field_N.textHorizontalPadding = ke.field_e.textHorizontalPadding;
               pi.field_N.horizontalAlignment = 1;
               if (param7 > ~PreparedAction.field_r) {
                 j.a(1, param9, param0, param5);
@@ -186,16 +186,16 @@ final class qh {
               }
               if (!vk.field_f) {
                 IconTextComponent.field_Kb.inputEnabled = true;
-                MapTile.field_f.field_Nb.text = null;
+                MapTile.field_f.viewport.text = null;
                 VertexNormal.a(param1, 255, param3, param5, MapTile.field_f);
               } else {
                 if (vu.field_M.field_Ub >= vu.field_M.field_nc) {
-                  MapTile.field_f.field_Nb.text = TelefragEvent.field_y;
+                  MapTile.field_f.viewport.text = TelefragEvent.field_y;
                   IconTextComponent.field_Kb.inputEnabled = false;
-                  ArchiveIndex.a(MapTile.field_f.field_Jb, param7 - 77);
+                  ArchiveIndex.a(MapTile.field_f.content, param7 - 77);
                 } else {
                   IconTextComponent.field_Kb.inputEnabled = true;
-                  MapTile.field_f.field_Nb.text = null;
+                  MapTile.field_f.viewport.text = null;
                   VertexNormal.a(param1, 255, param3, param5, MapTile.field_f);
                 }
               }
@@ -211,14 +211,14 @@ final class qh {
         if (param1 == 0) {
           if (null != Spell.field_d) {
             SoftwareRaster.d(SoftwareRaster.clipLeft, SoftwareRaster.clipTop, -SoftwareRaster.clipLeft + SoftwareRaster.clipRight, -SoftwareRaster.clipTop + SoftwareRaster.clipBottom);
-            Spell.field_d.b(param0, 20);
+            Spell.field_d.draw(param0, 20);
           }
           return;
         }
         qh.a((byte) -15);
         if (null != Spell.field_d) {
           SoftwareRaster.d(SoftwareRaster.clipLeft, SoftwareRaster.clipTop, -SoftwareRaster.clipLeft + SoftwareRaster.clipRight, -SoftwareRaster.clipTop + SoftwareRaster.clipBottom);
-          Spell.field_d.b(param0, 20);
+          Spell.field_d.draw(param0, 20);
         }
     }
 

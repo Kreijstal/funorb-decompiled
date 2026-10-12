@@ -26,8 +26,8 @@ final class np extends ClientUiComponent {
             this.d((byte) 111);
           }
           this.field_Sb[this.field_Lb] = new IconTextComponent(0L, (ClientUiComponent) null, (ClientUiComponent) null, this.field_Tb, param3, param1);
-          this.field_Sb[this.field_Lb].field_mb = this.field_Ub;
-          this.field_Sb[this.field_Lb].field_ub = true;
+          this.field_Sb[this.field_Lb].matchedButtonSkinSprites = this.field_Ub;
+          this.field_Sb[this.field_Lb].drawSkinInParentBounds = true;
           this.field_Sb[this.field_Lb].verticalAlignment = 1;
           this.addChild(this.field_Sb[this.field_Lb], 86);
           this.field_Mb[this.field_Lb] = param2;
@@ -150,8 +150,8 @@ final class np extends ClientUiComponent {
             np.k(-112);
           }
           this.field_Sb[this.field_Lb] = new IconTextComponent(0L, (ClientUiComponent) null, (ClientUiComponent) null, this.field_Tb, (RgbSprite) null, param1);
-          this.field_Sb[this.field_Lb].field_mb = this.field_Ub;
-          this.field_Sb[this.field_Lb].field_ub = true;
+          this.field_Sb[this.field_Lb].matchedButtonSkinSprites = this.field_Ub;
+          this.field_Sb[this.field_Lb].drawSkinInParentBounds = true;
           this.field_Sb[this.field_Lb].verticalAlignment = 1;
           this.addChild(this.field_Sb[this.field_Lb], 55);
           this.field_Mb[this.field_Lb] = param0;

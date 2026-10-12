@@ -154,9 +154,9 @@ final class IconTextComponent extends ClientUiComponent {
           if (text != null) {
             this.textComponent = new ClientUiComponent(0L, textStyle, text);
             this.addChild(this.textComponent, 41);
-            this.useParentClipForDescendants(-10027);
+            this.inheritVisualStateForDescendants(-10027);
           } else {
-            this.useParentClipForDescendants(-10027);
+            this.inheritVisualStateForDescendants(-10027);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

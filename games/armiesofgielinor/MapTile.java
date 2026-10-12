@@ -4,7 +4,7 @@
 final class MapTile implements TaggedFieldReader {
     int terrainType;
     private Battlefield battlefield;
-    static dn field_f;
+    static ScrollContainer field_f;
     Unit occupant;
     boolean field_b;
     int godId;
@@ -630,7 +630,7 @@ final class MapTile implements TaggedFieldReader {
           this.metadata = new TileMetadata();
         }
         if (!obfuscationGuard) {
-          field_f = (dn) null;
+          field_f = (ScrollContainer) null;
         }
         this.metadata.ownerPlayer = ownerPlayer;
         this.metadata.modifierFlags = this.metadata.modifierFlags | 16;

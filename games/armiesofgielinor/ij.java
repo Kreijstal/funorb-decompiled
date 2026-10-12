@@ -512,7 +512,7 @@ final class ij extends dv {
               decompiledCaughtException = decompiledCaughtParameter0;
               var3 = (ef) (Object) decompiledCaughtException;
               param0 = "<col=55ff55>" + param0.substring(0, var3.field_b) + "</col>" + param0.substring(var3.field_b);
-              var4 = (ClientUiComponent) (this.field_d.field_Jb.children.last((byte) -98));
+              var4 = (ClientUiComponent) (this.field_d.content.children.last((byte) -98));
               var4.text = this.field_c + param0;
               return false;
             } catch (cb decompiledCaughtParameter1) {

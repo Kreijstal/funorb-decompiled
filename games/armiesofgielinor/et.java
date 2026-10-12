@@ -231,7 +231,7 @@ final class et {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 == -1) {
-            stackIn_4_0 = bu.field_a.field_Jb;
+            stackIn_4_0 = bu.field_a.content;
             return stackIn_4_0;
           }
           stackIn_2_0 = (ClientUiComponent) null;

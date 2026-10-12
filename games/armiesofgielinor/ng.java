@@ -545,7 +545,7 @@ final class ng {
         return this.field_r;
     }
 
-    final static void a(dn param0, ClientUiComponent param1, int[] param2, String param3, int param4, int param5, int param6, String param7, long param8) {
+    final static void a(ScrollContainer param0, ClientUiComponent param1, int[] param2, String param3, int param4, int param5, int param6, String param7, long param8) {
         try {
           int var10_int = -119 % ((param5 + 47) / 32);
           PointerInputHandler.field_b = param0;
@@ -739,8 +739,8 @@ final class ng {
         if (jl.field_b != null) {
           UpkeepEvent.field_z = jl.field_b;
           rb.field_b = ArchiveProvider.field_d;
-          UpkeepEvent.field_z.field_W = -1;
-          UpkeepEvent.field_z.field_T = -1;
+          UpkeepEvent.field_z.matchedButtonTextColour = -1;
+          UpkeepEvent.field_z.heldPressTextColour = -1;
           jl.field_b = null;
           ArchiveProvider.field_d = null;
         }

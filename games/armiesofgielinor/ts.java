@@ -72,7 +72,7 @@ final class ts {
           sb.field_i.setBounds(param3, -20500, var9_int, 0, 0);
           var12 = 5 + param4 + var10;
           StrongCacheEntry.field_C.setBounds(var12, -20500, var9_int, param3, 0);
-          StrongCacheEntry.field_C.field_G = tq.a(11579568, false, StrongCacheEntry.field_C.height, 2105376, 3, 8421504);
+          StrongCacheEntry.field_C.skinSprites = tq.a(11579568, false, StrongCacheEntry.field_C.height, 2105376, 3, 8421504);
           var12 = var12 + param3;
           UnitCycler.field_g.setBounds(var12, -20500, var9_int, param8 - var12 / 2, -(var9_int / 2) + param1);
         } catch (RuntimeException runtimeException) {

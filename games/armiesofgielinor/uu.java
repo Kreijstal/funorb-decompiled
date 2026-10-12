@@ -110,7 +110,7 @@ final class uu {
                 lm.field_b.text = TelefragEvent.field_y.toUpperCase();
                 lm.field_b.inputEnabled = false;
               }
-              lm.field_b.field_G = nd.field_a.field_G;
+              lm.field_b.skinSprites = nd.field_a.skinSprites;
               if (0 < AnimationPlayer.field_a) {
                 boolean decompiledSharedTail0 = (1 != AnimationPlayer.field_a);
                 if (!decompiledSharedTail0) {
@@ -122,7 +122,7 @@ final class uu {
                 }
                 if (0 == (16 & hg.field_b) &&
                   !vk.field_f) {
-                  lm.field_b.field_G = nd.field_a.field_mb;
+                  lm.field_b.skinSprites = nd.field_a.matchedButtonSkinSprites;
                 }
                 lm.field_b.text = lm.field_b.text + "<br>" + var10_ref_String;
               }
@@ -284,7 +284,7 @@ final class uu {
                 if (decompiledNaturalLoopExit0) {
                   var16 = 0;
                 }
-                var17 = bu.field_a.field_Jb.children;
+                var17 = bu.field_a.content.children;
                 var18_ref = (of) (var17.first((byte) 110));
                 scanLoop3: while (true) {
                   boolean decompiledFrameRemainder0 = true;

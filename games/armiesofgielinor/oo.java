@@ -419,7 +419,7 @@ final class oo {
             bh.field_H.ensureGroupAvailableByName(28979, "pump32")) {
             UnitLossCondition.field_a = pv.a("members_expansion_screen", "frame", iw.field_p, 24914);
             ByteStorage.field_d = GameplayController.a("arrow", (byte) 51, "members_expansion_screen", iw.field_p);
-            ll.field_Sb = DropdownArrowPainter.a("arialish12", iw.field_p, bh.field_H, (byte) -53, "");
+            VerticalScrollbar.field_Sb = DropdownArrowPainter.a("arialish12", iw.field_p, bh.field_H, (byte) -53, "");
             kt.field_n = it.a("", iw.field_p, bh.field_H, (byte) -87, "pump32");
             UnitModelPreview.field_b = DiskCacheRequest.a("benefit_orbs", "members_expansion_screen", iw.field_p, false);
             QuickChatPhrase.field_D = DiskCacheRequest.a("button_text", "members_expansion_screen", iw.field_p, false);
@@ -462,11 +462,11 @@ final class oo {
             }
           }
           this.field_m.g(16, 302);
-          ll.field_Sb.a(this.field_k[this.field_n], 9, 257, 622, 33, 16754688, -1, 1, 1, 0);
+          VerticalScrollbar.field_Sb.a(this.field_k[this.field_n], 9, 257, 622, 33, 16754688, -1, 1, 1, 0);
           UnitModelPreview.field_b.g(30, 330);
-          ll.field_Sb.a(db.field_e[0], 17, 428, 111, 35, 16754688, -1, 1, 1, 0);
-          ll.field_Sb.a(db.field_e[1], 138, 428, 111, 35, 16754688, -1, 1, 1, 0);
-          ll.field_Sb.a(db.field_e[2], 259, 428, 111, 35, 16754688, -1, 1, 1, 0);
+          VerticalScrollbar.field_Sb.a(db.field_e[0], 17, 428, 111, 35, 16754688, -1, 1, 1, 0);
+          VerticalScrollbar.field_Sb.a(db.field_e[1], 138, 428, 111, 35, 16754688, -1, 1, 1, 0);
+          VerticalScrollbar.field_Sb.a(db.field_e[2], 259, 428, 111, 35, 16754688, -1, 1, 1, 0);
           QuickChatPhrase.field_D.g((127 - QuickChatPhrase.field_D.canvasWidth) / 2 + 508, 315);
           if (0 != this.field_h.selectedIndex) {
             if (this.field_h.selectedIndex == 1) {
@@ -496,8 +496,8 @@ final class oo {
         var5 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           if (null == this.field_i) {
-            if (null != ll.field_Sb) {
-              ll.field_Sb.a(ef.field_a, 9, 58, 622, 196, 16754688, -1, 1, 1, 0);
+            if (null != VerticalScrollbar.field_Sb) {
+              VerticalScrollbar.field_Sb.a(ef.field_a, 9, 58, 622, 196, 16754688, -1, 1, 1, 0);
             }
             return;
           }
@@ -507,8 +507,8 @@ final class oo {
           var6 = this.field_i[this.field_n];
           var2 = var6;
           if (var2 == null) {
-            if (ll.field_Sb != null) {
-              ll.field_Sb.a(ef.field_a, 9, 58, 622, 196, 16754688, -1, 1, 1, 0);
+            if (VerticalScrollbar.field_Sb != null) {
+              VerticalScrollbar.field_Sb.a(ef.field_a, 9, 58, 622, 196, 16754688, -1, 1, 1, 0);
             }
           } else {
             var6.draw(9, 58);

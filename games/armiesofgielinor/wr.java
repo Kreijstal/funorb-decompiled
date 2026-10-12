@@ -45,13 +45,13 @@ final class wr extends hs implements he {
           vu.field_Q.text = param1;
           var2_int = so.field_b.field_a;
           var3 = so.field_b.field_g;
-          var4 = vu.field_Q.font.getParagraphHeight(param1, 272, vu.field_Q.field_pb);
+          var4 = vu.field_Q.font.getParagraphHeight(param1, 272, vu.field_Q.textLineSpacing);
           var5 = -(var4 / 2) + var3 / 2 - 103;
           if (param0 < 27) {
             field_J = -20;
           }
           qc.field_c.setBounds(-(var5 * 2) + (-120 + var3), -20500, 320, var5, (var2_int - 320) / 2);
-          qc.field_c.field_G = tq.a(11579568, false, qc.field_c.height, 2105376, 3, 8421504);
+          qc.field_c.skinSprites = tq.a(11579568, false, qc.field_c.height, 2105376, 3, 8421504);
           vu.field_Q.setBounds(-20 + (qc.field_c.height - 24), -20500, qc.field_c.width - 48, 16, 24);
           td.field_g.setBounds(24, -20500, 80, qc.field_c.height - 20 - 24, 120);
         } catch (RuntimeException runtimeException) {

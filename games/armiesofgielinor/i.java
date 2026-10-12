@@ -308,7 +308,7 @@ final class i extends ClientUiComponent {
         RuntimeException decompiledCaughtException = null;
         try {
           param4 += 8;
-          var6_int = param3.font.getParagraphHeight(param3.text, -(param3.field_O * param1) + param0, param3.field_pb);
+          var6_int = param3.font.getParagraphHeight(param3.text, -(param3.textHorizontalPadding * param1) + param0, param3.textLineSpacing);
           param3.setBounds(var6_int, -20500, param0, param4, 0);
           param4 = param4 + (var6_int - 0);
           param2.addChild(param3, 57);
@@ -439,16 +439,16 @@ final class i extends ClientUiComponent {
           if (param11 != null) {
             this.field_Vb = new ClientUiComponent(0L, param8, ii.field_c);
             this.field_Vb.horizontalAlignment = 1;
-            this.field_Vb.field_N = 11184810;
+            this.field_Vb.textColour = 11184810;
             this.field_Tb.addChild(this.field_Vb, 116);
             this.field_Pb = new ClientUiComponent(0L, param8, mk.field_d);
             this.field_Pb.horizontalAlignment = 1;
-            this.field_Pb.field_N = 11184810;
+            this.field_Pb.textColour = 11184810;
             this.field_Tb.addChild(this.field_Pb, 119);
             this.field_Rb = new ClientUiComponent(0L, param8);
-            this.field_Rb.field_N = 16764006;
+            this.field_Rb.textColour = 16764006;
             this.field_Tb.addChild(this.field_Rb, 63);
-            this.field_Rb.field_I = "|";
+            this.field_Rb.blinkTextSuffix = "|";
             if (!(tf.field_l < 5) ||
               !(BufferedSocket.field_j < 2)) {
               regionExit1: {
@@ -584,7 +584,7 @@ final class i extends ClientUiComponent {
             var28[2].setBounds(var17Lifetime5, -20500, var16Lifetime2, var21, 26 + (2 * var16Lifetime2 + 13));
             var22 = var21;
             this.field_Tb.setBounds(10 + var17Lifetime5 + var22, -20500, var19 + 13 + 13, 24, 0);
-            this.field_Tb.field_G = tq.a(11579568, false, this.field_Tb.height, 2105376, 3, 8421504);
+            this.field_Tb.skinSprites = tq.a(11579568, false, this.field_Tb.height, 2105376, 3, 8421504);
             var23 = var19 + 26;
             var24 = 10 + (var17Lifetime5 + (var22 + 24));
             var25 = jp.a(param0, param2, var23, -1);
@@ -594,7 +594,7 @@ final class i extends ClientUiComponent {
           }
           this.field_Vb = new ClientUiComponent(0L, param8, ot.field_F);
           this.field_Vb.horizontalAlignment = 1;
-          this.field_Vb.field_N = 11184810;
+          this.field_Vb.textColour = 11184810;
           this.field_Tb.addChild(this.field_Vb, 43);
           var15_int = 226;
           var16Lifetime1 = 10;
@@ -602,7 +602,7 @@ final class i extends ClientUiComponent {
           this.field_Vb.setBounds(jn.field_d * var17Lifetime1, -20500, var15_int, var16Lifetime1, 13);
           var16Lifetime1 = var16Lifetime1 + jn.field_d * var17Lifetime1;
           this.field_Tb.setBounds(var16Lifetime1 + 10, -20500, 13 + (var15_int + 13), 24, 0);
-          this.field_Tb.field_G = tq.a(11579568, false, this.field_Tb.height, 2105376, 3, 8421504);
+          this.field_Tb.skinSprites = tq.a(11579568, false, this.field_Tb.height, 2105376, 3, 8421504);
           var18Lifetime1 = 13 + var15_int + 13;
           var19Lifetime1 = var16Lifetime1 + 34;
           var20Lifetime1 = jp.a(param0, param2, var18Lifetime1, -1);

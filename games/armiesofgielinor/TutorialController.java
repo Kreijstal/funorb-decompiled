@@ -3835,7 +3835,7 @@ final class TutorialController {
           }
           if (itemId == 33) {
             if (vg.field_m) {
-              var3 = DisplacedUnitMarker.field_t[33] + dn.field_Mb;
+              var3 = DisplacedUnitMarker.field_t[33] + ScrollContainer.field_Mb;
               if (var4 != 0) {
                 var3 = DisplacedUnitMarker.field_t[33] + qd.field_J;
               }
@@ -4008,7 +4008,7 @@ final class TutorialController {
                 var6 = "";
                 var6Lifetime1 = ut.field_cb[var5];
                 var7 = bh.field_M[var5];
-                this.a(var7, bw.unitDefinitions[var5][0], ve.a((byte) 13, dn.unitDisplayNames[var5]), this.f(var5, 8), (byte) 116, var6Lifetime1);
+                this.a(var7, bw.unitDefinitions[var5][0], ve.a((byte) 13, ScrollContainer.unitDisplayNames[var5]), this.f(var5, 8), (byte) 116, var6Lifetime1);
               } else {
                 this.a((String) null, -1, ve.a((byte) 13, wf.field_q[li.field_q + 1]), (String) null, (byte) -55, GlobalSpell.field_l[li.field_q + 1]);
               }
@@ -4605,7 +4605,7 @@ final class TutorialController {
           }
           var2_intLifetime1 = 69 / ((param0 + 36) / 37);
           if (!SpellCastAction.field_t &&
-            !dn.field_Qb &&
+            !ScrollContainer.field_Qb &&
             null == mu.field_a) {
             while (true) {
               if (Unit.i((byte) 102)) {

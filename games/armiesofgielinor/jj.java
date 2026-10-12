@@ -246,7 +246,7 @@ final class jj {
           if (tn.field_Z != null) {
             return true;
           }
-          if (dn.l(0)) {
+          if (ScrollContainer.l(0)) {
             return true;
           }
           if (Spell.field_b != null) {
@@ -264,7 +264,7 @@ final class jj {
         if (tn.field_Z != null) {
           return true;
         }
-        if (dn.l(0)) {
+        if (ScrollContainer.l(0)) {
           return true;
         }
         if (Spell.field_b != null) {

@@ -284,7 +284,7 @@ final class co {
         }
         byte[] var3 = fd.field_m.getFileByName(this.field_x, param0 ^ 108, "");
         byte[] var2 = var3;
-        return new RgbSprite(var3, (java.awt.Component) ((Object) ll.p(0)));
+        return new RgbSprite(var3, (java.awt.Component) ((Object) VerticalScrollbar.p(0)));
     }
 
     static {

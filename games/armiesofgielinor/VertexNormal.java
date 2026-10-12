@@ -11,9 +11,9 @@ final class VertexNormal {
     int z;
     int contributions;
 
-    final static void a(int param0, int param1, boolean param2, int param3, dn param4) {
+    final static void a(int param0, int param1, boolean param2, int param3, ScrollContainer param4) {
         int var27_int = 0;
-        dn stackIn_40_0;
+        ScrollContainer stackIn_40_0;
         boolean stackIn_40_1;
         int stackIn_40_2;
         int stackIn_40_3;
@@ -124,14 +124,14 @@ final class VertexNormal {
               }
             }
           }
-          stackIn_40_0 = (dn) (param4);
+          stackIn_40_0 = (ScrollContainer) (param4);
           stackIn_40_1 = param2;
           stackIn_40_2 = param0 * (8 + jn.field_d * 4);
           stackIn_40_3 = jn.field_d * 2 + 4;
           stackIn_41_4 = (param4 == PointerInputHandler.field_b);
-          stackIn_44_0 = (!((dn) (Object) stackIn_40_0).a(stackIn_40_1, stackIn_40_2, stackIn_40_3, stackIn_41_4, 0, 2)) ? 0 : 1;
+          stackIn_44_0 = (!((ScrollContainer) (Object) stackIn_40_0).updateContentLayout(stackIn_40_1, stackIn_40_2, stackIn_40_3, stackIn_41_4, 0, 2)) ? 0 : 1;
           var9Lifetime1 = stackIn_44_0;
-          var10 = param4.field_Jb.children;
+          var10 = param4.content.children;
           var11 = null;
           if (param1 != 255) {
             return;
@@ -149,7 +149,7 @@ final class VertexNormal {
               var12.field_Tb.horizontalAlignment = 2;
               var12.field_fc = new ClientUiComponent(0L, eq.field_h);
               var12.addChild(var12.field_fc, 62);
-              var12.useParentClipForDescendants(-10027);
+              var12.inheritVisualStateForDescendants(-10027);
               var12.field_dc = new ClientUiComponent(0L, QuickChatPhraseRepository.field_d);
               var12.addChild(var12.field_dc, param1 - 194);
               var12.field_ec = new ClientUiComponent(0L, pt.field_X);
@@ -176,7 +176,7 @@ final class VertexNormal {
             var12.field_fc.height = 0;
             var18 = var12.field_fc;
             var18.width = 0;
-            var12.width = param4.field_Jb.width;
+            var12.width = param4.content.width;
             var19 = 0;
             var32 = var12.field_Yb;
             var21 = 72;
@@ -206,18 +206,18 @@ final class VertexNormal {
                 var23_int = 8414771;
                 var24_int = 8421504;
               }
-              var12.field_ac.field_wb = var24_int;
-              var12.field_ac.field_T = var24_int;
-              var12.field_ac.field_W = var24_int;
-              var12.field_dc.field_N = var23_int;
-              var12.field_Tb.field_N = var23_int;
-              var12.field_ac.field_N = var23_int;
-              var12.field_Tb.field_wb = var24_int;
-              var12.field_Tb.field_T = var24_int;
-              var12.field_Tb.field_W = var24_int;
-              var12.field_dc.field_wb = var24_int;
-              var12.field_dc.field_T = var24_int;
-              var12.field_dc.field_W = var24_int;
+              var12.field_ac.selectedTextColour = var24_int;
+              var12.field_ac.heldPressTextColour = var24_int;
+              var12.field_ac.matchedButtonTextColour = var24_int;
+              var12.field_dc.textColour = var23_int;
+              var12.field_Tb.textColour = var23_int;
+              var12.field_ac.textColour = var23_int;
+              var12.field_Tb.selectedTextColour = var24_int;
+              var12.field_Tb.heldPressTextColour = var24_int;
+              var12.field_Tb.matchedButtonTextColour = var24_int;
+              var12.field_dc.selectedTextColour = var24_int;
+              var12.field_dc.heldPressTextColour = var24_int;
+              var12.field_dc.matchedButtonTextColour = var24_int;
               if (bu.field_a != param4) {
                 if (var12.field_Wb) {
                   var12.field_ac.text = fo.a(param1 ^ 4671, AiPlanningStrategy.field_g, new String[]{var20});
@@ -290,7 +290,7 @@ final class VertexNormal {
             var24Lifetime1 = var23;
             if (var23 != null) {
               var24_intLifetime1 = var12.field_fc.font.c(var23, -mi.field_l + (var12.width - mi.field_l));
-              var12.field_fc.opacity = var12.field_Rb * 256 / qd.field_K;
+              var12.field_fc.textOpacity = var12.field_Rb * 256 / qd.field_K;
               var12.field_fc.text = var23;
               var12.field_fc.setBounds(var24_intLifetime1 * jn.field_d, -20500, var12.width - 2 * mi.field_l, var19, mi.field_l);
               var19 = var19 + jn.field_d * var24_intLifetime1;
@@ -299,7 +299,7 @@ final class VertexNormal {
               var12.pendingHeightDelta = var19 - var12.height;
             }
             if (var13 != 0) {
-              param4.field_Jb.a(var12, true, 2, (ClientUiComponent) (var11));
+              param4.content.positionAfter(var12, true, 2, (ClientUiComponent) (var11));
             }
             if (var12.pressedButton != 0 &&
               !var12.k(0)) {

@@ -483,10 +483,10 @@ final class tg {
     final void a(byte param0, boolean param1) {
         if (param0 != -108) {
           tg.a(-128);
-          this.field_i.b(param1, 20);
+          this.field_i.draw(param1, 20);
           return;
         }
-        this.field_i.b(param1, 20);
+        this.field_i.draw(param1, 20);
     }
 
     final boolean c(byte param0) {

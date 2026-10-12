@@ -9,7 +9,7 @@ final class mj {
     final static void a(byte param0) {
         rj.field_F.setBounds(18, -20500, IconTextComponent.field_Kb.width - (!fh.field_c ? 0 : 40 + (jn.field_c + 4)), 0, 0);
         CampaignProgress.field_a.setBounds(18, -20500, jn.field_c + 42, 0, -2 + (IconTextComponent.field_Kb.width - jn.field_c - 40));
-        MapTile.field_f.a(0, false, IconTextComponent.field_Kb.width, 2, jn.field_c, 20, IconTextComponent.field_Kb.height - 20);
+        MapTile.field_f.setLayout(0, false, IconTextComponent.field_Kb.width, 2, jn.field_c, 20, IconTextComponent.field_Kb.height - 20);
         if (param0 >= 29) {
           return;
         }

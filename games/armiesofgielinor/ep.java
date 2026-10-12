@@ -33,7 +33,7 @@ final class ep {
         if (param0 >= -15) {
           this.a(29);
         }
-        return new RgbSprite(PopupPresentation.field_j.getFileByName("intro" + (param1 + 1) + ".jpg", -125, ""), (java.awt.Component) ((Object) ll.p(0)));
+        return new RgbSprite(PopupPresentation.field_j.getFileByName("intro" + (param1 + 1) + ".jpg", -125, ""), (java.awt.Component) ((Object) VerticalScrollbar.p(0)));
     }
 
     final void a(boolean param0) {
@@ -421,7 +421,7 @@ final class ep {
           var4 = sb.field_i.text;
           String var3 = var4;
           sb.field_i.text = param1;
-          UnitCycler.field_g.b(param2, 20);
+          UnitCycler.field_g.draw(param2, 20);
           sb.field_i.text = var4;
         } catch (RuntimeException runtimeException) {
           throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "ep.H(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');

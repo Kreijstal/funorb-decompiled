@@ -8,7 +8,7 @@ final class WeightedLruCache {
     static int field_d;
     private IterableDualNodeDeque lruEntries;
     private IterableNodeHashTable entries;
-    static ll field_b;
+    static VerticalScrollbar field_b;
 
     final Object get(long key, byte obfuscationGuard) {
         StrongCacheEntry promotedEntry = null;

@@ -7,7 +7,7 @@ final class mp extends ClientUiComponent {
     ClientUiComponent field_Ib;
     ClientUiComponent field_Nb;
     static RgbSprite field_Jb;
-    dn field_Kb;
+    ScrollContainer field_Kb;
     static QuickChatCategoryRepository quickChatCategories;
     static String field_Pb;
     static ClientUiComponent field_Lb;
@@ -15,7 +15,7 @@ final class mp extends ClientUiComponent {
     static ClientUiComponent field_Qb;
 
     mp(long param0, mp param1, String param2, String param3) {
-        this(param0, param1, param1.field_Kb.field_Nb, param1.field_Kb.field_Ib, param1.field_Ib, param2, param3);
+        this(param0, param1, param1.field_Kb.viewport, param1.field_Kb.scrollbar, param1.field_Ib, param2, param3);
     }
 
     final void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, byte param7) {
@@ -53,11 +53,11 @@ final class mp extends ClientUiComponent {
         field_Lb = null;
     }
 
-    mp(long param0, ClientUiComponent param1, ClientUiComponent param2, ll param3, ClientUiComponent param4, String param5, String param6) {
+    mp(long param0, ClientUiComponent param1, ClientUiComponent param2, VerticalScrollbar param3, ClientUiComponent param4, String param5, String param6) {
         super(param0, param1);
         try {
           this.field_Nb = new ClientUiComponent(0L, (ClientUiComponent) null);
-          this.field_Kb = new dn(0L, this.field_Nb, param2, param3);
+          this.field_Kb = new ScrollContainer(0L, this.field_Nb, param2, param3);
           this.field_Ib = new ClientUiComponent(0L, param4);
           this.field_Rb = new ClientUiComponent(0L, param4);
           this.field_Ib.text = param5;
@@ -80,7 +80,7 @@ final class mp extends ClientUiComponent {
     final void a(byte param0, int param1, int param2, int param3) {
         int var5 = (this.width + param3) / 2;
         int var6 = this.height - param2;
-        this.field_Kb.a(0, false, this.width, param3, param1, 0, -param3 + var6);
+        this.field_Kb.setLayout(0, false, this.width, param3, param1, 0, -param3 + var6);
         this.field_Ib.x = 0;
         this.field_Ib.height = param2;
         this.field_Ib.y = var6;

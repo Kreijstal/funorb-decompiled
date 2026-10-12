@@ -392,9 +392,9 @@ final class oc extends ClientUiComponent {
           this.field_Lb = new ClientUiComponent(0L, param6, param4);
           this.addChild(this.field_Lb, 112);
           this.field_Mb = new ClientUiComponent(0L, param7);
-          this.field_Mb.field_N = 16764006;
+          this.field_Mb.textColour = 16764006;
           this.addChild(this.field_Mb, 74);
-          this.field_Mb.field_I = "|";
+          this.field_Mb.blinkTextSuffix = "|";
           this.field_Qb = new StringBuilder(12);
           var9_int = this.field_Lb.getPreferredWidth(122);
           this.field_Lb.setBounds(jn.field_d, -20500, var9_int, 3, 5);

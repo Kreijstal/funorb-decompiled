@@ -139,12 +139,12 @@ final class PaletteRegionMap {
         try {
           var13_int = -103 % ((-17 - param11) / 52);
           var14 = new ClientUiComponent(0L, (ClientUiComponent) null);
-          var14.field_G = tn.a(true, param12, param3);
-          var14.field_mb = tn.a(true, param4, param8);
-          var14.field_U = tn.a(true, param1, param7);
-          var14.field_H = tn.a(true, param10, param9);
-          var14.field_A = tn.a(true, param2, param0);
-          var14.field_N = param5;
+          var14.skinSprites = tn.a(true, param12, param3);
+          var14.matchedButtonSkinSprites = tn.a(true, param4, param8);
+          var14.heldPressSkinSprites = tn.a(true, param1, param7);
+          var14.selectedSkinSprites = tn.a(true, param10, param9);
+          var14.disabledSkinSprites = tn.a(true, param2, param0);
+          var14.textColour = param5;
           var14.font = param6;
           stackIn_1_0 = var14;
           return stackIn_1_0;
