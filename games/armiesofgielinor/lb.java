@@ -19,9 +19,9 @@ final class lb {
     final static boolean b(int param0) {
         if (param0 != 0) {
           field_e = (IndexedSprite[]) null;
-          return ub.field_e;
+          return RadialSummonMenu.field_e;
         }
-        return ub.field_e;
+        return RadialSummonMenu.field_e;
     }
 
     public static void a(int param0) {

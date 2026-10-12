@@ -742,7 +742,7 @@ abstract class hs extends kb implements gw {
         sn var3 = MoveAttackRequest.field_v[param1];
         if (var3 != null &&
           0 != var3.field_o.length) {
-          ub.$cfr$intArgs$a$6d836999ad61(127, var3);
+          RadialSummonMenu.$cfr$intArgs$a$6d836999ad61(127, var3);
         }
     }
 

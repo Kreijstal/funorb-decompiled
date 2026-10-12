@@ -328,17 +328,17 @@ final class DiskCacheWorker implements Runnable {
     }
 
     final static void a(int param0) {
-        if (!(sj.field_d <= 0)) {
-          sj.field_d = sj.field_d - 1;
+        if (!(TurnTimerDial.field_d <= 0)) {
+          TurnTimerDial.field_d = TurnTimerDial.field_d - 1;
         }
         if (param0 != -10232) {
           DiskCacheWorker.a(-87, -49, 69, -51, 90, -121, false);
         }
-        if (so.field_b.field_g != gb.field_y) {
-          sh.field_l = sh.field_l + (so.field_b.field_g - gb.field_y);
-          gb.field_y = so.field_b.field_g;
+        if (so.field_b.field_g != EquipmentBattleTutorial.field_y) {
+          sh.field_l = sh.field_l + (so.field_b.field_g - EquipmentBattleTutorial.field_y);
+          EquipmentBattleTutorial.field_y = so.field_b.field_g;
         }
-        if (!(sj.field_d <= 0)) {
+        if (!(TurnTimerDial.field_d <= 0)) {
           vi.a(-67);
         }
     }

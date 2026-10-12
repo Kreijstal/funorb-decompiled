@@ -20,11 +20,11 @@ final class bw {
         int var2;
         var2 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         if (rd.field_j.field_u) {
-          if (0 == (1 << rd.field_j.field_q & rd.field_j.battlefield.field_i)) {
+          if (0 == (1 << rd.field_j.controlledPlayerId & rd.field_j.battlefield.field_i)) {
             if (rd.field_j.battlefield.field_i != 0) {
               DisplacedUnitMarker.field_t[12] = CampaignUnitOverride.field_c;
             } else {
-              if ((1 << rd.field_j.field_q | rd.field_j.field_hb) != (1 << rd.field_j.battlefield.playerCount) - 1) {
+              if ((1 << rd.field_j.controlledPlayerId | rd.field_j.field_hb) != (1 << rd.field_j.battlefield.playerCount) - 1) {
                 DisplacedUnitMarker.field_t[12] = fa.field_e;
               } else {
                 DisplacedUnitMarker.field_t[12] = ml.field_Nb;
@@ -34,13 +34,13 @@ final class bw {
             DisplacedUnitMarker.field_t[12] = ti.field_a;
           }
         } else {
-          if (0 != (1 << rd.field_j.field_q & rd.field_j.battlefield.field_i)) {
+          if (0 != (1 << rd.field_j.controlledPlayerId & rd.field_j.battlefield.field_i)) {
             DisplacedUnitMarker.field_t[12] = is.field_c;
           } else {
             if (rd.field_j.battlefield.field_i != 0) {
               DisplacedUnitMarker.field_t[12] = lk.field_s;
             } else {
-              if (-1 + (1 << rd.field_j.battlefield.playerCount) != (1 << rd.field_j.field_q | rd.field_j.field_hb)) {
+              if (-1 + (1 << rd.field_j.battlefield.playerCount) != (1 << rd.field_j.controlledPlayerId | rd.field_j.field_hb)) {
                 DisplacedUnitMarker.field_t[12] = db.field_h;
               } else {
                 DisplacedUnitMarker.field_t[12] = ji.field_b;

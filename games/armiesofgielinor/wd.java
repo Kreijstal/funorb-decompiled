@@ -68,7 +68,7 @@ final class wd {
               if (null != CipherPacketBuffer.currentBattlefield) {
                 var11 = CipherPacketBuffer.currentBattlefield.getPlayerTeamIndex(var11, -1);
               }
-              eu.a(param1 + 22, var11, ug.field_b + var6_int, 92, 20 + param4);
+              UnitCycler.a(param1 + 22, var11, ug.field_b + var6_int, 92, 20 + param4);
             }
             if (var7.hasModifierFlag4((byte) -125)) {
               GameEvent.a(20 + param4, true, var6_int + ug.field_b, var7.ownerPlayer, param1 + 22);
@@ -76,7 +76,7 @@ final class wd {
             fs.a(param4, false, param0, var9, param1, var6_int, param5, var8, param3);
             return;
           }
-          gb.a(param3, param5, param1, param4, (byte) -82);
+          EquipmentBattleTutorial.a(param3, param5, param1, param4, (byte) -82);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -177,14 +177,14 @@ final class wd {
             } else {
               var2 = fo.a(4800, pt.field_gb, new String[]{qd.field_G});
             }
-            if (iu.field_h) {
+            if (BattleTutorial.field_h) {
               ta.a((String) null, 2, -18119, (String) null, (String) (var2), 0);
               qu.e(-3);
             }
           }
           if (null == var2 &&
             !cu.field_c &&
-            null == eu.field_g) {
+            null == UnitCycler.field_g) {
             var2 = uq.field_w;
           }
           if (var2 != null) {

@@ -999,7 +999,7 @@ final class AiPlanner extends IntrusiveNode implements UnitObserver {
                     continue scanLoop1;
                 }
                 case 1: {
-                    if (this.battlefield.field_B[this.playerId] == null) {
+                    if (this.battlefield.equippedSpellIds[this.playerId] == null) {
                         /* Inlined CFG state: 3. */
                         {
                             return;
@@ -1010,7 +1010,7 @@ final class AiPlanner extends IntrusiveNode implements UnitObserver {
                             if (param2 == 23) {
                                 /* Inlined CFG state: 6. */
                                 {
-                                    var4 = this.battlefield.field_B[this.playerId][param1];
+                                    var4 = this.battlefield.equippedSpellIds[this.playerId][param1];
                                     if (var4 != -1) {
                                         statePc = 8;
                                     } else {
@@ -1762,7 +1762,7 @@ final class AiPlanner extends IntrusiveNode implements UnitObserver {
                   if ((var36Lifetime1.terrainType != 11 ||
                     var36Lifetime1.godId == var19) &&
                     (-1 != var19 ||
-                    (this.battlefield.field_a[this.playerId][var19 + 1] & 1 << b.getUnitUnlockOrdinal(false, var18)) != 0)) {
+                    (this.battlefield.godUnitUnlockMasks[this.playerId][var19 + 1] & 1 << b.getUnitUnlockOrdinal(false, var18)) != 0)) {
                     var20 = this.battlefield.canSummonUnitAt(var17, -26813, var18, var16, this.playerId) ? 1 : 0;
                     var21 = var20;
                     if (var20 == 0) {
@@ -1870,7 +1870,7 @@ final class AiPlanner extends IntrusiveNode implements UnitObserver {
           return true;
         }
         if (!hf.field_c) {
-          if (!iu.field_h &&
+          if (!BattleTutorial.field_h &&
             rs.field_q != 9 &&
             rs.field_q != 10 &&
             rs.field_q != 11) {

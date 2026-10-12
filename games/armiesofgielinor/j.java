@@ -143,13 +143,13 @@ final class j {
           wb.field_b[9] = jn.field_e;
           wb.field_b[20] = CorpseConditionMarker.field_x;
           oi.field_a[10] = fo.a(4800, oi.field_a[10], new String[]{Integer.toString(20)});
-          vl.field_m = new String[6];
-          vl.field_m[3] = jj.field_f;
-          vl.field_m[0] = DeployAction.field_C;
-          vl.field_m[4] = pp.field_Y;
-          vl.field_m[2] = qt.field_a;
-          vl.field_m[1] = bk.field_c;
-          vl.field_m[5] = fa.field_g;
+          vl.battleHintMessages = new String[6];
+          vl.battleHintMessages[3] = jj.field_f;
+          vl.battleHintMessages[0] = DeployAction.field_C;
+          vl.battleHintMessages[4] = pp.field_Y;
+          vl.battleHintMessages[2] = qt.field_a;
+          vl.battleHintMessages[1] = bk.field_c;
+          vl.battleHintMessages[5] = fa.field_g;
           var3 = 0;
           var1_intLifetime1 = var3;
           while (jj.field_a.length > var3) {

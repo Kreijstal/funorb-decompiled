@@ -13,7 +13,7 @@ final class ce extends tj implements he {
     static ResourceArchive field_M;
     static int field_Q;
     static rf field_K;
-    static int[] field_O;
+    static int[] turnDurationTicks;
     private fw field_L;
 
     final boolean a(kb param0, int param1, char param2, int param3) {
@@ -79,14 +79,14 @@ final class ce extends tj implements he {
           field_H = null;
           field_K = null;
           field_F = null;
-          field_O = null;
+          turnDurationTicks = null;
           return;
         }
         field_Q = -81;
         field_H = null;
         field_K = null;
         field_F = null;
-        field_O = null;
+        turnDurationTicks = null;
     }
 
     public ce() {
@@ -161,6 +161,6 @@ final class ce extends tj implements he {
         field_H = "Your turn";
         field_I = new int[]{31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
         field_J = 10;
-        field_O = new int[]{12000, 9000, 7500, 6000, 4500, 3000, 1500};
+        turnDurationTicks = new int[]{12000, 9000, 7500, 6000, 4500, 3000, 1500};
     }
 }

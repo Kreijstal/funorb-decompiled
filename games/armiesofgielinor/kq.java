@@ -8,7 +8,7 @@ class kq extends fw {
     static je field_N;
     static RgbSprite field_P;
 
-    final static String a(int param0, int param1, int param2, Battlefield param3, int param4) {
+    final static String getSpellConfirmationPrompt(int tileY, int obfuscationGuard, int spellId, Battlefield battlefield, int tileX) {
         String[] array$0 = null;
         String[] array$1 = null;
         String[] array$2 = null;
@@ -52,19 +52,19 @@ class kq extends fw {
         int var6Lifetime1;
         int var6Lifetime2;
         try {
-          if (param1 != 7) {
+          if (obfuscationGuard != 7) {
             field_N = (je) null;
           }
-          if (uc.spellDefinitions[param2][3] != 0) {
+          if (uc.spellDefinitions[spellId][3] != 0) {
             return null;
           }
-          var7 = param3.getUnitAt(param0, true, param4);
+          var7 = battlefield.getUnitAt(tileY, true, tileX);
           var8 = var7;
           if (var8 == null) {
             stackIn_7_0 = null;
             return (String) (stackIn_7_0);
           }
-          if (uc.spellDefinitions[param2][4] == 1 &&
+          if (uc.spellDefinitions[spellId][4] == 1 &&
             var8.getEquipmentId((byte) 81) > 0) {
             var6 = UiSelectionState.field_e[var7.getEquipmentId((byte) 81)][var7.getEquipmentCategory(20640)];
             array$0 = new String[3];
@@ -74,9 +74,9 @@ class kq extends fw {
             stackIn_13_3 = array$0;
             stackIn_13_4 = 1;
             if (og.field_m != 1) {
-              stackIn_14_5 = fq.field_f[param2].toLowerCase();
+              stackIn_14_5 = fq.field_f[spellId].toLowerCase();
             } else {
-              stackIn_14_5 = fq.field_f[param2];
+              stackIn_14_5 = fq.field_f[spellId];
             }
             stackIn_13_3[stackIn_13_4] = stackIn_14_5;
             stackIn_16_4 = 2;
@@ -89,7 +89,7 @@ class kq extends fw {
             stackIn_18_0 = fo.a(stackIn_13_0, stackIn_13_1, stackIn_13_2);
             return stackIn_18_0;
           }
-          if (uc.spellDefinitions[param2][4] == 0 &&
+          if (uc.spellDefinitions[spellId][4] == 0 &&
             0 != var8.statusEffectType) {
             var6Lifetime1 = PaletteRegionMap.field_f[var7.statusEffectType];
             if (7 != var8.statusEffectType &&
@@ -103,9 +103,9 @@ class kq extends fw {
             stackIn_29_3 = array$1;
             stackIn_29_4 = 1;
             if (og.field_m == 1) {
-              stackIn_30_5 = fq.field_f[param2];
+              stackIn_30_5 = fq.field_f[spellId];
             } else {
-              stackIn_30_5 = fq.field_f[param2].toLowerCase();
+              stackIn_30_5 = fq.field_f[spellId].toLowerCase();
             }
             stackIn_29_3[stackIn_29_4] = stackIn_30_5;
             stackIn_32_4 = 2;
@@ -118,7 +118,7 @@ class kq extends fw {
             stackIn_34_0 = fo.a(stackIn_29_0, stackIn_29_1, stackIn_29_2);
             return stackIn_34_0;
           }
-          if (uc.spellDefinitions[param2][4] != 3) {
+          if (uc.spellDefinitions[spellId][4] != 3) {
             stackIn_48_0 = null;
             return (String) (stackIn_48_0);
           }
@@ -133,9 +133,9 @@ class kq extends fw {
           stackIn_41_3 = array$2;
           stackIn_41_4 = 1;
           if (og.field_m == 1) {
-            stackIn_42_5 = fq.field_f[param2];
+            stackIn_42_5 = fq.field_f[spellId];
           } else {
-            stackIn_42_5 = fq.field_f[param2].toLowerCase();
+            stackIn_42_5 = fq.field_f[spellId].toLowerCase();
           }
           stackIn_41_3[stackIn_41_4] = stackIn_42_5;
           stackIn_44_4 = 2;
@@ -151,13 +151,13 @@ class kq extends fw {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
           stackIn_51_0 = var5;
-          stackIn_51_1 = new StringBuilder().append("kq.G(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
-          if (param3 == null) {
+          stackIn_51_1 = new StringBuilder().append("kq.G(").append(tileY).append(',').append(obfuscationGuard).append(',').append(spellId).append(',');
+          if (battlefield == null) {
             stackIn_52_2 = "null";
           } else {
             stackIn_52_2 = "{...}";
           }
-          throw ig.addExceptionContext((Throwable) ((Object) stackIn_51_0), ((StringBuilder) (Object) stackIn_51_1).append(stackIn_52_2).append(',').append(param4).append(')').toString());
+          throw ig.addExceptionContext((Throwable) ((Object) stackIn_51_0), ((StringBuilder) (Object) stackIn_51_1).append(stackIn_52_2).append(',').append(tileX).append(')').toString());
         }
     }
 
@@ -168,7 +168,7 @@ class kq extends fw {
         ia.field_g = param3;
         if (param2 != 87) {
           Battlefield var6 = (Battlefield) null;
-          kq.a(-11, 19, 8, (Battlefield) null, -83);
+          kq.getSpellConfirmationPrompt(-11, 19, 8, (Battlefield) null, -83);
         }
     }
 

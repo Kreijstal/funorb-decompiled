@@ -139,8 +139,8 @@ final class ActionSpell extends Spell {
                         wr.campaignPacketWord3 = wr.campaignPacketWord3 + 1;
                       }
                     } else {
-                      kw.campaignPacketWord0 = kw.campaignPacketWord0 + iu.field_t;
-                      ii.campaignPacketWord1 = ii.campaignPacketWord1 + iu.field_t;
+                      kw.campaignPacketWord0 = kw.campaignPacketWord0 + BattleTutorial.field_t;
+                      ii.campaignPacketWord1 = ii.campaignPacketWord1 + BattleTutorial.field_t;
                     }
                   }
                 }
@@ -163,7 +163,7 @@ final class ActionSpell extends Spell {
             ((CipherPacketBuffer) (Object) stackIn_32_0).writeByte(stackIn_32_1, stackIn_33_2);
             vl.outgoingPacket.writeInt((byte) -108, km.getCampaignPacketWord0(-59));
             vl.outgoingPacket.writeInt((byte) -124, oq.getCampaignPacketWord1(false));
-            vl.outgoingPacket.writeInt((byte) -59, jr.getCampaignPacketWord2(false));
+            vl.outgoingPacket.writeInt((byte) -59, RadialSummonItem.getCampaignPacketWord2(false));
             vl.outgoingPacket.writeInt((byte) -50, RevivalEvent.getCampaignPacketWord3(0));
           }
           qh.requestDeleteQuicksave((byte) 27);

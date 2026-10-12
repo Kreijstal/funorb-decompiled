@@ -393,7 +393,7 @@ final class BattleCamera {
           var10 = var4;
         }
         if (param0 == 0 &&
-          gb.field_B &&
+          EquipmentBattleTutorial.field_B &&
           cu.field_a) {
           this.a(-12608);
         }

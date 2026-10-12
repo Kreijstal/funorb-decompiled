@@ -681,7 +681,7 @@ final class kd extends tj implements nq, he, mf {
           var2 = Integer.parseInt(this.field_N.field_v);
         } catch (NumberFormatException numberFormatException) {
         }
-        return eo.a(this.field_ab.field_K, this, this.field_V.field_v, this.field_I.field_v, var2, (byte) -110, this.field_O.field_v);
+        return BattleUnitRenderer.a(this.field_ab.field_K, this, this.field_V.field_v, this.field_I.field_v, var2, (byte) -110, this.field_O.field_v);
     }
 
     static {

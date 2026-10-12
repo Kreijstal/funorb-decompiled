@@ -231,7 +231,7 @@ final class bl {
                                     var7 = UnitModelPreview.a(var3_long, -79);
                                     if (var7 == null) {
                                       var7 = new of(var27, var28, var3_long);
-                                      eu.field_e.a(-1, var3_long, var7);
+                                      UnitCycler.field_e.a(-1, var3_long, var7);
                                       vu.field_M.field_Ub = vu.field_M.field_Ub + 1;
                                     }
                                     var7.field_Sb = ((PacketBuffer) ((Object) var1)).readUnsignedShort((byte) -104);

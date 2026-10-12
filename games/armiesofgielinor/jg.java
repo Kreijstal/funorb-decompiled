@@ -34,7 +34,7 @@ final class jg extends IntrusiveNode {
     }
 
     final static void a(byte param0) {
-        if (iu.field_h) {
+        if (BattleTutorial.field_h) {
           SoftwareRaster.d(SoftwareRaster.clipLeft, SoftwareRaster.clipTop, SoftwareRaster.clipRight - SoftwareRaster.clipLeft, SoftwareRaster.clipBottom - SoftwareRaster.clipTop);
           OwnerChangeEvent.field_E.b(false, 20);
         }

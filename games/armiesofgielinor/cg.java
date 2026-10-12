@@ -20,7 +20,7 @@ final class cg {
         int var2 = 0;
         int var3 = 0;
         int var4 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
-        ub.$cfr$intArgs$a$6d836999ad61(70, im.field_v[13]);
+        RadialSummonMenu.$cfr$intArgs$a$6d836999ad61(70, im.field_v[13]);
         for (var2 = param0; this.field_h > var2; var2++) {
           for (var3 = 0; var3 < this.field_f; var3++) {
             this.field_e[var2 + this.field_h * var3] = SoftwareRaster.pixels[this.field_l + var2 + (this.field_k + var3) * SoftwareRaster.width];

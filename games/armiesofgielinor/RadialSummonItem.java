@@ -1,15 +1,15 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class jr {
-    int field_g;
-    int field_b;
-    boolean field_a;
+final class RadialSummonItem {
+    int offsetY;
+    int offsetX;
+    boolean unitChoice;
     static String field_e;
     static int[][] field_h;
-    private int field_d;
-    int field_c;
-    int field_i;
+    private int hitRadius;
+    int godGroupId;
+    int choiceId;
     static vg field_f;
 
     final static int getCampaignPacketWord2(boolean obfuscationGuard) {
@@ -37,84 +37,84 @@ final class jr {
           field_h = (int[][]) null;
           return;
         }
-        jr.b(125);
+        RadialSummonItem.b(125);
         field_f = null;
         field_h = (int[][]) null;
     }
 
-    final void a(int param0, int param1, boolean param2, int param3) {
+    final void draw(int availability, int originY, boolean obfuscationGuard, int originX) {
         int var6;
         var6 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
-        if (param2) {
-          jr.getCampaignPacketWord2(false);
+        if (obfuscationGuard) {
+          RadialSummonItem.getCampaignPacketWord2(false);
         }
-        if (!this.field_a) {
-          if (param0 > 0) {
-            if (this.b(112, AiPlanningStrategy.field_d, param1, param3, ko.field_b)) {
-              UnitModelPreview.field_d[this.field_c].g(this.field_b + param3 - 25, param1 + (this.field_g - 25));
-              UnitModelPreview.field_d[0].f(param3 + (this.field_b - 25), -25 + this.field_g + param1, 256);
+        if (!this.unitChoice) {
+          if (availability > 0) {
+            if (this.containsPoint(112, AiPlanningStrategy.field_d, originY, originX, ko.field_b)) {
+              UnitModelPreview.field_d[this.godGroupId].g(this.offsetX + originX - 25, originY + (this.offsetY - 25));
+              UnitModelPreview.field_d[0].f(originX + (this.offsetX - 25), -25 + this.offsetY + originY, 256);
               if (var6 != 0) {
-                UnitModelPreview.field_d[this.field_c].g(this.field_b + param3 - 25, param1 + (this.field_g - 25));
-                UnitModelPreview.field_d[this.field_c].g(param3 - (-this.field_b + 25), -25 + (this.field_g + param1), 128);
+                UnitModelPreview.field_d[this.godGroupId].g(this.offsetX + originX - 25, originY + (this.offsetY - 25));
+                UnitModelPreview.field_d[this.godGroupId].g(originX - (-this.offsetX + 25), -25 + (this.offsetY + originY), 128);
               }
             } else {
-              UnitModelPreview.field_d[this.field_c].g(this.field_b + param3 - 25, param1 + (this.field_g - 25));
+              UnitModelPreview.field_d[this.godGroupId].g(this.offsetX + originX - 25, originY + (this.offsetY - 25));
               if (var6 != 0) {
-                UnitModelPreview.field_d[this.field_c].g(param3 - (-this.field_b + 25), -25 + (this.field_g + param1), 128);
+                UnitModelPreview.field_d[this.godGroupId].g(originX - (-this.offsetX + 25), -25 + (this.offsetY + originY), 128);
               }
             }
           } else {
-            UnitModelPreview.field_d[this.field_c].g(param3 - (-this.field_b + 25), -25 + (this.field_g + param1), 128);
+            UnitModelPreview.field_d[this.godGroupId].g(originX - (-this.offsetX + 25), -25 + (this.offsetY + originY), 128);
           }
-          fe.a(this.field_b + param3, param1 + this.field_g, this.field_c, param0, fe.field_b);
+          fe.a(this.offsetX + originX, originY + this.offsetY, this.godGroupId, availability, fe.field_b);
           if (var6 == 0) {
             return;
           }
         }
-        if (0 < param0) {
-          if (this.b(31, AiPlanningStrategy.field_d, param1, param3, ko.field_b)) {
-            lw.field_ob.b(param3 - (-this.field_b + 20), -20 + (this.field_g + param1), TutorialLayout.field_g[this.field_c]);
+        if (0 < availability) {
+          if (this.containsPoint(31, AiPlanningStrategy.field_d, originY, originX, ko.field_b)) {
+            lw.field_ob.b(originX - (-this.offsetX + 20), -20 + (this.offsetY + originY), TutorialLayout.field_g[this.godGroupId]);
             if (var6 == 0) {
-              if (this.field_i != 81) {
-                DeployAction.field_x[this.field_i].g(this.field_b + param3 - 20, this.field_g + param1 - 20);
-                km.field_h[0].g(-23 + (this.field_b + param3), -23 + param1 + this.field_g);
+              if (this.choiceId != 81) {
+                DeployAction.field_x[this.choiceId].g(this.offsetX + originX - 20, this.offsetY + originY - 20);
+                km.field_h[0].g(-23 + (this.offsetX + originX), -23 + originY + this.offsetY);
                 return;
               }
-              DeployAction.field_x[4].g(-20 + this.field_b + param3, -20 + (param1 + this.field_g));
-              km.field_h[0].g(-23 + (this.field_b + param3), -23 + param1 + this.field_g);
+              DeployAction.field_x[4].g(-20 + this.offsetX + originX, -20 + (originY + this.offsetY));
+              km.field_h[0].g(-23 + (this.offsetX + originX), -23 + originY + this.offsetY);
               return;
             }
           }
-          lw.field_ob.d(-20 + this.field_b + param3, param1 + this.field_g - 20, TutorialLayout.field_g[this.field_c]);
-          if (this.field_i == 81) {
-            DeployAction.field_x[4].g(-20 + this.field_b + param3, -20 + (param1 + this.field_g));
+          lw.field_ob.d(-20 + this.offsetX + originX, originY + this.offsetY - 20, TutorialLayout.field_g[this.godGroupId]);
+          if (this.choiceId == 81) {
+            DeployAction.field_x[4].g(-20 + this.offsetX + originX, -20 + (originY + this.offsetY));
             if (var6 != 0) {
-              DeployAction.field_x[this.field_i].g(this.field_b + param3 - 20, this.field_g + param1 - 20);
+              DeployAction.field_x[this.choiceId].g(this.offsetX + originX - 20, this.offsetY + originY - 20);
             }
           } else {
-            DeployAction.field_x[this.field_i].g(this.field_b + param3 - 20, this.field_g + param1 - 20);
+            DeployAction.field_x[this.choiceId].g(this.offsetX + originX - 20, this.offsetY + originY - 20);
           }
-          km.field_h[0].g(-23 + (this.field_b + param3), -23 + param1 + this.field_g);
+          km.field_h[0].g(-23 + (this.offsetX + originX), -23 + originY + this.offsetY);
           if (var6 != 0) {
-            lw.field_ob.d(this.field_b + (param3 - 20), -20 + param1 + this.field_g, fe.b(TutorialLayout.field_g[this.field_c], 128));
-            if (this.field_i != 81) {
-              DeployAction.field_x[this.field_i].g(-20 + this.field_b + param3, -20 + (param1 + this.field_g), 0);
+            lw.field_ob.d(this.offsetX + (originX - 20), -20 + originY + this.offsetY, fe.b(TutorialLayout.field_g[this.godGroupId], 128));
+            if (this.choiceId != 81) {
+              DeployAction.field_x[this.choiceId].g(-20 + this.offsetX + originX, -20 + (originY + this.offsetY), 0);
             }
-            DeployAction.field_x[4].g(-20 + (param3 + this.field_b), param1 + this.field_g - 20, 0);
-            km.field_h[0].g(-23 + param3 + this.field_b, -23 + (param1 + this.field_g), 10);
+            DeployAction.field_x[4].g(-20 + (originX + this.offsetX), originY + this.offsetY - 20, 0);
+            km.field_h[0].g(-23 + originX + this.offsetX, -23 + (originY + this.offsetY), 10);
           }
           return;
         }
-        lw.field_ob.d(this.field_b + (param3 - 20), -20 + param1 + this.field_g, fe.b(TutorialLayout.field_g[this.field_c], 128));
-        if (this.field_i == 81) {
-          DeployAction.field_x[4].g(-20 + (param3 + this.field_b), param1 + this.field_g - 20, 0);
+        lw.field_ob.d(this.offsetX + (originX - 20), -20 + originY + this.offsetY, fe.b(TutorialLayout.field_g[this.godGroupId], 128));
+        if (this.choiceId == 81) {
+          DeployAction.field_x[4].g(-20 + (originX + this.offsetX), originY + this.offsetY - 20, 0);
         } else {
-          DeployAction.field_x[this.field_i].g(-20 + this.field_b + param3, -20 + (param1 + this.field_g), 0);
+          DeployAction.field_x[this.choiceId].g(-20 + this.offsetX + originX, -20 + (originY + this.offsetY), 0);
           if (var6 != 0) {
-            DeployAction.field_x[4].g(-20 + (param3 + this.field_b), param1 + this.field_g - 20, 0);
+            DeployAction.field_x[4].g(-20 + (originX + this.offsetX), originY + this.offsetY - 20, 0);
           }
         }
-        km.field_h[0].g(-23 + param3 + this.field_b, -23 + (param1 + this.field_g), 10);
+        km.field_h[0].g(-23 + originX + this.offsetX, -23 + (originY + this.offsetY), 10);
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4) {
@@ -153,27 +153,27 @@ final class jr {
         }
     }
 
-    jr(boolean param0, int param1, int param2, int param3) {
-        this.field_d = param3;
-        this.field_a = param0 ? true : false;
-        this.field_c = param1;
-        this.field_i = param2;
+    RadialSummonItem(boolean unitChoice, int godGroupId, int choiceId, int hitRadius) {
+        this.hitRadius = hitRadius;
+        this.unitChoice = unitChoice ? true : false;
+        this.godGroupId = godGroupId;
+        this.choiceId = choiceId;
     }
 
-    final boolean b(int param0, int param1, int param2, int param3, int param4) {
-        int var7 = 0;
-        int var6 = -param1 + param3 + this.field_b;
-        int var7Lifetime1;
-        if (param0 < 10) {
+    final boolean containsPoint(int obfuscationGuard, int pointerX, int originY, int originX, int pointerY) {
+        int deltaY = 0;
+        int deltaX = -pointerX + originX + this.offsetX;
+        int deltaYCanonical;
+        if (obfuscationGuard < 10) {
           field_e = (String) null;
-          var7 = this.field_g + param2 - param4;
-          if (this.field_d * this.field_d <= var7 * var7 + var6 * var6) {
+          deltaY = this.offsetY + originY - pointerY;
+          if (this.hitRadius * this.hitRadius <= deltaY * deltaY + deltaX * deltaX) {
             return false;
           }
           return true;
         }
-        var7Lifetime1 = this.field_g + param2 - param4;
-        if (this.field_d * this.field_d <= var7Lifetime1 * var7Lifetime1 + var6 * var6) {
+        deltaYCanonical = this.offsetY + originY - pointerY;
+        if (this.hitRadius * this.hitRadius <= deltaYCanonical * deltaYCanonical + deltaX * deltaX) {
           return false;
         }
         return true;
@@ -196,7 +196,7 @@ final class jr {
         int var12 = 0;
         var12 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          uf.field_a = param7;
+          SpellConfirmationDialog.field_a = param7;
           t.field_b = param3;
           oh.field_H = -1L;
           tq.field_b = param3.length;
@@ -205,7 +205,7 @@ final class jr {
           if (param8 >= -52) {
             field_h = (int[][]) null;
           }
-          CoatOfArms.field_d = new byte[(uf.field_a + 7) / 8];
+          CoatOfArms.field_d = new byte[(SpellConfirmationDialog.field_a + 7) / 8];
           vu.field_M = null;
           var10_int = 0;
           var11 = 0;
@@ -239,7 +239,7 @@ final class jr {
           }
           wl.field_F = param5.field_fb;
           wl.field_F.b(122);
-          eu.field_e = new tp(param0);
+          UnitCycler.field_e = new tp(param0);
           qd.field_K = param2;
           ph.field_d = 0L;
           return;

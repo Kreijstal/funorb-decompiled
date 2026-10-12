@@ -193,7 +193,7 @@ final class vv {
         if (var7 == 0) {
           return;
         }
-        var8 = NetworkResourceRequest.field_C.field_q;
+        var8 = NetworkResourceRequest.field_C.controlledPlayerId;
         if (0 > var8) {
           var8 = CipherPacketBuffer.currentBattlefield.currentPlayer;
         }
@@ -207,12 +207,12 @@ final class vv {
               i.a(false, param5, param0);
             }
             if (var12.hasMovementFlag1(false)) {
-              eu.a(111, param5, param0, var12);
+              UnitCycler.a(111, param5, param0, var12);
             }
             if (var12.u(8)) {
               nb.a(param0, param5, (byte) -97, var12);
             }
-            if (var12.field_x != null) {
+            if (var12.modelPreview != null) {
               if (var12.ownerPlayer == MapTile.field_i &&
                 !var12.movementSpent &&
                 NetworkResourceRequest.field_C.field_L > 0) {
@@ -263,12 +263,12 @@ final class vv {
                 i.a(false, param5, param0);
               }
               if (var12.hasMovementFlag1(false)) {
-                eu.a(111, param5, param0, var12);
+                UnitCycler.a(111, param5, param0, var12);
               }
               if (var12.u(8)) {
                 nb.a(param0, param5, (byte) -97, var12);
               }
-              if (var12.field_x != null) {
+              if (var12.modelPreview != null) {
                 if (var12.ownerPlayer == MapTile.field_i &&
                   !var12.movementSpent &&
                   NetworkResourceRequest.field_C.field_L > 0) {
@@ -318,12 +318,12 @@ final class vv {
                 i.a(false, param5, param0);
               }
               if (var12.hasMovementFlag1(false)) {
-                eu.a(111, param5, param0, var12);
+                UnitCycler.a(111, param5, param0, var12);
               }
               if (var12.u(8)) {
                 nb.a(param0, param5, (byte) -97, var12);
               }
-              if (var12.field_x != null) {
+              if (var12.modelPreview != null) {
                 if (var12.ownerPlayer == MapTile.field_i &&
                   !var12.movementSpent &&
                   NetworkResourceRequest.field_C.field_L > 0) {
@@ -375,12 +375,12 @@ final class vv {
           i.a(false, param5, param0);
         }
         if (var12.hasMovementFlag1(false)) {
-          eu.a(111, param5, param0, var12);
+          UnitCycler.a(111, param5, param0, var12);
         }
         if (var12.u(8)) {
           nb.a(param0, param5, (byte) -97, var12);
         }
-        if (var12.field_x == null) {
+        if (var12.modelPreview == null) {
           return;
         }
         if (var12.ownerPlayer != MapTile.field_i) {

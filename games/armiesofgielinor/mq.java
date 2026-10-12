@@ -204,7 +204,7 @@ final class mq extends je {
           va.field_z = var9;
           rq.field_m = var9;
           j.field_b = var9;
-          uf.field_e = var9;
+          SpellConfirmationDialog.field_e = var9;
           oh.field_E = var9;
           stackIn_9_0 = (param3 <= 0) ? 0 : 1;
           var11 = stackIn_9_0;
@@ -223,7 +223,7 @@ final class mq extends je {
             cs.field_Y = CampaignMenuEntry.field_u[param2 - 1];
           }
           if (var12 != 0) {
-            uf.field_e = CampaignMenuEntry.field_u[1 + param2];
+            SpellConfirmationDialog.field_e = CampaignMenuEntry.field_u[1 + param2];
           }
           var9 = var9 * 20;
           if (param7 < -1 + ef.field_c) {
@@ -235,9 +235,9 @@ final class mq extends je {
               gt.field_i = CampaignMenuEntry.field_u[param2 + ResourceRequest.field_y + 1];
             }
           }
-          ac.field_k[ls.a(rq.field_m, j.field_b, pv.field_b, uf.field_e, -26) + (0 + var9)].b(param0, param4, param5, param1);
+          ac.field_k[ls.a(rq.field_m, j.field_b, pv.field_b, SpellConfirmationDialog.field_e, -26) + (0 + var9)].b(param0, param4, param5, param1);
           ac.field_k[var9 - (-1 - ls.a(np.field_Wb, j.field_b, pv.field_b, cs.field_Y, -87))].b(param0, param4, param5, param1);
-          ac.field_k[2 + var9 + ls.a(gt.field_i, j.field_b, va.field_z, uf.field_e, -68)].b(param0, param4, param5, param1);
+          ac.field_k[2 + var9 + ls.a(gt.field_i, j.field_b, va.field_z, SpellConfirmationDialog.field_e, -68)].b(param0, param4, param5, param1);
           ac.field_k[3 + (var9 + ls.a(oh.field_E, j.field_b, va.field_z, cs.field_Y, -72))].b(param0, param4, param5, param1);
           if (cu.field_a &&
             var8 == 0 &&

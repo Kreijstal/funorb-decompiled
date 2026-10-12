@@ -45,7 +45,7 @@ final class ef extends Exception {
             return;
           }
           ts.a(param7, param2, param4, 20, param0, param0, param5, 15676, param6);
-          eu.field_g.a(true, param3);
+          UnitCycler.field_g.a(true, param3);
           if (param3) {
             if (qf.field_e.field_yb != 0) {
               hf.field_c = false;

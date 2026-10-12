@@ -195,7 +195,7 @@ final class no extends en {
           param1 = param1 + this.field_p;
           this.a(mi.field_z, this.field_L, param1, 16777215, param0);
           this.a(eb.field_e, this.field_Q, param1, 16777215, param0);
-          this.a(iu.field_l, this.field_O, param1, 16777215, param0);
+          this.a(BattleTutorial.field_l, this.field_O, param1, 16777215, param0);
           return;
         }
     }

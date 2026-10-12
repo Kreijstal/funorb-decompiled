@@ -130,7 +130,7 @@ final class df extends tj implements fb, he {
           this.field_p = 15;
           var7 = ArmiesOfGielinor.field_J;
           if (null != this.field_I) {
-            this.field_p = this.field_p + (5 + var7.a(this.field_I, this.field_l - 40, var7.field_H));
+            this.field_p = this.field_p + (5 + var7.getParagraphHeight(this.field_I, this.field_l - 40, var7.field_H));
           }
           var8 = bh.field_J;
           var9 = ea.a(0, CombatEvent.d((byte) 34));
@@ -326,8 +326,8 @@ final class df extends tj implements fb, he {
           df.a((String) null, -20, (ResourceArchive) null, -114, (String) null);
         }
         MoveEvent.campaignMenu = new CampaignMenu();
-        gb.configureTutorialStage(30, 21, 220, 420, 440, 470, new int[]{7}, -121);
-        gb.configureTutorialStage(30, 22, 490, 610, 20, 50, new int[]{47}, param0 - 55);
+        EquipmentBattleTutorial.configureTutorialStage(30, 21, 220, 420, 440, 470, new int[]{7}, -121);
+        EquipmentBattleTutorial.configureTutorialStage(30, 22, 490, 610, 20, 50, new int[]{47}, param0 - 55);
     }
 
     final String m(int param0) {

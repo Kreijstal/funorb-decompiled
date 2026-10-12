@@ -83,7 +83,7 @@ final class la {
           var5_ref_String = wp.field_y;
           var4.field_i.a(5, var5_ref_String, (byte) -109);
           var4Lifetime1 = tn.field_Z;
-          var5 = iu.field_t;
+          var5 = BattleTutorial.field_t;
           var6 = TeleportAction.field_z;
           var4Lifetime1.field_i.a(0, var6, 0, (byte) -118, var5);
         }

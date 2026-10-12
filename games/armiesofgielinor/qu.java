@@ -13,7 +13,7 @@ final class qu extends IntrusiveNode {
     static String[] field_s;
 
     final static void e(int param0) {
-        if (iu.field_h) {
+        if (BattleTutorial.field_h) {
           e.a((byte) -93);
           if (param0 == -3) {
             return;
@@ -45,8 +45,8 @@ final class qu extends IntrusiveNode {
         cg.campaignPacketWord2 = 72584621;
         wr.campaignPacketWord3 = 224;
         ii.campaignPacketWord1 = 4452;
-        int var3 = var10.battlefield.playerTurnCounts[var10.field_q];
-        int var4 = var10.battlefield.damageTakenByPlayer[var10.field_q];
+        int var3 = var10.battlefield.playerTurnCounts[var10.controlledPlayerId];
+        int var4 = var10.battlefield.damageTakenByPlayer[var10.controlledPlayerId];
         hc.field_b = hc.field_b + 1;
         hc.field_b = hc.field_b + (ko.field_b ^ AiPlanningStrategy.field_d);
         if (param1 <= 31) {

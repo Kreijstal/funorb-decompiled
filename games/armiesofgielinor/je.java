@@ -88,7 +88,7 @@ class je extends im {
               if (PreparedAction.field_r <= 0) {
                 if (mj.field_c > InstructionsPanel.field_D) {
                   if (InstructionsPanel.field_D == 0) {
-                    ub.a(false, false);
+                    RadialSummonMenu.a(false, false);
                   }
                   InstructionsPanel.field_D = InstructionsPanel.field_D + 1;
                 }
@@ -122,7 +122,7 @@ class je extends im {
                 if (InstructionsPanel.field_D <= 0) {
                   if (mj.field_c > PreparedAction.field_r) {
                     if (0 == PreparedAction.field_r) {
-                      ub.a(false, true);
+                      RadialSummonMenu.a(false, true);
                     }
                     PreparedAction.field_r = PreparedAction.field_r + 1;
                   }
@@ -419,13 +419,13 @@ class je extends im {
         if (!SectorCacheStore.field_e &&
           param0 &&
           DeployEvent.field_A != 0 &&
-          SoftwareRaster.clipLeft <= iu.field_t &&
-          iu.field_t < SoftwareRaster.clipRight &&
+          SoftwareRaster.clipLeft <= BattleTutorial.field_t &&
+          BattleTutorial.field_t < SoftwareRaster.clipRight &&
           TeleportAction.field_z >= SoftwareRaster.clipTop &&
           TeleportAction.field_z < SoftwareRaster.clipBottom) {
           this.field_yb = DeployEvent.field_A;
           this.field_hb = DeployEvent.field_A;
-          this.field_bb = -this.field_V + iu.field_t;
+          this.field_bb = -this.field_V + BattleTutorial.field_t;
           var12 = 1;
           this.field_Ab = -this.field_D + TeleportAction.field_z;
         } else {
@@ -593,7 +593,7 @@ class je extends im {
           if (var4 > 40) {
             var4 = 40;
           }
-          iu.field_d.a(var4, -20500, vc.field_l.field_gb - 5 - 5, 5, 5);
+          BattleTutorial.field_d.a(var4, -20500, vc.field_l.field_gb - 5 - 5, 5, 5);
           var5 = 5 + var4 + 2;
           for (var6 = 0; 4 + tq.field_b > var6; var6++) {
             if ((var6 != 1 ||

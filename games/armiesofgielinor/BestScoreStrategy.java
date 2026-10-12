@@ -142,7 +142,7 @@ final class BestScoreStrategy extends AiPlanningStrategy {
           if (var4 != 34) {
             stackIn_15_0 = hf.field_h;
           } else {
-            stackIn_15_0 = iu.field_x;
+            stackIn_15_0 = BattleTutorial.field_x;
           }
           var6Lifetime1 = stackIn_15_0;
           stackIn_16_0 = new og(var6Lifetime1, var2_int, var3.toString());

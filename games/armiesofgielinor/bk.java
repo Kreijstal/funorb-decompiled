@@ -129,7 +129,7 @@ final class bk {
           CombatEvent.field_A[3] = 16736511;
           CombatEvent.field_A[1] = 6356832;
           bq.field_c = param0;
-          uf.field_i = param4;
+          SpellConfirmationDialog.field_i = param4;
           CombatEvent.field_A[2] = 9474303;
           fm.field_d[0] = 16764000;
           ni.field_d = 8421504;
@@ -192,10 +192,10 @@ final class bk {
               }
               if (decompiledFrameRemainder0) {
                 gt.field_b[var19] = new je(0L, param10);
-                jj.field_i[var19] = new je(0L, uf.field_i, var20);
+                jj.field_i[var19] = new je(0L, SpellConfirmationDialog.field_i, var20);
                 we.field_g[var19] = new je(0L, (je) null);
                 we.field_g[var19].field_Fb = 1;
-                ResourceProtocolClient.field_j[var19] = new je(0L, uf.field_i);
+                ResourceProtocolClient.field_j[var19] = new je(0L, SpellConfirmationDialog.field_i);
                 ResourceProtocolClient.field_j[var19].field_Fb = 1;
                 gt.field_b[var19].a(jj.field_i[var19], 107);
                 gt.field_b[var19].a(we.field_g[var19], 45);

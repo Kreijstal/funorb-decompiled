@@ -141,7 +141,7 @@ abstract class AiPlanningStrategy {
                   if (null != var7.field_Ib) {
                     stackIn_49_1 = var7.field_Ib;
                   } else {
-                    stackIn_49_1 = iu.field_i;
+                    stackIn_49_1 = BattleTutorial.field_i;
                   }
                   stackIn_48_0.field_X = stackIn_49_1;
                   var7.field_Kb.a(jn.field_d, -20500, 80, var9, -80 + var7.field_gb);

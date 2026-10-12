@@ -515,7 +515,7 @@ final class InstructionsPanel {
                   if (param2 > -1 &&
                     op.field_c.length > param2) {
                     wb.a(7816226, db.a(true, param0 + 20), param2, var7, MatchConditionEntry.a(param1 - 20, (byte) 94));
-                    eu.a(db.a(true, param0 + 15), param2, 11, 127, MatchConditionEntry.a(21 + param1, (byte) 94));
+                    UnitCycler.a(db.a(true, param0 + 15), param2, 11, 127, MatchConditionEntry.a(21 + param1, (byte) 94));
                   }
                 }
               } else {
@@ -641,7 +641,7 @@ final class InstructionsPanel {
     private final void a(int param0, int param1, int param2, int param3, int param4, Unit param5, Unit param6, int param7) {
         int var9_int = 0;
         int var10 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
-        uf.field_j.b();
+        SpellConfirmationDialog.field_j.b();
         SoftwareRaster.b();
         fe.b(0, 0, 134, 61, io.field_m, nd.field_b, 0, 0);
         qt.field_e.drawOpaque(2, 2);
@@ -671,7 +671,7 @@ final class InstructionsPanel {
           en.field_E.c(100 - param3 + "%", 20, 45, 16777215, -1);
           EventPresenter.field_t.b(68, 60, nd.field_b[-1 + nd.field_b.length]);
           so.field_b.a(5605);
-          uf.field_j.e(db.a(true, param1), MatchConditionEntry.a(param7, (byte) 94), -param0 + 32 << 3);
+          SpellConfirmationDialog.field_j.e(db.a(true, param1), MatchConditionEntry.a(param7, (byte) 94), -param0 + 32 << 3);
         } catch (RuntimeException runtimeException) {
           throw ig.addExceptionContext((Throwable) ((Object) runtimeException), "rk.R(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ',' + (param6 != null ? "{...}" : "null") + ',' + param7 + ')');
         }
@@ -694,11 +694,11 @@ final class InstructionsPanel {
         if (param4 != -3) {
           this.field_m = 124;
         }
-        if (null == uf.field_j) {
+        if (null == SpellConfirmationDialog.field_j) {
           return null;
         }
         if (param1 == 0) {
-          return new IntPair(uf.field_j.canvasWidth, uf.field_j.canvasHeight);
+          return new IntPair(SpellConfirmationDialog.field_j.canvasWidth, SpellConfirmationDialog.field_j.canvasHeight);
         }
         if (param1 == 1) {
           return new IntPair(0, 0);
@@ -1807,7 +1807,7 @@ final class InstructionsPanel {
         if (this.field_S != null) {
           this.field_S.setScreenPosition(db.a(true, 40 + param2), MatchConditionEntry.a(90 + param0, (byte) 94), (byte) -3);
           this.field_S.a((byte) -72, false);
-          eu.a(-10, MatchConditionEntry.a(38 + param0, (byte) 94), db.a(true, param2), (Unit) null);
+          UnitCycler.a(-10, MatchConditionEntry.a(38 + param0, (byte) 94), db.a(true, param2), (Unit) null);
         }
     }
 
@@ -2732,7 +2732,7 @@ final class InstructionsPanel {
             var18Lifetime1 = var10_int;
             var19Lifetime1 = var12;
             var20 = var11 - var10_int;
-            var21 = rs.field_n.a(param2, var20, var15);
+            var21 = rs.field_n.getParagraphHeight(param2, var20, var15);
             var22 = this.field_z;
             var23 = 0;
             if (param5 == 1 &&
@@ -2756,7 +2756,7 @@ final class InstructionsPanel {
             var25 = 0;
             var21Lifetime1 = var25;
             while (param1.length > var25) {
-              var22Lifetime1 = rs.field_n.a(param1[var25], var20Lifetime1, var15);
+              var22Lifetime1 = rs.field_n.getParagraphHeight(param1[var25], var20Lifetime1, var15);
               var23Lifetime1 = this.field_l;
               rs.field_n.a(param1[var25], db.a(true, var18Lifetime2), MatchConditionEntry.a(var19Lifetime2, (byte) 94), var20Lifetime1, var22Lifetime1, var23Lifetime1, -1, 0, 0, var15);
               var19Lifetime2 = var19Lifetime2 + var22Lifetime1;

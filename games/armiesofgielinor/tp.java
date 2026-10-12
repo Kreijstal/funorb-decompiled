@@ -79,8 +79,8 @@ final class tp {
         return this.c(1);
     }
 
-    final static int b(int param0) {
-        if (param0 > -68) {
+    final static int getNominalTickRate(int obfuscationGuard) {
+        if (obfuscationGuard > -68) {
           return -119;
         }
         return (int)(1000000000L / rd.field_i);

@@ -1,12 +1,12 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ub {
-    private int field_c;
-    private jr[] field_b;
+final class RadialSummonMenu {
+    private int itemCount;
+    private RadialSummonItem[] items;
     static boolean field_e;
     static String field_a;
-    private int field_f;
+    private int layoutRadius;
     static int field_d;
 
     final static te a(byte param0, sn param1) {
@@ -38,39 +38,39 @@ final class ub {
         }
     }
 
-    final boolean b(byte param0, int param1, int param2, int param3, int param4) {
+    final boolean isSecondHalfHit(byte obfuscationGuard, int pointerY, int originY, int originX, int pointerX) {
         int var7 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         int var6 = 0;
-        if (param0 != 117) {
+        if (obfuscationGuard != 117) {
           sn var8 = (sn) null;
-          ub.$cfr$intArgs$a$6d836999ad61(7, (sn) null);
+          RadialSummonMenu.$cfr$intArgs$a$6d836999ad61(7, (sn) null);
         }
-        while (this.field_c > var6) {
-          if (this.field_b[var6].b(42, param4, param2, param3, param1)) {
-            return this.field_c >> 1 < var6 ? true : false;
+        while (this.itemCount > var6) {
+          if (this.items[var6].containsPoint(42, pointerX, originY, originX, pointerY)) {
+            return this.itemCount >> 1 < var6 ? true : false;
           }
           var6++;
         }
         return false;
     }
 
-    final int a(byte param0, int param1, int param2, int param3, int param4) {
-        int var6 = 0;
+    final int getChoiceAtPoint(byte obfuscationGuard, int pointerY, int originX, int pointerX, int originY) {
+        int itemOrdinal = 0;
         int var7 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
-        if (param0 >= -92) {
+        if (obfuscationGuard >= -92) {
           field_d = 33;
         }
-        for (var6 = 0; this.field_c > var6; var6++) {
-          if (this.field_b[var6].b(71, param3, param4, param2, param1)) {
-            return this.field_b[var6].field_i;
+        for (itemOrdinal = 0; this.itemCount > itemOrdinal; itemOrdinal++) {
+          if (this.items[itemOrdinal].containsPoint(71, pointerX, originY, originX, pointerY)) {
+            return this.items[itemOrdinal].choiceId;
           }
         }
         return -1;
     }
 
-    final void a(int param0, int param1, int[] param2, int param3, int param4) {
+    final void draw(int mana, int obfuscationGuard, int[] godFavourLevels, int originX, int originY) {
         int var7 = 0;
-        jr stackIn_9_0 = null;
+        RadialSummonItem stackIn_9_0 = null;
         int stackIn_10_1 = 0;
         RuntimeException stackIn_20_0 = null;
         StringBuilder stackIn_20_1 = null;
@@ -81,43 +81,43 @@ final class ub {
         int var8 = 0;
         var8 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          var6_int = param2[6];
-          for (var7 = 0; this.field_c > var7; var7++) {
-            if (!this.field_b[var7].field_a) {
-              if (this.field_b[var7].field_c == 0) {
-                this.field_b[var7].a(var6_int, param4 + 16, false, param3 + 16);
+          var6_int = godFavourLevels[6];
+          for (var7 = 0; this.itemCount > var7; var7++) {
+            if (!this.items[var7].unitChoice) {
+              if (this.items[var7].godGroupId == 0) {
+                this.items[var7].draw(var6_int, originY + 16, false, originX + 16);
               } else {
-                this.field_b[var7].a(param2[-1 + this.field_b[var7].field_c], param4 + 16, false, param3 + 16);
+                this.items[var7].draw(godFavourLevels[-1 + this.items[var7].godGroupId], originY + 16, false, originX + 16);
               }
             } else {
-              if (-1 != bw.unitDefinitions[this.field_b[var7].field_i][1]) {
-                var6_int = param2[bw.unitDefinitions[this.field_b[var7].field_i][1]];
+              if (-1 != bw.unitDefinitions[this.items[var7].choiceId][1]) {
+                var6_int = godFavourLevels[bw.unitDefinitions[this.items[var7].choiceId][1]];
               }
-              stackIn_9_0 = this.field_b[var7];
-              if (param0 >= bw.unitDefinitions[this.field_b[var7].field_i][8] &&
-                var6_int >= bw.unitDefinitions[this.field_b[var7].field_i][2]) {
+              stackIn_9_0 = this.items[var7];
+              if (mana >= bw.unitDefinitions[this.items[var7].choiceId][8] &&
+                var6_int >= bw.unitDefinitions[this.items[var7].choiceId][2]) {
                 stackIn_10_1 = 1;
               } else {
                 stackIn_10_1 = 0;
               }
-              ((jr) (Object) stackIn_9_0).a(stackIn_10_1, 16 + param4, false, param3 + 16);
+              ((RadialSummonItem) (Object) stackIn_9_0).draw(stackIn_10_1, 16 + originY, false, originX + 16);
             }
           }
-          if (param1 != -23451) {
-            this.b((byte) 112, 3, 116, -86, -110);
+          if (obfuscationGuard != -23451) {
+            this.isSecondHalfHit((byte) 112, 3, 116, -86, -110);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = decompiledCaughtException;
           stackIn_20_0 = var6;
-          stackIn_20_1 = new StringBuilder().append("ub.E(").append(param0).append(',').append(param1).append(',');
-          if (param2 == null) {
+          stackIn_20_1 = new StringBuilder().append("ub.E(").append(mana).append(',').append(obfuscationGuard).append(',');
+          if (godFavourLevels == null) {
             stackIn_21_2 = "null";
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw ig.addExceptionContext((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw ig.addExceptionContext((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(originX).append(',').append(originY).append(')').toString());
         }
     }
 
@@ -138,19 +138,19 @@ final class ub {
         return var2;
     }
 
-    final jr a(int param0, int param1) {
-        int var3;
+    final RadialSummonItem getItemByChoiceId(int choiceId, int obfuscationGuard) {
+        int itemOrdinal;
         int var4;
         var4 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
-        var3 = 0;
-        if (param1 != -15050) {
+        itemOrdinal = 0;
+        if (obfuscationGuard != -15050) {
           field_a = (String) null;
         }
-        while (var3 < this.field_c) {
-          if (param0 == this.field_b[var3].field_i) {
-            return this.field_b[var3];
+        while (itemOrdinal < this.itemCount) {
+          if (choiceId == this.items[itemOrdinal].choiceId) {
+            return this.items[itemOrdinal];
           }
-          var3++;
+          itemOrdinal++;
         }
         return null;
     }
@@ -179,9 +179,9 @@ final class ub {
         }
     }
 
-    ub(int param0, jr[] param1, boolean param2) {
-        int var4_int = 0;
-        jr stackIn_5_0 = null;
+    RadialSummonMenu(int layoutRadius, RadialSummonItem[] items, boolean clockwise) {
+        int itemOrdinal = 0;
+        RadialSummonItem stackIn_5_0 = null;
         int stackIn_6_1 = 0;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
@@ -189,35 +189,35 @@ final class ub {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var4 = null;
         try {
-          this.field_c = param1.length;
-          this.field_f = param0;
-          this.field_b = param1;
-          for (var4_int = 0; var4_int < this.field_c; var4_int++) {
-            stackIn_5_0 = this.field_b[var4_int];
-            if (!param2) {
+          this.itemCount = items.length;
+          this.layoutRadius = layoutRadius;
+          this.items = items;
+          for (itemOrdinal = 0; itemOrdinal < this.itemCount; itemOrdinal++) {
+            stackIn_5_0 = this.items[itemOrdinal];
+            if (!clockwise) {
               stackIn_6_1 = -1;
             } else {
               stackIn_6_1 = 1;
             }
-            stackIn_5_0.field_b = stackIn_6_1 * (int)(Math.sin(2.0 * (3.141592653589793 * (double)var4_int) / (double)this.field_c) * (double)this.field_f);
-            this.field_b[var4_int].field_g = -(int)(Math.cos(2.0 * (3.141592653589793 * (double)var4_int) / (double)this.field_c) * (double)this.field_f);
+            stackIn_5_0.offsetX = stackIn_6_1 * (int)(Math.sin(2.0 * (3.141592653589793 * (double)itemOrdinal) / (double)this.itemCount) * (double)this.layoutRadius);
+            this.items[itemOrdinal].offsetY = -(int)(Math.cos(2.0 * (3.141592653589793 * (double)itemOrdinal) / (double)this.itemCount) * (double)this.layoutRadius);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
           stackIn_10_0 = var4;
-          stackIn_10_1 = new StringBuilder().append("ub.<init>(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_10_1 = new StringBuilder().append("ub.<init>(").append(layoutRadius).append(',');
+          if (items == null) {
             stackIn_11_2 = "null";
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw ig.addExceptionContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param2).append(')').toString());
+          throw ig.addExceptionContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(clockwise).append(')').toString());
         }
     }
 
-    final static EventPresenter a(GameEvent param0, Battlefield param1, boolean param2, int param3, GameplayController param4, int param5, int param6, eo param7) {
+    final static EventPresenter a(GameEvent param0, Battlefield param1, boolean param2, int param3, GameplayController param4, int param5, int param6, BattleUnitRenderer param7) {
         int var8_int = 0;
         RuntimeException var8 = null;
         EventPresenter var9 = null;

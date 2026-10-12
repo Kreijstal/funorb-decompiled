@@ -189,7 +189,7 @@ final class EffectPresentation implements EventPresentation {
           if (event == null) {
             return;
           }
-          this.finished = this.presenter.field_u.a(this.presenter.screenX + 1, -35, this.presenter.screenY - 6, -1, event.unit);
+          this.finished = this.presenter.unitRenderer.a(this.presenter.screenX + 1, -35, this.presenter.screenY - 6, -1, event.unit);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -308,8 +308,8 @@ final class EffectPresentation implements EventPresentation {
                   this.battlefield.a(obfuscationGuard ^ 57, var24, event);
                   return false;
                 }
-                ub.$cfr$intArgs$a$6d836999ad61(91, im.field_v[8]);
-                var23_ref.unit.field_z = 5;
+                RadialSummonMenu.$cfr$intArgs$a$6d836999ad61(91, im.field_v[8]);
+                var23_ref.unit.modelAnimationIndex = 5;
                 var23_ref.a(var23_ref.unit, 12);
                 this.advanceFrame(var23_ref, (byte) -95);
               } else {
@@ -329,7 +329,7 @@ final class EffectPresentation implements EventPresentation {
                         this.battlefield.a(0, var22, event);
                         return false;
                       }
-                      var21_ref.unit.field_z = 2;
+                      var21_ref.unit.modelAnimationIndex = 2;
                       var21_ref.a(var21_ref.unit, 12);
                       this.advanceFrame(var21_ref, (byte) -103);
                     } else {
@@ -341,7 +341,7 @@ final class EffectPresentation implements EventPresentation {
                           return false;
                         }
                         var4 = var20_ref.unit.tileX + var20_ref.unit.tileY * this.mapWidth;
-                        var20_ref.unit.field_z = 1;
+                        var20_ref.unit.modelAnimationIndex = 1;
                         this.presenter.tileIndex = var4;
                         dh.a(var20_ref.unit.unitType, 0, obfuscationGuard ^ 25);
                         var20_ref.a(var20_ref.unit, 12);
@@ -362,7 +362,7 @@ final class EffectPresentation implements EventPresentation {
                             }
                             if (34 == var15.unit.unitType) {
                               var15.unit.c(75, obfuscationGuard ^ 49);
-                              var15.unit.field_z = 1;
+                              var15.unit.modelAnimationIndex = 1;
                             } else {
                               if (var15.unit.unitType != 7 &&
                                 17 != var15.unit.unitType) {
@@ -370,7 +370,7 @@ final class EffectPresentation implements EventPresentation {
                                 this.battlefield.a(0, var17, event);
                                 return false;
                               }
-                              var15.unit.field_z = 4;
+                              var15.unit.modelAnimationIndex = 4;
                             }
                             var15.a(var15.unit, 12);
                             this.advanceFrame(var15, (byte) -75);
@@ -387,7 +387,7 @@ final class EffectPresentation implements EventPresentation {
                             this.battlefield.a(0, var19, event);
                             return false;
                           }
-                          var18_ref.unit.field_z = 8;
+                          var18_ref.unit.modelAnimationIndex = 8;
                           var18_ref.a(var18_ref.unit, 12);
                           this.advanceFrame(var18_ref, (byte) -124);
                         }
@@ -408,7 +408,7 @@ final class EffectPresentation implements EventPresentation {
                       return false;
                     }
                     dh.a(var13.unit.unitType, 0, 32);
-                    var13.unit.field_z = 2;
+                    var13.unit.modelAnimationIndex = 2;
                     var13.a(var13.unit, 12);
                     this.advanceFrame(var13, (byte) 73);
                   }
@@ -422,7 +422,7 @@ final class EffectPresentation implements EventPresentation {
                     this.battlefield.a(0, var12, event);
                     return false;
                   }
-                  var11.unit.field_z = 4;
+                  var11.unit.modelAnimationIndex = 4;
                   var11.a(var11.unit, 12);
                   this.advanceFrame(var11, (byte) -126);
                 }
@@ -436,7 +436,7 @@ final class EffectPresentation implements EventPresentation {
                 this.battlefield.a(0, var10, event);
                 return false;
               }
-              var9.unit.field_z = 1;
+              var9.unit.modelAnimationIndex = 1;
               var9.a(var9.unit, 12);
               this.advanceFrame(var9, (byte) 123);
             }
@@ -452,7 +452,7 @@ final class EffectPresentation implements EventPresentation {
               this.battlefield.a(0, var8, event);
               return false;
             }
-            var7.unit.field_z = 7;
+            var7.unit.modelAnimationIndex = 7;
             dh.a(var7.unit.unitType, 5, obfuscationGuard - 25);
             var7.a(var7.unit, 12);
             this.advanceFrame(var7, (byte) 68);

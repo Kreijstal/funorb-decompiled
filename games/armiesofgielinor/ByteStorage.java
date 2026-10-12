@@ -70,11 +70,11 @@ abstract class ByteStorage {
               decompiledCaughtException = decompiledCaughtParameter0;
               var2 = decompiledCaughtException;
             }
-            if (sj.field_b == null) {
+            if (TurnTimerDial.field_b == null) {
               stackIn_15_0 = param1.getParameter("settings");
               return stackIn_15_0;
             }
-            stackIn_13_0 = sj.field_b;
+            stackIn_13_0 = TurnTimerDial.field_b;
             return stackIn_13_0;
           } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
             decompiledCaughtException = decompiledCaughtParameter1;

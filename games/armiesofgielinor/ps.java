@@ -131,13 +131,13 @@ final class ps extends lk {
         int var2 = 0;
         int var3 = 0;
         sh.field_l = param0;
-        if (sj.field_d != mj.field_c) {
+        if (TurnTimerDial.field_d != mj.field_c) {
           var2 = mj.field_c * mj.field_c;
-          var3 = var2 - sj.field_d * sj.field_d;
-          param0 = param0 + var3 * (gb.field_y - param0) / var2;
+          var3 = var2 - TurnTimerDial.field_d * TurnTimerDial.field_d;
+          param0 = param0 + var3 * (EquipmentBattleTutorial.field_y - param0) / var2;
         }
         CombatEvent.field_I.a(120, -20500, 640, param0, va.field_u);
-        PlayerProfile.a(-1, mi.field_l, 0, io.field_n, 5, gb.field_y - 24, 640);
+        PlayerProfile.a(-1, mi.field_l, 0, io.field_n, 5, EquipmentBattleTutorial.field_y - 24, 640);
         if (param1) {
           return;
         }

@@ -151,25 +151,25 @@ final class ac extends IntrusiveNode {
           if (this.field_o == 0) {
             if (this.field_y == 0 &&
               !uu.field_b) {
-              ub.$cfr$intArgs$a$6d836999ad61(29, el.field_b[0]);
+              RadialSummonMenu.$cfr$intArgs$a$6d836999ad61(29, el.field_b[0]);
               ep.field_f = false;
               uu.field_b = true;
             }
             if (this.field_y == 1 &&
               !et.field_d) {
-              ub.$cfr$intArgs$a$6d836999ad61(50, el.field_b[0]);
+              RadialSummonMenu.$cfr$intArgs$a$6d836999ad61(50, el.field_b[0]);
               ep.field_f = false;
               et.field_d = true;
             }
             if (this.field_y == 2 &&
               !wt.field_G) {
-              ub.$cfr$intArgs$a$6d836999ad61(113, el.field_b[0]);
+              RadialSummonMenu.$cfr$intArgs$a$6d836999ad61(113, el.field_b[0]);
               ep.field_f = false;
               wt.field_G = true;
             }
             if (this.field_y == 3 &&
               !ep.field_f) {
-              ub.$cfr$intArgs$a$6d836999ad61(57, el.field_b[0]);
+              RadialSummonMenu.$cfr$intArgs$a$6d836999ad61(57, el.field_b[0]);
               et.field_d = false;
               wt.field_G = false;
               uu.field_b = false;
@@ -187,7 +187,7 @@ final class ac extends IntrusiveNode {
             return;
           }
           this.a(param0, -12614);
-          ub.$cfr$intArgs$a$6d836999ad61(91, el.field_b[1 + AttackEvent.a(false, 8, li.field_n)]);
+          RadialSummonMenu.$cfr$intArgs$a$6d836999ad61(91, el.field_b[1 + AttackEvent.a(false, 8, li.field_n)]);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

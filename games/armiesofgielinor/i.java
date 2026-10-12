@@ -308,7 +308,7 @@ final class i extends je {
         RuntimeException decompiledCaughtException = null;
         try {
           param4 += 8;
-          var6_int = param3.field_Z.a(param3.field_X, -(param3.field_O * param1) + param0, param3.field_pb);
+          var6_int = param3.field_Z.getParagraphHeight(param3.field_X, -(param3.field_O * param1) + param0, param3.field_pb);
           param3.a(var6_int, -20500, param0, param4, 0);
           param4 = param4 + (var6_int - 0);
           param2.a(param3, 57);

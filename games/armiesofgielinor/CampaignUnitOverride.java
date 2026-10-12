@@ -591,7 +591,7 @@ final class CampaignUnitOverride {
                 }
                 var2 = NodeIterator.a(param0 + 132, "reject");
                 if (var2 != null) {
-                  uf.field_l = uu.a(var2, (byte) -123);
+                  SpellConfirmationDialog.field_l = uu.a(var2, (byte) -123);
                 }
                 var2 = NodeIterator.a(50, "invite");
                 if (var2 != null) {
@@ -679,7 +679,7 @@ final class CampaignUnitOverride {
                 }
                 var2 = NodeIterator.a(50, "offline");
                 if (var2 != null) {
-                  iu.field_i = uu.a(var2, (byte) -116);
+                  BattleTutorial.field_i = uu.a(var2, (byte) -116);
                 }
                 var2 = NodeIterator.a(50, "multiconst_invite_only");
                 if (null != var2) {
@@ -1057,7 +1057,7 @@ final class CampaignUnitOverride {
                 }
                 var2 = NodeIterator.a(50, "changedisplayname");
                 if (var2 != null) {
-                  iu.field_b = uu.a(var2, (byte) 63);
+                  BattleTutorial.field_b = uu.a(var2, (byte) 63);
                 }
                 var2 = NodeIterator.a(50, "returntohomepage");
                 if (var2 != null) {
@@ -1337,7 +1337,7 @@ final class CampaignUnitOverride {
                 }
                 var2 = NodeIterator.a(param0 + 132, "year");
                 if (null != var2) {
-                  iu.field_l = uu.a(var2, (byte) 89);
+                  BattleTutorial.field_l = uu.a(var2, (byte) 89);
                 }
                 var2 = NodeIterator.a(50, "monthnames,0");
                 if (var2 != null) {
@@ -1513,7 +1513,7 @@ final class CampaignUnitOverride {
                 }
                 var2 = NodeIterator.a(param0 + 132, "login_no_displayname");
                 if (null != var2) {
-                  iu.field_u = uu.a(var2, (byte) -96);
+                  BattleTutorial.field_u = uu.a(var2, (byte) -96);
                 }
                 var2 = NodeIterator.a(param0 ^ -100, "create_username_tooltip");
                 if (var2 != null) {
@@ -2298,7 +2298,7 @@ final class CampaignUnitOverride {
                 }
                 var2 = NodeIterator.a(param0 + 132, "secretachievement");
                 if (null != var2) {
-                  eu.field_d = uu.a(var2, (byte) -117);
+                  UnitCycler.field_d = uu.a(var2, (byte) -117);
                 }
                 var2 = NodeIterator.a(50, "no_highscores");
                 if (null != var2) {

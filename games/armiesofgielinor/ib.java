@@ -463,7 +463,7 @@ final class ib extends mk {
         if (param0 != 40) {
           ib.a(127, true, 27, -95);
         }
-        if (!iu.field_h) {
+        if (!BattleTutorial.field_h) {
           return;
         }
         OwnerChangeEvent.field_E.a(true, param1);

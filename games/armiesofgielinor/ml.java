@@ -127,7 +127,7 @@ final class ml extends je {
             }
           }
           var14 = tn.field_Z;
-          var5 = iu.field_t;
+          var5 = BattleTutorial.field_t;
           var6 = TeleportAction.field_z;
           var7 = 125 / ((22 - param0) / 38);
           var14.field_i.a(0, var6, 0, (byte) -118, var5);

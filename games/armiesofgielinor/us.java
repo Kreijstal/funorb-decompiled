@@ -40,7 +40,7 @@ final class us {
           if ((2 & NetworkResourceRequest.field_C.movementPlanner.field_e[param0]) == 0) {
             return 0;
           }
-          stackIn_22_0 = (CipherPacketBuffer.currentBattlefield.currentPlayer != NetworkResourceRequest.field_C.field_q) ? 128 : 256;
+          stackIn_22_0 = (CipherPacketBuffer.currentBattlefield.currentPlayer != NetworkResourceRequest.field_C.controlledPlayerId) ? 128 : 256;
           return stackIn_22_0;
         }
         if (NetworkResourceRequest.field_C.selectedUnit.attacksRemaining == 0) {

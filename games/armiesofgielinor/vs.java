@@ -24,7 +24,7 @@ final class vs {
           if (param0 != 256) {
             field_j = true;
           }
-          iu.field_h = true;
+          BattleTutorial.field_h = true;
         } catch (RuntimeException runtimeException) {
           throw ig.addExceptionContext((Throwable) ((Object) runtimeException), "vs.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

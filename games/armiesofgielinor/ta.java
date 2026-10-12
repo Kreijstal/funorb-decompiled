@@ -116,7 +116,7 @@ final class ta extends nl {
           stackIn_4_1 = (param5);
           this.field_J = stackIn_4_1;
           var12_int = this.field_S - this.field_H;
-          var13 = this.field_P.a(param10, var12_int, this.field_P.field_H) + 2 * this.field_H;
+          var13 = this.field_P.getParagraphHeight(param10, var12_int, this.field_P.field_H) + 2 * this.field_H;
           if (param3 >= var13) {
             var13 = param3;
           } else {

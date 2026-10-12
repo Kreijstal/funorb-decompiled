@@ -1,18 +1,18 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class sj {
-    private int field_c;
+final class TurnTimerDial {
+    private int cycleLength;
     static wj field_a;
-    int field_h;
+    int sweepPosition;
     static String field_b;
-    private int[] field_f;
+    private int[] pixelThresholds;
     static String field_g;
-    private boolean field_i;
+    private boolean useSweepMask;
     static int field_e;
     static int field_d;
 
-    final void a(int param0, int param1, byte param2) {
+    final void draw(int screenY, int screenX, byte obfuscationGuard) {
         int var4;
         int var5;
         int var6;
@@ -25,11 +25,11 @@ final class sj {
         int var9;
         int var10;
         var14 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
-        if (!this.field_i) {
-          vg.field_q[0].g(param1, param0);
+        if (!this.useSweepMask) {
+          vg.field_q[0].g(screenX, screenY);
         } else {
           var4 = 0;
-          var5 = SoftwareRaster.width * param0 + param1;
+          var5 = SoftwareRaster.width * screenY + screenX;
           var6 = SoftwareRaster.width - CampaignProgress.field_b;
           var12 = 0;
           while (ac.field_m > var12) {
@@ -39,12 +39,12 @@ final class sj {
               var11 = var7 >>> 24;
               if (0 != var11) {
                 if (var11 >= 255) {
-                  if (this.field_f[var4] <= this.field_h) {
+                  if (this.pixelThresholds[var4] <= this.sweepPosition) {
                     var7 = vg.field_q[1].pixels[var4];
                   }
                   SoftwareRaster.pixels[var5] = var7;
                 } else {
-                  if (this.field_h >= this.field_f[var4]) {
+                  if (this.sweepPosition >= this.pixelThresholds[var4]) {
                     var7 = vg.field_q[1].pixels[var4];
                     var11 = var7 >>> 24;
                   }
@@ -71,33 +71,33 @@ final class sj {
             var5 = var5 + var6;
           }
         }
-        DeployEvent.field_z.b(384, 2464, param1 + (CampaignProgress.field_b >> 1) << 4, param0 + (ac.field_m >> 1) << 4, this.field_h * 65535 / this.field_c, 1024);
-        if (param2 == 121) {
+        DeployEvent.field_z.b(384, 2464, screenX + (CampaignProgress.field_b >> 1) << 4, screenY + (ac.field_m >> 1) << 4, this.sweepPosition * 65535 / this.cycleLength, 1024);
+        if (obfuscationGuard == 121) {
           return;
         }
-        this.a(false, -122, (byte) -12);
+        this.advanceSweep(false, -122, (byte) -12);
     }
 
-    final void a(boolean param0, int param1, byte param2) {
-        int var5 = 0;
-        int var6 = 0;
-        if (param1 < 0) {
-          this.field_h = 0;
-          this.field_i = true;
+    final void advanceSweep(boolean useMaskAfterWrap, int targetPosition, byte obfuscationGuard) {
+        int distanceToTarget = 0;
+        int maximumStep = 0;
+        if (targetPosition < 0) {
+          this.sweepPosition = 0;
+          this.useSweepMask = true;
           return;
         }
-        if (param1 > this.field_h) {
-          param1 = param1 - this.field_c;
+        if (targetPosition > this.sweepPosition) {
+          targetPosition = targetPosition - this.cycleLength;
         }
-        int var4 = 23 % ((param2 - 82) / 42);
-        if (this.field_h > param1) {
-          var5 = -param1 + this.field_h;
-          var6 = tp.b(-84) * 2;
-          this.field_h = this.field_h - (var6 <= var5 ? var6 : var5);
+        int guardArithmetic = 23 % ((obfuscationGuard - 82) / 42);
+        if (this.sweepPosition > targetPosition) {
+          distanceToTarget = -targetPosition + this.sweepPosition;
+          maximumStep = tp.getNominalTickRate(-84) * 2;
+          this.sweepPosition = this.sweepPosition - (maximumStep <= distanceToTarget ? maximumStep : distanceToTarget);
         }
-        if (0 > this.field_h) {
-          this.field_i = param0 ? true : false;
-          this.field_h = this.field_h + this.field_c;
+        if (0 > this.sweepPosition) {
+          this.useSweepMask = useMaskAfterWrap ? true : false;
+          this.sweepPosition = this.sweepPosition + this.cycleLength;
         }
     }
 
@@ -232,28 +232,28 @@ final class sj {
         }
     }
 
-    sj(int param0) {
-        int var4 = 0;
-        int var2;
-        int var3;
-        int var5;
-        int var6;
-        int var7;
-        this.field_i = false;
-        this.field_c = param0;
-        var2 = 2147483647;
-        this.field_f = new int[ac.field_m * CampaignProgress.field_b];
-        var3 = -2147483648;
-        for (var4 = 0; ac.field_m * CampaignProgress.field_b > var4; var4++) {
-          var5 = var4 % CampaignProgress.field_b - (CampaignProgress.field_b >> 1);
-          var6 = -(ac.field_m >> 1) + var4 / CampaignProgress.field_b;
-          var7 = (this.field_c - (int)(Math.atan2((double)(-var5), (double)var6) * (double)this.field_c / 3.141592653589793)) / 2;
-          if (var3 < var7) {
-            var3 = var7;
+    TurnTimerDial(int cycleLength) {
+        int pixelIndex = 0;
+        int minimumThreshold;
+        int maximumThreshold;
+        int pixelXFromCenter;
+        int pixelYFromCenter;
+        int threshold;
+        this.useSweepMask = false;
+        this.cycleLength = cycleLength;
+        minimumThreshold = 2147483647;
+        this.pixelThresholds = new int[ac.field_m * CampaignProgress.field_b];
+        maximumThreshold = -2147483648;
+        for (pixelIndex = 0; ac.field_m * CampaignProgress.field_b > pixelIndex; pixelIndex++) {
+          pixelXFromCenter = pixelIndex % CampaignProgress.field_b - (CampaignProgress.field_b >> 1);
+          pixelYFromCenter = -(ac.field_m >> 1) + pixelIndex / CampaignProgress.field_b;
+          threshold = (this.cycleLength - (int)(Math.atan2((double)(-pixelXFromCenter), (double)pixelYFromCenter) * (double)this.cycleLength / 3.141592653589793)) / 2;
+          if (maximumThreshold < threshold) {
+            maximumThreshold = threshold;
           }
-          this.field_f[var4] = var7;
-          if (var7 < var2) {
-            var2 = var7;
+          this.pixelThresholds[pixelIndex] = threshold;
+          if (threshold < minimumThreshold) {
+            minimumThreshold = threshold;
           }
         }
     }

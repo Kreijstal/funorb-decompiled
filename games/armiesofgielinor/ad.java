@@ -112,7 +112,7 @@ final class ad extends tj implements he {
           this.field_G = param2;
           this.field_L = param0;
           this.field_J = param1;
-          var4_int = this.field_G != null ? this.field_J.a(this.field_G, 260, this.field_J.field_H) : 0;
+          var4_int = this.field_G != null ? this.field_J.getParagraphHeight(this.field_G, 260, this.field_J.field_H) : 0;
           this.a(0, 288, 0, 8192, 22 + var4_int);
         } catch (RuntimeException runtimeException) {
           throw ig.addExceptionContext((Throwable) ((Object) runtimeException), "ad.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');

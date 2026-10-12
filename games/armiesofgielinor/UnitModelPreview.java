@@ -211,7 +211,7 @@ final class UnitModelPreview {
         if (param1 >= -68) {
           return (of) null;
         }
-        return (of) (eu.field_e.a((byte) -27, param0));
+        return (of) (UnitCycler.field_e.a((byte) -27, param0));
     }
 
     final void selectAnimation(int obfuscationGuard, int animationIndex) {

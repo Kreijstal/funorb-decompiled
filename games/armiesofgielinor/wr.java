@@ -45,7 +45,7 @@ final class wr extends hs implements he {
           vu.field_Q.field_X = param1;
           var2_int = so.field_b.field_a;
           var3 = so.field_b.field_g;
-          var4 = vu.field_Q.field_Z.a(param1, 272, vu.field_Q.field_pb);
+          var4 = vu.field_Q.field_Z.getParagraphHeight(param1, 272, vu.field_Q.field_pb);
           var5 = -(var4 / 2) + var3 / 2 - 103;
           if (param0 < 27) {
             field_J = -20;

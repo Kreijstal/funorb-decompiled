@@ -226,7 +226,7 @@ final class wi {
                   if (var12.field_Ub) {
                     var12.field_ac.field_X = fo.a(param1 + 4545, DeployEvent.field_G, new String[]{var20});
                     var12.field_dc.field_X = LeaderEscortCondition.field_g;
-                    var12.field_ec.field_X = uf.field_l;
+                    var12.field_ec.field_X = SpellConfirmationDialog.field_l;
                   } else {
                     var12.field_dc.field_X = bq.field_b;
                   }
@@ -307,7 +307,7 @@ final class wi {
                 ActionSpell.a(var12.field_Pb, param3, 6);
               } else {
                 if (0 == var12.field_ec.field_yb) {
-                  bk.a(false, 0, iu.field_t, 0, var12, param4, TeleportAction.field_z);
+                  bk.a(false, 0, BattleTutorial.field_t, 0, var12, param4, TeleportAction.field_z);
                 } else {
                   te.a(param3, var12.field_Pb, (byte) 97);
                 }

@@ -49,7 +49,7 @@ final class CampaignProgress {
         String var7;
         String var8;
         var5 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
-        var6 = "(" + me.field_c + " " + ba.field_F + " " + sj.field_e + ") " + nm.field_o;
+        var6 = "(" + me.field_c + " " + ba.field_F + " " + TurnTimerDial.field_e + ") " + nm.field_o;
         var1 = var6;
         if (fk.field_b > 0) {
           var1 = var6 + ":";

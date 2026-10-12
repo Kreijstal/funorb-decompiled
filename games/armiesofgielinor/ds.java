@@ -29,7 +29,7 @@ final class ds {
           var2 = 48 / ((36 - param0) / 56);
           ku.field_I = false;
           DeployEvent.field_A = ArchiveIndex.field_k;
-          iu.field_t = mq.field_Xb;
+          BattleTutorial.field_t = mq.field_Xb;
           TeleportAction.field_z = BoundedFile.field_d;
           ArchiveIndex.field_k = 0;
           eq.field_l = EffectPresentation.field_g;

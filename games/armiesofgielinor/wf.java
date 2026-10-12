@@ -99,7 +99,7 @@ abstract class wf extends iv {
         if (param0 >= -15) {
           this.field_o = true;
         }
-        var2 = InstructionsPanel.a((byte) -53, this.field_n, this.field_w, jr.a(-1), CombatPresentation.i(-4938), true);
+        var2 = InstructionsPanel.a((byte) -53, this.field_n, this.field_w, RadialSummonItem.a(-1), CombatPresentation.i(-4938), true);
         if (var2 == -1) {
           return -1;
         }
@@ -231,7 +231,7 @@ abstract class wf extends iv {
             }
           }
           if (2 == var4) {
-            var5_intLifetime1 = DiskCacheWorker.a((byte) -46, CombatPresentation.i(-4938), cn.e(488997228), lb.b(0), this.field_n, qp.e((byte) -127), jr.a(-1));
+            var5_intLifetime1 = DiskCacheWorker.a((byte) -46, CombatPresentation.i(-4938), cn.e(488997228), lb.b(0), this.field_n, qp.e((byte) -127), RadialSummonItem.a(-1));
             if (var5_intLifetime1 != -1) {
               CampaignMenuEntry.a(lk.field_r, -14, br.field_b, var5_intLifetime1);
               lk.field_r = null;
@@ -247,7 +247,7 @@ abstract class wf extends iv {
             if (param1) {
               ol.field_C = false;
             } else {
-              var5_intLifetime2 = InstructionsPanel.a((byte) -53, this.field_n, this.field_w, jr.a(-1), CombatPresentation.i(-4938), false);
+              var5_intLifetime2 = InstructionsPanel.a((byte) -53, this.field_n, this.field_w, RadialSummonItem.a(-1), CombatPresentation.i(-4938), false);
               if (var5_intLifetime2 != -1) {
                 if (var5_intLifetime2 != 0) {
                   wv.a(lk.field_r, 10, var5_intLifetime2);
@@ -532,7 +532,7 @@ abstract class wf extends iv {
           el.field_d = CampaignMission.field_I.a(9);
         }
         if (TeamRoster.a(99)) {
-          var3 = tp.b(-113) * 1200;
+          var3 = tp.getNominalTickRate(-113) * 1200;
           if (this.field_r ||
             !(var3 >= bs.a((byte) 99)) &&
             !(os.g(4) <= var3)) {
@@ -837,13 +837,13 @@ abstract class wf extends iv {
             }
             var8 = stackIn_6_0;
             var9 = param0.substring(var7, var8);
-            if (var6.field_q == iu.field_x) {
+            if (var6.field_q == BattleTutorial.field_x) {
               discarded$0 = var4.append("<col=66ffff>").append(var9).append("</col>");
             } else {
               if (hf.field_h != var6.field_q) {
                 if (var6.field_q != rn.field_c) {
                   if (var6.field_q != gg.field_G) {
-                    if (var6.field_q != gb.field_z) {
+                    if (var6.field_q != EquipmentBattleTutorial.field_z) {
                       discarded$1 = var4.append(var9);
                     } else {
                       discarded$2 = var4.append("<col=33ffaa>").append(var9).append("</col>");

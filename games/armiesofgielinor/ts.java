@@ -74,7 +74,7 @@ final class ts {
           f.field_C.a(var12, -20500, var9_int, param3, 0);
           f.field_C.field_G = tq.a(11579568, false, f.field_C.field_ob, 2105376, 3, 8421504);
           var12 = var12 + param3;
-          eu.field_g.a(var12, -20500, var9_int, param8 - var12 / 2, -(var9_int / 2) + param1);
+          UnitCycler.field_g.a(var12, -20500, var9_int, param8 - var12 / 2, -(var9_int / 2) + param1);
         } catch (RuntimeException runtimeException) {
           throw ig.addExceptionContext((Throwable) ((Object) runtimeException), "ts.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ')');
         }

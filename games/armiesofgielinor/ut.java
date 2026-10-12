@@ -101,7 +101,7 @@ final class ut extends sf implements he {
                 this.field_db[incrementValue$0] = var3_ref_ls__[var5];
               }
             }
-            uf.a(this.field_db, 1680474497);
+            SpellConfirmationDialog.a(this.field_db, 1680474497);
           }
           stackIn_31_1 = !(this.field_db.length <= 0);
           this.field_jb = stackIn_31_1;

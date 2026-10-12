@@ -644,12 +644,12 @@ abstract class BitmapFont extends DualLinkedNode {
         return null;
     }
 
-    final int a(String param0, int param1, int param2) {
-        if (param2 == 0) {
-          param2 = this.field_v;
+    final int getParagraphHeight(String text, int width, int lineHeight) {
+        if (lineHeight == 0) {
+          lineHeight = this.field_v;
         }
-        int var4 = this.a(param0, new int[]{param1}, field_w);
-        int var5 = (var4 - 1) * param2;
+        int var4 = this.a(text, new int[]{width}, field_w);
+        int var5 = (var4 - 1) * lineHeight;
         return this.field_H + var5 + this.field_L;
     }
 

@@ -3,11 +3,11 @@
  */
 final class Unit extends IntrusiveNode implements TaggedFieldReader {
     int tag;
-    UnitModelPreview field_x;
+    UnitModelPreview modelPreview;
     int accessoryType;
     boolean hasTileEffect8;
     boolean hasTileEffect4;
-    boolean field_U;
+    boolean modelVisible;
     int strength;
     static String field_n;
     int attacksRemaining;
@@ -32,7 +32,7 @@ final class Unit extends IntrusiveNode implements TaggedFieldReader {
     AiUnitPlanner aiPlanner;
     int[] field_R;
     static String field_T;
-    int field_z;
+    int modelAnimationIndex;
     boolean meleeLifeSteal;
     boolean field_X;
     boolean removedFromActivePlay;
@@ -113,10 +113,10 @@ final class Unit extends IntrusiveNode implements TaggedFieldReader {
         if (param1 != 8) {
           this.n((byte) 80);
         }
-        if (this.field_x == null) {
-          this.field_x = new UnitModelPreview(this.field_R, param0, this.facingAngle);
+        if (this.modelPreview == null) {
+          this.modelPreview = new UnitModelPreview(this.field_R, param0, this.facingAngle);
         } else {
-          this.field_x.setUnitType((byte) 59, param0);
+          this.modelPreview.setUnitType((byte) 59, param0);
         }
     }
 
@@ -341,7 +341,7 @@ final class Unit extends IntrusiveNode implements TaggedFieldReader {
             return false;
           }
           if (obfuscationGuard < 113) {
-            this.field_z = -18;
+            this.modelAnimationIndex = -18;
           }
           stackIn_12_0 = !(this.bonusStrength + this.strength < target.strength + target.bonusStrength);
           return stackIn_12_0;
@@ -429,7 +429,7 @@ final class Unit extends IntrusiveNode implements TaggedFieldReader {
           this.immobilizedTurns = this.immobilizedTurns - 1;
         }
         if (obfuscationGuard != -36) {
-          this.field_x = (UnitModelPreview) null;
+          this.modelPreview = (UnitModelPreview) null;
         }
         if (this.immobilizedTurns != 0) {
         } else {
@@ -475,14 +475,14 @@ final class Unit extends IntrusiveNode implements TaggedFieldReader {
     }
 
     final void z(int param0) {
-        if (null != this.field_x) {
+        if (null != this.modelPreview) {
           if (this.unitType == 34) {
-            this.field_x.setUnitType((byte) 115, 75);
+            this.modelPreview.setUnitType((byte) 115, 75);
           }
           if (this.unitType == 7) {
-            this.field_x.setUnitType((byte) 77, 76);
+            this.modelPreview.setUnitType((byte) 77, 76);
           }
-          this.field_x.selectAnimation(-23162, 0);
+          this.modelPreview.selectAnimation(-23162, 0);
         }
         if (param0 != 10) {
           this.field_R = (int[]) null;
@@ -503,8 +503,8 @@ final class Unit extends IntrusiveNode implements TaggedFieldReader {
           angle < 2048) {
           this.facingAngle = angle;
         }
-        if (this.field_x != null) {
-          this.field_x.setYaw(false, angle);
+        if (this.modelPreview != null) {
+          this.modelPreview.setYaw(false, angle);
         }
         int var3 = 114 / ((-56 - obfuscationGuard) / 54);
     }
@@ -1105,7 +1105,7 @@ final class Unit extends IntrusiveNode implements TaggedFieldReader {
             battlefield.tiles[tileX + battlefield.mapWidth * tileY].occupant = this;
             this.refreshTileEffects((byte) -122);
           }
-          this.field_z = -1;
+          this.modelAnimationIndex = -1;
           this.field_R = new int[3];
           this.facingAngle = 1792;
           if (0 == this.unitType &&

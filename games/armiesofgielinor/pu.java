@@ -90,7 +90,7 @@ final class pu {
             wl.field_F.b(87);
             wl.field_F = null;
           }
-          eu.field_e = null;
+          UnitCycler.field_e = null;
           if (null != oi.field_d) {
             var3 = (of) (oi.field_d.a((byte) 66));
             while (var3 != null) {

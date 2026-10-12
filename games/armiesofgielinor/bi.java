@@ -61,7 +61,7 @@ abstract class bi {
               var4Lifetime1 = gg.field_G;
             }
           } else {
-            var4Lifetime1 = gb.field_z;
+            var4Lifetime1 = EquipmentBattleTutorial.field_z;
           }
           stackIn_21_0 = new og(var4Lifetime1, var2_int, var5);
           return stackIn_21_0;

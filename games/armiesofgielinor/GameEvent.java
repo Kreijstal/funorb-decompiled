@@ -132,7 +132,7 @@ abstract class GameEvent extends IntrusiveNode {
           if (param0 != -39) {
             return false;
           }
-          var5 = cp.a(param1, 10120, param1.battlefield, this.e(1023) & param3, this, param1.field_gb);
+          var5 = cp.a(param1, 10120, param1.battlefield, this.e(1023) & param3, this, param1.unitRenderer);
           if (var5 != null) {
             param2.addLast((byte) -119, (IntrusiveNode) (var5));
           }
@@ -170,7 +170,7 @@ abstract class GameEvent extends IntrusiveNode {
         if (null != this.unit &&
           this.eventKind != 19) {
           this.unit.field_u = false;
-          this.unit.field_z = 0;
+          this.unit.modelAnimationIndex = 0;
         }
         if (obfuscationGuard > -46) {
           this.acknowledgePresentation((byte) -28);
@@ -230,7 +230,7 @@ abstract class GameEvent extends IntrusiveNode {
         String stackIn_16_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var6 = ub.a(this, param2.battlefield, this.e(param1 + 1008), param0, param2, 17, param4, param2.field_gb);
+          var6 = RadialSummonMenu.a(this, param2.battlefield, this.e(param1 + 1008), param0, param2, 17, param4, param2.unitRenderer);
           if (var6 != null) {
             param3.addLast((byte) -119, (IntrusiveNode) (var6));
           }
@@ -350,7 +350,7 @@ abstract class GameEvent extends IntrusiveNode {
     final void f(int param0) {
         if (this.unit != null) {
           this.unit.field_u = false;
-          this.unit.field_z = 0;
+          this.unit.modelAnimationIndex = 0;
         }
         if (param0 != 6) {
           GameEvent.a((byte) 88);

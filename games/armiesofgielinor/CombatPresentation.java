@@ -2769,7 +2769,7 @@ final class CombatPresentation implements EventPresentation {
           var5 = 35;
           var6 = rs.field_k - var2_int - var4;
           var7 = var3 + 0;
-          if (iu.field_n &&
+          if (BattleTutorial.field_n &&
             this.isCombatViewReady((byte) -96)) {
             stackIn_50_0 = TutorialController.field_e;
           } else {

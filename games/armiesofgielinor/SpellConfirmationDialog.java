@@ -1,19 +1,19 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class uf {
+final class SpellConfirmationDialog {
     static je field_i;
-    int field_c;
+    int tileY;
     static String field_g;
-    int field_b;
+    int tileX;
     static int field_a;
-    int field_k;
+    int spellId;
     static String field_l;
     static int field_e;
     static RgbSprite field_j;
-    int field_d;
+    int selectionMode;
     static ResourceArchive field_f;
-    private String field_h;
+    private String prompt;
 
     final static void a(ls[] param0, int param1) {
         int var3 = 0;
@@ -58,17 +58,17 @@ final class uf {
         }
     }
 
-    final int a(int param0, byte param1, int param2) {
-        int var4 = so.field_b.field_a;
-        int var5 = so.field_b.field_g;
-        int var6 = 30 + (rs.field_n.a(this.field_h, 200, 0) + 5);
-        if (wg.a(-33, var4 / 2 - 100, -2 + var4 / 2, var5 / 2 + ((var6 >> 1) - 30), (var6 >> 1) + var5 / 2)) {
-          return param2;
+    final int getActionAtPointer(int cancelAction, byte obfuscationGuard, int confirmAction) {
+        int surfaceWidth = so.field_b.field_a;
+        int surfaceHeight = so.field_b.field_g;
+        int dialogHeight = 30 + (rs.field_n.getParagraphHeight(this.prompt, 200, 0) + 5);
+        if (wg.a(-33, surfaceWidth / 2 - 100, -2 + surfaceWidth / 2, surfaceHeight / 2 + ((dialogHeight >> 1) - 30), (dialogHeight >> 1) + surfaceHeight / 2)) {
+          return confirmAction;
         }
-        if (wg.a(-33, var4 / 2 + 2, var4 / 2 + 100, -30 + ((var6 >> 1) + var5 / 2), var5 / 2 + (var6 >> 1))) {
-          return param0;
+        if (wg.a(-33, surfaceWidth / 2 + 2, surfaceWidth / 2 + 100, -30 + ((dialogHeight >> 1) + surfaceHeight / 2), surfaceHeight / 2 + (dialogHeight >> 1))) {
+          return cancelAction;
         }
-        if (param1 < 41) {
+        if (obfuscationGuard < 41) {
           field_i = (je) null;
         }
         return -1;
@@ -85,17 +85,17 @@ final class uf {
         field_j = null;
     }
 
-    final void b(int param0) {
+    final void draw(int obfuscationGuard) {
         int var2 = so.field_b.field_a;
         int var3 = so.field_b.field_g;
-        if (param0 != 1619620993) {
+        if (obfuscationGuard != 1619620993) {
           return;
         }
         SoftwareRaster.b(0, 0, var2, var3, 0, 128);
-        int var4 = 5 + (rs.field_n.a(this.field_h, 200, 0) + 30);
+        int var4 = 5 + (rs.field_n.getParagraphHeight(this.prompt, 200, 0) + 30);
         fe.b(212, -(var4 >> 1) + (-8 + var3 / 2), 216, 16 + var4, io.field_m, nd.field_b, 0, 128);
-        rs.field_n.a(this.field_h, var2 / 2 - 100, -(var4 >> 1) + var3 / 2, 200, var4, 16777215, 0, 1, 0, 0);
-        int[] var10 = wg.a(param0 - 1619621026, var2 / 2 - 100, 318, -30 + var3 / 2 + (var4 >> 1), (var4 >> 1) + var3 / 2) ? TutorialController.field_e : nd.field_b;
+        rs.field_n.a(this.prompt, var2 / 2 - 100, -(var4 >> 1) + var3 / 2, 200, var4, 16777215, 0, 1, 0, 0);
+        int[] var10 = wg.a(obfuscationGuard - 1619621026, var2 / 2 - 100, 318, -30 + var3 / 2 + (var4 >> 1), (var4 >> 1) + var3 / 2) ? TutorialController.field_e : nd.field_b;
         int[] var8 = var10;
         int[] var6 = var8;
         int[] var5 = var6;
@@ -109,15 +109,15 @@ final class uf {
         fe.c(oa.field_G, -50 + var2 / 2 + 100, 2 + (var3 / 2 + (var4 >> 1)), 0, true);
     }
 
-    uf(int param0, int param1, int param2, int param3, String param4, GameplayController param5) {
+    SpellConfirmationDialog(int selectionMode, int spellId, int tileX, int tileY, String prompt, GameplayController unusedController) {
         try {
-          this.field_c = param3;
-          this.field_k = param1;
-          this.field_b = param2;
-          this.field_h = param4;
-          this.field_d = param0;
+          this.tileY = tileY;
+          this.spellId = spellId;
+          this.tileX = tileX;
+          this.prompt = prompt;
+          this.selectionMode = selectionMode;
         } catch (RuntimeException runtimeException) {
-          throw ig.addExceptionContext((Throwable) ((Object) runtimeException), "uf.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) runtimeException), "uf.<init>(" + selectionMode + ',' + spellId + ',' + tileX + ',' + tileY + ',' + (prompt != null ? "{...}" : "null") + ',' + (unusedController != null ? "{...}" : "null") + ')');
         }
     }
 

@@ -1,68 +1,68 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class iu {
+class BattleTutorial {
     static int field_t;
-    int field_g;
+    int panelWidth;
     static boolean field_n;
-    private int field_p;
-    private int field_f;
-    int field_w;
+    private int messageId;
+    private int targetPanelWidth;
+    int buttonMode;
     static je field_d;
     static String field_b;
-    private int field_m;
-    private int field_j;
-    private boolean field_v;
+    private int autoAdvanceFrames;
+    private int panelHeight;
+    private boolean enemyWaveSpawned;
     private boolean field_o;
-    boolean field_c;
-    GameplayController field_q;
+    boolean expanded;
+    GameplayController controller;
     static String field_l;
     static String field_r;
-    int field_k;
+    int stage;
     private boolean field_s;
     static String field_i;
-    private String field_e;
-    private int field_a;
+    private String message;
+    private int expandedPanelHeight;
     static boolean field_h;
     static int field_x;
     static String field_u;
 
-    private final boolean c(byte param0) {
-        if (this.field_q.battlefield.unitsByPlayer[1].b(false) == 0 &&
-          this.field_q.battlefield.tiles[DeployAction.field_s[0]].ownerPlayer == 0) {
+    private final boolean isEnemyWaveDefeated(byte obfuscationGuard) {
+        if (this.controller.battlefield.unitsByPlayer[1].b(false) == 0 &&
+          this.controller.battlefield.tiles[DeployAction.field_s[0]].ownerPlayer == 0) {
           return true;
         }
-        if (param0 != -62) {
-          this.h((byte) -125);
+        if (obfuscationGuard != -62) {
+          this.draw((byte) -125);
         }
         return false;
     }
 
-    final void a(String param0, byte param1) {
+    final void setMessage(String message, byte obfuscationGuard) {
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
         String stackIn_12_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
         try {
-          this.field_e = param0;
-          if (this.field_e != null &&
-            this.field_c) {
-            this.field_a = 50 + rs.field_n.a(this.field_e, 220, 0);
-            this.field_f = 240;
+          this.message = message;
+          if (this.message != null &&
+            this.expanded) {
+            this.expandedPanelHeight = 50 + rs.field_n.getParagraphHeight(this.message, 220, 0);
+            this.targetPanelWidth = 240;
             if (ArmiesOfGielinor.obfuscationControl) {
-              this.field_a = 40;
-              if (this.field_k == 34) {
-                this.field_f = 100;
+              this.expandedPanelHeight = 40;
+              if (this.stage == 34) {
+                this.targetPanelWidth = 100;
               }
             }
           } else {
-            this.field_a = 40;
-            if (this.field_k == 34) {
-              this.field_f = 100;
+            this.expandedPanelHeight = 40;
+            if (this.stage == 34) {
+              this.targetPanelWidth = 100;
             }
           }
-          if (param1 <= 108) {
+          if (obfuscationGuard <= 108) {
             this.j((byte) 81);
           }
           return;
@@ -71,28 +71,28 @@ class iu {
           var3 = decompiledCaughtException;
           stackIn_11_0 = var3;
           stackIn_11_1 = new StringBuilder().append("iu.FA(");
-          if (param0 == null) {
+          if (message == null) {
             stackIn_12_2 = "null";
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw ig.addExceptionContext((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(')').toString());
+          throw ig.addExceptionContext((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 
-    void b(int param0, int param1, int param2) {
+    void handleInteraction(int tileIndex, int obfuscationGuard, int interactionKind) {
         int var4;
         int var5;
         var5 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
-        if (param1 != -3) {
+        if (obfuscationGuard != -3) {
           return;
         }
-        if (param2 == 5) {
-          param2 = this.a(param0, (byte) -124);
+        if (interactionKind == 5) {
+          interactionKind = this.classifyTerrainInteraction(tileIndex, (byte) -124);
         }
-        if (this.c((byte) -62) &&
-          this.field_v) {
-          this.b(28, -30659);
+        if (this.isEnemyWaveDefeated((byte) -62) &&
+          this.enemyWaveSpawned) {
+          this.setStage(28, -30659);
           return;
         }
         regionExit1: {
@@ -127,12 +127,12 @@ class iu {
                           boolean decompiledFrameRemainder3 = true;
                           boolean decompiledFrameRemainder2 = true;
                           boolean decompiledFrameRemainder0 = true;
-                          var4 = this.field_k;
+                          var4 = this.stage;
                           if (var4 == 0) {
-                            if (param2 != 1) {
+                            if (interactionKind != 1) {
                               break regionExit1;
                             }
-                            this.b(1, -30659);
+                            this.setStage(1, -30659);
                             if (var5 == 0) {
                               break regionExit1;
                             }
@@ -225,10 +225,10 @@ class iu {
                             (decompiledFrameRemainder2) &&
                             (decompiledFrameRemainder1) &&
                             (decompiledFrameRemainder0)) {
-                            if (param2 != 2) {
+                            if (interactionKind != 2) {
                               break regionExit1;
                             }
-                            this.b(2, -30659);
+                            this.setStage(2, -30659);
                             if (var5 == 0) {
                               break regionExit1;
                             }
@@ -255,10 +255,10 @@ class iu {
                             (decompiledFrameRemainder3) &&
                             (decompiledFrameRemainder2) &&
                             (decompiledFrameRemainder1)) {
-                            if (param2 != 3) {
+                            if (interactionKind != 3) {
                               break regionExit1;
                             }
-                            this.b(3, -30659);
+                            this.setStage(3, -30659);
                             if (var5 == 0) {
                               break regionExit1;
                             }
@@ -284,16 +284,16 @@ class iu {
                             (decompiledFrameRemainder4) &&
                             (decompiledFrameRemainder3) &&
                             (decompiledFrameRemainder1)) {
-                            if (2 != param2) {
-                              if (param2 != 4) {
+                            if (2 != interactionKind) {
+                              if (interactionKind != 4) {
                                 break regionExit1;
                               }
-                              this.b(5, param1 - 30656);
+                              this.setStage(5, obfuscationGuard - 30656);
                               if (var5 == 0) {
                                 break regionExit1;
                               }
                             }
-                            this.b(4, -30659);
+                            this.setStage(4, -30659);
                             if (var5 == 0) {
                               break regionExit1;
                             }
@@ -318,10 +318,10 @@ class iu {
                             (decompiledFrameRemainder5) &&
                             (decompiledFrameRemainder4) &&
                             (decompiledFrameRemainder1)) {
-                            if (param2 != 4) {
+                            if (interactionKind != 4) {
                               break regionExit1;
                             }
-                            this.b(5, -30659);
+                            this.setStage(5, -30659);
                             if (var5 == 0) {
                               break regionExit1;
                             }
@@ -345,28 +345,28 @@ class iu {
                             (decompiledFrameRemainder6) &&
                             (decompiledFrameRemainder5) &&
                             (decompiledFrameRemainder1)) {
-                            if (param2 == 2) {
-                              this.b(6, -30659);
+                            if (interactionKind == 2) {
+                              this.setStage(6, -30659);
                               if (var5 == 0) {
                                 break regionExit1;
                               }
                             }
-                            if (param2 == 6) {
-                              this.b(8, -30659);
+                            if (interactionKind == 6) {
+                              this.setStage(8, -30659);
                               if (var5 == 0) {
                                 break regionExit1;
                               }
                             }
-                            if (7 == param2) {
-                              this.b(9, -30659);
+                            if (7 == interactionKind) {
+                              this.setStage(9, -30659);
                               if (var5 == 0) {
                                 break regionExit1;
                               }
                             }
-                            if (param2 != 9) {
+                            if (interactionKind != 9) {
                               break regionExit1;
                             }
-                            this.b(10, -30659);
+                            this.setStage(10, -30659);
                             if (var5 == 0) {
                               break regionExit1;
                             }
@@ -389,12 +389,12 @@ class iu {
                             (decompiledFrameRemainder7) &&
                             (decompiledFrameRemainder6) &&
                             (decompiledFrameRemainder1)) {
-                            if (param2 != 18 &&
-                              5 != param2 &&
-                              param2 != 9) {
+                            if (interactionKind != 18 &&
+                              5 != interactionKind &&
+                              interactionKind != 9) {
                               break regionExit1;
                             }
-                            this.b(7, param1 ^ 30656);
+                            this.setStage(7, obfuscationGuard ^ 30656);
                             if (var5 == 0) {
                               break regionExit1;
                             }
@@ -416,22 +416,22 @@ class iu {
                             (decompiledFrameRemainder8) &&
                             (decompiledFrameRemainder7) &&
                             (decompiledFrameRemainder1)) {
-                            if (param2 != 6) {
-                              if (param2 == 7) {
-                                this.b(9, param1 ^ 30656);
+                            if (interactionKind != 6) {
+                              if (interactionKind == 7) {
+                                this.setStage(9, obfuscationGuard ^ 30656);
                                 if (var5 == 0) {
                                   break regionExit1;
                                 }
                               }
-                              if (param2 != 9) {
+                              if (interactionKind != 9) {
                                 break regionExit1;
                               }
-                              this.b(10, param1 - 30656);
+                              this.setStage(10, obfuscationGuard - 30656);
                               if (var5 == 0) {
                                 break regionExit1;
                               }
                             }
-                            this.b(8, -30659);
+                            this.setStage(8, -30659);
                             if (var5 == 0) {
                               break regionExit1;
                             }
@@ -452,16 +452,16 @@ class iu {
                             (decompiledFrameRemainder9) &&
                             (decompiledFrameRemainder8) &&
                             (decompiledFrameRemainder1)) {
-                            if (param2 == 2) {
-                              this.b(30, -30659);
+                            if (interactionKind == 2) {
+                              this.setStage(30, -30659);
                               if (var5 == 0) {
                                 break regionExit1;
                               }
                             }
-                            if (param2 != 14) {
+                            if (interactionKind != 14) {
                               break regionExit1;
                             }
-                            this.b(12, -30659);
+                            this.setStage(12, -30659);
                             if (var5 == 0) {
                               break regionExit1;
                             }
@@ -481,16 +481,16 @@ class iu {
                             (decompiledFrameRemainder10) &&
                             (decompiledFrameRemainder9) &&
                             (decompiledFrameRemainder1)) {
-                            if (param2 == 2) {
-                              this.b(30, -30659);
+                            if (interactionKind == 2) {
+                              this.setStage(30, -30659);
                               if (var5 == 0) {
                                 break regionExit1;
                               }
                             }
-                            if (14 != param2) {
+                            if (14 != interactionKind) {
                               break regionExit1;
                             }
-                            this.b(12, -30659);
+                            this.setStage(12, -30659);
                             if (var5 == 0) {
                               break regionExit1;
                             }
@@ -509,16 +509,16 @@ class iu {
                             (decompiledFrameRemainder11) &&
                             (decompiledFrameRemainder10) &&
                             (decompiledFrameRemainder1)) {
-                            if (param2 == 2) {
-                              this.b(11, -30659);
+                            if (interactionKind == 2) {
+                              this.setStage(11, -30659);
                               if (var5 == 0) {
                                 break regionExit1;
                               }
                             }
-                            if (param2 != 14) {
+                            if (interactionKind != 14) {
                               break regionExit1;
                             }
-                            this.b(12, param1 ^ 30656);
+                            this.setStage(12, obfuscationGuard ^ 30656);
                             if (var5 == 0) {
                               break regionExit1;
                             }
@@ -536,10 +536,10 @@ class iu {
                             (decompiledFrameRemainder12) &&
                             (decompiledFrameRemainder11) &&
                             (decompiledFrameRemainder1)) {
-                            if (param2 != 14) {
+                            if (interactionKind != 14) {
                               break regionExit1;
                             }
-                            this.b(12, -30659);
+                            this.setStage(12, -30659);
                             if (var5 == 0) {
                               break regionExit1;
                             }
@@ -556,10 +556,10 @@ class iu {
                             (decompiledFrameRemainder13) &&
                             (decompiledFrameRemainder12) &&
                             (decompiledFrameRemainder1)) {
-                            if (param2 != 14) {
+                            if (interactionKind != 14) {
                               break regionExit1;
                             }
-                            this.b(12, -30659);
+                            this.setStage(12, -30659);
                             if (var5 == 0) {
                               break regionExit1;
                             }
@@ -576,35 +576,35 @@ class iu {
                             (decompiledFrameRemainder13) &&
                             (decompiledFrameRemainder1)) {
                             if (this.field_s ||
-                              param2 != 6) {
+                              interactionKind != 6) {
                               if (this.field_o ||
-                                param2 != 7) {
-                                if (param2 != 2) {
+                                interactionKind != 7) {
+                                if (interactionKind != 2) {
                                   break regionExit1;
                                 }
                                 if (!this.field_s) {
-                                  this.b(13, -30659);
+                                  this.setStage(13, -30659);
                                   if (var5 == 0) {
                                     break regionExit1;
                                   }
                                 }
                                 if (this.field_o) {
-                                  this.b(31, param1 - 30656);
+                                  this.setStage(31, obfuscationGuard - 30656);
                                   if (var5 == 0) {
                                     break regionExit1;
                                   }
                                 }
-                                this.b(16, param1 - 30656);
+                                this.setStage(16, obfuscationGuard - 30656);
                                 if (var5 == 0) {
                                   break regionExit1;
                                 }
                               }
-                              this.b(17, param1 - 30656);
+                              this.setStage(17, obfuscationGuard - 30656);
                               if (var5 == 0) {
                                 break regionExit1;
                               }
                             }
-                            this.b(14, param1 ^ 30656);
+                            this.setStage(14, obfuscationGuard ^ 30656);
                             if (var5 == 0) {
                               break regionExit1;
                             }
@@ -619,10 +619,10 @@ class iu {
                             (decompiledFrameRemainder15) &&
                             (decompiledFrameRemainder14) &&
                             (decompiledFrameRemainder1)) {
-                            if (6 != param2) {
+                            if (6 != interactionKind) {
                               break regionExit1;
                             }
-                            this.b(14, -30659);
+                            this.setStage(14, -30659);
                             if (var5 == 0) {
                               break regionExit1;
                             }
@@ -636,20 +636,20 @@ class iu {
                             (decompiledFrameRemainder16) &&
                             (decompiledFrameRemainder15) &&
                             (decompiledFrameRemainder1)) {
-                            if (param2 == 14) {
+                            if (interactionKind == 14) {
                               if (!this.field_o) {
-                                this.b(16, param1 - 30656);
+                                this.setStage(16, obfuscationGuard - 30656);
                                 if (var5 != 0) {
-                                  this.b(31, -30659);
+                                  this.setStage(31, -30659);
                                 }
                               } else {
-                                this.b(31, -30659);
+                                this.setStage(31, -30659);
                               }
                             }
-                            if (2 != param2) {
+                            if (2 != interactionKind) {
                               break regionExit1;
                             }
-                            this.b(15, -30659);
+                            this.setStage(15, -30659);
                             if (var5 == 0) {
                               break regionExit1;
                             }
@@ -662,14 +662,14 @@ class iu {
                             (decompiledFrameRemainder17) &&
                             (decompiledFrameRemainder16) &&
                             (decompiledFrameRemainder1) &&
-                            (14 == param2)) {
+                            (14 == interactionKind)) {
                             if (!this.field_o) {
-                              this.b(16, -30659);
+                              this.setStage(16, -30659);
                               if (var5 != 0) {
-                                this.b(31, -30659);
+                                this.setStage(31, -30659);
                               }
                             } else {
-                              this.b(31, -30659);
+                              this.setStage(31, -30659);
                             }
                           }
                           if ((decompiledFrameRemainder22) &&
@@ -679,10 +679,10 @@ class iu {
                             (decompiledFrameRemainder18) &&
                             (decompiledFrameRemainder17) &&
                             (decompiledFrameRemainder1)) {
-                            if (7 != param2) {
+                            if (7 != interactionKind) {
                               break regionExit1;
                             }
-                            this.b(17, -30659);
+                            this.setStage(17, -30659);
                             if (var5 == 0) {
                               break regionExit1;
                             }
@@ -693,20 +693,20 @@ class iu {
                             (decompiledFrameRemainder19) &&
                             (decompiledFrameRemainder18) &&
                             (decompiledFrameRemainder1)) {
-                            if (param2 == 14) {
+                            if (interactionKind == 14) {
                               if (!this.field_s) {
-                                this.b(13, param1 - 30656);
+                                this.setStage(13, obfuscationGuard - 30656);
                                 if (var5 != 0) {
-                                  this.b(31, -30659);
+                                  this.setStage(31, -30659);
                                 }
                               } else {
-                                this.b(31, -30659);
+                                this.setStage(31, -30659);
                               }
                             }
-                            if (param2 != 2) {
+                            if (interactionKind != 2) {
                               break regionExit1;
                             }
-                            this.b(18, -30659);
+                            this.setStage(18, -30659);
                             if (var5 == 0) {
                               break regionExit1;
                             }
@@ -716,24 +716,24 @@ class iu {
                             (decompiledFrameRemainder20) &&
                             (decompiledFrameRemainder19) &&
                             (decompiledFrameRemainder1) &&
-                            (14 == param2)) {
+                            (14 == interactionKind)) {
                             if (!this.field_s) {
-                              this.b(13, -30659);
+                              this.setStage(13, -30659);
                               if (var5 != 0) {
-                                this.b(31, -30659);
+                                this.setStage(31, -30659);
                               }
                             } else {
-                              this.b(31, -30659);
+                              this.setStage(31, -30659);
                             }
                           }
                           if ((decompiledFrameRemainder22) &&
                             (decompiledFrameRemainder21) &&
                             (decompiledFrameRemainder20) &&
                             (decompiledFrameRemainder1)) {
-                            if (param2 != 2) {
+                            if (interactionKind != 2) {
                               break regionExit1;
                             }
-                            this.b(32, -30659);
+                            this.setStage(32, -30659);
                             if (var5 == 0) {
                               break regionExit1;
                             }
@@ -741,127 +741,127 @@ class iu {
                           if ((decompiledFrameRemainder22) &&
                             (decompiledFrameRemainder21) &&
                             (decompiledFrameRemainder1)) {
-                            if (param2 != 2) {
+                            if (interactionKind != 2) {
                               break regionExit1;
                             }
-                            this.b(19, -30659);
+                            this.setStage(19, -30659);
                             if (var5 == 0) {
                               break regionExit1;
                             }
                           }
                           if ((decompiledFrameRemainder22) &&
                             (decompiledFrameRemainder1)) {
-                            if (param2 != 3) {
+                            if (interactionKind != 3) {
                               break regionExit1;
                             }
-                            this.b(20, param1 - 30656);
+                            this.setStage(20, obfuscationGuard - 30656);
                             if (var5 == 0) {
                               break regionExit1;
                             }
                           }
                           if (decompiledFrameRemainder1) {
-                            if (2 == param2) {
-                              this.b(21, -30659);
+                            if (2 == interactionKind) {
+                              this.setStage(21, -30659);
                             }
-                            if (param2 != 16) {
+                            if (interactionKind != 16) {
                               break regionExit1;
                             }
-                            this.b(29, param1 - 30656);
+                            this.setStage(29, obfuscationGuard - 30656);
                             if (var5 == 0) {
                               break regionExit1;
                             }
                           }
                         }
                         if (decompiledFrameRemainder1) {
-                          if (param2 != 16) {
+                          if (interactionKind != 16) {
                             break regionExit1;
                           }
-                          this.b(29, -30659);
+                          this.setStage(29, -30659);
                           if (var5 == 0) {
                             break regionExit1;
                           }
                         }
                       }
                       if (decompiledFrameRemainder1) {
-                        if (param2 != 17) {
+                        if (interactionKind != 17) {
                           break regionExit1;
                         }
-                        this.b(22, -30659);
+                        this.setStage(22, -30659);
                         if (var5 == 0) {
                           break regionExit1;
                         }
                       }
                     }
                     if (decompiledFrameRemainder1) {
-                      if (10 != param2) {
+                      if (10 != interactionKind) {
                         break regionExit1;
                       }
-                      this.b(23, -30659);
+                      this.setStage(23, -30659);
                       if (var5 == 0) {
                         break regionExit1;
                       }
                     }
                   }
                   if (decompiledFrameRemainder1) {
-                    if (11 != param2) {
+                    if (11 != interactionKind) {
                       break regionExit1;
                     }
-                    this.b(24, -30659);
+                    this.setStage(24, -30659);
                     if (var5 == 0) {
                       break regionExit1;
                     }
                   }
                 }
                 if (decompiledFrameRemainder1) {
-                  if (param2 != 12) {
+                  if (interactionKind != 12) {
                     break regionExit1;
                   }
-                  this.b(25, -30659);
+                  this.setStage(25, -30659);
                   if (var5 == 0) {
                     break regionExit1;
                   }
                 }
               }
               if (decompiledFrameRemainder1) {
-                if (param2 != 2) {
+                if (interactionKind != 2) {
                   break regionExit1;
                 }
-                this.b(26, param1 - 30656);
+                this.setStage(26, obfuscationGuard - 30656);
                 if (var5 == 0) {
                   break regionExit1;
                 }
               }
             }
             if (decompiledFrameRemainder1) {
-              if (param2 != 2) {
+              if (interactionKind != 2) {
                 break regionExit1;
               }
-              this.b(27, -30659);
+              this.setStage(27, -30659);
               if (var5 == 0) {
                 break regionExit1;
               }
             }
           }
           if (decompiledFrameRemainder1) {
-            if (param2 != 13 &&
-              param2 != 15) {
+            if (interactionKind != 13 &&
+              interactionKind != 15) {
               break regionExit1;
             }
-            if (!this.c((byte) -62)) {
+            if (!this.isEnemyWaveDefeated((byte) -62)) {
               break regionExit1;
             }
-            this.b(28, param1 - 30656);
+            this.setStage(28, obfuscationGuard - 30656);
             if (var5 == 0) {
               break regionExit1;
             }
           }
-          if (param2 == 2) {
-            this.field_j = 0;
+          if (interactionKind == 2) {
+            this.panelHeight = 0;
           }
         }
     }
 
-    final void f(int param0) {
+    final void advancePanelAnimation(int obfuscationGuard) {
         int stackIn_13_1 = 0;
         int stackIn_14_2 = 0;
         int stackIn_18_1 = 0;
@@ -870,69 +870,69 @@ class iu {
         int stackIn_24_2 = 0;
         int stackIn_28_1 = 0;
         int stackIn_29_2 = 0;
-        int var2;
-        int var3;
-        int var4;
-        int var4Lifetime1;
-        int var4Lifetime2;
-        int var4Lifetime3;
-        var2 = 40;
-        if (this.field_k != 33) {
-          if (this.field_c) {
-            var2 = this.field_a;
+        int targetHeight;
+        int guardArithmetic;
+        int heightToShrink;
+        int heightToGrow;
+        int widthToShrink;
+        int widthToGrow;
+        targetHeight = 40;
+        if (this.stage != 33) {
+          if (this.expanded) {
+            targetHeight = this.expandedPanelHeight;
             if (ArmiesOfGielinor.obfuscationControl) {
-              var2 = 0;
+              targetHeight = 0;
             }
           }
         } else {
-          var2 = 0;
+          targetHeight = 0;
         }
-        if (0 < this.field_m) {
-          this.field_m = this.field_m - 1;
-          if (this.field_m == 0) {
-            this.b(-1, -3, 1);
+        if (0 < this.autoAdvanceFrames) {
+          this.autoAdvanceFrames = this.autoAdvanceFrames - 1;
+          if (this.autoAdvanceFrames == 0) {
+            this.handleInteraction(-1, -3, 1);
           }
         }
-        var3 = 0 / ((-9 - param0) / 47);
-        if (var2 < this.field_j) {
-          var4 = -var2 + this.field_j;
-          stackIn_13_1 = this.field_j;
-          if (var4 > 5) {
+        guardArithmetic = 0 / ((-9 - obfuscationGuard) / 47);
+        if (targetHeight < this.panelHeight) {
+          heightToShrink = -targetHeight + this.panelHeight;
+          stackIn_13_1 = this.panelHeight;
+          if (heightToShrink > 5) {
             stackIn_14_2 = 5;
           } else {
-            stackIn_14_2 = var4;
+            stackIn_14_2 = heightToShrink;
           }
-          this.field_j = stackIn_13_1 - stackIn_14_2;
+          this.panelHeight = stackIn_13_1 - stackIn_14_2;
         }
-        if (var2 > this.field_j) {
-          var4Lifetime1 = -this.field_j + var2;
-          stackIn_18_1 = this.field_j;
-          if (5 < var4Lifetime1) {
+        if (targetHeight > this.panelHeight) {
+          heightToGrow = -this.panelHeight + targetHeight;
+          stackIn_18_1 = this.panelHeight;
+          if (5 < heightToGrow) {
             stackIn_19_2 = 5;
           } else {
-            stackIn_19_2 = var4Lifetime1;
+            stackIn_19_2 = heightToGrow;
           }
-          this.field_j = stackIn_18_1 + stackIn_19_2;
+          this.panelHeight = stackIn_18_1 + stackIn_19_2;
         }
-        if (this.field_g > this.field_f) {
-          var4Lifetime2 = this.field_g - this.field_f;
-          stackIn_23_1 = this.field_g;
-          if (var4Lifetime2 > 5) {
+        if (this.panelWidth > this.targetPanelWidth) {
+          widthToShrink = this.panelWidth - this.targetPanelWidth;
+          stackIn_23_1 = this.panelWidth;
+          if (widthToShrink > 5) {
             stackIn_24_2 = 5;
           } else {
-            stackIn_24_2 = var4Lifetime2;
+            stackIn_24_2 = widthToShrink;
           }
-          this.field_g = stackIn_23_1 - stackIn_24_2;
+          this.panelWidth = stackIn_23_1 - stackIn_24_2;
         }
-        if (this.field_f > this.field_g) {
-          var4Lifetime3 = this.field_f - this.field_g;
-          stackIn_28_1 = this.field_g;
-          if (var4Lifetime3 > 5) {
+        if (this.targetPanelWidth > this.panelWidth) {
+          widthToGrow = this.targetPanelWidth - this.panelWidth;
+          stackIn_28_1 = this.panelWidth;
+          if (widthToGrow > 5) {
             stackIn_29_2 = 5;
           } else {
-            stackIn_29_2 = var4Lifetime3;
+            stackIn_29_2 = widthToGrow;
           }
-          this.field_g = stackIn_28_1 + stackIn_29_2;
+          this.panelWidth = stackIn_28_1 + stackIn_29_2;
         }
     }
 
@@ -940,7 +940,7 @@ class iu {
         if (param0 <= 72) {
           return;
         }
-        this.field_q.field_jc = true;
+        this.controller.field_jc = true;
     }
 
     private final void g(int param0) {
@@ -950,18 +950,18 @@ class iu {
 
     private final void g(byte param0) {
         int var2 = -88 % ((param0 - 8) / 48);
-        this.field_q.field_Ab = true;
+        this.controller.field_Ab = true;
     }
 
-    private final void b(int param0, int param1) {
+    private final void setStage(int stage, int obfuscationGuard) {
         int var3;
         int var4;
         var4 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
-        this.field_c = true;
-        this.field_k = param0;
-        this.d((byte) 37);
-        if (param1 != -30659) {
-          this.field_g = -114;
+        this.expanded = true;
+        this.stage = stage;
+        this.clearControlHighlights((byte) 37);
+        if (obfuscationGuard != -30659) {
+          this.panelWidth = -114;
         }
         regionExit1: {
           regionExit2: {
@@ -997,12 +997,12 @@ class iu {
                             boolean decompiledFrameRemainder2 = true;
                             boolean decompiledFrameRemainder1 = true;
                             boolean decompiledFrameRemainder0 = true;
-                            var3 = this.field_k;
+                            var3 = this.stage;
                             if (var3 == 0 &&
                               var4 == 0) {
-                              this.field_w = 2;
-                              this.field_m = 150;
-                              this.field_e = TutorialController.field_f[0];
+                              this.buttonMode = 2;
+                              this.autoAdvanceFrames = 150;
+                              this.message = TutorialController.field_f[0];
                               break regionExit2;
                             } else if (var3 != 1 ||
                               var4 != 0) {
@@ -1068,7 +1068,7 @@ class iu {
                                   case 34:
                                     break regionExit3;
                                   default:
-                                    this.a(this.field_e, (byte) 112);
+                                    this.setMessage(this.message, (byte) 112);
                                     break regionExit1;
                                 }
                               }
@@ -1097,8 +1097,8 @@ class iu {
                               (decompiledFrameRemainder2) &&
                               (decompiledFrameRemainder1) &&
                               (decompiledFrameRemainder0)) {
-                              this.field_e = TutorialController.field_f[1];
-                              this.field_w = 0;
+                              this.message = TutorialController.field_f[1];
+                              this.buttonMode = 0;
                               break regionExit2;
                             }
                             if ((decompiledFrameRemainder23) &&
@@ -1124,9 +1124,9 @@ class iu {
                               (decompiledFrameRemainder3) &&
                               (decompiledFrameRemainder2) &&
                               (decompiledFrameRemainder1)) {
-                              this.field_e = null;
-                              this.a(3, 4, param1 + 30685);
-                              this.field_w = 2;
+                              this.message = null;
+                              this.a(3, 4, obfuscationGuard + 30685);
+                              this.buttonMode = 2;
                               if (var4 == 0) {
                                 break regionExit2;
                               }
@@ -1154,8 +1154,8 @@ class iu {
                               (decompiledFrameRemainder3) &&
                               (decompiledFrameRemainder2)) {
                               this.d(-4);
-                              this.field_e = TutorialController.field_f[2];
-                              this.field_w = 0;
+                              this.message = TutorialController.field_f[2];
+                              this.buttonMode = 0;
                               if (var4 == 0) {
                                 break regionExit2;
                               }
@@ -1181,8 +1181,8 @@ class iu {
                               (decompiledFrameRemainder5) &&
                               (decompiledFrameRemainder4) &&
                               (decompiledFrameRemainder3)) {
-                              this.field_e = TutorialController.field_f[3];
-                              this.field_w = 1;
+                              this.message = TutorialController.field_f[3];
+                              this.buttonMode = 1;
                               this.a((byte) -122);
                               if (var4 == 0) {
                                 break regionExit2;
@@ -1208,8 +1208,8 @@ class iu {
                               (decompiledFrameRemainder6) &&
                               (decompiledFrameRemainder5) &&
                               (decompiledFrameRemainder4)) {
-                              this.field_e = TutorialController.field_f[4];
-                              this.field_w = 0;
+                              this.message = TutorialController.field_f[4];
+                              this.buttonMode = 0;
                               this.f((byte) -34);
                               if (var4 == 0) {
                                 break regionExit2;
@@ -1234,8 +1234,8 @@ class iu {
                               (decompiledFrameRemainder7) &&
                               (decompiledFrameRemainder6) &&
                               (decompiledFrameRemainder5)) {
-                              this.field_w = 1;
-                              this.field_e = TutorialController.field_f[5];
+                              this.buttonMode = 1;
+                              this.message = TutorialController.field_f[5];
                               if (var4 == 0) {
                                 break regionExit2;
                               }
@@ -1258,8 +1258,8 @@ class iu {
                               (decompiledFrameRemainder8) &&
                               (decompiledFrameRemainder7) &&
                               (decompiledFrameRemainder6)) {
-                              this.field_w = 1;
-                              this.field_e = TutorialController.field_f[6];
+                              this.buttonMode = 1;
+                              this.message = TutorialController.field_f[6];
                               if (var4 == 0) {
                                 break regionExit2;
                               }
@@ -1281,8 +1281,8 @@ class iu {
                               (decompiledFrameRemainder9) &&
                               (decompiledFrameRemainder8) &&
                               (decompiledFrameRemainder7)) {
-                              this.field_w = 0;
-                              this.field_e = TutorialController.field_f[8];
+                              this.buttonMode = 0;
+                              this.message = TutorialController.field_f[8];
                               this.field_s = true;
                               if (var4 == 0) {
                                 break regionExit2;
@@ -1305,8 +1305,8 @@ class iu {
                               (decompiledFrameRemainder9) &&
                               (decompiledFrameRemainder8)) {
                               this.field_o = true;
-                              this.field_w = 0;
-                              this.field_e = TutorialController.field_f[7];
+                              this.buttonMode = 0;
+                              this.message = TutorialController.field_f[7];
                               if (var4 == 0) {
                                 break regionExit2;
                               }
@@ -1326,8 +1326,8 @@ class iu {
                               (decompiledFrameRemainder11) &&
                               (decompiledFrameRemainder10) &&
                               (decompiledFrameRemainder9)) {
-                              this.field_w = 0;
-                              this.field_e = TutorialController.field_f[25];
+                              this.buttonMode = 0;
+                              this.message = TutorialController.field_f[25];
                               if (var4 == 0) {
                                 break regionExit2;
                               }
@@ -1347,8 +1347,8 @@ class iu {
                               (decompiledFrameRemainder11) &&
                               (decompiledFrameRemainder10)) {
                               this.b((byte) 113);
-                              this.field_w = 1;
-                              this.field_e = TutorialController.field_f[9];
+                              this.buttonMode = 1;
+                              this.message = TutorialController.field_f[9];
                               if (var4 == 0) {
                                 break regionExit2;
                               }
@@ -1367,8 +1367,8 @@ class iu {
                               (decompiledFrameRemainder12) &&
                               (decompiledFrameRemainder11)) {
                               this.b((byte) 111);
-                              this.field_w = 1;
-                              this.field_e = TutorialController.field_f[10];
+                              this.buttonMode = 1;
+                              this.message = TutorialController.field_f[10];
                               if (var4 == 0) {
                                 break regionExit2;
                               }
@@ -1385,8 +1385,8 @@ class iu {
                               (decompiledFrameRemainder14) &&
                               (decompiledFrameRemainder13) &&
                               (decompiledFrameRemainder12)) {
-                              this.field_w = 0;
-                              this.field_e = TutorialController.field_f[11];
+                              this.buttonMode = 0;
+                              this.message = TutorialController.field_f[11];
                               this.e(31);
                               if (var4 == 0) {
                                 break regionExit2;
@@ -1403,8 +1403,8 @@ class iu {
                               (decompiledFrameRemainder15) &&
                               (decompiledFrameRemainder14) &&
                               (decompiledFrameRemainder13)) {
-                              this.field_w = 1;
-                              this.field_e = TutorialController.field_f[12];
+                              this.buttonMode = 1;
+                              this.message = TutorialController.field_f[12];
                               this.g(26);
                               if (var4 == 0) {
                                 break regionExit2;
@@ -1420,10 +1420,10 @@ class iu {
                               (decompiledFrameRemainder16) &&
                               (decompiledFrameRemainder15) &&
                               (decompiledFrameRemainder14)) {
-                              this.field_e = TutorialController.field_f[8];
+                              this.message = TutorialController.field_f[8];
                               this.f((byte) -34);
                               this.field_s = true;
-                              this.field_w = 0;
+                              this.buttonMode = 0;
                               if (var4 == 0) {
                                 break regionExit2;
                               }
@@ -1437,10 +1437,10 @@ class iu {
                               (decompiledFrameRemainder17) &&
                               (decompiledFrameRemainder16) &&
                               (decompiledFrameRemainder15)) {
-                              this.field_e = TutorialController.field_f[14];
+                              this.message = TutorialController.field_f[14];
                               this.f((byte) -34);
                               this.b((byte) 120);
-                              this.field_w = 1;
+                              this.buttonMode = 1;
                               if (var4 == 0) {
                                 break regionExit2;
                               }
@@ -1453,8 +1453,8 @@ class iu {
                               (decompiledFrameRemainder18) &&
                               (decompiledFrameRemainder17) &&
                               (decompiledFrameRemainder16)) {
-                              this.field_e = TutorialController.field_f[13];
-                              this.field_w = 1;
+                              this.message = TutorialController.field_f[13];
+                              this.buttonMode = 1;
                               this.a(5);
                               if (var4 == 0) {
                                 break regionExit2;
@@ -1467,9 +1467,9 @@ class iu {
                               (decompiledFrameRemainder19) &&
                               (decompiledFrameRemainder18) &&
                               (decompiledFrameRemainder17)) {
-                              this.field_e = TutorialController.field_f[7];
+                              this.message = TutorialController.field_f[7];
                               this.f((byte) -34);
-                              this.field_w = 0;
+                              this.buttonMode = 0;
                               this.field_o = true;
                               if (var4 == 0) {
                                 break regionExit2;
@@ -1481,10 +1481,10 @@ class iu {
                               (decompiledFrameRemainder20) &&
                               (decompiledFrameRemainder19) &&
                               (decompiledFrameRemainder18)) {
-                              this.field_e = TutorialController.field_f[14];
+                              this.message = TutorialController.field_f[14];
                               this.f((byte) -34);
                               this.b((byte) 90);
-                              this.field_w = 1;
+                              this.buttonMode = 1;
                               if (var4 == 0) {
                                 break regionExit2;
                               }
@@ -1494,8 +1494,8 @@ class iu {
                               (decompiledFrameRemainder21) &&
                               (decompiledFrameRemainder20) &&
                               (decompiledFrameRemainder19)) {
-                              this.field_e = TutorialController.field_f[26];
-                              this.field_w = 0;
+                              this.message = TutorialController.field_f[26];
+                              this.buttonMode = 0;
                               this.j((byte) -119);
                               if (var4 == 0) {
                                 break regionExit2;
@@ -1505,8 +1505,8 @@ class iu {
                               (decompiledFrameRemainder22) &&
                               (decompiledFrameRemainder21) &&
                               (decompiledFrameRemainder20)) {
-                              this.field_e = TutorialController.field_f[27];
-                              this.field_w = 0;
+                              this.message = TutorialController.field_f[27];
+                              this.buttonMode = 0;
                               this.k((byte) -120);
                               if (var4 == 0) {
                                 break regionExit2;
@@ -1515,9 +1515,9 @@ class iu {
                             if ((decompiledFrameRemainder23) &&
                               (decompiledFrameRemainder22) &&
                               (decompiledFrameRemainder21)) {
-                              this.field_w = 2;
-                              this.field_e = null;
-                              this.c(param1 ^ -30659);
+                              this.buttonMode = 2;
+                              this.message = null;
+                              this.spawnEnemyWave(obfuscationGuard ^ -30659);
                               this.a(13, 17, 26);
                               if (var4 == 0) {
                                 break regionExit2;
@@ -1525,92 +1525,92 @@ class iu {
                             }
                             if ((decompiledFrameRemainder23) &&
                               (decompiledFrameRemainder22)) {
-                              this.field_w = 0;
-                              this.field_e = TutorialController.field_f[15];
+                              this.buttonMode = 0;
+                              this.message = TutorialController.field_f[15];
                               if (var4 == 0) {
                                 break regionExit2;
                               }
                             }
                             if (decompiledFrameRemainder23) {
-                              this.field_e = TutorialController.field_f[16];
-                              this.field_w = 1;
+                              this.message = TutorialController.field_f[16];
+                              this.buttonMode = 1;
                               if (var4 == 0) {
                                 break regionExit2;
                               }
                             }
-                            this.field_e = TutorialController.field_f[17];
-                            this.field_w = 1;
+                            this.message = TutorialController.field_f[17];
+                            this.buttonMode = 1;
                             if (var4 == 0) {
                               break regionExit2;
                             }
                           }
-                          this.field_e = TutorialController.field_f[18];
-                          this.field_w = 1;
+                          this.message = TutorialController.field_f[18];
+                          this.buttonMode = 1;
                           if (var4 == 0) {
                             break regionExit2;
                           }
                         }
-                        this.field_e = TutorialController.field_f[19];
-                        this.field_w = 1;
+                        this.message = TutorialController.field_f[19];
+                        this.buttonMode = 1;
                         if (var4 == 0) {
                           break regionExit2;
                         }
                       }
-                      this.field_e = TutorialController.field_f[20];
-                      this.field_w = 0;
+                      this.message = TutorialController.field_f[20];
+                      this.buttonMode = 0;
                       this.g((byte) 59);
                       if (var4 == 0) {
                         break regionExit2;
                       }
                     }
-                    this.field_w = 0;
-                    this.field_e = TutorialController.field_f[21];
+                    this.buttonMode = 0;
+                    this.message = TutorialController.field_f[21];
                     this.e((byte) 115);
                     if (var4 == 0) {
                       break regionExit2;
                     }
                   }
-                  this.field_e = TutorialController.field_f[22];
+                  this.message = TutorialController.field_f[22];
                   this.f((byte) -34);
-                  this.field_w = 1;
+                  this.buttonMode = 1;
                   if (var4 == 0) {
                     break regionExit2;
                   }
                 }
-                this.field_e = TutorialController.field_f[23];
-                this.field_w = 3;
+                this.message = TutorialController.field_f[23];
+                this.buttonMode = 3;
                 this.i((byte) 44);
                 if (var4 == 0) {
                   break regionExit2;
                 }
               }
-              this.field_w = 1;
-              this.field_e = TutorialController.field_f[24];
+              this.buttonMode = 1;
+              this.message = TutorialController.field_f[24];
               if (var4 == 0) {
                 break regionExit2;
               }
             }
-            this.field_e = vl.field_m[this.field_p];
-            this.field_w = 1;
+            this.message = vl.battleHintMessages[this.messageId];
+            this.buttonMode = 1;
           }
-          this.a(this.field_e, (byte) 112);
+          this.setMessage(this.message, (byte) 112);
         }
     }
 
     private final void a(int param0) {
         uh.a(m.field_a, 124);
         if (param0 != 5) {
-          this.field_a = 30;
+          this.expandedPanelHeight = 30;
         }
     }
 
-    private final void c(int param0) {
-        this.field_q.battlefield.tiles[9 + this.field_q.battlefield.mapWidth * 12].terrainType = 10;
+    private final void spawnEnemyWave(int secondUnitBonus) {
+        this.controller.battlefield.tiles[9 + this.controller.battlefield.mapWidth * 12].terrainType = 10;
         nk.a((byte) 106);
-        this.field_q.battlefield.pendingEvents.addLast((byte) -119, (IntrusiveNode) (new SummonEvent(0, 9, 12, -4, 1)));
-        this.field_q.battlefield.pendingEvents.addLast((byte) -119, (IntrusiveNode) (new SummonEvent(0, 15, 13, param0, 1)));
-        this.field_q.battlefield.pendingEvents.addLast((byte) -119, (IntrusiveNode) (new SummonEvent(5, 16, 17, 0, 1)));
-        this.field_v = true;
+        this.controller.battlefield.pendingEvents.addLast((byte) -119, (IntrusiveNode) (new SummonEvent(0, 9, 12, -4, 1)));
+        this.controller.battlefield.pendingEvents.addLast((byte) -119, (IntrusiveNode) (new SummonEvent(0, 15, 13, secondUnitBonus, 1)));
+        this.controller.battlefield.pendingEvents.addLast((byte) -119, (IntrusiveNode) (new SummonEvent(5, 16, 17, 0, 1)));
+        this.enemyWaveSpawned = true;
     }
 
     private final void a(byte param0) {
@@ -1620,7 +1620,7 @@ class iu {
         uh.a(f.field_D, 125);
     }
 
-    final void h(byte param0) {
+    final void draw(byte obfuscationGuard) {
         int stackIn_12_0;
         int stackIn_12_1;
         int stackIn_12_2;
@@ -1635,58 +1635,58 @@ class iu {
         int var4;
         int var5;
         var5 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
-        if (param0 != 21) {
-          this.field_a = -21;
+        if (obfuscationGuard != 21) {
+          this.expandedPanelHeight = -21;
         }
-        if (this.field_k == 0) {
+        if (this.stage == 0) {
           ol.field_y.g(db.a(true, 320) - (ol.field_y.pixelWidth >> 1), MatchConditionEntry.a(100, (byte) 94));
-          fe.b(this.field_e, db.a(true, 320), MatchConditionEntry.a(130, (byte) 94));
-          fe.c(this.field_e, db.a(true, 320), MatchConditionEntry.a(130, (byte) 94), nd.field_b, false);
-          this.field_j = 40;
+          fe.b(this.message, db.a(true, 320), MatchConditionEntry.a(130, (byte) 94));
+          fe.c(this.message, db.a(true, 320), MatchConditionEntry.a(130, (byte) 94), nd.field_b, false);
+          this.panelHeight = 40;
         }
-        if (0 == this.field_j) {
+        if (0 == this.panelHeight) {
           return;
         }
         boolean decompiledFrameRemainder0 = true;
         var2 = so.field_b.field_a;
         var3 = so.field_b.field_g;
-        SoftwareRaster.f(-10 + var2 - this.field_g, -this.field_j + var3 - 10, -10 + var2, var3);
-        fe.b(-10 + (-this.field_g + var2), -10 - this.field_j + var3, this.field_g, this.field_j, io.field_m, nd.field_b, 0, 192);
-        if (4 != this.field_w) {
-          stackIn_12_0 = -5 + var2 - this.field_g;
+        SoftwareRaster.f(-10 + var2 - this.panelWidth, -this.panelHeight + var3 - 10, -10 + var2, var3);
+        fe.b(-10 + (-this.panelWidth + var2), -10 - this.panelHeight + var3, this.panelWidth, this.panelHeight, io.field_m, nd.field_b, 0, 192);
+        if (4 != this.buttonMode) {
+          stackIn_12_0 = -5 + var2 - this.panelWidth;
           stackIn_12_1 = -45 + var3;
-          stackIn_12_2 = this.field_g - 10;
+          stackIn_12_2 = this.panelWidth - 10;
           stackIn_12_3 = 30;
           stackIn_12_4 = DisplacedUnitMarker.field_s;
-          if (this.field_w != 2 &&
-            wg.a(param0 - 54, -5 - this.field_g + var2, var2 - 15, -45 + var3, var3 - 15)) {
+          if (this.buttonMode != 2 &&
+            wg.a(obfuscationGuard - 54, -5 - this.panelWidth + var2, var2 - 15, -45 + var3, var3 - 15)) {
             stackIn_13_5 = TutorialController.field_e;
           } else {
             stackIn_13_5 = nd.field_b;
           }
           fe.a(stackIn_12_0, stackIn_12_1, stackIn_12_2, stackIn_12_3, stackIn_12_4, stackIn_13_5, 0, 192, true);
-          if (this.field_w == 0) {
+          if (this.buttonMode == 0) {
             fe.c(qf.field_c, -10 + (-120 + var2), -16 + var3, 0, true);
             decompiledFrameRemainder0 = (var5 != 0);
           }
           if (decompiledFrameRemainder0) {
-            if (this.field_w == 1) {
-              stackIn_20_0 = (this.field_k != 34) ? 0 : 1;
+            if (this.buttonMode == 1) {
+              stackIn_20_0 = (this.stage != 34) ? 0 : 1;
               var4 = stackIn_20_0;
-              if (!this.field_c) {
+              if (!this.expanded) {
                 if (var4 != 0) {
                   stackIn_24_0 = vg.field_k;
                 } else {
                   stackIn_24_0 = DeployAction.field_z;
                 }
-                fe.c(stackIn_24_0, var2 - this.field_g / 2 - 10, var3 - 16, 0, true);
+                fe.c(stackIn_24_0, var2 - this.panelWidth / 2 - 10, var3 - 16, 0, true);
                 if (var5 != 0) {
                   if (var4 == 0) {
                     stackIn_28_0 = jk.field_a;
                   } else {
                     stackIn_28_0 = SkeletonLimitMarker.field_t;
                   }
-                  fe.c(stackIn_28_0, -10 + (var2 - this.field_g / 2), var3 - 16, 0, true);
+                  fe.c(stackIn_28_0, -10 + (var2 - this.panelWidth / 2), var3 - 16, 0, true);
                 }
               } else {
                 if (var4 == 0) {
@@ -1694,36 +1694,36 @@ class iu {
                 } else {
                   stackIn_28_0 = SkeletonLimitMarker.field_t;
                 }
-                fe.c(stackIn_28_0, -10 + (var2 - this.field_g / 2), var3 - 16, 0, true);
+                fe.c(stackIn_28_0, -10 + (var2 - this.panelWidth / 2), var3 - 16, 0, true);
               }
               decompiledFrameRemainder0 = (var5 != 0);
             }
             if (decompiledFrameRemainder0) {
-              if (this.field_w == 2) {
+              if (this.buttonMode == 2) {
                 fe.c(SectorCacheStore.field_f, -120 + var2 - 10, -16 + var3, 0, true);
                 decompiledFrameRemainder0 = (var5 != 0);
               }
               if (decompiledFrameRemainder0) {
-                if (this.field_w == 3) {
+                if (this.buttonMode == 3) {
                   fe.c(ac.field_u, -10 + var2 - 120, -16 + var3, 0, true);
                   decompiledFrameRemainder0 = (var5 != 0);
                 }
                 if ((decompiledFrameRemainder0) &&
-                  (this.field_w == 5)) {
+                  (this.buttonMode == 5)) {
                   fe.c(GlobalSpell.field_m, -120 + var2 - 10, var3 - 16, 0, true);
                   if (var5 != 0) {
-                    fe.a(-5 - this.field_g + var2, -45 + var3, -10 + this.field_g, 30, DisplacedUnitMarker.field_s, jh.field_k, 0, 192, true);
+                    fe.a(-5 - this.panelWidth + var2, -45 + var3, -10 + this.panelWidth, 30, DisplacedUnitMarker.field_s, jh.field_k, 0, 192, true);
                   }
                 }
               }
             }
           }
         } else {
-          fe.a(-5 - this.field_g + var2, -45 + var3, -10 + this.field_g, 30, DisplacedUnitMarker.field_s, jh.field_k, 0, 192, true);
+          fe.a(-5 - this.panelWidth + var2, -45 + var3, -10 + this.panelWidth, 30, DisplacedUnitMarker.field_s, jh.field_k, 0, 192, true);
         }
-        if (this.field_e != null) {
-          SoftwareRaster.f(var2 - this.field_g, -this.field_j + var3, var2 - 10, var3 - 45);
-          rs.field_n.a(this.field_e, -this.field_g + var2, -this.field_j + var3, 220, 400, 16777215, -1, 0, 0, 0);
+        if (this.message != null) {
+          SoftwareRaster.f(var2 - this.panelWidth, -this.panelHeight + var3, var2 - 10, var3 - 45);
+          rs.field_n.a(this.message, -this.panelWidth + var2, -this.panelHeight + var3, 220, 400, 16777215, -1, 0, 0, 0);
         }
         SoftwareRaster.a();
     }
@@ -1732,15 +1732,15 @@ class iu {
         if (param2 != 26) {
           return;
         }
-        this.field_q.c(25, param0, param1);
+        this.controller.c(25, param0, param1);
     }
 
-    final void d(byte param0) {
-        this.field_q.field_fc = false;
-        this.field_q.field_Mb = false;
-        this.field_q.field_Ab = false;
-        this.field_q.field_ac = false;
-        if (param0 != 37) {
+    final void clearControlHighlights(byte obfuscationGuard) {
+        this.controller.field_fc = false;
+        this.controller.field_Mb = false;
+        this.controller.field_Ab = false;
+        this.controller.field_ac = false;
+        if (obfuscationGuard != 37) {
           field_i = (String) null;
         }
     }
@@ -1749,8 +1749,8 @@ class iu {
         if (param1 != 13567) {
           return;
         }
-        this.field_p = param0;
-        this.b(34, -30659);
+        this.messageId = param0;
+        this.setStage(34, -30659);
     }
 
     private final void e(byte param0) {
@@ -1763,32 +1763,32 @@ class iu {
     private final void i(byte param0) {
         RevivalEvent.d((byte) 113);
         int var2 = 47 / ((param0 + 75) / 34);
-        this.field_q.a(0, (byte) 30, 255);
+        this.controller.a(0, (byte) 30, 255);
     }
 
-    final void a(boolean param0) {
+    final void activateButton(boolean obfuscationGuard) {
         int var3;
         boolean stackIn_13_1 = false;
         int stackIn_18_1 = 0;
         var3 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
-        if (param0) {
+        if (obfuscationGuard) {
           this.a((byte) -26);
         }
         boolean decompiledFrameRemainder0 = true;
-        if (this.field_w != 0) {
-          if (1 != this.field_w) {
-            if (this.field_w == 3) {
-              this.field_q.d(114, true);
+        if (this.buttonMode != 0) {
+          if (1 != this.buttonMode) {
+            if (this.buttonMode == 3) {
+              this.controller.d(114, true);
               decompiledFrameRemainder0 = (var3 != 0);
             }
             if ((decompiledFrameRemainder0) &&
-              (this.field_w == 5)) {
-              this.field_k = 33;
+              (this.buttonMode == 5)) {
+              this.stage = 33;
               if (var3 != 0) {
-                stackIn_13_1 = !(this.field_c);
-                this.field_c = stackIn_13_1;
-                if (!this.field_c) {
-                  if (this.field_k != 34) {
+                stackIn_13_1 = !(this.expanded);
+                this.expanded = stackIn_13_1;
+                if (!this.expanded) {
+                  if (this.stage != 34) {
                     stackIn_18_1 = 240;
                   } else {
                     stackIn_18_1 = 100;
@@ -1796,15 +1796,15 @@ class iu {
                 } else {
                   stackIn_18_1 = 240;
                 }
-                this.field_f = stackIn_18_1;
-                this.b(-1, -3, 2);
+                this.targetPanelWidth = stackIn_18_1;
+                this.handleInteraction(-1, -3, 2);
               }
             }
           } else {
-            stackIn_13_1 = !(this.field_c);
-            this.field_c = stackIn_13_1;
-            if (!this.field_c) {
-              if (this.field_k != 34) {
+            stackIn_13_1 = !(this.expanded);
+            this.expanded = stackIn_13_1;
+            if (!this.expanded) {
+              if (this.stage != 34) {
                 stackIn_18_1 = 240;
               } else {
                 stackIn_18_1 = 100;
@@ -1812,36 +1812,36 @@ class iu {
             } else {
               stackIn_18_1 = 240;
             }
-            this.field_f = stackIn_18_1;
+            this.targetPanelWidth = stackIn_18_1;
             if (var3 != 0) {
-              this.b(-1, -3, 2);
+              this.handleInteraction(-1, -3, 2);
             }
           }
         } else {
-          this.b(-1, -3, 2);
+          this.handleInteraction(-1, -3, 2);
         }
 
     }
 
     private final void j(byte param0) {
         if (param0 > -95) {
-          this.field_p = 95;
+          this.messageId = 95;
         }
-        this.field_q.field_fc = true;
+        this.controller.field_fc = true;
     }
 
     private final void d(int param0) {
-        this.field_q.battlefield.pendingEvents.addLast((byte) -119, (IntrusiveNode) (new SummonEvent(0, 3, 4, 5, 0, true)));
+        this.controller.battlefield.pendingEvents.addLast((byte) -119, (IntrusiveNode) (new SummonEvent(0, 3, 4, 5, 0, true)));
         int var2 = -44 % ((-70 - param0) / 43);
     }
 
-    private final int a(int param0, byte param1) {
+    private final int classifyTerrainInteraction(int tileIndex, byte obfuscationGuard) {
         int var3;
         int var4;
-        if (param1 > -108) {
+        if (obfuscationGuard > -108) {
           return -34;
         }
-        var3 = this.field_q.battlefield.tiles[param0].terrainType;
+        var3 = this.controller.battlefield.tiles[tileIndex].terrainType;
         var4 = var3;
         if (var4 == 7) {
           return 6;
@@ -1859,7 +1859,7 @@ class iu {
         if (param0 > -55) {
           return;
         }
-        this.field_q.field_Mb = true;
+        this.controller.field_Mb = true;
     }
 
     private final void f(byte param0) {
@@ -1906,7 +1906,7 @@ class iu {
             return stackIn_4_0;
           }
           if (param2 != 7502) {
-            iu.b(6);
+            BattleTutorial.b(6);
           }
           var6 = (-1 + var5_int + param0) / param0;
           param0 = var5_int / var6;
@@ -1981,9 +1981,9 @@ class iu {
     }
 
     private final void e(int param0) {
-        this.field_q.field_ac = true;
+        this.controller.field_ac = true;
         if (param0 != 31) {
-          this.field_e = (String) null;
+          this.message = (String) null;
         }
     }
 
@@ -1999,39 +1999,39 @@ class iu {
         field_r = null;
     }
 
-    iu(GameplayController param0, int param1) {
-        this.field_g = 240;
-        this.field_w = 0;
-        this.field_m = 0;
-        this.field_k = 0;
-        this.field_j = 40;
+    BattleTutorial(GameplayController controller, int messageId) {
+        this.panelWidth = 240;
+        this.buttonMode = 0;
+        this.autoAdvanceFrames = 0;
+        this.stage = 0;
+        this.panelHeight = 40;
         try {
-          this.field_a = 40;
-          this.field_q = param0;
-          this.a(param1, 13567);
+          this.expandedPanelHeight = 40;
+          this.controller = controller;
+          this.a(messageId, 13567);
         } catch (RuntimeException runtimeException) {
-          throw ig.addExceptionContext((Throwable) ((Object) runtimeException), "iu.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) runtimeException), "iu.<init>(" + (controller != null ? "{...}" : "null") + ',' + messageId + ')');
         }
     }
 
-    iu(GameplayController param0) {
-        this.field_g = 240;
-        this.field_w = 0;
-        this.field_m = 0;
-        this.field_k = 0;
-        this.field_j = 40;
+    BattleTutorial(GameplayController controller) {
+        this.panelWidth = 240;
+        this.buttonMode = 0;
+        this.autoAdvanceFrames = 0;
+        this.stage = 0;
+        this.panelHeight = 40;
         try {
-          this.field_a = 40;
-          this.field_q = param0;
+          this.expandedPanelHeight = 40;
+          this.controller = controller;
           this.field_s = false;
-          this.field_v = false;
+          this.enemyWaveSpawned = false;
           this.field_o = false;
-          this.b(0, -30659);
-          this.field_q.battlefield.tiles[DeployAction.field_s[0]].ownerPlayer = 1;
-          this.field_q.battlefield.field_f = true;
-          this.field_q.battlefield.teamStructureCounts[1][1] = 1;
+          this.setStage(0, -30659);
+          this.controller.battlefield.tiles[DeployAction.field_s[0]].ownerPlayer = 1;
+          this.controller.battlefield.field_f = true;
+          this.controller.battlefield.teamStructureCounts[1][1] = 1;
         } catch (RuntimeException runtimeException) {
-          throw ig.addExceptionContext((Throwable) ((Object) runtimeException), "iu.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) runtimeException), "iu.<init>(" + (controller != null ? "{...}" : "null") + ')');
         }
     }
 

@@ -253,7 +253,7 @@ final class CampaignMenu {
             var7 = this.field_h.width;
           }
           var8Lifetime1 = 26 + var7;
-          var9Lifetime1 = rs.field_n.a(var6, var8Lifetime1, 0);
+          var9Lifetime1 = rs.field_n.getParagraphHeight(var6, var8Lifetime1, 0);
           var10 = 60 + (30 + (var9Lifetime1 + 14) + 40 + 10);
           var11 = -(var8Lifetime1 / 2) + 320;
           var12 = -(var10 / 2) + 240;
@@ -351,7 +351,7 @@ final class CampaignMenu {
             }
             rf.b(param0 ^ -18466);
             var6 = 5;
-            var7 = 5 + rs.field_n.a(this.selectedCampaignEntry.description, 232, 0);
+            var7 = 5 + rs.field_n.getParagraphHeight(this.selectedCampaignEntry.description, 232, 0);
             en.field_E.a(this.selectedCampaignEntry.description, var4 + var6, 200 + var5, -(2 * var6) + 236, var7, 16777215, -1, 1, 0, 0);
           }
           if (param0 != 396) {
@@ -391,7 +391,7 @@ final class CampaignMenu {
               }
               stackIn_53_0 = 55;
             }
-            ub.$cfr$intArgs$a$6d836999ad61(stackIn_53_0, im.field_v[1]);
+            RadialSummonMenu.$cfr$intArgs$a$6d836999ad61(stackIn_53_0, im.field_v[1]);
             break;
           }
           this.hoveredEntry = (CampaignMenuEntry) (var2);
@@ -744,7 +744,7 @@ final class CampaignMenu {
             }
           }
           var7Lifetime1 = param0 + var6;
-          var8Lifetime1 = rs.field_n.a(var5, var7Lifetime1, 0);
+          var8Lifetime1 = rs.field_n.getParagraphHeight(var5, var7Lifetime1, 0);
           var9Lifetime1 = 154 + (var8Lifetime1 + 40);
           var10 = -(var7Lifetime1 / 2) + 320;
           var11 = 240 - var9Lifetime1 / 2;
@@ -1140,7 +1140,7 @@ final class CampaignMenu {
               if (so.field_b.field_a < var26 + var25_intLifetime1) {
                 var25_intLifetime1 = so.field_b.field_a - var26;
               }
-              var27Lifetime1 = rs.field_n.a(var23_ref.description, var25_intLifetime1, 0);
+              var27Lifetime1 = rs.field_n.getParagraphHeight(var23_ref.description, var25_intLifetime1, 0);
               var28Lifetime1 = var6Lifetime2 - var27Lifetime1 / 2;
               SoftwareRaster.b(db.a(true, var26), MatchConditionEntry.a(var28Lifetime1, (byte) 94), var25_intLifetime1, var27Lifetime1 + 2, 0, 128);
               rs.field_n.a(var23_ref.description, db.a(true, var26), MatchConditionEntry.a(var28Lifetime1, (byte) 94), var25_intLifetime1, 472, 16777215, 1, 1, 0, 0);
@@ -1149,7 +1149,7 @@ final class CampaignMenu {
             if (null != var19) {
               var25_intLifetime2 = 100;
               var26Lifetime1 = AiPlanningStrategy.field_d;
-              var27Lifetime2 = rs.field_n.a(((CampaignParticipant) (var19)).displayName, var25_intLifetime2, 0);
+              var27Lifetime2 = rs.field_n.getParagraphHeight(((CampaignParticipant) (var19)).displayName, var25_intLifetime2, 0);
               var28Lifetime2 = -(var27Lifetime2 / 2) + (25 + ko.field_b);
               SoftwareRaster.b(db.a(true, var26Lifetime1), MatchConditionEntry.a(var28Lifetime2, (byte) 94), var25_intLifetime2, var27Lifetime2 + 2, 0, 255);
               rs.field_n.a(((CampaignParticipant) (var19)).displayName, db.a(true, var26Lifetime1), MatchConditionEntry.a(var28Lifetime2, (byte) 94), var25_intLifetime2, 472, 16777215, 1, 1, 0, 0);
@@ -1630,11 +1630,11 @@ final class CampaignMenu {
                       if (!(this.selectedMissionEntry.selectionAge >= 20)) {
                         this.selectMissionOrQuicksaveDialog((byte) 72);
                         if (var7 != 0) {
-                          ub.$cfr$intArgs$a$6d836999ad61(80, im.field_v[11]);
+                          RadialSummonMenu.$cfr$intArgs$a$6d836999ad61(80, im.field_v[11]);
                         }
                       }
                     } else {
-                      ub.$cfr$intArgs$a$6d836999ad61(80, im.field_v[11]);
+                      RadialSummonMenu.$cfr$intArgs$a$6d836999ad61(80, im.field_v[11]);
                     }
                     this.selectedMissionEntry = (CampaignMenuEntry) (var3);
                     this.selectedMissionEntry.selectionAge = 0;
@@ -1751,7 +1751,7 @@ final class CampaignMenu {
                 return;
               }
               if (this.selectedCampaignEntry != var2) {
-                ub.$cfr$intArgs$a$6d836999ad61(98, im.field_v[11]);
+                RadialSummonMenu.$cfr$intArgs$a$6d836999ad61(98, im.field_v[11]);
               }
               this.selectedCampaignEntry = (CampaignMenuEntry) (var2);
               if (this.selectedCampaignEntry.selectionAge < 20) {
@@ -2281,7 +2281,7 @@ final class CampaignMenu {
                 fe.c(qf.field_a, db.a(true, ((CampaignMenuEntry) (var3)).left), MatchConditionEntry.a(((CampaignMenuEntry) (var3)).top + 10, (byte) 94), nd.field_b, true);
               }
               if (this.hoveredEntry != var3) {
-                ub.$cfr$intArgs$a$6d836999ad61(127, im.field_v[1]);
+                RadialSummonMenu.$cfr$intArgs$a$6d836999ad61(127, im.field_v[1]);
               }
             }
             this.hoveredEntry = (CampaignMenuEntry) (var3);

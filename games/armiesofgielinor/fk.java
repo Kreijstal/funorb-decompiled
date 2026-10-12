@@ -89,10 +89,10 @@ final class fk implements kh {
             return stackIn_2_0;
           }
           var4 = param0.a((byte) 13);
-          if (iu.field_x != var4.field_q &&
+          if (BattleTutorial.field_x != var4.field_q &&
             hf.field_h != var4.field_q &&
             var4.field_q != gg.field_G &&
-            var4.field_q != gb.field_z) {
+            var4.field_q != EquipmentBattleTutorial.field_z) {
             if (rn.field_c != var4.field_q) {
               throw new ef(var4.field_s);
             }

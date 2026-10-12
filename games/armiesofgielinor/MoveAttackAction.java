@@ -52,7 +52,7 @@ final class MoveAttackAction extends PreparedAction {
           }
           var6 = stackIn_4_0;
           if (DualNodeDeque.field_f == 0) {
-            var7 = iu.a(480, var11, param3 ^ 7444, AiPlanner.field_G, fs.field_c);
+            var7 = BattleTutorial.a(480, var11, param3 ^ 7444, AiPlanner.field_G, fs.field_c);
             var8 = 3 + var7;
             DirectByteStorage.field_k = new int[var8];
             nb.field_h = new String[var8];
@@ -74,7 +74,7 @@ final class MoveAttackAction extends PreparedAction {
             if (DualNodeDeque.field_f != 1) {
               throw new IllegalArgumentException();
             }
-            var7 = iu.a(480, var11, param3 + 7412, AiPlanner.field_G, fs.field_c);
+            var7 = BattleTutorial.a(480, var11, param3 + 7412, AiPlanner.field_G, fs.field_c);
             var8 = 2 + var7;
             DirectByteStorage.field_k = new int[var8];
             nb.field_h = new String[var8];

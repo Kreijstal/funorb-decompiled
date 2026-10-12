@@ -11,7 +11,7 @@ abstract class vt extends IntrusiveNode {
         if (NodeIterator.field_a) {
           return BestScoreStrategy.field_i.a(rs.field_q, DualNodeDeque.field_i, 80);
         }
-        if (iu.field_h) {
+        if (BattleTutorial.field_h) {
           return cd.a(param2, param0, false);
         }
         if (po.a(param0, 6150, param2)) {
@@ -57,7 +57,7 @@ abstract class vt extends IntrusiveNode {
           return;
         }
         if (MoveEvent.instructionsPanel.itemIds.length != 0) {
-          gb.configureTutorialStage(var3, 7, var1.first, var2.first, var1.second, var2.second, MoveEvent.instructionsPanel.itemIds, -40);
+          EquipmentBattleTutorial.configureTutorialStage(var3, 7, var1.first, var2.first, var1.second, var2.second, MoveEvent.instructionsPanel.itemIds, -40);
           return;
         }
     }

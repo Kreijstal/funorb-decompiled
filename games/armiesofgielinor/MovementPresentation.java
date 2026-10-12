@@ -142,7 +142,7 @@ final class MovementPresentation implements EventPresentation {
               var8.unit = var8.unit.copyDetached(false);
               hs.b(-90, 29);
             }
-            var8.unit.field_z = 1;
+            var8.unit.modelAnimationIndex = 1;
             var8.a(var8.unit, 12);
             this.advanceFrame(var8, (byte) 58);
           }
@@ -620,11 +620,11 @@ final class MovementPresentation implements EventPresentation {
           var3_int = this.e((byte) -69);
           var4 = event.unit;
           if (event.eventKind != 7) {
-            var4.field_z = 1;
+            var4.modelAnimationIndex = 1;
           } else {
-            var4.field_z = 5;
+            var4.modelAnimationIndex = 5;
           }
-          this.presenter.field_u.a(1 + this.presenter.screenX, -35, this.presenter.screenY - 6, var3_int, var4);
+          this.presenter.unitRenderer.a(1 + this.presenter.screenX, -35, this.presenter.screenY - 6, var3_int, var4);
           var5 = 115 / ((obfuscationGuard + 26) / 48);
           this.elapsedFrames = this.elapsedFrames + 1;
           return;

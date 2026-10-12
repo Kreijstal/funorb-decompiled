@@ -284,12 +284,12 @@ final class gh extends tj implements he {
           }
           var1_int = -118 / ((16 - param0) / 35);
           if (!sh.field_h) {
-            if (null == jr.field_f) {
-              jr.field_f = fq.a(14663, 6);
+            if (null == RadialSummonItem.field_f) {
+              RadialSummonItem.field_f = fq.a(14663, 6);
             }
-            if (jr.field_f.field_n) {
-              if (null != jr.field_f.field_s) {
-                oe.a(jr.field_f.field_s, 1);
+            if (RadialSummonItem.field_f.field_n) {
+              if (null != RadialSummonItem.field_f.field_s) {
+                oe.a(RadialSummonItem.field_f.field_s, 1);
               }
               if (ps.field_v) {
                 rj.a(1);

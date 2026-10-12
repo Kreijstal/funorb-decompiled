@@ -136,7 +136,7 @@ final class ph {
           String var5Lifetime5;
           String var5Lifetime6;
           try {
-            sj.field_b = param0;
+            TurnTimerDial.field_b = param0;
             try {
               var6 = param1.getParameter("cookieprefix");
               var5 = var6;

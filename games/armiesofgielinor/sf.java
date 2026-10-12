@@ -107,8 +107,8 @@ abstract class sf extends wl {
           var8Lifetime1++;
         }
         gt.field_e.g(this.field_l + (param0 - 90), 10 + param2);
-        gb.a(t.field_d, param0 + 5, param2 + 35, this.field_l - 10, 8941);
-        gb.a(ip.field_c, param0, -22 + param2 + this.field_w, this.field_l, param1 ^ 1851672364);
+        EquipmentBattleTutorial.a(t.field_d, param0 + 5, param2 + 35, this.field_l - 10, 8941);
+        EquipmentBattleTutorial.a(ip.field_c, param0, -22 + param2 + this.field_w, this.field_l, param1 ^ 1851672364);
         var4Lifetime2 = this.field_w - 79;
         var6Lifetime2 = 127;
         var5Lifetime2 = 169;
@@ -354,10 +354,10 @@ abstract class sf extends wl {
                 continue;
               }
               if (null != var7.event.unit &&
-                var7.event.unit.field_x != null &&
+                var7.event.unit.modelPreview != null &&
                 !var7.fullCombatScene) {
-                var8Lifetime1 = var7.event.unit.field_x.screenPosition[0];
-                var9Lifetime1 = var7.event.unit.field_x.screenPosition[1];
+                var8Lifetime1 = var7.event.unit.modelPreview.screenPosition[0];
+                var9Lifetime1 = var7.event.unit.modelPreview.screenPosition[1];
                 var10 = var7.event.unit.ownerPlayer;
                 stackIn_43_0 = TeamRoster.field_g;
                 stackIn_43_1 = -30 + var8Lifetime1;

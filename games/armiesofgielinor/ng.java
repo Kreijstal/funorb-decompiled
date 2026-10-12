@@ -744,7 +744,7 @@ final class ng {
           jl.field_b = null;
           ArchiveProvider.field_d = null;
         }
-        eu.field_g = null;
+        UnitCycler.field_g = null;
         hf.field_c = true;
         sb.field_i = null;
         int var1 = 89 % ((param0 + 51) / 39);

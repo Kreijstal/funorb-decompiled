@@ -52,7 +52,7 @@ final class bt {
           return;
         }
         if (MoveEvent.matchSetupPanel.itemIds.length != 0) {
-          gb.configureTutorialStage(var4, 5, var1.first, var2.first, var1.second, var2.second, MoveEvent.matchSetupPanel.itemIds, -52);
+          EquipmentBattleTutorial.configureTutorialStage(var4, 5, var1.first, var2.first, var1.second, var2.second, MoveEvent.matchSetupPanel.itemIds, -52);
           return;
         }
     }

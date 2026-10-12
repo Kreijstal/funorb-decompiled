@@ -63,9 +63,9 @@ final class ck {
             field_a = (String) null;
           }
           var3 = null;
-          if (null != sj.field_b &&
-            !sj.field_b.equals(param2.getParameter("settings"))) {
-            var3 = sj.field_b;
+          if (null != TurnTimerDial.field_b &&
+            !TurnTimerDial.field_b.equals(param2.getParameter("settings"))) {
+            var3 = TurnTimerDial.field_b;
             var4 = var3;
             var4Lifetime2 = var3;
           }

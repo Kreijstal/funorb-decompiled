@@ -258,12 +258,12 @@ final class TurnEffectEvent extends GameEvent {
             var5 = dc.field_l;
           }
           fs.a(ni.field_d, (String) null, var5, 112, 0);
-          UpkeepEvent.field_z.field_W = (8355711 & uf.field_i.field_W >> 1) - (ni.field_d >> 1 & 8355711) + ni.field_d;
+          UpkeepEvent.field_z.field_W = (8355711 & SpellConfirmationDialog.field_i.field_W >> 1) - (ni.field_d >> 1 & 8355711) + ni.field_d;
           jl.field_b = UpkeepEvent.field_z;
-          UpkeepEvent.field_z.field_T = (8355711 & uf.field_i.field_T >> 1) + (ni.field_d - ((ni.field_d & 16711422) >> 1));
-          UpkeepEvent.field_z.field_wb = -((16711423 & ni.field_d) >> 1) + ni.field_d + ((uf.field_i.field_wb & 16711423) >> 1);
+          UpkeepEvent.field_z.field_T = (8355711 & SpellConfirmationDialog.field_i.field_T >> 1) + (ni.field_d - ((ni.field_d & 16711422) >> 1));
+          UpkeepEvent.field_z.field_wb = -((16711423 & ni.field_d) >> 1) + ni.field_d + ((SpellConfirmationDialog.field_i.field_wb & 16711423) >> 1);
           ArchiveProvider.field_d = rb.field_b;
-          eu.field_g = new je(0L, param2);
+          UnitCycler.field_g = new je(0L, param2);
           sb.field_i = new je(0L, param4);
           f.field_C = new je(0L, (je) null);
           SummonEvent.field_F = new je(0L, param3);
@@ -272,10 +272,10 @@ final class TurnEffectEvent extends GameEvent {
           SummonEvent.field_F.a(UpkeepEvent.field_z, 102);
           rb.field_b = new je(0L, ArchiveProvider.field_d);
           SummonEvent.field_F.a(rb.field_b, 66);
-          qf.field_e = new je(0L, uf.field_i, nk.field_t);
-          ed.field_e = new je(0L, uf.field_i);
-          eu.field_g.a(sb.field_i, 103);
-          eu.field_g.a(f.field_C, 79);
+          qf.field_e = new je(0L, SpellConfirmationDialog.field_i, nk.field_t);
+          ed.field_e = new je(0L, SpellConfirmationDialog.field_i);
+          UnitCycler.field_g.a(sb.field_i, 103);
+          UnitCycler.field_g.a(f.field_C, 79);
           f.field_C.a(SummonEvent.field_F, 64);
           f.field_C.a(qf.field_e, 80);
           f.field_C.a(ed.field_e, 123);

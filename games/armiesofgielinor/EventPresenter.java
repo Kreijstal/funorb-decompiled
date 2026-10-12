@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class EventPresenter extends IntrusiveNode {
-    eo field_u;
+    BattleUnitRenderer unitRenderer;
     int screenY;
     boolean fullCombatScene;
     private Battlefield battlefield;
@@ -135,7 +135,7 @@ final class EventPresenter extends IntrusiveNode {
                                                     this.presentationActive = false;
                                                     this.presentation = (EventPresentation) ((Object) new PopupPresentation(this.battlefield, this.controller.camera, this));
                                                     if (this.presentation.initialize(this.event, (byte) 57)) {
-                                                      stackIn_94_0 = (-1 < this.controller.field_q) ? 1 : 0;
+                                                      stackIn_94_0 = (-1 < this.controller.controlledPlayerId) ? 1 : 0;
                                                     } else {
                                                       stackIn_94_0 = 0;
                                                     }
@@ -244,7 +244,7 @@ final class EventPresenter extends IntrusiveNode {
           if (null != this.controller.selectedUnit) {
             stackIn_17_0 = this.controller.movementPlanner;
             stackIn_18_1 = (null != this.controller.field_oc) ? false : true;
-            ((MovementPlanner) (Object) stackIn_17_0).prepareForUnit(stackIn_18_1, obfuscationGuard + 19769, this.controller.field_q, this.controller.selectedUnit, this.controller.movementPlanner.field_y, this.controller.movementPlanner.spellId);
+            ((MovementPlanner) (Object) stackIn_17_0).prepareForUnit(stackIn_18_1, obfuscationGuard + 19769, this.controller.controlledPlayerId, this.controller.selectedUnit, this.controller.movementPlanner.field_y, this.controller.movementPlanner.spellId);
           }
           this.presentation = (EventPresentation) ((Object) new MovementPresentation(this.battlefield, this.controller.camera, this));
           stackIn_22_0 = (!this.presentation.initialize(this.event, (byte) 57)) ? 0 : 1;
@@ -292,11 +292,11 @@ final class EventPresenter extends IntrusiveNode {
         if (null == this.event.unit) {
           return;
         }
-        if (this.event.unit.field_x == null) {
+        if (this.event.unit.modelPreview == null) {
           return;
         }
-        var4 = -40 + this.event.unit.field_x.screenPosition[0];
-        var5 = -20 + this.event.unit.field_x.screenPosition[1];
+        var4 = -40 + this.event.unit.modelPreview.screenPosition[0];
+        var5 = -20 + this.event.unit.modelPreview.screenPosition[1];
         stackIn_14_0 = TeamRoster.field_g;
         stackIn_14_1 = 10 + var4;
         stackIn_14_2 = var5 + 5;
@@ -310,7 +310,7 @@ final class EventPresenter extends IntrusiveNode {
           this.controller.field_oc == this.event.unit) {
           TeamRoster.field_g.f(var4 + 10, 5 + var5, 128 + (int)(64.0 * Math.sin((double)frameNumber / 3.141592653589793)));
         }
-        this.event.unit.field_x.a((byte) -72, false);
+        this.event.unit.modelPreview.a((byte) -72, false);
         return;
     }
 
@@ -373,14 +373,14 @@ final class EventPresenter extends IntrusiveNode {
         }
     }
 
-    EventPresenter(GameplayController controller, Battlefield battlefield, eo effectSprites, GameEvent event, boolean blocking) {
+    EventPresenter(GameplayController controller, Battlefield battlefield, BattleUnitRenderer unitRenderer, GameEvent event, boolean blocking) {
         j discarded$0 = null;
         this.fullCombatScene = false;
         this.tileIndex = -1;
         try {
           this.battlefield = battlefield;
           this.event = event;
-          this.field_u = effectSprites;
+          this.unitRenderer = unitRenderer;
           this.controller = controller;
           discarded$0 = new j(240, controller.camera);
           this.event.a(-97);
@@ -389,18 +389,18 @@ final class EventPresenter extends IntrusiveNode {
           this.field_w = blocking ? true : false;
           this.acknowledged = false;
         } catch (RuntimeException runtimeException) {
-          throw ig.addExceptionContext((Throwable) ((Object) runtimeException), "vb.<init>(" + (controller != null ? "{...}" : "null") + ',' + (battlefield != null ? "{...}" : "null") + ',' + (effectSprites != null ? "{...}" : "null") + ',' + (event != null ? "{...}" : "null") + ',' + blocking + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) runtimeException), "vb.<init>(" + (controller != null ? "{...}" : "null") + ',' + (battlefield != null ? "{...}" : "null") + ',' + (unitRenderer != null ? "{...}" : "null") + ',' + (event != null ? "{...}" : "null") + ',' + blocking + ')');
         }
     }
 
-    EventPresenter(GameplayController param0, Battlefield param1, eo param2, GameEvent param3, int param4, int param5, boolean param6) {
+    EventPresenter(GameplayController param0, Battlefield param1, BattleUnitRenderer param2, GameEvent param3, int param4, int param5, boolean param6) {
         j discarded$0 = null;
         this.fullCombatScene = false;
         this.tileIndex = -1;
         try {
           this.event = param3;
           this.battlefield = param1;
-          this.field_u = param2;
+          this.unitRenderer = param2;
           this.controller = param0;
           discarded$0 = new j(240, param0.camera);
           this.event.a(-97);

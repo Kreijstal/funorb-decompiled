@@ -404,7 +404,7 @@ abstract class nl extends kb implements gw {
           mp.field_Lb = new je(0L, kd.field_M, DeployAction.field_v.toUpperCase());
           kd.field_F = new je(0L, SummonAction.field_y);
           vc.field_l = new je(0L, sh.field_m);
-          iu.field_d = new je(0L, rn.field_a, EffectPresentation.field_d.toUpperCase());
+          BattleTutorial.field_d = new je(0L, rn.field_a, EffectPresentation.field_d.toUpperCase());
           KingBlackDragonEvent.field_z = new je[param1 + 4];
           pu.field_k = new nf[4 + param1][];
           KingBlackDragonEvent.field_z[0] = new je(0L, fp.field_Lb, et.field_c);
@@ -486,7 +486,7 @@ abstract class nl extends kb implements gw {
           pd.field_c = new je(0L, (je) null);
           pd.field_c.a(kd.field_F, 44);
           pd.field_c.a(vc.field_l, 68);
-          vc.field_l.a(iu.field_d, 106);
+          vc.field_l.a(BattleTutorial.field_d, 106);
           for (var18Lifetime2 = 0; var18Lifetime2 < param1 + 4; var18Lifetime2++) {
             if ((var18Lifetime2 != 1 ||
               !(2 > lm.field_e.length)) && (var18Lifetime2 != 3 ||

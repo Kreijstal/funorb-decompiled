@@ -47,13 +47,13 @@ final class og extends IntrusiveNode {
         if (gg.field_G == this.field_q) {
           return "Number{" + this.field_o + "}";
         }
-        if (gb.field_z == this.field_q) {
+        if (EquipmentBattleTutorial.field_z == this.field_q) {
           return "Boolean{" + this.field_o + "}";
         }
         if (this.field_q == hf.field_h) {
           return "Char{" + this.field_o + "}";
         }
-        if (this.field_q == iu.field_x) {
+        if (this.field_q == BattleTutorial.field_x) {
           return "String{" + this.field_o + "}";
         }
         if (mo.field_j == this.field_q) {
@@ -145,7 +145,7 @@ final class og extends IntrusiveNode {
               stackIn_23_0 = new nd(Integer.parseInt(this.field_o));
               return stackIn_23_0;
             }
-            if (gb.field_z == this.field_q) {
+            if (EquipmentBattleTutorial.field_z == this.field_q) {
               stackIn_27_0 = new nd(this.field_o.equals("true"));
               return stackIn_27_0;
             }
@@ -157,7 +157,7 @@ final class og extends IntrusiveNode {
               stackIn_33_0 = new nd(var9.charAt(0));
               return stackIn_33_0;
             }
-            if (iu.field_x == this.field_q) {
+            if (BattleTutorial.field_x == this.field_q) {
               stackIn_36_0 = new nd(this.field_o.substring(1, this.field_o.length() - 1));
               return stackIn_36_0;
             }

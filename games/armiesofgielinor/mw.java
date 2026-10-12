@@ -85,7 +85,7 @@ final class mw extends dr {
           if (param0 != -24872) {
             mw.e((byte) 60);
           }
-          stackIn_3_0 = new nd(ub.a((byte) 123, param1[0].a(param0 ^ -24870)));
+          stackIn_3_0 = new nd(RadialSummonMenu.a((byte) 123, param1[0].a(param0 ^ -24870)));
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

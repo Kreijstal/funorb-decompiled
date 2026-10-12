@@ -64,7 +64,7 @@ final class fg extends IntrusiveNode {
                     if (null != CipherPacketBuffer.currentBattlefield) {
                       var11 = CipherPacketBuffer.currentBattlefield.getPlayerTeamIndex(var11, -1);
                     }
-                    eu.a(22 + param5, var11, var7 + ug.field_b, 119, param3 + 20);
+                    UnitCycler.a(22 + param5, var11, var7 + ug.field_b, 119, param3 + 20);
                   }
                   fs.a(param3, false, false, var9, param5, var7, param1, var8, param0);
                   if (vs.field_e[var7].hasModifierFlag4((byte) -115)) {
@@ -92,7 +92,7 @@ final class fg extends IntrusiveNode {
           return;
         }
         if (param2 == 2) {
-          gb.a(param0, param1, param5, param3, (byte) 49);
+          EquipmentBattleTutorial.a(param0, param1, param5, param3, (byte) 49);
         }
     }
 

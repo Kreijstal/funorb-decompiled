@@ -200,7 +200,7 @@ public final class ArmiesOfGielinor extends wf {
                   continue;
                 }
                 if (nm.field_o == 14) {
-                  jr.a(rs.a((byte) 76, 8), sp.b((byte) -90), 150, CipherPacketBuffer.field_A, rs.a((byte) 95, 1000), et.b(-1), 1024, 6, -84, sh.d((byte) 81));
+                  RadialSummonItem.a(rs.a((byte) 76, 8), sp.b((byte) -90), 150, CipherPacketBuffer.field_A, rs.a((byte) 95, 1000), et.b(-1), 1024, 6, -84, sh.d((byte) 81));
                   ep.a(lp.b(-126), -72, km.c(0));
                   s.field_d = 0;
                   ma.field_Z = true;
@@ -407,15 +407,15 @@ public final class ArmiesOfGielinor extends wf {
                       ((GameplayController) (var2)).field_d = UnitLossCondition.field_d[((GameplayController) (var2)).battlefield.mapTheme].field_n;
                       oo.e(-387);
                       if (((GameplayController) (var2)).battlefield.field_D == 3) {
-                        ((GameplayController) (var2)).f(true);
+                        ((GameplayController) (var2)).rebuildSummonMenus(true);
                       }
                       ((GameplayController) (var2)).h(true);
-                      hc.a(((GameplayController) (var2)).field_q, false);
+                      hc.a(((GameplayController) (var2)).controlledPlayerId, false);
                       ((GameplayController) (var2)).battlefield.field_Ab = true;
-                      if (((GameplayController) (var2)).field_q <= -1) {
+                      if (((GameplayController) (var2)).controlledPlayerId <= -1) {
                         NodeHashTable.a(-1, op.field_c[0][0]);
                       } else {
-                        NodeHashTable.a(-1, op.field_c[0][((GameplayController) (var2)).battlefield.getPlayerTeamIndex(((GameplayController) (var2)).field_q, -1)]);
+                        NodeHashTable.a(-1, op.field_c[0][((GameplayController) (var2)).battlefield.getPlayerTeamIndex(((GameplayController) (var2)).controlledPlayerId, -1)]);
                       }
                     }
                     var3Lifetime2 = ByteStorage.field_e.readUnsignedByte(0);
@@ -436,8 +436,8 @@ public final class ArmiesOfGielinor extends wf {
                       ((GameplayController) (var2)).battlefield.pendingEvents.addLast((byte) -119, (IntrusiveNode) (new TurnChangeEvent(var4Lifetime3, var3Lifetime2)));
                       continue;
                     }
-                    ((GameplayController) (var2)).field_ub = null;
-                    ((GameplayController) (var2)).field_p = var5_intLifetime2;
+                    ((GameplayController) (var2)).spellConfirmation = null;
+                    ((GameplayController) (var2)).remainingTurnTicks = var5_intLifetime2;
                     ((GameplayController) (var2)).field_Tb = false;
                     continue;
                   }
@@ -453,7 +453,7 @@ public final class ArmiesOfGielinor extends wf {
                     continue;
                   }
                   if (nm.field_o == 78) {
-                    ub.field_d = ByteStorage.field_e.readInt(1);
+                    RadialSummonMenu.field_d = ByteStorage.field_e.readInt(1);
                     continue;
                   }
                   if (76 == nm.field_o) {
@@ -485,8 +485,8 @@ public final class ArmiesOfGielinor extends wf {
                     ((GameplayController) (var2)).battlefield.applyMatchOutcome(var6Lifetime1Lifetime1, true, var3_ref_int__);
                     ((GameplayController) (var2)).battlefield.field_rb = var5;
                     ((GameplayController) (var2)).battlefield.field_G = var4_ref_int__;
-                    if (0 <= ((GameplayController) (var2)).field_q) {
-                      ((GameplayController) (var2)).field_Gb = ((GameplayController) (var2)).battlefield.field_rb[((GameplayController) (var2)).field_q] * 768 >> 8;
+                    if (0 <= ((GameplayController) (var2)).controlledPlayerId) {
+                      ((GameplayController) (var2)).field_Gb = ((GameplayController) (var2)).battlefield.field_rb[((GameplayController) (var2)).controlledPlayerId] * 768 >> 8;
                       if (!(((GameplayController) (var2)).field_Gb <= pg.playerProfile.progressionCredit)) {
                         ((GameplayController) (var2)).field_Gb = pg.playerProfile.progressionCredit;
                       }
@@ -974,7 +974,7 @@ public final class ArmiesOfGielinor extends wf {
           }
           if (jt.field_a == -9) {
             this.a(true, (byte) -90);
-            rd.field_j.t((byte) 60);
+            rd.field_j.startEquipmentTutorial((byte) 60);
             rd.field_j.h(true);
             var3_intLifetime4 = r.field_s ? 1 : 0;
             CipherPacketBuffer.a(var3_intLifetime4 != 0, -1, 1, 0);
@@ -1268,14 +1268,14 @@ public final class ArmiesOfGielinor extends wf {
           GlobalSpell.a((byte) 103);
           UnitSpell.c(6);
           UnitModelPreview.b(param0 ^ 298276648);
-          uf.a(param0 + 173);
+          SpellConfirmationDialog.a(param0 + 173);
           MovementPlanner.b(-104);
-          ub.a((byte) -122);
-          eu.a((byte) -55);
+          RadialSummonMenu.a((byte) -122);
+          UnitCycler.a((byte) -55);
           BattleCamera.d((byte) 55);
-          eo.a(0);
-          sj.a((byte) -95);
-          iu.b(1);
+          BattleUnitRenderer.a(0);
+          TurnTimerDial.a((byte) -95);
+          BattleTutorial.b(1);
           EventPresenter.f(-126);
           GameEvent.a((byte) -103);
           UnitInfoPopup.a(param0 ^ 101);
@@ -1445,7 +1445,7 @@ public final class ArmiesOfGielinor extends wf {
           AiPlanningStrategy.a(-1);
           ja.e(-93);
           j.b((byte) 125);
-          jr.b(76);
+          RadialSummonItem.b(76);
           sq.a(false);
           DeployAction.a(true);
           c.a(param0 + 157);
@@ -1706,7 +1706,7 @@ public final class ArmiesOfGielinor extends wf {
           iw.field_l = DamageEvent.a(0, 5, (byte) 102, false, false);
           sh.field_j = nu.a(6, true);
           br.field_d = nu.a(7, true);
-          uf.field_f = nu.a(8, true);
+          SpellConfirmationDialog.field_f = nu.a(8, true);
           ep.field_b = nu.a(9, true);
           SummonAction.field_w = nu.a(10, true);
           CorpseConditionMarker.field_w = nu.a(11, true);
@@ -1940,8 +1940,8 @@ public final class ArmiesOfGielinor extends wf {
                       ResourceRequest.field_A.ensureGroupAvailableByName(28979, "lobby")) {
                       if (br.field_d.ensureIndex((byte) 82) &&
                         br.field_d.ensureAllGroupsAvailable(-27927)) {
-                        if (uf.field_f.ensureIndex((byte) 82) &&
-                          uf.field_f.ensureAllGroupsAvailable(-27927)) {
+                        if (SpellConfirmationDialog.field_f.ensureIndex((byte) 82) &&
+                          SpellConfirmationDialog.field_f.ensureAllGroupsAvailable(-27927)) {
                           if (ep.field_b.ensureIndex((byte) 82) &&
                             ep.field_b.ensureAllGroupsAvailable(-27927)) {
                             if (SummonAction.field_w.ensureIndex((byte) 82) &&
@@ -1974,7 +1974,7 @@ public final class ArmiesOfGielinor extends wf {
                                                 UpkeepEvent.h(65);
                                                 bn.a((byte) -24, 70.0f, ph.field_a);
                                                 this.a(0);
-                                                jl.field_d = new p(br.field_d, uf.field_f);
+                                                jl.field_d = new p(br.field_d, SpellConfirmationDialog.field_f);
                                                 im.field_v[0] = jl.field_d.a("sword_slash_4", (byte) -97, "");
                                                 im.field_v[1] = jl.field_d.a("runewars_menu_mouseover", (byte) -97, "");
                                                 im.field_v[2] = jl.field_d.a("runewars_select_menu_item", (byte) -97, "");
@@ -2007,7 +2007,7 @@ public final class ArmiesOfGielinor extends wf {
                                                 var5_int = 0;
                                                 do {
                                                   if (var5_int >= 8) {
-                                                    sj.a(126, jl.field_d);
+                                                    TurnTimerDial.a(126, jl.field_d);
                                                     ml.a(jl.field_d, (byte) 123);
                                                     br.field_d = null;
                                                     wl.a(0);
@@ -2051,7 +2051,7 @@ public final class ArmiesOfGielinor extends wf {
                           bn.a((byte) -24, 33.0f, df.a(is.field_d, 0, ep.field_b, -27638, PacketBuffer.field_m));
                           return false;
                         }
-                        bn.a((byte) -24, 28.0f, vl.a(uf.field_f, 0, ds.field_b, "", ResourceProtocolClient.field_k));
+                        bn.a((byte) -24, 28.0f, vl.a(SpellConfirmationDialog.field_f, 0, ds.field_b, "", ResourceProtocolClient.field_k));
                         return false;
                       }
                       bn.a((byte) -24, 23.0f, vl.a(br.field_d, 0, ds.field_b, "", ResourceProtocolClient.field_k));
@@ -2072,10 +2072,10 @@ public final class ArmiesOfGielinor extends wf {
             bn.a((byte) -24, 10.0f, vl.a(gg.field_K, 0, Battlefield.field_nb, "basic", TileMetadata.field_i));
             return false;
           }
-          if (null != uf.field_f) {
+          if (null != SpellConfirmationDialog.field_f) {
             bn.a((byte) -24, 71.0f, ph.field_a);
             this.a(0);
-            uf.field_f = null;
+            SpellConfirmationDialog.field_f = null;
             wl.a(0);
             return false;
           }

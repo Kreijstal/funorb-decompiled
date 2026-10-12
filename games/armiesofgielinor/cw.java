@@ -33,13 +33,13 @@ final class cw {
             field_b = (String) null;
           }
           if (null != NetworkResourceRequest.field_C.selectedUnit) {
-            if (NetworkResourceRequest.field_C.field_q != CipherPacketBuffer.currentBattlefield.currentPlayer &&
-              NetworkResourceRequest.field_C.selectedUnit.ownerPlayer == NetworkResourceRequest.field_C.field_q) {
+            if (NetworkResourceRequest.field_C.controlledPlayerId != CipherPacketBuffer.currentBattlefield.currentPlayer &&
+              NetworkResourceRequest.field_C.selectedUnit.ownerPlayer == NetworkResourceRequest.field_C.controlledPlayerId) {
               return;
             }
             if (NetworkResourceRequest.field_C.selectedUnit.attacksRemaining > 0) {
               if (!NetworkResourceRequest.field_C.selectedUnit.movementSpent &&
-                NetworkResourceRequest.field_C.selectedUnit.ownerPlayer == NetworkResourceRequest.field_C.field_q &&
+                NetworkResourceRequest.field_C.selectedUnit.ownerPlayer == NetworkResourceRequest.field_C.controlledPlayerId &&
                 !NetworkResourceRequest.field_C.selectedUnit.h(-13494)) {
                 var7 = NetworkResourceRequest.field_C.selectedUnit.getMaximumAttackRange(3257);
                 var8 = NetworkResourceRequest.field_C.selectedUnit.getMinimumAttackRange((byte) -79);

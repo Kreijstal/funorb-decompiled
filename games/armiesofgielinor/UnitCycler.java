@@ -1,13 +1,13 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class eu {
+final class UnitCycler {
     static tp field_e;
     static int field_a;
-    private IntrusiveNode field_c;
-    private NodeDeque field_b;
+    private IntrusiveNode selectedNode;
+    private NodeDeque units;
     static String field_d;
-    private NodeIterator field_f;
+    private NodeIterator iterator;
     static je field_g;
 
     final static void a(int param0, int param1, int param2, int param3, int param4) {
@@ -132,56 +132,56 @@ final class eu {
         }
     }
 
-    final IntrusiveNode d(byte param0) {
-        if (param0 < 42) {
+    final IntrusiveNode getSelectedNode(byte obfuscationGuard) {
+        if (obfuscationGuard < 42) {
           Unit var3 = (Unit) null;
-          this.a(57, (Unit) null);
+          this.selectUnit(57, (Unit) null);
         }
-        return this.field_c;
+        return this.selectedNode;
     }
 
     public static void a(byte param0) {
         field_g = null;
         field_d = null;
         if (param0 != -55) {
-          eu.a((byte) 5);
+          UnitCycler.a((byte) 5);
         }
         field_e = null;
     }
 
-    private final boolean c(byte param0) {
-        if (null != this.field_c &&
-          this.field_c.next != null) {
-          if (param0 == -33) {
+    private final boolean isSelectionUnlinked(byte obfuscationGuard) {
+        if (null != this.selectedNode &&
+          this.selectedNode.next != null) {
+          if (obfuscationGuard == -33) {
             return false;
           }
           field_g = (je) null;
           return false;
         }
-        this.field_c = null;
+        this.selectedNode = null;
         return true;
     }
 
-    final void a(int param0, Unit param1) {
+    final void selectUnit(int obfuscationGuard, Unit unit) {
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
         try {
-          if (param0 > -90) {
+          if (obfuscationGuard > -90) {
             return;
           }
-          if (this.field_c != param1) {
-            this.field_c = (IntrusiveNode) ((Object) param1);
+          if (this.selectedNode != unit) {
+            this.selectedNode = (IntrusiveNode) ((Object) unit);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
           stackIn_8_0 = var3;
-          stackIn_8_1 = new StringBuilder().append("eu.E(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_8_1 = new StringBuilder().append("eu.E(").append(obfuscationGuard).append(',');
+          if (unit == null) {
             stackIn_9_2 = "null";
           } else {
             stackIn_9_2 = "{...}";
@@ -190,25 +190,25 @@ final class eu {
         }
     }
 
-    final void a(int param0) {
-        if (param0 <= 11) {
-          this.field_f = (NodeIterator) null;
+    final void selectNext(int obfuscationGuard) {
+        if (obfuscationGuard <= 11) {
+          this.iterator = (NodeIterator) null;
         }
-        this.c(10201);
-        if (null != this.field_c) {
-          this.field_f.a(this.field_c, true);
-          this.field_c = this.field_f.next(50);
+        this.refreshIteratorIfNeeded(10201);
+        if (null != this.selectedNode) {
+          this.iterator.a(this.selectedNode, true);
+          this.selectedNode = this.iterator.next(50);
         }
-        if (this.field_c == null) {
-          this.field_c = this.field_f.first(50);
+        if (this.selectedNode == null) {
+          this.selectedNode = this.iterator.first(50);
         }
     }
 
-    final int b(byte param0) {
-        if (param0 <= 31) {
-          this.b((byte) 71);
+    final int getUnitCount(byte obfuscationGuard) {
+        if (obfuscationGuard <= 31) {
+          this.getUnitCount((byte) 71);
         }
-        return this.field_b.b(false);
+        return this.units.b(false);
     }
 
     final static void a(int param0, int param1, int param2, Unit param3) {
@@ -220,37 +220,37 @@ final class eu {
         }
     }
 
-    final void b(int param0) {
+    final void selectPrevious(int obfuscationGuard) {
         boolean discarded$0 = false;
-        this.c(10201);
-        if (null != this.field_c) {
-          this.field_f.a(false, this.field_c);
-          this.field_c = this.field_f.previous((byte) -112);
+        this.refreshIteratorIfNeeded(10201);
+        if (null != this.selectedNode) {
+          this.iterator.a(false, this.selectedNode);
+          this.selectedNode = this.iterator.previous((byte) -112);
         }
-        if (param0 >= -50) {
-          discarded$0 = this.c((byte) 124);
+        if (obfuscationGuard >= -50) {
+          discarded$0 = this.isSelectionUnlinked((byte) 124);
         }
-        if (this.field_c == null) {
-          this.field_c = this.field_f.last(50);
+        if (this.selectedNode == null) {
+          this.selectedNode = this.iterator.last(50);
         }
     }
 
-    private final void c(int param0) {
+    private final void refreshIteratorIfNeeded(int obfuscationGuard) {
         boolean discarded$0 = false;
-        if (param0 != 10201) {
-          discarded$0 = this.c((byte) -44);
+        if (obfuscationGuard != 10201) {
+          discarded$0 = this.isSelectionUnlinked((byte) -44);
         }
-        if (this.c((byte) -33)) {
-          this.field_f = new NodeIterator(this.field_b);
+        if (this.isSelectionUnlinked((byte) -33)) {
+          this.iterator = new NodeIterator(this.units);
         }
     }
 
-    eu(NodeDeque param0) {
+    UnitCycler(NodeDeque units) {
         try {
-          this.field_b = param0;
-          this.field_f = new NodeIterator(this.field_b);
+          this.units = units;
+          this.iterator = new NodeIterator(this.units);
         } catch (RuntimeException runtimeException) {
-          throw ig.addExceptionContext((Throwable) ((Object) runtimeException), "eu.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) runtimeException), "eu.<init>(" + (units != null ? "{...}" : "null") + ')');
         }
     }
 

@@ -120,7 +120,7 @@ final class cr extends sf {
         try {
           this.field_X = param1;
           if (this.field_X != null) {
-            var3_int = CipherPacketBuffer.field_t.a(this.field_X, 260, CipherPacketBuffer.field_t.field_H);
+            var3_int = CipherPacketBuffer.field_t.getParagraphHeight(this.field_X, 260, CipherPacketBuffer.field_t.field_H);
             this.a(300, (byte) 100, 150 + var3_int);
           }
           this.field_Y = new rj(13, 50, 274, 30, 15, 2113632, 4210752);

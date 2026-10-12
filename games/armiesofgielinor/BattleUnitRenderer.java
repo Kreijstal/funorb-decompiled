@@ -1,31 +1,31 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class eo {
+final class BattleUnitRenderer {
     static RgbSprite field_a;
     static String field_c;
-    private BattleCamera field_b;
+    private BattleCamera camera;
 
-    private final boolean a(byte param0, int param1) {
-        this.field_b.a(1, param1);
-        int var3 = this.field_b.field_e[0];
-        int var4 = this.field_b.field_e[1];
-        if (param0 > -77) {
+    private final boolean isTileVisible(byte obfuscationGuard, int tileIndex) {
+        this.camera.a(1, tileIndex);
+        int screenX = this.camera.field_e[0];
+        int screenY = this.camera.field_e[1];
+        if (obfuscationGuard > -77) {
           Unit var7 = (Unit) null;
-          this.a(-96, -101, (Unit) null);
+          this.refreshUnitModel(-96, -101, (Unit) null);
         }
-        int var5 = so.field_b.field_a;
-        int var6 = so.field_b.field_g;
-        if (var3 > var5) {
+        int surfaceWidth = so.field_b.field_a;
+        int surfaceHeight = so.field_b.field_g;
+        if (screenX > surfaceWidth) {
           return false;
         }
-        if (var3 < -180) {
+        if (screenX < -180) {
           return false;
         }
-        if (var6 < var4) {
+        if (surfaceHeight < screenY) {
           return false;
         }
-        if (var4 < -10) {
+        if (screenY < -10) {
           return false;
         }
         return true;
@@ -51,26 +51,26 @@ final class eo {
             return true;
           }
           if (param1 != -35) {
-            this.field_b = (BattleCamera) null;
+            this.camera = (BattleCamera) null;
           }
           if (-1 < param3) {
             param4.facingAngle = param3;
           }
-          if (null == param4.field_x) {
+          if (null == param4.modelPreview) {
             var6_int = param4.unitType;
             if (var6_int == 34 &&
               param4.packedFlag8) {
               var6_int = 75;
             }
-            param4.field_x = new UnitModelPreview(param4.field_R, var6_int, param4.facingAngle);
+            param4.modelPreview = new UnitModelPreview(param4.field_R, var6_int, param4.facingAngle);
           }
-          if (param4.field_x == null) {
+          if (param4.modelPreview == null) {
             return true;
           }
-          if (param4.field_z == -1) {
-            param4.field_z = 0;
+          if (param4.modelAnimationIndex == -1) {
+            param4.modelAnimationIndex = 0;
           }
-          stackIn_18_0 = param4.field_x.a(param2, param4.field_U, param0, param3, param4.field_z, false);
+          stackIn_18_0 = param4.modelPreview.a(param2, param4.modelVisible, param0, param3, param4.modelAnimationIndex, false);
           return stackIn_18_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -86,11 +86,11 @@ final class eo {
         }
     }
 
-    final void a(int param0, byte param1, int param2, MapTile[] param3) {
-        int var7 = 0;
-        int var5_int = 0;
+    final void refreshUnitModels(int mapWidth, byte obfuscationGuard, int mapHeight, MapTile[] tiles) {
+        int tileIndex = 0;
+        int tileCount = 0;
         RuntimeException var5 = null;
-        Unit var6 = null;
+        Unit unit = null;
         int var8 = 0;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
@@ -98,15 +98,15 @@ final class eo {
         RuntimeException decompiledCaughtException = null;
         var8 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          var5_int = param2 * param0;
-          for (var7 = 0; var5_int > var7; var7++) {
-            var6 = param3[var7].occupant;
-            if (var6 != null &&
-              !var6.field_u) {
-              this.a(79, var7, var6);
+          tileCount = mapHeight * mapWidth;
+          for (tileIndex = 0; tileCount > tileIndex; tileIndex++) {
+            unit = tiles[tileIndex].occupant;
+            if (unit != null &&
+              !unit.field_u) {
+              this.refreshUnitModel(79, tileIndex, unit);
             }
           }
-          if (param1 <= 91) {
+          if (obfuscationGuard <= 91) {
             field_c = (String) null;
           }
           return;
@@ -114,8 +114,8 @@ final class eo {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
           stackIn_13_0 = var5;
-          stackIn_13_1 = new StringBuilder().append("eo.F(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
-          if (param3 == null) {
+          stackIn_13_1 = new StringBuilder().append("eo.F(").append(mapWidth).append(',').append(obfuscationGuard).append(',').append(mapHeight).append(',');
+          if (tiles == null) {
             stackIn_14_2 = "null";
           } else {
             stackIn_14_2 = "{...}";
@@ -187,7 +187,7 @@ final class eo {
         }
     }
 
-    private final void a(int param0, int param1, Unit param2) {
+    private final void refreshUnitModel(int obfuscationGuard, int tileIndex, Unit unit) {
         RuntimeException var4 = null;
         String var5 = null;
         RuntimeException stackIn_13_0 = null;
@@ -195,28 +195,28 @@ final class eo {
         String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param2 == null) {
+          if (unit == null) {
             return;
           }
-          param2.field_U = this.a((byte) -81, param1);
-          if (param0 <= 42) {
+          unit.modelVisible = this.isTileVisible((byte) -81, tileIndex);
+          if (obfuscationGuard <= 42) {
             var5 = (String) null;
-            eo.a(false, (kd) null, (String) null, (String) null, -91, (byte) -105, (String) null);
+            BattleUnitRenderer.a(false, (kd) null, (String) null, (String) null, -91, (byte) -105, (String) null);
           }
-          if (!param2.field_U) {
-            if (!param2.field_u) {
-              param2.field_x = null;
+          if (!unit.modelVisible) {
+            if (!unit.field_u) {
+              unit.modelPreview = null;
             }
           } else {
-            this.a(param1, -35, -1, -1, param2);
+            this.a(tileIndex, -35, -1, -1, unit);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
           stackIn_13_0 = var4;
-          stackIn_13_1 = new StringBuilder().append("eo.E(").append(param0).append(',').append(param1).append(',');
-          if (param2 == null) {
+          stackIn_13_1 = new StringBuilder().append("eo.E(").append(obfuscationGuard).append(',').append(tileIndex).append(',');
+          if (unit == null) {
             stackIn_14_2 = "null";
           } else {
             stackIn_14_2 = "{...}";
@@ -251,7 +251,7 @@ final class eo {
             BufferedFile.field_a = param6;
             nm.field_z = param4;
             oh.field_L = du.field_d;
-            ub.field_e = param0;
+            RadialSummonMenu.field_e = param0;
             qk.field_b = param2;
           } else {
             var9.k((byte) -119);
@@ -290,13 +290,13 @@ final class eo {
         }
     }
 
-    eo(BattleCamera param0) {
+    BattleUnitRenderer(BattleCamera camera) {
         j discarded$0 = null;
         try {
-          discarded$0 = new j(240, param0);
-          this.field_b = param0;
+          discarded$0 = new j(240, camera);
+          this.camera = camera;
         } catch (RuntimeException runtimeException) {
-          throw ig.addExceptionContext((Throwable) ((Object) runtimeException), "eo.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) runtimeException), "eo.<init>(" + (camera != null ? "{...}" : "null") + ')');
         }
     }
 

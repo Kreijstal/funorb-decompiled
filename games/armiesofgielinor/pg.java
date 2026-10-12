@@ -133,7 +133,7 @@ final class pg {
           tn.field_Z.b((byte) 92);
           tn.field_Z.a(param1, 0);
           var13 = tn.field_Z;
-          var3 = iu.field_t;
+          var3 = BattleTutorial.field_t;
           var4 = TeleportAction.field_z;
           var13.field_i.a(0, var4, param0, (byte) -118, var3);
           return;

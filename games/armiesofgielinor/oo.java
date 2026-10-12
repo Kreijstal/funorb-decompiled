@@ -187,14 +187,14 @@ final class oo {
             if (DeployEvent.field_A != 0 &&
               TeleportAction.field_z > 257 &&
               290 > TeleportAction.field_z) {
-              if (9 < iu.field_t &&
-                82 > iu.field_t) {
+              if (9 < BattleTutorial.field_t &&
+                82 > BattleTutorial.field_t) {
                 var4 = 1;
                 this.field_p = qk.field_c;
                 this.field_s = false;
               }
-              if (558 < iu.field_t &&
-                631 > iu.field_t) {
+              if (558 < BattleTutorial.field_t &&
+                631 > BattleTutorial.field_t) {
                 var4 = 1;
                 this.field_p = qk.field_c;
                 this.field_s = true;
@@ -215,7 +215,7 @@ final class oo {
             }
           }
           if (param0) {
-            this.field_h.updatePointerSelection(0, this.a(iu.field_t, TeleportAction.field_z, -387), this.a(AiPlanningStrategy.field_d, ko.field_b, -387));
+            this.field_h.updatePointerSelection(0, this.a(BattleTutorial.field_t, TeleportAction.field_z, -387), this.a(AiPlanningStrategy.field_d, ko.field_b, -387));
             var4Lifetime1 = 0;
             if (this.field_h.hasActivationInput((byte) 96)) {
               if (0 == this.field_h.selectedIndex) {

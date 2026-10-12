@@ -133,7 +133,7 @@ final class sa {
           return;
         }
         try {
-          var5 = en.field_E.a(param3, -20 + var4_int, 0);
+          var5 = en.field_E.getParagraphHeight(param3, -20 + var4_int, 0);
           fe.b(50 + param2, 80 + param1, var4_int, var5 + 20, io.field_m, TutorialController.field_e, 0, 192);
           en.field_E.a(param3, 62 + param2, 90 + param1, -20 + var4_int, var5, 16777215, -1, 1, 0, 0);
         } catch (RuntimeException runtimeException) {

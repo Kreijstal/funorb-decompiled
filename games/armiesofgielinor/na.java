@@ -18,7 +18,7 @@ final class na extends tj implements mf, he {
         super(0, 0, 496, 0, (kh) null);
         this.field_P = new ma("", (qo) null, 12);
         lk var1 = new lk(gl.field_e, 0, 0, 0, 0, 16777215, -1, 3, 0, ArmiesOfGielinor.field_J.field_H, -1, 2147483647, true);
-        kb var2 = new kb(iu.field_u, var1, (qo) null);
+        kb var2 = new kb(BattleTutorial.field_u, var1, (qo) null);
         this.field_O = new fw(ul.field_f, (qo) null);
         this.field_L = new fw(ac.field_s, (qo) null);
         this.field_P.field_s = DualLinkedNode.field_m;

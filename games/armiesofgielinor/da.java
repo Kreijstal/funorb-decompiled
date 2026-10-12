@@ -43,7 +43,7 @@ final class da {
           param1 >= vi.field_a.length) {
           return;
         }
-        ub.$cfr$intArgs$a$6d836999ad61(106, vi.field_a[param1]);
+        RadialSummonMenu.$cfr$intArgs$a$6d836999ad61(106, vi.field_a[param1]);
         if (param0 > -22) {
           da.b(0);
         }

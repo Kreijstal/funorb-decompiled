@@ -172,14 +172,14 @@ final class UiSelectionState {
         mo var9 = null;
         var7 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          if (mj.field_c > sj.field_d) {
-            sj.field_d = sj.field_d + 1;
+          if (mj.field_c > TurnTimerDial.field_d) {
+            TurnTimerDial.field_d = TurnTimerDial.field_d + 1;
           }
-          if (gb.field_y != so.field_b.field_g) {
-            sh.field_l = sh.field_l + (-gb.field_y + so.field_b.field_g);
-            gb.field_y = so.field_b.field_g;
+          if (EquipmentBattleTutorial.field_y != so.field_b.field_g) {
+            sh.field_l = sh.field_l + (-EquipmentBattleTutorial.field_y + so.field_b.field_g);
+            EquipmentBattleTutorial.field_y = so.field_b.field_g;
           }
-          if (sj.field_d <= 0) {
+          if (TurnTimerDial.field_d <= 0) {
             return;
           }
           vi.a(-68);
@@ -235,7 +235,7 @@ final class UiSelectionState {
           this.buttonPress = DeployEvent.field_A;
           this.pointerDrivenSelection = true;
           this.selectedIndex = pressedIndex;
-          this.repeatCountdown = eu.field_a;
+          this.repeatCountdown = UnitCycler.field_a;
         }
         if (this.pressedPointerButton != 0 &&
           0 != ro.field_ub) {

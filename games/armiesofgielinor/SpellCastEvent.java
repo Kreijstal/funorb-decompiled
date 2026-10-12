@@ -137,7 +137,7 @@ final class SpellCastEvent extends GameEvent {
 
     final static String g(int param0) {
         if (!(f.field_E >= 2)) {
-          return eo.field_c;
+          return BattleUnitRenderer.field_c;
         }
         if (null != nf.field_Nb) {
           if (!nf.field_Nb.ensureIndex((byte) 82)) {
@@ -352,7 +352,7 @@ final class SpellCastEvent extends GameEvent {
         try {
           hs.b(-103, this.spell.spellId);
           SpellCastRequest.a(3, (byte) -121, 38);
-          param2.g(27, this.spell.spellId, -91);
+          param2.notifyTutorialInteraction(27, this.spell.spellId, -91);
           var4_int = 0;
           if (param1 >= -84) {
             SpellCastEvent.b(30, -93);
@@ -412,7 +412,7 @@ final class SpellCastEvent extends GameEvent {
               var4_int = var4_int != 0 | this.a(var10, 15, param2, param0, var9) ? 1 : 0;
             }
           }
-          ul.$cfr$intArgs$a$5d483ac33914(-80, fo.a(4800, jr.field_e, new String[]{param2.battlefield.playerNames[this.castingPlayer], fq.field_f[this.spell.spellId]}), param2.field_Nb);
+          ul.$cfr$intArgs$a$5d483ac33914(-80, fo.a(4800, RadialSummonItem.field_e, new String[]{param2.battlefield.playerNames[this.castingPlayer], fq.field_f[this.spell.spellId]}), param2.field_Nb);
           stackIn_39_0 = var4_int;
           return stackIn_39_0 != 0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

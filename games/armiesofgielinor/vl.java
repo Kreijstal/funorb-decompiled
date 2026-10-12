@@ -8,7 +8,7 @@ final class vl extends mk {
     static CipherPacketBuffer outgoingPacket;
     static String field_l;
     static String field_p;
-    static String[] field_m;
+    static String[] battleHintMessages;
 
     final static String a(ResourceArchive param0, int param1, String param2, String param3, String param4) {
         RuntimeException var5 = null;
@@ -109,7 +109,7 @@ final class vl extends mk {
           return;
         }
         outgoingPacket = null;
-        field_m = null;
+        battleHintMessages = null;
         field_p = null;
         field_o = null;
         field_l = null;

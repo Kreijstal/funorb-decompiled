@@ -11,7 +11,7 @@ final class cp {
     static String field_f;
     static je field_d;
 
-    final static EventPresenter a(GameplayController param0, int param1, Battlefield param2, boolean param3, GameEvent param4, eo param5) {
+    final static EventPresenter a(GameplayController param0, int param1, Battlefield param2, boolean param3, GameEvent param4, BattleUnitRenderer param5) {
         EventPresenter var6 = null;
         RuntimeException var6_ref = null;
         EventPresenter stackIn_2_0 = null;
@@ -79,8 +79,8 @@ final class cp {
           field_c = null;
           return;
         }
-        eo var2 = (eo) null;
-        cp.a((GameplayController) null, -1, (Battlefield) null, false, (GameEvent) null, (eo) null);
+        BattleUnitRenderer var2 = (BattleUnitRenderer) null;
+        cp.a((GameplayController) null, -1, (Battlefield) null, false, (GameEvent) null, (BattleUnitRenderer) null);
         field_b = null;
         field_g = null;
         field_c = null;

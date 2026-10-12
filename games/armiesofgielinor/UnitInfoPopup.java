@@ -62,7 +62,7 @@ final class UnitInfoPopup extends IntrusiveNode {
         int var9Lifetime1;
         var13 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          uf.field_j.b();
+          SpellConfirmationDialog.field_j.b();
           SoftwareRaster.b();
           fe.b(0, 0, 134, 61, io.field_m, nd.field_b, 0, 0);
           qt.field_e.drawOpaque(2, 2);
@@ -117,7 +117,7 @@ final class UnitInfoPopup extends IntrusiveNode {
           so.field_b.a(param2 + 5600);
           var9Lifetime1 = this.screenX - param3 - 75;
           var10 = this.screenY - (param4 + 80);
-          uf.field_j.e(var9Lifetime1, var10, -this.fadeOffset + 32 << 3);
+          SpellConfirmationDialog.field_j.e(var9Lifetime1, var10, -this.fadeOffset + 32 << 3);
           var11 = bw.unitDefinitions[this.unit.unitType][12];
           if (var11 != -1) {
             PreparedAction.a(32 - this.fadeOffset << 3, true, var9Lifetime1 + 96, e.field_b, 40, 60 + var10);

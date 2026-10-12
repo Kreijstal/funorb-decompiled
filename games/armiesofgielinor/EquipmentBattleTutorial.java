@@ -1,14 +1,14 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class gb extends iu {
+final class EquipmentBattleTutorial extends BattleTutorial {
     static int field_y;
-    private int field_C;
+    private int equipmentSlot;
     static boolean field_B;
     static int field_z;
 
-    gb(GameplayController param0) {
-        super(param0);
+    EquipmentBattleTutorial(GameplayController controller) {
+        super(controller);
         RuntimeException runtimeException = null;
         int var2_int = 0;
         Unit var2 = null;
@@ -18,50 +18,50 @@ final class gb extends iu {
         String stackIn_23_2 = null;
         RuntimeException decompiledCaughtException = null;
         var3 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
-        this.field_C = -1;
+        this.equipmentSlot = -1;
         try {
-          if (!param0.battlefield.field_Cb) {
-            this.e(-119, 2);
+          if (!controller.battlefield.field_Cb) {
+            this.setEquipmentStage(-119, 2);
             if (var3 != 0) {
-              this.e(-124, 1);
+              this.setEquipmentStage(-124, 1);
             }
           } else {
-            this.e(-124, 1);
+            this.setEquipmentStage(-124, 1);
           }
-          param0.battlefield.field_f = true;
-          param0.battlefield.tiles[157].ownerPlayer = 1;
-          param0.battlefield.playerTurnCounts[0] = 10;
-          param0.battlefield.tiles[217].ownerPlayer = 1;
-          param0.battlefield.tiles[56].ownerPlayer = 1;
-          param0.battlefield.tiles[157].ownerPlayer = 1;
-          param0.battlefield.tiles[217].ownerPlayer = 1;
-          param0.battlefield.tiles[330].ownerPlayer = 1;
-          param0.battlefield.tiles[166].ownerPlayer = 0;
-          param0.battlefield.tiles[65].ownerPlayer = 0;
+          controller.battlefield.field_f = true;
+          controller.battlefield.tiles[157].ownerPlayer = 1;
+          controller.battlefield.playerTurnCounts[0] = 10;
+          controller.battlefield.tiles[217].ownerPlayer = 1;
+          controller.battlefield.tiles[56].ownerPlayer = 1;
+          controller.battlefield.tiles[157].ownerPlayer = 1;
+          controller.battlefield.tiles[217].ownerPlayer = 1;
+          controller.battlefield.tiles[330].ownerPlayer = 1;
+          controller.battlefield.tiles[166].ownerPlayer = 0;
+          controller.battlefield.tiles[65].ownerPlayer = 0;
           var2_int = 0;
           do {
             if (!(br.field_c.length > var2_int)) {
-              param0.battlefield.a(true, 14, 74, 13, 1, 1, 0);
-              param0.battlefield.a(true, 17, 0, 8, 1, 1, 0);
-              param0.battlefield.a(true, 10, 0, 14, 1, 1, 0);
-              param0.battlefield.a(true, 9, 9, 4, 1, 1, 1);
-              param0.battlefield.a(true, 4, 9, 14, 1, 1, 0);
-              param0.battlefield.a(true, 1, 16, 11, 1, 1, 3);
-              param0.battlefield.a(true, 16, 16, 4, 1, 1, 0);
-              param0.battlefield.a(true, 14, 22, 9, 1, 1, 0);
-              param0.battlefield.a(true, 3, 22, 12, 1, 1, 1);
-              param0.battlefield.a(true, 8, 52, 5, 1, 1, 2);
-              param0.battlefield.a(true, 7, 52, 10, 1, 1, 0);
-              param0.battlefield.a(true, 5, 52, 5, 1, 1, 3);
+              controller.battlefield.a(true, 14, 74, 13, 1, 1, 0);
+              controller.battlefield.a(true, 17, 0, 8, 1, 1, 0);
+              controller.battlefield.a(true, 10, 0, 14, 1, 1, 0);
+              controller.battlefield.a(true, 9, 9, 4, 1, 1, 1);
+              controller.battlefield.a(true, 4, 9, 14, 1, 1, 0);
+              controller.battlefield.a(true, 1, 16, 11, 1, 1, 3);
+              controller.battlefield.a(true, 16, 16, 4, 1, 1, 0);
+              controller.battlefield.a(true, 14, 22, 9, 1, 1, 0);
+              controller.battlefield.a(true, 3, 22, 12, 1, 1, 1);
+              controller.battlefield.a(true, 8, 52, 5, 1, 1, 2);
+              controller.battlefield.a(true, 7, 52, 10, 1, 1, 0);
+              controller.battlefield.a(true, 5, 52, 5, 1, 1, 3);
               break;
             }
-            param0.battlefield.tiles[br.field_c[var2_int]].a(126);
+            controller.battlefield.tiles[br.field_c[var2_int]].a(126);
             var2_int++;
           } while (var3 == 0);
-          var2 = (Unit) (param0.battlefield.unitsByPlayer[1].first((byte) 95));
+          var2 = (Unit) (controller.battlefield.unitsByPlayer[1].first((byte) 95));
           while (null != var2) {
-            var2.faceUnit((Unit) (param0.battlefield.unitsByPlayer[0].first((byte) 94)), 2048);
-            var2 = (Unit) (param0.battlefield.unitsByPlayer[1].next((byte) 123));
+            var2.faceUnit((Unit) (controller.battlefield.unitsByPlayer[0].first((byte) 94)), 2048);
+            var2 = (Unit) (controller.battlefield.unitsByPlayer[1].next((byte) 123));
             if (var3 != 0) {
               return;
             }
@@ -72,7 +72,7 @@ final class gb extends iu {
           runtimeException = decompiledCaughtException;
           stackIn_22_0 = runtimeException;
           stackIn_22_1 = new StringBuilder().append("gb.<init>(");
-          if (param0 == null) {
+          if (controller == null) {
             stackIn_23_2 = "null";
           } else {
             stackIn_23_2 = "{...}";
@@ -125,22 +125,22 @@ final class gb extends iu {
         }
     }
 
-    private final boolean c(int param0, int param1) {
+    private final boolean isGodLocked(int godId, int obfuscationGuard) {
         boolean discarded$1 = false;
         RuntimeException var3 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (0 == this.field_q.battlefield.godFavourLevels[0][param0]) {
+          if (0 == this.controller.battlefield.godFavourLevels[0][godId]) {
             return true;
           }
-          if (param1 <= 81) {
-            discarded$1 = this.b(37, (byte) -23);
+          if (obfuscationGuard <= 81) {
+            discarded$1 = this.isUnitLocked(37, (byte) -23);
           }
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw ig.addExceptionContext((Throwable) ((Object) var3), "gb.H(" + param0 + ',' + param1 + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) var3), "gb.H(" + godId + ',' + obfuscationGuard + ')');
         }
     }
 
@@ -154,7 +154,7 @@ final class gb extends iu {
           MoveEvent.tutorialStageItems[stage] = itemIds;
           MoveEvent.tutorialLayout.setStageLayout(rightX, bottomY, (byte) 18, topY, leftX, itemSpacing, stage);
           if (obfuscationGuard >= -26) {
-            gb.a((RgbSprite[]) null, -121, -66, -22, -91);
+            EquipmentBattleTutorial.a((RgbSprite[]) null, -121, -66, -22, -91);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -171,7 +171,7 @@ final class gb extends iu {
         }
     }
 
-    final void b(int param0, int param1, int param2) {
+    final void handleInteraction(int tileIndex, int obfuscationGuard, int interactionKind) {
         boolean discarded$0 = false;
         RuntimeException decompiledCaughtException = null;
         int var4_int = 0;
@@ -179,7 +179,7 @@ final class gb extends iu {
         int var5 = 0;
         var5 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          var4_int = this.field_k;
+          var4_int = this.stage;
           switch ((var5 == 0
             || var4_int == 3
             || var4_int == 6
@@ -188,162 +188,162 @@ final class gb extends iu {
             || var4_int == 12
             ) ? var4_int : -1) {
             case 1:
-              if (param2 != 2) {
+              if (interactionKind != 2) {
                 break;
               }
-              if (this.field_q.field_pb != 0) {
-                this.e(-116, 5);
+              if (this.controller.field_pb != 0) {
+                this.setEquipmentStage(-116, 5);
                 if (var5 == 0) {
                   break;
                 }
               }
-              this.e(-122, 3);
+              this.setEquipmentStage(-122, 3);
               if (var5 == 0) {
                 break;
               }
             case 2:
-              if (29 != param2) {
+              if (29 != interactionKind) {
                 break;
               }
-              this.e(param1 ^ 115, 1);
+              this.setEquipmentStage(obfuscationGuard ^ 115, 1);
               if (var5 == 0) {
                 break;
               }
             case 3:
-              if (param2 != 19) {
+              if (interactionKind != 19) {
                 break;
               }
-              this.e(param1 ^ 126, 5);
+              this.setEquipmentStage(obfuscationGuard ^ 126, 5);
               if (var5 == 0) {
                 break;
               }
             case 9:
-              if (param2 != 2) {
+              if (interactionKind != 2) {
                 break;
               }
-              if (this.field_C < 4) {
-                this.e(param1 ^ 121, 5);
+              if (this.equipmentSlot < 4) {
+                this.setEquipmentStage(obfuscationGuard ^ 121, 5);
                 if (var5 == 0) {
                   break;
                 }
               }
-              this.e(-128, 14);
+              this.setEquipmentStage(-128, 14);
               if (var5 == 0) {
                 break;
               }
             case 8:
-              if (param2 != 25) {
+              if (interactionKind != 25) {
                 break;
               }
-              if (param0 != this.field_q.battlefield.field_B[0][this.field_C]) {
+              if (tileIndex != this.controller.battlefield.equippedSpellIds[0][this.equipmentSlot]) {
                 break;
               }
-              this.h(51);
+              this.updateLesson(51);
               if (var5 == 0) {
                 break;
               }
             case 11:
-              if (param2 != 25) {
+              if (interactionKind != 25) {
                 break;
               }
-              if (this.field_q.battlefield.field_B[0][this.field_C] != param0) {
+              if (this.controller.battlefield.equippedSpellIds[0][this.equipmentSlot] != tileIndex) {
                 break;
               }
-              this.h(85);
+              this.updateLesson(85);
               if (var5 == 0) {
                 break;
               }
             case 10:
-              if (25 != param2 ||
-                param0 == this.field_q.battlefield.field_B[0][this.field_C]) {
-                if (param2 != 27) {
+              if (25 != interactionKind ||
+                tileIndex == this.controller.battlefield.equippedSpellIds[0][this.equipmentSlot]) {
+                if (interactionKind != 27) {
                   break;
                 }
-                if (param0 != this.field_q.battlefield.field_B[0][this.field_C]) {
+                if (tileIndex != this.controller.battlefield.equippedSpellIds[0][this.equipmentSlot]) {
                   break;
                 }
-                this.e(param1 - 122, 12);
+                this.setEquipmentStage(obfuscationGuard - 122, 12);
                 if (var5 == 0) {
                   break;
                 }
               }
-              this.e(-126, 11);
+              this.setEquipmentStage(-126, 11);
               if (var5 == 0) {
                 break;
               }
             case 6:
-              if (param2 != 25 ||
-                param0 == this.field_q.battlefield.field_B[0][this.field_C]) {
-                if ((param2 == 28 ||
-                  param2 == 4) &&
-                  this.j(-36)) {
-                  if (uc.spellDefinitions[this.field_q.battlefield.field_B[0][this.field_C]][4] != 5) {
+              if (interactionKind != 25 ||
+                tileIndex == this.controller.battlefield.equippedSpellIds[0][this.equipmentSlot]) {
+                if ((interactionKind == 28 ||
+                  interactionKind == 4) &&
+                  this.isSelectedUnitEligible(-36)) {
+                  if (uc.spellDefinitions[this.controller.battlefield.equippedSpellIds[0][this.equipmentSlot]][4] != 5) {
                     break;
                   }
-                  this.e(-123, 10);
+                  this.setEquipmentStage(-123, 10);
                   if (var5 == 0) {
                     break;
                   }
                 }
-                if (param2 != 27) {
+                if (interactionKind != 27) {
                   break;
                 }
-                if (this.field_q.battlefield.field_B[0][this.field_C] != param0) {
+                if (this.controller.battlefield.equippedSpellIds[0][this.equipmentSlot] != tileIndex) {
                   break;
                 }
-                this.e(-115, 12);
+                this.setEquipmentStage(-115, 12);
                 if (var5 == 0) {
                   break;
                 }
               }
-              this.e(-119, 11);
+              this.setEquipmentStage(-119, 11);
               if (var5 == 0) {
                 break;
               }
             case 12:
-              if (2 == param2) {
-                if (this.field_C >= 4) {
-                  this.e(param1 ^ 118, 14);
+              if (2 == interactionKind) {
+                if (this.equipmentSlot >= 4) {
+                  this.setEquipmentStage(obfuscationGuard ^ 118, 14);
                   if (var5 == 0) {
                     break;
                   }
                 }
-                this.e(param1 ^ 117, 5);
+                this.setEquipmentStage(obfuscationGuard ^ 117, 5);
               }
             default:
               break;
           }
-          if (param1 != -3) {
-            discarded$0 = this.b(82, (byte) 62);
+          if (obfuscationGuard != -3) {
+            discarded$0 = this.isUnitLocked(82, (byte) 62);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
-          throw ig.addExceptionContext((Throwable) ((Object) var4), "gb.A(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) var4), "gb.A(" + tileIndex + ',' + obfuscationGuard + ',' + interactionKind + ')');
         }
     }
 
-    private final boolean b(int param0, byte param1) {
+    private final boolean isUnitLocked(int unitType, byte obfuscationGuard) {
         int var3_int = 0;
         RuntimeException var3 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var3_int = b.getUnitUnlockOrdinal(false, param0);
-          if (this.field_q.battlefield.godFavourLevels[0][-1 + jv.getUnitUnlockGroup(false, param0)] == 0) {
+          var3_int = b.getUnitUnlockOrdinal(false, unitType);
+          if (this.controller.battlefield.godFavourLevels[0][-1 + jv.getUnitUnlockGroup(false, unitType)] == 0) {
             return true;
           }
-          if ((this.field_q.battlefield.field_a[0][jv.getUnitUnlockGroup(false, param0) - 1] & 1 << var3_int) == 0) {
+          if ((this.controller.battlefield.godUnitUnlockMasks[0][jv.getUnitUnlockGroup(false, unitType) - 1] & 1 << var3_int) == 0) {
             return true;
           }
-          if (param1 > 0) {
-            gb.a(-50, 57, -48, -76, (byte) -116);
+          if (obfuscationGuard > 0) {
+            EquipmentBattleTutorial.a(-50, 57, -48, -76, (byte) -116);
           }
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw ig.addExceptionContext((Throwable) ((Object) var3), "gb.B(" + param0 + ',' + param1 + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) var3), "gb.B(" + unitType + ',' + obfuscationGuard + ')');
         }
     }
 
@@ -361,42 +361,42 @@ final class gb extends iu {
         try {
           if (uc.spellDefinitions[param1][3] == 4 &&
             1 == uc.spellDefinitions[param1][5] &&
-            this.c(uc.spellDefinitions[param1][6], 121)) {
-            stackIn_10_0 = r.field_E[23];
+            this.isGodLocked(uc.spellDefinitions[param1][6], 121)) {
+            stackIn_10_0 = r.equipmentTutorialMessages[23];
             return stackIn_10_0;
           }
           if (param1 == 115 &&
-            this.b(63, (byte) -9)) {
-            stackIn_16_0 = r.field_E[25];
+            this.isUnitLocked(63, (byte) -9)) {
+            stackIn_16_0 = r.equipmentTutorialMessages[25];
             return stackIn_16_0;
           }
           if (param1 == 115 &&
-            this.b(63, (byte) -58)) {
-            stackIn_22_0 = r.field_E[25];
+            this.isUnitLocked(63, (byte) -58)) {
+            stackIn_22_0 = r.equipmentTutorialMessages[25];
             return stackIn_22_0;
           }
           if (param1 == 116 &&
-            this.b(58, (byte) -62)) {
-            stackIn_28_0 = r.field_E[25];
+            this.isUnitLocked(58, (byte) -62)) {
+            stackIn_28_0 = r.equipmentTutorialMessages[25];
             return stackIn_28_0;
           }
           if (param1 == 117 &&
-            this.b(53, (byte) -44)) {
-            stackIn_36_0 = r.field_E[25];
+            this.isUnitLocked(53, (byte) -44)) {
+            stackIn_36_0 = r.equipmentTutorialMessages[25];
             return stackIn_36_0;
           }
           if (param1 == 118 &&
-            this.b(59, (byte) -120)) {
-            stackIn_44_0 = r.field_E[25];
+            this.isUnitLocked(59, (byte) -120)) {
+            stackIn_44_0 = r.equipmentTutorialMessages[25];
             return stackIn_44_0;
           }
           if (119 == param1 &&
-            this.b(43, (byte) -103)) {
-            stackIn_50_0 = r.field_E[25];
+            this.isUnitLocked(43, (byte) -103)) {
+            stackIn_50_0 = r.equipmentTutorialMessages[25];
             return stackIn_50_0;
           }
           if (param0 != 66) {
-            this.b(-6, 14, 3);
+            this.handleInteraction(-6, 14, 3);
           }
           stackIn_55_0 = null;
           return (String) (stackIn_55_0);
@@ -407,7 +407,7 @@ final class gb extends iu {
         }
     }
 
-    private final void h(int param0) {
+    private final void updateLesson(int obfuscationGuard) {
         RuntimeException decompiledCaughtException = null;
         int var2_int = 0;
         RuntimeException var2 = null;
@@ -416,7 +416,7 @@ final class gb extends iu {
         var4 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           regionExit1: {
-            var2_int = this.field_q.battlefield.field_B[0][this.field_C];
+            var2_int = this.controller.battlefield.equippedSpellIds[0][this.equipmentSlot];
             var3 = var2_int;
             if (-1 != var3) {
               regionExit2: {
@@ -941,8 +941,8 @@ final class gb extends iu {
                                                                                                       }
                                                                                                       if (decompiledFrameRemainder2) {
                                                                                                         if (decompiledFrameRemainder1) {
-                                                                                                          this.a(r.field_E[8], (byte) 122);
-                                                                                                          this.e(-128, 6);
+                                                                                                          this.setMessage(r.equipmentTutorialMessages[8], (byte) 122);
+                                                                                                          this.setEquipmentStage(-128, 6);
                                                                                                           if (var4 == 0) {
                                                                                                             break regionExit1;
                                                                                                           }
@@ -950,316 +950,316 @@ final class gb extends iu {
                                                                                                       }
                                                                                                     }
                                                                                                     if (decompiledFrameRemainder2) {
-                                                                                                      this.e(-114, 12);
+                                                                                                      this.setEquipmentStage(-114, 12);
                                                                                                       if (var4 == 0) {
                                                                                                         break regionExit1;
                                                                                                       }
                                                                                                     }
                                                                                                   }
-                                                                                                  this.a(r.field_E[9], (byte) 118);
-                                                                                                  this.e(-122, 6);
+                                                                                                  this.setMessage(r.equipmentTutorialMessages[9], (byte) 118);
+                                                                                                  this.setEquipmentStage(-122, 6);
                                                                                                   if (var4 == 0) {
                                                                                                     break regionExit1;
                                                                                                   }
                                                                                                 }
-                                                                                                this.a(r.field_E[8], (byte) 113);
-                                                                                                this.e(-124, 6);
+                                                                                                this.setMessage(r.equipmentTutorialMessages[8], (byte) 113);
+                                                                                                this.setEquipmentStage(-124, 6);
                                                                                                 if (var4 == 0) {
                                                                                                   break regionExit1;
                                                                                                 }
                                                                                               }
-                                                                                              this.a(r.field_E[15], (byte) 115);
-                                                                                              this.e(-121, 6);
+                                                                                              this.setMessage(r.equipmentTutorialMessages[15], (byte) 115);
+                                                                                              this.setEquipmentStage(-121, 6);
                                                                                               if (var4 == 0) {
                                                                                                 break regionExit1;
                                                                                               }
                                                                                             }
-                                                                                            this.a(r.field_E[13], (byte) 116);
-                                                                                            this.e(-117, 6);
+                                                                                            this.setMessage(r.equipmentTutorialMessages[13], (byte) 116);
+                                                                                            this.setEquipmentStage(-117, 6);
                                                                                             if (var4 == 0) {
                                                                                               break regionExit1;
                                                                                             }
                                                                                           }
-                                                                                          this.a(r.field_E[12], (byte) 125);
-                                                                                          this.e(-126, 6);
+                                                                                          this.setMessage(r.equipmentTutorialMessages[12], (byte) 125);
+                                                                                          this.setEquipmentStage(-126, 6);
                                                                                           if (var4 == 0) {
                                                                                             break regionExit1;
                                                                                           }
                                                                                         }
-                                                                                        this.a(r.field_E[13], (byte) 114);
-                                                                                        this.e(-123, 6);
+                                                                                        this.setMessage(r.equipmentTutorialMessages[13], (byte) 114);
+                                                                                        this.setEquipmentStage(-123, 6);
                                                                                         if (var4 == 0) {
                                                                                           break regionExit1;
                                                                                         }
                                                                                       }
-                                                                                      this.a(r.field_E[11], (byte) 116);
-                                                                                      this.e(-123, 6);
+                                                                                      this.setMessage(r.equipmentTutorialMessages[11], (byte) 116);
+                                                                                      this.setEquipmentStage(-123, 6);
                                                                                       if (var4 == 0) {
                                                                                         break regionExit1;
                                                                                       }
                                                                                     }
-                                                                                    this.a(r.field_E[9], (byte) 115);
-                                                                                    this.e(-126, 6);
+                                                                                    this.setMessage(r.equipmentTutorialMessages[9], (byte) 115);
+                                                                                    this.setEquipmentStage(-126, 6);
                                                                                     if (var4 == 0) {
                                                                                       break regionExit1;
                                                                                     }
                                                                                   }
-                                                                                  this.a(r.field_E[8], (byte) 112);
-                                                                                  this.e(-116, 6);
+                                                                                  this.setMessage(r.equipmentTutorialMessages[8], (byte) 112);
+                                                                                  this.setEquipmentStage(-116, 6);
                                                                                   if (var4 == 0) {
                                                                                     break regionExit1;
                                                                                   }
                                                                                 }
-                                                                                if (!this.c(uc.spellDefinitions[var2_int][6], 120)) {
-                                                                                  this.e(-119, 12);
+                                                                                if (!this.isGodLocked(uc.spellDefinitions[var2_int][6], 120)) {
+                                                                                  this.setEquipmentStage(-119, 12);
                                                                                   if (var4 == 0) {
                                                                                     break regionExit1;
                                                                                   }
                                                                                 }
-                                                                                this.a(r.field_E[23], (byte) 119);
-                                                                                this.e(-122, 9);
+                                                                                this.setMessage(r.equipmentTutorialMessages[23], (byte) 119);
+                                                                                this.setEquipmentStage(-122, 9);
                                                                                 if (var4 == 0) {
                                                                                   break regionExit1;
                                                                                 }
                                                                               }
-                                                                              this.a(r.field_E[10], (byte) 125);
-                                                                              this.e(-114, 6);
+                                                                              this.setMessage(r.equipmentTutorialMessages[10], (byte) 125);
+                                                                              this.setEquipmentStage(-114, 6);
                                                                               if (var4 == 0) {
                                                                                 break regionExit1;
                                                                               }
                                                                             }
-                                                                            this.a(r.field_E[14], (byte) 123);
-                                                                            this.e(-119, 6);
+                                                                            this.setMessage(r.equipmentTutorialMessages[14], (byte) 123);
+                                                                            this.setEquipmentStage(-119, 6);
                                                                             if (var4 == 0) {
                                                                               break regionExit1;
                                                                             }
                                                                           }
-                                                                          this.e(-114, 12);
+                                                                          this.setEquipmentStage(-114, 12);
                                                                           if (var4 == 0) {
                                                                             break regionExit1;
                                                                           }
                                                                         }
-                                                                        this.a(r.field_E[9], (byte) 126);
-                                                                        this.e(-121, 6);
+                                                                        this.setMessage(r.equipmentTutorialMessages[9], (byte) 126);
+                                                                        this.setEquipmentStage(-121, 6);
                                                                         if (var4 == 0) {
                                                                           break regionExit1;
                                                                         }
                                                                       }
-                                                                      this.a(r.field_E[13], (byte) 125);
-                                                                      this.e(-115, 6);
+                                                                      this.setMessage(r.equipmentTutorialMessages[13], (byte) 125);
+                                                                      this.setEquipmentStage(-115, 6);
                                                                       if (var4 == 0) {
                                                                         break regionExit1;
                                                                       }
                                                                     }
-                                                                    this.a(r.field_E[9], (byte) 115);
-                                                                    this.e(-118, 6);
+                                                                    this.setMessage(r.equipmentTutorialMessages[9], (byte) 115);
+                                                                    this.setEquipmentStage(-118, 6);
                                                                     if (var4 == 0) {
                                                                       break regionExit1;
                                                                     }
                                                                   }
-                                                                  this.a(r.field_E[13], (byte) 114);
-                                                                  this.e(-116, 6);
+                                                                  this.setMessage(r.equipmentTutorialMessages[13], (byte) 114);
+                                                                  this.setEquipmentStage(-116, 6);
                                                                   if (var4 == 0) {
                                                                     break regionExit1;
                                                                   }
                                                                 }
-                                                                this.a(r.field_E[8], (byte) 121);
-                                                                this.e(-116, 6);
+                                                                this.setMessage(r.equipmentTutorialMessages[8], (byte) 121);
+                                                                this.setEquipmentStage(-116, 6);
                                                                 if (var4 == 0) {
                                                                   break regionExit1;
                                                                 }
                                                               }
-                                                              this.a(r.field_E[9], (byte) 120);
-                                                              this.e(-114, 6);
+                                                              this.setMessage(r.equipmentTutorialMessages[9], (byte) 120);
+                                                              this.setEquipmentStage(-114, 6);
                                                               if (var4 == 0) {
                                                                 break regionExit1;
                                                               }
                                                             }
-                                                            this.a(r.field_E[13], (byte) 125);
-                                                            this.e(-117, 6);
+                                                            this.setMessage(r.equipmentTutorialMessages[13], (byte) 125);
+                                                            this.setEquipmentStage(-117, 6);
                                                             if (var4 == 0) {
                                                               break regionExit1;
                                                             }
                                                           }
-                                                          this.a(r.field_E[13], (byte) 123);
-                                                          this.e(-115, 6);
+                                                          this.setMessage(r.equipmentTutorialMessages[13], (byte) 123);
+                                                          this.setEquipmentStage(-115, 6);
                                                           if (var4 == 0) {
                                                             break regionExit1;
                                                           }
                                                         }
-                                                        this.a(r.field_E[13], (byte) 112);
-                                                        this.e(-115, 6);
+                                                        this.setMessage(r.equipmentTutorialMessages[13], (byte) 112);
+                                                        this.setEquipmentStage(-115, 6);
                                                         if (var4 == 0) {
                                                           break regionExit1;
                                                         }
                                                       }
-                                                      this.a(r.field_E[13], (byte) 122);
-                                                      this.e(-124, 6);
+                                                      this.setMessage(r.equipmentTutorialMessages[13], (byte) 122);
+                                                      this.setEquipmentStage(-124, 6);
                                                       if (var4 == 0) {
                                                         break regionExit1;
                                                       }
                                                     }
-                                                    if (!this.b(63, (byte) -72)) {
-                                                      this.a(r.field_E[18], (byte) 114);
-                                                      this.e(-116, 6);
+                                                    if (!this.isUnitLocked(63, (byte) -72)) {
+                                                      this.setMessage(r.equipmentTutorialMessages[18], (byte) 114);
+                                                      this.setEquipmentStage(-116, 6);
                                                       if (var4 == 0) {
                                                         break regionExit1;
                                                       }
                                                     }
-                                                    this.a(r.field_E[25], (byte) 116);
-                                                    this.e(-116, 9);
+                                                    this.setMessage(r.equipmentTutorialMessages[25], (byte) 116);
+                                                    this.setEquipmentStage(-116, 9);
                                                     if (var4 == 0) {
                                                       break regionExit1;
                                                     }
                                                   }
-                                                  if (this.b(58, (byte) -35)) {
-                                                    this.a(r.field_E[25], (byte) 118);
-                                                    this.e(-118, 9);
+                                                  if (this.isUnitLocked(58, (byte) -35)) {
+                                                    this.setMessage(r.equipmentTutorialMessages[25], (byte) 118);
+                                                    this.setEquipmentStage(-118, 9);
                                                     if (var4 == 0) {
                                                       break regionExit1;
                                                     }
                                                   }
-                                                  this.a(r.field_E[20], (byte) 115);
-                                                  this.e(-128, 6);
+                                                  this.setMessage(r.equipmentTutorialMessages[20], (byte) 115);
+                                                  this.setEquipmentStage(-128, 6);
                                                   if (var4 == 0) {
                                                     break regionExit1;
                                                   }
                                                 }
-                                                if (!this.b(53, (byte) -32)) {
-                                                  this.a(r.field_E[19], (byte) 112);
-                                                  this.e(-115, 6);
+                                                if (!this.isUnitLocked(53, (byte) -32)) {
+                                                  this.setMessage(r.equipmentTutorialMessages[19], (byte) 112);
+                                                  this.setEquipmentStage(-115, 6);
                                                   if (var4 == 0) {
                                                     break regionExit1;
                                                   }
                                                 }
-                                                this.a(r.field_E[25], (byte) 117);
-                                                this.e(-123, 9);
+                                                this.setMessage(r.equipmentTutorialMessages[25], (byte) 117);
+                                                this.setEquipmentStage(-123, 9);
                                                 if (var4 == 0) {
                                                   break regionExit1;
                                                 }
                                               }
-                                              if (!this.b(59, (byte) -39)) {
-                                                this.a(r.field_E[17], (byte) 124);
-                                                this.e(-117, 6);
+                                              if (!this.isUnitLocked(59, (byte) -39)) {
+                                                this.setMessage(r.equipmentTutorialMessages[17], (byte) 124);
+                                                this.setEquipmentStage(-117, 6);
                                                 if (var4 == 0) {
                                                   break regionExit1;
                                                 }
                                               }
-                                              this.a(r.field_E[25], (byte) 119);
-                                              this.e(-114, 9);
+                                              this.setMessage(r.equipmentTutorialMessages[25], (byte) 119);
+                                              this.setEquipmentStage(-114, 9);
                                               if (var4 == 0) {
                                                 break regionExit1;
                                               }
                                             }
-                                            if (this.b(43, (byte) -79)) {
-                                              this.a(r.field_E[25], (byte) 115);
-                                              this.e(-125, 9);
+                                            if (this.isUnitLocked(43, (byte) -79)) {
+                                              this.setMessage(r.equipmentTutorialMessages[25], (byte) 115);
+                                              this.setEquipmentStage(-125, 9);
                                               if (var4 == 0) {
                                                 break regionExit1;
                                               }
                                             }
-                                            this.a(r.field_E[21], (byte) 111);
-                                            this.e(-117, 6);
+                                            this.setMessage(r.equipmentTutorialMessages[21], (byte) 111);
+                                            this.setEquipmentStage(-117, 6);
                                             if (var4 == 0) {
                                               break regionExit1;
                                             }
                                           }
-                                          this.a(r.field_E[9], (byte) 124);
-                                          this.e(-115, 6);
+                                          this.setMessage(r.equipmentTutorialMessages[9], (byte) 124);
+                                          this.setEquipmentStage(-115, 6);
                                           if (var4 == 0) {
                                             break regionExit1;
                                           }
                                         }
-                                        this.a(r.field_E[8], (byte) 121);
-                                        this.e(-116, 6);
+                                        this.setMessage(r.equipmentTutorialMessages[8], (byte) 121);
+                                        this.setEquipmentStage(-116, 6);
                                         if (var4 == 0) {
                                           break regionExit1;
                                         }
                                       }
-                                      this.a(r.field_E[8], (byte) 109);
-                                      this.e(-128, 6);
+                                      this.setMessage(r.equipmentTutorialMessages[8], (byte) 109);
+                                      this.setEquipmentStage(-128, 6);
                                       if (var4 == 0) {
                                         break regionExit1;
                                       }
                                     }
-                                    this.a(r.field_E[8], (byte) 114);
-                                    this.e(-128, 6);
+                                    this.setMessage(r.equipmentTutorialMessages[8], (byte) 114);
+                                    this.setEquipmentStage(-128, 6);
                                     if (var4 == 0) {
                                       break regionExit1;
                                     }
                                   }
-                                  this.a(r.field_E[9], (byte) 120);
-                                  this.e(-121, 6);
+                                  this.setMessage(r.equipmentTutorialMessages[9], (byte) 120);
+                                  this.setEquipmentStage(-121, 6);
                                   if (var4 == 0) {
                                     break regionExit1;
                                   }
                                 }
-                                this.a(r.field_E[9], (byte) 123);
-                                this.e(-116, 6);
+                                this.setMessage(r.equipmentTutorialMessages[9], (byte) 123);
+                                this.setEquipmentStage(-116, 6);
                                 if (var4 == 0) {
                                   break regionExit1;
                                 }
                               }
-                              this.a(r.field_E[9], (byte) 125);
-                              this.e(-123, 6);
+                              this.setMessage(r.equipmentTutorialMessages[9], (byte) 125);
+                              this.setEquipmentStage(-123, 6);
                               if (var4 == 0) {
                                 break regionExit1;
                               }
                             }
-                            this.a(r.field_E[9], (byte) 126);
-                            this.e(-126, 6);
+                            this.setMessage(r.equipmentTutorialMessages[9], (byte) 126);
+                            this.setEquipmentStage(-126, 6);
                             if (var4 == 0) {
                               break regionExit1;
                             }
                           }
-                          this.a(r.field_E[9], (byte) 118);
-                          this.e(-123, 6);
+                          this.setMessage(r.equipmentTutorialMessages[9], (byte) 118);
+                          this.setEquipmentStage(-123, 6);
                           if (var4 == 0) {
                             break regionExit1;
                           }
                         }
-                        this.a(r.field_E[9], (byte) 119);
-                        this.e(-116, 6);
+                        this.setMessage(r.equipmentTutorialMessages[9], (byte) 119);
+                        this.setEquipmentStage(-116, 6);
                         if (var4 == 0) {
                           break regionExit1;
                         }
                       }
-                      this.a(r.field_E[9], (byte) 126);
-                      this.e(-122, 6);
+                      this.setMessage(r.equipmentTutorialMessages[9], (byte) 126);
+                      this.setEquipmentStage(-122, 6);
                       if (var4 == 0) {
                         break regionExit1;
                       }
                     }
-                    this.a(r.field_E[9], (byte) 125);
-                    this.e(-126, 6);
+                    this.setMessage(r.equipmentTutorialMessages[9], (byte) 125);
+                    this.setEquipmentStage(-126, 6);
                     if (var4 == 0) {
                       break regionExit1;
                     }
                   }
-                  this.a(r.field_E[9], (byte) 120);
-                  this.e(-117, 6);
+                  this.setMessage(r.equipmentTutorialMessages[9], (byte) 120);
+                  this.setEquipmentStage(-117, 6);
                   if (var4 == 0) {
                     break regionExit1;
                   }
                 }
-                this.a(r.field_E[9], (byte) 123);
-                this.e(-124, 6);
+                this.setMessage(r.equipmentTutorialMessages[9], (byte) 123);
+                this.setEquipmentStage(-124, 6);
                 if (var4 == 0) {
                   break regionExit1;
                 }
               }
-              this.a(r.field_E[9], (byte) 112);
-              this.e(-124, 6);
+              this.setMessage(r.equipmentTutorialMessages[9], (byte) 112);
+              this.setEquipmentStage(-124, 6);
             }
           }
-          if (param0 <= 35) {
-            gb.a(-66, 125, 5, 76, (byte) 66);
+          if (obfuscationGuard <= 35) {
+            EquipmentBattleTutorial.a(-66, 125, 5, 76, (byte) 66);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ig.addExceptionContext((Throwable) ((Object) var2), "gb.E(" + param0 + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) var2), "gb.E(" + obfuscationGuard + ')');
         }
     }
 
@@ -1290,7 +1290,7 @@ final class gb extends iu {
               param0[1].g(param1, param2);
             }
             if (param4 != 8941) {
-              gb.a((RgbSprite[]) null, -52, 126, 81, -73);
+              EquipmentBattleTutorial.a((RgbSprite[]) null, -52, 126, 81, -73);
             }
             SoftwareRaster.a(an.field_H);
             return;
@@ -1456,7 +1456,7 @@ final class gb extends iu {
         int var4 = 0;
         var4 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          var2_int = this.field_q.battlefield.field_B[0][this.field_C];
+          var2_int = this.controller.battlefield.equippedSpellIds[0][this.equipmentSlot];
           if (param0 != -134) {
             stackIn_3_0 = 8;
             return stackIn_3_0;
@@ -2083,7 +2083,7 @@ final class gb extends iu {
         }
     }
 
-    private final void e(int param0, int param1) {
+    private final void setEquipmentStage(int obfuscationGuard, int stage) {
         String discarded$0 = null;
         int stackIn_87_0 = 0;
         int stackIn_101_1 = 0;
@@ -2099,7 +2099,7 @@ final class gb extends iu {
         int var6Lifetime1;
         var7 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          if (param0 > -113) {
+          if (obfuscationGuard > -113) {
             discarded$0 = this.a((byte) -54, -8);
           }
           boolean decompiledFrameRemainder6 = true;
@@ -2109,15 +2109,15 @@ final class gb extends iu {
           boolean decompiledFrameRemainder2 = true;
           boolean decompiledFrameRemainder1 = true;
           boolean decompiledFrameRemainder0 = true;
-          this.field_c = true;
-          this.field_k = param1;
-          this.d((byte) 37);
+          this.expanded = true;
+          this.stage = stage;
+          this.clearControlHighlights((byte) 37);
           this.d(-85, -1);
-          var6 = param1;
+          var6 = stage;
           if (var6 == 2 &&
             var7 == 0) {
-            this.a(r.field_E[2], (byte) 111);
-            this.field_w = 4;
+            this.setMessage(r.equipmentTutorialMessages[2], (byte) 111);
+            this.buttonMode = 4;
             if (var7 == 0) {
               return;
             }
@@ -2144,8 +2144,8 @@ final class gb extends iu {
             (decompiledFrameRemainder2) &&
             (decompiledFrameRemainder1) &&
             (decompiledFrameRemainder0)) {
-            this.a(r.field_E[0], (byte) 126);
-            this.field_w = 0;
+            this.setMessage(r.equipmentTutorialMessages[0], (byte) 126);
+            this.buttonMode = 0;
             if (var7 == 0) {
               return;
             }
@@ -2156,8 +2156,8 @@ final class gb extends iu {
             (decompiledFrameRemainder3) &&
             (decompiledFrameRemainder2) &&
             (decompiledFrameRemainder1)) {
-            this.a(r.field_E[1], (byte) 111);
-            this.field_w = 1;
+            this.setMessage(r.equipmentTutorialMessages[1], (byte) 111);
+            this.buttonMode = 1;
             this.d(-75, 255);
             if (var7 == 0) {
               return;
@@ -2168,46 +2168,46 @@ final class gb extends iu {
             (decompiledFrameRemainder4) &&
             (decompiledFrameRemainder3) &&
             (decompiledFrameRemainder2)) {
-            this.field_C = this.field_C + 1;
-            if (-1 == this.field_q.battlefield.field_B[0][this.field_C]) {
-              this.a(r.field_E[24], (byte) 117);
-              while (this.field_C < 5) {
-                if (-1 == this.field_q.battlefield.field_B[0][this.field_C]) {
-                  this.field_C = this.field_C + 1;
+            this.equipmentSlot = this.equipmentSlot + 1;
+            if (-1 == this.controller.battlefield.equippedSpellIds[0][this.equipmentSlot]) {
+              this.setMessage(r.equipmentTutorialMessages[24], (byte) 117);
+              while (this.equipmentSlot < 5) {
+                if (-1 == this.controller.battlefield.equippedSpellIds[0][this.equipmentSlot]) {
+                  this.equipmentSlot = this.equipmentSlot + 1;
                   if (var7 == 0) {
                     continue;
                   }
                 }
                 break;
               }
-              this.field_k = 9;
-              this.field_w = 0;
-              this.field_C = this.field_C - 1;
+              this.stage = 9;
+              this.buttonMode = 0;
+              this.equipmentSlot = this.equipmentSlot - 1;
               return;
             }
             var6Lifetime1 = 0;
             scanLoop1: while (true) {
-              if (var6Lifetime1 < this.field_C) {
-                stackIn_87_0 = ~this.field_q.battlefield.field_B[0][var6Lifetime1];
+              if (var6Lifetime1 < this.equipmentSlot) {
+                stackIn_87_0 = ~this.controller.battlefield.equippedSpellIds[0][var6Lifetime1];
                 if (var7 != 0) {
                   break scanLoop1;
                 }
-                if (stackIn_87_0 == ~this.field_q.battlefield.field_B[0][this.field_C]) {
-                  this.a(fo.a(4800, r.field_E[31], new String[]{fq.field_f[this.field_q.battlefield.field_B[0][this.field_C]]}), (byte) 119);
-                  this.field_w = 0;
-                  this.field_k = 9;
+                if (stackIn_87_0 == ~this.controller.battlefield.equippedSpellIds[0][this.equipmentSlot]) {
+                  this.setMessage(fo.a(4800, r.equipmentTutorialMessages[31], new String[]{fq.field_f[this.controller.battlefield.equippedSpellIds[0][this.equipmentSlot]]}), (byte) 119);
+                  this.buttonMode = 0;
+                  this.stage = 9;
                   while (true) {
-                    if (this.field_C < 5 &&
+                    if (this.equipmentSlot < 5 &&
                       var7 == 0 &&
-                      ~this.field_q.battlefield.field_B[0][this.field_C] == ~this.field_q.battlefield.field_B[0][var6Lifetime1]) {
-                      this.field_C = this.field_C + 1;
+                      ~this.controller.battlefield.equippedSpellIds[0][this.equipmentSlot] == ~this.controller.battlefield.equippedSpellIds[0][var6Lifetime1]) {
+                      this.equipmentSlot = this.equipmentSlot + 1;
                       if (var7 == 0) {
                         continue;
                       }
                     }
                     break;
                   }
-                  this.field_C = this.field_C - 1;
+                  this.equipmentSlot = this.equipmentSlot - 1;
                   return;
                 }
                 var6Lifetime1++;
@@ -2215,31 +2215,31 @@ final class gb extends iu {
                   continue;
                 }
               }
-              stackIn_87_0 = uc.spellDefinitions[this.field_q.battlefield.field_B[0][this.field_C]][3];
+              stackIn_87_0 = uc.spellDefinitions[this.controller.battlefield.equippedSpellIds[0][this.equipmentSlot]][3];
               break;
             }
             var3_int = stackIn_87_0;
-            var4 = this.a((byte) 66, this.field_q.battlefield.field_B[0][this.field_C]);
+            var4 = this.a((byte) 66, this.controller.battlefield.equippedSpellIds[0][this.equipmentSlot]);
             boolean decompiledSharedTail0 = (var4 == null);
             if (!decompiledSharedTail0) {
-              this.field_k = 9;
-              this.field_w = 0;
+              this.stage = 9;
+              this.buttonMode = 0;
               decompiledSharedTail0 = (var7 != 0);
             }
             if (decompiledSharedTail0) {
               if (var3_int != 4) {
-                var4 = r.field_E[26];
+                var4 = r.equipmentTutorialMessages[26];
               }
               if (var3_int == 4 ||
                 var7 != 0) {
-                var4 = r.field_E[22];
+                var4 = r.equipmentTutorialMessages[22];
               }
-              var4 = fo.a(4800, var4, new String[]{fq.field_f[this.field_q.battlefield.field_B[0][this.field_C]]});
-              this.field_w = 1;
-              this.field_k = 8;
-              this.d(-37, this.field_C);
+              var4 = fo.a(4800, var4, new String[]{fq.field_f[this.controller.battlefield.equippedSpellIds[0][this.equipmentSlot]]});
+              this.buttonMode = 1;
+              this.stage = 8;
+              this.d(-37, this.equipmentSlot);
             }
-            this.a(fo.a(4800, r.field_E[3 + this.field_C], new String[]{fq.field_f[this.field_q.battlefield.field_B[0][this.field_C]], ActionRequest.field_l[this.field_q.battlefield.field_B[0][this.field_C]], var4}), (byte) 109);
+            this.setMessage(fo.a(4800, r.equipmentTutorialMessages[3 + this.equipmentSlot], new String[]{fq.field_f[this.controller.battlefield.equippedSpellIds[0][this.equipmentSlot]], ActionRequest.field_l[this.controller.battlefield.equippedSpellIds[0][this.equipmentSlot]], var4}), (byte) 109);
             if (var7 == 0) {
               return;
             }
@@ -2248,18 +2248,18 @@ final class gb extends iu {
             (decompiledFrameRemainder5) &&
             (decompiledFrameRemainder4) &&
             (decompiledFrameRemainder3)) {
-            var4 = r.field_E[26];
-            var4 = fo.a(4800, var4, new String[]{fq.field_f[this.field_q.battlefield.field_B[0][this.field_C]]});
+            var4 = r.equipmentTutorialMessages[26];
+            var4 = fo.a(4800, var4, new String[]{fq.field_f[this.controller.battlefield.equippedSpellIds[0][this.equipmentSlot]]});
             stackIn_101_1 = 4800;
-            stackIn_101_2 = r.field_E;
-            if (this.field_q.field_gc < 0) {
+            stackIn_101_2 = r.equipmentTutorialMessages;
+            if (this.controller.field_gc < 0) {
               stackIn_102_3 = 1;
             } else {
               stackIn_102_3 = 0;
             }
-            this.a(fo.a(stackIn_101_1, stackIn_101_2[stackIn_102_3 + 32], new String[]{var4}), (byte) 125);
-            this.d(-122, this.field_C);
-            this.field_w = 1;
+            this.setMessage(fo.a(stackIn_101_1, stackIn_101_2[stackIn_102_3 + 32], new String[]{var4}), (byte) 125);
+            this.d(-122, this.equipmentSlot);
+            this.buttonMode = 1;
             if (var7 == 0) {
               return;
             }
@@ -2267,68 +2267,68 @@ final class gb extends iu {
           if ((decompiledFrameRemainder6) &&
             (decompiledFrameRemainder5) &&
             (decompiledFrameRemainder4)) {
-            this.field_w = 1;
+            this.buttonMode = 1;
             if (var7 == 0) {
               return;
             }
           }
           if ((decompiledFrameRemainder6) &&
             (decompiledFrameRemainder5)) {
-            this.a(r.field_E[29], (byte) 110);
-            this.field_w = 1;
+            this.setMessage(r.equipmentTutorialMessages[29], (byte) 110);
+            this.buttonMode = 1;
             if (var7 == 0) {
               return;
             }
           }
           if (decompiledFrameRemainder6) {
             var5 = us.field_b[this.i(-134)];
-            if (this.field_C == 0) {
-              var5 = fo.a(4800, r.field_E[27], new String[]{var5});
+            if (this.equipmentSlot == 0) {
+              var5 = fo.a(4800, r.equipmentTutorialMessages[27], new String[]{var5});
             }
-            this.a(var5, (byte) 126);
-            this.field_w = 0;
+            this.setMessage(var5, (byte) 126);
+            this.buttonMode = 0;
             if (var7 == 0) {
               return;
             }
           }
-          this.a(r.field_E[30], (byte) 110);
-          this.field_w = 3;
+          this.setMessage(r.equipmentTutorialMessages[30], (byte) 110);
+          this.buttonMode = 3;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw ig.addExceptionContext((Throwable) ((Object) var3), "gb.F(" + param0 + ',' + param1 + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) var3), "gb.F(" + obfuscationGuard + ',' + stage + ')');
         }
     }
 
-    private final boolean j(int param0) {
+    private final boolean isSelectedUnitEligible(int obfuscationGuard) {
         RuntimeException decompiledCaughtException = null;
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
         var3 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          if (this.field_q.selectedUnit == null) {
+          if (this.controller.selectedUnit == null) {
             return false;
           }
           regionExit1: {
-            var2_int = this.field_q.battlefield.field_B[0][this.field_C];
+            var2_int = this.controller.battlefield.equippedSpellIds[0][this.equipmentSlot];
             if (var2_int != 36 ||
               var3 != 0) {
               switch (var2_int) {
                 case 34:
-                  if (this.field_q.selectedUnit.ownerPlayer != 0) {
+                  if (this.controller.selectedUnit.ownerPlayer != 0) {
                     break regionExit1;
                   }
-                  if (this.field_q.selectedUnit.movementSpent) {
+                  if (this.controller.selectedUnit.movementSpent) {
                     break regionExit1;
                   }
                   return true;
                 case 35:
-                  if (this.field_q.selectedUnit.ownerPlayer != 0) {
+                  if (this.controller.selectedUnit.ownerPlayer != 0) {
                     break regionExit1;
                   }
-                  if (this.field_q.selectedUnit.movementSpent) {
+                  if (this.controller.selectedUnit.movementSpent) {
                     break regionExit1;
                   }
                   return true;
@@ -2336,10 +2336,10 @@ final class gb extends iu {
                   break regionExit1;
                 case 109:
                   if (var3 == 0) {
-                    if (this.field_q.selectedUnit.ownerPlayer != 0) {
+                    if (this.controller.selectedUnit.ownerPlayer != 0) {
                       break regionExit1;
                     }
-                    if (this.field_q.selectedUnit.movementSpent) {
+                    if (this.controller.selectedUnit.movementSpent) {
                       break regionExit1;
                     }
                     return true;
@@ -2347,25 +2347,25 @@ final class gb extends iu {
                   break;
               }
             }
-            if (this.field_q.selectedUnit.ownerPlayer != 0 &&
-              !this.field_q.selectedUnit.movementSpent) {
+            if (this.controller.selectedUnit.ownerPlayer != 0 &&
+              !this.controller.selectedUnit.movementSpent) {
               return true;
             }
           }
-          if (param0 != -36) {
+          if (obfuscationGuard != -36) {
             field_z = 53;
           }
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ig.addExceptionContext((Throwable) ((Object) var2), "gb.K(" + param0 + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) var2), "gb.K(" + obfuscationGuard + ')');
         }
     }
 
     private final void d(int param0, int param1) {
         try {
-          this.field_q.field_Jb = param1;
+          this.controller.field_Jb = param1;
           if (param0 > 0) {
             field_B = true;
           }

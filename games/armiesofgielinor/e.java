@@ -8,7 +8,7 @@ final class e {
     final static void a(byte param0) {
         if (param0 >= -88) {
           e.a((byte) 98);
-          iu.field_h = false;
+          BattleTutorial.field_h = false;
           if (null != qd.field_I) {
             qd.field_I.f((byte) -106);
           }
@@ -20,7 +20,7 @@ final class e {
           TelefragEvent.field_z = 0;
           return;
         }
-        iu.field_h = false;
+        BattleTutorial.field_h = false;
         if (null != qd.field_I) {
           qd.field_I.f((byte) -106);
         }

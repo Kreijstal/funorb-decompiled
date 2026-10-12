@@ -163,7 +163,7 @@ final class qd extends tj implements nq, he {
 
     final static void a(ResourceArchive param0, byte param1, uv param2, int param3) {
         try {
-          fw.field_C = tp.b(-74) * param3 / 1000;
+          fw.field_C = tp.getNominalTickRate(-74) * param3 / 1000;
           DualNodeDeque.a((byte) -124, param0);
           jj.a(-93, param0);
           lg.a(32381, param0);

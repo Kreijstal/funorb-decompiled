@@ -8,9 +8,9 @@ final class Battlefield {
     int turnLimit;
     private int[] field_M;
     int[] damageTakenByPlayer;
-    int field_ib;
+    int turnDurationOption;
     static String field_nb;
-    int[][] field_a;
+    int[][] godUnitUnlockMasks;
     private int field_Db;
     boolean field_X;
     private int field_ab;
@@ -72,7 +72,7 @@ final class Battlefield {
     int mapWidth;
     boolean teamGame;
     int[][] teamStructureCounts;
-    int[][] field_B;
+    int[][] equippedSpellIds;
     boolean kingBlackDragonSummoned;
     boolean field_f;
     ul field_j;
@@ -1786,7 +1786,7 @@ final class Battlefield {
             this.b(-42, true, -106, -92, 114);
           }
           if (var5_int != 0) {
-            this.field_B[param3][param2] = -1;
+            this.equippedSpellIds[param3][param2] = -1;
             this.remainingRuneCap[param3] = this.remainingRuneCap[param3] - uc.spellDefinitions[param1.spellId][0];
           }
           this.field_J = false;
@@ -1809,7 +1809,7 @@ final class Battlefield {
         int var2 = this.field_Fb ? 1 : 0;
         this.field_Fb = false;
         if (param0 != -293) {
-          this.field_ib = 1;
+          this.turnDurationOption = 1;
         }
         return var2 != 0;
     }
@@ -2140,7 +2140,7 @@ final class Battlefield {
           var4 = 0;
         }
         if (!param0) {
-          this.field_ib = -38;
+          this.turnDurationOption = -38;
         }
         var5 = 0;
         scanLoop1: while (true) {
@@ -3473,8 +3473,8 @@ final class Battlefield {
               }
               boolean decompiledFrameCompleted0 = true;
               if (stackIn_38_0 != stackIn_38_1) {
-                if (this.field_B == null) {
-                  this.field_B = new int[this.playerCount][5];
+                if (this.equippedSpellIds == null) {
+                  this.equippedSpellIds = new int[this.playerCount][5];
                 }
                 var6 = 0;
                 while (var6 < 5) {
@@ -3488,7 +3488,7 @@ final class Battlefield {
                   if (stackIn_50_0 == stackIn_50_1) {
                     var7Lifetime2 = -1;
                   }
-                  this.field_B[this.localPlayer][var6] = var7Lifetime2;
+                  this.equippedSpellIds[this.localPlayer][var6] = var7Lifetime2;
                   var6++;
                 }
               }
@@ -3714,7 +3714,7 @@ final class Battlefield {
         var9 = b.getUnitUnlockOrdinal(false, unitType);
         if (unitType != 74 &&
           unitType >= 8 &&
-          0 == (1 << var9 & this.field_a[playerId][var8 + 1])) {
+          0 == (1 << var9 & this.godUnitUnlockMasks[playerId][var8 + 1])) {
           return 4;
         }
         if (!this.f(bw.unitDefinitions[unitType][8], this.playerMana[playerId], 0)) {
@@ -4093,7 +4093,7 @@ final class Battlefield {
             if (this.field_Q != 0) {
               var6 = 0;
               while (var6 < 5) {
-                packet.writeShort(true, this.field_B[playerId][var6]);
+                packet.writeShort(true, this.equippedSpellIds[playerId][var6]);
                 var6++;
                 if (var12 != 0) {
                   decompiledFrameCompleted1 = false;
@@ -4753,7 +4753,7 @@ final class Battlefield {
         var8 = b.getUnitUnlockOrdinal(false, unitType);
         if (unitType != 74 &&
           unitType >= 8 &&
-          0 == (this.field_a[playerId][1 + var7] & 1 << var8)) {
+          0 == (this.godUnitUnlockMasks[playerId][1 + var7] & 1 << var8)) {
           return false;
         }
         if (this.f(bw.unitDefinitions[unitType][8], this.playerMana[playerId], 0)) {
@@ -7064,7 +7064,7 @@ final class Battlefield {
           this.randomSeed = AttackEvent.a(false, 2147483647, li.field_n);
           this.teams = new TeamRoster[this.teamCount];
           this.playerTeamIndices = new int[this.playerCount];
-          this.field_ib = param0;
+          this.turnDurationOption = param0;
           if (!this.teamGame ||
             null != this.campaignMission) {
             var17_int = 0;
@@ -7135,7 +7135,7 @@ final class Battlefield {
             this.rankedParticipants = new int[this.teamCount];
             this.unitsByPlayer = new NodeDeque[this.playerCount];
             this.localPlayer = param4;
-            this.field_a = param3;
+            this.godUnitUnlockMasks = param3;
             this.mapWidth = 0;
             stackIn_60_1 = (param5);
             this.field_b = stackIn_60_1;
@@ -7151,13 +7151,13 @@ final class Battlefield {
             boolean decompiledFrameCompleted3 = true;
             regionExit1: {
               if (param11 == null) {
-                this.field_B = (int[][]) null;
+                this.equippedSpellIds = (int[][]) null;
                 if (var25 == 0) {
                   break regionExit1;
                 }
               }
               if (param11.length != 1) {
-                this.field_B = new int[this.playerCount][];
+                this.equippedSpellIds = new int[this.playerCount][];
                 var17_int = 0;
                 while (var17_int < this.playerCount) {
                   var18Lifetime1 = param11[var17_int].length;
@@ -7171,15 +7171,15 @@ final class Battlefield {
                     var18Lifetime1 = 5;
                   }
                   array$2 = new int[var18Lifetime1];
-                  this.field_B[var17_int] = array$2;
+                  this.equippedSpellIds[var17_int] = array$2;
                   var19 = 0;
                   while (param11[var17_int].length > var19) {
-                    this.field_B[var17_int][var19] = param11[var17_int][var19];
+                    this.equippedSpellIds[var17_int][var19] = param11[var17_int][var19];
                     var19++;
                   }
                   var19Lifetime2 = param11[var17_int].length;
                   while (var18Lifetime1 > var19Lifetime2) {
-                    this.field_B[var17_int][var19Lifetime2] = -1;
+                    this.equippedSpellIds[var17_int][var19Lifetime2] = -1;
                     var19Lifetime2++;
                   }
                   var17_int++;
@@ -7190,7 +7190,7 @@ final class Battlefield {
                 }
               }
               if (decompiledFrameCompleted4) {
-                this.field_B = new int[this.playerCount][5];
+                this.equippedSpellIds = new int[this.playerCount][5];
                 var17_int = 0;
                 while (this.playerCount > var17_int) {
                   stackIn_91_0 = 0;
@@ -7200,7 +7200,7 @@ final class Battlefield {
                   }
                   var18Lifetime1 = stackIn_91_0;
                   while (var18Lifetime1 < 5) {
-                    this.field_B[var17_int][var18Lifetime1] = param11[0][var18Lifetime1];
+                    this.equippedSpellIds[var17_int][var18Lifetime1] = param11[0][var18Lifetime1];
                     var18Lifetime1++;
                   }
                   var17_int++;
@@ -7217,14 +7217,14 @@ final class Battlefield {
             }
             boolean decompiledFrameCompleted2 = true;
             if (stackIn_92_0 != stackIn_92_1) {
-              this.field_a = param3;
+              this.godUnitUnlockMasks = param3;
             }
             if (stackIn_92_0 == stackIn_92_1 ||
               var25 != 0) {
-              this.field_a = new int[this.playerCount][];
+              this.godUnitUnlockMasks = new int[this.playerCount][];
               var17_int = 0;
               while (var17_int < this.playerCount) {
-                this.field_a[var17_int] = param3[0];
+                this.godUnitUnlockMasks[var17_int] = param3[0];
                 var17_int++;
                 if (var25 != 0) {
                   decompiledFrameCompleted2 = false;
@@ -7286,17 +7286,17 @@ final class Battlefield {
             }
             if ((decompiledFrameCompleted1) &&
               (var25 != 0)) {
-              this.field_a = new int[this.playerCount][];
+              this.godUnitUnlockMasks = new int[this.playerCount][];
               if (0 <= param4 &&
-                param4 < this.field_a.length) {
-                this.field_a[param4] = param3[0];
+                param4 < this.godUnitUnlockMasks.length) {
+                this.godUnitUnlockMasks[param4] = param3[0];
               }
             }
           } else {
-            this.field_a = new int[this.playerCount][];
+            this.godUnitUnlockMasks = new int[this.playerCount][];
             if (0 <= param4 &&
-              param4 < this.field_a.length) {
-              this.field_a[param4] = param3[0];
+              param4 < this.godUnitUnlockMasks.length) {
+              this.godUnitUnlockMasks[param4] = param3[0];
             }
           }
           var17_int = 0;
@@ -7338,9 +7338,9 @@ final class Battlefield {
                     continue;
                   }
                   if (!this.field_b &&
-                    var17_int != this.localPlayer || (this.field_a[var17_int][4] != 0 ||
-                    0 != this.field_a[var17_int][5] ||
-                    0 != this.field_a[var17_int][6])) {
+                    var17_int != this.localPlayer || (this.godUnitUnlockMasks[var17_int][4] != 0 ||
+                    0 != this.godUnitUnlockMasks[var17_int][5] ||
+                    0 != this.godUnitUnlockMasks[var17_int][6])) {
                     if (!this.field_L) {
                       var18Lifetime2 = 0;
                       while (var18Lifetime2 < 3) {
@@ -7351,8 +7351,8 @@ final class Battlefield {
                     }
                     var18Lifetime2 = 4;
                     var19Lifetime1 = 4;
-                    while (this.field_a[var17_int].length > var19Lifetime1) {
-                      stackIn_145_0 = this.field_a[var17_int][var19Lifetime1];
+                    while (this.godUnitUnlockMasks[var17_int].length > var19Lifetime1) {
+                      stackIn_145_0 = this.godUnitUnlockMasks[var17_int][var19Lifetime1];
                       if (stackIn_145_0 != 0) {
                         var18Lifetime2++;
                       }
@@ -7363,9 +7363,9 @@ final class Battlefield {
                     var19Lifetime1 = 0;
                     stackIn_145_0Lifetime1 = 0;
                     var20Lifetime1 = stackIn_145_0Lifetime1;
-                    while (this.field_a[var17_int].length > var20Lifetime1) {
+                    while (this.godUnitUnlockMasks[var17_int].length > var20Lifetime1) {
                       stackIn_118_0 = 0;
-                      stackIn_118_1 = this.field_a[var17_int][var20Lifetime1];
+                      stackIn_118_1 = this.godUnitUnlockMasks[var17_int][var20Lifetime1];
                       if (stackIn_118_0 != stackIn_118_1) {
                         incrementValue$4 = var19Lifetime1;
                         var19Lifetime1++;
@@ -7492,8 +7492,8 @@ final class Battlefield {
                     var30 = this.campaignMission.campaign.participants[this.campaignMission.participantIds[var18Lifetime2]];
                     var20Lifetime1 = 0;
                     var21Lifetime1Lifetime1 = 1;
-                    while (var21Lifetime1Lifetime1 < this.field_a[var18Lifetime2].length) {
-                      stackIn_204_0 = this.field_a[var18Lifetime2][var21Lifetime1Lifetime1];
+                    while (var21Lifetime1Lifetime1 < this.godUnitUnlockMasks[var18Lifetime2].length) {
+                      stackIn_204_0 = this.godUnitUnlockMasks[var18Lifetime2][var21Lifetime1Lifetime1];
                       if (stackIn_204_0 != 0) {
                         var20Lifetime1++;
                       }
@@ -7505,9 +7505,9 @@ final class Battlefield {
                     stackIn_204_0Lifetime1 = 0;
                     var22Lifetime1 = stackIn_204_0Lifetime1;
                     var23Lifetime1 = 1;
-                    while (var23Lifetime1 < this.field_a[var18Lifetime2].length) {
+                    while (var23Lifetime1 < this.godUnitUnlockMasks[var18Lifetime2].length) {
                       var24 = var30.godFavourLevels[var23Lifetime1 - 1];
-                      stackIn_215_0 = ~this.field_a[var18Lifetime2][var23Lifetime1];
+                      stackIn_215_0 = ~this.godUnitUnlockMasks[var18Lifetime2][var23Lifetime1];
                       stackIn_215_1 = -1;
                       if (stackIn_215_0 == stackIn_215_1) {
                         if (var22Lifetime1 < var24) {

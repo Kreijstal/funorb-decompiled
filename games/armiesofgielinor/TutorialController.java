@@ -212,11 +212,11 @@ final class TutorialController {
                 ts.currentSpellMenu = ih.field_p;
                 wj.field_q = 0;
               }
-              ub.$cfr$intArgs$a$6d836999ad61(123, im.field_v[2]);
+              RadialSummonMenu.$cfr$intArgs$a$6d836999ad61(123, im.field_v[2]);
             }
             if (wg.a(-33, db.a(true, 171), db.a(true, 286), MatchConditionEntry.a(384, (byte) 94), MatchConditionEntry.a(416, (byte) 94))) {
               tg.field_k = 0;
-              ub.$cfr$intArgs$a$6d836999ad61(121, im.field_v[2]);
+              RadialSummonMenu.$cfr$intArgs$a$6d836999ad61(121, im.field_v[2]);
             }
           }
           if (KingBlackDragonEvent.field_A == 0) {
@@ -236,7 +236,7 @@ final class TutorialController {
                       pg.playerProfile.equippedSpellIds[var2_int] > -1) {
                       pg.playerProfile.equippedSpellIds[var2_int] = -1;
                       AttackEvent.b(false);
-                      ub.$cfr$intArgs$a$6d836999ad61(101, MoveAttackRequest.field_v[45]);
+                      RadialSummonMenu.$cfr$intArgs$a$6d836999ad61(101, MoveAttackRequest.field_v[45]);
                     }
                     if (pg.playerProfile.equippedSpellIds[var2_int] > -1) {
                       if (BufferedSocket.field_j >= 2 &&
@@ -257,10 +257,10 @@ final class TutorialController {
                       ih.field_p = ct.spellMenuById[ev.field_d];
                       this.a((byte) 88, ev.field_d, (SpellMenuGroup) null);
                       if (ts.currentSpellMenu != ih.field_p) {
-                        ub.$cfr$intArgs$a$6d836999ad61(127, MoveAttackRequest.field_v[44]);
+                        RadialSummonMenu.$cfr$intArgs$a$6d836999ad61(127, MoveAttackRequest.field_v[44]);
                         return;
                       }
-                      ub.$cfr$intArgs$a$6d836999ad61(31, MoveAttackRequest.field_v[42]);
+                      RadialSummonMenu.$cfr$intArgs$a$6d836999ad61(31, MoveAttackRequest.field_v[42]);
                     }
                     return;
                   }
@@ -279,7 +279,7 @@ final class TutorialController {
               }
               if (wg.a(stackIn_70_0, stackIn_70_1, stackIn_70_2, stackIn_70_3, MatchConditionEntry.a(e.field_b[0].pixelHeight + 19, (byte) 94))) {
                 CipherPacketBuffer.a(true, -9, 1, 0);
-                ub.$cfr$intArgs$a$6d836999ad61(91, im.field_v[2]);
+                RadialSummonMenu.$cfr$intArgs$a$6d836999ad61(91, im.field_v[2]);
                 return;
               }
               if (tg.field_k == 0) {
@@ -292,7 +292,7 @@ final class TutorialController {
                     vl.outgoingPacket.writeShort(true, ev.field_d + 2000);
                     pg.playerProfile.spellQuantities[ev.field_d] = pg.playerProfile.spellQuantities[ev.field_d] + 1;
                     this.a((byte) 48, ev.field_d, (SpellMenuGroup) null);
-                    ub.$cfr$intArgs$a$6d836999ad61(58, im.field_v[2]);
+                    RadialSummonMenu.$cfr$intArgs$a$6d836999ad61(58, im.field_v[2]);
                   }
                   return;
                 }
@@ -303,7 +303,7 @@ final class TutorialController {
                     KingBlackDragonEvent.field_A = -248;
                     ts.currentSpellMenu = ts.currentSpellMenu.parent;
                     this.a((byte) 51, -1, ts.currentSpellMenu);
-                    ub.$cfr$intArgs$a$6d836999ad61(118, MoveAttackRequest.field_v[43]);
+                    RadialSummonMenu.$cfr$intArgs$a$6d836999ad61(118, MoveAttackRequest.field_v[43]);
                     ab.field_a = ev.field_d;
                     ev.field_d = -1;
                   }
@@ -331,7 +331,7 @@ final class TutorialController {
                       wj.field_q = 248;
                       KingBlackDragonEvent.field_A = 248;
                       this.a((byte) 92, -1, ts.currentSpellMenu);
-                      ub.$cfr$intArgs$a$6d836999ad61(79, MoveAttackRequest.field_v[42]);
+                      RadialSummonMenu.$cfr$intArgs$a$6d836999ad61(79, MoveAttackRequest.field_v[42]);
                       ab.field_a = ev.field_d;
                       ev.field_d = -1;
                       return;
@@ -366,8 +366,8 @@ final class TutorialController {
                     wj.field_q = 248;
                     TelepopEvent.field_D = true;
                     this.a((byte) 90, ev.field_d, (SpellMenuGroup) null);
-                    ub.$cfr$intArgs$a$6d836999ad61(113, MoveAttackRequest.field_v[45]);
-                    ub.$cfr$intArgs$a$6d836999ad61(124, im.field_v[12]);
+                    RadialSummonMenu.$cfr$intArgs$a$6d836999ad61(113, MoveAttackRequest.field_v[45]);
+                    RadialSummonMenu.$cfr$intArgs$a$6d836999ad61(124, im.field_v[12]);
                     return;
                   }
                 }
@@ -607,26 +607,26 @@ final class TutorialController {
         var4 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           var2_int = 0;
-          if (eo.field_a == null) {
+          if (BattleUnitRenderer.field_a == null) {
             return;
           }
-          boolean decompiledSharedTail0 = !(158 >= eo.field_a.pixelHeight);
+          boolean decompiledSharedTail0 = !(158 >= BattleUnitRenderer.field_a.pixelHeight);
           if (!decompiledSharedTail0) {
             SoftwareRaster.f(db.a(param0, 589), MatchConditionEntry.a(157, (byte) 94), 14, 156, 1250067);
             mp.field_Jb.g(db.a(param0, 590), MatchConditionEntry.a(158, (byte) 94), 128);
             decompiledSharedTail0 = (var4 != 0);
           }
           if (decompiledSharedTail0) {
-            var2_int = ep.field_o * (-155 + eo.field_a.pixelHeight) / 137;
+            var2_int = ep.field_o * (-155 + BattleUnitRenderer.field_a.pixelHeight) / 137;
             SoftwareRaster.f(db.a(true, 589), MatchConditionEntry.a(157, (byte) 94), 14, 156, 2302755);
             mp.field_Jb.g(db.a(true, 590), MatchConditionEntry.a(158 + ep.field_o, (byte) 94));
           }
           if (!param0) {
             field_b = (String) null;
           }
-          if (eo.field_a != null) {
+          if (BattleUnitRenderer.field_a != null) {
             SoftwareRaster.f(db.a(true, 314), MatchConditionEntry.a(158, (byte) 94), db.a(param0, 606), MatchConditionEntry.a(311, (byte) 94));
-            eo.field_a.g(db.a(true, 326), MatchConditionEntry.a(-var2_int + 154, (byte) 94));
+            BattleUnitRenderer.field_a.g(db.a(true, 326), MatchConditionEntry.a(-var2_int + 154, (byte) 94));
           }
           if (1 == fa.field_j) {
             if (ro.field_ub == 1) {
@@ -812,10 +812,10 @@ final class TutorialController {
         try {
           var2_int = og.field_m;
           if (!(og.field_m >= 0) ||
-            !(og.field_m < jr.field_h.length)) {
+            !(og.field_m < RadialSummonItem.field_h.length)) {
             var2_int = 0;
           }
-          var3 = jr.field_h[var2_int];
+          var3 = RadialSummonItem.field_h[var2_int];
           if (DamageEvent.g(126)) {
             this.b(320);
             return;
@@ -976,8 +976,8 @@ final class TutorialController {
               TelepopEvent.field_D = true;
               ts.currentSpellMenu = param0;
               this.a((byte) 62, ev.field_d, (SpellMenuGroup) null);
-              ub.$cfr$intArgs$a$6d836999ad61(59, MoveAttackRequest.field_v[45]);
-              ub.$cfr$intArgs$a$6d836999ad61(38, im.field_v[12]);
+              RadialSummonMenu.$cfr$intArgs$a$6d836999ad61(59, MoveAttackRequest.field_v[45]);
+              RadialSummonMenu.$cfr$intArgs$a$6d836999ad61(38, im.field_v[12]);
               stackIn_42_0 = -1;
               return stackIn_42_0;
             }
@@ -1028,7 +1028,7 @@ final class TutorialController {
         try {
           var4_int = MoveEvent.tutorialStageItems[this.tutorialStage][param2];
           if (this.selectionState.hasActivationInput((byte) 124)) {
-            ub.$cfr$intArgs$a$6d836999ad61(64, im.field_v[2]);
+            RadialSummonMenu.$cfr$intArgs$a$6d836999ad61(64, im.field_v[2]);
           }
           if (param1 != 0) {
             this.b(false);
@@ -1465,7 +1465,7 @@ final class TutorialController {
                                                                                                                               }
                                                                                                                               if (jt.field_a == 12) {
                                                                                                                                 b.field_n = null;
-                                                                                                                                eo.field_a = null;
+                                                                                                                                BattleUnitRenderer.field_a = null;
                                                                                                                               }
                                                                                                                               TrianglePulse.a(-16147, 50, mp.field_Ob, true);
                                                                                                                               var6 = param0 ? 1 : 0;
@@ -1693,7 +1693,7 @@ final class TutorialController {
                                                                                     }
                                                                                     if (jt.field_a == 12) {
                                                                                       b.field_n = null;
-                                                                                      eo.field_a = null;
+                                                                                      BattleUnitRenderer.field_a = null;
                                                                                     }
                                                                                     var6 = param0 ? 1 : 0;
                                                                                     CipherPacketBuffer.a(var6 != 0, 13, param1 + 1, jt.field_a);
@@ -1711,7 +1711,7 @@ final class TutorialController {
                                                                                     ah.b((byte) 90);
                                                                                   }
                                                                                   if (jt.field_a == 12) {
-                                                                                    eo.field_a = null;
+                                                                                    BattleUnitRenderer.field_a = null;
                                                                                     b.field_n = null;
                                                                                   }
                                                                                   var6 = DualNodeDeque.field_c;
@@ -1837,7 +1837,7 @@ final class TutorialController {
                                                                       uk.field_n <= pn.field_h) {
                                                                       return;
                                                                     }
-                                                                    ub.$cfr$intArgs$a$6d836999ad61(33, im.field_v[0]);
+                                                                    RadialSummonMenu.$cfr$intArgs$a$6d836999ad61(33, im.field_v[0]);
                                                                     pn.field_h = 20 + uk.field_n;
                                                                     if (var9 == 0) {
                                                                       return;
@@ -2348,7 +2348,7 @@ final class TutorialController {
             }
             if (!(-1 < param1) ||
               ArmiesOfGielinor.obfuscationControl) {
-              eo.field_a = null;
+              BattleUnitRenderer.field_a = null;
               return;
             }}
           if (param0 <= 41) {
@@ -2356,8 +2356,8 @@ final class TutorialController {
           }
           var8 = 250;
           var9 = 12;
-          var10 = en.field_E.a(var5, -20 + var8, var9);
-          var11 = nr.field_e.a(var4, var8 - 45 << 1, 0) >> 1;
+          var10 = en.field_E.getParagraphHeight(var5, -20 + var8, var9);
+          var11 = nr.field_e.getParagraphHeight(var4, var8 - 45 << 1, 0) >> 1;
           stackIn_16_0 = var11 + 40 + var10;
           stackIn_16_1 = -12;
           stackIn_16_2 = var9;
@@ -2367,8 +2367,8 @@ final class TutorialController {
             stackIn_17_3 = 0;
           }
           var12 = stackIn_16_0 - (stackIn_16_1 - (stackIn_16_2 + stackIn_17_3));
-          eo.field_a = new RgbSprite(var8, var12);
-          eo.field_a.b();
+          BattleUnitRenderer.field_a = new RgbSprite(var8, var12);
+          BattleUnitRenderer.field_a.b();
           var13 = 200;
           var14 = 16777215;
           var15 = -1;
@@ -2437,7 +2437,7 @@ final class TutorialController {
             ko.field_b > MatchConditionEntry.a(330, (byte) 94) &&
             ko.field_b < MatchConditionEntry.a(414, (byte) 94)) {
             ah.localCoat.setColour(wh.field_a, (AiPlanningStrategy.field_d - db.a(true, 40)) / 21 + 16 * ((ko.field_b - MatchConditionEntry.a(330, (byte) 94)) / 42), (byte) -110);
-            ub.$cfr$intArgs$a$6d836999ad61(62, im.field_v[10]);
+            RadialSummonMenu.$cfr$intArgs$a$6d836999ad61(62, im.field_v[10]);
             return;
           }
           var2_int = fs.a(ko.field_b, 24340, db.a(true, 380), MatchConditionEntry.a(60, (byte) 94), AiPlanningStrategy.field_d, 224, 352);
@@ -2450,12 +2450,12 @@ final class TutorialController {
             stackIn_26_2 = !(BufferedSocket.field_j < 2);
             if (BufferedFile.a(stackIn_25_0, stackIn_25_1, stackIn_26_2, var2_int, -1208926000, BoundedFile.field_e[0])) {
               ah.localCoat.setPart(73, var2_int, wh.field_a);
-              ub.$cfr$intArgs$a$6d836999ad61(121, im.field_v[9]);
+              RadialSummonMenu.$cfr$intArgs$a$6d836999ad61(121, im.field_v[9]);
               if (var5 == 0) {
                 return;
               }
             }
-            ub.$cfr$intArgs$a$6d836999ad61(62, im.field_v[5]);
+            RadialSummonMenu.$cfr$intArgs$a$6d836999ad61(62, im.field_v[5]);
             return;
           }
           if (-3 == var2_int) {
@@ -2482,7 +2482,7 @@ final class TutorialController {
                   kd.field_X = wh.field_a;
                   dg.b((byte) -61);
                 }
-                ub.$cfr$intArgs$a$6d836999ad61(33, im.field_v[2]);
+                RadialSummonMenu.$cfr$intArgs$a$6d836999ad61(33, im.field_v[2]);
                 return;
               }
               var4++;
@@ -2501,7 +2501,7 @@ final class TutorialController {
               dd.field_e = 0;
               dg.b((byte) -61);
             }
-            ub.$cfr$intArgs$a$6d836999ad61(68, im.field_v[2]);
+            RadialSummonMenu.$cfr$intArgs$a$6d836999ad61(68, im.field_v[2]);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -2877,7 +2877,7 @@ final class TutorialController {
           var10 = var10 + rs.field_n.field_H;
           var10 = var10 + rs.field_n.field_H;
           var11 = new String[16];
-          var12 = eu.field_d;
+          var12 = UnitCycler.field_d;
           if (!cg.field_m[var6] ||
             var8 != 0) {
             var12 = oi.field_a[var6];
@@ -3065,9 +3065,9 @@ final class TutorialController {
           var10 = 17 % ((44 - param4) / 54);
           var11 = "<br>" + param3;
           var12 = "<br>" + param0;
-          var13 = en.field_E.a(param5, var7_int, var8);
+          var13 = en.field_E.getParagraphHeight(param5, var7_int, var8);
           if (null != param3) {
-            stackIn_12_0 = en.field_E.a(var11, var7_int, var8);
+            stackIn_12_0 = en.field_E.getParagraphHeight(var11, var7_int, var8);
           } else {
             stackIn_12_0 = 0;
           }
@@ -3075,12 +3075,12 @@ final class TutorialController {
           if (param0 == null) {
             stackIn_16_0 = 0;
           } else {
-            stackIn_16_0 = en.field_E.a(var12, var7_int, var8);
+            stackIn_16_0 = en.field_E.getParagraphHeight(var12, var7_int, var8);
           }
           var15 = stackIn_16_0;
           var16 = var9 + var14 + (var13 + var15 + 30);
-          eo.field_a = new RgbSprite(var7_int, var16);
-          eo.field_a.b();
+          BattleUnitRenderer.field_a = new RgbSprite(var7_int, var16);
+          BattleUnitRenderer.field_a.b();
           var17 = 200;
           var18 = 16777215;
           var19 = -1;
@@ -3302,7 +3302,7 @@ final class TutorialController {
           if (this.tutorialStage == 26 ||
             this.tutorialStage == 27 ||
             this.tutorialStage == 28) {
-            sj.field_a = null;
+            TurnTimerDial.field_a = null;
           }
           if (this.tutorialStage == 6) {
             wp.field_z = null;
@@ -3384,11 +3384,11 @@ final class TutorialController {
               }
               if (this.tutorialStage == 25 &&
                 itemIndex > -1) {
-                var3_int = var3_int + (nr.field_e.a(vd.field_a, 500, 0) >> 1);
+                var3_int = var3_int + (nr.field_e.getParagraphHeight(vd.field_a, 500, 0) >> 1);
               }
               if (19 == this.tutorialStage &&
                 -1 < itemIndex) {
-                var3_int = var3_int + (nr.field_e.a(mu.field_e, 500, 0) >> 1);
+                var3_int = var3_int + (nr.field_e.getParagraphHeight(mu.field_e, 500, 0) >> 1);
               }
               if (this.tutorialStage != 0) {
                 stackIn_85_0 = var3_int + itemIndex * MoveEvent.tutorialLayout.getItemSpacing(this.tutorialStage, (byte) -29);
@@ -3436,10 +3436,10 @@ final class TutorialController {
         try {
           var2_int = og.field_m;
           if (!(0 <= og.field_m) ||
-            !(og.field_m < jr.field_h.length)) {
+            !(og.field_m < RadialSummonItem.field_h.length)) {
             var2_int = 0;
           }
-          var3 = jr.field_h[var2_int];
+          var3 = RadialSummonItem.field_h[var2_int];
           if (DamageEvent.g(123)) {
             this.b(320);
             return;
@@ -3464,7 +3464,7 @@ final class TutorialController {
           } else {
             var4 = 0;
           }
-          if (null == sj.field_a) {
+          if (null == TurnTimerDial.field_a) {
             boolean decompiledFrameRemainder2 = true;
             var5 = -1;
             if (this.tutorialStage == 26) {
@@ -3483,7 +3483,7 @@ final class TutorialController {
                 var5 = 1;
               }
             }
-            sj.field_a = DeployAction.a(34, var5, 3, 10, 1);
+            TurnTimerDial.field_a = DeployAction.a(34, var5, 3, 10, 1);
           }
           boolean decompiledFrameRemainder1 = true;
           boolean decompiledFrameCompleted0 = true;
@@ -3492,15 +3492,15 @@ final class TutorialController {
           var6 = field_e;
           fe.c(bj.field_o, db.a(true, var3[4]), MatchConditionEntry.a(var5Lifetime1, (byte) 94), field_e, true);
           var5Lifetime1 = var5Lifetime1 + (8 + rs.field_n.field_H);
-          if (!sj.field_a.field_o) {
+          if (!TurnTimerDial.field_a.field_o) {
             var7 = fm.field_c;
             decompiledFrameRemainder0 = (var13 != 0);
           }
           if (decompiledFrameRemainder0) {
-            if (sj.field_a.field_s != null) {
+            if (TurnTimerDial.field_a.field_s != null) {
               var7 = ed.field_b;
-              var8_ref_String__ = sj.field_a.field_s[2];
-              var9 = sj.field_a.field_m[2];
+              var8_ref_String__ = TurnTimerDial.field_a.field_s[2];
+              var9 = TurnTimerDial.field_a.field_m[2];
               var10 = 0;
               var11 = 0;
               while (var11 < 10) {
@@ -3953,7 +3953,7 @@ final class TutorialController {
                 vs.field_f = tf.field_k;
                 li.field_q = -1 + var2_int;
                 tf.field_k = 256;
-                ub.$cfr$intArgs$a$6d836999ad61(91, im.field_v[11]);
+                RadialSummonMenu.$cfr$intArgs$a$6d836999ad61(91, im.field_v[11]);
                 vf.field_f = jq.field_F;
                 kq.field_L = 0;
                 jq.field_F = -1;
@@ -4012,7 +4012,7 @@ final class TutorialController {
               } else {
                 this.a((String) null, -1, ve.a((byte) 13, wf.field_q[li.field_q + 1]), (String) null, (byte) -55, GlobalSpell.field_l[li.field_q + 1]);
               }
-              ub.$cfr$intArgs$a$6d836999ad61(100, im.field_v[12]);
+              RadialSummonMenu.$cfr$intArgs$a$6d836999ad61(100, im.field_v[12]);
               return;
             }
           }
@@ -4044,14 +4044,14 @@ final class TutorialController {
                   }
                   break;
                 }
-                ub.$cfr$intArgs$a$6d836999ad61(stackIn_72_0, im.field_v[14]);
+                RadialSummonMenu.$cfr$intArgs$a$6d836999ad61(stackIn_72_0, im.field_v[14]);
                 if ((var8 != 0) && (jq.field_F > -1 &&
                   0 < pg.playerProfile.unitUnlockMasks[li.field_q + 1] &&
                   0 == (pg.playerProfile.unitUnlockMasks[1 + li.field_q] & 1 << jq.field_F) &&
                   pg.playerProfile.getAvailableRunes((byte) 91) >= bw.unitDefinitions[jq.field_F][11])) {
                   vl.outgoingPacket.writeCipheredOpcode(32161, 70);
                   vl.outgoingPacket.writeShort(true, wp.unitUnlockGroups[1 + li.field_q][jq.field_F]);
-                  ub.$cfr$intArgs$a$6d836999ad61(62, im.field_v[14]);
+                  RadialSummonMenu.$cfr$intArgs$a$6d836999ad61(62, im.field_v[14]);
                   pg.playerProfile.unitUnlockMasks[1 + li.field_q] = oe.c(pg.playerProfile.unitUnlockMasks[1 + li.field_q], 1 << jq.field_F);
                 }
               }
@@ -4062,7 +4062,7 @@ final class TutorialController {
                 pg.playerProfile.getAvailableRunes((byte) 91) >= bw.unitDefinitions[jq.field_F][11]) {
                 vl.outgoingPacket.writeCipheredOpcode(32161, 70);
                 vl.outgoingPacket.writeShort(true, wp.unitUnlockGroups[1 + li.field_q][jq.field_F]);
-                ub.$cfr$intArgs$a$6d836999ad61(62, im.field_v[14]);
+                RadialSummonMenu.$cfr$intArgs$a$6d836999ad61(62, im.field_v[14]);
                 pg.playerProfile.unitUnlockMasks[1 + li.field_q] = oe.c(pg.playerProfile.unitUnlockMasks[1 + li.field_q], 1 << jq.field_F);
               }
             }
@@ -4371,10 +4371,10 @@ final class TutorialController {
             this.drawStageItem(true, 56, 5);
           }
           if (!(og.field_m >= 0) ||
-            !(og.field_m < jr.field_h.length)) {
+            !(og.field_m < RadialSummonItem.field_h.length)) {
             var10_int = 0;
           }
-          var11 = jr.field_h[var10_int];
+          var11 = RadialSummonItem.field_h[var10_int];
           var12 = param1 + param5 + param7;
           if (param2 != -1) {
             fe.b(param2 + 1 + ". ", db.a(true, 80), MatchConditionEntry.a(param3, (byte) 94), param0, true);
@@ -4692,7 +4692,7 @@ final class TutorialController {
                   if (li.field_q == 6) {
                     li.field_q = -1;
                   }
-                  ub.$cfr$intArgs$a$6d836999ad61(126, im.field_v[11]);
+                  RadialSummonMenu.$cfr$intArgs$a$6d836999ad61(126, im.field_v[11]);
                   if (var4 == 0) {
                     continue;
                   }
@@ -4707,10 +4707,10 @@ final class TutorialController {
                 }
               } else {
                 ac.field_p = this.b(ko.field_b, AiPlanningStrategy.field_d, 31);
-                this.selectionState.updatePointerSelection(0, this.b(TeleportAction.field_z, iu.field_t, 31), ac.field_p);
+                this.selectionState.updatePointerSelection(0, this.b(TeleportAction.field_z, BattleTutorial.field_t, 31), ac.field_p);
               }
               if (~pn.field_m != ~ac.field_p) {
-                ub.$cfr$intArgs$a$6d836999ad61(90, im.field_v[1]);
+                RadialSummonMenu.$cfr$intArgs$a$6d836999ad61(90, im.field_v[1]);
                 pn.field_m = ac.field_p;
               }
               if (this.selectionState.selectedIndex != -1) {
@@ -4753,7 +4753,7 @@ final class TutorialController {
                   this.tutorialStage != 21) {
                   if (this.tutorialStage == 18) {
                     if (GameplayController.field_J != na.field_F) {
-                      ub.$cfr$intArgs$a$6d836999ad61(37, im.field_v[1]);
+                      RadialSummonMenu.$cfr$intArgs$a$6d836999ad61(37, im.field_v[1]);
                       GameplayController.field_J = na.field_F;
                     }
                     if (KingBlackDragonEvent.field_A > 0) {
@@ -4816,13 +4816,13 @@ final class TutorialController {
                             }
                             if (decompiledFrameRemainder1) {
                               if (stackIn_284_0 != stackIn_284_1) {
-                                ub.$cfr$intArgs$a$6d836999ad61(98, MoveAttackRequest.field_v[44]);
+                                RadialSummonMenu.$cfr$intArgs$a$6d836999ad61(98, MoveAttackRequest.field_v[44]);
                                 if (var4 == 0) {
                                   break;
                                 }
                               }
                               ih.field_p = null;
-                              ub.$cfr$intArgs$a$6d836999ad61(83, MoveAttackRequest.field_v[42]);
+                              RadialSummonMenu.$cfr$intArgs$a$6d836999ad61(83, MoveAttackRequest.field_v[42]);
                               if (var4 == 0) {
                                 break;
                               }
@@ -4830,7 +4830,7 @@ final class TutorialController {
                             vu.field_O = ts.currentSpellMenu;
                             ts.currentSpellMenu = ts.currentSpellMenu.parent;
                             KingBlackDragonEvent.field_A = -240;
-                            ub.$cfr$intArgs$a$6d836999ad61(41, MoveAttackRequest.field_v[45]);
+                            RadialSummonMenu.$cfr$intArgs$a$6d836999ad61(41, MoveAttackRequest.field_v[45]);
                             break;
                           }
                         }
@@ -4852,7 +4852,7 @@ final class TutorialController {
                       if ((decompiledFrameRemainder3) &&
                         (decompiledFrameRemainder3 = (this.tutorialStage == 13))) {
                         if (na.field_F != GameplayController.field_J) {
-                          ub.$cfr$intArgs$a$6d836999ad61(65, im.field_v[1]);
+                          RadialSummonMenu.$cfr$intArgs$a$6d836999ad61(65, im.field_v[1]);
                           GameplayController.field_J = na.field_F;
                         }
                         ul.a((byte) -102, 224, db.a(true, 380), ro.field_ub, ko.field_b, 352, AiPlanningStrategy.field_d, MatchConditionEntry.a(60, (byte) 94));
@@ -4877,7 +4877,7 @@ final class TutorialController {
                         GlobalSpell.field_h = GlobalSpell.field_h - var3;
                       }
                       if (GameplayController.field_J != na.field_F) {
-                        ub.$cfr$intArgs$a$6d836999ad61(116, im.field_v[1]);
+                        RadialSummonMenu.$cfr$intArgs$a$6d836999ad61(116, im.field_v[1]);
                         GameplayController.field_J = na.field_F;
                       }
                       decompiledFrameRemainder3 = (var4 != 0);
@@ -4909,7 +4909,7 @@ final class TutorialController {
           if (2 == this.tutorialStage &&
             null != rd.field_j &&
             rd.field_j.field_lb &&
-            0 <= rd.field_j.field_q &&
+            0 <= rd.field_j.controlledPlayerId &&
             rd.field_j.battlefield != null &&
             rd.field_j.battlefield.field_X) {
             CipherPacketBuffer.a(false, 3, 1, 0);
@@ -5367,8 +5367,8 @@ final class TutorialController {
         try {
           lm.field_c = this.d(AiPlanningStrategy.field_d, -1, ko.field_b);
           if (1 == DeployEvent.field_A) {
-            ub.$cfr$intArgs$a$6d836999ad61(94, im.field_v[2]);
-            var2_int = this.d(iu.field_t, -1, TeleportAction.field_z);
+            RadialSummonMenu.$cfr$intArgs$a$6d836999ad61(94, im.field_v[2]);
+            var2_int = this.d(BattleTutorial.field_t, -1, TeleportAction.field_z);
             if (vs.field_a == var2_int) {
               vs.field_a = -1;
               if ((ArmiesOfGielinor.obfuscationControl) &&
@@ -5456,10 +5456,10 @@ final class TutorialController {
         try {
           var7_int = og.field_m;
           if (!(0 <= og.field_m) ||
-            !(jr.field_h.length > og.field_m)) {
+            !(RadialSummonItem.field_h.length > og.field_m)) {
             var7_int = 0;
           }
-          var8 = jr.field_h[var7_int];
+          var8 = RadialSummonItem.field_h[var7_int];
           if (param0 != 63) {
             field_c = (int[]) null;
           }
@@ -5693,7 +5693,7 @@ final class TutorialController {
             }
             if (decompiledFrameRemainder0) {
               var2_int = MoveEvent.tutorialLayout.getTopY(this.tutorialStage, (byte) -117);
-              var3 = MoveEvent.tutorialLayout.getBottomY(-6, this.tutorialStage) - MoveEvent.tutorialLayout.getTopY(this.tutorialStage, (byte) -119) - (-MoveEvent.tutorialLayout.getItemSpacing(this.tutorialStage, (byte) -66) - (nr.field_e.a(vd.field_a, 500, 0) >> 1));
+              var3 = MoveEvent.tutorialLayout.getBottomY(-6, this.tutorialStage) - MoveEvent.tutorialLayout.getTopY(this.tutorialStage, (byte) -119) - (-MoveEvent.tutorialLayout.getItemSpacing(this.tutorialStage, (byte) -66) - (nr.field_e.getParagraphHeight(vd.field_a, 500, 0) >> 1));
               fe.b(MoveEvent.tutorialLayout.getLeftX(this.tutorialStage, 29), var2_int - MoveEvent.tutorialLayout.getItemSpacing(this.tutorialStage, (byte) 112), MoveEvent.tutorialLayout.getRightX((byte) 94, this.tutorialStage) - MoveEvent.tutorialLayout.getLeftX(this.tutorialStage, 29), var3, io.field_m, nd.field_b, 0, 128);
               fe.a(vd.field_a, this.getItemLeftX(true, 0) + this.getItemRightX(-1 + this.selectionState.itemCount, -3858) >> 1, var2_int + 20, 250, 16777215, true);
               stackIn_180_0 = wb.field_b[this.tutorialStage];
@@ -5710,7 +5710,7 @@ final class TutorialController {
           }
           if (decompiledFrameRemainder0) {
             var2_intLifetime2 = MoveEvent.tutorialLayout.getTopY(this.tutorialStage, (byte) -124);
-            var3Lifetime1 = MoveEvent.tutorialLayout.getBottomY(-6, this.tutorialStage) - MoveEvent.tutorialLayout.getTopY(this.tutorialStage, (byte) -103) - (-MoveEvent.tutorialLayout.getItemSpacing(this.tutorialStage, (byte) 122) - (nr.field_e.a(mu.field_e, 500, 0) >> 1));
+            var3Lifetime1 = MoveEvent.tutorialLayout.getBottomY(-6, this.tutorialStage) - MoveEvent.tutorialLayout.getTopY(this.tutorialStage, (byte) -103) - (-MoveEvent.tutorialLayout.getItemSpacing(this.tutorialStage, (byte) 122) - (nr.field_e.getParagraphHeight(mu.field_e, 500, 0) >> 1));
             fe.b(MoveEvent.tutorialLayout.getLeftX(this.tutorialStage, 29), -MoveEvent.tutorialLayout.getItemSpacing(this.tutorialStage, (byte) 123) + var2_intLifetime2, MoveEvent.tutorialLayout.getRightX((byte) -61, this.tutorialStage) - MoveEvent.tutorialLayout.getLeftX(this.tutorialStage, 29), var3Lifetime1, io.field_m, nd.field_b, 0, 128);
             stackIn_189_0 = mu.field_e;
             stackIn_190_2 = !(param0);
@@ -5899,7 +5899,7 @@ final class TutorialController {
             }
             if (ml.a(MatchConditionEntry.a(98, (byte) 94), db.a(true, 350 + 55 * var2_int), 22, false)) {
               pg.playerProfile.equippedSpellIds[var2_int] = ev.field_d;
-              ub.$cfr$intArgs$a$6d836999ad61(51, MoveAttackRequest.field_v[44]);
+              RadialSummonMenu.$cfr$intArgs$a$6d836999ad61(51, MoveAttackRequest.field_v[44]);
               AttackEvent.b(false);
               return;
             }

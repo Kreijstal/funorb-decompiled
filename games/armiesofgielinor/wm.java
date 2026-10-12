@@ -137,10 +137,10 @@ final class wm {
               var10 = af.a(var8_ref_mo, (byte) 103);
               var11 = var10 + BitmapFont.c(var8_ref_mo.field_h);
               var12 = PlayerProfile.a(var8_ref_mo, -5);
-              var8_ref_mo.field_u = new je(0L, uf.field_i, var11);
-              var8_ref_mo.field_u.field_T = (uf.field_i.field_T >> 1 & 8355711) + (var12 - ((var12 & 16711423) >> 1));
+              var8_ref_mo.field_u = new je(0L, SpellConfirmationDialog.field_i, var11);
+              var8_ref_mo.field_u.field_T = (SpellConfirmationDialog.field_i.field_T >> 1 & 8355711) + (var12 - ((var12 & 16711423) >> 1));
               var8_ref_mo.field_u.field_Z = IntrusiveNode.field_e;
-              var8_ref_mo.field_u.field_W = (uf.field_i.field_W >> 1 & 8355711) + var12 - (8355711 & var12 >> 1);
+              var8_ref_mo.field_u.field_W = (SpellConfirmationDialog.field_i.field_W >> 1 & 8355711) + var12 - (8355711 & var12 >> 1);
               var6 = var6 + param0;
               var8_ref_mo.field_u.field_N = var12;
             }
@@ -179,7 +179,7 @@ final class wm {
             cu.field_c = true;
           }
           if (hf.field_c) {
-            if (null == eu.field_g) {
+            if (null == UnitCycler.field_g) {
               var9Lifetime1 = -vq.field_a.field_Jb.field_nb - (vq.field_a.field_Jb.field_ob - vq.field_a.field_Nb.field_ob);
               if (cu.field_c) {
                 vq.field_a.field_Jb.field_db = var9Lifetime1 - vq.field_a.field_Jb.field_ab;
@@ -212,7 +212,7 @@ final class wm {
           cu.field_c = true;
         }
         if (hf.field_c) {
-          if (null == eu.field_g) {
+          if (null == UnitCycler.field_g) {
             var9Lifetime2 = -vq.field_a.field_Jb.field_nb - (vq.field_a.field_Jb.field_ob - vq.field_a.field_Nb.field_ob);
             if (!cu.field_c) {
               vq.field_a.a(param0, true, 2 * param0 * param3, false);

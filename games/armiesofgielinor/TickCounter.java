@@ -1435,7 +1435,7 @@ final class TickCounter {
                 }
                 var2 = fk.a(false, "ACTION_PORTAL");
                 if (var2 != null) {
-                  uf.field_g = uu.a(var2, (byte) 88);
+                  SpellConfirmationDialog.field_g = uu.a(var2, (byte) 88);
                 }
                 var2 = fk.a(false, "ACTION_SPHINX");
                 if (null != var2) {
@@ -1467,7 +1467,7 @@ final class TickCounter {
                 }
                 var2 = fk.a(false, "ACTION_SUMMON");
                 if (null != var2) {
-                  ub.field_a = uu.a(var2, (byte) 45);
+                  RadialSummonMenu.field_a = uu.a(var2, (byte) 45);
                 }
                 var2 = fk.a(false, "ACTION_TIRED");
                 if (null != var2) {
@@ -5031,7 +5031,7 @@ final class TickCounter {
                 }
                 var2 = fk.a(false, "TERROR_NOTMYTURN");
                 if (null != var2) {
-                  sj.field_g = uu.a(var2, (byte) 36);
+                  TurnTimerDial.field_g = uu.a(var2, (byte) 36);
                 }
                 var2 = fk.a(false, "TERROR_NOTYET");
                 if (var2 != null) {
@@ -5201,7 +5201,7 @@ final class TickCounter {
                 }
                 var2 = fk.a(false, "TERROR_POISONWEAPON");
                 if (null != var2) {
-                  iu.field_r = uu.a(var2, (byte) -122);
+                  BattleTutorial.field_r = uu.a(var2, (byte) -122);
                 }
                 var2 = fk.a(false, "TERROR_POISONED");
                 if (var2 != null) {
@@ -5213,142 +5213,142 @@ final class TickCounter {
                 }
                 var2 = fk.a(false, "TRT_TEXT,0");
                 if (var2 != null) {
-                  r.field_E[0] = uu.a(var2, (byte) -114);
+                  r.equipmentTutorialMessages[0] = uu.a(var2, (byte) -114);
                 }
                 var2 = fk.a(false, "TRT_TEXT,1");
                 if (null != var2) {
-                  r.field_E[1] = uu.a(var2, (byte) -97);
+                  r.equipmentTutorialMessages[1] = uu.a(var2, (byte) -97);
                 }
                 var2 = fk.a(false, "TRT_TEXT,2");
                 if (null != var2) {
-                  r.field_E[2] = uu.a(var2, (byte) -124);
+                  r.equipmentTutorialMessages[2] = uu.a(var2, (byte) -124);
                 }
                 var2 = fk.a(false, "TRT_TEXT,3");
                 if (var2 != null) {
-                  r.field_E[3] = uu.a(var2, (byte) -113);
+                  r.equipmentTutorialMessages[3] = uu.a(var2, (byte) -113);
                 }
                 var2 = fk.a(false, "TRT_TEXT,4");
                 if (null != var2) {
-                  r.field_E[4] = uu.a(var2, (byte) -105);
+                  r.equipmentTutorialMessages[4] = uu.a(var2, (byte) -105);
                 }
                 var2 = fk.a(false, "TRT_TEXT,5");
                 if (var2 != null) {
-                  r.field_E[5] = uu.a(var2, (byte) 101);
+                  r.equipmentTutorialMessages[5] = uu.a(var2, (byte) 101);
                 }
                 var2 = fk.a(false, "TRT_TEXT,6");
                 if (null != var2) {
-                  r.field_E[6] = uu.a(var2, (byte) -113);
+                  r.equipmentTutorialMessages[6] = uu.a(var2, (byte) -113);
                 }
                 if (param1 != 10207) {
                   finished = true; return;
                 }
                 var2 = fk.a(false, "TRT_TEXT,7");
                 if (var2 != null) {
-                  r.field_E[7] = uu.a(var2, (byte) -118);
+                  r.equipmentTutorialMessages[7] = uu.a(var2, (byte) -118);
                 }
                 var2 = fk.a(false, "TRT_TEXT,8");
                 if (var2 != null) {
-                  r.field_E[8] = uu.a(var2, (byte) 100);
+                  r.equipmentTutorialMessages[8] = uu.a(var2, (byte) 100);
                 }
                 var2 = fk.a(false, "TRT_TEXT,9");
                 if (null != var2) {
-                  r.field_E[9] = uu.a(var2, (byte) -96);
+                  r.equipmentTutorialMessages[9] = uu.a(var2, (byte) -96);
                 }
                 var2 = fk.a(false, "TRT_TEXT,10");
                 if (var2 != null) {
-                  r.field_E[10] = uu.a(var2, (byte) 121);
+                  r.equipmentTutorialMessages[10] = uu.a(var2, (byte) 121);
                 }
                 var2 = fk.a(false, "TRT_TEXT,11");
                 if (null != var2) {
-                  r.field_E[11] = uu.a(var2, (byte) -107);
+                  r.equipmentTutorialMessages[11] = uu.a(var2, (byte) -107);
                 }
                 var2 = fk.a(false, "TRT_TEXT,12");
                 if (null != var2) {
-                  r.field_E[12] = uu.a(var2, (byte) -97);
+                  r.equipmentTutorialMessages[12] = uu.a(var2, (byte) -97);
                 }
                 var2 = fk.a(false, "TRT_TEXT,13");
                 if (var2 != null) {
-                  r.field_E[13] = uu.a(var2, (byte) -107);
+                  r.equipmentTutorialMessages[13] = uu.a(var2, (byte) -107);
                 }
                 var2 = fk.a(false, "TRT_TEXT,14");
                 if (null != var2) {
-                  r.field_E[14] = uu.a(var2, (byte) -124);
+                  r.equipmentTutorialMessages[14] = uu.a(var2, (byte) -124);
                 }
                 var2 = fk.a(false, "TRT_TEXT,15");
                 if (var2 != null) {
-                  r.field_E[15] = uu.a(var2, (byte) -125);
+                  r.equipmentTutorialMessages[15] = uu.a(var2, (byte) -125);
                 }
                 var2 = fk.a(false, "TRT_TEXT,16");
                 if (var2 != null) {
-                  r.field_E[16] = uu.a(var2, (byte) -128);
+                  r.equipmentTutorialMessages[16] = uu.a(var2, (byte) -128);
                 }
                 var2 = fk.a(false, "TRT_TEXT,17");
                 if (var2 != null) {
-                  r.field_E[17] = uu.a(var2, (byte) -94);
+                  r.equipmentTutorialMessages[17] = uu.a(var2, (byte) -94);
                 }
                 var2 = fk.a(false, "TRT_TEXT,18");
                 if (var2 != null) {
-                  r.field_E[18] = uu.a(var2, (byte) -126);
+                  r.equipmentTutorialMessages[18] = uu.a(var2, (byte) -126);
                 }
                 var2 = fk.a(false, "TRT_TEXT,19");
                 if (var2 != null) {
-                  r.field_E[19] = uu.a(var2, (byte) 86);
+                  r.equipmentTutorialMessages[19] = uu.a(var2, (byte) 86);
                 }
                 var2 = fk.a(false, "TRT_TEXT,20");
                 if (var2 != null) {
-                  r.field_E[20] = uu.a(var2, (byte) 16);
+                  r.equipmentTutorialMessages[20] = uu.a(var2, (byte) 16);
                 }
                 var2 = fk.a(false, "TRT_TEXT,21");
                 if (null != var2) {
-                  r.field_E[21] = uu.a(var2, (byte) -108);
+                  r.equipmentTutorialMessages[21] = uu.a(var2, (byte) -108);
                 }
                 var2 = fk.a(false, "TRT_TEXT,22");
                 if (var2 != null) {
-                  r.field_E[22] = uu.a(var2, (byte) 127);
+                  r.equipmentTutorialMessages[22] = uu.a(var2, (byte) 127);
                 }
                 var2 = fk.a(false, "TRT_TEXT,23");
                 if (var2 != null) {
-                  r.field_E[23] = uu.a(var2, (byte) 3);
+                  r.equipmentTutorialMessages[23] = uu.a(var2, (byte) 3);
                 }
                 var2 = fk.a(false, "TRT_TEXT,24");
                 if (null != var2) {
-                  r.field_E[24] = uu.a(var2, (byte) -108);
+                  r.equipmentTutorialMessages[24] = uu.a(var2, (byte) -108);
                 }
                 var2 = fk.a(false, "TRT_TEXT,25");
                 if (var2 != null) {
-                  r.field_E[25] = uu.a(var2, (byte) 102);
+                  r.equipmentTutorialMessages[25] = uu.a(var2, (byte) 102);
                 }
                 var2 = fk.a(false, "TRT_TEXT,26");
                 if (var2 != null) {
-                  r.field_E[26] = uu.a(var2, (byte) -107);
+                  r.equipmentTutorialMessages[26] = uu.a(var2, (byte) -107);
                 }
                 var2 = fk.a(false, "TRT_TEXT,27");
                 if (var2 != null) {
-                  r.field_E[27] = uu.a(var2, (byte) 60);
+                  r.equipmentTutorialMessages[27] = uu.a(var2, (byte) 60);
                 }
                 var2 = fk.a(false, "TRT_TEXT,28");
                 if (var2 != null) {
-                  r.field_E[28] = uu.a(var2, (byte) -127);
+                  r.equipmentTutorialMessages[28] = uu.a(var2, (byte) -127);
                 }
                 var2 = fk.a(false, "TRT_TEXT,29");
                 if (null != var2) {
-                  r.field_E[29] = uu.a(var2, (byte) -120);
+                  r.equipmentTutorialMessages[29] = uu.a(var2, (byte) -120);
                 }
                 var2 = fk.a(false, "TRT_TEXT,30");
                 if (null != var2) {
-                  r.field_E[30] = uu.a(var2, (byte) 88);
+                  r.equipmentTutorialMessages[30] = uu.a(var2, (byte) 88);
                 }
                 var2 = fk.a(false, "TRT_TEXT,31");
                 if (var2 != null) {
-                  r.field_E[31] = uu.a(var2, (byte) -108);
+                  r.equipmentTutorialMessages[31] = uu.a(var2, (byte) -108);
                 }
                 var2 = fk.a(false, "TRT_TEXT,32");
                 if (var2 != null) {
-                  r.field_E[32] = uu.a(var2, (byte) -110);
+                  r.equipmentTutorialMessages[32] = uu.a(var2, (byte) -110);
                 }
                 var2 = fk.a(false, "TRT_TEXT,33");
                 if (var2 != null) {
-                  r.field_E[33] = uu.a(var2, (byte) 95);
+                  r.equipmentTutorialMessages[33] = uu.a(var2, (byte) 95);
                 }
                 var2 = fk.a(false, "trinketcongratulations,0");
                 if (null != var2) {
@@ -5548,7 +5548,7 @@ final class TickCounter {
                 }
                 var2 = fk.a(false, "TRINKET_USE_MESSAGE");
                 if (null != var2) {
-                  jr.field_e = uu.a(var2, (byte) 67);
+                  RadialSummonItem.field_e = uu.a(var2, (byte) 67);
                 }
                 var2 = fk.a(false, "TRINKET_ACCESSORY_CONFIRM");
                 if (var2 != null) {
@@ -5810,7 +5810,7 @@ final class TickCounter {
               var12 != 6 &&
               var12 != 2 &&
               0 != (var11 & 1)) {
-              jr.a(var9_int, param5 ^ 117, param3, ug.field_b, param7);
+              RadialSummonItem.a(var9_int, param5 ^ 117, param3, ug.field_b, param7);
             }
           }
           if (param5 != 0) {

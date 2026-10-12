@@ -347,8 +347,8 @@ final class gs implements kh {
                             /* Inlined CFG state: 17. */
                             {
                                 me.field_c = ba.field_F;
-                                ba.field_F = sj.field_e;
-                                sj.field_e = nm.field_o;
+                                ba.field_F = TurnTimerDial.field_e;
+                                TurnTimerDial.field_e = nm.field_o;
                                 nm.field_o = var4_ref_qu.field_o;
                                 stackIn_18_0 = 1;
                                 statePc = 18;
@@ -462,8 +462,8 @@ final class gs implements kh {
                                         /* Inlined CFG state: 41. */
                                         {
                                             me.field_c = ba.field_F;
-                                            ba.field_F = sj.field_e;
-                                            sj.field_e = nm.field_o;
+                                            ba.field_F = TurnTimerDial.field_e;
+                                            TurnTimerDial.field_e = nm.field_o;
                                             nm.field_o = ByteStorage.field_f;
                                             ByteStorage.field_f = -1;
                                             stackIn_42_0 = 1;

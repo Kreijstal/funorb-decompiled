@@ -178,7 +178,7 @@ class ro extends pt implements he {
         var11 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         var3 = 1;
         if (!cu.field_c &&
-          null == eu.field_g) {
+          null == UnitCycler.field_g) {
           var3 = 0;
         }
         if (0 == rs.field_t &&
@@ -406,7 +406,7 @@ class ro extends pt implements he {
             if (param0 != 4) {
               if (param0 != 6) {
                 if (param0 == 9) {
-                  var6.a(iu.field_b, (qo) (this), (byte) -55);
+                  var6.a(BattleTutorial.field_b, (qo) (this), (byte) -55);
                 }
               } else {
                 var6.a(CombatEvent.field_O, 9, 1);

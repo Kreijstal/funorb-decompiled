@@ -44,7 +44,7 @@ final class RegionAnchor extends IntrusiveNode {
               if (!NetworkResourceRequest.field_C.movementPlanner.field_w) {
                 var6 = NetworkResourceRequest.field_C.movementPlanner.getMovementBudget(27732);
                 if (!NetworkResourceRequest.field_C.selectedUnit.movementSpent) {
-                  if (CipherPacketBuffer.currentBattlefield.currentPlayer != NetworkResourceRequest.field_C.field_q) {
+                  if (CipherPacketBuffer.currentBattlefield.currentPlayer != NetworkResourceRequest.field_C.controlledPlayerId) {
                     if (var6 <= NetworkResourceRequest.field_C.movementPlanner.movementCosts[param2]) {
                       if ((NetworkResourceRequest.field_C.movementPlanner.field_e[param2] & 2) != 0) {
                         var4_int = var5 | 5570560;
@@ -95,7 +95,7 @@ final class RegionAnchor extends IntrusiveNode {
               }
             }
             if (!NetworkResourceRequest.field_C.selectedUnit.movementSpent &&
-              NetworkResourceRequest.field_C.selectedUnit.ownerPlayer == NetworkResourceRequest.field_C.field_q &&
+              NetworkResourceRequest.field_C.selectedUnit.ownerPlayer == NetworkResourceRequest.field_C.controlledPlayerId &&
               !NetworkResourceRequest.field_C.selectedUnit.h(-13494)) {
               var6 = NetworkResourceRequest.field_C.selectedUnit.getMaximumAttackRange(3257);
               var7 = NetworkResourceRequest.field_C.selectedUnit.getMinimumAttackRange((byte) -79);
