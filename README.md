@@ -102,7 +102,11 @@ and synchronization checksums, plus command timing, scheduling, queue routing
 and equal-tick replacement. Packet names and wire fixtures cover bit fields,
 byte order, slices and cipher block boundaries; bounded randomness and intrusive
 hash lookups have independent expectations. Archive/provider roots and versioned
-index decoding now have names and raw/gzip, sparse-ID and retention fixtures. Three dispatcher files remain.
+index decoding now have names and raw/gzip, sparse-ID and retention fixtures. Two dispatcher files remain: BattleTerrain.java and rl.java.
+Explosion.advanceExplosion now uses reconstructed loops and branches from the
+generic decompiler. Its copy certificate and original-edge proof pass, and native
+bytecode/old/new Java agree across 790 scenarios and 2,288 checks. Visual emission
+is suppressed in those fixtures; full collision/rendering remain unverified.
 Particle integration, terrain contact, cyclic reuse and deferred removal now
 have reviewed names and fixtures. Guided projectile launch/coasting is checked;
 8192-unit angle and 16.16 trig helpers now have names and mathematical fixtures.

@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "inputTreeSha256": "2713f45b1bf8186a4a2e4c283f1b1cca876716cb17a00318e3d87ceaa13e5399",
+  "inputTreeSha256": "6478eb5845afc293d37ad893c4eafe6eb3b6d55555de4c0af0c477822e7a4de1",
   "positionUnits": "UTF-16 code units in original source",
   "rules": [
     {
@@ -341,8 +341,8 @@
     },
     {
       "symbol": "B:jb.a(Z)V#0",
-      "originalName": "stateLoop",
-      "to": "scanLoop1",
+      "originalName": "L35",
+      "to": "regionExit1",
       "evidence": "Resolved lexical target and declaration ordinal; transfers are unchanged.",
       "confidence": "structural",
       "renamedSymbol": "B:Explosion.advanceExplosion(Z)V#0"
@@ -6526,12 +6526,12 @@
     {
       "symbol": "B:jb.a(Z)V#0",
       "renamedSymbol": "B:Explosion.advanceExplosion(Z)V#0",
-      "originalName": "stateLoop",
-      "renamedName": "scanLoop1",
+      "originalName": "L35",
+      "renamedName": "regionExit1",
       "declaration": {
         "file": "jb.java",
-        "start": 4721,
-        "end": 4730
+        "start": 19016,
+        "end": 19019
       }
     },
     {
@@ -139784,8 +139784,8 @@
       "renamedName": "stackIn_9_0",
       "declaration": {
         "file": "jb.java",
-        "start": 85755,
-        "end": 85766
+        "start": 31643,
+        "end": 31654
       }
     },
     {
@@ -139795,8 +139795,8 @@
       "renamedName": "stackIn_9_1",
       "declaration": {
         "file": "jb.java",
-        "start": 85797,
-        "end": 85808
+        "start": 31685,
+        "end": 31696
       }
     },
     {
@@ -139806,8 +139806,8 @@
       "renamedName": "stackIn_10_2",
       "declaration": {
         "file": "jb.java",
-        "start": 85832,
-        "end": 85844
+        "start": 31720,
+        "end": 31732
       }
     },
     {
@@ -139817,8 +139817,8 @@
       "renamedName": "stackIn_12_1",
       "declaration": {
         "file": "jb.java",
-        "start": 85875,
-        "end": 85887
+        "start": 31763,
+        "end": 31775
       }
     },
     {
@@ -139828,8 +139828,8 @@
       "renamedName": "stackIn_13_2",
       "declaration": {
         "file": "jb.java",
-        "start": 85911,
-        "end": 85923
+        "start": 31799,
+        "end": 31811
       }
     },
     {
@@ -139839,8 +139839,8 @@
       "renamedName": "stackIn_15_1",
       "declaration": {
         "file": "jb.java",
-        "start": 85954,
-        "end": 85966
+        "start": 31842,
+        "end": 31854
       }
     },
     {
@@ -139850,8 +139850,8 @@
       "renamedName": "stackIn_16_2",
       "declaration": {
         "file": "jb.java",
-        "start": 85990,
-        "end": 86002
+        "start": 31878,
+        "end": 31890
       }
     },
     {
@@ -139861,8 +139861,8 @@
       "renamedName": "decompiledCaughtException",
       "declaration": {
         "file": "jb.java",
-        "start": 86036,
-        "end": 86061
+        "start": 31924,
+        "end": 31949
       }
     },
     {
@@ -139872,8 +139872,8 @@
       "renamedName": "var9",
       "declaration": {
         "file": "jb.java",
-        "start": 86095,
-        "end": 86099
+        "start": 31983,
+        "end": 31987
       }
     },
     {
@@ -139883,8 +139883,8 @@
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
         "file": "jb.java",
-        "start": 86911,
-        "end": 86937
+        "start": 32799,
+        "end": 32825
       }
     },
     {
@@ -140000,507 +140000,430 @@
     {
       "symbol": "L:jb.a(Z)V#10",
       "renamedSymbol": "L:Explosion.advanceExplosion(Z)V#10",
-      "originalName": "stackIn_50_0",
-      "renamedName": "stackIn_50_0",
+      "originalName": "var2",
+      "renamedName": "var2",
       "declaration": {
         "file": "jb.java",
-        "start": 3669,
+        "start": 3677,
         "end": 3681
       }
     },
     {
       "symbol": "L:jb.a(Z)V#11",
       "renamedSymbol": "L:Explosion.advanceExplosion(Z)V#11",
-      "originalName": "stackIn_51_0",
-      "renamedName": "stackIn_51_0",
+      "originalName": "var3",
+      "renamedName": "var3",
       "declaration": {
         "file": "jb.java",
-        "start": 3704,
-        "end": 3716
+        "start": 3699,
+        "end": 3703
       }
     },
     {
       "symbol": "L:jb.a(Z)V#12",
       "renamedSymbol": "L:Explosion.advanceExplosion(Z)V#12",
-      "originalName": "stackIn_52_0",
-      "renamedName": "stackIn_52_0",
+      "originalName": "var4",
+      "renamedName": "var4",
       "declaration": {
         "file": "jb.java",
-        "start": 3739,
-        "end": 3751
+        "start": 3721,
+        "end": 3725
       }
     },
     {
       "symbol": "L:jb.a(Z)V#13",
       "renamedSymbol": "L:Explosion.advanceExplosion(Z)V#13",
-      "originalName": "stackIn_52_1",
-      "renamedName": "stackIn_52_1",
+      "originalName": "var4_ref_jc",
+      "renamedName": "var4_ref_jc",
       "declaration": {
         "file": "jb.java",
-        "start": 3771,
-        "end": 3783
+        "start": 3742,
+        "end": 3753
       }
     },
     {
       "symbol": "L:jb.a(Z)V#14",
       "renamedSymbol": "L:Explosion.advanceExplosion(Z)V#14",
-      "originalName": "stackIn_77_0",
-      "renamedName": "stackIn_77_0",
+      "originalName": "var5_double",
+      "renamedName": "var5_double",
       "declaration": {
         "file": "jb.java",
-        "start": 3801,
-        "end": 3813
+        "start": 3777,
+        "end": 3788
       }
     },
     {
       "symbol": "L:jb.a(Z)V#15",
       "renamedSymbol": "L:Explosion.advanceExplosion(Z)V#15",
-      "originalName": "stackIn_77_1",
-      "renamedName": "stackIn_77_1",
+      "originalName": "var5_ref_wl",
+      "renamedName": "var5_ref_wl",
       "declaration": {
         "file": "jb.java",
-        "start": 3831,
-        "end": 3843
+        "start": 3807,
+        "end": 3818
       }
     },
     {
       "symbol": "L:jb.a(Z)V#16",
       "renamedSymbol": "L:Explosion.advanceExplosion(Z)V#16",
-      "originalName": "stackIn_111_0",
-      "renamedName": "stackIn_111_0",
+      "originalName": "var5",
+      "renamedName": "var5",
       "declaration": {
         "file": "jb.java",
-        "start": 3861,
-        "end": 3874
+        "start": 3839,
+        "end": 3843
       }
     },
     {
       "symbol": "L:jb.a(Z)V#17",
       "renamedSymbol": "L:Explosion.advanceExplosion(Z)V#17",
-      "originalName": "stackIn_112_0",
-      "renamedName": "stackIn_112_0",
+      "originalName": "var6",
+      "renamedName": "var6",
       "declaration": {
         "file": "jb.java",
-        "start": 3892,
-        "end": 3905
+        "start": 3861,
+        "end": 3865
       }
     },
     {
       "symbol": "L:jb.a(Z)V#18",
       "renamedSymbol": "L:Explosion.advanceExplosion(Z)V#18",
-      "originalName": "stackIn_113_0",
-      "renamedName": "stackIn_113_0",
+      "originalName": "var7_ref_mb",
+      "renamedName": "var7_ref_mb",
       "declaration": {
         "file": "jb.java",
-        "start": 3923,
-        "end": 3936
+        "start": 3882,
+        "end": 3893
       }
     },
     {
       "symbol": "L:jb.a(Z)V#19",
       "renamedSymbol": "L:Explosion.advanceExplosion(Z)V#19",
-      "originalName": "stackIn_114_0",
-      "renamedName": "stackIn_114_0",
+      "originalName": "var7_ref",
+      "renamedName": "var7_ref",
       "declaration": {
         "file": "jb.java",
-        "start": 3954,
-        "end": 3967
+        "start": 3917,
+        "end": 3925
       }
     },
     {
       "symbol": "L:jb.a(Z)V#2",
       "renamedSymbol": "L:Explosion.advanceExplosion(Z)V#2",
-      "originalName": "stackIn_4_0",
-      "renamedName": "stackIn_4_0",
+      "originalName": "stackIn_25_0",
+      "renamedName": "stackIn_25_0",
       "declaration": {
         "file": "jb.java",
         "start": 3428,
-        "end": 3439
+        "end": 3440
       }
     },
     {
       "symbol": "L:jb.a(Z)V#20",
       "renamedSymbol": "L:Explosion.advanceExplosion(Z)V#20",
-      "originalName": "stackIn_114_1",
-      "renamedName": "stackIn_114_1",
+      "originalName": "var7_ref_qb",
+      "renamedName": "var7_ref_qb",
       "declaration": {
         "file": "jb.java",
-        "start": 3985,
-        "end": 3998
+        "start": 3945,
+        "end": 3956
       }
     },
     {
       "symbol": "L:jb.a(Z)V#21",
       "renamedSymbol": "L:Explosion.advanceExplosion(Z)V#21",
-      "originalName": "stackIn_266_0",
-      "renamedName": "stackIn_266_0",
+      "originalName": "var7",
+      "renamedName": "var7",
       "declaration": {
         "file": "jb.java",
-        "start": 4016,
-        "end": 4029
+        "start": 3977,
+        "end": 3981
       }
     },
     {
       "symbol": "L:jb.a(Z)V#22",
       "renamedSymbol": "L:Explosion.advanceExplosion(Z)V#22",
-      "originalName": "stackIn_266_1",
-      "renamedName": "stackIn_266_1",
+      "originalName": "var8_double",
+      "renamedName": "var8_double",
       "declaration": {
         "file": "jb.java",
-        "start": 4047,
-        "end": 4060
+        "start": 4002,
+        "end": 4013
       }
     },
     {
       "symbol": "L:jb.a(Z)V#23",
       "renamedSymbol": "L:Explosion.advanceExplosion(Z)V#23",
-      "originalName": "statePc",
-      "renamedName": "statePc",
+      "originalName": "var8_int",
+      "renamedName": "var8_int",
       "declaration": {
         "file": "jb.java",
-        "start": 4078,
-        "end": 4085
+        "start": 4033,
+        "end": 4041
       }
     },
     {
       "symbol": "L:jb.a(Z)V#24",
       "renamedSymbol": "L:Explosion.advanceExplosion(Z)V#24",
-      "originalName": "var2",
-      "renamedName": "var2",
+      "originalName": "var8",
+      "renamedName": "var8",
       "declaration": {
         "file": "jb.java",
-        "start": 4103,
-        "end": 4107
+        "start": 4058,
+        "end": 4062
       }
     },
     {
       "symbol": "L:jb.a(Z)V#25",
       "renamedSymbol": "L:Explosion.advanceExplosion(Z)V#25",
-      "originalName": "var3",
-      "renamedName": "var3",
+      "originalName": "var9",
+      "renamedName": "var9",
       "declaration": {
         "file": "jb.java",
-        "start": 4125,
-        "end": 4129
+        "start": 4083,
+        "end": 4087
       }
     },
     {
       "symbol": "L:jb.a(Z)V#26",
       "renamedSymbol": "L:Explosion.advanceExplosion(Z)V#26",
-      "originalName": "var4",
-      "renamedName": "var4",
+      "originalName": "var10",
+      "renamedName": "var10",
       "declaration": {
         "file": "jb.java",
-        "start": 4147,
-        "end": 4151
+        "start": 4105,
+        "end": 4110
       }
     },
     {
       "symbol": "L:jb.a(Z)V#27",
       "renamedSymbol": "L:Explosion.advanceExplosion(Z)V#27",
-      "originalName": "var4_ref_jc",
-      "renamedName": "var4_ref_jc",
+      "originalName": "var11",
+      "renamedName": "var11",
       "declaration": {
         "file": "jb.java",
-        "start": 4168,
-        "end": 4179
+        "start": 4128,
+        "end": 4133
       }
     },
     {
       "symbol": "L:jb.a(Z)V#28",
       "renamedSymbol": "L:Explosion.advanceExplosion(Z)V#28",
-      "originalName": "var5_double",
-      "renamedName": "var5_double",
+      "originalName": "var12",
+      "renamedName": "var12",
       "declaration": {
         "file": "jb.java",
-        "start": 4203,
-        "end": 4214
+        "start": 4151,
+        "end": 4156
       }
     },
     {
       "symbol": "L:jb.a(Z)V#29",
       "renamedSymbol": "L:Explosion.advanceExplosion(Z)V#29",
-      "originalName": "var5_ref_wl",
-      "renamedName": "var5_ref_wl",
+      "originalName": "var13",
+      "renamedName": "var13",
       "declaration": {
         "file": "jb.java",
-        "start": 4233,
-        "end": 4244
+        "start": 4174,
+        "end": 4179
       }
     },
     {
       "symbol": "L:jb.a(Z)V#3",
       "renamedSymbol": "L:Explosion.advanceExplosion(Z)V#3",
-      "originalName": "stackIn_4_1",
-      "renamedName": "stackIn_4_1",
+      "originalName": "stackIn_25_1",
+      "renamedName": "stackIn_25_1",
       "declaration": {
         "file": "jb.java",
-        "start": 3457,
-        "end": 3468
+        "start": 3458,
+        "end": 3470
       }
     },
     {
       "symbol": "L:jb.a(Z)V#30",
       "renamedSymbol": "L:Explosion.advanceExplosion(Z)V#30",
-      "originalName": "var5",
-      "renamedName": "var5",
+      "originalName": "var14",
+      "renamedName": "var14",
       "declaration": {
         "file": "jb.java",
-        "start": 4265,
-        "end": 4269
+        "start": 4196,
+        "end": 4201
       }
     },
     {
       "symbol": "L:jb.a(Z)V#31",
       "renamedSymbol": "L:Explosion.advanceExplosion(Z)V#31",
-      "originalName": "var6",
-      "renamedName": "var6",
+      "originalName": "var15",
+      "renamedName": "var15",
       "declaration": {
         "file": "jb.java",
-        "start": 4287,
-        "end": 4291
+        "start": 4223,
+        "end": 4228
       }
     },
     {
       "symbol": "L:jb.a(Z)V#32",
       "renamedSymbol": "L:Explosion.advanceExplosion(Z)V#32",
-      "originalName": "var7_ref_mb",
-      "renamedName": "var7_ref_mb",
+      "originalName": "var16",
+      "renamedName": "var16",
       "declaration": {
         "file": "jb.java",
-        "start": 4308,
-        "end": 4319
+        "start": 4248,
+        "end": 4253
       }
     },
     {
       "symbol": "L:jb.a(Z)V#33",
       "renamedSymbol": "L:Explosion.advanceExplosion(Z)V#33",
-      "originalName": "var7_ref",
-      "renamedName": "var7_ref",
+      "originalName": "var17",
+      "renamedName": "var17",
       "declaration": {
         "file": "jb.java",
-        "start": 4343,
-        "end": 4351
+        "start": 4273,
+        "end": 4278
       }
     },
     {
       "symbol": "L:jb.a(Z)V#34",
       "renamedSymbol": "L:Explosion.advanceExplosion(Z)V#34",
-      "originalName": "var7_ref_qb",
-      "renamedName": "var7_ref_qb",
+      "originalName": "stackIn_25_0Lifetime1",
+      "renamedName": "stackIn_25_0Lifetime1",
       "declaration": {
         "file": "jb.java",
-        "start": 4371,
-        "end": 4382
+        "start": 4299,
+        "end": 4320
       }
     },
     {
       "symbol": "L:jb.a(Z)V#35",
       "renamedSymbol": "L:Explosion.advanceExplosion(Z)V#35",
-      "originalName": "var7",
-      "renamedName": "var7",
+      "originalName": "stackIn_25_1Lifetime1",
+      "renamedName": "stackIn_25_1Lifetime1",
       "declaration": {
         "file": "jb.java",
-        "start": 4403,
-        "end": 4407
+        "start": 4334,
+        "end": 4355
       }
     },
     {
       "symbol": "L:jb.a(Z)V#36",
       "renamedSymbol": "L:Explosion.advanceExplosion(Z)V#36",
-      "originalName": "var8_double",
-      "renamedName": "var8_double",
+      "originalName": "var7Lifetime1",
+      "renamedName": "var7Lifetime1",
       "declaration": {
         "file": "jb.java",
-        "start": 4428,
-        "end": 4439
+        "start": 4369,
+        "end": 4382
       }
     },
     {
       "symbol": "L:jb.a(Z)V#37",
       "renamedSymbol": "L:Explosion.advanceExplosion(Z)V#37",
-      "originalName": "var8_int",
-      "renamedName": "var8_int",
+      "originalName": "var8_intLifetime1",
+      "renamedName": "var8_intLifetime1",
       "declaration": {
         "file": "jb.java",
-        "start": 4459,
-        "end": 4467
+        "start": 4396,
+        "end": 4413
       }
     },
     {
       "symbol": "L:jb.a(Z)V#38",
       "renamedSymbol": "L:Explosion.advanceExplosion(Z)V#38",
-      "originalName": "var8",
-      "renamedName": "var8",
+      "originalName": "decompiledFrameCompleted0",
+      "renamedName": "decompiledFrameCompleted0",
       "declaration": {
         "file": "jb.java",
-        "start": 4484,
-        "end": 4488
+        "start": 4582,
+        "end": 4607
       }
     },
     {
       "symbol": "L:jb.a(Z)V#39",
       "renamedSymbol": "L:Explosion.advanceExplosion(Z)V#39",
-      "originalName": "var9",
-      "renamedName": "var9",
+      "originalName": "decompiledFrameCompleted1",
+      "renamedName": "decompiledFrameCompleted1",
       "declaration": {
         "file": "jb.java",
-        "start": 4509,
-        "end": 4513
+        "start": 4634,
+        "end": 4659
       }
     },
     {
       "symbol": "L:jb.a(Z)V#4",
       "renamedSymbol": "L:Explosion.advanceExplosion(Z)V#4",
-      "originalName": "stackIn_19_0",
-      "renamedName": "stackIn_19_0",
+      "originalName": "stackIn_51_0",
+      "renamedName": "stackIn_51_0",
       "declaration": {
         "file": "jb.java",
-        "start": 3486,
-        "end": 3498
+        "start": 3491,
+        "end": 3503
       }
     },
     {
       "symbol": "L:jb.a(Z)V#40",
       "renamedSymbol": "L:Explosion.advanceExplosion(Z)V#40",
-      "originalName": "var10",
-      "renamedName": "var10",
+      "originalName": "decompiledFrameRemainder0",
+      "renamedName": "decompiledFrameRemainder0",
       "declaration": {
         "file": "jb.java",
-        "start": 4531,
-        "end": 4536
-      }
-    },
-    {
-      "symbol": "L:jb.a(Z)V#41",
-      "renamedSymbol": "L:Explosion.advanceExplosion(Z)V#41",
-      "originalName": "var11",
-      "renamedName": "var11",
-      "declaration": {
-        "file": "jb.java",
-        "start": 4554,
-        "end": 4559
-      }
-    },
-    {
-      "symbol": "L:jb.a(Z)V#42",
-      "renamedSymbol": "L:Explosion.advanceExplosion(Z)V#42",
-      "originalName": "var12",
-      "renamedName": "var12",
-      "declaration": {
-        "file": "jb.java",
-        "start": 4577,
-        "end": 4582
-      }
-    },
-    {
-      "symbol": "L:jb.a(Z)V#43",
-      "renamedSymbol": "L:Explosion.advanceExplosion(Z)V#43",
-      "originalName": "var13",
-      "renamedName": "var13",
-      "declaration": {
-        "file": "jb.java",
-        "start": 4600,
-        "end": 4605
-      }
-    },
-    {
-      "symbol": "L:jb.a(Z)V#44",
-      "renamedSymbol": "L:Explosion.advanceExplosion(Z)V#44",
-      "originalName": "var14",
-      "renamedName": "var14",
-      "declaration": {
-        "file": "jb.java",
-        "start": 4622,
-        "end": 4627
-      }
-    },
-    {
-      "symbol": "L:jb.a(Z)V#45",
-      "renamedSymbol": "L:Explosion.advanceExplosion(Z)V#45",
-      "originalName": "var15",
-      "renamedName": "var15",
-      "declaration": {
-        "file": "jb.java",
-        "start": 4649,
-        "end": 4654
-      }
-    },
-    {
-      "symbol": "L:jb.a(Z)V#46",
-      "renamedSymbol": "L:Explosion.advanceExplosion(Z)V#46",
-      "originalName": "var16",
-      "renamedName": "var16",
-      "declaration": {
-        "file": "jb.java",
-        "start": 4674,
-        "end": 4679
-      }
-    },
-    {
-      "symbol": "L:jb.a(Z)V#47",
-      "renamedSymbol": "L:Explosion.advanceExplosion(Z)V#47",
-      "originalName": "var17",
-      "renamedName": "var17",
-      "declaration": {
-        "file": "jb.java",
-        "start": 4699,
-        "end": 4704
+        "start": 23703,
+        "end": 23728
       }
     },
     {
       "symbol": "L:jb.a(Z)V#5",
       "renamedSymbol": "L:Explosion.advanceExplosion(Z)V#5",
-      "originalName": "stackIn_19_1",
-      "renamedName": "stackIn_19_1",
+      "originalName": "stackIn_52_1",
+      "renamedName": "stackIn_52_1",
       "declaration": {
         "file": "jb.java",
-        "start": 3516,
-        "end": 3528
+        "start": 3523,
+        "end": 3535
       }
     },
     {
       "symbol": "L:jb.a(Z)V#6",
       "renamedSymbol": "L:Explosion.advanceExplosion(Z)V#6",
-      "originalName": "stackIn_25_0",
-      "renamedName": "stackIn_25_0",
+      "originalName": "stackIn_111_0",
+      "renamedName": "stackIn_111_0",
       "declaration": {
         "file": "jb.java",
-        "start": 3546,
-        "end": 3558
+        "start": 3553,
+        "end": 3566
       }
     },
     {
       "symbol": "L:jb.a(Z)V#7",
       "renamedSymbol": "L:Explosion.advanceExplosion(Z)V#7",
-      "originalName": "stackIn_25_1",
-      "renamedName": "stackIn_25_1",
+      "originalName": "stackIn_114_1",
+      "renamedName": "stackIn_114_1",
       "declaration": {
         "file": "jb.java",
-        "start": 3576,
-        "end": 3588
+        "start": 3584,
+        "end": 3597
       }
     },
     {
       "symbol": "L:jb.a(Z)V#8",
       "renamedSymbol": "L:Explosion.advanceExplosion(Z)V#8",
-      "originalName": "stackIn_36_0",
-      "renamedName": "stackIn_36_0",
+      "originalName": "stackIn_266_0",
+      "renamedName": "stackIn_266_0",
       "declaration": {
         "file": "jb.java",
-        "start": 3606,
-        "end": 3618
+        "start": 3615,
+        "end": 3628
       }
     },
     {
       "symbol": "L:jb.a(Z)V#9",
       "renamedSymbol": "L:Explosion.advanceExplosion(Z)V#9",
-      "originalName": "stackIn_36_1",
-      "renamedName": "stackIn_36_1",
+      "originalName": "stackIn_266_1",
+      "renamedName": "stackIn_266_1",
       "declaration": {
         "file": "jb.java",
-        "start": 3636,
-        "end": 3648
+        "start": 3646,
+        "end": 3659
       }
     },
     {
@@ -140510,8 +140433,8 @@
       "renamedName": "var1",
       "declaration": {
         "file": "jb.java",
-        "start": 85582,
-        "end": 85586
+        "start": 31470,
+        "end": 31474
       }
     },
     {
@@ -296930,8 +296853,8 @@
       "renamedName": "Explosion",
       "declaration": {
         "file": "jb.java",
-        "start": 85630,
-        "end": 85632
+        "start": 31518,
+        "end": 31520
       }
     },
     {
@@ -296963,8 +296886,8 @@
       "renamedName": "c",
       "declaration": {
         "file": "jb.java",
-        "start": 85526,
-        "end": 85527
+        "start": 31414,
+        "end": 31415
       }
     },
     {
@@ -296985,8 +296908,8 @@
       "renamedName": "h",
       "declaration": {
         "file": "jb.java",
-        "start": 85168,
-        "end": 85169
+        "start": 31056,
+        "end": 31057
       }
     },
     {
@@ -352205,8 +352128,8 @@
       "renamedName": "worldX",
       "declaration": {
         "file": "jb.java",
-        "start": 85637,
-        "end": 85643
+        "start": 31525,
+        "end": 31531
       }
     },
     {
@@ -352216,8 +352139,8 @@
       "renamedName": "worldY",
       "declaration": {
         "file": "jb.java",
-        "start": 85649,
-        "end": 85655
+        "start": 31537,
+        "end": 31543
       }
     },
     {
@@ -352227,8 +352150,8 @@
       "renamedName": "velocityX",
       "declaration": {
         "file": "jb.java",
-        "start": 85661,
-        "end": 85667
+        "start": 31549,
+        "end": 31555
       }
     },
     {
@@ -352238,8 +352161,8 @@
       "renamedName": "velocityY",
       "declaration": {
         "file": "jb.java",
-        "start": 85673,
-        "end": 85679
+        "start": 31561,
+        "end": 31567
       }
     },
     {
@@ -352249,8 +352172,8 @@
       "renamedName": "durationTicks",
       "declaration": {
         "file": "jb.java",
-        "start": 85685,
-        "end": 85691
+        "start": 31573,
+        "end": 31579
       }
     },
     {
@@ -352260,8 +352183,8 @@
       "renamedName": "world",
       "declaration": {
         "file": "jb.java",
-        "start": 85696,
-        "end": 85702
+        "start": 31584,
+        "end": 31590
       }
     },
     {
@@ -352271,8 +352194,8 @@
       "renamedName": "affectedSentinels",
       "declaration": {
         "file": "jb.java",
-        "start": 85709,
-        "end": 85715
+        "start": 31597,
+        "end": 31603
       }
     },
     {
@@ -352282,8 +352205,8 @@
       "renamedName": "projectile",
       "declaration": {
         "file": "jb.java",
-        "start": 85720,
-        "end": 85726
+        "start": 31608,
+        "end": 31614
       }
     },
     {
@@ -352337,8 +352260,8 @@
       "renamedName": "param0",
       "declaration": {
         "file": "jb.java",
-        "start": 85533,
-        "end": 85539
+        "start": 31421,
+        "end": 31427
       }
     },
     {
@@ -352359,8 +352282,8 @@
       "renamedName": "param0",
       "declaration": {
         "file": "jb.java",
-        "start": 85174,
-        "end": 85180
+        "start": 31062,
+        "end": 31068
       }
     },
     {
@@ -474184,8 +474107,8 @@
     {
       "original": "jb.java",
       "renamed": "Explosion.java",
-      "inputSha256": "680e40c9b763bf58d4f240e98d63afb036d7e8cf0a5d77fe1ed88683a64f5cbc",
-      "outputSha256": "f6c7aa143bf14d7b564b15e7249de13b826b1aa846b5ea6399c733200e8d4092",
+      "inputSha256": "98ebc686a7a819881aba71dca7d2142d25e8b9baa157fd80a163142faf43a4c6",
+      "outputSha256": "567fdab3e0bb6ca5a7cc4ff5af1f2209f9e45aac98696cf7edb898b593ac1eda",
       "edits": [
         {
           "start": 50,
@@ -474527,5275 +474450,3587 @@
           "renamed": "obfuscationGuard"
         },
         {
-          "start": 4165,
-          "end": 4167,
+          "start": 3739,
+          "end": 3741,
           "symbol": "C:jc",
           "original": "jc",
           "renamed": "NodeIterator"
         },
         {
-          "start": 4230,
-          "end": 4232,
+          "start": 3804,
+          "end": 3806,
           "symbol": "C:wl",
           "original": "wl",
           "renamed": "Projectile"
         },
         {
-          "start": 4305,
-          "end": 4307,
+          "start": 3879,
+          "end": 3881,
           "symbol": "C:mb",
           "original": "mb",
           "renamed": "Sentinel"
         },
         {
-          "start": 4368,
-          "end": 4370,
+          "start": 3942,
+          "end": 3944,
           "symbol": "C:qb",
           "original": "qb",
           "renamed": "ParticleEffect"
         },
         {
-          "start": 4481,
-          "end": 4483,
+          "start": 4055,
+          "end": 4057,
           "symbol": "C:mb",
           "original": "mb",
           "renamed": "Sentinel"
         },
         {
-          "start": 4619,
-          "end": 4621,
+          "start": 4193,
+          "end": 4195,
           "symbol": "C:jc",
           "original": "jc",
           "renamed": "NodeIterator"
         },
         {
-          "start": 4644,
-          "end": 4646,
+          "start": 4218,
+          "end": 4220,
           "symbol": "C:mb",
           "original": "mb",
           "renamed": "Sentinel"
         },
         {
-          "start": 4671,
-          "end": 4673,
+          "start": 4245,
+          "end": 4247,
           "symbol": "C:ie",
           "original": "ie",
           "renamed": "IsaacRandom"
         },
         {
-          "start": 4696,
-          "end": 4698,
+          "start": 4270,
+          "end": 4272,
           "symbol": "C:mb",
           "original": "mb",
           "renamed": "Sentinel"
         },
         {
-          "start": 4721,
-          "end": 4730,
-          "symbol": "B:jb.a(Z)V#0",
-          "original": "stateLoop",
-          "renamed": "scanLoop1",
-          "kind": "label"
-        },
-        {
-          "start": 4847,
-          "end": 4854,
+          "start": 4446,
+          "end": 4453,
           "symbol": "F:SteelSentinels.field_G:I",
           "original": "field_G",
           "renamed": "obfuscationControl"
         },
         {
-          "start": 4948,
-          "end": 4957,
-          "symbol": "B:jb.a(Z)V#0",
-          "original": "stateLoop",
-          "renamed": "scanLoop1",
-          "kind": "label"
-        },
-        {
-          "start": 5153,
-          "end": 5162,
-          "symbol": "B:jb.a(Z)V#0",
-          "original": "stateLoop",
-          "renamed": "scanLoop1",
-          "kind": "label"
-        },
-        {
-          "start": 5332,
-          "end": 5341,
-          "symbol": "B:jb.a(Z)V#0",
-          "original": "stateLoop",
-          "renamed": "scanLoop1",
-          "kind": "label"
-        },
-        {
-          "start": 5483,
-          "end": 5490,
+          "start": 4729,
+          "end": 4736,
           "symbol": "F:jb.field_M:I",
           "original": "field_M",
           "renamed": "worldY"
         },
         {
-          "start": 5498,
-          "end": 5505,
+          "start": 4744,
+          "end": 4751,
           "symbol": "F:jb.field_M:I",
           "original": "field_M",
           "renamed": "worldY"
         },
         {
-          "start": 5513,
-          "end": 5520,
+          "start": 4759,
+          "end": 4766,
           "symbol": "F:jb.field_T:I",
           "original": "field_T",
           "renamed": "velocityY"
         },
         {
-          "start": 5555,
-          "end": 5562,
+          "start": 4785,
+          "end": 4792,
           "symbol": "F:jb.field_H:I",
           "original": "field_H",
           "renamed": "worldX"
         },
         {
-          "start": 5570,
-          "end": 5577,
+          "start": 4800,
+          "end": 4807,
           "symbol": "F:jb.field_H:I",
           "original": "field_H",
           "renamed": "worldX"
         },
         {
-          "start": 5585,
-          "end": 5592,
+          "start": 4815,
+          "end": 4822,
           "symbol": "F:jb.field_V:I",
           "original": "field_V",
           "renamed": "velocityX"
         },
         {
-          "start": 5644,
-          "end": 5651,
+          "start": 4858,
+          "end": 4865,
           "symbol": "F:jb.field_Z:Lee;",
           "original": "field_Z",
           "renamed": "world"
         },
         {
-          "start": 5652,
-          "end": 5660,
+          "start": 4866,
+          "end": 4874,
           "symbol": "F:ee.field_ab:Lhd;",
           "original": "field_ab",
           "renamed": "terrain"
         },
         {
-          "start": 5661,
-          "end": 5662,
+          "start": 4875,
+          "end": 4876,
           "symbol": "M:hd.a(BI)I",
           "original": "a",
           "renamed": "getGroundHeightAt"
         },
         {
-          "start": 5681,
-          "end": 5688,
+          "start": 4895,
+          "end": 4902,
           "symbol": "F:jb.field_H:I",
           "original": "field_H",
           "renamed": "worldX"
         },
         {
-          "start": 5805,
-          "end": 5812,
+          "start": 4946,
+          "end": 4953,
           "symbol": "F:jb.field_M:I",
           "original": "field_M",
           "renamed": "worldY"
         },
         {
-          "start": 6011,
-          "end": 6020,
-          "symbol": "B:jb.a(Z)V#0",
-          "original": "stateLoop",
-          "renamed": "scanLoop1",
-          "kind": "label"
-        },
-        {
-          "start": 6325,
-          "end": 6334,
-          "symbol": "B:jb.a(Z)V#0",
-          "original": "stateLoop",
-          "renamed": "scanLoop1",
-          "kind": "label"
-        },
-        {
-          "start": 6540,
-          "end": 6547,
+          "start": 5063,
+          "end": 5070,
           "symbol": "F:jb.field_M:I",
           "original": "field_M",
           "renamed": "worldY"
         },
         {
-          "start": 6557,
-          "end": 6564,
+          "start": 5080,
+          "end": 5087,
           "symbol": "F:jb.field_Z:Lee;",
           "original": "field_Z",
           "renamed": "world"
         },
         {
-          "start": 6565,
-          "end": 6573,
+          "start": 5088,
+          "end": 5096,
           "symbol": "F:ee.field_ab:Lhd;",
           "original": "field_ab",
           "renamed": "terrain"
         },
         {
-          "start": 6574,
-          "end": 6575,
+          "start": 5097,
+          "end": 5098,
           "symbol": "M:hd.a(BI)I",
           "original": "a",
           "renamed": "getGroundHeightAt"
         },
         {
-          "start": 6594,
-          "end": 6601,
+          "start": 5117,
+          "end": 5124,
           "symbol": "F:jb.field_H:I",
           "original": "field_H",
           "renamed": "worldX"
         },
         {
-          "start": 6725,
-          "end": 6734,
-          "symbol": "B:jb.a(Z)V#0",
-          "original": "stateLoop",
-          "renamed": "scanLoop1",
-          "kind": "label"
-        },
-        {
-          "start": 7019,
-          "end": 7026,
+          "start": 5195,
+          "end": 5202,
           "symbol": "F:jb.field_Y:I",
           "original": "field_Y",
           "renamed": "ageTicks"
         },
         {
-          "start": 7035,
-          "end": 7042,
+          "start": 5211,
+          "end": 5218,
           "symbol": "F:jb.field_z:I",
           "original": "field_z",
           "renamed": "durationTicks"
         },
         {
-          "start": 7241,
-          "end": 7250,
-          "symbol": "B:jb.a(Z)V#0",
-          "original": "stateLoop",
-          "renamed": "scanLoop1",
-          "kind": "label"
-        },
-        {
-          "start": 7329,
-          "end": 7336,
+          "start": 5281,
+          "end": 5288,
           "symbol": "F:jb.field_Y:I",
           "original": "field_Y",
           "renamed": "ageTicks"
         },
         {
-          "start": 7535,
-          "end": 7544,
-          "symbol": "B:jb.a(Z)V#0",
-          "original": "stateLoop",
-          "renamed": "scanLoop1",
-          "kind": "label"
-        },
-        {
-          "start": 7672,
-          "end": 7681,
-          "symbol": "B:jb.a(Z)V#0",
-          "original": "stateLoop",
-          "renamed": "scanLoop1",
-          "kind": "label"
-        },
-        {
-          "start": 7775,
-          "end": 7782,
+          "start": 5353,
+          "end": 5360,
           "symbol": "F:jb.field_Y:I",
           "original": "field_Y",
           "renamed": "ageTicks"
         },
         {
-          "start": 7790,
-          "end": 7797,
+          "start": 5368,
+          "end": 5375,
           "symbol": "F:jb.field_Y:I",
           "original": "field_Y",
           "renamed": "ageTicks"
         },
         {
-          "start": 7835,
-          "end": 7842,
+          "start": 5407,
+          "end": 5414,
           "symbol": "F:jb.field_Y:I",
           "original": "field_Y",
           "renamed": "ageTicks"
         },
         {
-          "start": 7866,
-          "end": 7873,
+          "start": 5438,
+          "end": 5445,
           "symbol": "F:jb.field_z:I",
           "original": "field_z",
           "renamed": "durationTicks"
         },
         {
-          "start": 7909,
-          "end": 7916,
+          "start": 5475,
+          "end": 5482,
           "symbol": "F:jb.field_I:Lwl;",
           "original": "field_I",
           "renamed": "projectile"
         },
         {
-          "start": 8084,
-          "end": 8093,
-          "symbol": "B:jb.a(Z)V#0",
-          "original": "stateLoop",
-          "renamed": "scanLoop1",
-          "kind": "label"
-        },
-        {
-          "start": 8169,
-          "end": 8176,
+          "start": 5515,
+          "end": 5522,
           "symbol": "F:jb.field_X:[Lmb;",
           "original": "field_X",
           "renamed": "affectedSentinels"
         },
         {
-          "start": 8259,
-          "end": 8268,
-          "symbol": "B:jb.a(Z)V#0",
-          "original": "stateLoop",
-          "renamed": "scanLoop1",
-          "kind": "label"
-        },
-        {
-          "start": 8415,
-          "end": 8422,
+          "start": 5540,
+          "end": 5547,
           "symbol": "F:jb.field_I:Lwl;",
           "original": "field_I",
           "renamed": "projectile"
         },
         {
-          "start": 8423,
-          "end": 8430,
+          "start": 5548,
+          "end": 5555,
           "symbol": "F:wl.field_C:I",
           "original": "field_C",
           "renamed": "effectType"
         },
         {
-          "start": 8526,
-          "end": 8535,
-          "symbol": "B:jb.a(Z)V#0",
-          "original": "stateLoop",
-          "renamed": "scanLoop1",
-          "kind": "label"
-        },
-        {
-          "start": 8714,
-          "end": 8721,
+          "start": 5585,
+          "end": 5592,
           "symbol": "F:jb.field_I:Lwl;",
           "original": "field_I",
           "renamed": "projectile"
         },
         {
-          "start": 8722,
-          "end": 8729,
+          "start": 5593,
+          "end": 5600,
           "symbol": "F:wl.field_y:I",
           "original": "field_y",
           "renamed": "sourceWeaponType"
         },
         {
-          "start": 8974,
-          "end": 8983,
-          "symbol": "B:jb.a(Z)V#0",
-          "original": "stateLoop",
-          "renamed": "scanLoop1",
-          "kind": "label"
-        },
-        {
-          "start": 9172,
-          "end": 9179,
+          "start": 5616,
+          "end": 5623,
           "symbol": "F:jb.field_Y:I",
           "original": "field_Y",
           "renamed": "ageTicks"
         },
         {
-          "start": 9265,
-          "end": 9274,
-          "symbol": "B:jb.a(Z)V#0",
-          "original": "stateLoop",
-          "renamed": "scanLoop1",
-          "kind": "label"
-        },
-        {
-          "start": 9424,
-          "end": 9426,
+          "start": 5666,
+          "end": 5668,
           "symbol": "C:jc",
           "original": "jc",
           "renamed": "NodeIterator"
         },
         {
-          "start": 9432,
-          "end": 9439,
+          "start": 5674,
+          "end": 5681,
           "symbol": "F:jb.field_Z:Lee;",
           "original": "field_Z",
           "renamed": "world"
         },
         {
-          "start": 9440,
-          "end": 9447,
+          "start": 5682,
+          "end": 5689,
           "symbol": "F:ee.field_K:Lul;",
           "original": "field_K",
           "renamed": "sentinels"
         },
         {
-          "start": 9531,
-          "end": 9533,
+          "start": 5749,
+          "end": 5751,
           "symbol": "C:mb",
           "original": "mb",
           "renamed": "Sentinel"
         },
         {
-          "start": 9628,
-          "end": 9637,
-          "symbol": "B:jb.a(Z)V#0",
-          "original": "stateLoop",
-          "renamed": "scanLoop1",
-          "kind": "label"
-        },
-        {
-          "start": 9850,
-          "end": 9859,
-          "symbol": "B:jb.a(Z)V#0",
-          "original": "stateLoop",
-          "renamed": "scanLoop1",
-          "kind": "label"
-        },
-        {
-          "start": 10123,
-          "end": 10130,
+          "start": 5890,
+          "end": 5897,
           "symbol": "F:jb.field_X:[Lmb;",
           "original": "field_X",
           "renamed": "affectedSentinels"
         },
         {
-          "start": 10329,
-          "end": 10338,
-          "symbol": "B:jb.a(Z)V#0",
-          "original": "stateLoop",
-          "renamed": "scanLoop1",
-          "kind": "label"
-        },
-        {
-          "start": 10712,
-          "end": 10719,
+          "start": 5993,
+          "end": 6000,
           "symbol": "F:jb.field_X:[Lmb;",
           "original": "field_X",
           "renamed": "affectedSentinels"
         },
         {
-          "start": 10770,
-          "end": 10777,
+          "start": 6027,
+          "end": 6034,
           "symbol": "F:jb.field_X:[Lmb;",
           "original": "field_X",
           "renamed": "affectedSentinels"
         },
         {
-          "start": 10784,
-          "end": 10786,
+          "start": 6041,
+          "end": 6043,
           "symbol": "C:mb",
           "original": "mb",
           "renamed": "Sentinel"
         },
         {
-          "start": 10792,
-          "end": 10799,
+          "start": 6049,
+          "end": 6056,
           "symbol": "F:jb.field_Z:Lee;",
           "original": "field_Z",
           "renamed": "world"
         },
         {
-          "start": 10800,
-          "end": 10807,
+          "start": 6057,
+          "end": 6064,
           "symbol": "F:ee.field_K:Lul;",
           "original": "field_K",
           "renamed": "sentinels"
         },
         {
-          "start": 10808,
-          "end": 10809,
+          "start": 6065,
+          "end": 6066,
           "symbol": "M:ul.b(B)I",
           "original": "b",
           "renamed": "size"
         },
         {
-          "start": 10889,
-          "end": 10896,
+          "start": 6122,
+          "end": 6129,
           "symbol": "F:jb.field_X:[Lmb;",
           "original": "field_X",
           "renamed": "affectedSentinels"
         },
         {
-          "start": 11019,
-          "end": 11028,
-          "symbol": "B:jb.a(Z)V#0",
-          "original": "stateLoop",
-          "renamed": "scanLoop1",
-          "kind": "label"
-        },
-        {
-          "start": 11220,
-          "end": 11229,
-          "symbol": "B:jb.a(Z)V#0",
-          "original": "stateLoop",
-          "renamed": "scanLoop1",
-          "kind": "label"
-        },
-        {
-          "start": 11451,
-          "end": 11458,
+          "start": 6184,
+          "end": 6191,
           "symbol": "F:jb.field_X:[Lmb;",
           "original": "field_X",
           "renamed": "affectedSentinels"
         },
         {
-          "start": 11543,
-          "end": 11545,
+          "start": 6272,
+          "end": 6274,
           "symbol": "C:mb",
           "original": "mb",
           "renamed": "Sentinel"
         },
         {
-          "start": 11755,
-          "end": 11764,
-          "symbol": "B:jb.a(Z)V#0",
-          "original": "stateLoop",
-          "renamed": "scanLoop1",
-          "kind": "label"
-        },
-        {
-          "start": 11894,
-          "end": 11901,
+          "start": 6436,
+          "end": 6443,
           "symbol": "F:jb.field_X:[Lmb;",
           "original": "field_X",
           "renamed": "affectedSentinels"
         },
         {
-          "start": 11973,
-          "end": 11982,
-          "symbol": "B:jb.a(Z)V#0",
-          "original": "stateLoop",
-          "renamed": "scanLoop1",
-          "kind": "label"
-        },
-        {
-          "start": 12156,
-          "end": 12165,
-          "symbol": "B:jb.a(Z)V#0",
-          "original": "stateLoop",
-          "renamed": "scanLoop1",
-          "kind": "label"
-        },
-        {
-          "start": 12308,
-          "end": 12315,
+          "start": 6594,
+          "end": 6601,
           "symbol": "F:jb.field_X:[Lmb;",
           "original": "field_X",
           "renamed": "affectedSentinels"
         },
         {
-          "start": 12499,
-          "end": 12508,
-          "symbol": "B:jb.a(Z)V#0",
-          "original": "stateLoop",
-          "renamed": "scanLoop1",
-          "kind": "label"
-        },
-        {
-          "start": 12932,
-          "end": 12941,
-          "symbol": "B:jb.a(Z)V#0",
-          "original": "stateLoop",
-          "renamed": "scanLoop1",
-          "kind": "label"
-        },
-        {
-          "start": 13293,
-          "end": 13302,
-          "symbol": "B:jb.a(Z)V#0",
-          "original": "stateLoop",
-          "renamed": "scanLoop1",
-          "kind": "label"
-        },
-        {
-          "start": 13442,
-          "end": 13451,
-          "symbol": "B:jb.a(Z)V#0",
-          "original": "stateLoop",
-          "renamed": "scanLoop1",
-          "kind": "label"
-        },
-        {
-          "start": 13528,
-          "end": 13535,
+          "start": 6773,
+          "end": 6780,
           "symbol": "F:jb.field_Z:Lee;",
           "original": "field_Z",
           "renamed": "world"
         },
         {
-          "start": 13703,
-          "end": 13712,
-          "symbol": "B:jb.a(Z)V#0",
-          "original": "stateLoop",
-          "renamed": "scanLoop1",
-          "kind": "label"
-        },
-        {
-          "start": 13870,
-          "end": 13879,
-          "symbol": "B:jb.a(Z)V#0",
-          "original": "stateLoop",
-          "renamed": "scanLoop1",
-          "kind": "label"
-        },
-        {
-          "start": 14571,
-          "end": 14580,
-          "symbol": "B:jb.a(Z)V#0",
-          "original": "stateLoop",
-          "renamed": "scanLoop1",
-          "kind": "label"
-        },
-        {
-          "start": 14884,
-          "end": 14891,
+          "start": 7137,
+          "end": 7144,
           "symbol": "F:jb.field_Y:I",
           "original": "field_Y",
           "renamed": "ageTicks"
         },
         {
-          "start": 14899,
-          "end": 14906,
+          "start": 7152,
+          "end": 7159,
           "symbol": "F:jb.field_z:I",
           "original": "field_z",
           "renamed": "durationTicks"
         },
         {
-          "start": 14929,
-          "end": 14936,
+          "start": 7182,
+          "end": 7189,
           "symbol": "F:jb.field_Y:I",
           "original": "field_Y",
           "renamed": "ageTicks"
         },
         {
-          "start": 14976,
-          "end": 14983,
+          "start": 7229,
+          "end": 7236,
           "symbol": "F:jb.field_z:I",
           "original": "field_z",
           "renamed": "durationTicks"
         },
         {
-          "start": 15203,
-          "end": 15205,
+          "start": 7432,
+          "end": 7434,
           "symbol": "C:nk",
           "original": "nk",
           "renamed": "ArticulatedPart"
         },
         {
-          "start": 15206,
-          "end": 15207,
+          "start": 7435,
+          "end": 7436,
           "symbol": "M:nk.a(IILee;IIZIIII)Lqb;",
           "original": "a",
           "renamed": "createParticle"
         },
         {
-          "start": 15219,
-          "end": 15226,
+          "start": 7448,
+          "end": 7455,
           "symbol": "F:jb.field_Z:Lee;",
           "original": "field_Z",
           "renamed": "world"
         },
         {
-          "start": 15238,
-          "end": 15245,
+          "start": 7467,
+          "end": 7474,
           "symbol": "F:jb.field_M:I",
           "original": "field_M",
           "renamed": "worldY"
         },
         {
-          "start": 15298,
-          "end": 15305,
+          "start": 7527,
+          "end": 7534,
           "symbol": "F:jb.field_H:I",
           "original": "field_H",
           "renamed": "worldX"
         },
         {
-          "start": 15355,
-          "end": 15362,
+          "start": 7576,
+          "end": 7583,
           "symbol": "F:jb.field_Z:Lee;",
           "original": "field_Z",
           "renamed": "world"
         },
         {
-          "start": 15363,
-          "end": 15370,
+          "start": 7584,
+          "end": 7591,
           "symbol": "F:ee.field_O:Lul;",
           "original": "field_O",
           "renamed": "pendingParticles"
         },
         {
-          "start": 15371,
-          "end": 15372,
+          "start": 7592,
+          "end": 7593,
           "symbol": "M:ul.a(ILck;)V",
           "original": "a",
           "renamed": "addLast"
         },
         {
-          "start": 15433,
-          "end": 15440,
+          "start": 7645,
+          "end": 7652,
           "symbol": "F:jb.field_Y:I",
           "original": "field_Y",
           "renamed": "ageTicks"
         },
         {
-          "start": 15531,
-          "end": 15540,
-          "symbol": "B:jb.a(Z)V#0",
-          "original": "stateLoop",
-          "renamed": "scanLoop1",
-          "kind": "label"
-        },
-        {
-          "start": 15772,
-          "end": 15774,
+          "start": 7726,
+          "end": 7728,
           "symbol": "C:nk",
           "original": "nk",
           "renamed": "ArticulatedPart"
         },
         {
-          "start": 15775,
-          "end": 15776,
+          "start": 7729,
+          "end": 7730,
           "symbol": "M:nk.a(IILee;IIZIIII)Lqb;",
           "original": "a",
           "renamed": "createParticle"
         },
         {
-          "start": 15832,
-          "end": 15839,
+          "start": 7786,
+          "end": 7793,
           "symbol": "F:jb.field_Z:Lee;",
           "original": "field_Z",
           "renamed": "world"
         },
         {
-          "start": 15858,
-          "end": 15865,
+          "start": 7812,
+          "end": 7819,
           "symbol": "F:jb.field_M:I",
           "original": "field_M",
           "renamed": "worldY"
         },
         {
-          "start": 15945,
-          "end": 15952,
+          "start": 7899,
+          "end": 7906,
           "symbol": "F:jb.field_H:I",
           "original": "field_H",
           "renamed": "worldX"
         },
         {
-          "start": 16010,
-          "end": 16017,
+          "start": 7950,
+          "end": 7957,
           "symbol": "F:jb.field_Z:Lee;",
           "original": "field_Z",
           "renamed": "world"
         },
         {
-          "start": 16018,
-          "end": 16025,
+          "start": 7958,
+          "end": 7965,
           "symbol": "F:ee.field_O:Lul;",
           "original": "field_O",
           "renamed": "pendingParticles"
         },
         {
-          "start": 16026,
-          "end": 16027,
+          "start": 7966,
+          "end": 7967,
           "symbol": "M:ul.a(ILck;)V",
           "original": "a",
           "renamed": "addLast"
         },
         {
-          "start": 16140,
-          "end": 16149,
-          "symbol": "B:jb.a(Z)V#0",
-          "original": "stateLoop",
-          "renamed": "scanLoop1",
-          "kind": "label"
-        },
-        {
-          "start": 16758,
-          "end": 16765,
-          "symbol": "F:jb.field_z:I",
-          "original": "field_z",
-          "renamed": "durationTicks"
-        },
-        {
-          "start": 16773,
-          "end": 16780,
-          "symbol": "F:jb.field_Y:I",
-          "original": "field_Y",
-          "renamed": "ageTicks"
-        },
-        {
-          "start": 16803,
-          "end": 16810,
-          "symbol": "F:jb.field_Y:I",
-          "original": "field_Y",
-          "renamed": "ageTicks"
-        },
-        {
-          "start": 16850,
-          "end": 16857,
-          "symbol": "F:jb.field_z:I",
-          "original": "field_z",
-          "renamed": "durationTicks"
-        },
-        {
-          "start": 17119,
-          "end": 17121,
+          "start": 8041,
+          "end": 8043,
           "symbol": "C:nk",
           "original": "nk",
           "renamed": "ArticulatedPart"
         },
         {
-          "start": 17122,
-          "end": 17123,
+          "start": 8044,
+          "end": 8045,
           "symbol": "M:nk.a(IILee;IIZIIII)Lqb;",
           "original": "a",
           "renamed": "createParticle"
         },
         {
-          "start": 17135,
-          "end": 17142,
+          "start": 8066,
+          "end": 8073,
           "symbol": "F:jb.field_Z:Lee;",
           "original": "field_Z",
           "renamed": "world"
         },
         {
-          "start": 17166,
-          "end": 17173,
+          "start": 8084,
+          "end": 8091,
           "symbol": "F:jb.field_M:I",
           "original": "field_M",
           "renamed": "worldY"
         },
         {
-          "start": 17201,
-          "end": 17208,
+          "start": 8136,
+          "end": 8143,
+          "symbol": "F:jb.field_Y:I",
+          "original": "field_Y",
+          "renamed": "ageTicks"
+        },
+        {
+          "start": 8178,
+          "end": 8185,
           "symbol": "F:jb.field_H:I",
           "original": "field_H",
           "renamed": "worldX"
         },
         {
-          "start": 17286,
-          "end": 17293,
+          "start": 8227,
+          "end": 8234,
           "symbol": "F:jb.field_Z:Lee;",
           "original": "field_Z",
           "renamed": "world"
         },
         {
-          "start": 17294,
-          "end": 17301,
+          "start": 8235,
+          "end": 8242,
           "symbol": "F:ee.field_O:Lul;",
           "original": "field_O",
           "renamed": "pendingParticles"
         },
         {
-          "start": 17302,
-          "end": 17303,
+          "start": 8243,
+          "end": 8244,
           "symbol": "M:ul.a(ILck;)V",
           "original": "a",
           "renamed": "addLast"
         },
         {
-          "start": 17487,
-          "end": 17496,
-          "symbol": "B:jb.a(Z)V#0",
-          "original": "stateLoop",
-          "renamed": "scanLoop1",
-          "kind": "label"
-        },
-        {
-          "start": 17989,
-          "end": 17996,
+          "start": 8450,
+          "end": 8457,
           "symbol": "F:jb.field_z:I",
           "original": "field_z",
           "renamed": "durationTicks"
         },
         {
-          "start": 18004,
-          "end": 18011,
+          "start": 8465,
+          "end": 8472,
           "symbol": "F:jb.field_Y:I",
           "original": "field_Y",
           "renamed": "ageTicks"
         },
         {
-          "start": 18024,
-          "end": 18031,
+          "start": 8495,
+          "end": 8502,
           "symbol": "F:jb.field_Y:I",
           "original": "field_Y",
           "renamed": "ageTicks"
         },
         {
-          "start": 18071,
-          "end": 18078,
+          "start": 8542,
+          "end": 8549,
           "symbol": "F:jb.field_z:I",
           "original": "field_z",
           "renamed": "durationTicks"
         },
         {
-          "start": 18364,
-          "end": 18366,
+          "start": 8751,
+          "end": 8753,
           "symbol": "C:nk",
           "original": "nk",
           "renamed": "ArticulatedPart"
         },
         {
-          "start": 18367,
-          "end": 18368,
+          "start": 8754,
+          "end": 8755,
           "symbol": "M:nk.a(IILee;IIZIIII)Lqb;",
           "original": "a",
           "renamed": "createParticle"
         },
         {
-          "start": 18380,
-          "end": 18387,
+          "start": 8767,
+          "end": 8774,
           "symbol": "F:jb.field_Z:Lee;",
           "original": "field_Z",
           "renamed": "world"
         },
         {
-          "start": 18398,
-          "end": 18405,
+          "start": 8798,
+          "end": 8805,
           "symbol": "F:jb.field_M:I",
           "original": "field_M",
           "renamed": "worldY"
         },
         {
-          "start": 18450,
-          "end": 18457,
+          "start": 8833,
+          "end": 8840,
           "symbol": "F:jb.field_H:I",
           "original": "field_H",
           "renamed": "worldX"
         },
         {
-          "start": 18531,
-          "end": 18538,
+          "start": 8898,
+          "end": 8905,
           "symbol": "F:jb.field_Z:Lee;",
           "original": "field_Z",
           "renamed": "world"
         },
         {
-          "start": 18539,
-          "end": 18546,
+          "start": 8906,
+          "end": 8913,
           "symbol": "F:ee.field_O:Lul;",
           "original": "field_O",
           "renamed": "pendingParticles"
         },
         {
-          "start": 18547,
-          "end": 18548,
+          "start": 8914,
+          "end": 8915,
           "symbol": "M:ul.a(ILck;)V",
           "original": "a",
           "renamed": "addLast"
         },
         {
-          "start": 18693,
-          "end": 18702,
-          "symbol": "B:jb.a(Z)V#0",
-          "original": "stateLoop",
-          "renamed": "scanLoop1",
-          "kind": "label"
-        },
-        {
-          "start": 19327,
-          "end": 19336,
-          "symbol": "B:jb.a(Z)V#0",
-          "original": "stateLoop",
-          "renamed": "scanLoop1",
-          "kind": "label"
-        },
-        {
-          "start": 19761,
-          "end": 19768,
-          "symbol": "F:jb.field_z:I",
-          "original": "field_z",
-          "renamed": "durationTicks"
-        },
-        {
-          "start": 19776,
-          "end": 19783,
-          "symbol": "F:jb.field_Y:I",
-          "original": "field_Y",
-          "renamed": "ageTicks"
-        },
-        {
-          "start": 19796,
-          "end": 19803,
-          "symbol": "F:jb.field_Y:I",
-          "original": "field_Y",
-          "renamed": "ageTicks"
-        },
-        {
-          "start": 19843,
-          "end": 19850,
-          "symbol": "F:jb.field_z:I",
-          "original": "field_z",
-          "renamed": "durationTicks"
-        },
-        {
-          "start": 20088,
-          "end": 20090,
+          "start": 9052,
+          "end": 9054,
           "symbol": "C:nk",
           "original": "nk",
           "renamed": "ArticulatedPart"
         },
         {
-          "start": 20091,
-          "end": 20092,
+          "start": 9055,
+          "end": 9056,
           "symbol": "M:nk.a(IILee;IIZIIII)Lqb;",
           "original": "a",
           "renamed": "createParticle"
         },
         {
-          "start": 20104,
-          "end": 20111,
+          "start": 9118,
+          "end": 9125,
           "symbol": "F:jb.field_Z:Lee;",
           "original": "field_Z",
           "renamed": "world"
         },
         {
-          "start": 20123,
-          "end": 20130,
+          "start": 9137,
+          "end": 9144,
           "symbol": "F:jb.field_M:I",
           "original": "field_M",
           "renamed": "worldY"
         },
         {
-          "start": 20174,
-          "end": 20181,
+          "start": 9234,
+          "end": 9241,
           "symbol": "F:jb.field_H:I",
           "original": "field_H",
           "renamed": "worldX"
         },
         {
-          "start": 20239,
-          "end": 20246,
+          "start": 9364,
+          "end": 9371,
+          "symbol": "F:jb.field_I:Lwl;",
+          "original": "field_I",
+          "renamed": "projectile"
+        },
+        {
+          "start": 9372,
+          "end": 9379,
+          "symbol": "F:wl.field_y:I",
+          "original": "field_y",
+          "renamed": "sourceWeaponType"
+        },
+        {
+          "start": 9420,
+          "end": 9427,
+          "symbol": "F:jb.field_I:Lwl;",
+          "original": "field_I",
+          "renamed": "projectile"
+        },
+        {
+          "start": 9428,
+          "end": 9435,
+          "symbol": "F:wl.field_y:I",
+          "original": "field_y",
+          "renamed": "sourceWeaponType"
+        },
+        {
+          "start": 9497,
+          "end": 9504,
+          "symbol": "F:jb.field_H:I",
+          "original": "field_H",
+          "renamed": "worldX"
+        },
+        {
+          "start": 9562,
+          "end": 9569,
           "symbol": "F:jb.field_Z:Lee;",
           "original": "field_Z",
           "renamed": "world"
         },
         {
-          "start": 20247,
-          "end": 20254,
+          "start": 9570,
+          "end": 9577,
           "symbol": "F:ee.field_O:Lul;",
           "original": "field_O",
           "renamed": "pendingParticles"
         },
         {
-          "start": 20255,
-          "end": 20256,
+          "start": 9578,
+          "end": 9579,
           "symbol": "M:ul.a(ILck;)V",
           "original": "a",
           "renamed": "addLast"
         },
         {
-          "start": 20369,
-          "end": 20378,
-          "symbol": "B:jb.a(Z)V#0",
-          "original": "stateLoop",
-          "renamed": "scanLoop1",
-          "kind": "label"
-        },
-        {
-          "start": 20603,
-          "end": 20610,
-          "symbol": "F:jb.field_Y:I",
-          "original": "field_Y",
-          "renamed": "ageTicks"
-        },
-        {
-          "start": 20618,
-          "end": 20625,
+          "start": 9748,
+          "end": 9755,
           "symbol": "F:jb.field_z:I",
           "original": "field_z",
           "renamed": "durationTicks"
         },
         {
-          "start": 20648,
-          "end": 20655,
+          "start": 9763,
+          "end": 9770,
           "symbol": "F:jb.field_Y:I",
           "original": "field_Y",
           "renamed": "ageTicks"
         },
         {
-          "start": 20695,
-          "end": 20702,
+          "start": 9783,
+          "end": 9790,
+          "symbol": "F:jb.field_Y:I",
+          "original": "field_Y",
+          "renamed": "ageTicks"
+        },
+        {
+          "start": 9830,
+          "end": 9837,
           "symbol": "F:jb.field_z:I",
           "original": "field_z",
           "renamed": "durationTicks"
         },
         {
-          "start": 20892,
-          "end": 20894,
+          "start": 10045,
+          "end": 10047,
           "symbol": "C:nk",
           "original": "nk",
           "renamed": "ArticulatedPart"
         },
         {
-          "start": 20895,
-          "end": 20896,
+          "start": 10048,
+          "end": 10049,
           "symbol": "M:nk.a(IILee;IIZIIII)Lqb;",
           "original": "a",
           "renamed": "createParticle"
         },
         {
-          "start": 20908,
-          "end": 20915,
+          "start": 10061,
+          "end": 10068,
           "symbol": "F:jb.field_Z:Lee;",
           "original": "field_Z",
           "renamed": "world"
         },
         {
-          "start": 20927,
-          "end": 20934,
+          "start": 10079,
+          "end": 10086,
           "symbol": "F:jb.field_M:I",
           "original": "field_M",
           "renamed": "worldY"
         },
         {
-          "start": 20971,
-          "end": 20978,
+          "start": 10131,
+          "end": 10138,
           "symbol": "F:jb.field_H:I",
           "original": "field_H",
           "renamed": "worldX"
         },
         {
-          "start": 21028,
-          "end": 21035,
+          "start": 10186,
+          "end": 10193,
           "symbol": "F:jb.field_Z:Lee;",
           "original": "field_Z",
           "renamed": "world"
         },
         {
-          "start": 21036,
-          "end": 21043,
+          "start": 10194,
+          "end": 10201,
           "symbol": "F:ee.field_O:Lul;",
           "original": "field_O",
           "renamed": "pendingParticles"
         },
         {
-          "start": 21044,
-          "end": 21045,
+          "start": 10202,
+          "end": 10203,
           "symbol": "M:ul.a(ILck;)V",
           "original": "a",
           "renamed": "addLast"
         },
         {
-          "start": 21097,
-          "end": 21099,
+          "start": 10433,
+          "end": 10440,
+          "symbol": "F:jb.field_z:I",
+          "original": "field_z",
+          "renamed": "durationTicks"
+        },
+        {
+          "start": 10448,
+          "end": 10455,
+          "symbol": "F:jb.field_Y:I",
+          "original": "field_Y",
+          "renamed": "ageTicks"
+        },
+        {
+          "start": 10468,
+          "end": 10475,
+          "symbol": "F:jb.field_Y:I",
+          "original": "field_Y",
+          "renamed": "ageTicks"
+        },
+        {
+          "start": 10515,
+          "end": 10522,
+          "symbol": "F:jb.field_z:I",
+          "original": "field_z",
+          "renamed": "durationTicks"
+        },
+        {
+          "start": 10742,
+          "end": 10744,
           "symbol": "C:nk",
           "original": "nk",
           "renamed": "ArticulatedPart"
         },
         {
-          "start": 21100,
-          "end": 21101,
+          "start": 10745,
+          "end": 10746,
           "symbol": "M:nk.a(IILee;IIZIIII)Lqb;",
           "original": "a",
           "renamed": "createParticle"
         },
         {
-          "start": 21122,
-          "end": 21129,
+          "start": 10758,
+          "end": 10765,
           "symbol": "F:jb.field_Z:Lee;",
           "original": "field_Z",
           "renamed": "world"
         },
         {
-          "start": 21141,
-          "end": 21148,
+          "start": 10777,
+          "end": 10784,
           "symbol": "F:jb.field_M:I",
           "original": "field_M",
           "renamed": "worldY"
         },
         {
-          "start": 21198,
-          "end": 21205,
+          "start": 10839,
+          "end": 10846,
           "symbol": "F:jb.field_H:I",
           "original": "field_H",
           "renamed": "worldX"
         },
         {
-          "start": 21259,
-          "end": 21266,
+          "start": 10912,
+          "end": 10919,
           "symbol": "F:jb.field_Z:Lee;",
           "original": "field_Z",
           "renamed": "world"
         },
         {
-          "start": 21267,
-          "end": 21274,
+          "start": 10920,
+          "end": 10927,
           "symbol": "F:ee.field_O:Lul;",
           "original": "field_O",
           "renamed": "pendingParticles"
         },
         {
-          "start": 21275,
-          "end": 21276,
+          "start": 10928,
+          "end": 10929,
           "symbol": "M:ul.a(ILck;)V",
           "original": "a",
           "renamed": "addLast"
         },
         {
-          "start": 21357,
-          "end": 21366,
-          "symbol": "B:jb.a(Z)V#0",
-          "original": "stateLoop",
-          "renamed": "scanLoop1",
-          "kind": "label"
-        },
-        {
-          "start": 21610,
-          "end": 21617,
-          "symbol": "F:jb.field_z:I",
-          "original": "field_z",
-          "renamed": "durationTicks"
-        },
-        {
-          "start": 21625,
-          "end": 21632,
-          "symbol": "F:jb.field_Y:I",
-          "original": "field_Y",
-          "renamed": "ageTicks"
-        },
-        {
-          "start": 21645,
-          "end": 21652,
-          "symbol": "F:jb.field_Y:I",
-          "original": "field_Y",
-          "renamed": "ageTicks"
-        },
-        {
-          "start": 21692,
-          "end": 21699,
-          "symbol": "F:jb.field_z:I",
-          "original": "field_z",
-          "renamed": "durationTicks"
-        },
-        {
-          "start": 21913,
-          "end": 21915,
+          "start": 11179,
+          "end": 11181,
           "symbol": "C:nk",
           "original": "nk",
           "renamed": "ArticulatedPart"
         },
         {
-          "start": 21916,
-          "end": 21917,
+          "start": 11182,
+          "end": 11183,
           "symbol": "M:nk.a(IILee;IIZIIII)Lqb;",
           "original": "a",
           "renamed": "createParticle"
         },
         {
-          "start": 21929,
-          "end": 21936,
+          "start": 11195,
+          "end": 11202,
           "symbol": "F:jb.field_Z:Lee;",
           "original": "field_Z",
           "renamed": "world"
         },
         {
-          "start": 21948,
-          "end": 21955,
+          "start": 11213,
+          "end": 11220,
           "symbol": "F:jb.field_M:I",
           "original": "field_M",
           "renamed": "worldY"
         },
         {
-          "start": 22010,
-          "end": 22017,
+          "start": 11257,
+          "end": 11264,
           "symbol": "F:jb.field_H:I",
           "original": "field_H",
           "renamed": "worldX"
         },
         {
-          "start": 22081,
-          "end": 22088,
+          "start": 11324,
+          "end": 11331,
           "symbol": "F:jb.field_Z:Lee;",
           "original": "field_Z",
           "renamed": "world"
         },
         {
-          "start": 22089,
-          "end": 22096,
+          "start": 11332,
+          "end": 11339,
           "symbol": "F:ee.field_O:Lul;",
           "original": "field_O",
           "renamed": "pendingParticles"
         },
         {
-          "start": 22097,
-          "end": 22098,
+          "start": 11340,
+          "end": 11341,
           "symbol": "M:ul.a(ILck;)V",
           "original": "a",
           "renamed": "addLast"
         },
         {
-          "start": 22342,
-          "end": 22344,
+          "start": 11588,
+          "end": 11595,
+          "symbol": "F:jb.field_Y:I",
+          "original": "field_Y",
+          "renamed": "ageTicks"
+        },
+        {
+          "start": 11603,
+          "end": 11610,
+          "symbol": "F:jb.field_z:I",
+          "original": "field_z",
+          "renamed": "durationTicks"
+        },
+        {
+          "start": 11623,
+          "end": 11630,
+          "symbol": "F:jb.field_Y:I",
+          "original": "field_Y",
+          "renamed": "ageTicks"
+        },
+        {
+          "start": 11670,
+          "end": 11677,
+          "symbol": "F:jb.field_z:I",
+          "original": "field_z",
+          "renamed": "durationTicks"
+        },
+        {
+          "start": 11909,
+          "end": 11911,
           "symbol": "C:nk",
           "original": "nk",
           "renamed": "ArticulatedPart"
         },
         {
-          "start": 22345,
-          "end": 22346,
+          "start": 11912,
+          "end": 11913,
           "symbol": "M:nk.a(IILee;IIZIIII)Lqb;",
           "original": "a",
           "renamed": "createParticle"
         },
         {
-          "start": 22358,
-          "end": 22365,
+          "start": 11925,
+          "end": 11932,
           "symbol": "F:jb.field_Z:Lee;",
           "original": "field_Z",
           "renamed": "world"
         },
         {
-          "start": 22376,
-          "end": 22383,
+          "start": 11952,
+          "end": 11959,
           "symbol": "F:jb.field_M:I",
           "original": "field_M",
           "renamed": "worldY"
         },
         {
-          "start": 22420,
-          "end": 22427,
+          "start": 11988,
+          "end": 11995,
           "symbol": "F:jb.field_H:I",
           "original": "field_H",
           "renamed": "worldX"
         },
         {
-          "start": 22485,
-          "end": 22492,
+          "start": 12059,
+          "end": 12066,
           "symbol": "F:jb.field_Z:Lee;",
           "original": "field_Z",
           "renamed": "world"
         },
         {
-          "start": 22493,
-          "end": 22500,
+          "start": 12067,
+          "end": 12074,
           "symbol": "F:ee.field_O:Lul;",
           "original": "field_O",
           "renamed": "pendingParticles"
         },
         {
-          "start": 22501,
-          "end": 22502,
+          "start": 12075,
+          "end": 12076,
           "symbol": "M:ul.a(ILck;)V",
           "original": "a",
           "renamed": "addLast"
         },
         {
-          "start": 22599,
-          "end": 22608,
-          "symbol": "B:jb.a(Z)V#0",
-          "original": "stateLoop",
-          "renamed": "scanLoop1",
-          "kind": "label"
-        },
-        {
-          "start": 23154,
-          "end": 23161,
+          "start": 12258,
+          "end": 12265,
           "symbol": "F:jb.field_Y:I",
           "original": "field_Y",
           "renamed": "ageTicks"
         },
         {
-          "start": 23169,
-          "end": 23176,
+          "start": 12288,
+          "end": 12295,
           "symbol": "F:jb.field_z:I",
           "original": "field_z",
           "renamed": "durationTicks"
         },
         {
-          "start": 23189,
-          "end": 23196,
-          "symbol": "F:jb.field_Y:I",
-          "original": "field_Y",
-          "renamed": "ageTicks"
-        },
-        {
-          "start": 23236,
-          "end": 23243,
-          "symbol": "F:jb.field_z:I",
-          "original": "field_z",
-          "renamed": "durationTicks"
-        },
-        {
-          "start": 23505,
-          "end": 23507,
+          "start": 12548,
+          "end": 12550,
           "symbol": "C:nk",
           "original": "nk",
           "renamed": "ArticulatedPart"
         },
         {
-          "start": 23508,
-          "end": 23509,
+          "start": 12551,
+          "end": 12552,
           "symbol": "M:nk.a(IILee;IIZIIII)Lqb;",
           "original": "a",
           "renamed": "createParticle"
         },
         {
-          "start": 23521,
-          "end": 23528,
+          "start": 12564,
+          "end": 12571,
           "symbol": "F:jb.field_Z:Lee;",
           "original": "field_Z",
           "renamed": "world"
         },
         {
-          "start": 23548,
-          "end": 23555,
+          "start": 12582,
+          "end": 12589,
           "symbol": "F:jb.field_M:I",
           "original": "field_M",
           "renamed": "worldY"
         },
         {
-          "start": 23584,
-          "end": 23591,
+          "start": 12634,
+          "end": 12641,
           "symbol": "F:jb.field_H:I",
           "original": "field_H",
           "renamed": "worldX"
         },
         {
-          "start": 23665,
-          "end": 23672,
+          "start": 12699,
+          "end": 12706,
           "symbol": "F:jb.field_Z:Lee;",
           "original": "field_Z",
           "renamed": "world"
         },
         {
-          "start": 23673,
-          "end": 23680,
+          "start": 12707,
+          "end": 12714,
           "symbol": "F:ee.field_O:Lul;",
           "original": "field_O",
           "renamed": "pendingParticles"
         },
         {
-          "start": 23681,
-          "end": 23682,
+          "start": 12715,
+          "end": 12716,
           "symbol": "M:ul.a(ILck;)V",
           "original": "a",
           "renamed": "addLast"
         },
         {
-          "start": 23811,
-          "end": 23820,
-          "symbol": "B:jb.a(Z)V#0",
-          "original": "stateLoop",
-          "renamed": "scanLoop1",
-          "kind": "label"
-        },
-        {
-          "start": 24296,
-          "end": 24303,
-          "symbol": "F:jb.field_Y:I",
-          "original": "field_Y",
-          "renamed": "ageTicks"
-        },
-        {
-          "start": 24326,
-          "end": 24333,
-          "symbol": "F:jb.field_z:I",
-          "original": "field_z",
-          "renamed": "durationTicks"
-        },
-        {
-          "start": 24634,
-          "end": 24636,
+          "start": 12784,
+          "end": 12786,
           "symbol": "C:nk",
           "original": "nk",
           "renamed": "ArticulatedPart"
         },
         {
-          "start": 24637,
-          "end": 24638,
+          "start": 12787,
+          "end": 12788,
           "symbol": "M:nk.a(IILee;IIZIIII)Lqb;",
           "original": "a",
           "renamed": "createParticle"
         },
         {
-          "start": 24650,
-          "end": 24657,
+          "start": 12800,
+          "end": 12807,
           "symbol": "F:jb.field_Z:Lee;",
           "original": "field_Z",
           "renamed": "world"
         },
         {
-          "start": 24668,
-          "end": 24675,
+          "start": 12828,
+          "end": 12835,
           "symbol": "F:jb.field_M:I",
           "original": "field_M",
           "renamed": "worldY"
         },
         {
-          "start": 24720,
-          "end": 24727,
+          "start": 12864,
+          "end": 12871,
           "symbol": "F:jb.field_H:I",
           "original": "field_H",
           "renamed": "worldX"
         },
         {
-          "start": 24801,
-          "end": 24808,
+          "start": 12937,
+          "end": 12944,
           "symbol": "F:jb.field_Z:Lee;",
           "original": "field_Z",
           "renamed": "world"
         },
         {
-          "start": 24809,
-          "end": 24816,
+          "start": 12945,
+          "end": 12952,
           "symbol": "F:ee.field_O:Lul;",
           "original": "field_O",
           "renamed": "pendingParticles"
         },
         {
-          "start": 24817,
-          "end": 24818,
+          "start": 12953,
+          "end": 12954,
           "symbol": "M:ul.a(ILck;)V",
           "original": "a",
           "renamed": "addLast"
         },
         {
-          "start": 24902,
-          "end": 24904,
+          "start": 13160,
+          "end": 13167,
+          "symbol": "F:jb.field_Y:I",
+          "original": "field_Y",
+          "renamed": "ageTicks"
+        },
+        {
+          "start": 13175,
+          "end": 13182,
+          "symbol": "F:jb.field_z:I",
+          "original": "field_z",
+          "renamed": "durationTicks"
+        },
+        {
+          "start": 13195,
+          "end": 13202,
+          "symbol": "F:jb.field_Y:I",
+          "original": "field_Y",
+          "renamed": "ageTicks"
+        },
+        {
+          "start": 13242,
+          "end": 13249,
+          "symbol": "F:jb.field_z:I",
+          "original": "field_z",
+          "renamed": "durationTicks"
+        },
+        {
+          "start": 13741,
+          "end": 13743,
           "symbol": "C:nk",
           "original": "nk",
           "renamed": "ArticulatedPart"
         },
         {
-          "start": 24905,
-          "end": 24906,
+          "start": 13744,
+          "end": 13745,
           "symbol": "M:nk.a(IILee;IIZIIII)Lqb;",
           "original": "a",
           "renamed": "createParticle"
         },
         {
-          "start": 24918,
-          "end": 24925,
+          "start": 13757,
+          "end": 13764,
           "symbol": "F:jb.field_Z:Lee;",
           "original": "field_Z",
           "renamed": "world"
         },
         {
-          "start": 24946,
-          "end": 24953,
-          "symbol": "F:jb.field_M:I",
-          "original": "field_M",
-          "renamed": "worldY"
-        },
-        {
-          "start": 24982,
-          "end": 24989,
+          "start": 13800,
+          "end": 13807,
           "symbol": "F:jb.field_H:I",
           "original": "field_H",
           "renamed": "worldX"
         },
         {
-          "start": 25071,
-          "end": 25078,
+          "start": 13875,
+          "end": 13882,
           "symbol": "F:jb.field_Z:Lee;",
           "original": "field_Z",
           "renamed": "world"
         },
         {
-          "start": 25079,
-          "end": 25086,
+          "start": 13883,
+          "end": 13890,
           "symbol": "F:ee.field_O:Lul;",
           "original": "field_O",
           "renamed": "pendingParticles"
         },
         {
-          "start": 25087,
-          "end": 25088,
+          "start": 13891,
+          "end": 13892,
           "symbol": "M:ul.a(ILck;)V",
           "original": "a",
           "renamed": "addLast"
         },
         {
-          "start": 25233,
-          "end": 25242,
-          "symbol": "B:jb.a(Z)V#0",
-          "original": "stateLoop",
-          "renamed": "scanLoop1",
-          "kind": "label"
-        },
-        {
-          "start": 25867,
-          "end": 25876,
-          "symbol": "B:jb.a(Z)V#0",
-          "original": "stateLoop",
-          "renamed": "scanLoop1",
-          "kind": "label"
-        },
-        {
-          "start": 26300,
-          "end": 26307,
+          "start": 14133,
+          "end": 14140,
           "symbol": "F:jb.field_Y:I",
           "original": "field_Y",
           "renamed": "ageTicks"
         },
         {
-          "start": 26316,
-          "end": 26323,
+          "start": 14149,
+          "end": 14156,
           "symbol": "F:jb.field_z:I",
           "original": "field_z",
           "renamed": "durationTicks"
         },
         {
-          "start": 26331,
-          "end": 26338,
+          "start": 14164,
+          "end": 14171,
           "symbol": "F:jb.field_Y:I",
           "original": "field_Y",
           "renamed": "ageTicks"
         },
         {
-          "start": 26383,
-          "end": 26390,
+          "start": 14216,
+          "end": 14223,
           "symbol": "F:jb.field_z:I",
           "original": "field_z",
           "renamed": "durationTicks"
         },
         {
-          "start": 26628,
-          "end": 26630,
+          "start": 14449,
+          "end": 14451,
           "symbol": "C:nk",
           "original": "nk",
           "renamed": "ArticulatedPart"
         },
         {
-          "start": 26631,
-          "end": 26632,
+          "start": 14452,
+          "end": 14453,
           "symbol": "M:nk.a(IILee;IIZIIII)Lqb;",
           "original": "a",
           "renamed": "createParticle"
         },
         {
-          "start": 26644,
-          "end": 26651,
+          "start": 14465,
+          "end": 14472,
           "symbol": "F:jb.field_Z:Lee;",
           "original": "field_Z",
           "renamed": "world"
         },
         {
-          "start": 26671,
-          "end": 26678,
+          "start": 14492,
+          "end": 14499,
           "symbol": "F:jb.field_M:I",
           "original": "field_M",
           "renamed": "worldY"
         },
         {
-          "start": 26715,
-          "end": 26722,
+          "start": 14536,
+          "end": 14543,
           "symbol": "F:jb.field_H:I",
           "original": "field_H",
           "renamed": "worldX"
         },
         {
-          "start": 26787,
-          "end": 26794,
+          "start": 14604,
+          "end": 14611,
           "symbol": "F:qb.field_O:I",
           "original": "field_O",
           "renamed": "velocityY"
         },
         {
-          "start": 26870,
-          "end": 26877,
+          "start": 14683,
+          "end": 14690,
           "symbol": "F:jb.field_Z:Lee;",
           "original": "field_Z",
           "renamed": "world"
         },
         {
-          "start": 26878,
-          "end": 26885,
+          "start": 14691,
+          "end": 14698,
           "symbol": "F:ee.field_O:Lul;",
           "original": "field_O",
           "renamed": "pendingParticles"
         },
         {
-          "start": 26886,
-          "end": 26887,
+          "start": 14699,
+          "end": 14700,
           "symbol": "M:ul.a(ILck;)V",
           "original": "a",
           "renamed": "addLast"
         },
         {
-          "start": 27000,
-          "end": 27009,
-          "symbol": "B:jb.a(Z)V#0",
-          "original": "stateLoop",
-          "renamed": "scanLoop1",
-          "kind": "label"
-        },
-        {
-          "start": 27234,
-          "end": 27241,
+          "start": 14889,
+          "end": 14896,
           "symbol": "F:jb.field_Y:I",
           "original": "field_Y",
           "renamed": "ageTicks"
         },
         {
-          "start": 27249,
-          "end": 27256,
+          "start": 14904,
+          "end": 14911,
           "symbol": "F:jb.field_z:I",
           "original": "field_z",
           "renamed": "durationTicks"
         },
         {
-          "start": 27269,
-          "end": 27276,
+          "start": 14934,
+          "end": 14941,
           "symbol": "F:jb.field_Y:I",
           "original": "field_Y",
           "renamed": "ageTicks"
         },
         {
-          "start": 27316,
-          "end": 27323,
+          "start": 14981,
+          "end": 14988,
           "symbol": "F:jb.field_z:I",
           "original": "field_z",
           "renamed": "durationTicks"
         },
         {
-          "start": 27739,
-          "end": 27748,
-          "symbol": "B:jb.a(Z)V#0",
-          "original": "stateLoop",
-          "renamed": "scanLoop1",
-          "kind": "label"
-        },
-        {
-          "start": 28066,
-          "end": 28075,
-          "symbol": "B:jb.a(Z)V#0",
-          "original": "stateLoop",
-          "renamed": "scanLoop1",
-          "kind": "label"
-        },
-        {
-          "start": 28281,
-          "end": 28283,
+          "start": 15202,
+          "end": 15204,
           "symbol": "C:nk",
           "original": "nk",
           "renamed": "ArticulatedPart"
         },
         {
-          "start": 28284,
-          "end": 28285,
+          "start": 15205,
+          "end": 15206,
           "symbol": "M:nk.a(IILee;IIZIIII)Lqb;",
           "original": "a",
           "renamed": "createParticle"
         },
         {
-          "start": 28297,
-          "end": 28304,
+          "start": 15218,
+          "end": 15225,
           "symbol": "F:jb.field_Z:Lee;",
           "original": "field_Z",
           "renamed": "world"
         },
         {
-          "start": 28340,
-          "end": 28347,
-          "symbol": "F:jb.field_H:I",
-          "original": "field_H",
-          "renamed": "worldX"
-        },
-        {
-          "start": 28397,
-          "end": 28404,
-          "symbol": "F:jb.field_Z:Lee;",
-          "original": "field_Z",
-          "renamed": "world"
-        },
-        {
-          "start": 28405,
-          "end": 28412,
-          "symbol": "F:ee.field_O:Lul;",
-          "original": "field_O",
-          "renamed": "pendingParticles"
-        },
-        {
-          "start": 28413,
-          "end": 28414,
-          "symbol": "M:ul.a(ILck;)V",
-          "original": "a",
-          "renamed": "addLast"
-        },
-        {
-          "start": 28495,
-          "end": 28504,
-          "symbol": "B:jb.a(Z)V#0",
-          "original": "stateLoop",
-          "renamed": "scanLoop1",
-          "kind": "label"
-        },
-        {
-          "start": 28660,
-          "end": 28669,
-          "symbol": "B:jb.a(Z)V#0",
-          "original": "stateLoop",
-          "renamed": "scanLoop1",
-          "kind": "label"
-        },
-        {
-          "start": 28821,
-          "end": 28823,
-          "symbol": "C:nk",
-          "original": "nk",
-          "renamed": "ArticulatedPart"
-        },
-        {
-          "start": 28824,
-          "end": 28825,
-          "symbol": "M:nk.a(IILee;IIZIIII)Lqb;",
-          "original": "a",
-          "renamed": "createParticle"
-        },
-        {
-          "start": 28887,
-          "end": 28894,
-          "symbol": "F:jb.field_Z:Lee;",
-          "original": "field_Z",
-          "renamed": "world"
-        },
-        {
-          "start": 28906,
-          "end": 28913,
+          "start": 15237,
+          "end": 15244,
           "symbol": "F:jb.field_M:I",
           "original": "field_M",
           "renamed": "worldY"
         },
         {
-          "start": 29003,
-          "end": 29010,
+          "start": 15281,
+          "end": 15288,
           "symbol": "F:jb.field_H:I",
           "original": "field_H",
           "renamed": "worldX"
         },
         {
-          "start": 29209,
-          "end": 29218,
-          "symbol": "B:jb.a(Z)V#0",
-          "original": "stateLoop",
-          "renamed": "scanLoop1",
-          "kind": "label"
-        },
-        {
-          "start": 29642,
-          "end": 29651,
-          "symbol": "B:jb.a(Z)V#0",
-          "original": "stateLoop",
-          "renamed": "scanLoop1",
-          "kind": "label"
-        },
-        {
-          "start": 29839,
-          "end": 29846,
-          "symbol": "F:jb.field_I:Lwl;",
-          "original": "field_I",
-          "renamed": "projectile"
-        },
-        {
-          "start": 29847,
-          "end": 29854,
-          "symbol": "F:wl.field_y:I",
-          "original": "field_y",
-          "renamed": "sourceWeaponType"
-        },
-        {
-          "start": 29935,
-          "end": 29944,
-          "symbol": "B:jb.a(Z)V#0",
-          "original": "stateLoop",
-          "renamed": "scanLoop1",
-          "kind": "label"
-        },
-        {
-          "start": 30091,
-          "end": 30098,
-          "symbol": "F:jb.field_I:Lwl;",
-          "original": "field_I",
-          "renamed": "projectile"
-        },
-        {
-          "start": 30099,
-          "end": 30106,
-          "symbol": "F:wl.field_y:I",
-          "original": "field_y",
-          "renamed": "sourceWeaponType"
-        },
-        {
-          "start": 30203,
-          "end": 30212,
-          "symbol": "B:jb.a(Z)V#0",
-          "original": "stateLoop",
-          "renamed": "scanLoop1",
-          "kind": "label"
-        },
-        {
-          "start": 30408,
-          "end": 30415,
-          "symbol": "F:jb.field_H:I",
-          "original": "field_H",
-          "renamed": "worldX"
-        },
-        {
-          "start": 30513,
-          "end": 30522,
-          "symbol": "B:jb.a(Z)V#0",
-          "original": "stateLoop",
-          "renamed": "scanLoop1",
-          "kind": "label"
-        },
-        {
-          "start": 30706,
-          "end": 30713,
+          "start": 15346,
+          "end": 15353,
           "symbol": "F:jb.field_Z:Lee;",
           "original": "field_Z",
           "renamed": "world"
         },
         {
-          "start": 30714,
-          "end": 30721,
+          "start": 15354,
+          "end": 15361,
           "symbol": "F:ee.field_O:Lul;",
           "original": "field_O",
           "renamed": "pendingParticles"
         },
         {
-          "start": 30722,
-          "end": 30723,
+          "start": 15362,
+          "end": 15363,
           "symbol": "M:ul.a(ILck;)V",
           "original": "a",
           "renamed": "addLast"
         },
         {
-          "start": 30804,
-          "end": 30813,
-          "symbol": "B:jb.a(Z)V#0",
-          "original": "stateLoop",
-          "renamed": "scanLoop1",
-          "kind": "label"
-        },
-        {
-          "start": 30894,
-          "end": 30896,
+          "start": 15423,
+          "end": 15425,
           "symbol": "C:nk",
           "original": "nk",
           "renamed": "ArticulatedPart"
         },
         {
-          "start": 30897,
-          "end": 30898,
+          "start": 15426,
+          "end": 15427,
           "symbol": "M:nk.a(IILee;IIZIIII)Lqb;",
           "original": "a",
           "renamed": "createParticle"
         },
         {
-          "start": 30919,
-          "end": 30926,
+          "start": 15448,
+          "end": 15455,
           "symbol": "F:jb.field_Z:Lee;",
           "original": "field_Z",
           "renamed": "world"
         },
         {
-          "start": 30937,
-          "end": 30944,
+          "start": 15467,
+          "end": 15474,
           "symbol": "F:jb.field_M:I",
           "original": "field_M",
           "renamed": "worldY"
         },
         {
-          "start": 30989,
-          "end": 30996,
+          "start": 15524,
+          "end": 15531,
+          "symbol": "F:jb.field_H:I",
+          "original": "field_H",
+          "renamed": "worldX"
+        },
+        {
+          "start": 15593,
+          "end": 15600,
+          "symbol": "F:jb.field_Z:Lee;",
+          "original": "field_Z",
+          "renamed": "world"
+        },
+        {
+          "start": 15601,
+          "end": 15608,
+          "symbol": "F:ee.field_O:Lul;",
+          "original": "field_O",
+          "renamed": "pendingParticles"
+        },
+        {
+          "start": 15609,
+          "end": 15610,
+          "symbol": "M:ul.a(ILck;)V",
+          "original": "a",
+          "renamed": "addLast"
+        },
+        {
+          "start": 15802,
+          "end": 15809,
+          "symbol": "F:jb.field_z:I",
+          "original": "field_z",
+          "renamed": "durationTicks"
+        },
+        {
+          "start": 15817,
+          "end": 15824,
           "symbol": "F:jb.field_Y:I",
           "original": "field_Y",
           "renamed": "ageTicks"
         },
         {
-          "start": 31031,
-          "end": 31038,
-          "symbol": "F:jb.field_H:I",
-          "original": "field_H",
-          "renamed": "worldX"
+          "start": 15837,
+          "end": 15844,
+          "symbol": "F:jb.field_Y:I",
+          "original": "field_Y",
+          "renamed": "ageTicks"
         },
         {
-          "start": 31080,
-          "end": 31087,
+          "start": 15884,
+          "end": 15891,
+          "symbol": "F:jb.field_z:I",
+          "original": "field_z",
+          "renamed": "durationTicks"
+        },
+        {
+          "start": 16087,
+          "end": 16089,
+          "symbol": "C:nk",
+          "original": "nk",
+          "renamed": "ArticulatedPart"
+        },
+        {
+          "start": 16090,
+          "end": 16091,
+          "symbol": "M:nk.a(IILee;IIZIIII)Lqb;",
+          "original": "a",
+          "renamed": "createParticle"
+        },
+        {
+          "start": 16103,
+          "end": 16110,
           "symbol": "F:jb.field_Z:Lee;",
           "original": "field_Z",
           "renamed": "world"
         },
         {
-          "start": 31088,
-          "end": 31095,
+          "start": 16122,
+          "end": 16129,
+          "symbol": "F:jb.field_M:I",
+          "original": "field_M",
+          "renamed": "worldY"
+        },
+        {
+          "start": 16173,
+          "end": 16180,
+          "symbol": "F:jb.field_H:I",
+          "original": "field_H",
+          "renamed": "worldX"
+        },
+        {
+          "start": 16224,
+          "end": 16231,
+          "symbol": "F:jb.field_Z:Lee;",
+          "original": "field_Z",
+          "renamed": "world"
+        },
+        {
+          "start": 16232,
+          "end": 16239,
           "symbol": "F:ee.field_O:Lul;",
           "original": "field_O",
           "renamed": "pendingParticles"
         },
         {
-          "start": 31096,
-          "end": 31097,
+          "start": 16240,
+          "end": 16241,
           "symbol": "M:ul.a(ILck;)V",
           "original": "a",
           "renamed": "addLast"
         },
         {
-          "start": 31178,
-          "end": 31187,
-          "symbol": "B:jb.a(Z)V#0",
-          "original": "stateLoop",
-          "renamed": "scanLoop1",
-          "kind": "label"
-        },
-        {
-          "start": 31456,
-          "end": 31465,
-          "symbol": "B:jb.a(Z)V#0",
-          "original": "stateLoop",
-          "renamed": "scanLoop1",
-          "kind": "label"
-        },
-        {
-          "start": 31733,
-          "end": 31742,
-          "symbol": "B:jb.a(Z)V#0",
-          "original": "stateLoop",
-          "renamed": "scanLoop1",
-          "kind": "label"
-        },
-        {
-          "start": 31814,
-          "end": 31820,
+          "start": 16456,
+          "end": 16462,
           "symbol": "P:jb.a(Z)V#0",
           "original": "param0",
           "renamed": "obfuscationGuard"
         },
         {
-          "start": 31967,
-          "end": 31974,
+          "start": 16550,
+          "end": 16557,
           "symbol": "F:jb.field_Y:I",
           "original": "field_Y",
           "renamed": "ageTicks"
         },
         {
-          "start": 31984,
-          "end": 31991,
+          "start": 16567,
+          "end": 16574,
           "symbol": "F:jb.field_Y:I",
           "original": "field_Y",
           "renamed": "ageTicks"
         },
         {
-          "start": 31999,
-          "end": 32006,
+          "start": 16582,
+          "end": 16589,
           "symbol": "F:jb.field_z:I",
           "original": "field_z",
           "renamed": "durationTicks"
         },
         {
-          "start": 32020,
-          "end": 32027,
+          "start": 16603,
+          "end": 16610,
           "symbol": "F:jb.field_z:I",
           "original": "field_z",
           "renamed": "durationTicks"
         },
         {
-          "start": 32166,
-          "end": 32175,
-          "symbol": "B:jb.a(Z)V#0",
-          "original": "stateLoop",
-          "renamed": "scanLoop1",
-          "kind": "label"
-        },
-        {
-          "start": 32429,
-          "end": 32431,
+          "start": 16720,
+          "end": 16722,
           "symbol": "C:ie",
           "original": "ie",
           "renamed": "IsaacRandom"
         },
         {
-          "start": 32447,
-          "end": 32454,
+          "start": 16738,
+          "end": 16745,
           "symbol": "F:jb.field_Z:Lee;",
           "original": "field_Z",
           "renamed": "world"
         },
         {
-          "start": 32455,
-          "end": 32462,
+          "start": 16746,
+          "end": 16753,
           "symbol": "F:ee.field_r:I",
           "original": "field_r",
           "renamed": "simulationTick"
         },
         {
-          "start": 32469,
-          "end": 32476,
+          "start": 16760,
+          "end": 16767,
           "symbol": "F:jb.field_H:I",
           "original": "field_H",
           "renamed": "worldX"
         },
         {
-          "start": 32483,
-          "end": 32490,
+          "start": 16774,
+          "end": 16781,
           "symbol": "F:jb.field_M:I",
           "original": "field_M",
           "renamed": "worldY"
         },
         {
-          "start": 32548,
-          "end": 32550,
+          "start": 16817,
+          "end": 16819,
           "symbol": "C:jc",
           "original": "jc",
           "renamed": "NodeIterator"
         },
         {
-          "start": 32556,
-          "end": 32563,
+          "start": 16825,
+          "end": 16832,
           "symbol": "F:jb.field_Z:Lee;",
           "original": "field_Z",
           "renamed": "world"
         },
         {
-          "start": 32626,
-          "end": 32628,
+          "start": 16873,
+          "end": 16875,
           "symbol": "C:wl",
           "original": "wl",
           "renamed": "Projectile"
         },
         {
-          "start": 32745,
-          "end": 32754,
-          "symbol": "B:jb.a(Z)V#0",
-          "original": "stateLoop",
-          "renamed": "scanLoop1",
-          "kind": "label"
-        },
-        {
-          "start": 33202,
-          "end": 33211,
-          "symbol": "B:jb.a(Z)V#0",
-          "original": "stateLoop",
-          "renamed": "scanLoop1",
-          "kind": "label"
-        },
-        {
-          "start": 33369,
-          "end": 33376,
+          "start": 16977,
+          "end": 16984,
           "symbol": "F:wl.field_U:I",
           "original": "field_U",
           "renamed": "worldX"
         },
         {
-          "start": 33384,
-          "end": 33391,
+          "start": 16992,
+          "end": 16999,
           "symbol": "F:jb.field_H:I",
           "original": "field_H",
           "renamed": "worldX"
         },
         {
-          "start": 33446,
-          "end": 33453,
+          "start": 17042,
+          "end": 17049,
           "symbol": "F:wl.field_A:I",
           "original": "field_A",
           "renamed": "worldY"
         },
         {
-          "start": 33461,
-          "end": 33468,
+          "start": 17057,
+          "end": 17064,
           "symbol": "F:jb.field_M:I",
           "original": "field_M",
           "renamed": "worldY"
         },
         {
-          "start": 33532,
-          "end": 33539,
+          "start": 17116,
+          "end": 17123,
           "symbol": "F:wl.field_C:I",
           "original": "field_C",
           "renamed": "effectType"
         },
         {
-          "start": 33948,
-          "end": 33957,
-          "symbol": "B:jb.a(Z)V#0",
-          "original": "stateLoop",
-          "renamed": "scanLoop1",
-          "kind": "label"
-        },
-        {
-          "start": 34179,
-          "end": 34188,
-          "symbol": "B:jb.a(Z)V#0",
-          "original": "stateLoop",
-          "renamed": "scanLoop1",
-          "kind": "label"
-        },
-        {
-          "start": 34342,
-          "end": 34349,
+          "start": 17376,
+          "end": 17383,
           "symbol": "F:wl.field_C:I",
           "original": "field_C",
           "renamed": "effectType"
         },
         {
-          "start": 34445,
-          "end": 34454,
-          "symbol": "B:jb.a(Z)V#0",
-          "original": "stateLoop",
-          "renamed": "scanLoop1",
-          "kind": "label"
-        },
-        {
-          "start": 34640,
-          "end": 34647,
+          "start": 17422,
+          "end": 17429,
           "symbol": "F:wl.field_C:I",
           "original": "field_C",
           "renamed": "effectType"
         },
         {
-          "start": 34893,
-          "end": 34902,
-          "symbol": "B:jb.a(Z)V#0",
-          "original": "stateLoop",
-          "renamed": "scanLoop1",
-          "kind": "label"
-        },
-        {
-          "start": 35097,
-          "end": 35104,
+          "start": 17471,
+          "end": 17478,
           "symbol": "F:wl.field_y:I",
           "original": "field_y",
           "renamed": "sourceWeaponType"
         },
         {
-          "start": 35185,
-          "end": 35194,
-          "symbol": "B:jb.a(Z)V#0",
-          "original": "stateLoop",
-          "renamed": "scanLoop1",
-          "kind": "label"
-        },
-        {
-          "start": 35532,
-          "end": 35539,
+          "start": 17588,
+          "end": 17595,
           "symbol": "F:wl.field_X:Lmb;",
           "original": "field_X",
           "renamed": "sourceSentinel"
         },
         {
-          "start": 35646,
-          "end": 35655,
-          "symbol": "B:jb.a(Z)V#0",
-          "original": "stateLoop",
-          "renamed": "scanLoop1",
-          "kind": "label"
-        },
-        {
-          "start": 35866,
-          "end": 35873,
+          "start": 17624,
+          "end": 17631,
           "symbol": "F:jb.field_I:Lwl;",
           "original": "field_I",
           "renamed": "projectile"
         },
         {
-          "start": 35874,
-          "end": 35881,
+          "start": 17632,
+          "end": 17639,
           "symbol": "F:wl.field_X:Lmb;",
           "original": "field_X",
           "renamed": "sourceSentinel"
         },
         {
-          "start": 35897,
-          "end": 35904,
+          "start": 17655,
+          "end": 17662,
           "symbol": "F:wl.field_X:Lmb;",
           "original": "field_X",
           "renamed": "sourceSentinel"
         },
         {
-          "start": 36092,
-          "end": 36099,
+          "start": 17691,
+          "end": 17698,
           "symbol": "F:jb.field_I:Lwl;",
           "original": "field_I",
           "renamed": "projectile"
         },
         {
-          "start": 36100,
-          "end": 36107,
+          "start": 17699,
+          "end": 17706,
           "symbol": "F:wl.field_X:Lmb;",
           "original": "field_X",
           "renamed": "sourceSentinel"
         },
         {
-          "start": 36124,
-          "end": 36131,
+          "start": 17723,
+          "end": 17730,
           "symbol": "F:jb.field_I:Lwl;",
           "original": "field_I",
           "renamed": "projectile"
         },
         {
-          "start": 36132,
-          "end": 36139,
+          "start": 17731,
+          "end": 17738,
           "symbol": "F:wl.field_X:Lmb;",
           "original": "field_X",
           "renamed": "sourceSentinel"
         },
         {
-          "start": 36281,
-          "end": 36290,
-          "symbol": "B:jb.a(Z)V#0",
-          "original": "stateLoop",
-          "renamed": "scanLoop1",
-          "kind": "label"
-        },
-        {
-          "start": 36514,
-          "end": 36523,
-          "symbol": "B:jb.a(Z)V#0",
-          "original": "stateLoop",
-          "renamed": "scanLoop1",
-          "kind": "label"
-        },
-        {
-          "start": 36809,
-          "end": 36818,
-          "symbol": "B:jb.a(Z)V#0",
-          "original": "stateLoop",
-          "renamed": "scanLoop1",
-          "kind": "label"
-        },
-        {
-          "start": 37028,
-          "end": 37035,
+          "start": 17854,
+          "end": 17861,
           "symbol": "F:wl.field_C:I",
           "original": "field_C",
           "renamed": "effectType"
         },
         {
-          "start": 37259,
-          "end": 37268,
-          "symbol": "B:jb.a(Z)V#0",
-          "original": "stateLoop",
-          "renamed": "scanLoop1",
-          "kind": "label"
-        },
-        {
-          "start": 37396,
-          "end": 37405,
-          "symbol": "B:jb.a(Z)V#0",
-          "original": "stateLoop",
-          "renamed": "scanLoop1",
-          "kind": "label"
-        },
-        {
-          "start": 37506,
-          "end": 37513,
+          "start": 17969,
+          "end": 17976,
           "symbol": "F:wl.field_X:Lmb;",
           "original": "field_X",
           "renamed": "sourceSentinel"
         },
         {
-          "start": 37521,
-          "end": 37528,
+          "start": 17984,
+          "end": 17991,
           "symbol": "F:jb.field_I:Lwl;",
           "original": "field_I",
           "renamed": "projectile"
         },
         {
-          "start": 37529,
-          "end": 37536,
+          "start": 17992,
+          "end": 17999,
           "symbol": "F:wl.field_X:Lmb;",
           "original": "field_X",
           "renamed": "sourceSentinel"
         },
         {
-          "start": 37601,
-          "end": 37610,
-          "symbol": "B:jb.a(Z)V#0",
-          "original": "stateLoop",
-          "renamed": "scanLoop1",
-          "kind": "label"
-        },
-        {
-          "start": 37698,
-          "end": 37705,
+          "start": 18056,
+          "end": 18063,
           "symbol": "F:wl.field_C:I",
           "original": "field_C",
           "renamed": "effectType"
         },
         {
-          "start": 37781,
-          "end": 37790,
-          "symbol": "B:jb.a(Z)V#0",
-          "original": "stateLoop",
-          "renamed": "scanLoop1",
-          "kind": "label"
-        },
-        {
-          "start": 38056,
-          "end": 38065,
-          "symbol": "B:jb.a(Z)V#0",
-          "original": "stateLoop",
-          "renamed": "scanLoop1",
-          "kind": "label"
-        },
-        {
-          "start": 38249,
-          "end": 38250,
+          "start": 18151,
+          "end": 18152,
           "symbol": "M:ie.a(II)I",
           "original": "a",
           "renamed": "nextIntBounded"
         },
         {
-          "start": 38367,
-          "end": 38376,
-          "symbol": "B:jb.a(Z)V#0",
-          "original": "stateLoop",
-          "renamed": "scanLoop1",
-          "kind": "label"
-        },
-        {
-          "start": 38675,
-          "end": 38682,
+          "start": 18254,
+          "end": 18261,
           "symbol": "F:wl.field_X:Lmb;",
           "original": "field_X",
           "renamed": "sourceSentinel"
         },
         {
-          "start": 38805,
-          "end": 38814,
-          "symbol": "B:jb.a(Z)V#0",
-          "original": "stateLoop",
-          "renamed": "scanLoop1",
-          "kind": "label"
-        },
-        {
-          "start": 39064,
-          "end": 39071,
+          "start": 18297,
+          "end": 18304,
           "symbol": "F:wl.field_X:Lmb;",
           "original": "field_X",
           "renamed": "sourceSentinel"
         },
         {
-          "start": 39080,
-          "end": 39087,
+          "start": 18313,
+          "end": 18320,
           "symbol": "F:jb.field_I:Lwl;",
           "original": "field_I",
           "renamed": "projectile"
         },
         {
-          "start": 39088,
-          "end": 39095,
+          "start": 18321,
+          "end": 18328,
           "symbol": "F:wl.field_X:Lmb;",
           "original": "field_X",
           "renamed": "sourceSentinel"
         },
         {
-          "start": 39415,
-          "end": 39424,
-          "symbol": "B:jb.a(Z)V#0",
-          "original": "stateLoop",
-          "renamed": "scanLoop1",
-          "kind": "label"
-        },
-        {
-          "start": 39784,
-          "end": 39791,
+          "start": 18357,
+          "end": 18364,
           "symbol": "F:jb.field_I:Lwl;",
           "original": "field_I",
           "renamed": "projectile"
         },
         {
-          "start": 39792,
-          "end": 39799,
+          "start": 18365,
+          "end": 18372,
           "symbol": "F:wl.field_X:Lmb;",
           "original": "field_X",
           "renamed": "sourceSentinel"
         },
         {
-          "start": 39816,
-          "end": 39823,
+          "start": 18389,
+          "end": 18396,
           "symbol": "F:jb.field_I:Lwl;",
           "original": "field_I",
           "renamed": "projectile"
         },
         {
-          "start": 39824,
-          "end": 39831,
+          "start": 18397,
+          "end": 18404,
           "symbol": "F:wl.field_X:Lmb;",
           "original": "field_X",
           "renamed": "sourceSentinel"
         },
         {
-          "start": 39909,
-          "end": 39918,
-          "symbol": "B:jb.a(Z)V#0",
-          "original": "stateLoop",
-          "renamed": "scanLoop1",
-          "kind": "label"
-        },
-        {
-          "start": 39997,
-          "end": 40004,
+          "start": 18469,
+          "end": 18476,
           "symbol": "F:wl.field_X:Lmb;",
           "original": "field_X",
           "renamed": "sourceSentinel"
         },
         {
-          "start": 40012,
-          "end": 40019,
+          "start": 18484,
+          "end": 18491,
           "symbol": "F:jb.field_I:Lwl;",
           "original": "field_I",
           "renamed": "projectile"
         },
         {
-          "start": 40020,
-          "end": 40027,
+          "start": 18492,
+          "end": 18499,
           "symbol": "F:wl.field_X:Lmb;",
           "original": "field_X",
           "renamed": "sourceSentinel"
         },
         {
-          "start": 40093,
-          "end": 40102,
-          "symbol": "B:jb.a(Z)V#0",
-          "original": "stateLoop",
-          "renamed": "scanLoop1",
-          "kind": "label"
-        },
-        {
-          "start": 40185,
-          "end": 40187,
+          "start": 18550,
+          "end": 18552,
           "symbol": "C:wl",
           "original": "wl",
           "renamed": "Projectile"
         },
         {
-          "start": 40404,
-          "end": 40413,
-          "symbol": "B:jb.a(Z)V#0",
-          "original": "stateLoop",
-          "renamed": "scanLoop1",
-          "kind": "label"
-        },
-        {
-          "start": 40490,
-          "end": 40497,
+          "start": 18672,
+          "end": 18679,
           "symbol": "F:jb.field_X:[Lmb;",
           "original": "field_X",
           "renamed": "affectedSentinels"
         },
         {
-          "start": 40581,
-          "end": 40590,
-          "symbol": "B:jb.a(Z)V#0",
-          "original": "stateLoop",
-          "renamed": "scanLoop1",
-          "kind": "label"
-        },
-        {
-          "start": 40738,
-          "end": 40745,
+          "start": 18712,
+          "end": 18719,
           "symbol": "F:jb.field_I:Lwl;",
           "original": "field_I",
           "renamed": "projectile"
         },
         {
-          "start": 40999,
-          "end": 41008,
-          "symbol": "B:jb.a(Z)V#0",
-          "original": "stateLoop",
-          "renamed": "scanLoop1",
-          "kind": "label"
-        },
-        {
-          "start": 41169,
-          "end": 41178,
-          "symbol": "B:jb.a(Z)V#0",
-          "original": "stateLoop",
-          "renamed": "scanLoop1",
-          "kind": "label"
-        },
-        {
-          "start": 41333,
-          "end": 41340,
+          "start": 18789,
+          "end": 18796,
           "symbol": "F:jb.field_X:[Lmb;",
           "original": "field_X",
           "renamed": "affectedSentinels"
         },
         {
-          "start": 41431,
-          "end": 41440,
-          "symbol": "B:jb.a(Z)V#0",
-          "original": "stateLoop",
-          "renamed": "scanLoop1",
-          "kind": "label"
-        },
-        {
-          "start": 41592,
-          "end": 41599,
+          "start": 18845,
+          "end": 18852,
           "symbol": "F:jb.field_X:[Lmb;",
           "original": "field_X",
           "renamed": "affectedSentinels"
         },
         {
-          "start": 41851,
-          "end": 41860,
+          "start": 19016,
+          "end": 19019,
           "symbol": "B:jb.a(Z)V#0",
-          "original": "stateLoop",
-          "renamed": "scanLoop1",
+          "original": "L35",
+          "renamed": "regionExit1",
           "kind": "label"
         },
         {
-          "start": 42069,
-          "end": 42078,
-          "symbol": "B:jb.a(Z)V#0",
-          "original": "stateLoop",
-          "renamed": "scanLoop1",
-          "kind": "label"
-        },
-        {
-          "start": 42484,
-          "end": 42493,
-          "symbol": "B:jb.a(Z)V#0",
-          "original": "stateLoop",
-          "renamed": "scanLoop1",
-          "kind": "label"
-        },
-        {
-          "start": 42813,
-          "end": 42822,
-          "symbol": "B:jb.a(Z)V#0",
-          "original": "stateLoop",
-          "renamed": "scanLoop1",
-          "kind": "label"
-        },
-        {
-          "start": 43391,
-          "end": 43400,
-          "symbol": "B:jb.a(Z)V#0",
-          "original": "stateLoop",
-          "renamed": "scanLoop1",
-          "kind": "label"
-        },
-        {
-          "start": 43723,
-          "end": 43732,
-          "symbol": "B:jb.a(Z)V#0",
-          "original": "stateLoop",
-          "renamed": "scanLoop1",
-          "kind": "label"
-        },
-        {
-          "start": 43958,
-          "end": 43967,
-          "symbol": "B:jb.a(Z)V#0",
-          "original": "stateLoop",
-          "renamed": "scanLoop1",
-          "kind": "label"
-        },
-        {
-          "start": 44115,
-          "end": 44122,
+          "start": 19400,
+          "end": 19407,
           "symbol": "F:jb.field_Z:Lee;",
           "original": "field_Z",
           "renamed": "world"
         },
         {
-          "start": 44123,
-          "end": 44131,
+          "start": 19408,
+          "end": 19416,
           "symbol": "F:ee.field_ab:Lhd;",
           "original": "field_ab",
           "renamed": "terrain"
         },
         {
-          "start": 44132,
-          "end": 44133,
+          "start": 19417,
+          "end": 19418,
           "symbol": "M:hd.b(BI)I",
           "original": "b",
           "renamed": "getSurfaceProfileAt"
         },
         {
-          "start": 44152,
-          "end": 44160,
+          "start": 19437,
+          "end": 19445,
           "symbol": "F:mb.field_hc:I",
           "original": "field_hc",
           "renamed": "worldX"
         },
         {
-          "start": 44175,
-          "end": 44182,
+          "start": 19460,
+          "end": 19467,
           "symbol": "F:jb.field_Z:Lee;",
           "original": "field_Z",
           "renamed": "world"
         },
         {
-          "start": 44183,
-          "end": 44191,
+          "start": 19468,
+          "end": 19476,
           "symbol": "F:ee.field_ab:Lhd;",
           "original": "field_ab",
           "renamed": "terrain"
         },
         {
-          "start": 44192,
-          "end": 44193,
+          "start": 19477,
+          "end": 19478,
           "symbol": "M:hd.a(ZI)I",
           "original": "a",
           "renamed": "getSecondaryHeightAt"
         },
         {
-          "start": 44207,
-          "end": 44215,
+          "start": 19492,
+          "end": 19500,
           "symbol": "F:mb.field_hc:I",
           "original": "field_hc",
           "renamed": "worldX"
         },
         {
-          "start": 44423,
-          "end": 44432,
-          "symbol": "B:jb.a(Z)V#0",
-          "original": "stateLoop",
-          "renamed": "scanLoop1",
-          "kind": "label"
-        },
-        {
-          "start": 44647,
-          "end": 44656,
-          "symbol": "B:jb.a(Z)V#0",
-          "original": "stateLoop",
-          "renamed": "scanLoop1",
-          "kind": "label"
-        },
-        {
-          "start": 44804,
-          "end": 44811,
+          "start": 19564,
+          "end": 19571,
           "symbol": "F:jb.field_I:Lwl;",
           "original": "field_I",
           "renamed": "projectile"
         },
         {
-          "start": 44812,
-          "end": 44819,
+          "start": 19572,
+          "end": 19579,
           "symbol": "F:wl.field_y:I",
           "original": "field_y",
           "renamed": "sourceWeaponType"
         },
         {
-          "start": 44928,
-          "end": 44937,
-          "symbol": "B:jb.a(Z)V#0",
-          "original": "stateLoop",
-          "renamed": "scanLoop1",
-          "kind": "label"
-        },
-        {
-          "start": 45364,
-          "end": 45373,
-          "symbol": "B:jb.a(Z)V#0",
-          "original": "stateLoop",
-          "renamed": "scanLoop1",
-          "kind": "label"
-        },
-        {
-          "start": 45565,
-          "end": 45572,
+          "start": 19675,
+          "end": 19682,
           "symbol": "F:jb.field_H:I",
           "original": "field_H",
           "renamed": "worldX"
         },
         {
-          "start": 45581,
-          "end": 45589,
+          "start": 19691,
+          "end": 19699,
           "symbol": "F:mb.field_hc:I",
           "original": "field_hc",
           "renamed": "worldX"
         },
         {
-          "start": 45637,
-          "end": 45645,
+          "start": 19751,
+          "end": 19759,
           "symbol": "F:mb.field_Gb:I",
           "original": "field_Gb",
           "renamed": "worldY"
         },
         {
-          "start": 45653,
-          "end": 45660,
+          "start": 19767,
+          "end": 19774,
           "symbol": "F:jb.field_M:I",
           "original": "field_M",
           "renamed": "worldY"
         },
         {
-          "start": 45883,
-          "end": 45892,
-          "symbol": "B:jb.a(Z)V#0",
-          "original": "stateLoop",
-          "renamed": "scanLoop1",
-          "kind": "label"
-        },
-        {
-          "start": 46095,
-          "end": 46104,
-          "symbol": "B:jb.a(Z)V#0",
-          "original": "stateLoop",
-          "renamed": "scanLoop1",
-          "kind": "label"
-        },
-        {
-          "start": 46257,
-          "end": 46264,
+          "start": 19970,
+          "end": 19977,
           "symbol": "F:jb.field_I:Lwl;",
           "original": "field_I",
           "renamed": "projectile"
         },
         {
-          "start": 46265,
-          "end": 46272,
+          "start": 19978,
+          "end": 19985,
           "symbol": "F:wl.field_C:I",
           "original": "field_C",
           "renamed": "effectType"
         },
         {
-          "start": 46364,
-          "end": 46373,
-          "symbol": "B:jb.a(Z)V#0",
-          "original": "stateLoop",
-          "renamed": "scanLoop1",
-          "kind": "label"
-        },
-        {
-          "start": 46553,
-          "end": 46560,
+          "start": 20022,
+          "end": 20029,
           "symbol": "F:jb.field_I:Lwl;",
           "original": "field_I",
           "renamed": "projectile"
         },
         {
-          "start": 46561,
-          "end": 46568,
+          "start": 20030,
+          "end": 20037,
           "symbol": "F:wl.field_X:Lmb;",
           "original": "field_X",
           "renamed": "sourceSentinel"
         },
         {
-          "start": 46684,
-          "end": 46693,
-          "symbol": "B:jb.a(Z)V#0",
-          "original": "stateLoop",
-          "renamed": "scanLoop1",
-          "kind": "label"
-        },
-        {
-          "start": 46910,
-          "end": 46917,
+          "start": 20091,
+          "end": 20098,
           "symbol": "F:jb.field_I:Lwl;",
           "original": "field_I",
           "renamed": "projectile"
         },
         {
-          "start": 46918,
-          "end": 46925,
+          "start": 20099,
+          "end": 20106,
           "symbol": "F:wl.field_X:Lmb;",
           "original": "field_X",
           "renamed": "sourceSentinel"
         },
         {
-          "start": 47058,
-          "end": 47067,
-          "symbol": "B:jb.a(Z)V#0",
-          "original": "stateLoop",
-          "renamed": "scanLoop1",
-          "kind": "label"
-        },
-        {
-          "start": 47308,
-          "end": 47316,
+          "start": 20155,
+          "end": 20163,
           "symbol": "F:mb.field_ab:I",
           "original": "field_ab",
           "renamed": "velocityY"
         },
         {
-          "start": 47325,
-          "end": 47333,
+          "start": 20172,
+          "end": 20180,
           "symbol": "F:mb.field_ab:I",
           "original": "field_ab",
           "renamed": "velocityY"
         },
         {
-          "start": 47350,
-          "end": 47358,
+          "start": 20197,
+          "end": 20205,
           "symbol": "F:mb.field_Eb:I",
           "original": "field_Eb",
           "renamed": "maximumArmour"
         },
         {
-          "start": 47418,
-          "end": 47425,
+          "start": 20243,
+          "end": 20250,
           "symbol": "F:mb.field_K:I",
           "original": "field_K",
           "renamed": "velocityX"
         },
         {
-          "start": 47434,
-          "end": 47441,
+          "start": 20259,
+          "end": 20266,
           "symbol": "F:mb.field_K:I",
           "original": "field_K",
           "renamed": "velocityX"
         },
         {
-          "start": 47458,
-          "end": 47465,
+          "start": 20283,
+          "end": 20290,
           "symbol": "F:jb.field_I:Lwl;",
           "original": "field_I",
           "renamed": "projectile"
         },
         {
-          "start": 47466,
-          "end": 47473,
+          "start": 20291,
+          "end": 20298,
           "symbol": "F:wl.field_X:Lmb;",
           "original": "field_X",
           "renamed": "sourceSentinel"
         },
         {
-          "start": 47490,
-          "end": 47498,
+          "start": 20315,
+          "end": 20323,
           "symbol": "F:mb.field_Eb:I",
           "original": "field_Eb",
           "renamed": "maximumArmour"
         },
         {
-          "start": 47628,
-          "end": 47637,
-          "symbol": "B:jb.a(Z)V#0",
-          "original": "stateLoop",
-          "renamed": "scanLoop1",
-          "kind": "label"
-        },
-        {
-          "start": 48007,
-          "end": 48014,
+          "start": 20397,
+          "end": 20404,
           "symbol": "F:jb.field_I:Lwl;",
           "original": "field_I",
           "renamed": "projectile"
         },
         {
-          "start": 48015,
-          "end": 48022,
+          "start": 20405,
+          "end": 20412,
           "symbol": "F:wl.field_X:Lmb;",
           "original": "field_X",
           "renamed": "sourceSentinel"
         },
         {
-          "start": 48152,
-          "end": 48159,
+          "start": 20464,
+          "end": 20471,
           "symbol": "F:jb.field_I:Lwl;",
           "original": "field_I",
           "renamed": "projectile"
         },
         {
-          "start": 48160,
-          "end": 48167,
+          "start": 20472,
+          "end": 20479,
           "symbol": "F:wl.field_X:Lmb;",
           "original": "field_X",
           "renamed": "sourceSentinel"
         },
         {
-          "start": 48168,
-          "end": 48176,
+          "start": 20480,
+          "end": 20488,
           "symbol": "F:mb.field_hc:I",
           "original": "field_hc",
           "renamed": "worldX"
         },
         {
-          "start": 48185,
-          "end": 48193,
+          "start": 20498,
+          "end": 20506,
           "symbol": "F:mb.field_hc:I",
           "original": "field_hc",
           "renamed": "worldX"
         },
         {
-          "start": 48285,
-          "end": 48294,
-          "symbol": "B:jb.a(Z)V#0",
-          "original": "stateLoop",
-          "renamed": "scanLoop1",
-          "kind": "label"
-        },
-        {
-          "start": 48471,
-          "end": 48478,
+          "start": 20548,
+          "end": 20555,
           "symbol": "F:mb.field_K:I",
           "original": "field_K",
           "renamed": "velocityX"
         },
         {
-          "start": 48487,
-          "end": 48494,
+          "start": 20564,
+          "end": 20571,
           "symbol": "F:mb.field_K:I",
           "original": "field_K",
           "renamed": "velocityX"
         },
         {
-          "start": 48512,
-          "end": 48520,
+          "start": 20589,
+          "end": 20597,
           "symbol": "F:mb.field_Eb:I",
           "original": "field_Eb",
           "renamed": "maximumArmour"
         },
         {
-          "start": 48618,
-          "end": 48627,
-          "symbol": "B:jb.a(Z)V#0",
-          "original": "stateLoop",
-          "renamed": "scanLoop1",
-          "kind": "label"
-        },
-        {
-          "start": 48820,
-          "end": 48829,
-          "symbol": "B:jb.a(Z)V#0",
-          "original": "stateLoop",
-          "renamed": "scanLoop1",
-          "kind": "label"
-        },
-        {
-          "start": 48925,
-          "end": 48933,
+          "start": 20667,
+          "end": 20675,
           "symbol": "F:mb.field_ab:I",
           "original": "field_ab",
           "renamed": "velocityY"
         },
         {
-          "start": 48942,
-          "end": 48950,
+          "start": 20684,
+          "end": 20692,
           "symbol": "F:mb.field_ab:I",
           "original": "field_ab",
           "renamed": "velocityY"
         },
         {
-          "start": 48968,
-          "end": 48976,
+          "start": 20710,
+          "end": 20718,
           "symbol": "F:mb.field_Eb:I",
           "original": "field_Eb",
           "renamed": "maximumArmour"
         },
         {
-          "start": 49008,
-          "end": 49016,
+          "start": 20760,
+          "end": 20768,
           "symbol": "F:mb.field_hc:I",
           "original": "field_hc",
           "renamed": "worldX"
         },
         {
-          "start": 49025,
-          "end": 49032,
+          "start": 20776,
+          "end": 20783,
           "symbol": "F:jb.field_I:Lwl;",
           "original": "field_I",
           "renamed": "projectile"
         },
         {
-          "start": 49033,
-          "end": 49040,
+          "start": 20784,
+          "end": 20791,
           "symbol": "F:wl.field_X:Lmb;",
           "original": "field_X",
           "renamed": "sourceSentinel"
         },
         {
-          "start": 49041,
-          "end": 49049,
+          "start": 20792,
+          "end": 20800,
           "symbol": "F:mb.field_hc:I",
           "original": "field_hc",
           "renamed": "worldX"
         },
         {
-          "start": 49125,
-          "end": 49134,
-          "symbol": "B:jb.a(Z)V#0",
-          "original": "stateLoop",
-          "renamed": "scanLoop1",
-          "kind": "label"
-        },
-        {
-          "start": 49279,
-          "end": 49286,
+          "start": 20842,
+          "end": 20849,
           "symbol": "F:mb.field_K:I",
           "original": "field_K",
           "renamed": "velocityX"
         },
         {
-          "start": 49295,
-          "end": 49302,
+          "start": 20858,
+          "end": 20865,
           "symbol": "F:mb.field_K:I",
           "original": "field_K",
           "renamed": "velocityX"
         },
         {
-          "start": 49320,
-          "end": 49328,
+          "start": 20883,
+          "end": 20891,
           "symbol": "F:mb.field_Eb:I",
           "original": "field_Eb",
           "renamed": "maximumArmour"
         },
         {
-          "start": 49410,
-          "end": 49419,
-          "symbol": "B:jb.a(Z)V#0",
-          "original": "stateLoop",
-          "renamed": "scanLoop1",
-          "kind": "label"
-        },
-        {
-          "start": 49544,
-          "end": 49551,
+          "start": 20992,
+          "end": 20999,
           "symbol": "F:jb.field_I:Lwl;",
           "original": "field_I",
           "renamed": "projectile"
         },
         {
-          "start": 49552,
-          "end": 49559,
+          "start": 21000,
+          "end": 21007,
           "symbol": "F:wl.field_X:Lmb;",
           "original": "field_X",
           "renamed": "sourceSentinel"
         },
         {
-          "start": 49649,
-          "end": 49658,
-          "symbol": "B:jb.a(Z)V#0",
-          "original": "stateLoop",
-          "renamed": "scanLoop1",
-          "kind": "label"
-        },
-        {
-          "start": 49803,
-          "end": 49811,
+          "start": 21061,
+          "end": 21069,
           "symbol": "F:mb.field_ab:I",
           "original": "field_ab",
           "renamed": "velocityY"
         },
         {
-          "start": 49820,
-          "end": 49828,
+          "start": 21078,
+          "end": 21086,
           "symbol": "F:mb.field_ab:I",
           "original": "field_ab",
           "renamed": "velocityY"
         },
         {
-          "start": 49846,
-          "end": 49854,
+          "start": 21104,
+          "end": 21112,
           "symbol": "F:mb.field_Eb:I",
           "original": "field_Eb",
           "renamed": "maximumArmour"
         },
         {
-          "start": 49890,
-          "end": 49897,
+          "start": 21150,
+          "end": 21157,
           "symbol": "F:mb.field_K:I",
           "original": "field_K",
           "renamed": "velocityX"
         },
         {
-          "start": 49906,
-          "end": 49913,
+          "start": 21166,
+          "end": 21173,
           "symbol": "F:mb.field_K:I",
           "original": "field_K",
           "renamed": "velocityX"
         },
         {
-          "start": 49929,
-          "end": 49936,
+          "start": 21189,
+          "end": 21196,
           "symbol": "F:jb.field_I:Lwl;",
           "original": "field_I",
           "renamed": "projectile"
         },
         {
-          "start": 49937,
-          "end": 49944,
+          "start": 21197,
+          "end": 21204,
           "symbol": "F:wl.field_X:Lmb;",
           "original": "field_X",
           "renamed": "sourceSentinel"
         },
         {
-          "start": 49961,
-          "end": 49969,
+          "start": 21221,
+          "end": 21229,
           "symbol": "F:mb.field_Eb:I",
           "original": "field_Eb",
           "renamed": "maximumArmour"
         },
         {
-          "start": 50051,
-          "end": 50060,
-          "symbol": "B:jb.a(Z)V#0",
-          "original": "stateLoop",
-          "renamed": "scanLoop1",
-          "kind": "label"
-        },
-        {
-          "start": 50181,
-          "end": 50188,
+          "start": 21320,
+          "end": 21327,
           "symbol": "F:jb.field_X:[Lmb;",
           "original": "field_X",
           "renamed": "affectedSentinels"
         },
         {
-          "start": 50393,
-          "end": 50402,
-          "symbol": "B:jb.a(Z)V#0",
-          "original": "stateLoop",
-          "renamed": "scanLoop1",
-          "kind": "label"
-        },
-        {
-          "start": 50550,
-          "end": 50557,
+          "start": 21504,
+          "end": 21511,
           "symbol": "F:jb.field_I:Lwl;",
           "original": "field_I",
           "renamed": "projectile"
         },
         {
-          "start": 50558,
-          "end": 50565,
+          "start": 21512,
+          "end": 21519,
           "symbol": "F:wl.field_C:I",
           "original": "field_C",
           "renamed": "effectType"
         },
         {
-          "start": 50662,
-          "end": 50671,
-          "symbol": "B:jb.a(Z)V#0",
-          "original": "stateLoop",
-          "renamed": "scanLoop1",
-          "kind": "label"
-        },
-        {
-          "start": 50854,
-          "end": 50861,
+          "start": 21577,
+          "end": 21584,
           "symbol": "F:jb.field_I:Lwl;",
           "original": "field_I",
           "renamed": "projectile"
         },
         {
-          "start": 51073,
-          "end": 51082,
-          "symbol": "B:jb.a(Z)V#0",
-          "original": "stateLoop",
-          "renamed": "scanLoop1",
-          "kind": "label"
-        },
-        {
-          "start": 51635,
-          "end": 51644,
-          "symbol": "B:jb.a(Z)V#0",
-          "original": "stateLoop",
-          "renamed": "scanLoop1",
-          "kind": "label"
-        },
-        {
-          "start": 51916,
-          "end": 51923,
+          "start": 21855,
+          "end": 21862,
           "symbol": "F:jb.field_I:Lwl;",
           "original": "field_I",
           "renamed": "projectile"
         },
         {
-          "start": 51997,
-          "end": 52006,
-          "symbol": "B:jb.a(Z)V#0",
-          "original": "stateLoop",
-          "renamed": "scanLoop1",
-          "kind": "label"
-        },
-        {
-          "start": 52083,
-          "end": 52090,
+          "start": 21935,
+          "end": 21942,
           "symbol": "F:jb.field_I:Lwl;",
           "original": "field_I",
           "renamed": "projectile"
         },
         {
-          "start": 52091,
-          "end": 52098,
+          "start": 21943,
+          "end": 21950,
           "symbol": "F:wl.field_C:I",
           "original": "field_C",
           "renamed": "effectType"
         },
         {
-          "start": 52179,
-          "end": 52188,
-          "symbol": "B:jb.a(Z)V#0",
-          "original": "stateLoop",
-          "renamed": "scanLoop1",
-          "kind": "label"
-        },
-        {
-          "start": 52339,
-          "end": 52346,
+          "start": 22008,
+          "end": 22015,
           "symbol": "F:jb.field_I:Lwl;",
           "original": "field_I",
           "renamed": "projectile"
         },
         {
-          "start": 52421,
-          "end": 52428,
+          "start": 22090,
+          "end": 22097,
           "symbol": "F:jb.field_I:Lwl;",
           "original": "field_I",
           "renamed": "projectile"
         },
         {
-          "start": 52477,
-          "end": 52484,
+          "start": 22145,
+          "end": 22152,
           "symbol": "F:jb.field_I:Lwl;",
           "original": "field_I",
           "renamed": "projectile"
         },
         {
-          "start": 52604,
-          "end": 52613,
-          "symbol": "B:jb.a(Z)V#0",
-          "original": "stateLoop",
-          "renamed": "scanLoop1",
-          "kind": "label"
-        },
-        {
-          "start": 52983,
-          "end": 52990,
+          "start": 22281,
+          "end": 22288,
           "symbol": "F:jb.field_I:Lwl;",
           "original": "field_I",
           "renamed": "projectile"
         },
         {
-          "start": 53113,
-          "end": 53122,
-          "symbol": "B:jb.a(Z)V#0",
-          "original": "stateLoop",
-          "renamed": "scanLoop1",
-          "kind": "label"
-        },
-        {
-          "start": 53315,
-          "end": 53324,
-          "symbol": "B:jb.a(Z)V#0",
-          "original": "stateLoop",
-          "renamed": "scanLoop1",
-          "kind": "label"
-        },
-        {
-          "start": 53551,
-          "end": 53558,
+          "start": 22366,
+          "end": 22373,
           "symbol": "F:jb.field_I:Lwl;",
           "original": "field_I",
           "renamed": "projectile"
         },
         {
-          "start": 53648,
-          "end": 53657,
-          "symbol": "B:jb.a(Z)V#0",
-          "original": "stateLoop",
-          "renamed": "scanLoop1",
-          "kind": "label"
-        },
-        {
-          "start": 53806,
-          "end": 53814,
+          "start": 22426,
+          "end": 22434,
           "symbol": "F:mb.field_Tb:I",
           "original": "field_Tb",
           "renamed": "charge"
         },
         {
-          "start": 53911,
-          "end": 53920,
-          "symbol": "B:jb.a(Z)V#0",
-          "original": "stateLoop",
-          "renamed": "scanLoop1",
-          "kind": "label"
-        },
-        {
-          "start": 54274,
-          "end": 54275,
+          "start": 22525,
+          "end": 22526,
           "symbol": "M:mb.a(ZI)V",
           "original": "a",
           "renamed": "consumeCharge"
         },
         {
-          "start": 54297,
-          "end": 54305,
+          "start": 22548,
+          "end": 22556,
           "symbol": "F:mb.field_Tb:I",
           "original": "field_Tb",
           "renamed": "charge"
         },
         {
-          "start": 54312,
-          "end": 54319,
+          "start": 22563,
+          "end": 22570,
           "symbol": "F:jb.field_I:Lwl;",
           "original": "field_I",
           "renamed": "projectile"
         },
         {
-          "start": 54449,
-          "end": 54458,
-          "symbol": "B:jb.a(Z)V#0",
-          "original": "stateLoop",
-          "renamed": "scanLoop1",
-          "kind": "label"
-        },
-        {
-          "start": 54651,
-          "end": 54660,
-          "symbol": "B:jb.a(Z)V#0",
-          "original": "stateLoop",
-          "renamed": "scanLoop1",
-          "kind": "label"
-        },
-        {
-          "start": 54976,
-          "end": 54985,
-          "symbol": "B:jb.a(Z)V#0",
-          "original": "stateLoop",
-          "renamed": "scanLoop1",
-          "kind": "label"
-        },
-        {
-          "start": 55223,
-          "end": 55232,
-          "symbol": "B:jb.a(Z)V#0",
-          "original": "stateLoop",
-          "renamed": "scanLoop1",
-          "kind": "label"
-        },
-        {
-          "start": 55363,
-          "end": 55371,
+          "start": 22792,
+          "end": 22800,
           "symbol": "F:mb.field_rb:I",
           "original": "field_rb",
           "renamed": "armour"
         },
         {
-          "start": 55447,
-          "end": 55456,
-          "symbol": "B:jb.a(Z)V#0",
-          "original": "stateLoop",
-          "renamed": "scanLoop1",
-          "kind": "label"
-        },
-        {
-          "start": 55619,
-          "end": 55626,
+          "start": 22858,
+          "end": 22865,
           "symbol": "F:jb.field_I:Lwl;",
           "original": "field_I",
           "renamed": "projectile"
         },
         {
-          "start": 55709,
-          "end": 55718,
-          "symbol": "B:jb.a(Z)V#0",
-          "original": "stateLoop",
-          "renamed": "scanLoop1",
-          "kind": "label"
-        },
-        {
-          "start": 55844,
-          "end": 55852,
+          "start": 22938,
+          "end": 22946,
           "symbol": "F:mb.field_rb:I",
           "original": "field_rb",
           "renamed": "armour"
         },
         {
-          "start": 55933,
-          "end": 55942,
-          "symbol": "B:jb.a(Z)V#0",
-          "original": "stateLoop",
-          "renamed": "scanLoop1",
-          "kind": "label"
-        },
-        {
-          "start": 56090,
-          "end": 56097,
+          "start": 22990,
+          "end": 22997,
           "symbol": "F:jb.field_I:Lwl;",
           "original": "field_I",
           "renamed": "projectile"
         },
         {
-          "start": 56098,
-          "end": 56105,
+          "start": 22998,
+          "end": 23005,
           "symbol": "F:wl.field_X:Lmb;",
           "original": "field_X",
           "renamed": "sourceSentinel"
         },
         {
-          "start": 56315,
-          "end": 56324,
-          "symbol": "B:jb.a(Z)V#0",
-          "original": "stateLoop",
-          "renamed": "scanLoop1",
-          "kind": "label"
-        },
-        {
-          "start": 56450,
-          "end": 56458,
+          "start": 23059,
+          "end": 23067,
           "symbol": "F:mb.field_rb:I",
           "original": "field_rb",
           "renamed": "armour"
         },
         {
-          "start": 56539,
-          "end": 56548,
-          "symbol": "B:jb.a(Z)V#0",
-          "original": "stateLoop",
-          "renamed": "scanLoop1",
-          "kind": "label"
-        },
-        {
-          "start": 56704,
-          "end": 56711,
+          "start": 23122,
+          "end": 23129,
           "symbol": "F:jb.field_I:Lwl;",
           "original": "field_I",
           "renamed": "projectile"
         },
         {
-          "start": 56712,
-          "end": 56719,
+          "start": 23130,
+          "end": 23137,
           "symbol": "F:wl.field_X:Lmb;",
           "original": "field_X",
           "renamed": "sourceSentinel"
         },
         {
-          "start": 56811,
-          "end": 56820,
-          "symbol": "B:jb.a(Z)V#0",
-          "original": "stateLoop",
-          "renamed": "scanLoop1",
-          "kind": "label"
-        },
-        {
-          "start": 57120,
-          "end": 57129,
-          "symbol": "B:jb.a(Z)V#0",
-          "original": "stateLoop",
-          "renamed": "scanLoop1",
-          "kind": "label"
-        },
-        {
-          "start": 57338,
-          "end": 57339,
+          "start": 23235,
+          "end": 23236,
           "symbol": "M:mb.e(II)V",
           "original": "e",
           "renamed": "reduceArmour"
         },
         {
-          "start": 57692,
-          "end": 57701,
-          "symbol": "B:jb.a(Z)V#0",
-          "original": "stateLoop",
-          "renamed": "scanLoop1",
-          "kind": "label"
-        },
-        {
-          "start": 58020,
-          "end": 58028,
+          "start": 23434,
+          "end": 23442,
           "symbol": "F:mb.field_rb:I",
           "original": "field_rb",
           "renamed": "armour"
         },
         {
-          "start": 58190,
-          "end": 58199,
-          "symbol": "B:jb.a(Z)V#0",
-          "original": "stateLoop",
-          "renamed": "scanLoop1",
-          "kind": "label"
-        },
-        {
-          "start": 58284,
-          "end": 58292,
+          "start": 23495,
+          "end": 23503,
           "symbol": "F:mb.field_rb:I",
           "original": "field_rb",
           "renamed": "armour"
         },
         {
-          "start": 58358,
-          "end": 58367,
-          "symbol": "B:jb.a(Z)V#0",
-          "original": "stateLoop",
-          "renamed": "scanLoop1",
-          "kind": "label"
-        },
-        {
-          "start": 58657,
-          "end": 58666,
-          "symbol": "B:jb.a(Z)V#0",
-          "original": "stateLoop",
-          "renamed": "scanLoop1",
-          "kind": "label"
-        },
-        {
-          "start": 58795,
-          "end": 58804,
-          "symbol": "B:jb.a(Z)V#0",
-          "original": "stateLoop",
-          "renamed": "scanLoop1",
-          "kind": "label"
-        },
-        {
-          "start": 59197,
-          "end": 59204,
+          "start": 23890,
+          "end": 23897,
           "symbol": "F:jb.field_I:Lwl;",
           "original": "field_I",
           "renamed": "projectile"
         },
         {
-          "start": 59205,
-          "end": 59212,
+          "start": 23898,
+          "end": 23905,
           "symbol": "F:wl.field_X:Lmb;",
           "original": "field_X",
           "renamed": "sourceSentinel"
         },
         {
-          "start": 59213,
-          "end": 59221,
+          "start": 23906,
+          "end": 23914,
           "symbol": "F:mb.field_jc:I",
           "original": "field_jc",
           "renamed": "teamId"
         },
         {
-          "start": 59232,
-          "end": 59240,
+          "start": 23925,
+          "end": 23933,
           "symbol": "F:mb.field_jc:I",
           "original": "field_jc",
           "renamed": "teamId"
         },
         {
-          "start": 59348,
-          "end": 59357,
-          "symbol": "B:jb.a(Z)V#0",
-          "original": "stateLoop",
-          "renamed": "scanLoop1",
-          "kind": "label"
-        },
-        {
-          "start": 59569,
-          "end": 59576,
+          "start": 23981,
+          "end": 23988,
           "symbol": "F:jb.field_I:Lwl;",
           "original": "field_I",
           "renamed": "projectile"
         },
         {
-          "start": 59577,
-          "end": 59584,
+          "start": 23989,
+          "end": 23996,
           "symbol": "F:wl.field_X:Lmb;",
           "original": "field_X",
           "renamed": "sourceSentinel"
         },
         {
-          "start": 59717,
-          "end": 59726,
-          "symbol": "B:jb.a(Z)V#0",
-          "original": "stateLoop",
-          "renamed": "scanLoop1",
-          "kind": "label"
-        },
-        {
-          "start": 59966,
-          "end": 59973,
+          "start": 24051,
+          "end": 24058,
           "symbol": "F:jb.field_I:Lwl;",
           "original": "field_I",
           "renamed": "projectile"
         },
         {
-          "start": 59974,
-          "end": 59981,
+          "start": 24059,
+          "end": 24066,
           "symbol": "F:wl.field_X:Lmb;",
           "original": "field_X",
           "renamed": "sourceSentinel"
         },
         {
-          "start": 59991,
-          "end": 59998,
+          "start": 24076,
+          "end": 24083,
           "symbol": "F:jb.field_Z:Lee;",
           "original": "field_Z",
           "renamed": "world"
         },
         {
-          "start": 60044,
-          "end": 60052,
+          "start": 24129,
+          "end": 24137,
           "symbol": "F:mb.field_Eb:I",
           "original": "field_Eb",
           "renamed": "maximumArmour"
         },
         {
-          "start": 60452,
-          "end": 60461,
-          "symbol": "B:jb.a(Z)V#0",
-          "original": "stateLoop",
-          "renamed": "scanLoop1",
-          "kind": "label"
-        },
-        {
-          "start": 60798,
-          "end": 60807,
-          "symbol": "B:jb.a(Z)V#0",
-          "original": "stateLoop",
-          "renamed": "scanLoop1",
-          "kind": "label"
-        },
-        {
-          "start": 60966,
-          "end": 60975,
-          "symbol": "B:jb.a(Z)V#0",
-          "original": "stateLoop",
-          "renamed": "scanLoop1",
-          "kind": "label"
-        },
-        {
-          "start": 61070,
-          "end": 61077,
+          "start": 24366,
+          "end": 24373,
           "symbol": "F:jb.field_I:Lwl;",
           "original": "field_I",
           "renamed": "projectile"
         },
         {
-          "start": 61078,
-          "end": 61085,
+          "start": 24374,
+          "end": 24381,
           "symbol": "F:wl.field_X:Lmb;",
           "original": "field_X",
           "renamed": "sourceSentinel"
         },
         {
-          "start": 61093,
-          "end": 61100,
+          "start": 24389,
+          "end": 24396,
           "symbol": "F:jb.field_Z:Lee;",
           "original": "field_Z",
           "renamed": "world"
         },
         {
-          "start": 61146,
-          "end": 61154,
+          "start": 24442,
+          "end": 24450,
           "symbol": "F:mb.field_Eb:I",
           "original": "field_Eb",
           "renamed": "maximumArmour"
         },
         {
-          "start": 61190,
-          "end": 61197,
+          "start": 24500,
+          "end": 24507,
           "symbol": "F:jb.field_I:Lwl;",
           "original": "field_I",
           "renamed": "projectile"
         },
         {
-          "start": 61198,
-          "end": 61205,
+          "start": 24508,
+          "end": 24515,
           "symbol": "F:wl.field_X:Lmb;",
           "original": "field_X",
           "renamed": "sourceSentinel"
         },
         {
-          "start": 61222,
-          "end": 61229,
+          "start": 24532,
+          "end": 24539,
           "symbol": "F:jb.field_I:Lwl;",
           "original": "field_I",
           "renamed": "projectile"
         },
         {
-          "start": 61230,
-          "end": 61237,
+          "start": 24540,
+          "end": 24547,
           "symbol": "F:wl.field_X:Lmb;",
           "original": "field_X",
           "renamed": "sourceSentinel"
         },
         {
-          "start": 61323,
-          "end": 61332,
-          "symbol": "B:jb.a(Z)V#0",
-          "original": "stateLoop",
-          "renamed": "scanLoop1",
-          "kind": "label"
-        },
-        {
-          "start": 61497,
-          "end": 61506,
-          "symbol": "B:jb.a(Z)V#0",
-          "original": "stateLoop",
-          "renamed": "scanLoop1",
-          "kind": "label"
-        },
-        {
-          "start": 61651,
-          "end": 61652,
+          "start": 24729,
+          "end": 24730,
           "symbol": "M:mb.e(II)V",
           "original": "e",
           "renamed": "reduceArmour"
         },
         {
-          "start": 61745,
-          "end": 61754,
-          "symbol": "B:jb.a(Z)V#0",
-          "original": "stateLoop",
-          "renamed": "scanLoop1",
-          "kind": "label"
-        },
-        {
-          "start": 62011,
-          "end": 62012,
+          "start": 24909,
+          "end": 24910,
           "symbol": "M:mb.i(II)Z",
           "original": "i",
           "renamed": "hasModuleType"
         },
         {
-          "start": 62471,
-          "end": 62480,
+          "start": 25041,
+          "end": 25044,
           "symbol": "B:jb.a(Z)V#0",
-          "original": "stateLoop",
-          "renamed": "scanLoop1",
+          "original": "L35",
+          "renamed": "regionExit1",
           "kind": "label"
         },
         {
-          "start": 62641,
-          "end": 62650,
-          "symbol": "B:jb.a(Z)V#0",
-          "original": "stateLoop",
-          "renamed": "scanLoop1",
-          "kind": "label"
-        },
-        {
-          "start": 62809,
-          "end": 62818,
-          "symbol": "B:jb.a(Z)V#0",
-          "original": "stateLoop",
-          "renamed": "scanLoop1",
-          "kind": "label"
-        },
-        {
-          "start": 62952,
-          "end": 62959,
+          "start": 25153,
+          "end": 25160,
           "symbol": "F:jb.field_I:Lwl;",
           "original": "field_I",
           "renamed": "projectile"
         },
         {
-          "start": 62976,
-          "end": 62983,
+          "start": 25177,
+          "end": 25184,
           "symbol": "F:jb.field_I:Lwl;",
           "original": "field_I",
           "renamed": "projectile"
         },
         {
-          "start": 63111,
-          "end": 63120,
-          "symbol": "B:jb.a(Z)V#0",
-          "original": "stateLoop",
-          "renamed": "scanLoop1",
-          "kind": "label"
-        },
-        {
-          "start": 63358,
-          "end": 63367,
-          "symbol": "B:jb.a(Z)V#0",
-          "original": "stateLoop",
-          "renamed": "scanLoop1",
-          "kind": "label"
-        },
-        {
-          "start": 63581,
-          "end": 63590,
-          "symbol": "B:jb.a(Z)V#0",
-          "original": "stateLoop",
-          "renamed": "scanLoop1",
-          "kind": "label"
-        },
-        {
-          "start": 63755,
-          "end": 63762,
+          "start": 25425,
+          "end": 25432,
           "symbol": "F:jb.field_H:I",
           "original": "field_H",
           "renamed": "worldX"
         },
         {
-          "start": 63845,
-          "end": 63854,
-          "symbol": "B:jb.a(Z)V#0",
-          "original": "stateLoop",
-          "renamed": "scanLoop1",
-          "kind": "label"
-        },
-        {
-          "start": 64211,
-          "end": 64218,
+          "start": 25671,
+          "end": 25678,
           "symbol": "F:jb.field_I:Lwl;",
           "original": "field_I",
           "renamed": "projectile"
         },
         {
-          "start": 64219,
-          "end": 64226,
+          "start": 25679,
+          "end": 25686,
           "symbol": "F:wl.field_C:I",
           "original": "field_C",
           "renamed": "effectType"
         },
         {
-          "start": 64323,
-          "end": 64332,
-          "symbol": "B:jb.a(Z)V#0",
-          "original": "stateLoop",
-          "renamed": "scanLoop1",
-          "kind": "label"
-        },
-        {
-          "start": 64512,
-          "end": 64519,
+          "start": 25730,
+          "end": 25737,
           "symbol": "F:jb.field_I:Lwl;",
           "original": "field_I",
           "renamed": "projectile"
         },
         {
-          "start": 64520,
-          "end": 64527,
+          "start": 25738,
+          "end": 25745,
           "symbol": "F:wl.field_C:I",
           "original": "field_C",
           "renamed": "effectType"
         },
         {
-          "start": 64640,
-          "end": 64649,
-          "symbol": "B:jb.a(Z)V#0",
-          "original": "stateLoop",
-          "renamed": "scanLoop1",
-          "kind": "label"
-        },
-        {
-          "start": 64861,
-          "end": 64868,
+          "start": 25789,
+          "end": 25796,
           "symbol": "F:jb.field_I:Lwl;",
           "original": "field_I",
           "renamed": "projectile"
         },
         {
-          "start": 64869,
-          "end": 64876,
+          "start": 25797,
+          "end": 25804,
           "symbol": "F:wl.field_C:I",
           "original": "field_C",
           "renamed": "effectType"
         },
         {
-          "start": 65005,
-          "end": 65014,
-          "symbol": "B:jb.a(Z)V#0",
-          "original": "stateLoop",
-          "renamed": "scanLoop1",
-          "kind": "label"
-        },
-        {
-          "start": 65258,
-          "end": 65265,
+          "start": 25848,
+          "end": 25855,
           "symbol": "F:jb.field_I:Lwl;",
           "original": "field_I",
           "renamed": "projectile"
         },
         {
-          "start": 65266,
-          "end": 65273,
+          "start": 25856,
+          "end": 25863,
           "symbol": "F:wl.field_C:I",
           "original": "field_C",
           "renamed": "effectType"
         },
         {
-          "start": 65601,
-          "end": 65610,
-          "symbol": "B:jb.a(Z)V#0",
-          "original": "stateLoop",
-          "renamed": "scanLoop1",
-          "kind": "label"
-        },
-        {
-          "start": 65979,
-          "end": 65988,
-          "symbol": "B:jb.a(Z)V#0",
-          "original": "stateLoop",
-          "renamed": "scanLoop1",
-          "kind": "label"
-        },
-        {
-          "start": 66103,
-          "end": 66110,
+          "start": 25928,
+          "end": 25935,
           "symbol": "F:jb.field_H:I",
           "original": "field_H",
           "renamed": "worldX"
         },
         {
-          "start": 66309,
-          "end": 66318,
-          "symbol": "B:jb.a(Z)V#0",
-          "original": "stateLoop",
-          "renamed": "scanLoop1",
-          "kind": "label"
-        },
-        {
-          "start": 66413,
-          "end": 66420,
+          "start": 26032,
+          "end": 26039,
           "symbol": "F:jb.field_H:I",
           "original": "field_H",
           "renamed": "worldX"
         },
         {
-          "start": 66460,
-          "end": 66461,
+          "start": 26098,
+          "end": 26099,
           "symbol": "M:mb.h(II)I",
           "original": "h",
           "renamed": "addModuleBonuses"
         },
         {
-          "start": 66597,
-          "end": 66606,
-          "symbol": "B:jb.a(Z)V#0",
-          "original": "stateLoop",
-          "renamed": "scanLoop1",
-          "kind": "label"
-        },
-        {
-          "start": 66684,
-          "end": 66692,
+          "start": 26258,
+          "end": 26266,
           "symbol": "F:mb.field_rb:I",
           "original": "field_rb",
           "renamed": "armour"
         },
         {
-          "start": 66832,
-          "end": 66839,
+          "start": 26328,
+          "end": 26335,
           "symbol": "F:jb.field_I:Lwl;",
           "original": "field_I",
           "renamed": "projectile"
         },
         {
-          "start": 66922,
-          "end": 66931,
-          "symbol": "B:jb.a(Z)V#0",
-          "original": "stateLoop",
-          "renamed": "scanLoop1",
-          "kind": "label"
-        },
-        {
-          "start": 67060,
-          "end": 67069,
-          "symbol": "B:jb.a(Z)V#0",
-          "original": "stateLoop",
-          "renamed": "scanLoop1",
-          "kind": "label"
-        },
-        {
-          "start": 67169,
-          "end": 67177,
+          "start": 26406,
+          "end": 26414,
           "symbol": "F:mb.field_rb:I",
           "original": "field_rb",
           "renamed": "armour"
         },
         {
-          "start": 67258,
-          "end": 67267,
-          "symbol": "B:jb.a(Z)V#0",
-          "original": "stateLoop",
-          "renamed": "scanLoop1",
-          "kind": "label"
-        },
-        {
-          "start": 67415,
-          "end": 67422,
+          "start": 26457,
+          "end": 26464,
           "symbol": "F:jb.field_I:Lwl;",
           "original": "field_I",
           "renamed": "projectile"
         },
         {
-          "start": 67423,
-          "end": 67430,
+          "start": 26465,
+          "end": 26472,
           "symbol": "F:wl.field_X:Lmb;",
           "original": "field_X",
           "renamed": "sourceSentinel"
         },
         {
-          "start": 67530,
-          "end": 67539,
-          "symbol": "B:jb.a(Z)V#0",
-          "original": "stateLoop",
-          "renamed": "scanLoop1",
-          "kind": "label"
-        },
-        {
-          "start": 67722,
-          "end": 67729,
+          "start": 26526,
+          "end": 26533,
           "symbol": "F:jb.field_I:Lwl;",
           "original": "field_I",
           "renamed": "projectile"
         },
         {
-          "start": 67730,
-          "end": 67737,
+          "start": 26534,
+          "end": 26541,
           "symbol": "F:wl.field_X:Lmb;",
           "original": "field_X",
           "renamed": "sourceSentinel"
         },
         {
-          "start": 67784,
-          "end": 67791,
+          "start": 26582,
+          "end": 26589,
           "symbol": "F:jb.field_I:Lwl;",
           "original": "field_I",
           "renamed": "projectile"
         },
         {
-          "start": 67792,
-          "end": 67799,
+          "start": 26590,
+          "end": 26597,
           "symbol": "F:wl.field_X:Lmb;",
           "original": "field_X",
           "renamed": "sourceSentinel"
         },
         {
-          "start": 67808,
-          "end": 67815,
+          "start": 26606,
+          "end": 26613,
           "symbol": "F:jb.field_I:Lwl;",
           "original": "field_I",
           "renamed": "projectile"
         },
         {
-          "start": 68065,
-          "end": 68074,
-          "symbol": "B:jb.a(Z)V#0",
-          "original": "stateLoop",
-          "renamed": "scanLoop1",
-          "kind": "label"
-        },
-        {
-          "start": 68271,
-          "end": 68278,
+          "start": 26670,
+          "end": 26677,
           "symbol": "F:jb.field_I:Lwl;",
           "original": "field_I",
           "renamed": "projectile"
         },
         {
-          "start": 68362,
-          "end": 68371,
-          "symbol": "B:jb.a(Z)V#0",
-          "original": "stateLoop",
-          "renamed": "scanLoop1",
-          "kind": "label"
-        },
-        {
-          "start": 68520,
-          "end": 68527,
+          "start": 26696,
+          "end": 26703,
           "symbol": "F:jb.field_I:Lwl;",
           "original": "field_I",
           "renamed": "projectile"
         },
         {
-          "start": 68536,
-          "end": 68544,
+          "start": 26712,
+          "end": 26720,
           "symbol": "F:mb.field_jc:I",
           "original": "field_jc",
           "renamed": "teamId"
         },
         {
-          "start": 68554,
-          "end": 68561,
+          "start": 26730,
+          "end": 26737,
           "symbol": "F:jb.field_I:Lwl;",
           "original": "field_I",
           "renamed": "projectile"
         },
         {
-          "start": 68562,
-          "end": 68569,
+          "start": 26738,
+          "end": 26745,
           "symbol": "F:wl.field_X:Lmb;",
           "original": "field_X",
           "renamed": "sourceSentinel"
         },
         {
-          "start": 68570,
-          "end": 68578,
+          "start": 26746,
+          "end": 26754,
           "symbol": "F:mb.field_jc:I",
           "original": "field_jc",
           "renamed": "teamId"
         },
         {
-          "start": 68670,
-          "end": 68679,
-          "symbol": "B:jb.a(Z)V#0",
-          "original": "stateLoop",
-          "renamed": "scanLoop1",
-          "kind": "label"
-        },
-        {
-          "start": 68860,
-          "end": 68868,
+          "start": 26796,
+          "end": 26804,
           "symbol": "F:mb.field_jc:I",
           "original": "field_jc",
           "renamed": "teamId"
         },
         {
-          "start": 68877,
-          "end": 68884,
+          "start": 26813,
+          "end": 26820,
           "symbol": "F:jb.field_I:Lwl;",
           "original": "field_I",
           "renamed": "projectile"
         },
         {
-          "start": 68885,
-          "end": 68892,
+          "start": 26821,
+          "end": 26828,
           "symbol": "F:wl.field_X:Lmb;",
           "original": "field_X",
           "renamed": "sourceSentinel"
         },
         {
-          "start": 68893,
-          "end": 68901,
+          "start": 26829,
+          "end": 26837,
           "symbol": "F:mb.field_jc:I",
           "original": "field_jc",
           "renamed": "teamId"
         },
         {
-          "start": 69143,
-          "end": 69152,
-          "symbol": "B:jb.a(Z)V#0",
-          "original": "stateLoop",
-          "renamed": "scanLoop1",
-          "kind": "label"
-        },
-        {
-          "start": 69350,
-          "end": 69357,
+          "start": 26887,
+          "end": 26894,
           "symbol": "F:jb.field_I:Lwl;",
           "original": "field_I",
           "renamed": "projectile"
         },
         {
-          "start": 69358,
-          "end": 69365,
+          "start": 26895,
+          "end": 26902,
           "symbol": "F:wl.field_X:Lmb;",
           "original": "field_X",
           "renamed": "sourceSentinel"
         },
         {
-          "start": 69527,
-          "end": 69536,
-          "symbol": "B:jb.a(Z)V#0",
-          "original": "stateLoop",
-          "renamed": "scanLoop1",
-          "kind": "label"
-        },
-        {
-          "start": 69616,
-          "end": 69623,
+          "start": 26951,
+          "end": 26958,
           "symbol": "F:jb.field_I:Lwl;",
           "original": "field_I",
           "renamed": "projectile"
         },
         {
-          "start": 69697,
-          "end": 69706,
-          "symbol": "B:jb.a(Z)V#0",
-          "original": "stateLoop",
-          "renamed": "scanLoop1",
-          "kind": "label"
-        },
-        {
-          "start": 69827,
-          "end": 69835,
+          "start": 27093,
+          "end": 27101,
           "symbol": "F:mb.field_rb:I",
           "original": "field_rb",
           "renamed": "armour"
         },
         {
-          "start": 70005,
-          "end": 70014,
-          "symbol": "B:jb.a(Z)V#0",
-          "original": "stateLoop",
-          "renamed": "scanLoop1",
-          "kind": "label"
-        },
-        {
-          "start": 70095,
-          "end": 70103,
+          "start": 27157,
+          "end": 27165,
           "symbol": "F:mb.field_rb:I",
           "original": "field_rb",
           "renamed": "armour"
         },
         {
-          "start": 70169,
-          "end": 70178,
-          "symbol": "B:jb.a(Z)V#0",
-          "original": "stateLoop",
-          "renamed": "scanLoop1",
-          "kind": "label"
-        },
-        {
-          "start": 70460,
-          "end": 70469,
-          "symbol": "B:jb.a(Z)V#0",
-          "original": "stateLoop",
-          "renamed": "scanLoop1",
-          "kind": "label"
-        },
-        {
-          "start": 70598,
-          "end": 70607,
-          "symbol": "B:jb.a(Z)V#0",
-          "original": "stateLoop",
-          "renamed": "scanLoop1",
-          "kind": "label"
-        },
-        {
-          "start": 70945,
-          "end": 70954,
-          "symbol": "B:jb.a(Z)V#0",
-          "original": "stateLoop",
-          "renamed": "scanLoop1",
-          "kind": "label"
-        },
-        {
-          "start": 71135,
-          "end": 71143,
+          "start": 27472,
+          "end": 27480,
           "symbol": "F:mb.field_jc:I",
           "original": "field_jc",
           "renamed": "teamId"
         },
         {
-          "start": 71152,
-          "end": 71160,
+          "start": 27489,
+          "end": 27497,
           "symbol": "F:mb.field_jc:I",
           "original": "field_jc",
           "renamed": "teamId"
         },
         {
-          "start": 71268,
-          "end": 71277,
-          "symbol": "B:jb.a(Z)V#0",
-          "original": "stateLoop",
-          "renamed": "scanLoop1",
-          "kind": "label"
-        },
-        {
-          "start": 71492,
-          "end": 71499,
+          "start": 27547,
+          "end": 27554,
           "symbol": "F:jb.field_Z:Lee;",
           "original": "field_Z",
           "renamed": "world"
         },
         {
-          "start": 71541,
-          "end": 71549,
+          "start": 27596,
+          "end": 27604,
           "symbol": "F:mb.field_Eb:I",
           "original": "field_Eb",
           "renamed": "maximumArmour"
         },
         {
-          "start": 71982,
-          "end": 71991,
-          "symbol": "B:jb.a(Z)V#0",
-          "original": "stateLoop",
-          "renamed": "scanLoop1",
-          "kind": "label"
-        },
-        {
-          "start": 72264,
-          "end": 72273,
-          "symbol": "B:jb.a(Z)V#0",
-          "original": "stateLoop",
-          "renamed": "scanLoop1",
-          "kind": "label"
-        },
-        {
-          "start": 72506,
-          "end": 72513,
+          "start": 27833,
+          "end": 27840,
           "symbol": "F:jb.field_Z:Lee;",
           "original": "field_Z",
           "renamed": "world"
         },
         {
-          "start": 72555,
-          "end": 72563,
+          "start": 27882,
+          "end": 27890,
           "symbol": "F:mb.field_Eb:I",
           "original": "field_Eb",
           "renamed": "maximumArmour"
         },
         {
-          "start": 72655,
-          "end": 72664,
-          "symbol": "B:jb.a(Z)V#0",
-          "original": "stateLoop",
-          "renamed": "scanLoop1",
-          "kind": "label"
-        },
-        {
-          "start": 72793,
-          "end": 72802,
-          "symbol": "B:jb.a(Z)V#0",
-          "original": "stateLoop",
-          "renamed": "scanLoop1",
-          "kind": "label"
-        },
-        {
-          "start": 73032,
-          "end": 73033,
+          "start": 28098,
+          "end": 28099,
           "symbol": "M:mb.e(II)V",
           "original": "e",
           "renamed": "reduceArmour"
         },
         {
-          "start": 73094,
-          "end": 73102,
+          "start": 28164,
+          "end": 28172,
           "symbol": "F:mb.field_rb:I",
           "original": "field_rb",
           "renamed": "armour"
         },
         {
-          "start": 73198,
-          "end": 73207,
-          "symbol": "B:jb.a(Z)V#0",
-          "original": "stateLoop",
-          "renamed": "scanLoop1",
-          "kind": "label"
-        },
-        {
-          "start": 73509,
-          "end": 73518,
-          "symbol": "B:jb.a(Z)V#0",
-          "original": "stateLoop",
-          "renamed": "scanLoop1",
-          "kind": "label"
-        },
-        {
-          "start": 73731,
-          "end": 73738,
+          "start": 28277,
+          "end": 28284,
           "symbol": "F:jb.field_I:Lwl;",
           "original": "field_I",
           "renamed": "projectile"
         },
         {
-          "start": 73871,
-          "end": 73880,
-          "symbol": "B:jb.a(Z)V#0",
-          "original": "stateLoop",
-          "renamed": "scanLoop1",
-          "kind": "label"
-        },
-        {
-          "start": 74124,
-          "end": 74131,
+          "start": 28336,
+          "end": 28343,
           "symbol": "F:jb.field_I:Lwl;",
           "original": "field_I",
           "renamed": "projectile"
         },
         {
-          "start": 74469,
-          "end": 74478,
-          "symbol": "B:jb.a(Z)V#0",
-          "original": "stateLoop",
-          "renamed": "scanLoop1",
-          "kind": "label"
-        },
-        {
-          "start": 74847,
-          "end": 74856,
-          "symbol": "B:jb.a(Z)V#0",
-          "original": "stateLoop",
-          "renamed": "scanLoop1",
-          "kind": "label"
-        },
-        {
-          "start": 74956,
-          "end": 74964,
+          "start": 28403,
+          "end": 28411,
           "symbol": "F:mb.field_jc:I",
           "original": "field_jc",
           "renamed": "teamId"
         },
         {
-          "start": 74975,
-          "end": 74983,
+          "start": 28422,
+          "end": 28430,
           "symbol": "F:mb.field_jc:I",
           "original": "field_jc",
           "renamed": "teamId"
         },
         {
-          "start": 75145,
-          "end": 75154,
-          "symbol": "B:jb.a(Z)V#0",
-          "original": "stateLoop",
-          "renamed": "scanLoop1",
-          "kind": "label"
-        },
-        {
-          "start": 75232,
-          "end": 75240,
+          "start": 28510,
+          "end": 28518,
           "symbol": "F:mb.field_rb:I",
           "original": "field_rb",
           "renamed": "armour"
         },
         {
-          "start": 75320,
-          "end": 75329,
-          "symbol": "B:jb.a(Z)V#0",
-          "original": "stateLoop",
-          "renamed": "scanLoop1",
-          "kind": "label"
-        },
-        {
-          "start": 75583,
-          "end": 75592,
-          "symbol": "B:jb.a(Z)V#0",
-          "original": "stateLoop",
-          "renamed": "scanLoop1",
-          "kind": "label"
-        },
-        {
-          "start": 76029,
-          "end": 76038,
-          "symbol": "B:jb.a(Z)V#0",
-          "original": "stateLoop",
-          "renamed": "scanLoop1",
-          "kind": "label"
-        },
-        {
-          "start": 76233,
-          "end": 76240,
+          "start": 28622,
+          "end": 28629,
           "symbol": "F:jb.field_I:Lwl;",
           "original": "field_I",
           "renamed": "projectile"
         },
         {
-          "start": 76241,
-          "end": 76248,
+          "start": 28630,
+          "end": 28637,
           "symbol": "F:wl.field_y:I",
           "original": "field_y",
           "renamed": "sourceWeaponType"
         },
         {
-          "start": 76324,
-          "end": 76333,
-          "symbol": "B:jb.a(Z)V#0",
-          "original": "stateLoop",
-          "renamed": "scanLoop1",
-          "kind": "label"
-        },
-        {
-          "start": 76481,
-          "end": 76488,
+          "start": 28680,
+          "end": 28687,
           "symbol": "F:jb.field_I:Lwl;",
           "original": "field_I",
           "renamed": "projectile"
         },
         {
-          "start": 76769,
-          "end": 76778,
-          "symbol": "B:jb.a(Z)V#0",
-          "original": "stateLoop",
-          "renamed": "scanLoop1",
-          "kind": "label"
-        },
-        {
-          "start": 76939,
-          "end": 76948,
-          "symbol": "B:jb.a(Z)V#0",
-          "original": "stateLoop",
-          "renamed": "scanLoop1",
-          "kind": "label"
-        },
-        {
-          "start": 77270,
-          "end": 77279,
-          "symbol": "B:jb.a(Z)V#0",
-          "original": "stateLoop",
-          "renamed": "scanLoop1",
-          "kind": "label"
-        },
-        {
-          "start": 77362,
-          "end": 77370,
+          "start": 28922,
+          "end": 28930,
           "symbol": "F:mb.field_rb:I",
           "original": "field_rb",
           "renamed": "armour"
         },
         {
-          "start": 77446,
-          "end": 77455,
-          "symbol": "B:jb.a(Z)V#0",
-          "original": "stateLoop",
-          "renamed": "scanLoop1",
-          "kind": "label"
-        },
-        {
-          "start": 77603,
-          "end": 77610,
+          "start": 28971,
+          "end": 28978,
           "symbol": "F:jb.field_I:Lwl;",
           "original": "field_I",
           "renamed": "projectile"
         },
         {
-          "start": 77611,
-          "end": 77618,
+          "start": 28979,
+          "end": 28986,
           "symbol": "F:wl.field_X:Lmb;",
           "original": "field_X",
           "renamed": "sourceSentinel"
         },
         {
-          "start": 77718,
-          "end": 77727,
-          "symbol": "B:jb.a(Z)V#0",
-          "original": "stateLoop",
-          "renamed": "scanLoop1",
-          "kind": "label"
-        },
-        {
-          "start": 78027,
-          "end": 78036,
-          "symbol": "B:jb.a(Z)V#0",
-          "original": "stateLoop",
-          "renamed": "scanLoop1",
-          "kind": "label"
-        },
-        {
-          "start": 78245,
-          "end": 78246,
+          "start": 29090,
+          "end": 29091,
           "symbol": "M:mb.e(II)V",
           "original": "e",
           "renamed": "reduceArmour"
         },
         {
-          "start": 78381,
-          "end": 78390,
-          "symbol": "B:jb.a(Z)V#0",
-          "original": "stateLoop",
-          "renamed": "scanLoop1",
-          "kind": "label"
-        },
-        {
-          "start": 78744,
-          "end": 78753,
-          "symbol": "B:jb.a(Z)V#0",
-          "original": "stateLoop",
-          "renamed": "scanLoop1",
-          "kind": "label"
-        },
-        {
-          "start": 78925,
-          "end": 78932,
+          "start": 29293,
+          "end": 29300,
           "symbol": "F:jb.field_I:Lwl;",
           "original": "field_I",
           "renamed": "projectile"
         },
         {
-          "start": 78949,
-          "end": 78956,
+          "start": 29317,
+          "end": 29324,
           "symbol": "F:jb.field_I:Lwl;",
           "original": "field_I",
           "renamed": "projectile"
         },
         {
-          "start": 79122,
-          "end": 79129,
+          "start": 29388,
+          "end": 29395,
           "symbol": "F:jb.field_I:Lwl;",
           "original": "field_I",
           "renamed": "projectile"
         },
         {
-          "start": 79153,
-          "end": 79160,
+          "start": 29428,
+          "end": 29435,
           "symbol": "F:jb.field_I:Lwl;",
           "original": "field_I",
           "renamed": "projectile"
         },
         {
-          "start": 79266,
-          "end": 79275,
-          "symbol": "B:jb.a(Z)V#0",
-          "original": "stateLoop",
-          "renamed": "scanLoop1",
-          "kind": "label"
-        },
-        {
-          "start": 79436,
-          "end": 79445,
-          "symbol": "B:jb.a(Z)V#0",
-          "original": "stateLoop",
-          "renamed": "scanLoop1",
-          "kind": "label"
-        },
-        {
-          "start": 79607,
-          "end": 79614,
+          "start": 29528,
+          "end": 29535,
           "symbol": "F:jb.field_I:Lwl;",
           "original": "field_I",
           "renamed": "projectile"
         },
         {
-          "start": 79631,
-          "end": 79638,
+          "start": 29552,
+          "end": 29559,
           "symbol": "F:jb.field_I:Lwl;",
           "original": "field_I",
           "renamed": "projectile"
         },
         {
-          "start": 79727,
-          "end": 79736,
-          "symbol": "B:jb.a(Z)V#0",
-          "original": "stateLoop",
-          "renamed": "scanLoop1",
-          "kind": "label"
-        },
-        {
-          "start": 79885,
-          "end": 79893,
+          "start": 29611,
+          "end": 29619,
           "symbol": "F:mb.field_Tb:I",
           "original": "field_Tb",
           "renamed": "charge"
         },
         {
-          "start": 79990,
-          "end": 79999,
-          "symbol": "B:jb.a(Z)V#0",
-          "original": "stateLoop",
-          "renamed": "scanLoop1",
-          "kind": "label"
-        },
-        {
-          "start": 80353,
-          "end": 80354,
+          "start": 29710,
+          "end": 29711,
           "symbol": "M:mb.a(ZI)V",
           "original": "a",
           "renamed": "consumeCharge"
         },
         {
-          "start": 80376,
-          "end": 80384,
+          "start": 29733,
+          "end": 29741,
           "symbol": "F:mb.field_Tb:I",
           "original": "field_Tb",
           "renamed": "charge"
         },
         {
-          "start": 80398,
-          "end": 80405,
+          "start": 29764,
+          "end": 29771,
           "symbol": "F:jb.field_I:Lwl;",
           "original": "field_I",
           "renamed": "projectile"
         },
         {
-          "start": 80422,
-          "end": 80429,
+          "start": 29788,
+          "end": 29795,
           "symbol": "F:jb.field_I:Lwl;",
           "original": "field_I",
           "renamed": "projectile"
         },
         {
-          "start": 80558,
-          "end": 80567,
-          "symbol": "B:jb.a(Z)V#0",
-          "original": "stateLoop",
-          "renamed": "scanLoop1",
-          "kind": "label"
-        },
-        {
-          "start": 80760,
-          "end": 80769,
-          "symbol": "B:jb.a(Z)V#0",
-          "original": "stateLoop",
-          "renamed": "scanLoop1",
-          "kind": "label"
-        },
-        {
-          "start": 80998,
-          "end": 80999,
+          "start": 29880,
+          "end": 29881,
           "symbol": "M:mb.i(II)Z",
           "original": "i",
           "renamed": "hasModuleType"
         },
         {
-          "start": 81084,
-          "end": 81093,
-          "symbol": "B:jb.a(Z)V#0",
-          "original": "stateLoop",
-          "renamed": "scanLoop1",
-          "kind": "label"
-        },
-        {
-          "start": 81346,
-          "end": 81355,
-          "symbol": "B:jb.a(Z)V#0",
-          "original": "stateLoop",
-          "renamed": "scanLoop1",
-          "kind": "label"
-        },
-        {
-          "start": 81875,
-          "end": 81884,
-          "symbol": "B:jb.a(Z)V#0",
-          "original": "stateLoop",
-          "renamed": "scanLoop1",
-          "kind": "label"
-        },
-        {
-          "start": 82147,
-          "end": 82156,
-          "symbol": "B:jb.a(Z)V#0",
-          "original": "stateLoop",
-          "renamed": "scanLoop1",
-          "kind": "label"
-        },
-        {
-          "start": 82364,
-          "end": 82365,
+          "start": 30235,
+          "end": 30236,
           "symbol": "M:mb.i(II)Z",
           "original": "i",
           "renamed": "hasModuleType"
         },
         {
-          "start": 82466,
-          "end": 82475,
-          "symbol": "B:jb.a(Z)V#0",
-          "original": "stateLoop",
-          "renamed": "scanLoop1",
-          "kind": "label"
-        },
-        {
-          "start": 82959,
-          "end": 82968,
-          "symbol": "B:jb.a(Z)V#0",
-          "original": "stateLoop",
-          "renamed": "scanLoop1",
-          "kind": "label"
-        },
-        {
-          "start": 83161,
-          "end": 83170,
-          "symbol": "B:jb.a(Z)V#0",
-          "original": "stateLoop",
-          "renamed": "scanLoop1",
-          "kind": "label"
-        },
-        {
-          "start": 83401,
-          "end": 83410,
-          "symbol": "B:jb.a(Z)V#0",
-          "original": "stateLoop",
-          "renamed": "scanLoop1",
-          "kind": "label"
-        },
-        {
-          "start": 83704,
-          "end": 83713,
-          "symbol": "B:jb.a(Z)V#0",
-          "original": "stateLoop",
-          "renamed": "scanLoop1",
-          "kind": "label"
-        },
-        {
-          "start": 83916,
-          "end": 83925,
-          "symbol": "B:jb.a(Z)V#0",
-          "original": "stateLoop",
-          "renamed": "scanLoop1",
-          "kind": "label"
-        },
-        {
-          "start": 84103,
-          "end": 84112,
-          "symbol": "B:jb.a(Z)V#0",
-          "original": "stateLoop",
-          "renamed": "scanLoop1",
-          "kind": "label"
-        },
-        {
-          "start": 84364,
-          "end": 84373,
-          "symbol": "B:jb.a(Z)V#0",
-          "original": "stateLoop",
-          "renamed": "scanLoop1",
-          "kind": "label"
-        },
-        {
-          "start": 84498,
-          "end": 84505,
+          "start": 30900,
+          "end": 30907,
           "symbol": "F:jb.field_z:I",
           "original": "field_z",
           "renamed": "durationTicks"
         },
         {
-          "start": 84514,
-          "end": 84521,
+          "start": 30915,
+          "end": 30922,
           "symbol": "F:jb.field_Y:I",
           "original": "field_Y",
           "renamed": "ageTicks"
         },
         {
-          "start": 84597,
-          "end": 84606,
-          "symbol": "B:jb.a(Z)V#0",
-          "original": "stateLoop",
-          "renamed": "scanLoop1",
-          "kind": "label"
-        },
-        {
-          "start": 84750,
-          "end": 84757,
+          "start": 30943,
+          "end": 30950,
           "symbol": "F:jb.field_Z:Lee;",
           "original": "field_Z",
           "renamed": "world"
         },
         {
-          "start": 84758,
-          "end": 84765,
+          "start": 30951,
+          "end": 30958,
           "symbol": "F:ee.field_J:Lra;",
           "original": "field_J",
           "renamed": "pendingRemovals"
         },
         {
-          "start": 84766,
-          "end": 84767,
+          "start": 30959,
+          "end": 30960,
           "symbol": "M:ra.a(BLkd;)V",
           "original": "a",
           "renamed": "addLast"
         },
         {
-          "start": 84780,
-          "end": 84782,
+          "start": 30973,
+          "end": 30975,
           "symbol": "C:kd",
           "original": "kd",
           "renamed": "DualNode"
         },
         {
-          "start": 84873,
-          "end": 84882,
-          "symbol": "B:jb.a(Z)V#0",
-          "original": "stateLoop",
-          "renamed": "scanLoop1",
-          "kind": "label"
-        },
-        {
-          "start": 85630,
-          "end": 85632,
+          "start": 31518,
+          "end": 31520,
           "symbol": "M:jb.<init>(IIIIILee;[Lmb;Lwl;)V",
           "original": "jb",
           "renamed": "Explosion"
         },
         {
-          "start": 85637,
-          "end": 85643,
+          "start": 31525,
+          "end": 31531,
           "symbol": "P:jb.<init>(IIIIILee;[Lmb;Lwl;)V#0",
           "original": "param0",
           "renamed": "worldX"
         },
         {
-          "start": 85649,
-          "end": 85655,
+          "start": 31537,
+          "end": 31543,
           "symbol": "P:jb.<init>(IIIIILee;[Lmb;Lwl;)V#1",
           "original": "param1",
           "renamed": "worldY"
         },
         {
-          "start": 85661,
-          "end": 85667,
+          "start": 31549,
+          "end": 31555,
           "symbol": "P:jb.<init>(IIIIILee;[Lmb;Lwl;)V#2",
           "original": "param2",
           "renamed": "velocityX"
         },
         {
-          "start": 85673,
-          "end": 85679,
+          "start": 31561,
+          "end": 31567,
           "symbol": "P:jb.<init>(IIIIILee;[Lmb;Lwl;)V#3",
           "original": "param3",
           "renamed": "velocityY"
         },
         {
-          "start": 85685,
-          "end": 85691,
+          "start": 31573,
+          "end": 31579,
           "symbol": "P:jb.<init>(IIIIILee;[Lmb;Lwl;)V#4",
           "original": "param4",
           "renamed": "durationTicks"
         },
         {
-          "start": 85693,
-          "end": 85695,
+          "start": 31581,
+          "end": 31583,
           "symbol": "C:ee",
           "original": "ee",
           "renamed": "CombatWorld"
         },
         {
-          "start": 85696,
-          "end": 85702,
+          "start": 31584,
+          "end": 31590,
           "symbol": "P:jb.<init>(IIIIILee;[Lmb;Lwl;)V#5",
           "original": "param5",
           "renamed": "world"
         },
         {
-          "start": 85704,
-          "end": 85706,
+          "start": 31592,
+          "end": 31594,
           "symbol": "C:mb",
           "original": "mb",
           "renamed": "Sentinel"
         },
         {
-          "start": 85709,
-          "end": 85715,
+          "start": 31597,
+          "end": 31603,
           "symbol": "P:jb.<init>(IIIIILee;[Lmb;Lwl;)V#6",
           "original": "param6",
           "renamed": "affectedSentinels"
         },
         {
-          "start": 85717,
-          "end": 85719,
+          "start": 31605,
+          "end": 31607,
           "symbol": "C:wl",
           "original": "wl",
           "renamed": "Projectile"
         },
         {
-          "start": 85720,
-          "end": 85726,
+          "start": 31608,
+          "end": 31614,
           "symbol": "P:jb.<init>(IIIIILee;[Lmb;Lwl;)V#7",
           "original": "param7",
           "renamed": "projectile"
         },
         {
-          "start": 86137,
-          "end": 86144,
+          "start": 32025,
+          "end": 32032,
           "symbol": "F:jb.field_X:[Lmb;",
           "original": "field_X",
           "renamed": "affectedSentinels"
         },
         {
-          "start": 86147,
-          "end": 86153,
+          "start": 32035,
+          "end": 32041,
           "symbol": "P:jb.<init>(IIIIILee;[Lmb;Lwl;)V#6",
           "original": "param6",
           "renamed": "affectedSentinels"
         },
         {
-          "start": 86170,
-          "end": 86177,
+          "start": 32058,
+          "end": 32065,
           "symbol": "F:jb.field_T:I",
           "original": "field_T",
           "renamed": "velocityY"
         },
         {
-          "start": 86180,
-          "end": 86186,
+          "start": 32068,
+          "end": 32074,
           "symbol": "P:jb.<init>(IIIIILee;[Lmb;Lwl;)V#3",
           "original": "param3",
           "renamed": "velocityY"
         },
         {
-          "start": 86203,
-          "end": 86210,
+          "start": 32091,
+          "end": 32098,
           "symbol": "F:jb.field_z:I",
           "original": "field_z",
           "renamed": "durationTicks"
         },
         {
-          "start": 86213,
-          "end": 86219,
+          "start": 32101,
+          "end": 32107,
           "symbol": "P:jb.<init>(IIIIILee;[Lmb;Lwl;)V#4",
           "original": "param4",
           "renamed": "durationTicks"
         },
         {
-          "start": 86236,
-          "end": 86243,
+          "start": 32124,
+          "end": 32131,
           "symbol": "F:jb.field_V:I",
           "original": "field_V",
           "renamed": "velocityX"
         },
         {
-          "start": 86246,
-          "end": 86252,
+          "start": 32134,
+          "end": 32140,
           "symbol": "P:jb.<init>(IIIIILee;[Lmb;Lwl;)V#2",
           "original": "param2",
           "renamed": "velocityX"
         },
         {
-          "start": 86269,
-          "end": 86276,
+          "start": 32157,
+          "end": 32164,
           "symbol": "F:jb.field_H:I",
           "original": "field_H",
           "renamed": "worldX"
         },
         {
-          "start": 86279,
-          "end": 86285,
+          "start": 32167,
+          "end": 32173,
           "symbol": "P:jb.<init>(IIIIILee;[Lmb;Lwl;)V#0",
           "original": "param0",
           "renamed": "worldX"
         },
         {
-          "start": 86302,
-          "end": 86309,
+          "start": 32190,
+          "end": 32197,
           "symbol": "F:jb.field_Z:Lee;",
           "original": "field_Z",
           "renamed": "world"
         },
         {
-          "start": 86312,
-          "end": 86318,
+          "start": 32200,
+          "end": 32206,
           "symbol": "P:jb.<init>(IIIIILee;[Lmb;Lwl;)V#5",
           "original": "param5",
           "renamed": "world"
         },
         {
-          "start": 86335,
-          "end": 86342,
+          "start": 32223,
+          "end": 32230,
           "symbol": "F:jb.field_Y:I",
           "original": "field_Y",
           "renamed": "ageTicks"
         },
         {
-          "start": 86363,
-          "end": 86370,
+          "start": 32251,
+          "end": 32258,
           "symbol": "F:jb.field_I:Lwl;",
           "original": "field_I",
           "renamed": "projectile"
         },
         {
-          "start": 86373,
-          "end": 86379,
+          "start": 32261,
+          "end": 32267,
           "symbol": "P:jb.<init>(IIIIILee;[Lmb;Lwl;)V#7",
           "original": "param7",
           "renamed": "projectile"
         },
         {
-          "start": 86396,
-          "end": 86403,
+          "start": 32284,
+          "end": 32291,
           "symbol": "F:jb.field_M:I",
           "original": "field_M",
           "renamed": "worldY"
         },
         {
-          "start": 86406,
-          "end": 86412,
+          "start": 32294,
+          "end": 32300,
           "symbol": "P:jb.<init>(IIIIILee;[Lmb;Lwl;)V#1",
           "original": "param1",
           "renamed": "worldY"
         },
         {
-          "start": 86444,
-          "end": 86451,
+          "start": 32332,
+          "end": 32339,
           "symbol": "F:jb.field_H:I",
           "original": "field_H",
           "renamed": "worldX"
         },
         {
-          "start": 86480,
-          "end": 86487,
+          "start": 32368,
+          "end": 32375,
           "symbol": "F:jb.field_I:Lwl;",
           "original": "field_I",
           "renamed": "projectile"
         },
         {
-          "start": 86523,
-          "end": 86530,
+          "start": 32411,
+          "end": 32418,
           "symbol": "F:jb.field_I:Lwl;",
           "original": "field_I",
           "renamed": "projectile"
         },
         {
-          "start": 86656,
-          "end": 86663,
+          "start": 32544,
+          "end": 32551,
           "symbol": "F:jb.field_z:I",
           "original": "field_z",
           "renamed": "durationTicks"
         },
         {
-          "start": 86688,
-          "end": 86695,
+          "start": 32576,
+          "end": 32583,
           "symbol": "F:jb.field_z:I",
           "original": "field_z",
           "renamed": "durationTicks"
         },
         {
-          "start": 86788,
-          "end": 86795,
+          "start": 32676,
+          "end": 32683,
           "symbol": "F:jb.field_Y:I",
           "original": "field_Y",
           "renamed": "ageTicks"
         },
         {
-          "start": 86804,
-          "end": 86811,
+          "start": 32692,
+          "end": 32699,
           "symbol": "F:jb.field_z:I",
           "original": "field_z",
           "renamed": "durationTicks"
         },
         {
-          "start": 86819,
-          "end": 86826,
+          "start": 32707,
+          "end": 32714,
           "symbol": "F:jb.field_Y:I",
           "original": "field_Y",
           "renamed": "ageTicks"
         },
         {
-          "start": 86840,
-          "end": 86847,
+          "start": 32728,
+          "end": 32735,
           "symbol": "F:jb.field_z:I",
           "original": "field_z",
           "renamed": "durationTicks"
         },
         {
-          "start": 87153,
-          "end": 87159,
+          "start": 33041,
+          "end": 33047,
           "symbol": "P:jb.<init>(IIIIILee;[Lmb;Lwl;)V#0",
           "original": "param0",
           "renamed": "worldX"
         },
         {
-          "start": 87180,
-          "end": 87186,
+          "start": 33068,
+          "end": 33074,
           "symbol": "P:jb.<init>(IIIIILee;[Lmb;Lwl;)V#1",
           "original": "param1",
           "renamed": "worldY"
         },
         {
-          "start": 87207,
-          "end": 87213,
+          "start": 33095,
+          "end": 33101,
           "symbol": "P:jb.<init>(IIIIILee;[Lmb;Lwl;)V#2",
           "original": "param2",
           "renamed": "velocityX"
         },
         {
-          "start": 87234,
-          "end": 87240,
+          "start": 33122,
+          "end": 33128,
           "symbol": "P:jb.<init>(IIIIILee;[Lmb;Lwl;)V#3",
           "original": "param3",
           "renamed": "velocityY"
         },
         {
-          "start": 87261,
-          "end": 87267,
+          "start": 33149,
+          "end": 33155,
           "symbol": "P:jb.<init>(IIIIILee;[Lmb;Lwl;)V#4",
           "original": "param4",
           "renamed": "durationTicks"
         },
         {
-          "start": 87296,
-          "end": 87302,
+          "start": 33184,
+          "end": 33190,
           "symbol": "P:jb.<init>(IIIIILee;[Lmb;Lwl;)V#5",
           "original": "param5",
           "renamed": "world"
         },
         {
-          "start": 87528,
-          "end": 87534,
+          "start": 33416,
+          "end": 33422,
           "symbol": "P:jb.<init>(IIIIILee;[Lmb;Lwl;)V#6",
           "original": "param6",
           "renamed": "affectedSentinels"
         },
         {
-          "start": 87761,
-          "end": 87767,
+          "start": 33649,
+          "end": 33655,
           "symbol": "P:jb.<init>(IIIIILee;[Lmb;Lwl;)V#7",
           "original": "param7",
           "renamed": "projectile"
         },
         {
-          "start": 88286,
-          "end": 88288,
+          "start": 34174,
+          "end": 34176,
           "symbol": "C:ul",
           "original": "ul",
           "renamed": "NodeDeque"
@@ -608042,13 +606277,13 @@
     "mode": "readable-source-mirror",
     "source": {
       "repository": "Kreijstal/funorb-decompiled",
-      "commit": "1655ca853d0d4027018f3efcdc37be76ab7895f4",
+      "commit": "56c18e5fa3eda13b7324b0df50a3746fc39e3242",
       "subdirectory": "games/steelsentinels"
     },
-    "rulesSha256": "d145cfb21ef03a0e13d76b1df728ea38a6dfb027de924a9460c2c2aae825d206",
+    "rulesSha256": "82f47987aecfa0871d317562c34186c4df8314410a3c5cd737269db433618987",
     "generatorSha256": "c87ba8382ad34d3c3c57003e11e034e8eb16f2f20a91985e9179c7253427aab7",
-    "inputTreeSha256": "2713f45b1bf8186a4a2e4c283f1b1cca876716cb17a00318e3d87ceaa13e5399",
-    "outputTreeSha256": "b937189f3a4d494ba1c5cc87bdfc692f10c9c46b51223b9a501b30fd913cab3f",
+    "inputTreeSha256": "6478eb5845afc293d37ad893c4eafe6eb3b6d55555de4c0af0c477822e7a4de1",
+    "outputTreeSha256": "58b8cf63e55bde2b4704304041b4129add4387cfa86e6aee03f9480cb477d303",
     "jdk": "openjdk version \"11.0.32.1\" 2026-08-18\nOpenJDK Runtime Environment (build 11.0.32.1+1)\nOpenJDK 64-Bit Server VM (build 11.0.32.1+1, mixed mode)",
     "classpath": [
       {
@@ -608059,13 +606294,13 @@
     "verification": {
       "originalCompiles": true,
       "renamedCompiles": true,
-      "bindingsCompared": 288740,
+      "bindingsCompared": 288434,
       "overrideFamiliesChecked": 417,
       "overrideRelationshipsPreserved": true,
       "classNameLiteralBindingsCompared": 11,
       "classNameLiteralEdits": 0,
-      "labelBindingsCompared": 1234,
-      "labelEdits": 1234,
+      "labelBindingsCompared": 1023,
+      "labelEdits": 1023,
       "runtimeEquivalenceVerified": false,
       "gameplayCore": {
         "checks": 40109,
@@ -608084,26 +606319,69 @@
   },
   "generators": {
     "javaTools": {
-      "repository": "Kreijstal/java-tools",
-      "commit": "92e6a69ec0692bf9e6b1f63a30406bfc5455e86c",
-      "trackedClean": true,
-      "sourceArchive": {
-        "sha256": "f268ab42f8acb99fe87c86e38819a820ce801510a2a388972021d2d046522775",
-        "reproduce": "git archive --format=tar 92e6a69ec0692bf9e6b1f63a30406bfc5455e86c | sha256sum",
-        "format": "Git-generated tar archive of all tracked decompiler repository files; excludes build caches and dependencies"
+      "base": {
+        "repository": "Kreijstal/java-tools",
+        "commit": "92e6a69ec0692bf9e6b1f63a30406bfc5455e86c",
+        "trackedClean": true,
+        "sourceArchive": {
+          "sha256": "f268ab42f8acb99fe87c86e38819a820ce801510a2a388972021d2d046522775",
+          "reproduce": "git archive --format=tar 92e6a69ec0692bf9e6b1f63a30406bfc5455e86c | sha256sum",
+          "format": "Git-generated tar archive of all tracked decompiler repository files; excludes build caches and dependencies"
+        },
+        "sourceTreeSha256": "2713f45b1bf8186a4a2e4c283f1b1cca876716cb17a00318e3d87ceaa13e5399",
+        "correctedFailures": {
+          "pipeline": 0,
+          "cli": 1,
+          "verify": 0,
+          "javac": 1
+        },
+        "runner": {
+          "repository": "Kreijstal/dekobloko-work",
+          "commit": "c1ee9703d1fe3c1e6d1c8f2503496ff59f72de7d",
+          "sourceSha256": "6f2fefbeb420abd0c0c80a286b676b55130acd3e8f83383085aaf50f83fd3880"
+        }
       },
-      "sourceTreeSha256": "2713f45b1bf8186a4a2e4c283f1b1cca876716cb17a00318e3d87ceaa13e5399",
-      "correctedFailures": {
-        "pipeline": 0,
-        "cli": 1,
-        "verify": 0,
-        "javac": 1
+      "methodReconstruction": {
+        "method": "jb.a(Z)V",
+        "bytecode": "73c5ce3191038cd4472776e90ab73049ba41ca39bea2d34b97b61f815333b353",
+        "sourcePin": "1655ca853d0d4027018f3efcdc37be76ab7895f4",
+        "compiler": {
+          "commit": "83acdd6beb2590213f8e4f0d2a5a4f7a52355b89",
+          "sourceArchiveSha256": "263464ed40d91927f3977c2ee0f8b9d3fe4d3892752cb86deccaaf9e451d5bd6"
+        },
+        "baseline": {
+          "commit": "92e6a69ec0692bf9e6b1f63a30406bfc5455e86c",
+          "reason": "irreducible: irreducible CFG: 1 non-dominating retreating edge(s)",
+          "dispatchStates": 94
+        },
+        "reconstruction": {
+          "originalBlocks": 271,
+          "clonedBlocks": 4,
+          "originalEdgesVerified": true,
+          "copyCertificateVerified": true,
+          "stateMachine": false,
+          "deterministic": true,
+          "oldBodySha256": "67bf2f9f4afef0cf0a1a7c1001304dcb371662325fb5b78dd50d910a6421658d",
+          "newBodySha256": "90e177a033b6128f188831e1008b98c02ed0fe665a1db7b209d3637bb878f6a8"
+        },
+        "native": {
+          "summary": "cases:790/checks:2288",
+          "bytecodeOldJavaNewJavaIdentical": true,
+          "traceSha256": "747dde9cc5d4a7ed1dceef867ef3e57415266794ba25e8f6fbc5f5dac842283e",
+          "visualEmissionSuppressed": true,
+          "fullCollisionAndRenderingVerified": false
+        },
+        "rawSources": {
+          "files": 347,
+          "sha256": "6478eb5845afc293d37ad893c4eafe6eb3b6d55555de4c0af0c477822e7a4de1"
+        },
+        "runner": {
+          "repository": "Kreijstal/dekobloko-work",
+          "path": "readable/reconstruct-steel-explosion.mjs",
+          "sha256": "cadc0a0fec0a18c1282d769a399661a45868e207a3a2eb507c5f79ac233868f5"
+        }
       },
-      "runner": {
-        "repository": "Kreijstal/dekobloko-work",
-        "commit": "c1ee9703d1fe3c1e6d1c8f2503496ff59f72de7d",
-        "sourceSha256": "6f2fefbeb420abd0c0c80a286b676b55130acd3e8f83383085aaf50f83fd3880"
-      }
+      "sourceTreeSha256": "6478eb5845afc293d37ad893c4eafe6eb3b6d55555de4c0af0c477822e7a4de1"
     },
     "namingTool": {
       "schema": 1,
