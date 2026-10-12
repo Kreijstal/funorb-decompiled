@@ -8,14 +8,14 @@ final class rn {
     static int field_c;
     static String field_b;
 
-    final static void a(int param0, Battlefield param1) {
-        if (param0 >= -1) {
+    final static void generateProceduralMap(int obfuscationGuard, Battlefield battlefield) {
+        if (obfuscationGuard >= -1) {
           return;
         }
         try {
-          MovementPlanner.a((byte) 96, param1);
+          MovementPlanner.generateProceduralMap((byte) 96, battlefield);
         } catch (RuntimeException runtimeException) {
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "rn.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "rn.C(" + obfuscationGuard + ',' + (battlefield != null ? "{...}" : "null") + ')');
         }
     }
 

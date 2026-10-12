@@ -380,7 +380,7 @@ abstract class nl extends Widget implements gw {
           vu.field_Q = new ClientUiComponent(0L, eq.field_h);
           vu.field_Q.horizontalAlignment = 1;
           vu.field_Q.verticalAlignment = 0;
-          td.field_g = new ClientUiComponent(0L, bw.field_h, ul.field_f.toUpperCase());
+          td.field_g = new ClientUiComponent(0L, bw.field_h, LineOfSightGrid.field_f.toUpperCase());
           qc.field_c = new ClientUiComponent(0L, ArchiveIndex.field_b);
           qc.field_c.addChild(vu.field_Q, 116);
           qc.field_c.addChild(td.field_g, 89);

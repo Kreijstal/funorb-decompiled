@@ -29,7 +29,7 @@ final class cg {
     }
 
     private final int a(int param0, int param1, int param2) {
-        int var4 = th.a(param0, 1, param1);
+        int var4 = th.floorModWithOffset(param0, 1, param1);
         if (var4 > param1 / 2) {
           var4 = param1 - var4;
         }

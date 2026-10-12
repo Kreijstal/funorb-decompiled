@@ -36,7 +36,7 @@ final class qp extends dr {
     final static int e(byte param0) {
         if (param0 >= -123) {
           Random var2 = (Random) null;
-          qp.a(-126, -81, -63, -13, -70, -42, (Battlefield) null, -51, (Random) null);
+          qp.paintTerrainConnection(-126, -81, -63, -13, -70, -42, (Battlefield) null, -51, (Random) null);
         }
         return nm.field_z;
     }
@@ -147,7 +147,7 @@ final class qp extends dr {
         field_E = null;
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int param4, int param5, Battlefield param6, int param7, Random param8) {
+    final static void paintTerrainConnection(int startY, int endX, int obfuscationGuard, int endY, int startX, int recursionDepth, Battlefield battlefield, int terrainType, Random random) {
         int stackIn_7_0 = 0;
         int stackIn_12_0 = 0;
         int stackIn_12_1 = 0;
@@ -205,7 +205,7 @@ final class qp extends dr {
         int var15 = 0;
         var15 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          if (5 == param5) {
+          if (5 == recursionDepth) {
             return;
           }
           boolean decompiledFrameCompleted14 = true;
@@ -223,13 +223,13 @@ final class qp extends dr {
           boolean decompiledFrameCompleted2 = true;
           boolean decompiledFrameCompleted1 = true;
           boolean decompiledFrameCompleted0 = true;
-          var9_int = -param4 + param1;
-          var10 = param3 - param0;
+          var9_int = -startX + endX;
+          var10 = endY - startY;
           var11 = 0;
           var12 = 0;
           var13 = 0;
           var14 = 0;
-          if (param1 == param4) {
+          if (endX == startX) {
             stackIn_7_0 = (0 >= var10) ? -1 : 1;
             var11 = stackIn_7_0;
             while (true) {
@@ -246,15 +246,15 @@ final class qp extends dr {
                   break;
                 }
               }
-              if (null != param6.tiles[(param0 + var11) * param6.mapWidth + var12 + param4] &&
-                param6.tiles[param6.mapWidth * (var11 + param0) + (var12 + param4)].terrainType == param7) {
+              if (null != battlefield.tiles[(startY + var11) * battlefield.mapWidth + var12 + startX] &&
+                battlefield.tiles[battlefield.mapWidth * (var11 + startY) + (var12 + startX)].terrainType == terrainType) {
                 var14 = 1;
                 decompiledFrameCompleted12 = false;
                 break;
               }
               var13++;
-              if (null == param6.tiles[var12 - (-param4 - param6.mapWidth * (var11 + param0))]) {
-                param6.tiles[param6.mapWidth * (var11 + param0) + (param4 + var12)] = new MapTile(param7, param6);
+              if (null == battlefield.tiles[var12 - (-startX - battlefield.mapWidth * (var11 + startY))]) {
+                battlefield.tiles[battlefield.mapWidth * (var11 + startY) + (startX + var12)] = new MapTile(terrainType, battlefield);
               }
               stackIn_22_0 = var11;
               if (var10 > 0) {
@@ -268,7 +268,7 @@ final class qp extends dr {
           if ((decompiledFrameCompleted14) &&
             (decompiledFrameCompleted13) &&
             (decompiledFrameCompleted12)) {
-            if (param3 == param0) {
+            if (endY == startY) {
               stackIn_28_0 = (0 < var9_int) ? 1 : -1;
               var12 = stackIn_28_0;
               while (true) {
@@ -285,14 +285,14 @@ final class qp extends dr {
                     break;
                   }
                 }
-                if (null != param6.tiles[(var11 + param0) * param6.mapWidth + (param4 + var12)] &&
-                  param7 == param6.tiles[(param0 + var11) * param6.mapWidth + (var12 + param4)].terrainType) {
+                if (null != battlefield.tiles[(var11 + startY) * battlefield.mapWidth + (startX + var12)] &&
+                  terrainType == battlefield.tiles[(startY + var11) * battlefield.mapWidth + (var12 + startX)].terrainType) {
                   var14 = 1;
                   decompiledFrameCompleted9 = false;
                   break;
                 }
-                if (param6.tiles[param4 + (var12 + param6.mapWidth * (var11 + param0))] == null) {
-                  param6.tiles[param4 + (var12 + param6.mapWidth * (var11 + param0))] = new MapTile(param7, param6);
+                if (battlefield.tiles[startX + (var12 + battlefield.mapWidth * (var11 + startY))] == null) {
+                  battlefield.tiles[startX + (var12 + battlefield.mapWidth * (var11 + startY))] = new MapTile(terrainType, battlefield);
                 }
                 var13++;
                 stackIn_44_0 = var12;
@@ -325,15 +325,15 @@ final class qp extends dr {
                       break;
                     }
                   }
-                  if (null != param6.tiles[(var11 + param0) * param6.mapWidth + (var12 + param4)] &&
-                    param6.tiles[param4 + (var12 + (var11 + param0) * param6.mapWidth)].terrainType == param7) {
+                  if (null != battlefield.tiles[(var11 + startY) * battlefield.mapWidth + (var12 + startX)] &&
+                    battlefield.tiles[startX + (var12 + (var11 + startY) * battlefield.mapWidth)].terrainType == terrainType) {
                     var14 = 1;
                     decompiledFrameCompleted6 = false;
                     break;
                   }
                   var13++;
-                  if (param6.tiles[(var11 + param0) * param6.mapWidth + var12 + param4] == null) {
-                    param6.tiles[var12 + param4 + (param0 + var11) * param6.mapWidth] = new MapTile(param7, param6);
+                  if (battlefield.tiles[(var11 + startY) * battlefield.mapWidth + var12 + startX] == null) {
+                    battlefield.tiles[var12 + startX + (startY + var11) * battlefield.mapWidth] = new MapTile(terrainType, battlefield);
                   }
                   stackIn_183_0 = var11;
                   if (var10 <= 0) {
@@ -363,15 +363,15 @@ final class qp extends dr {
                         break;
                       }
                     }
-                    if (null != param6.tiles[var12 + param4 + (var11 + param0) * param6.mapWidth] &&
-                      param7 == param6.tiles[var12 + param4 + (param0 + var11) * param6.mapWidth].terrainType) {
+                    if (null != battlefield.tiles[var12 + startX + (var11 + startY) * battlefield.mapWidth] &&
+                      terrainType == battlefield.tiles[var12 + startX + (startY + var11) * battlefield.mapWidth].terrainType) {
                       var14 = 1;
                       decompiledFrameCompleted3 = false;
                       break;
                     }
                     var13++;
-                    if (null == param6.tiles[param6.mapWidth * (var11 + param0) + (var12 + param4)]) {
-                      param6.tiles[param6.mapWidth * (param0 + var11) + param4 + var12] = new MapTile(param7, param6);
+                    if (null == battlefield.tiles[battlefield.mapWidth * (var11 + startY) + (var12 + startX)]) {
+                      battlefield.tiles[battlefield.mapWidth * (startY + var11) + startX + var12] = new MapTile(terrainType, battlefield);
                     }
                     stackIn_163_0 = var12;
                     if (var9_int > 0) {
@@ -385,7 +385,7 @@ final class qp extends dr {
                 if ((decompiledFrameCompleted5) &&
                   (decompiledFrameCompleted4) &&
                   (decompiledFrameCompleted3)) {
-                  if (AttackEvent.a(false, 100, param8) > 50) {
+                  if (AttackEvent.nextBoundedInt(false, 100, random) > 50) {
                     stackIn_102_0 = (var9_int > 0) ? 1 : -1;
                     var12 = stackIn_102_0;
                     while (true) {
@@ -401,14 +401,14 @@ final class qp extends dr {
                           break;
                         }
                       }
-                      if (param6.tiles[param4 + (var12 + param6.mapWidth * (param0 + var11))] != null &&
-                        param6.tiles[var12 + (param4 + param6.mapWidth * (var11 + param0))].terrainType == param7) {
+                      if (battlefield.tiles[startX + (var12 + battlefield.mapWidth * (startY + var11))] != null &&
+                        battlefield.tiles[var12 + (startX + battlefield.mapWidth * (var11 + startY))].terrainType == terrainType) {
                         var14 = 1;
                         decompiledFrameCompleted0 = false;
                         break;
                       }
-                      if (param6.tiles[param4 + (var12 + (param0 + var11) * param6.mapWidth)] == null) {
-                        param6.tiles[param4 + var12 + param6.mapWidth * (param0 + var11)] = new MapTile(param7, param6);
+                      if (battlefield.tiles[startX + (var12 + (startY + var11) * battlefield.mapWidth)] == null) {
+                        battlefield.tiles[startX + var12 + battlefield.mapWidth * (startY + var11)] = new MapTile(terrainType, battlefield);
                       }
                       var13++;
                       if (var12 == var9_int >> 1) {
@@ -426,13 +426,13 @@ final class qp extends dr {
                               break scanLoop1;
                             }
                           }
-                          if (param6.tiles[var12 + param4 + (var11 + param0) * param6.mapWidth] != null &&
-                            param7 == param6.tiles[(param0 + var11) * param6.mapWidth + (var12 + param4)].terrainType) {
+                          if (battlefield.tiles[var12 + startX + (var11 + startY) * battlefield.mapWidth] != null &&
+                            terrainType == battlefield.tiles[(startY + var11) * battlefield.mapWidth + (var12 + startX)].terrainType) {
                             break scanLoop1;
                           }
                           var13++;
-                          if (null == param6.tiles[(param0 + var11) * param6.mapWidth + (param4 + var12)]) {
-                            param6.tiles[param6.mapWidth * (var11 + param0) + param4 + var12] = new MapTile(param7, param6);
+                          if (null == battlefield.tiles[(startY + var11) * battlefield.mapWidth + (startX + var12)]) {
+                            battlefield.tiles[battlefield.mapWidth * (var11 + startY) + startX + var12] = new MapTile(terrainType, battlefield);
                           }
                           stackIn_136_0 = var11;
                           if (var10 <= 0) {
@@ -478,13 +478,13 @@ final class qp extends dr {
                           break;
                         }
                       }
-                      if (null != param6.tiles[param4 + (var12 + (param0 + var11) * param6.mapWidth)] &&
-                        param6.tiles[var12 + param4 + param6.mapWidth * (var11 + param0)].terrainType == param7) {
+                      if (null != battlefield.tiles[startX + (var12 + (startY + var11) * battlefield.mapWidth)] &&
+                        battlefield.tiles[var12 + startX + battlefield.mapWidth * (var11 + startY)].terrainType == terrainType) {
                         var14 = 1;
                         break;
                       }
-                      if (null == param6.tiles[(var11 + param0) * param6.mapWidth + (param4 + var12)]) {
-                        param6.tiles[var12 + param4 + param6.mapWidth * (param0 + var11)] = new MapTile(param7, param6);
+                      if (null == battlefield.tiles[(var11 + startY) * battlefield.mapWidth + (startX + var12)]) {
+                        battlefield.tiles[var12 + startX + battlefield.mapWidth * (startY + var11)] = new MapTile(terrainType, battlefield);
                       }
                       var13++;
                       if (var11 == var10 >> 1) {
@@ -502,13 +502,13 @@ final class qp extends dr {
                               break scanLoop2;
                             }
                           }
-                          if (param6.tiles[(param0 + var11) * param6.mapWidth + (var12 + param4)] != null &&
-                            param7 == param6.tiles[(var11 + param0) * param6.mapWidth + (param4 + var12)].terrainType) {
+                          if (battlefield.tiles[(startY + var11) * battlefield.mapWidth + (var12 + startX)] != null &&
+                            terrainType == battlefield.tiles[(var11 + startY) * battlefield.mapWidth + (startX + var12)].terrainType) {
                             break scanLoop2;
                           }
                           var13++;
-                          if (null == param6.tiles[param6.mapWidth * (param0 + var11) + (param4 + var12)]) {
-                            param6.tiles[param4 + (var12 + (param0 + var11) * param6.mapWidth)] = new MapTile(param7, param6);
+                          if (null == battlefield.tiles[battlefield.mapWidth * (startY + var11) + (startX + var12)]) {
+                            battlefield.tiles[startX + (var12 + (startY + var11) * battlefield.mapWidth)] = new MapTile(terrainType, battlefield);
                           }
                           stackIn_89_0 = var12;
                           if (var9_int > 0) {
@@ -541,24 +541,24 @@ final class qp extends dr {
               }
             }
           }
-          if (param2 == ~var13 &&
+          if (obfuscationGuard == ~var13 &&
             var14 == 0) {
             var13 = 1;
-            qp.a(param0, param1, param2 ^ 0, param3, param4, param5 + 1, param6, param7, param8);
+            qp.paintTerrainConnection(startY, endX, obfuscationGuard ^ 0, endY, startX, recursionDepth + 1, battlefield, terrainType, random);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var9 = decompiledCaughtException;
           stackIn_191_0 = var9;
-          stackIn_191_1 = new StringBuilder().append("qp.A(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',');
-          if (param6 == null) {
+          stackIn_191_1 = new StringBuilder().append("qp.A(").append(startY).append(',').append(endX).append(',').append(obfuscationGuard).append(',').append(endY).append(',').append(startX).append(',').append(recursionDepth).append(',');
+          if (battlefield == null) {
             stackIn_192_2 = "null";
           } else {
             stackIn_192_2 = "{...}";
           }
-          stackIn_194_1 = ((StringBuilder) (Object) stackIn_191_1).append(stackIn_192_2).append(',').append(param7).append(',');
-          if (param8 == null) {
+          stackIn_194_1 = ((StringBuilder) (Object) stackIn_191_1).append(stackIn_192_2).append(',').append(terrainType).append(',');
+          if (random == null) {
             stackIn_195_2 = "null";
           } else {
             stackIn_195_2 = "{...}";

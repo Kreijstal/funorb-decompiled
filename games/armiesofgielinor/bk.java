@@ -49,7 +49,7 @@ final class bk {
           if (BestScoreStrategy.field_l) {
             var6 = var6 | 1;
           }
-          if (ul.field_a) {
+          if (LineOfSightGrid.field_a) {
             var6 = var6 | 4;
           }
           if (param0) {

@@ -43,12 +43,12 @@ final class km {
         for (var8 = 0; var8 < 6; var8++) {
           if (var8 * 8 < this.field_f) {
             if (param2) {
-              var7 = -((this.field_f - var8 * 4) * 2) + (this.field_k + AttackEvent.a(false, var8 + 1, li.field_n));
-              var5 = -(this.field_g - 5 * (-(4 * var8) + this.field_f)) + AttackEvent.a(false, var8 + 1, li.field_n);
+              var7 = -((this.field_f - var8 * 4) * 2) + (this.field_k + AttackEvent.nextBoundedInt(false, var8 + 1, li.field_n));
+              var5 = -(this.field_g - 5 * (-(4 * var8) + this.field_f)) + AttackEvent.nextBoundedInt(false, var8 + 1, li.field_n);
               var6 = this.field_d;
             } else {
-              var7 = this.field_k - 2 * (-24 + var8 * 4 + this.field_f) + AttackEvent.a(false, 1 + var8, li.field_n);
-              var5 = -((var8 * 4 + (-24 + this.field_f)) * 5) + (this.field_g + AttackEvent.a(false, var8 + 1, li.field_n));
+              var7 = this.field_k - 2 * (-24 + var8 * 4 + this.field_f) + AttackEvent.nextBoundedInt(false, 1 + var8, li.field_n);
+              var5 = -((var8 * 4 + (-24 + this.field_f)) * 5) + (this.field_g + AttackEvent.nextBoundedInt(false, var8 + 1, li.field_n));
               var6 = this.field_d;
             }
             fh.$cfr$intArgs$a$e0bc7fdb2979(var7, -(var8 * 40) + 400, 56, fe.field_o[param0 + 1], -(5 * var8) + 63, var5, var6);

@@ -11,11 +11,11 @@ final class pg {
     static RgbSprite field_c;
     static String[] field_b;
 
-    final static boolean a(int param0, int param1) {
-        if (param1 != -10) {
+    final static boolean isPowerOfTwoBits(int value, int obfuscationGuard) {
+        if (obfuscationGuard != -10) {
           return false;
         }
-        return (param0 & -param0) == param0 ? true : false;
+        return (value & -value) == value ? true : false;
     }
 
     final static AnimationSequence selectUnitAnimation(int animationIndex, int obfuscationGuard, boolean allowDefaultFallback, int unitType) {
@@ -30,7 +30,7 @@ final class pg {
         int[] variantsAlias = variants;
         int[] variantChoices = variantsAlias;
         int[] slotVariants = variantChoices;
-        int selectedVariant = variantChoices[AttackEvent.a(false, variants.length, gg.animationRandom)];
+        int selectedVariant = variantChoices[AttackEvent.nextBoundedInt(false, variants.length, gg.animationRandom)];
         if (selectedVariant >= 0) {
           return ck.animationSequencesByGroup[sf.unitAnimationGroups[unitType]][selectedVariant];
         }

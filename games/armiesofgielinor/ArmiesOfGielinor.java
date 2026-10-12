@@ -1341,7 +1341,7 @@ public final class ArmiesOfGielinor extends wf {
           LeaderEscortCondition.e(25931);
           UnitLossCondition.d(param0 + 196);
           PortalLossCondition.d(-12428);
-          ul.b(param0 ^ -90);
+          LineOfSightGrid.b(param0 ^ -90);
           AnimationFrameSet.e((byte) -74);
           TileMetadata.a(23582);
           fd.a(-30097);
@@ -2178,7 +2178,7 @@ public final class ArmiesOfGielinor extends wf {
           fe.field_l = fk.a("textshadow", (byte) -127, iw.field_l, "basic");
           var5_array = MapLayout.a("members_benefits_screenshots", -28106, "basic", iw.field_l);
           if (var5_array != null) {
-            ul.a(var5_array, (byte) 110, this);
+            LineOfSightGrid.a(var5_array, (byte) 110, this);
           }
           MatchConditionEntry.field_n = pv.a("basic", "background", iw.field_l, 24914);
           cp.field_e = MapLayout.a("statusicons", -28106, "basic", iw.field_l);
@@ -2187,7 +2187,7 @@ public final class ArmiesOfGielinor extends wf {
           TrianglePulse.field_d = GameplayController.a("godspark", (byte) 51, "basic", iw.field_l);
           DropdownSelector.field_M = DiskCacheRequest.a("mapbutton", "basic", iw.field_l, false);
           DiskCacheRequest.a("endturnbutton", "basic", iw.field_l, false);
-          ul.field_g = DiskCacheRequest.a("buttonring", "basic", iw.field_l, false);
+          LineOfSightGrid.field_g = DiskCacheRequest.a("buttonring", "basic", iw.field_l, false);
           e.field_b = ac.a(iw.field_l, "lozenge", (byte) -4, "basic");
           bu.field_c = fk.a("endturnlozenge", (byte) -127, iw.field_l, "basic");
           jh.field_l = ac.a(iw.field_l, "summonframe", (byte) -4, "basic");
@@ -2352,7 +2352,7 @@ public final class ArmiesOfGielinor extends wf {
         RuntimeException decompiledCaughtException = null;
         var3 = obfuscationControl ? 1 : 0;
         try {
-          ul.buildSpellMenu(17);
+          LineOfSightGrid.buildSpellMenu(17);
           StateChangeEvent.g(1);
           var2_int = 0;
           while (var2_int < 29) {

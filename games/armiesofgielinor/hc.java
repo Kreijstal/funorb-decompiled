@@ -252,7 +252,7 @@ final class hc {
         var8 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         var9 = BestScoreStrategy.unitAnimationVariants[this.field_a][param0];
         var3 = var9;
-        var4 = var3[AttackEvent.a(false, var9.length, new Random())];
+        var4 = var3[AttackEvent.nextBoundedInt(false, var9.length, new Random())];
         if (0 <= var4) {
           return var4;
         }

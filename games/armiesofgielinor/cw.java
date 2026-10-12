@@ -58,7 +58,7 @@ final class cw {
                   if (var13 == 0) {
                     if ((CipherPacketBuffer.currentBattlefield.getTileEffects(31, var10, var9, NetworkResourceRequest.field_C.selectedUnit.ownerPlayer) & 2) == 0) {
                       if ((2 & CipherPacketBuffer.currentBattlefield.getTileEffects(31, param5, param4, NetworkResourceRequest.field_C.selectedUnit.ownerPlayer)) == 0) {
-                        stackIn_29_0 = (CipherPacketBuffer.currentBattlefield.field_j.a(var10, param4, var9, NetworkResourceRequest.field_C.selectedUnit.isFlying(-111), var7, param5, (byte) 62)) ? 1 : 0;
+                        stackIn_29_0 = (CipherPacketBuffer.currentBattlefield.lineOfSightGrid.computeVisibility(var10, param4, var9, NetworkResourceRequest.field_C.selectedUnit.isFlying(-111), var7, param5, (byte) 62)) ? 1 : 0;
                       } else {
                         stackIn_29_0 = 0;
                       }

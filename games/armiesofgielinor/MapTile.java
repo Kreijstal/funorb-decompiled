@@ -686,9 +686,9 @@ final class MapTile implements TaggedFieldReader {
         }
     }
 
-    final boolean b(int param0) {
+    final boolean blocksLineOfSight(int obfuscationGuard) {
         boolean stackIn_7_0 = false;
-        if (param0 != 928) {
+        if (obfuscationGuard != 928) {
           return false;
         }
         stackIn_7_0 = (3 == this.terrainType) || (this.terrainType == 2);

@@ -331,7 +331,7 @@ final class MovementPlanner {
         int var9 = 0;
         int var10 = 0;
         boolean stackIn_32_1 = false;
-        ul stackIn_74_0;
+        LineOfSightGrid stackIn_74_0;
         int stackIn_74_1;
         int stackIn_74_2;
         int stackIn_74_3;
@@ -403,12 +403,12 @@ final class MovementPlanner {
                 var5 <= var11 && (1 == var11 ||
                 (2 & this.battlefield.getTileEffects(31, var10 + param0, param1 + var9, this.unit.ownerPlayer)) == 0 &&
                 0 == (this.battlefield.getTileEffects(31, param0, param1, this.unit.ownerPlayer) & 2)) && this.movementCosts[param1 + (var9 + this.mapWidth * (param0 + var10))] <= var6) {
-                stackIn_74_0 = this.battlefield.field_j;
+                stackIn_74_0 = this.battlefield.lineOfSightGrid;
                 stackIn_74_1 = var10 + param0;
                 stackIn_74_2 = param1;
                 stackIn_74_3 = param1 + var9;
                 stackIn_75_4 = (this.unit.getUnitCategory(0) == 4);
-                if (((ul) (Object) stackIn_74_0).a(stackIn_74_1, stackIn_74_2, stackIn_74_3, stackIn_75_4, var4, param0, (byte) 86)) {
+                if (((LineOfSightGrid) (Object) stackIn_74_0).computeVisibility(stackIn_74_1, stackIn_74_2, stackIn_74_3, stackIn_75_4, var4, param0, (byte) 86)) {
                   var6 = this.movementCosts[param1 + var9 + this.mapWidth * (param0 + var10)];
                   var8 = var10 + param0;
                   var7 = var9 + param1;
@@ -800,7 +800,7 @@ final class MovementPlanner {
           var14Lifetime1 = stackIn_75_0;
           stackIn_78_0 = (!this.unit.canAttackFlying((byte) 102)) ? 0 : 1;
           var15Lifetime1 = stackIn_78_0;
-          this.battlefield.field_j.a(var8, var15Lifetime1 != 0, -1, var10, var13, this.unit.ownerPlayer, this.field_a, this.movementCosts, var7_int, var11, var14Lifetime1 != 0, this.field_e, var9, var12);
+          this.battlefield.lineOfSightGrid.mergeAttackTargetMask(var8, var15Lifetime1 != 0, -1, var10, var13, this.unit.ownerPlayer, this.field_a, this.movementCosts, var7_int, var11, var14Lifetime1 != 0, this.field_e, var9, var12);
           if (this.unit.packedFlag8 &&
             this.unit.unitType != 0) {
             this.movementCosts[this.unit.tileX + this.unit.tileY * this.mapWidth] = 1000000;
@@ -847,92 +847,92 @@ final class MovementPlanner {
         return (ActionRequest) ((Object) new SpellCastRequest(new ActionSpell(this.spellId, var4), this.field_y, actingPlayer));
     }
 
-    final static void a(byte param0, Battlefield param1) {
-        int var2_int = 0;
+    final static void generateProceduralMap(byte obfuscationGuard, Battlefield battlefield) {
+        int tileIndex = 0;
         RuntimeException stackIn_179_0 = null;
         StringBuilder stackIn_179_1 = null;
         String stackIn_180_2 = null;
         RuntimeException decompiledCaughtException = null;
-        Battlefield var2 = null;
+        Battlefield fixedArena = null;
         RuntimeException var2_ref = null;
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
-        Random var13 = null;
-        int var3Lifetime1;
-        int var4Lifetime1;
-        int var5Lifetime1;
-        int var6Lifetime1;
-        int var6Lifetime2;
-        int var7Lifetime1;
-        int var8Lifetime1;
-        int var9Lifetime1;
-        int var10Lifetime1;
-        var12 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        int arenaIndex = 0;
+        int arenaX = 0;
+        int arenaY = 0;
+        int sectorX = 0;
+        int sectorY = 0;
+        int structureX = 0;
+        int structureY = 0;
+        int villageIndex = 0;
+        int spawnY = 0;
+        int obfuscationControl = 0;
+        Random random = null;
+        int centerPattern;
+        int villagesPerSector;
+        int patternRoll;
+        int emptyTileIndex;
+        int preferredScatteredTerrain;
+        int spawnSectorX;
+        int spawnSectorY;
+        int spawnPlayer;
+        int spawnX;
+        obfuscationControl = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          if (param1.mapSizeSetting == 4) {
-            var2 = param1;
-            param1.mapHeight = 10;
-            param1.tiles = new MapTile[100];
-            var2.mapWidth = 10;
-            for (var3 = 0; var3 < 100; var3++) {
+          if (battlefield.mapSizeSetting == 4) {
+            fixedArena = battlefield;
+            battlefield.mapHeight = 10;
+            battlefield.tiles = new MapTile[100];
+            fixedArena.mapWidth = 10;
+            for (arenaIndex = 0; arenaIndex < 100; arenaIndex++) {
               boolean decompiledFrameRemainder0 = true;
-              var4 = var3 % 10;
-              var5 = var3 / 10;
-              if ((var4 == 1 ||
-                var4 == 8) && (1 == var5 ||
-                var5 == 8)) {
-                param1.tiles[var3] = new MapTile(7, param1);
+              arenaX = arenaIndex % 10;
+              arenaY = arenaIndex / 10;
+              if ((arenaX == 1 ||
+                arenaX == 8) && (1 == arenaY ||
+                arenaY == 8)) {
+                battlefield.tiles[arenaIndex] = new MapTile(7, battlefield);
                 decompiledFrameRemainder0 = false;
               }
               else {
-                if ((var4 != 1 &&
-                  var4 != 8 ||
-                  (var5 >= 9 ||
-                  var5 <= 0)) &&
-                  (var5 != 1 &&
-                  var5 != 8 ||
-                  (var4 >= 9 ||
-                  var4 <= 0))) {
-                  if ((2 == var4 ||
-                    var4 == 7) &&
-                    (var5 == 2 ||
-                    7 == var5)) {
-                    param1.tiles[var3] = new MapTile(9, param1);
+                if ((arenaX != 1 &&
+                  arenaX != 8 ||
+                  (arenaY >= 9 ||
+                  arenaY <= 0)) &&
+                  (arenaY != 1 &&
+                  arenaY != 8 ||
+                  (arenaX >= 9 ||
+                  arenaX <= 0))) {
+                  if ((2 == arenaX ||
+                    arenaX == 7) &&
+                    (arenaY == 2 ||
+                    7 == arenaY)) {
+                    battlefield.tiles[arenaIndex] = new MapTile(9, battlefield);
                   } else {
-                    if ((var4 == 3 ||
-                      var4 == 6) &&
-                      (var5 == 2 ||
-                      var5 == 7)) {
-                      param1.tiles[var3] = new MapTile(8, param1);
+                    if ((arenaX == 3 ||
+                      arenaX == 6) &&
+                      (arenaY == 2 ||
+                      arenaY == 7)) {
+                      battlefield.tiles[arenaIndex] = new MapTile(8, battlefield);
                     } else {
-                      if ((var4 == 2 ||
-                        7 == var4) &&
-                        (var5 == 3 ||
-                        6 == var5)) {
-                        param1.tiles[var3] = new MapTile(8, param1);
+                      if ((arenaX == 2 ||
+                        7 == arenaX) &&
+                        (arenaY == 3 ||
+                        6 == arenaY)) {
+                        battlefield.tiles[arenaIndex] = new MapTile(8, battlefield);
                       } else {
-                        if ((4 != var4 ||
-                          var5 >= 4) &&
-                          (var4 != 5 ||
-                          var5 <= 5)) {
-                          if ((4 == var4 ||
-                            5 == var4) &&
-                            (var5 == 4 ||
-                            var5 == 5)) {
-                            param1.tiles[var3] = new MapTile(6, param1);
+                        if ((4 != arenaX ||
+                          arenaY >= 4) &&
+                          (arenaX != 5 ||
+                          arenaY <= 5)) {
+                          if ((4 == arenaX ||
+                            5 == arenaX) &&
+                            (arenaY == 4 ||
+                            arenaY == 5)) {
+                            battlefield.tiles[arenaIndex] = new MapTile(6, battlefield);
                           } else {
-                            param1.tiles[var3] = new MapTile(0, param1);
+                            battlefield.tiles[arenaIndex] = new MapTile(0, battlefield);
                           }
                         } else {
-                          param1.tiles[var3] = new MapTile(4, param1);
+                          battlefield.tiles[arenaIndex] = new MapTile(4, battlefield);
                         }
                       }
                     }
@@ -940,189 +940,189 @@ final class MovementPlanner {
                   decompiledFrameRemainder0 = false;
                 }
                 else {
-                  if ((var4 != 4 ||
-                    var5 != 1) &&
-                    (5 != var4 ||
-                    var5 != 8)) {
-                    param1.tiles[var3] = new MapTile(1, param1);
+                  if ((arenaX != 4 ||
+                    arenaY != 1) &&
+                    (5 != arenaX ||
+                    arenaY != 8)) {
+                    battlefield.tiles[arenaIndex] = new MapTile(1, battlefield);
                   } else {
-                    param1.tiles[var3] = new MapTile(10, param1);
+                    battlefield.tiles[arenaIndex] = new MapTile(10, battlefield);
                   }
                 }
               }
             }
-            param1.unitsByPlayer[0].addLast((byte) -119, (IntrusiveNode) (new Unit(3, 3, 0, 0, 10, 10, 9, 0, 0, param1, 0, 0, -1, false, 0)));
-            param1.unitsByPlayer[1].addLast((byte) -119, (IntrusiveNode) (new Unit(6, 6, 0, 1, 10, 10, 9, 0, 0, param1, 0, 0, -1, false, 0)));
-            param1.a((byte) -110, param1.mapWidth, param1.mapHeight, param1.tiles);
+            battlefield.unitsByPlayer[0].addLast((byte) -119, (IntrusiveNode) (new Unit(3, 3, 0, 0, 10, 10, 9, 0, 0, battlefield, 0, 0, -1, false, 0)));
+            battlefield.unitsByPlayer[1].addLast((byte) -119, (IntrusiveNode) (new Unit(6, 6, 0, 1, 10, 10, 9, 0, 0, battlefield, 0, 0, -1, false, 0)));
+            battlefield.installMap((byte) -110, battlefield.mapWidth, battlefield.mapHeight, battlefield.tiles);
             return;
           }
-          param1.tiles = new MapTile[param1.mapWidth * param1.mapHeight];
-          for (var2_int = 0; var2_int < param1.mapHeight * param1.mapWidth; var2_int++) {
-            param1.tiles[var2_int] = null;
+          battlefield.tiles = new MapTile[battlefield.mapWidth * battlefield.mapHeight];
+          for (tileIndex = 0; tileIndex < battlefield.mapHeight * battlefield.mapWidth; tileIndex++) {
+            battlefield.tiles[tileIndex] = null;
           }
-          if (param0 <= 40) {
+          if (obfuscationGuard <= 40) {
             MovementPlanner.b(69);
           }
-          var13 = new Random((long)param1.randomSeed);
-          var3Lifetime1 = 3;
-          var4Lifetime1 = 4 + AttackEvent.a(false, 4, var13);
-          var5Lifetime1 = AttackEvent.a(false, 100, var13);
-          if (param1.mapTheme == 0) {
-            if (10 > var5Lifetime1) {
-              var3Lifetime1 = 5;
+          random = new Random((long)battlefield.randomSeed);
+          centerPattern = 3;
+          villagesPerSector = 4 + AttackEvent.nextBoundedInt(false, 4, random);
+          patternRoll = AttackEvent.nextBoundedInt(false, 100, random);
+          if (battlefield.mapTheme == 0) {
+            if (10 > patternRoll) {
+              centerPattern = 5;
             } else {
-              if (30 <= var5Lifetime1) {
-                if (var5Lifetime1 < 60) {
-                  var3Lifetime1 = 1;
+              if (30 <= patternRoll) {
+                if (patternRoll < 60) {
+                  centerPattern = 1;
                 } else {
-                  if (var5Lifetime1 < 70) {
-                    var3Lifetime1 = 6;
+                  if (patternRoll < 70) {
+                    centerPattern = 6;
                   }
                 }
               } else {
-                var3Lifetime1 = 4;
+                centerPattern = 4;
               }
             }
           } else {
-            if (param1.mapTheme != 2) {
-              if (var5Lifetime1 >= 30) {
-                if (var5Lifetime1 >= 60) {
-                  if (var5Lifetime1 < 80) {
-                    var3Lifetime1 = 6;
+            if (battlefield.mapTheme != 2) {
+              if (patternRoll >= 30) {
+                if (patternRoll >= 60) {
+                  if (patternRoll < 80) {
+                    centerPattern = 6;
                   }
                 } else {
-                  var3Lifetime1 = 4;
+                  centerPattern = 4;
                 }
               } else {
-                var3Lifetime1 = 0;
+                centerPattern = 0;
               }
             } else {
-              if (var5Lifetime1 >= 30) {
-                if (60 > var5Lifetime1) {
-                  var3Lifetime1 = 4;
+              if (patternRoll >= 30) {
+                if (60 > patternRoll) {
+                  centerPattern = 4;
                 } else {
-                  if (var5Lifetime1 < 80) {
-                    var3Lifetime1 = 2;
+                  if (patternRoll < 80) {
+                    centerPattern = 2;
                   }
                 }
               } else {
-                var3Lifetime1 = 5;
+                centerPattern = 5;
               }
             }
           }
-          for (var6 = -1; var6 < 2; var6++) {
-            for (var7 = -1; var7 < 2; var7++) {
-              if (var6 == 0 &&
-                var7 == 0) {
-                ul.a(var13, param1, (byte) 85, var3Lifetime1);
+          for (sectorX = -1; sectorX < 2; sectorX++) {
+            for (sectorY = -1; sectorY < 2; sectorY++) {
+              if (sectorX == 0 &&
+                sectorY == 0) {
+                LineOfSightGrid.paintMapCenterPattern(random, battlefield, (byte) 85, centerPattern);
               } else {
-                var8 = var6 * 20 + 20 + 10;
-                var9 = 20 * (var7 + 1) + 10;
-                param1.tiles[param1.mapWidth * var9 + var8] = new MapTile(1, param1);
-                if (var6 != 0 &&
-                  var7 != 0) {
-                  var8 = var8 + (-1 + AttackEvent.a(false, 2, var13));
-                  var9 = var9 + (-1 + AttackEvent.a(false, 2, var13));
+                structureX = sectorX * 20 + 20 + 10;
+                structureY = 20 * (sectorY + 1) + 10;
+                battlefield.tiles[battlefield.mapWidth * structureY + structureX] = new MapTile(1, battlefield);
+                if (sectorX != 0 &&
+                  sectorY != 0) {
+                  structureX = structureX + (-1 + AttackEvent.nextBoundedInt(false, 2, random));
+                  structureY = structureY + (-1 + AttackEvent.nextBoundedInt(false, 2, random));
                 } else {
-                  var8 = var6 * (AttackEvent.a(false, 4, var13) + 5) - (-10 - (1 + var6) * 20);
-                  var9 = (5 + AttackEvent.a(false, 4, var13)) * var7 + 10 + 20 * (var7 + 1);
+                  structureX = sectorX * (AttackEvent.nextBoundedInt(false, 4, random) + 5) - (-10 - (1 + sectorX) * 20);
+                  structureY = (5 + AttackEvent.nextBoundedInt(false, 4, random)) * sectorY + 10 + 20 * (sectorY + 1);
                 }
-                param1.tiles[param1.mapWidth * var9 + var8] = new MapTile(7, param1);
-                if (0 != var3Lifetime1) {
-                  UnitInfoPopup.a(var8, (byte) 101, 1, var9, 20 * (var6 + 1) + 10, false, (var7 + 1) * 20 + 10, param1, var13);
+                battlefield.tiles[battlefield.mapWidth * structureY + structureX] = new MapTile(7, battlefield);
+                if (0 != centerPattern) {
+                  UnitInfoPopup.paintRandomTerrainPath(structureX, (byte) 101, 1, structureY, 20 * (sectorX + 1) + 10, false, (sectorY + 1) * 20 + 10, battlefield, random);
                 }
-                for (var10 = 0; var10 < var4Lifetime1; var10++) {
-                  while (null != param1.tiles[var9 * param1.mapWidth + var8]) {
-                    if (param1.tiles[var8 + param1.mapWidth * var9].terrainType != 0 &&
-                      param1.tiles[var9 * param1.mapWidth + var8].terrainType != 1) {
-                      var8 = AttackEvent.a(false, 7, var13) * 2 + (20 * (var6 + 1) + 3);
-                      var9 = (1 + var7) * 20 - (-(2 * AttackEvent.a(false, 7, var13)) - 3);
+                for (villageIndex = 0; villageIndex < villagesPerSector; villageIndex++) {
+                  while (null != battlefield.tiles[structureY * battlefield.mapWidth + structureX]) {
+                    if (battlefield.tiles[structureX + battlefield.mapWidth * structureY].terrainType != 0 &&
+                      battlefield.tiles[structureY * battlefield.mapWidth + structureX].terrainType != 1) {
+                      structureX = AttackEvent.nextBoundedInt(false, 7, random) * 2 + (20 * (sectorX + 1) + 3);
+                      structureY = (1 + sectorY) * 20 - (-(2 * AttackEvent.nextBoundedInt(false, 7, random)) - 3);
                       continue;
                     }
                     break;
                   }
-                  param1.tiles[var8 + var9 * param1.mapWidth] = new MapTile(8, param1);
-                  if (var3Lifetime1 != 0) {
-                    qp.a(var9, 20 * (1 + var6) + 10, -1, var7 * 20 + 30, var8, 0, param1, 1, var13);
+                  battlefield.tiles[structureX + structureY * battlefield.mapWidth] = new MapTile(8, battlefield);
+                  if (centerPattern != 0) {
+                    qp.paintTerrainConnection(structureY, 20 * (1 + sectorX) + 10, -1, sectorY * 20 + 30, structureX, 0, battlefield, 1, random);
                   }
                 }
               }
             }
           }
-          for (var6Lifetime1 = 0; var6Lifetime1 < param1.mapHeight * param1.mapWidth; var6Lifetime1++) {
-            if (param1.tiles[var6Lifetime1] == null) {
-              param1.tiles[var6Lifetime1] = new MapTile(0, param1);
+          for (emptyTileIndex = 0; emptyTileIndex < battlefield.mapHeight * battlefield.mapWidth; emptyTileIndex++) {
+            if (battlefield.tiles[emptyTileIndex] == null) {
+              battlefield.tiles[emptyTileIndex] = new MapTile(0, battlefield);
             }
           }
-          var6Lifetime2 = -1;
-          if (var3Lifetime1 == 5) {
-            var6Lifetime2 = 3;
+          preferredScatteredTerrain = -1;
+          if (centerPattern == 5) {
+            preferredScatteredTerrain = 3;
           }
-          for (var7Lifetime1 = -1; var7Lifetime1 < 2; var7Lifetime1++) {
-            for (var8Lifetime1 = -1; 2 > var8Lifetime1; var8Lifetime1++) {
-              var9Lifetime1 = 0;
-              if (0 != var7Lifetime1 &&
-                var8Lifetime1 != 0) {
-                if (var7Lifetime1 != var8Lifetime1) {
-                  var9Lifetime1 += 2;
+          for (spawnSectorX = -1; spawnSectorX < 2; spawnSectorX++) {
+            for (spawnSectorY = -1; 2 > spawnSectorY; spawnSectorY++) {
+              spawnPlayer = 0;
+              if (0 != spawnSectorX &&
+                spawnSectorY != 0) {
+                if (spawnSectorX != spawnSectorY) {
+                  spawnPlayer += 2;
                 }
-                if (var8Lifetime1 == 1) {
-                  var9Lifetime1++;
+                if (spawnSectorY == 1) {
+                  spawnPlayer++;
                 }
               } else {
-                var9Lifetime1 += 4;
-                if (1 == var8Lifetime1 ||
-                  var7Lifetime1 == 1) {
-                  var9Lifetime1++;
+                spawnPlayer += 4;
+                if (1 == spawnSectorY ||
+                  spawnSectorX == 1) {
+                  spawnPlayer++;
                 }
-                if (var8Lifetime1 == 0) {
-                  var9Lifetime1 += 2;
+                if (spawnSectorY == 0) {
+                  spawnPlayer += 2;
                 }
               }
-              if ((var7Lifetime1 != 0 ||
-                var8Lifetime1 != 0) && var9Lifetime1 < param1.playerCount) {
-                var10Lifetime1 = 20 * (1 + var7Lifetime1) + 10;
-                var11 = 10 + 20 * (1 + var8Lifetime1);
-                if (var7Lifetime1 != 0 &&
-                  var8Lifetime1 != 0) {
-                  var10Lifetime1 = var10Lifetime1 + (-1 + AttackEvent.a(false, 2, var13));
-                  var11 = var11 + (-1 + AttackEvent.a(false, 2, var13));
+              if ((spawnSectorX != 0 ||
+                spawnSectorY != 0) && spawnPlayer < battlefield.playerCount) {
+                spawnX = 20 * (1 + spawnSectorX) + 10;
+                spawnY = 10 + 20 * (1 + spawnSectorY);
+                if (spawnSectorX != 0 &&
+                  spawnSectorY != 0) {
+                  spawnX = spawnX + (-1 + AttackEvent.nextBoundedInt(false, 2, random));
+                  spawnY = spawnY + (-1 + AttackEvent.nextBoundedInt(false, 2, random));
                 } else {
-                  var10Lifetime1 = 10 + (AttackEvent.a(false, 4, var13) + 5) * var7Lifetime1 + (20 + 20 * var7Lifetime1);
-                  var11 = 10 + var8Lifetime1 * (AttackEvent.a(false, 4, var13) + 5) + (20 + 20 * var8Lifetime1);
+                  spawnX = 10 + (AttackEvent.nextBoundedInt(false, 4, random) + 5) * spawnSectorX + (20 + 20 * spawnSectorX);
+                  spawnY = 10 + spawnSectorY * (AttackEvent.nextBoundedInt(false, 4, random) + 5) + (20 + 20 * spawnSectorY);
                 }
-                while (param1.tiles[param1.mapWidth * var11 + var10Lifetime1].terrainType != 0) {
-                  if (1 != param1.tiles[var10Lifetime1 + param1.mapWidth * var11].terrainType) {
-                    var11 = 20 + (var8Lifetime1 * 20 + 10);
-                    var10Lifetime1 = (1 + var7Lifetime1) * 20 + 10;
-                    if (var7Lifetime1 != 0 &&
-                      0 != var8Lifetime1) {
-                      var10Lifetime1 = var10Lifetime1 + (AttackEvent.a(false, 4, var13) - 2);
-                      var11 = var11 + (AttackEvent.a(false, 4, var13) - 2);
+                while (battlefield.tiles[battlefield.mapWidth * spawnY + spawnX].terrainType != 0) {
+                  if (1 != battlefield.tiles[spawnX + battlefield.mapWidth * spawnY].terrainType) {
+                    spawnY = 20 + (spawnSectorY * 20 + 10);
+                    spawnX = (1 + spawnSectorX) * 20 + 10;
+                    if (spawnSectorX != 0 &&
+                      0 != spawnSectorY) {
+                      spawnX = spawnX + (AttackEvent.nextBoundedInt(false, 4, random) - 2);
+                      spawnY = spawnY + (AttackEvent.nextBoundedInt(false, 4, random) - 2);
                       continue;
                     }
-                    var10Lifetime1 = var7Lifetime1 * (AttackEvent.a(false, 4, var13) + 5) + 10 - (-20 - var7Lifetime1 * 20);
-                    var11 = (AttackEvent.a(false, 4, var13) + 5) * var8Lifetime1 + 10 - (-20 - 20 * var8Lifetime1);
+                    spawnX = spawnSectorX * (AttackEvent.nextBoundedInt(false, 4, random) + 5) + 10 - (-20 - spawnSectorX * 20);
+                    spawnY = (AttackEvent.nextBoundedInt(false, 4, random) + 5) * spawnSectorY + 10 - (-20 - 20 * spawnSectorY);
                     continue;
                   }
                   break;
                 }
-                param1.unitsByPlayer[var9Lifetime1].addLast((byte) -119, (IntrusiveNode) (new Unit(var10Lifetime1, var11, 0, var9Lifetime1, 10, 10, 9, 0, 0, param1, 0, 0, -1, false, 0)));
+                battlefield.unitsByPlayer[spawnPlayer].addLast((byte) -119, (IntrusiveNode) (new Unit(spawnX, spawnY, 0, spawnPlayer, 10, 10, 9, 0, 0, battlefield, 0, 0, -1, false, 0)));
               }
             }
           }
-          if (var3Lifetime1 == 2) {
-            var6Lifetime2 = 5;
+          if (centerPattern == 2) {
+            preferredScatteredTerrain = 5;
           }
-          on.a(param1, var6Lifetime2, false, var13);
-          param1.a((byte) -119, param1.mapWidth, param1.mapHeight, param1.tiles);
+          on.scatterMapTerrain(battlefield, preferredScatteredTerrain, false, random);
+          battlefield.installMap((byte) -119, battlefield.mapWidth, battlefield.mapHeight, battlefield.tiles);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
           stackIn_179_0 = var2_ref;
-          stackIn_179_1 = new StringBuilder().append("nn.H(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_179_1 = new StringBuilder().append("nn.H(").append(obfuscationGuard).append(',');
+          if (battlefield == null) {
             stackIn_180_2 = "null";
           } else {
             stackIn_180_2 = "{...}";

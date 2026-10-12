@@ -75,14 +75,14 @@ final class Battlefield {
     int[][] equippedSpellIds;
     boolean kingBlackDragonSummoned;
     boolean field_f;
-    ul field_j;
+    LineOfSightGrid lineOfSightGrid;
     private int field_I;
     int[][] chosenGods;
     private MatchConditionRegistry matchConditions;
     private int field_vb;
     int[][] godFavourLevels;
     int randomSeed;
-    int[] field_s;
+    int[] mapStructureTotals;
     int[] field_ob;
     private int[] field_y;
     static String field_pb;
@@ -115,7 +115,7 @@ final class Battlefield {
           }
           this.unitsByPlayer[unit.ownerPlayer].addLast((byte) -119, (IntrusiveNode) (unit));
           if (obfuscationGuard != 8288) {
-            this.l(-73, -26);
+            this.loadOrGenerateMap(-73, -26);
           }
           var3 = this.unitObservers.first((byte) 96);
           while (var3 != null) {
@@ -941,15 +941,15 @@ final class Battlefield {
         int var2;
         int var3;
         int var4;
-        if (this.field_s != null &&
-          this.field_s.length == 3) {
+        if (this.mapStructureTotals != null &&
+          this.mapStructureTotals.length == 3) {
           if (param0 > -65) {
             return 72;
           }
           var2 = 2 * this.turnLimit / 3;
-          var3 = 50 * this.field_s[0] * var2;
-          var3 = var3 + 75 * var2 * this.field_s[1];
-          var3 = var3 + this.field_s[2] * var2 * 25;
+          var3 = 50 * this.mapStructureTotals[0] * var2;
+          var3 = var3 + 75 * var2 * this.mapStructureTotals[1];
+          var3 = var3 + this.mapStructureTotals[2] * var2 * 25;
           if (this.turnLimit <= 1) {
             return 0;
           }
@@ -1136,7 +1136,7 @@ final class Battlefield {
                     var7 = var9.getDefaultCaptureStrength(10);
                     var6.terrainType = param2;
                     var9.captureStrength = var9.captureStrength + (-var7 + var9.getDefaultCaptureStrength(10));
-                    this.f(-2);
+                    this.recountMapStructures(-2);
                     this.recountStructures(2);
                     return;
                   }
@@ -3048,7 +3048,7 @@ final class Battlefield {
           }
           this.turnNumber = packet.readUnsignedByte(obfuscationGuard ^ 0);
           this.currentPlayer = packet.readUnsignedByte(obfuscationGuard + 0);
-          this.l(obfuscationGuard + 0, 0);
+          this.loadOrGenerateMap(obfuscationGuard + 0, 0);
           var6 = this.tiles.length - 1;
           scanLoop1: while (true) {
             if (var6 >= 0) {
@@ -3244,7 +3244,7 @@ final class Battlefield {
             break;
           }
           this.initializeMatchConditions(-29673);
-          this.f(-2);
+          this.recountMapStructures(-2);
           this.collectedManaTarget = this.f((byte) -82);
           this.recountStructures(obfuscationGuard ^ 2);
           this.a(0, 0, obfuscationGuard + 0, -1);
@@ -4002,7 +4002,7 @@ final class Battlefield {
         return var2;
     }
 
-    final void a(byte param0, int param1, int param2, MapTile[] param3) {
+    final void installMap(byte obfuscationGuard, int mapWidth, int mapHeight, MapTile[] tiles) {
         int[] dupTemp$0 = null;
         int[] dupTemp$1 = null;
         int[] dupTemp$2 = null;
@@ -4053,17 +4053,17 @@ final class Battlefield {
         int var10Lifetime1;
         var20 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          if (param3 == null) {
+          if (tiles == null) {
             return;
           }
-          var5_int = param1 * param2;
-          if (param3.length != var5_int) {
+          var5_int = mapWidth * mapHeight;
+          if (tiles.length != var5_int) {
             return;
           }
-          this.field_j = new ul(this, param3, param1, param2);
-          this.tiles = param3;
-          this.mapHeight = param2;
-          this.mapWidth = param1;
+          this.lineOfSightGrid = new LineOfSightGrid(this, tiles, mapWidth, mapHeight);
+          this.tiles = tiles;
+          this.mapHeight = mapHeight;
+          this.mapWidth = mapWidth;
           var6 = 0;
           boolean decompiledNaturalLoopExit0 = false;
           while (!(decompiledNaturalLoopExit0 = (this.unitsByPlayer.length <= var6))) {
@@ -4085,7 +4085,7 @@ final class Battlefield {
             break;
           }
           if ((decompiledNaturalLoopExit0) &&
-            (param0 >= -69)) {
+            (obfuscationGuard >= -69)) {
             this.a(83, -46, -45, (byte) -10);
           }
           var6Lifetime1 = 0;
@@ -4246,14 +4246,14 @@ final class Battlefield {
             var6Lifetime1++;
           }
           this.initializeMatchConditions(-29673);
-          this.f(-2);
+          this.recountMapStructures(-2);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
           stackIn_106_0 = var5;
-          stackIn_106_1 = new StringBuilder().append("ha.OB(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
-          if (param3 == null) {
+          stackIn_106_1 = new StringBuilder().append("ha.OB(").append(obfuscationGuard).append(',').append(mapWidth).append(',').append(mapHeight).append(',');
+          if (tiles == null) {
             stackIn_107_2 = "null";
           } else {
             stackIn_107_2 = "{...}";
@@ -4319,17 +4319,17 @@ final class Battlefield {
         }
     }
 
-    final void f(int param0) {
+    final void recountMapStructures(int obfuscationGuard) {
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
         var4 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
-        if (param0 != -2) {
+        if (obfuscationGuard != -2) {
           this.field_d = (int[]) null;
         }
-        this.field_s[1] = 0;
-        this.field_s[2] = 0;
-        this.field_s[0] = 0;
+        this.mapStructureTotals[1] = 0;
+        this.mapStructureTotals[2] = 0;
+        this.mapStructureTotals[0] = 0;
         if (null == this.tiles) {
           return;
         }
@@ -4342,18 +4342,18 @@ final class Battlefield {
               || var3 == 8
               ) ? var3 : -1) {
               case 7:
-                this.field_s[0] = this.field_s[0] + 1;
+                this.mapStructureTotals[0] = this.mapStructureTotals[0] + 1;
                 {
                   break;
                 }
               case 14:
               case 9:
-                this.field_s[1] = this.field_s[1] + 1;
+                this.mapStructureTotals[1] = this.mapStructureTotals[1] + 1;
                 {
                   break;
                 }
               case 8:
-                this.field_s[2] = this.field_s[2] + 1;
+                this.mapStructureTotals[2] = this.mapStructureTotals[2] + 1;
               default:
                 break;
             }
@@ -4504,7 +4504,7 @@ final class Battlefield {
         try {
           packet.readUnsignedByte(0);
           if (!obfuscationGuard) {
-            this.f(-120);
+            this.recountMapStructures(-120);
           }
           unitType = packet.readUnsignedByte(0);
           ownerAndBonus = packet.readUnsignedByte(0);
@@ -5020,7 +5020,7 @@ final class Battlefield {
         boolean discarded$0 = this.a(attacker, targetDeltaX, attackerDamage, attackerDies, attackerY, -1, targetDeltaY, defender, attackerX, defenderDamage, unseenUnitType, defenderDies, 0);
     }
 
-    final void l(int param0, int param1) {
+    final void loadOrGenerateMap(int obfuscationGuard, int tutorialSelection) {
         int dupTemp$0 = 0;
         RuntimeException stackIn_7_0 = null;
         RuntimeException stackIn_7_1 = null;
@@ -5033,7 +5033,7 @@ final class Battlefield {
         int var5;
         int var6;
         var6 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
-        if (param0 != param1) {
+        if (obfuscationGuard != tutorialSelection) {
           this.mapSizeSetting = 0;
         }
         if (this.mapSizeSetting >= 0 &&
@@ -5042,21 +5042,21 @@ final class Battlefield {
           this.mapWidth = dupTemp$0;
           this.mapHeight = dupTemp$0;
           if ((0 > this.mapSizeSetting ||
-            2 < this.mapSizeSetting) && param1 == 0) {
-            rn.a(-118, this);
+            2 < this.mapSizeSetting) && tutorialSelection == 0) {
+            rn.generateProceduralMap(-118, this);
             if (var6 == 0) {
               return;
             }
           }
           regionExit1: {
-            if (param1 != 0) {
-              var3 = ArchiveProvider.mapRepository.getTutorialMap((byte) 59, param1 - 1);
+            if (tutorialSelection != 0) {
+              var3 = ArchiveProvider.mapRepository.getTutorialMap((byte) 59, tutorialSelection - 1);
               if (var6 == 0) {
                 break regionExit1;
               }
             }
             if (null == this.campaignMission) {
-              var4_int = ArchiveProvider.mapRepository.countAvailableMaps(param0 + 0, this.mapSizeSetting, this.mapTheme, this.playerCount);
+              var4_int = ArchiveProvider.mapRepository.countAvailableMaps(obfuscationGuard + 0, this.mapSizeSetting, this.mapTheme, this.playerCount);
               if (var4_int <= 0) {
                 throw new RuntimeException((String) null);
               }
@@ -5072,8 +5072,8 @@ final class Battlefield {
               var3 = this.campaignMission.getMapLayout(-114);
             }
           }
-          var4 = var3.createTiles(param0 - 95, this);
-          this.a((byte) -104, var3.mapWidth, var3.mapHeight, var4);
+          var4 = var3.createTiles(obfuscationGuard - 95, this);
+          this.installMap((byte) -104, var3.mapWidth, var3.mapHeight, var4);
           return;
         }
         stackIn_7_0 = null;
@@ -6690,7 +6690,7 @@ final class Battlefield {
           }
           boolean decompiledFrameCompleted5 = true;
           boolean decompiledFrameRemainder0 = true;
-          this.randomSeed = AttackEvent.a(false, 2147483647, li.field_n);
+          this.randomSeed = AttackEvent.nextBoundedInt(false, 2147483647, li.field_n);
           this.teams = new TeamRoster[this.teamCount];
           this.playerTeamIndices = new int[this.playerCount];
           this.turnDurationOption = param0;
@@ -6771,7 +6771,7 @@ final class Battlefield {
             this.field_S = new int[this.teamCount];
             this.teamStructureCounts = new int[this.teamCount][3];
             this.playerTurnCounts = new int[this.playerCount];
-            this.field_s = new int[3];
+            this.mapStructureTotals = new int[3];
             this.field_U = new int[this.playerCount];
           }
           boolean decompiledFrameCompleted1 = true;
@@ -7171,11 +7171,11 @@ final class Battlefield {
               }
             }
             if (stackIn_220_0 != 0) {
-              this.randomSeed = AttackEvent.a(false, 2147483647, li.field_n);
-              this.l(0, 0);
+              this.randomSeed = AttackEvent.nextBoundedInt(false, 2147483647, li.field_n);
+              this.loadOrGenerateMap(0, 0);
             }
             this.turnLimit = this.b((byte) 32);
-            this.f(-2);
+            this.recountMapStructures(-2);
             this.collectedManaTarget = this.f((byte) -80);
             this.field_F = false;
             return;

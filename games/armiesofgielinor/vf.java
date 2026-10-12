@@ -859,7 +859,7 @@ abstract class vf {
         }
         for (var3Lifetime1 = 0; var3Lifetime1 < 255; var3Lifetime1++) {
           var4 = 255 - var3Lifetime1;
-          var5 = AttackEvent.a(false, var4, var2);
+          var5 = AttackEvent.nextBoundedInt(false, var4, var2);
           var6 = this.field_k[var5];
           this.field_k[var5] = this.field_k[var4];
           this.field_k[256 + var4] = (short) var6;

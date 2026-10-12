@@ -105,13 +105,13 @@ final class EquipmentBattleTutorial extends BattleTutorial {
               var5_int++;
             }
             if (var5_int > 0) {
-              boolean decompiledSharedTail0 = (th.a(param0 + param1, 1, 2) != 0);
+              boolean decompiledSharedTail0 = (th.floorModWithOffset(param0 + param1, 1, 2) != 0);
               if (!decompiledSharedTail0) {
                 hq.field_a[0].draw(param2, param3);
                 decompiledSharedTail0 = (ArmiesOfGielinor.obfuscationControl);
               }
               if (decompiledSharedTail0) {
-                hq.field_a[(og.field_p[th.a(param1, 1, ResourceRequest.field_y) + th.a(param0, 1, ef.field_c) * ResourceRequest.field_y] % 6 + 1 << 2) - 1 + var5_int].draw(param2, param3);
+                hq.field_a[(og.field_p[th.floorModWithOffset(param1, 1, ResourceRequest.field_y) + th.floorModWithOffset(param0, 1, ef.field_c) * ResourceRequest.field_y] % 6 + 1 << 2) - 1 + var5_int].draw(param2, param3);
               }
             }
             var6 = 88 / ((-21 - param4) / 46);

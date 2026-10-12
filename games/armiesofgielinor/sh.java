@@ -127,11 +127,11 @@ final class sh {
           var2 = 0;
           var3 = 0;
           var4 = 0;
-          var5 = th.a(this.field_p, 1, 2048);
+          var5 = th.floorModWithOffset(this.field_p, 1, 2048);
           var6 = 1024;
           var7 = 2048;
           var8 = 12;
-          var9 = th.a(this.field_f - var7 / var8 + var7, 1, 2048);
+          var9 = th.floorModWithOffset(this.field_f - var7 / var8 + var7, 1, 2048);
           var10 = 0;
           var11 = (!this.field_q ? 300 : 400) - this.field_f * 2;
           var12 = -400;
@@ -156,11 +156,11 @@ final class sh {
         var2Lifetime1 = 0;
         var3Lifetime1 = 0;
         var4Lifetime1 = 0;
-        var5Lifetime1 = th.a(this.field_p, 1, 2048);
+        var5Lifetime1 = th.floorModWithOffset(this.field_p, 1, 2048);
         var6Lifetime1 = 1024;
         var7Lifetime1 = 2048;
         var8Lifetime1 = 12;
-        var9Lifetime1 = th.a(this.field_f - var7Lifetime1 / var8Lifetime1 + var7Lifetime1, 1, 2048);
+        var9Lifetime1 = th.floorModWithOffset(this.field_f - var7Lifetime1 / var8Lifetime1 + var7Lifetime1, 1, 2048);
         var10Lifetime1 = 0;
         var11Lifetime1 = (!this.field_q ? 300 : 400) - this.field_f * 2;
         var12Lifetime1 = -400;

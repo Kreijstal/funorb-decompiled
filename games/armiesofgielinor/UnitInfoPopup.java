@@ -247,7 +247,7 @@ final class UnitInfoPopup extends IntrusiveNode {
         }
     }
 
-    final static void a(int param0, byte param1, int param2, int param3, int param4, boolean param5, int param6, Battlefield param7, Random param8) {
+    final static void paintRandomTerrainPath(int startX, byte obfuscationGuard, int terrainType, int startY, int endX, boolean allowLavaCrossings, int endY, Battlefield battlefield, Random random) {
         MapTile[] stackIn_22_0 = null;
         int stackIn_22_1 = 0;
         int stackIn_23_2 = 0;
@@ -290,11 +290,11 @@ final class UnitInfoPopup extends IntrusiveNode {
         Random var14 = null;
         var13 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          var9_int = -param0 + param4;
-          var10 = -param3 + param6;
-          if (param1 != 101) {
+          var9_int = -startX + endX;
+          var10 = -startY + endY;
+          if (obfuscationGuard != 101) {
             var14 = (Random) null;
-            UnitInfoPopup.a(-20, (byte) 51, -30, 104, -20, false, -76, (Battlefield) null, (Random) null);
+            UnitInfoPopup.paintRandomTerrainPath(-20, (byte) 51, -30, 104, -20, false, -76, (Battlefield) null, (Random) null);
           }
           var11 = 0;
           var12 = 0;
@@ -303,68 +303,68 @@ final class UnitInfoPopup extends IntrusiveNode {
               var9_int == var12) {
               return;
             }
-            if (param7.tiles[var12 + param0 + (var11 + param3) * param7.mapWidth] != null &&
-              param7.tiles[var12 + (param0 + (var11 + param3) * param7.mapWidth)].terrainType == param2) {
+            if (battlefield.tiles[var12 + startX + (var11 + startY) * battlefield.mapWidth] != null &&
+              battlefield.tiles[var12 + (startX + (var11 + startY) * battlefield.mapWidth)].terrainType == terrainType) {
               return;
             }
-            if (param7.tiles[param0 + var12 + (var11 + param3) * param7.mapWidth] == null) {
-              param7.tiles[param7.mapWidth * (var11 + param3) + (param0 + var12)] = new MapTile(param2, param7);
+            if (battlefield.tiles[startX + var12 + (var11 + startY) * battlefield.mapWidth] == null) {
+              battlefield.tiles[battlefield.mapWidth * (var11 + startY) + (startX + var12)] = new MapTile(terrainType, battlefield);
             } else {
-              if (param7.tiles[param7.mapWidth * (var11 + param3) + (var12 + param0)].terrainType == 4 ||
-                6 == param7.tiles[(var11 + param3) * param7.mapWidth + (var12 + param0)].terrainType &&
-                param5) {
-                if (param2 == 1) {
-                  param7.tiles[(param3 + var11) * param7.mapWidth + var12 + param0] = new MapTile(10, param7);
+              if (battlefield.tiles[battlefield.mapWidth * (var11 + startY) + (var12 + startX)].terrainType == 4 ||
+                6 == battlefield.tiles[(var11 + startY) * battlefield.mapWidth + (var12 + startX)].terrainType &&
+                allowLavaCrossings) {
+                if (terrainType == 1) {
+                  battlefield.tiles[(startY + var11) * battlefield.mapWidth + var12 + startX] = new MapTile(10, battlefield);
                 } else {
-                  param7.tiles[(param3 + var11) * param7.mapWidth + param0 + var12] = new MapTile(param2, param7);
+                  battlefield.tiles[(startY + var11) * battlefield.mapWidth + startX + var12] = new MapTile(terrainType, battlefield);
                 }
               }
             }
             if (var9_int != var12) {
-              stackIn_22_0 = param7.tiles;
-              stackIn_22_1 = param7.mapWidth * (var11 + param3) + (param0 + var12);
+              stackIn_22_0 = battlefield.tiles;
+              stackIn_22_1 = battlefield.mapWidth * (var11 + startY) + (startX + var12);
               if (var9_int > 0) {
                 stackIn_23_2 = 1;
               } else {
                 stackIn_23_2 = -1;
               }
               if (stackIn_22_0[stackIn_22_1 + stackIn_23_2] != null) {
-                stackIn_26_0 = param2;
-                stackIn_26_1 = param7.tiles;
-                stackIn_26_2 = param0;
+                stackIn_26_0 = terrainType;
+                stackIn_26_1 = battlefield.tiles;
+                stackIn_26_2 = startX;
                 stackIn_26_3 = var12;
                 if (var9_int <= 0) {
                   stackIn_27_4 = -1;
                 } else {
                   stackIn_27_4 = 1;
                 }
-                if (stackIn_26_0 == stackIn_26_1[stackIn_26_2 + (stackIn_26_3 + (stackIn_27_4 + param7.mapWidth * (var11 + param3)))].terrainType) {
+                if (stackIn_26_0 == stackIn_26_1[stackIn_26_2 + (stackIn_26_3 + (stackIn_27_4 + battlefield.mapWidth * (var11 + startY)))].terrainType) {
                   return;
                 }
               }
             }
             if (var10 != var11) {
               stackIn_31_0 = null;
-              stackIn_31_1 = param7.tiles;
-              stackIn_31_2 = param7.mapWidth;
-              stackIn_31_3 = param3;
+              stackIn_31_1 = battlefield.tiles;
+              stackIn_31_2 = battlefield.mapWidth;
+              stackIn_31_3 = startY;
               stackIn_31_4 = var11;
               if (var10 > 0) {
                 stackIn_32_5 = 1;
               } else {
                 stackIn_32_5 = -1;
               }
-              if (stackIn_31_0 != stackIn_31_1[stackIn_31_2 * (stackIn_31_3 + (stackIn_31_4 + stackIn_32_5)) + param0 + var12]) {
-                stackIn_35_0 = ~param2;
-                stackIn_35_1 = param7.tiles;
-                stackIn_35_2 = var12 + param0;
-                stackIn_35_3 = param7.mapWidth;
+              if (stackIn_31_0 != stackIn_31_1[stackIn_31_2 * (stackIn_31_3 + (stackIn_31_4 + stackIn_32_5)) + startX + var12]) {
+                stackIn_35_0 = ~terrainType;
+                stackIn_35_1 = battlefield.tiles;
+                stackIn_35_2 = var12 + startX;
+                stackIn_35_3 = battlefield.mapWidth;
                 if (var10 > 0) {
                   stackIn_36_4 = 1;
                 } else {
                   stackIn_36_4 = -1;
                 }
-                if (stackIn_35_0 == ~stackIn_35_1[stackIn_35_2 + stackIn_35_3 * (stackIn_36_4 + param3 + var11)].terrainType) {
+                if (stackIn_35_0 == ~stackIn_35_1[stackIn_35_2 + stackIn_35_3 * (stackIn_36_4 + startY + var11)].terrainType) {
                   return;
                 }
               }
@@ -385,7 +385,7 @@ final class UnitInfoPopup extends IntrusiveNode {
             } else {
               stackIn_47_3 = -(var9_int - var12);
             }
-            if (stackIn_41_0 > AttackEvent.a(stackIn_43_1, stackIn_44_2 + stackIn_47_3, param8) &&
+            if (stackIn_41_0 > AttackEvent.nextBoundedInt(stackIn_43_1, stackIn_44_2 + stackIn_47_3, random) &&
               var12 != var9_int) {
               stackIn_51_0 = var12;
               if (0 >= var9_int) {
@@ -411,14 +411,14 @@ final class UnitInfoPopup extends IntrusiveNode {
           decompiledCaughtException = decompiledCaughtParameter0;
           var9 = decompiledCaughtException;
           stackIn_62_0 = var9;
-          stackIn_62_1 = new StringBuilder().append("fi.D(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',');
-          if (param7 == null) {
+          stackIn_62_1 = new StringBuilder().append("fi.D(").append(startX).append(',').append(obfuscationGuard).append(',').append(terrainType).append(',').append(startY).append(',').append(endX).append(',').append(allowLavaCrossings).append(',').append(endY).append(',');
+          if (battlefield == null) {
             stackIn_63_2 = "null";
           } else {
             stackIn_63_2 = "{...}";
           }
           stackIn_65_1 = ((StringBuilder) (Object) stackIn_62_1).append(stackIn_63_2).append(',');
-          if (param8 == null) {
+          if (random == null) {
             stackIn_66_2 = "null";
           } else {
             stackIn_66_2 = "{...}";

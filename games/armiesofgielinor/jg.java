@@ -22,7 +22,7 @@ final class jg extends IntrusiveNode {
         }
         int var5 = kd.field_Z[param4][param3];
         if (var5 > -1) {
-          var6 = AttackEvent.a(false, td.field_d[var5].length, li.field_n);
+          var6 = AttackEvent.nextBoundedInt(false, td.field_d[var5].length, li.field_n);
           if (td.field_d[var5][var6] != null &&
             td.field_d[var5][var6].field_o.length != 0) {
             param0 = 512 - (param0 - 800);

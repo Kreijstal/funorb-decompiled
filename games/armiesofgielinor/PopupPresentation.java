@@ -96,14 +96,14 @@ final class PopupPresentation implements EventPresentation {
             for (var4 = 0; var4 < 10; var4++) {
               stackIn_13_0 = this.field_t[var4];
               stackIn_13_1 = 0;
-              stackIn_13_2 = AttackEvent.a(false, 20, li.field_n) + 20;
-              if (10 >= AttackEvent.a(false, 20, li.field_n)) {
+              stackIn_13_2 = AttackEvent.nextBoundedInt(false, 20, li.field_n) + 20;
+              if (10 >= AttackEvent.nextBoundedInt(false, 20, li.field_n)) {
                 stackIn_14_3 = -1;
               } else {
                 stackIn_14_3 = 1;
               }
               stackIn_13_0[stackIn_13_1] = stackIn_13_2 * stackIn_14_3;
-              this.field_t[var4][1] = -60 + -1 * AttackEvent.a(false, 40, li.field_n);
+              this.field_t[var4][1] = -60 + -1 * AttackEvent.nextBoundedInt(false, 40, li.field_n);
             }
             event.applyToBattlefield(this.battlefield, -26661);
             return;
@@ -176,8 +176,8 @@ final class PopupPresentation implements EventPresentation {
           if (param3.eventKind == 14) {
             this.field_n = 2;
             this.unit = this.battlefield.getUnitAt(param1, true, param2);
-            this.field_f = AttackEvent.a(false, 21, li.field_n) - 10;
-            this.field_r = AttackEvent.a(false, 21, li.field_n) - 10;
+            this.field_f = AttackEvent.nextBoundedInt(false, 21, li.field_n) - 10;
+            this.field_r = AttackEvent.nextBoundedInt(false, 21, li.field_n) - 10;
             if (this.unit != null &&
               this.unit.ownerPlayer == ((StateChangeEvent) (param3)).playerId &&
               this.unit.bonusStrength != 5) {
@@ -192,8 +192,8 @@ final class PopupPresentation implements EventPresentation {
           if (16 == param3.eventKind) {
             this.field_n = 1;
             this.unit = this.battlefield.getUnitAt(param1, true, param2);
-            this.field_f = AttackEvent.a(false, 21, li.field_n) - 10;
-            this.field_r = -10 + AttackEvent.a(false, 21, li.field_n);
+            this.field_f = AttackEvent.nextBoundedInt(false, 21, li.field_n) - 10;
+            this.field_r = -10 + AttackEvent.nextBoundedInt(false, 21, li.field_n);
             if ((!this.field_g[param2 + this.field_s * param1].hasCorpse(92) ||
               null != this.unit) && (this.unit == null ||
               !this.unit.a(23072) ||
@@ -289,15 +289,15 @@ final class PopupPresentation implements EventPresentation {
               break;
             }
             stackIn_6_0 = var2;
-            if (AttackEvent.a(false, 100, li.field_n) > 50) {
+            if (AttackEvent.nextBoundedInt(false, 100, li.field_n) > 50) {
               stackIn_7_1 = 0;
             } else {
-              stackIn_7_1 = AttackEvent.a(false, 100, li.field_n) - 50 >> 4;
+              stackIn_7_1 = AttackEvent.nextBoundedInt(false, 100, li.field_n) - 50 >> 4;
             }
             var2 = stackIn_6_0 + stackIn_7_1;
             stackIn_9_0 = var3;
-            if (AttackEvent.a(false, 100, li.field_n) <= 50) {
-              stackIn_10_1 = -50 + AttackEvent.a(false, 100, li.field_n) >> 4;
+            if (AttackEvent.nextBoundedInt(false, 100, li.field_n) <= 50) {
+              stackIn_10_1 = -50 + AttackEvent.nextBoundedInt(false, 100, li.field_n) >> 4;
             } else {
               stackIn_10_1 = 0;
             }
@@ -331,7 +331,7 @@ final class PopupPresentation implements EventPresentation {
         GameEvent var6;
         var5 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         if (this.elapsedFrames < 20) {
-          stackIn_4_0 = hs.field_F[AttackEvent.a(false, hs.field_F.length, li.field_n)];
+          stackIn_4_0 = hs.field_F[AttackEvent.nextBoundedInt(false, hs.field_F.length, li.field_n)];
           stackIn_4_1 = this.presenter.screenX + 30;
           stackIn_4_2 = -90 + (this.presenter.screenY + this.elapsedFrames * 4);
           stackIn_4_3 = 20;
@@ -347,7 +347,7 @@ final class PopupPresentation implements EventPresentation {
           for (var2 = 0; var2 < this.field_t.length; var2++) {
             var3 = this.presenter.screenX + (this.field_t[var2][0] * (this.elapsedFrames - 20) / 20 + 35);
             var4 = -10 + this.presenter.screenY + (-20 + this.elapsedFrames) * this.field_t[var2][1] / 20;
-            hs.field_F[AttackEvent.a(false, hs.field_F.length, li.field_n)].d(-((-20 + this.elapsedFrames) / 4) + var3, -((-40 + this.elapsedFrames) / 4) + (this.elapsedFrames - 20) * (this.elapsedFrames - 20) / 10 + var4, (-20 + this.elapsedFrames) / 2 + 10, (-20 + this.elapsedFrames) / 2 + 10, (-this.elapsedFrames + 60) * 255 / 40);
+            hs.field_F[AttackEvent.nextBoundedInt(false, hs.field_F.length, li.field_n)].d(-((-20 + this.elapsedFrames) / 4) + var3, -((-40 + this.elapsedFrames) / 4) + (this.elapsedFrames - 20) * (this.elapsedFrames - 20) / 10 + var4, (-20 + this.elapsedFrames) / 2 + 10, (-20 + this.elapsedFrames) / 2 + 10, (-this.elapsedFrames + 60) * 255 / 40);
           }
         }
         if (param0 != -117) {
@@ -649,8 +649,8 @@ final class PopupPresentation implements EventPresentation {
                 this.field_n = 2;
                 this.field_m = -1;
               }
-              this.field_f = AttackEvent.a(false, 21, li.field_n) - 10;
-              this.field_r = AttackEvent.a(false, 21, li.field_n) - 10;
+              this.field_f = AttackEvent.nextBoundedInt(false, 21, li.field_n) - 10;
+              this.field_r = AttackEvent.nextBoundedInt(false, 21, li.field_n) - 10;
               if (event.unit == null) {
                 return false;
               }
@@ -663,8 +663,8 @@ final class PopupPresentation implements EventPresentation {
                 this.field_m = 3;
                 this.field_n = 6;
                 var10 = (UpkeepEvent) (event);
-                this.field_f = AttackEvent.a(false, 21, li.field_n) - 10;
-                this.field_r = AttackEvent.a(false, 21, li.field_n) - 10;
+                this.field_f = AttackEvent.nextBoundedInt(false, 21, li.field_n) - 10;
+                this.field_r = AttackEvent.nextBoundedInt(false, 21, li.field_n) - 10;
                 this.presenter.tileIndex = var10.field_y * this.field_s + var10.field_D;
               } else {
                 if (event.eventKind != 2) {

@@ -78,7 +78,7 @@ final class SummonAction extends PreparedAction {
                   }
                   if (var5 >= 2 &&
                     !param2) {
-                    stackIn_32_0 = ul.field_o;
+                    stackIn_32_0 = LineOfSightGrid.field_o;
                     return stackIn_32_0;
                   }
                 }

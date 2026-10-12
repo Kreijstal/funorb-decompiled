@@ -20,8 +20,8 @@ final class on extends IntrusiveNode {
         }
     }
 
-    final static void a(Battlefield param0, int param1, boolean param2, Random param3) {
-        int var4_int = 0;
+    final static void scatterMapTerrain(Battlefield battlefield, int preferredTerrainType, boolean obfuscationGuard, Random random) {
+        int attempt = 0;
         RuntimeException stackIn_36_0 = null;
         StringBuilder stackIn_36_1 = null;
         String stackIn_37_2 = null;
@@ -29,38 +29,38 @@ final class on extends IntrusiveNode {
         String stackIn_40_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var4 = null;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var8Lifetime1;
-        var9 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        int tileX = 0;
+        int tileY = 0;
+        int tileIndex = 0;
+        int terrainRoll = 0;
+        int obfuscationControl = 0;
+        int neighborTerrainRoll;
+        obfuscationControl = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          for (var4_int = 0; var4_int < param0.mapHeight * param0.mapWidth / 3; var4_int++) {
+          for (attempt = 0; attempt < battlefield.mapHeight * battlefield.mapWidth / 3; attempt++) {
             boolean decompiledFrameRemainder0 = true;
-            var5 = 1 + AttackEvent.a(false, param0.mapWidth - 2, param3);
-            var6 = AttackEvent.a(param2, param0.mapHeight - 2, param3) + 1;
-            var7 = var6 * param0.mapWidth + var5;
-            if (param0.tiles[var7].terrainType == 0 &&
-              null == param0.tiles[var7].occupant) {
-              if (param0.tiles[1 + var7].terrainType != param1 &&
-                param1 != param0.tiles[-1 + var7].terrainType &&
-                param0.tiles[param0.mapWidth + var7].terrainType != param1 &&
-                param1 != param0.tiles[var7 - param0.mapWidth].terrainType) {
-                var8 = AttackEvent.a(false, 100, param3);
-                if (var8 < 20) {
-                  param0.tiles[var7].terrainType = 3;
+            tileX = 1 + AttackEvent.nextBoundedInt(false, battlefield.mapWidth - 2, random);
+            tileY = AttackEvent.nextBoundedInt(obfuscationGuard, battlefield.mapHeight - 2, random) + 1;
+            tileIndex = tileY * battlefield.mapWidth + tileX;
+            if (battlefield.tiles[tileIndex].terrainType == 0 &&
+              null == battlefield.tiles[tileIndex].occupant) {
+              if (battlefield.tiles[1 + tileIndex].terrainType != preferredTerrainType &&
+                preferredTerrainType != battlefield.tiles[-1 + tileIndex].terrainType &&
+                battlefield.tiles[battlefield.mapWidth + tileIndex].terrainType != preferredTerrainType &&
+                preferredTerrainType != battlefield.tiles[tileIndex - battlefield.mapWidth].terrainType) {
+                terrainRoll = AttackEvent.nextBoundedInt(false, 100, random);
+                if (terrainRoll < 20) {
+                  battlefield.tiles[tileIndex].terrainType = 3;
                 } else {
-                  if (40 > var8) {
-                    param0.tiles[var7].terrainType = 5;
+                  if (40 > terrainRoll) {
+                    battlefield.tiles[tileIndex].terrainType = 5;
                   } else {
-                    if (50 > var8) {
-                      param0.tiles[var7].terrainType = 2;
+                    if (50 > terrainRoll) {
+                      battlefield.tiles[tileIndex].terrainType = 2;
                     } else {
-                      if ((!(70 <= var8)) &&
-                        (!(param1 <= -1))) {
-                        param0.tiles[var7].terrainType = param1;
+                      if ((!(70 <= terrainRoll)) &&
+                        (!(preferredTerrainType <= -1))) {
+                        battlefield.tiles[tileIndex].terrainType = preferredTerrainType;
                       }
                     }
                   }
@@ -68,31 +68,31 @@ final class on extends IntrusiveNode {
                 decompiledFrameRemainder0 = false;
               }
               else {
-                if (AttackEvent.a(false, 100, param3) >= 40) {
-                  var8Lifetime1 = AttackEvent.a(param2, 100, param3);
-                  if (var8Lifetime1 >= 20) {
-                    if (var8Lifetime1 < 40) {
-                      param0.tiles[var7].terrainType = 5;
+                if (AttackEvent.nextBoundedInt(false, 100, random) >= 40) {
+                  neighborTerrainRoll = AttackEvent.nextBoundedInt(obfuscationGuard, 100, random);
+                  if (neighborTerrainRoll >= 20) {
+                    if (neighborTerrainRoll < 40) {
+                      battlefield.tiles[tileIndex].terrainType = 5;
                     } else {
-                      if (var8Lifetime1 >= 50) {
-                        if (var8Lifetime1 < 70 &&
-                          param1 > -1) {
-                          param0.tiles[var7].terrainType = param1;
+                      if (neighborTerrainRoll >= 50) {
+                        if (neighborTerrainRoll < 70 &&
+                          preferredTerrainType > -1) {
+                          battlefield.tiles[tileIndex].terrainType = preferredTerrainType;
                         }
                       } else {
-                        param0.tiles[var7].terrainType = 2;
+                        battlefield.tiles[tileIndex].terrainType = 2;
                       }
                     }
                   } else {
-                    param0.tiles[var7].terrainType = 3;
+                    battlefield.tiles[tileIndex].terrainType = 3;
                   }
                 } else {
-                  param0.tiles[var7].terrainType = param1;
+                  battlefield.tiles[tileIndex].terrainType = preferredTerrainType;
                 }
               }
             }
           }
-          if (param2) {
+          if (obfuscationGuard) {
             field_o = (String) null;
           }
           return;
@@ -101,13 +101,13 @@ final class on extends IntrusiveNode {
           var4 = decompiledCaughtException;
           stackIn_36_0 = var4;
           stackIn_36_1 = new StringBuilder().append("on.A(");
-          if (param0 == null) {
+          if (battlefield == null) {
             stackIn_37_2 = "null";
           } else {
             stackIn_37_2 = "{...}";
           }
-          stackIn_39_1 = ((StringBuilder) (Object) stackIn_36_1).append(stackIn_37_2).append(',').append(param1).append(',').append(param2).append(',');
-          if (param3 == null) {
+          stackIn_39_1 = ((StringBuilder) (Object) stackIn_36_1).append(stackIn_37_2).append(',').append(preferredTerrainType).append(',').append(obfuscationGuard).append(',');
+          if (random == null) {
             stackIn_40_2 = "null";
           } else {
             stackIn_40_2 = "{...}";

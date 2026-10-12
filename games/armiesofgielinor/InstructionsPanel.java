@@ -2430,13 +2430,13 @@ final class InstructionsPanel {
                 stackIn_55_0 = ((2 & var7) != 0);
                 vi.field_d = stackIn_55_0;
                 stackIn_58_0 = ((4 & var7) != 0);
-                ul.field_m = stackIn_58_0;
+                LineOfSightGrid.field_m = stackIn_58_0;
                 if (NodeIterator.field_a) {
                   vi.field_d = true;
                 }
                 stackIn_63_0 = ((16 & var7) != 0);
                 c.field_c = stackIn_63_0;
-                if (ul.field_a) {
+                if (LineOfSightGrid.field_a) {
                   ByteStorage.incomingPacket.readUnsignedByte(0);
                   ByteStorage.incomingPacket.readUnsignedByte(param0 ^ -53);
                   ByteStorage.incomingPacket.readInt(param0 + 54);
@@ -2449,7 +2449,7 @@ final class InstructionsPanel {
               } else {
                 stackIn_45_0 = ((16 & var7) != 0);
                 c.field_c = stackIn_45_0;
-                if (ul.field_a) {
+                if (LineOfSightGrid.field_a) {
                   ByteStorage.incomingPacket.readUnsignedByte(0);
                   ByteStorage.incomingPacket.readUnsignedByte(param0 ^ -53);
                   ByteStorage.incomingPacket.readInt(param0 + 54);
@@ -2477,7 +2477,7 @@ final class InstructionsPanel {
                 ph.a(var6, CombatEvent.d((byte) -117), false);
               }
               if (df.field_M <= 0 &&
-                !ul.field_m) {
+                !LineOfSightGrid.field_m) {
                 try {
                   lj.a("unzap", (byte) -52, CombatEvent.d((byte) -128));
                 } catch (java.lang.Throwable decompiledCaughtParameter0) {

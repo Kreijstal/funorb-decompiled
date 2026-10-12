@@ -93,7 +93,7 @@ final class AttackEvent extends GameEvent {
         }
     }
 
-    final static int a(boolean param0, int param1, Random param2) {
+    final static int nextBoundedInt(boolean obfuscationGuard, int bound, Random random) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
@@ -104,28 +104,28 @@ final class AttackEvent extends GameEvent {
         String stackIn_17_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param1 <= 0) {
+          if (bound <= 0) {
             throw new IllegalArgumentException();
           }
-          if (pg.a(param1, -10)) {
-            stackIn_6_0 = (int)((long)param1 * (4294967295L & (long)param2.nextInt()) >> 32);
+          if (pg.isPowerOfTwoBits(bound, -10)) {
+            stackIn_6_0 = (int)((long)bound * (4294967295L & (long)random.nextInt()) >> 32);
             return stackIn_6_0;
           }
-          if (param0) {
+          if (obfuscationGuard) {
             AttackEvent.b(true);
           }
-          var3_int = -(int)(4294967296L % (long)param1) + -2147483648;
+          var3_int = -(int)(4294967296L % (long)bound) + -2147483648;
           do {
-            var4 = param2.nextInt();
+            var4 = random.nextInt();
           } while (var3_int <= var4);
-          stackIn_13_0 = th.a(var4, 1, param1);
+          stackIn_13_0 = th.floorModWithOffset(var4, 1, bound);
           return stackIn_13_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
           stackIn_16_0 = var3;
-          stackIn_16_1 = new StringBuilder().append("ns.D(").append(param0).append(',').append(param1).append(',');
-          if (param2 == null) {
+          stackIn_16_1 = new StringBuilder().append("ns.D(").append(obfuscationGuard).append(',').append(bound).append(',');
+          if (random == null) {
             stackIn_17_2 = "null";
           } else {
             stackIn_17_2 = "{...}";

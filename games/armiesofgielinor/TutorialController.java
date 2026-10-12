@@ -4855,7 +4855,7 @@ final class TutorialController {
                           RadialSummonMenu.$cfr$intArgs$a$6d836999ad61(65, ClientUiNode.field_v[1]);
                           GameplayController.field_J = na.field_F;
                         }
-                        ul.a((byte) -102, 224, db.a(true, 380), ro.pointerButton, ko.pointerY, 352, AiPlanningStrategy.pointerX, MatchConditionEntry.a(60, (byte) 94));
+                        LineOfSightGrid.a((byte) -102, 224, db.a(true, 380), ro.pointerButton, ko.pointerY, 352, AiPlanningStrategy.pointerX, MatchConditionEntry.a(60, (byte) 94));
                         decompiledFrameRemainder3 = (var4 != 0);
                       }
                     }

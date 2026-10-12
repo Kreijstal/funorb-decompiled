@@ -1605,7 +1605,7 @@ final class CampaignUnitOverride {
                 }
                 var2 = NodeIterator.a(50, "create_alert_doublespace");
                 if (var2 != null) {
-                  ul.field_o = uu.a(var2, (byte) 117);
+                  LineOfSightGrid.field_o = uu.a(var2, (byte) 117);
                 }
                 var2 = NodeIterator.a(param0 ^ -100, "create_alert_passchars");
                 if (null != var2) {
@@ -2031,7 +2031,7 @@ final class CampaignUnitOverride {
                 }
                 var2 = NodeIterator.a(50, "ok");
                 if (var2 != null) {
-                  ul.field_f = uu.a(var2, (byte) -125);
+                  LineOfSightGrid.field_f = uu.a(var2, (byte) -125);
                 }
                 if (param0 != -82) {
                   field_c = (String) null;

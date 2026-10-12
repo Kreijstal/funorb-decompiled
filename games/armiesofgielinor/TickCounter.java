@@ -1271,7 +1271,7 @@ final class TickCounter {
                 }
                 var2 = fk.a(false, "START_MISSION");
                 if (var2 != null) {
-                  ul.field_j = uu.a(var2, (byte) 108);
+                  LineOfSightGrid.field_j = uu.a(var2, (byte) 108);
                 }
                 var2 = fk.a(false, "REPLAY_MISSION");
                 if (var2 != null) {

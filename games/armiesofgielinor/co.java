@@ -139,7 +139,7 @@ final class co {
 
     final sn b(int param0) {
         int var2 = 27 % ((50 - param0) / 33);
-        return this.field_t[AttackEvent.a(false, this.field_t.length, li.field_n)];
+        return this.field_t[AttackEvent.nextBoundedInt(false, this.field_t.length, li.field_n)];
     }
 
     public static void a(byte param0) {

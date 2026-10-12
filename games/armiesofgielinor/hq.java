@@ -40,7 +40,7 @@ final class hq {
             AiPlanningStrategy.field_c = param2;
             wj.field_n = param11;
             rn.field_d = param8;
-            ul.field_a = param4;
+            LineOfSightGrid.field_a = param4;
             an.field_E = param12;
             CampaignRewardPreview.field_d = param0;
             fl.field_e = param13;

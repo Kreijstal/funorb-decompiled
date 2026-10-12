@@ -46,9 +46,9 @@ final class th {
         field_b = null;
     }
 
-    final static int a(int param0, int param1, int param2) {
-        int var3 = param2 - param1 & param0 >> 31;
-        return var3 + ((param0 >>> 31) + param0) % param2;
+    final static int floorModWithOffset(int value, int offset, int divisor) {
+        int var3 = divisor - offset & value >> 31;
+        return var3 + ((value >>> 31) + value) % divisor;
     }
 
     static {

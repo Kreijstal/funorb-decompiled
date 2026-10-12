@@ -335,7 +335,7 @@ final class MoveAttackRequest extends ActionRequest {
               } else {
                 stackIn_97_0 = (bw.unitDefinitions[var17.unitType][0] != 4) ? 0 : 1;
                 var14 = stackIn_97_0;
-                if (!battlefield.field_j.a(var6, this.targetDeltaX + var5, var5, var14 != 0, var13, this.targetDeltaY + var6, (byte) 81)) {
+                if (!battlefield.lineOfSightGrid.computeVisibility(var6, this.targetDeltaX + var5, var5, var14 != 0, var13, this.targetDeltaY + var6, (byte) 81)) {
                   this.targetDeltaX = 0;
                   this.targetDeltaY = 0;
                 }

@@ -187,7 +187,7 @@ final class ac extends IntrusiveNode {
             return;
           }
           this.a(param0, -12614);
-          RadialSummonMenu.$cfr$intArgs$a$6d836999ad61(91, el.field_b[1 + AttackEvent.a(false, 8, li.field_n)]);
+          RadialSummonMenu.$cfr$intArgs$a$6d836999ad61(91, el.field_b[1 + AttackEvent.nextBoundedInt(false, 8, li.field_n)]);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -258,7 +258,7 @@ final class ac extends IntrusiveNode {
         this.field_q = param4;
         this.field_w = param6;
         this.field_o = -param5;
-        this.field_t = AttackEvent.a(false, vc.field_k.length, li.field_n);
+        this.field_t = AttackEvent.nextBoundedInt(false, vc.field_k.length, li.field_n);
         this.field_y = param7;
     }
 

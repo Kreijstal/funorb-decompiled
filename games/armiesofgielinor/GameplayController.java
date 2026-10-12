@@ -300,7 +300,7 @@ final class GameplayController {
           scanLoop1: while (true) {
             if (var9 < 3) {
               stackIn_32_0 = en.field_E;
-              stackIn_32_1 = this.battlefield.teamStructureCounts[this.battlefield.getPlayerTeamIndex(param6, -1)][var9] + "/" + this.battlefield.field_s[var9];
+              stackIn_32_1 = this.battlefield.teamStructureCounts[this.battlefield.getPlayerTeamIndex(param6, -1)][var9] + "/" + this.battlefield.mapStructureTotals[var9];
               stackIn_32_2 = param3;
               stackIn_32_3 = param5 + var9 * param2;
               stackIn_32_4 = op.field_c;
@@ -1642,11 +1642,11 @@ final class GameplayController {
         try {
           vl.outgoingPacket.writeCipheredOpcode(32161, 65);
           var3 = -5 % ((26 - param0) / 37);
-          var2_int = 5 + AttackEvent.a(false, 15, vv.field_b);
+          var2_int = 5 + AttackEvent.nextBoundedInt(false, 15, vv.field_b);
           vl.outgoingPacket.writeByte(1, var2_int);
           var4 = 0;
           while (var4 < var2_int) {
-            vl.outgoingPacket.writeByte(1, AttackEvent.a(false, 256, vv.field_b));
+            vl.outgoingPacket.writeByte(1, AttackEvent.nextBoundedInt(false, 256, vv.field_b));
             var4++;
             if (var5 != 0) {
               return;
@@ -3791,7 +3791,7 @@ final class GameplayController {
                           if (((ManaEvent) (var3)).manaPoints <= 0) {
                             break;
                           }
-                          this.field_Ub.addLast((byte) -119, (IntrusiveNode) (new ac(AttackEvent.a(false, 30, vv.field_b) + 115, this.f(128, 0) - (110 - AttackEvent.a(false, 30, vv.field_b)), 30, 0, this.controlledPlayerId, var4 >> 3, 1, ((ManaEvent) (var3)).field_z)));
+                          this.field_Ub.addLast((byte) -119, (IntrusiveNode) (new ac(AttackEvent.nextBoundedInt(false, 30, vv.field_b) + 115, this.f(128, 0) - (110 - AttackEvent.nextBoundedInt(false, 30, vv.field_b)), 30, 0, this.controlledPlayerId, var4 >> 3, 1, ((ManaEvent) (var3)).field_z)));
                           var4++;
                           ((ManaEvent) (var3)).manaPoints = ((ManaEvent) (var3)).manaPoints - 1;
                           if (var10 != 0) {
@@ -4073,7 +4073,7 @@ final class GameplayController {
             this.field_hb = 66;
           }
           this.battlefield.tiles = null;
-          this.battlefield.field_j = null;
+          this.battlefield.lineOfSightGrid = null;
           var2 = this.battlefield.unitsByPlayer;
           var3 = 0;
           while (var2.length > var3) {
@@ -4164,7 +4164,7 @@ final class GameplayController {
             if (TabbedPanel.a(29, 129, 19, false)) {
               DropdownSelector.field_M.f(110, 10, 128);
             }
-            ul.field_g.g(110, 10);
+            LineOfSightGrid.field_g.g(110, 10);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -5199,7 +5199,7 @@ final class GameplayController {
               default:
                 break;
             }
-            ul.$cfr$intArgs$a$5d483ac33914(-80, var3, this.field_Nb);
+            LineOfSightGrid.$cfr$intArgs$a$5d483ac33914(-80, var3, this.field_Nb);
             return;
           }
           return;
@@ -5570,7 +5570,7 @@ final class GameplayController {
             } else {
               stackIn_347_2 = "";
             }
-            ul.$cfr$intArgs$a$5d483ac33914(stackIn_346_0, ((StringBuilder) (Object) stackIn_346_1).append(stackIn_347_2).append("paused").toString(), this.field_Nb);
+            LineOfSightGrid.$cfr$intArgs$a$5d483ac33914(stackIn_346_0, ((StringBuilder) (Object) stackIn_346_1).append(stackIn_347_2).append("paused").toString(), this.field_Nb);
           }
           if (this.field_E &&
             rs.field_q == 54 &&
@@ -6096,7 +6096,7 @@ final class GameplayController {
                       if (var6 == 5) {
                         var2 = HuffmanCodec.field_g;
                       } else {
-                        var7 = th.a(this.field_Lb + var6, param0 ^ 121, 135);
+                        var7 = th.floorModWithOffset(this.field_Lb + var6, param0 ^ 121, 135);
                         if (-1 < var7 &&
                           var7 < fq.field_f.length) {
                           stackIn_72_0 = fq.field_f[var7];
@@ -6353,7 +6353,7 @@ final class GameplayController {
                       decompiledSharedTail5 = (var20 != 0);
                     }
                     if (decompiledSharedTail5) {
-                      var2 = fo.a(param0 ^ 4792, DiskCacheWorker.field_f[var9], new String[]{Integer.toString(this.battlefield.teamStructureCounts[this.battlefield.getPlayerTeamIndex(this.battlefield.currentPlayer, -1)][-1 + var9]), Integer.toString(this.battlefield.field_s[-1 + var9])});
+                      var2 = fo.a(param0 ^ 4792, DiskCacheWorker.field_f[var9], new String[]{Integer.toString(this.battlefield.teamStructureCounts[this.battlefield.getPlayerTeamIndex(this.battlefield.currentPlayer, -1)][-1 + var9]), Integer.toString(this.battlefield.mapStructureTotals[-1 + var9])});
                     }
                   }
                   decompiledFrameRemainder10 = (~this.battlefield.rankedParticipants[0] != ~this.battlefield.currentPlayer);
@@ -6366,7 +6366,7 @@ final class GameplayController {
                     }
                     decompiledFrameRemainder10 = !(var9 <= 0);
                     if (decompiledFrameRemainder10) {
-                      var2 = fo.a(param0 ^ 4792, DiskCacheWorker.field_f[var9 + 4], new String[]{Integer.toString(this.battlefield.teamStructureCounts[this.battlefield.rankedParticipants[0]][-1 + var9]), Integer.toString(this.battlefield.field_s[-1 + var9]), this.battlefield.teams[this.battlefield.rankedParticipants[0]].getTeamName(param0 ^ 123)});
+                      var2 = fo.a(param0 ^ 4792, DiskCacheWorker.field_f[var9 + 4], new String[]{Integer.toString(this.battlefield.teamStructureCounts[this.battlefield.rankedParticipants[0]][-1 + var9]), Integer.toString(this.battlefield.mapStructureTotals[-1 + var9]), this.battlefield.teams[this.battlefield.rankedParticipants[0]].getTeamName(param0 ^ 123)});
                       decompiledFrameRemainder10 = (var20 != 0);
                     }
                   }
@@ -6383,7 +6383,7 @@ final class GameplayController {
                       decompiledSharedTail4 = (var20 != 0);
                     }
                     if (decompiledSharedTail4) {
-                      var2 = fo.a(4800, DiskCacheWorker.field_f[var9], new String[]{Integer.toString(this.battlefield.teamStructureCounts[this.battlefield.getPlayerTeamIndex(this.controlledPlayerId, -1)][var9 - 1]), Integer.toString(this.battlefield.field_s[var9 - 1])});
+                      var2 = fo.a(4800, DiskCacheWorker.field_f[var9], new String[]{Integer.toString(this.battlefield.teamStructureCounts[this.battlefield.getPlayerTeamIndex(this.controlledPlayerId, -1)][var9 - 1]), Integer.toString(this.battlefield.mapStructureTotals[var9 - 1])});
                     }
                   }
                   if (this.battlefield.rankedParticipants[0] != this.battlefield.getPlayerTeamIndex(this.controlledPlayerId, param0 - 121) &&
@@ -6394,7 +6394,7 @@ final class GameplayController {
                       var9++;
                     }
                     if (0 < var9) {
-                      var2 = fo.a(param0 ^ 4792, DiskCacheWorker.field_f[4 + var9], new String[]{Integer.toString(this.battlefield.teamStructureCounts[this.battlefield.rankedParticipants[0]][-1 + var9]), Integer.toString(this.battlefield.field_s[var9 - 1]), this.battlefield.teams[this.battlefield.rankedParticipants[0]].getTeamName(3)});
+                      var2 = fo.a(param0 ^ 4792, DiskCacheWorker.field_f[4 + var9], new String[]{Integer.toString(this.battlefield.teamStructureCounts[this.battlefield.rankedParticipants[0]][-1 + var9]), Integer.toString(this.battlefield.mapStructureTotals[var9 - 1]), this.battlefield.teams[this.battlefield.rankedParticipants[0]].getTeamName(3)});
                     }
                   }
                 }
@@ -7794,7 +7794,7 @@ final class GameplayController {
             RadialSummonMenu.$cfr$intArgs$a$6d836999ad61(127, UnitLossCondition.field_d[this.battlefield.mapTheme].b(param0 - 74));
           }
           if (0 >= this.field_kb) {
-            this.field_kb = 50 + AttackEvent.a(false, 200, vv.field_b);
+            this.field_kb = 50 + AttackEvent.nextBoundedInt(false, 200, vv.field_b);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -8478,7 +8478,7 @@ final class GameplayController {
                       if (var10Lifetime1Lifetime2 != 5) {
                         if (((0 == this.field_g)) &&
                           ((this.field_b == 0))) {
-                          this.e(th.a(var10Lifetime1Lifetime2 + this.field_Lb, 1, 135), -1, 127);
+                          this.e(th.floorModWithOffset(var10Lifetime1Lifetime2 + this.field_Lb, 1, 135), -1, 127);
                         }
                       } else {
                         this.field_b = this.field_b + 1;
@@ -10045,7 +10045,7 @@ final class GameplayController {
             var6++;
           } while (var7 == 0);
           while (var6 < 3) {
-            en.field_E.b(this.battlefield.teamStructureCounts[param0][var6] + "/" + this.battlefield.field_s[var6], db.a(true, 40 + param1), MatchConditionEntry.a(-2 + param2 + (var6 + 1) * var5_int, (byte) 94), 38810, -1);
+            en.field_E.b(this.battlefield.teamStructureCounts[param0][var6] + "/" + this.battlefield.mapStructureTotals[var6], db.a(true, 40 + param1), MatchConditionEntry.a(-2 + param2 + (var6 + 1) * var5_int, (byte) 94), 38810, -1);
             var6++;
             if (var7 != 0) {
               return;
@@ -10115,18 +10115,18 @@ final class GameplayController {
             var3 = 1 << var2_int;
             if (var4 == 0) {
               if ((this.field_hb & var3) != 0) {
-                ul.$cfr$intArgs$a$5d483ac33914(-80, fo.a(4800, wd.field_g, new String[]{this.battlefield.playerNames[var2_int]}), this.field_Nb);
+                LineOfSightGrid.$cfr$intArgs$a$5d483ac33914(-80, fo.a(4800, wd.field_g, new String[]{this.battlefield.playerNames[var2_int]}), this.field_Nb);
               } else {
                 if ((this.field_ob & var3) != 0) {
-                  ul.$cfr$intArgs$a$5d483ac33914(-80, fo.a(4800, QuickChatMenu.field_Mb, new String[]{this.battlefield.playerNames[var2_int]}), this.field_Nb);
+                  LineOfSightGrid.$cfr$intArgs$a$5d483ac33914(-80, fo.a(4800, QuickChatMenu.field_Mb, new String[]{this.battlefield.playerNames[var2_int]}), this.field_Nb);
                 }
               }
               if (0 != (var3 & this.field_x) &&
                 0 == (this.battlefield.eliminatedPlayerMask & var3)) {
                 if (0 == (var3 & this.battlefield.field_C)) {
-                  ul.$cfr$intArgs$a$5d483ac33914(-80, fo.a(4800, TelepopEvent.field_y, new String[]{this.battlefield.playerNames[var2_int]}), this.field_Nb);
+                  LineOfSightGrid.$cfr$intArgs$a$5d483ac33914(-80, fo.a(4800, TelepopEvent.field_y, new String[]{this.battlefield.playerNames[var2_int]}), this.field_Nb);
                 } else {
-                  ul.$cfr$intArgs$a$5d483ac33914(-80, fo.a(4800, bk.field_h, new String[]{this.battlefield.playerNames[var2_int]}), this.field_Nb);
+                  LineOfSightGrid.$cfr$intArgs$a$5d483ac33914(-80, fo.a(4800, bk.field_h, new String[]{this.battlefield.playerNames[var2_int]}), this.field_Nb);
                 }
               }
               var2_int++;
@@ -11103,21 +11103,21 @@ final class GameplayController {
             }
             var2_int = -1;
             while (var2_int < 6) {
-              stackIn_75_0 = uc.spellDefinitions[th.a(var2_int + this.field_Lb, param0 - 11424, 135)][1];
+              stackIn_75_0 = uc.spellDefinitions[th.floorModWithOffset(var2_int + this.field_Lb, param0 - 11424, 135)][1];
               stackIn_75_1 = this.battlefield.playerTurnCounts[this.controlledPlayerId];
               if (var5 != 0) {
                 return;
               }
               stackIn_20_0 = (stackIn_75_0 <= stackIn_75_1) ? 0 : 1;
               var3 = stackIn_20_0;
-              var4 = uc.spellDefinitions[th.a(var2_int + this.field_Lb, 1, 135)][2];
-              if (~th.a(this.field_Lb + var2_int, 1, 135) == ~this.field_gc) {
+              var4 = uc.spellDefinitions[th.floorModWithOffset(var2_int + this.field_Lb, 1, 135)][2];
+              if (~th.floorModWithOffset(this.field_Lb + var2_int, 1, 135) == ~this.field_gc) {
                 TeamRoster.field_e.d(var2_int * 45 + 200 + this.field_g, -125 + this.o(127), 60, 60, 256);
               }
               if (var2_int == -1) {
                 if (this.field_g > 0) {
                   if (BattleCharacter.field_h.length <= var4) {
-                    SoftwareRaster.a(this.field_g + 45 * var2_int + 230, this.o(126) - 95, 20, AttackEvent.a(false, 16777215, vv.field_b), -(this.field_n >> 1) + 128);
+                    SoftwareRaster.a(this.field_g + 45 * var2_int + 230, this.o(126) - 95, 20, AttackEvent.nextBoundedInt(false, 16777215, vv.field_b), -(this.field_n >> 1) + 128);
                   } else {
                     BattleCharacter.field_h[var4].e(this.field_g + (211 + var2_int * 45), this.o(127) - 115, -this.field_n + 256);
                   }
@@ -11129,7 +11129,7 @@ final class GameplayController {
               } else if (var2_int == 5) {
                 if (0 > this.field_g) {
                   if (BattleCharacter.field_h.length <= var4) {
-                    SoftwareRaster.a(45 * var2_int + 230 + this.field_g, -95 + this.o(126), 20, AttackEvent.a(false, 16777215, vv.field_b), -(this.field_n >> 1) + 128);
+                    SoftwareRaster.a(45 * var2_int + 230 + this.field_g, -95 + this.o(126), 20, AttackEvent.nextBoundedInt(false, 16777215, vv.field_b), -(this.field_n >> 1) + 128);
                   } else {
                     BattleCharacter.field_h[var4].e(45 * var2_int + (211 + this.field_g), this.o(127) - 115, -this.field_n + 256);
                   }
@@ -11142,7 +11142,7 @@ final class GameplayController {
                 if (var4 < BattleCharacter.field_h.length) {
                   BattleCharacter.field_h[var4].e(this.field_g + (var2_int * 45 + 211), -115 + this.o(126), 256 - this.field_n);
                 } else {
-                  SoftwareRaster.a(this.field_g + (230 + 45 * var2_int), -95 + this.o(127), 20, AttackEvent.a(false, 16777215, vv.field_b), -(this.field_n >> 1) + 128);
+                  SoftwareRaster.a(this.field_g + (230 + 45 * var2_int), -95 + this.o(127), 20, AttackEvent.nextBoundedInt(false, 16777215, vv.field_b), -(this.field_n >> 1) + 128);
                 }
                 if (var3 != 0) {
                   SoftwareRaster.a(var2_int * 45 + (230 + this.field_g), this.o(127) - 95, 20, 0, 128);
@@ -11271,7 +11271,7 @@ final class GameplayController {
     private final void saveCampaignQuicksave(byte obfuscationGuard) {
         try {
           LobbyPlayer.uploadQuicksave(this.battlefield, this.battlefield.damageTakenByPlayer[this.battlefield.campaignMission.playerSlot], this.battlefield.unitLossCounts[this.battlefield.campaignMission.playerSlot], (byte) -80, this.battlefield.campaignMission.missionId, this.battlefield.campaignMission.campaign.campaignIndex);
-          ul.$cfr$intArgs$a$5d483ac33914(-80, PacketBuffer.field_p, this.field_Nb);
+          LineOfSightGrid.$cfr$intArgs$a$5d483ac33914(-80, PacketBuffer.field_p, this.field_Nb);
           if (obfuscationGuard >= -39) {
             this.s(-24);
           }
@@ -11288,7 +11288,7 @@ final class GameplayController {
         var3 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           this.field_Yb = 2;
-          this.battlefield.l(0, 2);
+          this.battlefield.loadOrGenerateMap(0, 2);
           var2_int = 0;
           do {
             if (var2_int >= this.aiPlanners.length) {
@@ -11925,7 +11925,7 @@ final class GameplayController {
         var3 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           this.field_Yb = 1;
-          this.battlefield.l(0, 1);
+          this.battlefield.loadOrGenerateMap(0, 1);
           this.movementPlanner = new MovementPlanner(this.battlefield);
           this.battleTutorial = new BattleTutorial(this);
           this.field_z = true;
@@ -12559,7 +12559,7 @@ final class GameplayController {
             if (decompiledFrameCompleted1) {
               var19Lifetime1 = 0;
               if (ByteStorage.field_g < this.battlefield.playerCount) {
-                var19Lifetime1 = AttackEvent.a(false, 1 - ByteStorage.field_g + this.battlefield.playerCount, li.field_n);
+                var19Lifetime1 = AttackEvent.nextBoundedInt(false, 1 - ByteStorage.field_g + this.battlefield.playerCount, li.field_n);
               }
               var20Lifetime1 = 0;
               while (this.aiPlanners.length > var20Lifetime1) {

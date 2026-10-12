@@ -23,7 +23,7 @@ by default for every game. Semantic game-specific names use explicit naming
 rules. Deko's numbered structural-category and type-based names identify
 unresolved purposes honestly; they are not complete semantic deobfuscation.
 
-Armies has 206 reviewed class names, not a complete semantic map. Shared widget
+Armies has 207 reviewed class names, not a complete semantic map. Shared widget
 bounds, dropdown options/prefix selection, painter dispatch and expansion now
 have reviewed names with pointer, selection and arrow-pixel fixtures. Campaign
 loadouts now name unit/spell rewards, equipped slots and cumulative mana bonuses;
@@ -131,6 +131,14 @@ fixtures cover theme/size/player-capacity selection, membership gates and tutori
 fallback. Nested raster fixtures preserve target/clip restoration and pooled
 pixel-reference release. Production map loading, full battlefield setup and
 rendered raster behavior remain unverified.
+
+Procedural map generation now has reviewed path, pattern, scattering and
+installation names. Native fixtures compare nine theme/seed combinations,
+repeat each seed and independently check the fixed arena's full terrain and
+leader positions. LineOfSightGrid exposes terrain occlusion and the retained
+local mask, including original coordinate-edge quirks. Bounded random values,
+draw counts and scatter thresholds have independent expectations. Full game
+setup, rendered attack previews and target-mask merging remain unverified.
 
 Camera overview grouping, centroid bounds, hold state and explicit tile focus
 now have reviewed names, alongside directional panning, dragging and velocity

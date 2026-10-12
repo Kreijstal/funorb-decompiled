@@ -32,12 +32,12 @@ final class od {
           return var2_ref_byte__;
         }
         if (param0 == 5000 &&
-          0 < ul.field_d) {
+          0 < LineOfSightGrid.field_d) {
           fieldTemp$1 = oo.field_d;
-          fieldTemp$2 = ul.field_d - 1;
-          ul.field_d = ul.field_d - 1;
+          fieldTemp$2 = LineOfSightGrid.field_d - 1;
+          LineOfSightGrid.field_d = LineOfSightGrid.field_d - 1;
           var2_ref_byte__Lifetime1 = fieldTemp$1[fieldTemp$2];
-          oo.field_d[ul.field_d] = null;
+          oo.field_d[LineOfSightGrid.field_d] = null;
           return var2_ref_byte__Lifetime1;
         }
         if (param0 == 30000 &&
@@ -147,10 +147,10 @@ final class od {
             return;
           }
           if (param1.length == 5000 &&
-            ul.field_d < 250) {
+            LineOfSightGrid.field_d < 250) {
             fieldTemp$1 = oo.field_d;
-            fieldTemp$2 = ul.field_d;
-            ul.field_d = ul.field_d + 1;
+            fieldTemp$2 = LineOfSightGrid.field_d;
+            LineOfSightGrid.field_d = LineOfSightGrid.field_d + 1;
             fieldTemp$1[fieldTemp$2] = param1;
             return;
           }

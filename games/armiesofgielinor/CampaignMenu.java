@@ -973,7 +973,7 @@ final class CampaignMenu {
             }
             if (decompiledSharedTail0) {
               var2_int = 184;
-              var3 = 26 + nr.field_e.a(ul.field_j) / 2;
+              var3 = 26 + nr.field_e.a(LineOfSightGrid.field_j) / 2;
               if (var3 > var2_int) {
                 var2_int = var3;
               }
@@ -1156,7 +1156,7 @@ final class CampaignMenu {
             }
             var6Lifetime3 = 436;
             if (this.field_t == null) {
-              this.field_t = new CampaignMenuButton(ul.field_j, var5Lifetime1, var6Lifetime3, var2_int);
+              this.field_t = new CampaignMenuButton(LineOfSightGrid.field_j, var5Lifetime1, var6Lifetime3, var2_int);
             }
             if (null == this.field_p) {
               this.field_p = new CampaignMenuButton(pn.field_k, var5Lifetime1, var6Lifetime3, var2_int);

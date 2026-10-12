@@ -66,7 +66,7 @@ final class CombatPresentation implements EventPresentation {
             }
             if (this.attackers[var2_int] != null &&
               this.attackers[var2_int].isIdle((byte) 44)) {
-              this.attackers[var2_int].animationDelay = AttackEvent.a(false, 20, vv.field_b);
+              this.attackers[var2_int].animationDelay = AttackEvent.nextBoundedInt(false, 20, vv.field_b);
               this.attackers[var2_int].animationFrame = 1;
             }
             var2_int++;
@@ -157,7 +157,7 @@ final class CombatPresentation implements EventPresentation {
               this.field_C = -127;
             }
             boolean decompiledFrameRemainder0 = true;
-            var9 = var6[AttackEvent.a(false, var7, vv.field_b)];
+            var9 = var6[AttackEvent.nextBoundedInt(false, var7, vv.field_b)];
             if (1 != param1 ||
               param0[2] != null) {
               if (param1 == 0) {
@@ -247,7 +247,7 @@ final class CombatPresentation implements EventPresentation {
             if (null != param0[var3_int] &&
               param0[var3_int].isIdle((byte) 121)) {
               param0[var3_int].animationFrame = 5;
-              param0[var3_int].animationDelay = AttackEvent.a(false, 20, vv.field_b);
+              param0[var3_int].animationDelay = AttackEvent.nextBoundedInt(false, 20, vv.field_b);
             }
             var3_int++;
           }
@@ -637,7 +637,7 @@ final class CombatPresentation implements EventPresentation {
                       }
                     }
                   }
-                  this.field_p = this.field_O - (-AttackEvent.a(false, this.field_y, vv.field_b) - this.field_y);
+                  this.field_p = this.field_O - (-AttackEvent.nextBoundedInt(false, this.field_y, vv.field_b) - this.field_y);
                   this.field_D = new km[this.field_p];
                   this.field_b = this.a(this.field_w, (byte) -128);
                   this.phase = 5;
@@ -743,7 +743,7 @@ final class CombatPresentation implements EventPresentation {
                     } else {
                       stackIn_205_2 = null;
                       stackIn_205_3 = null;
-                      stackIn_205_9 = 1300 + AttackEvent.a(false, 700, vv.field_b);
+                      stackIn_205_9 = 1300 + AttackEvent.nextBoundedInt(false, 700, vv.field_b);
                     }
                     stackIn_227_0[stackIn_227_1] = new BattleCharacter(stackIn_204_4, stackIn_204_5, stackIn_204_6, stackIn_204_7, stackIn_204_8, stackIn_205_9);
                     var8Lifetime1++;
@@ -772,7 +772,7 @@ final class CombatPresentation implements EventPresentation {
                     if (!this.field_d) {
                       stackIn_215_2 = null;
                       stackIn_215_3 = null;
-                      stackIn_215_9 = 1300 + AttackEvent.a(false, 700, vv.field_b);
+                      stackIn_215_9 = 1300 + AttackEvent.nextBoundedInt(false, 700, vv.field_b);
                     } else {
                       stackIn_215_2 = null;
                       stackIn_215_3 = null;
@@ -1013,9 +1013,9 @@ final class CombatPresentation implements EventPresentation {
               return;
             }
             if (var2_int < this.field_O) {
-              this.field_D[var2_int] = new km(this.defenders[this.field_b[var2_int]].destinationX, 600 - pk.field_T[this.field_a][0], this.defenders[this.field_b[var2_int]].destinationY, 200 + AttackEvent.a(false, 600, vv.field_b), this.field_z);
+              this.field_D[var2_int] = new km(this.defenders[this.field_b[var2_int]].destinationX, 600 - pk.field_T[this.field_a][0], this.defenders[this.field_b[var2_int]].destinationY, 200 + AttackEvent.nextBoundedInt(false, 600, vv.field_b), this.field_z);
             } else {
-              this.field_D[var2_int] = new km(100 + AttackEvent.a(false, 600, vv.field_b), 600, AttackEvent.a(false, 850, vv.field_b) + 900, AttackEvent.a(false, 600, vv.field_b) + 200, this.field_z);
+              this.field_D[var2_int] = new km(100 + AttackEvent.nextBoundedInt(false, 600, vv.field_b), 600, AttackEvent.nextBoundedInt(false, 850, vv.field_b) + 900, AttackEvent.nextBoundedInt(false, 600, vv.field_b) + 200, this.field_z);
             }
             var2_int++;
           }
@@ -1217,7 +1217,7 @@ final class CombatPresentation implements EventPresentation {
               return;
             }
             this.field_p = this.field_p - 1;
-            var4 = var3[AttackEvent.a(false, var2_int, vv.field_b)];
+            var4 = var3[AttackEvent.nextBoundedInt(false, var2_int, vv.field_b)];
             stackIn_25_0 = this.attackers[var4];
           }
           ((BattleCharacter) (Object) stackIn_25_0).c((byte) 102);
@@ -2118,7 +2118,7 @@ final class CombatPresentation implements EventPresentation {
                 null != this.defenders[var2_int] &&
                 this.attackers[var2_int].isIdle((byte) -74) &&
                 this.defenders[var2_int].isIdle((byte) -110)) {
-                if (AttackEvent.a(false, 1000, vv.field_b) >= 500) {
+                if (AttackEvent.nextBoundedInt(false, 1000, vv.field_b) >= 500) {
                   this.attackers[var2_int].setAnimationState(2, (byte) -113);
                   this.attackers[var2_int].animationDelay = ClientUiComponent.field_K[this.field_a][0];
                   this.defenders[var2_int].setAnimationState(1, (byte) -119);
@@ -2143,7 +2143,7 @@ final class CombatPresentation implements EventPresentation {
                 stackIn_139_0 = this.attackers[var3];
                 if (var4 != 0) {
                   while (true) {
-                    stackIn_139_0.animationDelay = AttackEvent.a(false, 5, vv.field_b);
+                    stackIn_139_0.animationDelay = AttackEvent.nextBoundedInt(false, 5, vv.field_b);
                     while (true) {
                       var3++;
                       break scanLoop1;
@@ -2177,7 +2177,7 @@ final class CombatPresentation implements EventPresentation {
                   if (var2_intLifetime1 == 0) {
                     break;
                   }
-                  if (AttackEvent.a(false, 1000, vv.field_b) < 500) {
+                  if (AttackEvent.nextBoundedInt(false, 1000, vv.field_b) < 500) {
                     boolean decompiledFrameRemainder5 = true;
                     regionExit2: {
                       boolean decompiledSharedTail2 = (this.field_J == 2);
@@ -2190,7 +2190,7 @@ final class CombatPresentation implements EventPresentation {
                             while (true) {
                               if (stackIn_91_0 != stackIn_91_1) {
                                 this.defenders[var3].animationFrame = 2;
-                                this.defenders[var3].animationDelay = ClientUiComponent.field_K[this.field_c][0] - AttackEvent.a(false, 5, vv.field_b);
+                                this.defenders[var3].animationDelay = ClientUiComponent.field_K[this.field_c][0] - AttackEvent.nextBoundedInt(false, 5, vv.field_b);
                               }
                               var3++;
                               break regionExit2;
@@ -2200,7 +2200,7 @@ final class CombatPresentation implements EventPresentation {
                             this.attackers[var3].animationFrame = 1;
                           }
                           if (null != this.attackers[var3]) {
-                            this.attackers[var3].animationDelay = AttackEvent.a(false, 5, vv.field_b);
+                            this.attackers[var3].animationDelay = AttackEvent.nextBoundedInt(false, 5, vv.field_b);
                           }
                           var3++;
                           if (var4 == 0) {
@@ -2225,7 +2225,7 @@ final class CombatPresentation implements EventPresentation {
                           stackIn_91_1Lifetime1 = this.defenders[var3];
                           if (stackIn_91_0Lifetime1 != stackIn_91_1Lifetime1) {
                             this.defenders[var3].animationFrame = 2;
-                            this.defenders[var3].animationDelay = ClientUiComponent.field_K[this.field_c][0] - AttackEvent.a(false, 5, vv.field_b);
+                            this.defenders[var3].animationDelay = ClientUiComponent.field_K[this.field_c][0] - AttackEvent.nextBoundedInt(false, 5, vv.field_b);
                           }
                           var3++;
                         }
@@ -2264,7 +2264,7 @@ final class CombatPresentation implements EventPresentation {
                         this.attackers[var3].animationFrame = 2;
                       }
                       if (this.attackers[var3] != null) {
-                        this.attackers[var3].animationDelay = ClientUiComponent.field_K[this.field_a][0] - AttackEvent.a(false, 5, vv.field_b);
+                        this.attackers[var3].animationDelay = ClientUiComponent.field_K[this.field_a][0] - AttackEvent.nextBoundedInt(false, 5, vv.field_b);
                       }
                       var3++;
                     }
@@ -2289,7 +2289,7 @@ final class CombatPresentation implements EventPresentation {
                       if (stackIn_136_0 != stackIn_136_1) {
                         this.defenders[var3].animationFrame = 1;
                         stackIn_139_0Lifetime1 = this.defenders[var3];
-                        stackIn_139_0Lifetime1.animationDelay = AttackEvent.a(false, 5, vv.field_b);
+                        stackIn_139_0Lifetime1.animationDelay = AttackEvent.nextBoundedInt(false, 5, vv.field_b);
                       }
                       var3++;
                     }
@@ -2300,7 +2300,7 @@ final class CombatPresentation implements EventPresentation {
                   if (stackIn_136_0 != stackIn_136_1) {
                     this.defenders[var3].animationFrame = 1;
                     stackIn_139_0Lifetime1Lifetime1 = this.defenders[var3];
-                    stackIn_139_0Lifetime1Lifetime1.animationDelay = AttackEvent.a(false, 5, vv.field_b);
+                    stackIn_139_0Lifetime1Lifetime1.animationDelay = AttackEvent.nextBoundedInt(false, 5, vv.field_b);
                   }
                   var3++;
                   if (var4 != 0) {
@@ -2330,41 +2330,41 @@ final class CombatPresentation implements EventPresentation {
                 decompiledFrameRemainder3 = !(!this.defenders[1].isIdle((byte) 33));
               }
               if (decompiledFrameRemainder3) {
-                if (500 > AttackEvent.a(false, 1000, vv.field_b)) {
+                if (500 > AttackEvent.nextBoundedInt(false, 1000, vv.field_b)) {
                   if (null != this.attackers[0]) {
-                    this.attackers[0].animationDelay = ClientUiComponent.field_K[this.field_a][0] - AttackEvent.a(false, 5, vv.field_b);
+                    this.attackers[0].animationDelay = ClientUiComponent.field_K[this.field_a][0] - AttackEvent.nextBoundedInt(false, 5, vv.field_b);
                     this.attackers[0].animationFrame = 2;
                   }
                   if (this.defenders[1] != null &&
                     this.defenders[1].isIdle((byte) -80)) {
-                    this.defenders[1].animationDelay = ClientUiComponent.field_K[this.field_c][0] - AttackEvent.a(false, 5, vv.field_b);
+                    this.defenders[1].animationDelay = ClientUiComponent.field_K[this.field_c][0] - AttackEvent.nextBoundedInt(false, 5, vv.field_b);
                     this.defenders[1].animationFrame = 1;
                     decompiledFrameRemainder3 = (var4 != 0);
                   }
                   if ((decompiledFrameRemainder3) &&
                     (decompiledFrameRemainder3 = (this.defenders[0] != null))) {
-                    this.defenders[0].animationDelay = ClientUiComponent.field_K[this.field_c][0] - AttackEvent.a(false, 5, vv.field_b);
+                    this.defenders[0].animationDelay = ClientUiComponent.field_K[this.field_c][0] - AttackEvent.nextBoundedInt(false, 5, vv.field_b);
                     this.defenders[0].animationFrame = 1;
                     decompiledFrameRemainder3 = (var4 != 0);
                   }
                 }
                 if (decompiledFrameRemainder3) {
                   if (this.attackers[0] != null) {
-                    this.attackers[0].animationDelay = AttackEvent.a(false, 5, vv.field_b);
+                    this.attackers[0].animationDelay = AttackEvent.nextBoundedInt(false, 5, vv.field_b);
                     this.attackers[0].animationFrame = 1;
                   }
                   if (this.defenders[1] == null ||
                     !this.defenders[1].isIdle((byte) -56)) {
                     if (null != this.defenders[0]) {
-                      this.defenders[0].animationDelay = ClientUiComponent.field_K[this.field_c][0] - AttackEvent.a(false, 5, vv.field_b);
+                      this.defenders[0].animationDelay = ClientUiComponent.field_K[this.field_c][0] - AttackEvent.nextBoundedInt(false, 5, vv.field_b);
                       this.defenders[0].animationFrame = 2;
                       if (var4 != 0) {
-                        this.defenders[1].animationDelay = ClientUiComponent.field_K[this.field_c][0] - AttackEvent.a(false, 5, vv.field_b);
+                        this.defenders[1].animationDelay = ClientUiComponent.field_K[this.field_c][0] - AttackEvent.nextBoundedInt(false, 5, vv.field_b);
                         this.defenders[1].animationFrame = 2;
                       }
                     }
                   } else {
-                    this.defenders[1].animationDelay = ClientUiComponent.field_K[this.field_c][0] - AttackEvent.a(false, 5, vv.field_b);
+                    this.defenders[1].animationDelay = ClientUiComponent.field_K[this.field_c][0] - AttackEvent.nextBoundedInt(false, 5, vv.field_b);
                     this.defenders[1].animationFrame = 2;
                   }
                 }
@@ -2380,39 +2380,39 @@ final class CombatPresentation implements EventPresentation {
                 decompiledFrameRemainder2 = !(!this.defenders[2].isIdle((byte) 29));
               }
               if (decompiledFrameRemainder2) {
-                if (AttackEvent.a(false, 1000, vv.field_b) >= 500) {
+                if (AttackEvent.nextBoundedInt(false, 1000, vv.field_b) >= 500) {
                   if (this.attackers[1] != null) {
-                    this.attackers[1].animationDelay = AttackEvent.a(false, 5, vv.field_b);
+                    this.attackers[1].animationDelay = AttackEvent.nextBoundedInt(false, 5, vv.field_b);
                     this.attackers[1].animationFrame = 1;
                   }
                   if ((this.defenders[2] == null ||
                     !this.defenders[2].isIdle((byte) -114)) &&
                     (decompiledFrameRemainder2 = (null != this.defenders[0]))) {
-                    this.defenders[0].animationDelay = ClientUiComponent.field_K[this.field_c][0] - AttackEvent.a(false, 30, vv.field_b);
+                    this.defenders[0].animationDelay = ClientUiComponent.field_K[this.field_c][0] - AttackEvent.nextBoundedInt(false, 30, vv.field_b);
                     this.defenders[0].animationFrame = 2;
                     decompiledFrameRemainder2 = (var4 != 0);
                   }
                   if (decompiledFrameRemainder2) {
-                    this.defenders[2].animationDelay = ClientUiComponent.field_K[this.field_c][0] - AttackEvent.a(false, 5, vv.field_b);
+                    this.defenders[2].animationDelay = ClientUiComponent.field_K[this.field_c][0] - AttackEvent.nextBoundedInt(false, 5, vv.field_b);
                     this.defenders[2].animationFrame = 2;
                     decompiledFrameRemainder2 = (var4 != 0);
                   }
                 }
                 if (decompiledFrameRemainder2) {
                   if (null != this.attackers[1]) {
-                    this.attackers[1].animationDelay = ClientUiComponent.field_K[this.field_a][0] - AttackEvent.a(false, 5, vv.field_b);
+                    this.attackers[1].animationDelay = ClientUiComponent.field_K[this.field_a][0] - AttackEvent.nextBoundedInt(false, 5, vv.field_b);
                     this.attackers[1].animationFrame = 2;
                   }
                   boolean decompiledSharedTail1 = (null == this.defenders[2] ||
                     !(this.defenders[2].isIdle((byte) -112)));
                   if (!decompiledSharedTail1) {
-                    this.defenders[2].animationDelay = AttackEvent.a(false, 5, vv.field_b);
+                    this.defenders[2].animationDelay = AttackEvent.nextBoundedInt(false, 5, vv.field_b);
                     this.defenders[2].animationFrame = 1;
                     decompiledSharedTail1 = (var4 != 0);
                   }
                   if ((decompiledSharedTail1) &&
                     (this.defenders[0] != null)) {
-                    this.defenders[0].animationDelay = AttackEvent.a(false, 5, vv.field_b);
+                    this.defenders[0].animationDelay = AttackEvent.nextBoundedInt(false, 5, vv.field_b);
                     this.defenders[0].animationFrame = 1;
                   }
                 }
@@ -2439,7 +2439,7 @@ final class CombatPresentation implements EventPresentation {
                 if (null == this.defenders[0]) {
                   return;
                 }
-                this.defenders[0].animationDelay = this.defenders[2].animationDelay + AttackEvent.a(false, 5, vv.field_b);
+                this.defenders[0].animationDelay = this.defenders[2].animationDelay + AttackEvent.nextBoundedInt(false, 5, vv.field_b);
                 this.defenders[0].animationFrame = this.defenders[2].animationFrame;
                 if (var4 == 0) {
                   return;
@@ -2448,17 +2448,17 @@ final class CombatPresentation implements EventPresentation {
               if (null == this.defenders[0]) {
                 return;
               }
-              this.defenders[0].animationDelay = this.defenders[1].animationDelay + AttackEvent.a(false, 5, vv.field_b);
+              this.defenders[0].animationDelay = this.defenders[1].animationDelay + AttackEvent.nextBoundedInt(false, 5, vv.field_b);
               this.defenders[0].animationFrame = this.defenders[1].animationFrame;
               if (var4 == 0) {
                 return;
               }
             }
-            if (AttackEvent.a(false, 1000, vv.field_b) >= 500) {
+            if (AttackEvent.nextBoundedInt(false, 1000, vv.field_b) >= 500) {
               if (this.defenders[0] == null) {
                 return;
               }
-              this.defenders[0].animationDelay = this.defenders[1].animationDelay + AttackEvent.a(false, 5, vv.field_b);
+              this.defenders[0].animationDelay = this.defenders[1].animationDelay + AttackEvent.nextBoundedInt(false, 5, vv.field_b);
               this.defenders[0].animationFrame = this.defenders[1].animationFrame;
               if (var4 == 0) {
                 return;
@@ -2467,7 +2467,7 @@ final class CombatPresentation implements EventPresentation {
             if (null == this.defenders[0]) {
               return;
             }
-            this.defenders[0].animationDelay = this.defenders[2].animationDelay + AttackEvent.a(false, 5, vv.field_b);
+            this.defenders[0].animationDelay = this.defenders[2].animationDelay + AttackEvent.nextBoundedInt(false, 5, vv.field_b);
             this.defenders[0].animationFrame = this.defenders[2].animationFrame;
             if (var4 == 0) {
               return;
@@ -2483,39 +2483,39 @@ final class CombatPresentation implements EventPresentation {
               decompiledFrameRemainder1 = !(!this.attackers[1].isIdle((byte) 117));
             }
             if (decompiledFrameRemainder1) {
-              if (AttackEvent.a(false, 1000, vv.field_b) >= 500) {
+              if (AttackEvent.nextBoundedInt(false, 1000, vv.field_b) >= 500) {
                 if (this.defenders[0] != null) {
-                  this.defenders[0].animationDelay = AttackEvent.a(false, 5, vv.field_b);
+                  this.defenders[0].animationDelay = AttackEvent.nextBoundedInt(false, 5, vv.field_b);
                   this.defenders[0].animationFrame = 1;
                 }
                 if ((null == this.attackers[1] ||
                   !this.attackers[1].isIdle((byte) 126)) &&
                   (decompiledFrameRemainder1 = (null != this.attackers[0]))) {
-                  this.attackers[0].animationDelay = ClientUiComponent.field_K[this.field_a][0] - AttackEvent.a(false, 5, vv.field_b);
+                  this.attackers[0].animationDelay = ClientUiComponent.field_K[this.field_a][0] - AttackEvent.nextBoundedInt(false, 5, vv.field_b);
                   this.attackers[0].animationFrame = 2;
                   decompiledFrameRemainder1 = (var4 != 0);
                 }
                 if (decompiledFrameRemainder1) {
-                  this.attackers[1].animationDelay = ClientUiComponent.field_K[this.field_a][0] - AttackEvent.a(false, 5, vv.field_b);
+                  this.attackers[1].animationDelay = ClientUiComponent.field_K[this.field_a][0] - AttackEvent.nextBoundedInt(false, 5, vv.field_b);
                   this.attackers[1].animationFrame = 2;
                   decompiledFrameRemainder1 = (var4 != 0);
                 }
               }
               if (decompiledFrameRemainder1) {
-                this.defenders[0].animationDelay = ClientUiComponent.field_K[this.field_c][0] - AttackEvent.a(false, 5, vv.field_b);
+                this.defenders[0].animationDelay = ClientUiComponent.field_K[this.field_c][0] - AttackEvent.nextBoundedInt(false, 5, vv.field_b);
                 this.defenders[0].animationFrame = 2;
                 if (null == this.attackers[1] ||
                   !this.attackers[1].isIdle((byte) 112)) {
                   if (this.attackers[0] != null) {
-                    this.attackers[0].animationDelay = AttackEvent.a(false, 5, vv.field_b);
+                    this.attackers[0].animationDelay = AttackEvent.nextBoundedInt(false, 5, vv.field_b);
                     this.attackers[0].animationFrame = 1;
                     if (var4 != 0) {
-                      this.attackers[1].animationDelay = AttackEvent.a(false, 5, vv.field_b);
+                      this.attackers[1].animationDelay = AttackEvent.nextBoundedInt(false, 5, vv.field_b);
                       this.attackers[1].animationFrame = 1;
                     }
                   }
                 } else {
-                  this.attackers[1].animationDelay = AttackEvent.a(false, 5, vv.field_b);
+                  this.attackers[1].animationDelay = AttackEvent.nextBoundedInt(false, 5, vv.field_b);
                   this.attackers[1].animationFrame = 1;
                 }
               }
@@ -2531,39 +2531,39 @@ final class CombatPresentation implements EventPresentation {
               decompiledFrameRemainder0 = !(!this.attackers[2].isIdle((byte) 99));
             }
             if (decompiledFrameRemainder0) {
-              if (AttackEvent.a(false, 1000, vv.field_b) < 500) {
+              if (AttackEvent.nextBoundedInt(false, 1000, vv.field_b) < 500) {
                 if (null != this.defenders[1]) {
-                  this.defenders[1].animationDelay = ClientUiComponent.field_K[this.field_c][0] - AttackEvent.a(false, 5, vv.field_b);
+                  this.defenders[1].animationDelay = ClientUiComponent.field_K[this.field_c][0] - AttackEvent.nextBoundedInt(false, 5, vv.field_b);
                   this.defenders[1].animationFrame = 2;
                 }
                 if (null != this.attackers[2] &&
                   this.attackers[2].isIdle((byte) -50)) {
-                  this.attackers[2].animationDelay = AttackEvent.a(false, 5, vv.field_b);
+                  this.attackers[2].animationDelay = AttackEvent.nextBoundedInt(false, 5, vv.field_b);
                   this.attackers[2].animationFrame = 1;
                   decompiledFrameRemainder0 = (var4 != 0);
                 }
                 if ((decompiledFrameRemainder0) &&
                   (decompiledFrameRemainder0 = (this.attackers[0] != null))) {
-                  this.attackers[0].animationDelay = AttackEvent.a(false, 5, vv.field_b);
+                  this.attackers[0].animationDelay = AttackEvent.nextBoundedInt(false, 5, vv.field_b);
                   this.attackers[0].animationFrame = 1;
                   decompiledFrameRemainder0 = (var4 != 0);
                 }
               }
               if (decompiledFrameRemainder0) {
                 if (null != this.defenders[1]) {
-                  this.defenders[1].animationDelay = AttackEvent.a(false, 5, vv.field_b);
+                  this.defenders[1].animationDelay = AttackEvent.nextBoundedInt(false, 5, vv.field_b);
                   this.defenders[1].animationFrame = 1;
                 }
                 boolean decompiledSharedTail0 = (this.attackers[2] == null ||
                   !(this.attackers[2].isIdle((byte) -122)));
                 if (!decompiledSharedTail0) {
-                  this.attackers[2].animationDelay = ClientUiComponent.field_K[this.field_a][0] - AttackEvent.a(false, 5, vv.field_b);
+                  this.attackers[2].animationDelay = ClientUiComponent.field_K[this.field_a][0] - AttackEvent.nextBoundedInt(false, 5, vv.field_b);
                   this.attackers[2].animationFrame = 2;
                   decompiledSharedTail0 = (var4 != 0);
                 }
                 if ((decompiledSharedTail0) &&
                   (null != this.attackers[0])) {
-                  this.attackers[0].animationDelay = ClientUiComponent.field_K[this.field_a][0] - AttackEvent.a(false, 5, vv.field_b);
+                  this.attackers[0].animationDelay = ClientUiComponent.field_K[this.field_a][0] - AttackEvent.nextBoundedInt(false, 5, vv.field_b);
                   this.attackers[0].animationFrame = 2;
                 }
               }
@@ -2586,7 +2586,7 @@ final class CombatPresentation implements EventPresentation {
                 if (null == this.attackers[0]) {
                   return;
                 }
-                this.attackers[0].animationDelay = this.attackers[2].animationDelay + AttackEvent.a(false, 5, vv.field_b);
+                this.attackers[0].animationDelay = this.attackers[2].animationDelay + AttackEvent.nextBoundedInt(false, 5, vv.field_b);
                 this.attackers[0].animationFrame = this.attackers[2].animationFrame;
                 if (var4 == 0) {
                   return;
@@ -2595,24 +2595,24 @@ final class CombatPresentation implements EventPresentation {
               if (null == this.attackers[0]) {
                 return;
               }
-              this.attackers[0].animationDelay = this.attackers[1].animationDelay + AttackEvent.a(false, 5, vv.field_b);
+              this.attackers[0].animationDelay = this.attackers[1].animationDelay + AttackEvent.nextBoundedInt(false, 5, vv.field_b);
               this.attackers[0].animationFrame = this.attackers[1].animationFrame;
               if (var4 == 0) {
                 return;
               }
             }
-            if (AttackEvent.a(false, 1000, vv.field_b) >= 500) {
+            if (AttackEvent.nextBoundedInt(false, 1000, vv.field_b) >= 500) {
               if (null == this.attackers[0]) {
                 return;
               }
-              this.attackers[0].animationDelay = this.attackers[1].animationDelay + AttackEvent.a(false, 5, vv.field_b);
+              this.attackers[0].animationDelay = this.attackers[1].animationDelay + AttackEvent.nextBoundedInt(false, 5, vv.field_b);
               this.attackers[0].animationFrame = this.attackers[1].animationFrame;
               if (var4 == 0) {
                 return;
               }
             }
             if (this.attackers[0] != null) {
-              this.attackers[0].animationDelay = this.attackers[1].animationDelay + AttackEvent.a(false, 5, vv.field_b);
+              this.attackers[0].animationDelay = this.attackers[1].animationDelay + AttackEvent.nextBoundedInt(false, 5, vv.field_b);
               this.attackers[0].animationFrame = this.attackers[2].animationFrame;
             }
           }
@@ -2914,7 +2914,7 @@ final class CombatPresentation implements EventPresentation {
             }
             boolean decompiledFrameRemainder0 = true;
             var8 = -1;
-            var9 = var6[AttackEvent.a(false, var7, vv.field_b)];
+            var9 = var6[AttackEvent.nextBoundedInt(false, var7, vv.field_b)];
             if (1 == param2 &&
               param4[2] != null) {
               var8 = 2;
@@ -3127,7 +3127,7 @@ final class CombatPresentation implements EventPresentation {
               break;
             }
             var3[var5] = var5;
-            var4[var5] = AttackEvent.a(false, 2147483647, vv.field_b);
+            var4[var5] = AttackEvent.nextBoundedInt(false, 2147483647, vv.field_b);
             var5++;
           } while (var9 == 0);
           while (true) {
@@ -3208,7 +3208,7 @@ final class CombatPresentation implements EventPresentation {
               if (var2_int == 0) {
                 return;
               }
-              var2_int = AttackEvent.a(false, var2_int, vv.field_b) + 1;
+              var2_int = AttackEvent.nextBoundedInt(false, var2_int, vv.field_b) + 1;
               var3Lifetime1 = 0;
               var3Lifetime1 = 0;
               while (var3Lifetime1 < this.attackers.length) {
@@ -3234,7 +3234,7 @@ final class CombatPresentation implements EventPresentation {
           }
           ((BattleCharacter) (Object) stackIn_43_0).a(0, 30, 1, 20, MatchConditionEntry.field_o[this.field_a][1], pk.field_T[this.field_a][1], (byte) 122);
           this.field_v = this.field_v - 1;
-          this.field_I = 20 + AttackEvent.a(false, 20, vv.field_b);
+          this.field_I = 20 + AttackEvent.nextBoundedInt(false, 20, vv.field_b);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -3364,7 +3364,7 @@ final class CombatPresentation implements EventPresentation {
           if (var7 == 0) {
             return false;
           }
-          var8 = var6[AttackEvent.a(false, var7, vv.field_b)];
+          var8 = var6[AttackEvent.nextBoundedInt(false, var7, vv.field_b)];
           if (param0 != -93) {
             return true;
           }
@@ -3845,7 +3845,7 @@ final class CombatPresentation implements EventPresentation {
           }
           if (var2_int > 0 &&
             0 < var3) {
-            if (AttackEvent.a(false, this.field_O + this.field_v, vv.field_b) <= this.field_v) {
+            if (AttackEvent.nextBoundedInt(false, this.field_O + this.field_v, vv.field_b) <= this.field_v) {
               if (!this.a((byte) -93, this.field_J, this.defenders, this.field_u, this.attackers)) {
                 return;
               }
@@ -4122,7 +4122,7 @@ final class CombatPresentation implements EventPresentation {
                 }
               }
             }
-            this.field_p = this.field_O - (-AttackEvent.a(false, this.field_y, vv.field_b) - this.field_y);
+            this.field_p = this.field_O - (-AttackEvent.nextBoundedInt(false, this.field_y, vv.field_b) - this.field_y);
             this.field_D = new km[this.field_p];
             this.field_b = this.a(this.field_w, (byte) -127);
             this.phase = 5;
@@ -4237,7 +4237,7 @@ final class CombatPresentation implements EventPresentation {
                 }
                 stackIn_211_2 = null;
                 stackIn_211_3 = null;
-                stackIn_211_9 = stackIn_209_9 + AttackEvent.a(stackIn_210_10, 700, vv.field_b);
+                stackIn_211_9 = stackIn_209_9 + AttackEvent.nextBoundedInt(stackIn_210_10, 700, vv.field_b);
               } else {
                 stackIn_211_2 = null;
                 stackIn_211_3 = null;
@@ -4280,7 +4280,7 @@ final class CombatPresentation implements EventPresentation {
                 }
                 stackIn_224_2 = null;
                 stackIn_224_3 = null;
-                stackIn_224_9 = stackIn_222_9 + AttackEvent.a(stackIn_223_10, 700, vv.field_b);
+                stackIn_224_9 = stackIn_222_9 + AttackEvent.nextBoundedInt(stackIn_223_10, 700, vv.field_b);
               } else {
                 stackIn_224_2 = null;
                 stackIn_224_3 = null;
@@ -4415,7 +4415,7 @@ final class CombatPresentation implements EventPresentation {
             }
           }
           this.framebuffer = new RgbSprite(640, 480);
-          var4 = cb.field_a[AttackEvent.a(false, cb.field_a.length, vv.field_b)];
+          var4 = cb.field_a[AttackEvent.nextBoundedInt(false, cb.field_a.length, vv.field_b)];
           TrianglePulse.a(-16147, 50, var4, true);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
