@@ -56,7 +56,7 @@ final class ku extends nl {
 
     final static void a(byte param0, boolean param1, MusicTrack param2) {
         try {
-          nm.a(param2, param1, 256, (byte) 41);
+          MusicCrossfadeStream.setMusicTrack(param2, param1, 256, (byte) 41);
           if (param0 >= -28) {
             field_K = -125;
           }

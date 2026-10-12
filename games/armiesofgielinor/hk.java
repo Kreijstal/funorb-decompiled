@@ -36,7 +36,7 @@ final class hk extends ClientUiComponent {
         int var2 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         te var1Lifetime1;
         try {
-          l.field_a.pump();
+          l.musicPlayer.pump();
           TextCursor.field_e.pump();
           DelayedPacket.field_p = DelayedPacket.field_p - 1;
           if (param0 != 128) {
@@ -61,9 +61,9 @@ final class hk extends ClientUiComponent {
               }
             }
           }
-          if (LobbyRoom.field_Kb != null &&
-            !LobbyRoom.field_Kb.isPlaying(param0 + 11771)) {
-            MapLayout.field_u = null;
+          if (LobbyRoom.directMusicSequencer != null &&
+            !LobbyRoom.directMusicSequencer.isPlaying(param0 + 11771)) {
+            MapLayout.currentDirectMusicTrack = null;
             return;
           }
         } catch (RuntimeException runtimeException) {

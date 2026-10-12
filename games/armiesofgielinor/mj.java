@@ -17,8 +17,8 @@ final class mj {
     }
 
     final static void b(byte param0) {
-        if (l.field_a != null) {
-          l.field_a.shutdown();
+        if (l.musicPlayer != null) {
+          l.musicPlayer.shutdown();
           if (TextCursor.field_e != null) {
             TextCursor.field_e.shutdown();
           }

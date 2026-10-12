@@ -2367,7 +2367,7 @@ final class InstructionsPanel {
               es.receivePacketBytes(-111, 1)) {
               var6_int = ByteStorage.incomingPacket.readUnsignedByte(0);
               if (0 != var6_int) {
-                nm.deliveredOpcode = var6_int;
+                MusicCrossfadeStream.deliveredOpcode = var6_int;
                 fk.packetPayloadLength = -1;
                 ov.connectionState = SummonAction.field_z;
               } else {
@@ -2388,7 +2388,7 @@ final class InstructionsPanel {
               var6_intLifetime1 = ByteStorage.incomingPacket.readUnsignedByte(param0 + 53);
               ByteStorage.incomingPacket.position = 0;
               DropdownSelector.field_P = null;
-              nm.deliveredOpcode = var6_intLifetime1;
+              MusicCrossfadeStream.deliveredOpcode = var6_intLifetime1;
               if (var6_intLifetime1 != 0 &&
                 var6_intLifetime1 != 1) {
                 if (var6_intLifetime1 != 8) {
@@ -2500,24 +2500,24 @@ final class InstructionsPanel {
                 CombatEvent.field_L[var8Lifetime1] = CombatEvent.field_L[var8Lifetime1] + 50;
               }
               ByteStorage.incomingPacket.initializeOpcodeCipher(CombatEvent.field_L, param0 - 66);
-              stackIn_88_0 = nm.deliveredOpcode;
+              stackIn_88_0 = MusicCrossfadeStream.deliveredOpcode;
               return stackIn_88_0;
             }
             if (SummonAction.field_z == ov.connectionState &&
               jh.isPacketPayloadReady(2)) {
               dj.a((byte) -128);
-              if (nm.deliveredOpcode == 7 &&
+              if (MusicCrossfadeStream.deliveredOpcode == 7 &&
                 !ev.field_b) {
                 ev.field_b = true;
                 stackIn_101_0 = -1;
                 return stackIn_101_0;
               }
-              if (nm.deliveredOpcode == 7) {
-                nm.deliveredOpcode = 3;
+              if (MusicCrossfadeStream.deliveredOpcode == 7) {
+                MusicCrossfadeStream.deliveredOpcode = 3;
               }
               lk.field_r = ByteStorage.incomingPacket.readNullTerminatedString(1);
               ev.field_b = false;
-              stackIn_99_0 = nm.deliveredOpcode;
+              stackIn_99_0 = MusicCrossfadeStream.deliveredOpcode;
               return stackIn_99_0;
             }
             if (null == MoveAttackRequest.sessionSocket) {

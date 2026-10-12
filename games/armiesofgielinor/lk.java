@@ -16,7 +16,7 @@ class lk implements WidgetPainter, pm {
     int field_l;
     static String field_s;
     int field_i;
-    static nm field_e;
+    static MusicCrossfadeStream musicCrossfadeStream;
     int field_j;
     int field_o;
     private int field_b;
@@ -563,7 +563,7 @@ class lk implements WidgetPainter, pm {
 
     public static void a(byte param0) {
         field_a = null;
-        field_e = null;
+        musicCrossfadeStream = null;
         int var1 = -5 / ((-45 - param0) / 50);
         field_s = null;
         field_r = null;
@@ -724,7 +724,7 @@ class lk implements WidgetPainter, pm {
     protected lk() {
     }
 
-    final static void a(PlatformTaskService param0, int param1, nm param2, byte param3, boolean param4, java.awt.Component param5) {
+    final static void a(PlatformTaskService param0, int param1, MusicCrossfadeStream param2, byte param3, boolean param4, java.awt.Component param5) {
         try {
           int var6_int = -98 / ((param3 + 3) / 46);
           TileMetadata.a(param5, 1024, param0, param4, -115, param2, param1, param1);

@@ -289,35 +289,35 @@ final class bk {
         }
     }
 
-    final static void a(int param0, int param1, MusicTrack param2, int param3, boolean param4) {
-        nm stackIn_3_0 = null;
-        int stackIn_3_1 = 0;
-        boolean stackIn_4_2 = false;
-        RuntimeException stackIn_11_0 = null;
-        StringBuilder stackIn_11_1 = null;
-        String stackIn_12_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException var5 = null;
+    final static void selectMusicTrack(int channelGain, int fadeRate, MusicTrack track, int obfuscationGuard, boolean loop) {
+        MusicCrossfadeStream crossfadeStream = null;
+        int gainToApply = 0;
+        boolean returnAfterTrack = false;
+        RuntimeException failureForContext = null;
+        StringBuilder errorContext = null;
+        String trackDescription = null;
+        RuntimeException caughtFailure = null;
+        RuntimeException failure = null;
         try {
-          stackIn_3_0 = lk.field_e;
-          stackIn_3_1 = param0;
-          stackIn_4_2 = !(param4);
-          ((nm) (Object) stackIn_3_0).a(stackIn_3_1, stackIn_4_2, param2, param3 - 20608, param1, 1000000);
-          if (param3 != 20607) {
-            bk.a(117, -8, (MusicTrack) null, 124, false);
+          crossfadeStream = lk.musicCrossfadeStream;
+          gainToApply = channelGain;
+          returnAfterTrack = !(loop);
+          ((MusicCrossfadeStream) (Object) crossfadeStream).selectTrack(gainToApply, returnAfterTrack, track, obfuscationGuard - 20608, fadeRate, 1000000);
+          if (obfuscationGuard != 20607) {
+            bk.selectMusicTrack(117, -8, (MusicTrack) null, 124, false);
           }
           return;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var5 = decompiledCaughtException;
-          stackIn_11_0 = var5;
-          stackIn_11_1 = new StringBuilder().append("bk.B(").append(param0).append(',').append(param1).append(',');
-          if (param2 == null) {
-            stackIn_12_2 = "null";
+        } catch (java.lang.RuntimeException caughtParameter) {
+          caughtFailure = caughtParameter;
+          failure = caughtFailure;
+          failureForContext = failure;
+          errorContext = new StringBuilder().append("bk.B(").append(channelGain).append(',').append(fadeRate).append(',');
+          if (track == null) {
+            trackDescription = "null";
           } else {
-            stackIn_12_2 = "{...}";
+            trackDescription = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) failureForContext), ((StringBuilder) (Object) errorContext).append(trackDescription).append(',').append(obfuscationGuard).append(',').append(loop).append(')').toString());
         }
     }
 

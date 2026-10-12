@@ -317,7 +317,7 @@
         },
         "publishedSources": {
           "files": 542,
-          "sha256": "08007368ae4aaa4bc09b92accc7301901075e9efc9263a392ef8af3a091f83a4"
+          "sha256": "67bbae9a92ca0f090945b6cba816188ad74365a2e694fcde27ada4ce36858987"
         }
       },
       "bachelorfridge": {
@@ -2623,17 +2623,17 @@
       "inputTreeSha256": "da234d1d0aacadddcf2056dd95c5f3a1032062e03f27dddb0e4f2914ca7c704c",
       "sources": {
         "files": 542,
-        "sha256": "08007368ae4aaa4bc09b92accc7301901075e9efc9263a392ef8af3a091f83a4"
+        "sha256": "67bbae9a92ca0f090945b6cba816188ad74365a2e694fcde27ada4ce36858987"
       },
       "dictionary": {
         "path": "decompilation/armiesofgielinor-naming.json",
-        "sha256": "d91700a6812778c61771f45bf582d5e1bbf60cedc373849ed8a76fa04df1309c"
+        "sha256": "0d2a77e89b27cd097e2c3fcefb90f97b4994e191722c4f47ad3e871d3815ea2c"
       },
       "readingGuide": {
         "path": "games/armiesofgielinor/README.md",
-        "sha256": "75ef11d6044ac4a019e0c3bd45dfa3e0020e3e3498b484f13dcd566f8971cb68"
+        "sha256": "168b9de4e43c78ceeb44ca0db606149a9a7fe153c2188f18a423b3dc291b7268"
       },
-      "rulesSha256": "48b3cce5e1a58871b288dafa1038f7dba527131a6d7bbe040a565f3da3f5297f",
+      "rulesSha256": "20abe2c89c35183ae364f76ad1145731c94989f05cc6668dda86da72d4757bd2",
       "compiler": {
         "base": {
           "repository": "Kreijstal/java-tools",

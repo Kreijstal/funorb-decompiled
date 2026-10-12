@@ -38,7 +38,7 @@ final class qp extends dr {
           Random var2 = (Random) null;
           qp.paintTerrainConnection(-126, -81, -63, -13, -70, -42, (Battlefield) null, -51, (Random) null);
         }
-        return nm.field_z;
+        return MusicCrossfadeStream.field_z;
     }
 
     final static void a(int param0, boolean param1, int param2, int param3, boolean param4, boolean param5, boolean param6, int param7, boolean param8, RgbSprite param9) {

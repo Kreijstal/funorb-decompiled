@@ -235,8 +235,8 @@ final class DropdownArrowPainter implements WidgetPainter {
               }
               QuickChatCommandDefinition.thirdPreviousOpcode = ba.secondPreviousOpcode;
               ba.secondPreviousOpcode = TurnTimerDial.previousOpcode;
-              TurnTimerDial.previousOpcode = nm.deliveredOpcode;
-              nm.deliveredOpcode = var4_ref_qu.opcode;
+              TurnTimerDial.previousOpcode = MusicCrossfadeStream.deliveredOpcode;
+              MusicCrossfadeStream.deliveredOpcode = var4_ref_qu.opcode;
               return true;
             }
           }
@@ -270,8 +270,8 @@ final class DropdownArrowPainter implements WidgetPainter {
             if (HuffmanCodec.packetDelayMillis == 0) {
               QuickChatCommandDefinition.thirdPreviousOpcode = ba.secondPreviousOpcode;
               ba.secondPreviousOpcode = TurnTimerDial.previousOpcode;
-              TurnTimerDial.previousOpcode = nm.deliveredOpcode;
-              nm.deliveredOpcode = ByteStorage.pendingOpcode;
+              TurnTimerDial.previousOpcode = MusicCrossfadeStream.deliveredOpcode;
+              MusicCrossfadeStream.deliveredOpcode = ByteStorage.pendingOpcode;
               ByteStorage.pendingOpcode = -1;
               return true;
             }

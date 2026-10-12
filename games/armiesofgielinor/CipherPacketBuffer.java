@@ -222,7 +222,7 @@ final class CipherPacketBuffer extends PacketBuffer {
             mu.field_a = new cg();
           }
           qc.field_j = 0;
-          if (nm.a(jt.field_a, true)) {
+          if (MusicCrossfadeStream.a(jt.field_a, true)) {
             rq.field_p[jt.field_a].clearSelectionResources(true);
           }
         } else {
@@ -233,7 +233,7 @@ final class CipherPacketBuffer extends PacketBuffer {
               mu.field_a = new cg();
             }
             qc.field_j = 0;
-            if (nm.a(jt.field_a, true)) {
+            if (MusicCrossfadeStream.a(jt.field_a, true)) {
               rq.field_p[jt.field_a].clearSelectionResources(true);
             }
           } else {
@@ -241,13 +241,13 @@ final class CipherPacketBuffer extends PacketBuffer {
             if (param1 != -10) {
               mu.field_a = new cg();
               qc.field_j = 0;
-              if (nm.a(jt.field_a, true)) {
+              if (MusicCrossfadeStream.a(jt.field_a, true)) {
                 rq.field_p[jt.field_a].clearSelectionResources(true);
               }
             } else {
               qc.field_j = 0;
-              if (!nm.a(jt.field_a, true)) {
-                if (!nm.a(param1, true)) {
+              if (!MusicCrossfadeStream.a(jt.field_a, true)) {
+                if (!MusicCrossfadeStream.a(param1, true)) {
                   if (jt.field_a == 16) {
                     RasterState.a((byte) 111);
                     ts.a((byte) -41);
@@ -303,7 +303,7 @@ final class CipherPacketBuffer extends PacketBuffer {
             }
           }
         }
-        if (nm.a(param1, true)) {
+        if (MusicCrossfadeStream.a(param1, true)) {
           var4Lifetime1 = -2;
           if (param1 == 15) {
             var4Lifetime1 = -1;

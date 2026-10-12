@@ -848,7 +848,7 @@ final class CampaignMenu {
               stackIn_38_0[stackIn_38_1] = stackIn_39_2;
               var6++;
             }
-            ((wn) (lk.field_e.field_y)).a((byte) 48, wf.field_v, var4);
+            ((wn) (lk.musicCrossfadeStream.selectedSequencer)).a((byte) 48, wf.field_v, var4);
             return;
           }
           return;
@@ -2119,8 +2119,8 @@ final class CampaignMenu {
             stackIn_46_0 = (!br.field_f[81]) ? 256 : 0;
             var5Lifetime1 = stackIn_46_0;
             if (var4_int != -2) {
-              lk.field_e.field_w.setChannelGain(var5Lifetime1, var4_int, (byte) -52);
-              lk.field_e.field_D.setChannelGain(var5Lifetime1, var4_int, (byte) -116);
+              lk.musicCrossfadeStream.firstSequencer.setChannelGain(var5Lifetime1, var4_int, (byte) -52);
+              lk.musicCrossfadeStream.secondSequencer.setChannelGain(var5Lifetime1, var4_int, (byte) -116);
             }
           }
           return;

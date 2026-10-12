@@ -65,7 +65,7 @@ final class TrianglePulse {
           return;
         }
         try {
-          lk.field_e.a(256, !param3 ? true : false, param2, -1, param1, 1000000);
+          lk.musicCrossfadeStream.selectTrack(256, !param3 ? true : false, param2, -1, param1, 1000000);
         } catch (RuntimeException runtimeException) {
           throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "hh.H(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }

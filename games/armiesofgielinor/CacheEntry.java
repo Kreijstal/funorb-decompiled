@@ -130,7 +130,7 @@ abstract class CacheEntry extends DualLinkedNode {
                 ByteStorage.incomingPacket.position = 0;
               } else {
                 fk.packetPayloadLength = -1;
-                nm.deliveredOpcode = var9Lifetime1;
+                MusicCrossfadeStream.deliveredOpcode = var9Lifetime1;
                 ov.connectionState = da.field_b;
               }
             }
@@ -154,7 +154,7 @@ abstract class CacheEntry extends DualLinkedNode {
           }
           if (da.field_b == ov.connectionState &&
             jh.isPacketPayloadReady(2)) {
-            if (nm.deliveredOpcode == 255) {
+            if (MusicCrossfadeStream.deliveredOpcode == 255) {
               var9_ref_String = ByteStorage.incomingPacket.c((byte) -85);
               if (var9_ref_String != null) {
                 ph.a(var9_ref_String, CombatEvent.d((byte) -5), false);
@@ -164,7 +164,7 @@ abstract class CacheEntry extends DualLinkedNode {
             }
             dj.a((byte) -127);
             ev.field_b = false;
-            stackIn_53_0 = nm.deliveredOpcode;
+            stackIn_53_0 = MusicCrossfadeStream.deliveredOpcode;
             return stackIn_53_0;
           }
           if (param2 != -20032) {

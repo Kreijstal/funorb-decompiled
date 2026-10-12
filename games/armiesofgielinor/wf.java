@@ -399,7 +399,7 @@ abstract class wf extends iv {
         ChatMessage var3;
         int var4;
         var4 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
-        var2 = nm.deliveredOpcode;
+        var2 = MusicCrossfadeStream.deliveredOpcode;
         if (var2 < 64 &&
           tk.field_f[var2]) {
           if (0 == var2) {

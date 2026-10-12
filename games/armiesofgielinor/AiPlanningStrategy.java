@@ -328,20 +328,20 @@ abstract class AiPlanningStrategy {
               vl.field_k = BoundedFile.a(2, param1);
               if (var5 != 0) {
                 vl.field_k = DisplacedUnitMarker.a(-1, param3, param2);
-                stackIn_18_0 = !(nm.field_z >= 13);
+                stackIn_18_0 = !(MusicCrossfadeStream.field_z >= 13);
                 vl.field_k = dc.a(stackIn_18_0, false);
                 fw.a(-1, (String[]) null);
               }
             } else {
               vl.field_k = DisplacedUnitMarker.a(-1, param3, param2);
               if (var5 != 0) {
-                stackIn_18_0 = !(nm.field_z >= 13);
+                stackIn_18_0 = !(MusicCrossfadeStream.field_z >= 13);
                 vl.field_k = dc.a(stackIn_18_0, false);
                 fw.a(-1, (String[]) null);
               }
             }
           } else {
-            stackIn_18_0 = !(nm.field_z >= 13);
+            stackIn_18_0 = !(MusicCrossfadeStream.field_z >= 13);
             vl.field_k = dc.a(stackIn_18_0, false);
             fw.a(-1, (String[]) null);
           }

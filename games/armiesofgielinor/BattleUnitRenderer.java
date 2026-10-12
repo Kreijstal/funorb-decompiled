@@ -249,7 +249,7 @@ final class BattleUnitRenderer {
             cd.field_e = param3;
             SoundCache.field_a = null;
             BufferedFile.field_a = param6;
-            nm.field_z = param4;
+            MusicCrossfadeStream.field_z = param4;
             oh.field_L = du.field_d;
             RadialSummonMenu.field_e = param0;
             qk.field_b = param2;

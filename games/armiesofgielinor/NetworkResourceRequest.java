@@ -46,20 +46,20 @@ final class NetworkResourceRequest extends ResourceRequest {
     final static void b(int param0, int param1) {
         te.field_n = param0;
         if (param1 >= 83) {
-          if (null != LobbyRoom.field_Kb) {
-            LobbyRoom.field_Kb.setMasterVolume(-122, param0);
+          if (null != LobbyRoom.directMusicSequencer) {
+            LobbyRoom.directMusicSequencer.setMasterVolume(-122, param0);
           }
-          if (null != lk.field_e) {
-            lk.field_e.b(param0, 6);
+          if (null != lk.musicCrossfadeStream) {
+            lk.musicCrossfadeStream.setMasterGain(param0, 6);
           }
           return;
         }
         field_C = (GameplayController) null;
-        if (null != LobbyRoom.field_Kb) {
-          LobbyRoom.field_Kb.setMasterVolume(-122, param0);
+        if (null != LobbyRoom.directMusicSequencer) {
+          LobbyRoom.directMusicSequencer.setMasterVolume(-122, param0);
         }
-        if (null != lk.field_e) {
-          lk.field_e.b(param0, 6);
+        if (null != lk.musicCrossfadeStream) {
+          lk.musicCrossfadeStream.setMasterGain(param0, 6);
         }
     }
 

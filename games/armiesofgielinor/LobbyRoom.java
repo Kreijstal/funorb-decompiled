@@ -7,7 +7,7 @@ final class LobbyRoom extends ClientUiComponent {
     ClientUiComponent field_ec;
     ClientUiComponent field_Wb;
     int displayRating;
-    static MidiPcmStream field_Kb;
+    static MidiPcmStream directMusicSequencer;
     ClientUiComponent field_sc;
     static String field_Jb;
     ClientUiComponent capacityComponent;
@@ -48,7 +48,7 @@ final class LobbyRoom extends ClientUiComponent {
           return;
         }
         field_Jb = null;
-        field_Kb = null;
+        directMusicSequencer = null;
     }
 
     final boolean isRemovedFromIndex(int obfuscationGuard) {

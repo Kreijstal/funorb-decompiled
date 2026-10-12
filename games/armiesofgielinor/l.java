@@ -7,7 +7,7 @@ final class l {
     static IndexedSprite[] activeStructureSprites;
     static CampaignMission activeCampaignMission;
     static String field_g;
-    static PcmPlayer field_a;
+    static PcmPlayer musicPlayer;
     static String field_d;
     static String field_f;
 
@@ -142,7 +142,7 @@ final class l {
           return;
         }
         field_g = null;
-        field_a = null;
+        musicPlayer = null;
         field_e = null;
         field_h = null;
         field_f = null;

@@ -92,10 +92,10 @@ final class TileMetadata implements TaggedFieldReader {
         }
     }
 
-    final static void a(java.awt.Component param0, int param1, PlatformTaskService param2, boolean param3, int param4, nm param5, int param6, int param7) {
+    final static void a(java.awt.Component param0, int param1, PlatformTaskService param2, boolean param3, int param4, MusicCrossfadeStream param5, int param6, int param7) {
         try {
           PcmPlayer.configureOutput(param7, param3, 10);
-          l.field_a = PcmPlayer.create(param2, param0, 0, param6);
+          l.musicPlayer = PcmPlayer.create(param2, param0, 0, param6);
           TextCursor.field_e = PcmPlayer.create(param2, param0, 1, param1);
           AnimationSkeleton.field_n = new PcmStreamMixer();
           ku.field_K = param1;
@@ -103,9 +103,9 @@ final class TileMetadata implements TaggedFieldReader {
             field_a = (int[]) null;
           }
           TextCursor.field_e.setStream(AnimationSkeleton.field_n);
-          lk.field_e = param5;
-          lk.field_e.b(te.field_n, -120);
-          l.field_a.setStream(lk.field_e);
+          lk.musicCrossfadeStream = param5;
+          lk.musicCrossfadeStream.setMasterGain(te.field_n, -120);
+          l.musicPlayer.setStream(lk.musicCrossfadeStream);
         } catch (RuntimeException runtimeException) {
           throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "ca.F(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ',' + param6 + ',' + param7 + ')');
         }

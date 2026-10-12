@@ -10,7 +10,7 @@ final class MapLayout extends IntrusiveNode {
     static QuickChatCommandDefinition field_q;
     int mapHeight;
     int playerCapacity;
-    static MusicTrack field_u;
+    static MusicTrack currentDirectMusicTrack;
     static String field_m;
     static String field_o;
 
@@ -282,7 +282,7 @@ final class MapLayout extends IntrusiveNode {
           ResourceArchive var2 = (ResourceArchive) null;
           MapLayout.loadIndexedSpritesByName((String) null, 125, (String) null, (ResourceArchive) null);
         }
-        field_u = null;
+        currentDirectMusicTrack = null;
         field_q = null;
         field_m = null;
     }

@@ -189,7 +189,7 @@ public final class ArmiesOfGielinor extends wf {
           if (decompiledFrameCompleted0) {
             boolean decompiledNaturalLoopExit0 = false;
             while (!(decompiledNaturalLoopExit0 = (!DropdownArrowPainter.pollIncomingPacket((byte) 42, sh.opcodePayloadLengths)))) {
-              stackIn_337_0 = nm.deliveredOpcode;
+              stackIn_337_0 = MusicCrossfadeStream.deliveredOpcode;
               stackIn_337_1 = 9;
               if (var11 == 0) {
                 if (stackIn_337_0 == stackIn_337_1) {
@@ -199,7 +199,7 @@ public final class ArmiesOfGielinor extends wf {
                   PaletteRegionMap.field_i = ByteStorage.incomingPacket.readNullTerminatedString(1);
                   continue;
                 }
-                if (nm.deliveredOpcode == 14) {
+                if (MusicCrossfadeStream.deliveredOpcode == 14) {
                   RadialSummonItem.a(rs.nextPowerOfTwo((byte) 76, 8), DualNodeIterator.b((byte) -90), 150, CipherPacketBuffer.field_A, rs.nextPowerOfTwo((byte) 95, 1000), et.b(-1), 1024, 6, -84, sh.d((byte) 81));
                   ep.a(lp.b(-126), -72, km.c(0));
                   s.field_d = 0;
@@ -210,7 +210,7 @@ public final class ArmiesOfGielinor extends wf {
                   TrianglePulse.a(-16147, 50, DeployRequest.field_B, true);
                   continue;
                 }
-                if (nm.deliveredOpcode == 15) {
+                if (MusicCrossfadeStream.deliveredOpcode == 15) {
                   if (FaceNormal.field_d) {
                     ut.i((byte) 124);
                     PacketBuffer.i((byte) 109);
@@ -230,15 +230,15 @@ public final class ArmiesOfGielinor extends wf {
                   SpellCastAction.field_t = false;
                   continue;
                 }
-                if (nm.deliveredOpcode == 10 &&
+                if (MusicCrossfadeStream.deliveredOpcode == 10 &&
                   FaceNormal.field_d) {
                   QuickChatCategoryRepository.processLobbyUpdate((byte) -105);
                   continue;
                 }
-                if (nm.deliveredOpcode == 11 ||
-                  nm.deliveredOpcode == 12) {
+                if (MusicCrossfadeStream.deliveredOpcode == 11 ||
+                  MusicCrossfadeStream.deliveredOpcode == 12) {
                   stackIn_119_0 = 96;
-                  stackIn_120_1 = (12 == nm.deliveredOpcode);
+                  stackIn_120_1 = (12 == MusicCrossfadeStream.deliveredOpcode);
                   var2 = CommunityTabGroup.decodeChatMessageWithIntGuard(stackIn_119_0, stackIn_120_1);
                   if (((ChatMessage) (var2)).channelId == 4) {
                     if (null != rd.field_j) {
@@ -251,7 +251,7 @@ public final class ArmiesOfGielinor extends wf {
                   MapLayout.acceptReceivedChatMessage((ChatMessage) (var2), -1);
                   continue;
                 }
-                if (nm.deliveredOpcode == 74) {
+                if (MusicCrossfadeStream.deliveredOpcode == 74) {
                   var2 = rq.field_n;
                   var3_ref_bv = ByteStorage.incomingPacket;
                   var4 = ((PacketBuffer) ((Object) var3_ref_bv)).readUnsignedByte(0);
@@ -263,13 +263,13 @@ public final class ArmiesOfGielinor extends wf {
                   Unit.m(13);
                   continue;
                 }
-                if (nm.deliveredOpcode == 75) {
+                if (MusicCrossfadeStream.deliveredOpcode == 75) {
                   var2 = ByteStorage.incomingPacket;
                   EffectPresentation.readCoatOfArms(ah.localCoat.parts, (PacketBuffer) (var2), false, ah.localCoat.colourIndices);
                   ClientUiNode.field_w = true;
                   continue;
                 }
-                if (81 == nm.deliveredOpcode) {
+                if (81 == MusicCrossfadeStream.deliveredOpcode) {
                   var2_intLifetime1 = ByteStorage.incomingPacket.readUnsignedByte(0);
                   if (var2_intLifetime1 != 0) {
                     bu.storedQuicksave = new CampaignQuicksave(ByteStorage.incomingPacket, 9, true);
@@ -279,27 +279,27 @@ public final class ArmiesOfGielinor extends wf {
                   mv.field_b = true;
                   continue;
                 }
-                if (nm.deliveredOpcode == 82) {
+                if (MusicCrossfadeStream.deliveredOpcode == 82) {
                   if (!bu.storedQuicksave.appendSnapshotChunk(fk.packetPayloadLength, -1, ByteStorage.incomingPacket)) {
                     continue;
                   }
                   mv.field_b = true;
                   continue;
                 }
-                if (nm.deliveredOpcode == 80) {
+                if (MusicCrossfadeStream.deliveredOpcode == 80) {
                   pg.playerProfile = new PlayerProfile(ByteStorage.incomingPacket, true);
                   ve.field_b = true;
                   continue;
                 }
-                if (79 == nm.deliveredOpcode) {
+                if (79 == MusicCrossfadeStream.deliveredOpcode) {
                   if (null == rd.field_j) {
                     continue;
                   }
                   rd.field_j.field_Bb = ByteStorage.incomingPacket.readInt(1);
                   continue;
                 }
-                if (nm.deliveredOpcode == 64 ||
-                  nm.deliveredOpcode == 65) {
+                if (MusicCrossfadeStream.deliveredOpcode == 64 ||
+                  MusicCrossfadeStream.deliveredOpcode == 65) {
                   ut.i((byte) 123);
                   var2_intLifetime1Lifetime1 = ByteStorage.incomingPacket.readUnsignedByte(0);
                   var3 = ByteStorage.incomingPacket.readUnsignedByte(0);
@@ -314,7 +314,7 @@ public final class ArmiesOfGielinor extends wf {
                   var10_int = 0;
                   while (var8.length > var10_int) {
                     var8[var10_int] = ByteStorage.incomingPacket.readNullCircumfixedString((byte) 121);
-                    stackIn_337_0 = ~nm.deliveredOpcode;
+                    stackIn_337_0 = ~MusicCrossfadeStream.deliveredOpcode;
                     stackIn_337_1 = -65;
                     if (stackIn_337_0 == stackIn_337_1 &&
                       gt.isLocalAccountName(var8[var10_int], (byte) 121)) {
@@ -349,7 +349,7 @@ public final class ArmiesOfGielinor extends wf {
                     stackIn_195_14 = true;
                   }
                   var10 = new GameplayController(stackIn_194_2, stackIn_194_3, stackIn_194_4, stackIn_194_5, stackIn_194_6 != 0, stackIn_194_7, stackIn_194_8, stackIn_194_9, stackIn_194_10, stackIn_194_11 != 0, stackIn_194_12, stackIn_194_13, stackIn_195_14, (CampaignMission) null);
-                  if (nm.deliveredOpcode != 64) {
+                  if (MusicCrossfadeStream.deliveredOpcode != 64) {
                     SectorCacheStore.field_a = var10;
                     gk.field_H = true;
                   } else {
@@ -365,7 +365,7 @@ public final class ArmiesOfGielinor extends wf {
                   MusicPatch.field_w = true;
                   continue;
                 }
-                if (66 == nm.deliveredOpcode) {
+                if (66 == MusicCrossfadeStream.deliveredOpcode) {
                   if (fj.field_c ||
                     gk.field_H) {
                     if (fj.field_c &&
@@ -393,11 +393,11 @@ public final class ArmiesOfGielinor extends wf {
                   var2 = rd.field_j;
                 }
                 if (var2 != null) {
-                  if (nm.deliveredOpcode == 77) {
+                  if (MusicCrossfadeStream.deliveredOpcode == 77) {
                     ((GameplayController) (var2)).battlefield.appendSnapshotChunk(fk.packetPayloadLength, ByteStorage.incomingPacket, (byte) -81);
                     continue;
                   }
-                  if (nm.deliveredOpcode == 67) {
+                  if (MusicCrossfadeStream.deliveredOpcode == 67) {
                     if (!((GameplayController) (var2)).battlefield.field_Ab) {
                       ((GameplayController) (var2)).battlefield.snapshotBuffer.position = 0;
                       ((GameplayController) (var2)).battlefield.readLegacySnapshot(0, ((GameplayController) (var2)).battlefield.snapshotBuffer);
@@ -441,7 +441,7 @@ public final class ArmiesOfGielinor extends wf {
                     ((GameplayController) (var2)).field_Tb = false;
                     continue;
                   }
-                  if (68 == nm.deliveredOpcode) {
+                  if (68 == MusicCrossfadeStream.deliveredOpcode) {
                     ((GameplayController) (var2)).battlefield.readGameEvent((PacketBuffer) (ByteStorage.incomingPacket), (byte) -67);
                     if (((GameplayController) (var2)).battlefield.currentPlayer != ((GameplayController) (var2)).battlefield.localPlayer) {
                       continue;
@@ -452,11 +452,11 @@ public final class ArmiesOfGielinor extends wf {
                     ((GameplayController) (var2)).i(0);
                     continue;
                   }
-                  if (nm.deliveredOpcode == 78) {
+                  if (MusicCrossfadeStream.deliveredOpcode == 78) {
                     RadialSummonMenu.field_d = ByteStorage.incomingPacket.readInt(1);
                     continue;
                   }
-                  if (76 == nm.deliveredOpcode) {
+                  if (76 == MusicCrossfadeStream.deliveredOpcode) {
                     var3Lifetime2 = ByteStorage.incomingPacket.readUnsignedByte(0);
                     if (var3Lifetime2 != 0) {
                       ((GameplayController) (var2)).field_Tb = true;
@@ -466,7 +466,7 @@ public final class ArmiesOfGielinor extends wf {
                     ((GameplayController) (var2)).field_Vb = ByteStorage.incomingPacket.readUnsignedShort((byte) -104);
                     continue;
                   }
-                  if (nm.deliveredOpcode == 69) {
+                  if (MusicCrossfadeStream.deliveredOpcode == 69) {
                     var3_ref_int__ = new int[((GameplayController) (var2)).battlefield.teamCount];
                     var4_ref_int__ = new int[((GameplayController) (var2)).battlefield.playerCount];
                     var5 = new int[((GameplayController) (var2)).battlefield.playerCount];
@@ -496,7 +496,7 @@ public final class ArmiesOfGielinor extends wf {
                     ((GameplayController) (var2)).prepareMatchResults(true);
                     continue;
                   }
-                  if (nm.deliveredOpcode == 70) {
+                  if (MusicCrossfadeStream.deliveredOpcode == 70) {
                     ((GameplayController) (var2)).battlefield.field_C = ByteStorage.incomingPacket.readUnsignedByte(0);
                     if (null == rd.field_j) {
                       continue;
@@ -504,7 +504,7 @@ public final class ArmiesOfGielinor extends wf {
                     dv.a(true);
                     continue;
                   }
-                  if (nm.deliveredOpcode == 71) {
+                  if (MusicCrossfadeStream.deliveredOpcode == 71) {
                     ((GameplayController) (var2)).battlefield.setInactivePlayerMask(0, ByteStorage.incomingPacket.readUnsignedByte(0));
                     if (rd.field_j == null) {
                       continue;
@@ -512,7 +512,7 @@ public final class ArmiesOfGielinor extends wf {
                     dv.a(true);
                     continue;
                   }
-                  if (nm.deliveredOpcode == 73) {
+                  if (MusicCrossfadeStream.deliveredOpcode == 73) {
                     ((GameplayController) (var2)).battlefield.setEliminatedPlayerMask(ByteStorage.incomingPacket.readUnsignedByte(0), -119);
                     if (null == rd.field_j) {
                       continue;
@@ -520,7 +520,7 @@ public final class ArmiesOfGielinor extends wf {
                     dv.a(true);
                     continue;
                   }
-                  if (nm.deliveredOpcode == 72) {
+                  if (MusicCrossfadeStream.deliveredOpcode == 72) {
                     ((GameplayController) (var2)).battlefield.field_i = ByteStorage.incomingPacket.readUnsignedByte(0);
                     if (null == rd.field_j) {
                       continue;
@@ -528,7 +528,7 @@ public final class ArmiesOfGielinor extends wf {
                     bw.d(7242);
                     continue;
                   }
-                  if (nm.deliveredOpcode == 73) {
+                  if (MusicCrossfadeStream.deliveredOpcode == 73) {
                     ((GameplayController) (var2)).field_hb = ByteStorage.incomingPacket.readUnsignedByte(0);
                     if (null == rd.field_j) {
                       continue;
@@ -667,11 +667,11 @@ public final class ArmiesOfGielinor extends wf {
                 op.field_b.ensureAllGroupsAvailable(-27927)) {
                 if (bi.field_f.ensureIndex((byte) 82) &&
                   bi.field_f.ensureAllGroupsAvailable(-27927)) {
-                  if (nm.field_s.ensureIndex((byte) 82) &&
-                    nm.field_s.ensureAllGroupsAvailable(-27927)) {
+                  if (MusicCrossfadeStream.field_s.ensureIndex((byte) 82) &&
+                    MusicCrossfadeStream.field_s.ensureAllGroupsAvailable(-27927)) {
                     return true;
                   }
-                  bn.a((byte) -24, 67.0f, ao.a(cr.field_eb, true, en.field_G, nm.field_s));
+                  bn.a((byte) -24, 67.0f, ao.a(cr.field_eb, true, en.field_G, MusicCrossfadeStream.field_s));
                   return false;
                 }
                 bn.a((byte) -24, 67.0f, ao.a(cr.field_eb, true, en.field_G, bi.field_f));
@@ -770,7 +770,7 @@ public final class ArmiesOfGielinor extends wf {
                       decompiledFrameRemainder2 = (var8 != 0);
                     }
                     if ((decompiledFrameRemainder2) &&
-                      (nm.a(jt.field_a, true))) {
+                      (MusicCrossfadeStream.a(jt.field_a, true))) {
                       rq.field_p[jt.field_a].d((byte) -109);
                       if (var8 != 0) {
                         ResourceArchive.c(-20193);
@@ -928,7 +928,7 @@ public final class ArmiesOfGielinor extends wf {
                   if (tv.field_a) {
                     CipherPacketBuffer.a(false, -4, 1, jt.field_a);
                   }
-                  if (nm.a(jt.field_a, true)) {
+                  if (MusicCrossfadeStream.a(jt.field_a, true)) {
                     ut.i((byte) 125);
                   }
                 }
@@ -1134,7 +1134,7 @@ public final class ArmiesOfGielinor extends wf {
           ed.b(15000);
           gi.a(180);
           wn.c((byte) 52);
-          nm.e(256);
+          MusicCrossfadeStream.e(256);
           gp.a((byte) 115);
           us.a(param0 ^ 30);
           CampaignMenu.d((byte) 44);
@@ -1607,7 +1607,7 @@ public final class ArmiesOfGielinor extends wf {
         wn var2 = null;
         RuntimeException var2_ref = null;
         wn var3 = null;
-        nm var4 = null;
+        MusicCrossfadeStream var4 = null;
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
@@ -1618,9 +1618,9 @@ public final class ArmiesOfGielinor extends wf {
           UnitSpell.a(52, new lt());
           var2 = new wn();
           var3 = new wn(var2);
-          var4 = new nm(var2, var3);
-          var4.field_w.setChannelProgram(-1, 128, 9);
-          var4.field_D.setChannelProgram(-1, 128, 9);
+          var4 = new MusicCrossfadeStream(var2, var3);
+          var4.firstSequencer.setChannelProgram(-1, 128, 9);
+          var4.secondSequencer.setChannelProgram(-1, 128, 9);
           var5 = 0;
           do {
             if (!(CorpseConditionMarker.field_u.field_a.length > var5)) {
@@ -1713,7 +1713,7 @@ public final class ArmiesOfGielinor extends wf {
           ki.field_b = nu.a(12, true);
           op.field_b = nu.a(15, true);
           bi.field_f = nu.a(14, true);
-          nm.field_s = nu.a(param0, true);
+          MusicCrossfadeStream.field_s = nu.a(param0, true);
           ReportAbuseDialog.field_Lb = nu.a(18, true);
           ce.field_M = nu.a(19, true);
           oh.field_M = nu.a(20, true);
@@ -2105,7 +2105,7 @@ public final class ArmiesOfGielinor extends wf {
               cb.field_a[var5_int] = MusicTrack.load(SummonAction.field_w, "", "attack" + (var5_int + 1));
               var5_int++;
             } while (var18 == 0);
-            var5 = lk.field_e.field_w;
+            var5 = lk.musicCrossfadeStream.firstSequencer;
             var5.prepareTrackSamples(jl.field_d, ep.field_b, 0, SocialListPanel.field_Ob, (byte) 86);
             var5.prepareTrackSamples(jl.field_d, ep.field_b, 0, DeployRequest.field_B, (byte) 86);
             var5.prepareTrackSamples(jl.field_d, ep.field_b, 0, oh.field_K, (byte) 86);
@@ -2425,14 +2425,14 @@ public final class ArmiesOfGielinor extends wf {
           }
           if (op.field_b != null &&
             null != bi.field_f &&
-            nm.field_s != null &&
+            MusicCrossfadeStream.field_s != null &&
             ki.field_b == null) {
             bn.a((byte) -24, 99.0f, AiPlanner.field_R);
             this.a(0);
-            CoatOfArms.a(nm.field_s, bi.field_f, op.field_b, 0);
+            CoatOfArms.a(MusicCrossfadeStream.field_s, bi.field_f, op.field_b, 0);
             op.field_b = null;
             bi.field_f = null;
-            nm.field_s = null;
+            MusicCrossfadeStream.field_s = null;
             wl.a(0);
             return false;
           }

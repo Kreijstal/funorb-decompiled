@@ -260,7 +260,7 @@ final class rj extends Widget {
         if (cu.field_a) {
           var2[1] = (byte)oe.bitwiseOr((int) var2[1], 1);
         }
-        nm.a(0, 6, var2);
+        MusicCrossfadeStream.a(0, 6, var2);
         ps.field_v = false;
     }
 

@@ -867,7 +867,7 @@ final class CampaignUnitOverride {
                 }
                 var2 = NodeIterator.a(param0 + 132, "gameopt_needchanging2");
                 if (null != var2) {
-                  nm.field_u = uu.a(var2, (byte) -127);
+                  MusicCrossfadeStream.field_u = uu.a(var2, (byte) -127);
                 }
                 var2 = NodeIterator.a(50, "gameopt_mightchange");
                 if (null != var2) {
