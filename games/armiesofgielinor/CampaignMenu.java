@@ -68,15 +68,15 @@ final class CampaignMenu {
 
     private final void resumeQuicksave(int obfuscationGuard) {
         RuntimeException runtimeException = null;
-        sl var2 = null;
+        CampaignQuicksave var2 = null;
         CampaignMission var3 = null;
         int var4 = 0;
         int var5 = 0;
         RuntimeException decompiledCaughtException = null;
         try {
-          var2 = ku.j(124);
-          var3 = ar.getCampaignMission(var2.field_g, var2.field_e, 0);
-          ts.a(var3, -1, var2);
+          var2 = ku.getStoredQuicksave(124);
+          var3 = ar.getCampaignMission(var2.campaignIndex, var2.missionId, 0);
+          ts.startCampaignMission(var3, -1, var2);
           var4 = var3.playerSlot;
           var5 = rd.field_j.battlefield.playerTurnCounts[var4];
           if (~var5 < obfuscationGuard) {
@@ -212,7 +212,7 @@ final class CampaignMenu {
 
     private final void a(byte param0) {
         RuntimeException runtimeException = null;
-        sl var2 = null;
+        CampaignQuicksave var2 = null;
         CampaignMission var3 = null;
         int var4 = 0;
         String var5 = null;
@@ -231,9 +231,9 @@ final class CampaignMenu {
         int var8Lifetime1;
         int var9Lifetime1;
         try {
-          var2 = ku.j(111);
-          var3 = ar.getCampaignMission(var2.field_g, var2.field_e, 0);
-          var4 = Battlefield.a(var3.participantIds.length, var2.field_c, false);
+          var2 = ku.getStoredQuicksave(111);
+          var3 = ar.getCampaignMission(var2.campaignIndex, var2.missionId, 0);
+          var4 = Battlefield.a(var3.participantIds.length, var2.snapshotBytes, false);
           var5 = fo.a(4800, wd.field_e, new String[]{var3.name, Integer.toString(var4)});
           var6 = fo.a(4800, hi.field_h, new String[]{var5});
           if (this.field_h == null) {
@@ -700,7 +700,7 @@ final class CampaignMenu {
 
     private final void d(int param0) {
         RuntimeException runtimeException = null;
-        sl var2 = null;
+        CampaignQuicksave var2 = null;
         CampaignMission var3 = null;
         int var4 = 0;
         String var5 = null;
@@ -719,9 +719,9 @@ final class CampaignMenu {
         int var8Lifetime1;
         int var9Lifetime1;
         try {
-          var2 = ku.j(97);
-          var3 = ar.getCampaignMission(var2.field_g, var2.field_e, param0 - 26);
-          var4 = Battlefield.a(var3.participantIds.length, var2.field_c, false);
+          var2 = ku.getStoredQuicksave(97);
+          var3 = ar.getCampaignMission(var2.campaignIndex, var2.missionId, param0 - 26);
+          var4 = Battlefield.a(var3.participantIds.length, var2.snapshotBytes, false);
           var5 = fo.a(4800, sb.field_f, new String[]{Integer.toString(var4)});
           boolean decompiledSharedTail0 = (null == this.field_c);
           if (!decompiledSharedTail0) {
@@ -931,7 +931,7 @@ final class CampaignMenu {
         int var24_int = 0;
         RgbSprite var24 = null;
         int var25_int = 0;
-        sl var25 = null;
+        CampaignQuicksave var25 = null;
         CampaignParticipant var26_ref_sd = null;
         int var26 = 0;
         int var27 = 0;
@@ -1161,10 +1161,10 @@ final class CampaignMenu {
             if (null == this.field_p) {
               this.field_p = new CampaignMenuButton(pn.field_k, var5Lifetime1, var6Lifetime3, var2_int);
             }
-            var25 = ku.j(121);
+            var25 = ku.getStoredQuicksave(121);
             if (null != var25 &&
-              ~this.campaignIndex == ~var25.field_g &&
-              ~var25.field_e == ~this.selectedMissionEntry.entryId) {
+              ~this.campaignIndex == ~var25.campaignIndex &&
+              ~var25.missionId == ~this.selectedMissionEntry.entryId) {
               stackIn_98_0 = 1;
             } else {
               stackIn_98_0 = 0;
@@ -1283,23 +1283,23 @@ final class CampaignMenu {
         }
     }
 
-    private final RgbSprite a(CampaignMission param0, sl param1, int param2, int param3, int param4) {
+    private final RgbSprite renderMissionPreview(CampaignMission mission, CampaignQuicksave quicksave, int height, int obfuscationGuard, int width) {
         RuntimeException runtimeException = null;
-        RgbSprite var6 = null;
-        MapLayout var7 = null;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        int[][] var12 = null;
-        String[] var13 = null;
+        RgbSprite sprite = null;
+        MapLayout layout = null;
+        int tileHeight = 0;
+        int tileWidth = 0;
+        int leftOffset = 0;
+        int topOffset = 0;
+        int[][] terrain = null;
+        String[] participantNames = null;
         int var14_int = 0;
-        Battlefield var14 = null;
-        int var15 = 0;
-        int var16 = 0;
-        int var17 = 0;
-        MapTile var18 = null;
-        int var19 = 0;
+        Battlefield previewBattlefield = null;
+        int tileIndex = 0;
+        int tileY = 0;
+        int tileX = 0;
+        MapTile tile = null;
+        int terrainType = 0;
         int var23 = 0;
         int stackIn_20_0 = 0;
         int stackIn_20_1 = 0;
@@ -1311,95 +1311,95 @@ final class CampaignMenu {
         String stackIn_30_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var6_ref = null;
-        int var20 = 0;
-        Unit var21_ref_jd = null;
-        int var21 = 0;
-        int var22 = 0;
+        int tileColour = 0;
+        Unit unit = null;
+        int left = 0;
+        int top = 0;
         var23 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          var6 = new RgbSprite(param4, param2);
-          var7 = param0.getMapLayout(-98);
-          var8 = var6.pixelHeight / var7.mapHeight;
-          var9 = var6.pixelWidth / var7.mapWidth;
-          var10 = (var6.pixelWidth - var9 * var7.mapWidth) / 2;
-          var11 = (-(var9 * var7.mapHeight) + var6.pixelHeight) / 2;
-          var12 = new int[][]{kb.field_o};
-          var13 = new String[param0.participantIds.length];
+          sprite = new RgbSprite(width, height);
+          layout = mission.getMapLayout(-98);
+          tileHeight = sprite.pixelHeight / layout.mapHeight;
+          tileWidth = sprite.pixelWidth / layout.mapWidth;
+          leftOffset = (sprite.pixelWidth - tileWidth * layout.mapWidth) / 2;
+          topOffset = (-(tileWidth * layout.mapHeight) + sprite.pixelHeight) / 2;
+          terrain = new int[][]{kb.field_o};
+          participantNames = new String[mission.participantIds.length];
           var14_int = 0;
-          while (var13.length > var14_int) {
-            var13[var14_int] = "-";
+          while (participantNames.length > var14_int) {
+            participantNames[var14_int] = "-";
             var14_int++;
             if (var23 == 0) {
               continue;
             }
             break;
           }
-          var14 = new Battlefield(0, var13, -1, var12, 0, true, false, param0.mapSizeSetting, 1, var7.field_p, false, (int[][]) null, 4, 0, 0, param0);
-          var14.localPlayer = 0;
+          previewBattlefield = new Battlefield(0, participantNames, -1, terrain, 0, true, false, mission.mapSizeSetting, 1, layout.field_p, false, (int[][]) null, 4, 0, 0, mission);
+          previewBattlefield.localPlayer = 0;
           try {
-            ml.a(param0, (byte) -26);
-            var14.readLegacySnapshot(param3 ^ param3, new PacketBuffer(param1.field_c));
+            ml.a(mission, (byte) -26);
+            previewBattlefield.readLegacySnapshot(obfuscationGuard ^ obfuscationGuard, new PacketBuffer(quicksave.snapshotBytes));
           } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
             runtimeException = decompiledCaughtException;
             runtimeException.printStackTrace();
           }
-          CombatSandbox.a(var6, 3);
-          SoftwareRaster.f(0, 0, var6.pixelWidth, var6.pixelHeight, 4473924);
-          var15 = 0;
+          CombatSandbox.a(sprite, 3);
+          SoftwareRaster.f(0, 0, sprite.pixelWidth, sprite.pixelHeight, 4473924);
+          tileIndex = 0;
           boolean decompiledNaturalLoopExit0 = false;
-          while (!(decompiledNaturalLoopExit0 = (!(var15 < var14.tiles.length)))) {
-            var16 = var15 / var14.mapWidth;
-            var17 = var15 % var14.mapWidth;
-            var18 = var14.tiles[var15];
-            var19 = var18.terrainType;
+          while (!(decompiledNaturalLoopExit0 = (!(tileIndex < previewBattlefield.tiles.length)))) {
+            tileY = tileIndex / previewBattlefield.mapWidth;
+            tileX = tileIndex % previewBattlefield.mapWidth;
+            tile = previewBattlefield.tiles[tileIndex];
+            terrainType = tile.terrainType;
             stackIn_20_0 = -17;
-            stackIn_20_1 = ~var19;
+            stackIn_20_1 = ~terrainType;
             if (var23 == 0) {
               if (stackIn_20_0 >= stackIn_20_1) {
-                var19 = 0;
+                terrainType = 0;
               }
-              var20 = UnitLossCondition.field_d[var7.field_p].field_i[var19];
-              if (null != var18.occupant) {
-                var21_ref_jd = var18.occupant;
-                var20 = op.field_c[0][var21_ref_jd.ownerPlayer];
+              tileColour = UnitLossCondition.field_d[layout.field_p].field_i[terrainType];
+              if (null != tile.occupant) {
+                unit = tile.occupant;
+                tileColour = op.field_c[0][unit.ownerPlayer];
               }
-              var21 = var9 * var17 + var10;
-              var22 = var11 + var8 * var16;
-              SoftwareRaster.f(var21, var22, var9, var8, var20);
-              SoftwareRaster.e(var21, var22, var21 + var9, var22, 16777215, 16);
-              SoftwareRaster.e(var21, var22 + 1, var21, var8 + var22, 16777215, 16);
-              SoftwareRaster.d(1 + var21, -1 + (var8 + var22), var21 + var9, -1 + var22 + var8, 0, 16);
-              SoftwareRaster.e(var21 + var9 - 1, var22 + 1, var21 + (var9 - 1), var8 + (var22 - 1), 0, 16);
-              var15++;
+              left = tileWidth * tileX + leftOffset;
+              top = topOffset + tileHeight * tileY;
+              SoftwareRaster.f(left, top, tileWidth, tileHeight, tileColour);
+              SoftwareRaster.e(left, top, left + tileWidth, top, 16777215, 16);
+              SoftwareRaster.e(left, top + 1, left, tileHeight + top, 16777215, 16);
+              SoftwareRaster.d(1 + left, -1 + (tileHeight + top), left + tileWidth, -1 + top + tileHeight, 0, 16);
+              SoftwareRaster.e(left + tileWidth - 1, top + 1, left + (tileWidth - 1), tileHeight + (top - 1), 0, 16);
+              tileIndex++;
               continue;
             }
             break;
           }
           if (decompiledNaturalLoopExit0) {
-            stackIn_20_0 = param3;
+            stackIn_20_0 = obfuscationGuard;
             stackIn_20_1 = -18863;
           }
           rf.b(stackIn_20_0 + stackIn_20_1);
-          stackIn_21_0 = var6;
+          stackIn_21_0 = sprite;
           return stackIn_21_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
           decompiledCaughtException = decompiledCaughtParameter1;
           var6_ref = decompiledCaughtException;
           stackIn_25_0 = var6_ref;
           stackIn_25_1 = new StringBuilder().append("cv.V(");
-          if (param0 == null) {
+          if (mission == null) {
             stackIn_26_2 = "null";
           } else {
             stackIn_26_2 = "{...}";
           }
           stackIn_29_1 = ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(',');
-          if (param1 == null) {
+          if (quicksave == null) {
             stackIn_30_2 = "null";
           } else {
             stackIn_30_2 = "{...}";
           }
-          throw ig.addExceptionContext((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_29_1).append(stackIn_30_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw ig.addExceptionContext((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_29_1).append(stackIn_30_2).append(',').append(height).append(',').append(obfuscationGuard).append(',').append(width).append(')').toString());
         }
     }
 
@@ -1454,22 +1454,22 @@ final class CampaignMenu {
     }
 
     private final void openSelectedCampaign(int obfuscationGuard) {
-        sl var2 = null;
+        CampaignQuicksave var2 = null;
         CampaignMission var3 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2_ref = null;
         try {
           this.selectedMissionEntry = null;
           if (this.selectedCampaignEntry.entryId == -1) {
-            var2 = ku.j(obfuscationGuard + 86);
-            if (!ei.a(var2.field_g, obfuscationGuard + 11906) &&
+            var2 = ku.getStoredQuicksave(obfuscationGuard + 86);
+            if (!ei.a(var2.campaignIndex, obfuscationGuard + 11906) &&
               rf.a(27875)) {
               PaletteRegionMap.field_i = bn.field_g;
               CipherPacketBuffer.a(false, 11, obfuscationGuard ^ 1, jt.field_a);
               return;
             }
-            this.rebuildMissionEntries(var2.field_g, 53);
-            var3 = ar.getCampaignMission(var2.field_g, var2.field_e, 0);
+            this.rebuildMissionEntries(var2.campaignIndex, 53);
+            var3 = ar.getCampaignMission(var2.campaignIndex, var2.missionId, 0);
             l.field_c = var3;
             CipherPacketBuffer.a(true, -11, obfuscationGuard + 1, 0);
             if (ArmiesOfGielinor.obfuscationControl) {
@@ -1545,7 +1545,7 @@ final class CampaignMenu {
                 this.selectedMissionEntry.selectable &&
                 this.field_t != null &&
                 this.field_t.containsPointer((byte) -27)) {
-                this.b((byte) 107);
+                this.selectMissionOrQuicksaveDialog((byte) 107);
                 return;
               }
               var2_int = this.regionMap.getRegionAt(AiPlanningStrategy.field_d - db.a(true, 0), (byte) -79, ko.field_b - MatchConditionEntry.a(0, (byte) 94));
@@ -1628,7 +1628,7 @@ final class CampaignMenu {
                   if (var4_int == 0) {
                     if (this.selectedMissionEntry == var3) {
                       if (!(this.selectedMissionEntry.selectionAge >= 20)) {
-                        this.b((byte) 72);
+                        this.selectMissionOrQuicksaveDialog((byte) 72);
                         if (var7 != 0) {
                           ub.$cfr$intArgs$a$6d836999ad61(80, im.field_v[11]);
                         }
@@ -1655,8 +1655,8 @@ final class CampaignMenu {
                 if (DeployEvent.field_A == 1 &&
                   this.field_c != null &&
                   this.field_c.containsPointer((byte) -49)) {
-                  var2 = ku.j(86);
-                  var3 = ar.getCampaignMission(((sl) (var2)).field_g, ((sl) (var2)).field_e, 0);
+                  var2 = ku.getStoredQuicksave(86);
+                  var3 = ar.getCampaignMission(((CampaignQuicksave) (var2)).campaignIndex, ((CampaignQuicksave) (var2)).missionId, 0);
                   l.field_c = (CampaignMission) (var3);
                   CipherPacketBuffer.a(true, -11, 1, 0);
                 }
@@ -1769,21 +1769,21 @@ final class CampaignMenu {
         }
     }
 
-    private final void b(byte param0) {
+    private final void selectMissionOrQuicksaveDialog(byte obfuscationGuard) {
         RuntimeException runtimeException = null;
-        sl var2 = null;
+        CampaignQuicksave var2 = null;
         int var3 = 0;
         int var4 = 0;
         RuntimeException decompiledCaughtException = null;
         var4 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          var2 = ku.j(91);
+          var2 = ku.getStoredQuicksave(91);
           if (null == var2) {
             l.field_c = this.selectedMissionEntry.mission;
             CipherPacketBuffer.a(true, -10, 1, 0);
             if (var4 != 0) {
-              if (this.selectedMissionEntry.entryId == var2.field_e &&
-                var2.field_g == this.campaignIndex) {
+              if (this.selectedMissionEntry.entryId == var2.missionId &&
+                var2.campaignIndex == this.campaignIndex) {
                 this.setViewMode(3, (byte) 42);
                 this.setViewMode(2, (byte) 42);
               } else {
@@ -1791,8 +1791,8 @@ final class CampaignMenu {
               }
             }
           } else {
-            if (this.selectedMissionEntry.entryId == var2.field_e &&
-              var2.field_g == this.campaignIndex) {
+            if (this.selectedMissionEntry.entryId == var2.missionId &&
+              var2.campaignIndex == this.campaignIndex) {
               this.setViewMode(3, (byte) 42);
               if (var4 != 0) {
                 this.setViewMode(2, (byte) 42);
@@ -1801,12 +1801,12 @@ final class CampaignMenu {
               this.setViewMode(2, (byte) 42);
             }
           }
-          var3 = -127 % ((param0 - 10) / 55);
+          var3 = -127 % ((obfuscationGuard - 10) / 55);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
-          throw ig.addExceptionContext((Throwable) ((Object) runtimeException), "cv.S(" + param0 + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) runtimeException), "cv.S(" + obfuscationGuard + ')');
         }
     }
 
@@ -2043,7 +2043,7 @@ final class CampaignMenu {
           this.campaignIndex = campaignIndex;
           this.rebuildMissionEntries(campaignIndex, 98);
           if (!obfuscationGuard) {
-            discarded$1 = this.a((CampaignMission) null, (sl) null, -116, 21, 100);
+            discarded$1 = this.renderMissionPreview((CampaignMission) null, (CampaignQuicksave) null, -116, 21, 100);
           }
           this.setViewMode(1, (byte) 42);
           return;
@@ -2150,7 +2150,7 @@ final class CampaignMenu {
         RuntimeException var2_ref = null;
         Object var3 = null;
         CampaignMenuEntry var4 = null;
-        sl var4_ref = null;
+        CampaignQuicksave var4_ref = null;
         CampaignMenuEntry var5_ref_cq = null;
         int var5 = 0;
         int var6 = 0;
@@ -2187,7 +2187,7 @@ final class CampaignMenu {
             this.setViewMode(85, (byte) -25);
           }
           var3 = null;
-          var4_ref = ku.j(85);
+          var4_ref = ku.getStoredQuicksave(85);
           var5_ref_cq = (CampaignMenuEntry) (this.missionEntries.first(1));
           boolean decompiledNaturalLoopExit0 = false;
           while (!(decompiledNaturalLoopExit0 = (var5_ref_cq == null))) {
@@ -2220,8 +2220,8 @@ final class CampaignMenu {
                 var3 = var5_ref_cq;
               }
               if (var4_ref != null &&
-                this.campaignIndex == var4_ref.field_g &&
-                var5_ref_cq.entryId == var4_ref.field_e) {
+                this.campaignIndex == var4_ref.campaignIndex &&
+                var5_ref_cq.entryId == var4_ref.missionId) {
                 stackIn_61_0 = 1;
               } else {
                 stackIn_61_0 = 0;
@@ -2269,8 +2269,8 @@ final class CampaignMenu {
               fe.b(((CampaignMenuEntry) (var3)).title, db.a(true, var6), MatchConditionEntry.a(((CampaignMenuEntry) (var3)).top - 12, (byte) 94), true);
               fe.c(((CampaignMenuEntry) (var3)).title, db.a(true, var6), MatchConditionEntry.a(((CampaignMenuEntry) (var3)).top - 12, (byte) 94), nd.field_b, true);
               if (null != var4_ref &&
-                ~this.campaignIndex == ~var4_ref.field_g &&
-                var4_ref.field_e == ((CampaignMenuEntry) (var3)).entryId) {
+                ~this.campaignIndex == ~var4_ref.campaignIndex &&
+                var4_ref.missionId == ((CampaignMenuEntry) (var3)).entryId) {
                 stackIn_89_0 = 1;
               } else {
                 stackIn_89_0 = 0;
@@ -2312,7 +2312,7 @@ final class CampaignMenu {
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
-        sl var10_ref_sl = null;
+        CampaignQuicksave var10_ref_sl = null;
         RuntimeException var10_ref_RuntimeException = null;
         CampaignMenuEntry var11 = null;
         CampaignDefinition var11_ref = null;
@@ -2349,15 +2349,15 @@ final class CampaignMenu {
               var9 = 10;
               this.campaignEntries.clear((byte) -124);
               try {
-                var10_ref_sl = ku.j(84);
+                var10_ref_sl = ku.getStoredQuicksave(84);
                 if (var10_ref_sl != null) {
                   var11 = new CampaignMenuEntry(-1, SummonAction.field_A);
                   var11.width = 278;
                   var11.top = 341;
                   var11.height = 57;
                   var11.left = 45;
-                  var12 = ar.getCampaignMission(var10_ref_sl.field_g, var10_ref_sl.field_e, 0);
-                  var13_int = Battlefield.a(var12.participantIds.length, var10_ref_sl.field_c, false);
+                  var12 = ar.getCampaignMission(var10_ref_sl.campaignIndex, var10_ref_sl.missionId, 0);
+                  var13_int = Battlefield.a(var12.participantIds.length, var10_ref_sl.snapshotBytes, false);
                   var14 = fo.a(4800, wd.field_e, new String[]{var12.name, Integer.toString(var13_int)});
                   var11.title = var12.campaign.name;
                   var11.selectable = true;
@@ -2370,7 +2370,7 @@ final class CampaignMenu {
                     var11.selectable = false;
                     var11.statusText = bn.field_g + " (" + var11.statusText + ")";
                   }
-                  var15 = this.a(var12, var10_ref_sl, 200, 1, 200);
+                  var15 = this.renderMissionPreview(var12, var10_ref_sl, 200, 1, 200);
                   var11.previewSprite = var15;
                   this.campaignEntries.put(var11, (long)var11.entryId, 82);
                 }
@@ -2378,7 +2378,7 @@ final class CampaignMenu {
                 decompiledCaughtException = decompiledCaughtParameter0;
                 var10_ref_RuntimeException = decompiledCaughtException;
                 af.a((Throwable) ((Object) var10_ref_RuntimeException), 93, "Error reading quicksave map.");
-                qh.b((byte) 27);
+                qh.requestDeleteQuicksave((byte) 27);
               }
               var10 = 0;
               scanLoop1: while (true) {

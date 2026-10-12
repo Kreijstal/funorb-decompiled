@@ -15,16 +15,16 @@ final class ku extends nl {
         field_J = null;
     }
 
-    final static sl j(int param0) {
-        if (param0 <= 78) {
+    final static CampaignQuicksave getStoredQuicksave(int obfuscationGuard) {
+        if (obfuscationGuard <= 78) {
           ku.k(-59);
-          if (null != bu.field_b) {
-            return bu.field_b;
+          if (null != bu.storedQuicksave) {
+            return bu.storedQuicksave;
           }
           return null;
         }
-        if (null != bu.field_b) {
-          return bu.field_b;
+        if (null != bu.storedQuicksave) {
+          return bu.storedQuicksave;
         }
         return null;
     }

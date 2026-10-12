@@ -17,7 +17,7 @@ final class DeathEvent extends GameEvent {
         String stackIn_9_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var5 = vl.field_n;
+          var5 = vl.outgoingPacket;
           var5.writeCipheredOpcode(32161, param1);
           var5.position = var5.position + 1;
           var4 = var5.position;
@@ -26,7 +26,7 @@ final class DeathEvent extends GameEvent {
             var5.writeByte(param2 - 25521, 0);
           } else {
             var5.writeByte(1, param0.field_l.length);
-            var5.a(param0.field_l, 0, param0.field_l.length, 86);
+            var5.writeBytes(param0.field_l, 0, param0.field_l.length, 86);
           }
           var5.b((byte) -39, var4);
           var5.position = var5.position - 4;

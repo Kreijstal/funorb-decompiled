@@ -52,7 +52,7 @@ final class MovementPresentation implements EventPresentation {
         int var7 = 0;
         int var8 = 0;
         try {
-          var6 = vl.field_n;
+          var6 = vl.outgoingPacket;
           var6.writeCipheredOpcode(32161, param0);
           var6.position = var6.position + 1;
           if (param5 != 5623) {
@@ -66,7 +66,7 @@ final class MovementPresentation implements EventPresentation {
             var8 += 128;
           }
           var6.writeByte(1, var8);
-          var6.a(param4, 0, param4.length, 102);
+          var6.writeBytes(param4, 0, param4.length, 102);
           var6.e(var6.position - var7, 5930);
         } catch (RuntimeException runtimeException) {
           throw ig.addExceptionContext((Throwable) ((Object) runtimeException), "qv.B(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ')');

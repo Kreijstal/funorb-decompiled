@@ -35,7 +35,7 @@ final class sq extends IntrusiveNode {
         if (var5.battlefield.playerCount >= param2) {
           var5.battlefield.eliminatePlayer(10001, param2, false);
           var5.battlefield.playerTurnCounts[var5.field_q] = param3;
-          var5.battlefield.field_zb[var5.field_q] = param0;
+          var5.battlefield.damageTakenByPlayer[var5.field_q] = param0;
           var5.j(true);
           return "Done.";
         }

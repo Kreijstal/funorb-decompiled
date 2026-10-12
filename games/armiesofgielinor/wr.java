@@ -98,7 +98,7 @@ final class wr extends hs implements he {
         int var5 = 0;
         int var6 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          var8 = vl.field_n;
+          var8 = vl.outgoingPacket;
           var9 = var8;
           var9.writeCipheredOpcode(32161, param2);
           var9.position = var9.position + 1;

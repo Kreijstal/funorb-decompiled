@@ -59,7 +59,7 @@ final class pg {
         pf.a(-15291);
         tj.j(-118);
         if (fh.b((byte) -88)) {
-          vl.field_n.writeCipheredOpcode(32161, 1);
+          vl.outgoingPacket.writeCipheredOpcode(32161, 1);
           hb.$cfr$intArgs$a$e9dea5688aa5(124, 0);
         }
         dj.a((byte) -126);

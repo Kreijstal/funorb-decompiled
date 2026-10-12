@@ -113,7 +113,7 @@ final class it {
         CipherPacketBuffer var9 = null;
         int var7 = 0;
         try {
-          var9 = vl.field_n;
+          var9 = vl.outgoingPacket;
           CipherPacketBuffer var6 = var9;
           if (param1 > -71) {
             String var8 = (String) null;

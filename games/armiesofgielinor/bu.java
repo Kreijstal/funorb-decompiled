@@ -4,7 +4,7 @@
 final class bu {
     static dn field_a;
     static RgbSprite[] field_c;
-    static sl field_b;
+    static CampaignQuicksave storedQuicksave;
 
     final static void a(int param0, Unit param1, int param2, PacketBuffer param3) {
         RuntimeException stackIn_16_0 = null;
@@ -68,7 +68,7 @@ final class bu {
 
     public static void a(int param0) {
         field_a = null;
-        field_b = null;
+        storedQuicksave = null;
         field_c = null;
         if (param0 >= -76) {
           field_a = (dn) null;

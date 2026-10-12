@@ -12,7 +12,7 @@ final class te extends IntrusiveNode {
 
     final static void a(int param0, long param1, byte param2) {
         int var5 = 0;
-        CipherPacketBuffer var4 = vl.field_n;
+        CipherPacketBuffer var4 = vl.outgoingPacket;
         int var5Lifetime1;
         if (param2 >= 88) {
           var4.writeCipheredOpcode(32161, param0);
@@ -99,7 +99,7 @@ final class te extends IntrusiveNode {
         String stackIn_6_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var3 = vl.field_n;
+          var3 = vl.outgoingPacket;
           var3.writeCipheredOpcode(32161, param0);
           var3.writeByte(1, param1.field_n);
           var3.writeShort(true, param1.field_m);

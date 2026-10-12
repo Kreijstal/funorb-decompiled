@@ -143,26 +143,26 @@ final class of extends je {
         field_Lb = null;
     }
 
-    final static void a(Battlefield param0, int param1, int param2, byte param3, int param4, int param5) {
-        sl var9 = null;
-        int var7 = 0;
+    final static void uploadQuicksave(Battlefield battlefield, int damageTaken, int unitLossCount, byte obfuscationGuard, int missionId, int campaignIndex) {
+        CampaignQuicksave quicksave = null;
+        int payloadStart = 0;
         if (DamageEvent.g(121)) {
           return;
         }
         try {
-          var9 = new sl(param5, param4, param0, param1, param2 > 0 ? true : false);
-          bu.field_b = var9;
-          vl.field_n.writeCipheredOpcode(32161, 80);
-          vl.field_n.position = vl.field_n.position + 2;
-          if (param3 != -80) {
+          quicksave = new CampaignQuicksave(campaignIndex, missionId, battlefield, damageTaken, unitLossCount > 0 ? true : false);
+          bu.storedQuicksave = quicksave;
+          vl.outgoingPacket.writeCipheredOpcode(32161, 80);
+          vl.outgoingPacket.position = vl.outgoingPacket.position + 2;
+          if (obfuscationGuard != -80) {
             Battlefield var8 = (Battlefield) null;
-            of.a((Battlefield) null, -98, 73, (byte) 105, 55, -24);
+            of.uploadQuicksave((Battlefield) null, -98, 73, (byte) 105, 55, -24);
           }
-          var7 = vl.field_n.position;
-          var9.a(0, vl.field_n);
-          vl.field_n.f(0, vl.field_n.position - var7);
+          payloadStart = vl.outgoingPacket.position;
+          quicksave.write(0, vl.outgoingPacket);
+          vl.outgoingPacket.f(0, vl.outgoingPacket.position - payloadStart);
         } catch (RuntimeException runtimeException) {
-          throw ig.addExceptionContext((Throwable) ((Object) runtimeException), "of.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) runtimeException), "of.E(" + (battlefield != null ? "{...}" : "null") + ',' + damageTaken + ',' + unitLossCount + ',' + obfuscationGuard + ',' + missionId + ',' + campaignIndex + ')');
         }
     }
 

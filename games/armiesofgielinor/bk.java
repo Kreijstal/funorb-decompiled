@@ -33,18 +33,18 @@ final class bk {
           PaletteRegionMap.a(vd.field_b, (byte) -84);
           vd.field_b.writeShort(true, param4);
           param2.a(vd.field_b, -11436);
-          vl.field_n.position = 0;
+          vl.outgoingPacket.position = 0;
           if (!param1) {
-            vl.field_n.writeByte(1, 16);
+            vl.outgoingPacket.writeByte(1, 16);
           }
           if (param1 ||
             ArmiesOfGielinor.obfuscationControl) {
-            vl.field_n.writeByte(1, 18);
+            vl.outgoingPacket.writeByte(1, 18);
           }
-          vl.field_n.position = vl.field_n.position + 2;
-          var5_int = vl.field_n.position;
-          vl.field_n.writeInt((byte) -67, fl.field_e);
-          vl.field_n.a(an.field_E, 38359632);
+          vl.outgoingPacket.position = vl.outgoingPacket.position + 2;
+          var5_int = vl.outgoingPacket.position;
+          vl.outgoingPacket.writeInt((byte) -67, fl.field_e);
+          vl.outgoingPacket.a(an.field_E, 38359632);
           var6 = 0;
           if (BestScoreStrategy.field_l) {
             var6 = var6 | 1;
@@ -58,17 +58,17 @@ final class bk {
           if (gh.field_P != null) {
             var6 = var6 | 16;
           }
-          vl.field_n.writeByte(1, var6);
+          vl.outgoingPacket.writeByte(1, var6);
           var7 = mg.a(0, CombatEvent.d((byte) -116));
           if (var7 == null) {
             var7 = "";
           }
-          vl.field_n.b(var7, param3 + 13851);
+          vl.outgoingPacket.b(var7, param3 + 13851);
           if (gh.field_P != null) {
-            vl.field_n.a(gh.field_P, 413740432);
+            vl.outgoingPacket.a(gh.field_P, 413740432);
           }
-          fp.a(mu.field_c, cs.field_cb, (byte) 26, vd.field_b, vl.field_n);
-          vl.field_n.f(param3 ^ param3, vl.field_n.position - var5_int);
+          fp.a(mu.field_c, cs.field_cb, (byte) 26, vd.field_b, vl.outgoingPacket);
+          vl.outgoingPacket.f(param3 ^ param3, vl.outgoingPacket.position - var5_int);
           hb.$cfr$intArgs$a$e9dea5688aa5(29, -1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -200,14 +200,14 @@ final class pu {
           if (param0 != 28704) {
             field_h = (String) null;
           }
-          var1 = vl.field_n;
+          var1 = vl.outgoingPacket;
           while (ContextualRuntimeException.a(param0 ^ -13083)) {
             var1.writeCipheredOpcode(32161, 8);
             fieldTemp$0 = var1.position + 1;
             var1.position = var1.position + 1;
             var2 = fieldTemp$0;
             fg.a(param0 ^ 28704, var1);
-            vl.field_n.e(-var2 + var1.position, param0 - 22774);
+            vl.outgoingPacket.e(-var2 + var1.position, param0 - 22774);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

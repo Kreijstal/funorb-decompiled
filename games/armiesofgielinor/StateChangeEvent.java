@@ -344,7 +344,7 @@ final class StateChangeEvent extends GameEvent {
         if (DamageEvent.g(98)) {
           return;
         }
-        CipherPacketBuffer var4 = vl.field_n;
+        CipherPacketBuffer var4 = vl.outgoingPacket;
         var4.writeCipheredOpcode(32161, 16);
         var4.position = var4.position + 1;
         int var5 = var4.position;

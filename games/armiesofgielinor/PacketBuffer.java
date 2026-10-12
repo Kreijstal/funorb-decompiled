@@ -134,7 +134,7 @@ class PacketBuffer extends IntrusiveNode {
         this.payload[param0 - param1 + this.position] = (byte)param1;
     }
 
-    final void a(byte[] param0, int param1, int param2, int param3) {
+    final void writeBytes(byte[] source, int sourceOffset, int length, int obfuscationGuard) {
         int var6 = 0;
         int fieldTemp$0 = 0;
         RuntimeException stackIn_7_0 = null;
@@ -146,11 +146,11 @@ class PacketBuffer extends IntrusiveNode {
         int var7 = 0;
         var7 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          var5_int = 122 % ((param3 - 32) / 47);
-          for (var6 = param1; param2 + param1 > var6; var6++) {
+          var5_int = 122 % ((obfuscationGuard - 32) / 47);
+          for (var6 = sourceOffset; length + sourceOffset > var6; var6++) {
             fieldTemp$0 = this.position;
             this.position = this.position + 1;
-            this.payload[fieldTemp$0] = param0[var6];
+            this.payload[fieldTemp$0] = source[var6];
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -158,12 +158,12 @@ class PacketBuffer extends IntrusiveNode {
           var5 = decompiledCaughtException;
           stackIn_7_0 = var5;
           stackIn_7_1 = new StringBuilder().append("vh.OA(");
-          if (param0 == null) {
+          if (source == null) {
             stackIn_8_2 = "null";
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw ig.addExceptionContext((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw ig.addExceptionContext((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(sourceOffset).append(',').append(length).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 
@@ -567,7 +567,7 @@ class PacketBuffer extends IntrusiveNode {
           }
           if (param1 != 13851) {
             byte[] var4 = (byte[]) null;
-            this.a((byte[]) null, -81, 60, -69);
+            this.writeBytes((byte[]) null, -81, 60, -69);
           }
           var5 = (CharSequence) ((Object) param0);
           this.position = this.position + GameplayController.a(this.payload, 0, var5, param0.length(), this.position, (byte) 114);
@@ -726,7 +726,7 @@ class PacketBuffer extends IntrusiveNode {
           var8 = var7.toByteArray();
           this.position = 0;
           this.writeShort(true, var8.length);
-          this.a(var8, 0, var8.length, 115);
+          this.writeBytes(var8, 0, var8.length, 115);
         } catch (RuntimeException runtimeException) {
           throw ig.addExceptionContext((Throwable) ((Object) runtimeException), "vh.TA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
@@ -767,11 +767,11 @@ class PacketBuffer extends IntrusiveNode {
         return 2147483647 & this.readInt(1);
     }
 
-    final byte[] g(byte param0) {
+    final byte[] copyWrittenBytes(byte obfuscationGuard) {
         int var4 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         byte[] var2 = new byte[this.position];
         int var3 = 0;
-        if (param0 >= -27) {
+        if (obfuscationGuard >= -27) {
           this.a(97);
         }
         while (var3 < this.position) {

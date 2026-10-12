@@ -23,15 +23,17 @@ by default for every game. Semantic game-specific names use explicit naming
 rules. Deko's numbered structural-category and type-based names identify
 unresolved purposes honestly; they are not complete semantic deobfuscation.
 
-Armies has 120 reviewed class names, not a complete semantic map. Campaign
+Armies has 121 reviewed class names, not a complete semantic map. Campaign
 loadouts now name unit/spell rewards, equipped slots and cumulative mana bonuses;
 reward previews retain unit-before-spell-before-mana precedence. Campaign menu
 entries, buttons and intrusive hash lookup/traversal now have reviewed names;
 neighbor requirements and the score-1 replacement rule are independently tested.
 Palette-region IDs, marker anchors, sprite bounds and clipped indexed rendering
 also have reviewed names and pixel fixtures; signed-index failures and original
-mask-extraction bounds remain unchanged. Its raw/named core probe checks map
-lookups, alliances, status packing, damage, equipment/ranges,
+mask-extraction bounds remain unchanged. CampaignQuicksave adds versioned
+header/chunk names and explicit upload/delete/restore paths; codec probes verify
+wire bytes and guarded deletion without claiming full gameplay restoration.
+Its raw/named core probe checks map lookups, alliances, status packing, damage, equipment/ranges,
 spell payload bytes and queued combat consequences under a controlled headless
 boundary. SpellCastEvent corrects the earlier trinket label from actual spell-table
 dispatch. Candidate selection/recycling and presentation acknowledgement are

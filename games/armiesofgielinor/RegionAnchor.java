@@ -282,7 +282,7 @@ final class RegionAnchor extends IntrusiveNode {
         if (param1 != -32) {
           field_m = (RgbSprite[]) null;
         }
-        CipherPacketBuffer var2 = vl.field_n;
+        CipherPacketBuffer var2 = vl.outgoingPacket;
         var2.writeCipheredOpcode(32161, param0);
         var2.writeByte(1, 1);
         var2.writeByte(1, 2);

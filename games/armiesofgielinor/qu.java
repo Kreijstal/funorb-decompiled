@@ -46,7 +46,7 @@ final class qu extends IntrusiveNode {
         wr.field_L = 224;
         ii.field_b = 4452;
         int var3 = var10.battlefield.playerTurnCounts[var10.field_q];
-        int var4 = var10.battlefield.field_zb[var10.field_q];
+        int var4 = var10.battlefield.damageTakenByPlayer[var10.field_q];
         hc.field_b = hc.field_b + 1;
         hc.field_b = hc.field_b + (ko.field_b ^ AiPlanningStrategy.field_d);
         if (param1 <= 31) {

@@ -199,7 +199,7 @@ final class bw {
           if (var7 != null) {
             var7.field_jc = null;
           }
-          var4 = vl.field_n;
+          var4 = vl.outgoingPacket;
           var4.writeCipheredOpcode(param2 ^ -32211, param0);
           var4.writeByte(1, 3);
           var4.writeByte(1, 11);

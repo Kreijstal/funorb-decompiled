@@ -53,7 +53,7 @@ abstract class uq extends ms {
             return stackIn_4_0;
           }
           if (ov.field_g == sg.field_a) {
-            vl.field_n.position = 0;
+            vl.outgoingPacket.position = 0;
             CampaignMenu.field_s = null;
             if (param0 != null) {
               var9 = 0;
@@ -70,16 +70,16 @@ abstract class uq extends ms {
               vd.field_b.writeShort(true, param4);
               vd.field_b.writeByte(1, param3);
               vd.field_b.writeByte(param2 + 20033, var9);
-              vl.field_n.writeByte(param2 + 20033, 18);
-              vl.field_n.position = vl.field_n.position + 2;
-              var10 = vl.field_n.position;
+              vl.outgoingPacket.writeByte(param2 + 20033, 18);
+              vl.outgoingPacket.position = vl.outgoingPacket.position + 2;
+              var10 = vl.outgoingPacket.position;
               var11_ref_String = mg.a(0, CombatEvent.d((byte) 55));
               if (var11_ref_String == null) {
                 var11_ref_String = "";
               }
-              vl.field_n.b(var11_ref_String, param2 + 33883);
-              fp.a(mu.field_c, cs.field_cb, (byte) 26, vd.field_b, vl.field_n);
-              vl.field_n.f(0, -var10 + vl.field_n.position);
+              vl.outgoingPacket.b(var11_ref_String, param2 + 33883);
+              fp.a(mu.field_c, cs.field_cb, (byte) 26, vd.field_b, vl.outgoingPacket);
+              vl.outgoingPacket.f(0, -var10 + vl.outgoingPacket.position);
             } else {
               vd.field_b.position = 0;
               vd.field_b.writeInt((byte) -57, CampaignMenuButton.field_e.nextInt());
@@ -98,11 +98,11 @@ abstract class uq extends ms {
                 stackIn_14_1 = "";
               }
               ((PacketBuffer) (Object) stackIn_13_0).a(stackIn_14_1, 413740432);
-              vl.field_n.writeByte(1, 16);
-              vl.field_n.position = vl.field_n.position + 1;
-              var9 = vl.field_n.position;
-              fp.a(mu.field_c, cs.field_cb, (byte) 26, vd.field_b, vl.field_n);
-              vl.field_n.e(vl.field_n.position - var9, 5930);
+              vl.outgoingPacket.writeByte(1, 16);
+              vl.outgoingPacket.position = vl.outgoingPacket.position + 1;
+              var9 = vl.outgoingPacket.position;
+              fp.a(mu.field_c, cs.field_cb, (byte) 26, vd.field_b, vl.outgoingPacket);
+              vl.outgoingPacket.e(vl.outgoingPacket.position - var9, 5930);
             }
             hb.$cfr$intArgs$a$e9dea5688aa5(54, -1);
             ov.field_g = cj.field_m;

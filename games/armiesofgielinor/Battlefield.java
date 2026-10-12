@@ -7,7 +7,7 @@ final class Battlefield {
     int mapHeight;
     int turnLimit;
     private int[] field_M;
-    int[] field_zb;
+    int[] damageTakenByPlayer;
     int field_ib;
     static String field_nb;
     int[][] field_a;
@@ -19,7 +19,7 @@ final class Battlefield {
     boolean field_eb;
     float campaignManaMultiplier;
     int winnerCount;
-    int[] field_h;
+    int[] unitLossCounts;
     int field_D;
     int currentPlayer;
     CampaignMission campaignMission;
@@ -7252,7 +7252,7 @@ final class Battlefield {
                 this.field_Y = new int[this.playerCount];
                 this.field_M = new int[this.playerCount];
                 this.field_g = new int[this.playerCount];
-                this.field_h = new int[this.playerCount];
+                this.unitLossCounts = new int[this.playerCount];
                 this.field_d[14] = 2;
                 this.field_d[5] = 5;
                 this.field_d[8] = 5;
@@ -7262,7 +7262,7 @@ final class Battlefield {
                 this.field_d[11] = 30;
                 this.field_ub = new int[this.playerCount];
                 this.field_d[0] = 1;
-                this.field_zb = new int[this.playerCount];
+                this.damageTakenByPlayer = new int[this.playerCount];
                 this.field_y = new int[this.playerCount];
                 this.field_d[13] = 10;
               }
@@ -7272,9 +7272,9 @@ final class Battlefield {
             while (var17_int < this.playerCount) {
               this.field_ub[var17_int] = 0;
               this.field_g[var17_int] = 0;
-              this.field_h[var17_int] = 0;
+              this.unitLossCounts[var17_int] = 0;
               this.field_Y[var17_int] = 0;
-              this.field_zb[var17_int] = 0;
+              this.damageTakenByPlayer[var17_int] = 0;
               this.field_ob[var17_int] = 0;
               this.field_M[var17_int] = 0;
               this.field_y[var17_int] = 0;

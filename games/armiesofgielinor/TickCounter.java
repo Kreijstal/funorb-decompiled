@@ -5027,7 +5027,7 @@ final class TickCounter {
                 }
                 var2 = fk.a(false, "TTREED_MUTAGENS");
                 if (var2 != null) {
-                  sl.field_a = uu.a(var2, (byte) 101);
+                  CampaignQuicksave.field_a = uu.a(var2, (byte) 101);
                 }
                 var2 = fk.a(false, "TERROR_NOTMYTURN");
                 if (null != var2) {

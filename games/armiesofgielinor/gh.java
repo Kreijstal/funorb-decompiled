@@ -274,12 +274,12 @@ final class gh extends tj implements he {
           }
           if (!im.field_w &&
             !de.field_a) {
-            vl.field_n.writeCipheredOpcode(32161, 69);
+            vl.outgoingPacket.writeCipheredOpcode(32161, 69);
             de.field_a = true;
           }
           if (!ve.field_b &&
             !af.field_c) {
-            vl.field_n.writeCipheredOpcode(32161, 75);
+            vl.outgoingPacket.writeCipheredOpcode(32161, 75);
             af.field_c = true;
           }
           var1_int = -118 / ((16 - param0) / 35);

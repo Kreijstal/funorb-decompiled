@@ -9,7 +9,7 @@ final class gn {
     final static void a(int param0, wj param1, int param2) {
         CipherPacketBuffer var3 = null;
         try {
-          var3 = vl.field_n;
+          var3 = vl.outgoingPacket;
           var3.writeCipheredOpcode(32161, param0);
           var3.writeByte(1, 5);
           var3.writeByte(param2 + 1, param2);

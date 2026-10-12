@@ -31,15 +31,15 @@ final class gs implements kh {
     }
 
     final static void a(int param0, int param1) {
-        CipherPacketBuffer var2 = vl.field_n;
+        CipherPacketBuffer var2 = vl.outgoingPacket;
         var2.writeCipheredOpcode(32161, param0);
         var2.position = var2.position + 1;
         int var3 = var2.position;
         var2.writeByte(1, 2);
-        var2.a(CoatOfArms.field_d, 0, CoatOfArms.field_d.length, 113);
+        var2.writeBytes(CoatOfArms.field_d, 0, CoatOfArms.field_d.length, 113);
         var2.writeByte(1, nh.field_E);
         var2.writeByte(1, AiPlanningStrategy.field_b);
-        var2.a(tg.field_d, 0, tg.field_d.length, -72);
+        var2.writeBytes(tg.field_d, 0, tg.field_d.length, -72);
         if (param1 != -8006) {
           field_b = -111;
         }

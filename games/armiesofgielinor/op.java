@@ -125,7 +125,7 @@ final class op {
             stackIn_24_0 = fo.a(4800, km.field_a, new String[]{param1});
             return stackIn_24_0;
           }
-          var5 = vl.field_n;
+          var5 = vl.outgoingPacket;
           var5.writeCipheredOpcode(32161, param2);
           var5.position = var5.position + 1;
           var4 = var5.position;

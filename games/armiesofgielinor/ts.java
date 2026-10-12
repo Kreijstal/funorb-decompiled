@@ -105,7 +105,7 @@ final class ts {
         return 0;
     }
 
-    final static void a(CampaignMission param0, int param1, sl param2) {
+    final static void startCampaignMission(CampaignMission mission, int obfuscationGuard, CampaignQuicksave quicksave) {
         GameplayController stackIn_4_0;
         GameplayController stackIn_4_1;
         boolean stackIn_4_2;
@@ -147,14 +147,14 @@ final class ts {
         var7 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           regionExit1: {
-            l.field_c = param0;
+            l.field_c = mission;
             pq.field_f = null;
-            var8 = param0.getParticipantNames(-23209);
+            var8 = mission.getParticipantNames(-23209);
             var3 = var8;
             r.field_B = var8.length;
-            var4 = param0.playerSlot;
-            mg.field_g = param1 + r.field_B;
-            td.field_f.a(param0.mapTheme, 0);
+            var4 = mission.playerSlot;
+            mg.field_g = obfuscationGuard + r.field_B;
+            td.field_f.a(mission.mapTheme, 0);
             stackIn_4_0 = null;
             stackIn_4_1 = null;
             stackIn_4_2 = false;
@@ -163,9 +163,9 @@ final class ts {
             stackIn_4_5 = var4;
             stackIn_4_6 = false;
             stackIn_4_7 = td.field_f;
-            stackIn_4_8 = param0.mapSizeSetting;
+            stackIn_4_8 = mission.mapSizeSetting;
             stackIn_4_9 = ArmiesOfGielinor.field_K;
-            stackIn_4_10 = param0.mapTheme;
+            stackIn_4_10 = mission.mapTheme;
             stackIn_4_11 = false;
             stackIn_4_12 = 4;
             stackIn_4_13 = 0;
@@ -183,33 +183,33 @@ final class ts {
             stackIn_5_1Lifetime1 = null;
             stackIn_5_14 = false;
           }
-          rd.field_j = new GameplayController(stackIn_4_2, stackIn_4_3, stackIn_4_4, stackIn_4_5, stackIn_4_6, stackIn_4_7, stackIn_4_8, stackIn_4_9, stackIn_4_10, stackIn_4_11, stackIn_4_12, stackIn_4_13, stackIn_5_14, param0);
+          rd.field_j = new GameplayController(stackIn_4_2, stackIn_4_3, stackIn_4_4, stackIn_4_5, stackIn_4_6, stackIn_4_7, stackIn_4_8, stackIn_4_9, stackIn_4_10, stackIn_4_11, stackIn_4_12, stackIn_4_13, stackIn_5_14, mission);
           rd.field_j.battlefield.field_F = true;
-          rd.field_j.battlefield.playerCoats = new CoatOfArms[param0.participantIds.length];
+          rd.field_j.battlefield.playerCoats = new CoatOfArms[mission.participantIds.length];
           for (var5_int = 0; rd.field_j.battlefield.playerCoats.length > var5_int; var5_int++) {
-            if (~var5_int == ~param0.playerSlot) {
+            if (~var5_int == ~mission.playerSlot) {
               rd.field_j.battlefield.playerCoats[var5_int] = ah.localCoat;
             } else {
-              var9 = param0.campaign.participants[param0.participantIds[var5_int]];
+              var9 = mission.campaign.participants[mission.participantIds[var5_int]];
               var6_ref = var9;
               rd.field_j.battlefield.playerCoats[var5_int] = var9.coatOfArms;
             }
           }
-          if ((1 & param0.flags) != 0) {
-            var5_intLifetime1 = -1 + param0.participantIds.length;
-            var6 = (Unit) (rd.field_j.battlefield.getUnitsForPlayer(var5_intLifetime1, ~param1).first((byte) 97));
+          if ((1 & mission.flags) != 0) {
+            var5_intLifetime1 = -1 + mission.participantIds.length;
+            var6 = (Unit) (rd.field_j.battlefield.getUnitsForPlayer(var5_intLifetime1, ~obfuscationGuard).first((byte) 97));
             while (var6 != null) {
               if (var6.strength > 10) {
                 var6.strength = 10;
               }
-              var6 = (Unit) (rd.field_j.battlefield.getUnitsForPlayer(var5_intLifetime1, ~param1).next((byte) 123));
+              var6 = (Unit) (rd.field_j.battlefield.getUnitsForPlayer(var5_intLifetime1, ~obfuscationGuard).next((byte) 123));
             }
           }
-          if (param2 == null) {
+          if (quicksave == null) {
             return;
           }
           try {
-            rd.field_j.a((byte) -121, param2, param0);
+            rd.field_j.restoreCampaignQuicksave((byte) -121, quicksave, mission);
             return;
           } catch (java.lang.Exception decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
@@ -222,13 +222,13 @@ final class ts {
           var3_ref = (RuntimeException) (Object) decompiledCaughtException;
           stackIn_28_0 = var3_ref;
           stackIn_28_1 = new StringBuilder().append("ts.E(");
-          if (param0 == null) {
+          if (mission == null) {
             stackIn_29_2 = "null";
           } else {
             stackIn_29_2 = "{...}";
           }
-          stackIn_31_1 = ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(',').append(param1).append(',');
-          if (param2 == null) {
+          stackIn_31_1 = ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(',').append(obfuscationGuard).append(',');
+          if (quicksave == null) {
             stackIn_32_2 = "null";
           } else {
             stackIn_32_2 = "{...}";

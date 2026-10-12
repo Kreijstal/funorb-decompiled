@@ -32,7 +32,7 @@ final class ov {
     }
 
     final static void a(int param0, int param1, int param2) {
-        CipherPacketBuffer var3 = vl.field_n;
+        CipherPacketBuffer var3 = vl.outgoingPacket;
         var3.writeCipheredOpcode(32161, param0);
         var3.writeByte(param1 - 2, param1);
         var3.writeByte(1, 10);

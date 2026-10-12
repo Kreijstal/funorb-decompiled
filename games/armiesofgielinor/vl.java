@@ -5,7 +5,7 @@ final class vl extends mk {
     static wd field_k;
     static int field_j;
     static String field_o;
-    static CipherPacketBuffer field_n;
+    static CipherPacketBuffer outgoingPacket;
     static String field_l;
     static String field_p;
     static String[] field_m;
@@ -108,7 +108,7 @@ final class vl extends mk {
         if (!param0) {
           return;
         }
-        field_n = null;
+        outgoingPacket = null;
         field_m = null;
         field_p = null;
         field_o = null;

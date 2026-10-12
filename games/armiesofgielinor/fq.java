@@ -163,7 +163,7 @@ final class fq {
           var7.unlink(-124);
           var7.c((byte) -76);
           vg.field_p = vg.field_p - 1;
-          var5 = vl.field_n;
+          var5 = vl.outgoingPacket;
           var5.writeCipheredOpcode(32161, param0);
           var5.position = var5.position + 1;
           var6 = var5.position;

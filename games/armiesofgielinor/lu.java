@@ -22,7 +22,7 @@ class lu extends lk {
     }
 
     final static void a(int param0, int param1) {
-        CipherPacketBuffer var2 = vl.field_n;
+        CipherPacketBuffer var2 = vl.outgoingPacket;
         var2.writeCipheredOpcode(32161, param1);
         if (param0 < -99) {
           var2.writeByte(1, 1);

@@ -391,12 +391,12 @@ final class ak extends ju {
           vd.field_b.writeByte(1, param1);
           vd.field_b.writeShort(true, param2);
           vd.field_b.a(-5247, cs.field_cb, mu.field_c);
-          vl.field_n.writeCipheredOpcode(32161, 18);
-          fieldTemp$0 = vl.field_n.position + 1;
-          vl.field_n.position = vl.field_n.position + 1;
+          vl.outgoingPacket.writeCipheredOpcode(32161, 18);
+          fieldTemp$0 = vl.outgoingPacket.position + 1;
+          vl.outgoingPacket.position = vl.outgoingPacket.position + 1;
           var4 = fieldTemp$0;
-          vl.field_n.a(vd.field_b.payload, 0, vd.field_b.position, param3 + 69);
-          vl.field_n.e(-var4 + vl.field_n.position, param3 + 5900);
+          vl.outgoingPacket.writeBytes(vd.field_b.payload, 0, vd.field_b.position, param3 + 69);
+          vl.outgoingPacket.e(-var4 + vl.outgoingPacket.position, param3 + 5900);
           return;
         }
         kl var5 = (kl) null;
@@ -405,12 +405,12 @@ final class ak extends ju {
         vd.field_b.writeByte(1, param1);
         vd.field_b.writeShort(true, param2);
         vd.field_b.a(-5247, cs.field_cb, mu.field_c);
-        vl.field_n.writeCipheredOpcode(32161, 18);
-        int fieldTemp$1 = vl.field_n.position + 1;
-        vl.field_n.position = vl.field_n.position + 1;
+        vl.outgoingPacket.writeCipheredOpcode(32161, 18);
+        int fieldTemp$1 = vl.outgoingPacket.position + 1;
+        vl.outgoingPacket.position = vl.outgoingPacket.position + 1;
         var4Lifetime1 = fieldTemp$1;
-        vl.field_n.a(vd.field_b.payload, 0, vd.field_b.position, param3 + 69);
-        vl.field_n.e(-var4Lifetime1 + vl.field_n.position, param3 + 5900);
+        vl.outgoingPacket.writeBytes(vd.field_b.payload, 0, vd.field_b.position, param3 + 69);
+        vl.outgoingPacket.e(-var4Lifetime1 + vl.outgoingPacket.position, param3 + 5900);
     }
 
     final static RgbSprite[] b(int param0, int param1) {

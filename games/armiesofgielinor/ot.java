@@ -11,7 +11,7 @@ final class ot extends dr {
         CipherPacketBuffer var6 = null;
         int var4 = 0;
         try {
-          var6 = vl.field_n;
+          var6 = vl.outgoingPacket;
           var6.writeCipheredOpcode(32161, param1);
           var6.position = var6.position + 1;
           var4 = var6.position;

@@ -56,7 +56,7 @@ final class se {
             stackIn_20_0 = fo.a(4800, PopupPresentation.field_p, new String[]{param0});
             return stackIn_20_0;
           }
-          var5 = vl.field_n;
+          var5 = vl.outgoingPacket;
           var5.writeCipheredOpcode(32161, param1);
           var5.position = var5.position + 1;
           var4 = var5.position;

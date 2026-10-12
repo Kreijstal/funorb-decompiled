@@ -38,35 +38,35 @@ final class hb {
           if (null != MoveAttackRequest.field_z) {
             if (param1 >= 0) {
               decompiledFrameRemainder0 = (kl.field_k == ov.field_g);
-              if ((decompiledFrameRemainder0) && (0 == vl.field_n.position &&
+              if ((decompiledFrameRemainder0) && (0 == vl.outgoingPacket.position &&
                 (10000L + SummonEvent.field_G) < vi.b(-60))) {
-                vl.field_n.writeCipheredOpcode(32161, param1);
+                vl.outgoingPacket.writeCipheredOpcode(32161, param1);
               }
             } else {
-              if (0 == vl.field_n.position &&
+              if (0 == vl.outgoingPacket.position &&
                 (10000L + SummonEvent.field_G) < vi.b(-60)) {
-                vl.field_n.writeCipheredOpcode(32161, param1);
+                vl.outgoingPacket.writeCipheredOpcode(32161, param1);
               }
             }
             if (decompiledFrameRemainder0) {
               if (param0 < 8) {
                 return;
               }
-              if (vl.field_n.position > 0) {
+              if (vl.outgoingPacket.position > 0) {
                 try {
-                  MoveAttackRequest.field_z.a(vl.field_n.payload, (byte) 20, 0, vl.field_n.position);
+                  MoveAttackRequest.field_z.a(vl.outgoingPacket.payload, (byte) 20, 0, vl.outgoingPacket.position);
                   SummonEvent.field_G = vi.b(51);
                 } catch (java.io.IOException decompiledCaughtParameter0) {
                   decompiledCaughtException = decompiledCaughtParameter0;
                   var2 = (IOException) (Object) decompiledCaughtException;
                   dj.a((byte) -127);
                 }
-                vl.field_n.position = 0;
+                vl.outgoingPacket.position = 0;
               }
               return;
             }
           }
-          vl.field_n.position = 0;
+          vl.outgoingPacket.position = 0;
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
@@ -88,35 +88,35 @@ final class hb {
           if (null != MoveAttackRequest.field_z) {
             if (param1 >= 0) {
               decompiledFrameRemainder0 = (kl.field_k == ov.field_g);
-              if ((decompiledFrameRemainder0) && (0 == vl.field_n.position &&
+              if ((decompiledFrameRemainder0) && (0 == vl.outgoingPacket.position &&
                 (10000L + SummonEvent.field_G) < vi.b(-60))) {
-                vl.field_n.writeCipheredOpcode(32161, param1);
+                vl.outgoingPacket.writeCipheredOpcode(32161, param1);
               }
             } else {
-              if (0 == vl.field_n.position &&
+              if (0 == vl.outgoingPacket.position &&
                 (10000L + SummonEvent.field_G) < vi.b(-60)) {
-                vl.field_n.writeCipheredOpcode(32161, param1);
+                vl.outgoingPacket.writeCipheredOpcode(32161, param1);
               }
             }
             if (decompiledFrameRemainder0) {
               if (param0 < 8) {
                 return;
               }
-              if (vl.field_n.position > 0) {
+              if (vl.outgoingPacket.position > 0) {
                 try {
-                  MoveAttackRequest.field_z.a(vl.field_n.payload, (byte) 20, 0, vl.field_n.position);
+                  MoveAttackRequest.field_z.a(vl.outgoingPacket.payload, (byte) 20, 0, vl.outgoingPacket.position);
                   SummonEvent.field_G = vi.b(51);
                 } catch (java.io.IOException decompiledCaughtParameter0) {
                   decompiledCaughtException = decompiledCaughtParameter0;
                   var2 = (IOException) (Object) decompiledCaughtException;
                   dj.a((byte) -127);
                 }
-                vl.field_n.position = 0;
+                vl.outgoingPacket.position = 0;
               }
               return;
             }
           }
-          vl.field_n.position = 0;
+          vl.outgoingPacket.position = 0;
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {

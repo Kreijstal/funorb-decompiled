@@ -2357,9 +2357,9 @@ final class InstructionsPanel {
               } else {
                 CampaignRewardPreview.field_g = ml.a(false, param4, (byte) 10, param3);
               }
-              vl.field_n.position = 0;
-              vl.field_n.writeByte(1, 14);
-              vl.field_n.writeByte(param0 ^ -54, CampaignRewardPreview.field_g.a((byte) -16).field_c);
+              vl.outgoingPacket.position = 0;
+              vl.outgoingPacket.writeByte(1, 14);
+              vl.outgoingPacket.writeByte(param0 ^ -54, CampaignRewardPreview.field_g.a((byte) -16).field_c);
               hb.$cfr$intArgs$a$e9dea5688aa5(67, -1);
               ov.field_g = gi.field_d;
             }
@@ -2495,7 +2495,7 @@ final class InstructionsPanel {
               if (df.field_M > 0) {
                 BestScoreStrategy.field_l = true;
               }
-              vl.field_n.initializeOpcodeCipher(CombatEvent.field_L, -106);
+              vl.outgoingPacket.initializeOpcodeCipher(CombatEvent.field_L, -106);
               for (var8Lifetime1 = 0; 4 > var8Lifetime1; var8Lifetime1++) {
                 CombatEvent.field_L[var8Lifetime1] = CombatEvent.field_L[var8Lifetime1] + 50;
               }

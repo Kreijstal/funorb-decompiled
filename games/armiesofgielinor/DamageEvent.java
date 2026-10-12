@@ -235,8 +235,8 @@ final class DamageEvent extends GameEvent {
             field_y = (String) null;
           }
           if (battlefield.field_b) {
-            battlefield.field_zb[this.unit.ownerPlayer] = battlefield.field_zb[this.unit.ownerPlayer] + var3_int;
-            battlefield.d(this.unit.ownerPlayer, battlefield.field_zb[this.unit.ownerPlayer], 72, 11);
+            battlefield.damageTakenByPlayer[this.unit.ownerPlayer] = battlefield.damageTakenByPlayer[this.unit.ownerPlayer] + var3_int;
+            battlefield.d(this.unit.ownerPlayer, battlefield.damageTakenByPlayer[this.unit.ownerPlayer], 72, 11);
           }
           hf.a(battlefield, (byte) 9, true);
         } catch (RuntimeException runtimeException) {
@@ -298,7 +298,7 @@ final class DamageEvent extends GameEvent {
           }
           var8.c((byte) -76);
           dj.field_a = dj.field_a - 1;
-          var9 = vl.field_n;
+          var9 = vl.outgoingPacket;
           var9.writeCipheredOpcode(32161, param2);
           var9.position = var9.position + 1;
           var5 = var9.position;

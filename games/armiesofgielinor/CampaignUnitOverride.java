@@ -2538,7 +2538,7 @@ final class CampaignUnitOverride {
                 }
                 var2 = NodeIterator.a(50, "rating_rating");
                 if (null != var2) {
-                  sl.field_i = uu.a(var2, (byte) 117);
+                  CampaignQuicksave.field_i = uu.a(var2, (byte) 117);
                 }
                 var2 = NodeIterator.a(param0 + 132, "rating_played");
                 if (var2 != null) {

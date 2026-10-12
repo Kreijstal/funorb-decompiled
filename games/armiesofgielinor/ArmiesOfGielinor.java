@@ -272,15 +272,15 @@ public final class ArmiesOfGielinor extends wf {
                 if (81 == nm.field_o) {
                   var2_intLifetime1 = mg.field_e.readUnsignedByte(0);
                   if (var2_intLifetime1 != 0) {
-                    bu.field_b = new sl(mg.field_e, 9, true);
+                    bu.storedQuicksave = new CampaignQuicksave(mg.field_e, 9, true);
                     continue;
                   }
-                  bu.field_b = null;
+                  bu.storedQuicksave = null;
                   mv.field_b = true;
                   continue;
                 }
                 if (nm.field_o == 82) {
-                  if (!bu.field_b.a(fk.field_b, -1, mg.field_e)) {
+                  if (!bu.storedQuicksave.appendSnapshotChunk(fk.field_b, -1, mg.field_e)) {
                     continue;
                   }
                   mv.field_b = true;
@@ -707,7 +707,7 @@ public final class ArmiesOfGielinor extends wf {
         int stackIn_102_2 = 0;
         CampaignMission stackIn_196_0 = null;
         int stackIn_196_1 = 0;
-        sl stackIn_197_2 = null;
+        CampaignQuicksave stackIn_197_2 = null;
         RuntimeException decompiledCaughtException = null;
         int var3_int = 0;
         RuntimeException var3 = null;
@@ -953,11 +953,11 @@ public final class ArmiesOfGielinor extends wf {
             if (jt.field_a != -11) {
               stackIn_197_2 = null;
             } else {
-              stackIn_197_2 = ku.j(127);
+              stackIn_197_2 = ku.getStoredQuicksave(127);
             }
-            ts.a(stackIn_196_0, stackIn_196_1, stackIn_197_2);
+            ts.startCampaignMission(stackIn_196_0, stackIn_196_1, stackIn_197_2);
             if (jt.field_a == -10) {
-              qh.b((byte) 27);
+              qh.requestDeleteQuicksave((byte) 27);
             }
             rd.field_j.h(true);
             var3_intLifetime2 = r.field_s ? 1 : 0;
@@ -981,7 +981,7 @@ public final class ArmiesOfGielinor extends wf {
             du.field_h = true;
           }
           if (-4 == jt.field_a) {
-            vl.field_n.writeCipheredOpcode(32161, 9);
+            vl.outgoingPacket.writeCipheredOpcode(32161, 9);
             SpellCastAction.field_t = true;
             TelepopEvent.field_F = mj.field_c;
           }
@@ -1179,7 +1179,7 @@ public final class ArmiesOfGielinor extends wf {
           co.a((byte) -117);
           ep.a((byte) 11);
           PlayerProfile.b(0);
-          sl.a(param0 + 157);
+          CampaignQuicksave.a(param0 + 157);
           p.a((byte) -58);
           TutorialController.h(param0 + 71);
           cg.a((byte) -109);

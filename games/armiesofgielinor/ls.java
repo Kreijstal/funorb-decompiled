@@ -181,7 +181,7 @@ final class ls {
             return;
           }
           sb.field_h.position = 0;
-          sb.field_h.a(param6, param1, param4, param3 - 6621);
+          sb.field_h.writeBytes(param6, param1, param4, param3 - 6621);
           sb.field_h.b(var7_int, (byte) 100);
           sb.field_h.a((byte) 31, var13);
           if (ArmiesOfGielinor.field_L == null ||
@@ -198,8 +198,8 @@ final class ls {
           }
           ArmiesOfGielinor.field_L.writeShort(true, param4);
           ArmiesOfGielinor.field_L.a(-5247, param5, param2);
-          param0.a(ArmiesOfGielinor.field_L.payload, 0, ArmiesOfGielinor.field_L.position, 99);
-          param0.a(sb.field_h.payload, 0, sb.field_h.position, 109);
+          param0.writeBytes(ArmiesOfGielinor.field_L.payload, 0, ArmiesOfGielinor.field_L.position, 99);
+          param0.writeBytes(sb.field_h.payload, 0, sb.field_h.position, 109);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -221,7 +221,7 @@ final class ManaEvent extends GameEvent {
     final static void a(byte param0, int param1) {
         CipherPacketBuffer var2 = null;
         if (param0 == 69) {
-          var2 = vl.field_n;
+          var2 = vl.outgoingPacket;
           var2.writeCipheredOpcode(32161, param1);
           var2.writeByte(1, 1);
           var2.writeByte(1, 3);

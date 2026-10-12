@@ -222,13 +222,13 @@ final class qh {
         }
     }
 
-    final static void b(byte param0) {
-        if (param0 != 27) {
+    final static void requestDeleteQuicksave(byte obfuscationGuard) {
+        if (obfuscationGuard != 27) {
           return;
         }
         if (!DamageEvent.g(81)) {
-          vl.field_n.writeCipheredOpcode(32161, 81);
-          bu.field_b = null;
+          vl.outgoingPacket.writeCipheredOpcode(32161, 81);
+          bu.storedQuicksave = null;
         }
     }
 

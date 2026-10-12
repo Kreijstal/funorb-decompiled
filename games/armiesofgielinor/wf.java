@@ -286,7 +286,7 @@ abstract class wf extends iv {
             ov.a(CombatEvent.d((byte) 48), 11982);
           }
           if (10 == var4) {
-            vl.field_n.writeCipheredOpcode(32161, 17);
+            vl.outgoingPacket.writeCipheredOpcode(32161, 17);
           }
           if (11 == var4) {
             t.a((byte) -118, CombatEvent.d((byte) 7));

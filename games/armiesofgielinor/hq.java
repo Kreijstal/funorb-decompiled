@@ -33,7 +33,7 @@ final class hq {
           RuntimeException var15_ref = null;
           try {
             mg.field_e = new CipherPacketBuffer(param3);
-            vl.field_n = new CipherPacketBuffer(param1);
+            vl.outgoingPacket = new CipherPacketBuffer(param1);
             io.field_t = param5;
             k.field_c = param10;
             BestScoreStrategy.field_l = param9;

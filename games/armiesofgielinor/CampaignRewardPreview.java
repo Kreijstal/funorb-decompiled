@@ -36,18 +36,18 @@ final class CampaignRewardPreview {
 
     final static void a(String param0, int param1, long param2, int param3, boolean param4, int param5) {
         int var7_int = 0;
-        vl.field_n.writeCipheredOpcode(param3 ^ 3982, param5);
-        vl.field_n.position = vl.field_n.position + 1;
+        vl.outgoingPacket.writeCipheredOpcode(param3 ^ 3982, param5);
+        vl.outgoingPacket.position = vl.outgoingPacket.position + 1;
         if (param3 != 29231) {
           return;
         }
         try {
-          var7_int = vl.field_n.position;
-          vl.field_n.a(param2, param3 ^ 38346879);
-          vl.field_n.b(param0, param3 ^ 17460);
-          vl.field_n.writeByte(1, param1);
-          vl.field_n.writeByte(param3 - 29230, param4 ? 1 : 0);
-          vl.field_n.e(-var7_int + vl.field_n.position, 5930);
+          var7_int = vl.outgoingPacket.position;
+          vl.outgoingPacket.a(param2, param3 ^ 38346879);
+          vl.outgoingPacket.b(param0, param3 ^ 17460);
+          vl.outgoingPacket.writeByte(1, param1);
+          vl.outgoingPacket.writeByte(param3 - 29230, param4 ? 1 : 0);
+          vl.outgoingPacket.e(-var7_int + vl.outgoingPacket.position, 5930);
         } catch (RuntimeException runtimeException) {
           throw ig.addExceptionContext((Throwable) ((Object) runtimeException), "fu.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }

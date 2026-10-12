@@ -147,13 +147,13 @@ final class ActionSpell extends Spell {
               }
             }
             pg.playerProfile.campaignProgress.setResult(65535, var7, param5, var6_int, param1);
-            vl.field_n.writeCipheredOpcode(32161, 79);
-            vl.field_n.writeByte(param0 - 3, var6_int);
-            vl.field_n.writeByte(1, var7);
-            vl.field_n.writeShort(true, param4);
-            vl.field_n.writeShort(true, param5);
-            vl.field_n.writeShort(true, param1);
-            stackIn_32_0 = vl.field_n;
+            vl.outgoingPacket.writeCipheredOpcode(32161, 79);
+            vl.outgoingPacket.writeByte(param0 - 3, var6_int);
+            vl.outgoingPacket.writeByte(1, var7);
+            vl.outgoingPacket.writeShort(true, param4);
+            vl.outgoingPacket.writeShort(true, param5);
+            vl.outgoingPacket.writeShort(true, param1);
+            stackIn_32_0 = vl.outgoingPacket;
             stackIn_32_1 = 1;
             if (!param3) {
               stackIn_33_2 = 0;
@@ -161,12 +161,12 @@ final class ActionSpell extends Spell {
               stackIn_33_2 = 1;
             }
             ((CipherPacketBuffer) (Object) stackIn_32_0).writeByte(stackIn_32_1, stackIn_33_2);
-            vl.field_n.writeInt((byte) -108, km.a(-59));
-            vl.field_n.writeInt((byte) -124, oq.a(false));
-            vl.field_n.writeInt((byte) -59, jr.a(false));
-            vl.field_n.writeInt((byte) -50, RevivalEvent.g(0));
+            vl.outgoingPacket.writeInt((byte) -108, km.a(-59));
+            vl.outgoingPacket.writeInt((byte) -124, oq.a(false));
+            vl.outgoingPacket.writeInt((byte) -59, jr.a(false));
+            vl.outgoingPacket.writeInt((byte) -50, RevivalEvent.g(0));
           }
-          qh.b((byte) 27);
+          qh.requestDeleteQuicksave((byte) 27);
           if (param0 == 4) {
             return;
           }
@@ -299,7 +299,7 @@ final class ActionSpell extends Spell {
     }
 
     final static void a(long param0, int param1, int param2) {
-        CipherPacketBuffer var4 = vl.field_n;
+        CipherPacketBuffer var4 = vl.outgoingPacket;
         var4.writeCipheredOpcode(32161, param1);
         var4.position = var4.position + 1;
         int var5 = var4.position;

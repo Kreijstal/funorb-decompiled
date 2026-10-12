@@ -18,9 +18,9 @@ final class ug extends IOException {
         }
         try {
           System.out.println("--- STATE DUMP ENDS: " + Integer.toString(ub.field_d, 16) + " ---");
-          vl.field_n.writeCipheredOpcode(32161, 72);
-          vl.field_n.writeInt((byte) -117, ub.field_d);
-          vl.field_n.writeInt((byte) -98, var4);
+          vl.outgoingPacket.writeCipheredOpcode(32161, 72);
+          vl.outgoingPacket.writeInt((byte) -117, ub.field_d);
+          vl.outgoingPacket.writeInt((byte) -98, var4);
           if (param2) {
             hb.$cfr$intArgs$a$e9dea5688aa5(116, 0);
             dj.a((byte) -125);

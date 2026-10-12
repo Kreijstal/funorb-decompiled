@@ -11,7 +11,7 @@ final class s {
     final static void a(int param0, int param1, on param2) {
         CipherPacketBuffer var3 = null;
         try {
-          var3 = vl.field_n;
+          var3 = vl.outgoingPacket;
           var3.writeCipheredOpcode(32161, param1);
           var3.writeByte(1, 2);
           var3.writeByte(1, 0);

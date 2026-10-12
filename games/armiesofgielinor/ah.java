@@ -19,13 +19,13 @@ final class ah {
 
     final static void b(byte param0) {
         if (param0 == 90) {
-          vl.field_n.writeCipheredOpcode(32161, 71);
-          AiInfluenceMap.writeCoatOfArms(localCoat.parts, (byte) 100, vl.field_n, localCoat.colourIndices);
+          vl.outgoingPacket.writeCipheredOpcode(32161, 71);
+          AiInfluenceMap.writeCoatOfArms(localCoat.parts, (byte) 100, vl.outgoingPacket, localCoat.colourIndices);
           return;
         }
         ah.a((byte) 9, -104);
-        vl.field_n.writeCipheredOpcode(32161, 71);
-        AiInfluenceMap.writeCoatOfArms(localCoat.parts, (byte) 100, vl.field_n, localCoat.colourIndices);
+        vl.outgoingPacket.writeCipheredOpcode(32161, 71);
+        AiInfluenceMap.writeCoatOfArms(localCoat.parts, (byte) 100, vl.outgoingPacket, localCoat.colourIndices);
     }
 
     final static Class a(String param0, byte param1) throws ClassNotFoundException {

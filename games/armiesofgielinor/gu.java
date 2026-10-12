@@ -80,7 +80,7 @@ final class gu {
     }
 
     final static void a(int param0, int param1) {
-        CipherPacketBuffer var2 = vl.field_n;
+        CipherPacketBuffer var2 = vl.outgoingPacket;
         if (param0 < -31) {
           var2.writeCipheredOpcode(32161, param1);
           var2.writeByte(1, 1);

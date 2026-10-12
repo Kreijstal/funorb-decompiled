@@ -92,7 +92,7 @@ final class PaletteRegionMap {
                 if (var3_int >= 24) {
                   throw new IOException();
                 }
-                param0.a(var2, 0, 24, 81);
+                param0.writeBytes(var2, 0, 24, 81);
                 decompiledRegionSelector0 = 0;
               } catch (java.lang.Exception decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
@@ -106,7 +106,7 @@ final class PaletteRegionMap {
                 return;
               }
             }
-            param0.a(var2, 0, 24, 81);
+            param0.writeBytes(var2, 0, 24, 81);
             return;
           } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
             decompiledCaughtException = decompiledCaughtParameter1;

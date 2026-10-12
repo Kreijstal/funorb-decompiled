@@ -288,8 +288,8 @@ final class TutorialController {
                     ev.field_d < 135 &&
                     pg.playerProfile.spellQuantities[ev.field_d] < 250 &&
                     pg.playerProfile.tryDebitRunes(uc.spellDefinitions[ev.field_d][0], (byte) 103)) {
-                    vl.field_n.writeCipheredOpcode(32161, 70);
-                    vl.field_n.writeShort(true, ev.field_d + 2000);
+                    vl.outgoingPacket.writeCipheredOpcode(32161, 70);
+                    vl.outgoingPacket.writeShort(true, ev.field_d + 2000);
                     pg.playerProfile.spellQuantities[ev.field_d] = pg.playerProfile.spellQuantities[ev.field_d] + 1;
                     this.a((byte) 48, ev.field_d, (SpellMenuGroup) null);
                     ub.$cfr$intArgs$a$6d836999ad61(58, im.field_v[2]);
@@ -826,7 +826,7 @@ final class TutorialController {
           boolean decompiledFrameRemainder0 = true;
           var4 = 89;
           var5 = field_e;
-          fe.c(sl.field_i, db.a(true, var3[0]), MatchConditionEntry.a(var4, (byte) 94), field_e, true);
+          fe.c(CampaignQuicksave.field_i, db.a(true, var3[0]), MatchConditionEntry.a(var4, (byte) 94), field_e, true);
           fe.c(ou.field_f, db.a(true, var3[1]), MatchConditionEntry.a(var4, (byte) 94), field_e, true);
           fe.c(ts.field_g, db.a(true, var3[2]), MatchConditionEntry.a(var4, (byte) 94), field_e, true);
           fe.c(vi.field_c, db.a(true, var3[3]), MatchConditionEntry.a(var4, (byte) 94), field_e, true);
@@ -4026,8 +4026,8 @@ final class TutorialController {
                 (!(-1 >= li.field_q)) &&
                 (pg.playerProfile.unitUnlockMasks[1 + li.field_q] == 0) &&
                 (pg.playerProfile.tryDebitRunes(50, (byte) 103))) {
-                vl.field_n.writeCipheredOpcode(32161, 70);
-                vl.field_n.writeShort(true, wp.unitUnlockGroups[li.field_q + 1][0]);
+                vl.outgoingPacket.writeCipheredOpcode(32161, 70);
+                vl.outgoingPacket.writeShort(true, wp.unitUnlockGroups[li.field_q + 1][0]);
                 var2_intLifetime2 = 0;
                 while (true) {
                   if (var2_intLifetime2 < wp.unitUnlockGroups[li.field_q + 1].length) {
@@ -4049,8 +4049,8 @@ final class TutorialController {
                   0 < pg.playerProfile.unitUnlockMasks[li.field_q + 1] &&
                   0 == (pg.playerProfile.unitUnlockMasks[1 + li.field_q] & 1 << jq.field_F) &&
                   pg.playerProfile.getAvailableRunes((byte) 91) >= bw.unitDefinitions[jq.field_F][11])) {
-                  vl.field_n.writeCipheredOpcode(32161, 70);
-                  vl.field_n.writeShort(true, wp.unitUnlockGroups[1 + li.field_q][jq.field_F]);
+                  vl.outgoingPacket.writeCipheredOpcode(32161, 70);
+                  vl.outgoingPacket.writeShort(true, wp.unitUnlockGroups[1 + li.field_q][jq.field_F]);
                   ub.$cfr$intArgs$a$6d836999ad61(62, im.field_v[14]);
                   pg.playerProfile.unitUnlockMasks[1 + li.field_q] = oe.c(pg.playerProfile.unitUnlockMasks[1 + li.field_q], 1 << jq.field_F);
                 }
@@ -4060,8 +4060,8 @@ final class TutorialController {
                 0 < pg.playerProfile.unitUnlockMasks[li.field_q + 1] &&
                 0 == (pg.playerProfile.unitUnlockMasks[1 + li.field_q] & 1 << jq.field_F) &&
                 pg.playerProfile.getAvailableRunes((byte) 91) >= bw.unitDefinitions[jq.field_F][11]) {
-                vl.field_n.writeCipheredOpcode(32161, 70);
-                vl.field_n.writeShort(true, wp.unitUnlockGroups[1 + li.field_q][jq.field_F]);
+                vl.outgoingPacket.writeCipheredOpcode(32161, 70);
+                vl.outgoingPacket.writeShort(true, wp.unitUnlockGroups[1 + li.field_q][jq.field_F]);
                 ub.$cfr$intArgs$a$6d836999ad61(62, im.field_v[14]);
                 pg.playerProfile.unitUnlockMasks[1 + li.field_q] = oe.c(pg.playerProfile.unitUnlockMasks[1 + li.field_q], 1 << jq.field_F);
               }
