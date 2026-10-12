@@ -150,7 +150,7 @@ abstract class ArchiveProvider {
             return stackIn_7_0;
           }
           var3 = 82 / ((param1 - 50) / 49);
-          var4 = dj.a(32, '.', param0);
+          var4 = dj.splitText(32, '.', param0);
           if (var4.length < 2) {
             stackIn_11_0 = hv.field_N;
             return stackIn_11_0;

@@ -217,7 +217,7 @@ final class ClientContextMenu {
           if (this.accountName == null) {
             return;
           }
-          if (this.accountId == oh.localAccountId) {
+          if (this.accountId == ChannelBaseVolumeConsoleCommand.localAccountId) {
             return;
           }
           if (null == vu.currentRoom) {
@@ -265,7 +265,7 @@ final class ClientContextMenu {
         if (this.accountName == null) {
           return;
         }
-        if (this.accountId == oh.localAccountId) {
+        if (this.accountId == ChannelBaseVolumeConsoleCommand.localAccountId) {
           return;
         }
         if (null == vu.currentRoom) {
@@ -521,7 +521,7 @@ final class ClientContextMenu {
         int var6 = 0;
         String var7 = null;
         try {
-          if (null != this.accountName && (this.accountId != oh.localAccountId ||
+          if (null != this.accountName && (this.accountId != ChannelBaseVolumeConsoleCommand.localAccountId ||
             2 == chatChannel) && 2 == th.socialListState) {
             var7 = this.getTargetDisplayName(-97);
             var4 = var7;
@@ -553,7 +553,7 @@ final class ClientContextMenu {
               this.menu.addTextAction(5, fo.a(4800, na.field_K, new String[]{var7}), (byte) -111);
             }
             if (var6 != 0) {
-              this.menu.addTextAction(7, fo.a(4800, oa.field_E, new String[]{var7}), (byte) -102);
+              this.menu.addTextAction(7, fo.a(4800, ToggleTurnSkipConsoleCommand.field_E, new String[]{var7}), (byte) -102);
             }
           }
           if (obfuscationGuard != 7) {
@@ -577,7 +577,7 @@ final class ClientContextMenu {
     final void addReportAction(byte obfuscationGuard) {
         String var3 = null;
         if (null != this.accountName &&
-          ~this.accountId != ~oh.localAccountId) {
+          ~this.accountId != ~ChannelBaseVolumeConsoleCommand.localAccountId) {
           var3 = this.getTargetDisplayName(96);
           String var2 = var3;
           this.menu.addTextAction(17, fo.a(4800, IterableDualNodeDeque.field_e, new String[]{var3}), (byte) -127);

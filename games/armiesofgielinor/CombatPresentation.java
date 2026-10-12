@@ -2675,7 +2675,7 @@ final class CombatPresentation implements EventPresentation {
           if (param0 != -4938) {
             field_N = (String) null;
           }
-          if (du.field_d == oh.field_L) {
+          if (du.field_d == ChannelBaseVolumeConsoleCommand.field_L) {
             stackIn_5_0 = BufferedFile.field_a;
             return stackIn_5_0;
           }

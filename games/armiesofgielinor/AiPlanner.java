@@ -704,8 +704,8 @@ final class AiPlanner extends IntrusiveNode implements UnitObserver {
               if (var7_int != 3) {
                 if (var7_int == 4) {
                   var5 = null;
-                  if (rd.field_j != null) {
-                    var7 = rd.field_j.selectedUnit;
+                  if (rd.gameplayController != null) {
+                    var7 = rd.gameplayController.selectedUnit;
                     if (var7 != null) {
                       var8 = (AiUnitPlanner) (this.unitPlanners.first((byte) 114));
                       while (var8 != null) {

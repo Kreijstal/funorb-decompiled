@@ -186,7 +186,7 @@ final class et {
                   stackIn_24_0 = 1;
                   return stackIn_24_0;
                 }
-                if (oh.field_L == du.field_d) {
+                if (ChannelBaseVolumeConsoleCommand.field_L == du.field_d) {
                   stackIn_29_0 = 2;
                   return stackIn_29_0;
                 }

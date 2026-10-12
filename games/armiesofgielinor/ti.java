@@ -43,17 +43,17 @@ final class ti {
         field_a = null;
     }
 
-    final static String b(byte param0) {
-        int fieldTemp$0 = 0;
-        if (param0 <= -117) {
-          fieldTemp$0 = !DualLinkedNode.field_o ? 1 : 0;
-          DualLinkedNode.field_o = !DualLinkedNode.field_o ? true : false;
-          return new Boolean(fieldTemp$0 != 0).toString();
+    final static String toggleAutomaticTurnSkipping(byte obfuscationGuard) {
+        int newSkipFlag = 0;
+        if (obfuscationGuard <= -117) {
+          newSkipFlag = !DualLinkedNode.automaticallySkipPlayerTurns ? 1 : 0;
+          DualLinkedNode.automaticallySkipPlayerTurns = !DualLinkedNode.automaticallySkipPlayerTurns ? true : false;
+          return new Boolean(newSkipFlag != 0).toString();
         }
         field_b = (String) null;
-        int fieldTemp$1 = !DualLinkedNode.field_o ? 1 : 0;
-        DualLinkedNode.field_o = !DualLinkedNode.field_o ? true : false;
-        return new Boolean(fieldTemp$1 != 0).toString();
+        int guardedNewSkipFlag = !DualLinkedNode.automaticallySkipPlayerTurns ? 1 : 0;
+        DualLinkedNode.automaticallySkipPlayerTurns = !DualLinkedNode.automaticallySkipPlayerTurns ? true : false;
+        return new Boolean(guardedNewSkipFlag != 0).toString();
     }
 
     static {

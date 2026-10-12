@@ -60,7 +60,7 @@ final class s {
             return stackIn_13_0;
           }
           if (param2 == 5) {
-            stackIn_16_0 = fo.a(4800, ot.field_H, new String[]{param1});
+            stackIn_16_0 = fo.a(4800, FixInvisibleUnitsConsoleCommand.field_H, new String[]{param1});
             return stackIn_16_0;
           }
           if (param2 == 6) {

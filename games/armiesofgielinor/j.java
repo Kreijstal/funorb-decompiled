@@ -69,7 +69,7 @@ final class j {
           DisplacedUnitMarker.field_t[16] = InstructionsPanel.field_y;
           DisplacedUnitMarker.field_t[28] = wf.field_s;
           DisplacedUnitMarker.field_t[19] = s.field_b;
-          DisplacedUnitMarker.field_t[21] = dv.field_r;
+          DisplacedUnitMarker.field_t[21] = ConsolePanel.field_r;
           DisplacedUnitMarker.field_t[26] = bj.field_l;
           DisplacedUnitMarker.field_t[46] = hc.field_d;
           DisplacedUnitMarker.field_t[17] = su.field_c;
@@ -95,14 +95,14 @@ final class j {
           DisplacedUnitMarker.field_t[44] = dd.field_g;
           DisplacedUnitMarker.field_t[37] = lg.field_c;
           CampaignDefinition.field_m = new String[3];
-          DisplacedUnitMarker.field_t[52] = oa.field_G;
+          DisplacedUnitMarker.field_t[52] = ToggleTurnSkipConsoleCommand.field_G;
           DisplacedUnitMarker.field_t[38] = PortalLossCondition.field_f;
           ParasiteEvent.field_A = new String[]{VertexNormal.field_a, QuickChatPhraseRepository.field_e, ClientUiComponent.field_lb, ob.field_P};
           DisplacedUnitMarker.field_t[43] = FaceNormal.field_c;
           DisplacedUnitMarker.field_t[33] = gv.field_b;
           DisplacedUnitMarker.field_t[59] = TickCounter.field_e;
           DisplacedUnitMarker.field_t[41] = CorpseConditionMarker.field_x;
-          DisplacedUnitMarker.field_t[45] = oa.field_G;
+          DisplacedUnitMarker.field_t[45] = ToggleTurnSkipConsoleCommand.field_G;
           DisplacedUnitMarker.field_t[50] = GameEvent.field_u;
           DisplacedUnitMarker.field_t[34] = pf.field_e;
           DisplacedUnitMarker.field_t[29] = qm.field_I;
@@ -120,7 +120,7 @@ final class j {
           wb.field_b[13] = QuickChatPhrase.field_y;
           du.field_g = new String[]{ClientContextMenu.field_l, gk.field_N, tv.field_c, tv.field_b, CombatSandbox.field_g, ScrollContainer.field_Kb, DelayedPacket.field_r, r.field_I, we.field_h, kd.field_Q, ConsoleExpression.field_t, ByteStorage.field_c, RasterState.field_l, pi.field_P, StateChangeEvent.field_H, ut.field_ib};
           wb.field_b[18] = dd.field_g;
-          wb.field_b[4] = gg.field_H;
+          wb.field_b[4] = PrintVictoryConditionsConsoleCommand.field_H;
           wb.field_b[14] = ov.field_d;
           wb.field_b[17] = ke.field_f;
           wb.field_b[12] = bk.field_b;
@@ -291,7 +291,7 @@ final class j {
             if (!SpellCastAction.field_s) {
               stackIn_32_0 = so.field_d;
               if (var8 != 0) {
-                stackIn_33_1 = qp.field_E;
+                stackIn_33_1 = DefeatPlayerWithMetricsConsoleCommand.field_E;
               } else {
                 stackIn_33_1 = fk.field_e;
               }

@@ -1282,7 +1282,7 @@ final class EquipmentBattleTutorial extends BattleTutorial {
             var7 = param0[1].canvasWidth;
             param0[0].g(param1, param2);
             param0[2].g(param3 + (param1 - var6), param2);
-            SoftwareRaster.b(an.field_H);
+            SoftwareRaster.b(DefeatPlayerConsoleCommand.field_H);
             SoftwareRaster.b(param1 + var5_int, param2, param1 + (param3 - var6), param0[1].canvasHeight + param2);
             var8 = var5_int + param1;
             var9 = param3 + param1 - var6;
@@ -1292,7 +1292,7 @@ final class EquipmentBattleTutorial extends BattleTutorial {
             if (param4 != 8941) {
               EquipmentBattleTutorial.a((RgbSprite[]) null, -52, 126, 81, -73);
             }
-            SoftwareRaster.a(an.field_H);
+            SoftwareRaster.a(DefeatPlayerConsoleCommand.field_H);
             return;
           }
           return;

@@ -49,7 +49,7 @@ final class CampaignProgress {
         String var7;
         String var8;
         var5 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
-        var6 = "(" + QuickChatCommandDefinition.thirdPreviousOpcode + " " + ba.secondPreviousOpcode + " " + TurnTimerDial.previousOpcode + ") " + MusicCrossfadeStream.deliveredOpcode;
+        var6 = "(" + QuickChatCommandDefinition.thirdPreviousOpcode + " " + PrintCoatConsoleCommand.secondPreviousOpcode + " " + TurnTimerDial.previousOpcode + ") " + MusicCrossfadeStream.deliveredOpcode;
         var1 = var6;
         if (fk.packetPayloadLength > 0) {
           var1 = var6 + ":";

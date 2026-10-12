@@ -112,7 +112,7 @@ final class ah {
         try {
           var4 = (iw) (cg.field_c.first((byte) 107));
           while (var4 != null) {
-            ot.a((byte) 112, param1, var4);
+            FixInvisibleUnitsConsoleCommand.a((byte) 112, param1, var4);
             var4 = (iw) (cg.field_c.next((byte) 123));
           }
           var2 = ta.field_O.first((byte) 116);

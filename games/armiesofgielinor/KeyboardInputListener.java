@@ -28,19 +28,19 @@ final class KeyboardInputListener implements java.awt.event.KeyListener, java.aw
 
     final static NodeDeque createDebugCommandRegistry(int obfuscationGuard) {
         NodeDeque commands = new NodeDeque();
-        commands.addLast((byte) -119, (IntrusiveNode) (new re("hello", new Class[]{}, "Be friendly.")));
-        commands.addLast((byte) -119, (IntrusiveNode) (new ba("printCoat", new Class[]{}, "Print out your current coat of arms in a line ready for the config file.")));
-        commands.addLast((byte) -119, (IntrusiveNode) (new jq("setCoat", new Class[]{String.class}, "Set your coat of arms to one indicated by the format used in the config file (including coat=).")));
+        commands.addLast((byte) -119, (IntrusiveNode) (new HelloConsoleCommand("hello", new Class[]{}, "Be friendly.")));
+        commands.addLast((byte) -119, (IntrusiveNode) (new PrintCoatConsoleCommand("printCoat", new Class[]{}, "Print out your current coat of arms in a line ready for the config file.")));
+        commands.addLast((byte) -119, (IntrusiveNode) (new SetCoatConsoleCommand("setCoat", new Class[]{String.class}, "Set your coat of arms to one indicated by the format used in the config file (including coat=).")));
         int guardRemainder = -43 % ((obfuscationGuard - 32) / 63);
-        commands.addLast((byte) -119, (IntrusiveNode) (new qa("channelFadeTime", new Class[]{Integer.TYPE}, "Change the time to fade between channel sets in the campaign menu, in milliseconds.")));
-        commands.addLast((byte) -119, (IntrusiveNode) (new oh("channelBaseVolume", new Class[]{Integer.TYPE}, "(From 0 to 256) Change the volume of the base (<=3) channels in the campaign menu when in a campaign map.")));
-        commands.addLast((byte) -119, (IntrusiveNode) (new mw("listMissions", new Class[]{Integer.TYPE}, "List available missions.")));
-        commands.addLast((byte) -119, (IntrusiveNode) (new wt("giveTo", new Class[]{Integer.TYPE}, "Change ownership of a selected tile in the map.")));
-        commands.addLast((byte) -119, (IntrusiveNode) (new qp("defeat", new Class[]{Integer.TYPE, Integer.TYPE, Integer.TYPE}, "Defeat the given player. And specify it as happening in the given number of turns and damage taken")));
-        commands.addLast((byte) -119, (IntrusiveNode) (new an("defeat", new Class[]{Integer.TYPE}, "Defeat the given player.")));
-        commands.addLast((byte) -119, (IntrusiveNode) (new oa("toggleSkip", new Class[]{}, "Toggle Automatically Skipping Player Turns")));
-        commands.addLast((byte) -119, (IntrusiveNode) (new gg("printVictoryConditions", new Class[]{}, "Print out victory conditions for current player")));
-        commands.addLast((byte) -119, (IntrusiveNode) (new ot("fixInvisible", new Class[]{}, "Make invisible units visible")));
+        commands.addLast((byte) -119, (IntrusiveNode) (new ChannelFadeTimeConsoleCommand("channelFadeTime", new Class[]{Integer.TYPE}, "Change the time to fade between channel sets in the campaign menu, in milliseconds.")));
+        commands.addLast((byte) -119, (IntrusiveNode) (new ChannelBaseVolumeConsoleCommand("channelBaseVolume", new Class[]{Integer.TYPE}, "(From 0 to 256) Change the volume of the base (<=3) channels in the campaign menu when in a campaign map.")));
+        commands.addLast((byte) -119, (IntrusiveNode) (new ListMissionsConsoleCommand("listMissions", new Class[]{Integer.TYPE}, "List available missions.")));
+        commands.addLast((byte) -119, (IntrusiveNode) (new GiveTileConsoleCommand("giveTo", new Class[]{Integer.TYPE}, "Change ownership of a selected tile in the map.")));
+        commands.addLast((byte) -119, (IntrusiveNode) (new DefeatPlayerWithMetricsConsoleCommand("defeat", new Class[]{Integer.TYPE, Integer.TYPE, Integer.TYPE}, "Defeat the given player. And specify it as happening in the given number of turns and damage taken")));
+        commands.addLast((byte) -119, (IntrusiveNode) (new DefeatPlayerConsoleCommand("defeat", new Class[]{Integer.TYPE}, "Defeat the given player.")));
+        commands.addLast((byte) -119, (IntrusiveNode) (new ToggleTurnSkipConsoleCommand("toggleSkip", new Class[]{}, "Toggle Automatically Skipping Player Turns")));
+        commands.addLast((byte) -119, (IntrusiveNode) (new PrintVictoryConditionsConsoleCommand("printVictoryConditions", new Class[]{}, "Print out victory conditions for current player")));
+        commands.addLast((byte) -119, (IntrusiveNode) (new FixInvisibleUnitsConsoleCommand("fixInvisible", new Class[]{}, "Make invisible units visible")));
         return commands;
     }
 

@@ -742,11 +742,11 @@ abstract class vf {
                 var11 = var11 & 255;
               }
               var14 = var4 - 4096;
-              var13 = mw.field_F[var5];
+              var13 = ListMissionsConsoleCommand.field_F[var5];
               var17 = this.field_k[var11];
               var15 = var5 - 4096;
               var16 = this.field_k[var10];
-              var12 = mw.field_F[var4];
+              var12 = ListMissionsConsoleCommand.field_F[var4];
               var18 = ma.a(var4, 3, (int) this.field_k[var16 + var8], var5);
               var19 = ma.a(var14, 3, (int) this.field_k[var9 + var16], var5);
               var20 = (var12 * (var19 - var18) >> 12) + var18;

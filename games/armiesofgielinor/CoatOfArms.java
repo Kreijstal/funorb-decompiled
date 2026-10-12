@@ -99,11 +99,11 @@ final class CoatOfArms {
           for (var4_int = param3; or.field_f.length > var4_int; var4_int++) {
             var10 = or.field_f[var4_int];
             var5 = var10;
-            var6_int = jq.field_I[var4_int].length;
+            var6_int = SetCoatConsoleCommand.field_I[var4_int].length;
             array$0 = new AnimationSequence[var6_int];
             ck.animationSequencesByGroup[var4_int] = array$0;
             for (var7 = 0; var6_int > var7; var7++) {
-              var8 = jq.field_I[var4_int][var7];
+              var8 = SetCoatConsoleCommand.field_I[var4_int][var7];
               ck.animationSequencesByGroup[var4_int][var7] = new AnimationSequence(param0, var10, var8);
             }
           }
@@ -227,10 +227,10 @@ final class CoatOfArms {
           no.field_P.pixels = SoftwareRaster.pixels;
           no.field_P.pixelWidth = SoftwareRaster.width;
           if (param8) {
-            if (null == dv.field_k ||
+            if (null == ConsolePanel.field_k ||
               param1 != t.field_f) {
-              dv.field_k = RegionAnchor.field_m[0].g();
-              var21 = dv.field_k.pixels;
+              ConsolePanel.field_k = RegionAnchor.field_m[0].g();
+              var21 = ConsolePanel.field_k.pixels;
               var20 = var21;
               var19 = var20;
               var11 = var19;
@@ -242,7 +242,7 @@ final class CoatOfArms {
                 var11[var12] = (var15 << 8) + ((var14 << 16) + var16);
               }
             }
-            dv.field_k.d(-20 + param4, param2 - 15, 92, 92, 256);
+            ConsolePanel.field_k.d(-20 + param4, param2 - 15, 92, 92, 256);
           }
           ku.field_J.b();
           SoftwareRaster.b();

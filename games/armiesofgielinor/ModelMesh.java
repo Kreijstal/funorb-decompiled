@@ -1043,7 +1043,7 @@ final class ModelMesh extends ModelMeshBase {
                 break regionExit1;
               }
               if (param1 &&
-                this.a(ot.field_G + TriangleRasterizer.projectionCenterX, vl.field_j + TriangleRasterizer.projectionCenterY, field_V[var9], field_V[var10], field_V[var11], var12, var13, var14_int)) {
+                this.a(FixInvisibleUnitsConsoleCommand.field_G + TriangleRasterizer.projectionCenterX, vl.field_j + TriangleRasterizer.projectionCenterY, field_V[var9], field_V[var10], field_V[var11], var12, var13, var14_int)) {
                 fieldTemp$13 = ws.field_O;
                 ws.field_O = ws.field_O + 1;
                 MoveAttackRequest.field_I[fieldTemp$13] = param2;

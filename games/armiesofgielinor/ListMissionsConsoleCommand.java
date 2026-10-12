@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class mw extends ConsoleCommand {
+final class ListMissionsConsoleCommand extends ConsoleCommand {
     static int[] field_F;
     static SocialListPanel field_E;
 
@@ -32,7 +32,7 @@ final class mw extends ConsoleCommand {
           SocialListPanel.field_Qb.setBounds(CombatEvent.field_I.height - 6, param5 ^ -20499, -6 + var6_int, 3, 3);
           var7 = SocialListPanel.field_Qb.height - 5;
           if (param5 != 1) {
-            mw.g(78);
+            ListMissionsConsoleCommand.g(78);
           }
           we.field_f.setBounds(param4, -20500, 2 + (485 + param2 + param1), -param4 + var7, 5);
           UpkeepEvent.field_z.setBounds(param4, -20500, -rb.field_b.width + (we.field_f.width - param2), 0, param2);
@@ -70,34 +70,34 @@ final class mw extends ConsoleCommand {
         }
     }
 
-    mw(String param0, Class[] param1, String param2) {
-        super(param0, param1, param2);
+    ListMissionsConsoleCommand(String commandName, Class[] parameterTypes, String description) {
+        super(commandName, parameterTypes, description);
     }
 
     final ConsoleValue execute(int obfuscationGuard, ConsoleValue[] arguments) {
-        RuntimeException var3 = null;
-        ConsoleValue stackIn_3_0 = null;
-        RuntimeException stackIn_6_0 = null;
-        StringBuilder stackIn_6_1 = null;
-        String stackIn_7_2 = null;
-        RuntimeException decompiledCaughtException = null;
+        RuntimeException failure = null;
+        ConsoleValue result = null;
+        RuntimeException failureForContext = null;
+        StringBuilder errorContext = null;
+        String argumentsDescription = null;
+        RuntimeException caughtFailure = null;
         try {
           if (obfuscationGuard != -24872) {
-            mw.e((byte) 60);
+            ListMissionsConsoleCommand.e((byte) 60);
           }
-          stackIn_3_0 = new ConsoleValue(RadialSummonMenu.a((byte) 123, arguments[0].asInt(obfuscationGuard ^ -24870)));
-          return stackIn_3_0;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var3 = decompiledCaughtException;
-          stackIn_6_0 = var3;
-          stackIn_6_1 = new StringBuilder().append("mw.C(").append(obfuscationGuard).append(',');
+          result = new ConsoleValue(RadialSummonMenu.listCampaignMissions((byte) 123, arguments[0].asInt(obfuscationGuard ^ -24870)));
+          return result;
+        } catch (java.lang.RuntimeException caughtParameter) {
+          caughtFailure = caughtParameter;
+          failure = caughtFailure;
+          failureForContext = failure;
+          errorContext = new StringBuilder().append("mw.C(").append(obfuscationGuard).append(',');
           if (arguments == null) {
-            stackIn_7_2 = "null";
+            argumentsDescription = "null";
           } else {
-            stackIn_7_2 = "{...}";
+            argumentsDescription = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) failureForContext), ((StringBuilder) (Object) errorContext).append(argumentsDescription).append(')').toString());
         }
     }
 

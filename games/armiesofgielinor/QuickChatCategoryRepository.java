@@ -277,7 +277,7 @@ final class QuickChatCategoryRepository {
                                     SummonAction.field_s = ((PacketBuffer) ((Object) var1)).readVarInt(95);
                                     break regionExit1;
                                   case 23:
-                                    oh.localAccountId = ((PacketBuffer) ((Object) var1)).readLong((byte) -2);
+                                    ChannelBaseVolumeConsoleCommand.localAccountId = ((PacketBuffer) ((Object) var1)).readLong((byte) -2);
                                     break regionExit1;
                                   default:
                                     af.a((Throwable) null, 118, "L1: " + CampaignProgress.b(false));

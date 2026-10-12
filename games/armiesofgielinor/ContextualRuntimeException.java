@@ -46,7 +46,7 @@ final class ContextualRuntimeException extends RuntimeException {
         ClientUiComponent var3 = null;
         try {
           NodeHashIterator.field_e = GameplayController.a("display_name_changed", (byte) 51, "basic", param1);
-          mw.field_E = new SocialListPanel(0L, br.field_g, h.field_b, AnimationFrameSet.field_y);
+          ListMissionsConsoleCommand.field_E = new SocialListPanel(0L, br.field_g, h.field_b, AnimationFrameSet.field_y);
           TaggedMapData.field_g = new SocialListPanel(0L, br.field_g, lm.field_a, ArchiveIndex.field_u);
           su.field_d = new ClientUiComponent(0L, (ClientUiComponent) null);
           bn.field_c = new ClientUiComponent(0L, eq.field_h);
@@ -57,11 +57,11 @@ final class ContextualRuntimeException extends RuntimeException {
           su.field_d.addChild(bn.field_c, 49);
           su.field_d.addChild(AdaptiveMidiPcmStream.field_kb, 109);
           su.field_d.addChild(ek.field_a, 49);
-          su.field_d.addChild(mw.field_E, 105);
+          su.field_d.addChild(ListMissionsConsoleCommand.field_E, 105);
           su.field_d.addChild(PlayerProfile.field_f, 56);
-          mw.field_E.scrollContainer.viewport.applyStyle(param0 + 6145, eq.field_h);
-          mw.field_E.scrollContainer.viewport.verticalAlignment = 1;
-          var6 = mw.field_E.scrollContainer.viewport;
+          ListMissionsConsoleCommand.field_E.scrollContainer.viewport.applyStyle(param0 + 6145, eq.field_h);
+          ListMissionsConsoleCommand.field_E.scrollContainer.viewport.verticalAlignment = 1;
+          var6 = ListMissionsConsoleCommand.field_E.scrollContainer.viewport;
           var7 = var6;
           var7.horizontalAlignment = 1;
           TaggedMapData.field_g.scrollContainer.viewport.applyStyle(0, eq.field_h);

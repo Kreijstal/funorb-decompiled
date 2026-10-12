@@ -1,9 +1,9 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class rq extends IntrusiveNode {
+final class ConsoleTextNode extends IntrusiveNode {
     static int[] field_n;
-    String field_l;
+    String text;
     static RgbSprite[] field_k;
     static int field_m;
     static String field_o;
@@ -14,7 +14,7 @@ final class rq extends IntrusiveNode {
         field_k = null;
         field_o = null;
         if (param0 != -22823) {
-          rq.a(53);
+          ConsoleTextNode.a(53);
           field_n = null;
           return;
         }
@@ -36,18 +36,18 @@ final class rq extends IntrusiveNode {
     final static void a(boolean param0) {
         IsaacRandom.field_g = new kd();
         if (param0) {
-          rq.pushRasterState((byte) 79);
+          ConsoleTextNode.pushRasterState((byte) 79);
           lt.field_g.a(IsaacRandom.field_g, (byte) 78);
           return;
         }
         lt.field_g.a(IsaacRandom.field_g, (byte) 78);
     }
 
-    rq(String param0) {
+    ConsoleTextNode(String text) {
         try {
-          this.field_l = param0;
+          this.text = text;
         } catch (RuntimeException runtimeException) {
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "rq.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "rq.<init>(" + (text != null ? "{...}" : "null") + ')');
         }
     }
 

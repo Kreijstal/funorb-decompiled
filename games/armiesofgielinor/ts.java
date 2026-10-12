@@ -183,33 +183,33 @@ final class ts {
             stackIn_5_1Lifetime1 = null;
             stackIn_5_14 = false;
           }
-          rd.field_j = new GameplayController(stackIn_4_2, stackIn_4_3, stackIn_4_4, stackIn_4_5, stackIn_4_6, stackIn_4_7, stackIn_4_8, stackIn_4_9, stackIn_4_10, stackIn_4_11, stackIn_4_12, stackIn_4_13, stackIn_5_14, mission);
-          rd.field_j.battlefield.field_F = true;
-          rd.field_j.battlefield.playerCoats = new CoatOfArms[mission.participantIds.length];
-          for (var5_int = 0; rd.field_j.battlefield.playerCoats.length > var5_int; var5_int++) {
+          rd.gameplayController = new GameplayController(stackIn_4_2, stackIn_4_3, stackIn_4_4, stackIn_4_5, stackIn_4_6, stackIn_4_7, stackIn_4_8, stackIn_4_9, stackIn_4_10, stackIn_4_11, stackIn_4_12, stackIn_4_13, stackIn_5_14, mission);
+          rd.gameplayController.battlefield.field_F = true;
+          rd.gameplayController.battlefield.playerCoats = new CoatOfArms[mission.participantIds.length];
+          for (var5_int = 0; rd.gameplayController.battlefield.playerCoats.length > var5_int; var5_int++) {
             if (~var5_int == ~mission.playerSlot) {
-              rd.field_j.battlefield.playerCoats[var5_int] = ah.localCoat;
+              rd.gameplayController.battlefield.playerCoats[var5_int] = ah.localCoat;
             } else {
               var9 = mission.campaign.participants[mission.participantIds[var5_int]];
               var6_ref = var9;
-              rd.field_j.battlefield.playerCoats[var5_int] = var9.coatOfArms;
+              rd.gameplayController.battlefield.playerCoats[var5_int] = var9.coatOfArms;
             }
           }
           if ((1 & mission.flags) != 0) {
             var5_intLifetime1 = -1 + mission.participantIds.length;
-            var6 = (Unit) (rd.field_j.battlefield.getUnitsForPlayer(var5_intLifetime1, ~obfuscationGuard).first((byte) 97));
+            var6 = (Unit) (rd.gameplayController.battlefield.getUnitsForPlayer(var5_intLifetime1, ~obfuscationGuard).first((byte) 97));
             while (var6 != null) {
               if (var6.strength > 10) {
                 var6.strength = 10;
               }
-              var6 = (Unit) (rd.field_j.battlefield.getUnitsForPlayer(var5_intLifetime1, ~obfuscationGuard).next((byte) 123));
+              var6 = (Unit) (rd.gameplayController.battlefield.getUnitsForPlayer(var5_intLifetime1, ~obfuscationGuard).next((byte) 123));
             }
           }
           if (quicksave == null) {
             return;
           }
           try {
-            rd.field_j.restoreCampaignQuicksave((byte) -121, quicksave, mission);
+            rd.gameplayController.restoreCampaignQuicksave((byte) -121, quicksave, mission);
             return;
           } catch (java.lang.Exception decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;

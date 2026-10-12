@@ -350,7 +350,7 @@ final class de {
                     return stackIn_177_0;
                   }
                   if (var7.getUnitCategory(0) == 3) {
-                    stackIn_180_0 = qa.field_E;
+                    stackIn_180_0 = ChannelFadeTimeConsoleCommand.field_E;
                     return stackIn_180_0;
                   }
                   if (var7.unitType == 34 &&

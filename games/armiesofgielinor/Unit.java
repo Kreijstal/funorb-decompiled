@@ -992,13 +992,13 @@ final class Unit extends IntrusiveNode implements TaggedFieldReader {
         int var3Lifetime2;
         var5 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          if (!MusicPatch.a(rq.field_n, (byte) 108)) {
+          if (!MusicPatch.a(ConsoleTextNode.field_n, (byte) 108)) {
             return;
           }
           if (!OwnerChangeEvent.field_B) {
             return;
           }
-          var17 = rq.field_n;
+          var17 = ConsoleTextNode.field_n;
           var13 = var17;
           var6 = var13;
           var1 = var6;
@@ -1007,7 +1007,7 @@ final class Unit extends IntrusiveNode implements TaggedFieldReader {
             var6[var3] = rn.bitwiseAnd(var17[var3], ~var24[var3]);
           }
           for (var1_int = 0; var1_int < so.field_a.length; var1_int++) {
-            if (rb.a(var1_int, rq.field_n, 1)) {
+            if (rb.a(var1_int, ConsoleTextNode.field_n, 1)) {
               ai.field_P.addLast((byte) -119, (IntrusiveNode) (new jg(var1_int)));
             }
           }
@@ -1015,7 +1015,7 @@ final class Unit extends IntrusiveNode implements TaggedFieldReader {
           var14 = var18;
           var8 = var14;
           var1Lifetime1 = var8;
-          var25 = rq.field_n;
+          var25 = ConsoleTextNode.field_n;
           for (var3Lifetime1 = 0; var3Lifetime1 < 8; var3Lifetime1++) {
             var8[var3Lifetime1] = oe.bitwiseOr(var18[var3Lifetime1], var25[var3Lifetime1]);
           }
@@ -1023,14 +1023,14 @@ final class Unit extends IntrusiveNode implements TaggedFieldReader {
           var15 = var19;
           var10 = var15;
           var1Lifetime2 = var10;
-          var26 = rq.field_n;
+          var26 = ConsoleTextNode.field_n;
           var3Lifetime2 = 0;
           var4 = 124 % ((-63 - param0) / 63);
           while (var3Lifetime2 < 8) {
             var10[var3Lifetime2] = oe.bitwiseOr(var19[var3Lifetime2], var26[var3Lifetime2]);
             var3Lifetime2++;
           }
-          var20 = rq.field_n;
+          var20 = ConsoleTextNode.field_n;
           var16 = var20;
           var12 = var16;
           var1Lifetime3 = var12;

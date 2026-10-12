@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class re extends ConsoleCommand {
+final class HelloConsoleCommand extends ConsoleCommand {
     static String field_E;
 
     final static boolean a(int param0, byte param1) {
@@ -29,31 +29,31 @@ final class re extends ConsoleCommand {
     }
 
     final ConsoleValue execute(int obfuscationGuard, ConsoleValue[] arguments) {
-        RuntimeException var3 = null;
-        ConsoleValue stackIn_2_0 = null;
-        ConsoleValue stackIn_4_0 = null;
-        RuntimeException stackIn_7_0 = null;
-        StringBuilder stackIn_7_1 = null;
-        String stackIn_8_2 = null;
-        RuntimeException decompiledCaughtException = null;
+        RuntimeException failure = null;
+        ConsoleValue guardResult = null;
+        ConsoleValue result = null;
+        RuntimeException failureForContext = null;
+        StringBuilder errorContext = null;
+        String argumentsDescription = null;
+        RuntimeException caughtFailure = null;
         try {
           if (obfuscationGuard == -24872) {
-            stackIn_4_0 = new ConsoleValue(vv.a((byte) -62));
-            return stackIn_4_0;
+            result = new ConsoleValue(vv.consoleGreeting((byte) -62));
+            return result;
           }
-          stackIn_2_0 = (ConsoleValue) null;
-          return stackIn_2_0;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var3 = decompiledCaughtException;
-          stackIn_7_0 = var3;
-          stackIn_7_1 = new StringBuilder().append("re.C(").append(obfuscationGuard).append(',');
+          guardResult = (ConsoleValue) null;
+          return guardResult;
+        } catch (java.lang.RuntimeException caughtParameter) {
+          caughtFailure = caughtParameter;
+          failure = caughtFailure;
+          failureForContext = failure;
+          errorContext = new StringBuilder().append("re.C(").append(obfuscationGuard).append(',');
           if (arguments == null) {
-            stackIn_8_2 = "null";
+            argumentsDescription = "null";
           } else {
-            stackIn_8_2 = "{...}";
+            argumentsDescription = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) failureForContext), ((StringBuilder) (Object) errorContext).append(argumentsDescription).append(')').toString());
         }
     }
 
@@ -64,8 +64,8 @@ final class re extends ConsoleCommand {
         }
     }
 
-    re(String param0, Class[] param1, String param2) {
-        super(param0, param1, param2);
+    HelloConsoleCommand(String commandName, Class[] parameterTypes, String description) {
+        super(commandName, parameterTypes, description);
     }
 
     static {

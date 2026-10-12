@@ -106,7 +106,7 @@ final class SpellConfirmationDialog {
         var5 = var7;
         fe.a(var2 / 2 + 2, -30 + (var3 / 2 + (var4 >> 1)), 98, 30, DisplacedUnitMarker.field_s, var11, 0, 128, true);
         fe.c(nt.field_p, 50 + (-100 + var2 / 2), 17 + (var4 >> 1) + var3 / 2 - 15, 0, true);
-        fe.c(oa.field_G, -50 + var2 / 2 + 100, 2 + (var3 / 2 + (var4 >> 1)), 0, true);
+        fe.c(ToggleTurnSkipConsoleCommand.field_G, -50 + var2 / 2 + 100, 2 + (var3 / 2 + (var4 >> 1)), 0, true);
     }
 
     SpellConfirmationDialog(int selectionMode, int spellId, int tileX, int tileY, String prompt, GameplayController unusedController) {

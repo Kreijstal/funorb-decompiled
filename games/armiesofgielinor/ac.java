@@ -162,16 +162,16 @@ final class ac extends IntrusiveNode {
               et.field_d = true;
             }
             if (this.field_y == 2 &&
-              !wt.field_G) {
+              !GiveTileConsoleCommand.field_G) {
               RadialSummonMenu.playDefaultSoundWithIntGuard(113, el.field_b[0]);
               ep.field_f = false;
-              wt.field_G = true;
+              GiveTileConsoleCommand.field_G = true;
             }
             if (this.field_y == 3 &&
               !ep.field_f) {
               RadialSummonMenu.playDefaultSoundWithIntGuard(57, el.field_b[0]);
               et.field_d = false;
-              wt.field_G = false;
+              GiveTileConsoleCommand.field_G = false;
               uu.field_b = false;
               ep.field_f = true;
             }

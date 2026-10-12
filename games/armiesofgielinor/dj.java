@@ -137,7 +137,7 @@ final class dj {
         }
     }
 
-    final static String[] a(int param0, char param1, String param2) {
+    final static String[] splitText(int obfuscationGuard, char delimiter, String text) {
         int var8 = 0;
         int incrementValue$1 = 0;
         int var3_int = 0;
@@ -156,29 +156,29 @@ final class dj {
         RuntimeException decompiledCaughtException = null;
         var10 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          var11 = (CharSequence) ((Object) param2);
-          var3_int = RevivalEvent.a(var11, 0, param1);
+          var11 = (CharSequence) ((Object) text);
+          var3_int = RevivalEvent.a(var11, 0, delimiter);
           var4 = new String[var3_int + 1];
           var5 = 0;
           var6 = 0;
-          var7 = -23 / ((param0 + 52) / 48);
+          var7 = -23 / ((obfuscationGuard + 52) / 48);
           for (var8 = 0; var8 < var3_int; var8++) {
-            for (var9 = var6; param1 != param2.charAt(var9); var9++) {
+            for (var9 = var6; delimiter != text.charAt(var9); var9++) {
             }
             incrementValue$1 = var5;
             var5++;
-            var4[incrementValue$1] = param2.substring(var6, var9);
+            var4[incrementValue$1] = text.substring(var6, var9);
             var6 = var9 + 1;
           }
-          var4[var3_int] = param2.substring(var6);
+          var4[var3_int] = text.substring(var6);
           stackIn_8_0 = var4;
           return stackIn_8_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
           stackIn_11_0 = var3;
-          stackIn_11_1 = new StringBuilder().append("dj.F(").append(param0).append(',').append(param1).append(',');
-          if (param2 == null) {
+          stackIn_11_1 = new StringBuilder().append("dj.F(").append(obfuscationGuard).append(',').append(delimiter).append(',');
+          if (text == null) {
             stackIn_12_2 = "null";
           } else {
             stackIn_12_2 = "{...}";
@@ -238,7 +238,7 @@ final class dj {
         field_c = null;
         if (param0 <= 20) {
           String var2 = (String) null;
-          dj.a(74, '{', (String) null);
+          dj.splitText(74, '{', (String) null);
         }
     }
 

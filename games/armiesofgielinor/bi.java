@@ -58,7 +58,7 @@ abstract class bi {
               !Character.isDigit(text.charAt(0))) {
               kind = rn.consoleCallKind;
             } else {
-              kind = gg.consoleNumberKind;
+              kind = PrintVictoryConditionsConsoleCommand.consoleNumberKind;
             }
           } else {
             kind = EquipmentBattleTutorial.consoleBooleanKind;
@@ -194,7 +194,7 @@ abstract class bi {
         pk.a(param1, param5, param4, var6, var7, -29403, var8, param2);
         if (param3 > 71) {
           if (Unit.field_L) {
-            oh.field_I.g(param2, param1);
+            ChannelBaseVolumeConsoleCommand.field_I.g(param2, param1);
           }
           return;
         }

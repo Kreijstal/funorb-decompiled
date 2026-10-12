@@ -41,7 +41,7 @@ final class MapRepository {
         }
         try {
           gl.a(127, -1);
-          oh.field_L = nb.field_i;
+          ChannelBaseVolumeConsoleCommand.field_L = nb.field_i;
           mh.field_b = nb.field_i;
         } catch (RuntimeException runtimeException) {
           throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "ou.M(" + param0 + ')');

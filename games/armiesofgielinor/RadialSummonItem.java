@@ -24,7 +24,7 @@ final class RadialSummonItem {
         if (param0 != -1) {
           return (String) null;
         }
-        if (du.field_d == oh.field_L) {
+        if (du.field_d == ChannelBaseVolumeConsoleCommand.field_L) {
           return qk.field_b;
         }
         return ah.field_d;
@@ -139,7 +139,7 @@ final class RadialSummonItem {
             var10 = (param0 + param3 / (4 + (param0 & 3))) % 3;
             param0 = param0 >> 1;
             var5_int = var5_int >> 1;
-            jq.kalphiteSprites[var10].h(60 + var6, 50 + var7);
+            SetCoatConsoleCommand.kalphiteSprites[var10].h(60 + var6, 50 + var7);
             var9++;
             if (var11 != 0) {
               return;
@@ -198,7 +198,7 @@ final class RadialSummonItem {
         try {
           SpellConfirmationDialog.field_a = param7;
           t.field_b = param3;
-          oh.localAccountId = -1L;
+          ChannelBaseVolumeConsoleCommand.localAccountId = -1L;
           tq.gameOptionCount = param3.length;
           no.roomSetup = null;
           SpellCastAction.field_s = false;

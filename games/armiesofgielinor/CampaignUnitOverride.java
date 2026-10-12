@@ -179,7 +179,7 @@ final class CampaignUnitOverride {
                 }
                 var2 = NodeIterator.a(param0 ^ -100, "mu_x_lost_con");
                 if (var2 != null) {
-                  ot.field_H = uu.a(var2, (byte) -128);
+                  FixInvisibleUnitsConsoleCommand.field_H = uu.a(var2, (byte) -128);
                 }
                 var2 = NodeIterator.a(50, "mu_x_cannot_join_full");
                 if (null != var2) {
@@ -355,7 +355,7 @@ final class CampaignUnitOverride {
                 }
                 var2 = NodeIterator.a(50, "rm_x_from_ignore");
                 if (var2 != null) {
-                  oa.field_E = uu.a(var2, (byte) -109);
+                  ToggleTurnSkipConsoleCommand.field_E = uu.a(var2, (byte) -109);
                 }
                 var2 = NodeIterator.a(param0 + 132, "send_pm_to_x");
                 if (null != var2) {
@@ -507,7 +507,7 @@ final class CampaignUnitOverride {
                 }
                 var2 = NodeIterator.a(param0 ^ -100, "find_opponents_plural");
                 if (var2 != null) {
-                  qp.field_E = uu.a(var2, (byte) -112);
+                  DefeatPlayerWithMetricsConsoleCommand.field_E = uu.a(var2, (byte) -112);
                 }
                 var2 = NodeIterator.a(50, "rated_game_tips_setup_singular");
                 if (var2 != null) {
@@ -543,7 +543,7 @@ final class CampaignUnitOverride {
                 }
                 var2 = NodeIterator.a(50, "waiting_for_x_to_start_game");
                 if (null != var2) {
-                  wt.field_F = uu.a(var2, (byte) 119);
+                  GiveTileConsoleCommand.field_F = uu.a(var2, (byte) 119);
                 }
                 var2 = NodeIterator.a(50, "game_options_changed");
                 if (null != var2) {
@@ -603,7 +603,7 @@ final class CampaignUnitOverride {
                 }
                 var2 = NodeIterator.a(50, "status_spectate");
                 if (null != var2) {
-                  re.field_E = uu.a(var2, (byte) -112);
+                  HelloConsoleCommand.field_E = uu.a(var2, (byte) -112);
                 }
                 var2 = NodeIterator.a(param0 + 132, "status_playing");
                 if (null != var2) {
@@ -925,7 +925,7 @@ final class CampaignUnitOverride {
                 }
                 var2 = NodeIterator.a(param0 ^ -100, "ra_suggestmute");
                 if (null != var2) {
-                  jq.field_E = uu.a(var2, (byte) -109);
+                  SetCoatConsoleCommand.field_E = uu.a(var2, (byte) -109);
                 }
                 var2 = NodeIterator.a(param0 + 132, "ra_intro");
                 if (var2 != null) {
@@ -933,7 +933,7 @@ final class CampaignUnitOverride {
                 }
                 var2 = NodeIterator.a(50, "ra_intro_no_name");
                 if (var2 != null) {
-                  ot.field_F = uu.a(var2, (byte) -94);
+                  FixInvisibleUnitsConsoleCommand.field_F = uu.a(var2, (byte) -94);
                 }
                 var2 = NodeIterator.a(50, "ra_explanation");
                 if (null != var2) {
@@ -949,7 +949,7 @@ final class CampaignUnitOverride {
                 }
                 var2 = NodeIterator.a(50, "rule_0_1");
                 if (null != var2) {
-                  wt.field_E = uu.a(var2, (byte) -94);
+                  GiveTileConsoleCommand.field_E = uu.a(var2, (byte) -94);
                 }
                 var2 = NodeIterator.a(param0 + 132, "rule_0_2");
                 if (var2 != null) {
@@ -1129,7 +1129,7 @@ final class CampaignUnitOverride {
                 }
                 var2 = NodeIterator.a(50, "invalidpass");
                 if (var2 != null) {
-                  rq.field_o = uu.a(var2, (byte) 115);
+                  ConsoleTextNode.field_o = uu.a(var2, (byte) 115);
                 }
                 var2 = NodeIterator.a(50, "retry");
                 if (null != var2) {
@@ -2912,7 +2912,7 @@ final class CampaignUnitOverride {
                 }
                 var2 = NodeIterator.a(50, "discard");
                 if (var2 != null) {
-                  dv.field_r = uu.a(var2, (byte) 103);
+                  ConsolePanel.field_r = uu.a(var2, (byte) 103);
                 }
                 var2 = NodeIterator.a(param0 + 132, "mustlogin4,1");
                 if (null != var2) {
@@ -3066,7 +3066,7 @@ final class CampaignUnitOverride {
 
     final static void a(int param0, int param1, int param2, int param3, byte param4) {
         try {
-          rq.pushRasterState((byte) -56);
+          ConsoleTextNode.pushRasterState((byte) -56);
           SoftwareRaster.b(param0, param3, param1, param2);
           if (param4 < 70) {
             field_c = (String) null;

@@ -231,7 +231,7 @@ abstract class hs extends Widget implements gw {
           }
           if (param2.immobilizedTurns > 0) {
             stackIn_54_0 = BattleCharacter.field_h;
-            stackIn_54_1 = jq.field_H;
+            stackIn_54_1 = SetCoatConsoleCommand.field_H;
             if (3 >= param2.immobilizedTurns) {
               stackIn_55_2 = -1 + param2.immobilizedTurns;
             } else {

@@ -114,7 +114,7 @@ final class CampaignMenuEntry extends IntrusiveNode {
         RuntimeException var4 = null;
         var5 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          oh.field_L = lm.field_d;
+          ChannelBaseVolumeConsoleCommand.field_L = lm.field_d;
           if (param1 != -14) {
             CampaignMenuEntry.a(7);
           }

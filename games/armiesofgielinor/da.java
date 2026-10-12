@@ -14,7 +14,7 @@ final class da {
           dj.friendCount = 0;
           vg.ignoreCount = 0;
           wh.friendEntries.clear(126);
-          ot.ignoreEntries.clear(81);
+          FixInvisibleUnitsConsoleCommand.ignoreEntries.clear(81);
           var1 = DiskCacheRequest.friendsByName.first((byte) 66);
           while (var1 != null) {
             var1.unlinkSecondary((byte) -76);
@@ -82,7 +82,7 @@ final class da {
             try {
               var2 = "tuhstatbut";
               var3 = (String) (lj.a("getcookies", (byte) 81, param1));
-              var4 = dj.a(29, ';', var3);
+              var4 = dj.splitText(29, ';', var3);
               if (param0 != 23660) {
                 instructionIllustrationArguments = (int[][][]) null;
               }
@@ -236,11 +236,11 @@ final class da {
           }
           if (1 == var2) {
             var4_int = var9.readSignedSmart(100);
-            var5_ref_rs = (rs) (gg.field_F.first((byte) 107));
+            var5_ref_rs = (rs) (PrintVictoryConditionsConsoleCommand.field_F.first((byte) 107));
             while (var5_ref_rs != null) {
               if (var5_ref_rs.field_r != var3 ||
                 var4_int != var5_ref_rs.field_l) {
-                var5_ref_rs = (rs) (gg.field_F.next((byte) 123));
+                var5_ref_rs = (rs) (PrintVictoryConditionsConsoleCommand.field_F.next((byte) 123));
                 continue;
               }
               break;

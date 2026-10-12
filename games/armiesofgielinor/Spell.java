@@ -16,8 +16,8 @@ abstract class Spell {
           if (param1 < 33) {
             Spell.b(-9);
           }
-          if (null != rd.field_j) {
-            rd.field_j.eventPresenters.clear(87);
+          if (null != rd.gameplayController) {
+            rd.gameplayController.eventPresenters.clear(87);
           }
           if (null != SectorCacheStore.field_a) {
             SectorCacheStore.field_a.eventPresenters.clear(93);

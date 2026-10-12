@@ -141,7 +141,7 @@ final class RegionAnchor extends IntrusiveNode {
               }
             }
           }
-          if (param2 == NetworkResourceRequest.field_C.field_h) {
+          if (param2 == NetworkResourceRequest.field_C.selectedTileIndex) {
             var4_int = var4_int & 16777215 | var5 + var4_int & -16777216;
           }
           regionExit1: {

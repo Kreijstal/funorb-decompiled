@@ -54,10 +54,10 @@ final class op {
         RuntimeException var2 = null;
         var3 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          var5 = (rs) (gg.field_F.first((byte) 94));
+          var5 = (rs) (PrintVictoryConditionsConsoleCommand.field_F.first((byte) 94));
           while (var5 != null) {
             IntrusiveNode.a(param0, var5, (byte) 105);
-            var5 = (rs) (gg.field_F.next((byte) 123));
+            var5 = (rs) (PrintVictoryConditionsConsoleCommand.field_F.next((byte) 123));
           }
           if (!param1) {
             var4 = (nr) null;

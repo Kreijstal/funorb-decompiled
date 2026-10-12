@@ -4,7 +4,7 @@
 final class vs {
     static String field_d;
     static boolean field_j;
-    static String field_c;
+    static String highlightedConsoleInput;
     static int field_a;
     static String field_i;
     static int field_f;
@@ -37,7 +37,7 @@ final class vs {
         if (param0 < -50) {
           field_g = null;
           field_h = null;
-          field_c = null;
+          highlightedConsoleInput = null;
           field_i = null;
           return;
         }

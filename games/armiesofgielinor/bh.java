@@ -9,12 +9,12 @@ final class bh extends nl {
     static ResourceArchive field_H;
     int field_K;
 
-    final static String a(int param0, byte param1) {
-        String var2 = null;
-        if (param1 == 74) {
-          var2 = "old time: " + wf.musicProfileTransitionMillis;
-          wf.musicProfileTransitionMillis = param0;
-          return var2;
+    final static String setMusicProfileTransitionMillis(int durationMillis, byte obfuscationGuard) {
+        String previousDurationText = null;
+        if (obfuscationGuard == 74) {
+          previousDurationText = "old time: " + wf.musicProfileTransitionMillis;
+          wf.musicProfileTransitionMillis = durationMillis;
+          return previousDurationText;
         }
         return (String) null;
     }

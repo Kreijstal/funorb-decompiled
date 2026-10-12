@@ -1043,7 +1043,7 @@ final class MovementPlanner {
                   }
                   battlefield.tiles[structureX + structureY * battlefield.mapWidth] = new MapTile(8, battlefield);
                   if (centerPattern != 0) {
-                    qp.paintTerrainConnection(structureY, 20 * (1 + sectorX) + 10, -1, sectorY * 20 + 30, structureX, 0, battlefield, 1, random);
+                    DefeatPlayerWithMetricsConsoleCommand.paintTerrainConnection(structureY, 20 * (1 + sectorX) + 10, -1, sectorY * 20 + 30, structureX, 0, battlefield, 1, random);
                   }
                 }
               }

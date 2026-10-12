@@ -202,10 +202,10 @@ final class QuickChatMenu extends ClientUiComponent {
           cs.field_Y = var9;
           ContextActionMenu.field_Wb = var9;
           QuickChatCategory.field_z = var9;
-          rq.field_m = var9;
+          ConsoleTextNode.field_m = var9;
           j.field_b = var9;
           SpellConfirmationDialog.field_e = var9;
-          oh.field_E = var9;
+          ChannelBaseVolumeConsoleCommand.field_E = var9;
           stackIn_9_0 = (param3 <= 0) ? 0 : 1;
           var11 = stackIn_9_0;
           stackIn_12_0 = (param3 >= -1 + ResourceRequest.field_y) ? 0 : 1;
@@ -216,7 +216,7 @@ final class QuickChatMenu extends ClientUiComponent {
             }
             pv.field_b = CampaignMenuEntry.field_u[param2 - ResourceRequest.field_y];
             if (var12 != 0) {
-              rq.field_m = CampaignMenuEntry.field_u[-ResourceRequest.field_y + (param2 + 1)];
+              ConsoleTextNode.field_m = CampaignMenuEntry.field_u[-ResourceRequest.field_y + (param2 + 1)];
             }
           }
           if (var11 != 0) {
@@ -228,17 +228,17 @@ final class QuickChatMenu extends ClientUiComponent {
           var9 = var9 * 20;
           if (param7 < -1 + ConsoleParseException.field_c) {
             if (var11 != 0) {
-              oh.field_E = CampaignMenuEntry.field_u[-1 + param2 + ResourceRequest.field_y];
+              ChannelBaseVolumeConsoleCommand.field_E = CampaignMenuEntry.field_u[-1 + param2 + ResourceRequest.field_y];
             }
             QuickChatCategory.field_z = CampaignMenuEntry.field_u[param2 + ResourceRequest.field_y];
             if (var12 != 0) {
               gt.field_i = CampaignMenuEntry.field_u[param2 + ResourceRequest.field_y + 1];
             }
           }
-          ac.activeTerrainSprites[ls.a(rq.field_m, j.field_b, pv.field_b, SpellConfirmationDialog.field_e, -26) + (0 + var9)].b(param0, param4, param5, param1);
+          ac.activeTerrainSprites[ls.a(ConsoleTextNode.field_m, j.field_b, pv.field_b, SpellConfirmationDialog.field_e, -26) + (0 + var9)].b(param0, param4, param5, param1);
           ac.activeTerrainSprites[var9 - (-1 - ls.a(ContextActionMenu.field_Wb, j.field_b, pv.field_b, cs.field_Y, -87))].b(param0, param4, param5, param1);
           ac.activeTerrainSprites[2 + var9 + ls.a(gt.field_i, j.field_b, QuickChatCategory.field_z, SpellConfirmationDialog.field_e, -68)].b(param0, param4, param5, param1);
-          ac.activeTerrainSprites[3 + (var9 + ls.a(oh.field_E, j.field_b, QuickChatCategory.field_z, cs.field_Y, -72))].b(param0, param4, param5, param1);
+          ac.activeTerrainSprites[3 + (var9 + ls.a(ChannelBaseVolumeConsoleCommand.field_E, j.field_b, QuickChatCategory.field_z, cs.field_Y, -72))].b(param0, param4, param5, param1);
           if (cu.field_a &&
             var8 == 0 &&
             (ConsoleExpression.field_p[param2] + param2 & 5) == 5) {

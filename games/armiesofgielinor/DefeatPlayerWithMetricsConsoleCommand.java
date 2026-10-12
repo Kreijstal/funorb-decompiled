@@ -3,40 +3,40 @@
  */
 import java.util.*;
 
-final class qp extends ConsoleCommand {
+final class DefeatPlayerWithMetricsConsoleCommand extends ConsoleCommand {
     static String field_E;
 
     final ConsoleValue execute(int obfuscationGuard, ConsoleValue[] arguments) {
-        RuntimeException var3 = null;
-        ConsoleValue stackIn_3_0 = null;
-        RuntimeException stackIn_6_0 = null;
-        StringBuilder stackIn_6_1 = null;
-        String stackIn_7_2 = null;
-        RuntimeException decompiledCaughtException = null;
+        RuntimeException failure = null;
+        ConsoleValue result = null;
+        RuntimeException failureForContext = null;
+        StringBuilder errorContext = null;
+        String argumentsDescription = null;
+        RuntimeException caughtFailure = null;
         try {
           if (obfuscationGuard != -24872) {
-            qp.g(125);
+            DefeatPlayerWithMetricsConsoleCommand.g(125);
           }
-          stackIn_3_0 = new ConsoleValue(sq.a(arguments[2].asInt(obfuscationGuard ^ -24870), (byte) -2, arguments[0].asInt(2), arguments[1].asInt(2)));
-          return stackIn_3_0;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var3 = decompiledCaughtException;
-          stackIn_6_0 = var3;
-          stackIn_6_1 = new StringBuilder().append("qp.C(").append(obfuscationGuard).append(',');
+          result = new ConsoleValue(sq.defeatPlayerWithMetricsForConsole(arguments[2].asInt(obfuscationGuard ^ -24870), (byte) -2, arguments[0].asInt(2), arguments[1].asInt(2)));
+          return result;
+        } catch (java.lang.RuntimeException caughtParameter) {
+          caughtFailure = caughtParameter;
+          failure = caughtFailure;
+          failureForContext = failure;
+          errorContext = new StringBuilder().append("qp.C(").append(obfuscationGuard).append(',');
           if (arguments == null) {
-            stackIn_7_2 = "null";
+            argumentsDescription = "null";
           } else {
-            stackIn_7_2 = "{...}";
+            argumentsDescription = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) failureForContext), ((StringBuilder) (Object) errorContext).append(argumentsDescription).append(')').toString());
         }
     }
 
     final static int e(byte param0) {
         if (param0 >= -123) {
           Random var2 = (Random) null;
-          qp.paintTerrainConnection(-126, -81, -63, -13, -70, -42, (Battlefield) null, -51, (Random) null);
+          DefeatPlayerWithMetricsConsoleCommand.paintTerrainConnection(-126, -81, -63, -13, -70, -42, (Battlefield) null, -51, (Random) null);
         }
         return MusicCrossfadeStream.field_z;
     }
@@ -61,16 +61,16 @@ final class qp extends ConsoleCommand {
         try {
           no.field_P.pixelHeight = SoftwareRaster.height;
           if (param0 != 1) {
-            qp.g(111);
+            DefeatPlayerWithMetricsConsoleCommand.g(111);
           }
           no.field_P.pixelWidth = SoftwareRaster.width;
           no.field_P.pixels = SoftwareRaster.pixels;
           if (param6) {
-            if (dv.field_k == null ||
+            if (ConsolePanel.field_k == null ||
               t.field_f != param7) {
               t.field_f = param7;
-              dv.field_k = RegionAnchor.field_m[0].g();
-              var19 = dv.field_k.pixels;
+              ConsolePanel.field_k = RegionAnchor.field_m[0].g();
+              var19 = ConsolePanel.field_k.pixels;
               var18 = var19;
               var17 = var18;
               var10 = var17;
@@ -82,7 +82,7 @@ final class qp extends ConsoleCommand {
                 var17[var11] = (var14 << 8) + (var13 << 16) + var15;
               }
             }
-            dv.field_k.d(param3 - 20, -15 + param2, 92, 92, 256);
+            ConsolePanel.field_k.d(param3 - 20, -15 + param2, 92, 92, 256);
           }
           if (!param5) {
             param9.g(param3, param2);
@@ -135,14 +135,14 @@ final class qp extends ConsoleCommand {
         }
     }
 
-    qp(String param0, Class[] param1, String param2) {
-        super(param0, param1, param2);
+    DefeatPlayerWithMetricsConsoleCommand(String commandName, Class[] parameterTypes, String description) {
+        super(commandName, parameterTypes, description);
     }
 
     public static void g(int param0) {
         if (param0 < 114) {
           RgbSprite var2 = (RgbSprite) null;
-          qp.a(-47, true, -89, 99, true, true, false, -24, false, (RgbSprite) null);
+          DefeatPlayerWithMetricsConsoleCommand.a(-47, true, -89, 99, true, true, false, -24, false, (RgbSprite) null);
         }
         field_E = null;
     }
@@ -544,7 +544,7 @@ final class qp extends ConsoleCommand {
           if (obfuscationGuard == ~var13 &&
             var14 == 0) {
             var13 = 1;
-            qp.paintTerrainConnection(startY, endX, obfuscationGuard ^ 0, endY, startX, recursionDepth + 1, battlefield, terrainType, random);
+            DefeatPlayerWithMetricsConsoleCommand.paintTerrainConnection(startY, endX, obfuscationGuard ^ 0, endY, startX, recursionDepth + 1, battlefield, terrainType, random);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

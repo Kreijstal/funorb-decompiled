@@ -146,7 +146,7 @@ final class ut extends sf implements he {
           this.field_gb.field_Q = 83;
           this.field_gb.d(5, 57, 5);
           this.a((byte) 10, (Widget) (this.field_gb));
-          this.field_mb = this.a((qo) (this), oq.field_j, oa.field_H, false);
+          this.field_mb = this.a((qo) (this), oq.field_j, ToggleTurnSkipConsoleCommand.field_H, false);
           if (var2_intLifetime1 != 0) {
             this.field_Z = this.a((qo) (this), Unit.field_n, HuffmanCodec.field_e, false);
           }
@@ -455,7 +455,7 @@ final class ut extends sf implements he {
           mu.field_a = null;
           qc.field_j = 0;
           if (vs.field_j) {
-            rd.field_j = null;
+            rd.gameplayController = null;
             vs.field_j = false;
             SectorCacheStore.field_a = null;
             ConsoleParseException.b(-1);
@@ -477,7 +477,7 @@ final class ut extends sf implements he {
             for (var2Lifetime1 = 0; var2Lifetime1 < 8; var2Lifetime1++) {
               var11[var2Lifetime1] = 0;
             }
-            var12 = rq.field_n;
+            var12 = ConsoleTextNode.field_n;
             var9 = var12;
             var6 = var9;
             var1Lifetime2 = var6;

@@ -89,7 +89,7 @@ final class IconLabelControl extends ClientUiComponent {
             var61 = var45.field_K;
             el.a((byte) -105, var61, jp.field_g, 0, 0);
           } else {
-            mw.e((byte) -63);
+            ListMissionsConsoleCommand.e((byte) -63);
           }
           var55 = new int[param1.field_t];
           var50 = var55;
@@ -203,7 +203,7 @@ final class IconLabelControl extends ClientUiComponent {
               var37 = var37 + 65793 * var31;
               var39 = (var35 * var30 & -16711828) >>> 8 | (var30 * var36 & 16711711) >>> 8;
               var39 = var39 + var33 * 65793;
-              dv.a(var23, (65292 & var39) >> 8, var22, (byte) -66, var37 & 255, (var37 & 65466) >> 8, var37 >> 16, var38 >> 16, var27, 255 & var38 >> 8, var39 >> 16, var26, var39 & 255, var38 & 255, var24, var25);
+              ConsolePanel.a(var23, (65292 & var39) >> 8, var22, (byte) -66, var37 & 255, (var37 & 65466) >> 8, var37 >> 16, var38 >> 16, var27, 255 & var38 >> 8, var39 >> 16, var26, var39 & 255, var38 & 255, var24, var25);
             }
             var44++;
           }

@@ -13,7 +13,7 @@ final class no extends en {
     static ClientUiComponent field_T;
     private boolean field_R;
     private fn field_L;
-    static String field_N;
+    static String cachedConsoleSource;
 
     final int l(int param0) {
         int stackIn_2_0 = 0;
@@ -152,7 +152,7 @@ final class no extends en {
     }
 
     public static void c(boolean param0) {
-        field_N = null;
+        cachedConsoleSource = null;
         field_U = null;
         field_P = null;
         field_T = null;
@@ -181,7 +181,7 @@ final class no extends en {
     final static void b(boolean param0) {
         tf.a((byte) -99, CombatEvent.d((byte) -111));
         if (param0) {
-          field_N = (String) null;
+          cachedConsoleSource = (String) null;
         }
     }
 

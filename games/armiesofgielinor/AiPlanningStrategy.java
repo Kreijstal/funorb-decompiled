@@ -45,13 +45,13 @@ abstract class AiPlanningStrategy {
         String var18Lifetime1;
         var19 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          stackIn_4_0 = mw.field_E.scrollContainer;
+          stackIn_4_0 = ListMissionsConsoleCommand.field_E.scrollContainer;
           stackIn_4_1 = enableCapture;
           stackIn_4_2 = (jn.field_d * 3 + 6) * visibleRows;
           stackIn_4_3 = 2 + jn.field_d;
-          stackIn_5_4 = (mw.field_E.scrollContainer == PointerInputHandler.contextMenuScrollContainer);
+          stackIn_5_4 = (ListMissionsConsoleCommand.field_E.scrollContainer == PointerInputHandler.contextMenuScrollContainer);
           var3_int = ((ScrollContainer) (Object) stackIn_4_0).updateContentLayout(stackIn_4_1, stackIn_4_2, stackIn_4_3, stackIn_5_4, 0, 2) ? 1 : 0;
-          var4 = mw.field_E.listContent.children;
+          var4 = ListMissionsConsoleCommand.field_E.listContent.children;
           if (obfuscationGuard <= 20) {
             AiPlanningStrategy.a(-8, (String[]) null, (String) null, -108);
           }
@@ -61,20 +61,20 @@ abstract class AiPlanningStrategy {
             su.field_d.inputEnabled = false;
             bn.field_c.text = fm.field_c;
             if (1 != th.socialListState) {
-              mw.field_E.scrollContainer.viewport.text = ConsoleParseException.field_a;
+              ListMissionsConsoleCommand.field_E.scrollContainer.viewport.text = ConsoleParseException.field_a;
               if (var19 != 0) {
-                mw.field_E.scrollContainer.viewport.text = TeleportAction.field_u;
+                ListMissionsConsoleCommand.field_E.scrollContainer.viewport.text = TeleportAction.field_u;
               }
             } else {
-              mw.field_E.scrollContainer.viewport.text = TeleportAction.field_u;
+              ListMissionsConsoleCommand.field_E.scrollContainer.viewport.text = TeleportAction.field_u;
             }
-            ArchiveIndex.a(mw.field_E.listContent, -47);
+            ArchiveIndex.a(ListMissionsConsoleCommand.field_E.listContent, -47);
             decompiledFrameRemainder1 = (var19 != 0);
           }
           if (decompiledFrameRemainder1) {
             su.field_d.inputEnabled = true;
             bn.field_c.text = fo.a(4800, ps.field_A, new String[]{vl.currentLocationLabel});
-            mw.field_E.scrollContainer.viewport.text = null;
+            ListMissionsConsoleCommand.field_E.scrollContainer.viewport.text = null;
             var6 = null;
             var7 = (SocialListEntry) (var4.first((byte) 109));
             while (true) {
@@ -93,7 +93,7 @@ abstract class AiPlanningStrategy {
                     var7.inheritVisualStateForDescendants(-10027);
                     var8 = 1;
                   }
-                  var7.width = mw.field_E.listContent.width;
+                  var7.width = ListMissionsConsoleCommand.field_E.listContent.width;
                   var9 = 0;
                   if (null != var7.locationLabel) {
                     if (vl.currentLocationLabel != var7.locationLabel) {
@@ -152,7 +152,7 @@ abstract class AiPlanningStrategy {
                     var7.pendingHeightDelta = var9 - var7.height;
                   }
                   if (var8 != 0) {
-                    mw.field_E.listContent.positionAfter(var7, true, 2, (ClientUiComponent) (var6));
+                    ListMissionsConsoleCommand.field_E.listContent.positionAfter(var7, true, 2, (ClientUiComponent) (var6));
                   }
                   var6 = var7;
                   if (var7.previousNameComponent != null &&
@@ -165,7 +165,7 @@ abstract class AiPlanningStrategy {
                     }
                   } else {
                     var16 = var7.displayName;
-                    ng.openClientContextMenu(mw.field_E.scrollContainer, var7, (int[]) null, (String) null, -1, 84, -1, var16, 0L);
+                    ng.openClientContextMenu(ListMissionsConsoleCommand.field_E.scrollContainer, var7, (int[]) null, (String) null, -1, 84, -1, var16, 0L);
                     if (null != var7.locationLabel &&
                       !fs.isActivePrivateTextRecipient((byte) 110, tn.activeContextMenu.accountName) &&
                       !NodeIterator.field_a) {
@@ -184,18 +184,18 @@ abstract class AiPlanningStrategy {
                   continue;
                 }
               } else {
-                decompiledFrameRemainder0 = (0 != mw.field_E.addButton.pressedButton);
+                decompiledFrameRemainder0 = (0 != ListMissionsConsoleCommand.field_E.addButton.pressedButton);
                 if (decompiledFrameRemainder0) {
-                  EffectPresentation.field_e = new AccountNamePrompt(mw.field_E.addButton.screenX, mw.field_E.addButton.screenY, mw.field_E.addButton.width, mw.field_E.addButton.height, iv.field_a, kq.field_N, eq.field_h, eq.field_h);
+                  EffectPresentation.field_e = new AccountNamePrompt(ListMissionsConsoleCommand.field_E.addButton.screenX, ListMissionsConsoleCommand.field_E.addButton.screenY, ListMissionsConsoleCommand.field_E.addButton.width, ListMissionsConsoleCommand.field_E.addButton.height, iv.field_a, kq.field_N, eq.field_h, eq.field_h);
                 }
               }
               if (decompiledFrameRemainder0) {
                 ut.field_fb = 0;
               }
-              if (mw.field_E.removeButton.pressedButton == 0) {
+              if (ListMissionsConsoleCommand.field_E.removeButton.pressedButton == 0) {
                 break;
               }
-              EffectPresentation.field_e = new AccountNamePrompt(mw.field_E.removeButton.screenX, mw.field_E.removeButton.screenY, mw.field_E.removeButton.width, mw.field_E.removeButton.height, se.field_b, kq.field_N, eq.field_h, eq.field_h);
+              EffectPresentation.field_e = new AccountNamePrompt(ListMissionsConsoleCommand.field_E.removeButton.screenX, ListMissionsConsoleCommand.field_E.removeButton.screenY, ListMissionsConsoleCommand.field_E.removeButton.width, ListMissionsConsoleCommand.field_E.removeButton.height, se.field_b, kq.field_N, eq.field_h, eq.field_h);
               ut.field_fb = 1;
               break;
             }

@@ -22,7 +22,7 @@ final class uk extends qc {
             uk.d(-122);
           }
           for (var1_int = 0; var1_int < lk.chatHistorySize; var1_int++) {
-            an.chatHistory[var1_int] = null;
+            DefeatPlayerConsoleCommand.chatHistory[var1_int] = null;
           }
           lk.chatHistorySize = 0;
         } catch (RuntimeException runtimeException) {

@@ -115,7 +115,7 @@ final class TutorialController {
             return;
           }
           var4 = pk.field_V;
-          var4 = var4 + " " + ia.a(fo.a(param0 ^ 4800, QuickChatPhrase.a(var2_int != 0, false, (byte) -115, var3 != 0), new String[]{dv.field_r}), '#', param0 ^ 3, "<br><br>");
+          var4 = var4 + " " + ia.a(fo.a(param0 ^ 4800, QuickChatPhrase.a(var2_int != 0, false, (byte) -115, var3 != 0), new String[]{ConsolePanel.field_r}), '#', param0 ^ 3, "<br><br>");
           fe.b(40, 180, 560, 150, MusicPatch.field_m, ConsoleValue.field_b, param0, 128);
           rs.field_n.a(var4, 80, 200, 480, 300, 16777215, -1, 1, 0, 30);
           return;
@@ -1597,7 +1597,7 @@ final class TutorialController {
                                                                                                       }
                                                                                                       vs.field_j = true;
                                                                                                       du.field_h = false;
-                                                                                                      rd.field_j.r(-128);
+                                                                                                      rd.gameplayController.r(-128);
                                                                                                       var6 = param0 ? 1 : 0;
                                                                                                       CipherPacketBuffer.a(var6 != 0, -5, 1, jt.field_a);
                                                                                                       if (var9 == 0) {
@@ -1632,7 +1632,7 @@ final class TutorialController {
                                                                                               if (this.tutorialStage == 12) {
                                                                                                 return;
                                                                                               }
-                                                                                              jq.field_F = -1;
+                                                                                              SetCoatConsoleCommand.field_F = -1;
                                                                                               li.field_q = -1;
                                                                                               this.a((String) null, -1, wf.field_q[0], (String) null, (byte) -64, GlobalSpell.field_l[0]);
                                                                                               var6 = param0 ? 1 : 0;
@@ -1653,7 +1653,7 @@ final class TutorialController {
                                                                                             }
                                                                                           }
                                                                                           li.field_q = -1;
-                                                                                          jq.field_F = -1;
+                                                                                          SetCoatConsoleCommand.field_F = -1;
                                                                                           this.a((String) null, -1, wf.field_q[0], (String) null, (byte) -99, GlobalSpell.field_l[0]);
                                                                                           var6 = param0 ? 1 : 0;
                                                                                           CipherPacketBuffer.a(var6 != 0, 12, 1, 0);
@@ -1896,7 +1896,7 @@ final class TutorialController {
                                                               if (!this.selectionState.hasActivationInput((byte) 111)) {
                                                                 return;
                                                               }
-                                                              rd.field_j.d(122, param0);
+                                                              rd.gameplayController.d(122, param0);
                                                               vs.field_j = true;
                                                               du.field_h = false;
                                                               if (var9 == 0) {
@@ -1906,7 +1906,7 @@ final class TutorialController {
                                                             if (!this.selectionState.hasActivationInput((byte) 117)) {
                                                               return;
                                                             }
-                                                            rd.field_j.h((byte) 69);
+                                                            rd.gameplayController.h((byte) 69);
                                                             var6 = param0 ? 1 : 0;
                                                             CipherPacketBuffer.a(var6 != 0, -1, param1 ^ 1, 0);
                                                             if (var9 == 0) {
@@ -1916,7 +1916,7 @@ final class TutorialController {
                                                           if (!this.selectionState.hasActivationInput((byte) 96)) {
                                                             return;
                                                           }
-                                                          rd.field_j.r(122);
+                                                          rd.gameplayController.r(122);
                                                           var6 = param0 ? 1 : 0;
                                                           CipherPacketBuffer.a(var6 != 0, -1, param1 ^ 1, 0);
                                                           if (var9 == 0) {
@@ -1926,7 +1926,7 @@ final class TutorialController {
                                                         if (!this.selectionState.hasActivationInput((byte) 72)) {
                                                           return;
                                                         }
-                                                        rd.field_j.l((byte) 108);
+                                                        rd.gameplayController.l((byte) 108);
                                                         var6 = param0 ? 1 : 0;
                                                         CipherPacketBuffer.a(var6 != 0, -1, 1, 0);
                                                         if (var9 == 0) {
@@ -1937,7 +1937,7 @@ final class TutorialController {
                                                         return;
                                                       }
                                                       if (fj.field_c) {
-                                                        boolean decompiledSharedTail0 = !(!rd.field_j.battlefield.field_X);
+                                                        boolean decompiledSharedTail0 = !(!rd.gameplayController.battlefield.field_X);
                                                         if (!decompiledSharedTail0) {
                                                           var6 = param0 ? 1 : 0;
                                                           CipherPacketBuffer.a(var6 != 0, 19, param1 ^ 1, jt.field_a);
@@ -2543,7 +2543,7 @@ final class TutorialController {
           var2_int = 56;
           var3 = 0;
           boolean decompiledNaturalLoopExit0 = false;
-          while (!(decompiledNaturalLoopExit0 = (!(var3 < oh.field_G.length)))) {
+          while (!(decompiledNaturalLoopExit0 = (!(var3 < ChannelBaseVolumeConsoleCommand.field_G.length)))) {
             stackOut_3_0 = this.c((byte) 102, var3);
             stackIn_10_0 = stackOut_3_0 ? 1 : 0;
             stackIn_4_0 = stackOut_3_0;
@@ -3871,15 +3871,15 @@ final class TutorialController {
             this.g((byte) 101);
           }
           if (itemId == 9 &&
-            rd.field_j != null) {
-            if (rd.field_j.field_z) {
+            rd.gameplayController != null) {
+            if (rd.gameplayController.field_z) {
               var3 = ac.field_u;
               if ((var4 != 0) &&
-                (rd.field_j.battlefield.campaignMission != null)) {
+                (rd.gameplayController.battlefield.campaignMission != null)) {
                 var3 = jn.field_a;
               }
             } else {
-              if (rd.field_j.battlefield.campaignMission != null) {
+              if (rd.gameplayController.battlefield.campaignMission != null) {
                 var3 = jn.field_a;
               }
             }
@@ -3954,9 +3954,9 @@ final class TutorialController {
                 li.field_q = -1 + var2_int;
                 tf.field_k = 256;
                 RadialSummonMenu.playDefaultSoundWithIntGuard(91, ClientUiNode.field_v[11]);
-                vf.field_f = jq.field_F;
+                vf.field_f = SetCoatConsoleCommand.field_F;
                 kq.field_L = 0;
-                jq.field_F = -1;
+                SetCoatConsoleCommand.field_F = -1;
                 WeightedLruCache.field_d = GlobalSpell.field_h;
                 b.field_n = null;
                 GlobalSpell.field_h = 256;
@@ -3987,24 +3987,24 @@ final class TutorialController {
                 continue;
               }
               ep.field_o = 0;
-              if (var4Lifetime1 != jq.field_F) {
+              if (var4Lifetime1 != SetCoatConsoleCommand.field_F) {
                 MoveAttackAction.field_s = li.field_q;
-                vf.field_f = jq.field_F;
-                jq.field_F = var4Lifetime1;
-                b.field_n = new la(AnimationFrameSet.unitUnlockGroups[li.field_q + 1][jq.field_F]);
+                vf.field_f = SetCoatConsoleCommand.field_F;
+                SetCoatConsoleCommand.field_F = var4Lifetime1;
+                b.field_n = new la(AnimationFrameSet.unitUnlockGroups[li.field_q + 1][SetCoatConsoleCommand.field_F]);
                 WeightedLruCache.field_d = GlobalSpell.field_h;
                 GlobalSpell.field_h = 256;
               } else {
-                vf.field_f = jq.field_F;
+                vf.field_f = SetCoatConsoleCommand.field_F;
                 MoveAttackAction.field_s = li.field_q;
                 WeightedLruCache.field_d = GlobalSpell.field_h;
                 kq.field_L = 0;
-                jq.field_F = -1;
+                SetCoatConsoleCommand.field_F = -1;
                 b.field_n = null;
                 GlobalSpell.field_h = 256;
               }
-              if (jq.field_F > -1) {
-                var5 = AnimationFrameSet.unitUnlockGroups[1 + li.field_q][jq.field_F];
+              if (SetCoatConsoleCommand.field_F > -1) {
+                var5 = AnimationFrameSet.unitUnlockGroups[1 + li.field_q][SetCoatConsoleCommand.field_F];
                 var6 = "";
                 var6Lifetime1 = ut.field_cb[var5];
                 var7 = bh.field_M[var5];
@@ -4020,9 +4020,9 @@ final class TutorialController {
             stackIn_42_0 = IterableDualNodeDeque.isPointerInBounds(param0 - 622, db.a(true, 469), db.a(true, 606), MatchConditionEntry.a(384, (byte) 94), MatchConditionEntry.a(416, (byte) 94));
           }
           if (stackIn_42_0) {
-            if (jq.field_F <= -1) {
+            if (SetCoatConsoleCommand.field_F <= -1) {
               if ((!(li.field_q <= -1)) &&
-                (-1 == jq.field_F) &&
+                (-1 == SetCoatConsoleCommand.field_F) &&
                 (!(-1 >= li.field_q)) &&
                 (pg.playerProfile.unitUnlockMasks[1 + li.field_q] == 0) &&
                 (pg.playerProfile.tryDebitRunes(50, (byte) 103))) {
@@ -4045,25 +4045,25 @@ final class TutorialController {
                   break;
                 }
                 RadialSummonMenu.playDefaultSoundWithIntGuard(stackIn_72_0, ClientUiNode.field_v[14]);
-                if ((var8 != 0) && (jq.field_F > -1 &&
+                if ((var8 != 0) && (SetCoatConsoleCommand.field_F > -1 &&
                   0 < pg.playerProfile.unitUnlockMasks[li.field_q + 1] &&
-                  0 == (pg.playerProfile.unitUnlockMasks[1 + li.field_q] & 1 << jq.field_F) &&
-                  pg.playerProfile.getAvailableRunes((byte) 91) >= bw.unitDefinitions[jq.field_F][11])) {
+                  0 == (pg.playerProfile.unitUnlockMasks[1 + li.field_q] & 1 << SetCoatConsoleCommand.field_F) &&
+                  pg.playerProfile.getAvailableRunes((byte) 91) >= bw.unitDefinitions[SetCoatConsoleCommand.field_F][11])) {
                   vl.outgoingPacket.writeCipheredOpcode(32161, 70);
-                  vl.outgoingPacket.writeShort(true, AnimationFrameSet.unitUnlockGroups[1 + li.field_q][jq.field_F]);
+                  vl.outgoingPacket.writeShort(true, AnimationFrameSet.unitUnlockGroups[1 + li.field_q][SetCoatConsoleCommand.field_F]);
                   RadialSummonMenu.playDefaultSoundWithIntGuard(62, ClientUiNode.field_v[14]);
-                  pg.playerProfile.unitUnlockMasks[1 + li.field_q] = oe.bitwiseOr(pg.playerProfile.unitUnlockMasks[1 + li.field_q], 1 << jq.field_F);
+                  pg.playerProfile.unitUnlockMasks[1 + li.field_q] = oe.bitwiseOr(pg.playerProfile.unitUnlockMasks[1 + li.field_q], 1 << SetCoatConsoleCommand.field_F);
                 }
               }
             } else {
-              if (jq.field_F > -1 &&
+              if (SetCoatConsoleCommand.field_F > -1 &&
                 0 < pg.playerProfile.unitUnlockMasks[li.field_q + 1] &&
-                0 == (pg.playerProfile.unitUnlockMasks[1 + li.field_q] & 1 << jq.field_F) &&
-                pg.playerProfile.getAvailableRunes((byte) 91) >= bw.unitDefinitions[jq.field_F][11]) {
+                0 == (pg.playerProfile.unitUnlockMasks[1 + li.field_q] & 1 << SetCoatConsoleCommand.field_F) &&
+                pg.playerProfile.getAvailableRunes((byte) 91) >= bw.unitDefinitions[SetCoatConsoleCommand.field_F][11]) {
                 vl.outgoingPacket.writeCipheredOpcode(32161, 70);
-                vl.outgoingPacket.writeShort(true, AnimationFrameSet.unitUnlockGroups[1 + li.field_q][jq.field_F]);
+                vl.outgoingPacket.writeShort(true, AnimationFrameSet.unitUnlockGroups[1 + li.field_q][SetCoatConsoleCommand.field_F]);
                 RadialSummonMenu.playDefaultSoundWithIntGuard(62, ClientUiNode.field_v[14]);
-                pg.playerProfile.unitUnlockMasks[1 + li.field_q] = oe.bitwiseOr(pg.playerProfile.unitUnlockMasks[1 + li.field_q], 1 << jq.field_F);
+                pg.playerProfile.unitUnlockMasks[1 + li.field_q] = oe.bitwiseOr(pg.playerProfile.unitUnlockMasks[1 + li.field_q], 1 << SetCoatConsoleCommand.field_F);
               }
             }
           }
@@ -4136,7 +4136,7 @@ final class TutorialController {
           pn.field_h = uk.field_n;
           if (this.tutorialStage == 22 ||
             21 == this.tutorialStage) {
-            rd.field_j = null;
+            rd.gameplayController = null;
             System.gc();
             MoveEvent.campaignMenu.loadCampaignResources((byte) -120);
             MoveEvent.campaignMenu.updateMusicProfile(92);
@@ -4236,7 +4236,7 @@ final class TutorialController {
           if (null != b.field_n) {
             TriangleRasterizer.setClip(db.a(true, 34), MatchConditionEntry.a(154, (byte) 94), db.a(true, 296), MatchConditionEntry.a(416, (byte) 94));
             TriangleRasterizer.centerProjection();
-            stackIn_25_0 = ((pg.playerProfile.unitUnlockMasks[1 + li.field_q] & 1 << jq.field_F) != 0) ? 0 : 1;
+            stackIn_25_0 = ((pg.playerProfile.unitUnlockMasks[1 + li.field_q] & 1 << SetCoatConsoleCommand.field_F) != 0) ? 0 : 1;
             var7Lifetime1 = stackIn_25_0;
             fieldTemp$0 = kq.field_L;
             kq.field_L = kq.field_L + 1;
@@ -4299,7 +4299,7 @@ final class TutorialController {
                   TeamRoster.field_e.f(db.a(true, -35 + var8Lifetime1Lifetime1), MatchConditionEntry.a(var9Lifetime1Lifetime1 - 35, (byte) 94), 128);
                   na.field_F = 20 + var7Lifetime2;
                 }
-                if (~jq.field_F == ~var7Lifetime2) {
+                if (~SetCoatConsoleCommand.field_F == ~var7Lifetime2) {
                   TeamRoster.field_e.f(db.a(true, var8Lifetime1Lifetime1 - 35), MatchConditionEntry.a(var9Lifetime1Lifetime1 - 35, (byte) 94), var3);
                 }
                 if (vf.field_f == var7Lifetime2 &&
@@ -4332,13 +4332,13 @@ final class TutorialController {
           }
           fe.b(db.a(true, 465), MatchConditionEntry.a(330, (byte) 94), 145, 40, EffectPresentation.field_j, jh.field_k, 0, 128);
           fe.b(db.a(true, 465), MatchConditionEntry.a(380, (byte) 94), 145, 40, EffectPresentation.field_j, jh.field_k, 0, 128);
-          if (jq.field_F <= -1) {
+          if (SetCoatConsoleCommand.field_F <= -1) {
             this.d((byte) -35, 1 + li.field_q);
             if (var10 == 0) {
               return;
             }
           }
-          this.a(li.field_q + 1, jq.field_F, -104);
+          this.a(li.field_q + 1, SetCoatConsoleCommand.field_F, -104);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -4679,9 +4679,9 @@ final class TutorialController {
                   this.tutorialStage == 12 &&
                   tf.field_k == 0) {
                   MoveAttackAction.field_s = li.field_q;
-                  vf.field_f = jq.field_F;
+                  vf.field_f = SetCoatConsoleCommand.field_F;
                   WeightedLruCache.field_d = GlobalSpell.field_h;
-                  jq.field_F = -1;
+                  SetCoatConsoleCommand.field_F = -1;
                   li.field_q = li.field_q + 1;
                   GlobalSpell.field_h = 256;
                   li.field_q = li.field_q % 7;
@@ -4907,11 +4907,11 @@ final class TutorialController {
             }
           }
           if (2 == this.tutorialStage &&
-            null != rd.field_j &&
-            rd.field_j.field_lb &&
-            0 <= rd.field_j.controlledPlayerId &&
-            rd.field_j.battlefield != null &&
-            rd.field_j.battlefield.field_X) {
+            null != rd.gameplayController &&
+            rd.gameplayController.field_lb &&
+            0 <= rd.gameplayController.controlledPlayerId &&
+            rd.gameplayController.battlefield != null &&
+            rd.gameplayController.battlefield.field_X) {
             CipherPacketBuffer.a(false, 3, 1, 0);
           }
           return;
@@ -4929,7 +4929,7 @@ final class TutorialController {
         RuntimeException decompiledCaughtException = null;
         try {
           var3_int = 83 % ((44 - param0) / 33);
-          stackIn_7_0 = (this.b(-82, param1)) || (oh.field_G[param1]);
+          stackIn_7_0 = (this.b(-82, param1)) || (ChannelBaseVolumeConsoleCommand.field_G[param1]);
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

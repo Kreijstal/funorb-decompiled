@@ -5,7 +5,7 @@ final class ol extends lu {
     static int field_B;
     static int field_A;
     static RgbSprite field_y;
-    static ConsoleExpression[] field_w;
+    static ConsoleExpression[] cachedConsoleTokens;
     static volatile boolean field_z;
     static String field_x;
     static boolean field_C;
@@ -46,11 +46,11 @@ final class ol extends lu {
         if (param0 <= 30) {
           ol.b((byte) -13);
           field_x = null;
-          field_w = null;
+          cachedConsoleTokens = null;
           return;
         }
         field_x = null;
-        field_w = null;
+        cachedConsoleTokens = null;
     }
 
     private ol(BitmapFont param0, int param1) {

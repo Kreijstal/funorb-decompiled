@@ -1,41 +1,41 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class wt extends ConsoleCommand {
+final class GiveTileConsoleCommand extends ConsoleCommand {
     static boolean field_G;
     static String field_E;
     static String field_F;
 
-    wt(String param0, Class[] param1, String param2) {
-        super(param0, param1, param2);
+    GiveTileConsoleCommand(String commandName, Class[] parameterTypes, String description) {
+        super(commandName, parameterTypes, description);
     }
 
     final ConsoleValue execute(int obfuscationGuard, ConsoleValue[] arguments) {
-        RuntimeException var3 = null;
-        ConsoleValue[] var4 = null;
-        ConsoleValue stackIn_3_0 = null;
-        RuntimeException stackIn_6_0 = null;
-        StringBuilder stackIn_6_1 = null;
-        String stackIn_7_2 = null;
-        RuntimeException decompiledCaughtException = null;
+        RuntimeException failure = null;
+        ConsoleValue[] guardArguments = null;
+        ConsoleValue result = null;
+        RuntimeException failureForContext = null;
+        StringBuilder errorContext = null;
+        String argumentsDescription = null;
+        RuntimeException caughtFailure = null;
         try {
           if (obfuscationGuard != -24872) {
-            var4 = (ConsoleValue[]) null;
+            guardArguments = (ConsoleValue[]) null;
             this.execute(-63, (ConsoleValue[]) null);
           }
-          stackIn_3_0 = new ConsoleValue(SoundPlaybackHandle.b(128, arguments[0].asInt(2)));
-          return stackIn_3_0;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var3 = decompiledCaughtException;
-          stackIn_6_0 = var3;
-          stackIn_6_1 = new StringBuilder().append("wt.C(").append(obfuscationGuard).append(',');
+          result = new ConsoleValue(SoundPlaybackHandle.giveSelectedTileToPlayer(128, arguments[0].asInt(2)));
+          return result;
+        } catch (java.lang.RuntimeException caughtParameter) {
+          caughtFailure = caughtParameter;
+          failure = caughtFailure;
+          failureForContext = failure;
+          errorContext = new StringBuilder().append("wt.C(").append(obfuscationGuard).append(',');
           if (arguments == null) {
-            stackIn_7_2 = "null";
+            argumentsDescription = "null";
           } else {
-            stackIn_7_2 = "{...}";
+            argumentsDescription = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) failureForContext), ((StringBuilder) (Object) errorContext).append(argumentsDescription).append(')').toString());
         }
     }
 

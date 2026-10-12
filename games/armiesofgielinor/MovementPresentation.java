@@ -187,7 +187,7 @@ final class MovementPresentation implements EventPresentation {
           }
           for (var4 = 0; var4 < var2; var4++) {
             var5 = sf.unitAnimationGroups[var4];
-            var6 = jq.field_I[var5];
+            var6 = SetCoatConsoleCommand.field_I[var5];
             PreparedAction.a(var8[var4], var6, var4, 2378077);
           }
           return;

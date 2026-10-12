@@ -27,54 +27,54 @@ final class DelayedPacket extends IntrusiveNode {
         }
     }
 
-    final static String a(int param0, byte param1) {
-        int var9 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
-        GameplayController var10 = rd.field_j;
-        GameplayController var11 = var10;
-        if (var11 == null) {
+    final static String defeatPlayerForConsole(int playerId, byte obfuscationGuard) {
+        int obfuscationControl = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        GameplayController controller = rd.gameplayController;
+        GameplayController controllerAlias = controller;
+        if (controllerAlias == null) {
           return "No game in progress.";
         }
-        if (param0 < 0) {
+        if (playerId < 0) {
           return "Please choose a player, 0-based.";
         }
-        if (var11.battlefield.playerCount < param0) {
+        if (controllerAlias.battlefield.playerCount < playerId) {
           return "Please choose a player, 0-based.";
         }
-        var11.battlefield.eliminatePlayer(10001, param0, false);
+        controllerAlias.battlefield.eliminatePlayer(10001, playerId, false);
         kw.campaignPacketWord0 = 2297;
         cg.campaignPacketWord2 = 72584621;
         wr.campaignPacketWord3 = 224;
         ii.campaignPacketWord1 = 4452;
-        int var3 = var10.battlefield.playerTurnCounts[var10.controlledPlayerId];
-        int var4 = var10.battlefield.damageTakenByPlayer[var10.controlledPlayerId];
-        hc.field_b = hc.field_b + 1;
-        hc.field_b = hc.field_b + (ko.pointerY ^ AiPlanningStrategy.pointerX);
-        if (param1 <= 31) {
-          DelayedPacket.a(-2, (byte) 45);
+        int turnsTaken = controller.battlefield.playerTurnCounts[controller.controlledPlayerId];
+        int damageTaken = controller.battlefield.damageTakenByPlayer[controller.controlledPlayerId];
+        hc.campaignMetricMutationCounter = hc.campaignMetricMutationCounter + 1;
+        hc.campaignMetricMutationCounter = hc.campaignMetricMutationCounter + (ko.pointerY ^ AiPlanningStrategy.pointerX);
+        if (obfuscationGuard <= 31) {
+          DelayedPacket.defeatPlayerForConsole(-2, (byte) 45);
         }
-        hc.field_b = Math.abs(hc.field_b);
-        int var5 = var3 + 0;
-        int var6 = var4 - 0;
-        int var7 = hc.field_b % 4;
-        int var8 = var7;
-        if (0 == var8) {
-          kw.campaignPacketWord0 = kw.campaignPacketWord0 - var6;
-          ii.campaignPacketWord1 = ii.campaignPacketWord1 - var5;
+        hc.campaignMetricMutationCounter = Math.abs(hc.campaignMetricMutationCounter);
+        int turnDelta = turnsTaken + 0;
+        int damageDelta = damageTaken - 0;
+        int mutationSelector = hc.campaignMetricMutationCounter % 4;
+        int mutationVariant = mutationSelector;
+        if (0 == mutationVariant) {
+          kw.campaignPacketWord0 = kw.campaignPacketWord0 - damageDelta;
+          ii.campaignPacketWord1 = ii.campaignPacketWord1 - turnDelta;
           return "Done.";
         }
-        if (var8 != 1) {
-          if (var8 == 2) {
-            kw.campaignPacketWord0 = kw.campaignPacketWord0 + (var5 - var6);
+        if (mutationVariant != 1) {
+          if (mutationVariant == 2) {
+            kw.campaignPacketWord0 = kw.campaignPacketWord0 + (turnDelta - damageDelta);
             return "Done.";
           }
-          if (var8 != 3) {
+          if (mutationVariant != 3) {
             throw new IllegalStateException("");
           }
-          ii.campaignPacketWord1 = ii.campaignPacketWord1 - (-var6 + var5);
+          ii.campaignPacketWord1 = ii.campaignPacketWord1 - (-damageDelta + turnDelta);
           return "Done.";
         }
-        ii.campaignPacketWord1 = ii.campaignPacketWord1 + var6;
-        kw.campaignPacketWord0 = kw.campaignPacketWord0 + var5;
+        ii.campaignPacketWord1 = ii.campaignPacketWord1 + damageDelta;
+        kw.campaignPacketWord0 = kw.campaignPacketWord0 + turnDelta;
         return "Done.";
     }
 

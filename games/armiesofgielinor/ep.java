@@ -254,7 +254,7 @@ final class ep {
           if (bk.ignoredAccountsByName == null) {
             bk.ignoredAccountsByName = new DualNodeHashTable(64);
           }
-          ot.ignoreEntries = param0.children;
+          FixInvisibleUnitsConsoleCommand.ignoreEntries = param0.children;
           wh.friendEntries = param2.children;
           da.clearSocialLists(-123);
         } catch (RuntimeException runtimeException) {

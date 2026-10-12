@@ -91,7 +91,7 @@ final class fk implements WidgetPainter {
           expression = cursor.readToken((byte) 13);
           if (BattleTutorial.consoleStringKind != expression.kind &&
             hf.consoleCharacterKind != expression.kind &&
-            expression.kind != gg.consoleNumberKind &&
+            expression.kind != PrintVictoryConditionsConsoleCommand.consoleNumberKind &&
             expression.kind != EquipmentBattleTutorial.consoleBooleanKind) {
             if (rn.consoleCallKind != expression.kind) {
               throw new ConsoleParseException(expression.sourceOffset);
@@ -312,7 +312,7 @@ final class fk implements WidgetPainter {
                 stackIn_3_0 = (String) null;
                 return stackIn_3_0;
               }
-              var4 = dj.a(97, ';', var3);
+              var4 = dj.splitText(97, ';', var3);
               for (var5 = 0; var4.length > var5; var5++) {
                 var6 = var4[var5].indexOf('=');
                 if (var6 >= 0 &&

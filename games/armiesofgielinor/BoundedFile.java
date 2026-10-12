@@ -87,42 +87,42 @@ final class BoundedFile {
           if (19 == param0) {
             wl.a(65, false);
             SoftwareRaster.d(0, 0, so.field_b.field_a, so.field_b.field_g);
-            rq.field_p[param0].e(param3);
+            ConsoleTextNode.field_p[param0].e(param3);
           } else {
             if (param0 == 25) {
               wl.a(65, false);
               SoftwareRaster.d(0, 0, so.field_b.field_a, so.field_b.field_g);
-              rq.field_p[param0].e(param3);
+              ConsoleTextNode.field_p[param0].e(param3);
             } else {
               if (param0 == 1) {
                 wl.a(65, false);
                 SoftwareRaster.d(0, 0, so.field_b.field_a, so.field_b.field_g);
-                rq.field_p[param0].e(param3);
+                ConsoleTextNode.field_p[param0].e(param3);
               } else {
                 if (param0 == 24) {
                   wl.a(65, false);
                   SoftwareRaster.d(0, 0, so.field_b.field_a, so.field_b.field_g);
-                  rq.field_p[param0].e(param3);
+                  ConsoleTextNode.field_p[param0].e(param3);
                 } else {
                   if (param0 == 2) {
                     wl.a(65, false);
                     SoftwareRaster.d(0, 0, so.field_b.field_a, so.field_b.field_g);
-                    rq.field_p[param0].e(param3);
+                    ConsoleTextNode.field_p[param0].e(param3);
                   } else {
                     if (param0 == 17) {
                       wl.a(65, false);
                       SoftwareRaster.d(0, 0, so.field_b.field_a, so.field_b.field_g);
-                      rq.field_p[param0].e(param3);
+                      ConsoleTextNode.field_p[param0].e(param3);
                     } else {
                       if (param0 == 3) {
                         wl.a(65, false);
                         SoftwareRaster.d(0, 0, so.field_b.field_a, so.field_b.field_g);
-                        rq.field_p[param0].e(param3);
+                        ConsoleTextNode.field_p[param0].e(param3);
                       } else {
                         if (param0 == 4) {
                           wl.a(65, false);
                           SoftwareRaster.d(0, 0, so.field_b.field_a, so.field_b.field_g);
-                          rq.field_p[param0].e(param3);
+                          ConsoleTextNode.field_p[param0].e(param3);
                         } else {
                           if (param0 == -2) {
                             SoftwareRaster.b();
@@ -145,7 +145,7 @@ final class BoundedFile {
                                       wl.a(61, false);
                                     }
                                     SoftwareRaster.d(0, 0, so.field_b.field_a, so.field_b.field_g);
-                                    rq.field_p[param0].e(false);
+                                    ConsoleTextNode.field_p[param0].e(false);
                                   }
                                 }
                               }

@@ -121,21 +121,21 @@ final class RadialSummonMenu {
         }
     }
 
-    final static String a(byte param0, int param1) {
-        int var3 = 0;
-        int var4 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
-        if (0 > param1 ||
-          param1 >= 3) {
-          return "Unkown Campaign " + param1;
+    final static String listCampaignMissions(byte obfuscationGuard, int campaignIndex) {
+        int missionIndex = 0;
+        int obfuscationControl = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        if (0 > campaignIndex ||
+          campaignIndex >= 3) {
+          return "Unkown Campaign " + campaignIndex;
         }
-        String var2 = "";
-        if (param0 < 19) {
+        String missionList = "";
+        if (obfuscationGuard < 19) {
           return (String) null;
         }
-        for (var3 = 0; var3 < cd.campaigns[param1].missions.length; var3++) {
-          var2 = var2 + var3 + ": " + cd.campaigns[param1].missions[var3].name + "\n";
+        for (missionIndex = 0; missionIndex < cd.campaigns[campaignIndex].missions.length; missionIndex++) {
+          missionList = missionList + missionIndex + ": " + cd.campaigns[campaignIndex].missions[missionIndex].name + "\n";
         }
-        return var2;
+        return missionList;
     }
 
     final RadialSummonItem getItemByChoiceId(int choiceId, int obfuscationGuard) {
@@ -168,7 +168,7 @@ final class RadialSummonMenu {
         ta.field_R.addChild(bk.field_f, 54);
         ta.field_R.addChild(df.field_K, 70);
         df.field_K.addChild(IconTextComponent.field_Kb, 112);
-        df.field_K.addChild(dv.field_m, 74);
+        df.field_K.addChild(ConsolePanel.field_m, 74);
         ClientUiComponent.a(27, param1);
     }
 

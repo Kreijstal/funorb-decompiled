@@ -32,7 +32,7 @@ final class ChatMessage {
         }
         if (!this.systemMessage && (2 != this.channelId ||
           this.chatIconId <= 0)) {
-          if (oh.localAccountId == this.accountId) {
+          if (ChannelBaseVolumeConsoleCommand.localAccountId == this.accountId) {
             return 1;
           }
           if (th.socialListState == 2 &&

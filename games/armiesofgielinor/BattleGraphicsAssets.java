@@ -113,9 +113,9 @@ final class BattleGraphicsAssets {
         bk.attackTargetSprites = MapLayout.loadIndexedSpritesByName("attacktargets", -28106, "basic", this.basicArchive);
         hq.surroundTileSprites = MapLayout.loadIndexedSpritesByName("surround_tiles", -28106, "basic", this.basicArchive);
         vf.smokeSprites = fk.loadRgbSpritesByName("smoke", (byte) -124, this.basicArchive, "basic");
-        jq.kalphiteSprites = fk.loadRgbSpritesByName("kalphites", (byte) -124, this.basicArchive, "basic");
-        for (spriteIndex = obfuscationGuard; jq.kalphiteSprites.length > spriteIndex; spriteIndex++) {
-          jq.kalphiteSprites[spriteIndex].normalizeCanvas();
+        SetCoatConsoleCommand.kalphiteSprites = fk.loadRgbSpritesByName("kalphites", (byte) -124, this.basicArchive, "basic");
+        for (spriteIndex = obfuscationGuard; SetCoatConsoleCommand.kalphiteSprites.length > spriteIndex; spriteIndex++) {
+          SetCoatConsoleCommand.kalphiteSprites[spriteIndex].normalizeCanvas();
         }
         ConsoleTokenCursor.boneSprites = MapLayout.loadIndexedSpritesByName("bones", obfuscationGuard - 28106, "basic", this.basicArchive);
         wf.boneShadowSprites = fk.loadRgbSpritesByName("boneshadows", (byte) -124, this.basicArchive, "basic");

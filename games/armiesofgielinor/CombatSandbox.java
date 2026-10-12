@@ -260,7 +260,7 @@ final class CombatSandbox {
           return;
         }
         try {
-          rq.pushRasterState((byte) -56);
+          ConsoleTextNode.pushRasterState((byte) -56);
           SoftwareRaster.setTarget(param0.pixels, param0.canvasWidth, param0.canvasHeight);
         } catch (RuntimeException runtimeException) {
           throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "vn.F(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');

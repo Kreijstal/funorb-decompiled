@@ -331,7 +331,7 @@ final class oo {
         RuntimeException var9 = null;
         var12 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          rq.pushRasterState((byte) -56);
+          ConsoleTextNode.pushRasterState((byte) -56);
           for (var9_int = param7; var9_int < param6; var9_int++) {
             SoftwareRaster.setClip(param3, var9_int, param1, var9_int + 1);
             var10 = var9_int * param0.length / param6;
@@ -740,11 +740,11 @@ final class oo {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
         try {
-          if (rd.field_j != null) {
-            oa.selectMusicWithDefaultProfile(90, rd.field_j.field_d);
+          if (rd.gameplayController != null) {
+            ToggleTurnSkipConsoleCommand.selectMusicWithDefaultProfile(90, rd.gameplayController.field_d);
           } else {
             if (SectorCacheStore.field_a != null) {
-              oa.selectMusicWithDefaultProfile(102, SectorCacheStore.field_a.field_d);
+              ToggleTurnSkipConsoleCommand.selectMusicWithDefaultProfile(102, SectorCacheStore.field_a.field_d);
             }
           }
           if (param0 != -387) {

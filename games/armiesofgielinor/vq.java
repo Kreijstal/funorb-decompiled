@@ -335,7 +335,7 @@ final class vq {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1) {
-            stackIn_4_0 = wt.a(param0, (byte) 65, false);
+            stackIn_4_0 = GiveTileConsoleCommand.a(param0, (byte) 65, false);
             return stackIn_4_0;
           }
           return false;

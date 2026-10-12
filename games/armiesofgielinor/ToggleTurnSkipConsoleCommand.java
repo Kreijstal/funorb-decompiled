@@ -1,22 +1,22 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class oa extends ConsoleCommand {
+final class ToggleTurnSkipConsoleCommand extends ConsoleCommand {
     static QuickChatCommandDefinition field_F;
     static String field_G;
     static String field_E;
     static IndexedSprite[] field_H;
-    static DebugConsole field_I;
+    static DebugConsole debugConsole;
 
-    oa(String param0, Class[] param1, String param2) {
-        super(param0, param1, param2);
+    ToggleTurnSkipConsoleCommand(String commandName, Class[] parameterTypes, String description) {
+        super(commandName, parameterTypes, description);
     }
 
     public static void g(int param0) {
         if (param0 >= -112) {
           return;
         }
-        field_I = null;
+        debugConsole = null;
         field_G = null;
         field_H = null;
         field_E = null;
@@ -45,29 +45,29 @@ final class oa extends ConsoleCommand {
     }
 
     final ConsoleValue execute(int obfuscationGuard, ConsoleValue[] arguments) {
-        RuntimeException var3 = null;
-        ConsoleValue stackIn_3_0 = null;
-        RuntimeException stackIn_6_0 = null;
-        StringBuilder stackIn_6_1 = null;
-        String stackIn_7_2 = null;
-        RuntimeException decompiledCaughtException = null;
+        RuntimeException failure = null;
+        ConsoleValue result = null;
+        RuntimeException failureForContext = null;
+        StringBuilder errorContext = null;
+        String argumentsDescription = null;
+        RuntimeException caughtFailure = null;
         try {
           if (obfuscationGuard != -24872) {
-            oa.g(-45);
+            ToggleTurnSkipConsoleCommand.g(-45);
           }
-          stackIn_3_0 = new ConsoleValue(ti.b((byte) -120));
-          return stackIn_3_0;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var3 = decompiledCaughtException;
-          stackIn_6_0 = var3;
-          stackIn_6_1 = new StringBuilder().append("oa.C(").append(obfuscationGuard).append(',');
+          result = new ConsoleValue(ti.toggleAutomaticTurnSkipping((byte) -120));
+          return result;
+        } catch (java.lang.RuntimeException caughtParameter) {
+          caughtFailure = caughtParameter;
+          failure = caughtFailure;
+          failureForContext = failure;
+          errorContext = new StringBuilder().append("oa.C(").append(obfuscationGuard).append(',');
           if (arguments == null) {
-            stackIn_7_2 = "null";
+            argumentsDescription = "null";
           } else {
-            stackIn_7_2 = "{...}";
+            argumentsDescription = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) failureForContext), ((StringBuilder) (Object) errorContext).append(argumentsDescription).append(')').toString());
         }
     }
 

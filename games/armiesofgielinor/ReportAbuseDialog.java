@@ -340,7 +340,7 @@ final class ReportAbuseDialog extends ClientUiComponent {
         var2[2] = 16777215;
         var2[0] = 1;
         var2[1] = param0;
-        TurnEffectEvent.field_z = new hc(oh.field_J, IsaacRandom.field_k, rs.field_n, var2, 0, 0);
+        TurnEffectEvent.field_z = new hc(ChannelBaseVolumeConsoleCommand.field_J, IsaacRandom.field_k, rs.field_n, var2, 0, 0);
     }
 
     final boolean isMuteSelected(int obfuscationGuard) {
@@ -464,7 +464,7 @@ final class ReportAbuseDialog extends ClientUiComponent {
                     stackIn_8_0 = this;
                     stackIn_8_1 = null;
                     stackIn_8_2 = null;
-                    stackIn_8_5 = jq.field_E;
+                    stackIn_8_5 = SetCoatConsoleCommand.field_E;
                     break regionExit1;
                   }
                 }
@@ -592,7 +592,7 @@ final class ReportAbuseDialog extends ClientUiComponent {
             this.setBounds(var24, -20500, var23, var26, var25);
             return;
           }
-          this.instructions = new ClientUiComponent(0L, textStyle, ot.field_F);
+          this.instructions = new ClientUiComponent(0L, textStyle, FixInvisibleUnitsConsoleCommand.field_F);
           this.instructions.horizontalAlignment = 1;
           this.instructions.textColour = 11184810;
           this.content.addChild(this.instructions, 43);

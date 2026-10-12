@@ -30,7 +30,7 @@ final class pg {
         int[] variantsAlias = variants;
         int[] variantChoices = variantsAlias;
         int[] slotVariants = variantChoices;
-        int selectedVariant = variantChoices[AttackEvent.nextBoundedInt(false, variants.length, gg.animationRandom)];
+        int selectedVariant = variantChoices[AttackEvent.nextBoundedInt(false, variants.length, PrintVictoryConditionsConsoleCommand.animationRandom)];
         if (selectedVariant >= 0) {
           return ck.animationSequencesByGroup[sf.unitAnimationGroups[unitType]][selectedVariant];
         }

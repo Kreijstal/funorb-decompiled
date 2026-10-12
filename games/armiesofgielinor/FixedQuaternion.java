@@ -150,7 +150,7 @@ final class FixedQuaternion {
               return param0;
             }
             param0 = false;
-            ot.g(76);
+            FixInvisibleUnitsConsoleCommand.g(76);
           }
           kd.a(param6 ^ -81, param4, param0);
           wm.a(0, param2, param0);
@@ -166,12 +166,12 @@ final class FixedQuaternion {
 
     final static void a(String param0, boolean param1) {
         if (!param1) {
-          System.out.println("Error: " + dv.a(param0, -87, "%0a", "\n"));
+          System.out.println("Error: " + ConsolePanel.replaceText(param0, -87, "%0a", "\n"));
           return;
         }
         String var3 = (String) null;
         FixedQuaternion.isOnlineFriendOrRoomMember(71L, (String) null, (byte) 79);
-        System.out.println("Error: " + dv.a(param0, -87, "%0a", "\n"));
+        System.out.println("Error: " + ConsolePanel.replaceText(param0, -87, "%0a", "\n"));
     }
 
     public static void a(byte param0) {

@@ -1591,11 +1591,11 @@ final class TickCounter {
                 }
                 var2 = fk.a(false, "STATUS_STUN,0");
                 if (null != var2) {
-                  ba.field_E[0] = uu.a(var2, (byte) 57);
+                  PrintCoatConsoleCommand.field_E[0] = uu.a(var2, (byte) 57);
                 }
                 var2 = fk.a(false, "STATUS_STUN,1");
                 if (null != var2) {
-                  ba.field_E[1] = uu.a(var2, (byte) 63);
+                  PrintCoatConsoleCommand.field_E[1] = uu.a(var2, (byte) 63);
                 }
                 var2 = fk.a(false, "STATUS_EFFECTEXPAND");
                 if (var2 != null) {
@@ -3283,7 +3283,7 @@ final class TickCounter {
                 }
                 var2 = fk.a(false, "LABEL_INGAME_MULTI_SPECTATING");
                 if (var2 != null) {
-                  gg.field_H = uu.a(var2, (byte) 82);
+                  PrintVictoryConditionsConsoleCommand.field_H = uu.a(var2, (byte) 82);
                 }
                 var2 = fk.a(false, "LABEL_MISSION_SELECTION");
                 if (var2 != null) {
@@ -3371,7 +3371,7 @@ final class TickCounter {
                 }
                 var2 = fk.a(false, "LABEL_NO");
                 if (null != var2) {
-                  oa.field_G = uu.a(var2, (byte) -111);
+                  ToggleTurnSkipConsoleCommand.field_G = uu.a(var2, (byte) -111);
                 }
                 var2 = fk.a(false, "LABEL_STATS");
                 if (var2 != null) {
@@ -4783,7 +4783,7 @@ final class TickCounter {
                 }
                 var2 = fk.a(false, "TTREEN_DRAGONSCALE");
                 if (null != var2) {
-                  oh.field_F = uu.a(var2, (byte) -113);
+                  ChannelBaseVolumeConsoleCommand.field_F = uu.a(var2, (byte) -113);
                 }
                 var2 = fk.a(false, "TTREEN_CAMOUFLAGE");
                 if (null != var2) {
@@ -4863,7 +4863,7 @@ final class TickCounter {
                 }
                 var2 = fk.a(false, "TTREEN_SOURCERY");
                 if (var2 != null) {
-                  dv.field_i = uu.a(var2, (byte) -97);
+                  ConsolePanel.field_i = uu.a(var2, (byte) -97);
                 }
                 var2 = fk.a(false, "TTREEN_PRAYER");
                 if (var2 != null) {
@@ -5177,7 +5177,7 @@ final class TickCounter {
                 }
                 var2 = fk.a(false, "TERROR_BLADEMAGE");
                 if (var2 != null) {
-                  qa.field_E = uu.a(var2, (byte) 48);
+                  ChannelFadeTimeConsoleCommand.field_E = uu.a(var2, (byte) 48);
                 }
                 var2 = fk.a(false, "TERROR_BOWNORANGE");
                 if (var2 != null) {
@@ -5580,7 +5580,7 @@ final class TickCounter {
                 }
                 var2 = fk.a(false, "ZERO");
                 if (var2 != null) {
-                  dv.field_g = uu.a(var2, (byte) -111);
+                  ConsolePanel.field_g = uu.a(var2, (byte) -111);
                 }
                 sb.field_e = null;
             }

@@ -390,12 +390,12 @@ abstract class nl extends Widget implements gw {
           var16 = uj.field_l;
           var16.horizontalAlignment = 1;
           eb.field_c = new ClientUiComponent(0L, (ClientUiComponent) null);
-          gg.field_E = new ClientUiComponent(0L, eq.field_h);
-          gg.field_E.horizontalAlignment = 1;
+          PrintVictoryConditionsConsoleCommand.field_E = new ClientUiComponent(0L, eq.field_h);
+          PrintVictoryConditionsConsoleCommand.field_E.horizontalAlignment = 1;
           di.field_l = new ClientUiComponent(0L, SoundPlaybackHandle.field_p, su.field_b);
           SpellCastEvent.field_D = new ClientUiComponent(0L, br.field_e, PcmPlayerService.ratingLabel);
           bu.field_a = new ScrollContainer(0L, new ClientUiComponent(0L, (ClientUiComponent) null), ConsoleEvaluationException.field_c, WeightedLruCache.field_b);
-          eb.field_c.addChild(gg.field_E, 72);
+          eb.field_c.addChild(PrintVictoryConditionsConsoleCommand.field_E, 72);
           eb.field_c.addChild(di.field_l, 83);
           if (fh.field_c) {
             eb.field_c.addChild(SpellCastEvent.field_D, 107);
@@ -503,7 +503,7 @@ abstract class nl extends Widget implements gw {
           pd.field_c.addChild(so.field_d, 69);
           pd.field_c.addChild(pi.field_N, 91);
           bk.field_f = new ClientUiComponent(0L, UnitModelPreview.field_m, TickCounter.field_d.toUpperCase());
-          dv.field_m = new ClientUiComponent(0L, bw.field_h, ConsoleCommand.field_D.toUpperCase());
+          ConsolePanel.field_m = new ClientUiComponent(0L, bw.field_h, ConsoleCommand.field_D.toUpperCase());
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -715,7 +715,7 @@ abstract class nl extends Widget implements gw {
             nl.a(30, -59, (iw) null);
           }
           cg.field_c.addLast((byte) -119, (IntrusiveNode) (param2));
-          ot.a((byte) 112, param1, param2);
+          FixInvisibleUnitsConsoleCommand.a((byte) 112, param1, param2);
         } catch (RuntimeException runtimeException) {
           throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "nl.MA(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }

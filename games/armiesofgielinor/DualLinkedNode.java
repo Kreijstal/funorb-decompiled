@@ -5,7 +5,7 @@ class DualLinkedNode extends IntrusiveNode {
     static String field_m;
     DualLinkedNode secondaryPrevious;
     static int field_t;
-    static boolean field_o;
+    static boolean automaticallySkipPlayerTurns;
     long secondaryKey;
     static ClientUiComponent field_k;
     DualLinkedNode secondaryNext;
@@ -37,48 +37,48 @@ class DualLinkedNode extends IntrusiveNode {
         this.secondaryPrevious = null;
     }
 
-    final static int a(int param0, ConsoleExpression[] param1, int param2) {
-        int var3_int = 0;
-        RuntimeException var3 = null;
-        int var4 = 0;
-        int stackIn_7_0 = 0;
-        int stackIn_11_0 = 0;
-        int stackIn_13_0 = 0;
-        RuntimeException stackIn_16_0 = null;
-        StringBuilder stackIn_16_1 = null;
-        String stackIn_17_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        var4 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+    final static int consoleTokenAtCaret(int caretIndex, ConsoleExpression[] tokens, int obfuscationGuard) {
+        int tokenIndex = 0;
+        RuntimeException failure = null;
+        int obfuscationControl = 0;
+        int precedingToken = 0;
+        int guardResult = 0;
+        int lastToken = 0;
+        RuntimeException failureForContext = null;
+        StringBuilder errorContext = null;
+        String tokensDescription = null;
+        RuntimeException caughtFailure = null;
+        obfuscationControl = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          var3_int = 0;
+          tokenIndex = 0;
           while (true) {
-            if (-1 + param1.length <= var3_int) {
-              if (param2 < -81) {
-                stackIn_13_0 = -1 + param1.length;
-                return stackIn_13_0;
+            if (-1 + tokens.length <= tokenIndex) {
+              if (obfuscationGuard < -81) {
+                lastToken = -1 + tokens.length;
+                return lastToken;
               }
-              stackIn_11_0 = -74;
-              return stackIn_11_0;
+              guardResult = -74;
+              return guardResult;
             }
-            if ((param0 - 1) >= param1[1 + var3_int].sourceOffset) {
-              var3_int++;
+            if ((caretIndex - 1) >= tokens[1 + tokenIndex].sourceOffset) {
+              tokenIndex++;
               continue;
             }
             break;
           }
-          stackIn_7_0 = var3_int;
-          return stackIn_7_0;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var3 = decompiledCaughtException;
-          stackIn_16_0 = var3;
-          stackIn_16_1 = new StringBuilder().append("ms.FA(").append(param0).append(',');
-          if (param1 == null) {
-            stackIn_17_2 = "null";
+          precedingToken = tokenIndex;
+          return precedingToken;
+        } catch (java.lang.RuntimeException caughtParameter) {
+          caughtFailure = caughtParameter;
+          failure = caughtFailure;
+          failureForContext = failure;
+          errorContext = new StringBuilder().append("ms.FA(").append(caretIndex).append(',');
+          if (tokens == null) {
+            tokensDescription = "null";
           } else {
-            stackIn_17_2 = "{...}";
+            tokensDescription = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param2).append(')').toString());
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) failureForContext), ((StringBuilder) (Object) errorContext).append(tokensDescription).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 
@@ -94,7 +94,7 @@ class DualLinkedNode extends IntrusiveNode {
 
     final long getSecondaryKey(int obfuscationGuard) {
         if (obfuscationGuard < 101) {
-          field_o = true;
+          automaticallySkipPlayerTurns = true;
           return this.secondaryKey;
         }
         return this.secondaryKey;

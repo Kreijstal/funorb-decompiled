@@ -41,7 +41,7 @@ final class hq {
             wj.field_n = param11;
             rn.field_d = param8;
             LineOfSightGrid.field_a = param4;
-            an.field_E = param12;
+            DefeatPlayerConsoleCommand.field_E = param12;
             CampaignRewardPreview.field_d = param0;
             fl.field_e = param13;
             ng.field_v = param6;

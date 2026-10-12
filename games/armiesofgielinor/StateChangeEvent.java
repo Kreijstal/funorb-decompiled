@@ -213,7 +213,7 @@ final class StateChangeEvent extends GameEvent {
           for (var7 = 0; 4 > var7; var7++) {
             var5 = -54 + (CachedArchiveProvider.field_y[var7][0] + param3) + (var4_int & 15);
             var6 = param2 + (CachedArchiveProvider.field_y[var7][1] + (param0 & 7) - 64);
-            fe.a(jq.kalphiteSprites[3], 60 + var5, var6 + 50, jq.kalphiteSprites[3].canvasWidth >> 1, jq.kalphiteSprites[3].canvasHeight >> 1);
+            fe.a(SetCoatConsoleCommand.kalphiteSprites[3], 60 + var5, var6 + 50, SetCoatConsoleCommand.kalphiteSprites[3].canvasWidth >> 1, SetCoatConsoleCommand.kalphiteSprites[3].canvasHeight >> 1);
             var4_int = var4_int >> 1;
             param0 = param0 >> 1;
           }
@@ -248,11 +248,11 @@ final class StateChangeEvent extends GameEvent {
           if (param0 != 1) {
             field_A = (String) null;
           }
-          for (var2 = 0; var2 < oh.field_G.length; var2++) {
-            oh.field_G[var2] = true;
+          for (var2 = 0; var2 < ChannelBaseVolumeConsoleCommand.field_G.length; var2++) {
+            ChannelBaseVolumeConsoleCommand.field_G[var2] = true;
           }
-          oh.field_G[37] = false;
-          oh.field_G[32] = re.a(0, (byte) -98);
+          ChannelBaseVolumeConsoleCommand.field_G[37] = false;
+          ChannelBaseVolumeConsoleCommand.field_G[32] = HelloConsoleCommand.a(0, (byte) -98);
         } catch (RuntimeException runtimeException) {
           throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "qq.D(" + param0 + ')');
         }
@@ -474,7 +474,7 @@ final class StateChangeEvent extends GameEvent {
         try {
           MoveEvent.a(param2, false, param1, param0);
           da.b(-2);
-          oh.field_L = nb.field_i;
+          ChannelBaseVolumeConsoleCommand.field_L = nb.field_i;
           mh.field_b = nb.field_i;
         } catch (RuntimeException runtimeException) {
           throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "qq.E(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');

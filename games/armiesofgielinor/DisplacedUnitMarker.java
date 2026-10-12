@@ -5,15 +5,15 @@ final class DisplacedUnitMarker extends PreparedAction {
     static RgbSprite[] field_s;
     static String[] field_t;
 
-    final static String b(int param0, int param1) {
-        String var2 = null;
-        if (param0 < param1) {
+    final static String setCampaignBaseChannelGain(int maximumGain, int gain) {
+        String previousGainText = null;
+        if (maximumGain < gain) {
           return "Please use a value from 0 to 256, inclusive.";
         }
-        if (param1 >= 0) {
-          var2 = "old volume: " + gi.campaignBaseChannelGain;
-          gi.campaignBaseChannelGain = param1;
-          return var2;
+        if (gain >= 0) {
+          previousGainText = "old volume: " + gi.campaignBaseChannelGain;
+          gi.campaignBaseChannelGain = gain;
+          return previousGainText;
         }
         return "Please use a value from 0 to 256, inclusive.";
     }

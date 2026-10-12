@@ -44,7 +44,7 @@ final class ConsoleExpression extends IntrusiveNode {
         if (this.kind == rn.consoleCallKind) {
           return "Method{" + this.text + "}";
         }
-        if (gg.consoleNumberKind == this.kind) {
+        if (PrintVictoryConditionsConsoleCommand.consoleNumberKind == this.kind) {
           return "Number{" + this.text + "}";
         }
         if (EquipmentBattleTutorial.consoleBooleanKind == this.kind) {
@@ -128,7 +128,7 @@ final class ConsoleExpression extends IntrusiveNode {
               callResult = na.invokeConsoleCommand(commands, (byte) 2, argumentValuesAlias, this.text);
               return callResult;
             }
-            if (this.kind == gg.consoleNumberKind) {
+            if (this.kind == PrintVictoryConditionsConsoleCommand.consoleNumberKind) {
               numericSuffix = Character.toLowerCase(this.text.charAt(-1 + this.text.length()));
               if (102 == numericSuffix) {
                 floatValue = new ConsoleValue(Float.valueOf(this.text).floatValue());

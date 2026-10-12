@@ -44,7 +44,7 @@ final class bk {
           vl.outgoingPacket.position = vl.outgoingPacket.position + 2;
           var5_int = vl.outgoingPacket.position;
           vl.outgoingPacket.writeInt((byte) -67, fl.field_e);
-          vl.outgoingPacket.writeLong(an.field_E, 38359632);
+          vl.outgoingPacket.writeLong(DefeatPlayerConsoleCommand.field_E, 38359632);
           var6 = 0;
           if (BestScoreStrategy.field_l) {
             var6 = var6 | 1;

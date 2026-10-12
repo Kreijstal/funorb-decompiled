@@ -133,10 +133,10 @@ final class uj extends mk {
 
     final static QuickChatCommandDefinition[] getQuickChatCommands(byte obfuscationGuard) {
         if (obfuscationGuard > 100) {
-          return new QuickChatCommandDefinition[]{jk.field_b, na.field_G, oa.field_F, PacketBuffer.field_l, NodeHashIterator.field_i, MovementPlanner.field_c, ab.field_d, lg.field_e, du.field_e, Widget.field_y, MapLayout.field_q, IconTextComponent.field_Ib, rs.field_v, kq.field_M};
+          return new QuickChatCommandDefinition[]{jk.field_b, na.field_G, ToggleTurnSkipConsoleCommand.field_F, PacketBuffer.field_l, NodeHashIterator.field_i, MovementPlanner.field_c, ab.field_d, lg.field_e, du.field_e, Widget.field_y, MapLayout.field_q, IconTextComponent.field_Ib, rs.field_v, kq.field_M};
         }
         uj.h(67);
-        return new QuickChatCommandDefinition[]{jk.field_b, na.field_G, oa.field_F, PacketBuffer.field_l, NodeHashIterator.field_i, MovementPlanner.field_c, ab.field_d, lg.field_e, du.field_e, Widget.field_y, MapLayout.field_q, IconTextComponent.field_Ib, rs.field_v, kq.field_M};
+        return new QuickChatCommandDefinition[]{jk.field_b, na.field_G, ToggleTurnSkipConsoleCommand.field_F, PacketBuffer.field_l, NodeHashIterator.field_i, MovementPlanner.field_c, ab.field_d, lg.field_e, du.field_e, Widget.field_y, MapLayout.field_q, IconTextComponent.field_Ib, rs.field_v, kq.field_M};
     }
 
     uj(fn param0) {

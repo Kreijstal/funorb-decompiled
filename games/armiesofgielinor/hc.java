@@ -9,7 +9,7 @@ final class hc {
     static int[][] field_o;
     static String field_d;
     private int field_a;
-    static int field_b;
+    static int campaignMetricMutationCounter;
     private String[] field_k;
     private int[] field_j;
     static int decodedChatIconId;
@@ -362,7 +362,7 @@ final class hc {
         this.field_k = hf.field_d;
         this.field_p = new r(this.field_v, this.field_c, this.field_l, this.field_j, this.field_k, 0, 0);
         if (param0 >= -122) {
-          field_b = 61;
+          campaignMetricMutationCounter = 61;
         }
         this.field_x = new r(this.field_v, this.field_c, this.field_l, this.field_j, this.field_m, 0, 0);
     }

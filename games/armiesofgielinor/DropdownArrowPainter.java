@@ -15,7 +15,7 @@ final class DropdownArrowPainter implements WidgetPainter {
             field_a = true;
           }
           le.field_c = new RgbSprite[op.field_c[0].length];
-          rq.pushRasterState((byte) -56);
+          ConsoleTextNode.pushRasterState((byte) -56);
           for (var1_int = 0; var1_int < op.field_c[0].length; var1_int++) {
             ds.field_a[var1_int] = new RgbSprite(DiskCacheWorker.field_d.pixelWidth, DiskCacheWorker.field_d.pixelHeight);
             le.field_c[var1_int] = new RgbSprite(ClientUiNode.field_y.pixelWidth, ClientUiNode.field_y.pixelHeight);
@@ -233,8 +233,8 @@ final class DropdownArrowPainter implements WidgetPainter {
               for (var5_int = 0; fk.packetPayloadLength > var5_int; var5_int++) {
                 ByteStorage.incomingPacket.payload[var5_int] = var4_ref_qu.payload[var5_int];
               }
-              QuickChatCommandDefinition.thirdPreviousOpcode = ba.secondPreviousOpcode;
-              ba.secondPreviousOpcode = TurnTimerDial.previousOpcode;
+              QuickChatCommandDefinition.thirdPreviousOpcode = PrintCoatConsoleCommand.secondPreviousOpcode;
+              PrintCoatConsoleCommand.secondPreviousOpcode = TurnTimerDial.previousOpcode;
               TurnTimerDial.previousOpcode = MusicCrossfadeStream.deliveredOpcode;
               MusicCrossfadeStream.deliveredOpcode = var4_ref_qu.opcode;
               return true;
@@ -268,8 +268,8 @@ final class DropdownArrowPainter implements WidgetPainter {
               return false;
             }
             if (HuffmanCodec.packetDelayMillis == 0) {
-              QuickChatCommandDefinition.thirdPreviousOpcode = ba.secondPreviousOpcode;
-              ba.secondPreviousOpcode = TurnTimerDial.previousOpcode;
+              QuickChatCommandDefinition.thirdPreviousOpcode = PrintCoatConsoleCommand.secondPreviousOpcode;
+              PrintCoatConsoleCommand.secondPreviousOpcode = TurnTimerDial.previousOpcode;
               TurnTimerDial.previousOpcode = MusicCrossfadeStream.deliveredOpcode;
               MusicCrossfadeStream.deliveredOpcode = ByteStorage.pendingOpcode;
               ByteStorage.pendingOpcode = -1;

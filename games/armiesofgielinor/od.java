@@ -88,7 +88,7 @@ final class od {
             stackIn_4_0 = null;
             return (String[]) (stackIn_4_0);
           }
-          var3 = dj.a(77, ' ', param1);
+          var3 = dj.splitText(77, ' ', param1);
           var2_array = var3;
           if (var3.length != 1) {
             stackIn_9_0 = var2_array;

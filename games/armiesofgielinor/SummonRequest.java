@@ -264,7 +264,7 @@ final class SummonRequest extends ActionRequest {
     final static void a(byte param0, int[] param1, int param2) {
         try {
           MoveEvent.tutorialStageItems[param2] = param1;
-          rq.field_p[param2] = new TutorialController(param2);
+          ConsoleTextNode.field_p[param2] = new TutorialController(param2);
           if (param0 <= 17) {
             field_B = -14;
           }

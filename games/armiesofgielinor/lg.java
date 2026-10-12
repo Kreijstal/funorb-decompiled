@@ -22,7 +22,7 @@ final class lg {
           var2 = new RgbSprite(param1.getFileByName("", 49, "final_frame.jpg"), (java.awt.Component) ((Object) IndexedSpriteBase.field_b));
           var3 = var2.pixelWidth;
           var4 = var2.pixelHeight;
-          rq.pushRasterState((byte) -56);
+          ConsoleTextNode.pushRasterState((byte) -56);
           wd.field_k = new RgbSprite(var3, 3 * var4 / 4);
           wd.field_k.b();
           var2.f(0, 0);

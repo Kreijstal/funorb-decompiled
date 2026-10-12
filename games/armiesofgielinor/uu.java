@@ -91,7 +91,7 @@ final class uu {
               var9_ref_String = vu.currentRoom.ownerName;
               kd.field_F.text = fo.a(4800, CampaignMenu.field_m, new String[]{var9_ref_String}).toUpperCase();
               pi.field_N.setBounds(40, param3 - 20500, pd.field_c.width, -40 + pd.field_c.height, 0);
-              pi.field_N.text = fo.a(4800, wt.field_F, new String[]{var9_ref_String});
+              pi.field_N.text = fo.a(4800, GiveTileConsoleCommand.field_F, new String[]{var9_ref_String});
               var8 = pi.field_N;
               decompiledFrameRemainder1 = (var19 != 0);
             }
@@ -417,7 +417,7 @@ final class uu {
               }
               var8.text = fo.a(4800, CorpseConditionMarker.field_t, new String[]{Integer.toString(var9)});
             }
-            gg.field_E.text = fo.a(4800, ws.field_T, new String[]{Integer.toString(vu.currentRoom.playerCount), Integer.toString(vu.currentRoom.playerCapacity)});
+            PrintVictoryConditionsConsoleCommand.field_E.text = fo.a(4800, ws.field_T, new String[]{Integer.toString(vu.currentRoom.playerCount), Integer.toString(vu.currentRoom.playerCapacity)});
           }
           stackIn_173_0 = lk.field_a;
           stackIn_173_1 = true;
@@ -442,7 +442,7 @@ final class uu {
             if (0 != so.field_d.pressedButton) {
               cp.field_h = true;
             }
-            if (dv.field_m.pressedButton != 0) {
+            if (ConsolePanel.field_m.pressedButton != 0) {
               ChannelGainProfile.field_f = false;
             }
             vf.a(param3 + 1, false, param2, vu.currentRoom);

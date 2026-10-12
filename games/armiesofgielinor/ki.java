@@ -10,11 +10,11 @@ final class ki {
     static String[][] field_d;
 
     final static wd a(int param0) {
-        if (nb.field_i == oh.field_L) {
+        if (nb.field_i == ChannelBaseVolumeConsoleCommand.field_L) {
           throw new IllegalStateException();
         }
-        if (lm.field_d == oh.field_L) {
-          oh.field_L = nb.field_i;
+        if (lm.field_d == ChannelBaseVolumeConsoleCommand.field_L) {
+          ChannelBaseVolumeConsoleCommand.field_L = nb.field_i;
           return SoundCache.field_a;
         }
         if (param0 != -61440) {

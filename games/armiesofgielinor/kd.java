@@ -400,7 +400,7 @@ final class kd extends tj implements nq, he, mf {
             this.field_I = (ma) null;
           }
           if (this.field_G == param4) {
-            ba.g(111);
+            PrintCoatConsoleCommand.g(111);
           } else {
             if (param4 == this.field_bb) {
               discarded$1 = this.a(-1);

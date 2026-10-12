@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-final class DebugConsole extends dv {
+final class DebugConsole extends ConsolePanel {
     static String field_A;
     static CommunityTabGroup field_w;
     static String field_B;
@@ -14,296 +14,296 @@ final class DebugConsole extends dv {
     private ConsoleCommand[] commands;
     static int field_x;
 
-    final boolean a(int param0, char param1, int param2) {
-        boolean discarded$0 = false;
-        boolean stackIn_3_0 = false;
-        int stackIn_16_0 = 0;
-        int stackIn_20_0 = 0;
-        int stackIn_21_1 = 0;
-        int stackIn_25_0 = 0;
-        int stackIn_26_1 = 0;
-        int stackIn_32_0 = 0;
-        int stackIn_36_0 = 0;
-        RuntimeException decompiledCaughtException = null;
-        String var4 = null;
-        RuntimeException var4_ref = null;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        String var12 = null;
-        int var9Lifetime1;
-        int var10Lifetime1;
-        var11 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+    final boolean handleKey(int obfuscationGuard, char character, int keyCode) {
+        boolean baseConsumed = false;
+        boolean closedResult = false;
+        int escapeFlag = 0;
+        int previousStringFlag = 0;
+        int stringQuoteToggle = 0;
+        int previousCharacterFlag = 0;
+        int characterQuoteToggle = 0;
+        int previousCharacter = 0;
+        int nextCharacter = 0;
+        RuntimeException caughtFailure = null;
+        String updatedText = null;
+        RuntimeException failure = null;
+        int caretIndex = 0;
+        int inString = 0;
+        int inCharacter = 0;
+        int escapeNext = 0;
+        int scanIndex = 0;
+        int scanCharacter = 0;
+        int obfuscationControl = 0;
+        String text = null;
+        int beforeCaret;
+        int atCaret;
+        obfuscationControl = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          if (!this.a(-31501)) {
-            stackIn_3_0 = super.a(-30847, param1, param2);
-            return stackIn_3_0;
+          if (!this.isOpen(-31501)) {
+            closedResult = super.handleKey(-30847, character, keyCode);
+            return closedResult;
           }
-          var12 = this.field_o.getText(param0 ^ param0);
-          var5 = this.field_o.getCaretIndex(param0 ^ 30781);
-          var6 = 0;
-          var7 = 0;
-          var8 = 0;
-          for (var9 = 0; var5 > var9; var9++) {
-            if (var8 == 0) {
-              var10 = var12.charAt(var9);
-              if (var6 == 0 &&
-                var7 == 0) {
-                stackIn_16_0 = 0;
+          text = this.input.getText(obfuscationGuard ^ obfuscationGuard);
+          caretIndex = this.input.getCaretIndex(obfuscationGuard ^ 30781);
+          inString = 0;
+          inCharacter = 0;
+          escapeNext = 0;
+          for (scanIndex = 0; caretIndex > scanIndex; scanIndex++) {
+            if (escapeNext == 0) {
+              scanCharacter = text.charAt(scanIndex);
+              if (inString == 0 &&
+                inCharacter == 0) {
+                escapeFlag = 0;
               } else {
-                stackIn_16_0 = (var10 == 92) ? 1 : 0;
+                escapeFlag = (scanCharacter == 92) ? 1 : 0;
               }
-              var8 = stackIn_16_0;
-              stackIn_20_0 = var6;
-              if (var7 == 0 &&
-                var10 == 34) {
-                stackIn_21_1 = 1;
+              escapeNext = escapeFlag;
+              previousStringFlag = inString;
+              if (inCharacter == 0 &&
+                scanCharacter == 34) {
+                stringQuoteToggle = 1;
               } else {
-                stackIn_21_1 = 0;
+                stringQuoteToggle = 0;
               }
-              var6 = stackIn_20_0 ^ stackIn_21_1;
-              stackIn_25_0 = var7;
-              if (var6 == 0 &&
-                var10 == 39) {
-                stackIn_26_1 = 1;
+              inString = previousStringFlag ^ stringQuoteToggle;
+              previousCharacterFlag = inCharacter;
+              if (inString == 0 &&
+                scanCharacter == 39) {
+                characterQuoteToggle = 1;
               } else {
-                stackIn_26_1 = 0;
+                characterQuoteToggle = 0;
               }
-              var7 = stackIn_25_0 ^ stackIn_26_1;
+              inCharacter = previousCharacterFlag ^ characterQuoteToggle;
             } else {
-              var8 = 0;
+              escapeNext = 0;
             }
           }
-          if (0 >= var5) {
-            stackIn_32_0 = 65535;
+          if (0 >= caretIndex) {
+            previousCharacter = 65535;
           } else {
-            stackIn_32_0 = var12.charAt(var5 - 1);
+            previousCharacter = text.charAt(caretIndex - 1);
           }
-          var9Lifetime1 = stackIn_32_0;
-          if (var12.length() <= var5) {
-            stackIn_36_0 = 65535;
+          beforeCaret = previousCharacter;
+          if (text.length() <= caretIndex) {
+            nextCharacter = 65535;
           } else {
-            stackIn_36_0 = var12.charAt(var5);
+            nextCharacter = text.charAt(caretIndex);
           }
-          boolean decompiledFrameRemainder0 = true;
-          var10Lifetime1 = stackIn_36_0;
-          if ((var6 == 0 ||
-            var8 != 0 ||
-            param1 != 34 ||
-            var10Lifetime1 != 34) && (var7 == 0 ||
-            var8 != 0 ||
-            39 != param1 ||
-            var10Lifetime1 != 39) && (var6 != 0 ||
-            var7 != 0 ||
-            param1 != 41 ||
-            var10Lifetime1 != 41)) {
-            if (param2 == 85 && (var9Lifetime1 == 40 &&
-              var10Lifetime1 == 41 ||
-              var6 != 0 &&
-              var9Lifetime1 == 34 &&
-              var10Lifetime1 == 34 ||
-              var7 != 0 &&
-              39 == var9Lifetime1 &&
-              39 == var10Lifetime1)) {
-              this.field_o.handleKey(101, -26126, '￿');
+          boolean editNormally = true;
+          atCaret = nextCharacter;
+          if ((inString == 0 ||
+            escapeNext != 0 ||
+            character != 34 ||
+            atCaret != 34) && (inCharacter == 0 ||
+            escapeNext != 0 ||
+            39 != character ||
+            atCaret != 39) && (inString != 0 ||
+            inCharacter != 0 ||
+            character != 41 ||
+            atCaret != 41)) {
+            if (keyCode == 85 && (beforeCaret == 40 &&
+              atCaret == 41 ||
+              inString != 0 &&
+              beforeCaret == 34 &&
+              atCaret == 34 ||
+              inCharacter != 0 &&
+              39 == beforeCaret &&
+              39 == atCaret)) {
+              this.input.handleKey(101, -26126, '￿');
             }
-            discarded$0 = super.a(-30847, param1, param2);
-            var4 = this.field_o.getText(param0 ^ -30847);
-            var5 = this.field_o.getCaretIndex(param0 ^ -30779);
-            if (var6 == 0 &&
-              var7 == 0 &&
-              param1 == 40) {
-              this.field_o.handleKey(-1, -26126, ')');
-              this.field_o.setSelection(-98, var5, var5);
+            baseConsumed = super.handleKey(-30847, character, keyCode);
+            updatedText = this.input.getText(obfuscationGuard ^ -30847);
+            caretIndex = this.input.getCaretIndex(obfuscationGuard ^ -30779);
+            if (inString == 0 &&
+              inCharacter == 0 &&
+              character == 40) {
+              this.input.handleKey(-1, -26126, ')');
+              this.input.setSelection(-98, caretIndex, caretIndex);
             }
-            if (var6 == 0 &&
-              var7 == 0 &&
-              param1 == 34) {
-              this.field_o.handleKey(-1, -26126, '"');
-              this.field_o.setSelection(param0 + 30749, var5, var5);
+            if (inString == 0 &&
+              inCharacter == 0 &&
+              character == 34) {
+              this.input.handleKey(-1, -26126, '"');
+              this.input.setSelection(obfuscationGuard + 30749, caretIndex, caretIndex);
             }
-            if (((var6 == 0)) &&
-              ((var7 == 0)) &&
-              ((param1 == 39))) {
-              this.field_o.handleKey(-1, param0 + 4721, '\'');
-              this.field_o.setSelection(-98, var5, var5);
+            if (((inString == 0)) &&
+              ((inCharacter == 0)) &&
+              ((character == 39))) {
+              this.input.handleKey(-1, obfuscationGuard + 4721, '\'');
+              this.input.setSelection(-98, caretIndex, caretIndex);
             }
-            decompiledFrameRemainder0 = false;
+            editNormally = false;
           }
           else {
-            this.field_o.setCollapsedSelection(1 + var5, false);
+            this.input.setCollapsedSelection(1 + caretIndex, false);
           }
-          vs.field_c = wf.a(this.field_o.getText(0), -101);
+          vs.highlightedConsoleInput = wf.highlightConsoleSyntax(this.input.getText(0), -101);
           return true;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var4_ref = decompiledCaughtException;
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) var4_ref), "ij.S(" + param0 + ',' + param1 + ',' + param2 + ')');
+        } catch (java.lang.RuntimeException caughtParameter) {
+          caughtFailure = caughtParameter;
+          failure = caughtFailure;
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) failure), "ij.S(" + obfuscationGuard + ',' + character + ',' + keyCode + ')');
         }
     }
 
-    DebugConsole(NodeDeque param0, BitmapFont param1, PlatformTaskService param2) {
-        super(param1, param2);
-        int incrementValue$3 = 0;
-        int var4_int = 0;
-        ConsoleCommand var5 = null;
-        RuntimeException stackIn_10_0 = null;
-        StringBuilder stackIn_10_1 = null;
-        String stackIn_11_2 = null;
-        RuntimeException stackIn_14_0 = null;
-        StringBuilder stackIn_14_1 = null;
-        RuntimeException stackIn_15_0 = null;
-        String stackIn_15_2 = null;
-        RuntimeException stackIn_18_0 = null;
-        StringBuilder stackIn_18_1 = null;
-        RuntimeException stackIn_19_0 = null;
-        String stackIn_19_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException var4 = null;
+    DebugConsole(NodeDeque commandDeque, BitmapFont font, PlatformTaskService platformService) {
+        super(font, platformService);
+        int commandSlot = 0;
+        int commandIndex = 0;
+        ConsoleCommand command = null;
+        RuntimeException failureForContext = null;
+        StringBuilder errorContext = null;
+        String dequeDescription = null;
+        RuntimeException failureWithDeque = null;
+        StringBuilder errorContextWithDeque = null;
+        RuntimeException failureWithFont = null;
+        String fontDescription = null;
+        RuntimeException failureWithPlatform = null;
+        StringBuilder errorContextWithFont = null;
+        RuntimeException finalFailureForContext = null;
+        String platformDescription = null;
+        RuntimeException caughtFailure = null;
+        RuntimeException failure = null;
         try {
-          this.commands = new ConsoleCommand[param0.size(false)];
-          var4_int = 0;
-          var5 = (ConsoleCommand) (param0.first((byte) 94));
-          while (var5 != null) {
-            incrementValue$3 = var4_int;
-            var4_int++;
-            this.commands[incrementValue$3] = var5;
-            var5 = (ConsoleCommand) (param0.next((byte) 123));
+          this.commands = new ConsoleCommand[commandDeque.size(false)];
+          commandIndex = 0;
+          command = (ConsoleCommand) (commandDeque.first((byte) 94));
+          while (command != null) {
+            commandSlot = commandIndex;
+            commandIndex++;
+            this.commands[commandSlot] = command;
+            command = (ConsoleCommand) (commandDeque.next((byte) 123));
           }
-          this.a(-1, "# <col=ffaaff>FunOrbConsole (loaded " + this.commands.length + " methods at " + new Date() + ")</col>");
+          this.printText(-1, "# <col=ffaaff>FunOrbConsole (loaded " + this.commands.length + " methods at " + new Date() + ")</col>");
           return;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var4 = decompiledCaughtException;
-          stackIn_10_0 = var4;
-          stackIn_10_1 = new StringBuilder().append("ij.<init>(");
-          if (param0 == null) {
-            stackIn_11_2 = "null";
+        } catch (java.lang.RuntimeException caughtParameter) {
+          caughtFailure = caughtParameter;
+          failure = caughtFailure;
+          failureForContext = failure;
+          errorContext = new StringBuilder().append("ij.<init>(");
+          if (commandDeque == null) {
+            dequeDescription = "null";
           } else {
-            stackIn_11_2 = "{...}";
+            dequeDescription = "{...}";
           }
-          stackIn_14_0 = stackIn_10_0;
-          stackIn_14_1 = ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',');
-          if (param1 == null) {
-            stackIn_15_0 = stackIn_14_0;
-            stackIn_15_2 = "null";
+          failureWithDeque = failureForContext;
+          errorContextWithDeque = ((StringBuilder) (Object) errorContext).append(dequeDescription).append(',');
+          if (font == null) {
+            failureWithFont = failureWithDeque;
+            fontDescription = "null";
           } else {
-            stackIn_15_0 = stackIn_10_0;
-            stackIn_15_2 = "{...}";
+            failureWithFont = failureForContext;
+            fontDescription = "{...}";
           }
-          stackIn_18_0 = stackIn_15_0;
-          stackIn_18_1 = ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',');
-          if (param2 == null) {
-            stackIn_19_0 = stackIn_18_0;
-            stackIn_19_2 = "null";
+          failureWithPlatform = failureWithFont;
+          errorContextWithFont = ((StringBuilder) (Object) errorContextWithDeque).append(fontDescription).append(',');
+          if (platformService == null) {
+            finalFailureForContext = failureWithPlatform;
+            platformDescription = "null";
           } else {
-            stackIn_19_0 = stackIn_15_0;
-            stackIn_19_2 = "{...}";
+            finalFailureForContext = failureWithFont;
+            platformDescription = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) finalFailureForContext), ((StringBuilder) (Object) errorContextWithFont).append(platformDescription).append(')').toString());
         }
     }
 
-    final void b(int param0) {
-        String var3 = null;
+    final void drawConsole(int obfuscationGuard) {
+        String savedDisplayText = null;
         try {
-          int var2_int = -78 / ((param0 - 13) / 33);
-          var3 = this.field_o.textComponent.text;
-          this.field_o.textComponent.text = vs.field_c;
-          super.b(-100);
-          this.field_o.textComponent.text = var3;
-        } catch (RuntimeException runtimeException) {
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "ij.M(" + param0 + ')');
+          int guardQuotient = -78 / ((obfuscationGuard - 13) / 33);
+          savedDisplayText = this.input.textComponent.text;
+          this.input.textComponent.text = vs.highlightedConsoleInput;
+          super.drawConsole(-100);
+          this.input.textComponent.text = savedDisplayText;
+        } catch (RuntimeException failure) {
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) failure), "ij.M(" + obfuscationGuard + ')');
         }
     }
 
-    final String[] b(boolean param0) {
-        DualNodeDeque discarded$0 = null;
-        int incrementValue$1 = 0;
-        String[] stackIn_27_0 = null;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException var2 = null;
-        int var3 = 0;
-        ConsoleExpression[] var4 = null;
-        int var5 = 0;
-        String var6 = null;
-        int var8_int = 0;
-        String[] var8 = null;
-        int var9 = 0;
-        int var10_int = 0;
-        ConsoleCommand var10 = null;
-        int var11 = 0;
-        String var12 = null;
-        String var13 = null;
-        ConsoleExpression var14 = null;
-        DualNodeDeque var15 = null;
-        String var6Lifetime1;
-        String var6Lifetime2;
-        int var9Lifetime1;
-        var11 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+    final String[] getSuggestions(boolean obfuscationGuard) {
+        DualNodeDeque guardMatches = null;
+        int suggestionSlot = 0;
+        String[] result = null;
+        RuntimeException caughtFailure = null;
+        RuntimeException failure = null;
+        int caretIndex = 0;
+        ConsoleExpression[] tokens = null;
+        int tokenIndex = 0;
+        String sourceAlias = null;
+        int prefixLength = 0;
+        String[] signatures = null;
+        int backwardTokenIndex = 0;
+        int parenthesisDepth = 0;
+        ConsoleCommand command = null;
+        int obfuscationControl = 0;
+        String unusedSource = null;
+        String source = null;
+        ConsoleExpression token = null;
+        DualNodeDeque matches = null;
+        String sourceSecondAlias;
+        String prefix;
+        int signatureIndex;
+        obfuscationControl = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          var13 = this.field_o.getText(0);
-          var6 = var13;
-          var6Lifetime1 = var13;
-          var3 = this.field_o.getCaretIndex(95);
-          var4 = vv.a(var13, 114);
-          var5 = DualLinkedNode.a(var3, var4, -122);
-          this.field_s.x = 0;
-          var6Lifetime2 = "";
-          if (0 <= var5) {
-            var14 = var4[var5];
-            var8_int = -var14.sourceOffset + var3;
-            if (rn.consoleCallKind == var14.kind &&
-              var8_int > 0) {
-              var6Lifetime2 = var14.text.substring(0, Math.min(var14.text.length(), var8_int));
-              this.field_s.x = this.field_t.a(var13.substring(0, var14.sourceOffset));
+          source = this.input.getText(0);
+          sourceAlias = source;
+          sourceSecondAlias = source;
+          caretIndex = this.input.getCaretIndex(95);
+          tokens = vv.cachedConsoleTokenArray(source, 114);
+          tokenIndex = DualLinkedNode.consoleTokenAtCaret(caretIndex, tokens, -122);
+          this.suggestionBackdrop.x = 0;
+          prefix = "";
+          if (0 <= tokenIndex) {
+            token = tokens[tokenIndex];
+            prefixLength = -token.sourceOffset + caretIndex;
+            if (rn.consoleCallKind == token.kind &&
+              prefixLength > 0) {
+              prefix = token.text.substring(0, Math.min(token.text.length(), prefixLength));
+              this.suggestionBackdrop.x = this.font.a(source.substring(0, token.sourceOffset));
             } else {
-              var9 = var5;
-              var10_int = 0;
-              while (var9 >= 0) {
-                if (~LeaderEscortCondition.consoleArgumentEndKind == ~var4[var9].kind) {
-                  var10_int++;
+              backwardTokenIndex = tokenIndex;
+              parenthesisDepth = 0;
+              while (backwardTokenIndex >= 0) {
+                if (~LeaderEscortCondition.consoleArgumentEndKind == ~tokens[backwardTokenIndex].kind) {
+                  parenthesisDepth++;
                 }
-                if (var4[var9].kind == ChatMessage.consoleArgumentStartKind) {
-                  var10_int--;
+                if (tokens[backwardTokenIndex].kind == ChatMessage.consoleArgumentStartKind) {
+                  parenthesisDepth--;
                 }
-                if (var10_int >= 0) {
-                  var9--;
+                if (parenthesisDepth >= 0) {
+                  backwardTokenIndex--;
                   continue;
                 }
                 break;
               }
-              if (0 < var9 &&
-                var4[var9 - 1].kind == rn.consoleCallKind) {
-                var6Lifetime2 = var4[-1 + var9].text;
-                this.field_s.x = this.field_t.a(var13.substring(0, var4[-1 + var9].sourceOffset));
+              if (0 < backwardTokenIndex &&
+                tokens[backwardTokenIndex - 1].kind == rn.consoleCallKind) {
+                prefix = tokens[-1 + backwardTokenIndex].text;
+                this.suggestionBackdrop.x = this.font.a(source.substring(0, tokens[-1 + backwardTokenIndex].sourceOffset));
               }
             }
           }
-          var15 = this.a((byte) -75, var6Lifetime2);
-          var8 = new String[var15.size(30578)];
-          var9Lifetime1 = 0;
-          var10 = (ConsoleCommand) (var15.first((byte) 43));
-          if (!param0) {
-            var12 = (String) null;
-            discarded$0 = this.a((byte) 83, (String) null);
+          matches = this.matchingCommands((byte) -75, prefix);
+          signatures = new String[matches.size(30578)];
+          signatureIndex = 0;
+          command = (ConsoleCommand) (matches.first((byte) 43));
+          if (!obfuscationGuard) {
+            unusedSource = (String) null;
+            guardMatches = this.matchingCommands((byte) 83, (String) null);
           }
-          while (var10 != null) {
-            incrementValue$1 = var9Lifetime1;
-            var9Lifetime1++;
-            var8[incrementValue$1] = var10.displaySignature;
-            var10 = (ConsoleCommand) (var15.next(24));
+          while (command != null) {
+            suggestionSlot = signatureIndex;
+            signatureIndex++;
+            signatures[suggestionSlot] = command.displaySignature;
+            command = (ConsoleCommand) (matches.next(24));
           }
-          stackIn_27_0 = var8;
-          return stackIn_27_0;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var2 = decompiledCaughtException;
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) var2), "ij.K(" + param0 + ')');
+          result = signatures;
+          return result;
+        } catch (java.lang.RuntimeException caughtParameter) {
+          caughtFailure = caughtParameter;
+          failure = caughtFailure;
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) failure), "ij.K(" + obfuscationGuard + ')');
         }
     }
 
@@ -332,211 +332,211 @@ final class DebugConsole extends dv {
         }
     }
 
-    final void a(byte param0) {
-        StringBuilder discarded$0 = null;
-        StringBuilder discarded$1 = null;
-        int stackIn_26_0 = 0;
-        int stackIn_27_1 = 0;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException var2 = null;
-        int var3 = 0;
-        ConsoleExpression[] var4 = null;
-        int var5 = 0;
-        String var6 = null;
-        int var8_int = 0;
-        StringBuilder var8 = null;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        ConsoleCommand var12_ref_dr = null;
-        int var12 = 0;
-        ConsoleCommand var13 = null;
-        int var14 = 0;
-        String var15 = null;
-        ConsoleExpression var16 = null;
-        DualNodeDeque var17 = null;
-        String var6Lifetime1;
-        String var6Lifetime2;
-        int var12Lifetime1;
-        var14 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+    final void completeInput(byte obfuscationGuard) {
+        StringBuilder commonAppendResult = null;
+        StringBuilder parenthesesAppendResult = null;
+        int previousSharedFlag = 0;
+        int matchingCharacterFlag = 0;
+        RuntimeException caughtFailure = null;
+        RuntimeException failure = null;
+        int caretIndex = 0;
+        ConsoleExpression[] tokens = null;
+        int tokenIndex = 0;
+        String sourceAlias = null;
+        int prefixLength = 0;
+        StringBuilder suffixBuilder = null;
+        int characterIndex = 0;
+        int sharedPrefix = 0;
+        int shortestNameLength = 0;
+        ConsoleCommand lengthCandidate = null;
+        int candidateCharacter = 0;
+        ConsoleCommand comparisonCandidate = null;
+        int obfuscationControl = 0;
+        String source = null;
+        ConsoleExpression token = null;
+        DualNodeDeque matches = null;
+        String sourceSecondAlias;
+        String prefix;
+        int nextCaretIndex;
+        obfuscationControl = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          var15 = this.field_o.getText(0);
-          var6 = var15;
-          var6Lifetime1 = var15;
-          var3 = this.field_o.getCaretIndex(-105);
-          var4 = vv.a(var15, param0 - 11);
-          var5 = DualLinkedNode.a(var3, var4, -126);
-          var6Lifetime2 = "";
-          if (0 <= var5) {
-            var16 = var4[var5];
-            var8_int = var3 - var16.sourceOffset;
-            if (rn.consoleCallKind == var16.kind &&
-              0 < var8_int &&
-              var16.text.length() >= var8_int) {
-              var6Lifetime2 = var16.text.substring(0, var8_int);
+          source = this.input.getText(0);
+          sourceAlias = source;
+          sourceSecondAlias = source;
+          caretIndex = this.input.getCaretIndex(-105);
+          tokens = vv.cachedConsoleTokenArray(source, obfuscationGuard - 11);
+          tokenIndex = DualLinkedNode.consoleTokenAtCaret(caretIndex, tokens, -126);
+          prefix = "";
+          if (0 <= tokenIndex) {
+            token = tokens[tokenIndex];
+            prefixLength = caretIndex - token.sourceOffset;
+            if (rn.consoleCallKind == token.kind &&
+              0 < prefixLength &&
+              token.text.length() >= prefixLength) {
+              prefix = token.text.substring(0, prefixLength);
             }
           }
-          var17 = this.a((byte) -75, var6Lifetime2);
-          if (0 == var17.size(30578)) {
+          matches = this.matchingCommands((byte) -75, prefix);
+          if (0 == matches.size(30578)) {
             return;
           }
-          if (param0 != 122) {
-            this.b(77);
+          if (obfuscationGuard != 122) {
+            this.drawConsole(77);
           }
-          var8 = new StringBuilder();
-          var9 = var6Lifetime2.length();
-          var10 = 1;
-          var11 = 2147483647;
-          var12_ref_dr = (ConsoleCommand) (var17.first((byte) -110));
-          while (var12_ref_dr != null) {
-            if (var11 > var12_ref_dr.commandName.length()) {
-              var11 = var12_ref_dr.commandName.length();
+          suffixBuilder = new StringBuilder();
+          characterIndex = prefix.length();
+          sharedPrefix = 1;
+          shortestNameLength = 2147483647;
+          lengthCandidate = (ConsoleCommand) (matches.first((byte) -110));
+          while (lengthCandidate != null) {
+            if (shortestNameLength > lengthCandidate.commandName.length()) {
+              shortestNameLength = lengthCandidate.commandName.length();
             }
-            var12_ref_dr = (ConsoleCommand) (var17.next(24));
+            lengthCandidate = (ConsoleCommand) (matches.next(24));
           }
-          while (var10 != 0) {
-            if (var11 > var9) {
-              var12 = ((ConsoleCommand) (var17.first((byte) -112))).commandName.charAt(var9);
-              var13 = (ConsoleCommand) (var17.next(24));
-              while (var13 != null) {
-                stackIn_26_0 = var10;
-                if (~var12 != ~var13.commandName.charAt(var9)) {
-                  stackIn_27_1 = 0;
+          while (sharedPrefix != 0) {
+            if (shortestNameLength > characterIndex) {
+              candidateCharacter = ((ConsoleCommand) (matches.first((byte) -112))).commandName.charAt(characterIndex);
+              comparisonCandidate = (ConsoleCommand) (matches.next(24));
+              while (comparisonCandidate != null) {
+                previousSharedFlag = sharedPrefix;
+                if (~candidateCharacter != ~comparisonCandidate.commandName.charAt(characterIndex)) {
+                  matchingCharacterFlag = 0;
                 } else {
-                  stackIn_27_1 = 1;
+                  matchingCharacterFlag = 1;
                 }
-                var10 = stackIn_26_0 & stackIn_27_1;
-                var13 = (ConsoleCommand) (var17.next(24));
+                sharedPrefix = previousSharedFlag & matchingCharacterFlag;
+                comparisonCandidate = (ConsoleCommand) (matches.next(24));
               }
-              var9++;
-              if (var10 == 0) {
+              characterIndex++;
+              if (sharedPrefix == 0) {
                 continue;
               }
-              discarded$0 = var8.append((char) var12);
+              commonAppendResult = suffixBuilder.append((char) candidateCharacter);
               continue;
             }
             break;
           }
-          var12Lifetime1 = var3 + var8.length();
-          if (var6Lifetime2.length() + var8.length() == var11) {
-            var12Lifetime1++;
-            discarded$1 = var8.append("()");
-            if (var17.size(30578) == 1 &&
-              ((ConsoleCommand) (var17.first((byte) 44))).parameterTypes.length == 0) {
-              var12Lifetime1++;
+          nextCaretIndex = caretIndex + suffixBuilder.length();
+          if (prefix.length() + suffixBuilder.length() == shortestNameLength) {
+            nextCaretIndex++;
+            parenthesesAppendResult = suffixBuilder.append("()");
+            if (matches.size(30578) == 1 &&
+              ((ConsoleCommand) (matches.first((byte) 44))).parameterTypes.length == 0) {
+              nextCaretIndex++;
             }
-            this.field_o.setText(var15.substring(0, var3) + var8.toString() + var15.substring(var3), (byte) 45);
-            this.field_o.setCollapsedSelection(var12Lifetime1, false);
+            this.input.setText(source.substring(0, caretIndex) + suffixBuilder.toString() + source.substring(caretIndex), (byte) 45);
+            this.input.setCollapsedSelection(nextCaretIndex, false);
           } else {
-            this.field_o.setText(var15.substring(0, var3) + var8.toString() + var15.substring(var3), (byte) 45);
-            this.field_o.setCollapsedSelection(var12Lifetime1, false);
+            this.input.setText(source.substring(0, caretIndex) + suffixBuilder.toString() + source.substring(caretIndex), (byte) 45);
+            this.input.setCollapsedSelection(nextCaretIndex, false);
           }
           return;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var2 = decompiledCaughtException;
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) var2), "ij.J(" + param0 + ')');
+        } catch (java.lang.RuntimeException caughtParameter) {
+          caughtFailure = caughtParameter;
+          failure = caughtFailure;
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) failure), "ij.J(" + obfuscationGuard + ')');
         }
     }
 
-    private final DualNodeDeque a(byte param0, String param1) {
-        int var4 = 0;
-        DualNodeDeque var3 = null;
-        int var5 = 0;
-        DualNodeDeque var6 = null;
-        DualNodeDeque stackIn_3_0 = null;
-        DualNodeDeque stackIn_12_0 = null;
-        RuntimeException stackIn_16_0 = null;
-        StringBuilder stackIn_16_1 = null;
-        String stackIn_17_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException var3_ref = null;
-        var5 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+    private final DualNodeDeque matchingCommands(byte obfuscationGuard, String prefix) {
+        int commandIndex = 0;
+        DualNodeDeque matchesAlias = null;
+        int obfuscationControl = 0;
+        DualNodeDeque matches = null;
+        DualNodeDeque guardResult = null;
+        DualNodeDeque result = null;
+        RuntimeException failureForContext = null;
+        StringBuilder errorContext = null;
+        String prefixDescription = null;
+        RuntimeException caughtFailure = null;
+        RuntimeException failure = null;
+        obfuscationControl = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          if (param0 != -75) {
-            stackIn_3_0 = (DualNodeDeque) null;
-            return stackIn_3_0;
+          if (obfuscationGuard != -75) {
+            guardResult = (DualNodeDeque) null;
+            return guardResult;
           }
-          var6 = new DualNodeDeque();
-          var3 = var6;
-          for (var4 = 0; var4 < this.commands.length; var4++) {
-            if (this.commands[var4].commandName.startsWith(param1)) {
-              this.commands[var4].unlinkSecondary((byte) -76);
-              var6.addLast(this.commands[var4], false);
+          matches = new DualNodeDeque();
+          matchesAlias = matches;
+          for (commandIndex = 0; commandIndex < this.commands.length; commandIndex++) {
+            if (this.commands[commandIndex].commandName.startsWith(prefix)) {
+              this.commands[commandIndex].unlinkSecondary((byte) -76);
+              matches.addLast(this.commands[commandIndex], false);
             }
           }
-          stackIn_12_0 = var3;
-          return stackIn_12_0;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var3_ref = decompiledCaughtException;
-          stackIn_16_0 = var3_ref;
-          stackIn_16_1 = new StringBuilder().append("ij.BA(").append(param0).append(',');
-          if (param1 == null) {
-            stackIn_17_2 = "null";
+          result = matchesAlias;
+          return result;
+        } catch (java.lang.RuntimeException caughtParameter) {
+          caughtFailure = caughtParameter;
+          failure = caughtFailure;
+          failureForContext = failure;
+          errorContext = new StringBuilder().append("ij.BA(").append(obfuscationGuard).append(',');
+          if (prefix == null) {
+            prefixDescription = "null";
           } else {
-            stackIn_17_2 = "{...}";
+            prefixDescription = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) failureForContext), ((StringBuilder) (Object) errorContext).append(prefixDescription).append(')').toString());
         }
     }
 
     final boolean evaluateInput(String source, boolean executeExpression) {
         try {
-          ConsoleExpression var5 = null;
-          NodeDeque var6 = null;
-          ConsoleTokenCursor var7 = null;
-          RuntimeException stackIn_15_0 = null;
-          StringBuilder stackIn_15_1 = null;
-          String stackIn_16_2 = null;
-          Throwable decompiledCaughtException = null;
-          ConsoleParseException var3 = null;
-          ConsoleEvaluationException var3_ref = null;
-          RuntimeException var3_ref2 = null;
-          ClientUiComponent var4 = null;
+          ConsoleExpression expression = null;
+          NodeDeque tokenDeque = null;
+          ConsoleTokenCursor cursor = null;
+          RuntimeException failureForContext = null;
+          StringBuilder errorContext = null;
+          String sourceDescription = null;
+          Throwable caughtFailure = null;
+          ConsoleParseException parseFailure = null;
+          ConsoleEvaluationException evaluationFailure = null;
+          RuntimeException failure = null;
+          ClientUiComponent submittedLine = null;
           try {
             try {
               if (false) throw (ConsoleParseException) null;
-              var6 = gu.tokenizeConsole(false, source);
+              tokenDeque = gu.tokenizeConsole(false, source);
               if (!executeExpression) {
                 return true;
               }
-              var7 = new ConsoleTokenCursor(var6);
-              var5 = fk.parseConsoleExpression(var7, -39);
-              if (!var7.isAtEnd(124)) {
-                throw new ConsoleParseException(var7.readToken((byte) 13).sourceOffset);
+              cursor = new ConsoleTokenCursor(tokenDeque);
+              expression = fk.parseConsoleExpression(cursor, -39);
+              if (!cursor.isAtEnd(124)) {
+                throw new ConsoleParseException(cursor.readToken((byte) 13).sourceOffset);
               }
-              this.a(var5.evaluate(1, this.commands), -58);
+              this.printValue(expression.evaluate(1, this.commands), -58);
               return true;
-            } catch (ConsoleParseException decompiledCaughtParameter0) {
-              decompiledCaughtException = decompiledCaughtParameter0;
-              var3 = (ConsoleParseException) (Object) decompiledCaughtException;
-              source = "<col=55ff55>" + source.substring(0, var3.sourceOffset) + "</col>" + source.substring(var3.sourceOffset);
-              var4 = (ClientUiComponent) (this.field_d.content.children.last((byte) -98));
-              var4.text = this.field_c + source;
+            } catch (ConsoleParseException caughtParseFailure) {
+              caughtFailure = caughtParseFailure;
+              parseFailure = (ConsoleParseException) (Object) caughtFailure;
+              source = "<col=55ff55>" + source.substring(0, parseFailure.sourceOffset) + "</col>" + source.substring(parseFailure.sourceOffset);
+              submittedLine = (ClientUiComponent) (this.outputScroll.content.children.last((byte) -98));
+              submittedLine.text = this.prompt + source;
               return false;
-            } catch (ConsoleEvaluationException decompiledCaughtParameter1) {
-              decompiledCaughtException = decompiledCaughtParameter1;
-              var3_ref = (ConsoleEvaluationException) (Object) decompiledCaughtException;
-              this.a(-1, var3_ref.diagnostic);
+            } catch (ConsoleEvaluationException caughtEvaluationFailure) {
+              caughtFailure = caughtEvaluationFailure;
+              evaluationFailure = (ConsoleEvaluationException) (Object) caughtFailure;
+              this.printText(-1, evaluationFailure.diagnostic);
               return false;
             }
-          } catch (java.lang.RuntimeException decompiledCaughtParameter2) {
-            decompiledCaughtException = decompiledCaughtParameter2;
-            var3_ref2 = (RuntimeException) (Object) decompiledCaughtException;
-            stackIn_15_0 = var3_ref2;
-            stackIn_15_1 = new StringBuilder().append("ij.D(");
+          } catch (java.lang.RuntimeException caughtParameter) {
+            caughtFailure = caughtParameter;
+            failure = (RuntimeException) (Object) caughtFailure;
+            failureForContext = failure;
+            errorContext = new StringBuilder().append("ij.D(");
             if (source == null) {
-              stackIn_16_2 = "null";
+              sourceDescription = "null";
             } else {
-              stackIn_16_2 = "{...}";
+              sourceDescription = "{...}";
             }
-            throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(executeExpression).append(')').toString());
+            throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) failureForContext), ((StringBuilder) (Object) errorContext).append(sourceDescription).append(',').append(executeExpression).append(')').toString());
           }
-        } catch (RuntimeException | Error decompiledUncheckedException) {
-          throw decompiledUncheckedException;
-        } catch (Throwable decompiledCheckedException) {
-          throw new RuntimeException(decompiledCheckedException);
+        } catch (RuntimeException | Error uncheckedFailure) {
+          throw uncheckedFailure;
+        } catch (Throwable checkedFailure) {
+          throw new RuntimeException(checkedFailure);
         }
     }
 

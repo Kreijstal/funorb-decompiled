@@ -67,7 +67,7 @@ final class kv extends tj implements he {
         var2[0] = 1;
         var2[2] = 16777215;
         var2[1] = 14737632;
-        VerticalScrollbar.field_Rb = new CombatSandbox(oh.field_J, IsaacRandom.field_k, rs.field_n, var2, 0, 0);
+        VerticalScrollbar.field_Rb = new CombatSandbox(ChannelBaseVolumeConsoleCommand.field_J, IsaacRandom.field_k, rs.field_n, var2, 0, 0);
         if (param0 != -28541) {
           field_F = 18;
         }

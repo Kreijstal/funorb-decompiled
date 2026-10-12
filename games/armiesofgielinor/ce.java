@@ -132,7 +132,7 @@ final class ce extends tj implements he {
                 di.c((byte) -127);
               }
             } else {
-              rq.a(false);
+              ConsoleTextNode.a(false);
             }
           }
           if (param1 == 11) {

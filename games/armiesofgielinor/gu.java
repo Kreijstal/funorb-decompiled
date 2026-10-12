@@ -7,8 +7,8 @@ final class gu {
 
     final static boolean a(int param0) {
         int var1 = -61 / ((-54 - param0) / 62);
-        if (oa.field_I != null) {
-          return oa.field_I.a(-30847, DualNodeDeque.typedCharacter, rs.keyCode);
+        if (ToggleTurnSkipConsoleCommand.debugConsole != null) {
+          return ToggleTurnSkipConsoleCommand.debugConsole.handleKey(-30847, DualNodeDeque.typedCharacter, rs.keyCode);
         }
         return false;
     }

@@ -559,7 +559,7 @@ class ClientUiComponent extends ClientUiNode {
           }
           AnimationSequence.a(stackIn_4_0, -106);
           DebugConsole.field_w.setLayout(-40 + lk.field_a.height - 2, (byte) -125, 0, lk.field_a.width, 0);
-          gg.field_E.setBounds(jn.field_d, -20500, eb.field_c.width, 0, 0);
+          PrintVictoryConditionsConsoleCommand.field_E.setBounds(jn.field_d, -20500, eb.field_c.width, 0, 0);
           stackIn_6_0 = di.field_l;
           stackIn_6_1 = 18;
           stackIn_6_2 = -20500;
@@ -679,7 +679,7 @@ class ClientUiComponent extends ClientUiNode {
           df.field_K.setBounds(-24 + ta.field_R.height, -20500, ta.field_R.width, 24, 0);
           df.field_K.skinSprites = tq.a(11579568, false, df.field_K.height, 1, 3, 8421504);
           IconTextComponent.field_Kb.setBounds(df.field_K.height - 36, -20500, df.field_K.width - 10, 5, 5);
-          dv.field_m.setBounds(24, -20500, 80, -24 + df.field_K.height - 5, (df.field_K.width - 80) / 2);
+          ConsolePanel.field_m.setBounds(24, -20500, 80, -24 + df.field_K.height - 5, (df.field_K.width - 80) / 2);
           mj.a((byte) 120);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

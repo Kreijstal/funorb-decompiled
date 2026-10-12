@@ -179,10 +179,10 @@ final class MoveEvent extends GameEvent {
           }
           pv.a("commonui", "dropdown", param2, 24914);
           var5 = MapLayout.loadIndexedSpritesByName("screen_options", -28106, "commonui", param2);
-          oa.field_H = new IndexedSprite[4];
+          ToggleTurnSkipConsoleCommand.field_H = new IndexedSprite[4];
           HuffmanCodec.field_e = new IndexedSprite[4];
           ClientContextMenu.field_b = new IndexedSprite[4];
-          var6 = new IndexedSprite[][]{oa.field_H, HuffmanCodec.field_e, ClientContextMenu.field_b};
+          var6 = new IndexedSprite[][]{ToggleTurnSkipConsoleCommand.field_H, HuffmanCodec.field_e, ClientContextMenu.field_b};
           var7 = new int[4][];
           var7[0] = var5[0].palette;
           var8 = 1;
@@ -214,7 +214,7 @@ final class MoveEvent extends GameEvent {
               continue scanLoop1;
             }
             var9 = var4.pixelHeight;
-            rq.pushRasterState((byte) -56);
+            ConsoleTextNode.pushRasterState((byte) -56);
             var4.b();
             stackIn_23_0 = 0;
             break;

@@ -108,54 +108,54 @@ class ClientUiNode extends DualLinkedNode {
         }
     }
 
-    final static String a(int param0, String param1) {
-        int var4 = 0;
-        String var2 = null;
-        RuntimeException var2_ref = null;
-        String[] var3 = null;
-        int var5 = 0;
-        String stackIn_3_0 = null;
-        String stackIn_11_0 = null;
-        String stackIn_13_0 = null;
-        RuntimeException stackIn_16_0 = null;
-        StringBuilder stackIn_16_1 = null;
-        String stackIn_17_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        var5 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+    final static String setCoatFromQuery(int obfuscationGuard, String query) {
+        int valueIndex = 0;
+        String queryAlias = null;
+        RuntimeException failure = null;
+        String[] values = null;
+        int obfuscationControl = 0;
+        String guardResult = null;
+        String successResult = null;
+        String errorResult = null;
+        RuntimeException failureForContext = null;
+        StringBuilder errorContext = null;
+        String queryDescription = null;
+        RuntimeException caughtFailure = null;
+        obfuscationControl = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          var2 = param1;
-          var3 = dj.a(14, ':', var2.substring(var2.indexOf('=') + 1));
-          if (param0 <= 88) {
-            stackIn_3_0 = (String) null;
-            return stackIn_3_0;
+          queryAlias = query;
+          values = dj.splitText(14, ':', queryAlias.substring(queryAlias.indexOf('=') + 1));
+          if (obfuscationGuard <= 88) {
+            guardResult = (String) null;
+            return guardResult;
           }
-          for (var4 = 0; var4 < var3.length; var4++) {
-            if (var4 % 2 == 0) {
-              ah.localCoat.setPart(119, Integer.parseInt(var3[var4]), var4 / 2);
+          for (valueIndex = 0; valueIndex < values.length; valueIndex++) {
+            if (valueIndex % 2 == 0) {
+              ah.localCoat.setPart(119, Integer.parseInt(values[valueIndex]), valueIndex / 2);
             } else {
-              ah.localCoat.setColour(var4 / 2, Integer.parseInt(var3[var4]), (byte) -128);
+              ah.localCoat.setColour(valueIndex / 2, Integer.parseInt(values[valueIndex]), (byte) -128);
             }
           }
-          stackIn_11_0 = "done.";
-          return stackIn_11_0;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
+          successResult = "done.";
+          return successResult;
+        } catch (java.lang.RuntimeException caughtParseFailure) {
+          caughtFailure = caughtParseFailure;
           try {
-            var2_ref = decompiledCaughtException;
-            var2_ref.printStackTrace();
-            stackIn_13_0 = "Error. See console for details.";
-            return stackIn_13_0;
-          } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
-            decompiledCaughtException = decompiledCaughtParameter1;
-            var2_ref = decompiledCaughtException;
-            stackIn_16_0 = var2_ref;
-            stackIn_16_1 = new StringBuilder().append("im.AA(").append(param0).append(',');
-            if (param1 == null) {
-              stackIn_17_2 = "null";
+            failure = caughtFailure;
+            failure.printStackTrace();
+            errorResult = "Error. See console for details.";
+            return errorResult;
+          } catch (java.lang.RuntimeException caughtParameter) {
+            caughtFailure = caughtParameter;
+            failure = caughtFailure;
+            failureForContext = failure;
+            errorContext = new StringBuilder().append("im.AA(").append(obfuscationGuard).append(',');
+            if (query == null) {
+              queryDescription = "null";
             } else {
-              stackIn_17_2 = "{...}";
+              queryDescription = "{...}";
             }
-            throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
+            throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) failureForContext), ((StringBuilder) (Object) errorContext).append(queryDescription).append(')').toString());
           }
         }
     }

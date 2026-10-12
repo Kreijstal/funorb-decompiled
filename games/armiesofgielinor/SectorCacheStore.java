@@ -88,8 +88,8 @@ final class SectorCacheStore {
             MoveAttackRequest.chatHistoryPriorityCounts[priorityIndex] = 0;
           }
           for (countIndex = 0; countIndex < lk.chatHistorySize; countIndex++) {
-            if (message.channelId == an.chatHistory[countIndex].channelId) {
-              existingPriority = an.chatHistory[countIndex].getFilterPriority(true);
+            if (message.channelId == DefeatPlayerConsoleCommand.chatHistory[countIndex].channelId) {
+              existingPriority = DefeatPlayerConsoleCommand.chatHistory[countIndex].getFilterPriority(true);
               MoveAttackRequest.chatHistoryPriorityCounts[existingPriority] = MoveAttackRequest.chatHistoryPriorityCounts[existingPriority] + 1;
             }
           }
@@ -98,8 +98,8 @@ final class SectorCacheStore {
           writeIndex = 0;
           for (readIndex = 0; readIndex < lk.chatHistorySize; readIndex++) {
             boolean decompiledFrameRemainder0 = true;
-            if (~message.channelId == ~an.chatHistory[readIndex].channelId) {
-              messagePriority = an.chatHistory[readIndex].getFilterPriority(true);
+            if (~message.channelId == ~DefeatPlayerConsoleCommand.chatHistory[readIndex].channelId) {
+              messagePriority = DefeatPlayerConsoleCommand.chatHistory[readIndex].getFilterPriority(true);
               if (MoveAttackRequest.chatHistoryPriorityCounts[messagePriority] > AnimationPlayer.chatHistoryCategoryLimit) {
                 MoveAttackRequest.chatHistoryPriorityCounts[messagePriority] = MoveAttackRequest.chatHistoryPriorityCounts[messagePriority] - 1;
                 decompiledFrameRemainder0 = false;
@@ -108,7 +108,7 @@ final class SectorCacheStore {
             if (decompiledFrameRemainder0) {
               destinationIndex = writeIndex;
               writeIndex++;
-              an.chatHistory[destinationIndex] = an.chatHistory[readIndex];
+              DefeatPlayerConsoleCommand.chatHistory[destinationIndex] = DefeatPlayerConsoleCommand.chatHistory[readIndex];
             }
           }
           lk.chatHistorySize = writeIndex;
@@ -117,7 +117,7 @@ final class SectorCacheStore {
           }
           appendIndex = lk.chatHistorySize;
           lk.chatHistorySize = lk.chatHistorySize + 1;
-          an.chatHistory[appendIndex] = message;
+          DefeatPlayerConsoleCommand.chatHistory[appendIndex] = message;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

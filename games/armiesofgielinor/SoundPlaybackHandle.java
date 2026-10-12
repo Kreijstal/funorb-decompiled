@@ -23,7 +23,7 @@ final class SoundPlaybackHandle extends IntrusiveNode {
           var4.writeByteLengthPrefix(-var5 + var4.position, 5930);
           return;
         }
-        SoundPlaybackHandle.b(-87, -88);
+        SoundPlaybackHandle.giveSelectedTileToPlayer(-87, -88);
         var4.writeCipheredOpcode(32161, packetOpcode);
         var4.position = var4.position + 1;
         var5Lifetime1 = var4.position;
@@ -32,53 +32,53 @@ final class SoundPlaybackHandle extends IntrusiveNode {
         var4.writeByteLengthPrefix(-var5Lifetime1 + var4.position, 5930);
     }
 
-    final static String b(int param0, int param1) {
-        GameplayController var2;
-        int var3;
-        GameplayController var5;
-        GameplayController var6;
-        GameplayController var7;
-        GameplayController var8;
-        int var3Lifetime1;
-        if (param0 == 128) {
-          var8 = rd.field_j;
-          var7 = var8;
-          if (var7 == null) {
+    final static String giveSelectedTileToPlayer(int obfuscationGuard, int ownerPlayer) {
+        GameplayController guardedControllerSecondAlias;
+        int selectedTileIndex;
+        GameplayController guardedControllerAlias;
+        GameplayController guardedController;
+        GameplayController controllerAlias;
+        GameplayController controller;
+        int guardedSelectedTileIndex;
+        if (obfuscationGuard == 128) {
+          controller = rd.gameplayController;
+          controllerAlias = controller;
+          if (controllerAlias == null) {
             return "No game in progress.";
           }
-          var3 = var7.field_h;
-          if (0 <= var3 &&
-            var3 < var7.battlefield.tiles.length) {
-            if (-1 <= param1 &&
-              var7.battlefield.playerCount > param1) {
-              var8.battlefield.tiles[var3].ownerPlayer = param1;
+          selectedTileIndex = controllerAlias.selectedTileIndex;
+          if (0 <= selectedTileIndex &&
+            selectedTileIndex < controllerAlias.battlefield.tiles.length) {
+            if (-1 <= ownerPlayer &&
+              controllerAlias.battlefield.playerCount > ownerPlayer) {
+              controller.battlefield.tiles[selectedTileIndex].ownerPlayer = ownerPlayer;
               return "Done.";
             }
-            return "Invalid owner; use -1 to " + var7.battlefield.playerCount;
+            return "Invalid owner; use -1 to " + controllerAlias.battlefield.playerCount;
           }
           return "Please select a tile before using this.";
         }
         field_l = 113;
-        var6 = rd.field_j;
-        var5 = var6;
-        var2 = var5;
-        if (var5 == null) {
+        guardedController = rd.gameplayController;
+        guardedControllerAlias = guardedController;
+        guardedControllerSecondAlias = guardedControllerAlias;
+        if (guardedControllerAlias == null) {
           return "No game in progress.";
         }
-        var3Lifetime1 = var5.field_h;
-        if (0 > var3Lifetime1) {
+        guardedSelectedTileIndex = guardedControllerAlias.selectedTileIndex;
+        if (0 > guardedSelectedTileIndex) {
           return "Please select a tile before using this.";
         }
-        if (var3Lifetime1 >= var5.battlefield.tiles.length) {
+        if (guardedSelectedTileIndex >= guardedControllerAlias.battlefield.tiles.length) {
           return "Please select a tile before using this.";
         }
-        if (-1 > param1) {
-          return "Invalid owner; use -1 to " + var5.battlefield.playerCount;
+        if (-1 > ownerPlayer) {
+          return "Invalid owner; use -1 to " + guardedControllerAlias.battlefield.playerCount;
         }
-        if (var5.battlefield.playerCount <= param1) {
-          return "Invalid owner; use -1 to " + var5.battlefield.playerCount;
+        if (guardedControllerAlias.battlefield.playerCount <= ownerPlayer) {
+          return "Invalid owner; use -1 to " + guardedControllerAlias.battlefield.playerCount;
         }
-        var6.battlefield.tiles[var3Lifetime1].ownerPlayer = param1;
+        guardedController.battlefield.tiles[guardedSelectedTileIndex].ownerPlayer = ownerPlayer;
         return "Done.";
     }
 

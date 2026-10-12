@@ -118,7 +118,7 @@ final class wm {
         var5 = 0;
         var6 = 0;
         for (var7 = -1 + lk.chatHistorySize; var7 >= 0; var7--) {
-          var8_ref_mo = an.chatHistory[var7];
+          var8_ref_mo = DefeatPlayerConsoleCommand.chatHistory[var7];
           var9 = 0;
           if (!NodeIterator.field_a &&
             AnimationPlayer.chatHistoryCategoryLimit > var5) {
@@ -155,7 +155,7 @@ final class wm {
           wm.a(44);
         }
         while (lk.chatHistorySize > var8) {
-          var9_ref_mo = an.chatHistory[var8];
+          var9_ref_mo = DefeatPlayerConsoleCommand.chatHistory[var8];
           if (null != var9_ref_mo.rowComponent) {
             vq.field_a.content.addChild(var9_ref_mo.rowComponent, 65);
             var9_ref_mo.rowComponent.setBounds(param0, -20500, var9_ref_mo.rowComponent.getPreferredWidth(-49), var7Lifetime1, param1);
@@ -259,7 +259,7 @@ final class wm {
               CampaignRewardPreview.writeAbuseReport(Spell.field_b.getTargetName(1), var3, Spell.field_b.accountId, 29231, var4 != 0, param1);
             }
             Spell.field_b = null;
-            ot.g(76);
+            FixInvisibleUnitsConsoleCommand.g(76);
             return;
           }
           return;
@@ -274,7 +274,7 @@ final class wm {
             CampaignRewardPreview.writeAbuseReport(Spell.field_b.getTargetName(1), var3Lifetime1, Spell.field_b.accountId, 29231, var4Lifetime1 != 0, param1);
           }
           Spell.field_b = null;
-          ot.g(76);
+          FixInvisibleUnitsConsoleCommand.g(76);
           return;
         }
     }

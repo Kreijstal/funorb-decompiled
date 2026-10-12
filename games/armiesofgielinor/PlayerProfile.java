@@ -56,7 +56,7 @@ final class PlayerProfile {
             if (param0.channelId == 4) {
               var2_intLifetime1 = fm.field_d[param0.channelId];
             } else {
-              if (~oh.localAccountId == ~param0.accountId) {
+              if (~ChannelBaseVolumeConsoleCommand.localAccountId == ~param0.accountId) {
                 var2_intLifetime1 = CombatEvent.field_A[param0.channelId];
               } else {
                 var2_intLifetime1 = fm.field_d[param0.channelId];

@@ -273,12 +273,12 @@ final class df extends tj implements fb, he {
                   if (!this.field_F) {
                     QuickChatCommandDefinition.a(param1 ^ 26573);
                   } else {
-                    ba.g(89);
+                    PrintCoatConsoleCommand.g(89);
                   }
                 }
               }
             } else {
-              rq.a(false);
+              ConsoleTextNode.a(false);
             }
           } else {
             this.c(false);

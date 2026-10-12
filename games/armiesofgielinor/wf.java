@@ -32,7 +32,7 @@ abstract class wf extends iv {
           musicProfileTransitionMillis = 91;
         }
         ConsoleExpression.field_m = this.field_z;
-        qa.b(ConsoleExpression.field_m, 1);
+        ChannelFadeTimeConsoleCommand.b(ConsoleExpression.field_m, 1);
         hq.a(param6, 5000, this.field_E, 5000, param2, ConsoleExpression.field_m, this.field_C, 0, this.field_t, this.field_o, this.field_p, IntPair.field_m, this.field_x, this.field_G);
         qf.a(ConsoleExpression.field_m, this.field_p, this.field_G, (byte) 103, this.field_C, param6, this.field_E, this.field_t, IntPair.field_m);
         QuickChatPhraseRepository.configurePunctuationKeys((byte) 112);
@@ -231,7 +231,7 @@ abstract class wf extends iv {
             }
           }
           if (2 == var4) {
-            var5_intLifetime1 = DiskCacheWorker.a((byte) -46, CombatPresentation.i(-4938), cn.e(488997228), lb.b(0), this.field_n, qp.e((byte) -127), RadialSummonItem.a(-1));
+            var5_intLifetime1 = DiskCacheWorker.a((byte) -46, CombatPresentation.i(-4938), cn.e(488997228), lb.b(0), this.field_n, DefeatPlayerWithMetricsConsoleCommand.e((byte) -127), RadialSummonItem.a(-1));
             if (var5_intLifetime1 != -1) {
               CampaignMenuEntry.a(lk.field_r, -14, br.field_b, var5_intLifetime1);
               lk.field_r = null;
@@ -631,7 +631,7 @@ abstract class wf extends iv {
           ps.field_u = DamageEvent.a(1, ChatMessage.field_c, (byte) 119, false, true);
           CombatPresentation.field_M = DamageEvent.a(1, wl.field_E, (byte) 122, false, true);
           h.field_g = DamageEvent.a(1, DualLinkedNode.field_t, (byte) 127, false, true);
-          gg.field_K = ps.field_u;
+          PrintVictoryConditionsConsoleCommand.field_K = ps.field_u;
           StrongCacheEntry.field_E = 2;
           ResourceRequest.field_A = CombatPresentation.field_M;
         }
@@ -797,81 +797,81 @@ abstract class wf extends iv {
         }
     }
 
-    final static String a(String param0, int param1) {
-        int var5 = 0;
-        StringBuilder discarded$0 = null;
-        StringBuilder discarded$1 = null;
-        StringBuilder discarded$2 = null;
-        StringBuilder discarded$3 = null;
-        StringBuilder discarded$4 = null;
-        StringBuilder discarded$5 = null;
-        int stackIn_6_0 = 0;
-        String stackIn_19_0 = null;
-        RuntimeException stackIn_22_0 = null;
-        StringBuilder stackIn_22_1 = null;
-        String stackIn_23_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        ConsoleExpression[] var2 = null;
-        RuntimeException var2_ref = null;
-        int var3 = 0;
-        StringBuilder var4 = null;
-        ConsoleExpression var6 = null;
-        int var7 = 0;
-        int var8 = 0;
-        String var9 = null;
-        int var10 = 0;
-        ConsoleExpression[] var11 = null;
-        var10 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+    final static String highlightConsoleSyntax(String source, int obfuscationGuard) {
+        int tokenIndex = 0;
+        StringBuilder stringAppendResult = null;
+        StringBuilder punctuationAppendResult = null;
+        StringBuilder booleanAppendResult = null;
+        StringBuilder numberAppendResult = null;
+        StringBuilder callAppendResult = null;
+        StringBuilder characterAppendResult = null;
+        int sliceEnd = 0;
+        String result = null;
+        RuntimeException failureForContext = null;
+        StringBuilder errorContext = null;
+        String sourceDescription = null;
+        RuntimeException caughtFailure = null;
+        ConsoleExpression[] tokensAlias = null;
+        RuntimeException failure = null;
+        int guardRemainder = 0;
+        StringBuilder output = null;
+        ConsoleExpression token = null;
+        int startOffset = 0;
+        int endOffset = 0;
+        String slice = null;
+        int obfuscationControl = 0;
+        ConsoleExpression[] tokens = null;
+        obfuscationControl = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          var3 = 107 % ((param1 + 11) / 61);
-          var11 = vv.a(param0, 119);
-          var2 = var11;
-          var4 = new StringBuilder();
-          for (var5 = 0; var11.length > var5; var5++) {
-            var6 = var11[var5];
-            var7 = var6.sourceOffset;
-            if (var5 == -1 + var11.length) {
-              stackIn_6_0 = param0.length();
+          guardRemainder = 107 % ((obfuscationGuard + 11) / 61);
+          tokens = vv.cachedConsoleTokenArray(source, 119);
+          tokensAlias = tokens;
+          output = new StringBuilder();
+          for (tokenIndex = 0; tokens.length > tokenIndex; tokenIndex++) {
+            token = tokens[tokenIndex];
+            startOffset = token.sourceOffset;
+            if (tokenIndex == -1 + tokens.length) {
+              sliceEnd = source.length();
             } else {
-              stackIn_6_0 = var2[1 + var5].sourceOffset;
+              sliceEnd = tokensAlias[1 + tokenIndex].sourceOffset;
             }
-            var8 = stackIn_6_0;
-            var9 = param0.substring(var7, var8);
-            if (var6.kind == BattleTutorial.consoleStringKind) {
-              discarded$0 = var4.append("<col=66ffff>").append(var9).append("</col>");
+            endOffset = sliceEnd;
+            slice = source.substring(startOffset, endOffset);
+            if (token.kind == BattleTutorial.consoleStringKind) {
+              stringAppendResult = output.append("<col=66ffff>").append(slice).append("</col>");
             } else {
-              if (hf.consoleCharacterKind != var6.kind) {
-                if (var6.kind != rn.consoleCallKind) {
-                  if (var6.kind != gg.consoleNumberKind) {
-                    if (var6.kind != EquipmentBattleTutorial.consoleBooleanKind) {
-                      discarded$1 = var4.append(var9);
+              if (hf.consoleCharacterKind != token.kind) {
+                if (token.kind != rn.consoleCallKind) {
+                  if (token.kind != PrintVictoryConditionsConsoleCommand.consoleNumberKind) {
+                    if (token.kind != EquipmentBattleTutorial.consoleBooleanKind) {
+                      punctuationAppendResult = output.append(slice);
                     } else {
-                      discarded$2 = var4.append("<col=33ffaa>").append(var9).append("</col>");
+                      booleanAppendResult = output.append("<col=33ffaa>").append(slice).append("</col>");
                     }
                   } else {
-                    discarded$3 = var4.append("<col=ffaaff>").append(var9).append("</col>");
+                    numberAppendResult = output.append("<col=ffaaff>").append(slice).append("</col>");
                   }
                 } else {
-                  discarded$4 = var4.append("<col=ffff99>").append(var9).append("</col>");
+                  callAppendResult = output.append("<col=ffff99>").append(slice).append("</col>");
                 }
               } else {
-                discarded$5 = var4.append("<col=33bbff>").append(var9).append("</col>");
+                characterAppendResult = output.append("<col=33bbff>").append(slice).append("</col>");
               }
             }
           }
-          stackIn_19_0 = var4.toString();
-          return stackIn_19_0;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var2_ref = decompiledCaughtException;
-          stackIn_22_0 = var2_ref;
-          stackIn_22_1 = new StringBuilder().append("wf.C(");
-          if (param0 == null) {
-            stackIn_23_2 = "null";
+          result = output.toString();
+          return result;
+        } catch (java.lang.RuntimeException caughtParameter) {
+          caughtFailure = caughtParameter;
+          failure = caughtFailure;
+          failureForContext = failure;
+          errorContext = new StringBuilder().append("wf.C(");
+          if (source == null) {
+            sourceDescription = "null";
           } else {
-            stackIn_23_2 = "{...}";
+            sourceDescription = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param1).append(')').toString());
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) failureForContext), ((StringBuilder) (Object) errorContext).append(sourceDescription).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 

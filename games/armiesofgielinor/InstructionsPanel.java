@@ -136,25 +136,25 @@ final class InstructionsPanel {
         return;
     }
 
-    final static String c(int param0) {
-        int var5 = 0;
-        String var6 = null;
-        int var7 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
-        GameplayController var1 = rd.field_j;
-        if (var1 == null) {
+    final static String describeBattleVictoryConditions(int obfuscationGuard) {
+        int lineIndex = 0;
+        String description = null;
+        int obfuscationControl = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        GameplayController controller = rd.gameplayController;
+        if (controller == null) {
           return "No game in progress.";
         }
-        String[] var2 = var1.battlefield.e(26524);
-        if (param0 != -29288) {
+        String[] descriptions = controller.battlefield.describeMatchConditions(26524);
+        if (obfuscationGuard != -29288) {
           field_B = -83;
         }
-        String var3 = "";
-        String[] var4 = var2;
-        for (var5 = 0; var4.length > var5; var5++) {
-          var6 = var4[var5];
-          var3 = var3 + var6 + "\n";
+        String output = "";
+        String[] descriptionsAlias = descriptions;
+        for (lineIndex = 0; descriptionsAlias.length > lineIndex; lineIndex++) {
+          description = descriptionsAlias[lineIndex];
+          output = output + description + "\n";
         }
-        return var3;
+        return output;
     }
 
     private final void c(byte param0) {
@@ -1430,7 +1430,7 @@ final class InstructionsPanel {
 
     private final int h(byte param0) {
         if (param0 >= -90) {
-          InstructionsPanel.c(117);
+          InstructionsPanel.describeBattleVictoryConditions(117);
         }
         return nr.field_e.field_v - nr.field_e.field_L - (nr.field_e.field_H - ((nr.field_e.field_y >> 1) + 3));
     }

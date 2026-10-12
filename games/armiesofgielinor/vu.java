@@ -39,7 +39,7 @@ final class vu extends fw {
         if (obfuscationGuard) {
           vu.isCurrentRoomOwner(false);
         }
-        return currentRoom.ownerAccountId == oh.localAccountId ? true : false;
+        return currentRoom.ownerAccountId == ChannelBaseVolumeConsoleCommand.localAccountId ? true : false;
     }
 
     final static boolean isChatRecipientAvailable(int obfuscationGuard) {

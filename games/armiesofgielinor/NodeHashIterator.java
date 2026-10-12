@@ -82,12 +82,12 @@ final class NodeHashIterator implements Iterator {
               var9.setColor(java.awt.Color.white);
               var9.drawString(param2, var7 + (304 - param2.length() * 6) / 2, 22 + var8);
             }
-            if (an.field_G == null) {
+            if (DefeatPlayerConsoleCommand.field_G == null) {
               return;
             }
             var9.setFont(BattleCharacter.field_g);
             var9.setColor(java.awt.Color.white);
-            var9.drawString(an.field_G, bn.field_b / 2 - an.field_G.length() * 6 / 2, dt.field_a / 2 - 26);
+            var9.drawString(DefeatPlayerConsoleCommand.field_G, bn.field_b / 2 - DefeatPlayerConsoleCommand.field_G.length() * 6 / 2, dt.field_a / 2 - 26);
             return;
           } catch (java.lang.Exception decompiledCaughtParameter1) {
             decompiledCaughtException = decompiledCaughtParameter1;

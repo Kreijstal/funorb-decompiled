@@ -125,7 +125,7 @@ abstract class CacheEntry extends DualLinkedNode {
                 return stackIn_31_0;
               }
               if (var9Lifetime1 == 99) {
-                ConsoleTokenCursor.receivePacketBytes(-81, qa.h(1));
+                ConsoleTokenCursor.receivePacketBytes(-81, ChannelFadeTimeConsoleCommand.h(1));
                 CampaignMenu.field_s = new Boolean(rr.a((byte) -76, ByteStorage.incomingPacket));
                 ByteStorage.incomingPacket.position = 0;
               } else {

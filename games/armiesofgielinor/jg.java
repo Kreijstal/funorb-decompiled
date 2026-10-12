@@ -206,7 +206,7 @@ final class jg extends IntrusiveNode {
                 var12.optionIconContainer.addChild(var12.field_ec, param0 + 59);
               }
               var12.spectatorIcon = new ClientUiComponent(0L, (ClientUiComponent) null);
-              if ((var14 & 1 << gg.field_I) != 0) {
+              if ((var14 & 1 << PrintVictoryConditionsConsoleCommand.field_I) != 0) {
                 var12.optionIconContainer.addChild(var12.spectatorIcon, param0 + 121);
               }
               var12.ratedIcon = new ClientUiComponent(0L, (ClientUiComponent) null);
@@ -344,7 +344,7 @@ final class jg extends IntrusiveNode {
                     if (var12.spectatorMode != 2) {
                       var12.field_Xb.text = bi.field_d;
                     } else {
-                      var12.field_Yb.text = re.field_E;
+                      var12.field_Yb.text = HelloConsoleCommand.field_E;
                     }
                   }
                 } else {
@@ -416,7 +416,7 @@ final class jg extends IntrusiveNode {
                 var12.field_ec.setBounds(var12.optionIconContainer.height, param0 ^ -20500, var51_ref.canvasWidth, 0, var34_int);
                 var34_int = var34_int + (var51_ref.canvasWidth + MusicPatch.field_n);
               }
-              if ((1 << gg.field_I & var14Lifetime1) != 0) {
+              if ((1 << PrintVictoryConditionsConsoleCommand.field_I & var14Lifetime1) != 0) {
                 var52_ref = lm.field_h[var12.spectatorMode - 1];
                 var12.spectatorIcon.sprite = var52_ref;
                 var12.spectatorIcon.setBounds(var12.optionIconContainer.height, -20500, var52_ref.canvasWidth, 0, var34_int);

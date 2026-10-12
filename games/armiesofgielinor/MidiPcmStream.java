@@ -530,25 +530,25 @@ class MidiPcmStream extends PcmStream {
         return this.masterVolume;
     }
 
-    final static String e(int param0) {
-        int var3 = 0;
-        NodeDeque var4 = null;
-        Unit var5 = null;
-        int var6 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
-        GameplayController var1 = rd.field_j;
-        if (var1 == null) {
+    final static String releaseUnitModelOwnershipForConsole(int obfuscationGuard) {
+        int playerIndex = 0;
+        NodeDeque units = null;
+        Unit unit = null;
+        int obfuscationControl = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        GameplayController controller = rd.gameplayController;
+        if (controller == null) {
           return "No game in progress.";
         }
-        NodeDeque[] var2 = var1.battlefield.unitsByPlayer;
-        if (param0 <= 10) {
+        NodeDeque[] unitsByPlayer = controller.battlefield.unitsByPlayer;
+        if (obfuscationGuard <= 10) {
           return (String) null;
         }
-        for (var3 = 0; var3 < var2.length; var3++) {
-          var4 = var2[var3];
-          var5 = (Unit) (var4.first((byte) 99));
-          while (var5 != null) {
-            var5.presentationOwnsModel = false;
-            var5 = (Unit) (var4.next((byte) 123));
+        for (playerIndex = 0; playerIndex < unitsByPlayer.length; playerIndex++) {
+          units = unitsByPlayer[playerIndex];
+          unit = (Unit) (units.first((byte) 99));
+          while (unit != null) {
+            unit.presentationOwnsModel = false;
+            unit = (Unit) (units.next((byte) 123));
           }
         }
         return "Did that work?";
@@ -567,7 +567,7 @@ class MidiPcmStream extends PcmStream {
         }
         this.notesByKey[channel][key] = null;
         if (obfuscationGuard != -44) {
-          MidiPcmStream.e(-77);
+          MidiPcmStream.releaseUnitModelOwnershipForConsole(-77);
         }
         if ((this.channelFlags[channel] & 2) == 0) {
           note.releaseTime = 0;

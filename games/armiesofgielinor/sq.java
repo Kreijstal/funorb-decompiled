@@ -23,20 +23,20 @@ final class sq extends IntrusiveNode {
         return false;
     }
 
-    final static String a(int param0, byte param1, int param2, int param3) {
-        int var4 = -110 / ((param1 + 76) / 36);
-        GameplayController var5 = rd.field_j;
-        if (var5 == null) {
+    final static String defeatPlayerWithMetricsForConsole(int damageTaken, byte obfuscationGuard, int playerId, int turnsTaken) {
+        int guardQuotient = -110 / ((obfuscationGuard + 76) / 36);
+        GameplayController controller = rd.gameplayController;
+        if (controller == null) {
           return "No game in progress.";
         }
-        if (param2 < 0) {
+        if (playerId < 0) {
           return "Please choose a player, 0-based.";
         }
-        if (var5.battlefield.playerCount >= param2) {
-          var5.battlefield.eliminatePlayer(10001, param2, false);
-          var5.battlefield.playerTurnCounts[var5.controlledPlayerId] = param3;
-          var5.battlefield.damageTakenByPlayer[var5.controlledPlayerId] = param0;
-          var5.trackCampaignMetrics(true);
+        if (controller.battlefield.playerCount >= playerId) {
+          controller.battlefield.eliminatePlayer(10001, playerId, false);
+          controller.battlefield.playerTurnCounts[controller.controlledPlayerId] = turnsTaken;
+          controller.battlefield.damageTakenByPlayer[controller.controlledPlayerId] = damageTaken;
+          controller.trackCampaignMetrics(true);
           return "Done.";
         }
         return "Please choose a player, 0-based.";
@@ -66,7 +66,7 @@ final class sq extends IntrusiveNode {
         field_n = null;
         field_s = null;
         if (param0) {
-          sq.a(24, (byte) 101, 43, 1);
+          sq.defeatPlayerWithMetricsForConsole(24, (byte) 101, 43, 1);
         }
     }
 

@@ -32,7 +32,7 @@ final class SkeletonLimitMarker extends PreparedAction {
         try {
           var2_int = param0.length;
           if (param1 != 31732) {
-            SkeletonLimitMarker.a((byte) -52);
+            SkeletonLimitMarker.printCurrentCoat((byte) -52);
           }
           var3 = new byte[var2_int];
           vm.a(param0, 0, var3, 0, var2_int);
@@ -61,26 +61,26 @@ final class SkeletonLimitMarker extends PreparedAction {
     public static void a(boolean param0) {
         field_t = null;
         if (param0) {
-          SkeletonLimitMarker.a((byte) 66);
+          SkeletonLimitMarker.printCurrentCoat((byte) 66);
           field_s = null;
           return;
         }
         field_s = null;
     }
 
-    final static String a(byte param0) {
-        String var1 = null;
-        String var1Lifetime1;
-        if (param0 > 26) {
-          var1 = ah.localCoat.toQueryString((byte) -109);
-          System.out.println(var1);
-          return var1;
+    final static String printCurrentCoat(byte obfuscationGuard) {
+        String query = null;
+        String guardedQuery;
+        if (obfuscationGuard > 26) {
+          query = ah.localCoat.toQueryString((byte) -109);
+          System.out.println(query);
+          return query;
         }
-        byte[] var2 = (byte[]) null;
+        byte[] unusedPackedCoat = (byte[]) null;
         SkeletonLimitMarker.a((byte[]) null, -39);
-        var1Lifetime1 = ah.localCoat.toQueryString((byte) -109);
-        System.out.println(var1Lifetime1);
-        return var1Lifetime1;
+        guardedQuery = ah.localCoat.toQueryString((byte) -109);
+        System.out.println(guardedQuery);
+        return guardedQuery;
     }
 
     static {

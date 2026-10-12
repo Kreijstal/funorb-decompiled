@@ -307,7 +307,7 @@ final class QuickChatPhrase extends DualLinkedNode {
               }
             }
           } else {
-            this.textFragments = dj.a(61, '<', packet.readNullTerminatedString(1));
+            this.textFragments = dj.splitText(61, '<', packet.readNullTerminatedString(1));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

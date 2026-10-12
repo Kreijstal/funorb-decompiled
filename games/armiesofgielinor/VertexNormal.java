@@ -239,7 +239,7 @@ final class VertexNormal {
               var25_int = 0;
               if (null != vu.currentRoom &&
                 vu.isCurrentRoomOwner(false) &&
-                oh.localAccountId != var12.accountId) {
+                ChannelBaseVolumeConsoleCommand.localAccountId != var12.accountId) {
                 if (null != var12.admissionButton.text) {
                   var26 = var12.admissionButton.getPreferredWidth(104) + MusicPatchNode.field_l * 2;
                   var12.admissionButton.setBounds(jn.field_d, -20500, var26, var19, var25_int);
@@ -320,7 +320,7 @@ final class VertexNormal {
                 continue;
               }
               var24Lifetime2 = null;
-              if (oh.localAccountId != var12.accountId) {
+              if (ChannelBaseVolumeConsoleCommand.localAccountId != var12.accountId) {
                 if (var5_int != 0 &&
                   !var12.packedFlag0) {
                   var24Lifetime2 = fo.a(param1 + 4545, TickCounter.field_b, new String[]{var20});

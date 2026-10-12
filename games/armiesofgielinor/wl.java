@@ -178,15 +178,15 @@ abstract class wl extends tj {
         }
         stackIn_13_0 = (param1) && (sq.c((byte) -103)) && (var2 == 0);
         tq.a(stackIn_13_0, false);
-        if (null != rd.field_j) {
-          rd.field_j.b(0, param1);
+        if (null != rd.gameplayController) {
+          rd.gameplayController.b(0, param1);
         }
         if (null != SectorCacheStore.field_a) {
           SectorCacheStore.field_a.b(0, param1);
         }
         fe.b(0, 0, so.field_b.field_a, so.field_b.field_g, HuffmanCodec.field_i, ConsoleValue.field_b, 0, 0);
         if (var2 != 0) {
-          if (!qa.field_F) {
+          if (!ChannelFadeTimeConsoleCommand.field_F) {
             stackIn_22_0 = CampaignMenu.field_q;
           } else {
             stackIn_22_0 = l.field_d;

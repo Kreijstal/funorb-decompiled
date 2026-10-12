@@ -117,7 +117,7 @@ final class AdaptiveMidiPcmStream extends MidiPcmStream {
             var8 = param1[1].canvasWidth;
             param1[0].b(param3, param4, param0);
             param1[2].b(-var7 + param2 + param3, param4, param0);
-            SoftwareRaster.b(an.field_H);
+            SoftwareRaster.b(DefeatPlayerConsoleCommand.field_H);
             SoftwareRaster.b(var6_int + param3, param4, param3 + param2 - var7, param1[1].canvasHeight + param4);
             if (param5 != -3225) {
               AdaptiveMidiPcmStream.a(true);
@@ -127,7 +127,7 @@ final class AdaptiveMidiPcmStream extends MidiPcmStream {
             for (param3 = var9; var10 > param3; param3 = param3 + var8) {
               param1[1].b(param3, param4, param0);
             }
-            SoftwareRaster.a(an.field_H);
+            SoftwareRaster.a(DefeatPlayerConsoleCommand.field_H);
             return;
           }
           return;

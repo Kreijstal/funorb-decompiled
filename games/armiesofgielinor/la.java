@@ -135,7 +135,7 @@ final class la {
         }
         lk.chatHistorySize = 0;
         MoveAttackRequest.chatHistoryPriorityCounts = new int[3];
-        an.chatHistory = new ChatMessage[categoryLimit * 15];
+        DefeatPlayerConsoleCommand.chatHistory = new ChatMessage[categoryLimit * 15];
         AnimationPlayer.chatHistoryCategoryLimit = categoryLimit;
     }
 

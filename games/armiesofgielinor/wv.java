@@ -52,7 +52,7 @@ class wv extends af {
               if (!fh.field_i) {
                 param0 = rs.field_x;
               } else {
-                param0 = rq.field_o;
+                param0 = ConsoleTextNode.field_o;
               }
               param2 = 2;
               ContextActionMenu.field_Qb.a(-17376, IsaacRandom.field_d);

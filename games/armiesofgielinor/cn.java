@@ -13,7 +13,7 @@ final class cn extends vf {
     static int field_o;
 
     final static String e(int param0) {
-        if (du.field_d == oh.field_L) {
+        if (du.field_d == ChannelBaseVolumeConsoleCommand.field_L) {
           return cd.field_e;
         }
         if (param0 != 488997228) {

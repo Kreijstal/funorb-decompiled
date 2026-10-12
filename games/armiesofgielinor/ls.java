@@ -163,7 +163,7 @@ final class ls {
         int var9Lifetime1;
         var10 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          var7_int = jq.b(7, param4);
+          var7_int = SetCoatConsoleCommand.b(7, param4);
           if (dt.field_b == null) {
             dt.field_b = new java.security.SecureRandom();
           }

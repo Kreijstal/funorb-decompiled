@@ -100,7 +100,7 @@ final class GameplayController {
     private int field_Kb;
     private int encodedDamageCheckpoint;
     int field_y;
-    int field_h;
+    int selectedTileIndex;
     private int field_C;
     int remainingTurnTicks;
     private int field_nb;
@@ -1539,7 +1539,7 @@ final class GameplayController {
             -1 != this.controlledPlayerId) {
             stackIn_23_2 = se.field_h;
           } else {
-            stackIn_23_2 = oh.field_K;
+            stackIn_23_2 = ChannelBaseVolumeConsoleCommand.field_K;
           }
           TrianglePulse.selectMusicTrackWithDefaultGain(stackIn_20_0, stackIn_20_1, stackIn_23_2, false);
           this.battleTutorial = null;
@@ -1555,12 +1555,12 @@ final class GameplayController {
               currentTurns = turnsTaken;
               previousDamage = 996394 ^ this.encodedDamageCheckpoint;
               previousTurns = this.encodedTurnCheckpoint ^ 996394;
-              hc.field_b = hc.field_b + 1;
-              hc.field_b = hc.field_b + (AiPlanningStrategy.pointerX ^ ko.pointerY);
-              hc.field_b = Math.abs(hc.field_b);
+              hc.campaignMetricMutationCounter = hc.campaignMetricMutationCounter + 1;
+              hc.campaignMetricMutationCounter = hc.campaignMetricMutationCounter + (AiPlanningStrategy.pointerX ^ ko.pointerY);
+              hc.campaignMetricMutationCounter = Math.abs(hc.campaignMetricMutationCounter);
               damageDelta = -previousDamage + currentDamageThenSpecialUnitCount;
               turnDelta = -previousTurns + currentTurns;
-              mutationSelector = hc.field_b % 4;
+              mutationSelector = hc.campaignMetricMutationCounter % 4;
               mutationVariant = mutationSelector;
               switch ((var15 == 0
                 || mutationVariant == 0
@@ -1932,7 +1932,7 @@ final class GameplayController {
         try {
           boolean decompiledFrameRemainder0 = true;
           if (this.selectedUnit != null ||
-            this.field_h > -1) {
+            this.selectedTileIndex > -1) {
             if (80 > this.field_fb) {
               this.field_fb = this.field_fb + 5;
               decompiledFrameRemainder0 = (var3 != 0);
@@ -2627,7 +2627,7 @@ final class GameplayController {
                 return stackIn_347_0;
               }
               if ((this.selectedUnit != null ||
-                this.field_h > -1) && IterableDualNodeDeque.isPointerInBounds(-33, 253, var2_int - 78, 0, 75)) {
+                this.selectedTileIndex > -1) && IterableDualNodeDeque.isPointerInBounds(-33, 253, var2_int - 78, 0, 75)) {
                 stackIn_358_0 = -1;
                 return stackIn_358_0;
               }
@@ -3038,8 +3038,8 @@ final class GameplayController {
               hs.a(false, true, this.field_W, 0, 253, this.field_fb, this.field_i, 0);
             }
           }
-          if (this.field_h > -1) {
-            this.a(0, 110, this.field_qb, 253, this.battlefield.tiles[this.field_h], this.field_fb, this.controlledPlayerId, this.battlefield.mapTheme);
+          if (this.selectedTileIndex > -1) {
+            this.a(0, 110, this.field_qb, 253, this.battlefield.tiles[this.selectedTileIndex], this.field_fb, this.controlledPlayerId, this.battlefield.mapTheme);
           }
           if (null != this.selectedUnit) {
             stackIn_95_0 = (~this.controlledPlayerId == ~this.selectedUnit.ownerPlayer);
@@ -3587,7 +3587,7 @@ final class GameplayController {
             this.updateCamera((byte) -42);
             if (!jj.b((byte) -73)) {
               this.b(this.b(true), 123);
-              if (null == rd.field_j &&
+              if (null == rd.gameplayController &&
                 SectorCacheStore.field_a == null) {
                 return;
               }
@@ -4995,12 +4995,12 @@ final class GameplayController {
         try {
           this.field_i = this.field_fb;
           this.field_W = this.selectedUnit;
-          this.field_ab = this.field_h;
+          this.field_ab = this.selectedTileIndex;
           if (param1 != 58) {
             this.field_d = (MusicTrack) null;
           }
           this.field_lc = false;
-          this.field_h = -1;
+          this.selectedTileIndex = -1;
           boolean decompiledSharedTail1 = (param2 == this.selectedUnit &&
             null != param2);
           if (!decompiledSharedTail1) {
@@ -5547,11 +5547,11 @@ final class GameplayController {
           }
           if (stackIn_313_0 == rs.keyCode &&
             this.field_E &&
-            this.field_h > 0 &&
-            this.battlefield.tiles.length > this.field_h &&
-            this.battlefield.tiles[this.field_h].occupant == null) {
-            var2_int = this.field_h % this.battlefield.mapWidth;
-            var3Lifetime3 = this.field_h / this.battlefield.mapWidth;
+            this.selectedTileIndex > 0 &&
+            this.battlefield.tiles.length > this.selectedTileIndex &&
+            this.battlefield.tiles[this.selectedTileIndex].occupant == null) {
+            var2_int = this.selectedTileIndex % this.battlefield.mapWidth;
+            var3Lifetime3 = this.selectedTileIndex / this.battlefield.mapWidth;
             var4 = 40;
             stackIn_332_0 = (!br.heldKeys[81]) ? 0 : 1;
             var5 = stackIn_332_0;
@@ -6158,7 +6158,7 @@ final class GameplayController {
                     if (this.field_lb &&
                       this.battlefield.teamGame &&
                       TabbedPanel.a(-40 + this.o(125) + 14, 88, 14, false)) {
-                      if (qa.field_F) {
+                      if (ChannelFadeTimeConsoleCommand.field_F) {
                         stackIn_132_0 = or.field_e;
                       } else {
                         stackIn_132_0 = kd.field_E;
@@ -6551,9 +6551,9 @@ final class GameplayController {
                         if (this.selectedUnit.immobilizedTurns > 0) {
                           if (IterableDualNodeDeque.isPointerInBounds(-33, 487 - 30 * (var16 & 3), 517 - (var16 & 3) * 30, 39 + (var16 >> 2) * 30, 30 * (var16 >> 2) + 79)) {
                             if (this.selectedUnit.immobilizedTurns > 1) {
-                              stackIn_457_0 = fo.a(4800, ba.field_E[1], new String[]{Integer.toString(this.selectedUnit.immobilizedTurns)});
+                              stackIn_457_0 = fo.a(4800, PrintCoatConsoleCommand.field_E[1], new String[]{Integer.toString(this.selectedUnit.immobilizedTurns)});
                             } else {
-                              stackIn_457_0 = ba.field_E[0];
+                              stackIn_457_0 = PrintCoatConsoleCommand.field_E[0];
                             }
                             var2 = stackIn_457_0;
                           }
@@ -6670,11 +6670,11 @@ final class GameplayController {
                 }
               }
               if (this.field_fb == 80 &&
-                this.field_h > -1 &&
+                this.selectedTileIndex > -1 &&
                 IterableDualNodeDeque.isPointerInBounds(-33, 253, 562, 0, 75)) {
                 boolean decompiledFrameRemainder7 = true;
                 var2 = "";
-                var13_ref_ne = this.battlefield.tiles[this.field_h];
+                var13_ref_ne = this.battlefield.tiles[this.selectedTileIndex];
                 if (IterableDualNodeDeque.isPointerInBounds(-33, 260, 285, 12, 44)) {
                   if (!var13_ref_ne.isStructure(false)) {
                     var2 = GlobalSpell.field_k;
@@ -7237,7 +7237,7 @@ final class GameplayController {
           this.camera = new BattleCamera(this.battlefield.mapWidth, this.battlefield.mapHeight);
           this.unitRenderer = new BattleUnitRenderer(this.camera);
           ro.modelProjectionCamera = this.camera;
-          ot.a(this.battlefield, this.battleGraphicsAssets, 1, this);
+          FixInvisibleUnitsConsoleCommand.a(this.battlefield, this.battleGraphicsAssets, 1, this);
           var2_int = (this.battlefield.mapWidth >> 1) + (this.battlefield.mapWidth >> 1) * this.battlefield.mapWidth;
           if (!param0) {
             this.field_Gb = -93;
@@ -7692,7 +7692,7 @@ final class GameplayController {
                 stackIn_149_0 = 88;
                 stackIn_149_1 = -40 + (this.o(127) + 14);
                 stackIn_149_2 = 10;
-                if (qa.field_F) {
+                if (ChannelFadeTimeConsoleCommand.field_F) {
                   stackIn_150_3 = op.field_c[0][this.battlefield.getPlayerTeamIndex(this.controlledPlayerId, ~param0)];
                 } else {
                   stackIn_150_3 = 14540253;
@@ -7763,7 +7763,7 @@ final class GameplayController {
                 en.field_E.c(Integer.toString(this.remainingTurnTicks), 64, 35 + en.field_E.field_H * 3, 16777215, -1);
                 en.field_E.b(Integer.toString(this.field_cc) + "," + Integer.toString(this.field_eb), 20, 150, 16777215, -1);
               }
-              en.field_E.b(Integer.toString(this.field_h), 20, 140, 16777215, -1);
+              en.field_E.b(Integer.toString(this.selectedTileIndex), 20, 140, 16777215, -1);
               stackIn_238_0 = en.field_E;
               stackIn_238_1 = new StringBuilder().append("total hurt: ").append(this.battlefield.damageTakenByPlayer[this.controlledPlayerId]).append(" lost a unit? ");
               stackIn_239_2 = !(0 >= this.battlefield.unitLossCounts[this.controlledPlayerId]);
@@ -8159,7 +8159,7 @@ final class GameplayController {
             break;
           }
           var7Lifetime1 = stackIn_195_0;
-          if (DualLinkedNode.field_o) {
+          if (DualLinkedNode.automaticallySkipPlayerTurns) {
             param0 = 4;
             var7Lifetime1 = 1;
           }
@@ -8221,8 +8221,8 @@ final class GameplayController {
               return;
             }
             if (26 == param0) {
-              stackIn_262_0 = !(qa.field_F);
-              qa.field_F = stackIn_262_0;
+              stackIn_262_0 = !(ChannelFadeTimeConsoleCommand.field_F);
+              ChannelFadeTimeConsoleCommand.field_F = stackIn_262_0;
               return;
             }
             if (param0 == 3) {
@@ -9052,7 +9052,7 @@ final class GameplayController {
             }
             RadialSummonMenu.playDefaultSoundWithIntGuard(126, ClientUiNode.field_v[17]);
           }
-          wt.field_G = false;
+          GiveTileConsoleCommand.field_G = false;
           ep.field_f = false;
           et.field_d = false;
           uu.field_b = false;
@@ -9351,12 +9351,12 @@ final class GameplayController {
                 currentTurnsThenMutationVariant = turnsTaken;
                 damageCheckpoint = previousDamage;
                 turnCheckpoint = previousTurns;
-                hc.field_b = hc.field_b + 1;
-                hc.field_b = hc.field_b + (ko.pointerY ^ AiPlanningStrategy.pointerX);
-                hc.field_b = Math.abs(hc.field_b);
+                hc.campaignMetricMutationCounter = hc.campaignMetricMutationCounter + 1;
+                hc.campaignMetricMutationCounter = hc.campaignMetricMutationCounter + (ko.pointerY ^ AiPlanningStrategy.pointerX);
+                hc.campaignMetricMutationCounter = Math.abs(hc.campaignMetricMutationCounter);
                 damageDelta = -damageCheckpoint + currentDamageThenMutationSelector;
                 turnDelta = -turnCheckpoint + currentTurnsThenMutationVariant;
-                deltaMutationSelector = hc.field_b % 4;
+                deltaMutationSelector = hc.campaignMetricMutationCounter % 4;
                 deltaMutationVariant = deltaMutationSelector;
                 if ((deltaMutationVariant != 0 ||
                   var14 != 0) &&
@@ -9407,10 +9407,10 @@ final class GameplayController {
                 return;
               }
             }
-            hc.field_b = hc.field_b + 1;
-            hc.field_b = hc.field_b + (ko.pointerY ^ AiPlanningStrategy.pointerX);
-            hc.field_b = Math.abs(hc.field_b);
-            currentDamageThenMutationSelector = hc.field_b % 8;
+            hc.campaignMetricMutationCounter = hc.campaignMetricMutationCounter + 1;
+            hc.campaignMetricMutationCounter = hc.campaignMetricMutationCounter + (ko.pointerY ^ AiPlanningStrategy.pointerX);
+            hc.campaignMetricMutationCounter = Math.abs(hc.campaignMetricMutationCounter);
+            currentDamageThenMutationSelector = hc.campaignMetricMutationCounter % 8;
             currentTurnsThenMutationVariant = currentDamageThenMutationSelector;
             switch ((var14 == 0
               || currentTurnsThenMutationVariant == 0
@@ -9797,7 +9797,7 @@ final class GameplayController {
                         stackIn_43_6 = false;
                         stackIn_43_7 = op.field_c[0][var4];
                         stackIn_44_8 = !((this.battlefield.eliminatedPlayerMask & 1 << var5) <= 0);
-                        qp.a(stackIn_35_0, stackIn_36_1, stackIn_39_2, stackIn_39_3, stackIn_40_4, stackIn_43_5, stackIn_43_6, stackIn_43_7, stackIn_44_8, this.field_Wb[var5]);
+                        DefeatPlayerWithMetricsConsoleCommand.a(stackIn_35_0, stackIn_36_1, stackIn_39_2, stackIn_39_3, stackIn_40_4, stackIn_43_5, stackIn_43_6, stackIn_43_7, stackIn_44_8, this.field_Wb[var5]);
                         var3 += 30;
                       }
                     } else {
@@ -9810,7 +9810,7 @@ final class GameplayController {
                       stackIn_58_6 = true;
                       stackIn_58_7 = op.field_c[0][var4];
                       stackIn_59_8 = !((1 << var5 & this.battlefield.eliminatedPlayerMask) <= 0);
-                      qp.a(stackIn_50_0, stackIn_51_1, stackIn_54_2, stackIn_54_3, stackIn_55_4, stackIn_58_5, stackIn_58_6, stackIn_58_7, stackIn_59_8, this.field_Wb[var5]);
+                      DefeatPlayerWithMetricsConsoleCommand.a(stackIn_50_0, stackIn_51_1, stackIn_54_2, stackIn_54_3, stackIn_55_4, stackIn_58_5, stackIn_58_6, stackIn_58_7, stackIn_59_8, this.field_Wb[var5]);
                       var3 += 60;
                     }
                     var5++;
@@ -9844,7 +9844,7 @@ final class GameplayController {
                         stackIn_86_6 = false;
                         stackIn_86_7 = op.field_c[0][var4];
                         stackIn_87_8 = !((this.battlefield.eliminatedPlayerMask & 1 << var6_int) <= 0);
-                        qp.a(stackIn_78_0, stackIn_79_1, stackIn_82_2, stackIn_82_3, stackIn_83_4, stackIn_86_5, stackIn_86_6, stackIn_86_7, stackIn_87_8, this.field_Wb[var6_int]);
+                        DefeatPlayerWithMetricsConsoleCommand.a(stackIn_78_0, stackIn_79_1, stackIn_82_2, stackIn_82_3, stackIn_83_4, stackIn_86_5, stackIn_86_6, stackIn_86_7, stackIn_87_8, this.field_Wb[var6_int]);
                         var5Lifetime2 += 30;
                       }
                       var6_int++;
@@ -9978,7 +9978,7 @@ final class GameplayController {
                 stackIn_168_6 = false;
                 stackIn_168_7 = op.field_c[0][var8Lifetime1];
                 stackIn_169_8 = !((1 << var8Lifetime1 & this.battlefield.eliminatedPlayerMask) <= 0);
-                qp.a(stackIn_160_0, stackIn_161_1, stackIn_164_2, stackIn_164_3, stackIn_165_4, stackIn_168_5, stackIn_168_6, stackIn_168_7, stackIn_169_8, this.field_Wb[var8Lifetime1]);
+                DefeatPlayerWithMetricsConsoleCommand.a(stackIn_160_0, stackIn_161_1, stackIn_164_2, stackIn_164_3, stackIn_165_4, stackIn_168_5, stackIn_168_6, stackIn_168_7, stackIn_169_8, this.field_Wb[var8Lifetime1]);
                 if (this.battlefield.field_r) {
                   var9Lifetime1 = 30;
                   this.a(var8Lifetime1, 6, 30, 24 + var3Lifetime1, -36 + (-(var9Lifetime1 / 2) + var2_int), (byte) -116);
@@ -9998,7 +9998,7 @@ final class GameplayController {
                 stackIn_191_6 = true;
                 stackIn_191_7 = op.field_c[0][var8Lifetime1];
                 stackIn_192_8 = !((1 << var8Lifetime1 & this.battlefield.eliminatedPlayerMask) <= 0);
-                qp.a(stackIn_183_0, stackIn_184_1, stackIn_187_2, stackIn_187_3, stackIn_188_4, stackIn_191_5, stackIn_191_6, stackIn_191_7, stackIn_192_8, this.field_Wb[var8Lifetime1]);
+                DefeatPlayerWithMetricsConsoleCommand.a(stackIn_183_0, stackIn_184_1, stackIn_187_2, stackIn_187_3, stackIn_188_4, stackIn_191_5, stackIn_191_6, stackIn_191_7, stackIn_192_8, this.field_Wb[var8Lifetime1]);
                 if (this.battlefield.field_r) {
                   var9Lifetime1 = 56;
                   this.a(var8Lifetime1, 8, var9Lifetime1, var3Lifetime1 + 48, var2_int - 36 - var9Lifetime1 / 2, (byte) -116);
@@ -10452,24 +10452,24 @@ final class GameplayController {
         try {
           this.field_i = this.field_fb;
           this.field_W = this.selectedUnit;
-          this.field_ab = this.field_h;
+          this.field_ab = this.selectedTileIndex;
           this.selectedUnit = null;
-          if (this.field_h == -1 ||
+          if (this.selectedTileIndex == -1 ||
             param0 == -1) {
             this.field_qb = 0;
             this.field_fb = 0;
           }
-          if (~param0 != ~this.field_h) {
-            this.field_h = param0;
+          if (~param0 != ~this.selectedTileIndex) {
+            this.selectedTileIndex = param0;
             if (ArmiesOfGielinor.obfuscationControl) {
-              this.field_h = -1;
+              this.selectedTileIndex = -1;
             }
           } else {
-            this.field_h = -1;
+            this.selectedTileIndex = -1;
           }
           this.field_D = false;
-          if (this.field_h != -1) {
-            var4 = this.battlefield.tiles[this.field_h].getDisplayName((byte) 81);
+          if (this.selectedTileIndex != -1) {
+            var4 = this.battlefield.tiles[this.selectedTileIndex].getDisplayName((byte) 81);
             this.field_mc = (nr.field_e.a(var4) >> 1) - 210;
             if (this.field_mc < 0) {
               this.field_mc = 0;
@@ -11887,7 +11887,7 @@ final class GameplayController {
           if (!param0) {
             stackIn_22_0 = IsaacRandom.field_a;
           } else {
-            stackIn_22_0 = rq.field_k;
+            stackIn_22_0 = ConsoleTextNode.field_k;
           }
           fm.a(stackIn_22_0, var8, db.a(true, param3), MatchConditionEntry.a(param4, (byte) 94), -116);
           it.field_a.g(db.a(true, param3 + 9), MatchConditionEntry.a(6 + param4, (byte) 94));
@@ -12161,7 +12161,7 @@ final class GameplayController {
         this.field_ib = 0;
         this.field_kb = -1;
         this.field_Wb = null;
-        this.field_h = -1;
+        this.selectedTileIndex = -1;
         this.field_W = null;
         this.field_Sb = -1;
         this.field_b = 0;
@@ -12604,7 +12604,7 @@ final class GameplayController {
             this.unitCycler = new UnitCycler(this.battlefield.unitsByPlayer[this.battlefield.campaignMission.playerSlot]);
             this.rebuildOverviewTargets(0);
           }
-          oa.selectMusicWithDefaultProfile(-63, this.field_d);
+          ToggleTurnSkipConsoleCommand.selectMusicWithDefaultProfile(-63, this.field_d);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

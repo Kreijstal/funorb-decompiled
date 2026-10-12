@@ -27,7 +27,7 @@ final class km {
         if (param0 != 0) {
           return (ClientUiComponent) null;
         }
-        return mw.field_E.listContent;
+        return ListMissionsConsoleCommand.field_E.listContent;
     }
 
     private final void a(int param0, int param1, boolean param2, byte param3) {

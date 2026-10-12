@@ -777,7 +777,7 @@ final class Battlefield {
         this.registerUnit(8288, var11);
         if (var11.getUnitCategory(0) != 4) {
         }
-        if (re.a(0, (byte) -98) &&
+        if (HelloConsoleCommand.a(0, (byte) -98) &&
           this.field_b) {
           if (param2 != 19 &&
             param2 != 21 &&
@@ -1472,11 +1472,11 @@ final class Battlefield {
         }
     }
 
-    final String[] e(int param0) {
-        if (param0 != 26524) {
+    final String[] describeMatchConditions(int obfuscationGuard) {
+        if (obfuscationGuard != 26524) {
           this.field_qb = true;
         }
-        return this.matchConditions.describeConditions(param0 ^ 26524);
+        return this.matchConditions.describeConditions(obfuscationGuard ^ 26524);
     }
 
     private final void readStateChangeEvent(int obfuscationGuard, PacketBuffer packet) {
@@ -5012,7 +5012,7 @@ final class Battlefield {
               if (this.campaignMission.missionId != 5) {
                 return;
               }
-              rd.field_j.a(50, (byte) 30, 205);
+              rd.gameplayController.a(50, (byte) 30, 205);
             }
           }
           return;

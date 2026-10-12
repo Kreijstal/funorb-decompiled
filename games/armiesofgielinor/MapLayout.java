@@ -31,7 +31,7 @@ final class MapLayout extends IntrusiveNode {
           if (~message.privateMessageIdHigh16 != obfuscationGuard ||
             0 != message.privateMessageIdLow24) {
             for (historyIndex = 0; lk.chatHistorySize > historyIndex; historyIndex++) {
-              previousMessage = an.chatHistory[historyIndex];
+              previousMessage = DefeatPlayerConsoleCommand.chatHistory[historyIndex];
               if (2 == previousMessage.channelId &&
                 message.privateMessageIdHigh16 == previousMessage.privateMessageIdHigh16 &&
                 previousMessage.privateMessageIdLow24 == message.privateMessageIdLow24) {

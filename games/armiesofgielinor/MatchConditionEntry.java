@@ -88,7 +88,7 @@ final class MatchConditionEntry extends IntrusiveNode {
               newIgnoreOrder = vg.ignoreCount;
               vg.ignoreCount = vg.ignoreCount + 1;
               ignoreEntry.orderIndex = newIgnoreOrder;
-              ot.ignoreEntries.addLast((byte) -119, (IntrusiveNode) (ignoreEntry));
+              FixInvisibleUnitsConsoleCommand.ignoreEntries.addLast((byte) -119, (IntrusiveNode) (ignoreEntry));
             }
             ignoreEntry.previousDisplayName = previousIgnoreName;
             ignoreEntry.accountName = ignoreAccountName;

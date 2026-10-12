@@ -28,59 +28,59 @@ final class vv {
         if (param0 == -30647) {
           return;
         }
-        vv.a((byte) 85);
+        vv.consoleGreeting((byte) 85);
     }
 
-    final static ConsoleExpression[] a(String param0, int param1) {
-        int incrementValue$1 = 0;
-        NodeDeque var2 = null;
-        RuntimeException var2_ref = null;
-        ConsoleExpression[] var3 = null;
-        int var4 = 0;
-        ConsoleExpression var5 = null;
-        int var6 = 0;
-        ConsoleExpression[] stackIn_4_0 = null;
-        ConsoleExpression[] stackIn_7_0 = null;
-        ConsoleExpression[] stackIn_12_0 = null;
-        RuntimeException stackIn_15_0 = null;
-        StringBuilder stackIn_15_1 = null;
-        String stackIn_16_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        var6 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+    final static ConsoleExpression[] cachedConsoleTokenArray(String source, int obfuscationGuard) {
+        int tokenSlot = 0;
+        NodeDeque tokenDeque = null;
+        RuntimeException failure = null;
+        ConsoleExpression[] tokens = null;
+        int tokenIndex = 0;
+        ConsoleExpression token = null;
+        int obfuscationControl = 0;
+        ConsoleExpression[] cachedResult = null;
+        ConsoleExpression[] guardResult = null;
+        ConsoleExpression[] newResult = null;
+        RuntimeException failureForContext = null;
+        StringBuilder errorContext = null;
+        String sourceDescription = null;
+        RuntimeException caughtFailure = null;
+        obfuscationControl = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          if (param0.equals(no.field_N)) {
-            stackIn_4_0 = ol.field_w;
-            return stackIn_4_0;
+          if (source.equals(no.cachedConsoleSource)) {
+            cachedResult = ol.cachedConsoleTokens;
+            return cachedResult;
           }
-          var2 = gu.tokenizeConsole(false, param0);
-          var3 = new ConsoleExpression[var2.size(false)];
-          var4 = 0;
-          if (param1 <= 109) {
-            stackIn_7_0 = (ConsoleExpression[]) null;
-            return stackIn_7_0;
+          tokenDeque = gu.tokenizeConsole(false, source);
+          tokens = new ConsoleExpression[tokenDeque.size(false)];
+          tokenIndex = 0;
+          if (obfuscationGuard <= 109) {
+            guardResult = (ConsoleExpression[]) null;
+            return guardResult;
           }
-          var5 = (ConsoleExpression) (var2.first((byte) 100));
-          while (var5 != null) {
-            incrementValue$1 = var4;
-            var4++;
-            var3[incrementValue$1] = var5;
-            var5 = (ConsoleExpression) (var2.next((byte) 123));
+          token = (ConsoleExpression) (tokenDeque.first((byte) 100));
+          while (token != null) {
+            tokenSlot = tokenIndex;
+            tokenIndex++;
+            tokens[tokenSlot] = token;
+            token = (ConsoleExpression) (tokenDeque.next((byte) 123));
           }
-          no.field_N = param0;
-          ol.field_w = var3;
-          stackIn_12_0 = var3;
-          return stackIn_12_0;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var2_ref = decompiledCaughtException;
-          stackIn_15_0 = var2_ref;
-          stackIn_15_1 = new StringBuilder().append("vv.F(");
-          if (param0 == null) {
-            stackIn_16_2 = "null";
+          no.cachedConsoleSource = source;
+          ol.cachedConsoleTokens = tokens;
+          newResult = tokens;
+          return newResult;
+        } catch (java.lang.RuntimeException caughtParameter) {
+          caughtFailure = caughtParameter;
+          failure = caughtFailure;
+          failureForContext = failure;
+          errorContext = new StringBuilder().append("vv.F(");
+          if (source == null) {
+            sourceDescription = "null";
           } else {
-            stackIn_16_2 = "{...}";
+            sourceDescription = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param1).append(')').toString());
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) failureForContext), ((StringBuilder) (Object) errorContext).append(sourceDescription).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 
@@ -584,8 +584,8 @@ final class vv {
         }
     }
 
-    final static String a(byte param0) {
-        if (param0 != -62) {
+    final static String consoleGreeting(byte obfuscationGuard) {
+        if (obfuscationGuard != -62) {
           field_a = (String) null;
           return "Hi!";
         }

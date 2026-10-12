@@ -78,7 +78,7 @@ final class CampaignMenu {
           var3 = QuickChatPhrase.getCampaignMission(var2.campaignIndex, var2.missionId, 0);
           ts.startCampaignMission(var3, -1, var2);
           var4 = var3.playerSlot;
-          var5 = rd.field_j.battlefield.playerTurnCounts[var4];
+          var5 = rd.gameplayController.battlefield.playerTurnCounts[var4];
           if (~var5 < obfuscationGuard) {
             DiskCacheWorker.reportCampaignTurn(false, 1, var5, var3);
           }
@@ -142,13 +142,13 @@ final class CampaignMenu {
         var4 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           ConsoleParseException.b(-1);
-          if (rd.field_j != null) {
-            rd.field_j.A(111);
+          if (rd.gameplayController != null) {
+            rd.gameplayController.A(111);
           }
           if (null != SectorCacheStore.field_a) {
             SectorCacheStore.field_a.A(111);
           }
-          rd.field_j = null;
+          rd.gameplayController = null;
           SectorCacheStore.field_a = null;
           System.gc();
           ChannelGainProfile.campaignBackgrounds[0] = new RgbSprite(MusicPatchUsage.backgroundArchive.getFileByName("campaign_1.jpg", -105, ""), (java.awt.Component) ((Object) VerticalScrollbar.p(0)));
@@ -1058,7 +1058,7 @@ final class CampaignMenu {
               stackIn_37_3 = array$0;
               stackIn_37_4 = 0;
               if (null == this.selectedMissionEntry.statusText) {
-                stackIn_38_5 = dv.field_g;
+                stackIn_38_5 = ConsolePanel.field_g;
               } else {
                 stackIn_38_5 = this.selectedMissionEntry.statusText;
               }
@@ -1577,10 +1577,10 @@ final class CampaignMenu {
                       ii.campaignPacketWord1 = 4452;
                       wr.campaignPacketWord3 = 224;
                       kw.campaignPacketWord0 = 2297;
-                      hc.field_b = hc.field_b + 1;
-                      hc.field_b = hc.field_b + (ko.pointerY ^ AiPlanningStrategy.pointerX);
-                      hc.field_b = Math.abs(hc.field_b);
-                      var5 = hc.field_b % 4;
+                      hc.campaignMetricMutationCounter = hc.campaignMetricMutationCounter + 1;
+                      hc.campaignMetricMutationCounter = hc.campaignMetricMutationCounter + (ko.pointerY ^ AiPlanningStrategy.pointerX);
+                      hc.campaignMetricMutationCounter = Math.abs(hc.campaignMetricMutationCounter);
+                      var5 = hc.campaignMetricMutationCounter % 4;
                       var6 = var5;
                       switch ((var7 == 0
                         || var6 == 0
