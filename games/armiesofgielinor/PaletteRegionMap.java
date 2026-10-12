@@ -24,7 +24,7 @@ final class PaletteRegionMap {
 
     final static void a(byte param0, java.awt.Canvas param1) {
         if (11 == p.field_b) {
-          wp.d((byte) -13);
+          AnimationFrameSet.d((byte) -13);
         }
         SpellCastRequest.a(dd.field_a, TelepopEvent.field_C, UnitSpell.field_e, -1);
         if (param0 <= 106) {
@@ -33,7 +33,7 @@ final class PaletteRegionMap {
         try {
           pt.a(0, 12, param1, 0);
         } catch (RuntimeException runtimeException) {
-          throw ig.addExceptionContext((Throwable) ((Object) runtimeException), "pr.L(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "pr.L(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -118,7 +118,7 @@ final class PaletteRegionMap {
             } else {
               stackIn_21_2 = "{...}";
             }
-            throw ig.addExceptionContext((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param1).append(')').toString());
+            throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param1).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -158,7 +158,7 @@ final class PaletteRegionMap {
           } else {
             stackIn_5_2 = "{...}";
           }
-          throw ig.addExceptionContext((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(param7).append(',').append(param8).append(',').append(param9).append(',').append(param10).append(',').append(param11).append(',').append(param12).append(')').toString());
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(param7).append(',').append(param8).append(',').append(param9).append(',').append(param10).append(',').append(param11).append(',').append(param12).append(')').toString());
         }
     }
 
@@ -262,7 +262,7 @@ final class PaletteRegionMap {
           this.ignoredColour = ignoredColour;
           this.indexRegions(-91);
         } catch (RuntimeException runtimeException) {
-          throw ig.addExceptionContext((Throwable) ((Object) runtimeException), "pr.<init>(" + (sourceImage != null ? "{...}" : "null") + ',' + ignoredColour + ',' + anchorColour + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "pr.<init>(" + (sourceImage != null ? "{...}" : "null") + ',' + ignoredColour + ',' + anchorColour + ')');
         }
     }
 
@@ -419,7 +419,7 @@ final class PaletteRegionMap {
           } else {
             stackIn_38_2 = "{...}";
           }
-          throw ig.addExceptionContext((Throwable) ((Object) stackIn_34_0), ((StringBuilder) (Object) stackIn_37_1).append(stackIn_38_2).append(')').toString());
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_34_0), ((StringBuilder) (Object) stackIn_37_1).append(stackIn_38_2).append(')').toString());
         }
     }
 

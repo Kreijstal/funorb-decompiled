@@ -42,7 +42,7 @@ final class MoveAttackRequest extends ActionRequest {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw ig.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(obfuscationGuard).append(')').toString());
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 
@@ -148,7 +148,7 @@ final class MoveAttackRequest extends ActionRequest {
           } else {
             stackIn_41_2 = "{...}";
           }
-          throw ig.addExceptionContext((Throwable) ((Object) stackIn_37_0), ((StringBuilder) (Object) stackIn_40_1).append(stackIn_41_2).append(')').toString());
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_37_0), ((StringBuilder) (Object) stackIn_40_1).append(stackIn_41_2).append(')').toString());
         }
     }
 
@@ -366,7 +366,7 @@ final class MoveAttackRequest extends ActionRequest {
           } else {
             stackIn_118_2 = "{...}";
           }
-          throw ig.addExceptionContext((Throwable) ((Object) stackIn_117_0), ((StringBuilder) (Object) stackIn_117_1).append(stackIn_118_2).append(')').toString());
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_117_0), ((StringBuilder) (Object) stackIn_117_1).append(stackIn_118_2).append(')').toString());
         }
     }
 
@@ -427,7 +427,7 @@ final class MoveAttackRequest extends ActionRequest {
           } else {
             stackIn_25_2 = "{...}";
           }
-          throw ig.addExceptionContext((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(')').toString());
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(')').toString());
         }
     }
 
@@ -476,7 +476,7 @@ final class MoveAttackRequest extends ActionRequest {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw ig.addExceptionContext((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(actingPlayer).append(')').toString());
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(actingPlayer).append(')').toString());
         }
     }
 
@@ -489,7 +489,7 @@ final class MoveAttackRequest extends ActionRequest {
           this.targetDeltaX = targetDeltaX;
           this.actingPlayer = actingPlayer;
         } catch (RuntimeException runtimeException) {
-          throw ig.addExceptionContext((Throwable) ((Object) runtimeException), "am.<init>(" + actingPlayer + ',' + declaredPathLength + ',' + (pathDirections != null ? "{...}" : "null") + ',' + startX + ',' + startY + ',' + targetDeltaX + ',' + targetDeltaY + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "am.<init>(" + actingPlayer + ',' + declaredPathLength + ',' + (pathDirections != null ? "{...}" : "null") + ',' + startX + ',' + startY + ',' + targetDeltaX + ',' + targetDeltaY + ')');
         }
     }
 

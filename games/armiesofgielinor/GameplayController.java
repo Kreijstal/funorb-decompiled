@@ -219,7 +219,7 @@ final class GameplayController {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
-          throw ig.addExceptionContext((Throwable) ((Object) runtimeException), "ic.SD(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "ic.SD(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -351,7 +351,7 @@ final class GameplayController {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var8 = decompiledCaughtException;
-          throw ig.addExceptionContext((Throwable) ((Object) var8), "ic.WD(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) var8), "ic.WD(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
         }
     }
 
@@ -421,7 +421,7 @@ final class GameplayController {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw ig.addExceptionContext((Throwable) ((Object) var2_ref), "ic.C(" + param0 + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) var2_ref), "ic.C(" + param0 + ')');
         }
     }
 
@@ -439,7 +439,7 @@ final class GameplayController {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
-          throw ig.addExceptionContext((Throwable) ((Object) var4), "ic.NC(" + interactionKind + ',' + tileIndex + ',' + obfuscationGuard + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) var4), "ic.NC(" + interactionKind + ',' + tileIndex + ',' + obfuscationGuard + ')');
         }
     }
 
@@ -535,7 +535,7 @@ final class GameplayController {
           } else {
             stackIn_57_2 = "{...}";
           }
-          throw ig.addExceptionContext((Throwable) ((Object) stackIn_52_0), ((StringBuilder) (Object) stackIn_56_1).append(stackIn_57_2).append(')').toString());
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_52_0), ((StringBuilder) (Object) stackIn_56_1).append(stackIn_57_2).append(')').toString());
         }
     }
 
@@ -701,7 +701,7 @@ final class GameplayController {
           } else {
             stackIn_84_2 = "{...}";
           }
-          throw ig.addExceptionContext((Throwable) ((Object) stackIn_75_0), ((StringBuilder) (Object) stackIn_83_1).append(stackIn_84_2).append(')').toString());
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_75_0), ((StringBuilder) (Object) stackIn_83_1).append(stackIn_84_2).append(')').toString());
         }
     }
 
@@ -724,7 +724,7 @@ final class GameplayController {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var11 = decompiledCaughtException;
-          throw ig.addExceptionContext((Throwable) ((Object) var11), "ic.KC(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ',' + param9 + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) var11), "ic.KC(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ',' + param9 + ')');
         }
     }
 
@@ -874,7 +874,7 @@ final class GameplayController {
           } else {
             stackIn_194_2 = "{...}";
           }
-          throw ig.addExceptionContext((Throwable) ((Object) stackIn_189_0), ((StringBuilder) (Object) stackIn_193_1).append(stackIn_194_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_189_0), ((StringBuilder) (Object) stackIn_193_1).append(stackIn_194_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 
@@ -953,7 +953,7 @@ final class GameplayController {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var7 = decompiledCaughtException;
-          throw ig.addExceptionContext((Throwable) ((Object) var7), "ic.Q(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) var7), "ic.Q(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
     }
 
@@ -1025,7 +1025,7 @@ final class GameplayController {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6_ref = decompiledCaughtException;
-          throw ig.addExceptionContext((Throwable) ((Object) var6_ref), "ic.S(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) var6_ref), "ic.S(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -1060,7 +1060,7 @@ final class GameplayController {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
-          throw ig.addExceptionContext((Throwable) ((Object) runtimeException), "ic.FD(" + param0 + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "ic.FD(" + param0 + ')');
         }
     }
 
@@ -1171,7 +1171,7 @@ final class GameplayController {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6_ref = decompiledCaughtException;
-          throw ig.addExceptionContext((Throwable) ((Object) var6_ref), "ic.A(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) var6_ref), "ic.A(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -1225,7 +1225,7 @@ final class GameplayController {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ig.addExceptionContext((Throwable) ((Object) var2), "ic.MC(" + param0 + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) var2), "ic.MC(" + param0 + ')');
         }
     }
 
@@ -1244,7 +1244,7 @@ final class GameplayController {
             this.field_Tb = false;
           }
         } catch (RuntimeException runtimeException) {
-          throw ig.addExceptionContext((Throwable) ((Object) runtimeException), "ic.TA(" + param0 + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "ic.TA(" + param0 + ')');
         }
     }
 
@@ -1262,7 +1262,7 @@ final class GameplayController {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ig.addExceptionContext((Throwable) ((Object) var2), "ic.CD(" + param0 + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) var2), "ic.CD(" + param0 + ')');
         }
     }
 
@@ -1308,7 +1308,7 @@ final class GameplayController {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw ig.addExceptionContext((Throwable) ((Object) var3), "ic.RA(" + param0 + ',' + param1 + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) var3), "ic.RA(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -1376,7 +1376,7 @@ final class GameplayController {
           } else {
             stackIn_66_2 = "{...}";
           }
-          throw ig.addExceptionContext((Throwable) ((Object) stackIn_65_0), ((StringBuilder) (Object) stackIn_65_1).append(stackIn_66_2).append(')').toString());
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_65_0), ((StringBuilder) (Object) stackIn_65_1).append(stackIn_66_2).append(')').toString());
         }
     }
 
@@ -1427,14 +1427,14 @@ final class GameplayController {
             this.unitMenus = new RadialSummonMenu[this.battlefield.chosenGods[this.controlledPlayerId].length + 1];
           }
           neutralItemCount = 0;
-          neutralItems = new RadialSummonItem[wp.unitUnlockGroups[0].length - 1];
+          neutralItems = new RadialSummonItem[AnimationFrameSet.unitUnlockGroups[0].length - 1];
           if (l.activeCampaignMission != null) {
             neutralItems = new RadialSummonItem[eb.a((byte) -107, 1 | this.field_Y[0])];
           }
           neutralUnitOrdinal = 0;
           boolean decompiledNaturalLoopExit0 = false;
-          while (!(decompiledNaturalLoopExit0 = (!(-1 + wp.unitUnlockGroups[0].length > neutralUnitOrdinal)))) {
-            neutralUnitType = wp.unitUnlockGroups[0][neutralUnitOrdinal];
+          while (!(decompiledNaturalLoopExit0 = (!(-1 + AnimationFrameSet.unitUnlockGroups[0].length > neutralUnitOrdinal)))) {
+            neutralUnitType = AnimationFrameSet.unitUnlockGroups[0][neutralUnitOrdinal];
             if (var7 == 0) {
               if (l.activeCampaignMission == null ||
                 (1 << neutralUnitOrdinal & this.field_Y[0]) != 0) {
@@ -1472,7 +1472,7 @@ final class GameplayController {
               }
               godUnitOrdinal = 0;
               while (godUnitOrdinal < 11) {
-                godUnitType = wp.unitUnlockGroups[1 + this.battlefield.chosenGods[this.controlledPlayerId][chosenGodOrdinal]][godUnitOrdinal];
+                godUnitType = AnimationFrameSet.unitUnlockGroups[1 + this.battlefield.chosenGods[this.controlledPlayerId][chosenGodOrdinal]][godUnitOrdinal];
                 stackIn_58_0Lifetime1 = 0;
                 stackIn_58_1Lifetime1 = this.field_Y[this.battlefield.chosenGods[this.controlledPlayerId][chosenGodOrdinal] + 1] & 1 << godUnitOrdinal;
                 if (stackIn_58_0Lifetime1 < stackIn_58_1Lifetime1) {
@@ -1489,7 +1489,7 @@ final class GameplayController {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw ig.addExceptionContext((Throwable) ((Object) var2_ref), "ic.AC(" + obfuscationGuard + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) var2_ref), "ic.AC(" + obfuscationGuard + ')');
         }
     }
 
@@ -1627,7 +1627,7 @@ final class GameplayController {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ig.addExceptionContext((Throwable) ((Object) var2), "ic.I(" + obfuscationGuard + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) var2), "ic.I(" + obfuscationGuard + ')');
         }
     }
 
@@ -1656,7 +1656,7 @@ final class GameplayController {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
-          throw ig.addExceptionContext((Throwable) ((Object) runtimeException), "ic.QA(" + param0 + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "ic.QA(" + param0 + ')');
         }
     }
 
@@ -1683,7 +1683,7 @@ final class GameplayController {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw ig.addExceptionContext((Throwable) ((Object) var2_ref), "ic.ED(" + param0 + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) var2_ref), "ic.ED(" + param0 + ')');
         }
     }
 
@@ -1733,7 +1733,7 @@ final class GameplayController {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4_ref = decompiledCaughtException;
-          throw ig.addExceptionContext((Throwable) ((Object) var4_ref), "ic.UA(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) var4_ref), "ic.UA(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -1920,7 +1920,7 @@ final class GameplayController {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw ig.addExceptionContext((Throwable) ((Object) var2_ref), "ic.N(" + param0 + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) var2_ref), "ic.N(" + param0 + ')');
         }
     }
 
@@ -1995,7 +1995,7 @@ final class GameplayController {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ig.addExceptionContext((Throwable) ((Object) var2), "ic.QB(" + param0 + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) var2), "ic.QB(" + param0 + ')');
         }
     }
 
@@ -2017,7 +2017,7 @@ final class GameplayController {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ig.addExceptionContext((Throwable) ((Object) var2), "ic.GC(" + param0 + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) var2), "ic.GC(" + param0 + ')');
         }
     }
 
@@ -2080,7 +2080,7 @@ final class GameplayController {
           } else {
             stackIn_29_2 = "{...}";
           }
-          throw ig.addExceptionContext((Throwable) ((Object) stackIn_28_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(',').append(param1).append(')').toString());
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_28_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -2097,7 +2097,7 @@ final class GameplayController {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ig.addExceptionContext((Throwable) ((Object) var2), "ic.W(" + param0 + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) var2), "ic.W(" + param0 + ')');
         }
     }
 
@@ -2756,7 +2756,7 @@ final class GameplayController {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ig.addExceptionContext((Throwable) ((Object) var2), "ic.WB(" + param0 + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) var2), "ic.WB(" + param0 + ')');
         }
     }
 
@@ -2850,7 +2850,7 @@ final class GameplayController {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
-          throw ig.addExceptionContext((Throwable) ((Object) var4), "ic.CB(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) var4), "ic.CB(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -2879,7 +2879,7 @@ final class GameplayController {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
-          throw ig.addExceptionContext((Throwable) ((Object) runtimeException), "ic.DA(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "ic.DA(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
     }
 
@@ -3049,7 +3049,7 @@ final class GameplayController {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ig.addExceptionContext((Throwable) ((Object) var2), "ic.HB(" + param0 + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) var2), "ic.HB(" + param0 + ')');
         }
     }
 
@@ -3185,7 +3185,7 @@ final class GameplayController {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw ig.addExceptionContext((Throwable) ((Object) var3), "ic.J(" + param0 + ',' + param1 + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) var3), "ic.J(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -3203,7 +3203,7 @@ final class GameplayController {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ig.addExceptionContext((Throwable) ((Object) var2), "ic.RD(" + param0 + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) var2), "ic.RD(" + param0 + ')');
         }
     }
 
@@ -3249,7 +3249,7 @@ final class GameplayController {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
-          throw ig.addExceptionContext((Throwable) ((Object) runtimeException), "ic.KD(" + param0 + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "ic.KD(" + param0 + ')');
         }
     }
 
@@ -3313,7 +3313,7 @@ final class GameplayController {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ig.addExceptionContext((Throwable) ((Object) var2), "ic.FA(" + param0 + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) var2), "ic.FA(" + param0 + ')');
         }
     }
 
@@ -3344,7 +3344,7 @@ final class GameplayController {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw ig.addExceptionContext((Throwable) ((Object) var3), "ic.QC(" + param0 + ',' + param1 + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) var3), "ic.QC(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -3364,7 +3364,7 @@ final class GameplayController {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
-          throw ig.addExceptionContext((Throwable) ((Object) var5), "ic.AA(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) var5), "ic.AA(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -3383,7 +3383,7 @@ final class GameplayController {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
-          throw ig.addExceptionContext((Throwable) ((Object) runtimeException), "ic.HD(" + param0 + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "ic.HD(" + param0 + ')');
         }
     }
 
@@ -3394,7 +3394,7 @@ final class GameplayController {
           fe.c(mo.field_o, db.a(true, 320), MatchConditionEntry.a(380, (byte) 94), nd.field_b, false);
         }
         int var2_int = 0;
-        ig.field_t.draw(db.a(true, var2_int), MatchConditionEntry.a(0, (byte) 94));
+        AnimationSkeleton.field_t.draw(db.a(true, var2_int), MatchConditionEntry.a(0, (byte) 94));
         if (this.battlefield.currentPlayer < 0) {
           return;
         }
@@ -3403,7 +3403,7 @@ final class GameplayController {
           fe.c(this.battlefield.playerNames[this.battlefield.currentPlayer], db.a(true, var2_int + 320), MatchConditionEntry.a(170, (byte) 94), nd.field_b, false);
           this.battlefield.playerCoats[this.battlefield.currentPlayer].a(db.a(true, var2_int + 264), this.battlefield.playerNames[this.battlefield.currentPlayer], false, false, MatchConditionEntry.a(this.battlefield.playerCoats[this.battlefield.currentPlayer].getMissingPartOffset((byte) -62) + 190, (byte) 94), false, false, 74);
         } catch (RuntimeException runtimeException) {
-          throw ig.addExceptionContext((Throwable) ((Object) runtimeException), "ic.GA(" + param0 + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "ic.GA(" + param0 + ')');
         }
     }
 
@@ -3500,7 +3500,7 @@ final class GameplayController {
           } else {
             stackIn_67_2 = "{...}";
           }
-          throw ig.addExceptionContext((Throwable) (stackIn_66_0), ((StringBuilder) (Object) stackIn_66_1).append(stackIn_67_2).append(')').toString());
+          throw AnimationSkeleton.addExceptionContext((Throwable) (stackIn_66_0), ((StringBuilder) (Object) stackIn_66_1).append(stackIn_67_2).append(')').toString());
         }
     }
 
@@ -4046,7 +4046,7 @@ final class GameplayController {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw ig.addExceptionContext((Throwable) (var3), "ic.PD(" + param0 + ',' + param1 + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) (var3), "ic.PD(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -4090,7 +4090,7 @@ final class GameplayController {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw ig.addExceptionContext((Throwable) ((Object) var2_ref), "ic.O(" + param0 + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) var2_ref), "ic.O(" + param0 + ')');
         }
     }
 
@@ -4112,7 +4112,7 @@ final class GameplayController {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
-          throw ig.addExceptionContext((Throwable) ((Object) runtimeException), "ic.SC(" + param0 + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "ic.SC(" + param0 + ')');
         }
     }
 
@@ -4170,7 +4170,7 @@ final class GameplayController {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ig.addExceptionContext((Throwable) ((Object) var2), "ic.AB(" + param0 + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) var2), "ic.AB(" + param0 + ')');
         }
     }
 
@@ -4217,7 +4217,7 @@ final class GameplayController {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
-          throw ig.addExceptionContext((Throwable) ((Object) var4), "ic.QD(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) var4), "ic.QD(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -4319,7 +4319,7 @@ final class GameplayController {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
-          throw ig.addExceptionContext((Throwable) ((Object) runtimeException), "ic.VA(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "ic.VA(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -4345,7 +4345,7 @@ final class GameplayController {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
-          throw ig.addExceptionContext((Throwable) ((Object) runtimeException), "ic.KB(" + param0 + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "ic.KB(" + param0 + ')');
         }
     }
 
@@ -4393,7 +4393,7 @@ final class GameplayController {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
-          throw ig.addExceptionContext((Throwable) ((Object) var4), "ic.F(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) var4), "ic.F(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -4422,7 +4422,7 @@ final class GameplayController {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw ig.addExceptionContext((Throwable) ((Object) var3), "ic.WA(" + param0 + ',' + param1 + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) var3), "ic.WA(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -4487,7 +4487,7 @@ final class GameplayController {
           } else {
             stackIn_40_2 = "{...}";
           }
-          throw ig.addExceptionContext((Throwable) ((Object) stackIn_39_0), ((StringBuilder) (Object) stackIn_39_1).append(stackIn_40_2).append(',').append(param3).append(')').toString());
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_39_0), ((StringBuilder) (Object) stackIn_39_1).append(stackIn_40_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -4563,7 +4563,7 @@ final class GameplayController {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
-          throw ig.addExceptionContext((Throwable) ((Object) var5), "ic.PC(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) var5), "ic.PC(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -4580,7 +4580,7 @@ final class GameplayController {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ig.addExceptionContext((Throwable) ((Object) var2), "ic.PA(" + param0 + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) var2), "ic.PA(" + param0 + ')');
         }
     }
 
@@ -4607,7 +4607,7 @@ final class GameplayController {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ig.addExceptionContext((Throwable) ((Object) var2), "ic.DC(" + param0 + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) var2), "ic.DC(" + param0 + ')');
         }
     }
 
@@ -4689,7 +4689,7 @@ final class GameplayController {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ig.addExceptionContext((Throwable) ((Object) var2), "ic.JA(" + param0 + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) var2), "ic.JA(" + param0 + ')');
         }
     }
 
@@ -4706,7 +4706,7 @@ final class GameplayController {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ig.addExceptionContext((Throwable) ((Object) var2), "ic.EB(" + param0 + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) var2), "ic.EB(" + param0 + ')');
         }
     }
 
@@ -4860,7 +4860,7 @@ final class GameplayController {
         } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
           decompiledCaughtException = decompiledCaughtParameter1;
           var2 = decompiledCaughtException;
-          throw ig.addExceptionContext((Throwable) ((Object) var2), "ic.OC(" + param0 + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) var2), "ic.OC(" + param0 + ')');
         }
     }
 
@@ -4889,7 +4889,7 @@ final class GameplayController {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw ig.addExceptionContext((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param2).append(')').toString());
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -4976,7 +4976,7 @@ final class GameplayController {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ig.addExceptionContext((Throwable) ((Object) var2), "ic.UD(" + param0 + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) var2), "ic.UD(" + param0 + ')');
         }
     }
 
@@ -5060,7 +5060,7 @@ final class GameplayController {
           } else {
             stackIn_52_2 = "{...}";
           }
-          throw ig.addExceptionContext((Throwable) ((Object) stackIn_51_0), ((StringBuilder) (Object) stackIn_51_1).append(stackIn_52_2).append(')').toString());
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_51_0), ((StringBuilder) (Object) stackIn_51_1).append(stackIn_52_2).append(')').toString());
         }
     }
 
@@ -5148,7 +5148,7 @@ final class GameplayController {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
-          throw ig.addExceptionContext((Throwable) ((Object) var4), "ic.JC(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) var4), "ic.JC(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -5206,7 +5206,7 @@ final class GameplayController {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3_ref = decompiledCaughtException;
-          throw ig.addExceptionContext((Throwable) ((Object) var3_ref), "ic.WC(" + param0 + ',' + param1 + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) var3_ref), "ic.WC(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -5586,7 +5586,7 @@ final class GameplayController {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ig.addExceptionContext((Throwable) ((Object) var2), "ic.VB(" + param0 + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) var2), "ic.VB(" + param0 + ')');
         }
     }
 
@@ -5604,13 +5604,13 @@ final class GameplayController {
           var5 = var3_int * ((param0 - 50) * (param0 - 50)) * (param1 + param0) / 200 / rs.field_k;
           var6 = (int)(Math.sin(3.141592653589793 * (double)param0 / 100.0) * 128.0);
           SoftwareRaster.b(0, 0, var3_int, var4, 0, var6);
-          ig.field_t.draw(db.a(true, var5), 0);
+          AnimationSkeleton.field_t.draw(db.a(true, var5), 0);
           stackIn_1_0 = var5;
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw ig.addExceptionContext((Throwable) ((Object) var3), "ic.BB(" + param0 + ',' + param1 + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) var3), "ic.BB(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -5656,7 +5656,7 @@ final class GameplayController {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
-          throw ig.addExceptionContext((Throwable) ((Object) runtimeException), "ic.D(" + param0 + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "ic.D(" + param0 + ')');
         }
     }
 
@@ -5675,7 +5675,7 @@ final class GameplayController {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw ig.addExceptionContext((Throwable) ((Object) var3), "ic.BC(" + param0 + ',' + param1 + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) var3), "ic.BC(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -5886,7 +5886,7 @@ final class GameplayController {
           } else {
             stackIn_113_2 = "{...}";
           }
-          throw ig.addExceptionContext((Throwable) ((Object) stackIn_112_0), ((StringBuilder) (Object) stackIn_112_1).append(stackIn_113_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_112_0), ((StringBuilder) (Object) stackIn_112_1).append(stackIn_113_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -5904,7 +5904,7 @@ final class GameplayController {
           this.field_bc = false;
           this.field_Tb = true;
         } catch (RuntimeException runtimeException) {
-          throw ig.addExceptionContext((Throwable) ((Object) runtimeException), "ic.HA(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "ic.HA(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -5926,7 +5926,7 @@ final class GameplayController {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ig.addExceptionContext((Throwable) ((Object) var2), "ic.U(" + param0 + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) var2), "ic.U(" + param0 + ')');
         }
     }
 
@@ -7148,7 +7148,7 @@ final class GameplayController {
                         (decompiledFrameRemainder2) &&
                         (decompiledFrameRemainder1) &&
                         (decompiledFrameRemainder0)) {
-                        var2 = wp.field_F;
+                        var2 = AnimationFrameSet.field_F;
                         decompiledFrameRemainder3 = (var20 != 0);
                       }
                       if ((decompiledFrameRemainder3) &&
@@ -7218,7 +7218,7 @@ final class GameplayController {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ig.addExceptionContext((Throwable) (var2), "ic.UB(" + param0 + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) (var2), "ic.UB(" + param0 + ')');
         }
     }
 
@@ -7305,7 +7305,7 @@ final class GameplayController {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ig.addExceptionContext((Throwable) ((Object) var2), "ic.NA(" + param0 + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) var2), "ic.NA(" + param0 + ')');
         }
     }
 
@@ -7392,7 +7392,7 @@ final class GameplayController {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw ig.addExceptionContext((Throwable) ((Object) var2_ref), "ic.B(" + param0 + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) var2_ref), "ic.B(" + param0 + ')');
         }
     }
 
@@ -7409,7 +7409,7 @@ final class GameplayController {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ig.addExceptionContext((Throwable) ((Object) var2), "ic.K(" + param0 + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) var2), "ic.K(" + param0 + ')');
         }
     }
 
@@ -7469,7 +7469,7 @@ final class GameplayController {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = decompiledCaughtException;
-          throw ig.addExceptionContext((Throwable) ((Object) var6), "ic.TB(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) var6), "ic.TB(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -7778,7 +7778,7 @@ final class GameplayController {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw ig.addExceptionContext((Throwable) ((Object) var3), "ic.R(" + param0 + ',' + param1 + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) var3), "ic.R(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -7800,7 +7800,7 @@ final class GameplayController {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ig.addExceptionContext((Throwable) ((Object) var2), "ic.LB(" + param0 + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) var2), "ic.LB(" + param0 + ')');
         }
     }
 
@@ -7855,7 +7855,7 @@ final class GameplayController {
           } else {
             stackIn_23_2 = "{...}";
           }
-          throw ig.addExceptionContext((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -8789,7 +8789,7 @@ final class GameplayController {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw ig.addExceptionContext((Throwable) ((Object) var3), "ic.SB(" + param0 + ',' + param1 + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) var3), "ic.SB(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -8858,7 +8858,7 @@ final class GameplayController {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ig.addExceptionContext((Throwable) ((Object) var2), "ic.BA(" + param0 + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) var2), "ic.BA(" + param0 + ')');
         }
     }
 
@@ -8888,7 +8888,7 @@ final class GameplayController {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
-          throw ig.addExceptionContext((Throwable) ((Object) runtimeException), "ic.P(" + param0 + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "ic.P(" + param0 + ')');
         }
     }
 
@@ -8956,7 +8956,7 @@ final class GameplayController {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw ig.addExceptionContext((Throwable) ((Object) var2_ref), "ic.VC(" + param0 + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) var2_ref), "ic.VC(" + param0 + ')');
         }
     }
 
@@ -9060,7 +9060,7 @@ final class GameplayController {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ig.addExceptionContext((Throwable) ((Object) var2), "ic.VD(" + param0 + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) var2), "ic.VD(" + param0 + ')');
         }
     }
 
@@ -9082,7 +9082,7 @@ final class GameplayController {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw ig.addExceptionContext((Throwable) ((Object) var3), "ic.G(" + param0 + ',' + param1 + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) var3), "ic.G(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -9305,7 +9305,7 @@ final class GameplayController {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ig.addExceptionContext((Throwable) ((Object) var2), "ic.IC(" + param0 + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) var2), "ic.IC(" + param0 + ')');
         }
     }
 
@@ -9476,7 +9476,7 @@ final class GameplayController {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ig.addExceptionContext((Throwable) ((Object) var2), "ic.MB(" + obfuscationGuard + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) var2), "ic.MB(" + obfuscationGuard + ')');
         }
     }
 
@@ -9672,7 +9672,7 @@ final class GameplayController {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ig.addExceptionContext((Throwable) ((Object) var2), "ic.CA(" + param0 + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) var2), "ic.CA(" + param0 + ')');
         }
     }
 
@@ -10019,7 +10019,7 @@ final class GameplayController {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ig.addExceptionContext((Throwable) ((Object) var2), "ic.TC(" + param0 + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) var2), "ic.TC(" + param0 + ')');
         }
     }
 
@@ -10055,7 +10055,7 @@ final class GameplayController {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
-          throw ig.addExceptionContext((Throwable) ((Object) runtimeException), "ic.SA(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "ic.SA(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -10074,7 +10074,7 @@ final class GameplayController {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ig.addExceptionContext((Throwable) ((Object) var2), "ic.BD(" + param0 + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) var2), "ic.BD(" + param0 + ')');
         }
     }
 
@@ -10091,7 +10091,7 @@ final class GameplayController {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ig.addExceptionContext((Throwable) ((Object) var2), "ic.CC(" + param0 + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) var2), "ic.CC(" + param0 + ')');
         }
     }
 
@@ -10143,7 +10143,7 @@ final class GameplayController {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ig.addExceptionContext((Throwable) ((Object) var2), "ic.PB(" + param0 + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) var2), "ic.PB(" + param0 + ')');
         }
     }
 
@@ -10159,7 +10159,7 @@ final class GameplayController {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ig.addExceptionContext((Throwable) ((Object) var2), "ic.OD(" + param0 + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) var2), "ic.OD(" + param0 + ')');
         }
     }
 
@@ -10398,7 +10398,7 @@ final class GameplayController {
           } else {
             stackIn_143_2 = "{...}";
           }
-          throw ig.addExceptionContext((Throwable) ((Object) stackIn_142_0), ((StringBuilder) (Object) stackIn_142_1).append(stackIn_143_2).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(')').toString());
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_142_0), ((StringBuilder) (Object) stackIn_142_1).append(stackIn_143_2).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(')').toString());
         }
     }
 
@@ -10441,7 +10441,7 @@ final class GameplayController {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw ig.addExceptionContext((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param4).append(')').toString());
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -10494,7 +10494,7 @@ final class GameplayController {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4_ref = decompiledCaughtException;
-          throw ig.addExceptionContext((Throwable) ((Object) var4_ref), "ic.JD(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) var4_ref), "ic.JD(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -10506,7 +10506,7 @@ final class GameplayController {
           this.remainingTurnTicks = param0;
           this.field_Tb = true;
         } catch (RuntimeException runtimeException) {
-          throw ig.addExceptionContext((Throwable) ((Object) runtimeException), "ic.AD(" + param0 + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "ic.AD(" + param0 + ')');
         }
     }
 
@@ -10555,7 +10555,7 @@ final class GameplayController {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
-          throw ig.addExceptionContext((Throwable) ((Object) var4), "ic.LD(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) var4), "ic.LD(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -10722,7 +10722,7 @@ final class GameplayController {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ig.addExceptionContext((Throwable) ((Object) var2), "ic.CE(" + param0 + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) var2), "ic.CE(" + param0 + ')');
         }
     }
 
@@ -10792,7 +10792,7 @@ final class GameplayController {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var7_ref = decompiledCaughtException;
-          throw ig.addExceptionContext((Throwable) ((Object) var7_ref), "ic.DD(" + selectionMode + ',' + tileY + ',' + spellId + ',' + obfuscationGuard + ',' + confirmed + ',' + tileX + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) var7_ref), "ic.DD(" + selectionMode + ',' + tileY + ',' + spellId + ',' + obfuscationGuard + ',' + confirmed + ',' + tileX + ')');
         }
     }
 
@@ -10814,7 +10814,7 @@ final class GameplayController {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ig.addExceptionContext((Throwable) ((Object) var2), "ic.IB(" + param0 + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) var2), "ic.IB(" + param0 + ')');
         }
     }
 
@@ -11017,7 +11017,7 @@ final class GameplayController {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ig.addExceptionContext((Throwable) ((Object) var2), "ic.EA(" + param0 + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) var2), "ic.EA(" + param0 + ')');
         }
     }
 
@@ -11077,7 +11077,7 @@ final class GameplayController {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ig.addExceptionContext((Throwable) ((Object) var2), "ic.OB(" + param0 + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) var2), "ic.OB(" + param0 + ')');
         }
     }
 
@@ -11177,7 +11177,7 @@ final class GameplayController {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ig.addExceptionContext((Throwable) ((Object) var2), "ic.GB(" + param0 + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) var2), "ic.GB(" + param0 + ')');
         }
     }
 
@@ -11188,7 +11188,7 @@ final class GameplayController {
             GameplayController.a((String) null, (byte) 73, (String) null, (ResourceArchive) null);
           }
         } catch (RuntimeException runtimeException) {
-          throw ig.addExceptionContext((Throwable) ((Object) runtimeException), "ic.LA(" + param0 + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "ic.LA(" + param0 + ')');
         }
     }
 
@@ -11264,7 +11264,7 @@ final class GameplayController {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
-          throw ig.addExceptionContext((Throwable) ((Object) var4), "ic.NB(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) var4), "ic.NB(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -11276,7 +11276,7 @@ final class GameplayController {
             this.s(-24);
           }
         } catch (RuntimeException runtimeException) {
-          throw ig.addExceptionContext((Throwable) ((Object) runtimeException), "ic.EC(" + obfuscationGuard + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "ic.EC(" + obfuscationGuard + ')');
         }
     }
 
@@ -11324,7 +11324,7 @@ final class GameplayController {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ig.addExceptionContext((Throwable) ((Object) var2), "ic.BE(" + obfuscationGuard + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) var2), "ic.BE(" + obfuscationGuard + ')');
         }
     }
 
@@ -11356,7 +11356,7 @@ final class GameplayController {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4_ref = decompiledCaughtException;
-          throw ig.addExceptionContext((Throwable) ((Object) var4_ref), "ic.DB(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) var4_ref), "ic.DB(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -11388,7 +11388,7 @@ final class GameplayController {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw ig.addExceptionContext((Throwable) ((Object) var3), "ic.HC(" + param0 + ',' + param1 + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) var3), "ic.HC(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -11660,7 +11660,7 @@ final class GameplayController {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ig.addExceptionContext((Throwable) ((Object) var2), "ic.UC(" + param0 + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) var2), "ic.UC(" + param0 + ')');
         }
     }
 
@@ -11707,7 +11707,7 @@ final class GameplayController {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw ig.addExceptionContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
         }
     }
 
@@ -11725,7 +11725,7 @@ final class GameplayController {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ig.addExceptionContext((Throwable) ((Object) var2), "ic.TD(" + param0 + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) var2), "ic.TD(" + param0 + ')');
         }
     }
 
@@ -11744,7 +11744,7 @@ final class GameplayController {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
-          throw ig.addExceptionContext((Throwable) ((Object) var4), "ic.V(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) var4), "ic.V(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -11787,7 +11787,7 @@ final class GameplayController {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var9 = decompiledCaughtException;
-          throw ig.addExceptionContext((Throwable) ((Object) var9), "ic.JB(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) var9), "ic.JB(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ')');
         }
     }
 
@@ -11817,7 +11817,7 @@ final class GameplayController {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw ig.addExceptionContext((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(')').toString());
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -11843,7 +11843,7 @@ final class GameplayController {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw ig.addExceptionContext((Throwable) ((Object) var3), "ic.M(" + param0 + ',' + param1 + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) var3), "ic.M(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -11912,7 +11912,7 @@ final class GameplayController {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = decompiledCaughtException;
-          throw ig.addExceptionContext((Throwable) ((Object) var6), "ic.T(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) var6), "ic.T(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -11975,7 +11975,7 @@ final class GameplayController {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ig.addExceptionContext((Throwable) ((Object) var2), "ic.RC(" + param0 + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) var2), "ic.RC(" + param0 + ')');
         }
     }
 
@@ -12051,7 +12051,7 @@ final class GameplayController {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw ig.addExceptionContext((Throwable) ((Object) var3), "ic.L(" + param0 + ',' + param1 + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) var3), "ic.L(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -12628,7 +12628,7 @@ final class GameplayController {
           } else {
             stackIn_253_2 = "{...}";
           }
-          throw ig.addExceptionContext((Throwable) ((Object) stackIn_244_0), ((StringBuilder) (Object) stackIn_252_1).append(stackIn_253_2).append(')').toString());
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_244_0), ((StringBuilder) (Object) stackIn_252_1).append(stackIn_253_2).append(')').toString());
         }
     }
 

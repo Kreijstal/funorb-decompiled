@@ -1550,11 +1550,11 @@ final class GameplayController {
               (stackIn_190_0 == 0)) {
               break regionExit2;
             }
-            var8_ref3 = (ParticleEffect) (this.world.field_o.first(13058));
+            var8_ref3 = (ParticleEffect) (this.world.particles.first(13058));
             while (true) {
               if (var8_ref3 != null) {
-                var8_ref3.a(var6, var7, true, (byte) -119);
-                var8_ref3 = (ParticleEffect) (this.world.field_o.next((byte) -8));
+                var8_ref3.drawParticle(var6, var7, true, (byte) -119);
+                var8_ref3 = (ParticleEffect) (this.world.particles.next((byte) -8));
                 if (var16 == 0) {
                   continue;
                 }
@@ -1575,13 +1575,13 @@ final class GameplayController {
                     break regionExit2;
                   }
                 }
-                var8_ref3 = (ParticleEffect) (this.world.field_o.first(13058));
+                var8_ref3 = (ParticleEffect) (this.world.particles.first(13058));
               }
               break;
             }
             while (null != var8_ref3) {
-              var8_ref3.a(var6, var7, false, (byte) -107);
-              var8_ref3 = (ParticleEffect) (this.world.field_o.next((byte) -61));
+              var8_ref3.drawParticle(var6, var7, false, (byte) -107);
+              var8_ref3 = (ParticleEffect) (this.world.particles.next((byte) -61));
               if (var16 != 0) {
                 decompiledFrameCompleted1 = false;
                 break;
@@ -10002,8 +10002,8 @@ final class GameplayController {
           pm.field_db.clear(6);
           ri.field_b = null;
           hf.field_c = 0;
-          this.world.field_O.clear(6);
-          this.world.field_o.clear(6);
+          this.world.pendingParticles.clear(6);
+          this.world.particles.clear(6);
           db.c(10000);
           jh.field_h = null;
           if (param0 >= -60) {

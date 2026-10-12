@@ -101,7 +101,7 @@ final class MoveEvent extends GameEvent {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3_ref = decompiledCaughtException;
-          throw ig.addExceptionContext((Throwable) ((Object) var3_ref), "kr.C(" + obfuscationGuard + ',' + verbose + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) var3_ref), "kr.C(" + obfuscationGuard + ',' + verbose + ')');
         }
     }
 
@@ -136,7 +136,7 @@ final class MoveEvent extends GameEvent {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw ig.addExceptionContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 
@@ -254,7 +254,7 @@ final class MoveEvent extends GameEvent {
           } else {
             stackIn_37_2 = "{...}";
           }
-          throw ig.addExceptionContext((Throwable) ((Object) stackIn_28_0), ((StringBuilder) (Object) stackIn_36_1).append(stackIn_37_2).append(')').toString());
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_28_0), ((StringBuilder) (Object) stackIn_36_1).append(stackIn_37_2).append(')').toString());
         }
     }
 
@@ -463,7 +463,7 @@ final class MoveEvent extends GameEvent {
           } else {
             stackIn_146_2 = "{...}";
           }
-          throw ig.addExceptionContext((Throwable) ((Object) stackIn_145_0), ((StringBuilder) (Object) stackIn_145_1).append(stackIn_146_2).append(',').append(obfuscationGuard).append(')').toString());
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_145_0), ((StringBuilder) (Object) stackIn_145_1).append(stackIn_146_2).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 
@@ -485,7 +485,7 @@ final class MoveEvent extends GameEvent {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw ig.addExceptionContext((Throwable) ((Object) var1), "kr.B(" + param0 + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) var1), "kr.B(" + param0 + ')');
         }
     }
 
@@ -512,7 +512,7 @@ final class MoveEvent extends GameEvent {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw ig.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 

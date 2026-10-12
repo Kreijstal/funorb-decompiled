@@ -230,7 +230,7 @@ final class CampaignMission extends IntrusiveNode implements TaggedFieldReader {
           } else {
             stackIn_95_2 = "{...}";
           }
-          throw ig.addExceptionContext((Throwable) ((Object) stackIn_91_0), ((StringBuilder) (Object) stackIn_94_1).append(stackIn_95_2).append(',').append(obfuscationGuard).append(')').toString());
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_91_0), ((StringBuilder) (Object) stackIn_94_1).append(stackIn_95_2).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 
@@ -353,7 +353,7 @@ final class CampaignMission extends IntrusiveNode implements TaggedFieldReader {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw ig.addExceptionContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
         }
     }
 

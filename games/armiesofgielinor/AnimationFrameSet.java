@@ -1,11 +1,11 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class wp extends DualLinkedNode {
-    private byte[][] field_x;
+final class AnimationFrameSet extends DualLinkedNode {
+    private byte[][] encodedFrames;
     static int[][] unitUnlockGroups;
     static int[] field_w;
-    private int field_C;
+    private int groupId;
     static int[] field_D;
     static int field_E;
     static String field_y;
@@ -13,11 +13,11 @@ final class wp extends DualLinkedNode {
     static nt field_z;
     static String field_u;
     static String[] field_v;
-    ht[] field_A;
+    AnimationFrame[] frames;
     static String field_B;
     static String field_F;
 
-    final boolean f(byte param0) {
+    final boolean ensureFramesAvailable(byte obfuscationGuard) {
         int var2;
         int var3_int;
         NodeDeque var3;
@@ -26,7 +26,7 @@ final class wp extends DualLinkedNode {
         PacketBuffer var8;
         int var9;
         Object var10;
-        ig var11;
+        AnimationSkeleton var11;
         int var12;
         int var13;
         PacketBuffer var16;
@@ -37,27 +37,27 @@ final class wp extends DualLinkedNode {
         int var3_intLifetime1;
         int var6Lifetime1;
         var12 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
-        if (param0 != -65) {
+        if (obfuscationGuard != -65) {
           field_v = (String[]) null;
         }
-        if (null != this.field_A) {
+        if (null != this.frames) {
           return true;
         }
-        if (this.field_x == null) {
-          if (!jj.field_c.ensureGroupAvailable(11894, this.field_C)) {
+        if (this.encodedFrames == null) {
+          if (!jj.field_c.ensureGroupAvailable(11894, this.groupId)) {
             return false;
           }
-          var27 = jj.field_c.getFileIds(-26, this.field_C);
-          this.field_x = new byte[var27.length][];
+          var27 = jj.field_c.getFileIds(-26, this.groupId);
+          this.encodedFrames = new byte[var27.length][];
           for (var3_int = 0; var27.length > var3_int; var3_int++) {
-            this.field_x[var3_int] = jj.field_c.getFile((byte) 114, var27[var3_int], this.field_C);
+            this.encodedFrames[var3_int] = jj.field_c.getFile((byte) 114, var27[var3_int], this.groupId);
           }
         }
         var2 = 1;
         var13 = 0;
         var3_intLifetime1 = var13;
-        while (var13 < this.field_x.length) {
-          var28 = this.field_x[var13];
+        while (var13 < this.encodedFrames.length) {
+          var28 = this.encodedFrames[var13];
           var16 = new PacketBuffer(var28);
           var16.position = 1;
           var6 = var16.readUnsignedShort((byte) -104);
@@ -68,41 +68,41 @@ final class wp extends DualLinkedNode {
           return false;
         }
         var3 = new NodeDeque();
-        var4 = jj.field_c.getFileCapacity(this.field_C, param0 ^ 65);
-        this.field_A = new ht[var4];
-        var29 = jj.field_c.getFileIds(-92, this.field_C);
+        var4 = jj.field_c.getFileCapacity(this.groupId, obfuscationGuard ^ 65);
+        this.frames = new AnimationFrame[var4];
+        var29 = jj.field_c.getFileIds(-92, this.groupId);
         for (var6Lifetime1 = 0; var6Lifetime1 < var29.length; var6Lifetime1++) {
-          var30 = this.field_x[var6Lifetime1];
+          var30 = this.encodedFrames[var6Lifetime1];
           var8 = new PacketBuffer(var30);
           var8.position = 1;
           var9 = var8.readUnsignedShort((byte) -104);
           var10 = null;
-          var11 = (ig) (var3.first((byte) 124));
+          var11 = (AnimationSkeleton) (var3.first((byte) 124));
           while (var11 != null) {
-            if (~var11.field_k != ~var9) {
-              var11 = (ig) (var3.next((byte) 123));
+            if (~var11.skeletonId != ~var9) {
+              var11 = (AnimationSkeleton) (var3.next((byte) 123));
               continue;
             }
             var10 = var11;
             break;
           }
           if (var10 == null) {
-            var10 = new ig(var9, PortalLossCondition.field_e.getFlatFile(var9, (byte) 81));
+            var10 = new AnimationSkeleton(var9, PortalLossCondition.field_e.getFlatFile(var9, (byte) 81));
             var3.addLast((byte) -119, (IntrusiveNode) (var10));
           }
-          this.field_A[var29[var6Lifetime1]] = new ht(var30, (ig) (var10));
+          this.frames[var29[var6Lifetime1]] = new AnimationFrame(var30, (AnimationSkeleton) (var10));
         }
-        this.field_x = (byte[][]) null;
+        this.encodedFrames = (byte[][]) null;
         return true;
     }
 
-    wp(int param0) {
-        this.field_C = param0;
+    AnimationFrameSet(int groupId) {
+        this.groupId = groupId;
     }
 
     final static void d(byte param0) {
         if (param0 != -13) {
-          wp.d((byte) 11);
+          AnimationFrameSet.d((byte) 11);
         }
     }
 

@@ -1,23 +1,23 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ht {
+final class AnimationFrame {
     private static short[] field_j;
-    ig field_n;
-    short[] field_a;
+    AnimationSkeleton skeleton;
+    short[] transformSlots;
     private static short[] field_b;
     private static short[] field_g;
-    short[] field_f;
-    short[] field_h;
+    short[] transformY;
+    short[] transformZ;
     private static byte[] field_c;
-    int field_d;
-    byte[] field_m;
+    int transformCount;
+    byte[] interpolationFlags;
     private static short[] field_k;
-    short[] field_l;
+    short[] transformX;
     private static short[] field_e;
-    short[] field_i;
+    short[] precedingPivotSlots;
 
-    ht(byte[] param0, ig param1) {
+    AnimationFrame(byte[] encodedFrame, AnimationSkeleton skeleton) {
         Throwable decompiledCaughtException = null;
         Exception var3 = null;
         PacketBuffer var4 = null;
@@ -32,12 +32,12 @@ final class ht {
         int var13 = 0;
         PacketBuffer var14 = null;
         int var9Lifetime1;
-        this.field_d = -1;
-        this.field_n = null;
-        this.field_n = param1;
+        this.transformCount = -1;
+        this.skeleton = null;
+        this.skeleton = skeleton;
         try {
-          var14 = new PacketBuffer(param0);
-          var4 = new PacketBuffer(param0);
+          var14 = new PacketBuffer(encodedFrame);
+          var4 = new PacketBuffer(encodedFrame);
           var14.readUnsignedByte(0);
           var14.position = var14.position + 2;
           var5 = var14.readUnsignedByte(0);
@@ -46,7 +46,7 @@ final class ht {
           var8 = -1;
           var4.position = var14.position + var5;
           for (var9 = 0; var9 < var5; var9++) {
-            var10 = this.field_n.field_p[var9];
+            var10 = this.skeleton.transformTypes[var9];
             if (var10 == 0) {
               var7 = var9;
             }
@@ -97,31 +97,31 @@ final class ht {
               var6++;
             }
           }
-          if (var4.position != param0.length) {
+          if (var4.position != encodedFrame.length) {
             throw new RuntimeException();
           }
-          this.field_d = var6;
-          this.field_a = new short[var6];
-          this.field_l = new short[var6];
-          this.field_f = new short[var6];
-          this.field_h = new short[var6];
-          this.field_i = new short[var6];
-          this.field_m = new byte[var6];
+          this.transformCount = var6;
+          this.transformSlots = new short[var6];
+          this.transformX = new short[var6];
+          this.transformY = new short[var6];
+          this.transformZ = new short[var6];
+          this.precedingPivotSlots = new short[var6];
+          this.interpolationFlags = new byte[var6];
           var13 = 0;
           var9Lifetime1 = var13;
           while (var13 < var6) {
-            this.field_a[var13] = field_j[var13];
-            this.field_l[var13] = field_k[var13];
-            this.field_f[var13] = field_e[var13];
-            this.field_h[var13] = field_b[var13];
-            this.field_i[var13] = field_g[var13];
-            this.field_m[var13] = field_c[var13];
+            this.transformSlots[var13] = field_j[var13];
+            this.transformX[var13] = field_k[var13];
+            this.transformY[var13] = field_e[var13];
+            this.transformZ[var13] = field_b[var13];
+            this.precedingPivotSlots[var13] = field_g[var13];
+            this.interpolationFlags[var13] = field_c[var13];
             var13++;
           }
         } catch (java.lang.Exception decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = (Exception) (Object) decompiledCaughtException;
-          this.field_d = 0;
+          this.transformCount = 0;
         }
     }
 

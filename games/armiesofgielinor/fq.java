@@ -21,9 +21,9 @@ final class fq {
     final static uv a(int param0) {
         if (param0 != 18757) {
           fq.a((byte) 23, -125L);
-          return ig.field_n;
+          return AnimationSkeleton.field_n;
         }
-        return ig.field_n;
+        return AnimationSkeleton.field_n;
     }
 
     public static void a(byte param0) {
@@ -91,7 +91,7 @@ final class fq {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw ig.addExceptionContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -192,7 +192,7 @@ final class fq {
           } else {
             stackIn_22_2 = "{...}";
           }
-          throw ig.addExceptionContext((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(')').toString());
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(')').toString());
         }
     }
 

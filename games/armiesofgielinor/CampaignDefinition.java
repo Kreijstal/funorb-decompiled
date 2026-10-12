@@ -35,7 +35,7 @@ final class CampaignDefinition extends IntrusiveNode {
         try {
           this.name = name;
         } catch (RuntimeException runtimeException) {
-          throw ig.addExceptionContext((Throwable) ((Object) runtimeException), "cf.<init>(" + (name != null ? "{...}" : "null") + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "cf.<init>(" + (name != null ? "{...}" : "null") + ')');
         }
     }
 

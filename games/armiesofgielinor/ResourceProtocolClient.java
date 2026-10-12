@@ -122,7 +122,7 @@ abstract class ResourceProtocolClient {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3_ref = decompiledCaughtException;
-          throw ig.addExceptionContext((Throwable) ((Object) var3_ref), "bp.J(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) var3_ref), "bp.J(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 

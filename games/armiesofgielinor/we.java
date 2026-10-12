@@ -34,7 +34,7 @@ final class we {
         return param0 & param1;
     }
 
-    final static wp a(int param0, boolean param1) {
+    final static AnimationFrameSet a(int param0, boolean param1) {
         fd var2;
         int var3;
         NodeDeque stackIn_5_0 = null;
@@ -48,7 +48,7 @@ final class we {
           return null;
         }
         if (!param1) {
-          return (wp) null;
+          return (AnimationFrameSet) null;
         }
         var2 = (fd) (bk.field_e.first((byte) 109));
         while (var2 != null) {
@@ -86,7 +86,7 @@ final class we {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw ig.addExceptionContext((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 

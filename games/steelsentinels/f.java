@@ -122,17 +122,17 @@ final class f extends vk {
             this.field_c.position = 0;
             this.field_d = null;
             while (true) {
-              var5 = (qa) (this.field_a.c(25));
+              var5 = (qa) (this.field_a.removeFirst(25));
               if (var5 != null) {
-                this.field_m.a((byte) 58, var5);
+                this.field_m.addLast((byte) 58, var5);
                 continue;
               }
               break;
             }
             while (true) {
-              var5Lifetime1 = (qa) (this.field_p.c(54));
+              var5Lifetime1 = (qa) (this.field_p.removeFirst(54));
               if (var5Lifetime1 != null) {
-                this.field_j.a((byte) 45, var5Lifetime1);
+                this.field_j.addLast((byte) 45, var5Lifetime1);
                 continue;
               }
               break;
@@ -388,23 +388,23 @@ final class f extends vk {
           try {
             var2_int = -82 % ((78 - param0) / 33);
             this.field_F.a(true);
-            var3 = (qa) (this.field_m.b(22));
+            var3 = (qa) (this.field_m.first(22));
             while (var3 != null) {
               this.field_o.position = 0;
               this.field_o.writeByte((byte) 111, 1);
               this.field_o.a(var3.field_w, (byte) 120);
               this.field_F.a(this.field_o.payload.length, this.field_o.payload, -100, 0);
-              this.field_a.a((byte) 121, var3);
-              var3 = (qa) (this.field_m.a(false));
+              this.field_a.addLast((byte) 121, var3);
+              var3 = (qa) (this.field_m.next(false));
             }
-            var3Lifetime1 = (qa) (this.field_j.b(22));
+            var3Lifetime1 = (qa) (this.field_j.first(22));
             while (var3Lifetime1 != null) {
               this.field_o.position = 0;
               this.field_o.writeByte((byte) 110, 0);
               this.field_o.a(var3Lifetime1.field_w, (byte) 120);
               this.field_F.a(this.field_o.payload.length, this.field_o.payload, -100, 0);
-              this.field_p.a((byte) 106, var3Lifetime1);
-              var3Lifetime1 = (qa) (this.field_j.a(false));
+              this.field_p.addLast((byte) 106, var3Lifetime1);
+              var3Lifetime1 = (qa) (this.field_j.next(false));
             }
             for (var3_int = 0; var3_int < 100; var3_int++) {
               var4 = this.field_F.a(-114);
@@ -458,24 +458,24 @@ final class f extends vk {
                       var13 = ((long)var7 << 32) + (long)var8;
                       var15 = null;
                       if (var12 != 0) {
-                        var15_ref = (qa) (this.field_p.b(22));
+                        var15_ref = (qa) (this.field_p.first(22));
                         while (var15_ref != null) {
                           if (~var15_ref.field_w == ~var13) {
                             decompiledFrameCompleted0 = false;
                             break;
                           }
-                          var15_ref = (qa) (this.field_p.a(false));
+                          var15_ref = (qa) (this.field_p.next(false));
                         }
                         decompiledFrameRemainder0 = !(decompiledFrameCompleted0);
                       }
                       if ((decompiledFrameRemainder0) &&
                         (decompiledFrameCompleted0)) {
-                        var15_ref = (qa) (this.field_a.b(22));
+                        var15_ref = (qa) (this.field_a.first(22));
                         while (var15_ref != null) {
                           if (var15_ref.field_w == var13) {
                             break;
                           }
-                          var15_ref = (qa) (this.field_a.a(false));
+                          var15_ref = (qa) (this.field_a.next(false));
                         }
                       }
                       if (var15_ref == null) {

@@ -2,62 +2,62 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class DualNodeDeque {
-    private DualNode field_d;
+    private DualNode sentinel;
     static String field_b;
     static int[] field_c;
     static hm field_a;
-    private DualNode field_e;
+    private DualNode traversalCursor;
     static rm field_f;
 
-    final DualNode a(boolean param0) {
-        DualNode var2 = this.field_e;
-        if (this.field_d == var2) {
-          this.field_e = null;
+    final DualNode next(boolean obfuscationGuard) {
+        DualNode var2 = this.traversalCursor;
+        if (this.sentinel == var2) {
+          this.traversalCursor = null;
           return null;
         }
-        this.field_e = var2.dualNext;
-        if (!param0) {
+        this.traversalCursor = var2.dualNext;
+        if (!obfuscationGuard) {
           return var2;
         }
         DualNodeDeque.b((byte) 121);
         return var2;
     }
 
-    final DualNode b(int param0) {
-        DualNode var2 = this.field_d.dualNext;
-        if (param0 != 22) {
-          this.b(118);
-          if (var2 == this.field_d) {
-            this.field_e = null;
+    final DualNode first(int obfuscationGuard) {
+        DualNode var2 = this.sentinel.dualNext;
+        if (obfuscationGuard != 22) {
+          this.first(118);
+          if (var2 == this.sentinel) {
+            this.traversalCursor = null;
             return null;
           }
-          this.field_e = var2.dualNext;
+          this.traversalCursor = var2.dualNext;
           return var2;
         }
-        if (var2 == this.field_d) {
-          this.field_e = null;
+        if (var2 == this.sentinel) {
+          this.traversalCursor = null;
           return null;
         }
-        this.field_e = var2.dualNext;
+        this.traversalCursor = var2.dualNext;
         return var2;
     }
 
-    final void a(int param0) {
+    final void clear(int obfuscationGuard) {
         DualNode var2 = null;
         int var3 = SteelSentinels.obfuscationControl;
         while (true) {
-          var2 = this.field_d.dualNext;
-          if (var2 == this.field_d) {
+          var2 = this.sentinel.dualNext;
+          if (var2 == this.sentinel) {
             break;
           }
           var2.unlinkDual(480);
         }
-        if (param0 == 8150) {
-          this.field_e = null;
+        if (obfuscationGuard == 8150) {
+          this.traversalCursor = null;
           return;
         }
-        this.a((byte) -114);
-        this.field_e = null;
+        this.size((byte) -114);
+        this.traversalCursor = null;
     }
 
     final static void a(int param0, int param1, int param2, int param3, byte param4) {
@@ -107,10 +107,10 @@ final class DualNodeDeque {
         field_c = null;
     }
 
-    final DualNode c(int param0) {
-        DualNode var2 = this.field_d.dualNext;
-        int var3 = -86 % ((param0 + 32) / 35);
-        if (var2 != this.field_d) {
+    final DualNode removeFirst(int obfuscationGuard) {
+        DualNode var2 = this.sentinel.dualNext;
+        int var3 = -86 % ((obfuscationGuard + 32) / 35);
+        if (var2 != this.sentinel) {
           var2.unlinkDual(480);
           return var2;
         }
@@ -157,31 +157,31 @@ final class DualNodeDeque {
         }
     }
 
-    final void a(byte param0, DualNode param1) {
+    final void addLast(byte obfuscationGuard, DualNode node) {
         RuntimeException var3 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (null != param1.dualPrevious) {
-            param1.unlinkDual(480);
+          if (null != node.dualPrevious) {
+            node.unlinkDual(480);
           }
-          param1.dualNext = this.field_d;
-          param1.dualPrevious = this.field_d.dualPrevious;
-          param1.dualPrevious.dualNext = param1;
-          param1.dualNext.dualPrevious = param1;
-          if (param0 > 34) {
+          node.dualNext = this.sentinel;
+          node.dualPrevious = this.sentinel.dualPrevious;
+          node.dualPrevious.dualNext = node;
+          node.dualNext.dualPrevious = node;
+          if (obfuscationGuard > 34) {
             return;
           }
-          this.field_e = (DualNode) null;
+          this.traversalCursor = (DualNode) null;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
           stackIn_7_0 = var3;
-          stackIn_7_1 = new StringBuilder().append("ra.F(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_7_1 = new StringBuilder().append("ra.F(").append(obfuscationGuard).append(',');
+          if (node == null) {
             stackIn_8_2 = "null";
           } else {
             stackIn_8_2 = "{...}";
@@ -190,19 +190,19 @@ final class DualNodeDeque {
         }
     }
 
-    final int a(byte param0) {
+    final int size(byte obfuscationGuard) {
         int var4 = SteelSentinels.obfuscationControl;
         int var2 = 0;
-        DualNode var3 = this.field_d.dualNext;
-        if (param0 >= -81) {
-          this.a(false);
-          while (this.field_d != var3) {
+        DualNode var3 = this.sentinel.dualNext;
+        if (obfuscationGuard >= -81) {
+          this.next(false);
+          while (this.sentinel != var3) {
             var3 = var3.dualNext;
             var2++;
           }
           return var2;
         }
-        while (this.field_d != var3) {
+        while (this.sentinel != var3) {
           var3 = var3.dualNext;
           var2++;
         }
@@ -210,9 +210,9 @@ final class DualNodeDeque {
     }
 
     public DualNodeDeque() {
-        this.field_d = new DualNode();
-        this.field_d.dualPrevious = this.field_d;
-        this.field_d.dualNext = this.field_d;
+        this.sentinel = new DualNode();
+        this.sentinel.dualPrevious = this.sentinel;
+        this.sentinel.dualNext = this.sentinel;
     }
 
     static {

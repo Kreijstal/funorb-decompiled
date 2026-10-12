@@ -50,8 +50,8 @@ final class co {
           }
           boolean decompiledFrameRemainder1 = true;
           if (no.field_U[param1] >= no.field_U[param2]) {
-            var4 = VineGrowthAction.field_s[param2] + wp.field_w[param2] + TutorialController.field_c[param2];
-            var5 = VineGrowthAction.field_s[param1] + (wp.field_w[param1] + TutorialController.field_c[param1]);
+            var4 = VineGrowthAction.field_s[param2] + AnimationFrameSet.field_w[param2] + TutorialController.field_c[param2];
+            var5 = VineGrowthAction.field_s[param1] + (AnimationFrameSet.field_w[param1] + TutorialController.field_c[param1]);
             if (var4 < var5) {
               return true;
             }
@@ -80,8 +80,8 @@ final class co {
         }
         boolean decompiledFrameRemainder0 = true;
         if (EffectPresentation.field_h[param1] >= EffectPresentation.field_h[param2]) {
-          var4Lifetime1 = VineGrowthAction.field_s[param2] + wp.field_w[param2] + TutorialController.field_c[param2];
-          var5Lifetime1 = VineGrowthAction.field_s[param1] + (wp.field_w[param1] + TutorialController.field_c[param1]);
+          var4Lifetime1 = VineGrowthAction.field_s[param2] + AnimationFrameSet.field_w[param2] + TutorialController.field_c[param2];
+          var5Lifetime1 = VineGrowthAction.field_s[param1] + (AnimationFrameSet.field_w[param1] + TutorialController.field_c[param1]);
           if (var4Lifetime1 < var5Lifetime1) {
             return true;
           }
@@ -133,7 +133,7 @@ final class co {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw ig.addExceptionContext((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
         }
     }
 
@@ -215,7 +215,7 @@ final class co {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw ig.addExceptionContext((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
         }
     }
 
@@ -227,7 +227,7 @@ final class co {
             this.field_a = (String) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw ig.addExceptionContext((Throwable) ((Object) runtimeException), "co.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "co.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -244,7 +244,7 @@ final class co {
         try {
           param4.a(param0, param1, param3, this.field_n, (byte) 86);
         } catch (RuntimeException runtimeException) {
-          throw ig.addExceptionContext((Throwable) ((Object) runtimeException), "co.J(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "co.J(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');
         }
     }
 

@@ -133,7 +133,7 @@ final class MatchConditionRegistry {
           } else {
             stackIn_28_2 = "{...}";
           }
-          throw ig.addExceptionContext((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(',').append(param3).append(')').toString());
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -207,7 +207,7 @@ final class MatchConditionRegistry {
             field_a = (String[]) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw ig.addExceptionContext((Throwable) ((Object) runtimeException), "tt.C(" + (condition != null ? "{...}" : "null") + ',' + obfuscationGuard + ',' + playerId + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "tt.C(" + (condition != null ? "{...}" : "null") + ',' + obfuscationGuard + ',' + playerId + ')');
         }
     }
 

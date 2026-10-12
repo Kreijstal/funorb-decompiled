@@ -141,7 +141,7 @@ final class km {
         var7 = 0;
         var8 = 150;
         if (this.field_e == 2) {
-          var4_ref.b(256, 256, 256);
+          var4_ref.scaleGeometry(256, 256, 256);
         }
         if (!param0) {
           var11 = -(this.field_f * 2) + this.field_k;

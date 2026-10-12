@@ -38,9 +38,9 @@ final class CombatWorld {
     int simulationTick;
     int field_q;
     private int field_m;
-    NodeDeque field_o;
+    NodeDeque particles;
     int field_X;
-    NodeDeque field_O;
+    NodeDeque pendingParticles;
     int mapSeed;
     int field_n;
     NodeDeque explosions;
@@ -63,9 +63,9 @@ final class CombatWorld {
     private int field_i;
     NodeDeque field_C;
     static String[] field_jb;
-    DualNodeDeque field_J;
+    DualNodeDeque pendingRemovals;
     static String field_x;
-    int field_z;
+    int gravityAcceleration;
 
     private final void a(int param0, int param1) {
         int var3_int = 0;
@@ -1235,7 +1235,7 @@ final class CombatWorld {
               if (var15 != 0) {
                 if (stackIn_1133_0 != stackIn_1133_1) {
                   ((DualNode) (var8)).unlink(4);
-                  var8 = this.field_J.a(false);
+                  var8 = this.pendingRemovals.next(false);
                   return;
                 }
                 break scanLoop8;
@@ -1331,19 +1331,19 @@ final class CombatWorld {
                   continue;
                 }
               } else {
-                if (this.field_o != null) {
-                  this.field_O.a(35, this.field_o);
-                  var8 = (ParticleEffect) (this.field_o.first(13058));
+                if (this.particles != null) {
+                  this.pendingParticles.a(35, this.particles);
+                  var8 = (ParticleEffect) (this.particles.first(13058));
                   while (null != var8) {
                     ((ParticleEffect) (var8)).advanceParticle((byte) 60);
-                    var8 = (ParticleEffect) (this.field_o.next((byte) -13));
+                    var8 = (ParticleEffect) (this.particles.next((byte) -13));
                     if (var15 != 0) {
                       break scanLoop9;
                     }
                   }
                 }
               }
-              var8 = this.field_J.b(22);
+              var8 = this.pendingRemovals.first(22);
               break;
             }
             while (true) {
@@ -1353,14 +1353,14 @@ final class CombatWorld {
                 break scanLoop8;
               }
               ((DualNode) (var8)).unlink(4);
-              var8 = this.field_J.a(false);
+              var8 = this.pendingRemovals.next(false);
               if (var15 != 0) {
                 return;
               }
             }
 
           }
-          this.field_J.a(8150);
+          this.pendingRemovals.clear(8150);
           this.projectiles.a(114, this.field_db);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -2086,7 +2086,7 @@ final class CombatWorld {
               }
             }
             if (var7_int >= 0 &&
-              this.a(this.field_z, (byte) -95, var7_int, param4, param5, 2600, 5 + this.simulationTick + (param4.worldX + (param5.worldX + this.simulationTick)) % 100)) {
+              this.a(this.gravityAcceleration, (byte) -95, var7_int, param4, param5, 2600, 5 + this.simulationTick + (param4.worldX + (param5.worldX + this.simulationTick)) % 100)) {
               return;
             }
             stackIn_55_0 = 40000;
@@ -2561,9 +2561,9 @@ final class CombatWorld {
             }
           }
           if (Math.abs(param1) > 50000 &&
-            this.a(this.field_z, (byte) -119, 3, param4, param0, 2600, this.simulationTick + 15)) {
+            this.a(this.gravityAcceleration, (byte) -119, 3, param4, param0, 2600, this.simulationTick + 15)) {
           }
-          if (!this.a(this.field_z, (byte) -72, 2, param4, param0, 2600, 15 + this.simulationTick)) {
+          if (!this.a(this.gravityAcceleration, (byte) -72, 2, param4, param0, 2600, 15 + this.simulationTick)) {
             if (param4.charge <= 1) {
               if (80000 < Math.abs(param1) &&
                 param4.charge > 0) {
@@ -2575,13 +2575,13 @@ final class CombatWorld {
                 param4.charge = param4.maximumCharge;
               }
             } else {
-              if (!this.a(this.field_z, (byte) -67, 1, param4, param0, 1728, 25 + this.simulationTick) &&
-                !this.a(this.field_z, (byte) -49, 0, param4, param0, 4608, 25 + this.simulationTick)) {
+              if (!this.a(this.gravityAcceleration, (byte) -67, 1, param4, param0, 1728, 25 + this.simulationTick) &&
+                !this.a(this.gravityAcceleration, (byte) -49, 0, param4, param0, 4608, 25 + this.simulationTick)) {
               }
             }
           }
           if (param2 > -127) {
-            this.field_O = (NodeDeque) null;
+            this.pendingParticles = (NodeDeque) null;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -2661,16 +2661,16 @@ final class CombatWorld {
             param2.pendingCommands.addLast(3, var7Lifetime1);
           }
           boolean decompiledFrameRemainder0 = true;
-          if (!this.a(this.field_z, (byte) -78, 3, param2, param4, 2600, this.simulationTick + 15) &&
-            !this.a(this.field_z, (byte) -64, 2, param2, param4, 2600, 15 + this.simulationTick)) {
+          if (!this.a(this.gravityAcceleration, (byte) -78, 3, param2, param4, 2600, this.simulationTick + 15) &&
+            !this.a(this.gravityAcceleration, (byte) -64, 2, param2, param4, 2600, 15 + this.simulationTick)) {
             if (80000 > Math.abs(param3) &&
               param2.charge > 0 &&
-              this.a(this.field_z, (byte) -29, 1, param2, param4, 4608, this.simulationTick + 25)) {
-              discarded$0 = this.a(this.field_z, (byte) -98, 0, param2, param4, 2304, this.simulationTick + 75);
+              this.a(this.gravityAcceleration, (byte) -29, 1, param2, param4, 4608, this.simulationTick + 25)) {
+              discarded$0 = this.a(this.gravityAcceleration, (byte) -98, 0, param2, param4, 2304, this.simulationTick + 75);
               decompiledFrameRemainder0 = (var8 != 0);
             }
             if ((decompiledFrameRemainder0) &&
-              (this.a(this.field_z, (byte) -105, 0, param2, param4, 3072, 50 + this.simulationTick))) {
+              (this.a(this.gravityAcceleration, (byte) -105, 0, param2, param4, 3072, 50 + this.simulationTick))) {
             }
           }
           var7_int = 112 % ((param5 + 66) / 46);
@@ -3652,7 +3652,7 @@ final class CombatWorld {
           var17Lifetime1 = stackIn_89_0;
           var18 = var12[var17Lifetime1];
           if (param1 >= -16) {
-            this.field_J = (DualNodeDeque) null;
+            this.pendingRemovals = (DualNodeDeque) null;
           }
           var8.aimAngle = var11[var17Lifetime1];
           if (var18 == 0L ||
@@ -3908,20 +3908,20 @@ final class CombatWorld {
             var7Lifetime1.scheduled = true;
             param4.pendingCommands.addLast(3, var7Lifetime1);
           }
-          if (!this.a(this.field_z, (byte) -73, 3, param4, param2, 2600, this.simulationTick + 15)) {
+          if (!this.a(this.gravityAcceleration, (byte) -73, 3, param4, param2, 2600, this.simulationTick + 15)) {
             if (param4.charge > 0 &&
               param2.field_S > 50) {
-              if (this.a(this.field_z * 4, (byte) -63, 2, param4, param2, 8448, 25 + this.simulationTick)) {
+              if (this.a(this.gravityAcceleration * 4, (byte) -63, 2, param4, param2, 8448, 25 + this.simulationTick)) {
                 return;
               }
-              if (!this.a(this.field_z, (byte) -114, 1, param4, param2, 3072, 50 + this.simulationTick)) {
+              if (!this.a(this.gravityAcceleration, (byte) -114, 1, param4, param2, 3072, 50 + this.simulationTick)) {
                 return;
               }
               return;
             }
-            if (!this.a(this.field_z, (byte) -57, 1, param4, param2, 3072, 50 + this.simulationTick) &&
+            if (!this.a(this.gravityAcceleration, (byte) -57, 1, param4, param2, 3072, 50 + this.simulationTick) &&
               param4.charge > 0 &&
-              !this.a(this.field_z, (byte) -24, 2, param4, param2, 8448, 25 + this.simulationTick)) {
+              !this.a(this.gravityAcceleration, (byte) -24, 2, param4, param2, 8448, 25 + this.simulationTick)) {
             }
           }
           return;
@@ -4103,7 +4103,7 @@ final class CombatWorld {
             var7Lifetime1Lifetime1.targetWorldX = param3.worldX;
             var7Lifetime1Lifetime1.targetWorldY = param3.worldY;
             var8 = 900;
-            var9 = this.field_z;
+            var9 = this.gravityAcceleration;
             var10 = 0;
             var11 = 10922;
             this.a(param1, param2, param5, var8, var10, var7Lifetime1Lifetime1, var9, var11, -1);
@@ -4772,11 +4772,11 @@ final class CombatWorld {
             return;
           }
           if (50000 < Math.abs(param1) &&
-            this.a(this.field_z, (byte) -89, 2, param3, param4, 2600, this.simulationTick + 15)) {
+            this.a(this.gravityAcceleration, (byte) -89, 2, param3, param4, 2600, this.simulationTick + 15)) {
             return;
           }
           if (param3.charge <= 1) {
-            if (this.a(this.field_z, (byte) -88, 0, param3, param4, 4352, this.simulationTick + 25) &&
+            if (this.a(this.gravityAcceleration, (byte) -88, 0, param3, param4, 4352, this.simulationTick + 25) &&
               Math.abs(param1) > 80000 &&
               param3.charge > 0) {
               var7Lifetime1 = new SentinelCommand(3, 0, this.simulationTick + 30);
@@ -4786,8 +4786,8 @@ final class CombatWorld {
               param3.pendingCommands.addLast(3, var7Lifetime1);
             }
           } else {
-            if (!this.a(this.field_z, (byte) -126, 1, param3, param4, 1728, 25 + this.simulationTick) &&
-              !this.a(this.field_z, (byte) -63, 0, param3, param4, 4352, 25 + this.simulationTick)) {
+            if (!this.a(this.gravityAcceleration, (byte) -126, 1, param3, param4, 1728, 25 + this.simulationTick) &&
+              !this.a(this.gravityAcceleration, (byte) -63, 0, param3, param4, 4352, 25 + this.simulationTick)) {
             }
           }
           return;
@@ -5004,21 +5004,21 @@ final class CombatWorld {
           if (param0 != 57) {
             this.field_hb = -92;
           }
-          if (!this.a(this.field_z, (byte) -57, 4, param3, param2, 2600, this.simulationTick + 15) &&
-            !this.a(this.field_z, (byte) -61, 3, param3, param2, 2600, this.simulationTick + 15)) {
+          if (!this.a(this.gravityAcceleration, (byte) -57, 4, param3, param2, 2600, this.simulationTick + 15) &&
+            !this.a(this.gravityAcceleration, (byte) -61, 3, param3, param2, 2600, this.simulationTick + 15)) {
             if (param3.charge > 0 &&
               param2.field_S > 50) {
-              if (this.a(this.field_z * 4, (byte) -88, 1, param3, param2, 8448, 15 + this.simulationTick)) {
+              if (this.a(this.gravityAcceleration * 4, (byte) -88, 1, param3, param2, 8448, 15 + this.simulationTick)) {
                 return;
               }
-              if (!this.a(this.field_z, (byte) -29, 0, param3, param2, 2304, this.simulationTick + 25)) {
+              if (!this.a(this.gravityAcceleration, (byte) -29, 0, param3, param2, 2304, this.simulationTick + 25)) {
                 return;
               }
               return;
             }
-            if (!this.a(this.field_z, (byte) -88, 0, param3, param2, 2304, this.simulationTick + 25) &&
+            if (!this.a(this.gravityAcceleration, (byte) -88, 0, param3, param2, 2304, this.simulationTick + 25) &&
               param3.charge > 0 &&
-              this.a(this.field_z, (byte) -91, 1, param3, param2, 1728, 15 + this.simulationTick)) {
+              this.a(this.gravityAcceleration, (byte) -91, 1, param3, param2, 1728, 15 + this.simulationTick)) {
             }
           }
           return;
@@ -5228,11 +5228,11 @@ final class CombatWorld {
           }
           param2.worldY = param2.worldY + (param4.field_Db << 3);
           if ((param4.field_Lb ||
-            !(param4.field_oc <= 0)) && !this.a(this.field_z, (byte) -128, 3, param4, param2, 2600, this.simulationTick + 15)) {
+            !(param4.field_oc <= 0)) && !this.a(this.gravityAcceleration, (byte) -128, 3, param4, param2, 2600, this.simulationTick + 15)) {
           }
-          if (!this.a(this.field_z, (byte) -97, 2, param4, param2, 2600, 15 + this.simulationTick)) {
+          if (!this.a(this.gravityAcceleration, (byte) -97, 2, param4, param2, 2600, 15 + this.simulationTick)) {
             if (param4.charge > 1) {
-              if ((!this.a(this.field_z, (byte) -109, 1, param4, param2, 1728, 25 + this.simulationTick)) &&
+              if ((!this.a(this.gravityAcceleration, (byte) -109, 1, param4, param2, 1728, 25 + this.simulationTick)) &&
                 (this.a(0, (byte) -69, 0, param4, param2, 4608, 25 + this.simulationTick)) &&
                 (param4.field_t == 0)) {
                 var6Lifetime1 = new SentinelCommand(3, 0, 3 + this.simulationTick);
@@ -5799,10 +5799,10 @@ final class CombatWorld {
           boolean decompiledFrameRemainder0 = true;
           var8 = 41 % ((param1 - 31) / 61);
           if (!param0.field_Lb ||
-            !this.a(this.field_z, (byte) -92, 2, param0, param2, 2600, 3 + this.simulationTick)) {
+            !this.a(this.gravityAcceleration, (byte) -92, 2, param0, param2, 2600, 3 + this.simulationTick)) {
             if (param0.charge > 1) {
-              if ((!this.a(this.field_z, (byte) -75, 1, param0, param2, 4608, this.simulationTick + 3)) &&
-                (decompiledFrameRemainder0 = !(!this.a(this.field_z, (byte) -26, 0, param0, param2, 1280, this.simulationTick + 3)))) {
+              if ((!this.a(this.gravityAcceleration, (byte) -75, 1, param0, param2, 4608, this.simulationTick + 3)) &&
+                (decompiledFrameRemainder0 = !(!this.a(this.gravityAcceleration, (byte) -26, 0, param0, param2, 1280, this.simulationTick + 3)))) {
                 var9 = new SentinelCommand(6, -param4, this.simulationTick + 50);
                 var9.scheduled = true;
                 param0.pendingCommands.addLast(3, var9);
@@ -5816,19 +5816,19 @@ final class CombatWorld {
               }
             }
             if ((decompiledFrameRemainder0) &&
-              (this.a(this.field_z, (byte) -30, 0, param0, param2, 1280, this.simulationTick + 3))) {
+              (this.a(this.gravityAcceleration, (byte) -30, 0, param0, param2, 1280, this.simulationTick + 3))) {
               var9 = new SentinelCommand(6, -param4, this.simulationTick + 50);
               var9.scheduled = true;
               param0.pendingCommands.addLast(3, var9);
               if (var10 != 0) {
-                discarded$0 = this.a(this.field_z, (byte) -87, 2, param0, param2, 2600, this.simulationTick + 15);
+                discarded$0 = this.a(this.gravityAcceleration, (byte) -87, 2, param0, param2, 2600, this.simulationTick + 15);
                 var9 = new SentinelCommand(6, -param4, 30 + this.simulationTick);
                 var9.scheduled = true;
                 param0.pendingCommands.addLast(3, var9);
               }
             }
           } else {
-            discarded$0 = this.a(this.field_z, (byte) -87, 2, param0, param2, 2600, this.simulationTick + 15);
+            discarded$0 = this.a(this.gravityAcceleration, (byte) -87, 2, param0, param2, 2600, this.simulationTick + 15);
             var9 = new SentinelCommand(6, -param4, 30 + this.simulationTick);
             var9.scheduled = true;
             param0.pendingCommands.addLast(3, var9);
@@ -6139,19 +6139,19 @@ final class CombatWorld {
           }
           if (param4.field_Xb[4] == 19) {
             if (!param4.field_u) {
-              discarded$0 = this.a(this.field_z / 2, (byte) -76, 4, param4, param3, 2600, this.simulationTick + 5);
+              discarded$0 = this.a(this.gravityAcceleration / 2, (byte) -76, 4, param4, param3, 2600, this.simulationTick + 5);
               if ((var10 != 0) &&
                 (!param4.field_u)) {
-                discarded$1 = this.a(this.field_z, (byte) -85, 4, param4, param3, 2600, 5 + this.simulationTick);
+                discarded$1 = this.a(this.gravityAcceleration, (byte) -85, 4, param4, param3, 2600, 5 + this.simulationTick);
               }
             }
           } else {
             if (!param4.field_u) {
-              discarded$1 = this.a(this.field_z, (byte) -85, 4, param4, param3, 2600, 5 + this.simulationTick);
+              discarded$1 = this.a(this.gravityAcceleration, (byte) -85, 4, param4, param3, 2600, 5 + this.simulationTick);
             }
           }
           if (var8 == 0 &&
-            this.a(this.field_z, (byte) -36, 2, param4, param3, 2304, 25 + this.simulationTick)) {
+            this.a(this.gravityAcceleration, (byte) -36, 2, param4, param3, 2304, 25 + this.simulationTick)) {
             if ((param4.field_t == 0) &&
               (!(30000 > Math.abs(param5)))) {
               var9 = new SentinelCommand(6, param1, this.simulationTick + 27);
@@ -6402,33 +6402,33 @@ final class CombatWorld {
             break;
           }
           if (decompiledNaturalLoopExit0) {
-            this.field_z = 4;
+            this.gravityAcceleration = 4;
             stackIn_101_0 = this.terrain.getTerrainType(109);
             stackIn_101_1 = 4;
           }
           if (stackIn_101_0 == stackIn_101_1) {
-            this.field_z = 2;
+            this.gravityAcceleration = 2;
           }
           if (this.terrain.getTerrainType(98) == 3) {
-            this.field_z = 3;
+            this.gravityAcceleration = 3;
           }
           this.field_C = new NodeDeque();
           this.explosions = new NodeDeque();
           this.field_db = new NodeDeque();
           this.projectiles = new NodeDeque();
           if (this.field_h) {
-            this.field_O = null;
-            this.field_o = null;
+            this.pendingParticles = null;
+            this.particles = null;
             if (var19 != 0) {
-              this.field_o = new NodeDeque();
-              this.field_O = new NodeDeque();
+              this.particles = new NodeDeque();
+              this.pendingParticles = new NodeDeque();
             }
           } else {
-            this.field_o = new NodeDeque();
-            this.field_O = new NodeDeque();
+            this.particles = new NodeDeque();
+            this.pendingParticles = new NodeDeque();
           }
           this.field_e = new NodeDeque();
-          this.field_J = new DualNodeDeque();
+          this.pendingRemovals = new DualNodeDeque();
           this.field_cb = -1;
           if (this.field_lb) {
             this.field_d = 100000;

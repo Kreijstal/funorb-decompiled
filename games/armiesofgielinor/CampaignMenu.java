@@ -62,7 +62,7 @@ final class CampaignMenu {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ig.addExceptionContext((Throwable) ((Object) var2), "cv.N(" + obfuscationGuard + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) var2), "cv.N(" + obfuscationGuard + ')');
         }
     }
 
@@ -86,7 +86,7 @@ final class CampaignMenu {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
-          throw ig.addExceptionContext((Throwable) ((Object) runtimeException), "cv.FA(" + obfuscationGuard + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "cv.FA(" + obfuscationGuard + ')');
         }
     }
 
@@ -112,7 +112,7 @@ final class CampaignMenu {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
-          throw ig.addExceptionContext((Throwable) ((Object) runtimeException), "cv.E(" + missionId + ',' + obfuscationGuard + ',' + score + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "cv.E(" + missionId + ',' + obfuscationGuard + ',' + score + ')');
         }
     }
 
@@ -129,7 +129,7 @@ final class CampaignMenu {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ig.addExceptionContext((Throwable) ((Object) var2), "cv.CA(" + param0 + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) var2), "cv.CA(" + param0 + ')');
         }
     }
 
@@ -177,7 +177,7 @@ final class CampaignMenu {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ig.addExceptionContext((Throwable) ((Object) var2), "cv.F(" + obfuscationGuard + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) var2), "cv.F(" + obfuscationGuard + ')');
         }
     }
 
@@ -206,7 +206,7 @@ final class CampaignMenu {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
-          throw ig.addExceptionContext((Throwable) ((Object) runtimeException), "cv.EA(" + obfuscationGuard + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "cv.EA(" + obfuscationGuard + ')');
         }
     }
 
@@ -282,7 +282,7 @@ final class CampaignMenu {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
-          throw ig.addExceptionContext((Throwable) ((Object) runtimeException), "cv.A(" + param0 + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "cv.A(" + param0 + ')');
         }
     }
 
@@ -400,7 +400,7 @@ final class CampaignMenu {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ig.addExceptionContext((Throwable) (var2), "cv.M(" + param0 + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) (var2), "cv.M(" + param0 + ')');
         }
     }
 
@@ -422,7 +422,7 @@ final class CampaignMenu {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw ig.addExceptionContext((Throwable) ((Object) var1), "cv.U(" + param0 + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) var1), "cv.U(" + param0 + ')');
         }
     }
 
@@ -505,7 +505,7 @@ final class CampaignMenu {
           } else {
             stackIn_27_2 = "{...}";
           }
-          throw ig.addExceptionContext((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(',').append(param3).append(')').toString());
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -537,7 +537,7 @@ final class CampaignMenu {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw ig.addExceptionContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -694,7 +694,7 @@ final class CampaignMenu {
           } else {
             stackIn_91_2 = "{...}";
           }
-          throw ig.addExceptionContext((Throwable) ((Object) stackIn_90_0), ((StringBuilder) (Object) stackIn_90_1).append(stackIn_91_2).append(',').append(param4).append(')').toString());
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_90_0), ((StringBuilder) (Object) stackIn_90_1).append(stackIn_91_2).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -775,7 +775,7 @@ final class CampaignMenu {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
-          throw ig.addExceptionContext((Throwable) ((Object) runtimeException), "cv.R(" + param0 + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "cv.R(" + param0 + ')');
         }
     }
 
@@ -855,7 +855,7 @@ final class CampaignMenu {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ig.addExceptionContext((Throwable) (var2), "cv.AA(" + param0 + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) (var2), "cv.AA(" + param0 + ')');
         }
     }
 
@@ -883,7 +883,7 @@ final class CampaignMenu {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw ig.addExceptionContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -1186,7 +1186,7 @@ final class CampaignMenu {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ig.addExceptionContext((Throwable) ((Object) var2), "cv.K(" + param0 + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) var2), "cv.K(" + param0 + ')');
         }
     }
 
@@ -1279,7 +1279,7 @@ final class CampaignMenu {
           } else {
             stackIn_63_2 = "{...}";
           }
-          throw ig.addExceptionContext((Throwable) ((Object) stackIn_58_0), ((StringBuilder) (Object) stackIn_62_1).append(stackIn_63_2).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(')').toString());
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_58_0), ((StringBuilder) (Object) stackIn_62_1).append(stackIn_63_2).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(')').toString());
         }
     }
 
@@ -1399,7 +1399,7 @@ final class CampaignMenu {
           } else {
             stackIn_30_2 = "{...}";
           }
-          throw ig.addExceptionContext((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_29_1).append(stackIn_30_2).append(',').append(height).append(',').append(obfuscationGuard).append(',').append(width).append(')').toString());
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_29_1).append(stackIn_30_2).append(',').append(height).append(',').append(obfuscationGuard).append(',').append(width).append(')').toString());
         }
     }
 
@@ -1430,7 +1430,7 @@ final class CampaignMenu {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw ig.addExceptionContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
         }
     }
 
@@ -1449,7 +1449,7 @@ final class CampaignMenu {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3_ref = decompiledCaughtException;
-          throw ig.addExceptionContext((Throwable) ((Object) var3_ref), "cv.W(" + obfuscationGuard + ',' + missionId + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) var3_ref), "cv.W(" + obfuscationGuard + ',' + missionId + ')');
         }
     }
 
@@ -1485,7 +1485,7 @@ final class CampaignMenu {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw ig.addExceptionContext((Throwable) ((Object) var2_ref), "cv.D(" + obfuscationGuard + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) var2_ref), "cv.D(" + obfuscationGuard + ')');
         }
     }
 
@@ -1765,7 +1765,7 @@ final class CampaignMenu {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ig.addExceptionContext((Throwable) (var2), "cv.H(" + obfuscationGuard + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) (var2), "cv.H(" + obfuscationGuard + ')');
         }
     }
 
@@ -1806,7 +1806,7 @@ final class CampaignMenu {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
-          throw ig.addExceptionContext((Throwable) ((Object) runtimeException), "cv.S(" + obfuscationGuard + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "cv.S(" + obfuscationGuard + ')');
         }
     }
 
@@ -1906,7 +1906,7 @@ final class CampaignMenu {
           } else {
             stackIn_44_2 = "{...}";
           }
-          throw ig.addExceptionContext((Throwable) ((Object) stackIn_43_0), ((StringBuilder) (Object) stackIn_43_1).append(stackIn_44_2).append(')').toString());
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_43_0), ((StringBuilder) (Object) stackIn_43_1).append(stackIn_44_2).append(')').toString());
         }
     }
 
@@ -2022,7 +2022,7 @@ final class CampaignMenu {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3_ref = decompiledCaughtException;
-          throw ig.addExceptionContext((Throwable) ((Object) var3_ref), "cv.C(" + campaignIndex + ',' + obfuscationGuard + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) var3_ref), "cv.C(" + campaignIndex + ',' + obfuscationGuard + ')');
         }
     }
 
@@ -2050,7 +2050,7 @@ final class CampaignMenu {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw ig.addExceptionContext((Throwable) ((Object) var3), "cv.P(" + campaignIndex + ',' + obfuscationGuard + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) var3), "cv.P(" + campaignIndex + ',' + obfuscationGuard + ')');
         }
     }
 
@@ -2127,7 +2127,7 @@ final class CampaignMenu {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
-          throw ig.addExceptionContext((Throwable) ((Object) var4), "cv.B(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) var4), "cv.B(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -2296,7 +2296,7 @@ final class CampaignMenu {
         } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
           decompiledCaughtException = decompiledCaughtParameter1;
           var2_ref = decompiledCaughtException;
-          throw ig.addExceptionContext((Throwable) ((Object) var2_ref), "cv.O(" + param0 + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) var2_ref), "cv.O(" + param0 + ')');
         }
     }
 
@@ -2428,7 +2428,7 @@ final class CampaignMenu {
         } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
           decompiledCaughtException = decompiledCaughtParameter1;
           var3 = decompiledCaughtException;
-          throw ig.addExceptionContext((Throwable) ((Object) var3), "cv.T(" + viewMode + ',' + obfuscationGuard + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) var3), "cv.T(" + viewMode + ',' + obfuscationGuard + ')');
         }
     }
 

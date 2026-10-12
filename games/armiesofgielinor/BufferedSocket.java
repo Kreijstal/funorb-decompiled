@@ -104,7 +104,7 @@ final class BufferedSocket implements Runnable {
           } else {
             stackIn_29_2 = "{...}";
           }
-          throw ig.addExceptionContext((Throwable) ((Object) stackIn_28_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(',').append(obfuscationGuard).append(',').append(sourceOffset).append(',').append(length).append(')').toString());
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_28_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(',').append(obfuscationGuard).append(',').append(sourceOffset).append(',').append(length).append(')').toString());
         }
     }
 
@@ -143,7 +143,7 @@ final class BufferedSocket implements Runnable {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw ig.addExceptionContext((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
         }
     }
 
@@ -352,7 +352,7 @@ final class BufferedSocket implements Runnable {
           this.output = this.socket.getOutputStream();
           this.bufferCapacity = bufferCapacity;
         } catch (RuntimeException runtimeException) {
-          throw ig.addExceptionContext((Throwable) ((Object) runtimeException), "hi.<init>(" + (socket != null ? "{...}" : "null") + ',' + (threadLauncher != null ? "{...}" : "null") + ',' + bufferCapacity + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "hi.<init>(" + (socket != null ? "{...}" : "null") + ',' + (threadLauncher != null ? "{...}" : "null") + ',' + bufferCapacity + ')');
         }
     }
 

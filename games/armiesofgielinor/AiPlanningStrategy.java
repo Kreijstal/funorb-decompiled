@@ -205,7 +205,7 @@ abstract class AiPlanningStrategy {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw ig.addExceptionContext((Throwable) ((Object) var3), "sm.H(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) var3), "sm.H(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -230,7 +230,7 @@ abstract class AiPlanningStrategy {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw ig.addExceptionContext((Throwable) ((Object) var2_ref), "sm.G(" + obfuscationGuard + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) var2_ref), "sm.G(" + obfuscationGuard + ')');
         }
     }
 
@@ -248,7 +248,7 @@ abstract class AiPlanningStrategy {
           var5.destinationX = destinationX;
           this.submitCandidate(16777062, var5);
         } catch (RuntimeException runtimeException) {
-          throw ig.addExceptionContext((Throwable) ((Object) runtimeException), "sm.N(" + destinationY + ',' + destinationX + ',' + obfuscationGuard + ',' + score + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "sm.N(" + destinationY + ',' + destinationX + ',' + obfuscationGuard + ',' + score + ')');
         }
     }
 
@@ -270,7 +270,7 @@ abstract class AiPlanningStrategy {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var7_ref = decompiledCaughtException;
-          throw ig.addExceptionContext((Throwable) ((Object) var7_ref), "sm.K(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) var7_ref), "sm.K(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
     }
 
@@ -290,7 +290,7 @@ abstract class AiPlanningStrategy {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4_ref = decompiledCaughtException;
-          throw ig.addExceptionContext((Throwable) ((Object) var4_ref), "sm.P(" + obfuscationGuard + ',' + executionResult + ',' + score + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) var4_ref), "sm.P(" + obfuscationGuard + ',' + executionResult + ',' + score + ')');
         }
     }
 
@@ -302,7 +302,7 @@ abstract class AiPlanningStrategy {
             field_g = (String) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw ig.addExceptionContext((Throwable) ((Object) runtimeException), "sm.O(" + param0 + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "sm.O(" + param0 + ')');
         }
     }
 
@@ -365,7 +365,7 @@ abstract class AiPlanningStrategy {
           } else {
             stackIn_31_2 = "{...}";
           }
-          throw ig.addExceptionContext((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_30_1).append(stackIn_31_2).append(',').append(param3).append(')').toString());
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_30_1).append(stackIn_31_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -383,7 +383,7 @@ abstract class AiPlanningStrategy {
           var7.destinationX = destinationX;
           this.submitCandidate(16777062, var7);
         } catch (RuntimeException runtimeException) {
-          throw ig.addExceptionContext((Throwable) ((Object) runtimeException), "sm.J(" + destinationY + ',' + unitType + ',' + score + ',' + actingPlayer + ',' + destinationX + ',' + submit + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "sm.J(" + destinationY + ',' + unitType + ',' + score + ',' + actingPlayer + ',' + destinationX + ',' + submit + ')');
         }
     }
 
@@ -392,7 +392,7 @@ abstract class AiPlanningStrategy {
           int var2_int = -101 / ((obfuscationGuard + 67) / 49);
           this.candidates.a(true, this.recycledCandidates);
         } catch (RuntimeException runtimeException) {
-          throw ig.addExceptionContext((Throwable) ((Object) runtimeException), "sm.D(" + obfuscationGuard + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "sm.D(" + obfuscationGuard + ')');
         }
     }
 
@@ -418,7 +418,7 @@ abstract class AiPlanningStrategy {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw ig.addExceptionContext((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 
@@ -441,7 +441,7 @@ abstract class AiPlanningStrategy {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
-          throw ig.addExceptionContext((Throwable) ((Object) runtimeException), "sm.M(" + destinationY + ',' + targetX + ',' + destinationX + ',' + obfuscationGuard + ',' + score + ',' + targetY + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "sm.M(" + destinationY + ',' + targetX + ',' + destinationX + ',' + obfuscationGuard + ',' + score + ',' + targetY + ')');
         }
     }
 
@@ -495,7 +495,7 @@ abstract class AiPlanningStrategy {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ig.addExceptionContext((Throwable) ((Object) var2), "sm.L(" + param0 + ',' + param1 + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) var2), "sm.L(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -519,7 +519,7 @@ abstract class AiPlanningStrategy {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw ig.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 

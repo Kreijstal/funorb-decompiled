@@ -54,7 +54,7 @@ final class SpellConfirmationDialog {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw ig.addExceptionContext((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(')').toString());
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -117,7 +117,7 @@ final class SpellConfirmationDialog {
           this.prompt = prompt;
           this.selectionMode = selectionMode;
         } catch (RuntimeException runtimeException) {
-          throw ig.addExceptionContext((Throwable) ((Object) runtimeException), "uf.<init>(" + selectionMode + ',' + spellId + ',' + tileX + ',' + tileY + ',' + (prompt != null ? "{...}" : "null") + ',' + (unusedController != null ? "{...}" : "null") + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "uf.<init>(" + selectionMode + ',' + spellId + ',' + tileX + ',' + tileY + ',' + (prompt != null ? "{...}" : "null") + ',' + (unusedController != null ? "{...}" : "null") + ')');
         }
     }
 

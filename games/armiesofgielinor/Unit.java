@@ -355,7 +355,7 @@ final class Unit extends IntrusiveNode implements TaggedFieldReader {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw ig.addExceptionContext((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(obfuscationGuard).append(')').toString());
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 
@@ -648,7 +648,7 @@ final class Unit extends IntrusiveNode implements TaggedFieldReader {
           } else {
             stackIn_51_2 = "{...}";
           }
-          throw ig.addExceptionContext((Throwable) ((Object) stackIn_47_0), ((StringBuilder) (Object) stackIn_50_1).append(stackIn_51_2).append(',').append(obfuscationGuard).append(')').toString());
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_47_0), ((StringBuilder) (Object) stackIn_50_1).append(stackIn_51_2).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 
@@ -849,7 +849,7 @@ final class Unit extends IntrusiveNode implements TaggedFieldReader {
         try {
           this.setFacingAngle(obfuscationGuard ^ 2079, 256 + (obfuscationGuard - (int)(2048.0 * Math.atan2((double)(-(this.tileY - targetUnit.tileY)), (double)(this.tileX - targetUnit.tileX)) / 3.141592653589793 / 2.0)) & 2047);
         } catch (RuntimeException runtimeException) {
-          throw ig.addExceptionContext((Throwable) ((Object) runtimeException), "jd.HB(" + (targetUnit != null ? "{...}" : "null") + ',' + obfuscationGuard + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "jd.HB(" + (targetUnit != null ? "{...}" : "null") + ',' + obfuscationGuard + ')');
         }
     }
 
@@ -1041,7 +1041,7 @@ final class Unit extends IntrusiveNode implements TaggedFieldReader {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw ig.addExceptionContext((Throwable) ((Object) var1_ref), "jd.VA(" + param0 + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) var1_ref), "jd.VA(" + param0 + ')');
         }
     }
 
@@ -1127,7 +1127,7 @@ final class Unit extends IntrusiveNode implements TaggedFieldReader {
           } else {
             stackIn_33_2 = "{...}";
           }
-          throw ig.addExceptionContext((Throwable) ((Object) stackIn_32_0), ((StringBuilder) (Object) stackIn_32_1).append(stackIn_33_2).append(',').append(statusEffectType).append(',').append(statusEffectValue).append(',').append(equipmentDescriptor).append(',').append(detached).append(',').append(immobilizedTurns).append(')').toString());
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_32_0), ((StringBuilder) (Object) stackIn_32_1).append(stackIn_33_2).append(',').append(statusEffectType).append(',').append(statusEffectValue).append(',').append(equipmentDescriptor).append(',').append(detached).append(',').append(immobilizedTurns).append(')').toString());
         }
     }
 

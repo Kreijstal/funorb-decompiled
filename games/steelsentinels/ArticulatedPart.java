@@ -29,10 +29,10 @@ final class ArticulatedPart extends DualNode {
     static boolean field_B;
     static String[] field_X;
 
-    final static ParticleEffect a(int param0, int param1, CombatWorld param2, int param3, int param4, boolean param5, int param6, int param7, int param8, int param9) {
-        ParticleEffect var10 = null;
-        RuntimeException var10_ref = null;
-        CombatWorld var11 = null;
+    final static ParticleEffect createParticle(int effectType, int velocityX, CombatWorld world, int obfuscationGuard, int worldY, boolean usesSurfaceProfile, int durationTicks, int velocityY, int worldX, int inheritedEffectValue) {
+        ParticleEffect particle = null;
+        RuntimeException failure = null;
+        CombatWorld unusedWorld = null;
         ParticleEffect stackIn_4_0 = null;
         boolean stackIn_5_1 = false;
         ParticleEffect stackIn_6_0 = null;
@@ -41,36 +41,36 @@ final class ArticulatedPart extends DualNode {
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var10 = ol.d((byte) -105);
-          var10.velocityY = param7;
-          var10.worldY = param4;
-          if (param3 <= 86) {
-            var11 = (CombatWorld) null;
-            ArticulatedPart.a(91, 120, (CombatWorld) null, -2, -98, true, 88, 125, 5, -15);
+          particle = ol.acquireCyclicParticle((byte) -105);
+          particle.velocityY = velocityY;
+          particle.worldY = worldY;
+          if (obfuscationGuard <= 86) {
+            unusedWorld = (CombatWorld) null;
+            ArticulatedPart.createParticle(91, 120, (CombatWorld) null, -2, -98, true, 88, 125, 5, -15);
           }
-          var10.field_P = param9;
-          stackIn_4_0 = var10;
-          stackIn_5_1 = (param5);
-          stackIn_4_0.field_G = stackIn_5_1;
-          var10.field_M = param0;
-          var10.field_D = param6;
-          var10.worldX = param8;
-          var10.field_I = 0;
-          var10.velocityX = param1;
-          var10.world = param2;
-          stackIn_6_0 = var10;
+          particle.field_P = inheritedEffectValue;
+          stackIn_4_0 = particle;
+          stackIn_5_1 = (usesSurfaceProfile);
+          stackIn_4_0.usesSurfaceProfile = stackIn_5_1;
+          particle.effectType = effectType;
+          particle.durationTicks = durationTicks;
+          particle.worldX = worldX;
+          particle.ageTicks = 0;
+          particle.velocityX = velocityX;
+          particle.world = world;
+          stackIn_6_0 = particle;
           return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          var10_ref = decompiledCaughtException;
-          stackIn_9_0 = var10_ref;
-          stackIn_9_1 = new StringBuilder().append("nk.K(").append(param0).append(',').append(param1).append(',');
-          if (param2 == null) {
+          failure = decompiledCaughtException;
+          stackIn_9_0 = failure;
+          stackIn_9_1 = new StringBuilder().append("nk.K(").append(effectType).append(',').append(velocityX).append(',');
+          if (world == null) {
             stackIn_10_2 = "null";
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(',').append(param8).append(',').append(param9).append(')').toString());
+          throw ci.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(obfuscationGuard).append(',').append(worldY).append(',').append(usesSurfaceProfile).append(',').append(durationTicks).append(',').append(velocityY).append(',').append(worldX).append(',').append(inheritedEffectValue).append(')').toString());
         }
     }
 

@@ -151,11 +151,11 @@ public final class SteelSentinels extends FunOrbClient {
                     }
                   }
                   if (decompiledFrameCompleted1) {
-                    var9_ref = (ParticleEffect) (var6_ref_ee.field_o.first(13058));
+                    var9_ref = (ParticleEffect) (var6_ref_ee.particles.first(13058));
                     while (true) {
                       if (null != var9_ref) {
-                        var9_ref.a(var7, var8, true, (byte) -89);
-                        var9_ref = (ParticleEffect) (var6_ref_ee.field_o.next((byte) -112));
+                        var9_ref.drawParticle(var7, var8, true, (byte) -89);
+                        var9_ref = (ParticleEffect) (var6_ref_ee.particles.next((byte) -112));
                         if (var13 == 0) {
                           continue;
                         }
@@ -168,13 +168,13 @@ public final class SteelSentinels extends FunOrbClient {
                             break regionExit1;
                           }
                         }
-                        var9_ref = (ParticleEffect) (var6_ref_ee.field_o.first(13058));
+                        var9_ref = (ParticleEffect) (var6_ref_ee.particles.first(13058));
                       }
                       break;
                     }
                     while (var9_ref != null) {
-                      var9_ref.a(var7, var8, false, (byte) 31);
-                      var9_ref = (ParticleEffect) (var6_ref_ee.field_o.next((byte) -82));
+                      var9_ref.drawParticle(var7, var8, false, (byte) 31);
+                      var9_ref = (ParticleEffect) (var6_ref_ee.particles.next((byte) -82));
                       if (var13 != 0) {
                         decompiledFrameCompleted0 = false;
                         break;

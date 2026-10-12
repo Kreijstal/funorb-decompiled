@@ -114,7 +114,7 @@ final class MovementPlanner {
           } else {
             stackIn_26_2 = "{...}";
           }
-          throw ig.addExceptionContext((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(')').toString());
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(')').toString());
         }
     }
 
@@ -559,7 +559,7 @@ final class MovementPlanner {
           } else {
             stackIn_45_2 = "{...}";
           }
-          throw ig.addExceptionContext((Throwable) ((Object) stackIn_44_0), ((StringBuilder) (Object) stackIn_44_1).append(stackIn_45_2).append(',').append(param1).append(')').toString());
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_44_0), ((StringBuilder) (Object) stackIn_44_1).append(stackIn_45_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -817,7 +817,7 @@ final class MovementPlanner {
           } else {
             stackIn_85_2 = "{...}";
           }
-          throw ig.addExceptionContext((Throwable) ((Object) stackIn_84_0), ((StringBuilder) (Object) stackIn_84_1).append(stackIn_85_2).append(',').append(selectionMode).append(',').append(spellId).append(')').toString());
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_84_0), ((StringBuilder) (Object) stackIn_84_1).append(stackIn_85_2).append(',').append(selectionMode).append(',').append(spellId).append(')').toString());
         }
     }
 
@@ -1127,7 +1127,7 @@ final class MovementPlanner {
           } else {
             stackIn_180_2 = "{...}";
           }
-          throw ig.addExceptionContext((Throwable) ((Object) stackIn_179_0), ((StringBuilder) (Object) stackIn_179_1).append(stackIn_180_2).append(')').toString());
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_179_0), ((StringBuilder) (Object) stackIn_179_1).append(stackIn_180_2).append(')').toString());
         }
     }
 
@@ -1203,7 +1203,7 @@ final class MovementPlanner {
           } else {
             stackIn_24_2 = "{...}";
           }
-          throw ig.addExceptionContext((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(')').toString());
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(')').toString());
         }
     }
 
@@ -1229,7 +1229,7 @@ final class MovementPlanner {
           this.field_e = new int[this.mapWidth * this.mapHeight];
           this.resetCosts(0);
         } catch (RuntimeException runtimeException) {
-          throw ig.addExceptionContext((Throwable) ((Object) runtimeException), "nn.<init>(" + (battlefield != null ? "{...}" : "null") + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "nn.<init>(" + (battlefield != null ? "{...}" : "null") + ')');
         }
     }
 

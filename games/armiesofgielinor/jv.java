@@ -23,9 +23,9 @@ final class jv {
             stackIn_3_0 = -40;
             return stackIn_3_0;
           }
-          for (var2_int = 0; var2_int < wp.unitUnlockGroups.length; var2_int++) {
-            for (var3 = 0; var3 < wp.unitUnlockGroups[var2_int].length; var3++) {
-              if (wp.unitUnlockGroups[var2_int][var3] == unitType) {
+          for (var2_int = 0; var2_int < AnimationFrameSet.unitUnlockGroups.length; var2_int++) {
+            for (var3 = 0; var3 < AnimationFrameSet.unitUnlockGroups[var2_int].length; var3++) {
+              if (AnimationFrameSet.unitUnlockGroups[var2_int][var3] == unitType) {
                 stackIn_11_0 = var2_int;
                 return stackIn_11_0;
               }
@@ -36,7 +36,7 @@ final class jv {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ig.addExceptionContext((Throwable) ((Object) var2), "jv.A(" + obfuscationGuard + ',' + unitType + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) var2), "jv.A(" + obfuscationGuard + ',' + unitType + ')');
         }
     }
 
@@ -73,7 +73,7 @@ final class jv {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw ig.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 

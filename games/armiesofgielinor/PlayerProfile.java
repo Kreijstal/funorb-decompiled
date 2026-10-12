@@ -32,7 +32,7 @@ final class PlayerProfile {
         try {
           discarded$0 = this.decode(packet, -2, includeSpellQuantities);
         } catch (RuntimeException runtimeException) {
-          throw ig.addExceptionContext((Throwable) ((Object) runtimeException), "hm.<init>(" + (packet != null ? "{...}" : "null") + ',' + includeSpellQuantities + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "hm.<init>(" + (packet != null ? "{...}" : "null") + ',' + includeSpellQuantities + ')');
         }
     }
 
@@ -86,7 +86,7 @@ final class PlayerProfile {
           } else {
             stackIn_20_2 = "{...}";
           }
-          throw ig.addExceptionContext((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param1).append(')').toString());
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -191,7 +191,7 @@ final class PlayerProfile {
           } else {
             stackIn_30_2 = "{...}";
           }
-          throw ig.addExceptionContext((Throwable) ((Object) stackIn_29_0), ((StringBuilder) (Object) stackIn_29_1).append(stackIn_30_2).append(',').append(obfuscationGuard).append(',').append(includeSpellQuantities).append(')').toString());
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_29_0), ((StringBuilder) (Object) stackIn_29_1).append(stackIn_30_2).append(',').append(obfuscationGuard).append(',').append(includeSpellQuantities).append(')').toString());
         }
     }
 

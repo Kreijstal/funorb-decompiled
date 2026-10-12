@@ -85,9 +85,9 @@ final class qu extends IntrusiveNode {
             !(param2 <= no.field_U.length)) {
             no.field_U = new int[param2 * 2];
           }
-          if (wp.field_w == null ||
-            !(param2 <= wp.field_w.length)) {
-            wp.field_w = new int[param2 * 2];
+          if (AnimationFrameSet.field_w == null ||
+            !(param2 <= AnimationFrameSet.field_w.length)) {
+            AnimationFrameSet.field_w = new int[param2 * 2];
           }
           if (TutorialController.field_c == null ||
             !(param2 <= TutorialController.field_c.length)) {
@@ -150,9 +150,9 @@ final class qu extends IntrusiveNode {
               !(param2 <= no.field_U.length)) {
               no.field_U = new int[param2 * 2];
             }
-            if (wp.field_w == null ||
-              !(param2 <= wp.field_w.length)) {
-              wp.field_w = new int[param2 * 2];
+            if (AnimationFrameSet.field_w == null ||
+              !(param2 <= AnimationFrameSet.field_w.length)) {
+              AnimationFrameSet.field_w = new int[param2 * 2];
             }
             if (TutorialController.field_c == null ||
               !(param2 <= TutorialController.field_c.length)) {
@@ -215,9 +215,9 @@ final class qu extends IntrusiveNode {
               !(param2 <= no.field_U.length)) {
               no.field_U = new int[param2 * 2];
             }
-            if (wp.field_w == null ||
-              !(param2 <= wp.field_w.length)) {
-              wp.field_w = new int[param2 * 2];
+            if (AnimationFrameSet.field_w == null ||
+              !(param2 <= AnimationFrameSet.field_w.length)) {
+              AnimationFrameSet.field_w = new int[param2 * 2];
             }
             if (TutorialController.field_c == null ||
               !(param2 <= TutorialController.field_c.length)) {
@@ -294,7 +294,7 @@ final class qu extends IntrusiveNode {
           this.field_l = param0;
           this.field_m = param2;
         } catch (RuntimeException runtimeException) {
-          throw ig.addExceptionContext((Throwable) ((Object) runtimeException), "qu.<init>(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "qu.<init>(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 

@@ -61,7 +61,7 @@ final class ws extends fw {
           } else {
             stackIn_22_2 = "{...}";
           }
-          throw ig.addExceptionContext((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(param5).append(',').append(param6).append(')').toString());
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(param5).append(',').append(param6).append(')').toString());
         }
     }
 
@@ -81,7 +81,7 @@ final class ws extends fw {
             SummonRequest.a((byte) 91, GameEvent.field_t, 24);
             SummonRequest.a((byte) 101, op.field_f, 17);
             SummonRequest.a((byte) 39, sa.field_i, 3);
-            SummonRequest.a((byte) 78, wp.field_D, 4);
+            SummonRequest.a((byte) 78, AnimationFrameSet.field_D, 4);
             DisplacedUnitMarker.field_t[40] = od.field_f;
           }
           return;
@@ -101,7 +101,7 @@ final class ws extends fw {
           SummonRequest.a((byte) 91, GameEvent.field_t, 24);
           SummonRequest.a((byte) 101, op.field_f, 17);
           SummonRequest.a((byte) 39, sa.field_i, 3);
-          SummonRequest.a((byte) 78, wp.field_D, 4);
+          SummonRequest.a((byte) 78, AnimationFrameSet.field_D, 4);
           DisplacedUnitMarker.field_t[40] = od.field_f;
         }
     }
@@ -141,7 +141,7 @@ final class ws extends fw {
             } else {
               stackIn_9_2 = "{...}";
             }
-            throw ig.addExceptionContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
+            throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;

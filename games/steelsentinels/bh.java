@@ -535,14 +535,14 @@ final class bh {
               this.field_m = 0;
             } else {
               this.field_l = this.field_b * this.field_e;
-              this.field_m = this.field_m + var19.field_z;
+              this.field_m = this.field_m + var19.gravityAcceleration;
             }
             this.field_j = false;
             this.field_r = false;
           } else {
-            this.field_m = this.field_m + var19.field_z;
+            this.field_m = this.field_m + var19.gravityAcceleration;
             if (this.field_r) {
-              this.field_m = this.field_m - var19.field_z * 3 / 4;
+              this.field_m = this.field_m - var19.gravityAcceleration * 3 / 4;
             }
             this.field_a = 0;
             this.field_j = true;
@@ -920,11 +920,11 @@ final class bh {
           var11Lifetime1 = var11Lifetime1 - 32 * (this.field_b * var10Lifetime2 * var19_int) / var13Lifetime1;
         }
         var19 = new Projectile(var11Lifetime1, var12Lifetime1, var14 * var9Lifetime2 / var13Lifetime1, var14 * var10Lifetime2 / var13Lifetime1, var17, var16, var15, this.field_c.world, this.field_c, 0, var18, param0 - 17);
-        var19.field_K = var11Lifetime1 + var9Lifetime2 * 100;
-        var19.field_S = 100 * var10Lifetime2 + var12Lifetime1;
+        var19.targetWorldX = var11Lifetime1 + var9Lifetime2 * 100;
+        var19.targetWorldY = 100 * var10Lifetime2 + var12Lifetime1;
         if (var8 == 3) {
-          var19.field_S = param6;
-          var19.field_K = param2;
+          var19.targetWorldY = param6;
+          var19.targetWorldX = param2;
         }
         stackIn_147_0 = var19;
         if (var19.sourceSentinel != null) {
@@ -932,7 +932,7 @@ final class bh {
         } else {
           stackIn_148_1 = null;
         }
-        stackIn_147_0.field_nb = stackIn_148_1;
+        stackIn_147_0.targetSentinel = stackIn_148_1;
         var19.affectedSentinels = null;
         var19.field_V = true;
         var19.field_I = true;
@@ -1212,22 +1212,22 @@ final class bh {
             var7Lifetime1 = var7Lifetime1 - 32 * var15_int * var6Lifetime2 * this.field_b / var9Lifetime1;
           }
           var15 = new Projectile(var7Lifetime1, var8Lifetime1, var10 * var5Lifetime2 / var9Lifetime1, var6Lifetime2 * var10 / var9Lifetime1, var13, var12, var11, this.field_c.world, this.field_c, 0, var14, param1.componentId - 17);
-          var15.field_S = 100 * var6Lifetime2 + var8Lifetime1;
-          var15.field_K = var5Lifetime2 * 100 + var7Lifetime1;
+          var15.targetWorldY = 100 * var6Lifetime2 + var8Lifetime1;
+          var15.targetWorldX = var5Lifetime2 * 100 + var7Lifetime1;
           stackIn_151_0 = var15;
           if (var15.sourceSentinel != null) {
             stackIn_152_1 = var15.sourceSentinel.field_Vb;
           } else {
             stackIn_152_1 = null;
           }
-          stackIn_151_0.field_nb = stackIn_152_1;
+          stackIn_151_0.targetSentinel = stackIn_152_1;
           var15.affectedSentinels = null;
           stackIn_154_0 = var15;
           stackIn_155_1 = (param0);
           stackIn_154_0.field_V = stackIn_155_1;
           if (var4_int == 3) {
-            var15.field_S = param2.targetWorldY;
-            var15.field_K = param2.targetWorldX;
+            var15.targetWorldY = param2.targetWorldY;
+            var15.targetWorldX = param2.targetWorldX;
           }
           pm.field_db.addLast(3, var15);
           cf.field_q = var15.worldY - this.field_q;

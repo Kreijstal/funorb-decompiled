@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 abstract class ModelMeshBase extends MeshObject {
-    private final void a(ig param0, ht param1, ht param2, int param3, int param4, boolean[] param5, boolean param6, boolean param7, int param8, int[] param9) {
+    private final void blendAnimationFrames(AnimationSkeleton skeleton, AnimationFrame frame, AnimationFrame nextFrame, int elapsed, int duration, boolean[] slotSelection, boolean selectedValue, boolean transformOption, int transformMask, int[] transformMatrix) {
         int var11;
         int var12;
         int var13;
@@ -36,30 +36,30 @@ abstract class ModelMeshBase extends MeshObject {
         int var31Lifetime1;
         int var31Lifetime2;
         int var14Lifetime1Lifetime1;
-        if (param2 != null &&
-          param3 != 0) {
+        if (nextFrame != null &&
+          elapsed != 0) {
           var34 = 0;
           var11 = var34;
           var35 = 0;
           var12 = var35;
           var36 = 0;
           var13 = var36;
-          while (var36 < param0.field_o) {
+          while (var36 < skeleton.transformCount) {
             var14 = 0;
-            if (var34 < param1.field_d &&
-              param1.field_a[var34] == var36) {
+            if (var34 < frame.transformCount &&
+              frame.transformSlots[var34] == var36) {
               var14 = 1;
             }
             var15 = 0;
-            if (var35 < param2.field_d &&
-              param2.field_a[var35] == var36) {
+            if (var35 < nextFrame.transformCount &&
+              nextFrame.transformSlots[var35] == var36) {
               var15 = 1;
             }
             if (var14 != 0 ||
               var15 != 0) {
-              if (param5 != null &&
-                param5[var36] != param6 &&
-                param0.field_p[var36] != 0) {
+              if (slotSelection != null &&
+                slotSelection[var36] != selectedValue &&
+                skeleton.transformTypes[var36] != 0) {
                 if (var14 != 0) {
                   var34++;
                 }
@@ -68,7 +68,7 @@ abstract class ModelMeshBase extends MeshObject {
                 }
               } else {
                 var16 = 0;
-                var17 = param0.field_p[var36];
+                var17 = skeleton.transformTypes[var36];
                 if (var17 == 3) {
                   var16 = 128;
                 }
@@ -79,11 +79,11 @@ abstract class ModelMeshBase extends MeshObject {
                   var21 = -1;
                   var22 = 0;
                 } else {
-                  var18 = param1.field_l[var34];
-                  var19 = param1.field_f[var34];
-                  var20 = param1.field_h[var34];
-                  var21 = param1.field_i[var34];
-                  var22 = param1.field_m[var34];
+                  var18 = frame.transformX[var34];
+                  var19 = frame.transformY[var34];
+                  var20 = frame.transformZ[var34];
+                  var21 = frame.precedingPivotSlots[var34];
+                  var22 = frame.interpolationFlags[var34];
                   var34++;
                 }
                 if (var15 == 0) {
@@ -93,28 +93,28 @@ abstract class ModelMeshBase extends MeshObject {
                   var26 = -1;
                   var27 = 0;
                 } else {
-                  var23 = param2.field_l[var35];
-                  var24 = param2.field_f[var35];
-                  var25 = param2.field_h[var35];
-                  var26 = param2.field_i[var35];
-                  var27 = param2.field_m[var35];
+                  var23 = nextFrame.transformX[var35];
+                  var24 = nextFrame.transformY[var35];
+                  var25 = nextFrame.transformZ[var35];
+                  var26 = nextFrame.precedingPivotSlots[var35];
+                  var27 = nextFrame.interpolationFlags[var35];
                   var35++;
                 }
                 if ((var22 & 2) == 0 &&
                   (var27 & 1) == 0) {
                   if (var17 != 2) {
                     if (var17 != 7) {
-                      var28 = var18 + (var23 - var18) * param3 / param4;
-                      var29 = var19 + (var24 - var19) * param3 / param4;
-                      var30 = var20 + (var25 - var20) * param3 / param4;
+                      var28 = var18 + (var23 - var18) * elapsed / duration;
+                      var29 = var19 + (var24 - var19) * elapsed / duration;
+                      var30 = var20 + (var25 - var20) * elapsed / duration;
                     } else {
                       var31 = var23 - var18 & 63;
                       if (var31 >= 32) {
                         var31 -= 64;
                       }
-                      var28 = var18 + var31 * param3 / param4 & 63;
-                      var29 = var19 + (var24 - var19) * param3 / param4;
-                      var30 = var20 + (var25 - var20) * param3 / param4;
+                      var28 = var18 + var31 * elapsed / duration & 63;
+                      var29 = var19 + (var24 - var19) * elapsed / duration;
+                      var30 = var20 + (var25 - var20) * elapsed / duration;
                     }
                   } else {
                     var31 = var23 - var18 & 2047;
@@ -129,9 +129,9 @@ abstract class ModelMeshBase extends MeshObject {
                     if (var33 >= 1024) {
                       var33 -= 2048;
                     }
-                    var28 = var18 + var31 * param3 / param4 & 2047;
-                    var29 = var19 + var32 * param3 / param4 & 2047;
-                    var30 = var20 + var33 * param3 / param4 & 2047;
+                    var28 = var18 + var31 * elapsed / duration & 2047;
+                    var29 = var19 + var32 * elapsed / duration & 2047;
+                    var30 = var20 + var33 * elapsed / duration & 2047;
                   }
                 } else {
                   var28 = var18;
@@ -140,26 +140,26 @@ abstract class ModelMeshBase extends MeshObject {
                 }
                 if (var21 == -1) {
                   if (var26 != -1) {
-                    var31Lifetime1 = param8 & param0.field_s[var26];
+                    var31Lifetime1 = transformMask & skeleton.transformMasks[var26];
                     if (var31Lifetime1 == 65535) {
-                      this.a(0, param0.field_l[var26], 0, 0, 0, param7);
+                      this.applyGroupTransform(0, skeleton.transformGroups[var26], 0, 0, 0, transformOption);
                     } else {
-                      this.a(0, param0.field_l[var26], 0, 0, 0, param7, var31Lifetime1, param9);
+                      this.applyMaskedGroupTransform(0, skeleton.transformGroups[var26], 0, 0, 0, transformOption, var31Lifetime1, transformMatrix);
                     }
                   }
                 } else {
-                  var31Lifetime1 = param8 & param0.field_s[var21];
+                  var31Lifetime1 = transformMask & skeleton.transformMasks[var21];
                   if (var31Lifetime1 == 65535) {
-                    this.a(0, param0.field_l[var21], 0, 0, 0, param7);
+                    this.applyGroupTransform(0, skeleton.transformGroups[var21], 0, 0, 0, transformOption);
                   } else {
-                    this.a(0, param0.field_l[var21], 0, 0, 0, param7, var31Lifetime1, param9);
+                    this.applyMaskedGroupTransform(0, skeleton.transformGroups[var21], 0, 0, 0, transformOption, var31Lifetime1, transformMatrix);
                   }
                 }
-                var31Lifetime2 = param8 & param0.field_s[var36];
+                var31Lifetime2 = transformMask & skeleton.transformMasks[var36];
                 if (var31Lifetime2 == 65535) {
-                  this.a(var17, param0.field_l[var36], var28, var29, var30, param7);
+                  this.applyGroupTransform(var17, skeleton.transformGroups[var36], var28, var29, var30, transformOption);
                 } else {
-                  this.a(var17, param0.field_l[var36], var28, var29, var30, param7, var31Lifetime2, param9);
+                  this.applyMaskedGroupTransform(var17, skeleton.transformGroups[var36], var28, var29, var30, transformOption, var31Lifetime2, transformMatrix);
                 }
               }
             }
@@ -167,64 +167,64 @@ abstract class ModelMeshBase extends MeshObject {
           }
           return;
         }
-        for (var11Lifetime1 = 0; var11Lifetime1 < param1.field_d; var11Lifetime1++) {
-          var12Lifetime1 = param1.field_a[var11Lifetime1];
-          if (param5 == null ||
-            param5[var12Lifetime1] == param6 ||
-            param0.field_p[var12Lifetime1] == 0) {
-            var13Lifetime1 = param1.field_i[var11Lifetime1];
+        for (var11Lifetime1 = 0; var11Lifetime1 < frame.transformCount; var11Lifetime1++) {
+          var12Lifetime1 = frame.transformSlots[var11Lifetime1];
+          if (slotSelection == null ||
+            slotSelection[var12Lifetime1] == selectedValue ||
+            skeleton.transformTypes[var12Lifetime1] == 0) {
+            var13Lifetime1 = frame.precedingPivotSlots[var11Lifetime1];
             if (var13Lifetime1 != -1) {
-              var14Lifetime1 = param8 & param0.field_s[var13Lifetime1];
+              var14Lifetime1 = transformMask & skeleton.transformMasks[var13Lifetime1];
               if (var14Lifetime1 == 65535) {
-                this.a(0, param0.field_l[var13Lifetime1], 0, 0, 0, param7);
+                this.applyGroupTransform(0, skeleton.transformGroups[var13Lifetime1], 0, 0, 0, transformOption);
               } else {
-                this.a(0, param0.field_l[var13Lifetime1], 0, 0, 0, param7, var14Lifetime1, param9);
+                this.applyMaskedGroupTransform(0, skeleton.transformGroups[var13Lifetime1], 0, 0, 0, transformOption, var14Lifetime1, transformMatrix);
               }
             }
-            var14Lifetime1Lifetime1 = param8 & param0.field_s[var12Lifetime1];
+            var14Lifetime1Lifetime1 = transformMask & skeleton.transformMasks[var12Lifetime1];
             if (var14Lifetime1Lifetime1 == 65535) {
-              this.a(param0.field_p[var12Lifetime1], param0.field_l[var12Lifetime1], (int) param1.field_l[var11Lifetime1], (int) param1.field_f[var11Lifetime1], (int) param1.field_h[var11Lifetime1], param7);
+              this.applyGroupTransform(skeleton.transformTypes[var12Lifetime1], skeleton.transformGroups[var12Lifetime1], (int) frame.transformX[var11Lifetime1], (int) frame.transformY[var11Lifetime1], (int) frame.transformZ[var11Lifetime1], transformOption);
             } else {
-              this.a(param0.field_p[var12Lifetime1], param0.field_l[var12Lifetime1], (int) param1.field_l[var11Lifetime1], (int) param1.field_f[var11Lifetime1], (int) param1.field_h[var11Lifetime1], param7, var14Lifetime1Lifetime1, param9);
+              this.applyMaskedGroupTransform(skeleton.transformTypes[var12Lifetime1], skeleton.transformGroups[var12Lifetime1], (int) frame.transformX[var11Lifetime1], (int) frame.transformY[var11Lifetime1], (int) frame.transformZ[var11Lifetime1], transformOption, var14Lifetime1Lifetime1, transformMatrix);
             }
           }
         }
     }
 
-    abstract boolean b();
+    abstract boolean beginAnimation();
 
-    abstract void a(int param0, int[] param1, int param2, int param3, int param4, boolean param5);
+    abstract void applyGroupTransform(int transformType, int[] groups, int x, int y, int z, boolean transformOption);
 
-    abstract void b(int param0, int param1, int param2);
+    abstract void scaleGeometry(int scaleX, int scaleY, int scaleZ);
 
     abstract void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, long param7);
 
     abstract ModelMeshBase a(boolean param0, boolean param1, boolean param2);
 
-    abstract void a(int param0, int[] param1, int param2, int param3, int param4, boolean param5, int param6, int[] param7);
+    abstract void applyMaskedGroupTransform(int transformType, int[] groups, int x, int y, int z, boolean transformOption, int transformMask, int[] transformMatrix);
 
-    final void a(wp param0, int param1, wp param2, int param3, int param4, int param5, boolean param6) {
-        if (param1 == -1) {
+    final void applyAnimationFrame(AnimationFrameSet frameSet, int frameId, AnimationFrameSet nextFrameSet, int nextFrameId, int elapsed, int duration, boolean transformOption) {
+        if (frameId == -1) {
           return;
         }
-        if (!this.b()) {
+        if (!this.beginAnimation()) {
           return;
         }
-        ht var8 = param0.field_A[param1];
-        ig var9 = var8.field_n;
+        AnimationFrame var8 = frameSet.frames[frameId];
+        AnimationSkeleton var9 = var8.skeleton;
         Object var10 = null;
-        if (param2 != null) {
-          var10 = param2.field_A[param3];
-          if (((ht) (var10)).field_n != var9) {
+        if (nextFrameSet != null) {
+          var10 = nextFrameSet.frames[nextFrameId];
+          if (((AnimationFrame) (var10)).skeleton != var9) {
             var10 = null;
           }
         }
-        this.a(var9, var8, (ht) (var10), param4, param5, (boolean[]) null, false, param6, 65535, (int[]) null);
-        this.a();
+        this.blendAnimationFrames(var9, var8, (AnimationFrame) (var10), elapsed, duration, (boolean[]) null, false, transformOption, 65535, (int[]) null);
+        this.finishAnimation();
     }
 
     ModelMeshBase() {
     }
 
-    abstract void a();
+    abstract void finishAnimation();
 }

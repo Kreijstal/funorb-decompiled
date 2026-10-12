@@ -10,26 +10,26 @@ final class Projectile extends DualNode {
     boolean field_W;
     int worldY;
     Sentinel[] affectedSentinels;
-    private int field_cb;
+    private int initialDirectionX;
     int velocityY;
     boolean field_ab;
     int field_kb;
     private CombatWorld world;
     private boolean field_P;
     boolean field_ob;
-    Sentinel field_nb;
+    Sentinel targetSentinel;
     boolean field_I;
     static rf field_N;
     int worldX;
-    private int field_Q;
+    private int initialDirectionY;
     boolean field_E;
     int field_M;
     int ageTicks;
     private boolean field_mb;
     static String field_Y;
-    int field_K;
+    int targetWorldX;
     int velocityX;
-    private boolean field_H;
+    private boolean applyGravity;
     boolean field_V;
     private int field_ib;
     static String field_R;
@@ -41,7 +41,7 @@ final class Projectile extends DualNode {
     static byte[] field_db;
     int field_z;
     static SceneWidget field_J;
-    int field_S;
+    int targetWorldY;
     int field_jb;
     Sentinel field_G;
     boolean field_T;
@@ -56,7 +56,7 @@ final class Projectile extends DualNode {
         this.g(1354276);
         if (10 != this.sourceWeaponType &&
           this.sourceWeaponType != 21) {
-          this.field_H = false;
+          this.applyGravity = false;
           this.field_L = 32;
           if (this.sourceWeaponType == 35 &&
             !this.field_V &&
@@ -64,14 +64,14 @@ final class Projectile extends DualNode {
             (3 & param1 + this.ageTicks) == 0 &&
             0 == (this.field_hb & 7)) {
             var3 = 5 - Math.abs(-50 + this.field_hb) / 10;
-            var4 = ArticulatedPart.a(14, (int)((double)(-this.velocityY) * ((double)(-var3) + Math.random() * (double)(var3 * 2))), this.world, 87, this.worldY, this.field_ob, 8, (int)((double)this.velocityX * ((double)(-var3) + (double)(var3 * 2) * Math.random())), this.worldX, this.worldX);
-            this.world.field_O.addLast(3, var4);
+            var4 = ArticulatedPart.createParticle(14, (int)((double)(-this.velocityY) * ((double)(-var3) + Math.random() * (double)(var3 * 2))), this.world, 87, this.worldY, this.field_ob, 8, (int)((double)this.velocityX * ((double)(-var3) + (double)(var3 * 2) * Math.random())), this.worldX, this.worldX);
+            this.world.pendingParticles.addLast(3, var4);
           }
           if (this.sourceWeaponType == 35 &&
             !this.field_V &&
             this.ageTicks == 8 &&
             (7 & this.field_hb) != 0) {
-            this.world.field_J.a((byte) 44, (DualNode) (this));
+            this.world.pendingRemovals.addLast((byte) 44, (DualNode) (this));
             return true;
           }
           if (this.sourceWeaponType != 30) {
@@ -81,7 +81,7 @@ final class Projectile extends DualNode {
           if ((decompiledFrameRemainder0) &&
             (decompiledFrameRemainder0 = ((this.field_hb & 3) != 0))) {
             if (!this.field_I) {
-              this.world.field_J.a((byte) 74, (DualNode) (this));
+              this.world.pendingRemovals.addLast((byte) 74, (DualNode) (this));
             } else {
               this.field_T = true;
             }
@@ -522,7 +522,7 @@ final class Projectile extends DualNode {
                           this.sourceSentinel.field_Ac = this.sourceSentinel.field_Ac + var9Lifetime2;
                         }
                         if (!this.field_V &&
-                          this.field_jb <= this.ageTicks && (null == this.field_nb ||
+                          this.field_jb <= this.ageTicks && (null == this.targetSentinel ||
                           3 != this.effectType)) {
                           this.sourceSentinel.field_db = this.sourceSentinel.field_db + 1;
                           if (0 <= this.sourceSentinel.field_q) {
@@ -848,8 +848,8 @@ final class Projectile extends DualNode {
         this.field_L = 32;
         if (!this.world.field_h &&
           !this.field_V) {
-          var4 = ArticulatedPart.a(2, -this.velocityX / 2, this.world, 112, this.worldY, this.field_ob, 10, -this.velocityY / 2, this.worldX, this.worldX);
-          this.world.field_O.addLast(3, var4);
+          var4 = ArticulatedPart.createParticle(2, -this.velocityX / 2, this.world, 112, this.worldY, this.field_ob, 10, -this.velocityY / 2, this.worldX, this.worldX);
+          this.world.pendingParticles.addLast(3, var4);
         }
         if (50 > this.field_hb) {
           this.field_hb = this.field_hb * 6;
@@ -869,7 +869,7 @@ final class Projectile extends DualNode {
         if (this.field_I) {
           this.field_T = true;
         } else {
-          this.world.field_J.a((byte) 92, (DualNode) (this));
+          this.world.pendingRemovals.addLast((byte) 92, (DualNode) (this));
         }
         return true;
     }
@@ -906,8 +906,8 @@ final class Projectile extends DualNode {
           if (var6 > 0) {
             var8 = this.velocityY * var7 / var6;
             var9 = var7 * -this.velocityX / var6;
-            var10 = ArticulatedPart.a(6, var8, this.world, 88, this.worldY, this.field_ob, 100, var9, this.worldX, this.worldX);
-            this.world.field_O.addLast(3, var10);
+            var10 = ArticulatedPart.createParticle(6, var8, this.world, 88, this.worldY, this.field_ob, 100, var9, this.worldX, this.worldX);
+            this.world.pendingParticles.addLast(3, var10);
           }
         }
         return false;
@@ -928,12 +928,12 @@ final class Projectile extends DualNode {
           if (this.sourceWeaponType == 18 &&
             (15 & this.field_L * this.world.simulationTick + param0) == 0) {
             if ((this.world.simulationTick & 3) == 0) {
-              var3 = ArticulatedPart.a(5, -this.velocityY / 2, this.world, 94, this.worldY, this.field_ob, 200, this.velocityX / 2, this.worldX, this.worldX);
-              this.world.field_O.addLast(param1 ^ 30, var3);
+              var3 = ArticulatedPart.createParticle(5, -this.velocityY / 2, this.world, 94, this.worldY, this.field_ob, 200, this.velocityX / 2, this.worldX, this.worldX);
+              this.world.pendingParticles.addLast(param1 ^ 30, var3);
             } else {
               if ((2 == (3 & this.world.simulationTick))) {
-                var3Lifetime2 = ArticulatedPart.a(5, this.velocityY / 2, this.world, 104, this.worldY, this.field_ob, 200, -this.velocityX / 2, this.worldX, this.worldX);
-                this.world.field_O.addLast(3, var3Lifetime2);
+                var3Lifetime2 = ArticulatedPart.createParticle(5, this.velocityY / 2, this.world, 104, this.worldY, this.field_ob, 200, -this.velocityX / 2, this.worldX, this.worldX);
+                this.world.pendingParticles.addLast(3, var3Lifetime2);
               }
             }
             decompiledFrameRemainder0 = false;
@@ -942,12 +942,12 @@ final class Projectile extends DualNode {
             if (31 == this.sourceWeaponType) {
               if ((7 & this.world.simulationTick) != 0) {
                 if (4 == (7 & this.world.simulationTick)) {
-                  var3Lifetime1 = ArticulatedPart.a(4, this.velocityY, this.world, 98, this.worldY, this.field_ob, 200, -this.velocityX, this.worldX, this.worldX);
-                  this.world.field_O.addLast(param1 - 26, var3Lifetime1);
+                  var3Lifetime1 = ArticulatedPart.createParticle(4, this.velocityY, this.world, 98, this.worldY, this.field_ob, 200, -this.velocityX, this.worldX, this.worldX);
+                  this.world.pendingParticles.addLast(param1 - 26, var3Lifetime1);
                 }
               } else {
-                var3Lifetime1 = ArticulatedPart.a(4, -this.velocityY, this.world, param1 + 63, this.worldY, this.field_ob, 200, this.velocityX, this.worldX, this.worldX);
-                this.world.field_O.addLast(3, var3Lifetime1);
+                var3Lifetime1 = ArticulatedPart.createParticle(4, -this.velocityY, this.world, param1 + 63, this.worldY, this.field_ob, 200, this.velocityX, this.worldX, this.worldX);
+                this.world.pendingParticles.addLast(3, var3Lifetime1);
               }
             }
           }
@@ -986,12 +986,12 @@ final class Projectile extends DualNode {
         var3 = 200;
         if (0 == this.ageTicks &&
           0 == param0) {
-          this.field_S = this.field_S - this.worldY;
-          this.field_K = this.field_K - this.worldX;
+          this.targetWorldY = this.targetWorldY - this.worldY;
+          this.targetWorldX = this.targetWorldX - this.worldX;
         }
         if (this.ageTicks < 10) {
-          var4_int = this.field_K;
-          var5 = this.field_S;
+          var4_int = this.targetWorldX;
+          var5 = this.targetWorldY;
           var6_int = 10 * (int)Math.sqrt((double)(var4_int / 100 * var4_int + var5 / 100 * var5));
           if (1 > var6_int) {
             var6_int = 1;
@@ -999,7 +999,7 @@ final class Projectile extends DualNode {
           this.velocityY = var3 * this.ageTicks * var5 / (var6_int * 10);
           if (this.sourceWeaponType != 32 && (null == this.sourceSentinel ||
             0 == this.sourceSentinel.field_Nb)) {
-            this.field_H = false;
+            this.applyGravity = false;
           }
           this.velocityX = var4_int * (this.ageTicks * var3) / (10 * var6_int);
         } else {
@@ -1059,7 +1059,7 @@ final class Projectile extends DualNode {
             this.velocityX = this.velocityX * var3 / var4_int;
             if (32 != this.sourceWeaponType && (this.sourceSentinel == null ||
               0 == this.sourceSentinel.field_Nb)) {
-              this.field_H = false;
+              this.applyGravity = false;
             }
           }
         }
@@ -1072,23 +1072,23 @@ final class Projectile extends DualNode {
             (1 & this.world.simulationTick + param0) == 0) {
             var4_intLifetime1 = -(this.velocityX * 20) + this.worldX;
             var5Lifetime1 = this.worldY - 20 * this.velocityY;
-            var6 = ArticulatedPart.a(1, -this.velocityY - this.velocityX, this.world, 99, var5Lifetime1, this.field_ob, 50, -this.velocityY + this.velocityX, var4_intLifetime1, this.worldX);
-            this.world.field_O.addLast(param1 - 47, var6);
-            var6Lifetime1 = ArticulatedPart.a(1, -this.velocityX + this.velocityY, this.world, 106, var5Lifetime1, this.field_ob, 50, -this.velocityX - this.velocityY, var4_intLifetime1, this.worldX);
-            this.world.field_O.addLast(3, var6Lifetime1);
-            var6Lifetime2 = ArticulatedPart.a(0, -this.velocityX / 2, this.world, param1 ^ 72, var5Lifetime1, this.field_ob, 250, -this.velocityY / 2, var4_intLifetime1, this.worldX);
-            this.world.field_O.addLast(3, var6Lifetime2);
+            var6 = ArticulatedPart.createParticle(1, -this.velocityY - this.velocityX, this.world, 99, var5Lifetime1, this.field_ob, 50, -this.velocityY + this.velocityX, var4_intLifetime1, this.worldX);
+            this.world.pendingParticles.addLast(param1 - 47, var6);
+            var6Lifetime1 = ArticulatedPart.createParticle(1, -this.velocityX + this.velocityY, this.world, 106, var5Lifetime1, this.field_ob, 50, -this.velocityX - this.velocityY, var4_intLifetime1, this.worldX);
+            this.world.pendingParticles.addLast(3, var6Lifetime1);
+            var6Lifetime2 = ArticulatedPart.createParticle(0, -this.velocityX / 2, this.world, param1 ^ 72, var5Lifetime1, this.field_ob, 250, -this.velocityY / 2, var4_intLifetime1, this.worldX);
+            this.world.pendingParticles.addLast(3, var6Lifetime2);
           }
           stackIn_56_1 = (this.ageTicks % 2 == 0);
-          this.field_H = stackIn_56_1;
+          this.applyGravity = stackIn_56_1;
         } else {
           if (!this.world.field_h &&
             !this.field_V &&
             0 == (this.world.simulationTick + param0 & 1)) {
-            var4 = ArticulatedPart.a(2, -this.velocityX / 2, this.world, 108, this.worldY, this.field_ob, 50, -this.velocityY / 2, this.worldX, this.worldX);
-            this.world.field_O.addLast(3, var4);
-            var4Lifetime1 = ArticulatedPart.a(3, -this.velocityX / 2, this.world, 101, this.worldY, this.field_ob, 250, -this.velocityY / 2, this.worldX, this.worldX);
-            this.world.field_O.addLast(3, var4Lifetime1);
+            var4 = ArticulatedPart.createParticle(2, -this.velocityX / 2, this.world, 108, this.worldY, this.field_ob, 50, -this.velocityY / 2, this.worldX, this.worldX);
+            this.world.pendingParticles.addLast(3, var4);
+            var4Lifetime1 = ArticulatedPart.createParticle(3, -this.velocityX / 2, this.world, 101, this.worldY, this.field_ob, 250, -this.velocityY / 2, this.worldX, this.worldX);
+            this.world.pendingParticles.addLast(3, var4Lifetime1);
           }
         }
         if (param1 == 50) {
@@ -1202,23 +1202,23 @@ final class Projectile extends DualNode {
           stackIn_68_0Lifetime1 = this.world.field_h;
           if ((!(stackIn_68_0Lifetime1)) &&
             (!(this.field_V))) {
-            var3 = ArticulatedPart.a(2, -this.velocityX / 2, this.world, 107, this.worldY, this.field_ob, 25, -this.velocityY / 2, this.worldX, this.worldX);
-            this.world.field_O.addLast(3, var3);
+            var3 = ArticulatedPart.createParticle(2, -this.velocityX / 2, this.world, 107, this.worldY, this.field_ob, 25, -this.velocityY / 2, this.worldX, this.worldX);
+            this.world.pendingParticles.addLast(3, var3);
           }
           decompiledFrameRemainder0 = false;
         }
         else {
           if (this.sourceWeaponType == 2) {
             stackIn_39_1 = (this.field_L != 3);
-            this.field_H = stackIn_39_1;
+            this.applyGravity = stackIn_39_1;
             if (this.field_L == 2 ||
               this.field_L == 8) {
               this.field_L = 4;
             }
             if (!this.world.field_h &&
               !this.field_V) {
-              var3Lifetime1 = ArticulatedPart.a(2, -this.velocityX / 2, this.world, 97, this.worldY, this.field_ob, 25, -this.velocityY / 2, this.worldX, this.worldX);
-              this.world.field_O.addLast(3, var3Lifetime1);
+              var3Lifetime1 = ArticulatedPart.createParticle(2, -this.velocityX / 2, this.world, 97, this.worldY, this.field_ob, 25, -this.velocityY / 2, this.worldX, this.worldX);
+              this.world.pendingParticles.addLast(3, var3Lifetime1);
             }
           } else {
             if (14 != this.sourceWeaponType &&
@@ -1227,40 +1227,40 @@ final class Projectile extends DualNode {
                 if (this.field_V) {
                   return false;
                 }
-                var3Lifetime1 = ArticulatedPart.a(3, -this.velocityX / 2, this.world, 110, this.worldY, this.field_ob, 5, -this.velocityY / 2, this.worldX, this.worldX);
-                this.world.field_O.addLast(3, var3Lifetime1);
+                var3Lifetime1 = ArticulatedPart.createParticle(3, -this.velocityX / 2, this.world, 110, this.worldY, this.field_ob, 5, -this.velocityY / 2, this.worldX, this.worldX);
+                this.world.pendingParticles.addLast(3, var3Lifetime1);
                 if (this.sourceWeaponType == 27) {
-                  var3Lifetime1 = ArticulatedPart.a(8, -this.velocityX / 2, this.world, param1 + 123, this.worldY, this.field_ob, 25, -this.velocityY / 2, this.worldX, this.worldX);
-                  this.world.field_O.addLast(3, var3Lifetime1);
+                  var3Lifetime1 = ArticulatedPart.createParticle(8, -this.velocityX / 2, this.world, param1 + 123, this.worldY, this.field_ob, 25, -this.velocityY / 2, this.worldX, this.worldX);
+                  this.world.pendingParticles.addLast(3, var3Lifetime1);
                 } else {
-                  var3Lifetime1 = ArticulatedPart.a(8, -this.velocityX / 2, this.world, 99, this.worldY, this.field_ob, 10, -this.velocityY / 2, this.worldX, this.worldX);
+                  var3Lifetime1 = ArticulatedPart.createParticle(8, -this.velocityX / 2, this.world, 99, this.worldY, this.field_ob, 10, -this.velocityY / 2, this.worldX, this.worldX);
                   if (this.sourceWeaponType == 15 &&
                     this.ageTicks >= this.field_jb &&
                     null != this.sourceSentinel &&
                     this.field_E) {
-                    var3Lifetime1.field_M = 3;
+                    var3Lifetime1.effectType = 3;
                   }
-                  this.world.field_O.addLast(3, var3Lifetime1);
+                  this.world.pendingParticles.addLast(3, var3Lifetime1);
                 }
               }
               decompiledFrameRemainder0 = false;
             }
             else {
-              this.field_H = true;
+              this.applyGravity = true;
               this.field_L = 16;
               if (!this.world.field_h &&
                 !this.field_V) {
                 if (this.sourceWeaponType == 28 &&
                   3 > this.ageTicks) {
-                  var3Lifetime1 = ArticulatedPart.a(1, -this.velocityX / 2, this.world, 120, this.worldY, this.field_ob, 35 - this.ageTicks * 10, -this.velocityY / 2, this.worldX, this.worldX);
-                  this.world.field_O.addLast(param1 ^ -32, var3Lifetime1);
+                  var3Lifetime1 = ArticulatedPart.createParticle(1, -this.velocityX / 2, this.world, 120, this.worldY, this.field_ob, 35 - this.ageTicks * 10, -this.velocityY / 2, this.worldX, this.worldX);
+                  this.world.pendingParticles.addLast(param1 ^ -32, var3Lifetime1);
                 } else {
                   if (this.ageTicks >= 1) {
-                    var3Lifetime1 = ArticulatedPart.a(3, -this.velocityX / 2, this.world, param1 + 119, this.worldY, this.field_ob, 5, -this.velocityY / 2, this.worldX, this.worldX);
-                    this.world.field_O.addLast(3, var3Lifetime1);
+                    var3Lifetime1 = ArticulatedPart.createParticle(3, -this.velocityX / 2, this.world, param1 + 119, this.worldY, this.field_ob, 5, -this.velocityY / 2, this.worldX, this.worldX);
+                    this.world.pendingParticles.addLast(3, var3Lifetime1);
                   } else {
-                    var3Lifetime1 = ArticulatedPart.a(1, -this.velocityX / 2, this.world, 125, this.worldY, this.field_ob, 18 - this.ageTicks * 8, -this.velocityY / 2, this.worldX, this.worldX);
-                    this.world.field_O.addLast(3, var3Lifetime1);
+                    var3Lifetime1 = ArticulatedPart.createParticle(1, -this.velocityX / 2, this.world, 125, this.worldY, this.field_ob, 18 - this.ageTicks * 8, -this.velocityY / 2, this.worldX, this.worldX);
+                    this.world.pendingParticles.addLast(3, var3Lifetime1);
                   }
                 }
               }
@@ -1276,12 +1276,12 @@ final class Projectile extends DualNode {
         if (param1 > -107) {
           discarded$0 = this.b(31, (byte) -17);
         }
-        this.field_H = 0 == (1 & param0) ? true : false;
+        this.applyGravity = 0 == (1 & param0) ? true : false;
         this.field_L = 2;
         if (!this.world.field_h &&
           !this.field_V) {
-          var3 = ArticulatedPart.a(2, -this.velocityX / 2, this.world, 112, this.worldY, this.field_ob, 25, -this.velocityY / 2, this.worldX, this.worldX);
-          this.world.field_O.addLast(3, var3);
+          var3 = ArticulatedPart.createParticle(2, -this.velocityX / 2, this.world, 112, this.worldY, this.field_ob, 25, -this.velocityY / 2, this.worldX, this.worldX);
+          this.world.pendingParticles.addLast(3, var3);
         }
         if (this.sourceWeaponType == 2 &&
           this.field_bb) {
@@ -1563,106 +1563,106 @@ final class Projectile extends DualNode {
         return jn.field_b == nj.field_ab ? true : false;
     }
 
-    private final boolean a(byte param0, int param1) {
-        int var3;
-        int var4;
-        ParticleEffect var4_ref_qb;
-        int var5;
-        int var6;
-        ParticleEffect var7;
-        int var7_int;
-        int var8;
-        int var9;
-        ParticleEffect var10;
-        int var11;
-        ParticleEffect var7Lifetime1;
-        ParticleEffect var10Lifetime1;
-        var11 = SteelSentinels.obfuscationControl;
-        if (param0 >= -1) {
+    private final boolean advanceGuidedMotion(byte obfuscationGuard, int substepIndex) {
+        int maximumSpeed;
+        int velocityOrTargetDeltaX;
+        ParticleEffect coastingTrail;
+        int velocityOrTargetDeltaY;
+        int speedOrTargetAngle;
+        ParticleEffect launchTrail;
+        int heading;
+        int headingDelta;
+        int speed;
+        ParticleEffect guidedTrail;
+        int obfuscationControl;
+        ParticleEffect secondaryLaunchTrail;
+        ParticleEffect secondaryGuidedTrail;
+        obfuscationControl = SteelSentinels.obfuscationControl;
+        if (obfuscationGuard >= -1) {
           this.ageTicks = 101;
         }
-        var3 = 300;
+        maximumSpeed = 300;
         if (this.ageTicks < 20) {
-          var4 = this.velocityX;
-          var5 = this.velocityY;
-          var6 = (int)Math.sqrt((double)(var5 * var5 + var4 * var4));
-          if (1 > var6) {
-            var6 = 1;
+          velocityOrTargetDeltaX = this.velocityX;
+          velocityOrTargetDeltaY = this.velocityY;
+          speedOrTargetAngle = (int)Math.sqrt((double)(velocityOrTargetDeltaY * velocityOrTargetDeltaY + velocityOrTargetDeltaX * velocityOrTargetDeltaX));
+          if (1 > speedOrTargetAngle) {
+            speedOrTargetAngle = 1;
           }
-          this.field_H = false;
-          this.velocityX = (this.ageTicks + 5) * (var4 * var3) / (var6 * 25);
-          this.velocityY = var5 * ((this.ageTicks + 5) * var3) / (var6 * 25);
+          this.applyGravity = false;
+          this.velocityX = (this.ageTicks + 5) * (velocityOrTargetDeltaX * maximumSpeed) / (speedOrTargetAngle * 25);
+          this.velocityY = velocityOrTargetDeltaY * ((this.ageTicks + 5) * maximumSpeed) / (speedOrTargetAngle * 25);
           if (!this.world.field_h &&
             !this.field_V &&
-            (this.world.simulationTick + param1 & 1) == 0) {
-            var7 = ArticulatedPart.a(2, -this.velocityX / 2, this.world, 95, this.worldY, this.field_ob, 200, -this.velocityY / 2, this.worldX, this.worldX);
-            this.world.field_O.addLast(3, var7);
-            var7Lifetime1 = ArticulatedPart.a(3, -this.velocityX / 2, this.world, 113, this.worldY, this.field_ob, 50, -this.velocityY / 2, this.worldX, this.worldX);
-            this.world.field_O.addLast(3, var7Lifetime1);
+            (this.world.simulationTick + substepIndex & 1) == 0) {
+            launchTrail = ArticulatedPart.createParticle(2, -this.velocityX / 2, this.world, 95, this.worldY, this.field_ob, 200, -this.velocityY / 2, this.worldX, this.worldX);
+            this.world.pendingParticles.addLast(3, launchTrail);
+            secondaryLaunchTrail = ArticulatedPart.createParticle(3, -this.velocityX / 2, this.world, 113, this.worldY, this.field_ob, 50, -this.velocityY / 2, this.worldX, this.worldX);
+            this.world.pendingParticles.addLast(3, secondaryLaunchTrail);
           }
         } else {
           if (this.ageTicks < 128) {
-            if (null != this.field_nb) {
-              if (this.field_nb.field_pc) {
-                this.field_nb = null;
+            if (null != this.targetSentinel) {
+              if (this.targetSentinel.field_pc) {
+                this.targetSentinel = null;
               } else {
-                this.field_K = this.field_nb.worldX;
-                this.field_S = -(this.field_nb.field_Db << 3) + this.field_nb.worldY;
+                this.targetWorldX = this.targetSentinel.worldX;
+                this.targetWorldY = -(this.targetSentinel.field_Db << 3) + this.targetSentinel.worldY;
               }
             }
-            var4 = (-this.worldX + this.field_K) / 10;
-            var5 = (-this.worldY + this.field_S) / 10;
-            var6 = ResourceArchive.a(var5, 200, var4);
-            var7_int = ResourceArchive.a(this.velocityY, 200, this.velocityX);
-            var8 = -4096 + (8191 & -var7_int + (var6 + 4096));
-            var9 = kk.a(this.velocityY, this.velocityX, -22967);
-            if (var8 >= -1024 &&
-              1024 >= var8) {
-              if (300 > var9) {
-                var9 += 5;
+            velocityOrTargetDeltaX = (-this.worldX + this.targetWorldX) / 10;
+            velocityOrTargetDeltaY = (-this.worldY + this.targetWorldY) / 10;
+            speedOrTargetAngle = ResourceArchive.a(velocityOrTargetDeltaY, 200, velocityOrTargetDeltaX);
+            heading = ResourceArchive.a(this.velocityY, 200, this.velocityX);
+            headingDelta = -4096 + (8191 & -heading + (speedOrTargetAngle + 4096));
+            speed = kk.a(this.velocityY, this.velocityX, -22967);
+            if (headingDelta >= -1024 &&
+              1024 >= headingDelta) {
+              if (300 > speed) {
+                speed += 5;
               }
             } else {
-              if (var9 < 300) {
-                var9 += 5;
+              if (speed < 300) {
+                speed += 5;
               }
-              if (var9 > 300) {
-                var9 -= 5;
+              if (speed > 300) {
+                speed -= 5;
               }
             }
-            if (var8 > 16) {
-              var8 = 16;
+            if (headingDelta > 16) {
+              headingDelta = 16;
             }
-            if (var8 < -16) {
-              var8 = -16;
+            if (headingDelta < -16) {
+              headingDelta = -16;
             }
-            if (var4 * this.velocityX < 0 &&
-              this.field_cb * this.velocityX > 0 &&
-              this.field_Q * this.velocityY > 0 &&
-              null != this.field_nb &&
-              this.velocityY * (this.velocityX * var8) < 0) {
-              var8 = -var8;
+            if (velocityOrTargetDeltaX * this.velocityX < 0 &&
+              this.initialDirectionX * this.velocityX > 0 &&
+              this.initialDirectionY * this.velocityY > 0 &&
+              null != this.targetSentinel &&
+              this.velocityY * (this.velocityX * headingDelta) < 0) {
+              headingDelta = -headingDelta;
             }
-            var7_int = var7_int + var8;
-            this.velocityX = kg.a(var7_int, (byte) -127) * var9 >> 16;
-            this.velocityY = jh.a(var7_int, 4096) * var9 >> 16;
-            this.field_H = false;
+            heading = heading + headingDelta;
+            this.velocityX = kg.a(heading, (byte) -127) * speed >> 16;
+            this.velocityY = jh.a(heading, 4096) * speed >> 16;
+            this.applyGravity = false;
             if (!this.world.field_h &&
               !this.field_V) {
-              if (0 != (this.world.simulationTick + param1 & 1)) {
+              if (0 != (this.world.simulationTick + substepIndex & 1)) {
                 this.field_L = 4;
                 return false;
               }
-              var10 = ArticulatedPart.a(2, -this.velocityX / 2, this.world, 102, this.worldY, this.field_ob, 200, -this.velocityY / 2, this.worldX, this.worldX);
-              this.world.field_O.addLast(3, var10);
-              var10Lifetime1 = ArticulatedPart.a(3, -this.velocityX / 2, this.world, 107, this.worldY, this.field_ob, 50, -this.velocityY / 2, this.worldX, this.worldX);
-              this.world.field_O.addLast(3, var10Lifetime1);
+              guidedTrail = ArticulatedPart.createParticle(2, -this.velocityX / 2, this.world, 102, this.worldY, this.field_ob, 200, -this.velocityY / 2, this.worldX, this.worldX);
+              this.world.pendingParticles.addLast(3, guidedTrail);
+              secondaryGuidedTrail = ArticulatedPart.createParticle(3, -this.velocityX / 2, this.world, 107, this.worldY, this.field_ob, 50, -this.velocityY / 2, this.worldX, this.worldX);
+              this.world.pendingParticles.addLast(3, secondaryGuidedTrail);
             }
           } else {
             if (!this.world.field_h &&
               !this.field_V &&
-              0 == (this.world.simulationTick + param1 & 1)) {
-              var4_ref_qb = ArticulatedPart.a(3, -this.velocityX / 2, this.world, 120, this.worldY, this.field_ob, 50, -this.velocityY / 2, this.worldX, this.worldX);
-              this.world.field_O.addLast(3, var4_ref_qb);
+              0 == (this.world.simulationTick + substepIndex & 1)) {
+              coastingTrail = ArticulatedPart.createParticle(3, -this.velocityX / 2, this.world, 120, this.worldY, this.field_ob, 50, -this.velocityY / 2, this.worldX, this.worldX);
+              this.world.pendingParticles.addLast(3, coastingTrail);
             }
           }
         }
@@ -1764,7 +1764,7 @@ final class Projectile extends DualNode {
         int var4Lifetime1Lifetime4;
         var3 = null;
         var9 = SteelSentinels.obfuscationControl;
-        this.field_H = true;
+        this.applyGravity = true;
         stackIn_3_1 = !(this.world.terrain.getSecondaryHeightAt(false, this.worldX >> 4) <= -(this.worldY >> 4));
         this.field_ob = stackIn_3_1;
         if (19 == this.effectType) {
@@ -1827,7 +1827,7 @@ final class Projectile extends DualNode {
               fc.a((byte) 104, 60, -1);
             }
             if (this.ageTicks > 250) {
-              this.world.field_J.a((byte) 82, (DualNode) (this));
+              this.world.pendingRemovals.addLast((byte) 82, (DualNode) (this));
               var3_ref = (Sentinel) (this.world.sentinels.first(13058));
               while (var3_ref != null) {
                 stackIn_73_0 = 0;
@@ -1891,12 +1891,12 @@ final class Projectile extends DualNode {
           if (stackIn_70_0Lifetime1 == 0) {
             stackIn_73_0Lifetime1 = 1;
             stackIn_73_1Lifetime1 = 0;
-            var3_ref2 = ArticulatedPart.a(stackIn_73_0Lifetime1, stackIn_73_1Lifetime1, this.world, 116, this.worldY + 29000, false, 50, 100, this.worldX + 9000 * this.velocityX, this.worldX);
-            this.world.field_O.addLast(obfuscationGuard ^ -4, var3_ref2);
-            var3_ref2Lifetime2 = ArticulatedPart.a(1, 0, this.world, 101, this.worldY + 32000, false, 50, 100, this.worldX + 15000 * this.velocityX, this.worldX);
-            this.world.field_O.addLast(3, var3_ref2Lifetime2);
-            var3_ref2Lifetime3 = ArticulatedPart.a(1, 0, this.world, obfuscationGuard + 112, this.worldY + 35000, false, 50, 100, this.worldX + 21000 * this.velocityX, this.worldX);
-            this.world.field_O.addLast(3, var3_ref2Lifetime3);
+            var3_ref2 = ArticulatedPart.createParticle(stackIn_73_0Lifetime1, stackIn_73_1Lifetime1, this.world, 116, this.worldY + 29000, false, 50, 100, this.worldX + 9000 * this.velocityX, this.worldX);
+            this.world.pendingParticles.addLast(obfuscationGuard ^ -4, var3_ref2);
+            var3_ref2Lifetime2 = ArticulatedPart.createParticle(1, 0, this.world, 101, this.worldY + 32000, false, 50, 100, this.worldX + 15000 * this.velocityX, this.worldX);
+            this.world.pendingParticles.addLast(3, var3_ref2Lifetime2);
+            var3_ref2Lifetime3 = ArticulatedPart.createParticle(1, 0, this.world, obfuscationGuard + 112, this.worldY + 35000, false, 50, 100, this.worldX + 21000 * this.velocityX, this.worldX);
+            this.world.pendingParticles.addLast(3, var3_ref2Lifetime3);
           }
           boolean decompiledFrameRemainder0 = true;
           if (12 != this.effectType) {
@@ -1909,7 +1909,7 @@ final class Projectile extends DualNode {
                 var10.field_ab = true;
                 this.world.projectiles.addLast(3, var10);
                 fc.a((byte) 27, 14, this.worldX);
-                var10.field_nb = null;
+                var10.targetSentinel = null;
                 var4_ref_mb = (Sentinel) (this.world.sentinels.first(obfuscationGuard ^ -13059));
                 while (var4_ref_mb != null) {
                   stackIn_100_0 = -1;
@@ -1920,16 +1920,16 @@ final class Projectile extends DualNode {
                       var4_ref_mb = (Sentinel) (this.world.sentinels.next((byte) -74));
                       continue;
                     }
-                    if (var10.field_nb == null ||
-                      !(Math.abs(var4_ref_mb.worldX - var10.worldX) >= Math.abs(var10.field_nb.worldX - var10.worldX))) {
-                      var10.field_nb = var4_ref_mb;
-                      var10.field_K = var10.field_nb.worldX;
-                      var10.field_S = var10.field_nb.worldY;
+                    if (var10.targetSentinel == null ||
+                      !(Math.abs(var4_ref_mb.worldX - var10.worldX) >= Math.abs(var10.targetSentinel.worldX - var10.worldX))) {
+                      var10.targetSentinel = var4_ref_mb;
+                      var10.targetWorldX = var10.targetSentinel.worldX;
+                      var10.targetWorldY = var10.targetSentinel.worldY;
                     }
                   }
                   var4_ref_mb = (Sentinel) (this.world.sentinels.next((byte) -74));
                 }
-                var10.field_nb = null;
+                var10.targetSentinel = null;
               }
               decompiledFrameRemainder0 = false;
             }
@@ -1964,10 +1964,10 @@ final class Projectile extends DualNode {
               this.effectType = 13;
             } else {
               if (13 == this.effectType) {
-                this.world.field_J.a((byte) 79, (DualNode) (this));
+                this.world.pendingRemovals.addLast((byte) 79, (DualNode) (this));
               } else {
                 if (this.effectType == 16) {
-                  this.world.field_J.a((byte) 89, (DualNode) (this));
+                  this.world.pendingRemovals.addLast((byte) 89, (DualNode) (this));
                 }
               }
             }
@@ -1983,8 +1983,8 @@ final class Projectile extends DualNode {
                 var4Lifetime1 = (int)(1024.0 * Math.sin(var2_double));
                 var5 = (int)(1024.0 * Math.cos(var2_double));
                 var6 = -(this.ageTicks / 4) + (50 - (int)(Math.random() * (double)this.ageTicks / 4.0));
-                var7 = ArticulatedPart.a(4, var4Lifetime1, this.world, 100, -(var6 * var5) + this.worldY, this.field_ob, 50, var5, -(var4Lifetime1 * var6) + this.worldX, this.worldX);
-                this.world.field_O.addLast(3, var7);
+                var7 = ArticulatedPart.createParticle(4, var4Lifetime1, this.world, 100, -(var6 * var5) + this.worldY, this.field_ob, 50, var5, -(var4Lifetime1 * var6) + this.worldX, this.worldX);
+                this.world.pendingParticles.addLast(3, var7);
               }
               boolean decompiledFrameRemainder2 = true;
               if (100 <= this.ageTicks &&
@@ -2029,10 +2029,10 @@ final class Projectile extends DualNode {
                 }
                 else {
                   if (!this.world.field_h) {
-                    var3_ref2Lifetime1 = ArticulatedPart.a(4, 0, this.world, obfuscationGuard ^ -99, -((this.ageTicks - 100) * 40) + this.worldY, this.field_ob, 50, -500 + (this.world.simulationTick & 1) * 1000, var2Lifetime2, this.worldX);
-                    this.world.field_O.addLast(3, var3_ref2Lifetime1);
-                    var3_ref2Lifetime1 = ArticulatedPart.a(1, 0, this.world, 125, this.worldY - (-100 + this.ageTicks) * 40, this.field_ob, 100, 0, var2Lifetime2, this.worldX);
-                    this.world.field_O.addLast(3, var3_ref2Lifetime1);
+                    var3_ref2Lifetime1 = ArticulatedPart.createParticle(4, 0, this.world, obfuscationGuard ^ -99, -((this.ageTicks - 100) * 40) + this.worldY, this.field_ob, 50, -500 + (this.world.simulationTick & 1) * 1000, var2Lifetime2, this.worldX);
+                    this.world.pendingParticles.addLast(3, var3_ref2Lifetime1);
+                    var3_ref2Lifetime1 = ArticulatedPart.createParticle(1, 0, this.world, 125, this.worldY - (-100 + this.ageTicks) * 40, this.field_ob, 100, 0, var2Lifetime2, this.worldX);
+                    this.world.pendingParticles.addLast(3, var3_ref2Lifetime1);
                   }
                 }
               }
@@ -2089,7 +2089,7 @@ final class Projectile extends DualNode {
                   }
                   this.sourceSentinel.field_qc = this.sourceSentinel.field_qc + 1;
                 }
-                this.world.field_J.a((byte) 124, (DualNode) (this));
+                this.world.pendingRemovals.addLast((byte) 124, (DualNode) (this));
               }
               return;
             }
@@ -2134,7 +2134,7 @@ final class Projectile extends DualNode {
                               }
                               if ((decompiledFrameRemainder1) &&
                                 (decompiledFrameRemainder1 = (3 == this.effectType)) &&
-                                (decompiledFrameRemainder1 = !(!this.a((byte) -102, var2Lifetime2Lifetime3)))) {
+                                (decompiledFrameRemainder1 = !(!this.advanceGuidedMotion((byte) -102, var2Lifetime2Lifetime3)))) {
                                 return;
                               }
                             }
@@ -2190,7 +2190,7 @@ final class Projectile extends DualNode {
                 if (this.sourceSentinel != null &&
                   !this.field_V &&
                   !this.field_T &&
-                  this.field_jb <= this.ageTicks && (this.field_nb == null ||
+                  this.field_jb <= this.ageTicks && (this.targetSentinel == null ||
                   3 != this.effectType)) {
                   this.sourceSentinel.field_q = -200;
                   this.sourceSentinel.field_sb = this.sourceSentinel.field_sb + 1;
@@ -2208,7 +2208,7 @@ final class Projectile extends DualNode {
                     this.a(64, 1, 1, false, 10, (byte) -116);
                   }
                   if (!this.field_I) {
-                    this.world.field_J.a((byte) 36, (DualNode) (this));
+                    this.world.pendingRemovals.addLast((byte) 36, (DualNode) (this));
                   } else {
                     this.field_T = true;
                   }
@@ -2226,7 +2226,7 @@ final class Projectile extends DualNode {
                             }
                           }
                           if (!this.field_I) {
-                            this.world.field_J.a((byte) 83, (DualNode) (this));
+                            this.world.pendingRemovals.addLast((byte) 83, (DualNode) (this));
                             return;
                           }
                           this.field_T = true;
@@ -2245,7 +2245,7 @@ final class Projectile extends DualNode {
                             this.a(25, 500, 3, obfuscationGuard - 111, 50);
                           }
                           if (!this.field_I) {
-                            this.world.field_J.a((byte) 66, (DualNode) (this));
+                            this.world.pendingRemovals.addLast((byte) 66, (DualNode) (this));
                             return;
                           }
                           this.field_T = true;
@@ -2264,7 +2264,7 @@ final class Projectile extends DualNode {
                               this.field_T = true;
                               return;
                             }
-                            this.world.field_J.a((byte) 76, (DualNode) (this));
+                            this.world.pendingRemovals.addLast((byte) 76, (DualNode) (this));
                             return;
                           }
                           if (5 != this.effectType) {
@@ -2272,7 +2272,7 @@ final class Projectile extends DualNode {
                               this.field_T = true;
                               return;
                             }
-                            this.world.field_J.a((byte) 75, (DualNode) (this));
+                            this.world.pendingRemovals.addLast((byte) 75, (DualNode) (this));
                             return;
                           }
                           if (this.sourceWeaponType == 3) {
@@ -2287,7 +2287,7 @@ final class Projectile extends DualNode {
                             }
                           }
                           if (!this.field_I) {
-                            this.world.field_J.a((byte) 115, (DualNode) (this));
+                            this.world.pendingRemovals.addLast((byte) 115, (DualNode) (this));
                             return;
                           }
                           this.field_T = true;
@@ -2335,7 +2335,7 @@ final class Projectile extends DualNode {
                           this.field_T = true;
                           return;
                         }
-                        this.world.field_J.a((byte) 80, (DualNode) (this));
+                        this.world.pendingRemovals.addLast((byte) 80, (DualNode) (this));
                         return;
                       }
                       if (this.sourceWeaponType != 2) {
@@ -2378,7 +2378,7 @@ final class Projectile extends DualNode {
                         this.a(1, 32, 1, obfuscationGuard - 101, 5);
                       }
                       if (!this.field_I) {
-                        this.world.field_J.a((byte) 92, (DualNode) (this));
+                        this.world.pendingRemovals.addLast((byte) 92, (DualNode) (this));
                       } else {
                         this.field_T = true;
                       }
@@ -2390,8 +2390,8 @@ final class Projectile extends DualNode {
                           if (!this.field_T) {
                             if (!this.world.field_h &&
                               !this.field_V) {
-                              var3_ref2Lifetime1Lifetime1 = ArticulatedPart.a(2, 0, this.world, 114, -(this.world.terrain.getGroundHeightAt((byte) -109, this.worldX >> 4) << 4) - 8, this.field_ob, 250, 0, this.worldX, this.worldX);
-                              this.world.field_O.addLast(obfuscationGuard ^ -4, var3_ref2Lifetime1Lifetime1);
+                              var3_ref2Lifetime1Lifetime1 = ArticulatedPart.createParticle(2, 0, this.world, 114, -(this.world.terrain.getGroundHeightAt((byte) -109, this.worldX >> 4) << 4) - 8, this.field_ob, 250, 0, this.worldX, this.worldX);
+                              this.world.pendingParticles.addLast(obfuscationGuard ^ -4, var3_ref2Lifetime1Lifetime1);
                             }
                             if (!this.world.field_h &&
                               !this.field_V) {
@@ -2406,8 +2406,8 @@ final class Projectile extends DualNode {
                               } else {
                                 stackIn_317_6 = 20;
                               }
-                              var3_ref2Lifetime1Lifetime1 = ArticulatedPart.a(stackIn_316_0, stackIn_316_1, stackIn_316_2, stackIn_316_3, stackIn_316_4, stackIn_316_5, stackIn_317_6, -this.velocityY / 2, this.worldX, this.worldX);
-                              this.world.field_O.addLast(3, var3_ref2Lifetime1Lifetime1);
+                              var3_ref2Lifetime1Lifetime1 = ArticulatedPart.createParticle(stackIn_316_0, stackIn_316_1, stackIn_316_2, stackIn_316_3, stackIn_316_4, stackIn_316_5, stackIn_317_6, -this.velocityY / 2, this.worldX, this.worldX);
+                              this.world.pendingParticles.addLast(3, var3_ref2Lifetime1Lifetime1);
                             }
                           } else {
                             this.a(32, 1, 1, false, 10, (byte) -98);
@@ -2424,8 +2424,8 @@ final class Projectile extends DualNode {
                               } else {
                                 stackIn_307_6 = 20;
                               }
-                              var3_ref2Lifetime1Lifetime1 = ArticulatedPart.a(stackIn_306_0, stackIn_306_1, stackIn_306_2, stackIn_306_3, stackIn_306_4, stackIn_306_5, stackIn_307_6, -this.velocityY / 2, this.worldX, this.worldX);
-                              this.world.field_O.addLast(3, var3_ref2Lifetime1Lifetime1);
+                              var3_ref2Lifetime1Lifetime1 = ArticulatedPart.createParticle(stackIn_306_0, stackIn_306_1, stackIn_306_2, stackIn_306_3, stackIn_306_4, stackIn_306_5, stackIn_307_6, -this.velocityY / 2, this.worldX, this.worldX);
+                              this.world.pendingParticles.addLast(3, var3_ref2Lifetime1Lifetime1);
                             }
                           }
                         }
@@ -2433,7 +2433,7 @@ final class Projectile extends DualNode {
                         this.a(32, 1, 2, false, 10, (byte) -99);
                       }
                       if (!this.field_I) {
-                        this.world.field_J.a((byte) 100, (DualNode) (this));
+                        this.world.pendingRemovals.addLast((byte) 100, (DualNode) (this));
                       } else {
                         this.field_T = true;
                       }
@@ -2447,7 +2447,7 @@ final class Projectile extends DualNode {
                       }
                     }
                     if (!this.field_I) {
-                      this.world.field_J.a((byte) 77, (DualNode) (this));
+                      this.world.pendingRemovals.addLast((byte) 77, (DualNode) (this));
                       break regionExit1;
                     }
                     this.field_T = true;
@@ -2493,10 +2493,10 @@ final class Projectile extends DualNode {
             if (stackIn_456_0Lifetime2 > stackIn_456_1Lifetime2) {
               this.field_L = this.field_L - 1;
             }
-            if (this.field_H) {
-              this.velocityY = this.velocityY + this.world.field_z;
+            if (this.applyGravity) {
+              this.velocityY = this.velocityY + this.world.gravityAcceleration;
               if (this.effectType == 4) {
-                this.velocityY = this.velocityY + 3 * this.world.field_z;
+                this.velocityY = this.velocityY + 3 * this.world.gravityAcceleration;
               }
             }
             this.ageTicks = this.ageTicks + 1;
@@ -2507,11 +2507,11 @@ final class Projectile extends DualNode {
             if (this.field_I) {
               this.field_T = true;
             } else {
-              this.world.field_J.a((byte) 42, (DualNode) (this));
+              this.world.pendingRemovals.addLast((byte) 42, (DualNode) (this));
             }
             return;
           }
-          if (this.field_nb == null) {
+          if (this.targetSentinel == null) {
             var2_ref_mb = (Sentinel) (this.world.sentinels.first(13058));
             while (var2_ref_mb != null) {
               if (var2_ref_mb.armour > 0 &&
@@ -2519,22 +2519,22 @@ final class Projectile extends DualNode {
                 -1 == this.velocityX ||
                 0 == var2_ref_mb.teamId &&
                 this.velocityX == 1) &&
-                (this.field_nb == null ||
-                !(Math.abs(var2_ref_mb.worldX - this.worldX) >= Math.abs(this.field_nb.worldX - this.worldX))))) {
-                this.field_nb = var2_ref_mb;
-                this.field_K = this.field_nb.worldX;
-                this.field_S = this.field_nb.worldY;
+                (this.targetSentinel == null ||
+                !(Math.abs(var2_ref_mb.worldX - this.worldX) >= Math.abs(this.targetSentinel.worldX - this.worldX))))) {
+                this.targetSentinel = var2_ref_mb;
+                this.targetWorldX = this.targetSentinel.worldX;
+                this.targetWorldY = this.targetSentinel.worldY;
               }
               var2_ref_mb = (Sentinel) (this.world.sentinels.next((byte) -93));
             }
-            if (this.field_nb == null) {
-              this.world.field_J.a((byte) 97, (DualNode) (this));
+            if (this.targetSentinel == null) {
+              this.world.pendingRemovals.addLast((byte) 97, (DualNode) (this));
             }
             return;
           }
-          if (!(this.field_nb.armour > 0) ||
-            this.field_nb.field_Hb) {
-            this.world.field_J.a((byte) 40, (DualNode) (this));
+          if (!(this.targetSentinel.armour > 0) ||
+            this.targetSentinel.field_Hb) {
+            this.world.pendingRemovals.addLast((byte) 40, (DualNode) (this));
           }
           if (!this.world.field_h &&
             this.ageTicks < 125) {
@@ -2542,25 +2542,25 @@ final class Projectile extends DualNode {
             var4Lifetime1Lifetime1 = (int)(Math.sin(var2_doubleLifetime1) * 1024.0);
             var5Lifetime1 = (int)(1024.0 * Math.cos(var2_doubleLifetime1));
             var6Lifetime1 = -(this.ageTicks / 4) + 50 - (int)(Math.random() * (double)this.ageTicks / 4.0);
-            var7Lifetime1 = ArticulatedPart.a(4, var4Lifetime1Lifetime1, this.world, obfuscationGuard ^ -119, -(var5Lifetime1 * var6Lifetime1) + this.worldY, this.field_ob, 50, var5Lifetime1, -(var4Lifetime1Lifetime1 * var6Lifetime1) + this.worldX, this.worldX);
-            this.world.field_O.addLast(3, var7Lifetime1);
+            var7Lifetime1 = ArticulatedPart.createParticle(4, var4Lifetime1Lifetime1, this.world, obfuscationGuard ^ -119, -(var5Lifetime1 * var6Lifetime1) + this.worldY, this.field_ob, 50, var5Lifetime1, -(var4Lifetime1Lifetime1 * var6Lifetime1) + this.worldX, this.worldX);
+            this.world.pendingParticles.addLast(3, var7Lifetime1);
           }
           if (this.ageTicks >= 100 &&
             this.ageTicks < 1000) {
             this.worldX = this.worldX + this.velocityX * 1000;
-            var2Lifetime2Lifetime1 = (-100 + this.ageTicks) * (this.field_nb.worldX - this.worldX) / 900 + this.worldX;
-            var3_intLifetime2 = (-100 + this.ageTicks) * (-this.worldY + this.field_nb.worldY) / 900 + this.worldY;
+            var2Lifetime2Lifetime1 = (-100 + this.ageTicks) * (this.targetSentinel.worldX - this.worldX) / 900 + this.worldX;
+            var3_intLifetime2 = (-100 + this.ageTicks) * (-this.worldY + this.targetSentinel.worldY) / 900 + this.worldY;
             if (!this.world.field_h) {
-              var4_ref_qb = ArticulatedPart.a(4, 0, this.world, 125, var3_intLifetime2, this.field_ob, 50, 1000 * (1 & this.world.simulationTick) - 500, var2Lifetime2Lifetime1, this.worldX);
-              this.world.field_O.addLast(obfuscationGuard + 4, var4_ref_qb);
-              var4_ref_qbLifetime1 = ArticulatedPart.a(1, 0, this.world, 125, var3_intLifetime2, this.field_ob, 100, 0, var2Lifetime2Lifetime1, this.worldX);
-              this.world.field_O.addLast(3, var4_ref_qbLifetime1);
+              var4_ref_qb = ArticulatedPart.createParticle(4, 0, this.world, 125, var3_intLifetime2, this.field_ob, 50, 1000 * (1 & this.world.simulationTick) - 500, var2Lifetime2Lifetime1, this.worldX);
+              this.world.pendingParticles.addLast(obfuscationGuard + 4, var4_ref_qb);
+              var4_ref_qbLifetime1 = ArticulatedPart.createParticle(1, 0, this.world, 125, var3_intLifetime2, this.field_ob, 100, 0, var2Lifetime2Lifetime1, this.worldX);
+              this.world.pendingParticles.addLast(3, var4_ref_qbLifetime1);
             }
           }
           this.ageTicks = this.ageTicks + 1;
           if (this.ageTicks >= 1000) {
-            this.worldX = this.field_nb.worldX;
-            this.worldY = this.field_nb.worldY;
+            this.worldX = this.targetSentinel.worldX;
+            this.worldY = this.targetSentinel.worldY;
             this.a(1000, 5000, 0, obfuscationGuard - 121, 200);
             var2Lifetime2Lifetime2 = -1;
             var3_intLifetime2Lifetime1 = 0;
@@ -2610,7 +2610,7 @@ final class Projectile extends DualNode {
                 this.world.field_v = this.world.field_v | 1;
               }
             }
-            this.world.field_J.a((byte) 125, (DualNode) (this));
+            this.world.pendingRemovals.addLast((byte) 125, (DualNode) (this));
             return;
           }
         }
@@ -2790,21 +2790,21 @@ final class Projectile extends DualNode {
         this.field_L = 10;
         if (!this.world.field_h &&
           !this.field_V) {
-          var3 = ArticulatedPart.a(3, -this.velocityX / 2, this.world, 108, this.worldY, this.field_ob, 10, -this.velocityY / 2, this.worldX, this.worldX);
-          var3.field_I = 10 * this.ageTicks / this.field_hb;
-          this.world.field_O.addLast(param0 ^ 1, var3);
+          var3 = ArticulatedPart.createParticle(3, -this.velocityX / 2, this.world, 108, this.worldY, this.field_ob, 10, -this.velocityY / 2, this.worldX, this.worldX);
+          var3.ageTicks = 10 * this.ageTicks / this.field_hb;
+          this.world.pendingParticles.addLast(param0 ^ 1, var3);
         }
         if (this.ageTicks <= this.field_hb) {
         } else {
           if (!this.field_I) {
-            this.world.field_J.a((byte) 127, (DualNode) (this));
+            this.world.pendingRemovals.addLast((byte) 127, (DualNode) (this));
           } else {
             this.field_T = true;
             return true;
           }
           return true;
         }
-        this.field_H = false;
+        this.applyGravity = false;
         return false;
     }
 
@@ -2847,7 +2847,7 @@ final class Projectile extends DualNode {
           } else {
             stackIn_6_1 = -1;
           }
-          this.field_Q = stackIn_6_1;
+          this.initialDirectionY = stackIn_6_1;
           if (param2 >= 0) {
             if (param2 != 0) {
               stackIn_11_1 = 1;
@@ -2857,12 +2857,12 @@ final class Projectile extends DualNode {
           } else {
             stackIn_11_1 = -1;
           }
-          this.field_cb = stackIn_11_1;
+          this.initialDirectionX = stackIn_11_1;
           this.velocityX = param2;
           this.field_hb = param4;
           this.velocityY = param3;
-          this.field_K = this.worldX;
-          this.field_S = this.worldY;
+          this.targetWorldX = this.worldX;
+          this.targetWorldY = this.worldY;
           this.g(1354276);
           if (this.sourceSentinel != null) {
             this.field_ob = this.sourceSentinel.field_u;
@@ -2875,7 +2875,7 @@ final class Projectile extends DualNode {
           } else {
             stackIn_17_1 = 42;
           }
-          this.field_jb = stackIn_17_1 * 4 / this.world.field_z;
+          this.field_jb = stackIn_17_1 * 4 / this.world.gravityAcceleration;
           this.field_bb = false;
           this.field_gb = false;
           this.field_W = false;

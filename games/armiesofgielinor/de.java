@@ -489,7 +489,7 @@ final class de {
           } else {
             stackIn_333_2 = "{...}";
           }
-          throw ig.addExceptionContext((Throwable) ((Object) stackIn_332_0), ((StringBuilder) (Object) stackIn_332_1).append(stackIn_333_2).append(',').append(tileX).append(',').append(spellId).append(',').append(actingPlayer).append(')').toString());
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_332_0), ((StringBuilder) (Object) stackIn_332_1).append(stackIn_333_2).append(',').append(tileX).append(',').append(spellId).append(',').append(actingPlayer).append(')').toString());
         }
     }
 
@@ -557,7 +557,7 @@ final class de {
           } else {
             stackIn_20_2 = "{...}";
           }
-          throw ig.addExceptionContext((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(tier0Bits).append(',').append(tier1Bits).append(',').append(tier3Bits).append(',').append(tier2Bits).append(')').toString());
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(tier0Bits).append(',').append(tier1Bits).append(',').append(tier3Bits).append(',').append(tier2Bits).append(')').toString());
         }
     }
 

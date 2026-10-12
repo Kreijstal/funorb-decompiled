@@ -77,7 +77,7 @@ final class EquipmentBattleTutorial extends BattleTutorial {
           } else {
             stackIn_23_2 = "{...}";
           }
-          throw ig.addExceptionContext((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(')').toString());
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(')').toString());
         }
     }
 
@@ -121,7 +121,7 @@ final class EquipmentBattleTutorial extends BattleTutorial {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
-          throw ig.addExceptionContext((Throwable) ((Object) var5), "gb.I(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) var5), "gb.I(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -140,7 +140,7 @@ final class EquipmentBattleTutorial extends BattleTutorial {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw ig.addExceptionContext((Throwable) ((Object) var3), "gb.H(" + godId + ',' + obfuscationGuard + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) var3), "gb.H(" + godId + ',' + obfuscationGuard + ')');
         }
     }
 
@@ -167,7 +167,7 @@ final class EquipmentBattleTutorial extends BattleTutorial {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw ig.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(obfuscationGuard).append(')').toString());
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 
@@ -320,7 +320,7 @@ final class EquipmentBattleTutorial extends BattleTutorial {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
-          throw ig.addExceptionContext((Throwable) ((Object) var4), "gb.A(" + tileIndex + ',' + obfuscationGuard + ',' + interactionKind + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) var4), "gb.A(" + tileIndex + ',' + obfuscationGuard + ',' + interactionKind + ')');
         }
     }
 
@@ -343,7 +343,7 @@ final class EquipmentBattleTutorial extends BattleTutorial {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw ig.addExceptionContext((Throwable) ((Object) var3), "gb.B(" + unitType + ',' + obfuscationGuard + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) var3), "gb.B(" + unitType + ',' + obfuscationGuard + ')');
         }
     }
 
@@ -403,7 +403,7 @@ final class EquipmentBattleTutorial extends BattleTutorial {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw ig.addExceptionContext((Throwable) ((Object) var3), "gb.G(" + param0 + ',' + param1 + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) var3), "gb.G(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -1259,7 +1259,7 @@ final class EquipmentBattleTutorial extends BattleTutorial {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ig.addExceptionContext((Throwable) ((Object) var2), "gb.E(" + obfuscationGuard + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) var2), "gb.E(" + obfuscationGuard + ')');
         }
     }
 
@@ -1306,7 +1306,7 @@ final class EquipmentBattleTutorial extends BattleTutorial {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw ig.addExceptionContext((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -2079,7 +2079,7 @@ final class EquipmentBattleTutorial extends BattleTutorial {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ig.addExceptionContext((Throwable) ((Object) var2), "gb.D(" + param0 + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) var2), "gb.D(" + param0 + ')');
         }
     }
 
@@ -2297,7 +2297,7 @@ final class EquipmentBattleTutorial extends BattleTutorial {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw ig.addExceptionContext((Throwable) ((Object) var3), "gb.F(" + obfuscationGuard + ',' + stage + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) var3), "gb.F(" + obfuscationGuard + ',' + stage + ')');
         }
     }
 
@@ -2359,7 +2359,7 @@ final class EquipmentBattleTutorial extends BattleTutorial {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ig.addExceptionContext((Throwable) ((Object) var2), "gb.K(" + obfuscationGuard + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) var2), "gb.K(" + obfuscationGuard + ')');
         }
     }
 
@@ -2370,7 +2370,7 @@ final class EquipmentBattleTutorial extends BattleTutorial {
             field_B = true;
           }
         } catch (RuntimeException runtimeException) {
-          throw ig.addExceptionContext((Throwable) ((Object) runtimeException), "gb.C(" + param0 + ',' + param1 + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "gb.C(" + param0 + ',' + param1 + ')');
         }
     }
 

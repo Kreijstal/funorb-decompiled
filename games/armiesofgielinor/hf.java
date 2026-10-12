@@ -38,7 +38,7 @@ final class hf {
         ef.field_d[20] = MatchSetupPanel.field_d;
         ef.field_d[16] = tv.field_e;
         ef.field_d[4] = IntrusiveNode.field_c;
-        ef.field_d[15] = ig.field_r;
+        ef.field_d[15] = AnimationSkeleton.field_r;
         if (param0 == 7670) {
           ef.field_d[5] = sa.field_f;
           return;
@@ -56,7 +56,7 @@ final class hf {
           }
           param0.a(true, param0.localPlayer);
         } catch (RuntimeException runtimeException) {
-          throw ig.addExceptionContext((Throwable) ((Object) runtimeException), "hf.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "hf.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -84,7 +84,7 @@ final class hf {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw ig.addExceptionContext((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param2).append(')').toString());
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param2).append(')').toString());
         }
     }
 

@@ -43,7 +43,7 @@ final class CampaignMenuButton {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw ig.addExceptionContext((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
         }
     }
 
@@ -93,7 +93,7 @@ final class CampaignMenuButton {
           this.width = width;
           this.label = label;
         } catch (RuntimeException runtimeException) {
-          throw ig.addExceptionContext((Throwable) ((Object) runtimeException), "iq.<init>(" + (label != null ? "{...}" : "null") + ',' + left + ',' + top + ',' + width + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "iq.<init>(" + (label != null ? "{...}" : "null") + ',' + left + ',' + top + ',' + width + ')');
         }
     }
 

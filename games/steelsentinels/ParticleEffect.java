@@ -3,18 +3,18 @@
  */
 final class ParticleEffect extends DualNode {
     static boolean field_J;
-    int field_D;
+    int durationTicks;
     int velocityX;
-    boolean field_G;
+    boolean usesSurfaceProfile;
     int worldY;
     int field_P;
     static SceneWidget field_K;
-    int field_M;
+    int effectType;
     int velocityY;
     static String[][] field_y;
     static fm field_H;
     CombatWorld world;
-    int field_I;
+    int ageTicks;
     int worldX;
     static SceneWidget field_E;
     static String field_C;
@@ -80,7 +80,7 @@ final class ParticleEffect extends DualNode {
         }
     }
 
-    final void a(int param0, int param1, boolean param2, byte param3) {
+    final void drawParticle(int screenOffsetX, int screenOffsetY, boolean alternateRenderPass, byte obfuscationGuard) {
         ek stackIn_56_0;
         int stackIn_56_1;
         int stackIn_56_2;
@@ -98,36 +98,36 @@ final class ParticleEffect extends DualNode {
         int var9Lifetime2;
         int var9Lifetime3;
         var10 = SteelSentinels.obfuscationControl;
-        var5 = (this.worldX >> 8) + param0;
-        var6 = -124 / ((-25 - param3) / 54);
-        var7 = (this.worldY >> 8) + param1;
+        var5 = (this.worldX >> 8) + screenOffsetX;
+        var6 = -124 / ((-25 - obfuscationGuard) / 54);
+        var7 = (this.worldY >> 8) + screenOffsetY;
         if (var5 >= -32 &&
           var5 <= 672 &&
           var7 >= -32 &&
           var7 <= 672) {
-          var8 = this.field_I * 8 / this.field_D;
+          var8 = this.ageTicks * 8 / this.durationTicks;
           if (var8 < 0) {
             var8 = 0;
           }
           if (var8 > 7) {
             var8 = 7;
           }
-          if (this.field_M != 0) {
-            if (this.field_M != 1) {
-              if (this.field_M != 3) {
-                if (this.field_M == 2) {
-                  if (!param2) {
+          if (this.effectType != 0) {
+            if (this.effectType != 1) {
+              if (this.effectType != 3) {
+                if (this.effectType == 2) {
+                  if (!alternateRenderPass) {
                     return;
                   }
-                  var8 = Math.max(0, Math.min(15, 16 * this.field_I / this.field_D));
+                  var8 = Math.max(0, Math.min(15, 16 * this.ageTicks / this.durationTicks));
                   var9 = 2;
                   cc.field_pc[var8].c(-var9 + var5, -var9 + var7, 2 * var9, 2 * var9);
                   if (var10 == 0) {
                     return;
                   }
                 }
-                if (this.field_M == 4) {
-                  if (param2) {
+                if (this.effectType == 4) {
+                  if (alternateRenderPass) {
                     return;
                   }
                   var9 = 16;
@@ -136,9 +136,9 @@ final class ParticleEffect extends DualNode {
                     return;
                   }
                 }
-                if (this.field_M != 5) {
-                  if (this.field_M == 6) {
-                    if (param2) {
+                if (this.effectType != 5) {
+                  if (this.effectType == 6) {
+                    if (alternateRenderPass) {
                       return;
                     }
                     var9 = 2;
@@ -147,8 +147,8 @@ final class ParticleEffect extends DualNode {
                       return;
                     }
                   }
-                  if (7 == this.field_M) {
-                    if (param2) {
+                  if (7 == this.effectType) {
+                    if (alternateRenderPass) {
                       return;
                     }
                     var9 = 1;
@@ -157,41 +157,41 @@ final class ParticleEffect extends DualNode {
                       return;
                     }
                   }
-                  if (this.field_M != 8) {
-                    if (this.field_M == 9) {
-                      if (param2) {
+                  if (this.effectType != 8) {
+                    if (this.effectType == 9) {
+                      if (alternateRenderPass) {
                         return;
                       }
                       var9 = 4;
-                      vi.field_gb[7 - var8].a(-var9 + var5, -var9 + var7, var9 * 2, var9 * 2, 200 - this.field_I * 200 / this.field_D);
+                      vi.field_gb[7 - var8].a(-var9 + var5, -var9 + var7, var9 * 2, var9 * 2, 200 - this.ageTicks * 200 / this.durationTicks);
                       if (var10 == 0) {
                         return;
                       }
                     }
-                    if (12 == this.field_M) {
-                      if (param2) {
+                    if (12 == this.effectType) {
+                      if (alternateRenderPass) {
                         return;
                       }
                       var9 = 2;
-                      bm.field_S[2 & var8].d(var5 - var9, -var9 + var7, 2 * var9, 2 * var9, -(this.field_I * 250 / this.field_D) + 250);
+                      bm.field_S[2 & var8].d(var5 - var9, -var9 + var7, 2 * var9, 2 * var9, -(this.ageTicks * 250 / this.durationTicks) + 250);
                       if (var10 == 0) {
                         return;
                       }
                     }
-                    if (this.field_M != 13) {
-                      if (this.field_M != 14) {
+                    if (this.effectType != 13) {
+                      if (this.effectType != 14) {
                         return;
                       }
-                      if (param2) {
+                      if (alternateRenderPass) {
                         return;
                       }
-                      var9 = (500 - 2 * this.field_I) / 125;
+                      var9 = (500 - 2 * this.ageTicks) / 125;
                       SoftwareRaster.a(var5 << 4, var7 << 4, var9 << 4, 31, hc.field_W);
                       if (var10 == 0) {
                         return;
                       }
                     }
-                    if (param2) {
+                    if (alternateRenderPass) {
                       return;
                     }
                     var9 = 16;
@@ -200,17 +200,17 @@ final class ParticleEffect extends DualNode {
                       return;
                     }
                   }
-                  if (param2) {
+                  if (alternateRenderPass) {
                     return;
                   }
-                  var8 = Math.max(0, Math.min(15, 16 * this.field_I / this.field_D));
+                  var8 = Math.max(0, Math.min(15, 16 * this.ageTicks / this.durationTicks));
                   var9 = 4;
                   cc.field_pc[var8].c(var5 - var9, var7 - var9, var9 * 2, 2 * var9);
                   if (var10 == 0) {
                     return;
                   }
                 }
-                if (param2) {
+                if (alternateRenderPass) {
                   return;
                 }
                 var9 = 4;
@@ -219,7 +219,7 @@ final class ParticleEffect extends DualNode {
                   return;
                 }
               }
-              if (param2) {
+              if (alternateRenderPass) {
                 return;
               }
               var9Lifetime3 = 2;
@@ -228,7 +228,7 @@ final class ParticleEffect extends DualNode {
                 return;
               }
             }
-            if (param2) {
+            if (alternateRenderPass) {
               return;
             }
             var9Lifetime2 = 16;
@@ -237,18 +237,18 @@ final class ParticleEffect extends DualNode {
               return;
             }
           }
-          if (param2) {
-            var8Lifetime1 = Math.max(0, Math.min(15, this.field_I * 16 / this.field_D));
+          if (alternateRenderPass) {
+            var8Lifetime1 = Math.max(0, Math.min(15, this.ageTicks * 16 / this.durationTicks));
             var9Lifetime1 = 17;
             stackIn_56_0 = cc.field_pc[var8Lifetime1];
             stackIn_56_1 = -var9Lifetime1 + var5;
             stackIn_56_2 = -var9Lifetime1 + var7;
             stackIn_56_3 = 2 * var9Lifetime1;
             stackIn_56_4 = var9Lifetime1 * 2;
-            if (this.field_D / 2 > this.field_I) {
+            if (this.durationTicks / 2 > this.ageTicks) {
               stackIn_57_5 = 255;
             } else {
-              stackIn_57_5 = 505 - this.field_I * 500 / this.field_D;
+              stackIn_57_5 = 505 - this.ageTicks * 500 / this.durationTicks;
             }
             ((ek) (Object) stackIn_56_0).a(stackIn_56_1, stackIn_56_2, stackIn_56_3, stackIn_56_4, stackIn_57_5);
           }
@@ -256,8 +256,8 @@ final class ParticleEffect extends DualNode {
         }
     }
 
-    final void i(int param0) {
-        if (param0 != -15809) {
+    final void detachWorld(int obfuscationGuard) {
+        if (obfuscationGuard != -15809) {
           field_H = (fm) null;
         }
         this.world = null;
@@ -271,68 +271,68 @@ final class ParticleEffect extends DualNode {
     }
 
     final void advanceParticle(byte obfuscationGuard) {
-        ParticleEffect var2;
-        int var3;
-        String var4;
-        var3 = SteelSentinels.obfuscationControl;
+        ParticleEffect spawnedParticle;
+        int obfuscationControl;
+        String unusedString;
+        obfuscationControl = SteelSentinels.obfuscationControl;
         if (this.world == null) {
           return;
         }
         this.worldX = this.worldX + this.velocityX;
         this.worldY = this.worldY + this.velocityY;
         if (obfuscationGuard < 1) {
-          var4 = (String) null;
+          unusedString = (String) null;
           ParticleEffect.a(-116, -34, (String) null, -4, (String) null);
         }
-        if (200 > this.field_I) {
-          this.field_I = this.field_I + (int)(Math.random() * 4.0);
+        if (200 > this.ageTicks) {
+          this.ageTicks = this.ageTicks + (int)(Math.random() * 4.0);
         }
         if (this.world.terrain.getTerrainType(110) != 4) {
           boolean decompiledFrameRemainder0 = true;
-          if (!this.field_G) {
+          if (!this.usesSurfaceProfile) {
             if (!(this.world.terrain.getSecondaryHeightAt(false, this.worldX >> 4) <= -(this.worldY >> 4))) {
               if ((this.world.terrain.getTerrainType(51) != 2 ||
                 !(this.world.terrain.getSecondaryHeightAt(false, this.worldX >> 4) > 2048)) &&
-                (decompiledFrameRemainder0 = ((this.field_M != 2 &&
-                3 != this.field_M &&
-                this.field_M != 9 &&
-                10 != this.field_M &&
-                this.field_M != 6) ||
+                (decompiledFrameRemainder0 = ((this.effectType != 2 &&
+                3 != this.effectType &&
+                this.effectType != 9 &&
+                10 != this.effectType &&
+                this.effectType != 6) ||
                 this.world.terrain.getSurfaceProfileAt((byte) 126, this.worldX >> 4) != this.world.terrain.getSecondaryHeightAt(false, this.worldX >> 4)))) {
                 this.worldY = -(this.world.terrain.getSecondaryHeightAt(false, this.worldX >> 4) << 4);
-                decompiledFrameRemainder0 = (var3 != 0);
+                decompiledFrameRemainder0 = (obfuscationControl != 0);
               }
               if (decompiledFrameRemainder0) {
                 this.worldX = this.worldX - this.velocityX;
                 this.velocityX = 0;
-                if ((var3 != 0) &&
+                if ((obfuscationControl != 0) &&
                   (this.world.terrain.getSurfaceProfileAt((byte) 122, this.worldX >> 4) < -(this.worldY >> 4))) {
-                  if (this.field_M != 2 &&
-                    this.field_M != 3 &&
-                    this.field_M != 9 &&
-                    this.field_M != 10 &&
-                    this.field_M != 6 ||
+                  if (this.effectType != 2 &&
+                    this.effectType != 3 &&
+                    this.effectType != 9 &&
+                    this.effectType != 10 &&
+                    this.effectType != 6 ||
                     this.world.terrain.getSurfaceProfileAt((byte) 127, this.worldX >> 4) != this.world.terrain.getSecondaryHeightAt(false, this.worldX >> 4)) {
                     this.worldY = -(this.world.terrain.getSurfaceProfileAt((byte) 118, this.worldX >> 4) << 4);
                   }
                   if (this.world.terrain.getSurfaceProfileAt((byte) 120, this.worldX >> 4) == this.world.terrain.getSecondaryHeightAt(false, this.worldX >> 4)) {
-                    this.field_G = false;
+                    this.usesSurfaceProfile = false;
                   }
                 }
               }
             }
           } else {
             if (this.world.terrain.getSurfaceProfileAt((byte) 122, this.worldX >> 4) < -(this.worldY >> 4)) {
-              if (this.field_M != 2 &&
-                this.field_M != 3 &&
-                this.field_M != 9 &&
-                this.field_M != 10 &&
-                this.field_M != 6 ||
+              if (this.effectType != 2 &&
+                this.effectType != 3 &&
+                this.effectType != 9 &&
+                this.effectType != 10 &&
+                this.effectType != 6 ||
                 this.world.terrain.getSurfaceProfileAt((byte) 127, this.worldX >> 4) != this.world.terrain.getSecondaryHeightAt(false, this.worldX >> 4)) {
                 this.worldY = -(this.world.terrain.getSurfaceProfileAt((byte) 118, this.worldX >> 4) << 4);
               }
               if (this.world.terrain.getSurfaceProfileAt((byte) 120, this.worldX >> 4) == this.world.terrain.getSecondaryHeightAt(false, this.worldX >> 4)) {
-                this.field_G = false;
+                this.usesSurfaceProfile = false;
               }
             }
           }
@@ -340,22 +340,22 @@ final class ParticleEffect extends DualNode {
             this.worldY = -(this.world.terrain.getGroundHeightAt((byte) -128, this.worldX >> 4) << 4);
           }
         }
-        if (this.field_M != 10) {
+        if (this.effectType != 10) {
           this.velocityX = this.velocityX * 9 / 10;
           this.velocityY = this.velocityY * 9 / 10;
-          if (var3 != 0) {
-            this.velocityY = this.velocityY + this.world.field_z;
-            var2 = ArticulatedPart.a(9, 0, this.world, 105, this.worldY, this.field_G, 100, 0, this.worldX, this.field_P);
-            this.world.field_O.addLast(3, var2);
+          if (obfuscationControl != 0) {
+            this.velocityY = this.velocityY + this.world.gravityAcceleration;
+            spawnedParticle = ArticulatedPart.createParticle(9, 0, this.world, 105, this.worldY, this.usesSurfaceProfile, 100, 0, this.worldX, this.field_P);
+            this.world.pendingParticles.addLast(3, spawnedParticle);
           }
         } else {
-          this.velocityY = this.velocityY + this.world.field_z;
-          var2 = ArticulatedPart.a(9, 0, this.world, 105, this.worldY, this.field_G, 100, 0, this.worldX, this.field_P);
-          this.world.field_O.addLast(3, var2);
+          this.velocityY = this.velocityY + this.world.gravityAcceleration;
+          spawnedParticle = ArticulatedPart.createParticle(9, 0, this.world, 105, this.worldY, this.usesSurfaceProfile, 100, 0, this.worldX, this.field_P);
+          this.world.pendingParticles.addLast(3, spawnedParticle);
         }
-        this.field_I = this.field_I + 1;
-        if (this.field_I > this.field_D) {
-          this.world.field_J.a((byte) 110, (DualNode) (this));
+        this.ageTicks = this.ageTicks + 1;
+        if (this.ageTicks > this.durationTicks) {
+          this.world.pendingRemovals.addLast((byte) 110, (DualNode) (this));
         }
     }
 

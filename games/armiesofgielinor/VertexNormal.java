@@ -479,7 +479,7 @@ final class VertexNormal {
           } else {
             stackIn_222_2 = "{...}";
           }
-          throw ig.addExceptionContext((Throwable) ((Object) stackIn_221_0), ((StringBuilder) (Object) stackIn_221_1).append(stackIn_222_2).append(')').toString());
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_221_0), ((StringBuilder) (Object) stackIn_221_1).append(stackIn_222_2).append(')').toString());
         }
     }
 

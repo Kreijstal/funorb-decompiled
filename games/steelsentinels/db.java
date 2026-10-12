@@ -204,7 +204,7 @@ abstract class db {
         var2 = SteelSentinels.obfuscationControl;
         try {
           for (var1_int = 0; var1_int < 10000; var1_int++) {
-            k.field_Cb[var1_int].i(-15809);
+            k.particleReuseBuffer[var1_int].detachWorld(-15809);
           }
           if (param0 != 10000) {
             field_f = (String) null;

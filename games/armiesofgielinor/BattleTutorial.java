@@ -76,7 +76,7 @@ class BattleTutorial {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw ig.addExceptionContext((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(obfuscationGuard).append(')').toString());
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 
@@ -1976,7 +1976,7 @@ class BattleTutorial {
           } else {
             stackIn_35_2 = "{...}";
           }
-          throw ig.addExceptionContext((Throwable) ((Object) stackIn_28_0), ((StringBuilder) (Object) stackIn_34_1).append(stackIn_35_2).append(')').toString());
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_28_0), ((StringBuilder) (Object) stackIn_34_1).append(stackIn_35_2).append(')').toString());
         }
     }
 
@@ -2010,7 +2010,7 @@ class BattleTutorial {
           this.controller = controller;
           this.a(messageId, 13567);
         } catch (RuntimeException runtimeException) {
-          throw ig.addExceptionContext((Throwable) ((Object) runtimeException), "iu.<init>(" + (controller != null ? "{...}" : "null") + ',' + messageId + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "iu.<init>(" + (controller != null ? "{...}" : "null") + ',' + messageId + ')');
         }
     }
 
@@ -2031,7 +2031,7 @@ class BattleTutorial {
           this.controller.battlefield.field_f = true;
           this.controller.battlefield.teamStructureCounts[1][1] = 1;
         } catch (RuntimeException runtimeException) {
-          throw ig.addExceptionContext((Throwable) ((Object) runtimeException), "iu.<init>(" + (controller != null ? "{...}" : "null") + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "iu.<init>(" + (controller != null ? "{...}" : "null") + ')');
         }
     }
 

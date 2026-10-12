@@ -94,7 +94,7 @@ final class TutorialController {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
-          throw ig.addExceptionContext((Throwable) ((Object) var4), "ci.RA(" + highlighted + ',' + itemIndex + ',' + obfuscationGuard + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) var4), "ci.RA(" + highlighted + ',' + itemIndex + ',' + obfuscationGuard + ')');
         }
     }
 
@@ -122,7 +122,7 @@ final class TutorialController {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
-          throw ig.addExceptionContext((Throwable) ((Object) runtimeException), "ci.JB(" + param0 + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "ci.JB(" + param0 + ')');
         }
     }
 
@@ -166,7 +166,7 @@ final class TutorialController {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw ig.addExceptionContext((Throwable) ((Object) var3), "ci.EA(" + obfuscationGuard + ',' + itemIndex + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) var3), "ci.EA(" + obfuscationGuard + ',' + itemIndex + ')');
         }
     }
 
@@ -271,7 +271,7 @@ final class TutorialController {
                 if (DeployEvent.field_A == 2) {
                   return;
                 }
-                var2_int = (nr.field_e.a(ig.field_m) >> 1) + 40;
+                var2_int = (nr.field_e.a(AnimationSkeleton.field_m) >> 1) + 40;
                 stackIn_70_0 = -33;
                 stackIn_70_1 = db.a(true, 620 - var2_int);
                 stackIn_70_2 = db.a(true, 620);
@@ -441,7 +441,7 @@ final class TutorialController {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ig.addExceptionContext((Throwable) ((Object) var2), "ci.IB(" + param0 + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) var2), "ci.IB(" + param0 + ')');
         }
     }
 
@@ -576,7 +576,7 @@ final class TutorialController {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ig.addExceptionContext((Throwable) ((Object) var2), "ci.O(" + param0 + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) var2), "ci.O(" + param0 + ')');
         }
     }
 
@@ -594,7 +594,7 @@ final class TutorialController {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ig.addExceptionContext((Throwable) ((Object) var2), "ci.F(" + obfuscationGuard + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) var2), "ci.F(" + obfuscationGuard + ')');
         }
     }
 
@@ -663,7 +663,7 @@ final class TutorialController {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ig.addExceptionContext((Throwable) ((Object) var2), "ci.AA(" + param0 + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) var2), "ci.AA(" + param0 + ')');
         }
     }
 
@@ -741,7 +741,7 @@ final class TutorialController {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
-          throw ig.addExceptionContext((Throwable) ((Object) var4), "ci.I(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) var4), "ci.I(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -788,7 +788,7 @@ final class TutorialController {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ig.addExceptionContext((Throwable) ((Object) var2), "ci.A(" + obfuscationGuard + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) var2), "ci.A(" + obfuscationGuard + ')');
         }
     }
 
@@ -820,8 +820,8 @@ final class TutorialController {
             this.b(320);
             return;
           }
-          if (null == wp.field_z) {
-            wp.field_z = km.a(0, 120, 10, 7);
+          if (null == AnimationFrameSet.field_z) {
+            AnimationFrameSet.field_z = km.a(0, 120, 10, 7);
           }
           boolean decompiledFrameRemainder0 = true;
           var4 = 89;
@@ -833,15 +833,15 @@ final class TutorialController {
           fe.c(hq.field_c, db.a(true, var3[4]), MatchConditionEntry.a(var4, (byte) 94), field_e, true);
           var4 = var4 + (8 + rs.field_n.field_H);
           var6 = -100 / ((15 - param0) / 42);
-          if (!wp.field_z.field_l) {
+          if (!AnimationFrameSet.field_z.field_l) {
             var7 = fm.field_c;
             decompiledFrameRemainder0 = (var13 != 0);
           }
           if (decompiledFrameRemainder0) {
-            if (wp.field_z.field_t != null) {
+            if (AnimationFrameSet.field_z.field_t != null) {
               var7 = wd.field_l;
-              var8 = wp.field_z.field_t[nf.field_Mb];
-              var9 = wp.field_z.field_n[nf.field_Mb];
+              var8 = AnimationFrameSet.field_z.field_t[nf.field_Mb];
+              var9 = AnimationFrameSet.field_z.field_n[nf.field_Mb];
               var10 = 0;
               var11 = 0;
               scanLoop1: while (true) {
@@ -867,7 +867,7 @@ final class TutorialController {
                   }
                   var5 = nd.field_b;
                 }
-                this.a(var5, wp.field_z.field_k, -1, var4, wp.field_z.field_s, wp.field_z.field_m, 310, wp.field_z.field_r, mv.field_d);
+                this.a(var5, AnimationFrameSet.field_z.field_k, -1, var4, AnimationFrameSet.field_z.field_s, AnimationFrameSet.field_z.field_m, 310, AnimationFrameSet.field_z.field_r, mv.field_d);
                 break;
               }
               if (var13 != 0) {
@@ -885,7 +885,7 @@ final class TutorialController {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ig.addExceptionContext((Throwable) ((Object) var2), "ci.J(" + param0 + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) var2), "ci.J(" + param0 + ')');
         }
     }
 
@@ -997,7 +997,7 @@ final class TutorialController {
           } else {
             stackIn_51_2 = "{...}";
           }
-          throw ig.addExceptionContext((Throwable) ((Object) stackIn_50_0), ((StringBuilder) (Object) stackIn_50_1).append(stackIn_51_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_50_0), ((StringBuilder) (Object) stackIn_50_1).append(stackIn_51_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 
@@ -2260,7 +2260,7 @@ final class TutorialController {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
-          throw ig.addExceptionContext((Throwable) ((Object) var4), "ci.HA(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) var4), "ci.HA(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -2268,7 +2268,7 @@ final class TutorialController {
         try {
           fe.a(eq.field_n, db.a(true, param0), MatchConditionEntry.a(220, (byte) 94), 400, 16777215, true);
         } catch (RuntimeException runtimeException) {
-          throw ig.addExceptionContext((Throwable) ((Object) runtimeException), "ci.H(" + param0 + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "ci.H(" + param0 + ')');
         }
     }
 
@@ -2295,7 +2295,7 @@ final class TutorialController {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw ig.addExceptionContext((Throwable) ((Object) var3), "ci.PA(" + param0 + ',' + param1 + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) var3), "ci.PA(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -2412,7 +2412,7 @@ final class TutorialController {
           } else {
             stackIn_39_2 = "{...}";
           }
-          throw ig.addExceptionContext((Throwable) ((Object) stackIn_38_0), ((StringBuilder) (Object) stackIn_38_1).append(stackIn_39_2).append(')').toString());
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_38_0), ((StringBuilder) (Object) stackIn_38_1).append(stackIn_39_2).append(')').toString());
         }
     }
 
@@ -2507,7 +2507,7 @@ final class TutorialController {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ig.addExceptionContext((Throwable) ((Object) var2), "ci.SA(" + param0 + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) var2), "ci.SA(" + param0 + ')');
         }
     }
 
@@ -2643,7 +2643,7 @@ final class TutorialController {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ig.addExceptionContext((Throwable) ((Object) var2), "ci.NA(" + param0 + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) var2), "ci.NA(" + param0 + ')');
         }
     }
 
@@ -2661,7 +2661,7 @@ final class TutorialController {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ig.addExceptionContext((Throwable) ((Object) var2), "ci.GB(" + param0 + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) var2), "ci.GB(" + param0 + ')');
         }
     }
 
@@ -2673,7 +2673,7 @@ final class TutorialController {
             TutorialController.h((byte) -22);
           }
         } catch (RuntimeException runtimeException) {
-          throw ig.addExceptionContext((Throwable) ((Object) runtimeException), "ci.BA(" + param0 + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "ci.BA(" + param0 + ')');
         }
     }
 
@@ -2737,7 +2737,7 @@ final class TutorialController {
           } else {
             stackIn_30_2 = "{...}";
           }
-          throw ig.addExceptionContext((Throwable) ((Object) stackIn_29_0), ((StringBuilder) (Object) stackIn_29_1).append(stackIn_30_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_29_0), ((StringBuilder) (Object) stackIn_29_1).append(stackIn_30_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -2914,7 +2914,7 @@ final class TutorialController {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw ig.addExceptionContext((Throwable) ((Object) var3), "ci.OA(" + param0 + ',' + param1 + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) var3), "ci.OA(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -2945,7 +2945,7 @@ final class TutorialController {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw ig.addExceptionContext((Throwable) ((Object) var3), "ci.LB(" + param0 + ',' + param1 + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) var3), "ci.LB(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -2964,7 +2964,7 @@ final class TutorialController {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw ig.addExceptionContext((Throwable) ((Object) var1), "ci.QA(" + param0 + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) var1), "ci.QA(" + param0 + ')');
         }
     }
 
@@ -3020,7 +3020,7 @@ final class TutorialController {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
-          throw ig.addExceptionContext((Throwable) ((Object) var4), "ci.KA(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) var4), "ci.KA(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -3125,7 +3125,7 @@ final class TutorialController {
           } else {
             stackIn_38_2 = "{...}";
           }
-          throw ig.addExceptionContext((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_37_1).append(stackIn_38_2).append(')').toString());
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_37_1).append(stackIn_38_2).append(')').toString());
         }
     }
 
@@ -3170,7 +3170,7 @@ final class TutorialController {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ig.addExceptionContext((Throwable) (var2), "ci.K(" + param0 + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) (var2), "ci.K(" + param0 + ')');
         }
     }
 
@@ -3221,7 +3221,7 @@ final class TutorialController {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
-          throw ig.addExceptionContext((Throwable) ((Object) var4), "ci.G(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) var4), "ci.G(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -3286,7 +3286,7 @@ final class TutorialController {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ig.addExceptionContext((Throwable) ((Object) var2), "ci.AB(" + param0 + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) var2), "ci.AB(" + param0 + ')');
         }
     }
 
@@ -3305,13 +3305,13 @@ final class TutorialController {
             TurnTimerDial.field_a = null;
           }
           if (this.tutorialStage == 6) {
-            wp.field_z = null;
+            AnimationFrameSet.field_z = null;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ig.addExceptionContext((Throwable) ((Object) var2), "ci.P(" + obfuscationGuard + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) var2), "ci.P(" + obfuscationGuard + ')');
         }
     }
 
@@ -3405,7 +3405,7 @@ final class TutorialController {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw ig.addExceptionContext((Throwable) ((Object) var3), "ci.S(" + itemIndex + ',' + obfuscationGuard + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) var3), "ci.S(" + itemIndex + ',' + obfuscationGuard + ')');
         }
     }
 
@@ -3551,7 +3551,7 @@ final class TutorialController {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ig.addExceptionContext((Throwable) ((Object) var2), "ci.MA(" + param0 + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) var2), "ci.MA(" + param0 + ')');
         }
     }
 
@@ -3793,9 +3793,9 @@ final class TutorialController {
           fe.b(db.a(true, 465), MatchConditionEntry.a(330, (byte) 94), 145, 40, EffectPresentation.field_j, jh.field_k, 0, 128);
           fe.b(db.a(true, 465), MatchConditionEntry.a(380, (byte) 94), 145, 40, EffectPresentation.field_j, jh.field_k, 0, 128);
           this.g(ev.field_d, -118);
-          var5Lifetime1 = 40 + (nr.field_e.a(ig.field_m) >> 1);
+          var5Lifetime1 = 40 + (nr.field_e.a(AnimationSkeleton.field_m) >> 1);
           fm.a(e.field_b, var5Lifetime1, db.a(true, 620 - var5Lifetime1), MatchConditionEntry.a(19, (byte) 94), -104);
-          fe.a(ig.field_m, db.a(true, 640 - var5Lifetime1), MatchConditionEntry.a(49, (byte) 94), 16777215, true);
+          fe.a(AnimationSkeleton.field_m, db.a(true, 640 - var5Lifetime1), MatchConditionEntry.a(49, (byte) 94), 16777215, true);
           if (wg.a(-33, db.a(true, 620 - var5Lifetime1), db.a(true, 620), MatchConditionEntry.a(19, (byte) 94), MatchConditionEntry.a(e.field_b[0].pixelHeight + 19, (byte) 94))) {
             na.field_F = 45;
           }
@@ -3807,7 +3807,7 @@ final class TutorialController {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ig.addExceptionContext((Throwable) ((Object) var2), "ci.KB(" + param0 + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) var2), "ci.KB(" + param0 + ')');
         }
     }
 
@@ -3893,7 +3893,7 @@ final class TutorialController {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3_ref = decompiledCaughtException;
-          throw ig.addExceptionContext((Throwable) ((Object) var3_ref), "ci.C(" + itemId + ',' + obfuscationGuard + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) var3_ref), "ci.C(" + itemId + ',' + obfuscationGuard + ')');
         }
     }
 
@@ -3910,7 +3910,7 @@ final class TutorialController {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw ig.addExceptionContext((Throwable) ((Object) var3), "ci.CB(" + x + ',' + obfuscationGuard + ',' + y + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) var3), "ci.CB(" + x + ',' + obfuscationGuard + ',' + y + ')');
         }
     }
 
@@ -3974,9 +3974,9 @@ final class TutorialController {
           boolean decompiledFrameCompleted0 = true;
           if (stackIn_18_0) {
             var4Lifetime1 = 0;
-            while (!(wp.unitUnlockGroups[li.field_q + 1].length <= var4Lifetime1)) {
-              var2_intLifetime1 = 135 + (int)(100.0 * Math.sin(2.0 * (3.141592653589793 * (double)var4Lifetime1) / (double)wp.unitUnlockGroups[1 + li.field_q].length)) + 30;
-              var3Lifetime1 = (int)(-(Math.cos(3.141592653589793 * (double)var4Lifetime1 * 2.0 / (double)wp.unitUnlockGroups[li.field_q + 1].length) * 100.0)) + 150 + 135;
+            while (!(AnimationFrameSet.unitUnlockGroups[li.field_q + 1].length <= var4Lifetime1)) {
+              var2_intLifetime1 = 135 + (int)(100.0 * Math.sin(2.0 * (3.141592653589793 * (double)var4Lifetime1) / (double)AnimationFrameSet.unitUnlockGroups[1 + li.field_q].length)) + 30;
+              var3Lifetime1 = (int)(-(Math.cos(3.141592653589793 * (double)var4Lifetime1 * 2.0 / (double)AnimationFrameSet.unitUnlockGroups[li.field_q + 1].length) * 100.0)) + 150 + 135;
               stackIn_42_0 = ml.a(MatchConditionEntry.a(var3Lifetime1, (byte) 94), db.a(true, var2_intLifetime1), 25, false);
               if (var8 != 0) {
                 decompiledFrameCompleted0 = false;
@@ -3991,7 +3991,7 @@ final class TutorialController {
                 MoveAttackAction.field_s = li.field_q;
                 vf.field_f = jq.field_F;
                 jq.field_F = var4Lifetime1;
-                b.field_n = new la(wp.unitUnlockGroups[li.field_q + 1][jq.field_F]);
+                b.field_n = new la(AnimationFrameSet.unitUnlockGroups[li.field_q + 1][jq.field_F]);
                 ri.field_d = GlobalSpell.field_h;
                 GlobalSpell.field_h = 256;
               } else {
@@ -4004,7 +4004,7 @@ final class TutorialController {
                 GlobalSpell.field_h = 256;
               }
               if (jq.field_F > -1) {
-                var5 = wp.unitUnlockGroups[1 + li.field_q][jq.field_F];
+                var5 = AnimationFrameSet.unitUnlockGroups[1 + li.field_q][jq.field_F];
                 var6 = "";
                 var6Lifetime1 = ut.field_cb[var5];
                 var7 = bh.field_M[var5];
@@ -4027,11 +4027,11 @@ final class TutorialController {
                 (pg.playerProfile.unitUnlockMasks[1 + li.field_q] == 0) &&
                 (pg.playerProfile.tryDebitRunes(50, (byte) 103))) {
                 vl.outgoingPacket.writeCipheredOpcode(32161, 70);
-                vl.outgoingPacket.writeShort(true, wp.unitUnlockGroups[li.field_q + 1][0]);
+                vl.outgoingPacket.writeShort(true, AnimationFrameSet.unitUnlockGroups[li.field_q + 1][0]);
                 var2_intLifetime2 = 0;
                 while (true) {
-                  if (var2_intLifetime2 < wp.unitUnlockGroups[li.field_q + 1].length) {
-                    stackIn_72_0 = bw.unitDefinitions[wp.unitUnlockGroups[li.field_q + 1][var2_intLifetime2]][11];
+                  if (var2_intLifetime2 < AnimationFrameSet.unitUnlockGroups[li.field_q + 1].length) {
+                    stackIn_72_0 = bw.unitDefinitions[AnimationFrameSet.unitUnlockGroups[li.field_q + 1][var2_intLifetime2]][11];
                     if (var8 == 0) {
                       if (stackIn_72_0 == 0) {
                         pg.playerProfile.unitUnlockMasks[li.field_q] = oe.c(pg.playerProfile.unitUnlockMasks[li.field_q], 1 << var2_intLifetime2);
@@ -4050,7 +4050,7 @@ final class TutorialController {
                   0 == (pg.playerProfile.unitUnlockMasks[1 + li.field_q] & 1 << jq.field_F) &&
                   pg.playerProfile.getAvailableRunes((byte) 91) >= bw.unitDefinitions[jq.field_F][11])) {
                   vl.outgoingPacket.writeCipheredOpcode(32161, 70);
-                  vl.outgoingPacket.writeShort(true, wp.unitUnlockGroups[1 + li.field_q][jq.field_F]);
+                  vl.outgoingPacket.writeShort(true, AnimationFrameSet.unitUnlockGroups[1 + li.field_q][jq.field_F]);
                   RadialSummonMenu.$cfr$intArgs$a$6d836999ad61(62, im.field_v[14]);
                   pg.playerProfile.unitUnlockMasks[1 + li.field_q] = oe.c(pg.playerProfile.unitUnlockMasks[1 + li.field_q], 1 << jq.field_F);
                 }
@@ -4061,7 +4061,7 @@ final class TutorialController {
                 0 == (pg.playerProfile.unitUnlockMasks[1 + li.field_q] & 1 << jq.field_F) &&
                 pg.playerProfile.getAvailableRunes((byte) 91) >= bw.unitDefinitions[jq.field_F][11]) {
                 vl.outgoingPacket.writeCipheredOpcode(32161, 70);
-                vl.outgoingPacket.writeShort(true, wp.unitUnlockGroups[1 + li.field_q][jq.field_F]);
+                vl.outgoingPacket.writeShort(true, AnimationFrameSet.unitUnlockGroups[1 + li.field_q][jq.field_F]);
                 RadialSummonMenu.$cfr$intArgs$a$6d836999ad61(62, im.field_v[14]);
                 pg.playerProfile.unitUnlockMasks[1 + li.field_q] = oe.c(pg.playerProfile.unitUnlockMasks[1 + li.field_q], 1 << jq.field_F);
               }
@@ -4076,7 +4076,7 @@ final class TutorialController {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ig.addExceptionContext((Throwable) ((Object) var2), "ci.V(" + param0 + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) var2), "ci.V(" + param0 + ')');
         }
     }
 
@@ -4116,7 +4116,7 @@ final class TutorialController {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
-          throw ig.addExceptionContext((Throwable) ((Object) runtimeException), "ci.D(" + param0 + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "ci.D(" + param0 + ')');
         }
     }
 
@@ -4151,7 +4151,7 @@ final class TutorialController {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
-          throw ig.addExceptionContext((Throwable) ((Object) var4), "ci.E(" + obfuscationGuard + ',' + pointerDriven + ',' + fallbackIndex + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) var4), "ci.E(" + obfuscationGuard + ',' + pointerDriven + ',' + fallbackIndex + ')');
         }
     }
 
@@ -4245,15 +4245,15 @@ final class TutorialController {
           var7Lifetime2 = 0;
           scanLoop1: while (true) {
             boolean decompiledFrameRemainder0 = true;
-            if (var7Lifetime2 < wp.unitUnlockGroups[1 + MoveAttackAction.field_s].length) {
-              var8Lifetime1 = 135 + ((int)(Math.sin(3.141592653589793 * (double)var7Lifetime2 * 2.0 / (double)wp.unitUnlockGroups[1 + MoveAttackAction.field_s].length) * (double)(100 + var5 * 150 / 256)) + 30);
-              var9Lifetime1 = 285 + (int)(-(Math.cos(3.141592653589793 * (double)var7Lifetime2 * 2.0 / (double)wp.unitUnlockGroups[MoveAttackAction.field_s + 1].length) * (double)(100 + var5 * 150 / 256)));
+            if (var7Lifetime2 < AnimationFrameSet.unitUnlockGroups[1 + MoveAttackAction.field_s].length) {
+              var8Lifetime1 = 135 + ((int)(Math.sin(3.141592653589793 * (double)var7Lifetime2 * 2.0 / (double)AnimationFrameSet.unitUnlockGroups[1 + MoveAttackAction.field_s].length) * (double)(100 + var5 * 150 / 256)) + 30);
+              var9Lifetime1 = 285 + (int)(-(Math.cos(3.141592653589793 * (double)var7Lifetime2 * 2.0 / (double)AnimationFrameSet.unitUnlockGroups[MoveAttackAction.field_s + 1].length) * (double)(100 + var5 * 150 / 256)));
               stackIn_43_0 = vf.field_f;
               stackIn_43_1 = var7Lifetime2;
               if (var10 != 0) {
                 if (stackIn_43_0 < stackIn_43_1) {
-                  var8Lifetime1 = 135 + (30 + (int)((double)(100 + var4 * 150 / 256) * Math.sin(2.0 * (3.141592653589793 * (double)var7Lifetime2) / (double)wp.unitUnlockGroups[li.field_q + 1].length)));
-                  var9Lifetime1 = 135 + (150 + (int)(-(Math.cos((double)var7Lifetime2 * 3.141592653589793 * 2.0 / (double)wp.unitUnlockGroups[1 + li.field_q].length) * (double)(var4 * 150 / 256 + 100))));
+                  var8Lifetime1 = 135 + (30 + (int)((double)(100 + var4 * 150 / 256) * Math.sin(2.0 * (3.141592653589793 * (double)var7Lifetime2) / (double)AnimationFrameSet.unitUnlockGroups[li.field_q + 1].length)));
+                  var9Lifetime1 = 135 + (150 + (int)(-(Math.cos((double)var7Lifetime2 * 3.141592653589793 * 2.0 / (double)AnimationFrameSet.unitUnlockGroups[1 + li.field_q].length) * (double)(var4 * 150 / 256 + 100))));
                   stackOut_44_0 = ml.a(MatchConditionEntry.a(var9Lifetime1, (byte) 94), db.a(true, var8Lifetime1), 25, false);
                   stackIn_71_0 = stackOut_44_0 ? 1 : 0;
                   stackIn_45_0 = stackOut_44_0;
@@ -4268,10 +4268,10 @@ final class TutorialController {
                 lw.field_ob.d(db.a(true, var8Lifetime1 - 20), MatchConditionEntry.a(-20 + var9Lifetime1, (byte) 94), TutorialLayout.field_g[MoveAttackAction.field_s + 1]);
                 km.field_h[0].g(db.a(true, var8Lifetime1 - 23), MatchConditionEntry.a(-23 + var9Lifetime1, (byte) 94));
                 if ((1 << var7Lifetime2 & pg.playerProfile.unitUnlockMasks[1 + MoveAttackAction.field_s]) > 0) {
-                  DeployAction.field_x[wp.unitUnlockGroups[MoveAttackAction.field_s + 1][var7Lifetime2]].g(db.a(true, -19 + var8Lifetime1), MatchConditionEntry.a(-19 + var9Lifetime1, (byte) 94));
+                  DeployAction.field_x[AnimationFrameSet.unitUnlockGroups[MoveAttackAction.field_s + 1][var7Lifetime2]].g(db.a(true, -19 + var8Lifetime1), MatchConditionEntry.a(-19 + var9Lifetime1, (byte) 94));
                   km.field_h[0].g(db.a(true, var8Lifetime1 - 23), MatchConditionEntry.a(-23 + var9Lifetime1, (byte) 94));
                 } else {
-                  DeployAction.field_x[wp.unitUnlockGroups[MoveAttackAction.field_s + 1][var7Lifetime2]].g(db.a(true, var8Lifetime1 - 19), MatchConditionEntry.a(var9Lifetime1 - 19, (byte) 94), 0);
+                  DeployAction.field_x[AnimationFrameSet.unitUnlockGroups[MoveAttackAction.field_s + 1][var7Lifetime2]].g(db.a(true, var8Lifetime1 - 19), MatchConditionEntry.a(var9Lifetime1 - 19, (byte) 94), 0);
                   km.field_h[0].g(db.a(true, -23 + var8Lifetime1), MatchConditionEntry.a(-23 + var9Lifetime1, (byte) 94), 10);
                 }
                 var7Lifetime2++;
@@ -4281,13 +4281,13 @@ final class TutorialController {
             if (decompiledFrameRemainder0) {
               var7Lifetime2 = 0;
               while (true) {
-                stackIn_43_0Lifetime1 = ~wp.unitUnlockGroups[1 + li.field_q].length;
+                stackIn_43_0Lifetime1 = ~AnimationFrameSet.unitUnlockGroups[1 + li.field_q].length;
                 stackIn_43_1Lifetime1 = ~var7Lifetime2;
                 if (stackIn_43_0Lifetime1 >= stackIn_43_1Lifetime1) {
                   break;
                 }
-                var8Lifetime1Lifetime1 = 135 + (30 + (int)((double)(100 + var4 * 150 / 256) * Math.sin(2.0 * (3.141592653589793 * (double)var7Lifetime2) / (double)wp.unitUnlockGroups[li.field_q + 1].length)));
-                var9Lifetime1Lifetime1 = 135 + (150 + (int)(-(Math.cos((double)var7Lifetime2 * 3.141592653589793 * 2.0 / (double)wp.unitUnlockGroups[1 + li.field_q].length) * (double)(var4 * 150 / 256 + 100))));
+                var8Lifetime1Lifetime1 = 135 + (30 + (int)((double)(100 + var4 * 150 / 256) * Math.sin(2.0 * (3.141592653589793 * (double)var7Lifetime2) / (double)AnimationFrameSet.unitUnlockGroups[li.field_q + 1].length)));
+                var9Lifetime1Lifetime1 = 135 + (150 + (int)(-(Math.cos((double)var7Lifetime2 * 3.141592653589793 * 2.0 / (double)AnimationFrameSet.unitUnlockGroups[1 + li.field_q].length) * (double)(var4 * 150 / 256 + 100))));
                 stackOut_44_0Lifetime1 = ml.a(MatchConditionEntry.a(var9Lifetime1Lifetime1, (byte) 94), db.a(true, var8Lifetime1Lifetime1), 25, false);
                 stackIn_71_0 = stackOut_44_0Lifetime1 ? 1 : 0;
                 stackIn_45_0Lifetime1 = stackOut_44_0Lifetime1;
@@ -4308,10 +4308,10 @@ final class TutorialController {
                 }
                 lw.field_ob.d(db.a(true, var8Lifetime1Lifetime1 - 20), MatchConditionEntry.a(var9Lifetime1Lifetime1 - 20, (byte) 94), TutorialLayout.field_g[1 + li.field_q]);
                 if ((1 << var7Lifetime2 & pg.playerProfile.unitUnlockMasks[li.field_q + 1]) <= 0) {
-                  DeployAction.field_x[wp.unitUnlockGroups[li.field_q + 1][var7Lifetime2]].g(db.a(true, var8Lifetime1Lifetime1 - 19), MatchConditionEntry.a(var9Lifetime1Lifetime1 - 19, (byte) 94), 0);
+                  DeployAction.field_x[AnimationFrameSet.unitUnlockGroups[li.field_q + 1][var7Lifetime2]].g(db.a(true, var8Lifetime1Lifetime1 - 19), MatchConditionEntry.a(var9Lifetime1Lifetime1 - 19, (byte) 94), 0);
                   km.field_h[0].g(db.a(true, var8Lifetime1Lifetime1 - 23), MatchConditionEntry.a(var9Lifetime1Lifetime1 - 23, (byte) 94), 10);
                 } else {
-                  DeployAction.field_x[wp.unitUnlockGroups[li.field_q + 1][var7Lifetime2]].g(db.a(true, var8Lifetime1Lifetime1 - 19), MatchConditionEntry.a(var9Lifetime1Lifetime1 - 19, (byte) 94));
+                  DeployAction.field_x[AnimationFrameSet.unitUnlockGroups[li.field_q + 1][var7Lifetime2]].g(db.a(true, var8Lifetime1Lifetime1 - 19), MatchConditionEntry.a(var9Lifetime1Lifetime1 - 19, (byte) 94));
                   km.field_h[0].g(db.a(true, -23 + var8Lifetime1Lifetime1), MatchConditionEntry.a(var9Lifetime1Lifetime1 - 23, (byte) 94));
                 }
                 var7Lifetime2++;
@@ -4343,7 +4343,7 @@ final class TutorialController {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
-          throw ig.addExceptionContext((Throwable) ((Object) runtimeException), "ci.T(" + param0 + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "ci.T(" + param0 + ')');
         }
     }
 
@@ -4418,7 +4418,7 @@ final class TutorialController {
           } else {
             stackIn_29_2 = "{...}";
           }
-          throw ig.addExceptionContext((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(')').toString());
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(')').toString());
         }
     }
 
@@ -4480,7 +4480,7 @@ final class TutorialController {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ig.addExceptionContext((Throwable) ((Object) var2), "ci.<init>(" + tutorialStage + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) var2), "ci.<init>(" + tutorialStage + ')');
         }
     }
 
@@ -4528,7 +4528,7 @@ final class TutorialController {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ig.addExceptionContext((Throwable) ((Object) var2), "ci.WA(" + param0 + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) var2), "ci.WA(" + param0 + ')');
         }
     }
 
@@ -4552,7 +4552,7 @@ final class TutorialController {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw ig.addExceptionContext((Throwable) ((Object) var3), "ci.W(" + obfuscationGuard + ',' + itemIndex + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) var3), "ci.W(" + obfuscationGuard + ',' + itemIndex + ')');
         }
     }
 
@@ -4918,7 +4918,7 @@ final class TutorialController {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ig.addExceptionContext((Throwable) ((Object) var2), "ci.DB(" + param0 + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) var2), "ci.DB(" + param0 + ')');
         }
     }
 
@@ -4934,7 +4934,7 @@ final class TutorialController {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw ig.addExceptionContext((Throwable) ((Object) var3), "ci.Q(" + param0 + ',' + param1 + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) var3), "ci.Q(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -5054,7 +5054,7 @@ final class TutorialController {
           } else {
             stackIn_65_2 = "{...}";
           }
-          throw ig.addExceptionContext((Throwable) ((Object) stackIn_64_0), ((StringBuilder) (Object) stackIn_64_1).append(stackIn_65_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_64_0), ((StringBuilder) (Object) stackIn_64_1).append(stackIn_65_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 
@@ -5142,7 +5142,7 @@ final class TutorialController {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ig.addExceptionContext((Throwable) ((Object) var2), "ci.DA(" + param0 + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) var2), "ci.DA(" + param0 + ')');
         }
     }
 
@@ -5154,7 +5154,7 @@ final class TutorialController {
         int var6 = 0;
         var6 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          var4_int = wp.unitUnlockGroups[param0][param1];
+          var4_int = AnimationFrameSet.unitUnlockGroups[param0][param1];
           var5 = 69 % ((14 - param2) / 40);
           this.b(true);
           if (bw.unitDefinitions[var4_int][11] <= 0) {
@@ -5196,7 +5196,7 @@ final class TutorialController {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
-          throw ig.addExceptionContext((Throwable) ((Object) var4), "ci.HB(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) var4), "ci.HB(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -5291,7 +5291,7 @@ final class TutorialController {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw ig.addExceptionContext((Throwable) ((Object) var3), "ci.UA(" + param0 + ',' + param1 + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) var3), "ci.UA(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -5356,7 +5356,7 @@ final class TutorialController {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw ig.addExceptionContext((Throwable) ((Object) var3), "ci.BB(" + obfuscationGuard + ',' + itemIndex + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) var3), "ci.BB(" + obfuscationGuard + ',' + itemIndex + ')');
         }
     }
 
@@ -5388,7 +5388,7 @@ final class TutorialController {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ig.addExceptionContext((Throwable) ((Object) var2), "ci.LA(" + param0 + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) var2), "ci.LA(" + param0 + ')');
         }
     }
 
@@ -5413,7 +5413,7 @@ final class TutorialController {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3_ref = decompiledCaughtException;
-          throw ig.addExceptionContext((Throwable) ((Object) var3_ref), "ci.MB(" + param0 + ',' + param1 + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) var3_ref), "ci.MB(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -5437,7 +5437,7 @@ final class TutorialController {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw ig.addExceptionContext((Throwable) ((Object) var3), "ci.EB(" + param0 + ',' + param1 + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) var3), "ci.EB(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -5487,7 +5487,7 @@ final class TutorialController {
           } else {
             stackIn_24_2 = "{...}";
           }
-          throw ig.addExceptionContext((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(')').toString());
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(')').toString());
         }
     }
 
@@ -5787,7 +5787,7 @@ final class TutorialController {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ig.addExceptionContext((Throwable) ((Object) var2), "ci.R(" + param0 + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) var2), "ci.R(" + param0 + ')');
         }
     }
 
@@ -5836,7 +5836,7 @@ final class TutorialController {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ig.addExceptionContext((Throwable) ((Object) var2), "ci.CA(" + param0 + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) var2), "ci.CA(" + param0 + ')');
         }
     }
 
@@ -5880,7 +5880,7 @@ final class TutorialController {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3_ref = decompiledCaughtException;
-          throw ig.addExceptionContext((Throwable) ((Object) var3_ref), "ci.M(" + param0 + ',' + param1 + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) var3_ref), "ci.M(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -5909,7 +5909,7 @@ final class TutorialController {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ig.addExceptionContext((Throwable) ((Object) var2), "ci.GA(" + param0 + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) var2), "ci.GA(" + param0 + ')');
         }
     }
 
@@ -5948,7 +5948,7 @@ final class TutorialController {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw ig.addExceptionContext((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param1).append(')').toString());
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -6010,7 +6010,7 @@ final class TutorialController {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw ig.addExceptionContext((Throwable) ((Object) var3), "ci.FB(" + itemIndex + ',' + obfuscationGuard + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) var3), "ci.FB(" + itemIndex + ',' + obfuscationGuard + ')');
         }
     }
 
@@ -6154,7 +6154,7 @@ final class TutorialController {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ig.addExceptionContext((Throwable) ((Object) var2), "ci.L(" + param0 + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) var2), "ci.L(" + param0 + ')');
         }
     }
 

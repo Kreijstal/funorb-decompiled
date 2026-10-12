@@ -24,7 +24,7 @@ final class TickCounter {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ig.addExceptionContext((Throwable) ((Object) var2), "em.D(" + obfuscationGuard + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) var2), "em.D(" + obfuscationGuard + ')');
         }
     }
 
@@ -40,7 +40,7 @@ final class TickCounter {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ig.addExceptionContext((Throwable) ((Object) var2), "em.F(" + obfuscationGuard + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) var2), "em.F(" + obfuscationGuard + ')');
         }
     }
 
@@ -1495,7 +1495,7 @@ final class TickCounter {
                 }
                 var2 = fk.a(false, "GROUND_TIP_PORTAL");
                 if (var2 != null) {
-                  wp.field_F = uu.a(var2, (byte) -102);
+                  AnimationFrameSet.field_F = uu.a(var2, (byte) -102);
                 }
                 var2 = fk.a(false, "GROUND_TIP_TOWER");
                 if (var2 != null) {
@@ -3195,7 +3195,7 @@ final class TickCounter {
                 }
                 var2 = fk.a(false, "LABEL_TUTORIAL");
                 if (null != var2) {
-                  ig.field_m = uu.a(var2, (byte) 98);
+                  AnimationSkeleton.field_m = uu.a(var2, (byte) 98);
                 }
                 var2 = fk.a(false, "LABEL_SANDBOX");
                 if (null != var2) {
@@ -5611,7 +5611,7 @@ final class TickCounter {
                   } else {
                     stackIn_4827_2 = "{...}";
                   }
-                  throw ig.addExceptionContext((Throwable) ((Object) stackIn_4826_0), ((StringBuilder) (Object) stackIn_4826_1).append(stackIn_4827_2).append(',').append(param1).append(')').toString());
+                  throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_4826_0), ((StringBuilder) (Object) stackIn_4826_1).append(stackIn_4827_2).append(',').append(param1).append(')').toString());
                 }
                 if (var3 != 0) {
                   stackIn_4835_0 = (!iv.field_k);
@@ -5683,7 +5683,7 @@ final class TickCounter {
           } else {
             stackIn_20_2 = "{...}";
           }
-          throw ig.addExceptionContext((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
         }
     }
 
@@ -5820,7 +5820,7 @@ final class TickCounter {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var9 = decompiledCaughtException;
-          throw ig.addExceptionContext((Throwable) ((Object) var9), "em.E(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) var9), "em.E(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ')');
         }
     }
 
@@ -5839,7 +5839,7 @@ final class TickCounter {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw ig.addExceptionContext((Throwable) ((Object) var1), "em.B(" + param0 + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) var1), "em.B(" + param0 + ')');
         }
     }
 
@@ -5848,7 +5848,7 @@ final class TickCounter {
           this.limit = limit;
           this.elapsedTicks = 0;
         } catch (RuntimeException runtimeException) {
-          throw ig.addExceptionContext((Throwable) ((Object) runtimeException), "em.<init>(" + limit + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "em.<init>(" + limit + ')');
         }
     }
 

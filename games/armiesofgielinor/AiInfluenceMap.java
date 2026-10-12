@@ -68,7 +68,7 @@ final class AiInfluenceMap {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw ig.addExceptionContext((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(')').toString());
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(')').toString());
         }
     }
 
@@ -161,7 +161,7 @@ final class AiInfluenceMap {
           } else {
             stackIn_39_2 = "{...}";
           }
-          throw ig.addExceptionContext((Throwable) ((Object) stackIn_38_0), ((StringBuilder) (Object) stackIn_38_1).append(stackIn_39_2).append(')').toString());
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_38_0), ((StringBuilder) (Object) stackIn_38_1).append(stackIn_39_2).append(')').toString());
         }
     }
 
@@ -264,7 +264,7 @@ final class AiInfluenceMap {
           } else {
             stackIn_22_2 = "{...}";
           }
-          throw ig.addExceptionContext((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(')').toString());
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(')').toString());
         }
     }
 
@@ -275,7 +275,7 @@ final class AiInfluenceMap {
           }
           this.a(param4[param0][param6], param5, param2, param0, (byte) -4, param6, param3, param1);
         } catch (RuntimeException runtimeException) {
-          throw ig.addExceptionContext((Throwable) ((Object) runtimeException), "ir.I(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ',' + param6 + ',' + param7 + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "ir.I(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ',' + param6 + ',' + param7 + ')');
         }
     }
 
@@ -323,7 +323,7 @@ final class AiInfluenceMap {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw ig.addExceptionContext((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
         }
     }
 
@@ -449,7 +449,7 @@ final class AiInfluenceMap {
           } else {
             stackIn_61_2 = "{...}";
           }
-          throw ig.addExceptionContext((Throwable) ((Object) stackIn_60_0), ((StringBuilder) (Object) stackIn_60_1).append(stackIn_61_2).append(',').append(param1).append(')').toString());
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_60_0), ((StringBuilder) (Object) stackIn_60_1).append(stackIn_61_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -663,7 +663,7 @@ final class AiInfluenceMap {
           } else {
             stackIn_34_2 = "{...}";
           }
-          throw ig.addExceptionContext((Throwable) ((Object) stackIn_30_0), ((StringBuilder) (Object) stackIn_33_1).append(stackIn_34_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_30_0), ((StringBuilder) (Object) stackIn_33_1).append(stackIn_34_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -675,7 +675,7 @@ final class AiInfluenceMap {
           }
           this.a(param3, param6, param2, param1, param5, false, param4, true);
         } catch (RuntimeException runtimeException) {
-          throw ig.addExceptionContext((Throwable) ((Object) runtimeException), "ir.D(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ',' + param6 + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "ir.D(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ',' + param6 + ')');
         }
     }
 
@@ -732,7 +732,7 @@ final class AiInfluenceMap {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw ig.addExceptionContext((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(mapWidth).append(',').append(mapHeight).append(')').toString());
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(mapWidth).append(',').append(mapHeight).append(')').toString());
         }
     }
 
@@ -811,11 +811,11 @@ final class AiInfluenceMap {
               var11 = vt.field_m[var9];
               var6[0][var10] = LeaderEscortCondition.field_a[var11];
               var7[0][var10 * 4] = no.field_U[var11];
-              var7[0][1 + 4 * var10] = wp.field_w[var11];
+              var7[0][1 + 4 * var10] = AnimationFrameSet.field_w[var11];
               var7[0][var10 * 4 + 2] = TutorialController.field_c[var11];
               var7[0][3 + var10 * 4] = VineGrowthAction.field_s[var11];
               if (gt.a(LeaderEscortCondition.field_a[var11], (byte) 121) &&
-                0 == TutorialController.field_c[var11] + wp.field_w[var11] + VineGrowthAction.field_s[var11]) {
+                0 == TutorialController.field_c[var11] + AnimationFrameSet.field_w[var11] + VineGrowthAction.field_s[var11]) {
                 var6[0][var10] = null;
                 var10--;
               }
@@ -829,11 +829,11 @@ final class AiInfluenceMap {
               var11Lifetime1 = vt.field_m[var5 + var9Lifetime1];
               var6[1][var13] = LeaderEscortCondition.field_a[var11Lifetime1];
               var7[1][4 * var13] = no.field_U[var11Lifetime1];
-              var7[1][var13 * 4 + 1] = wp.field_w[var11Lifetime1];
+              var7[1][var13 * 4 + 1] = AnimationFrameSet.field_w[var11Lifetime1];
               var7[1][var13 * 4 + 2] = TutorialController.field_c[var11Lifetime1];
               var7[1][var13 * 4 + 3] = VineGrowthAction.field_s[var11Lifetime1];
               if (gt.a(LeaderEscortCondition.field_a[var11Lifetime1], (byte) 109) &&
-                VineGrowthAction.field_s[var11Lifetime1] + (wp.field_w[var11Lifetime1] + TutorialController.field_c[var11Lifetime1]) == 0) {
+                VineGrowthAction.field_s[var11Lifetime1] + (AnimationFrameSet.field_w[var11Lifetime1] + TutorialController.field_c[var11Lifetime1]) == 0) {
                 var6[1][var13] = null;
                 var13--;
               }
@@ -849,7 +849,7 @@ final class AiInfluenceMap {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw ig.addExceptionContext((Throwable) ((Object) var1), "ir.J(" + param0 + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) var1), "ir.J(" + param0 + ')');
         }
     }
 

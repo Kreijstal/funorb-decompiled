@@ -15,14 +15,14 @@ final class ol extends SceneWidget {
     static int field_Ub;
     static int field_dc;
 
-    final static ParticleEffect d(byte param0) {
-        int fieldTemp$0 = mg.field_hc - 1;
-        mg.field_hc = mg.field_hc - 1;
+    final static ParticleEffect acquireCyclicParticle(byte obfuscationGuard) {
+        int fieldTemp$0 = mg.particleReuseCursor - 1;
+        mg.particleReuseCursor = mg.particleReuseCursor - 1;
         if (0 > fieldTemp$0) {
-          mg.field_hc = mg.field_hc + 10000;
+          mg.particleReuseCursor = mg.particleReuseCursor + 10000;
         }
-        int var1 = -54 % ((-5 - param0) / 60);
-        return k.field_Cb[mg.field_hc];
+        int var1 = -54 % ((-5 - obfuscationGuard) / 60);
+        return k.particleReuseBuffer[mg.particleReuseCursor];
     }
 
     final static void l(int param0) {

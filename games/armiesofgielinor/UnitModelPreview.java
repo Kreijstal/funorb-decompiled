@@ -377,7 +377,7 @@ final class UnitModelPreview {
           tm.c(screenX, screenY);
           var18_ref = (ModelMesh) (this.model.a(var5 != 0, false, var6 != 0));
           var20 = var18_ref;
-          var18_ref.b(hk.field_Jb[this.unitType], hk.field_Jb[this.unitType], hk.field_Jb[this.unitType]);
+          var18_ref.scaleGeometry(hk.field_Jb[this.unitType], hk.field_Jb[this.unitType], hk.field_Jb[this.unitType]);
           if (highlighted) {
             np.a(false, var20);
           }
@@ -388,7 +388,7 @@ final class UnitModelPreview {
         tm.c(screenX, screenY);
         ModelMesh var17_ref = (ModelMesh) (this.animationPlayer.applyCurrentFrame(var5 != 0, true, var6 != 0, this.model));
         ModelMesh var19 = var17_ref;
-        var17_ref.b(hk.field_Jb[this.unitType], hk.field_Jb[this.unitType], hk.field_Jb[this.unitType]);
+        var17_ref.scaleGeometry(hk.field_Jb[this.unitType], hk.field_Jb[this.unitType], hk.field_Jb[this.unitType]);
         if (highlighted) {
           np.a(copyVariant, var19);
         } else {
@@ -417,7 +417,7 @@ final class UnitModelPreview {
           } else {
             stackIn_6_2 = "{...}";
           }
-          throw ig.addExceptionContext((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(',').append(unitType).append(',').append(yaw).append(')').toString());
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(',').append(unitType).append(',').append(yaw).append(')').toString());
         }
     }
 
@@ -427,7 +427,7 @@ final class UnitModelPreview {
 
     private final void installFrameSet(int obfuscationGuard) {
         int var2 = this.animationPlayer.frameId >> 16;
-        wp var3 = we.a(var2, true);
+        AnimationFrameSet var3 = we.a(var2, true);
         if (obfuscationGuard == -298276720) {
           io.a(var3, (byte) -34);
           return;

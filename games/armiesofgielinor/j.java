@@ -64,7 +64,7 @@ final class j {
           DisplacedUnitMarker.field_t[54] = mh.field_d;
           DisplacedUnitMarker.field_t[2] = sa.field_b;
           DisplacedUnitMarker.field_t[5] = pq.field_d;
-          DisplacedUnitMarker.field_t[25] = ig.field_m;
+          DisplacedUnitMarker.field_t[25] = AnimationSkeleton.field_m;
           DisplacedUnitMarker.field_t[22] = hq.field_d;
           DisplacedUnitMarker.field_t[16] = InstructionsPanel.field_y;
           DisplacedUnitMarker.field_t[28] = wf.field_s;
@@ -162,7 +162,7 @@ final class j {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw ig.addExceptionContext((Throwable) ((Object) var1), "j.C(" + param0 + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) var1), "j.C(" + param0 + ')');
         }
     }
 
@@ -199,7 +199,7 @@ final class j {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw ig.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -413,7 +413,7 @@ final class j {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
-          throw ig.addExceptionContext((Throwable) ((Object) var4), "j.A(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) var4), "j.A(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -444,7 +444,7 @@ final class j {
           } else {
             stackIn_6_2 = "{...}";
           }
-          throw ig.addExceptionContext((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(')').toString());
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(')').toString());
         }
     }
 

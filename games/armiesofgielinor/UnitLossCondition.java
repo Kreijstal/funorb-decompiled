@@ -39,7 +39,7 @@ final class UnitLossCondition implements MatchCondition {
           this.playerId = playerId;
           this.battlefield = battlefield;
         } catch (RuntimeException runtimeException) {
-          throw ig.addExceptionContext((Throwable) ((Object) runtimeException), "mc.<init>(" + playerId + ',' + (battlefield != null ? "{...}" : "null") + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "mc.<init>(" + playerId + ',' + (battlefield != null ? "{...}" : "null") + ')');
         }
     }
 

@@ -7,7 +7,7 @@ final class IntPair extends IntrusiveNode {
     static String field_o;
     static String field_p;
     int second;
-    static wp field_q;
+    static AnimationFrameSet field_q;
     static hd field_m;
 
     public static void a(int param0) {

@@ -611,13 +611,13 @@ final class ne extends DualNode {
           var6Lifetime1 = stackIn_83_0;
           if (4 == this.field_B.terrain.getTerrainType(114) &&
             this.field_I >= 0) {
-            this.field_B.field_J.a((byte) 114, (DualNode) (this));
+            this.field_B.pendingRemovals.addLast((byte) 114, (DualNode) (this));
             return;
           }
           if (var6Lifetime1 == 0) {
-            this.field_S = this.field_S + this.field_B.field_z;
+            this.field_S = this.field_S + this.field_B.gravityAcceleration;
             if (this.field_U) {
-              this.field_S = this.field_S - 3 * this.field_B.field_z / 4;
+              this.field_S = this.field_S - 3 * this.field_B.gravityAcceleration / 4;
             }
             this.field_I = this.field_I + this.field_S;
             if (var5Lifetime1 <= this.field_I) {
@@ -649,8 +649,8 @@ final class ne extends DualNode {
               while (2 > var7_intLifetime1) {
                 var8_double = Math.random() * 6.283185307179586;
                 var10_double = Math.random() * 512.0;
-                var12_ref_qb = ArticulatedPart.a(8, (int)(Math.sin(var8_double) * var10_double), this.field_B, 90, this.field_I, false, 250, (int)((double)(this.field_S + 10) - Math.abs(Math.cos(var8_double)) * var10_double), this.field_z, this.field_z);
-                this.field_B.field_O.addLast(3, var12_ref_qb);
+                var12_ref_qb = ArticulatedPart.createParticle(8, (int)(Math.sin(var8_double) * var10_double), this.field_B, 90, this.field_I, false, 250, (int)((double)(this.field_S + 10) - Math.abs(Math.cos(var8_double)) * var10_double), this.field_z, this.field_z);
+                this.field_B.pendingParticles.addLast(3, var12_ref_qb);
                 var7_intLifetime1++;
                 if (var13 != 0) {
                   decompiledFrameCompleted0 = false;

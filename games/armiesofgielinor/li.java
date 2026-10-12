@@ -15,7 +15,7 @@ final class li extends IntrusiveNode {
     final static void a(int param0) {
         int var3 = 0;
         int var1_int = 0;
-        wp var2 = null;
+        AnimationFrameSet var2 = null;
         int var4 = 0;
         int stackIn_4_0 = 0;
         RuntimeException decompiledCaughtException = null;
@@ -43,7 +43,7 @@ final class li extends IntrusiveNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw ig.addExceptionContext((Throwable) ((Object) var1), "li.B(" + param0 + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) var1), "li.B(" + param0 + ')');
         }
     }
 
@@ -63,7 +63,7 @@ final class li extends IntrusiveNode {
         try {
           this.field_l = param0;
         } catch (RuntimeException runtimeException) {
-          throw ig.addExceptionContext((Throwable) ((Object) runtimeException), "li.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "li.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

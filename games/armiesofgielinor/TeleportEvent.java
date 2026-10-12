@@ -65,7 +65,7 @@ final class TeleportEvent extends GameEvent {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw ig.addExceptionContext((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
         }
     }
 
@@ -119,7 +119,7 @@ final class TeleportEvent extends GameEvent {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw ig.addExceptionContext((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(obfuscationGuard).append(')').toString());
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 
@@ -143,12 +143,12 @@ final class TeleportEvent extends GameEvent {
           }
           var3_int = 0;
           var4 = od.field_b;
-          while (wp.field_v.length > var3_int) {
+          while (AnimationFrameSet.field_v.length > var3_int) {
             var5 = TileMetadata.field_h[var3_int];
             if (0 > var5) {
               var4 = var4 + fh.field_e;
             } else {
-              var6 = lg.a(wp.field_v[var3_int], true, (byte) -56);
+              var6 = lg.a(AnimationFrameSet.field_v[var3_int], true, (byte) -56);
               var4 = var4 + cp.field_a;
               var7 = InstructionsPanel.field_B - (var6 >> 1);
               if (mu.a(param0, (el.field_c << 1) + TelepopEvent.field_B, param2, -et.field_b + var7, 5138823, var6 + (et.field_b << 1), var4)) {
@@ -164,7 +164,7 @@ final class TeleportEvent extends GameEvent {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw ig.addExceptionContext((Throwable) ((Object) var3), "ec.B(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) var3), "ec.B(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 

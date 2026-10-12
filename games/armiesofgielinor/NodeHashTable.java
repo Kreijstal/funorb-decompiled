@@ -159,7 +159,7 @@ final class NodeHashTable {
           node.key = key;
           node.next.previous = node;
         } catch (RuntimeException runtimeException) {
-          throw ig.addExceptionContext((Throwable) ((Object) runtimeException), "bg.D(" + (node != null ? "{...}" : "null") + ',' + key + ',' + obfuscationGuard + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "bg.D(" + (node != null ? "{...}" : "null") + ',' + key + ',' + obfuscationGuard + ')');
         }
     }
 

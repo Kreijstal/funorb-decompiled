@@ -32,7 +32,7 @@ final class DisplacedUnitMarker extends PreparedAction {
             field_s = (RgbSprite[]) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw ig.addExceptionContext((Throwable) ((Object) runtimeException), "il.C(" + obfuscationGuard + ',' + (battlefield != null ? "{...}" : "null") + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "il.C(" + obfuscationGuard + ',' + (battlefield != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -65,7 +65,7 @@ final class DisplacedUnitMarker extends PreparedAction {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw ig.addExceptionContext((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 
@@ -74,7 +74,7 @@ final class DisplacedUnitMarker extends PreparedAction {
           if (null != tile.occupant) {
           }
         } catch (RuntimeException runtimeException) {
-          throw ig.addExceptionContext((Throwable) ((Object) runtimeException), "il.<init>(" + suppliedX + ',' + suppliedY + ',' + (unit != null ? "{...}" : "null") + ',' + (tile != null ? "{...}" : "null") + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "il.<init>(" + suppliedX + ',' + suppliedY + ',' + (unit != null ? "{...}" : "null") + ',' + (tile != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -85,7 +85,7 @@ final class DisplacedUnitMarker extends PreparedAction {
           param0.addMouseMotionListener(BattleCharacter.field_q);
           param0.addFocusListener(BattleCharacter.field_q);
         } catch (RuntimeException runtimeException) {
-          throw ig.addExceptionContext((Throwable) ((Object) runtimeException), "il.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "il.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

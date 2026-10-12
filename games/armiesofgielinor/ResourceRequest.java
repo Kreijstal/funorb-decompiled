@@ -65,7 +65,7 @@ abstract class ResourceRequest extends DualLinkedNode {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw ig.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 
@@ -115,7 +115,7 @@ abstract class ResourceRequest extends DualLinkedNode {
           if (param3 != null) {
             param0 = param3.applyCurrentFrame(false, true, false, param0);
           }
-          param0.b(param4, param4, param4);
+          param0.scaleGeometry(param4, param4, param4);
           param0.a(var9_int, var10, var11, var14, var15, var16, var17, -1L);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -140,7 +140,7 @@ abstract class ResourceRequest extends DualLinkedNode {
           } else {
             stackIn_25_2 = "{...}";
           }
-          throw ig.addExceptionContext((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param8).append(')').toString());
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param8).append(')').toString());
         }
     }
 

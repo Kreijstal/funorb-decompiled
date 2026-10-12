@@ -159,7 +159,7 @@ final class BufferedFile {
           } else {
             stackIn_52_2 = "{...}";
           }
-          throw ig.addExceptionContext((Throwable) ((Object) stackIn_51_0), ((StringBuilder) (Object) stackIn_51_1).append(stackIn_52_2).append(')').toString());
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_51_0), ((StringBuilder) (Object) stackIn_51_1).append(stackIn_52_2).append(')').toString());
         }
     }
 
@@ -203,7 +203,7 @@ final class BufferedFile {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw ig.addExceptionContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -220,7 +220,7 @@ final class BufferedFile {
         try {
           this.readFully(destinationOffset, destination, (byte) -103, destination.length);
         } catch (RuntimeException runtimeException) {
-          throw ig.addExceptionContext((Throwable) ((Object) runtimeException), "ue.E(" + destinationOffset + ',' + (destination != null ? "{...}" : "null") + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "ue.E(" + destinationOffset + ',' + (destination != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -384,7 +384,7 @@ final class BufferedFile {
           } else {
             stackIn_63_2 = "{...}";
           }
-          throw ig.addExceptionContext((Throwable) ((Object) stackIn_62_0), ((StringBuilder) (Object) stackIn_62_1).append(stackIn_63_2).append(',').append(obfuscationGuard).append(',').append(length).append(')').toString());
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_62_0), ((StringBuilder) (Object) stackIn_62_1).append(stackIn_63_2).append(',').append(obfuscationGuard).append(',').append(length).append(')').toString());
         }
     }
 
@@ -501,7 +501,7 @@ final class BufferedFile {
           this.writeBuffer = new byte[writeBufferSize];
           this.position = 0L;
         } catch (RuntimeException runtimeException) {
-          throw ig.addExceptionContext((Throwable) ((Object) runtimeException), "ue.<init>(" + (file != null ? "{...}" : "null") + ',' + readBufferSize + ',' + writeBufferSize + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "ue.<init>(" + (file != null ? "{...}" : "null") + ',' + readBufferSize + ',' + writeBufferSize + ')');
         }
     }
 

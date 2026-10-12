@@ -39,7 +39,7 @@ abstract class vk {
         if (param0 != 16) {
           return 76;
         }
-        return this.field_m.a((byte) -115) + this.field_a.a((byte) -105);
+        return this.field_m.size((byte) -115) + this.field_a.size((byte) -105);
     }
 
     final boolean b(byte param0) {
@@ -52,10 +52,10 @@ abstract class vk {
 
     final int d(int param0) {
         if (param0 == -21033) {
-          return this.field_j.a((byte) -102) + this.field_p.a((byte) -85);
+          return this.field_j.size((byte) -102) + this.field_p.size((byte) -85);
         }
         this.a(124);
-        return this.field_j.a((byte) -102) + this.field_p.a((byte) -85);
+        return this.field_j.size((byte) -102) + this.field_p.size((byte) -85);
     }
 
     final static boolean a(long param0, int[] param1, String param2, int param3, int param4) {
@@ -236,12 +236,12 @@ abstract class vk {
           if (this.a((byte) 16) >= 20) {
             throw new RuntimeException();
           }
-          this.field_m.a((byte) 96, var8);
+          this.field_m.addLast((byte) 96, var8);
         } else {
           if (!(this.d(-21033) < 20)) {
             throw new RuntimeException();
           }
-          this.field_j.a((byte) 47, var8);
+          this.field_j.addLast((byte) 47, var8);
         }
         return var8;
     }

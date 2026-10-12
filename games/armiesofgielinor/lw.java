@@ -16,7 +16,7 @@ final class lw extends pt {
             field_nb = (String) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw ig.addExceptionContext((Throwable) ((Object) runtimeException), "lw.K(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "lw.K(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -29,7 +29,7 @@ final class lw extends pt {
           int var3_int = -61 % ((-27 - param1) / 44);
           super.a(param0, (byte) 87);
         } catch (RuntimeException runtimeException) {
-          throw ig.addExceptionContext((Throwable) ((Object) runtimeException), "lw.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "lw.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

@@ -157,7 +157,7 @@ class kq extends fw {
           } else {
             stackIn_52_2 = "{...}";
           }
-          throw ig.addExceptionContext((Throwable) ((Object) stackIn_51_0), ((StringBuilder) (Object) stackIn_51_1).append(stackIn_52_2).append(',').append(tileX).append(')').toString());
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_51_0), ((StringBuilder) (Object) stackIn_51_1).append(stackIn_52_2).append(',').append(tileX).append(')').toString());
         }
     }
 
@@ -176,7 +176,7 @@ class kq extends fw {
         try {
           this.field_Q = param0;
         } catch (RuntimeException runtimeException) {
-          throw ig.addExceptionContext((Throwable) ((Object) runtimeException), "kq.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "kq.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -203,7 +203,7 @@ class kq extends fw {
           packet.writeBits(-16807, headerBitLength, var5_int);
           packet.setReadBitPosition((byte) -73, headerBitPosition);
         } catch (RuntimeException runtimeException) {
-          throw ig.addExceptionContext((Throwable) ((Object) runtimeException), "kq.E(" + headerBitPosition + ',' + obfuscationGuard + ',' + headerBitLength + ',' + payloadBitLength + ',' + (packet != null ? "{...}" : "null") + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "kq.E(" + headerBitPosition + ',' + obfuscationGuard + ',' + headerBitLength + ',' + payloadBitLength + ',' + (packet != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -230,7 +230,7 @@ class kq extends fw {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw ig.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
@@ -265,7 +265,7 @@ class kq extends fw {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw ig.addExceptionContext((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(')').toString());
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(')').toString());
         }
     }
 

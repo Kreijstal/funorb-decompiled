@@ -414,8 +414,8 @@ final class Explosion extends DualNode {
                             var8_double = (Math.random() * (double)(-this.ageTicks + this.durationTicks) / 4.0 + (double)this.ageTicks) * (double)this.field_U / (double)this.durationTicks + 1.0;
                             var10 = (int)(var8_double * Math.sin(var5_double)) << 4;
                             var11 = (int)(var8_double * Math.cos(var5_double)) << 4;
-                            var7_ref_qb = ArticulatedPart.a(1, 0, this.world, 126, this.worldY + var11 / 2, this.field_R, 150, 0, var10 / 2 + this.worldX, this.field_y);
-                            this.world.field_O.addLast(3, var7_ref_qb);
+                            var7_ref_qb = ArticulatedPart.createParticle(1, 0, this.world, 126, this.worldY + var11 / 2, this.field_R, 150, 0, var10 / 2 + this.worldX, this.field_y);
+                            this.world.pendingParticles.addLast(3, var7_ref_qb);
                             if (10 <= this.ageTicks) {
                                 statePc = 68;
                                 continue scanLoop1;
@@ -423,8 +423,8 @@ final class Explosion extends DualNode {
                                 /* Inlined CFG state: 67. */
                                 {
                                     var12 = 25;
-                                    var7_ref_qb = ArticulatedPart.a(10, (int)((double)(var12 * var10) / var8_double), this.world, 95, var11 + this.worldY, this.field_R, 100, (int)((double)(var12 * var11) / var8_double), var10 + this.worldX, this.field_y);
-                                    this.world.field_O.addLast(3, var7_ref_qb);
+                                    var7_ref_qb = ArticulatedPart.createParticle(10, (int)((double)(var12 * var10) / var8_double), this.world, 95, var11 + this.worldY, this.field_R, 100, (int)((double)(var12 * var11) / var8_double), var10 + this.worldX, this.field_y);
+                                    this.world.pendingParticles.addLast(3, var7_ref_qb);
                                     statePc = 68;
                                     continue scanLoop1;
                                 }
@@ -442,8 +442,8 @@ final class Explosion extends DualNode {
                                             var8_double = (Math.random() * (double)(this.durationTicks - this.ageTicks) / 4.0 + (double)this.ageTicks) * (double)this.field_U / (double)this.durationTicks;
                                             var10 = (int)(Math.sin(var5_double) * var8_double) << 4;
                                             var11 = (int)(Math.cos(var5_double) * var8_double) << 4;
-                                            var7_ref_qb = ArticulatedPart.a(1, 0, this.world, 125, var11 / 2 + this.worldY, this.field_R, 50, 0, this.worldX + var10 / 2, this.field_y);
-                                            this.world.field_O.addLast(3, var7_ref_qb);
+                                            var7_ref_qb = ArticulatedPart.createParticle(1, 0, this.world, 125, var11 / 2 + this.worldY, this.field_R, 50, 0, this.worldX + var10 / 2, this.field_y);
+                                            this.world.pendingParticles.addLast(3, var7_ref_qb);
                                             var12 = 0;
                                             statePc = 58;
                                             continue scanLoop1;
@@ -457,8 +457,8 @@ final class Explosion extends DualNode {
                                                     var8_double = Math.random() * (double)((this.durationTicks - this.ageTicks) / 4 + this.ageTicks) * (double)this.field_U / (double)this.durationTicks;
                                                     var10 = (int)(var8_double * Math.sin(var5_double)) << 4;
                                                     var11 = (int)(Math.cos(var5_double) * var8_double) << 4;
-                                                    var7_ref_qb = ArticulatedPart.a(4, 0, this.world, 95, this.worldY + var11, this.field_R, 100, 0, var10 + this.worldX, this.field_y);
-                                                    this.world.field_O.addLast(3, var7_ref_qb);
+                                                    var7_ref_qb = ArticulatedPart.createParticle(4, 0, this.world, 95, this.worldY + var11, this.field_R, 100, 0, var10 + this.worldX, this.field_y);
+                                                    this.world.pendingParticles.addLast(3, var7_ref_qb);
                                                     statePc = 69;
                                                     continue scanLoop1;
                                                 }
@@ -482,8 +482,8 @@ final class Explosion extends DualNode {
                                     var8_double = Math.random() * (double)((this.durationTicks - this.ageTicks) / 4 + this.ageTicks) * (double)this.field_U / (double)this.durationTicks;
                                     var10 = (int)(Math.sin(var5_double) * var8_double) << 4;
                                     var11 = (int)(Math.cos(var5_double) * var8_double) << 4;
-                                    var7_ref_qb = ArticulatedPart.a(3, 0, this.world, 104, this.worldY + var11, this.field_R, 50, 0, var10 + this.worldX, this.field_y);
-                                    this.world.field_O.addLast(3, var7_ref_qb);
+                                    var7_ref_qb = ArticulatedPart.createParticle(3, 0, this.world, 104, this.worldY + var11, this.field_R, 50, 0, var10 + this.worldX, this.field_y);
+                                    this.world.pendingParticles.addLast(3, var7_ref_qb);
                                     statePc = 69;
                                     continue scanLoop1;
                                 }
@@ -495,10 +495,10 @@ final class Explosion extends DualNode {
                     var8_double = (Math.random() * (double)(-this.ageTicks + this.durationTicks) / 4.0 + (double)this.ageTicks) * (double)this.field_U / (double)this.durationTicks;
                     var10 = (int)(Math.sin(var5_double) * var8_double) << 4;
                     var11 = (int)(Math.cos(var5_double) * var8_double) << 4;
-                    var7_ref_qb = ArticulatedPart.a(1, 0, this.world, 114, this.worldY + var11, this.field_R, 150, 0, this.worldX + var10, this.field_y);
-                    this.world.field_O.addLast(3, var7_ref_qb);
-                    var7_ref_qb = ArticulatedPart.a(0, var10 >> 5, this.world, 115, this.worldY + var11 / 2, this.field_R, 300, var11 >> 5, this.worldX + var10 / 2, this.field_y);
-                    this.world.field_O.addLast(3, var7_ref_qb);
+                    var7_ref_qb = ArticulatedPart.createParticle(1, 0, this.world, 114, this.worldY + var11, this.field_R, 150, 0, this.worldX + var10, this.field_y);
+                    this.world.pendingParticles.addLast(3, var7_ref_qb);
+                    var7_ref_qb = ArticulatedPart.createParticle(0, var10 >> 5, this.world, 115, this.worldY + var11 / 2, this.field_R, 300, var11 >> 5, this.worldX + var10 / 2, this.field_y);
+                    this.world.pendingParticles.addLast(3, var7_ref_qb);
                     statePc = 69;
                     continue scanLoop1;
                 }
@@ -509,12 +509,12 @@ final class Explosion extends DualNode {
                             var8_double = Math.random() * (double)((this.durationTicks - this.ageTicks) / 4 + this.ageTicks) * (double)this.field_U / (double)this.durationTicks;
                             var10 = (int)(Math.sin(var5_double) * var8_double) << 4;
                             var11 = (int)(var8_double * Math.cos(var5_double)) << 4;
-                            var7_ref_qb = ArticulatedPart.a(5, 0, this.world, 104, this.worldY - (-(var11 / 256) + 3584), this.field_R, 100, 0, this.worldX + var10 / 256, this.field_y);
-                            this.world.field_O.addLast(3, var7_ref_qb);
+                            var7_ref_qb = ArticulatedPart.createParticle(5, 0, this.world, 104, this.worldY - (-(var11 / 256) + 3584), this.field_R, 100, 0, this.worldX + var10 / 256, this.field_y);
+                            this.world.pendingParticles.addLast(3, var7_ref_qb);
                             var10 = (int)(Math.sin((double)var3 * 0.2) * var8_double) << 4;
                             var11 = (int)(var8_double * Math.cos((double)var3 * 0.2)) << 4;
-                            var7_ref_qb = ArticulatedPart.a(5, 0, this.world, 95, this.worldY + var11, this.field_R, 100, 0, this.worldX + var10, this.field_y);
-                            this.world.field_O.addLast(3, var7_ref_qb);
+                            var7_ref_qb = ArticulatedPart.createParticle(5, 0, this.world, 95, this.worldY + var11, this.field_R, 100, 0, this.worldX + var10, this.field_y);
+                            this.world.pendingParticles.addLast(3, var7_ref_qb);
                             statePc = 69;
                             continue scanLoop1;
                         }
@@ -530,8 +530,8 @@ final class Explosion extends DualNode {
                                             var8_double = Math.random() * (double)((-this.ageTicks + this.durationTicks) / 4 + this.ageTicks) * (double)this.field_U / (double)this.durationTicks;
                                             var10 = (int)(Math.sin(var5_double) * var8_double) << 4;
                                             var11 = (int)(Math.cos(var5_double) * var8_double) << 4;
-                                            var7_ref_qb = ArticulatedPart.a(4, 0, this.world, 112, var11 + this.worldY, this.field_R, 100, 0, this.worldX + var10, this.field_y);
-                                            this.world.field_O.addLast(3, var7_ref_qb);
+                                            var7_ref_qb = ArticulatedPart.createParticle(4, 0, this.world, 112, var11 + this.worldY, this.field_R, 100, 0, this.worldX + var10, this.field_y);
+                                            this.world.pendingParticles.addLast(3, var7_ref_qb);
                                             statePc = 69;
                                             continue scanLoop1;
                                         }
@@ -544,10 +544,10 @@ final class Explosion extends DualNode {
                                                     var8_double = (double)(this.ageTicks * this.field_U / this.durationTicks);
                                                     var10 = (int)(var8_double * Math.sin(0.2 * (double)var3)) << 4;
                                                     var11 = (int)(var8_double * Math.cos(0.2 * (double)var3)) << 4;
-                                                    var7_ref_qb = ArticulatedPart.a(5, 0, this.world, 99, this.worldY + var11, this.field_R, 100, 0, var10 + this.worldX, this.field_y);
-                                                    this.world.field_O.addLast(3, var7_ref_qb);
-                                                    var7_ref_qb = ArticulatedPart.a(5, 0, this.world, 113, -var11 + this.worldY, this.field_R, 100, 0, this.worldX - var10, this.field_y);
-                                                    this.world.field_O.addLast(3, var7_ref_qb);
+                                                    var7_ref_qb = ArticulatedPart.createParticle(5, 0, this.world, 99, this.worldY + var11, this.field_R, 100, 0, var10 + this.worldX, this.field_y);
+                                                    this.world.pendingParticles.addLast(3, var7_ref_qb);
+                                                    var7_ref_qb = ArticulatedPart.createParticle(5, 0, this.world, 113, -var11 + this.worldY, this.field_R, 100, 0, this.worldX - var10, this.field_y);
+                                                    this.world.pendingParticles.addLast(3, var7_ref_qb);
                                                     statePc = 69;
                                                     continue scanLoop1;
                                                 }
@@ -571,9 +571,9 @@ final class Explosion extends DualNode {
                                     var8_double = Math.random() * (double)(this.ageTicks + (this.durationTicks - this.ageTicks) / 4) * (double)this.field_U / (double)this.durationTicks;
                                     var10 = (int)(var8_double * Math.sin(var5_double)) << 4;
                                     var11 = (int)(Math.cos(var5_double) * var8_double) << 4;
-                                    var7_ref_qb = ArticulatedPart.a(0, 0, this.world, 111, var11 + this.worldY, this.field_R, 100, 0, var10 + this.worldX, this.field_y);
+                                    var7_ref_qb = ArticulatedPart.createParticle(0, 0, this.world, 111, var11 + this.worldY, this.field_R, 100, 0, var10 + this.worldX, this.field_y);
                                     var7_ref_qb.velocityY = (int)(2000.0 * -Math.random());
-                                    this.world.field_O.addLast(3, var7_ref_qb);
+                                    this.world.pendingParticles.addLast(3, var7_ref_qb);
                                     statePc = 69;
                                     continue scanLoop1;
                                 }
@@ -605,8 +605,8 @@ final class Explosion extends DualNode {
                 }
                 case 52: {
                     var10 = (int)(stackIn_52_0 * (double)stackIn_52_1) << 4;
-                    var7_ref_qb = ArticulatedPart.a(0, 0, this.world, 102, 0, this.field_R, 50, 0, this.worldX + var10, this.field_y);
-                    this.world.field_O.addLast(3, var7_ref_qb);
+                    var7_ref_qb = ArticulatedPart.createParticle(0, 0, this.world, 102, 0, this.field_R, 50, 0, this.worldX + var10, this.field_y);
+                    this.world.pendingParticles.addLast(3, var7_ref_qb);
                     statePc = 69;
                     continue scanLoop1;
                 }
@@ -617,7 +617,7 @@ final class Explosion extends DualNode {
                     } else {
                         /* Inlined CFG state: 59. */
                         {
-                            var7_ref_qb = ArticulatedPart.a(0, (int)(-64.0 + 128.0 * Math.random()) + (var10 >> 5), this.world, 117, this.worldY + var11 / 2, this.field_R, 200, (var11 >> 5) + (int)(128.0 * Math.random() - 64.0), this.worldX + var10 / 2, this.field_y);
+                            var7_ref_qb = ArticulatedPart.createParticle(0, (int)(-64.0 + 128.0 * Math.random()) + (var10 >> 5), this.world, 117, this.worldY + var11 / 2, this.field_R, 200, (var11 >> 5) + (int)(128.0 * Math.random() - 64.0), this.worldX + var10 / 2, this.field_y);
                             var12++;
                             if (var13 != 0) {
                                 statePc = 69;
@@ -658,13 +658,13 @@ final class Explosion extends DualNode {
                     }
                 }
                 case 65: {
-                    this.world.field_O.addLast(3, var7_ref_qb);
+                    this.world.pendingParticles.addLast(3, var7_ref_qb);
                     statePc = 69;
                     continue scanLoop1;
                 }
                 case 68: {
-                    var7_ref_qb = ArticulatedPart.a(0, var10 >> 4, this.world, 94, this.worldY + var11 / 2, this.field_R, 300, -(10 * this.ageTicks) + (var11 >> 4), var10 / 2 + this.worldX, this.field_y);
-                    this.world.field_O.addLast(3, var7_ref_qb);
+                    var7_ref_qb = ArticulatedPart.createParticle(0, var10 >> 4, this.world, 94, this.worldY + var11 / 2, this.field_R, 300, -(10 * this.ageTicks) + (var11 >> 4), var10 / 2 + this.worldX, this.field_y);
+                    this.world.pendingParticles.addLast(3, var7_ref_qb);
                     statePc = 69;
                     continue scanLoop1;
                 }
@@ -1893,7 +1893,7 @@ final class Explosion extends DualNode {
                     } else {
                         /* Inlined CFG state: 269. */
                         {
-                            this.world.field_J.a((byte) 82, (DualNode) (this));
+                            this.world.pendingRemovals.addLast((byte) 82, (DualNode) (this));
                             statePc = 270;
                             continue scanLoop1;
                         }

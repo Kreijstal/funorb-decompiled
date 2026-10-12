@@ -441,7 +441,7 @@ final class InstructionsPanel {
           } else {
             stackIn_27_2 = "{...}";
           }
-          throw ig.addExceptionContext((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(')').toString());
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(')').toString());
         }
     }
 
@@ -673,7 +673,7 @@ final class InstructionsPanel {
           so.field_b.a(5605);
           SpellConfirmationDialog.field_j.e(db.a(true, param1), MatchConditionEntry.a(param7, (byte) 94), -param0 + 32 << 3);
         } catch (RuntimeException runtimeException) {
-          throw ig.addExceptionContext((Throwable) ((Object) runtimeException), "rk.R(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ',' + (param6 != null ? "{...}" : "null") + ',' + param7 + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "rk.R(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ',' + (param6 != null ? "{...}" : "null") + ',' + param7 + ')');
         }
     }
 
@@ -1134,7 +1134,7 @@ final class InstructionsPanel {
           } else {
             stackIn_34_2 = "{...}";
           }
-          throw ig.addExceptionContext((Throwable) ((Object) stackIn_30_0), ((StringBuilder) (Object) stackIn_33_1).append(stackIn_34_2).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_30_0), ((StringBuilder) (Object) stackIn_33_1).append(stackIn_34_2).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 
@@ -1308,7 +1308,7 @@ final class InstructionsPanel {
           } else {
             stackIn_41_2 = "{...}";
           }
-          throw ig.addExceptionContext((Throwable) ((Object) stackIn_37_0), ((StringBuilder) (Object) stackIn_40_1).append(stackIn_41_2).append(')').toString());
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_37_0), ((StringBuilder) (Object) stackIn_40_1).append(stackIn_41_2).append(')').toString());
         }
     }
 
@@ -1341,7 +1341,7 @@ final class InstructionsPanel {
 
     private final void j(int param0) {
         int var2 = 0;
-        wp var3 = null;
+        AnimationFrameSet var3 = null;
         if (param0 != -302977872) {
           this.highlightPulse = (TrianglePulse) null;
         }
@@ -1403,7 +1403,7 @@ final class InstructionsPanel {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw ig.addExceptionContext((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
         }
     }
 
@@ -1778,7 +1778,7 @@ final class InstructionsPanel {
           param2.drawAtStoredPosition((byte) -72, false);
           int var5_int = -57 % ((param1 - 3) / 48);
         } catch (RuntimeException runtimeException) {
-          throw ig.addExceptionContext((Throwable) ((Object) runtimeException), "rk.NA(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "rk.NA(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 
@@ -2035,7 +2035,7 @@ final class InstructionsPanel {
           } else {
             stackIn_29_2 = "{...}";
           }
-          throw ig.addExceptionContext((Throwable) ((Object) stackIn_28_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_28_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -2306,7 +2306,7 @@ final class InstructionsPanel {
           } else {
             stackIn_48_2 = "{...}";
           }
-          throw ig.addExceptionContext((Throwable) ((Object) stackIn_38_0), ((StringBuilder) (Object) stackIn_47_1).append(stackIn_48_2).append(',').append(obfuscationGuard).append(',').append(sectionIndex).append(')').toString());
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_38_0), ((StringBuilder) (Object) stackIn_47_1).append(stackIn_48_2).append(',').append(obfuscationGuard).append(',').append(sectionIndex).append(')').toString());
         }
     }
 
@@ -2554,7 +2554,7 @@ final class InstructionsPanel {
             } else {
               stackIn_119_2 = "{...}";
             }
-            throw ig.addExceptionContext((Throwable) ((Object) stackIn_115_0), ((StringBuilder) (Object) stackIn_118_1).append(stackIn_119_2).append(',').append(param5).append(')').toString());
+            throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_115_0), ((StringBuilder) (Object) stackIn_118_1).append(stackIn_119_2).append(',').append(param5).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -2625,7 +2625,7 @@ final class InstructionsPanel {
           } else {
             stackIn_34_2 = "{...}";
           }
-          throw ig.addExceptionContext((Throwable) ((Object) stackIn_33_0), ((StringBuilder) (Object) stackIn_33_1).append(stackIn_34_2).append(',').append(previousEnabled).append(',').append(obfuscationGuard).append(',').append(selectedItem).append(',').append(nextEnabled).append(',').append(pageIndex).append(')').toString());
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_33_0), ((StringBuilder) (Object) stackIn_33_1).append(stackIn_34_2).append(',').append(previousEnabled).append(',').append(obfuscationGuard).append(',').append(selectedItem).append(',').append(nextEnabled).append(',').append(pageIndex).append(')').toString());
         }
     }
 
@@ -2817,7 +2817,7 @@ final class InstructionsPanel {
           } else {
             stackIn_68_2 = "{...}";
           }
-          throw ig.addExceptionContext((Throwable) ((Object) stackIn_64_0), ((StringBuilder) (Object) stackIn_67_1).append(stackIn_68_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(',').append(param8).append(')').toString());
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_64_0), ((StringBuilder) (Object) stackIn_67_1).append(stackIn_68_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(',').append(param8).append(')').toString());
         }
     }
 

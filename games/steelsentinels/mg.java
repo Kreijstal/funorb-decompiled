@@ -18,7 +18,7 @@ final class mg extends SceneWidget {
     private int field_dc;
     private int field_fc;
     private int field_Wb;
-    static int field_hc;
+    static int particleReuseCursor;
     private int field_oc;
     static String field_Tb;
     static String field_lc;
@@ -384,7 +384,7 @@ final class mg extends SceneWidget {
         field_gc = "Show all private chat";
         field_ac = true;
         field_ic = "Please remove <%0> from your friend list first.";
-        field_hc = 0;
+        particleReuseCursor = 0;
         field_Zb = "PROGRESS BEYOND THIS POINT REQUIRES YOU TO LOG IN OR CREATE A FREE ACCOUNT.";
         field_nc = "START MISSION";
         field_lc = "Email is valid";

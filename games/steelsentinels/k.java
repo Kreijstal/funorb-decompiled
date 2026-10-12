@@ -6,7 +6,7 @@ class k extends gd implements ae {
     private boolean field_Jb;
     private boolean field_Db;
     private boolean field_Ab;
-    static ParticleEffect[] field_Cb;
+    static ParticleEffect[] particleReuseBuffer;
     static String field_zb;
     static String[] field_Ib;
     private boolean field_Mb;
@@ -57,7 +57,7 @@ class k extends gd implements ae {
           oa.a(param1, (byte) -107);
           bf.a((byte) -83, false, rh.field_p);
           if (param0 < 108) {
-            field_Cb = (ParticleEffect[]) null;
+            particleReuseBuffer = (ParticleEffect[]) null;
           }
         } catch (RuntimeException runtimeException) {
           throw ci.a((Throwable) ((Object) runtimeException), "k.CA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
@@ -184,7 +184,7 @@ class k extends gd implements ae {
     public static void n(byte param0) {
         field_Kb = null;
         field_Fb = null;
-        field_Cb = null;
+        particleReuseBuffer = null;
         int var1 = -88 / ((39 - param0) / 56);
         field_Eb = null;
         field_zb = null;
@@ -267,9 +267,9 @@ class k extends gd implements ae {
         int var0 = 0;
         field_Ib = new String[]{"NAME", "CHASSIS", "WAVE", "SCORE"};
         field_zb = "<%0> must play <%1> more rated games before playing with the current options.";
-        field_Cb = new ParticleEffect[10000];
+        particleReuseBuffer = new ParticleEffect[10000];
         for (var0 = 0; 10000 > var0; var0++) {
-          field_Cb[var0] = new ParticleEffect();
+          particleReuseBuffer[var0] = new ParticleEffect();
         }
         field_Fb = "Friends can be added in the multiplayer<nbsp>lobby";
         field_Kb = "All players have left <%0>'s game.";

@@ -41,7 +41,7 @@ final class CampaignQuicksave {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw ig.addExceptionContext((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 
@@ -50,7 +50,7 @@ final class CampaignQuicksave {
           this.writeHeader(8, packet);
           packet.writeBytes(this.snapshotBytes, sourceOffset, this.snapshotBytes.length, 104);
         } catch (RuntimeException runtimeException) {
-          throw ig.addExceptionContext((Throwable) ((Object) runtimeException), "sl.D(" + sourceOffset + ',' + (packet != null ? "{...}" : "null") + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "sl.D(" + sourceOffset + ',' + (packet != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -102,7 +102,7 @@ final class CampaignQuicksave {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw ig.addExceptionContext((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
         }
     }
 
@@ -164,7 +164,7 @@ final class CampaignQuicksave {
           } else {
             stackIn_20_2 = "{...}";
           }
-          throw ig.addExceptionContext((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(formatVersion).append(',').append(receiveInChunks).append(')').toString());
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(formatVersion).append(',').append(receiveInChunks).append(')').toString());
         }
     }
 
@@ -183,7 +183,7 @@ final class CampaignQuicksave {
           this.playerMana = new int[battlefield.playerMana.length];
           vm.a(battlefield.playerMana, 0, this.playerMana, 0, battlefield.playerMana.length);
         } catch (RuntimeException runtimeException) {
-          throw ig.addExceptionContext((Throwable) ((Object) runtimeException), "sl.<init>(" + campaignIndex + ',' + missionId + ',' + (battlefield != null ? "{...}" : "null") + ',' + damageTaken + ',' + hasLostUnit + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "sl.<init>(" + campaignIndex + ',' + missionId + ',' + (battlefield != null ? "{...}" : "null") + ',' + damageTaken + ',' + hasLostUnit + ')');
         }
     }
 

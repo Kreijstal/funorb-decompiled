@@ -25,7 +25,7 @@ final class cb implements Runnable {
         try {
           var3 = this.field_i;
           synchronized (var3) {
-            this.field_i.a((byte) 47, param1);
+            this.field_i.addLast((byte) 47, param1);
             if (param0 >= -52) {
               field_g = (String) null;
             }
@@ -66,7 +66,7 @@ final class cb implements Runnable {
           var4.field_H = 1;
           var5 = this.field_i;
           synchronized (var5) {
-            var6 = (df) (this.field_i.b(22));
+            var6 = (df) (this.field_i.first(22));
             while (var6 != null) {
               if (~var6.field_w == ~(long)param1 &&
                 var6.field_G == param2 &&
@@ -76,7 +76,7 @@ final class cb implements Runnable {
                 stackIn_9_0 = var4;
                 return stackIn_9_0;
               }
-              var6 = (df) (this.field_i.a(false));
+              var6 = (df) (this.field_i.next(false));
             }
           }
           var4.field_L = param2.b(param1, false);
@@ -757,7 +757,7 @@ final class cb implements Runnable {
           while (!this.field_b) {
             var2 = this.field_i;
             synchronized (var2) {
-              var7 = (df) (this.field_i.c(-104));
+              var7 = (df) (this.field_i.removeFirst(-104));
               if (var7 != null) {
                 this.field_f = this.field_f - 1;
                 decompiledRegionSelector0 = 1;

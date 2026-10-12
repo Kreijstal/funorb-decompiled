@@ -354,7 +354,7 @@ final class jg extends IntrusiveNode {
                 if (!var12.field_Sb &&
                   !var12.field_Nb) {
                   if (var12.field_uc) {
-                    var12.field_Xb.field_X = wp.field_I;
+                    var12.field_Xb.field_X = AnimationFrameSet.field_I;
                   } else {
                     var12.field_Xb.field_X = je.field_zb;
                   }
@@ -596,7 +596,7 @@ final class jg extends IntrusiveNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var7 = decompiledCaughtException;
-          throw ig.addExceptionContext((Throwable) ((Object) var7), "jg.D(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) var7), "jg.D(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
         }
     }
 
@@ -666,7 +666,7 @@ final class jg extends IntrusiveNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw ig.addExceptionContext((Throwable) ((Object) var1), "jg.A(" + param0 + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) var1), "jg.A(" + param0 + ')');
         }
     }
 

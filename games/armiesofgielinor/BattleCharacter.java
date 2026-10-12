@@ -499,10 +499,10 @@ final class BattleCharacter {
         }
         var13 = (ModelMesh) (this.field_x.applyCurrentFrame(false, true, false, this.model));
         if (this.modelIndex == 75) {
-          var13.b(250, 250, 250);
+          var13.scaleGeometry(250, 250, 250);
         }
         if (this.modelIndex == 76) {
-          var13.b(512, 512, 512);
+          var13.scaleGeometry(512, 512, 512);
         }
         var5 = 0;
         if (param1 >= -30) {
@@ -739,7 +739,7 @@ final class BattleCharacter {
 
     private final void a(int param0) {
         int var2 = this.field_x.frameId >> 16;
-        wp var3 = we.a(var2, true);
+        AnimationFrameSet var3 = we.a(var2, true);
         io.a(var3, (byte) -34);
         if (param0 != -313055120) {
           return;
@@ -796,7 +796,7 @@ final class BattleCharacter {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw ig.addExceptionContext((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(obfuscationGuard).append(')').toString());
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 

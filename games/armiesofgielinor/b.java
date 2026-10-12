@@ -152,7 +152,7 @@ final class b extends IntrusiveNode {
           } else {
             stackIn_56_2 = "{...}";
           }
-          throw ig.addExceptionContext((Throwable) ((Object) stackIn_55_0), ((StringBuilder) (Object) stackIn_55_1).append(stackIn_56_2).append(',').append(param1).append(')').toString());
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_55_0), ((StringBuilder) (Object) stackIn_55_1).append(stackIn_56_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -215,9 +215,9 @@ final class b extends IntrusiveNode {
           if (obfuscationGuard) {
             field_n = (la) null;
           }
-          for (var2_int = 0; var2_int < wp.unitUnlockGroups.length; var2_int++) {
-            for (var3 = 0; wp.unitUnlockGroups[var2_int].length > var3; var3++) {
-              if (~wp.unitUnlockGroups[var2_int][var3] == ~unitType) {
+          for (var2_int = 0; var2_int < AnimationFrameSet.unitUnlockGroups.length; var2_int++) {
+            for (var3 = 0; AnimationFrameSet.unitUnlockGroups[var2_int].length > var3; var3++) {
+              if (~AnimationFrameSet.unitUnlockGroups[var2_int][var3] == ~unitType) {
                 stackIn_10_0 = var3;
                 return stackIn_10_0;
               }
@@ -228,7 +228,7 @@ final class b extends IntrusiveNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ig.addExceptionContext((Throwable) ((Object) var2), "b.A(" + obfuscationGuard + ',' + unitType + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) var2), "b.A(" + obfuscationGuard + ',' + unitType + ')');
         }
     }
 

@@ -6,7 +6,7 @@ final class fd extends IntrusiveNode {
     static ResourceArchive field_m;
     static String field_o;
     static String field_l;
-    wp field_p;
+    AnimationFrameSet field_p;
     static String[][] field_n;
 
     final static int a(boolean param0, int param1) {
@@ -49,9 +49,9 @@ final class fd extends IntrusiveNode {
         RuntimeException decompiledCaughtException = null;
         try {
           this.field_k = param2;
-          this.field_p = new wp(param2);
+          this.field_p = new AnimationFrameSet(param2);
           tl.a((byte) -121, param1, param0);
-          while (!this.field_p.f((byte) -65)) {
+          while (!this.field_p.ensureFramesAvailable((byte) -65)) {
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -70,7 +70,7 @@ final class fd extends IntrusiveNode {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw ig.addExceptionContext((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param2).append(')').toString());
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param2).append(')').toString());
         }
     }
 

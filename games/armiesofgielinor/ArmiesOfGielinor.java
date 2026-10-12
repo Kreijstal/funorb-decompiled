@@ -625,7 +625,7 @@ public final class ArmiesOfGielinor extends wf {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ig.addExceptionContext((Throwable) (var2), "ArmiesOfGielinor.QA(" + param0 + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) (var2), "ArmiesOfGielinor.QA(" + param0 + ')');
         }
     }
 
@@ -648,7 +648,7 @@ public final class ArmiesOfGielinor extends wf {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ig.addExceptionContext((Throwable) ((Object) var2), "ArmiesOfGielinor.OA(" + param0 + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) var2), "ArmiesOfGielinor.OA(" + param0 + ')');
         }
     }
 
@@ -688,7 +688,7 @@ public final class ArmiesOfGielinor extends wf {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ig.addExceptionContext((Throwable) ((Object) var2), "ArmiesOfGielinor.KA(" + param0 + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) var2), "ArmiesOfGielinor.KA(" + param0 + ')');
         }
     }
 
@@ -696,7 +696,7 @@ public final class ArmiesOfGielinor extends wf {
         try {
           this.a((byte) 31, 25, "armiesofgielinor");
         } catch (RuntimeException runtimeException) {
-          throw ig.addExceptionContext((Throwable) ((Object) runtimeException), "ArmiesOfGielinor.init()");
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "ArmiesOfGielinor.init()");
         }
     }
 
@@ -1001,7 +1001,7 @@ public final class ArmiesOfGielinor extends wf {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw ig.addExceptionContext((Throwable) ((Object) var3), "ArmiesOfGielinor.EA(" + param0 + ',' + param1 + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) var3), "ArmiesOfGielinor.EA(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -1053,7 +1053,7 @@ public final class ArmiesOfGielinor extends wf {
           }
           if (var3 != null &&
             null == var3.movementPlanner) {
-            ig.field_t.draw(0, 0);
+            AnimationSkeleton.field_t.draw(0, 0);
             fe.c(ManaEvent.field_A, 320, 200, nd.field_b, false);
           }
           this.c(false);
@@ -1099,7 +1099,7 @@ public final class ArmiesOfGielinor extends wf {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw ig.addExceptionContext((Throwable) ((Object) var2_ref), "ArmiesOfGielinor.DA(" + param0 + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) var2_ref), "ArmiesOfGielinor.DA(" + param0 + ')');
         }
     }
 
@@ -1119,7 +1119,7 @@ public final class ArmiesOfGielinor extends wf {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw ig.addExceptionContext((Throwable) ((Object) var1), "ArmiesOfGielinor.MA(" + param0 + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) var1), "ArmiesOfGielinor.MA(" + param0 + ')');
         }
     }
 
@@ -1342,7 +1342,7 @@ public final class ArmiesOfGielinor extends wf {
           UnitLossCondition.d(param0 + 196);
           PortalLossCondition.d(-12428);
           ul.b(param0 ^ -90);
-          wp.e((byte) -74);
+          AnimationFrameSet.e((byte) -74);
           TileMetadata.a(23582);
           fd.a(-30097);
           AnimationSequence.a(param0 ^ 125);
@@ -1398,9 +1398,9 @@ public final class ArmiesOfGielinor extends wf {
           MeshObject.a(-66);
           FaceNormal.a((byte) -101);
           VertexNormal.a(param0 - 14619);
-          ig.e(77);
+          AnimationSkeleton.e(77);
           mv.a((byte) -48);
-          ht.a();
+          AnimationFrame.a();
           rv.a(param0 ^ -72);
           PreparedAction.a(28038);
           VineGrowthAction.a((byte) 119);
@@ -1595,7 +1595,7 @@ public final class ArmiesOfGielinor extends wf {
           rn.a(false);
           this.field_p = null;
         } catch (RuntimeException runtimeException) {
-          throw ig.addExceptionContext((Throwable) ((Object) runtimeException), "ArmiesOfGielinor.GA(" + param0 + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "ArmiesOfGielinor.GA(" + param0 + ')');
         }
     }
 
@@ -1641,8 +1641,8 @@ public final class ArmiesOfGielinor extends wf {
               if (var7 == 0) {
                 if (stackIn_26_0 > -5) {
                   var6 = 0;
-                  while (!(var6 >= wp.unitUnlockGroups[var5].length)) {
-                    stackIn_10_0 = ~bw.unitDefinitions[wp.unitUnlockGroups[var5][var6]][11];
+                  while (!(var6 >= AnimationFrameSet.unitUnlockGroups[var5].length)) {
+                    stackIn_10_0 = ~bw.unitDefinitions[AnimationFrameSet.unitUnlockGroups[var5][var6]][11];
                     stackIn_10_1 = -1;
                     if (stackIn_10_0 == stackIn_10_1) {
                       kb.field_o[var5] = oe.c(kb.field_o[var5], 1 << var6);
@@ -1688,7 +1688,7 @@ public final class ArmiesOfGielinor extends wf {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw ig.addExceptionContext((Throwable) ((Object) var2_ref), "ArmiesOfGielinor.FA(" + param0 + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) var2_ref), "ArmiesOfGielinor.FA(" + param0 + ')');
         }
     }
 
@@ -1724,7 +1724,7 @@ public final class ArmiesOfGielinor extends wf {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ig.addExceptionContext((Throwable) ((Object) var2), "ArmiesOfGielinor.JA(" + param0 + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) var2), "ArmiesOfGielinor.JA(" + param0 + ')');
         }
     }
 
@@ -1759,7 +1759,7 @@ public final class ArmiesOfGielinor extends wf {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw ig.addExceptionContext((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(')').toString());
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -1886,7 +1886,7 @@ public final class ArmiesOfGielinor extends wf {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3_ref = decompiledCaughtException;
-          throw ig.addExceptionContext((Throwable) ((Object) var3_ref), "ArmiesOfGielinor.HA(" + param0 + ',' + param1 + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) var3_ref), "ArmiesOfGielinor.HA(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -2199,7 +2199,7 @@ public final class ArmiesOfGielinor extends wf {
           sg.field_b = MapLayout.a("compare_icons", -28106, "basic", iw.field_l);
           CampaignRewardPreview.field_e = DiskCacheRequest.a("mapf", "basic", iw.field_l, false);
           io.field_z = DiskCacheRequest.a("mapi", "basic", iw.field_l, false);
-          ig.field_t = pv.a("basic", "turn", iw.field_l, 24914);
+          AnimationSkeleton.field_t = pv.a("basic", "turn", iw.field_l, 24914);
           AttackEvent.field_y = fk.a("mapsquares", (byte) -127, iw.field_l, "basic");
           SkeletonLimitMarker.field_s = fk.a("isomapsquares", (byte) -127, iw.field_l, "basic");
           SpellMenuGroup.field_h = fk.a("maprotbutton", (byte) -128, iw.field_l, "basic");
@@ -2341,7 +2341,7 @@ public final class ArmiesOfGielinor extends wf {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw ig.addExceptionContext((Throwable) ((Object) var3), "ArmiesOfGielinor.IA(" + param0 + ',' + param1 + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) var3), "ArmiesOfGielinor.IA(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -2374,7 +2374,7 @@ public final class ArmiesOfGielinor extends wf {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
-          throw ig.addExceptionContext((Throwable) ((Object) runtimeException), "ArmiesOfGielinor.PA(" + param0 + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "ArmiesOfGielinor.PA(" + param0 + ')');
         }
     }
 
@@ -2395,7 +2395,7 @@ public final class ArmiesOfGielinor extends wf {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
-          throw ig.addExceptionContext((Throwable) ((Object) runtimeException), "ArmiesOfGielinor.BA(" + param0 + ',' + param1 + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "ArmiesOfGielinor.BA(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -2440,7 +2440,7 @@ public final class ArmiesOfGielinor extends wf {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ig.addExceptionContext((Throwable) ((Object) var2), "ArmiesOfGielinor.CA(" + param0 + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) var2), "ArmiesOfGielinor.CA(" + param0 + ')');
         }
     }
 
@@ -2487,7 +2487,7 @@ public final class ArmiesOfGielinor extends wf {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw ig.addExceptionContext((Throwable) ((Object) var2_ref), "ArmiesOfGielinor.LA(" + param0 + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) var2_ref), "ArmiesOfGielinor.LA(" + param0 + ')');
         }
     }
 

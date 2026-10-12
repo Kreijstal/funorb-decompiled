@@ -66,7 +66,7 @@ final class la {
           }
           int var4 = 57 % ((-6 - param0) / 49);
         } catch (RuntimeException runtimeException) {
-          throw ig.addExceptionContext((Throwable) ((Object) runtimeException), "la.K(" + param0 + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "la.K(" + param0 + ')');
         }
     }
 
@@ -80,7 +80,7 @@ final class la {
         if (var3 != null) {
           tn.field_Z.a(23899, false);
           var4 = tn.field_Z;
-          var5_ref_String = wp.field_y;
+          var5_ref_String = AnimationFrameSet.field_y;
           var4.field_i.a(5, var5_ref_String, (byte) -109);
           var4Lifetime1 = tn.field_Z;
           var5 = BattleTutorial.field_t;
@@ -98,7 +98,7 @@ final class la {
         if (param0 < 68) {
           this.a(91);
         }
-        wp var3 = we.a(var2, true);
+        AnimationFrameSet var3 = we.a(var2, true);
         io.a(var3, (byte) -34);
     }
 
@@ -189,7 +189,7 @@ final class la {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = decompiledCaughtException;
-          throw ig.addExceptionContext((Throwable) ((Object) var6), "la.B(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) var6), "la.B(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
     }
 
@@ -209,10 +209,10 @@ final class la {
     final void b(int param0, int param1, int param2, int param3, int param4, boolean param5) {
         ModelMesh var15 = (ModelMesh) (this.field_a.applyCurrentFrame(false, true, false, this.field_c));
         if (75 == this.field_f) {
-          var15.b(250, 250, 250);
+          var15.scaleGeometry(250, 250, 250);
         }
         if (this.field_f == 76) {
-          var15.b(512, 512, 512);
+          var15.scaleGeometry(512, 512, 512);
         }
         int var8 = 0;
         int var9 = 2044 & param3 << 2;
@@ -226,7 +226,7 @@ final class la {
         int var13 = 500;
         int var14 = 250 - (this.field_h ? 100 * param0 / 128 : 0);
         var14 = var14 + wv.field_g[this.field_f];
-        var15.b(param0, param0, param0);
+        var15.scaleGeometry(param0, param0, param0);
         if (param5) {
           fh.a(124, var15);
         }

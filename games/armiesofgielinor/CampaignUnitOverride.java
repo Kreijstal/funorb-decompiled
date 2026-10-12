@@ -16,7 +16,7 @@ final class CampaignUnitOverride {
             field_c = (String) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw ig.addExceptionContext((Throwable) ((Object) runtimeException), "id.C(" + param0 + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "id.C(" + param0 + ')');
         }
     }
 
@@ -251,7 +251,7 @@ final class CampaignUnitOverride {
                 }
                 var2 = NodeIterator.a(50, "mu_lobby_friend_rm");
                 if (var2 != null) {
-                  wp.field_y = uu.a(var2, (byte) -103);
+                  AnimationFrameSet.field_y = uu.a(var2, (byte) -103);
                 }
                 var2 = NodeIterator.a(param0 + 132, "mu_lobby_name_add");
                 if (var2 != null) {
@@ -323,7 +323,7 @@ final class CampaignUnitOverride {
                 }
                 var2 = NodeIterator.a(50, "mu_options_ratedgametype");
                 if (var2 != null) {
-                  wp.field_u = uu.a(var2, (byte) 38);
+                  AnimationFrameSet.field_u = uu.a(var2, (byte) 38);
                 }
                 var2 = NodeIterator.a(50, "yes");
                 if (var2 != null) {
@@ -619,7 +619,7 @@ final class CampaignUnitOverride {
                 }
                 var2 = NodeIterator.a(50, "status_full");
                 if (var2 != null) {
-                  wp.field_I = uu.a(var2, (byte) -92);
+                  AnimationFrameSet.field_I = uu.a(var2, (byte) -92);
                 }
                 var2 = NodeIterator.a(50, "players_in_game");
                 if (var2 != null) {
@@ -961,7 +961,7 @@ final class CampaignUnitOverride {
                 }
                 var2 = NodeIterator.a(50, "rule_0_4");
                 if (null != var2) {
-                  ig.field_r = uu.a(var2, (byte) 8);
+                  AnimationSkeleton.field_r = uu.a(var2, (byte) 8);
                 }
                 var2 = NodeIterator.a(param0 + 132, "rule_0_5");
                 if (var2 != null) {
@@ -2586,7 +2586,7 @@ final class CampaignUnitOverride {
                 }
                 var2 = NodeIterator.a(50, "members_expansion_price_bottom");
                 if (var2 != null) {
-                  wp.field_B = uu.a(var2, (byte) -94);
+                  AnimationFrameSet.field_B = uu.a(var2, (byte) -94);
                 }
                 var2 = NodeIterator.a(50, "reconnect_lost_seq,0");
                 if (null != var2) {
@@ -3053,7 +3053,7 @@ final class CampaignUnitOverride {
                   } else {
                     stackIn_2614_2 = "{...}";
                   }
-                  throw ig.addExceptionContext((Throwable) ((Object) stackIn_2613_0), ((StringBuilder) (Object) stackIn_2613_1).append(stackIn_2614_2).append(')').toString());
+                  throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_2613_0), ((StringBuilder) (Object) stackIn_2613_1).append(stackIn_2614_2).append(')').toString());
                 }
                 if (iv.field_k) {
                   ArmiesOfGielinor.obfuscationControl = (var3 == 0);
@@ -3072,7 +3072,7 @@ final class CampaignUnitOverride {
             field_c = (String) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw ig.addExceptionContext((Throwable) ((Object) runtimeException), "id.A(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "id.A(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -3147,7 +3147,7 @@ final class CampaignUnitOverride {
           } else {
             stackIn_23_2 = "{...}";
           }
-          throw ig.addExceptionContext((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(')').toString());
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(')').toString());
         }
     }
 

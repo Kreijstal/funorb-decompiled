@@ -1388,11 +1388,11 @@ final class Sentinel extends IntrusiveNode {
           !this.world.field_h) {
           this.field_bb = this.field_bb - 1;
           if (this.field_bb > 10) {
-            var3_ref_qb = ArticulatedPart.a(1, this.field_X, this.world, 97, -(this.field_Db << 3) + this.worldY, this.field_u, this.field_bb / 2, this.field_lc, this.worldX, this.worldX);
-            this.world.field_o.addLast(3, var3_ref_qb);
+            var3_ref_qb = ArticulatedPart.createParticle(1, this.field_X, this.world, 97, -(this.field_Db << 3) + this.worldY, this.field_u, this.field_bb / 2, this.field_lc, this.worldX, this.worldX);
+            this.world.particles.addLast(3, var3_ref_qb);
           } else {
-            var3_ref_qb = ArticulatedPart.a(0, this.field_X, this.world, 89, this.worldY - (this.field_Db << 3), this.field_u, 2 * this.field_bb + 25, this.field_lc, this.worldX, this.worldX);
-            this.world.field_o.addLast(3, var3_ref_qb);
+            var3_ref_qb = ArticulatedPart.createParticle(0, this.field_X, this.world, 89, this.worldY - (this.field_Db << 3), this.field_u, 2 * this.field_bb + 25, this.field_lc, this.worldX, this.worldX);
+            this.world.particles.addLast(3, var3_ref_qb);
           }
         }
         if (-120000 > this.worldY &&
@@ -1509,8 +1509,8 @@ final class Sentinel extends IntrusiveNode {
           var4Lifetime2 = this.field_E * (jh.a(var11.rotation - 5000 >> 3, 4096) * 100 >> 16);
           var5Lifetime2 = 100 * -kg.a(var11.rotation - 5000 >> 3, (byte) -119) >> 16;
           var6Lifetime2 = 100;
-          var7_ref_qb = ArticulatedPart.a(12, var4Lifetime2 * -500 / var6Lifetime2 + this.velocityX, this.world, 99, var11.field_V + var5Lifetime2 * -700 / var6Lifetime2 - 500 * (this.field_E * var4Lifetime2) / var6Lifetime2, this.field_u, 50, this.velocityY + var5Lifetime2 * -500 / var6Lifetime2, var11.field_T + var4Lifetime2 * -700 / var6Lifetime2 + var5Lifetime2 * (this.field_E * 500) / var6Lifetime2, var11.field_T);
-          this.world.field_o.addLast(3, var7_ref_qb);
+          var7_ref_qb = ArticulatedPart.createParticle(12, var4Lifetime2 * -500 / var6Lifetime2 + this.velocityX, this.world, 99, var11.field_V + var5Lifetime2 * -700 / var6Lifetime2 - 500 * (this.field_E * var4Lifetime2) / var6Lifetime2, this.field_u, 50, this.velocityY + var5Lifetime2 * -500 / var6Lifetime2, var11.field_T + var4Lifetime2 * -700 / var6Lifetime2 + var5Lifetime2 * (this.field_E * 500) / var6Lifetime2, var11.field_T);
+          this.world.particles.addLast(3, var7_ref_qb);
         }
         if (!this.hasModuleType(30, -27)) {
           if (this.field_F > 0) {
@@ -1613,14 +1613,14 @@ final class Sentinel extends IntrusiveNode {
           if (Math.abs(this.field_Qb) < 250 &&
             !this.world.field_h &&
             this.world.terrain.getTerrainType(71) != 4) {
-            var4_ref_qb = ArticulatedPart.a(1, -2000 + (int)(-256.0 + 512.0 * Math.random()), this.world, 124, 5000 + this.worldY, false, 50, -2000 + (int)(-Math.random() * 1024.0), this.worldX - 1000, this.worldX);
-            this.world.field_O.addLast(3, var4_ref_qb);
-            var4_ref_qbLifetime1 = ArticulatedPart.a(1, -1000 + (int)(512.0 * Math.random() - 256.0), this.world, obfuscationGuard ^ 109, 6000 + this.worldY, false, 50, -2000 + (int)(1024.0 * -Math.random()), this.worldX, this.worldX);
-            this.world.field_O.addLast(3, var4_ref_qbLifetime1);
-            var4_ref_qbLifetime2 = ArticulatedPart.a(1, (int)(512.0 * Math.random() - 256.0) + 1000, this.world, 101, this.worldY + 6000, false, 50, (int)(-Math.random() * 1024.0) - 2000, this.worldX, this.worldX);
-            this.world.field_O.addLast(3, var4_ref_qbLifetime2);
-            var4_ref_qbLifetime3 = ArticulatedPart.a(1, 2000 + (int)(-256.0 + 512.0 * Math.random()), this.world, 100, 5000 + this.worldY, false, 50, (int)(-Math.random() * 1024.0) - 2000, 1000 + this.worldX, this.worldX);
-            this.world.field_O.addLast(obfuscationGuard + 2, var4_ref_qbLifetime3);
+            var4_ref_qb = ArticulatedPart.createParticle(1, -2000 + (int)(-256.0 + 512.0 * Math.random()), this.world, 124, 5000 + this.worldY, false, 50, -2000 + (int)(-Math.random() * 1024.0), this.worldX - 1000, this.worldX);
+            this.world.pendingParticles.addLast(3, var4_ref_qb);
+            var4_ref_qbLifetime1 = ArticulatedPart.createParticle(1, -1000 + (int)(512.0 * Math.random() - 256.0), this.world, obfuscationGuard ^ 109, 6000 + this.worldY, false, 50, -2000 + (int)(1024.0 * -Math.random()), this.worldX, this.worldX);
+            this.world.pendingParticles.addLast(3, var4_ref_qbLifetime1);
+            var4_ref_qbLifetime2 = ArticulatedPart.createParticle(1, (int)(512.0 * Math.random() - 256.0) + 1000, this.world, 101, this.worldY + 6000, false, 50, (int)(-Math.random() * 1024.0) - 2000, this.worldX, this.worldX);
+            this.world.pendingParticles.addLast(3, var4_ref_qbLifetime2);
+            var4_ref_qbLifetime3 = ArticulatedPart.createParticle(1, 2000 + (int)(-256.0 + 512.0 * Math.random()), this.world, 100, 5000 + this.worldY, false, 50, (int)(-Math.random() * 1024.0) - 2000, 1000 + this.worldX, this.worldX);
+            this.world.pendingParticles.addLast(obfuscationGuard + 2, var4_ref_qbLifetime3);
           }
         }
         if (this.field_Lb &&
@@ -1658,23 +1658,23 @@ final class Sentinel extends IntrusiveNode {
           this.field_qb = fc.a((byte) 39, 90, this.worldX);
           if (!this.world.field_h) {
             for (var6Lifetime3 = 0; var6Lifetime3 < 4; var6Lifetime3++) {
-              var7_ref_qbLifetime1 = ArticulatedPart.a(0, (int)(-256.0 + Math.random() * 512.0), this.world, 110, this.worldY, this.field_u, 250, (int)(-Math.random() * 1024.0), this.worldX, this.worldX);
-              this.world.field_O.addLast(3, var7_ref_qbLifetime1);
+              var7_ref_qbLifetime1 = ArticulatedPart.createParticle(0, (int)(-256.0 + Math.random() * 512.0), this.world, 110, this.worldY, this.field_u, 250, (int)(-Math.random() * 1024.0), this.worldX, this.worldX);
+              this.world.pendingParticles.addLast(3, var7_ref_qbLifetime1);
             }
           }
         }
         if (0 > this.field_ub &&
           !this.world.field_h &&
           (15 & this.world.simulationTick) == 0) {
-          var5_ref_qb = ArticulatedPart.a(8, (int)(512.0 * Math.random() - 256.0), this.world, obfuscationGuard + 88, this.worldY, this.field_u, 250, (int)(-Math.random() * 1024.0), this.worldX, this.worldX);
-          this.world.field_O.addLast(obfuscationGuard ^ 2, var5_ref_qb);
+          var5_ref_qb = ArticulatedPart.createParticle(8, (int)(512.0 * Math.random() - 256.0), this.world, obfuscationGuard + 88, this.worldY, this.field_u, 250, (int)(-Math.random() * 1024.0), this.worldX, this.worldX);
+          this.world.pendingParticles.addLast(obfuscationGuard ^ 2, var5_ref_qb);
         }
         if (this.field_Dc > 0 &&
           !this.world.field_h) {
           var5_double = Math.random() * 6.283185307179586;
           var7_double = Math.random() * 1024.0;
-          var9 = ArticulatedPart.a(8, (int)((double)this.velocityX + Math.sin(var5_double) * (2.0 * var7_double)), this.world, 104, this.worldY - 16 * this.field_Db, this.field_u, 250, (int)((double)this.velocityY + Math.cos(var5_double) * var7_double), this.worldX, this.worldX);
-          this.world.field_O.addLast(3, var9);
+          var9 = ArticulatedPart.createParticle(8, (int)((double)this.velocityX + Math.sin(var5_double) * (2.0 * var7_double)), this.world, 104, this.worldY - 16 * this.field_Db, this.field_u, 250, (int)((double)this.velocityY + Math.cos(var5_double) * var7_double), this.worldX, this.worldX);
+          this.world.pendingParticles.addLast(3, var9);
         }
         boolean decompiledFrameRemainder1 = true;
         if (nn.field_c[0] != this.chassis.componentId) {
@@ -1683,13 +1683,13 @@ final class Sentinel extends IntrusiveNode {
               var5Lifetime4 = (-this.world.terrain.getSecondaryHeightAt(false, this.worldX >> 4) << 4) - 50000;
               if (!this.world.field_h) {
                 if (this.worldY > var5Lifetime4) {
-                  var6_ref_qb = ArticulatedPart.a(1, (int)(-256.0 + 512.0 * Math.random()) + (int)(Math.cos((double)this.field_Qb * 0.2) * 1000.0), this.world, 104, this.worldY, this.field_u, 50, (int)(-Math.random() * 1024.0) + 5000, this.worldX, this.worldX);
-                  this.world.field_O.addLast(3, var6_ref_qb);
-                  var6_ref_qb = ArticulatedPart.a(1, (int)(-256.0 + Math.random() * 512.0) - (int)(Math.cos((double)this.field_Qb * 0.2) * 1000.0), this.world, 126, this.worldY, this.field_u, 50, 5000 + (int)(-Math.random() * 1024.0), this.worldX, this.worldX);
-                  this.world.field_O.addLast(obfuscationGuard ^ 2, var6_ref_qb);
+                  var6_ref_qb = ArticulatedPart.createParticle(1, (int)(-256.0 + 512.0 * Math.random()) + (int)(Math.cos((double)this.field_Qb * 0.2) * 1000.0), this.world, 104, this.worldY, this.field_u, 50, (int)(-Math.random() * 1024.0) + 5000, this.worldX, this.worldX);
+                  this.world.pendingParticles.addLast(3, var6_ref_qb);
+                  var6_ref_qb = ArticulatedPart.createParticle(1, (int)(-256.0 + Math.random() * 512.0) - (int)(Math.cos((double)this.field_Qb * 0.2) * 1000.0), this.world, 126, this.worldY, this.field_u, 50, 5000 + (int)(-Math.random() * 1024.0), this.worldX, this.worldX);
+                  this.world.pendingParticles.addLast(obfuscationGuard ^ 2, var6_ref_qb);
                 } else {
-                  var6_ref_qb = ArticulatedPart.a(0, (int)(Math.random() * 512.0 - 256.0) - (int)(Math.sin(0.2 * (double)this.field_Qb) * 500.0), this.world, 89, this.worldY, this.field_u, 250, (int)(-Math.random() * 1024.0), this.worldX, this.worldX);
-                  this.world.field_O.addLast(obfuscationGuard + 2, var6_ref_qb);
+                  var6_ref_qb = ArticulatedPart.createParticle(0, (int)(Math.random() * 512.0 - 256.0) - (int)(Math.sin(0.2 * (double)this.field_Qb) * 500.0), this.world, 89, this.worldY, this.field_u, 250, (int)(-Math.random() * 1024.0), this.worldX, this.worldX);
+                  this.world.pendingParticles.addLast(obfuscationGuard + 2, var6_ref_qb);
                 }
               }
               boolean decompiledFrameRemainder0 = true;
@@ -2535,35 +2535,35 @@ final class Sentinel extends IntrusiveNode {
             var22Lifetime1 = var13 * var19 / var20;
             var23 = this.velocityX + 3 * (this.field_U * ka.field_G[o.a((byte) 84, this.chassis.componentId)][25][0]);
             if (var5 == 0) {
-              var24 = ArticulatedPart.a(3, var22Lifetime1 + var21_intLifetime1 + var23, this.world, 114, var8Lifetime1, this.field_u, 50, this.velocityY + (var22Lifetime1 - var21_intLifetime1), var7Lifetime2, var7Lifetime2);
-              this.world.field_o.addLast(3, var24);
-              var24 = ArticulatedPart.a(3, var21_intLifetime1 - var22Lifetime1 + var23, this.world, 95, var8Lifetime1, this.field_u, 50, this.velocityY + (var21_intLifetime1 + var22Lifetime1), var7Lifetime2, var7Lifetime2);
-              this.world.field_o.addLast(3, var24);
+              var24 = ArticulatedPart.createParticle(3, var22Lifetime1 + var21_intLifetime1 + var23, this.world, 114, var8Lifetime1, this.field_u, 50, this.velocityY + (var22Lifetime1 - var21_intLifetime1), var7Lifetime2, var7Lifetime2);
+              this.world.particles.addLast(3, var24);
+              var24 = ArticulatedPart.createParticle(3, var21_intLifetime1 - var22Lifetime1 + var23, this.world, 95, var8Lifetime1, this.field_u, 50, this.velocityY + (var21_intLifetime1 + var22Lifetime1), var7Lifetime2, var7Lifetime2);
+              this.world.particles.addLast(3, var24);
             } else {
               if (5 != var5) {
                 if (1 == var5) {
-                  var24 = ArticulatedPart.a(3, var21_intLifetime1 + (var22Lifetime1 + var23), this.world, 90, var8Lifetime1, this.field_u, 150, -var21_intLifetime1 + (var22Lifetime1 + this.velocityY), var7Lifetime2, var7Lifetime2);
-                  this.world.field_o.addLast(3, var24);
-                  var24 = ArticulatedPart.a(3, 2 * var21_intLifetime1 + var22Lifetime1 + var23, this.world, 119, var8Lifetime1, this.field_u, 150, 2 * var22Lifetime1 - (var21_intLifetime1 - this.velocityY), var7Lifetime2, var7Lifetime2);
-                  this.world.field_o.addLast(3, var24);
-                  var24 = ArticulatedPart.a(3, var23 + (var22Lifetime1 + 2 * var21_intLifetime1) / 2, this.world, 103, var8Lifetime1, this.field_u, 150, this.velocityY + (-var21_intLifetime1 + 2 * var22Lifetime1) / 2, var7Lifetime2, var7Lifetime2);
-                  this.world.field_o.addLast(3, var24);
-                  var24 = ArticulatedPart.a(3, var23 + (2 * var21_intLifetime1 - var22Lifetime1) / 2, this.world, 112, var8Lifetime1, this.field_u, 150, (var21_intLifetime1 + 2 * var22Lifetime1) / 2 + this.velocityY, var7Lifetime2, var7Lifetime2);
-                  this.world.field_o.addLast(3, var24);
-                  var24 = ArticulatedPart.a(3, var21_intLifetime1 * 2 - (var22Lifetime1 - var23), this.world, 109, var8Lifetime1, this.field_u, 150, this.velocityY + (var21_intLifetime1 + var22Lifetime1 * 2), var7Lifetime2, var7Lifetime2);
-                  this.world.field_o.addLast(3, var24);
-                  var24 = ArticulatedPart.a(3, -var22Lifetime1 + (var21_intLifetime1 + var23), this.world, 91, var8Lifetime1, this.field_u, 150, var22Lifetime1 + (var21_intLifetime1 + this.velocityY), var7Lifetime2, var7Lifetime2);
-                  this.world.field_o.addLast(3, var24);
-                  var24 = ArticulatedPart.a(1, var21_intLifetime1 * 3 + var23, this.world, 122, var8Lifetime1, this.field_u, 50, var22Lifetime1 * 3 + this.velocityY, var7Lifetime2, var7Lifetime2);
-                  this.world.field_o.addLast(3, var24);
+                  var24 = ArticulatedPart.createParticle(3, var21_intLifetime1 + (var22Lifetime1 + var23), this.world, 90, var8Lifetime1, this.field_u, 150, -var21_intLifetime1 + (var22Lifetime1 + this.velocityY), var7Lifetime2, var7Lifetime2);
+                  this.world.particles.addLast(3, var24);
+                  var24 = ArticulatedPart.createParticle(3, 2 * var21_intLifetime1 + var22Lifetime1 + var23, this.world, 119, var8Lifetime1, this.field_u, 150, 2 * var22Lifetime1 - (var21_intLifetime1 - this.velocityY), var7Lifetime2, var7Lifetime2);
+                  this.world.particles.addLast(3, var24);
+                  var24 = ArticulatedPart.createParticle(3, var23 + (var22Lifetime1 + 2 * var21_intLifetime1) / 2, this.world, 103, var8Lifetime1, this.field_u, 150, this.velocityY + (-var21_intLifetime1 + 2 * var22Lifetime1) / 2, var7Lifetime2, var7Lifetime2);
+                  this.world.particles.addLast(3, var24);
+                  var24 = ArticulatedPart.createParticle(3, var23 + (2 * var21_intLifetime1 - var22Lifetime1) / 2, this.world, 112, var8Lifetime1, this.field_u, 150, (var21_intLifetime1 + 2 * var22Lifetime1) / 2 + this.velocityY, var7Lifetime2, var7Lifetime2);
+                  this.world.particles.addLast(3, var24);
+                  var24 = ArticulatedPart.createParticle(3, var21_intLifetime1 * 2 - (var22Lifetime1 - var23), this.world, 109, var8Lifetime1, this.field_u, 150, this.velocityY + (var21_intLifetime1 + var22Lifetime1 * 2), var7Lifetime2, var7Lifetime2);
+                  this.world.particles.addLast(3, var24);
+                  var24 = ArticulatedPart.createParticle(3, -var22Lifetime1 + (var21_intLifetime1 + var23), this.world, 91, var8Lifetime1, this.field_u, 150, var22Lifetime1 + (var21_intLifetime1 + this.velocityY), var7Lifetime2, var7Lifetime2);
+                  this.world.particles.addLast(3, var24);
+                  var24 = ArticulatedPart.createParticle(1, var21_intLifetime1 * 3 + var23, this.world, 122, var8Lifetime1, this.field_u, 50, var22Lifetime1 * 3 + this.velocityY, var7Lifetime2, var7Lifetime2);
+                  this.world.particles.addLast(3, var24);
                 } else {
                   if (6 == var5) {
                     for (var25 = 0; var25 < 5; var25++) {
                       var26 = 400 * var25;
-                      var24 = ArticulatedPart.a(5, var23 + var22Lifetime1 * (1 + var25) / 10, this.world, 89, var8Lifetime1 + var26 * var19 / var20, this.field_u, var25 * 10 + 50, this.velocityX + -var21_intLifetime1 * (var25 + 1) / 10, var7Lifetime2 + var18 * var26 / var20, var7Lifetime2);
-                      this.world.field_o.addLast(3, var24);
-                      var24 = ArticulatedPart.a(5, var23 + (var25 + 1) * -var22Lifetime1 / 10, this.world, 120, var26 * var19 / var20 + var8Lifetime1, this.field_u, var25 * 10 + 50, this.velocityX + var21_intLifetime1 * (var25 + 1) / 10, var26 * var18 / var20 + var7Lifetime2, var7Lifetime2);
-                      this.world.field_o.addLast(3, var24);
+                      var24 = ArticulatedPart.createParticle(5, var23 + var22Lifetime1 * (1 + var25) / 10, this.world, 89, var8Lifetime1 + var26 * var19 / var20, this.field_u, var25 * 10 + 50, this.velocityX + -var21_intLifetime1 * (var25 + 1) / 10, var7Lifetime2 + var18 * var26 / var20, var7Lifetime2);
+                      this.world.particles.addLast(3, var24);
+                      var24 = ArticulatedPart.createParticle(5, var23 + (var25 + 1) * -var22Lifetime1 / 10, this.world, 120, var26 * var19 / var20 + var8Lifetime1, this.field_u, var25 * 10 + 50, this.velocityX + var21_intLifetime1 * (var25 + 1) / 10, var26 * var18 / var20 + var7Lifetime2, var7Lifetime2);
+                      this.world.particles.addLast(3, var24);
                     }
                   } else {
                     if (4 == var5) {
@@ -2578,43 +2578,43 @@ final class Sentinel extends IntrusiveNode {
                       } else {
                         stackIn_206_6 = 25;
                       }
-                      var24 = ArticulatedPart.a(stackIn_205_0, stackIn_205_1, stackIn_205_2, stackIn_205_3, stackIn_205_4, stackIn_205_5, stackIn_206_6, this.velocityY, var7Lifetime2 + var18 * 600 / var20, var7Lifetime2);
-                      this.world.field_o.addLast(3, var24);
+                      var24 = ArticulatedPart.createParticle(stackIn_205_0, stackIn_205_1, stackIn_205_2, stackIn_205_3, stackIn_205_4, stackIn_205_5, stackIn_206_6, this.velocityY, var7Lifetime2 + var18 * 600 / var20, var7Lifetime2);
+                      this.world.particles.addLast(3, var24);
                       if (param2.componentId == 34) {
-                        var24 = ArticulatedPart.a(14, (int)(Math.random() * 1000.0 - 500.0) + (var23 + var21_intLifetime1 * 2), this.world, 98, 600 * var19 / var20 + var8Lifetime1, this.field_u, 200, this.velocityY + var22Lifetime1 * 2 + (int)(-500.0 + 1000.0 * Math.random()), 600 * var18 / var20 + var7Lifetime2, var7Lifetime2);
-                        this.world.field_o.addLast(3, var24);
+                        var24 = ArticulatedPart.createParticle(14, (int)(Math.random() * 1000.0 - 500.0) + (var23 + var21_intLifetime1 * 2), this.world, 98, 600 * var19 / var20 + var8Lifetime1, this.field_u, 200, this.velocityY + var22Lifetime1 * 2 + (int)(-500.0 + 1000.0 * Math.random()), 600 * var18 / var20 + var7Lifetime2, var7Lifetime2);
+                        this.world.particles.addLast(3, var24);
                       }
                       if (param2.componentId == 47) {
-                        var24 = ArticulatedPart.a(13, var23 + 2 * var21_intLifetime1, this.world, 120, var22Lifetime1 * 15 + var8Lifetime1 + 600 * var19 / var20, this.field_u, 25, this.velocityY + var22Lifetime1 * 2, 15 * var21_intLifetime1 + (var7Lifetime2 + var18 * 600 / var20), var7Lifetime2);
-                        this.world.field_o.addLast(3, var24);
-                        var24 = ArticulatedPart.a(14, 2 * var21_intLifetime1 + (var23 + (int)(-500.0 + 1000.0 * Math.random())), this.world, 120, var8Lifetime1 + var19 * 600 / var20 + 25 * var22Lifetime1, this.field_u, 200, 2 * var22Lifetime1 + this.velocityY + (int)(1000.0 * Math.random() - 500.0), var7Lifetime2 + var18 * 600 / var20 + var21_intLifetime1 * 25, var7Lifetime2);
-                        this.world.field_o.addLast(3, var24);
-                        var24 = ArticulatedPart.a(13, 6 * var21_intLifetime1 + var23, this.world, 105, 600 * var19 / var20 + (var8Lifetime1 + var22Lifetime1 * 40), this.field_u, 25, this.velocityY + var22Lifetime1 * 6, var21_intLifetime1 * 40 + (600 * var18 / var20 + var7Lifetime2), var7Lifetime2);
-                        this.world.field_o.addLast(3, var24);
+                        var24 = ArticulatedPart.createParticle(13, var23 + 2 * var21_intLifetime1, this.world, 120, var22Lifetime1 * 15 + var8Lifetime1 + 600 * var19 / var20, this.field_u, 25, this.velocityY + var22Lifetime1 * 2, 15 * var21_intLifetime1 + (var7Lifetime2 + var18 * 600 / var20), var7Lifetime2);
+                        this.world.particles.addLast(3, var24);
+                        var24 = ArticulatedPart.createParticle(14, 2 * var21_intLifetime1 + (var23 + (int)(-500.0 + 1000.0 * Math.random())), this.world, 120, var8Lifetime1 + var19 * 600 / var20 + 25 * var22Lifetime1, this.field_u, 200, 2 * var22Lifetime1 + this.velocityY + (int)(1000.0 * Math.random() - 500.0), var7Lifetime2 + var18 * 600 / var20 + var21_intLifetime1 * 25, var7Lifetime2);
+                        this.world.particles.addLast(3, var24);
+                        var24 = ArticulatedPart.createParticle(13, 6 * var21_intLifetime1 + var23, this.world, 105, 600 * var19 / var20 + (var8Lifetime1 + var22Lifetime1 * 40), this.field_u, 25, this.velocityY + var22Lifetime1 * 6, var21_intLifetime1 * 40 + (600 * var18 / var20 + var7Lifetime2), var7Lifetime2);
+                        this.world.particles.addLast(3, var24);
                       }
                     } else {
                       if (var5 == 7) {
-                        var24 = ArticulatedPart.a(5, var23 + var21_intLifetime1 + var22Lifetime1, this.world, 112, var8Lifetime1, this.field_u, 150, var22Lifetime1 - var21_intLifetime1 + this.velocityY, var7Lifetime2, var7Lifetime2);
-                        this.world.field_o.addLast(3, var24);
-                        var24 = ArticulatedPart.a(5, var22Lifetime1 + (2 * var21_intLifetime1 + var23), this.world, 90, var8Lifetime1, this.field_u, 150, -var21_intLifetime1 + 2 * var22Lifetime1 + this.velocityY, var7Lifetime2, var7Lifetime2);
-                        this.world.field_o.addLast(3, var24);
-                        var24 = ArticulatedPart.a(5, var23 + (var22Lifetime1 + var21_intLifetime1 * 2) / 2, this.world, 108, var8Lifetime1, this.field_u, 150, (-var21_intLifetime1 + 2 * var22Lifetime1) / 2 + this.velocityY, var7Lifetime2, var7Lifetime2);
-                        this.world.field_o.addLast(3, var24);
-                        var24 = ArticulatedPart.a(5, (-var22Lifetime1 + var21_intLifetime1 * 2) / 2 + var23, this.world, 101, var8Lifetime1, this.field_u, 150, this.velocityY + (2 * var22Lifetime1 + var21_intLifetime1) / 2, var7Lifetime2, var7Lifetime2);
-                        this.world.field_o.addLast(3, var24);
-                        var24 = ArticulatedPart.a(5, var23 + var21_intLifetime1 * 2 - var22Lifetime1, this.world, 111, var8Lifetime1, this.field_u, 150, this.velocityY + var21_intLifetime1 + 2 * var22Lifetime1, var7Lifetime2, var7Lifetime2);
-                        this.world.field_o.addLast(3, var24);
-                        var24 = ArticulatedPart.a(5, var23 - var22Lifetime1 + var21_intLifetime1, this.world, 120, var8Lifetime1, this.field_u, 150, this.velocityY + var21_intLifetime1 + var22Lifetime1, var7Lifetime2, var7Lifetime2);
-                        this.world.field_o.addLast(3, var24);
-                        var24 = ArticulatedPart.a(4, 3 * var21_intLifetime1 + var23, this.world, 92, var8Lifetime1, this.field_u, 50, var22Lifetime1 * 3 + this.velocityY, var7Lifetime2, var7Lifetime2);
-                        this.world.field_o.addLast(3, var24);
+                        var24 = ArticulatedPart.createParticle(5, var23 + var21_intLifetime1 + var22Lifetime1, this.world, 112, var8Lifetime1, this.field_u, 150, var22Lifetime1 - var21_intLifetime1 + this.velocityY, var7Lifetime2, var7Lifetime2);
+                        this.world.particles.addLast(3, var24);
+                        var24 = ArticulatedPart.createParticle(5, var22Lifetime1 + (2 * var21_intLifetime1 + var23), this.world, 90, var8Lifetime1, this.field_u, 150, -var21_intLifetime1 + 2 * var22Lifetime1 + this.velocityY, var7Lifetime2, var7Lifetime2);
+                        this.world.particles.addLast(3, var24);
+                        var24 = ArticulatedPart.createParticle(5, var23 + (var22Lifetime1 + var21_intLifetime1 * 2) / 2, this.world, 108, var8Lifetime1, this.field_u, 150, (-var21_intLifetime1 + 2 * var22Lifetime1) / 2 + this.velocityY, var7Lifetime2, var7Lifetime2);
+                        this.world.particles.addLast(3, var24);
+                        var24 = ArticulatedPart.createParticle(5, (-var22Lifetime1 + var21_intLifetime1 * 2) / 2 + var23, this.world, 101, var8Lifetime1, this.field_u, 150, this.velocityY + (2 * var22Lifetime1 + var21_intLifetime1) / 2, var7Lifetime2, var7Lifetime2);
+                        this.world.particles.addLast(3, var24);
+                        var24 = ArticulatedPart.createParticle(5, var23 + var21_intLifetime1 * 2 - var22Lifetime1, this.world, 111, var8Lifetime1, this.field_u, 150, this.velocityY + var21_intLifetime1 + 2 * var22Lifetime1, var7Lifetime2, var7Lifetime2);
+                        this.world.particles.addLast(3, var24);
+                        var24 = ArticulatedPart.createParticle(5, var23 - var22Lifetime1 + var21_intLifetime1, this.world, 120, var8Lifetime1, this.field_u, 150, this.velocityY + var21_intLifetime1 + var22Lifetime1, var7Lifetime2, var7Lifetime2);
+                        this.world.particles.addLast(3, var24);
+                        var24 = ArticulatedPart.createParticle(4, 3 * var21_intLifetime1 + var23, this.world, 92, var8Lifetime1, this.field_u, 50, var22Lifetime1 * 3 + this.velocityY, var7Lifetime2, var7Lifetime2);
+                        this.world.particles.addLast(3, var24);
                       }
                     }
                   }
                 }
               } else {
-                var24 = ArticulatedPart.a(3, var21_intLifetime1 / 2 + var23, this.world, 115, var8Lifetime1, this.field_u, 100, this.velocityY + var22Lifetime1 / 2, var7Lifetime2, var7Lifetime2);
-                this.world.field_o.addLast(3, var24);
+                var24 = ArticulatedPart.createParticle(3, var21_intLifetime1 / 2 + var23, this.world, 115, var8Lifetime1, this.field_u, 100, this.velocityY + var22Lifetime1 / 2, var7Lifetime2, var7Lifetime2);
+                this.world.particles.addLast(3, var24);
               }
             }
           }
@@ -2648,8 +2648,8 @@ final class Sentinel extends IntrusiveNode {
           if (var21.field_E) {
             this.field_q = -200;
           }
-          var21.field_S = 100 * var19 + var8Lifetime1;
-          var21.field_K = 100 * var18 + var7Lifetime2;
+          var21.targetWorldY = 100 * var19 + var8Lifetime1;
+          var21.targetWorldX = 100 * var18 + var7Lifetime2;
           var21.field_kb = var11;
           if (var14 == 0 ||
             var14 == 4 ||
@@ -2668,10 +2668,10 @@ final class Sentinel extends IntrusiveNode {
           } else {
             stackIn_245_1 = var21.sourceSentinel.field_Vb;
           }
-          stackIn_244_0.field_nb = stackIn_245_1;
+          stackIn_244_0.targetSentinel = stackIn_245_1;
           if (3 == var5) {
-            var21.field_S = param0.targetWorldY;
-            var21.field_K = param0.targetWorldX;
+            var21.targetWorldY = param0.targetWorldY;
+            var21.targetWorldX = param0.targetWorldX;
           }
           this.world.projectiles.addLast(3, var21);
           stackIn_249_0 = var4_int;
@@ -2882,7 +2882,7 @@ final class Sentinel extends IntrusiveNode {
           stackIn_114_1 = (var9 != var11) && (this.worldY > var11);
           this.field_u = stackIn_114_1;
           if (var8 == 0) {
-            this.velocityY = this.velocityY + this.world.field_z;
+            this.velocityY = this.velocityY + this.world.gravityAcceleration;
             this.velocityX = this.field_E * ka.field_G[o.a((byte) 84, this.chassis.componentId)][25][0];
           } else {
             this.velocityY = 0;
@@ -2890,14 +2890,14 @@ final class Sentinel extends IntrusiveNode {
           if (this.field_Lb &&
             !this.world.field_h) {
             fc.a((byte) 66, 11, this.worldX);
-            var14 = ArticulatedPart.a(0, -100, this.world, 104, this.worldY, this.field_u, 100, -50, -50 + this.worldX, this.worldX);
-            this.world.field_o.addLast(3, var14);
-            var14Lifetime1 = ArticulatedPart.a(0, 100, this.world, 113, this.worldY, this.field_u, 100, -50, this.worldX + 50, this.worldX);
-            this.world.field_o.addLast(3, var14Lifetime1);
-            var14Lifetime2 = ArticulatedPart.a(0, -400, this.world, 113, this.worldY, this.field_u, 200, -100, this.worldX, this.worldX);
-            this.world.field_o.addLast(3, var14Lifetime2);
-            var14Lifetime3 = ArticulatedPart.a(0, 400, this.world, 116, this.worldY, this.field_u, 200, -100, this.worldX, this.worldX);
-            this.world.field_o.addLast(3, var14Lifetime3);
+            var14 = ArticulatedPart.createParticle(0, -100, this.world, 104, this.worldY, this.field_u, 100, -50, -50 + this.worldX, this.worldX);
+            this.world.particles.addLast(3, var14);
+            var14Lifetime1 = ArticulatedPart.createParticle(0, 100, this.world, 113, this.worldY, this.field_u, 100, -50, this.worldX + 50, this.worldX);
+            this.world.particles.addLast(3, var14Lifetime1);
+            var14Lifetime2 = ArticulatedPart.createParticle(0, -400, this.world, 113, this.worldY, this.field_u, 200, -100, this.worldX, this.worldX);
+            this.world.particles.addLast(3, var14Lifetime2);
+            var14Lifetime3 = ArticulatedPart.createParticle(0, 400, this.world, 116, this.worldY, this.field_u, 200, -100, this.worldX, this.worldX);
+            this.world.particles.addLast(3, var14Lifetime3);
           }
           this.field_Dc = 0;
           this.field_Lb = false;
@@ -2914,20 +2914,20 @@ final class Sentinel extends IntrusiveNode {
             this.field_pc = false;
           }
         } else {
-          this.velocityY = this.velocityY + this.world.field_z;
+          this.velocityY = this.velocityY + this.world.gravityAcceleration;
           if (this.field_pc) {
-            this.velocityY = this.velocityY - this.world.field_z * 3 / 4;
+            this.velocityY = this.velocityY - this.world.gravityAcceleration * 3 / 4;
           }
           if (!this.field_Lb &&
             !this.world.field_h) {
-            var9_ref_qb = ArticulatedPart.a(0, -100, this.world, 125, this.worldY, this.field_u, 100, -50, this.worldX - 50, this.worldX);
-            this.world.field_o.addLast(3, var9_ref_qb);
-            var9_ref_qbLifetime1 = ArticulatedPart.a(0, 100, this.world, param0 + 127, this.worldY, this.field_u, 100, -50, this.worldX + 50, this.worldX);
-            this.world.field_o.addLast(3, var9_ref_qbLifetime1);
-            var9_ref_qbLifetime2 = ArticulatedPart.a(0, -400, this.world, param0 ^ 99, this.worldY, this.field_u, 200, -100, this.worldX, this.worldX);
-            this.world.field_o.addLast(3, var9_ref_qbLifetime2);
-            var9_ref_qbLifetime3 = ArticulatedPart.a(0, 400, this.world, param0 ^ 125, this.worldY, this.field_u, 200, -100, this.worldX, this.worldX);
-            this.world.field_o.addLast(3, var9_ref_qbLifetime3);
+            var9_ref_qb = ArticulatedPart.createParticle(0, -100, this.world, 125, this.worldY, this.field_u, 100, -50, this.worldX - 50, this.worldX);
+            this.world.particles.addLast(3, var9_ref_qb);
+            var9_ref_qbLifetime1 = ArticulatedPart.createParticle(0, 100, this.world, param0 + 127, this.worldY, this.field_u, 100, -50, this.worldX + 50, this.worldX);
+            this.world.particles.addLast(3, var9_ref_qbLifetime1);
+            var9_ref_qbLifetime2 = ArticulatedPart.createParticle(0, -400, this.world, param0 ^ 99, this.worldY, this.field_u, 200, -100, this.worldX, this.worldX);
+            this.world.particles.addLast(3, var9_ref_qbLifetime2);
+            var9_ref_qbLifetime3 = ArticulatedPart.createParticle(0, 400, this.world, param0 ^ 125, this.worldY, this.field_u, 200, -100, this.worldX, this.worldX);
+            this.world.particles.addLast(3, var9_ref_qbLifetime3);
           }
           this.field_Lb = true;
           var9 = -this.world.terrain.getGroundHeightAt((byte) -105, this.worldX >> 4) << 4;

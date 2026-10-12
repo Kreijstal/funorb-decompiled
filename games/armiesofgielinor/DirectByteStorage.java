@@ -39,7 +39,7 @@ final class DirectByteStorage extends ByteStorage {
           }
           this.buffer.put(bytes);
         } catch (RuntimeException runtimeException) {
-          throw ig.addExceptionContext((Throwable) ((Object) runtimeException), "cj.D(" + obfuscationGuard + ',' + (bytes != null ? "{...}" : "null") + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "cj.D(" + obfuscationGuard + ',' + (bytes != null ? "{...}" : "null") + ')');
         }
     }
 

@@ -128,7 +128,7 @@ final class AnimationPlayer {
           stackIn_5_2 = false;
           stackIn_6_3 = !(frameVariant);
           var5 = ((ModelMeshBase) (Object) stackIn_5_0).a(stackIn_5_1, stackIn_5_2, stackIn_6_3);
-          var5.a(IntPair.field_q, this.frameId, (wp) null, -1, 0, 0, frameVariant);
+          var5.applyAnimationFrame(IntPair.field_q, this.frameId, (AnimationFrameSet) null, -1, 0, 0, frameVariant);
           stackIn_7_0 = var5;
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -141,7 +141,7 @@ final class AnimationPlayer {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw ig.addExceptionContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 
@@ -181,7 +181,7 @@ final class AnimationPlayer {
           this.ticksRemaining = this.sequence.frameDurations[this.frameIndex];
           this.scheduledSlot = scheduledSlot;
         } catch (RuntimeException runtimeException) {
-          throw ig.addExceptionContext((Throwable) ((Object) runtimeException), "vj.C(" + scheduledSlot + ',' + (sequence != null ? "{...}" : "null") + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "vj.C(" + scheduledSlot + ',' + (sequence != null ? "{...}" : "null") + ')');
         }
     }
 
