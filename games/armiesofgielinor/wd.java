@@ -179,7 +179,7 @@ final class wd {
             }
             if (BattleTutorial.field_h) {
               ta.a((String) null, 2, -18119, (String) null, (String) (var2), 0);
-              qu.e(-3);
+              DelayedPacket.e(-3);
             }
           }
           if (null == var2 &&
@@ -207,7 +207,7 @@ final class wd {
               if (0 == var6) {
                 if (null == vu.field_M &&
                   bq.field_c) {
-                  var4 = "[" + sa.field_c + "] ";
+                  var4 = "[" + ClientConnectionState.field_c + "] ";
                 }
                 if (null != vu.field_M) {
                   var6 = 1;

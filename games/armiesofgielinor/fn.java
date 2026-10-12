@@ -86,7 +86,7 @@ class fn extends fw {
                 this.field_O = var6;
               }
             }
-            this.field_U = vi.b(98);
+            this.field_U = vi.monotonicMillis(98);
           }
         } catch (RuntimeException runtimeException) {
           throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "fn.P(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
@@ -227,7 +227,7 @@ class fn extends fw {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var5 = null;
         try {
-          this.field_U = vi.b(-82);
+          this.field_U = vi.monotonicMillis(-82);
           if (param3 != -12215) {
             return true;
           }
@@ -437,7 +437,7 @@ class fn extends fw {
           this.field_R = param2;
           this.a(true, param0, -27934);
           this.field_N = true;
-          this.field_U = vi.b(-83);
+          this.field_U = vi.monotonicMillis(-83);
         } catch (RuntimeException runtimeException) {
           throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "fn.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
@@ -556,7 +556,7 @@ class fn extends fw {
             stackIn_9_1 = 0;
           }
           this.a(stackIn_9_1, (byte) -59);
-          var8_long = vi.b(39);
+          var8_long = vi.monotonicMillis(39);
           stackIn_12_1 = !(-this.field_T + var8_long >= 250L);
           this.field_P = stackIn_12_1;
           if (this.field_P) {
@@ -606,7 +606,7 @@ class fn extends fw {
             if (this.field_O != this.field_L) {
               var8.a(-21259, this.field_O, this.field_L, (Widget) (this), param1, param0);
             }
-            var6 = vi.b(-126);
+            var6 = vi.monotonicMillis(-126);
             if ((var6 - this.field_U) % 1000L < 500L) {
               var8.a(param1, 1024, param0, (Widget) (this), this.field_O);
             }

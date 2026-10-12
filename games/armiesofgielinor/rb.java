@@ -238,7 +238,7 @@ abstract class rb implements n {
         if (param0 <= 123) {
           return;
         }
-        this.field_a = vi.b(99);
+        this.field_a = vi.monotonicMillis(99);
     }
 
     public final gu a(boolean param0) {
@@ -248,7 +248,7 @@ abstract class rb implements n {
         if (this.b(81)) {
           return lq.field_c;
         }
-        if (!((350L + this.field_a) <= vi.b(-96))) {
+        if (!((350L + this.field_a) <= vi.monotonicMillis(-96))) {
           return ad.field_K;
         }
         return this.c(118);
@@ -398,7 +398,7 @@ abstract class rb implements n {
         if (this.b(88)) {
           return null;
         }
-        if (vi.b(65) < (350L + this.field_a)) {
+        if (vi.monotonicMillis(65) < (350L + this.field_a)) {
           return null;
         }
         if (param0 != 55) {

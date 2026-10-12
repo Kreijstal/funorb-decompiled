@@ -18,7 +18,7 @@ final class cs extends sf implements he {
         super(param0, 200, 200);
         Widget var3 = null;
         try {
-          this.field_fb = vi.b(-95);
+          this.field_fb = vi.monotonicMillis(-95);
           var3 = new Widget(ro.field_vb, (qo) null);
           var3.y = 50;
           var3.height = 100;
@@ -119,7 +119,7 @@ final class cs extends sf implements he {
           if (lk.field_f) {
             param3.f(param0 - 32721);
           }
-          var5_long = vi.b(92) - this.field_fb;
+          var5_long = vi.monotonicMillis(92) - this.field_fb;
           var7 = (int)((10999L - var5_long) / 1000L);
           if (0 >= var7) {
             ck.b(-62);

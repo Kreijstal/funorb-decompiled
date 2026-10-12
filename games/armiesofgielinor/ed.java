@@ -25,7 +25,7 @@ final class ed {
     final static boolean a(int param0) {
         if (param0 <= -66) {
           TurnEffectEvent.field_C = true;
-          jl.field_a = vi.b(124) + 15000L;
+          jl.field_a = vi.monotonicMillis(124) + 15000L;
           return 11 == p.field_b ? true : false;
         }
         return true;

@@ -1319,7 +1319,7 @@ final class InstructionsPanel {
           dj.a((byte) -128);
           return;
         }
-        CipherPacketBuffer var3 = ByteStorage.field_e;
+        CipherPacketBuffer var3 = ByteStorage.incomingPacket;
         var3.readInt(1);
         var3.readInt(1);
         var3.readInt(1);
@@ -2345,12 +2345,12 @@ final class InstructionsPanel {
           int var8Lifetime1;
           var9 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
           try {
-            if (null == MoveAttackRequest.field_z &&
+            if (null == MoveAttackRequest.sessionSocket &&
               !EffectPresentation.a(param5, 0)) {
               stackIn_4_0 = -1;
               return stackIn_4_0;
             }
-            if (ov.field_g == sg.field_a) {
+            if (ov.connectionState == sg.field_a) {
               if (param5) {
                 var10 = (String) null;
                 CampaignRewardPreview.field_g = oi.a((String) null, param3, false, 1, dc.field_o);
@@ -2361,39 +2361,39 @@ final class InstructionsPanel {
               vl.outgoingPacket.writeByte(1, 14);
               vl.outgoingPacket.writeByte(param0 ^ -54, CampaignRewardPreview.field_g.a((byte) -16).field_c);
               hb.$cfr$intArgs$a$e9dea5688aa5(67, -1);
-              ov.field_g = gi.field_d;
+              ov.connectionState = gi.field_d;
             }
-            if (ov.field_g == gi.field_d &&
-              es.a(-111, 1)) {
-              var6_int = ByteStorage.field_e.readUnsignedByte(0);
+            if (ov.connectionState == gi.field_d &&
+              es.receivePacketBytes(-111, 1)) {
+              var6_int = ByteStorage.incomingPacket.readUnsignedByte(0);
               if (0 != var6_int) {
-                nm.field_o = var6_int;
-                fk.field_b = -1;
-                ov.field_g = SummonAction.field_z;
+                nm.deliveredOpcode = var6_int;
+                fk.packetPayloadLength = -1;
+                ov.connectionState = SummonAction.field_z;
               } else {
-                ov.field_g = mh.field_a;
+                ov.connectionState = mh.field_a;
               }
-              ByteStorage.field_e.position = 0;
+              ByteStorage.incomingPacket.position = 0;
             }
-            if (mh.field_a == ov.field_g &&
-              es.a(-115, 8)) {
-              ts.field_h = ByteStorage.field_e.j((byte) -2);
-              ByteStorage.field_e.position = 0;
+            if (mh.field_a == ov.connectionState &&
+              es.receivePacketBytes(-115, 8)) {
+              ts.field_h = ByteStorage.incomingPacket.j((byte) -2);
+              ByteStorage.incomingPacket.position = 0;
               bk.a(param2, param5, CampaignRewardPreview.field_g, 0, param1);
-              ov.field_g = NetworkResourceRequest.field_D;
+              ov.connectionState = NetworkResourceRequest.field_D;
             }
             boolean decompiledFrameRemainder0 = true;
-            if (ov.field_g == NetworkResourceRequest.field_D &&
-              es.a(-90, 1)) {
-              var6_intLifetime1 = ByteStorage.field_e.readUnsignedByte(param0 + 53);
-              ByteStorage.field_e.position = 0;
+            if (ov.connectionState == NetworkResourceRequest.field_D &&
+              es.receivePacketBytes(-90, 1)) {
+              var6_intLifetime1 = ByteStorage.incomingPacket.readUnsignedByte(param0 + 53);
+              ByteStorage.incomingPacket.position = 0;
               DropdownSelector.field_P = null;
-              nm.field_o = var6_intLifetime1;
+              nm.deliveredOpcode = var6_intLifetime1;
               if (var6_intLifetime1 != 0 &&
                 var6_intLifetime1 != 1) {
                 if (var6_intLifetime1 != 8) {
-                  ov.field_g = SummonAction.field_z;
-                  fk.field_b = -1;
+                  ov.connectionState = SummonAction.field_z;
+                  fk.packetPayloadLength = -1;
                   decompiledFrameRemainder0 = false;
                 }
                 else {
@@ -2404,23 +2404,23 @@ final class InstructionsPanel {
                 }
               }
               if (decompiledFrameRemainder0) {
-                ov.field_g = oq.field_m;
-                fk.field_b = -1;
+                ov.connectionState = oq.field_m;
+                fk.packetPayloadLength = -1;
               }
             }
             if (param0 != -53) {
               stackIn_35_0 = -46;
               return stackIn_35_0;
             }
-            if (oq.field_m == ov.field_g &&
-              jh.g(2)) {
-              dc.field_o = ByteStorage.field_e.j((byte) -2);
+            if (oq.field_m == ov.connectionState &&
+              jh.isPacketPayloadReady(2)) {
+              dc.field_o = ByteStorage.incomingPacket.j((byte) -2);
               wl.field_I = param3;
-              BufferedSocket.field_j = ByteStorage.field_e.readUnsignedByte(0);
-              tf.field_l = ByteStorage.field_e.readUnsignedByte(0);
-              df.field_M = ByteStorage.field_e.readUnsignedShort((byte) -104);
-              var6 = ByteStorage.field_e.c((byte) -125);
-              var7 = ByteStorage.field_e.readUnsignedByte(param0 + 53);
+              BufferedSocket.field_j = ByteStorage.incomingPacket.readUnsignedByte(0);
+              tf.field_l = ByteStorage.incomingPacket.readUnsignedByte(0);
+              df.field_M = ByteStorage.incomingPacket.readUnsignedShort((byte) -104);
+              var6 = ByteStorage.incomingPacket.c((byte) -125);
+              var7 = ByteStorage.incomingPacket.readUnsignedByte(param0 + 53);
               if ((var7 & 1) != 0) {
                 wj.a(0);
               }
@@ -2437,34 +2437,34 @@ final class InstructionsPanel {
                 stackIn_63_0 = ((16 & var7) != 0);
                 c.field_c = stackIn_63_0;
                 if (ul.field_a) {
-                  ByteStorage.field_e.readUnsignedByte(0);
-                  ByteStorage.field_e.readUnsignedByte(param0 ^ -53);
-                  ByteStorage.field_e.readInt(param0 + 54);
-                  of.field_Nb = ByteStorage.field_e.readUnsignedShort((byte) -104);
+                  ByteStorage.incomingPacket.readUnsignedByte(0);
+                  ByteStorage.incomingPacket.readUnsignedByte(param0 ^ -53);
+                  ByteStorage.incomingPacket.readInt(param0 + 54);
+                  of.field_Nb = ByteStorage.incomingPacket.readUnsignedShort((byte) -104);
                   nk.field_C = new byte[of.field_Nb];
                   for (var8 = 0; of.field_Nb > var8; var8++) {
-                    nk.field_C[var8] = ByteStorage.field_e.readByte((byte) -49);
+                    nk.field_C[var8] = ByteStorage.incomingPacket.readByte((byte) -49);
                   }
                 }
               } else {
                 stackIn_45_0 = ((16 & var7) != 0);
                 c.field_c = stackIn_45_0;
                 if (ul.field_a) {
-                  ByteStorage.field_e.readUnsignedByte(0);
-                  ByteStorage.field_e.readUnsignedByte(param0 ^ -53);
-                  ByteStorage.field_e.readInt(param0 + 54);
-                  of.field_Nb = ByteStorage.field_e.readUnsignedShort((byte) -104);
+                  ByteStorage.incomingPacket.readUnsignedByte(0);
+                  ByteStorage.incomingPacket.readUnsignedByte(param0 ^ -53);
+                  ByteStorage.incomingPacket.readInt(param0 + 54);
+                  of.field_Nb = ByteStorage.incomingPacket.readUnsignedShort((byte) -104);
                   nk.field_C = new byte[of.field_Nb];
                   for (var8 = 0; of.field_Nb > var8; var8++) {
-                    nk.field_C[var8] = ByteStorage.field_e.readByte((byte) -49);
+                    nk.field_C[var8] = ByteStorage.incomingPacket.readByte((byte) -49);
                   }
                 }
               }
-              mv.field_d = ByteStorage.field_e.g(1);
+              mv.field_d = ByteStorage.incomingPacket.g(1);
               var11 = (CharSequence) ((Object) mv.field_d);
               IntPair.field_p = k.a(var11, false);
-              vt.field_n = ByteStorage.field_e.readUnsignedByte(0);
-              ov.field_g = ResourceArchive.field_k;
+              vt.field_n = ByteStorage.incomingPacket.readUnsignedByte(0);
+              ov.connectionState = ResourceArchive.connectedState;
               if (CampaignRewardPreview.field_g.a((byte) 50) != pt.field_db) {
                 if (CampaignRewardPreview.field_g.a((byte) -11) == fl.field_u) {
                   ps.field_y.a(param0 - 84, CombatEvent.d((byte) -120));
@@ -2499,28 +2499,28 @@ final class InstructionsPanel {
               for (var8Lifetime1 = 0; 4 > var8Lifetime1; var8Lifetime1++) {
                 CombatEvent.field_L[var8Lifetime1] = CombatEvent.field_L[var8Lifetime1] + 50;
               }
-              ByteStorage.field_e.initializeOpcodeCipher(CombatEvent.field_L, param0 - 66);
-              stackIn_88_0 = nm.field_o;
+              ByteStorage.incomingPacket.initializeOpcodeCipher(CombatEvent.field_L, param0 - 66);
+              stackIn_88_0 = nm.deliveredOpcode;
               return stackIn_88_0;
             }
-            if (SummonAction.field_z == ov.field_g &&
-              jh.g(2)) {
+            if (SummonAction.field_z == ov.connectionState &&
+              jh.isPacketPayloadReady(2)) {
               dj.a((byte) -128);
-              if (nm.field_o == 7 &&
+              if (nm.deliveredOpcode == 7 &&
                 !ev.field_b) {
                 ev.field_b = true;
                 stackIn_101_0 = -1;
                 return stackIn_101_0;
               }
-              if (nm.field_o == 7) {
-                nm.field_o = 3;
+              if (nm.deliveredOpcode == 7) {
+                nm.deliveredOpcode = 3;
               }
-              lk.field_r = ByteStorage.field_e.g(1);
+              lk.field_r = ByteStorage.incomingPacket.g(1);
               ev.field_b = false;
-              stackIn_99_0 = nm.field_o;
+              stackIn_99_0 = nm.deliveredOpcode;
               return stackIn_99_0;
             }
-            if (null == MoveAttackRequest.field_z) {
+            if (null == MoveAttackRequest.sessionSocket) {
               if (ev.field_b) {
                 if (TileMetadata.b(0) <= 30000L) {
                   lk.field_r = DamageEvent.field_y;

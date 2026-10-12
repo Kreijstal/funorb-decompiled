@@ -160,7 +160,7 @@ final class jg extends IntrusiveNode {
           stackIn_4_4 = (CipherPacketBuffer.field_x == pq.field_b);
           var7_int = ((dn) (Object) stackIn_3_0).a(stackIn_3_1, stackIn_3_2, stackIn_3_3, stackIn_4_4, param0, 2) ? 1 : 0;
           var8 = CipherPacketBuffer.field_x.field_Jb.field_fb;
-          var9 = vi.b(-118);
+          var9 = vi.monotonicMillis(-118);
           var11 = null;
           var12 = (au) (var8.first((byte) 120));
           while (var12 != null) {
@@ -618,7 +618,7 @@ final class jg extends IntrusiveNode {
         b var14 = null;
         var8 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          var13 = ByteStorage.field_e;
+          var13 = ByteStorage.incomingPacket;
           var2 = var13.readUnsignedByte(param0);
           if (var2 == 0) {
             var10 = ce.a(-80);

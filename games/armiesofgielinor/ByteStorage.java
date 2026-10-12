@@ -4,8 +4,8 @@
 abstract class ByteStorage {
     static String field_c;
     static String field_b;
-    static int field_f;
-    static CipherPacketBuffer field_e;
+    static int pendingOpcode;
+    static CipherPacketBuffer incomingPacket;
     static RgbSprite field_d;
     static String field_a;
     static int field_g;
@@ -27,7 +27,7 @@ abstract class ByteStorage {
         field_d = null;
         field_c = null;
         field_b = null;
-        field_e = null;
+        incomingPacket = null;
         field_a = null;
     }
 
@@ -98,7 +98,7 @@ abstract class ByteStorage {
     static {
         field_b = "Accept invitation to <%0>'s game";
         field_c = "Most health lost";
-        field_f = -1;
+        pendingOpcode = -1;
         field_g = 0;
         field_a = "You need to play <%0> more rated games to unlock this option.";
     }

@@ -3,7 +3,7 @@
  */
 final class oq extends wv {
     static String field_j;
-    static sa field_m;
+    static ClientConnectionState field_m;
     static RgbSprite[] field_l;
     static String field_k;
 
@@ -52,7 +52,7 @@ final class oq extends wv {
 
     static {
         field_j = "Classic";
-        field_m = new sa();
+        field_m = new ClientConnectionState();
         field_k = "CRC mismatch - unable to get a valid download. Please check any firewall/antivirus/filtering software.";
     }
 }

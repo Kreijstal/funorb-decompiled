@@ -410,7 +410,7 @@ final class uu {
               }
             }
             if (ph.field_d != 0L) {
-              var9 = (int)(-vi.b(-111) + ph.field_d);
+              var9 = (int)(-vi.monotonicMillis(-111) + ph.field_d);
               var9 = (var9 + 999) / 1000;
               if (1 > var9) {
                 var9 = 1;

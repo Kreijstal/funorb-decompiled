@@ -49,13 +49,13 @@ final class CampaignProgress {
         String var7;
         String var8;
         var5 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
-        var6 = "(" + me.field_c + " " + ba.field_F + " " + TurnTimerDial.field_e + ") " + nm.field_o;
+        var6 = "(" + me.thirdPreviousOpcode + " " + ba.secondPreviousOpcode + " " + TurnTimerDial.previousOpcode + ") " + nm.deliveredOpcode;
         var1 = var6;
-        if (fk.field_b > 0) {
+        if (fk.packetPayloadLength > 0) {
           var1 = var6 + ":";
-          for (var2 = 0; var2 < fk.field_b; var2++) {
+          for (var2 = 0; var2 < fk.packetPayloadLength; var2++) {
             var7 = var1 + ' ';
-            var3 = 255 & ByteStorage.field_e.payload[var2];
+            var3 = 255 & ByteStorage.incomingPacket.payload[var2];
             var4 = var3 >> 4;
             var3 = var3 & 15;
             if (var4 < 10) {

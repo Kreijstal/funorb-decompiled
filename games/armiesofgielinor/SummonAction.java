@@ -8,7 +8,7 @@ final class SummonAction extends PreparedAction {
     static int field_E;
     private int unitType;
     static je field_y;
-    static sa field_z;
+    static ClientConnectionState field_z;
     private int summoningBonus;
     private int tileX;
     static String field_A;
@@ -136,7 +136,7 @@ final class SummonAction extends PreparedAction {
         field_A = "Ongoing Mission";
         field_v = "If you do nothing the game will revert to normal view in <%0> seconds.";
         field_E = 0;
-        field_z = new sa();
+        field_z = new ClientConnectionState();
         field_x = 77;
         field_F = "Choose three alignments";
     }

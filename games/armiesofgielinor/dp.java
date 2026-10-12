@@ -702,7 +702,7 @@ final class dp extends je {
             if (this.field_yb == 1) {
               this.b(var2_int, false);
               this.field_Ib = true;
-              var3_long = vi.b(param0 - 95);
+              var3_long = vi.monotonicMillis(param0 - 95);
               stackIn_19_1 = !(250L <= var3_long - this.field_Wb);
               this.field_Nb = stackIn_19_1;
               if (this.field_Nb) {

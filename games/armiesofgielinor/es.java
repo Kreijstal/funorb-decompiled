@@ -28,33 +28,33 @@ final class es {
         field_c = (String[][][]) null;
     }
 
-    final static boolean a(int param0, int param1) {
+    final static boolean receivePacketBytes(int obfuscationGuard, int requiredLength) {
         try {
           int var2_int = 0;
           Throwable decompiledCaughtException = null;
           IOException var2 = null;
-          if (ByteStorage.field_e.position >= param1) {
+          if (ByteStorage.incomingPacket.position >= requiredLength) {
             return true;
           }
-          if (param0 >= -63) {
+          if (obfuscationGuard >= -63) {
             return true;
           }
-          if (null == MoveAttackRequest.field_z) {
+          if (null == MoveAttackRequest.sessionSocket) {
             return false;
           }
           try {
-            var2_int = MoveAttackRequest.field_z.available((byte) 43);
+            var2_int = MoveAttackRequest.sessionSocket.available((byte) 43);
             if (var2_int > 0) {
-              if (param1 - ByteStorage.field_e.position < var2_int) {
-                var2_int = -ByteStorage.field_e.position + param1;
+              if (requiredLength - ByteStorage.incomingPacket.position < var2_int) {
+                var2_int = -ByteStorage.incomingPacket.position + requiredLength;
               }
-              MoveAttackRequest.field_z.readFully(0, ByteStorage.field_e.position, var2_int, ByteStorage.field_e.payload);
-              CampaignMenuButton.field_h = vi.b(46);
-              ByteStorage.field_e.position = ByteStorage.field_e.position + var2_int;
-              if (ByteStorage.field_e.position < param1) {
+              MoveAttackRequest.sessionSocket.readFully(0, ByteStorage.incomingPacket.position, var2_int, ByteStorage.incomingPacket.payload);
+              CampaignMenuButton.lastPacketReadMillis = vi.monotonicMillis(46);
+              ByteStorage.incomingPacket.position = ByteStorage.incomingPacket.position + var2_int;
+              if (ByteStorage.incomingPacket.position < requiredLength) {
                 return false;
               }
-              ByteStorage.field_e.position = 0;
+              ByteStorage.incomingPacket.position = 0;
               return true;
             }
             if (0 <= var2_int &&

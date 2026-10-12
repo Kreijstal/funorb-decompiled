@@ -84,7 +84,7 @@ final class UpkeepEvent extends GameEvent {
           SectorCacheStore.field_j[4] = MapLayout.a("coatofarms_toppers", -28106, "basic", param0);
           RegionAnchor.field_m = fk.a("coatofarms_effects", (byte) -124, param0, "basic");
           GameplayController.a("coatofarms_palette", (byte) 51, "basic", param0);
-          sa.field_a = GameplayController.a("coatofarms_scrollbutton", (byte) 51, "basic", param0);
+          ClientConnectionState.field_a = GameplayController.a("coatofarms_scrollbutton", (byte) 51, "basic", param0);
           wv.field_h = fk.a("coatofarms_buttons", (byte) -128, param0, "basic");
         } catch (RuntimeException runtimeException) {
           throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "qj.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');

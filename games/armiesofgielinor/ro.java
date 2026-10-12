@@ -282,7 +282,7 @@ class ro extends pt implements he {
         }
         if (null == vu.field_M &&
           bq.field_c) {
-          var7 = "[" + sa.field_c + "] ";
+          var7 = "[" + ClientConnectionState.field_c + "] ";
         }
         if (vu.field_M == null) {
           var54 = var7 + var18 + ": ";
@@ -355,7 +355,7 @@ class ro extends pt implements he {
         if (param0 == 4259) {
           this.field_tb.c(4210752, 2121792, 27178);
           var2 = new ad(this, this.field_nb, va.field_B);
-          var2.a(sa.field_b, 15, 1);
+          var2.a(ClientConnectionState.field_b, 15, 1);
           this.a(var2, (byte) -108);
           return;
         }

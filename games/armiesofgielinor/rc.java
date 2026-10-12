@@ -222,7 +222,7 @@ class rc {
         if (this.field_r != null) {
           this.field_r.b(param0, 0, param1);
         }
-        this.field_t = vi.b(-121);
+        this.field_t = vi.monotonicMillis(-121);
     }
 
     public static void g() {
@@ -236,7 +236,7 @@ class rc {
             this.a();
           } catch (Exception exception) {
             this.e();
-            this.field_g = vi.b(127) + 2000L;
+            this.field_g = vi.monotonicMillis(127) + 2000L;
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -335,7 +335,7 @@ class rc {
           if (this.field_u) {
             return;
           }
-          var1 = vi.b(101);
+          var1 = vi.monotonicMillis(101);
           try {
             if (var1 > this.field_t + 6000L) {
               this.field_t = var1 - 6000L;
@@ -343,7 +343,7 @@ class rc {
             while (var1 > this.field_t + 5000L) {
               this.a(256);
               this.field_t = this.field_t + (long)(256000 / field_d);
-              var1 = vi.b(-116);
+              var1 = vi.monotonicMillis(-116);
             }
           } catch (java.lang.Exception decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
@@ -423,7 +423,7 @@ class rc {
     rc() {
         this.field_u = false;
         this.field_i = 32;
-        this.field_t = vi.b(-89);
+        this.field_t = vi.monotonicMillis(-89);
         this.field_e = new hn[8];
         this.field_g = 0L;
         this.field_n = 0;

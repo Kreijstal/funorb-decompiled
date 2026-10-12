@@ -37,9 +37,9 @@ final class dj {
     }
 
     final static void a(byte param0) {
-        if (null != MoveAttackRequest.field_z) {
-          MoveAttackRequest.field_z.close((byte) -45);
-          MoveAttackRequest.field_z = null;
+        if (null != MoveAttackRequest.sessionSocket) {
+          MoveAttackRequest.sessionSocket.close((byte) -45);
+          MoveAttackRequest.sessionSocket = null;
         }
         if (param0 > -123) {
           field_b = (int[]) null;

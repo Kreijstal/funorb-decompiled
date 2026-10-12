@@ -47,12 +47,12 @@ abstract class uq extends DualLinkedNode {
         try {
           var14 = param1.a(param2 ^ -20049);
           var8 = param5.a(-91);
-          if (null == MoveAttackRequest.field_z &&
+          if (null == MoveAttackRequest.sessionSocket &&
             !EffectPresentation.a(false, 0)) {
             stackIn_4_0 = -1;
             return stackIn_4_0;
           }
-          if (ov.field_g == sg.field_a) {
+          if (ov.connectionState == sg.field_a) {
             vl.outgoingPacket.position = 0;
             CampaignMenu.field_s = null;
             if (param0 != null) {
@@ -61,8 +61,8 @@ abstract class uq extends DualLinkedNode {
               if (param6) {
                 var9 = var9 | 1;
               }
-              vd.field_b.writeInt((byte) -108, CampaignMenuButton.field_e.nextInt());
-              vd.field_b.writeInt((byte) -52, CampaignMenuButton.field_e.nextInt());
+              vd.field_b.writeInt((byte) -108, CampaignMenuButton.connectionRandom.nextInt());
+              vd.field_b.writeInt((byte) -52, CampaignMenuButton.connectionRandom.nextInt());
               vd.field_b.a(var14, 413740432);
               vd.field_b.a(var8, 413740432);
               var15 = (CharSequence) ((Object) param0);
@@ -82,8 +82,8 @@ abstract class uq extends DualLinkedNode {
               vl.outgoingPacket.f(0, -var10 + vl.outgoingPacket.position);
             } else {
               vd.field_b.position = 0;
-              vd.field_b.writeInt((byte) -57, CampaignMenuButton.field_e.nextInt());
-              vd.field_b.writeInt((byte) -54, CampaignMenuButton.field_e.nextInt());
+              vd.field_b.writeInt((byte) -57, CampaignMenuButton.connectionRandom.nextInt());
+              vd.field_b.writeInt((byte) -54, CampaignMenuButton.connectionRandom.nextInt());
               stackIn_10_0 = vd.field_b;
               if (!param1.a((byte) 125)) {
                 stackIn_11_1 = "";
@@ -105,15 +105,15 @@ abstract class uq extends DualLinkedNode {
               vl.outgoingPacket.writeByteLengthPrefix(vl.outgoingPacket.position - var9, 5930);
             }
             hb.$cfr$intArgs$a$e9dea5688aa5(54, -1);
-            ov.field_g = DirectByteStorage.field_m;
+            ov.connectionState = DirectByteStorage.field_m;
           }
-          if (ov.field_g == DirectByteStorage.field_m &&
-            es.a(param2 ^ 20080, 1)) {
-            var9Lifetime1 = ByteStorage.field_e.readUnsignedByte(0);
-            ByteStorage.field_e.position = 0;
+          if (ov.connectionState == DirectByteStorage.field_m &&
+            es.receivePacketBytes(param2 ^ 20080, 1)) {
+            var9Lifetime1 = ByteStorage.incomingPacket.readUnsignedByte(0);
+            ByteStorage.incomingPacket.position = 0;
             if (var9Lifetime1 >= 100 &&
               var9Lifetime1 <= 105) {
-              ov.field_g = mv.field_c;
+              ov.connectionState = mv.field_c;
               br.field_b = new String[var9Lifetime1 - 100];
             } else {
               if (var9Lifetime1 == 248) {
@@ -125,25 +125,25 @@ abstract class uq extends DualLinkedNode {
                 return stackIn_31_0;
               }
               if (var9Lifetime1 == 99) {
-                es.a(-81, qa.h(1));
-                CampaignMenu.field_s = new Boolean(rr.a((byte) -76, ByteStorage.field_e));
-                ByteStorage.field_e.position = 0;
+                es.receivePacketBytes(-81, qa.h(1));
+                CampaignMenu.field_s = new Boolean(rr.a((byte) -76, ByteStorage.incomingPacket));
+                ByteStorage.incomingPacket.position = 0;
               } else {
-                fk.field_b = -1;
-                nm.field_o = var9Lifetime1;
-                ov.field_g = da.field_b;
+                fk.packetPayloadLength = -1;
+                nm.deliveredOpcode = var9Lifetime1;
+                ov.connectionState = da.field_b;
               }
             }
           }
-          if (mv.field_c == ov.field_g) {
+          if (mv.field_c == ov.connectionState) {
             var9Lifetime2 = 2;
-            if (es.a(-79, var9Lifetime2)) {
-              var10Lifetime1 = ByteStorage.field_e.readUnsignedShort((byte) -104);
-              ByteStorage.field_e.position = 0;
-              if (es.a(-83, var10Lifetime1)) {
+            if (es.receivePacketBytes(-79, var9Lifetime2)) {
+              var10Lifetime1 = ByteStorage.incomingPacket.readUnsignedShort((byte) -104);
+              ByteStorage.incomingPacket.position = 0;
+              if (es.receivePacketBytes(-83, var10Lifetime1)) {
                 var11 = br.field_b.length;
                 for (var12 = 0; var12 < var11; var12++) {
-                  br.field_b[var12] = ByteStorage.field_e.readNullCircumfixedString((byte) 121);
+                  br.field_b[var12] = ByteStorage.incomingPacket.readNullCircumfixedString((byte) 121);
                 }
                 dj.a((byte) -128);
                 ev.field_b = false;
@@ -152,25 +152,25 @@ abstract class uq extends DualLinkedNode {
               }
             }
           }
-          if (da.field_b == ov.field_g &&
-            jh.g(2)) {
-            if (nm.field_o == 255) {
-              var9_ref_String = ByteStorage.field_e.c((byte) -85);
+          if (da.field_b == ov.connectionState &&
+            jh.isPacketPayloadReady(2)) {
+            if (nm.deliveredOpcode == 255) {
+              var9_ref_String = ByteStorage.incomingPacket.c((byte) -85);
               if (var9_ref_String != null) {
                 ph.a(var9_ref_String, CombatEvent.d((byte) -5), false);
               }
             } else {
-              lk.field_r = ByteStorage.field_e.g(1);
+              lk.field_r = ByteStorage.incomingPacket.g(1);
             }
             dj.a((byte) -127);
             ev.field_b = false;
-            stackIn_53_0 = nm.field_o;
+            stackIn_53_0 = nm.deliveredOpcode;
             return stackIn_53_0;
           }
           if (param2 != -20032) {
             field_v = (String) null;
           }
-          if (MoveAttackRequest.field_z == null) {
+          if (MoveAttackRequest.sessionSocket == null) {
             if (ev.field_b) {
               if (TileMetadata.b(0) > 30000L) {
                 lk.field_r = gu.field_a;

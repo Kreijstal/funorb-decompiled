@@ -47,7 +47,7 @@ final class an extends dr {
             var4 = (nd[]) null;
             this.a(-83, (nd[]) null);
           }
-          stackIn_3_0 = new nd(qu.a(param1[0].a(2), (byte) 81));
+          stackIn_3_0 = new nd(DelayedPacket.a(param1[0].a(2), (byte) 81));
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

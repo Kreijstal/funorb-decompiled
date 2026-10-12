@@ -1215,7 +1215,7 @@ final class TickCounter {
                 }
                 var2 = fk.a(false, "LABEL_AWARD_UNITBEATUP");
                 if (null != var2) {
-                  qu.field_r = uu.a(var2, (byte) 38);
+                  DelayedPacket.field_r = uu.a(var2, (byte) 38);
                 }
                 var2 = fk.a(false, "LABEL_AWARD_UNITBULLY");
                 if (null != var2) {
@@ -4763,7 +4763,7 @@ final class TickCounter {
                 }
                 var2 = fk.a(false, "TTREEN_WEAPONS");
                 if (null != var2) {
-                  sa.field_d = uu.a(var2, (byte) 94);
+                  ClientConnectionState.field_d = uu.a(var2, (byte) 94);
                 }
                 var2 = fk.a(false, "TTREEN_ACCESSORIES");
                 if (var2 != null) {
@@ -4903,7 +4903,7 @@ final class TickCounter {
                 }
                 var2 = fk.a(false, "TTREED_ARMOUR");
                 if (var2 != null) {
-                  qu.field_n = uu.a(var2, (byte) 25);
+                  DelayedPacket.field_n = uu.a(var2, (byte) 25);
                 }
                 var2 = fk.a(false, "TTREED_WEAPONS");
                 if (null != var2) {

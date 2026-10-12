@@ -9,7 +9,7 @@ final class nm extends hn {
     private int field_C;
     ih field_y;
     private boolean field_B;
-    static int field_o;
+    static int deliveredOpcode;
     static String field_u;
     ih field_w;
     ih field_D;
@@ -537,6 +537,6 @@ final class nm extends hn {
 
     static {
         field_u = "The following settings need to be changed:  ";
-        field_o = -1;
+        deliveredOpcode = -1;
     }
 }

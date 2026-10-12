@@ -100,7 +100,7 @@ final class SocketResourceClient extends ResourceProtocolClient {
               }
             }
             this.idleMillis = 0;
-            this.lastPollMillis = vi.b(80);
+            this.lastPollMillis = vi.monotonicMillis(80);
             return;
           } catch (java.lang.RuntimeException decompiledCaughtParameter3) {
             decompiledCaughtException = decompiledCaughtParameter3;
@@ -179,7 +179,7 @@ final class SocketResourceClient extends ResourceProtocolClient {
           NetworkResourceRequest normalRequest;
           var16 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
           if (null != this.socket) {
-            now = vi.b(-75);
+            now = vi.monotonicMillis(-75);
             elapsedThenHeaderLength = (int)(-this.lastPollMillis + now);
             this.lastPollMillis = now;
             if (200 < elapsedThenHeaderLength) {

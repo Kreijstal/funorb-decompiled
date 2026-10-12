@@ -56,7 +56,7 @@ final class TextCursor {
           var2_int = packet.readBits(61, 2) + 1;
           var3 = new byte[var2_int];
           for (var4_int = 0; var4_int < var2_int; var4_int++) {
-            var3[var4_int] = (byte)(int)sa.readTagCharacter(packet, -1, -15329);
+            var3[var4_int] = (byte)(int)ClientConnectionState.readTagCharacter(packet, -1, -15329);
           }
           if (!obfuscationGuard) {
             field_g = (String) null;

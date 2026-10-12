@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class mv {
-    static sa field_c;
+    static ClientConnectionState field_c;
     static boolean field_b;
     static RgbSprite[] field_a;
     static String field_d;
@@ -106,7 +106,7 @@ final class mv {
     }
 
     static {
-        field_c = new sa();
+        field_c = new ClientConnectionState();
         field_e = "You can ask to join this game";
     }
 }

@@ -236,7 +236,7 @@ final class vq {
               }
               stackIn_47_0[stackIn_47_1] = stackIn_48_2;
             }
-            vi.b(71);
+            vi.monotonicMillis(71);
           }
           ug.field_c.itemCount = mi.field_G.length;
           var3_intLifetime1 = 0;

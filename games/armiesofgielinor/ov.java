@@ -8,7 +8,7 @@ final class ov {
     static String field_f;
     static je field_i;
     static String field_c;
-    static sa field_g;
+    static ClientConnectionState connectionState;
     static nr field_m;
     static String field_l;
     static int field_b;
@@ -26,7 +26,7 @@ final class ov {
         field_i = null;
         field_f = null;
         field_c = null;
-        field_g = null;
+        connectionState = null;
         field_l = null;
         field_k = null;
     }

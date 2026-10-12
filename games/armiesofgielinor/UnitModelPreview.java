@@ -130,9 +130,9 @@ final class UnitModelPreview {
     final static String b(byte param0) {
         if (param0 < 46) {
           UnitModelPreview.a(-107L, 79);
-          return ByteStorage.field_e.g(1);
+          return ByteStorage.incomingPacket.g(1);
         }
-        return ByteStorage.field_e.g(1);
+        return ByteStorage.incomingPacket.g(1);
     }
 
     final void setYaw(boolean obfuscationGuard, int yaw) {

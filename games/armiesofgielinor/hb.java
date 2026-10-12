@@ -35,16 +35,16 @@ final class hb {
           Throwable decompiledCaughtException = null;
           IOException var2 = null;
           boolean decompiledFrameRemainder0 = true;
-          if (null != MoveAttackRequest.field_z) {
+          if (null != MoveAttackRequest.sessionSocket) {
             if (param1 >= 0) {
-              decompiledFrameRemainder0 = (ResourceArchive.field_k == ov.field_g);
+              decompiledFrameRemainder0 = (ResourceArchive.connectedState == ov.connectionState);
               if ((decompiledFrameRemainder0) && (0 == vl.outgoingPacket.position &&
-                (10000L + SummonEvent.field_G) < vi.b(-60))) {
+                (10000L + SummonEvent.field_G) < vi.monotonicMillis(-60))) {
                 vl.outgoingPacket.writeCipheredOpcode(32161, param1);
               }
             } else {
               if (0 == vl.outgoingPacket.position &&
-                (10000L + SummonEvent.field_G) < vi.b(-60)) {
+                (10000L + SummonEvent.field_G) < vi.monotonicMillis(-60)) {
                 vl.outgoingPacket.writeCipheredOpcode(32161, param1);
               }
             }
@@ -54,8 +54,8 @@ final class hb {
               }
               if (vl.outgoingPacket.position > 0) {
                 try {
-                  MoveAttackRequest.field_z.write(vl.outgoingPacket.payload, (byte) 20, 0, vl.outgoingPacket.position);
-                  SummonEvent.field_G = vi.b(51);
+                  MoveAttackRequest.sessionSocket.write(vl.outgoingPacket.payload, (byte) 20, 0, vl.outgoingPacket.position);
+                  SummonEvent.field_G = vi.monotonicMillis(51);
                 } catch (java.io.IOException decompiledCaughtParameter0) {
                   decompiledCaughtException = decompiledCaughtParameter0;
                   var2 = (IOException) (Object) decompiledCaughtException;
@@ -85,16 +85,16 @@ final class hb {
           Throwable decompiledCaughtException = null;
           IOException var2 = null;
           boolean decompiledFrameRemainder0 = true;
-          if (null != MoveAttackRequest.field_z) {
+          if (null != MoveAttackRequest.sessionSocket) {
             if (param1 >= 0) {
-              decompiledFrameRemainder0 = (ResourceArchive.field_k == ov.field_g);
+              decompiledFrameRemainder0 = (ResourceArchive.connectedState == ov.connectionState);
               if ((decompiledFrameRemainder0) && (0 == vl.outgoingPacket.position &&
-                (10000L + SummonEvent.field_G) < vi.b(-60))) {
+                (10000L + SummonEvent.field_G) < vi.monotonicMillis(-60))) {
                 vl.outgoingPacket.writeCipheredOpcode(32161, param1);
               }
             } else {
               if (0 == vl.outgoingPacket.position &&
-                (10000L + SummonEvent.field_G) < vi.b(-60)) {
+                (10000L + SummonEvent.field_G) < vi.monotonicMillis(-60)) {
                 vl.outgoingPacket.writeCipheredOpcode(32161, param1);
               }
             }
@@ -104,8 +104,8 @@ final class hb {
               }
               if (vl.outgoingPacket.position > 0) {
                 try {
-                  MoveAttackRequest.field_z.write(vl.outgoingPacket.payload, (byte) 20, 0, vl.outgoingPacket.position);
-                  SummonEvent.field_G = vi.b(51);
+                  MoveAttackRequest.sessionSocket.write(vl.outgoingPacket.payload, (byte) 20, 0, vl.outgoingPacket.position);
+                  SummonEvent.field_G = vi.monotonicMillis(51);
                 } catch (java.io.IOException decompiledCaughtParameter0) {
                   decompiledCaughtException = decompiledCaughtParameter0;
                   var2 = (IOException) (Object) decompiledCaughtException;

@@ -106,7 +106,7 @@ final class bl {
         var11 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           regionExit1: {
-            var1 = ByteStorage.field_e;
+            var1 = ByteStorage.incomingPacket;
             var2 = ((PacketBuffer) ((Object) var1)).readUnsignedByte(0);
             if (var2 != 0 &&
               var2 != 1 &&
@@ -130,7 +130,7 @@ final class bl {
                     var20.a((byte) 53, var21, var22);
                   }
                 }
-                var8_ref_of.field_Vb = vi.b(82) - (long)((PacketBuffer) ((Object) var1)).readInt(1);
+                var8_ref_of.field_Vb = vi.monotonicMillis(82) - (long)((PacketBuffer) ((Object) var1)).readInt(1);
                 var8_ref_of.field_Sb = ((PacketBuffer) ((Object) var1)).readUnsignedShort((byte) -104);
                 var10 = ((PacketBuffer) ((Object) var1)).h(-27);
                 stackIn_16_0 = var8_ref_of;
@@ -270,7 +270,7 @@ final class bl {
                                       ph.field_d = 0L;
                                       break regionExit1;
                                     }
-                                    ph.field_d = vi.b(-59) + (long)var3;
+                                    ph.field_d = vi.monotonicMillis(-59) + (long)var3;
                                     break regionExit1;
                                   case 22:
                                     GlobalSpell.field_g = ((PacketBuffer) ((Object) var1)).readUnsignedShort((byte) -104);

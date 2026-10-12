@@ -40,7 +40,7 @@ final class hf {
         ef.field_d[4] = IntrusiveNode.field_c;
         ef.field_d[15] = AnimationSkeleton.field_r;
         if (param0 == 7670) {
-          ef.field_d[5] = sa.field_f;
+          ef.field_d[5] = ClientConnectionState.field_f;
           return;
         }
     }

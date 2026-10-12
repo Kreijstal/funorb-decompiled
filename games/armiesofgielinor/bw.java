@@ -257,7 +257,7 @@ final class bw {
             var4 = 0;
             var5 = 56;
             while (var4 < 8) {
-              this.field_e[var3Lifetime1] = BufferedFile.a(this.field_e[var3Lifetime1], sa.field_g[var4][rn.a(255, (int)(this.field_j[rn.a(7, var3Lifetime1 - var4)] >>> var5))]);
+              this.field_e[var3Lifetime1] = BufferedFile.a(this.field_e[var3Lifetime1], ClientConnectionState.field_g[var4][rn.a(255, (int)(this.field_j[rn.a(7, var3Lifetime1 - var4)] >>> var5))]);
               var5 -= 8;
               var4++;
             }
@@ -265,14 +265,14 @@ final class bw {
           for (var3Lifetime1Lifetime1 = 0; var3Lifetime1Lifetime1 < 8; var3Lifetime1Lifetime1++) {
             this.field_j[var3Lifetime1Lifetime1] = this.field_e[var3Lifetime1Lifetime1];
           }
-          this.field_j[0] = BufferedFile.a(this.field_j[0], sa.field_h[var2Lifetime2]);
+          this.field_j[0] = BufferedFile.a(this.field_j[0], ClientConnectionState.field_h[var2Lifetime2]);
           for (var3Lifetime1Lifetime2 = 0; var3Lifetime1Lifetime2 < 8; var3Lifetime1Lifetime2++) {
             this.field_e[var3Lifetime1Lifetime2] = this.field_j[var3Lifetime1Lifetime2];
             var7 = 0;
             var4Lifetime1 = var7;
             var5Lifetime1 = 56;
             while (var7 < 8) {
-              this.field_e[var3Lifetime1Lifetime2] = BufferedFile.a(this.field_e[var3Lifetime1Lifetime2], sa.field_g[var7][rn.a((int)(this.field_k[rn.a(var3Lifetime1Lifetime2 - var7, 7)] >>> var5Lifetime1), 255)]);
+              this.field_e[var3Lifetime1Lifetime2] = BufferedFile.a(this.field_e[var3Lifetime1Lifetime2], ClientConnectionState.field_g[var7][rn.a((int)(this.field_k[rn.a(var3Lifetime1Lifetime2 - var7, 7)] >>> var5Lifetime1), 255)]);
               var5Lifetime1 -= 8;
               var7++;
             }

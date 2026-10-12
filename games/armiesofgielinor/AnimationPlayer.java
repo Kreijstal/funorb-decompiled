@@ -11,7 +11,7 @@ final class AnimationPlayer {
     static String field_n;
     boolean frameChanged;
     int frameId;
-    static NodeDeque field_b;
+    static NodeDeque delayedPackets;
     int frameIndex;
     private int ticksRemaining;
     private AnimationSequence sequence;
@@ -19,7 +19,7 @@ final class AnimationPlayer {
 
     public static void b(int param0) {
         field_n = null;
-        field_b = null;
+        delayedPackets = null;
         field_j = (byte[][]) null;
         int var1 = 20 % ((param0 + 44) / 51);
     }

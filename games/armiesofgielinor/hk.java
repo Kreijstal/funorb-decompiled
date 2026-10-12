@@ -38,12 +38,12 @@ final class hk extends je {
         try {
           l.field_a.d();
           TextCursor.field_e.d();
-          qu.field_p = qu.field_p - 1;
+          DelayedPacket.field_p = DelayedPacket.field_p - 1;
           if (param0 != 128) {
             hk.k(94);
           }
-          if (qu.field_p == 0) {
-            qu.field_p = 200;
+          if (DelayedPacket.field_p == 0) {
+            DelayedPacket.field_p = 200;
             var1 = (te) (bl.field_h.first((byte) 118));
             while (var1 != null) {
               if (!var1.field_k.c(param0 ^ 65408)) {

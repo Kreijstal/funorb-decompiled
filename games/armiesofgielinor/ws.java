@@ -80,7 +80,7 @@ final class ws extends fw {
             SummonRequest.a((byte) 54, cg.field_b, 1);
             SummonRequest.a((byte) 91, GameEvent.field_t, 24);
             SummonRequest.a((byte) 101, op.field_f, 17);
-            SummonRequest.a((byte) 39, sa.field_i, 3);
+            SummonRequest.a((byte) 39, ClientConnectionState.field_i, 3);
             SummonRequest.a((byte) 78, AnimationFrameSet.field_D, 4);
             DisplacedUnitMarker.field_t[40] = od.field_f;
           }
@@ -100,7 +100,7 @@ final class ws extends fw {
           SummonRequest.a((byte) 54, cg.field_b, 1);
           SummonRequest.a((byte) 91, GameEvent.field_t, 24);
           SummonRequest.a((byte) 101, op.field_f, 17);
-          SummonRequest.a((byte) 39, sa.field_i, 3);
+          SummonRequest.a((byte) 39, ClientConnectionState.field_i, 3);
           SummonRequest.a((byte) 78, AnimationFrameSet.field_D, 4);
           DisplacedUnitMarker.field_t[40] = od.field_f;
         }

@@ -306,7 +306,7 @@ final class hd implements Runnable {
                     }
                     switch (var2_int) {
                       case 3:
-                        if (vi.b(-127) < field_p) {
+                        if (vi.monotonicMillis(-127) < field_p) {
                           throw new IOException();
                         }
                         var15 = (var8.field_c >> 24 & 255) + "." + (255 & var8.field_c >> 16) + "." + (255 & var8.field_c >> 8) + "." + (var8.field_c & 255);
@@ -403,7 +403,7 @@ final class hd implements Runnable {
                         }
                         break;
                       case 21:
-                        if (field_p > vi.b(46)) {
+                        if (field_p > vi.monotonicMillis(46)) {
                           throw new IOException();
                         }
                         var8.field_f = java.net.InetAddress.getByName((String) (var8.field_b)).getAddress();
@@ -419,7 +419,7 @@ final class hd implements Runnable {
                     var8.field_f = ((Class) (var10[0])).getDeclaredMethod((String) (var10[1]), (Class[]) (var10[2]));
                     break;
                   case 4:
-                    if (vi.b(89) < field_p) {
+                    if (vi.monotonicMillis(89) < field_p) {
                       throw new IOException();
                     }
                     var8.field_f = new DataInputStream(((java.net.URL) (var8.field_b)).openStream());
@@ -432,7 +432,7 @@ final class hd implements Runnable {
                     var8.field_f = var9;
                     break;
                   case 22:
-                    if (vi.b(-118) < field_p) {
+                    if (vi.monotonicMillis(-118) < field_p) {
                       throw new IOException();
                     }
                     try {
@@ -446,7 +446,7 @@ final class hd implements Runnable {
                     }
                     break;
                   case 1:
-                    if (vi.b(-108) < field_p) {
+                    if (vi.monotonicMillis(-108) < field_p) {
                       throw new IOException();
                     }
                     var8.field_f = new java.net.Socket(java.net.InetAddress.getByName((String) (var8.field_b)), var8.field_c);

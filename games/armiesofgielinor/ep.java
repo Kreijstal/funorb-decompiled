@@ -369,11 +369,11 @@ final class ep {
               var2.writeInt((byte) -124, vq.field_d);
               jj.field_g.write(var2.payload, (byte) 20, 0, 13);
               ta.field_N = ta.field_N + 1;
-              UnitInfoPopup.field_s = 30000L + vi.b(103);
+              UnitInfoPopup.field_s = 30000L + vi.monotonicMillis(103);
             }
             if (3 == ta.field_N) {
               if (jj.field_g.available((byte) 43) <= 0) {
-                if (vi.b(97) > UnitInfoPopup.field_s) {
+                if (vi.monotonicMillis(97) > UnitInfoPopup.field_s) {
                   stackIn_30_0 = OwnerChangeEvent.a(-2, (byte) 101);
                   return stackIn_30_0;
                 }

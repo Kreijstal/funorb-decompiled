@@ -64,7 +64,7 @@ final class oi implements WidgetPainter {
     }
 
     final static void a(boolean param0) {
-        if (!sa.a(76)) {
+        if (!ClientConnectionState.a(76)) {
           return;
         }
         vq.a(4, param0, (byte) 61);

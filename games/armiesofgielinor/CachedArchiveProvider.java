@@ -149,7 +149,7 @@ final class CachedArchiveProvider extends ArchiveProvider {
             }
           }
           if (this.field_l) {
-            if (this.field_v > vi.b(param0 + 26060)) {
+            if (this.field_v > vi.monotonicMillis(param0 + 26060)) {
               return;
             }
             var2_ref = (ResourceRequest) (this.field_t.first(1));
@@ -166,7 +166,7 @@ final class CachedArchiveProvider extends ArchiveProvider {
               }
               var2_ref = (ResourceRequest) (this.field_t.next((byte) 127));
             }
-            this.field_v = 1000L + vi.b(65);
+            this.field_v = 1000L + vi.monotonicMillis(65);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ba extends dr {
-    static int field_F;
+    static int secondPreviousOpcode;
     static String[] field_E;
 
     final nd a(int param0, nd[] param1) {
@@ -46,7 +46,7 @@ final class ba extends dr {
     public static void i(int param0) {
         field_E = null;
         if (param0 <= 111) {
-          field_F = 29;
+          secondPreviousOpcode = 29;
         }
     }
 
@@ -60,7 +60,7 @@ final class ba extends dr {
         var3 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           if (param0 > -103) {
-            field_F = 107;
+            secondPreviousOpcode = 107;
           }
           var1_int = 0;
           while (Unit.i((byte) -52)) {
@@ -92,7 +92,7 @@ final class ba extends dr {
     }
 
     static {
-        field_F = -1;
+        secondPreviousOpcode = -1;
         field_E = new String[]{"This unit is immobilised and unable to move for 1 turn", "This unit is immobilised and unable to move for <%0> turns"};
     }
 }

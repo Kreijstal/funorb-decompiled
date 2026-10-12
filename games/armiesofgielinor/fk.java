@@ -6,7 +6,7 @@ final class fk implements WidgetPainter {
     static String field_g;
     static String field_f;
     private DropdownSelector field_c;
-    static int field_b;
+    static int packetPayloadLength;
     static int[][] matchupDamagePercent;
     static String field_e;
 

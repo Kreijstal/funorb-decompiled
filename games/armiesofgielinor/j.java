@@ -62,7 +62,7 @@ final class j {
           DisplacedUnitMarker.field_t[8] = null;
           DisplacedUnitMarker.field_t[4] = el.field_a;
           DisplacedUnitMarker.field_t[54] = mh.field_d;
-          DisplacedUnitMarker.field_t[2] = sa.field_b;
+          DisplacedUnitMarker.field_t[2] = ClientConnectionState.field_b;
           DisplacedUnitMarker.field_t[5] = pq.field_d;
           DisplacedUnitMarker.field_t[25] = AnimationSkeleton.field_m;
           DisplacedUnitMarker.field_t[22] = hq.field_d;
@@ -73,13 +73,13 @@ final class j {
           DisplacedUnitMarker.field_t[26] = bj.field_l;
           DisplacedUnitMarker.field_t[46] = hc.field_d;
           DisplacedUnitMarker.field_t[17] = su.field_c;
-          DisplacedUnitMarker.field_t[23] = sa.field_e;
+          DisplacedUnitMarker.field_t[23] = ClientConnectionState.field_e;
           DisplacedUnitMarker.field_t[27] = NodeHashTable.field_b;
           DisplacedUnitMarker.field_t[30] = pf.field_e;
           DisplacedUnitMarker.field_t[20] = tl.field_h;
           DisplacedUnitMarker.field_t[18] = InstructionsPanel.field_c;
-          DisplacedUnitMarker.field_t[14] = qu.field_s[0];
-          DisplacedUnitMarker.field_t[15] = qu.field_s[1];
+          DisplacedUnitMarker.field_t[14] = DelayedPacket.field_s[0];
+          DisplacedUnitMarker.field_t[15] = DelayedPacket.field_s[1];
           for (var1_int = 55; 59 > var1_int; var1_int++) {
             DisplacedUnitMarker.field_t[var1_int] = null;
           }
@@ -118,7 +118,7 @@ final class j {
           }
           wb.field_b[6] = el.field_a;
           wb.field_b[13] = ar.field_y;
-          du.field_g = new String[]{tg.field_l, gk.field_N, tv.field_c, tv.field_b, CombatSandbox.field_g, dn.field_Kb, qu.field_r, r.field_I, we.field_h, kd.field_Q, og.field_t, ByteStorage.field_c, fg.field_l, pi.field_P, StateChangeEvent.field_H, ut.field_ib};
+          du.field_g = new String[]{tg.field_l, gk.field_N, tv.field_c, tv.field_b, CombatSandbox.field_g, dn.field_Kb, DelayedPacket.field_r, r.field_I, we.field_h, kd.field_Q, og.field_t, ByteStorage.field_c, fg.field_l, pi.field_P, StateChangeEvent.field_H, ut.field_ib};
           wb.field_b[18] = dd.field_g;
           wb.field_b[4] = gg.field_H;
           wb.field_b[14] = ov.field_d;

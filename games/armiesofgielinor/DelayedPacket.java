@@ -1,15 +1,15 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class qu extends IntrusiveNode {
+final class DelayedPacket extends IntrusiveNode {
     static String field_r;
     static String field_n;
     static IndexedSprite[] field_k;
     static int field_p;
-    byte[] field_m;
-    int field_o;
+    byte[] payload;
+    int opcode;
     static boolean field_q;
-    long field_l;
+    long releaseAtMillis;
     static String[] field_s;
 
     final static void e(int param0) {
@@ -50,7 +50,7 @@ final class qu extends IntrusiveNode {
         hc.field_b = hc.field_b + 1;
         hc.field_b = hc.field_b + (ko.field_b ^ AiPlanningStrategy.field_d);
         if (param1 <= 31) {
-          qu.a(-2, (byte) 45);
+          DelayedPacket.a(-2, (byte) 45);
         }
         hc.field_b = Math.abs(hc.field_b);
         int var5 = var3 + 0;
@@ -288,13 +288,13 @@ final class qu extends IntrusiveNode {
         int var1 = 97 % ((32 - param0) / 56);
     }
 
-    qu(long param0, int param1, byte[] param2) {
+    DelayedPacket(long releaseAtMillis, int opcode, byte[] payload) {
         try {
-          this.field_o = param1;
-          this.field_l = param0;
-          this.field_m = param2;
+          this.opcode = opcode;
+          this.releaseAtMillis = releaseAtMillis;
+          this.payload = payload;
         } catch (RuntimeException runtimeException) {
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "qu.<init>(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "qu.<init>(" + releaseAtMillis + ',' + opcode + ',' + (payload != null ? "{...}" : "null") + ')');
         }
     }
 

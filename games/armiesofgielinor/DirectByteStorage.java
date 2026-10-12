@@ -3,8 +3,8 @@
  */
 final class DirectByteStorage extends ByteStorage {
     private java.nio.ByteBuffer buffer;
-    static sa field_m;
-    static sa field_o;
+    static ClientConnectionState field_m;
+    static ClientConnectionState field_o;
     static String field_l;
     static int field_h;
     static int[] field_k;
@@ -35,7 +35,7 @@ final class DirectByteStorage extends ByteStorage {
           this.buffer = java.nio.ByteBuffer.allocateDirect(bytes.length);
           this.buffer.position(0);
           if (obfuscationGuard != 126) {
-            field_o = (sa) null;
+            field_o = (ClientConnectionState) null;
           }
           this.buffer.put(bytes);
         } catch (RuntimeException runtimeException) {
@@ -75,8 +75,8 @@ final class DirectByteStorage extends ByteStorage {
     }
 
     static {
-        field_m = new sa();
-        field_o = new sa();
+        field_m = new ClientConnectionState();
+        field_o = new ClientConnectionState();
         field_h = 1;
         field_l = "<%0> might change the options - wait and see.";
         field_i = "<%0> has been removed.";

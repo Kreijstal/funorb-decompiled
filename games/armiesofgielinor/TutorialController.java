@@ -2813,7 +2813,7 @@ final class TutorialController {
                   decompiledFrameRemainder0 = false;
                 }
                 else {
-                  qu.field_k[var6].c(var3_intLifetime1, var4Lifetime1);
+                  DelayedPacket.field_k[var6].c(var3_intLifetime1, var4Lifetime1);
                 }
               }
               var6++;
@@ -2853,7 +2853,7 @@ final class TutorialController {
           }
           var10 = MatchConditionEntry.a(260 + var7, (byte) 94);
           if (var8 != 0) {
-            qu.field_k[var6].draw(db.a(true, 82), -14 + var10);
+            DelayedPacket.field_k[var6].draw(db.a(true, 82), -14 + var10);
             if (var17 != 0) {
               if (!pn.field_n[var6] ||
                 !(df.field_M <= 0)) {

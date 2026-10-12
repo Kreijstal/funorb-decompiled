@@ -18,7 +18,7 @@ final class BestScoreStrategy extends AiPlanningStrategy {
         if (!param0) {
           return false;
         }
-        var1 = vi.b(-45);
+        var1 = vi.monotonicMillis(-45);
         var3 = var1 - dp.field_Lb;
         if (var3 > 30000L) {
           dp.field_Lb = var1;

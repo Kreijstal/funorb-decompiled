@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class NetworkResourceRequest extends ResourceRequest {
-    static sa field_D;
+    static ClientConnectionState field_D;
     byte paddingBytes;
     PacketBuffer responseBuffer;
     int blockPosition;
@@ -119,7 +119,7 @@ final class NetworkResourceRequest extends ResourceRequest {
     }
 
     static {
-        field_D = new sa();
+        field_D = new ClientConnectionState();
         field_G = "New Game";
     }
 }

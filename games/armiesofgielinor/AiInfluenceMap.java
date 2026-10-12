@@ -763,7 +763,7 @@ final class AiInfluenceMap {
         int var11Lifetime1;
         var12 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          var14 = ByteStorage.field_e;
+          var14 = ByteStorage.incomingPacket;
           var2 = var14.readUnsignedByte(0);
           var3 = (nt) (s.field_a.first((byte) 120));
           while (var3 != null) {
@@ -784,7 +784,7 @@ final class AiInfluenceMap {
             for (var6_int = 1; var6_int < var4; var6_int++) {
               LeaderEscortCondition.field_a[var6_int] = var14.g(1);
             }
-            qu.a(2, var5, var4);
+            DelayedPacket.a(2, var5, var4);
             for (var6_intLifetime1 = 0; var6_intLifetime1 < var4; var6_intLifetime1++) {
               jp.a(var14, -83);
               if (0 == var6_intLifetime1) {

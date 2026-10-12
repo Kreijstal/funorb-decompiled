@@ -206,12 +206,12 @@ final class ib extends mk {
           } else {
             fe.a(8 + param2, -40 + param1 + param8, param5 - 16, 32, DisplacedUnitMarker.field_s, jh.field_k, 0, 128, true);
           }
-          sa.field_a.e(param2 + ((param5 >> 1) - 29), param8 + 14, 128);
-          sa.field_a.e(11 + ((param5 >> 1) + param2), 14 + param8, 128);
-          sa.field_a.c();
-          sa.field_a.e(-29 + param2 + (param5 >> 1), param7 + (param1 + param8 + 9), 128);
-          sa.field_a.e(11 + ((param5 >> 1) + param2), 9 + param1 + (param8 - 40), 128);
-          sa.field_a.c();
+          ClientConnectionState.field_a.e(param2 + ((param5 >> 1) - 29), param8 + 14, 128);
+          ClientConnectionState.field_a.e(11 + ((param5 >> 1) + param2), 14 + param8, 128);
+          ClientConnectionState.field_a.c();
+          ClientConnectionState.field_a.e(-29 + param2 + (param5 >> 1), param7 + (param1 + param8 + 9), 128);
+          ClientConnectionState.field_a.e(11 + ((param5 >> 1) + param2), 9 + param1 + (param8 - 40), 128);
+          ClientConnectionState.field_a.c();
           if (kd.field_X < 0) {
             stackIn_18_0 = var9_int;
             return stackIn_18_0;
@@ -471,7 +471,7 @@ final class ib extends mk {
         if (DeployEvent.field_A != 0 &&
           var4 == 0) {
           param1 = false;
-          qu.e(-3);
+          DelayedPacket.e(-3);
         }
         if (param1) {
           qd.field_I.a(param3, (byte) -42, param2);

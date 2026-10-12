@@ -197,25 +197,25 @@ final class jh extends mk {
         }
     }
 
-    final static boolean g(int param0) {
-        if (param0 != 2) {
+    final static boolean isPacketPayloadReady(int obfuscationGuard) {
+        if (obfuscationGuard != 2) {
           field_l = (RgbSprite[]) null;
         }
-        if (fk.field_b == -1) {
-          if (!es.a(-122, 1)) {
+        if (fk.packetPayloadLength == -1) {
+          if (!es.receivePacketBytes(-122, 1)) {
             return false;
           }
-          fk.field_b = ByteStorage.field_e.readUnsignedByte(0);
-          ByteStorage.field_e.position = 0;
+          fk.packetPayloadLength = ByteStorage.incomingPacket.readUnsignedByte(0);
+          ByteStorage.incomingPacket.position = 0;
         }
-        if (-2 == fk.field_b) {
-          if (!es.a(-96, 2)) {
+        if (-2 == fk.packetPayloadLength) {
+          if (!es.receivePacketBytes(-96, 2)) {
             return false;
           }
-          fk.field_b = ByteStorage.field_e.readUnsignedShort((byte) -104);
-          ByteStorage.field_e.position = 0;
+          fk.packetPayloadLength = ByteStorage.incomingPacket.readUnsignedShort((byte) -104);
+          ByteStorage.incomingPacket.position = 0;
         }
-        return es.a(-105, fk.field_b);
+        return es.receivePacketBytes(-105, fk.packetPayloadLength);
     }
 
     final static void a(String param0, long param1, int param2, int param3, int param4) {
@@ -285,7 +285,7 @@ final class jh extends mk {
           try {
             var1 = Runtime.class.getMethod("maxMemory", new Class[]{});
             if (param0 >= -64) {
-              jh.g(-70);
+              jh.isPacketPayloadReady(-70);
             }
             if (var1 != null) {
               try {

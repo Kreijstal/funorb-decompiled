@@ -105,12 +105,12 @@ public final class ArmiesOfGielinor extends wf {
             }
           }
           boolean decompiledFrameRemainder0 = true;
-          if (!qu.field_q) {
+          if (!DelayedPacket.field_q) {
             ii.a(el.field_d, (byte) -73);
             decompiledFrameRemainder0 = !(!this.c(102, true));
             if (decompiledFrameRemainder0) {
               this.r(-66);
-              qu.field_q = true;
+              DelayedPacket.field_q = true;
               decompiledFrameRemainder0 = (var11 != 0);
             }
           }
@@ -188,18 +188,18 @@ public final class ArmiesOfGielinor extends wf {
           }
           if (decompiledFrameCompleted0) {
             boolean decompiledNaturalLoopExit0 = false;
-            while (!(decompiledNaturalLoopExit0 = (!DropdownArrowPainter.a((byte) 42, sh.field_a)))) {
-              stackIn_337_0 = nm.field_o;
+            while (!(decompiledNaturalLoopExit0 = (!DropdownArrowPainter.pollIncomingPacket((byte) 42, sh.opcodePayloadLengths)))) {
+              stackIn_337_0 = nm.deliveredOpcode;
               stackIn_337_1 = 9;
               if (var11 == 0) {
                 if (stackIn_337_0 == stackIn_337_1) {
                   ut.i((byte) 123);
                   SpellCastAction.field_t = false;
                   CipherPacketBuffer.a(false, 11, 1, jt.field_a);
-                  PaletteRegionMap.field_i = ByteStorage.field_e.g(1);
+                  PaletteRegionMap.field_i = ByteStorage.incomingPacket.g(1);
                   continue;
                 }
-                if (nm.field_o == 14) {
+                if (nm.deliveredOpcode == 14) {
                   RadialSummonItem.a(rs.a((byte) 76, 8), sp.b((byte) -90), 150, CipherPacketBuffer.field_A, rs.a((byte) 95, 1000), et.b(-1), 1024, 6, -84, sh.d((byte) 81));
                   ep.a(lp.b(-126), -72, km.c(0));
                   s.field_d = 0;
@@ -210,7 +210,7 @@ public final class ArmiesOfGielinor extends wf {
                   TrianglePulse.a(-16147, 50, DeployRequest.field_B, true);
                   continue;
                 }
-                if (nm.field_o == 15) {
+                if (nm.deliveredOpcode == 15) {
                   if (FaceNormal.field_d) {
                     ut.i((byte) 124);
                     PacketBuffer.i((byte) 109);
@@ -230,15 +230,15 @@ public final class ArmiesOfGielinor extends wf {
                   SpellCastAction.field_t = false;
                   continue;
                 }
-                if (nm.field_o == 10 &&
+                if (nm.deliveredOpcode == 10 &&
                   FaceNormal.field_d) {
                   bl.a((byte) -105);
                   continue;
                 }
-                if (nm.field_o == 11 ||
-                  nm.field_o == 12) {
+                if (nm.deliveredOpcode == 11 ||
+                  nm.deliveredOpcode == 12) {
                   stackIn_119_0 = 96;
-                  stackIn_120_1 = (12 == nm.field_o);
+                  stackIn_120_1 = (12 == nm.deliveredOpcode);
                   var2 = ea.$cfr$intArgs$a$72f70aa7c69d(stackIn_119_0, stackIn_120_1);
                   if (((mo) (var2)).field_b == 4) {
                     if (null != rd.field_j) {
@@ -251,9 +251,9 @@ public final class ArmiesOfGielinor extends wf {
                   MapLayout.a((mo) (var2), -1);
                   continue;
                 }
-                if (nm.field_o == 74) {
+                if (nm.deliveredOpcode == 74) {
                   var2 = rq.field_n;
-                  var3_ref_bv = ByteStorage.field_e;
+                  var3_ref_bv = ByteStorage.incomingPacket;
                   var4 = ((PacketBuffer) ((Object) var3_ref_bv)).readUnsignedByte(0);
                   var5_int = 0;
                   while (var5_int < var4) {
@@ -263,58 +263,58 @@ public final class ArmiesOfGielinor extends wf {
                   Unit.m(13);
                   continue;
                 }
-                if (nm.field_o == 75) {
-                  var2 = ByteStorage.field_e;
+                if (nm.deliveredOpcode == 75) {
+                  var2 = ByteStorage.incomingPacket;
                   EffectPresentation.readCoatOfArms(ah.localCoat.parts, (PacketBuffer) (var2), false, ah.localCoat.colourIndices);
                   im.field_w = true;
                   continue;
                 }
-                if (81 == nm.field_o) {
-                  var2_intLifetime1 = ByteStorage.field_e.readUnsignedByte(0);
+                if (81 == nm.deliveredOpcode) {
+                  var2_intLifetime1 = ByteStorage.incomingPacket.readUnsignedByte(0);
                   if (var2_intLifetime1 != 0) {
-                    bu.storedQuicksave = new CampaignQuicksave(ByteStorage.field_e, 9, true);
+                    bu.storedQuicksave = new CampaignQuicksave(ByteStorage.incomingPacket, 9, true);
                     continue;
                   }
                   bu.storedQuicksave = null;
                   mv.field_b = true;
                   continue;
                 }
-                if (nm.field_o == 82) {
-                  if (!bu.storedQuicksave.appendSnapshotChunk(fk.field_b, -1, ByteStorage.field_e)) {
+                if (nm.deliveredOpcode == 82) {
+                  if (!bu.storedQuicksave.appendSnapshotChunk(fk.packetPayloadLength, -1, ByteStorage.incomingPacket)) {
                     continue;
                   }
                   mv.field_b = true;
                   continue;
                 }
-                if (nm.field_o == 80) {
-                  pg.playerProfile = new PlayerProfile(ByteStorage.field_e, true);
+                if (nm.deliveredOpcode == 80) {
+                  pg.playerProfile = new PlayerProfile(ByteStorage.incomingPacket, true);
                   ve.field_b = true;
                   continue;
                 }
-                if (79 == nm.field_o) {
+                if (79 == nm.deliveredOpcode) {
                   if (null == rd.field_j) {
                     continue;
                   }
-                  rd.field_j.field_Bb = ByteStorage.field_e.readInt(1);
+                  rd.field_j.field_Bb = ByteStorage.incomingPacket.readInt(1);
                   continue;
                 }
-                if (nm.field_o == 64 ||
-                  nm.field_o == 65) {
+                if (nm.deliveredOpcode == 64 ||
+                  nm.deliveredOpcode == 65) {
                   ut.i((byte) 123);
-                  var2_intLifetime1Lifetime1 = ByteStorage.field_e.readUnsignedByte(0);
-                  var3 = ByteStorage.field_e.readUnsignedByte(0);
+                  var2_intLifetime1Lifetime1 = ByteStorage.incomingPacket.readUnsignedByte(0);
+                  var3 = ByteStorage.incomingPacket.readUnsignedByte(0);
                   stackIn_176_0 = ((1 & var3) == 0) ? 0 : 1;
                   var4Lifetime2 = stackIn_176_0;
                   stackIn_180_0 = ((var3 & 2) == 0) ? 0 : 1;
                   var5_intLifetime1 = stackIn_180_0;
                   var6 = (var3 & 30) >> 2;
                   var7 = 1 & var3 >> 6;
-                  var8 = new String[ByteStorage.field_e.readUnsignedByte(0)];
-                  var9 = ByteStorage.field_e.readByte((byte) 123);
+                  var8 = new String[ByteStorage.incomingPacket.readUnsignedByte(0)];
+                  var9 = ByteStorage.incomingPacket.readByte((byte) 123);
                   var10_int = 0;
                   while (var8.length > var10_int) {
-                    var8[var10_int] = ByteStorage.field_e.readNullCircumfixedString((byte) 121);
-                    stackIn_337_0 = ~nm.field_o;
+                    var8[var10_int] = ByteStorage.incomingPacket.readNullCircumfixedString((byte) 121);
+                    stackIn_337_0 = ~nm.deliveredOpcode;
                     stackIn_337_1 = -65;
                     if (stackIn_337_0 == stackIn_337_1 &&
                       gt.a(var8[var10_int], (byte) 121)) {
@@ -349,7 +349,7 @@ public final class ArmiesOfGielinor extends wf {
                     stackIn_195_14 = true;
                   }
                   var10 = new GameplayController(stackIn_194_2, stackIn_194_3, stackIn_194_4, stackIn_194_5, stackIn_194_6 != 0, stackIn_194_7, stackIn_194_8, stackIn_194_9, stackIn_194_10, stackIn_194_11 != 0, stackIn_194_12, stackIn_194_13, stackIn_195_14, (CampaignMission) null);
-                  if (nm.field_o != 64) {
+                  if (nm.deliveredOpcode != 64) {
                     SectorCacheStore.field_a = var10;
                     gk.field_H = true;
                   } else {
@@ -365,7 +365,7 @@ public final class ArmiesOfGielinor extends wf {
                   io.field_w = true;
                   continue;
                 }
-                if (66 == nm.field_o) {
+                if (66 == nm.deliveredOpcode) {
                   if (fj.field_c ||
                     gk.field_H) {
                     if (fj.field_c &&
@@ -393,11 +393,11 @@ public final class ArmiesOfGielinor extends wf {
                   var2 = rd.field_j;
                 }
                 if (var2 != null) {
-                  if (nm.field_o == 77) {
-                    ((GameplayController) (var2)).battlefield.appendSnapshotChunk(fk.field_b, ByteStorage.field_e, (byte) -81);
+                  if (nm.deliveredOpcode == 77) {
+                    ((GameplayController) (var2)).battlefield.appendSnapshotChunk(fk.packetPayloadLength, ByteStorage.incomingPacket, (byte) -81);
                     continue;
                   }
-                  if (nm.field_o == 67) {
+                  if (nm.deliveredOpcode == 67) {
                     if (!((GameplayController) (var2)).battlefield.field_Ab) {
                       ((GameplayController) (var2)).battlefield.snapshotBuffer.position = 0;
                       ((GameplayController) (var2)).battlefield.readLegacySnapshot(0, ((GameplayController) (var2)).battlefield.snapshotBuffer);
@@ -418,9 +418,9 @@ public final class ArmiesOfGielinor extends wf {
                         NodeHashTable.a(-1, op.field_c[0][((GameplayController) (var2)).battlefield.getPlayerTeamIndex(((GameplayController) (var2)).controlledPlayerId, -1)]);
                       }
                     }
-                    var3Lifetime2 = ByteStorage.field_e.readUnsignedByte(0);
-                    var4Lifetime3 = ByteStorage.field_e.readUnsignedByte(0);
-                    var5_intLifetime2 = ByteStorage.field_e.readUnsignedShort((byte) -104);
+                    var3Lifetime2 = ByteStorage.incomingPacket.readUnsignedByte(0);
+                    var4Lifetime3 = ByteStorage.incomingPacket.readUnsignedByte(0);
+                    var5_intLifetime2 = ByteStorage.incomingPacket.readUnsignedShort((byte) -104);
                     if (((GameplayController) (var2)).battlefield.currentPlayer == var3Lifetime2 &&
                       var4Lifetime3 == ((GameplayController) (var2)).battlefield.turnNumber) {
                       stackIn_256_0 = 0;
@@ -441,8 +441,8 @@ public final class ArmiesOfGielinor extends wf {
                     ((GameplayController) (var2)).field_Tb = false;
                     continue;
                   }
-                  if (68 == nm.field_o) {
-                    ((GameplayController) (var2)).battlefield.readGameEvent((PacketBuffer) (ByteStorage.field_e), (byte) -67);
+                  if (68 == nm.deliveredOpcode) {
+                    ((GameplayController) (var2)).battlefield.readGameEvent((PacketBuffer) (ByteStorage.incomingPacket), (byte) -67);
                     if (((GameplayController) (var2)).battlefield.currentPlayer != ((GameplayController) (var2)).battlefield.localPlayer) {
                       continue;
                     }
@@ -452,34 +452,34 @@ public final class ArmiesOfGielinor extends wf {
                     ((GameplayController) (var2)).i(0);
                     continue;
                   }
-                  if (nm.field_o == 78) {
-                    RadialSummonMenu.field_d = ByteStorage.field_e.readInt(1);
+                  if (nm.deliveredOpcode == 78) {
+                    RadialSummonMenu.field_d = ByteStorage.incomingPacket.readInt(1);
                     continue;
                   }
-                  if (76 == nm.field_o) {
-                    var3Lifetime2 = ByteStorage.field_e.readUnsignedByte(0);
+                  if (76 == nm.deliveredOpcode) {
+                    var3Lifetime2 = ByteStorage.incomingPacket.readUnsignedByte(0);
                     if (var3Lifetime2 != 0) {
                       ((GameplayController) (var2)).field_Tb = true;
                     } else {
                       ((GameplayController) (var2)).field_Tb = false;
                     }
-                    ((GameplayController) (var2)).field_Vb = ByteStorage.field_e.readUnsignedShort((byte) -104);
+                    ((GameplayController) (var2)).field_Vb = ByteStorage.incomingPacket.readUnsignedShort((byte) -104);
                     continue;
                   }
-                  if (nm.field_o == 69) {
+                  if (nm.deliveredOpcode == 69) {
                     var3_ref_int__ = new int[((GameplayController) (var2)).battlefield.teamCount];
                     var4_ref_int__ = new int[((GameplayController) (var2)).battlefield.playerCount];
                     var5 = new int[((GameplayController) (var2)).battlefield.playerCount];
-                    var6Lifetime1Lifetime1 = ByteStorage.field_e.readUnsignedByte(0);
+                    var6Lifetime1Lifetime1 = ByteStorage.incomingPacket.readUnsignedByte(0);
                     var7Lifetime1 = 0;
                     while (((GameplayController) (var2)).battlefield.teamCount > var7Lifetime1) {
-                      var3_ref_int__[var7Lifetime1] = ByteStorage.field_e.readUnsignedByte(0);
+                      var3_ref_int__[var7Lifetime1] = ByteStorage.incomingPacket.readUnsignedByte(0);
                       var7Lifetime1++;
                     }
                     var7Lifetime1Lifetime1 = 0;
                     while (var7Lifetime1Lifetime1 < ((GameplayController) (var2)).battlefield.playerCount) {
-                      var5[var7Lifetime1Lifetime1] = ByteStorage.field_e.readUnsignedByte(0);
-                      var4_ref_int__[var7Lifetime1Lifetime1] = ByteStorage.field_e.readUnsignedShort((byte) -104);
+                      var5[var7Lifetime1Lifetime1] = ByteStorage.incomingPacket.readUnsignedByte(0);
+                      var4_ref_int__[var7Lifetime1Lifetime1] = ByteStorage.incomingPacket.readUnsignedShort((byte) -104);
                       var7Lifetime1Lifetime1++;
                     }
                     ((GameplayController) (var2)).battlefield.applyMatchOutcome(var6Lifetime1Lifetime1, true, var3_ref_int__);
@@ -496,40 +496,40 @@ public final class ArmiesOfGielinor extends wf {
                     ((GameplayController) (var2)).prepareMatchResults(true);
                     continue;
                   }
-                  if (nm.field_o == 70) {
-                    ((GameplayController) (var2)).battlefield.field_C = ByteStorage.field_e.readUnsignedByte(0);
+                  if (nm.deliveredOpcode == 70) {
+                    ((GameplayController) (var2)).battlefield.field_C = ByteStorage.incomingPacket.readUnsignedByte(0);
                     if (null == rd.field_j) {
                       continue;
                     }
                     dv.a(true);
                     continue;
                   }
-                  if (nm.field_o == 71) {
-                    ((GameplayController) (var2)).battlefield.setInactivePlayerMask(0, ByteStorage.field_e.readUnsignedByte(0));
+                  if (nm.deliveredOpcode == 71) {
+                    ((GameplayController) (var2)).battlefield.setInactivePlayerMask(0, ByteStorage.incomingPacket.readUnsignedByte(0));
                     if (rd.field_j == null) {
                       continue;
                     }
                     dv.a(true);
                     continue;
                   }
-                  if (nm.field_o == 73) {
-                    ((GameplayController) (var2)).battlefield.setEliminatedPlayerMask(ByteStorage.field_e.readUnsignedByte(0), -119);
+                  if (nm.deliveredOpcode == 73) {
+                    ((GameplayController) (var2)).battlefield.setEliminatedPlayerMask(ByteStorage.incomingPacket.readUnsignedByte(0), -119);
                     if (null == rd.field_j) {
                       continue;
                     }
                     dv.a(true);
                     continue;
                   }
-                  if (nm.field_o == 72) {
-                    ((GameplayController) (var2)).battlefield.field_i = ByteStorage.field_e.readUnsignedByte(0);
+                  if (nm.deliveredOpcode == 72) {
+                    ((GameplayController) (var2)).battlefield.field_i = ByteStorage.incomingPacket.readUnsignedByte(0);
                     if (null == rd.field_j) {
                       continue;
                     }
                     bw.d(7242);
                     continue;
                   }
-                  if (nm.field_o == 73) {
-                    ((GameplayController) (var2)).field_hb = ByteStorage.field_e.readUnsignedByte(0);
+                  if (nm.deliveredOpcode == 73) {
+                    ((GameplayController) (var2)).field_hb = ByteStorage.incomingPacket.readUnsignedByte(0);
                     if (null == rd.field_j) {
                       continue;
                     }
@@ -1019,7 +1019,7 @@ public final class ArmiesOfGielinor extends wf {
             iv.a(false, fs.a(false), var2);
             return;
           }
-          if (!qu.field_q) {
+          if (!DelayedPacket.field_q) {
             PaletteRegionMap.a((byte) 121, var2);
             return;
           }
@@ -1548,8 +1548,8 @@ public final class ArmiesOfGielinor extends wf {
           es.b(-119);
           TeamRoster.b(-51);
           fo.a(true);
-          sa.a((byte) 96);
-          qu.a(param0 + 1);
+          ClientConnectionState.a((byte) 96);
+          DelayedPacket.a(param0 + 1);
           wm.a(-10743);
           wd.a(200);
           ad.a((byte) 63);
@@ -1613,7 +1613,7 @@ public final class ArmiesOfGielinor extends wf {
         int var7 = 0;
         var7 = obfuscationControl ? 1 : 0;
         try {
-          li.field_n = new Random(vi.b(-108));
+          li.field_n = new Random(vi.monotonicMillis(-108));
           this.a(4, 68, 24, 2, -119, 0, 1);
           UnitSpell.a(52, new lt());
           var2 = new wn();
@@ -1657,32 +1657,32 @@ public final class ArmiesOfGielinor extends wf {
               UnitLossCondition.field_d = TeleportAction.e(-10128);
               this.a(true, false, true, true, 55, false, true);
               jv.field_d = pi.field_M;
-              sh.field_a[65] = -2;
+              sh.opcodePayloadLengths[65] = -2;
               stackIn_26_0 = param0 ? 1 : 0;
             }
             bj.field_k = stackIn_26_0 != 0;
-            sh.field_a[80] = -2;
-            sh.field_a[77] = -2;
-            sh.field_a[68] = -1;
-            sh.field_a[9] = -1;
-            sh.field_a[81] = -1;
-            sh.field_a[72] = 1;
-            sh.field_a[78] = 4;
-            sh.field_a[82] = -2;
-            sh.field_a[79] = 4;
+            sh.opcodePayloadLengths[80] = -2;
+            sh.opcodePayloadLengths[77] = -2;
+            sh.opcodePayloadLengths[68] = -1;
+            sh.opcodePayloadLengths[9] = -1;
+            sh.opcodePayloadLengths[81] = -1;
+            sh.opcodePayloadLengths[72] = 1;
+            sh.opcodePayloadLengths[78] = 4;
+            sh.opcodePayloadLengths[82] = -2;
+            sh.opcodePayloadLengths[79] = 4;
             ke.field_b = m.field_f;
-            sh.field_a[73] = 1;
-            sh.field_a[75] = 12;
-            sh.field_a[74] = -1;
+            sh.opcodePayloadLengths[73] = 1;
+            sh.opcodePayloadLengths[75] = 12;
+            sh.opcodePayloadLengths[74] = -1;
             iv.field_e = DeployEvent.field_C;
-            sh.field_a[76] = 3;
-            sh.field_a[70] = 1;
-            sh.field_a[64] = -2;
-            sh.field_a[10] = -1;
-            sh.field_a[71] = 1;
-            sh.field_a[67] = 4;
+            sh.opcodePayloadLengths[76] = 3;
+            sh.opcodePayloadLengths[70] = 1;
+            sh.opcodePayloadLengths[64] = -2;
+            sh.opcodePayloadLengths[10] = -1;
+            sh.opcodePayloadLengths[71] = 1;
+            sh.opcodePayloadLengths[67] = 4;
             fs.field_d = hc.field_o;
-            sh.field_a[69] = -1;
+            sh.opcodePayloadLengths[69] = -1;
             return;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -1921,7 +1921,7 @@ public final class ArmiesOfGielinor extends wf {
         int var18 = 0;
         var18 = obfuscationControl ? 1 : 0;
         try {
-          if (qu.field_q) {
+          if (DelayedPacket.field_q) {
             return true;
           }
           var3_int = -78 / ((param0 + 45) / 46);
@@ -2289,7 +2289,7 @@ public final class ArmiesOfGielinor extends wf {
           ps.field_w[0] = DiskCacheRequest.a("campaign_1_glow", "campaign", iw.field_l, false);
           ps.field_w[1] = DiskCacheRequest.a("campaign_2_glow", "campaign", iw.field_l, false);
           ps.field_w[2] = DiskCacheRequest.a("campaign_3_glow", "campaign", iw.field_l, false);
-          qu.field_k = MapLayout.a("achievements_large", -28106, "basic", iw.field_l);
+          DelayedPacket.field_k = MapLayout.a("achievements_large", -28106, "basic", iw.field_l);
           MoveAttackRequest.field_A = GameplayController.a("unachieved", (byte) 51, "basic", gg.field_K);
           DeathEvent.field_A = GameplayController.a("locked", (byte) 51, "basic", gg.field_K);
           mo.field_t = GameplayController.a("orbcoin", (byte) 51, "basic", gg.field_K);
@@ -2366,7 +2366,7 @@ public final class ArmiesOfGielinor extends wf {
             field_J = (BitmapFont) null;
           }
           jt.field_a = 16;
-          sa.a(50, true);
+          ClientConnectionState.a(50, true);
           ar.a(param0 ^ -68, mp.field_Ob);
           DropdownSelector.a(128, 8, rs.field_n.field_z, rs.field_n.field_L + rs.field_n.field_z, rs.field_n, io.field_m[0].pixelHeight, 8, 2, 16777215, 240, rs.field_n.field_z, -99, new pn(DisplacedUnitMarker.field_s, nd.field_b, 0, 128, true), 255, new pn(DisplacedUnitMarker.field_s, nd.field_b, 0, 128, true), 320, io.field_m[0].pixelWidth, rs.field_n.field_z + rs.field_n.field_L, new pn(io.field_m, nd.field_b, 0, 224, false), rs.field_n);
           wm.a(320, 128, 240, 16777215, rs.field_n.field_z + rs.field_n.field_L, rs.field_n.field_z, new pn(DisplacedUnitMarker.field_s, nd.field_b, 0, 128, true), 8, (byte) 90, 480, 8, rs.field_n.field_L + rs.field_n.field_z, new pn(DisplacedUnitMarker.field_s, nd.field_b, 0, 128, true), io.field_m[0].pixelHeight, rs.field_n, 2, io.field_m[0].pixelWidth, rs.field_n, 255, rs.field_n.field_z, new pn(io.field_m, nd.field_b, 0, 224, false));
@@ -2480,7 +2480,7 @@ public final class ArmiesOfGielinor extends wf {
               }
             }
             fe.b(-5, var3 - 10, rs.field_n.a(so.field_a[var2.field_l]) + 62, 48, io.field_m, nd.field_b, 0, 128);
-            qu.field_k[var2.field_l].c(8, var3);
+            DelayedPacket.field_k[var2.field_l].c(8, var3);
             rs.field_n.b(so.field_a[var2.field_l], 42, var3 - (-5 - rs.field_n.field_H), 15658734, -1);
           }
           return;

@@ -71,7 +71,7 @@ public abstract class iv extends java.applet.Applet implements Runnable, java.aw
             !rh.field_c) {
             ol.field_z = true;
             if (se.field_c &&
-              -AttackEvent.field_P + vi.b(62) > 1000L) {
+              -AttackEvent.field_P + vi.monotonicMillis(62) > 1000L) {
               var2 = param0.getClipBounds();
               if (null != var2) {
                 if (ce.field_N > var2.width) {
@@ -109,7 +109,7 @@ public abstract class iv extends java.applet.Applet implements Runnable, java.aw
         try {
           if (IntKeyLookup.field_a == this &&
             !rh.field_c) {
-            ActionRequest.field_s = vi.b(-46);
+            ActionRequest.field_s = vi.monotonicMillis(-46);
             nu.a(5000L, 0);
             PacketBuffer.field_s = null;
             this.a(false, -1251);
@@ -175,7 +175,7 @@ public abstract class iv extends java.applet.Applet implements Runnable, java.aw
           return;
         }
         try {
-          ActionRequest.field_s = 4000L + vi.b(-62);
+          ActionRequest.field_s = 4000L + vi.monotonicMillis(-62);
         } catch (RuntimeException runtimeException) {
           throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "iv.stop()");
         }
@@ -266,7 +266,7 @@ public abstract class iv extends java.applet.Applet implements Runnable, java.aw
         Throwable decompiledCaughtException = null;
         Object var6 = null;
         try {
-          var2_long = vi.b(120);
+          var2_long = vi.monotonicMillis(120);
           var4 = CampaignMission.field_r[os.field_o];
           CampaignMission.field_r[os.field_o] = var2_long;
           if (0L != var4 &&
@@ -615,7 +615,7 @@ public abstract class iv extends java.applet.Applet implements Runnable, java.aw
                 do {
                   boolean decompiledFrameRemainder0 = true;
                   if (0L != ActionRequest.field_s) {
-                    stackIn_102_0 = $cfr$lcmp(ActionRequest.field_s, vi.b(-56));
+                    stackIn_102_0 = $cfr$lcmp(ActionRequest.field_s, vi.monotonicMillis(-56));
                     decompiledFrameRemainder0 = (var5 == 0);
                     if ((decompiledFrameRemainder0) &&
                       (stackIn_102_0 <= 0)) {
@@ -783,7 +783,7 @@ public abstract class iv extends java.applet.Applet implements Runnable, java.aw
         java.awt.Insets var6 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var2_long = vi.b(94);
+          var2_long = vi.monotonicMillis(94);
           var4 = AiActionCandidate.field_u[ih.field_ab];
           AiActionCandidate.field_u[ih.field_ab] = var2_long;
           ih.field_ab = ih.field_ab + 1 & 31;
@@ -887,7 +887,7 @@ public abstract class iv extends java.applet.Applet implements Runnable, java.aw
           wj.field_l = true;
           ol.field_z = true;
           tq.field_a = false;
-          AttackEvent.field_P = vi.b(param0 + 7);
+          AttackEvent.field_P = vi.monotonicMillis(param0 + 7);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

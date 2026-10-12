@@ -7,7 +7,7 @@ final class ResourceArchive {
     private ArchiveIndex index;
     int fileRetentionMode;
     boolean discardPackedGroups;
-    static sa field_k;
+    static ClientConnectionState connectedState;
     private Object[] packedGroups;
     static String field_d;
     static String field_f;
@@ -140,7 +140,7 @@ final class ResourceArchive {
     }
 
     public static void b(int param0) {
-        field_k = null;
+        connectedState = null;
         if (param0 != -1) {
           return;
         }
@@ -948,7 +948,7 @@ final class ResourceArchive {
     }
 
     static {
-        field_k = new sa();
+        connectedState = new ClientConnectionState();
         field_d = "Data server full or too many connections from your address. Please try again in a few minutes.";
         field_f = "Some players haven't unlocked the currently selected game options.<br>Please see the player list on the left for details.";
         field_i = -1;

@@ -29,7 +29,7 @@ final class DeployEvent extends GameEvent {
           GlobalSpell.field_f.a(t.field_g, 84);
         }
         GlobalSpell.field_f.a(nf.field_Kb, 104);
-        SpellCastEvent.field_E = new ea(sa.field_c, GlobalSpell.field_f);
+        SpellCastEvent.field_E = new ea(ClientConnectionState.field_c, GlobalSpell.field_f);
         if (param0 != 14570) {
           return;
         }

@@ -9,7 +9,7 @@ final class TurnTimerDial {
     private int[] pixelThresholds;
     static String field_g;
     private boolean useSweepMask;
-    static int field_e;
+    static int previousOpcode;
     static int field_d;
 
     final void draw(int screenY, int screenX, byte obfuscationGuard) {
@@ -261,7 +261,7 @@ final class TurnTimerDial {
     static {
         field_g = "You can only use equipment on your turn.";
         field_a = null;
-        field_e = -1;
+        previousOpcode = -1;
     }
 
     /* Full JVM integer arguments; original narrow signature preserved. */

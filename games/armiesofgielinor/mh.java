@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class mh {
-    static sa field_a;
+    static ClientConnectionState field_a;
     static String field_d;
     static wm field_b;
     static int field_c;
@@ -72,7 +72,7 @@ final class mh {
     }
 
     static {
-        field_a = new sa();
+        field_a = new ClientConnectionState();
         field_d = "Guthix Awakens Highscores";
         field_c = 0;
     }

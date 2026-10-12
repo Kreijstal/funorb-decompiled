@@ -7,7 +7,7 @@ final class dq {
     static String field_f;
     static String field_g;
     private int[] field_h;
-    static int field_c;
+    static int packetDelayMillis;
     private byte[] field_a;
     static RgbSprite[] field_i;
     static IndexedSprite[] field_e;
@@ -521,7 +521,7 @@ final class dq {
     }
 
     static {
-        field_c = 0;
+        packetDelayMillis = 0;
         field_d = "Useful items to carry with you. Each unit can only hold one accessory at a time. Equipping a unit with a new accessory will cause whatever accessory that unit is currently holding to be discarded.";
         field_f = "Breaking real-world laws";
         field_j = "Ranged weapons will improve the effectiveness of ranged attacks.";

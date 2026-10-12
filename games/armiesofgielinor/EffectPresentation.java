@@ -159,12 +159,12 @@ final class EffectPresentation implements EventPresentation {
         if (param1 == kd.field_J.field_g) {
           return false;
         }
-        dupTemp$2 = vi.b(82);
+        dupTemp$2 = vi.monotonicMillis(82);
         SummonEvent.field_G = dupTemp$2;
-        CampaignMenuButton.field_h = dupTemp$2;
+        CampaignMenuButton.lastPacketReadMillis = dupTemp$2;
         if (kd.field_J.field_g != 1) {
         }
-        ov.field_g = DirectByteStorage.field_o;
+        ov.connectionState = DirectByteStorage.field_o;
         kd.field_J = null;
         return true;
     }

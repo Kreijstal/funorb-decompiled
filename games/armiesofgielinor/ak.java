@@ -384,8 +384,8 @@ final class ak extends ju {
         int var4Lifetime1;
         vd.field_b.position = 0;
         vd.field_b.writeByte(1, 12);
-        vd.field_b.writeInt((byte) -128, CampaignMenuButton.field_e.nextInt());
-        vd.field_b.writeInt((byte) -75, CampaignMenuButton.field_e.nextInt());
+        vd.field_b.writeInt((byte) -128, CampaignMenuButton.connectionRandom.nextInt());
+        vd.field_b.writeInt((byte) -75, CampaignMenuButton.connectionRandom.nextInt());
         if (param3 == 30) {
           vd.field_b.writeByte(1, param0);
           vd.field_b.writeByte(1, param1);

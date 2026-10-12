@@ -46,9 +46,9 @@ final class vi {
         field_b = null;
     }
 
-    final synchronized static long b(int param0) {
+    final synchronized static long monotonicMillis(int obfuscationGuard) {
         long var1 = System.currentTimeMillis();
-        int var3 = -1 / ((-3 - param0) / 38);
+        int var3 = -1 / ((-3 - obfuscationGuard) / 38);
         if (!(var1 >= h.field_a)) {
           IndexedSpriteBase.field_c = IndexedSpriteBase.field_c + (-var1 + h.field_a);
         }

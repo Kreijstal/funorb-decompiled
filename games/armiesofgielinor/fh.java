@@ -137,10 +137,10 @@ final class fh {
 
     final static boolean b(byte param0) {
         int var1 = -84 % ((-51 - param0) / 32);
-        if (null == MoveAttackRequest.field_z) {
+        if (null == MoveAttackRequest.sessionSocket) {
           return false;
         }
-        if (ov.field_g.b((byte) -121)) {
+        if (ov.connectionState.b((byte) -121)) {
           return true;
         }
         return false;

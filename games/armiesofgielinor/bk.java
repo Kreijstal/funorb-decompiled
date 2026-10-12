@@ -21,8 +21,8 @@ final class bk {
         int var6 = 0;
         String var7 = null;
         try {
-          CombatEvent.field_L[0] = CampaignMenuButton.field_e.nextInt();
-          CombatEvent.field_L[1] = CampaignMenuButton.field_e.nextInt();
+          CombatEvent.field_L[0] = CampaignMenuButton.connectionRandom.nextInt();
+          CombatEvent.field_L[1] = CampaignMenuButton.connectionRandom.nextInt();
           vd.field_b.position = 0;
           CombatEvent.field_L[3] = (int)ts.field_h;
           CombatEvent.field_L[2] = (int)(ts.field_h >> 32);
@@ -176,7 +176,7 @@ final class bk {
               boolean decompiledFrameRemainder0 = true;
               if (stackIn_28_0 == 0) {
                 if (bq.field_c) {
-                  stackIn_13_0 = sa.field_c;
+                  stackIn_13_0 = ClientConnectionState.field_c;
                 } else {
                   stackIn_13_0 = wf.field_u;
                 }

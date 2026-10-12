@@ -59,7 +59,7 @@ final class pq implements java.awt.event.MouseListener, java.awt.event.MouseMoti
             av.field_a = 0;
             mq.field_Xb = param0.getX();
             BoundedFile.field_d = param0.getY();
-            vi.b(-112);
+            vi.monotonicMillis(-112);
             if (javax.swing.SwingUtilities.isRightMouseButton(param0)) {
               ArchiveIndex.field_k = 2;
               ob.field_J = 2;

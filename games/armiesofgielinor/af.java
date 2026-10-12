@@ -55,7 +55,7 @@ abstract class af {
           } else {
             if (0 == param0.field_b &&
               bq.field_c) {
-              var3_ref = "[" + sa.field_c + "] ";
+              var3_ref = "[" + ClientConnectionState.field_c + "] ";
             }
             if (param0.field_b == 1) {
               var3_ref = "[" + fo.a(param1 + 4697, CampaignMenu.field_m, new String[]{param0.field_k}) + "] ";

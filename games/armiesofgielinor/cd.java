@@ -27,7 +27,7 @@ final class cd {
           if (param0 > -17) {
             field_c = -14;
           }
-          var8 = ByteStorage.field_e;
+          var8 = ByteStorage.incomingPacket;
           var2 = var8.readUnsignedByte(0);
           if (var2 != 0) {
             if (var2 != 1) {
@@ -96,7 +96,7 @@ final class cd {
         if (param2) {
           campaigns = (CampaignDefinition[]) null;
           if (rs.field_q == 13) {
-            qu.e(-3);
+            DelayedPacket.e(-3);
             return true;
           }
           if (rs.field_q == 102) {
@@ -112,7 +112,7 @@ final class cd {
           return false;
         }
         if (rs.field_q == 13) {
-          qu.e(-3);
+          DelayedPacket.e(-3);
           return true;
         }
         if (rs.field_q == 102) {

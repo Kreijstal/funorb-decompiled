@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class sg {
-    static sa field_a;
+    static ClientConnectionState field_a;
     static IndexedSprite[] field_b;
     static nr field_c;
     private static String field_z;
@@ -18,6 +18,6 @@ final class sg {
 
     static {
         field_z = "sg.A(";
-        field_a = new sa();
+        field_a = new ClientConnectionState();
     }
 }

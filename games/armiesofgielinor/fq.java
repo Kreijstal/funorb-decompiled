@@ -198,7 +198,7 @@ final class fq {
 
     final static void b(byte param0) {
         NodeIterator.field_a = false;
-        vi.field_d = ByteStorage.field_e.readUnsignedByte(0) == 0 ? true : false;
+        vi.field_d = ByteStorage.incomingPacket.readUnsignedByte(0) == 0 ? true : false;
         if (param0 < 70) {
           field_h = (fa) null;
           return;

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class sa {
+final class ClientConnectionState {
     static String field_b;
     static String field_d;
     static long[][] field_g;
@@ -23,7 +23,7 @@ final class sa {
         try {
           if (obfuscationGuard != -15329) {
             var4 = (String) null;
-            sa.a(18, -42, -58, (String) null);
+            ClientConnectionState.a(18, -42, -58, (String) null);
           }
           stackIn_3_0 = (long)vt.readTwoTierUnsignedInt(-9202, 8, 4, packet);
           return stackIn_3_0;
@@ -70,7 +70,7 @@ final class sa {
     final static void a(int param0, boolean param1) {
         if (!param1) {
           gl var3 = (gl) null;
-          sa.a(false, (gl) null, (gl) null);
+          ClientConnectionState.a(false, (gl) null, (gl) null);
         }
         rd.field_i = 1000000000L / (long)param0;
     }
@@ -119,7 +119,7 @@ final class sa {
         if (param0 >= -64) {
           field_c = (String) null;
         }
-        stackIn_8_0 = (this == NetworkResourceRequest.field_D) || (this == oq.field_m) || (this == ResourceArchive.field_k);
+        stackIn_8_0 = (this == NetworkResourceRequest.field_D) || (this == oq.field_m) || (this == ResourceArchive.connectedState);
         return stackIn_8_0;
     }
 

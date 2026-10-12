@@ -301,9 +301,9 @@ final class AiPlanner extends IntrusiveNode implements UnitObserver {
           if (0 != this.field_t % 2) {
             return false;
           }
-          vi.b(-128);
+          vi.monotonicMillis(-128);
           this.c((byte) -117);
-          vi.b(111);
+          vi.monotonicMillis(111);
           return false;
         }
         var2 = this.field_k;

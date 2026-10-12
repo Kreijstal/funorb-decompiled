@@ -23,7 +23,7 @@ by default for every game. Semantic game-specific names use explicit naming
 rules. Deko's numbered structural-category and type-based names identify
 unresolved purposes honestly; they are not complete semantic deobfuscation.
 
-Armies has 164 reviewed class names, not a complete semantic map. Shared widget
+Armies has 166 reviewed class names, not a complete semantic map. Shared widget
 bounds, dropdown options/prefix selection, painter dispatch and expansion now
 have reviewed names with pointer, selection and arrow-pixel fixtures. Campaign
 loadouts now name unit/spell rewards, equipped slots and cumulative mana bonuses;
@@ -92,8 +92,10 @@ mesh transforms, decoder cleanup and flat/constant-shade rasterization now have
 reviewed names and fixtures. Matrix-backed rotation/scale and full animation
 rendering remain unverified. Battlefield elimination and AI equipped-spell
 planning now use reconstructed control flow from the pinned generic compiler.
-Only DropdownArrowPainter.java retains a dispatcher fallback, in its unrelated
-static packet poller. AI candidate scoring/window fixtures
+DropdownArrowPainter.pollIncomingPacket now preserves its fragmented exception
+regions with ordinary try/catch and a loop. No statePc dispatchers remain in
+the Armies export. Packet framing, partial reads, delayed FIFO delivery and
+failure wrapping have independent fixtures. AI candidate scoring/window fixtures
 cover damage spells, with selection and live casts still unverified.
 
 Steel has 33 reviewed class names. Its controlled raw/named core checks cover

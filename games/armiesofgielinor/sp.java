@@ -10,7 +10,7 @@ final class sp implements Iterator {
     static String field_g;
     static int field_b;
     private DualLinkedNode field_f;
-    static double field_e;
+    static double packetJitterMillis;
 
     final static java.awt.Container a(int param0) {
         if (null != ContextualRuntimeException.field_f) {
@@ -34,7 +34,7 @@ final class sp implements Iterator {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param2 != 0) {
-            field_e = 2.5194855074937275;
+            packetJitterMillis = 2.5194855074937275;
           }
           if (!kp.a(false, param3, param0, param1)) {
             return null;
@@ -118,6 +118,6 @@ final class sp implements Iterator {
         field_d = "This unit has no use for this accessory.";
         field_g = "Drawn";
         field_b = 0;
-        field_e = 0.0;
+        packetJitterMillis = 0.0;
     }
 }

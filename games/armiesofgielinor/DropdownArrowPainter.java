@@ -166,7 +166,7 @@ final class DropdownArrowPainter implements WidgetPainter {
           var6_intLifetime1 = 1;
           if (obfuscationGuard > -79) {
             var11 = (int[]) null;
-            DropdownArrowPainter.a((byte) -58, (int[]) null);
+            DropdownArrowPainter.pollIncomingPacket((byte) -58, (int[]) null);
           }
           while (5 >= var6_intLifetime1) {
             var7Lifetime1 = var6_intLifetime1 + (-5 + (originX + widget.x)) + (widget.width - (widget.width >> 1));
@@ -199,408 +199,108 @@ final class DropdownArrowPainter implements WidgetPainter {
         }
     }
 
-    final static boolean a(byte param0, int[] param1) {
-        int stackIn_3_0 = 0;
-        int stackIn_7_0 = 0;
-        int stackIn_18_0 = 0;
+    final static boolean pollIncomingPacket(byte obfuscationGuard, int[] opcodePayloadLengths) {
+        int var5_int = 0;
+        int var6 = 0;
         int stackIn_22_0 = 0;
-        int stackIn_26_0 = 0;
-        int stackIn_31_0 = 0;
-        int stackIn_42_0 = 0;
-        RuntimeException stackIn_44_0 = null;
-        StringBuilder stackIn_44_1 = null;
         RuntimeException stackIn_45_0 = null;
         StringBuilder stackIn_45_1 = null;
-        RuntimeException stackIn_46_0 = null;
-        StringBuilder stackIn_46_1 = null;
         String stackIn_46_2 = null;
-        int statePc = 0;
-        Throwable caughtException = null;
+        RuntimeException decompiledCaughtException = null;
         long var2_long = 0L;
         RuntimeException var2 = null;
-        qu var4_ref_qu = null;
+        DelayedPacket var4_ref_qu = null;
         int var4 = 0;
-        int var5_int = 0;
-        qu var5 = null;
-        int var6 = 0;
+        DelayedPacket var5 = null;
         int var7 = 0;
-        scanLoop1: while (true) {
-            switch (statePc) {
-                case 0: {
-                    var7 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
-                    statePc = 1;
-                    continue scanLoop1;
-                }
-                case 1: {
-                    try {
-                        if (param0 == 42) {
-                            /* Inlined CFG state: 4. */
-                            {
-                                if (ov.field_g != ResourceArchive.field_k) {
-                                    /* Inlined CFG state: 6. */
-                                    {
-                                        stackIn_7_0 = 0;
-                                        statePc = 7;
-                                        continue scanLoop1;
-                                    }
-                                } else {
-                                    /* Inlined CFG state: 5. */
-                                    {
-                                        /* Sequential CFG blocks: 5, 8. */
-                                        {
-                                        }
-                                        {
-                                            var2_long = vi.b(126);
-                                            if (dq.field_c == 0) {
-                                                statePc = 19;
-                                            } else {
-                                                statePc = 9;
-                                            }
-                                            continue scanLoop1;
-                                        }
-                                    }
-                                }
-                            }
-                        } else {
-                            /* Inlined CFG state: 2. */
-                            {
-                                stackIn_3_0 = 0;
-                                statePc = 3;
-                                continue scanLoop1;
-                            }
-                        }
-                    } catch (Throwable stateCaught_1) {
-                        statePc = ((Object) stateCaught_1 instanceof RuntimeException ? 43 : -1);
-                        if (statePc == -1) {
-                            throw DropdownArrowPainter.<RuntimeException>$cfr$sneakyThrow(stateCaught_1);
-                        }
-                        caughtException = stateCaught_1;
-                        continue scanLoop1;
-                    }
-                }
-                case 3: {
-                    return stackIn_3_0 != 0;
-                }
-                case 7: {
-                    return stackIn_7_0 != 0;
-                }
-                case 9: {
-                    try {
-                        if (0 > ByteStorage.field_f) {
-                            /* Inlined CFG state: 11. */
-                            {
-                                var4_ref_qu = (qu) (AnimationPlayer.field_b.first((byte) 127));
-                                if (var4_ref_qu == null) {
-                                    statePc = 20;
-                                } else {
-                                    statePc = 12;
-                                }
-                                continue scanLoop1;
-                            }
-                        } else {
-                            /* Inlined CFG state: 10. */
-                            {
-                                statePc = 19;
-                                continue scanLoop1;
-                            }
-                        }
-                    } catch (Throwable stateCaught_9) {
-                        statePc = ((Object) stateCaught_9 instanceof RuntimeException ? 43 : -1);
-                        if (statePc == -1) {
-                            throw DropdownArrowPainter.<RuntimeException>$cfr$sneakyThrow(stateCaught_9);
-                        }
-                        caughtException = stateCaught_9;
-                        continue scanLoop1;
-                    }
-                }
-                case 12: {
-                    try {
-                        if (~var2_long < ~var4_ref_qu.field_l) {
-                            /* Inlined CFG state: 14. */
-                            {
-                                var4_ref_qu.unlink(-111);
-                                fk.field_b = var4_ref_qu.field_m.length;
-                                ByteStorage.field_e.position = 0;
-                                var5_int = 0;
-                                statePc = 15;
-                                continue scanLoop1;
-                            }
-                        } else {
-                            /* Inlined CFG state: 13. */
-                            {
-                                statePc = 20;
-                                continue scanLoop1;
-                            }
-                        }
-                    } catch (Throwable stateCaught_12) {
-                        statePc = ((Object) stateCaught_12 instanceof RuntimeException ? 43 : -1);
-                        if (statePc == -1) {
-                            throw DropdownArrowPainter.<RuntimeException>$cfr$sneakyThrow(stateCaught_12);
-                        }
-                        caughtException = stateCaught_12;
-                        continue scanLoop1;
-                    }
-                }
-                case 15: {
-                    try {
-                        if (fk.field_b <= var5_int) {
-                            /* Inlined CFG state: 17. */
-                            {
-                                me.field_c = ba.field_F;
-                                ba.field_F = TurnTimerDial.field_e;
-                                TurnTimerDial.field_e = nm.field_o;
-                                nm.field_o = var4_ref_qu.field_o;
-                                stackIn_18_0 = 1;
-                                statePc = 18;
-                                continue scanLoop1;
-                            }
-                        } else {
-                            /* Inlined CFG state: 16. */
-                            {
-                                ByteStorage.field_e.payload[var5_int] = var4_ref_qu.field_m[var5_int];
-                                var5_int++;
-                                statePc = 15;
-                                continue scanLoop1;
-                            }
-                        }
-                    } catch (Throwable stateCaught_15) {
-                        statePc = ((Object) stateCaught_15 instanceof RuntimeException ? 43 : -1);
-                        if (statePc == -1) {
-                            throw DropdownArrowPainter.<RuntimeException>$cfr$sneakyThrow(stateCaught_15);
-                        }
-                        caughtException = stateCaught_15;
-                        continue scanLoop1;
-                    }
-                }
-                case 18: {
-                    return stackIn_18_0 != 0;
-                }
-                case 19: {
-                    stackIn_22_0 = ByteStorage.field_f;
-                    statePc = 22;
-                    continue scanLoop1;
-                }
-                case 20: {
-                    stackIn_22_0 = ByteStorage.field_f;
-                    statePc = 22;
-                    continue scanLoop1;
-                }
-                case 21: {
-                    try {
-                        stackIn_22_0 = ByteStorage.field_f;
-                        statePc = 22;
-                        continue scanLoop1;
-                    } catch (Throwable stateCaught_21) {
-                        statePc = ((Object) stateCaught_21 instanceof RuntimeException ? 43 : -1);
-                        if (statePc == -1) {
-                            throw DropdownArrowPainter.<RuntimeException>$cfr$sneakyThrow(stateCaught_21);
-                        }
-                        caughtException = stateCaught_21;
-                        continue scanLoop1;
-                    }
-                }
-                case 22: {
-                    try {
-                        if (stackIn_22_0 < 0) {
-                            /* Inlined CFG state: 24. */
-                            {
-                                ByteStorage.field_e.position = 0;
-                                if (es.a(param0 ^ -83, 1)) {
-                                    /* Inlined CFG state: 27. */
-                                    {
-                                        ByteStorage.field_f = ByteStorage.field_e.readCipheredOpcode(255);
-                                        ByteStorage.field_e.position = 0;
-                                        fk.field_b = param1[ByteStorage.field_f];
-                                        statePc = 28;
-                                        continue scanLoop1;
-                                    }
-                                } else {
-                                    /* Inlined CFG state: 25. */
-                                    {
-                                        stackIn_26_0 = 0;
-                                        statePc = 26;
-                                        continue scanLoop1;
-                                    }
-                                }
-                            }
-                        } else {
-                            /* Inlined CFG state: 23. */
-                            {
-                                statePc = 28;
-                                continue scanLoop1;
-                            }
-                        }
-                    } catch (Throwable stateCaught_22) {
-                        statePc = ((Object) stateCaught_22 instanceof RuntimeException ? 43 : -1);
-                        if (statePc == -1) {
-                            throw DropdownArrowPainter.<RuntimeException>$cfr$sneakyThrow(stateCaught_22);
-                        }
-                        caughtException = stateCaught_22;
-                        continue scanLoop1;
-                    }
-                }
-                case 26: {
-                    return stackIn_26_0 != 0;
-                }
-                case 28: {
-                    try {
-                        if (!jh.g(2)) {
-                            /* Inlined CFG state: 30. */
-                            {
-                                stackIn_31_0 = 0;
-                                statePc = 31;
-                                continue scanLoop1;
-                            }
-                        } else {
-                            /* Inlined CFG state: 29. */
-                            {
-                                /* Sequential CFG blocks: 29, 32. */
-                                {
-                                }
-                                {
-                                    if (dq.field_c == 0) {
-                                        /* Inlined CFG state: 41. */
-                                        {
-                                            me.field_c = ba.field_F;
-                                            ba.field_F = TurnTimerDial.field_e;
-                                            TurnTimerDial.field_e = nm.field_o;
-                                            nm.field_o = ByteStorage.field_f;
-                                            ByteStorage.field_f = -1;
-                                            stackIn_42_0 = 1;
-                                            statePc = 42;
-                                            continue scanLoop1;
-                                        }
-                                    } else {
-                                        /* Inlined CFG state: 33. */
-                                        {
-                                            var4 = dq.field_c;
-                                            if (0.0 == sp.field_e) {
-                                                statePc = 37;
-                                            } else {
-                                                statePc = 34;
-                                            }
-                                            continue scanLoop1;
-                                        }
-                                    }
-                                }
-                            }
-                        }
-                    } catch (Throwable stateCaught_28) {
-                        statePc = ((Object) stateCaught_28 instanceof RuntimeException ? 43 : -1);
-                        if (statePc == -1) {
-                            throw DropdownArrowPainter.<RuntimeException>$cfr$sneakyThrow(stateCaught_28);
-                        }
-                        caughtException = stateCaught_28;
-                        continue scanLoop1;
-                    }
-                }
-                case 31: {
-                    return stackIn_31_0 != 0;
-                }
-                case 34: {
-                    try {
-                        var4 = (int)((double)var4 + CampaignMenuButton.field_e.nextGaussian() * sp.field_e);
-                        if (0 > var4) {
-                            /* Inlined CFG state: 36. */
-                            {
-                                var4 = 0;
-                                statePc = 37;
-                                continue scanLoop1;
-                            }
-                        } else {
-                            /* Inlined CFG state: 35. */
-                            {
-                                statePc = 37;
-                                continue scanLoop1;
-                            }
-                        }
-                    } catch (Throwable stateCaught_34) {
-                        statePc = ((Object) stateCaught_34 instanceof RuntimeException ? 43 : -1);
-                        if (statePc == -1) {
-                            throw DropdownArrowPainter.<RuntimeException>$cfr$sneakyThrow(stateCaught_34);
-                        }
-                        caughtException = stateCaught_34;
-                        continue scanLoop1;
-                    }
-                }
-                case 37: {
-                    try {
-                        var5 = new qu(var2_long + (long)var4, ByteStorage.field_f, new byte[fk.field_b]);
-                        var6 = 0;
-                        statePc = 38;
-                        continue scanLoop1;
-                    } catch (Throwable stateCaught_37) {
-                        statePc = ((Object) stateCaught_37 instanceof RuntimeException ? 43 : -1);
-                        if (statePc == -1) {
-                            throw DropdownArrowPainter.<RuntimeException>$cfr$sneakyThrow(stateCaught_37);
-                        }
-                        caughtException = stateCaught_37;
-                        continue scanLoop1;
-                    }
-                }
-                case 38: {
-                    try {
-                        if (var6 >= fk.field_b) {
-                            /* Inlined CFG state: 40. */
-                            {
-                                AnimationPlayer.field_b.addLast((byte) -119, (IntrusiveNode) (var5));
-                                ByteStorage.field_f = -1;
-                                statePc = 21;
-                                continue scanLoop1;
-                            }
-                        } else {
-                            /* Inlined CFG state: 39. */
-                            {
-                                var5.field_m[var6] = ByteStorage.field_e.payload[var6];
-                                var6++;
-                                statePc = 38;
-                                continue scanLoop1;
-                            }
-                        }
-                    } catch (Throwable stateCaught_38) {
-                        statePc = ((Object) stateCaught_38 instanceof RuntimeException ? 43 : -1);
-                        if (statePc == -1) {
-                            throw DropdownArrowPainter.<RuntimeException>$cfr$sneakyThrow(stateCaught_38);
-                        }
-                        caughtException = stateCaught_38;
-                        continue scanLoop1;
-                    }
-                }
-                case 42: {
-                    return stackIn_42_0 != 0;
-                }
-                case 43: {
-                    var2 = (RuntimeException) ((Object) caughtException);
-                    stackIn_45_0 = (RuntimeException) (var2);
-                    stackIn_44_0 = stackIn_45_0;
-                    stackIn_45_1 = new StringBuilder().append("gs.A(").append(param0).append(',');
-                    stackIn_44_1 = stackIn_45_1;
-                    if (param1 == null) {
-                        statePc = 45;
-                    } else {
-                        statePc = 44;
-                    }
-                    continue scanLoop1;
-                }
-                case 44: {
-                    stackIn_46_0 = stackIn_44_0;
-                    stackIn_46_1 = stackIn_44_1;
-                    stackIn_46_2 = "{...}";
-                    statePc = 46;
-                    continue scanLoop1;
-                }
-                case 45: {
-                    stackIn_46_0 = stackIn_45_0;
-                    stackIn_46_1 = stackIn_45_1;
-                    stackIn_46_2 = "null";
-                    statePc = 46;
-                    continue scanLoop1;
-                }
-                case 46: {
-                    throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_46_0), ((StringBuilder) (Object) stackIn_46_1).append(stackIn_46_2).append(')').toString());
-                }
-                default: throw new IllegalStateException("invalid CFG state " + statePc);
+        var7 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        try {
+          if (obfuscationGuard != 42) {
+            return false;
+          }
+          if (ov.connectionState != ResourceArchive.connectedState) {
+            return false;
+          }
+          var2_long = vi.monotonicMillis(126);
+          if (dq.packetDelayMillis != 0 &&
+            0 > ByteStorage.pendingOpcode) {
+            var4_ref_qu = (DelayedPacket) (AnimationPlayer.delayedPackets.first((byte) 127));
+            if (var4_ref_qu != null &&
+              var2_long > var4_ref_qu.releaseAtMillis) {
+              var4_ref_qu.unlink(-111);
+              fk.packetPayloadLength = var4_ref_qu.payload.length;
+              ByteStorage.incomingPacket.position = 0;
+              for (var5_int = 0; fk.packetPayloadLength > var5_int; var5_int++) {
+                ByteStorage.incomingPacket.payload[var5_int] = var4_ref_qu.payload[var5_int];
+              }
+              me.thirdPreviousOpcode = ba.secondPreviousOpcode;
+              ba.secondPreviousOpcode = TurnTimerDial.previousOpcode;
+              TurnTimerDial.previousOpcode = nm.deliveredOpcode;
+              nm.deliveredOpcode = var4_ref_qu.opcode;
+              return true;
             }
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var2 = decompiledCaughtException;
+          stackIn_45_0 = var2;
+          stackIn_45_1 = new StringBuilder().append("gs.A(").append(obfuscationGuard).append(',');
+          if (opcodePayloadLengths == null) {
+            stackIn_46_2 = "null";
+          } else {
+            stackIn_46_2 = "{...}";
+          }
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_45_0), ((StringBuilder) (Object) stackIn_45_1).append(stackIn_46_2).append(')').toString());
+        }
+        stackIn_22_0 = ByteStorage.pendingOpcode;
+        try {
+          while (true) {
+            if (stackIn_22_0 < 0) {
+              ByteStorage.incomingPacket.position = 0;
+              if (!es.receivePacketBytes(obfuscationGuard ^ -83, 1)) {
+                return false;
+              }
+              ByteStorage.pendingOpcode = ByteStorage.incomingPacket.readCipheredOpcode(255);
+              ByteStorage.incomingPacket.position = 0;
+              fk.packetPayloadLength = opcodePayloadLengths[ByteStorage.pendingOpcode];
+            }
+            if (!jh.isPacketPayloadReady(2)) {
+              return false;
+            }
+            if (dq.packetDelayMillis == 0) {
+              me.thirdPreviousOpcode = ba.secondPreviousOpcode;
+              ba.secondPreviousOpcode = TurnTimerDial.previousOpcode;
+              TurnTimerDial.previousOpcode = nm.deliveredOpcode;
+              nm.deliveredOpcode = ByteStorage.pendingOpcode;
+              ByteStorage.pendingOpcode = -1;
+              return true;
+            }
+            var4 = dq.packetDelayMillis;
+            if (0.0 != sp.packetJitterMillis) {
+              var4 = (int)((double)var4 + CampaignMenuButton.connectionRandom.nextGaussian() * sp.packetJitterMillis);
+              if (0 > var4) {
+                var4 = 0;
+              }
+            }
+            var5 = new DelayedPacket(var2_long + (long)var4, ByteStorage.pendingOpcode, new byte[fk.packetPayloadLength]);
+            for (var6 = 0; var6 < fk.packetPayloadLength; var6++) {
+              var5.payload[var6] = ByteStorage.incomingPacket.payload[var6];
+            }
+            AnimationPlayer.delayedPackets.addLast((byte) -119, (IntrusiveNode) (var5));
+            ByteStorage.pendingOpcode = -1;
+            stackIn_22_0 = ByteStorage.pendingOpcode;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
+          decompiledCaughtException = decompiledCaughtParameter1;
+          var2 = decompiledCaughtException;
+          stackIn_45_0 = var2;
+          stackIn_45_1 = new StringBuilder().append("gs.A(").append(obfuscationGuard).append(',');
+          if (opcodePayloadLengths == null) {
+            stackIn_46_2 = "null";
+          } else {
+            stackIn_46_2 = "{...}";
+          }
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_45_0), ((StringBuilder) (Object) stackIn_45_1).append(stackIn_46_2).append(')').toString());
         }
     }
 

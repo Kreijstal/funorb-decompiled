@@ -7,9 +7,9 @@ final class CampaignMenuButton {
     private int top;
     private String label;
     private int left;
-    static Random field_e;
+    static Random connectionRandom;
     int width;
-    static long field_h;
+    static long lastPacketReadMillis;
     static int[] field_g;
     static String field_b;
     static pu[] field_a;
@@ -73,14 +73,14 @@ final class CampaignMenuButton {
     }
 
     public static void c(int param0) {
-        field_e = null;
+        connectionRandom = null;
         if (param0 == 0) {
           field_a = null;
           field_g = null;
           field_b = null;
           return;
         }
-        field_e = (Random) null;
+        connectionRandom = (Random) null;
         field_a = null;
         field_g = null;
         field_b = null;
@@ -103,7 +103,7 @@ final class CampaignMenuButton {
     }
 
     static {
-        field_e = new Random();
+        connectionRandom = new Random();
         field_b = "Owned";
     }
 }

@@ -17,7 +17,7 @@ final class sh {
     private ModelMesh field_e;
     static ResourceArchive field_j;
     private int field_k;
-    static int[] field_a;
+    static int[] opcodePayloadLengths;
     private int field_i;
     static int[] field_r;
 
@@ -244,7 +244,7 @@ final class sh {
         if (param0 != 40) {
           return;
         }
-        field_a = null;
+        opcodePayloadLengths = null;
         field_j = null;
         field_r = null;
         field_m = null;
@@ -289,7 +289,7 @@ final class sh {
 
     static {
         field_l = 360;
-        field_a = new int[256];
+        opcodePayloadLengths = new int[256];
         field_r = new int[]{8};
     }
 }

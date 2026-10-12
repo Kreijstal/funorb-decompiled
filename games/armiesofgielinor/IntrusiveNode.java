@@ -268,7 +268,7 @@ class IntrusiveNode {
               var7Lifetime2 = var9;
               var7Lifetime3 = var9;
               if (param4 >= 0L) {
-                var7Lifetime4 = var9 + "; Expires=" + fq.a((byte) -82, vi.b(107) + 1000L * param4) + "; Max-Age=" + param4;
+                var7Lifetime4 = var9 + "; Expires=" + fq.a((byte) -82, vi.monotonicMillis(107) + 1000L * param4) + "; Max-Age=" + param4;
               } else {
                 var7Lifetime4 = var9 + "; Discard;";
               }

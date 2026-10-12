@@ -48,7 +48,7 @@ abstract class wf extends iv {
     }
 
     final static void g(int param0) {
-        dp.field_Lb = vi.b(-83);
+        dp.field_Lb = vi.monotonicMillis(-83);
         mu.field_d = 0;
         if (param0 != -20873) {
           wf.h(-23);
@@ -120,7 +120,7 @@ abstract class wf extends iv {
           er.b(-11);
           wv.a(lk.field_r, 10, var2);
           ol.field_C = true;
-          jl.field_a = vi.b(-111) + 15000L;
+          jl.field_a = vi.monotonicMillis(-111) + 15000L;
         } else {
           if (p.field_b == 11 &&
             gk.field_K == 0) {
@@ -185,11 +185,11 @@ abstract class wf extends iv {
     }
 
     private final void n(int param0) {
-        int var2 = ByteStorage.field_e.readUnsignedByte(0);
+        int var2 = ByteStorage.incomingPacket.readUnsignedByte(0);
         int var3 = (var2 & 1) != 0 ? 1 : 0;
-        int var4 = fk.field_b - 1;
+        int var4 = fk.packetPayloadLength - 1;
         byte[] var5 = new byte[var4];
-        ByteStorage.field_e.a(var4, var5, false, 0);
+        ByteStorage.incomingPacket.a(var4, var5, false, 0);
         SpellCastAction.a(CombatEvent.d((byte) -125), 87, uu.a(var5, (byte) 127), var3 != 0);
         if (param0 != 16433) {
           this.j(-76);
@@ -219,7 +219,7 @@ abstract class wf extends iv {
             throw new IllegalStateException();
           }
           if (1 == var4) {
-            var5_int = sa.a(false, CampaignMission.c((byte) -27), fp.l(-117));
+            var5_int = ClientConnectionState.a(false, CampaignMission.c((byte) -27), fp.l(-117));
             if (var5_int != -1) {
               AiPlanningStrategy.a(103, br.field_b, lk.field_r, var5_int);
               lk.field_r = null;
@@ -344,23 +344,23 @@ abstract class wf extends iv {
     }
 
     private final void f(byte param0) {
-        sh.field_a[9] = -1;
-        sh.field_a[7] = -1;
-        sh.field_a[1] = 16;
-        sh.field_a[18] = 1;
+        sh.opcodePayloadLengths[9] = -1;
+        sh.opcodePayloadLengths[7] = -1;
+        sh.opcodePayloadLengths[1] = 16;
+        sh.opcodePayloadLengths[18] = 1;
         if (param0 == -51) {
-          sh.field_a[13] = -1;
-          sh.field_a[4] = -1;
-          sh.field_a[12] = -1;
-          sh.field_a[6] = -2;
-          sh.field_a[5] = -1;
-          sh.field_a[3] = -1;
-          sh.field_a[11] = -1;
-          sh.field_a[16] = -1;
-          sh.field_a[8] = -2;
-          sh.field_a[17] = -1;
-          sh.field_a[10] = -1;
-          sh.field_a[2] = -2;
+          sh.opcodePayloadLengths[13] = -1;
+          sh.opcodePayloadLengths[4] = -1;
+          sh.opcodePayloadLengths[12] = -1;
+          sh.opcodePayloadLengths[6] = -2;
+          sh.opcodePayloadLengths[5] = -1;
+          sh.opcodePayloadLengths[3] = -1;
+          sh.opcodePayloadLengths[11] = -1;
+          sh.opcodePayloadLengths[16] = -1;
+          sh.opcodePayloadLengths[8] = -2;
+          sh.opcodePayloadLengths[17] = -1;
+          sh.opcodePayloadLengths[10] = -1;
+          sh.opcodePayloadLengths[2] = -2;
           return;
         }
     }
@@ -399,7 +399,7 @@ abstract class wf extends iv {
         mo var3;
         int var4;
         var4 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
-        var2 = nm.field_o;
+        var2 = nm.deliveredOpcode;
         if (var2 < 64 &&
           tk.field_f[var2]) {
           if (0 == var2) {
@@ -444,7 +444,7 @@ abstract class wf extends iv {
                 MapLayout.a(var3, -1);
                 break;
               case 8:
-                jh.a(ByteStorage.field_e, IntPair.field_m, fk.field_b, param0 - 13);
+                jh.a(ByteStorage.incomingPacket, IntPair.field_m, fk.packetPayloadLength, param0 - 13);
                 break;
               case 7:
                 this.e((byte) 127);
@@ -542,7 +542,7 @@ abstract class wf extends iv {
             wv.a(of.field_bc, 10, 2);
             qf.b(56);
             ol.field_C = true;
-            jl.field_a = 15000L + vi.b(-49);
+            jl.field_a = 15000L + vi.monotonicMillis(-49);
           }
         }
         if (gk.field_K == -1 ||
@@ -558,7 +558,7 @@ abstract class wf extends iv {
           }
           if (gk.field_K != -1 &&
             gk.field_K != 0) {
-            jl.field_a = vi.b(98) + 15000L;
+            jl.field_a = vi.monotonicMillis(98) + 15000L;
           }
         }
         if (gk.field_K != -1 &&
@@ -608,7 +608,7 @@ abstract class wf extends iv {
         if ((gk.field_K != -1 &&
           gk.field_K != 0 ||
           MovementPresentation.j(-11)) &&
-          jl.field_a <= vi.b(74)) {
+          jl.field_a <= vi.monotonicMillis(74)) {
           ol.field_C = false;
           if (gk.field_K != -1 &&
             gk.field_K != 0) {

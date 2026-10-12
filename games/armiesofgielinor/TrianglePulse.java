@@ -228,7 +228,7 @@ final class TrianglePulse {
           var6 = stackIn_28_0;
           param2.readBytes(0, param0.field_pc.length, 0, param0.field_pc);
           param0.field_qc = param2.readUnsignedShort((byte) -104);
-          param0.field_Mb = vi.b(39) - (long)param2.readInt(1);
+          param0.field_Mb = vi.monotonicMillis(39) - (long)param2.readInt(1);
           if (var5 == 0) {
             param0.field_bc = -1;
           } else {

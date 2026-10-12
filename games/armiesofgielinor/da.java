@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class da {
-    static sa field_b;
+    static ClientConnectionState field_b;
     static int[][][] instructionIllustrationArguments;
 
     final static void c(int param0) {
@@ -50,7 +50,7 @@ final class da {
     }
 
     final static void a(int param0) {
-        mv.field_d = ByteStorage.field_e.g(1);
+        mv.field_d = ByteStorage.incomingPacket.g(1);
         if (param0 <= 10) {
           String[] var2 = (String[]) null;
           da.a(70, 41, (String[][]) null, (String[]) null, 94);
@@ -173,7 +173,7 @@ final class da {
 
     final static void a(int param0, boolean param1) {
         if (param0 != -10820) {
-          field_b = (sa) null;
+          field_b = (ClientConnectionState) null;
         }
         if (jj.b((byte) -73)) {
           param1 = false;
@@ -209,7 +209,7 @@ final class da {
         int[] var11 = null;
         var8 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          var9 = ByteStorage.field_e;
+          var9 = ByteStorage.incomingPacket;
           var2 = var9.readUnsignedByte(0);
           if (param0 >= -77) {
             return;
@@ -221,7 +221,7 @@ final class da {
               dj.a((byte) -124);
               return;
             }
-            var5 = fk.field_b - var9.position;
+            var5 = fk.packetPayloadLength - var9.position;
             var11 = var4.field_m;
             var10 = var11;
             var6 = var10;
@@ -263,7 +263,7 @@ final class da {
     }
 
     static {
-        field_b = new sa();
+        field_b = new ClientConnectionState();
         instructionIllustrationArguments = new int[][][]{new int[][]{new int[]{-2, -2, -2, -2}}, new int[][]{new int[]{-2, -2, -2, -2}}, new int[][]{new int[]{-2, -2, -2, -2, -2}}, new int[][]{new int[]{-2, -2, -2, -2, -2}}, new int[][]{new int[]{-2, -2, -2, -2, -2}}, new int[][]{new int[]{-2, -2, -2, -1, 0, 3}}, new int[][]{new int[]{-2, -1, 0, 3, -2, -2}}, new int[][]{new int[]{-2, -1, 0, 3, -2}}, new int[][]{new int[]{-2, -2, -2, -2}}, new int[][]{new int[]{-2, -1, 3, -1, 3}, new int[]{-2, -2, -2, -2}}, new int[][]{new int[]{-2, -2, -2, -2, -2, -2}}, new int[][]{new int[]{-2, -1, 0, 3, -2, -2, -2}}, new int[][]{new int[]{-2, -2, -2, -2}}, new int[][]{new int[]{-2, -2, -2, -2}}, new int[][]{new int[]{-2, -2, -2}}, new int[][]{new int[]{-2, -2, -2, -2}}, new int[][]{new int[]{-2, -2, -2, -2}}};
     }
 }

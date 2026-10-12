@@ -6582,7 +6582,7 @@ final class GameplayController {
                       }
                     }}
                   if (((String) (var2)).length() > 0) {
-                    sa.a(-1204320024, -30 + 30 * var15, 223, (String) (var2));
+                    ClientConnectionState.a(-1204320024, -30 + 30 * var15, 223, (String) (var2));
                     return;
                   }
                   decompiledFrameRemainder9 = (var20 != 0);
@@ -6665,7 +6665,7 @@ final class GameplayController {
                   } else {
                     var2 = kv.field_J;
                   }
-                  sa.a(param0 - 1204320144, 0, 253, (String) (var2));
+                  ClientConnectionState.a(param0 - 1204320144, 0, 253, (String) (var2));
                   return;
                 }
               }
@@ -6879,7 +6879,7 @@ final class GameplayController {
                   if (0 >= ((String) (var2)).length()) {
                     break;
                   }
-                  sa.a(param0 - 1204320144, 0, 253, (String) (var2));
+                  ClientConnectionState.a(param0 - 1204320144, 0, 253, (String) (var2));
                   return;
                 }
               }
@@ -12186,7 +12186,7 @@ final class GameplayController {
         this.field_sb = 0;
         this.movementPlanner = null;
         try {
-          vv.field_b = new Random(vi.b(95));
+          vv.field_b = new Random(vi.monotonicMillis(95));
           this.encodedDamageCheckpoint = 996394;
           stackIn_4_1 = !(BufferedSocket.field_j < 2);
           this.field_E = stackIn_4_1;

@@ -317,7 +317,7 @@
         },
         "publishedSources": {
           "files": 542,
-          "sha256": "42bbb193063f848463831a879231c1a065cd36dab881ad87760ad02d30b6ce7e"
+          "sha256": "ec914cad5fdbd0b6cabe2a5c158434ed0bee32e24be37aa8e71d80a903ea0255"
         }
       },
       "bachelorfridge": {
@@ -2617,23 +2617,23 @@
     "armiesofgielinor": {
       "source": {
         "repository": "Kreijstal/funorb-decompiled",
-        "commit": "b9cfce0e13ffae9ae44870e1d959c628663a96dc",
+        "commit": "f9a6dd401349b0d2b3a426a62d2ee09c32514c63",
         "subdirectory": "games/armiesofgielinor"
       },
-      "inputTreeSha256": "2c88a51ecea2c0b981a5b108eb38d0ea276180435a22f4cbd552997163f5a433",
+      "inputTreeSha256": "da234d1d0aacadddcf2056dd95c5f3a1032062e03f27dddb0e4f2914ca7c704c",
       "sources": {
         "files": 542,
-        "sha256": "42bbb193063f848463831a879231c1a065cd36dab881ad87760ad02d30b6ce7e"
+        "sha256": "ec914cad5fdbd0b6cabe2a5c158434ed0bee32e24be37aa8e71d80a903ea0255"
       },
       "dictionary": {
         "path": "decompilation/armiesofgielinor-naming.json",
-        "sha256": "086ff81d0eae97ec96190bb37864f0d5f52a3bf3ad04e1ee942fc0408a5c0de7"
+        "sha256": "8939ffafae665e66afee395e1537b7651c99911b69cfa6834b85dd8fc2070d16"
       },
       "readingGuide": {
         "path": "games/armiesofgielinor/README.md",
-        "sha256": "ffcafd0cf019aeb3447d02c8cc0ec4d116b956cddd5d2b0585591acc458c11bc"
+        "sha256": "c0489e1bfc91b375f3529b54c8348a5d11552963d608739926d3e84b27c38444"
       },
-      "rulesSha256": "580867b12222359722e9d8174b01ce5ad8e7eea5c3b1025b90481f8b95546e8e",
+      "rulesSha256": "7512afe65266ed8107e4b0266c9293330e2bfcc2d1a1dd4ca71d8dbafce55379",
       "compiler": {
         "base": {
           "repository": "Kreijstal/java-tools",
@@ -2670,11 +2670,11 @@
           },
           "generator": {
             "repository": "Kreijstal/java-tools",
-            "commit": "71adcd0171f6926ae054f86bf2c96d87e045faf8",
+            "commit": "ef1fb8596761b757a3ddf5288ca96dcc186a070f",
             "trackedClean": true,
             "sourceArchive": {
-              "sha256": "789cb63546e126182923ac21046e2e9ec8c64a06b38a323a898f2c705adb26e8",
-              "reproduce": "git archive --format=tar 71adcd0171f6926ae054f86bf2c96d87e045faf8 | sha256sum"
+              "sha256": "b972fd2a60c5d2ddad0f9f80b426942804db9b591789f8a70929679a7c1e58a1",
+              "reproduce": "git archive --format=tar ef1fb8596761b757a3ddf5288ca96dcc186a070f | sha256sum"
             }
           },
           "methods": [
@@ -2684,6 +2684,7 @@
               "descriptor": "(IIZ)V",
               "oldBodySha256": "c19446be507696f6c6930f72ed6e53ce0ef5e7160cd44b2233c0f44064b052ec",
               "newBodySha256": "836f6dc47a41db523d4dd8844835a554486755d4ab75efe24db976777e38424a",
+              "deterministic": true,
               "splitBlocks": 8,
               "normalFlowVerified": true
             },
@@ -2693,13 +2694,27 @@
               "descriptor": "(ZII)V",
               "oldBodySha256": "9a6cb9643bae694dcc6870173c113d142900cbff6eb42db6dce8f49995e3ee6c",
               "newBodySha256": "f818b90b93587497c514599640140e57264a5a86bf729d80592417d2313eb12c",
+              "deterministic": true,
               "splitBlocks": 26,
               "normalFlowVerified": true
+            },
+            {
+              "owner": "gs",
+              "name": "a",
+              "descriptor": "(B[I)Z",
+              "oldBodySha256": "29cb1507567cc43a491b924eeeebf3bd390fdf4d72df202ca98ce65cd4e13663",
+              "newBodySha256": "6ad438bf3835c128b235bad82185dfa5f1e73932c098374489d4d4252a347e93",
+              "deterministic": true,
+              "exceptionTableRows": 6,
+              "regions": 2,
+              "regionExitsVerified": true,
+              "regionSourceFlowVerified": true,
+              "outerRoutingVerified": true
             }
           ],
-          "sourceTreeSha256": "2c88a51ecea2c0b981a5b108eb38d0ea276180435a22f4cbd552997163f5a433",
+          "sourceTreeSha256": "da234d1d0aacadddcf2056dd95c5f3a1032062e03f27dddb0e4f2914ca7c704c",
           "verification": {
-            "checks": 58911,
+            "checks": 60889,
             "rawNamedIdentical": true,
             "independentExpectations": true,
             "headlessClientBoundary": true,
@@ -2732,10 +2747,16 @@
             "triangleClipFixtures": true,
             "flatAndUniformShadedTriangleFixtures": true,
             "modelBoundsFixtures": true,
-            "traceSha256": "23f16ae89c77139fd012a6b4be863862c097cc606d48ad603f5e6a88afd5a0b2"
+            "aiSpellCandidateFixtures": true,
+            "incomingPacketFramingFixtures": true,
+            "delayedPacketFixtures": true,
+            "packetPollingFailureFixtures": true,
+            "dropdownWidgetFixtures": true,
+            "dropdownArrowPixelFixture": true,
+            "traceSha256": "aed4049a37fa9c86bc4d14f0df129096b7930618772413d4eddc90d46f7b4459"
           }
         },
-        "sourceTreeSha256": "2c88a51ecea2c0b981a5b108eb38d0ea276180435a22f4cbd552997163f5a433"
+        "sourceTreeSha256": "da234d1d0aacadddcf2056dd95c5f3a1032062e03f27dddb0e4f2914ca7c704c"
       }
     },
     "steelsentinels": {

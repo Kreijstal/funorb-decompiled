@@ -5,7 +5,7 @@ final class me {
     int field_b;
     int field_f;
     static int field_e;
-    static int field_c;
+    static int thirdPreviousOpcode;
     static String field_a;
     static String field_d;
 
@@ -88,7 +88,7 @@ final class me {
     static {
         field_e = -1;
         field_a = "You have: <%0>";
-        field_c = -1;
+        thirdPreviousOpcode = -1;
         field_d = "Reload game";
     }
 }

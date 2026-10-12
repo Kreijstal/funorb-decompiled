@@ -139,7 +139,7 @@ final class CampaignUnitOverride {
                 }
                 var2 = NodeIterator.a(50, "mu_chat_lobby");
                 if (null != var2) {
-                  sa.field_c = uu.a(var2, (byte) -114);
+                  ClientConnectionState.field_c = uu.a(var2, (byte) -114);
                 }
                 var2 = NodeIterator.a(50, "mu_chat_public");
                 if (null != var2) {
@@ -953,7 +953,7 @@ final class CampaignUnitOverride {
                 }
                 var2 = NodeIterator.a(param0 + 132, "rule_0_2");
                 if (var2 != null) {
-                  sa.field_f = uu.a(var2, (byte) -105);
+                  ClientConnectionState.field_f = uu.a(var2, (byte) -105);
                 }
                 var2 = NodeIterator.a(param0 ^ -100, "rule_0_3");
                 if (var2 != null) {
@@ -2054,7 +2054,7 @@ final class CampaignUnitOverride {
                 }
                 var2 = NodeIterator.a(50, "next");
                 if (null != var2) {
-                  sa.field_e = uu.a(var2, (byte) 101);
+                  ClientConnectionState.field_e = uu.a(var2, (byte) 101);
                 }
                 var2 = NodeIterator.a(50, "graphics_colon");
                 if (null != var2) {
@@ -2074,7 +2074,7 @@ final class CampaignUnitOverride {
                 }
                 var2 = NodeIterator.a(50, "returntogame");
                 if (var2 != null) {
-                  sa.field_b = uu.a(var2, (byte) 75);
+                  ClientConnectionState.field_b = uu.a(var2, (byte) 75);
                 }
                 var2 = NodeIterator.a(50, "endgameresign");
                 if (var2 != null) {
@@ -2780,11 +2780,11 @@ final class CampaignUnitOverride {
                 }
                 var2 = NodeIterator.a(50, "rating_mode_name,0");
                 if (var2 != null) {
-                  qu.field_s[0] = uu.a(var2, (byte) -96);
+                  DelayedPacket.field_s[0] = uu.a(var2, (byte) -96);
                 }
                 var2 = NodeIterator.a(param0 ^ -100, "rating_mode_name,1");
                 if (null != var2) {
-                  qu.field_s[1] = uu.a(var2, (byte) 61);
+                  DelayedPacket.field_s[1] = uu.a(var2, (byte) 61);
                 }
                 var2 = NodeIterator.a(50, "rating_mode_long_name,0");
                 if (var2 != null) {
