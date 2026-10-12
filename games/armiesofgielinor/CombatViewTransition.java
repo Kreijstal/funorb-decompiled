@@ -33,7 +33,7 @@ final class CombatViewTransition {
           return param2;
         }
         if (param3 < -91) {
-          return cq.field_u[param0 + ks.field_y * param1];
+          return CampaignMenuEntry.field_u[param0 + ks.field_y * param1];
         }
         return -54;
     }

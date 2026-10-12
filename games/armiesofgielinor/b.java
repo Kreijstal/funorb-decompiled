@@ -51,11 +51,11 @@ final class b extends IntrusiveNode {
           iw.field_n = var17.readUnsignedShort((byte) -104);
           j.field_e = new int[iw.field_n];
           c.field_e = new int[iw.field_n];
-          iq.field_g = new int[iw.field_n];
+          CampaignMenuButton.field_g = new int[iw.field_n];
           MapTile.field_e = new boolean[iw.field_n];
           qm.field_K = new int[iw.field_n];
           AnimationPlayer.field_j = new byte[iw.field_n][];
-          cq.field_z = new byte[iw.field_n][];
+          CampaignMenuEntry.field_z = new byte[iw.field_n][];
           var17.position = -(iw.field_n * 8) - 7 + param0.length;
           lg.field_d = var17.readUnsignedShort((byte) -104);
           wr.field_J = var17.readUnsignedShort((byte) -104);
@@ -64,7 +64,7 @@ final class b extends IntrusiveNode {
             j.field_e[var4] = var16.readUnsignedShort((byte) -104);
           }
           for (var4Lifetime1 = 0; var4Lifetime1 < iw.field_n; var4Lifetime1++) {
-            iq.field_g[var4Lifetime1] = var17.readUnsignedShort((byte) -104);
+            CampaignMenuButton.field_g[var4Lifetime1] = var17.readUnsignedShort((byte) -104);
           }
           for (var4Lifetime2 = 0; iw.field_n > var4Lifetime2; var4Lifetime2++) {
             qm.field_K[var4Lifetime2] = var17.readUnsignedShort((byte) -104);
@@ -95,7 +95,7 @@ final class b extends IntrusiveNode {
             var21 = new byte[var7];
             var19 = var21;
             var9 = var19;
-            cq.field_z[var4Lifetime5] = var21;
+            CampaignMenuEntry.field_z[var4Lifetime5] = var21;
             var10 = 0;
             var11 = var17.readUnsignedByte(0);
             if ((1 & var11) == 0) {

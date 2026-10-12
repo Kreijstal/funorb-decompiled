@@ -233,7 +233,7 @@ abstract class wf extends iv {
           if (2 == var4) {
             var5_intLifetime1 = vo.a((byte) -46, CombatPresentation.i(-4938), cn.e(488997228), lb.b(0), this.field_n, qp.e((byte) -127), jr.a(-1));
             if (var5_intLifetime1 != -1) {
-              cq.a(lk.field_r, -14, br.field_b, var5_intLifetime1);
+              CampaignMenuEntry.a(lk.field_r, -14, br.field_b, var5_intLifetime1);
               lk.field_r = null;
               br.field_b = null;
             }
@@ -596,7 +596,7 @@ abstract class wf extends iv {
                     wv.a(kl.field_d, 10, 256);
                   }
                 } else {
-                  wv.a(cv.field_k, 10, 256);
+                  wv.a(CampaignMenu.field_k, 10, 256);
                 }
               } else {
                 wv.a(oq.field_k, 10, 256);

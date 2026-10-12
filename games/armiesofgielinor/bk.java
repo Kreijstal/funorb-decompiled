@@ -21,8 +21,8 @@ final class bk {
         int var6 = 0;
         String var7 = null;
         try {
-          CombatEvent.field_L[0] = iq.field_e.nextInt();
-          CombatEvent.field_L[1] = iq.field_e.nextInt();
+          CombatEvent.field_L[0] = CampaignMenuButton.field_e.nextInt();
+          CombatEvent.field_L[1] = CampaignMenuButton.field_e.nextInt();
           vd.field_b.position = 0;
           CombatEvent.field_L[3] = (int)ts.field_h;
           CombatEvent.field_L[2] = (int)(ts.field_h >> 32);
@@ -211,7 +211,7 @@ final class bk {
           }
           if (decompiledNaturalLoopExit0) {
             UnitLossCondition.field_f = new je(0L, param11);
-            UnitLossCondition.field_f.field_X = cv.field_n;
+            UnitLossCondition.field_f.field_X = CampaignMenu.field_n;
             CombatEvent.field_I.a(UnitLossCondition.field_f, 42);
             stackIn_28_0 = TeamRoster.a(4) ? 1 : 0;
           }

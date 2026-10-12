@@ -58,7 +58,7 @@ abstract class af {
               var3_ref = "[" + sa.field_c + "] ";
             }
             if (param0.field_b == 1) {
-              var3_ref = "[" + fo.a(param1 + 4697, cv.field_m, new String[]{param0.field_k}) + "] ";
+              var3_ref = "[" + fo.a(param1 + 4697, CampaignMenu.field_m, new String[]{param0.field_k}) + "] ";
             }
             if (4 == param0.field_b &&
               null != TeleportAction.field_C) {

@@ -54,15 +54,15 @@ abstract class uq extends ms {
           }
           if (ov.field_g == sg.field_a) {
             vl.field_n.position = 0;
-            cv.field_s = null;
+            CampaignMenu.field_s = null;
             if (param0 != null) {
               var9 = 0;
               vd.field_b.position = 0;
               if (param6) {
                 var9 = var9 | 1;
               }
-              vd.field_b.writeInt((byte) -108, iq.field_e.nextInt());
-              vd.field_b.writeInt((byte) -52, iq.field_e.nextInt());
+              vd.field_b.writeInt((byte) -108, CampaignMenuButton.field_e.nextInt());
+              vd.field_b.writeInt((byte) -52, CampaignMenuButton.field_e.nextInt());
               vd.field_b.a(var14, 413740432);
               vd.field_b.a(var8, 413740432);
               var15 = (CharSequence) ((Object) param0);
@@ -82,8 +82,8 @@ abstract class uq extends ms {
               vl.field_n.f(0, -var10 + vl.field_n.position);
             } else {
               vd.field_b.position = 0;
-              vd.field_b.writeInt((byte) -57, iq.field_e.nextInt());
-              vd.field_b.writeInt((byte) -54, iq.field_e.nextInt());
+              vd.field_b.writeInt((byte) -57, CampaignMenuButton.field_e.nextInt());
+              vd.field_b.writeInt((byte) -54, CampaignMenuButton.field_e.nextInt());
               stackIn_10_0 = vd.field_b;
               if (!param1.a((byte) 125)) {
                 stackIn_11_1 = "";
@@ -126,7 +126,7 @@ abstract class uq extends ms {
               }
               if (var9Lifetime1 == 99) {
                 es.a(-81, qa.h(1));
-                cv.field_s = new Boolean(rr.a((byte) -76, mg.field_e));
+                CampaignMenu.field_s = new Boolean(rr.a((byte) -76, mg.field_e));
                 mg.field_e.position = 0;
               } else {
                 fk.field_b = -1;

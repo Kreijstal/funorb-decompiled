@@ -45,7 +45,7 @@ final class ib extends mk {
             return stackIn_11_0;
           }
           if (ph.a(var5, (byte) 113)) {
-            stackIn_15_0 = cv.field_v;
+            stackIn_15_0 = CampaignMenu.field_v;
             return stackIn_15_0;
           }
           if (this.a(param1, 127)) {

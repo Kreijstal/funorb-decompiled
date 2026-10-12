@@ -273,7 +273,7 @@ final class i extends je {
             stackIn_7_1 = !(this.field_Qb.field_rb);
             stackIn_6_0.field_rb = stackIn_7_1;
           }
-          for (var4 = 0; cq.field_F > var4; var4++) {
+          for (var4 = 0; CampaignMenuEntry.field_F > var4; var4++) {
             if (null != this.field_Ub[var4]) {
               stackIn_15_0 = this.field_Ub[var4];
               stackIn_16_1 = !(0 >= this.field_Jb.length());
@@ -484,8 +484,8 @@ final class i extends je {
             this.field_Tb.a(var28[1], 65);
             var28[2] = new je(0L, (je) null);
             this.field_Tb.a(var28[2], 111);
-            this.field_Ub = new je[cq.field_F];
-            for (var16 = 0; var16 < cq.field_F; var16++) {
+            this.field_Ub = new je[CampaignMenuEntry.field_F];
+            for (var16 = 0; var16 < CampaignMenuEntry.field_F; var16++) {
               if (ef.field_d[var16] != null) {
                 this.field_Ub[var16] = new je(0L, param10, ef.field_d[var16]);
                 this.field_Ub[var16].field_Eb = 0;
@@ -512,7 +512,7 @@ final class i extends je {
             if (var17Lifetime3 > var16Lifetime2) {
               var16Lifetime2 = var17Lifetime3;
             }
-            for (var17Lifetime4 = 0; cq.field_F > var17Lifetime4; var17Lifetime4++) {
+            for (var17Lifetime4 = 0; CampaignMenuEntry.field_F > var17Lifetime4; var17Lifetime4++) {
               if (this.field_Ub[var17Lifetime4] != null) {
                 var18 = this.field_Ub[var17Lifetime4].j(92);
                 if (var16Lifetime2 < var18) {

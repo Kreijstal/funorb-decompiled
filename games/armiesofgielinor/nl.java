@@ -358,7 +358,7 @@ abstract class nl extends kb implements gw {
           } else {
             stackIn_6_0 = null;
             stackIn_6_1 = null;
-            stackIn_6_4 = cq.field_C;
+            stackIn_6_4 = CampaignMenuEntry.field_C;
           }
           VineGrowthAction.field_x = new je(stackIn_5_2, stackIn_5_3, ((String) (Object) stackIn_6_4).toUpperCase());
           ov.field_i = new je(0L, (je) null);

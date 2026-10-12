@@ -291,8 +291,8 @@ final class CampaignMission extends IntrusiveNode implements TaggedFieldReader {
         return this.teamAssignments;
     }
 
-    final boolean e(byte param0) {
-        if (param0 <= 56) {
+    final boolean requiresAllNeighborScores(byte obfuscationGuard) {
+        if (obfuscationGuard <= 56) {
           return true;
         }
         return (this.flags & 2) != 0 ? true : false;

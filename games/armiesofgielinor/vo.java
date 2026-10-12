@@ -241,7 +241,7 @@ final class vo implements Runnable {
         if (rs.field_t == param1) {
           var7 = eb.field_d;
         } else {
-          var7 = cv.field_q;
+          var7 = CampaignMenu.field_q;
         }
         ef.a(param2, (byte) 46, param3, param6, param4, param0, param5, var7);
     }

@@ -49,7 +49,7 @@ final class es {
                 var2_int = -mg.field_e.position + param1;
               }
               MoveAttackRequest.field_z.a(0, mg.field_e.position, var2_int, mg.field_e.payload);
-              iq.field_h = vi.b(46);
+              CampaignMenuButton.field_h = vi.b(46);
               mg.field_e.position = mg.field_e.position + var2_int;
               if (mg.field_e.position < param1) {
                 return false;

@@ -293,7 +293,7 @@ class ro extends pt implements he {
           return true;
         }
         if (!TextCursor.field_f) {
-          var7Lifetime1 = "[" + fo.a(param1 ^ -4859, cv.field_m, new String[]{vu.field_M.field_rc}) + "] ";
+          var7Lifetime1 = "[" + fo.a(param1 ^ -4859, CampaignMenu.field_m, new String[]{vu.field_M.field_rc}) + "] ";
           var54Lifetime1 = var7Lifetime1 + var18 + ": ";
           var5Lifetime1 = var5Lifetime1 - IntrusiveNode.field_e.a(var54Lifetime1);
           if (IntrusiveNode.field_e.a(UpkeepEvent.field_C.toString()) > var5Lifetime1) {
@@ -310,7 +310,7 @@ class ro extends pt implements he {
           }
           return true;
         }
-        var7Lifetime2 = "[" + fo.a(param1 ^ -4859, cv.field_m, new String[]{vu.field_M.field_rc}) + "] ";
+        var7Lifetime2 = "[" + fo.a(param1 ^ -4859, CampaignMenu.field_m, new String[]{vu.field_M.field_rc}) + "] ";
         var54Lifetime2 = var7Lifetime2 + var18 + ": ";
         var5Lifetime1 = var5Lifetime1 - IntrusiveNode.field_e.a(var54Lifetime2);
         if (IntrusiveNode.field_e.a(UpkeepEvent.field_C.toString()) > var5Lifetime1) {

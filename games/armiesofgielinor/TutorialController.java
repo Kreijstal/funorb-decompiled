@@ -4138,7 +4138,7 @@ final class TutorialController {
             21 == this.tutorialStage) {
             rd.field_j = null;
             System.gc();
-            MoveEvent.field_C.c((byte) -120);
+            MoveEvent.field_C.loadCampaignResources((byte) -120);
             MoveEvent.field_C.b(92);
           }
           if (obfuscationGuard < 50) {
@@ -4885,7 +4885,7 @@ final class TutorialController {
                   }
                 }
                 if (decompiledFrameRemainder3) {
-                  MoveEvent.field_C.f((byte) 124);
+                  MoveEvent.field_C.handleInput((byte) 124);
                   if (var4 != 0) {
                     this.c((byte) -120);
                     if (hi.field_i != null) {
@@ -5159,7 +5159,7 @@ final class TutorialController {
           this.b(true);
           if (bw.unitDefinitions[var4_int][11] <= 0) {
             if ((pg.playerProfile.unitUnlockMasks[param0] & 1 << param1) != 0) {
-              fe.c(iq.field_b, db.a(true, 537), MatchConditionEntry.a(366, (byte) 94), nd.field_b, true);
+              fe.c(CampaignMenuButton.field_b, db.a(true, 537), MatchConditionEntry.a(366, (byte) 94), nd.field_b, true);
               if (var6 == 0) {
                 return;
               }
@@ -5191,7 +5191,7 @@ final class TutorialController {
               return;
             }
           }
-          fe.c(iq.field_b, db.a(true, 537), MatchConditionEntry.a(366, (byte) 94), nd.field_b, true);
+          fe.c(CampaignMenuButton.field_b, db.a(true, 537), MatchConditionEntry.a(366, (byte) 94), nd.field_b, true);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -5596,7 +5596,7 @@ final class TutorialController {
                               if (this.tutorialStage == 22 ||
                                 21 == this.tutorialStage) {
                                 fe.b(db.a(true, 15), MatchConditionEntry.a(30, (byte) 94), 610, 420, io.field_m, nd.field_b, 0, 180);
-                                MoveEvent.field_C.e((byte) 17);
+                                MoveEvent.field_C.draw((byte) 17);
                                 fe.b(MoveEvent.tutorialLayout.getLeftX(this.tutorialStage, 29), MoveEvent.tutorialLayout.getTopY(this.tutorialStage, (byte) -119) - 10, MoveEvent.tutorialLayout.getRightX((byte) 103, this.tutorialStage) - MoveEvent.tutorialLayout.getLeftX(this.tutorialStage, 29), MoveEvent.tutorialLayout.getBottomY(-6, this.tutorialStage) - (MoveEvent.tutorialLayout.getTopY(this.tutorialStage, (byte) -119) - 10), io.field_m, nd.field_b, 0, 256);
                                 decompiledFrameRemainder0 = (var4 != 0);
                               }

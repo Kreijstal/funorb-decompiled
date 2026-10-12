@@ -56,38 +56,38 @@ final class nk {
         int var1_intLifetime1;
         var4 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          cq.field_u = new int[vs.field_e.length];
+          CampaignMenuEntry.field_u = new int[vs.field_e.length];
           for (var1_int = 0; var1_int < vs.field_e.length; var1_int++) {
-            cq.field_u[var1_int] = va.field_G[vs.field_e[var1_int].terrainType];
+            CampaignMenuEntry.field_u[var1_int] = va.field_G[vs.field_e[var1_int].terrainType];
           }
           if (param0 <= 79) {
             nk.a((byte) 84);
           }
           for (var1_intLifetime1 = 0; var1_intLifetime1 < ef.field_c; var1_intLifetime1++) {
             for (var2 = 0; ks.field_y > var2; var2++) {
-              var3 = cq.field_u[var1_intLifetime1 * ks.field_y + var2];
+              var3 = CampaignMenuEntry.field_u[var1_intLifetime1 * ks.field_y + var2];
               if (1 == var3) {
                 var3 = 7;
                 if (ta.field_L) {
                   var3 = 4;
                 }
                 if (0 == var2 ||
-                  cq.field_u[-1 + (var2 + var1_intLifetime1 * ks.field_y)] == 1) {
+                  CampaignMenuEntry.field_u[-1 + (var2 + var1_intLifetime1 * ks.field_y)] == 1) {
                   var3 = 1;
                 }
                 if (-1 + ks.field_y == var2 ||
-                  1 == cq.field_u[1 + var2 + var1_intLifetime1 * ks.field_y]) {
+                  1 == CampaignMenuEntry.field_u[1 + var2 + var1_intLifetime1 * ks.field_y]) {
                   var3 = 1;
                 }
                 if (var1_intLifetime1 == 0 ||
-                  cq.field_u[var2 + ks.field_y * (var1_intLifetime1 - 1)] == 1) {
+                  CampaignMenuEntry.field_u[var2 + ks.field_y * (var1_intLifetime1 - 1)] == 1) {
                   var3 = 1;
                 }
                 if (-1 + ef.field_c == var1_intLifetime1 ||
-                  cq.field_u[(var1_intLifetime1 + 1) * ks.field_y + var2] == 1) {
+                  CampaignMenuEntry.field_u[(var1_intLifetime1 + 1) * ks.field_y + var2] == 1) {
                   var3 = 1;
                 }
-                cq.field_u[var1_intLifetime1 * ks.field_y + var2] = var3;
+                CampaignMenuEntry.field_u[var1_intLifetime1 * ks.field_y + var2] = var3;
               }
             }
           }

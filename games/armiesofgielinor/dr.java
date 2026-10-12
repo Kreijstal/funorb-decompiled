@@ -66,7 +66,7 @@ abstract class dr extends ms {
           var4_int = -96 / ((-2 - param1) / 52);
           for (var5 = 0; var5 < this.field_u.length; var5++) {
             if (param2[var5].field_e) {
-              var6 = cq.a(param2[var5].field_c, (byte) -75);
+              var6 = CampaignMenuEntry.getBoxedPrimitiveType(param2[var5].field_c, (byte) -75);
               if (Boolean.TYPE == var6 &&
                 this.field_u[var5] != Boolean.TYPE) {
                 return false;

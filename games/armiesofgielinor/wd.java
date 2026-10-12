@@ -213,7 +213,7 @@ final class wd {
                   var6 = 1;
                   if (!TextCursor.field_f ||
                     TeleportAction.field_C == null) {
-                    var4 = "[" + fo.a(4800, cv.field_m, new String[]{vu.field_M.field_rc}) + "] ";
+                    var4 = "[" + fo.a(4800, CampaignMenu.field_m, new String[]{vu.field_M.field_rc}) + "] ";
                     if (var10 != 0) {
                       var4 = "[" + TeleportAction.field_C + "] ";
                     }

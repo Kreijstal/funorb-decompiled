@@ -355,7 +355,7 @@ final class na extends tj implements mf, he {
             if (!param2[var7].field_e) {
               discarded$1 = var8.append(SummonRequest.a(640, param2[var7].field_c.getClass()));
             } else {
-              discarded$2 = var8.append(cq.a(param2[var7].field_c, (byte) -75).toString());
+              discarded$2 = var8.append(CampaignMenuEntry.getBoxedPrimitiveType(param2[var7].field_c, (byte) -75).toString());
             }
             if (var7 < param2.length - 1) {
               discarded$3 = var8.append(',');

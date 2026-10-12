@@ -7,7 +7,7 @@ final class MoveEvent extends GameEvent {
     static RgbSprite field_z;
     static int[][] tutorialStageItems;
     int[] pathDirections;
-    static cv field_C;
+    static CampaignMenu field_C;
     static InstructionsPanel instructionsPanel;
     static TutorialLayout tutorialLayout;
     int startY;

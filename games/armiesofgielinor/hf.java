@@ -25,7 +25,7 @@ final class hf {
     }
 
     final static void a(int param0) {
-        ef.field_d = new String[cq.field_F];
+        ef.field_d = new String[CampaignMenuEntry.field_F];
         ef.field_d[9] = wt.field_E;
         ef.field_d[18] = sf.field_Q;
         ef.field_d[17] = qc.field_b;

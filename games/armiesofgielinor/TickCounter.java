@@ -3203,7 +3203,7 @@ final class TickCounter {
                 }
                 var2 = fk.a(false, "LABEL_STARTGAME");
                 if (null != var2) {
-                  bg.field_b = uu.a(var2, (byte) 126);
+                  NodeHashTable.field_b = uu.a(var2, (byte) 126);
                 }
                 var2 = fk.a(false, "LABEL_PLAYERS");
                 if (null != var2) {
@@ -3613,7 +3613,7 @@ final class TickCounter {
                 }
                 var2 = fk.a(false, "SPELLBOOK_OWNED");
                 if (var2 != null) {
-                  iq.field_b = uu.a(var2, (byte) 17);
+                  CampaignMenuButton.field_b = uu.a(var2, (byte) 17);
                 }
                 var2 = fk.a(false, "SPELLBOOK_FREE");
                 if (var2 != null) {

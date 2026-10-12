@@ -394,8 +394,8 @@ final class r extends vt {
         if (param0 != -11506) {
           field_G = (String) null;
         }
-        Boolean var1 = cv.field_s;
-        cv.field_s = null;
+        Boolean var1 = CampaignMenu.field_s;
+        CampaignMenu.field_s = null;
         return var1;
     }
 

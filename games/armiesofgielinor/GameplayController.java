@@ -12039,7 +12039,7 @@ final class GameplayController {
                 this.field_a)) {
                 this.s((byte) -79);
               }
-              MoveEvent.field_C.a(l.field_c.campaign.campaignIndex, true);
+              MoveEvent.field_C.openCampaign(l.field_c.campaign.campaignIndex, true);
             }
           }
           du.field_h = false;

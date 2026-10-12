@@ -7,7 +7,7 @@ final class bm extends ew {
     static String field_z;
     static int field_p;
     private bc field_w;
-    private bg field_t;
+    private NodeHashTable field_t;
     private int field_B;
     private byte[] field_C;
     static SpellMenuGroup spellMenuRoot;
@@ -152,7 +152,7 @@ final class bm extends ew {
             if (this.field_v > vi.b(param0 + 26060)) {
               return;
             }
-            var2_ref = (ks) (this.field_t.b(1));
+            var2_ref = (ks) (this.field_t.first(1));
             while (var2_ref != null) {
               if (!var2_ref.field_x) {
                 if (var2_ref.field_w) {
@@ -164,7 +164,7 @@ final class bm extends ew {
                   var2_ref.field_w = true;
                 }
               }
-              var2_ref = (ks) (this.field_t.b((byte) 127));
+              var2_ref = (ks) (this.field_t.next((byte) 127));
             }
             this.field_v = 1000L + vi.b(65);
           }
@@ -299,7 +299,7 @@ final class bm extends ew {
             stackIn_3_0 = (ks) null;
             return stackIn_3_0;
           }
-          var12 = (ks) (this.field_t.a(-67, (long)param1));
+          var12 = (ks) (this.field_t.get(-67, (long)param1));
           var4 = var12;
           if (var12 != null &&
             0 == param2 &&
@@ -341,7 +341,7 @@ final class bm extends ew {
                 var4 = this.field_A.a((byte) 56, param1, this.field_w);
               }
             }
-            this.field_t.a((IntrusiveNode) (var4), (long)param1, 108);
+            this.field_t.put((IntrusiveNode) (var4), (long)param1, 108);
           }
           if (((ks) (var4)).field_x) {
             return null;
@@ -395,7 +395,7 @@ final class bm extends ew {
                   return null;
                 }
                 var4 = this.field_x.a(param1, false, this.field_r, (byte) 2, true);
-                this.field_t.a((IntrusiveNode) (var4), (long)param1, 98);
+                this.field_t.put((IntrusiveNode) (var4), (long)param1, 98);
               }
               stackIn_84_0 = null;
               return (ks) (stackIn_84_0);
@@ -436,7 +436,7 @@ final class bm extends ew {
             if (((ks) (var4)).field_z &&
               !this.field_x.d(59)) {
               var4 = this.field_x.a(param1, false, this.field_r, (byte) 2, true);
-              this.field_t.a((IntrusiveNode) (var4), (long)param1, 120);
+              this.field_t.put((IntrusiveNode) (var4), (long)param1, 120);
             }
             stackIn_112_0 = null;
             return (ks) (stackIn_112_0);
@@ -506,7 +506,7 @@ final class bm extends ew {
         int stackIn_7_0 = 0;
         RuntimeException decompiledCaughtException = null;
         try {
-          var3 = (ks) (this.field_t.a(param0 - 5958, (long)param1));
+          var3 = (ks) (this.field_t.get(param0 - 5958, (long)param1));
           if (var3 != null) {
             stackIn_2_0 = var3.g(0);
             return stackIn_2_0;
@@ -635,7 +635,7 @@ final class bm extends ew {
         String stackIn_32_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var10 = null;
-        this.field_t = new bg(16);
+        this.field_t = new NodeHashTable(16);
         this.field_s = 0;
         this.field_m = new NodeDeque();
         this.field_v = 0L;

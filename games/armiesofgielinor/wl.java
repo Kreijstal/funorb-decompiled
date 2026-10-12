@@ -187,7 +187,7 @@ abstract class wl extends tj {
         fe.b(0, 0, so.field_b.field_a, so.field_b.field_g, dq.field_i, nd.field_b, 0, 0);
         if (var2 != 0) {
           if (!qa.field_F) {
-            stackIn_22_0 = cv.field_q;
+            stackIn_22_0 = CampaignMenu.field_q;
           } else {
             stackIn_22_0 = l.field_d;
           }

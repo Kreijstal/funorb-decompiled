@@ -84,7 +84,7 @@ final class jj {
           if (le.a((byte) -125, var4)) {
             var5 = var4;
           } else {
-            if (iq.a(30, var4)) {
+            if (CampaignMenuButton.a(30, var4)) {
               var5 = SpellCastAction.a(param3, (byte) 78, var4);
             } else {
               if (!kq.a(var4, false)) {
@@ -193,16 +193,16 @@ final class jj {
             return;
           }
           pg.field_a = fk.a(12, var10);
-          iq.field_a = new pu[var3];
+          CampaignMenuButton.field_a = new pu[var3];
           CampaignParticipant.field_s = new int[var3][];
           for (var4 = 0; var3 > var4; var4++) {
-            iq.field_a[var4] = GameEvent.a(-86, var8);
+            CampaignMenuButton.field_a[var4] = GameEvent.a(-86, var8);
           }
           var10.endBitReading(-2);
           var9 = 0;
           var4Lifetime1 = var9;
           while (var9 < var3) {
-            var5 = iq.field_a[var9];
+            var5 = CampaignMenuButton.field_a[var9];
             var5.a(1, 6, 6, 6, 115);
             var5.a(-3831);
             var6 = new int[]{var5.field_p + var5.field_L >> 1, var5.field_H + var5.field_P >> 1, var5.field_J + var5.field_D >> 1};

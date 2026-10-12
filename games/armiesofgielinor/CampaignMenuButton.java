@@ -3,12 +3,12 @@
  */
 import java.util.*;
 
-final class iq {
-    private int field_c;
-    private String field_d;
-    private int field_f;
+final class CampaignMenuButton {
+    private int top;
+    private String label;
+    private int left;
     static Random field_e;
-    int field_i;
+    int width;
     static long field_h;
     static int[] field_g;
     static String field_b;
@@ -26,7 +26,7 @@ final class iq {
             return false;
           }
           if (param0 != 30) {
-            iq.c(70);
+            CampaignMenuButton.c(70);
           }
           var2_int = param1.charAt(0);
           if (!Character.isLowerCase((char) var2_int)) {
@@ -47,14 +47,14 @@ final class iq {
         }
     }
 
-    final void a(int param0) {
-        if (!wg.a(-33, db.a(true, this.field_f), db.a(true, this.field_f + this.field_i), MatchConditionEntry.a(this.field_c, (byte) 94), MatchConditionEntry.a(30 + this.field_c, (byte) 94))) {
-          fe.a(db.a(true, this.field_f), MatchConditionEntry.a(this.field_c, (byte) 94), this.field_i, 30, DisplacedUnitMarker.field_s, nd.field_b, 0, 0);
-          fe.c(this.field_d, db.a(true, this.field_i / 2 + this.field_f), MatchConditionEntry.a(this.field_c + 30, (byte) 94), param0, true);
+    final void draw(int textRenderParameter) {
+        if (!wg.a(-33, db.a(true, this.left), db.a(true, this.left + this.width), MatchConditionEntry.a(this.top, (byte) 94), MatchConditionEntry.a(30 + this.top, (byte) 94))) {
+          fe.a(db.a(true, this.left), MatchConditionEntry.a(this.top, (byte) 94), this.width, 30, DisplacedUnitMarker.field_s, nd.field_b, 0, 0);
+          fe.c(this.label, db.a(true, this.width / 2 + this.left), MatchConditionEntry.a(this.top + 30, (byte) 94), textRenderParameter, true);
           return;
         }
-        fe.a(db.a(true, this.field_f), MatchConditionEntry.a(this.field_c, (byte) 94), this.field_i, 30, DisplacedUnitMarker.field_s, TutorialController.field_e, 0, 0);
-        fe.c(this.field_d, db.a(true, this.field_i / 2 + this.field_f), MatchConditionEntry.a(this.field_c + 30, (byte) 94), param0, true);
+        fe.a(db.a(true, this.left), MatchConditionEntry.a(this.top, (byte) 94), this.width, 30, DisplacedUnitMarker.field_s, TutorialController.field_e, 0, 0);
+        fe.c(this.label, db.a(true, this.width / 2 + this.left), MatchConditionEntry.a(this.top + 30, (byte) 94), textRenderParameter, true);
     }
 
     final static void b(int param0) {
@@ -67,7 +67,7 @@ final class iq {
           p.field_b = 0;
           return;
         }
-        iq.c(56);
+        CampaignMenuButton.c(56);
         wc.a(false, -49);
         p.field_b = 0;
     }
@@ -86,20 +86,20 @@ final class iq {
         field_b = null;
     }
 
-    iq(String param0, int param1, int param2, int param3) {
+    CampaignMenuButton(String label, int left, int top, int width) {
         try {
-          this.field_c = param2;
-          this.field_f = param1;
-          this.field_i = param3;
-          this.field_d = param0;
+          this.top = top;
+          this.left = left;
+          this.width = width;
+          this.label = label;
         } catch (RuntimeException runtimeException) {
-          throw ig.addExceptionContext((Throwable) ((Object) runtimeException), "iq.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) runtimeException), "iq.<init>(" + (label != null ? "{...}" : "null") + ',' + left + ',' + top + ',' + width + ')');
         }
     }
 
-    final boolean a(byte param0) {
-        int var2 = -106 / ((param0 - 17) / 39);
-        return wg.a(-33, db.a(true, this.field_f), db.a(true, this.field_f + this.field_i), MatchConditionEntry.a(this.field_c, (byte) 94), MatchConditionEntry.a(this.field_c + 30, (byte) 94));
+    final boolean containsPointer(byte obfuscationGuard) {
+        int var2 = -106 / ((obfuscationGuard - 17) / 39);
+        return wg.a(-33, db.a(true, this.left), db.a(true, this.left + this.width), MatchConditionEntry.a(this.top, (byte) 94), MatchConditionEntry.a(this.top + 30, (byte) 94));
     }
 
     static {

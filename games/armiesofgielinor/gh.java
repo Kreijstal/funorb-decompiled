@@ -551,7 +551,7 @@ final class gh extends tj implements he {
           uk.field_s = param4;
           AiPlanner.field_G = param19;
           kq.a(param3, param17, (byte) 87, param10, param2);
-          cv.a((byte) 123, param18, param5, param16);
+          CampaignMenu.a((byte) 123, param18, param5, param16);
           if (param11 != -99) {
             return;
           }

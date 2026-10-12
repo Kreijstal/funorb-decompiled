@@ -74,7 +74,7 @@ final class j {
           DisplacedUnitMarker.field_t[46] = hc.field_d;
           DisplacedUnitMarker.field_t[17] = su.field_c;
           DisplacedUnitMarker.field_t[23] = sa.field_e;
-          DisplacedUnitMarker.field_t[27] = bg.field_b;
+          DisplacedUnitMarker.field_t[27] = NodeHashTable.field_b;
           DisplacedUnitMarker.field_t[30] = pf.field_e;
           DisplacedUnitMarker.field_t[20] = tl.field_h;
           DisplacedUnitMarker.field_t[18] = InstructionsPanel.field_c;

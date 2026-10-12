@@ -242,10 +242,10 @@ public final class ArmiesOfGielinor extends wf {
                   var2 = ea.$cfr$intArgs$a$72f70aa7c69d(stackIn_119_0, stackIn_120_1);
                   if (((mo) (var2)).field_b == 4) {
                     if (null != rd.field_j) {
-                      bg.a(-1, rd.field_j.battlefield.a(((mo) (var2)).field_q, (byte) -64));
+                      NodeHashTable.a(-1, rd.field_j.battlefield.a(((mo) (var2)).field_q, (byte) -64));
                     }
                     if (bc.field_a != null) {
-                      bg.a(-1, bc.field_a.battlefield.a(((mo) (var2)).field_q, (byte) -64));
+                      NodeHashTable.a(-1, bc.field_a.battlefield.a(((mo) (var2)).field_q, (byte) -64));
                     }
                   }
                   MapLayout.a((mo) (var2), -1);
@@ -413,9 +413,9 @@ public final class ArmiesOfGielinor extends wf {
                       hc.a(((GameplayController) (var2)).field_q, false);
                       ((GameplayController) (var2)).battlefield.field_Ab = true;
                       if (((GameplayController) (var2)).field_q <= -1) {
-                        bg.a(-1, op.field_c[0][0]);
+                        NodeHashTable.a(-1, op.field_c[0][0]);
                       } else {
-                        bg.a(-1, op.field_c[0][((GameplayController) (var2)).battlefield.getPlayerTeamIndex(((GameplayController) (var2)).field_q, -1)]);
+                        NodeHashTable.a(-1, op.field_c[0][((GameplayController) (var2)).battlefield.getPlayerTeamIndex(((GameplayController) (var2)).field_q, -1)]);
                       }
                     }
                     var3Lifetime2 = mg.field_e.readUnsignedByte(0);
@@ -896,10 +896,10 @@ public final class ArmiesOfGielinor extends wf {
                 if (!ke.field_a) {
                   ed.a(false);
                   if (var8 != 0) {
-                    iq.b(-20267);
+                    CampaignMenuButton.b(-20267);
                   }
                 } else {
-                  iq.b(-20267);
+                  CampaignMenuButton.b(-20267);
                 }
                 pg.field_f = or.field_c;
                 decompiledFrameRemainder4 = (var8 != 0);
@@ -1137,7 +1137,7 @@ public final class ArmiesOfGielinor extends wf {
           nm.e(256);
           gp.a((byte) 115);
           us.a(param0 ^ 30);
-          cv.d((byte) 44);
+          CampaignMenu.d((byte) 44);
           dg.a((byte) -12);
           ve.a(1);
           CombatSandbox.a((byte) -8);
@@ -1204,7 +1204,7 @@ public final class ArmiesOfGielinor extends wf {
           lt.b(-51);
           ev.a(960112080);
           rc.g();
-          bg.a(-83);
+          NodeHashTable.a(-83);
           mi.a(9480);
           dw.c();
           os.f(1048575);
@@ -1523,8 +1523,8 @@ public final class ArmiesOfGielinor extends wf {
           CampaignDefinition.a((byte) 9);
           CampaignParticipant.a((byte) -95);
           CampaignUnitOverride.a(param0 ^ -10);
-          iq.c(param0 ^ -72);
-          cq.a(-101);
+          CampaignMenuButton.c(param0 ^ -72);
+          CampaignMenuEntry.a(-101);
           bj.a(param0 ^ -72);
           nu.a(-26601);
           td.a(-127);
@@ -1745,7 +1745,7 @@ public final class ArmiesOfGielinor extends wf {
             stackIn_5_0 = null;
             return (tu) (stackIn_5_0);
           }
-          var2 = new tu(param0, j.field_e, iq.field_g, qm.field_K, c.field_e, AnimationPlayer.field_j);
+          var2 = new tu(param0, j.field_e, CampaignMenuButton.field_g, qm.field_K, c.field_e, AnimationPlayer.field_j);
           rj.d((byte) 124);
           stackIn_7_0 = var2;
           return stackIn_7_0;
@@ -2153,12 +2153,12 @@ public final class ArmiesOfGielinor extends wf {
               return false;
             }
             if (null != fw.field_F) {
-              cv.a(fw.field_F, 0, 28);
+              CampaignMenu.a(fw.field_F, 0, 28);
               fw.field_F = null;
               return false;
             }
             if (AiInfluenceMap.field_f != null) {
-              cv.a(AiInfluenceMap.field_f, 1, -85);
+              CampaignMenu.a(AiInfluenceMap.field_f, 1, -85);
               AiInfluenceMap.field_f = null;
               return false;
             }

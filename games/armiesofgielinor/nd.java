@@ -48,7 +48,7 @@ final class nd {
 
     public final String toString() {
         if (this.field_e) {
-          return cq.a(this.field_c, (byte) -75) + "{" + this.field_c + "}";
+          return CampaignMenuEntry.getBoxedPrimitiveType(this.field_c, (byte) -75) + "{" + this.field_c + "}";
         }
         if (this.field_c == null) {
           return "null";

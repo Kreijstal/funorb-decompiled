@@ -310,7 +310,7 @@ final class rj extends kb {
           return;
         }
         MovementPresentation.field_j = null;
-        iq.field_g = null;
+        CampaignMenuButton.field_g = null;
     }
 
     private rj(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {

@@ -15,7 +15,7 @@ final class ef extends Exception {
         jf.field_C = null;
         pr.field_g = null;
         kl.field_a = null;
-        cq.field_u = null;
+        CampaignMenuEntry.field_u = null;
         if (param0 != -1) {
           ef.b(95);
         }

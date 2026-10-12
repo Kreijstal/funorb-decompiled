@@ -120,11 +120,11 @@ final class pg {
             param1.field_v == vu.field_M.d((byte) -88)) {
             if (!vi.field_d) {
               var9 = tn.field_Z;
-              var10 = cv.field_q;
+              var10 = CampaignMenu.field_q;
               var9.field_i.a(14, var10, (byte) -108);
             }
             var11 = tn.field_Z;
-            var12 = cq.field_E;
+            var12 = CampaignMenuEntry.field_E;
             var11.field_i.a(20, var12, (byte) -117);
           }
           tn.field_Z.a((byte) 68);

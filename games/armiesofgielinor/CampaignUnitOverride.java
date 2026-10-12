@@ -67,7 +67,7 @@ final class CampaignUnitOverride {
                 }
                 var2 = NodeIterator.a(param0 + 132, "error_js5io");
                 if (null != var2) {
-                  cv.field_k = uu.a(var2, (byte) 100);
+                  CampaignMenu.field_k = uu.a(var2, (byte) 100);
                 }
                 var2 = NodeIterator.a(50, "error_js5connect_full");
                 if (null != var2) {
@@ -299,7 +299,7 @@ final class CampaignUnitOverride {
                 }
                 var2 = NodeIterator.a(50, "mu_create_unrated");
                 if (null != var2) {
-                  cq.field_C = uu.a(var2, (byte) 95);
+                  CampaignMenuEntry.field_C = uu.a(var2, (byte) 95);
                 }
                 var2 = NodeIterator.a(50, "mu_options");
                 if (null != var2) {
@@ -539,7 +539,7 @@ final class CampaignUnitOverride {
                 }
                 var2 = NodeIterator.a(50, "xs_game");
                 if (var2 != null) {
-                  cv.field_m = uu.a(var2, (byte) -93);
+                  CampaignMenu.field_m = uu.a(var2, (byte) -93);
                 }
                 var2 = NodeIterator.a(50, "waiting_for_x_to_start_game");
                 if (null != var2) {
@@ -563,7 +563,7 @@ final class CampaignUnitOverride {
                 }
                 var2 = NodeIterator.a(50, "message_game");
                 if (null != var2) {
-                  cv.field_q = uu.a(var2, (byte) 51);
+                  CampaignMenu.field_q = uu.a(var2, (byte) 51);
                 }
                 var2 = NodeIterator.a(50, "message_team");
                 if (null != var2) {
@@ -571,7 +571,7 @@ final class CampaignUnitOverride {
                 }
                 var2 = NodeIterator.a(param0 ^ -100, "quickchat_game");
                 if (var2 != null) {
-                  cq.field_E = uu.a(var2, (byte) 74);
+                  CampaignMenuEntry.field_E = uu.a(var2, (byte) 74);
                 }
                 var2 = NodeIterator.a(50, "kick");
                 if (var2 != null) {
@@ -707,7 +707,7 @@ final class CampaignUnitOverride {
                 }
                 var2 = NodeIterator.a(50, "reportabuse");
                 if (var2 != null) {
-                  cv.field_n = uu.a(var2, (byte) -127);
+                  CampaignMenu.field_n = uu.a(var2, (byte) -127);
                 }
                 var2 = NodeIterator.a(50, "presstabtochat");
                 if (null != var2) {
@@ -1613,7 +1613,7 @@ final class CampaignUnitOverride {
                 }
                 var2 = NodeIterator.a(50, "create_alert_passrepeated");
                 if (var2 != null) {
-                  cv.field_v = uu.a(var2, (byte) -94);
+                  CampaignMenu.field_v = uu.a(var2, (byte) -94);
                 }
                 var2 = NodeIterator.a(50, "create_alert_passlength");
                 if (null != var2) {
@@ -1653,7 +1653,7 @@ final class CampaignUnitOverride {
                 }
                 var2 = NodeIterator.a(50, "create_alert_yearrange");
                 if (var2 != null) {
-                  cv.field_r = uu.a(var2, (byte) -106);
+                  CampaignMenu.field_r = uu.a(var2, (byte) -106);
                 }
                 var2 = NodeIterator.a(param0 ^ -100, "create_alert_mismatch");
                 if (var2 != null) {

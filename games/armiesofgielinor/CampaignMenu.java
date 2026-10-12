@@ -1,49 +1,49 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class cv {
+final class CampaignMenu {
     static String field_v;
-    private cq field_d;
-    private iq field_p;
-    private int field_a;
+    private CampaignMenuEntry selectedCampaignEntry;
+    private CampaignMenuButton field_p;
+    private int viewMode;
     static String field_r;
-    private iq field_c;
+    private CampaignMenuButton field_c;
     static String field_q;
     static Boolean field_s;
     static String field_n;
-    private cq field_b;
+    private CampaignMenuEntry selectedMissionEntry;
     static String field_m;
-    private bg field_i;
-    private cq field_u;
-    private iq field_f;
+    private NodeHashTable missionEntries;
+    private CampaignMenuEntry hoveredEntry;
+    private CampaignMenuButton field_f;
     static String field_k;
-    private int field_l;
-    private iq field_t;
-    private iq field_j;
-    private iq field_h;
-    private iq field_o;
-    private pr field_e;
-    private bg field_g;
+    private int campaignIndex;
+    private CampaignMenuButton field_t;
+    private CampaignMenuButton field_j;
+    private CampaignMenuButton field_h;
+    private CampaignMenuButton field_o;
+    private pr regionMap;
+    private NodeHashTable campaignEntries;
 
-    final void e(byte param0) {
+    final void draw(byte obfuscationGuard) {
         int var3 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         var3 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          if (param0 <= 13) {
-            this.field_t = (iq) null;
+          if (obfuscationGuard <= 13) {
+            this.field_t = (CampaignMenuButton) null;
           }
-          if (this.field_a != 1) {
-            if (this.field_a != 0) {
-              if (this.field_a == 2) {
+          if (this.viewMode != 1) {
+            if (this.viewMode != 0) {
+              if (this.viewMode == 2) {
                 this.e(-25752);
                 this.a((byte) 88);
                 if (var3 == 0) {
                   return;
                 }
               }
-              if (this.field_a != 3) {
+              if (this.viewMode != 3) {
                 return;
               }
               this.e(-25752);
@@ -62,11 +62,11 @@ final class cv {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ig.addExceptionContext((Throwable) ((Object) var2), "cv.N(" + param0 + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) var2), "cv.N(" + obfuscationGuard + ')');
         }
     }
 
-    private final void f(int param0) {
+    private final void resumeQuicksave(int obfuscationGuard) {
         RuntimeException runtimeException = null;
         sl var2 = null;
         CampaignMission var3 = null;
@@ -79,40 +79,40 @@ final class cv {
           ts.a(var3, -1, var2);
           var4 = var3.playerSlot;
           var5 = rd.field_j.battlefield.playerTurnCounts[var4];
-          if (~var5 < param0) {
+          if (~var5 < obfuscationGuard) {
             vo.a(false, 1, var5, var3);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
-          throw ig.addExceptionContext((Throwable) ((Object) runtimeException), "cv.FA(" + param0 + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) runtimeException), "cv.FA(" + obfuscationGuard + ')');
         }
     }
 
-    final void a(int param0, byte param1, int param2) {
+    final void updateMissionScore(int missionId, byte obfuscationGuard, int score) {
         RuntimeException runtimeException = null;
-        cq var4 = null;
+        CampaignMenuEntry entry = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var4 = this.a(321, param0);
-          if (param1 != 33) {
-            this.field_i = (bg) null;
+          entry = this.getMissionEntry(321, missionId);
+          if (obfuscationGuard != 33) {
+            this.missionEntries = (NodeHashTable) null;
           }
-          if (null != var4) {
-            if (var4.field_A > param2 &&
-              1 != param2) {
+          if (null != entry) {
+            if (entry.score > score &&
+              1 != score) {
               return;
             }
-            var4.field_r = AiInfluenceMap.a(10602, param2);
-            var4.field_A = param2;
+            entry.statusText = AiInfluenceMap.a(10602, score);
+            entry.score = score;
             return;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
-          throw ig.addExceptionContext((Throwable) ((Object) runtimeException), "cv.E(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) runtimeException), "cv.E(" + missionId + ',' + obfuscationGuard + ',' + score + ')');
         }
     }
 
@@ -121,10 +121,10 @@ final class cv {
         RuntimeException var2 = null;
         try {
           if (param0) {
-            this.field_o = (iq) null;
+            this.field_o = (CampaignMenuButton) null;
           }
-          this.field_g = new bg(32);
-          this.a(0, (byte) 42);
+          this.campaignEntries = new NodeHashTable(32);
+          this.setViewMode(0, (byte) 42);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -133,7 +133,7 @@ final class cv {
         }
     }
 
-    final void c(byte param0) {
+    final void loadCampaignResources(byte obfuscationGuard) {
         RuntimeException decompiledCaughtException = null;
         int var2_int = 0;
         RuntimeException var2 = null;
@@ -166,8 +166,8 @@ final class cv {
               return;
             }
           }
-          if (param0 > -62) {
-            cv.d((byte) -46);
+          if (obfuscationGuard > -62) {
+            CampaignMenu.d((byte) -46);
           }
           DeployAction.field_D = new RgbSprite[3];
           DeployAction.field_D[0] = nh.a("takenicon_zamorak", "campaign", iw.field_l, false);
@@ -177,11 +177,11 @@ final class cv {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ig.addExceptionContext((Throwable) ((Object) var2), "cv.F(" + param0 + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) var2), "cv.F(" + obfuscationGuard + ')');
         }
     }
 
-    final void a(int param0) {
+    final void releaseCampaignResources(int obfuscationGuard) {
         RuntimeException runtimeException = null;
         int var2_int = 0;
         int var3 = 0;
@@ -196,8 +196,8 @@ final class cv {
               return;
             }
           }
-          if (param0 < 119) {
-            this.b(4, 127);
+          if (obfuscationGuard < 119) {
+            this.rebuildMissionEntries(4, 127);
           }
           mu.field_g = (ru[][]) null;
           DeployAction.field_D = null;
@@ -206,7 +206,7 @@ final class cv {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
-          throw ig.addExceptionContext((Throwable) ((Object) runtimeException), "cv.EA(" + param0 + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) runtimeException), "cv.EA(" + obfuscationGuard + ')');
         }
     }
 
@@ -247,10 +247,10 @@ final class cv {
               var7 = var9;
             }
             if (ArmiesOfGielinor.obfuscationControl) {
-              var7 = this.field_h.field_i;
+              var7 = this.field_h.width;
             }
           } else {
-            var7 = this.field_h.field_i;
+            var7 = this.field_h.width;
           }
           var8Lifetime1 = 26 + var7;
           var9Lifetime1 = rs.field_n.a(var6, var8Lifetime1, 0);
@@ -265,19 +265,19 @@ final class cv {
           if (param0 < 9) {
             field_s = (Boolean) null;
           }
-          fe.a(this.field_b.field_w, db.a(true, var8Lifetime1 / 2 + var11), MatchConditionEntry.a(var16, (byte) 94), var8Lifetime1 - 20, nd.field_b, true, 40, 1);
+          fe.a(this.selectedMissionEntry.title, db.a(true, var8Lifetime1 / 2 + var11), MatchConditionEntry.a(var16, (byte) 94), var8Lifetime1 - 20, nd.field_b, true, 40, 1);
           var16 += 14;
           rs.field_n.a(var6, db.a(true, var15), MatchConditionEntry.a(var16, (byte) 94), var14, var10, 16777215, 1, 1, 0, 0);
           var16 = var16 + (var9Lifetime1 + 30);
           if (this.field_h == null) {
-            this.field_h = new iq(qf.field_c, var15, var16, var7);
+            this.field_h = new CampaignMenuButton(qf.field_c, var15, var16, var7);
           }
-          this.field_h.a(0);
+          this.field_h.draw(0);
           var16 += 40;
           if (null == this.field_f) {
-            this.field_f = new iq(lb.field_c, var15, var16, var7);
+            this.field_f = new CampaignMenuButton(lb.field_c, var15, var16, var7);
           }
-          this.field_f.a(0);
+          this.field_f.draw(0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -301,7 +301,7 @@ final class cv {
         boolean stackOut_30_0;
         Object var2 = null;
         String var3 = null;
-        cq var3_ref = null;
+        CampaignMenuEntry var3_ref = null;
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
@@ -312,11 +312,11 @@ final class cv {
         try {
           fe.a(db.a(true, 32), MatchConditionEntry.a(71, (byte) 94), 305, 228, io.field_m, jh.field_k, 0, 128, ai.field_V, true, nd.field_b);
           fe.a(db.a(true, 32), MatchConditionEntry.a(321, (byte) 94), 305, 92, io.field_m, jh.field_k, 0, 128, SummonAction.field_A, true, nd.field_b);
-          if (null != this.field_d) {
-            if (this.field_d.field_k == -1) {
+          if (null != this.selectedCampaignEntry) {
+            if (this.selectedCampaignEntry.entryId == -1) {
               stackIn_8_0 = SummonAction.field_A;
             } else {
-              stackIn_8_0 = this.field_d.field_w;
+              stackIn_8_0 = this.selectedCampaignEntry.title;
             }
             var2 = stackIn_8_0;
             fe.a(db.a(true, 346), MatchConditionEntry.a(70, (byte) 94), 262, 343, io.field_m, jh.field_k, 0, 128, (String) (var2), true, nd.field_b);
@@ -332,42 +332,42 @@ final class cv {
             }
             fe.a(stackIn_11_0, stackIn_11_1, stackIn_11_2, stackIn_11_3, stackIn_11_4, stackIn_12_5, 0, 0);
             var3 = io.field_o;
-            if (this.field_d.field_k == -1) {
+            if (this.selectedCampaignEntry.entryId == -1) {
               var3 = es.field_b;
             }
             fe.c(var3, db.a(true, 477), MatchConditionEntry.a(396, (byte) 94), 0, true);
             var4 = db.a(true, 359);
             var5 = MatchConditionEntry.a(85, (byte) 94);
             CampaignUnitOverride.a(var4, var4 + 236, var5 + 200, var5, (byte) 83);
-            boolean decompiledSharedTail0 = (this.field_d == null ||
-              this.field_d.field_k != -1);
+            boolean decompiledSharedTail0 = (this.selectedCampaignEntry == null ||
+              this.selectedCampaignEntry.entryId != -1);
             if (!decompiledSharedTail0) {
-              this.field_d.field_m.f(-(this.field_d.field_m.field_y / 2) + (var4 + 118), var5);
+              this.selectedCampaignEntry.previewSprite.f(-(this.selectedCampaignEntry.previewSprite.field_y / 2) + (var4 + 118), var5);
               decompiledSharedTail0 = (var8 != 0);
             }
             if (decompiledSharedTail0) {
-              vk.field_e[this.field_d.field_k].g(var4, var5);
-              this.field_d.field_m.f(var4, var5, Math.abs(ContextualRuntimeException.a(param0 ^ -397, uk.field_n << 5) * 100 >> 16) + 80);
+              vk.field_e[this.selectedCampaignEntry.entryId].g(var4, var5);
+              this.selectedCampaignEntry.previewSprite.f(var4, var5, Math.abs(ContextualRuntimeException.a(param0 ^ -397, uk.field_n << 5) * 100 >> 16) + 80);
             }
             rf.b(param0 ^ -18466);
             var6 = 5;
-            var7 = 5 + rs.field_n.a(this.field_d.field_q, 232, 0);
-            en.field_E.a(this.field_d.field_q, var4 + var6, 200 + var5, -(2 * var6) + 236, var7, 16777215, -1, 1, 0, 0);
+            var7 = 5 + rs.field_n.a(this.selectedCampaignEntry.description, 232, 0);
+            en.field_E.a(this.selectedCampaignEntry.description, var4 + var6, 200 + var5, -(2 * var6) + 236, var7, 16777215, -1, 1, 0, 0);
           }
           if (param0 != 396) {
             return;
           }
           var2 = null;
-          var3_ref = (cq) (this.field_g.b(param0 ^ 397));
+          var3_ref = (CampaignMenuEntry) (this.campaignEntries.first(param0 ^ 397));
           scanLoop1: while (true) {
             if (null != var3_ref) {
-              stackOut_30_0 = var3_ref.field_l;
+              stackOut_30_0 = var3_ref.selectable;
               stackIn_53_0 = stackOut_30_0 ? 1 : 0;
               stackIn_31_0 = stackOut_30_0;
               if (var8 == 0) {
                 boolean decompiledFrameRemainder0 = true;
-                if (stackIn_31_0 && (var3_ref.a(AiPlanningStrategy.field_d, ko.field_b, param0 - 275) ||
-                  var3_ref == this.field_d)) {
+                if (stackIn_31_0 && (var3_ref.containsPoint(AiPlanningStrategy.field_d, ko.field_b, param0 - 275) ||
+                  var3_ref == this.selectedCampaignEntry)) {
                   stackIn_43_0 = 1;
                   decompiledFrameRemainder0 = false;
                 }
@@ -379,11 +379,11 @@ final class cv {
                 if (var4Lifetime1 != 0) {
                   var2 = var3_ref;
                 }
-                var3_ref = (cq) (this.field_g.b((byte) 101));
+                var3_ref = (CampaignMenuEntry) (this.campaignEntries.next((byte) 101));
                 continue;
               }
             } else {
-              if (this.field_u == var2) {
+              if (this.hoveredEntry == var2) {
                 break scanLoop1;
               }
               if (null == var2) {
@@ -394,7 +394,7 @@ final class cv {
             ub.$cfr$intArgs$a$6d836999ad61(stackIn_53_0, im.field_v[1]);
             break;
           }
-          this.field_u = (cq) (var2);
+          this.hoveredEntry = (CampaignMenuEntry) (var2);
           fe.a(og.field_u, db.a(true, 320), MatchConditionEntry.a(30, (byte) 94), nd.field_b, 1, false);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -426,7 +426,7 @@ final class cv {
         }
     }
 
-    private final void a(byte param0, boolean param1, cq param2, boolean param3) {
+    private final void a(byte param0, boolean param1, CampaignMenuEntry param2, boolean param3) {
         int stackIn_5_0 = 0;
         int stackIn_17_0;
         int stackIn_17_1;
@@ -448,27 +448,27 @@ final class cv {
         int var11 = 0;
         int var9Lifetime1;
         try {
-          var5_int = db.a(true, -15 + param2.field_y);
-          var6 = MatchConditionEntry.a(19 + param2.field_x, (byte) 94);
-          CampaignUnitOverride.a(db.a(true, param2.field_y), db.a(true, param2.field_B + param2.field_y), MatchConditionEntry.a(param2.field_x + param2.field_o, (byte) 94), MatchConditionEntry.a(param2.field_x, (byte) 94), (byte) 125);
+          var5_int = db.a(true, -15 + param2.left);
+          var6 = MatchConditionEntry.a(19 + param2.top, (byte) 94);
+          CampaignUnitOverride.a(db.a(true, param2.left), db.a(true, param2.width + param2.left), MatchConditionEntry.a(param2.top + param2.height, (byte) 94), MatchConditionEntry.a(param2.top, (byte) 94), (byte) 125);
           var7 = 54;
           var8 = 128;
           var9 = -1;
-          if (!param2.field_l) {
+          if (!param2.selectable) {
             var8 = 48;
-            stackIn_5_0 = (param2.field_k == 2) ? 2 : 0;
+            stackIn_5_0 = (param2.entryId == 2) ? 2 : 0;
             var9Lifetime1 = stackIn_5_0 + 1;
             if (ArmiesOfGielinor.obfuscationControl) {
               if (param3) {
                 var8 = (int)(Math.sin((double)uk.field_n / 3.141592653589793 / 6.0) * 20.0 + 235.0);
               }
-              var9Lifetime1 = 1 + param2.field_D;
+              var9Lifetime1 = 1 + param2.godId;
             }
           } else {
             if (param3) {
               var8 = (int)(Math.sin((double)uk.field_n / 3.141592653589793 / 6.0) * 20.0 + 235.0);
             }
-            var9Lifetime1 = 1 + param2.field_D;
+            var9Lifetime1 = 1 + param2.godId;
           }
           UnitModelPreview.field_d[var9Lifetime1].g(var5_int, var6, var8);
           gt.field_c[var9Lifetime1].g(-12 + var5_int, var6 - 18, var8);
@@ -476,10 +476,10 @@ final class cv {
             field_n = (String) null;
           }
           rf.b(param0 - 18875);
-          stackIn_17_0 = db.a(true, param2.field_y);
-          stackIn_17_1 = MatchConditionEntry.a(param2.field_x, (byte) 94);
-          stackIn_17_2 = param2.field_B;
-          stackIn_17_3 = param2.field_o;
+          stackIn_17_0 = db.a(true, param2.left);
+          stackIn_17_1 = MatchConditionEntry.a(param2.top, (byte) 94);
+          stackIn_17_2 = param2.width;
+          stackIn_17_3 = param2.height;
           stackIn_17_4 = EffectPresentation.field_j;
           if (param3) {
             stackIn_18_5 = nd.field_b;
@@ -487,12 +487,12 @@ final class cv {
             stackIn_18_5 = jh.field_k;
           }
           fe.b(stackIn_17_0, stackIn_17_1, stackIn_17_2, stackIn_17_3, stackIn_17_4, stackIn_18_5, 0, 0);
-          if (null != param2.field_w) {
-            var10 = db.a(true, param2.field_y + var7);
-            var11 = param2.field_o / 2 + param2.field_x + rs.field_n.field_v;
-            fe.a(param2.field_w, var10, MatchConditionEntry.a(8 + (param2.field_x + param2.field_o / 2), (byte) 94), true);
-            fe.a(param2.field_w, var10, MatchConditionEntry.a(param2.field_o / 2 + param2.field_x + 8, (byte) 94), nd.field_b, true);
-            rs.field_n.b(param2.field_r, var10, MatchConditionEntry.a(var11, (byte) 94), 12303291, 1);
+          if (null != param2.title) {
+            var10 = db.a(true, param2.left + var7);
+            var11 = param2.height / 2 + param2.top + rs.field_n.field_v;
+            fe.a(param2.title, var10, MatchConditionEntry.a(8 + (param2.top + param2.height / 2), (byte) 94), true);
+            fe.a(param2.title, var10, MatchConditionEntry.a(param2.height / 2 + param2.top + 8, (byte) 94), nd.field_b, true);
+            rs.field_n.b(param2.statusText, var10, MatchConditionEntry.a(var11, (byte) 94), 12303291, 1);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -541,7 +541,7 @@ final class cv {
         }
     }
 
-    private final void a(int param0, boolean param1, boolean param2, cq param3, boolean param4) {
+    private final void a(int param0, boolean param1, boolean param2, CampaignMenuEntry param3, boolean param4) {
         RuntimeException stackIn_90_0 = null;
         StringBuilder stackIn_90_1 = null;
         String stackIn_91_2 = null;
@@ -560,32 +560,32 @@ final class cv {
         var13 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           var6_int = 36 / ((param0 + 78) / 43);
-          if (this.field_b == param3 ||
+          if (this.selectedMissionEntry == param3 ||
             param4) {
-            param3.field_t = param3.field_t + 20;
+            param3.highlightProgress = param3.highlightProgress + 20;
             if (var13 != 0) {
-              param3.field_t = param3.field_t - 14;
+              param3.highlightProgress = param3.highlightProgress - 14;
             }
           } else {
-            param3.field_t = param3.field_t - 14;
+            param3.highlightProgress = param3.highlightProgress - 14;
           }
-          if (param3.field_m == null) {
-            param3.field_m = this.field_e.a(param3.field_k, 3355443, (byte) -73, 0);
-            var6 = this.field_e.a(param3.field_k, 1);
+          if (param3.previewSprite == null) {
+            param3.previewSprite = this.regionMap.a(param3.entryId, 3355443, (byte) -73, 0);
+            var6 = this.regionMap.a(param3.entryId, 1);
             if (null != var6) {
               var7 = (a) (var6.first((byte) 95));
               if (null != var7) {
-                param3.field_y = var7.field_p;
-                param3.field_x = var7.field_l;
+                param3.left = var7.field_p;
+                param3.top = var7.field_l;
               }
             }
           }
-          if (param3.field_m != null) {
-            if (null != param3.field_r) {
+          if (param3.previewSprite != null) {
+            if (null != param3.statusText) {
               regionExit1: {
                 regionExit2: {
                   var6_int = 8421504;
-                  var7_int = this.field_l;
+                  var7_int = this.campaignIndex;
                   switch (var7_int) {
                     case 1:
                       break;
@@ -609,35 +609,35 @@ final class cv {
                 }
                 var6_int = 8573219;
               }
-              fe.c(param3.field_m, db.a(true, 0), MatchConditionEntry.a(3, (byte) 94), param3.field_m.field_y, var6_int);
+              fe.c(param3.previewSprite, db.a(true, 0), MatchConditionEntry.a(3, (byte) 94), param3.previewSprite.field_y, var6_int);
             }
             if (param4) {
-              param3.field_m.f(db.a(true, 0), MatchConditionEntry.a(0, (byte) 94), 128);
+              param3.previewSprite.f(db.a(true, 0), MatchConditionEntry.a(0, (byte) 94), 128);
             }
             if (param2) {
-              if (null == param3.field_s) {
-                param3.field_s = param3.field_m.g();
-                param3.field_s.c(228, 130, 4);
+              if (null == param3.highlightSprite) {
+                param3.highlightSprite = param3.previewSprite.g();
+                param3.highlightSprite.c(228, 130, 4);
               }
-              param3.field_s.e(db.a(true, 0), MatchConditionEntry.a(0, (byte) 94), (ae.b(uk.field_n << 6, 100) >> 12) + 22);
+              param3.highlightSprite.e(db.a(true, 0), MatchConditionEntry.a(0, (byte) 94), (ae.b(uk.field_n << 6, 100) >> 12) + 22);
             }
             if (!param2 ||
               var13 != 0) {
-              param3.field_s = null;
+              param3.highlightSprite = null;
             }
-            if (param3.field_l) {
-              var6 = this.field_e.a(param3.field_k, 1);
+            if (param3.selectable) {
+              var6 = this.regionMap.a(param3.entryId, 1);
               if (var6 != null) {
                 var7 = (a) (var6.first((byte) 120));
                 if (null != var7) {
                   var8 = null;
-                  var10 = param3.field_p.difficulty;
-                  if (param3.field_r != null) {
+                  var10 = param3.mission.difficulty;
+                  if (param3.statusText != null) {
                     var10 = 0;
-                    var9 = DeployAction.field_D[this.field_l];
+                    var9 = DeployAction.field_D[this.campaignIndex];
                   } else {
                     var8 = km.field_h[2];
-                    var9 = param3.field_p.createRewardPreview(-1).icon;
+                    var9 = param3.mission.createRewardPreview(-1).icon;
                   }
                   if (var8 == null &&
                     null == var9) {
@@ -646,24 +646,24 @@ final class cv {
                   boolean decompiledFrameRemainder0 = true;
                   var11 = 0;
                   var12 = 1.0f;
-                  if (null != param3.field_r) {
+                  if (null != param3.statusText) {
                     var12 = 0.8999999761581421f;
                     decompiledFrameRemainder0 = (var13 != 0);
                   }
                   if (decompiledFrameRemainder0) {
-                    if (param3.field_t < 256) {
-                      if (!(0 < param3.field_t)) {
-                        param3.field_t = 0;
+                    if (param3.highlightProgress < 256) {
+                      if (!(0 < param3.highlightProgress)) {
+                        param3.highlightProgress = 0;
                         if (var13 != 0) {
-                          param3.field_t = 256;
+                          param3.highlightProgress = 256;
                         }
                       }
                     } else {
-                      param3.field_t = 256;
+                      param3.highlightProgress = 256;
                     }
-                    if (param3.field_t < 164) {
-                      if (param3.field_t > 32) {
-                        var12 = 0.5f + 0.5f * (float)(-32 + param3.field_t) / 132.0f;
+                    if (param3.highlightProgress < 164) {
+                      if (param3.highlightProgress > 32) {
+                        var12 = 0.5f + 0.5f * (float)(-32 + param3.highlightProgress) / 132.0f;
                         if (var13 != 0) {
                           var12 = 0.5f;
                           var12 = 1.0f;
@@ -725,7 +725,7 @@ final class cv {
           var5 = fo.a(4800, sb.field_f, new String[]{Integer.toString(var4)});
           boolean decompiledSharedTail0 = (null == this.field_c);
           if (!decompiledSharedTail0) {
-            var6 = this.field_c.field_i;
+            var6 = this.field_c.width;
             decompiledSharedTail0 = (ArmiesOfGielinor.obfuscationControl);
           }
           if (decompiledSharedTail0) {
@@ -753,24 +753,24 @@ final class cv {
           var13 = var7Lifetime1 - 26;
           var14 = var12;
           var15 = 30 + var11;
-          fe.a(this.field_b.field_w, db.a(true, var10 + var7Lifetime1 / 2), MatchConditionEntry.a(var15, (byte) 94), var7Lifetime1 - 20, nd.field_b, true, 40, 1);
+          fe.a(this.selectedMissionEntry.title, db.a(true, var10 + var7Lifetime1 / 2), MatchConditionEntry.a(var15, (byte) 94), var7Lifetime1 - 20, nd.field_b, true, 40, 1);
           var15 += 14;
           rs.field_n.a(var5, db.a(true, var14), MatchConditionEntry.a(var15, (byte) 94), var13, var9Lifetime1, 16777215, 1, 1, 0, 0);
           var15 = var15 + (30 + var8Lifetime1);
           if (null == this.field_c) {
-            this.field_c = new iq(kd.field_Y, var14, var15, var6);
+            this.field_c = new CampaignMenuButton(kd.field_Y, var14, var15, var6);
           }
-          this.field_c.a(param0 - 26);
+          this.field_c.draw(param0 - 26);
           var15 += 40;
           if (null == this.field_j) {
-            this.field_j = new iq(PacketBuffer.field_r, var14, var15, var6);
+            this.field_j = new CampaignMenuButton(PacketBuffer.field_r, var14, var15, var6);
           }
           var15 += 40;
-          this.field_j.a(0);
+          this.field_j.draw(0);
           if (this.field_o == null) {
-            this.field_o = new iq(lb.field_c, var14, var15, var6);
+            this.field_o = new CampaignMenuButton(lb.field_c, var14, var15, var6);
           }
-          this.field_o.a(param0 ^ 26);
+          this.field_o.draw(param0 ^ 26);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -799,8 +799,8 @@ final class cv {
           boolean decompiledFrameRemainder0 = true;
           TrianglePulse.a(-16147, 50, qf.field_f, true);
           var2 = null;
-          if (0 != this.field_a) {
-            var3 = this.field_l;
+          if (0 != this.viewMode) {
+            var3 = this.campaignIndex;
             if (var3 != 0) {
               if (var3 == 1 &&
                 var9 == 0) {
@@ -830,7 +830,7 @@ final class cv {
               if (var9 != 0) {
                 return;
               }
-              if (2 == this.field_l &&
+              if (2 == this.campaignIndex &&
                 var7 == 0) {
                 stackIn_32_0 = 20 + gi.field_b;
               } else {
@@ -839,7 +839,7 @@ final class cv {
               var8 = stackIn_32_0;
               stackIn_38_0 = var4.field_a;
               stackIn_38_1 = var7;
-              if (this.field_a != 0 &&
+              if (this.viewMode != 0 &&
                 3 >= var7) {
                 stackIn_39_2 = var8;
               } else {
@@ -890,7 +890,7 @@ final class cv {
     private final void c(int param0) {
         String[] array$0 = null;
         int stackIn_26_0 = 0;
-        cq stackIn_31_0 = null;
+        CampaignMenuEntry stackIn_31_0 = null;
         int stackIn_37_0;
         String stackIn_37_1;
         String[] stackIn_37_2;
@@ -964,11 +964,11 @@ final class cv {
         int var28Lifetime2;
         var29 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          if (this.field_b != null &&
-            this.field_b.field_l) {
+          if (this.selectedMissionEntry != null &&
+            this.selectedMissionEntry.selectable) {
             boolean decompiledSharedTail0 = (null == this.field_t);
             if (!decompiledSharedTail0) {
-              var2_int = this.field_t.field_i;
+              var2_int = this.field_t.width;
               decompiledSharedTail0 = (var29 != 0);
             }
             if (decompiledSharedTail0) {
@@ -988,9 +988,9 @@ final class cv {
             var5 = 18;
             var6 = 34;
             var6Lifetime1 = 34;
-            fe.a(this.field_b.field_w, db.a(true, var3Lifetime1 / 2 + 5), MatchConditionEntry.a(var6Lifetime1, (byte) 94), -20 + var3Lifetime1, nd.field_b, true, 40, 1);
+            fe.a(this.selectedMissionEntry.title, db.a(true, var3Lifetime1 / 2 + 5), MatchConditionEntry.a(var6Lifetime1, (byte) 94), -20 + var3Lifetime1, nd.field_b, true, 40, 1);
             var6Lifetime1 += 14;
-            var7 = this.field_b.field_p.getMapLayout(-127);
+            var7 = this.selectedMissionEntry.mission.getMapLayout(-127);
             var8 = 0;
             var9 = 6;
             var10 = 5;
@@ -1030,43 +1030,43 @@ final class cv {
               break;
             }
             var15_intLifetime1 = stackIn_26_0;
-            var16_ref_tc = this.field_b.field_n.b(param0 ^ 21);
+            var16_ref_tc = this.selectedMissionEntry.previewUnitCategories.first(param0 ^ 21);
             boolean decompiledNaturalLoopExit0 = false;
             while (!(decompiledNaturalLoopExit0 = (var16_ref_tc == null))) {
               var17Lifetime1 = (int)var16_ref_tc.key;
               ro.field_rb[var17Lifetime1].a(db.a(true, var15_intLifetime1), MatchConditionEntry.a(var6Lifetime1 - ro.field_rb[var17Lifetime1].field_f, (byte) 94));
               var15_intLifetime1 = var15_intLifetime1 + ro.field_rb[var17Lifetime1].field_g;
-              stackIn_31_0 = this.field_b;
+              stackIn_31_0 = this.selectedMissionEntry;
               if (var29 == 0) {
-                var16_ref_tc = ((bg) (Object) stackIn_31_0.field_n).b((byte) 77);
+                var16_ref_tc = ((NodeHashTable) (Object) stackIn_31_0.previewUnitCategories).next((byte) 77);
                 continue;
               }
               break;
             }
             if (decompiledNaturalLoopExit0) {
-              stackIn_31_0 = this.field_b;
+              stackIn_31_0 = this.selectedMissionEntry;
             }
-            var15 = stackIn_31_0.field_p;
+            var15 = stackIn_31_0.mission;
             rs.field_n.a(k.field_b + var15.difficulty, db.a(true, var5), MatchConditionEntry.a(var6Lifetime1, (byte) 94), var4Lifetime1, 472, 16776960, 1, 0, 0, 0);
             var6Lifetime1 = var6Lifetime1 + rs.field_n.field_v;
             var16Lifetime1 = 1;
-            if (this.field_b.field_r != null) {
+            if (this.selectedMissionEntry.statusText != null) {
               array$0 = new String[1];
               stackIn_37_0 = 4800;
               stackIn_37_1 = uh.field_c;
               stackIn_37_2 = array$0;
               stackIn_37_3 = array$0;
               stackIn_37_4 = 0;
-              if (null == this.field_b.field_r) {
+              if (null == this.selectedMissionEntry.statusText) {
                 stackIn_38_5 = dv.field_g;
               } else {
-                stackIn_38_5 = this.field_b.field_r;
+                stackIn_38_5 = this.selectedMissionEntry.statusText;
               }
               stackIn_37_3[stackIn_37_4] = stackIn_38_5;
               var17_ref_String = fo.a(stackIn_37_0, stackIn_37_1, stackIn_37_2);
               var16Lifetime1 = rs.field_n.a(var17_ref_String, db.a(true, var5), MatchConditionEntry.a(var6Lifetime1, (byte) 94), var4Lifetime1, 472, 16776960, 1, 0, 0, 0);
               var18Lifetime1 = rs.field_n.a(var17_ref_String, var4Lifetime1);
-              var19_intLifetime1 = this.field_b.field_A;
+              var19_intLifetime1 = this.selectedMissionEntry.score;
               if (1000 >= var19_intLifetime1) {
                 if (var19_intLifetime1 > 500) {
                   MoveAttackRequest.field_C[1].g(db.a(true, 5 + var18Lifetime1 + var5), MatchConditionEntry.a(var6Lifetime1 + rs.field_n.field_H - rs.field_n.field_z, (byte) 94));
@@ -1156,29 +1156,29 @@ final class cv {
             }
             var6Lifetime3 = 436;
             if (this.field_t == null) {
-              this.field_t = new iq(ul.field_j, var5Lifetime1, var6Lifetime3, var2_int);
+              this.field_t = new CampaignMenuButton(ul.field_j, var5Lifetime1, var6Lifetime3, var2_int);
             }
             if (null == this.field_p) {
-              this.field_p = new iq(pn.field_k, var5Lifetime1, var6Lifetime3, var2_int);
+              this.field_p = new CampaignMenuButton(pn.field_k, var5Lifetime1, var6Lifetime3, var2_int);
             }
             var25 = ku.j(121);
             if (null != var25 &&
-              ~this.field_l == ~var25.field_g &&
-              ~var25.field_e == ~this.field_b.field_k) {
+              ~this.campaignIndex == ~var25.field_g &&
+              ~var25.field_e == ~this.selectedMissionEntry.entryId) {
               stackIn_98_0 = 1;
             } else {
               stackIn_98_0 = 0;
             }
             var26Lifetime2 = stackIn_98_0;
-            if (this.field_a == 1) {
-              if (this.field_b.field_r != null &&
+            if (this.viewMode == 1) {
+              if (this.selectedMissionEntry.statusText != null &&
                 var26Lifetime2 == 0) {
-                this.field_p.a(0);
+                this.field_p.draw(0);
                 if (var29 == 0) {
                   return;
                 }
               }
-              this.field_t.a(0);
+              this.field_t.draw(0);
             }
             return;
           }
@@ -1403,29 +1403,29 @@ final class cv {
         }
     }
 
-    private final void a(int param0, CampaignMission param1) {
+    private final void addMissionEntry(int obfuscationGuard, CampaignMission mission) {
         RuntimeException runtimeException = null;
-        cq var3 = null;
-        int var4 = 0;
+        CampaignMenuEntry entry = null;
+        int score = 0;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var3 = new cq(param1);
-          var4 = mh.getProfileMissionScore(this.field_l, param0 - 119, var3.field_k);
-          if (~var4 < param0) {
-            var3.field_r = AiInfluenceMap.a(10602, var4);
-            var3.field_A = var4;
+          entry = new CampaignMenuEntry(mission);
+          score = mh.getProfileMissionScore(this.campaignIndex, obfuscationGuard - 119, entry.entryId);
+          if (~score < obfuscationGuard) {
+            entry.statusText = AiInfluenceMap.a(10602, score);
+            entry.score = score;
           }
-          this.field_i.a(var3, (long)var3.field_k, 122);
+          this.missionEntries.put(entry, (long)entry.entryId, 122);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
           stackIn_8_0 = runtimeException;
-          stackIn_8_1 = new StringBuilder().append("cv.L(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_8_1 = new StringBuilder().append("cv.L(").append(obfuscationGuard).append(',');
+          if (mission == null) {
             stackIn_9_2 = "null";
           } else {
             stackIn_9_2 = "{...}";
@@ -1434,62 +1434,62 @@ final class cv {
         }
     }
 
-    private final cq a(int param0, int param1) {
-        cq var3 = null;
+    private final CampaignMenuEntry getMissionEntry(int obfuscationGuard, int missionId) {
+        CampaignMenuEntry var3 = null;
         RuntimeException var3_ref = null;
-        cq stackIn_4_0 = null;
+        CampaignMenuEntry stackIn_4_0 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param0 != 321) {
-            this.a((byte) -52, true, (cq) null, true);
+          if (obfuscationGuard != 321) {
+            this.a((byte) -52, true, (CampaignMenuEntry) null, true);
           }
-          var3 = (cq) (this.field_i.a(-128, (long)param1));
+          var3 = (CampaignMenuEntry) (this.missionEntries.get(-128, (long)missionId));
           stackIn_4_0 = var3;
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3_ref = decompiledCaughtException;
-          throw ig.addExceptionContext((Throwable) ((Object) var3_ref), "cv.W(" + param0 + ',' + param1 + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) var3_ref), "cv.W(" + obfuscationGuard + ',' + missionId + ')');
         }
     }
 
-    private final void g(int param0) {
+    private final void openSelectedCampaign(int obfuscationGuard) {
         sl var2 = null;
         CampaignMission var3 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2_ref = null;
         try {
-          this.field_b = null;
-          if (this.field_d.field_k == -1) {
-            var2 = ku.j(param0 + 86);
-            if (!ei.a(var2.field_g, param0 + 11906) &&
+          this.selectedMissionEntry = null;
+          if (this.selectedCampaignEntry.entryId == -1) {
+            var2 = ku.j(obfuscationGuard + 86);
+            if (!ei.a(var2.field_g, obfuscationGuard + 11906) &&
               rf.a(27875)) {
               pr.field_i = bn.field_g;
-              CipherPacketBuffer.a(false, 11, param0 ^ 1, jt.field_a);
+              CipherPacketBuffer.a(false, 11, obfuscationGuard ^ 1, jt.field_a);
               return;
             }
-            this.b(var2.field_g, 53);
+            this.rebuildMissionEntries(var2.field_g, 53);
             var3 = ar.getCampaignMission(var2.field_g, var2.field_e, 0);
             l.field_c = var3;
-            CipherPacketBuffer.a(true, -11, param0 + 1, 0);
+            CipherPacketBuffer.a(true, -11, obfuscationGuard + 1, 0);
             if (ArmiesOfGielinor.obfuscationControl) {
-              this.a(this.field_d.field_k, true);
+              this.openCampaign(this.selectedCampaignEntry.entryId, true);
             }
           } else {
-            this.a(this.field_d.field_k, true);
+            this.openCampaign(this.selectedCampaignEntry.entryId, true);
           }
-          if (param0 != 0) {
-            this.field_p = (iq) null;
+          if (obfuscationGuard != 0) {
+            this.field_p = (CampaignMenuButton) null;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw ig.addExceptionContext((Throwable) ((Object) var2_ref), "cv.D(" + param0 + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) var2_ref), "cv.D(" + obfuscationGuard + ')');
         }
     }
 
-    final void f(byte param0) {
+    final void handleInput(byte obfuscationGuard) {
         int stackIn_189_0 = 0;
         int stackIn_189_1 = 0;
         RuntimeException decompiledCaughtException = null;
@@ -1498,7 +1498,7 @@ final class cv {
         int var3_int = 0;
         Object var3 = null;
         Object var4 = null;
-        cq var4_ref = null;
+        CampaignMenuEntry var4_ref = null;
         int var4_int = 0;
         int var5 = 0;
         int var6 = 0;
@@ -1507,7 +1507,7 @@ final class cv {
         try {
           fe.field_b = fe.field_b + 1;
           fe.field_b = fe.field_b % 100;
-          if (param0 < 114) {
+          if (obfuscationGuard < 114) {
             return;
           }
           if (2 <= hi.field_j &&
@@ -1517,7 +1517,7 @@ final class cv {
             cg.field_j = 72584621;
             wr.field_L = 224;
             ii.field_b = 4452;
-            var2 = br.getCampaign(this.field_l, (byte) -125).missions;
+            var2 = br.getCampaign(this.campaignIndex, (byte) -125).missions;
             var3_int = 0;
             while (true) {
               if (java.lang.reflect.Array.getLength(var2) > var3_int) {
@@ -1532,35 +1532,35 @@ final class cv {
               }
               break;
             }
-            this.a(this.field_l, true);
+            this.openCampaign(this.campaignIndex, true);
           }
-          if (1 == this.field_a) {
-            if (null != this.field_b) {
-              this.field_b.field_v = this.field_b.field_v + 1;
+          if (1 == this.viewMode) {
+            if (null != this.selectedMissionEntry) {
+              this.selectedMissionEntry.selectionAge = this.selectedMissionEntry.selectionAge + 1;
             }
             boolean decompiledFrameCompleted0 = true;
             if (DeployEvent.field_A == 1 &&
-              null != this.field_e) {
-              if (null != this.field_b &&
-                this.field_b.field_l &&
+              null != this.regionMap) {
+              if (null != this.selectedMissionEntry &&
+                this.selectedMissionEntry.selectable &&
                 this.field_t != null &&
-                this.field_t.a((byte) -27)) {
+                this.field_t.containsPointer((byte) -27)) {
                 this.b((byte) 107);
                 return;
               }
-              var2_int = this.field_e.a(AiPlanningStrategy.field_d - db.a(true, 0), (byte) -79, ko.field_b - MatchConditionEntry.a(0, (byte) 94));
+              var2_int = this.regionMap.a(AiPlanningStrategy.field_d - db.a(true, 0), (byte) -79, ko.field_b - MatchConditionEntry.a(0, (byte) 94));
               if (-1 < var2_int) {
                 var3 = null;
-                var4_ref = (cq) (this.field_i.b(1));
+                var4_ref = (CampaignMenuEntry) (this.missionEntries.first(1));
                 while (var4_ref != null) {
-                  stackIn_189_0 = var4_ref.field_k;
+                  stackIn_189_0 = var4_ref.entryId;
                   stackIn_189_1 = var2_int;
                   if (var7 != 0) {
                     decompiledFrameCompleted0 = false;
                     break;
                   }
                   if (stackIn_189_0 != stackIn_189_1) {
-                    var4_ref = (cq) (this.field_i.b((byte) 60));
+                    var4_ref = (CampaignMenuEntry) (this.missionEntries.next((byte) 60));
                     continue;
                   }
                   var3 = var4_ref;
@@ -1568,7 +1568,7 @@ final class cv {
                 }
                 if ((decompiledFrameCompleted0) &&
                   (var3 != null &&
-                  ((cq) (var3)).field_l)) {
+                  ((CampaignMenuEntry) (var3)).selectable)) {
                   var4_int = 0;
                   if (hi.field_j >= 2) {
                     boolean decompiledSharedTail0 = !(br.field_f[81]);
@@ -1612,22 +1612,22 @@ final class cv {
                           throw new IllegalStateException("");
                       }
                       var5 = b.calculateMissionScore(2, 10, 12, (byte) 25, 3);
-                      ActionSpell.a(4, 12, ((cq) (var3)).field_p, true, var5, 3);
-                      this.a(((cq) (var3)).field_p.campaign.campaignIndex, true);
-                      System.out.println("m  id " + ((cq) (var3)).field_k + " " + ((cq) (var3)).field_w);
+                      ActionSpell.a(4, 12, ((CampaignMenuEntry) (var3)).mission, true, var5, 3);
+                      this.openCampaign(((CampaignMenuEntry) (var3)).mission.campaign.campaignIndex, true);
+                      System.out.println("m  id " + ((CampaignMenuEntry) (var3)).entryId + " " + ((CampaignMenuEntry) (var3)).title);
                       var4_int = 1;
                       decompiledSharedTail0 = (var7 != 0);
                     }
                     if ((decompiledSharedTail0) &&
                       (br.field_f[82])) {
                       var4_int = 1;
-                      ActionSpell.a(4, -1, ((cq) (var3)).field_p, true, 1, -1);
-                      this.a(((cq) (var3)).field_p.campaign.campaignIndex, true);
+                      ActionSpell.a(4, -1, ((CampaignMenuEntry) (var3)).mission, true, 1, -1);
+                      this.openCampaign(((CampaignMenuEntry) (var3)).mission.campaign.campaignIndex, true);
                     }
                   }
                   if (var4_int == 0) {
-                    if (this.field_b == var3) {
-                      if (!(this.field_b.field_v >= 20)) {
+                    if (this.selectedMissionEntry == var3) {
+                      if (!(this.selectedMissionEntry.selectionAge >= 20)) {
                         this.b((byte) 72);
                         if (var7 != 0) {
                           ub.$cfr$intArgs$a$6d836999ad61(80, im.field_v[11]);
@@ -1636,8 +1636,8 @@ final class cv {
                     } else {
                       ub.$cfr$intArgs$a$6d836999ad61(80, im.field_v[11]);
                     }
-                    this.field_b = (cq) (var3);
-                    this.field_b.field_v = 0;
+                    this.selectedMissionEntry = (CampaignMenuEntry) (var3);
+                    this.selectedMissionEntry.selectionAge = 0;
                   }
                 }
               }
@@ -1647,14 +1647,14 @@ final class cv {
               stackIn_189_1 = ~DeployEvent.field_A;
             }
             if (stackIn_189_0 == stackIn_189_1) {
-              this.field_b = null;
+              this.selectedMissionEntry = null;
             }
           } else {
-            if (this.field_a != 0) {
-              if (this.field_a == 3) {
+            if (this.viewMode != 0) {
+              if (this.viewMode == 3) {
                 if (DeployEvent.field_A == 1 &&
                   this.field_c != null &&
-                  this.field_c.a((byte) -49)) {
+                  this.field_c.containsPointer((byte) -49)) {
                   var2 = ku.j(86);
                   var3 = ar.getCampaignMission(((sl) (var2)).field_g, ((sl) (var2)).field_e, 0);
                   l.field_c = (CampaignMission) (var3);
@@ -1662,71 +1662,71 @@ final class cv {
                 }
                 if (DeployEvent.field_A == 1 &&
                   null != this.field_j &&
-                  this.field_j.a((byte) 121)) {
-                  this.f(-2);
-                  l.field_c = this.field_b.field_p;
+                  this.field_j.containsPointer((byte) 121)) {
+                  this.resumeQuicksave(-2);
+                  l.field_c = this.selectedMissionEntry.mission;
                   CipherPacketBuffer.a(true, -10, 1, 0);
                 }
                 if (DeployEvent.field_A == 1 &&
                   this.field_o != null &&
-                  this.field_o.a((byte) -52)) {
-                  this.field_a = 1;
+                  this.field_o.containsPointer((byte) -52)) {
+                  this.viewMode = 1;
                 }
                 return;
               }
-              if (this.field_a == 2) {
+              if (this.viewMode == 2) {
                 if (DeployEvent.field_A == 1 &&
                   null != this.field_h &&
-                  this.field_h.a((byte) 86)) {
-                  this.f(-2);
-                  l.field_c = this.field_b.field_p;
+                  this.field_h.containsPointer((byte) 86)) {
+                  this.resumeQuicksave(-2);
+                  l.field_c = this.selectedMissionEntry.mission;
                   CipherPacketBuffer.a(true, -10, 1, 0);
                 }
                 if (DeployEvent.field_A == 1 &&
                   this.field_f != null &&
-                  this.field_f.a((byte) -69)) {
-                  this.field_a = 1;
+                  this.field_f.containsPointer((byte) -69)) {
+                  this.viewMode = 1;
                 }
                 return;
               }
             } else {
-              if (this.field_d != null) {
-                this.field_d.field_v = this.field_d.field_v + 1;
+              if (this.selectedCampaignEntry != null) {
+                this.selectedCampaignEntry.selectionAge = this.selectedCampaignEntry.selectionAge + 1;
               }
-              if (null != this.field_d &&
+              if (null != this.selectedCampaignEntry &&
                 DeployEvent.field_A == 1 &&
                 wg.a(-33, db.a(true, 354), db.a(true, 600), MatchConditionEntry.a(361, (byte) 94), MatchConditionEntry.a(402, (byte) 94))) {
-                this.g(0);
+                this.openSelectedCampaign(0);
                 return;
               }
             }
           }
           if (2 == DeployEvent.field_A) {
-            this.field_b = null;
-            this.field_d = null;
+            this.selectedMissionEntry = null;
+            this.selectedCampaignEntry = null;
           }
           if (DeployEvent.field_A == 1) {
             var2 = null;
             var3 = null;
-            var4_int = this.field_a;
+            var4_int = this.viewMode;
             if (0 == var4_int) {
-              var3 = this.field_g;
+              var3 = this.campaignEntries;
             } else {
               if (1 == var4_int) {
-                var3 = this.field_i;
+                var3 = this.missionEntries;
               }
             }
             if (null != var3) {
-              var4_ref = (cq) (((bg) (var3)).b(1));
+              var4_ref = (CampaignMenuEntry) (((NodeHashTable) (var3)).first(1));
               while (null != var4_ref) {
                 if (var7 != 0) {
                   return;
                 }
-                if (var4_ref.field_l &&
-                  var4_ref.a(AiPlanningStrategy.field_d, ko.field_b, 122)) {
+                if (var4_ref.selectable &&
+                  var4_ref.containsPoint(AiPlanningStrategy.field_d, ko.field_b, 122)) {
                   var2 = var4_ref;
                 } else {
-                  var4_ref = (cq) (((bg) (var3)).b((byte) 80));
+                  var4_ref = (CampaignMenuEntry) (((NodeHashTable) (var3)).next((byte) 80));
                   continue;
                 }
                 break;
@@ -1734,30 +1734,30 @@ final class cv {
               if (null == var2) {
                 return;
               }
-              if (this.field_a == 1) {
+              if (this.viewMode == 1) {
                 if (hi.field_j < 2) {
                   return;
                 }
                 if (!br.field_f[81]) {
                   return;
                 }
-                pg.playerProfile.campaignProgress.setResult(65535, ((cq) (var2)).field_k, uk.field_n % 10 + ((cq) (var2)).field_k * 10, this.field_l, ((cq) (var2)).field_k * 200 + uk.field_n % 200);
-                this.a(this.field_l, true);
+                pg.playerProfile.campaignProgress.setResult(65535, ((CampaignMenuEntry) (var2)).entryId, uk.field_n % 10 + ((CampaignMenuEntry) (var2)).entryId * 10, this.campaignIndex, ((CampaignMenuEntry) (var2)).entryId * 200 + uk.field_n % 200);
+                this.openCampaign(this.campaignIndex, true);
                 if (var7 == 0) {
                   return;
                 }
               }
-              if (this.field_a != 0) {
+              if (this.viewMode != 0) {
                 return;
               }
-              if (this.field_d != var2) {
+              if (this.selectedCampaignEntry != var2) {
                 ub.$cfr$intArgs$a$6d836999ad61(98, im.field_v[11]);
               }
-              this.field_d = (cq) (var2);
-              if (this.field_d.field_v < 20) {
-                this.g(0);
+              this.selectedCampaignEntry = (CampaignMenuEntry) (var2);
+              if (this.selectedCampaignEntry.selectionAge < 20) {
+                this.openSelectedCampaign(0);
               }
-              this.field_d.field_v = 0;
+              this.selectedCampaignEntry.selectionAge = 0;
               return;
             }
           }
@@ -1765,7 +1765,7 @@ final class cv {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ig.addExceptionContext((Throwable) (var2), "cv.H(" + param0 + ')');
+          throw ig.addExceptionContext((Throwable) (var2), "cv.H(" + obfuscationGuard + ')');
         }
     }
 
@@ -1779,26 +1779,26 @@ final class cv {
         try {
           var2 = ku.j(91);
           if (null == var2) {
-            l.field_c = this.field_b.field_p;
+            l.field_c = this.selectedMissionEntry.mission;
             CipherPacketBuffer.a(true, -10, 1, 0);
             if (var4 != 0) {
-              if (this.field_b.field_k == var2.field_e &&
-                var2.field_g == this.field_l) {
-                this.a(3, (byte) 42);
-                this.a(2, (byte) 42);
+              if (this.selectedMissionEntry.entryId == var2.field_e &&
+                var2.field_g == this.campaignIndex) {
+                this.setViewMode(3, (byte) 42);
+                this.setViewMode(2, (byte) 42);
               } else {
-                this.a(2, (byte) 42);
+                this.setViewMode(2, (byte) 42);
               }
             }
           } else {
-            if (this.field_b.field_k == var2.field_e &&
-              var2.field_g == this.field_l) {
-              this.a(3, (byte) 42);
+            if (this.selectedMissionEntry.entryId == var2.field_e &&
+              var2.field_g == this.campaignIndex) {
+              this.setViewMode(3, (byte) 42);
               if (var4 != 0) {
-                this.a(2, (byte) 42);
+                this.setViewMode(2, (byte) 42);
               }
             } else {
-              this.a(2, (byte) 42);
+              this.setViewMode(2, (byte) 42);
             }
           }
           var3 = -127 % ((param0 - 10) / 55);
@@ -1810,19 +1810,19 @@ final class cv {
         }
     }
 
-    private final cq a(boolean param0, CampaignDefinition param1) {
-        cq stackIn_3_0 = null;
-        cq stackIn_11_0 = null;
+    private final CampaignMenuEntry buildCampaignEntry(boolean obfuscationGuard, CampaignDefinition campaign) {
+        CampaignMenuEntry stackIn_3_0 = null;
+        CampaignMenuEntry stackIn_11_0 = null;
         boolean stackIn_14_1 = false;
         CampaignDefinition stackIn_18_0 = null;
         Object stackIn_34_0 = null;
-        cq stackIn_39_0 = null;
+        CampaignMenuEntry stackIn_39_0 = null;
         RuntimeException stackIn_43_0 = null;
         StringBuilder stackIn_43_1 = null;
         String stackIn_44_2 = null;
         RuntimeException decompiledCaughtException = null;
         CampaignDefinition stackOut_17_0;
-        cq var3 = null;
+        CampaignMenuEntry var3 = null;
         RuntimeException var3_ref = null;
         int var4_int = 0;
         Object var4 = null;
@@ -1834,23 +1834,23 @@ final class cv {
         int var9 = 0;
         var9 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          if (!param0) {
-            stackIn_3_0 = (cq) null;
+          if (!obfuscationGuard) {
+            stackIn_3_0 = (CampaignMenuEntry) null;
             return stackIn_3_0;
           }
-          var3 = new cq(param1.campaignIndex, param1.name);
-          var3.field_D = param1.localGodId;
-          var3.field_q = param1.description;
+          var3 = new CampaignMenuEntry(campaign.campaignIndex, campaign.name);
+          var3.godId = campaign.localGodId;
+          var3.description = campaign.description;
           stackIn_11_0 = var3;
-          stackIn_14_1 = (param1.c((byte) -45)) || !(0 >= df.field_M) || !(hi.field_j < 2);
+          stackIn_14_1 = (campaign.c((byte) -45)) || !(0 >= df.field_M) || !(hi.field_j < 2);
           boolean decompiledFrameCompleted0 = true;
-          stackIn_11_0.field_l = stackIn_14_1;
-          if (var3.field_l) {
+          stackIn_11_0.selectable = stackIn_14_1;
+          if (var3.selectable) {
             var4_int = 0;
-            var5 = param1.missions.length;
+            var5 = campaign.missions.length;
             var6_int = 0;
             while (var5 > var6_int) {
-              stackOut_17_0 = (CampaignDefinition) (param1);
+              stackOut_17_0 = (CampaignDefinition) (campaign);
               stackIn_34_0 = stackOut_17_0;
               stackIn_18_0 = stackOut_17_0;
               if (var9 != 0) {
@@ -1863,13 +1863,13 @@ final class cv {
               var6_int++;
             }
             if (decompiledFrameCompleted0) {
-              var3.field_r = fo.a(4800, og.field_l, new String[]{Integer.toString(var4_int), Integer.toString(var5)});
-              var6 = ps.field_w[var3.field_k];
+              var3.statusText = fo.a(4800, og.field_l, new String[]{Integer.toString(var4_int), Integer.toString(var5)});
+              var6 = ps.field_w[var3.entryId];
               var7 = new RgbSprite(var6.field_A, var6.field_x);
               CombatSandbox.a(var7, 3);
               var6.f(0, 0);
               var8 = 18;
-              boolean decompiledSharedTail0 = (var3.field_k == 1);
+              boolean decompiledSharedTail0 = (var3.entryId == 1);
               if (!decompiledSharedTail0) {
                 SoftwareRaster.c(var8, var8, 0, 0, var6.field_A, var6.field_x);
                 decompiledSharedTail0 = (var9 != 0);
@@ -1878,30 +1878,30 @@ final class cv {
                 SoftwareRaster.c(var8, var8, 0, var8, var6.field_A, -var8 + var6.field_x);
               }
               rf.b(-18862);
-              var3.field_m = var7;
+              var3.previewSprite = var7;
               if (var9 != 0) {
-                var3.field_r = bn.field_g;
+                var3.statusText = bn.field_g;
               }
             }
           } else {
-            var3.field_r = bn.field_g;
+            var3.statusText = bn.field_g;
           }
           if (decompiledFrameCompleted0) {
-            stackIn_34_0 = this.field_g.a(-64, (long)var3.field_k);
+            stackIn_34_0 = this.campaignEntries.get(-64, (long)var3.entryId);
           }
           var4 = stackIn_34_0;
           if (null != var4) {
             ((IntrusiveNode) (var4)).unlink(-100);
           }
-          this.field_g.a(var3, (long)var3.field_k, 97);
+          this.campaignEntries.put(var3, (long)var3.entryId, 97);
           stackIn_39_0 = var3;
           return stackIn_39_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3_ref = decompiledCaughtException;
           stackIn_43_0 = var3_ref;
-          stackIn_43_1 = new StringBuilder().append("cv.I(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_43_1 = new StringBuilder().append("cv.I(").append(obfuscationGuard).append(',');
+          if (campaign == null) {
             stackIn_44_2 = "null";
           } else {
             stackIn_44_2 = "{...}";
@@ -1910,147 +1910,147 @@ final class cv {
         }
     }
 
-    private final void b(int param0, int param1) {
+    private final void rebuildMissionEntries(int campaignIndex, int obfuscationGuard) {
         int stackIn_26_0 = 0;
-        cq stackIn_42_0 = null;
+        CampaignMenuEntry stackIn_42_0 = null;
         RuntimeException decompiledCaughtException = null;
-        CampaignDefinition var3 = null;
+        CampaignDefinition campaign = null;
         RuntimeException var3_ref = null;
-        CampaignMission[] var4_ref_om__ = null;
-        int var4 = 0;
-        int var5 = 0;
-        CampaignMission var6_ref_om = null;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
-        cq var13 = null;
-        int var14 = 0;
-        int var15 = 0;
-        int[] var16 = null;
-        int var17 = 0;
-        int var18 = 0;
-        int var19 = 0;
+        CampaignMission[] missions = null;
+        int initialLeft = 0;
+        int missionIndex = 0;
+        CampaignMission mission = null;
+        int left = 0;
+        int top = 0;
+        int lastColumnLeft = 0;
+        int cardWidth = 0;
+        int cardHeight = 0;
+        int rowSpacing = 0;
+        int columnSpacing = 0;
+        CampaignMenuEntry entry = null;
+        int requireAll = 0;
+        int selectable = 0;
+        int[] neighborIds = null;
+        int neighborIndex = 0;
+        int neighborId = 0;
+        int neighborHasScore = 0;
         int var20 = 0;
-        cq stackIn_42_0Lifetime1;
-        int var5Lifetime1;
+        CampaignMenuEntry stackIn_42_0Lifetime1;
+        int initialTop;
         var20 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          this.field_e = new pr(mu.field_g[param0][1], 1, 16777215);
-          this.field_i = new bg(32);
-          var3 = br.getCampaign(param0, (byte) -118);
-          if (var3 != null) {
-            var4_ref_om__ = var3.missions;
-            var5 = 0;
-            while (var4_ref_om__.length > var5) {
-              var6_ref_om = var4_ref_om__[var5];
-              if (var6_ref_om != null) {
-                this.a(-1, var6_ref_om);
+          this.regionMap = new pr(mu.field_g[campaignIndex][1], 1, 16777215);
+          this.missionEntries = new NodeHashTable(32);
+          campaign = br.getCampaign(campaignIndex, (byte) -118);
+          if (campaign != null) {
+            missions = campaign.missions;
+            missionIndex = 0;
+            while (missions.length > missionIndex) {
+              mission = missions[missionIndex];
+              if (mission != null) {
+                this.addMissionEntry(-1, mission);
               }
-              var5++;
+              missionIndex++;
               if (var20 == 0) {
                 continue;
               }
               break;
             }
           }
-          var4 = 90;
-          var5Lifetime1 = 80;
-          var6 = var4;
-          var7 = var5Lifetime1;
-          var8 = 400;
-          var9 = 150;
-          var10 = 38;
-          var11 = var10 / 2;
-          var12 = 10;
-          var13 = (cq) (this.field_i.b(1));
-          while (null != var13) {
+          initialLeft = 90;
+          initialTop = 80;
+          left = initialLeft;
+          top = initialTop;
+          lastColumnLeft = 400;
+          cardWidth = 150;
+          cardHeight = 38;
+          rowSpacing = cardHeight / 2;
+          columnSpacing = 10;
+          entry = (CampaignMenuEntry) (this.missionEntries.first(1));
+          while (null != entry) {
             if (var20 != 0) {
               return;
             }
             boolean decompiledFrameRemainder0 = true;
-            if (null != var13.field_p.neighborMissionIds &&
-              null == var13.field_r) {
-              var14 = var13.field_p.e((byte) 68) ? 1 : 0;
-              var15 = var14;
-              var16 = var13.field_p.neighborMissionIds;
-              var17 = 0;
-              while (var16.length > var17) {
-                var18 = var16[var17];
-                stackIn_42_0 = this.a(321, var18);
-                stackIn_26_0 = (stackIn_42_0.field_r == null) ? 0 : 1;
-                var19 = stackIn_26_0;
-                if (var19 != 0 &&
-                  var14 == 0) {
-                  var15 = 1;
+            if (null != entry.mission.neighborMissionIds &&
+              null == entry.statusText) {
+              requireAll = entry.mission.requiresAllNeighborScores((byte) 68) ? 1 : 0;
+              selectable = requireAll;
+              neighborIds = entry.mission.neighborMissionIds;
+              neighborIndex = 0;
+              while (neighborIds.length > neighborIndex) {
+                neighborId = neighborIds[neighborIndex];
+                stackIn_42_0 = this.getMissionEntry(321, neighborId);
+                stackIn_26_0 = (stackIn_42_0.statusText == null) ? 0 : 1;
+                neighborHasScore = stackIn_26_0;
+                if (neighborHasScore != 0 &&
+                  requireAll == 0) {
+                  selectable = 1;
                 } else {
-                  if (var19 == 0 &&
-                    var14 != 0) {
-                    var15 = 0;
+                  if (neighborHasScore == 0 &&
+                    requireAll != 0) {
+                    selectable = 0;
                   } else {
-                    var17++;
+                    neighborIndex++;
                     continue;
                   }
                 }
                 break;
               }
-              stackIn_42_0Lifetime1 = var13;
-              stackIn_42_0Lifetime1.field_l = var15 != 0;
+              stackIn_42_0Lifetime1 = entry;
+              stackIn_42_0Lifetime1.selectable = selectable != 0;
               decompiledFrameRemainder0 = false;
             }
             else {
-              var13.field_l = true;
+              entry.selectable = true;
             }
-            var13.field_B = var9;
-            var13.field_o = var10;
-            var13.field_x = var7;
-            var13.field_y = var6;
-            var6 = var6 + (var12 + var13.field_B);
-            if (var13.field_y > var8) {
-              var6 = var4;
-              var7 = var7 + (var13.field_o + var11);
+            entry.width = cardWidth;
+            entry.height = cardHeight;
+            entry.top = top;
+            entry.left = left;
+            left = left + (columnSpacing + entry.width);
+            if (entry.left > lastColumnLeft) {
+              left = initialLeft;
+              top = top + (entry.height + rowSpacing);
             }
-            var13 = (cq) (this.field_i.b((byte) 64));
+            entry = (CampaignMenuEntry) (this.missionEntries.next((byte) 64));
           }
-          if (param1 < 15) {
-            this.a(45, (CampaignMission) null);
+          if (obfuscationGuard < 15) {
+            this.addMissionEntry(45, (CampaignMission) null);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3_ref = decompiledCaughtException;
-          throw ig.addExceptionContext((Throwable) ((Object) var3_ref), "cv.C(" + param0 + ',' + param1 + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) var3_ref), "cv.C(" + campaignIndex + ',' + obfuscationGuard + ')');
         }
     }
 
-    final void a(int param0, boolean param1) {
+    final void openCampaign(int campaignIndex, boolean obfuscationGuard) {
         RgbSprite discarded$1 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
         try {
-          if (!ei.a(param0, 11906) &&
+          if (!ei.a(campaignIndex, 11906) &&
             rf.a(27875)) {
             pr.field_i = bn.field_g;
             CipherPacketBuffer.a(false, 11, 1, jt.field_a);
             return;
           }
           if (null == mu.field_g) {
-            this.c((byte) -122);
+            this.loadCampaignResources((byte) -122);
           }
-          this.field_l = param0;
-          this.b(param0, 98);
-          if (!param1) {
+          this.campaignIndex = campaignIndex;
+          this.rebuildMissionEntries(campaignIndex, 98);
+          if (!obfuscationGuard) {
             discarded$1 = this.a((CampaignMission) null, (sl) null, -116, 21, 100);
           }
-          this.a(1, (byte) 42);
+          this.setViewMode(1, (byte) 42);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw ig.addExceptionContext((Throwable) ((Object) var3), "cv.P(" + param0 + ',' + param1 + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) var3), "cv.P(" + campaignIndex + ',' + obfuscationGuard + ')');
         }
     }
 
@@ -2065,24 +2065,24 @@ final class cv {
         var6 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           if (param0 == 13) {
-            if (this.field_a != 1) {
-              if (this.field_a != 0) {
-                if (this.field_a == 2 ||
-                  this.field_a == 3) {
-                  this.field_a = 1;
+            if (this.viewMode != 1) {
+              if (this.viewMode != 0) {
+                if (this.viewMode == 2 ||
+                  this.viewMode == 3) {
+                  this.viewMode = 1;
                   if (var6 != 0) {
                     CipherPacketBuffer.a(false, 0, 1, jt.field_a);
-                    this.a(0, (byte) 42);
+                    this.setViewMode(0, (byte) 42);
                   }
                 }
               } else {
                 CipherPacketBuffer.a(false, 0, 1, jt.field_a);
                 if (var6 != 0) {
-                  this.a(0, (byte) 42);
+                  this.setViewMode(0, (byte) 42);
                 }
               }
             } else {
-              this.a(0, (byte) 42);
+              this.setViewMode(0, (byte) 42);
             }
           }
           if (param2 <= hi.field_j) {
@@ -2139,7 +2139,7 @@ final class cv {
         int stackIn_68_1;
         boolean stackIn_68_2;
         int stackIn_68_3;
-        cq stackIn_68_4;
+        CampaignMenuEntry stackIn_68_4;
         Object stackIn_70_0;
         boolean stackIn_71_5 = false;
         int stackIn_89_0 = 0;
@@ -2149,9 +2149,9 @@ final class cv {
         ru var2 = null;
         RuntimeException var2_ref = null;
         Object var3 = null;
-        cq var4 = null;
+        CampaignMenuEntry var4 = null;
         sl var4_ref = null;
-        cq var5_ref_cq = null;
+        CampaignMenuEntry var5_ref_cq = null;
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
@@ -2162,53 +2162,53 @@ final class cv {
         int var7Lifetime1;
         var8 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          var2 = mu.field_g[this.field_l][0];
+          var2 = mu.field_g[this.campaignIndex][0];
           var2.b(db.a(true, 0), MatchConditionEntry.a(0, (byte) 94));
-          if (null != this.field_e) {
+          if (null != this.regionMap) {
             try {
-              var3 = new boolean[this.field_i.a((byte) 117)];
-              var4 = (cq) (this.field_i.b(param0 ^ -25751));
+              var3 = new boolean[this.missionEntries.size((byte) 117)];
+              var4 = (CampaignMenuEntry) (this.missionEntries.first(param0 ^ -25751));
               do {
                 if (var4 == null) {
-                  this.field_e.a((byte) 93, db.a(true, 0), (boolean[]) (var3), MatchConditionEntry.a(0, (byte) 94), mu.field_g[this.field_l][2]);
+                  this.regionMap.a((byte) 93, db.a(true, 0), (boolean[]) (var3), MatchConditionEntry.a(0, (byte) 94), mu.field_g[this.campaignIndex][2]);
                   break;
                 }
-                ((byte[]) (var3))[var4.field_k] = (byte) (var4.field_l ? 1 : 0);
-                var4 = (cq) (this.field_i.b((byte) 109));
+                ((byte[]) (var3))[var4.entryId] = (byte) (var4.selectable ? 1 : 0);
+                var4 = (CampaignMenuEntry) (this.missionEntries.next((byte) 109));
               } while (var8 == 0);
             } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var3 = decompiledCaughtException;
               ((RuntimeException) (var3)).printStackTrace();
-              this.field_e = null;
+              this.regionMap = null;
             }
           }
           if (param0 != -25752) {
-            this.a(85, (byte) -25);
+            this.setViewMode(85, (byte) -25);
           }
           var3 = null;
           var4_ref = ku.j(85);
-          var5_ref_cq = (cq) (this.field_i.b(1));
+          var5_ref_cq = (CampaignMenuEntry) (this.missionEntries.first(1));
           boolean decompiledNaturalLoopExit0 = false;
           while (!(decompiledNaturalLoopExit0 = (var5_ref_cq == null))) {
             var6Lifetime1 = 0;
-            stackIn_96_0 = this.field_a;
+            stackIn_96_0 = this.viewMode;
             stackIn_96_1 = 1;
             if (var8 == 0) {
               if (stackIn_96_0 == stackIn_96_1) {
-                if (var5_ref_cq.field_l &&
-                  AiPlanningStrategy.field_d >= db.a(true, var5_ref_cq.field_y) &&
-                  AiPlanningStrategy.field_d <= db.a(true, var5_ref_cq.field_y + var5_ref_cq.field_B) &&
-                  ko.field_b >= MatchConditionEntry.a(var5_ref_cq.field_x, (byte) 94) &&
-                  ko.field_b <= MatchConditionEntry.a(var5_ref_cq.field_o + var5_ref_cq.field_x, (byte) 94)) {
+                if (var5_ref_cq.selectable &&
+                  AiPlanningStrategy.field_d >= db.a(true, var5_ref_cq.left) &&
+                  AiPlanningStrategy.field_d <= db.a(true, var5_ref_cq.left + var5_ref_cq.width) &&
+                  ko.field_b >= MatchConditionEntry.a(var5_ref_cq.top, (byte) 94) &&
+                  ko.field_b <= MatchConditionEntry.a(var5_ref_cq.height + var5_ref_cq.top, (byte) 94)) {
                   stackIn_38_0 = 1;
                 } else {
                   stackIn_38_0 = 0;
                 }
                 var6Lifetime1 = stackIn_38_0;
-                if (this.field_e != null) {
-                  if (var5_ref_cq.field_l &&
-                    this.field_e.a(AiPlanningStrategy.field_d - db.a(true, 0), (byte) -128, ko.field_b - MatchConditionEntry.a(0, (byte) 94)) == var5_ref_cq.field_k) {
+                if (this.regionMap != null) {
+                  if (var5_ref_cq.selectable &&
+                    this.regionMap.a(AiPlanningStrategy.field_d - db.a(true, 0), (byte) -128, ko.field_b - MatchConditionEntry.a(0, (byte) 94)) == var5_ref_cq.entryId) {
                     stackIn_48_0 = 1;
                   } else {
                     stackIn_48_0 = 0;
@@ -2220,8 +2220,8 @@ final class cv {
                 var3 = var5_ref_cq;
               }
               if (var4_ref != null &&
-                this.field_l == var4_ref.field_g &&
-                var5_ref_cq.field_k == var4_ref.field_e) {
+                this.campaignIndex == var4_ref.field_g &&
+                var5_ref_cq.entryId == var4_ref.field_e) {
                 stackIn_61_0 = 1;
               } else {
                 stackIn_61_0 = 0;
@@ -2236,9 +2236,9 @@ final class cv {
                 stackIn_68_4 = var5_ref_cq;
                 if (var6Lifetime1 == 0) {
                   stackIn_70_0 = this;
-                  if (null != this.field_b) {
+                  if (null != this.selectedMissionEntry) {
                     stackIn_70_0Lifetime1 = this;
-                    if (var5_ref_cq == this.field_b) {
+                    if (var5_ref_cq == this.selectedMissionEntry) {
                       stackIn_68_0Lifetime1 = this;
                       decompiledFrameRemainder0 = false;
                     }
@@ -2251,45 +2251,45 @@ final class cv {
                 stackIn_71_5 = true;
               }
               this.a(stackIn_68_1, stackIn_68_2, stackIn_68_3 != 0, stackIn_68_4, stackIn_71_5);
-              var5_ref_cq = (cq) (this.field_i.b((byte) 110));
+              var5_ref_cq = (CampaignMenuEntry) (this.missionEntries.next((byte) 110));
               continue;
             }
             break;
           }
           if (decompiledNaturalLoopExit0) {
             if (null != var3) {
-              var5 = nr.field_e.a(((cq) (var3)).field_w) >> 2;
-              var6 = ((cq) (var3)).field_y;
+              var5 = nr.field_e.a(((CampaignMenuEntry) (var3)).title) >> 2;
+              var6 = ((CampaignMenuEntry) (var3)).left;
               if (var5 + var6 > 630) {
                 var6 = -var5 + 630;
               }
               if (-var5 + var6 < 225) {
                 var6 = 225 + var5;
               }
-              fe.b(((cq) (var3)).field_w, db.a(true, var6), MatchConditionEntry.a(((cq) (var3)).field_x - 12, (byte) 94), true);
-              fe.c(((cq) (var3)).field_w, db.a(true, var6), MatchConditionEntry.a(((cq) (var3)).field_x - 12, (byte) 94), nd.field_b, true);
+              fe.b(((CampaignMenuEntry) (var3)).title, db.a(true, var6), MatchConditionEntry.a(((CampaignMenuEntry) (var3)).top - 12, (byte) 94), true);
+              fe.c(((CampaignMenuEntry) (var3)).title, db.a(true, var6), MatchConditionEntry.a(((CampaignMenuEntry) (var3)).top - 12, (byte) 94), nd.field_b, true);
               if (null != var4_ref &&
-                ~this.field_l == ~var4_ref.field_g &&
-                var4_ref.field_e == ((cq) (var3)).field_k) {
+                ~this.campaignIndex == ~var4_ref.field_g &&
+                var4_ref.field_e == ((CampaignMenuEntry) (var3)).entryId) {
                 stackIn_89_0 = 1;
               } else {
                 stackIn_89_0 = 0;
               }
               var7 = stackIn_89_0;
               if (var7 != 0) {
-                fe.b(qf.field_a, db.a(true, ((cq) (var3)).field_y), MatchConditionEntry.a(10 + ((cq) (var3)).field_x, (byte) 94), true);
-                fe.c(qf.field_a, db.a(true, ((cq) (var3)).field_y), MatchConditionEntry.a(((cq) (var3)).field_x + 10, (byte) 94), nd.field_b, true);
+                fe.b(qf.field_a, db.a(true, ((CampaignMenuEntry) (var3)).left), MatchConditionEntry.a(10 + ((CampaignMenuEntry) (var3)).top, (byte) 94), true);
+                fe.c(qf.field_a, db.a(true, ((CampaignMenuEntry) (var3)).left), MatchConditionEntry.a(((CampaignMenuEntry) (var3)).top + 10, (byte) 94), nd.field_b, true);
               }
-              if (this.field_u != var3) {
+              if (this.hoveredEntry != var3) {
                 ub.$cfr$intArgs$a$6d836999ad61(127, im.field_v[1]);
               }
             }
-            this.field_u = (cq) (var3);
+            this.hoveredEntry = (CampaignMenuEntry) (var3);
             stackIn_96_0 = -2;
-            stackIn_96_1 = ~this.field_a;
+            stackIn_96_1 = ~this.viewMode;
           }
           if (stackIn_96_0 == stackIn_96_1 &&
-            this.field_b != null) {
+            this.selectedMissionEntry != null) {
             this.c(param0 + 25772);
           }
           return;
@@ -2300,8 +2300,8 @@ final class cv {
         }
     }
 
-    private final void a(int param0, byte param1) {
-        cq discarded$0 = null;
+    private final void setViewMode(int viewMode, byte obfuscationGuard) {
+        CampaignMenuEntry discarded$0 = null;
         RuntimeException decompiledCaughtException = null;
         int var3_int = 0;
         RuntimeException var3 = null;
@@ -2314,10 +2314,10 @@ final class cv {
         int var10 = 0;
         sl var10_ref_sl = null;
         RuntimeException var10_ref_RuntimeException = null;
-        cq var11 = null;
+        CampaignMenuEntry var11 = null;
         CampaignDefinition var11_ref = null;
         CampaignMission var12 = null;
-        cq var12_ref = null;
+        CampaignMenuEntry var12_ref = null;
         int var13_int = 0;
         IntrusiveNode var13 = null;
         String var14 = null;
@@ -2327,8 +2327,8 @@ final class cv {
         int var6Lifetime1;
         var16 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          this.field_a = param0;
-          var10 = this.field_a;
+          this.viewMode = viewMode;
+          var10 = this.viewMode;
           if (0 == var10 &&
             var16 == 0 || var10 == 1) {
             if (0 == var10 &&
@@ -2342,37 +2342,37 @@ final class cv {
               var3_int = 278;
               var5Lifetime1 = 45;
               var7 = var5Lifetime1;
-              if (this.field_g == null) {
+              if (this.campaignEntries == null) {
                 this.a(false);
               }
               var8 = var6Lifetime1;
               var9 = 10;
-              this.field_g.c((byte) -124);
+              this.campaignEntries.clear((byte) -124);
               try {
                 var10_ref_sl = ku.j(84);
                 if (var10_ref_sl != null) {
-                  var11 = new cq(-1, SummonAction.field_A);
-                  var11.field_B = 278;
-                  var11.field_x = 341;
-                  var11.field_o = 57;
-                  var11.field_y = 45;
+                  var11 = new CampaignMenuEntry(-1, SummonAction.field_A);
+                  var11.width = 278;
+                  var11.top = 341;
+                  var11.height = 57;
+                  var11.left = 45;
                   var12 = ar.getCampaignMission(var10_ref_sl.field_g, var10_ref_sl.field_e, 0);
                   var13_int = Battlefield.a(var12.participantIds.length, var10_ref_sl.field_c, false);
                   var14 = fo.a(4800, wd.field_e, new String[]{var12.name, Integer.toString(var13_int)});
-                  var11.field_w = var12.campaign.name;
-                  var11.field_l = true;
-                  var11.field_p = var12;
-                  var11.field_D = var12.campaign.localGodId;
-                  var11.field_r = var14;
-                  var11.field_q = var12.description;
+                  var11.title = var12.campaign.name;
+                  var11.selectable = true;
+                  var11.mission = var12;
+                  var11.godId = var12.campaign.localGodId;
+                  var11.statusText = var14;
+                  var11.description = var12.description;
                   if (!var12.campaign.c((byte) -45) &&
                     rf.a(27875)) {
-                    var11.field_l = false;
-                    var11.field_r = bn.field_g + " (" + var11.field_r + ")";
+                    var11.selectable = false;
+                    var11.statusText = bn.field_g + " (" + var11.statusText + ")";
                   }
                   var15 = this.a(var12, var10_ref_sl, 200, 1, 200);
-                  var11.field_m = var15;
-                  this.field_g.a(var11, (long)var11.field_k, 82);
+                  var11.previewSprite = var15;
+                  this.campaignEntries.put(var11, (long)var11.entryId, 82);
                 }
               } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
@@ -2386,30 +2386,30 @@ final class cv {
                   var11_ref = br.getCampaign(var10, (byte) -12);
                   if (var16 == 0) {
                     if (var11_ref != null) {
-                      var12_ref = this.a(true, var11_ref);
+                      var12_ref = this.buildCampaignEntry(true, var11_ref);
                     } else {
-                      var12_ref = new cq(var10, (String) null);
-                      var12_ref.field_l = false;
-                      var13 = this.field_g.a(-89, (long)var12_ref.field_k);
+                      var12_ref = new CampaignMenuEntry(var10, (String) null);
+                      var12_ref.selectable = false;
+                      var13 = this.campaignEntries.get(-89, (long)var12_ref.entryId);
                       if (null != var13) {
-                        var13.unlink(param1 + 14);
+                        var13.unlink(obfuscationGuard + 14);
                       }
-                      this.field_g.a(var12_ref, (long)var12_ref.field_k, 105);
+                      this.campaignEntries.put(var12_ref, (long)var12_ref.entryId, 105);
                     }
-                    var12_ref.field_o = var4;
-                    var12_ref.field_B = var3_int;
-                    var12_ref.field_y = var7;
-                    var12_ref.field_x = var8;
+                    var12_ref.height = var4;
+                    var12_ref.width = var3_int;
+                    var12_ref.left = var7;
+                    var12_ref.top = var8;
                     var8 = var8 + (var4 + var9);
                     var10++;
                     continue;
                   }
                 } else {
-                  if (this.field_d == null) {
+                  if (this.selectedCampaignEntry == null) {
                     break scanLoop1;
                   }
                 }
-                this.field_d = (cq) (this.field_g.a(-19, (long)this.field_d.field_k));
+                this.selectedCampaignEntry = (CampaignMenuEntry) (this.campaignEntries.get(-19, (long)this.selectedCampaignEntry.entryId));
                 break;
               }
               CipherPacketBuffer.a(true, 21, 1, 0);
@@ -2420,15 +2420,15 @@ final class cv {
               CipherPacketBuffer.a(true, 22, 1, 21);
             }
           }
-          if (param1 != 42) {
-            discarded$0 = this.a(122, 13);
+          if (obfuscationGuard != 42) {
+            discarded$0 = this.getMissionEntry(122, 13);
           }
           this.b(78);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
           decompiledCaughtException = decompiledCaughtParameter1;
           var3 = decompiledCaughtException;
-          throw ig.addExceptionContext((Throwable) ((Object) var3), "cv.T(" + param0 + ',' + param1 + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) var3), "cv.T(" + viewMode + ',' + obfuscationGuard + ')');
         }
     }
 

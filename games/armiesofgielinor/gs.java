@@ -499,7 +499,7 @@ final class gs implements kh {
                 }
                 case 34: {
                     try {
-                        var4 = (int)((double)var4 + iq.field_e.nextGaussian() * sp.field_e);
+                        var4 = (int)((double)var4 + CampaignMenuButton.field_e.nextGaussian() * sp.field_e);
                         if (0 > var4) {
                             /* Inlined CFG state: 36. */
                             {

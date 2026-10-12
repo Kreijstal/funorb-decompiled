@@ -115,7 +115,7 @@ final class TileMetadata implements TaggedFieldReader {
         if (param0 != 0) {
           TileMetadata.a(-47, true);
         }
-        return -iq.field_h + vi.b(-53);
+        return -CampaignMenuButton.field_h + vi.b(-53);
     }
 
     final static pf[] c(int param0) {

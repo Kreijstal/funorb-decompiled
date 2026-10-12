@@ -89,7 +89,7 @@ final class uu {
             var7.field_gb = 0;
             if (!vu.b(false)) {
               var9_ref_String = vu.field_M.field_rc;
-              kd.field_F.field_X = fo.a(4800, cv.field_m, new String[]{var9_ref_String}).toUpperCase();
+              kd.field_F.field_X = fo.a(4800, CampaignMenu.field_m, new String[]{var9_ref_String}).toUpperCase();
               pi.field_N.a(40, param3 - 20500, pd.field_c.field_gb, -40 + pd.field_c.field_ob, 0);
               pi.field_N.field_X = fo.a(4800, wt.field_F, new String[]{var9_ref_String});
               var8 = pi.field_N;

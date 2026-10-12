@@ -1,41 +1,41 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class cq extends IntrusiveNode {
-    int field_k;
+final class CampaignMenuEntry extends IntrusiveNode {
+    int entryId;
     static byte[][] field_z;
-    bg field_n;
-    int field_B;
+    NodeHashTable previewUnitCategories;
+    int width;
     static int[] field_u;
-    int field_D;
-    String field_r;
-    int field_A;
-    RgbSprite field_m;
-    int field_t;
-    boolean field_l;
-    int field_x;
+    int godId;
+    String statusText;
+    int score;
+    RgbSprite previewSprite;
+    int highlightProgress;
+    boolean selectable;
+    int top;
     static int field_F;
-    int field_v;
-    CampaignMission field_p;
+    int selectionAge;
+    CampaignMission mission;
     static String field_C;
-    String field_w;
-    String field_q;
-    int field_o;
+    String title;
+    String description;
+    int height;
     static String field_E;
-    int field_y;
-    RgbSprite field_s;
+    int left;
+    RgbSprite highlightSprite;
 
     public static void a(int param0) {
         field_z = (byte[][]) null;
         if (param0 != -101) {
-          cq.a(-99, -40, -126, (byte) 12, -104);
+          CampaignMenuEntry.a(-99, -40, -126, (byte) 12, -104);
         }
         field_E = null;
         field_u = null;
         field_C = null;
     }
 
-    final static Class a(Object param0, byte param1) {
+    final static Class getBoxedPrimitiveType(Object value, byte obfuscationGuard) {
         RuntimeException var2 = null;
         Class stackIn_2_0 = null;
         Class stackIn_5_0 = null;
@@ -51,39 +51,39 @@ final class cq extends IntrusiveNode {
         String stackIn_34_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (Integer.class.isInstance(param0)) {
+          if (Integer.class.isInstance(value)) {
             stackIn_2_0 = Integer.TYPE;
             return stackIn_2_0;
           }
-          if (param1 != -75) {
+          if (obfuscationGuard != -75) {
             stackIn_5_0 = (Class) null;
             return stackIn_5_0;
           }
-          if (Byte.class.isInstance(param0)) {
+          if (Byte.class.isInstance(value)) {
             stackIn_8_0 = Byte.TYPE;
             return stackIn_8_0;
           }
-          if (Short.class.isInstance(param0)) {
+          if (Short.class.isInstance(value)) {
             stackIn_11_0 = Short.TYPE;
             return stackIn_11_0;
           }
-          if (Long.class.isInstance(param0)) {
+          if (Long.class.isInstance(value)) {
             stackIn_15_0 = Long.TYPE;
             return stackIn_15_0;
           }
-          if (Boolean.class.isInstance(param0)) {
+          if (Boolean.class.isInstance(value)) {
             stackIn_18_0 = Boolean.TYPE;
             return stackIn_18_0;
           }
-          if (Float.class.isInstance(param0)) {
+          if (Float.class.isInstance(value)) {
             stackIn_21_0 = Float.TYPE;
             return stackIn_21_0;
           }
-          if (Double.class.isInstance(param0)) {
+          if (Double.class.isInstance(value)) {
             stackIn_25_0 = Double.TYPE;
             return stackIn_25_0;
           }
-          if (!Character.class.isInstance(param0)) {
+          if (!Character.class.isInstance(value)) {
             return null;
           }
           stackIn_29_0 = Character.TYPE;
@@ -93,12 +93,12 @@ final class cq extends IntrusiveNode {
           var2 = decompiledCaughtException;
           stackIn_33_0 = var2;
           stackIn_33_1 = new StringBuilder().append("cq.F(");
-          if (param0 == null) {
+          if (value == null) {
             stackIn_34_2 = "null";
           } else {
             stackIn_34_2 = "{...}";
           }
-          throw ig.addExceptionContext((Throwable) ((Object) stackIn_33_0), ((StringBuilder) (Object) stackIn_33_1).append(stackIn_34_2).append(',').append(param1).append(')').toString());
+          throw ig.addExceptionContext((Throwable) ((Object) stackIn_33_0), ((StringBuilder) (Object) stackIn_33_1).append(stackIn_34_2).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 
@@ -116,7 +116,7 @@ final class cq extends IntrusiveNode {
         try {
           oh.field_L = lm.field_d;
           if (param1 != -14) {
-            cq.a(7);
+            CampaignMenuEntry.a(7);
           }
           if (255 == param3) {
             stackIn_11_0 = !(nm.field_z >= 13);
@@ -184,7 +184,7 @@ final class cq extends IntrusiveNode {
           var4 = 1;
         }
         if (param0 != -116) {
-          cq.a((byte) 74, 85);
+          CampaignMenuEntry.a((byte) 74, 85);
         }
         if (param1 == 5) {
           var4 = -1;
@@ -235,7 +235,7 @@ final class cq extends IntrusiveNode {
         var5[7] = dupTemp$1;
         var5[5] = dupTemp$1;
         if (param3 <= 33) {
-          cq.a(111);
+          CampaignMenuEntry.a(111);
         }
         if (param0 != 0) {
           var6[4] = hl.a(false, param0, 64);
@@ -243,65 +243,65 @@ final class cq extends IntrusiveNode {
         return var5;
     }
 
-    final boolean a(int param0, int param1, int param2) {
+    final boolean containsPoint(int screenX, int screenY, int obfuscationGuard) {
         boolean stackIn_8_0 = false;
-        if (param2 < 114) {
-          this.a(106, -67, 2);
+        if (obfuscationGuard < 114) {
+          this.containsPoint(106, -67, 2);
         }
-        stackIn_8_0 = (db.a(true, this.field_y) <= param0) && (db.a(true, this.field_B + this.field_y) >= param0) && (param1 >= MatchConditionEntry.a(this.field_x, (byte) 94)) && (MatchConditionEntry.a(this.field_o + this.field_x, (byte) 94) >= param1);
+        stackIn_8_0 = (db.a(true, this.left) <= screenX) && (db.a(true, this.width + this.left) >= screenX) && (screenY >= MatchConditionEntry.a(this.top, (byte) 94)) && (MatchConditionEntry.a(this.height + this.top, (byte) 94) >= screenY);
         return stackIn_8_0;
     }
 
-    cq(CampaignMission param0) {
-        int var4 = 0;
-        int var8 = 0;
+    CampaignMenuEntry(CampaignMission mission) {
+        int playerSlotIndex = 0;
+        int availableUnitIndex = 0;
         RuntimeException stackIn_21_0 = null;
         StringBuilder stackIn_21_1 = null;
         String stackIn_22_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
-        MapTile[] var3 = null;
-        MapTile[] var4_ref_ne__ = null;
-        int var5 = 0;
-        int var7 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        MapLayout var12 = null;
-        MapTile var13 = null;
-        CampaignParticipant var14 = null;
-        int[] var18 = null;
-        int var5Lifetime1;
+        MapTile[] tiles = null;
+        MapTile[] mapTiles = null;
+        int tileIndex = 0;
+        int unitCategory = 0;
+        int unitType = 0;
+        int availableCategory = 0;
+        MapLayout layout = null;
+        MapTile tile = null;
+        CampaignParticipant participant = null;
+        int[] availableUnits = null;
+        int participantId;
         try {
-          this.field_p = param0;
-          this.field_w = param0.name;
-          this.field_v = 1073741823;
-          this.field_l = false;
-          this.field_k = param0.missionId;
-          this.field_n = new bg(16);
-          var12 = param0.getMapLayout(-114);
-          var3 = var12.createTiles(115, (Battlefield) null);
-          var4_ref_ne__ = var3;
-          for (var5 = 0; var5 < var4_ref_ne__.length; var5++) {
-            var13 = var4_ref_ne__[var5];
-            if (null != var13.occupant &&
-              var13.occupant.ownerPlayer != param0.playerSlot) {
-              var7 = var13.occupant.getUnitCategory(0);
-              if (this.field_n.a(-57, (long)var7) == null) {
-                this.field_n.a(new IntrusiveNode(), (long)var7, 108);
+          this.mission = mission;
+          this.title = mission.name;
+          this.selectionAge = 1073741823;
+          this.selectable = false;
+          this.entryId = mission.missionId;
+          this.previewUnitCategories = new NodeHashTable(16);
+          layout = mission.getMapLayout(-114);
+          tiles = layout.createTiles(115, (Battlefield) null);
+          mapTiles = tiles;
+          for (tileIndex = 0; tileIndex < mapTiles.length; tileIndex++) {
+            tile = mapTiles[tileIndex];
+            if (null != tile.occupant &&
+              tile.occupant.ownerPlayer != mission.playerSlot) {
+              unitCategory = tile.occupant.getUnitCategory(0);
+              if (this.previewUnitCategories.get(-57, (long)unitCategory) == null) {
+                this.previewUnitCategories.put(new IntrusiveNode(), (long)unitCategory, 108);
               }
             }
           }
-          for (var4 = 0; var4 < param0.participantIds.length; var4++) {
-            var5Lifetime1 = param0.participantIds[var4];
-            if (var5Lifetime1 != -1) {
-              var14 = param0.campaign.participants[var5Lifetime1];
-              if (null != var14.availableUnitTypes) {
-                var18 = var14.availableUnitTypes;
-                for (var8 = 0; var18.length > var8; var8++) {
-                  var9 = var18[var8];
-                  var10 = bw.unitDefinitions[var9][0];
-                  if (this.field_n.a(-96, (long)var10) == null) {
-                    this.field_n.a(new IntrusiveNode(), (long)var10, 126);
+          for (playerSlotIndex = 0; playerSlotIndex < mission.participantIds.length; playerSlotIndex++) {
+            participantId = mission.participantIds[playerSlotIndex];
+            if (participantId != -1) {
+              participant = mission.campaign.participants[participantId];
+              if (null != participant.availableUnitTypes) {
+                availableUnits = participant.availableUnitTypes;
+                for (availableUnitIndex = 0; availableUnits.length > availableUnitIndex; availableUnitIndex++) {
+                  unitType = availableUnits[availableUnitIndex];
+                  availableCategory = bw.unitDefinitions[unitType][0];
+                  if (this.previewUnitCategories.get(-96, (long)availableCategory) == null) {
+                    this.previewUnitCategories.put(new IntrusiveNode(), (long)availableCategory, 126);
                   }
                 }
               }
@@ -313,7 +313,7 @@ final class cq extends IntrusiveNode {
           var2 = decompiledCaughtException;
           stackIn_21_0 = var2;
           stackIn_21_1 = new StringBuilder().append("cq.<init>(");
-          if (param0 == null) {
+          if (mission == null) {
             stackIn_22_2 = "null";
           } else {
             stackIn_22_2 = "{...}";
@@ -322,13 +322,13 @@ final class cq extends IntrusiveNode {
         }
     }
 
-    cq(int param0, String param1) {
+    CampaignMenuEntry(int entryId, String title) {
         try {
-          this.field_w = param1;
-          this.field_v = 1073741823;
-          this.field_k = param0;
+          this.title = title;
+          this.selectionAge = 1073741823;
+          this.entryId = entryId;
         } catch (RuntimeException runtimeException) {
-          throw ig.addExceptionContext((Throwable) ((Object) runtimeException), "cq.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) runtimeException), "cq.<init>(" + entryId + ',' + (title != null ? "{...}" : "null") + ')');
         }
     }
 

@@ -82,7 +82,7 @@ final class rs extends IntrusiveNode {
         if (param0 != 26449) {
           return;
         }
-        int var4 = cq.field_u[param2];
+        int var4 = CampaignMenuEntry.field_u[param2];
         if (7 == var4 &&
           5 == (og.field_p[param2] + param2 & 5)) {
           var5 = tn.field_eb[6 + og.field_p[param2] % 8];

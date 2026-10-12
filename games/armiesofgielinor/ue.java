@@ -236,7 +236,7 @@ final class ue {
         if (param2 != 1) {
           ue.b((byte) 15);
         }
-        return cq.a(param1, 1, param0, (byte) 58, param3);
+        return CampaignMenuEntry.a(param1, 1, param0, (byte) 58, param3);
     }
 
     final void a(int param0, byte[] param1, byte param2, int param3) throws IOException {

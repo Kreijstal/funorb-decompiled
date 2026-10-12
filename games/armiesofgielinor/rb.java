@@ -167,14 +167,14 @@ abstract class rb implements n {
         var19 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           ActionRequest.field_t = new int[]{0, 0, -8144, 65536, 0, 0, 0, -65536, 0, 0, 0, 65536};
-          var1_int = iq.field_a.length;
+          var1_int = CampaignMenuButton.field_a.length;
           var21 = new int[var1_int];
           var20 = var21;
           var2 = var20;
           for (var3 = 0; var3 < var1_int; var3++) {
-            var4_ref_pu = iq.field_a[var3];
+            var4_ref_pu = CampaignMenuButton.field_a[var3];
             var4_ref_pu.a(-3831);
-            cq.a((byte) -116, var3);
+            CampaignMenuEntry.a((byte) -116, var3);
             var5 = var4_ref_pu.field_L + var4_ref_pu.field_p >> 1;
             var6 = var4_ref_pu.field_H + var4_ref_pu.field_P >> 1;
             var7 = var4_ref_pu.field_D + var4_ref_pu.field_J >> 1;
@@ -210,16 +210,16 @@ abstract class rb implements n {
           var12Lifetime1 = (int)((double)var12Lifetime1 * var10Lifetime1);
           var13Lifetime1 = (int)((double)var13Lifetime1 * var10Lifetime1);
           var14 = (int)((double)var14 * var10Lifetime1);
-          for (var15 = 0; iq.field_a.length > var15; var15++) {
+          for (var15 = 0; CampaignMenuButton.field_a.length > var15; var15++) {
             var16 = 0;
-            for (var17_int = 1; var17_int < iq.field_a.length; var17_int++) {
+            for (var17_int = 1; var17_int < CampaignMenuButton.field_a.length; var17_int++) {
               if (var21[var16] < var21[var17_int]) {
                 var16 = var17_int;
               }
             }
             var21[var16] = -2147483648;
-            var17 = iq.field_a[var16];
-            cq.a((byte) -116, var16);
+            var17 = CampaignMenuButton.field_a[var16];
+            CampaignMenuEntry.a((byte) -116, var16);
             for (var18 = 0; var18 < 3; var18++) {
               pd.field_a[var18] = pd.field_a[var18] + CampaignParticipant.field_s[var15][var18];
             }

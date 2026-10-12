@@ -96,7 +96,7 @@ final class ActionSpell extends Spell {
           }
           var6_int = param2.campaign.campaignIndex;
           var7 = param2.missionId;
-          MoveEvent.field_C.a(var7, (byte) 33, param4);
+          MoveEvent.field_C.updateMissionScore(var7, (byte) 33, param4);
           if (!(pg.playerProfile.campaignProgress.getMissionScore(var6_int, -63, var7) >= param4) ||
             param4 == 1) {
             if (1 < param4) {

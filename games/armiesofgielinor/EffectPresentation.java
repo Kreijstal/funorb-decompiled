@@ -161,7 +161,7 @@ final class EffectPresentation implements EventPresentation {
         }
         dupTemp$2 = vi.b(82);
         SummonEvent.field_G = dupTemp$2;
-        iq.field_h = dupTemp$2;
+        CampaignMenuButton.field_h = dupTemp$2;
         if (kd.field_J.field_g != 1) {
         }
         ov.field_g = cj.field_o;

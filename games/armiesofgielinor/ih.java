@@ -9,7 +9,7 @@ class ih extends hn {
     private mi[][] field_I;
     int[] field_s;
     private int[] field_F;
-    private bg field_T;
+    private NodeHashTable field_T;
     private int[] field_P;
     private mi[][] field_M;
     private int[] field_C;
@@ -321,14 +321,14 @@ class ih extends hn {
           if (param4 != 86) {
             return true;
           }
-          var8 = (vc) (param3.field_l.b(1));
+          var8 = (vc) (param3.field_l.first(1));
           while (var8 != null) {
             var9 = (int)var8.key;
-            var12 = (io) (this.field_T.a(-27, (long)var9));
+            var12 = (io) (this.field_T.get(-27, (long)var9));
             if (var12 == null) {
               var13 = wl.a(param1, var9, true);
               if (var13 != null) {
-                this.field_T.a(var13, (long)var9, 24);
+                this.field_T.put(var13, (long)var9, 24);
                 if (!var13.a(param4 + 10922, var8.field_n, (int[]) (var7), param0)) {
                   var6_int = 0;
                 }
@@ -338,11 +338,11 @@ class ih extends hn {
             } else {
               if (!var12.a(param4 + 10922, var8.field_n, (int[]) (var7), param0)) {
                 var6_int = 0;
-                var8 = (vc) (param3.field_l.b((byte) 115));
+                var8 = (vc) (param3.field_l.next((byte) 115));
                 continue;
               }
             }
-            var8 = (vc) (param3.field_l.b((byte) 115));
+            var8 = (vc) (param3.field_l.next((byte) 115));
           }
           if (var6_int != 0) {
             param3.a();
@@ -477,11 +477,11 @@ class ih extends hn {
 
     final synchronized void h(int param0) {
         int var4 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
-        io var5 = (io) (this.field_T.b(1));
+        io var5 = (io) (this.field_T.first(1));
         int var3 = -125 % ((-68 - param0) / 49);
         while (var5 != null) {
           var5.a(126);
-          var5 = (io) (this.field_T.b((byte) 55));
+          var5 = (io) (this.field_T.next((byte) 55));
         }
     }
 
@@ -607,7 +607,7 @@ class ih extends hn {
         int var5Lifetime1;
         try {
           if (param0 != 1370206316) {
-            this.field_T = (bg) null;
+            this.field_T = (NodeHashTable) null;
           }
           var3_int = param1.field_t + (param1.field_n * param1.field_J >> 12);
           var3_int = var3_int + (this.field_x[param1.field_m] * (-8192 + this.field_r[param1.field_m]) >> 12);
@@ -1122,7 +1122,7 @@ class ih extends hn {
             var5 = (mi) (this.field_Q.field_p.b((byte) 60));
           }
         }
-        var10 = (io) (this.field_T.a(-22, (long)this.field_O[param3]));
+        var10 = (io) (this.field_T.get(-22, (long)this.field_O[param3]));
         var11 = var10;
         var12 = var11;
         if (var11 == null) {
@@ -1347,7 +1347,7 @@ class ih extends hn {
         this.field_J = new int[16];
         this.field_q = new dw();
         this.field_Q = new os(this);
-        this.field_T = new bg(128);
+        this.field_T = new NodeHashTable(128);
         this.a(256, -1, (byte) -116);
         this.a(true, true);
     }

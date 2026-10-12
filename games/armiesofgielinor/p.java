@@ -9,9 +9,9 @@ final class p {
     static String field_i;
     static String field_f;
     private kl field_h;
-    private bg field_e;
+    private NodeHashTable field_e;
     static String field_c;
-    private bg field_j;
+    private NodeHashTable field_j;
 
     private final sn a(String param0, String param1, int param2, int[] param3) {
         int var5_int = 0;
@@ -157,7 +157,7 @@ final class p {
           var5_int = param3 ^ (65532 & param2 << 4 | param2 >>> 12);
           var5_int = var5_int | param2 << 16;
           var6 = 4294967296L ^ (long)var5_int;
-          var8 = (sn) (this.field_j.a(-56, var6));
+          var8 = (sn) (this.field_j.get(-56, var6));
           if (var8 != null) {
             stackIn_2_0 = var8;
             return stackIn_2_0;
@@ -167,14 +167,14 @@ final class p {
             stackIn_6_0 = null;
             return (sn) (stackIn_6_0);
           }
-          var9 = (qs) (this.field_e.a(param0 + 648691672, var6));
+          var9 = (qs) (this.field_e.get(param0 + 648691672, var6));
           if (var9 == null) {
             var9 = qs.a(this.field_h, param2, param3);
             if (var9 == null) {
               stackIn_10_0 = null;
               return (sn) (stackIn_10_0);
             }
-            this.field_e.a(var9, var6, param0 + 648691834);
+            this.field_e.put(var9, var6, param0 + 648691834);
           }
           var8Lifetime1 = var9.a(param1);
           if (var8Lifetime1 == null) {
@@ -185,7 +185,7 @@ final class p {
             stackIn_17_0 = (sn) null;
             return stackIn_17_0;
           }
-          this.field_j.a(var8Lifetime1, var6, 32);
+          this.field_j.put(var8Lifetime1, var6, 32);
           stackIn_19_0 = var8Lifetime1;
           return stackIn_19_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -237,7 +237,7 @@ final class p {
           var5_int = (param3 >>> 12 | (1073745919 & param3) << 4) ^ param2;
           var5_int = var5_int | param3 << 16;
           var6 = (long)var5_int;
-          var8 = (sn) (this.field_j.a(param0 ^ -121, var6));
+          var8 = (sn) (this.field_j.get(param0 ^ -121, var6));
           if (var8 != null) {
             stackIn_2_0 = var8;
             return stackIn_2_0;
@@ -258,7 +258,7 @@ final class p {
           }
           var10 = var9.b();
           var8Lifetime1 = var10;
-          this.field_j.a(var8Lifetime1, var6, 77);
+          this.field_j.put(var8Lifetime1, var6, 77);
           if (param1 != null) {
             param1[0] = param1[0] - var10.field_o.length;
           }
@@ -448,8 +448,8 @@ final class p {
     }
 
     p(kl param0, kl param1) {
-        this.field_e = new bg(256);
-        this.field_j = new bg(256);
+        this.field_e = new NodeHashTable(256);
+        this.field_j = new NodeHashTable(256);
         try {
           this.field_g = param0;
           this.field_h = param1;
