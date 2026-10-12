@@ -3,7 +3,7 @@
  */
 abstract class wl extends tj {
     static String field_J;
-    static RgbSprite field_N;
+    static RgbSprite groundShadowSprite;
     static String[] field_M;
     static ClientUiComponent field_K;
     static int field_E;
@@ -61,7 +61,7 @@ abstract class wl extends tj {
     public static void f(byte param0) {
         field_I = null;
         field_M = null;
-        field_N = null;
+        groundShadowSprite = null;
         int var1 = -89 % ((8 - param0) / 57);
         field_K = null;
         currentRoomPlayers = null;

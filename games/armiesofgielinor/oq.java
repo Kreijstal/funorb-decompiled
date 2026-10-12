@@ -4,7 +4,7 @@
 final class oq extends wv {
     static String field_j;
     static ClientConnectionState field_m;
-    static RgbSprite[] field_l;
+    static RgbSprite[] activeStructureShadows;
     static String field_k;
 
     oq(long param0, String param1) {
@@ -16,13 +16,13 @@ final class oq extends wv {
         if (param0 >= 66) {
           field_m = null;
           field_j = null;
-          field_l = null;
+          activeStructureShadows = null;
           return;
         }
         oq.a(-38);
         field_m = null;
         field_j = null;
-        field_l = null;
+        activeStructureShadows = null;
     }
 
     final h a(byte param0) {

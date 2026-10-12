@@ -3,7 +3,7 @@
  */
 final class jq extends dr {
     static String field_E;
-    static RgbSprite[] field_G;
+    static RgbSprite[] kalphiteSprites;
     static int field_F;
     static String[][] field_I;
     static int[] field_H;
@@ -96,14 +96,14 @@ final class jq extends dr {
     public static void g(int param0) {
         if (param0 < -2) {
           field_E = null;
-          field_G = null;
+          kalphiteSprites = null;
           field_H = null;
           field_I = (String[][]) null;
           return;
         }
         field_I = (String[][]) null;
         field_E = null;
-        field_G = null;
+        kalphiteSprites = null;
         field_H = null;
         field_I = (String[][]) null;
     }

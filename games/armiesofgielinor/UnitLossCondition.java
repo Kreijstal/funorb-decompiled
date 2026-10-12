@@ -6,7 +6,7 @@ final class UnitLossCondition implements MatchCondition {
     static IndexedSprite field_a;
     private int playerId;
     private Battlefield battlefield;
-    static co[] field_d;
+    static BattlefieldTheme[] battlefieldThemes;
     static String field_c;
 
     public final String describeCondition(int obfuscationGuard) {
@@ -29,7 +29,7 @@ final class UnitLossCondition implements MatchCondition {
         if (param0 <= 114) {
           return;
         }
-        field_d = null;
+        battlefieldThemes = null;
         field_f = null;
         field_a = null;
     }

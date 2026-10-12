@@ -12,7 +12,7 @@ final class ac extends IntrusiveNode {
     static String field_x;
     private int field_v;
     static int field_p;
-    static IndexedSprite[] field_k;
+    static IndexedSprite[] activeTerrainSprites;
     private int field_l;
     static boolean field_n;
     static int field_m;
@@ -64,7 +64,7 @@ final class ac extends IntrusiveNode {
     }
 
     public static void a(byte param0) {
-        field_k = null;
+        activeTerrainSprites = null;
         field_x = null;
         field_u = null;
         field_s = null;

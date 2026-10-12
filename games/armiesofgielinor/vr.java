@@ -62,14 +62,14 @@ final class vr {
             bj.field_p[var10] = new RgbSprite(100, 110);
             bj.field_p[var10].b();
             SoftwareRaster.b();
-            td.field_f.a(var10, 0);
+            td.field_f.selectTheme(var10, 0);
             ds.a(10, 50, QuickChatCategory.field_G[0], 27066, false, var10, true, QuickChatCategory.field_G[3]);
             ds.a(10, 50, QuickChatCategory.field_G[0], 27066, false, var10, false, QuickChatCategory.field_G[3]);
             vu.a(true, false, 10, 50, var10, 1, 1);
             vu.a(false, false, 10, 50, var10, 1, 1);
             var10++;
           }
-          td.field_f.a(0, param1 - 18);
+          td.field_f.selectTheme(0, param1 - 18);
           so.field_b.a(5605);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

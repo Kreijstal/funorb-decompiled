@@ -27,8 +27,8 @@ final class LeaderEscortCondition implements MatchCondition {
           if (param1 < 71) {
             field_f = (tu) null;
           }
-          var2 = new d(param0, j.field_e, CampaignMenuButton.field_g, qm.field_K, c.field_e, MovementPresentation.field_j, AnimationPlayer.field_j);
-          rj.d((byte) 107);
+          var2 = new d(param0, j.decodedSpriteOffsetXs, CampaignMenuButton.decodedSpriteOffsetYs, qm.decodedSpriteWidths, c.decodedSpriteHeights, MovementPresentation.decodedSpritePalette, AnimationPlayer.decodedSpriteIndices);
+          rj.releaseSpriteDecodeBuffers((byte) 107);
           stackIn_6_0 = var2;
           return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

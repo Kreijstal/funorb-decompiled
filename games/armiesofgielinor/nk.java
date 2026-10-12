@@ -156,7 +156,7 @@ final class nk {
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (!kp.a(false, param0, param3, param2)) {
+          if (!kp.decodeSpriteSheetFromArchive(false, param0, param3, param2)) {
             return null;
           }
           if (param1 == 28) {

@@ -14,7 +14,7 @@ final class ke {
         String var2 = null;
         RuntimeException var2_ref = null;
         String var4 = null;
-        sn var5 = null;
+        PcmSample var5 = null;
         int var6 = 0;
         String var7 = null;
         RuntimeException stackIn_9_0 = null;
@@ -26,7 +26,7 @@ final class ke {
           if (param0 != 90) {
             field_c = (ClientUiComponent) null;
           }
-          vi.field_a = new sn[km.field_j.length];
+          vi.field_a = new PcmSample[km.field_j.length];
           var7 = "";
           var2 = var7;
           for (var3 = 0; var3 < km.field_j.length; var3++) {

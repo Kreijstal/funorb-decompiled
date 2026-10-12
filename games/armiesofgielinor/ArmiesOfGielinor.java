@@ -29,7 +29,7 @@ public final class ArmiesOfGielinor extends wf {
         String[] stackIn_194_4;
         int stackIn_194_5;
         int stackIn_194_6;
-        dg stackIn_194_7;
+        BattleGraphicsAssets stackIn_194_7;
         int stackIn_194_8;
         int stackIn_194_9;
         int stackIn_194_10;
@@ -403,8 +403,8 @@ public final class ArmiesOfGielinor extends wf {
                       ((GameplayController) (var2)).battlefield.readLegacySnapshot(0, ((GameplayController) (var2)).battlefield.snapshotBuffer);
                       ((GameplayController) (var2)).battlefield.snapshotBuffer = null;
                       mu.field_a = new cg();
-                      ((GameplayController) (var2)).field_Ib.a(((GameplayController) (var2)).battlefield.mapTheme, 0);
-                      ((GameplayController) (var2)).field_d = UnitLossCondition.field_d[((GameplayController) (var2)).battlefield.mapTheme].field_n;
+                      ((GameplayController) (var2)).battleGraphicsAssets.selectTheme(((GameplayController) (var2)).battlefield.mapTheme, 0);
+                      ((GameplayController) (var2)).field_d = UnitLossCondition.battlefieldThemes[((GameplayController) (var2)).battlefield.mapTheme].musicTrack;
                       oo.e(-387);
                       if (((GameplayController) (var2)).battlefield.field_D == 3) {
                         ((GameplayController) (var2)).rebuildSummonMenus(true);
@@ -1138,7 +1138,7 @@ public final class ArmiesOfGielinor extends wf {
           gp.a((byte) 115);
           us.a(param0 ^ 30);
           CampaignMenu.d((byte) 44);
-          dg.a((byte) -12);
+          BattleGraphicsAssets.a((byte) -12);
           ve.a(1);
           CombatSandbox.a((byte) -8);
           hc.b(1017);
@@ -1176,7 +1176,7 @@ public final class ArmiesOfGielinor extends wf {
           rd.a(param0 ^ -20000072);
           fj.b((byte) -67);
           CoatOfArms.a(false);
-          co.a((byte) -117);
+          BattlefieldTheme.a((byte) -117);
           ep.a((byte) 11);
           PlayerProfile.b(0);
           CampaignQuicksave.a(param0 + 157);
@@ -1654,7 +1654,7 @@ public final class ArmiesOfGielinor extends wf {
                 continue;
               }
             } else {
-              UnitLossCondition.field_d = TeleportAction.e(-10128);
+              UnitLossCondition.battlefieldThemes = TeleportAction.createThemeCatalog(-10128);
               this.a(true, false, true, true, 55, false, true);
               jv.field_d = pi.field_M;
               sh.opcodePayloadLengths[65] = -2;
@@ -1698,7 +1698,7 @@ public final class ArmiesOfGielinor extends wf {
         try {
           if (null != RegionAnchor.field_o) {
             TickCounter.loadClientAssets(RegionAnchor.field_o, 10207);
-            IntKeyLookup.a(UnitLossCondition.field_d, (byte) 62);
+            IntKeyLookup.a(UnitLossCondition.battlefieldThemes, (byte) 62);
             RegionAnchor.field_o = null;
             wl.a(0);
           }
@@ -1745,8 +1745,8 @@ public final class ArmiesOfGielinor extends wf {
             stackIn_5_0 = null;
             return (tu) (stackIn_5_0);
           }
-          var2 = new tu(param0, j.field_e, CampaignMenuButton.field_g, qm.field_K, c.field_e, AnimationPlayer.field_j);
-          rj.d((byte) 124);
+          var2 = new tu(param0, j.decodedSpriteOffsetXs, CampaignMenuButton.decodedSpriteOffsetYs, qm.decodedSpriteWidths, c.decodedSpriteHeights, AnimationPlayer.decodedSpriteIndices);
+          rj.releaseSpriteDecodeBuffers((byte) 124);
           stackIn_7_0 = var2;
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -1771,7 +1771,7 @@ public final class ArmiesOfGielinor extends wf {
         String[] stackIn_20_4;
         int stackIn_20_5;
         boolean stackIn_20_6;
-        dg stackIn_20_7;
+        BattleGraphicsAssets stackIn_20_7;
         GameplayController stackIn_21_0 = null;
         GameplayController stackIn_21_1 = null;
         int stackIn_21_8 = 0;
@@ -1824,7 +1824,7 @@ public final class ArmiesOfGielinor extends wf {
               var3[1] = vs.field_b;
               var3[0] = var4_ref_String;
             }
-            td.field_f.a(wf.field_D, 0);
+            td.field_f.selectTheme(wf.field_D, 0);
             qa.field_F = false;
             var4 = 0;
           }
@@ -1898,16 +1898,16 @@ public final class ArmiesOfGielinor extends wf {
         int var5_int = 0;
         ih var5 = null;
         IndexedSprite[] var5_array = null;
-        co[] var5_array2 = null;
+        BattlefieldTheme[] var5_array2 = null;
         um[] var6 = null;
-        co[] var6_array = null;
+        BattlefieldTheme[] var6_array = null;
         int[] var6_array2 = null;
         int var6_int = 0;
         int var7_int = 0;
         int[] var7 = null;
-        co var7_ref = null;
+        BattlefieldTheme var7_ref = null;
         um var8 = null;
-        co var8_ref = null;
+        BattlefieldTheme var8_ref = null;
         int[] var8_array = null;
         int[] var9 = null;
         int[] var10 = null;
@@ -1993,7 +1993,7 @@ public final class ArmiesOfGielinor extends wf {
                                                 ClientUiNode.field_v[16] = jl.field_d.a("runewars_clock_tick", (byte) -97, "");
                                                 ClientUiNode.field_v[17] = jl.field_d.a("runewars_time_over_dong", (byte) -97, "");
                                                 ClientUiNode.field_v[18] = jl.field_d.a("runewars_turnover_page_map", (byte) -97, "");
-                                                var5_array2 = UnitLossCondition.field_d;
+                                                var5_array2 = UnitLossCondition.battlefieldThemes;
                                                 var6_int = 0;
                                                 do {
                                                   if (var6_int >= var5_array2.length) {
@@ -2001,7 +2001,7 @@ public final class ArmiesOfGielinor extends wf {
                                                     break;
                                                   }
                                                   var7_ref = var5_array2[var6_int];
-                                                  var7_ref.a(17952, jl.field_d);
+                                                  var7_ref.loadAmbientSounds(17952, jl.field_d);
                                                   var6_int++;
                                                 } while (var18 == 0);
                                                 var5_int = 0;
@@ -2121,7 +2121,7 @@ public final class ArmiesOfGielinor extends wf {
               var5.a(jl.field_d, ep.field_b, 0, var8, (byte) 86);
               var7_int++;
             } while (var18 == 0);
-            var6_array = UnitLossCondition.field_d;
+            var6_array = UnitLossCondition.battlefieldThemes;
             var7_int = 0;
             do {
               if (var6_array.length <= var7_int) {
@@ -2133,7 +2133,7 @@ public final class ArmiesOfGielinor extends wf {
                 break;
               }
               var8_ref = var6_array[var7_int];
-              var8_ref.a(jl.field_d, ep.field_b, SummonAction.field_w, 0, var5);
+              var8_ref.prepareMusicSamples(jl.field_d, ep.field_b, SummonAction.field_w, 0, var5);
               var7_int++;
             } while (var18 == 0);
             return false;
@@ -2175,48 +2175,48 @@ public final class ArmiesOfGielinor extends wf {
           TrianglePulse.field_i = it.a("introfont", iw.field_l, sh.field_j, (byte) -87, "basic");
           nr.field_e = TurnEffectEvent.a("runewarsfont", sh.field_j, iw.field_l, "basic", -2088);
           fe.a(nr.field_e);
-          fe.field_l = fk.a("textshadow", (byte) -127, iw.field_l, "basic");
-          var5_array = MapLayout.a("members_benefits_screenshots", -28106, "basic", iw.field_l);
+          fe.field_l = fk.loadRgbSpritesByName("textshadow", (byte) -127, iw.field_l, "basic");
+          var5_array = MapLayout.loadIndexedSpritesByName("members_benefits_screenshots", -28106, "basic", iw.field_l);
           if (var5_array != null) {
             LineOfSightGrid.a(var5_array, (byte) 110, this);
           }
           MatchConditionEntry.field_n = pv.a("basic", "background", iw.field_l, 24914);
-          cp.field_e = MapLayout.a("statusicons", -28106, "basic", iw.field_l);
-          MapLayout.a("armouricons", -28106, "basic", iw.field_l);
-          lb.field_e = MapLayout.a("special_icons", -28106, "basic", iw.field_l);
+          cp.field_e = MapLayout.loadIndexedSpritesByName("statusicons", -28106, "basic", iw.field_l);
+          MapLayout.loadIndexedSpritesByName("armouricons", -28106, "basic", iw.field_l);
+          lb.field_e = MapLayout.loadIndexedSpritesByName("special_icons", -28106, "basic", iw.field_l);
           TrianglePulse.field_d = GameplayController.a("godspark", (byte) 51, "basic", iw.field_l);
-          DropdownSelector.field_M = DiskCacheRequest.a("mapbutton", "basic", iw.field_l, false);
-          DiskCacheRequest.a("endturnbutton", "basic", iw.field_l, false);
-          LineOfSightGrid.field_g = DiskCacheRequest.a("buttonring", "basic", iw.field_l, false);
+          DropdownSelector.field_M = DiskCacheRequest.loadRgbSpriteByName("mapbutton", "basic", iw.field_l, false);
+          DiskCacheRequest.loadRgbSpriteByName("endturnbutton", "basic", iw.field_l, false);
+          LineOfSightGrid.field_g = DiskCacheRequest.loadRgbSpriteByName("buttonring", "basic", iw.field_l, false);
           e.field_b = ac.a(iw.field_l, "lozenge", (byte) -4, "basic");
-          bu.field_c = fk.a("endturnlozenge", (byte) -127, iw.field_l, "basic");
+          bu.field_c = fk.loadRgbSpritesByName("endturnlozenge", (byte) -127, iw.field_l, "basic");
           jh.field_l = ac.a(iw.field_l, "summonframe", (byte) -4, "basic");
-          EventPresenter.field_t = DiskCacheRequest.a("bubblepoint", "basic", iw.field_l, false);
+          EventPresenter.field_t = DiskCacheRequest.loadRgbSpriteByName("bubblepoint", "basic", iw.field_l, false);
           ii.field_a = ac.a(iw.field_l, "actionbuttons", (byte) -4, "basic");
           od.field_a = ac.a(iw.field_l, "info_icons", (byte) -4, "basic");
-          ro.field_rb = MapLayout.a("trait_icons", -28106, "basic", iw.field_l);
-          lp.field_b = MapLayout.a("terrain_icons", -28106, "basic", iw.field_l);
-          sg.field_b = MapLayout.a("compare_icons", -28106, "basic", iw.field_l);
-          CampaignRewardPreview.field_e = DiskCacheRequest.a("mapf", "basic", iw.field_l, false);
-          io.field_z = DiskCacheRequest.a("mapi", "basic", iw.field_l, false);
+          ro.field_rb = MapLayout.loadIndexedSpritesByName("trait_icons", -28106, "basic", iw.field_l);
+          lp.field_b = MapLayout.loadIndexedSpritesByName("terrain_icons", -28106, "basic", iw.field_l);
+          sg.field_b = MapLayout.loadIndexedSpritesByName("compare_icons", -28106, "basic", iw.field_l);
+          CampaignRewardPreview.field_e = DiskCacheRequest.loadRgbSpriteByName("mapf", "basic", iw.field_l, false);
+          io.field_z = DiskCacheRequest.loadRgbSpriteByName("mapi", "basic", iw.field_l, false);
           AnimationSkeleton.field_t = pv.a("basic", "turn", iw.field_l, 24914);
-          AttackEvent.field_y = fk.a("mapsquares", (byte) -127, iw.field_l, "basic");
-          SkeletonLimitMarker.field_s = fk.a("isomapsquares", (byte) -127, iw.field_l, "basic");
-          SpellMenuGroup.field_h = fk.a("maprotbutton", (byte) -128, iw.field_l, "basic");
-          TeleportAction.field_w = fk.a("placeicons", (byte) -124, iw.field_l, "basic");
-          SocialListPanel.field_Jb = DiskCacheRequest.a("slider", "basic", iw.field_l, false);
+          AttackEvent.field_y = fk.loadRgbSpritesByName("mapsquares", (byte) -127, iw.field_l, "basic");
+          SkeletonLimitMarker.field_s = fk.loadRgbSpritesByName("isomapsquares", (byte) -127, iw.field_l, "basic");
+          SpellMenuGroup.field_h = fk.loadRgbSpritesByName("maprotbutton", (byte) -128, iw.field_l, "basic");
+          TeleportAction.field_w = fk.loadRgbSpritesByName("placeicons", (byte) -124, iw.field_l, "basic");
+          SocialListPanel.field_Jb = DiskCacheRequest.loadRgbSpriteByName("slider", "basic", iw.field_l, false);
           MoveEvent.field_z = GameplayController.a("bcarrow", (byte) 51, "basic", iw.field_l);
           BestScoreStrategy.field_m = GameplayController.a("goldiv", (byte) 51, "basic", iw.field_l);
-          wc.field_Q = fk.a("silverbar", (byte) -125, iw.field_l, "basic");
-          TaggedMapData.field_f = fk.a("pathfinder", (byte) -125, iw.field_l, "basic");
+          wc.field_Q = fk.loadRgbSpritesByName("silverbar", (byte) -125, iw.field_l, "basic");
+          TaggedMapData.field_f = fk.loadRgbSpritesByName("pathfinder", (byte) -125, iw.field_l, "basic");
           DeployAction.field_x = ac.a(iw.field_l, "unitheads", (byte) -4, "basic");
-          lt.field_i = fk.a("theme_icons", (byte) -127, iw.field_l, "basic");
+          lt.field_i = fk.loadRgbSpritesByName("theme_icons", (byte) -127, iw.field_l, "basic");
           UpkeepEvent.a(iw.field_l, 116);
-          hs.field_F = fk.a("fireball", (byte) -128, iw.field_l, "basic");
-          MatchConditionRegistry.field_d = fk.a("fortcontrols", (byte) -124, iw.field_l, "basic");
-          lw.field_ob = DiskCacheRequest.a("smallorb", "basic", iw.field_l, false);
-          wc.field_J = DiskCacheRequest.a("bigorb", "basic", iw.field_l, false);
-          pg.field_c = DiskCacheRequest.a("bigorbring", "basic", iw.field_l, false);
+          hs.field_F = fk.loadRgbSpritesByName("fireball", (byte) -128, iw.field_l, "basic");
+          MatchConditionRegistry.field_d = fk.loadRgbSpritesByName("fortcontrols", (byte) -124, iw.field_l, "basic");
+          lw.field_ob = DiskCacheRequest.loadRgbSpriteByName("smallorb", "basic", iw.field_l, false);
+          wc.field_J = DiskCacheRequest.loadRgbSpriteByName("bigorb", "basic", iw.field_l, false);
+          pg.field_c = DiskCacheRequest.loadRgbSpriteByName("bigorbring", "basic", iw.field_l, false);
           UnitModelPreview.field_d = ac.a(iw.field_l, "godorbs", (byte) -4, "basic");
           gt.field_c = ac.a(iw.field_l, "godframes", (byte) -4, "basic");
           ce.field_F = ac.a(iw.field_l, "godglows", (byte) -4, "basic");
@@ -2227,29 +2227,29 @@ public final class ArmiesOfGielinor extends wf {
           fn.a(8678, 256, 15, TeamRoster.field_e);
           tn.a((byte) 105, ce.field_F);
           tn.a((byte) 124, BufferedFile.field_k);
-          ol.field_y = DiskCacheRequest.a("logo", "basic", iw.field_l, false);
+          ol.field_y = DiskCacheRequest.loadRgbSpriteByName("logo", "basic", iw.field_l, false);
           km.field_h = ac.a(iw.field_l, "summonrings", (byte) -4, "basic");
-          jv.field_b = fk.a("chatbubbles", (byte) -128, iw.field_l, "basic");
+          jv.field_b = fk.loadRgbSpritesByName("chatbubbles", (byte) -128, iw.field_l, "basic");
           AttackEvent.field_O = GameplayController.a("results_award_badge", (byte) 51, "basic", iw.field_l);
-          ih.field_H = (nj) (DiskCacheRequest.a("shine", "basic", iw.field_l, false));
+          ih.field_H = (nj) (DiskCacheRequest.loadRgbSpriteByName("shine", "basic", iw.field_l, false));
           CampaignDefinition.field_t = pv.a("basic", "statboxbg", iw.field_l, 24914);
           qt.field_e = pv.a("basic", "popupbg", iw.field_l, 24914);
           vq.field_b = pv.a("basic", "gameinfobg", iw.field_l, 24914);
-          vc.field_k = fk.a("manastars", (byte) -127, iw.field_l, "basic");
+          vc.field_k = fk.loadRgbSpritesByName("manastars", (byte) -127, iw.field_l, "basic");
           TrianglePulse.field_f = GameplayController.a("manaicon", (byte) 51, "basic", iw.field_l);
-          od.field_d = fk.a("overlayicons", (byte) -125, iw.field_l, "basic");
-          mv.field_a = fk.a("bloodsplat", (byte) -126, iw.field_l, "basic");
+          od.field_d = fk.loadRgbSpritesByName("overlayicons", (byte) -125, iw.field_l, "basic");
+          mv.field_a = fk.loadRgbSpritesByName("bloodsplat", (byte) -126, iw.field_l, "basic");
           it.field_a = GameplayController.a("results_rune_icon", (byte) 51, "basic", iw.field_l);
-          rq.field_k = fk.a("results_mini_button_silver", (byte) -124, iw.field_l, "basic");
-          IsaacRandom.field_a = fk.a("results_mini_button_gold", (byte) -127, iw.field_l, "basic");
+          rq.field_k = fk.loadRgbSpritesByName("results_mini_button_silver", (byte) -124, iw.field_l, "basic");
+          IsaacRandom.field_a = fk.loadRgbSpritesByName("results_mini_button_gold", (byte) -127, iw.field_l, "basic");
           BattleCharacter.field_h = ac.a(iw.field_l, "trinketicons", (byte) -4, "basic");
-          AttackEvent.field_E = DiskCacheRequest.a("eye", "basic", iw.field_l, false);
+          AttackEvent.field_E = DiskCacheRequest.loadRgbSpriteByName("eye", "basic", iw.field_l, false);
           cu.field_d = ac.a(iw.field_l, "trinketbuttons", (byte) -4, "basic");
           ChatMessage.field_s = GameplayController.a("wait_icon", (byte) 51, "basic", iw.field_l);
           ChatMessage.field_s.a();
-          kt.field_o = fk.a("diamondscale", (byte) -128, iw.field_l, "basic");
+          kt.field_o = fk.loadRgbSpritesByName("diamondscale", (byte) -128, iw.field_l, "basic");
           jg.field_m = new RgbSprite(vc.field_m.getFileByName("menu_background.jpg", -123, ""), (java.awt.Component) ((Object) VerticalScrollbar.p(0)));
-          var6_array = UnitLossCondition.field_d;
+          var6_array = UnitLossCondition.battlefieldThemes;
           var7_int = 0;
           do {
             if (var6_array.length <= var7_int) {
@@ -2262,7 +2262,7 @@ public final class ArmiesOfGielinor extends wf {
               break;
             }
             var8_ref = var6_array[var7_int];
-            var8_ref.a(vc.field_m, 0, iw.field_l);
+            var8_ref.setResourceArchives(vc.field_m, 0, iw.field_l);
             var7_int++;
           } while (var18 == 0);
           var6_array2 = new int[]{13615618, 10121728};
@@ -2282,14 +2282,14 @@ public final class ArmiesOfGielinor extends wf {
           dh.field_l = jk.a(100, var15, 123, var14);
           fe.a(0, 0, 640, 480, oh.field_J, nd.field_b);
           SocketResourceClient.a((byte) 125, ac.a(iw.field_l, "dials", (byte) -4, "basic"), GameplayController.a("hand", (byte) 51, "basic", iw.field_l));
-          IsaacRandom.field_k = fk.a("arrows", (byte) -124, iw.field_l, "basic");
+          IsaacRandom.field_k = fk.loadRgbSpritesByName("arrows", (byte) -124, iw.field_l, "basic");
           pi.field_T = GameplayController.a("isocrosshair", (byte) 51, "basic", iw.field_l);
           ng.a(GameplayController.a("glowray", (byte) 51, "basic", iw.field_l), 0, GameplayController.a("glowspark", (byte) 51, "basic", iw.field_l));
-          MoveAttackRequest.field_C = fk.a("medals", (byte) -127, iw.field_l, "campaign");
-          ps.field_w[0] = DiskCacheRequest.a("campaign_1_glow", "campaign", iw.field_l, false);
-          ps.field_w[1] = DiskCacheRequest.a("campaign_2_glow", "campaign", iw.field_l, false);
-          ps.field_w[2] = DiskCacheRequest.a("campaign_3_glow", "campaign", iw.field_l, false);
-          DelayedPacket.field_k = MapLayout.a("achievements_large", -28106, "basic", iw.field_l);
+          MoveAttackRequest.field_C = fk.loadRgbSpritesByName("medals", (byte) -127, iw.field_l, "campaign");
+          ps.field_w[0] = DiskCacheRequest.loadRgbSpriteByName("campaign_1_glow", "campaign", iw.field_l, false);
+          ps.field_w[1] = DiskCacheRequest.loadRgbSpriteByName("campaign_2_glow", "campaign", iw.field_l, false);
+          ps.field_w[2] = DiskCacheRequest.loadRgbSpriteByName("campaign_3_glow", "campaign", iw.field_l, false);
+          DelayedPacket.field_k = MapLayout.loadIndexedSpritesByName("achievements_large", -28106, "basic", iw.field_l);
           MoveAttackRequest.field_A = GameplayController.a("unachieved", (byte) 51, "basic", gg.field_K);
           DeathEvent.field_A = GameplayController.a("locked", (byte) 51, "basic", gg.field_K);
           ChatMessage.field_t = GameplayController.a("orbcoin", (byte) 51, "basic", gg.field_K);
@@ -2304,10 +2304,10 @@ public final class ArmiesOfGielinor extends wf {
           var17 = 0;
           do {
             if (!(hs.field_E.length > var17)) {
-              km.field_c = MapLayout.a("prestigeicons", -28106, "basic", iw.field_l);
+              km.field_c = MapLayout.loadIndexedSpritesByName("prestigeicons", -28106, "basic", iw.field_l);
               break;
             }
-            var16[var17] = fk.a(hs.field_E[var17], (byte) -127, iw.field_l, "basic");
+            var16[var17] = fk.loadRgbSpritesByName(hs.field_E[var17], (byte) -127, iw.field_l, "basic");
             var17++;
           } while (var18 == 0);
           if (!ta.field_L) {

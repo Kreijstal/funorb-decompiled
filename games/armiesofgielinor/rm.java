@@ -6,9 +6,9 @@ final class rm {
     private hu[] field_a;
     private int field_c;
 
-    final sn b() {
+    final PcmSample b() {
         byte[] var1 = this.a();
-        return new sn(22050, var1, 22050 * this.field_c / 1000, 22050 * this.field_b / 1000);
+        return new PcmSample(22050, var1, 22050 * this.field_c / 1000, 22050 * this.field_b / 1000);
     }
 
     final static rm a(ResourceArchive param0, int param1, int param2) {

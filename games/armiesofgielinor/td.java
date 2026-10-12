@@ -6,9 +6,9 @@ final class td implements WidgetPainter {
     private BitmapFont field_b;
     private int field_e;
     static String field_h;
-    static sn[][] field_d;
+    static PcmSample[][] field_d;
     private int field_c;
-    static dg field_f;
+    static BattleGraphicsAssets field_f;
     static String field_a;
 
     public static void a(int param0) {
@@ -16,13 +16,13 @@ final class td implements WidgetPainter {
         field_a = null;
         if (param0 < -9) {
           field_f = null;
-          field_d = (sn[][]) null;
+          field_d = (PcmSample[][]) null;
           field_g = null;
           return;
         }
         field_g = (ClientUiComponent) null;
         field_f = null;
-        field_d = (sn[][]) null;
+        field_d = (PcmSample[][]) null;
         field_g = null;
     }
 

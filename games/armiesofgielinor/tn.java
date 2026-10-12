@@ -5,7 +5,7 @@ final class tn extends sf implements he {
     private fw field_bb;
     static rn field_ab;
     private fw field_fb;
-    static RgbSprite[] field_eb;
+    static RgbSprite[] activeFoliageShadows;
     static jl field_cb;
     static byte[] field_db;
     static ClientContextMenu activeContextMenu;
@@ -15,7 +15,7 @@ final class tn extends sf implements he {
 
     public static void n(int param0) {
         field_ab = null;
-        field_eb = null;
+        activeFoliageShadows = null;
         field_db = null;
         field_X = null;
         activeContextMenu = null;

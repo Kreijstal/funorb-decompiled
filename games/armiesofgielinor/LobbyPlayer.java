@@ -5,7 +5,7 @@ final class LobbyPlayer extends ClientUiComponent {
     long accountId;
     String displayName;
     int notificationCode;
-    static IndexedSprite[] field_Mb;
+    static IndexedSprite[] cannotMoveSprites;
     ClientUiComponent admissionButton;
     boolean invitationSent;
     ClientUiComponent field_fc;
@@ -133,13 +133,13 @@ final class LobbyPlayer extends ClientUiComponent {
           LobbyPlayer.e((byte) 74);
           field_Jb = null;
           field_bc = null;
-          field_Mb = null;
+          cannotMoveSprites = null;
           field_Lb = null;
           return;
         }
         field_Jb = null;
         field_bc = null;
-        field_Mb = null;
+        cannotMoveSprites = null;
         field_Lb = null;
     }
 

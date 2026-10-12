@@ -185,7 +185,7 @@ final class QuickChatMenu extends ClientUiComponent {
         int var10;
         int var11;
         int var12;
-        ac.field_k[0].b(param0, param4, param5, param1);
+        ac.activeTerrainSprites[0].b(param0, param4, param5, param1);
         var8 = 0;
         var9 = CampaignMenuEntry.field_u[param2];
         if (var9 == 11) {
@@ -235,14 +235,14 @@ final class QuickChatMenu extends ClientUiComponent {
               gt.field_i = CampaignMenuEntry.field_u[param2 + ResourceRequest.field_y + 1];
             }
           }
-          ac.field_k[ls.a(rq.field_m, j.field_b, pv.field_b, SpellConfirmationDialog.field_e, -26) + (0 + var9)].b(param0, param4, param5, param1);
-          ac.field_k[var9 - (-1 - ls.a(ContextActionMenu.field_Wb, j.field_b, pv.field_b, cs.field_Y, -87))].b(param0, param4, param5, param1);
-          ac.field_k[2 + var9 + ls.a(gt.field_i, j.field_b, QuickChatCategory.field_z, SpellConfirmationDialog.field_e, -68)].b(param0, param4, param5, param1);
-          ac.field_k[3 + (var9 + ls.a(oh.field_E, j.field_b, QuickChatCategory.field_z, cs.field_Y, -72))].b(param0, param4, param5, param1);
+          ac.activeTerrainSprites[ls.a(rq.field_m, j.field_b, pv.field_b, SpellConfirmationDialog.field_e, -26) + (0 + var9)].b(param0, param4, param5, param1);
+          ac.activeTerrainSprites[var9 - (-1 - ls.a(ContextActionMenu.field_Wb, j.field_b, pv.field_b, cs.field_Y, -87))].b(param0, param4, param5, param1);
+          ac.activeTerrainSprites[2 + var9 + ls.a(gt.field_i, j.field_b, QuickChatCategory.field_z, SpellConfirmationDialog.field_e, -68)].b(param0, param4, param5, param1);
+          ac.activeTerrainSprites[3 + (var9 + ls.a(oh.field_E, j.field_b, QuickChatCategory.field_z, cs.field_Y, -72))].b(param0, param4, param5, param1);
           if (cu.field_a &&
             var8 == 0 &&
             (og.field_p[param2] + param2 & 5) == 5) {
-            nr.field_c[6 + og.field_p[param2] % 8].b(param0, -40 + param4, param5, param1);
+            nr.activeFoliageSprites[6 + og.field_p[param2] % 8].b(param0, -40 + param4, param5, param1);
           }
         }
         return;

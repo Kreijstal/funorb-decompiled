@@ -312,32 +312,32 @@ abstract class sf extends wl {
               StateChangeEvent.a(var6_int, param2 ^ -12933, param5, param3);
             }
             if (vs.field_e[param4].hasCorpse(-121)) {
-              fe.a(wf.field_B[var6_int % 4], param3 - 10, -25 + param5);
+              fe.a(wf.boneShadowSprites[var6_int % 4], param3 - 10, -25 + param5);
             }
             var9 = fn.field_Q[vs.field_e[param4].terrainType];
             if (var9 > -1) {
               if (2 == var9) {
-                fe.a(oq.field_l[17], -10 + param3, param5 - 25);
+                fe.a(oq.activeStructureShadows[17], -10 + param3, param5 - 25);
               } else {
                 if (vs.field_e[param4].terrainType == 3) {
                   ih.a((byte) -124, param3 + 30, param4 + og.field_p[param4], 32 + param5);
                 } else {
                   if (var9 == 1) {
-                    fe.a(oq.field_l[8 + var6_int % 3], -10 + param3, param5 - 55);
+                    fe.a(oq.activeStructureShadows[8 + var6_int % 3], -10 + param3, param5 - 55);
                   } else {
                     if (var9 == 9) {
-                      fe.a(oq.field_l[14 + var6_int % 2], -10 + param3, param5 - 30);
+                      fe.a(oq.activeStructureShadows[14 + var6_int % 2], -10 + param3, param5 - 30);
                     } else {
                       if (8 != var9) {
                         if (var9 == 0) {
-                          fe.a(oq.field_l[var6_int % 8 + 0], param3 - 10, param5 - 35);
+                          fe.a(oq.activeStructureShadows[var6_int % 8 + 0], param3 - 10, param5 - 35);
                         } else {
                           if (4 == var9) {
                             ab.a(35 + param5, og.field_p[param4] + param4, param3 + 30, false);
                           }
                         }
                       } else {
-                        fe.a(oq.field_l[var6_int % 2 + 11], -10 + param3, param5 - 55);
+                        fe.a(oq.activeStructureShadows[var6_int % 2 + 11], -10 + param3, param5 - 55);
                       }
                     }
                   }
@@ -359,7 +359,7 @@ abstract class sf extends wl {
                 var8Lifetime1 = var7.event.unit.modelPreview.screenPosition[0];
                 var9Lifetime1 = var7.event.unit.modelPreview.screenPosition[1];
                 var10 = var7.event.unit.ownerPlayer;
-                stackIn_43_0 = TeamRoster.field_g;
+                stackIn_43_0 = TeamRoster.playerRingSprite;
                 stackIn_43_1 = -30 + var8Lifetime1;
                 stackIn_43_2 = var9Lifetime1 - 15;
                 stackIn_43_3 = op.field_c;
@@ -369,7 +369,7 @@ abstract class sf extends wl {
                   stackIn_44_4 = 1;
                 }
                 ((RgbSprite) (Object) stackIn_43_0).b(stackIn_43_1, stackIn_43_2, stackIn_43_3[stackIn_44_4][var10]);
-                wl.field_N.b(var8Lifetime1 - 40, -20 + var9Lifetime1);
+                wl.groundShadowSprite.b(var8Lifetime1 - 40, -20 + var9Lifetime1);
               }
             }
             var7 = (EventPresenter) (NetworkResourceRequest.field_C.eventPresenters.next((byte) 123));
@@ -378,7 +378,7 @@ abstract class sf extends wl {
             if (vs.field_e[param4].occupant.presentationOwnsModel) {
               return;
             }
-            wl.field_N.b(param3, param5);
+            wl.groundShadowSprite.b(param3, param5);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

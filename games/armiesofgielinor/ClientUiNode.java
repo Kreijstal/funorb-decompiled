@@ -3,7 +3,7 @@
  */
 class ClientUiNode extends DualLinkedNode {
     private static int[] field_u;
-    static sn[] field_v;
+    static PcmSample[] field_v;
     static ClientUiComponent field_x;
     static RgbSprite field_y;
     static boolean field_w;
@@ -176,6 +176,6 @@ class ClientUiNode extends DualLinkedNode {
           }
           field_u[var1] = var0;
         }
-        field_v = new sn[19];
+        field_v = new PcmSample[19];
     }
 }

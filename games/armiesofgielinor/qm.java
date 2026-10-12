@@ -6,7 +6,7 @@ final class qm extends nl {
     static String field_H;
     static int field_L;
     static DualNodeHashTable lobbyRoomsById;
-    static int[] field_K;
+    static int[] decodedSpriteWidths;
 
     final void b(boolean param0) {
         this.field_E.e(0);
@@ -96,13 +96,13 @@ final class qm extends nl {
         if (param0 >= 38) {
           lobbyRoomsById = null;
           field_I = null;
-          field_K = null;
+          decodedSpriteWidths = null;
           return;
         }
-        field_K = (int[]) null;
+        decodedSpriteWidths = (int[]) null;
         lobbyRoomsById = null;
         field_I = null;
-        field_K = null;
+        decodedSpriteWidths = null;
     }
 
     static {

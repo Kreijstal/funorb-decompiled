@@ -24,13 +24,13 @@ final class an extends dr {
         int var2Lifetime1;
         if (param0 == 1976460609) {
           var2 = so.a(param0 - 1976435396);
-          sg.field_c.a((byte) -111, var2 + (ov.field_b << 1), co.field_f - b.field_k, var1 + (b.field_k << 1), -ov.field_b + InstructionsPanel.field_r);
+          sg.field_c.a((byte) -111, var2 + (ov.field_b << 1), BattlefieldTheme.field_f - b.field_k, var1 + (b.field_k << 1), -ov.field_b + InstructionsPanel.field_r);
           SpellCastEvent.h(15);
           return;
         }
         an.g(37);
         var2Lifetime1 = so.a(param0 - 1976435396);
-        sg.field_c.a((byte) -111, var2Lifetime1 + (ov.field_b << 1), co.field_f - b.field_k, var1 + (b.field_k << 1), -ov.field_b + InstructionsPanel.field_r);
+        sg.field_c.a((byte) -111, var2Lifetime1 + (ov.field_b << 1), BattlefieldTheme.field_f - b.field_k, var1 + (b.field_k << 1), -ov.field_b + InstructionsPanel.field_r);
         SpellCastEvent.h(15);
     }
 

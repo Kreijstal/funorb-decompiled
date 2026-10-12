@@ -198,7 +198,7 @@ class PacketBuffer extends IntrusiveNode {
         } while (0 != this.payload[fieldTemp$0]);
         var3 = -1 + (this.position - var2);
         if (var3 != 0) {
-          return co.decodeSingleByteText(var2, var3, -101, this.payload);
+          return BattlefieldTheme.decodeSingleByteText(var2, var3, -101, this.payload);
         }
         return "";
     }
@@ -383,7 +383,7 @@ class PacketBuffer extends IntrusiveNode {
             for (var8Lifetime1 = param0; var8Lifetime1 < var7_intLifetime1; var8Lifetime1++) {
               var9Lifetime1 = vt.field_m[var8Lifetime1];
               var10Lifetime1 = vt.field_m[1 + var8Lifetime1];
-              if (co.a(param6, var10Lifetime1, var9Lifetime1, -27)) {
+              if (BattlefieldTheme.a(param6, var10Lifetime1, var9Lifetime1, -27)) {
                 vt.field_m[var8Lifetime1] = var10Lifetime1;
                 vt.field_m[var8Lifetime1 + 1] = var9Lifetime1;
               }
@@ -422,7 +422,7 @@ class PacketBuffer extends IntrusiveNode {
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (!kp.a(false, param1, param2, param3)) {
+          if (!kp.decodeSpriteSheetFromArchive(false, param1, param2, param3)) {
             stackIn_2_0 = null;
             return (RgbSprite) (stackIn_2_0);
           }
@@ -701,7 +701,7 @@ class PacketBuffer extends IntrusiveNode {
         } while (0 != this.payload[fieldTemp$1]);
         var4 = -1 + this.position - var3;
         if (var4 != 0) {
-          return co.decodeSingleByteText(var3, var4, obfuscationGuard - 231, this.payload);
+          return BattlefieldTheme.decodeSingleByteText(var3, var4, obfuscationGuard - 231, this.payload);
         }
         return "";
     }

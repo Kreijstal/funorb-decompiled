@@ -71,17 +71,17 @@ final class KingBlackDragonEvent extends GameEvent {
           return;
         }
         if (null != var9.modelPreview) {
-          stackIn_15_0 = TeamRoster.field_g;
+          stackIn_15_0 = TeamRoster.playerRingSprite;
           stackIn_15_1 = param2 + 10;
           stackIn_15_2 = 5 + param4;
           stackIn_15_3 = op.field_c;
           stackIn_16_4 = (CipherPacketBuffer.currentBattlefield.teamGame) ? 1 : 0;
           ((RgbSprite) (Object) stackIn_15_0).b(stackIn_15_1, stackIn_15_2, stackIn_15_3[stackIn_16_4][var8.ownerPlayer]);
           if (NetworkResourceRequest.field_C.selectedUnit == var9) {
-            TeamRoster.field_g.f(10 + param2, param4 + 5, (int)(Math.sin((double)ug.field_b / 3.141592653589793) * 64.0) + 128);
+            TeamRoster.playerRingSprite.f(10 + param2, param4 + 5, (int)(Math.sin((double)ug.field_b / 3.141592653589793) * 64.0) + 128);
           } else {
             if (NetworkResourceRequest.field_C.field_oc == var9) {
-              TeamRoster.field_g.f(10 + param2, param4 + 5, (int)(Math.sin((double)ug.field_b / 3.141592653589793) * 64.0) + 128);
+              TeamRoster.playerRingSprite.f(10 + param2, param4 + 5, (int)(Math.sin((double)ug.field_b / 3.141592653589793) * 64.0) + 128);
             }
           }
           var9.modelPreview.drawAtStoredPosition((byte) -72, param3);

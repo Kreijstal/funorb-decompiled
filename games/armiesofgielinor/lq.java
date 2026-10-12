@@ -22,12 +22,12 @@ final class lq {
           if (param0 == null) {
             return null;
           }
-          var2 = new nc(param0, j.field_e, CampaignMenuButton.field_g, qm.field_K, c.field_e, MovementPresentation.field_j, AnimationPlayer.field_j);
+          var2 = new nc(param0, j.decodedSpriteOffsetXs, CampaignMenuButton.decodedSpriteOffsetYs, qm.decodedSpriteWidths, c.decodedSpriteHeights, MovementPresentation.decodedSpritePalette, AnimationPlayer.decodedSpriteIndices);
           if (param1 != 0) {
             stackIn_5_0 = (nc) null;
             return stackIn_5_0;
           }
-          rj.d((byte) 117);
+          rj.releaseSpriteDecodeBuffers((byte) 117);
           stackIn_7_0 = var2;
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

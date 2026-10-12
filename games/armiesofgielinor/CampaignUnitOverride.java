@@ -839,7 +839,7 @@ final class CampaignUnitOverride {
                 }
                 var2 = NodeIterator.a(50, "gameopt_playerneeds1ratedgame");
                 if (null != var2) {
-                  co.field_r = uu.a(var2, (byte) -117);
+                  BattlefieldTheme.field_r = uu.a(var2, (byte) -117);
                 }
                 var2 = NodeIterator.a(param0 + 132, "gameopt_youneed1ratedgame");
                 if (var2 != null) {
@@ -2478,7 +2478,7 @@ final class CampaignUnitOverride {
                 }
                 var2 = NodeIterator.a(50, "quickchat_help_title");
                 if (null != var2) {
-                  co.field_j = uu.a(var2, (byte) -115);
+                  BattlefieldTheme.field_j = uu.a(var2, (byte) -115);
                 }
                 var2 = NodeIterator.a(50, "quickchat_shortcut_help,0");
                 if (var2 != null) {

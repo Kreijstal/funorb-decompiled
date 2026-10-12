@@ -17,7 +17,7 @@ final class io extends IntrusiveNode {
     byte[] field_l;
     byte[] field_k;
     static RgbSprite[] field_m;
-    sn[] field_y;
+    PcmSample[] field_y;
 
     final static void a(AnimationFrameSet param0, byte param1) {
         try {
@@ -132,7 +132,7 @@ final class io extends IntrusiveNode {
                   }
                 }
                 if (var7 != null) {
-                  this.field_y[var8] = (sn) (var7);
+                  this.field_y[var8] = (PcmSample) (var7);
                   this.field_q[var8] = 0;
                 }
               }
@@ -297,7 +297,7 @@ final class io extends IntrusiveNode {
         int var31Lifetime1Lifetime1;
         try {
           this.field_x = new byte[128];
-          this.field_y = new sn[128];
+          this.field_y = new PcmSample[128];
           this.field_k = new byte[128];
           this.field_r = new short[128];
           this.field_q = new int[128];

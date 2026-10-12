@@ -14,7 +14,7 @@ final class DiskCacheRequest extends ResourceRequest {
     static int field_E;
     static DualNodeHashTable friendsByName;
 
-    final static RgbSprite a(String param0, String param1, ResourceArchive param2, boolean param3) {
+    final static RgbSprite loadRgbSpriteByName(String fileName, String groupName, ResourceArchive archive, boolean obfuscationGuard) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -28,36 +28,36 @@ final class DiskCacheRequest extends ResourceRequest {
         String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var4_int = param2.getGroupId(param1, 96);
-          if (param3) {
+          var4_int = archive.getGroupId(groupName, 96);
+          if (obfuscationGuard) {
             field_G = (RgbSprite[]) null;
           }
-          var5 = param2.getFileId((byte) -107, var4_int, param0);
-          stackIn_3_0 = PacketBuffer.a(-1, var4_int, param2, var5);
+          var5 = archive.getFileId((byte) -107, var4_int, fileName);
+          stackIn_3_0 = PacketBuffer.a(-1, var4_int, archive, var5);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
           stackIn_6_0 = var4;
           stackIn_6_1 = new StringBuilder().append("nh.D(");
-          if (param0 == null) {
+          if (fileName == null) {
             stackIn_7_2 = "null";
           } else {
             stackIn_7_2 = "{...}";
           }
           stackIn_9_1 = ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',');
-          if (param1 == null) {
+          if (groupName == null) {
             stackIn_10_2 = "null";
           } else {
             stackIn_10_2 = "{...}";
           }
           stackIn_12_1 = ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',');
-          if (param2 == null) {
+          if (archive == null) {
             stackIn_13_2 = "null";
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param3).append(')').toString());
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 

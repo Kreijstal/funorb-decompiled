@@ -305,8 +305,8 @@ final class ManaEvent extends GameEvent {
           if (param2 != -9027) {
             ManaEvent.g(-17);
           }
-          if (kp.a(false, param0, param3, param1)) {
-            return gv.a(2809);
+          if (kp.decodeSpriteSheetFromArchive(false, param0, param3, param1)) {
+            return gv.buildFirstDecodedRgbSprite(2809);
           }
           return null;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

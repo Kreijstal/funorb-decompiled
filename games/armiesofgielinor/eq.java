@@ -49,7 +49,7 @@ final class eq extends af {
             stackIn_7_0 = param1;
             stackIn_8_1 = !(var10 <= param0 - 60);
             if (stackIn_7_0 ^ stackIn_8_1) {
-              nr.field_c[0 + param3 % 6].b(var9, var10, param4, param7);
+              nr.activeFoliageSprites[0 + param3 % 6].b(var9, var10, param4, param7);
             }
             var8_int = var8_int >> 1;
             param3 = param3 >> 1;
@@ -132,7 +132,7 @@ final class eq extends af {
             stackIn_7_0 = param1;
             stackIn_8_1 = !(var10 <= param0 - 60);
             if (stackIn_7_0 ^ stackIn_8_1) {
-              nr.field_c[0 + param3 % 6].b(var9, var10, param4, param7);
+              nr.activeFoliageSprites[0 + param3 % 6].b(var9, var10, param4, param7);
             }
             var8_int = var8_int >> 1;
             param3 = param3 >> 1;

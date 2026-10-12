@@ -5,7 +5,7 @@ final class dd {
     private DiskCacheWorker field_b;
     private java.math.BigInteger field_h;
     static String field_g;
-    static RgbSprite field_k;
+    static RgbSprite activeTerrainSample;
     private CachedArchiveProvider[] field_i;
     private ResourceProtocolClient field_d;
     private NetworkResourceRequest field_c;
@@ -181,7 +181,7 @@ final class dd {
         if (param0 > -9) {
           return;
         }
-        field_k = null;
+        activeTerrainSample = null;
         field_g = null;
     }
 

@@ -110,7 +110,7 @@ final class hk extends ClientUiComponent {
           var17.horizontalAlignment = 1;
           this.field_Kb = new ClientUiComponent(0L, param2);
           var8 = new ClientUiComponent(0L, param3);
-          var9 = new ClientUiComponent(0L, param3, co.field_j);
+          var9 = new ClientUiComponent(0L, param3, BattlefieldTheme.field_j);
           var9.horizontalAlignment = 1;
           var10 = 50;
           var11 = 0;

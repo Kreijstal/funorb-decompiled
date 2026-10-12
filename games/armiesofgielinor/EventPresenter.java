@@ -297,7 +297,7 @@ final class EventPresenter extends IntrusiveNode {
         }
         var4 = -40 + this.event.unit.modelPreview.screenPosition[0];
         var5 = -20 + this.event.unit.modelPreview.screenPosition[1];
-        stackIn_14_0 = TeamRoster.field_g;
+        stackIn_14_0 = TeamRoster.playerRingSprite;
         stackIn_14_1 = 10 + var4;
         stackIn_14_2 = var5 + 5;
         stackIn_14_3 = op.field_c;
@@ -308,7 +308,7 @@ final class EventPresenter extends IntrusiveNode {
         }
         if (this.controller.selectedUnit == this.event.unit ||
           this.controller.field_oc == this.event.unit) {
-          TeamRoster.field_g.f(var4 + 10, 5 + var5, 128 + (int)(64.0 * Math.sin((double)frameNumber / 3.141592653589793)));
+          TeamRoster.playerRingSprite.f(var4 + 10, 5 + var5, 128 + (int)(64.0 * Math.sin((double)frameNumber / 3.141592653589793)));
         }
         this.event.unit.modelPreview.drawAtStoredPosition((byte) -72, false);
         return;

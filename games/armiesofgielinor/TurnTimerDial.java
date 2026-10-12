@@ -195,16 +195,16 @@ final class TurnTimerDial {
 
     final static void a(int param0, p param1) {
         int var3 = 0;
-        sn[] array$0 = null;
+        PcmSample[] array$0 = null;
         int var4 = 0;
-        sn var5 = null;
+        PcmSample var5 = null;
         int var6 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           wh.field_f = false;
-          td.field_d = new sn[cr.field_W.length][];
+          td.field_d = new PcmSample[cr.field_W.length][];
           int var2_int = 93 / ((27 - param0) / 62);
           for (var3 = 0; cr.field_W.length > var3; var3++) {
-            array$0 = new sn[cr.field_W[var3].length];
+            array$0 = new PcmSample[cr.field_W[var3].length];
             td.field_d[var3] = array$0;
             for (var4 = 0; cr.field_W[var3].length > var4; var4++) {
               var5 = param1.a(cr.field_W[var3][var4], (byte) -97, "");

@@ -10,7 +10,7 @@ final class MoveAttackRequest extends ActionRequest {
     static String field_y;
     static RgbSprite[] field_C;
     private int startY;
-    static sn[] field_v;
+    static PcmSample[] field_v;
     static long[] field_I;
     static String field_F;
     static int[] chatHistoryPriorityCounts;

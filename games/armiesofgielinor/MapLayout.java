@@ -280,14 +280,14 @@ final class MapLayout extends IntrusiveNode {
         field_o = null;
         if (param0 != 0) {
           ResourceArchive var2 = (ResourceArchive) null;
-          MapLayout.a((String) null, 125, (String) null, (ResourceArchive) null);
+          MapLayout.loadIndexedSpritesByName((String) null, 125, (String) null, (ResourceArchive) null);
         }
         field_u = null;
         field_q = null;
         field_m = null;
     }
 
-    final static IndexedSprite[] a(String param0, int param1, String param2, ResourceArchive param3) {
+    final static IndexedSprite[] loadIndexedSpritesByName(String fileName, int obfuscationGuard, String groupName, ResourceArchive archive) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -302,32 +302,32 @@ final class MapLayout extends IntrusiveNode {
         String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param1 != -28106) {
+          if (obfuscationGuard != -28106) {
             stackIn_2_0 = (IndexedSprite[]) null;
             return stackIn_2_0;
           }
-          var4_int = param3.getGroupId(param2, 110);
-          var5 = param3.getFileId((byte) -74, var4_int, param0);
-          stackIn_4_0 = ak.a(var5, param3, 0, var4_int);
+          var4_int = archive.getGroupId(groupName, 110);
+          var5 = archive.getFileId((byte) -74, var4_int, fileName);
+          stackIn_4_0 = ak.a(var5, archive, 0, var4_int);
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
           stackIn_7_0 = var4;
           stackIn_7_1 = new StringBuilder().append("lo.H(");
-          if (param0 == null) {
+          if (fileName == null) {
             stackIn_8_2 = "null";
           } else {
             stackIn_8_2 = "{...}";
           }
-          stackIn_10_1 = ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(',');
-          if (param2 == null) {
+          stackIn_10_1 = ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(obfuscationGuard).append(',');
+          if (groupName == null) {
             stackIn_11_2 = "null";
           } else {
             stackIn_11_2 = "{...}";
           }
           stackIn_13_1 = ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',');
-          if (param3 == null) {
+          if (archive == null) {
             stackIn_14_2 = "null";
           } else {
             stackIn_14_2 = "{...}";

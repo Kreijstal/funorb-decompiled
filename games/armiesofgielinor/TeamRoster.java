@@ -7,7 +7,7 @@ final class TeamRoster {
     static RgbSprite field_e;
     static String field_d;
     static String[] field_c;
-    static RgbSprite field_g;
+    static RgbSprite playerRingSprite;
     int[] playerIds;
     static String field_h;
 
@@ -45,7 +45,7 @@ final class TeamRoster {
     }
 
     public static void b(int param0) {
-        field_g = null;
+        playerRingSprite = null;
         field_d = null;
         if (param0 >= -15) {
           TeamRoster.a(62);
@@ -76,7 +76,7 @@ final class TeamRoster {
             battlefield.eliminatePlayer(obfuscationGuard ^ 10002, var5, true);
           }
           if (obfuscationGuard != 3) {
-            field_g = (RgbSprite) null;
+            playerRingSprite = (RgbSprite) null;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

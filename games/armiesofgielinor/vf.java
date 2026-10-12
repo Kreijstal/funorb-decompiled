@@ -6,7 +6,7 @@ import java.util.*;
 abstract class vf {
     private short[] field_g;
     static String field_h;
-    static RgbSprite[] field_j;
+    static RgbSprite[] smokeSprites;
     private int field_d;
     static String field_e;
     private int field_a;
@@ -653,7 +653,7 @@ abstract class vf {
 
     public static void c(int param0) {
         field_e = null;
-        field_j = null;
+        smokeSprites = null;
         field_l = null;
         if (param0 >= -70) {
           return;
@@ -834,7 +834,7 @@ abstract class vf {
           !(param2 >= ro.field_pb + rs.field_o.pixelHeight)) {
           return 0;
         }
-        if (param0 >= co.field_h && co.field_h + rs.field_o.pixelWidth > param0 && ug.field_a <= param2 &&
+        if (param0 >= BattlefieldTheme.field_h && BattlefieldTheme.field_h + rs.field_o.pixelWidth > param0 && ug.field_a <= param2 &&
           !(rs.field_o.pixelHeight + ug.field_a <= param2)) {
           return 1;
         }

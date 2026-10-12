@@ -96,7 +96,7 @@ final class dh extends bi implements java.awt.image.ImageProducer, java.awt.imag
           if (null == td.field_d[var3][var4]) {
             return;
           }
-          if (0 == td.field_d[var3][var4].field_o.length) {
+          if (0 == td.field_d[var3][var4].samples.length) {
             return;
           }
           RadialSummonMenu.$cfr$intArgs$a$6d836999ad61(52, td.field_d[var3][var4]);
@@ -111,7 +111,7 @@ final class dh extends bi implements java.awt.image.ImageProducer, java.awt.imag
         if (null == td.field_d[var3Lifetime1][var4Lifetime1]) {
           return;
         }
-        if (0 == td.field_d[var3Lifetime1][var4Lifetime1].field_o.length) {
+        if (0 == td.field_d[var3Lifetime1][var4Lifetime1].samples.length) {
           return;
         }
         RadialSummonMenu.$cfr$intArgs$a$6d836999ad61(52, td.field_d[var3Lifetime1][var4Lifetime1]);

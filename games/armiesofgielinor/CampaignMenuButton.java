@@ -10,7 +10,7 @@ final class CampaignMenuButton {
     static Random connectionRandom;
     int width;
     static long lastPacketReadMillis;
-    static int[] field_g;
+    static int[] decodedSpriteOffsetYs;
     static String field_b;
     static pu[] field_a;
 
@@ -76,13 +76,13 @@ final class CampaignMenuButton {
         connectionRandom = null;
         if (param0 == 0) {
           field_a = null;
-          field_g = null;
+          decodedSpriteOffsetYs = null;
           field_b = null;
           return;
         }
         connectionRandom = (Random) null;
         field_a = null;
-        field_g = null;
+        decodedSpriteOffsetYs = null;
         field_b = null;
     }
 

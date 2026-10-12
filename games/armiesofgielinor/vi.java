@@ -5,7 +5,7 @@ final class vi {
     static boolean field_d;
     static int lastQuickChatPhraseId;
     static String field_c;
-    static sn[] field_a;
+    static PcmSample[] field_a;
     static String field_b;
     static String field_f;
 

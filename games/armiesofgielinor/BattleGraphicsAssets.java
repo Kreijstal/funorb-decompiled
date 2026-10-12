@@ -1,11 +1,11 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class dg {
+final class BattleGraphicsAssets {
     static String decodedChatText;
     static String field_a;
     static int field_c;
-    private ResourceArchive field_d;
+    private ResourceArchive basicArchive;
 
     final static void b(byte param0) {
         int stackIn_5_0 = 0;
@@ -33,7 +33,7 @@ final class dg {
           }
           return;
         }
-        dg.a(38);
+        BattleGraphicsAssets.a(38);
         var1Lifetime1 = 352;
         stackIn_5_0 = SectorCacheStore.field_j[kd.field_X].length;
         stackIn_6_1 = (od.field_c[kd.field_X]) ? 1 : 0;
@@ -81,63 +81,63 @@ final class dg {
         }
     }
 
-    final void a(int param0, int param1) {
-        co var4 = null;
-        co var5 = null;
-        co var3 = null;
-        co var3Lifetime1;
-        if (param0 != mk.field_e) {
-          if (!(param1 > mk.field_e)) {
-            var4 = UnitLossCondition.field_d[mk.field_e];
-            var3 = var4;
-            var4.a(0);
+    final void selectTheme(int themeId, int minimumThemeIdToRelease) {
+        BattlefieldTheme previousTheme = null;
+        BattlefieldTheme nextTheme = null;
+        BattlefieldTheme previousAlias = null;
+        BattlefieldTheme nextAlias;
+        if (themeId != mk.currentThemeId) {
+          if (!(minimumThemeIdToRelease > mk.currentThemeId)) {
+            previousTheme = UnitLossCondition.battlefieldThemes[mk.currentThemeId];
+            previousAlias = previousTheme;
+            previousTheme.releaseSprites(0);
           }
-          var5 = UnitLossCondition.field_d[param0];
-          var3Lifetime1 = var5;
-          var3Lifetime1.b((byte) -118);
-          ac.field_k = var3Lifetime1.field_w;
-          tn.field_eb = var3Lifetime1.field_u;
-          nr.field_c = var3Lifetime1.field_m;
-          mk.field_e = param0;
-          l.field_b = var3Lifetime1.field_g;
-          oq.field_l = var5.field_b;
-          dd.field_k = ac.field_k[1].toRgbSprite();
+          nextTheme = UnitLossCondition.battlefieldThemes[themeId];
+          nextAlias = nextTheme;
+          nextAlias.loadSpriteSheets((byte) -118);
+          ac.activeTerrainSprites = nextAlias.terrainSprites;
+          tn.activeFoliageShadows = nextAlias.foliageShadowSprites;
+          nr.activeFoliageSprites = nextAlias.foliageSprites;
+          mk.currentThemeId = themeId;
+          l.activeStructureSprites = nextAlias.structureSprites;
+          oq.activeStructureShadows = nextTheme.structureShadowSprites;
+          dd.activeTerrainSample = ac.activeTerrainSprites[1].toRgbSprite();
           return;
         }
     }
 
-    final void b(int param0) {
-        int var2 = 0;
-        int var3 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
-        LobbyPlayer.field_Mb = MapLayout.a("cantmove", -28106, "basic", this.field_d);
-        bk.field_d = MapLayout.a("attacktargets", -28106, "basic", this.field_d);
-        hq.field_a = MapLayout.a("surround_tiles", -28106, "basic", this.field_d);
-        vf.field_j = fk.a("smoke", (byte) -124, this.field_d, "basic");
-        jq.field_G = fk.a("kalphites", (byte) -124, this.field_d, "basic");
-        for (var2 = param0; jq.field_G.length > var2; var2++) {
-          jq.field_G[var2].i();
+    final void loadBasicSprites(int obfuscationGuard) {
+        int spriteIndex = 0;
+        int obfuscationControl = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        LobbyPlayer.cannotMoveSprites = MapLayout.loadIndexedSpritesByName("cantmove", -28106, "basic", this.basicArchive);
+        bk.attackTargetSprites = MapLayout.loadIndexedSpritesByName("attacktargets", -28106, "basic", this.basicArchive);
+        hq.surroundTileSprites = MapLayout.loadIndexedSpritesByName("surround_tiles", -28106, "basic", this.basicArchive);
+        vf.smokeSprites = fk.loadRgbSpritesByName("smoke", (byte) -124, this.basicArchive, "basic");
+        jq.kalphiteSprites = fk.loadRgbSpritesByName("kalphites", (byte) -124, this.basicArchive, "basic");
+        for (spriteIndex = obfuscationGuard; jq.kalphiteSprites.length > spriteIndex; spriteIndex++) {
+          jq.kalphiteSprites[spriteIndex].normalizeCanvas();
         }
-        es.field_d = MapLayout.a("bones", param0 - 28106, "basic", this.field_d);
-        wf.field_B = fk.a("boneshadows", (byte) -124, this.field_d, "basic");
-        TeamRoster.field_g = DiskCacheRequest.a("player_ring", "basic", this.field_d, false);
-        wl.field_N = fk.a("shadows", (byte) -128, this.field_d, "basic")[0];
+        es.boneSprites = MapLayout.loadIndexedSpritesByName("bones", obfuscationGuard - 28106, "basic", this.basicArchive);
+        wf.boneShadowSprites = fk.loadRgbSpritesByName("boneshadows", (byte) -124, this.basicArchive, "basic");
+        TeamRoster.playerRingSprite = DiskCacheRequest.loadRgbSpriteByName("player_ring", "basic", this.basicArchive, false);
+        wl.groundShadowSprite = fk.loadRgbSpritesByName("shadows", (byte) -128, this.basicArchive, "basic")[0];
     }
 
-    dg(ResourceArchive param0) {
+    BattleGraphicsAssets(ResourceArchive basicArchive) {
         RuntimeException var2 = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
         String stackIn_6_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          this.field_d = param0;
+          this.basicArchive = basicArchive;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
           stackIn_5_0 = var2;
           stackIn_5_1 = new StringBuilder().append("dg.<init>(");
-          if (param0 == null) {
+          if (basicArchive == null) {
             stackIn_6_2 = "null";
           } else {
             stackIn_6_2 = "{...}";

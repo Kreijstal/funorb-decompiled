@@ -175,10 +175,10 @@ final class ClientContextMenu {
     final static void a(ResourceArchive param0, int param1, boolean param2, ResourceArchive param3) {
         try {
           bk.a(param2, IconLabelControl.field_Lb, eq.field_h, LeaderEscortCondition.field_f, DualLinkedNode.field_k, -106, ke.field_e, ClientUiNode.field_x, qc.field_e, WeightedLruCache.field_b, PreparedAction.field_o, rd.field_e);
-          dh.field_n = fk.a("chatfilter", (byte) -125, param3, "lobby");
-          co.field_k[0] = QuickChatPhrase.field_v;
-          co.field_k[1] = IterableDualNodeDeque.field_a;
-          co.field_k[param1] = cd.field_d;
+          dh.field_n = fk.loadRgbSpritesByName("chatfilter", (byte) -125, param3, "lobby");
+          BattlefieldTheme.field_k[0] = QuickChatPhrase.field_v;
+          BattlefieldTheme.field_k[1] = IterableDualNodeDeque.field_a;
+          BattlefieldTheme.field_k[param1] = cd.field_d;
           mu.a(t.field_a, param1 - 2, param0);
         } catch (RuntimeException runtimeException) {
           throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "tg.N(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');

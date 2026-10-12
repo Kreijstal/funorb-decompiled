@@ -78,7 +78,7 @@ final class ChatMessage {
     }
 
     ChatMessage(boolean retainResponsePhraseIds) {
-        this.text = dg.decodedChatText;
+        this.text = BattleGraphicsAssets.decodedChatText;
         if (retainResponsePhraseIds) {
           this.responsePhraseIds = hv.decodedChatResponsePhraseIds;
         } else {

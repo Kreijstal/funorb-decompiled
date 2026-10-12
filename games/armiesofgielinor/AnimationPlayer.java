@@ -15,12 +15,12 @@ final class AnimationPlayer {
     int frameIndex;
     private int ticksRemaining;
     private AnimationSequence sequence;
-    static byte[][] field_j;
+    static byte[][] decodedSpriteIndices;
 
     public static void b(int param0) {
         field_n = null;
         delayedPackets = null;
-        field_j = (byte[][]) null;
+        decodedSpriteIndices = (byte[][]) null;
         int var1 = 20 % ((param0 + 44) / 51);
     }
 

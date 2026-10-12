@@ -7,7 +7,7 @@ final class b extends IntrusiveNode {
     int[] field_l;
     static int field_k;
 
-    final static void a(byte[] param0, int param1) {
+    final static void decodeSpriteSheet(byte[] encodedSheet, int obfuscationGuard) {
         byte dupTemp$0 = 0;
         byte dupTemp$1 = 0;
         int stackIn_37_0 = 0;
@@ -19,127 +19,127 @@ final class b extends IntrusiveNode {
         String stackIn_56_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        byte[] var8 = null;
-        byte[] var9 = null;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
-        int var13 = 0;
-        int var14 = 0;
-        int var15 = 0;
-        PacketBuffer var16 = null;
-        PacketBuffer var17 = null;
+        int paletteSize = 0;
+        int offsetXIndex = 0;
+        int spriteWidth = 0;
+        int spriteHeight = 0;
+        int pixelCount = 0;
+        byte[] indices = null;
+        byte[] alphas = null;
+        int hasNonOpaqueAlpha = 0;
+        int layoutFlags = 0;
+        int pixelIndexOrX = 0;
+        int alphaOrY = 0;
+        int alphaValue = 0;
+        int obfuscationControl = 0;
+        PacketBuffer packet = null;
+        PacketBuffer packetAlias = null;
         byte[] var18 = null;
         byte[] var19 = null;
         byte[] var20 = null;
         byte[] var21 = null;
-        int var4Lifetime1;
-        int var4Lifetime2;
-        int var4Lifetime3;
-        int var4Lifetime4;
-        int var4Lifetime5;
-        var15 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        int offsetYIndex;
+        int widthIndex;
+        int heightIndex;
+        int paletteIndex;
+        int spriteIndex;
+        obfuscationControl = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          var16 = new PacketBuffer(param0);
-          var17 = var16;
-          var17.position = param0.length - 2;
-          iw.field_n = var17.readUnsignedShort((byte) -104);
-          j.field_e = new int[iw.field_n];
-          c.field_e = new int[iw.field_n];
-          CampaignMenuButton.field_g = new int[iw.field_n];
-          MapTile.field_e = new boolean[iw.field_n];
-          qm.field_K = new int[iw.field_n];
-          AnimationPlayer.field_j = new byte[iw.field_n][];
-          CampaignMenuEntry.field_z = new byte[iw.field_n][];
-          var17.position = -(iw.field_n * 8) - 7 + param0.length;
-          lg.field_d = var17.readUnsignedShort((byte) -104);
-          wr.field_J = var17.readUnsignedShort((byte) -104);
-          var3 = 1 + (255 & var17.readUnsignedByte(param1 + 1));
-          for (var4 = 0; iw.field_n > var4; var4++) {
-            j.field_e[var4] = var16.readUnsignedShort((byte) -104);
+          packet = new PacketBuffer(encodedSheet);
+          packetAlias = packet;
+          packetAlias.position = encodedSheet.length - 2;
+          iw.decodedSpriteCount = packetAlias.readUnsignedShort((byte) -104);
+          j.decodedSpriteOffsetXs = new int[iw.decodedSpriteCount];
+          c.decodedSpriteHeights = new int[iw.decodedSpriteCount];
+          CampaignMenuButton.decodedSpriteOffsetYs = new int[iw.decodedSpriteCount];
+          MapTile.decodedSpriteHasAlpha = new boolean[iw.decodedSpriteCount];
+          qm.decodedSpriteWidths = new int[iw.decodedSpriteCount];
+          AnimationPlayer.decodedSpriteIndices = new byte[iw.decodedSpriteCount][];
+          CampaignMenuEntry.decodedSpriteAlphas = new byte[iw.decodedSpriteCount][];
+          packetAlias.position = -(iw.decodedSpriteCount * 8) - 7 + encodedSheet.length;
+          lg.decodedSpriteCanvasWidth = packetAlias.readUnsignedShort((byte) -104);
+          wr.decodedSpriteCanvasHeight = packetAlias.readUnsignedShort((byte) -104);
+          paletteSize = 1 + (255 & packetAlias.readUnsignedByte(obfuscationGuard + 1));
+          for (offsetXIndex = 0; iw.decodedSpriteCount > offsetXIndex; offsetXIndex++) {
+            j.decodedSpriteOffsetXs[offsetXIndex] = packet.readUnsignedShort((byte) -104);
           }
-          for (var4Lifetime1 = 0; var4Lifetime1 < iw.field_n; var4Lifetime1++) {
-            CampaignMenuButton.field_g[var4Lifetime1] = var17.readUnsignedShort((byte) -104);
+          for (offsetYIndex = 0; offsetYIndex < iw.decodedSpriteCount; offsetYIndex++) {
+            CampaignMenuButton.decodedSpriteOffsetYs[offsetYIndex] = packetAlias.readUnsignedShort((byte) -104);
           }
-          for (var4Lifetime2 = 0; iw.field_n > var4Lifetime2; var4Lifetime2++) {
-            qm.field_K[var4Lifetime2] = var17.readUnsignedShort((byte) -104);
+          for (widthIndex = 0; iw.decodedSpriteCount > widthIndex; widthIndex++) {
+            qm.decodedSpriteWidths[widthIndex] = packetAlias.readUnsignedShort((byte) -104);
           }
-          for (var4Lifetime3 = 0; var4Lifetime3 < iw.field_n; var4Lifetime3++) {
-            c.field_e[var4Lifetime3] = var17.readUnsignedShort((byte) -104);
+          for (heightIndex = 0; heightIndex < iw.decodedSpriteCount; heightIndex++) {
+            c.decodedSpriteHeights[heightIndex] = packetAlias.readUnsignedShort((byte) -104);
           }
-          if (param1 != -1) {
+          if (obfuscationGuard != -1) {
             field_n = (la) null;
           }
-          var17.position = 3 + (-(var3 * 3) + (-(8 * iw.field_n) - 7) + param0.length);
-          MovementPresentation.field_j = new int[var3];
-          for (var4Lifetime4 = 1; var4Lifetime4 < var3; var4Lifetime4++) {
-            MovementPresentation.field_j[var4Lifetime4] = var17.readUnsignedMedium((byte) -13);
-            if (MovementPresentation.field_j[var4Lifetime4] == 0) {
-              MovementPresentation.field_j[var4Lifetime4] = 1;
+          packetAlias.position = 3 + (-(paletteSize * 3) + (-(8 * iw.decodedSpriteCount) - 7) + encodedSheet.length);
+          MovementPresentation.decodedSpritePalette = new int[paletteSize];
+          for (paletteIndex = 1; paletteIndex < paletteSize; paletteIndex++) {
+            MovementPresentation.decodedSpritePalette[paletteIndex] = packetAlias.readUnsignedMedium((byte) -13);
+            if (MovementPresentation.decodedSpritePalette[paletteIndex] == 0) {
+              MovementPresentation.decodedSpritePalette[paletteIndex] = 1;
             }
           }
-          var17.position = 0;
-          for (var4Lifetime5 = 0; var4Lifetime5 < iw.field_n; var4Lifetime5++) {
-            var5 = qm.field_K[var4Lifetime5];
-            var6 = c.field_e[var4Lifetime5];
-            var7 = var6 * var5;
-            var20 = new byte[var7];
+          packetAlias.position = 0;
+          for (spriteIndex = 0; spriteIndex < iw.decodedSpriteCount; spriteIndex++) {
+            spriteWidth = qm.decodedSpriteWidths[spriteIndex];
+            spriteHeight = c.decodedSpriteHeights[spriteIndex];
+            pixelCount = spriteHeight * spriteWidth;
+            var20 = new byte[pixelCount];
             var18 = var20;
-            var8 = var18;
-            AnimationPlayer.field_j[var4Lifetime5] = var20;
-            var21 = new byte[var7];
+            indices = var18;
+            AnimationPlayer.decodedSpriteIndices[spriteIndex] = var20;
+            var21 = new byte[pixelCount];
             var19 = var21;
-            var9 = var19;
-            CampaignMenuEntry.field_z[var4Lifetime5] = var21;
-            var10 = 0;
-            var11 = var17.readUnsignedByte(0);
-            if ((1 & var11) == 0) {
-              for (var12 = 0; var12 < var7; var12++) {
-                var8[var12] = var17.readByte((byte) -90);
+            alphas = var19;
+            CampaignMenuEntry.decodedSpriteAlphas[spriteIndex] = var21;
+            hasNonOpaqueAlpha = 0;
+            layoutFlags = packetAlias.readUnsignedByte(0);
+            if ((1 & layoutFlags) == 0) {
+              for (pixelIndexOrX = 0; pixelIndexOrX < pixelCount; pixelIndexOrX++) {
+                indices[pixelIndexOrX] = packetAlias.readByte((byte) -90);
               }
-              if ((var11 & 2) != 0) {
-                for (var12 = 0; var12 < var7; var12++) {
-                  dupTemp$0 = var17.readByte((byte) 102);
-                  var9[var12] = dupTemp$0;
-                  var13 = dupTemp$0;
-                  stackIn_49_0 = var10;
-                  if (var13 == -1) {
+              if ((layoutFlags & 2) != 0) {
+                for (pixelIndexOrX = 0; pixelIndexOrX < pixelCount; pixelIndexOrX++) {
+                  dupTemp$0 = packetAlias.readByte((byte) 102);
+                  alphas[pixelIndexOrX] = dupTemp$0;
+                  alphaOrY = dupTemp$0;
+                  stackIn_49_0 = hasNonOpaqueAlpha;
+                  if (alphaOrY == -1) {
                     stackIn_50_1 = 0;
                   } else {
                     stackIn_50_1 = 1;
                   }
-                  var10 = stackIn_49_0 | stackIn_50_1;
+                  hasNonOpaqueAlpha = stackIn_49_0 | stackIn_50_1;
                 }
               }
             } else {
-              for (var12 = 0; var5 > var12; var12++) {
-                for (var13 = 0; var6 > var13; var13++) {
-                  var8[var13 * var5 + var12] = var17.readByte((byte) -106);
+              for (pixelIndexOrX = 0; spriteWidth > pixelIndexOrX; pixelIndexOrX++) {
+                for (alphaOrY = 0; spriteHeight > alphaOrY; alphaOrY++) {
+                  indices[alphaOrY * spriteWidth + pixelIndexOrX] = packetAlias.readByte((byte) -106);
                 }
               }
-              if ((2 & var11) != 0) {
-                for (var12 = 0; var12 < var5; var12++) {
-                  for (var13 = 0; var6 > var13; var13++) {
-                    dupTemp$1 = var17.readByte((byte) -67);
-                    var9[var12 + var5 * var13] = dupTemp$1;
-                    var14 = dupTemp$1;
-                    stackIn_37_0 = var10;
-                    if (var14 == -1) {
+              if ((2 & layoutFlags) != 0) {
+                for (pixelIndexOrX = 0; pixelIndexOrX < spriteWidth; pixelIndexOrX++) {
+                  for (alphaOrY = 0; spriteHeight > alphaOrY; alphaOrY++) {
+                    dupTemp$1 = packetAlias.readByte((byte) -67);
+                    alphas[pixelIndexOrX + spriteWidth * alphaOrY] = dupTemp$1;
+                    alphaValue = dupTemp$1;
+                    stackIn_37_0 = hasNonOpaqueAlpha;
+                    if (alphaValue == -1) {
                       stackIn_38_1 = 0;
                     } else {
                       stackIn_38_1 = 1;
                     }
-                    var10 = stackIn_37_0 | stackIn_38_1;
+                    hasNonOpaqueAlpha = stackIn_37_0 | stackIn_38_1;
                   }
                 }
               }
             }
-            MapTile.field_e[var4Lifetime5] = var10 != 0;
+            MapTile.decodedSpriteHasAlpha[spriteIndex] = hasNonOpaqueAlpha != 0;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -147,12 +147,12 @@ final class b extends IntrusiveNode {
           var2 = decompiledCaughtException;
           stackIn_55_0 = var2;
           stackIn_55_1 = new StringBuilder().append("b.B(");
-          if (param0 == null) {
+          if (encodedSheet == null) {
             stackIn_56_2 = "null";
           } else {
             stackIn_56_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_55_0), ((StringBuilder) (Object) stackIn_55_1).append(stackIn_56_2).append(',').append(param1).append(')').toString());
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_55_0), ((StringBuilder) (Object) stackIn_55_1).append(stackIn_56_2).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 

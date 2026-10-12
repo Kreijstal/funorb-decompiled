@@ -95,7 +95,7 @@ final class kp implements WidgetPainter {
         field_c = null;
     }
 
-    final static boolean a(boolean param0, int param1, ResourceArchive param2, int param3) {
+    final static boolean decodeSpriteSheetFromArchive(boolean obfuscationGuard, int groupId, ResourceArchive archive, int fileId) {
         byte[] var4 = null;
         RuntimeException var4_ref = null;
         byte[] var5 = null;
@@ -104,27 +104,27 @@ final class kp implements WidgetPainter {
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param0) {
+          if (obfuscationGuard) {
             kp.a(81);
           }
-          var5 = param2.getFile((byte) 72, param3, param1);
+          var5 = archive.getFile((byte) 72, fileId, groupId);
           var4 = var5;
           if (var5 == null) {
             return false;
           }
-          b.a(var5, -1);
+          b.decodeSpriteSheet(var5, -1);
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4_ref = decompiledCaughtException;
           stackIn_10_0 = var4_ref;
-          stackIn_10_1 = new StringBuilder().append("kp.D(").append(param0).append(',').append(param1).append(',');
-          if (param2 == null) {
+          stackIn_10_1 = new StringBuilder().append("kp.D(").append(obfuscationGuard).append(',').append(groupId).append(',');
+          if (archive == null) {
             stackIn_11_2 = "null";
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param3).append(')').toString());
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(fileId).append(')').toString());
         }
     }
 

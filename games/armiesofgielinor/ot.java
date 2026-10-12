@@ -96,7 +96,7 @@ final class ot extends dr {
         field_F = null;
     }
 
-    final static void a(Battlefield param0, dg param1, int param2, GameplayController param3) {
+    final static void a(Battlefield param0, BattleGraphicsAssets param1, int param2, GameplayController param3) {
         RgbSprite discarded$1 = null;
         RuntimeException var4 = null;
         RuntimeException stackIn_4_0 = null;

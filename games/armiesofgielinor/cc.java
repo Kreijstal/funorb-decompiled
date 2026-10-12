@@ -60,7 +60,7 @@ final class cc {
         RuntimeException decompiledCaughtException = null;
         try {
           stackIn_3_0 = !param3;
-          if (!kp.a(stackIn_3_0, param1, param0, param4)) {
+          if (!kp.decodeSpriteSheetFromArchive(stackIn_3_0, param1, param0, param4)) {
             return null;
           }
           if (!param3) {

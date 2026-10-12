@@ -185,12 +185,12 @@ final class ak extends ju {
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (!kp.a(false, param3, param1, param0)) {
+          if (!kp.decodeSpriteSheetFromArchive(false, param3, param1, param0)) {
             stackIn_2_0 = null;
             return (IndexedSprite[]) (stackIn_2_0);
           }
           if (param2 == 0) {
-            stackIn_7_0 = IntKeyLookup.a(111);
+            stackIn_7_0 = IntKeyLookup.buildDecodedIndexedSprites(111);
             return stackIn_7_0;
           }
           stackIn_5_0 = (IndexedSprite[]) null;

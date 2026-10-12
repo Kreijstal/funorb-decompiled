@@ -64,13 +64,13 @@ final class ds {
         int var14 = 0;
         var14 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          if (null != ac.field_k &&
+          if (null != ac.activeTerrainSprites &&
             0 <= param5 &&
-            ac.field_k.length > param5 &&
-            ac.field_k[param5] != null) {
+            ac.activeTerrainSprites.length > param5 &&
+            ac.activeTerrainSprites[param5] != null) {
             if (param6 &&
-              ac.field_k.length >= 1) {
-              var8 = ac.field_k[0];
+              ac.activeTerrainSprites.length >= 1) {
+              var8 = ac.activeTerrainSprites[0];
               if (var8 != null) {
                 if (param4) {
                   var8.d(db.a(true, param0), MatchConditionEntry.a(param1, (byte) 94));
@@ -101,8 +101,8 @@ final class ds {
                 }
                 var12 = var8_int + (param7 * 20 + ls.a(var11, param7, var10, var9, param3 - 27089));
                 if (var12 >= 0 &&
-                  var12 < ac.field_k.length) {
-                  var13 = ac.field_k[var12];
+                  var12 < ac.activeTerrainSprites.length) {
+                  var13 = ac.activeTerrainSprites[var12];
                   if (var13 != null) {
                     if (!param4) {
                       var13.draw(db.a(true, param0), MatchConditionEntry.a(param1, (byte) 94));

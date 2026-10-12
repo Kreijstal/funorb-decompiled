@@ -88,12 +88,12 @@ final class aa extends hn {
         }
     }
 
-    final static aa a(sn param0, int param1, int param2, int param3) {
-        if (param0.field_o == null) {
+    final static aa a(PcmSample param0, int param1, int param2, int param3) {
+        if (param0.samples == null) {
           return null;
         }
-        if (param0.field_o.length != 0) {
-          return new aa(param0, (int)((long)param0.field_p * 256L * (long)param1 / (long)(100 * rc.field_d)), param2 << 6, param3 << 6);
+        if (param0.samples.length != 0) {
+          return new aa(param0, (int)((long)param0.sampleRate * 256L * (long)param1 / (long)(100 * rc.field_d)), param2 << 6, param3 << 6);
         }
         return null;
     }
@@ -431,7 +431,7 @@ final class aa extends hn {
         int fieldTemp$2 = 0;
         int discarded$4 = 0;
         int discarded$3 = 0;
-        sn var4;
+        PcmSample var4;
         int var5;
         int var6;
         int var7;
@@ -444,10 +444,10 @@ final class aa extends hn {
           this.a(param2);
           return;
         }
-        var4 = (sn) (this.field_m);
+        var4 = (PcmSample) (this.field_m);
         var5 = this.field_r << 8;
         var6 = this.field_B << 8;
-        var7 = var4.field_o.length << 8;
+        var7 = var4.samples.length << 8;
         var8 = var6 - var5;
         if (var8 <= 0) {
           this.field_x = 0;
@@ -474,7 +474,7 @@ final class aa extends hn {
           if (!this.field_q) {
             if (this.field_o >= 0) {
               while (true) {
-                var9 = this.b(param0, var9, var6, param2, (int) var4.field_o[this.field_r]);
+                var9 = this.b(param0, var9, var6, param2, (int) var4.samples[this.field_r]);
                 if (this.field_z < var6) {
                   return;
                 }
@@ -482,7 +482,7 @@ final class aa extends hn {
               }
             }
             while (true) {
-              var9 = this.a(param0, var9, var5, param2, (int) var4.field_o[this.field_B - 1]);
+              var9 = this.a(param0, var9, var5, param2, (int) var4.samples[this.field_B - 1]);
               if (this.field_z >= var5) {
                 return;
               }
@@ -490,7 +490,7 @@ final class aa extends hn {
             }
           }
           if (this.field_o < 0) {
-            var9 = this.a(param0, var9, var5, param2, (int) var4.field_o[this.field_r]);
+            var9 = this.a(param0, var9, var5, param2, (int) var4.samples[this.field_r]);
             if (this.field_z >= var5) {
               return;
             }
@@ -498,13 +498,13 @@ final class aa extends hn {
             this.field_o = -this.field_o;
           }
           while (true) {
-            var9 = this.b(param0, var9, var6, param2, (int) var4.field_o[this.field_B - 1]);
+            var9 = this.b(param0, var9, var6, param2, (int) var4.samples[this.field_B - 1]);
             if (this.field_z < var6) {
               return;
             }
             this.field_z = var6 + var6 - 1 - this.field_z;
             this.field_o = -this.field_o;
-            var9 = this.a(param0, var9, var5, param2, (int) var4.field_o[this.field_r]);
+            var9 = this.a(param0, var9, var5, param2, (int) var4.samples[this.field_r]);
             if (this.field_z >= var5) {
               return;
             }
@@ -517,7 +517,7 @@ final class aa extends hn {
           if (!this.field_q) {
             if (this.field_o < 0) {
               while (true) {
-                var9 = this.a(param0, var9, var5, param2, (int) var4.field_o[this.field_B - 1]);
+                var9 = this.a(param0, var9, var5, param2, (int) var4.samples[this.field_B - 1]);
                 if (this.field_z >= var5) {
                   return;
                 }
@@ -533,7 +533,7 @@ final class aa extends hn {
               this.field_x = 0;
             } else {
               while (true) {
-                var9 = this.b(param0, var9, var6, param2, (int) var4.field_o[this.field_r]);
+                var9 = this.b(param0, var9, var6, param2, (int) var4.samples[this.field_r]);
                 if (this.field_z < var6) {
                   return;
                 }
@@ -552,7 +552,7 @@ final class aa extends hn {
           }
           else {
             if (this.field_o < 0) {
-              var9 = this.a(param0, var9, var5, param2, (int) var4.field_o[this.field_r]);
+              var9 = this.a(param0, var9, var5, param2, (int) var4.samples[this.field_r]);
               if (this.field_z >= var5) {
                 return;
               }
@@ -564,7 +564,7 @@ final class aa extends hn {
             }
             if (decompiledFrameRemainder0) {
               do {
-                var9 = this.b(param0, var9, var6, param2, (int) var4.field_o[this.field_B - 1]);
+                var9 = this.b(param0, var9, var6, param2, (int) var4.samples[this.field_B - 1]);
                 if (this.field_z < var6) {
                   return;
                 }
@@ -575,7 +575,7 @@ final class aa extends hn {
                 if (fieldTemp$1 == 0) {
                   break;
                 }
-                var9 = this.a(param0, var9, var5, param2, (int) var4.field_o[this.field_r]);
+                var9 = this.a(param0, var9, var5, param2, (int) var4.samples[this.field_r]);
                 if (this.field_z >= var5) {
                   return;
                 }
@@ -834,10 +834,10 @@ final class aa extends hn {
         int var1 = this.field_u * 3 >> 6;
         var1 = (var1 ^ var1 >> 31) + (var1 >>> 31);
         if (this.field_x == 0) {
-          var1 = var1 - var1 * this.field_z / (((sn) (this.field_m)).field_o.length << 8);
+          var1 = var1 - var1 * this.field_z / (((PcmSample) (this.field_m)).samples.length << 8);
         } else {
           if (this.field_x >= 0) {
-            var1 = var1 - var1 * this.field_r / ((sn) (this.field_m)).field_o.length;
+            var1 = var1 - var1 * this.field_r / ((PcmSample) (this.field_m)).samples.length;
           }
         }
         return var1 > 255 ? 255 : var1;
@@ -847,12 +847,12 @@ final class aa extends hn {
         return this.field_s != 0;
     }
 
-    final static aa a(sn param0, int param1, int param2) {
-        if (param0.field_o == null) {
+    final static aa a(PcmSample param0, int param1, int param2) {
+        if (param0.samples == null) {
           return null;
         }
-        if (param0.field_o.length != 0) {
-          return new aa(param0, (int)((long)param0.field_p * 256L * (long)param1 / (long)(100 * rc.field_d)), param2 << 6);
+        if (param0.samples.length != 0) {
+          return new aa(param0, (int)((long)param0.sampleRate * 256L * (long)param1 / (long)(100 * rc.field_d)), param2 << 6);
         }
         return null;
     }
@@ -1034,11 +1034,11 @@ final class aa extends hn {
         this.unlink(86);
     }
 
-    final static aa b(sn param0, int param1, int param2, int param3) {
-        if (param0.field_o == null) {
+    final static aa b(PcmSample param0, int param1, int param2, int param3) {
+        if (param0.samples == null) {
           return null;
         }
-        if (param0.field_o.length != 0) {
+        if (param0.samples.length != 0) {
           return new aa(param0, param1, param2, param3);
         }
         return null;
@@ -1174,14 +1174,14 @@ final class aa extends hn {
     }
 
     final synchronized boolean i() {
-        return this.field_z < 0 || this.field_z >= ((sn) (this.field_m)).field_o.length << 8;
+        return this.field_z < 0 || this.field_z >= ((PcmSample) (this.field_m)).samples.length << 8;
     }
 
     final synchronized void a(int param0) {
         int fieldTemp$0 = 0;
         int fieldTemp$1 = 0;
         int fieldTemp$2 = 0;
-        sn var2;
+        PcmSample var2;
         int var3;
         int var4;
         int var5;
@@ -1206,10 +1206,10 @@ final class aa extends hn {
             this.j();
           }
         }
-        var2 = (sn) (this.field_m);
+        var2 = (PcmSample) (this.field_m);
         var3 = this.field_r << 8;
         var4 = this.field_B << 8;
-        var5 = var2.field_o.length << 8;
+        var5 = var2.samples.length << 8;
         var6 = var4 - var3;
         if (var6 <= 0) {
           this.field_x = 0;
@@ -1479,7 +1479,7 @@ final class aa extends hn {
     }
 
     final synchronized void g(int param0) {
-        int var2 = ((sn) (this.field_m)).field_o.length << 8;
+        int var2 = ((PcmSample) (this.field_m)).samples.length << 8;
         if (param0 < -1) {
           param0 = -1;
         }
@@ -1506,14 +1506,14 @@ final class aa extends hn {
             if (this.field_o == -256 &&
               (this.field_z & 255) == 0) {
               if (rc.field_q) {
-                return aa.b(0, ((sn) (this.field_m)).field_o, param0, this.field_z, param1, this.field_C, this.field_t, 0, param3, param2, this);
+                return aa.b(0, ((PcmSample) (this.field_m)).samples, param0, this.field_z, param1, this.field_C, this.field_t, 0, param3, param2, this);
               }
-              return aa.a(((sn) (this.field_m)).field_o, param0, this.field_z, param1, this.field_u, 0, param3, param2, this);
+              return aa.a(((PcmSample) (this.field_m)).samples, param0, this.field_z, param1, this.field_u, 0, param3, param2, this);
             }
             if (rc.field_q) {
-              return aa.c(0, 0, ((sn) (this.field_m)).field_o, param0, this.field_z, param1, this.field_C, this.field_t, 0, param3, param2, this, this.field_o, param4);
+              return aa.c(0, 0, ((PcmSample) (this.field_m)).samples, param0, this.field_z, param1, this.field_C, this.field_t, 0, param3, param2, this, this.field_o, param4);
             }
-            return aa.a(0, 0, ((sn) (this.field_m)).field_o, param0, this.field_z, param1, this.field_u, 0, param3, param2, this, this.field_o, param4);
+            return aa.a(0, 0, ((PcmSample) (this.field_m)).samples, param0, this.field_z, param1, this.field_u, 0, param3, param2, this, this.field_o, param4);
           }
           var6 = param1 + this.field_s;
           if (var6 > param3) {
@@ -1523,15 +1523,15 @@ final class aa extends hn {
           if (this.field_o == -256 &&
             (this.field_z & 255) == 0) {
             if (!rc.field_q) {
-              param1 = aa.b(((sn) (this.field_m)).field_o, param0, this.field_z, param1, this.field_u, this.field_w, 0, var6, param2, this);
+              param1 = aa.b(((PcmSample) (this.field_m)).samples, param0, this.field_z, param1, this.field_u, this.field_w, 0, var6, param2, this);
             } else {
-              param1 = aa.b(0, ((sn) (this.field_m)).field_o, param0, this.field_z, param1, this.field_C, this.field_t, this.field_A, this.field_p, 0, var6, param2, this);
+              param1 = aa.b(0, ((PcmSample) (this.field_m)).samples, param0, this.field_z, param1, this.field_C, this.field_t, this.field_A, this.field_p, 0, var6, param2, this);
             }
           } else {
             if (!rc.field_q) {
-              param1 = aa.a(0, 0, ((sn) (this.field_m)).field_o, param0, this.field_z, param1, this.field_u, this.field_w, 0, var6, param2, this, this.field_o, param4);
+              param1 = aa.a(0, 0, ((PcmSample) (this.field_m)).samples, param0, this.field_z, param1, this.field_u, this.field_w, 0, var6, param2, this, this.field_o, param4);
             } else {
-              param1 = aa.b(0, 0, ((sn) (this.field_m)).field_o, param0, this.field_z, param1, this.field_C, this.field_t, this.field_A, this.field_p, 0, var6, param2, this, this.field_o, param4);
+              param1 = aa.b(0, 0, ((PcmSample) (this.field_m)).samples, param0, this.field_z, param1, this.field_C, this.field_t, this.field_A, this.field_p, 0, var6, param2, this, this.field_o, param4);
             }
           }
           this.field_s = this.field_s - param1;
@@ -1549,14 +1549,14 @@ final class aa extends hn {
             if (this.field_o == 256 &&
               (this.field_z & 255) == 0) {
               if (rc.field_q) {
-                return aa.a(0, ((sn) (this.field_m)).field_o, param0, this.field_z, param1, this.field_C, this.field_t, 0, param3, param2, this);
+                return aa.a(0, ((PcmSample) (this.field_m)).samples, param0, this.field_z, param1, this.field_C, this.field_t, 0, param3, param2, this);
               }
-              return aa.b(((sn) (this.field_m)).field_o, param0, this.field_z, param1, this.field_u, 0, param3, param2, this);
+              return aa.b(((PcmSample) (this.field_m)).samples, param0, this.field_z, param1, this.field_u, 0, param3, param2, this);
             }
             if (rc.field_q) {
-              return aa.d(0, 0, ((sn) (this.field_m)).field_o, param0, this.field_z, param1, this.field_C, this.field_t, 0, param3, param2, this, this.field_o, param4);
+              return aa.d(0, 0, ((PcmSample) (this.field_m)).samples, param0, this.field_z, param1, this.field_C, this.field_t, 0, param3, param2, this, this.field_o, param4);
             }
-            return aa.b(0, 0, ((sn) (this.field_m)).field_o, param0, this.field_z, param1, this.field_u, 0, param3, param2, this, this.field_o, param4);
+            return aa.b(0, 0, ((PcmSample) (this.field_m)).samples, param0, this.field_z, param1, this.field_u, 0, param3, param2, this, this.field_o, param4);
           }
           var6 = param1 + this.field_s;
           if (var6 > param3) {
@@ -1566,15 +1566,15 @@ final class aa extends hn {
           if (this.field_o == 256 &&
             (this.field_z & 255) == 0) {
             if (!rc.field_q) {
-              param1 = aa.a(((sn) (this.field_m)).field_o, param0, this.field_z, param1, this.field_u, this.field_w, 0, var6, param2, this);
+              param1 = aa.a(((PcmSample) (this.field_m)).samples, param0, this.field_z, param1, this.field_u, this.field_w, 0, var6, param2, this);
             } else {
-              param1 = aa.a(0, ((sn) (this.field_m)).field_o, param0, this.field_z, param1, this.field_C, this.field_t, this.field_A, this.field_p, 0, var6, param2, this);
+              param1 = aa.a(0, ((PcmSample) (this.field_m)).samples, param0, this.field_z, param1, this.field_C, this.field_t, this.field_A, this.field_p, 0, var6, param2, this);
             }
           } else {
             if (!rc.field_q) {
-              param1 = aa.b(0, 0, ((sn) (this.field_m)).field_o, param0, this.field_z, param1, this.field_u, this.field_w, 0, var6, param2, this, this.field_o, param4);
+              param1 = aa.b(0, 0, ((PcmSample) (this.field_m)).samples, param0, this.field_z, param1, this.field_u, this.field_w, 0, var6, param2, this, this.field_o, param4);
             } else {
-              param1 = aa.a(0, 0, ((sn) (this.field_m)).field_o, param0, this.field_z, param1, this.field_C, this.field_t, this.field_A, this.field_p, 0, var6, param2, this, this.field_o, param4);
+              param1 = aa.a(0, 0, ((PcmSample) (this.field_m)).samples, param0, this.field_z, param1, this.field_C, this.field_t, this.field_A, this.field_p, 0, var6, param2, this, this.field_o, param4);
             }
           }
           this.field_s = this.field_s - param1;
@@ -1722,11 +1722,11 @@ final class aa extends hn {
         return param5;
     }
 
-    private aa(sn param0, int param1, int param2) {
+    private aa(PcmSample param0, int param1, int param2) {
         this.field_m = (ow) ((Object) param0);
-        this.field_r = param0.field_m;
-        this.field_B = param0.field_n;
-        this.field_q = param0.field_l;
+        this.field_r = param0.loopStart;
+        this.field_B = param0.loopEnd;
+        this.field_q = param0.loopModeFlag;
         this.field_o = param1;
         this.field_y = param2;
         this.field_v = 8192;
@@ -1734,11 +1734,11 @@ final class aa extends hn {
         this.j();
     }
 
-    private aa(sn param0, int param1, int param2, int param3) {
+    private aa(PcmSample param0, int param1, int param2, int param3) {
         this.field_m = (ow) ((Object) param0);
-        this.field_r = param0.field_m;
-        this.field_B = param0.field_n;
-        this.field_q = param0.field_l;
+        this.field_r = param0.loopStart;
+        this.field_B = param0.loopEnd;
+        this.field_q = param0.loopModeFlag;
         this.field_o = param1;
         this.field_y = param2;
         this.field_v = param3;

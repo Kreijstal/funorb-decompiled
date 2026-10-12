@@ -24,7 +24,7 @@ final class jg extends IntrusiveNode {
         if (var5 > -1) {
           var6 = AttackEvent.nextBoundedInt(false, td.field_d[var5].length, li.field_n);
           if (td.field_d[var5][var6] != null &&
-            td.field_d[var5][var6].field_o.length != 0) {
+            td.field_d[var5][var6].samples.length != 0) {
             param0 = 512 - (param0 - 800);
             param1 = 512 + (param1 <= 512 ? param1 < -512 ? -512 : param1 : 512) >> 2;
             param0 = ((param0 <= 512 ? param0 : 512) >> 2) + 120;

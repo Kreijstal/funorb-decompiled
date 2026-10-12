@@ -213,7 +213,7 @@ final class StateChangeEvent extends GameEvent {
           for (var7 = 0; 4 > var7; var7++) {
             var5 = -54 + (CachedArchiveProvider.field_y[var7][0] + param3) + (var4_int & 15);
             var6 = param2 + (CachedArchiveProvider.field_y[var7][1] + (param0 & 7) - 64);
-            fe.a(jq.field_G[3], 60 + var5, var6 + 50, jq.field_G[3].canvasWidth >> 1, jq.field_G[3].canvasHeight >> 1);
+            fe.a(jq.kalphiteSprites[3], 60 + var5, var6 + 50, jq.kalphiteSprites[3].canvasWidth >> 1, jq.kalphiteSprites[3].canvasHeight >> 1);
             var4_int = var4_int >> 1;
             param0 = param0 >> 1;
           }

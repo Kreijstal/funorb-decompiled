@@ -4,7 +4,7 @@
 final class l {
     static String field_h;
     static String field_e;
-    static IndexedSprite[] field_b;
+    static IndexedSprite[] activeStructureSprites;
     static CampaignMission activeCampaignMission;
     static String field_g;
     static rc field_a;
@@ -147,7 +147,7 @@ final class l {
         field_h = null;
         field_f = null;
         field_d = null;
-        field_b = null;
+        activeStructureSprites = null;
         activeCampaignMission = null;
     }
 

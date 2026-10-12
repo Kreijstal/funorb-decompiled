@@ -81,15 +81,15 @@ final class ts {
     }
 
     final static void a(byte param0) {
-        td.field_f = new dg(iw.field_l);
+        td.field_f = new BattleGraphicsAssets(iw.field_l);
         if (param0 < -36) {
-          td.field_f.a(0, 0);
-          td.field_f.b(0);
+          td.field_f.selectTheme(0, 0);
+          td.field_f.loadBasicSprites(0);
           return;
         }
         currentSpellMenu = (SpellMenuGroup) null;
-        td.field_f.a(0, 0);
-        td.field_f.b(0);
+        td.field_f.selectTheme(0, 0);
+        td.field_f.loadBasicSprites(0);
     }
 
     final int a(int param0) {
@@ -113,7 +113,7 @@ final class ts {
         String[] stackIn_4_4;
         int stackIn_4_5;
         boolean stackIn_4_6;
-        dg stackIn_4_7;
+        BattleGraphicsAssets stackIn_4_7;
         int stackIn_4_8;
         int stackIn_4_9;
         int stackIn_4_10;
@@ -154,7 +154,7 @@ final class ts {
             r.field_B = var8.length;
             var4 = mission.playerSlot;
             ByteStorage.field_g = obfuscationGuard + r.field_B;
-            td.field_f.a(mission.mapTheme, 0);
+            td.field_f.selectTheme(mission.mapTheme, 0);
             stackIn_4_0 = null;
             stackIn_4_1 = null;
             stackIn_4_2 = false;

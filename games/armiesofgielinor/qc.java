@@ -36,8 +36,8 @@ abstract class qc {
     }
 
     final static RgbSprite a(int param0, int param1) {
-        co var2 = null;
-        co var2Lifetime1;
+        BattlefieldTheme var2 = null;
+        BattlefieldTheme var2Lifetime1;
         if (param1 != 8806) {
           field_h = (qc) null;
           if (vc.field_m == null) {
@@ -46,9 +46,9 @@ abstract class qc {
           if (param0 < 0) {
             return null;
           }
-          if (UnitLossCondition.field_d.length > param0) {
-            var2 = UnitLossCondition.field_d[param0];
-            return var2.c((byte) -116);
+          if (UnitLossCondition.battlefieldThemes.length > param0) {
+            var2 = UnitLossCondition.battlefieldThemes[param0];
+            return var2.loadBackgroundImage((byte) -116);
           }
           return null;
         }
@@ -58,9 +58,9 @@ abstract class qc {
         if (param0 < 0) {
           return null;
         }
-        if (UnitLossCondition.field_d.length > param0) {
-          var2Lifetime1 = UnitLossCondition.field_d[param0];
-          return var2Lifetime1.c((byte) -116);
+        if (UnitLossCondition.battlefieldThemes.length > param0) {
+          var2Lifetime1 = UnitLossCondition.battlefieldThemes[param0];
+          return var2Lifetime1.loadBackgroundImage((byte) -116);
         }
         return null;
     }

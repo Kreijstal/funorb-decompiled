@@ -21,7 +21,7 @@ final class fk implements WidgetPainter {
         field_f = null;
     }
 
-    final static RgbSprite[] a(String param0, byte param1, ResourceArchive param2, String param3) {
+    final static RgbSprite[] loadRgbSpritesByName(String fileName, byte obfuscationGuard, ResourceArchive archive, String groupName) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -36,32 +36,32 @@ final class fk implements WidgetPainter {
         String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param1 > -123) {
+          if (obfuscationGuard > -123) {
             var6 = (String) null;
             fk.a(false, (String) null);
           }
-          var4_int = param2.getGroupId(param3, 110);
-          var5 = param2.getFileId((byte) -72, var4_int, param0);
-          stackIn_3_0 = cb.a(false, param2, var4_int, var5);
+          var4_int = archive.getGroupId(groupName, 110);
+          var5 = archive.getFileId((byte) -72, var4_int, fileName);
+          stackIn_3_0 = cb.a(false, archive, var4_int, var5);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
           stackIn_6_0 = var4;
           stackIn_6_1 = new StringBuilder().append("fk.E(");
-          if (param0 == null) {
+          if (fileName == null) {
             stackIn_7_2 = "null";
           } else {
             stackIn_7_2 = "{...}";
           }
-          stackIn_9_1 = ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(',');
-          if (param2 == null) {
+          stackIn_9_1 = ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(obfuscationGuard).append(',');
+          if (archive == null) {
             stackIn_10_2 = "null";
           } else {
             stackIn_10_2 = "{...}";
           }
           stackIn_12_1 = ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',');
-          if (param3 == null) {
+          if (groupName == null) {
             stackIn_13_2 = "null";
           } else {
             stackIn_13_2 = "{...}";

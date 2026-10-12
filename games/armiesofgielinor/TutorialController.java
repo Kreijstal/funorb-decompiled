@@ -2480,7 +2480,7 @@ final class TutorialController {
                   dd.field_e = 0;
                   Widget.field_n = 0;
                   kd.field_X = wh.field_a;
-                  dg.b((byte) -61);
+                  BattleGraphicsAssets.b((byte) -61);
                 }
                 RadialSummonMenu.$cfr$intArgs$a$6d836999ad61(33, ClientUiNode.field_v[2]);
                 return;
@@ -2499,7 +2499,7 @@ final class TutorialController {
               Widget.field_n = 0;
               kd.field_X = wh.field_a;
               dd.field_e = 0;
-              dg.b((byte) -61);
+              BattleGraphicsAssets.b((byte) -61);
             }
             RadialSummonMenu.$cfr$intArgs$a$6d836999ad61(68, ClientUiNode.field_v[2]);
           }

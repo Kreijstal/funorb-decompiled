@@ -3,7 +3,7 @@
  */
 final class CampaignMenuEntry extends IntrusiveNode {
     int entryId;
-    static byte[][] field_z;
+    static byte[][] decodedSpriteAlphas;
     NodeHashTable previewUnitCategories;
     int width;
     static int[] field_u;
@@ -26,7 +26,7 @@ final class CampaignMenuEntry extends IntrusiveNode {
     RgbSprite highlightSprite;
 
     public static void a(int param0) {
-        field_z = (byte[][]) null;
+        decodedSpriteAlphas = (byte[][]) null;
         if (param0 != -101) {
           CampaignMenuEntry.a(-99, -40, -126, (byte) 12, -104);
         }

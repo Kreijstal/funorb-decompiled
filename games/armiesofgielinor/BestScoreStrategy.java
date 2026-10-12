@@ -161,14 +161,14 @@ final class BestScoreStrategy extends AiPlanningStrategy {
         }
     }
 
-    final static void a(co param0, co[] param1, int param2) {
+    final static void registerTheme(BattlefieldTheme theme, BattlefieldTheme[] themes, int obfuscationGuard) {
         try {
-          if (param2 != -5841) {
+          if (obfuscationGuard != -5841) {
             field_h = (String) null;
           }
-          param1[param0.field_d] = param0;
+          themes[theme.themeId] = theme;
         } catch (RuntimeException runtimeException) {
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "aw.A(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "aw.A(" + (theme != null ? "{...}" : "null") + ',' + (themes != null ? "{...}" : "null") + ',' + obfuscationGuard + ')');
         }
     }
 

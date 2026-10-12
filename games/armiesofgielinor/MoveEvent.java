@@ -165,10 +165,10 @@ final class MoveEvent extends GameEvent {
         int var13 = 0;
         var13 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          t.field_d = fk.a("frame_top", (byte) -124, param2, "commonui");
-          ip.field_c = fk.a("frame_bottom", (byte) -125, param2, "commonui");
+          t.field_d = fk.loadRgbSpritesByName("frame_top", (byte) -124, param2, "commonui");
+          ip.field_c = fk.loadRgbSpritesByName("frame_bottom", (byte) -125, param2, "commonui");
           gt.field_e = GameplayController.a("jagex_logo_grey", (byte) 51, "commonui", param2);
-          NodeIterator.field_b = fk.a("button", (byte) -124, param2, "commonui");
+          NodeIterator.field_b = fk.loadRgbSpritesByName("button", (byte) -124, param2, "commonui");
           db.field_a = ac.a(param2, "validation", (byte) -4, "commonui");
           gl.field_e = (BitmapFont) ((Object) it.a("arezzo12", param2, param3, (byte) -87, "commonui"));
           ArmiesOfGielinor.field_J = (BitmapFont) ((Object) it.a("arezzo14", param2, param3, (byte) -87, "commonui"));
@@ -178,7 +178,7 @@ final class MoveEvent extends GameEvent {
             MoveEvent.g(90);
           }
           pv.a("commonui", "dropdown", param2, 24914);
-          var5 = MapLayout.a("screen_options", -28106, "commonui", param2);
+          var5 = MapLayout.loadIndexedSpritesByName("screen_options", -28106, "commonui", param2);
           oa.field_H = new IndexedSprite[4];
           HuffmanCodec.field_e = new IndexedSprite[4];
           ClientContextMenu.field_b = new IndexedSprite[4];

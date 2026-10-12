@@ -217,10 +217,10 @@ class ih extends hn {
           if (param2 != 16) {
             this.a(-101, 56, -32, -116);
           }
-          var4_int = param1.field_q.field_o.length;
+          var4_int = param1.field_q.samples.length;
           if (param0 &&
-            param1.field_q.field_l) {
-            var6 = -param1.field_q.field_m + var4_int + var4_int;
+            param1.field_q.loopModeFlag) {
+            var6 = -param1.field_q.loopStart + var4_int + var4_int;
             var5 = (int)((long)this.field_W[param1.field_m] * (long)var6 >> 6);
             var4_int = var4_int << 8;
             if (var4_int <= var5) {
@@ -623,7 +623,7 @@ class ih extends hn {
             var7 = Math.sin(0.01227184630308513 * (double)(param1.field_y & 511));
             var3_int = var3_int + (int)(var7 * (double)var5);
           }
-          var5Lifetime1 = (int)(0.5 + (double)(param1.field_q.field_p * 256) * Math.pow(2.0, 0.0003255208333333333 * (double)var3_int) / (double)rc.field_d);
+          var5Lifetime1 = (int)(0.5 + (double)(param1.field_q.sampleRate * 256) * Math.pow(2.0, 0.0003255208333333333 * (double)var3_int) / (double)rc.field_d);
           stackIn_12_0 = (1 > var5Lifetime1) ? 1 : var5Lifetime1;
           return stackIn_12_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -1096,7 +1096,7 @@ class ih extends hn {
         boolean stackIn_16_1 = false;
         mi var5;
         int var6_int;
-        sn var6;
+        PcmSample var6;
         mi var7;
         mi var8;
         int var9;
@@ -1233,7 +1233,7 @@ class ih extends hn {
           for (var7 = 0; var7 < 4; var7++) {
             var6 = -64 + (param3 + (CachedArchiveProvider.field_y[var7][1] + (param2 & 3)));
             var5 = (var4_int & 7) + (CachedArchiveProvider.field_y[var7][0] + param1) - 44;
-            var8 = tn.field_eb[0 + param2 % 6];
+            var8 = tn.activeFoliageShadows[0 + param2 % 6];
             fe.a(var8, var5, var6);
             var4_int = var4_int >> 1;
             param2 = param2 >> 1;

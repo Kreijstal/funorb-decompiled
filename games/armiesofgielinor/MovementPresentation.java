@@ -25,7 +25,7 @@ final class MovementPresentation implements EventPresentation {
     private int field_t;
     static h field_l;
     private int durationFrames;
-    static int[] field_j;
+    static int[] decodedSpritePalette;
     static String field_r;
 
     public final boolean isCombatViewReady(byte obfuscationGuard) {
@@ -453,7 +453,7 @@ final class MovementPresentation implements EventPresentation {
           return;
         }
         field_l = null;
-        field_j = null;
+        decodedSpritePalette = null;
         field_i = null;
     }
 

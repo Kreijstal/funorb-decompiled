@@ -14,7 +14,7 @@ final class MapTile implements TaggedFieldReader {
     TileMetadata metadata;
     int[] teamEffectFlags;
     int captureStrength;
-    static boolean[] field_e;
+    static boolean[] decodedSpriteHasAlpha;
     static int field_i;
 
     public static void g(int param0) {
@@ -22,7 +22,7 @@ final class MapTile implements TaggedFieldReader {
         if (param0 >= -19) {
           return;
         }
-        field_e = null;
+        decodedSpriteHasAlpha = null;
     }
 
     final static void a(PlatformTaskService param0, Object param1, boolean param2) {

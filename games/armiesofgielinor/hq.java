@@ -5,7 +5,7 @@ import java.io.*;
 
 final class hq {
     static char[] field_b;
-    static IndexedSprite[] field_a;
+    static IndexedSprite[] surroundTileSprites;
     static String field_c;
     static String field_d;
     static int field_f;
@@ -16,7 +16,7 @@ final class hq {
         if (param0 >= -50) {
           return;
         }
-        field_a = null;
+        surroundTileSprites = null;
         field_b = null;
         field_c = null;
     }

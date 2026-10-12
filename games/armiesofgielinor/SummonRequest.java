@@ -258,7 +258,7 @@ final class SummonRequest extends ActionRequest {
         if (!param0) {
           field_B = -104;
         }
-        return -co.field_f + CachedArchiveProvider.field_h;
+        return -BattlefieldTheme.field_f + CachedArchiveProvider.field_h;
     }
 
     final static void a(byte param0, int[] param1, int param2) {

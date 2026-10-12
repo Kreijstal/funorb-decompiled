@@ -45,12 +45,12 @@ final class jv {
         field_d = (int[][]) null;
         field_e = null;
         if (param0 != 36) {
-          sn var2 = (sn) null;
-          jv.a((sn) null, -72, 76, (byte) 115);
+          PcmSample var2 = (PcmSample) null;
+          jv.a((PcmSample) null, -72, 76, (byte) 115);
         }
     }
 
-    final static te a(sn param0, int param1, int param2, byte param3) {
+    final static te a(PcmSample param0, int param1, int param2, byte param3) {
         RuntimeException var4 = null;
         te stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;

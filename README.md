@@ -23,7 +23,7 @@ by default for every game. Semantic game-specific names use explicit naming
 rules. Deko's numbered structural-category and type-based names identify
 unresolved purposes honestly; they are not complete semantic deobfuscation.
 
-Armies has 207 reviewed class names, not a complete semantic map. Shared widget
+Armies has 210 reviewed class names, not a complete semantic map. Shared widget
 bounds, dropdown options/prefix selection, painter dispatch and expansion now
 have reviewed names with pointer, selection and arrow-pixel fixtures. Campaign
 loadouts now name unit/spell rewards, equipped slots and cumulative mana bonuses;
@@ -166,6 +166,13 @@ mana gates/caps/overflow and shared-team updates. State/player/unit/tile checksu
 helpers now have names and fixed vectors, with omitted fields and the discarded
 post-event calculation documented. Original-bytecode checksum matching, loaded
 spell tables and live server compatibility remain unverified.
+
+BattleGraphicsAssets, BattlefieldTheme and PcmSample now name battle resource
+loading, theme-owned sprite/audio data and PCM containers. Controlled real-archive
+fixtures verify sprite assets, theme switching/ownership and canvas normalization.
+Sprite-sheet scratch and decode/build/release methods have names and independent
+byte fixtures, including layout, palette and alpha behavior. Production assets,
+JPEG loading, live audio and complete rendering remain unverified.
 
 Camera overview grouping, centroid bounds, hold state and explicit tile focus
 now have reviewed names, alongside directional panning, dragging and velocity

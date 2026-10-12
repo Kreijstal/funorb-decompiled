@@ -10,7 +10,7 @@ final class mi extends IntrusiveNode {
     int field_n;
     int field_F;
     aa field_K;
-    sn field_q;
+    PcmSample field_q;
     int field_m;
     int field_w;
     int field_x;

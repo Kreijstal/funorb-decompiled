@@ -95,7 +95,7 @@ final class GameplayController {
     private boolean field_a;
     private int field_Sb;
     private boolean field_Xb;
-    dg field_Ib;
+    BattleGraphicsAssets battleGraphicsAssets;
     private NodeDeque overviewTargets;
     private int field_Kb;
     private int encodedDamageCheckpoint;
@@ -5163,7 +5163,7 @@ final class GameplayController {
         try {
           if (this.aiPlanners.length >= ActionSpell.field_j &&
             this.aiPlanners[ActionSpell.field_j] != null) {
-            this.aiPlanners[ActionSpell.field_j].a(mu.field_f, dg.field_c, (byte) 18, param1);
+            this.aiPlanners[ActionSpell.field_j].a(mu.field_f, BattleGraphicsAssets.field_c, (byte) 18, param1);
             if (param0 != 0) {
               discarded$0 = this.a((EventPresenter) null, false);
             }
@@ -5185,12 +5185,12 @@ final class GameplayController {
                   break;
                 }
               case 3:
-                var3 = var3 + "own power " + dg.field_c;
+                var3 = var3 + "own power " + BattleGraphicsAssets.field_c;
                 if (var5 == 0) {
                   break;
                 }
               case 2:
-                var3 = var3 + "enemy power " + dg.field_c;
+                var3 = var3 + "enemy power " + BattleGraphicsAssets.field_c;
                 if (var5 == 0) {
                   break;
                 }
@@ -5463,7 +5463,7 @@ final class GameplayController {
             }
             if (rs.field_q == 2) {
               if (br.field_f[81]) {
-                dg.field_c = (dg.field_c + 1) % 9;
+                BattleGraphicsAssets.field_c = (BattleGraphicsAssets.field_c + 1) % 9;
                 if (var8 != 0) {
                   mu.field_f = (mu.field_f + 1) % 5;
                 }
@@ -7154,7 +7154,7 @@ final class GameplayController {
                       if ((decompiledFrameRemainder3) &&
                         (decompiledFrameRemainder2) &&
                         (decompiledFrameRemainder1)) {
-                        var2 = dg.field_a;
+                        var2 = BattleGraphicsAssets.field_a;
                         decompiledFrameRemainder3 = (var20 != 0);
                       }
                       if ((decompiledFrameRemainder3) &&
@@ -7237,7 +7237,7 @@ final class GameplayController {
           this.camera = new BattleCamera(this.battlefield.mapWidth, this.battlefield.mapHeight);
           this.unitRenderer = new BattleUnitRenderer(this.camera);
           ro.modelProjectionCamera = this.camera;
-          ot.a(this.battlefield, this.field_Ib, 1, this);
+          ot.a(this.battlefield, this.battleGraphicsAssets, 1, this);
           var2_int = (this.battlefield.mapWidth >> 1) + (this.battlefield.mapWidth >> 1) * this.battlefield.mapWidth;
           if (!param0) {
             this.field_Gb = -93;
@@ -7791,7 +7791,7 @@ final class GameplayController {
             field_f = 79;
           }
           if (this.field_kb == 0) {
-            RadialSummonMenu.$cfr$intArgs$a$6d836999ad61(127, UnitLossCondition.field_d[this.battlefield.mapTheme].b(param0 - 74));
+            RadialSummonMenu.$cfr$intArgs$a$6d836999ad61(127, UnitLossCondition.battlefieldThemes[this.battlefield.mapTheme].chooseAmbientSound(param0 - 74));
           }
           if (0 >= this.field_kb) {
             this.field_kb = 50 + AttackEvent.nextBoundedInt(false, 200, vv.field_b);
@@ -9181,7 +9181,7 @@ final class GameplayController {
               if (var12 == 0) {
                 var6 = stackIn_81_0;
                 while (var6 < this.battlefield.mapWidth) {
-                  var7 = UnitLossCondition.field_d[this.battlefield.mapTheme].field_i[this.battlefield.tiles[var2_int].terrainType];
+                  var7 = UnitLossCondition.battlefieldThemes[this.battlefield.mapTheme].terrainPreviewColours[this.battlefield.tiles[var2_int].terrainType];
                   stackIn_54_0 = this.battlefield.tiles[var2_int].ownerPlayer;
                   stackIn_54_1 = -1;
                   if (stackIn_54_0 > stackIn_54_1) {
@@ -11537,7 +11537,7 @@ final class GameplayController {
               if (var16 == 0) {
                 var10 = stackIn_111_0;
                 while (var10 < this.battlefield.mapWidth) {
-                  var11 = UnitLossCondition.field_d[this.battlefield.mapTheme].field_i[this.battlefield.tiles[var2_int].terrainType];
+                  var11 = UnitLossCondition.battlefieldThemes[this.battlefield.mapTheme].terrainPreviewColours[this.battlefield.tiles[var2_int].terrainType];
                   var13 = mu.field_f;
                   stackIn_75_0 = var13;
                   if (stackIn_75_0 == 0) {
@@ -12055,7 +12055,7 @@ final class GameplayController {
         }
     }
 
-    GameplayController(boolean param0, int param1, String[] param2, int param3, boolean param4, dg param5, int param6, int param7, int param8, boolean param9, int param10, int param11, boolean param12, CampaignMission param13) {
+    GameplayController(boolean param0, int param1, String[] param2, int param3, boolean param4, BattleGraphicsAssets param5, int param6, int param7, int param8, boolean param9, int param10, int param11, boolean param12, CampaignMission param13) {
         boolean stackIn_4_1 = false;
         Object stackIn_66_0;
         Battlefield stackIn_66_1;
@@ -12422,15 +12422,15 @@ final class GameplayController {
             }
             this.battlefield.field_Cb = true;
           }
-          this.field_Ib = param5;
+          this.battleGraphicsAssets = param5;
           this.field_Kb = -1;
           if (this.battlefield.mapTheme == -1) {
             this.field_d = null;
             if (var26 != 0) {
-              this.field_d = UnitLossCondition.field_d[this.battlefield.mapTheme].field_n;
+              this.field_d = UnitLossCondition.battlefieldThemes[this.battlefield.mapTheme].musicTrack;
             }
           } else {
-            this.field_d = UnitLossCondition.field_d[this.battlefield.mapTheme].field_n;
+            this.field_d = UnitLossCondition.battlefieldThemes[this.battlefield.mapTheme].musicTrack;
           }
           boolean decompiledFrameRemainder2 = true;
           boolean decompiledFrameRemainder1 = true;

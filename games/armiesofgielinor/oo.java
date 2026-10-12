@@ -421,8 +421,8 @@ final class oo {
             ByteStorage.field_d = GameplayController.a("arrow", (byte) 51, "members_expansion_screen", iw.field_p);
             VerticalScrollbar.field_Sb = DropdownArrowPainter.a("arialish12", iw.field_p, bh.field_H, (byte) -53, "");
             kt.field_n = it.a("", iw.field_p, bh.field_H, (byte) -87, "pump32");
-            UnitModelPreview.field_b = DiskCacheRequest.a("benefit_orbs", "members_expansion_screen", iw.field_p, false);
-            QuickChatPhrase.field_D = DiskCacheRequest.a("button_text", "members_expansion_screen", iw.field_p, false);
+            UnitModelPreview.field_b = DiskCacheRequest.loadRgbSpriteByName("benefit_orbs", "members_expansion_screen", iw.field_p, false);
+            QuickChatPhrase.field_D = DiskCacheRequest.loadRgbSpriteByName("button_text", "members_expansion_screen", iw.field_p, false);
             DiskCacheRequest.field_G = ac.a(iw.field_p, "button_highlights", (byte) -4, "members_expansion_screen");
             bh.field_H = null;
             iw.field_p = null;
@@ -723,10 +723,10 @@ final class oo {
             var8 += 2;
           }
           if ((var8 & 1) > 0) {
-            ac.field_k[2].b(-32 + param4, param1 + 10, param0, param2);
+            ac.activeTerrainSprites[2].b(-32 + param4, param1 + 10, param0, param2);
           }
           if ((var8 & 2) > 0) {
-            ac.field_k[2].b(8 + param4, 10 + param1, param0, param2);
+            ac.activeTerrainSprites[2].b(8 + param4, 10 + param1, param0, param2);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

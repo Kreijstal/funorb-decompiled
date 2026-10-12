@@ -5,7 +5,7 @@ abstract class mk extends rb implements fb {
     private fn field_g;
     static String field_f;
     static String field_d;
-    static int field_e;
+    static int currentThemeId;
     static String field_i;
     static boolean field_h;
 
@@ -81,7 +81,7 @@ abstract class mk extends rb implements fb {
     static {
         field_f = null;
         field_d = "A detailed explanation of each rule can be found through the link on our website.<br>(in the Help Section)";
-        field_e = -1;
+        currentThemeId = -1;
         field_i = "STRENGTH";
         field_h = true;
     }

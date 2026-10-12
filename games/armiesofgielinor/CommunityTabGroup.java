@@ -115,13 +115,13 @@ final class CommunityTabGroup {
           }
         }
         if (!quickChat) {
-          dg.decodedChatText = le.readCompressedChatText(80, (byte) -25, packet);
+          BattleGraphicsAssets.decodedChatText = le.readCompressedChatText(80, (byte) -25, packet);
           hv.decodedChatResponsePhraseIds = null;
         } else {
           phraseIdOrGuardRemainder = packet.readUnsignedShort((byte) -104);
           try {
             phrase = ce.quickChatPhrases.getPhrase(phraseIdOrGuardRemainder, -124);
-            dg.decodedChatText = phrase.getPreviewText((byte) 97);
+            BattleGraphicsAssets.decodedChatText = phrase.getPreviewText((byte) 97);
             if (gp.decodedChatAccountName.equals(mv.localAccountName)) {
               responsePhraseIds = null;
             } else {
@@ -133,7 +133,7 @@ final class CommunityTabGroup {
             phraseFailure = (Exception) (Object) decompiledCaughtException;
             af.a((Throwable) ((Object) phraseFailure), -120, "CC1");
             hv.decodedChatResponsePhraseIds = null;
-            dg.decodedChatText = null;
+            BattleGraphicsAssets.decodedChatText = null;
           }
         }
         phraseIdOrGuardRemainder = -17 / ((obfuscationGuard - 47) / 42);
@@ -281,13 +281,13 @@ final class CommunityTabGroup {
           }
         }
         if (!quickChat) {
-          dg.decodedChatText = le.readCompressedChatText(80, (byte) -25, packet);
+          BattleGraphicsAssets.decodedChatText = le.readCompressedChatText(80, (byte) -25, packet);
           hv.decodedChatResponsePhraseIds = null;
         } else {
           phraseIdOrGuardRemainder = packet.readUnsignedShort((byte) -104);
           try {
             phrase = ce.quickChatPhrases.getPhrase(phraseIdOrGuardRemainder, -124);
-            dg.decodedChatText = phrase.getPreviewText((byte) 97);
+            BattleGraphicsAssets.decodedChatText = phrase.getPreviewText((byte) 97);
             if (gp.decodedChatAccountName.equals(mv.localAccountName)) {
               responsePhraseIds = null;
             } else {
@@ -299,7 +299,7 @@ final class CommunityTabGroup {
             phraseFailure = (Exception) (Object) decompiledCaughtException;
             af.a((Throwable) ((Object) phraseFailure), -120, "CC1");
             hv.decodedChatResponsePhraseIds = null;
-            dg.decodedChatText = null;
+            BattleGraphicsAssets.decodedChatText = null;
           }
         }
         phraseIdOrGuardRemainder = -17 / ((obfuscationGuard - 47) / 42);

@@ -45,18 +45,18 @@ final class IntKeyLookup {
         }
     }
 
-    final static IndexedSprite[] a(int param0) {
+    final static IndexedSprite[] buildDecodedIndexedSprites(int obfuscationGuard) {
         int var2 = 0;
         int var3 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
-        IndexedSprite[] var1 = new IndexedSprite[iw.field_n];
-        for (var2 = 0; var2 < iw.field_n; var2++) {
-          var1[var2] = new IndexedSprite(lg.field_d, wr.field_J, j.field_e[var2], CampaignMenuButton.field_g[var2], qm.field_K[var2], c.field_e[var2], AnimationPlayer.field_j[var2], MovementPresentation.field_j);
+        IndexedSprite[] var1 = new IndexedSprite[iw.decodedSpriteCount];
+        for (var2 = 0; var2 < iw.decodedSpriteCount; var2++) {
+          var1[var2] = new IndexedSprite(lg.decodedSpriteCanvasWidth, wr.decodedSpriteCanvasHeight, j.decodedSpriteOffsetXs[var2], CampaignMenuButton.decodedSpriteOffsetYs[var2], qm.decodedSpriteWidths[var2], c.decodedSpriteHeights[var2], AnimationPlayer.decodedSpriteIndices[var2], MovementPresentation.decodedSpritePalette);
         }
-        if (param0 < 102) {
-          co[] var4 = (co[]) null;
-          IntKeyLookup.a((co[]) null, (byte) -34);
+        if (obfuscationGuard < 102) {
+          BattlefieldTheme[] var4 = (BattlefieldTheme[]) null;
+          IntKeyLookup.a((BattlefieldTheme[]) null, (byte) -34);
         }
-        rj.d((byte) 103);
+        rj.releaseSpriteDecodeBuffers((byte) 103);
         return var1;
     }
 
@@ -83,11 +83,11 @@ final class IntKeyLookup {
         }
     }
 
-    final static void a(co[] param0, byte param1) {
+    final static void a(BattlefieldTheme[] param0, byte param1) {
         int var3 = 0;
-        co[] var2 = null;
+        BattlefieldTheme[] var2 = null;
         int var4 = 0;
-        co[] var5 = null;
+        BattlefieldTheme[] var5 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;
@@ -98,7 +98,7 @@ final class IntKeyLookup {
           var5 = param0;
           var2 = var5;
           if (param1 <= 35) {
-            IntKeyLookup.a(-11);
+            IntKeyLookup.buildDecodedIndexedSprites(-11);
           }
           for (var3 = 0; var3 < var5.length; var3++) {
           }

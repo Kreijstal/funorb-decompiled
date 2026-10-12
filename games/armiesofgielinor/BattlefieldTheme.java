@@ -3,31 +3,31 @@
  */
 import java.util.*;
 
-final class co {
-    String field_c;
-    RgbSprite[] field_b;
-    String field_x;
-    String field_a;
+final class BattlefieldTheme {
+    String structureShadowFile;
+    RgbSprite[] structureShadowSprites;
+    String backgroundImageFile;
+    String terrainSpriteFile;
     static int[][] field_p;
-    int field_d;
+    int themeId;
     static String[] field_k;
-    IndexedSprite[] field_m;
-    IndexedSprite[] field_w;
+    IndexedSprite[] foliageSprites;
+    IndexedSprite[] terrainSprites;
     static int field_h;
     static String field_r;
     static int field_f;
-    int[] field_i;
-    String field_e;
-    IndexedSprite[] field_g;
-    RgbSprite[] field_u;
+    int[] terrainPreviewColours;
+    String foliageShadowFile;
+    IndexedSprite[] structureSprites;
+    RgbSprite[] foliageShadowSprites;
     static String field_j;
-    String field_q;
-    private sn[] field_t;
+    String structureSpriteFile;
+    private PcmSample[] ambientSounds;
     static String field_s;
-    String field_v;
-    String[] field_o;
-    String field_l;
-    um field_n;
+    String foliageSpriteFile;
+    String[] ambientSoundNames;
+    String musicTrackName;
+    um musicTrack;
 
     final static boolean a(boolean param0, int param1, int param2, int param3) {
         boolean stackIn_16_0 = false;
@@ -100,35 +100,35 @@ final class co {
         return stackIn_34_0;
     }
 
-    final void a(int param0, p param1) {
-        int var3_int = 0;
-        int var4 = 0;
-        byte[] var5 = null;
+    final void loadAmbientSounds(int obfuscationGuard, p soundCache) {
+        int soundIndex = 0;
+        int obfuscationControl = 0;
+        byte[] discardedBytes = null;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
         String stackIn_12_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
-        var4 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        obfuscationControl = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          if (null == this.field_o) {
+          if (null == this.ambientSoundNames) {
             return;
           }
-          this.field_t = new sn[this.field_o.length];
-          if (param0 != 17952) {
-            var5 = (byte[]) null;
-            co.decodeSingleByteText(102, -75, -58, (byte[]) null);
+          this.ambientSounds = new PcmSample[this.ambientSoundNames.length];
+          if (obfuscationGuard != 17952) {
+            discardedBytes = (byte[]) null;
+            BattlefieldTheme.decodeSingleByteText(102, -75, -58, (byte[]) null);
           }
-          for (var3_int = 0; var3_int < this.field_o.length; var3_int++) {
-            this.field_t[var3_int] = param1.a(this.field_o[var3_int], (byte) -97, "");
+          for (soundIndex = 0; soundIndex < this.ambientSoundNames.length; soundIndex++) {
+            this.ambientSounds[soundIndex] = soundCache.a(this.ambientSoundNames[soundIndex], (byte) -97, "");
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
           stackIn_11_0 = var3;
-          stackIn_11_1 = new StringBuilder().append("co.G(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_11_1 = new StringBuilder().append("co.G(").append(obfuscationGuard).append(',');
+          if (soundCache == null) {
             stackIn_12_2 = "null";
           } else {
             stackIn_12_2 = "{...}";
@@ -137,9 +137,9 @@ final class co {
         }
     }
 
-    final sn b(int param0) {
-        int var2 = 27 % ((50 - param0) / 33);
-        return this.field_t[AttackEvent.nextBoundedInt(false, this.field_t.length, li.field_n)];
+    final PcmSample chooseAmbientSound(int obfuscationGuard) {
+        int var2 = 27 % ((50 - obfuscationGuard) / 33);
+        return this.ambientSounds[AttackEvent.nextBoundedInt(false, this.ambientSounds.length, li.field_n)];
     }
 
     public static void a(byte param0) {
@@ -148,16 +148,16 @@ final class co {
         field_s = null;
         field_k = null;
         if (param0 >= -100) {
-          co.a(true, 87, 46, 119);
+          BattlefieldTheme.a(true, 87, 46, 119);
           field_j = null;
           return;
         }
         field_j = null;
     }
 
-    final RgbSprite c(byte param0) {
-        int var2 = -68 / ((53 - param0) / 32);
-        return this.c(34);
+    final RgbSprite loadBackgroundImage(byte obfuscationGuard) {
+        int var2 = -68 / ((53 - obfuscationGuard) / 32);
+        return this.readBackgroundImage(34);
     }
 
     final static String decodeSingleByteText(int offset, int length, int obfuscationGuard, byte[] bytes) {
@@ -219,70 +219,70 @@ final class co {
         }
     }
 
-    final void a(ResourceArchive param0, int param1, ResourceArchive param2) {
+    final void setResourceArchives(ResourceArchive backgroundArchive, int obfuscationGuard, ResourceArchive spriteArchive) {
         try {
-          SocketResourceClient.field_u = param2;
-          fd.field_m = param0;
-          if (param1 != 0) {
-            this.field_a = (String) null;
+          SocketResourceClient.themeSpriteArchive = spriteArchive;
+          fd.themeBackgroundArchive = backgroundArchive;
+          if (obfuscationGuard != 0) {
+            this.terrainSpriteFile = (String) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "co.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "co.H(" + (backgroundArchive != null ? "{...}" : "null") + ',' + obfuscationGuard + ',' + (spriteArchive != null ? "{...}" : "null") + ')');
         }
     }
 
-    final void a(p param0, ResourceArchive param1, ResourceArchive param2, int param3, ih param4) {
-        if (null == this.field_l ||
-          param4 == null ||
-          param2 == null) {
+    final void prepareMusicSamples(p soundCache, ResourceArchive patchArchive, ResourceArchive musicArchive, int sampleBudget, ih audioEngine) {
+        if (null == this.musicTrackName ||
+          audioEngine == null ||
+          musicArchive == null) {
           return;
         }
-        this.field_n = um.a(param2, "", this.field_l);
-        if (null == this.field_n) {
+        this.musicTrack = um.a(musicArchive, "", this.musicTrackName);
+        if (null == this.musicTrack) {
           return;
         }
         try {
-          param4.a(param0, param1, param3, this.field_n, (byte) 86);
+          audioEngine.a(soundCache, patchArchive, sampleBudget, this.musicTrack, (byte) 86);
         } catch (RuntimeException runtimeException) {
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "co.J(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "co.J(" + (soundCache != null ? "{...}" : "null") + ',' + (patchArchive != null ? "{...}" : "null") + ',' + (musicArchive != null ? "{...}" : "null") + ',' + sampleBudget + ',' + (audioEngine != null ? "{...}" : "null") + ')');
         }
     }
 
-    final void b(byte param0) {
-        if (this.field_b != null) {
+    final void loadSpriteSheets(byte obfuscationGuard) {
+        if (this.structureShadowSprites != null) {
           return;
         }
-        this.field_w = MapLayout.a(this.field_a, -28106, "basic", SocketResourceClient.field_u);
-        this.field_m = MapLayout.a(this.field_v, -28106, "basic", SocketResourceClient.field_u);
-        this.field_g = MapLayout.a(this.field_q, -28106, "basic", SocketResourceClient.field_u);
-        this.field_u = fk.a(this.field_e, (byte) -128, SocketResourceClient.field_u, "basic");
-        if (param0 > -63) {
-          this.field_u = (RgbSprite[]) null;
-          this.field_b = fk.a(this.field_c, (byte) -127, SocketResourceClient.field_u, "basic");
+        this.terrainSprites = MapLayout.loadIndexedSpritesByName(this.terrainSpriteFile, -28106, "basic", SocketResourceClient.themeSpriteArchive);
+        this.foliageSprites = MapLayout.loadIndexedSpritesByName(this.foliageSpriteFile, -28106, "basic", SocketResourceClient.themeSpriteArchive);
+        this.structureSprites = MapLayout.loadIndexedSpritesByName(this.structureSpriteFile, -28106, "basic", SocketResourceClient.themeSpriteArchive);
+        this.foliageShadowSprites = fk.loadRgbSpritesByName(this.foliageShadowFile, (byte) -128, SocketResourceClient.themeSpriteArchive, "basic");
+        if (obfuscationGuard > -63) {
+          this.foliageShadowSprites = (RgbSprite[]) null;
+          this.structureShadowSprites = fk.loadRgbSpritesByName(this.structureShadowFile, (byte) -127, SocketResourceClient.themeSpriteArchive, "basic");
           return;
         }
-        this.field_b = fk.a(this.field_c, (byte) -127, SocketResourceClient.field_u, "basic");
+        this.structureShadowSprites = fk.loadRgbSpritesByName(this.structureShadowFile, (byte) -127, SocketResourceClient.themeSpriteArchive, "basic");
     }
 
-    final void a(int param0) {
-        this.field_b = null;
-        this.field_m = null;
-        this.field_u = null;
-        if (param0 != 0) {
+    final void releaseSprites(int obfuscationGuard) {
+        this.structureShadowSprites = null;
+        this.foliageSprites = null;
+        this.foliageShadowSprites = null;
+        if (obfuscationGuard != 0) {
           field_k = (String[]) null;
-          this.field_w = null;
-          this.field_g = null;
+          this.terrainSprites = null;
+          this.structureSprites = null;
           return;
         }
-        this.field_w = null;
-        this.field_g = null;
+        this.terrainSprites = null;
+        this.structureSprites = null;
     }
 
-    private final RgbSprite c(int param0) {
-        if (param0 != 34) {
+    private final RgbSprite readBackgroundImage(int obfuscationGuard) {
+        if (obfuscationGuard != 34) {
           return (RgbSprite) null;
         }
-        byte[] var3 = fd.field_m.getFileByName(this.field_x, param0 ^ 108, "");
+        byte[] var3 = fd.themeBackgroundArchive.getFileByName(this.backgroundImageFile, obfuscationGuard ^ 108, "");
         byte[] var2 = var3;
         return new RgbSprite(var3, (java.awt.Component) ((Object) VerticalScrollbar.p(0)));
     }

@@ -103,32 +103,32 @@ final class se {
         int[] var21;
         byte[] var22;
         var8 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
-        var1 = new RgbSprite[iw.field_n];
-        for (var2 = 0; iw.field_n > var2; var2++) {
-          var3 = c.field_e[var2] * qm.field_K[var2];
-          var20 = AnimationPlayer.field_j[var2];
-          if (!MapTile.field_e[var2]) {
+        var1 = new RgbSprite[iw.decodedSpriteCount];
+        for (var2 = 0; iw.decodedSpriteCount > var2; var2++) {
+          var3 = c.decodedSpriteHeights[var2] * qm.decodedSpriteWidths[var2];
+          var20 = AnimationPlayer.decodedSpriteIndices[var2];
+          if (!MapTile.decodedSpriteHasAlpha[var2]) {
             var9 = new int[var3];
             var21 = var9;
             for (var6_int = 0; var6_int < var3; var6_int++) {
-              var9[var6_int] = MovementPresentation.field_j[rn.bitwiseAnd(255, (int) var20[var6_int])];
+              var9[var6_int] = MovementPresentation.decodedSpritePalette[rn.bitwiseAnd(255, (int) var20[var6_int])];
             }
-            var1[var2] = new RgbSprite(lg.field_d, wr.field_J, j.field_e[var2], CampaignMenuButton.field_g[var2], qm.field_K[var2], c.field_e[var2], var21);
+            var1[var2] = new RgbSprite(lg.decodedSpriteCanvasWidth, wr.decodedSpriteCanvasHeight, j.decodedSpriteOffsetXs[var2], CampaignMenuButton.decodedSpriteOffsetYs[var2], qm.decodedSpriteWidths[var2], c.decodedSpriteHeights[var2], var21);
           } else {
-            var22 = CampaignMenuEntry.field_z[var2];
+            var22 = CampaignMenuEntry.decodedSpriteAlphas[var2];
             var16 = new int[var3];
             var13 = var16;
             var6 = var13;
             for (var7 = 0; var3 > var7; var7++) {
-              var6[var7] = oe.bitwiseOr(MovementPresentation.field_j[rn.bitwiseAnd((int) var20[var7], 255)], rn.bitwiseAnd((int) var22[var7], 255) << 24);
+              var6[var7] = oe.bitwiseOr(MovementPresentation.decodedSpritePalette[rn.bitwiseAnd((int) var20[var7], 255)], rn.bitwiseAnd((int) var22[var7], 255) << 24);
             }
-            var1[var2] = (RgbSprite) ((Object) new nj(lg.field_d, wr.field_J, j.field_e[var2], CampaignMenuButton.field_g[var2], qm.field_K[var2], c.field_e[var2], var16));
+            var1[var2] = (RgbSprite) ((Object) new nj(lg.decodedSpriteCanvasWidth, wr.decodedSpriteCanvasHeight, j.decodedSpriteOffsetXs[var2], CampaignMenuButton.decodedSpriteOffsetYs[var2], qm.decodedSpriteWidths[var2], c.decodedSpriteHeights[var2], var16));
           }
         }
         if (param0 != 32) {
           return (RgbSprite[]) null;
         }
-        rj.d((byte) 101);
+        rj.releaseSpriteDecodeBuffers((byte) 101);
         return var1;
     }
 

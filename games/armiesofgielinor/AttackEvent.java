@@ -163,7 +163,7 @@ final class AttackEvent extends GameEvent {
         if (null != qc.field_a) {
           qc.field_a.b(true);
         }
-        String var1 = dg.a(-123);
+        String var1 = BattleGraphicsAssets.a(-123);
         ContextActionMenu.field_Qb = new df(var1, (String) null, true, false, false);
         if (param0 >= 75) {
           KingBlackDragonEvent.field_C.a(lt.field_g, 0);

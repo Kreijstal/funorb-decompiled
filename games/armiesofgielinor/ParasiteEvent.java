@@ -32,25 +32,25 @@ final class ParasiteEvent extends GameEvent {
         }
     }
 
-    final static RgbSprite[] g(int param0) {
+    final static RgbSprite[] buildDecodedRgbSprites(int obfuscationGuard) {
         int var2 = 0;
         int var3 = 0;
         byte[] var4 = null;
         int[] var5 = null;
         int var6 = 0;
         int var7 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
-        RgbSprite[] var1 = new RgbSprite[iw.field_n];
-        for (var2 = 0; iw.field_n > var2; var2++) {
-          var3 = qm.field_K[var2] * c.field_e[var2];
-          var4 = AnimationPlayer.field_j[var2];
+        RgbSprite[] var1 = new RgbSprite[iw.decodedSpriteCount];
+        for (var2 = 0; iw.decodedSpriteCount > var2; var2++) {
+          var3 = qm.decodedSpriteWidths[var2] * c.decodedSpriteHeights[var2];
+          var4 = AnimationPlayer.decodedSpriteIndices[var2];
           var5 = new int[var3];
           for (var6 = 0; var3 > var6; var6++) {
-            var5[var6] = MovementPresentation.field_j[rn.bitwiseAnd(255, (int) var4[var6])];
+            var5[var6] = MovementPresentation.decodedSpritePalette[rn.bitwiseAnd(255, (int) var4[var6])];
           }
-          var1[var2] = new RgbSprite(lg.field_d, wr.field_J, j.field_e[var2], CampaignMenuButton.field_g[var2], qm.field_K[var2], c.field_e[var2], var5);
+          var1[var2] = new RgbSprite(lg.decodedSpriteCanvasWidth, wr.decodedSpriteCanvasHeight, j.decodedSpriteOffsetXs[var2], CampaignMenuButton.decodedSpriteOffsetYs[var2], qm.decodedSpriteWidths[var2], c.decodedSpriteHeights[var2], var5);
         }
-        rj.d((byte) 106);
-        if (param0 >= 1) {
+        rj.releaseSpriteDecodeBuffers((byte) 106);
+        if (obfuscationGuard >= 1) {
           return var1;
         }
         field_A = (String[]) null;

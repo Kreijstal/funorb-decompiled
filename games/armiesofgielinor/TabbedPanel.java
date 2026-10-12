@@ -11,11 +11,11 @@ final class TabbedPanel extends ClientUiComponent {
 
     final static void a(p param0, byte param1) {
         int var2_int = 0;
-        sn var3 = null;
+        PcmSample var3 = null;
         int var4 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           wh.field_f = false;
-          MoveAttackRequest.field_v = new sn[47];
+          MoveAttackRequest.field_v = new PcmSample[47];
           for (var2_int = 0; var2_int < 47; var2_int++) {
             var3 = param0.a(wl.field_M[var2_int], (byte) -97, "");
             if (var3 == null) {

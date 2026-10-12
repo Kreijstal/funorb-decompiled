@@ -118,7 +118,7 @@ final class ls {
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (!kp.a(false, param2, param1, param0)) {
+          if (!kp.decodeSpriteSheetFromArchive(false, param2, param1, param0)) {
             return null;
           }
           if (param3 <= -2) {

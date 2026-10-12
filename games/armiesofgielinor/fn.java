@@ -372,7 +372,7 @@ class fn extends fw {
         RgbSprite var16 = null;
         var15 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          param3.i();
+          param3.normalizeCanvas();
           var4_int = 0;
           var5 = param3.pixelWidth / 2;
           if (param0 != 8678) {

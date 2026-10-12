@@ -309,10 +309,10 @@ abstract class nl extends Widget implements gw {
           jn.field_b = param8;
           ju.field_a = param9;
           TextCursor.field_d = param2;
-          rs.field_p = fk.a("gameprivacy", (byte) -128, param7, "lobby");
-          ResourceProtocolClient.field_d = fk.a("ratedgame", (byte) -125, param7, "lobby");
-          ChatMessage.field_g = fk.a("opentome", (byte) -124, param7, "lobby");
-          lm.field_h = fk.a("allowspectators", (byte) -125, param7, "lobby");
+          rs.field_p = fk.loadRgbSpritesByName("gameprivacy", (byte) -128, param7, "lobby");
+          ResourceProtocolClient.field_d = fk.loadRgbSpritesByName("ratedgame", (byte) -125, param7, "lobby");
+          ChatMessage.field_g = fk.loadRgbSpritesByName("opentome", (byte) -124, param7, "lobby");
+          lm.field_h = fk.loadRgbSpritesByName("allowspectators", (byte) -125, param7, "lobby");
           ResourceRequest.field_u = new String[5];
           ResourceRequest.field_u[1] = pc.field_i;
           ResourceRequest.field_u[3] = ek.field_f;

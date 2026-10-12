@@ -467,15 +467,15 @@ final class InstructionsPanel {
           if (var8 < 0) {
             return;
           }
-          if (null != l.field_b &&
+          if (null != l.activeStructureSprites &&
             0 <= param5 &&
-            l.field_b.length > param5 &&
-            null != l.field_b[param5] &&
-            l.field_b.length != 0) {
+            l.activeStructureSprites.length > param5 &&
+            null != l.activeStructureSprites[param5] &&
+            l.activeStructureSprites.length != 0) {
             if (2 == var8) {
-              if (17 < l.field_b.length &&
-                l.field_b.length > 16) {
-                l.field_b[17].draw(db.a(true, param0), MatchConditionEntry.a(-40 + param1, (byte) 94));
+              if (17 < l.activeStructureSprites.length &&
+                l.activeStructureSprites.length > 16) {
+                l.activeStructureSprites[17].draw(db.a(true, param0), MatchConditionEntry.a(-40 + param1, (byte) 94));
                 var9 = 1;
                 if (null == ds.field_a ||
                   !(param2 < ds.field_a.length)) {
@@ -491,16 +491,16 @@ final class InstructionsPanel {
                 if (-1 < param2) {
                   ResourceRequest.a(ActionRequest.unitModels[76][param2], false, MatchConditionEntry.a(-40 + param1, (byte) 94), this.illustrationAnimation, 128, 150, db.a(true, param0), (MeshData) null, -10374);
                 }
-                l.field_b[16].draw(db.a(true, param0), MatchConditionEntry.a(param1 - 40, (byte) 94));
+                l.activeStructureSprites[16].draw(db.a(true, param0), MatchConditionEntry.a(param1 - 40, (byte) 94));
                 return;
               }
               return;
             }
             if (var8 == 1) {
-              if (l.field_b.length <= 8) {
+              if (l.activeStructureSprites.length <= 8) {
                 return;
               }
-              l.field_b[8].draw(db.a(true, param0), MatchConditionEntry.a(-50 + param1, (byte) 94));
+              l.activeStructureSprites[8].draw(db.a(true, param0), MatchConditionEntry.a(-50 + param1, (byte) 94));
               if (param2 > -1 &&
                 param2 < op.field_c.length) {
                 wb.a(7816226, db.a(true, param0 + 21), param2, var7, MatchConditionEntry.a(-30 + param1, (byte) 94));
@@ -508,10 +508,10 @@ final class InstructionsPanel {
             } else {
               if (0 != var8) {
                 if (var8 == 8) {
-                  if (11 >= l.field_b.length) {
+                  if (11 >= l.activeStructureSprites.length) {
                     return;
                   }
-                  l.field_b[11].draw(db.a(true, param0), MatchConditionEntry.a(-10 + (param1 - 40), (byte) 94));
+                  l.activeStructureSprites[11].draw(db.a(true, param0), MatchConditionEntry.a(-10 + (param1 - 40), (byte) 94));
                   if (param2 > -1 &&
                     op.field_c.length > param2) {
                     wb.a(7816226, db.a(true, param0 + 20), param2, var7, MatchConditionEntry.a(param1 - 20, (byte) 94));
@@ -519,10 +519,10 @@ final class InstructionsPanel {
                   }
                 }
               } else {
-                if (l.field_b.length <= 0) {
+                if (l.activeStructureSprites.length <= 0) {
                   return;
                 }
-                l.field_b[0].draw(db.a(true, param0), MatchConditionEntry.a(-40 + param1, (byte) 94));
+                l.activeStructureSprites[0].draw(db.a(true, param0), MatchConditionEntry.a(-40 + param1, (byte) 94));
                 if (param2 > -1 &&
                   op.field_c.length > param2) {
                   wb.a(param3 + 7841939, db.a(true, 20 + param0), param2, var7, MatchConditionEntry.a(10 + param1, (byte) 94));
@@ -1436,19 +1436,19 @@ final class InstructionsPanel {
     }
 
     private final void a(int param0, int param1, int param2, byte param3, int param4) {
-        if (l.field_b != null &&
+        if (l.activeStructureSprites != null &&
           param2 >= 0 &&
-          l.field_b.length > param2) {
-          if (null != l.field_b &&
+          l.activeStructureSprites.length > param2) {
+          if (null != l.activeStructureSprites &&
             param1 >= 0 &&
-            l.field_b.length > param1) {
+            l.activeStructureSprites.length > param1) {
             if (param3 != 114) {
               this.j((byte) 86);
             }
-            if (null == l.field_b[param1]) {
+            if (null == l.activeStructureSprites[param1]) {
               return;
             }
-            l.field_b[param1].d(db.a(true, param0), MatchConditionEntry.a(-20 + param4, (byte) 94));
+            l.activeStructureSprites[param1].d(db.a(true, param0), MatchConditionEntry.a(-20 + param4, (byte) 94));
             return;
           }
           return;
@@ -1467,10 +1467,10 @@ final class InstructionsPanel {
         String var14;
         int var11Lifetime1;
         var13 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
-        if (nr.field_c != null &&
+        if (nr.activeFoliageSprites != null &&
           param0 >= 0 &&
-          param0 < nr.field_c.length &&
-          null != nr.field_c[param0]) {
+          param0 < nr.activeFoliageSprites.length &&
+          null != nr.activeFoliageSprites[param0]) {
           if (param1 < 71) {
             var14 = (String) null;
             discarded$0 = this.a(55, (String[]) null, (String) null, 27, -41, -10, 103, 60, -125);
@@ -1496,9 +1496,9 @@ final class InstructionsPanel {
             var7 = var7 >> 1;
             param2 = param2 >> 1;
             if (0 <= var11Lifetime1 &&
-              nr.field_c.length > var11Lifetime1 &&
-              nr.field_c[var11Lifetime1] != null) {
-              var12 = nr.field_c[var11Lifetime1];
+              nr.activeFoliageSprites.length > var11Lifetime1 &&
+              nr.activeFoliageSprites[var11Lifetime1] != null) {
+              var12 = nr.activeFoliageSprites[var11Lifetime1];
               if (param3) {
                 var12.d(db.a(true, var8 + param4), MatchConditionEntry.a(var9 + param5, (byte) 94));
               } else {

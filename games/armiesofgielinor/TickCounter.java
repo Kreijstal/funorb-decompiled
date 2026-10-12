@@ -533,7 +533,7 @@ final class TickCounter {
                 }
                 var2 = fk.a(false, "TXT_REQUIRES");
                 if (null != var2) {
-                  co.field_s = uu.a(var2, (byte) -93);
+                  BattlefieldTheme.field_s = uu.a(var2, (byte) -93);
                 }
                 var2 = fk.a(false, "TXT_REQUIRESPRESTIGE");
                 if (var2 != null) {
@@ -1503,7 +1503,7 @@ final class TickCounter {
                 }
                 var2 = fk.a(false, "GROUND_TIP_TEMPLE");
                 if (null != var2) {
-                  dg.field_a = uu.a(var2, (byte) -124);
+                  BattleGraphicsAssets.field_a = uu.a(var2, (byte) -124);
                 }
                 var2 = fk.a(false, "GROUND_TIP_VILLAGE");
                 if (var2 != null) {
@@ -5728,12 +5728,12 @@ final class TickCounter {
                   var11 = CipherPacketBuffer.currentBattlefield.getPlayerTeamIndex(var11, -1);
                 }
                 if (var10 == 2) {
-                  l.field_b[17].b(param7, -40 + param3, param0, param8);
+                  l.activeStructureSprites[17].b(param7, -40 + param3, param0, param8);
                   mv.a(param7 + 20, (byte) -95, ug.field_b + param4, var11, param3);
                   if (var11 > -1) {
                     ResourceRequest.a(ActionRequest.unitModels[76][var11], false, -40 + param3, PaletteRegionMap.field_g, 128, 150, param7, (MeshData) null, -10374);
                   }
-                  l.field_b[16].b(param7, -40 + param3, param0, param8);
+                  l.activeStructureSprites[16].b(param7, -40 + param3, param0, param8);
                 }
                 if (var10 == 3) {
                   if (var11 > -1) {
@@ -5745,7 +5745,7 @@ final class TickCounter {
                   var13 != 0) &&
                   (!param1)) {
                   if (var10 == 1) {
-                    l.field_b[8 + var9_int % 3].b(param7, -50 + param3, param0, param8);
+                    l.activeStructureSprites[8 + var9_int % 3].b(param7, -50 + param3, param0, param8);
                     if (var11 <= -1) {
                       break regionExit1;
                     }
@@ -5756,13 +5756,13 @@ final class TickCounter {
                     if (8 != var10) {
                       switch (var10) {
                         case 9:
-                          l.field_b[var9_int % 2 + 14].draw(param7, -40 + param3);
+                          l.activeStructureSprites[var9_int % 2 + 14].draw(param7, -40 + param3);
                           if (var13 == 0) {
                             break regionExit1;
                           }
                           break;
                         case 0:
-                          l.field_b[0 + var9_int % 8].b(param7, param3 - 40, param0, param8);
+                          l.activeStructureSprites[0 + var9_int % 8].b(param7, param3 - 40, param0, param8);
                           if (var11 <= -1) {
                             break regionExit1;
                           }
@@ -5795,14 +5795,14 @@ final class TickCounter {
                     } else {
                       var12 -= 10;
                     }
-                    l.field_b[var9_int % 2 + 11].b(param7, -50 + param3, param0, param8);
+                    l.activeStructureSprites[var9_int % 2 + 11].b(param7, -50 + param3, param0, param8);
                     if (var11 > -1) {
                       wb.a(7816226, param7 + 22, var11, param4 + ug.field_b, param3 + var12);
                     }
                   }}}
             }
             if (vs.field_e[param4].hasCorpse(-26)) {
-              es.field_d[var9_int % 4].b(param7, -25 + param3, param0, param8);
+              es.boneSprites[var9_int % 4].b(param7, -25 + param3, param0, param8);
             }
             var11 = CipherPacketBuffer.currentBattlefield.getTileEffects(param5 + 31, param2, param6, -1);
             var12 = vs.field_e[param4].terrainType;

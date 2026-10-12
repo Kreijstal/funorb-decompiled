@@ -36,7 +36,7 @@ final class DualNodeIterator implements Iterator {
           if (param2 != 0) {
             packetJitterMillis = 2.5194855074937275;
           }
-          if (!kp.a(false, param3, param0, param1)) {
+          if (!kp.decodeSpriteSheetFromArchive(false, param3, param0, param1)) {
             return null;
           }
           stackIn_6_0 = LeaderEscortCondition.a(param4.getFile((byte) 58, param1, param3), 126);

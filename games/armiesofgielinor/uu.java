@@ -465,7 +465,7 @@ final class uu {
         RuntimeException decompiledCaughtException = null;
         try {
           var2_int = -73 / ((param1 + 45) / 47);
-          stackIn_1_0 = co.decodeSingleByteText(0, param0.length, -112, param0);
+          stackIn_1_0 = BattlefieldTheme.decodeSingleByteText(0, param0.length, -112, param0);
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

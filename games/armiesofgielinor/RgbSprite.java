@@ -980,7 +980,7 @@ class RgbSprite extends RgbSpriteBase {
         throw new IllegalArgumentException();
     }
 
-    final void i() {
+    final void normalizeCanvas() {
         int var2 = 0;
         int var3 = 0;
         if (this.pixelWidth == this.canvasWidth &&

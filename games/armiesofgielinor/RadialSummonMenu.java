@@ -9,7 +9,7 @@ final class RadialSummonMenu {
     private int layoutRadius;
     static int field_d;
 
-    final static te a(byte param0, sn param1) {
+    final static te a(byte param0, PcmSample param1) {
         RuntimeException var2 = null;
         te stackIn_2_0 = null;
         te stackIn_4_0 = null;
@@ -42,8 +42,8 @@ final class RadialSummonMenu {
         int var7 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         int var6 = 0;
         if (obfuscationGuard != 117) {
-          sn var8 = (sn) null;
-          RadialSummonMenu.$cfr$intArgs$a$6d836999ad61(7, (sn) null);
+          PcmSample var8 = (PcmSample) null;
+          RadialSummonMenu.$cfr$intArgs$a$6d836999ad61(7, (PcmSample) null);
         }
         while (this.itemCount > var6) {
           if (this.items[var6].containsPoint(42, pointerX, originY, originX, pointerY)) {
@@ -279,7 +279,7 @@ final class RadialSummonMenu {
     }
 
     /* Full JVM integer arguments; original narrow signature preserved. */
-    final static te $cfr$intArgs$a$6d836999ad61(int param0, sn param1) {
+    final static te $cfr$intArgs$a$6d836999ad61(int param0, PcmSample param1) {
         RuntimeException var2 = null;
         te stackIn_2_0 = null;
         te stackIn_4_0 = null;

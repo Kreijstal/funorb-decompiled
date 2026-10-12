@@ -9,7 +9,7 @@ final class SocketResourceClient extends ResourceProtocolClient {
     private BufferedSocket socket;
     static String field_x;
     static String field_s;
-    static ResourceArchive field_u;
+    static ResourceArchive themeSpriteArchive;
 
     final void close(int obfuscationGuard) {
         if (obfuscationGuard != -5758) {
@@ -124,7 +124,7 @@ final class SocketResourceClient extends ResourceProtocolClient {
     public static void e(int param0) {
         field_s = null;
         field_v = null;
-        field_u = null;
+        themeSpriteArchive = null;
         field_x = null;
         if (param0 != -4096) {
           field_w = (String) null;
@@ -478,8 +478,8 @@ final class SocketResourceClient extends ResourceProtocolClient {
     final static void a(byte param0, RgbSprite[] param1, RgbSprite param2) {
         try {
           vg.field_q = param1;
-          vg.field_q[0].i();
-          vg.field_q[1].i();
+          vg.field_q[0].normalizeCanvas();
+          vg.field_q[1].normalizeCanvas();
           DeployEvent.field_z = param2;
           ac.field_m = vg.field_q[0].pixelHeight;
           if (param0 < 118) {

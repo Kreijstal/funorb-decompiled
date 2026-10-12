@@ -3,7 +3,7 @@
  */
 final class fd extends IntrusiveNode {
     int field_k;
-    static ResourceArchive field_m;
+    static ResourceArchive themeBackgroundArchive;
     static String field_o;
     static String field_l;
     AnimationFrameSet field_p;
@@ -28,7 +28,7 @@ final class fd extends IntrusiveNode {
 
     public static void a(int param0) {
         field_o = null;
-        field_m = null;
+        themeBackgroundArchive = null;
         if (param0 == -30097) {
           field_n = (String[][]) null;
           field_l = null;

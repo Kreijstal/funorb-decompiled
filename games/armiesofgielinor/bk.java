@@ -8,7 +8,7 @@ final class bk {
     static DualNodeHashTable ignoredAccountsByName;
     static String field_c;
     static NodeDeque field_e;
-    static IndexedSprite[] field_d;
+    static IndexedSprite[] attackTargetSprites;
     static String field_h;
 
     final static void a(boolean param0, boolean param1, af param2, int param3, int param4) {
@@ -331,7 +331,7 @@ final class bk {
           return;
         }
         try {
-          field_d = null;
+          attackTargetSprites = null;
           field_g = null;
           field_f = null;
         } catch (RuntimeException runtimeException) {

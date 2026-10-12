@@ -192,7 +192,7 @@ final class qs extends IntrusiveNode {
         return var1;
     }
 
-    final sn a(int[] param0) {
+    final PcmSample a(int[] param0) {
         int var5 = 0;
         int incrementValue$0 = 0;
         int var3;
@@ -242,7 +242,7 @@ final class qs extends IntrusiveNode {
         this.field_O = null;
         var12 = this.field_w;
         this.field_w = null;
-        return new sn(this.field_m, var12, this.field_D, this.field_S, this.field_z);
+        return new PcmSample(this.field_m, var12, this.field_D, this.field_S, this.field_z);
     }
 
     private final float[] f(int param0) {
@@ -628,7 +628,7 @@ final class qs extends IntrusiveNode {
         return true;
     }
 
-    final sn c() {
+    final PcmSample c() {
         int var3 = 0;
         int var6 = 0;
         int incrementValue$0 = 0;
@@ -660,7 +660,7 @@ final class qs extends IntrusiveNode {
           }
         }
         this.field_O = null;
-        return new sn(this.field_m, var1, this.field_D, this.field_S, this.field_z);
+        return new PcmSample(this.field_m, var1, this.field_D, this.field_S, this.field_z);
     }
 
     final static qs a(ResourceArchive param0, String param1, String param2) {

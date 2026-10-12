@@ -378,7 +378,7 @@ final class ib extends mk {
                 var12 = fo.a(4800, VerticalScrollbar.field_Jb, new String[]{Integer.toString(el.field_f[kd.field_X][var9_int])});
               }
               if (var12 != null) {
-                var19 = fo.a(4800, co.field_s, new String[]{(String) (var12)});
+                var19 = fo.a(4800, BattlefieldTheme.field_s, new String[]{(String) (var12)});
                 var12 = var19;
                 var13Lifetime1Lifetime1 = en.field_E.a(var19);
                 if (var13Lifetime1Lifetime1 + param4 > db.a(true, 620)) {

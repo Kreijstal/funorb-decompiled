@@ -182,7 +182,7 @@ final class BufferedFile {
             stackIn_2_0 = (nc) null;
             return stackIn_2_0;
           }
-          if (!kp.a(false, param1, param0, param4)) {
+          if (!kp.decodeSpriteSheetFromArchive(false, param1, param0, param4)) {
             return null;
           }
           stackIn_7_0 = lq.a(param2.getFile((byte) 103, param4, param1), 0);

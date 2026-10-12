@@ -8,7 +8,7 @@ final class iw extends IntrusiveNode {
     static ResourceArchive field_l;
     int field_s;
     static String field_o;
-    static int field_n;
+    static int decodedSpriteCount;
     int field_r;
     int field_t;
     int field_q;

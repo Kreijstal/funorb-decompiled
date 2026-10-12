@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class wr extends hs implements he {
-    static int field_J;
+    static int decodedSpriteCanvasHeight;
     private no field_M;
     static int campaignPacketWord3;
     private fw field_K;
@@ -48,7 +48,7 @@ final class wr extends hs implements he {
           var4 = vu.field_Q.font.getParagraphHeight(param1, 272, vu.field_Q.textLineSpacing);
           var5 = -(var4 / 2) + var3 / 2 - 103;
           if (param0 < 27) {
-            field_J = -20;
+            decodedSpriteCanvasHeight = -20;
           }
           qc.field_c.setBounds(-(var5 * 2) + (-120 + var3), -20500, 320, var5, (var2_int - 320) / 2);
           qc.field_c.skinSprites = tq.a(11579568, false, qc.field_c.height, 2105376, 3, 8421504);

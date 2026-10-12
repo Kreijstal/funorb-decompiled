@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 abstract class wf extends iv {
-    static RgbSprite[] field_B;
+    static RgbSprite[] boneShadowSprites;
     static String field_u;
     static int[] field_y;
     static String field_A;
@@ -72,7 +72,7 @@ abstract class wf extends iv {
         field_q = null;
         field_F = null;
         field_y = null;
-        field_B = null;
+        boneShadowSprites = null;
     }
 
     private final void a(boolean param0, boolean param1) {
@@ -302,7 +302,7 @@ abstract class wf extends iv {
               if (fq.field_h.b(0)) {
                 var12 = fq.field_h.a(3);
                 if (var12 != null) {
-                  var7 = co.decodeSingleByteText(0, var12.position, -127, var12.payload);
+                  var7 = BattlefieldTheme.decodeSingleByteText(0, var12.position, -127, var12.payload);
                   df.a(var7, -73);
                 } else {
                   var9 = (String) null;
@@ -461,7 +461,7 @@ abstract class wf extends iv {
             }
           }
           if (param0 != 12) {
-            field_B = (RgbSprite[]) null;
+            boneShadowSprites = (RgbSprite[]) null;
           }
           return;
         }
@@ -493,7 +493,7 @@ abstract class wf extends iv {
           this.k(-13);
         }
         if (param4 <= 6) {
-          field_B = (RgbSprite[]) null;
+          boneShadowSprites = (RgbSprite[]) null;
         }
     }
 

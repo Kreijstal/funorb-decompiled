@@ -170,9 +170,9 @@ final class CampaignMenu {
             CampaignMenu.d((byte) -46);
           }
           DeployAction.field_D = new RgbSprite[3];
-          DeployAction.field_D[0] = DiskCacheRequest.a("takenicon_zamorak", "campaign", iw.field_l, false);
-          DeployAction.field_D[1] = DiskCacheRequest.a("takenicon_saradomin", "campaign", iw.field_l, false);
-          DeployAction.field_D[2] = DiskCacheRequest.a("takenicon_guthix", "campaign", iw.field_l, false);
+          DeployAction.field_D[0] = DiskCacheRequest.loadRgbSpriteByName("takenicon_zamorak", "campaign", iw.field_l, false);
+          DeployAction.field_D[1] = DiskCacheRequest.loadRgbSpriteByName("takenicon_saradomin", "campaign", iw.field_l, false);
+          DeployAction.field_D[2] = DiskCacheRequest.loadRgbSpriteByName("takenicon_guthix", "campaign", iw.field_l, false);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -1011,7 +1011,7 @@ final class CampaignMenu {
                 var16 = stackIn_26_0;
                 while (var16 < var13[0].length) {
                   var17 = var13[var15_int][-var16 + var13[0].length - 1];
-                  var18 = UnitLossCondition.field_d[var7.mapTheme].field_i[var17];
+                  var18 = UnitLossCondition.battlefieldThemes[var7.mapTheme].terrainPreviewColours[var17];
                   var19_int = db.a(true, var8Lifetime1 + var9Lifetime1 * (var14 - var16) + var5);
                   var20 = MatchConditionEntry.a(var6Lifetime1 + var10Lifetime1 * var15_int, (byte) 94);
                   SoftwareRaster.f(var19_int, var20, var9Lifetime1, var10Lifetime1, var18);
@@ -1359,7 +1359,7 @@ final class CampaignMenu {
               if (stackIn_20_0 >= stackIn_20_1) {
                 terrainType = 0;
               }
-              tileColour = UnitLossCondition.field_d[layout.mapTheme].field_i[terrainType];
+              tileColour = UnitLossCondition.battlefieldThemes[layout.mapTheme].terrainPreviewColours[terrainType];
               if (null != tile.occupant) {
                 unit = tile.occupant;
                 tileColour = op.field_c[0][unit.ownerPlayer];

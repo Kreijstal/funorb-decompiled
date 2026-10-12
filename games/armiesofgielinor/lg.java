@@ -8,7 +8,7 @@ final class lg {
     static int[][] field_b;
     static QuickChatCommandDefinition field_e;
     static String field_c;
-    static int field_d;
+    static int decodedSpriteCanvasWidth;
 
     final static void a(int param0, ResourceArchive param1) {
         RgbSprite var2 = null;

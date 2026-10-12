@@ -199,7 +199,7 @@ final class UiSelectionState {
               }
               var6 = kp.getChatFilter(var4_int, -119);
               we.field_g[var4_int].sprite = dh.field_n[var6];
-              ResourceProtocolClient.field_j[var4_int].text = co.field_k[var6];
+              ResourceProtocolClient.field_j[var4_int].text = BattlefieldTheme.field_k[var6];
             }
           }
           if (UnitLossCondition.field_f.pressedButton != 0) {

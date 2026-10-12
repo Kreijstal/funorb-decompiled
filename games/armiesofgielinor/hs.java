@@ -220,7 +220,7 @@ abstract class hs extends Widget implements gw {
             var13++;
           }
           if (param2.equipmentDescriptor > -1) {
-            BattleCharacter.field_h[co.field_p[param2.getEquipmentCategory(20640)][param2.getEquipmentId((byte) 81)]].h(235 + param4 - (var13 & 3) * 30, (var13 >> 2) * 30 + param7 + (-36 + param6));
+            BattleCharacter.field_h[BattlefieldTheme.field_p[param2.getEquipmentCategory(20640)][param2.getEquipmentId((byte) 81)]].h(235 + param4 - (var13 & 3) * 30, (var13 >> 2) * 30 + param7 + (-36 + param6));
             km.field_h[0].h(-((var13 & 3) * 30) + (param4 + 233), (var13 >> 2) * 30 - 37 + param6 + param7);
             var13++;
           }
@@ -739,9 +739,9 @@ abstract class hs extends Widget implements gw {
         if (param1 < 0) {
           return;
         }
-        sn var3 = MoveAttackRequest.field_v[param1];
+        PcmSample var3 = MoveAttackRequest.field_v[param1];
         if (var3 != null &&
-          0 != var3.field_o.length) {
+          0 != var3.samples.length) {
           RadialSummonMenu.$cfr$intArgs$a$6d836999ad61(127, var3);
         }
     }

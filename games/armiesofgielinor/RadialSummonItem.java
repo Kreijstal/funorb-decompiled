@@ -139,7 +139,7 @@ final class RadialSummonItem {
             var10 = (param0 + param3 / (4 + (param0 & 3))) % 3;
             param0 = param0 >> 1;
             var5_int = var5_int >> 1;
-            jq.field_G[var10].h(60 + var6, 50 + var7);
+            jq.kalphiteSprites[var10].h(60 + var6, 50 + var7);
             var9++;
             if (var11 != 0) {
               return;

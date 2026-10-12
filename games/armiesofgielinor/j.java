@@ -10,7 +10,7 @@ final class j {
     private FixedQuaternion field_f;
     private int field_g;
     private FixedQuaternion field_a;
-    static int[] field_e;
+    static int[] decodedSpriteOffsetXs;
     private int field_k;
     static String field_d;
 
@@ -33,7 +33,7 @@ final class j {
         int var1 = 92 % ((param0 - 88) / 37);
         field_j = null;
         field_d = null;
-        field_e = null;
+        decodedSpriteOffsetXs = null;
     }
 
     final static void a(byte param0) {
@@ -183,7 +183,7 @@ final class j {
           var7 = param4;
           param2[0] = var6_int;
           if (param0 <= 49) {
-            field_e = (int[]) null;
+            decodedSpriteOffsetXs = (int[]) null;
           }
           var8 = this.field_h.transformedPosition[1];
           param2[1] = var7;

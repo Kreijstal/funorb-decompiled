@@ -301,16 +301,16 @@ final class rj extends Widget {
         this.field_K = new RgbSprite(this.height >> 1, this.height);
     }
 
-    final static void d(byte param0) {
-        c.field_e = null;
-        qm.field_K = null;
-        j.field_e = null;
-        AnimationPlayer.field_j = (byte[][]) null;
-        if (param0 < 96) {
+    final static void releaseSpriteDecodeBuffers(byte obfuscationGuard) {
+        c.decodedSpriteHeights = null;
+        qm.decodedSpriteWidths = null;
+        j.decodedSpriteOffsetXs = null;
+        AnimationPlayer.decodedSpriteIndices = (byte[][]) null;
+        if (obfuscationGuard < 96) {
           return;
         }
-        MovementPresentation.field_j = null;
-        CampaignMenuButton.field_g = null;
+        MovementPresentation.decodedSpritePalette = null;
+        CampaignMenuButton.decodedSpriteOffsetYs = null;
     }
 
     private rj(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {

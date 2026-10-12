@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 class nr {
-    static IndexedSprite[] field_c;
+    static IndexedSprite[] activeFoliageSprites;
     static d field_e;
     static int[] field_a;
     static String field_d;
@@ -150,7 +150,7 @@ class nr {
 
     public static void a(byte param0) {
         field_a = null;
-        field_c = null;
+        activeFoliageSprites = null;
         field_d = null;
         if (param0 == -119) {
           field_e = null;

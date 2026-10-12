@@ -216,8 +216,8 @@ final class vv {
               if (var12.ownerPlayer == MapTile.field_i &&
                 !var12.movementSpent &&
                 NetworkResourceRequest.field_C.field_L > 0) {
-                TeamRoster.field_g.f(10 + param0, param5 + 5, (int)(256.0 * Math.sin((double)NetworkResourceRequest.field_C.field_L * 3.141592653589793 / 200.0)));
-                TeamRoster.field_g.f(10 + param0, 5 + param5, (int)(256.0 * Math.sin((double)NetworkResourceRequest.field_C.field_L * 3.141592653589793 / 200.0)));
+                TeamRoster.playerRingSprite.f(10 + param0, param5 + 5, (int)(256.0 * Math.sin((double)NetworkResourceRequest.field_C.field_L * 3.141592653589793 / 200.0)));
+                TeamRoster.playerRingSprite.f(10 + param0, 5 + param5, (int)(256.0 * Math.sin((double)NetworkResourceRequest.field_C.field_L * 3.141592653589793 / 200.0)));
               }
               if (var9.isStructure(false) &&
                 !CipherPacketBuffer.currentBattlefield.arePlayersAllied(var9.ownerPlayer, -16985, var12.ownerPlayer) &&
@@ -253,12 +253,12 @@ final class vv {
                 SoftwareRaster.f(stackIn_48_0, stackIn_48_1, stackIn_49_2, stackIn_51_3, stackIn_51_4[stackIn_52_5][CipherPacketBuffer.currentBattlefield.getPlayerTeamIndex(var12.ownerPlayer, -1)]);
               }
               if (param4 > 0) {
-                bk.field_d[1].b(30 + param0, -50 + param5, param4, 0);
+                bk.attackTargetSprites[1].b(30 + param0, -50 + param5, param4, 0);
               }
             }
           } else {
             if (var12.attacksRemaining == 0) {
-              LobbyPlayer.field_Mb[2].draw(param0 + 8, param5 + 12);
+              LobbyPlayer.cannotMoveSprites[2].draw(param0 + 8, param5 + 12);
               if (var12.accessoryType == 1) {
                 ReportAbuseDialog.a(false, param5, param0);
               }
@@ -272,8 +272,8 @@ final class vv {
                 if (var12.ownerPlayer == MapTile.field_i &&
                   !var12.movementSpent &&
                   NetworkResourceRequest.field_C.field_L > 0) {
-                  TeamRoster.field_g.f(10 + param0, param5 + 5, (int)(256.0 * Math.sin((double)NetworkResourceRequest.field_C.field_L * 3.141592653589793 / 200.0)));
-                  TeamRoster.field_g.f(10 + param0, 5 + param5, (int)(256.0 * Math.sin((double)NetworkResourceRequest.field_C.field_L * 3.141592653589793 / 200.0)));
+                  TeamRoster.playerRingSprite.f(10 + param0, param5 + 5, (int)(256.0 * Math.sin((double)NetworkResourceRequest.field_C.field_L * 3.141592653589793 / 200.0)));
+                  TeamRoster.playerRingSprite.f(10 + param0, 5 + param5, (int)(256.0 * Math.sin((double)NetworkResourceRequest.field_C.field_L * 3.141592653589793 / 200.0)));
                 }
                 if (var9.isStructure(false) &&
                   !CipherPacketBuffer.currentBattlefield.arePlayersAllied(var9.ownerPlayer, -16985, var12.ownerPlayer) &&
@@ -309,11 +309,11 @@ final class vv {
                   SoftwareRaster.f(stackIn_130_0, stackIn_130_1, stackIn_131_2, stackIn_133_3, stackIn_133_4[stackIn_134_5][CipherPacketBuffer.currentBattlefield.getPlayerTeamIndex(var12.ownerPlayer, -1)]);
                 }
                 if (param4 > 0) {
-                  bk.field_d[1].b(30 + param0, -50 + param5, param4, 0);
+                  bk.attackTargetSprites[1].b(30 + param0, -50 + param5, param4, 0);
                 }
               }
             } else {
-              LobbyPlayer.field_Mb[1].draw(param0 + 8, param5 + 12);
+              LobbyPlayer.cannotMoveSprites[1].draw(param0 + 8, param5 + 12);
               if (var12.accessoryType == 1) {
                 ReportAbuseDialog.a(false, param5, param0);
               }
@@ -327,8 +327,8 @@ final class vv {
                 if (var12.ownerPlayer == MapTile.field_i &&
                   !var12.movementSpent &&
                   NetworkResourceRequest.field_C.field_L > 0) {
-                  TeamRoster.field_g.f(10 + param0, param5 + 5, (int)(256.0 * Math.sin((double)NetworkResourceRequest.field_C.field_L * 3.141592653589793 / 200.0)));
-                  TeamRoster.field_g.f(10 + param0, 5 + param5, (int)(256.0 * Math.sin((double)NetworkResourceRequest.field_C.field_L * 3.141592653589793 / 200.0)));
+                  TeamRoster.playerRingSprite.f(10 + param0, param5 + 5, (int)(256.0 * Math.sin((double)NetworkResourceRequest.field_C.field_L * 3.141592653589793 / 200.0)));
+                  TeamRoster.playerRingSprite.f(10 + param0, 5 + param5, (int)(256.0 * Math.sin((double)NetworkResourceRequest.field_C.field_L * 3.141592653589793 / 200.0)));
                 }
                 if (var9.isStructure(false) &&
                   !CipherPacketBuffer.currentBattlefield.arePlayersAllied(var9.ownerPlayer, -16985, var12.ownerPlayer) &&
@@ -364,7 +364,7 @@ final class vv {
                   SoftwareRaster.f(stackIn_89_0, stackIn_89_1, stackIn_90_2, stackIn_92_3, stackIn_92_4[stackIn_93_5][CipherPacketBuffer.currentBattlefield.getPlayerTeamIndex(var12.ownerPlayer, -1)]);
                 }
                 if (param4 > 0) {
-                  bk.field_d[1].b(30 + param0, -50 + param5, param4, 0);
+                  bk.attackTargetSprites[1].b(30 + param0, -50 + param5, param4, 0);
                 }
               }
             }
@@ -418,7 +418,7 @@ final class vv {
             SoftwareRaster.f(stackIn_166_0, stackIn_166_1, stackIn_167_2, stackIn_169_3, stackIn_169_4[stackIn_170_5][CipherPacketBuffer.currentBattlefield.getPlayerTeamIndex(var12.ownerPlayer, -1)]);
           }
           if (param4 > 0) {
-            bk.field_d[1].b(30 + param0, -50 + param5, param4, 0);
+            bk.attackTargetSprites[1].b(30 + param0, -50 + param5, param4, 0);
           }
           return;
         }
@@ -457,7 +457,7 @@ final class vv {
             SoftwareRaster.f(stackIn_198_0, stackIn_198_1, stackIn_199_2, stackIn_201_3, stackIn_201_4[stackIn_202_5][CipherPacketBuffer.currentBattlefield.getPlayerTeamIndex(var12.ownerPlayer, -1)]);
           }
           if (param4 > 0) {
-            bk.field_d[1].b(30 + param0, -50 + param5, param4, 0);
+            bk.attackTargetSprites[1].b(30 + param0, -50 + param5, param4, 0);
           }
           return;
         }
@@ -496,29 +496,29 @@ final class vv {
             SoftwareRaster.f(stackIn_234_0, stackIn_234_1, stackIn_235_2, stackIn_237_3, stackIn_237_4[stackIn_238_5][CipherPacketBuffer.currentBattlefield.getPlayerTeamIndex(var12.ownerPlayer, -1)]);
           }
           if (param4 > 0) {
-            bk.field_d[1].b(30 + param0, -50 + param5, param4, 0);
+            bk.attackTargetSprites[1].b(30 + param0, -50 + param5, param4, 0);
           }
           return;
         }
-        TeamRoster.field_g.f(10 + param0, param5 + 5, (int)(256.0 * Math.sin((double)NetworkResourceRequest.field_C.field_L * 3.141592653589793 / 200.0)));
-        TeamRoster.field_g.f(10 + param0, 5 + param5, (int)(256.0 * Math.sin((double)NetworkResourceRequest.field_C.field_L * 3.141592653589793 / 200.0)));
+        TeamRoster.playerRingSprite.f(10 + param0, param5 + 5, (int)(256.0 * Math.sin((double)NetworkResourceRequest.field_C.field_L * 3.141592653589793 / 200.0)));
+        TeamRoster.playerRingSprite.f(10 + param0, 5 + param5, (int)(256.0 * Math.sin((double)NetworkResourceRequest.field_C.field_L * 3.141592653589793 / 200.0)));
         if (!var9.isStructure(false)) {
           if (param4 <= 0) {
             return;
           }
-          bk.field_d[1].b(30 + param0, -50 + param5, param4, 0);
+          bk.attackTargetSprites[1].b(30 + param0, -50 + param5, param4, 0);
           return;
         }
         if (CipherPacketBuffer.currentBattlefield.arePlayersAllied(var9.ownerPlayer, -16985, var12.ownerPlayer)) {
           if (param4 <= 0) {
             return;
           }
-          bk.field_d[1].b(30 + param0, -50 + param5, param4, 0);
+          bk.attackTargetSprites[1].b(30 + param0, -50 + param5, param4, 0);
           return;
         }
         if (!var12.canCaptureStructures(-21428)) {
           if (param4 > 0) {
-            bk.field_d[1].b(30 + param0, -50 + param5, param4, 0);
+            bk.attackTargetSprites[1].b(30 + param0, -50 + param5, param4, 0);
           }
           return;
         }
@@ -554,7 +554,7 @@ final class vv {
         if (param4 <= 0) {
           return;
         }
-        bk.field_d[1].b(30 + param0, -50 + param5, param4, 0);
+        bk.attackTargetSprites[1].b(30 + param0, -50 + param5, param4, 0);
         return;
     }
 

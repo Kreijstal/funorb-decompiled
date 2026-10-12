@@ -61,7 +61,7 @@ final class we {
         return null;
     }
 
-    final static te a(int param0, int param1, sn param2) {
+    final static te a(int param0, int param1, PcmSample param2) {
         RuntimeException var3 = null;
         te stackIn_2_0 = null;
         te stackIn_4_0 = null;
