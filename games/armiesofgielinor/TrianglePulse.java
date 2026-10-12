@@ -239,12 +239,12 @@ final class TrianglePulse {
           if (param3 < 73) {
             return;
           }
-          param0.field_rc = param2.g(1);
+          param0.field_rc = param2.readNullTerminatedString(1);
           if (var6 != 0) {
             param0.field_jc = new String[param0.field_Ub];
             param2.position = var7;
             for (var8 = 0; var8 < param0.field_Ub; var8++) {
-              param0.field_jc[var8] = param2.g(1);
+              param0.field_jc[var8] = param2.readNullTerminatedString(1);
             }
             return;
           }

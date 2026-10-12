@@ -122,7 +122,7 @@ final class fg extends IntrusiveNode {
         char[] var7 = null;
         mq[] var8 = null;
         int var9 = 0;
-        ar var11 = null;
+        QuickChatPhrase var11 = null;
         int var12 = 0;
         char[] var13 = null;
         char[] var14 = null;
@@ -150,8 +150,8 @@ final class fg extends IntrusiveNode {
           var9 = 49;
           try {
             for (var10_int = 0; var5_int > var10_int; var10_int++) {
-              var11 = ce.field_K.a(param2[var10_int], 81);
-              var6[var10_int] = var11.d((byte) 97);
+              var11 = ce.quickChatPhrases.getPhrase(param2[var10_int], 81);
+              var6[var10_int] = var11.getPreviewText((byte) 97);
               var9 = (char)(var9 + 1);
               var7[var10_int] = (char)var9;
               var8[var10_int] = null;

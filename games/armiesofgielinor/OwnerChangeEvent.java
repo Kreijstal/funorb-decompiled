@@ -237,10 +237,10 @@ final class OwnerChangeEvent extends GameEvent {
         var3 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           ev.field_a = ev.field_a + 1;
-          if (me.field_e == -1 &&
+          if (QuickChatCommandDefinition.field_e == -1 &&
             of.field_Ib == -1) {
             of.field_Ib = ko.pointerY;
-            me.field_e = AiPlanningStrategy.pointerX;
+            QuickChatCommandDefinition.field_e = AiPlanningStrategy.pointerX;
           }
           boolean decompiledFrameRemainder0 = true;
           if (param1 == null) {
@@ -280,17 +280,17 @@ final class OwnerChangeEvent extends GameEvent {
                 BoundedFile.field_b = true;
               }
             }
-            lq.field_e = me.field_e;
+            lq.field_e = QuickChatCommandDefinition.field_e;
           }
           if (!BoundedFile.field_b &&
             ev.field_a < NodeIterator.field_c &&
             lk.pointerChangedSnapshot) {
             cc.field_b = of.field_Ib;
-            lq.field_e = me.field_e;
+            lq.field_e = QuickChatCommandDefinition.field_e;
             ev.field_a = 0;
           }
           ts.field_a = param1;
-          me.field_e = param0;
+          QuickChatCommandDefinition.field_e = param0;
           of.field_Ib = -1;
           if (BoundedFile.field_b &&
             ce.field_J == ev.field_a) {

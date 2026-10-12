@@ -14,7 +14,7 @@ final class ud extends sf implements he {
           field_X = (RgbSprite[]) null;
           if (param2 != 0) {
             if (param2 == 1) {
-              if (va.field_D == param0) {
+              if (QuickChatCategory.field_D == param0) {
                 if (2 == param2 &&
                   cd.field_c != param0) {
                   cd.field_c = param0;
@@ -23,7 +23,7 @@ final class ud extends sf implements he {
                 }
                 return;
               }
-              va.field_D = param0;
+              QuickChatCategory.field_D = param0;
               MoveEvent.field_J = true;
               SocketResourceClient.a(896, param3);
             }
@@ -34,8 +34,8 @@ final class ud extends sf implements he {
               SocketResourceClient.a(896, param3);
             }
             if (param2 == 1 &&
-              va.field_D != param0) {
-              va.field_D = param0;
+              QuickChatCategory.field_D != param0) {
+              QuickChatCategory.field_D = param0;
               MoveEvent.field_J = true;
               SocketResourceClient.a(896, param3);
             }
@@ -48,8 +48,8 @@ final class ud extends sf implements he {
             SocketResourceClient.a(896, param3);
           }
           if (param2 == 1 &&
-            va.field_D != param0) {
-            va.field_D = param0;
+            QuickChatCategory.field_D != param0) {
+            QuickChatCategory.field_D = param0;
             MoveEvent.field_J = true;
             SocketResourceClient.a(896, param3);
           }

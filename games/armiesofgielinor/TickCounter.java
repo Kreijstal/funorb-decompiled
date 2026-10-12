@@ -3323,7 +3323,7 @@ final class TickCounter {
                 }
                 var2 = fk.a(false, "LABEL_COA");
                 if (null != var2) {
-                  ar.field_y = uu.a(var2, (byte) -96);
+                  QuickChatPhrase.field_y = uu.a(var2, (byte) -96);
                 }
                 var2 = fk.a(false, "LABEL_SETTINGS");
                 if (var2 != null) {
@@ -3415,7 +3415,7 @@ final class TickCounter {
                 }
                 var2 = fk.a(false, "INTRO_2");
                 if (null != var2) {
-                  rf.field_e = uu.a(var2, (byte) -92);
+                  QuickChatPhraseRepository.field_e = uu.a(var2, (byte) -92);
                 }
                 var2 = fk.a(false, "INTRO_3");
                 if (null != var2) {
@@ -3633,7 +3633,7 @@ final class TickCounter {
                 }
                 var2 = fk.a(false, "TRINKET_HAVE");
                 if (var2 != null) {
-                  me.field_a = uu.a(var2, (byte) -125);
+                  QuickChatCommandDefinition.field_a = uu.a(var2, (byte) -125);
                 }
                 var2 = fk.a(false, "MESSAGE_LOADING");
                 if (var2 != null) {
@@ -4955,7 +4955,7 @@ final class TickCounter {
                 }
                 var2 = fk.a(false, "TTREED_AERIAL");
                 if (var2 != null) {
-                  bl.field_a = uu.a(var2, (byte) 41);
+                  QuickChatCategoryRepository.field_a = uu.a(var2, (byte) 41);
                 }
                 var2 = fk.a(false, "TTREED_FLAME");
                 if (null != var2) {
@@ -5476,7 +5476,7 @@ final class TickCounter {
                 }
                 var2 = fk.a(false, "LABEL_EQUIPMENTSTOCK");
                 if (var2 != null) {
-                  ar.field_x = uu.a(var2, (byte) 63);
+                  QuickChatPhrase.field_x = uu.a(var2, (byte) 63);
                 }
                 var2 = fk.a(false, "LABEL_STOCK");
                 if (null != var2) {

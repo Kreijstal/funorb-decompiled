@@ -62,12 +62,12 @@ final class jh extends mk {
                   var6_int != 2) {
                   if (3 == var6_int ||
                     var6_int == 4) {
-                    var20 = param0.g(1);
-                    var21 = param0.g(param3 + 2);
+                    var20 = param0.readNullTerminatedString(1);
+                    var21 = param0.readNullTerminatedString(param3 + 2);
                     var9 = param0.readUnsignedByte(0);
                     var10 = new String[var9];
                     for (var11_int = 0; var9 > var11_int; var11_int++) {
-                      var10[var11_int] = param0.g(GrowthEvent.b(param3, -2));
+                      var10[var11_int] = param0.readNullTerminatedString(GrowthEvent.b(param3, -2));
                     }
                     var22 = new byte[var9][];
                     var19 = var22;
@@ -92,8 +92,8 @@ final class jh extends mk {
                     var18.field_u[var5] = var22;
                   }
                 } else {
-                  var15 = param0.g(param3 + 2);
-                  var16 = param0.g(1);
+                  var15 = param0.readNullTerminatedString(param3 + 2);
+                  var16 = param0.readNullTerminatedString(1);
                   var9 = 0;
                   if (var6_int == 1) {
                     var9 = param0.readInt(param3 + 2);

@@ -32,7 +32,7 @@ final class ed {
     }
 
     final static void a(boolean param0) {
-        if (!bl.field_b) {
+        if (!QuickChatCategoryRepository.field_b) {
           throw new IllegalStateException();
         }
         it.field_b = true;

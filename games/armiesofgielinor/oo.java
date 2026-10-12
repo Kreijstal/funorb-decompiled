@@ -257,7 +257,7 @@ final class oo {
         RuntimeException var2_ref = null;
         try {
           try {
-            rf.a(32767, CombatEvent.d((byte) 73));
+            QuickChatPhraseRepository.a(32767, CombatEvent.d((byte) 73));
             if (param0 >= -84) {
               this.field_n = 29;
             }
@@ -338,7 +338,7 @@ final class oo {
             var11 = param0[param0.length - var10 - 1];
             param4.a(param2, param3, param7, param1, param6, var11, -1, 1, 1, 0);
           }
-          rf.b(-18862);
+          QuickChatPhraseRepository.b(-18862);
           if (param5 < 62) {
             field_e = (String) null;
           }
@@ -422,7 +422,7 @@ final class oo {
             ll.field_Sb = DropdownArrowPainter.a("arialish12", iw.field_p, bh.field_H, (byte) -53, "");
             kt.field_n = it.a("", iw.field_p, bh.field_H, (byte) -87, "pump32");
             UnitModelPreview.field_b = DiskCacheRequest.a("benefit_orbs", "members_expansion_screen", iw.field_p, false);
-            ar.field_D = DiskCacheRequest.a("button_text", "members_expansion_screen", iw.field_p, false);
+            QuickChatPhrase.field_D = DiskCacheRequest.a("button_text", "members_expansion_screen", iw.field_p, false);
             DiskCacheRequest.field_G = ac.a(iw.field_p, "button_highlights", (byte) -4, "members_expansion_screen");
             bh.field_H = null;
             iw.field_p = null;
@@ -467,7 +467,7 @@ final class oo {
           ll.field_Sb.a(db.field_e[0], 17, 428, 111, 35, 16754688, -1, 1, 1, 0);
           ll.field_Sb.a(db.field_e[1], 138, 428, 111, 35, 16754688, -1, 1, 1, 0);
           ll.field_Sb.a(db.field_e[2], 259, 428, 111, 35, 16754688, -1, 1, 1, 0);
-          ar.field_D.g((127 - ar.field_D.canvasWidth) / 2 + 508, 315);
+          QuickChatPhrase.field_D.g((127 - QuickChatPhrase.field_D.canvasWidth) / 2 + 508, 315);
           if (0 != this.field_h.selectedIndex) {
             if (this.field_h.selectedIndex == 1) {
               DiskCacheRequest.field_G[1].g(508, 387);
@@ -565,10 +565,10 @@ final class oo {
           }
           param0.c((int)((float)(-param2) / param9), (int)((float)(-param1) / param9), (int)((float)param0.pixelWidth / param9), (int)((float)param0.pixelHeight / param9));
           this.a(param5, var11_int, param3, 0, param4, (byte) 79, var12, 0);
-          rf.b(-18862);
+          QuickChatPhraseRepository.b(-18862);
           CombatSandbox.a(param0, 3);
           var13.d(param2, param1, param8, param7);
-          rf.b(-18862);
+          QuickChatPhraseRepository.b(-18862);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -674,7 +674,7 @@ final class oo {
             var11 = var12;
             var9 = var11;
             this.a(var12, 622, this.field_c, 0, kt.field_n, (byte) 66, 47, 0);
-            rf.b(-18862);
+            QuickChatPhraseRepository.b(-18862);
             this.field_m = new RgbSprite(475, 24);
             this.a(this.field_m, -4, 0, UnitModelPreview.field_h, kt.field_n, var9, -124, 24, 475, 0.75f);
             if (param0 >= -103) {
@@ -691,11 +691,11 @@ final class oo {
             this.a(var5, -16, 0, var6, kt.field_n, var10, -112, var5.pixelHeight, var5.pixelWidth, 0.5f);
             this.a(var5, 20, 0, var7, kt.field_n, var10, -123, var5.pixelHeight, var5.pixelWidth, 0.5f);
             this.a(var5, 12 - kt.field_n.field_H + var5.pixelHeight / 2, 0, AnimationSequence.field_c[this.field_r], kt.field_n, var10, -125, var5.pixelHeight / 3, var5.pixelWidth, 0.699999988079071f);
-            rf.b(-18862);
+            QuickChatPhraseRepository.b(-18862);
             this.field_b = new RgbSprite(121, 122);
             CombatSandbox.a(this.field_b, 3);
             var5.a(this.field_b.pixelWidth / 2, this.field_b.pixelHeight / 2, -2048, 4096);
-            rf.b(-18862);
+            QuickChatPhraseRepository.b(-18862);
             return;
           }
           return;

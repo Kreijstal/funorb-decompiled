@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class oa extends dr {
-    static me field_F;
+    static QuickChatCommandDefinition field_F;
     static String field_G;
     static String field_E;
     static IndexedSprite[] field_H;
@@ -73,7 +73,7 @@ final class oa extends dr {
 
     static {
         field_G = "No";
-        field_F = new me(2, 4, 4, 0);
+        field_F = new QuickChatCommandDefinition(2, 4, 4, 0);
         field_E = "Remove <%0> from ignore list";
     }
 }

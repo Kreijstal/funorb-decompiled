@@ -3,7 +3,7 @@
  */
 final class rs extends IntrusiveNode {
     int field_l;
-    static me field_v;
+    static QuickChatCommandDefinition field_v;
     int field_s;
     int field_m;
     int field_w;
@@ -108,7 +108,7 @@ final class rs extends IntrusiveNode {
     }
 
     static {
-        field_v = new me(14, 0, 4, 1);
+        field_v = new QuickChatCommandDefinition(14, 0, 4, 1);
         field_k = 640;
         field_x = "Invalid Login or Password<br><br>For accounts created after the 24th of November 2010, please use your email address to log in.<br><br>Otherwise please log in with your username.";
         field_t = 0;

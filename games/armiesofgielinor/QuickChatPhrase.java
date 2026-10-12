@@ -1,40 +1,40 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ar extends DualLinkedNode {
+final class QuickChatPhrase extends DualLinkedNode {
     static int field_w;
     static String field_v;
-    int[] field_A;
-    private int[][] field_u;
+    int[] linkedPhraseIds;
+    private int[][] commandArguments;
     static RgbSprite field_D;
     static String field_y;
-    private String[] field_z;
+    private String[] textFragments;
     static int field_C;
-    private int[] field_B;
+    private int[] commandIds;
     static String field_x;
 
     final static void a(int param0, um param1) {
         try {
           ku.a((byte) -93, true, param1);
           if (param0 != 2) {
-            ar.getCampaignMission(87, 100, -49);
+            QuickChatPhrase.getCampaignMission(87, 100, -49);
           }
         } catch (RuntimeException runtimeException) {
           throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "ar.G(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final void a(boolean param0) {
+    final void applyGlobalIds(boolean obfuscationGuard) {
         int var2 = 0;
         int var3 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
-        if (this.field_A != null) {
-          for (var2 = 0; this.field_A.length > var2; var2++) {
-            this.field_A[var2] = oe.c(this.field_A[var2], 32768);
+        if (this.linkedPhraseIds != null) {
+          for (var2 = 0; this.linkedPhraseIds.length > var2; var2++) {
+            this.linkedPhraseIds[var2] = oe.c(this.linkedPhraseIds[var2], 32768);
           }
         }
-        if (!param0) {
+        if (!obfuscationGuard) {
           PacketBuffer var4 = (PacketBuffer) null;
-          this.a((byte) -5, 7, (PacketBuffer) null);
+          this.decodeOpcode((byte) -5, 7, (PacketBuffer) null);
         }
     }
 
@@ -47,7 +47,7 @@ final class ar extends DualLinkedNode {
           var4 += 2;
         }
         if (param2 != -115) {
-          ar.e((byte) -15);
+          QuickChatPhrase.e((byte) -15);
         }
         if (param1) {
           var4++;
@@ -193,56 +193,56 @@ final class ar extends DualLinkedNode {
         }
     }
 
-    final void a(PacketBuffer param0, byte param1) {
-        int var3_int = 0;
-        int var4 = 0;
+    final void decode(PacketBuffer packet, byte obfuscationGuard) {
+        int opcode = 0;
+        int obfuscationControl = 0;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
-        var4 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        obfuscationControl = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          if (param1 != 91) {
+          if (obfuscationGuard != 91) {
             return;
           }
           while (true) {
-            var3_int = param0.readUnsignedByte(0);
-            if (var3_int == 0) {
+            opcode = packet.readUnsignedByte(0);
+            if (opcode == 0) {
               return;
             }
-            this.a((byte) -96, var3_int, param0);
+            this.decodeOpcode((byte) -96, opcode, packet);
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
           stackIn_9_0 = var3;
           stackIn_9_1 = new StringBuilder().append("ar.A(");
-          if (param0 == null) {
+          if (packet == null) {
             stackIn_10_2 = "null";
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(')').toString());
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 
-    final String d(byte param0) {
+    final String getPreviewText(byte obfuscationGuard) {
         int var3 = 0;
         StringBuilder discarded$1 = null;
         StringBuilder discarded$2 = null;
         int var4 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         StringBuilder var5 = new StringBuilder(80);
         StringBuilder var2 = var5;
-        if (this.field_z == null) {
+        if (this.textFragments == null) {
           return "";
         }
-        StringBuilder discarded$0 = var5.append(this.field_z[0]);
-        for (var3 = 1; this.field_z.length > var3; var3++) {
+        StringBuilder discarded$0 = var5.append(this.textFragments[0]);
+        for (var3 = 1; this.textFragments.length > var3; var3++) {
           discarded$1 = var2.append("...");
-          discarded$2 = var5.append(this.field_z[var3]);
+          discarded$2 = var5.append(this.textFragments[var3]);
         }
-        if (param0 != 97) {
+        if (obfuscationGuard != 97) {
           field_D = (RgbSprite) null;
         }
         return var2.toString();
@@ -258,64 +258,64 @@ final class ar extends DualLinkedNode {
         field_D = null;
     }
 
-    ar() {
+    QuickChatPhrase() {
     }
 
-    private final void a(byte param0, int param1, PacketBuffer param2) {
+    private final void decodeOpcode(byte obfuscationGuard, int opcode, PacketBuffer packet) {
         int[] array$0 = null;
-        int var9 = 0;
+        int argumentIndex = 0;
         RuntimeException stackIn_20_0 = null;
         StringBuilder stackIn_20_1 = null;
         String stackIn_21_2 = null;
         RuntimeException decompiledCaughtException = null;
-        int var4_int = 0;
+        int guardRemainder = 0;
         RuntimeException var4 = null;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        me var8 = null;
-        int var10 = 0;
-        var10 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        int entryCount = 0;
+        int entryIndex = 0;
+        int commandId = 0;
+        QuickChatCommandDefinition command = null;
+        int obfuscationControl = 0;
+        obfuscationControl = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          var4_int = -110 % ((13 - param0) / 56);
-          if (param1 != 1) {
-            if (param1 == 2) {
-              var5 = param2.readUnsignedByte(0);
-              this.field_A = new int[var5];
-              for (var6 = 0; var5 > var6; var6++) {
-                this.field_A[var6] = param2.readUnsignedShort((byte) -104);
+          guardRemainder = -110 % ((13 - obfuscationGuard) / 56);
+          if (opcode != 1) {
+            if (opcode == 2) {
+              entryCount = packet.readUnsignedByte(0);
+              this.linkedPhraseIds = new int[entryCount];
+              for (entryIndex = 0; entryCount > entryIndex; entryIndex++) {
+                this.linkedPhraseIds[entryIndex] = packet.readUnsignedShort((byte) -104);
               }
-            } else if (param1 == 3) {
-              var5 = param2.readUnsignedByte(0);
-              this.field_B = new int[var5];
-              this.field_u = new int[var5][];
-              for (var6 = 0; var5 > var6; var6++) {
-                var7 = param2.readUnsignedShort((byte) -104);
-                var8 = UnitInfoPopup.b(0, var7);
-                if (var8 != null) {
-                  this.field_B[var6] = var7;
-                  array$0 = new int[var8.field_f];
-                  this.field_u[var6] = array$0;
-                  for (var9 = 0; var9 < var8.field_f; var9++) {
-                    this.field_u[var6][var9] = param2.readUnsignedShort((byte) -104);
+            } else if (opcode == 3) {
+              entryCount = packet.readUnsignedByte(0);
+              this.commandIds = new int[entryCount];
+              this.commandArguments = new int[entryCount][];
+              for (entryIndex = 0; entryCount > entryIndex; entryIndex++) {
+                commandId = packet.readUnsignedShort((byte) -104);
+                command = UnitInfoPopup.getQuickChatCommand(0, commandId);
+                if (command != null) {
+                  this.commandIds[entryIndex] = commandId;
+                  array$0 = new int[command.definitionArgumentCount];
+                  this.commandArguments[entryIndex] = array$0;
+                  for (argumentIndex = 0; argumentIndex < command.definitionArgumentCount; argumentIndex++) {
+                    this.commandArguments[entryIndex][argumentIndex] = packet.readUnsignedShort((byte) -104);
                   }
                 }
               }
             } else {
-              if (param1 == 4) {
+              if (opcode == 4) {
                 return;
               }
             }
           } else {
-            this.field_z = dj.a(61, '<', param2.g(1));
+            this.textFragments = dj.a(61, '<', packet.readNullTerminatedString(1));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
           stackIn_20_0 = var4;
-          stackIn_20_1 = new StringBuilder().append("ar.B(").append(param0).append(',').append(param1).append(',');
-          if (param2 == null) {
+          stackIn_20_1 = new StringBuilder().append("ar.B(").append(obfuscationGuard).append(',').append(opcode).append(',');
+          if (packet == null) {
             stackIn_21_2 = "null";
           } else {
             stackIn_21_2 = "{...}";

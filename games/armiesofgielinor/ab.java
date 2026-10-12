@@ -7,12 +7,12 @@ final class ab {
     static int field_a;
     static int[] field_c;
     static java.util.zip.CRC32 field_b;
-    static me field_d;
+    static QuickChatCommandDefinition field_d;
     static String field_e;
 
     public static void a(byte param0) {
         if (param0 != 32) {
-          field_d = (me) null;
+          field_d = (QuickChatCommandDefinition) null;
         }
         field_b = null;
         field_c = null;
@@ -96,6 +96,6 @@ final class ab {
         field_c = new int[16384];
         field_b = new java.util.zip.CRC32();
         field_e = "This option cannot be combined with the current '<%0>' setting.";
-        field_d = new me(8, 0, 4, 1);
+        field_d = new QuickChatCommandDefinition(8, 0, 4, 1);
     }
 }

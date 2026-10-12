@@ -127,7 +127,7 @@ final class CampaignUnitOverride {
                 }
                 var2 = NodeIterator.a(param0 ^ -100, "mu_chat_on");
                 if (var2 != null) {
-                  ar.field_v = uu.a(var2, (byte) -120);
+                  QuickChatPhrase.field_v = uu.a(var2, (byte) -120);
                 }
                 var2 = NodeIterator.a(50, "mu_chat_friends");
                 if (null != var2) {
@@ -703,7 +703,7 @@ final class CampaignUnitOverride {
                 }
                 var2 = NodeIterator.a(50, "no_options_available");
                 if (null != var2) {
-                  va.field_F = uu.a(var2, (byte) -108);
+                  QuickChatCategory.field_F = uu.a(var2, (byte) -108);
                 }
                 var2 = NodeIterator.a(50, "reportabuse");
                 if (var2 != null) {
@@ -1045,7 +1045,7 @@ final class CampaignUnitOverride {
                 }
                 var2 = NodeIterator.a(50, "reloadgame");
                 if (var2 != null) {
-                  me.field_d = uu.a(var2, (byte) -107);
+                  QuickChatCommandDefinition.field_d = uu.a(var2, (byte) -107);
                 }
                 var2 = NodeIterator.a(50, "toserverlist");
                 if (var2 != null) {
@@ -1149,7 +1149,7 @@ final class CampaignUnitOverride {
                 }
                 var2 = NodeIterator.a(param0 ^ -100, "connectionrestored");
                 if (null != var2) {
-                  va.field_B = uu.a(var2, (byte) -96);
+                  QuickChatCategory.field_B = uu.a(var2, (byte) -96);
                 }
                 var2 = NodeIterator.a(param0 + 132, "warning_ifyouquit");
                 if (var2 != null) {
@@ -1817,7 +1817,7 @@ final class CampaignUnitOverride {
                 }
                 var2 = NodeIterator.a(50, "loading_fonts");
                 if (null != var2) {
-                  rf.field_a = uu.a(var2, (byte) -117);
+                  QuickChatPhraseRepository.field_a = uu.a(var2, (byte) -117);
                 }
                 var2 = NodeIterator.a(param0 + 132, "loading_soundeffects");
                 if (null != var2) {
@@ -2270,7 +2270,7 @@ final class CampaignUnitOverride {
                 }
                 var2 = NodeIterator.a(50, "notyetachieved");
                 if (null != var2) {
-                  bl.field_g = uu.a(var2, (byte) -120);
+                  QuickChatCategoryRepository.field_g = uu.a(var2, (byte) -120);
                 }
                 var2 = NodeIterator.a(50, "achieved");
                 if (null != var2) {
@@ -2530,7 +2530,7 @@ final class CampaignUnitOverride {
                 }
                 var2 = NodeIterator.a(param0 + 132, "keychar_the_character_under_questionmark");
                 if (var2 != null) {
-                  et.field_a = we.a(-121, var2[0]);
+                  et.field_a = we.decodeSingleByteCharacter(-121, var2[0]);
                 }
                 var2 = NodeIterator.a(param0 + 132, "rating_noratings");
                 if (null != var2) {

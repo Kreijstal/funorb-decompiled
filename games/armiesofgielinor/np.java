@@ -88,7 +88,7 @@ final class np extends je {
         int var8Lifetime1;
         var11 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         if (this.field_Lb == 0) {
-          this.field_Sb[this.field_Lb] = new nf(0L, (je) null, (je) null, this.field_Nb, (RgbSprite) null, va.field_F);
+          this.field_Sb[this.field_Lb] = new nf(0L, (je) null, (je) null, this.field_Nb, (RgbSprite) null, QuickChatCategory.field_F);
           this.field_Sb[this.field_Lb].field_Fb = 1;
           this.a(this.field_Sb[this.field_Lb], 43);
           this.field_Mb[this.field_Lb] = -1;

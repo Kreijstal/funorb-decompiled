@@ -66,9 +66,9 @@ final class DamageEvent extends GameEvent {
     final static boolean g(int param0) {
         if (param0 <= 73) {
           field_z = (String) null;
-          return bl.field_b;
+          return QuickChatCategoryRepository.field_b;
         }
-        return bl.field_b;
+        return QuickChatCategoryRepository.field_b;
     }
 
     final static void a(byte[] param0, String[][] param1, int param2, RgbSprite[][] param3, int param4, boolean param5, String[][] param6, int param7, ResourceArchive param8, String[] param9, int param10, RgbSprite[][] param11, String[] param12, ResourceArchive param13, IndexedSprite[] param14, int[] param15, byte[] param16, String[] param17, ResourceArchive param18, int[] param19) {

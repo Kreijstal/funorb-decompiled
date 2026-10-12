@@ -58,7 +58,7 @@ final class nk {
         try {
           CampaignMenuEntry.field_u = new int[vs.field_e.length];
           for (var1_int = 0; var1_int < vs.field_e.length; var1_int++) {
-            CampaignMenuEntry.field_u[var1_int] = va.field_G[vs.field_e[var1_int].terrainType];
+            CampaignMenuEntry.field_u[var1_int] = QuickChatCategory.field_G[vs.field_e[var1_int].terrainType];
           }
           if (param0 <= 79) {
             nk.a((byte) 84);

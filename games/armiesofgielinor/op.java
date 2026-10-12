@@ -35,7 +35,7 @@ final class op {
     final static void a(int param0, int param1, nr param2, nr param3, int param4, int param5) {
         try {
           df.field_E = param1;
-          ar.field_w = param0;
+          QuickChatPhrase.field_w = param0;
           ed.field_d = param3;
           rd.field_b = param5;
           int var6_int = -13 / ((53 - param4) / 48);

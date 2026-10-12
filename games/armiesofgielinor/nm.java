@@ -488,7 +488,7 @@ final class nm extends hn {
           stackIn_28_1 = (param1) && (!vk.field_f);
           ((je) (Object) stackIn_27_0).b(stackIn_28_1, 20);
         }
-        rf.b(-18862);
+        QuickChatPhraseRepository.b(-18862);
     }
 
     final static li a(int param0, int param1, byte[] param2) {

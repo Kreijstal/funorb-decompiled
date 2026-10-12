@@ -16,16 +16,16 @@ final class UnitInfoPopup extends IntrusiveNode {
     private int fadeOffset;
     static String field_l;
 
-    final static me b(int param0, int param1) {
+    final static QuickChatCommandDefinition getQuickChatCommand(int startIndex, int commandId) {
         int var3 = 0;
-        me[] var2;
+        QuickChatCommandDefinition[] var2;
         int var4;
-        me[] var5;
+        QuickChatCommandDefinition[] var5;
         var4 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
-        var5 = uj.c((byte) 105);
+        var5 = uj.getQuickChatCommands((byte) 105);
         var2 = var5;
-        for (var3 = param0; var5.length > var3; var3++) {
-          if (var5[var3].field_b == param1) {
+        for (var3 = startIndex; var5.length > var3; var3++) {
+          if (var5[var3].commandId == commandId) {
             return var5[var3];
           }
         }

@@ -4,7 +4,7 @@
 class PacketBuffer extends IntrusiveNode {
     byte[] payload;
     int position;
-    static me field_l;
+    static QuickChatCommandDefinition field_l;
     static String field_r;
     static hd field_s;
     static String field_m;
@@ -184,11 +184,11 @@ class PacketBuffer extends IntrusiveNode {
         return (this.payload[this.position - 1] & 255) + ((255 & this.payload[this.position - 2]) << 8) + ((-16777216 & this.payload[-4 + this.position] << 24) + (this.payload[-3 + this.position] << 16 & 16711680));
     }
 
-    final String g(int param0) {
+    final String readNullTerminatedString(int obfuscationGuard) {
         int fieldTemp$0 = 0;
         int var2;
         int var3;
-        if (param0 != 1) {
+        if (obfuscationGuard != 1) {
           this.e(28);
         }
         var2 = this.position;
@@ -211,7 +211,7 @@ class PacketBuffer extends IntrusiveNode {
           this.position = this.position + 1;
           return null;
         }
-        return this.g(1);
+        return this.readNullTerminatedString(1);
     }
 
     final void encryptXtea(byte obfuscationGuard, int[] key) {
@@ -911,7 +911,7 @@ class PacketBuffer extends IntrusiveNode {
     }
 
     static {
-        field_l = new me(4, 1, 1, 1);
+        field_l = new QuickChatCommandDefinition(4, 1, 1, 1);
         field_r = "Restart Mission";
         field_m = "Waiting for music";
         field_p = "Quicksaving...";

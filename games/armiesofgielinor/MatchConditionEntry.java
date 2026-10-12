@@ -62,16 +62,16 @@ final class MatchConditionEntry extends IntrusiveNode {
             }
             stackIn_12_0 = (1 != var1.readUnsignedByte(0)) ? 0 : 1;
             var3_int = stackIn_12_0;
-            var4_ref_String = var1.g(1);
+            var4_ref_String = var1.readNullTerminatedString(1);
             if (var3_int == 0) {
               var5 = var4_ref_String;
             }
             if (var3_int != 0 ||
               var9 != 0) {
-              var5 = var1.g(1);
+              var5 = var1.readNullTerminatedString(1);
             }
             var6 = db.a(var4_ref_String, -124);
-            var7_ref = var1.g(1);
+            var7_ref = var1.readNullTerminatedString(1);
             var8 = k.a((CharSequence) ((Object) var4_ref_String), false);
             if (null == var8) {
               var8 = var4_ref_String;
@@ -117,7 +117,7 @@ final class MatchConditionEntry extends IntrusiveNode {
               return;
             }
             th.field_a = 1;
-            var3 = var1.g(1);
+            var3 = var1.readNullTerminatedString(1);
             vl.field_p = ((String) (var3)).intern();
             var4 = var1.readUnsignedByte(0);
             im.b(var4, param0 - 27499);
@@ -127,12 +127,12 @@ final class MatchConditionEntry extends IntrusiveNode {
             DiskCacheRequest.field_K = new tp(128);
             dj.field_a = 0;
           }
-          var3Lifetime1 = var1.g(1);
+          var3Lifetime1 = var1.readNullTerminatedString(1);
           if (((String) (var3Lifetime1)).equals("")) {
             var3Lifetime1 = null;
           }
-          var4_ref_StringLifetime1 = var1.g(1);
-          var5Lifetime1 = var1.g(1);
+          var4_ref_StringLifetime1 = var1.readNullTerminatedString(1);
+          var5Lifetime1 = var1.readNullTerminatedString(1);
           var6Lifetime1 = lg.a(var4_ref_StringLifetime1, (byte) -34);
           if (null == var6Lifetime1) {
             var6Lifetime1 = lg.a(var5Lifetime1, (byte) -34);

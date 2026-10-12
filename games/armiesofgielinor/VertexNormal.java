@@ -150,7 +150,7 @@ final class VertexNormal {
               var12.field_fc = new je(0L, eq.field_h);
               var12.a(var12.field_fc, 62);
               var12.i(-10027);
-              var12.field_dc = new je(0L, rf.field_d);
+              var12.field_dc = new je(0L, QuickChatPhraseRepository.field_d);
               var12.a(var12.field_dc, param1 - 194);
               var12.field_ec = new je(0L, pt.field_X);
               var12.a(var12.field_ec, 90);

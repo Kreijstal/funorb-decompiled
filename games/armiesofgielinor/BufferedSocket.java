@@ -27,12 +27,12 @@ final class BufferedSocket implements Runnable {
         if (param0 != 41) {
           return;
         }
-        if (va.field_w == null) {
+        if (QuickChatCategory.field_w == null) {
           return;
         }
-        var1 = va.field_w;
+        var1 = QuickChatCategory.field_w;
         synchronized (var1) {
-          va.field_w = null;
+          QuickChatCategory.field_w = null;
         }
         return;
     }

@@ -5,7 +5,7 @@ import java.util.*;
 
 final class MovementPlanner {
     private int mapWidth;
-    static me field_c;
+    static QuickChatCommandDefinition field_c;
     private boolean field_g;
     private int[] pathDirections;
     int targetX;
@@ -1235,7 +1235,7 @@ final class MovementPlanner {
 
     static {
         field_s = "Show chat (<%0> unread messages)";
-        field_c = new me(7, 0, 1, 1);
+        field_c = new QuickChatCommandDefinition(7, 0, 1, 1);
         field_v = "You can only use a further <%0> runes of trinkets in this game. This trinket is worth <%1>.";
         field_z = new UiSelectionState(1);
     }

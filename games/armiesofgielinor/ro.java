@@ -354,7 +354,7 @@ class ro extends pt implements he {
         ad var2 = null;
         if (param0 == 4259) {
           this.field_tb.c(4210752, 2121792, 27178);
-          var2 = new ad(this, this.field_nb, va.field_B);
+          var2 = new ad(this, this.field_nb, QuickChatCategory.field_B);
           var2.a(ClientConnectionState.field_b, 15, 1);
           this.a(var2, (byte) -108);
           return;
@@ -385,7 +385,7 @@ class ro extends pt implements he {
           var6 = new ad(this, this.field_nb, param2);
           var4 = var6;
           if (5 == param0) {
-            var6.a(me.field_d, 11, 1);
+            var6.a(QuickChatCommandDefinition.field_d, 11, 1);
             var6.a(dt.field_c, 17, param1 ^ 99);
           } else {
             if (param0 != 256) {

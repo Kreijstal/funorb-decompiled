@@ -252,7 +252,7 @@ final class jg extends IntrusiveNode {
               var12.field_Wb = new je(0L, eq.field_h);
               var12.a(var12.field_Wb, 51);
               var12.i(param0 ^ -10027);
-              var12.field_Yb = new je(0L, rf.field_d);
+              var12.field_Yb = new je(0L, QuickChatPhraseRepository.field_d);
               var12.a(var12.field_Yb, 89);
               var13 = 1;
             }

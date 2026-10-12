@@ -97,7 +97,7 @@ final class j {
           CampaignDefinition.field_m = new String[3];
           DisplacedUnitMarker.field_t[52] = oa.field_G;
           DisplacedUnitMarker.field_t[38] = PortalLossCondition.field_f;
-          ParasiteEvent.field_A = new String[]{VertexNormal.field_a, rf.field_e, je.field_lb, ob.field_P};
+          ParasiteEvent.field_A = new String[]{VertexNormal.field_a, QuickChatPhraseRepository.field_e, je.field_lb, ob.field_P};
           DisplacedUnitMarker.field_t[43] = FaceNormal.field_c;
           DisplacedUnitMarker.field_t[33] = gv.field_b;
           DisplacedUnitMarker.field_t[59] = TickCounter.field_e;
@@ -117,7 +117,7 @@ final class j {
             return;
           }
           wb.field_b[6] = el.field_a;
-          wb.field_b[13] = ar.field_y;
+          wb.field_b[13] = QuickChatPhrase.field_y;
           du.field_g = new String[]{tg.field_l, gk.field_N, tv.field_c, tv.field_b, CombatSandbox.field_g, dn.field_Kb, DelayedPacket.field_r, r.field_I, we.field_h, kd.field_Q, og.field_t, ByteStorage.field_c, fg.field_l, pi.field_P, StateChangeEvent.field_H, ut.field_ib};
           wb.field_b[18] = dd.field_g;
           wb.field_b[4] = gg.field_H;

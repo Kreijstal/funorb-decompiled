@@ -6,7 +6,7 @@ import java.io.*;
 abstract class du {
     String field_a;
     int field_c;
-    static me field_e;
+    static QuickChatCommandDefinition field_e;
     static wm field_d;
     static boolean field_h;
     static String field_f;
@@ -42,7 +42,7 @@ abstract class du {
     }
 
     static {
-        field_e = new me(10, 2, 2, 0);
+        field_e = new QuickChatCommandDefinition(10, 2, 2, 0);
         field_d = new wm();
         field_f = "No special attribute";
         field_b = new String[16];

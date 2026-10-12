@@ -75,7 +75,7 @@ final class CampaignMenu {
         RuntimeException decompiledCaughtException = null;
         try {
           var2 = ku.getStoredQuicksave(124);
-          var3 = ar.getCampaignMission(var2.campaignIndex, var2.missionId, 0);
+          var3 = QuickChatPhrase.getCampaignMission(var2.campaignIndex, var2.missionId, 0);
           ts.startCampaignMission(var3, -1, var2);
           var4 = var3.playerSlot;
           var5 = rd.field_j.battlefield.playerTurnCounts[var4];
@@ -232,7 +232,7 @@ final class CampaignMenu {
         int var9Lifetime1;
         try {
           var2 = ku.getStoredQuicksave(111);
-          var3 = ar.getCampaignMission(var2.campaignIndex, var2.missionId, 0);
+          var3 = QuickChatPhrase.getCampaignMission(var2.campaignIndex, var2.missionId, 0);
           var4 = Battlefield.a(var3.participantIds.length, var2.snapshotBytes, false);
           var5 = fo.a(4800, wd.field_e, new String[]{var3.name, Integer.toString(var4)});
           var6 = fo.a(4800, BufferedSocket.field_h, new String[]{var5});
@@ -349,7 +349,7 @@ final class CampaignMenu {
               vk.field_e[this.selectedCampaignEntry.entryId].g(var4, var5);
               this.selectedCampaignEntry.previewSprite.f(var4, var5, Math.abs(ContextualRuntimeException.a(param0 ^ -397, uk.field_n << 5) * 100 >> 16) + 80);
             }
-            rf.b(param0 ^ -18466);
+            QuickChatPhraseRepository.b(param0 ^ -18466);
             var6 = 5;
             var7 = 5 + rs.field_n.getParagraphHeight(this.selectedCampaignEntry.description, 232, 0);
             en.field_E.a(this.selectedCampaignEntry.description, var4 + var6, 200 + var5, -(2 * var6) + 236, var7, 16777215, -1, 1, 0, 0);
@@ -475,7 +475,7 @@ final class CampaignMenu {
           if (param0 != 13) {
             field_n = (String) null;
           }
-          rf.b(param0 - 18875);
+          QuickChatPhraseRepository.b(param0 - 18875);
           stackIn_17_0 = db.a(true, param2.left);
           stackIn_17_1 = MatchConditionEntry.a(param2.top, (byte) 94);
           stackIn_17_2 = param2.width;
@@ -720,7 +720,7 @@ final class CampaignMenu {
         int var9Lifetime1;
         try {
           var2 = ku.getStoredQuicksave(97);
-          var3 = ar.getCampaignMission(var2.campaignIndex, var2.missionId, param0 - 26);
+          var3 = QuickChatPhrase.getCampaignMission(var2.campaignIndex, var2.missionId, param0 - 26);
           var4 = Battlefield.a(var3.participantIds.length, var2.snapshotBytes, false);
           var5 = fo.a(4800, sb.field_f, new String[]{Integer.toString(var4)});
           boolean decompiledSharedTail0 = (null == this.field_c);
@@ -1380,7 +1380,7 @@ final class CampaignMenu {
             stackIn_20_0 = obfuscationGuard;
             stackIn_20_1 = -18863;
           }
-          rf.b(stackIn_20_0 + stackIn_20_1);
+          QuickChatPhraseRepository.b(stackIn_20_0 + stackIn_20_1);
           stackIn_21_0 = sprite;
           return stackIn_21_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
@@ -1463,13 +1463,13 @@ final class CampaignMenu {
           if (this.selectedCampaignEntry.entryId == -1) {
             var2 = ku.getStoredQuicksave(obfuscationGuard + 86);
             if (!BoundedFile.a(var2.campaignIndex, obfuscationGuard + 11906) &&
-              rf.a(27875)) {
+              QuickChatPhraseRepository.a(27875)) {
               PaletteRegionMap.field_i = bn.field_g;
               CipherPacketBuffer.a(false, 11, obfuscationGuard ^ 1, jt.field_a);
               return;
             }
             this.rebuildMissionEntries(var2.campaignIndex, 53);
-            var3 = ar.getCampaignMission(var2.campaignIndex, var2.missionId, 0);
+            var3 = QuickChatPhrase.getCampaignMission(var2.campaignIndex, var2.missionId, 0);
             l.activeCampaignMission = var3;
             CipherPacketBuffer.a(true, -11, obfuscationGuard + 1, 0);
             if (ArmiesOfGielinor.obfuscationControl) {
@@ -1656,7 +1656,7 @@ final class CampaignMenu {
                   this.field_c != null &&
                   this.field_c.containsPointer((byte) -49)) {
                   var2 = ku.getStoredQuicksave(86);
-                  var3 = ar.getCampaignMission(((CampaignQuicksave) (var2)).campaignIndex, ((CampaignQuicksave) (var2)).missionId, 0);
+                  var3 = QuickChatPhrase.getCampaignMission(((CampaignQuicksave) (var2)).campaignIndex, ((CampaignQuicksave) (var2)).missionId, 0);
                   l.activeCampaignMission = (CampaignMission) (var3);
                   CipherPacketBuffer.a(true, -11, 1, 0);
                 }
@@ -1877,7 +1877,7 @@ final class CampaignMenu {
               if (decompiledSharedTail0) {
                 SoftwareRaster.c(var8, var8, 0, var8, var6.canvasWidth, -var8 + var6.canvasHeight);
               }
-              rf.b(-18862);
+              QuickChatPhraseRepository.b(-18862);
               var3.previewSprite = var7;
               if (var9 != 0) {
                 var3.statusText = bn.field_g;
@@ -2032,7 +2032,7 @@ final class CampaignMenu {
         RuntimeException var3 = null;
         try {
           if (!BoundedFile.a(campaignIndex, 11906) &&
-            rf.a(27875)) {
+            QuickChatPhraseRepository.a(27875)) {
             PaletteRegionMap.field_i = bn.field_g;
             CipherPacketBuffer.a(false, 11, 1, jt.field_a);
             return;
@@ -2356,7 +2356,7 @@ final class CampaignMenu {
                   var11.top = 341;
                   var11.height = 57;
                   var11.left = 45;
-                  var12 = ar.getCampaignMission(var10_ref_sl.campaignIndex, var10_ref_sl.missionId, 0);
+                  var12 = QuickChatPhrase.getCampaignMission(var10_ref_sl.campaignIndex, var10_ref_sl.missionId, 0);
                   var13_int = Battlefield.a(var12.participantIds.length, var10_ref_sl.snapshotBytes, false);
                   var14 = fo.a(4800, wd.field_e, new String[]{var12.name, Integer.toString(var13_int)});
                   var11.title = var12.campaign.name;
@@ -2366,7 +2366,7 @@ final class CampaignMenu {
                   var11.statusText = var14;
                   var11.description = var12.description;
                   if (!var12.campaign.c((byte) -45) &&
-                    rf.a(27875)) {
+                    QuickChatPhraseRepository.a(27875)) {
                     var11.selectable = false;
                     var11.statusText = bn.field_g + " (" + var11.statusText + ")";
                   }

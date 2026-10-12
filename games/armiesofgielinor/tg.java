@@ -156,7 +156,7 @@ final class tg {
             this.field_i.a(13, ou.field_g, (byte) -116);
           }
           if (param0.field_b == 1) {
-            if (va.field_D == 0) {
+            if (QuickChatCategory.field_D == 0) {
               this.field_i.a(12, jj.field_b, (byte) -108);
             }
             this.field_i.a(13, fa.field_c, (byte) -121);
@@ -176,7 +176,7 @@ final class tg {
         try {
           bk.a(param2, fp.field_Lb, eq.field_h, LeaderEscortCondition.field_f, DualLinkedNode.field_k, -106, ke.field_e, im.field_x, qc.field_e, WeightedLruCache.field_b, PreparedAction.field_o, rd.field_e);
           dh.field_n = fk.a("chatfilter", (byte) -125, param3, "lobby");
-          co.field_k[0] = ar.field_v;
+          co.field_k[0] = QuickChatPhrase.field_v;
           co.field_k[1] = IterableDualNodeDeque.field_a;
           co.field_k[param1] = cd.field_d;
           mu.a(t.field_a, param1 - 2, param0);
@@ -446,7 +446,7 @@ final class tg {
           return true;
         }
         if (param0 == 19) {
-          me.a(81, this.field_m, this.field_o, this.field_f, this.field_e);
+          QuickChatCommandDefinition.a(81, this.field_m, this.field_o, this.field_f, this.field_e);
           var4Lifetime7 = 84 % ((param2 - 30) / 54);
           return true;
         }

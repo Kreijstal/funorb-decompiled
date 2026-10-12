@@ -7450,7 +7450,7 @@ final class GameplayController {
           stackIn_18_5 = MatchConditionEntry.a(param0 - 2, (byte) 94);
           stackIn_19_6 = !((1 << var6_int & this.battlefield.field_C) <= 0);
           ((CoatOfArms) (Object) stackIn_10_0).a(stackIn_10_1, stackIn_10_2, stackIn_11_3, stackIn_15_4, stackIn_18_5, stackIn_19_6, false, param2 ^ -3);
-          rf.b(-18862);
+          QuickChatPhraseRepository.b(-18862);
           fe.b(db.a(true, param1), MatchConditionEntry.a(param0, (byte) 94), 134, 228, io.field_m, var8, 0, 0);
           if (param3 <= -1) {
             fe.b(DualNodeIterator.field_g, db.a(true, param1 + 67), MatchConditionEntry.a(18 + param0, (byte) 94), true);
@@ -7677,7 +7677,7 @@ final class GameplayController {
                 stackIn_136_0 = 0;
               }
               var4 = stackIn_136_0;
-              va.field_u = 0;
+              QuickChatCategory.field_u = 0;
               fm.a(e.field_b, 64, 10, this.o(125) - 40, -41);
               stackIn_139_0 = jv.field_b;
               if (var4 != 0) {

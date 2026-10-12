@@ -132,12 +132,12 @@ final class po {
         }
         if (rb.a(ma.field_ab, WeightedScoreStrategy.field_h, -17231, no.field_S, rv.field_b)) {
           if (2 == no.field_S) {
-            return me.a(param1 ^ 6251, WeightedScoreStrategy.field_h, rv.field_b, ma.field_ab, no.field_S);
+            return QuickChatCommandDefinition.a(param1 ^ 6251, WeightedScoreStrategy.field_h, rv.field_b, ma.field_ab, no.field_S);
           }
           if (var3 != 0) {
             return false;
           }
-          return me.a(param1 ^ 6251, WeightedScoreStrategy.field_h, rv.field_b, ma.field_ab, no.field_S);
+          return QuickChatCommandDefinition.a(param1 ^ 6251, WeightedScoreStrategy.field_h, rv.field_b, ma.field_ab, no.field_S);
         }
         if (param1 != 6150) {
           field_a = (String) null;

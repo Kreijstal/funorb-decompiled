@@ -105,7 +105,7 @@ final class MoveAttackAction extends PreparedAction {
           }
           CachedArchiveProvider.field_h = var7Lifetime1 + bt.field_g - (var7Lifetime1 >> 1);
           co.field_f = bt.field_g - (var7Lifetime1 >> 1);
-          DualLinkedNode.field_r = (ar.field_w + rd.field_b << 1) * MovementPlanner.field_z.itemCount;
+          DualLinkedNode.field_r = (QuickChatPhrase.field_w + rd.field_b << 1) * MovementPlanner.field_z.itemCount;
           var8Lifetime2 = 0;
           while (nb.field_h.length > var8Lifetime2) {
             stackIn_38_0 = DualLinkedNode.field_r;

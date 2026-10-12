@@ -6,7 +6,7 @@ final class qh {
         int var11;
         var11 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         if (param9) {
-          va.field_u = qm.field_L;
+          QuickChatCategory.field_u = qm.field_L;
           je.c(param9, -120);
           if (gk.field_J > 0) {
             bn.a(param0, param9, 117, param5);
@@ -33,7 +33,7 @@ final class qh {
           if (SoftwareRaster.width == tq.field_c &&
             SoftwareRaster.height == CachedArchiveProvider.field_p) {
             if (!param9) {
-              va.field_u = (-640 + tq.field_c) / 2;
+              QuickChatCategory.field_u = (-640 + tq.field_c) / 2;
               je.c(param9, -120);
               if (gk.field_J > 0) {
                 bn.a(param0, param9, 117, param5);
@@ -57,7 +57,7 @@ final class qh {
                 VertexNormal.a(param1, 255, param3, param5, MapTile.field_f);
               }
             } else {
-              va.field_u = qm.field_L;
+              QuickChatCategory.field_u = qm.field_L;
               je.c(param9, -120);
               if (gk.field_J > 0) {
                 bn.a(param0, param9, 117, param5);
@@ -91,9 +91,9 @@ final class qh {
             if (null != vu.field_M) {
               je.a(45, false);
               if (param9) {
-                va.field_u = qm.field_L;
+                QuickChatCategory.field_u = qm.field_L;
               } else {
-                va.field_u = (-640 + tq.field_c) / 2;
+                QuickChatCategory.field_u = (-640 + tq.field_c) / 2;
               }
               je.c(param9, -120);
               if (gk.field_J > 0) {
@@ -129,7 +129,7 @@ final class qh {
             }
           }
           if (!param9) {
-            va.field_u = (-640 + tq.field_c) / 2;
+            QuickChatCategory.field_u = (-640 + tq.field_c) / 2;
             je.c(param9, -120);
             if (gk.field_J > 0) {
               bn.a(param0, param9, 117, param5);
@@ -153,7 +153,7 @@ final class qh {
               VertexNormal.a(param1, 255, param3, param5, MapTile.field_f);
             }
           } else {
-            va.field_u = qm.field_L;
+            QuickChatCategory.field_u = qm.field_L;
             je.c(param9, -120);
             if (gk.field_J > 0) {
               bn.a(param0, param9, 117, param5);

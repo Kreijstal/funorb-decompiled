@@ -77,7 +77,7 @@ final class ea {
         Exception var6 = null;
         int var7 = 0;
         CipherPacketBuffer var8 = null;
-        ar var9 = null;
+        QuickChatPhrase var9 = null;
         var7 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         var8 = ByteStorage.incomingPacket;
         var2 = var8;
@@ -96,19 +96,19 @@ final class ea {
         }
         stackIn_9_0 = (var8.readUnsignedByte(0) != 1) ? 0 : 1;
         var4 = stackIn_9_0;
-        qd.field_L = var8.g(1);
+        qd.field_L = var8.readNullTerminatedString(1);
         if (var4 == 0) {
           gp.field_b = qd.field_L;
         } else {
-          gp.field_b = var8.g(1);
+          gp.field_b = var8.readNullTerminatedString(1);
         }
         if (MatchConditionEntry.field_k == 1) {
           ut.field_eb = var8.readUnsignedShort((byte) -104);
-          BestScoreStrategy.field_k = var8.g(1);
+          BestScoreStrategy.field_k = var8.readNullTerminatedString(1);
         } else {
           if (MatchConditionEntry.field_k == 4) {
             ut.field_eb = var8.readUnsignedShort((byte) -104);
-            BestScoreStrategy.field_k = var8.g(1);
+            BestScoreStrategy.field_k = var8.readNullTerminatedString(1);
           } else {
             ut.field_eb = 0;
             BestScoreStrategy.field_k = null;
@@ -120,12 +120,12 @@ final class ea {
         } else {
           var5 = var8.readUnsignedShort((byte) -104);
           try {
-            var9 = ce.field_K.a(var5, -124);
-            dg.field_b = var9.d((byte) 97);
+            var9 = ce.quickChatPhrases.getPhrase(var5, -124);
+            dg.field_b = var9.getPreviewText((byte) 97);
             if (gp.field_b.equals(mv.field_d)) {
               stackIn_22_0 = null;
             } else {
-              stackIn_22_0 = var9.field_A;
+              stackIn_22_0 = var9.linkedPhraseIds;
             }
             hv.field_R = stackIn_22_0;
           } catch (java.lang.Exception decompiledCaughtParameter0) {
@@ -243,7 +243,7 @@ final class ea {
         Exception var6 = null;
         int var7 = 0;
         CipherPacketBuffer var8 = null;
-        ar var9 = null;
+        QuickChatPhrase var9 = null;
         var7 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         var8 = ByteStorage.incomingPacket;
         var2 = var8;
@@ -262,19 +262,19 @@ final class ea {
         }
         stackIn_9_0 = (var8.readUnsignedByte(0) != 1) ? 0 : 1;
         var4 = stackIn_9_0;
-        qd.field_L = var8.g(1);
+        qd.field_L = var8.readNullTerminatedString(1);
         if (var4 == 0) {
           gp.field_b = qd.field_L;
         } else {
-          gp.field_b = var8.g(1);
+          gp.field_b = var8.readNullTerminatedString(1);
         }
         if (MatchConditionEntry.field_k == 1) {
           ut.field_eb = var8.readUnsignedShort((byte) -104);
-          BestScoreStrategy.field_k = var8.g(1);
+          BestScoreStrategy.field_k = var8.readNullTerminatedString(1);
         } else {
           if (MatchConditionEntry.field_k == 4) {
             ut.field_eb = var8.readUnsignedShort((byte) -104);
-            BestScoreStrategy.field_k = var8.g(1);
+            BestScoreStrategy.field_k = var8.readNullTerminatedString(1);
           } else {
             ut.field_eb = 0;
             BestScoreStrategy.field_k = null;
@@ -286,12 +286,12 @@ final class ea {
         } else {
           var5 = var8.readUnsignedShort((byte) -104);
           try {
-            var9 = ce.field_K.a(var5, -124);
-            dg.field_b = var9.d((byte) 97);
+            var9 = ce.quickChatPhrases.getPhrase(var5, -124);
+            dg.field_b = var9.getPreviewText((byte) 97);
             if (gp.field_b.equals(mv.field_d)) {
               stackIn_22_0 = null;
             } else {
-              stackIn_22_0 = var9.field_A;
+              stackIn_22_0 = var9.linkedPhraseIds;
             }
             hv.field_R = stackIn_22_0;
           } catch (java.lang.Exception decompiledCaughtParameter0) {

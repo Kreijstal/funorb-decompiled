@@ -172,9 +172,9 @@ final class InstructionsPanel {
         int var8Lifetime1;
         int var8Lifetime2;
         if (param2 >= 0 &&
-          va.field_G.length > param2) {
-          var6 = va.field_G[param2];
-          var7 = va.field_G[0];
+          QuickChatCategory.field_G.length > param2) {
+          var6 = QuickChatCategory.field_G[param2];
+          var7 = QuickChatCategory.field_G[0];
           ds.a(param1, param0, var7, 27066, true, param3, true, var6);
           ds.a(param1, param0, var7, 27066, true, param3, false, var6);
           if (param2 == 3) {
@@ -1842,10 +1842,10 @@ final class InstructionsPanel {
         }
         int var7 = 0;
         if (param1 < 0 ||
-          va.field_G.length <= param1) {
+          QuickChatCategory.field_G.length <= param1) {
           return;
         }
-        int var8 = va.field_G[param1];
+        int var8 = QuickChatCategory.field_G[param1];
         ds.a(param4, 40 + param0, var7, param2 + 58616, false, var6, true, var8);
         ds.a(param4, param0 + 40, var7, param2 + 58616, false, var6, false, var8);
         this.b(param4, 40 + param0, param3, -25713, param1, var6);
@@ -2460,7 +2460,7 @@ final class InstructionsPanel {
                   }
                 }
               }
-              mv.field_d = ByteStorage.incomingPacket.g(1);
+              mv.field_d = ByteStorage.incomingPacket.readNullTerminatedString(1);
               var11 = (CharSequence) ((Object) mv.field_d);
               IntPair.field_p = k.a(var11, false);
               vt.field_n = ByteStorage.incomingPacket.readUnsignedByte(0);
@@ -2515,7 +2515,7 @@ final class InstructionsPanel {
               if (nm.deliveredOpcode == 7) {
                 nm.deliveredOpcode = 3;
               }
-              lk.field_r = ByteStorage.incomingPacket.g(1);
+              lk.field_r = ByteStorage.incomingPacket.readNullTerminatedString(1);
               ev.field_b = false;
               stackIn_99_0 = nm.deliveredOpcode;
               return stackIn_99_0;

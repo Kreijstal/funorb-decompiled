@@ -24,7 +24,7 @@ final class DropdownArrowPainter implements WidgetPainter {
             le.field_c[var1_int].b();
             im.field_y.b(0, 0, op.field_c[0][var1_int]);
           }
-          rf.b(-18862);
+          QuickChatPhraseRepository.b(-18862);
         } catch (RuntimeException runtimeException) {
           throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "gs.F(" + param0 + ')');
         }
@@ -233,7 +233,7 @@ final class DropdownArrowPainter implements WidgetPainter {
               for (var5_int = 0; fk.packetPayloadLength > var5_int; var5_int++) {
                 ByteStorage.incomingPacket.payload[var5_int] = var4_ref_qu.payload[var5_int];
               }
-              me.thirdPreviousOpcode = ba.secondPreviousOpcode;
+              QuickChatCommandDefinition.thirdPreviousOpcode = ba.secondPreviousOpcode;
               ba.secondPreviousOpcode = TurnTimerDial.previousOpcode;
               TurnTimerDial.previousOpcode = nm.deliveredOpcode;
               nm.deliveredOpcode = var4_ref_qu.opcode;
@@ -268,7 +268,7 @@ final class DropdownArrowPainter implements WidgetPainter {
               return false;
             }
             if (dq.packetDelayMillis == 0) {
-              me.thirdPreviousOpcode = ba.secondPreviousOpcode;
+              QuickChatCommandDefinition.thirdPreviousOpcode = ba.secondPreviousOpcode;
               ba.secondPreviousOpcode = TurnTimerDial.previousOpcode;
               TurnTimerDial.previousOpcode = nm.deliveredOpcode;
               nm.deliveredOpcode = ByteStorage.pendingOpcode;

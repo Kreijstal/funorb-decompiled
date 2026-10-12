@@ -434,7 +434,7 @@ class je extends im {
             this.field_hb = 0;
           }
         }
-        stackIn_30_1 = (!bl.field_f) && (SoftwareRaster.clipLeft <= AiPlanningStrategy.pointerX) && (SoftwareRaster.clipRight > AiPlanningStrategy.pointerX) && (SoftwareRaster.clipTop <= ko.pointerY) && (SoftwareRaster.clipBottom > ko.pointerY);
+        stackIn_30_1 = (!QuickChatCategoryRepository.field_f) && (SoftwareRaster.clipLeft <= AiPlanningStrategy.pointerX) && (SoftwareRaster.clipRight > AiPlanningStrategy.pointerX) && (SoftwareRaster.clipTop <= ko.pointerY) && (SoftwareRaster.clipBottom > ko.pointerY);
         this.field_jb = stackIn_30_1;
         if (ro.pointerButton == 0) {
           this.field_hb = 0;
@@ -452,7 +452,7 @@ class je extends im {
           SectorCacheStore.field_e = true;
         }
         if (this.field_jb) {
-          bl.field_f = true;
+          QuickChatCategoryRepository.field_f = true;
         }
         SoftwareRaster.f(var8, var9, var10, var11);
         if (this.field_hb != 0 &&
@@ -691,7 +691,7 @@ class je extends im {
 
     final void a(boolean param0, boolean param1) {
         SectorCacheStore.field_e = !param1 ? true : false;
-        bl.field_f = !param1 ? true : false;
+        QuickChatCategoryRepository.field_f = !param1 ? true : false;
         this.a(param0, false, 0, SoftwareRaster.height, SoftwareRaster.width, 0);
     }
 

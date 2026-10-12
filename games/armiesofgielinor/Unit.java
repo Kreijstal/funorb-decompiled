@@ -403,7 +403,7 @@ final class Unit extends IntrusiveNode implements TaggedFieldReader {
         Throwable var3 = null;
         boolean stackIn_6_0 = false;
         Throwable decompiledCaughtException = null;
-        var1 = va.field_w;
+        var1 = QuickChatCategory.field_w;
         synchronized (var1) {
           if (rd.field_d == SummonAction.field_E) {
             return false;

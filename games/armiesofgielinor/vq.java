@@ -181,14 +181,14 @@ final class vq {
             if (var4 == -1) {
               throw new IllegalStateException();
             }
-            va.field_A = new String[var4];
-            vm.a(du.field_b, 0, va.field_A, 0, var4);
+            QuickChatCategory.field_A = new String[var4];
+            vm.a(du.field_b, 0, QuickChatCategory.field_A, 0, var4);
             IntrusiveNode.field_f = new String[var3_int - var4 - 1];
             vm.a(du.field_b, var4 + 1, IntrusiveNode.field_f, 0, -1 + (-var4 + var3_int));
-            if (va.field_A.length <= mo.field_i.length) {
+            if (QuickChatCategory.field_A.length <= mo.field_i.length) {
               stackIn_31_0 = mo.field_i.length;
             } else {
-              stackIn_31_0 = va.field_A.length;
+              stackIn_31_0 = QuickChatCategory.field_A.length;
             }
             var5 = stackIn_31_0;
             if (IntrusiveNode.field_f.length > hg.field_d.length) {
@@ -217,10 +217,10 @@ final class vq {
             for (var8Lifetime2 = 0; var5 > var8Lifetime2; var8Lifetime2++) {
               stackIn_41_0 = AnimationFrameSet.field_v;
               stackIn_41_1 = 6 + var8Lifetime2;
-              if (-var5 + (va.field_A.length + var8Lifetime2) < 0) {
+              if (-var5 + (QuickChatCategory.field_A.length + var8Lifetime2) < 0) {
                 stackIn_42_2 = "";
               } else {
-                stackIn_42_2 = va.field_A[-var5 + (va.field_A.length + var8Lifetime2)];
+                stackIn_42_2 = QuickChatCategory.field_A[-var5 + (QuickChatCategory.field_A.length + var8Lifetime2)];
               }
               stackIn_41_0[stackIn_41_1] = stackIn_42_2;
             }
@@ -280,7 +280,7 @@ final class vq {
             IterableNodeHashTable.field_i = stackIn_115_0 + stackIn_116_1;
             var4Lifetime2++;
           }
-          od.field_b = -(IterableNodeHashTable.field_i >> 1) + ar.field_C;
+          od.field_b = -(IterableNodeHashTable.field_i >> 1) + QuickChatPhrase.field_C;
           lg.field_b = new int[AnimationFrameSet.field_v.length][];
           var4Lifetime3 = 0;
           var5Lifetime4 = od.field_b;

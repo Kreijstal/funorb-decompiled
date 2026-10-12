@@ -43,8 +43,8 @@ final class oq extends wv {
           return;
         }
         try {
-          param1.addKeyListener(va.field_w);
-          param1.addFocusListener(va.field_w);
+          param1.addKeyListener(QuickChatCategory.field_w);
+          param1.addFocusListener(QuickChatCategory.field_w);
         } catch (RuntimeException runtimeException) {
           throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "oq.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

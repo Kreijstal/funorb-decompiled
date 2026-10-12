@@ -49,7 +49,7 @@ final class LeaderEscortCondition implements MatchCondition {
         if (param0 != 3) {
           field_i = -52;
         }
-        return (va.field_D << 2) + (ol.field_B << 4) + cd.field_c;
+        return (QuickChatCategory.field_D << 2) + (ol.field_B << 4) + cd.field_c;
     }
 
     public final boolean isVictory(int obfuscationGuard) {
@@ -216,10 +216,10 @@ final class LeaderEscortCondition implements MatchCondition {
               th.field_b[0].field_f = mv.field_d;
               th.field_b[0].field_c = null;
               for (var8_int = 1; var8_int < var5; var8_int++) {
-                th.field_b[var8_int].field_f = var27.g(param0 ^ 8);
+                th.field_b[var8_int].field_f = var27.readNullTerminatedString(param0 ^ 8);
                 th.field_b[var8_int].field_d = false;
                 if (var27.readUnsignedByte(0) == 1) {
-                  th.field_b[var8_int].field_c = var27.g(1);
+                  th.field_b[var8_int].field_c = var27.readNullTerminatedString(1);
                 } else {
                   th.field_b[var8_int].field_c = null;
                 }

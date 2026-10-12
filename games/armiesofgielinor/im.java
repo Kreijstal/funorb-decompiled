@@ -44,12 +44,12 @@ class im extends DualLinkedNode {
         if (param1 != -27498) {
           field_x = (je) null;
         }
-        va.field_D = (param0 & 13) >> 2;
+        QuickChatCategory.field_D = (param0 & 13) >> 2;
         if (2 < ol.field_B) {
           ol.field_B = 2;
         }
-        if (va.field_D > 2) {
-          va.field_D = 2;
+        if (QuickChatCategory.field_D > 2) {
+          QuickChatCategory.field_D = 2;
         }
         cd.field_c = param0 & 3;
         if (!(cd.field_c <= 2)) {

@@ -44,12 +44,12 @@ final class hk extends je {
           }
           if (DelayedPacket.field_p == 0) {
             DelayedPacket.field_p = 200;
-            var1 = (te) (bl.field_h.first((byte) 118));
+            var1 = (te) (QuickChatCategoryRepository.field_h.first((byte) 118));
             while (var1 != null) {
               if (!var1.field_k.c(param0 ^ 65408)) {
                 var1.unlink(param0 ^ 247);
               }
-              var1 = (te) (bl.field_h.next((byte) 123));
+              var1 = (te) (QuickChatCategoryRepository.field_h.next((byte) 123));
             }
             if (null != ts.field_e) {
               var1Lifetime1 = (te) (ts.field_e.first((byte) 120));

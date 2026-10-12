@@ -35,7 +35,7 @@ abstract class wf extends iv {
         qa.b(og.field_m, 1);
         hq.a(param6, 5000, this.field_E, 5000, param2, og.field_m, this.field_C, 0, this.field_t, this.field_o, this.field_p, IntPair.field_m, this.field_x, this.field_G);
         qf.a(og.field_m, this.field_p, this.field_G, (byte) 103, this.field_C, param6, this.field_E, this.field_t, IntPair.field_m);
-        rf.b((byte) 112);
+        QuickChatPhraseRepository.b((byte) 112);
         CampaignMission.field_I = jk.b(68);
         lk.a(101, IndexedSpriteBase.field_b);
         mo.field_c = param7;
@@ -255,7 +255,7 @@ abstract class wf extends iv {
                 } else {
                   ck.field_b = dc.field_o;
                   DualLinkedNode.e(112);
-                  bl.field_b = false;
+                  QuickChatCategoryRepository.field_b = false;
                   p.field_b = 10;
                 }
               }
@@ -263,9 +263,9 @@ abstract class wf extends iv {
           }
           if (var4 == 4) {
             if (BestScoreStrategy.field_l) {
-              bl.a(CombatEvent.d((byte) -116), true);
+              QuickChatCategoryRepository.a(CombatEvent.d((byte) -116), true);
             } else {
-              bl.field_b = true;
+              QuickChatCategoryRepository.field_b = true;
               p.field_b = 10;
             }
           }
@@ -280,7 +280,7 @@ abstract class wf extends iv {
             ws.a(CombatEvent.d((byte) 53), -126);
           }
           if (var4 == 8) {
-            bl.a(CombatEvent.d((byte) -120), true);
+            QuickChatCategoryRepository.a(CombatEvent.d((byte) -120), true);
           }
           if (9 == var4) {
             ov.a(CombatEvent.d((byte) 48), 11982);

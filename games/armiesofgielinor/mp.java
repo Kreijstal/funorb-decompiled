@@ -8,7 +8,7 @@ final class mp extends je {
     je field_Nb;
     static RgbSprite field_Jb;
     dn field_Kb;
-    static bl field_Sb;
+    static QuickChatCategoryRepository quickChatCategories;
     static String field_Pb;
     static je field_Lb;
     static um field_Ob;
@@ -42,13 +42,13 @@ final class mp extends je {
         if (param0 != -8291) {
           mp.l(-93);
           field_Jb = null;
-          field_Sb = null;
+          quickChatCategories = null;
           field_Mb = null;
           field_Lb = null;
           return;
         }
         field_Jb = null;
-        field_Sb = null;
+        quickChatCategories = null;
         field_Mb = null;
         field_Lb = null;
     }

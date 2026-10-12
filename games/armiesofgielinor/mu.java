@@ -39,7 +39,7 @@ final class mu {
         RuntimeException decompiledCaughtException = null;
         int var3_int = 0;
         RuntimeException var3 = null;
-        va var4 = null;
+        QuickChatCategory var4 = null;
         int var5 = 0;
         int var6 = 0;
         int var9 = 0;
@@ -58,15 +58,15 @@ final class mu {
           }
           param2.discardPackedGroups = false;
           param2.fileRetentionMode = 0;
-          mp.field_Sb = new bl(var3_int, param2, param2);
-          ce.field_K = new rf(var3_int, param2, param2, new cu());
-          var4 = ps.b((byte) -83);
+          mp.quickChatCategories = new QuickChatCategoryRepository(var3_int, param2, param2);
+          ce.quickChatPhrases = new QuickChatPhraseRepository(var3_int, param2, param2, new cu());
+          var4 = ps.findQuickChatRootCategory((byte) -83);
           if (var4 == null) {
             var11 = (Throwable) null;
             af.a((Throwable) null, 124, "QC2");
             return;
           }
-          MapLayout.a(var4, 19003);
+          MapLayout.addCustomQuickChatOption(var4, 19003);
           var12 = (BitmapFont) null;
           hf.field_f = PaletteRegionMap.a(65793, 2245737, 65793, 65793, 8947848, 0, (BitmapFont) null, 1127256, 1513239, 4020342, 5138823, (byte) 39, 1513239);
           vs.field_g = PaletteRegionMap.a(param1, 0, 0, 0, 0, 16764006, param0, 0, 0, 0, 0, (byte) 107, 0);
@@ -80,7 +80,7 @@ final class mu {
             SoftwareRaster.h(var8, var8 + 1, 14 - (var8 << 1), 16777215);
           }
           SoftwareRaster.a(var16, var5, var6);
-          wn.field_jb = l.a(var4, hf.field_f, param1 ^ 0, vs.field_g, uj.field_n);
+          wn.field_jb = l.buildQuickChatCategoryMenu(var4, hf.field_f, param1 ^ 0, vs.field_g, uj.field_n);
           OwnerChangeEvent.field_E.field_fb = new NodeDeque();
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

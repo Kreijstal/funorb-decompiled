@@ -10,7 +10,7 @@ final class NodeHashIterator implements Iterator {
     private IntrusiveNode lastReturned;
     static String field_a;
     static String field_f;
-    static me field_i;
+    static QuickChatCommandDefinition field_i;
     private IterableNodeHashTable table;
     static String field_h;
 
@@ -118,7 +118,7 @@ final class NodeHashIterator implements Iterator {
     final static void b(byte param0) {
         SoftwareRaster.b();
         if (param0 != -90) {
-          field_i = (me) null;
+          field_i = (QuickChatCommandDefinition) null;
           ll.field_Rb.draw(2);
           return;
         }
@@ -214,7 +214,7 @@ final class NodeHashIterator implements Iterator {
     static {
         field_a = "Unfortunately your configuration doesn't support fullscreen mode. You could try restarting your browser and using the signed applet.";
         field_f = "Rune";
-        field_i = new me(6, 0, 4, 2);
+        field_i = new QuickChatCommandDefinition(6, 0, 4, 2);
         field_h = "Log in / Create account";
     }
 }

@@ -76,7 +76,7 @@ final class ws extends fw {
           SummonRequest.a((byte) 78, sh.field_r, 28);
           MoveEvent.tutorialLayout.setTopY(MoveEvent.tutorialLayout.getTopY(28, (byte) -122) + 30, 28, (byte) 120);
           SummonRequest.a((byte) 45, pu.field_B, 9);
-          if (!rf.a(27875)) {
+          if (!QuickChatPhraseRepository.a(27875)) {
             SummonRequest.a((byte) 54, cg.field_b, 1);
             SummonRequest.a((byte) 91, GameEvent.field_t, 24);
             SummonRequest.a((byte) 101, op.field_f, 17);
@@ -96,7 +96,7 @@ final class ws extends fw {
         SummonRequest.a((byte) 78, sh.field_r, 28);
         MoveEvent.tutorialLayout.setTopY(MoveEvent.tutorialLayout.getTopY(28, (byte) -122) + 30, 28, (byte) 120);
         SummonRequest.a((byte) 45, pu.field_B, 9);
-        if (!rf.a(27875)) {
+        if (!QuickChatPhraseRepository.a(27875)) {
           SummonRequest.a((byte) 54, cg.field_b, 1);
           SummonRequest.a((byte) 91, GameEvent.field_t, 24);
           SummonRequest.a((byte) 101, op.field_f, 17);

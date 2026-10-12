@@ -143,7 +143,7 @@ final class oe extends ro implements he {
               if (param2.field_d != 5) {
                 var5.a(fj.field_a, -1, 1);
               } else {
-                var5.a(me.field_d, 11, 1);
+                var5.a(QuickChatCommandDefinition.field_d, 11, 1);
                 var5.a(dt.field_c, 17, 1);
               }
             } else {

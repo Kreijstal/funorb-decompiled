@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 abstract class jk {
-    static me field_b;
+    static QuickChatCommandDefinition field_b;
     static String field_a;
 
     final static int[] a(int param0, int[] param1, int param2, int[] param3) {
@@ -116,6 +116,6 @@ abstract class jk {
 
     static {
         field_a = "Hide tutorial";
-        field_b = new me(0, 2, 2, 1);
+        field_b = new QuickChatCommandDefinition(0, 2, 2, 1);
     }
 }

@@ -1,9 +1,9 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class me {
-    int field_b;
-    int field_f;
+final class QuickChatCommandDefinition {
+    int commandId;
+    int definitionArgumentCount;
     static int field_e;
     static int thirdPreviousOpcode;
     static String field_a;
@@ -12,7 +12,7 @@ final class me {
     final static void a(int param0) {
         gl.a(126, 4);
         if (param0 != 26566) {
-          me.a(-97, (String) null, (int[]) null, 72L, -125);
+          QuickChatCommandDefinition.a(-97, (String) null, (int[]) null, 72L, -125);
         }
     }
 
@@ -20,9 +20,9 @@ final class me {
         throw new IllegalStateException();
     }
 
-    me(int param0, int param1, int param2, int param3) {
-        this.field_f = param3;
-        this.field_b = param0;
+    QuickChatCommandDefinition(int commandId, int unusedParameter1, int unusedParameter2, int definitionArgumentCount) {
+        this.definitionArgumentCount = definitionArgumentCount;
+        this.commandId = commandId;
     }
 
     public static void a(byte param0) {
@@ -31,7 +31,7 @@ final class me {
           field_d = null;
           return;
         }
-        me.a(97, (String) null, (int[]) null, -40L, 2);
+        QuickChatCommandDefinition.a(97, (String) null, (int[]) null, -40L, 2);
         field_a = null;
         field_d = null;
     }

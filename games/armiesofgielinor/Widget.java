@@ -8,7 +8,7 @@ class Widget extends IntrusiveNode {
     static int[] field_o;
     int y;
     qo field_x;
-    static me field_y;
+    static QuickChatCommandDefinition field_y;
     boolean field_t;
     int width;
     int field_z;
@@ -233,7 +233,7 @@ class Widget extends IntrusiveNode {
           if (param2 == 80) {
             return false;
           }
-          field_y = (me) null;
+          field_y = (QuickChatCommandDefinition) null;
           return false;
         }
         if (this.a(this, param0, param1, param2 - 12295)) {
@@ -246,7 +246,7 @@ class Widget extends IntrusiveNode {
         if (param2 == 80) {
           return false;
         }
-        field_y = (me) null;
+        field_y = (QuickChatCommandDefinition) null;
         return false;
     }
 
@@ -795,7 +795,7 @@ class Widget extends IntrusiveNode {
             }
             break;
           }
-          var5 = bl.b(2);
+          var5 = QuickChatCategoryRepository.b(2);
           var7 = var5;
           var9 = var7;
           var5 = var9;
@@ -813,7 +813,7 @@ class Widget extends IntrusiveNode {
             }
             break;
           }
-          var5 = bl.b(2);
+          var5 = QuickChatCategoryRepository.b(2);
           var12 = var5;
           var5 = var12;
           var12Lifetime1 = var5;
@@ -895,7 +895,7 @@ class Widget extends IntrusiveNode {
     }
 
     static {
-        field_y = new me(11, 0, 1, 2);
+        field_y = new QuickChatCommandDefinition(11, 0, 1, 2);
         field_n = 0;
         field_m = new int[8192];
     }

@@ -229,7 +229,7 @@ final class MoveEvent extends GameEvent {
           var12 = new RgbSprite(-(var9 * 2) + var4.pixelWidth, var9);
           var12.b();
           var4.f(-var9, 0);
-          rf.b(-18862);
+          QuickChatPhraseRepository.b(-18862);
           NodeIterator.field_b = new RgbSprite[]{var10_ref, var12, var11};
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

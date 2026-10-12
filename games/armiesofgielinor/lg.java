@@ -6,7 +6,7 @@ import java.util.*;
 final class lg {
     private java.util.zip.Inflater field_a;
     static int[][] field_b;
-    static me field_e;
+    static QuickChatCommandDefinition field_e;
     static String field_c;
     static int field_d;
 
@@ -30,7 +30,7 @@ final class lg {
           vt.field_k.b();
           var2.f(0, -wd.field_k.pixelHeight);
           vt.field_k.offsetY = wd.field_k.pixelHeight;
-          rf.b(-18862);
+          QuickChatPhraseRepository.b(-18862);
         } catch (RuntimeException runtimeException) {
           throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "lg.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -207,7 +207,7 @@ final class lg {
     }
 
     static {
-        field_e = new me(9, 0, 4, 1);
+        field_e = new QuickChatCommandDefinition(9, 0, 4, 1);
         field_c = "Skip battles: ";
     }
 }

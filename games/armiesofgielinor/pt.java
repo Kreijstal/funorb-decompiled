@@ -21,11 +21,11 @@ abstract class pt extends sf {
         if (param2 < 1) {
           field_db = (h) null;
           InstructionsPanel.field_B = param0;
-          ar.field_C = param1;
+          QuickChatPhrase.field_C = param1;
           return;
         }
         InstructionsPanel.field_B = param0;
-        ar.field_C = param1;
+        QuickChatPhrase.field_C = param1;
     }
 
     final void m(int param0) {

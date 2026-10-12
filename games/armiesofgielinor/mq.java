@@ -201,7 +201,7 @@ final class mq extends je {
           gt.field_i = var9;
           cs.field_Y = var9;
           np.field_Wb = var9;
-          va.field_z = var9;
+          QuickChatCategory.field_z = var9;
           rq.field_m = var9;
           j.field_b = var9;
           SpellConfirmationDialog.field_e = var9;
@@ -230,15 +230,15 @@ final class mq extends je {
             if (var11 != 0) {
               oh.field_E = CampaignMenuEntry.field_u[-1 + param2 + ResourceRequest.field_y];
             }
-            va.field_z = CampaignMenuEntry.field_u[param2 + ResourceRequest.field_y];
+            QuickChatCategory.field_z = CampaignMenuEntry.field_u[param2 + ResourceRequest.field_y];
             if (var12 != 0) {
               gt.field_i = CampaignMenuEntry.field_u[param2 + ResourceRequest.field_y + 1];
             }
           }
           ac.field_k[ls.a(rq.field_m, j.field_b, pv.field_b, SpellConfirmationDialog.field_e, -26) + (0 + var9)].b(param0, param4, param5, param1);
           ac.field_k[var9 - (-1 - ls.a(np.field_Wb, j.field_b, pv.field_b, cs.field_Y, -87))].b(param0, param4, param5, param1);
-          ac.field_k[2 + var9 + ls.a(gt.field_i, j.field_b, va.field_z, SpellConfirmationDialog.field_e, -68)].b(param0, param4, param5, param1);
-          ac.field_k[3 + (var9 + ls.a(oh.field_E, j.field_b, va.field_z, cs.field_Y, -72))].b(param0, param4, param5, param1);
+          ac.field_k[2 + var9 + ls.a(gt.field_i, j.field_b, QuickChatCategory.field_z, SpellConfirmationDialog.field_e, -68)].b(param0, param4, param5, param1);
+          ac.field_k[3 + (var9 + ls.a(oh.field_E, j.field_b, QuickChatCategory.field_z, cs.field_Y, -72))].b(param0, param4, param5, param1);
           if (cu.field_a &&
             var8 == 0 &&
             (og.field_p[param2] + param2 & 5) == 5) {

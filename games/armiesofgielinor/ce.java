@@ -12,7 +12,7 @@ final class ce extends tj implements he {
     private fw field_E;
     static ResourceArchive field_M;
     static int field_Q;
-    static rf field_K;
+    static QuickChatPhraseRepository quickChatPhrases;
     static int[] turnDurationTicks;
     private fw field_L;
 
@@ -77,14 +77,14 @@ final class ce extends tj implements he {
         field_M = null;
         if (param0 == 12000) {
           field_H = null;
-          field_K = null;
+          quickChatPhrases = null;
           field_F = null;
           turnDurationTicks = null;
           return;
         }
         field_Q = -81;
         field_H = null;
-        field_K = null;
+        quickChatPhrases = null;
         field_F = null;
         turnDurationTicks = null;
     }

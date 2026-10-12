@@ -78,7 +78,7 @@ final class SpellCastEvent extends GameEvent {
             var7 = lp.a(stackIn_12_0, stackIn_13_1, false);
             var8 = bt.field_g - (var7 >> 1);
             if (0 <= var4) {
-              var2 = var2 + ar.field_w;
+              var2 = var2 + QuickChatPhrase.field_w;
               if (MovementPlanner.field_z.selectedIndex != var4) {
                 stackIn_17_0 = ov.field_m;
               } else {
@@ -92,7 +92,7 @@ final class SpellCastEvent extends GameEvent {
             }
             if (0 <= var4) {
               uk.field_s.b(var6, var8, ia.field_g + var2, var5, -1);
-              var2 = var2 + (jg.field_k + ar.field_w + rd.field_b);
+              var2 = var2 + (jg.field_k + QuickChatPhrase.field_w + rd.field_b);
             } else {
               AiPlanner.field_G.b(var6, var8, var2 + lw.field_mb, var5, -1);
               var2 = var2 + cn.field_o;
@@ -158,7 +158,7 @@ final class SpellCastEvent extends GameEvent {
           return is.field_f;
         }
         if (!CombatPresentation.field_M.ensureGroupAvailableByName(28979, "commonui")) {
-          return rf.field_a + " - " + CombatPresentation.field_M.getGroupProgressByName("commonui", (byte) 122) + "%";
+          return QuickChatPhraseRepository.field_a + " - " + CombatPresentation.field_M.getGroupProgressByName("commonui", (byte) 122) + "%";
         }
         if (!h.field_g.ensureIndex((byte) 82)) {
           return cr.field_eb;

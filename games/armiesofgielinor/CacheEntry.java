@@ -160,7 +160,7 @@ abstract class CacheEntry extends DualLinkedNode {
                 ph.a(var9_ref_String, CombatEvent.d((byte) -5), false);
               }
             } else {
-              lk.field_r = ByteStorage.incomingPacket.g(1);
+              lk.field_r = ByteStorage.incomingPacket.readNullTerminatedString(1);
             }
             dj.a((byte) -127);
             ev.field_b = false;

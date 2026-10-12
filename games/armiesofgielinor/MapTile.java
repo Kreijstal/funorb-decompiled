@@ -664,7 +664,7 @@ final class MapTile implements TaggedFieldReader {
         RuntimeException decompiledCaughtException = null;
         try {
           var2 = new te(param1, param1);
-          bl.field_h.addLast((byte) -119, (IntrusiveNode) (var2));
+          QuickChatCategoryRepository.field_h.addLast((byte) -119, (IntrusiveNode) (var2));
           if (param0 > -35) {
             stackIn_2_0 = (te) null;
             return stackIn_2_0;

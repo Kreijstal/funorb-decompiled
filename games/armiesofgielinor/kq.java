@@ -4,7 +4,7 @@
 class kq extends fw {
     static int field_L;
     private Widget field_Q;
-    static me field_M;
+    static QuickChatCommandDefinition field_M;
     static je field_N;
     static RgbSprite field_P;
 
@@ -271,7 +271,7 @@ class kq extends fw {
 
     static {
         field_L = 0;
-        field_M = new me(15, 0, 1, 0);
+        field_M = new QuickChatCommandDefinition(15, 0, 1, 0);
         field_P = new RgbSprite(270, 70);
     }
 }

@@ -30,7 +30,7 @@ final class vi {
         int var2 = -(TurnTimerDial.field_d * TurnTimerDial.field_d) + var1;
         int var3 = sh.field_l + var2 * (-sh.field_l + EquipmentBattleTutorial.field_y) / var1;
         if (param0 < -53) {
-          CombatEvent.field_I.a(120, -20500, 640, var3, va.field_u);
+          CombatEvent.field_I.a(120, -20500, 640, var3, QuickChatCategory.field_u);
           PlayerProfile.a(-1, mi.field_l, 0, io.field_n, 5, EquipmentBattleTutorial.field_y - 24, 640);
           return;
         }

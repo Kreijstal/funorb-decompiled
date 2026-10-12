@@ -782,7 +782,7 @@ final class AiInfluenceMap {
             var5 = var3.field_q;
             LeaderEscortCondition.field_a[0] = mv.field_d;
             for (var6_int = 1; var6_int < var4; var6_int++) {
-              LeaderEscortCondition.field_a[var6_int] = var14.g(1);
+              LeaderEscortCondition.field_a[var6_int] = var14.readNullTerminatedString(1);
             }
             DelayedPacket.a(2, var5, var4);
             for (var6_intLifetime1 = 0; var6_intLifetime1 < var4; var6_intLifetime1++) {

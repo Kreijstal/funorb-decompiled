@@ -1,13 +1,13 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class bl {
+final class QuickChatCategoryRepository {
     static String field_a;
-    private WeightedLruCache field_e;
+    private WeightedLruCache categories;
     static NodeDeque field_h;
     static boolean field_f;
-    private ResourceArchive field_c;
-    private ResourceArchive field_d;
+    private ResourceArchive globalArchive;
+    private ResourceArchive localArchive;
     static String field_g;
     static boolean field_b;
 
@@ -115,9 +115,9 @@ final class bl {
               var2 != 4) {
               if (var2 == 5) {
                 var3_long = ((PacketBuffer) ((Object) var1)).j((byte) -2);
-                var22 = ((PacketBuffer) ((Object) var1)).g(1);
-                var19 = ((PacketBuffer) ((Object) var1)).g(1);
-                var21 = ((PacketBuffer) ((Object) var1)).g(1);
+                var22 = ((PacketBuffer) ((Object) var1)).readNullTerminatedString(1);
+                var19 = ((PacketBuffer) ((Object) var1)).readNullTerminatedString(1);
+                var21 = ((PacketBuffer) ((Object) var1)).readNullTerminatedString(1);
                 var20 = DeployEvent.a((byte) 121, var3_long);
                 var8_ref_of = var20;
                 stackIn_10_0 = (var19.equals("")) ? 0 : 1;
@@ -177,7 +177,7 @@ final class bl {
                       qm.field_J.a(-1, (long)var3, var4_ref_au);
                     }
                     TrianglePulse.a(var4_ref_au, true, var1, 78);
-                    rf.a(-107, var4_ref_au);
+                    QuickChatPhraseRepository.a(-107, var4_ref_au);
                   } else {
                     if (var2 == 9) {
                       var3 = ((PacketBuffer) ((Object) var1)).readUnsignedShort((byte) -104);
@@ -216,7 +216,7 @@ final class bl {
                                 var17_ref.field_mc = var4;
                                 var17_ref.field_Lb = qd.field_K;
                               }
-                              rf.a(-127, var17_ref);
+                              QuickChatPhraseRepository.a(-127, var17_ref);
                             }
                           } else {
                             if (14 != var2 &&
@@ -226,8 +226,8 @@ final class bl {
                                 switch (var2) {
                                   case 18:
                                     var3_long = ((PacketBuffer) ((Object) var1)).j((byte) -2);
-                                    var27 = ((PacketBuffer) ((Object) var1)).g(1);
-                                    var28 = ((PacketBuffer) ((Object) var1)).g(1);
+                                    var27 = ((PacketBuffer) ((Object) var1)).readNullTerminatedString(1);
+                                    var28 = ((PacketBuffer) ((Object) var1)).readNullTerminatedString(1);
                                     var7 = UnitModelPreview.a(var3_long, -79);
                                     if (var7 == null) {
                                       var7 = new of(var27, var28, var3_long);
@@ -330,7 +330,7 @@ final class bl {
                             } else {
                               var15.field_Nb = true;
                             }
-                            rf.a(-121, var30);
+                            QuickChatPhraseRepository.a(-121, var30);
                           }
                         }
                       }
@@ -395,7 +395,7 @@ final class bl {
             }
           }
           if (param0 >= -36) {
-            bl.b(122);
+            QuickChatCategoryRepository.b(122);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -405,29 +405,29 @@ final class bl {
         }
     }
 
-    final va a(int param0, boolean param1) {
-        byte[] var4 = null;
-        if (!param1) {
+    final QuickChatCategory getCategory(int categoryId, boolean obfuscationGuard) {
+        byte[] encodedCategory = null;
+        if (!obfuscationGuard) {
           field_g = (String) null;
         }
-        va var3 = (va) (this.field_e.get((long)param0, (byte) 122));
-        if (var3 != null) {
-          return var3;
+        QuickChatCategory category = (QuickChatCategory) (this.categories.get((long)categoryId, (byte) 122));
+        if (category != null) {
+          return category;
         }
-        if (param0 >= 32768) {
-          var4 = this.field_c.getFile((byte) 94, 32767 & param0, 0);
+        if (categoryId >= 32768) {
+          encodedCategory = this.globalArchive.getFile((byte) 94, 32767 & categoryId, 0);
         } else {
-          var4 = this.field_d.getFile((byte) 98, param0, 0);
+          encodedCategory = this.localArchive.getFile((byte) 98, categoryId, 0);
         }
-        var3 = new va();
-        if (var4 != null) {
-          var3.a((byte) -91, new PacketBuffer(var4));
+        category = new QuickChatCategory();
+        if (encodedCategory != null) {
+          category.decode((byte) -91, new PacketBuffer(encodedCategory));
         }
-        if (param0 >= 32768) {
-          var3.g(30);
+        if (categoryId >= 32768) {
+          category.applyGlobalIds(30);
         }
-        this.field_e.put(var3, 100, (long)param0);
-        return var3;
+        this.categories.put(category, 100, (long)categoryId);
+        return category;
     }
 
     final static void a(int param0, ResourceArchive param1) {
@@ -521,7 +521,7 @@ final class bl {
         }
     }
 
-    bl(int param0, ResourceArchive param1, ResourceArchive param2) {
+    QuickChatCategoryRepository(int unusedParameter, ResourceArchive localArchive, ResourceArchive globalArchive) {
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;
@@ -529,29 +529,29 @@ final class bl {
         String stackIn_12_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var4 = null;
-        this.field_e = new WeightedLruCache(64);
+        this.categories = new WeightedLruCache(64);
         try {
-          this.field_c = param2;
-          this.field_d = param1;
-          if (this.field_d != null) {
-            this.field_d.getFileCapacity(0, -2);
+          this.globalArchive = globalArchive;
+          this.localArchive = localArchive;
+          if (this.localArchive != null) {
+            this.localArchive.getFileCapacity(0, -2);
           }
-          if (null != this.field_c) {
-            this.field_c.getFileCapacity(0, -2);
+          if (null != this.globalArchive) {
+            this.globalArchive.getFileCapacity(0, -2);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
           stackIn_8_0 = var4;
-          stackIn_8_1 = new StringBuilder().append("bl.<init>(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_8_1 = new StringBuilder().append("bl.<init>(").append(unusedParameter).append(',');
+          if (localArchive == null) {
             stackIn_9_2 = "null";
           } else {
             stackIn_9_2 = "{...}";
           }
           stackIn_11_1 = ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',');
-          if (param2 == null) {
+          if (globalArchive == null) {
             stackIn_12_2 = "null";
           } else {
             stackIn_12_2 = "{...}";

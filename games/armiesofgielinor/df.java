@@ -271,7 +271,7 @@ final class df extends tj implements fb, he {
                   IntPair.e(17);
                 } else {
                   if (!this.field_F) {
-                    me.a(param1 ^ 26573);
+                    QuickChatCommandDefinition.a(param1 ^ 26573);
                   } else {
                     ba.g(89);
                   }

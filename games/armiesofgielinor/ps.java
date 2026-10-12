@@ -14,21 +14,21 @@ final class ps extends lk {
     static String field_z;
     static int[] field_C;
 
-    final static va b(byte param0) {
+    final static QuickChatCategory findQuickChatRootCategory(byte obfuscationGuard) {
         int var1 = 0;
         int var2_int = 0;
-        va var3 = null;
+        QuickChatCategory var3 = null;
         int var4 = 0;
-        va stackIn_4_0 = null;
+        QuickChatCategory stackIn_4_0 = null;
         Throwable decompiledCaughtException = null;
         IllegalArgumentException var2 = null;
         var4 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
-        var1 = 55 / ((param0 - 21) / 34);
+        var1 = 55 / ((obfuscationGuard - 21) / 34);
         try {
           var2_int = 0;
           while (true) {
-            var3 = mp.field_Sb.a(var2_int, true);
-            if (!var3.field_H) {
+            var3 = mp.quickChatCategories.getCategory(var2_int, true);
+            if (!var3.isRootCategory) {
               var2_int++;
               continue;
             }
@@ -136,7 +136,7 @@ final class ps extends lk {
           var3 = var2 - TurnTimerDial.field_d * TurnTimerDial.field_d;
           param0 = param0 + var3 * (EquipmentBattleTutorial.field_y - param0) / var2;
         }
-        CombatEvent.field_I.a(120, -20500, 640, param0, va.field_u);
+        CombatEvent.field_I.a(120, -20500, 640, param0, QuickChatCategory.field_u);
         PlayerProfile.a(-1, mi.field_l, 0, io.field_n, 5, EquipmentBattleTutorial.field_y - 24, 640);
         if (param1) {
           return;

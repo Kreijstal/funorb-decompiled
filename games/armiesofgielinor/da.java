@@ -50,7 +50,7 @@ final class da {
     }
 
     final static void a(int param0) {
-        mv.field_d = ByteStorage.incomingPacket.g(1);
+        mv.field_d = ByteStorage.incomingPacket.readNullTerminatedString(1);
         if (param0 <= 10) {
           String[] var2 = (String[]) null;
           da.a(70, 41, (String[][]) null, (String[]) null, 94);

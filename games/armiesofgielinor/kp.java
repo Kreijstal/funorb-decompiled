@@ -21,7 +21,7 @@ final class kp implements WidgetPainter {
           var3 = ol.field_B;
         }
         if (param0 == 1) {
-          var3 = va.field_D;
+          var3 = QuickChatCategory.field_D;
         }
         if (param0 == 2) {
           var3 = cd.field_c;

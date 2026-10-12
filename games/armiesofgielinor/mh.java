@@ -16,14 +16,14 @@ final class mh {
         var3 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           ResourceProtocolClient.field_e = param0;
-          var2 = (te) (bl.field_h.first((byte) 110));
+          var2 = (te) (QuickChatCategoryRepository.field_h.first((byte) 110));
           while (var2 != null) {
             if (!var2.field_k.c(65280)) {
               var2.unlink(-110);
             } else {
               var2.field_q.i(var2.field_o * ResourceProtocolClient.field_e + 128 >> 8);
             }
-            var2 = (te) (bl.field_h.next((byte) 123));
+            var2 = (te) (QuickChatCategoryRepository.field_h.next((byte) 123));
           }
           if (ts.field_e != null) {
             var2Lifetime1 = (te) (ts.field_e.first((byte) 95));

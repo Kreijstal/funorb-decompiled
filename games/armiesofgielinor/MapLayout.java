@@ -7,7 +7,7 @@ final class MapLayout extends IntrusiveNode {
     int field_p;
     private MapTile[] decodedTiles;
     int mapWidth;
-    static me field_q;
+    static QuickChatCommandDefinition field_q;
     int mapHeight;
     int field_k;
     static um field_u;
@@ -263,16 +263,16 @@ final class MapLayout extends IntrusiveNode {
         return (PacketBuffer) ((Object) var8);
     }
 
-    final static void a(va param0, int param1) {
+    final static void addCustomQuickChatOption(QuickChatCategory category, int obfuscationGuard) {
         try {
-          param0.field_y = new int[]{-1};
-          param0.field_v = new char[]{(char)63};
-          if (param1 != 19003) {
-            va var3 = (va) null;
-            MapLayout.a((va) null, 21);
+          category.phraseIds = new int[]{-1};
+          category.phraseShortcuts = new char[]{(char)63};
+          if (obfuscationGuard != 19003) {
+            QuickChatCategory var3 = (QuickChatCategory) null;
+            MapLayout.addCustomQuickChatOption((QuickChatCategory) null, 21);
           }
         } catch (RuntimeException runtimeException) {
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "lo.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "lo.A(" + (category != null ? "{...}" : "null") + ',' + obfuscationGuard + ')');
         }
     }
 
@@ -455,7 +455,7 @@ final class MapLayout extends IntrusiveNode {
     }
 
     static {
-        field_q = new me(12, 0, 1, 0);
+        field_q = new QuickChatCommandDefinition(12, 0, 1, 0);
         field_m = "Your friend list is full. Max of 100 for free users, and 200 for members.";
         field_o = "Logging in...";
     }

@@ -89,14 +89,14 @@ final class ds {
               }
               var8_int = 0;
               while (var8_int < 4) {
-                if (~param7 == ~va.field_G[6]) {
+                if (~param7 == ~QuickChatCategory.field_G[6]) {
                   param2 = param7;
                 }
                 var9 = param2;
                 var10 = param2;
                 var11 = param2;
-                if (param2 != param7 && (param7 == va.field_G[1] ||
-                  va.field_G[4] == param7)) {
+                if (param2 != param7 && (param7 == QuickChatCategory.field_G[1] ||
+                  QuickChatCategory.field_G[4] == param7)) {
                   var9 = param7;
                 }
                 var12 = var8_int + (param7 * 20 + ls.a(var11, param7, var10, var9, param3 - 27089));

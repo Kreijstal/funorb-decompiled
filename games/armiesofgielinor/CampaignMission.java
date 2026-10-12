@@ -387,7 +387,7 @@ final class CampaignMission extends IntrusiveNode implements TaggedFieldReader {
           ResourceArchive var2 = (ResourceArchive) null;
           CampaignMission.a((byte) -102, (String) null, (String) null, (ResourceArchive) null);
         }
-        return new gl(cn.e(488997228), rf.c(-104));
+        return new gl(cn.e(488997228), QuickChatPhraseRepository.c(-104));
     }
 
     CampaignMission() {

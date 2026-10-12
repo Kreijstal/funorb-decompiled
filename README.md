@@ -23,7 +23,7 @@ by default for every game. Semantic game-specific names use explicit naming
 rules. Deko's numbered structural-category and type-based names identify
 unresolved purposes honestly; they are not complete semantic deobfuscation.
 
-Armies has 175 reviewed class names, not a complete semantic map. Shared widget
+Armies has 180 reviewed class names, not a complete semantic map. Shared widget
 bounds, dropdown options/prefix selection, painter dispatch and expansion now
 have reviewed names with pointer, selection and arrow-pixel fixtures. Campaign
 loadouts now name unit/spell rewards, equipped slots and cumulative mana bonuses;
@@ -63,6 +63,12 @@ replacement and LRU eviction. IterableNodeHashTable/NodeHashIterator expose
 duplicate-key buckets and removable traversal. Native cache models preserve
 zero/negative weights and partial guard failures; controlled entry fixtures
 check reference-backed promotion without assuming a GC mechanism.
+
+Quick-chat categories, phrases, command definitions and repositories now expose
+shortcut decoding, fragment previews and local/global archive routing. Native
+wire/archive fixtures preserve unknown command rows, cached missing defaults and
+global-ID marking. Rendered quick-chat interaction and live delivery remain
+unverified.
 
 Camera overview grouping, centroid bounds, hold state and explicit tile focus
 now have reviewed names, alongside directional panning, dragging and velocity

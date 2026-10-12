@@ -11,7 +11,7 @@ final class l {
     static String field_d;
     static String field_f;
 
-    final static mq a(va param0, je param1, int param2, je param3, je param4) {
+    final static mq buildQuickChatCategoryMenu(QuickChatCategory category, je param1, int obfuscationGuard, je param3, je param4) {
         int var14 = 0;
         int stackIn_7_0 = 0;
         int stackIn_10_0 = 0;
@@ -35,10 +35,10 @@ final class l {
         int[] var10 = null;
         mq[] var11 = null;
         int var12 = 0;
-        va var13_ref_va = null;
+        QuickChatCategory var13_ref_va = null;
         int var13 = 0;
         int var15 = 0;
-        ar var16 = null;
+        QuickChatPhrase var16 = null;
         int var17 = 0;
         int[] var18 = null;
         char[] var19 = null;
@@ -47,19 +47,19 @@ final class l {
         int var12Lifetime1;
         var17 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          if (param0 == null) {
+          if (category == null) {
             return null;
           }
-          if (param0.field_C == null) {
+          if (category.subcategoryIds == null) {
             stackIn_7_0 = 0;
           } else {
-            stackIn_7_0 = param0.field_C.length;
+            stackIn_7_0 = category.subcategoryIds.length;
           }
           var5_int = stackIn_7_0;
-          if (null == param0.field_y) {
+          if (null == category.phraseIds) {
             stackIn_10_0 = 0;
           } else {
-            stackIn_10_0 = param0.field_y.length;
+            stackIn_10_0 = category.phraseIds.length;
           }
           var6 = stackIn_10_0;
           var7 = var6 + var5_int;
@@ -67,39 +67,39 @@ final class l {
           var21 = new char[var7];
           var19 = var21;
           var9 = var19;
-          if (param2 != 0) {
+          if (obfuscationGuard != 0) {
             field_g = (String) null;
           }
           var20 = new int[var7];
           var18 = var20;
           var10 = var18;
           var11 = new mq[var7];
-          if (null != param0.field_C) {
-            for (var12 = 0; var12 < param0.field_C.length; var12++) {
-              var13_ref_va = mp.field_Sb.a(param0.field_C[var12], true);
-              var8[var12] = var13_ref_va.field_E;
-              var9[var12] = param0.field_x[var12];
-              var11[var12] = l.a(var13_ref_va, param1, 0, param3, param4);
+          if (null != category.subcategoryIds) {
+            for (var12 = 0; var12 < category.subcategoryIds.length; var12++) {
+              var13_ref_va = mp.quickChatCategories.getCategory(category.subcategoryIds[var12], true);
+              var8[var12] = var13_ref_va.title;
+              var9[var12] = category.subcategoryShortcuts[var12];
+              var11[var12] = l.buildQuickChatCategoryMenu(var13_ref_va, param1, 0, param3, param4);
             }
           }
-          if (param0.field_y != null) {
+          if (category.phraseIds != null) {
             var12Lifetime1 = var5_int;
             var13 = 49;
-            for (var14 = 0; param0.field_y.length > var14; var14++) {
-              var15 = param0.field_y[var14];
+            for (var14 = 0; category.phraseIds.length > var14; var14++) {
+              var15 = category.phraseIds[var14];
               if (var15 != -1) {
-                var16 = ce.field_K.a(var15, 98);
-                var8[var12Lifetime1 + var14] = var16.d((byte) 97);
-                var9[var14 + var12Lifetime1] = param0.field_v[var14];
+                var16 = ce.quickChatPhrases.getPhrase(var15, 98);
+                var8[var12Lifetime1 + var14] = var16.getPreviewText((byte) 97);
+                var9[var14 + var12Lifetime1] = category.phraseShortcuts[var14];
                 if (var9[var12Lifetime1 + var14] <= 0) {
                   var13 = (char)(var13 + 1);
                   var9[var12Lifetime1 + var14] = (char)var13;
                 }
-                var10[var14 + var12Lifetime1] = param0.field_y[var14];
+                var10[var14 + var12Lifetime1] = category.phraseIds[var14];
               } else {
                 var8[var14 + var12Lifetime1] = GameEvent.field_x;
-                var9[var12Lifetime1 + var14] = param0.field_v[var14];
-                var10[var14 + var12Lifetime1] = param0.field_y[var14];
+                var9[var12Lifetime1 + var14] = category.phraseShortcuts[var14];
+                var10[var14 + var12Lifetime1] = category.phraseIds[var14];
               }
             }
           }
@@ -110,7 +110,7 @@ final class l {
           var5 = decompiledCaughtException;
           stackIn_31_0 = var5;
           stackIn_31_1 = new StringBuilder().append("l.A(");
-          if (param0 == null) {
+          if (category == null) {
             stackIn_32_2 = "null";
           } else {
             stackIn_32_2 = "{...}";
@@ -121,7 +121,7 @@ final class l {
           } else {
             stackIn_35_2 = "{...}";
           }
-          stackIn_37_1 = ((StringBuilder) (Object) stackIn_34_1).append(stackIn_35_2).append(',').append(param2).append(',');
+          stackIn_37_1 = ((StringBuilder) (Object) stackIn_34_1).append(stackIn_35_2).append(',').append(obfuscationGuard).append(',');
           if (param3 == null) {
             stackIn_38_2 = "null";
           } else {

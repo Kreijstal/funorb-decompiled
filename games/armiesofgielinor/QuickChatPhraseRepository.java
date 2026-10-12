@@ -1,12 +1,12 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class rf {
-    private ResourceArchive field_f;
+final class QuickChatPhraseRepository {
+    private ResourceArchive localArchive;
     static String field_e;
     static je field_d;
-    private WeightedLruCache field_b;
-    private ResourceArchive field_c;
+    private WeightedLruCache phrases;
+    private ResourceArchive globalArchive;
     static String field_a;
 
     final static boolean c(int param0) {
@@ -121,7 +121,7 @@ final class rf {
           var2 = (au) (qc.field_g.first((byte) 92));
           if (param0 > -66) {
             var4 = (java.applet.Applet) null;
-            rf.a(-6, (java.applet.Applet) null);
+            QuickChatPhraseRepository.a(-6, (java.applet.Applet) null);
           }
           while (var2 != null) {
             if (var2.a((byte) -76, param1)) {
@@ -177,39 +177,39 @@ final class rf {
         EventPresenter.field_q.addLast((byte) -119, (IntrusiveNode) (var1_refLifetime1));
     }
 
-    final ar a(int param0, int param1) {
-        byte[] var5 = null;
-        int var4 = 112 % ((-78 - param1) / 40);
-        ar var3 = (ar) (this.field_b.get((long)param0, (byte) 127));
-        if (var3 != null) {
-          return var3;
+    final QuickChatPhrase getPhrase(int phraseId, int obfuscationGuard) {
+        byte[] encodedPhrase = null;
+        int guardRemainder = 112 % ((-78 - obfuscationGuard) / 40);
+        QuickChatPhrase cachedPhrase = (QuickChatPhrase) (this.phrases.get((long)phraseId, (byte) 127));
+        if (cachedPhrase != null) {
+          return cachedPhrase;
         }
-        if (32768 <= param0) {
-          var5 = this.field_c.getFile((byte) 99, 32767 & param0, 1);
+        if (32768 <= phraseId) {
+          encodedPhrase = this.globalArchive.getFile((byte) 99, 32767 & phraseId, 1);
         } else {
-          var5 = this.field_f.getFile((byte) 118, param0, 1);
+          encodedPhrase = this.localArchive.getFile((byte) 118, phraseId, 1);
         }
-        ar var6 = new ar();
-        if (var5 != null) {
-          var6.a(new PacketBuffer(var5), (byte) 91);
-          if (32768 <= param0) {
-            var6.a(true);
-            this.field_b.put(var6, 100, (long)param0);
-            return var6;
+        QuickChatPhrase phrase = new QuickChatPhrase();
+        if (encodedPhrase != null) {
+          phrase.decode(new PacketBuffer(encodedPhrase), (byte) 91);
+          if (32768 <= phraseId) {
+            phrase.applyGlobalIds(true);
+            this.phrases.put(phrase, 100, (long)phraseId);
+            return phrase;
           }
-          this.field_b.put(var6, 100, (long)param0);
-          return var6;
+          this.phrases.put(phrase, 100, (long)phraseId);
+          return phrase;
         }
-        if (32768 > param0) {
-          this.field_b.put(var6, 100, (long)param0);
-          return var6;
+        if (32768 > phraseId) {
+          this.phrases.put(phrase, 100, (long)phraseId);
+          return phrase;
         }
-        var6.a(true);
-        this.field_b.put(var6, 100, (long)param0);
-        return var6;
+        phrase.applyGlobalIds(true);
+        this.phrases.put(phrase, 100, (long)phraseId);
+        return phrase;
     }
 
-    rf(int param0, ResourceArchive param1, ResourceArchive param2, gj param3) {
+    QuickChatPhraseRepository(int unusedParameter, ResourceArchive localArchive, ResourceArchive globalArchive, gj unusedMarker) {
         RuntimeException var5 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
@@ -219,36 +219,36 @@ final class rf {
         StringBuilder stackIn_14_1 = null;
         String stackIn_15_2 = null;
         RuntimeException decompiledCaughtException = null;
-        this.field_b = new WeightedLruCache(64);
+        this.phrases = new WeightedLruCache(64);
         try {
-          this.field_c = param2;
-          this.field_f = param1;
-          if (null != this.field_f) {
-            this.field_f.getFileCapacity(1, -2);
+          this.globalArchive = globalArchive;
+          this.localArchive = localArchive;
+          if (null != this.localArchive) {
+            this.localArchive.getFileCapacity(1, -2);
           }
-          if (this.field_c == null) {
+          if (this.globalArchive == null) {
             return;
           }
-          this.field_c.getFileCapacity(1, -2);
+          this.globalArchive.getFileCapacity(1, -2);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
           stackIn_8_0 = var5;
-          stackIn_8_1 = new StringBuilder().append("rf.<init>(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_8_1 = new StringBuilder().append("rf.<init>(").append(unusedParameter).append(',');
+          if (localArchive == null) {
             stackIn_9_2 = "null";
           } else {
             stackIn_9_2 = "{...}";
           }
           stackIn_11_1 = ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',');
-          if (param2 == null) {
+          if (globalArchive == null) {
             stackIn_12_2 = "null";
           } else {
             stackIn_12_2 = "{...}";
           }
           stackIn_14_1 = ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',');
-          if (param3 == null) {
+          if (unusedMarker == null) {
             stackIn_15_2 = "null";
           } else {
             stackIn_15_2 = "{...}";

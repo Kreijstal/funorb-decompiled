@@ -117,7 +117,7 @@ class lk implements WidgetPainter, pm {
             var12 = stackIn_3_0 + Math.min(stackIn_3_1, Math.min(stackIn_3_2, stackIn_4_3));
             CampaignUnitOverride.a(param2 + param3.x, param3.x + param2 + param3.width, param3.height + (param3.y + param0), param3.y + param0, (byte) 100);
             t.field_c.a(this.field_o, var12, var10, (byte) 101, var11, var10);
-            rf.b(-18862);
+            QuickChatPhraseRepository.b(-18862);
           }
           if (param1 == 1024) {
             return;
@@ -545,7 +545,7 @@ class lk implements WidgetPainter, pm {
             var15 = stackIn_21_0;
             t.field_c.a(this.field_l >>> 24, this.a(param5, param3, var14, -109), this.field_g + param4 + (param3.y + param3.field_z) + var13.field_n, true, var13.field_c, -var14 + var15, this.field_l);
           }
-          rf.b(param0 + 2397);
+          QuickChatPhraseRepository.b(param0 + 2397);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -640,7 +640,7 @@ class lk implements WidgetPainter, pm {
           } else {
             this.field_q.a(this.d(param7 ^ 2, param6), this.a(param2, param6, param0, 66), this.a(param6, param4, 0, param1), var9_int, var10, param3, param5, this.field_n, this.field_k, this.field_j);
           }
-          rf.b(-18862);
+          QuickChatPhraseRepository.b(-18862);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

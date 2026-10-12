@@ -3,7 +3,7 @@
  */
 final class nf extends je {
     static je field_Kb;
-    static me field_Ib;
+    static QuickChatCommandDefinition field_Ib;
     static String field_Jb;
     private je field_Lb;
     static int field_Mb;
@@ -65,7 +65,7 @@ final class nf extends je {
         field_Ib = null;
         field_Kb = null;
         if (param0 != 0) {
-          field_Ib = (me) null;
+          field_Ib = (QuickChatCommandDefinition) null;
         }
         field_Nb = null;
     }
@@ -108,7 +108,7 @@ final class nf extends je {
         try {
           var2_int = param1.length();
           if (!param0) {
-            field_Ib = (me) null;
+            field_Ib = (QuickChatCommandDefinition) null;
           }
           var3 = new char[var2_int];
           for (var4 = 0; var4 < var2_int; var4++) {
@@ -239,7 +239,7 @@ final class nf extends je {
 
     static {
         field_Jb = "Play free version";
-        field_Ib = new me(13, 0, 1, 0);
+        field_Ib = new QuickChatCommandDefinition(13, 0, 1, 0);
         field_Pb = "Spells to affect the very ground itself.";
     }
 }

@@ -223,7 +223,7 @@ final class SphinxActionRequest extends ActionRequest {
           je.field_Q.field_tb = 1;
           je.field_Q.field_B = 1;
           je.field_Q.field_Eb = 1;
-          rf.field_d = new je(0L, je.field_Q);
+          QuickChatPhraseRepository.field_d = new je(0L, je.field_Q);
           pt.field_X = new je(0L, je.field_Q);
           kd.field_M = new je(0L, nd.field_a);
           rd.field_e = new je(0L, je.field_Q);
@@ -242,9 +242,9 @@ final class SphinxActionRequest extends ActionRequest {
           nd.field_a.field_mb = wj.a(-12310, fk.a("bigbutton_mouseover", (byte) -124, param1, "lobby"));
           nd.field_a.field_U = wj.a(-12310, fk.a("bigbutton_mouseheld", (byte) -124, param1, "lobby"));
           nd.field_a.field_A = wj.a(-12310, fk.a("bigbutton_disabled", (byte) -126, param1, "lobby"));
-          rf.field_d.field_G = wj.a(-12310, fk.a("greenbutton", (byte) -124, param1, "lobby"));
-          rf.field_d.field_mb = wj.a(-12310, fk.a("greenbutton_mouseover", (byte) -126, param1, "lobby"));
-          rf.field_d.field_U = wj.a(-12310, fk.a("greenbutton_mouseheld", (byte) -127, param1, "lobby"));
+          QuickChatPhraseRepository.field_d.field_G = wj.a(-12310, fk.a("greenbutton", (byte) -124, param1, "lobby"));
+          QuickChatPhraseRepository.field_d.field_mb = wj.a(-12310, fk.a("greenbutton_mouseover", (byte) -126, param1, "lobby"));
+          QuickChatPhraseRepository.field_d.field_U = wj.a(-12310, fk.a("greenbutton_mouseheld", (byte) -127, param1, "lobby"));
           pt.field_X.field_G = wj.a(-12310, fk.a("redbutton", (byte) -128, param1, "lobby"));
           pt.field_X.field_mb = wj.a(-12310, fk.a("redbutton_mouseover", (byte) -127, param1, "lobby"));
           pt.field_X.field_U = wj.a(-12310, fk.a("redbutton_mouseheld", (byte) -126, param1, "lobby"));

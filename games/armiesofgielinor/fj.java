@@ -174,8 +174,8 @@ final class fj {
             IntrusiveNode var3 = (IntrusiveNode) null;
             fj.$cfr$intArgs$a$f94c566f195c(-121, (IntrusiveNode) null, (IntrusiveNode) null);
           }
-          param0.removeKeyListener(va.field_w);
-          param0.removeFocusListener(va.field_w);
+          param0.removeKeyListener(QuickChatCategory.field_w);
+          param0.removeFocusListener(QuickChatCategory.field_w);
           us.field_c = -1;
         } catch (RuntimeException runtimeException) {
           throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "fj.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');

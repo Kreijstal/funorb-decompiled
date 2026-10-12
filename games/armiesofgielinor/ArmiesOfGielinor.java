@@ -196,7 +196,7 @@ public final class ArmiesOfGielinor extends wf {
                   ut.i((byte) 123);
                   SpellCastAction.field_t = false;
                   CipherPacketBuffer.a(false, 11, 1, jt.field_a);
-                  PaletteRegionMap.field_i = ByteStorage.incomingPacket.g(1);
+                  PaletteRegionMap.field_i = ByteStorage.incomingPacket.readNullTerminatedString(1);
                   continue;
                 }
                 if (nm.deliveredOpcode == 14) {
@@ -232,7 +232,7 @@ public final class ArmiesOfGielinor extends wf {
                 }
                 if (nm.deliveredOpcode == 10 &&
                   FaceNormal.field_d) {
-                  bl.a((byte) -105);
+                  QuickChatCategoryRepository.a((byte) -105);
                   continue;
                 }
                 if (nm.deliveredOpcode == 11 ||
@@ -1070,7 +1070,7 @@ public final class ArmiesOfGielinor extends wf {
                 } else {
                   stackIn_65_0 = true;
                 }
-                bl.a(stackIn_65_0, -5);
+                QuickChatCategoryRepository.a(stackIn_65_0, -5);
               }
             }
           } else {
@@ -1079,7 +1079,7 @@ public final class ArmiesOfGielinor extends wf {
             } else {
               stackIn_65_0 = true;
             }
-            bl.a(stackIn_65_0, -5);
+            QuickChatCategoryRepository.a(stackIn_65_0, -5);
           }
           if (~pg.field_f != ~pg.field_e) {
             var4 = pk.field_X * 256 / 16;
@@ -1430,10 +1430,10 @@ public final class ArmiesOfGielinor extends wf {
           cu.a((byte) -121);
           e.b((byte) -13);
           mq.k(85);
-          bl.a(40);
-          rf.a((byte) -110);
-          va.h(-97);
-          ar.e((byte) -74);
+          QuickChatCategoryRepository.a(40);
+          QuickChatPhraseRepository.a((byte) -110);
+          QuickChatCategory.h(-97);
+          QuickChatPhrase.e((byte) -74);
           WeightedLruCache.a((byte) -57);
           du.b(16);
           ug.a(16);
@@ -1507,7 +1507,7 @@ public final class ArmiesOfGielinor extends wf {
           IterableNodeHashTable.a(false);
           IterableDualNodeDeque.a(19345);
           CacheEntry.g(param0 ^ 91);
-          me.a((byte) -36);
+          QuickChatCommandDefinition.a((byte) -36);
           StrongCacheEntry.c(true);
           pc.d(35);
           lc.a();
@@ -1856,7 +1856,7 @@ public final class ArmiesOfGielinor extends wf {
             stackIn_24_11 = false;
             stackIn_24_12 = 4;
             stackIn_24_13 = var4;
-            if (!rf.a(27875)) {
+            if (!QuickChatPhraseRepository.a(27875)) {
               stackIn_21_0Lifetime1Lifetime1 = null;
               stackIn_21_1Lifetime1Lifetime1 = null;
               if (BufferedSocket.field_j >= 2) {
@@ -2039,7 +2039,7 @@ public final class ArmiesOfGielinor extends wf {
                                   bn.a((byte) -24, 54.0f, vl.a(bt.field_e, 0, en.field_G, "", cr.field_eb));
                                   return false;
                                 }
-                                bn.a((byte) -24, 52.0f, vl.a(sh.field_j, 0, rf.field_a, "basic", is.field_f));
+                                bn.a((byte) -24, 52.0f, vl.a(sh.field_j, 0, QuickChatPhraseRepository.field_a, "basic", is.field_f));
                                 return false;
                               }
                               bn.a((byte) -24, 41.0f, vl.a(iw.field_l, 0, Battlefield.field_nb, "basic", TileMetadata.field_i));
@@ -2057,13 +2057,13 @@ public final class ArmiesOfGielinor extends wf {
                       bn.a((byte) -24, 23.0f, vl.a(br.field_d, 0, ds.field_b, "", ResourceProtocolClient.field_k));
                       return false;
                     }
-                    bn.a((byte) -24, 21.0f, vl.a(ResourceRequest.field_A, 0, rf.field_a, "lobby", is.field_f));
+                    bn.a((byte) -24, 21.0f, vl.a(ResourceRequest.field_A, 0, QuickChatPhraseRepository.field_a, "lobby", is.field_f));
                     return false;
                   }
                   bn.a((byte) -24, 18.0f, vl.a(gg.field_K, 0, Battlefield.field_nb, "lobby", TileMetadata.field_i));
                   return false;
                 }
-                bn.a((byte) -24, 16.0f, vl.a(ResourceRequest.field_A, 0, rf.field_a, var4, is.field_f));
+                bn.a((byte) -24, 16.0f, vl.a(ResourceRequest.field_A, 0, QuickChatPhraseRepository.field_a, var4, is.field_f));
                 return false;
               }
               bn.a((byte) -24, 13.0f, vl.a(gg.field_K, 0, Battlefield.field_nb, var4, TileMetadata.field_i));
@@ -2312,7 +2312,7 @@ public final class ArmiesOfGielinor extends wf {
           } while (var18 == 0);
           if (!ta.field_L) {
             dh.field_k = GameplayController.a("lobby_game_logo", (byte) 51, "basic", iw.field_l);
-            ar.a(var16, bs.field_b, (byte) 53, MoveAttackRequest.field_B, 4, gg.field_K, ResourceRequest.field_A, CipherPacketBuffer.field_A, pf.field_a, new int[]{10, 10, 10, 10, 10, 10, 10, 10, 10, 10}, true, pf.field_a.length, ku.field_L, km.field_c, CorpseConditionMarker.field_w, ki.field_d, var16);
+            QuickChatPhrase.a(var16, bs.field_b, (byte) 53, MoveAttackRequest.field_B, 4, gg.field_K, ResourceRequest.field_A, CipherPacketBuffer.field_A, pf.field_a, new int[]{10, 10, 10, 10, 10, 10, 10, 10, 10, 10}, true, pf.field_a.length, ku.field_L, km.field_c, CorpseConditionMarker.field_w, ki.field_d, var16);
             la.b((byte) 30, 200);
             ps.a(124, ResourceRequest.field_A, gg.field_K);
           }
@@ -2367,7 +2367,7 @@ public final class ArmiesOfGielinor extends wf {
           }
           jt.field_a = 16;
           ClientConnectionState.a(50, true);
-          ar.a(param0 ^ -68, mp.field_Ob);
+          QuickChatPhrase.a(param0 ^ -68, mp.field_Ob);
           DropdownSelector.a(128, 8, rs.field_n.field_z, rs.field_n.field_L + rs.field_n.field_z, rs.field_n, io.field_m[0].pixelHeight, 8, 2, 16777215, 240, rs.field_n.field_z, -99, new pn(DisplacedUnitMarker.field_s, nd.field_b, 0, 128, true), 255, new pn(DisplacedUnitMarker.field_s, nd.field_b, 0, 128, true), 320, io.field_m[0].pixelWidth, rs.field_n.field_z + rs.field_n.field_L, new pn(io.field_m, nd.field_b, 0, 224, false), rs.field_n);
           wm.a(320, 128, 240, 16777215, rs.field_n.field_z + rs.field_n.field_L, rs.field_n.field_z, new pn(DisplacedUnitMarker.field_s, nd.field_b, 0, 128, true), 8, (byte) 90, 480, 8, rs.field_n.field_L + rs.field_n.field_z, new pn(DisplacedUnitMarker.field_s, nd.field_b, 0, 128, true), io.field_m[0].pixelHeight, rs.field_n, 2, io.field_m[0].pixelWidth, rs.field_n, 255, rs.field_n.field_z, new pn(io.field_m, nd.field_b, 0, 224, false));
           return;
@@ -2407,7 +2407,7 @@ public final class ArmiesOfGielinor extends wf {
             null == i.field_Lb) {
             bn.a((byte) -24, 97.0f, AiPlanner.field_R);
             this.a(param0 ^ 11672);
-            bl.a(0, ki.field_b);
+            QuickChatCategoryRepository.a(0, ki.field_b);
             ki.field_b = null;
             wl.a(0);
             return false;

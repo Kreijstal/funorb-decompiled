@@ -261,7 +261,7 @@ final class r extends vt {
         RuntimeException var1_ref = null;
         var4 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          var1 = va.field_w;
+          var1 = QuickChatCategory.field_w;
           synchronized (var1) {
             SummonAction.field_E = rd.field_d;
             if (!param0) {

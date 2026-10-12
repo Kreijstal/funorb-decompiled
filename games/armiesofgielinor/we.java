@@ -22,7 +22,7 @@ final class we {
           field_a = null;
           return;
         }
-        we.a(2, (byte) 125);
+        we.decodeSingleByteCharacter(2, (byte) 125);
         field_g = null;
         field_f = null;
         field_h = null;
@@ -90,13 +90,13 @@ final class we {
         }
     }
 
-    final static char a(int param0, byte param1) {
+    final static char decodeSingleByteCharacter(int obfuscationGuard, byte encodedByte) {
         int var3 = 0;
-        int var2 = 255 & param1;
+        int var2 = 255 & encodedByte;
         if (var2 == 0) {
           throw new IllegalArgumentException("" + Integer.toString(var2, 16));
         }
-        if (param0 > -115) {
+        if (obfuscationGuard > -115) {
           return 'ﾍ';
         }
         if (var2 < 128) {

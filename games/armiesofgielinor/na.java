@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class na extends tj implements mf, he {
-    static me field_G;
+    static QuickChatCommandDefinition field_G;
     private ma field_P;
     static int field_E;
     kv field_M;
@@ -564,6 +564,6 @@ final class na extends tj implements mf, he {
         field_I = "Spells";
         field_N = "This item can only be used on other players' units.";
         field_J = new int[]{1, 1, 2, 1, 1, 1, 2, 2, 2, 2, 3, 2, 2, 2, 3, 5, 1, 1, 1, 2, 3, 3, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 5, 2, 2, 2, 2, 2, 2, 3, 5, 3, 3, 5, 2, 3, 5, 3, 3, 5, 2, 3, 5, 2, 3, 5};
-        field_G = new me(1, 2, 2, 0);
+        field_G = new QuickChatCommandDefinition(1, 2, 2, 0);
     }
 }

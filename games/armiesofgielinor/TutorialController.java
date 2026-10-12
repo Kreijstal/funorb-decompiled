@@ -115,7 +115,7 @@ final class TutorialController {
             return;
           }
           var4 = pk.field_V;
-          var4 = var4 + " " + ia.a(fo.a(param0 ^ 4800, ar.a(var2_int != 0, false, (byte) -115, var3 != 0), new String[]{dv.field_r}), '#', param0 ^ 3, "<br><br>");
+          var4 = var4 + " " + ia.a(fo.a(param0 ^ 4800, QuickChatPhrase.a(var2_int != 0, false, (byte) -115, var3 != 0), new String[]{dv.field_r}), '#', param0 ^ 3, "<br><br>");
           fe.b(40, 180, 560, 150, io.field_m, nd.field_b, param0, 128);
           rs.field_n.a(var4, 80, 200, 480, 300, 16777215, -1, 1, 0, 30);
           return;
@@ -1645,7 +1645,7 @@ final class TutorialController {
                                                                                           if (!this.selectionState.hasActivationInput((byte) 79)) {
                                                                                             return;
                                                                                           }
-                                                                                          if (rf.a(27875)) {
+                                                                                          if (QuickChatPhraseRepository.a(27875)) {
                                                                                             var6 = param0 ? 1 : 0;
                                                                                             CipherPacketBuffer.a(var6 != 0, 15, 1, jt.field_a);
                                                                                             if (var9 == 0) {
@@ -2250,7 +2250,7 @@ final class TutorialController {
             this.selectionState.hasActivationInput((byte) 121)) {
             var6Lifetime1 = -55 + var4_int;
             if (var6Lifetime1 > 1 &&
-              rf.a(param1 + 27875) &&
+              QuickChatPhraseRepository.a(param1 + 27875) &&
               var9 == 0) {
               return;
             }
@@ -2375,7 +2375,7 @@ final class TutorialController {
           var16 = 1;
           var17 = 0;
           if (var7 == 0) {
-            fe.a(fo.a(4800, me.field_a, new String[]{Integer.toString(pg.playerProfile.spellQuantities[param1])}), var8 >> 1, 82 + var11, var8 - 45, nd.field_b, true);
+            fe.a(fo.a(4800, QuickChatCommandDefinition.field_a, new String[]{Integer.toString(pg.playerProfile.spellQuantities[param1])}), var8 >> 1, 82 + var11, var8 - 45, nd.field_b, true);
           }
           stackIn_24_0 = en.field_E;
           stackIn_24_1 = var5;
@@ -2849,7 +2849,7 @@ final class TutorialController {
           }
           if (var8 == 0 ||
             var17 != 0) {
-            rs.field_n.b(bl.field_g, db.a(true, 272), var9, 16711680, -1);
+            rs.field_n.b(QuickChatCategoryRepository.field_g, db.a(true, 272), var9, 16711680, -1);
           }
           var10 = MatchConditionEntry.a(260 + var7, (byte) 94);
           if (var8 != 0) {
@@ -4593,7 +4593,7 @@ final class TutorialController {
               if (null != FixedQuaternion.field_a) {
                 ck.b(-99);
               }
-              rf.a(32767, CombatEvent.d((byte) 65));
+              QuickChatPhraseRepository.a(32767, CombatEvent.d((byte) 65));
             }
             if (var2_int == 1) {
               CipherPacketBuffer.a(false, 0, 1, jt.field_a);
@@ -5037,7 +5037,7 @@ final class TutorialController {
           }
           if (stackIn_48_0 != 0) {
             if (param3 == 0) {
-              rs.field_n.a(ar.field_x, db.a(true, 50), MatchConditionEntry.a(70 + param0, (byte) 94), 220, 324 - (param0 + 20), 16777215, -1, 1, 1, 0);
+              rs.field_n.a(QuickChatPhrase.field_x, db.a(true, 50), MatchConditionEntry.a(70 + param0, (byte) 94), 220, 324 - (param0 + 20), 16777215, -1, 1, 1, 0);
             }
             stackIn_58_0 = ((3 & param3) != 0) ? 70 : 0;
             TrianglePulse.field_c = stackIn_58_0 + (param0 + 70 * (param3 >> 2));
