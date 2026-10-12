@@ -401,7 +401,7 @@ abstract class nl extends Widget implements gw {
             eb.field_c.addChild(SpellCastEvent.field_D, 107);
           }
           eb.field_c.addChild(bu.field_a, 109);
-          mp.field_Lb = new ClientUiComponent(0L, kd.field_M, DeployAction.field_v.toUpperCase());
+          SocialListPanel.field_Lb = new ClientUiComponent(0L, kd.field_M, DeployAction.field_v.toUpperCase());
           kd.field_F = new ClientUiComponent(0L, SummonAction.field_y);
           vc.field_l = new ClientUiComponent(0L, sh.field_m);
           BattleTutorial.field_d = new ClientUiComponent(0L, rn.field_a, EffectPresentation.field_d.toUpperCase());

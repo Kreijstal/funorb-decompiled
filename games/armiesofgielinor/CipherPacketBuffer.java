@@ -227,7 +227,7 @@ final class CipherPacketBuffer extends PacketBuffer {
           }
         } else {
           DualNodeDeque.field_c = 0;
-          TrianglePulse.a(-16147, 50, mp.field_Ob, true);
+          TrianglePulse.a(-16147, 50, SocialListPanel.field_Ob, true);
           if (param1 != 23) {
             if (param1 != -10) {
               mu.field_a = new cg();

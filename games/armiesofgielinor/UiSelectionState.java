@@ -197,7 +197,7 @@ final class UiSelectionState {
               if (0 != var5.pressedButton) {
                 QuickChatMenu.a(var5, var4_int, false);
               }
-              var6 = kp.a(var4_int, -119);
+              var6 = kp.getChatFilter(var4_int, -119);
               we.field_g[var4_int].sprite = dh.field_n[var6];
               ResourceProtocolClient.field_j[var4_int].text = co.field_k[var6];
             }

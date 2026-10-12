@@ -91,7 +91,7 @@ final class uj extends mk {
             this.field_m = param1;
           }
           if (!this.field_k) {
-            stackIn_13_0 = oc.field_Ob;
+            stackIn_13_0 = AccountNamePrompt.field_Ob;
             return stackIn_13_0;
           }
           if (param0 < 89) {

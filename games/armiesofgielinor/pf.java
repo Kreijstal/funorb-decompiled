@@ -19,7 +19,7 @@ final class pf {
             if (FixedQuaternion.field_a != null &&
               FixedQuaternion.field_a.field_k) {
               ck.b(-110);
-              SphinxActionRequest.field_v.a(new ud(SphinxActionRequest.field_v, mp.field_Mb), 0);
+              SphinxActionRequest.field_v.a(new ud(SphinxActionRequest.field_v, SocialListPanel.field_Mb), 0);
             }
             return;
           }

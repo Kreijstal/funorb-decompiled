@@ -36,12 +36,12 @@ final class la {
         }
     }
 
-    final static void b(int param0) {
-        if (param0 != -26887) {
+    final static void openPublicTextChat(int obfuscationGuard) {
+        if (obfuscationGuard != -26887) {
           return;
         }
-        rs.field_t = 0;
-        hf.field_c = true;
+        rs.outgoingChatChannel = 0;
+        hf.textChatActive = true;
     }
 
     final static void d(byte param0) {
@@ -131,7 +131,7 @@ final class la {
 
     final static void b(byte param0, int param1) {
         if (param0 != 30) {
-          la.b(104);
+          la.openPublicTextChat(104);
         }
         lk.field_h = 0;
         MoveAttackRequest.field_D = new int[3];

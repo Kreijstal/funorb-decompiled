@@ -180,9 +180,9 @@ final class MoveEvent extends GameEvent {
           pv.a("commonui", "dropdown", param2, 24914);
           var5 = MapLayout.a("screen_options", -28106, "commonui", param2);
           oa.field_H = new IndexedSprite[4];
-          dq.field_e = new IndexedSprite[4];
+          HuffmanCodec.field_e = new IndexedSprite[4];
           ClientContextMenu.field_b = new IndexedSprite[4];
-          var6 = new IndexedSprite[][]{oa.field_H, dq.field_e, ClientContextMenu.field_b};
+          var6 = new IndexedSprite[][]{oa.field_H, HuffmanCodec.field_e, ClientContextMenu.field_b};
           var7 = new int[4][];
           var7[0] = var5[0].palette;
           var8 = 1;

@@ -13,20 +13,20 @@ final class vs {
     static String field_h;
     static String field_b;
 
-    final static void a(int param0, QuickChatMenu param1) {
-        if (param1 == null) {
+    final static void showQuickChatMenu(int obfuscationGuard, QuickChatMenu menu) {
+        if (menu == null) {
           return;
         }
         try {
-          qd.field_I = param1;
-          OwnerChangeEvent.field_E.children.clear(75);
-          OwnerChangeEvent.field_E.addChild(qd.field_I, 105);
-          if (param0 != 256) {
+          qd.activeQuickChatMenu = menu;
+          OwnerChangeEvent.quickChatMenuHost.children.clear(75);
+          OwnerChangeEvent.quickChatMenuHost.addChild(qd.activeQuickChatMenu, 105);
+          if (obfuscationGuard != 256) {
             field_j = true;
           }
-          BattleTutorial.field_h = true;
+          BattleTutorial.quickChatMenuVisible = true;
         } catch (RuntimeException runtimeException) {
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "vs.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "vs.B(" + obfuscationGuard + ',' + (menu != null ? "{...}" : "null") + ')');
         }
     }
 

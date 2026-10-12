@@ -11,7 +11,7 @@ final class lw extends pt {
 
     final static void a(byte param0, QuickChatMenu param1) {
         try {
-          OwnerChangeEvent.field_E.addChild(param1, 80);
+          OwnerChangeEvent.quickChatMenuHost.addChild(param1, 80);
           if (param0 != 79) {
             field_nb = (String) null;
           }

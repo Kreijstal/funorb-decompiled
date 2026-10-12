@@ -72,7 +72,7 @@ final class s {
             return stackIn_24_0;
           }
           if (param2 == 8) {
-            stackIn_27_0 = fo.a(4800, oc.field_Nb, new String[]{param1});
+            stackIn_27_0 = fo.a(4800, AccountNamePrompt.field_Nb, new String[]{param1});
             return stackIn_27_0;
           }
           if (param0) {

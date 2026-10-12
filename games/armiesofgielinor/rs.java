@@ -15,7 +15,7 @@ final class rs extends IntrusiveNode {
     static int field_q;
     static int field_k;
     static RgbSprite[] field_p;
-    static int field_t;
+    static int outgoingChatChannel;
 
     final static int a(byte param0, CharSequence param1) {
         int var4 = 0;
@@ -111,6 +111,6 @@ final class rs extends IntrusiveNode {
         field_v = new QuickChatCommandDefinition(14, 0, 4, 1);
         field_k = 640;
         field_x = "Invalid Login or Password<br><br>For accounts created after the 24th of November 2010, please use your email address to log in.<br><br>Otherwise please log in with your username.";
-        field_t = 0;
+        outgoingChatChannel = 0;
     }
 }

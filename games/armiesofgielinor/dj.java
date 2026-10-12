@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class dj {
-    static long field_e;
+    static long chatRecipientAccountId;
     static int[] field_b;
     static int friendCount;
     static String[] field_d;

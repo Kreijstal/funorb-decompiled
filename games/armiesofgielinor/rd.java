@@ -37,15 +37,15 @@ final class rd extends java.awt.Canvas implements java.awt.event.FocusListener {
         }
     }
 
-    final static void b(int param0) {
-        if (param0 != 8445) {
-          rd.b(33);
-          UpkeepEvent.field_C.setLength(0);
-          rs.field_t = 0;
+    final static void clearChatText(int obfuscationGuard) {
+        if (obfuscationGuard != 8445) {
+          rd.clearChatText(33);
+          UpkeepEvent.chatTextBuffer.setLength(0);
+          rs.outgoingChatChannel = 0;
           return;
         }
-        UpkeepEvent.field_C.setLength(0);
-        rs.field_t = 0;
+        UpkeepEvent.chatTextBuffer.setLength(0);
+        rs.outgoingChatChannel = 0;
     }
 
     public final void focusGained(java.awt.event.FocusEvent param0) {

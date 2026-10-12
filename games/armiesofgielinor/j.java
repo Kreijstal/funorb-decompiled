@@ -304,7 +304,7 @@ final class j {
                 stackIn_36_2 = dr.field_x;
               }
               stackIn_35_0.text = fo.a(stackIn_35_1, stackIn_36_2, new String[]{so.field_d.text});
-              mp.field_Lb.inputEnabled = true;
+              SocialListPanel.field_Lb.inputEnabled = true;
               fc.field_a = true;
               pi.field_N.text = cg.field_i;
               if (fs.field_d != null) {
@@ -354,7 +354,7 @@ final class j {
               }
             } else {
               uj.field_l.text = AiActionCandidate.field_v;
-              mp.field_Lb.inputEnabled = false;
+              SocialListPanel.field_Lb.inputEnabled = false;
               if (var8 != 0) {
                 stackIn_23_0 = p.field_f;
               } else {
@@ -397,7 +397,7 @@ final class j {
           ((ClientUiComponent) (Object) stackIn_76_0).updateInput(stackIn_76_1, stackIn_77_2);
           ij.field_w.field_a.advanceTabSelection(10000);
           if (null != no.roomSetup) {
-            if (0 != mp.field_Lb.pressedButton) {
+            if (0 != SocialListPanel.field_Lb.pressedButton) {
               lu.a(-127, param3);
             }
             if (so.field_d.pressedButton != 0) {

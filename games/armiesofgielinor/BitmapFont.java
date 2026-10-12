@@ -105,7 +105,7 @@ abstract class BitmapFont extends DualLinkedNode {
                               if (!(!var8.startsWith("img="))) {
                                 try {
                                   var10 = (CharSequence) ((Object) var8.substring(4));
-                                  var9_int = dq.a(49, var10);
+                                  var9_int = HuffmanCodec.a(49, var10);
                                   var4 = var4 + this.field_E[var9_int].canvasWidth;
                                   var3 = 0;
                                 } catch (java.lang.Exception decompiledCaughtParameter0) {
@@ -218,7 +218,7 @@ abstract class BitmapFont extends DualLinkedNode {
                                 if (var15.startsWith("img=")) {
                                   try {
                                     var18 = (CharSequence) ((Object) var15.substring(4));
-                                    var16_int = dq.a(25, var18);
+                                    var16_int = HuffmanCodec.a(25, var18);
                                     var4 = var4 + this.field_E[var16_int].canvasWidth;
                                     var10 = 0;
                                   } catch (java.lang.Exception decompiledCaughtParameter0) {
@@ -452,7 +452,7 @@ abstract class BitmapFont extends DualLinkedNode {
                 }
               } else {
                 var4 = (CharSequence) ((Object) param0.substring(6));
-                field_T = dq.a(34, var4);
+                field_T = HuffmanCodec.a(34, var4);
               }
             } else {
               field_D = field_P;
@@ -813,7 +813,7 @@ abstract class BitmapFont extends DualLinkedNode {
                               } else {
                                 try {
                                   var13 = (CharSequence) ((Object) var9_ref_String.substring(4));
-                                  var10 = dq.a(12, var13);
+                                  var10 = HuffmanCodec.a(12, var13);
                                   var11_ref_si = this.field_E[var10];
                                   if (this.field_C == null) {
                                     stackIn_27_0 = var11_ref_si.canvasHeight;

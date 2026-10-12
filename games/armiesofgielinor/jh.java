@@ -176,7 +176,7 @@ final class jh extends mk {
             return stackIn_5_0;
           }
           var5 = (CharSequence) ((Object) param1);
-          var3_int = dq.a(46, var5);
+          var3_int = HuffmanCodec.a(46, var5);
           if (var3_int > 0 &&
             var3_int <= 130) {
             return oo.field_g;
@@ -218,18 +218,18 @@ final class jh extends mk {
         return es.receivePacketBytes(-105, fk.packetPayloadLength);
     }
 
-    final static void a(String param0, long param1, int param2, int param3, int param4) {
-        vt.field_l = param3;
-        wn.field_db = param0;
-        vi.field_e = param2;
-        if (param4 != 19212) {
+    final static void rememberLastQuickChat(String recipientName, long accountId, int phraseId, int channelId, int obfuscationGuard) {
+        vt.lastQuickChatChannel = channelId;
+        wn.lastQuickChatRecipientName = recipientName;
+        vi.lastQuickChatPhraseId = phraseId;
+        if (obfuscationGuard != 19212) {
           return;
         }
         try {
-          lq.field_d = true;
-          RevivalEvent.field_z = param1;
+          lq.hasLastQuickChat = true;
+          RevivalEvent.lastQuickChatRecipientAccountId = accountId;
         } catch (RuntimeException runtimeException) {
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "jh.Q(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "jh.Q(" + (recipientName != null ? "{...}" : "null") + ',' + accountId + ',' + phraseId + ',' + channelId + ',' + obfuscationGuard + ')');
         }
     }
 

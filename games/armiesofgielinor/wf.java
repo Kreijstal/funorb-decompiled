@@ -302,7 +302,7 @@ abstract class wf extends iv {
               if (fq.field_h.b(0)) {
                 var12 = fq.field_h.a(3);
                 if (var12 != null) {
-                  var7 = co.a(0, var12.position, -127, var12.payload);
+                  var7 = co.decodeSingleByteText(0, var12.position, -127, var12.payload);
                   df.a(var7, -73);
                 } else {
                   var9 = (String) null;

@@ -16,7 +16,7 @@ class nr {
         }
     }
 
-    final static byte[] a(CharSequence param0, boolean param1) {
+    final static byte[] encodeSingleByteText(CharSequence text, boolean obfuscationGuard) {
         int var4 = 0;
         byte[] stackIn_69_0 = null;
         RuntimeException stackIn_72_0 = null;
@@ -30,14 +30,14 @@ class nr {
         int var6 = 0;
         var6 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          if (param1) {
+          if (obfuscationGuard) {
             field_a = (int[]) null;
           }
-          var2_int = param0.length();
+          var2_int = text.length();
           var3 = new byte[var2_int];
           for (var4 = 0; var2_int > var4; var4++) {
             {
-              var5 = param0.charAt(var4);
+              var5 = text.charAt(var4);
               if ((0 >= var5 ||
                 var5 >= 128) && (160 > var5 ||
                 var5 > 255)) {
@@ -139,12 +139,12 @@ class nr {
           var2 = decompiledCaughtException;
           stackIn_72_0 = var2;
           stackIn_72_1 = new StringBuilder().append("nr.C(");
-          if (param0 == null) {
+          if (text == null) {
             stackIn_73_2 = "null";
           } else {
             stackIn_73_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_72_0), ((StringBuilder) (Object) stackIn_72_1).append(stackIn_73_2).append(',').append(param1).append(')').toString());
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_72_0), ((StringBuilder) (Object) stackIn_72_1).append(stackIn_73_2).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 

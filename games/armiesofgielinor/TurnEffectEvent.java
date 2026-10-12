@@ -240,7 +240,7 @@ final class TurnEffectEvent extends GameEvent {
           if (param0 != 8) {
             TurnEffectEvent.a(-95, (ClientUiComponent) null, (ClientUiComponent) null, (ClientUiComponent) null, (ClientUiComponent) null);
           }
-          hf.field_c = false;
+          hf.textChatActive = false;
           if (!NodeIterator.field_a) {
             if (vi.field_d) {
               var5 = TabbedPanel.field_Lb;

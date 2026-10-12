@@ -4,7 +4,7 @@
 final class wm {
     static ClientUiComponent field_c;
     static String field_d;
-    static String field_b;
+    static String chatRecipientNameKey;
     static String field_a;
 
     public static void a(int param0) {
@@ -12,13 +12,13 @@ final class wm {
         if (param0 == -10743) {
           field_a = null;
           field_d = null;
-          field_b = null;
+          chatRecipientNameKey = null;
           return;
         }
-        field_b = (String) null;
+        chatRecipientNameKey = (String) null;
         field_a = null;
         field_d = null;
-        field_b = null;
+        chatRecipientNameKey = null;
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5, nr param6, int param7, byte param8, int param9, int param10, int param11, nr param12, int param13, BitmapFont param14, int param15, int param16, BitmapFont param17, int param18, int param19, nr param20) {
@@ -122,7 +122,7 @@ final class wm {
           var9 = 0;
           if (!NodeIterator.field_a &&
             AnimationPlayer.field_g > var5) {
-            var10_int = kp.a(var8_ref_mo.channelId, -125);
+            var10_int = kp.getChatFilter(var8_ref_mo.channelId, -125);
             if (var8_ref_mo.getFilterPriority(true) >= var10_int && (var8_ref_mo.systemMessage ||
               !IndexedSpriteBase.isIgnoredAccount(var8_ref_mo.accountName, -3404))) {
               var9 = 1;
@@ -178,7 +178,7 @@ final class wm {
             MoveEvent.field_J = false;
             cu.field_c = true;
           }
-          if (hf.field_c) {
+          if (hf.textChatActive) {
             if (null == UnitCycler.field_g) {
               var9Lifetime1 = -vq.field_a.content.pendingHeightDelta - (vq.field_a.content.height - vq.field_a.viewport.height);
               if (cu.field_c) {
@@ -211,7 +211,7 @@ final class wm {
           MoveEvent.field_J = false;
           cu.field_c = true;
         }
-        if (hf.field_c) {
+        if (hf.textChatActive) {
           if (null == UnitCycler.field_g) {
             var9Lifetime2 = -vq.field_a.content.pendingHeightDelta - (vq.field_a.content.height - vq.field_a.viewport.height);
             if (!cu.field_c) {

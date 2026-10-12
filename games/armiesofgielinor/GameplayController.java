@@ -994,7 +994,7 @@ final class GameplayController {
             fe.c(DualNodeIterator.field_g, db.a(true, param4 + 137), MatchConditionEntry.a(18 + param1, (byte) 94), nd.field_b, true);
           }
           var7 = 260 / this.battlefield.c(-9650, param0);
-          dq.a(db.a(true, 25 + param4), op.field_c[0][param0], this.battlefield.teams[param0].getTeamName(3), false, (byte) -8, MatchConditionEntry.a(param1 + 5, (byte) 94));
+          HuffmanCodec.a(db.a(true, 25 + param4), op.field_c[0][param0], this.battlefield.teams[param0].getTeamName(3), false, (byte) -8, MatchConditionEntry.a(param1 + 5, (byte) 94));
           var8 = -33 + (5 + param4) + var7 / 2;
           var9 = 0;
           while (var9 < this.battlefield.playerCount) {
@@ -5306,7 +5306,7 @@ final class GameplayController {
             return;
           }
           if (this.field_lb &&
-            hf.field_c) {
+            hf.textChatActive) {
             return;
           }
           if (rs.field_q == 83) {
@@ -6094,7 +6094,7 @@ final class GameplayController {
                   if (stackIn_55_0) {
                     if (var6 != -1) {
                       if (var6 == 5) {
-                        var2 = dq.field_g;
+                        var2 = HuffmanCodec.field_g;
                       } else {
                         var7 = th.a(this.field_Lb + var6, param0 ^ 121, 135);
                         if (-1 < var7 &&
@@ -6123,7 +6123,7 @@ final class GameplayController {
                       decompiledFrameRemainder14 = false;
                     }
                     else {
-                      var2 = dq.field_g;
+                      var2 = HuffmanCodec.field_g;
                     }
                   }
                   var6++;
@@ -9822,7 +9822,7 @@ final class GameplayController {
                   }
                   stackIn_66_0Lifetime1 = var2_int - 120;
                   stackIn_66_1Lifetime1 = op.field_c[0][var4];
-                  dq.a(stackIn_66_0Lifetime1, stackIn_66_1Lifetime1, this.battlefield.teams[var4].getTeamName(3), true, (byte) -27, var3);
+                  HuffmanCodec.a(stackIn_66_0Lifetime1, stackIn_66_1Lifetime1, this.battlefield.teams[var4].getTeamName(3), true, (byte) -27, var3);
                   var3 += 30;
                   decompiledFrameRemainder0 = false;
                 }
@@ -9859,7 +9859,7 @@ final class GameplayController {
                   }
                   stackIn_94_0Lifetime1 = var2_int - 120;
                   stackIn_94_1Lifetime1 = op.field_c[0][var4];
-                  dq.a(stackIn_94_0Lifetime1, stackIn_94_1Lifetime1, this.battlefield.teams[var4].getTeamName(3), true, (byte) 109, var3);
+                  HuffmanCodec.a(stackIn_94_0Lifetime1, stackIn_94_1Lifetime1, this.battlefield.teams[var4].getTeamName(3), true, (byte) 109, var3);
                   var3 += 30;
                 }
                 var4++;

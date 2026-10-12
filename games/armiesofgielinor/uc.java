@@ -23,14 +23,14 @@ final class uc {
         SectorCacheStore.a(2858);
     }
 
-    final static void a(dq param0, int param1) {
+    final static void setChatHuffmanCodec(HuffmanCodec codec, int obfuscationGuard) {
         try {
-          if (param1 != 4) {
+          if (obfuscationGuard != 4) {
             field_b = (ClientUiComponent) null;
           }
-          ds.field_c = param0;
+          ds.chatHuffmanCodec = codec;
         } catch (RuntimeException runtimeException) {
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "uc.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "uc.C(" + (codec != null ? "{...}" : "null") + ',' + obfuscationGuard + ')');
         }
     }
 

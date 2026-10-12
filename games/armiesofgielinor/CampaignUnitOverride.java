@@ -191,7 +191,7 @@ final class CampaignUnitOverride {
                 }
                 var2 = NodeIterator.a(50, "mu_x_declined_invite");
                 if (null != var2) {
-                  oc.field_Nb = uu.a(var2, (byte) -102);
+                  AccountNamePrompt.field_Nb = uu.a(var2, (byte) -102);
                 }
                 var2 = NodeIterator.a(50, "mu_x_withdrew_request");
                 if (var2 != null) {
@@ -831,7 +831,7 @@ final class CampaignUnitOverride {
                 }
                 var2 = NodeIterator.a(param0 ^ -100, "gameopt_playerneedsratedgames");
                 if (var2 != null) {
-                  oc.field_Ib = uu.a(var2, (byte) 3);
+                  AccountNamePrompt.field_Ib = uu.a(var2, (byte) 3);
                 }
                 var2 = NodeIterator.a(param0 ^ -100, "gameopt_youneedratedgames");
                 if (var2 != null) {
@@ -1001,7 +1001,7 @@ final class CampaignUnitOverride {
                 }
                 var2 = NodeIterator.a(50, "rule_2_1");
                 if (null != var2) {
-                  dq.field_f = uu.a(var2, (byte) -100);
+                  HuffmanCodec.field_f = uu.a(var2, (byte) -100);
                 }
                 var2 = NodeIterator.a(50, "rule_2_2");
                 if (null != var2) {
@@ -1549,7 +1549,7 @@ final class CampaignUnitOverride {
                 }
                 var2 = NodeIterator.a(50, "create_email_confirm_tooltip");
                 if (var2 != null) {
-                  oc.field_Jb = uu.a(var2, (byte) -100);
+                  AccountNamePrompt.field_Jb = uu.a(var2, (byte) -100);
                 }
                 var2 = NodeIterator.a(param0 + 132, "create_age_tooltip");
                 if (var2 != null) {
@@ -1585,7 +1585,7 @@ final class CampaignUnitOverride {
                 }
                 var2 = NodeIterator.a(50, "create_username_unavailable");
                 if (null != var2) {
-                  oc.field_Ob = uu.a(var2, (byte) 11);
+                  AccountNamePrompt.field_Ob = uu.a(var2, (byte) 11);
                 }
                 var2 = NodeIterator.a(50, "create_username_available");
                 if (null != var2) {
@@ -1617,7 +1617,7 @@ final class CampaignUnitOverride {
                 }
                 var2 = NodeIterator.a(50, "create_alert_passlength");
                 if (null != var2) {
-                  mp.field_Pb = uu.a(var2, (byte) -112);
+                  SocialListPanel.field_Pb = uu.a(var2, (byte) -112);
                 }
                 var2 = NodeIterator.a(50, "create_alert_passcontainsname");
                 if (null != var2) {
@@ -2766,17 +2766,17 @@ final class CampaignUnitOverride {
                 }
                 var2 = NodeIterator.a(param0 ^ -100, "hs_mode_name,0");
                 if (var2 != null) {
-                  oc.field_Pb[0] = uu.a(var2, (byte) 60);
+                  AccountNamePrompt.field_Pb[0] = uu.a(var2, (byte) 60);
                 }
             }
             void runChunk3() throws java.lang.RuntimeException {
                 var2 = NodeIterator.a(param0 ^ -100, "hs_mode_name,1");
                 if (var2 != null) {
-                  oc.field_Pb[1] = uu.a(var2, (byte) -120);
+                  AccountNamePrompt.field_Pb[1] = uu.a(var2, (byte) -120);
                 }
                 var2 = NodeIterator.a(param0 ^ -100, "hs_mode_name,2");
                 if (null != var2) {
-                  oc.field_Pb[2] = uu.a(var2, (byte) 55);
+                  AccountNamePrompt.field_Pb[2] = uu.a(var2, (byte) 55);
                 }
                 var2 = NodeIterator.a(50, "rating_mode_name,0");
                 if (var2 != null) {

@@ -79,7 +79,7 @@ final class fo {
                 continue;
               }
               var5++;
-              var8 = dq.a(param0 ^ 4761, (CharSequence) ((Object) var7_ref_String));
+              var8 = HuffmanCodec.a(param0 ^ 4761, (CharSequence) ((Object) var7_ref_String));
               var4 = var4 + (param2[var8].length() - (var5 - var6_int));
               continue;
             }
@@ -115,7 +115,7 @@ final class fo {
               continue;
             }
             var5Lifetime1++;
-            var10 = dq.a(90, (CharSequence) ((Object) var9));
+            var10 = HuffmanCodec.a(90, (CharSequence) ((Object) var9));
             discarded$1 = var6.append(param1.substring(var7, var8Lifetime1));
             discarded$2 = var6.append(param2[var10]);
             var7 = var5Lifetime1;

@@ -69,12 +69,12 @@ final class ContextActionMenu extends ClientUiComponent {
         return true;
     }
 
-    final static void k(int param0) {
-        rs.field_t = 0;
-        if (param0 <= 63) {
+    final static void openPublicQuickChat(int obfuscationGuard) {
+        rs.outgoingChatChannel = 0;
+        if (obfuscationGuard <= 63) {
           field_Jb = (String) null;
         }
-        TrianglePulse.a((byte) 126);
+        TrianglePulse.openDefaultQuickChatMenu((byte) 126);
     }
 
     final void layoutPopup(int anchorHeight, int anchorY, int anchorWidth, byte obfuscationGuard, int anchorX) {
@@ -137,7 +137,7 @@ final class ContextActionMenu extends ClientUiComponent {
     public static void e(byte param0) {
         field_Qb = null;
         if (param0 != 5) {
-          ContextActionMenu.k(-69);
+          ContextActionMenu.openPublicQuickChat(-69);
         }
         field_Jb = null;
         field_Vb = (int[][]) null;
@@ -147,7 +147,7 @@ final class ContextActionMenu extends ClientUiComponent {
     final void addTextAction(int actionId, String text, byte obfuscationGuard) {
         try {
           if (obfuscationGuard >= -98) {
-            ContextActionMenu.k(-112);
+            ContextActionMenu.openPublicQuickChat(-112);
           }
           this.items[this.itemCount] = new IconTextComponent(0L, (ClientUiComponent) null, (ClientUiComponent) null, this.itemTextStyle, (RgbSprite) null, text);
           this.items[this.itemCount].matchedButtonSkinSprites = this.matchedButtonSkin;

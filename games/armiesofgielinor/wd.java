@@ -163,21 +163,21 @@ final class wd {
           }
           var1 = null;
           var2 = null;
-          if (rs.field_t == 0 &&
+          if (rs.outgoingChatChannel == 0 &&
             no.roomSetup != null) {
             var2 = wc.field_K;
           }
-          if (rs.field_t == 2 &&
-            !vu.j(6)) {
-            if (!jj.isFriend(62, wm.field_b)) {
-              var2 = fo.a(4800, DiskCacheWorker.field_h, new String[]{qd.field_G});
+          if (rs.outgoingChatChannel == 2 &&
+            !vu.isChatRecipientAvailable(6)) {
+            if (!jj.isFriend(62, wm.chatRecipientNameKey)) {
+              var2 = fo.a(4800, DiskCacheWorker.field_h, new String[]{qd.chatRecipientName});
               if (var10 != 0) {
-                var2 = fo.a(4800, pt.field_gb, new String[]{qd.field_G});
+                var2 = fo.a(4800, pt.field_gb, new String[]{qd.chatRecipientName});
               }
             } else {
-              var2 = fo.a(4800, pt.field_gb, new String[]{qd.field_G});
+              var2 = fo.a(4800, pt.field_gb, new String[]{qd.chatRecipientName});
             }
-            if (BattleTutorial.field_h) {
+            if (BattleTutorial.quickChatMenuVisible) {
               ta.a((String) null, 2, -18119, (String) null, (String) (var2), 0);
               DelayedPacket.e(-3);
             }
@@ -194,10 +194,10 @@ final class wd {
             var3 = nt.a(-121, var3);
             var4 = "";
             var5 = "|";
-            var6 = rs.field_t;
+            var6 = rs.outgoingChatChannel;
             var7 = 0;
             if (var6 == 2) {
-              var4 = fo.a(4800, ta.field_Q, new String[]{qd.field_G});
+              var4 = fo.a(4800, ta.field_Q, new String[]{qd.chatRecipientName});
               var8 = fo.a(4800, ov.field_l, new String[]{var3});
               var7 = rb.field_b.width + UpkeepEvent.field_z.width - 485 - (-IntrusiveNode.field_e.a(var8) + IntrusiveNode.field_e.a(var4));
               if (var7 < 0) {
@@ -253,16 +253,16 @@ final class wd {
                 if (UpkeepEvent.field_z.pressedButton != 0 &&
                   UpkeepEvent.field_z.dragGrabX < var9 &&
                   !NodeIterator.field_a) {
-                  ContextActionMenu.k(92);
+                  ContextActionMenu.openPublicQuickChat(92);
                 }
               }
             }
-            fs.a(CombatEvent.field_A[var6], var5, var4 + BitmapFont.c(UpkeepEvent.field_C.toString()), 33, var7);
-            if (!hf.field_c) {
+            fs.a(CombatEvent.field_A[var6], var5, var4 + BitmapFont.c(UpkeepEvent.chatTextBuffer.toString()), 33, var7);
+            if (!hf.textChatActive) {
               rb.field_b.heldButtonMatches = false;
             }
             if (rb.field_b.heldButtonMatches) {
-              var1 = fo.a(4800, os.field_q, new String[]{var3, qd.field_G});
+              var1 = fo.a(4800, os.field_q, new String[]{var3, qd.chatRecipientName});
             }
           }
           stackIn_96_0 = var1;

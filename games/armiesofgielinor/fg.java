@@ -114,7 +114,7 @@ final class fg extends IntrusiveNode {
         }
     }
 
-    final static QuickChatMenu a(int param0, ClientUiComponent param1, int[] param2, ClientUiComponent param3, ClientUiComponent param4) {
+    final static QuickChatMenu buildQuickChatResponseMenu(int obfuscationGuard, ClientUiComponent style, int[] responsePhraseIds, ClientUiComponent textStyle, ClientUiComponent itemStyle) {
         int var10_int = 0;
         int var5_int = 0;
         RuntimeException var5 = null;
@@ -141,7 +141,7 @@ final class fg extends IntrusiveNode {
         Exception var10 = null;
         var12 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          var5_int = param2.length;
+          var5_int = responsePhraseIds.length;
           var6 = new String[var5_int];
           var14 = new char[var5_int];
           var13 = var14;
@@ -150,13 +150,13 @@ final class fg extends IntrusiveNode {
           var9 = 49;
           try {
             for (var10_int = 0; var5_int > var10_int; var10_int++) {
-              var11 = ce.quickChatPhrases.getPhrase(param2[var10_int], 81);
+              var11 = ce.quickChatPhrases.getPhrase(responsePhraseIds[var10_int], 81);
               var6[var10_int] = var11.getPreviewText((byte) 97);
               var9 = (char)(var9 + 1);
               var7[var10_int] = (char)var9;
               var8[var10_int] = null;
             }
-            if (param0 >= -7) {
+            if (obfuscationGuard >= -7) {
               fg.a(-20);
             }
           } catch (java.lang.Exception decompiledCaughtParameter0) {
@@ -165,32 +165,32 @@ final class fg extends IntrusiveNode {
             stackIn_9_0 = null;
             return (QuickChatMenu) (stackIn_9_0);
           }
-          stackIn_11_0 = new QuickChatMenu(0L, param1, param4, param3, var8, param2, var6, var14);
+          stackIn_11_0 = new QuickChatMenu(0L, style, itemStyle, textStyle, var8, responsePhraseIds, var6, var14);
           return stackIn_11_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
           decompiledCaughtException = decompiledCaughtParameter1;
           var5 = (RuntimeException) (Object) decompiledCaughtException;
           stackIn_14_0 = var5;
-          stackIn_14_1 = new StringBuilder().append("fg.A(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_14_1 = new StringBuilder().append("fg.A(").append(obfuscationGuard).append(',');
+          if (style == null) {
             stackIn_15_2 = "null";
           } else {
             stackIn_15_2 = "{...}";
           }
           stackIn_17_1 = ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',');
-          if (param2 == null) {
+          if (responsePhraseIds == null) {
             stackIn_18_2 = "null";
           } else {
             stackIn_18_2 = "{...}";
           }
           stackIn_20_1 = ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',');
-          if (param3 == null) {
+          if (textStyle == null) {
             stackIn_21_2 = "null";
           } else {
             stackIn_21_2 = "{...}";
           }
           stackIn_23_1 = ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',');
-          if (param4 == null) {
+          if (itemStyle == null) {
             stackIn_24_2 = "null";
           } else {
             stackIn_24_2 = "{...}";
@@ -207,7 +207,7 @@ final class fg extends IntrusiveNode {
           this.field_t = param3;
           if (param7 > -55) {
             ClientUiComponent var10 = (ClientUiComponent) null;
-            fg.a(-76, (ClientUiComponent) null, (int[]) null, (ClientUiComponent) null, (ClientUiComponent) null);
+            fg.buildQuickChatResponseMenu(-76, (ClientUiComponent) null, (int[]) null, (ClientUiComponent) null, (ClientUiComponent) null);
           }
           this.field_r = param4;
           this.field_s = param2;

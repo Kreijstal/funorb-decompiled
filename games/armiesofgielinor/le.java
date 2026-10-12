@@ -34,7 +34,7 @@ final class le extends java.awt.Canvas {
             return false;
           }
           var3 = (PacketBuffer) null;
-          le.a(94, (byte) 20, (PacketBuffer) null);
+          le.readCompressedChatText(94, (byte) 20, (PacketBuffer) null);
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -66,7 +66,7 @@ final class le extends java.awt.Canvas {
         }
     }
 
-    final static String a(int param0, byte param1, PacketBuffer param2) {
+    final static String readCompressedChatText(int maximumLength, byte obfuscationGuard, PacketBuffer packet) {
         int var3_int = 0;
         Exception var3 = null;
         RuntimeException var3_ref = null;
@@ -81,17 +81,17 @@ final class le extends java.awt.Canvas {
         Throwable decompiledCaughtException = null;
         try {
           try {
-            var3_int = param2.e(-23470);
-            if (param1 != -25) {
+            var3_int = packet.readUnsignedSmart(-23470);
+            if (obfuscationGuard != -25) {
               stackIn_2_0 = (String) null;
               return stackIn_2_0;
             }
-            if (var3_int > param0) {
-              var3_int = param0;
+            if (var3_int > maximumLength) {
+              var3_int = maximumLength;
             }
             var4 = new byte[var3_int];
-            param2.position = param2.position + ds.field_c.a(param2.payload, param2.position, false, var3_int, 0, var4);
-            var5 = co.a(0, var3_int, -107, var4);
+            packet.position = packet.position + ds.chatHuffmanCodec.decompress(packet.payload, packet.position, false, var3_int, 0, var4);
+            var5 = co.decodeSingleByteText(0, var3_int, -107, var4);
             stackIn_7_0 = var5;
             return stackIn_7_0;
           } catch (java.lang.Exception decompiledCaughtParameter0) {
@@ -104,8 +104,8 @@ final class le extends java.awt.Canvas {
           decompiledCaughtException = decompiledCaughtParameter1;
           var3_ref = (RuntimeException) (Object) decompiledCaughtException;
           stackIn_12_0 = var3_ref;
-          stackIn_12_1 = new StringBuilder().append("le.B(").append(param0).append(',').append(param1).append(',');
-          if (param2 == null) {
+          stackIn_12_1 = new StringBuilder().append("le.B(").append(maximumLength).append(',').append(obfuscationGuard).append(',');
+          if (packet == null) {
             stackIn_13_2 = "null";
           } else {
             stackIn_13_2 = "{...}";

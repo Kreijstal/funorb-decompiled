@@ -76,7 +76,7 @@ final class uu {
           AnimationSequence.a(InstructionsPanel.field_D, 125);
           if (vu.currentRoom != null) {
             boolean decompiledFrameRemainder1 = true;
-            mp.field_Lb.inputEnabled = true;
+            SocialListPanel.field_Lb.inputEnabled = true;
             lm.field_b.height = 0;
             var22 = lm.field_b;
             var26 = var22;
@@ -433,7 +433,7 @@ final class uu {
           ((ClientUiComponent) (Object) stackIn_183_0).updateInput(stackIn_183_1, stackIn_184_2);
           ij.field_w.field_a.advanceTabSelection(param3 ^ 10000);
           if (vu.currentRoom != null) {
-            if (mp.field_Lb.pressedButton != 0) {
+            if (SocialListPanel.field_Lb.pressedButton != 0) {
               PointerInputHandler.writeRoomAdmissionCancellation(69, vu.currentRoom.getRoomId((byte) -68), param2);
             }
             if (lm.field_b.pressedButton != 0) {
@@ -465,7 +465,7 @@ final class uu {
         RuntimeException decompiledCaughtException = null;
         try {
           var2_int = -73 / ((param1 + 45) / 47);
-          stackIn_1_0 = co.a(0, param0.length, -112, param0);
+          stackIn_1_0 = co.decodeSingleByteText(0, param0.length, -112, param0);
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

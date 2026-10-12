@@ -2,9 +2,9 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class qd extends tj implements nq, he {
-    static String field_G;
+    static String chatRecipientName;
     static int lobbyNotificationDuration;
-    static QuickChatMenu field_I;
+    static QuickChatMenu activeQuickChatMenu;
     private hv field_F;
     private oe field_H;
     private fw field_M;
@@ -13,8 +13,8 @@ final class qd extends tj implements nq, he {
 
     public static void k(int param0) {
         field_L = null;
-        field_G = null;
-        field_I = null;
+        chatRecipientName = null;
+        activeQuickChatMenu = null;
         if (param0 != -15) {
           qd.k(71);
           field_J = null;

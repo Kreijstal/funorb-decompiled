@@ -4911,7 +4911,7 @@ final class TickCounter {
                 }
                 var2 = fk.a(false, "TTREED_ACCESSORIES");
                 if (null != var2) {
-                  dq.field_d = uu.a(var2, (byte) -111);
+                  HuffmanCodec.field_d = uu.a(var2, (byte) -111);
                 }
                 var2 = fk.a(false, "TTREED_PLATE");
                 if (null != var2) {
@@ -4947,7 +4947,7 @@ final class TickCounter {
                 }
                 var2 = fk.a(false, "TTREED_RANGED");
                 if (var2 != null) {
-                  dq.field_j = uu.a(var2, (byte) 114);
+                  HuffmanCodec.field_j = uu.a(var2, (byte) 114);
                 }
                 var2 = fk.a(false, "TTREED_MAGIC");
                 if (null != var2) {
@@ -5572,7 +5572,7 @@ final class TickCounter {
                 }
                 var2 = fk.a(false, "TRINKET_SCROLL");
                 if (null != var2) {
-                  dq.field_g = uu.a(var2, (byte) -126);
+                  HuffmanCodec.field_g = uu.a(var2, (byte) -126);
                 }
                 var2 = fk.a(false, "MEMBERS_ONLY");
                 if (var2 != null) {

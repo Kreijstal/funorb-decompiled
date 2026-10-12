@@ -37,7 +37,7 @@ final class ib extends mk {
           }
           var5 = var4;
           if (pd.a(var5, 0)) {
-            stackIn_7_0 = mp.field_Pb;
+            stackIn_7_0 = SocialListPanel.field_Pb;
             return stackIn_7_0;
           }
           if (ab.a(var5, 0)) {
@@ -65,7 +65,7 @@ final class ib extends mk {
             return stackIn_29_0;
           }
           if (!Battlefield.a(var5, (byte) -26, var6)) {
-            stackIn_34_0 = mp.field_Pb;
+            stackIn_34_0 = SocialListPanel.field_Pb;
             return stackIn_34_0;
           }
           stackIn_32_0 = de.field_c;
@@ -463,23 +463,23 @@ final class ib extends mk {
         if (param0 != 40) {
           ib.a(127, true, 27, -95);
         }
-        if (!BattleTutorial.field_h) {
+        if (!BattleTutorial.quickChatMenuVisible) {
           return;
         }
-        OwnerChangeEvent.field_E.updateInput(true, param1);
-        int var4 = qd.field_I.hasPressedItem((byte) 91) ? 1 : 0;
+        OwnerChangeEvent.quickChatMenuHost.updateInput(true, param1);
+        int var4 = qd.activeQuickChatMenu.hasPressedItem((byte) 91) ? 1 : 0;
         if (DeployEvent.pointerPressButton != 0 &&
           var4 == 0) {
           param1 = false;
           DelayedPacket.e(-3);
         }
         if (param1) {
-          qd.field_I.advanceMenu(param3, (byte) -42, param2);
+          qd.activeQuickChatMenu.advanceMenu(param3, (byte) -42, param2);
         }
         if (var4 != 0) {
-          OwnerChangeEvent.field_E.updateInput(true, param1);
+          OwnerChangeEvent.quickChatMenuHost.updateInput(true, param1);
         }
-        int var5 = qd.field_I.getOpenMenuWidth((byte) -123) + qd.field_I.screenX;
+        int var5 = qd.activeQuickChatMenu.getOpenMenuWidth((byte) -123) + qd.activeQuickChatMenu.screenX;
         if (var5 > 640) {
           TelefragEvent.field_z = TelefragEvent.field_z + 5;
         } else {

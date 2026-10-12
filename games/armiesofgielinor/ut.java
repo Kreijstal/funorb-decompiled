@@ -148,7 +148,7 @@ final class ut extends sf implements he {
           this.a((byte) 10, (Widget) (this.field_gb));
           this.field_mb = this.a((qo) (this), oq.field_j, oa.field_H, false);
           if (var2_intLifetime1 != 0) {
-            this.field_Z = this.a((qo) (this), Unit.field_n, dq.field_e, false);
+            this.field_Z = this.a((qo) (this), Unit.field_n, HuffmanCodec.field_e, false);
           }
           this.field_bb = this.a((qo) (this), oo.field_e, ClientContextMenu.field_b, false);
           if (var2_intLifetime1 != 0) {

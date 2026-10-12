@@ -3,7 +3,7 @@
  */
 final class vi {
     static boolean field_d;
-    static int field_e;
+    static int lastQuickChatPhraseId;
     static String field_c;
     static sn[] field_a;
     static String field_b;

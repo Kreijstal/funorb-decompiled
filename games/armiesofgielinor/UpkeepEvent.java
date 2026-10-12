@@ -6,7 +6,7 @@ final class UpkeepEvent extends GameEvent {
     private boolean field_B;
     static ClientUiComponent field_z;
     int field_y;
-    static StringBuilder field_C;
+    static StringBuilder chatTextBuffer;
 
     final static void h(int param0) {
         er.a((byte) -127);
@@ -95,11 +95,11 @@ final class UpkeepEvent extends GameEvent {
         if (param0 != 10) {
           UpkeepEvent.g(30);
           field_z = null;
-          field_C = null;
+          chatTextBuffer = null;
           return;
         }
         field_z = null;
-        field_C = null;
+        chatTextBuffer = null;
     }
 
     final String describeEvent(byte obfuscationGuard, boolean verbose) {
@@ -161,6 +161,6 @@ final class UpkeepEvent extends GameEvent {
     }
 
     static {
-        field_C = new StringBuilder(80);
+        chatTextBuffer = new StringBuilder(80);
     }
 }

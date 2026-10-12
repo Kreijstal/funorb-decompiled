@@ -120,7 +120,7 @@ final class oe extends ro implements he {
                 this.field_yb = true;
               }
             } else {
-              var4 = oc.field_Ob;
+              var4 = AccountNamePrompt.field_Ob;
               if (null != this.field_xb) {
                 this.field_xb.a((byte) -116);
               }

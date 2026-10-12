@@ -551,7 +551,7 @@ public abstract class iv extends java.applet.Applet implements Runnable, java.aw
                     if (decompiledFrameCompleted0) {
                       var4 = var2.substring(6, var3);
                       if (vv.a(-45, (CharSequence) ((Object) var4)) &&
-                        !(dq.a(107, (CharSequence) ((Object) var4)) >= 10)) {
+                        !(HuffmanCodec.a(107, (CharSequence) ((Object) var4)) >= 10)) {
                         this.a("wrongjava", (byte) -101);
                         decompiledFrameRemainder3 = (var5 != 0);
                       }

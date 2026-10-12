@@ -35,24 +35,24 @@ final class ef extends Exception {
             if (NodeIterator.field_a) {
             } else {
               if (!vi.field_d) {
-                hf.field_c = true;
+                hf.textChatActive = true;
               } else {
-                ContextActionMenu.k(86);
+                ContextActionMenu.openPublicQuickChat(86);
               }
             }
           }
-          if (!hf.field_c) {
+          if (!hf.textChatActive) {
             return;
           }
           ts.a(param7, param2, param4, 20, param0, param0, param5, 15676, param6);
           UnitCycler.field_g.updateInput(true, param3);
           if (param3) {
             if (qf.field_e.pressedButton != 0) {
-              hf.field_c = false;
+              hf.textChatActive = false;
             }
             if (ed.field_e.pressedButton != 0) {
-              rd.b(8445);
-              hf.field_c = false;
+              rd.clearChatText(8445);
+              hf.textChatActive = false;
               return;
             }
           }

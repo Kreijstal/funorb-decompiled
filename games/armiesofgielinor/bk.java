@@ -149,14 +149,14 @@ final class bk {
           var16[4] = var12;
           var17 = 106 / ((param5 + 53) / 51);
           CombatEvent.field_I = new ClientUiComponent(0L, param7);
-          mp.field_Qb = new ClientUiComponent(0L, param8);
-          CombatEvent.field_I.addChild(mp.field_Qb, 55);
+          SocialListPanel.field_Qb = new ClientUiComponent(0L, param8);
+          CombatEvent.field_I.addChild(SocialListPanel.field_Qb, 55);
           var18 = new ClientUiComponent(0L, (ClientUiComponent) null);
           var18.children = new NodeDeque();
           vq.field_a = new ScrollContainer(0L, var18, param1, param9);
-          mp.field_Qb.addChild(vq.field_a, 126);
+          SocialListPanel.field_Qb.addChild(vq.field_a, 126);
           we.field_f = new ClientUiComponent(0L, param6);
-          mp.field_Qb.addChild(we.field_f, 110);
+          SocialListPanel.field_Qb.addChild(we.field_f, 110);
           UpkeepEvent.field_z = new ClientUiComponent(0L, param2);
           UpkeepEvent.field_z.font = IntrusiveNode.field_e;
           we.field_f.addChild(UpkeepEvent.field_z, 82);

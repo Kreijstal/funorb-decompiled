@@ -3,13 +3,13 @@
  */
 final class mw extends dr {
     static int[] field_F;
-    static mp field_E;
+    static SocialListPanel field_E;
 
     public static void g(int param0) {
         field_F = null;
         field_E = null;
         if (param0 != 12600) {
-          field_E = (mp) null;
+          field_E = (SocialListPanel) null;
         }
     }
 
@@ -29,8 +29,8 @@ final class mw extends dr {
         var14 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           var6_int = 493 + (param2 + (8 - (-2 - param1)));
-          mp.field_Qb.setBounds(CombatEvent.field_I.height - 6, param5 ^ -20499, -6 + var6_int, 3, 3);
-          var7 = mp.field_Qb.height - 5;
+          SocialListPanel.field_Qb.setBounds(CombatEvent.field_I.height - 6, param5 ^ -20499, -6 + var6_int, 3, 3);
+          var7 = SocialListPanel.field_Qb.height - 5;
           if (param5 != 1) {
             mw.g(78);
           }

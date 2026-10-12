@@ -68,20 +68,20 @@ final class og extends IntrusiveNode {
         return "Unknown";
     }
 
-    final static void a(long param0, int param1, String param2) {
+    final static void openPrivateQuickChat(long accountId, int obfuscationGuard, String recipientName) {
         CharSequence var5 = null;
         try {
-          qd.field_G = param2;
-          rs.field_t = 2;
-          var5 = (CharSequence) ((Object) param2);
-          wm.field_b = AccountNameNormalizer.normalize(var5, false);
-          dj.field_e = param0;
-          TrianglePulse.a((byte) 118);
-          if (param1 != 1) {
+          qd.chatRecipientName = recipientName;
+          rs.outgoingChatChannel = 2;
+          var5 = (CharSequence) ((Object) recipientName);
+          wm.chatRecipientNameKey = AccountNameNormalizer.normalize(var5, false);
+          dj.chatRecipientAccountId = accountId;
+          TrianglePulse.openDefaultQuickChatMenu((byte) 118);
+          if (obfuscationGuard != 1) {
             field_r = (String) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "og.D(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "og.D(" + accountId + ',' + obfuscationGuard + ',' + (recipientName != null ? "{...}" : "null") + ')');
         }
     }
 

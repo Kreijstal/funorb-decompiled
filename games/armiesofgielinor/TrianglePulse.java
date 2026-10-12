@@ -26,9 +26,9 @@ final class TrianglePulse {
         field_a = null;
     }
 
-    final static void a(byte param0) {
-        vs.a(256, wn.field_jb);
-        if (param0 < 113) {
+    final static void openDefaultQuickChatMenu(byte obfuscationGuard) {
+        vs.showQuickChatMenu(256, wn.defaultQuickChatMenu);
+        if (obfuscationGuard < 113) {
           field_d = (RgbSprite) null;
         }
     }

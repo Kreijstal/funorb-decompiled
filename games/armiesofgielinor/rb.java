@@ -50,7 +50,7 @@ abstract class rb implements n {
 
     abstract gu c(int param0);
 
-    final static boolean a(long param0, String param1, int param2, int param3, int[] param4) {
+    final static boolean canOpenQuickChatResponses(long accountId, String recipientName, int obfuscationGuard, int channelId, int[] responsePhraseIds) {
         RuntimeException var6 = null;
         boolean stackIn_8_0 = false;
         RuntimeException stackIn_11_0 = null;
@@ -60,12 +60,12 @@ abstract class rb implements n {
         String stackIn_15_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param2 != -17231) {
+          if (obfuscationGuard != -17231) {
             field_b = (ClientUiComponent) null;
           }
           boolean decompiledFrameRemainder0 = true;
-          if (param4 != null && (param3 != 2 ||
-            FixedQuaternion.isOnlineFriendOrRoomMember(param0, param1, (byte) -125))) {
+          if (responsePhraseIds != null && (channelId != 2 ||
+            FixedQuaternion.isOnlineFriendOrRoomMember(accountId, recipientName, (byte) -125))) {
             stackIn_8_0 = true;
             decompiledFrameRemainder0 = false;
           }
@@ -77,14 +77,14 @@ abstract class rb implements n {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = decompiledCaughtException;
           stackIn_11_0 = var6;
-          stackIn_11_1 = new StringBuilder().append("rb.I(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_11_1 = new StringBuilder().append("rb.I(").append(accountId).append(',');
+          if (recipientName == null) {
             stackIn_12_2 = "null";
           } else {
             stackIn_12_2 = "{...}";
           }
-          stackIn_14_1 = ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param2).append(',').append(param3).append(',');
-          if (param4 == null) {
+          stackIn_14_1 = ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(obfuscationGuard).append(',').append(channelId).append(',');
+          if (responsePhraseIds == null) {
             stackIn_15_2 = "null";
           } else {
             stackIn_15_2 = "{...}";

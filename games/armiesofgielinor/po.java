@@ -53,7 +53,7 @@ final class po {
         }
     }
 
-    final static boolean a(int param0, int param1, int param2) {
+    final static boolean handleQuickChatShortcuts(int packetOpcode, int obfuscationGuard, int unusedParameter2) {
         int stackIn_3_0 = 0;
         int var3;
         String var4;
@@ -65,26 +65,26 @@ final class po {
         stackIn_3_0 = (null == no.roomSetup) ? 0 : 1;
         var3 = stackIn_3_0;
         if (rs.field_q != 9) {
-          if (param1 != 6150) {
+          if (obfuscationGuard != 6150) {
             field_a = (String) null;
             if (10 == rs.field_q) {
               if (var3 != 0) {
                 return false;
               }
-              ContextActionMenu.k(param1 ^ 6217);
+              ContextActionMenu.openPublicQuickChat(obfuscationGuard ^ 6217);
               return true;
             }
             if (11 != rs.field_q) {
               return false;
             }
-            if (!lq.field_d) {
+            if (!lq.hasLastQuickChat) {
               return false;
             }
-            if (vt.field_l == 2 &&
-              !FixedQuaternion.isOnlineFriendOrRoomMember(RevivalEvent.field_z, wn.field_db, (byte) 78)) {
+            if (vt.lastQuickChatChannel == 2 &&
+              !FixedQuaternion.isOnlineFriendOrRoomMember(RevivalEvent.lastQuickChatRecipientAccountId, wn.lastQuickChatRecipientName, (byte) 78)) {
               return false;
             }
-            if (vt.field_l != 2 &&
+            if (vt.lastQuickChatChannel != 2 &&
               var3 != 0) {
               return false;
             }
@@ -93,32 +93,32 @@ final class po {
               if (var3 != 0) {
                 return false;
               }
-              ContextActionMenu.k(param1 ^ 6217);
+              ContextActionMenu.openPublicQuickChat(obfuscationGuard ^ 6217);
               return true;
             }
             if (11 != rs.field_q) {
               return false;
             }
-            if (!lq.field_d) {
+            if (!lq.hasLastQuickChat) {
               return false;
             }
-            if (vt.field_l != 2) {
-              if (vt.field_l == 2) {
+            if (vt.lastQuickChatChannel != 2) {
+              if (vt.lastQuickChatChannel == 2) {
                 if (!BestScoreStrategy.a(true)) {
                   return true;
                 }
                 var4 = (String) null;
-                it.a(vi.field_e, -82, vt.field_l, wn.field_db, param0, (String) null);
+                it.writeChatMessage(vi.lastQuickChatPhraseId, -82, vt.lastQuickChatChannel, wn.lastQuickChatRecipientName, packetOpcode, (String) null);
                 return true;
               }
               if (var3 != 0) {
                 return false;
               }
             } else {
-              if (!FixedQuaternion.isOnlineFriendOrRoomMember(RevivalEvent.field_z, wn.field_db, (byte) 78)) {
+              if (!FixedQuaternion.isOnlineFriendOrRoomMember(RevivalEvent.lastQuickChatRecipientAccountId, wn.lastQuickChatRecipientName, (byte) 78)) {
                 return false;
               }
-              if (vt.field_l != 2 &&
+              if (vt.lastQuickChatChannel != 2 &&
                 var3 != 0) {
                 return false;
               }
@@ -126,58 +126,58 @@ final class po {
           }
           if (BestScoreStrategy.a(true)) {
             var4Lifetime4 = (String) null;
-            it.a(vi.field_e, -82, vt.field_l, wn.field_db, param0, (String) null);
+            it.writeChatMessage(vi.lastQuickChatPhraseId, -82, vt.lastQuickChatChannel, wn.lastQuickChatRecipientName, packetOpcode, (String) null);
           }
           return true;
         }
-        if (rb.a(ma.field_ab, WeightedScoreStrategy.field_h, -17231, no.field_S, rv.field_b)) {
+        if (rb.canOpenQuickChatResponses(ma.field_ab, WeightedScoreStrategy.field_h, -17231, no.field_S, rv.field_b)) {
           if (2 == no.field_S) {
-            return QuickChatCommandDefinition.a(param1 ^ 6251, WeightedScoreStrategy.field_h, rv.field_b, ma.field_ab, no.field_S);
+            return QuickChatCommandDefinition.openQuickChatResponses(obfuscationGuard ^ 6251, WeightedScoreStrategy.field_h, rv.field_b, ma.field_ab, no.field_S);
           }
           if (var3 != 0) {
             return false;
           }
-          return QuickChatCommandDefinition.a(param1 ^ 6251, WeightedScoreStrategy.field_h, rv.field_b, ma.field_ab, no.field_S);
+          return QuickChatCommandDefinition.openQuickChatResponses(obfuscationGuard ^ 6251, WeightedScoreStrategy.field_h, rv.field_b, ma.field_ab, no.field_S);
         }
-        if (param1 != 6150) {
+        if (obfuscationGuard != 6150) {
           field_a = (String) null;
           if (10 == rs.field_q) {
             if (var3 != 0) {
               return false;
             }
-            ContextActionMenu.k(param1 ^ 6217);
+            ContextActionMenu.openPublicQuickChat(obfuscationGuard ^ 6217);
             return true;
           }
           if (11 != rs.field_q) {
             return false;
           }
-          if (!lq.field_d) {
+          if (!lq.hasLastQuickChat) {
             return false;
           }
-          if (vt.field_l != 2) {
-            if (vt.field_l == 2) {
+          if (vt.lastQuickChatChannel != 2) {
+            if (vt.lastQuickChatChannel == 2) {
               if (!BestScoreStrategy.a(true)) {
                 return true;
               }
               var4Lifetime1 = (String) null;
-              it.a(vi.field_e, -82, vt.field_l, wn.field_db, param0, (String) null);
+              it.writeChatMessage(vi.lastQuickChatPhraseId, -82, vt.lastQuickChatChannel, wn.lastQuickChatRecipientName, packetOpcode, (String) null);
               return true;
             }
             if (var3 != 0) {
               return false;
             }
           } else {
-            if (!FixedQuaternion.isOnlineFriendOrRoomMember(RevivalEvent.field_z, wn.field_db, (byte) 78)) {
+            if (!FixedQuaternion.isOnlineFriendOrRoomMember(RevivalEvent.lastQuickChatRecipientAccountId, wn.lastQuickChatRecipientName, (byte) 78)) {
               return false;
             }
-            if (vt.field_l != 2 &&
+            if (vt.lastQuickChatChannel != 2 &&
               var3 != 0) {
               return false;
             }
           }
           if (BestScoreStrategy.a(true)) {
             var4Lifetime1Lifetime1 = (String) null;
-            it.a(vi.field_e, -82, vt.field_l, wn.field_db, param0, (String) null);
+            it.writeChatMessage(vi.lastQuickChatPhraseId, -82, vt.lastQuickChatChannel, wn.lastQuickChatRecipientName, packetOpcode, (String) null);
           }
           return true;
         }
@@ -185,32 +185,32 @@ final class po {
           if (var3 != 0) {
             return false;
           }
-          ContextActionMenu.k(param1 ^ 6217);
+          ContextActionMenu.openPublicQuickChat(obfuscationGuard ^ 6217);
           return true;
         }
         if (11 != rs.field_q) {
           return false;
         }
-        if (!lq.field_d) {
+        if (!lq.hasLastQuickChat) {
           return false;
         }
-        if (vt.field_l != 2) {
-          if (vt.field_l == 2) {
+        if (vt.lastQuickChatChannel != 2) {
+          if (vt.lastQuickChatChannel == 2) {
             if (!BestScoreStrategy.a(true)) {
               return true;
             }
             var4Lifetime2 = (String) null;
-            it.a(vi.field_e, -82, vt.field_l, wn.field_db, param0, (String) null);
+            it.writeChatMessage(vi.lastQuickChatPhraseId, -82, vt.lastQuickChatChannel, wn.lastQuickChatRecipientName, packetOpcode, (String) null);
             return true;
           }
           if (var3 != 0) {
             return false;
           }
         } else {
-          if (!FixedQuaternion.isOnlineFriendOrRoomMember(RevivalEvent.field_z, wn.field_db, (byte) 78)) {
+          if (!FixedQuaternion.isOnlineFriendOrRoomMember(RevivalEvent.lastQuickChatRecipientAccountId, wn.lastQuickChatRecipientName, (byte) 78)) {
             return false;
           }
-          if (vt.field_l != 2 &&
+          if (vt.lastQuickChatChannel != 2 &&
             var3 != 0) {
             return false;
           }
@@ -219,7 +219,7 @@ final class po {
           return true;
         }
         var4Lifetime3 = (String) null;
-        it.a(vi.field_e, -82, vt.field_l, wn.field_db, param0, (String) null);
+        it.writeChatMessage(vi.lastQuickChatPhraseId, -82, vt.lastQuickChatChannel, wn.lastQuickChatRecipientName, packetOpcode, (String) null);
         return true;
     }
 

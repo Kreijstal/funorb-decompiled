@@ -4,7 +4,7 @@
 final class br {
     static oo field_a;
     static String[] field_b;
-    static mp field_g;
+    static SocialListPanel field_g;
     static ClientUiComponent field_e;
     static boolean[] field_f;
     static ResourceArchive field_d;

@@ -3,7 +3,7 @@
  */
 final class OwnerChangeEvent extends GameEvent {
     private int newOwnerPlayer;
-    static ClientUiComponent field_E;
+    static ClientUiComponent quickChatMenuHost;
     private boolean field_z;
     private boolean applied;
     static boolean field_B;
@@ -343,7 +343,7 @@ final class OwnerChangeEvent extends GameEvent {
     }
 
     public static void g(int param0) {
-        field_E = null;
+        quickChatMenuHost = null;
         if (param0 != -19269) {
           return;
         }

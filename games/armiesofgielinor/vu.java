@@ -42,11 +42,11 @@ final class vu extends fw {
         return currentRoom.ownerAccountId == oh.localAccountId ? true : false;
     }
 
-    final static boolean j(int param0) {
-        if (param0 != 6) {
+    final static boolean isChatRecipientAvailable(int obfuscationGuard) {
+        if (obfuscationGuard != 6) {
           field_P = (String) null;
         }
-        return FixedQuaternion.isOnlineFriendOrRoomMember(dj.field_e, wm.field_b, (byte) -116);
+        return FixedQuaternion.isOnlineFriendOrRoomMember(dj.chatRecipientAccountId, wm.chatRecipientNameKey, (byte) -116);
     }
 
     private vu(String param0, qo param1) {

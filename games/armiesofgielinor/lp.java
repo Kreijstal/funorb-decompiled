@@ -50,9 +50,9 @@ final class lp {
     final static ClientUiComponent b(int param0) {
         if (param0 > -122) {
           field_a = (int[][]) null;
-          return TaggedMapData.field_g.field_Nb;
+          return TaggedMapData.field_g.listContent;
         }
-        return TaggedMapData.field_g.field_Nb;
+        return TaggedMapData.field_g.listContent;
     }
 
     static {

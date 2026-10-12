@@ -2,14 +2,14 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ds {
-    static dq field_c;
+    static HuffmanCodec chatHuffmanCodec;
     static RgbSprite[] field_a;
     static String field_b;
 
     public static void a(int param0) {
-        field_c = null;
+        chatHuffmanCodec = null;
         if (param0 != 2) {
-          field_c = (dq) null;
+          chatHuffmanCodec = (HuffmanCodec) null;
         }
         field_b = null;
         field_a = null;

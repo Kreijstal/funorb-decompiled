@@ -9,7 +9,7 @@ final class EffectPresentation implements EventPresentation {
     private int mapWidth;
     static volatile int livePointerButtonMask;
     private Battlefield battlefield;
-    static oc field_e;
+    static AccountNamePrompt field_e;
     static int[] field_h;
     static RgbSprite[] field_j;
     private BattleCamera camera;
@@ -34,7 +34,7 @@ final class EffectPresentation implements EventPresentation {
 
     public final boolean isFinished(int obfuscationGuard) {
         if (obfuscationGuard != 8865) {
-          field_e = (oc) null;
+          field_e = (AccountNamePrompt) null;
         }
         return this.finished;
     }
@@ -460,7 +460,7 @@ final class EffectPresentation implements EventPresentation {
           if (obfuscationGuard == 57) {
             return true;
           }
-          field_e = (oc) null;
+          field_e = (AccountNamePrompt) null;
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

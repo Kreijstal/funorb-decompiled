@@ -613,13 +613,13 @@ final class TutorialController {
           boolean decompiledSharedTail0 = !(158 >= BattleUnitRenderer.field_a.pixelHeight);
           if (!decompiledSharedTail0) {
             SoftwareRaster.f(db.a(param0, 589), MatchConditionEntry.a(157, (byte) 94), 14, 156, 1250067);
-            mp.field_Jb.g(db.a(param0, 590), MatchConditionEntry.a(158, (byte) 94), 128);
+            SocialListPanel.field_Jb.g(db.a(param0, 590), MatchConditionEntry.a(158, (byte) 94), 128);
             decompiledSharedTail0 = (var4 != 0);
           }
           if (decompiledSharedTail0) {
             var2_int = ep.field_o * (-155 + BattleUnitRenderer.field_a.pixelHeight) / 137;
             SoftwareRaster.f(db.a(true, 589), MatchConditionEntry.a(157, (byte) 94), 14, 156, 2302755);
-            mp.field_Jb.g(db.a(true, 590), MatchConditionEntry.a(158 + ep.field_o, (byte) 94));
+            SocialListPanel.field_Jb.g(db.a(true, 590), MatchConditionEntry.a(158 + ep.field_o, (byte) 94));
           }
           if (!param0) {
             field_b = (String) null;
@@ -1467,7 +1467,7 @@ final class TutorialController {
                                                                                                                                 b.field_n = null;
                                                                                                                                 BattleUnitRenderer.field_a = null;
                                                                                                                               }
-                                                                                                                              TrianglePulse.a(-16147, 50, mp.field_Ob, true);
+                                                                                                                              TrianglePulse.a(-16147, 50, SocialListPanel.field_Ob, true);
                                                                                                                               var6 = param0 ? 1 : 0;
                                                                                                                               CipherPacketBuffer.a(var6 != 0, 0, 1, jt.field_a);
                                                                                                                               if (var9 == 0) {
@@ -1952,7 +1952,7 @@ final class TutorialController {
                                                         return;
                                                       }
                                                       ov.writeSpectateRoomRequest(11, 3, 0);
-                                                      TrianglePulse.a(-16147, 50, mp.field_Ob, true);
+                                                      TrianglePulse.a(-16147, 50, SocialListPanel.field_Ob, true);
                                                       if (var9 == 0) {
                                                         return;
                                                       }
@@ -3711,12 +3711,12 @@ final class TutorialController {
             if (!decompiledSharedTail0) {
               var4 = ou.field_c * (-312 + TrianglePulse.field_c) / 291;
               SoftwareRaster.f(db.a(true, 279), MatchConditionEntry.a(67, (byte) 94), 14, 310, 2302755);
-              mp.field_Jb.g(db.a(true, 280), MatchConditionEntry.a(68 + ou.field_c, (byte) 94));
+              SocialListPanel.field_Jb.g(db.a(true, 280), MatchConditionEntry.a(68 + ou.field_c, (byte) 94));
               decompiledSharedTail0 = (var8 != 0);
             }
             if (decompiledSharedTail0) {
               SoftwareRaster.f(db.a(true, 279), MatchConditionEntry.a(67, (byte) 94), 14, 310, 1250067);
-              mp.field_Jb.g(db.a(true, 280), MatchConditionEntry.a(68, (byte) 94), 128);
+              SocialListPanel.field_Jb.g(db.a(true, 280), MatchConditionEntry.a(68, (byte) 94), 128);
             }
             discarded$3 = this.a(0, CachedArchiveProvider.spellMenuRoot, true, 0, var4, (byte) 116);
             this.c(0);
@@ -5541,7 +5541,7 @@ final class TutorialController {
             19 != this.tutorialStage &&
             4 != this.tutorialStage &&
             this.tutorialStage != 16) {
-            fe.b(db.a(!param0, 0), MatchConditionEntry.a(0, (byte) 94), rs.field_k, se.field_a, dq.field_i, nd.field_b, 0, 0);
+            fe.b(db.a(!param0, 0), MatchConditionEntry.a(0, (byte) 94), rs.field_k, se.field_a, HuffmanCodec.field_i, nd.field_b, 0, 0);
           }
           boolean decompiledFrameRemainder0 = true;
           if (19 != this.tutorialStage) {

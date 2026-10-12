@@ -350,7 +350,7 @@ final class VertexNormal {
                     if (var25_int == 1) {
                       var24Lifetime2 = fo.a(4800, co.field_r, new String[]{var20});
                     }
-                    var24Lifetime2 = fo.a(4800, oc.field_Ib, new String[]{var20, Integer.toString(var25_int)});
+                    var24Lifetime2 = fo.a(4800, AccountNamePrompt.field_Ib, new String[]{var20, Integer.toString(var25_int)});
                   }
                 }
               } else {

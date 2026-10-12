@@ -12,7 +12,7 @@ final class QuickChatCommandDefinition {
     final static void a(int param0) {
         gl.a(126, 4);
         if (param0 != 26566) {
-          QuickChatCommandDefinition.a(-97, (String) null, (int[]) null, 72L, -125);
+          QuickChatCommandDefinition.openQuickChatResponses(-97, (String) null, (int[]) null, 72L, -125);
         }
     }
 
@@ -31,15 +31,15 @@ final class QuickChatCommandDefinition {
           field_d = null;
           return;
         }
-        QuickChatCommandDefinition.a(97, (String) null, (int[]) null, -40L, 2);
+        QuickChatCommandDefinition.openQuickChatResponses(97, (String) null, (int[]) null, -40L, 2);
         field_a = null;
         field_d = null;
     }
 
-    final static boolean a(int param0, String param1, int[] param2, long param3, int param4) {
-        QuickChatMenu var6 = null;
+    final static boolean openQuickChatResponses(int obfuscationGuard, String recipientName, int[] responsePhraseIds, long accountId, int channelId) {
+        QuickChatMenu responseMenu = null;
         RuntimeException var6_ref = null;
-        CharSequence var7 = null;
+        CharSequence recipientCharacters = null;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
         String stackIn_13_2 = null;
@@ -47,20 +47,20 @@ final class QuickChatCommandDefinition {
         String stackIn_16_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (!rb.a(param3, param1, -17231, param4, param2)) {
+          if (!rb.canOpenQuickChatResponses(accountId, recipientName, -17231, channelId, responsePhraseIds)) {
             return false;
           }
-          if (param4 == 1) {
-            param4 = 0;
+          if (channelId == 1) {
+            channelId = 0;
           }
-          rs.field_t = param4;
-          qd.field_G = param1;
-          var7 = (CharSequence) ((Object) param1);
-          wm.field_b = AccountNameNormalizer.normalize(var7, false);
-          dj.field_e = param3;
-          var6 = fg.a(-11, uj.field_n, param2, vs.field_g, hf.field_f);
-          vs.a(256, var6);
-          if (param0 > 77) {
+          rs.outgoingChatChannel = channelId;
+          qd.chatRecipientName = recipientName;
+          recipientCharacters = (CharSequence) ((Object) recipientName);
+          wm.chatRecipientNameKey = AccountNameNormalizer.normalize(recipientCharacters, false);
+          dj.chatRecipientAccountId = accountId;
+          responseMenu = fg.buildQuickChatResponseMenu(-11, uj.field_n, responsePhraseIds, vs.field_g, hf.field_f);
+          vs.showQuickChatMenu(256, responseMenu);
+          if (obfuscationGuard > 77) {
             return true;
           }
           field_e = -67;
@@ -69,19 +69,19 @@ final class QuickChatCommandDefinition {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6_ref = decompiledCaughtException;
           stackIn_12_0 = var6_ref;
-          stackIn_12_1 = new StringBuilder().append("me.C(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_12_1 = new StringBuilder().append("me.C(").append(obfuscationGuard).append(',');
+          if (recipientName == null) {
             stackIn_13_2 = "null";
           } else {
             stackIn_13_2 = "{...}";
           }
           stackIn_15_1 = ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',');
-          if (param2 == null) {
+          if (responsePhraseIds == null) {
             stackIn_16_2 = "null";
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(accountId).append(',').append(channelId).append(')').toString());
         }
     }
 

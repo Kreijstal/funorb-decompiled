@@ -1618,8 +1618,8 @@ final class AiPlanner extends IntrusiveNode implements UnitObserver {
           Spell.field_d = null;
           return true;
         }
-        if (!hf.field_c) {
-          if (!BattleTutorial.field_h &&
+        if (!hf.textChatActive) {
+          if (!BattleTutorial.quickChatMenuVisible &&
             rs.field_q != 9 &&
             rs.field_q != 10 &&
             rs.field_q != 11) {
@@ -1629,7 +1629,7 @@ final class AiPlanner extends IntrusiveNode implements UnitObserver {
             if (!os.e(-1)) {
               return false;
             }
-            hf.field_c = true;
+            hf.textChatActive = true;
             return true;
           }
           return cd.a(param0, param1, false);
@@ -1641,12 +1641,12 @@ final class AiPlanner extends IntrusiveNode implements UnitObserver {
         var4 = stackIn_22_0;
         if (80 == rs.field_q ||
           84 == rs.field_q) {
-          hf.field_c = false;
+          hf.textChatActive = false;
           var4 = 1;
         }
         if (rs.field_q == 13) {
-          rd.b(8445);
-          hf.field_c = false;
+          rd.clearChatText(8445);
+          hf.textChatActive = false;
           var4 = 1;
         }
         return var4 != 0;

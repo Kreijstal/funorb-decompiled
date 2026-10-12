@@ -131,12 +131,12 @@ final class cs extends sf implements he {
           if (this.field_L &&
             null == FixedQuaternion.field_a) {
             this.n(param0 ^ 32728);
-            this.field_G.a(new ud(this.field_G, mp.field_Mb), 0);
+            this.field_G.a(new ud(this.field_G, SocialListPanel.field_Mb), 0);
           }
           if (null != FixedQuaternion.field_a &&
             FixedQuaternion.field_a.field_k) {
             this.n(10);
-            this.field_G.a(new ud(this.field_G, mp.field_Mb), param0 ^ 32722);
+            this.field_G.a(new ud(this.field_G, SocialListPanel.field_Mb), param0 ^ 32722);
             return;
           }
           return;

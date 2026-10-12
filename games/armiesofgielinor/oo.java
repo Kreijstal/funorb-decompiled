@@ -61,7 +61,7 @@ final class oo {
           var7 = param3.getParameter("currency");
           if (var7 != null &&
             vv.a(-84, (CharSequence) ((Object) var7))) {
-            this.field_r = dq.a(param1 + 2, (CharSequence) ((Object) var7));
+            this.field_r = HuffmanCodec.a(param1 + 2, (CharSequence) ((Object) var7));
           } else {
             this.field_r = 2;
           }

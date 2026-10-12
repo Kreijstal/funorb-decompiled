@@ -5,7 +5,7 @@ final class TaggedMapData implements TaggedFieldReader {
     static String field_i;
     int playerCount;
     int mapWidth;
-    static mp field_g;
+    static SocialListPanel field_g;
     MapTile[] tiles;
     static BitmapFont field_b;
     int mapHeight;

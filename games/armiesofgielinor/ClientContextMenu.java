@@ -411,42 +411,42 @@ final class ClientContextMenu {
         int var4Lifetime6;
         int var4Lifetime7;
         if (actionId == 8) {
-          gk.a(-23503, this.accountName, this.accountId);
+          gk.openPrivateTextChat(-23503, this.accountName, this.accountId);
           var4 = 84 % ((obfuscationGuard - 30) / 54);
           return true;
         }
         if (18 == actionId) {
-          og.a(this.accountId, 1, this.accountName);
+          og.openPrivateQuickChat(this.accountId, 1, this.accountName);
           var4Lifetime1 = 84 % ((obfuscationGuard - 30) / 54);
           return true;
         }
         if (actionId == 11) {
-          ud.b(0, false, this.chatChannel, filterContext);
+          ud.setChatFilter(0, false, this.chatChannel, filterContext);
           var4Lifetime2 = 84 % ((obfuscationGuard - 30) / 54);
           return true;
         }
         if (actionId == 12) {
-          ud.b(1, false, this.chatChannel, filterContext);
+          ud.setChatFilter(1, false, this.chatChannel, filterContext);
           var4Lifetime3 = 84 % ((obfuscationGuard - 30) / 54);
           return true;
         }
         if (13 == actionId) {
-          ud.b(2, false, this.chatChannel, filterContext);
+          ud.setChatFilter(2, false, this.chatChannel, filterContext);
           var4Lifetime4 = 84 % ((obfuscationGuard - 30) / 54);
           return true;
         }
         if (14 == actionId) {
-          la.b(-26887);
+          la.openPublicTextChat(-26887);
           var4Lifetime5 = 84 % ((obfuscationGuard - 30) / 54);
           return true;
         }
         if (actionId == 20) {
-          ContextActionMenu.k(110);
+          ContextActionMenu.openPublicQuickChat(110);
           var4Lifetime6 = 84 % ((obfuscationGuard - 30) / 54);
           return true;
         }
         if (actionId == 19) {
-          QuickChatCommandDefinition.a(81, this.accountName, this.quickChatContext, this.accountId, this.chatChannel);
+          QuickChatCommandDefinition.openQuickChatResponses(81, this.accountName, this.quickChatContext, this.accountId, this.chatChannel);
           var4Lifetime7 = 84 % ((obfuscationGuard - 30) / 54);
           return true;
         }
@@ -539,7 +539,7 @@ final class ClientContextMenu {
               }
             }
             if (var5 != null) {
-              if (!fs.a((byte) 111, this.accountName) &&
+              if (!fs.isActivePrivateTextRecipient((byte) 111, this.accountName) &&
                 !NodeIterator.field_a) {
                 if (!vi.field_d) {
                   this.menu.addTextAction(8, fo.a(4800, mi.field_k, new String[]{var7}), (byte) -114);

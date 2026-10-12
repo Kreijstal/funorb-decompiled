@@ -5,30 +5,30 @@ final class e {
     static int[] field_a;
     static RgbSprite[] field_b;
 
-    final static void a(byte param0) {
-        if (param0 >= -88) {
-          e.a((byte) 98);
-          BattleTutorial.field_h = false;
-          if (null != qd.field_I) {
-            qd.field_I.resetSelection((byte) -106);
+    final static void closeQuickChatMenu(byte obfuscationGuard) {
+        if (obfuscationGuard >= -88) {
+          e.closeQuickChatMenu((byte) 98);
+          BattleTutorial.quickChatMenuVisible = false;
+          if (null != qd.activeQuickChatMenu) {
+            qd.activeQuickChatMenu.resetSelection((byte) -106);
           }
-          if (0 != rs.field_t) {
-            rd.b(8445);
+          if (0 != rs.outgoingChatChannel) {
+            rd.clearChatText(8445);
             TelefragEvent.field_z = 0;
             return;
           }
           TelefragEvent.field_z = 0;
           return;
         }
-        BattleTutorial.field_h = false;
-        if (null != qd.field_I) {
-          qd.field_I.resetSelection((byte) -106);
+        BattleTutorial.quickChatMenuVisible = false;
+        if (null != qd.activeQuickChatMenu) {
+          qd.activeQuickChatMenu.resetSelection((byte) -106);
         }
-        if (0 == rs.field_t) {
+        if (0 == rs.outgoingChatChannel) {
           TelefragEvent.field_z = 0;
           return;
         }
-        rd.b(8445);
+        rd.clearChatText(8445);
         TelefragEvent.field_z = 0;
     }
 

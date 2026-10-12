@@ -115,7 +115,7 @@ final class ea {
           }
         }
         if (!param1) {
-          dg.field_b = le.a(80, (byte) -25, var8);
+          dg.field_b = le.readCompressedChatText(80, (byte) -25, var8);
           hv.field_R = null;
         } else {
           var5 = var8.readUnsignedShort((byte) -104);
@@ -201,8 +201,8 @@ final class ea {
         bn.field_c.setBounds(jn.field_d, -20500, su.field_d.width, 0, 0);
         wn.field_kb.setBounds(18, -20500, -2 + (-2 + su.field_d.width + (-jn.field_c - 80)), 2 + jn.field_d, 0);
         ek.field_a.setBounds(18, -20500, 82 + jn.field_c, jn.field_d + 2, -82 + (su.field_d.width - jn.field_c));
-        mw.field_E.a(0, jn.field_c, 2, 20, su.field_d.width, 20 + (2 + jn.field_d), -2 + (su.field_d.height - jn.field_d) - 20, (byte) -92);
-        TaggedMapData.field_g.a((byte) -110, jn.field_c, 20, 2);
+        mw.field_E.setLayout(0, jn.field_c, 2, 20, su.field_d.width, 20 + (2 + jn.field_d), -2 + (su.field_d.height - jn.field_d) - 20, (byte) -92);
+        TaggedMapData.field_g.layoutControls((byte) -110, jn.field_c, 20, 2);
     }
 
     ea(String param0, ClientUiComponent param1) {
@@ -281,7 +281,7 @@ final class ea {
           }
         }
         if (!param1) {
-          dg.field_b = le.a(80, (byte) -25, var8);
+          dg.field_b = le.readCompressedChatText(80, (byte) -25, var8);
           hv.field_R = null;
         } else {
           var5 = var8.readUnsignedShort((byte) -104);

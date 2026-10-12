@@ -238,7 +238,7 @@ final class DiskCacheWorker implements Runnable {
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5, boolean param6) {
         String var7 = null;
-        if (rs.field_t == param1) {
+        if (rs.outgoingChatChannel == param1) {
           var7 = eb.field_d;
         } else {
           var7 = CampaignMenu.field_q;

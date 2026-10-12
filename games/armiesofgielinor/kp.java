@@ -14,16 +14,16 @@ final class kp implements WidgetPainter {
     private int field_i;
     private int field_h;
 
-    final static int a(int param0, int param1) {
-        int var2 = -125 / ((param1 + 11) / 51);
+    final static int getChatFilter(int channelId, int obfuscationGuard) {
+        int var2 = -125 / ((obfuscationGuard + 11) / 51);
         int var3 = 0;
-        if (0 == param0) {
+        if (0 == channelId) {
           var3 = ol.field_B;
         }
-        if (param0 == 1) {
+        if (channelId == 1) {
           var3 = QuickChatCategory.field_D;
         }
-        if (param0 == 2) {
+        if (channelId == 2) {
           var3 = cd.field_c;
         }
         return var3;

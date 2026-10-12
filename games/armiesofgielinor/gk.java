@@ -88,20 +88,20 @@ final class gk extends nl {
         this.height = param1;
     }
 
-    final static void a(int param0, String param1, long param2) {
+    final static void openPrivateTextChat(int obfuscationGuard, String recipientName, long accountId) {
         CharSequence var5 = null;
         try {
-          rs.field_t = 2;
-          qd.field_G = param1;
-          var5 = (CharSequence) ((Object) param1);
-          wm.field_b = AccountNameNormalizer.normalize(var5, false);
-          hf.field_c = true;
-          if (param0 != -23503) {
-            gk.a(120, (String) null, 75L);
+          rs.outgoingChatChannel = 2;
+          qd.chatRecipientName = recipientName;
+          var5 = (CharSequence) ((Object) recipientName);
+          wm.chatRecipientNameKey = AccountNameNormalizer.normalize(var5, false);
+          hf.textChatActive = true;
+          if (obfuscationGuard != -23503) {
+            gk.openPrivateTextChat(120, (String) null, 75L);
           }
-          dj.field_e = param2;
+          dj.chatRecipientAccountId = accountId;
         } catch (RuntimeException runtimeException) {
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "gk.H(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "gk.H(" + obfuscationGuard + ',' + (recipientName != null ? "{...}" : "null") + ',' + accountId + ')');
         }
     }
 

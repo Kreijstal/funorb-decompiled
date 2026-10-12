@@ -184,7 +184,7 @@ final class kd extends tj implements nq, he, mf {
         this.field_G = new fw(pt.field_Y, (qo) null);
         this.field_O.field_s = DualLinkedNode.field_m;
         this.field_I.field_s = NodeIterator.field_d;
-        this.field_H.field_s = oc.field_Jb;
+        this.field_H.field_s = AccountNamePrompt.field_Jb;
         this.field_V.field_s = CachedArchiveProvider.field_k;
         this.field_K.field_s = WeightedScoreStrategy.field_i;
         this.field_N.field_s = StrongCacheEntry.field_A;
@@ -632,7 +632,7 @@ final class kd extends tj implements nq, he, mf {
         Object var5Lifetime1;
         Object var5Lifetime2;
         if (null != EffectPresentation.field_e) {
-          var3 = EffectPresentation.field_e.b(true, param2);
+          var3 = EffectPresentation.field_e.pollInput(true, param2);
           if (0 == var3) {
           } else {
             if (var3 == 2 &&

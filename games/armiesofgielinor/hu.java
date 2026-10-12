@@ -290,16 +290,16 @@ final class hu {
           this.field_l.a(param0);
         }
         for (var3 = 0; var3 < 10; var3++) {
-          var4 = param0.e(-23470);
+          var4 = param0.readUnsignedSmart(-23470);
           if (var4 == 0) {
             break;
           }
           this.field_b[var3] = var4;
           this.field_i[var3] = param0.readSignedSmart(112);
-          this.field_q[var3] = param0.e(-23470);
+          this.field_q[var3] = param0.readUnsignedSmart(-23470);
         }
-        this.field_p = param0.e(-23470);
-        this.field_k = param0.e(-23470);
+        this.field_p = param0.readUnsignedSmart(-23470);
+        this.field_k = param0.readUnsignedSmart(-23470);
         this.field_r = param0.readUnsignedShort((byte) -104);
         this.field_e = param0.readUnsignedShort((byte) -104);
         this.field_t = new lc();

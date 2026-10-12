@@ -572,7 +572,7 @@ class ClientUiComponent extends ClientUiNode {
           ((ClientUiComponent) (Object) stackIn_6_0).setBounds(stackIn_6_1, stackIn_6_2, stackIn_6_3 - stackIn_7_4, 2 + jn.field_d, 0);
           SpellCastEvent.field_D.setBounds(18, -20500, 42 + jn.field_c, 2 + jn.field_d, -40 + (eb.field_c.width - jn.field_c - 2));
           bu.field_a.setLayout(0, false, eb.field_c.width, 2, jn.field_c, 20 + (2 + jn.field_d), -20 + (-2 + (-jn.field_d + eb.field_c.height)));
-          mp.field_Lb.setBounds(40, -20500, lk.field_a.width, lk.field_a.height - 40, 0);
+          SocialListPanel.field_Lb.setBounds(40, -20500, lk.field_a.width, lk.field_a.height - 40, 0);
           kd.field_F.setBounds(30, -20500, pd.field_c.width, 0, 0);
           if (param0 < 13) {
             return;

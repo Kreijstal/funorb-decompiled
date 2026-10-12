@@ -191,21 +191,21 @@ final class DeployEvent extends GameEvent {
           if (obfuscationGuard >= -67) {
             field_G = (String) null;
           }
-          stackIn_5_0 = TaggedMapData.field_g.field_Kb;
+          stackIn_5_0 = TaggedMapData.field_g.scrollContainer;
           stackIn_5_1 = enableCapture;
           stackIn_5_2 = (2 + jn.field_d) * (3 * visibleRows);
           stackIn_5_3 = jn.field_d + 2;
-          stackIn_6_4 = (PointerInputHandler.contextMenuScrollContainer == TaggedMapData.field_g.field_Kb);
+          stackIn_6_4 = (PointerInputHandler.contextMenuScrollContainer == TaggedMapData.field_g.scrollContainer);
           var3_int = ((ScrollContainer) (Object) stackIn_5_0).updateContentLayout(stackIn_5_1, stackIn_5_2, stackIn_5_3, stackIn_6_4, 0, 2) ? 1 : 0;
-          var4 = TaggedMapData.field_g.field_Nb.children;
+          var4 = TaggedMapData.field_g.listContent.children;
           if (th.socialListState != 2 &&
             th.socialListState != 1) {
-            TaggedMapData.field_g.field_Kb.viewport.text = ef.field_a;
+            TaggedMapData.field_g.scrollContainer.viewport.text = ef.field_a;
             TaggedMapData.field_g.inputEnabled = false;
-            ArchiveIndex.a(TaggedMapData.field_g.field_Nb, -71);
+            ArchiveIndex.a(TaggedMapData.field_g.listContent, -71);
             return;
           }
-          TaggedMapData.field_g.field_Kb.viewport.text = null;
+          TaggedMapData.field_g.scrollContainer.viewport.text = null;
           TaggedMapData.field_g.inputEnabled = true;
           var5 = null;
           var6 = (SocialListEntry) (var4.first((byte) 110));
@@ -219,7 +219,7 @@ final class DeployEvent extends GameEvent {
               var6.inheritVisualStateForDescendants(-10027);
               var7 = 1;
             }
-            var6.width = TaggedMapData.field_g.field_Nb.width;
+            var6.width = TaggedMapData.field_g.listContent.width;
             var6.nameComponent.setBounds(jn.field_d, -20500, var6.width, 0, 0);
             var8 = 0;
             if (null != var6.previousDisplayName &&
@@ -249,7 +249,7 @@ final class DeployEvent extends GameEvent {
               var6.pendingHeightDelta = -var6.height + jn.field_d;
             }
             if (var7 != 0) {
-              TaggedMapData.field_g.field_Nb.positionAfter(var6, true, 2, (ClientUiComponent) (var5));
+              TaggedMapData.field_g.listContent.positionAfter(var6, true, 2, (ClientUiComponent) (var5));
             }
             if (var6.previousNameComponent != null &&
               var6.previousNameComponent.heldButtonMatches) {
@@ -261,7 +261,7 @@ final class DeployEvent extends GameEvent {
               }
             }
             if (0 != var6.pressedButton) {
-              ng.openClientContextMenu(TaggedMapData.field_g.field_Kb, var6, (int[]) null, var6.displayName, -1, -110, -1, var6.accountName, 0L);
+              ng.openClientContextMenu(TaggedMapData.field_g.scrollContainer, var6, (int[]) null, var6.displayName, -1, -110, -1, var6.accountName, 0L);
               var16 = tn.activeContextMenu;
               var13_ref_String = ArchiveIndex.field_u;
               var16.menu.addTextAction(7, var13_ref_String, (byte) -100);
@@ -273,14 +273,14 @@ final class DeployEvent extends GameEvent {
             var5 = var6;
             var6 = (SocialListEntry) (var4.next((byte) 123));
           }
-          if (0 != TaggedMapData.field_g.field_Ib.pressedButton) {
-            EffectPresentation.field_e = new oc(TaggedMapData.field_g.field_Ib.screenX, TaggedMapData.field_g.field_Ib.screenY, TaggedMapData.field_g.field_Ib.width, TaggedMapData.field_g.field_Ib.height, iw.field_o, kq.field_N, eq.field_h, eq.field_h);
+          if (0 != TaggedMapData.field_g.addButton.pressedButton) {
+            EffectPresentation.field_e = new AccountNamePrompt(TaggedMapData.field_g.addButton.screenX, TaggedMapData.field_g.addButton.screenY, TaggedMapData.field_g.addButton.width, TaggedMapData.field_g.addButton.height, iw.field_o, kq.field_N, eq.field_h, eq.field_h);
             ut.field_fb = 2;
           }
-          if (TaggedMapData.field_g.field_Rb.pressedButton == 0) {
+          if (TaggedMapData.field_g.removeButton.pressedButton == 0) {
             return;
           }
-          EffectPresentation.field_e = new oc(TaggedMapData.field_g.field_Rb.screenX, TaggedMapData.field_g.field_Rb.screenY, TaggedMapData.field_g.field_Rb.width, TaggedMapData.field_g.field_Rb.height, lw.field_kb, kq.field_N, eq.field_h, eq.field_h);
+          EffectPresentation.field_e = new AccountNamePrompt(TaggedMapData.field_g.removeButton.screenX, TaggedMapData.field_g.removeButton.screenY, TaggedMapData.field_g.removeButton.width, TaggedMapData.field_g.removeButton.height, lw.field_kb, kq.field_N, eq.field_h, eq.field_h);
           ut.field_fb = 3;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

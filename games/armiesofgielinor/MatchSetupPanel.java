@@ -341,7 +341,7 @@ final class MatchSetupPanel {
               var11 = MatchConditionEntry.a(param5.second, (byte) 94);
               var12 = MatchConditionEntry.a(param2.second, (byte) 94);
               var8Lifetime1 = var11 + var12 >> 1;
-              var13 = mp.k(-78);
+              var13 = SocialListPanel.k(-78);
               var8Lifetime1 = var8Lifetime1 + var13;
               if (!param4) {
                 stackIn_12_0 = nd.field_b;
@@ -881,7 +881,7 @@ final class MatchSetupPanel {
             var10 = MatchConditionEntry.a(param0.second, (byte) 94);
             var11 = MatchConditionEntry.a(param3.second, (byte) 94);
             var7Lifetime1 = var10 + var11 >> 1;
-            var12 = mp.k(-57);
+            var12 = SocialListPanel.k(-57);
             var7Lifetime1 = var12 + var7Lifetime1;
             if (param2) {
               stackIn_11_0 = TutorialController.field_e;
@@ -1020,7 +1020,7 @@ final class MatchSetupPanel {
             var11 = param1.second;
             var12 = param2.second;
             var7Lifetime1 = var11 + var12 >> 1;
-            var13 = mp.k(-74);
+            var13 = SocialListPanel.k(-74);
             var7Lifetime1 = var7Lifetime1 + var13;
             fe.c(param4, db.a(true, this.field_c.first), MatchConditionEntry.a(var7Lifetime1, (byte) 94), this.field_Q, true);
             return;

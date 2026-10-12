@@ -117,7 +117,7 @@ final class co {
           this.field_t = new sn[this.field_o.length];
           if (param0 != 17952) {
             var5 = (byte[]) null;
-            co.a(102, -75, -58, (byte[]) null);
+            co.decodeSingleByteText(102, -75, -58, (byte[]) null);
           }
           for (var3_int = 0; var3_int < this.field_o.length; var3_int++) {
             this.field_t[var3_int] = param1.a(this.field_o[var3_int], (byte) -97, "");
@@ -160,7 +160,7 @@ final class co {
         return this.c(34);
     }
 
-    final static String a(int param0, int param1, int param2, byte[] param3) {
+    final static String decodeSingleByteText(int offset, int length, int obfuscationGuard, byte[] bytes) {
         int var6 = 0;
         int incrementValue$1 = 0;
         char[] var4 = null;
@@ -179,16 +179,16 @@ final class co {
         RuntimeException decompiledCaughtException = null;
         var9 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          var11 = new char[param1];
+          var11 = new char[length];
           var10 = var11;
           var4 = var10;
           var5 = 0;
-          if (param2 > -65) {
+          if (obfuscationGuard > -65) {
             stackIn_3_0 = (String) null;
             return stackIn_3_0;
           }
-          for (var6 = 0; param1 > var6; var6++) {
-            var7 = 255 & param3[param0 + var6];
+          for (var6 = 0; length > var6; var6++) {
+            var7 = 255 & bytes[offset + var6];
             if (var7 != 0) {
               if (var7 >= 128 &&
                 var7 < 160) {
@@ -209,8 +209,8 @@ final class co {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4_ref = decompiledCaughtException;
           stackIn_20_0 = var4_ref;
-          stackIn_20_1 = new StringBuilder().append("co.K(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
-          if (param3 == null) {
+          stackIn_20_1 = new StringBuilder().append("co.K(").append(offset).append(',').append(length).append(',').append(obfuscationGuard).append(',');
+          if (bytes == null) {
             stackIn_21_2 = "null";
           } else {
             stackIn_21_2 = "{...}";

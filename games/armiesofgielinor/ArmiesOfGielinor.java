@@ -225,7 +225,7 @@ public final class ArmiesOfGielinor extends wf {
                     vs.field_j = true;
                     uc.a(0);
                   }
-                  TrianglePulse.a(-16147, 50, mp.field_Ob, true);
+                  TrianglePulse.a(-16147, 50, SocialListPanel.field_Ob, true);
                   ScrollContainer.field_Qb = false;
                   SpellCastAction.field_t = false;
                   continue;
@@ -802,7 +802,7 @@ public final class ArmiesOfGielinor extends wf {
               !SpellCastAction.field_t &&
               !ScrollContainer.field_Qb) {
               if (fj.field_c &&
-                hf.field_c) {
+                hf.textChatActive) {
                 var3_int = 0;
               }
               wt.a(73, var3_int != 0);
@@ -1306,7 +1306,7 @@ public final class ArmiesOfGielinor extends wf {
           VerticalScrollbar.k(-1);
           ClientUiNode.g(31343);
           ContextActionMenu.e((byte) 5);
-          mp.l(-8291);
+          SocialListPanel.l(-8291);
           ClientContextMenu.a(-97);
           ReportAbuseDialog.m(73);
           ea.a(-47);
@@ -1325,7 +1325,7 @@ public final class ArmiesOfGielinor extends wf {
           EditableTextField.f((byte) -123);
           IndexedSpriteBase.a(18347);
           hf.a((byte) 19);
-          dq.a(-1);
+          HuffmanCodec.a(-1);
           ou.a(4116);
           NodeIterator.a((byte) -121);
           vs.a(param0 ^ 21);
@@ -1336,7 +1336,7 @@ public final class ArmiesOfGielinor extends wf {
           IsaacRandom.b(-119);
           pg.a(20);
           TabbedPanel.k(2);
-          oc.k(param0 ^ -72);
+          AccountNamePrompt.k(param0 ^ -72);
           MatchConditionRegistry.a(true);
           LeaderEscortCondition.e(25931);
           UnitLossCondition.d(param0 + 196);
@@ -2082,7 +2082,7 @@ public final class ArmiesOfGielinor extends wf {
           if (null != SummonAction.field_w) {
             bn.a((byte) -24, 75.0f, ta.field_M);
             this.a(0);
-            mp.field_Ob = um.a(SummonAction.field_w, "", "Runewars Titlescreen");
+            SocialListPanel.field_Ob = um.a(SummonAction.field_w, "", "Runewars Titlescreen");
             DeployRequest.field_B = um.a(SummonAction.field_w, "", "legion");
             oh.field_K = um.a(SummonAction.field_w, "", "Runewars win");
             se.field_h = um.a(SummonAction.field_w, "", "Runewars lose");
@@ -2106,7 +2106,7 @@ public final class ArmiesOfGielinor extends wf {
               var5_int++;
             } while (var18 == 0);
             var5 = lk.field_e.field_w;
-            var5.a(jl.field_d, ep.field_b, 0, mp.field_Ob, (byte) 86);
+            var5.a(jl.field_d, ep.field_b, 0, SocialListPanel.field_Ob, (byte) 86);
             var5.a(jl.field_d, ep.field_b, 0, DeployRequest.field_B, (byte) 86);
             var5.a(jl.field_d, ep.field_b, 0, oh.field_K, (byte) 86);
             var5.a(jl.field_d, ep.field_b, 0, se.field_h, (byte) 86);
@@ -2140,7 +2140,7 @@ public final class ArmiesOfGielinor extends wf {
           }
           if (sh.field_j == null) {
             if (bt.field_e != null) {
-              uc.a(new dq(bt.field_e.getFileByName("huffman", -105, "")), 4);
+              uc.setChatHuffmanCodec(new HuffmanCodec(bt.field_e.getFileByName("huffman", -105, "")), 4);
               bt.field_e = null;
               wl.a(0);
               return false;
@@ -2204,7 +2204,7 @@ public final class ArmiesOfGielinor extends wf {
           SkeletonLimitMarker.field_s = fk.a("isomapsquares", (byte) -127, iw.field_l, "basic");
           SpellMenuGroup.field_h = fk.a("maprotbutton", (byte) -128, iw.field_l, "basic");
           TeleportAction.field_w = fk.a("placeicons", (byte) -124, iw.field_l, "basic");
-          mp.field_Jb = DiskCacheRequest.a("slider", "basic", iw.field_l, false);
+          SocialListPanel.field_Jb = DiskCacheRequest.a("slider", "basic", iw.field_l, false);
           MoveEvent.field_z = GameplayController.a("bcarrow", (byte) 51, "basic", iw.field_l);
           BestScoreStrategy.field_m = GameplayController.a("goldiv", (byte) 51, "basic", iw.field_l);
           wc.field_Q = fk.a("silverbar", (byte) -125, iw.field_l, "basic");
@@ -2254,7 +2254,7 @@ public final class ArmiesOfGielinor extends wf {
           do {
             if (var6_array.length <= var7_int) {
               BufferedSocket.field_i = new ep(vc.field_m);
-              dq.field_i = CampaignMission.a((byte) -125, "frame_outer", "basic", iw.field_l);
+              HuffmanCodec.field_i = CampaignMission.a((byte) -125, "frame_outer", "basic", iw.field_l);
               io.field_m = CampaignMission.a((byte) 83, "frame_inner", "basic", iw.field_l);
               oh.field_J = CampaignMission.a((byte) 83, "frame_ingame", "basic", iw.field_l);
               EffectPresentation.field_j = CampaignMission.a((byte) -108, "frame_boxes", "basic", iw.field_l);
@@ -2367,7 +2367,7 @@ public final class ArmiesOfGielinor extends wf {
           }
           jt.field_a = 16;
           ClientConnectionState.a(50, true);
-          QuickChatPhrase.a(param0 ^ -68, mp.field_Ob);
+          QuickChatPhrase.a(param0 ^ -68, SocialListPanel.field_Ob);
           DropdownSelector.a(128, 8, rs.field_n.field_z, rs.field_n.field_L + rs.field_n.field_z, rs.field_n, io.field_m[0].pixelHeight, 8, 2, 16777215, 240, rs.field_n.field_z, -99, new pn(DisplacedUnitMarker.field_s, nd.field_b, 0, 128, true), 255, new pn(DisplacedUnitMarker.field_s, nd.field_b, 0, 128, true), 320, io.field_m[0].pixelWidth, rs.field_n.field_z + rs.field_n.field_L, new pn(io.field_m, nd.field_b, 0, 224, false), rs.field_n);
           wm.a(320, 128, 240, 16777215, rs.field_n.field_z + rs.field_n.field_L, rs.field_n.field_z, new pn(DisplacedUnitMarker.field_s, nd.field_b, 0, 128, true), 8, (byte) 90, 480, 8, rs.field_n.field_L + rs.field_n.field_z, new pn(DisplacedUnitMarker.field_s, nd.field_b, 0, 128, true), io.field_m[0].pixelHeight, rs.field_n, 2, io.field_m[0].pixelWidth, rs.field_n, 255, rs.field_n.field_z, new pn(io.field_m, nd.field_b, 0, 224, false));
           return;

@@ -76,7 +76,7 @@ final class l {
           var11 = new QuickChatMenu[var7];
           if (null != category.subcategoryIds) {
             for (var12 = 0; var12 < category.subcategoryIds.length; var12++) {
-              var13_ref_va = mp.quickChatCategories.getCategory(category.subcategoryIds[var12], true);
+              var13_ref_va = SocialListPanel.quickChatCategories.getCategory(category.subcategoryIds[var12], true);
               var8[var12] = var13_ref_va.title;
               var9[var12] = category.subcategoryShortcuts[var12];
               var11[var12] = l.buildQuickChatCategoryMenu(var13_ref_va, param1, 0, param3, param4);

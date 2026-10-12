@@ -23,7 +23,7 @@ class BattleTutorial {
     static String field_i;
     private String message;
     private int expandedPanelHeight;
-    static boolean field_h;
+    static boolean quickChatMenuVisible;
     static int field_x;
     static String field_u;
 
@@ -2041,7 +2041,7 @@ class BattleTutorial {
         field_l = "Year";
         field_i = "Offline";
         field_x = 4;
-        field_h = false;
+        quickChatMenuVisible = false;
         field_r = "This unit already has a poisonous attack.";
         field_u = "You need to choose a name before you can log in. This is the name that will be displayed to other players.";
     }

@@ -86,7 +86,7 @@ final class NetworkResourceRequest extends ResourceRequest {
             stackIn_2_0 = (String) (param2);
             return stackIn_2_0;
           }
-          var5_int = dq.a((byte) -105, param1);
+          var5_int = HuffmanCodec.a((byte) -105, param1);
           if (param1 != var5_int) {
             var6_ref_String = VineGrowthAction.a(var5_int, false, param0);
             if (var6_ref_String != null) {

@@ -745,7 +745,7 @@ final class ng {
           ArchiveProvider.field_d = null;
         }
         UnitCycler.field_g = null;
-        hf.field_c = true;
+        hf.textChatActive = true;
         sb.field_i = null;
         int var1 = 89 % ((param0 + 51) / 39);
     }

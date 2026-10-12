@@ -167,7 +167,7 @@ abstract class wl extends tj {
         String stackIn_25_1 = null;
         boolean stackIn_26_2 = false;
         if (fj.field_c) {
-          stackIn_6_0 = (hf.field_c) ? 1 : 0;
+          stackIn_6_0 = (hf.textChatActive) ? 1 : 0;
         } else {
           stackIn_6_0 = 0;
         }
@@ -184,7 +184,7 @@ abstract class wl extends tj {
         if (null != SectorCacheStore.field_a) {
           SectorCacheStore.field_a.b(0, param1);
         }
-        fe.b(0, 0, so.field_b.field_a, so.field_b.field_g, dq.field_i, nd.field_b, 0, 0);
+        fe.b(0, 0, so.field_b.field_a, so.field_b.field_g, HuffmanCodec.field_i, nd.field_b, 0, 0);
         if (var2 != 0) {
           if (!qa.field_F) {
             stackIn_22_0 = CampaignMenu.field_q;

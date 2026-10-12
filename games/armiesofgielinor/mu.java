@@ -50,7 +50,7 @@ final class mu {
         var9 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           var3_int = og.field_m;
-          OwnerChangeEvent.field_E = new ClientUiComponent(0L, (ClientUiComponent) null);
+          OwnerChangeEvent.quickChatMenuHost = new ClientUiComponent(0L, (ClientUiComponent) null);
           if (param2 == null) {
             var10 = (Throwable) null;
             af.a((Throwable) null, -116, "QC1");
@@ -58,7 +58,7 @@ final class mu {
           }
           param2.discardPackedGroups = false;
           param2.fileRetentionMode = 0;
-          mp.quickChatCategories = new QuickChatCategoryRepository(var3_int, param2, param2);
+          SocialListPanel.quickChatCategories = new QuickChatCategoryRepository(var3_int, param2, param2);
           ce.quickChatPhrases = new QuickChatPhraseRepository(var3_int, param2, param2, new cu());
           var4 = ps.findQuickChatRootCategory((byte) -83);
           if (var4 == null) {
@@ -80,8 +80,8 @@ final class mu {
             SoftwareRaster.h(var8, var8 + 1, 14 - (var8 << 1), 16777215);
           }
           SoftwareRaster.a(var16, var5, var6);
-          wn.field_jb = l.buildQuickChatCategoryMenu(var4, hf.field_f, param1 ^ 0, vs.field_g, uj.field_n);
-          OwnerChangeEvent.field_E.children = new NodeDeque();
+          wn.defaultQuickChatMenu = l.buildQuickChatCategoryMenu(var4, hf.field_f, param1 ^ 0, vs.field_g, uj.field_n);
+          OwnerChangeEvent.quickChatMenuHost.children = new NodeDeque();
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

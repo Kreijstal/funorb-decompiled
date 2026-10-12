@@ -6,11 +6,11 @@ final class wn extends ih {
     private int[] field_fb;
     private int field_ib;
     static ClientUiComponent field_kb;
-    static String field_db;
+    static String lastQuickChatRecipientName;
     static String field_gb;
     private int[] field_S;
     static String[] field_eb;
-    static QuickChatMenu field_jb;
+    static QuickChatMenu defaultQuickChatMenu;
     private vk field_hb;
     static String field_bb;
 
@@ -151,10 +151,10 @@ final class wn extends ih {
           wn.hasValidAccountNameShape((CharSequence) null, -50, false);
         }
         field_kb = null;
-        field_jb = null;
+        defaultQuickChatMenu = null;
         field_eb = null;
         field_bb = null;
-        field_db = null;
+        lastQuickChatRecipientName = null;
         field_gb = null;
     }
 
@@ -298,7 +298,7 @@ final class wn extends ih {
           NetworkResourceRequest.b(te.field_n - var1, 108);
         }
         if (!param0) {
-          field_jb = (QuickChatMenu) null;
+          defaultQuickChatMenu = (QuickChatMenu) null;
         }
     }
 

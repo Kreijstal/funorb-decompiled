@@ -17,14 +17,14 @@ final class vg extends IntrusiveNode {
         if (param0 != 10) {
           vg.a((byte) 89);
           if (Spell.field_d == null) {
-            return BattleTutorial.field_h ? true : false;
+            return BattleTutorial.quickChatMenuVisible ? true : false;
           }
           return true;
         }
         if (Spell.field_d != null) {
           return true;
         }
-        if (!BattleTutorial.field_h) {
+        if (!BattleTutorial.quickChatMenuVisible) {
           return false;
         }
         return true;

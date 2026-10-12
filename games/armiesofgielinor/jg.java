@@ -34,9 +34,9 @@ final class jg extends IntrusiveNode {
     }
 
     final static void a(byte param0) {
-        if (BattleTutorial.field_h) {
+        if (BattleTutorial.quickChatMenuVisible) {
           SoftwareRaster.d(SoftwareRaster.clipLeft, SoftwareRaster.clipTop, SoftwareRaster.clipRight - SoftwareRaster.clipLeft, SoftwareRaster.clipBottom - SoftwareRaster.clipTop);
-          OwnerChangeEvent.field_E.draw(false, 20);
+          OwnerChangeEvent.quickChatMenuHost.draw(false, 20);
         }
         if (param0 != 102) {
           jg.a(-122, true, false, -112, 41, -27, 39);

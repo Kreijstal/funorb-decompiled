@@ -89,9 +89,9 @@ final class QuickChatMenu extends ClientUiComponent {
           }
           return this.activeSubmenu.handleKeyboard(false, selectionContext, messageContext);
         }
-        if (null == this.activeSubmenu && this == qd.field_I &&
+        if (null == this.activeSubmenu && this == qd.activeQuickChatMenu &&
           var4 != 0) {
-          e.a((byte) -101);
+          e.closeQuickChatMenu((byte) -101);
           return true;
         }
         int var5 = DualNodeDeque.field_i;
@@ -156,21 +156,21 @@ final class QuickChatMenu extends ClientUiComponent {
           } else {
             if (this.phraseIds[itemIndex] == -1) {
               gn.d(5);
-              e.a((byte) -115);
+              e.closeQuickChatMenu((byte) -115);
             } else {
               var5 = 32768 | this.phraseIds[itemIndex];
-              var6 = rs.field_t;
+              var6 = rs.outgoingChatChannel;
               if (var6 == 0 &&
                 null != vu.currentRoom) {
                 var6 = 1;
               }
-              if (kp.a(var6, 114) == 2) {
-                ud.b(1, false, var6, selectionContext);
+              if (kp.getChatFilter(var6, 114) == 2) {
+                ud.setChatFilter(1, false, var6, selectionContext);
               }
               String var8 = (String) null;
-              it.a(var5, -91, rs.field_t, qd.field_G, messageContext, (String) null);
-              jh.a(qd.field_G, dj.field_e, var5, rs.field_t, obfuscationGuard ^ 4124);
-              e.a((byte) -126);
+              it.writeChatMessage(var5, -91, rs.outgoingChatChannel, qd.chatRecipientName, messageContext, (String) null);
+              jh.rememberLastQuickChat(qd.chatRecipientName, dj.chatRecipientAccountId, var5, rs.outgoingChatChannel, obfuscationGuard ^ 4124);
+              e.closeQuickChatMenu((byte) -126);
               wf.g(-20873);
             }
           }

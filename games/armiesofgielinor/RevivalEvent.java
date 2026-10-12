@@ -6,7 +6,7 @@ final class RevivalEvent extends GameEvent {
     private int destinationX;
     static int field_D;
     private int destinationY;
-    static long field_z;
+    static long lastQuickChatRecipientAccountId;
 
     final boolean a(NodeDeque param0, byte param1, GameplayController param2) {
         RuntimeException var4 = null;

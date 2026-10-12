@@ -39,13 +39,13 @@ final class bn {
     }
 
     final static boolean a(boolean param0) {
-        if (!hf.field_c) {
+        if (!hf.textChatActive) {
           return false;
         }
         if (param0) {
           return true;
         }
-        if (rs.field_t != 0) {
+        if (rs.outgoingChatChannel != 0) {
           return false;
         }
         return true;

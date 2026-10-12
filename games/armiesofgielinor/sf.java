@@ -114,7 +114,7 @@ abstract class sf extends wl {
         var5Lifetime2 = 169;
         if (param1 != 1851680193) {
           var17 = (PacketBuffer) null;
-          sf.a(-110, (String) null, (PacketBuffer) null);
+          sf.writeCompressedChatText(-110, (String) null, (PacketBuffer) null);
         }
         var7Lifetime2 = 0;
         var8Lifetime2 = param2 + 57;
@@ -157,12 +157,12 @@ abstract class sf extends wl {
         return super.a((byte) -1);
     }
 
-    final static int a(int param0, String param1, PacketBuffer param2) {
-        int var3_int = 0;
+    final static int writeCompressedChatText(int obfuscationGuard, String text, PacketBuffer packet) {
+        int startPosition = 0;
         RuntimeException var3 = null;
-        byte[] var4 = null;
+        byte[] encodedText = null;
         PacketBuffer var5 = null;
-        CharSequence var6 = null;
+        CharSequence textCharacters = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -171,29 +171,29 @@ abstract class sf extends wl {
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param0 != 15901) {
+          if (obfuscationGuard != 15901) {
             var5 = (PacketBuffer) null;
-            sf.a(-112, (String) null, (PacketBuffer) null);
+            sf.writeCompressedChatText(-112, (String) null, (PacketBuffer) null);
           }
-          var3_int = param2.position;
-          var6 = (CharSequence) ((Object) param1);
-          var4 = nr.a(var6, false);
-          param2.a(true, var4.length);
-          param2.position = param2.position + ds.field_c.a(0, var4, var4.length, param2.payload, param2.position, (byte) 28);
-          stackIn_3_0 = param2.position - var3_int;
+          startPosition = packet.position;
+          textCharacters = (CharSequence) ((Object) text);
+          encodedText = nr.encodeSingleByteText(textCharacters, false);
+          packet.writeUnsignedSmart(true, encodedText.length);
+          packet.position = packet.position + ds.chatHuffmanCodec.compress(0, encodedText, encodedText.length, packet.payload, packet.position, (byte) 28);
+          stackIn_3_0 = packet.position - startPosition;
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
           stackIn_6_0 = var3;
-          stackIn_6_1 = new StringBuilder().append("sf.GB(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_6_1 = new StringBuilder().append("sf.GB(").append(obfuscationGuard).append(',');
+          if (text == null) {
             stackIn_7_2 = "null";
           } else {
             stackIn_7_2 = "{...}";
           }
           stackIn_9_1 = ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',');
-          if (param2 == null) {
+          if (packet == null) {
             stackIn_10_2 = "null";
           } else {
             stackIn_10_2 = "{...}";

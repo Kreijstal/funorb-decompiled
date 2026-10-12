@@ -3,7 +3,7 @@
  */
 final class hf {
     static int field_a;
-    static boolean field_c;
+    static boolean textChatActive;
     static String field_g;
     static String field_e;
     static int field_h;
@@ -34,7 +34,7 @@ final class hf {
         ef.field_d[6] = bs.field_c;
         ef.field_d[13] = EffectPresentation.field_b;
         ef.field_d[7] = vs.field_d;
-        ef.field_d[21] = dq.field_f;
+        ef.field_d[21] = HuffmanCodec.field_f;
         ef.field_d[20] = MatchSetupPanel.field_d;
         ef.field_d[16] = tv.field_e;
         ef.field_d[4] = IntrusiveNode.field_c;
@@ -93,7 +93,7 @@ final class hf {
         field_a = 0;
         field_e = "Prestige Level: <%0>";
         field_b = "+<MANA>% mana per turn";
-        field_c = true;
+        textChatActive = true;
         field_i = "Options Menu";
         field_d = new String[]{"BARBARIAN", "AVIANSIE", "GORILLA", "BARBARIANSPEARWOMAN", "DRAGON", "TXHAARKET", "DAGANNOTH", "PORTALMAGE", "PALADIN", "SARADOMINOWL", "MONK", "SARADOMINMAGE", "WHITEKNIGHT", "UNICORN", "CENTAURBOWMAN", "LION", "SARADOMINRANGER", "PRIEST", "ICYENE", "WEREWOLF", "SKELETON", "NECROMANCER", "ZAMORAKMAGE", "BLACKKNIGHT", "BLACKDEMON", "ZAMORAKRANGER", "HELLHOUND", "SEASLUG", "VYREWATCH", "PYRELORD", "TERRORBIRDGNOME", "WOLF", "DRUID", "BLACKGUARDDWARF", "DWARFCANNON", "MOSSGIANT", "VOIDKNIGHT", "TORTOISEGNOME", "GLIDERGNOME", "JADEVINE", "ENT", "FALCON", "BLACKBEAR", "ELFSONGSTRESS", "ELFSHIELDMAIDEN", "GRENWALL", "DIREWOLF", "ELVENPIKEMEN", "ELVENARCHER", "ELFLORD", "ELFLADY", "SHADOWCREATURE", "GOBLIN", "GOBLINHIGHPRIEST", "OGRE", "JOGRE", "MOGRE", "HOBGOBLIN", "OGRESHAMAN", "CYCLOPS", "ORK", "OGRESS", "OURG", "KALPHITEQUEEN", "JACKAL", "MUMMY", "LOCUST", "BEBADINNOMAD", "MENAPHITETHUG", "WARRIOROFICTHLARIN", "CROCODILE", "SCARABITEMAGE", "SPHINX", "ELIDINISELEMENTAL", "KINGBLACKDRAGON", "DWARFCANNON(cannon)", "PORTALMAGE(portal)", "Elf_songstress(dagger)"};
         field_h = 5;

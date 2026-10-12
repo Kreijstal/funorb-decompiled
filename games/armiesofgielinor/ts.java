@@ -52,7 +52,7 @@ final class ts {
         int var12 = 0;
         try {
           sb.field_i.text = param0;
-          if (rs.field_t != 2) {
+          if (rs.outgoingChatChannel != 2) {
             ed.field_e.text = FixedQuaternion.field_c;
           } else {
             ed.field_e.text = bq.field_d;

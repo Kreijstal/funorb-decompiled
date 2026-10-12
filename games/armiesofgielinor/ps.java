@@ -27,7 +27,7 @@ final class ps extends lk {
         try {
           var2_int = 0;
           while (true) {
-            var3 = mp.quickChatCategories.getCategory(var2_int, true);
+            var3 = SocialListPanel.quickChatCategories.getCategory(var2_int, true);
             if (!var3.isRootCategory) {
               var2_int++;
               continue;

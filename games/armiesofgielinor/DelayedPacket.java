@@ -13,8 +13,8 @@ final class DelayedPacket extends IntrusiveNode {
     static String[] field_s;
 
     final static void e(int param0) {
-        if (BattleTutorial.field_h) {
-          e.a((byte) -93);
+        if (BattleTutorial.quickChatMenuVisible) {
+          e.closeQuickChatMenu((byte) -93);
           if (param0 == -3) {
             return;
           }

@@ -109,31 +109,31 @@ final class it {
         }
     }
 
-    final static void a(int param0, int param1, int param2, String param3, int param4, String param5) {
-        CipherPacketBuffer var9 = null;
-        int var7 = 0;
+    final static void writeChatMessage(int phraseId, int obfuscationGuard, int channelId, String recipientName, int packetOpcode, String text) {
+        CipherPacketBuffer packet = null;
+        int payloadStart = 0;
         try {
-          var9 = vl.outgoingPacket;
-          CipherPacketBuffer var6 = var9;
-          if (param1 > -71) {
+          packet = vl.outgoingPacket;
+          CipherPacketBuffer packetAlias = packet;
+          if (obfuscationGuard > -71) {
             String var8 = (String) null;
             it.a((String) null, (ResourceArchive) null, (ResourceArchive) null, (byte) -14, (String) null);
           }
-          var9.writeCipheredOpcode(32161, param4);
-          var9.position = var9.position + 1;
-          var7 = var9.position;
-          var9.writeByte(1, param2);
-          if (param2 == 2) {
-            var9.b(param3, 13851);
+          packet.writeCipheredOpcode(32161, packetOpcode);
+          packet.position = packet.position + 1;
+          payloadStart = packet.position;
+          packet.writeByte(1, channelId);
+          if (channelId == 2) {
+            packet.b(recipientName, 13851);
           }
-          if (param5 != null) {
-            sf.a(15901, param5, var9);
+          if (text != null) {
+            sf.writeCompressedChatText(15901, text, packet);
           } else {
-            var9.writeShort(true, param0);
+            packet.writeShort(true, phraseId);
           }
-          var9.writeByteLengthPrefix(-var7 + var9.position, 5930);
+          packet.writeByteLengthPrefix(-payloadStart + packet.position, 5930);
         } catch (RuntimeException runtimeException) {
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "it.E(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "it.E(" + phraseId + ',' + obfuscationGuard + ',' + channelId + ',' + (recipientName != null ? "{...}" : "null") + ',' + packetOpcode + ',' + (text != null ? "{...}" : "null") + ')');
         }
     }
 

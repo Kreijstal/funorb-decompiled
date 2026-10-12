@@ -5,16 +5,16 @@ abstract class vt extends IntrusiveNode {
     static int[] field_m;
     static RgbSprite field_k;
     static int field_n;
-    static int field_l;
+    static int lastQuickChatChannel;
 
     final static boolean a(int param0, int param1, int param2, byte param3) {
         if (NodeIterator.field_a) {
           return BestScoreStrategy.field_i.a(rs.field_q, DualNodeDeque.field_i, 80);
         }
-        if (BattleTutorial.field_h) {
+        if (BattleTutorial.quickChatMenuVisible) {
           return cd.a(param2, param0, false);
         }
-        if (po.a(param0, 6150, param2)) {
+        if (po.handleQuickChatShortcuts(param0, 6150, param2)) {
           return true;
         }
         if (vi.field_d) {

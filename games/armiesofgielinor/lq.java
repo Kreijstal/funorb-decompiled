@@ -3,7 +3,7 @@
  */
 final class lq {
     static int field_e;
-    static boolean field_d;
+    static boolean hasLastQuickChat;
     static int field_b;
     static gu field_c;
     static String field_a;
@@ -85,7 +85,7 @@ final class lq {
     }
 
     static {
-        field_d = false;
+        hasLastQuickChat = false;
         field_e = -1;
         field_b = 0;
         field_c = new gu();

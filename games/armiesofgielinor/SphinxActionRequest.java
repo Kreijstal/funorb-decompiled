@@ -291,7 +291,7 @@ final class SphinxActionRequest extends ActionRequest {
           wh.field_g.heldPressSprite = GameplayController.a("downbutton_mouseheld", (byte) 51, "lobby", param1);
           wh.field_g.disabledSprite = GameplayController.a("downbutton_disabled", (byte) 51, "lobby", param1);
           WeightedLruCache.field_b = new VerticalScrollbar(0L, no.field_M, wh.field_g, oe.field_Cb, ke.field_c);
-          br.field_g = new mp(0L, (ClientUiComponent) null, cb.field_c, WeightedLruCache.field_b, ClientUiComponent.field_Q, (String) null, (String) null);
+          br.field_g = new SocialListPanel(0L, (ClientUiComponent) null, cb.field_c, WeightedLruCache.field_b, ClientUiComponent.field_Q, (String) null, (String) null);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

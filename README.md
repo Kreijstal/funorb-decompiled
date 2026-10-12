@@ -23,7 +23,7 @@ by default for every game. Semantic game-specific names use explicit naming
 rules. Deko's numbered structural-category and type-based names identify
 unresolved purposes honestly; they are not complete semantic deobfuscation.
 
-Armies has 200 reviewed class names, not a complete semantic map. Shared widget
+Armies has 203 reviewed class names, not a complete semantic map. Shared widget
 bounds, dropdown options/prefix selection, painter dispatch and expansion now
 have reviewed names with pointer, selection and arrow-pixel fixtures. Campaign
 loadouts now name unit/spell rewards, equipped slots and cumulative mana bonuses;
@@ -113,6 +113,12 @@ ordering and reset. The guide documents social update subtypes 0–4 and outgoin
 commands 0–3, including immediate local removal and distinct display/account
 names. Native fixtures cover these paths; live delivery and rendered social-list
 interaction remain unverified.
+
+HuffmanCodec, SocialListPanel and AccountNamePrompt now have reviewed names.
+The guide documents compressed chat text, phrase/recipient framing, private/public
+composition and response-menu eligibility, with synthetic packed-bit, frame,
+constructor and legacy key fixtures. Live delivery, the original loaded codebook
+and complete rendered composition remain unverified.
 
 Camera overview grouping, centroid bounds, hold state and explicit tile focus
 now have reviewed names, alongside directional panning, dragging and velocity

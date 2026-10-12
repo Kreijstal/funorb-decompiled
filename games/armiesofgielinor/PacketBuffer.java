@@ -189,7 +189,7 @@ class PacketBuffer extends IntrusiveNode {
         int var2;
         int var3;
         if (obfuscationGuard != 1) {
-          this.e(28);
+          this.readUnsignedSmart(28);
         }
         var2 = this.position;
         do {
@@ -198,7 +198,7 @@ class PacketBuffer extends IntrusiveNode {
         } while (0 != this.payload[fieldTemp$0]);
         var3 = -1 + (this.position - var2);
         if (var3 != 0) {
-          return co.a(var2, var3, -101, this.payload);
+          return co.decodeSingleByteText(var2, var3, -101, this.payload);
         }
         return "";
     }
@@ -295,18 +295,18 @@ class PacketBuffer extends IntrusiveNode {
         return ((255 & this.payload[this.position - 2]) << 8) + (this.payload[this.position - 1] & 255);
     }
 
-    final void a(boolean param0, int param1) {
-        if (!param0) {
+    final void writeUnsignedSmart(boolean obfuscationGuard, int value) {
+        if (!obfuscationGuard) {
           return;
         }
-        if (param1 >= 0 &&
-          128 > param1) {
-          this.writeByte(1, param1);
+        if (value >= 0 &&
+          128 > value) {
+          this.writeByte(1, value);
           return;
         }
-        if (0 <= param1 &&
-          param1 < 32768) {
-          this.writeShort(true, 32768 + param1);
+        if (0 <= value &&
+          value < 32768) {
+          this.writeShort(true, 32768 + value);
           return;
         }
         throw new IllegalArgumentException();
@@ -402,7 +402,7 @@ class PacketBuffer extends IntrusiveNode {
         dh.d(-1);
         Spell.field_b = null;
         int var1 = -111 % ((-16 - param0) / 46);
-        e.a((byte) -117);
+        e.closeQuickChatMenu((byte) -117);
     }
 
     final byte readByte(byte obfuscationGuard) {
@@ -657,7 +657,7 @@ class PacketBuffer extends IntrusiveNode {
 
     final void c(byte param0, int param1) {
         if (param0 != 60) {
-          this.a(false, 84);
+          this.writeUnsignedSmart(false, 84);
         }
         if (param1 < 64 &&
           param1 >= -64) {
@@ -701,7 +701,7 @@ class PacketBuffer extends IntrusiveNode {
         } while (0 != this.payload[fieldTemp$1]);
         var4 = -1 + this.position - var3;
         if (var4 != 0) {
-          return co.a(var3, var4, obfuscationGuard - 231, this.payload);
+          return co.decodeSingleByteText(var3, var4, obfuscationGuard - 231, this.payload);
         }
         return "";
     }
@@ -859,9 +859,9 @@ class PacketBuffer extends IntrusiveNode {
         this.payload[fieldTemp$1] = (byte)value;
     }
 
-    final int e(int param0) {
+    final int readUnsignedSmart(int obfuscationGuard) {
         int var2 = this.payload[this.position] & 255;
-        if (param0 != -23470) {
+        if (obfuscationGuard != -23470) {
           return 108;
         }
         if (var2 >= 128) {

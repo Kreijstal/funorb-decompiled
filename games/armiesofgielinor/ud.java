@@ -9,60 +9,60 @@ final class ud extends sf implements he {
     static String field_ab;
     private fw field_bb;
 
-    final static void b(int param0, boolean param1, int param2, int param3) {
-        if (param1) {
+    final static void setChatFilter(int filterValue, boolean obfuscationGuard, int channelId, int packetOpcode) {
+        if (obfuscationGuard) {
           field_X = (RgbSprite[]) null;
-          if (param2 != 0) {
-            if (param2 == 1) {
-              if (QuickChatCategory.field_D == param0) {
-                if (2 == param2 &&
-                  cd.field_c != param0) {
-                  cd.field_c = param0;
+          if (channelId != 0) {
+            if (channelId == 1) {
+              if (QuickChatCategory.field_D == filterValue) {
+                if (2 == channelId &&
+                  cd.field_c != filterValue) {
+                  cd.field_c = filterValue;
                   MoveEvent.field_J = true;
-                  SocketResourceClient.a(896, param3);
+                  SocketResourceClient.a(896, packetOpcode);
                 }
                 return;
               }
-              QuickChatCategory.field_D = param0;
+              QuickChatCategory.field_D = filterValue;
               MoveEvent.field_J = true;
-              SocketResourceClient.a(896, param3);
+              SocketResourceClient.a(896, packetOpcode);
             }
           } else {
-            if (param0 != ol.field_B) {
-              ol.field_B = param0;
+            if (filterValue != ol.field_B) {
+              ol.field_B = filterValue;
               MoveEvent.field_J = true;
-              SocketResourceClient.a(896, param3);
+              SocketResourceClient.a(896, packetOpcode);
             }
-            if (param2 == 1 &&
-              QuickChatCategory.field_D != param0) {
-              QuickChatCategory.field_D = param0;
+            if (channelId == 1 &&
+              QuickChatCategory.field_D != filterValue) {
+              QuickChatCategory.field_D = filterValue;
               MoveEvent.field_J = true;
-              SocketResourceClient.a(896, param3);
+              SocketResourceClient.a(896, packetOpcode);
             }
           }
         } else {
-          if (param2 == 0 &&
-            param0 != ol.field_B) {
-            ol.field_B = param0;
+          if (channelId == 0 &&
+            filterValue != ol.field_B) {
+            ol.field_B = filterValue;
             MoveEvent.field_J = true;
-            SocketResourceClient.a(896, param3);
+            SocketResourceClient.a(896, packetOpcode);
           }
-          if (param2 == 1 &&
-            QuickChatCategory.field_D != param0) {
-            QuickChatCategory.field_D = param0;
+          if (channelId == 1 &&
+            QuickChatCategory.field_D != filterValue) {
+            QuickChatCategory.field_D = filterValue;
             MoveEvent.field_J = true;
-            SocketResourceClient.a(896, param3);
+            SocketResourceClient.a(896, packetOpcode);
           }
         }
-        if (2 != param2) {
+        if (2 != channelId) {
           return;
         }
-        if (cd.field_c == param0) {
+        if (cd.field_c == filterValue) {
           return;
         }
-        cd.field_c = param0;
+        cd.field_c = filterValue;
         MoveEvent.field_J = true;
-        SocketResourceClient.a(896, param3);
+        SocketResourceClient.a(896, packetOpcode);
     }
 
     private final fw a(String param0, qo param1, int param2) {
@@ -121,7 +121,7 @@ final class ud extends sf implements he {
         try {
           var3 = null;
           if (param1 != PlayerProfile.field_h) {
-            if (mp.field_Mb == param1) {
+            if (SocialListPanel.field_Mb == param1) {
               this.height = this.height + 10;
               var3 = MoveAttackRequest.field_y;
               if (PaletteRegionMap.b(-108)) {

@@ -222,7 +222,7 @@ final class DropdownArrowPainter implements WidgetPainter {
             return false;
           }
           var2_long = vi.monotonicMillis(126);
-          if (dq.packetDelayMillis != 0 &&
+          if (HuffmanCodec.packetDelayMillis != 0 &&
             0 > ByteStorage.pendingOpcode) {
             var4_ref_qu = (DelayedPacket) (AnimationPlayer.delayedPackets.first((byte) 127));
             if (var4_ref_qu != null &&
@@ -267,7 +267,7 @@ final class DropdownArrowPainter implements WidgetPainter {
             if (!jh.isPacketPayloadReady(2)) {
               return false;
             }
-            if (dq.packetDelayMillis == 0) {
+            if (HuffmanCodec.packetDelayMillis == 0) {
               QuickChatCommandDefinition.thirdPreviousOpcode = ba.secondPreviousOpcode;
               ba.secondPreviousOpcode = TurnTimerDial.previousOpcode;
               TurnTimerDial.previousOpcode = nm.deliveredOpcode;
@@ -275,7 +275,7 @@ final class DropdownArrowPainter implements WidgetPainter {
               ByteStorage.pendingOpcode = -1;
               return true;
             }
-            var4 = dq.packetDelayMillis;
+            var4 = HuffmanCodec.packetDelayMillis;
             if (0.0 != DualNodeIterator.packetJitterMillis) {
               var4 = (int)((double)var4 + CampaignMenuButton.connectionRandom.nextGaussian() * DualNodeIterator.packetJitterMillis);
               if (0 > var4) {

@@ -108,7 +108,7 @@ final class fa implements Runnable {
             var3 = var4.getOutputStream();
             var3.write(17);
             var5 = (CharSequence) ((Object) ("JAGGRAB " + this.field_b.getFile() + "\n\n"));
-            var3.write(nr.a(var5, false));
+            var3.write(nr.encodeSingleByteText(var5, false));
             this.field_m = new DataInputStream(var4.getInputStream());
           }
           this.field_o.position = 0;

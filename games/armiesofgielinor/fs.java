@@ -86,7 +86,7 @@ final class fs {
         }
     }
 
-    final static boolean a(byte param0, String param1) {
+    final static boolean isActivePrivateTextRecipient(byte obfuscationGuard, String recipientName) {
         RuntimeException var2 = null;
         CharSequence var3 = null;
         RuntimeException stackIn_14_0 = null;
@@ -94,16 +94,16 @@ final class fs {
         String stackIn_15_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (!hf.field_c) {
+          if (!hf.textChatActive) {
             return false;
           }
-          if (param0 <= 108) {
+          if (obfuscationGuard <= 108) {
             return true;
           }
-          if (rs.field_t == 2 &&
-            null != wm.field_b) {
-            var3 = (CharSequence) ((Object) param1);
-            if (wm.field_b.equals(AccountNameNormalizer.normalize(var3, false))) {
+          if (rs.outgoingChatChannel == 2 &&
+            null != wm.chatRecipientNameKey) {
+            var3 = (CharSequence) ((Object) recipientName);
+            if (wm.chatRecipientNameKey.equals(AccountNameNormalizer.normalize(var3, false))) {
               return true;
             }
           }
@@ -112,8 +112,8 @@ final class fs {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
           stackIn_14_0 = var2;
-          stackIn_14_1 = new StringBuilder().append("fs.F(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_14_1 = new StringBuilder().append("fs.F(").append(obfuscationGuard).append(',');
+          if (recipientName == null) {
             stackIn_15_2 = "null";
           } else {
             stackIn_15_2 = "{...}";
