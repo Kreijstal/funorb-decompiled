@@ -211,7 +211,7 @@ final class GameplayController {
               lw.field_ob.g(db.a(true, 4 + (15 + var10)), MatchConditionEntry.a(param0 + 132, (byte) 94));
               var18.icon.g(db.a(true, 4 + var10 + 15), MatchConditionEntry.a(128 + param0 + 4, (byte) 94));
               km.field_h[2].g(db.a(true, var10 + 15), MatchConditionEntry.a(param0 + 128, (byte) 94));
-              var19 = 10 + km.field_h[2].field_A + (var10 + 15);
+              var19 = 10 + km.field_h[2].canvasWidth + (var10 + 15);
               rs.field_n.a(var18.title, db.a(true, var19), MatchConditionEntry.a(132 + param0, (byte) 94), -var19 + var11, 32, 16777215, -1, 1, 1, 0);
             }
           }
@@ -714,12 +714,12 @@ final class GameplayController {
           }
           fe.b(param0, param8, param7, param2, io.field_m, nd.field_b, 0, 0);
           if (param4) {
-            vq.field_b.c(param0 + param9, param8 + param1, param5, param6);
+            vq.field_b.drawScaled(param0 + param9, param8 + param1, param5, param6);
             if (!ArmiesOfGielinor.obfuscationControl) {
               return;
             }
           }
-          vq.field_b.b(param9 + param0, param8 + param1);
+          vq.field_b.drawOpaque(param9 + param0, param8 + param1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -1039,8 +1039,8 @@ final class GameplayController {
         RuntimeException decompiledCaughtException = null;
         var6 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          var2_int = SoftwareRaster.field_l >> 1;
-          var3 = SoftwareRaster.field_g >> 1;
+          var2_int = SoftwareRaster.width >> 1;
+          var3 = SoftwareRaster.height >> 1;
           if (param0 != -71) {
             return;
           }
@@ -1048,9 +1048,9 @@ final class GameplayController {
           while (var3 > var4) {
             var5 = var2_int * (-var4 + var3) / var3;
             SoftwareRaster.h(0, var4, var5, var4, 0);
-            SoftwareRaster.h(SoftwareRaster.field_l - 1, var4, SoftwareRaster.field_l - var5, var4, 0);
-            SoftwareRaster.h(0, -var4 + SoftwareRaster.field_g, var5, -var4 + SoftwareRaster.field_g, 0);
-            SoftwareRaster.h(SoftwareRaster.field_l - 1, SoftwareRaster.field_g - var4, SoftwareRaster.field_l - var5, SoftwareRaster.field_g - var4, 0);
+            SoftwareRaster.h(SoftwareRaster.width - 1, var4, SoftwareRaster.width - var5, var4, 0);
+            SoftwareRaster.h(0, -var4 + SoftwareRaster.height, var5, -var4 + SoftwareRaster.height, 0);
+            SoftwareRaster.h(SoftwareRaster.width - 1, SoftwareRaster.height - var4, SoftwareRaster.width - var5, SoftwareRaster.height - var4, 0);
             var4++;
             if (var6 != 0) {
               return;
@@ -1210,9 +1210,9 @@ final class GameplayController {
           var5 = 133;
           var6 = 25;
           var7 = 0;
-          var8 = vq.field_b.field_g;
+          var8 = vq.field_b.canvasWidth;
           var7Lifetime1 = 1;
-          var9 = var6 + vq.field_b.field_f;
+          var9 = var6 + vq.field_b.canvasHeight;
           this.a(4, 2, var5, (byte) 89, var7Lifetime1 != 0, var8, var9, 99, var4, 3);
           this.a(param0 - 111, 90, 9, this.o(125) - 133, 24, var6);
           this.a(30, var3 != 0, var6, 16, (byte) -126, 63, var2_int);
@@ -2802,7 +2802,7 @@ final class GameplayController {
             }
             pc.field_j = new RgbSprite(217, var9);
             pc.field_j.b();
-            SoftwareRaster.f(0, 0, SoftwareRaster.field_l, SoftwareRaster.field_g, 1776150);
+            SoftwareRaster.f(0, 0, SoftwareRaster.width, SoftwareRaster.height, 1776150);
             var10 = 0;
             while (var10 < 16) {
               stackIn_35_0 = -1;
@@ -2817,7 +2817,7 @@ final class GameplayController {
                 var8 += 19;
                 en.field_E.c(du.field_g[var10], 109, var8, 16777215, -1);
                 var12 = (en.field_E.a(du.field_g[var10]) >> 1) + 3;
-                AttackEvent.field_O.f(-AttackEvent.field_O.field_y + (109 - var12), -10 + var8);
+                AttackEvent.field_O.f(-AttackEvent.field_O.pixelWidth + (109 - var12), -10 + var8);
                 AttackEvent.field_O.f(109 + var12, var8 - 10);
               }
               var10++;
@@ -2834,9 +2834,9 @@ final class GameplayController {
             this.t((byte) 125);
           }
           SoftwareRaster.f(db.a(true, 374), MatchConditionEntry.a(33 + param0, (byte) 94), db.a(true, 591), MatchConditionEntry.a(192 + (param0 + 33), (byte) 94));
-          var6Lifetime1 = -(uk.field_n / 3) % pc.field_j.field_v;
+          var6Lifetime1 = -(uk.field_n / 3) % pc.field_j.pixelHeight;
           pc.field_j.f(db.a(true, 374), MatchConditionEntry.a(var6Lifetime1 + param0 + 33, (byte) 94));
-          pc.field_j.f(db.a(true, 374), MatchConditionEntry.a(pc.field_j.field_v + var6Lifetime1 + (param0 + 33), (byte) 94));
+          pc.field_j.f(db.a(true, 374), MatchConditionEntry.a(pc.field_j.pixelHeight + var6Lifetime1 + (param0 + 33), (byte) 94));
           SoftwareRaster.a();
           if (!this.field_l) {
             stackIn_42_0 = nd.field_b;
@@ -3394,7 +3394,7 @@ final class GameplayController {
           fe.c(mo.field_o, db.a(true, 320), MatchConditionEntry.a(380, (byte) 94), nd.field_b, false);
         }
         int var2_int = 0;
-        ig.field_t.a(db.a(true, var2_int), MatchConditionEntry.a(0, (byte) 94));
+        ig.field_t.draw(db.a(true, var2_int), MatchConditionEntry.a(0, (byte) 94));
         if (this.battlefield.currentPlayer < 0) {
           return;
         }
@@ -4309,7 +4309,7 @@ final class GameplayController {
             var9 != 0 || var11 != 0) {
             pg.field_c.g(var5_int - 78, var6 - 78, 10);
           }
-          ro.field_rb[bw.unitDefinitions[param1][0]].a(var5_int - 8, var6 - 71);
+          ro.field_rb[bw.unitDefinitions[param1][0]].draw(var5_int - 8, var6 - 71);
           if (null != bh.field_M[param1]) {
             var10 = en.field_E.a(bh.field_M[param1], 220, 0);
             fe.b(-120 + var5_int, 130 + var6, 240, 20 + var10, io.field_m, TutorialController.field_e, 0, 192);
@@ -4701,7 +4701,7 @@ final class GameplayController {
           if (param0 != 2) {
             this.k(1);
           }
-          stackIn_4_0 = -50 + SoftwareRaster.field_l / 2;
+          stackIn_4_0 = -50 + SoftwareRaster.width / 2;
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -5105,7 +5105,7 @@ final class GameplayController {
             }
             pc.field_j = new RgbSprite(217, var9);
             pc.field_j.b();
-            SoftwareRaster.f(0, 0, SoftwareRaster.field_l, SoftwareRaster.field_g, 1776150);
+            SoftwareRaster.f(0, 0, SoftwareRaster.width, SoftwareRaster.height, 1776150);
             var10 = 0;
             while (var10 < 16) {
               stackIn_33_0 = 1 << var10 & var6;
@@ -5119,7 +5119,7 @@ final class GameplayController {
                 var8 += 19;
                 en.field_E.c(du.field_g[var10], 109, var8, 16777215, -1);
                 var12 = 3 + (en.field_E.a(du.field_g[var10]) >> 1);
-                AttackEvent.field_O.f(109 - var12 - AttackEvent.field_O.field_y, var8 - 10);
+                AttackEvent.field_O.f(109 - var12 - AttackEvent.field_O.pixelWidth, var8 - 10);
                 AttackEvent.field_O.f(109 + var12, -10 + var8);
               }
               var10++;
@@ -5130,9 +5130,9 @@ final class GameplayController {
           }
           if (decompiledFrameCompleted0) {
             SoftwareRaster.f(4 + param0, param2 + 33, param0 + 4 + 217, param2 + 33 + 192);
-            var6Lifetime1 = -(uk.field_n / param1) % pc.field_j.field_v;
+            var6Lifetime1 = -(uk.field_n / param1) % pc.field_j.pixelHeight;
             pc.field_j.f(param0 + 3, var6Lifetime1 + (param2 + 33));
-            pc.field_j.f(param0 + 3, pc.field_j.field_v + (33 + param2) + var6Lifetime1);
+            pc.field_j.f(param0 + 3, pc.field_j.pixelHeight + (33 + param2) + var6Lifetime1);
             SoftwareRaster.a();
             stackIn_33_0 = this.field_l ? 1 : 0;
           }
@@ -5604,7 +5604,7 @@ final class GameplayController {
           var5 = var3_int * ((param0 - 50) * (param0 - 50)) * (param1 + param0) / 200 / rs.field_k;
           var6 = (int)(Math.sin(3.141592653589793 * (double)param0 / 100.0) * 128.0);
           SoftwareRaster.b(0, 0, var3_int, var4, 0, var6);
-          ig.field_t.a(db.a(true, var5), 0);
+          ig.field_t.draw(db.a(true, var5), 0);
           stackIn_1_0 = var5;
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -5634,10 +5634,10 @@ final class GameplayController {
               }
               var3 = stackIn_17_0;
               while (var3 < so.field_b.field_g) {
-                MatchConditionEntry.field_n.b(var2_int, var3);
-                var3 = var3 + MatchConditionEntry.field_n.field_f;
+                MatchConditionEntry.field_n.drawOpaque(var2_int, var3);
+                var3 = var3 + MatchConditionEntry.field_n.canvasHeight;
               }
-              var2_int = var2_int + MatchConditionEntry.field_n.field_g;
+              var2_int = var2_int + MatchConditionEntry.field_n.canvasWidth;
             }
             if ((decompiledFrameCompleted0) &&
               (var4 != 0)) {
@@ -6151,7 +6151,7 @@ final class GameplayController {
                 boolean decompiledFrameCompleted2 = true;
                 boolean decompiledFrameRemainder11 = true;
                 if (!this.field_r ||
-                  !wg.a(-33, 150, 227, 15, 15 + e.field_b[0].field_v) ||
+                  !wg.a(-33, 150, 227, 15, 15 + e.field_b[0].pixelHeight) ||
                   this.field_q < 0) {
                   if (!this.field_lb ||
                     !wg.a(-33, 10, 74, this.o(param0 ^ 5) - 40, -10 + this.o(125))) {
@@ -6532,7 +6532,7 @@ final class GameplayController {
                         }
                         if (stackIn_424_0 != stackIn_424_1) {
                           if (wg.a(-33, 487 - (var16 & 3) * 30, 517 - (3 & var16) * 30, 30 * (var16 >> 2) + 39, 79 + 30 * (var16 >> 2))) {
-                            var2 = fo.a(param0 + 4680, pr.field_a[this.selectedUnit.statusEffectType - 1], new String[]{Integer.toString(this.selectedUnit.statusEffectValue)});
+                            var2 = fo.a(param0 + 4680, PaletteRegionMap.field_a[this.selectedUnit.statusEffectType - 1], new String[]{Integer.toString(this.selectedUnit.statusEffectValue)});
                           }
                           var16++;
                         }
@@ -8497,7 +8497,7 @@ final class GameplayController {
               }
               if (stackIn_457_0 == param0) {
                 if (~this.selectedUnit.ownerPlayer != ~this.field_q) {
-                  this.a(false, si.field_a, (byte) -118);
+                  this.a(false, IndexedSpriteBase.field_a, (byte) -118);
                   return;
                 }
                 if (this.selectedUnit.movementSpent ||
@@ -10176,7 +10176,7 @@ final class GameplayController {
         int stackIn_59_1 = 0;
         int stackIn_59_2 = 0;
         int stackIn_60_3 = 0;
-        ru stackIn_67_0 = null;
+        IndexedSprite stackIn_67_0 = null;
         int stackIn_67_1 = 0;
         int stackIn_67_2 = 0;
         int stackIn_68_3 = 0;
@@ -10185,12 +10185,12 @@ final class GameplayController {
         int stackIn_71_2;
         int stackIn_71_3;
         int stackIn_72_4 = 0;
-        ru stackIn_127_0 = null;
+        IndexedSprite stackIn_127_0 = null;
         int stackIn_127_1 = 0;
         int stackIn_127_2 = 0;
         int stackIn_128_3;
         int stackIn_131_0 = 0;
-        ru stackIn_136_0 = null;
+        IndexedSprite stackIn_136_0 = null;
         int stackIn_136_1 = 0;
         int stackIn_136_2 = 0;
         int stackIn_137_3;
@@ -10213,7 +10213,7 @@ final class GameplayController {
         int var16Lifetime1;
         var17 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          CampaignDefinition.field_t.b(param3 + 2, -73 + (param5 + param0));
+          CampaignDefinition.field_t.drawOpaque(param3 + 2, -73 + (param5 + param0));
           fe.b(param3 + 0, -76 - (-param5 - param0), 309, 71, io.field_m, nd.field_b, 0, 0);
           SoftwareRaster.b(7 + param3, param5 - 70 + param0, 25, 25, 0, 128);
           if (-1 < param4.ownerPlayer) {
@@ -10224,7 +10224,7 @@ final class GameplayController {
           SoftwareRaster.f(37 + param3, param0 - 70 + param5, 245 + param3, param0 + param5 - 45);
           fe.a(var9, -param2 + 42 + param3, param0 + (-43 + param5), 16777215, true);
           SoftwareRaster.a();
-          lp.field_b[vg.field_r[param4.terrainType]].a(param3 + 273, param0 + (param5 - 74));
+          lp.field_b[vg.field_r[param4.terrainType]].draw(param3 + 273, param0 + (param5 - 74));
           SoftwareRaster.b(param3 + 7, param0 - 41 + param5, 60, 30, 0, 128);
           TrianglePulse.field_f.g(param3 + 12, -36 + param5 + param0);
           var10 = 0;
@@ -10296,7 +10296,7 @@ final class GameplayController {
           } else {
             stackIn_68_3 = 128;
           }
-          ((ru) (Object) stackIn_67_0).b(stackIn_67_1, stackIn_67_2, stackIn_68_3, 0);
+          ((IndexedSprite) (Object) stackIn_67_0).b(stackIn_67_1, stackIn_67_2, stackIn_68_3, 0);
           stackIn_71_0 = rs.field_n;
           stackIn_71_1 = 100 - ri.terrainDamageTakenPercent[param4.terrainType] + "%";
           stackIn_71_2 = 284 + param3;
@@ -10313,7 +10313,7 @@ final class GameplayController {
           var12Lifetime1 = 0;
           var13 = 23;
           if (param4.hasCorpse(68)) {
-            lp.field_b[0].a(72 + (param3 + var13 * var12Lifetime1), param5 - 42 + param0);
+            lp.field_b[0].draw(72 + (param3 + var13 * var12Lifetime1), param5 - 42 + param0);
             var12Lifetime1++;
           }
           boolean decompiledFrameRemainder5 = true;
@@ -10333,18 +10333,18 @@ final class GameplayController {
           if ((decompiledFrameRemainder5) &&
             (decompiledFrameRemainder4) &&
             (decompiledFrameRemainder3)) {
-            lp.field_b[1].a(var13 * var12Lifetime1 + (72 + param3), param0 - (-param5 + 42));
+            lp.field_b[1].draw(var13 * var12Lifetime1 + (72 + param3), param0 - (-param5 + 42));
             var12Lifetime1++;
             decompiledFrameRemainder5 = (var17 != 0);
           }
           if ((decompiledFrameRemainder5) &&
             (decompiledFrameRemainder4)) {
-            lp.field_b[2].a(var13 * var12Lifetime1 + param3 + 72, param0 + param5 - 42);
+            lp.field_b[2].draw(var13 * var12Lifetime1 + param3 + 72, param0 + param5 - 42);
             var12Lifetime1++;
             decompiledFrameRemainder5 = (var17 != 0);
           }
           if (decompiledFrameRemainder5) {
-            lp.field_b[3].a(72 - (-param3 - var13 * var12Lifetime1), param0 - 42 + param5);
+            lp.field_b[3].draw(72 - (-param3 - var13 * var12Lifetime1), param0 - 42 + param5);
             var12Lifetime1++;
           }
           var14Lifetime1 = param4.getEffectsForPlayer((byte) 97, param6, this.battlefield.getPlayerTeamIndex(param6, -1));
@@ -10363,7 +10363,7 @@ final class GameplayController {
                 } else {
                   stackIn_128_3 = 255;
                 }
-                ((ru) (Object) stackIn_127_0).b(stackIn_127_1, stackIn_127_2, stackIn_128_3, 0);
+                ((IndexedSprite) (Object) stackIn_127_0).b(stackIn_127_1, stackIn_127_2, stackIn_128_3, 0);
                 var12Lifetime1++;
               }
               var16++;
@@ -10384,7 +10384,7 @@ final class GameplayController {
             } else {
               stackIn_137_3 = 255;
             }
-            ((ru) (Object) stackIn_136_0).b(stackIn_136_1, stackIn_136_2, stackIn_137_3, 0);
+            ((IndexedSprite) (Object) stackIn_136_0).b(stackIn_136_1, stackIn_136_2, stackIn_137_3, 0);
             var12Lifetime1++;
           }
           return;

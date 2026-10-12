@@ -82,7 +82,7 @@ final class mv {
           }
           pv.field_e.b();
           SoftwareRaster.b();
-          TrianglePulse.field_d.d(0, TrianglePulse.field_d.field_v >> 1, op.field_c[0][param3]);
+          TrianglePulse.field_d.d(0, TrianglePulse.field_d.pixelHeight >> 1, op.field_c[0][param3]);
           so.field_b.a(5605);
           pv.field_e.d(-20 + param0, -200 + param4, 75, 210, 255);
           pv.field_e.c();

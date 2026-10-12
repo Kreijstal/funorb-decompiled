@@ -60,13 +60,13 @@ final class DeployRequest extends ActionRequest {
         if (param0 == -1) {
           var2 = new b();
           ta.field_O.addLast((byte) -119, (IntrusiveNode) (var2));
-          a.a(param1, (byte) -32);
+          RegionAnchor.a(param1, (byte) -32);
           return var2;
         }
         field_w = (String) null;
         var2Lifetime1 = new b();
         ta.field_O.addLast((byte) -119, (IntrusiveNode) (var2Lifetime1));
-        a.a(param1, (byte) -32);
+        RegionAnchor.a(param1, (byte) -32);
         return var2Lifetime1;
     }
 

@@ -181,80 +181,80 @@ final class na extends tj implements mf, he {
         try {
           var5_int = param1 + param0;
           var6 = param3 + param4;
-          if (param1 > SoftwareRaster.field_j) {
+          if (param1 > SoftwareRaster.clipLeft) {
             stackIn_4_0 = param1;
           } else {
-            stackIn_4_0 = SoftwareRaster.field_j;
+            stackIn_4_0 = SoftwareRaster.clipLeft;
           }
           var7 = stackIn_4_0;
-          if (SoftwareRaster.field_a < param4) {
+          if (SoftwareRaster.clipTop < param4) {
             stackIn_7_0 = param4;
           } else {
-            stackIn_7_0 = SoftwareRaster.field_a;
+            stackIn_7_0 = SoftwareRaster.clipTop;
           }
           var8 = stackIn_7_0;
-          if (var5_int >= SoftwareRaster.field_e) {
-            stackIn_10_0 = SoftwareRaster.field_e;
+          if (var5_int >= SoftwareRaster.clipRight) {
+            stackIn_10_0 = SoftwareRaster.clipRight;
           } else {
             stackIn_10_0 = var5_int;
           }
           var9 = stackIn_10_0;
-          if (var6 >= SoftwareRaster.field_f) {
-            stackIn_13_0 = SoftwareRaster.field_f;
+          if (var6 >= SoftwareRaster.clipBottom) {
+            stackIn_13_0 = SoftwareRaster.clipBottom;
           } else {
             stackIn_13_0 = var6;
           }
           var10 = stackIn_13_0;
-          if (param1 >= SoftwareRaster.field_j &&
-            param1 < SoftwareRaster.field_e) {
-            var11 = var8 * SoftwareRaster.field_l + param1;
+          if (param1 >= SoftwareRaster.clipLeft &&
+            param1 < SoftwareRaster.clipRight) {
+            var11 = var8 * SoftwareRaster.width + param1;
             var12 = 1 + var10 - var8 >> 1;
             while (true) {
               var12--;
               if (var12 < 0) {
                 break;
               }
-              SoftwareRaster.field_d[var11] = 16777215;
-              var11 = var11 + 2 * SoftwareRaster.field_l;
+              SoftwareRaster.pixels[var11] = 16777215;
+              var11 = var11 + 2 * SoftwareRaster.width;
             }
           }
-          if (SoftwareRaster.field_a <= param4 &&
-            SoftwareRaster.field_f > var6) {
-            var11Lifetime1 = SoftwareRaster.field_l * param4 + var7;
+          if (SoftwareRaster.clipTop <= param4 &&
+            SoftwareRaster.clipBottom > var6) {
+            var11Lifetime1 = SoftwareRaster.width * param4 + var7;
             var12Lifetime1 = -var7 + var9 + 1 >> 1;
             while (true) {
               var12Lifetime1--;
               if (var12Lifetime1 < 0) {
                 break;
               }
-              SoftwareRaster.field_d[var11Lifetime1] = 16777215;
+              SoftwareRaster.pixels[var11Lifetime1] = 16777215;
               var11Lifetime1 += 2;
             }
           }
           var11Lifetime2 = 72 / ((param2 - 79) / 37);
-          if (SoftwareRaster.field_j <= var5_int &&
-            SoftwareRaster.field_e > var5_int) {
-            var12Lifetime2 = var5_int + SoftwareRaster.field_l * ((1 & var5_int - param1) + var8);
+          if (SoftwareRaster.clipLeft <= var5_int &&
+            SoftwareRaster.clipRight > var5_int) {
+            var12Lifetime2 = var5_int + SoftwareRaster.width * ((1 & var5_int - param1) + var8);
             var13 = 1 + var10 - var8 >> 1;
             while (true) {
               var13--;
               if (var13 < 0) {
                 break;
               }
-              SoftwareRaster.field_d[var12Lifetime2] = 16777215;
-              var12Lifetime2 = var12Lifetime2 + 2 * SoftwareRaster.field_l;
+              SoftwareRaster.pixels[var12Lifetime2] = 16777215;
+              var12Lifetime2 = var12Lifetime2 + 2 * SoftwareRaster.width;
             }
           }
-          if (SoftwareRaster.field_a <= param4 &&
-            var6 < SoftwareRaster.field_f) {
-            var12Lifetime3 = var7 + (SoftwareRaster.field_l * var6 + (-param4 + var6 & 1));
+          if (SoftwareRaster.clipTop <= param4 &&
+            var6 < SoftwareRaster.clipBottom) {
+            var12Lifetime3 = var7 + (SoftwareRaster.width * var6 + (-param4 + var6 & 1));
             var13Lifetime1 = 1 + var9 - var7 >> 1;
             while (true) {
               var13Lifetime1--;
               if (0 > var13Lifetime1) {
                 return;
               }
-              SoftwareRaster.field_d[var12Lifetime3] = 16777215;
+              SoftwareRaster.pixels[var12Lifetime3] = 16777215;
               var12Lifetime3 += 2;
             }
           }

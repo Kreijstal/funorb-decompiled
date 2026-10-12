@@ -2787,7 +2787,7 @@ final class CombatPresentation implements EventPresentation {
             this.battlefield.playerCoats != null) {
             var3Lifetime2 = 19;
             if (ku.field_J != null) {
-              stackIn_63_0 = ku.field_J.field_x >> 1;
+              stackIn_63_0 = ku.field_J.canvasHeight >> 1;
             } else {
               stackIn_63_0 = 0;
             }
@@ -2795,7 +2795,7 @@ final class CombatPresentation implements EventPresentation {
             if (ku.field_J == null) {
               stackIn_67_0 = 0;
             } else {
-              stackIn_67_0 = ku.field_J.field_A >> 1;
+              stackIn_67_0 = ku.field_J.canvasWidth >> 1;
             }
             var4Lifetime1 = stackIn_67_0;
             var2_intLifetime2 = 17;

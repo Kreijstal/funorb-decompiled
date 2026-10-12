@@ -5,7 +5,7 @@ final class of extends je {
     long field_Pb;
     String field_Yb;
     int field_Kb;
-    static ru[] field_Mb;
+    static IndexedSprite[] field_Mb;
     je field_dc;
     boolean field_Wb;
     je field_fc;

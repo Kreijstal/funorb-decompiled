@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class CampaignDefinition extends IntrusiveNode {
-    static ru field_t;
+    static IndexedSprite field_t;
     static String[] field_m;
     CampaignMission[] missions;
     String description;

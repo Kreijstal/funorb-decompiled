@@ -208,7 +208,7 @@ final class tn extends sf implements he {
             var2_int = 1;
           }
           for (var3 = 0; var3 < param1.length; var3++) {
-            var15 = param1[var3].field_B;
+            var15 = param1[var3].pixels;
             var14 = var15;
             var4 = var14;
             var5 = 16711680 & TutorialLayout.field_g[var2_int + var3];

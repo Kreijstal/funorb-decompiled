@@ -59,18 +59,18 @@ final class qp extends dr {
         int[] var19 = null;
         var16 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          no.field_P.field_v = SoftwareRaster.field_g;
+          no.field_P.pixelHeight = SoftwareRaster.height;
           if (param0 != 1) {
             qp.g(111);
           }
-          no.field_P.field_y = SoftwareRaster.field_l;
-          no.field_P.field_B = SoftwareRaster.field_d;
+          no.field_P.pixelWidth = SoftwareRaster.width;
+          no.field_P.pixels = SoftwareRaster.pixels;
           if (param6) {
             if (dv.field_k == null ||
               t.field_f != param7) {
               t.field_f = param7;
-              dv.field_k = a.field_m[0].g();
-              var19 = dv.field_k.field_B;
+              dv.field_k = RegionAnchor.field_m[0].g();
+              var19 = dv.field_k.pixels;
               var18 = var19;
               var17 = var18;
               var10 = var17;
@@ -88,15 +88,15 @@ final class qp extends dr {
             param9.g(param3, param2);
             if (!param1) {
               if (param8) {
-                fe.a(a.field_m[2], param3, param2, 56, 56);
-                a.field_m[2].d(param3, param2, 56, 56, 228);
+                fe.a(RegionAnchor.field_m[2], param3, param2, 56, 56);
+                RegionAnchor.field_m[2].d(param3, param2, 56, 56, 228);
               } else {
                 if (param4) {
-                  a.field_m[3].e(param3, param2);
+                  RegionAnchor.field_m[3].e(param3, param2);
                 }
               }
             } else {
-              a.field_m[1].e(param3, param2);
+              RegionAnchor.field_m[1].e(param3, param2);
             }
           } else {
             ku.field_J.b();
@@ -104,18 +104,18 @@ final class qp extends dr {
             param9.g(0, 0);
             if (!param1) {
               if (param8) {
-                fe.a(a.field_m[2], 0, 0, 56, 56);
-                a.field_m[2].d(0, 0, 56, 56, 228);
+                fe.a(RegionAnchor.field_m[2], 0, 0, 56, 56);
+                RegionAnchor.field_m[2].d(0, 0, 56, 56, 228);
               } else {
                 if (!param4) {
                   no.field_P.b();
                   ku.field_J.h(param3, param2);
                   return;
                 }
-                a.field_m[3].e(0, 0);
+                RegionAnchor.field_m[3].e(0, 0);
               }
             } else {
-              a.field_m[1].e(0, 0);
+              RegionAnchor.field_m[1].e(0, 0);
             }
             no.field_P.b();
             ku.field_J.h(param3, param2);

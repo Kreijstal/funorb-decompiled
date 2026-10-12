@@ -279,18 +279,18 @@ final class ep {
         if (param1 != -79) {
           return;
         }
-        var17 = new int[SoftwareRaster.field_g];
+        var17 = new int[SoftwareRaster.height];
         var4 = -param0;
         var4 = var4 + kv.field_F;
         var5 = -1;
         for (var6 = us.field_a; var6 < 16; var6++) {
           var7 = var4;
           var8 = (var7 >> 4) + this.a(0, 4592);
-          if (SoftwareRaster.field_l > var8) {
+          if (SoftwareRaster.width > var8) {
             if (null == ck.field_c[var6]) {
               ck.field_c[var6] = this.b(-99, var6);
             }
-            var9 = ck.field_c[var6].field_y;
+            var9 = ck.field_c[var6].pixelWidth;
             var4 = var4 + (var9 << 4);
             var10 = var8 + var9;
             if (var10 >= 0) {
@@ -300,8 +300,8 @@ final class ep {
                 var11 = var11 - (var8 << 4);
                 var8 = 0;
               }
-              if (SoftwareRaster.field_l < var10) {
-                var9 = var9 - (var10 - SoftwareRaster.field_l);
+              if (SoftwareRaster.width < var10) {
+                var9 = var9 - (var10 - SoftwareRaster.width);
               }
               var12 = this.a((byte) -34, 0);
               if (var5 < 0) {
@@ -321,7 +321,7 @@ final class ep {
           break;
         }
         for (var6Lifetime1 = 0; var6Lifetime1 < 64; var6Lifetime1++) {
-          SoftwareRaster.d(var6Lifetime1 + var5, this.a((byte) -45, 0), SoftwareRaster.field_g, 0, 255 - (var6Lifetime1 << 2));
+          SoftwareRaster.d(var6Lifetime1 + var5, this.a((byte) -45, 0), SoftwareRaster.height, 0, 255 - (var6Lifetime1 << 2));
         }
         return;
     }

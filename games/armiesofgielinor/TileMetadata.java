@@ -128,13 +128,13 @@ final class TileMetadata implements TaggedFieldReader {
     final static void a(int param0, boolean param1) {
         if (gk.field_J > 0 &&
           bw.field_g) {
-          SoftwareRaster.d(0, 0, SoftwareRaster.field_l, CombatEvent.field_I.field_D);
+          SoftwareRaster.d(0, 0, SoftwareRaster.width, CombatEvent.field_I.field_D);
           qc.field_c.b(param1, 20);
         }
         if ((!(PreparedAction.field_r <= 0) ||
           !(0 >= InstructionsPanel.field_D)) &&
           vk.field_f) {
-          SoftwareRaster.d(0, 0, SoftwareRaster.field_l, CombatEvent.field_I.field_D);
+          SoftwareRaster.d(0, 0, SoftwareRaster.width, CombatEvent.field_I.field_D);
           ta.field_R.b(param1, 20);
         }
         if (param0 != 5295) {

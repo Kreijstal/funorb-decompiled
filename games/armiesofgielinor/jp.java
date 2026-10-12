@@ -52,8 +52,8 @@ final class jp {
             field_g = (int[]) null;
           }
           param3[0].g(param0, param1, param4);
-          param3[1].b(param3[1].field_y + param0, param1, -(param3[2].field_y << 1) + param2, param3[2].field_v, param4);
-          param3[2].g(-param3[2].field_y + (param2 + param0), param1, param4);
+          param3[1].b(param3[1].pixelWidth + param0, param1, -(param3[2].pixelWidth << 1) + param2, param3[2].pixelHeight, param4);
+          param3[2].g(-param3[2].pixelWidth + (param2 + param0), param1, param4);
         } catch (RuntimeException runtimeException) {
           throw ig.addExceptionContext((Throwable) ((Object) runtimeException), "jp.B(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ')');
         }
@@ -102,13 +102,13 @@ final class jp {
     }
 
     final static int a(int param0, int param1, int param2, int param3) {
-        if (SoftwareRaster.field_l >= param2 + param0) {
+        if (SoftwareRaster.width >= param2 + param0) {
           return param0;
         }
         if (~(param0 + param1 - param2) <= param3) {
           return -param2 + (param1 + param0);
         }
-        return -param2 + SoftwareRaster.field_l;
+        return -param2 + SoftwareRaster.width;
     }
 
     public static void a(byte param0) {

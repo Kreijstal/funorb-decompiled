@@ -481,11 +481,11 @@ final class ae extends bp {
           vg.field_q[0].i();
           vg.field_q[1].i();
           DeployEvent.field_z = param2;
-          ac.field_m = vg.field_q[0].field_v;
+          ac.field_m = vg.field_q[0].pixelHeight;
           if (param0 < 118) {
             field_x = (String) null;
           }
-          CampaignProgress.field_b = vg.field_q[0].field_y;
+          CampaignProgress.field_b = vg.field_q[0].pixelWidth;
         } catch (RuntimeException runtimeException) {
           throw ig.addExceptionContext((Throwable) ((Object) runtimeException), "ae.N(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }

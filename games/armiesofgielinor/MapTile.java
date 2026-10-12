@@ -113,7 +113,7 @@ final class MapTile implements TaggedFieldReader {
         try {
           if (fieldName.equals("unit")) {
             if (encodedLength > 0) {
-              this.occupant = a.readTaggedUnit(encodedLength, 32, packet);
+              this.occupant = RegionAnchor.readTaggedUnit(encodedLength, 32, packet);
             }
           } else {
             if (fieldName.equals("own")) {

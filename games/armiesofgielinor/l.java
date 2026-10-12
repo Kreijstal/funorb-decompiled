@@ -4,7 +4,7 @@
 final class l {
     static String field_h;
     static String field_e;
-    static ru[] field_b;
+    static IndexedSprite[] field_b;
     static CampaignMission field_c;
     static String field_g;
     static rc field_a;

@@ -53,14 +53,14 @@ final class ds {
     final static void a(int param0, int param1, int param2, int param3, boolean param4, int param5, boolean param6, int param7) {
         boolean stackIn_20_0 = false;
         RuntimeException decompiledCaughtException = null;
-        ru var8 = null;
+        IndexedSprite var8 = null;
         int var8_int = 0;
         RuntimeException var8_ref = null;
         int var9 = 0;
         int var10 = 0;
         int var11 = 0;
         int var12 = 0;
-        ru var13 = null;
+        IndexedSprite var13 = null;
         int var14 = 0;
         var14 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
@@ -75,7 +75,7 @@ final class ds {
                 if (param4) {
                   var8.d(db.a(true, param0), MatchConditionEntry.a(param1, (byte) 94));
                 } else {
-                  var8.a(db.a(true, param0), MatchConditionEntry.a(param1, (byte) 94));
+                  var8.draw(db.a(true, param0), MatchConditionEntry.a(param1, (byte) 94));
                 }
               }
             }
@@ -105,7 +105,7 @@ final class ds {
                   var13 = ac.field_k[var12];
                   if (var13 != null) {
                     if (!param4) {
-                      var13.a(db.a(true, param0), MatchConditionEntry.a(param1, (byte) 94));
+                      var13.draw(db.a(true, param0), MatchConditionEntry.a(param1, (byte) 94));
                     } else {
                       var13.d(db.a(true, param0), MatchConditionEntry.a(param1, (byte) 94));
                     }

@@ -81,8 +81,8 @@ abstract class wl extends tj {
           return;
         }
         if (TutorialLayout.field_b == null ||
-          !(this.field_l <= TutorialLayout.field_b.field_y) ||
-          !(TutorialLayout.field_b.field_v >= this.field_w)) {
+          !(this.field_l <= TutorialLayout.field_b.pixelWidth) ||
+          !(TutorialLayout.field_b.pixelHeight >= this.field_w)) {
           TutorialLayout.field_b = new RgbSprite(this.field_l, this.field_w);
         }
         CombatSandbox.a(TutorialLayout.field_b, 3);

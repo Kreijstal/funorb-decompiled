@@ -63,25 +63,25 @@ final class oe extends ro implements he {
         }
         if (param6 >= param4) {
           if (param2 > param6) {
-            ManaEvent.a(param6, param4, param7, param2, param1, param5, SoftwareRaster.field_d, param3, (byte) 20);
+            ManaEvent.a(param6, param4, param7, param2, param1, param5, SoftwareRaster.pixels, param3, (byte) 20);
             return;
           }
           if (param4 >= param2) {
-            ManaEvent.a(param4, param2, param1, param6, param3, param5, SoftwareRaster.field_d, param7, (byte) 20);
+            ManaEvent.a(param4, param2, param1, param6, param3, param5, SoftwareRaster.pixels, param7, (byte) 20);
             return;
           }
-          ManaEvent.a(param2, param4, param1, param6, param7, param5, SoftwareRaster.field_d, param3, (byte) 20);
+          ManaEvent.a(param2, param4, param1, param6, param7, param5, SoftwareRaster.pixels, param3, (byte) 20);
           return;
         }
         if (param2 > param4) {
-          ManaEvent.a(param4, param6, param7, param2, param3, param5, SoftwareRaster.field_d, param1, (byte) 20);
+          ManaEvent.a(param4, param6, param7, param2, param3, param5, SoftwareRaster.pixels, param1, (byte) 20);
           return;
         }
         if (param6 >= param2) {
-          ManaEvent.a(param6, param2, param3, param4, param1, param5, SoftwareRaster.field_d, param7, (byte) 20);
+          ManaEvent.a(param6, param2, param3, param4, param1, param5, SoftwareRaster.pixels, param7, (byte) 20);
           return;
         }
-        ManaEvent.a(param2, param6, param3, param4, param7, param5, SoftwareRaster.field_d, param1, (byte) 20);
+        ManaEvent.a(param2, param6, param3, param4, param7, param5, SoftwareRaster.pixels, param1, (byte) 20);
     }
 
     public final void a(int param0, int param1, int param2, int param3, fw param4) {

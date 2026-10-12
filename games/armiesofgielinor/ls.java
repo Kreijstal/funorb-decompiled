@@ -109,10 +109,10 @@ final class ls {
         return var8;
     }
 
-    final static ru a(int param0, kl param1, int param2, int param3) {
+    final static IndexedSprite a(int param0, kl param1, int param2, int param3) {
         RuntimeException var4 = null;
-        ru stackIn_5_0 = null;
-        ru stackIn_7_0 = null;
+        IndexedSprite stackIn_5_0 = null;
+        IndexedSprite stackIn_7_0 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
@@ -125,7 +125,7 @@ final class ls {
             stackIn_7_0 = rr.b(0);
             return stackIn_7_0;
           }
-          stackIn_5_0 = (ru) null;
+          stackIn_5_0 = (IndexedSprite) null;
           return stackIn_5_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -68,7 +68,7 @@ final class vu extends fw {
         int var8 = 0;
         int var9 = 0;
         int var11 = 0;
-        ru var12 = null;
+        IndexedSprite var12 = null;
         int var13 = 0;
         var13 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
@@ -96,7 +96,7 @@ final class vu extends fw {
                   if (param1) {
                     var12.d(db.a(true, param2 + var8), MatchConditionEntry.a(var9 + param3, (byte) 94));
                   } else {
-                    var12.a(db.a(true, var8 + param2), MatchConditionEntry.a(var9 + param3, (byte) 94));
+                    var12.draw(db.a(true, var8 + param2), MatchConditionEntry.a(var9 + param3, (byte) 94));
                   }
                 }
               }

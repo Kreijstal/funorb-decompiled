@@ -117,10 +117,10 @@ final class ia {
 
     private final void b(int param0) {
         int var9 = 0;
-        int var2 = this.field_f[3].field_A;
+        int var2 = this.field_f[3].canvasWidth;
         int var3 = this.field_a.a(' ');
         int var4 = var3 + (var2 + this.field_e);
-        int var5 = this.field_f[1].field_x;
+        int var5 = this.field_f[1].canvasHeight;
         int var6 = 2;
         int var7 = this.field_a.field_H;
         int var8 = var5 + this.field_i - (-var6 - var7);
@@ -203,22 +203,22 @@ final class ia {
         int var6Lifetime1;
         int var7Lifetime1;
         if (param0 < -92) {
-          var2 = this.field_f[5].field_A + this.field_f[3].field_A;
+          var2 = this.field_f[5].canvasWidth + this.field_f[3].canvasWidth;
           var3 = this.field_a.a(' ') << 1;
           var4 = this.field_a.a(this.field_d);
           this.field_j = var3 + var2 + var4;
-          var5 = this.field_f[1].field_x + this.field_f[7].field_x;
+          var5 = this.field_f[1].canvasHeight + this.field_f[7].canvasHeight;
           var6 = 4;
           var7 = this.field_a.field_L + this.field_a.field_H;
           this.field_c = var6 + (var5 + var7);
           return;
         }
         this.a(94, (byte) 54, -110);
-        var2Lifetime1 = this.field_f[5].field_A + this.field_f[3].field_A;
+        var2Lifetime1 = this.field_f[5].canvasWidth + this.field_f[3].canvasWidth;
         var3Lifetime1 = this.field_a.a(' ') << 1;
         var4Lifetime1 = this.field_a.a(this.field_d);
         this.field_j = var3Lifetime1 + var2Lifetime1 + var4Lifetime1;
-        var5Lifetime1 = this.field_f[1].field_x + this.field_f[7].field_x;
+        var5Lifetime1 = this.field_f[1].canvasHeight + this.field_f[7].canvasHeight;
         var6Lifetime1 = 4;
         var7Lifetime1 = this.field_a.field_L + this.field_a.field_H;
         this.field_c = var6Lifetime1 + (var5Lifetime1 + var7Lifetime1);

@@ -13,8 +13,8 @@ final class rr {
         }
     }
 
-    final static ru b(int param0) {
-        ru var1 = new ru(lg.field_d, wr.field_J, j.field_e[0], CampaignMenuButton.field_g[0], qm.field_K[0], c.field_e[param0], AnimationPlayer.field_j[0], MovementPresentation.field_j);
+    final static IndexedSprite b(int param0) {
+        IndexedSprite var1 = new IndexedSprite(lg.field_d, wr.field_J, j.field_e[0], CampaignMenuButton.field_g[0], qm.field_K[0], c.field_e[param0], AnimationPlayer.field_j[0], MovementPresentation.field_j);
         rj.d((byte) 99);
         return var1;
     }

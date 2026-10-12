@@ -13,7 +13,7 @@ final class ef extends Exception {
         og.field_p = null;
         vs.field_e = null;
         jf.field_C = null;
-        pr.field_g = null;
+        PaletteRegionMap.field_g = null;
         kl.field_a = null;
         CampaignMenuEntry.field_u = null;
         if (param0 != -1) {

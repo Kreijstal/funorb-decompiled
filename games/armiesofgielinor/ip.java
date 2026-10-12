@@ -51,17 +51,17 @@ final class ip {
           if (null != this.field_j) {
             var6_int = this.field_i + param0.field_B + param3;
             if (1 == param4.field_n) {
-              var6_int = var6_int + (param0.field_l - this.field_j.field_A) / 2;
+              var6_int = var6_int + (param0.field_l - this.field_j.canvasWidth) / 2;
             }
             var7 = this.field_a + (param2 + param0.field_p);
             if (param4.field_k == 1) {
-              var7 = var7 + (-this.field_j.field_x + param0.field_w) / 2;
+              var7 = var7 + (-this.field_j.canvasHeight + param0.field_w) / 2;
             }
             if (param4.field_n == 2) {
-              var6_int = var6_int + (param0.field_l - this.field_j.field_A);
+              var6_int = var6_int + (param0.field_l - this.field_j.canvasWidth);
             }
             if (param4.field_k == 2) {
-              var7 = var7 + (param0.field_w - this.field_j.field_x);
+              var7 = var7 + (param0.field_w - this.field_j.canvasHeight);
             }
             this.field_j.g(var6_int, var7);
           }
@@ -305,7 +305,7 @@ final class ip {
         int var10 = 0;
         int var11 = 0;
         try {
-          var9_int = param4.a(param7) + (param5[0].field_y << 1);
+          var9_int = param4.a(param7) + (param5[0].pixelWidth << 1);
           if (param1 > -92) {
             field_c = (RgbSprite[]) null;
           }

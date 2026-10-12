@@ -4,7 +4,7 @@
 import java.util.*;
 
 final class km {
-    static ru[] field_c;
+    static IndexedSprite[] field_c;
     private boolean field_b;
     private int field_k;
     int field_d;

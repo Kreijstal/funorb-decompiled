@@ -439,23 +439,23 @@ abstract class dv implements ap {
         }
         if (param15 > param0) {
           if (param8 > param15) {
-            TelepopEvent.a(SoftwareRaster.field_d, param5, param13, param12, param4, param1, param7, param9, param6, param11, param15, param8, param14, true, param2, param0, param10);
+            TelepopEvent.a(SoftwareRaster.pixels, param5, param13, param12, param4, param1, param7, param9, param6, param11, param15, param8, param14, true, param2, param0, param10);
           } else {
             if (param8 > param0) {
-              TelepopEvent.a(SoftwareRaster.field_d, param5, param12, param13, param4, param9, param10, param1, param6, param14, param8, param15, param11, true, param2, param0, param7);
+              TelepopEvent.a(SoftwareRaster.pixels, param5, param12, param13, param4, param9, param10, param1, param6, param14, param8, param15, param11, true, param2, param0, param7);
             } else {
-              TelepopEvent.a(SoftwareRaster.field_d, param1, param4, param13, param12, param9, param6, param5, param10, param14, param0, param15, param2, true, param11, param8, param7);
+              TelepopEvent.a(SoftwareRaster.pixels, param1, param4, param13, param12, param9, param6, param5, param10, param14, param0, param15, param2, true, param11, param8, param7);
             }
           }
         } else {
           if (param8 <= param0) {
             if (param8 > param15) {
-              TelepopEvent.a(SoftwareRaster.field_d, param9, param12, param4, param13, param5, param10, param1, param7, param2, param8, param0, param11, true, param14, param15, param6);
+              TelepopEvent.a(SoftwareRaster.pixels, param9, param12, param4, param13, param5, param10, param1, param7, param2, param8, param0, param11, true, param14, param15, param6);
             } else {
-              TelepopEvent.a(SoftwareRaster.field_d, param1, param13, param4, param12, param5, param7, param9, param10, param2, param15, param0, param14, true, param11, param8, param6);
+              TelepopEvent.a(SoftwareRaster.pixels, param1, param13, param4, param12, param5, param7, param9, param10, param2, param15, param0, param14, true, param11, param8, param6);
             }
           } else {
-            TelepopEvent.a(SoftwareRaster.field_d, param9, param4, param12, param13, param1, param6, param5, param7, param11, param0, param8, param2, true, param14, param15, param10);
+            TelepopEvent.a(SoftwareRaster.pixels, param9, param4, param12, param13, param1, param6, param5, param7, param11, param0, param8, param2, true, param14, param15, param10);
           }
         }
     }

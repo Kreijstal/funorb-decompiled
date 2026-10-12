@@ -471,7 +471,7 @@ final class mq extends je {
               this.field_Jb = var15;
             }
           }
-          this.field_Jb = this.field_Jb + (10 + s.field_c.field_A);
+          this.field_Jb = this.field_Jb + (10 + s.field_c.canvasWidth);
           this.c(12, -8);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

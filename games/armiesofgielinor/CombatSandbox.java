@@ -261,7 +261,7 @@ final class CombatSandbox {
         }
         try {
           rq.a((byte) -56);
-          SoftwareRaster.a(param0.field_B, param0.field_A, param0.field_x);
+          SoftwareRaster.a(param0.pixels, param0.canvasWidth, param0.canvasHeight);
         } catch (RuntimeException runtimeException) {
           throw ig.addExceptionContext((Throwable) ((Object) runtimeException), "vn.F(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

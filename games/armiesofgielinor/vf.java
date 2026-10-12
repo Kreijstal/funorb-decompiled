@@ -760,10 +760,10 @@ abstract class vf {
         }
     }
 
-    final static ru a(int[] param0, int param1, ru param2) {
-        ru var3 = null;
+    final static IndexedSprite a(int[] param0, int param1, IndexedSprite param2) {
+        IndexedSprite var3 = null;
         RuntimeException var3_ref = null;
-        ru stackIn_3_0 = null;
+        IndexedSprite stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -774,15 +774,15 @@ abstract class vf {
           if (param1 != -13546) {
             field_l = (String) null;
           }
-          var3 = new ru(0, 0, 0);
-          var3.field_j = param0;
-          var3.field_d = param2.field_d;
-          var3.field_e = param2.field_e;
-          var3.field_k = param2.field_k;
-          var3.field_i = param2.field_i;
-          var3.field_f = param2.field_f;
-          var3.field_h = param2.field_h;
-          var3.field_g = param2.field_g;
+          var3 = new IndexedSprite(0, 0, 0);
+          var3.palette = param0;
+          var3.offsetY = param2.offsetY;
+          var3.pixelWidth = param2.pixelWidth;
+          var3.pixelIndices = param2.pixelIndices;
+          var3.offsetX = param2.offsetX;
+          var3.canvasHeight = param2.canvasHeight;
+          var3.pixelHeight = param2.pixelHeight;
+          var3.canvasWidth = param2.canvasWidth;
           stackIn_3_0 = var3;
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -830,12 +830,12 @@ abstract class vf {
         if (rs.field_o == null) {
           return -1;
         }
-        if (param0 >= wi.field_c && wi.field_c + rs.field_o.field_y > param0 && param2 >= ro.field_pb &&
-          !(param2 >= ro.field_pb + rs.field_o.field_v)) {
+        if (param0 >= wi.field_c && wi.field_c + rs.field_o.pixelWidth > param0 && param2 >= ro.field_pb &&
+          !(param2 >= ro.field_pb + rs.field_o.pixelHeight)) {
           return 0;
         }
-        if (param0 >= co.field_h && co.field_h + rs.field_o.field_y > param0 && ug.field_a <= param2 &&
-          !(rs.field_o.field_v + ug.field_a <= param2)) {
+        if (param0 >= co.field_h && co.field_h + rs.field_o.pixelWidth > param0 && ug.field_a <= param2 &&
+          !(rs.field_o.pixelHeight + ug.field_a <= param2)) {
           return 1;
         }
         return -1;

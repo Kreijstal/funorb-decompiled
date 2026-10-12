@@ -2,17 +2,17 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class SoftwareRaster {
-    static int field_l;
-    static int field_f;
+    static int width;
+    static int clipBottom;
     private static int[] field_b;
     static int[] field_c;
-    static int[] field_d;
+    static int[] pixels;
     private static int[] field_i;
-    static int field_g;
-    static int field_a;
-    static int field_j;
+    static int height;
+    static int clipTop;
+    static int clipLeft;
     private static int[] field_h;
-    static int field_e;
+    static int clipRight;
     static int[] field_k;
 
     final static void b(int param0, int param1, int param2, int param3, int param4, int param5) {
@@ -23,31 +23,31 @@ final class SoftwareRaster {
         int var7;
         int var8;
         int var11;
-        if (param0 < field_j) {
-          param2 = param2 - (field_j - param0);
-          param0 = field_j;
+        if (param0 < clipLeft) {
+          param2 = param2 - (clipLeft - param0);
+          param0 = clipLeft;
         }
-        if (param1 < field_a) {
-          param3 = param3 - (field_a - param1);
-          param1 = field_a;
+        if (param1 < clipTop) {
+          param3 = param3 - (clipTop - param1);
+          param1 = clipTop;
         }
-        if (param0 + param2 > field_e) {
-          param2 = field_e - param0;
+        if (param0 + param2 > clipRight) {
+          param2 = clipRight - param0;
         }
-        if (param1 + param3 > field_f) {
-          param3 = field_f - param1;
+        if (param1 + param3 > clipBottom) {
+          param3 = clipBottom - param1;
         }
         param4 = ((param4 & 16711935) * param5 >> 8 & 16711935) + ((param4 & 65280) * param5 >> 8 & 65280);
         var6 = 256 - param5;
-        var7 = field_l - param2;
-        var8 = param0 + param1 * field_l;
+        var7 = width - param2;
+        var8 = param0 + param1 * width;
         for (var9 = 0; var9 < param3; var9++) {
           for (var10 = -param2; var10 < 0; var10++) {
-            var11 = field_d[var8];
+            var11 = pixels[var8];
             var11 = ((var11 & 16711935) * var6 >> 8 & 16711935) + ((var11 & 65280) * var6 >> 8 & 65280);
             incrementValue$0 = var8;
             var8++;
-            field_d[incrementValue$0] = param4 + var11;
+            pixels[incrementValue$0] = param4 + var11;
           }
           var8 = var8 + var7;
         }
@@ -60,16 +60,16 @@ final class SoftwareRaster {
         if (param1 < 0) {
           param1 = 0;
         }
-        if (param2 > field_l) {
-          param2 = field_l;
+        if (param2 > width) {
+          param2 = width;
         }
-        if (param3 > field_g) {
-          param3 = field_g;
+        if (param3 > height) {
+          param3 = height;
         }
-        field_j = param0;
-        field_a = param1;
-        field_e = param2;
-        field_f = param3;
+        clipLeft = param0;
+        clipTop = param1;
+        clipRight = param2;
+        clipBottom = param3;
         SoftwareRaster.c();
     }
 
@@ -121,12 +121,12 @@ final class SoftwareRaster {
         var6 = param0 + param4;
         var7 = param1 + param4;
         var8 = param1;
-        if (var8 < field_a) {
-          var8 = field_a;
+        if (var8 < clipTop) {
+          var8 = clipTop;
         }
         var9 = param1 + param3;
-        if (var9 > field_f) {
-          var9 = field_f;
+        if (var9 > clipBottom) {
+          var9 = clipBottom;
         }
         var10 = param2 - param4 - param4 - 1;
         var11 = var8;
@@ -143,18 +143,18 @@ final class SoftwareRaster {
             if (var16 > var12 &&
               var15 > var12) {
               var17 = var6 - var13 + 1;
-              if (var17 < field_j) {
-                var17 = field_j;
+              if (var17 < clipLeft) {
+                var17 = clipLeft;
               }
               var18 = var6 + var10 + var13;
-              if (var18 > field_e) {
-                var18 = field_e;
+              if (var18 > clipRight) {
+                var18 = clipRight;
               }
-              var19 = var17 + var11 * field_l;
+              var19 = var17 + var11 * width;
               for (var20 = var17; var20 < var18; var20++) {
                 incrementValue$5 = var19;
                 var19++;
-                field_d[incrementValue$5] = param5;
+                pixels[incrementValue$5] = param5;
               }
               var11++;
               incrementValue$4 = var14;
@@ -171,24 +171,24 @@ final class SoftwareRaster {
         }
         var14Lifetime1 = var11 - var7;
         var17Lifetime1 = param0;
-        if (var17Lifetime1 < field_j) {
-          var17Lifetime1 = field_j;
+        if (var17Lifetime1 < clipLeft) {
+          var17Lifetime1 = clipLeft;
         }
         var18Lifetime1 = param0 + param2;
-        if (var18Lifetime1 > field_e) {
-          var18Lifetime1 = field_e;
+        if (var18Lifetime1 > clipRight) {
+          var18Lifetime1 = clipRight;
         }
-        var19Lifetime1 = var17Lifetime1 + var11 * field_l;
-        var20Lifetime1 = field_l + var17Lifetime1 - var18Lifetime1;
+        var19Lifetime1 = var17Lifetime1 + var11 * width;
+        var20Lifetime1 = width + var17Lifetime1 - var18Lifetime1;
         var21 = param1 + param3 - param4 - 1;
-        if (var21 > field_f) {
-          var21 = field_f;
+        if (var21 > clipBottom) {
+          var21 = clipBottom;
         }
         while (var11 < var21) {
           for (var22 = var17Lifetime1; var22 < var18Lifetime1; var22++) {
             incrementValue$3 = var19Lifetime1;
             var19Lifetime1++;
-            field_d[incrementValue$3] = param5;
+            pixels[incrementValue$3] = param5;
           }
           var11++;
           var19Lifetime1 = var19Lifetime1 + var20Lifetime1;
@@ -210,18 +210,18 @@ final class SoftwareRaster {
             break;
           }
           var17Lifetime2 = var6 - var13Lifetime1;
-          if (var17Lifetime2 < field_j) {
-            var17Lifetime2 = field_j;
+          if (var17Lifetime2 < clipLeft) {
+            var17Lifetime2 = clipLeft;
           }
           var18Lifetime2 = var6 + var10 + var13Lifetime1;
-          if (var18Lifetime2 > field_e - 1) {
-            var18Lifetime2 = field_e - 1;
+          if (var18Lifetime2 > clipRight - 1) {
+            var18Lifetime2 = clipRight - 1;
           }
-          var19Lifetime2 = var17Lifetime2 + var11 * field_l;
+          var19Lifetime2 = var17Lifetime2 + var11 * width;
           for (var20Lifetime2 = var17Lifetime2; var20Lifetime2 <= var18Lifetime2; var20Lifetime2++) {
             incrementValue$2 = var19Lifetime2;
             var19Lifetime2++;
-            field_d[incrementValue$2] = param5;
+            pixels[incrementValue$2] = param5;
           }
           var11++;
           var16Lifetime1 = var16Lifetime1 + (var14Lifetime2 + var14Lifetime2);
@@ -238,49 +238,49 @@ final class SoftwareRaster {
         int var6 = 0;
         int var5Lifetime1;
         int var5Lifetime2;
-        if (param0 >= field_j) {
-          if (param1 < field_a ||
-            param0 >= field_e ||
-            param1 >= field_f) {
+        if (param0 >= clipLeft) {
+          if (param1 < clipTop ||
+            param0 >= clipRight ||
+            param1 >= clipBottom) {
             return;
           }
-          var4 = param0 + param1 * field_l;
+          var4 = param0 + param1 * width;
           var5 = (param2 & 16711935) * param3;
           param2 = (var5 & -16711936) + (param2 * param3 - var5 & 16711680) >>> 8;
-          var5Lifetime1 = field_d[var4];
+          var5Lifetime1 = pixels[var4];
           var6 = param2 + var5Lifetime1;
           param2 = (param2 & 16711935) + (var5Lifetime1 & 16711935);
           var5Lifetime2 = (param2 & 16777472) + (var6 - param2 & 65536);
-          field_d[var4] = var6 - var5Lifetime2 | var5Lifetime2 - (var5Lifetime2 >>> 8);
+          pixels[var4] = var6 - var5Lifetime2 | var5Lifetime2 - (var5Lifetime2 >>> 8);
           return;
         }
     }
 
     final static void d(int param0, int param1, int param2, int param3) {
-        if (param0 < field_j) {
-          param2 = param2 - (field_j - param0);
-          param0 = field_j;
+        if (param0 < clipLeft) {
+          param2 = param2 - (clipLeft - param0);
+          param0 = clipLeft;
         }
-        if (param1 < field_a) {
-          param3 = param3 - (field_a - param1);
-          param1 = field_a;
+        if (param1 < clipTop) {
+          param3 = param3 - (clipTop - param1);
+          param1 = clipTop;
         }
-        if (param0 + param2 > field_e) {
-          param2 = field_e - param0;
+        if (param0 + param2 > clipRight) {
+          param2 = clipRight - param0;
         }
-        if (param1 + param3 > field_f) {
-          param3 = field_f - param1;
+        if (param1 + param3 > clipBottom) {
+          param3 = clipBottom - param1;
         }
-        int var4 = field_l - param2;
-        int var5 = param0 + param1 * field_l;
-        SoftwareRaster.a(var5, field_d, 0, param2, -param3, var4);
+        int var4 = width - param2;
+        int var5 = param0 + param1 * width;
+        SoftwareRaster.a(var5, pixels, 0, param2, -param3, var4);
     }
 
     final static void a() {
-        field_j = 0;
-        field_a = 0;
-        field_e = field_l;
-        field_f = field_g;
+        clipLeft = 0;
+        clipTop = 0;
+        clipRight = width;
+        clipBottom = height;
         SoftwareRaster.c();
     }
 
@@ -300,37 +300,37 @@ final class SoftwareRaster {
         int var10 = 0;
         int var11 = 0;
         int incrementValue$0 = 0;
-        if (param0 < field_j) {
-          param2 = param2 - (field_j - param0);
-          param0 = field_j;
+        if (param0 < clipLeft) {
+          param2 = param2 - (clipLeft - param0);
+          param0 = clipLeft;
         }
-        if (param0 + param2 > field_e) {
-          param2 = field_e - param0;
+        if (param0 + param2 > clipRight) {
+          param2 = clipRight - param0;
         }
-        if (param1 < field_a) {
-          param3 = param3 - (field_a - param1);
-          param1 = field_a;
+        if (param1 < clipTop) {
+          param3 = param3 - (clipTop - param1);
+          param1 = clipTop;
         }
-        if (param1 + param3 > field_f) {
-          param3 = field_f - param1;
+        if (param1 + param3 > clipBottom) {
+          param3 = clipBottom - param1;
         }
-        int var4 = param0 + param1 * field_l;
+        int var4 = param0 + param1 * width;
         if (param2 > 0) {
           if (param3 <= 0) {
             return;
           }
           for (var5 = 0; var5 < param3; var5++) {
             for (var6 = 0; var6 < param2; var6++) {
-              var7 = field_d[var4];
+              var7 = pixels[var4];
               var8 = var7 >> 15 & 510;
               var9 = var7 >> 8 & 255;
               var10 = var7 & 255;
               var11 = (var10 + var8) / 3 + var9 >> 1;
               incrementValue$0 = var4;
               var4++;
-              field_d[incrementValue$0] = (var11 << 16) + (var11 << 8) + var11;
+              pixels[incrementValue$0] = (var11 << 16) + (var11 << 8) + var11;
             }
-            var4 = var4 + (field_l - param2);
+            var4 = var4 + (width - param2);
           }
           return;
         }
@@ -342,17 +342,17 @@ final class SoftwareRaster {
         int var7 = param0 + param2 + 15 >> 4;
         int var8 = param1 - param2 >> 4;
         int var9 = param1 + param2 + 15 >> 4;
-        if (var6 < field_j) {
-          var6 = field_j;
+        if (var6 < clipLeft) {
+          var6 = clipLeft;
         }
-        if (var7 > field_e) {
-          var7 = field_e;
+        if (var7 > clipRight) {
+          var7 = clipRight;
         }
-        if (var8 < field_a) {
-          var8 = field_a;
+        if (var8 < clipTop) {
+          var8 = clipTop;
         }
-        if (var9 > field_f) {
-          var9 = field_f;
+        if (var9 > clipBottom) {
+          var9 = clipBottom;
         }
         int var10 = (var6 << 4) - param0;
         var10 = var10 * var10;
@@ -372,9 +372,9 @@ final class SoftwareRaster {
         int var19 = var17 - var16;
         int var20 = var18 - var17;
         int var21 = var20 - var19;
-        int var22 = var6 + var8 * field_l;
-        int var23 = field_l + var6 - var7;
-        SoftwareRaster.a(0, 0, 0, 0, 0, var15, var5, var22, field_d, param3, param4, var23, var13, var6 - var7, var16 + var10, var19, var21, var8 - var9);
+        int var22 = var6 + var8 * width;
+        int var23 = width + var6 - var7;
+        SoftwareRaster.a(0, 0, 0, 0, 0, var15, var5, var22, pixels, param3, param4, var23, var13, var6 - var7, var16 + var10, var19, var21, var8 - var9);
     }
 
     private final static void a(int param0, int[] param1, int param2, int param3, int param4, int param5) {
@@ -468,26 +468,26 @@ final class SoftwareRaster {
             param0 = param0 + var11;
             param1++;
           }
-          if (param1 < field_a) {
-            param0 = param0 + var11 * (field_a - param1);
-            param1 = field_a;
+          if (param1 < clipTop) {
+            param0 = param0 + var11 * (clipTop - param1);
+            param1 = clipTop;
           }
-          if (param3 >= field_f) {
-            param3 = field_f - 1;
+          if (param3 >= clipBottom) {
+            param3 = clipBottom - 1;
           }
           if (var6 == 0) {
             param3--;
           }
           while (param1 <= param3) {
             var12 = param0 >> 16;
-            if (var12 >= field_j &&
-              var12 < field_e) {
-              var13 = var12 + param1 * field_l;
-              var14 = (field_d[var13] >> 16 & 255) * var7;
-              var15 = (field_d[var13] >> 8 & 255) * var7;
-              var16 = (field_d[var13] & 255) * var7;
+            if (var12 >= clipLeft &&
+              var12 < clipRight) {
+              var13 = var12 + param1 * width;
+              var14 = (pixels[var13] >> 16 & 255) * var7;
+              var15 = (pixels[var13] >> 8 & 255) * var7;
+              var16 = (pixels[var13] & 255) * var7;
               var17 = (var8 + var14 >> 8 << 16) + (var9 + var15 >> 8 << 8) + (var10 + var16 >> 8);
-              field_d[var13] = var17;
+              pixels[var13] = var17;
             }
             param0 = param0 + var11;
             param1++;
@@ -503,26 +503,26 @@ final class SoftwareRaster {
           param1 = param1 + var11Lifetime1;
           param0++;
         }
-        if (param0 < field_j) {
-          param1 = param1 + var11Lifetime1 * (field_j - param0);
-          param0 = field_j;
+        if (param0 < clipLeft) {
+          param1 = param1 + var11Lifetime1 * (clipLeft - param0);
+          param0 = clipLeft;
         }
-        if (param2 >= field_e) {
-          param2 = field_e - 1;
+        if (param2 >= clipRight) {
+          param2 = clipRight - 1;
         }
         if (var6 == 0) {
           param2--;
         }
         while (param0 <= param2) {
           var12Lifetime1 = param1 >> 16;
-          if (var12Lifetime1 >= field_a &&
-            var12Lifetime1 < field_f) {
-            var13Lifetime1 = param0 + var12Lifetime1 * field_l;
-            var14Lifetime1 = (field_d[var13Lifetime1] >> 16 & 255) * var7;
-            var15Lifetime1 = (field_d[var13Lifetime1] >> 8 & 255) * var7;
-            var16Lifetime1 = (field_d[var13Lifetime1] & 255) * var7;
+          if (var12Lifetime1 >= clipTop &&
+            var12Lifetime1 < clipBottom) {
+            var13Lifetime1 = param0 + var12Lifetime1 * width;
+            var14Lifetime1 = (pixels[var13Lifetime1] >> 16 & 255) * var7;
+            var15Lifetime1 = (pixels[var13Lifetime1] >> 8 & 255) * var7;
+            var16Lifetime1 = (pixels[var13Lifetime1] & 255) * var7;
             var17Lifetime1 = (var8 + var14Lifetime1 >> 8 << 16) + (var9 + var15Lifetime1 >> 8 << 8) + (var10 + var16Lifetime1 >> 8);
-            field_d[var13Lifetime1] = var17Lifetime1;
+            pixels[var13Lifetime1] = var17Lifetime1;
           }
           param1 = param1 + var11Lifetime1;
           param0++;
@@ -531,8 +531,8 @@ final class SoftwareRaster {
     }
 
     final static void c(int param0, int param1, int param2, int param3, int param4, int param5) {
-        SoftwareRaster.a(field_d, 0, param2 + param3 * field_l, param0, param2, param4, field_l - param4, param5);
-        SoftwareRaster.a(field_d, 0, param2 + param3 * field_l, param1, param3, param5, field_l - param4, param2, param4);
+        SoftwareRaster.a(pixels, 0, param2 + param3 * width, param0, param2, param4, width - param4, param5);
+        SoftwareRaster.a(pixels, 0, param2 + param3 * width, param1, param3, param5, width - param4, param2, param4);
     }
 
     private final static void a(int[] param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
@@ -612,12 +612,12 @@ final class SoftwareRaster {
         if (var13 < 0) {
           var13 = 0;
         }
-        var14 = param7 + var13 * field_l;
+        var14 = param7 + var13 * width;
         var15 = param4 + param3;
         var16 = 0;
-        if (var15 >= field_g) {
-          var16 = var15 - field_g + 1;
-          var15 = field_g - 1;
+        if (var15 >= height) {
+          var16 = var15 - height + 1;
+          var15 = height - 1;
         }
         var17 = var15 - var13 + 1;
         while (var13 <= var15) {
@@ -630,7 +630,7 @@ final class SoftwareRaster {
           var14 = var14 + param6;
           var13++;
         }
-        var14 = var14 + var16 * field_l;
+        var14 = var14 + var16 * width;
         for (var18Lifetime1 = 0; var18Lifetime1 < param8; var18Lifetime1++) {
           incrementValue$7 = param2;
           param2++;
@@ -642,12 +642,12 @@ final class SoftwareRaster {
         if (0 < var18Lifetime2) {
           var18Lifetime2 = 0;
         }
-        var19 = param7 + (param4 - param3) * field_l;
+        var19 = param7 + (param4 - param3) * width;
         if (var13Lifetime1 < var18Lifetime2) {
-          var19 = var19 + (var18Lifetime2 - var13Lifetime1) * field_l;
+          var19 = var19 + (var18Lifetime2 - var13Lifetime1) * width;
         }
         while (var13Lifetime1 < var18Lifetime2) {
-          if (var13Lifetime1 + param4 + param5 + param3 < field_f) {
+          if (var13Lifetime1 + param4 + param5 + param3 < clipBottom) {
             for (var20 = 0; var20 < param8; var20++) {
               param1 = param0[var14++];
               var9[var20] = var9[var20] + (param1 >> 16 & 255);
@@ -657,7 +657,7 @@ final class SoftwareRaster {
             var14 = var14 + param6;
             var17++;
           } else {
-            var14 = var14 + field_l;
+            var14 = var14 + width;
           }
           for (var20Lifetime3 = 0; var20Lifetime3 < param8; var20Lifetime3++) {
             var21 = var27[var20Lifetime3] / var17;
@@ -670,7 +670,7 @@ final class SoftwareRaster {
           param2 = param2 + param6;
           var13Lifetime1++;
         }
-        var18Lifetime3 = field_g - param4 - param5 - param3;
+        var18Lifetime3 = height - param4 - param5 - param3;
         if (0 < var18Lifetime3) {
           var18Lifetime3 = 0;
         }
@@ -788,43 +788,43 @@ final class SoftwareRaster {
         int var11 = 0;
         int var14 = 0;
         int incrementValue$0 = 0;
-        if (param1 >= field_a) {
-          if (param1 >= field_f) {
+        if (param1 >= clipTop) {
+          if (param1 >= clipBottom) {
             return;
           }
-          if (param0 < field_j) {
-            param2 = param2 - (field_j - param0);
-            param0 = field_j;
+          if (param0 < clipLeft) {
+            param2 = param2 - (clipLeft - param0);
+            param0 = clipLeft;
           }
-          if (param0 + param2 > field_e) {
-            param2 = field_e - param0;
+          if (param0 + param2 > clipRight) {
+            param2 = clipRight - param0;
           }
           var5 = 256 - param4;
           var6 = (param3 >> 16 & 255) * param4;
           var7 = (param3 >> 8 & 255) * param4;
           var8 = (param3 & 255) * param4;
-          var12 = param0 + param1 * field_l;
+          var12 = param0 + param1 * width;
           for (var13 = 0; var13 < param2; var13++) {
-            var9 = (field_d[var12] >> 16 & 255) * var5;
-            var10 = (field_d[var12] >> 8 & 255) * var5;
-            var11 = (field_d[var12] & 255) * var5;
+            var9 = (pixels[var12] >> 16 & 255) * var5;
+            var10 = (pixels[var12] >> 8 & 255) * var5;
+            var11 = (pixels[var12] & 255) * var5;
             var14 = (var6 + var9 >> 8 << 16) + (var7 + var10 >> 8 << 8) + (var8 + var11 >> 8);
             incrementValue$0 = var12;
             var12++;
-            field_d[incrementValue$0] = var14;
+            pixels[incrementValue$0] = var14;
           }
           return;
         }
     }
 
     final static void a(int param0, int param1, int param2) {
-        if (param0 >= field_j) {
-          if (param1 < field_a ||
-            param0 >= field_e ||
-            param1 >= field_f) {
+        if (param0 >= clipLeft) {
+          if (param1 < clipTop ||
+            param0 >= clipRight ||
+            param1 >= clipBottom) {
             return;
           }
-          field_d[param0 + param1 * field_l] = param2;
+          pixels[param0 + param1 * width] = param2;
           return;
         }
     }
@@ -864,12 +864,12 @@ final class SoftwareRaster {
           param2 = -param2;
         }
         var4 = param1 - param2;
-        if (var4 < field_a) {
-          var4 = field_a;
+        if (var4 < clipTop) {
+          var4 = clipTop;
         }
         var5 = param1 + param2 + 1;
-        if (var5 > field_f) {
-          var5 = field_f;
+        if (var5 > clipBottom) {
+          var5 = clipBottom;
         }
         var6 = var4;
         var7 = param2 * param2;
@@ -885,18 +885,18 @@ final class SoftwareRaster {
             if (var11 > var7 &&
               var10 > var7) {
               var12 = param0 - var8 + 1;
-              if (var12 < field_j) {
-                var12 = field_j;
+              if (var12 < clipLeft) {
+                var12 = clipLeft;
               }
               var13 = param0 + var8;
-              if (var13 > field_e) {
-                var13 = field_e;
+              if (var13 > clipRight) {
+                var13 = clipRight;
               }
-              var14 = var12 + var6 * field_l;
+              var14 = var12 + var6 * width;
               for (var15 = var12; var15 < var13; var15++) {
                 incrementValue$4 = var14;
                 var14++;
-                field_d[incrementValue$4] = param3;
+                pixels[incrementValue$4] = param3;
               }
               var6++;
               incrementValue$3 = var9;
@@ -928,18 +928,18 @@ final class SoftwareRaster {
             break;
           }
           var12Lifetime1 = param0 - var8Lifetime1;
-          if (var12Lifetime1 < field_j) {
-            var12Lifetime1 = field_j;
+          if (var12Lifetime1 < clipLeft) {
+            var12Lifetime1 = clipLeft;
           }
           var13Lifetime1 = param0 + var8Lifetime1;
-          if (var13Lifetime1 > field_e - 1) {
-            var13Lifetime1 = field_e - 1;
+          if (var13Lifetime1 > clipRight - 1) {
+            var13Lifetime1 = clipRight - 1;
           }
-          var14Lifetime1 = var12Lifetime1 + var6 * field_l;
+          var14Lifetime1 = var12Lifetime1 + var6 * width;
           for (var15Lifetime1 = var12Lifetime1; var15Lifetime1 <= var13Lifetime1; var15Lifetime1++) {
             incrementValue$2 = var14Lifetime1;
             var14Lifetime1++;
-            field_d[incrementValue$2] = param3;
+            pixels[incrementValue$2] = param3;
           }
           var6++;
           var11Lifetime1 = var11Lifetime1 + (var9Lifetime1 + var9Lifetime1);
@@ -973,7 +973,7 @@ final class SoftwareRaster {
     }
 
     public static void d() {
-        field_d = null;
+        pixels = null;
         field_k = null;
         field_c = null;
         field_b = null;
@@ -988,28 +988,28 @@ final class SoftwareRaster {
         int var8 = 0;
         int incrementValue$0 = 0;
         int var6Lifetime1;
-        if (param1 >= field_a) {
-          if (param1 >= field_f) {
+        if (param1 >= clipTop) {
+          if (param1 >= clipBottom) {
             return;
           }
-          if (param0 < field_j) {
-            param2 = param2 - (field_j - param0);
-            param0 = field_j;
+          if (param0 < clipLeft) {
+            param2 = param2 - (clipLeft - param0);
+            param0 = clipLeft;
           }
-          if (param0 + param2 > field_e) {
-            param2 = field_e - param0;
+          if (param0 + param2 > clipRight) {
+            param2 = clipRight - param0;
           }
-          var5 = param0 + param1 * field_l;
+          var5 = param0 + param1 * width;
           var6 = (param3 & 16711935) * param4;
           param3 = (var6 & -16711936) + (param3 * param4 - var6 & 16711680) >>> 8;
           for (var7 = 0; var7 < param2; var7++) {
-            var6Lifetime1 = field_d[var5];
+            var6Lifetime1 = pixels[var5];
             var8 = param3 + var6Lifetime1;
             var6Lifetime1 = (param3 & 16711935) + (var6Lifetime1 & 16711935);
             var6Lifetime1 = (var6Lifetime1 & 16777472) + (var8 - var6Lifetime1 & 65536);
             incrementValue$0 = var5;
             var5++;
-            field_d[incrementValue$0] = var8 - var6Lifetime1 | var6Lifetime1 - (var6Lifetime1 >>> 8);
+            pixels[incrementValue$0] = var8 - var6Lifetime1 | var6Lifetime1 - (var6Lifetime1 >>> 8);
           }
           return;
         }
@@ -1028,40 +1028,40 @@ final class SoftwareRaster {
     final static void h(int param0, int param1, int param2, int param3) {
         int var4 = 0;
         int var5 = 0;
-        if (param0 >= field_j) {
-          if (param0 >= field_e) {
+        if (param0 >= clipLeft) {
+          if (param0 >= clipRight) {
             return;
           }
-          if (param1 < field_a) {
-            param2 = param2 - (field_a - param1);
-            param1 = field_a;
+          if (param1 < clipTop) {
+            param2 = param2 - (clipTop - param1);
+            param1 = clipTop;
           }
-          if (param1 + param2 > field_f) {
-            param2 = field_f - param1;
+          if (param1 + param2 > clipBottom) {
+            param2 = clipBottom - param1;
           }
-          var4 = param0 + param1 * field_l;
+          var4 = param0 + param1 * width;
           var5 = 0;
           while (var5 < param2) {
-            field_d[var4] = param3;
+            pixels[var4] = param3;
             var5++;
-            var4 = var4 + field_l;
+            var4 = var4 + width;
           }
           return;
         }
     }
 
     final static void b(int param0, int param1, int param2, int param3) {
-        if (field_j < param0) {
-          field_j = param0;
+        if (clipLeft < param0) {
+          clipLeft = param0;
         }
-        if (field_a < param1) {
-          field_a = param1;
+        if (clipTop < param1) {
+          clipTop = param1;
         }
-        if (field_e > param2) {
-          field_e = param2;
+        if (clipRight > param2) {
+          clipRight = param2;
         }
-        if (field_f > param3) {
-          field_f = param3;
+        if (clipBottom > param3) {
+          clipBottom = param3;
         }
         SoftwareRaster.c();
     }
@@ -1124,12 +1124,12 @@ final class SoftwareRaster {
         var8 = param0 + param4;
         var9 = param1 + param4;
         var10 = param1;
-        if (var10 < field_a) {
-          var10 = field_a;
+        if (var10 < clipTop) {
+          var10 = clipTop;
         }
         var11 = param1 + param3;
-        if (var11 > field_f) {
-          var11 = field_f;
+        if (var11 > clipBottom) {
+          var11 = clipBottom;
         }
         var12 = param2 - param4 - param4 - 1;
         var13 = var10;
@@ -1146,20 +1146,20 @@ final class SoftwareRaster {
             if (var18 > var14 &&
               var17 > var14) {
               var19 = var8 - var15 + 1;
-              if (var19 < field_j) {
-                var19 = field_j;
+              if (var19 < clipLeft) {
+                var19 = clipLeft;
               }
               var20 = var8 + var12 + var15;
-              if (var20 > field_e) {
-                var20 = field_e;
+              if (var20 > clipRight) {
+                var20 = clipRight;
               }
-              var21 = var19 + var13 * field_l;
+              var21 = var19 + var13 * width;
               for (var22 = var19; var22 < var20; var22++) {
-                var23 = field_d[var21];
+                var23 = pixels[var21];
                 var23 = ((var23 & 16711935) * var7 >> 8 & 16711935) + ((var23 & 65280) * var7 >> 8 & 65280);
                 incrementValue$5 = var21;
                 var21++;
-                field_d[incrementValue$5] = param5 + var23;
+                pixels[incrementValue$5] = param5 + var23;
               }
               var13++;
               incrementValue$4 = var16;
@@ -1176,26 +1176,26 @@ final class SoftwareRaster {
         }
         var16Lifetime1 = var13 - var9;
         var19Lifetime1 = param0;
-        if (var19Lifetime1 < field_j) {
-          var19Lifetime1 = field_j;
+        if (var19Lifetime1 < clipLeft) {
+          var19Lifetime1 = clipLeft;
         }
         var20Lifetime1 = param0 + param2;
-        if (var20Lifetime1 > field_e) {
-          var20Lifetime1 = field_e;
+        if (var20Lifetime1 > clipRight) {
+          var20Lifetime1 = clipRight;
         }
-        var21Lifetime1 = var19Lifetime1 + var13 * field_l;
-        var22Lifetime1 = field_l + var19Lifetime1 - var20Lifetime1;
+        var21Lifetime1 = var19Lifetime1 + var13 * width;
+        var22Lifetime1 = width + var19Lifetime1 - var20Lifetime1;
         var23Lifetime1 = param1 + param3 - param4 - 1;
-        if (var23Lifetime1 > field_f) {
-          var23Lifetime1 = field_f;
+        if (var23Lifetime1 > clipBottom) {
+          var23Lifetime1 = clipBottom;
         }
         while (var13 < var23Lifetime1) {
           for (var24 = var19Lifetime1; var24 < var20Lifetime1; var24++) {
-            var25 = field_d[var21Lifetime1];
+            var25 = pixels[var21Lifetime1];
             var25 = ((var25 & 16711935) * var7 >> 8 & 16711935) + ((var25 & 65280) * var7 >> 8 & 65280);
             incrementValue$3 = var21Lifetime1;
             var21Lifetime1++;
-            field_d[incrementValue$3] = param5 + var25;
+            pixels[incrementValue$3] = param5 + var25;
           }
           var13++;
           var21Lifetime1 = var21Lifetime1 + var22Lifetime1;
@@ -1217,20 +1217,20 @@ final class SoftwareRaster {
             break;
           }
           var19Lifetime2 = var8 - var15Lifetime1;
-          if (var19Lifetime2 < field_j) {
-            var19Lifetime2 = field_j;
+          if (var19Lifetime2 < clipLeft) {
+            var19Lifetime2 = clipLeft;
           }
           var20Lifetime2 = var8 + var12 + var15Lifetime1;
-          if (var20Lifetime2 > field_e - 1) {
-            var20Lifetime2 = field_e - 1;
+          if (var20Lifetime2 > clipRight - 1) {
+            var20Lifetime2 = clipRight - 1;
           }
-          var21Lifetime2 = var19Lifetime2 + var13 * field_l;
+          var21Lifetime2 = var19Lifetime2 + var13 * width;
           for (var22Lifetime2 = var19Lifetime2; var22Lifetime2 <= var20Lifetime2; var22Lifetime2++) {
-            var23Lifetime2 = field_d[var21Lifetime2];
+            var23Lifetime2 = pixels[var21Lifetime2];
             var23Lifetime2 = ((var23Lifetime2 & 16711935) * var7 >> 8 & 16711935) + ((var23Lifetime2 & 65280) * var7 >> 8 & 65280);
             incrementValue$2 = var21Lifetime2;
             var21Lifetime2++;
-            field_d[incrementValue$2] = param5 + var23Lifetime2;
+            pixels[incrementValue$2] = param5 + var23Lifetime2;
           }
           var13++;
           var18Lifetime1 = var18Lifetime1 + (var16Lifetime2 + var16Lifetime2);
@@ -1294,23 +1294,23 @@ final class SoftwareRaster {
           param2 = param2 << 16;
           var10 = (int)Math.floor((double)param2 / (double)param3 + 0.5);
           param3 = param3 + param1;
-          if (param1 < field_a) {
-            param0 = param0 + var10 * (field_a - param1);
-            param1 = field_a;
+          if (param1 < clipTop) {
+            param0 = param0 + var10 * (clipTop - param1);
+            param1 = clipTop;
           }
-          if (param3 >= field_f) {
-            param3 = field_f - 1;
+          if (param3 >= clipBottom) {
+            param3 = clipBottom - 1;
           }
           while (param1 <= param3) {
             var11 = param0 >> 16;
-            if (var11 >= field_j &&
-              var11 < field_e) {
-              var12 = var11 + param1 * field_l;
-              var13 = (field_d[var12] >> 16 & 255) * var6;
-              var14 = (field_d[var12] >> 8 & 255) * var6;
-              var15 = (field_d[var12] & 255) * var6;
+            if (var11 >= clipLeft &&
+              var11 < clipRight) {
+              var12 = var11 + param1 * width;
+              var13 = (pixels[var12] >> 16 & 255) * var6;
+              var14 = (pixels[var12] >> 8 & 255) * var6;
+              var15 = (pixels[var12] & 255) * var6;
               var16 = (var7 + var13 >> 8 << 16) + (var8 + var14 >> 8 << 8) + (var9 + var15 >> 8);
-              field_d[var12] = var16;
+              pixels[var12] = var16;
             }
             param0 = param0 + var10;
             param1++;
@@ -1322,23 +1322,23 @@ final class SoftwareRaster {
         param3 = param3 << 16;
         var10Lifetime1 = (int)Math.floor((double)param3 / (double)param2 + 0.5);
         param2 = param2 + param0;
-        if (param0 < field_j) {
-          param1 = param1 + var10Lifetime1 * (field_j - param0);
-          param0 = field_j;
+        if (param0 < clipLeft) {
+          param1 = param1 + var10Lifetime1 * (clipLeft - param0);
+          param0 = clipLeft;
         }
-        if (param2 >= field_e) {
-          param2 = field_e - 1;
+        if (param2 >= clipRight) {
+          param2 = clipRight - 1;
         }
         while (param0 <= param2) {
           var11Lifetime1 = param1 >> 16;
-          if (var11Lifetime1 >= field_a &&
-            var11Lifetime1 < field_f) {
-            var12Lifetime1 = param0 + var11Lifetime1 * field_l;
-            var13Lifetime1 = (field_d[var12Lifetime1] >> 16 & 255) * var6;
-            var14Lifetime1 = (field_d[var12Lifetime1] >> 8 & 255) * var6;
-            var15Lifetime1 = (field_d[var12Lifetime1] & 255) * var6;
+          if (var11Lifetime1 >= clipTop &&
+            var11Lifetime1 < clipBottom) {
+            var12Lifetime1 = param0 + var11Lifetime1 * width;
+            var13Lifetime1 = (pixels[var12Lifetime1] >> 16 & 255) * var6;
+            var14Lifetime1 = (pixels[var12Lifetime1] >> 8 & 255) * var6;
+            var15Lifetime1 = (pixels[var12Lifetime1] & 255) * var6;
             var16Lifetime1 = (var7 + var13Lifetime1 >> 8 << 16) + (var8 + var14Lifetime1 >> 8 << 8) + (var9 + var15Lifetime1 >> 8);
-            field_d[var12Lifetime1] = var16Lifetime1;
+            pixels[var12Lifetime1] = var16Lifetime1;
           }
           param1 = param1 + var10Lifetime1;
           param0++;
@@ -1347,9 +1347,9 @@ final class SoftwareRaster {
     }
 
     final static void a(int[] param0, int param1, int param2) {
-        field_d = param0;
-        field_l = param1;
-        field_g = param2;
+        pixels = param0;
+        width = param1;
+        height = param2;
         SoftwareRaster.f(0, 0, param1, param2);
     }
 
@@ -1357,27 +1357,27 @@ final class SoftwareRaster {
         int var7 = 0;
         int var8 = 0;
         int incrementValue$0 = 0;
-        if (param0 < field_j) {
-          param2 = param2 - (field_j - param0);
-          param0 = field_j;
+        if (param0 < clipLeft) {
+          param2 = param2 - (clipLeft - param0);
+          param0 = clipLeft;
         }
-        if (param1 < field_a) {
-          param3 = param3 - (field_a - param1);
-          param1 = field_a;
+        if (param1 < clipTop) {
+          param3 = param3 - (clipTop - param1);
+          param1 = clipTop;
         }
-        if (param0 + param2 > field_e) {
-          param2 = field_e - param0;
+        if (param0 + param2 > clipRight) {
+          param2 = clipRight - param0;
         }
-        if (param1 + param3 > field_f) {
-          param3 = field_f - param1;
+        if (param1 + param3 > clipBottom) {
+          param3 = clipBottom - param1;
         }
-        int var5 = field_l - param2;
-        int var6 = param0 + param1 * field_l;
+        int var5 = width - param2;
+        int var6 = param0 + param1 * width;
         for (var7 = -param3; var7 < 0; var7++) {
           for (var8 = -param2; var8 < 0; var8++) {
             incrementValue$0 = var6;
             var6++;
-            field_d[incrementValue$0] = param4;
+            pixels[incrementValue$0] = param4;
           }
           var6 = var6 + var5;
         }
@@ -1394,38 +1394,38 @@ final class SoftwareRaster {
         int incrementValue$7 = 0;
         int incrementValue$8 = 0;
         int var0 = 0;
-        int var1 = field_l * field_g - 7;
+        int var1 = width * height - 7;
         while (var0 < var1) {
           incrementValue$0 = var0;
           var0++;
-          field_d[incrementValue$0] = 0;
+          pixels[incrementValue$0] = 0;
           incrementValue$1 = var0;
           var0++;
-          field_d[incrementValue$1] = 0;
+          pixels[incrementValue$1] = 0;
           incrementValue$2 = var0;
           var0++;
-          field_d[incrementValue$2] = 0;
+          pixels[incrementValue$2] = 0;
           incrementValue$3 = var0;
           var0++;
-          field_d[incrementValue$3] = 0;
+          pixels[incrementValue$3] = 0;
           incrementValue$4 = var0;
           var0++;
-          field_d[incrementValue$4] = 0;
+          pixels[incrementValue$4] = 0;
           incrementValue$5 = var0;
           var0++;
-          field_d[incrementValue$5] = 0;
+          pixels[incrementValue$5] = 0;
           incrementValue$6 = var0;
           var0++;
-          field_d[incrementValue$6] = 0;
+          pixels[incrementValue$6] = 0;
           incrementValue$7 = var0;
           var0++;
-          field_d[incrementValue$7] = 0;
+          pixels[incrementValue$7] = 0;
         }
         var1 += 7;
         while (var0 < var1) {
           incrementValue$8 = var0;
           var0++;
-          field_d[incrementValue$8] = 0;
+          pixels[incrementValue$8] = 0;
         }
     }
 
@@ -1469,18 +1469,18 @@ final class SoftwareRaster {
           param2 = param2 << 16;
           var5 = (int)Math.floor((double)param2 / (double)param3 + 0.5);
           param3 = param3 + param1;
-          if (param1 < field_a) {
-            param0 = param0 + var5 * (field_a - param1);
-            param1 = field_a;
+          if (param1 < clipTop) {
+            param0 = param0 + var5 * (clipTop - param1);
+            param1 = clipTop;
           }
-          if (param3 >= field_f) {
-            param3 = field_f - 1;
+          if (param3 >= clipBottom) {
+            param3 = clipBottom - 1;
           }
           while (param1 <= param3) {
             var6 = param0 >> 16;
-            if (var6 >= field_j &&
-              var6 < field_e) {
-              field_d[var6 + param1 * field_l] = param4;
+            if (var6 >= clipLeft &&
+              var6 < clipRight) {
+              pixels[var6 + param1 * width] = param4;
             }
             param0 = param0 + var5;
             param1++;
@@ -1492,18 +1492,18 @@ final class SoftwareRaster {
         param3 = param3 << 16;
         var5Lifetime1 = (int)Math.floor((double)param3 / (double)param2 + 0.5);
         param2 = param2 + param0;
-        if (param0 < field_j) {
-          param1 = param1 + var5Lifetime1 * (field_j - param0);
-          param0 = field_j;
+        if (param0 < clipLeft) {
+          param1 = param1 + var5Lifetime1 * (clipLeft - param0);
+          param0 = clipLeft;
         }
-        if (param2 >= field_e) {
-          param2 = field_e - 1;
+        if (param2 >= clipRight) {
+          param2 = clipRight - 1;
         }
         while (param0 <= param2) {
           var6Lifetime1 = param1 >> 16;
-          if (var6Lifetime1 >= field_a &&
-            var6Lifetime1 < field_f) {
-            field_d[param0 + var6Lifetime1 * field_l] = param4;
+          if (var6Lifetime1 >= clipTop &&
+            var6Lifetime1 < clipBottom) {
+            pixels[param0 + var6Lifetime1 * width] = param4;
           }
           param1 = param1 + var5Lifetime1;
           param0++;
@@ -1513,20 +1513,20 @@ final class SoftwareRaster {
     final static void e(int param0, int param1, int param2, int param3) {
         int var4 = 0;
         int var5 = 0;
-        if (param1 >= field_a) {
-          if (param1 >= field_f) {
+        if (param1 >= clipTop) {
+          if (param1 >= clipBottom) {
             return;
           }
-          if (param0 < field_j) {
-            param2 = param2 - (field_j - param0);
-            param0 = field_j;
+          if (param0 < clipLeft) {
+            param2 = param2 - (clipLeft - param0);
+            param0 = clipLeft;
           }
-          if (param0 + param2 > field_e) {
-            param2 = field_e - param0;
+          if (param0 + param2 > clipRight) {
+            param2 = clipRight - param0;
           }
-          var4 = param0 + param1 * field_l;
+          var4 = param0 + param1 * width;
           for (var5 = 0; var5 < param2; var5++) {
-            field_d[var4 + var5] = param3;
+            pixels[var4 + var5] = param3;
           }
           return;
         }
@@ -1586,12 +1586,12 @@ final class SoftwareRaster {
         var7 = (param3 >> 8 & 255) * param4;
         var8 = (param3 & 255) * param4;
         var12 = param1 - param2;
-        if (var12 < field_a) {
-          var12 = field_a;
+        if (var12 < clipTop) {
+          var12 = clipTop;
         }
         var13 = param1 + param2 + 1;
-        if (var13 > field_f) {
-          var13 = field_f;
+        if (var13 > clipBottom) {
+          var13 = clipBottom;
         }
         var14 = var12;
         var15 = param2 * param2;
@@ -1607,22 +1607,22 @@ final class SoftwareRaster {
             if (var19 > var15 &&
               var18 > var15) {
               var20 = param0 - var16 + 1;
-              if (var20 < field_j) {
-                var20 = field_j;
+              if (var20 < clipLeft) {
+                var20 = clipLeft;
               }
               var21 = param0 + var16;
-              if (var21 > field_e) {
-                var21 = field_e;
+              if (var21 > clipRight) {
+                var21 = clipRight;
               }
-              var22 = var20 + var14 * field_l;
+              var22 = var20 + var14 * width;
               for (var23 = var20; var23 < var21; var23++) {
-                var9 = (field_d[var22] >> 16 & 255) * var5;
-                var10 = (field_d[var22] >> 8 & 255) * var5;
-                var11 = (field_d[var22] & 255) * var5;
+                var9 = (pixels[var22] >> 16 & 255) * var5;
+                var10 = (pixels[var22] >> 8 & 255) * var5;
+                var11 = (pixels[var22] & 255) * var5;
                 var24 = (var6 + var9 >> 8 << 16) + (var7 + var10 >> 8 << 8) + (var8 + var11 >> 8);
                 incrementValue$4 = var22;
                 var22++;
-                field_d[incrementValue$4] = var24;
+                pixels[incrementValue$4] = var24;
               }
               var14++;
               incrementValue$3 = var17;
@@ -1654,23 +1654,23 @@ final class SoftwareRaster {
             break;
           }
           var20Lifetime1 = param0 - var16Lifetime1;
-          if (var20Lifetime1 < field_j) {
-            var20Lifetime1 = field_j;
+          if (var20Lifetime1 < clipLeft) {
+            var20Lifetime1 = clipLeft;
           }
           var21Lifetime1 = param0 + var16Lifetime1;
-          if (var21Lifetime1 > field_e - 1) {
-            var21Lifetime1 = field_e - 1;
+          if (var21Lifetime1 > clipRight - 1) {
+            var21Lifetime1 = clipRight - 1;
           }
-          var25 = var20Lifetime1 + var14 * field_l;
+          var25 = var20Lifetime1 + var14 * width;
           var22Lifetime1 = var25;
           for (var23Lifetime1 = var20Lifetime1; var23Lifetime1 <= var21Lifetime1; var23Lifetime1++) {
-            var9Lifetime1 = (field_d[var25] >> 16 & 255) * var5;
-            var10Lifetime1 = (field_d[var25] >> 8 & 255) * var5;
-            var11Lifetime1 = (field_d[var25] & 255) * var5;
+            var9Lifetime1 = (pixels[var25] >> 16 & 255) * var5;
+            var10Lifetime1 = (pixels[var25] >> 8 & 255) * var5;
+            var11Lifetime1 = (pixels[var25] & 255) * var5;
             var24Lifetime1 = (var6 + var9Lifetime1 >> 8 << 16) + (var7 + var10Lifetime1 >> 8 << 8) + (var8 + var11Lifetime1 >> 8);
             incrementValue$2 = var25;
             var25++;
-            field_d[incrementValue$2] = var24Lifetime1;
+            pixels[incrementValue$2] = var24Lifetime1;
           }
           var14++;
           var19Lifetime1 = var19Lifetime1 + (var17 + var17);
@@ -1707,10 +1707,10 @@ final class SoftwareRaster {
     }
 
     final static void a(int[] param0) {
-        field_j = param0[0];
-        field_a = param0[1];
-        field_e = param0[2];
-        field_f = param0[3];
+        clipLeft = param0[0];
+        clipTop = param0[1];
+        clipRight = param0[2];
+        clipBottom = param0[3];
         SoftwareRaster.c();
     }
 
@@ -1747,11 +1747,11 @@ final class SoftwareRaster {
         var5 = param2 * param2;
         var6 = param1 - param2 >> 4;
         var7 = param1 + param2 + 15 >> 4;
-        if (var6 < field_a) {
-          var6 = field_a;
+        if (var6 < clipTop) {
+          var6 = clipTop;
         }
-        if (var7 > field_f) {
-          var7 = field_f;
+        if (var7 > clipBottom) {
+          var7 = clipBottom;
         }
         var8 = (var6 << 4) - param1;
         var8 = var8 * var8;
@@ -1762,16 +1762,16 @@ final class SoftwareRaster {
         var11 = var9 - var8;
         var12 = var10 - var9;
         var13 = var12 - var11;
-        var14 = var6 * field_l;
-        var15 = field_l;
+        var14 = var6 * width;
+        var15 = width;
         for (var16 = var6 - var7; var16 < 0; var16++) {
           var17 = param0 - param2 >> 4;
           var18 = param0 + param2 + 15 >> 4;
-          if (var17 < field_j) {
-            var17 = field_j;
+          if (var17 < clipLeft) {
+            var17 = clipLeft;
           }
-          if (var18 > field_e) {
-            var18 = field_e;
+          if (var18 > clipRight) {
+            var18 = clipRight;
           }
           var19 = param0 + 15 >> 4;
           var20 = var19;
@@ -1809,8 +1809,8 @@ final class SoftwareRaster {
           var28 = (var18 - 2 << 4) - param0;
           var28 = var28 * var28;
           var29 = var28 - var27;
-          if (SoftwareRaster.a(0, 0, 0, 0, 0, var26, var5, var14 + var17, var17 - var18, field_d, param3, param4, 1, var24, var8 + var21Lifetime2)) {
-            SoftwareRaster.a(0, 0, 0, 0, 0, var26, var5, var14 + var18 - 1, var17 - var18, field_d, param3, param4, -1, var29, var8 + var27);
+          if (SoftwareRaster.a(0, 0, 0, 0, 0, var26, var5, var14 + var17, var17 - var18, pixels, param3, param4, 1, var24, var8 + var21Lifetime2)) {
+            SoftwareRaster.a(0, 0, 0, 0, 0, var26, var5, var14 + var18 - 1, var17 - var18, pixels, param3, param4, -1, var29, var8 + var27);
           }
           var14 = var14 + var15;
           var8 = var8 + var11;
@@ -1851,15 +1851,15 @@ final class SoftwareRaster {
         if (0 < var9) {
           var9 = 0;
         }
-        var10 = field_l - param4 - param5 - param3;
+        var10 = width - param4 - param5 - param3;
         if (0 < var10) {
           var10 = 0;
         }
         var11 = 0;
         var12 = param4 + param3 + 1;
-        if (field_l < var12) {
-          var11 = var12 - field_l;
-          var12 = field_l;
+        if (width < var12) {
+          var11 = var12 - width;
+          var12 = width;
         }
         for (var13 = -param7; var13 < 0; var13++) {
           var14 = 0;
@@ -1889,7 +1889,7 @@ final class SoftwareRaster {
           param0[incrementValue$0] = (var14 / var20 << 16) + (var15 / var20 << 8) + var16 / var20;
           for (var19Lifetime1 = 1 - param5; var19Lifetime1 < var9; var19Lifetime1++) {
             var18++;
-            if (param4 + param5 + var19Lifetime1 + param3 < field_e) {
+            if (param4 + param5 + var19Lifetime1 + param3 < clipRight) {
               param1 = param0[var17];
               var17++;
               var14 = var14 + (param1 >> 16 & 255);
@@ -1980,10 +1980,10 @@ final class SoftwareRaster {
     }
 
     final static void b(int[] param0) {
-        param0[0] = field_j;
-        param0[1] = field_a;
-        param0[2] = field_e;
-        param0[3] = field_f;
+        param0[0] = clipLeft;
+        param0[1] = clipTop;
+        param0[2] = clipRight;
+        param0[3] = clipBottom;
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5) {
@@ -1999,23 +1999,23 @@ final class SoftwareRaster {
         int var13;
         var6 = 0;
         var7 = 65536 / param3;
-        if (param0 < field_j) {
-          param2 = param2 - (field_j - param0);
-          param0 = field_j;
+        if (param0 < clipLeft) {
+          param2 = param2 - (clipLeft - param0);
+          param0 = clipLeft;
         }
-        if (param1 < field_a) {
-          var6 = var6 + (field_a - param1) * var7;
-          param3 = param3 - (field_a - param1);
-          param1 = field_a;
+        if (param1 < clipTop) {
+          var6 = var6 + (clipTop - param1) * var7;
+          param3 = param3 - (clipTop - param1);
+          param1 = clipTop;
         }
-        if (param0 + param2 > field_e) {
-          param2 = field_e - param0;
+        if (param0 + param2 > clipRight) {
+          param2 = clipRight - param0;
         }
-        if (param1 + param3 > field_f) {
-          param3 = field_f - param1;
+        if (param1 + param3 > clipBottom) {
+          param3 = clipBottom - param1;
         }
-        var8 = field_l - param2;
-        var9 = param0 + param1 * field_l;
+        var8 = width - param2;
+        var9 = param0 + param1 * width;
         for (var10 = -param3; var10 < 0; var10++) {
           var11 = 65536 - var6 >> 8;
           var12 = var6 >> 8;
@@ -2023,7 +2023,7 @@ final class SoftwareRaster {
           for (var14 = -param2; var14 < 0; var14++) {
             incrementValue$0 = var9;
             var9++;
-            field_d[incrementValue$0] = var13;
+            pixels[incrementValue$0] = var13;
           }
           var9 = var9 + var8;
           var6 = var6 + var7;
@@ -2041,38 +2041,38 @@ final class SoftwareRaster {
         int var10 = 0;
         int var11 = 0;
         int var14 = 0;
-        if (param0 >= field_j) {
-          if (param0 >= field_e) {
+        if (param0 >= clipLeft) {
+          if (param0 >= clipRight) {
             return;
           }
-          if (param1 < field_a) {
-            param2 = param2 - (field_a - param1);
-            param1 = field_a;
+          if (param1 < clipTop) {
+            param2 = param2 - (clipTop - param1);
+            param1 = clipTop;
           }
-          if (param1 + param2 > field_f) {
-            param2 = field_f - param1;
+          if (param1 + param2 > clipBottom) {
+            param2 = clipBottom - param1;
           }
           var5 = 256 - param4;
           var6 = (param3 >> 16 & 255) * param4;
           var7 = (param3 >> 8 & 255) * param4;
           var8 = (param3 & 255) * param4;
-          var12 = param0 + param1 * field_l;
+          var12 = param0 + param1 * width;
           for (var13 = 0; var13 < param2; var13++) {
-            var9 = (field_d[var12] >> 16 & 255) * var5;
-            var10 = (field_d[var12] >> 8 & 255) * var5;
-            var11 = (field_d[var12] & 255) * var5;
+            var9 = (pixels[var12] >> 16 & 255) * var5;
+            var10 = (pixels[var12] >> 8 & 255) * var5;
+            var11 = (pixels[var12] & 255) * var5;
             var14 = (var6 + var9 >> 8 << 16) + (var7 + var10 >> 8 << 8) + (var8 + var11 >> 8);
-            field_d[var12] = var14;
-            var12 = var12 + field_l;
+            pixels[var12] = var14;
+            var12 = var12 + width;
           }
           return;
         }
     }
 
     static {
-        field_a = 0;
-        field_f = 0;
-        field_j = 0;
-        field_e = 0;
+        clipTop = 0;
+        clipBottom = 0;
+        clipLeft = 0;
+        clipRight = 0;
     }
 }

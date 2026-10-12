@@ -9,7 +9,7 @@ final class bc {
     static String field_d;
     private ue field_g;
     static String field_f;
-    static ru[][] field_j;
+    static IndexedSprite[][] field_j;
     static String field_k;
     private ue field_l;
     private int field_b;
@@ -465,7 +465,7 @@ final class bc {
         }
         field_f = null;
         field_h = null;
-        field_j = (ru[][]) null;
+        field_j = (IndexedSprite[][]) null;
         field_i = null;
         field_d = null;
     }

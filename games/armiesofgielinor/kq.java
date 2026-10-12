@@ -91,7 +91,7 @@ class kq extends fw {
           }
           if (uc.spellDefinitions[param2][4] == 0 &&
             0 != var8.statusEffectType) {
-            var6Lifetime1 = pr.field_f[var7.statusEffectType];
+            var6Lifetime1 = PaletteRegionMap.field_f[var7.statusEffectType];
             if (7 != var8.statusEffectType &&
               var8.statusEffectType != 8) {
               var6Lifetime1 = var6Lifetime1 + (-1 + var8.statusEffectValue);

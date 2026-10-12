@@ -1639,7 +1639,7 @@ class iu {
           this.field_a = -21;
         }
         if (this.field_k == 0) {
-          ol.field_y.g(db.a(true, 320) - (ol.field_y.field_y >> 1), MatchConditionEntry.a(100, (byte) 94));
+          ol.field_y.g(db.a(true, 320) - (ol.field_y.pixelWidth >> 1), MatchConditionEntry.a(100, (byte) 94));
           fe.b(this.field_e, db.a(true, 320), MatchConditionEntry.a(130, (byte) 94));
           fe.c(this.field_e, db.a(true, 320), MatchConditionEntry.a(130, (byte) 94), nd.field_b, false);
           this.field_j = 40;
@@ -1863,7 +1863,7 @@ class iu {
     }
 
     private final void f(byte param0) {
-        si.b(13829);
+        IndexedSpriteBase.b(13829);
         if (param0 != -34) {
           this.field_s = false;
         }

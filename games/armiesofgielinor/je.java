@@ -65,7 +65,7 @@ class je extends im {
     BitmapFont field_Z;
 
     final void b(boolean param0, int param1) {
-        this.a((byte) -26, SoftwareRaster.field_g, param0, SoftwareRaster.field_l, 0, false, false, false, 0, true, false);
+        this.a((byte) -26, SoftwareRaster.height, param0, SoftwareRaster.width, 0, false, false, false, 0, true, false);
         if (param1 != 20) {
           je var4 = (je) null;
           this.a((je) null, false, 64, (je) null);
@@ -410,19 +410,19 @@ class je extends im {
         this.field_ob = this.field_ob + var7Lifetime3;
         this.field_nb = this.field_nb - var7Lifetime3;
         this.field_D = this.field_ab + param2;
-        var8 = SoftwareRaster.field_j;
-        var9 = SoftwareRaster.field_a;
-        var10 = SoftwareRaster.field_e;
-        var11 = SoftwareRaster.field_f;
+        var8 = SoftwareRaster.clipLeft;
+        var9 = SoftwareRaster.clipTop;
+        var10 = SoftwareRaster.clipRight;
+        var11 = SoftwareRaster.clipBottom;
         SoftwareRaster.b(this.field_V, this.field_D, this.field_V + this.field_gb, this.field_D + this.field_ob);
         var12 = param1 ? 1 : 0;
         if (!bc.field_e &&
           param0 &&
           DeployEvent.field_A != 0 &&
-          SoftwareRaster.field_j <= iu.field_t &&
-          iu.field_t < SoftwareRaster.field_e &&
-          TeleportAction.field_z >= SoftwareRaster.field_a &&
-          TeleportAction.field_z < SoftwareRaster.field_f) {
+          SoftwareRaster.clipLeft <= iu.field_t &&
+          iu.field_t < SoftwareRaster.clipRight &&
+          TeleportAction.field_z >= SoftwareRaster.clipTop &&
+          TeleportAction.field_z < SoftwareRaster.clipBottom) {
           this.field_yb = DeployEvent.field_A;
           this.field_hb = DeployEvent.field_A;
           this.field_bb = -this.field_V + iu.field_t;
@@ -434,7 +434,7 @@ class je extends im {
             this.field_hb = 0;
           }
         }
-        stackIn_30_1 = (!bl.field_f) && (SoftwareRaster.field_j <= AiPlanningStrategy.field_d) && (SoftwareRaster.field_e > AiPlanningStrategy.field_d) && (SoftwareRaster.field_a <= ko.field_b) && (SoftwareRaster.field_f > ko.field_b);
+        stackIn_30_1 = (!bl.field_f) && (SoftwareRaster.clipLeft <= AiPlanningStrategy.field_d) && (SoftwareRaster.clipRight > AiPlanningStrategy.field_d) && (SoftwareRaster.clipTop <= ko.field_b) && (SoftwareRaster.clipBottom > ko.field_b);
         this.field_jb = stackIn_30_1;
         if (ro.field_ub == 0) {
           this.field_hb = 0;
@@ -550,8 +550,8 @@ class je extends im {
         je var14 = null;
         var13 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          tq.field_c = SoftwareRaster.field_l;
-          bm.field_p = SoftwareRaster.field_g;
+          tq.field_c = SoftwareRaster.width;
+          bm.field_p = SoftwareRaster.height;
           if (param1) {
             stackIn_4_0 = PreparedAction.field_r;
           } else {
@@ -674,7 +674,7 @@ class je extends im {
               }
             }
           }
-          ta.field_R.a(-134 + (SoftwareRaster.field_g - 10), -20500, 360, 10, SoftwareRaster.field_l - 360 >> 1);
+          ta.field_R.a(-134 + (SoftwareRaster.height - 10), -20500, 360, 10, SoftwareRaster.width - 360 >> 1);
           bk.field_f.a(24, -20500, ta.field_R.field_gb, 0, 0);
           df.field_K.a(-24 + ta.field_R.field_ob, -20500, ta.field_R.field_gb, 24, 0);
           df.field_K.field_G = tq.a(11579568, false, df.field_K.field_ob, 1, 3, 8421504);
@@ -692,7 +692,7 @@ class je extends im {
     final void a(boolean param0, boolean param1) {
         bc.field_e = !param1 ? true : false;
         bl.field_f = !param1 ? true : false;
-        this.a(param0, false, 0, SoftwareRaster.field_g, SoftwareRaster.field_l, 0);
+        this.a(param0, false, 0, SoftwareRaster.height, SoftwareRaster.width, 0);
     }
 
     je(long param0, je param1, String param2) {
@@ -779,10 +779,10 @@ class je extends im {
         var25 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         this.field_V = this.field_S + param8;
         this.field_D = this.field_ab + param4;
-        var12 = SoftwareRaster.field_j;
-        var13 = SoftwareRaster.field_a;
-        var14 = SoftwareRaster.field_e;
-        var15 = SoftwareRaster.field_f;
+        var12 = SoftwareRaster.clipLeft;
+        var13 = SoftwareRaster.clipTop;
+        var14 = SoftwareRaster.clipRight;
+        var15 = SoftwareRaster.clipBottom;
         SoftwareRaster.b(this.field_V, this.field_D, this.field_gb + this.field_V, this.field_ob + this.field_D);
         param9 = param9 & this.field_xb;
         if (!this.field_Cb) {
@@ -871,17 +871,17 @@ class je extends im {
         if (var17 != null) {
           var23_int = var21 + this.field_V;
           if (1 == this.field_Eb) {
-            var23_int = var23_int + (this.field_gb - var17.field_A) / 2;
+            var23_int = var23_int + (this.field_gb - var17.canvasWidth) / 2;
           }
           var24 = this.field_D + var22;
           if (this.field_Fb == 1) {
-            var24 = var24 + (-var17.field_x + this.field_ob) / 2;
+            var24 = var24 + (-var17.canvasHeight + this.field_ob) / 2;
           }
           if (2 == this.field_Eb) {
-            var23_int = var23_int + (this.field_gb - var17.field_A);
+            var23_int = var23_int + (this.field_gb - var17.canvasWidth);
           }
           if (2 == this.field_Fb) {
-            var24 = var24 + (this.field_ob - var17.field_x);
+            var24 = var24 + (this.field_ob - var17.canvasHeight);
           }
           if (256 <= this.field_kb) {
             var17.g(var23_int, var24);
@@ -976,7 +976,7 @@ class je extends im {
           }
         }
         if (this.field_cb != null) {
-          var4_intLifetime1 = this.field_cb.field_A;
+          var4_intLifetime1 = this.field_cb.canvasWidth;
           if (var3 < var4_intLifetime1) {
             var3 = var4_intLifetime1;
           }

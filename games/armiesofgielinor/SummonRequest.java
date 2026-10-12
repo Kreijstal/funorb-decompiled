@@ -145,9 +145,9 @@ final class SummonRequest extends ActionRequest {
                 var7 = gv.field_a[param1][param2][var4];
                 var5 = var7;
                 if (var7 != null &&
-                  var7.field_A >= 0 && (var3_int < 0 ||
-                  !(var7.field_A < var3_int))) {
-                  var3_int = var7.field_A;
+                  var7.canvasWidth >= 0 && (var3_int < 0 ||
+                  !(var7.canvasWidth < var3_int))) {
+                  var3_int = var7.canvasWidth;
                 }
               }
               if (var3_int <= 0) {
@@ -156,9 +156,9 @@ final class SummonRequest extends ActionRequest {
               for (var4Lifetime1 = 0; var4Lifetime1 < gv.field_a[param1][param2].length; var4Lifetime1++) {
                 var5Lifetime1 = gv.field_a[param1][param2][var4Lifetime1];
                 if (var5Lifetime1 != null &&
-                  var3_int > var5Lifetime1.field_A) {
-                  var5Lifetime1.field_w = -var5Lifetime1.field_A + var3_int >> 1;
-                  var5Lifetime1.field_A = var3_int;
+                  var3_int > var5Lifetime1.canvasWidth) {
+                  var5Lifetime1.offsetX = -var5Lifetime1.canvasWidth + var3_int >> 1;
+                  var5Lifetime1.canvasWidth = var3_int;
                 }
               }
               return;

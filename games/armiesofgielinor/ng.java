@@ -44,7 +44,7 @@ final class ng {
     }
 
     private final int k(int param0) {
-        int var2 = this.field_l[1].field_x;
+        int var2 = this.field_l[1].canvasHeight;
         int var3 = this.field_k + var2;
         if (param0 >= -47) {
           this.field_x = true;
@@ -63,9 +63,9 @@ final class ng {
         int discarded$0 = 0;
         int var2 = this.field_a;
         int var3 = this.field_a + this.field_d;
-        if (!(SoftwareRaster.field_j <= var2)) {
-          var3 = var3 + (SoftwareRaster.field_j - var2);
-          if (SoftwareRaster.field_e >= var3) {
+        if (!(SoftwareRaster.clipLeft <= var2)) {
+          var3 = var3 + (SoftwareRaster.clipLeft - var2);
+          if (SoftwareRaster.clipRight >= var3) {
             return true;
           }
           return false;
@@ -74,9 +74,9 @@ final class ng {
           discarded$0 = this.i(-95);
         }
         var3 = this.field_d + this.field_a;
-        if (!(SoftwareRaster.field_e >= var3)) {
-          var2 = var2 - (-SoftwareRaster.field_e + var3);
-          return SoftwareRaster.field_j <= var2 ? true : false;
+        if (!(SoftwareRaster.clipRight >= var3)) {
+          var2 = var2 - (-SoftwareRaster.clipRight + var3);
+          return SoftwareRaster.clipLeft <= var2 ? true : false;
         }
         return true;
     }
@@ -130,7 +130,7 @@ final class ng {
     private final void t(int param0) {
         int var2 = this.o(114);
         int var3 = this.field_e.a(' ') << 1;
-        int var4 = this.field_l[3].field_A + this.field_l[5].field_A;
+        int var4 = this.field_l[3].canvasWidth + this.field_l[5].canvasWidth;
         if (param0 != 0) {
           return;
         }
@@ -226,10 +226,10 @@ final class ng {
     private final boolean s(int param0) {
         int var2 = this.field_h;
         int var3 = this.field_h + this.field_g;
-        if (SoftwareRaster.field_a > var2) {
+        if (SoftwareRaster.clipTop > var2) {
           return false;
         }
-        if (var3 > SoftwareRaster.field_f) {
+        if (var3 > SoftwareRaster.clipBottom) {
           return false;
         }
         if (param0 != 4) {
@@ -290,28 +290,28 @@ final class ng {
         if (this.h(-2)) {
           var2 = this.field_a;
           var3 = this.field_a + this.field_d;
-          if (var2 < SoftwareRaster.field_j) {
-            var3 = var3 + (SoftwareRaster.field_j - var2);
-            if (SoftwareRaster.field_e >= var3) {
-              var2 = SoftwareRaster.field_j;
+          if (var2 < SoftwareRaster.clipLeft) {
+            var3 = var3 + (SoftwareRaster.clipLeft - var2);
+            if (SoftwareRaster.clipRight >= var3) {
+              var2 = SoftwareRaster.clipLeft;
               this.field_f = var3 - var2;
               this.field_q = var2;
               return;
             }
           }
           var3Lifetime1 = this.field_a + this.field_d;
-          if (var3Lifetime1 > SoftwareRaster.field_e) {
-            var2 = var2 - (var3Lifetime1 - SoftwareRaster.field_e);
-            if (SoftwareRaster.field_j <= var2) {
+          if (var3Lifetime1 > SoftwareRaster.clipRight) {
+            var2 = var2 - (var3Lifetime1 - SoftwareRaster.clipRight);
+            if (SoftwareRaster.clipLeft <= var2) {
               this.field_q = var2;
-              var3Lifetime1 = SoftwareRaster.field_e;
+              var3Lifetime1 = SoftwareRaster.clipRight;
               this.field_f = -var2 + var3Lifetime1;
               return;
             }
           }
         }
-        this.field_q = SoftwareRaster.field_j;
-        this.field_f = SoftwareRaster.field_e;
+        this.field_q = SoftwareRaster.clipLeft;
+        this.field_f = SoftwareRaster.clipRight;
     }
 
     private final void a(byte param0, int param1, int param2) {
@@ -371,7 +371,7 @@ final class ng {
     private final int i(int param0) {
         int var2 = this.k(-123);
         int var3 = this.field_y.c(param0 + 26786);
-        int var4 = this.field_l[7].field_x;
+        int var4 = this.field_l[7].canvasHeight;
         int var5 = -var3 + (-var4 + (this.field_k + this.field_w));
         int var6 = -var2 + var5 + param0;
         return var6;
@@ -420,7 +420,7 @@ final class ng {
         if (param0 >= -55) {
           this.g(82);
         }
-        int var2 = this.field_l[3].field_A;
+        int var2 = this.field_l[3].canvasWidth;
         int var3 = this.field_q + var2;
         return var3;
     }
@@ -612,7 +612,7 @@ final class ng {
     private final int E(int param0) {
         int var2 = this.n(-128);
         int var3 = this.field_n.c(26787);
-        int var4 = this.field_l[5].field_A;
+        int var4 = this.field_l[5].canvasWidth;
         int var5 = -var3 - var4 + (this.field_q + this.field_f);
         int var6 = -var2 + (var5 + param0);
         return var6;
@@ -660,20 +660,20 @@ final class ng {
         if (this.b((byte) -105)) {
           var2 = this.field_h;
           var3 = this.field_g + this.field_h;
-          if (!(SoftwareRaster.field_a <= var2)) {
-            var3 = var3 + (-var2 + SoftwareRaster.field_a);
-            if (!(SoftwareRaster.field_f < var3)) {
-              var2 = SoftwareRaster.field_a;
+          if (!(SoftwareRaster.clipTop <= var2)) {
+            var3 = var3 + (-var2 + SoftwareRaster.clipTop);
+            if (!(SoftwareRaster.clipBottom < var3)) {
+              var2 = SoftwareRaster.clipTop;
               this.field_k = var2;
               this.field_w = var3 - var2;
               return;
             }
           }
           var3Lifetime1 = this.field_h + this.field_g;
-          if (!(SoftwareRaster.field_f >= var3Lifetime1)) {
-            var2 = var2 - (-SoftwareRaster.field_f + var3Lifetime1);
-            if (!(SoftwareRaster.field_a > var2)) {
-              var3Lifetime1 = SoftwareRaster.field_f;
+          if (!(SoftwareRaster.clipBottom >= var3Lifetime1)) {
+            var2 = var2 - (-SoftwareRaster.clipBottom + var3Lifetime1);
+            if (!(SoftwareRaster.clipTop > var2)) {
+              var3Lifetime1 = SoftwareRaster.clipBottom;
               this.field_k = var2;
               this.field_w = var3Lifetime1 - var2;
               return;
@@ -683,8 +683,8 @@ final class ng {
         if (param0 != -4) {
           return;
         }
-        this.field_w = SoftwareRaster.field_f;
-        this.field_k = SoftwareRaster.field_a;
+        this.field_w = SoftwareRaster.clipBottom;
+        this.field_k = SoftwareRaster.clipTop;
     }
 
     private final boolean a(boolean param0) {
@@ -693,10 +693,10 @@ final class ng {
           return true;
         }
         int var3 = this.field_a + this.field_d;
-        if (SoftwareRaster.field_j > var2) {
+        if (SoftwareRaster.clipLeft > var2) {
           return false;
         }
-        if (SoftwareRaster.field_e < var3) {
+        if (SoftwareRaster.clipRight < var3) {
           return false;
         }
         return true;
@@ -767,8 +767,8 @@ final class ng {
           vo.field_d = param0;
           im.field_y = param2;
           for (var3_int = 0; op.field_c[0].length > var3_int; var3_int++) {
-            ds.field_a[var3_int] = new RgbSprite(vo.field_d.field_y, vo.field_d.field_v);
-            le.field_c[var3_int] = new RgbSprite(im.field_y.field_y, im.field_y.field_v);
+            ds.field_a[var3_int] = new RgbSprite(vo.field_d.pixelWidth, vo.field_d.pixelHeight);
+            le.field_c[var3_int] = new RgbSprite(im.field_y.pixelWidth, im.field_y.pixelHeight);
             ds.field_a[var3_int].b();
             vo.field_d.d(0, 0, op.field_c[0][var3_int]);
             le.field_c[var3_int].b();
@@ -902,17 +902,17 @@ final class ng {
         int var2 = this.field_h;
         int var4 = 40 / ((param0 - 15) / 45);
         int var3 = this.field_h + this.field_g;
-        if (!(var2 >= SoftwareRaster.field_a)) {
-          var3 = var3 + (-var2 + SoftwareRaster.field_a);
-          if (var3 > SoftwareRaster.field_f) {
+        if (!(var2 >= SoftwareRaster.clipTop)) {
+          var3 = var3 + (-var2 + SoftwareRaster.clipTop);
+          if (var3 > SoftwareRaster.clipBottom) {
             return false;
           }
           return true;
         }
         var3 = this.field_g + this.field_h;
-        if (SoftwareRaster.field_f < var3) {
-          var2 = var2 - (var3 - SoftwareRaster.field_f);
-          if (SoftwareRaster.field_a <= var2) {
+        if (SoftwareRaster.clipBottom < var3) {
+          var2 = var2 - (var3 - SoftwareRaster.clipBottom);
+          if (SoftwareRaster.clipTop <= var2) {
             return true;
           }
           return false;
@@ -943,7 +943,7 @@ final class ng {
         if (param0 < 118) {
           this.field_y = (nb) null;
         }
-        int var4 = this.field_l[1].field_x + this.field_l[7].field_x;
+        int var4 = this.field_l[1].canvasHeight + this.field_l[7].canvasHeight;
         int var5 = this.field_y.c(26787);
         this.field_g = var3 + var4 + var5;
     }

@@ -112,13 +112,13 @@ final class wn extends ih {
         try {
           if (param1 != null &&
             param2 > 0) {
-            var6_int = param1[0].field_A;
-            var7 = param1[2].field_A;
-            var8 = param1[1].field_A;
+            var6_int = param1[0].canvasWidth;
+            var7 = param1[2].canvasWidth;
+            var8 = param1[1].canvasWidth;
             param1[0].b(param3, param4, param0);
             param1[2].b(-var7 + param2 + param3, param4, param0);
             SoftwareRaster.b(an.field_H);
-            SoftwareRaster.b(var6_int + param3, param4, param3 + param2 - var7, param1[1].field_x + param4);
+            SoftwareRaster.b(var6_int + param3, param4, param3 + param2 - var7, param1[1].canvasHeight + param4);
             if (param5 != -3225) {
               wn.a(true);
             }

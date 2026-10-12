@@ -13,7 +13,7 @@ class ro extends pt implements he {
     private boolean field_qb;
     static String field_vb;
     static int field_ub;
-    static ru[] field_rb;
+    static IndexedSprite[] field_rb;
     private BitmapFont field_nb;
 
     final static void a(IntrusiveNode param0, IntrusiveNode param1, boolean param2) {
@@ -110,7 +110,7 @@ class ro extends pt implements he {
           return;
         }
         if (!param0) {
-          field_rb = (ru[]) null;
+          field_rb = (IndexedSprite[]) null;
           this.field_L = false;
           if (this.field_mb) {
             AttackEvent.d((byte) 83);
@@ -391,13 +391,13 @@ class ro extends pt implements he {
             if (param0 != 256) {
               stackIn_12_0 = var6;
               if (this.field_mb) {
-                stackIn_13_1 = a.field_k;
+                stackIn_13_1 = RegionAnchor.field_k;
               } else {
                 stackIn_13_1 = fj.field_a;
               }
               ((ad) (Object) stackIn_12_0).a(stackIn_13_1, -1, param1 ^ 99);
             } else {
-              var6.a(a.field_k, (qo) (this), (byte) -89);
+              var6.a(RegionAnchor.field_k, (qo) (this), (byte) -89);
             }
           }
           if (param0 == 3) {

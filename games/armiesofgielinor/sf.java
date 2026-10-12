@@ -48,8 +48,8 @@ abstract class sf extends wl {
         var7 = 0;
         var8 = param2;
         while (var4 > var7) {
-          if (var8 >= SoftwareRaster.field_a &&
-            var8 < SoftwareRaster.field_f) {
+          if (var8 >= SoftwareRaster.clipTop &&
+            var8 < SoftwareRaster.clipBottom) {
             var9 = var5 + var7 * (var6 - var5) / var4;
             var10 = 0;
             var11 = this.field_l;
@@ -62,7 +62,7 @@ abstract class sf extends wl {
                   }
                   var13 = var9 * (462 - var12) / 42;
                   var13 = var13 | (var13 << 8 | var13 << 16);
-                  SoftwareRaster.field_d[var8 * SoftwareRaster.field_l - (-param0 - var10)] = var13;
+                  SoftwareRaster.pixels[var8 * SoftwareRaster.width - (-param0 - var10)] = var13;
                 }
                 var10++;
               }
@@ -78,7 +78,7 @@ abstract class sf extends wl {
                   } else {
                     var15 = var9 * (462 - var14) / 42;
                     var15 = var15 | (var15 << 16 | var15 << 8);
-                    SoftwareRaster.field_d[var11 + param0 + SoftwareRaster.field_l * var8] = var15;
+                    SoftwareRaster.pixels[var11 + param0 + SoftwareRaster.width * var8] = var15;
                   }
                   var11++;
                   continue;

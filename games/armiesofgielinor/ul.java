@@ -507,7 +507,7 @@ final class ul {
           var5Lifetime1 = 30;
           if (param2 != 85) {
             var10 = (ArmiesOfGielinor) null;
-            ul.a((ru[]) null, (byte) -17, (ArmiesOfGielinor) null);
+            ul.a((IndexedSprite[]) null, (byte) -17, (ArmiesOfGielinor) null);
           }
           var6Lifetime1 = 15 + AttackEvent.a(false, 15, param0);
           for (var7Lifetime1 = 0; var6Lifetime1 > var7Lifetime1; var7Lifetime1++) {
@@ -583,7 +583,7 @@ final class ul {
         this.field_c[465] = true;
     }
 
-    final static void a(ru[] param0, byte param1, ArmiesOfGielinor param2) {
+    final static void a(IndexedSprite[] param0, byte param1, ArmiesOfGielinor param2) {
         try {
           br.field_a = new oo(param2, bi.field_c, param0, new String[]{hi.field_a, LeaderEscortCondition.field_b, IntPair.field_o, pp.field_S, bj.field_q});
           if (param1 <= 56) {

@@ -99,7 +99,7 @@ final class df extends tj implements fb, he {
               this.field_R = new fw(li.field_p, (qo) (this));
             }
           } else {
-            this.field_O = new fw(a.field_k, (qo) null);
+            this.field_O = new fw(RegionAnchor.field_k, (qo) null);
             this.field_N = new fw(dt.field_c, (qo) null);
             this.field_Q.field_I = false;
           }

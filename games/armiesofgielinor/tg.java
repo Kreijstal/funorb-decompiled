@@ -15,7 +15,7 @@ final class tg {
     static int field_k;
     static int field_a;
     int field_c;
-    static ru[] field_b;
+    static IndexedSprite[] field_b;
     private int field_e;
 
     private final boolean b(int param0, byte param1, int param2) {
@@ -491,7 +491,7 @@ final class tg {
 
     final boolean c(byte param0) {
         if (param0 >= -107) {
-          field_b = (ru[]) null;
+          field_b = (IndexedSprite[]) null;
           if (null == this.field_i) {
             return false;
           }
@@ -526,7 +526,7 @@ final class tg {
             var7 = this.b(-97);
             var4 = var7;
             var5 = lg.a(this.field_m, (byte) -34);
-            var6 = si.a(this.field_m, -3404) ? 1 : 0;
+            var6 = IndexedSpriteBase.a(this.field_m, -3404) ? 1 : 0;
             if (var5 == null &&
               var6 == 0) {
               this.field_i.a(4, fo.a(4800, vf.field_l, new String[]{var7}), (byte) -125);

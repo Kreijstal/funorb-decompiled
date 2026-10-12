@@ -287,12 +287,12 @@ final class MapLayout extends IntrusiveNode {
         field_m = null;
     }
 
-    final static ru[] a(String param0, int param1, String param2, kl param3) {
+    final static IndexedSprite[] a(String param0, int param1, String param2, kl param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
-        ru[] stackIn_2_0 = null;
-        ru[] stackIn_4_0 = null;
+        IndexedSprite[] stackIn_2_0 = null;
+        IndexedSprite[] stackIn_4_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
@@ -303,7 +303,7 @@ final class MapLayout extends IntrusiveNode {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 != -28106) {
-            stackIn_2_0 = (ru[]) null;
+            stackIn_2_0 = (IndexedSprite[]) null;
             return stackIn_2_0;
           }
           var4_int = param3.a(param2, 110);

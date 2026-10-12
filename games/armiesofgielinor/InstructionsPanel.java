@@ -109,7 +109,7 @@ final class InstructionsPanel {
             if (null != gt.field_c &&
               0 <= var7 &&
               gt.field_c.length > var7) {
-              var9 = -(gt.field_c[var7].field_A >> 1) + 50 >> 1;
+              var9 = -(gt.field_c[var7].canvasWidth >> 1) + 50 >> 1;
               param1 = param1 + var9;
               if (null != UnitModelPreview.field_d &&
                 1 + var7 >= 0 &&
@@ -299,7 +299,7 @@ final class InstructionsPanel {
         }
         for (var2 = param0; this.cachedPageSprites.length > var2; var2++) {
           if (this.cachedPageSprites[var2] != null) {
-            this.cachedPageSprites[var2].field_B = null;
+            this.cachedPageSprites[var2].pixels = null;
             this.cachedPageSprites[var2] = null;
           }
         }
@@ -475,7 +475,7 @@ final class InstructionsPanel {
             if (2 == var8) {
               if (17 < l.field_b.length &&
                 l.field_b.length > 16) {
-                l.field_b[17].a(db.a(true, param0), MatchConditionEntry.a(-40 + param1, (byte) 94));
+                l.field_b[17].draw(db.a(true, param0), MatchConditionEntry.a(-40 + param1, (byte) 94));
                 var9 = 1;
                 if (null == ds.field_a ||
                   !(param2 < ds.field_a.length)) {
@@ -491,7 +491,7 @@ final class InstructionsPanel {
                 if (-1 < param2) {
                   ks.a(ActionRequest.unitModels[76][param2], false, MatchConditionEntry.a(-40 + param1, (byte) 94), this.illustrationAnimation, 128, 150, db.a(true, param0), (js) null, -10374);
                 }
-                l.field_b[16].a(db.a(true, param0), MatchConditionEntry.a(param1 - 40, (byte) 94));
+                l.field_b[16].draw(db.a(true, param0), MatchConditionEntry.a(param1 - 40, (byte) 94));
                 return;
               }
               return;
@@ -500,7 +500,7 @@ final class InstructionsPanel {
               if (l.field_b.length <= 8) {
                 return;
               }
-              l.field_b[8].a(db.a(true, param0), MatchConditionEntry.a(-50 + param1, (byte) 94));
+              l.field_b[8].draw(db.a(true, param0), MatchConditionEntry.a(-50 + param1, (byte) 94));
               if (param2 > -1 &&
                 param2 < op.field_c.length) {
                 wb.a(7816226, db.a(true, param0 + 21), param2, var7, MatchConditionEntry.a(-30 + param1, (byte) 94));
@@ -511,7 +511,7 @@ final class InstructionsPanel {
                   if (11 >= l.field_b.length) {
                     return;
                   }
-                  l.field_b[11].a(db.a(true, param0), MatchConditionEntry.a(-10 + (param1 - 40), (byte) 94));
+                  l.field_b[11].draw(db.a(true, param0), MatchConditionEntry.a(-10 + (param1 - 40), (byte) 94));
                   if (param2 > -1 &&
                     op.field_c.length > param2) {
                     wb.a(7816226, db.a(true, param0 + 20), param2, var7, MatchConditionEntry.a(param1 - 20, (byte) 94));
@@ -522,7 +522,7 @@ final class InstructionsPanel {
                 if (l.field_b.length <= 0) {
                   return;
                 }
-                l.field_b[0].a(db.a(true, param0), MatchConditionEntry.a(-40 + param1, (byte) 94));
+                l.field_b[0].draw(db.a(true, param0), MatchConditionEntry.a(-40 + param1, (byte) 94));
                 if (param2 > -1 &&
                   op.field_c.length > param2) {
                   wb.a(param3 + 7841939, db.a(true, 20 + param0), param2, var7, MatchConditionEntry.a(10 + param1, (byte) 94));
@@ -644,7 +644,7 @@ final class InstructionsPanel {
         uf.field_j.b();
         SoftwareRaster.b();
         fe.b(0, 0, 134, 61, io.field_m, nd.field_b, 0, 0);
-        qt.field_e.b(2, 2);
+        qt.field_e.drawOpaque(2, 2);
         SoftwareRaster.b(5, 5, 124, 18, 0, 192);
         if (param4 < 70) {
           return;
@@ -657,17 +657,17 @@ final class InstructionsPanel {
             SoftwareRaster.b(99, 25, 30, 30, 0, 128);
             SoftwareRaster.b(52, 25, 30, 30, 0, 128);
             var9_int = param5.l(-27014);
-            cp.field_e[eb.a((byte) -126, ~var9_int & 3)].a(56, 25);
+            cp.field_e[eb.a((byte) -126, ~var9_int & 3)].draw(56, 25);
           } else {
             if (param6 == null) {
               SoftwareRaster.b(99, 25, 30, 30, 0, 128);
             } else {
               SoftwareRaster.b(37, 25, 92, 30, 0, 128);
-              ro.field_rb[param6.getUnitCategory(0)].a(43, 32);
-              sg.field_b[this.a(param6.getUnitCategory(0), (byte) -6, param5.getUnitCategory(0))].a(75, 32);
+              ro.field_rb[param6.getUnitCategory(0)].draw(43, 32);
+              sg.field_b[this.a(param6.getUnitCategory(0), (byte) -6, param5.getUnitCategory(0))].draw(75, 32);
             }
           }
-          ro.field_rb[param5.getUnitCategory(0)].a(106, 32);
+          ro.field_rb[param5.getUnitCategory(0)].draw(106, 32);
           en.field_E.c(100 - param3 + "%", 20, 45, 16777215, -1);
           EventPresenter.field_t.b(68, 60, nd.field_b[-1 + nd.field_b.length]);
           so.field_b.a(5605);
@@ -698,7 +698,7 @@ final class InstructionsPanel {
           return null;
         }
         if (param1 == 0) {
-          return new IntPair(uf.field_j.field_A, uf.field_j.field_x);
+          return new IntPair(uf.field_j.canvasWidth, uf.field_j.canvasHeight);
         }
         if (param1 == 1) {
           return new IntPair(0, 0);
@@ -920,9 +920,9 @@ final class InstructionsPanel {
         var3 = 150;
         var4 = -1;
         for (var5 = 0; gt.field_c.length > var5; var5++) {
-          var6 = gt.field_c[var5].field_A;
+          var6 = gt.field_c[var5].canvasWidth;
           var6 = var6 >> 1;
-          var7 = gt.field_c[var5].field_x;
+          var7 = gt.field_c[var5].canvasHeight;
           if (0 > var3 &&
             var6 >= 0) {
             var3 = var6;
@@ -1106,8 +1106,8 @@ final class InstructionsPanel {
               SoftwareRaster.b(this.field_J);
               param0.b();
               SoftwareRaster.b();
-              var25 = param0.field_A;
-              var26 = param0.field_x;
+              var25 = param0.canvasWidth;
+              var26 = param0.canvasHeight;
               param3.d(param5, param2, var25, var26);
               so.field_b.a(5605);
               SoftwareRaster.a(this.field_J);
@@ -1227,7 +1227,7 @@ final class InstructionsPanel {
         return new IntPair(var2, var3);
     }
 
-    private final IntPair a(byte param0, int param1, int param2, RgbSprite param3, int param4, ru param5) {
+    private final IntPair a(byte param0, int param1, int param2, RgbSprite param3, int param4, IndexedSprite param5) {
         Object stackIn_4_0 = null;
         IntPair stackIn_8_0 = null;
         IntPair stackIn_15_0 = null;
@@ -1254,12 +1254,12 @@ final class InstructionsPanel {
           }
           if (param3 != null &&
             param2 == 0) {
-            stackIn_8_0 = new IntPair(param3.field_A, param3.field_v);
+            stackIn_8_0 = new IntPair(param3.canvasWidth, param3.pixelHeight);
             return stackIn_8_0;
           }
           if (param5 != null &&
             param2 == 0) {
-            stackIn_32_0 = new IntPair(param5.field_g, param5.field_h);
+            stackIn_32_0 = new IntPair(param5.canvasWidth, param5.pixelHeight);
             return stackIn_32_0;
           }
           if (param3 != null &&
@@ -1277,9 +1277,9 @@ final class InstructionsPanel {
             return null;
           }
           if (param5 != null) {
-            stackIn_26_0 = -param5.field_d + param4;
+            stackIn_26_0 = -param5.offsetY + param4;
           } else {
-            stackIn_26_0 = -param3.field_z + param4;
+            stackIn_26_0 = -param3.offsetY + param4;
           }
           param4 = stackIn_26_0;
           if (param3 != null) {
@@ -1288,7 +1288,7 @@ final class InstructionsPanel {
             if (param5 == null) {
               return null;
             }
-            param5.a(db.a(true, param1), MatchConditionEntry.a(param4, (byte) 94));
+            param5.draw(db.a(true, param1), MatchConditionEntry.a(param4, (byte) 94));
           }
           stackIn_34_0 = null;
           return (IntPair) (stackIn_34_0);
@@ -1375,7 +1375,7 @@ final class InstructionsPanel {
             return (IntPair) (stackIn_2_0);
           }
           if (0 == param0) {
-            stackIn_12_0 = new IntPair(param4.field_A >> 1, param4.field_v >> 1);
+            stackIn_12_0 = new IntPair(param4.canvasWidth >> 1, param4.pixelHeight >> 1);
             return stackIn_12_0;
           }
           if (param0 == 1) {
@@ -1383,7 +1383,7 @@ final class InstructionsPanel {
             return stackIn_6_0;
           }
           if (param4 != null) {
-            param3 = param3 - param4.field_z;
+            param3 = param3 - param4.offsetY;
             if (param4 != null) {
               param4.h(db.a(true, param2), MatchConditionEntry.a(param3, (byte) 94));
             }
@@ -1462,7 +1462,7 @@ final class InstructionsPanel {
         int var8;
         int var9;
         int var11;
-        ru var12;
+        IndexedSprite var12;
         int var13;
         String var14;
         int var11Lifetime1;
@@ -1502,7 +1502,7 @@ final class InstructionsPanel {
               if (param3) {
                 var12.d(db.a(true, var8 + param4), MatchConditionEntry.a(var9 + param5, (byte) 94));
               } else {
-                var12.a(db.a(true, param4 + var8), MatchConditionEntry.a(param5 + var9, (byte) 94));
+                var12.draw(db.a(true, param4 + var8), MatchConditionEntry.a(param5 + var9, (byte) 94));
               }
             }
           }
@@ -1717,7 +1717,7 @@ final class InstructionsPanel {
           var8 == null) {
           return null;
         }
-        return this.a((byte) 114, param3, param5, (RgbSprite) (var7), param0, (ru) (var8));
+        return this.a((byte) 114, param3, param5, (RgbSprite) (var7), param0, (IndexedSprite) (var8));
     }
 
     final int getItemTopY(int obfuscationGuard, int itemIndex) {
@@ -1823,9 +1823,9 @@ final class InstructionsPanel {
         return null;
     }
 
-    private final ru f(int param0, int param1) {
-        ru[] var4 = ro.field_rb;
-        ru[] var3 = var4;
+    private final IndexedSprite f(int param0, int param1) {
+        IndexedSprite[] var4 = ro.field_rb;
+        IndexedSprite[] var3 = var4;
         if (param1 < param0) {
           return null;
         }
@@ -1945,7 +1945,7 @@ final class InstructionsPanel {
                 }
                 this.a(this.cachedPageSprites[var7], var8, 0, var10, -110, 0);
               }
-              var10.field_B = null;
+              var10.pixels = null;
               var4 = null;
               this.cachedPageIndex = this.pageIndex;
               return;
@@ -2641,8 +2641,8 @@ final class InstructionsPanel {
           if (param1 != 1) {
             this.previousEnabled = false;
           }
-          var4.first = ue.field_k[param0].field_A;
-          var4.second = ue.field_k[param0].field_x;
+          var4.first = ue.field_k[param0].canvasWidth;
+          var4.second = ue.field_k[param0].canvasHeight;
           return var3;
         }
         return var3;

@@ -10,7 +10,7 @@ final class dq {
     static int field_c;
     private byte[] field_a;
     static RgbSprite[] field_i;
-    static ru[] field_e;
+    static IndexedSprite[] field_e;
     private int[] field_b;
 
     final static int a(byte param0, int param1) {
@@ -54,9 +54,9 @@ final class dq {
     final static void a(int param0, int param1, String param2, boolean param3, byte param4, int param5) {
         try {
           if (param3) {
-            no.field_P.field_y = SoftwareRaster.field_l;
-            no.field_P.field_B = SoftwareRaster.field_d;
-            no.field_P.field_v = SoftwareRaster.field_g;
+            no.field_P.pixelWidth = SoftwareRaster.width;
+            no.field_P.pixels = SoftwareRaster.pixels;
+            no.field_P.pixelHeight = SoftwareRaster.height;
             ku.field_J.b();
             SoftwareRaster.b();
             gq.b(bc.field_j[3][0], 0, 0, param1);

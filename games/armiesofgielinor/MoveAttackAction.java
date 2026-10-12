@@ -278,7 +278,7 @@ final class MoveAttackAction extends PreparedAction {
           if (param6 >= -33) {
             field_x = (int[]) null;
           }
-          var7_int = param2.a(param3) + (param1[0].field_y << 1);
+          var7_int = param2.a(param3) + (param1[0].pixelWidth << 1);
           var8 = -(var7_int >> 1) + param5;
           var9 = (var7_int >> 1) + param5;
           if (0 > var8) {

@@ -124,7 +124,7 @@ final class eo {
         }
     }
 
-    final static void a(int param0, int param1, byte param2, ru param3, int param4) {
+    final static void a(int param0, int param1, byte param2, IndexedSprite param3, int param4) {
         int var6 = 0;
         int var7 = 0;
         int var9 = 0;
@@ -143,20 +143,20 @@ final class eo {
             return;
           }
           var5_int = 0;
-          param4 = param4 + param3.field_d;
-          param0 = param0 + param3.field_i;
-          for (var6 = 0; param3.field_h > var6; var6++) {
-            for (var7 = 0; param3.field_e > var7; var7++) {
-              var8 = param3.field_k[var5_int];
+          param4 = param4 + param3.offsetY;
+          param0 = param0 + param3.offsetX;
+          for (var6 = 0; param3.pixelHeight > var6; var6++) {
+            for (var7 = 0; param3.pixelWidth > var7; var7++) {
+              var8 = param3.pixelIndices[var5_int];
               var5_int++;
               if (var8 > 0) {
                 for (var9 = -3; 4 > var9; var9++) {
                   for (var10 = -3; var10 < 4; var10++) {
                     if (var7 + var9 <= -1 ||
-                      !(var9 + var7 < param3.field_e) ||
+                      !(var9 + var7 < param3.pixelWidth) ||
                       -1 >= var6 + var10 ||
-                      !(param3.field_h > var10 + var6) ||
-                      param3.field_k[(var10 + var6) * param3.field_e + (var7 + var9)] == 0) {
+                      !(param3.pixelHeight > var10 + var6) ||
+                      param3.pixelIndices[(var10 + var6) * param3.pixelWidth + (var7 + var9)] == 0) {
                       SoftwareRaster.g(var7 + (param0 + var9), var10 + param4 + var6, param1, var9 * var9 + var10 * var10);
                     }
                   }

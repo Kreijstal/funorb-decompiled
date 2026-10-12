@@ -53,7 +53,7 @@ final class nb {
         int var3 = 0;
         if (this.field_l == 0) {
           var2 = this.field_q;
-          var3 = this.field_k[0].field_x;
+          var3 = this.field_k[0].canvasHeight;
           SoftwareRaster.b(this.field_c, this.field_d, var2, var3, this.field_m[0]);
           if (param0 != 1043) {
             this.g(61);
@@ -63,7 +63,7 @@ final class nb {
         }
         if (this.field_l == 1) {
           var3 = this.field_q;
-          var2 = this.field_k[0].field_A;
+          var2 = this.field_k[0].canvasWidth;
         }
         SoftwareRaster.b(this.field_c, this.field_d, var2, var3, this.field_m[0]);
         if (param0 == 1043) {
@@ -122,8 +122,8 @@ final class nb {
         int var5 = 0;
         int var6 = this.b(param3 ^ 0, param0);
         int var7 = this.a(param3, param0);
-        int var8 = this.field_k[0].field_A;
-        int var9 = this.field_k[0].field_x;
+        int var8 = this.field_k[0].canvasWidth;
+        int var9 = this.field_k[0].canvasHeight;
         var5 = mo.a(param1, var6, var7, param2, var8, (byte) -110, var9) ? 1 : 0;
         return var5 != 0;
     }
@@ -210,7 +210,7 @@ final class nb {
         if (param0 != 27150) {
           return;
         }
-        this.field_j = this.field_k[0].field_A;
+        this.field_j = this.field_k[0].canvasWidth;
     }
 
     final void f(int param0) {
@@ -302,7 +302,7 @@ final class nb {
           return var3;
         }
         if (1 == this.field_l) {
-          var4 = this.field_k[0].field_x;
+          var4 = this.field_k[0].canvasHeight;
           var3 = this.field_d - (-this.field_q + var4);
           return var3;
         }
@@ -630,7 +630,7 @@ final class nb {
           }
           return var3;
         }
-        int var4 = this.field_k[0].field_A;
+        int var4 = this.field_k[0].canvasWidth;
         var3 = this.field_c - (-this.field_q + var4);
         return var3;
     }
@@ -651,7 +651,7 @@ final class nb {
           var6 = 1;
         }
         if (this.field_l == 0) {
-          var7 = this.field_k[0].field_A;
+          var7 = this.field_k[0].canvasWidth;
           var2 = var7 + (this.b(0, 1) + (-(var7 << 1) + this.field_q) * this.field_b / var6);
           var3 = this.field_d;
           var4 = this.field_f * (this.field_q - (var7 << 1)) / var6;
@@ -662,7 +662,7 @@ final class nb {
         }
         if (this.field_l == 1) {
           var2 = this.field_c;
-          var7Lifetime1 = this.field_k[0].field_x;
+          var7Lifetime1 = this.field_k[0].canvasHeight;
           var3 = var7Lifetime1 + this.a(0, 1) + (-(var7Lifetime1 << 1) + this.field_q) * this.field_b / var6;
           var4 = this.field_j;
           var5 = this.field_f * (-(var7Lifetime1 << 1) + this.field_q) / var6;

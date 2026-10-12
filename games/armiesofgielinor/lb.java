@@ -4,7 +4,7 @@
 final class lb {
     static String field_d;
     static int field_a;
-    static ru[] field_e;
+    static IndexedSprite[] field_e;
     static String field_c;
     static String field_b;
 
@@ -18,7 +18,7 @@ final class lb {
 
     final static boolean b(int param0) {
         if (param0 != 0) {
-          field_e = (ru[]) null;
+          field_e = (IndexedSprite[]) null;
           return ub.field_e;
         }
         return ub.field_e;

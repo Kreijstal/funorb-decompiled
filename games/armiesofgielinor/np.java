@@ -46,7 +46,7 @@ final class np extends je {
           return;
         }
         if (param0) {
-          SoftwareRaster.b(0, 0, SoftwareRaster.field_l, SoftwareRaster.field_g, 0, 192);
+          SoftwareRaster.b(0, 0, SoftwareRaster.width, SoftwareRaster.height, 0, 192);
         }
         SphinxActionRequest.field_v.a(0, -118, 0);
         if (param1 >= -111) {

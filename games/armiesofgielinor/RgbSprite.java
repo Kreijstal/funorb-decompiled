@@ -1,42 +1,42 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class RgbSprite extends qg {
-    int[] field_B;
+class RgbSprite extends RgbSpriteBase {
+    int[] pixels;
 
     void d(int param0, int param1) {
         int var9 = 0;
         int var9Lifetime1;
         int var9Lifetime2;
-        param0 = param0 + (this.field_A - this.field_y - this.field_w);
-        param1 = param1 + this.field_z;
-        int var3 = param0 + param1 * SoftwareRaster.field_l;
-        int var4 = this.field_y - 1;
-        int var5 = this.field_v;
-        int var6 = this.field_y;
-        int var7 = SoftwareRaster.field_l - var6;
+        param0 = param0 + (this.canvasWidth - this.pixelWidth - this.offsetX);
+        param1 = param1 + this.offsetY;
+        int var3 = param0 + param1 * SoftwareRaster.width;
+        int var4 = this.pixelWidth - 1;
+        int var5 = this.pixelHeight;
+        int var6 = this.pixelWidth;
+        int var7 = SoftwareRaster.width - var6;
         int var8 = var6 + var6;
-        if (param1 < SoftwareRaster.field_a) {
-          var9 = SoftwareRaster.field_a - param1;
+        if (param1 < SoftwareRaster.clipTop) {
+          var9 = SoftwareRaster.clipTop - param1;
           var5 = var5 - var9;
-          param1 = SoftwareRaster.field_a;
+          param1 = SoftwareRaster.clipTop;
           var4 = var4 + var9 * var6;
-          var3 = var3 + var9 * SoftwareRaster.field_l;
+          var3 = var3 + var9 * SoftwareRaster.width;
         }
-        if (param1 + var5 > SoftwareRaster.field_f) {
-          var5 = var5 - (param1 + var5 - SoftwareRaster.field_f);
+        if (param1 + var5 > SoftwareRaster.clipBottom) {
+          var5 = var5 - (param1 + var5 - SoftwareRaster.clipBottom);
         }
-        if (param0 < SoftwareRaster.field_j) {
-          var9Lifetime1 = SoftwareRaster.field_j - param0;
+        if (param0 < SoftwareRaster.clipLeft) {
+          var9Lifetime1 = SoftwareRaster.clipLeft - param0;
           var6 = var6 - var9Lifetime1;
-          param0 = SoftwareRaster.field_j;
+          param0 = SoftwareRaster.clipLeft;
           var4 = var4 - var9Lifetime1;
           var3 = var3 + var9Lifetime1;
           var8 = var8 - var9Lifetime1;
           var7 = var7 + var9Lifetime1;
         }
-        if (param0 + var6 > SoftwareRaster.field_e) {
-          var9Lifetime2 = param0 + var6 - SoftwareRaster.field_e;
+        if (param0 + var6 > SoftwareRaster.clipRight) {
+          var9Lifetime2 = param0 + var6 - SoftwareRaster.clipRight;
           var6 = var6 - var9Lifetime2;
           var8 = var8 - var9Lifetime2;
           var7 = var7 + var9Lifetime2;
@@ -45,7 +45,7 @@ class RgbSprite extends qg {
           if (var5 <= 0) {
             return;
           }
-          RgbSprite.b(SoftwareRaster.field_d, this.field_B, 0, var4, var3, var6, var5, var7, var8);
+          RgbSprite.b(SoftwareRaster.pixels, this.pixels, 0, var4, var3, var6, var5, var7, var8);
           return;
         }
     }
@@ -54,35 +54,35 @@ class RgbSprite extends qg {
         int var10 = 0;
         int var10Lifetime1;
         int var10Lifetime2;
-        param0 = param0 + this.field_w;
-        param1 = param1 + this.field_z;
-        int var4 = param0 + param1 * SoftwareRaster.field_l;
+        param0 = param0 + this.offsetX;
+        param1 = param1 + this.offsetY;
+        int var4 = param0 + param1 * SoftwareRaster.width;
         int var5 = 0;
-        int var6 = this.field_v;
-        int var7 = this.field_y;
-        int var8 = SoftwareRaster.field_l - var7;
+        int var6 = this.pixelHeight;
+        int var7 = this.pixelWidth;
+        int var8 = SoftwareRaster.width - var7;
         int var9 = 0;
-        if (param1 < SoftwareRaster.field_a) {
-          var10 = SoftwareRaster.field_a - param1;
+        if (param1 < SoftwareRaster.clipTop) {
+          var10 = SoftwareRaster.clipTop - param1;
           var6 = var6 - var10;
-          param1 = SoftwareRaster.field_a;
+          param1 = SoftwareRaster.clipTop;
           var5 = var5 + var10 * var7;
-          var4 = var4 + var10 * SoftwareRaster.field_l;
+          var4 = var4 + var10 * SoftwareRaster.width;
         }
-        if (param1 + var6 > SoftwareRaster.field_f) {
-          var6 = var6 - (param1 + var6 - SoftwareRaster.field_f);
+        if (param1 + var6 > SoftwareRaster.clipBottom) {
+          var6 = var6 - (param1 + var6 - SoftwareRaster.clipBottom);
         }
-        if (param0 < SoftwareRaster.field_j) {
-          var10Lifetime1 = SoftwareRaster.field_j - param0;
+        if (param0 < SoftwareRaster.clipLeft) {
+          var10Lifetime1 = SoftwareRaster.clipLeft - param0;
           var7 = var7 - var10Lifetime1;
-          param0 = SoftwareRaster.field_j;
+          param0 = SoftwareRaster.clipLeft;
           var5 = var5 + var10Lifetime1;
           var4 = var4 + var10Lifetime1;
           var9 = var9 + var10Lifetime1;
           var8 = var8 + var10Lifetime1;
         }
-        if (param0 + var7 > SoftwareRaster.field_e) {
-          var10Lifetime2 = param0 + var7 - SoftwareRaster.field_e;
+        if (param0 + var7 > SoftwareRaster.clipRight) {
+          var10Lifetime2 = param0 + var7 - SoftwareRaster.clipRight;
           var7 = var7 - var10Lifetime2;
           var9 = var9 + var10Lifetime2;
           var8 = var8 + var10Lifetime2;
@@ -91,7 +91,7 @@ class RgbSprite extends qg {
           if (var6 <= 0) {
             return;
           }
-          RgbSprite.a(SoftwareRaster.field_d, this.field_B, 0, var5, var4, var7, var6, var8, var9, param2);
+          RgbSprite.a(SoftwareRaster.pixels, this.pixels, 0, var5, var4, var7, var6, var8, var9, param2);
           return;
         }
     }
@@ -120,23 +120,23 @@ class RgbSprite extends qg {
             this.c(param0, param1, param2, param3);
             return;
           }
-          var6 = this.field_y;
-          var7 = this.field_v;
+          var6 = this.pixelWidth;
+          var7 = this.pixelHeight;
           var8 = 0;
           var9 = 0;
-          var10 = this.field_A;
-          var11 = this.field_x;
+          var10 = this.canvasWidth;
+          var11 = this.canvasHeight;
           var12 = (var10 << 16) / param2;
           var13 = (var11 << 16) / param3;
-          if (this.field_w > 0) {
-            var14 = ((this.field_w << 16) + var12 - 1) / var12;
+          if (this.offsetX > 0) {
+            var14 = ((this.offsetX << 16) + var12 - 1) / var12;
             param0 = param0 + var14;
-            var8 = var8 + (var14 * var12 - (this.field_w << 16));
+            var8 = var8 + (var14 * var12 - (this.offsetX << 16));
           }
-          if (this.field_z > 0) {
-            var14Lifetime1 = ((this.field_z << 16) + var13 - 1) / var13;
+          if (this.offsetY > 0) {
+            var14Lifetime1 = ((this.offsetY << 16) + var13 - 1) / var13;
             param1 = param1 + var14Lifetime1;
-            var9 = var9 + (var14Lifetime1 * var13 - (this.field_z << 16));
+            var9 = var9 + (var14Lifetime1 * var13 - (this.offsetY << 16));
           }
           if (var6 < var10) {
             param2 = ((var6 << 16) - var8 + var12 - 1) / var12;
@@ -144,30 +144,30 @@ class RgbSprite extends qg {
           if (var7 < var11) {
             param3 = ((var7 << 16) - var9 + var13 - 1) / var13;
           }
-          var14Lifetime2 = param0 + param1 * SoftwareRaster.field_l;
-          var15 = SoftwareRaster.field_l - param2;
-          if (param1 + param3 > SoftwareRaster.field_f) {
-            param3 = param3 - (param1 + param3 - SoftwareRaster.field_f);
+          var14Lifetime2 = param0 + param1 * SoftwareRaster.width;
+          var15 = SoftwareRaster.width - param2;
+          if (param1 + param3 > SoftwareRaster.clipBottom) {
+            param3 = param3 - (param1 + param3 - SoftwareRaster.clipBottom);
           }
-          if (param1 < SoftwareRaster.field_a) {
-            var16 = SoftwareRaster.field_a - param1;
+          if (param1 < SoftwareRaster.clipTop) {
+            var16 = SoftwareRaster.clipTop - param1;
             param3 = param3 - var16;
-            var14Lifetime2 = var14Lifetime2 + var16 * SoftwareRaster.field_l;
+            var14Lifetime2 = var14Lifetime2 + var16 * SoftwareRaster.width;
             var9 = var9 + var13 * var16;
           }
-          if (param0 + param2 > SoftwareRaster.field_e) {
-            var16Lifetime1 = param0 + param2 - SoftwareRaster.field_e;
+          if (param0 + param2 > SoftwareRaster.clipRight) {
+            var16Lifetime1 = param0 + param2 - SoftwareRaster.clipRight;
             param2 = param2 - var16Lifetime1;
             var15 = var15 + var16Lifetime1;
           }
-          if (param0 < SoftwareRaster.field_j) {
-            var16Lifetime2 = SoftwareRaster.field_j - param0;
+          if (param0 < SoftwareRaster.clipLeft) {
+            var16Lifetime2 = SoftwareRaster.clipLeft - param0;
             param2 = param2 - var16Lifetime2;
             var14Lifetime2 = var14Lifetime2 + var16Lifetime2;
             var8 = var8 + var12 * var16Lifetime2;
             var15 = var15 + var16Lifetime2;
           }
-          RgbSprite.b(SoftwareRaster.field_d, this.field_B, 0, var8, var9, var14Lifetime2, var15, param2, param3, var12, var13, var6, param4);
+          RgbSprite.b(SoftwareRaster.pixels, this.pixels, 0, var8, var9, var14Lifetime2, var15, param2, param3, var12, var13, var6, param4);
           return;
         }
     }
@@ -204,63 +204,63 @@ class RgbSprite extends qg {
         int var4 = 0;
         int incrementValue$0 = 0;
         int var3 = 0;
-        int[] var1 = new int[this.field_y * this.field_v];
+        int[] var1 = new int[this.pixelWidth * this.pixelHeight];
         int var2 = 0;
         int var3Lifetime1;
         int var3Lifetime2;
         int var3Lifetime3;
-        for (var3 = 0; var3 < this.field_y; var3++) {
-          for (var4 = this.field_v - 1; var4 >= 0; var4--) {
+        for (var3 = 0; var3 < this.pixelWidth; var3++) {
+          for (var4 = this.pixelHeight - 1; var4 >= 0; var4--) {
             incrementValue$0 = var2;
             var2++;
-            var1[incrementValue$0] = this.field_B[var3 + var4 * this.field_y];
+            var1[incrementValue$0] = this.pixels[var3 + var4 * this.pixelWidth];
           }
         }
-        this.field_B = var1;
-        var3Lifetime1 = this.field_z;
-        this.field_z = this.field_w;
-        this.field_w = this.field_x - this.field_v - var3Lifetime1;
-        var3Lifetime2 = this.field_v;
-        this.field_v = this.field_y;
-        this.field_y = var3Lifetime2;
-        var3Lifetime3 = this.field_x;
-        this.field_x = this.field_A;
-        this.field_A = var3Lifetime3;
+        this.pixels = var1;
+        var3Lifetime1 = this.offsetY;
+        this.offsetY = this.offsetX;
+        this.offsetX = this.canvasHeight - this.pixelHeight - var3Lifetime1;
+        var3Lifetime2 = this.pixelHeight;
+        this.pixelHeight = this.pixelWidth;
+        this.pixelWidth = var3Lifetime2;
+        var3Lifetime3 = this.canvasHeight;
+        this.canvasHeight = this.canvasWidth;
+        this.canvasWidth = var3Lifetime3;
     }
 
     final void a(int param0, int param1, int param2) {
         int var10 = 0;
         int var10Lifetime1;
         int var10Lifetime2;
-        param0 = param0 + this.field_w;
-        param1 = param1 + this.field_z;
-        int var4 = param0 + param1 * SoftwareRaster.field_l;
+        param0 = param0 + this.offsetX;
+        param1 = param1 + this.offsetY;
+        int var4 = param0 + param1 * SoftwareRaster.width;
         int var5 = 0;
-        int var6 = this.field_v;
-        int var7 = this.field_y;
-        int var8 = SoftwareRaster.field_l - var7;
+        int var6 = this.pixelHeight;
+        int var7 = this.pixelWidth;
+        int var8 = SoftwareRaster.width - var7;
         int var9 = 0;
-        if (param1 < SoftwareRaster.field_a) {
-          var10 = SoftwareRaster.field_a - param1;
+        if (param1 < SoftwareRaster.clipTop) {
+          var10 = SoftwareRaster.clipTop - param1;
           var6 = var6 - var10;
-          param1 = SoftwareRaster.field_a;
+          param1 = SoftwareRaster.clipTop;
           var5 = var5 + var10 * var7;
-          var4 = var4 + var10 * SoftwareRaster.field_l;
+          var4 = var4 + var10 * SoftwareRaster.width;
         }
-        if (param1 + var6 > SoftwareRaster.field_f) {
-          var6 = var6 - (param1 + var6 - SoftwareRaster.field_f);
+        if (param1 + var6 > SoftwareRaster.clipBottom) {
+          var6 = var6 - (param1 + var6 - SoftwareRaster.clipBottom);
         }
-        if (param0 < SoftwareRaster.field_j) {
-          var10Lifetime1 = SoftwareRaster.field_j - param0;
+        if (param0 < SoftwareRaster.clipLeft) {
+          var10Lifetime1 = SoftwareRaster.clipLeft - param0;
           var7 = var7 - var10Lifetime1;
-          param0 = SoftwareRaster.field_j;
+          param0 = SoftwareRaster.clipLeft;
           var5 = var5 + var10Lifetime1;
           var4 = var4 + var10Lifetime1;
           var9 = var9 + var10Lifetime1;
           var8 = var8 + var10Lifetime1;
         }
-        if (param0 + var7 > SoftwareRaster.field_e) {
-          var10Lifetime2 = param0 + var7 - SoftwareRaster.field_e;
+        if (param0 + var7 > SoftwareRaster.clipRight) {
+          var10Lifetime2 = param0 + var7 - SoftwareRaster.clipRight;
           var7 = var7 - var10Lifetime2;
           var9 = var9 + var10Lifetime2;
           var8 = var8 + var10Lifetime2;
@@ -269,7 +269,7 @@ class RgbSprite extends qg {
           if (var6 <= 0) {
             return;
           }
-          RgbSprite.c(SoftwareRaster.field_d, this.field_B, param2, var5, var4, var7, var6, var8, var9);
+          RgbSprite.c(SoftwareRaster.pixels, this.pixels, param2, var5, var4, var7, var6, var8, var9);
           return;
         }
     }
@@ -290,12 +290,12 @@ class RgbSprite extends qg {
         int var4Lifetime1;
         int var4Lifetime2;
         int var5Lifetime1;
-        var1 = this.field_v - 1;
+        var1 = this.pixelHeight - 1;
         scanLoop1: while (true) {
           if (var1 >= 0) {
-            var2 = var1 * this.field_y;
-            for (var3 = 0; var3 < this.field_y; var3++) {
-              if (this.field_B[var2 + var3] != 0) {
+            var2 = var1 * this.pixelWidth;
+            for (var3 = 0; var3 < this.pixelWidth; var3++) {
+              if (this.pixels[var2 + var3] != 0) {
                 break scanLoop1;
               }
             }
@@ -307,9 +307,9 @@ class RgbSprite extends qg {
         var2Lifetime1 = 0;
         scanLoop2: while (true) {
           if (var2Lifetime1 < var1) {
-            var3Lifetime1 = var2Lifetime1 * this.field_y;
-            for (var4 = 0; var4 < this.field_y; var4++) {
-              if (this.field_B[var3Lifetime1 + var4] != 0) {
+            var3Lifetime1 = var2Lifetime1 * this.pixelWidth;
+            for (var4 = 0; var4 < this.pixelWidth; var4++) {
+              if (this.pixels[var3Lifetime1 + var4] != 0) {
                 break scanLoop2;
               }
             }
@@ -318,11 +318,11 @@ class RgbSprite extends qg {
           }
           break;
         }
-        var3Lifetime2 = this.field_y - 1;
+        var3Lifetime2 = this.pixelWidth - 1;
         scanLoop3: while (true) {
           if (var3Lifetime2 >= 0) {
             for (var4Lifetime1 = var2Lifetime1; var4Lifetime1 <= var1; var4Lifetime1++) {
-              if (this.field_B[var4Lifetime1 * this.field_y + var3Lifetime2] != 0) {
+              if (this.pixels[var4Lifetime1 * this.pixelWidth + var3Lifetime2] != 0) {
                 break scanLoop3;
               }
             }
@@ -335,7 +335,7 @@ class RgbSprite extends qg {
         scanLoop4: while (true) {
           if (var4Lifetime2 < var3Lifetime2) {
             for (var5 = var2Lifetime1; var5 <= var1; var5++) {
-              if (this.field_B[var5 * this.field_y + var4Lifetime2] != 0) {
+              if (this.pixels[var5 * this.pixelWidth + var4Lifetime2] != 0) {
                 break scanLoop4;
               }
             }
@@ -345,9 +345,9 @@ class RgbSprite extends qg {
           break;
         }
         if (var4Lifetime2 == 0 &&
-          var3Lifetime2 == this.field_y - 1 &&
+          var3Lifetime2 == this.pixelWidth - 1 &&
           var2Lifetime1 == 0 &&
-          var1 == this.field_v - 1) {
+          var1 == this.pixelHeight - 1) {
           return;
         }
         var5Lifetime1 = var3Lifetime2 + 1 - var4Lifetime2;
@@ -355,14 +355,14 @@ class RgbSprite extends qg {
         var7 = new int[var5Lifetime1 * var6];
         for (var8 = 0; var8 < var6; var8++) {
           for (var9 = 0; var9 < var5Lifetime1; var9++) {
-            var7[var8 * var5Lifetime1 + var9] = this.field_B[(var8 + var2Lifetime1) * this.field_y + (var9 + var4Lifetime2)];
+            var7[var8 * var5Lifetime1 + var9] = this.pixels[(var8 + var2Lifetime1) * this.pixelWidth + (var9 + var4Lifetime2)];
           }
         }
-        this.field_B = var7;
-        this.field_y = var5Lifetime1;
-        this.field_v = var6;
-        this.field_w = this.field_w + var4Lifetime2;
-        this.field_z = this.field_z + var2Lifetime1;
+        this.pixels = var7;
+        this.pixelWidth = var5Lifetime1;
+        this.pixelHeight = var6;
+        this.offsetX = this.offsetX + var4Lifetime2;
+        this.offsetY = this.offsetY + var2Lifetime1;
         return;
     }
 
@@ -430,19 +430,19 @@ class RgbSprite extends qg {
         if (param5 == 0) {
           return;
         }
-        param0 = param0 - (this.field_w << 4);
-        param1 = param1 - (this.field_z << 4);
+        param0 = param0 - (this.offsetX << 4);
+        param1 = param1 - (this.offsetY << 4);
         var7 = (double)(param4 & 65535) * 0.00009587379924285257;
         var9 = (int)Math.floor(Math.sin(var7) * (double)param5 + 0.5);
         var10 = (int)Math.floor(Math.cos(var7) * (double)param5 + 0.5);
         var11 = -param0 * var10 + -param1 * var9;
         var12 = -(-param0) * var9 + -param1 * var10;
-        var13 = ((this.field_y << 4) - param0) * var10 + -param1 * var9;
-        var14 = -((this.field_y << 4) - param0) * var9 + -param1 * var10;
-        var15 = -param0 * var10 + ((this.field_v << 4) - param1) * var9;
-        var16 = -(-param0) * var9 + ((this.field_v << 4) - param1) * var10;
-        var17 = ((this.field_y << 4) - param0) * var10 + ((this.field_v << 4) - param1) * var9;
-        var18 = -((this.field_y << 4) - param0) * var9 + ((this.field_v << 4) - param1) * var10;
+        var13 = ((this.pixelWidth << 4) - param0) * var10 + -param1 * var9;
+        var14 = -((this.pixelWidth << 4) - param0) * var9 + -param1 * var10;
+        var15 = -param0 * var10 + ((this.pixelHeight << 4) - param1) * var9;
+        var16 = -(-param0) * var9 + ((this.pixelHeight << 4) - param1) * var10;
+        var17 = ((this.pixelWidth << 4) - param0) * var10 + ((this.pixelHeight << 4) - param1) * var9;
+        var18 = -((this.pixelWidth << 4) - param0) * var9 + ((this.pixelHeight << 4) - param1) * var10;
         if (var11 >= var13) {
           var19 = var13;
           var20 = var11;
@@ -493,17 +493,17 @@ class RgbSprite extends qg {
         var20 = var20 + 15 >> 4;
         var21 = var21 >> 4;
         var22 = var22 + 15 >> 4;
-        if (var19 < SoftwareRaster.field_j) {
-          var19 = SoftwareRaster.field_j;
+        if (var19 < SoftwareRaster.clipLeft) {
+          var19 = SoftwareRaster.clipLeft;
         }
-        if (var20 > SoftwareRaster.field_e) {
-          var20 = SoftwareRaster.field_e;
+        if (var20 > SoftwareRaster.clipRight) {
+          var20 = SoftwareRaster.clipRight;
         }
-        if (var21 < SoftwareRaster.field_a) {
-          var21 = SoftwareRaster.field_a;
+        if (var21 < SoftwareRaster.clipTop) {
+          var21 = SoftwareRaster.clipTop;
         }
-        if (var22 > SoftwareRaster.field_f) {
-          var22 = SoftwareRaster.field_f;
+        if (var22 > SoftwareRaster.clipBottom) {
+          var22 = SoftwareRaster.clipBottom;
         }
         var20 = var19 - var20;
         if (var20 >= 0) {
@@ -513,8 +513,8 @@ class RgbSprite extends qg {
         if (var22 >= 0) {
           return;
         }
-        var23 = var21 * SoftwareRaster.field_l + var19;
-        var24 = SoftwareRaster.field_l + var20;
+        var23 = var21 * SoftwareRaster.width + var19;
+        var24 = SoftwareRaster.width + var20;
         var25 = 16777216.0 / (double)param5;
         var27 = (int)Math.floor(Math.sin(var7) * var25 + 0.5);
         var28 = (int)Math.floor(Math.cos(var7) * var25 + 0.5);
@@ -565,9 +565,9 @@ class RgbSprite extends qg {
                 if (var40 != 0) {
                   while (var39 < 0) {
                     var33 = var37 >> 12;
-                    if (var37 >> 12 < this.field_y) {
+                    if (var37 >> 12 < this.pixelWidth) {
                       var34 = var38 >> 12;
-                      if (var38 >> 12 < this.field_v) {
+                      if (var38 >> 12 < this.pixelHeight) {
                         this.a(var23, var33, var34, var37, var38);
                         var39++;
                         var37 = var37 + var28;
@@ -611,7 +611,7 @@ class RgbSprite extends qg {
             }
             if (var40Lifetime3 != 0) {
               var40Lifetime3 = 0;
-              var35Lifetime3Lifetime1 = var38Lifetime3 - (this.field_v << 12);
+              var35Lifetime3Lifetime1 = var38Lifetime3 - (this.pixelHeight << 12);
               if (var35Lifetime3Lifetime1 >= 0) {
                 if (var27 != 0) {
                   var35Lifetime3Lifetime1 = (var27 - var35Lifetime3Lifetime1) / var27;
@@ -630,7 +630,7 @@ class RgbSprite extends qg {
                 while (var39Lifetime3 < 0) {
                   if (var38Lifetime3 >= -4096) {
                     var33Lifetime3 = var37Lifetime3 >> 12;
-                    if (var37Lifetime3 >> 12 < this.field_y) {
+                    if (var37Lifetime3 >> 12 < this.pixelWidth) {
                       var34Lifetime3 = var38Lifetime3 >> 12;
                       this.a(var23, var33Lifetime3, var34Lifetime3, var37Lifetime3, var38Lifetime3);
                       var39Lifetime3++;
@@ -659,7 +659,7 @@ class RgbSprite extends qg {
             var38Lifetime1 = var32 + (var29 * var27 >> 4);
             var39Lifetime1 = var20;
             var40Lifetime1 = 0;
-            var35Lifetime1 = var37Lifetime1 - (this.field_y << 12);
+            var35Lifetime1 = var37Lifetime1 - (this.pixelWidth << 12);
             if (var35Lifetime1 >= 0) {
               if (var28 != 0) {
                 var35Lifetime1 = (var28 - var35Lifetime1) / var28;
@@ -695,7 +695,7 @@ class RgbSprite extends qg {
                 while (var39Lifetime1 < 0) {
                   if (var37Lifetime1 >= -4096) {
                     var34Lifetime1 = var38Lifetime1 >> 12;
-                    if (var38Lifetime1 >> 12 < this.field_v) {
+                    if (var38Lifetime1 >> 12 < this.pixelHeight) {
                       var33Lifetime1 = var37Lifetime1 >> 12;
                       this.a(var23, var33Lifetime1, var34Lifetime1, var37Lifetime1, var38Lifetime1);
                       var39Lifetime1++;
@@ -723,7 +723,7 @@ class RgbSprite extends qg {
           var38Lifetime2 = var32 + (var29 * var27 >> 4);
           var39Lifetime2 = var20;
           var40Lifetime2 = 0;
-          var35Lifetime2 = var37Lifetime2 - (this.field_y << 12);
+          var35Lifetime2 = var37Lifetime2 - (this.pixelWidth << 12);
           if (var35Lifetime2 >= 0) {
             if (var28 != 0) {
               var35Lifetime2 = (var28 - var35Lifetime2) / var28;
@@ -740,7 +740,7 @@ class RgbSprite extends qg {
           }
           if (var40Lifetime2 != 0) {
             var40Lifetime2 = 0;
-            var35Lifetime2Lifetime1 = var38Lifetime2 - (this.field_v << 12);
+            var35Lifetime2Lifetime1 = var38Lifetime2 - (this.pixelHeight << 12);
             if (var35Lifetime2Lifetime1 >= 0) {
               if (var27 != 0) {
                 var35Lifetime2Lifetime1 = (var27 - var35Lifetime2Lifetime1) / var27;
@@ -787,11 +787,11 @@ class RgbSprite extends qg {
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
-        int[] var1 = this.field_B;
-        for (var2 = (this.field_v >> 1) - 1; var2 >= 0; var2--) {
-          var3 = var2 * this.field_y;
-          var4 = (this.field_v - var2 - 1) * this.field_y;
-          for (var5 = -this.field_y; var5 < 0; var5++) {
+        int[] var1 = this.pixels;
+        for (var2 = (this.pixelHeight >> 1) - 1; var2 >= 0; var2--) {
+          var3 = var2 * this.pixelWidth;
+          var4 = (this.pixelHeight - var2 - 1) * this.pixelWidth;
+          for (var5 = -this.pixelWidth; var5 < 0; var5++) {
             var6 = var1[var3];
             var1[var3] = var1[var4];
             var1[var4] = var6;
@@ -799,7 +799,7 @@ class RgbSprite extends qg {
             var4++;
           }
         }
-        this.field_z = this.field_x - this.field_v - this.field_z;
+        this.offsetY = this.canvasHeight - this.pixelHeight - this.offsetY;
     }
 
     final void c(int param0, int param1, int param2) {
@@ -808,8 +808,8 @@ class RgbSprite extends qg {
         int var6;
         int var7;
         int var8;
-        for (var4 = 0; var4 < this.field_B.length; var4++) {
-          var5 = this.field_B[var4];
+        for (var4 = 0; var4 < this.pixels.length; var4++) {
+          var5 = this.pixels[var4];
           if (var5 != 0) {
             var6 = var5 >> 16 & 255;
             var6 = var6 + param0;
@@ -838,7 +838,7 @@ class RgbSprite extends qg {
             } else {
               var8 = 1;
             }
-            this.field_B[var4] = (var6 << 16) + (var7 << 8) + var8;
+            this.pixels[var4] = (var6 << 16) + (var7 << 8) + var8;
           }
         }
     }
@@ -873,23 +873,23 @@ class RgbSprite extends qg {
         int var31;
         int var32;
         int var28Lifetime1;
-        if (param2 <= this.field_A &&
-          param3 <= this.field_x) {
-          var5 = param0 + this.field_w * param2 / this.field_A;
-          var6 = param0 + ((this.field_w + this.field_y) * param2 + this.field_A - 1) / this.field_A;
-          var7 = param1 + this.field_z * param3 / this.field_x;
-          var8 = param1 + ((this.field_z + this.field_v) * param3 + this.field_x - 1) / this.field_x;
-          if (var5 < SoftwareRaster.field_j) {
-            var5 = SoftwareRaster.field_j;
+        if (param2 <= this.canvasWidth &&
+          param3 <= this.canvasHeight) {
+          var5 = param0 + this.offsetX * param2 / this.canvasWidth;
+          var6 = param0 + ((this.offsetX + this.pixelWidth) * param2 + this.canvasWidth - 1) / this.canvasWidth;
+          var7 = param1 + this.offsetY * param3 / this.canvasHeight;
+          var8 = param1 + ((this.offsetY + this.pixelHeight) * param3 + this.canvasHeight - 1) / this.canvasHeight;
+          if (var5 < SoftwareRaster.clipLeft) {
+            var5 = SoftwareRaster.clipLeft;
           }
-          if (var6 > SoftwareRaster.field_e) {
-            var6 = SoftwareRaster.field_e;
+          if (var6 > SoftwareRaster.clipRight) {
+            var6 = SoftwareRaster.clipRight;
           }
-          if (var7 < SoftwareRaster.field_a) {
-            var7 = SoftwareRaster.field_a;
+          if (var7 < SoftwareRaster.clipTop) {
+            var7 = SoftwareRaster.clipTop;
           }
-          if (var8 > SoftwareRaster.field_f) {
-            var8 = SoftwareRaster.field_f;
+          if (var8 > SoftwareRaster.clipBottom) {
+            var8 = SoftwareRaster.clipBottom;
           }
           if (var5 >= var6) {
             return;
@@ -897,29 +897,29 @@ class RgbSprite extends qg {
           if (var7 >= var8) {
             return;
           }
-          var9 = var7 * SoftwareRaster.field_l + var5;
-          var10 = SoftwareRaster.field_l - (var6 - var5);
+          var9 = var7 * SoftwareRaster.width + var5;
+          var10 = SoftwareRaster.width - (var6 - var5);
           for (var11 = var7; var11 < var8; var11++) {
             for (var12 = var5; var12 < var6; var12++) {
               var13 = var12 - param0 << 4;
               var14 = var11 - param1 << 4;
-              var15 = var13 * this.field_A / param2 - (this.field_w << 4);
-              var16 = (var13 + 16) * this.field_A / param2 - (this.field_w << 4);
-              var17 = var14 * this.field_x / param3 - (this.field_z << 4);
-              var18 = (var14 + 16) * this.field_x / param3 - (this.field_z << 4);
+              var15 = var13 * this.canvasWidth / param2 - (this.offsetX << 4);
+              var16 = (var13 + 16) * this.canvasWidth / param2 - (this.offsetX << 4);
+              var17 = var14 * this.canvasHeight / param3 - (this.offsetY << 4);
+              var18 = (var14 + 16) * this.canvasHeight / param3 - (this.offsetY << 4);
               var19 = (var16 - var15) * (var18 - var17) >> 1;
               if (var19 != 0) {
                 if (var15 < 0) {
                   var15 = 0;
                 }
-                if (var16 > this.field_y << 4) {
-                  var16 = this.field_y << 4;
+                if (var16 > this.pixelWidth << 4) {
+                  var16 = this.pixelWidth << 4;
                 }
                 if (var17 < 0) {
                   var17 = 0;
                 }
-                if (var18 > this.field_v << 4) {
-                  var18 = this.field_v << 4;
+                if (var18 > this.pixelHeight << 4) {
+                  var18 = this.pixelHeight << 4;
                 }
                 var16--;
                 var18--;
@@ -944,7 +944,7 @@ class RgbSprite extends qg {
                     var29 = var23;
                   }
                   for (var30 = var15; var30 <= var16; var30++) {
-                    var31 = this.field_B[var28 * this.field_y + var30];
+                    var31 = this.pixels[var28 * this.pixelWidth + var30];
                     if (var31 != 0) {
                       var32 = var29;
                       if (var30 != var15) {
@@ -968,7 +968,7 @@ class RgbSprite extends qg {
                   if (var28Lifetime1 == 0) {
                     var28Lifetime1 = 1;
                   }
-                  SoftwareRaster.field_d[var9] = var28Lifetime1;
+                  SoftwareRaster.pixels[var9] = var28Lifetime1;
                 }
                 var9++;
               }
@@ -983,31 +983,31 @@ class RgbSprite extends qg {
     final void i() {
         int var2 = 0;
         int var3 = 0;
-        if (this.field_y == this.field_A &&
-          this.field_v == this.field_x) {
+        if (this.pixelWidth == this.canvasWidth &&
+          this.pixelHeight == this.canvasHeight) {
           return;
         }
-        int[] var1 = new int[this.field_A * this.field_x];
-        for (var2 = 0; var2 < this.field_v; var2++) {
-          for (var3 = 0; var3 < this.field_y; var3++) {
-            var1[(var2 + this.field_z) * this.field_A + (var3 + this.field_w)] = this.field_B[var2 * this.field_y + var3];
+        int[] var1 = new int[this.canvasWidth * this.canvasHeight];
+        for (var2 = 0; var2 < this.pixelHeight; var2++) {
+          for (var3 = 0; var3 < this.pixelWidth; var3++) {
+            var1[(var2 + this.offsetY) * this.canvasWidth + (var3 + this.offsetX)] = this.pixels[var2 * this.pixelWidth + var3];
           }
         }
-        this.field_B = var1;
-        this.field_y = this.field_A;
-        this.field_v = this.field_x;
-        this.field_w = 0;
-        this.field_z = 0;
+        this.pixels = var1;
+        this.pixelWidth = this.canvasWidth;
+        this.pixelHeight = this.canvasHeight;
+        this.offsetX = 0;
+        this.offsetY = 0;
     }
 
     void h(int param0, int param1) {
-        param0 = param0 + (this.field_w >> 1);
-        param1 = param1 + (this.field_z >> 1);
-        int var3 = param0 < SoftwareRaster.field_j ? SoftwareRaster.field_j - param0 << 1 : 0;
-        int var4 = param0 + (this.field_y >> 1) > SoftwareRaster.field_e ? SoftwareRaster.field_e - param0 << 1 : this.field_y;
-        int var5 = param1 < SoftwareRaster.field_a ? SoftwareRaster.field_a - param1 << 1 : 0;
-        int var6 = param1 + (this.field_v >> 1) > SoftwareRaster.field_f ? SoftwareRaster.field_f - param1 << 1 : this.field_v;
-        RgbSprite.a(this.field_B, var5 * this.field_y + var3, (param1 + (var5 >> 1)) * SoftwareRaster.field_l + (param0 + (var3 >> 1)), (this.field_y << 1) - (var4 - var3) + (this.field_y & 1), SoftwareRaster.field_l - (var4 - var3 >> 1), this.field_y, var4 - var3 >> 1, var6 - var5 >> 1);
+        param0 = param0 + (this.offsetX >> 1);
+        param1 = param1 + (this.offsetY >> 1);
+        int var3 = param0 < SoftwareRaster.clipLeft ? SoftwareRaster.clipLeft - param0 << 1 : 0;
+        int var4 = param0 + (this.pixelWidth >> 1) > SoftwareRaster.clipRight ? SoftwareRaster.clipRight - param0 << 1 : this.pixelWidth;
+        int var5 = param1 < SoftwareRaster.clipTop ? SoftwareRaster.clipTop - param1 << 1 : 0;
+        int var6 = param1 + (this.pixelHeight >> 1) > SoftwareRaster.clipBottom ? SoftwareRaster.clipBottom - param1 << 1 : this.pixelHeight;
+        RgbSprite.a(this.pixels, var5 * this.pixelWidth + var3, (param1 + (var5 >> 1)) * SoftwareRaster.width + (param0 + (var3 >> 1)), (this.pixelWidth << 1) - (var4 - var3) + (this.pixelWidth & 1), SoftwareRaster.width - (var4 - var3 >> 1), this.pixelWidth, var4 - var3 >> 1, var6 - var5 >> 1);
     }
 
     final void g(int param0) {
@@ -1016,26 +1016,26 @@ class RgbSprite extends qg {
         int[] var2;
         int var3;
         int var6;
-        var2 = new int[this.field_y * this.field_v];
+        var2 = new int[this.pixelWidth * this.pixelHeight];
         var3 = 0;
-        for (var4 = 0; var4 < this.field_v; var4++) {
-          for (var5 = 0; var5 < this.field_y; var5++) {
-            var6 = this.field_B[var3];
+        for (var4 = 0; var4 < this.pixelHeight; var4++) {
+          for (var5 = 0; var5 < this.pixelWidth; var5++) {
+            var6 = this.pixels[var3];
             if (var6 == 0) {
               if (var5 > 0 &&
-                this.field_B[var3 - 1] != 0) {
+                this.pixels[var3 - 1] != 0) {
                 var6 = param0;
               } else {
                 if (var4 > 0 &&
-                  this.field_B[var3 - this.field_y] != 0) {
+                  this.pixels[var3 - this.pixelWidth] != 0) {
                   var6 = param0;
                 } else {
-                  if (var5 < this.field_y - 1 &&
-                    this.field_B[var3 + 1] != 0) {
+                  if (var5 < this.pixelWidth - 1 &&
+                    this.pixels[var3 + 1] != 0) {
                     var6 = param0;
                   } else {
-                    if (var4 < this.field_v - 1 &&
-                      this.field_B[var3 + this.field_y] != 0) {
+                    if (var4 < this.pixelHeight - 1 &&
+                      this.pixels[var3 + this.pixelWidth] != 0) {
                       var6 = param0;
                     }
                   }
@@ -1045,7 +1045,7 @@ class RgbSprite extends qg {
             var2[var3++] = var6;
           }
         }
-        this.field_B = var2;
+        this.pixels = var2;
     }
 
     private final static void a(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11) {
@@ -1134,35 +1134,35 @@ class RgbSprite extends qg {
         int var9 = 0;
         int var9Lifetime1;
         int var9Lifetime2;
-        param0 = param0 + this.field_w;
-        param1 = param1 + this.field_z;
-        int var3 = param0 + param1 * SoftwareRaster.field_l;
+        param0 = param0 + this.offsetX;
+        param1 = param1 + this.offsetY;
+        int var3 = param0 + param1 * SoftwareRaster.width;
         int var4 = 0;
-        int var5 = this.field_v;
-        int var6 = this.field_y;
-        int var7 = SoftwareRaster.field_l - var6;
+        int var5 = this.pixelHeight;
+        int var6 = this.pixelWidth;
+        int var7 = SoftwareRaster.width - var6;
         int var8 = 0;
-        if (param1 < SoftwareRaster.field_a) {
-          var9 = SoftwareRaster.field_a - param1;
+        if (param1 < SoftwareRaster.clipTop) {
+          var9 = SoftwareRaster.clipTop - param1;
           var5 = var5 - var9;
-          param1 = SoftwareRaster.field_a;
+          param1 = SoftwareRaster.clipTop;
           var4 = var4 + var9 * var6;
-          var3 = var3 + var9 * SoftwareRaster.field_l;
+          var3 = var3 + var9 * SoftwareRaster.width;
         }
-        if (param1 + var5 > SoftwareRaster.field_f) {
-          var5 = var5 - (param1 + var5 - SoftwareRaster.field_f);
+        if (param1 + var5 > SoftwareRaster.clipBottom) {
+          var5 = var5 - (param1 + var5 - SoftwareRaster.clipBottom);
         }
-        if (param0 < SoftwareRaster.field_j) {
-          var9Lifetime1 = SoftwareRaster.field_j - param0;
+        if (param0 < SoftwareRaster.clipLeft) {
+          var9Lifetime1 = SoftwareRaster.clipLeft - param0;
           var6 = var6 - var9Lifetime1;
-          param0 = SoftwareRaster.field_j;
+          param0 = SoftwareRaster.clipLeft;
           var4 = var4 + var9Lifetime1;
           var3 = var3 + var9Lifetime1;
           var8 = var8 + var9Lifetime1;
           var7 = var7 + var9Lifetime1;
         }
-        if (param0 + var6 > SoftwareRaster.field_e) {
-          var9Lifetime2 = param0 + var6 - SoftwareRaster.field_e;
+        if (param0 + var6 > SoftwareRaster.clipRight) {
+          var9Lifetime2 = param0 + var6 - SoftwareRaster.clipRight;
           var6 = var6 - var9Lifetime2;
           var8 = var8 + var9Lifetime2;
           var7 = var7 + var9Lifetime2;
@@ -1171,7 +1171,7 @@ class RgbSprite extends qg {
           if (var5 <= 0) {
             return;
           }
-          RgbSprite.a(SoftwareRaster.field_d, this.field_B, var4, var3, var6, var5, var7, var8);
+          RgbSprite.a(SoftwareRaster.pixels, this.pixels, var4, var3, var6, var5, var7, var8);
           return;
         }
     }
@@ -1197,37 +1197,37 @@ class RgbSprite extends qg {
         int var14;
         int var15;
         int var13Lifetime1;
-        var3 = this.field_y >> 2;
-        var4 = this.field_v >> 2;
-        param0 = param0 + this.field_w / 4;
-        param1 = param1 + this.field_z / 4;
-        if (param0 >= SoftwareRaster.field_j) {
+        var3 = this.pixelWidth >> 2;
+        var4 = this.pixelHeight >> 2;
+        param0 = param0 + this.offsetX / 4;
+        param1 = param1 + this.offsetY / 4;
+        if (param0 >= SoftwareRaster.clipLeft) {
           stackIn_3_0 = 0;
         } else {
-          stackIn_3_0 = SoftwareRaster.field_j - param0 << 2;
+          stackIn_3_0 = SoftwareRaster.clipLeft - param0 << 2;
         }
         var5 = stackIn_3_0;
-        if (param0 + var3 <= SoftwareRaster.field_e) {
-          stackIn_6_0 = this.field_y - 4;
+        if (param0 + var3 <= SoftwareRaster.clipRight) {
+          stackIn_6_0 = this.pixelWidth - 4;
         } else {
-          stackIn_6_0 = (SoftwareRaster.field_e - param0 << 2) - 4;
+          stackIn_6_0 = (SoftwareRaster.clipRight - param0 << 2) - 4;
         }
         var6 = stackIn_6_0;
-        if (param1 >= SoftwareRaster.field_a) {
+        if (param1 >= SoftwareRaster.clipTop) {
           stackIn_9_0 = 0;
         } else {
-          stackIn_9_0 = SoftwareRaster.field_a - param1 << 2;
+          stackIn_9_0 = SoftwareRaster.clipTop - param1 << 2;
         }
         var7 = stackIn_9_0;
-        if (param1 + var4 <= SoftwareRaster.field_f) {
-          stackIn_12_0 = this.field_v - 4;
+        if (param1 + var4 <= SoftwareRaster.clipBottom) {
+          stackIn_12_0 = this.pixelHeight - 4;
         } else {
-          stackIn_12_0 = (SoftwareRaster.field_f - param1 << 2) - 4;
+          stackIn_12_0 = (SoftwareRaster.clipBottom - param1 << 2) - 4;
         }
         var8 = stackIn_12_0;
         for (var9 = var7; var9 <= var8; var9 += 4) {
-          var10 = var9 * this.field_y + var5;
-          var11 = (param1 + (var9 >> 2)) * SoftwareRaster.field_l + (param0 + (var5 >> 2));
+          var10 = var9 * this.pixelWidth + var5;
+          var11 = (param1 + (var9 >> 2)) * SoftwareRaster.width + (param0 + (var5 >> 2));
           var12 = var5;
           while (var12 <= var6) {
             var13 = 0;
@@ -1235,15 +1235,15 @@ class RgbSprite extends qg {
             var15 = 0;
             for (var16 = 0; var16 < 4; var16++) {
               for (var17 = 0; var17 < 4; var17++) {
-                var13Lifetime1 = this.field_B[var10 + var16 * this.field_y + var17];
+                var13Lifetime1 = this.pixels[var10 + var16 * this.pixelWidth + var17];
                 if (var13Lifetime1 == 0) {
-                  var13Lifetime1 = SoftwareRaster.field_d[var11];
+                  var13Lifetime1 = SoftwareRaster.pixels[var11];
                 }
                 var14 = var14 + (var13Lifetime1 & 16711935);
                 var15 = var15 + (var13Lifetime1 & 65280);
               }
             }
-            SoftwareRaster.field_d[var11] = (var14 & 267390960 | var15 & 1044480) >> 4;
+            SoftwareRaster.pixels[var11] = (var14 & 267390960 | var15 & 1044480) >> 4;
             var12 += 4;
             var10 += 4;
             var11++;
@@ -1299,7 +1299,7 @@ class RgbSprite extends qg {
     }
 
     final void b() {
-        SoftwareRaster.a(this.field_B, this.field_y, this.field_v);
+        SoftwareRaster.a(this.pixels, this.pixelWidth, this.pixelHeight);
     }
 
     private final static void a(int param0, int param1, int param2, int[] param3, int[] param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12) {
@@ -1329,10 +1329,10 @@ class RgbSprite extends qg {
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
-        int[] var1 = this.field_B;
-        for (var2 = this.field_v - 1; var2 >= 0; var2--) {
-          var3 = var2 * this.field_y;
-          var4 = (var2 + 1) * this.field_y;
+        int[] var1 = this.pixels;
+        for (var2 = this.pixelHeight - 1; var2 >= 0; var2--) {
+          var3 = var2 * this.pixelWidth;
+          var4 = (var2 + 1) * this.pixelWidth;
           while (var3 < var4) {
             var4--;
             var5 = var1[var3];
@@ -1341,7 +1341,7 @@ class RgbSprite extends qg {
             var3++;
           }
         }
-        this.field_w = this.field_A - this.field_y - this.field_w;
+        this.offsetX = this.canvasWidth - this.pixelWidth - this.offsetX;
     }
 
     private final static void a(int param0, int param1, int param2, int[] param3, int[] param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12, int param13) {
@@ -1394,35 +1394,35 @@ class RgbSprite extends qg {
         int var9 = 0;
         int var9Lifetime1;
         int var9Lifetime2;
-        param0 = param0 + this.field_w;
-        param1 = param1 + this.field_z;
-        int var3 = param0 + param1 * SoftwareRaster.field_l;
+        param0 = param0 + this.offsetX;
+        param1 = param1 + this.offsetY;
+        int var3 = param0 + param1 * SoftwareRaster.width;
         int var4 = 0;
-        int var5 = this.field_v;
-        int var6 = this.field_y;
-        int var7 = SoftwareRaster.field_l - var6;
+        int var5 = this.pixelHeight;
+        int var6 = this.pixelWidth;
+        int var7 = SoftwareRaster.width - var6;
         int var8 = 0;
-        if (param1 < SoftwareRaster.field_a) {
-          var9 = SoftwareRaster.field_a - param1;
+        if (param1 < SoftwareRaster.clipTop) {
+          var9 = SoftwareRaster.clipTop - param1;
           var5 = var5 - var9;
-          param1 = SoftwareRaster.field_a;
+          param1 = SoftwareRaster.clipTop;
           var4 = var4 + var9 * var6;
-          var3 = var3 + var9 * SoftwareRaster.field_l;
+          var3 = var3 + var9 * SoftwareRaster.width;
         }
-        if (param1 + var5 > SoftwareRaster.field_f) {
-          var5 = var5 - (param1 + var5 - SoftwareRaster.field_f);
+        if (param1 + var5 > SoftwareRaster.clipBottom) {
+          var5 = var5 - (param1 + var5 - SoftwareRaster.clipBottom);
         }
-        if (param0 < SoftwareRaster.field_j) {
-          var9Lifetime1 = SoftwareRaster.field_j - param0;
+        if (param0 < SoftwareRaster.clipLeft) {
+          var9Lifetime1 = SoftwareRaster.clipLeft - param0;
           var6 = var6 - var9Lifetime1;
-          param0 = SoftwareRaster.field_j;
+          param0 = SoftwareRaster.clipLeft;
           var4 = var4 + var9Lifetime1;
           var3 = var3 + var9Lifetime1;
           var8 = var8 + var9Lifetime1;
           var7 = var7 + var9Lifetime1;
         }
-        if (param0 + var6 > SoftwareRaster.field_e) {
-          var9Lifetime2 = param0 + var6 - SoftwareRaster.field_e;
+        if (param0 + var6 > SoftwareRaster.clipRight) {
+          var9Lifetime2 = param0 + var6 - SoftwareRaster.clipRight;
           var6 = var6 - var9Lifetime2;
           var8 = var8 + var9Lifetime2;
           var7 = var7 + var9Lifetime2;
@@ -1431,7 +1431,7 @@ class RgbSprite extends qg {
           if (var5 <= 0) {
             return;
           }
-          RgbSprite.a(0, SoftwareRaster.field_d, this.field_B, 0, var4, var3, var6, var5, var7, var8);
+          RgbSprite.a(0, SoftwareRaster.pixels, this.pixels, 0, var4, var3, var6, var5, var7, var8);
           return;
         }
     }
@@ -1519,35 +1519,35 @@ class RgbSprite extends qg {
         int var10 = 0;
         int var10Lifetime1;
         int var10Lifetime2;
-        param0 = param0 + this.field_w;
-        param1 = param1 + this.field_z;
-        int var4 = param0 + param1 * SoftwareRaster.field_l;
+        param0 = param0 + this.offsetX;
+        param1 = param1 + this.offsetY;
+        int var4 = param0 + param1 * SoftwareRaster.width;
         int var5 = 0;
-        int var6 = this.field_v;
-        int var7 = this.field_y;
-        int var8 = SoftwareRaster.field_l - var7;
+        int var6 = this.pixelHeight;
+        int var7 = this.pixelWidth;
+        int var8 = SoftwareRaster.width - var7;
         int var9 = 0;
-        if (param1 < SoftwareRaster.field_a) {
-          var10 = SoftwareRaster.field_a - param1;
+        if (param1 < SoftwareRaster.clipTop) {
+          var10 = SoftwareRaster.clipTop - param1;
           var6 = var6 - var10;
-          param1 = SoftwareRaster.field_a;
+          param1 = SoftwareRaster.clipTop;
           var5 = var5 + var10 * var7;
-          var4 = var4 + var10 * SoftwareRaster.field_l;
+          var4 = var4 + var10 * SoftwareRaster.width;
         }
-        if (param1 + var6 > SoftwareRaster.field_f) {
-          var6 = var6 - (param1 + var6 - SoftwareRaster.field_f);
+        if (param1 + var6 > SoftwareRaster.clipBottom) {
+          var6 = var6 - (param1 + var6 - SoftwareRaster.clipBottom);
         }
-        if (param0 < SoftwareRaster.field_j) {
-          var10Lifetime1 = SoftwareRaster.field_j - param0;
+        if (param0 < SoftwareRaster.clipLeft) {
+          var10Lifetime1 = SoftwareRaster.clipLeft - param0;
           var7 = var7 - var10Lifetime1;
-          param0 = SoftwareRaster.field_j;
+          param0 = SoftwareRaster.clipLeft;
           var5 = var5 + var10Lifetime1;
           var4 = var4 + var10Lifetime1;
           var9 = var9 + var10Lifetime1;
           var8 = var8 + var10Lifetime1;
         }
-        if (param0 + var7 > SoftwareRaster.field_e) {
-          var10Lifetime2 = param0 + var7 - SoftwareRaster.field_e;
+        if (param0 + var7 > SoftwareRaster.clipRight) {
+          var10Lifetime2 = param0 + var7 - SoftwareRaster.clipRight;
           var7 = var7 - var10Lifetime2;
           var9 = var9 + var10Lifetime2;
           var8 = var8 + var10Lifetime2;
@@ -1557,17 +1557,17 @@ class RgbSprite extends qg {
             return;
           }
           if (param2 == 256) {
-            RgbSprite.a(0, 0, 0, SoftwareRaster.field_d, this.field_B, var5, 0, var4, 0, var7, var6, var8, var9);
+            RgbSprite.a(0, 0, 0, SoftwareRaster.pixels, this.pixels, var5, 0, var4, 0, var7, var6, var8, var9);
           } else {
-            RgbSprite.a(0, 0, 0, SoftwareRaster.field_d, this.field_B, var5, 0, var4, 0, var7, var6, var8, var9, param2);
+            RgbSprite.a(0, 0, 0, SoftwareRaster.pixels, this.pixels, var5, 0, var4, 0, var7, var6, var8, var9, param2);
           }
           return;
         }
     }
 
     final void a(int param0, int param1, int param2, int param3) {
-        int var5 = this.field_A << 3;
-        int var6 = this.field_x << 3;
+        int var5 = this.canvasWidth << 3;
+        int var6 = this.canvasHeight << 3;
         param0 = (param0 << 4) + (var5 & 15);
         param1 = (param1 << 4) + (var6 & 15);
         this.b(var5, var6, param0, param1, param2, param3);
@@ -1593,8 +1593,8 @@ class RgbSprite extends qg {
         while (var8 < param7) {
           var9 = 0;
           while (var9 < param6) {
-            var11 = SoftwareRaster.field_d[param2] & 16711935;
-            var12 = SoftwareRaster.field_d[param2] & 65280;
+            var11 = SoftwareRaster.pixels[param2] & 16711935;
+            var12 = SoftwareRaster.pixels[param2] & 65280;
             var13 = 0;
             var14 = 0;
             dupTemp$0 = param0[param1];
@@ -1635,7 +1635,7 @@ class RgbSprite extends qg {
             }
             incrementValue$4 = param2;
             param2++;
-            SoftwareRaster.field_d[incrementValue$4] = (var13 & 66847740 | var14 & 261120) >> 2;
+            SoftwareRaster.pixels[incrementValue$4] = (var13 & 66847740 | var14 & 261120) >> 2;
             var9++;
             param1 += 2;
           }
@@ -1663,7 +1663,7 @@ class RgbSprite extends qg {
         int var16;
         int var17;
         int var18;
-        var6 = param2 * this.field_y + param1;
+        var6 = param2 * this.pixelWidth + param1;
         param3 = param3 & 4095;
         param4 = param4 & 4095;
         if (param2 < 0) {
@@ -1676,7 +1676,7 @@ class RgbSprite extends qg {
             var11 = 0;
             var7 = 0;
           } else {
-            var7 = this.field_B[var6];
+            var7 = this.pixels[var6];
             if (var7 == 0) {
               stackIn_5_0 = 0;
             } else {
@@ -1684,11 +1684,11 @@ class RgbSprite extends qg {
             }
             var11 = stackIn_5_0;
           }
-          if (param1 >= this.field_y - 1) {
+          if (param1 >= this.pixelWidth - 1) {
             var12 = 0;
             var8 = 0;
           } else {
-            var8 = this.field_B[var6 + 1];
+            var8 = this.pixels[var6 + 1];
             if (var8 == 0) {
               stackIn_11_0 = 0;
             } else {
@@ -1697,7 +1697,7 @@ class RgbSprite extends qg {
             var12 = stackIn_11_0;
           }
         }
-        if (param2 >= this.field_v - 1) {
+        if (param2 >= this.pixelHeight - 1) {
           var14 = 0;
           var13 = 0;
           var10 = 0;
@@ -1707,7 +1707,7 @@ class RgbSprite extends qg {
             var13 = 0;
             var9 = 0;
           } else {
-            var9 = this.field_B[var6 + this.field_y];
+            var9 = this.pixels[var6 + this.pixelWidth];
             if (var9 == 0) {
               stackIn_19_0 = 0;
             } else {
@@ -1715,11 +1715,11 @@ class RgbSprite extends qg {
             }
             var13 = stackIn_19_0;
           }
-          if (param1 >= this.field_y - 1) {
+          if (param1 >= this.pixelWidth - 1) {
             var14 = 0;
             var10 = 0;
           } else {
-            var10 = this.field_B[var6 + this.field_y + 1];
+            var10 = this.pixels[var6 + this.pixelWidth + 1];
             if (var10 == 0) {
               stackIn_25_0 = 0;
             } else {
@@ -1745,7 +1745,7 @@ class RgbSprite extends qg {
           if (var18 == 0) {
             var18 = 1;
           }
-          SoftwareRaster.field_d[param0] = var18;
+          SoftwareRaster.pixels[param0] = var18;
         } else {
           var16 = (var7 & 16711935) * var11 + (var8 & 16711935) * var12;
           var16 = var16 + ((var9 & 16711935) * var13 + (var10 & 16711935) * var14);
@@ -1755,7 +1755,7 @@ class RgbSprite extends qg {
           if (var18 == 0) {
             var18 = 1;
           }
-          SoftwareRaster.field_d[param0] = var18;
+          SoftwareRaster.pixels[param0] = var18;
         }
     }
 
@@ -1763,35 +1763,35 @@ class RgbSprite extends qg {
         int var10 = 0;
         int var10Lifetime1;
         int var10Lifetime2;
-        param0 = param0 + this.field_w;
-        param1 = param1 + this.field_z;
-        int var4 = param0 + param1 * SoftwareRaster.field_l;
+        param0 = param0 + this.offsetX;
+        param1 = param1 + this.offsetY;
+        int var4 = param0 + param1 * SoftwareRaster.width;
         int var5 = 0;
-        int var6 = this.field_v;
-        int var7 = this.field_y;
-        int var8 = SoftwareRaster.field_l - var7;
+        int var6 = this.pixelHeight;
+        int var7 = this.pixelWidth;
+        int var8 = SoftwareRaster.width - var7;
         int var9 = 0;
-        if (param1 < SoftwareRaster.field_a) {
-          var10 = SoftwareRaster.field_a - param1;
+        if (param1 < SoftwareRaster.clipTop) {
+          var10 = SoftwareRaster.clipTop - param1;
           var6 = var6 - var10;
-          param1 = SoftwareRaster.field_a;
+          param1 = SoftwareRaster.clipTop;
           var5 = var5 + var10 * var7;
-          var4 = var4 + var10 * SoftwareRaster.field_l;
+          var4 = var4 + var10 * SoftwareRaster.width;
         }
-        if (param1 + var6 > SoftwareRaster.field_f) {
-          var6 = var6 - (param1 + var6 - SoftwareRaster.field_f);
+        if (param1 + var6 > SoftwareRaster.clipBottom) {
+          var6 = var6 - (param1 + var6 - SoftwareRaster.clipBottom);
         }
-        if (param0 < SoftwareRaster.field_j) {
-          var10Lifetime1 = SoftwareRaster.field_j - param0;
+        if (param0 < SoftwareRaster.clipLeft) {
+          var10Lifetime1 = SoftwareRaster.clipLeft - param0;
           var7 = var7 - var10Lifetime1;
-          param0 = SoftwareRaster.field_j;
+          param0 = SoftwareRaster.clipLeft;
           var5 = var5 + var10Lifetime1;
           var4 = var4 + var10Lifetime1;
           var9 = var9 + var10Lifetime1;
           var8 = var8 + var10Lifetime1;
         }
-        if (param0 + var7 > SoftwareRaster.field_e) {
-          var10Lifetime2 = param0 + var7 - SoftwareRaster.field_e;
+        if (param0 + var7 > SoftwareRaster.clipRight) {
+          var10Lifetime2 = param0 + var7 - SoftwareRaster.clipRight;
           var7 = var7 - var10Lifetime2;
           var9 = var9 + var10Lifetime2;
           var8 = var8 + var10Lifetime2;
@@ -1800,7 +1800,7 @@ class RgbSprite extends qg {
           if (var6 <= 0) {
             return;
           }
-          RgbSprite.a(SoftwareRaster.field_d, this.field_B, 0, var5, var4, 0, 0, var7, var6, var8, var9, param2);
+          RgbSprite.a(SoftwareRaster.pixels, this.pixels, 0, var5, var4, 0, 0, var7, var6, var8, var9, param2);
           return;
         }
     }
@@ -1825,23 +1825,23 @@ class RgbSprite extends qg {
           if (param3 <= 0) {
             return;
           }
-          var6 = this.field_y;
-          var7 = this.field_v;
+          var6 = this.pixelWidth;
+          var7 = this.pixelHeight;
           var8 = 0;
           var9 = 0;
-          var10 = this.field_A;
-          var11 = this.field_x;
+          var10 = this.canvasWidth;
+          var11 = this.canvasHeight;
           var12 = (var10 << 16) / param2;
           var13 = (var11 << 16) / param3;
-          if (this.field_w > 0) {
-            var14 = ((this.field_w << 16) + var12 - 1) / var12;
+          if (this.offsetX > 0) {
+            var14 = ((this.offsetX << 16) + var12 - 1) / var12;
             param0 = param0 + var14;
-            var8 = var8 + (var14 * var12 - (this.field_w << 16));
+            var8 = var8 + (var14 * var12 - (this.offsetX << 16));
           }
-          if (this.field_z > 0) {
-            var14Lifetime1 = ((this.field_z << 16) + var13 - 1) / var13;
+          if (this.offsetY > 0) {
+            var14Lifetime1 = ((this.offsetY << 16) + var13 - 1) / var13;
             param1 = param1 + var14Lifetime1;
-            var9 = var9 + (var14Lifetime1 * var13 - (this.field_z << 16));
+            var9 = var9 + (var14Lifetime1 * var13 - (this.offsetY << 16));
           }
           if (var6 < var10) {
             param2 = ((var6 << 16) - var8 + var12 - 1) / var12;
@@ -1849,30 +1849,30 @@ class RgbSprite extends qg {
           if (var7 < var11) {
             param3 = ((var7 << 16) - var9 + var13 - 1) / var13;
           }
-          var14Lifetime2 = param0 + param1 * SoftwareRaster.field_l;
-          var15 = SoftwareRaster.field_l - param2;
-          if (param1 + param3 > SoftwareRaster.field_f) {
-            param3 = param3 - (param1 + param3 - SoftwareRaster.field_f);
+          var14Lifetime2 = param0 + param1 * SoftwareRaster.width;
+          var15 = SoftwareRaster.width - param2;
+          if (param1 + param3 > SoftwareRaster.clipBottom) {
+            param3 = param3 - (param1 + param3 - SoftwareRaster.clipBottom);
           }
-          if (param1 < SoftwareRaster.field_a) {
-            var16 = SoftwareRaster.field_a - param1;
+          if (param1 < SoftwareRaster.clipTop) {
+            var16 = SoftwareRaster.clipTop - param1;
             param3 = param3 - var16;
-            var14Lifetime2 = var14Lifetime2 + var16 * SoftwareRaster.field_l;
+            var14Lifetime2 = var14Lifetime2 + var16 * SoftwareRaster.width;
             var9 = var9 + var13 * var16;
           }
-          if (param0 + param2 > SoftwareRaster.field_e) {
-            var16Lifetime1 = param0 + param2 - SoftwareRaster.field_e;
+          if (param0 + param2 > SoftwareRaster.clipRight) {
+            var16Lifetime1 = param0 + param2 - SoftwareRaster.clipRight;
             param2 = param2 - var16Lifetime1;
             var15 = var15 + var16Lifetime1;
           }
-          if (param0 < SoftwareRaster.field_j) {
-            var16Lifetime2 = SoftwareRaster.field_j - param0;
+          if (param0 < SoftwareRaster.clipLeft) {
+            var16Lifetime2 = SoftwareRaster.clipLeft - param0;
             param2 = param2 - var16Lifetime2;
             var14Lifetime2 = var14Lifetime2 + var16Lifetime2;
             var8 = var8 + var12 * var16Lifetime2;
             var15 = var15 + var16Lifetime2;
           }
-          RgbSprite.a(SoftwareRaster.field_d, this.field_B, 0, var8, var9, var14Lifetime2, var15, param2, param3, var12, var13, var6, param4);
+          RgbSprite.a(SoftwareRaster.pixels, this.pixels, 0, var8, var9, var14Lifetime2, var15, param2, param3, var12, var13, var6, param4);
           return;
         }
     }
@@ -1897,23 +1897,23 @@ class RgbSprite extends qg {
           if (param3 <= 0) {
             return;
           }
-          var5 = this.field_y;
-          var6 = this.field_v;
+          var5 = this.pixelWidth;
+          var6 = this.pixelHeight;
           var7 = 0;
           var8 = 0;
-          var9 = this.field_A;
-          var10 = this.field_x;
+          var9 = this.canvasWidth;
+          var10 = this.canvasHeight;
           var11 = (var9 << 16) / param2;
           var12 = (var10 << 16) / param3;
-          if (this.field_w > 0) {
-            var13 = ((this.field_w << 16) + var11 - 1) / var11;
+          if (this.offsetX > 0) {
+            var13 = ((this.offsetX << 16) + var11 - 1) / var11;
             param0 = param0 + var13;
-            var7 = var7 + (var13 * var11 - (this.field_w << 16));
+            var7 = var7 + (var13 * var11 - (this.offsetX << 16));
           }
-          if (this.field_z > 0) {
-            var13Lifetime1 = ((this.field_z << 16) + var12 - 1) / var12;
+          if (this.offsetY > 0) {
+            var13Lifetime1 = ((this.offsetY << 16) + var12 - 1) / var12;
             param1 = param1 + var13Lifetime1;
-            var8 = var8 + (var13Lifetime1 * var12 - (this.field_z << 16));
+            var8 = var8 + (var13Lifetime1 * var12 - (this.offsetY << 16));
           }
           if (var5 < var9) {
             param2 = ((var5 << 16) - var7 + var11 - 1) / var11;
@@ -1921,30 +1921,30 @@ class RgbSprite extends qg {
           if (var6 < var10) {
             param3 = ((var6 << 16) - var8 + var12 - 1) / var12;
           }
-          var13Lifetime2 = param0 + param1 * SoftwareRaster.field_l;
-          var14 = SoftwareRaster.field_l - param2;
-          if (param1 + param3 > SoftwareRaster.field_f) {
-            param3 = param3 - (param1 + param3 - SoftwareRaster.field_f);
+          var13Lifetime2 = param0 + param1 * SoftwareRaster.width;
+          var14 = SoftwareRaster.width - param2;
+          if (param1 + param3 > SoftwareRaster.clipBottom) {
+            param3 = param3 - (param1 + param3 - SoftwareRaster.clipBottom);
           }
-          if (param1 < SoftwareRaster.field_a) {
-            var15 = SoftwareRaster.field_a - param1;
+          if (param1 < SoftwareRaster.clipTop) {
+            var15 = SoftwareRaster.clipTop - param1;
             param3 = param3 - var15;
-            var13Lifetime2 = var13Lifetime2 + var15 * SoftwareRaster.field_l;
+            var13Lifetime2 = var13Lifetime2 + var15 * SoftwareRaster.width;
             var8 = var8 + var12 * var15;
           }
-          if (param0 + param2 > SoftwareRaster.field_e) {
-            var15Lifetime1 = param0 + param2 - SoftwareRaster.field_e;
+          if (param0 + param2 > SoftwareRaster.clipRight) {
+            var15Lifetime1 = param0 + param2 - SoftwareRaster.clipRight;
             param2 = param2 - var15Lifetime1;
             var14 = var14 + var15Lifetime1;
           }
-          if (param0 < SoftwareRaster.field_j) {
-            var15Lifetime2 = SoftwareRaster.field_j - param0;
+          if (param0 < SoftwareRaster.clipLeft) {
+            var15Lifetime2 = SoftwareRaster.clipLeft - param0;
             param2 = param2 - var15Lifetime2;
             var13Lifetime2 = var13Lifetime2 + var15Lifetime2;
             var7 = var7 + var11 * var15Lifetime2;
             var14 = var14 + var15Lifetime2;
           }
-          RgbSprite.b(SoftwareRaster.field_d, this.field_B, 0, var7, var8, var13Lifetime2, var14, param2, param3, var11, var12, var5);
+          RgbSprite.b(SoftwareRaster.pixels, this.pixels, 0, var7, var8, var13Lifetime2, var14, param2, param3, var11, var12, var5);
           return;
         }
     }
@@ -1969,23 +1969,23 @@ class RgbSprite extends qg {
           if (param3 <= 0) {
             return;
           }
-          var6 = this.field_y;
-          var7 = this.field_v;
+          var6 = this.pixelWidth;
+          var7 = this.pixelHeight;
           var8 = 0;
           var9 = 0;
-          var10 = this.field_A;
-          var11 = this.field_x;
+          var10 = this.canvasWidth;
+          var11 = this.canvasHeight;
           var12 = (var10 << 16) / param2;
           var13 = (var11 << 16) / param3;
-          if (this.field_w > 0) {
-            var14 = ((this.field_w << 16) + var12 - 1) / var12;
+          if (this.offsetX > 0) {
+            var14 = ((this.offsetX << 16) + var12 - 1) / var12;
             param0 = param0 + var14;
-            var8 = var8 + (var14 * var12 - (this.field_w << 16));
+            var8 = var8 + (var14 * var12 - (this.offsetX << 16));
           }
-          if (this.field_z > 0) {
-            var14Lifetime1 = ((this.field_z << 16) + var13 - 1) / var13;
+          if (this.offsetY > 0) {
+            var14Lifetime1 = ((this.offsetY << 16) + var13 - 1) / var13;
             param1 = param1 + var14Lifetime1;
-            var9 = var9 + (var14Lifetime1 * var13 - (this.field_z << 16));
+            var9 = var9 + (var14Lifetime1 * var13 - (this.offsetY << 16));
           }
           if (var6 < var10) {
             param2 = ((var6 << 16) - var8 + var12 - 1) / var12;
@@ -1993,33 +1993,33 @@ class RgbSprite extends qg {
           if (var7 < var11) {
             param3 = ((var7 << 16) - var9 + var13 - 1) / var13;
           }
-          var14Lifetime2 = param0 + param1 * SoftwareRaster.field_l;
-          var15 = SoftwareRaster.field_l - param2;
-          if (param1 + param3 > SoftwareRaster.field_f) {
-            param3 = param3 - (param1 + param3 - SoftwareRaster.field_f);
+          var14Lifetime2 = param0 + param1 * SoftwareRaster.width;
+          var15 = SoftwareRaster.width - param2;
+          if (param1 + param3 > SoftwareRaster.clipBottom) {
+            param3 = param3 - (param1 + param3 - SoftwareRaster.clipBottom);
           }
-          if (param1 < SoftwareRaster.field_a) {
-            var16 = SoftwareRaster.field_a - param1;
+          if (param1 < SoftwareRaster.clipTop) {
+            var16 = SoftwareRaster.clipTop - param1;
             param3 = param3 - var16;
-            var14Lifetime2 = var14Lifetime2 + var16 * SoftwareRaster.field_l;
+            var14Lifetime2 = var14Lifetime2 + var16 * SoftwareRaster.width;
             var9 = var9 + var13 * var16;
           }
-          if (param0 + param2 > SoftwareRaster.field_e) {
-            var16Lifetime1 = param0 + param2 - SoftwareRaster.field_e;
+          if (param0 + param2 > SoftwareRaster.clipRight) {
+            var16Lifetime1 = param0 + param2 - SoftwareRaster.clipRight;
             param2 = param2 - var16Lifetime1;
             var15 = var15 + var16Lifetime1;
           }
-          if (param0 < SoftwareRaster.field_j) {
-            var16Lifetime2 = SoftwareRaster.field_j - param0;
+          if (param0 < SoftwareRaster.clipLeft) {
+            var16Lifetime2 = SoftwareRaster.clipLeft - param0;
             param2 = param2 - var16Lifetime2;
             var14Lifetime2 = var14Lifetime2 + var16Lifetime2;
             var8 = var8 + var12 * var16Lifetime2;
             var15 = var15 + var16Lifetime2;
           }
           if (param4 == 256) {
-            RgbSprite.a(0, 0, 0, var8, this.field_B, SoftwareRaster.field_d, 0, 0, -param3, var9, var14Lifetime2, var15, param2, var12, var13, var6);
+            RgbSprite.a(0, 0, 0, var8, this.pixels, SoftwareRaster.pixels, 0, 0, -param3, var9, var14Lifetime2, var15, param2, var12, var13, var6);
           } else {
-            RgbSprite.a(0, 0, 0, var8, this.field_B, SoftwareRaster.field_d, 0, 0, -param3, var9, var14Lifetime2, var15, param2, var12, var13, var6, param4);
+            RgbSprite.a(0, 0, 0, var8, this.pixels, SoftwareRaster.pixels, 0, 0, -param3, var9, var14Lifetime2, var15, param2, var12, var13, var6, param4);
           }
           return;
         }
@@ -2076,28 +2076,28 @@ class RgbSprite extends qg {
         int var4 = 0;
         int incrementValue$0 = 0;
         int var3 = 0;
-        int[] var1 = new int[this.field_y * this.field_v];
+        int[] var1 = new int[this.pixelWidth * this.pixelHeight];
         int var2 = 0;
         int var3Lifetime1;
         int var3Lifetime2;
         int var3Lifetime3;
-        for (var3 = this.field_y - 1; var3 >= 0; var3--) {
-          for (var4 = 0; var4 < this.field_v; var4++) {
+        for (var3 = this.pixelWidth - 1; var3 >= 0; var3--) {
+          for (var4 = 0; var4 < this.pixelHeight; var4++) {
             incrementValue$0 = var2;
             var2++;
-            var1[incrementValue$0] = this.field_B[var3 + var4 * this.field_y];
+            var1[incrementValue$0] = this.pixels[var3 + var4 * this.pixelWidth];
           }
         }
-        this.field_B = var1;
-        var3Lifetime1 = this.field_w;
-        this.field_w = this.field_z;
-        this.field_z = this.field_A - this.field_y - var3Lifetime1;
-        var3Lifetime2 = this.field_v;
-        this.field_v = this.field_y;
-        this.field_y = var3Lifetime2;
-        var3Lifetime3 = this.field_x;
-        this.field_x = this.field_A;
-        this.field_A = var3Lifetime3;
+        this.pixels = var1;
+        var3Lifetime1 = this.offsetX;
+        this.offsetX = this.offsetY;
+        this.offsetY = this.canvasWidth - this.pixelWidth - var3Lifetime1;
+        var3Lifetime2 = this.pixelHeight;
+        this.pixelHeight = this.pixelWidth;
+        this.pixelWidth = var3Lifetime2;
+        var3Lifetime3 = this.canvasHeight;
+        this.canvasHeight = this.canvasWidth;
+        this.canvasWidth = var3Lifetime3;
     }
 
     private final static void c(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
@@ -2150,35 +2150,35 @@ class RgbSprite extends qg {
           this.g(param0, param1);
           return;
         }
-        param0 = param0 + this.field_w;
-        param1 = param1 + this.field_z;
-        int var4 = param0 + param1 * SoftwareRaster.field_l;
+        param0 = param0 + this.offsetX;
+        param1 = param1 + this.offsetY;
+        int var4 = param0 + param1 * SoftwareRaster.width;
         int var5 = 0;
-        int var6 = this.field_v;
-        int var7 = this.field_y;
-        int var8 = SoftwareRaster.field_l - var7;
+        int var6 = this.pixelHeight;
+        int var7 = this.pixelWidth;
+        int var8 = SoftwareRaster.width - var7;
         int var9 = 0;
-        if (param1 < SoftwareRaster.field_a) {
-          var10 = SoftwareRaster.field_a - param1;
+        if (param1 < SoftwareRaster.clipTop) {
+          var10 = SoftwareRaster.clipTop - param1;
           var6 = var6 - var10;
-          param1 = SoftwareRaster.field_a;
+          param1 = SoftwareRaster.clipTop;
           var5 = var5 + var10 * var7;
-          var4 = var4 + var10 * SoftwareRaster.field_l;
+          var4 = var4 + var10 * SoftwareRaster.width;
         }
-        if (param1 + var6 > SoftwareRaster.field_f) {
-          var6 = var6 - (param1 + var6 - SoftwareRaster.field_f);
+        if (param1 + var6 > SoftwareRaster.clipBottom) {
+          var6 = var6 - (param1 + var6 - SoftwareRaster.clipBottom);
         }
-        if (param0 < SoftwareRaster.field_j) {
-          var10Lifetime1 = SoftwareRaster.field_j - param0;
+        if (param0 < SoftwareRaster.clipLeft) {
+          var10Lifetime1 = SoftwareRaster.clipLeft - param0;
           var7 = var7 - var10Lifetime1;
-          param0 = SoftwareRaster.field_j;
+          param0 = SoftwareRaster.clipLeft;
           var5 = var5 + var10Lifetime1;
           var4 = var4 + var10Lifetime1;
           var9 = var9 + var10Lifetime1;
           var8 = var8 + var10Lifetime1;
         }
-        if (param0 + var7 > SoftwareRaster.field_e) {
-          var10Lifetime2 = param0 + var7 - SoftwareRaster.field_e;
+        if (param0 + var7 > SoftwareRaster.clipRight) {
+          var10Lifetime2 = param0 + var7 - SoftwareRaster.clipRight;
           var7 = var7 - var10Lifetime2;
           var9 = var9 + var10Lifetime2;
           var8 = var8 + var10Lifetime2;
@@ -2187,7 +2187,7 @@ class RgbSprite extends qg {
           if (var6 <= 0) {
             return;
           }
-          RgbSprite.b(SoftwareRaster.field_d, this.field_B, 0, var5, var4, var7, var6, var8, var9, param2);
+          RgbSprite.b(SoftwareRaster.pixels, this.pixels, 0, var5, var4, var7, var6, var8, var9, param2);
           return;
         }
     }
@@ -2243,14 +2243,14 @@ class RgbSprite extends qg {
 
     final RgbSprite g() {
         int var3 = 0;
-        RgbSprite var1 = new RgbSprite(this.field_y, this.field_v);
-        var1.field_A = this.field_A;
-        var1.field_x = this.field_x;
-        var1.field_w = this.field_w;
-        var1.field_z = this.field_z;
-        int var2 = this.field_B.length;
+        RgbSprite var1 = new RgbSprite(this.pixelWidth, this.pixelHeight);
+        var1.canvasWidth = this.canvasWidth;
+        var1.canvasHeight = this.canvasHeight;
+        var1.offsetX = this.offsetX;
+        var1.offsetY = this.offsetY;
+        int var2 = this.pixels.length;
         for (var3 = 0; var3 < var2; var3++) {
-          var1.field_B[var3] = this.field_B[var3];
+          var1.pixels[var3] = this.pixels[var3];
         }
         return var1;
     }
@@ -2287,27 +2287,27 @@ class RgbSprite extends qg {
     final RgbSprite e() {
         int var2 = 0;
         int var3 = 0;
-        RgbSprite var1 = new RgbSprite(this.field_y, this.field_v);
-        var1.field_A = this.field_A;
-        var1.field_x = this.field_x;
-        var1.field_w = this.field_A - this.field_y - this.field_w;
-        var1.field_z = this.field_z;
-        for (var2 = 0; var2 < this.field_v; var2++) {
-          for (var3 = 0; var3 < this.field_y; var3++) {
-            var1.field_B[var2 * this.field_y + var3] = this.field_B[var2 * this.field_y + this.field_y - 1 - var3];
+        RgbSprite var1 = new RgbSprite(this.pixelWidth, this.pixelHeight);
+        var1.canvasWidth = this.canvasWidth;
+        var1.canvasHeight = this.canvasHeight;
+        var1.offsetX = this.canvasWidth - this.pixelWidth - this.offsetX;
+        var1.offsetY = this.offsetY;
+        for (var2 = 0; var2 < this.pixelHeight; var2++) {
+          for (var3 = 0; var3 < this.pixelWidth; var3++) {
+            var1.pixels[var2 * this.pixelWidth + var3] = this.pixels[var2 * this.pixelWidth + this.pixelWidth - 1 - var3];
           }
         }
         return var1;
     }
 
-    RgbSprite(int param0, int param1, int param2, int param3, int param4, int param5, int[] param6) {
-        this.field_A = param0;
-        this.field_x = param1;
-        this.field_w = param2;
-        this.field_z = param3;
-        this.field_y = param4;
-        this.field_v = param5;
-        this.field_B = param6;
+    RgbSprite(int canvasWidth, int canvasHeight, int offsetX, int offsetY, int pixelWidth, int pixelHeight, int[] pixels) {
+        this.canvasWidth = canvasWidth;
+        this.canvasHeight = canvasHeight;
+        this.offsetX = offsetX;
+        this.offsetY = offsetY;
+        this.pixelWidth = pixelWidth;
+        this.pixelHeight = pixelHeight;
+        this.pixels = pixels;
     }
 
     private final static void b(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
@@ -2338,35 +2338,35 @@ class RgbSprite extends qg {
         int var10 = 0;
         int var10Lifetime1;
         int var10Lifetime2;
-        param0 = param0 + this.field_w;
-        param1 = param1 + this.field_z;
-        int var4 = param0 + param1 * SoftwareRaster.field_l;
+        param0 = param0 + this.offsetX;
+        param1 = param1 + this.offsetY;
+        int var4 = param0 + param1 * SoftwareRaster.width;
         int var5 = 0;
-        int var6 = this.field_v;
-        int var7 = this.field_y;
-        int var8 = SoftwareRaster.field_l - var7;
+        int var6 = this.pixelHeight;
+        int var7 = this.pixelWidth;
+        int var8 = SoftwareRaster.width - var7;
         int var9 = 0;
-        if (param1 < SoftwareRaster.field_a) {
-          var10 = SoftwareRaster.field_a - param1;
+        if (param1 < SoftwareRaster.clipTop) {
+          var10 = SoftwareRaster.clipTop - param1;
           var6 = var6 - var10;
-          param1 = SoftwareRaster.field_a;
+          param1 = SoftwareRaster.clipTop;
           var5 = var5 + var10 * var7;
-          var4 = var4 + var10 * SoftwareRaster.field_l;
+          var4 = var4 + var10 * SoftwareRaster.width;
         }
-        if (param1 + var6 > SoftwareRaster.field_f) {
-          var6 = var6 - (param1 + var6 - SoftwareRaster.field_f);
+        if (param1 + var6 > SoftwareRaster.clipBottom) {
+          var6 = var6 - (param1 + var6 - SoftwareRaster.clipBottom);
         }
-        if (param0 < SoftwareRaster.field_j) {
-          var10Lifetime1 = SoftwareRaster.field_j - param0;
+        if (param0 < SoftwareRaster.clipLeft) {
+          var10Lifetime1 = SoftwareRaster.clipLeft - param0;
           var7 = var7 - var10Lifetime1;
-          param0 = SoftwareRaster.field_j;
+          param0 = SoftwareRaster.clipLeft;
           var5 = var5 + var10Lifetime1;
           var4 = var4 + var10Lifetime1;
           var9 = var9 + var10Lifetime1;
           var8 = var8 + var10Lifetime1;
         }
-        if (param0 + var7 > SoftwareRaster.field_e) {
-          var10Lifetime2 = param0 + var7 - SoftwareRaster.field_e;
+        if (param0 + var7 > SoftwareRaster.clipRight) {
+          var10Lifetime2 = param0 + var7 - SoftwareRaster.clipRight;
           var7 = var7 - var10Lifetime2;
           var9 = var9 + var10Lifetime2;
           var8 = var8 + var10Lifetime2;
@@ -2375,7 +2375,7 @@ class RgbSprite extends qg {
           if (var6 <= 0) {
             return;
           }
-          RgbSprite.c(SoftwareRaster.field_d, this.field_B, 0, var5, var4, var7, var6, var8, var9, param2);
+          RgbSprite.c(SoftwareRaster.pixels, this.pixels, 0, var5, var4, var7, var6, var8, var9, param2);
           return;
         }
     }
@@ -2384,35 +2384,35 @@ class RgbSprite extends qg {
         int var9 = 0;
         int var9Lifetime1;
         int var9Lifetime2;
-        param0 = param0 + this.field_w;
-        param1 = param1 + (this.field_x - this.field_v - this.field_z);
-        int var3 = param0 + (param1 + this.field_v - 1) * SoftwareRaster.field_l;
+        param0 = param0 + this.offsetX;
+        param1 = param1 + (this.canvasHeight - this.pixelHeight - this.offsetY);
+        int var3 = param0 + (param1 + this.pixelHeight - 1) * SoftwareRaster.width;
         int var4 = 0;
-        int var5 = this.field_v;
-        int var6 = this.field_y;
-        int var7 = -SoftwareRaster.field_l - var6;
+        int var5 = this.pixelHeight;
+        int var6 = this.pixelWidth;
+        int var7 = -SoftwareRaster.width - var6;
         int var8 = 0;
-        if (param1 < SoftwareRaster.field_a) {
-          var5 = var5 - (SoftwareRaster.field_a - param1);
-          param1 = SoftwareRaster.field_a;
+        if (param1 < SoftwareRaster.clipTop) {
+          var5 = var5 - (SoftwareRaster.clipTop - param1);
+          param1 = SoftwareRaster.clipTop;
         }
-        if (param1 + var5 > SoftwareRaster.field_f) {
-          var9 = param1 + var5 - SoftwareRaster.field_f;
+        if (param1 + var5 > SoftwareRaster.clipBottom) {
+          var9 = param1 + var5 - SoftwareRaster.clipBottom;
           var5 = var5 - var9;
-          var3 = var3 - var9 * SoftwareRaster.field_l;
+          var3 = var3 - var9 * SoftwareRaster.width;
           var4 = var4 + var9 * var6;
         }
-        if (param0 < SoftwareRaster.field_j) {
-          var9Lifetime1 = SoftwareRaster.field_j - param0;
+        if (param0 < SoftwareRaster.clipLeft) {
+          var9Lifetime1 = SoftwareRaster.clipLeft - param0;
           var6 = var6 - var9Lifetime1;
-          param0 = SoftwareRaster.field_j;
+          param0 = SoftwareRaster.clipLeft;
           var4 = var4 + var9Lifetime1;
           var3 = var3 + var9Lifetime1;
           var8 = var8 + var9Lifetime1;
           var7 = var7 + var9Lifetime1;
         }
-        if (param0 + var6 > SoftwareRaster.field_e) {
-          var9Lifetime2 = param0 + var6 - SoftwareRaster.field_e;
+        if (param0 + var6 > SoftwareRaster.clipRight) {
+          var9Lifetime2 = param0 + var6 - SoftwareRaster.clipRight;
           var6 = var6 - var9Lifetime2;
           var8 = var8 + var9Lifetime2;
           var7 = var7 + var9Lifetime2;
@@ -2421,19 +2421,19 @@ class RgbSprite extends qg {
           if (var5 <= 0) {
             return;
           }
-          RgbSprite.a(SoftwareRaster.field_d, this.field_B, 0, var4, var3, var6, var5, var7, var8);
+          RgbSprite.a(SoftwareRaster.pixels, this.pixels, 0, var4, var3, var6, var5, var7, var8);
           return;
         }
     }
 
-    RgbSprite(int param0, int param1) {
-        this.field_B = new int[param0 * param1];
-        this.field_A = param0;
-        this.field_y = param0;
-        this.field_x = param1;
-        this.field_v = param1;
-        this.field_z = 0;
-        this.field_w = 0;
+    RgbSprite(int width, int height) {
+        this.pixels = new int[width * height];
+        this.canvasWidth = width;
+        this.pixelWidth = width;
+        this.canvasHeight = height;
+        this.pixelHeight = height;
+        this.offsetY = 0;
+        this.offsetX = 0;
     }
 
     RgbSprite(byte[] param0, java.awt.Component param1) {
@@ -2447,14 +2447,14 @@ class RgbSprite extends qg {
           var4 = new java.awt.MediaTracker(param1);
           var4.addImage(var3, 0);
           var4.waitForAll();
-          this.field_y = var3.getWidth((java.awt.image.ImageObserver) ((Object) param1));
-          this.field_v = var3.getHeight((java.awt.image.ImageObserver) ((Object) param1));
-          this.field_A = this.field_y;
-          this.field_x = this.field_v;
-          this.field_w = 0;
-          this.field_z = 0;
-          this.field_B = new int[this.field_y * this.field_v];
-          var5 = new java.awt.image.PixelGrabber(var3, 0, 0, this.field_y, this.field_v, this.field_B, 0, this.field_y);
+          this.pixelWidth = var3.getWidth((java.awt.image.ImageObserver) ((Object) param1));
+          this.pixelHeight = var3.getHeight((java.awt.image.ImageObserver) ((Object) param1));
+          this.canvasWidth = this.pixelWidth;
+          this.canvasHeight = this.pixelHeight;
+          this.offsetX = 0;
+          this.offsetY = 0;
+          this.pixels = new int[this.pixelWidth * this.pixelHeight];
+          var5 = new java.awt.image.PixelGrabber(var3, 0, 0, this.pixelWidth, this.pixelHeight, this.pixels, 0, this.pixelWidth);
           var5.grabPixels();
         } catch (java.lang.InterruptedException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -2464,17 +2464,17 @@ class RgbSprite extends qg {
 
     final boolean b(int param0, int param1, int param2, int param3) {
         boolean stackIn_11_0 = false;
-        param2 = param2 - (param0 + this.field_w);
+        param2 = param2 - (param0 + this.offsetX);
         if (param2 < 0) {
           return false;
         }
-        if (param2 >= this.field_y) {
+        if (param2 >= this.pixelWidth) {
           return false;
         }
-        param3 = param3 - (param1 + this.field_z);
+        param3 = param3 - (param1 + this.offsetY);
         if (param3 >= 0 &&
-          param3 < this.field_v) {
-          stackIn_11_0 = (this.field_B[param3 * this.field_y + param2] != 0);
+          param3 < this.pixelHeight) {
+          stackIn_11_0 = (this.pixels[param3 * this.pixelWidth + param2] != 0);
           return stackIn_11_0;
         }
         return false;
@@ -2484,35 +2484,35 @@ class RgbSprite extends qg {
         int var9 = 0;
         int var9Lifetime1;
         int var9Lifetime2;
-        param0 = param0 + this.field_w;
-        param1 = param1 + this.field_z;
-        int var3 = param0 + param1 * SoftwareRaster.field_l;
+        param0 = param0 + this.offsetX;
+        param1 = param1 + this.offsetY;
+        int var3 = param0 + param1 * SoftwareRaster.width;
         int var4 = 0;
-        int var5 = this.field_v;
-        int var6 = this.field_y;
-        int var7 = SoftwareRaster.field_l - var6;
+        int var5 = this.pixelHeight;
+        int var6 = this.pixelWidth;
+        int var7 = SoftwareRaster.width - var6;
         int var8 = 0;
-        if (param1 < SoftwareRaster.field_a) {
-          var9 = SoftwareRaster.field_a - param1;
+        if (param1 < SoftwareRaster.clipTop) {
+          var9 = SoftwareRaster.clipTop - param1;
           var5 = var5 - var9;
-          param1 = SoftwareRaster.field_a;
+          param1 = SoftwareRaster.clipTop;
           var4 = var4 + var9 * var6;
-          var3 = var3 + var9 * SoftwareRaster.field_l;
+          var3 = var3 + var9 * SoftwareRaster.width;
         }
-        if (param1 + var5 > SoftwareRaster.field_f) {
-          var5 = var5 - (param1 + var5 - SoftwareRaster.field_f);
+        if (param1 + var5 > SoftwareRaster.clipBottom) {
+          var5 = var5 - (param1 + var5 - SoftwareRaster.clipBottom);
         }
-        if (param0 < SoftwareRaster.field_j) {
-          var9Lifetime1 = SoftwareRaster.field_j - param0;
+        if (param0 < SoftwareRaster.clipLeft) {
+          var9Lifetime1 = SoftwareRaster.clipLeft - param0;
           var6 = var6 - var9Lifetime1;
-          param0 = SoftwareRaster.field_j;
+          param0 = SoftwareRaster.clipLeft;
           var4 = var4 + var9Lifetime1;
           var3 = var3 + var9Lifetime1;
           var8 = var8 + var9Lifetime1;
           var7 = var7 + var9Lifetime1;
         }
-        if (param0 + var6 > SoftwareRaster.field_e) {
-          var9Lifetime2 = param0 + var6 - SoftwareRaster.field_e;
+        if (param0 + var6 > SoftwareRaster.clipRight) {
+          var9Lifetime2 = param0 + var6 - SoftwareRaster.clipRight;
           var6 = var6 - var9Lifetime2;
           var8 = var8 + var9Lifetime2;
           var7 = var7 + var9Lifetime2;
@@ -2521,7 +2521,7 @@ class RgbSprite extends qg {
           if (var5 <= 0) {
             return;
           }
-          RgbSprite.a(SoftwareRaster.field_d, this.field_B, 0, var4, var3, var6, var5, var7, var8);
+          RgbSprite.a(SoftwareRaster.pixels, this.pixels, 0, var4, var3, var6, var5, var7, var8);
           return;
         }
     }

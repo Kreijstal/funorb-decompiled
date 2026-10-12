@@ -3,7 +3,7 @@
  */
 final class UnitLossCondition implements MatchCondition {
     static je field_f;
-    static ru field_a;
+    static IndexedSprite field_a;
     private int playerId;
     private Battlefield battlefield;
     static co[] field_d;

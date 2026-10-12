@@ -849,8 +849,8 @@ final class BattleCamera {
                 var28 >= 0 &&
                 var23 > var28) {
                 var29 = var24 + var22 * var28;
-                var30 = SoftwareRaster.field_d[var29];
-                var31 = dd.field_k.field_B[var21 + var25 * 80];
+                var30 = SoftwareRaster.pixels[var29];
+                var31 = dd.field_k.pixels[var21 + var25 * 80];
                 if (var30 != 0) {
                   var32 = (16745529 & var26) >> 15;
                   if (var32 > 255) {
@@ -868,7 +868,7 @@ final class BattleCamera {
                   var37 = var37 >> 8;
                   var38 = var38 >> 8;
                   var30 = (var33 * var36 & -16777216 | 65280 & var37 * var34 | 16711680 & var38 * var35) >> 8;
-                  SoftwareRaster.field_d[var29] = var30;
+                  SoftwareRaster.pixels[var29] = var30;
                 }
               }
               var26 = var26 + var27;
@@ -972,8 +972,8 @@ final class BattleCamera {
               0 <= var27 &&
               var20 > var27)) {
               var28 = var21 + var19 * var27;
-              var29 = SoftwareRaster.field_d[var28];
-              var30 = dd.field_k.field_B[var22 * 80 + var18];
+              var29 = SoftwareRaster.pixels[var28];
+              var30 = dd.field_k.pixels[var22 * 80 + var18];
               if (var29 != 0) {
                 var31 = (16772243 & var23) >> 15;
                 if (255 < var31) {
@@ -991,7 +991,7 @@ final class BattleCamera {
                 var37 = var37 >> 8;
                 var36 = var36 >> 8;
                 var29 = (var37 * var34 & 16711680 | (var36 * var33 & 65280 | var32 * var35 & -16777216)) >> 8;
-                SoftwareRaster.field_d[var28] = var29;
+                SoftwareRaster.pixels[var28] = var29;
               }
             }
             var25++;

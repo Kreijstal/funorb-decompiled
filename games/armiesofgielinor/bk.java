@@ -8,7 +8,7 @@ final class bk {
     static tp field_a;
     static String field_c;
     static NodeDeque field_e;
-    static ru[] field_d;
+    static IndexedSprite[] field_d;
     static String field_h;
 
     final static void a(boolean param0, boolean param1, af param2, int param3, int param4) {
@@ -30,7 +30,7 @@ final class bk {
           vd.field_b.writeInt((byte) -69, CombatEvent.field_L[1]);
           vd.field_b.writeInt((byte) -125, CombatEvent.field_L[2]);
           vd.field_b.writeInt((byte) -89, CombatEvent.field_L[3]);
-          pr.a(vd.field_b, (byte) -84);
+          PaletteRegionMap.a(vd.field_b, (byte) -84);
           vd.field_b.writeShort(true, param4);
           param2.a(vd.field_b, -11436);
           vl.field_n.position = 0;
@@ -138,10 +138,10 @@ final class bk {
           CombatEvent.field_A[4] = 16711935;
           fm.field_d[2] = 16736352;
           var12 = new RgbSprite(4, 4);
-          var13 = var12.field_B;
-          var14 = var12.field_B;
-          var15 = var12.field_B;
-          var12.field_B[15] = 7368816;
+          var13 = var12.pixels;
+          var14 = var12.pixels;
+          var15 = var12.pixels;
+          var12.pixels[15] = 7368816;
           var14[5] = 7368816;
           var13[2] = 7368816;
           var15[8] = 7368816;

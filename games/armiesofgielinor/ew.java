@@ -41,9 +41,9 @@ abstract class ew {
         int var18Lifetime1;
         var20 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          var2_int = param1.field_y;
-          var3 = param1.field_v;
-          var4 = param1.field_B;
+          var2_int = param1.pixelWidth;
+          var3 = param1.pixelHeight;
+          var4 = param1.pixels;
           var5 = var2_int >> 2;
           var6 = var3 >> 2;
           if (param0 != 107) {
@@ -51,7 +51,7 @@ abstract class ew {
             ew.a((String) null, (byte) 84);
           }
           var7 = new nj(var5, var6);
-          var23 = var7.field_B;
+          var23 = var7.pixels;
           var22 = var23;
           var8 = var22;
           for (var9 = 0; var3 > var9; var9 += 4) {

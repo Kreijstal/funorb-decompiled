@@ -25,13 +25,13 @@ final class pd {
     }
 
     final static int a(int param0, int param1, int param2, int param3) {
-        if (param0 + param3 + param2 <= SoftwareRaster.field_g) {
+        if (param0 + param3 + param2 <= SoftwareRaster.height) {
           return param3 + param2;
         }
         if (param2 - param0 >= param1) {
           return -param0 + param2;
         }
-        return -param0 + SoftwareRaster.field_g;
+        return -param0 + SoftwareRaster.height;
     }
 
     final static boolean a(String param0, int param1) {

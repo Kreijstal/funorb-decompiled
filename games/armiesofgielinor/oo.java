@@ -5,7 +5,7 @@ final class oo {
     private String field_c;
     private RgbSprite field_b;
     private int field_p;
-    private ru[] field_i;
+    private IndexedSprite[] field_i;
     private UiSelectionState field_h;
     private String[] field_k;
     static byte[][] field_d;
@@ -38,7 +38,7 @@ final class oo {
         }
     }
 
-    private final void a(String param0, byte param1, ru[] param2, java.applet.Applet param3, boolean param4, String[] param5) {
+    private final void a(String param0, byte param1, IndexedSprite[] param2, java.applet.Applet param3, boolean param4, String[] param5) {
         String var7 = null;
         RuntimeException stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;
@@ -433,7 +433,7 @@ final class oo {
           }
           this.field_b.g(376, 339);
           this.field_t.g(9, 9);
-          UnitLossCondition.field_a.a(0, 0);
+          UnitLossCondition.field_a.draw(0, 0);
           if (mg.field_d != null) {
             mg.field_d.g(9, 257);
             mg.field_d.d(558, 257);
@@ -467,7 +467,7 @@ final class oo {
           ll.field_Sb.a(db.field_e[0], 17, 428, 111, 35, 16754688, -1, 1, 1, 0);
           ll.field_Sb.a(db.field_e[1], 138, 428, 111, 35, 16754688, -1, 1, 1, 0);
           ll.field_Sb.a(db.field_e[2], 259, 428, 111, 35, 16754688, -1, 1, 1, 0);
-          ar.field_D.g((127 - ar.field_D.field_A) / 2 + 508, 315);
+          ar.field_D.g((127 - ar.field_D.canvasWidth) / 2 + 508, 315);
           if (0 != this.field_h.selectedIndex) {
             if (this.field_h.selectedIndex == 1) {
               nh.field_G[1].g(508, 387);
@@ -485,14 +485,14 @@ final class oo {
 
     private final void d(int param0) {
         RuntimeException decompiledCaughtException = null;
-        ru var2 = null;
+        IndexedSprite var2 = null;
         RuntimeException var2_ref = null;
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
-        ru var6 = null;
-        ru var7 = null;
-        ru var2Lifetime1;
+        IndexedSprite var6 = null;
+        IndexedSprite var7 = null;
+        IndexedSprite var2Lifetime1;
         var5 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           if (null == this.field_i) {
@@ -511,18 +511,18 @@ final class oo {
               ll.field_Sb.a(ef.field_a, 9, 58, 622, 196, 16754688, -1, 1, 1, 0);
             }
           } else {
-            var6.a(9, 58);
+            var6.draw(9, 58);
           }
           if (this.field_p < qk.field_a) {
             var7 = this.field_i[this.field_q];
             var2Lifetime1 = var7;
             if (var2Lifetime1 != null) {
-              var3 = this.field_p * (var7.field_g + 60) / qk.field_a;
+              var3 = this.field_p * (var7.canvasWidth + 60) / qk.field_a;
               var4 = var3 - 30;
               if (!this.field_s) {
-                rb.a(58, -1708086482, 9, 256 * (var7.field_g - var4) / 30, var4 * -256 / 30, var7);
+                rb.a(58, -1708086482, 9, 256 * (var7.canvasWidth - var4) / 30, var4 * -256 / 30, var7);
               } else {
-                rb.a(58, param0 ^ -1708085583, 9, var4 * -256 / 30, 256 * (-var4 + var7.field_g) / 30, var7);
+                rb.a(58, param0 ^ -1708085583, 9, var4 * -256 / 30, 256 * (-var4 + var7.canvasWidth) / 30, var7);
               }
             }
           }
@@ -563,7 +563,7 @@ final class oo {
           if (param6 >= -108) {
             oo.b(-32);
           }
-          param0.c((int)((float)(-param2) / param9), (int)((float)(-param1) / param9), (int)((float)param0.field_y / param9), (int)((float)param0.field_v / param9));
+          param0.c((int)((float)(-param2) / param9), (int)((float)(-param1) / param9), (int)((float)param0.pixelWidth / param9), (int)((float)param0.pixelHeight / param9));
           this.a(param5, var11_int, param3, 0, param4, (byte) 79, var12, 0);
           rf.b(-18862);
           CombatSandbox.a(param0, 3);
@@ -684,17 +684,17 @@ final class oo {
             var10 = cj.a(526344, 526344, 126);
             var5 = new RgbSprite(121, 122);
             CombatSandbox.a(var5, 3);
-            SoftwareRaster.a(0, 0, var5.field_y, var5.field_v / 2, 16180917, 16306250);
-            SoftwareRaster.a(0, var5.field_v / 2, var5.field_y, var5.field_v, 16306250, 15568919);
+            SoftwareRaster.a(0, 0, var5.pixelWidth, var5.pixelHeight / 2, 16180917, 16306250);
+            SoftwareRaster.a(0, var5.pixelHeight / 2, var5.pixelWidth, var5.pixelHeight, 16306250, 15568919);
             var6 = rv.field_a;
             var7 = wp.field_B;
-            this.a(var5, -16, 0, var6, kt.field_n, var10, -112, var5.field_v, var5.field_y, 0.5f);
-            this.a(var5, 20, 0, var7, kt.field_n, var10, -123, var5.field_v, var5.field_y, 0.5f);
-            this.a(var5, 12 - kt.field_n.field_H + var5.field_v / 2, 0, AnimationSequence.field_c[this.field_r], kt.field_n, var10, -125, var5.field_v / 3, var5.field_y, 0.699999988079071f);
+            this.a(var5, -16, 0, var6, kt.field_n, var10, -112, var5.pixelHeight, var5.pixelWidth, 0.5f);
+            this.a(var5, 20, 0, var7, kt.field_n, var10, -123, var5.pixelHeight, var5.pixelWidth, 0.5f);
+            this.a(var5, 12 - kt.field_n.field_H + var5.pixelHeight / 2, 0, AnimationSequence.field_c[this.field_r], kt.field_n, var10, -125, var5.pixelHeight / 3, var5.pixelWidth, 0.699999988079071f);
             rf.b(-18862);
             this.field_b = new RgbSprite(121, 122);
             CombatSandbox.a(this.field_b, 3);
-            var5.a(this.field_b.field_y / 2, this.field_b.field_v / 2, -2048, 4096);
+            var5.a(this.field_b.pixelWidth / 2, this.field_b.pixelHeight / 2, -2048, 4096);
             rf.b(-18862);
             return;
           }
@@ -758,7 +758,7 @@ final class oo {
         }
     }
 
-    oo(java.applet.Applet param0, String param1, ru[] param2, String[] param3) {
+    oo(java.applet.Applet param0, String param1, IndexedSprite[] param2, String[] param3) {
         RuntimeException runtimeException = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;

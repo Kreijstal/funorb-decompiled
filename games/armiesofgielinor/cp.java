@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class cp {
-    static ru[] field_e;
+    static IndexedSprite[] field_e;
     static boolean field_h;
     static String field_g;
     static int field_a;

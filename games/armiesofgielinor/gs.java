@@ -17,8 +17,8 @@ final class gs implements kh {
           le.field_c = new RgbSprite[op.field_c[0].length];
           rq.a((byte) -56);
           for (var1_int = 0; var1_int < op.field_c[0].length; var1_int++) {
-            ds.field_a[var1_int] = new RgbSprite(vo.field_d.field_y, vo.field_d.field_v);
-            le.field_c[var1_int] = new RgbSprite(im.field_y.field_y, im.field_y.field_v);
+            ds.field_a[var1_int] = new RgbSprite(vo.field_d.pixelWidth, vo.field_d.pixelHeight);
+            le.field_c[var1_int] = new RgbSprite(im.field_y.pixelWidth, im.field_y.pixelHeight);
             ds.field_a[var1_int].b();
             vo.field_d.d(0, 0, op.field_c[0][var1_int]);
             le.field_c[var1_int].b();
@@ -172,13 +172,13 @@ final class gs implements kh {
             var7Lifetime1 = var6_intLifetime1 + (-5 + (param1 + param0.field_B)) + (param0.field_l - (param0.field_l >> 1));
             var8Lifetime1 = -(var6_intLifetime1 * 2) + (param0.field_l >> 1);
             var9 = var6_intLifetime1 + (param4 + (param0.field_p + (-4 + param0.field_w >> 1)));
-            if (var9 >= SoftwareRaster.field_a &&
-              SoftwareRaster.field_f > var9) {
-              if (SoftwareRaster.field_j < var7Lifetime1) {
-                SoftwareRaster.field_d[var9 * SoftwareRaster.field_l - (-var7Lifetime1 + 1)] = rn.a(SoftwareRaster.field_d[-1 + (var7Lifetime1 + SoftwareRaster.field_l * var9)], 16711422) >> 1;
+            if (var9 >= SoftwareRaster.clipTop &&
+              SoftwareRaster.clipBottom > var9) {
+              if (SoftwareRaster.clipLeft < var7Lifetime1) {
+                SoftwareRaster.pixels[var9 * SoftwareRaster.width - (-var7Lifetime1 + 1)] = rn.a(SoftwareRaster.pixels[-1 + (var7Lifetime1 + SoftwareRaster.width * var9)], 16711422) >> 1;
               }
-              if (var8Lifetime1 + var7Lifetime1 < SoftwareRaster.field_e) {
-                SoftwareRaster.field_d[SoftwareRaster.field_l * var9 + (var7Lifetime1 + var8Lifetime1)] = rn.a(16711422, SoftwareRaster.field_d[SoftwareRaster.field_l * var9 + var7Lifetime1 + var8Lifetime1]) >> 1;
+              if (var8Lifetime1 + var7Lifetime1 < SoftwareRaster.clipRight) {
+                SoftwareRaster.pixels[SoftwareRaster.width * var9 + (var7Lifetime1 + var8Lifetime1)] = rn.a(16711422, SoftwareRaster.pixels[SoftwareRaster.width * var9 + var7Lifetime1 + var8Lifetime1]) >> 1;
               }
             }
             SoftwareRaster.e(var7Lifetime1, var9, var8Lifetime1, 0);

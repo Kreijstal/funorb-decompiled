@@ -82,8 +82,8 @@ final class CombatViewTransition {
         try {
           try {
             var7 = this.transitionFactor;
-            var6 = param1.field_x;
-            var5 = param1.field_A;
+            var6 = param1.canvasHeight;
+            var5 = param1.canvasWidth;
             var5Lifetime1 = this.field_d[0];
             var6Lifetime1 = this.field_d[1];
             var4 = -(var6Lifetime1 >> 1) + (this.field_l >> 1);

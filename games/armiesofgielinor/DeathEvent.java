@@ -150,9 +150,9 @@ final class DeathEvent extends GameEvent {
         String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          no.field_P.field_v = SoftwareRaster.field_g;
-          no.field_P.field_B = SoftwareRaster.field_d;
-          no.field_P.field_y = SoftwareRaster.field_l;
+          no.field_P.pixelHeight = SoftwareRaster.height;
+          no.field_P.pixels = SoftwareRaster.pixels;
+          no.field_P.pixelWidth = SoftwareRaster.width;
           ku.field_J.b();
           SoftwareRaster.b();
           MatchSetupPanel.a(-1, -1, param1, -1, false, param0, -1, false, 0, false, 0, param2);

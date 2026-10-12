@@ -30,8 +30,8 @@ final class qh {
             wi.a(param1, 255, param3, param5, MapTile.field_f);
           }
         } else {
-          if (SoftwareRaster.field_l == tq.field_c &&
-            SoftwareRaster.field_g == bm.field_p) {
+          if (SoftwareRaster.width == tq.field_c &&
+            SoftwareRaster.height == bm.field_p) {
             if (!param9) {
               va.field_u = (-640 + tq.field_c) / 2;
               je.c(param9, -120);
@@ -86,8 +86,8 @@ final class qh {
             hg.field_b = hg.field_b + 1;
             return;
           }
-          if (so.field_b.field_g == SoftwareRaster.field_g &&
-            SoftwareRaster.field_l == so.field_b.field_a) {
+          if (so.field_b.field_g == SoftwareRaster.height &&
+            SoftwareRaster.width == so.field_b.field_a) {
             if (null != vu.field_M) {
               je.a(45, false);
               if (param9) {
@@ -210,14 +210,14 @@ final class qh {
     final static void a(boolean param0, int param1) {
         if (param1 == 0) {
           if (null != Spell.field_d) {
-            SoftwareRaster.d(SoftwareRaster.field_j, SoftwareRaster.field_a, -SoftwareRaster.field_j + SoftwareRaster.field_e, -SoftwareRaster.field_a + SoftwareRaster.field_f);
+            SoftwareRaster.d(SoftwareRaster.clipLeft, SoftwareRaster.clipTop, -SoftwareRaster.clipLeft + SoftwareRaster.clipRight, -SoftwareRaster.clipTop + SoftwareRaster.clipBottom);
             Spell.field_d.b(param0, 20);
           }
           return;
         }
         qh.a((byte) -15);
         if (null != Spell.field_d) {
-          SoftwareRaster.d(SoftwareRaster.field_j, SoftwareRaster.field_a, -SoftwareRaster.field_j + SoftwareRaster.field_e, -SoftwareRaster.field_a + SoftwareRaster.field_f);
+          SoftwareRaster.d(SoftwareRaster.clipLeft, SoftwareRaster.clipTop, -SoftwareRaster.clipLeft + SoftwareRaster.clipRight, -SoftwareRaster.clipTop + SoftwareRaster.clipBottom);
           Spell.field_d.b(param0, 20);
         }
     }

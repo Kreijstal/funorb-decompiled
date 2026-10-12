@@ -170,13 +170,13 @@ final class CoatOfArms {
         String stackIn_9_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          no.field_P.field_v = SoftwareRaster.field_g;
+          no.field_P.pixelHeight = SoftwareRaster.height;
           if (param1 != -70) {
             var5 = (String) null;
             this.a(false, true, (byte) -47, true, false, true, -69, (String) null, 102);
           }
-          no.field_P.field_B = SoftwareRaster.field_d;
-          no.field_P.field_y = SoftwareRaster.field_l;
+          no.field_P.pixels = SoftwareRaster.pixels;
+          no.field_P.pixelWidth = SoftwareRaster.width;
           ku.field_J.b();
           SoftwareRaster.b();
           if (!param2) {
@@ -223,14 +223,14 @@ final class CoatOfArms {
         int[] var21 = null;
         var17 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          no.field_P.field_v = SoftwareRaster.field_g;
-          no.field_P.field_B = SoftwareRaster.field_d;
-          no.field_P.field_y = SoftwareRaster.field_l;
+          no.field_P.pixelHeight = SoftwareRaster.height;
+          no.field_P.pixels = SoftwareRaster.pixels;
+          no.field_P.pixelWidth = SoftwareRaster.width;
           if (param8) {
             if (null == dv.field_k ||
               param1 != t.field_f) {
-              dv.field_k = a.field_m[0].g();
-              var21 = dv.field_k.field_B;
+              dv.field_k = RegionAnchor.field_m[0].g();
+              var21 = dv.field_k.pixels;
               var20 = var21;
               var19 = var20;
               var11 = var19;
@@ -257,14 +257,14 @@ final class CoatOfArms {
           if (!param7) {
             if (!param0) {
               if (param3) {
-                a.field_m[3].g(0, 0);
+                RegionAnchor.field_m[3].g(0, 0);
               }
             } else {
-              fe.a(a.field_m[2], 0, 0);
-              a.field_m[2].f(0, 0, 228);
+              fe.a(RegionAnchor.field_m[2], 0, 0);
+              RegionAnchor.field_m[2].f(0, 0, 228);
             }
           } else {
-            a.field_m[1].g(0, 0);
+            RegionAnchor.field_m[1].g(0, 0);
           }
           no.field_P.b();
           ku.field_J.e(param4, param2);
@@ -298,9 +298,9 @@ final class CoatOfArms {
         int var11 = 0;
         var11 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          no.field_P.field_v = SoftwareRaster.field_g;
-          no.field_P.field_B = SoftwareRaster.field_d;
-          no.field_P.field_y = SoftwareRaster.field_l;
+          no.field_P.pixelHeight = SoftwareRaster.height;
+          no.field_P.pixels = SoftwareRaster.pixels;
+          no.field_P.pixelWidth = SoftwareRaster.width;
           ku.field_J.b();
           SoftwareRaster.b();
           if (!param3) {
@@ -312,15 +312,15 @@ final class CoatOfArms {
             cc.a(0, -1, this.parts, -1, -1, false, -1, param7, this.colourIndices, 0);
           }
           if (param0) {
-            a.field_m[1].g(0, 0);
+            RegionAnchor.field_m[1].g(0, 0);
           } else {
             if (!param5) {
               if (param4) {
-                a.field_m[3].g(0, 0);
+                RegionAnchor.field_m[3].g(0, 0);
               }
             } else {
-              fe.a(a.field_m[2], 0, 0);
-              a.field_m[2].f(0, 0, 228);
+              fe.a(RegionAnchor.field_m[2], 0, 0);
+              RegionAnchor.field_m[2].f(0, 0, 228);
             }
           }
           if (param2 != 68) {
@@ -365,11 +365,11 @@ final class CoatOfArms {
           if (param7 <= 16) {
             field_d = (byte[]) null;
           }
-          no.field_P.field_y = SoftwareRaster.field_l;
-          no.field_P.field_B = SoftwareRaster.field_d;
-          no.field_P.field_v = SoftwareRaster.field_g;
+          no.field_P.pixelWidth = SoftwareRaster.width;
+          no.field_P.pixels = SoftwareRaster.pixels;
+          no.field_P.pixelHeight = SoftwareRaster.height;
           if (param6) {
-            a.field_m[0].d(-40 + param0, -30 + param4, 184, 184, 256);
+            RegionAnchor.field_m[0].d(-40 + param0, -30 + param4, 184, 184, 256);
           }
           ku.field_J.b();
           SoftwareRaster.b();
@@ -377,14 +377,14 @@ final class CoatOfArms {
           if (!param3) {
             if (!param2) {
               if (param5) {
-                a.field_m[3].g(0, 0);
+                RegionAnchor.field_m[3].g(0, 0);
               }
             } else {
-              fe.a(a.field_m[2], 0, 0);
-              a.field_m[2].f(0, 0, 228);
+              fe.a(RegionAnchor.field_m[2], 0, 0);
+              RegionAnchor.field_m[2].f(0, 0, 228);
             }
           } else {
-            a.field_m[1].g(0, 0);
+            RegionAnchor.field_m[1].g(0, 0);
           }
           no.field_P.b();
           ku.field_J.h(param0, param4);

@@ -182,27 +182,27 @@ final class ui {
           var11 = 1;
           if (var11 != 0) {
             if (var7 != 0) {
-              l.field_b[30].a(param1, param4);
+              l.field_b[30].draw(param1, param4);
             }
             if (var5 != 0) {
-              l.field_b[29].a(param1, param4);
+              l.field_b[29].draw(param1, param4);
             }
-            l.field_b[24].a(param1, param4);
+            l.field_b[24].draw(param1, param4);
             if (var6 != 0) {
-              l.field_b[27].a(param1, param4);
+              l.field_b[27].draw(param1, param4);
             }
             if (var8 != 0) {
-              l.field_b[28].a(param1, param4);
+              l.field_b[28].draw(param1, param4);
             }
           } else {
             if (var7 != 0 &&
               var8 != 0) {
-              l.field_b[26].a(param1, param4);
+              l.field_b[26].draw(param1, param4);
               return;
             }
             if (var5 != 0 &&
               var6 != 0) {
-              l.field_b[25].a(param1, param4);
+              l.field_b[25].draw(param1, param4);
             }
           }
           return;
@@ -212,23 +212,23 @@ final class ui {
             var11Lifetime1 = 1;
             if (var11Lifetime1 == 0) {
               if (var8 != 0) {
-                l.field_b[26].a(param1, param4);
+                l.field_b[26].draw(param1, param4);
                 return;
               }
               if (var6 == 0) {
                 return;
               }
-              l.field_b[25].a(param1, param4);
+              l.field_b[25].draw(param1, param4);
               return;
             }
-            l.field_b[30].a(param1, param4);
-            l.field_b[29].a(param1, param4);
-            l.field_b[24].a(param1, param4);
+            l.field_b[30].draw(param1, param4);
+            l.field_b[29].draw(param1, param4);
+            l.field_b[24].draw(param1, param4);
             if (var6 != 0) {
-              l.field_b[27].a(param1, param4);
+              l.field_b[27].draw(param1, param4);
             }
             if (var8 != 0) {
-              l.field_b[28].a(param1, param4);
+              l.field_b[28].draw(param1, param4);
             }
             return;
           }
@@ -243,17 +243,17 @@ final class ui {
           }
           var11Lifetime1Lifetime1 = stackIn_57_0;
           if (var11Lifetime1Lifetime1 != 0) {
-            l.field_b[29].a(param1, param4);
-            l.field_b[24].a(param1, param4);
+            l.field_b[29].draw(param1, param4);
+            l.field_b[24].draw(param1, param4);
             if (var6 != 0) {
-              l.field_b[27].a(param1, param4);
+              l.field_b[27].draw(param1, param4);
             }
             if (var8 != 0) {
-              l.field_b[28].a(param1, param4);
+              l.field_b[28].draw(param1, param4);
             }
           } else {
             if (var6 != 0) {
-              l.field_b[25].a(param1, param4);
+              l.field_b[25].draw(param1, param4);
             }
           }
           return;
@@ -263,30 +263,30 @@ final class ui {
           if (var11Lifetime2 == 0) {
             if (var7 != 0 &&
               var8 != 0) {
-              l.field_b[26].a(param1, param4);
+              l.field_b[26].draw(param1, param4);
               return;
             }
             return;
           }
           if (var7 != 0) {
-            l.field_b[30].a(param1, param4);
+            l.field_b[30].draw(param1, param4);
           } else {
           }
-          l.field_b[24].a(param1, param4);
+          l.field_b[24].draw(param1, param4);
           if (var8 == 0) {
             return;
           }
-          l.field_b[28].a(param1, param4);
+          l.field_b[28].draw(param1, param4);
           return;
         }
         if (var7 == 0) {
           stackIn_177_0 = (var8 == 0) ? 0 : 1;
           var11Lifetime3 = stackIn_177_0;
           if (var11Lifetime3 != 0) {
-            l.field_b[24].a(param1, param4);
-            l.field_b[27].a(param1, param4);
+            l.field_b[24].draw(param1, param4);
+            l.field_b[27].draw(param1, param4);
             if (var8 != 0) {
-              l.field_b[28].a(param1, param4);
+              l.field_b[28].draw(param1, param4);
             }
           } else {
           }
@@ -295,16 +295,16 @@ final class ui {
         var11Lifetime4 = 1;
         if (var11Lifetime4 == 0) {
           if (var8 != 0) {
-            l.field_b[26].a(param1, param4);
+            l.field_b[26].draw(param1, param4);
             return;
           }
           return;
         }
-        l.field_b[30].a(param1, param4);
-        l.field_b[24].a(param1, param4);
-        l.field_b[27].a(param1, param4);
+        l.field_b[30].draw(param1, param4);
+        l.field_b[24].draw(param1, param4);
+        l.field_b[27].draw(param1, param4);
         if (var8 != 0) {
-          l.field_b[28].a(param1, param4);
+          l.field_b[28].draw(param1, param4);
         }
     }
 

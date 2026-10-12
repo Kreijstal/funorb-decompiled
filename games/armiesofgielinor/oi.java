@@ -91,7 +91,7 @@ final class oi implements kh {
           var8 = db.field_a[1];
           if (param0 instanceof fw &&
             ((fw) (param0)).field_K) {
-            var8.f((param0.field_l - var8.field_A >> 1) + (1 + var6_int), (-var8.field_x + param0.field_w >> 1) + (1 + var7), 256);
+            var8.f((param0.field_l - var8.canvasWidth >> 1) + (1 + var6_int), (-var8.canvasHeight + param0.field_w >> 1) + (1 + var7), 256);
           }
           if (!param0.a(false)) {
             return;

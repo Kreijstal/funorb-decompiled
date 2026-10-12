@@ -8,7 +8,7 @@ final class ig extends IntrusiveNode {
     private boolean[] field_q;
     static String field_m;
     int[][] field_l;
-    static ru field_t;
+    static IndexedSprite field_t;
     static String field_r;
     int[] field_s;
     int field_o;

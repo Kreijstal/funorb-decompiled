@@ -38,7 +38,7 @@ final class tl implements Iterator {
         int var8 = 0;
         try {
           try {
-            var9 = si.field_b.getGraphics();
+            var9 = IndexedSpriteBase.field_b.getGraphics();
             if (null == BattleCharacter.field_g) {
               BattleCharacter.field_g = new java.awt.Font("Helvetica", 1, 13);
             }
@@ -51,7 +51,7 @@ final class tl implements Iterator {
             }
             try {
               if (gp.field_e == null) {
-                gp.field_e = si.field_b.createImage(304, 34);
+                gp.field_e = IndexedSpriteBase.field_b.createImage(304, 34);
               }
               var10 = gp.field_e.getGraphics();
               var10.setColor(param1);
@@ -92,7 +92,7 @@ final class tl implements Iterator {
           } catch (java.lang.Exception decompiledCaughtParameter1) {
             decompiledCaughtException = decompiledCaughtParameter1;
             var5 = (Exception) (Object) decompiledCaughtException;
-            si.field_b.repaint();
+            IndexedSpriteBase.field_b.repaint();
             return;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter2) {

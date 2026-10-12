@@ -254,7 +254,7 @@ abstract class rb implements n {
         return this.c(118);
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int param4, ru param5) {
+    final static void a(int param0, int param1, int param2, int param3, int param4, IndexedSprite param5) {
         int incrementValue$0 = 0;
         RuntimeException stackIn_34_0 = null;
         StringBuilder stackIn_34_1 = null;
@@ -281,41 +281,41 @@ abstract class rb implements n {
         int var14Lifetime3;
         var20 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          var6_int = (-param4 + param3 << 8) / param5.field_g;
-          var7 = var6_int * param5.field_i + (param4 << 8);
-          param2 = param2 + param5.field_i;
-          param0 = param0 + param5.field_d;
-          var8 = param2 + SoftwareRaster.field_l * param0;
+          var6_int = (-param4 + param3 << 8) / param5.canvasWidth;
+          var7 = var6_int * param5.offsetX + (param4 << 8);
+          param2 = param2 + param5.offsetX;
+          param0 = param0 + param5.offsetY;
+          var8 = param2 + SoftwareRaster.width * param0;
           var9 = 0;
-          var10 = param5.field_h;
-          var11 = param5.field_e;
-          var12 = SoftwareRaster.field_l - var11;
-          if (param0 < SoftwareRaster.field_a) {
-            var14 = SoftwareRaster.field_a - param0;
-            param0 = SoftwareRaster.field_a;
+          var10 = param5.pixelHeight;
+          var11 = param5.pixelWidth;
+          var12 = SoftwareRaster.width - var11;
+          if (param0 < SoftwareRaster.clipTop) {
+            var14 = SoftwareRaster.clipTop - param0;
+            param0 = SoftwareRaster.clipTop;
             var10 = var10 - var14;
             var9 = var9 + var11 * var14;
-            var8 = var8 + SoftwareRaster.field_l * var14;
+            var8 = var8 + SoftwareRaster.width * var14;
           }
           if (param1 != -1708086482) {
             rb.e(-63);
           }
           var13 = 0;
-          if (param2 < SoftwareRaster.field_j) {
-            var14Lifetime1 = SoftwareRaster.field_j - param2;
+          if (param2 < SoftwareRaster.clipLeft) {
+            var14Lifetime1 = SoftwareRaster.clipLeft - param2;
             var9 = var9 + var14Lifetime1;
             var8 = var8 + var14Lifetime1;
-            param2 = SoftwareRaster.field_j;
+            param2 = SoftwareRaster.clipLeft;
             var13 = var13 + var14Lifetime1;
             var12 = var12 + var14Lifetime1;
             var7 = var7 + var6_int * var14Lifetime1;
             var11 = var11 - var14Lifetime1;
           }
-          if (SoftwareRaster.field_f < var10 + param0) {
-            var10 = var10 - (param0 + var10 - SoftwareRaster.field_f);
+          if (SoftwareRaster.clipBottom < var10 + param0) {
+            var10 = var10 - (param0 + var10 - SoftwareRaster.clipBottom);
           }
-          if (SoftwareRaster.field_e < var11 + param2) {
-            var14Lifetime2 = -SoftwareRaster.field_e + param2 + var11;
+          if (SoftwareRaster.clipRight < var11 + param2) {
+            var14Lifetime2 = -SoftwareRaster.clipRight + param2 + var11;
             var12 = var12 + var14Lifetime2;
             var13 = var13 + var14Lifetime2;
             var11 = var11 - var14Lifetime2;
@@ -331,14 +331,14 @@ abstract class rb implements n {
                 if (0 <= var15) {
                   incrementValue$0 = var9;
                   var9++;
-                  var17 = param5.field_j[param5.field_k[incrementValue$0] & 255];
+                  var17 = param5.palette[param5.pixelIndices[incrementValue$0] & 255];
                   if (0 != var17) {
                     if (255 < var15) {
-                      SoftwareRaster.field_d[var8] = var17;
+                      SoftwareRaster.pixels[var8] = var17;
                     } else {
-                      var18 = SoftwareRaster.field_d[var8];
+                      var18 = SoftwareRaster.pixels[var8];
                       var19 = (var17 & 16711935) * var15 + (16711935 & var18) * var16 >> 8 & 16711935;
-                      SoftwareRaster.field_d[var8] = var19 + rn.a(65280, rn.a(var17, 65280) * var15 + rn.a(var18, 65280) * var16 >> 8);
+                      SoftwareRaster.pixels[var8] = var19 + rn.a(65280, rn.a(var17, 65280) * var15 + rn.a(var18, 65280) * var16 >> 8);
                     }
                   }
                   var8++;

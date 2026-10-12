@@ -44,7 +44,7 @@ final class se {
             stackIn_11_0 = ct.field_m;
             return stackIn_11_0;
           }
-          if (si.a(param0, -3404)) {
+          if (IndexedSpriteBase.a(param0, -3404)) {
             stackIn_14_0 = fo.a(4800, ts.field_k, new String[]{param0});
             return stackIn_14_0;
           }

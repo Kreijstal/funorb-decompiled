@@ -11,14 +11,14 @@ final class co {
     static int[][] field_p;
     int field_d;
     static String[] field_k;
-    ru[] field_m;
-    ru[] field_w;
+    IndexedSprite[] field_m;
+    IndexedSprite[] field_w;
     static int field_h;
     static String field_r;
     static int field_f;
     int[] field_i;
     String field_e;
-    ru[] field_g;
+    IndexedSprite[] field_g;
     RgbSprite[] field_u;
     static String field_j;
     String field_q;

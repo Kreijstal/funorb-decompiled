@@ -50,10 +50,10 @@ final class vi {
         long var1 = System.currentTimeMillis();
         int var3 = -1 / ((-3 - param0) / 38);
         if (!(var1 >= h.field_a)) {
-          si.field_c = si.field_c + (-var1 + h.field_a);
+          IndexedSpriteBase.field_c = IndexedSpriteBase.field_c + (-var1 + h.field_a);
         }
         h.field_a = var1;
-        return si.field_c + var1;
+        return IndexedSpriteBase.field_c + var1;
     }
 
     static {

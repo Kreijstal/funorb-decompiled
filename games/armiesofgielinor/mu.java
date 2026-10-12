@@ -4,7 +4,7 @@
 final class mu {
     static cg field_a;
     static java.math.BigInteger field_c;
-    static ru[][] field_g;
+    static IndexedSprite[][] field_g;
     static int field_d;
     static String field_e;
     static int field_f;
@@ -68,12 +68,12 @@ final class mu {
           }
           MapLayout.a(var4, 19003);
           var12 = (BitmapFont) null;
-          hf.field_f = pr.a(65793, 2245737, 65793, 65793, 8947848, 0, (BitmapFont) null, 1127256, 1513239, 4020342, 5138823, (byte) 39, 1513239);
-          vs.field_g = pr.a(param1, 0, 0, 0, 0, 16764006, param0, 0, 0, 0, 0, (byte) 107, 0);
-          uj.field_n = pr.a(0, 0, 0, 0, 0, 16777215, param0, 0, 0, 0, 0, (byte) -124, 0);
-          var5 = SoftwareRaster.field_l;
-          var6 = SoftwareRaster.field_g;
-          var16 = SoftwareRaster.field_d;
+          hf.field_f = PaletteRegionMap.a(65793, 2245737, 65793, 65793, 8947848, 0, (BitmapFont) null, 1127256, 1513239, 4020342, 5138823, (byte) 39, 1513239);
+          vs.field_g = PaletteRegionMap.a(param1, 0, 0, 0, 0, 16764006, param0, 0, 0, 0, 0, (byte) 107, 0);
+          uj.field_n = PaletteRegionMap.a(0, 0, 0, 0, 0, 16777215, param0, 0, 0, 0, 0, (byte) -124, 0);
+          var5 = SoftwareRaster.width;
+          var6 = SoftwareRaster.height;
+          var16 = SoftwareRaster.pixels;
           s.field_c = new RgbSprite(10, 14);
           s.field_c.b();
           for (var8 = 2; var8 < 7; var8++) {
@@ -104,7 +104,7 @@ final class mu {
     }
 
     public static void a(int param0) {
-        field_g = (ru[][]) null;
+        field_g = (IndexedSprite[][]) null;
         field_c = null;
         if (param0 == 0) {
           field_b = null;
@@ -112,7 +112,7 @@ final class mu {
           field_e = null;
           return;
         }
-        field_g = (ru[][]) null;
+        field_g = (IndexedSprite[][]) null;
         field_b = null;
         field_a = null;
         field_e = null;

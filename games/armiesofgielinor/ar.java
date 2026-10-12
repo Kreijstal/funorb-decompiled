@@ -70,7 +70,7 @@ final class ar extends ms {
         return var4.missions[missionIndex];
     }
 
-    final static void a(RgbSprite[][] param0, int[] param1, byte param2, byte[] param3, int param4, kl param5, kl param6, byte[] param7, String[] param8, int[] param9, boolean param10, int param11, String[][] param12, ru[] param13, kl param14, String[][] param15, RgbSprite[][] param16) {
+    final static void a(RgbSprite[][] param0, int[] param1, byte param2, byte[] param3, int param4, kl param5, kl param6, byte[] param7, String[] param8, int[] param9, boolean param10, int param11, String[][] param12, IndexedSprite[] param13, kl param14, String[][] param15, RgbSprite[][] param16) {
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
         String stackIn_5_2 = null;

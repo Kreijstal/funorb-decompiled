@@ -116,7 +116,7 @@ final class ck {
         if (null != ActionSpell.field_e) {
           ActionSpell.field_e.b(124);
         }
-        si.field_b.requestFocus();
+        IndexedSpriteBase.field_b.requestFocus();
         if (param0 < -50) {
           return;
         }

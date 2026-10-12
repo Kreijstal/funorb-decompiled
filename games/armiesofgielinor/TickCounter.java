@@ -1479,7 +1479,7 @@ final class TickCounter {
                 }
                 var2 = fk.a(false, "ACTION_NOTYOURS");
                 if (null != var2) {
-                  si.field_a = uu.a(var2, (byte) 77);
+                  IndexedSpriteBase.field_a = uu.a(var2, (byte) 77);
                 }
                 var2 = fk.a(false, "ACTION_FIXED");
                 if (null != var2) {
@@ -1559,35 +1559,35 @@ final class TickCounter {
                 }
                 var2 = fk.a(false, "STATUS_ARMOUR,0");
                 if (var2 != null) {
-                  pr.field_a[0] = uu.a(var2, (byte) 40);
+                  PaletteRegionMap.field_a[0] = uu.a(var2, (byte) 40);
                 }
                 var2 = fk.a(false, "STATUS_ARMOUR,1");
                 if (null != var2) {
-                  pr.field_a[1] = uu.a(var2, (byte) 80);
+                  PaletteRegionMap.field_a[1] = uu.a(var2, (byte) 80);
                 }
                 var2 = fk.a(false, "STATUS_ARMOUR,2");
                 if (null != var2) {
-                  pr.field_a[2] = uu.a(var2, (byte) -97);
+                  PaletteRegionMap.field_a[2] = uu.a(var2, (byte) -97);
                 }
                 var2 = fk.a(false, "STATUS_ARMOUR,3");
                 if (var2 != null) {
-                  pr.field_a[3] = uu.a(var2, (byte) 83);
+                  PaletteRegionMap.field_a[3] = uu.a(var2, (byte) 83);
                 }
                 var2 = fk.a(false, "STATUS_ARMOUR,4");
                 if (null != var2) {
-                  pr.field_a[4] = uu.a(var2, (byte) -117);
+                  PaletteRegionMap.field_a[4] = uu.a(var2, (byte) -117);
                 }
                 var2 = fk.a(false, "STATUS_ARMOUR,5");
                 if (null != var2) {
-                  pr.field_a[5] = uu.a(var2, (byte) 127);
+                  PaletteRegionMap.field_a[5] = uu.a(var2, (byte) 127);
                 }
                 var2 = fk.a(false, "STATUS_ARMOUR,6");
                 if (var2 != null) {
-                  pr.field_a[6] = uu.a(var2, (byte) 14);
+                  PaletteRegionMap.field_a[6] = uu.a(var2, (byte) 14);
                 }
                 var2 = fk.a(false, "STATUS_ARMOUR,7");
                 if (null != var2) {
-                  pr.field_a[7] = uu.a(var2, (byte) -100);
+                  PaletteRegionMap.field_a[7] = uu.a(var2, (byte) -100);
                 }
                 var2 = fk.a(false, "STATUS_STUN,0");
                 if (null != var2) {
@@ -5043,7 +5043,7 @@ final class TickCounter {
                 }
                 var2 = fk.a(false, "TERROR_NOGOD");
                 if (var2 != null) {
-                  a.field_n = uu.a(var2, (byte) 49);
+                  RegionAnchor.field_n = uu.a(var2, (byte) 49);
                 }
                 var2 = fk.a(false, "TERROR_GODMAXED");
                 if (var2 != null) {
@@ -5731,7 +5731,7 @@ final class TickCounter {
                   l.field_b[17].b(param7, -40 + param3, param0, param8);
                   mv.a(param7 + 20, (byte) -95, ug.field_b + param4, var11, param3);
                   if (var11 > -1) {
-                    ks.a(ActionRequest.unitModels[76][var11], false, -40 + param3, pr.field_g, 128, 150, param7, (js) null, -10374);
+                    ks.a(ActionRequest.unitModels[76][var11], false, -40 + param3, PaletteRegionMap.field_g, 128, 150, param7, (js) null, -10374);
                   }
                   l.field_b[16].b(param7, -40 + param3, param0, param8);
                 }
@@ -5739,7 +5739,7 @@ final class TickCounter {
                   if (var11 > -1) {
                     mv.a(param7 + 20, (byte) -74, param4 + ug.field_b, var11, param3);
                   }
-                  ks.a(ActionRequest.unitModels[76][var11], false, param3 - 40, pr.field_g, 128, 150, param7, (js) null, -10374);
+                  ks.a(ActionRequest.unitModels[76][var11], false, param3 - 40, PaletteRegionMap.field_g, 128, 150, param7, (js) null, -10374);
                 }
                 if ((var10 != 3 ||
                   var13 != 0) &&
@@ -5756,7 +5756,7 @@ final class TickCounter {
                     if (8 != var10) {
                       switch (var10) {
                         case 9:
-                          l.field_b[var9_int % 2 + 14].a(param7, -40 + param3);
+                          l.field_b[var9_int % 2 + 14].draw(param7, -40 + param3);
                           if (var13 == 0) {
                             break regionExit1;
                           }

@@ -23,7 +23,7 @@ final class cg {
         ub.$cfr$intArgs$a$6d836999ad61(70, im.field_v[13]);
         for (var2 = param0; this.field_h > var2; var2++) {
           for (var3 = 0; var3 < this.field_f; var3++) {
-            this.field_e[var2 + this.field_h * var3] = SoftwareRaster.field_d[this.field_l + var2 + (this.field_k + var3) * SoftwareRaster.field_l];
+            this.field_e[var2 + this.field_h * var3] = SoftwareRaster.pixels[this.field_l + var2 + (this.field_k + var3) * SoftwareRaster.width];
           }
         }
     }
@@ -55,15 +55,15 @@ final class cg {
         for (var3 = 0; this.field_h > var3; var3++) {
           for (var4 = 0; this.field_f > var4; var4++) {
             var5 = this.field_h * var4 + var3;
-            var6 = this.field_l + (var3 + SoftwareRaster.field_l * (var4 + this.field_k));
+            var6 = this.field_l + (var3 + SoftwareRaster.width * (var4 + this.field_k));
             if (this.field_d[var5] > param1) {
               if (this.field_d[var5] <= 8 + param1) {
-                var7 = SoftwareRaster.field_d[var6];
+                var7 = SoftwareRaster.pixels[var6];
                 var8 = this.field_e[var5];
                 var9 = (-param1 + this.field_d[var5]) * 256 / 8;
-                SoftwareRaster.field_d[var6] = oe.c(oe.c(var9 * rn.a(var8, 255) + rn.a(var7, 255) * (-var9 + 256) >> 8, rn.a(var9 * (rn.a(var8, 65280) >> 8) + (-var9 + 256) * (rn.a(var7, 65280) >> 8), 65280)), rn.a((rn.a(var7, 16711680) >> 16) * (256 - var9) + (rn.a(var8, 16711680) >> 16) * var9 << 8, 16711851));
+                SoftwareRaster.pixels[var6] = oe.c(oe.c(var9 * rn.a(var8, 255) + rn.a(var7, 255) * (-var9 + 256) >> 8, rn.a(var9 * (rn.a(var8, 65280) >> 8) + (-var9 + 256) * (rn.a(var7, 65280) >> 8), 65280)), rn.a((rn.a(var7, 16711680) >> 16) * (256 - var9) + (rn.a(var8, 16711680) >> 16) * var9 << 8, 16711851));
               } else {
-                SoftwareRaster.field_d[var6] = this.field_e[var5];
+                SoftwareRaster.pixels[var6] = this.field_e[var5];
               }
             }
           }

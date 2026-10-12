@@ -52,8 +52,8 @@ final class pg {
 
     final static void a(boolean param0) {
         ck.b(-111);
-        if (si.field_b != null) {
-          dt.a(si.field_b, 23678);
+        if (IndexedSpriteBase.field_b != null) {
+          dt.a(IndexedSpriteBase.field_b, 23678);
         }
         hi.a((byte) 41);
         pf.a(-15291);

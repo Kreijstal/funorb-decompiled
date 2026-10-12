@@ -41,7 +41,7 @@ final class TutorialController {
           var9 = this.getItemTopY(itemIndex, true);
           if (var4_int == 17 ||
             var4_int == 18) {
-            var6 = kt.field_o[0].field_y + wd.field_b;
+            var6 = kt.field_o[0].pixelWidth + wd.field_b;
           }
           var10 = -var6 + var7 + var8 >> 1;
           var11 = var10;
@@ -277,7 +277,7 @@ final class TutorialController {
                 stackIn_70_2 = db.a(true, 620);
                 stackIn_70_3 = MatchConditionEntry.a(19, (byte) 94);
               }
-              if (wg.a(stackIn_70_0, stackIn_70_1, stackIn_70_2, stackIn_70_3, MatchConditionEntry.a(e.field_b[0].field_v + 19, (byte) 94))) {
+              if (wg.a(stackIn_70_0, stackIn_70_1, stackIn_70_2, stackIn_70_3, MatchConditionEntry.a(e.field_b[0].pixelHeight + 19, (byte) 94))) {
                 CipherPacketBuffer.a(true, -9, 1, 0);
                 ub.$cfr$intArgs$a$6d836999ad61(91, im.field_v[2]);
                 return;
@@ -392,7 +392,7 @@ final class TutorialController {
               if (fa.field_j != 2 &&
                 wg.a(-33, db.a(true, 279), db.a(true, 293), MatchConditionEntry.a(68 + ou.field_c, (byte) 94), MatchConditionEntry.a(60 - (-ou.field_c - 24), (byte) 94))) {
                 fa.field_j = 2;
-                qg.field_u = -ou.field_c + (-68 + ko.field_b);
+                RgbSpriteBase.field_u = -ou.field_c + (-68 + ko.field_b);
               }
               if (wg.a(-33, db.a(true, 469), db.a(param0, 606), MatchConditionEntry.a(384, (byte) 94), MatchConditionEntry.a(416, (byte) 94))) {
                 var4Lifetime1 = 4;
@@ -431,7 +431,7 @@ final class TutorialController {
           }
           if (1 != fa.field_j &&
             wg.a(-33, db.a(true, 589), db.a(param0, 603), MatchConditionEntry.a(ep.field_o + 158, (byte) 94), MatchConditionEntry.a(150 - (-ep.field_o - 24), (byte) 94))) {
-            qg.field_u = ko.field_b - (158 + ep.field_o);
+            RgbSpriteBase.field_u = ko.field_b - (158 + ep.field_o);
             fa.field_j = 1;
           }
           if (!param0) {
@@ -517,7 +517,7 @@ final class TutorialController {
             stackIn_26_1 = ah.field_b;
           }
           if (stackIn_26_0 <= stackIn_26_1) {
-            a.field_m[0].d(db.a(true, 10), MatchConditionEntry.a(130, (byte) 94), 310, 310, 256);
+            RegionAnchor.field_m[0].d(db.a(true, 10), MatchConditionEntry.a(130, (byte) 94), 310, 310, 256);
           }
           stackIn_32_0 = MatchConditionEntry.a(165, (byte) 94);
           stackIn_32_1 = true;
@@ -610,14 +610,14 @@ final class TutorialController {
           if (eo.field_a == null) {
             return;
           }
-          boolean decompiledSharedTail0 = !(158 >= eo.field_a.field_v);
+          boolean decompiledSharedTail0 = !(158 >= eo.field_a.pixelHeight);
           if (!decompiledSharedTail0) {
             SoftwareRaster.f(db.a(param0, 589), MatchConditionEntry.a(157, (byte) 94), 14, 156, 1250067);
             mp.field_Jb.g(db.a(param0, 590), MatchConditionEntry.a(158, (byte) 94), 128);
             decompiledSharedTail0 = (var4 != 0);
           }
           if (decompiledSharedTail0) {
-            var2_int = ep.field_o * (-155 + eo.field_a.field_v) / 137;
+            var2_int = ep.field_o * (-155 + eo.field_a.pixelHeight) / 137;
             SoftwareRaster.f(db.a(true, 589), MatchConditionEntry.a(157, (byte) 94), 14, 156, 2302755);
             mp.field_Jb.g(db.a(true, 590), MatchConditionEntry.a(158 + ep.field_o, (byte) 94));
           }
@@ -630,7 +630,7 @@ final class TutorialController {
           }
           if (1 == fa.field_j) {
             if (ro.field_ub == 1) {
-              var3 = -158 - qg.field_u + ko.field_b;
+              var3 = -158 - RgbSpriteBase.field_u + ko.field_b;
               if (0 > var3) {
                 ep.field_o = 0;
                 if (var4 != 0) {
@@ -879,7 +879,7 @@ final class TutorialController {
           }
           var4Lifetime1 = 275 + (rs.field_n.field_H + 110);
           if (var7 != null) {
-            fe.c((String) (var7), SoftwareRaster.field_l / 2, SoftwareRaster.field_g / 2, field_e, true);
+            fe.c((String) (var7), SoftwareRaster.width / 2, SoftwareRaster.height / 2, field_e, true);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -2853,7 +2853,7 @@ final class TutorialController {
           }
           var10 = MatchConditionEntry.a(260 + var7, (byte) 94);
           if (var8 != 0) {
-            qu.field_k[var6].a(db.a(true, 82), -14 + var10);
+            qu.field_k[var6].draw(db.a(true, 82), -14 + var10);
             if (var17 != 0) {
               if (!pn.field_n[var6] ||
                 !(df.field_M <= 0)) {
@@ -2898,14 +2898,14 @@ final class TutorialController {
             var10 = var10 + var7;
             var14++;
           } while (var17 == 0);
-          var15 = var10 - (rs.field_n.field_H + CorpseConditionMarker.field_v.field_v) / 2;
+          var15 = var10 - (rs.field_n.field_H + CorpseConditionMarker.field_v.pixelHeight) / 2;
           var16 = 0;
           while (true) {
             if (var16 >= na.field_J[var6]) {
               return;
             }
             CorpseConditionMarker.field_v.g(var14, var15);
-            var14 = var14 + CorpseConditionMarker.field_v.field_y / 3;
+            var14 = var14 + CorpseConditionMarker.field_v.pixelWidth / 3;
             var16++;
             if (var17 != 0) {
               return;
@@ -3089,7 +3089,7 @@ final class TutorialController {
           var22 = 12;
           en.field_E.a(param3, 0, 30, var7_int, var17, var18, var19, var20, var21, var22);
           if (-1 < param1) {
-            ro.field_rb[param1].a(0, var14 + 25);
+            ro.field_rb[param1].draw(0, var14 + 25);
             en.field_E.b(hi.field_m[param1], 23, 30 + var14 + 8, var18, var19);
           }
           en.field_E.a(param0, 0, var14 + (30 + var9), var7_int, var17, var18, var19, var20, var21, var22);
@@ -3543,7 +3543,7 @@ final class TutorialController {
             stackIn_60_0 = var7;
           }
           if (decompiledFrameRemainder1) {
-            fe.c((String) (stackIn_60_0), SoftwareRaster.field_l / 2, SoftwareRaster.field_g / 2, field_e, true);
+            fe.c((String) (stackIn_60_0), SoftwareRaster.width / 2, SoftwareRaster.height / 2, field_e, true);
           }
           var8 = 30 / ((param0 + 12) / 41);
           var5Lifetime2 = 385 + rs.field_n.field_H;
@@ -3796,7 +3796,7 @@ final class TutorialController {
           var5Lifetime1 = 40 + (nr.field_e.a(ig.field_m) >> 1);
           fm.a(e.field_b, var5Lifetime1, db.a(true, 620 - var5Lifetime1), MatchConditionEntry.a(19, (byte) 94), -104);
           fe.a(ig.field_m, db.a(true, 640 - var5Lifetime1), MatchConditionEntry.a(49, (byte) 94), 16777215, true);
-          if (wg.a(-33, db.a(true, 620 - var5Lifetime1), db.a(true, 620), MatchConditionEntry.a(19, (byte) 94), MatchConditionEntry.a(e.field_b[0].field_v + 19, (byte) 94))) {
+          if (wg.a(-33, db.a(true, 620 - var5Lifetime1), db.a(true, 620), MatchConditionEntry.a(19, (byte) 94), MatchConditionEntry.a(e.field_b[0].pixelHeight + 19, (byte) 94))) {
             na.field_F = 45;
           }
           if (TelepopEvent.field_D) {
@@ -4070,7 +4070,7 @@ final class TutorialController {
           if (fa.field_j != 1 &&
             wg.a(-33, db.a(true, 589), db.a(true, 603), MatchConditionEntry.a(158 + ep.field_o, (byte) 94), MatchConditionEntry.a(150 + (ep.field_o + 24), (byte) 94))) {
             fa.field_j = 1;
-            qg.field_u = -ep.field_o - (158 - ko.field_b);
+            RgbSpriteBase.field_u = -ep.field_o - (158 - ko.field_b);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -4498,7 +4498,7 @@ final class TutorialController {
               decompiledFrameRemainder0 = (var3 != 0);
             }
             if (decompiledFrameRemainder0) {
-              var2_int = ko.field_b + (-qg.field_u - 68);
+              var2_int = ko.field_b + (-RgbSpriteBase.field_u - 68);
               if (var2_int < 0) {
                 ou.field_c = 0;
                 if (var3 != 0) {
@@ -5584,7 +5584,7 @@ final class TutorialController {
                             fe.b(MoveEvent.tutorialLayout.getLeftX(this.tutorialStage, 29), MoveEvent.tutorialLayout.getTopY(this.tutorialStage, (byte) -106) - (-MoveEvent.tutorialLayout.getItemSpacing(this.tutorialStage, (byte) -33) - 10), MoveEvent.tutorialLayout.getRightX((byte) -125, this.tutorialStage) - MoveEvent.tutorialLayout.getLeftX(this.tutorialStage, 29), -10 + (MoveEvent.tutorialLayout.getBottomY(-6, this.tutorialStage) - MoveEvent.tutorialLayout.getTopY(this.tutorialStage, (byte) -125) - MoveEvent.tutorialLayout.getItemSpacing(this.tutorialStage, (byte) 113)), io.field_m, nd.field_b, 0, 128);
                             fe.b(10 + MoveEvent.tutorialLayout.getLeftX(this.tutorialStage, 29), 10 + MoveEvent.tutorialLayout.getTopY(this.tutorialStage, (byte) -104) + (MoveEvent.tutorialLayout.getItemSpacing(this.tutorialStage, (byte) -22) + 10), -20 + MoveEvent.tutorialLayout.getRightX((byte) 115, this.tutorialStage) - MoveEvent.tutorialLayout.getLeftX(this.tutorialStage, 29), MoveEvent.tutorialLayout.getBottomY(-6, this.tutorialStage) + (-MoveEvent.tutorialLayout.getTopY(this.tutorialStage, (byte) -120) - MoveEvent.tutorialLayout.getItemSpacing(this.tutorialStage, (byte) -125) - 10) - 20, io.field_m, field_e, 0, 128);
                             var2_int = so.field_b.field_a;
-                            ol.field_y.g(var2_int / 2 - ol.field_y.field_A / 2, 50 + MoveEvent.tutorialLayout.getTopY(this.tutorialStage, (byte) -111) - ol.field_y.field_x);
+                            ol.field_y.g(var2_int / 2 - ol.field_y.canvasWidth / 2, 50 + MoveEvent.tutorialLayout.getTopY(this.tutorialStage, (byte) -111) - ol.field_y.canvasHeight);
                             decompiledFrameRemainder0 = (var4 != 0);
                           }
                           if (decompiledFrameRemainder0) {
@@ -5772,7 +5772,7 @@ final class TutorialController {
               if (this.tutorialStage != 11) {
                 return;
               }
-              TrianglePulse.field_i.a(pr.field_i, MoveEvent.tutorialLayout.getLeftX(11, 29) + 20, 20 + MoveEvent.tutorialLayout.getTopY(11, (byte) -105), -40 + MoveEvent.tutorialLayout.getRightX((byte) 105, 11) - MoveEvent.tutorialLayout.getLeftX(11, 29), 1000, 16777215, -1, 0, 0, TrianglePulse.field_i.field_H);
+              TrianglePulse.field_i.a(PaletteRegionMap.field_i, MoveEvent.tutorialLayout.getLeftX(11, 29) + 20, 20 + MoveEvent.tutorialLayout.getTopY(11, (byte) -105), -40 + MoveEvent.tutorialLayout.getRightX((byte) 105, 11) - MoveEvent.tutorialLayout.getLeftX(11, 29), 1000, 16777215, -1, 0, 0, TrianglePulse.field_i.field_H);
               if (var4 == 0) {
                 return;
               }

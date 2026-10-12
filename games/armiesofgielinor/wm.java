@@ -124,7 +124,7 @@ final class wm {
             AnimationPlayer.field_g > var5) {
             var10_int = kp.a(var8_ref_mo.field_b, -125);
             if (var8_ref_mo.a(true) >= var10_int && (var8_ref_mo.field_f ||
-              !si.a(var8_ref_mo.field_m, -3404))) {
+              !IndexedSpriteBase.a(var8_ref_mo.field_m, -3404))) {
               var9 = 1;
             }
           }

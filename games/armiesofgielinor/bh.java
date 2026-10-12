@@ -82,8 +82,8 @@ final class bh extends nl {
         int var2 = mj.field_c * mj.field_c;
         int var3 = -(gk.field_J * gk.field_J) + var2;
         if (!param0) {
-          no.field_T.a(-4 + (SoftwareRaster.field_g - 120) - 90, -20500, 199, 90, var1 - var3 * 199 / var2);
-          ov.field_i.a(-4 + (SoftwareRaster.field_g - 120), -20500, 438, 0, var3 * 438 / var2 + 202 + var1);
+          no.field_T.a(-4 + (SoftwareRaster.height - 120) - 90, -20500, 199, 90, var1 - var3 * 199 / var2);
+          ov.field_i.a(-4 + (SoftwareRaster.height - 120), -20500, 438, 0, var3 * 438 / var2 + 202 + var1);
           return;
         }
     }

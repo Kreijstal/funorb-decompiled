@@ -1,12 +1,12 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class a extends IntrusiveNode {
-    int field_p;
+final class RegionAnchor extends IntrusiveNode {
+    int column;
     static RgbSprite[] field_m;
     static String field_n;
     static String field_k;
-    int field_l;
+    int row;
     static kl field_o;
 
     final static int a(int param0, int param1, int param2, int param3) {
@@ -241,7 +241,7 @@ final class a extends IntrusiveNode {
         field_k = null;
         field_n = null;
         if (!param0) {
-          a.a(-107, -22, -114, 71);
+          RegionAnchor.a(-107, -22, -114, 71);
         }
     }
 
@@ -259,7 +259,7 @@ final class a extends IntrusiveNode {
           }
           var3 = new Unit();
           if (obfuscationGuard <= 31) {
-            a.a(96, (byte) -94);
+            RegionAnchor.a(96, (byte) -94);
           }
           no.readTaggedFields(packet, var3, recordBitLength, -24721);
           stackIn_6_0 = var3;
@@ -288,9 +288,9 @@ final class a extends IntrusiveNode {
         var2.writeByte(1, 2);
     }
 
-    a(int param0, int param1) {
-        this.field_p = param0;
-        this.field_l = param1;
+    RegionAnchor(int column, int row) {
+        this.column = column;
+        this.row = row;
     }
 
     static {

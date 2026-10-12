@@ -175,11 +175,11 @@ final class ak extends ju {
         }
     }
 
-    final static ru[] a(int param0, kl param1, int param2, int param3) {
+    final static IndexedSprite[] a(int param0, kl param1, int param2, int param3) {
         RuntimeException var4 = null;
         Object stackIn_2_0 = null;
-        ru[] stackIn_5_0 = null;
-        ru[] stackIn_7_0 = null;
+        IndexedSprite[] stackIn_5_0 = null;
+        IndexedSprite[] stackIn_7_0 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
@@ -187,13 +187,13 @@ final class ak extends ju {
         try {
           if (!kp.a(false, param3, param1, param0)) {
             stackIn_2_0 = null;
-            return (ru[]) (stackIn_2_0);
+            return (IndexedSprite[]) (stackIn_2_0);
           }
           if (param2 == 0) {
             stackIn_7_0 = lr.a(111);
             return stackIn_7_0;
           }
-          stackIn_5_0 = (ru[]) null;
+          stackIn_5_0 = (IndexedSprite[]) null;
           return stackIn_5_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -351,8 +351,8 @@ final class ak extends ju {
     }
 
     final static void b(boolean param0) {
-        tq.field_c = SoftwareRaster.field_l;
-        bm.field_p = SoftwareRaster.field_g;
+        tq.field_c = SoftwareRaster.width;
+        bm.field_p = SoftwareRaster.height;
         bh.d(false);
         SpellCastEvent.field_E.a(-2 + no.field_T.field_ob - 40, (byte) -124, 0, no.field_T.field_gb, 0);
         t.field_g.a(jn.field_d, -20500, GlobalSpell.field_f.field_gb, 0, 0);

@@ -22,7 +22,7 @@ final class CampaignMenu {
     private CampaignMenuButton field_j;
     private CampaignMenuButton field_h;
     private CampaignMenuButton field_o;
-    private pr regionMap;
+    private PaletteRegionMap regionMap;
     private NodeHashTable campaignEntries;
 
     final void draw(byte obfuscationGuard) {
@@ -154,7 +154,7 @@ final class CampaignMenu {
           vk.field_e[0] = new RgbSprite(vc.field_m.a("campaign_1.jpg", -105, ""), (java.awt.Component) ((Object) ll.p(0)));
           vk.field_e[1] = new RgbSprite(vc.field_m.a("campaign_2.jpg", 13, ""), (java.awt.Component) ((Object) ll.p(0)));
           vk.field_e[2] = new RgbSprite(vc.field_m.a("campaign_3.jpg", -91, ""), (java.awt.Component) ((Object) ll.p(0)));
-          mu.field_g = new ru[3][3];
+          mu.field_g = new IndexedSprite[3][3];
           var2_int = 0;
           while (3 > var2_int) {
             var3 = "campaign_map" + (var2_int + 1);
@@ -199,7 +199,7 @@ final class CampaignMenu {
           if (obfuscationGuard < 119) {
             this.rebuildMissionEntries(4, 127);
           }
-          mu.field_g = (ru[][]) null;
+          mu.field_g = (IndexedSprite[][]) null;
           DeployAction.field_D = null;
           System.gc();
           return;
@@ -342,7 +342,7 @@ final class CampaignMenu {
             boolean decompiledSharedTail0 = (this.selectedCampaignEntry == null ||
               this.selectedCampaignEntry.entryId != -1);
             if (!decompiledSharedTail0) {
-              this.selectedCampaignEntry.previewSprite.f(-(this.selectedCampaignEntry.previewSprite.field_y / 2) + (var4 + 118), var5);
+              this.selectedCampaignEntry.previewSprite.f(-(this.selectedCampaignEntry.previewSprite.pixelWidth / 2) + (var4 + 118), var5);
               decompiledSharedTail0 = (var8 != 0);
             }
             if (decompiledSharedTail0) {
@@ -549,7 +549,7 @@ final class CampaignMenu {
         int var6_int = 0;
         NodeDeque var6 = null;
         RuntimeException var6_ref = null;
-        a var7 = null;
+        RegionAnchor var7 = null;
         int var7_int = 0;
         Object var8 = null;
         RgbSprite var9 = null;
@@ -570,13 +570,13 @@ final class CampaignMenu {
             param3.highlightProgress = param3.highlightProgress - 14;
           }
           if (param3.previewSprite == null) {
-            param3.previewSprite = this.regionMap.a(param3.entryId, 3355443, (byte) -73, 0);
-            var6 = this.regionMap.a(param3.entryId, 1);
+            param3.previewSprite = this.regionMap.extractRegionSprite(param3.entryId, 3355443, (byte) -73, 0);
+            var6 = this.regionMap.getAnchors(param3.entryId, 1);
             if (null != var6) {
-              var7 = (a) (var6.first((byte) 95));
+              var7 = (RegionAnchor) (var6.first((byte) 95));
               if (null != var7) {
-                param3.left = var7.field_p;
-                param3.top = var7.field_l;
+                param3.left = var7.column;
+                param3.top = var7.row;
               }
             }
           }
@@ -609,7 +609,7 @@ final class CampaignMenu {
                 }
                 var6_int = 8573219;
               }
-              fe.c(param3.previewSprite, db.a(true, 0), MatchConditionEntry.a(3, (byte) 94), param3.previewSprite.field_y, var6_int);
+              fe.c(param3.previewSprite, db.a(true, 0), MatchConditionEntry.a(3, (byte) 94), param3.previewSprite.pixelWidth, var6_int);
             }
             if (param4) {
               param3.previewSprite.f(db.a(true, 0), MatchConditionEntry.a(0, (byte) 94), 128);
@@ -626,9 +626,9 @@ final class CampaignMenu {
               param3.highlightSprite = null;
             }
             if (param3.selectable) {
-              var6 = this.regionMap.a(param3.entryId, 1);
+              var6 = this.regionMap.getAnchors(param3.entryId, 1);
               if (var6 != null) {
-                var7 = (a) (var6.first((byte) 120));
+                var7 = (RegionAnchor) (var6.first((byte) 120));
                 if (null != var7) {
                   var8 = null;
                   var10 = param3.mission.difficulty;
@@ -678,7 +678,7 @@ final class CampaignMenu {
                       var12 = 1.0f;
                     }
                   }
-                  this.a((RgbSprite) (var8), var11, var10, var7.field_l, var9, 1, var12, var7.field_p);
+                  this.a((RgbSprite) (var8), var11, var10, var7.row, var9, 1, var12, var7.column);
                 }
               }
             }
@@ -1025,7 +1025,7 @@ final class CampaignMenu {
                 continue scanLoop1;
               }
               fe.b(db.a(true, var5 + var8Lifetime1), MatchConditionEntry.a(var6Lifetime1, (byte) 94), var9Lifetime1 * var7.mapWidth, var7.mapHeight * var10Lifetime1, io.field_m, TutorialController.field_e, 0, 0);
-              var6Lifetime1 = var6Lifetime1 + (124 + ro.field_rb[0].field_f);
+              var6Lifetime1 = var6Lifetime1 + (124 + ro.field_rb[0].canvasHeight);
               stackIn_26_0 = 18;
               break;
             }
@@ -1034,8 +1034,8 @@ final class CampaignMenu {
             boolean decompiledNaturalLoopExit0 = false;
             while (!(decompiledNaturalLoopExit0 = (var16_ref_tc == null))) {
               var17Lifetime1 = (int)var16_ref_tc.key;
-              ro.field_rb[var17Lifetime1].a(db.a(true, var15_intLifetime1), MatchConditionEntry.a(var6Lifetime1 - ro.field_rb[var17Lifetime1].field_f, (byte) 94));
-              var15_intLifetime1 = var15_intLifetime1 + ro.field_rb[var17Lifetime1].field_g;
+              ro.field_rb[var17Lifetime1].draw(db.a(true, var15_intLifetime1), MatchConditionEntry.a(var6Lifetime1 - ro.field_rb[var17Lifetime1].canvasHeight, (byte) 94));
+              var15_intLifetime1 = var15_intLifetime1 + ro.field_rb[var17Lifetime1].canvasWidth;
               stackIn_31_0 = this.selectedMissionEntry;
               if (var29 == 0) {
                 var16_ref_tc = ((NodeHashTable) (Object) stackIn_31_0.previewUnitCategories).next((byte) 77);
@@ -1132,9 +1132,9 @@ final class CampaignMenu {
             var6Lifetime2 = stackIn_70_0;
             var23_ref = var15.createRewardPreview(-1);
             var24 = km.field_h[2];
-            this.a(var24, 0, 0, 10 + var6Lifetime2, var23_ref.icon, param0 - 19, 1.0f, 18 + var23_ref.icon.field_A / 2);
+            this.a(var24, 0, 0, 10 + var6Lifetime2, var23_ref.icon, param0 - 19, 1.0f, 18 + var23_ref.icon.canvasWidth / 2);
             if (var23_ref.description != null &&
-              ml.a(MatchConditionEntry.a(var6Lifetime2 + 10, (byte) 94), db.a(true, var23_ref.icon.field_A / 2 + 18), 25, false)) {
+              ml.a(MatchConditionEntry.a(var6Lifetime2 + 10, (byte) 94), db.a(true, var23_ref.icon.canvasWidth / 2 + 18), 25, false)) {
               var25_intLifetime1 = var4Lifetime1 * 2;
               var26 = var3Lifetime1 + 5;
               if (so.field_b.field_a < var26 + var25_intLifetime1) {
@@ -1145,7 +1145,7 @@ final class CampaignMenu {
               SoftwareRaster.b(db.a(true, var26), MatchConditionEntry.a(var28Lifetime1, (byte) 94), var25_intLifetime1, var27Lifetime1 + 2, 0, 128);
               rs.field_n.a(var23_ref.description, db.a(true, var26), MatchConditionEntry.a(var28Lifetime1, (byte) 94), var25_intLifetime1, 472, 16777215, 1, 1, 0, 0);
             }
-            rs.field_n.a(IntPair.field_l + var23_ref.title, db.a(true, var23_ref.icon.field_A + 31), MatchConditionEntry.a(-10 + var6Lifetime2, (byte) 94), -13 + (-var23_ref.icon.field_A + var4Lifetime1), var23_ref.icon.field_x, 16776960, 0, 0, 1, 0);
+            rs.field_n.a(IntPair.field_l + var23_ref.title, db.a(true, var23_ref.icon.canvasWidth + 31), MatchConditionEntry.a(-10 + var6Lifetime2, (byte) 94), -13 + (-var23_ref.icon.canvasWidth + var4Lifetime1), var23_ref.icon.canvasHeight, 16776960, 0, 0, 1, 0);
             if (null != var19) {
               var25_intLifetime2 = 100;
               var26Lifetime1 = AiPlanningStrategy.field_d;
@@ -1207,7 +1207,7 @@ final class CampaignMenu {
         int var15 = 0;
         var15 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          var9_int = param4.field_y;
+          var9_int = param4.pixelWidth;
           param7 = db.a(true, param7);
           param3 = MatchConditionEntry.a(param3, (byte) 94);
           var10 = (13 * param3 + fe.field_b + param7 * 57) % 100;
@@ -1319,10 +1319,10 @@ final class CampaignMenu {
         try {
           var6 = new RgbSprite(param4, param2);
           var7 = param0.getMapLayout(-98);
-          var8 = var6.field_v / var7.mapHeight;
-          var9 = var6.field_y / var7.mapWidth;
-          var10 = (var6.field_y - var9 * var7.mapWidth) / 2;
-          var11 = (-(var9 * var7.mapHeight) + var6.field_v) / 2;
+          var8 = var6.pixelHeight / var7.mapHeight;
+          var9 = var6.pixelWidth / var7.mapWidth;
+          var10 = (var6.pixelWidth - var9 * var7.mapWidth) / 2;
+          var11 = (-(var9 * var7.mapHeight) + var6.pixelHeight) / 2;
           var12 = new int[][]{kb.field_o};
           var13 = new String[param0.participantIds.length];
           var14_int = 0;
@@ -1345,7 +1345,7 @@ final class CampaignMenu {
             runtimeException.printStackTrace();
           }
           CombatSandbox.a(var6, 3);
-          SoftwareRaster.f(0, 0, var6.field_y, var6.field_v, 4473924);
+          SoftwareRaster.f(0, 0, var6.pixelWidth, var6.pixelHeight, 4473924);
           var15 = 0;
           boolean decompiledNaturalLoopExit0 = false;
           while (!(decompiledNaturalLoopExit0 = (!(var15 < var14.tiles.length)))) {
@@ -1464,7 +1464,7 @@ final class CampaignMenu {
             var2 = ku.j(obfuscationGuard + 86);
             if (!ei.a(var2.field_g, obfuscationGuard + 11906) &&
               rf.a(27875)) {
-              pr.field_i = bn.field_g;
+              PaletteRegionMap.field_i = bn.field_g;
               CipherPacketBuffer.a(false, 11, obfuscationGuard ^ 1, jt.field_a);
               return;
             }
@@ -1548,7 +1548,7 @@ final class CampaignMenu {
                 this.b((byte) 107);
                 return;
               }
-              var2_int = this.regionMap.a(AiPlanningStrategy.field_d - db.a(true, 0), (byte) -79, ko.field_b - MatchConditionEntry.a(0, (byte) 94));
+              var2_int = this.regionMap.getRegionAt(AiPlanningStrategy.field_d - db.a(true, 0), (byte) -79, ko.field_b - MatchConditionEntry.a(0, (byte) 94));
               if (-1 < var2_int) {
                 var3 = null;
                 var4_ref = (CampaignMenuEntry) (this.missionEntries.first(1));
@@ -1865,17 +1865,17 @@ final class CampaignMenu {
             if (decompiledFrameCompleted0) {
               var3.statusText = fo.a(4800, og.field_l, new String[]{Integer.toString(var4_int), Integer.toString(var5)});
               var6 = ps.field_w[var3.entryId];
-              var7 = new RgbSprite(var6.field_A, var6.field_x);
+              var7 = new RgbSprite(var6.canvasWidth, var6.canvasHeight);
               CombatSandbox.a(var7, 3);
               var6.f(0, 0);
               var8 = 18;
               boolean decompiledSharedTail0 = (var3.entryId == 1);
               if (!decompiledSharedTail0) {
-                SoftwareRaster.c(var8, var8, 0, 0, var6.field_A, var6.field_x);
+                SoftwareRaster.c(var8, var8, 0, 0, var6.canvasWidth, var6.canvasHeight);
                 decompiledSharedTail0 = (var9 != 0);
               }
               if (decompiledSharedTail0) {
-                SoftwareRaster.c(var8, var8, 0, var8, var6.field_A, -var8 + var6.field_x);
+                SoftwareRaster.c(var8, var8, 0, var8, var6.canvasWidth, -var8 + var6.canvasHeight);
               }
               rf.b(-18862);
               var3.previewSprite = var7;
@@ -1939,7 +1939,7 @@ final class CampaignMenu {
         int initialTop;
         var20 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          this.regionMap = new pr(mu.field_g[campaignIndex][1], 1, 16777215);
+          this.regionMap = new PaletteRegionMap(mu.field_g[campaignIndex][1], 1, 16777215);
           this.missionEntries = new NodeHashTable(32);
           campaign = br.getCampaign(campaignIndex, (byte) -118);
           if (campaign != null) {
@@ -2033,7 +2033,7 @@ final class CampaignMenu {
         try {
           if (!ei.a(campaignIndex, 11906) &&
             rf.a(27875)) {
-            pr.field_i = bn.field_g;
+            PaletteRegionMap.field_i = bn.field_g;
             CipherPacketBuffer.a(false, 11, 1, jt.field_a);
             return;
           }
@@ -2146,7 +2146,7 @@ final class CampaignMenu {
         int stackIn_96_0 = 0;
         int stackIn_96_1 = 0;
         RuntimeException decompiledCaughtException = null;
-        ru var2 = null;
+        IndexedSprite var2 = null;
         RuntimeException var2_ref = null;
         Object var3 = null;
         CampaignMenuEntry var4 = null;
@@ -2163,14 +2163,14 @@ final class CampaignMenu {
         var8 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           var2 = mu.field_g[this.campaignIndex][0];
-          var2.b(db.a(true, 0), MatchConditionEntry.a(0, (byte) 94));
+          var2.drawOpaque(db.a(true, 0), MatchConditionEntry.a(0, (byte) 94));
           if (null != this.regionMap) {
             try {
               var3 = new boolean[this.missionEntries.size((byte) 117)];
               var4 = (CampaignMenuEntry) (this.missionEntries.first(param0 ^ -25751));
               do {
                 if (var4 == null) {
-                  this.regionMap.a((byte) 93, db.a(true, 0), (boolean[]) (var3), MatchConditionEntry.a(0, (byte) 94), mu.field_g[this.campaignIndex][2]);
+                  this.regionMap.drawSelectedRegions((byte) 93, db.a(true, 0), (boolean[]) (var3), MatchConditionEntry.a(0, (byte) 94), mu.field_g[this.campaignIndex][2]);
                   break;
                 }
                 ((byte[]) (var3))[var4.entryId] = (byte) (var4.selectable ? 1 : 0);
@@ -2208,7 +2208,7 @@ final class CampaignMenu {
                 var6Lifetime1 = stackIn_38_0;
                 if (this.regionMap != null) {
                   if (var5_ref_cq.selectable &&
-                    this.regionMap.a(AiPlanningStrategy.field_d - db.a(true, 0), (byte) -128, ko.field_b - MatchConditionEntry.a(0, (byte) 94)) == var5_ref_cq.entryId) {
+                    this.regionMap.getRegionAt(AiPlanningStrategy.field_d - db.a(true, 0), (byte) -128, ko.field_b - MatchConditionEntry.a(0, (byte) 94)) == var5_ref_cq.entryId) {
                     stackIn_48_0 = 1;
                   } else {
                     stackIn_48_0 = 0;

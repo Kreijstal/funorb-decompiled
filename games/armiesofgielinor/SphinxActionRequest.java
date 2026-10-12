@@ -32,18 +32,18 @@ final class SphinxActionRequest extends ActionRequest {
         }
     }
 
-    final static void a(ru[] param0, kl param1, int param2, int[] param3, kl param4) {
+    final static void a(IndexedSprite[] param0, kl param1, int param2, int[] param3, kl param4) {
         RgbSprite[] dupTemp$0 = null;
         RgbSprite[] dupTemp$1 = null;
         RgbSprite[] dupTemp$2 = null;
         RgbSprite[] dupTemp$3 = null;
-        ru[] var5 = null;
-        ru[] var6 = null;
+        IndexedSprite[] var5 = null;
+        IndexedSprite[] var6 = null;
         int[] var6_array = null;
         int var7_int = 0;
         int var18 = 0;
         int[] var19 = null;
-        ru[] var20 = null;
+        IndexedSprite[] var20 = null;
         int[] var21 = null;
         int[] var22 = null;
         int[] var23 = null;
@@ -79,7 +79,7 @@ final class SphinxActionRequest extends ActionRequest {
           var5 = var20;
           PacketBuffer.field_n = var20.length;
           if (param0 != null) {
-            var6 = new ru[param0.length + PacketBuffer.field_n];
+            var6 = new IndexedSprite[param0.length + PacketBuffer.field_n];
             for (var7_int = 0; var7_int < PacketBuffer.field_n; var7_int++) {
               var6[var7_int] = var20[var7_int];
             }
@@ -104,7 +104,7 @@ final class SphinxActionRequest extends ActionRequest {
               }
             } else {
               for (var7_intLifetime2 = 0; var7_intLifetime2 < param0.length; var7_intLifetime2++) {
-                var6_array[var7_intLifetime2 + PacketBuffer.field_n] = param0[var7_intLifetime2].field_f;
+                var6_array[var7_intLifetime2 + PacketBuffer.field_n] = param0[var7_intLifetime2].canvasHeight;
               }
             }
           }
@@ -390,7 +390,7 @@ final class SphinxActionRequest extends ActionRequest {
           this.unlink(44);
           if (obfuscationGuard <= 31) {
             var4 = (kl) null;
-            SphinxActionRequest.a((ru[]) null, (kl) null, 4, (int[]) null, (kl) null);
+            SphinxActionRequest.a((IndexedSprite[]) null, (kl) null, 4, (int[]) null, (kl) null);
           }
           var5 = battlefield.getUnitAt(this.sphinxY, true, this.sphinxX);
           if (var5 == null) {

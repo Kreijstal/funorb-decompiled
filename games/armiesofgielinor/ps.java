@@ -6,7 +6,7 @@ final class ps extends lk {
     static int field_E;
     static RgbSprite[] field_w;
     static String field_x;
-    private ru[] field_B;
+    private IndexedSprite[] field_B;
     static int[] field_D;
     static pf field_y;
     static String field_A;
@@ -76,7 +76,7 @@ final class ps extends lk {
         int var7 = 0;
         int var8 = 0;
         int var9 = 0;
-        ru var10 = null;
+        IndexedSprite var10 = null;
         int var11 = 0;
         int var12 = 0;
         int var13 = 0;
@@ -107,10 +107,10 @@ final class ps extends lk {
             var8 = var8 | 1;
           }
           var10 = this.field_B[var8];
-          var11 = param1 + param0.field_B + (-var10.field_e + param0.field_l) / 2;
-          var12 = (-var10.field_h + param0.field_w) / 2 + param4 + param0.field_p;
+          var11 = param1 + param0.field_B + (-var10.pixelWidth + param0.field_l) / 2;
+          var12 = (-var10.pixelHeight + param0.field_w) / 2 + param4 + param0.field_p;
           var13 = param0.field_B + (param1 + param0.field_l / 2);
-          var10.a(var11, var12);
+          var10.draw(var11, var12);
           this.field_q.c(this.d(0, param0), var13, param4, var9, -1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -156,7 +156,7 @@ final class ps extends lk {
         }
     }
 
-    ps(ru[] param0) {
+    ps(IndexedSprite[] param0) {
         try {
           this.field_B = param0;
           this.field_q = ArmiesOfGielinor.field_J;

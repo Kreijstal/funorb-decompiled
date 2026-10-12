@@ -374,16 +374,16 @@ class fn extends fw {
         try {
           param3.i();
           var4_int = 0;
-          var5 = param3.field_y / 2;
+          var5 = param3.pixelWidth / 2;
           if (param0 != 8678) {
             var16 = (RgbSprite) null;
             fn.a(-106, -71, -114, (RgbSprite) null);
           }
-          var6 = param3.field_v / 2;
+          var6 = param3.pixelHeight / 2;
           stackIn_6_0 = (var5 >= var6) ? var6 : var5;
           var7 = stackIn_6_0;
-          for (var8 = 0; param3.field_v > var8; var8++) {
-            for (var9 = 0; param3.field_y > var9; var9++) {
+          for (var8 = 0; param3.pixelHeight > var8; var8++) {
+            for (var9 = 0; param3.pixelWidth > var9; var9++) {
               var10 = (int)Math.sqrt((double)((var9 - var5) * (var9 - var5) + (var8 - var6) * (-var6 + var8)));
               if (param2 <= var10) {
                 var10 = -(param1 * (-param2 + var10) / (-param2 + var7)) + param1;
@@ -391,7 +391,7 @@ class fn extends fw {
                 var10 = param1;
               }
               if (0 < var10) {
-                var11 = param3.field_B[var4_int];
+                var11 = param3.pixels[var4_int];
                 if (var11 == 1) {
                   var11 = 0;
                 }
@@ -407,7 +407,7 @@ class fn extends fw {
                 if (255 < var14) {
                   var14 = 255;
                 }
-                param3.field_B[var4_int] = oe.c(oe.c(var12, var13), var14);
+                param3.pixels[var4_int] = oe.c(oe.c(var12, var13), var14);
               }
               var4_int++;
             }

@@ -1,13 +1,13 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class si {
-    int field_h;
-    int field_g;
-    int field_i;
-    int field_f;
-    int field_e;
-    int field_d;
+abstract class IndexedSpriteBase {
+    int pixelHeight;
+    int canvasWidth;
+    int offsetX;
+    int canvasHeight;
+    int pixelWidth;
+    int offsetY;
     static String field_a;
     static long field_c;
     static java.awt.Canvas field_b;
@@ -48,17 +48,17 @@ abstract class si {
         }
     }
 
-    abstract void a(int param0, int param1);
+    abstract void draw(int left, int top);
 
     public static void a(int param0) {
         field_a = null;
         field_b = null;
         if (param0 != 18347) {
-          si.b(-3);
+          IndexedSpriteBase.b(-3);
         }
     }
 
-    abstract void a(int param0, int param1, int param2);
+    abstract void drawAlpha(int left, int top, int alpha);
 
     static {
         field_a = "This is not your unit";

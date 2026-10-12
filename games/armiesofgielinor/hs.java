@@ -133,7 +133,7 @@ abstract class hs extends kb implements gw {
         int var19Lifetime1;
         var20 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          CampaignDefinition.field_t.b(param4 + 2, param7 + param6 - 73);
+          CampaignDefinition.field_t.drawOpaque(param4 + 2, param7 + param6 - 73);
           fe.b(param4 + 0, -76 + param6 + param7, 309, 71, io.field_m, nd.field_b, 0, 0);
           SoftwareRaster.b(param4 + 7, param7 - 70 + param6, 25, 25, 0, 128);
           SoftwareRaster.b(37 + param4, param7 - 70 + param6, 265, 25, 0, 128);
@@ -143,10 +143,10 @@ abstract class hs extends kb implements gw {
           fe.a(var8, -param3 + (param4 + 42), param6 - 43 + param7, 16777215, true);
           SoftwareRaster.a();
           fe.c(param2.strength + param2.bonusStrength + "/" + param2.maximumStrength, param4 + 272, param6 - (42 - param7), 16777215, param1);
-          ro.field_rb[param2.getUnitCategory(0)].a(param4 + 9, param7 - 66 + param6);
+          ro.field_rb[param2.getUnitCategory(0)].draw(param4 + 9, param7 - 66 + param6);
           var9 = param2.l(-27014);
           SoftwareRaster.b(59 + param4, param7 - 41 + param6, 30, 30, 0, 128);
-          cp.field_e[eb.a((byte) -120, ~var9 & 3)].a(param4 + 62, param7 - (-param6 + 41));
+          cp.field_e[eb.a((byte) -120, ~var9 & 3)].draw(param4 + 62, param7 - (-param6 + 41));
           var10 = param2.unitType;
           if (var10 == 34 &&
             param2.packedFlag8) {
@@ -188,7 +188,7 @@ abstract class hs extends kb implements gw {
           var14 = bw.unitDefinitions[param2.unitType][12];
           if (var14 > -1) {
             if (var14 < lb.field_e.length) {
-              lb.field_e[var14].a(-35 + (308 + param4), -42 + param6 + param7);
+              lb.field_e[var14].draw(-35 + (308 + param4), -42 + param6 + param7);
             } else {
               SoftwareRaster.a(-35 + (param4 + 308), param7 + param6 - 42, 25, (int)(Math.random() * 16777215.0), 128);
             }
@@ -204,7 +204,7 @@ abstract class hs extends kb implements gw {
           SoftwareRaster.b(param4 + 284 - 150, -41 + param6 + param7, 130, 30 * var16, 0, 128);
           for (var17 = 5; 1 < var17; var17--) {
             if ((var9 & 1 << var17) != 0) {
-              cp.field_e[var17 + 1].a(-(30 * (3 & var13)) + 235 + param4, (var13 >> 2) * 30 + (param7 - 41 + param6));
+              cp.field_e[var17 + 1].draw(-(30 * (3 & var13)) + 235 + param4, (var13 >> 2) * 30 + (param7 - 41 + param6));
               var13++;
             }
           }

@@ -461,7 +461,7 @@ final class nm extends hn {
         boolean stackIn_24_1 = false;
         je stackIn_27_0 = null;
         boolean stackIn_28_1 = false;
-        CampaignUnitOverride.a(-640 + SoftwareRaster.field_l >> 1, 640 + SoftwareRaster.field_l >> 1, SoftwareRaster.field_g, 0, (byte) 91);
+        CampaignUnitOverride.a(-640 + SoftwareRaster.width >> 1, 640 + SoftwareRaster.width >> 1, SoftwareRaster.height, 0, (byte) 91);
         if (gk.field_J > 0) {
           if (null != dh.field_k) {
             dh.field_k.f(no.field_T.field_S, 0);

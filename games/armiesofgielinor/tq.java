@@ -26,7 +26,7 @@ final class tq {
           DamageEvent.b((byte) 92, param1);
           return;
         }
-        SoftwareRaster.b(0, 0, SoftwareRaster.field_l, SoftwareRaster.field_g, 0, 192);
+        SoftwareRaster.b(0, 0, SoftwareRaster.width, SoftwareRaster.height, 0, 192);
         DamageEvent.b((byte) 92, param1);
     }
 
@@ -43,12 +43,12 @@ final class tq {
         RgbSprite var13 = null;
         Object var14 = null;
         RgbSprite var16 = null;
-        int[] var18 = SoftwareRaster.field_d;
+        int[] var18 = SoftwareRaster.pixels;
         int[] var17 = var18;
         int[] var15 = var17;
         int[] var6 = var15;
-        int var7 = SoftwareRaster.field_l;
-        int var8 = SoftwareRaster.field_g;
+        int var7 = SoftwareRaster.width;
+        int var8 = SoftwareRaster.height;
         RgbSprite var9 = new RgbSprite(param4, -(2 * param4) + param2);
         var9.b();
         SoftwareRaster.a(0, 0, param4, -(2 * param4) + param2, param0, param5);

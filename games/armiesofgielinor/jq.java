@@ -40,12 +40,12 @@ final class jq extends dr {
     final static RgbSprite[] a(boolean param0, int param1, int param2, int param3, boolean param4, int param5) {
         RgbSprite var13 = null;
         RgbSprite var14 = null;
-        int[] var16 = SoftwareRaster.field_d;
+        int[] var16 = SoftwareRaster.pixels;
         int[] var15 = var16;
         int[] var12 = var15;
         int[] var6 = var12;
-        int var7 = SoftwareRaster.field_l;
-        int var8 = SoftwareRaster.field_g;
+        int var7 = SoftwareRaster.width;
+        int var8 = SoftwareRaster.height;
         RgbSprite var9 = new RgbSprite(16, param3);
         var9.b();
         SoftwareRaster.a(0, 0, 16, param3, param5, param1);

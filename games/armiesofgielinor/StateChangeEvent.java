@@ -213,7 +213,7 @@ final class StateChangeEvent extends GameEvent {
           for (var7 = 0; 4 > var7; var7++) {
             var5 = -54 + (bm.field_y[var7][0] + param3) + (var4_int & 15);
             var6 = param2 + (bm.field_y[var7][1] + (param0 & 7) - 64);
-            fe.a(jq.field_G[3], 60 + var5, var6 + 50, jq.field_G[3].field_A >> 1, jq.field_G[3].field_x >> 1);
+            fe.a(jq.field_G[3], 60 + var5, var6 + 50, jq.field_G[3].canvasWidth >> 1, jq.field_G[3].canvasHeight >> 1);
             var4_int = var4_int >> 1;
             param0 = param0 >> 1;
           }
@@ -373,20 +373,20 @@ final class StateChangeEvent extends GameEvent {
           SoftwareRaster.e(param1, param4, 1 + param0, 10000536);
           SoftwareRaster.e(param1, param4 + param2, param0 + 1, 12105912);
           var5_int = 1;
-          if (SoftwareRaster.field_a > var5_int + param4) {
-            var5_int = -param4 + SoftwareRaster.field_a;
+          if (SoftwareRaster.clipTop > var5_int + param4) {
+            var5_int = -param4 + SoftwareRaster.clipTop;
           }
           var6 = param2;
-          if (SoftwareRaster.field_f < var6 + param4) {
-            var6 = SoftwareRaster.field_f - param4;
+          if (SoftwareRaster.clipBottom < var6 + param4) {
+            var6 = SoftwareRaster.clipBottom - param4;
           }
           var7 = var5_int;
           var8 = 125 / ((param3 - 27) / 51);
           while (var7 < var6) {
             var9 = 152 + var7 * 48 / param2;
             var10 = var9 << 16 | var9 << 8 | var9;
-            SoftwareRaster.field_d[(var7 + param4) * SoftwareRaster.field_l + param1] = var10;
-            SoftwareRaster.field_d[SoftwareRaster.field_l * (param4 + var7) + (param1 + param0)] = var10;
+            SoftwareRaster.pixels[(var7 + param4) * SoftwareRaster.width + param1] = var10;
+            SoftwareRaster.pixels[SoftwareRaster.width * (param4 + var7) + (param1 + param0)] = var10;
             var7++;
           }
           return;

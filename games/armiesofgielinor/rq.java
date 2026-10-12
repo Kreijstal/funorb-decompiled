@@ -27,7 +27,7 @@ final class rq extends IntrusiveNode {
           var1 = new fg();
         }
         if (param0 == -56) {
-          var1.a(SoftwareRaster.field_f, SoftwareRaster.field_j, SoftwareRaster.field_e, SoftwareRaster.field_d, SoftwareRaster.field_a, SoftwareRaster.field_g, SoftwareRaster.field_l, -89);
+          var1.a(SoftwareRaster.clipBottom, SoftwareRaster.clipLeft, SoftwareRaster.clipRight, SoftwareRaster.pixels, SoftwareRaster.clipTop, SoftwareRaster.height, SoftwareRaster.width, -89);
           ParasiteEvent.field_y.addLast((byte) -119, (IntrusiveNode) (var1));
           return;
         }

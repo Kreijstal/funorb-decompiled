@@ -45,12 +45,12 @@ final class lr {
         }
     }
 
-    final static ru[] a(int param0) {
+    final static IndexedSprite[] a(int param0) {
         int var2 = 0;
         int var3 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
-        ru[] var1 = new ru[iw.field_n];
+        IndexedSprite[] var1 = new IndexedSprite[iw.field_n];
         for (var2 = 0; var2 < iw.field_n; var2++) {
-          var1[var2] = new ru(lg.field_d, wr.field_J, j.field_e[var2], CampaignMenuButton.field_g[var2], qm.field_K[var2], c.field_e[var2], AnimationPlayer.field_j[var2], MovementPresentation.field_j);
+          var1[var2] = new IndexedSprite(lg.field_d, wr.field_J, j.field_e[var2], CampaignMenuButton.field_g[var2], qm.field_K[var2], c.field_e[var2], AnimationPlayer.field_j[var2], MovementPresentation.field_j);
         }
         if (param0 < 102) {
           co[] var4 = (co[]) null;

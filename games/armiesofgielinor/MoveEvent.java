@@ -152,12 +152,12 @@ final class MoveEvent extends GameEvent {
         RuntimeException decompiledCaughtException = null;
         RgbSprite var4 = null;
         RuntimeException var4_ref = null;
-        ru[] var5 = null;
-        ru[][] var6 = null;
+        IndexedSprite[] var5 = null;
+        IndexedSprite[][] var6 = null;
         int[][] var7 = null;
         int var8 = 0;
         int var9 = 0;
-        ru[] var10 = null;
+        IndexedSprite[] var10 = null;
         RgbSprite var10_ref = null;
         int var11_int = 0;
         RgbSprite var11 = null;
@@ -173,22 +173,22 @@ final class MoveEvent extends GameEvent {
           gl.field_e = (BitmapFont) ((Object) it.a("arezzo12", param2, param3, (byte) -87, "commonui"));
           ArmiesOfGielinor.field_J = (BitmapFont) ((Object) it.a("arezzo14", param2, param3, (byte) -87, "commonui"));
           CipherPacketBuffer.field_t = (BitmapFont) ((Object) it.a("arezzo14bold", param2, param3, (byte) -87, "commonui"));
-          var4 = new RgbSprite(param0.a("", 45, "button.gif"), (java.awt.Component) ((Object) si.field_b));
+          var4 = new RgbSprite(param0.a("", 45, "button.gif"), (java.awt.Component) ((Object) IndexedSpriteBase.field_b));
           if (param1) {
             MoveEvent.g(90);
           }
           pv.a("commonui", "dropdown", param2, 24914);
           var5 = MapLayout.a("screen_options", -28106, "commonui", param2);
-          oa.field_H = new ru[4];
-          dq.field_e = new ru[4];
-          tg.field_b = new ru[4];
-          var6 = new ru[][]{oa.field_H, dq.field_e, tg.field_b};
+          oa.field_H = new IndexedSprite[4];
+          dq.field_e = new IndexedSprite[4];
+          tg.field_b = new IndexedSprite[4];
+          var6 = new IndexedSprite[][]{oa.field_H, dq.field_e, tg.field_b};
           var7 = new int[4][];
-          var7[0] = var5[0].field_j;
+          var7[0] = var5[0].palette;
           var8 = 1;
           do {
             if (var8 >= var7.length) {
-              var8 = var5[0].field_k[0];
+              var8 = var5[0].pixelIndices[0];
               var7[2][var8] = 16777215;
               var7[1][var8] = 2394342;
               var7[3][var8] = 4767999;
@@ -213,20 +213,20 @@ final class MoveEvent extends GameEvent {
               var9++;
               continue scanLoop1;
             }
-            var9 = var4.field_v;
+            var9 = var4.pixelHeight;
             rq.a((byte) -56);
             var4.b();
             stackIn_23_0 = 0;
             break;
           }
-          SoftwareRaster.c(stackIn_23_0, 0, SoftwareRaster.field_l, SoftwareRaster.field_g);
+          SoftwareRaster.c(stackIn_23_0, 0, SoftwareRaster.width, SoftwareRaster.height);
           var10_ref = new RgbSprite(var9, var9);
           var10_ref.b();
           var4.f(0, 0);
           var11 = new RgbSprite(var9, var9);
           var11.b();
-          var4.f(-var4.field_y + var9, 0);
-          var12 = new RgbSprite(-(var9 * 2) + var4.field_y, var9);
+          var4.f(-var4.pixelWidth + var9, 0);
+          var12 = new RgbSprite(-(var9 * 2) + var4.pixelWidth, var9);
           var12.b();
           var4.f(-var9, 0);
           rf.b(-18862);

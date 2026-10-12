@@ -4,7 +4,7 @@
 final class qt {
     static int[] field_c;
     static String field_d;
-    static ru field_e;
+    static IndexedSprite field_e;
     static String field_a;
     static String field_b;
 

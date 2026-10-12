@@ -66,7 +66,7 @@ final class UpkeepEvent extends GameEvent {
 
     final static void a(kl param0, int param1) {
         try {
-          bc.field_j = new ru[6][];
+          bc.field_j = new IndexedSprite[6][];
           lt.field_h = new RgbSprite[6];
           lt.field_h[1] = GameplayController.a("coatofarms_lbarespace", (byte) 51, "basic", param0);
           lt.field_h[2] = GameplayController.a("coatofarms_rbarespace", (byte) 51, "basic", param0);
@@ -82,7 +82,7 @@ final class UpkeepEvent extends GameEvent {
           bc.field_j[3] = MapLayout.a("coatofarms_banners", -28106, "basic", param0);
           bc.field_j[5] = MapLayout.a("coatofarms_icons", -28106, "basic", param0);
           bc.field_j[4] = MapLayout.a("coatofarms_toppers", -28106, "basic", param0);
-          a.field_m = fk.a("coatofarms_effects", (byte) -124, param0, "basic");
+          RegionAnchor.field_m = fk.a("coatofarms_effects", (byte) -124, param0, "basic");
           GameplayController.a("coatofarms_palette", (byte) 51, "basic", param0);
           sa.field_a = GameplayController.a("coatofarms_scrollbutton", (byte) 51, "basic", param0);
           wv.field_h = fk.a("coatofarms_buttons", (byte) -128, param0, "basic");

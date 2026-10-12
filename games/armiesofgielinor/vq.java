@@ -8,7 +8,7 @@ final class vq {
     static String field_g;
     static String field_f;
     static String field_e;
-    static ru field_b;
+    static IndexedSprite field_b;
 
     final static void a(int param0, boolean param1, byte param2) {
         int stackIn_31_0 = 0;
@@ -362,7 +362,7 @@ final class vq {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 != -2) {
-            field_b = (ru) null;
+            field_b = (IndexedSprite) null;
           }
           stackIn_5_0 = (param0.readBits(-108, 1) == 1);
           return stackIn_5_0;

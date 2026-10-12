@@ -54,12 +54,12 @@ final class fl {
           var5_int = this.field_m.a(param3);
           var6 = this.field_m.field_z + this.field_m.field_L;
           var7 = param1;
-          if (var5_int + (var7 - param0) > SoftwareRaster.field_l) {
-            var7 = -6 - var5_int + SoftwareRaster.field_l;
+          if (var5_int + (var7 - param0) > SoftwareRaster.width) {
+            var7 = -6 - var5_int + SoftwareRaster.width;
           }
           var8 = 32 + (param2 - this.field_m.field_z);
-          if (SoftwareRaster.field_g < var6 + (var8 + 6)) {
-            var8 = -6 - var6 + SoftwareRaster.field_g;
+          if (SoftwareRaster.height < var6 + (var8 + 6)) {
+            var8 = -6 - var6 + SoftwareRaster.height;
           }
           SoftwareRaster.b(var7, var8, 6 + var5_int, var6 + 6, this.field_v);
           SoftwareRaster.f(1 + var7, 1 + var8, 4 + var5_int, var6 + 4, this.field_c);
@@ -137,7 +137,7 @@ final class fl {
           if (var7 == -1) {
             var7 = this.field_m.field_H + this.field_m.field_L;
           }
-          var8 = SoftwareRaster.field_l >> 2;
+          var8 = SoftwareRaster.width >> 2;
           var9 = this.field_m.a(param3);
           var10 = this.field_m.field_L + this.field_m.field_H;
           var11 = 1;
@@ -163,14 +163,14 @@ final class fl {
             }
           }
           var12 = param2;
-          if (SoftwareRaster.field_l < var5_int + var9 + var12) {
-            var12 = -var5_int + (SoftwareRaster.field_l - var9);
+          if (SoftwareRaster.width < var5_int + var9 + var12) {
+            var12 = -var5_int + (SoftwareRaster.width - var9);
           }
           if (!param0) {
             this.field_w = (kh) null;
           }
           var13Lifetime1 = 32 + param1 - this.field_m.field_z;
-          if (SoftwareRaster.field_g < var6 + var13Lifetime1 + var10) {
+          if (SoftwareRaster.height < var6 + var13Lifetime1 + var10) {
             var13Lifetime1 = -var10 + (param1 - var6);
           }
           SoftwareRaster.b(var12, var13Lifetime1, var9 + var5_int, var10 + var6, this.field_s);
@@ -256,8 +256,8 @@ final class fl {
           var5 = new RgbSprite[9];
           var16 = new nj(32, 32);
           var18 = var16;
-          for (var7_int = 0; var7_int < var18.field_B.length; var7_int++) {
-            var16.field_B[var7_int] = 1077952576;
+          for (var7_int = 0; var7_int < var18.pixels.length; var7_int++) {
+            var16.pixels[var7_int] = 1077952576;
           }
           var5[4] = (RgbSprite) ((Object) var18);
           var4.a(4, (byte) -105).a(true, (byte) 66).a(var5, param0 - 13421900);
@@ -282,8 +282,8 @@ final class fl {
           var9[4] = new RgbSprite(2, 1);
           var10[4] = new RgbSprite(1, 2);
           dupTemp$2 = var9[4];
-          dupTemp$2.field_B = new int[]{6710886, 7829367};
-          var10[4].field_B = new int[]{6710886, 7829367};
+          dupTemp$2.pixels = new int[]{6710886, 7829367};
+          var10[4].pixels = new int[]{6710886, 7829367};
           var11 = new ao();
           var12 = new ao();
           var11.a(var9, 0, param0 - 13421779);
@@ -291,7 +291,7 @@ final class fl {
           this.field_k = (kh) ((Object) var12);
           this.field_p = (kh) ((Object) var4);
           var13 = new RgbSprite(7, 4);
-          var13.field_B = new int[]{8947848, 8947848, 8947848, 13421772, 8947848, 8947848, 8947848, 8947848, 8947848, param0, 13421772, 13421772, 8947848, 8947848, 8947848, 13421772, 13421772, 13421772, 13421772, 13421772, 8947848, 13421772, 13421772, 13421772, 13421772, 13421772, 13421772, 13421772};
+          var13.pixels = new int[]{8947848, 8947848, 8947848, 13421772, 8947848, 8947848, 8947848, 8947848, 8947848, param0, 13421772, 13421772, 8947848, 8947848, 8947848, 13421772, 13421772, 13421772, 13421772, 13421772, 8947848, 13421772, 13421772, 13421772, 13421772, 13421772, 13421772, 13421772};
           this.field_a = 10;
           var14 = new ao(var4, true);
           var14.a(0, var13.g());

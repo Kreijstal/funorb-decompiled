@@ -117,7 +117,7 @@ final class ah {
           }
           var2 = ta.field_O.first((byte) 116);
           while (var2 != null) {
-            a.a(param1, (byte) -32);
+            RegionAnchor.a(param1, (byte) -32);
             var2 = ta.field_O.next((byte) 123);
           }
           if (param0 == 33) {

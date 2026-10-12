@@ -196,7 +196,7 @@ public final class ArmiesOfGielinor extends wf {
                   ut.i((byte) 123);
                   SpellCastAction.field_t = false;
                   CipherPacketBuffer.a(false, 11, 1, jt.field_a);
-                  pr.field_i = mg.field_e.g(1);
+                  PaletteRegionMap.field_i = mg.field_e.g(1);
                   continue;
                 }
                 if (nm.field_o == 14) {
@@ -577,11 +577,11 @@ public final class ArmiesOfGielinor extends wf {
                   if (!fj.field_c) {
                     CipherPacketBuffer.a(false, 0, 1, 0);
                     if (var11 != 0) {
-                      pr.field_i = ContextualRuntimeException.field_d;
+                      PaletteRegionMap.field_i = ContextualRuntimeException.field_d;
                       CipherPacketBuffer.a(false, 11, 1, 0);
                     }
                   } else {
-                    pr.field_i = ContextualRuntimeException.field_d;
+                    PaletteRegionMap.field_i = ContextualRuntimeException.field_d;
                     CipherPacketBuffer.a(false, 11, 1, 0);
                   }
                   ut.i((byte) 126);
@@ -810,7 +810,7 @@ public final class ArmiesOfGielinor extends wf {
                 bc.field_a.a(109, var4 != 0);
               }
               if (fj.field_c) {
-                pr.a(320, 180, var4 != 0, 0);
+                PaletteRegionMap.a(320, 180, var4 != 0, 0);
                 rd.field_j.a(param0 + 119, var4 != 0);
               }
               while (Unit.i((byte) -127)) {
@@ -876,7 +876,7 @@ public final class ArmiesOfGielinor extends wf {
             }
             var5 = mj.field_c * mj.field_c;
             var6 = -(TelepopEvent.field_F * TelepopEvent.field_F) + var5;
-            var7 = SoftwareRaster.field_g - (120 - var6 * 120 / var5);
+            var7 = SoftwareRaster.height - (120 - var6 * 120 / var5);
             SpellCastAction.b(8, var7);
             if (null != ai.field_P.first((byte) 111)) {
               fieldTemp$0 = lq.field_b + 1;
@@ -1020,12 +1020,12 @@ public final class ArmiesOfGielinor extends wf {
             return;
           }
           if (!qu.field_q) {
-            pr.a((byte) 121, var2);
+            PaletteRegionMap.a((byte) 121, var2);
             return;
           }
           if (!UiSelectionState.d(param0 + 95)) {
             bn.a((byte) -24, 100.0f, en.field_G);
-            pr.a((byte) 122, var2);
+            PaletteRegionMap.a((byte) 122, var2);
             return;
           }
           stackIn_21_0 = ((rd.field_j != null ||
@@ -1053,7 +1053,7 @@ public final class ArmiesOfGielinor extends wf {
           }
           if (var3 != null &&
             null == var3.movementPlanner) {
-            ig.field_t.a(0, 0);
+            ig.field_t.draw(0, 0);
             fe.c(ManaEvent.field_A, 320, 200, nd.field_b, false);
           }
           this.c(false);
@@ -1062,7 +1062,7 @@ public final class ArmiesOfGielinor extends wf {
           }
           if (!ed.a(-89)) {
             if (an.e((byte) 93)) {
-              SoftwareRaster.d(0, 0, SoftwareRaster.field_l, SoftwareRaster.field_g);
+              SoftwareRaster.d(0, 0, SoftwareRaster.width, SoftwareRaster.height);
               an.h(1976460609);
               if (obfuscationControl) {
                 if (wq.field_a == null) {
@@ -1084,7 +1084,7 @@ public final class ArmiesOfGielinor extends wf {
           if (~pg.field_f != ~pg.field_e) {
             var4 = pk.field_X * 256 / 16;
             if (var4 > 0) {
-              SoftwareRaster.b(0, 0, SoftwareRaster.field_l, SoftwareRaster.field_g, 0, var4);
+              SoftwareRaster.b(0, 0, SoftwareRaster.width, SoftwareRaster.height, 0, var4);
             }
           }
           if (hi.field_j >= 2 &&
@@ -1241,7 +1241,7 @@ public final class ArmiesOfGielinor extends wf {
           CampaignProgress.a(false);
           MapLayout.a(0);
           db.a(-3);
-          pr.a(param0 + 7814);
+          PaletteRegionMap.a(param0 + 7814);
           tm.b();
           MatchSetupPanel.g(256);
           InstructionsPanel.q(-114);
@@ -1323,7 +1323,7 @@ public final class ArmiesOfGielinor extends wf {
           rq.a(-22823);
           cp.a(false);
           dp.f((byte) -123);
-          si.a(18347);
+          IndexedSpriteBase.a(18347);
           hf.a((byte) 19);
           dq.a(-1);
           ou.a(4116);
@@ -1555,7 +1555,7 @@ public final class ArmiesOfGielinor extends wf {
           ad.a((byte) 63);
           fg.a(-22856);
           CampaignResult.a((byte) -116);
-          a.a(true);
+          RegionAnchor.a(true);
           pf.b((byte) -49);
           wv.c((byte) -3);
           oq.a(120);
@@ -1624,7 +1624,7 @@ public final class ArmiesOfGielinor extends wf {
           var5 = 0;
           do {
             if (!(CorpseConditionMarker.field_u.field_a.length > var5)) {
-              lk.a(IntPair.field_m, 22050, var4, (byte) 68, true, (java.awt.Component) ((Object) si.field_b));
+              lk.a(IntPair.field_m, 22050, var4, (byte) 68, true, (java.awt.Component) ((Object) IndexedSpriteBase.field_b));
               kb.field_o = new int[7];
               break;
             }
@@ -1696,10 +1696,10 @@ public final class ArmiesOfGielinor extends wf {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         try {
-          if (null != a.field_o) {
-            TickCounter.loadClientAssets(a.field_o, 10207);
+          if (null != RegionAnchor.field_o) {
+            TickCounter.loadClientAssets(RegionAnchor.field_o, 10207);
             lr.a(UnitLossCondition.field_d, (byte) 62);
-            a.field_o = null;
+            RegionAnchor.field_o = null;
             wl.a(0);
           }
           bt.field_e = nu.a(3, true);
@@ -1897,7 +1897,7 @@ public final class ArmiesOfGielinor extends wf {
         String var4 = null;
         int var5_int = 0;
         ih var5 = null;
-        ru[] var5_array = null;
+        IndexedSprite[] var5_array = null;
         co[] var5_array2 = null;
         um[] var6 = null;
         co[] var6_array = null;
@@ -2368,8 +2368,8 @@ public final class ArmiesOfGielinor extends wf {
           jt.field_a = 16;
           sa.a(50, true);
           ar.a(param0 ^ -68, mp.field_Ob);
-          gh.a(128, 8, rs.field_n.field_z, rs.field_n.field_L + rs.field_n.field_z, rs.field_n, io.field_m[0].field_v, 8, 2, 16777215, 240, rs.field_n.field_z, -99, new pn(DisplacedUnitMarker.field_s, nd.field_b, 0, 128, true), 255, new pn(DisplacedUnitMarker.field_s, nd.field_b, 0, 128, true), 320, io.field_m[0].field_y, rs.field_n.field_z + rs.field_n.field_L, new pn(io.field_m, nd.field_b, 0, 224, false), rs.field_n);
-          wm.a(320, 128, 240, 16777215, rs.field_n.field_z + rs.field_n.field_L, rs.field_n.field_z, new pn(DisplacedUnitMarker.field_s, nd.field_b, 0, 128, true), 8, (byte) 90, 480, 8, rs.field_n.field_L + rs.field_n.field_z, new pn(DisplacedUnitMarker.field_s, nd.field_b, 0, 128, true), io.field_m[0].field_v, rs.field_n, 2, io.field_m[0].field_y, rs.field_n, 255, rs.field_n.field_z, new pn(io.field_m, nd.field_b, 0, 224, false));
+          gh.a(128, 8, rs.field_n.field_z, rs.field_n.field_L + rs.field_n.field_z, rs.field_n, io.field_m[0].pixelHeight, 8, 2, 16777215, 240, rs.field_n.field_z, -99, new pn(DisplacedUnitMarker.field_s, nd.field_b, 0, 128, true), 255, new pn(DisplacedUnitMarker.field_s, nd.field_b, 0, 128, true), 320, io.field_m[0].pixelWidth, rs.field_n.field_z + rs.field_n.field_L, new pn(io.field_m, nd.field_b, 0, 224, false), rs.field_n);
+          wm.a(320, 128, 240, 16777215, rs.field_n.field_z + rs.field_n.field_L, rs.field_n.field_z, new pn(DisplacedUnitMarker.field_s, nd.field_b, 0, 128, true), 8, (byte) 90, 480, 8, rs.field_n.field_L + rs.field_n.field_z, new pn(DisplacedUnitMarker.field_s, nd.field_b, 0, 128, true), io.field_m[0].pixelHeight, rs.field_n, 2, io.field_m[0].pixelWidth, rs.field_n, 255, rs.field_n.field_z, new pn(io.field_m, nd.field_b, 0, 224, false));
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

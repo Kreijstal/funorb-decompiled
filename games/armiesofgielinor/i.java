@@ -56,25 +56,25 @@ final class i extends je {
           if (0 < param5 &&
             0 < param1) {
             if (param0[3] != null) {
-              stackIn_9_0 = param0[3].field_A;
+              stackIn_9_0 = param0[3].canvasWidth;
             } else {
               stackIn_9_0 = 0;
             }
             var6_int = stackIn_9_0;
             if (null != param0[5]) {
-              stackIn_12_0 = param0[5].field_A;
+              stackIn_12_0 = param0[5].canvasWidth;
             } else {
               stackIn_12_0 = 0;
             }
             var7 = stackIn_12_0;
             if (param0[1] != null) {
-              stackIn_15_0 = param0[1].field_x;
+              stackIn_15_0 = param0[1].canvasHeight;
             } else {
               stackIn_15_0 = 0;
             }
             var8 = stackIn_15_0;
             if (null != param0[7]) {
-              stackIn_18_0 = param0[7].field_x;
+              stackIn_18_0 = param0[7].canvasHeight;
             } else {
               stackIn_18_0 = 0;
             }
@@ -122,45 +122,45 @@ final class i extends je {
               SoftwareRaster.a(pd.field_g);
             }
             if (param0[1] != null &&
-              param0[1].field_A != 0) {
+              param0[1].canvasWidth != 0) {
               SoftwareRaster.b(var16, param4, var17, var18);
-              for (var20 = var12; var20 < var13; var20 = var20 + param0[1].field_A) {
+              for (var20 = var12; var20 < var13; var20 = var20 + param0[1].canvasWidth) {
                 param0[1].g(var20, param4);
               }
               SoftwareRaster.a(pd.field_g);
             }
             if (null != param0[7] &&
-              0 != param0[7].field_A) {
+              0 != param0[7].canvasWidth) {
               SoftwareRaster.b(var16, var19, var17, var11);
-              for (var20Lifetime1 = var12; var13 > var20Lifetime1; var20Lifetime1 = var20Lifetime1 + param0[7].field_A) {
+              for (var20Lifetime1 = var12; var13 > var20Lifetime1; var20Lifetime1 = var20Lifetime1 + param0[7].canvasWidth) {
                 param0[7].g(var20Lifetime1, var15);
               }
               SoftwareRaster.a(pd.field_g);
             }
             if (null != param0[3] &&
-              0 != param0[3].field_x) {
+              0 != param0[3].canvasHeight) {
               SoftwareRaster.b(param2, var18, var16, var19);
-              for (var20Lifetime2 = var14; var15 > var20Lifetime2; var20Lifetime2 = var20Lifetime2 + param0[3].field_x) {
+              for (var20Lifetime2 = var14; var15 > var20Lifetime2; var20Lifetime2 = var20Lifetime2 + param0[3].canvasHeight) {
                 param0[3].g(param2, var20Lifetime2);
               }
               SoftwareRaster.a(pd.field_g);
             }
             if (null != param0[5] &&
-              param0[5].field_x != 0) {
+              param0[5].canvasHeight != 0) {
               SoftwareRaster.b(var17, var18, var10, var19);
-              for (var20Lifetime3 = var14; var15 > var20Lifetime3; var20Lifetime3 = var20Lifetime3 + param0[5].field_x) {
+              for (var20Lifetime3 = var14; var15 > var20Lifetime3; var20Lifetime3 = var20Lifetime3 + param0[5].canvasHeight) {
                 param0[5].g(var13, var20Lifetime3);
               }
               SoftwareRaster.a(pd.field_g);
             }
             if (null != param0[4] &&
-              param0[4].field_A != 0) {
-              if (param0[4].field_x == 0) {
+              param0[4].canvasWidth != 0) {
+              if (param0[4].canvasHeight == 0) {
                 return;
               }
               SoftwareRaster.b(var16, var18, var17, var19);
-              for (var20Lifetime4 = var14; var15 > var20Lifetime4; var20Lifetime4 = var20Lifetime4 + param0[4].field_x) {
-                for (var21 = var12; var21 < var13; var21 = var21 + param0[4].field_A) {
+              for (var20Lifetime4 = var14; var15 > var20Lifetime4; var20Lifetime4 = var20Lifetime4 + param0[4].canvasHeight) {
+                for (var21 = var12; var21 < var13; var21 = var21 + param0[4].canvasWidth) {
                   param0[4].g(var21, var20Lifetime4);
                 }
               }

@@ -4,7 +4,7 @@
 abstract class BitmapFont extends ms {
     private int[] field_A;
     private int[] field_F;
-    private si[] field_E;
+    private IndexedSpriteBase[] field_E;
     private int[] field_M;
     int field_H;
     private byte[] field_K;
@@ -106,7 +106,7 @@ abstract class BitmapFont extends ms {
                                 try {
                                   var10 = (CharSequence) ((Object) var8.substring(4));
                                   var9_int = dq.a(49, var10);
-                                  var4 = var4 + this.field_E[var9_int].field_g;
+                                  var4 = var4 + this.field_E[var9_int].canvasWidth;
                                   var3 = 0;
                                 } catch (java.lang.Exception decompiledCaughtParameter0) {
                                   decompiledCaughtException = decompiledCaughtParameter0;
@@ -219,7 +219,7 @@ abstract class BitmapFont extends ms {
                                   try {
                                     var18 = (CharSequence) ((Object) var15.substring(4));
                                     var16_int = dq.a(25, var18);
-                                    var4 = var4 + this.field_E[var16_int].field_g;
+                                    var4 = var4 + this.field_E[var16_int].canvasWidth;
                                     var10 = 0;
                                   } catch (java.lang.Exception decompiledCaughtParameter0) {
                                     decompiledCaughtException = decompiledCaughtParameter0;
@@ -480,7 +480,7 @@ abstract class BitmapFont extends ms {
         field_w = null;
     }
 
-    final void a(si[] param0, int[] param1) {
+    final void a(IndexedSpriteBase[] param0, int[] param1) {
         if (param1 != null &&
           param1.length != param0.length) {
           throw new IllegalArgumentException();
@@ -784,7 +784,7 @@ abstract class BitmapFont extends ms {
         int var9 = 0;
         int var10 = 0;
         Exception var10_ref_Exception = null;
-        si var11_ref_si = null;
+        IndexedSpriteBase var11_ref_si = null;
         int var11 = 0;
         int var12 = 0;
         CharSequence var13 = null;
@@ -816,17 +816,17 @@ abstract class BitmapFont extends ms {
                                   var10 = dq.a(12, var13);
                                   var11_ref_si = this.field_E[var10];
                                   if (this.field_C == null) {
-                                    stackIn_27_0 = var11_ref_si.field_f;
+                                    stackIn_27_0 = var11_ref_si.canvasHeight;
                                   } else {
                                     stackIn_27_0 = this.field_C[var10];
                                   }
                                   var12 = stackIn_27_0;
                                   if (field_T != 256) {
-                                    var11_ref_si.a(param1, param2 + this.field_v - var12, field_T);
+                                    var11_ref_si.drawAlpha(param1, param2 + this.field_v - var12, field_T);
                                   } else {
-                                    var11_ref_si.a(param1, param2 + this.field_v - var12);
+                                    var11_ref_si.draw(param1, param2 + this.field_v - var12);
                                   }
-                                  param1 = param1 + var11_ref_si.field_g;
+                                  param1 = param1 + var11_ref_si.canvasWidth;
                                   var5 = 0;
                                 } catch (java.lang.Exception decompiledCaughtParameter0) {
                                   decompiledCaughtException = decompiledCaughtParameter0;

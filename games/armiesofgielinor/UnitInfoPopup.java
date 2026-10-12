@@ -65,7 +65,7 @@ final class UnitInfoPopup extends IntrusiveNode {
           uf.field_j.b();
           SoftwareRaster.b();
           fe.b(0, 0, 134, 61, io.field_m, nd.field_b, 0, 0);
-          qt.field_e.b(2, 2);
+          qt.field_e.drawOpaque(2, 2);
           SoftwareRaster.b(5, 5, 124, 18, 0, 192);
           SoftwareRaster.b(5, 25, 30, 30, 0, 192);
           var7 = this.unit.displayName;
@@ -101,17 +101,17 @@ final class UnitInfoPopup extends IntrusiveNode {
             SoftwareRaster.b(99, 25, 30, 30, 0, 128);
             SoftwareRaster.b(53, 25, 30, 30, 0, 128);
             var9 = this.unit.l(-27014);
-            cp.field_e[eb.a((byte) -97, ~var9 & 3)].a(56, 25);
+            cp.field_e[eb.a((byte) -97, ~var9 & 3)].draw(56, 25);
           } else {
             if (param0 == null) {
               SoftwareRaster.b(99, 25, 30, 30, 0, 128);
             } else {
               SoftwareRaster.b(37, 25, 92, 30, 0, 128);
-              ro.field_rb[param0.getUnitCategory(0)].a(43, 32);
-              sg.field_b[this.a(param0.getUnitCategory(0), this.unit.getUnitCategory(param2 - 5), -46)].a(75, 32);
+              ro.field_rb[param0.getUnitCategory(0)].draw(43, 32);
+              sg.field_b[this.a(param0.getUnitCategory(0), this.unit.getUnitCategory(param2 - 5), -46)].draw(75, 32);
             }
           }
-          ro.field_rb[this.unit.getUnitCategory(0)].a(106, 32);
+          ro.field_rb[this.unit.getUnitCategory(0)].draw(106, 32);
           en.field_E.c(-param5.getDamageTakenPercent(param5.mapWidth * this.unit.tileY + this.unit.tileX, param2 - 9, this.unit) + 100 + "%", 20, 45, 16777215, -1);
           EventPresenter.field_t.b(68, 60, nd.field_b[-1 + nd.field_b.length]);
           so.field_b.a(param2 + 5600);
@@ -122,7 +122,7 @@ final class UnitInfoPopup extends IntrusiveNode {
           if (var11 != -1) {
             PreparedAction.a(32 - this.fadeOffset << 3, true, var9Lifetime1 + 96, e.field_b, 40, 60 + var10);
             if (var11 < lb.field_e.length) {
-              lb.field_e[var11].a(var9Lifetime1 + 101, var10 + 58, -this.fadeOffset + 32 << 3);
+              lb.field_e[var11].drawAlpha(var9Lifetime1 + 101, var10 + 58, -this.fadeOffset + 32 << 3);
             }
           }
           var12 = this.unit.f(param2 + 11);

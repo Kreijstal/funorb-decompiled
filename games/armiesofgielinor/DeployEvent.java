@@ -226,13 +226,13 @@ final class DeployEvent extends GameEvent {
               !var6.field_Nb.equals("")) {
               var6.field_Jb.field_cb = tl.field_e;
               var6.field_Jb.field_W = 16737894;
-              var6.field_Jb.a(jn.field_d, -20500, tl.field_e.field_A + 3, 0, 0);
+              var6.field_Jb.a(jn.field_d, -20500, tl.field_e.canvasWidth + 3, 0, 0);
               var8 = 1;
             }
             var9 = 0;
             var10 = var6.field_gb;
             if (var8 != 0) {
-              var9 = 3 + tl.field_e.field_A;
+              var9 = 3 + tl.field_e.canvasWidth;
               var10 = var10 - var9;
             }
             stackIn_21_0 = var6.field_Qb;

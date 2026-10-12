@@ -104,7 +104,7 @@ final class MatchConditionRegistry {
                 param2[var5] = 0;
               }
               if (param2[var5] > -1) {
-                if (bc.field_j[var5][param2[var5]].a(dp.field_Vb[var5][0], dp.field_Vb[var5][1], param1, param0)) {
+                if (bc.field_j[var5][param2[var5]].containsOpaquePixel(dp.field_Vb[var5][0], dp.field_Vb[var5][1], param1, param0)) {
                   stackIn_19_0 = var5;
                   return stackIn_19_0;
                 }

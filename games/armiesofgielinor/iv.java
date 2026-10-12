@@ -372,10 +372,10 @@ public abstract class iv extends java.applet.Applet implements Runnable, java.aw
             decompiledCaughtException = decompiledCaughtParameter0;
             exception = (Exception) (Object) decompiledCaughtException;
           }
-          if (null != si.field_b) {
+          if (null != IndexedSpriteBase.field_b) {
             try {
-              si.field_b.removeFocusListener((java.awt.event.FocusListener) (this));
-              si.field_b.getParent().remove((java.awt.Component) ((Object) si.field_b));
+              IndexedSpriteBase.field_b.removeFocusListener((java.awt.event.FocusListener) (this));
+              IndexedSpriteBase.field_b.getParent().remove((java.awt.Component) ((Object) IndexedSpriteBase.field_b));
             } catch (java.lang.Exception decompiledCaughtParameter1) {
               decompiledCaughtException = decompiledCaughtParameter1;
               exception = (Exception) (Object) decompiledCaughtException;
@@ -428,7 +428,7 @@ public abstract class iv extends java.applet.Applet implements Runnable, java.aw
                 decompiledFrameRemainder0 = (var4 != 0);
               }
               if (decompiledFrameRemainder0) {
-                pr.a((byte) 111, param2);
+                PaletteRegionMap.a((byte) 111, param2);
                 if (var4 != 0) {
                   SoftwareRaster.b();
                   TaggedMapData.a(240, 320, -121);
@@ -609,7 +609,7 @@ public abstract class iv extends java.applet.Applet implements Runnable, java.aw
                 }
                 jh.c((byte) -76);
                 this.c((byte) 87);
-                so.field_b = rj.a(bn.field_b, dt.field_a, 1423111778, (java.awt.Component) ((Object) si.field_b));
+                so.field_b = rj.a(bn.field_b, dt.field_a, 1423111778, (java.awt.Component) ((Object) IndexedSpriteBase.field_b));
                 this.a(false);
                 qc.field_h = wc.c(false);
                 do {
@@ -630,7 +630,7 @@ public abstract class iv extends java.applet.Applet implements Runnable, java.aw
                   do {
                     if (!(kb.field_A > var3)) {
                       this.c(-11);
-                      MapTile.a(IntPair.field_m, si.field_b, true);
+                      MapTile.a(IntPair.field_m, IndexedSpriteBase.field_b, true);
                       break;
                     }
                     this.b(17684);
@@ -797,17 +797,17 @@ public abstract class iv extends java.applet.Applet implements Runnable, java.aw
           if (fieldTemp$1 > 50) {
             uh.field_d = uh.field_d - 50;
             ol.field_z = true;
-            si.field_b.setSize(bn.field_b, dt.field_a);
-            si.field_b.setVisible(true);
+            IndexedSpriteBase.field_b.setSize(bn.field_b, dt.field_a);
+            IndexedSpriteBase.field_b.setVisible(true);
             if (null != ContextualRuntimeException.field_f &&
               cs.field_bb == null) {
               var6 = ContextualRuntimeException.field_f.getInsets();
-              si.field_b.setLocation(sp.field_b + var6.left, mh.field_c + var6.top);
+              IndexedSpriteBase.field_b.setLocation(sp.field_b + var6.left, mh.field_c + var6.top);
               if (ArmiesOfGielinor.obfuscationControl) {
-                si.field_b.setLocation(sp.field_b, mh.field_c);
+                IndexedSpriteBase.field_b.setLocation(sp.field_b, mh.field_c);
               }
             } else {
-              si.field_b.setLocation(sp.field_b, mh.field_c);
+              IndexedSpriteBase.field_b.setLocation(sp.field_b, mh.field_c);
             }
           }
           if (param0 != -11) {
@@ -832,10 +832,10 @@ public abstract class iv extends java.applet.Applet implements Runnable, java.aw
         RuntimeException decompiledCaughtException = null;
         var4 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          if (si.field_b != null) {
-            si.field_b.removeFocusListener((java.awt.event.FocusListener) (this));
-            si.field_b.getParent().setBackground(java.awt.Color.black);
-            si.field_b.getParent().remove((java.awt.Component) ((Object) si.field_b));
+          if (IndexedSpriteBase.field_b != null) {
+            IndexedSpriteBase.field_b.removeFocusListener((java.awt.event.FocusListener) (this));
+            IndexedSpriteBase.field_b.getParent().setBackground(java.awt.Color.black);
+            IndexedSpriteBase.field_b.getParent().remove((java.awt.Component) ((Object) IndexedSpriteBase.field_b));
           }
           boolean decompiledFrameRemainder0 = true;
           if (cs.field_bb != null) {
@@ -865,24 +865,24 @@ public abstract class iv extends java.applet.Applet implements Runnable, java.aw
             }
           }
           ((java.awt.Container) (var2)).setLayout((java.awt.LayoutManager) null);
-          si.field_b = (java.awt.Canvas) ((Object) new le((java.awt.Component) (this)));
-          ((java.awt.Container) (var2)).add((java.awt.Component) ((Object) si.field_b));
-          si.field_b.setSize(bn.field_b, dt.field_a);
+          IndexedSpriteBase.field_b = (java.awt.Canvas) ((Object) new le((java.awt.Component) (this)));
+          ((java.awt.Container) (var2)).add((java.awt.Component) ((Object) IndexedSpriteBase.field_b));
+          IndexedSpriteBase.field_b.setSize(bn.field_b, dt.field_a);
           if (param0 != 87) {
             return;
           }
-          si.field_b.setVisible(true);
+          IndexedSpriteBase.field_b.setVisible(true);
           boolean decompiledSharedTail0 = (var2 == ContextualRuntimeException.field_f);
           if (!decompiledSharedTail0) {
-            si.field_b.setLocation(sp.field_b, mh.field_c);
+            IndexedSpriteBase.field_b.setLocation(sp.field_b, mh.field_c);
             decompiledSharedTail0 = (var4 != 0);
           }
           if (decompiledSharedTail0) {
             var3 = ContextualRuntimeException.field_f.getInsets();
-            si.field_b.setLocation(var3.left + sp.field_b, var3.top + mh.field_c);
+            IndexedSpriteBase.field_b.setLocation(var3.left + sp.field_b, var3.top + mh.field_c);
           }
-          si.field_b.addFocusListener((java.awt.event.FocusListener) (this));
-          si.field_b.requestFocus();
+          IndexedSpriteBase.field_b.addFocusListener((java.awt.event.FocusListener) (this));
+          IndexedSpriteBase.field_b.requestFocus();
           ph.field_f = true;
           wj.field_l = true;
           ol.field_z = true;

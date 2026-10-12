@@ -47,7 +47,7 @@ final class wd {
             param3 < ef.field_c) {
             var6_int = ks.field_y * param3 + param5;
             var7 = vs.field_e[var6_int];
-            var8 = a.a(16711680, param3, var6_int, param5);
+            var8 = RegionAnchor.a(16711680, param3, var6_int, param5);
             if (param2 != -128) {
               return;
             }

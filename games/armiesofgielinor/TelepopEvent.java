@@ -256,7 +256,7 @@ final class TelepopEvent extends GameEvent {
                   var17_int = var17_int + var19;
                   var25 = var25 + var27;
                   var21 = var21 + var23;
-                  var36Lifetime2 = var36Lifetime2 + SoftwareRaster.field_l;
+                  var36Lifetime2 = var36Lifetime2 + SoftwareRaster.width;
                   var29 = var29 + var31;
                 }
               }
@@ -405,7 +405,7 @@ final class TelepopEvent extends GameEvent {
               if (param15 >= tm.field_q) {
                 return;
               }
-              var35Lifetime1 = var35Lifetime1 + SoftwareRaster.field_l;
+              var35Lifetime1 = var35Lifetime1 + SoftwareRaster.width;
               var29 = var29 + var31;
               var26 = var26 + var28;
               var21 = var21 + var23;

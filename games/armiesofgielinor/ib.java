@@ -144,18 +144,18 @@ final class ib extends mk {
         int stackIn_52_1 = 0;
         int stackIn_52_2 = 0;
         int stackIn_53_3 = 0;
-        ru stackIn_62_0;
+        IndexedSprite stackIn_62_0;
         int stackIn_62_1;
         int stackIn_62_2;
         int stackIn_62_3;
         int stackIn_63_4;
-        ru stackIn_68_0 = null;
+        IndexedSprite stackIn_68_0 = null;
         int stackIn_68_1 = 0;
         int stackIn_68_2 = 0;
         int stackIn_69_3;
-        ru stackIn_72_0 = null;
+        IndexedSprite stackIn_72_0 = null;
         int stackIn_73_1 = 0;
-        ru stackIn_76_0 = null;
+        IndexedSprite stackIn_76_0 = null;
         int stackIn_77_1 = 0;
         int stackIn_87_0 = 0;
         int stackIn_87_1 = 0;
@@ -287,7 +287,7 @@ final class ib extends mk {
                       } else {
                         stackIn_77_1 = param5 / 2;
                       }
-                      ((ru) (Object) stackIn_76_0).c(stackIn_77_1 + (param5 / 4 + param2) - (uh.field_e[2][0] >> 3), 40 + (var10 - (uh.field_e[2][1] >> 3)));
+                      ((IndexedSprite) (Object) stackIn_76_0).c(stackIn_77_1 + (param5 / 4 + param2) - (uh.field_e[2][0] >> 3), 40 + (var10 - (uh.field_e[2][1] >> 3)));
                     } else {
                       if (kd.field_X == 3) {
                         stackIn_72_0 = bc.field_j[3][var11];
@@ -296,7 +296,7 @@ final class ib extends mk {
                         } else {
                           stackIn_73_1 = 0;
                         }
-                        ((ru) (Object) stackIn_72_0).a(stackIn_73_1 - (uh.field_e[3][0] >> 3) + param2 + param5 / 4, -(uh.field_e[3][1] >> 1) + (40 + var10));
+                        ((IndexedSprite) (Object) stackIn_72_0).draw(stackIn_73_1 - (uh.field_e[3][0] >> 3) + param2 + param5 / 4, -(uh.field_e[3][1] >> 1) + (40 + var10));
                       } else {
                         stackIn_68_0 = bc.field_j[kd.field_X][var11];
                         stackIn_68_1 = param5 / 4 + param2;
@@ -306,7 +306,7 @@ final class ib extends mk {
                         } else {
                           stackIn_69_3 = 0;
                         }
-                        ((ru) (Object) stackIn_68_0).d(stackIn_68_1 - (stackIn_68_2 - stackIn_69_3), var10 + 40 - (uh.field_e[kd.field_X][1] >> 2));
+                        ((IndexedSprite) (Object) stackIn_68_0).d(stackIn_68_1 - (stackIn_68_2 - stackIn_69_3), var10 + 40 - (uh.field_e[kd.field_X][1] >> 2));
                       }
                     }
                   } else {
@@ -319,7 +319,7 @@ final class ib extends mk {
                     } else {
                       stackIn_63_4 = 0;
                     }
-                    ((ru) (Object) stackIn_62_0).c(stackIn_62_1 + (stackIn_62_2 - (stackIn_62_3 - stackIn_63_4)), 40 + (var10 - (uh.field_e[1][1] >> 3)));
+                    ((IndexedSprite) (Object) stackIn_62_0).c(stackIn_62_1 + (stackIn_62_2 - (stackIn_62_3 - stackIn_63_4)), 40 + (var10 - (uh.field_e[1][1] >> 3)));
                   }
                 }
                 if (MatchConditionEntry.a(80 + param1, (byte) 94) < var10) {

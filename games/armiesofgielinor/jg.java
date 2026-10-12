@@ -35,7 +35,7 @@ final class jg extends IntrusiveNode {
 
     final static void a(byte param0) {
         if (iu.field_h) {
-          SoftwareRaster.d(SoftwareRaster.field_j, SoftwareRaster.field_a, SoftwareRaster.field_e - SoftwareRaster.field_j, SoftwareRaster.field_f - SoftwareRaster.field_a);
+          SoftwareRaster.d(SoftwareRaster.clipLeft, SoftwareRaster.clipTop, SoftwareRaster.clipRight - SoftwareRaster.clipLeft, SoftwareRaster.clipBottom - SoftwareRaster.clipTop);
           OwnerChangeEvent.field_E.b(false, 20);
         }
         if (param0 != 102) {
@@ -395,8 +395,8 @@ final class jg extends IntrusiveNode {
               if ((1 << ev.field_c & var14Lifetime1) != 0) {
                 var50_ref = rs.field_p[var12.field_Tb];
                 var12.field_ic.field_cb = var50_ref;
-                var12.field_ic.a(var12.field_oc.field_ob, param0 ^ -20500, var50_ref.field_A, 0, var34_int);
-                var34_int = var34_int + (var50_ref.field_A + io.field_n);
+                var12.field_ic.a(var12.field_oc.field_ob, param0 ^ -20500, var50_ref.canvasWidth, 0, var34_int);
+                var34_int = var34_int + (var50_ref.canvasWidth + io.field_n);
               }
               if ((1 << ai.field_M & var14Lifetime1) != 0) {
                 if (!var12.field_Sb) {
@@ -413,14 +413,14 @@ final class jg extends IntrusiveNode {
                 }
                 var51_ref = stackIn_85_0[stackIn_86_1];
                 var12.field_ec.field_cb = var51_ref;
-                var12.field_ec.a(var12.field_oc.field_ob, param0 ^ -20500, var51_ref.field_A, 0, var34_int);
-                var34_int = var34_int + (var51_ref.field_A + io.field_n);
+                var12.field_ec.a(var12.field_oc.field_ob, param0 ^ -20500, var51_ref.canvasWidth, 0, var34_int);
+                var34_int = var34_int + (var51_ref.canvasWidth + io.field_n);
               }
               if ((1 << gg.field_I & var14Lifetime1) != 0) {
                 var52_ref = lm.field_h[var12.field_ac - 1];
                 var12.field_fc.field_cb = var52_ref;
-                var12.field_fc.a(var12.field_oc.field_ob, -20500, var52_ref.field_A, 0, var34_int);
-                var34_int = var34_int + (var52_ref.field_A + io.field_n);
+                var12.field_fc.a(var12.field_oc.field_ob, -20500, var52_ref.canvasWidth, 0, var34_int);
+                var34_int = var34_int + (var52_ref.canvasWidth + io.field_n);
               }
               if ((1 << uj.field_j & var14Lifetime1) != 0) {
                 stackIn_93_0 = bp.field_d;
@@ -431,8 +431,8 @@ final class jg extends IntrusiveNode {
                 }
                 var53_ref = stackIn_93_0[stackIn_94_1];
                 var12.field_Vb.field_cb = var53_ref;
-                var12.field_Vb.a(var12.field_oc.field_ob, -20500, var53_ref.field_A, 0, var34_int);
-                var34_int = var34_int + (io.field_n + var53_ref.field_A);
+                var12.field_Vb.a(var12.field_oc.field_ob, -20500, var53_ref.canvasWidth, 0, var34_int);
+                var34_int = var34_int + (io.field_n + var53_ref.canvasWidth);
               }
               if (ju.field_a != null) {
                 for (var36Lifetime1 = 0; var36Lifetime1 < tq.field_b; var36Lifetime1++) {
@@ -441,8 +441,8 @@ final class jg extends IntrusiveNode {
                     var42 = ju.field_a[var36Lifetime1][var12.field_pc[var36Lifetime1] & 255];
                     var54 = var42;
                     var12.field_Qb[var36Lifetime1].field_cb = var42;
-                    var12.field_Qb[var36Lifetime1].a(var12.field_oc.field_ob, -20500, var54.field_A, 0, var34_int);
-                    var34_int = var34_int + (var54.field_A + io.field_n);
+                    var12.field_Qb[var36Lifetime1].a(var12.field_oc.field_ob, -20500, var54.canvasWidth, 0, var34_int);
+                    var34_int = var34_int + (var54.canvasWidth + io.field_n);
                   }
                 }
               }

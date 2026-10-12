@@ -29,23 +29,23 @@ final class sj {
           vg.field_q[0].g(param1, param0);
         } else {
           var4 = 0;
-          var5 = SoftwareRaster.field_l * param0 + param1;
-          var6 = SoftwareRaster.field_l - CampaignProgress.field_b;
+          var5 = SoftwareRaster.width * param0 + param1;
+          var6 = SoftwareRaster.width - CampaignProgress.field_b;
           var12 = 0;
           while (ac.field_m > var12) {
             var13 = 0;
             while (var13 < CampaignProgress.field_b) {
-              var7 = vg.field_q[0].field_B[var4];
+              var7 = vg.field_q[0].pixels[var4];
               var11 = var7 >>> 24;
               if (0 != var11) {
                 if (var11 >= 255) {
                   if (this.field_f[var4] <= this.field_h) {
-                    var7 = vg.field_q[1].field_B[var4];
+                    var7 = vg.field_q[1].pixels[var4];
                   }
-                  SoftwareRaster.field_d[var5] = var7;
+                  SoftwareRaster.pixels[var5] = var7;
                 } else {
                   if (this.field_h >= this.field_f[var4]) {
-                    var7 = vg.field_q[1].field_B[var4];
+                    var7 = vg.field_q[1].pixels[var4];
                     var11 = var7 >>> 24;
                   }
                   var8 = 16711935 & var7;
@@ -53,14 +53,14 @@ final class sj {
                   var7 = 256 - var11;
                   var8 = var8 * var7;
                   var9 = var9 * var7;
-                  var7 = SoftwareRaster.field_d[var5];
+                  var7 = SoftwareRaster.pixels[var5];
                   var10 = var7 & 16711935;
                   var10 = var10 * var11;
                   var9 = var9 + var9;
                   var8 = var8 + var10;
                   var8 = var8 & -16711936;
                   var9 = var9 & 16711680;
-                  SoftwareRaster.field_d[var5] = oe.c(var9, var8) >>> 8;
+                  SoftwareRaster.pixels[var5] = oe.c(var9, var8) >>> 8;
                 }
               }
               var4++;

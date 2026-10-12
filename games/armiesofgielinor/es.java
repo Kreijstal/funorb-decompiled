@@ -5,7 +5,7 @@ import java.io.*;
 
 final class es {
     static String[][][] field_c;
-    static ru[] field_d;
+    static IndexedSprite[] field_d;
     int field_a;
     static String field_b;
     private og[] field_e;
@@ -77,7 +77,7 @@ final class es {
 
     final boolean a(int param0) {
         if (param0 <= 109) {
-          field_d = (ru[]) null;
+          field_d = (IndexedSprite[]) null;
         }
         return this.field_a >= this.field_e.length ? true : false;
     }

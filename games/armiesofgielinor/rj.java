@@ -86,15 +86,15 @@ final class rj extends kb {
         var9 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           var5_int = param3 + this.field_l;
-          CampaignUnitOverride.a(this.field_J.field_y + param3, -this.field_J.field_y + var5_int, param1 + this.field_w, param1, (byte) 87);
+          CampaignUnitOverride.a(this.field_J.pixelWidth + param3, -this.field_J.pixelWidth + var5_int, param1 + this.field_w, param1, (byte) 87);
           var6 = -this.field_N + param3;
           var7 = -123 / ((param0 + 26) / 40);
           while (var6 < var5_int) {
             param2.g(var6, param1);
-            var6 = var6 + param2.field_y;
+            var6 = var6 + param2.pixelWidth;
           }
           rf.b(-18862);
-          if (SoftwareRaster.field_j <= param3 + this.field_J.field_y) {
+          if (SoftwareRaster.clipLeft <= param3 + this.field_J.pixelWidth) {
             CombatSandbox.a(this.field_K, 3);
             param2.g(-this.field_N, 0);
             param2.g(this.field_C * 2 - this.field_N, 0);
@@ -102,15 +102,15 @@ final class rj extends kb {
             rf.b(-18862);
             this.field_K.g(param3, param1);
           }
-          if (-this.field_J.field_y + var5_int <= SoftwareRaster.field_e) {
+          if (-this.field_J.pixelWidth + var5_int <= SoftwareRaster.clipRight) {
             CombatSandbox.a(this.field_K, 3);
-            for (var8 = -this.field_J.field_y + this.field_l + this.field_N; var8 > this.field_C * 2; var8 = var8 - this.field_C * 2) {
+            for (var8 = -this.field_J.pixelWidth + this.field_l + this.field_N; var8 > this.field_C * 2; var8 = var8 - this.field_C * 2) {
             }
             param2.g(-var8, 0);
             param2.g(-var8 + this.field_C * 2, 0);
             this.field_J.b(0, 0);
             rf.b(-18862);
-            this.field_K.g(var5_int - this.field_J.field_y, param1);
+            this.field_K.g(var5_int - this.field_J.pixelWidth, param1);
             return;
           }
           return;

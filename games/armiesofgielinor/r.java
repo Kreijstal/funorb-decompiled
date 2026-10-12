@@ -225,10 +225,10 @@ final class r extends vt {
     }
 
     private final void e(byte param0) {
-        int var2 = this.field_D[3].field_A;
+        int var2 = this.field_D[3].canvasWidth;
         int var3 = this.field_C.a(' ');
         int var4 = this.field_A - (-var2 - var3);
-        int var5 = this.field_D[1].field_x;
+        int var5 = this.field_D[1].canvasHeight;
         if (param0 != 108) {
           this.field_L = -29;
         }
@@ -335,10 +335,10 @@ final class r extends vt {
 
     private final void c(byte param0) {
         RgbSprite var2 = this.k(3);
-        int var3 = this.field_D[5].field_A;
-        int var4 = var2.field_A;
+        int var3 = this.field_D[5].canvasWidth;
+        int var4 = var2.canvasWidth;
         int var5 = -var3 + this.field_A - (-this.field_t + var4);
-        int var6 = this.field_D[1].field_x;
+        int var6 = this.field_D[1].canvasHeight;
         if (param0 != -36) {
           return;
         }
@@ -489,18 +489,18 @@ final class r extends vt {
         if (param0 != 10009) {
           return;
         }
-        var4 = this.field_D[3].field_A + this.field_D[5].field_A;
+        var4 = this.field_D[3].canvasWidth + this.field_D[5].canvasWidth;
         var5 = this.k(3);
-        var6 = var5.field_A;
+        var6 = var5.canvasWidth;
         this.field_t = var6 + var4 + var2 + var3Lifetime1;
         var7 = this.field_C.field_L + this.field_C.field_H;
         var8 = 4;
-        var9 = var5.field_x;
+        var9 = var5.canvasHeight;
         this.field_o = var8 + var7;
         if (var9 > this.field_o) {
           this.field_o = var9;
         }
-        var10 = this.field_D[7].field_x + this.field_D[1].field_x;
+        var10 = this.field_D[7].canvasHeight + this.field_D[1].canvasHeight;
         this.field_o = var10 + this.field_o;
         return;
     }

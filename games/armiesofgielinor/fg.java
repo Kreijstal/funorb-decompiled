@@ -42,7 +42,7 @@ final class fg extends IntrusiveNode {
           if (param4 <= 64) {
             field_l = (String) null;
           }
-          var8 = a.a(16711680, param0, var7, param1);
+          var8 = RegionAnchor.a(16711680, param0, var7, param1);
           var9 = -((var8 & -14033988) >>> 24) + 255;
           var8 = var8 & 16777215;
           if (!param6) {

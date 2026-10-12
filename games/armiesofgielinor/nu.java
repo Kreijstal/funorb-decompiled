@@ -184,7 +184,7 @@ final class nu extends lk {
           var7 = stackIn_16_0;
           stackIn_19_0 = (!param3) ? 7105644 : 16777215;
           var8 = stackIn_19_0;
-          wn.a(var7, this.field_v, param0.field_l, param1 + param0.field_B, param0.field_p + param4 + (-this.field_v[0].field_x + param0.field_w >> 1), -3225);
+          wn.a(var7, this.field_v, param0.field_l, param1 + param0.field_B, param0.field_p + param4 + (-this.field_v[0].canvasHeight + param0.field_w >> 1), -3225);
           this.field_q.a(param0.field_v, param0.field_B + param1, param4 + param0.field_p - 2, param0.field_l, param0.field_w, var8, -1, 1, 1, this.field_q.field_H);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -21,8 +21,8 @@ final class re extends dr {
             field_E = (String) null;
           }
           param4[0].f(param1, param0, param5);
-          param4[1].d(param4[1].field_y + param1, param0, -(param4[2].field_y << 1) + param3, param4[2].field_v, param5);
-          param4[2].f(param3 + (param1 - param4[2].field_y), param0, param5);
+          param4[1].d(param4[1].pixelWidth + param1, param0, -(param4[2].pixelWidth << 1) + param3, param4[2].pixelHeight, param5);
+          param4[2].f(param3 + (param1 - param4[2].pixelWidth), param0, param5);
         } catch (RuntimeException runtimeException) {
           throw ig.addExceptionContext((Throwable) ((Object) runtimeException), "re.B(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ')');
         }

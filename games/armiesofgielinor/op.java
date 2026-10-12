@@ -121,7 +121,7 @@ final class op {
             stackIn_21_0 = MapLayout.field_m;
             return stackIn_21_0;
           }
-          if (si.a(param1, -3404)) {
+          if (IndexedSpriteBase.a(param1, -3404)) {
             stackIn_24_0 = fo.a(4800, km.field_a, new String[]{param1});
             return stackIn_24_0;
           }

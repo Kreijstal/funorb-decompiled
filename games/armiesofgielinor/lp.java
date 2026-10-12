@@ -4,7 +4,7 @@
 final class lp {
     static int[] field_c;
     static int[][] field_a;
-    static ru[] field_b;
+    static IndexedSprite[] field_b;
 
     final static int a(String param0, boolean param1, boolean param2) {
         RuntimeException var3 = null;
@@ -16,7 +16,7 @@ final class lp {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param2) {
-            field_b = (ru[]) null;
+            field_b = (IndexedSprite[]) null;
           }
           if (param1) {
             stackIn_6_0 = uk.field_s.a(param0);

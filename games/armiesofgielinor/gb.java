@@ -107,11 +107,11 @@ final class gb extends iu {
             if (var5_int > 0) {
               boolean decompiledSharedTail0 = (th.a(param0 + param1, 1, 2) != 0);
               if (!decompiledSharedTail0) {
-                hq.field_a[0].a(param2, param3);
+                hq.field_a[0].draw(param2, param3);
                 decompiledSharedTail0 = (ArmiesOfGielinor.obfuscationControl);
               }
               if (decompiledSharedTail0) {
-                hq.field_a[(og.field_p[th.a(param1, 1, ks.field_y) + th.a(param0, 1, ef.field_c) * ks.field_y] % 6 + 1 << 2) - 1 + var5_int].a(param2, param3);
+                hq.field_a[(og.field_p[th.a(param1, 1, ks.field_y) + th.a(param0, 1, ef.field_c) * ks.field_y] % 6 + 1 << 2) - 1 + var5_int].draw(param2, param3);
               }
             }
             var6 = 88 / ((-21 - param4) / 46);
@@ -1277,13 +1277,13 @@ final class gb extends iu {
         try {
           if (null != param0 &&
             param3 > 0) {
-            var5_int = param0[0].field_A;
-            var6 = param0[2].field_A;
-            var7 = param0[1].field_A;
+            var5_int = param0[0].canvasWidth;
+            var6 = param0[2].canvasWidth;
+            var7 = param0[1].canvasWidth;
             param0[0].g(param1, param2);
             param0[2].g(param3 + (param1 - var6), param2);
             SoftwareRaster.b(an.field_H);
-            SoftwareRaster.b(param1 + var5_int, param2, param1 + (param3 - var6), param0[1].field_x + param2);
+            SoftwareRaster.b(param1 + var5_int, param2, param1 + (param3 - var6), param0[1].canvasHeight + param2);
             var8 = var5_int + param1;
             var9 = param3 + param1 - var6;
             for (param1 = var8; var9 > param1; param1 = param1 + var7) {

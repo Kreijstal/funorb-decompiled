@@ -129,7 +129,7 @@ final class ManaEvent extends GameEvent {
                   if (param1 >= tm.field_q) {
                     return;
                   }
-                  var16Lifetime2 = var16Lifetime2 + SoftwareRaster.field_l;
+                  var16Lifetime2 = var16Lifetime2 + SoftwareRaster.width;
                   var9_int = var9_int + var11;
                   var10 = var10 + var12;
                 }
@@ -184,7 +184,7 @@ final class ManaEvent extends GameEvent {
                 return;
               }
               var10 = var10 + var12;
-              var15Lifetime1 = var15Lifetime1 + SoftwareRaster.field_l;
+              var15Lifetime1 = var15Lifetime1 + SoftwareRaster.width;
               var9_int = var9_int + var11;
             }
             return;

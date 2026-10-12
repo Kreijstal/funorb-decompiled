@@ -6,7 +6,7 @@ final class MatchConditionEntry extends IntrusiveNode {
     static pf field_l;
     static int[][] field_o;
     static CombatViewTransition field_p;
-    static ru field_n;
+    static IndexedSprite field_n;
     static int field_k;
 
     final static int a(int param0, byte param1) {

@@ -101,7 +101,7 @@ final class dg {
           mk.field_e = param0;
           l.field_b = var3Lifetime1.field_g;
           oq.field_l = var5.field_b;
-          dd.field_k = ac.field_k[1].a();
+          dd.field_k = ac.field_k[1].toRgbSprite();
           return;
         }
     }

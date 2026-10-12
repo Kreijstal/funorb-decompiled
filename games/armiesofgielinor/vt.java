@@ -109,7 +109,7 @@ abstract class vt extends IntrusiveNode {
         String stackIn_18_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var6_int = param1.a(param4) + (param3[0].field_A << 1) >> 1;
+          var6_int = param1.a(param4) + (param3[0].canvasWidth << 1) >> 1;
           if (param5 > -104) {
             field_m = (int[]) null;
           }
@@ -122,7 +122,7 @@ abstract class vt extends IntrusiveNode {
           } else {
             param0 = param0 - var7;
           }
-          stackIn_8_0 = wg.a(-33, -var6_int + param0, var6_int + param0, param2, param3[0].field_x + param2);
+          stackIn_8_0 = wg.a(-33, -var6_int + param0, var6_int + param0, param2, param3[0].canvasHeight + param2);
           return stackIn_8_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

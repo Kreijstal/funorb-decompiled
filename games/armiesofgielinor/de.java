@@ -101,7 +101,7 @@ final class de {
           if (uc.spellDefinitions[param4][3] == 4) {
             if (uc.spellDefinitions[param4][5] == 1) {
               if (0 == param2.godFavourLevels[param5][uc.spellDefinitions[param4][6]]) {
-                stackIn_21_0 = fo.a(4800, a.field_n, new String[]{wf.field_q[1 + uc.spellDefinitions[param4][6]]});
+                stackIn_21_0 = fo.a(4800, RegionAnchor.field_n, new String[]{wf.field_q[1 + uc.spellDefinitions[param4][6]]});
                 return stackIn_21_0;
               }
               if (param2.godFavourLevels[param5][uc.spellDefinitions[param4][6]] < 5) {

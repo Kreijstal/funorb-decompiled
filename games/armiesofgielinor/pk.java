@@ -99,17 +99,17 @@ final class pk extends hv {
         var10 = var8.a(-18033, param1, (kb) (this)) + (var8.a(-69, (kb) (this)).a((byte) 27) >> 1);
         if (var6Lifetime1 == ad.field_K) {
           var18 = db.field_a[0];
-          var11 = var18.field_A << 1;
-          var12 = var18.field_x << 1;
+          var11 = var18.canvasWidth << 1;
+          var12 = var18.canvasHeight << 1;
           if (this.field_Y == null) {
             this.field_Y = new RgbSprite(var11, var12);
             CombatSandbox.a(this.field_Y, 3);
           } else {
-            if (this.field_Y.field_y < var11) {
+            if (this.field_Y.pixelWidth < var11) {
               this.field_Y = new RgbSprite(var11, var12);
               CombatSandbox.a(this.field_Y, 3);
             } else {
-              if (var12 > this.field_Y.field_v) {
+              if (var12 > this.field_Y.pixelHeight) {
                 this.field_Y = new RgbSprite(var11, var12);
                 CombatSandbox.a(this.field_Y, 3);
               } else {
@@ -118,37 +118,37 @@ final class pk extends hv {
               }
             }
           }
-          var18.b(112, 144, var18.field_A << 4, var18.field_x << 4, -this.field_U << 10, 4096);
+          var18.b(112, 144, var18.canvasWidth << 4, var18.canvasHeight << 4, -this.field_U << 10, 4096);
           rf.b(-18862);
-          this.field_Y.f(var9 - (var18.field_A >> 1), -var18.field_x + var10, 256);
+          this.field_Y.f(var9 - (var18.canvasWidth >> 1), -var18.canvasHeight + var10, 256);
           return;
         }
         if (so.field_e != var6Lifetime1) {
           if (var6Lifetime1 == rn.field_e) {
             var16 = db.field_a[2];
-            var16.f(var9, -(var16.field_v >> 1) + var10, 256);
+            var16.f(var9, -(var16.pixelHeight >> 1) + var10, 256);
             return;
           }
           if (var6Lifetime1 != oo.field_g) {
             return;
           }
           var15 = db.field_a[1];
-          var15.f(var9, -(var15.field_v >> 1) + var10, 256);
+          var15.f(var9, -(var15.pixelHeight >> 1) + var10, 256);
           return;
         }
         var17 = db.field_a[0];
         var14 = var17;
-        var11Lifetime1 = var17.field_A << 1;
-        var12Lifetime1 = var17.field_x << 1;
+        var11Lifetime1 = var17.canvasWidth << 1;
+        var12Lifetime1 = var17.canvasHeight << 1;
         if (this.field_Y == null) {
           this.field_Y = new RgbSprite(var11Lifetime1, var12Lifetime1);
           CombatSandbox.a(this.field_Y, 3);
         } else {
-          if (this.field_Y.field_y < var11Lifetime1) {
+          if (this.field_Y.pixelWidth < var11Lifetime1) {
             this.field_Y = new RgbSprite(var11Lifetime1, var12Lifetime1);
             CombatSandbox.a(this.field_Y, 3);
           } else {
-            if (var12Lifetime1 > this.field_Y.field_v) {
+            if (var12Lifetime1 > this.field_Y.pixelHeight) {
               this.field_Y = new RgbSprite(var11Lifetime1, var12Lifetime1);
               CombatSandbox.a(this.field_Y, 3);
             } else {
@@ -157,9 +157,9 @@ final class pk extends hv {
             }
           }
         }
-        var17.b(112, 144, var17.field_A << 4, var17.field_x << 4, -this.field_U << 10, 4096);
+        var17.b(112, 144, var17.canvasWidth << 4, var17.canvasHeight << 4, -this.field_U << 10, 4096);
         rf.b(-18862);
-        this.field_Y.f(var9 - (var17.field_A >> 1), -var17.field_x + var10, 256);
+        this.field_Y.f(var9 - (var17.canvasWidth >> 1), -var17.canvasHeight + var10, 256);
         return;
     }
 

@@ -37,7 +37,7 @@ abstract class wf extends iv {
         qf.a(og.field_m, this.field_p, this.field_G, (byte) 103, this.field_C, param6, this.field_E, this.field_t, IntPair.field_m);
         rf.b((byte) 112);
         CampaignMission.field_I = jk.b(68);
-        lk.a(101, si.field_b);
+        lk.a(101, IndexedSpriteBase.field_b);
         mo.field_c = param7;
         on.field_n = param5;
         lk.field_p = param0;
@@ -685,15 +685,15 @@ abstract class wf extends iv {
         }
         if (f.field_E == 10) {
           if (0 != og.field_m) {
-            a.field_o = nu.a(lk.field_p, true);
+            RegionAnchor.field_o = nu.a(lk.field_p, true);
           }
           f.field_E = 11;
         }
         boolean decompiledFrameRemainder0 = true;
         if (f.field_E == 11) {
-          if (a.field_o != null && (!a.field_o.a((byte) 82) ||
-            !a.field_o.d(-27927))) {
-            bn.a((byte) -24, 0.0f, ao.a(db.field_b, true, of.field_Jb, a.field_o));
+          if (RegionAnchor.field_o != null && (!RegionAnchor.field_o.a((byte) 82) ||
+            !RegionAnchor.field_o.d(-27927))) {
+            bn.a((byte) -24, 0.0f, ao.a(db.field_b, true, of.field_Jb, RegionAnchor.field_o));
             decompiledFrameRemainder0 = false;
           }
           else {
@@ -718,9 +718,9 @@ abstract class wf extends iv {
         }
         if (!param1 &&
           tq.field_a) {
-          dt.a(si.field_b, 23678);
+          dt.a(IndexedSpriteBase.field_b, 23678);
           this.c((byte) 87);
-          lk.a(123, si.field_b);
+          lk.a(123, IndexedSpriteBase.field_b);
         }
         if (tk.field_f[8]) {
           pu.b(28704);

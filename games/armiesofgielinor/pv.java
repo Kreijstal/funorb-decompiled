@@ -248,12 +248,12 @@ final class pv {
         return '_';
     }
 
-    final static ru a(String param0, String param1, kl param2, int param3) {
+    final static IndexedSprite a(String param0, String param1, kl param2, int param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
-        ru stackIn_2_0 = null;
-        ru stackIn_4_0 = null;
+        IndexedSprite stackIn_2_0 = null;
+        IndexedSprite stackIn_4_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
@@ -269,7 +269,7 @@ final class pv {
             stackIn_4_0 = ls.a(var5, param2, var4_int, -80);
             return stackIn_4_0;
           }
-          stackIn_2_0 = (ru) null;
+          stackIn_2_0 = (IndexedSprite) null;
           return stackIn_2_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

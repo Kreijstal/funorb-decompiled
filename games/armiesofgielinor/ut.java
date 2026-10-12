@@ -105,7 +105,7 @@ final class ut extends sf implements he {
           }
           stackIn_31_1 = !(this.field_db.length <= 0);
           this.field_jb = stackIn_31_1;
-          stackIn_34_0 = (!pr.b(85)) ? 0 : 1;
+          stackIn_34_0 = (!PaletteRegionMap.b(85)) ? 0 : 1;
           var2_intLifetime1 = stackIn_34_0;
           stackIn_37_1 = !(DamageEvent.g(79));
           this.field_hb = stackIn_37_1;
@@ -249,12 +249,12 @@ final class ut extends sf implements he {
         int var6_int = 0;
         RuntimeException var6 = null;
         int var7 = 0;
-        ru[] var8 = null;
+        IndexedSprite[] var8 = null;
         var7 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           if (param1 != 11) {
-            var8 = (ru[]) null;
-            discarded$0 = this.a((qo) null, (String) null, (ru[]) null, true);
+            var8 = (IndexedSprite[]) null;
+            discarded$0 = this.a((qo) null, (String) null, (IndexedSprite[]) null, true);
           }
           if (param4 == this.field_X) {
             this.n(118);
@@ -803,7 +803,7 @@ final class ut extends sf implements he {
         }
     }
 
-    private final fw a(qo param0, String param1, ru[] param2, boolean param3) {
+    private final fw a(qo param0, String param1, IndexedSprite[] param2, boolean param3) {
         fw var5 = null;
         RuntimeException var5_ref = null;
         ob var6 = null;

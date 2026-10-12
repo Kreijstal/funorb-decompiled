@@ -3,23 +3,23 @@
  */
 import java.io.*;
 
-final class pr {
+final class PaletteRegionMap {
     static String[] field_a;
-    private int field_j;
+    private int anchorColour;
     static String field_i;
-    private NodeDeque[] field_b;
-    private int field_e;
-    private int field_c;
+    private NodeDeque[] anchorsByRegion;
+    private int regionCount;
+    private int ignoredColour;
     static int[] field_f;
     static AnimationPlayer field_g;
-    private int[] field_d;
-    private ru field_h;
+    private int[] regionByPaletteIndex;
+    private IndexedSprite sourceImage;
 
-    final NodeDeque a(int param0, int param1) {
-        if (param1 != 1) {
+    final NodeDeque getAnchors(int regionId, int obfuscationGuard) {
+        if (obfuscationGuard != 1) {
           return (NodeDeque) null;
         }
-        return this.field_b[1 + param0];
+        return this.anchorsByRegion[1 + regionId];
     }
 
     final static void a(byte param0, java.awt.Canvas param1) {
@@ -37,15 +37,15 @@ final class pr {
         }
     }
 
-    private final void a(int param0, int param1, int param2, byte param3) {
-        param2++;
-        if (this.field_b[param2] == null) {
-          this.field_b[param2] = new NodeDeque();
+    private final void addAnchor(int row, int column, int regionId, byte obfuscationGuard) {
+        regionId++;
+        if (this.anchorsByRegion[regionId] == null) {
+          this.anchorsByRegion[regionId] = new NodeDeque();
         }
-        if (param3 >= -95) {
-          this.a(-65, (byte) -99, 28);
+        if (obfuscationGuard >= -95) {
+          this.getRegionAt(-65, (byte) -99, 28);
         }
-        this.field_b[param2].addLast((byte) -119, (IntrusiveNode) (new a(param1, param0)));
+        this.anchorsByRegion[regionId].addLast((byte) -119, (IntrusiveNode) (new RegionAnchor(column, row)));
     }
 
     final static boolean b(int param0) {
@@ -75,7 +75,7 @@ final class pr {
           try {
             if (param1 != -84) {
               var6 = (java.awt.Canvas) null;
-              pr.a((byte) -8, (java.awt.Canvas) null);
+              PaletteRegionMap.a((byte) -8, (java.awt.Canvas) null);
             }
             var7 = new byte[24];
             var2 = var7;
@@ -172,173 +172,173 @@ final class pr {
         field_f = null;
     }
 
-    final RgbSprite a(int param0, int param1, byte param2, int param3) {
-        int var11_int = 0;
+    final RgbSprite extractRegionSprite(int regionId, int colour, byte obfuscationGuard, int padding) {
+        int x = 0;
         int[] stackIn_20_0 = null;
         int stackIn_20_1 = 0;
         int stackIn_21_2 = 0;
-        int var5;
-        int var6;
-        int var7;
-        int var8;
-        int var9;
+        int minimumX;
+        int maximumX;
+        int minimumY;
+        int maximumY;
+        int y;
         int var10;
-        RgbSprite var11;
-        int var12;
-        int var13;
-        int var14;
-        int var15;
+        RgbSprite sprite;
+        int paletteIndex;
+        int region;
+        int outputPaletteIndex;
+        int outputRegion;
         int var16;
-        int var17;
-        int var9Lifetime1;
-        int var10Lifetime1;
-        int var12Lifetime1;
+        int outputX;
+        int height;
+        int width;
+        int outputY;
         int var13Lifetime1;
         var16 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
-        var5 = this.field_h.field_e;
-        var6 = 0;
-        var7 = this.field_h.field_h;
-        var8 = 0;
-        var10 = 6 / ((17 - param2) / 40);
-        for (var9 = this.field_h.field_d; var9 < this.field_h.field_h; var9++) {
-          for (var11_int = this.field_h.field_i; this.field_h.field_e > var11_int; var11_int++) {
-            var12 = this.field_h.field_k[var11_int + this.field_h.field_e * var9];
-            var13 = this.field_d[var12];
-            if (~param0 == ~var13) {
-              var5 = Math.min(var5, var11_int);
-              var6 = Math.max(var6, var11_int);
-              var7 = Math.min(var7, var9);
-              var8 = Math.max(var8, var9);
+        minimumX = this.sourceImage.pixelWidth;
+        maximumX = 0;
+        minimumY = this.sourceImage.pixelHeight;
+        maximumY = 0;
+        var10 = 6 / ((17 - obfuscationGuard) / 40);
+        for (y = this.sourceImage.offsetY; y < this.sourceImage.pixelHeight; y++) {
+          for (x = this.sourceImage.offsetX; this.sourceImage.pixelWidth > x; x++) {
+            paletteIndex = this.sourceImage.pixelIndices[x + this.sourceImage.pixelWidth * y];
+            region = this.regionByPaletteIndex[paletteIndex];
+            if (~regionId == ~region) {
+              minimumX = Math.min(minimumX, x);
+              maximumX = Math.max(maximumX, x);
+              minimumY = Math.min(minimumY, y);
+              maximumY = Math.max(maximumY, y);
             }
           }
         }
-        var9Lifetime1 = 1 + (var8 - var7);
-        var10Lifetime1 = 1 + (var6 - var5);
-        if (var10Lifetime1 <= 0) {
+        height = 1 + (maximumY - minimumY);
+        width = 1 + (maximumX - minimumX);
+        if (width <= 0) {
           return null;
         }
-        if (0 >= var9Lifetime1) {
+        if (0 >= height) {
           return null;
         }
-        var10Lifetime1 = var10Lifetime1 + 2 * param3;
-        var9Lifetime1 = var9Lifetime1 + param3 * 2;
-        var11 = new RgbSprite(var10Lifetime1, var9Lifetime1);
-        for (var12Lifetime1 = var7; var8 >= var12Lifetime1; var12Lifetime1++) {
-          var17 = var5;
-          var13Lifetime1 = var17;
-          while (var17 < var6) {
-            var14 = this.field_h.field_k[var12Lifetime1 * this.field_h.field_e + var17];
-            var15 = this.field_d[var14];
-            stackIn_20_0 = var11.field_B;
-            stackIn_20_1 = (param3 + (-var7 + var12Lifetime1)) * var10Lifetime1 + (var17 - (var5 - param3));
-            if (var15 == param0) {
-              stackIn_21_2 = param1;
+        width = width + 2 * padding;
+        height = height + padding * 2;
+        sprite = new RgbSprite(width, height);
+        for (outputY = minimumY; maximumY >= outputY; outputY++) {
+          outputX = minimumX;
+          var13Lifetime1 = outputX;
+          while (outputX < maximumX) {
+            outputPaletteIndex = this.sourceImage.pixelIndices[outputY * this.sourceImage.pixelWidth + outputX];
+            outputRegion = this.regionByPaletteIndex[outputPaletteIndex];
+            stackIn_20_0 = sprite.pixels;
+            stackIn_20_1 = (padding + (-minimumY + outputY)) * width + (outputX - (minimumX - padding));
+            if (outputRegion == regionId) {
+              stackIn_21_2 = colour;
             } else {
               stackIn_21_2 = 0;
             }
             stackIn_20_0[stackIn_20_1] = stackIn_21_2;
-            var17++;
+            outputX++;
           }
         }
-        var11.field_A = var10Lifetime1 + var5;
-        var11.field_x = var9Lifetime1 + var7;
-        var11.field_z = var7;
-        var11.field_w = var5;
-        return var11;
+        sprite.canvasWidth = width + minimumX;
+        sprite.canvasHeight = height + minimumY;
+        sprite.offsetY = minimumY;
+        sprite.offsetX = minimumX;
+        return sprite;
     }
 
     final static void a(int param0, int param1, boolean param2, int param3) {
         if (param3 != 0) {
-          pr.b(-81);
+          PaletteRegionMap.b(-81);
         }
         vo.a(mi.field_l, 2, jn.field_d, param0, gl.field_c, param1, param2);
     }
 
-    pr(ru param0, int param1, int param2) {
+    PaletteRegionMap(IndexedSprite sourceImage, int ignoredColour, int anchorColour) {
         try {
-          this.field_e = 0;
-          this.field_h = param0;
-          this.field_j = param2;
-          this.field_c = param1;
-          this.c(-91);
+          this.regionCount = 0;
+          this.sourceImage = sourceImage;
+          this.anchorColour = anchorColour;
+          this.ignoredColour = ignoredColour;
+          this.indexRegions(-91);
         } catch (RuntimeException runtimeException) {
-          throw ig.addExceptionContext((Throwable) ((Object) runtimeException), "pr.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) runtimeException), "pr.<init>(" + (sourceImage != null ? "{...}" : "null") + ',' + ignoredColour + ',' + anchorColour + ')');
         }
     }
 
-    final int a(int param0, byte param1, int param2) {
-        int var4;
-        int var5;
-        int var6;
-        int var7;
+    final int getRegionAt(int x, byte obfuscationGuard, int y) {
+        int relativeX;
+        int relativeY;
+        int paletteIndex;
+        int regionId;
         int var8;
-        var4 = -this.field_h.field_i + param0;
-        var5 = param2 - this.field_h.field_d;
-        if (var4 >= 0 &&
-          var4 < -this.field_h.field_i + this.field_h.field_e &&
-          0 <= var5 &&
-          this.field_h.field_h - this.field_h.field_d > var5) {
-          if (this.field_h.field_k.length <= var4 + this.field_h.field_e * var5) {
+        relativeX = -this.sourceImage.offsetX + x;
+        relativeY = y - this.sourceImage.offsetY;
+        if (relativeX >= 0 &&
+          relativeX < -this.sourceImage.offsetX + this.sourceImage.pixelWidth &&
+          0 <= relativeY &&
+          this.sourceImage.pixelHeight - this.sourceImage.offsetY > relativeY) {
+          if (this.sourceImage.pixelIndices.length <= relativeX + this.sourceImage.pixelWidth * relativeY) {
             return -1;
           }
-          var8 = -17 % ((-35 - param1) / 36);
-          var6 = this.field_h.field_k[var4 + var5 * this.field_h.field_e];
-          var7 = this.field_d[var6];
-          return var7;
+          var8 = -17 % ((-35 - obfuscationGuard) / 36);
+          paletteIndex = this.sourceImage.pixelIndices[relativeX + relativeY * this.sourceImage.pixelWidth];
+          regionId = this.regionByPaletteIndex[paletteIndex];
+          return regionId;
         }
         return -1;
     }
 
-    private final void c(int param0) {
+    private final void indexRegions(int obfuscationGuard) {
         int fieldTemp$0 = 0;
-        int var2;
-        int var3;
+        int paletteIndex;
+        int anchorPaletteIndex;
         int var4;
-        int var5;
-        int var6;
+        int paletteEntry;
+        int pixelPaletteIndex;
         int var7;
-        int var2Lifetime1;
-        int var4Lifetime1;
-        int var5Lifetime1;
+        int ignoredPaletteIndex;
+        int lastRegionId;
+        int pixelIndex;
         var7 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
-        this.field_b = new NodeDeque[257];
-        this.field_d = new int[256];
-        for (var2 = 0; var2 < this.field_d.length; var2++) {
-          this.field_d[var2] = -1;
+        this.anchorsByRegion = new NodeDeque[257];
+        this.regionByPaletteIndex = new int[256];
+        for (paletteIndex = 0; paletteIndex < this.regionByPaletteIndex.length; paletteIndex++) {
+          this.regionByPaletteIndex[paletteIndex] = -1;
         }
-        var2Lifetime1 = -1;
-        var3 = -1;
-        var4 = 101 % ((-34 - param0) / 39);
-        for (var5 = 0; this.field_h.field_j.length > var5; var5++) {
-          if (this.field_c != this.field_h.field_j[var5]) {
-            if (this.field_h.field_j[var5] == this.field_j) {
-              var3 = var5;
+        ignoredPaletteIndex = -1;
+        anchorPaletteIndex = -1;
+        var4 = 101 % ((-34 - obfuscationGuard) / 39);
+        for (paletteEntry = 0; this.sourceImage.palette.length > paletteEntry; paletteEntry++) {
+          if (this.ignoredColour != this.sourceImage.palette[paletteEntry]) {
+            if (this.sourceImage.palette[paletteEntry] == this.anchorColour) {
+              anchorPaletteIndex = paletteEntry;
             }
           } else {
-            var2Lifetime1 = var5;
+            ignoredPaletteIndex = paletteEntry;
           }
         }
-        var4Lifetime1 = -1;
-        for (var5Lifetime1 = 0; var5Lifetime1 < this.field_h.field_k.length; var5Lifetime1++) {
-          var6 = this.field_h.field_k[var5Lifetime1] & 255;
-          if (var2Lifetime1 != var6) {
-            if (var3 != var6) {
-              if (this.field_d[var6] == -1) {
-                fieldTemp$0 = this.field_e;
-                this.field_e = this.field_e + 1;
-                this.field_d[var6] = fieldTemp$0;
+        lastRegionId = -1;
+        for (pixelIndex = 0; pixelIndex < this.sourceImage.pixelIndices.length; pixelIndex++) {
+          pixelPaletteIndex = this.sourceImage.pixelIndices[pixelIndex] & 255;
+          if (ignoredPaletteIndex != pixelPaletteIndex) {
+            if (anchorPaletteIndex != pixelPaletteIndex) {
+              if (this.regionByPaletteIndex[pixelPaletteIndex] == -1) {
+                fieldTemp$0 = this.regionCount;
+                this.regionCount = this.regionCount + 1;
+                this.regionByPaletteIndex[pixelPaletteIndex] = fieldTemp$0;
               }
-              var4Lifetime1 = this.field_d[var6];
+              lastRegionId = this.regionByPaletteIndex[pixelPaletteIndex];
             } else {
-              this.a(var5Lifetime1 / this.field_h.field_e, var5Lifetime1 % this.field_h.field_e, var4Lifetime1, (byte) -121);
+              this.addAnchor(pixelIndex / this.sourceImage.pixelWidth, pixelIndex % this.sourceImage.pixelWidth, lastRegionId, (byte) -121);
             }
           }
         }
     }
 
-    final void a(byte param0, int param1, boolean[] param2, int param3, ru param4) {
-        int var11 = 0;
-        int var12 = 0;
+    final void drawSelectedRegions(byte obfuscationGuard, int left, boolean[] enabledRegions, int top, IndexedSprite colourImage) {
+        int y = 0;
+        int x = 0;
         RuntimeException stackIn_34_0 = null;
         StringBuilder stackIn_34_1 = null;
         String stackIn_35_2 = null;
@@ -347,58 +347,58 @@ final class pr {
         RuntimeException decompiledCaughtException = null;
         int[] var6 = null;
         RuntimeException var6_ref = null;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        int var13 = 0;
-        int var14 = 0;
-        int var15 = 0;
-        int var16 = 0;
-        int var17 = 0;
+        int clipLeft = 0;
+        int clipTop = 0;
+        int clipRight = 0;
+        int clipBottom = 0;
+        int sourceIndex = 0;
+        int paletteIndex = 0;
+        int regionId = 0;
+        int colour = 0;
+        int destinationIndex = 0;
         int var18 = 0;
         int[] var19 = null;
         int[] var20 = null;
-        int[] var21 = null;
+        int[] pixels = null;
         var18 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          var21 = SoftwareRaster.field_d;
-          var20 = var21;
+          pixels = SoftwareRaster.pixels;
+          var20 = pixels;
           var19 = var20;
           var6 = var19;
-          var7 = this.field_h.field_i;
-          var8 = this.field_h.field_d;
-          if (param0 <= 79) {
-            this.a(52, 9);
+          clipLeft = this.sourceImage.offsetX;
+          clipTop = this.sourceImage.offsetY;
+          if (obfuscationGuard <= 79) {
+            this.getAnchors(52, 9);
           }
-          var9 = this.field_h.field_e;
-          if (SoftwareRaster.field_j > var7 + param1) {
-            var7 = SoftwareRaster.field_j - param1;
+          clipRight = this.sourceImage.pixelWidth;
+          if (SoftwareRaster.clipLeft > clipLeft + left) {
+            clipLeft = SoftwareRaster.clipLeft - left;
           }
-          if (var9 + param1 >= SoftwareRaster.field_e) {
-            var9 = -param1 + SoftwareRaster.field_e;
+          if (clipRight + left >= SoftwareRaster.clipRight) {
+            clipRight = -left + SoftwareRaster.clipRight;
           }
-          var10 = this.field_h.field_h;
-          if (SoftwareRaster.field_a > var8 + param3) {
-            var8 = -param3 + SoftwareRaster.field_a;
+          clipBottom = this.sourceImage.pixelHeight;
+          if (SoftwareRaster.clipTop > clipTop + top) {
+            clipTop = -top + SoftwareRaster.clipTop;
           }
-          if (SoftwareRaster.field_f <= var10 + param3) {
-            var10 = -param3 + SoftwareRaster.field_f;
+          if (SoftwareRaster.clipBottom <= clipBottom + top) {
+            clipBottom = -top + SoftwareRaster.clipBottom;
           }
-          for (var11 = var8; var11 < var10; var11++) {
-            for (var12 = var7; var12 < var9; var12++) {
-              var13 = var12 + var11 * this.field_h.field_e;
-              var14 = 255 & this.field_h.field_k[var13];
-              var15 = this.field_d[var14];
-              if (0 <= var15 &&
-                var15 < param2.length &&
-                param2[var15]) {
-                var16 = param4.field_j[255 & param4.field_k[var13]];
-                var17 = SoftwareRaster.field_l * (param3 + var11) + (param1 + var12);
-                if (var21.length <= var17) {
-                  System.out.println(var21.length);
+          for (y = clipTop; y < clipBottom; y++) {
+            for (x = clipLeft; x < clipRight; x++) {
+              sourceIndex = x + y * this.sourceImage.pixelWidth;
+              paletteIndex = 255 & this.sourceImage.pixelIndices[sourceIndex];
+              regionId = this.regionByPaletteIndex[paletteIndex];
+              if (0 <= regionId &&
+                regionId < enabledRegions.length &&
+                enabledRegions[regionId]) {
+                colour = colourImage.palette[255 & colourImage.pixelIndices[sourceIndex]];
+                destinationIndex = SoftwareRaster.width * (top + y) + (left + x);
+                if (pixels.length <= destinationIndex) {
+                  System.out.println(pixels.length);
                 }
-                var21[var17] = var16;
+                pixels[destinationIndex] = colour;
               }
             }
           }
@@ -407,14 +407,14 @@ final class pr {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6_ref = decompiledCaughtException;
           stackIn_34_0 = var6_ref;
-          stackIn_34_1 = new StringBuilder().append("pr.D(").append(param0).append(',').append(param1).append(',');
-          if (param2 == null) {
+          stackIn_34_1 = new StringBuilder().append("pr.D(").append(obfuscationGuard).append(',').append(left).append(',');
+          if (enabledRegions == null) {
             stackIn_35_2 = "null";
           } else {
             stackIn_35_2 = "{...}";
           }
-          stackIn_37_1 = ((StringBuilder) (Object) stackIn_34_1).append(stackIn_35_2).append(',').append(param3).append(',');
-          if (param4 == null) {
+          stackIn_37_1 = ((StringBuilder) (Object) stackIn_34_1).append(stackIn_35_2).append(',').append(top).append(',');
+          if (colourImage == null) {
             stackIn_38_2 = "null";
           } else {
             stackIn_38_2 = "{...}";

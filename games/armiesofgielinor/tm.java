@@ -258,7 +258,7 @@ final class tm {
     }
 
     final static void a() {
-        tm.a(SoftwareRaster.field_j, SoftwareRaster.field_a, SoftwareRaster.field_e, SoftwareRaster.field_f);
+        tm.a(SoftwareRaster.clipLeft, SoftwareRaster.clipTop, SoftwareRaster.clipRight, SoftwareRaster.clipBottom);
     }
 
     final static void c() {
@@ -274,10 +274,10 @@ final class tm {
         if (field_k.length < field_q) {
           field_k = new int[rs.a((byte) 84, field_q)];
         }
-        int var4 = param1 * SoftwareRaster.field_l + param0;
+        int var4 = param1 * SoftwareRaster.width + param0;
         for (var5 = 0; var5 < field_q; var5++) {
           field_k[var5] = var4;
-          var4 = var4 + SoftwareRaster.field_l;
+          var4 = var4 + SoftwareRaster.width;
         }
     }
 
@@ -343,20 +343,20 @@ final class tm {
               while (true) {
                 param2--;
                 if (param2 >= 0) {
-                  tm.a(SoftwareRaster.field_d, param0, param6, 0, param3 >> 16, param4 >> 16);
+                  tm.a(SoftwareRaster.pixels, param0, param6, 0, param3 >> 16, param4 >> 16);
                   param4 = param4 + var9;
                   param3 = param3 + var7;
-                  param0 = param0 + SoftwareRaster.field_l;
+                  param0 = param0 + SoftwareRaster.width;
                   continue;
                 }
                 break;
               }
               param1--;
               while (param1 >= 0) {
-                tm.a(SoftwareRaster.field_d, param0, param6, 0, param3 >> 16, param5 >> 16);
+                tm.a(SoftwareRaster.pixels, param0, param6, 0, param3 >> 16, param5 >> 16);
                 param5 = param5 + var8;
                 param3 = param3 + var7;
-                param0 = param0 + SoftwareRaster.field_l;
+                param0 = param0 + SoftwareRaster.width;
                 param1--;
               }
               return;
@@ -367,20 +367,20 @@ final class tm {
             while (true) {
               param2--;
               if (param2 >= 0) {
-                tm.a(SoftwareRaster.field_d, param0, param6, 0, param4 >> 16, param3 >> 16);
+                tm.a(SoftwareRaster.pixels, param0, param6, 0, param4 >> 16, param3 >> 16);
                 param4 = param4 + var9;
                 param3 = param3 + var7;
-                param0 = param0 + SoftwareRaster.field_l;
+                param0 = param0 + SoftwareRaster.width;
                 continue;
               }
               break;
             }
             param1--;
             while (param1 >= 0) {
-              tm.a(SoftwareRaster.field_d, param0, param6, 0, param5 >> 16, param3 >> 16);
+              tm.a(SoftwareRaster.pixels, param0, param6, 0, param5 >> 16, param3 >> 16);
               param5 = param5 + var8;
               param3 = param3 + var7;
-              param0 = param0 + SoftwareRaster.field_l;
+              param0 = param0 + SoftwareRaster.width;
               param1--;
             }
             return;
@@ -408,20 +408,20 @@ final class tm {
             while (true) {
               param1--;
               if (param1 >= 0) {
-                tm.a(SoftwareRaster.field_d, param0, param6, 0, param3 >> 16, param5 >> 16);
+                tm.a(SoftwareRaster.pixels, param0, param6, 0, param3 >> 16, param5 >> 16);
                 param5 = param5 + var9;
                 param3 = param3 + var7;
-                param0 = param0 + SoftwareRaster.field_l;
+                param0 = param0 + SoftwareRaster.width;
                 continue;
               }
               break;
             }
             param2--;
             while (param2 >= 0) {
-              tm.a(SoftwareRaster.field_d, param0, param6, 0, param4 >> 16, param5 >> 16);
+              tm.a(SoftwareRaster.pixels, param0, param6, 0, param4 >> 16, param5 >> 16);
               param5 = param5 + var9;
               param4 = param4 + var8;
-              param0 = param0 + SoftwareRaster.field_l;
+              param0 = param0 + SoftwareRaster.width;
               param2--;
             }
             return;
@@ -432,20 +432,20 @@ final class tm {
           while (true) {
             param1--;
             if (param1 >= 0) {
-              tm.a(SoftwareRaster.field_d, param0, param6, 0, param5 >> 16, param3 >> 16);
+              tm.a(SoftwareRaster.pixels, param0, param6, 0, param5 >> 16, param3 >> 16);
               param5 = param5 + var9;
               param3 = param3 + var7;
-              param0 = param0 + SoftwareRaster.field_l;
+              param0 = param0 + SoftwareRaster.width;
               continue;
             }
             break;
           }
           param2--;
           while (param2 >= 0) {
-            tm.a(SoftwareRaster.field_d, param0, param6, 0, param5 >> 16, param4 >> 16);
+            tm.a(SoftwareRaster.pixels, param0, param6, 0, param5 >> 16, param4 >> 16);
             param5 = param5 + var9;
             param4 = param4 + var8;
-            param0 = param0 + SoftwareRaster.field_l;
+            param0 = param0 + SoftwareRaster.width;
             param2--;
           }
           return;
@@ -481,20 +481,20 @@ final class tm {
               while (true) {
                 param1--;
                 if (param1 >= 0) {
-                  tm.a(SoftwareRaster.field_d, param2, param6, 0, param5 >> 16, param3 >> 16);
+                  tm.a(SoftwareRaster.pixels, param2, param6, 0, param5 >> 16, param3 >> 16);
                   param3 = param3 + var8;
                   param5 = param5 + var9;
-                  param2 = param2 + SoftwareRaster.field_l;
+                  param2 = param2 + SoftwareRaster.width;
                   continue;
                 }
                 break;
               }
               param0--;
               while (param0 >= 0) {
-                tm.a(SoftwareRaster.field_d, param2, param6, 0, param5 >> 16, param4 >> 16);
+                tm.a(SoftwareRaster.pixels, param2, param6, 0, param5 >> 16, param4 >> 16);
                 param4 = param4 + var7;
                 param5 = param5 + var9;
-                param2 = param2 + SoftwareRaster.field_l;
+                param2 = param2 + SoftwareRaster.width;
                 param0--;
               }
               return;
@@ -505,20 +505,20 @@ final class tm {
             while (true) {
               param1--;
               if (param1 >= 0) {
-                tm.a(SoftwareRaster.field_d, param2, param6, 0, param3 >> 16, param5 >> 16);
+                tm.a(SoftwareRaster.pixels, param2, param6, 0, param3 >> 16, param5 >> 16);
                 param3 = param3 + var8;
                 param5 = param5 + var9;
-                param2 = param2 + SoftwareRaster.field_l;
+                param2 = param2 + SoftwareRaster.width;
                 continue;
               }
               break;
             }
             param0--;
             while (param0 >= 0) {
-              tm.a(SoftwareRaster.field_d, param2, param6, 0, param4 >> 16, param5 >> 16);
+              tm.a(SoftwareRaster.pixels, param2, param6, 0, param4 >> 16, param5 >> 16);
               param4 = param4 + var7;
               param5 = param5 + var9;
-              param2 = param2 + SoftwareRaster.field_l;
+              param2 = param2 + SoftwareRaster.width;
               param0--;
             }
             return;
@@ -543,20 +543,20 @@ final class tm {
             while (true) {
               param0--;
               if (param0 >= 0) {
-                tm.a(SoftwareRaster.field_d, param2, param6, 0, param5 >> 16, param4 >> 16);
+                tm.a(SoftwareRaster.pixels, param2, param6, 0, param5 >> 16, param4 >> 16);
                 param4 = param4 + var8;
                 param5 = param5 + var9;
-                param2 = param2 + SoftwareRaster.field_l;
+                param2 = param2 + SoftwareRaster.width;
                 continue;
               }
               break;
             }
             param1--;
             while (param1 >= 0) {
-              tm.a(SoftwareRaster.field_d, param2, param6, 0, param3 >> 16, param4 >> 16);
+              tm.a(SoftwareRaster.pixels, param2, param6, 0, param3 >> 16, param4 >> 16);
               param4 = param4 + var8;
               param3 = param3 + var7;
-              param2 = param2 + SoftwareRaster.field_l;
+              param2 = param2 + SoftwareRaster.width;
               param1--;
             }
             return;
@@ -567,20 +567,20 @@ final class tm {
           while (true) {
             param0--;
             if (param0 >= 0) {
-              tm.a(SoftwareRaster.field_d, param2, param6, 0, param4 >> 16, param5 >> 16);
+              tm.a(SoftwareRaster.pixels, param2, param6, 0, param4 >> 16, param5 >> 16);
               param4 = param4 + var8;
               param5 = param5 + var9;
-              param2 = param2 + SoftwareRaster.field_l;
+              param2 = param2 + SoftwareRaster.width;
               continue;
             }
             break;
           }
           param1--;
           while (param1 >= 0) {
-            tm.a(SoftwareRaster.field_d, param2, param6, 0, param4 >> 16, param3 >> 16);
+            tm.a(SoftwareRaster.pixels, param2, param6, 0, param4 >> 16, param3 >> 16);
             param4 = param4 + var8;
             param3 = param3 + var7;
-            param2 = param2 + SoftwareRaster.field_l;
+            param2 = param2 + SoftwareRaster.width;
             param1--;
           }
           return;
@@ -615,20 +615,20 @@ final class tm {
             while (true) {
               param0--;
               if (param0 >= 0) {
-                tm.a(SoftwareRaster.field_d, param1, param6, 0, param4 >> 16, param5 >> 16);
+                tm.a(SoftwareRaster.pixels, param1, param6, 0, param4 >> 16, param5 >> 16);
                 param5 = param5 + var7;
                 param4 = param4 + var8;
-                param1 = param1 + SoftwareRaster.field_l;
+                param1 = param1 + SoftwareRaster.width;
                 continue;
               }
               break;
             }
             param2--;
             while (param2 >= 0) {
-              tm.a(SoftwareRaster.field_d, param1, param6, 0, param4 >> 16, param3 >> 16);
+              tm.a(SoftwareRaster.pixels, param1, param6, 0, param4 >> 16, param3 >> 16);
               param3 = param3 + var9;
               param4 = param4 + var8;
-              param1 = param1 + SoftwareRaster.field_l;
+              param1 = param1 + SoftwareRaster.width;
               param2--;
             }
             return;
@@ -639,20 +639,20 @@ final class tm {
           while (true) {
             param0--;
             if (param0 >= 0) {
-              tm.a(SoftwareRaster.field_d, param1, param6, 0, param5 >> 16, param4 >> 16);
+              tm.a(SoftwareRaster.pixels, param1, param6, 0, param5 >> 16, param4 >> 16);
               param5 = param5 + var7;
               param4 = param4 + var8;
-              param1 = param1 + SoftwareRaster.field_l;
+              param1 = param1 + SoftwareRaster.width;
               continue;
             }
             break;
           }
           param2--;
           while (param2 >= 0) {
-            tm.a(SoftwareRaster.field_d, param1, param6, 0, param3 >> 16, param4 >> 16);
+            tm.a(SoftwareRaster.pixels, param1, param6, 0, param3 >> 16, param4 >> 16);
             param3 = param3 + var9;
             param4 = param4 + var8;
-            param1 = param1 + SoftwareRaster.field_l;
+            param1 = param1 + SoftwareRaster.width;
             param2--;
           }
           return;
@@ -680,20 +680,20 @@ final class tm {
           while (true) {
             param2--;
             if (param2 >= 0) {
-              tm.a(SoftwareRaster.field_d, param1, param6, 0, param4 >> 16, param3 >> 16);
+              tm.a(SoftwareRaster.pixels, param1, param6, 0, param4 >> 16, param3 >> 16);
               param3 = param3 + var7;
               param4 = param4 + var8;
-              param1 = param1 + SoftwareRaster.field_l;
+              param1 = param1 + SoftwareRaster.width;
               continue;
             }
             break;
           }
           param0--;
           while (param0 >= 0) {
-            tm.a(SoftwareRaster.field_d, param1, param6, 0, param5 >> 16, param3 >> 16);
+            tm.a(SoftwareRaster.pixels, param1, param6, 0, param5 >> 16, param3 >> 16);
             param3 = param3 + var7;
             param5 = param5 + var9;
-            param1 = param1 + SoftwareRaster.field_l;
+            param1 = param1 + SoftwareRaster.width;
             param0--;
           }
           return;
@@ -704,20 +704,20 @@ final class tm {
         while (true) {
           param2--;
           if (param2 >= 0) {
-            tm.a(SoftwareRaster.field_d, param1, param6, 0, param3 >> 16, param4 >> 16);
+            tm.a(SoftwareRaster.pixels, param1, param6, 0, param3 >> 16, param4 >> 16);
             param3 = param3 + var7;
             param4 = param4 + var8;
-            param1 = param1 + SoftwareRaster.field_l;
+            param1 = param1 + SoftwareRaster.width;
             continue;
           }
           break;
         }
         param0--;
         while (param0 >= 0) {
-          tm.a(SoftwareRaster.field_d, param1, param6, 0, param3 >> 16, param5 >> 16);
+          tm.a(SoftwareRaster.pixels, param1, param6, 0, param3 >> 16, param5 >> 16);
           param3 = param3 + var7;
           param5 = param5 + var9;
-          param1 = param1 + SoftwareRaster.field_l;
+          param1 = param1 + SoftwareRaster.width;
           param0--;
         }
         return;
@@ -827,8 +827,8 @@ final class tm {
 
     final static void c(int param0, int param1) {
         int var2 = field_k[0];
-        int var3 = var2 / SoftwareRaster.field_l;
-        int var4 = var2 - var3 * SoftwareRaster.field_l;
+        int var3 = var2 / SoftwareRaster.width;
+        int var4 = var2 - var3 * SoftwareRaster.width;
         field_c = param0 - var4;
         field_j = param1 - var3;
     }
@@ -1429,11 +1429,11 @@ final class tm {
                 while (true) {
                   param2--;
                   if (param2 >= 0) {
-                    tm.a(SoftwareRaster.field_d, var43, 0, 0, param0, param3 >> 16, param4 >> 16, param6, var30, var32, var35, var38, var33, var36, var39);
+                    tm.a(SoftwareRaster.pixels, var43, 0, 0, param0, param3 >> 16, param4 >> 16, param6, var30, var32, var35, var38, var33, var36, var39);
                     param4 = param4 + var28;
                     param3 = param3 + var26;
                     param6 = param6 + var31;
-                    param0 = param0 + SoftwareRaster.field_l;
+                    param0 = param0 + SoftwareRaster.width;
                     var32 = var32 + var34;
                     var35 = var35 + var37;
                     var38 = var38 + var40;
@@ -1443,11 +1443,11 @@ final class tm {
                 }
                 param1--;
                 while (param1 >= 0) {
-                  tm.a(SoftwareRaster.field_d, var43, 0, 0, param0, param3 >> 16, param5 >> 16, param6, var30, var32, var35, var38, var33, var36, var39);
+                  tm.a(SoftwareRaster.pixels, var43, 0, 0, param0, param3 >> 16, param5 >> 16, param6, var30, var32, var35, var38, var33, var36, var39);
                   param5 = param5 + var27;
                   param3 = param3 + var26;
                   param6 = param6 + var31;
-                  param0 = param0 + SoftwareRaster.field_l;
+                  param0 = param0 + SoftwareRaster.width;
                   var32 = var32 + var34;
                   var35 = var35 + var37;
                   var38 = var38 + var40;
@@ -1461,11 +1461,11 @@ final class tm {
               while (true) {
                 param2--;
                 if (param2 >= 0) {
-                  tm.a(SoftwareRaster.field_d, var43, 0, 0, param0, param4 >> 16, param3 >> 16, param6, var30, var32, var35, var38, var33, var36, var39);
+                  tm.a(SoftwareRaster.pixels, var43, 0, 0, param0, param4 >> 16, param3 >> 16, param6, var30, var32, var35, var38, var33, var36, var39);
                   param4 = param4 + var28;
                   param3 = param3 + var26;
                   param6 = param6 + var31;
-                  param0 = param0 + SoftwareRaster.field_l;
+                  param0 = param0 + SoftwareRaster.width;
                   var32 = var32 + var34;
                   var35 = var35 + var37;
                   var38 = var38 + var40;
@@ -1475,11 +1475,11 @@ final class tm {
               }
               param1--;
               while (param1 >= 0) {
-                tm.a(SoftwareRaster.field_d, var43, 0, 0, param0, param5 >> 16, param3 >> 16, param6, var30, var32, var35, var38, var33, var36, var39);
+                tm.a(SoftwareRaster.pixels, var43, 0, 0, param0, param5 >> 16, param3 >> 16, param6, var30, var32, var35, var38, var33, var36, var39);
                 param5 = param5 + var27;
                 param3 = param3 + var26;
                 param6 = param6 + var31;
-                param0 = param0 + SoftwareRaster.field_l;
+                param0 = param0 + SoftwareRaster.width;
                 var32 = var32 + var34;
                 var35 = var35 + var37;
                 var38 = var38 + var40;
@@ -1514,11 +1514,11 @@ final class tm {
               while (true) {
                 param1--;
                 if (param1 >= 0) {
-                  tm.a(SoftwareRaster.field_d, var43, 0, 0, param0, param3 >> 16, param5 >> 16, param6, var30, var32, var35, var38, var33, var36, var39);
+                  tm.a(SoftwareRaster.pixels, var43, 0, 0, param0, param3 >> 16, param5 >> 16, param6, var30, var32, var35, var38, var33, var36, var39);
                   param5 = param5 + var28;
                   param3 = param3 + var26;
                   param6 = param6 + var31;
-                  param0 = param0 + SoftwareRaster.field_l;
+                  param0 = param0 + SoftwareRaster.width;
                   var32 = var32 + var34;
                   var35 = var35 + var37;
                   var38 = var38 + var40;
@@ -1528,11 +1528,11 @@ final class tm {
               }
               param2--;
               while (param2 >= 0) {
-                tm.a(SoftwareRaster.field_d, var43, 0, 0, param0, param4 >> 16, param5 >> 16, param6, var30, var32, var35, var38, var33, var36, var39);
+                tm.a(SoftwareRaster.pixels, var43, 0, 0, param0, param4 >> 16, param5 >> 16, param6, var30, var32, var35, var38, var33, var36, var39);
                 param5 = param5 + var28;
                 param4 = param4 + var27;
                 param6 = param6 + var31;
-                param0 = param0 + SoftwareRaster.field_l;
+                param0 = param0 + SoftwareRaster.width;
                 var32 = var32 + var34;
                 var35 = var35 + var37;
                 var38 = var38 + var40;
@@ -1546,11 +1546,11 @@ final class tm {
             while (true) {
               param1--;
               if (param1 >= 0) {
-                tm.a(SoftwareRaster.field_d, var43, 0, 0, param0, param5 >> 16, param3 >> 16, param6, var30, var32, var35, var38, var33, var36, var39);
+                tm.a(SoftwareRaster.pixels, var43, 0, 0, param0, param5 >> 16, param3 >> 16, param6, var30, var32, var35, var38, var33, var36, var39);
                 param5 = param5 + var28;
                 param3 = param3 + var26;
                 param6 = param6 + var31;
-                param0 = param0 + SoftwareRaster.field_l;
+                param0 = param0 + SoftwareRaster.width;
                 var32 = var32 + var34;
                 var35 = var35 + var37;
                 var38 = var38 + var40;
@@ -1560,11 +1560,11 @@ final class tm {
             }
             param2--;
             while (param2 >= 0) {
-              tm.a(SoftwareRaster.field_d, var43, 0, 0, param0, param5 >> 16, param4 >> 16, param6, var30, var32, var35, var38, var33, var36, var39);
+              tm.a(SoftwareRaster.pixels, var43, 0, 0, param0, param5 >> 16, param4 >> 16, param6, var30, var32, var35, var38, var33, var36, var39);
               param5 = param5 + var28;
               param4 = param4 + var27;
               param6 = param6 + var31;
-              param0 = param0 + SoftwareRaster.field_l;
+              param0 = param0 + SoftwareRaster.width;
               var32 = var32 + var34;
               var35 = var35 + var37;
               var38 = var38 + var40;
@@ -1609,11 +1609,11 @@ final class tm {
                 while (true) {
                   param1--;
                   if (param1 >= 0) {
-                    tm.a(SoftwareRaster.field_d, var43, 0, 0, param2, param5 >> 16, param3 >> 16, param8, var30, var32, var35, var38, var33, var36, var39);
+                    tm.a(SoftwareRaster.pixels, var43, 0, 0, param2, param5 >> 16, param3 >> 16, param8, var30, var32, var35, var38, var33, var36, var39);
                     param3 = param3 + var27;
                     param5 = param5 + var28;
                     param8 = param8 + var31;
-                    param2 = param2 + SoftwareRaster.field_l;
+                    param2 = param2 + SoftwareRaster.width;
                     var32 = var32 + var34;
                     var35 = var35 + var37;
                     var38 = var38 + var40;
@@ -1623,11 +1623,11 @@ final class tm {
                 }
                 param0--;
                 while (param0 >= 0) {
-                  tm.a(SoftwareRaster.field_d, var43, 0, 0, param2, param5 >> 16, param4 >> 16, param8, var30, var32, var35, var38, var33, var36, var39);
+                  tm.a(SoftwareRaster.pixels, var43, 0, 0, param2, param5 >> 16, param4 >> 16, param8, var30, var32, var35, var38, var33, var36, var39);
                   param4 = param4 + var26;
                   param5 = param5 + var28;
                   param8 = param8 + var31;
-                  param2 = param2 + SoftwareRaster.field_l;
+                  param2 = param2 + SoftwareRaster.width;
                   var32 = var32 + var34;
                   var35 = var35 + var37;
                   var38 = var38 + var40;
@@ -1641,11 +1641,11 @@ final class tm {
               while (true) {
                 param1--;
                 if (param1 >= 0) {
-                  tm.a(SoftwareRaster.field_d, var43, 0, 0, param2, param3 >> 16, param5 >> 16, param8, var30, var32, var35, var38, var33, var36, var39);
+                  tm.a(SoftwareRaster.pixels, var43, 0, 0, param2, param3 >> 16, param5 >> 16, param8, var30, var32, var35, var38, var33, var36, var39);
                   param3 = param3 + var27;
                   param5 = param5 + var28;
                   param8 = param8 + var31;
-                  param2 = param2 + SoftwareRaster.field_l;
+                  param2 = param2 + SoftwareRaster.width;
                   var32 = var32 + var34;
                   var35 = var35 + var37;
                   var38 = var38 + var40;
@@ -1655,11 +1655,11 @@ final class tm {
               }
               param0--;
               while (param0 >= 0) {
-                tm.a(SoftwareRaster.field_d, var43, 0, 0, param2, param4 >> 16, param5 >> 16, param8, var30, var32, var35, var38, var33, var36, var39);
+                tm.a(SoftwareRaster.pixels, var43, 0, 0, param2, param4 >> 16, param5 >> 16, param8, var30, var32, var35, var38, var33, var36, var39);
                 param4 = param4 + var26;
                 param5 = param5 + var28;
                 param8 = param8 + var31;
-                param2 = param2 + SoftwareRaster.field_l;
+                param2 = param2 + SoftwareRaster.width;
                 var32 = var32 + var34;
                 var35 = var35 + var37;
                 var38 = var38 + var40;
@@ -1692,11 +1692,11 @@ final class tm {
               while (true) {
                 param0--;
                 if (param0 >= 0) {
-                  tm.a(SoftwareRaster.field_d, var43, 0, 0, param2, param5 >> 16, param4 >> 16, param8, var30, var32, var35, var38, var33, var36, var39);
+                  tm.a(SoftwareRaster.pixels, var43, 0, 0, param2, param5 >> 16, param4 >> 16, param8, var30, var32, var35, var38, var33, var36, var39);
                   param4 = param4 + var27;
                   param5 = param5 + var28;
                   param8 = param8 + var31;
-                  param2 = param2 + SoftwareRaster.field_l;
+                  param2 = param2 + SoftwareRaster.width;
                   var32 = var32 + var34;
                   var35 = var35 + var37;
                   var38 = var38 + var40;
@@ -1706,11 +1706,11 @@ final class tm {
               }
               param1--;
               while (param1 >= 0) {
-                tm.a(SoftwareRaster.field_d, var43, 0, 0, param2, param3 >> 16, param4 >> 16, param8, var30, var32, var35, var38, var33, var36, var39);
+                tm.a(SoftwareRaster.pixels, var43, 0, 0, param2, param3 >> 16, param4 >> 16, param8, var30, var32, var35, var38, var33, var36, var39);
                 param4 = param4 + var27;
                 param3 = param3 + var26;
                 param8 = param8 + var31;
-                param2 = param2 + SoftwareRaster.field_l;
+                param2 = param2 + SoftwareRaster.width;
                 var32 = var32 + var34;
                 var35 = var35 + var37;
                 var38 = var38 + var40;
@@ -1724,11 +1724,11 @@ final class tm {
             while (true) {
               param0--;
               if (param0 >= 0) {
-                tm.a(SoftwareRaster.field_d, var43, 0, 0, param2, param4 >> 16, param5 >> 16, param8, var30, var32, var35, var38, var33, var36, var39);
+                tm.a(SoftwareRaster.pixels, var43, 0, 0, param2, param4 >> 16, param5 >> 16, param8, var30, var32, var35, var38, var33, var36, var39);
                 param4 = param4 + var27;
                 param5 = param5 + var28;
                 param8 = param8 + var31;
-                param2 = param2 + SoftwareRaster.field_l;
+                param2 = param2 + SoftwareRaster.width;
                 var32 = var32 + var34;
                 var35 = var35 + var37;
                 var38 = var38 + var40;
@@ -1738,11 +1738,11 @@ final class tm {
             }
             param1--;
             while (param1 >= 0) {
-              tm.a(SoftwareRaster.field_d, var43, 0, 0, param2, param4 >> 16, param3 >> 16, param8, var30, var32, var35, var38, var33, var36, var39);
+              tm.a(SoftwareRaster.pixels, var43, 0, 0, param2, param4 >> 16, param3 >> 16, param8, var30, var32, var35, var38, var33, var36, var39);
               param4 = param4 + var27;
               param3 = param3 + var26;
               param8 = param8 + var31;
-              param2 = param2 + SoftwareRaster.field_l;
+              param2 = param2 + SoftwareRaster.width;
               var32 = var32 + var34;
               var35 = var35 + var37;
               var38 = var38 + var40;
@@ -1786,11 +1786,11 @@ final class tm {
               while (true) {
                 param0--;
                 if (param0 >= 0) {
-                  tm.a(SoftwareRaster.field_d, var43, 0, 0, param1, param4 >> 16, param5 >> 16, param7, var30, var32, var35, var38, var33, var36, var39);
+                  tm.a(SoftwareRaster.pixels, var43, 0, 0, param1, param4 >> 16, param5 >> 16, param7, var30, var32, var35, var38, var33, var36, var39);
                   param5 = param5 + var26;
                   param4 = param4 + var27;
                   param7 = param7 + var31;
-                  param1 = param1 + SoftwareRaster.field_l;
+                  param1 = param1 + SoftwareRaster.width;
                   var32 = var32 + var34;
                   var35 = var35 + var37;
                   var38 = var38 + var40;
@@ -1800,11 +1800,11 @@ final class tm {
               }
               param2--;
               while (param2 >= 0) {
-                tm.a(SoftwareRaster.field_d, var43, 0, 0, param1, param4 >> 16, param3 >> 16, param7, var30, var32, var35, var38, var33, var36, var39);
+                tm.a(SoftwareRaster.pixels, var43, 0, 0, param1, param4 >> 16, param3 >> 16, param7, var30, var32, var35, var38, var33, var36, var39);
                 param3 = param3 + var28;
                 param4 = param4 + var27;
                 param7 = param7 + var31;
-                param1 = param1 + SoftwareRaster.field_l;
+                param1 = param1 + SoftwareRaster.width;
                 var32 = var32 + var34;
                 var35 = var35 + var37;
                 var38 = var38 + var40;
@@ -1818,11 +1818,11 @@ final class tm {
             while (true) {
               param0--;
               if (param0 >= 0) {
-                tm.a(SoftwareRaster.field_d, var43, 0, 0, param1, param5 >> 16, param4 >> 16, param7, var30, var32, var35, var38, var33, var36, var39);
+                tm.a(SoftwareRaster.pixels, var43, 0, 0, param1, param5 >> 16, param4 >> 16, param7, var30, var32, var35, var38, var33, var36, var39);
                 param5 = param5 + var26;
                 param4 = param4 + var27;
                 param7 = param7 + var31;
-                param1 = param1 + SoftwareRaster.field_l;
+                param1 = param1 + SoftwareRaster.width;
                 var32 = var32 + var34;
                 var35 = var35 + var37;
                 var38 = var38 + var40;
@@ -1832,11 +1832,11 @@ final class tm {
             }
             param2--;
             while (param2 >= 0) {
-              tm.a(SoftwareRaster.field_d, var43, 0, 0, param1, param3 >> 16, param4 >> 16, param7, var30, var32, var35, var38, var33, var36, var39);
+              tm.a(SoftwareRaster.pixels, var43, 0, 0, param1, param3 >> 16, param4 >> 16, param7, var30, var32, var35, var38, var33, var36, var39);
               param3 = param3 + var28;
               param4 = param4 + var27;
               param7 = param7 + var31;
-              param1 = param1 + SoftwareRaster.field_l;
+              param1 = param1 + SoftwareRaster.width;
               var32 = var32 + var34;
               var35 = var35 + var37;
               var38 = var38 + var40;
@@ -1871,11 +1871,11 @@ final class tm {
             while (true) {
               param2--;
               if (param2 >= 0) {
-                tm.a(SoftwareRaster.field_d, var43, 0, 0, param1, param4 >> 16, param3 >> 16, param7, var30, var32, var35, var38, var33, var36, var39);
+                tm.a(SoftwareRaster.pixels, var43, 0, 0, param1, param4 >> 16, param3 >> 16, param7, var30, var32, var35, var38, var33, var36, var39);
                 param3 = param3 + var26;
                 param4 = param4 + var27;
                 param7 = param7 + var31;
-                param1 = param1 + SoftwareRaster.field_l;
+                param1 = param1 + SoftwareRaster.width;
                 var32 = var32 + var34;
                 var35 = var35 + var37;
                 var38 = var38 + var40;
@@ -1885,11 +1885,11 @@ final class tm {
             }
             param0--;
             while (param0 >= 0) {
-              tm.a(SoftwareRaster.field_d, var43, 0, 0, param1, param5 >> 16, param3 >> 16, param7, var30, var32, var35, var38, var33, var36, var39);
+              tm.a(SoftwareRaster.pixels, var43, 0, 0, param1, param5 >> 16, param3 >> 16, param7, var30, var32, var35, var38, var33, var36, var39);
               param3 = param3 + var26;
               param5 = param5 + var28;
               param7 = param7 + var31;
-              param1 = param1 + SoftwareRaster.field_l;
+              param1 = param1 + SoftwareRaster.width;
               var32 = var32 + var34;
               var35 = var35 + var37;
               var38 = var38 + var40;
@@ -1903,11 +1903,11 @@ final class tm {
           while (true) {
             param2--;
             if (param2 >= 0) {
-              tm.a(SoftwareRaster.field_d, var43, 0, 0, param1, param3 >> 16, param4 >> 16, param7, var30, var32, var35, var38, var33, var36, var39);
+              tm.a(SoftwareRaster.pixels, var43, 0, 0, param1, param3 >> 16, param4 >> 16, param7, var30, var32, var35, var38, var33, var36, var39);
               param3 = param3 + var26;
               param4 = param4 + var27;
               param7 = param7 + var31;
-              param1 = param1 + SoftwareRaster.field_l;
+              param1 = param1 + SoftwareRaster.width;
               var32 = var32 + var34;
               var35 = var35 + var37;
               var38 = var38 + var40;
@@ -1917,11 +1917,11 @@ final class tm {
           }
           param0--;
           while (param0 >= 0) {
-            tm.a(SoftwareRaster.field_d, var43, 0, 0, param1, param3 >> 16, param5 >> 16, param7, var30, var32, var35, var38, var33, var36, var39);
+            tm.a(SoftwareRaster.pixels, var43, 0, 0, param1, param3 >> 16, param5 >> 16, param7, var30, var32, var35, var38, var33, var36, var39);
             param3 = param3 + var26;
             param5 = param5 + var28;
             param7 = param7 + var31;
-            param1 = param1 + SoftwareRaster.field_l;
+            param1 = param1 + SoftwareRaster.width;
             var32 = var32 + var34;
             var35 = var35 + var37;
             var38 = var38 + var40;
@@ -2016,22 +2016,22 @@ final class tm {
               while (true) {
                 param2--;
                 if (param2 >= 0) {
-                  tm.a(SoftwareRaster.field_d, param0, 0, 0, param3 >> 16, param4 >> 16, param6, var19);
+                  tm.a(SoftwareRaster.pixels, param0, 0, 0, param3 >> 16, param4 >> 16, param6, var19);
                   param4 = param4 + var17;
                   param3 = param3 + var16;
                   param6 = param6 + var20;
-                  param0 = param0 + SoftwareRaster.field_l;
+                  param0 = param0 + SoftwareRaster.width;
                   continue;
                 }
                 break;
               }
               param1--;
               while (param1 >= 0) {
-                tm.a(SoftwareRaster.field_d, param0, 0, 0, param3 >> 16, param5 >> 16, param6, var19);
+                tm.a(SoftwareRaster.pixels, param0, 0, 0, param3 >> 16, param5 >> 16, param6, var19);
                 param5 = param5 + var15;
                 param3 = param3 + var16;
                 param6 = param6 + var20;
-                param0 = param0 + SoftwareRaster.field_l;
+                param0 = param0 + SoftwareRaster.width;
                 param1--;
               }
               return;
@@ -2042,22 +2042,22 @@ final class tm {
             while (true) {
               param2--;
               if (param2 >= 0) {
-                tm.a(SoftwareRaster.field_d, param0, 0, 0, param4 >> 16, param3 >> 16, param6, var19);
+                tm.a(SoftwareRaster.pixels, param0, 0, 0, param4 >> 16, param3 >> 16, param6, var19);
                 param4 = param4 + var17;
                 param3 = param3 + var16;
                 param6 = param6 + var20;
-                param0 = param0 + SoftwareRaster.field_l;
+                param0 = param0 + SoftwareRaster.width;
                 continue;
               }
               break;
             }
             param1--;
             while (param1 >= 0) {
-              tm.a(SoftwareRaster.field_d, param0, 0, 0, param5 >> 16, param3 >> 16, param6, var19);
+              tm.a(SoftwareRaster.pixels, param0, 0, 0, param5 >> 16, param3 >> 16, param6, var19);
               param5 = param5 + var15;
               param3 = param3 + var16;
               param6 = param6 + var20;
-              param0 = param0 + SoftwareRaster.field_l;
+              param0 = param0 + SoftwareRaster.width;
               param1--;
             }
             return;
@@ -2086,22 +2086,22 @@ final class tm {
             while (true) {
               param1--;
               if (param1 >= 0) {
-                tm.a(SoftwareRaster.field_d, param0, 0, 0, param3 >> 16, param5 >> 16, param6, var19);
+                tm.a(SoftwareRaster.pixels, param0, 0, 0, param3 >> 16, param5 >> 16, param6, var19);
                 param5 = param5 + var17;
                 param3 = param3 + var16;
                 param6 = param6 + var20;
-                param0 = param0 + SoftwareRaster.field_l;
+                param0 = param0 + SoftwareRaster.width;
                 continue;
               }
               break;
             }
             param2--;
             while (param2 >= 0) {
-              tm.a(SoftwareRaster.field_d, param0, 0, 0, param4 >> 16, param5 >> 16, param6, var19);
+              tm.a(SoftwareRaster.pixels, param0, 0, 0, param4 >> 16, param5 >> 16, param6, var19);
               param5 = param5 + var17;
               param4 = param4 + var15;
               param6 = param6 + var20;
-              param0 = param0 + SoftwareRaster.field_l;
+              param0 = param0 + SoftwareRaster.width;
               param2--;
             }
             return;
@@ -2112,22 +2112,22 @@ final class tm {
           while (true) {
             param1--;
             if (param1 >= 0) {
-              tm.a(SoftwareRaster.field_d, param0, 0, 0, param5 >> 16, param3 >> 16, param6, var19);
+              tm.a(SoftwareRaster.pixels, param0, 0, 0, param5 >> 16, param3 >> 16, param6, var19);
               param5 = param5 + var17;
               param3 = param3 + var16;
               param6 = param6 + var20;
-              param0 = param0 + SoftwareRaster.field_l;
+              param0 = param0 + SoftwareRaster.width;
               continue;
             }
             break;
           }
           param2--;
           while (param2 >= 0) {
-            tm.a(SoftwareRaster.field_d, param0, 0, 0, param5 >> 16, param4 >> 16, param6, var19);
+            tm.a(SoftwareRaster.pixels, param0, 0, 0, param5 >> 16, param4 >> 16, param6, var19);
             param5 = param5 + var17;
             param4 = param4 + var15;
             param6 = param6 + var20;
-            param0 = param0 + SoftwareRaster.field_l;
+            param0 = param0 + SoftwareRaster.width;
             param2--;
           }
           return;
@@ -2165,22 +2165,22 @@ final class tm {
               while (true) {
                 param1--;
                 if (param1 >= 0) {
-                  tm.a(SoftwareRaster.field_d, param2, 0, 0, param5 >> 16, param3 >> 16, param8, var19);
+                  tm.a(SoftwareRaster.pixels, param2, 0, 0, param5 >> 16, param3 >> 16, param8, var19);
                   param3 = param3 + var15;
                   param5 = param5 + var17;
                   param8 = param8 + var20;
-                  param2 = param2 + SoftwareRaster.field_l;
+                  param2 = param2 + SoftwareRaster.width;
                   continue;
                 }
                 break;
               }
               param0--;
               while (param0 >= 0) {
-                tm.a(SoftwareRaster.field_d, param2, 0, 0, param5 >> 16, param4 >> 16, param8, var19);
+                tm.a(SoftwareRaster.pixels, param2, 0, 0, param5 >> 16, param4 >> 16, param8, var19);
                 param4 = param4 + var16;
                 param5 = param5 + var17;
                 param8 = param8 + var20;
-                param2 = param2 + SoftwareRaster.field_l;
+                param2 = param2 + SoftwareRaster.width;
                 param0--;
               }
               return;
@@ -2191,22 +2191,22 @@ final class tm {
             while (true) {
               param1--;
               if (param1 >= 0) {
-                tm.a(SoftwareRaster.field_d, param2, 0, 0, param3 >> 16, param5 >> 16, param8, var19);
+                tm.a(SoftwareRaster.pixels, param2, 0, 0, param3 >> 16, param5 >> 16, param8, var19);
                 param3 = param3 + var15;
                 param5 = param5 + var17;
                 param8 = param8 + var20;
-                param2 = param2 + SoftwareRaster.field_l;
+                param2 = param2 + SoftwareRaster.width;
                 continue;
               }
               break;
             }
             param0--;
             while (param0 >= 0) {
-              tm.a(SoftwareRaster.field_d, param2, 0, 0, param4 >> 16, param5 >> 16, param8, var19);
+              tm.a(SoftwareRaster.pixels, param2, 0, 0, param4 >> 16, param5 >> 16, param8, var19);
               param4 = param4 + var16;
               param5 = param5 + var17;
               param8 = param8 + var20;
-              param2 = param2 + SoftwareRaster.field_l;
+              param2 = param2 + SoftwareRaster.width;
               param0--;
             }
             return;
@@ -2232,22 +2232,22 @@ final class tm {
             while (true) {
               param0--;
               if (param0 >= 0) {
-                tm.a(SoftwareRaster.field_d, param2, 0, 0, param5 >> 16, param4 >> 16, param8, var19);
+                tm.a(SoftwareRaster.pixels, param2, 0, 0, param5 >> 16, param4 >> 16, param8, var19);
                 param4 = param4 + var15;
                 param5 = param5 + var17;
                 param8 = param8 + var20;
-                param2 = param2 + SoftwareRaster.field_l;
+                param2 = param2 + SoftwareRaster.width;
                 continue;
               }
               break;
             }
             param1--;
             while (param1 >= 0) {
-              tm.a(SoftwareRaster.field_d, param2, 0, 0, param3 >> 16, param4 >> 16, param8, var19);
+              tm.a(SoftwareRaster.pixels, param2, 0, 0, param3 >> 16, param4 >> 16, param8, var19);
               param4 = param4 + var15;
               param3 = param3 + var16;
               param8 = param8 + var20;
-              param2 = param2 + SoftwareRaster.field_l;
+              param2 = param2 + SoftwareRaster.width;
               param1--;
             }
             return;
@@ -2258,22 +2258,22 @@ final class tm {
           while (true) {
             param0--;
             if (param0 >= 0) {
-              tm.a(SoftwareRaster.field_d, param2, 0, 0, param4 >> 16, param5 >> 16, param8, var19);
+              tm.a(SoftwareRaster.pixels, param2, 0, 0, param4 >> 16, param5 >> 16, param8, var19);
               param4 = param4 + var15;
               param5 = param5 + var17;
               param8 = param8 + var20;
-              param2 = param2 + SoftwareRaster.field_l;
+              param2 = param2 + SoftwareRaster.width;
               continue;
             }
             break;
           }
           param1--;
           while (param1 >= 0) {
-            tm.a(SoftwareRaster.field_d, param2, 0, 0, param4 >> 16, param3 >> 16, param8, var19);
+            tm.a(SoftwareRaster.pixels, param2, 0, 0, param4 >> 16, param3 >> 16, param8, var19);
             param4 = param4 + var15;
             param3 = param3 + var16;
             param8 = param8 + var20;
-            param2 = param2 + SoftwareRaster.field_l;
+            param2 = param2 + SoftwareRaster.width;
             param1--;
           }
           return;
@@ -2310,22 +2310,22 @@ final class tm {
             while (true) {
               param0--;
               if (param0 >= 0) {
-                tm.a(SoftwareRaster.field_d, param1, 0, 0, param4 >> 16, param5 >> 16, param7, var19);
+                tm.a(SoftwareRaster.pixels, param1, 0, 0, param4 >> 16, param5 >> 16, param7, var19);
                 param5 = param5 + var16;
                 param4 = param4 + var15;
                 param7 = param7 + var20;
-                param1 = param1 + SoftwareRaster.field_l;
+                param1 = param1 + SoftwareRaster.width;
                 continue;
               }
               break;
             }
             param2--;
             while (param2 >= 0) {
-              tm.a(SoftwareRaster.field_d, param1, 0, 0, param4 >> 16, param3 >> 16, param7, var19);
+              tm.a(SoftwareRaster.pixels, param1, 0, 0, param4 >> 16, param3 >> 16, param7, var19);
               param3 = param3 + var17;
               param4 = param4 + var15;
               param7 = param7 + var20;
-              param1 = param1 + SoftwareRaster.field_l;
+              param1 = param1 + SoftwareRaster.width;
               param2--;
             }
             return;
@@ -2336,22 +2336,22 @@ final class tm {
           while (true) {
             param0--;
             if (param0 >= 0) {
-              tm.a(SoftwareRaster.field_d, param1, 0, 0, param5 >> 16, param4 >> 16, param7, var19);
+              tm.a(SoftwareRaster.pixels, param1, 0, 0, param5 >> 16, param4 >> 16, param7, var19);
               param5 = param5 + var16;
               param4 = param4 + var15;
               param7 = param7 + var20;
-              param1 = param1 + SoftwareRaster.field_l;
+              param1 = param1 + SoftwareRaster.width;
               continue;
             }
             break;
           }
           param2--;
           while (param2 >= 0) {
-            tm.a(SoftwareRaster.field_d, param1, 0, 0, param3 >> 16, param4 >> 16, param7, var19);
+            tm.a(SoftwareRaster.pixels, param1, 0, 0, param3 >> 16, param4 >> 16, param7, var19);
             param3 = param3 + var17;
             param4 = param4 + var15;
             param7 = param7 + var20;
-            param1 = param1 + SoftwareRaster.field_l;
+            param1 = param1 + SoftwareRaster.width;
             param2--;
           }
           return;
@@ -2380,22 +2380,22 @@ final class tm {
           while (true) {
             param2--;
             if (param2 >= 0) {
-              tm.a(SoftwareRaster.field_d, param1, 0, 0, param4 >> 16, param3 >> 16, param7, var19);
+              tm.a(SoftwareRaster.pixels, param1, 0, 0, param4 >> 16, param3 >> 16, param7, var19);
               param3 = param3 + var16;
               param4 = param4 + var15;
               param7 = param7 + var20;
-              param1 = param1 + SoftwareRaster.field_l;
+              param1 = param1 + SoftwareRaster.width;
               continue;
             }
             break;
           }
           param0--;
           while (param0 >= 0) {
-            tm.a(SoftwareRaster.field_d, param1, 0, 0, param5 >> 16, param3 >> 16, param7, var19);
+            tm.a(SoftwareRaster.pixels, param1, 0, 0, param5 >> 16, param3 >> 16, param7, var19);
             param3 = param3 + var16;
             param5 = param5 + var17;
             param7 = param7 + var20;
-            param1 = param1 + SoftwareRaster.field_l;
+            param1 = param1 + SoftwareRaster.width;
             param0--;
           }
           return;
@@ -2406,22 +2406,22 @@ final class tm {
         while (true) {
           param2--;
           if (param2 >= 0) {
-            tm.a(SoftwareRaster.field_d, param1, 0, 0, param3 >> 16, param4 >> 16, param7, var19);
+            tm.a(SoftwareRaster.pixels, param1, 0, 0, param3 >> 16, param4 >> 16, param7, var19);
             param3 = param3 + var16;
             param4 = param4 + var15;
             param7 = param7 + var20;
-            param1 = param1 + SoftwareRaster.field_l;
+            param1 = param1 + SoftwareRaster.width;
             continue;
           }
           break;
         }
         param0--;
         while (param0 >= 0) {
-          tm.a(SoftwareRaster.field_d, param1, 0, 0, param3 >> 16, param5 >> 16, param7, var19);
+          tm.a(SoftwareRaster.pixels, param1, 0, 0, param3 >> 16, param5 >> 16, param7, var19);
           param3 = param3 + var16;
           param5 = param5 + var17;
           param7 = param7 + var20;
-          param1 = param1 + SoftwareRaster.field_l;
+          param1 = param1 + SoftwareRaster.width;
           param0--;
         }
         return;

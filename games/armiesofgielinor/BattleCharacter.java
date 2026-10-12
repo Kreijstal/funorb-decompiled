@@ -410,17 +410,17 @@ final class BattleCharacter {
         var11_ref_wk__ = var10;
         for (var12 = 0; var11_ref_wk__.length > var12; var12++) {
           var13 = var11_ref_wk__[var12];
-          for (var14 = 0; var13.field_B.length > var14; var14++) {
-            var13.field_B[var14] = param5;
+          for (var14 = 0; var13.pixels.length > var14; var14++) {
+            var13.pixels[var14] = param5;
           }
         }
         var10Lifetime1 = var11_ref_wk__;
         for (var11 = 0; var11 < param7; var11++) {
           for (var12Lifetime1 = 0; var9 > var12Lifetime1; var12Lifetime1++) {
-            var10Lifetime1[6].field_B[var12Lifetime1 + var9 * (-1 - var11 + var9)] = param2;
-            var10Lifetime1[8].field_B[var12Lifetime1 + var9 * (-1 + var9 - var11)] = param2;
-            var10Lifetime1[2].field_B[-1 + var9 + (-var11 + var9 * var12Lifetime1)] = param2;
-            var10Lifetime1[8].field_B[var9 * var12Lifetime1 - (-var9 + (1 + var11))] = param2;
+            var10Lifetime1[6].pixels[var12Lifetime1 + var9 * (-1 - var11 + var9)] = param2;
+            var10Lifetime1[8].pixels[var12Lifetime1 + var9 * (-1 + var9 - var11)] = param2;
+            var10Lifetime1[2].pixels[-1 + var9 + (-var11 + var9 * var12Lifetime1)] = param2;
+            var10Lifetime1[8].pixels[var9 * var12Lifetime1 - (-var9 + (1 + var11))] = param2;
           }
         }
         if (param6 != -1) {
@@ -428,28 +428,28 @@ final class BattleCharacter {
         }
         for (var11Lifetime1 = 0; var11Lifetime1 < param7; var11Lifetime1++) {
           for (var12Lifetime2 = 0; var12Lifetime2 < var9; var12Lifetime2++) {
-            var10Lifetime1[0].field_B[var11Lifetime1 * var9 + var12Lifetime2] = param0;
-            var10Lifetime1[0].field_B[var9 * var12Lifetime2 + var11Lifetime1] = param0;
+            var10Lifetime1[0].pixels[var11Lifetime1 * var9 + var12Lifetime2] = param0;
+            var10Lifetime1[0].pixels[var9 * var12Lifetime2 + var11Lifetime1] = param0;
             if (var12Lifetime2 < (var9 - var11Lifetime1)) {
-              var10Lifetime1[2].field_B[var12Lifetime2 + var11Lifetime1 * var9] = param0;
-              var10Lifetime1[6].field_B[var11Lifetime1 + var9 * var12Lifetime2] = param0;
+              var10Lifetime1[2].pixels[var12Lifetime2 + var11Lifetime1 * var9] = param0;
+              var10Lifetime1[6].pixels[var11Lifetime1 + var9 * var12Lifetime2] = param0;
             }
           }
         }
         for (var11Lifetime2 = 0; param4 > var11Lifetime2; var11Lifetime2++) {
           for (var12Lifetime3 = 0; param7 > var12Lifetime3; var12Lifetime3++) {
-            var10Lifetime1[7].field_B[var11Lifetime2 + (-1 - var12Lifetime3 + var9) * param4] = param2;
-            var10Lifetime1[5].field_B[-1 + var9 - (var12Lifetime3 - var11Lifetime2 * var9)] = param2;
-            var10Lifetime1[1].field_B[var12Lifetime3 * param4 + var11Lifetime2] = param0;
-            var10Lifetime1[3].field_B[var12Lifetime3 + var11Lifetime2 * var9] = param0;
+            var10Lifetime1[7].pixels[var11Lifetime2 + (-1 - var12Lifetime3 + var9) * param4] = param2;
+            var10Lifetime1[5].pixels[-1 + var9 - (var12Lifetime3 - var11Lifetime2 * var9)] = param2;
+            var10Lifetime1[1].pixels[var12Lifetime3 * param4 + var11Lifetime2] = param0;
+            var10Lifetime1[3].pixels[var12Lifetime3 + var11Lifetime2 * var9] = param0;
           }
         }
         for (var11Lifetime3 = 0; var11Lifetime3 < param4 >> 1; var11Lifetime3++) {
           for (var12Lifetime4 = 0; param3 > var12Lifetime4; var12Lifetime4++) {
-            var10Lifetime1[1].field_B[var11Lifetime3 + param4 * (var9 - (var12Lifetime4 + 1))] = param8;
-            var10Lifetime1[3].field_B[var9 * var11Lifetime3 - (var12Lifetime4 + (1 - var9))] = param8;
-            var10Lifetime1[7].field_B[param4 * var12Lifetime4 + var11Lifetime3] = param8;
-            var10Lifetime1[5].field_B[var11Lifetime3 * var9 + var12Lifetime4] = param8;
+            var10Lifetime1[1].pixels[var11Lifetime3 + param4 * (var9 - (var12Lifetime4 + 1))] = param8;
+            var10Lifetime1[3].pixels[var9 * var11Lifetime3 - (var12Lifetime4 + (1 - var9))] = param8;
+            var10Lifetime1[7].pixels[param4 * var12Lifetime4 + var11Lifetime3] = param8;
+            var10Lifetime1[5].pixels[var11Lifetime3 * var9 + var12Lifetime4] = param8;
           }
         }
         return var10Lifetime1;

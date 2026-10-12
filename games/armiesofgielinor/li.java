@@ -22,7 +22,7 @@ final class li extends IntrusiveNode {
         RuntimeException var1 = null;
         var4 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          var1_int = pr.field_g.frameId >> 16;
+          var1_int = PaletteRegionMap.field_g.frameId >> 16;
           var2 = we.a(var1_int, true);
           io.a(var2, (byte) -34);
           if (CipherPacketBuffer.currentBattlefield.localPlayer <= -1) {

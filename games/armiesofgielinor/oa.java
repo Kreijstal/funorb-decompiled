@@ -5,7 +5,7 @@ final class oa extends dr {
     static me field_F;
     static String field_G;
     static String field_E;
-    static ru[] field_H;
+    static IndexedSprite[] field_H;
     static ij field_I;
 
     oa(String param0, Class[] param1, String param2) {
@@ -25,7 +25,7 @@ final class oa extends dr {
 
     final static void h(int param0) {
         if (param0 != 2) {
-          field_H = (ru[]) null;
+          field_H = (IndexedSprite[]) null;
           np.a(true, (byte) -113);
           return;
         }

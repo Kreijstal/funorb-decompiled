@@ -5,7 +5,7 @@ import java.io.*;
 
 final class hq {
     static char[] field_b;
-    static ru[] field_a;
+    static IndexedSprite[] field_a;
     static String field_c;
     static String field_d;
     static int field_f;

@@ -44,10 +44,10 @@ final class wj extends IntrusiveNode {
           }
           for (var2_int = 0; param1.length > var2_int; var2_int++) {
             var3 = param1[var2_int];
-            param1[var2_int].field_z = 0;
-            var3.field_w = 0;
-            param1[var2_int].field_A = param1[var2_int].field_y;
-            param1[var2_int].field_x = param1[var2_int].field_v;
+            param1[var2_int].offsetY = 0;
+            var3.offsetX = 0;
+            param1[var2_int].canvasWidth = param1[var2_int].pixelWidth;
+            param1[var2_int].canvasHeight = param1[var2_int].pixelHeight;
           }
           stackIn_8_0 = (RgbSprite[]) (param1);
           return stackIn_8_0;

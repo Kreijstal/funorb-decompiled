@@ -1133,7 +1133,7 @@ final class CampaignUnitOverride {
                 }
                 var2 = NodeIterator.a(50, "retry");
                 if (null != var2) {
-                  a.field_k = uu.a(var2, (byte) -112);
+                  RegionAnchor.field_k = uu.a(var2, (byte) -112);
                 }
                 var2 = NodeIterator.a(50, "back");
                 if (null != var2) {
@@ -3095,47 +3095,47 @@ final class CampaignUnitOverride {
         int var9 = 0;
         var9 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          if (0 == (3 & (param1.field_z | (param1.field_w | (param1.field_y | param1.field_v))))) {
+          if (0 == (3 & (param1.offsetY | (param1.offsetX | (param1.pixelWidth | param1.pixelHeight))))) {
             return;
           }
-          var2_int = (3 & param1.field_w) + param1.field_y;
+          var2_int = (3 & param1.offsetX) + param1.pixelWidth;
           var2_int = 4 - (3 & var2_int) + var2_int;
-          var3 = (param1.field_z & 3) + param1.field_v;
+          var3 = (param1.offsetY & 3) + param1.pixelHeight;
           var3 = -(var3 & 3) - (-4 - var3);
           var4 = new int[var2_int * var3];
           var5 = 0;
-          var6 = (3 & param1.field_w) + (param1.field_z & 3) * var2_int;
+          var6 = (3 & param1.offsetX) + (param1.offsetY & 3) * var2_int;
           var7 = 0;
           scanLoop1: while (true) {
-            if (param1.field_v > var7) {
+            if (param1.pixelHeight > var7) {
               stackIn_15_0 = 0;
               if (var9 != 0) {
                 break scanLoop1;
               }
               var8 = stackIn_15_0;
-              while (var8 < param1.field_y) {
+              while (var8 < param1.pixelWidth) {
                 incrementValue$0 = var6;
                 var6++;
                 incrementValue$1 = var5;
                 var5++;
-                var4[incrementValue$0] = param1.field_B[incrementValue$1];
+                var4[incrementValue$0] = param1.pixels[incrementValue$1];
                 var8++;
               }
-              var6 = var6 + (-param1.field_y + var2_int);
+              var6 = var6 + (-param1.pixelWidth + var2_int);
               var7++;
               continue scanLoop1;
             }
-            param1.field_v = var3;
-            param1.field_z = param1.field_z & -4;
-            param1.field_w = param1.field_w & -4;
+            param1.pixelHeight = var3;
+            param1.offsetY = param1.offsetY & -4;
+            param1.offsetX = param1.offsetX & -4;
             stackIn_15_0 = param0;
             break;
           }
           if (stackIn_15_0 != 300) {
             return;
           }
-          param1.field_y = var2_int;
-          param1.field_B = var4;
+          param1.pixelWidth = var2_int;
+          param1.pixels = var4;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
