@@ -53,7 +53,7 @@ final class MatchConditionEntry extends IntrusiveNode {
         hl var6Lifetime1;
         var9 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          var1 = mg.field_e;
+          var1 = ByteStorage.field_e;
           var2 = var1.readUnsignedByte(0);
           if (var2 == 0) {
             if (null == bk.field_a) {

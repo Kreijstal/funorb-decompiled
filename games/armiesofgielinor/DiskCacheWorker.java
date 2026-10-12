@@ -181,7 +181,7 @@ final class DiskCacheWorker implements Runnable {
           var4 = 0;
           var5 = InstructionsPanel.field_r;
           while (var4 < nb.field_h.length) {
-            var6 = cj.field_k[var4];
+            var6 = DirectByteStorage.field_k[var4];
             if (var6 < 0) {
               var5 = var5 + cn.field_o;
             } else {

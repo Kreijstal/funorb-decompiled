@@ -50,7 +50,7 @@ final class da {
     }
 
     final static void a(int param0) {
-        mv.field_d = mg.field_e.g(1);
+        mv.field_d = ByteStorage.field_e.g(1);
         if (param0 <= 10) {
           String[] var2 = (String[]) null;
           da.a(70, 41, (String[][]) null, (String[]) null, 94);
@@ -209,7 +209,7 @@ final class da {
         int[] var11 = null;
         var8 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          var9 = mg.field_e;
+          var9 = ByteStorage.field_e;
           var2 = var9.readUnsignedByte(0);
           if (param0 >= -77) {
             return;

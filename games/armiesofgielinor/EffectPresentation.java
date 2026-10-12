@@ -164,7 +164,7 @@ final class EffectPresentation implements EventPresentation {
         CampaignMenuButton.field_h = dupTemp$2;
         if (kd.field_J.field_g != 1) {
         }
-        ov.field_g = cj.field_o;
+        ov.field_g = DirectByteStorage.field_o;
         kd.field_J = null;
         return true;
     }

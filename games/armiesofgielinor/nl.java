@@ -302,7 +302,7 @@ abstract class nl extends kb implements gw {
           ob.field_M = param10;
           ll.field_Mb = param6;
           wb.field_a = param4;
-          cj.field_j = param3;
+          DirectByteStorage.field_j = param3;
           gt.field_f = param12;
           BoundedFile.field_h = param14;
           mi.field_r = param0;

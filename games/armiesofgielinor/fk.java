@@ -211,7 +211,7 @@ final class fk implements kh {
         RuntimeException decompiledCaughtException = null;
         try {
           if (!param0) {
-            stackIn_4_0 = sb.field_e.a(param1, 74, "");
+            stackIn_4_0 = sb.field_e.getFileByName(param1, 74, "");
             return stackIn_4_0;
           }
           stackIn_2_0 = (byte[]) null;

@@ -185,7 +185,7 @@ final class jj {
         int var4Lifetime1;
         var7 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          var8 = new CipherPacketBuffer(param1.a("", 97, "logo.fo3d"));
+          var8 = new CipherPacketBuffer(param1.getFileByName("", 97, "logo.fo3d"));
           var10 = var8;
           var3 = var10.readUnsignedByte(0);
           var10.beginBitReading(90);

@@ -32,7 +32,7 @@ final class hq {
           IOException var15 = null;
           RuntimeException var15_ref = null;
           try {
-            mg.field_e = new CipherPacketBuffer(param3);
+            ByteStorage.field_e = new CipherPacketBuffer(param3);
             vl.outgoingPacket = new CipherPacketBuffer(param1);
             io.field_t = param5;
             k.field_c = param10;

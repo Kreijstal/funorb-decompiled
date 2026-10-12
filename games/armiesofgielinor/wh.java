@@ -30,13 +30,13 @@ final class wh {
           if (!param0.ensureIndex((byte) 82)) {
             return false;
           }
-          if (!param0.a(28979, "commonui")) {
+          if (!param0.ensureGroupAvailableByName(28979, "commonui")) {
             return false;
           }
           if (param3.ensureIndex((byte) 82) &&
-            param3.a(28979, "commonui")) {
+            param3.ensureGroupAvailableByName(28979, "commonui")) {
             if (param2.ensureIndex((byte) 82) &&
-              param2.a(param1 ^ 29004, "button.gif")) {
+              param2.ensureGroupAvailableByName(param1 ^ 29004, "button.gif")) {
               return true;
             }
             return false;
@@ -77,7 +77,7 @@ final class wh {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 == -27701) {
-            stackIn_4_0 = param0.d(-27927);
+            stackIn_4_0 = param0.ensureAllGroupsAvailable(-27927);
             return stackIn_4_0;
           }
           return false;

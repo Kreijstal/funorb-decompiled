@@ -75,7 +75,7 @@ final class pf {
           return;
         }
         byte[] var2 = (byte[]) null;
-        pf.a(-6, (byte[]) null, false);
+        pf.storeBytes(-6, (byte[]) null, false);
         field_f = null;
         field_a = null;
     }
@@ -117,11 +117,11 @@ final class pf {
         }
     }
 
-    final static Object a(int param0, byte[] param1, boolean param2) {
-        cj var3 = null;
+    final static Object storeBytes(int obfuscationGuard, byte[] bytes, boolean copySmallArrays) {
+        DirectByteStorage directStorage = null;
         RuntimeException var3_ref = null;
         byte[] var4 = null;
-        cj stackIn_8_0 = null;
+        DirectByteStorage stackIn_8_0 = null;
         byte[] stackIn_11_0 = null;
         byte[] stackIn_13_0 = null;
         RuntimeException stackIn_16_0 = null;
@@ -129,36 +129,36 @@ final class pf {
         String stackIn_17_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param0 != 0) {
+          if (obfuscationGuard != 0) {
             var4 = (byte[]) null;
-            pf.a(113, (byte[]) null, true);
+            pf.storeBytes(113, (byte[]) null, true);
           }
-          if (param1 == null) {
+          if (bytes == null) {
             return null;
           }
-          if (param1.length > 136) {
-            var3 = new cj();
-            ((mg) ((Object) var3)).a((byte) 126, param1);
-            stackIn_8_0 = var3;
+          if (bytes.length > 136) {
+            directStorage = new DirectByteStorage();
+            ((ByteStorage) ((Object) directStorage)).setBytes((byte) 126, bytes);
+            stackIn_8_0 = directStorage;
             return stackIn_8_0;
           }
-          if (!param2) {
-            stackIn_13_0 = (byte[]) (param1);
+          if (!copySmallArrays) {
+            stackIn_13_0 = (byte[]) (bytes);
             return stackIn_13_0;
           }
-          stackIn_11_0 = SkeletonLimitMarker.a(param1, 31732);
+          stackIn_11_0 = SkeletonLimitMarker.a(bytes, 31732);
           return stackIn_11_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3_ref = decompiledCaughtException;
           stackIn_16_0 = var3_ref;
-          stackIn_16_1 = new StringBuilder().append("pf.E(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_16_1 = new StringBuilder().append("pf.E(").append(obfuscationGuard).append(',');
+          if (bytes == null) {
             stackIn_17_2 = "null";
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw ig.addExceptionContext((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param2).append(')').toString());
+          throw ig.addExceptionContext((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(copySmallArrays).append(')').toString());
         }
     }
 

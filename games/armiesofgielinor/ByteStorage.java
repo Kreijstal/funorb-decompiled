@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class mg {
+abstract class ByteStorage {
     static String field_c;
     static String field_b;
     static int field_f;
@@ -10,13 +10,13 @@ abstract class mg {
     static String field_a;
     static int field_g;
 
-    abstract void a(byte param0, byte[] param1);
+    abstract void setBytes(byte obfuscationGuard, byte[] bytes);
 
     final static RgbSprite[] a(int param0, int param1, byte param2, int param3, int param4) {
         if (param2 <= -23) {
           return BattleCharacter.a(param3, 1, param4, 1, 3, param1, -1, 1, param0);
         }
-        mg.a(0, -20, (byte) -123, -41, 33);
+        ByteStorage.a(0, -20, (byte) -123, -41, 33);
         return BattleCharacter.a(param3, 1, param4, 1, 3, param1, -1, 1, param0);
     }
 
@@ -31,7 +31,7 @@ abstract class mg {
         field_a = null;
     }
 
-    abstract byte[] a(int param0);
+    abstract byte[] getBytes(int startOffset);
 
     final static String a(int param0, java.applet.Applet param1) {
         try {

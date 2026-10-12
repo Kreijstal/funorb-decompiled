@@ -19,7 +19,7 @@ final class lg {
             String var5 = (String) null;
             lg.a((String) null, (byte) 32);
           }
-          var2 = new RgbSprite(param1.a("", 49, "final_frame.jpg"), (java.awt.Component) ((Object) IndexedSpriteBase.field_b));
+          var2 = new RgbSprite(param1.getFileByName("", 49, "final_frame.jpg"), (java.awt.Component) ((Object) IndexedSpriteBase.field_b));
           var3 = var2.pixelWidth;
           var4 = var2.pixelHeight;
           rq.a((byte) -56);

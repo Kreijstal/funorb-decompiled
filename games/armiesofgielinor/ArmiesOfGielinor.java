@@ -196,7 +196,7 @@ public final class ArmiesOfGielinor extends wf {
                   ut.i((byte) 123);
                   SpellCastAction.field_t = false;
                   CipherPacketBuffer.a(false, 11, 1, jt.field_a);
-                  PaletteRegionMap.field_i = mg.field_e.g(1);
+                  PaletteRegionMap.field_i = ByteStorage.field_e.g(1);
                   continue;
                 }
                 if (nm.field_o == 14) {
@@ -253,7 +253,7 @@ public final class ArmiesOfGielinor extends wf {
                 }
                 if (nm.field_o == 74) {
                   var2 = rq.field_n;
-                  var3_ref_bv = mg.field_e;
+                  var3_ref_bv = ByteStorage.field_e;
                   var4 = ((PacketBuffer) ((Object) var3_ref_bv)).readUnsignedByte(0);
                   var5_int = 0;
                   while (var5_int < var4) {
@@ -264,15 +264,15 @@ public final class ArmiesOfGielinor extends wf {
                   continue;
                 }
                 if (nm.field_o == 75) {
-                  var2 = mg.field_e;
+                  var2 = ByteStorage.field_e;
                   EffectPresentation.readCoatOfArms(ah.localCoat.parts, (PacketBuffer) (var2), false, ah.localCoat.colourIndices);
                   im.field_w = true;
                   continue;
                 }
                 if (81 == nm.field_o) {
-                  var2_intLifetime1 = mg.field_e.readUnsignedByte(0);
+                  var2_intLifetime1 = ByteStorage.field_e.readUnsignedByte(0);
                   if (var2_intLifetime1 != 0) {
-                    bu.storedQuicksave = new CampaignQuicksave(mg.field_e, 9, true);
+                    bu.storedQuicksave = new CampaignQuicksave(ByteStorage.field_e, 9, true);
                     continue;
                   }
                   bu.storedQuicksave = null;
@@ -280,14 +280,14 @@ public final class ArmiesOfGielinor extends wf {
                   continue;
                 }
                 if (nm.field_o == 82) {
-                  if (!bu.storedQuicksave.appendSnapshotChunk(fk.field_b, -1, mg.field_e)) {
+                  if (!bu.storedQuicksave.appendSnapshotChunk(fk.field_b, -1, ByteStorage.field_e)) {
                     continue;
                   }
                   mv.field_b = true;
                   continue;
                 }
                 if (nm.field_o == 80) {
-                  pg.playerProfile = new PlayerProfile(mg.field_e, true);
+                  pg.playerProfile = new PlayerProfile(ByteStorage.field_e, true);
                   ve.field_b = true;
                   continue;
                 }
@@ -295,25 +295,25 @@ public final class ArmiesOfGielinor extends wf {
                   if (null == rd.field_j) {
                     continue;
                   }
-                  rd.field_j.field_Bb = mg.field_e.readInt(1);
+                  rd.field_j.field_Bb = ByteStorage.field_e.readInt(1);
                   continue;
                 }
                 if (nm.field_o == 64 ||
                   nm.field_o == 65) {
                   ut.i((byte) 123);
-                  var2_intLifetime1Lifetime1 = mg.field_e.readUnsignedByte(0);
-                  var3 = mg.field_e.readUnsignedByte(0);
+                  var2_intLifetime1Lifetime1 = ByteStorage.field_e.readUnsignedByte(0);
+                  var3 = ByteStorage.field_e.readUnsignedByte(0);
                   stackIn_176_0 = ((1 & var3) == 0) ? 0 : 1;
                   var4Lifetime2 = stackIn_176_0;
                   stackIn_180_0 = ((var3 & 2) == 0) ? 0 : 1;
                   var5_intLifetime1 = stackIn_180_0;
                   var6 = (var3 & 30) >> 2;
                   var7 = 1 & var3 >> 6;
-                  var8 = new String[mg.field_e.readUnsignedByte(0)];
-                  var9 = mg.field_e.readByte((byte) 123);
+                  var8 = new String[ByteStorage.field_e.readUnsignedByte(0)];
+                  var9 = ByteStorage.field_e.readByte((byte) 123);
                   var10_int = 0;
                   while (var8.length > var10_int) {
-                    var8[var10_int] = mg.field_e.readNullCircumfixedString((byte) 121);
+                    var8[var10_int] = ByteStorage.field_e.readNullCircumfixedString((byte) 121);
                     stackIn_337_0 = ~nm.field_o;
                     stackIn_337_1 = -65;
                     if (stackIn_337_0 == stackIn_337_1 &&
@@ -394,7 +394,7 @@ public final class ArmiesOfGielinor extends wf {
                 }
                 if (var2 != null) {
                   if (nm.field_o == 77) {
-                    ((GameplayController) (var2)).battlefield.appendSnapshotChunk(fk.field_b, mg.field_e, (byte) -81);
+                    ((GameplayController) (var2)).battlefield.appendSnapshotChunk(fk.field_b, ByteStorage.field_e, (byte) -81);
                     continue;
                   }
                   if (nm.field_o == 67) {
@@ -418,9 +418,9 @@ public final class ArmiesOfGielinor extends wf {
                         NodeHashTable.a(-1, op.field_c[0][((GameplayController) (var2)).battlefield.getPlayerTeamIndex(((GameplayController) (var2)).field_q, -1)]);
                       }
                     }
-                    var3Lifetime2 = mg.field_e.readUnsignedByte(0);
-                    var4Lifetime3 = mg.field_e.readUnsignedByte(0);
-                    var5_intLifetime2 = mg.field_e.readUnsignedShort((byte) -104);
+                    var3Lifetime2 = ByteStorage.field_e.readUnsignedByte(0);
+                    var4Lifetime3 = ByteStorage.field_e.readUnsignedByte(0);
+                    var5_intLifetime2 = ByteStorage.field_e.readUnsignedShort((byte) -104);
                     if (((GameplayController) (var2)).battlefield.currentPlayer == var3Lifetime2 &&
                       var4Lifetime3 == ((GameplayController) (var2)).battlefield.turnNumber) {
                       stackIn_256_0 = 0;
@@ -442,7 +442,7 @@ public final class ArmiesOfGielinor extends wf {
                     continue;
                   }
                   if (68 == nm.field_o) {
-                    ((GameplayController) (var2)).battlefield.readGameEvent((PacketBuffer) (mg.field_e), (byte) -67);
+                    ((GameplayController) (var2)).battlefield.readGameEvent((PacketBuffer) (ByteStorage.field_e), (byte) -67);
                     if (((GameplayController) (var2)).battlefield.currentPlayer != ((GameplayController) (var2)).battlefield.localPlayer) {
                       continue;
                     }
@@ -453,33 +453,33 @@ public final class ArmiesOfGielinor extends wf {
                     continue;
                   }
                   if (nm.field_o == 78) {
-                    ub.field_d = mg.field_e.readInt(1);
+                    ub.field_d = ByteStorage.field_e.readInt(1);
                     continue;
                   }
                   if (76 == nm.field_o) {
-                    var3Lifetime2 = mg.field_e.readUnsignedByte(0);
+                    var3Lifetime2 = ByteStorage.field_e.readUnsignedByte(0);
                     if (var3Lifetime2 != 0) {
                       ((GameplayController) (var2)).field_Tb = true;
                     } else {
                       ((GameplayController) (var2)).field_Tb = false;
                     }
-                    ((GameplayController) (var2)).field_Vb = mg.field_e.readUnsignedShort((byte) -104);
+                    ((GameplayController) (var2)).field_Vb = ByteStorage.field_e.readUnsignedShort((byte) -104);
                     continue;
                   }
                   if (nm.field_o == 69) {
                     var3_ref_int__ = new int[((GameplayController) (var2)).battlefield.teamCount];
                     var4_ref_int__ = new int[((GameplayController) (var2)).battlefield.playerCount];
                     var5 = new int[((GameplayController) (var2)).battlefield.playerCount];
-                    var6Lifetime1Lifetime1 = mg.field_e.readUnsignedByte(0);
+                    var6Lifetime1Lifetime1 = ByteStorage.field_e.readUnsignedByte(0);
                     var7Lifetime1 = 0;
                     while (((GameplayController) (var2)).battlefield.teamCount > var7Lifetime1) {
-                      var3_ref_int__[var7Lifetime1] = mg.field_e.readUnsignedByte(0);
+                      var3_ref_int__[var7Lifetime1] = ByteStorage.field_e.readUnsignedByte(0);
                       var7Lifetime1++;
                     }
                     var7Lifetime1Lifetime1 = 0;
                     while (var7Lifetime1Lifetime1 < ((GameplayController) (var2)).battlefield.playerCount) {
-                      var5[var7Lifetime1Lifetime1] = mg.field_e.readUnsignedByte(0);
-                      var4_ref_int__[var7Lifetime1Lifetime1] = mg.field_e.readUnsignedShort((byte) -104);
+                      var5[var7Lifetime1Lifetime1] = ByteStorage.field_e.readUnsignedByte(0);
+                      var4_ref_int__[var7Lifetime1Lifetime1] = ByteStorage.field_e.readUnsignedShort((byte) -104);
                       var7Lifetime1Lifetime1++;
                     }
                     ((GameplayController) (var2)).battlefield.applyMatchOutcome(var6Lifetime1Lifetime1, true, var3_ref_int__);
@@ -497,7 +497,7 @@ public final class ArmiesOfGielinor extends wf {
                     continue;
                   }
                   if (nm.field_o == 70) {
-                    ((GameplayController) (var2)).battlefield.field_C = mg.field_e.readUnsignedByte(0);
+                    ((GameplayController) (var2)).battlefield.field_C = ByteStorage.field_e.readUnsignedByte(0);
                     if (null == rd.field_j) {
                       continue;
                     }
@@ -505,7 +505,7 @@ public final class ArmiesOfGielinor extends wf {
                     continue;
                   }
                   if (nm.field_o == 71) {
-                    ((GameplayController) (var2)).battlefield.setInactivePlayerMask(0, mg.field_e.readUnsignedByte(0));
+                    ((GameplayController) (var2)).battlefield.setInactivePlayerMask(0, ByteStorage.field_e.readUnsignedByte(0));
                     if (rd.field_j == null) {
                       continue;
                     }
@@ -513,7 +513,7 @@ public final class ArmiesOfGielinor extends wf {
                     continue;
                   }
                   if (nm.field_o == 73) {
-                    ((GameplayController) (var2)).battlefield.setEliminatedPlayerMask(mg.field_e.readUnsignedByte(0), -119);
+                    ((GameplayController) (var2)).battlefield.setEliminatedPlayerMask(ByteStorage.field_e.readUnsignedByte(0), -119);
                     if (null == rd.field_j) {
                       continue;
                     }
@@ -521,7 +521,7 @@ public final class ArmiesOfGielinor extends wf {
                     continue;
                   }
                   if (nm.field_o == 72) {
-                    ((GameplayController) (var2)).battlefield.field_i = mg.field_e.readUnsignedByte(0);
+                    ((GameplayController) (var2)).battlefield.field_i = ByteStorage.field_e.readUnsignedByte(0);
                     if (null == rd.field_j) {
                       continue;
                     }
@@ -529,7 +529,7 @@ public final class ArmiesOfGielinor extends wf {
                     continue;
                   }
                   if (nm.field_o == 73) {
-                    ((GameplayController) (var2)).field_hb = mg.field_e.readUnsignedByte(0);
+                    ((GameplayController) (var2)).field_hb = ByteStorage.field_e.readUnsignedByte(0);
                     if (null == rd.field_j) {
                       continue;
                     }
@@ -657,18 +657,18 @@ public final class ArmiesOfGielinor extends wf {
         RuntimeException decompiledCaughtException = null;
         try {
           if (ki.field_b.ensureIndex((byte) 82) &&
-            ki.field_b.d(-27927)) {
+            ki.field_b.ensureAllGroupsAvailable(-27927)) {
             if (i.field_Lb.ensureIndex((byte) 82) &&
-              i.field_Lb.d(-27927)) {
+              i.field_Lb.ensureAllGroupsAvailable(-27927)) {
               if (param0 > -18) {
                 return false;
               }
               if (op.field_b.ensureIndex((byte) 82) &&
-                op.field_b.d(-27927)) {
+                op.field_b.ensureAllGroupsAvailable(-27927)) {
                 if (bi.field_f.ensureIndex((byte) 82) &&
-                  bi.field_f.d(-27927)) {
+                  bi.field_f.ensureAllGroupsAvailable(-27927)) {
                   if (nm.field_s.ensureIndex((byte) 82) &&
-                    nm.field_s.d(-27927)) {
+                    nm.field_s.ensureAllGroupsAvailable(-27927)) {
                     return true;
                   }
                   bn.a((byte) -24, 67.0f, ao.a(cr.field_eb, true, en.field_G, nm.field_s));
@@ -889,7 +889,7 @@ public final class ArmiesOfGielinor extends wf {
             decompiledFrameRemainder4 = (var8 != 0);
           }
           if (decompiledFrameRemainder4) {
-            if (~cj.field_h == ~pg.field_f) {
+            if (~DirectByteStorage.field_h == ~pg.field_f) {
               pk.field_X = pk.field_X + 1;
               decompiledFrameRemainder4 = (pk.field_X == 16);
               if (decompiledFrameRemainder4) {
@@ -1363,7 +1363,7 @@ public final class ArmiesOfGielinor extends wf {
           TickCounter.a(1);
           ud.n(12213);
           se.a(0);
-          mg.b(9892);
+          ByteStorage.b(9892);
           pb.a();
           nk.b((byte) 75);
           dc.a(540);
@@ -1495,7 +1495,7 @@ public final class ArmiesOfGielinor extends wf {
           en.n(0);
           ai.b(false);
           nb.d((byte) 68);
-          cj.c(1);
+          DirectByteStorage.c(1);
           fh.a((byte) -28);
           ak.c(true);
           wc.j(0);
@@ -1929,42 +1929,42 @@ public final class ArmiesOfGielinor extends wf {
           var4 = "basicfont12";
           if (null != br.field_d) {
             if (gg.field_K.ensureIndex((byte) 82) &&
-              gg.field_K.a(28979, "basic")) {
+              gg.field_K.ensureGroupAvailableByName(28979, "basic")) {
               if (gg.field_K.ensureIndex((byte) 82) &&
-                gg.field_K.a(28979, var4)) {
+                gg.field_K.ensureGroupAvailableByName(28979, var4)) {
                 if (ResourceRequest.field_A.ensureIndex((byte) 82) &&
-                  ResourceRequest.field_A.a(28979, var4)) {
+                  ResourceRequest.field_A.ensureGroupAvailableByName(28979, var4)) {
                   if (gg.field_K.ensureIndex((byte) 82) &&
-                    gg.field_K.a(28979, "lobby")) {
+                    gg.field_K.ensureGroupAvailableByName(28979, "lobby")) {
                     if (ResourceRequest.field_A.ensureIndex((byte) 82) &&
-                      ResourceRequest.field_A.a(28979, "lobby")) {
+                      ResourceRequest.field_A.ensureGroupAvailableByName(28979, "lobby")) {
                       if (br.field_d.ensureIndex((byte) 82) &&
-                        br.field_d.d(-27927)) {
+                        br.field_d.ensureAllGroupsAvailable(-27927)) {
                         if (uf.field_f.ensureIndex((byte) 82) &&
-                          uf.field_f.d(-27927)) {
+                          uf.field_f.ensureAllGroupsAvailable(-27927)) {
                           if (ep.field_b.ensureIndex((byte) 82) &&
-                            ep.field_b.d(-27927)) {
+                            ep.field_b.ensureAllGroupsAvailable(-27927)) {
                             if (SummonAction.field_w.ensureIndex((byte) 82) &&
-                              SummonAction.field_w.d(-27927)) {
+                              SummonAction.field_w.ensureAllGroupsAvailable(-27927)) {
                               if (iw.field_l.ensureIndex((byte) 82) &&
-                                iw.field_l.a(28979, "basic") &&
-                                iw.field_l.a(28979, "campaign")) {
+                                iw.field_l.ensureGroupAvailableByName(28979, "basic") &&
+                                iw.field_l.ensureGroupAvailableByName(28979, "campaign")) {
                                 if (sh.field_j.ensureIndex((byte) 82) &&
-                                  sh.field_j.a(28979, "basic")) {
+                                  sh.field_j.ensureGroupAvailableByName(28979, "basic")) {
                                   if (bt.field_e.ensureIndex((byte) 82) &&
-                                    bt.field_e.d(-27927)) {
+                                    bt.field_e.ensureAllGroupsAvailable(-27927)) {
                                     if (CorpseConditionMarker.field_w.ensureIndex((byte) 82) &&
-                                      CorpseConditionMarker.field_w.d(-27927)) {
+                                      CorpseConditionMarker.field_w.ensureAllGroupsAvailable(-27927)) {
                                       if (ce.field_M.ensureIndex((byte) 82) &&
-                                        ce.field_M.d(-27927)) {
+                                        ce.field_M.ensureAllGroupsAvailable(-27927)) {
                                         if (oh.field_M.ensureIndex((byte) 82) &&
-                                          oh.field_M.d(-27927)) {
+                                          oh.field_M.ensureAllGroupsAvailable(-27927)) {
                                           if (fw.field_F.ensureIndex((byte) 82) &&
-                                            fw.field_F.d(-27927)) {
+                                            fw.field_F.ensureAllGroupsAvailable(-27927)) {
                                             if (AiInfluenceMap.field_f.ensureIndex((byte) 82) &&
-                                              AiInfluenceMap.field_f.d(-27927)) {
+                                              AiInfluenceMap.field_f.ensureAllGroupsAvailable(-27927)) {
                                               if (vc.field_m.ensureIndex((byte) 82) &&
-                                                vc.field_m.d(-27927)) {
+                                                vc.field_m.ensureAllGroupsAvailable(-27927)) {
                                                 if (!this.q(-46)) {
                                                   return false;
                                                 }
@@ -2140,7 +2140,7 @@ public final class ArmiesOfGielinor extends wf {
           }
           if (sh.field_j == null) {
             if (bt.field_e != null) {
-              uc.a(new dq(bt.field_e.a("huffman", -105, "")), 4);
+              uc.a(new dq(bt.field_e.getFileByName("huffman", -105, "")), 4);
               bt.field_e = null;
               wl.a(0);
               return false;
@@ -2248,7 +2248,7 @@ public final class ArmiesOfGielinor extends wf {
           mo.field_s = GameplayController.a("wait_icon", (byte) 51, "basic", iw.field_l);
           mo.field_s.a();
           kt.field_o = fk.a("diamondscale", (byte) -128, iw.field_l, "basic");
-          jg.field_m = new RgbSprite(vc.field_m.a("menu_background.jpg", -123, ""), (java.awt.Component) ((Object) ll.p(0)));
+          jg.field_m = new RgbSprite(vc.field_m.getFileByName("menu_background.jpg", -123, ""), (java.awt.Component) ((Object) ll.p(0)));
           var6_array = UnitLossCondition.field_d;
           var7_int = 0;
           do {

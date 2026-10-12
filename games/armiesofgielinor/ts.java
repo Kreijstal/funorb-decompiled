@@ -153,7 +153,7 @@ final class ts {
             var3 = var8;
             r.field_B = var8.length;
             var4 = mission.playerSlot;
-            mg.field_g = obfuscationGuard + r.field_B;
+            ByteStorage.field_g = obfuscationGuard + r.field_B;
             td.field_f.a(mission.mapTheme, 0);
             stackIn_4_0 = null;
             stackIn_4_1 = null;

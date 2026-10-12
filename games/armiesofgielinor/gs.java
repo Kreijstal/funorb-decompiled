@@ -286,7 +286,7 @@ final class gs implements kh {
                 }
                 case 9: {
                     try {
-                        if (0 > mg.field_f) {
+                        if (0 > ByteStorage.field_f) {
                             /* Inlined CFG state: 11. */
                             {
                                 var4_ref_qu = (qu) (AnimationPlayer.field_b.first((byte) 127));
@@ -320,7 +320,7 @@ final class gs implements kh {
                             {
                                 var4_ref_qu.unlink(-111);
                                 fk.field_b = var4_ref_qu.field_m.length;
-                                mg.field_e.position = 0;
+                                ByteStorage.field_e.position = 0;
                                 var5_int = 0;
                                 statePc = 15;
                                 continue scanLoop1;
@@ -357,7 +357,7 @@ final class gs implements kh {
                         } else {
                             /* Inlined CFG state: 16. */
                             {
-                                mg.field_e.payload[var5_int] = var4_ref_qu.field_m[var5_int];
+                                ByteStorage.field_e.payload[var5_int] = var4_ref_qu.field_m[var5_int];
                                 var5_int++;
                                 statePc = 15;
                                 continue scanLoop1;
@@ -376,18 +376,18 @@ final class gs implements kh {
                     return stackIn_18_0 != 0;
                 }
                 case 19: {
-                    stackIn_22_0 = mg.field_f;
+                    stackIn_22_0 = ByteStorage.field_f;
                     statePc = 22;
                     continue scanLoop1;
                 }
                 case 20: {
-                    stackIn_22_0 = mg.field_f;
+                    stackIn_22_0 = ByteStorage.field_f;
                     statePc = 22;
                     continue scanLoop1;
                 }
                 case 21: {
                     try {
-                        stackIn_22_0 = mg.field_f;
+                        stackIn_22_0 = ByteStorage.field_f;
                         statePc = 22;
                         continue scanLoop1;
                     } catch (Throwable stateCaught_21) {
@@ -404,13 +404,13 @@ final class gs implements kh {
                         if (stackIn_22_0 < 0) {
                             /* Inlined CFG state: 24. */
                             {
-                                mg.field_e.position = 0;
+                                ByteStorage.field_e.position = 0;
                                 if (es.a(param0 ^ -83, 1)) {
                                     /* Inlined CFG state: 27. */
                                     {
-                                        mg.field_f = mg.field_e.readCipheredOpcode(255);
-                                        mg.field_e.position = 0;
-                                        fk.field_b = param1[mg.field_f];
+                                        ByteStorage.field_f = ByteStorage.field_e.readCipheredOpcode(255);
+                                        ByteStorage.field_e.position = 0;
+                                        fk.field_b = param1[ByteStorage.field_f];
                                         statePc = 28;
                                         continue scanLoop1;
                                     }
@@ -464,8 +464,8 @@ final class gs implements kh {
                                             me.field_c = ba.field_F;
                                             ba.field_F = sj.field_e;
                                             sj.field_e = nm.field_o;
-                                            nm.field_o = mg.field_f;
-                                            mg.field_f = -1;
+                                            nm.field_o = ByteStorage.field_f;
+                                            ByteStorage.field_f = -1;
                                             stackIn_42_0 = 1;
                                             statePc = 42;
                                             continue scanLoop1;
@@ -525,7 +525,7 @@ final class gs implements kh {
                 }
                 case 37: {
                     try {
-                        var5 = new qu(var2_long + (long)var4, mg.field_f, new byte[fk.field_b]);
+                        var5 = new qu(var2_long + (long)var4, ByteStorage.field_f, new byte[fk.field_b]);
                         var6 = 0;
                         statePc = 38;
                         continue scanLoop1;
@@ -544,14 +544,14 @@ final class gs implements kh {
                             /* Inlined CFG state: 40. */
                             {
                                 AnimationPlayer.field_b.addLast((byte) -119, (IntrusiveNode) (var5));
-                                mg.field_f = -1;
+                                ByteStorage.field_f = -1;
                                 statePc = 21;
                                 continue scanLoop1;
                             }
                         } else {
                             /* Inlined CFG state: 39. */
                             {
-                                var5.field_m[var6] = mg.field_e.payload[var6];
+                                var5.field_m[var6] = ByteStorage.field_e.payload[var6];
                                 var6++;
                                 statePc = 38;
                                 continue scanLoop1;

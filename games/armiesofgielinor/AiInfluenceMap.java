@@ -763,7 +763,7 @@ final class AiInfluenceMap {
         int var11Lifetime1;
         var12 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          var14 = mg.field_e;
+          var14 = ByteStorage.field_e;
           var2 = var14.readUnsignedByte(0);
           var3 = (nt) (s.field_a.first((byte) 120));
           while (var3 != null) {

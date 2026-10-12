@@ -27,7 +27,7 @@ final class cd {
           if (param0 > -17) {
             field_c = -14;
           }
-          var8 = mg.field_e;
+          var8 = ByteStorage.field_e;
           var2 = var8.readUnsignedByte(0);
           if (var2 != 0) {
             if (var2 != 1) {

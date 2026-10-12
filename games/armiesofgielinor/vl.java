@@ -34,7 +34,7 @@ final class vl extends mk {
             stackIn_6_0 = (String) (param4);
             return stackIn_6_0;
           }
-          stackIn_8_0 = param2 + " - " + param0.a(param3, (byte) 87) + "%";
+          stackIn_8_0 = param2 + " - " + param0.getGroupProgressByName(param3, (byte) 87) + "%";
           return stackIn_8_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

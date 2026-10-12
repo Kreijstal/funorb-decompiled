@@ -39,7 +39,7 @@ final class ao extends lk {
             return stackIn_3_0;
           }
           if (param1) {
-            stackIn_8_0 = param2 + " - " + param3.a(0) + "%";
+            stackIn_8_0 = param2 + " - " + param3.getOverallProgress(0) + "%";
             return stackIn_8_0;
           }
           stackIn_6_0 = (String) null;

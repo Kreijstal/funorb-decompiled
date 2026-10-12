@@ -182,7 +182,7 @@ final class oo {
               this.field_s = true;
             }
           }
-          if (null != mg.field_d) {
+          if (null != ByteStorage.field_d) {
             var4 = 0;
             if (DeployEvent.field_A != 0 &&
               TeleportAction.field_z > 257 &&
@@ -410,15 +410,15 @@ final class oo {
           this.d(1439);
           if (null != iw.field_p &&
             iw.field_p.ensureIndex((byte) 82) &&
-            iw.field_p.a(28979, "members_expansion_screen") &&
-            iw.field_p.a(28979, "arialish12") &&
-            iw.field_p.a(28979, "pump32") &&
+            iw.field_p.ensureGroupAvailableByName(28979, "members_expansion_screen") &&
+            iw.field_p.ensureGroupAvailableByName(28979, "arialish12") &&
+            iw.field_p.ensureGroupAvailableByName(28979, "pump32") &&
             bh.field_H != null &&
             bh.field_H.ensureIndex((byte) 82) &&
-            bh.field_H.a(28979, "arialish12") &&
-            bh.field_H.a(28979, "pump32")) {
+            bh.field_H.ensureGroupAvailableByName(28979, "arialish12") &&
+            bh.field_H.ensureGroupAvailableByName(28979, "pump32")) {
             UnitLossCondition.field_a = pv.a("members_expansion_screen", "frame", iw.field_p, 24914);
-            mg.field_d = GameplayController.a("arrow", (byte) 51, "members_expansion_screen", iw.field_p);
+            ByteStorage.field_d = GameplayController.a("arrow", (byte) 51, "members_expansion_screen", iw.field_p);
             ll.field_Sb = gs.a("arialish12", iw.field_p, bh.field_H, (byte) -53, "");
             kt.field_n = it.a("", iw.field_p, bh.field_H, (byte) -87, "pump32");
             UnitModelPreview.field_b = DiskCacheRequest.a("benefit_orbs", "members_expansion_screen", iw.field_p, false);
@@ -434,28 +434,28 @@ final class oo {
           this.field_b.g(376, 339);
           this.field_t.g(9, 9);
           UnitLossCondition.field_a.draw(0, 0);
-          if (mg.field_d != null) {
-            mg.field_d.g(9, 257);
-            mg.field_d.d(558, 257);
+          if (ByteStorage.field_d != null) {
+            ByteStorage.field_d.g(9, 257);
+            ByteStorage.field_d.d(558, 257);
             if (ko.field_b > 257 &&
               ko.field_b < 290) {
               var2_intLifetime2 = (40 * CombatViewTransition.c(this.field_f << 4, 127) >> 16) + 40;
               if (var2_intLifetime2 > 0) {
                 if (AiPlanningStrategy.field_d > 9 &&
                   AiPlanningStrategy.field_d < 82) {
-                  mg.field_d.f(8, 256, var2_intLifetime2);
-                  mg.field_d.f(10, 256, var2_intLifetime2);
-                  mg.field_d.f(8, 258, var2_intLifetime2);
-                  mg.field_d.f(10, 258, var2_intLifetime2);
+                  ByteStorage.field_d.f(8, 256, var2_intLifetime2);
+                  ByteStorage.field_d.f(10, 256, var2_intLifetime2);
+                  ByteStorage.field_d.f(8, 258, var2_intLifetime2);
+                  ByteStorage.field_d.f(10, 258, var2_intLifetime2);
                 } else {
                   if (AiPlanningStrategy.field_d > 558 &&
                     AiPlanningStrategy.field_d < 631) {
-                    mg.field_d.h();
-                    mg.field_d.f(557, 256, var2_intLifetime2);
-                    mg.field_d.f(559, 256, var2_intLifetime2);
-                    mg.field_d.f(557, 258, var2_intLifetime2);
-                    mg.field_d.f(559, 258, var2_intLifetime2);
-                    mg.field_d.h();
+                    ByteStorage.field_d.h();
+                    ByteStorage.field_d.f(557, 256, var2_intLifetime2);
+                    ByteStorage.field_d.f(559, 256, var2_intLifetime2);
+                    ByteStorage.field_d.f(557, 258, var2_intLifetime2);
+                    ByteStorage.field_d.f(559, 258, var2_intLifetime2);
+                    ByteStorage.field_d.h();
                   }
                 }
               }
@@ -670,7 +670,7 @@ final class oo {
             SoftwareRaster.a(0, 0, 622, 47, 4540749, 65793);
             var2_int = 16448250;
             var3 = 10068666;
-            var12 = cj.a(var3, var2_int, -60);
+            var12 = DirectByteStorage.a(var3, var2_int, -60);
             var11 = var12;
             var9 = var11;
             this.a(var12, 622, this.field_c, 0, kt.field_n, (byte) 66, 47, 0);
@@ -681,7 +681,7 @@ final class oo {
               var8 = (BitmapFont) null;
               this.a((int[]) null, -60, (String) null, -5, (BitmapFont) null, (byte) 31, 126, -81);
             }
-            var10 = cj.a(526344, 526344, 126);
+            var10 = DirectByteStorage.a(526344, 526344, 126);
             var5 = new RgbSprite(121, 122);
             CombatSandbox.a(var5, 3);
             SoftwareRaster.a(0, 0, var5.pixelWidth, var5.pixelHeight / 2, 16180917, 16306250);

@@ -55,7 +55,7 @@ final class CampaignProgress {
           var1 = var6 + ":";
           for (var2 = 0; var2 < fk.field_b; var2++) {
             var7 = var1 + ' ';
-            var3 = 255 & mg.field_e.payload[var2];
+            var3 = 255 & ByteStorage.field_e.payload[var2];
             var4 = var3 >> 4;
             var3 = var3 & 15;
             if (var4 < 10) {

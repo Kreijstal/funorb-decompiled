@@ -1,8 +1,8 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class cj extends mg {
-    private java.nio.ByteBuffer field_p;
+final class DirectByteStorage extends ByteStorage {
+    private java.nio.ByteBuffer buffer;
     static sa field_m;
     static sa field_o;
     static String field_l;
@@ -30,28 +30,28 @@ final class cj extends mg {
         field_k = null;
     }
 
-    final void a(byte param0, byte[] param1) {
+    final void setBytes(byte obfuscationGuard, byte[] bytes) {
         try {
-          this.field_p = java.nio.ByteBuffer.allocateDirect(param1.length);
-          this.field_p.position(0);
-          if (param0 != 126) {
+          this.buffer = java.nio.ByteBuffer.allocateDirect(bytes.length);
+          this.buffer.position(0);
+          if (obfuscationGuard != 126) {
             field_o = (sa) null;
           }
-          this.field_p.put(param1);
+          this.buffer.put(bytes);
         } catch (RuntimeException runtimeException) {
-          throw ig.addExceptionContext((Throwable) ((Object) runtimeException), "cj.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) runtimeException), "cj.D(" + obfuscationGuard + ',' + (bytes != null ? "{...}" : "null") + ')');
         }
     }
 
-    final byte[] a(int param0) {
-        byte[] var3 = new byte[this.field_p.capacity()];
-        byte[] var2 = var3;
-        this.field_p.position(param0);
-        this.field_p.get(var3);
-        return var3;
+    final byte[] getBytes(int startOffset) {
+        byte[] result = new byte[this.buffer.capacity()];
+        byte[] resultAlias = result;
+        this.buffer.position(startOffset);
+        this.buffer.get(result);
+        return result;
     }
 
-    cj() {
+    DirectByteStorage() {
     }
 
     final static int[] a(int param0, int param1, int param2) {

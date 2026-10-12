@@ -1319,7 +1319,7 @@ final class InstructionsPanel {
           dj.a((byte) -128);
           return;
         }
-        CipherPacketBuffer var3 = mg.field_e;
+        CipherPacketBuffer var3 = ByteStorage.field_e;
         var3.readInt(1);
         var3.readInt(1);
         var3.readInt(1);
@@ -2365,7 +2365,7 @@ final class InstructionsPanel {
             }
             if (ov.field_g == gi.field_d &&
               es.a(-111, 1)) {
-              var6_int = mg.field_e.readUnsignedByte(0);
+              var6_int = ByteStorage.field_e.readUnsignedByte(0);
               if (0 != var6_int) {
                 nm.field_o = var6_int;
                 fk.field_b = -1;
@@ -2373,20 +2373,20 @@ final class InstructionsPanel {
               } else {
                 ov.field_g = mh.field_a;
               }
-              mg.field_e.position = 0;
+              ByteStorage.field_e.position = 0;
             }
             if (mh.field_a == ov.field_g &&
               es.a(-115, 8)) {
-              ts.field_h = mg.field_e.j((byte) -2);
-              mg.field_e.position = 0;
+              ts.field_h = ByteStorage.field_e.j((byte) -2);
+              ByteStorage.field_e.position = 0;
               bk.a(param2, param5, CampaignRewardPreview.field_g, 0, param1);
               ov.field_g = NetworkResourceRequest.field_D;
             }
             boolean decompiledFrameRemainder0 = true;
             if (ov.field_g == NetworkResourceRequest.field_D &&
               es.a(-90, 1)) {
-              var6_intLifetime1 = mg.field_e.readUnsignedByte(param0 + 53);
-              mg.field_e.position = 0;
+              var6_intLifetime1 = ByteStorage.field_e.readUnsignedByte(param0 + 53);
+              ByteStorage.field_e.position = 0;
               gh.field_P = null;
               nm.field_o = var6_intLifetime1;
               if (var6_intLifetime1 != 0 &&
@@ -2414,13 +2414,13 @@ final class InstructionsPanel {
             }
             if (oq.field_m == ov.field_g &&
               jh.g(2)) {
-              dc.field_o = mg.field_e.j((byte) -2);
+              dc.field_o = ByteStorage.field_e.j((byte) -2);
               wl.field_I = param3;
-              BufferedSocket.field_j = mg.field_e.readUnsignedByte(0);
-              tf.field_l = mg.field_e.readUnsignedByte(0);
-              df.field_M = mg.field_e.readUnsignedShort((byte) -104);
-              var6 = mg.field_e.c((byte) -125);
-              var7 = mg.field_e.readUnsignedByte(param0 + 53);
+              BufferedSocket.field_j = ByteStorage.field_e.readUnsignedByte(0);
+              tf.field_l = ByteStorage.field_e.readUnsignedByte(0);
+              df.field_M = ByteStorage.field_e.readUnsignedShort((byte) -104);
+              var6 = ByteStorage.field_e.c((byte) -125);
+              var7 = ByteStorage.field_e.readUnsignedByte(param0 + 53);
               if ((var7 & 1) != 0) {
                 wj.a(0);
               }
@@ -2437,33 +2437,33 @@ final class InstructionsPanel {
                 stackIn_63_0 = ((16 & var7) != 0);
                 c.field_c = stackIn_63_0;
                 if (ul.field_a) {
-                  mg.field_e.readUnsignedByte(0);
-                  mg.field_e.readUnsignedByte(param0 ^ -53);
-                  mg.field_e.readInt(param0 + 54);
-                  of.field_Nb = mg.field_e.readUnsignedShort((byte) -104);
+                  ByteStorage.field_e.readUnsignedByte(0);
+                  ByteStorage.field_e.readUnsignedByte(param0 ^ -53);
+                  ByteStorage.field_e.readInt(param0 + 54);
+                  of.field_Nb = ByteStorage.field_e.readUnsignedShort((byte) -104);
                   nk.field_C = new byte[of.field_Nb];
                   for (var8 = 0; of.field_Nb > var8; var8++) {
-                    nk.field_C[var8] = mg.field_e.readByte((byte) -49);
+                    nk.field_C[var8] = ByteStorage.field_e.readByte((byte) -49);
                   }
                 }
               } else {
                 stackIn_45_0 = ((16 & var7) != 0);
                 c.field_c = stackIn_45_0;
                 if (ul.field_a) {
-                  mg.field_e.readUnsignedByte(0);
-                  mg.field_e.readUnsignedByte(param0 ^ -53);
-                  mg.field_e.readInt(param0 + 54);
-                  of.field_Nb = mg.field_e.readUnsignedShort((byte) -104);
+                  ByteStorage.field_e.readUnsignedByte(0);
+                  ByteStorage.field_e.readUnsignedByte(param0 ^ -53);
+                  ByteStorage.field_e.readInt(param0 + 54);
+                  of.field_Nb = ByteStorage.field_e.readUnsignedShort((byte) -104);
                   nk.field_C = new byte[of.field_Nb];
                   for (var8 = 0; of.field_Nb > var8; var8++) {
-                    nk.field_C[var8] = mg.field_e.readByte((byte) -49);
+                    nk.field_C[var8] = ByteStorage.field_e.readByte((byte) -49);
                   }
                 }
               }
-              mv.field_d = mg.field_e.g(1);
+              mv.field_d = ByteStorage.field_e.g(1);
               var11 = (CharSequence) ((Object) mv.field_d);
               IntPair.field_p = k.a(var11, false);
-              vt.field_n = mg.field_e.readUnsignedByte(0);
+              vt.field_n = ByteStorage.field_e.readUnsignedByte(0);
               ov.field_g = ResourceArchive.field_k;
               if (CampaignRewardPreview.field_g.a((byte) 50) != pt.field_db) {
                 if (CampaignRewardPreview.field_g.a((byte) -11) == fl.field_u) {
@@ -2499,7 +2499,7 @@ final class InstructionsPanel {
               for (var8Lifetime1 = 0; 4 > var8Lifetime1; var8Lifetime1++) {
                 CombatEvent.field_L[var8Lifetime1] = CombatEvent.field_L[var8Lifetime1] + 50;
               }
-              mg.field_e.initializeOpcodeCipher(CombatEvent.field_L, param0 - 66);
+              ByteStorage.field_e.initializeOpcodeCipher(CombatEvent.field_L, param0 - 66);
               stackIn_88_0 = nm.field_o;
               return stackIn_88_0;
             }
@@ -2515,7 +2515,7 @@ final class InstructionsPanel {
               if (nm.field_o == 7) {
                 nm.field_o = 3;
               }
-              lk.field_r = mg.field_e.g(1);
+              lk.field_r = ByteStorage.field_e.g(1);
               ev.field_b = false;
               stackIn_99_0 = nm.field_o;
               return stackIn_99_0;

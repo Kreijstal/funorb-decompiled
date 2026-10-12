@@ -20,7 +20,7 @@ final class NodeIterator {
           if (param0 != 50) {
             field_c = -105;
           }
-          stackIn_3_0 = qk.field_e.a(param1, param0 ^ -72, "");
+          stackIn_3_0 = qk.field_e.getFileByName(param1, param0 ^ -72, "");
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

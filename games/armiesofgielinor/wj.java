@@ -72,7 +72,7 @@ final class wj extends IntrusiveNode {
           if (null != le.field_d) {
             try {
               le.field_d.seek(-1, 0L);
-              le.field_d.write(24, mg.field_e.position, (byte) 46, mg.field_e.payload);
+              le.field_d.write(24, ByteStorage.field_e.position, (byte) 46, ByteStorage.field_e.payload);
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var1 = (Exception) (Object) decompiledCaughtException;
@@ -81,7 +81,7 @@ final class wj extends IntrusiveNode {
           if (param0 != 0) {
             field_n = (hd) null;
           }
-          mg.field_e.position = mg.field_e.position + 24;
+          ByteStorage.field_e.position = ByteStorage.field_e.position + 24;
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {

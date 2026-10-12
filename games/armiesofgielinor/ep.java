@@ -33,7 +33,7 @@ final class ep {
         if (param0 >= -15) {
           this.a(29);
         }
-        return new RgbSprite(PopupPresentation.field_j.a("intro" + (param1 + 1) + ".jpg", -125, ""), (java.awt.Component) ((Object) ll.p(0)));
+        return new RgbSprite(PopupPresentation.field_j.getFileByName("intro" + (param1 + 1) + ".jpg", -125, ""), (java.awt.Component) ((Object) ll.p(0)));
     }
 
     final void a(boolean param0) {

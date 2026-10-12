@@ -79,7 +79,7 @@ final class ea {
         CipherPacketBuffer var8 = null;
         ar var9 = null;
         var7 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
-        var8 = mg.field_e;
+        var8 = ByteStorage.field_e;
         var2 = var8;
         var3 = var8.readUnsignedByte(0);
         stackIn_3_0 = (0 != (var3 & 128));
@@ -245,7 +245,7 @@ final class ea {
         CipherPacketBuffer var8 = null;
         ar var9 = null;
         var7 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
-        var8 = mg.field_e;
+        var8 = ByteStorage.field_e;
         var2 = var8;
         var3 = var8.readUnsignedByte(0);
         stackIn_3_0 = (0 != (var3 & 128));

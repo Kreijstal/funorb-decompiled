@@ -2129,8 +2129,8 @@ final class TutorialController {
                         if (r.field_B > 8) {
                           r.field_B = 2;
                         }
-                        if (mg.field_g > r.field_B) {
-                          mg.field_g = r.field_B;
+                        if (ByteStorage.field_g > r.field_B) {
+                          ByteStorage.field_g = r.field_B;
                         }
                         if (0 == t.field_e &&
                           r.field_B > 2) {
@@ -2158,20 +2158,20 @@ final class TutorialController {
                       if (!this.selectionState.hasActivationInput((byte) 124)) {
                         return;
                       }
-                      stackIn_740_0 = mg.field_g;
+                      stackIn_740_0 = ByteStorage.field_g;
                       if (1 == DeployEvent.field_A) {
                         stackIn_741_1 = 1;
                       } else {
                         stackIn_741_1 = -1;
                       }
-                      mg.field_g = stackIn_740_0 + stackIn_741_1;
-                      if (mg.field_g < 0) {
-                        mg.field_g = r.field_B;
+                      ByteStorage.field_g = stackIn_740_0 + stackIn_741_1;
+                      if (ByteStorage.field_g < 0) {
+                        ByteStorage.field_g = r.field_B;
                       }
-                      if (r.field_B >= mg.field_g) {
+                      if (r.field_B >= ByteStorage.field_g) {
                         return;
                       }
-                      mg.field_g = 0;
+                      ByteStorage.field_g = 0;
                       if (var9 == 0) {
                         return;
                       }
@@ -2655,7 +2655,7 @@ final class TutorialController {
           if (MoveEvent.matchSetupPanel == null) {
             return;
           }
-          MoveEvent.matchSetupPanel.setOptions(this.selectionState.selectedIndex, (byte) -28, t.field_e, wf.field_D, vg.field_m, mg.field_g, r.field_B, this.f(true));
+          MoveEvent.matchSetupPanel.setOptions(this.selectionState.selectedIndex, (byte) -28, t.field_e, wf.field_D, vg.field_m, ByteStorage.field_g, r.field_B, this.f(true));
           var2_int = -9 % ((61 - param0) / 60);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -3831,7 +3831,7 @@ final class TutorialController {
             var3 = DisplacedUnitMarker.field_t[28] + r.field_B;
           }
           if (itemId == 46) {
-            var3 = DisplacedUnitMarker.field_t[28] + mg.field_g;
+            var3 = DisplacedUnitMarker.field_t[28] + ByteStorage.field_g;
           }
           if (itemId == 33) {
             if (vg.field_m) {

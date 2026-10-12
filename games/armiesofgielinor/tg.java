@@ -331,7 +331,7 @@ final class tg {
           }
           var3 = var6.field_rc;
           if (var6.field_Nb) {
-            this.field_i.a(2, fo.a(4800, mg.field_b, new String[]{var3}), (byte) -108);
+            this.field_i.a(2, fo.a(4800, ByteStorage.field_b, new String[]{var3}), (byte) -108);
             this.field_i.a(3, fo.a(4800, or.field_a, new String[]{var3}), (byte) -120);
             return;
           }
@@ -375,7 +375,7 @@ final class tg {
         }
         var3 = var7.field_rc;
         if (var7.field_Nb) {
-          this.field_i.a(2, fo.a(4800, mg.field_b, new String[]{var3}), (byte) -108);
+          this.field_i.a(2, fo.a(4800, ByteStorage.field_b, new String[]{var3}), (byte) -108);
           this.field_i.a(3, fo.a(4800, or.field_a, new String[]{var3}), (byte) -120);
           return;
         }

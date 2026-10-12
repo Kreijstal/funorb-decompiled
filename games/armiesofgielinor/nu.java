@@ -48,7 +48,7 @@ final class nu extends lk {
         byte[] var23 = null;
         var16 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          var23 = archive.a("missions", -91, gk.field_O[campaignIndex]);
+          var23 = archive.getFileByName("missions", -91, gk.field_O[campaignIndex]);
           var18 = var23;
           var17 = var18;
           var3 = var17;

@@ -167,7 +167,7 @@ final class ou {
             this.a((byte) -41);
           }
           while (wn.field_eb.length > var2_int) {
-            var3 = this.field_e[0].a(wn.field_eb[var2_int], 35, "");
+            var3 = this.field_e[0].getFileByName(wn.field_eb[var2_int], 35, "");
             if (var4 != 0) {
               return;
             }
@@ -753,7 +753,7 @@ final class ou {
           this.field_i[param2][param1] = new NodeDeque();
           var5 = 0;
           while (AttackEvent.field_A[param2][param1].length > var5) {
-            var6 = var4.a(AttackEvent.field_A[param2][param1][var5], param0 - 5249, "");
+            var6 = var4.getFileByName(AttackEvent.field_A[param2][param1][var5], param0 - 5249, "");
             if (var6 != null && (var6.length != 0 ||
               var7 != 0)) {
               this.field_i[param2][param1].addLast((byte) -119, (IntrusiveNode) (new MapLayout(var5, var6)));

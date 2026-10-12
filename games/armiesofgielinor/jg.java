@@ -618,7 +618,7 @@ final class jg extends IntrusiveNode {
         b var14 = null;
         var8 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          var13 = mg.field_e;
+          var13 = ByteStorage.field_e;
           var2 = var13.readUnsignedByte(param0);
           if (var2 == 0) {
             var10 = ce.a(-80);

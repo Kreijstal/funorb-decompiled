@@ -1235,7 +1235,7 @@ final class TickCounter {
                 }
                 var2 = fk.a(false, "LABEL_AWARD_HEALTHLOST");
                 if (null != var2) {
-                  mg.field_c = uu.a(var2, (byte) -119);
+                  ByteStorage.field_c = uu.a(var2, (byte) -119);
                 }
                 var2 = fk.a(false, "LABEL_AWARD_HEALTHGAINED");
                 if (null != var2) {
@@ -2967,95 +2967,95 @@ final class TickCounter {
                 }
                 var2 = fk.a(false, "passivespecials,0");
                 if (var2 != null) {
-                  cj.field_n[0] = uu.a(var2, (byte) -122);
+                  DirectByteStorage.field_n[0] = uu.a(var2, (byte) -122);
                 }
                 var2 = fk.a(false, "passivespecials,1");
                 if (var2 != null) {
-                  cj.field_n[1] = uu.a(var2, (byte) 74);
+                  DirectByteStorage.field_n[1] = uu.a(var2, (byte) 74);
                 }
                 var2 = fk.a(false, "passivespecials,2");
                 if (null != var2) {
-                  cj.field_n[2] = uu.a(var2, (byte) -95);
+                  DirectByteStorage.field_n[2] = uu.a(var2, (byte) -95);
                 }
                 var2 = fk.a(false, "passivespecials,3");
                 if (var2 != null) {
-                  cj.field_n[3] = uu.a(var2, (byte) 114);
+                  DirectByteStorage.field_n[3] = uu.a(var2, (byte) 114);
                 }
                 var2 = fk.a(false, "passivespecials,4");
                 if (var2 != null) {
-                  cj.field_n[4] = uu.a(var2, (byte) -104);
+                  DirectByteStorage.field_n[4] = uu.a(var2, (byte) -104);
                 }
                 var2 = fk.a(false, "passivespecials,5");
                 if (null != var2) {
-                  cj.field_n[5] = uu.a(var2, (byte) 10);
+                  DirectByteStorage.field_n[5] = uu.a(var2, (byte) 10);
                 }
                 var2 = fk.a(false, "passivespecials,6");
                 if (null != var2) {
-                  cj.field_n[6] = uu.a(var2, (byte) 40);
+                  DirectByteStorage.field_n[6] = uu.a(var2, (byte) 40);
                 }
                 var2 = fk.a(false, "passivespecials,7");
                 if (null != var2) {
-                  cj.field_n[7] = uu.a(var2, (byte) 48);
+                  DirectByteStorage.field_n[7] = uu.a(var2, (byte) 48);
                 }
                 var2 = fk.a(false, "passivespecials,8");
                 if (null != var2) {
-                  cj.field_n[8] = uu.a(var2, (byte) 13);
+                  DirectByteStorage.field_n[8] = uu.a(var2, (byte) 13);
                 }
                 var2 = fk.a(false, "passivespecials,9");
                 if (var2 != null) {
-                  cj.field_n[9] = uu.a(var2, (byte) 75);
+                  DirectByteStorage.field_n[9] = uu.a(var2, (byte) 75);
                 }
                 var2 = fk.a(false, "passivespecials,10");
                 if (var2 != null) {
-                  cj.field_n[10] = uu.a(var2, (byte) 51);
+                  DirectByteStorage.field_n[10] = uu.a(var2, (byte) 51);
                 }
                 var2 = fk.a(false, "passivespecials,11");
                 if (var2 != null) {
-                  cj.field_n[11] = uu.a(var2, (byte) 45);
+                  DirectByteStorage.field_n[11] = uu.a(var2, (byte) 45);
                 }
                 var2 = fk.a(false, "passivespecials,12");
                 if (var2 != null) {
-                  cj.field_n[12] = uu.a(var2, (byte) -99);
+                  DirectByteStorage.field_n[12] = uu.a(var2, (byte) -99);
                 }
                 var2 = fk.a(false, "passivespecials,13");
                 if (null != var2) {
-                  cj.field_n[13] = uu.a(var2, (byte) -109);
+                  DirectByteStorage.field_n[13] = uu.a(var2, (byte) -109);
                 }
                 var2 = fk.a(false, "passivespecials,14");
                 if (var2 != null) {
-                  cj.field_n[14] = uu.a(var2, (byte) -102);
+                  DirectByteStorage.field_n[14] = uu.a(var2, (byte) -102);
                 }
                 var2 = fk.a(false, "passivespecials,15");
                 if (var2 != null) {
-                  cj.field_n[15] = uu.a(var2, (byte) -96);
+                  DirectByteStorage.field_n[15] = uu.a(var2, (byte) -96);
                 }
                 var2 = fk.a(false, "passivespecials,16");
                 if (var2 != null) {
-                  cj.field_n[16] = uu.a(var2, (byte) -109);
+                  DirectByteStorage.field_n[16] = uu.a(var2, (byte) -109);
                 }
                 var2 = fk.a(false, "passivespecials,17");
                 if (null != var2) {
-                  cj.field_n[17] = uu.a(var2, (byte) 63);
+                  DirectByteStorage.field_n[17] = uu.a(var2, (byte) 63);
                 }
                 var2 = fk.a(false, "passivespecials,18");
                 if (null != var2) {
-                  cj.field_n[18] = uu.a(var2, (byte) 25);
+                  DirectByteStorage.field_n[18] = uu.a(var2, (byte) 25);
                 }
                 var2 = fk.a(false, "passivespecials,19");
                 if (null != var2) {
-                  cj.field_n[19] = uu.a(var2, (byte) 32);
+                  DirectByteStorage.field_n[19] = uu.a(var2, (byte) 32);
                 }
                 var2 = fk.a(false, "passivespecials,20");
                 if (null != var2) {
-                  cj.field_n[20] = uu.a(var2, (byte) -118);
+                  DirectByteStorage.field_n[20] = uu.a(var2, (byte) -118);
                 }
                 var2 = fk.a(false, "passivespecials,21");
                 if (var2 != null) {
-                  cj.field_n[21] = uu.a(var2, (byte) -93);
+                  DirectByteStorage.field_n[21] = uu.a(var2, (byte) -93);
                 }
                 var2 = fk.a(false, "passivespecials,22");
                 if (var2 != null) {
-                  cj.field_n[22] = uu.a(var2, (byte) -122);
+                  DirectByteStorage.field_n[22] = uu.a(var2, (byte) -122);
                 }
                 var2 = fk.a(false, "SUMMON_ERRORS,0");
                 if (null != var2) {

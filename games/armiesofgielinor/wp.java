@@ -44,7 +44,7 @@ final class wp extends DualLinkedNode {
           return true;
         }
         if (this.field_x == null) {
-          if (!jj.field_c.a(11894, this.field_C)) {
+          if (!jj.field_c.ensureGroupAvailable(11894, this.field_C)) {
             return false;
           }
           var27 = jj.field_c.getFileIds(-26, this.field_C);
@@ -61,7 +61,7 @@ final class wp extends DualLinkedNode {
           var16 = new PacketBuffer(var28);
           var16.position = 1;
           var6 = var16.readUnsignedShort((byte) -104);
-          var2 = var2 != 0 & PortalLossCondition.field_e.a(var6, (byte) -56) ? 1 : 0;
+          var2 = var2 != 0 & PortalLossCondition.field_e.ensureFlatFileAvailable(var6, (byte) -56) ? 1 : 0;
           var13++;
         }
         if (var2 == 0) {
@@ -87,7 +87,7 @@ final class wp extends DualLinkedNode {
             break;
           }
           if (var10 == null) {
-            var10 = new ig(var9, PortalLossCondition.field_e.c(var9, (byte) 81));
+            var10 = new ig(var9, PortalLossCondition.field_e.getFlatFile(var9, (byte) 81));
             var3.addLast((byte) -119, (IntrusiveNode) (var10));
           }
           this.field_A[var29[var6Lifetime1]] = new ht(var30, (ig) (var10));

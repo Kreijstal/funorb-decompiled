@@ -185,11 +185,11 @@ abstract class wf extends iv {
     }
 
     private final void n(int param0) {
-        int var2 = mg.field_e.readUnsignedByte(0);
+        int var2 = ByteStorage.field_e.readUnsignedByte(0);
         int var3 = (var2 & 1) != 0 ? 1 : 0;
         int var4 = fk.field_b - 1;
         byte[] var5 = new byte[var4];
-        mg.field_e.a(var4, var5, false, 0);
+        ByteStorage.field_e.a(var4, var5, false, 0);
         SpellCastAction.a(CombatEvent.d((byte) -125), 87, uu.a(var5, (byte) 127), var3 != 0);
         if (param0 != 16433) {
           this.j(-76);
@@ -444,7 +444,7 @@ abstract class wf extends iv {
                 MapLayout.a(var3, -1);
                 break;
               case 8:
-                jh.a(mg.field_e, IntPair.field_m, fk.field_b, param0 - 13);
+                jh.a(ByteStorage.field_e, IntPair.field_m, fk.field_b, param0 - 13);
                 break;
               case 7:
                 this.e((byte) 127);
@@ -638,10 +638,10 @@ abstract class wf extends iv {
         if (f.field_E == 2) {
           if (null != nf.field_Nb &&
             nf.field_Nb.ensureIndex((byte) 82)) {
-            if (!nf.field_Nb.a((byte) -128, "")) {
+            if (!nf.field_Nb.containsGroupName((byte) -128, "")) {
               nf.field_Nb = null;
             } else {
-              if (nf.field_Nb.a(28979, "")) {
+              if (nf.field_Nb.ensureGroupAvailableByName(28979, "")) {
                 CampaignUnitOverride.a((byte) -82, nf.field_Nb);
                 nf.field_Nb = null;
                 wl.a(0);
@@ -692,7 +692,7 @@ abstract class wf extends iv {
         boolean decompiledFrameRemainder0 = true;
         if (f.field_E == 11) {
           if (RegionAnchor.field_o != null && (!RegionAnchor.field_o.ensureIndex((byte) 82) ||
-            !RegionAnchor.field_o.d(-27927))) {
+            !RegionAnchor.field_o.ensureAllGroupsAvailable(-27927))) {
             bn.a((byte) -24, 0.0f, ao.a(db.field_b, true, of.field_Jb, RegionAnchor.field_o));
             decompiledFrameRemainder0 = false;
           }

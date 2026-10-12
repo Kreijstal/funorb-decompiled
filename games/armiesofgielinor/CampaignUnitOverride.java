@@ -199,7 +199,7 @@ final class CampaignUnitOverride {
                 }
                 var2 = NodeIterator.a(50, "mu_x_removed");
                 if (null != var2) {
-                  cj.field_i = uu.a(var2, (byte) 52);
+                  DirectByteStorage.field_i = uu.a(var2, (byte) 52);
                 }
                 var2 = NodeIterator.a(50, "mu_x_dropped_out");
                 if (null != var2) {
@@ -371,7 +371,7 @@ final class CampaignUnitOverride {
                 }
                 var2 = NodeIterator.a(50, "invite_accept_xs_game");
                 if (null != var2) {
-                  mg.field_b = uu.a(var2, (byte) 109);
+                  ByteStorage.field_b = uu.a(var2, (byte) 109);
                 }
                 var2 = NodeIterator.a(50, "invite_decline_xs_game");
                 if (var2 != null) {
@@ -791,7 +791,7 @@ final class CampaignUnitOverride {
                 }
                 var2 = NodeIterator.a(50, "gameopt_moreratedgames");
                 if (var2 != null) {
-                  mg.field_a = uu.a(var2, (byte) -118);
+                  ByteStorage.field_a = uu.a(var2, (byte) -118);
                 }
                 var2 = NodeIterator.a(param0 + 132, "gameopt_needrating");
                 if (null != var2) {
@@ -871,7 +871,7 @@ final class CampaignUnitOverride {
                 }
                 var2 = NodeIterator.a(50, "gameopt_mightchange");
                 if (null != var2) {
-                  cj.field_l = uu.a(var2, (byte) 76);
+                  DirectByteStorage.field_l = uu.a(var2, (byte) 76);
                 }
                 var2 = NodeIterator.a(50, "gameopt_playersdontqualify");
                 if (null != var2) {

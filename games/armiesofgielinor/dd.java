@@ -96,19 +96,19 @@ final class dd {
           if (!ps.field_u.ensureIndex((byte) 82)) {
             return 20;
           }
-          if (!ps.field_u.a(28979, "commonui")) {
+          if (!ps.field_u.ensureGroupAvailableByName(28979, "commonui")) {
             return 40;
           }
           if (!CombatPresentation.field_M.ensureIndex((byte) 82)) {
             return 50;
           }
-          if (!CombatPresentation.field_M.a(28979, "commonui")) {
+          if (!CombatPresentation.field_M.ensureGroupAvailableByName(28979, "commonui")) {
             return 60;
           }
           if (!h.field_g.ensureIndex((byte) 82)) {
             return 70;
           }
-          if (!h.field_g.d(-27927)) {
+          if (!h.field_g.ensureAllGroupsAvailable(-27927)) {
             return 80;
           }
         } else {
@@ -116,29 +116,29 @@ final class dd {
             if (!nf.field_Nb.ensureIndex((byte) 82)) {
               return 14;
             }
-            if (!nf.field_Nb.a((byte) -128, "")) {
+            if (!nf.field_Nb.containsGroupName((byte) -128, "")) {
               return 29;
             }
-            if (!nf.field_Nb.a(28979, "")) {
+            if (!nf.field_Nb.ensureGroupAvailableByName(28979, "")) {
               return 29;
             }
           }
           if (!ps.field_u.ensureIndex((byte) 82)) {
             return 43;
           }
-          if (!ps.field_u.a(28979, "commonui")) {
+          if (!ps.field_u.ensureGroupAvailableByName(28979, "commonui")) {
             return 57;
           }
           if (!CombatPresentation.field_M.ensureIndex((byte) 82)) {
             return 71;
           }
-          if (!CombatPresentation.field_M.a(28979, "commonui")) {
+          if (!CombatPresentation.field_M.ensureGroupAvailableByName(28979, "commonui")) {
             return 80;
           }
           if (!h.field_g.ensureIndex((byte) 82)) {
             return 82;
           }
-          if (!h.field_g.d(-27927)) {
+          if (!h.field_g.ensureAllGroupsAvailable(-27927)) {
             return 86;
           }
         }

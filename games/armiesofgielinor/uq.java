@@ -73,7 +73,7 @@ abstract class uq extends DualLinkedNode {
               vl.outgoingPacket.writeByte(param2 + 20033, 18);
               vl.outgoingPacket.position = vl.outgoingPacket.position + 2;
               var10 = vl.outgoingPacket.position;
-              var11_ref_String = mg.a(0, CombatEvent.d((byte) 55));
+              var11_ref_String = ByteStorage.a(0, CombatEvent.d((byte) 55));
               if (var11_ref_String == null) {
                 var11_ref_String = "";
               }
@@ -105,12 +105,12 @@ abstract class uq extends DualLinkedNode {
               vl.outgoingPacket.writeByteLengthPrefix(vl.outgoingPacket.position - var9, 5930);
             }
             hb.$cfr$intArgs$a$e9dea5688aa5(54, -1);
-            ov.field_g = cj.field_m;
+            ov.field_g = DirectByteStorage.field_m;
           }
-          if (ov.field_g == cj.field_m &&
+          if (ov.field_g == DirectByteStorage.field_m &&
             es.a(param2 ^ 20080, 1)) {
-            var9Lifetime1 = mg.field_e.readUnsignedByte(0);
-            mg.field_e.position = 0;
+            var9Lifetime1 = ByteStorage.field_e.readUnsignedByte(0);
+            ByteStorage.field_e.position = 0;
             if (var9Lifetime1 >= 100 &&
               var9Lifetime1 <= 105) {
               ov.field_g = mv.field_c;
@@ -126,8 +126,8 @@ abstract class uq extends DualLinkedNode {
               }
               if (var9Lifetime1 == 99) {
                 es.a(-81, qa.h(1));
-                CampaignMenu.field_s = new Boolean(rr.a((byte) -76, mg.field_e));
-                mg.field_e.position = 0;
+                CampaignMenu.field_s = new Boolean(rr.a((byte) -76, ByteStorage.field_e));
+                ByteStorage.field_e.position = 0;
               } else {
                 fk.field_b = -1;
                 nm.field_o = var9Lifetime1;
@@ -138,12 +138,12 @@ abstract class uq extends DualLinkedNode {
           if (mv.field_c == ov.field_g) {
             var9Lifetime2 = 2;
             if (es.a(-79, var9Lifetime2)) {
-              var10Lifetime1 = mg.field_e.readUnsignedShort((byte) -104);
-              mg.field_e.position = 0;
+              var10Lifetime1 = ByteStorage.field_e.readUnsignedShort((byte) -104);
+              ByteStorage.field_e.position = 0;
               if (es.a(-83, var10Lifetime1)) {
                 var11 = br.field_b.length;
                 for (var12 = 0; var12 < var11; var12++) {
-                  br.field_b[var12] = mg.field_e.readNullCircumfixedString((byte) 121);
+                  br.field_b[var12] = ByteStorage.field_e.readNullCircumfixedString((byte) 121);
                 }
                 dj.a((byte) -128);
                 ev.field_b = false;
@@ -155,12 +155,12 @@ abstract class uq extends DualLinkedNode {
           if (da.field_b == ov.field_g &&
             jh.g(2)) {
             if (nm.field_o == 255) {
-              var9_ref_String = mg.field_e.c((byte) -85);
+              var9_ref_String = ByteStorage.field_e.c((byte) -85);
               if (var9_ref_String != null) {
                 ph.a(var9_ref_String, CombatEvent.d((byte) -5), false);
               }
             } else {
-              lk.field_r = mg.field_e.g(1);
+              lk.field_r = ByteStorage.field_e.g(1);
             }
             dj.a((byte) -127);
             ev.field_b = false;

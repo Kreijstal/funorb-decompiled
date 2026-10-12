@@ -106,7 +106,7 @@ final class bl {
         var11 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           regionExit1: {
-            var1 = mg.field_e;
+            var1 = ByteStorage.field_e;
             var2 = ((PacketBuffer) ((Object) var1)).readUnsignedByte(0);
             if (var2 != 0 &&
               var2 != 1 &&

@@ -62,7 +62,7 @@ final class SpellCastEvent extends GameEvent {
           InstructionsPanel.field_r = -(DualLinkedNode.field_r >> 1) + lm.field_g;
           var2 = InstructionsPanel.field_r;
           for (var3 = 0; nb.field_h.length > var3; var3++) {
-            var4 = cj.field_k[var3];
+            var4 = DirectByteStorage.field_k[var3];
             if (var4 >= 0) {
               if (var4 == MovementPlanner.field_z.selectedIndex) {
                 var5 = jv.field_c;
@@ -151,20 +151,20 @@ final class SpellCastEvent extends GameEvent {
         if (param0 != -15862) {
           return (String) null;
         }
-        if (!ps.field_u.a(28979, "commonui")) {
-          return Battlefield.field_nb + " - " + ps.field_u.a("commonui", (byte) -34) + "%";
+        if (!ps.field_u.ensureGroupAvailableByName(28979, "commonui")) {
+          return Battlefield.field_nb + " - " + ps.field_u.getGroupProgressByName("commonui", (byte) -34) + "%";
         }
         if (!CombatPresentation.field_M.ensureIndex((byte) 82)) {
           return is.field_f;
         }
-        if (!CombatPresentation.field_M.a(28979, "commonui")) {
-          return rf.field_a + " - " + CombatPresentation.field_M.a("commonui", (byte) 122) + "%";
+        if (!CombatPresentation.field_M.ensureGroupAvailableByName(28979, "commonui")) {
+          return rf.field_a + " - " + CombatPresentation.field_M.getGroupProgressByName("commonui", (byte) 122) + "%";
         }
         if (!h.field_g.ensureIndex((byte) 82)) {
           return cr.field_eb;
         }
-        if (!h.field_g.d(param0 ^ 20707)) {
-          return en.field_G + " - " + h.field_g.a(0) + "%";
+        if (!h.field_g.ensureAllGroupsAvailable(param0 ^ 20707)) {
+          return en.field_G + " - " + h.field_g.getOverallProgress(0) + "%";
         }
         return fm.field_c;
     }

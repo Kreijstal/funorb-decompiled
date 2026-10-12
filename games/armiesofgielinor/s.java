@@ -84,7 +84,7 @@ final class s {
             return stackIn_33_0;
           }
           if (param2 == 12) {
-            stackIn_37_0 = fo.a(4800, cj.field_i, new String[]{param1});
+            stackIn_37_0 = fo.a(4800, DirectByteStorage.field_i, new String[]{param1});
             return stackIn_37_0;
           }
           if (param2 != 13) {

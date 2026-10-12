@@ -667,10 +667,10 @@ final class qs extends IntrusiveNode {
         try {
           qs var4_ref = null;
           if (!qs.a(param0)) {
-            param0.a(-88, param2, param1);
+            param0.ensureFileAvailableByName(-88, param2, param1);
             return null;
           }
-          byte[] var3 = param0.a(param2, 46, param1);
+          byte[] var3 = param0.getFileByName(param2, 46, param1);
           if (var3 == null) {
             return null;
           }
@@ -723,7 +723,7 @@ final class qs extends IntrusiveNode {
         try {
           qs var4_ref = null;
           if (!qs.a(param0)) {
-            param0.a(param1, param2, 0);
+            param0.ensureFileAvailable(param1, param2, 0);
             return null;
           }
           byte[] var3 = param0.getFile((byte) 69, param2, param1);

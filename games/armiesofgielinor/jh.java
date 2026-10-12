@@ -205,15 +205,15 @@ final class jh extends mk {
           if (!es.a(-122, 1)) {
             return false;
           }
-          fk.field_b = mg.field_e.readUnsignedByte(0);
-          mg.field_e.position = 0;
+          fk.field_b = ByteStorage.field_e.readUnsignedByte(0);
+          ByteStorage.field_e.position = 0;
         }
         if (-2 == fk.field_b) {
           if (!es.a(-96, 2)) {
             return false;
           }
-          fk.field_b = mg.field_e.readUnsignedShort((byte) -104);
-          mg.field_e.position = 0;
+          fk.field_b = ByteStorage.field_e.readUnsignedShort((byte) -104);
+          ByteStorage.field_e.position = 0;
         }
         return es.a(-105, fk.field_b);
     }

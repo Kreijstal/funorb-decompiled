@@ -183,7 +183,7 @@ final class ls {
           sb.field_h.position = 0;
           sb.field_h.writeBytes(param6, param1, param4, param3 - 6621);
           sb.field_h.b(var7_int, (byte) 100);
-          sb.field_h.a((byte) 31, var13);
+          sb.field_h.encryptXtea((byte) 31, var13);
           if (ArmiesOfGielinor.field_L == null ||
             !(ArmiesOfGielinor.field_L.payload.length >= 100)) {
             ArmiesOfGielinor.field_L = new PacketBuffer(100);

@@ -282,7 +282,7 @@ final class co {
         if (param0 != 34) {
           return (RgbSprite) null;
         }
-        byte[] var3 = fd.field_m.a(this.field_x, param0 ^ 108, "");
+        byte[] var3 = fd.field_m.getFileByName(this.field_x, param0 ^ 108, "");
         byte[] var2 = var3;
         return new RgbSprite(var3, (java.awt.Component) ((Object) ll.p(0)));
     }

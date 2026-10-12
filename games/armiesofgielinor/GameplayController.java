@@ -6499,10 +6499,10 @@ final class GameplayController {
                     if (var17 == -1) {
                       var2 = du.field_f;
                       if (var20 != 0) {
-                        var2 = cj.field_n[var17];
+                        var2 = DirectByteStorage.field_n[var17];
                       }
                     } else {
-                      var2 = cj.field_n[var17];
+                      var2 = DirectByteStorage.field_n[var17];
                     }
                   }
                   if (wg.a(param0 - 153, 387, 517, 39, 39 + var15 * 30)) {
@@ -12558,8 +12558,8 @@ final class GameplayController {
             }
             if (decompiledFrameCompleted1) {
               var19Lifetime1 = 0;
-              if (mg.field_g < this.battlefield.playerCount) {
-                var19Lifetime1 = AttackEvent.a(false, 1 - mg.field_g + this.battlefield.playerCount, li.field_n);
+              if (ByteStorage.field_g < this.battlefield.playerCount) {
+                var19Lifetime1 = AttackEvent.a(false, 1 - ByteStorage.field_g + this.battlefield.playerCount, li.field_n);
               }
               var20Lifetime1 = 0;
               while (this.aiPlanners.length > var20Lifetime1) {
@@ -12570,7 +12570,7 @@ final class GameplayController {
                   break;
                 }
                 if (stackIn_234_0 <= stackIn_234_1 &&
-                  (var19Lifetime1 + mg.field_g) > var20Lifetime1) {
+                  (var19Lifetime1 + ByteStorage.field_g) > var20Lifetime1) {
                   var21Lifetime1Lifetime1 = -var19Lifetime1 + var20Lifetime1;
                   if (var18[var21Lifetime1Lifetime1] == null) {
                     this.aiPlanners[var20Lifetime1] = new AiPlanner(this.battlefield, var20Lifetime1, false, (CampaignUnitOverride[]) null);

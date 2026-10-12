@@ -54,10 +54,10 @@ final class MoveAttackAction extends PreparedAction {
           if (DualNodeDeque.field_f == 0) {
             var7 = iu.a(480, var11, param3 ^ 7444, AiPlanner.field_G, fs.field_c);
             var8 = 3 + var7;
-            cj.field_k = new int[var8];
+            DirectByteStorage.field_k = new int[var8];
             nb.field_h = new String[var8];
             for (var9 = 0; var9 < var8; var9++) {
-              cj.field_k[var9] = -1;
+              DirectByteStorage.field_k[var9] = -1;
             }
             SpellMenuGroup.field_m = new int[2];
             for (var9 = 0; var9 < var7; var9++) {
@@ -65,10 +65,10 @@ final class MoveAttackAction extends PreparedAction {
             }
             nb.field_h[var8 - 3] = "";
             nb.field_h[-2 + var8] = var6;
-            cj.field_k[-2 + var8] = 0;
+            DirectByteStorage.field_k[-2 + var8] = 0;
             SpellMenuGroup.field_m[0] = 1;
             nb.field_h[var8 - 1] = pd.field_f;
-            cj.field_k[var8 - 1] = 1;
+            DirectByteStorage.field_k[var8 - 1] = 1;
             SpellMenuGroup.field_m[1] = 2;
           } else {
             if (DualNodeDeque.field_f != 1) {
@@ -76,10 +76,10 @@ final class MoveAttackAction extends PreparedAction {
             }
             var7 = iu.a(480, var11, param3 + 7412, AiPlanner.field_G, fs.field_c);
             var8 = 2 + var7;
-            cj.field_k = new int[var8];
+            DirectByteStorage.field_k = new int[var8];
             nb.field_h = new String[var8];
             for (var9 = 0; var9 < var8; var9++) {
-              cj.field_k[var9] = -1;
+              DirectByteStorage.field_k[var9] = -1;
             }
             SpellMenuGroup.field_m = new int[1];
             for (var9 = 0; var7 > var9; var9++) {
@@ -87,16 +87,16 @@ final class MoveAttackAction extends PreparedAction {
             }
             nb.field_h[var8 - 2] = "";
             nb.field_h[var8 - 1] = pd.field_f;
-            cj.field_k[var8 - 1] = 0;
+            DirectByteStorage.field_k[var8 - 1] = 0;
             SpellMenuGroup.field_m[0] = 2;
           }
           MovementPlanner.field_z.itemCount = SpellMenuGroup.field_m.length;
           var7Lifetime1 = 0;
           for (var8Lifetime1 = 0; var8Lifetime1 < nb.field_h.length; var8Lifetime1++) {
             stackIn_25_0 = nb.field_h[var8Lifetime1];
-            stackIn_26_1 = !(cj.field_k[var8Lifetime1] < 0);
+            stackIn_26_1 = !(DirectByteStorage.field_k[var8Lifetime1] < 0);
             var9Lifetime1 = lp.a(stackIn_25_0, stackIn_26_1, false);
-            if (cj.field_k[var8Lifetime1] != -1) {
+            if (DirectByteStorage.field_k[var8Lifetime1] != -1) {
               var9Lifetime1 = var9Lifetime1 + df.field_E * 2;
             }
             if (var9Lifetime1 > var7Lifetime1) {
@@ -109,7 +109,7 @@ final class MoveAttackAction extends PreparedAction {
           var8Lifetime2 = 0;
           while (nb.field_h.length > var8Lifetime2) {
             stackIn_38_0 = DualLinkedNode.field_r;
-            stackIn_38_1 = ~cj.field_k[var8Lifetime2];
+            stackIn_38_1 = ~DirectByteStorage.field_k[var8Lifetime2];
             if (stackIn_38_1 <= -1) {
               stackIn_41_1 = jg.field_k;
             } else {

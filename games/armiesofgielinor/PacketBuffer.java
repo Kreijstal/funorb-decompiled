@@ -123,7 +123,7 @@ class PacketBuffer extends IntrusiveNode {
         this.payload[fieldTemp$7] = (byte)(int)param0;
         if (param1 != 38359632) {
           int[] var5 = (int[]) null;
-          this.a((int[]) null, -11, -67, -35);
+          this.decryptXteaRange((int[]) null, -11, -67, -35);
         }
     }
 
@@ -214,60 +214,60 @@ class PacketBuffer extends IntrusiveNode {
         return this.g(1);
     }
 
-    final void a(byte param0, int[] param1) {
+    final void encryptXtea(byte obfuscationGuard, int[] key) {
         int incrementValue$0 = 0;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
         String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
-        int var3_int = 0;
+        int blockCount = 0;
         RuntimeException var3 = null;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
+        int blockIndex = 0;
+        int leftWord = 0;
+        int rightWord = 0;
+        int sum = 0;
+        int delta = 0;
+        int roundsRemaining = 0;
         int var10 = 0;
         var10 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          var3_int = this.position / 8;
+          blockCount = this.position / 8;
           this.position = 0;
-          if (param0 != 31) {
+          if (obfuscationGuard != 31) {
             return;
           }
-          var4 = 0;
+          blockIndex = 0;
           while (true) {
-            if (var3_int <= var4) {
+            if (blockCount <= blockIndex) {
               return;
             }
-            var5 = this.readInt(1);
-            var6 = this.readInt(1);
-            var7 = 0;
-            var8 = -1640531527;
-            var9 = 32;
+            leftWord = this.readInt(1);
+            rightWord = this.readInt(1);
+            sum = 0;
+            delta = -1640531527;
+            roundsRemaining = 32;
             while (true) {
-              incrementValue$0 = var9;
-              var9--;
+              incrementValue$0 = roundsRemaining;
+              roundsRemaining--;
               if (incrementValue$0 > 0) {
-                var5 = var5 + (var6 + (var6 << 4 ^ var6 >>> 5) ^ param1[3 & var7] + var7);
-                var7 = var7 + var8;
-                var6 = var6 + (var7 + param1[(var7 & 8001) >>> 11] ^ var5 + (var5 >>> 5 ^ var5 << 4));
+                leftWord = leftWord + (rightWord + (rightWord << 4 ^ rightWord >>> 5) ^ key[3 & sum] + sum);
+                sum = sum + delta;
+                rightWord = rightWord + (sum + key[(sum & 8001) >>> 11] ^ leftWord + (leftWord >>> 5 ^ leftWord << 4));
                 continue;
               }
               break;
             }
             this.position = this.position - 8;
-            this.writeInt((byte) -105, var5);
-            this.writeInt((byte) -58, var6);
-            var4++;
+            this.writeInt((byte) -105, leftWord);
+            this.writeInt((byte) -58, rightWord);
+            blockIndex++;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
           stackIn_12_0 = var3;
-          stackIn_12_1 = new StringBuilder().append("vh.IA(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_12_1 = new StringBuilder().append("vh.IA(").append(obfuscationGuard).append(',');
+          if (key == null) {
             stackIn_13_2 = "null";
           } else {
             stackIn_13_2 = "{...}";
@@ -463,68 +463,68 @@ class PacketBuffer extends IntrusiveNode {
         return (var2 << 32) + var4;
     }
 
-    final void a(int[] param0, int param1, int param2, int param3) {
+    final void decryptXteaRange(int[] key, int endOffset, int startOffset, int obfuscationGuard) {
         int incrementValue$0 = 0;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
         String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
-        int var5_int = 0;
+        int savedPosition = 0;
         RuntimeException var5 = null;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
+        int blockCount = 0;
+        int blockIndex = 0;
+        int leftWord = 0;
+        int rightWord = 0;
+        int sum = 0;
+        int delta = 0;
+        int roundsRemaining = 0;
         int var13 = 0;
         var13 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          var5_int = this.position;
-          this.position = param2;
-          var6 = (param1 - param2) / 8;
-          var7 = 0;
+          savedPosition = this.position;
+          this.position = startOffset;
+          blockCount = (endOffset - startOffset) / 8;
+          blockIndex = 0;
           while (true) {
-            if (var6 <= var7) {
-              this.position = var5_int;
-              if (param3 != -12366) {
+            if (blockCount <= blockIndex) {
+              this.position = savedPosition;
+              if (obfuscationGuard != -12366) {
                 this.payload = (byte[]) null;
               }
               return;
             }
-            var8 = this.readInt(param3 ^ -12365);
-            var9 = this.readInt(param3 + 12367);
-            var10 = -957401312;
-            var11 = -1640531527;
-            var12 = 32;
+            leftWord = this.readInt(obfuscationGuard ^ -12365);
+            rightWord = this.readInt(obfuscationGuard + 12367);
+            sum = -957401312;
+            delta = -1640531527;
+            roundsRemaining = 32;
             while (true) {
-              incrementValue$0 = var12;
-              var12--;
+              incrementValue$0 = roundsRemaining;
+              roundsRemaining--;
               if (incrementValue$0 > 0) {
-                var9 = var9 - (var10 + param0[-1948254205 & var10 >>> 11] ^ (var8 << 4 ^ var8 >>> 5) + var8);
-                var10 = var10 - var11;
-                var8 = var8 - ((var9 >>> 5 ^ var9 << 4) + var9 ^ var10 + param0[var10 & 3]);
+                rightWord = rightWord - (sum + key[-1948254205 & sum >>> 11] ^ (leftWord << 4 ^ leftWord >>> 5) + leftWord);
+                sum = sum - delta;
+                leftWord = leftWord - ((rightWord >>> 5 ^ rightWord << 4) + rightWord ^ sum + key[sum & 3]);
                 continue;
               }
               break;
             }
             this.position = this.position - 8;
-            this.writeInt((byte) -118, var8);
-            this.writeInt((byte) -119, var9);
-            var7++;
+            this.writeInt((byte) -118, leftWord);
+            this.writeInt((byte) -119, rightWord);
+            blockIndex++;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
           stackIn_12_0 = var5;
           stackIn_12_1 = new StringBuilder().append("vh.S(");
-          if (param0 == null) {
+          if (key == null) {
             stackIn_13_2 = "null";
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw ig.addExceptionContext((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw ig.addExceptionContext((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(endOffset).append(',').append(startOffset).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 

@@ -189,7 +189,7 @@ final class LeaderEscortCondition implements MatchCondition {
         int var25Lifetime2;
         var26 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          var27 = mg.field_e;
+          var27 = ByteStorage.field_e;
           if (param0 != 9) {
             field_e = (String) null;
           }

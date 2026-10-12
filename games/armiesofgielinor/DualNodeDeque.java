@@ -311,7 +311,7 @@ final class DualNodeDeque {
     final static void a(byte param0, ResourceArchive param1) {
         qs var2 = null;
         try {
-          qs.a(param1.a("", 96, "headers.packvorbis"));
+          qs.a(param1.getFileByName("", 96, "headers.packvorbis"));
           var2 = qs.a(param1, "jagex logo2.packvorbis", "");
           if (param0 >= -102) {
             DualNodeDeque.a(-11, -82, (byte) 79, 117, -17);

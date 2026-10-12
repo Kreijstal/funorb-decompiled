@@ -25,20 +25,20 @@ final class jp {
             return false;
           }
           if (var4.field_d >= 0 &&
-            !var4.field_c.a(11894, var4.field_d)) {
+            !var4.field_c.ensureGroupAvailable(11894, var4.field_d)) {
             this.a(var4.field_c.getGroupProgress(var4.field_d, (byte) 73), var4, (byte) -89);
             return false;
           }
           if (var4.field_b != null &&
-            !var4.field_c.a(28979, var4.field_b)) {
-            this.a(var4.field_c.a(var4.field_b, (byte) -126), var4, (byte) -75);
+            !var4.field_c.ensureGroupAvailableByName(28979, var4.field_b)) {
+            this.a(var4.field_c.getGroupProgressByName(var4.field_b, (byte) -126), var4, (byte) -75);
             return false;
           }
           if (var4.field_d < 0 &&
             null == var4.field_b &&
             var4.field_j != null &&
-            !var4.field_c.d(-27927)) {
-            this.a(var4.field_c.a(0), var4, (byte) -88);
+            !var4.field_c.ensureAllGroupsAvailable(-27927)) {
+            this.a(var4.field_c.getOverallProgress(0), var4, (byte) -88);
             return false;
           }
           this.field_e = this.field_e + 1;

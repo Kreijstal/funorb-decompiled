@@ -24,7 +24,7 @@ abstract class vf {
         if (param0 != 0) {
           field_f = -108;
         }
-        pg.field_f = cj.field_h;
+        pg.field_f = DirectByteStorage.field_h;
     }
 
     private final void b(int param0) {
@@ -320,8 +320,8 @@ abstract class vf {
               }
               if (var29.field_jb &&
                 0 < var6Lifetime2) {
-                if (cj.field_j != null) {
-                  stackIn_153_0 = cj.field_j[var6Lifetime2 - 1];
+                if (DirectByteStorage.field_j != null) {
+                  stackIn_153_0 = DirectByteStorage.field_j[var6Lifetime2 - 1];
                 } else {
                   stackIn_153_0 = null;
                 }
@@ -517,7 +517,7 @@ abstract class vf {
                     if (var11 != 0) {
                       var22_int = jv.field_d[var7][var9] - SummonAction.field_s;
                       if (var22_int != 1) {
-                        var21 = fo.a(4800, mg.field_a, new String[]{Integer.toString(var22_int)});
+                        var21 = fo.a(4800, ByteStorage.field_a, new String[]{Integer.toString(var22_int)});
                       } else {
                         var21 = bt.field_a;
                       }

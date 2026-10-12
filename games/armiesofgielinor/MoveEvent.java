@@ -173,7 +173,7 @@ final class MoveEvent extends GameEvent {
           gl.field_e = (BitmapFont) ((Object) it.a("arezzo12", param2, param3, (byte) -87, "commonui"));
           ArmiesOfGielinor.field_J = (BitmapFont) ((Object) it.a("arezzo14", param2, param3, (byte) -87, "commonui"));
           CipherPacketBuffer.field_t = (BitmapFont) ((Object) it.a("arezzo14bold", param2, param3, (byte) -87, "commonui"));
-          var4 = new RgbSprite(param0.a("", 45, "button.gif"), (java.awt.Component) ((Object) IndexedSpriteBase.field_b));
+          var4 = new RgbSprite(param0.getFileByName("", 45, "button.gif"), (java.awt.Component) ((Object) IndexedSpriteBase.field_b));
           if (param1) {
             MoveEvent.g(90);
           }
