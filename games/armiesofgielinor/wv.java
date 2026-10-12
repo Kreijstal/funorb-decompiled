@@ -11,7 +11,7 @@ class wv extends af {
 
     final void a(PacketBuffer param0, int param1) {
         try {
-          param0.a(this.field_f, 38359632);
+          param0.writeLong(this.field_f, 38359632);
           param0.a(-28, this.field_i);
           if (param1 != -11436) {
             PacketBuffer var4 = (PacketBuffer) null;

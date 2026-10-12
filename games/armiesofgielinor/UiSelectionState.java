@@ -169,7 +169,7 @@ final class UiSelectionState {
         int var6 = 0;
         int var7 = 0;
         String var8 = null;
-        mo var9 = null;
+        ChatMessage var9 = null;
         var7 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           if (mj.field_c > TurnTimerDial.field_d) {
@@ -203,11 +203,11 @@ final class UiSelectionState {
             }
           }
           if (UnitLossCondition.field_f.pressedButton != 0) {
-            Spell.field_b = new i(UnitLossCondition.field_f.screenX, UnitLossCondition.field_f.screenY, UnitLossCondition.field_f.width, UnitLossCondition.field_f.height, param0, ArchiveIndex.field_b, UnitModelPreview.field_m, uc.field_b, eq.field_h, hs.field_H, DualLinkedNode.field_k, (String) null, 0L);
+            Spell.field_b = new ReportAbuseDialog(UnitLossCondition.field_f.screenX, UnitLossCondition.field_f.screenY, UnitLossCondition.field_f.width, UnitLossCondition.field_f.height, param0, ArchiveIndex.field_b, UnitModelPreview.field_m, uc.field_b, eq.field_h, hs.field_H, DualLinkedNode.field_k, (String) null, 0L);
           }
           var9 = wm.a(jn.field_d, mi.field_l, (byte) 127, param1);
           if (var9 != null) {
-            pg.a(0, var9);
+            pg.openChatMessageContextMenu(0, var9);
           }
           var8 = wd.a(false);
           if (var8 != null) {

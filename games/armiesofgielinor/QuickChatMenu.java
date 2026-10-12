@@ -249,33 +249,33 @@ final class QuickChatMenu extends ClientUiComponent {
     }
 
     final static void a(ClientUiComponent param0, int param1, boolean param2) {
-        tg var8 = null;
+        ClientContextMenu var8 = null;
         RgbSprite var10 = null;
         String var9 = null;
-        tg var11 = null;
+        ClientContextMenu var11 = null;
         RgbSprite var13 = null;
         String var12 = null;
-        tg var14 = null;
+        ClientContextMenu var14 = null;
         RgbSprite var16 = null;
         String var15 = null;
-        tg var17 = null;
+        ClientContextMenu var17 = null;
         RgbSprite var19 = null;
         String var18 = null;
-        tg var20 = null;
+        ClientContextMenu var20 = null;
         RgbSprite var22 = null;
         String var21 = null;
-        tg var23 = null;
+        ClientContextMenu var23 = null;
         RgbSprite var25 = null;
         String var24 = null;
-        tg var26 = null;
+        ClientContextMenu var26 = null;
         String var27 = null;
-        tg var29 = null;
+        ClientContextMenu var29 = null;
         RgbSprite var31 = null;
         String var30 = null;
-        tg var32 = null;
+        ClientContextMenu var32 = null;
         RgbSprite var34 = null;
         String var33 = null;
-        tg var35 = null;
+        ClientContextMenu var35 = null;
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
@@ -293,71 +293,71 @@ final class QuickChatMenu extends ClientUiComponent {
         RgbSprite var28Lifetime1Lifetime3;
         RgbSprite var28Lifetime1Lifetime4;
         RgbSprite var28Lifetime1Lifetime5;
-        ng.a((ScrollContainer) null, param0, (int[]) null, (String) null, -1, 2, param1, (String) null, 0L);
+        ng.openClientContextMenu((ScrollContainer) null, param0, (int[]) null, (String) null, -1, 2, param1, (String) null, 0L);
         if (param2) {
           return;
         }
         try {
           if (0 == param1) {
-            var8 = tn.field_Z;
+            var8 = tn.activeContextMenu;
             var10 = dh.field_n[0];
             var28 = var10;
             var28Lifetime3 = var10;
             var9 = vl.field_o;
-            var8.field_i.addIconAction(false, var9, 11, var10);
-            var11 = tn.field_Z;
+            var8.menu.addIconAction(false, var9, 11, var10);
+            var11 = tn.activeContextMenu;
             var13 = dh.field_n[1];
             var28Lifetime4 = var13;
             var28Lifetime5 = var13;
             var12 = li.field_m;
-            var11.field_i.addIconAction(false, var12, 12, var13);
-            var14 = tn.field_Z;
+            var11.menu.addIconAction(false, var12, 12, var13);
+            var14 = tn.activeContextMenu;
             var16 = dh.field_n[2];
             var28Lifetime6 = var16;
             var28Lifetime7 = var16;
             var15 = ou.field_g;
-            var14.field_i.addIconAction(param2, var15, 13, var16);
+            var14.menu.addIconAction(param2, var15, 13, var16);
           }
           if (param1 == 1) {
-            var17 = tn.field_Z;
+            var17 = tn.activeContextMenu;
             var19 = dh.field_n[0];
             var28Lifetime1 = var19;
             var28Lifetime1Lifetime1 = var19;
             var18 = vk.field_c;
-            var17.field_i.addIconAction(false, var18, 11, var19);
-            var20 = tn.field_Z;
+            var17.menu.addIconAction(false, var18, 11, var19);
+            var20 = tn.activeContextMenu;
             var22 = dh.field_n[1];
             var28Lifetime1Lifetime2 = var22;
             var28Lifetime1Lifetime3 = var22;
             var21 = fd.field_l;
-            var20.field_i.addIconAction(param2, var21, 12, var22);
-            var23 = tn.field_Z;
+            var20.menu.addIconAction(param2, var21, 12, var22);
+            var23 = tn.activeContextMenu;
             var25 = dh.field_n[2];
             var28Lifetime1Lifetime4 = var25;
             var28Lifetime1Lifetime5 = var25;
             var24 = fa.field_c;
-            var23.field_i.addIconAction(false, var24, 13, var25);
+            var23.menu.addIconAction(false, var24, 13, var25);
           }
           if (param1 == 2) {
-            var26 = tn.field_Z;
+            var26 = tn.activeContextMenu;
             var28Lifetime2 = dh.field_n[0];
             var27 = SocketResourceClient.field_v;
-            var26.field_i.addIconAction(param2, var27, 11, var28Lifetime2);
-            var29 = tn.field_Z;
+            var26.menu.addIconAction(param2, var27, 11, var28Lifetime2);
+            var29 = tn.activeContextMenu;
             var31 = dh.field_n[1];
             var30 = jj.field_e;
-            var29.field_i.addIconAction(param2, var30, 12, var31);
-            var32 = tn.field_Z;
+            var29.menu.addIconAction(param2, var30, 12, var31);
+            var32 = tn.activeContextMenu;
             var34 = dh.field_n[2];
             var33 = ai.field_R;
-            var32.field_i.addIconAction(false, var33, 13, var34);
+            var32.menu.addIconAction(false, var33, 13, var34);
           }
-          var35 = tn.field_Z;
+          var35 = tn.activeContextMenu;
           var4 = param0.screenX;
           var5 = param0.screenY;
           var6 = param0.width;
           var7 = param0.height;
-          var35.field_i.layoutPopup(var7, var5, var6, (byte) -118, var4);
+          var35.menu.layoutPopup(var7, var5, var6, (byte) -118, var4);
         } catch (RuntimeException runtimeException) {
           throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "mq.G(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }

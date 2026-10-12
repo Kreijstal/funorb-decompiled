@@ -3390,8 +3390,8 @@ final class GameplayController {
     private final void f(int param0) {
         this.s(-96);
         if (!this.field_bb) {
-          fe.b(mo.field_o, db.a(true, 320), MatchConditionEntry.a(380, (byte) 94), false);
-          fe.c(mo.field_o, db.a(true, 320), MatchConditionEntry.a(380, (byte) 94), nd.field_b, false);
+          fe.b(ChatMessage.field_o, db.a(true, 320), MatchConditionEntry.a(380, (byte) 94), false);
+          fe.c(ChatMessage.field_o, db.a(true, 320), MatchConditionEntry.a(380, (byte) 94), nd.field_b, false);
         }
         int var2_int = 0;
         AnimationSkeleton.field_t.draw(db.a(true, var2_int), MatchConditionEntry.a(0, (byte) 94));
@@ -6619,7 +6619,7 @@ final class GameplayController {
                         if (!(this.selectedUnit.packedFlag8)) {
                           var16 = this.battlefield.tiles[this.battlefield.mapWidth * this.selectedUnit.tileY + this.selectedUnit.tileX].terrainType;
                           if (var16 == 0) {
-                            var2 = fp.field_Ib;
+                            var2 = IconLabelControl.field_Ib;
                             if (var20 == 0) {
                               break regionExit3;
                             }
@@ -7712,7 +7712,7 @@ final class GameplayController {
                 ~this.battlefield.currentPlayer == ~this.controlledPlayerId &&
                 this.remainingTurnTicks <= 0 &&
                 !this.field_z) {
-                mo.field_s.g(8 + AiPlanningStrategy.pointerX, ko.pointerY + 8);
+                ChatMessage.field_s.g(8 + AiPlanningStrategy.pointerX, ko.pointerY + 8);
               }
               this.b((byte) 120);
             }
@@ -11345,7 +11345,7 @@ final class GameplayController {
           var4 = BoundedFile.field_e;
           var5 = param0;
           var4[var5 >> 5] = oe.c(var4[var5 >> 5], 1 << rn.a(var5, 31));
-          var4Lifetime1 = i.field_Nb;
+          var4Lifetime1 = ReportAbuseDialog.field_Nb;
           var5Lifetime1 = param0;
           var4Lifetime1[var5Lifetime1 >> 5] = oe.c(var4Lifetime1[var5Lifetime1 >> 5], 1 << rn.a(31, var5Lifetime1));
           ai.field_P.addLast((byte) -119, (IntrusiveNode) (new jg(param0)));
@@ -12000,7 +12000,7 @@ final class GameplayController {
                 var5 = param1 ? 1 : 0;
                 CipherPacketBuffer.a(var5 != 0, var4, 1, 0);
                 if (var6 != 0) {
-                  if (io.a(i.field_Nb, (byte) 124) ||
+                  if (io.a(ReportAbuseDialog.field_Nb, (byte) 124) ||
                     null != PointerInputHandler.field_f) {
                     var4 = param1 ? 1 : 0;
                     CipherPacketBuffer.a(var4 != 0, 10, 1, 0);
@@ -12014,7 +12014,7 @@ final class GameplayController {
                   }
                 }
               } else {
-                boolean decompiledSharedTail1 = (!(io.a(i.field_Nb, (byte) 124)) &&
+                boolean decompiledSharedTail1 = (!(io.a(ReportAbuseDialog.field_Nb, (byte) 124)) &&
                   null == PointerInputHandler.field_f);
                 if (!decompiledSharedTail1) {
                   var4 = param1 ? 1 : 0;
@@ -12204,7 +12204,7 @@ final class GameplayController {
           this.field_lb = param0;
           this.controlledPlayerId = param3;
           this.field_bb = false;
-          var15 = i.field_Nb;
+          var15 = ReportAbuseDialog.field_Nb;
           var16_int = 0;
           do {
             if (var16_int >= 8) {

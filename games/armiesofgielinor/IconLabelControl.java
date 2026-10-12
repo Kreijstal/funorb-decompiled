@@ -1,22 +1,22 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class fp extends ClientUiComponent {
+final class IconLabelControl extends ClientUiComponent {
     static ClientUiComponent field_Lb;
-    private ClientUiComponent field_Kb;
-    private ClientUiComponent field_Jb;
+    private ClientUiComponent labelComponent;
+    private ClientUiComponent iconComponent;
     static String field_Ib;
 
-    fp(long param0, fp param1, String param2) {
-        this(param0, param1.field_Jb, param1.field_Kb, param2);
+    IconLabelControl(long key, IconLabelControl style, String text) {
+        this(key, style.iconComponent, style.labelComponent, text);
     }
 
-    final void a(byte param0, int param1, int param2, int param3, int param4, int param5) {
-        this.setBounds(param3, -20500, param5, param1, param4);
-        if (param0 != 120) {
+    final void setLayout(byte obfuscationGuard, int y, int iconTextGap, int height, int x, int width) {
+        this.setBounds(height, -20500, width, y, x);
+        if (obfuscationGuard != 120) {
           field_Ib = (String) null;
         }
-        this.c(param0 ^ 120, param2);
+        this.layoutContent(obfuscationGuard ^ 120, iconTextGap);
     }
 
     final static void a(int param0, pu param1, int param2, int param3, int param4, int param5, int param6, byte param7) {
@@ -222,14 +222,14 @@ final class fp extends ClientUiComponent {
         }
     }
 
-    fp(long param0, RgbSprite param1, RgbSprite param2, int param3, ClientUiComponent param4, String param5) {
-        this(param0, (ClientUiComponent) null, param4, param5);
+    IconLabelControl(long key, RgbSprite selectedIcon, RgbSprite icon, int verticalAlignment, ClientUiComponent labelStyle, String text) {
+        this(key, (ClientUiComponent) null, labelStyle, text);
         try {
-          this.field_Jb.sprite = param2;
-          this.field_Jb.selectedSprite = param1;
-          this.field_Jb.verticalAlignment = param3;
+          this.iconComponent.sprite = icon;
+          this.iconComponent.selectedSprite = selectedIcon;
+          this.iconComponent.verticalAlignment = verticalAlignment;
         } catch (RuntimeException runtimeException) {
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "fp.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "fp.<init>(" + key + ',' + (selectedIcon != null ? "{...}" : "null") + ',' + (icon != null ? "{...}" : "null") + ',' + verticalAlignment + ',' + (labelStyle != null ? "{...}" : "null") + ',' + (text != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -256,24 +256,24 @@ final class fp extends ClientUiComponent {
         }
     }
 
-    private fp(long param0, ClientUiComponent param1, ClientUiComponent param2, String param3) {
-        super(param0, (ClientUiComponent) null);
+    private IconLabelControl(long key, ClientUiComponent iconStyle, ClientUiComponent labelStyle, String text) {
+        super(key, (ClientUiComponent) null);
         try {
-          this.field_Jb = new ClientUiComponent(0L, param1);
-          this.field_Kb = new ClientUiComponent(0L, param2);
-          this.field_Kb.text = param3;
-          this.addChild(this.field_Jb, 79);
-          this.addChild(this.field_Kb, 58);
+          this.iconComponent = new ClientUiComponent(0L, iconStyle);
+          this.labelComponent = new ClientUiComponent(0L, labelStyle);
+          this.labelComponent.text = text;
+          this.addChild(this.iconComponent, 79);
+          this.addChild(this.labelComponent, 58);
           this.inheritVisualStateForDescendants(-10027);
         } catch (RuntimeException runtimeException) {
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "fp.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "fp.<init>(" + key + ',' + (iconStyle != null ? "{...}" : "null") + ',' + (labelStyle != null ? "{...}" : "null") + ',' + (text != null ? "{...}" : "null") + ')');
         }
     }
 
-    private final void c(int param0, int param1) {
-        this.field_Jb.setBounds(this.height, -20500, this.field_Jb.getPreferredWidth(-53), 0, 0);
-        int var3 = this.field_Jb.width + param1;
-        this.field_Kb.setBounds(this.height, param0 - 20500, this.width - var3, param0, var3);
+    private final void layoutContent(int obfuscationGuard, int iconTextGap) {
+        this.iconComponent.setBounds(this.height, -20500, this.iconComponent.getPreferredWidth(-53), 0, 0);
+        int var3 = this.iconComponent.width + iconTextGap;
+        this.labelComponent.setBounds(this.height, obfuscationGuard - 20500, this.width - var3, obfuscationGuard, var3);
     }
 
     final static void a(String param0, byte param1) {
@@ -295,11 +295,11 @@ final class fp extends ClientUiComponent {
         field_Ib = null;
     }
 
-    final int d(int param0, int param1) {
-        if (param0 < 23) {
+    final int measureRowWidth(int obfuscationGuard, int iconTextGap) {
+        if (obfuscationGuard < 23) {
           field_Ib = (String) null;
         }
-        return this.field_Jb.getPreferredWidth(-35) + (param1 + this.field_Kb.getPreferredWidth(102));
+        return this.iconComponent.getPreferredWidth(-35) + (iconTextGap + this.labelComponent.getPreferredWidth(102));
     }
 
     static {

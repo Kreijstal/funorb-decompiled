@@ -60,13 +60,13 @@ final class SectorCacheStore {
 
     final static void a(int param0) {
         if (param0 != 2858) {
-          mo var2 = (mo) null;
-          SectorCacheStore.a(-95, (mo) null);
+          ChatMessage var2 = (ChatMessage) null;
+          SectorCacheStore.a(-95, (ChatMessage) null);
         }
         ng.x(90);
     }
 
-    final static void a(int param0, mo param1) {
+    final static void a(int param0, ChatMessage param1) {
         int dupTemp$3 = 0;
         int dupTemp$0 = 0;
         int var3 = 0;
@@ -88,18 +88,18 @@ final class SectorCacheStore {
             MoveAttackRequest.field_D[var2_int] = 0;
           }
           for (var2_intLifetime1 = 0; var2_intLifetime1 < lk.field_h; var2_intLifetime1++) {
-            if (param1.field_b == an.field_F[var2_intLifetime1].field_b) {
-              dupTemp$3 = an.field_F[var2_intLifetime1].a(true);
+            if (param1.channelId == an.field_F[var2_intLifetime1].channelId) {
+              dupTemp$3 = an.field_F[var2_intLifetime1].getFilterPriority(true);
               MoveAttackRequest.field_D[dupTemp$3] = MoveAttackRequest.field_D[dupTemp$3] + 1;
             }
           }
-          dupTemp$0 = param1.a(true);
+          dupTemp$0 = param1.getFilterPriority(true);
           MoveAttackRequest.field_D[dupTemp$0] = MoveAttackRequest.field_D[dupTemp$0] + 1;
           var2_intLifetime2 = 0;
           for (var3 = 0; var3 < lk.field_h; var3++) {
             boolean decompiledFrameRemainder0 = true;
-            if (~param1.field_b == ~an.field_F[var3].field_b) {
-              var4 = an.field_F[var3].a(true);
+            if (~param1.channelId == ~an.field_F[var3].channelId) {
+              var4 = an.field_F[var3].getFilterPriority(true);
               if (MoveAttackRequest.field_D[var4] > AnimationPlayer.field_g) {
                 MoveAttackRequest.field_D[var4] = MoveAttackRequest.field_D[var4] - 1;
                 decompiledFrameRemainder0 = false;

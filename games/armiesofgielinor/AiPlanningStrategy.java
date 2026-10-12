@@ -38,10 +38,10 @@ abstract class AiPlanningStrategy {
         int var14 = 0;
         int var15 = 0;
         String var16 = null;
-        tg var17 = null;
+        ClientContextMenu var17 = null;
         String var18 = null;
         int var19 = 0;
-        tg var17Lifetime1;
+        ClientContextMenu var17Lifetime1;
         String var18Lifetime1;
         var19 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
@@ -49,7 +49,7 @@ abstract class AiPlanningStrategy {
           stackIn_4_1 = param2;
           stackIn_4_2 = (jn.field_d * 3 + 6) * param1;
           stackIn_4_3 = 2 + jn.field_d;
-          stackIn_5_4 = (mw.field_E.field_Kb == PointerInputHandler.field_b);
+          stackIn_5_4 = (mw.field_E.field_Kb == PointerInputHandler.contextMenuScrollContainer);
           var3_int = ((ScrollContainer) (Object) stackIn_4_0).updateContentLayout(stackIn_4_1, stackIn_4_2, stackIn_4_3, stackIn_5_4, 0, 2) ? 1 : 0;
           var4 = mw.field_E.field_Nb.children;
           if (param0 <= 20) {
@@ -165,18 +165,18 @@ abstract class AiPlanningStrategy {
                     }
                   } else {
                     var16 = var7.field_Mb;
-                    ng.a(mw.field_E.field_Kb, var7, (int[]) null, (String) null, -1, 84, -1, var16, 0L);
+                    ng.openClientContextMenu(mw.field_E.field_Kb, var7, (int[]) null, (String) null, -1, 84, -1, var16, 0L);
                     if (null != var7.field_Ib &&
-                      !fs.a((byte) 110, tn.field_Z.field_m) &&
+                      !fs.a((byte) 110, tn.activeContextMenu.accountName) &&
                       !NodeIterator.field_a) {
                       if (!vi.field_d) {
-                        var17 = tn.field_Z;
+                        var17 = tn.activeContextMenu;
                         var18 = fo.a(4800, mi.field_k, new String[]{var16});
-                        var17.field_i.addTextAction(8, var18, (byte) -115);
+                        var17.menu.addTextAction(8, var18, (byte) -115);
                       }
-                      var17Lifetime1 = tn.field_Z;
+                      var17Lifetime1 = tn.activeContextMenu;
                       var18Lifetime1 = fo.a(4800, DeployRequest.field_w, new String[]{var16});
-                      var17Lifetime1.field_i.addTextAction(18, var18Lifetime1, (byte) -100);
+                      var17Lifetime1.menu.addTextAction(18, var18Lifetime1, (byte) -100);
                     }
                     var5 = var7;
                   }

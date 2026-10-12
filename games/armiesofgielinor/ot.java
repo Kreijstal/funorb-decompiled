@@ -34,26 +34,26 @@ final class ot extends dr {
     }
 
     final static void g(int param0) {
-        if (tn.field_Z != null) {
-          if (tn.field_Z.field_g == null) {
-            tn.field_Z = null;
+        if (tn.activeContextMenu != null) {
+          if (tn.activeContextMenu.sourceComponent == null) {
+            tn.activeContextMenu = null;
             if (param0 != 76) {
               ot.e((byte) -104);
-              PointerInputHandler.field_b = null;
+              PointerInputHandler.contextMenuScrollContainer = null;
               return;
             }
-            PointerInputHandler.field_b = null;
+            PointerInputHandler.contextMenuScrollContainer = null;
             return;
           }
-          tn.field_Z.field_g.selected = false;
+          tn.activeContextMenu.sourceComponent.selected = false;
         }
-        tn.field_Z = null;
+        tn.activeContextMenu = null;
         if (param0 == 76) {
-          PointerInputHandler.field_b = null;
+          PointerInputHandler.contextMenuScrollContainer = null;
           return;
         }
         ot.e((byte) -104);
-        PointerInputHandler.field_b = null;
+        PointerInputHandler.contextMenuScrollContainer = null;
     }
 
     ot(String param0, Class[] param1, String param2) {

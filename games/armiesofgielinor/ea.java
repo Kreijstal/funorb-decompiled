@@ -65,7 +65,7 @@ final class ea {
         }
     }
 
-    final static mo a(byte param0, boolean param1) {
+    final static ChatMessage a(byte param0, boolean param1) {
         boolean stackIn_3_0 = false;
         int stackIn_9_0 = 0;
         int[] stackIn_22_0 = null;
@@ -137,7 +137,7 @@ final class ea {
           }
         }
         var5 = -17 / ((param0 - 47) / 42);
-        return new mo(param1);
+        return new ChatMessage(param1);
     }
 
     final static pf a(int param0, java.applet.Applet param1) {
@@ -231,7 +231,7 @@ final class ea {
     }
 
     /* Full JVM integer arguments; original narrow signature preserved. */
-    final static mo $cfr$intArgs$a$72f70aa7c69d(int param0, boolean param1) {
+    final static ChatMessage $cfr$intArgs$a$72f70aa7c69d(int param0, boolean param1) {
         boolean stackIn_3_0 = false;
         int stackIn_9_0 = 0;
         int[] stackIn_22_0 = null;
@@ -303,6 +303,6 @@ final class ea {
           }
         }
         var5 = -17 / ((param0 - 47) / 42);
-        return new mo(param1);
+        return new ChatMessage(param1);
     }
 }

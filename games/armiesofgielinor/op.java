@@ -109,7 +109,7 @@ final class op {
             return stackIn_9_0;
           }
           if (jj.a(param0 ^ 58, param1)) {
-            stackIn_13_0 = fo.a(4800, i.field_Ob, new String[]{param1});
+            stackIn_13_0 = fo.a(4800, ReportAbuseDialog.field_Ob, new String[]{param1});
             return stackIn_13_0;
           }
           if (dj.field_a >= 100 &&

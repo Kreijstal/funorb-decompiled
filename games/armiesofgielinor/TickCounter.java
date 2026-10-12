@@ -1191,7 +1191,7 @@ final class TickCounter {
                 }
                 var2 = fk.a(false, "LABEL_AWARD_BUILDINGS");
                 if (null != var2) {
-                  tg.field_l = uu.a(var2, (byte) -100);
+                  ClientContextMenu.field_l = uu.a(var2, (byte) -100);
                 }
                 var2 = fk.a(false, "LABEL_AWARD_FIRSTTOWERS");
                 if (var2 != null) {
@@ -1443,7 +1443,7 @@ final class TickCounter {
                 }
                 var2 = fk.a(false, "ACTION_PORTALMAGE");
                 if (var2 != null) {
-                  fp.field_Ib = uu.a(var2, (byte) 76);
+                  IconLabelControl.field_Ib = uu.a(var2, (byte) 76);
                 }
                 var2 = fk.a(false, "ACTION_MOVE");
                 if (var2 != null) {
@@ -1697,7 +1697,7 @@ final class TickCounter {
                 }
                 var2 = fk.a(false, "BUTTON_ANNOUNCE");
                 if (null != var2) {
-                  mo.field_o = uu.a(var2, (byte) 37);
+                  ChatMessage.field_o = uu.a(var2, (byte) 37);
                 }
                 var2 = fk.a(false, "BUTTON_TEAMCHATON");
                 if (var2 != null) {

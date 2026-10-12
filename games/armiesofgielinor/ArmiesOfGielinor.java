@@ -240,15 +240,15 @@ public final class ArmiesOfGielinor extends wf {
                   stackIn_119_0 = 96;
                   stackIn_120_1 = (12 == nm.deliveredOpcode);
                   var2 = ea.$cfr$intArgs$a$72f70aa7c69d(stackIn_119_0, stackIn_120_1);
-                  if (((mo) (var2)).field_b == 4) {
+                  if (((ChatMessage) (var2)).channelId == 4) {
                     if (null != rd.field_j) {
-                      NodeHashTable.a(-1, rd.field_j.battlefield.a(((mo) (var2)).field_q, (byte) -64));
+                      NodeHashTable.a(-1, rd.field_j.battlefield.a(((ChatMessage) (var2)).displayName, (byte) -64));
                     }
                     if (SectorCacheStore.field_a != null) {
-                      NodeHashTable.a(-1, SectorCacheStore.field_a.battlefield.a(((mo) (var2)).field_q, (byte) -64));
+                      NodeHashTable.a(-1, SectorCacheStore.field_a.battlefield.a(((ChatMessage) (var2)).displayName, (byte) -64));
                     }
                   }
-                  MapLayout.a((mo) (var2), -1);
+                  MapLayout.a((ChatMessage) (var2), -1);
                   continue;
                 }
                 if (nm.deliveredOpcode == 74) {
@@ -658,8 +658,8 @@ public final class ArmiesOfGielinor extends wf {
         try {
           if (ki.field_b.ensureIndex((byte) 82) &&
             ki.field_b.ensureAllGroupsAvailable(-27927)) {
-            if (i.field_Lb.ensureIndex((byte) 82) &&
-              i.field_Lb.ensureAllGroupsAvailable(-27927)) {
+            if (ReportAbuseDialog.field_Lb.ensureIndex((byte) 82) &&
+              ReportAbuseDialog.field_Lb.ensureAllGroupsAvailable(-27927)) {
               if (param0 > -18) {
                 return false;
               }
@@ -680,7 +680,7 @@ public final class ArmiesOfGielinor extends wf {
               bn.a((byte) -24, 67.0f, vl.a(op.field_b, 0, en.field_G, "", cr.field_eb));
               return false;
             }
-            bn.a((byte) -24, 67.0f, ao.a(cr.field_eb, true, en.field_G, i.field_Lb));
+            bn.a((byte) -24, 67.0f, ao.a(cr.field_eb, true, en.field_G, ReportAbuseDialog.field_Lb));
             return false;
           }
           bn.a((byte) -24, 67.0f, ao.a(cr.field_eb, true, en.field_G, ki.field_b));
@@ -920,7 +920,7 @@ public final class ArmiesOfGielinor extends wf {
                     UnitSpell.a(3, 1, PointerInputHandler.field_f);
                   }
                   CombatPresentation.n(param0 ^ -110);
-                  CipherPacketBuffer.a(false, tg.field_a, 1, 0);
+                  CipherPacketBuffer.a(false, ClientContextMenu.field_a, 1, 0);
                   if (ke.field_a) {
                     ke.field_a = false;
                     AiPlanningStrategy.a(false, 8028);
@@ -988,12 +988,12 @@ public final class ArmiesOfGielinor extends wf {
           if (jt.field_a == -5) {
             boolean decompiledSharedTail0 = !(gk.field_H);
             if (!decompiledSharedTail0) {
-              ov.a(11, 3, 0);
+              ov.writeSpectateRoomRequest(11, 3, 0);
               decompiledSharedTail0 = (var8 != 0);
             }
             if ((decompiledSharedTail0) &&
               (fj.field_c)) {
-              PointerInputHandler.a(-81, vu.currentRoom.getRoomId((byte) 117), 11);
+              PointerInputHandler.writeRoomAdmissionCancellation(-81, vu.currentRoom.getRoomId((byte) 117), 11);
             }
             ScrollContainer.field_Qb = true;
           }
@@ -1167,7 +1167,7 @@ public final class ArmiesOfGielinor extends wf {
           dt.a(-1);
           qk.a(50);
           ov.a((byte) 50);
-          mo.a(0);
+          ChatMessage.a(0);
           er.a(-3);
           ds.a(2);
           qc.a((byte) -108);
@@ -1302,13 +1302,13 @@ public final class ArmiesOfGielinor extends wf {
           mh.a((byte) -119);
           IconTextComponent.k(param0 ^ -72);
           ScrollContainer.k(0);
-          fp.k(21755);
+          IconLabelControl.k(21755);
           VerticalScrollbar.k(-1);
           ClientUiNode.g(31343);
           ContextActionMenu.e((byte) 5);
           mp.l(-8291);
-          tg.a(-97);
-          i.m(73);
+          ClientContextMenu.a(-97);
+          ReportAbuseDialog.m(73);
           ea.a(-47);
           bn.a(29022);
           lm.a(1638);
@@ -1714,7 +1714,7 @@ public final class ArmiesOfGielinor extends wf {
           op.field_b = nu.a(15, true);
           bi.field_f = nu.a(14, true);
           nm.field_s = nu.a(param0, true);
-          i.field_Lb = nu.a(18, true);
+          ReportAbuseDialog.field_Lb = nu.a(18, true);
           ce.field_M = nu.a(19, true);
           oh.field_M = nu.a(20, true);
           fw.field_F = nu.a(22, true);
@@ -2245,8 +2245,8 @@ public final class ArmiesOfGielinor extends wf {
           BattleCharacter.field_h = ac.a(iw.field_l, "trinketicons", (byte) -4, "basic");
           AttackEvent.field_E = DiskCacheRequest.a("eye", "basic", iw.field_l, false);
           cu.field_d = ac.a(iw.field_l, "trinketbuttons", (byte) -4, "basic");
-          mo.field_s = GameplayController.a("wait_icon", (byte) 51, "basic", iw.field_l);
-          mo.field_s.a();
+          ChatMessage.field_s = GameplayController.a("wait_icon", (byte) 51, "basic", iw.field_l);
+          ChatMessage.field_s.a();
           kt.field_o = fk.a("diamondscale", (byte) -128, iw.field_l, "basic");
           jg.field_m = new RgbSprite(vc.field_m.getFileByName("menu_background.jpg", -123, ""), (java.awt.Component) ((Object) VerticalScrollbar.p(0)));
           var6_array = UnitLossCondition.field_d;
@@ -2292,14 +2292,14 @@ public final class ArmiesOfGielinor extends wf {
           DelayedPacket.field_k = MapLayout.a("achievements_large", -28106, "basic", iw.field_l);
           MoveAttackRequest.field_A = GameplayController.a("unachieved", (byte) 51, "basic", gg.field_K);
           DeathEvent.field_A = GameplayController.a("locked", (byte) 51, "basic", gg.field_K);
-          mo.field_t = GameplayController.a("orbcoin", (byte) 51, "basic", gg.field_K);
+          ChatMessage.field_t = GameplayController.a("orbcoin", (byte) 51, "basic", gg.field_K);
           CampaignUnitOverride.a(300, MoveAttackRequest.field_A);
-          CampaignUnitOverride.a(300, mo.field_t);
+          CampaignUnitOverride.a(300, ChatMessage.field_t);
           CorpseConditionMarker.field_v = new RgbSprite(32, 32);
           CorpseConditionMarker.field_v.b();
-          mo.field_t.d(0, 0, 32, 32);
+          ChatMessage.field_t.d(0, 0, 32, 32);
           so.field_b.a(5605);
-          mo.field_t = null;
+          ChatMessage.field_t = null;
           var16 = new RgbSprite[hs.field_E.length][];
           var17 = 0;
           do {
@@ -2404,7 +2404,7 @@ public final class ArmiesOfGielinor extends wf {
         RuntimeException decompiledCaughtException = null;
         try {
           if (null != ki.field_b &&
-            null == i.field_Lb) {
+            null == ReportAbuseDialog.field_Lb) {
             bn.a((byte) -24, 97.0f, AiPlanner.field_R);
             this.a(param0 ^ 11672);
             QuickChatCategoryRepository.a(0, ki.field_b);
@@ -2412,11 +2412,11 @@ public final class ArmiesOfGielinor extends wf {
             wl.a(0);
             return false;
           }
-          if (null != i.field_Lb &&
+          if (null != ReportAbuseDialog.field_Lb &&
             iw.field_l != null) {
             bn.a((byte) -24, 98.0f, AiPlanner.field_R);
             this.a(0);
-            i.field_Lb = null;
+            ReportAbuseDialog.field_Lb = null;
             wl.a(param0 ^ 11672);
             return false;
           }

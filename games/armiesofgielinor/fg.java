@@ -336,7 +336,7 @@ final class fg extends IntrusiveNode {
                       param1.writeByte(param0 ^ 1, 0);
                     } else if (var10 instanceof Number) {
                       param1.writeByte(1, 1);
-                      param1.a(((Number) (var10)).longValue(), param0 + 38359632);
+                      param1.writeLong(((Number) (var10)).longValue(), param0 + 38359632);
                     } else if (!(var10 instanceof String)) {
                       param1.writeByte(1, 4);
                     } else {

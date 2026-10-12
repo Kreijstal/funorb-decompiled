@@ -8,7 +8,7 @@ final class tn extends sf implements he {
     static RgbSprite[] field_eb;
     static jl field_cb;
     static byte[] field_db;
-    static tg field_Z;
+    static ClientContextMenu activeContextMenu;
     static String field_X;
     static String field_Y;
     static int[][] field_W;
@@ -18,7 +18,7 @@ final class tn extends sf implements he {
         field_eb = null;
         field_db = null;
         field_X = null;
-        field_Z = null;
+        activeContextMenu = null;
         field_W = (int[][]) null;
         if (param0 != 0) {
           return;
@@ -39,7 +39,7 @@ final class tn extends sf implements he {
           var2.painter = (WidgetPainter) ((Object) new lk(gl.field_e, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
           this.a((byte) 10, var2);
           if (DamageEvent.g(98)) {
-            this.field_fb = this.a((qo) (this), true, tg.field_j);
+            this.field_fb = this.a((qo) (this), true, ClientContextMenu.field_j);
           }
           this.field_bb = this.a((qo) (this), true, pd.field_f);
         } catch (RuntimeException runtimeException) {

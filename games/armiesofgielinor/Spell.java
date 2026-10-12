@@ -5,7 +5,7 @@ abstract class Spell {
     int spellId;
     static hk field_d;
     static String field_a;
-    static i field_b;
+    static ReportAbuseDialog field_b;
 
     abstract void applyEffect(int castingPlayer, Battlefield battlefield, int obfuscationGuard);
 

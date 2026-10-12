@@ -14,9 +14,9 @@ final class MapLayout extends IntrusiveNode {
     static String field_m;
     static String field_o;
 
-    final static void a(mo param0, int param1) {
+    final static void a(ChatMessage param0, int param1) {
         int var2_int = 0;
-        mo var3 = null;
+        ChatMessage var3 = null;
         int var4 = 0;
         RuntimeException stackIn_20_0 = null;
         StringBuilder stackIn_20_1 = null;
@@ -25,25 +25,25 @@ final class MapLayout extends IntrusiveNode {
         RuntimeException var2 = null;
         var4 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          if (null == param0.field_h) {
+          if (null == param0.text) {
             return;
           }
-          if (~param0.field_a != param1 ||
-            0 != param0.field_e) {
+          if (~param0.identityWord0 != param1 ||
+            0 != param0.identityWord1) {
             for (var2_int = 0; lk.field_h > var2_int; var2_int++) {
               var3 = an.field_F[var2_int];
-              if (2 == var3.field_b &&
-                param0.field_a == var3.field_a &&
-                var3.field_e == param0.field_e) {
+              if (2 == var3.channelId &&
+                param0.identityWord0 == var3.identityWord0 &&
+                var3.identityWord1 == param0.identityWord1) {
                 return;
               }
             }
           }
-          if (null != param0.field_d) {
-            ma.field_ab = param0.field_n;
-            rv.field_b = param0.field_d;
-            WeightedScoreStrategy.field_h = param0.field_m;
-            no.field_S = param0.field_b;
+          if (null != param0.quickChatValues) {
+            ma.field_ab = param0.accountId;
+            rv.field_b = param0.quickChatValues;
+            WeightedScoreStrategy.field_h = param0.accountName;
+            no.field_S = param0.channelId;
           }
           SectorCacheStore.a(3208, param0);
           return;

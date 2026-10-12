@@ -268,7 +268,7 @@ final class ij extends dv {
                 if (~LeaderEscortCondition.field_d == ~var4[var9].field_q) {
                   var10_int++;
                 }
-                if (var4[var9].field_q == mo.field_j) {
+                if (var4[var9].field_q == ChatMessage.field_j) {
                   var10_int--;
                 }
                 if (var10_int >= 0) {

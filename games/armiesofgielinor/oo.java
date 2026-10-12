@@ -14,7 +14,7 @@ final class oo {
     private RgbSprite field_t;
     private int field_r;
     private RgbSprite field_m;
-    static int field_a;
+    static int watchedRoomId;
     private boolean field_s;
     private int field_f;
     static String field_e;
@@ -502,7 +502,7 @@ final class oo {
             return;
           }
           if (param0 != 1439) {
-            field_a = -111;
+            watchedRoomId = -111;
           }
           var6 = this.field_i[this.field_n];
           var2 = var6;

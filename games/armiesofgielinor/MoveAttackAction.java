@@ -46,7 +46,7 @@ final class MoveAttackAction extends PreparedAction {
           DualNodeDeque.field_f = param0;
           var11 = param1;
           if (!param4) {
-            stackIn_4_0 = tg.field_j;
+            stackIn_4_0 = ClientContextMenu.field_j;
           } else {
             stackIn_4_0 = NodeHashIterator.field_h;
           }

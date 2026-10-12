@@ -71,21 +71,21 @@ final class la {
     }
 
     final static void a(boolean param0, int param1, int param2) {
-        tg var4 = null;
+        ClientContextMenu var4 = null;
         String var5_ref_String = null;
         int var5 = 0;
         int var6 = 0;
         hl var3 = AiPlanningStrategy.a(param2 + 76, param1, param0);
-        tg var4Lifetime1;
+        ClientContextMenu var4Lifetime1;
         if (var3 != null) {
-          tn.field_Z.a(23899, false);
-          var4 = tn.field_Z;
+          tn.activeContextMenu.addPlayerAdmissionActions(23899, false);
+          var4 = tn.activeContextMenu;
           var5_ref_String = AnimationFrameSet.field_y;
-          var4.field_i.addTextAction(5, var5_ref_String, (byte) -109);
-          var4Lifetime1 = tn.field_Z;
+          var4.menu.addTextAction(5, var5_ref_String, (byte) -109);
+          var4Lifetime1 = tn.activeContextMenu;
           var5 = BattleTutorial.pointerPressX;
           var6 = TeleportAction.pointerPressY;
-          var4Lifetime1.field_i.layoutPopup(0, var6, 0, (byte) -118, var5);
+          var4Lifetime1.menu.layoutPopup(0, var6, 0, (byte) -118, var5);
         }
         DeployEvent.a(-115, param0, param1);
         if (param2 != -1) {
@@ -135,7 +135,7 @@ final class la {
         }
         lk.field_h = 0;
         MoveAttackRequest.field_D = new int[3];
-        an.field_F = new mo[param1 * 15];
+        an.field_F = new ChatMessage[param1 * 15];
         AnimationPlayer.field_g = param1;
     }
 

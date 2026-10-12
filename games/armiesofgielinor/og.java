@@ -56,7 +56,7 @@ final class og extends IntrusiveNode {
         if (this.field_q == BattleTutorial.field_x) {
           return "String{" + this.field_o + "}";
         }
-        if (mo.field_j == this.field_q) {
+        if (ChatMessage.field_j == this.field_q) {
           return "ArgStart";
         }
         if (LeaderEscortCondition.field_d == this.field_q) {

@@ -70,7 +70,7 @@ final class vq {
               AnimationFrameSet.field_v[var5] = du.field_b[var5];
             }
             AnimationFrameSet.field_v[-3 + var4] = "";
-            AnimationFrameSet.field_v[-2 + var4] = tg.field_j;
+            AnimationFrameSet.field_v[-2 + var4] = ClientContextMenu.field_j;
             TileMetadata.field_h[var4 - 2] = 0;
             mi.field_G[0] = 4;
             AnimationFrameSet.field_v[-1 + var4] = pd.field_f;
@@ -165,8 +165,8 @@ final class vq {
             if (var4 == -1) {
               throw new IllegalStateException();
             }
-            mo.field_i = new String[var4];
-            vm.a(du.field_b, 0, mo.field_i, 0, var4);
+            ChatMessage.field_i = new String[var4];
+            vm.a(du.field_b, 0, ChatMessage.field_i, 0, var4);
             hg.field_d = new String[var3_int + (-var4 - 1)];
             vm.a(du.field_b, 1 + var4, hg.field_d, 0, -1 + var3_int - var4);
             var4 = -1;
@@ -185,8 +185,8 @@ final class vq {
             vm.a(du.field_b, 0, QuickChatCategory.field_A, 0, var4);
             IntrusiveNode.field_f = new String[var3_int - var4 - 1];
             vm.a(du.field_b, var4 + 1, IntrusiveNode.field_f, 0, -1 + (-var4 + var3_int));
-            if (QuickChatCategory.field_A.length <= mo.field_i.length) {
-              stackIn_31_0 = mo.field_i.length;
+            if (QuickChatCategory.field_A.length <= ChatMessage.field_i.length) {
+              stackIn_31_0 = ChatMessage.field_i.length;
             } else {
               stackIn_31_0 = QuickChatCategory.field_A.length;
             }
@@ -249,7 +249,7 @@ final class vq {
             }
           }
           if (no.field_J == 2) {
-            var10 = mo.field_i;
+            var10 = ChatMessage.field_i;
             var4_ref_String__ = var10;
             for (var5Lifetime2 = 0; var5Lifetime2 < var10.length; var5Lifetime2++) {
               var11 = var10[var5Lifetime2];

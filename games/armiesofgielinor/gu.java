@@ -39,7 +39,7 @@ final class gu {
             if (var4 != 34 &&
               var4 != 39) {
               if (var4 == 40) {
-                var2.addLast((byte) -119, (IntrusiveNode) (new og(mo.field_j, -1 + var3.position)));
+                var2.addLast((byte) -119, (IntrusiveNode) (new og(ChatMessage.field_j, -1 + var3.position)));
                 continue;
               }
               if (var4 == 41) {

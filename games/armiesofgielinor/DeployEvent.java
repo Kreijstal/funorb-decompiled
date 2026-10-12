@@ -184,8 +184,8 @@ final class DeployEvent extends GameEvent {
         int var13 = 0;
         int var14 = 0;
         int var15 = 0;
-        tg var16 = null;
-        tg var17 = null;
+        ClientContextMenu var16 = null;
+        ClientContextMenu var17 = null;
         var15 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           if (param0 >= -67) {
@@ -195,7 +195,7 @@ final class DeployEvent extends GameEvent {
           stackIn_5_1 = param1;
           stackIn_5_2 = (2 + jn.field_d) * (3 * param2);
           stackIn_5_3 = jn.field_d + 2;
-          stackIn_6_4 = (PointerInputHandler.field_b == TaggedMapData.field_g.field_Kb);
+          stackIn_6_4 = (PointerInputHandler.contextMenuScrollContainer == TaggedMapData.field_g.field_Kb);
           var3_int = ((ScrollContainer) (Object) stackIn_5_0).updateContentLayout(stackIn_5_1, stackIn_5_2, stackIn_5_3, stackIn_6_4, 0, 2) ? 1 : 0;
           var4 = TaggedMapData.field_g.field_Nb.children;
           if (th.field_a != 2 &&
@@ -261,14 +261,14 @@ final class DeployEvent extends GameEvent {
               }
             }
             if (0 != var6.pressedButton) {
-              ng.a(TaggedMapData.field_g.field_Kb, var6, (int[]) null, var6.field_Mb, -1, -110, -1, var6.field_Pb, 0L);
-              var16 = tn.field_Z;
+              ng.openClientContextMenu(TaggedMapData.field_g.field_Kb, var6, (int[]) null, var6.field_Mb, -1, -110, -1, var6.field_Pb, 0L);
+              var16 = tn.activeContextMenu;
               var13_ref_String = ArchiveIndex.field_u;
-              var16.field_i.addTextAction(7, var13_ref_String, (byte) -100);
-              var17 = tn.field_Z;
+              var16.menu.addTextAction(7, var13_ref_String, (byte) -100);
+              var17 = tn.activeContextMenu;
               var13 = BattleTutorial.pointerPressX;
               var14 = TeleportAction.pointerPressY;
-              var17.field_i.layoutPopup(0, var14, 0, (byte) -118, var13);
+              var17.menu.layoutPopup(0, var14, 0, (byte) -118, var13);
             }
             var5 = var6;
             var6 = (hl) (var4.next((byte) 123));

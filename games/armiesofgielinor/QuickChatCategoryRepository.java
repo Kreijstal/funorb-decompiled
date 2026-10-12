@@ -389,8 +389,8 @@ final class QuickChatCategoryRepository {
               }
               DiskCacheRequest.field_E = ((PacketBuffer) ((Object) var1)).readUnsignedByte(0);
               AiPlanningStrategy.field_b = ((PacketBuffer) ((Object) var1)).readUnsignedByte(0);
-              for (var3 = 0; tg.field_d.length > var3; var3++) {
-                tg.field_d[var3] = ((PacketBuffer) ((Object) var1)).readByte((byte) -106);
+              for (var3 = 0; ClientContextMenu.field_d.length > var3; var3++) {
+                ClientContextMenu.field_d[var3] = ((PacketBuffer) ((Object) var1)).readByte((byte) -106);
               }
             }
           }

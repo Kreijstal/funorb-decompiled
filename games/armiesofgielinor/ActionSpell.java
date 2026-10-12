@@ -298,13 +298,13 @@ final class ActionSpell extends Spell {
         }
     }
 
-    final static void a(long param0, int param1, int param2) {
+    final static void writePlayerAdmissionRequest(long accountId, int packetOpcode, int command) {
         CipherPacketBuffer var4 = vl.outgoingPacket;
-        var4.writeCipheredOpcode(32161, param1);
+        var4.writeCipheredOpcode(32161, packetOpcode);
         var4.position = var4.position + 1;
         int var5 = var4.position;
-        var4.writeByte(1, param2);
-        var4.a(param0, param2 ^ 38359638);
+        var4.writeByte(1, command);
+        var4.writeLong(accountId, command ^ 38359638);
         var4.writeByteLengthPrefix(-var5 + var4.position, 5930);
     }
 

@@ -10,7 +10,7 @@ class nr {
     static String field_f;
 
     void a(byte param0, int param1, int param2, int param3, int param4) {
-        i.a(this.field_b, param1, param2, (byte) -47, param4, param3);
+        ReportAbuseDialog.drawNineSlice(this.field_b, param1, param2, (byte) -47, param4, param3);
         if (param0 != -111) {
           field_a = (int[]) null;
         }

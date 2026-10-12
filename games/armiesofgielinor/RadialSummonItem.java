@@ -212,7 +212,7 @@ final class RadialSummonItem {
           do {
             if (!(t.field_b.length > var11)) {
               var10_int = (7 + var10_int) / 8;
-              tg.field_d = new byte[var10_int];
+              ClientContextMenu.field_d = new byte[var10_int];
               break;
             }
             var10_int = var10_int + (t.field_b[var11] & 255);
@@ -226,7 +226,7 @@ final class RadialSummonItem {
           oi.lobbyPlayersById = new DualNodeHashTable(param4);
           AnimationPlayer.pendingJoinRequestCount = 0;
           SummonAction.field_s = -1;
-          oo.field_a = 0;
+          oo.watchedRoomId = 0;
           GlobalSpell.field_g = -1;
           if (null == param1.children) {
             param1.children = new NodeDeque();

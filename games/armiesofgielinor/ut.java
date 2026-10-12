@@ -150,7 +150,7 @@ final class ut extends sf implements he {
           if (var2_intLifetime1 != 0) {
             this.field_Z = this.a((qo) (this), Unit.field_n, dq.field_e, false);
           }
-          this.field_bb = this.a((qo) (this), oo.field_e, tg.field_b, false);
+          this.field_bb = this.a((qo) (this), oo.field_e, ClientContextMenu.field_b, false);
           if (var2_intLifetime1 != 0) {
             stackIn_57_1 = 3;
           } else {
@@ -470,7 +470,7 @@ final class ut extends sf implements he {
             for (var2 = 0; 8 > var2; var2++) {
               var10[var2] = 0;
             }
-            var11 = i.field_Nb;
+            var11 = ReportAbuseDialog.field_Nb;
             var8 = var11;
             var5 = var8;
             var1Lifetime1 = var5;

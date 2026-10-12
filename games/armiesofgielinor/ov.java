@@ -31,12 +31,12 @@ final class ov {
         field_k = null;
     }
 
-    final static void a(int param0, int param1, int param2) {
+    final static void writeSpectateRoomRequest(int packetOpcode, int payloadLength, int roomId) {
         CipherPacketBuffer var3 = vl.outgoingPacket;
-        var3.writeCipheredOpcode(32161, param0);
-        var3.writeByte(param1 - 2, param1);
+        var3.writeCipheredOpcode(32161, packetOpcode);
+        var3.writeByte(payloadLength - 2, payloadLength);
         var3.writeByte(1, 10);
-        var3.writeShort(true, param2);
+        var3.writeShort(true, roomId);
     }
 
     final static void a(java.applet.Applet param0, int param1) {

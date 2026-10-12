@@ -15,7 +15,7 @@ final class ia {
 
     final void a(int param0) {
         SoftwareRaster.f(this.field_e, this.field_i, this.field_j, this.field_c, 7829367);
-        i.a(this.field_f, this.field_c, this.field_e, (byte) -47, this.field_i, this.field_j);
+        ReportAbuseDialog.drawNineSlice(this.field_f, this.field_c, this.field_e, (byte) -47, this.field_i, this.field_j);
         if (param0 >= 24) {
           this.b(-11727);
           return;
@@ -136,10 +136,10 @@ final class ia {
 
     final boolean a(int param0, int param1, int param2) {
         if (param1 == 0) {
-          return mo.a(param0, this.field_e, this.field_i, param2, this.field_j, (byte) 94, this.field_c);
+          return ChatMessage.a(param0, this.field_e, this.field_i, param2, this.field_j, (byte) 94, this.field_c);
         }
         this.field_i = 33;
-        return mo.a(param0, this.field_e, this.field_i, param2, this.field_j, (byte) 94, this.field_c);
+        return ChatMessage.a(param0, this.field_e, this.field_i, param2, this.field_j, (byte) 94, this.field_c);
     }
 
     private final void a(byte param0, String param1) {

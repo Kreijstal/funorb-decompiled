@@ -68,7 +68,7 @@ final class pg {
         }
     }
 
-    final static void a(int param0, mo param1) {
+    final static void openChatMessageContextMenu(int obfuscationGuard, ChatMessage message) {
         Object stackIn_2_0;
         ClientUiComponent stackIn_2_1;
         Object stackIn_2_2;
@@ -81,68 +81,68 @@ final class pg {
         RuntimeException var2 = null;
         int var3 = 0;
         int var4 = 0;
-        tg var5 = null;
+        ClientContextMenu var5 = null;
         String var6 = null;
-        tg var7 = null;
+        ClientContextMenu var7 = null;
         String var8 = null;
-        tg var9 = null;
+        ClientContextMenu var9 = null;
         String var10 = null;
-        tg var11 = null;
+        ClientContextMenu var11 = null;
         String var12 = null;
-        tg var13 = null;
+        ClientContextMenu var13 = null;
         try {
           stackIn_2_0 = null;
-          stackIn_2_1 = param1.field_u;
+          stackIn_2_1 = message.rowComponent;
           stackIn_2_2 = null;
-          stackIn_2_3 = param1.field_q;
-          if (param1.field_b == 1) {
-            stackIn_3_4 = param1.field_v;
+          stackIn_2_3 = message.displayName;
+          if (message.channelId == 1) {
+            stackIn_3_4 = message.contextId;
           } else {
             stackIn_3_4 = 0;
           }
-          ng.a((ScrollContainer) (stackIn_2_0), stackIn_2_1, (int[]) (stackIn_2_2), stackIn_2_3, stackIn_3_4, 1, param1.field_b, param1.field_m, param1.field_n);
-          if (param1.field_b == 0 &&
+          ng.openClientContextMenu((ScrollContainer) (stackIn_2_0), stackIn_2_1, (int[]) (stackIn_2_2), stackIn_2_3, stackIn_3_4, 1, message.channelId, message.accountName, message.accountId);
+          if (message.channelId == 0 &&
             !bn.a(false) &&
             null == vu.currentRoom &&
             no.roomSetup == null) {
             if (!vi.field_d) {
-              var5 = tn.field_Z;
+              var5 = tn.activeContextMenu;
               var6 = wh.field_b;
-              var5.field_i.addTextAction(14, var6, (byte) -128);
+              var5.menu.addTextAction(14, var6, (byte) -128);
             }
-            var7 = tn.field_Z;
+            var7 = tn.activeContextMenu;
             var8 = FixedQuaternion.field_g;
-            var7.field_i.addTextAction(20, var8, (byte) -115);
+            var7.menu.addTextAction(20, var8, (byte) -115);
           }
-          if (1 == param1.field_b &&
+          if (1 == message.channelId &&
             !bn.a(false) &&
             vu.currentRoom != null &&
-            param1.field_v == vu.currentRoom.getRoomId((byte) -88)) {
+            message.contextId == vu.currentRoom.getRoomId((byte) -88)) {
             if (!vi.field_d) {
-              var9 = tn.field_Z;
+              var9 = tn.activeContextMenu;
               var10 = CampaignMenu.field_q;
-              var9.field_i.addTextAction(14, var10, (byte) -108);
+              var9.menu.addTextAction(14, var10, (byte) -108);
             }
-            var11 = tn.field_Z;
+            var11 = tn.activeContextMenu;
             var12 = CampaignMenuEntry.field_E;
-            var11.field_i.addTextAction(20, var12, (byte) -117);
+            var11.menu.addTextAction(20, var12, (byte) -117);
           }
-          tn.field_Z.a((byte) 68);
-          tn.field_Z.a(param0 + 23899, false);
-          tn.field_Z.a(param1.field_d, 7, param1.field_b);
-          tn.field_Z.b((byte) 92);
-          tn.field_Z.a(param1, 0);
-          var13 = tn.field_Z;
+          tn.activeContextMenu.addRoomAdmissionActions((byte) 68);
+          tn.activeContextMenu.addPlayerAdmissionActions(obfuscationGuard + 23899, false);
+          tn.activeContextMenu.addSocialActions(message.quickChatValues, 7, message.channelId);
+          tn.activeContextMenu.addReportAction((byte) 92);
+          tn.activeContextMenu.addChatFilterActions(message, 0);
+          var13 = tn.activeContextMenu;
           var3 = BattleTutorial.pointerPressX;
           var4 = TeleportAction.pointerPressY;
-          var13.field_i.layoutPopup(0, var4, param0, (byte) -118, var3);
+          var13.menu.layoutPopup(0, var4, obfuscationGuard, (byte) -118, var3);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
           stackIn_23_0 = var2;
-          stackIn_23_1 = new StringBuilder().append("pg.E(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_23_1 = new StringBuilder().append("pg.E(").append(obfuscationGuard).append(',');
+          if (message == null) {
             stackIn_24_2 = "null";
           } else {
             stackIn_24_2 = "{...}";

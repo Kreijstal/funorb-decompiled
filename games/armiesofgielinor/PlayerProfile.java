@@ -36,7 +36,7 @@ final class PlayerProfile {
         }
     }
 
-    final static int a(mo param0, int param1) {
+    final static int a(ChatMessage param0, int param1) {
         int var2_int = 0;
         int var3 = 0;
         int stackIn_16_0 = 0;
@@ -52,23 +52,23 @@ final class PlayerProfile {
             PlayerProfile.a(-8, 127, -35, 78, 58, -62, -122);
           }
           var2_int = MeshObject.field_d;
-          if (param0.field_b != 2) {
-            if (param0.field_b == 4) {
-              var2_intLifetime1 = fm.field_d[param0.field_b];
+          if (param0.channelId != 2) {
+            if (param0.channelId == 4) {
+              var2_intLifetime1 = fm.field_d[param0.channelId];
             } else {
-              if (~oh.localAccountId == ~param0.field_n) {
-                var2_intLifetime1 = CombatEvent.field_A[param0.field_b];
+              if (~oh.localAccountId == ~param0.accountId) {
+                var2_intLifetime1 = CombatEvent.field_A[param0.channelId];
               } else {
-                var2_intLifetime1 = fm.field_d[param0.field_b];
+                var2_intLifetime1 = fm.field_d[param0.channelId];
               }
             }
           } else {
-            if (!param0.field_f) {
-              if (0 == param0.field_a &&
-                param0.field_e == 0) {
-                var2_intLifetime1 = CombatEvent.field_A[param0.field_b];
+            if (!param0.systemMessage) {
+              if (0 == param0.identityWord0 &&
+                param0.identityWord1 == 0) {
+                var2_intLifetime1 = CombatEvent.field_A[param0.channelId];
               } else {
-                var2_intLifetime1 = fm.field_d[param0.field_b];
+                var2_intLifetime1 = fm.field_d[param0.channelId];
               }
             } else {
               var2_intLifetime1 = MeshObject.field_d;

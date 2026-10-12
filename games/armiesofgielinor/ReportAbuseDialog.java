@@ -1,23 +1,23 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class i extends ClientUiComponent {
-    private fp field_Qb;
-    private ClientUiComponent field_Ib;
-    long field_Sb;
+final class ReportAbuseDialog extends ClientUiComponent {
+    private IconLabelControl muteControl;
+    private ClientUiComponent closeButton;
+    long accountId;
     static ResourceArchive field_Lb;
-    private ClientUiComponent field_Vb;
-    private StringBuilder field_Jb;
+    private ClientUiComponent instructions;
+    private StringBuilder targetName;
     static int[] field_Nb;
-    private ClientUiComponent field_Tb;
-    private ClientUiComponent[] field_Ub;
-    private ClientUiComponent field_Mb;
-    private int field_Kb;
+    private ClientUiComponent content;
+    private ClientUiComponent[] offenceButtons;
+    private ClientUiComponent title;
+    private int pendingResult;
     static String field_Ob;
-    private ClientUiComponent field_Rb;
-    private ClientUiComponent field_Pb;
+    private ClientUiComponent targetNameComponent;
+    private ClientUiComponent helpText;
 
-    final static void a(RgbSprite[] param0, int param1, int param2, byte param3, int param4, int param5) {
+    final static void drawNineSlice(RgbSprite[] sprites, int height, int x, byte obfuscationGuard, int y, int width) {
         int var21 = 0;
         int stackIn_9_0 = 0;
         int stackIn_12_0 = 0;
@@ -50,118 +50,118 @@ final class i extends ClientUiComponent {
         int var20Lifetime4;
         var22 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          if (param0 == null) {
+          if (sprites == null) {
             return;
           }
-          if (0 < param5 &&
-            0 < param1) {
-            if (param0[3] != null) {
-              stackIn_9_0 = param0[3].canvasWidth;
+          if (0 < width &&
+            0 < height) {
+            if (sprites[3] != null) {
+              stackIn_9_0 = sprites[3].canvasWidth;
             } else {
               stackIn_9_0 = 0;
             }
             var6_int = stackIn_9_0;
-            if (null != param0[5]) {
-              stackIn_12_0 = param0[5].canvasWidth;
+            if (null != sprites[5]) {
+              stackIn_12_0 = sprites[5].canvasWidth;
             } else {
               stackIn_12_0 = 0;
             }
             var7 = stackIn_12_0;
-            if (param0[1] != null) {
-              stackIn_15_0 = param0[1].canvasHeight;
+            if (sprites[1] != null) {
+              stackIn_15_0 = sprites[1].canvasHeight;
             } else {
               stackIn_15_0 = 0;
             }
             var8 = stackIn_15_0;
-            if (null != param0[7]) {
-              stackIn_18_0 = param0[7].canvasHeight;
+            if (null != sprites[7]) {
+              stackIn_18_0 = sprites[7].canvasHeight;
             } else {
               stackIn_18_0 = 0;
             }
             var9 = stackIn_18_0;
-            if (param3 != -47) {
-              i.a(true, -79, -40);
+            if (obfuscationGuard != -47) {
+              ReportAbuseDialog.a(true, -79, -40);
             }
-            var10 = param5 + param2;
-            var11 = param1 + param4;
-            var12 = var6_int + param2;
+            var10 = width + x;
+            var11 = height + y;
+            var12 = var6_int + x;
             var13 = var10 - var7;
-            var14 = param4 + var8;
+            var14 = y + var8;
             var15 = var11 - var9;
             var16 = var12;
             var17 = var13;
             if (var17 < var16) {
-              var17 = param2 + var6_int * param5 / (var6_int + var7);
-              var16 = param2 + var6_int * param5 / (var6_int + var7);
+              var17 = x + var6_int * width / (var6_int + var7);
+              var16 = x + var6_int * width / (var6_int + var7);
             }
             var18 = var14;
             var19 = var15;
             if (var19 < var18) {
-              var19 = param4 + var8 * param1 / (var9 + var8);
-              var18 = param4 + var8 * param1 / (var9 + var8);
+              var19 = y + var8 * height / (var9 + var8);
+              var18 = y + var8 * height / (var9 + var8);
             }
             SoftwareRaster.b(pd.field_g);
-            if (null != param0[0]) {
-              SoftwareRaster.b(param2, param4, var16, var18);
-              param0[0].g(param2, param4);
+            if (null != sprites[0]) {
+              SoftwareRaster.b(x, y, var16, var18);
+              sprites[0].g(x, y);
               SoftwareRaster.a(pd.field_g);
             }
-            if (param0[2] != null) {
-              SoftwareRaster.b(var17, param4, var10, var18);
-              param0[2].g(var13, param4);
+            if (sprites[2] != null) {
+              SoftwareRaster.b(var17, y, var10, var18);
+              sprites[2].g(var13, y);
               SoftwareRaster.a(pd.field_g);
             }
-            if (param0[6] != null) {
-              SoftwareRaster.b(param2, var19, var16, var11);
-              param0[6].g(param2, var15);
+            if (sprites[6] != null) {
+              SoftwareRaster.b(x, var19, var16, var11);
+              sprites[6].g(x, var15);
               SoftwareRaster.a(pd.field_g);
             }
-            if (null != param0[8]) {
+            if (null != sprites[8]) {
               SoftwareRaster.b(var17, var19, var10, var11);
-              param0[8].g(var13, var15);
+              sprites[8].g(var13, var15);
               SoftwareRaster.a(pd.field_g);
             }
-            if (param0[1] != null &&
-              param0[1].canvasWidth != 0) {
-              SoftwareRaster.b(var16, param4, var17, var18);
-              for (var20 = var12; var20 < var13; var20 = var20 + param0[1].canvasWidth) {
-                param0[1].g(var20, param4);
+            if (sprites[1] != null &&
+              sprites[1].canvasWidth != 0) {
+              SoftwareRaster.b(var16, y, var17, var18);
+              for (var20 = var12; var20 < var13; var20 = var20 + sprites[1].canvasWidth) {
+                sprites[1].g(var20, y);
               }
               SoftwareRaster.a(pd.field_g);
             }
-            if (null != param0[7] &&
-              0 != param0[7].canvasWidth) {
+            if (null != sprites[7] &&
+              0 != sprites[7].canvasWidth) {
               SoftwareRaster.b(var16, var19, var17, var11);
-              for (var20Lifetime1 = var12; var13 > var20Lifetime1; var20Lifetime1 = var20Lifetime1 + param0[7].canvasWidth) {
-                param0[7].g(var20Lifetime1, var15);
+              for (var20Lifetime1 = var12; var13 > var20Lifetime1; var20Lifetime1 = var20Lifetime1 + sprites[7].canvasWidth) {
+                sprites[7].g(var20Lifetime1, var15);
               }
               SoftwareRaster.a(pd.field_g);
             }
-            if (null != param0[3] &&
-              0 != param0[3].canvasHeight) {
-              SoftwareRaster.b(param2, var18, var16, var19);
-              for (var20Lifetime2 = var14; var15 > var20Lifetime2; var20Lifetime2 = var20Lifetime2 + param0[3].canvasHeight) {
-                param0[3].g(param2, var20Lifetime2);
+            if (null != sprites[3] &&
+              0 != sprites[3].canvasHeight) {
+              SoftwareRaster.b(x, var18, var16, var19);
+              for (var20Lifetime2 = var14; var15 > var20Lifetime2; var20Lifetime2 = var20Lifetime2 + sprites[3].canvasHeight) {
+                sprites[3].g(x, var20Lifetime2);
               }
               SoftwareRaster.a(pd.field_g);
             }
-            if (null != param0[5] &&
-              param0[5].canvasHeight != 0) {
+            if (null != sprites[5] &&
+              sprites[5].canvasHeight != 0) {
               SoftwareRaster.b(var17, var18, var10, var19);
-              for (var20Lifetime3 = var14; var15 > var20Lifetime3; var20Lifetime3 = var20Lifetime3 + param0[5].canvasHeight) {
-                param0[5].g(var13, var20Lifetime3);
+              for (var20Lifetime3 = var14; var15 > var20Lifetime3; var20Lifetime3 = var20Lifetime3 + sprites[5].canvasHeight) {
+                sprites[5].g(var13, var20Lifetime3);
               }
               SoftwareRaster.a(pd.field_g);
             }
-            if (null != param0[4] &&
-              param0[4].canvasWidth != 0) {
-              if (param0[4].canvasHeight == 0) {
+            if (null != sprites[4] &&
+              sprites[4].canvasWidth != 0) {
+              if (sprites[4].canvasHeight == 0) {
                 return;
               }
               SoftwareRaster.b(var16, var18, var17, var19);
-              for (var20Lifetime4 = var14; var15 > var20Lifetime4; var20Lifetime4 = var20Lifetime4 + param0[4].canvasHeight) {
-                for (var21 = var12; var21 < var13; var21 = var21 + param0[4].canvasWidth) {
-                  param0[4].g(var21, var20Lifetime4);
+              for (var20Lifetime4 = var14; var15 > var20Lifetime4; var20Lifetime4 = var20Lifetime4 + sprites[4].canvasHeight) {
+                for (var21 = var12; var21 < var13; var21 = var21 + sprites[4].canvasWidth) {
+                  sprites[4].g(var21, var20Lifetime4);
                 }
               }
               SoftwareRaster.a(pd.field_g);
@@ -174,12 +174,12 @@ final class i extends ClientUiComponent {
           var6 = decompiledCaughtException;
           stackIn_73_0 = var6;
           stackIn_73_1 = new StringBuilder().append("i.B(");
-          if (param0 == null) {
+          if (sprites == null) {
             stackIn_74_2 = "null";
           } else {
             stackIn_74_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_73_0), ((StringBuilder) (Object) stackIn_73_1).append(stackIn_74_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_73_0), ((StringBuilder) (Object) stackIn_73_1).append(stackIn_74_2).append(',').append(height).append(',').append(x).append(',').append(obfuscationGuard).append(',').append(y).append(',').append(width).append(')').toString());
         }
     }
 
@@ -236,15 +236,15 @@ final class i extends ClientUiComponent {
         }
     }
 
-    final boolean l(int param0) {
+    final boolean isWaitingForChoice(int obfuscationGuard) {
         int discarded$0 = 0;
-        if (this.field_Kb != -2) {
+        if (this.pendingResult != -2) {
           return false;
         }
         if (rs.field_q == 13) {
-          this.field_Kb = -1;
+          this.pendingResult = -1;
         }
-        if (param0 != 18585) {
+        if (obfuscationGuard != 18585) {
           String var3 = (String) null;
           discarded$0 = this.a((ClientUiComponent) null, 77, (ClientUiComponent) null, -9, (String) null, 124);
           return true;
@@ -252,48 +252,48 @@ final class i extends ClientUiComponent {
         return true;
     }
 
-    final int a(boolean param0, byte param1) {
+    final int pollOffence(boolean enableCapture, byte obfuscationGuard) {
         int var4 = 0;
-        fp stackIn_6_0 = null;
+        IconLabelControl stackIn_6_0 = null;
         boolean stackIn_7_1 = false;
         ClientUiComponent stackIn_15_0 = null;
         boolean stackIn_16_1 = false;
         int var3;
         int var5;
         var5 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
-        this.updateInput(true, param0);
-        var3 = 80 / ((param1 + 36) / 58);
-        if (this.field_Rb != null) {
-          this.field_Rb.text = this.field_Jb.toString();
-          this.field_Rb.x = (this.width - this.field_Rb.font.a(this.field_Rb.text)) / 2;
-          this.field_Rb.width = -this.field_Rb.x + this.width;
-          if (null != this.field_Qb &&
-            0 != this.field_Qb.pressedButton) {
-            stackIn_6_0 = this.field_Qb;
-            stackIn_7_1 = !(this.field_Qb.selected);
+        this.updateInput(true, enableCapture);
+        var3 = 80 / ((obfuscationGuard + 36) / 58);
+        if (this.targetNameComponent != null) {
+          this.targetNameComponent.text = this.targetName.toString();
+          this.targetNameComponent.x = (this.width - this.targetNameComponent.font.a(this.targetNameComponent.text)) / 2;
+          this.targetNameComponent.width = -this.targetNameComponent.x + this.width;
+          if (null != this.muteControl &&
+            0 != this.muteControl.pressedButton) {
+            stackIn_6_0 = this.muteControl;
+            stackIn_7_1 = !(this.muteControl.selected);
             stackIn_6_0.selected = stackIn_7_1;
           }
           for (var4 = 0; CampaignMenuEntry.field_F > var4; var4++) {
-            if (null != this.field_Ub[var4]) {
-              stackIn_15_0 = this.field_Ub[var4];
-              stackIn_16_1 = !(0 >= this.field_Jb.length());
+            if (null != this.offenceButtons[var4]) {
+              stackIn_15_0 = this.offenceButtons[var4];
+              stackIn_16_1 = !(0 >= this.targetName.length());
               stackIn_15_0.inputEnabled = stackIn_16_1;
-              if (this.field_Ub[var4].inputEnabled &&
-                this.field_Ub[var4].pressedButton != 0) {
+              if (this.offenceButtons[var4].inputEnabled &&
+                this.offenceButtons[var4].pressedButton != 0) {
                 return var4;
               }
             }
           }
         }
-        if (this.field_Ib.pressedButton != 0) {
+        if (this.closeButton.pressedButton != 0) {
           return -1;
         }
-        if (param0 &&
+        if (enableCapture &&
           0 != DeployEvent.pointerPressButton &&
           this.pressedButton == 0) {
           return -1;
         }
-        return this.field_Kb;
+        return this.pendingResult;
     }
 
     private final int a(int param0, int param1, ClientUiComponent param2, ClientUiComponent param3, int param4) {
@@ -343,34 +343,34 @@ final class i extends ClientUiComponent {
         TurnEffectEvent.field_z = new hc(oh.field_J, IsaacRandom.field_k, rs.field_n, var2, 0, 0);
     }
 
-    final boolean o(int param0) {
+    final boolean isMuteSelected(int obfuscationGuard) {
         boolean stackIn_6_0 = false;
-        if (param0 != 0) {
-          this.field_Ub = (ClientUiComponent[]) null;
+        if (obfuscationGuard != 0) {
+          this.offenceButtons = (ClientUiComponent[]) null;
         }
-        stackIn_6_0 = (null != this.field_Qb) && (this.field_Qb.selected);
+        stackIn_6_0 = (null != this.muteControl) && (this.muteControl.selected);
         return stackIn_6_0;
     }
 
-    final String k(int param0) {
-        if (param0 != 1) {
+    final String getTargetName(int obfuscationGuard) {
+        if (obfuscationGuard != 1) {
           return (String) null;
         }
-        return this.field_Jb.toString();
+        return this.targetName.toString();
     }
 
-    i(int param0, int param1, int param2, int param3, int param4, ClientUiComponent param5, ClientUiComponent param6, ClientUiComponent param7, ClientUiComponent param8, fp param9, ClientUiComponent param10, String param11, long param12) {
-        super(0L, param5);
+    ReportAbuseDialog(int anchorX, int anchorY, int anchorWidth, int anchorHeight, int unusedReportPacketOpcode, ClientUiComponent style, ClientUiComponent titleStyle, ClientUiComponent closeStyle, ClientUiComponent textStyle, IconLabelControl muteStyle, ClientUiComponent offenceStyle, String targetName, long accountId) {
+        super(0L, style);
         StringBuilder discarded$0 = null;
         Object stackIn_6_0;
-        fp stackIn_6_1;
-        fp stackIn_6_2;
+        IconLabelControl stackIn_6_1;
+        IconLabelControl stackIn_6_2;
         long stackIn_6_3;
-        fp stackIn_6_4;
+        IconLabelControl stackIn_6_4;
         Object stackIn_7_0;
         Object stackIn_8_0;
-        fp stackIn_8_1;
-        fp stackIn_8_2;
+        IconLabelControl stackIn_8_1;
+        IconLabelControl stackIn_8_2;
         String stackIn_8_5;
         ClientUiComponent stackIn_14_0 = null;
         boolean stackIn_15_1 = false;
@@ -407,8 +407,8 @@ final class i extends ClientUiComponent {
         ClientUiComponent[] var28 = null;
         Object stackIn_6_0Lifetime1;
         Object stackIn_8_0Lifetime1;
-        fp stackIn_8_1Lifetime1;
-        fp stackIn_8_2Lifetime1;
+        IconLabelControl stackIn_8_1Lifetime1;
+        IconLabelControl stackIn_8_2Lifetime1;
         int var16Lifetime1;
         int var17Lifetime1;
         int var18Lifetime1;
@@ -426,29 +426,29 @@ final class i extends ClientUiComponent {
         int var18Lifetime5;
         int var20Lifetime2;
         int var20Lifetime3;
-        this.field_Kb = -2;
+        this.pendingResult = -2;
         try {
-          this.field_Sb = param12;
-          this.field_Mb = new ClientUiComponent(0L, param6, ij.field_u.toUpperCase());
-          this.field_Mb.horizontalAlignment = 1;
-          this.addChild(this.field_Mb, 69);
-          this.field_Ib = new ClientUiComponent(0L, param7);
-          this.field_Mb.addChild(this.field_Ib, 126);
-          this.field_Tb = new ClientUiComponent(0L, (ClientUiComponent) null);
-          this.addChild(this.field_Tb, 106);
-          if (param11 != null) {
-            this.field_Vb = new ClientUiComponent(0L, param8, ii.field_c);
-            this.field_Vb.horizontalAlignment = 1;
-            this.field_Vb.textColour = 11184810;
-            this.field_Tb.addChild(this.field_Vb, 116);
-            this.field_Pb = new ClientUiComponent(0L, param8, mk.field_d);
-            this.field_Pb.horizontalAlignment = 1;
-            this.field_Pb.textColour = 11184810;
-            this.field_Tb.addChild(this.field_Pb, 119);
-            this.field_Rb = new ClientUiComponent(0L, param8);
-            this.field_Rb.textColour = 16764006;
-            this.field_Tb.addChild(this.field_Rb, 63);
-            this.field_Rb.blinkTextSuffix = "|";
+          this.accountId = accountId;
+          this.title = new ClientUiComponent(0L, titleStyle, ij.field_u.toUpperCase());
+          this.title.horizontalAlignment = 1;
+          this.addChild(this.title, 69);
+          this.closeButton = new ClientUiComponent(0L, closeStyle);
+          this.title.addChild(this.closeButton, 126);
+          this.content = new ClientUiComponent(0L, (ClientUiComponent) null);
+          this.addChild(this.content, 106);
+          if (targetName != null) {
+            this.instructions = new ClientUiComponent(0L, textStyle, ii.field_c);
+            this.instructions.horizontalAlignment = 1;
+            this.instructions.textColour = 11184810;
+            this.content.addChild(this.instructions, 116);
+            this.helpText = new ClientUiComponent(0L, textStyle, mk.field_d);
+            this.helpText.horizontalAlignment = 1;
+            this.helpText.textColour = 11184810;
+            this.content.addChild(this.helpText, 119);
+            this.targetNameComponent = new ClientUiComponent(0L, textStyle);
+            this.targetNameComponent.textColour = 16764006;
+            this.content.addChild(this.targetNameComponent, 63);
+            this.targetNameComponent.blinkTextSuffix = "|";
             if (!(tf.field_l < 5) ||
               !(BufferedSocket.field_j < 2)) {
               regionExit1: {
@@ -456,7 +456,7 @@ final class i extends ClientUiComponent {
                 stackIn_6_1 = null;
                 stackIn_6_2 = null;
                 stackIn_6_3 = 0L;
-                stackIn_6_4 = (fp) (param9);
+                stackIn_6_4 = (IconLabelControl) (muteStyle);
                 if (tf.field_l < 7) {
                   stackIn_7_0 = this;
                   stackIn_6_0Lifetime1 = stackIn_7_0;
@@ -473,48 +473,48 @@ final class i extends ClientUiComponent {
                 stackIn_8_2Lifetime1 = null;
                 stackIn_8_5 = SpellCastAction.field_v;
               }
-              this.field_Qb = new fp(stackIn_6_3, stackIn_6_4, stackIn_8_5);
-              this.field_Tb.addChild(this.field_Qb, 65);
+              this.muteControl = new IconLabelControl(stackIn_6_3, stackIn_6_4, stackIn_8_5);
+              this.content.addChild(this.muteControl, 65);
             }
             var28 = new ClientUiComponent[3];
             var15 = var28;
             var28[0] = new ClientUiComponent(0L, (ClientUiComponent) null);
-            this.field_Tb.addChild(var28[0], 100);
+            this.content.addChild(var28[0], 100);
             var28[1] = new ClientUiComponent(0L, (ClientUiComponent) null);
-            this.field_Tb.addChild(var28[1], 65);
+            this.content.addChild(var28[1], 65);
             var28[2] = new ClientUiComponent(0L, (ClientUiComponent) null);
-            this.field_Tb.addChild(var28[2], 111);
-            this.field_Ub = new ClientUiComponent[CampaignMenuEntry.field_F];
+            this.content.addChild(var28[2], 111);
+            this.offenceButtons = new ClientUiComponent[CampaignMenuEntry.field_F];
             for (var16 = 0; var16 < CampaignMenuEntry.field_F; var16++) {
               if (ef.field_d[var16] != null) {
-                this.field_Ub[var16] = new ClientUiComponent(0L, param10, ef.field_d[var16]);
-                this.field_Ub[var16].horizontalAlignment = 0;
-                stackIn_14_0 = this.field_Ub[var16];
-                stackIn_15_1 = (param11 != null);
+                this.offenceButtons[var16] = new ClientUiComponent(0L, offenceStyle, ef.field_d[var16]);
+                this.offenceButtons[var16].horizontalAlignment = 0;
+                stackIn_14_0 = this.offenceButtons[var16];
+                stackIn_15_1 = (targetName != null);
                 stackIn_14_0.inputEnabled = stackIn_15_1;
-                this.field_Tb.addChild(this.field_Ub[var16], 75);
+                this.content.addChild(this.offenceButtons[var16], 75);
               }
             }
-            this.field_Jb = new StringBuilder(12);
-            if (param11 != null) {
-              discarded$0 = this.field_Jb.append(param11);
+            this.targetName = new StringBuilder(12);
+            if (targetName != null) {
+              discarded$0 = this.targetName.append(targetName);
             }
             var16Lifetime2 = 0;
-            var17 = param6.font.a(is.field_g);
+            var17 = titleStyle.font.a(is.field_g);
             if (var17 > var16Lifetime2) {
               var16Lifetime2 = var17;
             }
-            var17Lifetime2 = param6.font.a(SpellCastAction.field_y);
+            var17Lifetime2 = titleStyle.font.a(SpellCastAction.field_y);
             if (var17Lifetime2 > var16Lifetime2) {
               var16Lifetime2 = var17Lifetime2;
             }
-            var17Lifetime3 = param6.font.a(op.field_d);
+            var17Lifetime3 = titleStyle.font.a(op.field_d);
             if (var17Lifetime3 > var16Lifetime2) {
               var16Lifetime2 = var17Lifetime3;
             }
             for (var17Lifetime4 = 0; CampaignMenuEntry.field_F > var17Lifetime4; var17Lifetime4++) {
-              if (this.field_Ub[var17Lifetime4] != null) {
-                var18 = this.field_Ub[var17Lifetime4].getPreferredWidth(92);
+              if (this.offenceButtons[var17Lifetime4] != null) {
+                var18 = this.offenceButtons[var17Lifetime4].getPreferredWidth(92);
                 if (var16Lifetime2 < var18) {
                   var16Lifetime2 = var18;
                 }
@@ -526,136 +526,136 @@ final class i extends ClientUiComponent {
             var17Lifetime5 = 0;
             var18Lifetime2 = 0;
             var18Lifetime3 = 0;
-            var18Lifetime3 = this.a(param6, var18Lifetime3, var28[0], var16Lifetime2, is.field_g, 24);
-            var18Lifetime3 = this.a(var16Lifetime2, 2, var28[0], this.field_Ub[6], var18Lifetime3);
-            var18Lifetime3 = this.a(var16Lifetime2, 2, var28[0], this.field_Ub[9], var18Lifetime3);
-            var18Lifetime3 = this.a(var16Lifetime2, 2, var28[0], this.field_Ub[5], var18Lifetime3);
-            var18Lifetime3 = this.a(var16Lifetime2, 2, var28[0], this.field_Ub[7], var18Lifetime3);
-            var18Lifetime3 = this.a(var16Lifetime2, 2, var28[0], this.field_Ub[15], var18Lifetime3);
-            var18Lifetime3 = this.a(var16Lifetime2, 2, var28[0], this.field_Ub[4], var18Lifetime3);
+            var18Lifetime3 = this.a(titleStyle, var18Lifetime3, var28[0], var16Lifetime2, is.field_g, 24);
+            var18Lifetime3 = this.a(var16Lifetime2, 2, var28[0], this.offenceButtons[6], var18Lifetime3);
+            var18Lifetime3 = this.a(var16Lifetime2, 2, var28[0], this.offenceButtons[9], var18Lifetime3);
+            var18Lifetime3 = this.a(var16Lifetime2, 2, var28[0], this.offenceButtons[5], var18Lifetime3);
+            var18Lifetime3 = this.a(var16Lifetime2, 2, var28[0], this.offenceButtons[7], var18Lifetime3);
+            var18Lifetime3 = this.a(var16Lifetime2, 2, var28[0], this.offenceButtons[15], var18Lifetime3);
+            var18Lifetime3 = this.a(var16Lifetime2, 2, var28[0], this.offenceButtons[4], var18Lifetime3);
             if (var18Lifetime3 > var17Lifetime5) {
               var17Lifetime5 = var18Lifetime3;
             }
             var18Lifetime4 = 0;
-            var18Lifetime4 = this.a(param6, var18Lifetime4, var28[1], var16Lifetime2, SpellCastAction.field_y, 24);
-            var18Lifetime4 = this.a(var16Lifetime2, 2, var28[1], this.field_Ub[16], var18Lifetime4);
-            var18Lifetime4 = this.a(var16Lifetime2, 2, var28[1], this.field_Ub[17], var18Lifetime4);
-            var18Lifetime4 = this.a(var16Lifetime2, 2, var28[1], this.field_Ub[18], var18Lifetime4);
-            var18Lifetime4 = this.a(var16Lifetime2, 2, var28[1], this.field_Ub[19], var18Lifetime4);
-            var18Lifetime4 = this.a(var16Lifetime2, 2, var28[1], this.field_Ub[20], var18Lifetime4);
+            var18Lifetime4 = this.a(titleStyle, var18Lifetime4, var28[1], var16Lifetime2, SpellCastAction.field_y, 24);
+            var18Lifetime4 = this.a(var16Lifetime2, 2, var28[1], this.offenceButtons[16], var18Lifetime4);
+            var18Lifetime4 = this.a(var16Lifetime2, 2, var28[1], this.offenceButtons[17], var18Lifetime4);
+            var18Lifetime4 = this.a(var16Lifetime2, 2, var28[1], this.offenceButtons[18], var18Lifetime4);
+            var18Lifetime4 = this.a(var16Lifetime2, 2, var28[1], this.offenceButtons[19], var18Lifetime4);
+            var18Lifetime4 = this.a(var16Lifetime2, 2, var28[1], this.offenceButtons[20], var18Lifetime4);
             if (var18Lifetime4 > var17Lifetime5) {
               var17Lifetime5 = var18Lifetime4;
             }
             var18Lifetime5 = 0;
-            var18Lifetime5 = this.a(param6, var18Lifetime5, var28[2], var16Lifetime2, op.field_d, 24);
-            var18Lifetime5 = this.a(var16Lifetime2, 2, var28[2], this.field_Ub[13], var18Lifetime5);
-            var18Lifetime5 = this.a(var16Lifetime2, 2, var28[2], this.field_Ub[21], var18Lifetime5);
-            var18Lifetime5 = this.a(var16Lifetime2, 2, var28[2], this.field_Ub[11], var18Lifetime5);
+            var18Lifetime5 = this.a(titleStyle, var18Lifetime5, var28[2], var16Lifetime2, op.field_d, 24);
+            var18Lifetime5 = this.a(var16Lifetime2, 2, var28[2], this.offenceButtons[13], var18Lifetime5);
+            var18Lifetime5 = this.a(var16Lifetime2, 2, var28[2], this.offenceButtons[21], var18Lifetime5);
+            var18Lifetime5 = this.a(var16Lifetime2, 2, var28[2], this.offenceButtons[11], var18Lifetime5);
             if (var17Lifetime5 < var18Lifetime5) {
               var17Lifetime5 = var18Lifetime5;
             }
             var19 = 26 + var16Lifetime2 * 3;
-            var20 = this.field_Mb.getPreferredWidth(116);
+            var20 = this.title.getPreferredWidth(116);
             if (var19 < var20) {
               var19 = var20;
             }
-            if (null != this.field_Qb) {
-              var20Lifetime2 = this.field_Qb.d(79, 4);
+            if (null != this.muteControl) {
+              var20Lifetime2 = this.muteControl.measureRowWidth(79, 4);
               if (var19 < var20Lifetime2) {
                 var19 = var20Lifetime2;
               }
             }
-            this.field_Mb.setBounds(24, -20500, 13 + (var19 + 13), 0, 0);
-            this.field_Ib.setBounds(15, -20500, 15, 5, -20 + this.field_Mb.width);
+            this.title.setBounds(24, -20500, 13 + (var19 + 13), 0, 0);
+            this.closeButton.setBounds(15, -20500, 15, 5, -20 + this.title.width);
             var21 = 10;
-            this.field_Vb.setBounds(jn.field_d * 2, -20500, var19, var21, 13);
+            this.instructions.setBounds(jn.field_d * 2, -20500, var19, var21, 13);
             var21 = var21 + jn.field_d * 2;
-            this.field_Pb.setBounds(2 * jn.field_d, -20500, var19, var21, 13);
+            this.helpText.setBounds(2 * jn.field_d, -20500, var19, var21, 13);
             var21 = var21 + (10 + 2 * jn.field_d);
-            this.field_Rb.setBounds(jn.field_d, -20500, 0, var21, 0);
+            this.targetNameComponent.setBounds(jn.field_d, -20500, 0, var21, 0);
             var21 = var21 + (10 + jn.field_d);
-            if (null != this.field_Qb) {
-              var20Lifetime3 = this.field_Qb.d(93, 4);
-              this.field_Qb.a((byte) 120, var21, 4, jn.field_d, 13 + (-var20Lifetime3 + var19) / 2, var20Lifetime3);
+            if (null != this.muteControl) {
+              var20Lifetime3 = this.muteControl.measureRowWidth(93, 4);
+              this.muteControl.setLayout((byte) 120, var21, 4, jn.field_d, 13 + (-var20Lifetime3 + var19) / 2, var20Lifetime3);
               var21 = var21 + (10 + jn.field_d);
             }
             var28[0].setBounds(var17Lifetime5, -20500, var16Lifetime2, var21, 13);
             var28[1].setBounds(var17Lifetime5, -20500, var16Lifetime2, var21, 26 + var16Lifetime2);
             var28[2].setBounds(var17Lifetime5, -20500, var16Lifetime2, var21, 26 + (2 * var16Lifetime2 + 13));
             var22 = var21;
-            this.field_Tb.setBounds(10 + var17Lifetime5 + var22, -20500, var19 + 13 + 13, 24, 0);
-            this.field_Tb.skinSprites = tq.a(11579568, false, this.field_Tb.height, 2105376, 3, 8421504);
+            this.content.setBounds(10 + var17Lifetime5 + var22, -20500, var19 + 13 + 13, 24, 0);
+            this.content.skinSprites = tq.a(11579568, false, this.content.height, 2105376, 3, 8421504);
             var23 = var19 + 26;
             var24 = 10 + (var17Lifetime5 + (var22 + 24));
-            var25 = jp.a(param0, param2, var23, -1);
-            var26 = pd.a(var24, 0, param1, param3);
+            var25 = jp.a(anchorX, anchorWidth, var23, -1);
+            var26 = pd.a(var24, 0, anchorY, anchorHeight);
             this.setBounds(var24, -20500, var23, var26, var25);
             return;
           }
-          this.field_Vb = new ClientUiComponent(0L, param8, ot.field_F);
-          this.field_Vb.horizontalAlignment = 1;
-          this.field_Vb.textColour = 11184810;
-          this.field_Tb.addChild(this.field_Vb, 43);
+          this.instructions = new ClientUiComponent(0L, textStyle, ot.field_F);
+          this.instructions.horizontalAlignment = 1;
+          this.instructions.textColour = 11184810;
+          this.content.addChild(this.instructions, 43);
           var15_int = 226;
           var16Lifetime1 = 10;
-          var17Lifetime1 = this.field_Vb.font.c(this.field_Vb.text, var15_int);
-          this.field_Vb.setBounds(jn.field_d * var17Lifetime1, -20500, var15_int, var16Lifetime1, 13);
+          var17Lifetime1 = this.instructions.font.c(this.instructions.text, var15_int);
+          this.instructions.setBounds(jn.field_d * var17Lifetime1, -20500, var15_int, var16Lifetime1, 13);
           var16Lifetime1 = var16Lifetime1 + jn.field_d * var17Lifetime1;
-          this.field_Tb.setBounds(var16Lifetime1 + 10, -20500, 13 + (var15_int + 13), 24, 0);
-          this.field_Tb.skinSprites = tq.a(11579568, false, this.field_Tb.height, 2105376, 3, 8421504);
+          this.content.setBounds(var16Lifetime1 + 10, -20500, 13 + (var15_int + 13), 24, 0);
+          this.content.skinSprites = tq.a(11579568, false, this.content.height, 2105376, 3, 8421504);
           var18Lifetime1 = 13 + var15_int + 13;
           var19Lifetime1 = var16Lifetime1 + 34;
-          var20Lifetime1 = jp.a(param0, param2, var18Lifetime1, -1);
-          var21Lifetime1 = pd.a(var19Lifetime1, 0, param1, param3);
+          var20Lifetime1 = jp.a(anchorX, anchorWidth, var18Lifetime1, -1);
+          var21Lifetime1 = pd.a(var19Lifetime1, 0, anchorY, anchorHeight);
           this.setBounds(var19Lifetime1, -20500, var18Lifetime1, var21Lifetime1, var20Lifetime1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var15_ref = decompiledCaughtException;
           stackIn_51_0 = var15_ref;
-          stackIn_51_1 = new StringBuilder().append("i.<init>(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',');
-          if (param5 == null) {
+          stackIn_51_1 = new StringBuilder().append("i.<init>(").append(anchorX).append(',').append(anchorY).append(',').append(anchorWidth).append(',').append(anchorHeight).append(',').append(unusedReportPacketOpcode).append(',');
+          if (style == null) {
             stackIn_52_2 = "null";
           } else {
             stackIn_52_2 = "{...}";
           }
           stackIn_54_1 = ((StringBuilder) (Object) stackIn_51_1).append(stackIn_52_2).append(',');
-          if (param6 == null) {
+          if (titleStyle == null) {
             stackIn_55_2 = "null";
           } else {
             stackIn_55_2 = "{...}";
           }
           stackIn_57_1 = ((StringBuilder) (Object) stackIn_54_1).append(stackIn_55_2).append(',');
-          if (param7 == null) {
+          if (closeStyle == null) {
             stackIn_58_2 = "null";
           } else {
             stackIn_58_2 = "{...}";
           }
           stackIn_60_1 = ((StringBuilder) (Object) stackIn_57_1).append(stackIn_58_2).append(',');
-          if (param8 == null) {
+          if (textStyle == null) {
             stackIn_61_2 = "null";
           } else {
             stackIn_61_2 = "{...}";
           }
           stackIn_63_1 = ((StringBuilder) (Object) stackIn_60_1).append(stackIn_61_2).append(',');
-          if (param9 == null) {
+          if (muteStyle == null) {
             stackIn_64_2 = "null";
           } else {
             stackIn_64_2 = "{...}";
           }
           stackIn_66_1 = ((StringBuilder) (Object) stackIn_63_1).append(stackIn_64_2).append(',');
-          if (param10 == null) {
+          if (offenceStyle == null) {
             stackIn_67_2 = "null";
           } else {
             stackIn_67_2 = "{...}";
           }
           stackIn_69_1 = ((StringBuilder) (Object) stackIn_66_1).append(stackIn_67_2).append(',');
-          if (param11 == null) {
+          if (targetName == null) {
             stackIn_70_2 = "null";
           } else {
             stackIn_70_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_51_0), ((StringBuilder) (Object) stackIn_69_1).append(stackIn_70_2).append(',').append(param12).append(')').toString());
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_51_0), ((StringBuilder) (Object) stackIn_69_1).append(stackIn_70_2).append(',').append(accountId).append(')').toString());
         }
     }
 
@@ -663,7 +663,7 @@ final class i extends ClientUiComponent {
         cd.a(108, param2, param1, 2);
         if (param0) {
           RgbSprite[] var4 = (RgbSprite[]) null;
-          i.a((RgbSprite[]) null, -22, 63, (byte) 45, 53, 9);
+          ReportAbuseDialog.drawNineSlice((RgbSprite[]) null, -22, 63, (byte) 45, 53, 9);
         }
     }
 

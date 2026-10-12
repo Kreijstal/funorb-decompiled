@@ -78,7 +78,7 @@ abstract class CacheEntry extends DualLinkedNode {
                 var11_ref_String = "";
               }
               vl.outgoingPacket.b(var11_ref_String, param2 + 33883);
-              fp.a(mu.field_c, cs.field_cb, (byte) 26, vd.field_b, vl.outgoingPacket);
+              IconLabelControl.a(mu.field_c, cs.field_cb, (byte) 26, vd.field_b, vl.outgoingPacket);
               vl.outgoingPacket.f(0, -var10 + vl.outgoingPacket.position);
             } else {
               vd.field_b.position = 0;
@@ -101,7 +101,7 @@ abstract class CacheEntry extends DualLinkedNode {
               vl.outgoingPacket.writeByte(1, 16);
               vl.outgoingPacket.position = vl.outgoingPacket.position + 1;
               var9 = vl.outgoingPacket.position;
-              fp.a(mu.field_c, cs.field_cb, (byte) 26, vd.field_b, vl.outgoingPacket);
+              IconLabelControl.a(mu.field_c, cs.field_cb, (byte) 26, vd.field_b, vl.outgoingPacket);
               vl.outgoingPacket.writeByteLengthPrefix(vl.outgoingPacket.position - var9, 5930);
             }
             hb.$cfr$intArgs$a$e9dea5688aa5(54, -1);

@@ -157,7 +157,7 @@ final class jg extends IntrusiveNode {
           stackIn_3_1 = param1;
           stackIn_3_2 = param3 * (8 + 4 * jn.field_d);
           stackIn_3_3 = jn.field_d * 2 + 4;
-          stackIn_4_4 = (CipherPacketBuffer.field_x == PointerInputHandler.field_b);
+          stackIn_4_4 = (CipherPacketBuffer.field_x == PointerInputHandler.contextMenuScrollContainer);
           var7_int = ((ScrollContainer) (Object) stackIn_3_0).updateContentLayout(stackIn_3_1, stackIn_3_2, stackIn_3_3, stackIn_4_4, param0, 2) ? 1 : 0;
           var8 = CipherPacketBuffer.field_x.content.children;
           var9 = vi.monotonicMillis(-118);
@@ -405,7 +405,7 @@ final class jg extends IntrusiveNode {
                   stackIn_83_0 = 1;
                 }
                 var36 = stackIn_83_0;
-                stackIn_85_0 = mo.field_g;
+                stackIn_85_0 = ChatMessage.field_g;
                 if (var36 == 0) {
                   stackIn_86_1 = 0;
                 } else {
@@ -582,11 +582,11 @@ final class jg extends IntrusiveNode {
                 if (var12.playing && (!var12.allowsAdmissionRequests ||
                   !var12.joinable &&
                   !var12.invitationReceived)) {
-                  ov.a(param6, param0 + 3, var12.getRoomId((byte) 119));
+                  ov.writeSpectateRoomRequest(param6, param0 + 3, var12.getRoomId((byte) 119));
                   decompiledFrameRemainder0 = false;
                 }
                 else {
-                  CombatEvent.a(param6, -99, var12.getRoomId((byte) -97));
+                  CombatEvent.writeRoomAdmissionRequest(param6, -99, var12.getRoomId((byte) -97));
                 }
               }
             }

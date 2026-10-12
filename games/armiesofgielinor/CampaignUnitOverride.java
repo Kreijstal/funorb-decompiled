@@ -211,7 +211,7 @@ final class CampaignUnitOverride {
                 }
                 var2 = NodeIterator.a(50, "mu_game_is_full");
                 if (var2 != null) {
-                  mo.field_l = uu.a(var2, (byte) 102);
+                  ChatMessage.field_l = uu.a(var2, (byte) 102);
                 }
                 var2 = NodeIterator.a(50, "mu_game_has_started");
                 if (null != var2) {
@@ -1701,7 +1701,7 @@ final class CampaignUnitOverride {
                 }
                 var2 = NodeIterator.a(50, "friendlistdupe");
                 if (var2 != null) {
-                  i.field_Ob = uu.a(var2, (byte) -128);
+                  ReportAbuseDialog.field_Ob = uu.a(var2, (byte) -128);
                 }
                 var2 = NodeIterator.a(50, "friendnotfound");
                 if (null != var2) {
@@ -2690,7 +2690,7 @@ final class CampaignUnitOverride {
                 }
                 var2 = NodeIterator.a(50, "fs_button_members");
                 if (var2 != null) {
-                  tg.field_j = uu.a(var2, (byte) 34);
+                  ClientContextMenu.field_j = uu.a(var2, (byte) 34);
                 }
                 var2 = NodeIterator.a(50, "fs_unavailable");
                 if (null != var2) {

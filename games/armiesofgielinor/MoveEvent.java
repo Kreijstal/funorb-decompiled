@@ -181,8 +181,8 @@ final class MoveEvent extends GameEvent {
           var5 = MapLayout.a("screen_options", -28106, "commonui", param2);
           oa.field_H = new IndexedSprite[4];
           dq.field_e = new IndexedSprite[4];
-          tg.field_b = new IndexedSprite[4];
-          var6 = new IndexedSprite[][]{oa.field_H, dq.field_e, tg.field_b};
+          ClientContextMenu.field_b = new IndexedSprite[4];
+          var6 = new IndexedSprite[][]{oa.field_H, dq.field_e, ClientContextMenu.field_b};
           var7 = new int[4][];
           var7[0] = var5[0].palette;
           var8 = 1;

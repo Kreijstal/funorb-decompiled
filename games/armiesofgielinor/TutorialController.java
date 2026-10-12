@@ -106,7 +106,7 @@ final class TutorialController {
         int stackIn_4_0 = 0;
         RuntimeException decompiledCaughtException = null;
         try {
-          var2_int = io.a(i.field_Nb, (byte) 127) ? 1 : 0;
+          var2_int = io.a(ReportAbuseDialog.field_Nb, (byte) 127) ? 1 : 0;
           stackIn_4_0 = (PointerInputHandler.field_f == null) ? 0 : 1;
           var3 = stackIn_4_0;
           if (var3 == 0 &&
@@ -205,9 +205,9 @@ final class TutorialController {
         try {
           if (1 == DeployEvent.pointerPressButton) {
             if (IterableDualNodeDeque.isPointerInBounds(-33, db.a(true, 44), db.a(true, 159), MatchConditionEntry.a(384, (byte) 94), MatchConditionEntry.a(416, (byte) 94))) {
-              tg.field_k = 1;
+              ClientContextMenu.field_k = 1;
               if (ih.field_p != null &&
-                tg.field_k == 0) {
+                ClientContextMenu.field_k == 0) {
                 KingBlackDragonEvent.field_A = 0;
                 ts.currentSpellMenu = ih.field_p;
                 wj.field_q = 0;
@@ -215,7 +215,7 @@ final class TutorialController {
               RadialSummonMenu.$cfr$intArgs$a$6d836999ad61(123, ClientUiNode.field_v[2]);
             }
             if (IterableDualNodeDeque.isPointerInBounds(-33, db.a(true, 171), db.a(true, 286), MatchConditionEntry.a(384, (byte) 94), MatchConditionEntry.a(416, (byte) 94))) {
-              tg.field_k = 0;
+              ClientContextMenu.field_k = 0;
               RadialSummonMenu.$cfr$intArgs$a$6d836999ad61(121, ClientUiNode.field_v[2]);
             }
           }
@@ -244,7 +244,7 @@ final class TutorialController {
                         hs.b(119, pg.playerProfile.equippedSpellIds[var2_int]);
                         return;
                       }
-                      if (tg.field_k != 0) {
+                      if (ClientContextMenu.field_k != 0) {
                         ab.field_a = ev.field_d;
                         ev.field_d = pg.playerProfile.equippedSpellIds[var2_int];
                         ts.currentSpellMenu = ct.spellMenuById[ev.field_d];
@@ -282,7 +282,7 @@ final class TutorialController {
                 RadialSummonMenu.$cfr$intArgs$a$6d836999ad61(91, ClientUiNode.field_v[2]);
                 return;
               }
-              if (tg.field_k == 0) {
+              if (ClientContextMenu.field_k == 0) {
                 if (IterableDualNodeDeque.isPointerInBounds(-33, db.a(true, 469), db.a(true, 606), MatchConditionEntry.a(384, (byte) 94), MatchConditionEntry.a(416, (byte) 94))) {
                   if (ev.field_d > -1 &&
                     ev.field_d < 135 &&
@@ -379,7 +379,7 @@ final class TutorialController {
                   break;
                 }
               }
-              if (tg.field_k != 1) {
+              if (ClientContextMenu.field_k != 1) {
                 break;
               }
               var3Lifetime1 = 0;
@@ -1951,7 +1951,7 @@ final class TutorialController {
                                                       if (!gk.field_H) {
                                                         return;
                                                       }
-                                                      ov.a(11, 3, 0);
+                                                      ov.writeSpectateRoomRequest(11, 3, 0);
                                                       TrianglePulse.a(-16147, 50, mp.field_Ob, true);
                                                       if (var9 == 0) {
                                                         return;
@@ -2218,7 +2218,7 @@ final class TutorialController {
                 if (!this.selectionState.hasActivationInput((byte) 102)) {
                   return;
                 }
-                i.n(14737632);
+                ReportAbuseDialog.n(14737632);
                 var6 = param0 ? 1 : 0;
                 CipherPacketBuffer.a(var6 != 0, -6, 1, jt.field_a);
                 if (var9 == 0) {
@@ -2777,7 +2777,7 @@ final class TutorialController {
             discarded$0 = this.getItemRightX(-41, 32);
           }
           if (param0) {
-            stackIn_8_0 = i.field_Nb;
+            stackIn_8_0 = ReportAbuseDialog.field_Nb;
           } else {
             stackIn_8_0 = BoundedFile.field_e;
           }
@@ -3608,11 +3608,11 @@ final class TutorialController {
           fe.b(db.a(true, 167), MatchConditionEntry.a(380, (byte) 94), 123, 40, EffectPresentation.field_j, jh.field_k, 0, 128);
           SoftwareRaster.b(db.a(true, 167), MatchConditionEntry.a(380, (byte) 94), 123, 40, 0, 192);
           SoftwareRaster.b(db.a(true, 40), MatchConditionEntry.a(380, (byte) 94), 123, 40, 0, 192);
-          if (tg.field_k == 0) {
+          if (ClientContextMenu.field_k == 0) {
             fe.b(db.a(true, 167), MatchConditionEntry.a(380, (byte) 94), 123, 40, EffectPresentation.field_j, jh.field_k, 0, 128);
             SoftwareRaster.b(db.a(true, 167), MatchConditionEntry.a(380, (byte) 94), 123, 40, 0, 128);
           }
-          if (1 == tg.field_k) {
+          if (1 == ClientContextMenu.field_k) {
             fe.b(db.a(true, 40), MatchConditionEntry.a(380, (byte) 94), 123, 40, EffectPresentation.field_j, jh.field_k, 0, 128);
             SoftwareRaster.b(db.a(true, 40), MatchConditionEntry.a(380, (byte) 94), 123, 40, 0, 128);
           }
@@ -3639,15 +3639,15 @@ final class TutorialController {
           if (param0 != 100) {
             discarded$0 = this.d(78, 100, 70);
           }
-          if (tg.field_k == 1) {
+          if (ClientContextMenu.field_k == 1) {
             SoftwareRaster.b(db.a(true, 167), MatchConditionEntry.a(380, (byte) 94), 123, 40, 0, 128);
           }
-          if (tg.field_k == 0) {
+          if (ClientContextMenu.field_k == 0) {
             SoftwareRaster.b(db.a(true, 40), MatchConditionEntry.a(380, (byte) 94), 123, 40, 0, 128);
           }
           boolean decompiledFrameRemainder0 = true;
           fe.b(db.a(true, 30), MatchConditionEntry.a(60, (byte) 94), 270, 324, EffectPresentation.field_j, jh.field_k, 0, 256);
-          if (tg.field_k == 0) {
+          if (ClientContextMenu.field_k == 0) {
             SoftwareRaster.f(db.a(true, 34), MatchConditionEntry.a(64, (byte) 94), db.a(true, 296), MatchConditionEntry.a(380, (byte) 94));
             if (vu.field_O == null ||
               ts.currentSpellMenu == vu.field_O.parent ||
@@ -3770,7 +3770,7 @@ final class TutorialController {
           }
           if ((stackIn_111_0 != 0 ||
             br.field_f[82] &&
-            !(2 > BufferedSocket.field_j)) && tg.field_k == 0) {
+            !(2 > BufferedSocket.field_j)) && ClientContextMenu.field_k == 0) {
             if (null == ts.currentSpellMenu.parent) {
               rs.field_n.a(SocketResourceClient.field_x, db.a(true, 40), MatchConditionEntry.a(284, (byte) 94), 250, 55, 16777215, -1, var2_int + 256, 1, 1, 0);
             }
@@ -5218,7 +5218,7 @@ final class TutorialController {
             return;
           }
           var3_int = 44 % ((-32 - param1) / 61);
-          if (tg.field_k == 0) {
+          if (ClientContextMenu.field_k == 0) {
             var4 = uc.spellDefinitions[param0][0];
             fe.c(this.c(-38, var4), db.a(true, 537), MatchConditionEntry.a(366, (byte) 94), nd.field_b, true);
             if (pg.playerProfile.getAvailableRunes((byte) 125) >= var4 &&
@@ -5236,7 +5236,7 @@ final class TutorialController {
               fe.c(wv.field_e, db.a(true, 537), MatchConditionEntry.a(416, (byte) 94), 0, true);
             }
           }
-          if (tg.field_k == 1) {
+          if (ClientContextMenu.field_k == 1) {
             var4Lifetime1 = 0;
             var5 = 0;
             var6 = 0;
@@ -5405,7 +5405,7 @@ final class TutorialController {
           if (this.tutorialStage != 9) {
             stackIn_7_0 = BoundedFile.field_e;
           } else {
-            stackIn_7_0 = i.field_Nb;
+            stackIn_7_0 = ReportAbuseDialog.field_Nb;
           }
           var3 = stackIn_7_0;
           stackIn_8_0 = rb.a(param1, var3, 1);

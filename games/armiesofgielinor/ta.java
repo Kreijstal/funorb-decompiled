@@ -46,7 +46,7 @@ final class ta extends nl {
     }
 
     final static void a(String param0, int param1, int param2, String param3, String param4, int param5) {
-        mo var6 = null;
+        ChatMessage var6 = null;
         RuntimeException var6_ref = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
@@ -57,7 +57,7 @@ final class ta extends nl {
         String stackIn_12_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var6 = new mo(param1, param3, param5, param0, param4);
+          var6 = new ChatMessage(param1, param3, param5, param0, param4);
           SectorCacheStore.a(param2 ^ -19023, var6);
           if (param2 == -18119) {
             return;

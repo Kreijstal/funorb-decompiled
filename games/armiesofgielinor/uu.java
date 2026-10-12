@@ -434,7 +434,7 @@ final class uu {
           ij.field_w.field_a.advanceTabSelection(param3 ^ 10000);
           if (vu.currentRoom != null) {
             if (mp.field_Lb.pressedButton != 0) {
-              PointerInputHandler.a(69, vu.currentRoom.getRoomId((byte) -68), param2);
+              PointerInputHandler.writeRoomAdmissionCancellation(69, vu.currentRoom.getRoomId((byte) -68), param2);
             }
             if (lm.field_b.pressedButton != 0) {
               vk.field_f = true;

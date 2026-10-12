@@ -112,7 +112,7 @@ final class DamageEvent extends GameEvent {
           if (param10 != -5429) {
             field_z = (String) null;
           }
-          tg.a(param13, 2, param5, param8);
+          ClientContextMenu.a(param13, 2, param5, param8);
           hf.a(param10 + 13099);
           DeployEvent.h(14570);
           TurnChangeEvent.d((byte) -112);

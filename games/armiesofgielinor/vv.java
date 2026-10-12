@@ -204,7 +204,7 @@ final class vv {
         if (var12.movementSpent) {
           if (var12.h(-13494)) {
             if (var12.accessoryType == 1) {
-              i.a(false, param5, param0);
+              ReportAbuseDialog.a(false, param5, param0);
             }
             if (var12.hasMovementFlag1(false)) {
               UnitCycler.a(111, param5, param0, var12);
@@ -260,7 +260,7 @@ final class vv {
             if (var12.attacksRemaining == 0) {
               LobbyPlayer.field_Mb[2].draw(param0 + 8, param5 + 12);
               if (var12.accessoryType == 1) {
-                i.a(false, param5, param0);
+                ReportAbuseDialog.a(false, param5, param0);
               }
               if (var12.hasMovementFlag1(false)) {
                 UnitCycler.a(111, param5, param0, var12);
@@ -315,7 +315,7 @@ final class vv {
             } else {
               LobbyPlayer.field_Mb[1].draw(param0 + 8, param5 + 12);
               if (var12.accessoryType == 1) {
-                i.a(false, param5, param0);
+                ReportAbuseDialog.a(false, param5, param0);
               }
               if (var12.hasMovementFlag1(false)) {
                 UnitCycler.a(111, param5, param0, var12);
@@ -372,7 +372,7 @@ final class vv {
           return;
         }
         if (var12.accessoryType == 1) {
-          i.a(false, param5, param0);
+          ReportAbuseDialog.a(false, param5, param0);
         }
         if (var12.hasMovementFlag1(false)) {
           UnitCycler.a(111, param5, param0, var12);

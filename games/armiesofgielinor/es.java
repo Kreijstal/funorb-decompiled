@@ -184,7 +184,7 @@ final class es {
           if (param4) {
             if (param3 != -1) {
               for (var11 = 0; var9.length - 1 > var11; var11++) {
-                if ((tg.field_d[(var11 + param0) / 8] & 1 << (param0 + var11 & 7)) == 0) {
+                if ((ClientContextMenu.field_d[(var11 + param0) / 8] & 1 << (param0 + var11 & 7)) == 0) {
                   continue;
                 }
                 var10 = 0;

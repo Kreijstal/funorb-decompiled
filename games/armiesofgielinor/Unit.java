@@ -1019,7 +1019,7 @@ final class Unit extends IntrusiveNode implements TaggedFieldReader {
           for (var3Lifetime1 = 0; var3Lifetime1 < 8; var3Lifetime1++) {
             var8[var3Lifetime1] = oe.c(var18[var3Lifetime1], var25[var3Lifetime1]);
           }
-          var19 = i.field_Nb;
+          var19 = ReportAbuseDialog.field_Nb;
           var15 = var19;
           var10 = var15;
           var1Lifetime2 = var10;

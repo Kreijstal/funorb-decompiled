@@ -120,7 +120,7 @@ final class bn {
                   br.field_f[12]) {
                   gu.a(-61, param3);
                 } else {
-                  mo.field_w = true;
+                  ChatMessage.field_w = true;
                 }
               }
             }
@@ -157,10 +157,10 @@ final class bn {
                   if (br.field_f[12]) {
                     gu.a(-61, param3);
                   } else {
-                    mo.field_w = true;
+                    ChatMessage.field_w = true;
                   }
                 } else {
-                  mo.field_w = true;
+                  ChatMessage.field_w = true;
                 }
               }
             }

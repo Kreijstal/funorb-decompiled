@@ -360,7 +360,7 @@ final class ak extends ju {
         IconTextComponent.field_Kb.setBounds(GlobalSpell.field_f.height - (!fh.field_c ? 0 : var1), -20500, GlobalSpell.field_f.width, !fh.field_c ? 0 : var1, 0);
         mj.a((byte) 91);
         cp.field_d.setBounds(40, -20500, no.field_T.width, no.field_T.height - 40, 0);
-        tg.field_n.setBounds(30, -20500, ov.field_i.width, 0, 0);
+        ClientContextMenu.field_n.setBounds(30, -20500, ov.field_i.width, 0, 0);
         LobbyPlayer.field_Lb.setBounds(-30 + (-40 + ov.field_i.height) - 2, -20500, ov.field_i.width, 30, 0);
         r.field_v.setBounds(30, -20500, 68, 5, 5);
         ek.field_c.setBounds(30, -20500, 78, 5, 75);

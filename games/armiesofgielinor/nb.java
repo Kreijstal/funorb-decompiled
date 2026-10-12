@@ -96,26 +96,26 @@ final class nb {
           if (this.field_l == 0) {
             var4 = this.field_q;
             var5 = this.field_j;
-            return mo.a(param2, this.field_c, this.field_d, param0, var4, (byte) -107, var5);
+            return ChatMessage.a(param2, this.field_c, this.field_d, param0, var4, (byte) -107, var5);
           }
           if (this.field_l != 1) {
             return false;
           }
           var4Lifetime3 = this.field_j;
           var5Lifetime3 = this.field_q;
-          return mo.a(param2, this.field_c, this.field_d, param0, var4Lifetime3, (byte) -107, var5Lifetime3);
+          return ChatMessage.a(param2, this.field_c, this.field_d, param0, var4Lifetime3, (byte) -107, var5Lifetime3);
         }
         if (this.field_l == 0) {
           var4Lifetime1 = this.field_q;
           var5Lifetime1 = this.field_j;
-          return mo.a(param2, this.field_c, this.field_d, param0, var4Lifetime1, (byte) -107, var5Lifetime1);
+          return ChatMessage.a(param2, this.field_c, this.field_d, param0, var4Lifetime1, (byte) -107, var5Lifetime1);
         }
         if (this.field_l != 1) {
           return false;
         }
         var4Lifetime2 = this.field_j;
         var5Lifetime2 = this.field_q;
-        return mo.a(param2, this.field_c, this.field_d, param0, var4Lifetime2, (byte) -107, var5Lifetime2);
+        return ChatMessage.a(param2, this.field_c, this.field_d, param0, var4Lifetime2, (byte) -107, var5Lifetime2);
     }
 
     private final boolean a(int param0, int param1, int param2, int param3) {
@@ -124,7 +124,7 @@ final class nb {
         int var7 = this.a(param3, param0);
         int var8 = this.field_k[0].canvasWidth;
         int var9 = this.field_k[0].canvasHeight;
-        var5 = mo.a(param1, var6, var7, param2, var8, (byte) -110, var9) ? 1 : 0;
+        var5 = ChatMessage.a(param1, var6, var7, param2, var8, (byte) -110, var9) ? 1 : 0;
         return var5 != 0;
     }
 

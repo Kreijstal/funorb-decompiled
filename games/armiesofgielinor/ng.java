@@ -392,7 +392,7 @@ final class ng {
           var5 = var5 - this.field_y.c(26787);
         }
         SoftwareRaster.f(var2, var3, var4, var5, 7829367);
-        i.a(this.field_l, var5, var2, (byte) -47, var3, var4);
+        ReportAbuseDialog.drawNineSlice(this.field_l, var5, var2, (byte) -47, var3, var4);
     }
 
     private final void f(int param0) {
@@ -545,13 +545,13 @@ final class ng {
         return this.field_r;
     }
 
-    final static void a(ScrollContainer param0, ClientUiComponent param1, int[] param2, String param3, int param4, int param5, int param6, String param7, long param8) {
+    final static void openClientContextMenu(ScrollContainer scrollContainer, ClientUiComponent sourceComponent, int[] quickChatContext, String displayName, int roomId, int obfuscationGuard, int chatChannel, String accountName, long accountId) {
         try {
-          int var10_int = -119 % ((param5 + 47) / 32);
-          PointerInputHandler.field_b = param0;
-          tn.field_Z = new tg(param1, param8, param7, param3, param4, param6, param2);
+          int var10_int = -119 % ((obfuscationGuard + 47) / 32);
+          PointerInputHandler.contextMenuScrollContainer = scrollContainer;
+          tn.activeContextMenu = new ClientContextMenu(sourceComponent, accountId, accountName, displayName, roomId, chatChannel, quickChatContext);
         } catch (RuntimeException runtimeException) {
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "ng.FA(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ',' + param6 + ',' + (param7 != null ? "{...}" : "null") + ',' + param8 + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "ng.FA(" + (scrollContainer != null ? "{...}" : "null") + ',' + (sourceComponent != null ? "{...}" : "null") + ',' + (quickChatContext != null ? "{...}" : "null") + ',' + (displayName != null ? "{...}" : "null") + ',' + roomId + ',' + obfuscationGuard + ',' + chatChannel + ',' + (accountName != null ? "{...}" : "null") + ',' + accountId + ')');
         }
     }
 
@@ -929,7 +929,7 @@ final class ng {
         int var8 = -30 / ((param1 + 89) / 32);
         int var7 = this.E(1);
         for (var9 = this.field_m; this.field_z > var9; var9++) {
-          if (mo.a(param0, var4, var5, param2, var7, (byte) -101, var6)) {
+          if (ChatMessage.a(param0, var4, var5, param2, var7, (byte) -101, var6)) {
             return var9;
           }
           var5 = var5 + var6;

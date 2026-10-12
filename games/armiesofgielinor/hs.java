@@ -7,7 +7,7 @@ abstract class hs extends Widget implements gw {
     static String field_D;
     Widget[] field_C;
     static String field_I;
-    static fp field_H;
+    static IconLabelControl field_H;
     static int[] field_G;
     static RgbSprite[] field_F;
     static String[] field_E;
@@ -863,7 +863,7 @@ abstract class hs extends Widget implements gw {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != 88) {
-            field_H = (fp) null;
+            field_H = (IconLabelControl) null;
           }
           stackIn_3_0 = this.a((byte) 99, param1, 1);
           return stackIn_3_0;
@@ -1027,7 +1027,7 @@ abstract class hs extends Widget implements gw {
           mh.a(ResourceProtocolClient.field_e + 32 - var1, (byte) -36);
         }
         if (param0 != 30) {
-          field_H = (fp) null;
+          field_H = (IconLabelControl) null;
         }
     }
 

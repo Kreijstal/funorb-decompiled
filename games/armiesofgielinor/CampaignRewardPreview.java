@@ -34,22 +34,22 @@ final class CampaignRewardPreview {
         field_e = null;
     }
 
-    final static void a(String param0, int param1, long param2, int param3, boolean param4, int param5) {
+    final static void writeAbuseReport(String targetName, int offenceId, long accountId, int obfuscationGuard, boolean mute, int packetOpcode) {
         int var7_int = 0;
-        vl.outgoingPacket.writeCipheredOpcode(param3 ^ 3982, param5);
+        vl.outgoingPacket.writeCipheredOpcode(obfuscationGuard ^ 3982, packetOpcode);
         vl.outgoingPacket.position = vl.outgoingPacket.position + 1;
-        if (param3 != 29231) {
+        if (obfuscationGuard != 29231) {
           return;
         }
         try {
           var7_int = vl.outgoingPacket.position;
-          vl.outgoingPacket.a(param2, param3 ^ 38346879);
-          vl.outgoingPacket.b(param0, param3 ^ 17460);
-          vl.outgoingPacket.writeByte(1, param1);
-          vl.outgoingPacket.writeByte(param3 - 29230, param4 ? 1 : 0);
+          vl.outgoingPacket.writeLong(accountId, obfuscationGuard ^ 38346879);
+          vl.outgoingPacket.b(targetName, obfuscationGuard ^ 17460);
+          vl.outgoingPacket.writeByte(1, offenceId);
+          vl.outgoingPacket.writeByte(obfuscationGuard - 29230, mute ? 1 : 0);
           vl.outgoingPacket.writeByteLengthPrefix(-var7_int + vl.outgoingPacket.position, 5930);
         } catch (RuntimeException runtimeException) {
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "fu.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "fu.B(" + (targetName != null ? "{...}" : "null") + ',' + offenceId + ',' + accountId + ',' + obfuscationGuard + ',' + mute + ',' + packetOpcode + ')');
         }
     }
 

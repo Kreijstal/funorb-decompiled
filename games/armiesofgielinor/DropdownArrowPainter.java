@@ -39,7 +39,7 @@ final class DropdownArrowPainter implements WidgetPainter {
         var2.writeBytes(CoatOfArms.field_d, 0, CoatOfArms.field_d.length, 113);
         var2.writeByte(1, DiskCacheRequest.field_E);
         var2.writeByte(1, AiPlanningStrategy.field_b);
-        var2.writeBytes(tg.field_d, 0, tg.field_d.length, -72);
+        var2.writeBytes(ClientContextMenu.field_d, 0, ClientContextMenu.field_d.length, -72);
         if (param1 != -8006) {
           field_b = -111;
         }

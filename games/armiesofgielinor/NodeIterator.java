@@ -100,9 +100,9 @@ final class NodeIterator {
     }
 
     final static boolean a(int param0, int param1, int param2, int param3) {
-        if (null == tn.field_Z) {
+        if (null == tn.activeContextMenu) {
           if (null != Spell.field_b &&
-            Spell.field_b.l(18585)) {
+            Spell.field_b.isWaitingForChoice(18585)) {
             Spell.field_b = null;
             ot.g(76);
             return true;
@@ -111,7 +111,7 @@ final class NodeIterator {
             field_b = (RgbSprite[]) null;
           }
         } else {
-          if (tn.field_Z.c((byte) -121)) {
+          if (tn.activeContextMenu.isWaitingForAction((byte) -121)) {
             ot.g(76);
             return true;
           }
@@ -127,7 +127,7 @@ final class NodeIterator {
             }
             return true;
           }
-          if (Spell.field_b.l(18585)) {
+          if (Spell.field_b.isWaitingForChoice(18585)) {
             Spell.field_b = null;
             ot.g(76);
             return true;

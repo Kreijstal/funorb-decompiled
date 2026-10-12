@@ -96,32 +96,32 @@ class PacketBuffer extends IntrusiveNode {
         this.payload[fieldTemp$4] = (byte)(int)value;
     }
 
-    final void a(long param0, int param1) {
+    final void writeLong(long value, int obfuscationGuard) {
         int fieldTemp$0 = this.position;
         this.position = this.position + 1;
-        this.payload[fieldTemp$0] = (byte)(int)(param0 >> 56);
+        this.payload[fieldTemp$0] = (byte)(int)(value >> 56);
         int fieldTemp$1 = this.position;
         this.position = this.position + 1;
-        this.payload[fieldTemp$1] = (byte)(int)(param0 >> 48);
+        this.payload[fieldTemp$1] = (byte)(int)(value >> 48);
         int fieldTemp$2 = this.position;
         this.position = this.position + 1;
-        this.payload[fieldTemp$2] = (byte)(int)(param0 >> 40);
+        this.payload[fieldTemp$2] = (byte)(int)(value >> 40);
         int fieldTemp$3 = this.position;
         this.position = this.position + 1;
-        this.payload[fieldTemp$3] = (byte)(int)(param0 >> 32);
+        this.payload[fieldTemp$3] = (byte)(int)(value >> 32);
         int fieldTemp$4 = this.position;
         this.position = this.position + 1;
-        this.payload[fieldTemp$4] = (byte)(int)(param0 >> 24);
+        this.payload[fieldTemp$4] = (byte)(int)(value >> 24);
         int fieldTemp$5 = this.position;
         this.position = this.position + 1;
-        this.payload[fieldTemp$5] = (byte)(int)(param0 >> 16);
+        this.payload[fieldTemp$5] = (byte)(int)(value >> 16);
         int fieldTemp$6 = this.position;
         this.position = this.position + 1;
-        this.payload[fieldTemp$6] = (byte)(int)(param0 >> 8);
+        this.payload[fieldTemp$6] = (byte)(int)(value >> 8);
         int fieldTemp$7 = this.position;
         this.position = this.position + 1;
-        this.payload[fieldTemp$7] = (byte)(int)param0;
-        if (param1 != 38359632) {
+        this.payload[fieldTemp$7] = (byte)(int)value;
+        if (obfuscationGuard != 38359632) {
           int[] var5 = (int[]) null;
           this.decryptXteaRange((int[]) null, -11, -67, -35);
         }

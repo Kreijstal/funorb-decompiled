@@ -19,7 +19,7 @@ final class TelepopEvent extends GameEvent {
 
     final static void a(boolean param0, String param1) {
         try {
-          fp.a(param1, (byte) -65);
+          IconLabelControl.a(param1, (byte) -65);
           af.a(param0, MapLayout.field_o, -1);
         } catch (RuntimeException runtimeException) {
           throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "q.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');

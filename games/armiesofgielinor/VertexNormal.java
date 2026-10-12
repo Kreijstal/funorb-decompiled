@@ -128,7 +128,7 @@ final class VertexNormal {
           stackIn_40_1 = param2;
           stackIn_40_2 = param0 * (8 + jn.field_d * 4);
           stackIn_40_3 = jn.field_d * 2 + 4;
-          stackIn_41_4 = (param4 == PointerInputHandler.field_b);
+          stackIn_41_4 = (param4 == PointerInputHandler.contextMenuScrollContainer);
           stackIn_44_0 = (!((ScrollContainer) (Object) stackIn_40_0).updateContentLayout(stackIn_40_1, stackIn_40_2, stackIn_40_3, stackIn_41_4, 0, 2)) ? 0 : 1;
           var9Lifetime1 = stackIn_44_0;
           var10 = param4.content.children;
@@ -304,12 +304,12 @@ final class VertexNormal {
             if (var12.pressedButton != 0 &&
               !var12.isRemovedFromIndex(0)) {
               if (var12.admissionButton.pressedButton != 0) {
-                ActionSpell.a(var12.accountId, param3, 6);
+                ActionSpell.writePlayerAdmissionRequest(var12.accountId, param3, 6);
               } else {
                 if (0 == var12.cancelRejectButton.pressedButton) {
                   bk.a(false, 0, BattleTutorial.pointerPressX, 0, var12, param4, TeleportAction.pointerPressY);
                 } else {
-                  te.a(param3, var12.accountId, (byte) 97);
+                  te.writePlayerAdmissionCancellation(param3, var12.accountId, (byte) 97);
                 }
               }
             }

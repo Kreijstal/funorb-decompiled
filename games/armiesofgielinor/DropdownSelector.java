@@ -245,7 +245,7 @@ final class DropdownSelector extends tj implements he {
               for (var3 = 0; var3 < 8; var3++) {
                 var5[var3] = oe.c(var12[var3], var16[var3]);
               }
-              var13 = i.field_Nb;
+              var13 = ReportAbuseDialog.field_Nb;
               var11 = var13;
               var7 = var11;
               var1Lifetime1 = var7;
@@ -266,9 +266,9 @@ final class DropdownSelector extends tj implements he {
             if (OwnerChangeEvent.field_B) {
               UpkeepEvent.h(-78);
               ws.b(true);
-              if (tg.field_a == 9 &&
-                !io.a(i.field_Nb, (byte) 116)) {
-                tg.field_a = 0;
+              if (ClientContextMenu.field_a == 9 &&
+                !io.a(ReportAbuseDialog.field_Nb, (byte) 116)) {
+                ClientContextMenu.field_a = 0;
               }
             }
           }

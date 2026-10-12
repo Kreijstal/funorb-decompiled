@@ -100,7 +100,7 @@ final class fk implements WidgetPainter {
               throw new ef(var4.field_s);
             }
             var5 = param0.a((byte) 13);
-            if (mo.field_j != var5.field_q) {
+            if (ChatMessage.field_j != var5.field_q) {
               throw new ef(var5.field_s);
             }
             var4.field_k = new NodeDeque();

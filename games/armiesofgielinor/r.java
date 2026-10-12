@@ -308,7 +308,7 @@ final class r extends vt {
 
     final boolean a(int param0, int param1, int param2) {
         int var4 = -56 % ((17 - param1) / 60);
-        return mo.a(param2, this.field_A, this.field_K, param0, this.field_t, (byte) -99, this.field_o);
+        return ChatMessage.a(param2, this.field_A, this.field_K, param0, this.field_t, (byte) -99, this.field_o);
     }
 
     final void j(int param0) {
@@ -361,7 +361,7 @@ final class r extends vt {
 
     private final void b(boolean param0) {
         SoftwareRaster.f(this.field_A, this.field_K, this.field_t, this.field_o, 7829367);
-        i.a(this.field_D, this.field_o, this.field_A, (byte) -47, this.field_K, this.field_t);
+        ReportAbuseDialog.drawNineSlice(this.field_D, this.field_o, this.field_A, (byte) -47, this.field_K, this.field_t);
         if (param0) {
           this.field_q = (int[]) null;
         }

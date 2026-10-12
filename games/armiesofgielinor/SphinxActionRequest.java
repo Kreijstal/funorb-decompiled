@@ -181,12 +181,12 @@ final class SphinxActionRequest extends ActionRequest {
           ke.field_e = new ClientUiComponent(0L, eq.field_h);
           ke.field_e.skinSprites = jq.a(false, 2236962, -20600, 16, false, 2236962);
           ke.field_e.textHorizontalPadding = 2;
-          fp.field_Lb = new ClientUiComponent(0L, eq.field_h);
-          fp.field_Lb.skinSprites = jq.a(false, 1513239, -20600, 16, false, 1513239);
-          fp.field_Lb.textHorizontalPadding = 2;
+          IconLabelControl.field_Lb = new ClientUiComponent(0L, eq.field_h);
+          IconLabelControl.field_Lb.skinSprites = jq.a(false, 1513239, -20600, 16, false, 1513239);
+          IconLabelControl.field_Lb.textHorizontalPadding = 2;
           ws.field_P = new ClientUiComponent(0L, ke.field_e);
           ws.field_P.applyStyle(0, DualLinkedNode.field_k);
-          IsaacRandom.field_i = new ClientUiComponent(0L, fp.field_Lb);
+          IsaacRandom.field_i = new ClientUiComponent(0L, IconLabelControl.field_Lb);
           IsaacRandom.field_i.applyStyle(0, DualLinkedNode.field_k);
           var16 = fk.a("button_mouseover", (byte) -128, param1, "lobby");
           AnimationSequence.field_h = new ContextActionMenu(kq.field_N, var12, eq.field_h, DualLinkedNode.field_k, 3, 2, io.field_n, 3, jn.field_d);
@@ -269,7 +269,7 @@ final class SphinxActionRequest extends ActionRequest {
           PreparedAction.field_o.selectedSkinSprites = dupTemp$3;
           PreparedAction.field_o.heldPressSkinSprites = dupTemp$3;
           var17 = fk.a("checkbox", (byte) -124, param1, "lobby");
-          hs.field_H = new fp(0L, var17[1], var17[0], 1, DualLinkedNode.field_k, (String) null);
+          hs.field_H = new IconLabelControl(0L, var17[1], var17[0], 1, DualLinkedNode.field_k, (String) null);
           oe.field_Cb = new ClientUiComponent(0L, (ClientUiComponent) null);
           oe.field_Cb.skinSprites = it.a(17, GameplayController.a("slideregion", (byte) 51, "lobby", param1));
           oe.field_Cb.matchedButtonSkinSprites = it.a(17, GameplayController.a("slideregion_mouseover", (byte) 51, "lobby", param1));

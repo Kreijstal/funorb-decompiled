@@ -5,7 +5,7 @@ final class PointerInputHandler implements java.awt.event.MouseListener, java.aw
     static cr field_a;
     static aj field_f;
     static String field_e;
-    static ScrollContainer field_b;
+    static ScrollContainer contextMenuScrollContainer;
     static String field_d;
     static String field_c;
 
@@ -38,13 +38,13 @@ final class PointerInputHandler implements java.awt.event.MouseListener, java.aw
         }
     }
 
-    final static void a(int param0, int param1, int param2) {
+    final static void writeRoomAdmissionCancellation(int obfuscationGuard, int roomId, int packetOpcode) {
         CipherPacketBuffer var3 = vl.outgoingPacket;
-        var3.writeCipheredOpcode(32161, param2);
+        var3.writeCipheredOpcode(32161, packetOpcode);
         var3.writeByte(1, 3);
-        int var4 = -78 % ((param0 - 10) / 46);
+        int var4 = -78 % ((obfuscationGuard - 10) / 46);
         var3.writeByte(1, 9);
-        var3.writeShort(true, param1);
+        var3.writeShort(true, roomId);
     }
 
     public final synchronized void mousePressed(java.awt.event.MouseEvent event) {
@@ -187,7 +187,7 @@ final class PointerInputHandler implements java.awt.event.MouseListener, java.aw
         field_e = null;
         field_f = null;
         field_c = null;
-        field_b = null;
+        contextMenuScrollContainer = null;
         field_d = null;
         field_a = null;
     }

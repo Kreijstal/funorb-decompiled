@@ -99,38 +99,38 @@ final class TabbedPanel extends ClientUiComponent {
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
-        tg var8 = null;
+        ClientContextMenu var8 = null;
         String var9 = null;
-        tg var10 = null;
+        ClientContextMenu var10 = null;
         String var11 = null;
-        tg var12 = null;
+        ClientContextMenu var12 = null;
         String var13 = null;
-        tg var14 = null;
+        ClientContextMenu var14 = null;
         try {
-          ng.a(CipherPacketBuffer.field_x, param1, (int[]) null, (String) null, param1.getRoomId((byte) -84), 92, -1, (String) null, 0L);
+          ng.openClientContextMenu(CipherPacketBuffer.field_x, param1, (int[]) null, (String) null, param1.getRoomId((byte) -84), 92, -1, (String) null, 0L);
           if (param1.playing && (2 == param1.spectatorMode ||
             !(BufferedSocket.field_j < 2))) {
-            var8 = tn.field_Z;
+            var8 = tn.activeContextMenu;
             var9 = fo.a(4800, SectorCacheStore.field_k, new String[]{param3});
-            var8.field_i.addTextAction(10, var9, (byte) -118);
+            var8.menu.addTextAction(10, var9, (byte) -118);
           }
-          tn.field_Z.a((byte) 96);
+          tn.activeContextMenu.addRoomAdmissionActions((byte) 96);
           if (param2) {
-            if (oo.field_a != tn.field_Z.field_c) {
-              var12 = tn.field_Z;
+            if (oo.watchedRoomId != tn.activeContextMenu.roomId) {
+              var12 = tn.activeContextMenu;
               var13 = fo.a(4800, fs.field_a, new String[]{param3});
-              var12.field_i.addTextAction(15, var13, (byte) -105);
+              var12.menu.addTextAction(15, var13, (byte) -105);
             } else {
-              var10 = tn.field_Z;
+              var10 = tn.activeContextMenu;
               var11 = fo.a(4800, cp.field_g, new String[]{param3});
-              var10.field_i.addTextAction(16, var11, (byte) -103);
+              var10.menu.addTextAction(16, var11, (byte) -103);
             }
           }
-          var14 = tn.field_Z;
+          var14 = tn.activeContextMenu;
           var5 = BattleTutorial.pointerPressX;
           var6 = TeleportAction.pointerPressY;
           var7 = 125 / ((22 - param0) / 38);
-          var14.field_i.layoutPopup(0, var6, 0, (byte) -118, var5);
+          var14.menu.layoutPopup(0, var6, 0, (byte) -118, var5);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -118,7 +118,7 @@ final class j {
           }
           wb.field_b[6] = el.field_a;
           wb.field_b[13] = QuickChatPhrase.field_y;
-          du.field_g = new String[]{tg.field_l, gk.field_N, tv.field_c, tv.field_b, CombatSandbox.field_g, ScrollContainer.field_Kb, DelayedPacket.field_r, r.field_I, we.field_h, kd.field_Q, og.field_t, ByteStorage.field_c, fg.field_l, pi.field_P, StateChangeEvent.field_H, ut.field_ib};
+          du.field_g = new String[]{ClientContextMenu.field_l, gk.field_N, tv.field_c, tv.field_b, CombatSandbox.field_g, ScrollContainer.field_Kb, DelayedPacket.field_r, r.field_I, we.field_h, kd.field_Q, og.field_t, ByteStorage.field_c, fg.field_l, pi.field_P, StateChangeEvent.field_H, ut.field_ib};
           wb.field_b[18] = dd.field_g;
           wb.field_b[4] = gg.field_H;
           wb.field_b[14] = ov.field_d;

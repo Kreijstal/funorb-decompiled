@@ -20,7 +20,7 @@ abstract class vf {
     abstract void b(int param0, int param1, int param2);
 
     final static void a(int param0, int param1) {
-        tg.field_a = param1;
+        ClientContextMenu.field_a = param1;
         if (param0 != 0) {
           field_f = -108;
         }
@@ -461,16 +461,16 @@ abstract class vf {
                 } else {
                   if (var9 == -1) {
                     for (var18 = var6Lifetime3; var18 < var30.length + var6Lifetime3 - 1; var18++) {
-                      tg.field_d[var18 / 8] = (byte)rn.a((int) tg.field_d[var18 / 8], ~(1 << rn.a(7, var18)));
+                      ClientContextMenu.field_d[var18 / 8] = (byte)rn.a((int) ClientContextMenu.field_d[var18 / 8], ~(1 << rn.a(7, var18)));
                     }
                   } else {
-                    tg.field_d[(var6Lifetime3 + var9) / 8] = (byte)GrowthEvent.b((int) tg.field_d[(var6Lifetime3 + var9) / 8], 1 << rn.a(var9 + var6Lifetime3, 7));
+                    ClientContextMenu.field_d[(var6Lifetime3 + var9) / 8] = (byte)GrowthEvent.b((int) ClientContextMenu.field_d[(var6Lifetime3 + var9) / 8], 1 << rn.a(var9 + var6Lifetime3, 7));
                   }
                 }
               }
               if (param1 &&
                 var16Lifetime1 != 0) {
-                tg.field_d[(var6Lifetime3 + var9) / 8] = (byte)rn.a((int) tg.field_d[(var6Lifetime3 + var9) / 8], ~(1 << rn.a(var9 + var6Lifetime3, 7)));
+                ClientContextMenu.field_d[(var6Lifetime3 + var9) / 8] = (byte)rn.a((int) ClientContextMenu.field_d[(var6Lifetime3 + var9) / 8], ~(1 << rn.a(var9 + var6Lifetime3, 7)));
               }
               if (var9 >= 0 &&
                 var17.hovered) {
@@ -607,14 +607,14 @@ abstract class vf {
                   while (var30.length + var6Lifetime3 - 1 > var27) {
                     stackIn_334_0 = var17;
                     stackIn_334_1 = var17.selected;
-                    stackIn_335_2 = ((tg.field_d[var27 / 8] & 1 << (var27 & 7)) == 0);
+                    stackIn_335_2 = ((ClientContextMenu.field_d[var27 / 8] & 1 << (var27 & 7)) == 0);
                     stackIn_334_0.selected = stackIn_334_1 & stackIn_335_2;
                     var27++;
                   }
                 } else {
                   stackIn_337_0 = var17;
                   stackIn_337_1 = -1;
-                  stackIn_337_2 = tg.field_d[(var9 + var6Lifetime3) / 8] & 1 << (var9 + var6Lifetime3 & 7);
+                  stackIn_337_2 = ClientContextMenu.field_d[(var9 + var6Lifetime3) / 8] & 1 << (var9 + var6Lifetime3 & 7);
                   stackIn_337_3 = -1;
                   stackIn_340_1 = (stackIn_337_1 != (stackIn_337_2 ^ stackIn_337_3));
                   stackIn_337_0.selected = stackIn_340_1;

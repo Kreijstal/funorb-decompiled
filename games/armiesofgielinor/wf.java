@@ -38,7 +38,7 @@ abstract class wf extends iv {
         QuickChatPhraseRepository.b((byte) 112);
         CampaignMission.field_I = jk.b(68);
         lk.a(101, IndexedSpriteBase.field_b);
-        mo.field_c = param7;
+        ChatMessage.field_c = param7;
         on.field_n = param5;
         lk.field_p = param0;
         wl.field_E = param1;
@@ -219,7 +219,7 @@ abstract class wf extends iv {
             throw new IllegalStateException();
           }
           if (1 == var4) {
-            var5_int = ClientConnectionState.a(false, CampaignMission.c((byte) -27), fp.l(-117));
+            var5_int = ClientConnectionState.a(false, CampaignMission.c((byte) -27), IconLabelControl.l(-117));
             if (var5_int != -1) {
               AiPlanningStrategy.a(103, br.field_b, lk.field_r, var5_int);
               lk.field_r = null;
@@ -396,7 +396,7 @@ abstract class wf extends iv {
         int stackIn_30_0 = 0;
         boolean stackIn_31_1 = false;
         int var2;
-        mo var3;
+        ChatMessage var3;
         int var4;
         var4 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         var2 = nm.deliveredOpcode;
@@ -628,7 +628,7 @@ abstract class wf extends iv {
           if (og.field_m != 0) {
             IconTextComponent.field_Nb = nu.a(on.field_n, true);
           }
-          ps.field_u = DamageEvent.a(1, mo.field_c, (byte) 119, false, true);
+          ps.field_u = DamageEvent.a(1, ChatMessage.field_c, (byte) 119, false, true);
           CombatPresentation.field_M = DamageEvent.a(1, wl.field_E, (byte) 122, false, true);
           h.field_g = DamageEvent.a(1, DualLinkedNode.field_t, (byte) 127, false, true);
           gg.field_K = ps.field_u;
@@ -660,12 +660,12 @@ abstract class wf extends iv {
           it.field_b = false;
           UnitSpell.field_e = ef.field_a;
           StateChangeEvent.a(CombatPresentation.field_M, ps.field_u, h.field_g, 0, BestScoreStrategy.field_l);
-          if (mo.field_r ||
+          if (ChatMessage.field_r ||
             pd.field_b != null) {
             stackIn_96_0 = 3;
             stackIn_96_1 = pd.field_b;
-            stackIn_97_2 = !(mo.field_r);
-            stackIn_100_3 = !(mo.field_r);
+            stackIn_97_2 = !(ChatMessage.field_r);
+            stackIn_100_3 = !(ChatMessage.field_r);
             rn.a(stackIn_96_0, stackIn_96_1, stackIn_97_2, stackIn_100_3);
           }
           if (hc.field_i) {

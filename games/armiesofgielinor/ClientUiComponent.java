@@ -864,9 +864,9 @@ class ClientUiComponent extends ClientUiNode {
         var21 = this.contentOffsetX + var19;
         var22 = var20 + this.contentOffsetY;
         if (this.drawSkinInParentBounds) {
-          i.a(var16, parentHeight, parentX, (byte) -47, parentY, parentWidth);
+          ReportAbuseDialog.drawNineSlice(var16, parentHeight, parentX, (byte) -47, parentY, parentWidth);
         } else {
-          i.a(var16, this.height, this.screenX, (byte) -47, this.screenY, this.width);
+          ReportAbuseDialog.drawNineSlice(var16, this.height, this.screenX, (byte) -47, this.screenY, this.width);
         }
         if (var17 != null) {
           var23_int = var21 + this.screenX;

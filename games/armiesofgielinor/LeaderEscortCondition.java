@@ -95,7 +95,7 @@ final class LeaderEscortCondition implements MatchCondition {
             return stackIn_3_0;
           }
           if (param1 == param0) {
-            stackIn_6_0 = mo.field_l;
+            stackIn_6_0 = ChatMessage.field_l;
             return stackIn_6_0;
           }
           if (param0 == 7) {

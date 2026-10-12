@@ -47,7 +47,7 @@ final class ip {
         RuntimeException var6_ref = null;
         int var7 = 0;
         try {
-          i.a(this.field_d, param0.height, param0.x + param3, (byte) -47, param2 + param0.y, param0.width);
+          ReportAbuseDialog.drawNineSlice(this.field_d, param0.height, param0.x + param3, (byte) -47, param2 + param0.y, param0.width);
           if (null != this.field_j) {
             var6_int = this.field_i + param0.x + param3;
             if (1 == param4.field_n) {

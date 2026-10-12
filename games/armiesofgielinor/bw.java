@@ -49,7 +49,7 @@ final class bw {
           }
         }
         if (param0 != 7242) {
-          bw.a(119, -40, (byte) -61);
+          bw.writeWatchedRoomRequest(119, -40, (byte) -61);
         }
     }
 
@@ -188,24 +188,24 @@ final class bw {
         }
     }
 
-    final static void a(int param0, int param1, byte param2) {
+    final static void writeWatchedRoomRequest(int packetOpcode, int roomId, byte obfuscationGuard) {
         LobbyRoom var6 = null;
         LobbyRoom var7 = null;
         CipherPacketBuffer var4 = null;
-        if (param1 != oo.field_a) {
-          var6 = (LobbyRoom) (qm.lobbyRoomsById.get((byte) -27, (long)oo.field_a));
+        if (roomId != oo.watchedRoomId) {
+          var6 = (LobbyRoom) (qm.lobbyRoomsById.get((byte) -27, (long)oo.watchedRoomId));
           var7 = var6;
-          oo.field_a = param1;
+          oo.watchedRoomId = roomId;
           if (var7 != null) {
             var7.playerNames = null;
           }
           var4 = vl.outgoingPacket;
-          var4.writeCipheredOpcode(param2 ^ -32211, param0);
+          var4.writeCipheredOpcode(obfuscationGuard ^ -32211, packetOpcode);
           var4.writeByte(1, 3);
           var4.writeByte(1, 11);
-          var4.writeShort(true, param1);
+          var4.writeShort(true, roomId);
         }
-        if (param2 != -116) {
+        if (obfuscationGuard != -116) {
           unitDefinitions = (int[][]) null;
         }
     }

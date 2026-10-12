@@ -230,8 +230,8 @@ final class wc extends nl {
         if (null != ad.field_I) {
           op.a(-116, ad.field_I);
         }
-        if (null != tn.field_Z) {
-          tn.field_Z.a((byte) -108, param0);
+        if (null != tn.activeContextMenu) {
+          tn.activeContextMenu.draw((byte) -108, param0);
         }
         SummonRequest.a(param0, (byte) -89);
         if (Spell.field_b != null) {

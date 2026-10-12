@@ -36,17 +36,17 @@ final class CombatEvent extends GameEvent {
         field_I = null;
     }
 
-    final static void a(int param0, int param1, int param2) {
+    final static void writeRoomAdmissionRequest(int packetOpcode, int obfuscationGuard, int roomId) {
         CipherPacketBuffer var3 = vl.outgoingPacket;
-        var3.writeCipheredOpcode(32161, param0);
+        var3.writeCipheredOpcode(32161, packetOpcode);
         var3.writeByte(1, 3);
         var3.writeByte(1, 8);
-        if (param1 <= -41) {
-          var3.writeShort(true, param2);
+        if (obfuscationGuard <= -41) {
+          var3.writeShort(true, roomId);
           return;
         }
         CombatEvent.e((byte) 75);
-        var3.writeShort(true, param2);
+        var3.writeShort(true, roomId);
     }
 
     final String describeEvent(byte obfuscationGuard, boolean verbose) {

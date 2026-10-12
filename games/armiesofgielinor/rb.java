@@ -224,7 +224,7 @@ abstract class rb implements n {
               pd.field_a[var18] = pd.field_a[var18] + CampaignParticipant.field_s[var15][var18];
             }
             ou.a(var17, true, true, false, false, pd.field_a, ActionRequest.field_t);
-            fp.a(var13Lifetime1, var17, var9Lifetime1, var8Lifetime1, var12Lifetime1, var7Lifetime1, var14, (byte) 120);
+            IconLabelControl.a(var13Lifetime1, var17, var9Lifetime1, var8Lifetime1, var12Lifetime1, var7Lifetime1, var14, (byte) 120);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

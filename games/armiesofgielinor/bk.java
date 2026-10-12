@@ -44,7 +44,7 @@ final class bk {
           vl.outgoingPacket.position = vl.outgoingPacket.position + 2;
           var5_int = vl.outgoingPacket.position;
           vl.outgoingPacket.writeInt((byte) -67, fl.field_e);
-          vl.outgoingPacket.a(an.field_E, 38359632);
+          vl.outgoingPacket.writeLong(an.field_E, 38359632);
           var6 = 0;
           if (BestScoreStrategy.field_l) {
             var6 = var6 | 1;
@@ -67,7 +67,7 @@ final class bk {
           if (DropdownSelector.field_P != null) {
             vl.outgoingPacket.a(DropdownSelector.field_P, 413740432);
           }
-          fp.a(mu.field_c, cs.field_cb, (byte) 26, vd.field_b, vl.outgoingPacket);
+          IconLabelControl.a(mu.field_c, cs.field_cb, (byte) 26, vd.field_b, vl.outgoingPacket);
           vl.outgoingPacket.f(param3 ^ param3, vl.outgoingPacket.position - var5_int);
           hb.$cfr$intArgs$a$e9dea5688aa5(29, -1);
           return;
@@ -340,7 +340,7 @@ final class bk {
     }
 
     final static void a(boolean param0, int param1, int param2, int param3, LobbyPlayer param4, ScrollContainer param5, int param6) {
-        tg var7 = null;
+        ClientContextMenu var7 = null;
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
@@ -353,19 +353,19 @@ final class bk {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var7_ref = null;
         try {
-          ng.a(param5, param4, (int[]) null, param4.displayName, -1, 111, -1, param4.accountName, param4.accountId);
-          tn.field_Z.a(23899, true);
-          tn.field_Z.a((int[]) null, 7, 0);
-          tn.field_Z.b((byte) 44);
+          ng.openClientContextMenu(param5, param4, (int[]) null, param4.displayName, -1, 111, -1, param4.accountName, param4.accountId);
+          tn.activeContextMenu.addPlayerAdmissionActions(23899, true);
+          tn.activeContextMenu.addSocialActions((int[]) null, 7, 0);
+          tn.activeContextMenu.addReportAction((byte) 44);
           if (param0) {
             bk.a(true, (ClientUiComponent) null, (ClientUiComponent) null, (BitmapFont) null, (ClientUiComponent) null, 86, (ClientUiComponent) null, (ClientUiComponent) null, (ClientUiComponent) null, (VerticalScrollbar) null, (ClientUiComponent) null, (ClientUiComponent) null);
           }
-          var7 = tn.field_Z;
+          var7 = tn.activeContextMenu;
           var8 = param2;
           var9 = param6;
           var10 = param3;
           var11 = param1;
-          var7.field_i.layoutPopup(var11, var9, var10, (byte) -118, var8);
+          var7.menu.layoutPopup(var11, var9, var10, (byte) -118, var8);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

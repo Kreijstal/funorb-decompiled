@@ -124,9 +124,9 @@ final class wt extends dr {
           vl.outgoingPacket.writeCipheredOpcode(32161, 10);
           cg.field_a = false;
         }
-        if (mo.field_w) {
+        if (ChatMessage.field_w) {
           MoveAttackAction.a(1, uh.field_a, true, (byte) 90, false);
-          mo.field_w = false;
+          ChatMessage.field_w = false;
         }
         var3 = 121 / ((-20 - param0) / 45);
     }

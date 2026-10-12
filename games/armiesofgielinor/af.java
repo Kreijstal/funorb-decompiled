@@ -8,7 +8,7 @@ abstract class af {
     static String[] field_a;
     static int field_b;
 
-    final static String a(mo param0, byte param1) {
+    final static String formatChatPrefix(ChatMessage message, byte obfuscationGuard) {
         String stackIn_33_0 = null;
         Object stackIn_36_0 = null;
         StringBuilder stackIn_36_1 = null;
@@ -24,50 +24,50 @@ abstract class af {
         var4 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           var2 = null;
-          if (param0.field_q != null) {
-            var5 = param0.field_q;
+          if (message.displayName != null) {
+            var5 = message.displayName;
             var2 = var5;
             var3 = var2;
             var2 = var5;
             var2 = var5;
-            if (param0.field_p == 1) {
+            if (message.chatIconId == 1) {
               var2 = "<img=0>" + var5;
             }
-            if (param0.field_p == 2) {
+            if (message.chatIconId == 2) {
               var2 = "<img=1>" + (String) (var2);
               var3Lifetime1 = var2;
               var3Lifetime1Lifetime1 = var2;
             }
           }
-          if (param1 != 103) {
+          if (obfuscationGuard != 103) {
             field_c = false;
           }
           var3_ref = "";
-          if (2 == param0.field_b) {
-            if (!param0.field_f) {
-              if (0 == param0.field_a &&
-                param0.field_e == 0) {
-                var3_ref = fo.a(param1 + 4697, ta.field_Q, new String[]{(String) (var2)});
+          if (2 == message.channelId) {
+            if (!message.systemMessage) {
+              if (0 == message.identityWord0 &&
+                message.identityWord1 == 0) {
+                var3_ref = fo.a(obfuscationGuard + 4697, ta.field_Q, new String[]{(String) (var2)});
               } else {
-                var3_ref = fo.a(param1 + 4697, ov.field_l, new String[]{(String) (var2)});
+                var3_ref = fo.a(obfuscationGuard + 4697, ov.field_l, new String[]{(String) (var2)});
               }
             }
           } else {
-            if (0 == param0.field_b &&
+            if (0 == message.channelId &&
               bq.field_c) {
               var3_ref = "[" + ClientConnectionState.field_c + "] ";
             }
-            if (param0.field_b == 1) {
-              var3_ref = "[" + fo.a(param1 + 4697, CampaignMenu.field_m, new String[]{param0.field_k}) + "] ";
+            if (message.channelId == 1) {
+              var3_ref = "[" + fo.a(obfuscationGuard + 4697, CampaignMenu.field_m, new String[]{message.channelLabel}) + "] ";
             }
-            if (4 == param0.field_b &&
+            if (4 == message.channelId &&
               null != TeleportAction.field_C) {
               var3_ref = "[" + TeleportAction.field_C + "] ";
             }
-            if (param0.field_b == 3) {
-              var3_ref = "[#" + param0.field_k + "] ";
+            if (message.channelId == 3) {
+              var3_ref = "[#" + message.channelLabel + "] ";
             }
-            if (!param0.field_f) {
+            if (!message.systemMessage) {
               var3_ref = var3_ref + (String) (var2) + ": ";
             }
           }
@@ -78,12 +78,12 @@ abstract class af {
           var2 = decompiledCaughtException;
           stackIn_36_0 = var2;
           stackIn_36_1 = new StringBuilder().append("af.H(");
-          if (param0 == null) {
+          if (message == null) {
             stackIn_37_2 = "null";
           } else {
             stackIn_37_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) (stackIn_36_0), ((StringBuilder) (Object) stackIn_36_1).append(stackIn_37_2).append(',').append(param1).append(')').toString());
+          throw AnimationSkeleton.addExceptionContext((Throwable) (stackIn_36_0), ((StringBuilder) (Object) stackIn_36_1).append(stackIn_37_2).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 

@@ -10,25 +10,25 @@ final class te extends IntrusiveNode {
     IntrusiveNode field_k;
     aa field_q;
 
-    final static void a(int param0, long param1, byte param2) {
+    final static void writePlayerAdmissionCancellation(int packetOpcode, long accountId, byte obfuscationGuard) {
         int var5 = 0;
         CipherPacketBuffer var4 = vl.outgoingPacket;
         int var5Lifetime1;
-        if (param2 >= 88) {
-          var4.writeCipheredOpcode(32161, param0);
+        if (obfuscationGuard >= 88) {
+          var4.writeCipheredOpcode(32161, packetOpcode);
           var4.position = var4.position + 1;
           var5 = var4.position;
           var4.writeByte(1, 7);
-          var4.a(param1, 38359632);
+          var4.writeLong(accountId, 38359632);
           var4.writeByteLengthPrefix(-var5 + var4.position, 5930);
           return;
         }
         te.b(-87, -88);
-        var4.writeCipheredOpcode(32161, param0);
+        var4.writeCipheredOpcode(32161, packetOpcode);
         var4.position = var4.position + 1;
         var5Lifetime1 = var4.position;
         var4.writeByte(1, 7);
-        var4.a(param1, 38359632);
+        var4.writeLong(accountId, 38359632);
         var4.writeByteLengthPrefix(-var5Lifetime1 + var4.position, 5930);
     }
 
@@ -106,7 +106,7 @@ final class te extends IntrusiveNode {
           if (param2 == -17006) {
             return;
           }
-          te.a(102, 77L, (byte) -50);
+          te.writePlayerAdmissionCancellation(102, 77L, (byte) -50);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

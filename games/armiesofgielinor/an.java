@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class an extends dr {
-    static mo[] field_F;
+    static ChatMessage[] field_F;
     static int[] field_H;
     static long field_E;
     static String field_G;

@@ -311,7 +311,7 @@ abstract class nl extends Widget implements gw {
           TextCursor.field_d = param2;
           rs.field_p = fk.a("gameprivacy", (byte) -128, param7, "lobby");
           ResourceProtocolClient.field_d = fk.a("ratedgame", (byte) -125, param7, "lobby");
-          mo.field_g = fk.a("opentome", (byte) -124, param7, "lobby");
+          ChatMessage.field_g = fk.a("opentome", (byte) -124, param7, "lobby");
           lm.field_h = fk.a("allowspectators", (byte) -125, param7, "lobby");
           ResourceRequest.field_u = new String[5];
           ResourceRequest.field_u[1] = pc.field_i;
@@ -336,7 +336,7 @@ abstract class nl extends Widget implements gw {
           t.field_g = new ClientUiComponent(0L, eq.field_h);
           t.field_g.horizontalAlignment = 1;
           cp.field_d = new ClientUiComponent(0L, kd.field_M, eq.field_e.toUpperCase());
-          tg.field_n = new ClientUiComponent(0L, SummonAction.field_y, nr.field_d.toUpperCase());
+          ClientContextMenu.field_n = new ClientUiComponent(0L, SummonAction.field_y, nr.field_d.toUpperCase());
           LobbyPlayer.field_Lb = new ClientUiComponent(0L, sh.field_m);
           r.field_v = new ClientUiComponent(0L, te.field_p, IntrusiveNode.field_a);
           ek.field_c = new ClientUiComponent(0L, CampaignResult.field_a, wb.field_c);
@@ -362,7 +362,7 @@ abstract class nl extends Widget implements gw {
           }
           VineGrowthAction.field_x = new ClientUiComponent(stackIn_5_2, stackIn_5_3, ((String) (Object) stackIn_6_4).toUpperCase());
           ov.field_i = new ClientUiComponent(0L, (ClientUiComponent) null);
-          ov.field_i.addChild(tg.field_n, 92);
+          ov.field_i.addChild(ClientContextMenu.field_n, 92);
           ov.field_i.addChild(LobbyPlayer.field_Lb, 47);
           LobbyPlayer.field_Lb.addChild(r.field_v, 38);
           LobbyPlayer.field_Lb.addChild(ek.field_c, 114);
@@ -407,13 +407,13 @@ abstract class nl extends Widget implements gw {
           BattleTutorial.field_d = new ClientUiComponent(0L, rn.field_a, EffectPresentation.field_d.toUpperCase());
           KingBlackDragonEvent.field_z = new ClientUiComponent[param1 + 4];
           pu.field_k = new IconTextComponent[4 + param1][];
-          KingBlackDragonEvent.field_z[0] = new ClientUiComponent(0L, fp.field_Lb, et.field_c);
+          KingBlackDragonEvent.field_z[0] = new ClientUiComponent(0L, IconLabelControl.field_Lb, et.field_c);
           pu.field_k[0] = new IconTextComponent[6];
           for (var17_int = 0; var17_int < 5; var17_int++) {
             pu.field_k[0][var17_int + 1] = new IconTextComponent(0L, eb.field_a, (ClientUiComponent) null, DualLinkedNode.field_k, rs.field_p[var17_int], ResourceRequest.field_u[var17_int]);
           }
           if (lm.field_e.length >= 2) {
-            KingBlackDragonEvent.field_z[1] = new ClientUiComponent(0L, fp.field_Lb, ep.field_h);
+            KingBlackDragonEvent.field_z[1] = new ClientUiComponent(0L, IconLabelControl.field_Lb, ep.field_h);
             array$0 = new IconTextComponent[1 + lm.field_e.length];
             pu.field_k[1] = array$0;
             pu.field_k[1][0] = new IconTextComponent(0L, eb.field_a, (ClientUiComponent) null, DualLinkedNode.field_k, (RgbSprite) null, ki.field_a);
@@ -421,10 +421,10 @@ abstract class nl extends Widget implements gw {
               pu.field_k[1][var17_intLifetime1 + 1] = new IconTextComponent(0L, eb.field_a, (ClientUiComponent) null, DualLinkedNode.field_k, (RgbSprite) null, Integer.toString(lm.field_e[var17_intLifetime1]));
             }
           }
-          KingBlackDragonEvent.field_z[2] = new ClientUiComponent(0L, fp.field_Lb, GameEvent.field_p);
+          KingBlackDragonEvent.field_z[2] = new ClientUiComponent(0L, IconLabelControl.field_Lb, GameEvent.field_p);
           pu.field_k[2] = new IconTextComponent[]{new IconTextComponent(0L, eb.field_a, (ClientUiComponent) null, DualLinkedNode.field_k, (RgbSprite) null, ki.field_a), new IconTextComponent(0L, eb.field_a, (ClientUiComponent) null, DualLinkedNode.field_k, lm.field_h[0], LeaderEscortCondition.field_e), new IconTextComponent(0L, eb.field_a, (ClientUiComponent) null, DualLinkedNode.field_k, lm.field_h[1], po.field_b)};
           if (BoundedFile.field_h > 1) {
-            KingBlackDragonEvent.field_z[3] = new ClientUiComponent(0L, fp.field_Lb, AnimationFrameSet.field_u);
+            KingBlackDragonEvent.field_z[3] = new ClientUiComponent(0L, IconLabelControl.field_Lb, AnimationFrameSet.field_u);
             array$1 = new IconTextComponent[1 + BoundedFile.field_h];
             pu.field_k[3] = array$1;
             pu.field_k[3][0] = new IconTextComponent(0L, eb.field_a, (ClientUiComponent) null, DualLinkedNode.field_k, (RgbSprite) null, ki.field_a);
@@ -433,7 +433,7 @@ abstract class nl extends Widget implements gw {
             }
           }
           for (var17_intLifetime3 = 0; param1 > var17_intLifetime3; var17_intLifetime3++) {
-            KingBlackDragonEvent.field_z[var17_intLifetime3 + 4] = new ClientUiComponent(0L, fp.field_Lb, ob.field_M[var17_intLifetime3]);
+            KingBlackDragonEvent.field_z[var17_intLifetime3 + 4] = new ClientUiComponent(0L, IconLabelControl.field_Lb, ob.field_M[var17_intLifetime3]);
             array$2 = new IconTextComponent[rn.a(255, (int) mi.field_r[var17_intLifetime3]) + 1];
             pu.field_k[var17_intLifetime3 + 4] = array$2;
             pu.field_k[var17_intLifetime3 + 4][0] = new IconTextComponent(0L, eb.field_a, (ClientUiComponent) null, DualLinkedNode.field_k, (RgbSprite) null, ki.field_a);
