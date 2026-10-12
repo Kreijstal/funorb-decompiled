@@ -64,7 +64,7 @@ final class UnitInfoPopup extends IntrusiveNode {
         try {
           SpellConfirmationDialog.field_j.b();
           SoftwareRaster.b();
-          fe.b(0, 0, 134, 61, MusicPatch.field_m, nd.field_b, 0, 0);
+          fe.b(0, 0, 134, 61, MusicPatch.field_m, ConsoleValue.field_b, 0, 0);
           qt.field_e.drawOpaque(2, 2);
           SoftwareRaster.b(5, 5, 124, 18, 0, 192);
           SoftwareRaster.b(5, 25, 30, 30, 0, 192);
@@ -113,7 +113,7 @@ final class UnitInfoPopup extends IntrusiveNode {
           }
           ro.field_rb[this.unit.getUnitCategory(0)].draw(106, 32);
           en.field_E.c(-param5.getDamageTakenPercent(param5.mapWidth * this.unit.tileY + this.unit.tileX, param2 - 9, this.unit) + 100 + "%", 20, 45, 16777215, -1);
-          EventPresenter.field_t.b(68, 60, nd.field_b[-1 + nd.field_b.length]);
+          EventPresenter.field_t.b(68, 60, ConsoleValue.field_b[-1 + ConsoleValue.field_b.length]);
           so.field_b.a(param2 + 5600);
           var9Lifetime1 = this.screenX - param3 - 75;
           var10 = this.screenY - (param4 + 80);

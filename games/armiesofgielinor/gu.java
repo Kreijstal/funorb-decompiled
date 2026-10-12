@@ -13,61 +13,61 @@ final class gu {
         return false;
     }
 
-    final static NodeDeque a(boolean param0, String param1) {
-        NodeDeque var2 = null;
-        TextCursor var3 = null;
-        int var4 = 0;
-        int var5 = 0;
-        NodeDeque stackIn_18_0 = null;
-        RuntimeException stackIn_21_0 = null;
-        StringBuilder stackIn_21_1 = null;
-        String stackIn_22_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException var2_ref = null;
-        var5 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+    final static NodeDeque tokenizeConsole(boolean obfuscationGuard, String source) {
+        NodeDeque tokens = null;
+        TextCursor cursor = null;
+        int character = 0;
+        int obfuscationControl = 0;
+        NodeDeque tokenDequeResult = null;
+        RuntimeException failureForContext = null;
+        StringBuilder errorContext = null;
+        String sourceDescription = null;
+        RuntimeException caughtFailure = null;
+        RuntimeException failure = null;
+        obfuscationControl = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          if (param0) {
+          if (obfuscationGuard) {
             gu.a(102);
           }
-          var2 = new NodeDeque();
-          var3 = new TextCursor(param1);
-          while (!var3.isAtEnd((byte) 16)) {
-            var4 = var3.readCharacter(-1);
-            if (Character.isWhitespace((char) var4)) {
+          tokens = new NodeDeque();
+          cursor = new TextCursor(source);
+          while (!cursor.isAtEnd((byte) 16)) {
+            character = cursor.readCharacter(-1);
+            if (Character.isWhitespace((char) character)) {
               continue;
             }
-            if (var4 != 34 &&
-              var4 != 39) {
-              if (var4 == 40) {
-                var2.addLast((byte) -119, (IntrusiveNode) (new og(ChatMessage.field_j, -1 + var3.position)));
+            if (character != 34 &&
+              character != 39) {
+              if (character == 40) {
+                tokens.addLast((byte) -119, (IntrusiveNode) (new ConsoleExpression(ChatMessage.consoleArgumentStartKind, -1 + cursor.position)));
                 continue;
               }
-              if (var4 == 41) {
-                var2.addLast((byte) -119, (IntrusiveNode) (new og(LeaderEscortCondition.field_d, -1 + var3.position)));
+              if (character == 41) {
+                tokens.addLast((byte) -119, (IntrusiveNode) (new ConsoleExpression(LeaderEscortCondition.consoleArgumentEndKind, -1 + cursor.position)));
                 continue;
               }
-              if (44 != var4) {
-                var2.addLast((byte) -119, (IntrusiveNode) (bi.a((byte) -118, var3)));
+              if (44 != character) {
+                tokens.addLast((byte) -119, (IntrusiveNode) (bi.readBareConsoleToken((byte) -118, cursor)));
                 continue;
               }
-              var2.addLast((byte) -119, (IntrusiveNode) (new og(sb.field_d, var3.position - 1)));
+              tokens.addLast((byte) -119, (IntrusiveNode) (new ConsoleExpression(sb.consoleArgumentCommaKind, cursor.position - 1)));
               continue;
             }
-            var2.addLast((byte) -119, (IntrusiveNode) (BestScoreStrategy.a((byte) 121, var3)));
+            tokens.addLast((byte) -119, (IntrusiveNode) (BestScoreStrategy.readQuotedConsoleToken((byte) 121, cursor)));
           }
-          stackIn_18_0 = var2;
-          return stackIn_18_0;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var2_ref = decompiledCaughtException;
-          stackIn_21_0 = var2_ref;
-          stackIn_21_1 = new StringBuilder().append("gu.D(").append(param0).append(',');
-          if (param1 == null) {
-            stackIn_22_2 = "null";
+          tokenDequeResult = tokens;
+          return tokenDequeResult;
+        } catch (java.lang.RuntimeException caughtParameter) {
+          caughtFailure = caughtParameter;
+          failure = caughtFailure;
+          failureForContext = failure;
+          errorContext = new StringBuilder().append("gu.D(").append(obfuscationGuard).append(',');
+          if (source == null) {
+            sourceDescription = "null";
           } else {
-            stackIn_22_2 = "{...}";
+            sourceDescription = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(')').toString());
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) failureForContext), ((StringBuilder) (Object) errorContext).append(sourceDescription).append(')').toString());
         }
     }
 

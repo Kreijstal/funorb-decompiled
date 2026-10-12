@@ -114,7 +114,7 @@ final class de {
               return null;
             }
             if (!battlefield.kingBlackDragonSummoned) {
-              stackIn_17_0 = ij.field_B;
+              stackIn_17_0 = DebugConsole.field_B;
               return stackIn_17_0;
             }
             stackIn_27_0 = null;

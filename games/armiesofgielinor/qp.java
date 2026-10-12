@@ -3,28 +3,28 @@
  */
 import java.util.*;
 
-final class qp extends dr {
+final class qp extends ConsoleCommand {
     static String field_E;
 
-    final nd a(int param0, nd[] param1) {
+    final ConsoleValue execute(int obfuscationGuard, ConsoleValue[] arguments) {
         RuntimeException var3 = null;
-        nd stackIn_3_0 = null;
+        ConsoleValue stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param0 != -24872) {
+          if (obfuscationGuard != -24872) {
             qp.g(125);
           }
-          stackIn_3_0 = new nd(sq.a(param1[2].a(param0 ^ -24870), (byte) -2, param1[0].a(2), param1[1].a(2)));
+          stackIn_3_0 = new ConsoleValue(sq.a(arguments[2].asInt(obfuscationGuard ^ -24870), (byte) -2, arguments[0].asInt(2), arguments[1].asInt(2)));
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
           stackIn_6_0 = var3;
-          stackIn_6_1 = new StringBuilder().append("qp.C(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_6_1 = new StringBuilder().append("qp.C(").append(obfuscationGuard).append(',');
+          if (arguments == null) {
             stackIn_7_2 = "null";
           } else {
             stackIn_7_2 = "{...}";

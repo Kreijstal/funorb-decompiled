@@ -5,7 +5,7 @@ final class EquipmentBattleTutorial extends BattleTutorial {
     static int field_y;
     private int equipmentSlot;
     static boolean field_B;
-    static int field_z;
+    static int consoleBooleanKind;
 
     EquipmentBattleTutorial(GameplayController controller) {
         super(controller);
@@ -91,13 +91,13 @@ final class EquipmentBattleTutorial extends BattleTutorial {
           if (param1 >= -1 &&
             ResourceRequest.field_y >= param1 &&
             param0 >= -1 &&
-            param0 <= ef.field_c) {
+            param0 <= ConsoleParseException.field_c) {
             if (param1 == -1 ||
               param1 == ResourceRequest.field_y) {
               var5_int += 2;
             }
             if (param0 == -1 ||
-              ~param0 == ~ef.field_c) {
+              ~param0 == ~ConsoleParseException.field_c) {
               var5_int++;
             }
             if (param0 == -1 &&
@@ -111,7 +111,7 @@ final class EquipmentBattleTutorial extends BattleTutorial {
                 decompiledSharedTail0 = (ArmiesOfGielinor.obfuscationControl);
               }
               if (decompiledSharedTail0) {
-                hq.surroundTileSprites[(og.field_p[th.floorModWithOffset(param1, 1, ResourceRequest.field_y) + th.floorModWithOffset(param0, 1, ef.field_c) * ResourceRequest.field_y] % 6 + 1 << 2) - 1 + var5_int].draw(param2, param3);
+                hq.surroundTileSprites[(ConsoleExpression.field_p[th.floorModWithOffset(param1, 1, ResourceRequest.field_y) + th.floorModWithOffset(param0, 1, ConsoleParseException.field_c) * ResourceRequest.field_y] % 6 + 1 << 2) - 1 + var5_int].draw(param2, param3);
               }
             }
             var6 = 88 / ((-21 - param4) / 46);
@@ -2353,7 +2353,7 @@ final class EquipmentBattleTutorial extends BattleTutorial {
             }
           }
           if (obfuscationGuard != -36) {
-            field_z = 53;
+            consoleBooleanKind = 53;
           }
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -2377,6 +2377,6 @@ final class EquipmentBattleTutorial extends BattleTutorial {
     static {
         field_B = true;
         field_y = 480;
-        field_z = 7;
+        consoleBooleanKind = 7;
     }
 }

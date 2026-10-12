@@ -6,7 +6,7 @@ final class hf {
     static boolean textChatActive;
     static String field_g;
     static String field_e;
-    static int field_h;
+    static int consoleCharacterKind;
     static String field_b;
     static String field_i;
     static ClientUiComponent field_f;
@@ -25,22 +25,22 @@ final class hf {
     }
 
     final static void a(int param0) {
-        ef.field_d = new String[CampaignMenuEntry.field_F];
-        ef.field_d[9] = wt.field_E;
-        ef.field_d[18] = sf.field_Q;
-        ef.field_d[17] = qc.field_b;
-        ef.field_d[19] = MidiPcmStream.field_X;
-        ef.field_d[11] = pf.field_f;
-        ef.field_d[6] = bs.field_c;
-        ef.field_d[13] = EffectPresentation.field_b;
-        ef.field_d[7] = vs.field_d;
-        ef.field_d[21] = HuffmanCodec.field_f;
-        ef.field_d[20] = MatchSetupPanel.field_d;
-        ef.field_d[16] = tv.field_e;
-        ef.field_d[4] = IntrusiveNode.field_c;
-        ef.field_d[15] = AnimationSkeleton.field_r;
+        ConsoleParseException.field_d = new String[CampaignMenuEntry.field_F];
+        ConsoleParseException.field_d[9] = wt.field_E;
+        ConsoleParseException.field_d[18] = sf.field_Q;
+        ConsoleParseException.field_d[17] = qc.field_b;
+        ConsoleParseException.field_d[19] = MidiPcmStream.field_X;
+        ConsoleParseException.field_d[11] = pf.field_f;
+        ConsoleParseException.field_d[6] = bs.field_c;
+        ConsoleParseException.field_d[13] = EffectPresentation.field_b;
+        ConsoleParseException.field_d[7] = vs.field_d;
+        ConsoleParseException.field_d[21] = HuffmanCodec.field_f;
+        ConsoleParseException.field_d[20] = MatchSetupPanel.field_d;
+        ConsoleParseException.field_d[16] = tv.field_e;
+        ConsoleParseException.field_d[4] = IntrusiveNode.field_c;
+        ConsoleParseException.field_d[15] = AnimationSkeleton.field_r;
         if (param0 == 7670) {
-          ef.field_d[5] = ClientConnectionState.field_f;
+          ConsoleParseException.field_d[5] = ClientConnectionState.field_f;
           return;
         }
     }
@@ -96,6 +96,6 @@ final class hf {
         textChatActive = true;
         field_i = "Options Menu";
         field_d = new String[]{"BARBARIAN", "AVIANSIE", "GORILLA", "BARBARIANSPEARWOMAN", "DRAGON", "TXHAARKET", "DAGANNOTH", "PORTALMAGE", "PALADIN", "SARADOMINOWL", "MONK", "SARADOMINMAGE", "WHITEKNIGHT", "UNICORN", "CENTAURBOWMAN", "LION", "SARADOMINRANGER", "PRIEST", "ICYENE", "WEREWOLF", "SKELETON", "NECROMANCER", "ZAMORAKMAGE", "BLACKKNIGHT", "BLACKDEMON", "ZAMORAKRANGER", "HELLHOUND", "SEASLUG", "VYREWATCH", "PYRELORD", "TERRORBIRDGNOME", "WOLF", "DRUID", "BLACKGUARDDWARF", "DWARFCANNON", "MOSSGIANT", "VOIDKNIGHT", "TORTOISEGNOME", "GLIDERGNOME", "JADEVINE", "ENT", "FALCON", "BLACKBEAR", "ELFSONGSTRESS", "ELFSHIELDMAIDEN", "GRENWALL", "DIREWOLF", "ELVENPIKEMEN", "ELVENARCHER", "ELFLORD", "ELFLADY", "SHADOWCREATURE", "GOBLIN", "GOBLINHIGHPRIEST", "OGRE", "JOGRE", "MOGRE", "HOBGOBLIN", "OGRESHAMAN", "CYCLOPS", "ORK", "OGRESS", "OURG", "KALPHITEQUEEN", "JACKAL", "MUMMY", "LOCUST", "BEBADINNOMAD", "MENAPHITETHUG", "WARRIOROFICTHLARIN", "CROCODILE", "SCARABITEMAGE", "SPHINX", "ELIDINISELEMENTAL", "KINGBLACKDRAGON", "DWARFCANNON(cannon)", "PORTALMAGE(portal)", "Elf_songstress(dagger)"};
-        field_h = 5;
+        consoleCharacterKind = 5;
     }
 }

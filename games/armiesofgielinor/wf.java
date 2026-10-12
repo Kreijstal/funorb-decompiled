@@ -31,10 +31,10 @@ abstract class wf extends iv {
         if (param3 <= 73) {
           musicProfileTransitionMillis = 91;
         }
-        og.field_m = this.field_z;
-        qa.b(og.field_m, 1);
-        hq.a(param6, 5000, this.field_E, 5000, param2, og.field_m, this.field_C, 0, this.field_t, this.field_o, this.field_p, IntPair.field_m, this.field_x, this.field_G);
-        qf.a(og.field_m, this.field_p, this.field_G, (byte) 103, this.field_C, param6, this.field_E, this.field_t, IntPair.field_m);
+        ConsoleExpression.field_m = this.field_z;
+        qa.b(ConsoleExpression.field_m, 1);
+        hq.a(param6, 5000, this.field_E, 5000, param2, ConsoleExpression.field_m, this.field_C, 0, this.field_t, this.field_o, this.field_p, IntPair.field_m, this.field_x, this.field_G);
+        qf.a(ConsoleExpression.field_m, this.field_p, this.field_G, (byte) 103, this.field_C, param6, this.field_E, this.field_t, IntPair.field_m);
         QuickChatPhraseRepository.configurePunctuationKeys((byte) 112);
         CampaignMission.field_I = jk.b(68);
         lk.a(101, IndexedSpriteBase.field_b);
@@ -214,7 +214,7 @@ abstract class wf extends iv {
           if (param2 >= -68) {
             this.field_r = true;
           }
-          var4 = IntrusiveNode.a(el.field_d, param0, true, og.field_m);
+          var4 = IntrusiveNode.a(el.field_d, param0, true, ConsoleExpression.field_m);
           if (var4 == 0) {
             throw new IllegalStateException();
           }
@@ -625,7 +625,7 @@ abstract class wf extends iv {
           StrongCacheEntry.field_E = 1;
         }
         if (StrongCacheEntry.field_E == 1) {
-          if (og.field_m != 0) {
+          if (ConsoleExpression.field_m != 0) {
             IconTextComponent.field_Nb = nu.a(on.field_n, true);
           }
           ps.field_u = DamageEvent.a(1, ChatMessage.field_c, (byte) 119, false, true);
@@ -658,7 +658,7 @@ abstract class wf extends iv {
           cd.a(12);
           vl.c((byte) 91);
           it.field_b = false;
-          UnitSpell.field_e = ef.field_a;
+          UnitSpell.field_e = ConsoleParseException.field_a;
           StateChangeEvent.a(CombatPresentation.field_M, ps.field_u, h.field_g, 0, BestScoreStrategy.field_l);
           if (ChatMessage.field_r ||
             pd.field_b != null) {
@@ -684,7 +684,7 @@ abstract class wf extends iv {
           StrongCacheEntry.field_E = 10;
         }
         if (StrongCacheEntry.field_E == 10) {
-          if (0 != og.field_m) {
+          if (0 != ConsoleExpression.field_m) {
             RegionAnchor.field_o = nu.a(lk.field_p, true);
           }
           StrongCacheEntry.field_E = 11;
@@ -811,16 +811,16 @@ abstract class wf extends iv {
         StringBuilder stackIn_22_1 = null;
         String stackIn_23_2 = null;
         RuntimeException decompiledCaughtException = null;
-        og[] var2 = null;
+        ConsoleExpression[] var2 = null;
         RuntimeException var2_ref = null;
         int var3 = 0;
         StringBuilder var4 = null;
-        og var6 = null;
+        ConsoleExpression var6 = null;
         int var7 = 0;
         int var8 = 0;
         String var9 = null;
         int var10 = 0;
-        og[] var11 = null;
+        ConsoleExpression[] var11 = null;
         var10 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           var3 = 107 % ((param1 + 11) / 61);
@@ -829,21 +829,21 @@ abstract class wf extends iv {
           var4 = new StringBuilder();
           for (var5 = 0; var11.length > var5; var5++) {
             var6 = var11[var5];
-            var7 = var6.field_s;
+            var7 = var6.sourceOffset;
             if (var5 == -1 + var11.length) {
               stackIn_6_0 = param0.length();
             } else {
-              stackIn_6_0 = var2[1 + var5].field_s;
+              stackIn_6_0 = var2[1 + var5].sourceOffset;
             }
             var8 = stackIn_6_0;
             var9 = param0.substring(var7, var8);
-            if (var6.field_q == BattleTutorial.field_x) {
+            if (var6.kind == BattleTutorial.consoleStringKind) {
               discarded$0 = var4.append("<col=66ffff>").append(var9).append("</col>");
             } else {
-              if (hf.field_h != var6.field_q) {
-                if (var6.field_q != rn.field_c) {
-                  if (var6.field_q != gg.field_G) {
-                    if (var6.field_q != EquipmentBattleTutorial.field_z) {
+              if (hf.consoleCharacterKind != var6.kind) {
+                if (var6.kind != rn.consoleCallKind) {
+                  if (var6.kind != gg.consoleNumberKind) {
+                    if (var6.kind != EquipmentBattleTutorial.consoleBooleanKind) {
                       discarded$1 = var4.append(var9);
                     } else {
                       discarded$2 = var4.append("<col=33ffaa>").append(var9).append("</col>");

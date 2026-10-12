@@ -429,7 +429,7 @@ final class ReportAbuseDialog extends ClientUiComponent {
         this.pendingResult = -2;
         try {
           this.accountId = accountId;
-          this.title = new ClientUiComponent(0L, titleStyle, ij.field_u.toUpperCase());
+          this.title = new ClientUiComponent(0L, titleStyle, DebugConsole.field_u.toUpperCase());
           this.title.horizontalAlignment = 1;
           this.addChild(this.title, 69);
           this.closeButton = new ClientUiComponent(0L, closeStyle);
@@ -486,8 +486,8 @@ final class ReportAbuseDialog extends ClientUiComponent {
             this.content.addChild(var28[2], 111);
             this.offenceButtons = new ClientUiComponent[CampaignMenuEntry.field_F];
             for (var16 = 0; var16 < CampaignMenuEntry.field_F; var16++) {
-              if (ef.field_d[var16] != null) {
-                this.offenceButtons[var16] = new ClientUiComponent(0L, offenceStyle, ef.field_d[var16]);
+              if (ConsoleParseException.field_d[var16] != null) {
+                this.offenceButtons[var16] = new ClientUiComponent(0L, offenceStyle, ConsoleParseException.field_d[var16]);
                 this.offenceButtons[var16].horizontalAlignment = 0;
                 stackIn_14_0 = this.offenceButtons[var16];
                 stackIn_15_1 = (targetName != null);

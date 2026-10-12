@@ -185,8 +185,8 @@ final class CampaignProgress {
         }
         MusicCrossfadeStream.a((byte) 95, param1);
         if (gl.field_b) {
-          SoftwareRaster.d(ij.field_w.tabs.x, ij.field_w.tabs.y, ij.field_w.tabs.width, ij.field_w.tabs.height);
-          ij.field_w.tabs.draw(param1, 20);
+          SoftwareRaster.d(DebugConsole.field_w.tabs.x, DebugConsole.field_w.tabs.y, DebugConsole.field_w.tabs.width, DebugConsole.field_w.tabs.height);
+          DebugConsole.field_w.tabs.draw(param1, 20);
         }
         if (param0 != 2000) {
           return;

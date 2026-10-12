@@ -1,28 +1,28 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ef extends Exception {
+final class ConsoleParseException extends Exception {
     static String[] field_d;
     static int field_c;
-    int field_b;
+    int sourceOffset;
     static String field_a;
 
     final static void b(int param0) {
         ro.field_lb = null;
         CipherPacketBuffer.currentBattlefield = null;
-        og.field_p = null;
+        ConsoleExpression.field_p = null;
         vs.field_e = null;
         NetworkResourceRequest.field_C = null;
         PaletteRegionMap.field_g = null;
         ResourceArchive.field_a = null;
         CampaignMenuEntry.field_u = null;
         if (param0 != -1) {
-          ef.b(95);
+          ConsoleParseException.b(95);
         }
     }
 
-    ef(int param0) {
-        this.field_b = param0;
+    ConsoleParseException(int sourceOffset) {
+        this.sourceOffset = sourceOffset;
     }
 
     final static void a(int param0, byte param1, int param2, boolean param3, int param4, int param5, int param6, String param7) {

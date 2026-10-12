@@ -93,30 +93,30 @@ final class RevivalEvent extends GameEvent {
         field_B = null;
     }
 
-    final static boolean a(boolean param0, Class param1) {
-        boolean stackIn_12_0 = false;
-        RuntimeException stackIn_15_0 = null;
-        StringBuilder stackIn_15_1 = null;
-        String stackIn_16_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException var2 = null;
+    final static boolean isConsoleNumericType(boolean obfuscationGuard, Class type) {
+        boolean numericResult = false;
+        RuntimeException failureForContext = null;
+        StringBuilder errorContext = null;
+        String typeDescription = null;
+        RuntimeException caughtFailure = null;
+        RuntimeException failure = null;
         try {
-          if (param0) {
+          if (obfuscationGuard) {
             return false;
           }
-          stackIn_12_0 = (Integer.TYPE == param1) || (Short.TYPE == param1) || (param1 == Long.TYPE) || (Byte.TYPE == param1) || (Float.TYPE == param1) || (param1 == Double.TYPE);
-          return stackIn_12_0;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var2 = decompiledCaughtException;
-          stackIn_15_0 = var2;
-          stackIn_15_1 = new StringBuilder().append("rt.F(").append(param0).append(',');
-          if (param1 == null) {
-            stackIn_16_2 = "null";
+          numericResult = (Integer.TYPE == type) || (Short.TYPE == type) || (type == Long.TYPE) || (Byte.TYPE == type) || (Float.TYPE == type) || (type == Double.TYPE);
+          return numericResult;
+        } catch (java.lang.RuntimeException caughtParameter) {
+          caughtFailure = caughtParameter;
+          failure = caughtFailure;
+          failureForContext = failure;
+          errorContext = new StringBuilder().append("rt.F(").append(obfuscationGuard).append(',');
+          if (type == null) {
+            typeDescription = "null";
           } else {
-            stackIn_16_2 = "{...}";
+            typeDescription = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) failureForContext), ((StringBuilder) (Object) errorContext).append(typeDescription).append(')').toString());
         }
     }
 

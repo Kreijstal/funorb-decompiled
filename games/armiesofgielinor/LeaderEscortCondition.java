@@ -7,7 +7,7 @@ final class LeaderEscortCondition implements MatchCondition {
     static String[] field_a;
     private Unit[] leaders;
     static String field_e;
-    static int field_d;
+    static int consoleArgumentEndKind;
     static int[][] baseTerrainMovementCosts;
     static int field_i;
     static String field_g;
@@ -334,7 +334,7 @@ final class LeaderEscortCondition implements MatchCondition {
 
     static {
         field_a = new String[255];
-        field_d = 1;
+        consoleArgumentEndKind = 1;
         field_b = "Loads more Achievements in Rated games.";
         field_e = "No";
         field_g = "Accept";

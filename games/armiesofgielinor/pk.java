@@ -223,7 +223,7 @@ final class pk extends hv {
           if (var10 != 0) {
             SpellConfirmationDialog.field_e = CampaignMenuEntry.field_u[param3 + 1];
             var8 = var8 * 20;
-            if (-1 + ef.field_c > param1) {
+            if (-1 + ConsoleParseException.field_c > param1) {
               if (var9 != 0) {
                 oh.field_E = CampaignMenuEntry.field_u[-1 + (param3 + ResourceRequest.field_y)];
               }
@@ -237,7 +237,7 @@ final class pk extends hv {
             return;
           }
           var8 = var8 * 20;
-          if (-1 + ef.field_c <= param1) {
+          if (-1 + ConsoleParseException.field_c <= param1) {
             ac.activeTerrainSprites[ls.a(rq.field_m, j.field_b, pv.field_b, SpellConfirmationDialog.field_e, -83) + (0 + var8)].b(param7, param0, param6, param4);
             ac.activeTerrainSprites[ls.a(ContextActionMenu.field_Wb, j.field_b, pv.field_b, cs.field_Y, -85) + (var8 + 1)].b(param7, param0, param6, param4);
             ac.activeTerrainSprites[ls.a(gt.field_i, j.field_b, QuickChatCategory.field_z, SpellConfirmationDialog.field_e, param5 ^ 29329) + (var8 + 2)].b(param7, param0, param6, param4);
@@ -269,7 +269,7 @@ final class pk extends hv {
             cs.field_Y = CampaignMenuEntry.field_u[-1 + param3];
           }
           var8 = var8 * 20;
-          if (-1 + ef.field_c <= param1) {
+          if (-1 + ConsoleParseException.field_c <= param1) {
             ac.activeTerrainSprites[ls.a(rq.field_m, j.field_b, pv.field_b, SpellConfirmationDialog.field_e, -83) + (0 + var8)].b(param7, param0, param6, param4);
             ac.activeTerrainSprites[ls.a(ContextActionMenu.field_Wb, j.field_b, pv.field_b, cs.field_Y, -85) + (var8 + 1)].b(param7, param0, param6, param4);
             ac.activeTerrainSprites[ls.a(gt.field_i, j.field_b, QuickChatCategory.field_z, SpellConfirmationDialog.field_e, param5 ^ 29329) + (var8 + 2)].b(param7, param0, param6, param4);
@@ -298,7 +298,7 @@ final class pk extends hv {
         }
         SpellConfirmationDialog.field_e = CampaignMenuEntry.field_u[param3 + 1];
         var8 = var8 * 20;
-        if (-1 + ef.field_c > param1) {
+        if (-1 + ConsoleParseException.field_c > param1) {
           if (var9 != 0) {
             oh.field_E = CampaignMenuEntry.field_u[-1 + (param3 + ResourceRequest.field_y)];
           }

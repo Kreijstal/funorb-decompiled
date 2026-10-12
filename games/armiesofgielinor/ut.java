@@ -458,7 +458,7 @@ final class ut extends sf implements he {
             rd.field_j = null;
             vs.field_j = false;
             SectorCacheStore.field_a = null;
-            ef.b(-1);
+            ConsoleParseException.b(-1);
           }
           if (pv.field_c) {
             PointerInputHandler.field_f = null;

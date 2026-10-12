@@ -13,7 +13,7 @@ final class gk extends nl {
     static String field_P;
 
     public gk() {
-        super(0, 0, SoundPlaybackHandle.field_l, ij.field_x, (WidgetPainter) null, (qo) null);
+        super(0, 0, SoundPlaybackHandle.field_l, DebugConsole.field_x, (WidgetPainter) null, (qo) null);
         this.field_M = new NodeDeque();
     }
 

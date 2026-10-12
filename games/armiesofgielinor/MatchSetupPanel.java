@@ -180,7 +180,7 @@ final class MatchSetupPanel {
             if (var5 == 0) {
               return;
             }
-            fe.b(db.a(true, var2), MatchConditionEntry.a(var3, (byte) 94), var4, var5, MusicPatch.field_m, nd.field_b, this.field_Q, this.field_p);
+            fe.b(db.a(true, var2), MatchConditionEntry.a(var3, (byte) 94), var4, var5, MusicPatch.field_m, ConsoleValue.field_b, this.field_Q, this.field_p);
             return;
           }
         }
@@ -344,7 +344,7 @@ final class MatchSetupPanel {
               var13 = SocialListPanel.k(-78);
               var8Lifetime1 = var8Lifetime1 + var13;
               if (!param4) {
-                stackIn_12_0 = nd.field_b;
+                stackIn_12_0 = ConsoleValue.field_b;
               } else {
                 stackIn_12_0 = TutorialController.field_e;
               }
@@ -877,7 +877,7 @@ final class MatchSetupPanel {
               this.option33Enabled = true;
             }
             SoftwareRaster.f(db.a(true, var6_int), MatchConditionEntry.a(var7, (byte) 94), var8, var9, this.field_M);
-            fe.b(db.a(true, var6_int), MatchConditionEntry.a(var7, (byte) 94), var8, var9, MusicPatch.field_m, nd.field_b, this.field_Q, this.field_p);
+            fe.b(db.a(true, var6_int), MatchConditionEntry.a(var7, (byte) 94), var8, var9, MusicPatch.field_m, ConsoleValue.field_b, this.field_Q, this.field_p);
             var10 = MatchConditionEntry.a(param0.second, (byte) 94);
             var11 = MatchConditionEntry.a(param3.second, (byte) 94);
             var7Lifetime1 = var10 + var11 >> 1;
@@ -886,7 +886,7 @@ final class MatchSetupPanel {
             if (param2) {
               stackIn_11_0 = TutorialController.field_e;
             } else {
-              stackIn_11_0 = nd.field_b;
+              stackIn_11_0 = ConsoleValue.field_b;
             }
             var15 = stackIn_11_0;
             var14 = var15;
@@ -1011,7 +1011,7 @@ final class MatchSetupPanel {
             }
             var8 = param2.first - var6_int;
             var9 = param2.second - var7;
-            var10 = nd.field_b;
+            var10 = ConsoleValue.field_b;
             if (param0) {
               var10 = TutorialController.field_e;
             }
@@ -1129,7 +1129,7 @@ final class MatchSetupPanel {
             return stackIn_6_0;
           }
           while (6 > var13) {
-            var14 = nd.field_d[var13];
+            var14 = ConsoleValue.field_d[var13];
             if (param2[var14] >= SectorCacheStore.field_j[var14].length) {
               param2[var14] = 0;
             }
@@ -1361,7 +1361,7 @@ final class MatchSetupPanel {
           }
           var4 = var3 + var2;
           fe.b(this.field_R, db.a(true, this.field_c.first), MatchConditionEntry.a(var4, (byte) 94));
-          fe.c(this.field_R, db.a(true, this.field_c.first), MatchConditionEntry.a(var4, (byte) 94), nd.field_b, false);
+          fe.c(this.field_R, db.a(true, this.field_c.first), MatchConditionEntry.a(var4, (byte) 94), ConsoleValue.field_b, false);
           return;
         }
     }

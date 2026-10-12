@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class mw extends dr {
+final class mw extends ConsoleCommand {
     static int[] field_F;
     static SocialListPanel field_E;
 
@@ -74,25 +74,25 @@ final class mw extends dr {
         super(param0, param1, param2);
     }
 
-    final nd a(int param0, nd[] param1) {
+    final ConsoleValue execute(int obfuscationGuard, ConsoleValue[] arguments) {
         RuntimeException var3 = null;
-        nd stackIn_3_0 = null;
+        ConsoleValue stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param0 != -24872) {
+          if (obfuscationGuard != -24872) {
             mw.e((byte) 60);
           }
-          stackIn_3_0 = new nd(RadialSummonMenu.a((byte) 123, param1[0].a(param0 ^ -24870)));
+          stackIn_3_0 = new ConsoleValue(RadialSummonMenu.a((byte) 123, arguments[0].asInt(obfuscationGuard ^ -24870)));
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
           stackIn_6_0 = var3;
-          stackIn_6_1 = new StringBuilder().append("mw.C(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_6_1 = new StringBuilder().append("mw.C(").append(obfuscationGuard).append(',');
+          if (arguments == null) {
             stackIn_7_2 = "null";
           } else {
             stackIn_7_2 = "{...}";

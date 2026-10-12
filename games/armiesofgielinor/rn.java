@@ -5,7 +5,7 @@ final class rn {
     static gu field_e;
     static int field_d;
     static ClientUiComponent field_a;
-    static int field_c;
+    static int consoleCallKind;
     static String field_b;
 
     final static void generateProceduralMap(int obfuscationGuard, Battlefield battlefield) {
@@ -73,6 +73,6 @@ final class rn {
     static {
         field_e = new gu();
         field_b = "This structure is not captured";
-        field_c = 3;
+        consoleCallKind = 3;
     }
 }

@@ -5,7 +5,7 @@ final class ol extends lu {
     static int field_B;
     static int field_A;
     static RgbSprite field_y;
-    static og[] field_w;
+    static ConsoleExpression[] field_w;
     static volatile boolean field_z;
     static String field_x;
     static boolean field_C;

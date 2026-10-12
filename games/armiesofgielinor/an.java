@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class an extends dr {
+final class an extends ConsoleCommand {
     static ChatMessage[] chatHistory;
     static int[] field_H;
     static long field_E;
@@ -34,27 +34,27 @@ final class an extends dr {
         SpellCastEvent.h(15);
     }
 
-    final nd a(int param0, nd[] param1) {
+    final ConsoleValue execute(int obfuscationGuard, ConsoleValue[] arguments) {
         RuntimeException var3 = null;
-        nd[] var4 = null;
-        nd stackIn_3_0 = null;
+        ConsoleValue[] var4 = null;
+        ConsoleValue stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param0 != -24872) {
-            var4 = (nd[]) null;
-            this.a(-83, (nd[]) null);
+          if (obfuscationGuard != -24872) {
+            var4 = (ConsoleValue[]) null;
+            this.execute(-83, (ConsoleValue[]) null);
           }
-          stackIn_3_0 = new nd(DelayedPacket.a(param1[0].a(2), (byte) 81));
+          stackIn_3_0 = new ConsoleValue(DelayedPacket.a(arguments[0].asInt(2), (byte) 81));
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
           stackIn_6_0 = var3;
-          stackIn_6_1 = new StringBuilder().append("an.C(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_6_1 = new StringBuilder().append("an.C(").append(obfuscationGuard).append(',');
+          if (arguments == null) {
             stackIn_7_2 = "null";
           } else {
             stackIn_7_2 = "{...}";

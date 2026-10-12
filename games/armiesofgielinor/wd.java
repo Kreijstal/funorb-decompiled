@@ -44,7 +44,7 @@ final class wd {
           if (param5 >= 0 &&
             param3 >= 0 &&
             param5 < ResourceRequest.field_y &&
-            param3 < ef.field_c) {
+            param3 < ConsoleParseException.field_c) {
             var6_int = ResourceRequest.field_y * param3 + param5;
             var7 = vs.field_e[var6_int];
             var8 = RegionAnchor.a(16711680, param3, var6_int, param5);

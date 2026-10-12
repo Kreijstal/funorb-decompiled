@@ -257,7 +257,7 @@ final class DropdownArrowPainter implements WidgetPainter {
           while (true) {
             if (stackIn_22_0 < 0) {
               ByteStorage.incomingPacket.position = 0;
-              if (!es.receivePacketBytes(obfuscationGuard ^ -83, 1)) {
+              if (!ConsoleTokenCursor.receivePacketBytes(obfuscationGuard ^ -83, 1)) {
                 return false;
               }
               ByteStorage.pendingOpcode = ByteStorage.incomingPacket.readCipheredOpcode(255);

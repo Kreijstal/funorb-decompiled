@@ -30,7 +30,7 @@ abstract class ActionRequest extends IntrusiveNode {
         if (param1 >= ResourceRequest.field_y) {
           return;
         }
-        if (!(param4 < ef.field_c)) {
+        if (!(param4 < ConsoleParseException.field_c)) {
           return;
         }
         int var6 = param4 * ResourceRequest.field_y + param1;

@@ -1231,7 +1231,7 @@ final class TickCounter {
                 }
                 var2 = fk.a(false, "LABEL_AWARD_MANASPEND");
                 if (var2 != null) {
-                  og.field_t = uu.a(var2, (byte) 103);
+                  ConsoleExpression.field_t = uu.a(var2, (byte) 103);
                 }
                 var2 = fk.a(false, "LABEL_AWARD_HEALTHLOST");
                 if (null != var2) {
@@ -1307,7 +1307,7 @@ final class TickCounter {
                 }
                 var2 = fk.a(false, "LOAD_QUICKSAVE");
                 if (var2 != null) {
-                  es.field_b = uu.a(var2, (byte) 87);
+                  ConsoleTokenCursor.field_b = uu.a(var2, (byte) 87);
                 }
                 var2 = fk.a(false, "COMING_SOON");
                 if (null != var2) {
@@ -1499,7 +1499,7 @@ final class TickCounter {
                 }
                 var2 = fk.a(false, "GROUND_TIP_TOWER");
                 if (var2 != null) {
-                  og.field_n = uu.a(var2, (byte) 47);
+                  ConsoleExpression.field_n = uu.a(var2, (byte) 47);
                 }
                 var2 = fk.a(false, "GROUND_TIP_TEMPLE");
                 if (null != var2) {
@@ -1511,7 +1511,7 @@ final class TickCounter {
                 }
                 var2 = fk.a(false, "EMPTY_TILE_ERROR");
                 if (null != var2) {
-                  ij.field_A = uu.a(var2, (byte) -108);
+                  DebugConsole.field_A = uu.a(var2, (byte) -108);
                 }
                 var2 = fk.a(false, "STATUS_NORANGE");
                 if (var2 != null) {
@@ -1769,7 +1769,7 @@ final class TickCounter {
                 }
                 var2 = fk.a(false, "MANA_INCREASE");
                 if (null != var2) {
-                  dr.field_w = uu.a(var2, (byte) -93);
+                  ConsoleCommand.field_w = uu.a(var2, (byte) -93);
                 }
                 var2 = fk.a(false, "MANA_COUNTER");
                 if (var2 != null) {
@@ -1897,7 +1897,7 @@ final class TickCounter {
                 }
                 var2 = fk.a(false, "LEADER");
                 if (var2 != null) {
-                  og.field_r = uu.a(var2, (byte) -123);
+                  ConsoleExpression.field_r = uu.a(var2, (byte) -123);
                 }
                 var2 = fk.a(false, "GUARD");
                 if (null != var2) {
@@ -2465,7 +2465,7 @@ final class TickCounter {
                 }
                 var2 = fk.a(false, "CAMPAIGN_PROGRESS");
                 if (var2 != null) {
-                  og.field_l = uu.a(var2, (byte) -103);
+                  ConsoleExpression.field_l = uu.a(var2, (byte) -103);
                 }
                 var2 = fk.a(false, "HOTSEAT_NAMES,0");
                 if (var2 != null) {
@@ -3223,7 +3223,7 @@ final class TickCounter {
                 }
                 var2 = fk.a(false, "LABEL_MODEL_VIEWER");
                 if (var2 != null) {
-                  ij.field_C = uu.a(var2, (byte) -111);
+                  DebugConsole.field_C = uu.a(var2, (byte) -111);
                 }
                 var2 = fk.a(false, "LABEL_BATTLE_VIEWER");
                 if (null != var2) {
@@ -3271,7 +3271,7 @@ final class TickCounter {
                 }
                 var2 = fk.a(false, "LABEL_INGAME_SINGLE");
                 if (var2 != null) {
-                  cb.field_d = uu.a(var2, (byte) 81);
+                  ConsoleEvaluationException.field_d = uu.a(var2, (byte) 81);
                 }
                 var2 = fk.a(false, "LABEL_INGAME_MULTI");
                 if (var2 != null) {
@@ -3291,7 +3291,7 @@ final class TickCounter {
                 }
                 var2 = fk.a(false, "LABEL_CAMPAIGN_SELECTION");
                 if (var2 != null) {
-                  og.field_u = uu.a(var2, (byte) -101);
+                  ConsoleExpression.field_u = uu.a(var2, (byte) -101);
                 }
                 var2 = fk.a(false, "LABEL_HOTSEAT");
                 if (null != var2) {
@@ -4827,7 +4827,7 @@ final class TickCounter {
                 }
                 var2 = fk.a(false, "TTREEN_MOVES");
                 if (var2 != null) {
-                  dr.field_y = uu.a(var2, (byte) 118);
+                  ConsoleCommand.field_y = uu.a(var2, (byte) 118);
                 }
                 var2 = fk.a(false, "TTREEN_INSTANTS");
                 if (var2 != null) {
@@ -4847,7 +4847,7 @@ final class TickCounter {
                 }
                 var2 = fk.a(false, "TTREEN_AURAS");
                 if (var2 != null) {
-                  ij.field_v = uu.a(var2, (byte) -113);
+                  DebugConsole.field_v = uu.a(var2, (byte) -113);
                 }
                 var2 = fk.a(false, "TTREEN_BOLTS");
                 if (null != var2) {
@@ -5051,7 +5051,7 @@ final class TickCounter {
                 }
                 var2 = fk.a(false, "TERROR_NOKBD");
                 if (var2 != null) {
-                  ij.field_B = uu.a(var2, (byte) 117);
+                  DebugConsole.field_B = uu.a(var2, (byte) 117);
                 }
                 var2 = fk.a(false, "TERROR_NOTARGET");
                 if (var2 != null) {
@@ -5698,7 +5698,7 @@ final class TickCounter {
         var13 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           if (DropdownArrowPainter.field_a) {
-            var9_int = param4 + og.field_p[param4];
+            var9_int = param4 + ConsoleExpression.field_p[param4];
             if (vs.field_e[param4].hasExplicitOwner((byte) -79)) {
               var10 = vs.field_e[param4].getExplicitOwner((byte) -102);
               var11 = 0;
@@ -5714,7 +5714,7 @@ final class TickCounter {
                 ~vs.field_e[param4 + 1].getExplicitOwner((byte) -95) != ~var10) {
                 var11 = var11 | 4;
               }
-              if (~(ef.field_c - 1) == ~param2 ||
+              if (~(ConsoleParseException.field_c - 1) == ~param2 ||
                 vs.field_e[ResourceRequest.field_y + param4].getExplicitOwner((byte) -55) != var10) {
                 var11 = var11 | 8;
               }
@@ -5772,7 +5772,7 @@ final class TickCounter {
                           }
                           break;
                         case 4:
-                          la.a(param3 + 20, og.field_p[param4] + param4, param8, 40 + param7, param0, false);
+                          la.a(param3 + 20, ConsoleExpression.field_p[param4] + param4, param8, 40 + param7, param0, false);
                           if (var13 == 0) {
                             break regionExit1;
                           }
@@ -5802,7 +5802,7 @@ final class TickCounter {
                   }}}
             }
             if (vs.field_e[param4].hasCorpse(-26)) {
-              es.boneSprites[var9_int % 4].b(param7, -25 + param3, param0, param8);
+              ConsoleTokenCursor.boneSprites[var9_int % 4].b(param7, -25 + param3, param0, param8);
             }
             var11 = CipherPacketBuffer.currentBattlefield.getTileEffects(param5 + 31, param2, param6, -1);
             var12 = vs.field_e[param4].terrainType;

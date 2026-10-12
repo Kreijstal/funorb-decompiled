@@ -92,7 +92,7 @@ final class dd {
         if (param0) {
           field_a = false;
         }
-        if (0 == og.field_m) {
+        if (0 == ConsoleExpression.field_m) {
           if (!ps.field_u.ensureIndex((byte) 82)) {
             return 20;
           }

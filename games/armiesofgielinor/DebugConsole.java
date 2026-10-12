@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-final class ij extends dv {
+final class DebugConsole extends dv {
     static String field_A;
     static CommunityTabGroup field_w;
     static String field_B;
@@ -11,7 +11,7 @@ final class ij extends dv {
     static int field_y;
     static String field_u;
     static String field_v;
-    private dr[] field_z;
+    private ConsoleCommand[] commands;
     static int field_x;
 
     final boolean a(int param0, char param1, int param2) {
@@ -146,11 +146,11 @@ final class ij extends dv {
         }
     }
 
-    ij(NodeDeque param0, BitmapFont param1, PlatformTaskService param2) {
+    DebugConsole(NodeDeque param0, BitmapFont param1, PlatformTaskService param2) {
         super(param1, param2);
         int incrementValue$3 = 0;
         int var4_int = 0;
-        dr var5 = null;
+        ConsoleCommand var5 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
@@ -165,16 +165,16 @@ final class ij extends dv {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var4 = null;
         try {
-          this.field_z = new dr[param0.size(false)];
+          this.commands = new ConsoleCommand[param0.size(false)];
           var4_int = 0;
-          var5 = (dr) (param0.first((byte) 94));
+          var5 = (ConsoleCommand) (param0.first((byte) 94));
           while (var5 != null) {
             incrementValue$3 = var4_int;
             var4_int++;
-            this.field_z[incrementValue$3] = var5;
-            var5 = (dr) (param0.next((byte) 123));
+            this.commands[incrementValue$3] = var5;
+            var5 = (ConsoleCommand) (param0.next((byte) 123));
           }
-          this.a(-1, "# <col=ffaaff>FunOrbConsole (loaded " + this.field_z.length + " methods at " + new Date() + ")</col>");
+          this.a(-1, "# <col=ffaaff>FunOrbConsole (loaded " + this.commands.length + " methods at " + new Date() + ")</col>");
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -228,18 +228,18 @@ final class ij extends dv {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         int var3 = 0;
-        og[] var4 = null;
+        ConsoleExpression[] var4 = null;
         int var5 = 0;
         String var6 = null;
         int var8_int = 0;
         String[] var8 = null;
         int var9 = 0;
         int var10_int = 0;
-        dr var10 = null;
+        ConsoleCommand var10 = null;
         int var11 = 0;
         String var12 = null;
         String var13 = null;
-        og var14 = null;
+        ConsoleExpression var14 = null;
         DualNodeDeque var15 = null;
         String var6Lifetime1;
         String var6Lifetime2;
@@ -256,19 +256,19 @@ final class ij extends dv {
           var6Lifetime2 = "";
           if (0 <= var5) {
             var14 = var4[var5];
-            var8_int = -var14.field_s + var3;
-            if (rn.field_c == var14.field_q &&
+            var8_int = -var14.sourceOffset + var3;
+            if (rn.consoleCallKind == var14.kind &&
               var8_int > 0) {
-              var6Lifetime2 = var14.field_o.substring(0, Math.min(var14.field_o.length(), var8_int));
-              this.field_s.x = this.field_t.a(var13.substring(0, var14.field_s));
+              var6Lifetime2 = var14.text.substring(0, Math.min(var14.text.length(), var8_int));
+              this.field_s.x = this.field_t.a(var13.substring(0, var14.sourceOffset));
             } else {
               var9 = var5;
               var10_int = 0;
               while (var9 >= 0) {
-                if (~LeaderEscortCondition.field_d == ~var4[var9].field_q) {
+                if (~LeaderEscortCondition.consoleArgumentEndKind == ~var4[var9].kind) {
                   var10_int++;
                 }
-                if (var4[var9].field_q == ChatMessage.field_j) {
+                if (var4[var9].kind == ChatMessage.consoleArgumentStartKind) {
                   var10_int--;
                 }
                 if (var10_int >= 0) {
@@ -278,16 +278,16 @@ final class ij extends dv {
                 break;
               }
               if (0 < var9 &&
-                var4[var9 - 1].field_q == rn.field_c) {
-                var6Lifetime2 = var4[-1 + var9].field_o;
-                this.field_s.x = this.field_t.a(var13.substring(0, var4[-1 + var9].field_s));
+                var4[var9 - 1].kind == rn.consoleCallKind) {
+                var6Lifetime2 = var4[-1 + var9].text;
+                this.field_s.x = this.field_t.a(var13.substring(0, var4[-1 + var9].sourceOffset));
               }
             }
           }
           var15 = this.a((byte) -75, var6Lifetime2);
           var8 = new String[var15.size(30578)];
           var9Lifetime1 = 0;
-          var10 = (dr) (var15.first((byte) 43));
+          var10 = (ConsoleCommand) (var15.first((byte) 43));
           if (!param0) {
             var12 = (String) null;
             discarded$0 = this.a((byte) 83, (String) null);
@@ -295,8 +295,8 @@ final class ij extends dv {
           while (var10 != null) {
             incrementValue$1 = var9Lifetime1;
             var9Lifetime1++;
-            var8[incrementValue$1] = var10.field_A;
-            var10 = (dr) (var15.next(24));
+            var8[incrementValue$1] = var10.displaySignature;
+            var10 = (ConsoleCommand) (var15.next(24));
           }
           stackIn_27_0 = var8;
           return stackIn_27_0;
@@ -340,7 +340,7 @@ final class ij extends dv {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         int var3 = 0;
-        og[] var4 = null;
+        ConsoleExpression[] var4 = null;
         int var5 = 0;
         String var6 = null;
         int var8_int = 0;
@@ -348,12 +348,12 @@ final class ij extends dv {
         int var9 = 0;
         int var10 = 0;
         int var11 = 0;
-        dr var12_ref_dr = null;
+        ConsoleCommand var12_ref_dr = null;
         int var12 = 0;
-        dr var13 = null;
+        ConsoleCommand var13 = null;
         int var14 = 0;
         String var15 = null;
-        og var16 = null;
+        ConsoleExpression var16 = null;
         DualNodeDeque var17 = null;
         String var6Lifetime1;
         String var6Lifetime2;
@@ -369,11 +369,11 @@ final class ij extends dv {
           var6Lifetime2 = "";
           if (0 <= var5) {
             var16 = var4[var5];
-            var8_int = var3 - var16.field_s;
-            if (rn.field_c == var16.field_q &&
+            var8_int = var3 - var16.sourceOffset;
+            if (rn.consoleCallKind == var16.kind &&
               0 < var8_int &&
-              var16.field_o.length() >= var8_int) {
-              var6Lifetime2 = var16.field_o.substring(0, var8_int);
+              var16.text.length() >= var8_int) {
+              var6Lifetime2 = var16.text.substring(0, var8_int);
             }
           }
           var17 = this.a((byte) -75, var6Lifetime2);
@@ -387,26 +387,26 @@ final class ij extends dv {
           var9 = var6Lifetime2.length();
           var10 = 1;
           var11 = 2147483647;
-          var12_ref_dr = (dr) (var17.first((byte) -110));
+          var12_ref_dr = (ConsoleCommand) (var17.first((byte) -110));
           while (var12_ref_dr != null) {
-            if (var11 > var12_ref_dr.field_B.length()) {
-              var11 = var12_ref_dr.field_B.length();
+            if (var11 > var12_ref_dr.commandName.length()) {
+              var11 = var12_ref_dr.commandName.length();
             }
-            var12_ref_dr = (dr) (var17.next(24));
+            var12_ref_dr = (ConsoleCommand) (var17.next(24));
           }
           while (var10 != 0) {
             if (var11 > var9) {
-              var12 = ((dr) (var17.first((byte) -112))).field_B.charAt(var9);
-              var13 = (dr) (var17.next(24));
+              var12 = ((ConsoleCommand) (var17.first((byte) -112))).commandName.charAt(var9);
+              var13 = (ConsoleCommand) (var17.next(24));
               while (var13 != null) {
                 stackIn_26_0 = var10;
-                if (~var12 != ~var13.field_B.charAt(var9)) {
+                if (~var12 != ~var13.commandName.charAt(var9)) {
                   stackIn_27_1 = 0;
                 } else {
                   stackIn_27_1 = 1;
                 }
                 var10 = stackIn_26_0 & stackIn_27_1;
-                var13 = (dr) (var17.next(24));
+                var13 = (ConsoleCommand) (var17.next(24));
               }
               var9++;
               if (var10 == 0) {
@@ -422,7 +422,7 @@ final class ij extends dv {
             var12Lifetime1++;
             discarded$1 = var8.append("()");
             if (var17.size(30578) == 1 &&
-              ((dr) (var17.first((byte) 44))).field_u.length == 0) {
+              ((ConsoleCommand) (var17.first((byte) 44))).parameterTypes.length == 0) {
               var12Lifetime1++;
             }
             this.field_o.setText(var15.substring(0, var3) + var8.toString() + var15.substring(var3), (byte) 45);
@@ -459,10 +459,10 @@ final class ij extends dv {
           }
           var6 = new DualNodeDeque();
           var3 = var6;
-          for (var4 = 0; var4 < this.field_z.length; var4++) {
-            if (this.field_z[var4].field_B.startsWith(param1)) {
-              this.field_z[var4].unlinkSecondary((byte) -76);
-              var6.addLast(this.field_z[var4], false);
+          for (var4 = 0; var4 < this.commands.length; var4++) {
+            if (this.commands[var4].commandName.startsWith(param1)) {
+              this.commands[var4].unlinkSecondary((byte) -76);
+              var6.addLast(this.commands[var4], false);
             }
           }
           stackIn_12_0 = var3;
@@ -481,44 +481,44 @@ final class ij extends dv {
         }
     }
 
-    final boolean a(String param0, boolean param1) {
+    final boolean evaluateInput(String source, boolean executeExpression) {
         try {
-          og var5 = null;
+          ConsoleExpression var5 = null;
           NodeDeque var6 = null;
-          es var7 = null;
+          ConsoleTokenCursor var7 = null;
           RuntimeException stackIn_15_0 = null;
           StringBuilder stackIn_15_1 = null;
           String stackIn_16_2 = null;
           Throwable decompiledCaughtException = null;
-          ef var3 = null;
-          cb var3_ref = null;
+          ConsoleParseException var3 = null;
+          ConsoleEvaluationException var3_ref = null;
           RuntimeException var3_ref2 = null;
           ClientUiComponent var4 = null;
           try {
             try {
-              if (false) throw (ef) null;
-              var6 = gu.a(false, param0);
-              if (!param1) {
+              if (false) throw (ConsoleParseException) null;
+              var6 = gu.tokenizeConsole(false, source);
+              if (!executeExpression) {
                 return true;
               }
-              var7 = new es(var6);
-              var5 = fk.a(var7, -39);
-              if (!var7.a(124)) {
-                throw new ef(var7.a((byte) 13).field_s);
+              var7 = new ConsoleTokenCursor(var6);
+              var5 = fk.parseConsoleExpression(var7, -39);
+              if (!var7.isAtEnd(124)) {
+                throw new ConsoleParseException(var7.readToken((byte) 13).sourceOffset);
               }
-              this.a(var5.a(1, this.field_z), -58);
+              this.a(var5.evaluate(1, this.commands), -58);
               return true;
-            } catch (ef decompiledCaughtParameter0) {
+            } catch (ConsoleParseException decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
-              var3 = (ef) (Object) decompiledCaughtException;
-              param0 = "<col=55ff55>" + param0.substring(0, var3.field_b) + "</col>" + param0.substring(var3.field_b);
+              var3 = (ConsoleParseException) (Object) decompiledCaughtException;
+              source = "<col=55ff55>" + source.substring(0, var3.sourceOffset) + "</col>" + source.substring(var3.sourceOffset);
               var4 = (ClientUiComponent) (this.field_d.content.children.last((byte) -98));
-              var4.text = this.field_c + param0;
+              var4.text = this.field_c + source;
               return false;
-            } catch (cb decompiledCaughtParameter1) {
+            } catch (ConsoleEvaluationException decompiledCaughtParameter1) {
               decompiledCaughtException = decompiledCaughtParameter1;
-              var3_ref = (cb) (Object) decompiledCaughtException;
-              this.a(-1, var3_ref.field_b);
+              var3_ref = (ConsoleEvaluationException) (Object) decompiledCaughtException;
+              this.a(-1, var3_ref.diagnostic);
               return false;
             }
           } catch (java.lang.RuntimeException decompiledCaughtParameter2) {
@@ -526,12 +526,12 @@ final class ij extends dv {
             var3_ref2 = (RuntimeException) (Object) decompiledCaughtException;
             stackIn_15_0 = var3_ref2;
             stackIn_15_1 = new StringBuilder().append("ij.D(");
-            if (param0 == null) {
+            if (source == null) {
               stackIn_16_2 = "null";
             } else {
               stackIn_16_2 = "{...}";
             }
-            throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param1).append(')').toString());
+            throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(executeExpression).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;

@@ -93,7 +93,7 @@ final class cw {
                   (var7Lifetime1 & NetworkResourceRequest.field_C.movementPlanner.attackTargetMask[param0 - ResourceRequest.field_y]) == 0) {
                   SoftwareRaster.d(-40 + param2, param1, param2, -20 + param1, 16711680, var6_int);
                 }
-                if (param5 == -1 + ef.field_c ||
+                if (param5 == -1 + ConsoleParseException.field_c ||
                   (!(var8Lifetime1 >= NetworkResourceRequest.field_C.movementPlanner.movementCosts[ResourceRequest.field_y + param0]) ||
                   NetworkResourceRequest.field_C.selectedUnit.movementSpent) &&
                   (NetworkResourceRequest.field_C.movementPlanner.attackTargetMask[ResourceRequest.field_y + param0] & var7Lifetime1) == 0) {

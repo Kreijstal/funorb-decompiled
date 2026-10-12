@@ -459,7 +459,7 @@ final class Unit extends IntrusiveNode implements TaggedFieldReader {
         }
         String var2 = new String(this.displayName);
         if (this.hasMovementFlag1(false)) {
-          var2 = var2 + " " + og.field_r;
+          var2 = var2 + " " + ConsoleExpression.field_r;
         }
         if (this.u(8)) {
           var2 = var2 + " " + fa.field_f;

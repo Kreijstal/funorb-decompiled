@@ -101,7 +101,7 @@ abstract class ResourceProtocolClient {
           if (param2 > -96) {
             ResourceProtocolClient.a(-87, 28, 102);
           }
-          var11 = dr.field_v[param0];
+          var11 = ConsoleCommand.field_v[param0];
           var10 = var11;
           var9 = var10;
           var3 = var9;

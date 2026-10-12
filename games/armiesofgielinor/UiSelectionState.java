@@ -264,7 +264,7 @@ final class UiSelectionState {
     }
 
     final static void f(int param0) {
-        TurnEffectEvent.a(8, eq.field_h, ArchiveIndex.field_b, cb.field_c, UnitModelPreview.field_m);
+        TurnEffectEvent.a(8, eq.field_h, ArchiveIndex.field_b, ConsoleEvaluationException.field_c, UnitModelPreview.field_m);
         if (param0 != 0) {
           field_i = 123;
         }

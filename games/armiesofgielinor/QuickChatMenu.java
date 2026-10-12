@@ -226,7 +226,7 @@ final class QuickChatMenu extends ClientUiComponent {
             SpellConfirmationDialog.field_e = CampaignMenuEntry.field_u[1 + param2];
           }
           var9 = var9 * 20;
-          if (param7 < -1 + ef.field_c) {
+          if (param7 < -1 + ConsoleParseException.field_c) {
             if (var11 != 0) {
               oh.field_E = CampaignMenuEntry.field_u[-1 + param2 + ResourceRequest.field_y];
             }
@@ -241,8 +241,8 @@ final class QuickChatMenu extends ClientUiComponent {
           ac.activeTerrainSprites[3 + (var9 + ls.a(oh.field_E, j.field_b, QuickChatCategory.field_z, cs.field_Y, -72))].b(param0, param4, param5, param1);
           if (cu.field_a &&
             var8 == 0 &&
-            (og.field_p[param2] + param2 & 5) == 5) {
-            nr.activeFoliageSprites[6 + og.field_p[param2] % 8].b(param0, -40 + param4, param5, param1);
+            (ConsoleExpression.field_p[param2] + param2 & 5) == 5) {
+            nr.activeFoliageSprites[6 + ConsoleExpression.field_p[param2] % 8].b(param0, -40 + param4, param5, param1);
           }
         }
         return;

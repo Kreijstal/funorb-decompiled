@@ -108,7 +108,7 @@ abstract class CacheEntry extends DualLinkedNode {
             ov.connectionState = DirectByteStorage.field_m;
           }
           if (ov.connectionState == DirectByteStorage.field_m &&
-            es.receivePacketBytes(param2 ^ 20080, 1)) {
+            ConsoleTokenCursor.receivePacketBytes(param2 ^ 20080, 1)) {
             var9Lifetime1 = ByteStorage.incomingPacket.readUnsignedByte(0);
             ByteStorage.incomingPacket.position = 0;
             if (var9Lifetime1 >= 100 &&
@@ -125,7 +125,7 @@ abstract class CacheEntry extends DualLinkedNode {
                 return stackIn_31_0;
               }
               if (var9Lifetime1 == 99) {
-                es.receivePacketBytes(-81, qa.h(1));
+                ConsoleTokenCursor.receivePacketBytes(-81, qa.h(1));
                 CampaignMenu.field_s = new Boolean(rr.a((byte) -76, ByteStorage.incomingPacket));
                 ByteStorage.incomingPacket.position = 0;
               } else {
@@ -137,10 +137,10 @@ abstract class CacheEntry extends DualLinkedNode {
           }
           if (mv.field_c == ov.connectionState) {
             var9Lifetime2 = 2;
-            if (es.receivePacketBytes(-79, var9Lifetime2)) {
+            if (ConsoleTokenCursor.receivePacketBytes(-79, var9Lifetime2)) {
               var10Lifetime1 = ByteStorage.incomingPacket.readUnsignedShort((byte) -104);
               ByteStorage.incomingPacket.position = 0;
-              if (es.receivePacketBytes(-83, var10Lifetime1)) {
+              if (ConsoleTokenCursor.receivePacketBytes(-83, var10Lifetime1)) {
                 var11 = br.field_b.length;
                 for (var12 = 0; var12 < var11; var12++) {
                   br.field_b[var12] = ByteStorage.incomingPacket.readNullCircumfixedString((byte) 121);

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class re extends dr {
+final class re extends ConsoleCommand {
     static String field_E;
 
     final static boolean a(int param0, byte param1) {
@@ -28,27 +28,27 @@ final class re extends dr {
         }
     }
 
-    final nd a(int param0, nd[] param1) {
+    final ConsoleValue execute(int obfuscationGuard, ConsoleValue[] arguments) {
         RuntimeException var3 = null;
-        nd stackIn_2_0 = null;
-        nd stackIn_4_0 = null;
+        ConsoleValue stackIn_2_0 = null;
+        ConsoleValue stackIn_4_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param0 == -24872) {
-            stackIn_4_0 = new nd(vv.a((byte) -62));
+          if (obfuscationGuard == -24872) {
+            stackIn_4_0 = new ConsoleValue(vv.a((byte) -62));
             return stackIn_4_0;
           }
-          stackIn_2_0 = (nd) null;
+          stackIn_2_0 = (ConsoleValue) null;
           return stackIn_2_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
           stackIn_7_0 = var3;
-          stackIn_7_1 = new StringBuilder().append("re.C(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_7_1 = new StringBuilder().append("re.C(").append(obfuscationGuard).append(',');
+          if (arguments == null) {
             stackIn_8_2 = "null";
           } else {
             stackIn_8_2 = "{...}";

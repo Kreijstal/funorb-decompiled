@@ -375,7 +375,7 @@ final class CampaignMission extends IntrusiveNode implements TaggedFieldReader {
         if (param1 != -22696) {
           field_s = (String) null;
         }
-        ij.field_x = param0;
+        DebugConsole.field_x = param0;
         SoundPlaybackHandle.field_l = param2;
         if (null != SphinxActionRequest.field_v) {
           SphinxActionRequest.field_v.a(param2, param0, (byte) -14);

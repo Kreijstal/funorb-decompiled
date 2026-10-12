@@ -37,7 +37,7 @@ class DualLinkedNode extends IntrusiveNode {
         this.secondaryPrevious = null;
     }
 
-    final static int a(int param0, og[] param1, int param2) {
+    final static int a(int param0, ConsoleExpression[] param1, int param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
@@ -60,7 +60,7 @@ class DualLinkedNode extends IntrusiveNode {
               stackIn_11_0 = -74;
               return stackIn_11_0;
             }
-            if ((param0 - 1) >= param1[1 + var3_int].field_s) {
+            if ((param0 - 1) >= param1[1 + var3_int].sourceOffset) {
               var3_int++;
               continue;
             }

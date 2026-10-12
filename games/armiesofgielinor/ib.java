@@ -190,7 +190,7 @@ final class ib extends mk {
             if (!param0) {
               fe.a(8 + param2, param8 + 8, param5 - 16, 32, DisplacedUnitMarker.field_s, TutorialController.field_e, 0, 128, true);
             } else {
-              fe.a(param2 + 8, param8 + 8, param5 - 16, 32, DisplacedUnitMarker.field_s, nd.field_b, 0, 128, true);
+              fe.a(param2 + 8, param8 + 8, param5 - 16, 32, DisplacedUnitMarker.field_s, ConsoleValue.field_b, 0, 128, true);
             }
           } else {
             fe.a(8 + param2, 8 + param8, -16 + param5, 32, DisplacedUnitMarker.field_s, jh.field_k, 0, 128, true);
@@ -199,7 +199,7 @@ final class ib extends mk {
             -param8 + param3 + 40 > param1 &&
             uk.field_q > dd.field_e) {
             if (param0) {
-              fe.a(param2 + 8, param8 + (param1 - 40), -16 + param5, 32, DisplacedUnitMarker.field_s, nd.field_b, 0, 128, true);
+              fe.a(param2 + 8, param8 + (param1 - 40), -16 + param5, 32, DisplacedUnitMarker.field_s, ConsoleValue.field_b, 0, 128, true);
             } else {
               fe.a(8 + param2, -40 + param1 + param8, -16 + param5, 32, DisplacedUnitMarker.field_s, TutorialController.field_e, 0, 128, true);
             }
@@ -254,7 +254,7 @@ final class ib extends mk {
                   }
                 }
               } else {
-                fe.a(var13, var14, (param5 >> 1) - 9, 78, MusicPatch.field_m, nd.field_b, 0, 128, false);
+                fe.a(var13, var14, (param5 >> 1) - 9, 78, MusicPatch.field_m, ConsoleValue.field_b, 0, 128, false);
               }
               if (var12_int % 2 != 1) {
                 stackIn_47_0 = 0;

@@ -46,7 +46,7 @@ abstract class dv implements ap {
         }
     }
 
-    abstract boolean a(String param0, boolean param1);
+    abstract boolean evaluateInput(String source, boolean executeExpression);
 
     final static String a(String param0, int param1, String param2, String param3) {
         int var5 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
@@ -512,7 +512,7 @@ abstract class dv implements ap {
           }
           this.a(this.field_c + var7, 5635925, param0 + 30734);
           var5 = (ClientUiComponent) (this.field_d.content.children.last((byte) -81));
-          if (!this.a(var7, true)) {
+          if (!this.evaluateInput(var7, true)) {
             var5.textColour = 16733525;
           }
           this.field_o.clearText(true);

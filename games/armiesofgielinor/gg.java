@@ -3,8 +3,8 @@
  */
 import java.util.*;
 
-final class gg extends dr {
-    static int field_G;
+final class gg extends ConsoleCommand {
+    static int consoleNumberKind;
     static NodeDeque field_F;
     static int field_I;
     static Random animationRandom;
@@ -12,27 +12,27 @@ final class gg extends dr {
     static ResourceArchive field_K;
     static ClientUiComponent field_E;
 
-    final nd a(int param0, nd[] param1) {
+    final ConsoleValue execute(int obfuscationGuard, ConsoleValue[] arguments) {
         RuntimeException var3 = null;
-        nd[] var4 = null;
-        nd stackIn_3_0 = null;
+        ConsoleValue[] var4 = null;
+        ConsoleValue stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param0 != -24872) {
-            var4 = (nd[]) null;
-            this.a(-98, (nd[]) null);
+          if (obfuscationGuard != -24872) {
+            var4 = (ConsoleValue[]) null;
+            this.execute(-98, (ConsoleValue[]) null);
           }
-          stackIn_3_0 = new nd(InstructionsPanel.c(-29288));
+          stackIn_3_0 = new ConsoleValue(InstructionsPanel.c(-29288));
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
           stackIn_6_0 = var3;
-          stackIn_6_1 = new StringBuilder().append("gg.C(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_6_1 = new StringBuilder().append("gg.C(").append(obfuscationGuard).append(',');
+          if (arguments == null) {
             stackIn_7_2 = "null";
           } else {
             stackIn_7_2 = "{...}";
@@ -57,7 +57,7 @@ final class gg extends dr {
     }
 
     static {
-        field_G = 6;
+        consoleNumberKind = 6;
         field_F = new NodeDeque();
         field_H = "Options";
         field_I = 2;

@@ -31,7 +31,7 @@ final class fs {
             null == vs.field_e[param5].occupant) {
             return;
           }
-          var9_int = param5 + og.field_p[param5];
+          var9_int = param5 + ConsoleExpression.field_p[param5];
           if (vs.field_e[param5].terrainType == 3) {
             eq.$cfr$intArgs$a$de73e65787eb(20 + param0, true, 126, var9_int, param3, false, 40 + param4, param7);
           }
@@ -67,7 +67,7 @@ final class fs {
               var10 != vs.field_e[param5 + 1].getExplicitOwner((byte) -90)) {
               var11 = var11 | 4;
             }
-            if (param8 == -1 + ef.field_c ||
+            if (param8 == -1 + ConsoleParseException.field_c ||
               var10 != vs.field_e[param5 + ResourceRequest.field_y].getExplicitOwner((byte) -75)) {
               var11 = var11 | 8;
             }

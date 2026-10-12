@@ -339,7 +339,7 @@ final class CampaignUnitOverride {
                 }
                 var2 = NodeIterator.a(50, "close");
                 if (var2 != null) {
-                  dr.field_D = uu.a(var2, (byte) 37);
+                  ConsoleCommand.field_D = uu.a(var2, (byte) 37);
                 }
                 var2 = NodeIterator.a(50, "add_x_to_friends");
                 if (var2 != null) {
@@ -515,7 +515,7 @@ final class CampaignUnitOverride {
                 }
                 var2 = NodeIterator.a(param0 ^ -100, "rated_game_tips_setup_plural");
                 if (var2 != null) {
-                  dr.field_x = uu.a(var2, (byte) -111);
+                  ConsoleCommand.field_x = uu.a(var2, (byte) -111);
                 }
                 var2 = NodeIterator.a(50, "waiting_to_start_hint");
                 if (var2 != null) {
@@ -675,7 +675,7 @@ final class CampaignUnitOverride {
                 }
                 var2 = NodeIterator.a(50, "loading");
                 if (null != var2) {
-                  ef.field_a = uu.a(var2, (byte) 64);
+                  ConsoleParseException.field_a = uu.a(var2, (byte) 64);
                 }
                 var2 = NodeIterator.a(50, "offline");
                 if (var2 != null) {
@@ -917,7 +917,7 @@ final class CampaignUnitOverride {
                 }
                 var2 = NodeIterator.a(50, "ra_title");
                 if (null != var2) {
-                  ij.field_u = uu.a(var2, (byte) -97);
+                  DebugConsole.field_u = uu.a(var2, (byte) -97);
                 }
                 var2 = NodeIterator.a(50, "ra_mutethisplayer");
                 if (var2 != null) {
@@ -2788,11 +2788,11 @@ final class CampaignUnitOverride {
                 }
                 var2 = NodeIterator.a(50, "rating_mode_long_name,0");
                 if (var2 != null) {
-                  dr.field_C[0] = uu.a(var2, (byte) -114);
+                  ConsoleCommand.field_C[0] = uu.a(var2, (byte) -114);
                 }
                 var2 = NodeIterator.a(50, "rating_mode_long_name,1");
                 if (null != var2) {
-                  dr.field_C[1] = uu.a(var2, (byte) -108);
+                  ConsoleCommand.field_C[1] = uu.a(var2, (byte) -108);
                 }
                 var2 = NodeIterator.a(param0 ^ -100, "graphics_config_fixed_size");
                 if (var2 != null) {

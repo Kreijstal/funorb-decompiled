@@ -393,7 +393,7 @@ final class InstructionsPanel {
           }
           var12 = title;
           if (var12 != null) {
-            fe.c(var12, db.a(true, var9_int), MatchConditionEntry.a(var10, (byte) 94), nd.field_b, true);
+            fe.c(var12, db.a(true, var9_int), MatchConditionEntry.a(var10, (byte) 94), ConsoleValue.field_b, true);
           }
           var13 = topY;
           var11Lifetime1 = this.field_Y - this.field_T + (this.a(true) >> 1);
@@ -555,7 +555,7 @@ final class InstructionsPanel {
         int var4 = this.footerEnd.first - var2;
         int var5 = -var3 + this.footerEnd.second;
         SoftwareRaster.f(db.a(true, var2), MatchConditionEntry.a(var3, (byte) 94), var4, var5, this.field_cb);
-        fe.b(db.a(true, var2), MatchConditionEntry.a(var3, (byte) 94), var4, var5, MusicPatch.field_m, nd.field_b, this.field_A, this.field_e);
+        fe.b(db.a(true, var2), MatchConditionEntry.a(var3, (byte) 94), var4, var5, MusicPatch.field_m, ConsoleValue.field_b, this.field_A, this.field_e);
         int var6 = this.footerStart.second;
         int var7 = this.footerEnd.second;
         var3 = var6 + var7 >> 1;
@@ -566,7 +566,7 @@ final class InstructionsPanel {
           var9.length() == 0) {
           return;
         }
-        int[] var12 = this.footerHighlighted ? TutorialController.field_e : nd.field_b;
+        int[] var12 = this.footerHighlighted ? TutorialController.field_e : ConsoleValue.field_b;
         int[] var11 = var12;
         int[] var10 = var11;
         fe.c(var9, db.a(true, this.field_F.first), MatchConditionEntry.a(var3, (byte) 94), var12, true);
@@ -643,7 +643,7 @@ final class InstructionsPanel {
         int var10 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         SpellConfirmationDialog.field_j.b();
         SoftwareRaster.b();
-        fe.b(0, 0, 134, 61, MusicPatch.field_m, nd.field_b, 0, 0);
+        fe.b(0, 0, 134, 61, MusicPatch.field_m, ConsoleValue.field_b, 0, 0);
         qt.field_e.drawOpaque(2, 2);
         SoftwareRaster.b(5, 5, 124, 18, 0, 192);
         if (param4 < 70) {
@@ -669,7 +669,7 @@ final class InstructionsPanel {
           }
           ro.field_rb[param5.getUnitCategory(0)].draw(106, 32);
           en.field_E.c(100 - param3 + "%", 20, 45, 16777215, -1);
-          EventPresenter.field_t.b(68, 60, nd.field_b[-1 + nd.field_b.length]);
+          EventPresenter.field_t.b(68, 60, ConsoleValue.field_b[-1 + ConsoleValue.field_b.length]);
           so.field_b.a(5605);
           SpellConfirmationDialog.field_j.e(db.a(true, param1), MatchConditionEntry.a(param7, (byte) 94), -param0 + 32 << 3);
         } catch (RuntimeException runtimeException) {
@@ -822,7 +822,7 @@ final class InstructionsPanel {
         if (this.previousHighlighted) {
           stackIn_5_0 = TutorialController.field_e;
         } else {
-          stackIn_5_0 = nd.field_b;
+          stackIn_5_0 = ConsoleValue.field_b;
         }
         var17 = stackIn_5_0;
         var14 = var17;
@@ -836,7 +836,7 @@ final class InstructionsPanel {
         if (this.nextHighlighted) {
           stackIn_12_0 = TutorialController.field_e;
         } else {
-          stackIn_12_0 = nd.field_b;
+          stackIn_12_0 = ConsoleValue.field_b;
         }
         var18 = stackIn_12_0;
         var16 = var18;
@@ -2152,7 +2152,7 @@ final class InstructionsPanel {
         }
         int var4 = var3 + var2;
         fe.b(this.field_a, db.a(true, this.field_F.first), MatchConditionEntry.a(var4, (byte) 94));
-        fe.c(this.field_a, db.a(true, this.field_F.first), MatchConditionEntry.a(var4, (byte) 94), nd.field_b, false);
+        fe.c(this.field_a, db.a(true, this.field_F.first), MatchConditionEntry.a(var4, (byte) 94), ConsoleValue.field_b, false);
     }
 
     private final void f(int param0) {
@@ -2364,7 +2364,7 @@ final class InstructionsPanel {
               ov.connectionState = gi.field_d;
             }
             if (ov.connectionState == gi.field_d &&
-              es.receivePacketBytes(-111, 1)) {
+              ConsoleTokenCursor.receivePacketBytes(-111, 1)) {
               var6_int = ByteStorage.incomingPacket.readUnsignedByte(0);
               if (0 != var6_int) {
                 MusicCrossfadeStream.deliveredOpcode = var6_int;
@@ -2376,7 +2376,7 @@ final class InstructionsPanel {
               ByteStorage.incomingPacket.position = 0;
             }
             if (mh.field_a == ov.connectionState &&
-              es.receivePacketBytes(-115, 8)) {
+              ConsoleTokenCursor.receivePacketBytes(-115, 8)) {
               ts.field_h = ByteStorage.incomingPacket.readLong((byte) -2);
               ByteStorage.incomingPacket.position = 0;
               bk.a(param2, param5, CampaignRewardPreview.field_g, 0, param1);
@@ -2384,7 +2384,7 @@ final class InstructionsPanel {
             }
             boolean decompiledFrameRemainder0 = true;
             if (ov.connectionState == NetworkResourceRequest.field_D &&
-              es.receivePacketBytes(-90, 1)) {
+              ConsoleTokenCursor.receivePacketBytes(-90, 1)) {
               var6_intLifetime1 = ByteStorage.incomingPacket.readUnsignedByte(param0 + 53);
               ByteStorage.incomingPacket.position = 0;
               DropdownSelector.field_P = null;
@@ -2872,7 +2872,7 @@ final class InstructionsPanel {
         int var3 = this.field_C.second;
         int var4 = this.field_V.first - var2;
         int var5 = this.field_V.second - var3;
-        fe.b(db.a(true, var2), MatchConditionEntry.a(var3, (byte) 94), var4, var5, MusicPatch.field_m, nd.field_b, this.field_A, this.field_e);
+        fe.b(db.a(true, var2), MatchConditionEntry.a(var3, (byte) 94), var4, var5, MusicPatch.field_m, ConsoleValue.field_b, this.field_A, this.field_e);
         this.g(120);
         var2 = this.field_x.first;
         var3 = this.field_x.second;

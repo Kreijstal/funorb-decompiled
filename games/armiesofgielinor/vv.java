@@ -31,17 +31,17 @@ final class vv {
         vv.a((byte) 85);
     }
 
-    final static og[] a(String param0, int param1) {
+    final static ConsoleExpression[] a(String param0, int param1) {
         int incrementValue$1 = 0;
         NodeDeque var2 = null;
         RuntimeException var2_ref = null;
-        og[] var3 = null;
+        ConsoleExpression[] var3 = null;
         int var4 = 0;
-        og var5 = null;
+        ConsoleExpression var5 = null;
         int var6 = 0;
-        og[] stackIn_4_0 = null;
-        og[] stackIn_7_0 = null;
-        og[] stackIn_12_0 = null;
+        ConsoleExpression[] stackIn_4_0 = null;
+        ConsoleExpression[] stackIn_7_0 = null;
+        ConsoleExpression[] stackIn_12_0 = null;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
         String stackIn_16_2 = null;
@@ -52,19 +52,19 @@ final class vv {
             stackIn_4_0 = ol.field_w;
             return stackIn_4_0;
           }
-          var2 = gu.a(false, param0);
-          var3 = new og[var2.size(false)];
+          var2 = gu.tokenizeConsole(false, param0);
+          var3 = new ConsoleExpression[var2.size(false)];
           var4 = 0;
           if (param1 <= 109) {
-            stackIn_7_0 = (og[]) null;
+            stackIn_7_0 = (ConsoleExpression[]) null;
             return stackIn_7_0;
           }
-          var5 = (og) (var2.first((byte) 100));
+          var5 = (ConsoleExpression) (var2.first((byte) 100));
           while (var5 != null) {
             incrementValue$1 = var4;
             var4++;
             var3[incrementValue$1] = var5;
-            var5 = (og) (var2.next((byte) 123));
+            var5 = (ConsoleExpression) (var2.next((byte) 123));
           }
           no.field_N = param0;
           ol.field_w = var3;

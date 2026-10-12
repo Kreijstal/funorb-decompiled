@@ -61,7 +61,7 @@ abstract class AiPlanningStrategy {
             su.field_d.inputEnabled = false;
             bn.field_c.text = fm.field_c;
             if (1 != th.socialListState) {
-              mw.field_E.scrollContainer.viewport.text = ef.field_a;
+              mw.field_E.scrollContainer.viewport.text = ConsoleParseException.field_a;
               if (var19 != 0) {
                 mw.field_E.scrollContainer.viewport.text = TeleportAction.field_u;
               }

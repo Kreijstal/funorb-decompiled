@@ -22,7 +22,7 @@ final class ChatMessage {
     String channelLabel;
     String text;
     int privateMessageIdHigh16;
-    static int field_j;
+    static int consoleArgumentStartKind;
     int contextId;
     boolean systemMessage;
 
@@ -119,6 +119,6 @@ final class ChatMessage {
         field_l = "This game is full.";
         field_r = false;
         field_o = "Click to begin";
-        field_j = 0;
+        consoleArgumentStartKind = 0;
     }
 }

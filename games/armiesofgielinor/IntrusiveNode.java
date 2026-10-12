@@ -47,7 +47,7 @@ class IntrusiveNode {
             var7[-CipherPacketBuffer.currentBattlefield.mapWidth + param4] > var9) {
             SoftwareRaster.d(-40 + param5, param3, param5, param3 - 20, 65280, var6);
           }
-          if (-1 + ef.field_c == param2 ||
+          if (-1 + ConsoleParseException.field_c == param2 ||
             var7[param4 + ResourceRequest.field_y] > var9) {
             SoftwareRaster.d(40 + param5, param3, param5, param3 + 20, 65280, var6);
           }
@@ -162,7 +162,7 @@ class IntrusiveNode {
                 var11 == NetworkResourceRequest.field_C.field_ic) {
                 SoftwareRaster.d(-40 + param5, param3, param5, param3 - 20, var9, var6);
               }
-              if (param2 == -1 + ef.field_c ||
+              if (param2 == -1 + ConsoleParseException.field_c ||
                 -var11 == NetworkResourceRequest.field_C.field_ic) {
                 SoftwareRaster.d(param5 + 40, param3, param5, param3 + 20, var9, var6);
               }

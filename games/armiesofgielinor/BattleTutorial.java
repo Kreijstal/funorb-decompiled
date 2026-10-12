@@ -24,7 +24,7 @@ class BattleTutorial {
     private String message;
     private int expandedPanelHeight;
     static boolean quickChatMenuVisible;
-    static int field_x;
+    static int consoleStringKind;
     static String field_u;
 
     private final boolean isEnemyWaveDefeated(byte obfuscationGuard) {
@@ -1641,7 +1641,7 @@ class BattleTutorial {
         if (this.stage == 0) {
           ol.field_y.g(db.a(true, 320) - (ol.field_y.pixelWidth >> 1), MatchConditionEntry.a(100, (byte) 94));
           fe.b(this.message, db.a(true, 320), MatchConditionEntry.a(130, (byte) 94));
-          fe.c(this.message, db.a(true, 320), MatchConditionEntry.a(130, (byte) 94), nd.field_b, false);
+          fe.c(this.message, db.a(true, 320), MatchConditionEntry.a(130, (byte) 94), ConsoleValue.field_b, false);
           this.panelHeight = 40;
         }
         if (0 == this.panelHeight) {
@@ -1651,7 +1651,7 @@ class BattleTutorial {
         var2 = so.field_b.field_a;
         var3 = so.field_b.field_g;
         SoftwareRaster.setClip(-10 + var2 - this.panelWidth, -this.panelHeight + var3 - 10, -10 + var2, var3);
-        fe.b(-10 + (-this.panelWidth + var2), -10 - this.panelHeight + var3, this.panelWidth, this.panelHeight, MusicPatch.field_m, nd.field_b, 0, 192);
+        fe.b(-10 + (-this.panelWidth + var2), -10 - this.panelHeight + var3, this.panelWidth, this.panelHeight, MusicPatch.field_m, ConsoleValue.field_b, 0, 192);
         if (4 != this.buttonMode) {
           stackIn_12_0 = -5 + var2 - this.panelWidth;
           stackIn_12_1 = -45 + var3;
@@ -1662,7 +1662,7 @@ class BattleTutorial {
             IterableDualNodeDeque.isPointerInBounds(obfuscationGuard - 54, -5 - this.panelWidth + var2, var2 - 15, -45 + var3, var3 - 15)) {
             stackIn_13_5 = TutorialController.field_e;
           } else {
-            stackIn_13_5 = nd.field_b;
+            stackIn_13_5 = ConsoleValue.field_b;
           }
           fe.a(stackIn_12_0, stackIn_12_1, stackIn_12_2, stackIn_12_3, stackIn_12_4, stackIn_13_5, 0, 192, true);
           if (this.buttonMode == 0) {
@@ -2040,7 +2040,7 @@ class BattleTutorial {
         field_b = "Change display name";
         field_l = "Year";
         field_i = "Offline";
-        field_x = 4;
+        consoleStringKind = 4;
         quickChatMenuVisible = false;
         field_r = "This unit already has a poisonous attack.";
         field_u = "You need to choose a name before you can log in. This is the name that will be displayed to other players.";

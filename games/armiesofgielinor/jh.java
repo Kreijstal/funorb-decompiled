@@ -202,20 +202,20 @@ final class jh extends mk {
           field_l = (RgbSprite[]) null;
         }
         if (fk.packetPayloadLength == -1) {
-          if (!es.receivePacketBytes(-122, 1)) {
+          if (!ConsoleTokenCursor.receivePacketBytes(-122, 1)) {
             return false;
           }
           fk.packetPayloadLength = ByteStorage.incomingPacket.readUnsignedByte(0);
           ByteStorage.incomingPacket.position = 0;
         }
         if (-2 == fk.packetPayloadLength) {
-          if (!es.receivePacketBytes(-96, 2)) {
+          if (!ConsoleTokenCursor.receivePacketBytes(-96, 2)) {
             return false;
           }
           fk.packetPayloadLength = ByteStorage.incomingPacket.readUnsignedShort((byte) -104);
           ByteStorage.incomingPacket.position = 0;
         }
-        return es.receivePacketBytes(-105, fk.packetPayloadLength);
+        return ConsoleTokenCursor.receivePacketBytes(-105, fk.packetPayloadLength);
     }
 
     final static void rememberLastQuickChat(String recipientName, long accountId, int phraseId, int channelId, int obfuscationGuard) {

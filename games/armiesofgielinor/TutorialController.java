@@ -46,9 +46,9 @@ final class TutorialController {
           var10 = -var6 + var7 + var8 >> 1;
           var11 = var10;
           if (var4_int != 18 ||
-            og.field_m != 3) {
+            ConsoleExpression.field_m != 3) {
             if (18 == var4_int &&
-              og.field_m == 2) {
+              ConsoleExpression.field_m == 2) {
               var11 = var10 - 30;
               if (var14 != 0) {
                 var11 = var10 - 27;
@@ -58,14 +58,14 @@ final class TutorialController {
             var11 = var10 - 27;
           }
           if (var4_int == 17 &&
-            og.field_m == 2) {
+            ConsoleExpression.field_m == 2) {
             var11 = 10 + var10;
           }
           if (obfuscationGuard != 28115) {
             this.drawInstructionsPanel(93);
           }
           if (!highlighted) {
-            fe.a(var5, var11, 25 + var9, nd.field_b, true);
+            fe.a(var5, var11, 25 + var9, ConsoleValue.field_b, true);
           }
           if (highlighted ||
             var14 != 0) {
@@ -116,7 +116,7 @@ final class TutorialController {
           }
           var4 = pk.field_V;
           var4 = var4 + " " + ia.a(fo.a(param0 ^ 4800, QuickChatPhrase.a(var2_int != 0, false, (byte) -115, var3 != 0), new String[]{dv.field_r}), '#', param0 ^ 3, "<br><br>");
-          fe.b(40, 180, 560, 150, MusicPatch.field_m, nd.field_b, param0, 128);
+          fe.b(40, 180, 560, 150, MusicPatch.field_m, ConsoleValue.field_b, param0, 128);
           rs.field_n.a(var4, 80, 200, 480, 300, 16777215, -1, 1, 0, 30);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -528,10 +528,10 @@ final class TutorialController {
           uh.a(stackIn_32_0, stackIn_32_1, stackIn_32_2, stackIn_32_3, stackIn_32_4, stackIn_33_5, db.a(true, 50));
           SoftwareRaster.a();
           fe.b(db.a(true, 310), MatchConditionEntry.a(150, (byte) 94), 300, 170, EffectPresentation.field_j, jh.field_k, 0, 128);
-          fe.b(db.a(true, 310), MatchConditionEntry.a(330, (byte) 94), 145, 90, EffectPresentation.field_j, nd.field_b, 0, 128);
+          fe.b(db.a(true, 310), MatchConditionEntry.a(330, (byte) 94), 145, 90, EffectPresentation.field_j, ConsoleValue.field_b, 0, 128);
           fe.b(db.a(true, 320), MatchConditionEntry.a(370, (byte) 94), 125, 42, EffectPresentation.field_j, jh.field_k, 0, 0);
-          fe.c(ov.field_f, db.a(true, 382), MatchConditionEntry.a(366, (byte) 94), nd.field_b, true);
-          fe.c(dd.a(pg.playerProfile.getAvailableRunes((byte) 45), param0 ^ -23666), db.a(true, 382), MatchConditionEntry.a(406, (byte) 94), nd.field_b, true);
+          fe.c(ov.field_f, db.a(true, 382), MatchConditionEntry.a(366, (byte) 94), ConsoleValue.field_b, true);
+          fe.c(dd.a(pg.playerProfile.getAvailableRunes((byte) 45), param0 ^ -23666), db.a(true, 382), MatchConditionEntry.a(406, (byte) 94), ConsoleValue.field_b, true);
           if (BufferedSocket.field_j >= 2) {
             rs.field_n.c(pg.playerProfile.getAvailableRunes((byte) 127) + "", db.a(true, 382), MatchConditionEntry.a(369, (byte) 94), 16777215, 0);
           }
@@ -542,7 +542,7 @@ final class TutorialController {
           do {
             if (!(var3 <= ah.field_b)) {
               var3 = -pg.playerProfile.progressionCredit - pg.playerProfile.runeCredit + var2_int;
-              fe.c(fo.a(4800, hf.field_e, new String[]{Integer.toString(1 + ah.field_b)}), db.a(true, 460), MatchConditionEntry.a(190, (byte) 94), nd.field_b, true);
+              fe.c(fo.a(4800, hf.field_e, new String[]{Integer.toString(1 + ah.field_b)}), db.a(true, 460), MatchConditionEntry.a(190, (byte) 94), ConsoleValue.field_b, true);
               break;
             }
             var2_int = var2_int + NodeDeque.unlockLevelCosts[var3];
@@ -557,7 +557,7 @@ final class TutorialController {
             rs.field_n.a(fo.a(4800, gt.field_g, new String[]{this.c(-38, var2_int)}), db.a(true, 320), MatchConditionEntry.a(200, (byte) 94), 280, 170, 16777215, 0, 1, 0, 0);
           }
           if (pg.playerProfile.getUnlockLevel(param0 ^ param0) < NodeDeque.unlockLevelCosts.length) {
-            fe.c(this.c(-38, NodeDeque.unlockLevelCosts[ah.field_b]), db.a(true, 537), MatchConditionEntry.a(366, (byte) 94), nd.field_b, true);
+            fe.c(this.c(-38, NodeDeque.unlockLevelCosts[ah.field_b]), db.a(true, 537), MatchConditionEntry.a(366, (byte) 94), ConsoleValue.field_b, true);
             if (pg.playerProfile.getUnlockLevel(0) == ah.field_b &&
               pg.playerProfile.getAvailableRunes((byte) 123) >= NodeDeque.unlockLevelCosts[pg.playerProfile.getUnlockLevel(0)]) {
               boolean decompiledSharedTail0 = !(IterableDualNodeDeque.isPointerInBounds(-33, db.a(true, 469), db.a(true, 606), MatchConditionEntry.a(384, (byte) 94), MatchConditionEntry.a(416, (byte) 94)));
@@ -567,7 +567,7 @@ final class TutorialController {
                 decompiledSharedTail0 = (var4 != 0);
               }
               if (decompiledSharedTail0) {
-                fe.a(db.a(true, 469), MatchConditionEntry.a(384, (byte) 94), 137, 32, DisplacedUnitMarker.field_s, nd.field_b, 0, 0);
+                fe.a(db.a(true, 469), MatchConditionEntry.a(384, (byte) 94), 137, 32, DisplacedUnitMarker.field_s, ConsoleValue.field_b, 0, 0);
               }
               fe.c(wv.field_e, db.a(true, 537), MatchConditionEntry.a(416, (byte) 94), 0, true);
             }
@@ -779,7 +779,7 @@ final class TutorialController {
                 }
                 var5++;
               }
-              MoveEvent.instructionsPanel.updatePageState(this.f(true), var2_int != 0, 100, this.selectionState.selectedIndex, var3 != 0, ij.field_y);
+              MoveEvent.instructionsPanel.updatePageState(this.f(true), var2_int != 0, 100, this.selectionState.selectedIndex, var3 != 0, DebugConsole.field_y);
               return;
             }
             return;
@@ -810,9 +810,9 @@ final class TutorialController {
         int var4Lifetime1;
         var13 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          var2_int = og.field_m;
-          if (!(og.field_m >= 0) ||
-            !(og.field_m < RadialSummonItem.field_h.length)) {
+          var2_int = ConsoleExpression.field_m;
+          if (!(ConsoleExpression.field_m >= 0) ||
+            !(ConsoleExpression.field_m < RadialSummonItem.field_h.length)) {
             var2_int = 0;
           }
           var3 = RadialSummonItem.field_h[var2_int];
@@ -851,7 +851,7 @@ final class TutorialController {
                       var5 = field_e;
                       var12 = var8[var11];
                       if (gt.isLocalAccountName(var12, (byte) 94)) {
-                        var5 = nd.field_b;
+                        var5 = ConsoleValue.field_b;
                         var10 = 1;
                       }
                       var7 = null;
@@ -865,7 +865,7 @@ final class TutorialController {
                   if (var10 != 0) {
                     break scanLoop1;
                   }
-                  var5 = nd.field_b;
+                  var5 = ConsoleValue.field_b;
                 }
                 this.a(var5, AnimationFrameSet.field_z.field_k, -1, var4, AnimationFrameSet.field_z.field_s, AnimationFrameSet.field_z.field_m, 310, AnimationFrameSet.field_z.field_r, mv.localAccountName);
                 break;
@@ -1616,7 +1616,7 @@ final class TutorialController {
                                                                                                     gk.field_H) {
                                                                                                     ma.field_Z = false;
                                                                                                   }
-                                                                                                  ij.field_y = 0;
+                                                                                                  DebugConsole.field_y = 0;
                                                                                                   var6 = param0 ? 1 : 0;
                                                                                                   CipherPacketBuffer.a(var6 != 0, 7, 1, jt.field_a);
                                                                                                   if (var9 == 0) {
@@ -2009,8 +2009,8 @@ final class TutorialController {
                                             if (!this.isItemEnabled((byte) -95, param2)) {
                                               return;
                                             }
-                                            fieldTemp$0 = ij.field_y - 1;
-                                            ij.field_y = ij.field_y - 1;
+                                            fieldTemp$0 = DebugConsole.field_y - 1;
+                                            DebugConsole.field_y = DebugConsole.field_y - 1;
                                             if (fieldTemp$0 != 0) {
                                               return;
                                             }
@@ -2028,8 +2028,8 @@ final class TutorialController {
                                           if (!this.isItemEnabled((byte) 70, param2)) {
                                             return;
                                           }
-                                          fieldTemp$1 = ij.field_y + 1;
-                                          ij.field_y = ij.field_y + 1;
+                                          fieldTemp$1 = DebugConsole.field_y + 1;
+                                          DebugConsole.field_y = DebugConsole.field_y + 1;
                                           if (~fieldTemp$1 != ~(-1 + PortalLossCondition.instructionParagraphs.length)) {
                                             return;
                                           }
@@ -2375,7 +2375,7 @@ final class TutorialController {
           var16 = 1;
           var17 = 0;
           if (var7 == 0) {
-            fe.a(fo.a(4800, QuickChatCommandDefinition.field_a, new String[]{Integer.toString(pg.playerProfile.spellQuantities[param1])}), var8 >> 1, 82 + var11, var8 - 45, nd.field_b, true);
+            fe.a(fo.a(4800, QuickChatCommandDefinition.field_a, new String[]{Integer.toString(pg.playerProfile.spellQuantities[param1])}), var8 >> 1, 82 + var11, var8 - 45, ConsoleValue.field_b, true);
           }
           stackIn_24_0 = en.field_E;
           stackIn_24_1 = var5;
@@ -2391,7 +2391,7 @@ final class TutorialController {
           if (var7 == 0) {
             en.field_E.a(fo.a(4800, SocketResourceClient.field_w, new String[]{Integer.toString(1 + uc.spellDefinitions[param1][1])}), 10, var11 + (52 - (-30 - var10)), var8 - 20, var13, var14, var15, var16, var17, var9);
           }
-          fe.a(var4, var8 >> 1, 35, -45 + var8, nd.field_b, true);
+          fe.a(var4, var8 >> 1, 35, -45 + var8, ConsoleValue.field_b, true);
           BattleCharacter.field_h[var6].g(-20 + (var8 >> 1), 12 + var11);
           stackIn_32_0 = km.field_h;
           if (var7 == 0) {
@@ -2841,7 +2841,7 @@ final class TutorialController {
             }
           }
           var7 = rs.field_n.field_z + rs.field_n.field_L;
-          fe.a(so.field_a[var6], db.a(true, 272), MatchConditionEntry.a(260 - (rs.field_n.field_L - rs.field_n.field_v), (byte) 94), nd.field_b, true);
+          fe.a(so.field_a[var6], db.a(true, 272), MatchConditionEntry.a(260 - (rs.field_n.field_L - rs.field_n.field_v), (byte) 94), ConsoleValue.field_b, true);
           var8 = rb.a(var6, var5, 1) ? 1 : 0;
           var9 = MatchConditionEntry.a(288, (byte) 94);
           if (var8 != 0) {
@@ -2927,7 +2927,7 @@ final class TutorialController {
             this.a(true);
           }
           if (0 == pg.playerProfile.unitUnlockMasks[param1]) {
-            fe.c(this.c(-38, 50), db.a(true, 537), MatchConditionEntry.a(366, (byte) 94), nd.field_b, true);
+            fe.c(this.c(-38, 50), db.a(true, 537), MatchConditionEntry.a(366, (byte) 94), ConsoleValue.field_b, true);
             if (pg.playerProfile.getAvailableRunes((byte) 120) >= 50) {
               boolean decompiledSharedTail0 = !(IterableDualNodeDeque.isPointerInBounds(-33, db.a(true, 469), db.a(true, 606), MatchConditionEntry.a(384, (byte) 94), MatchConditionEntry.a(416, (byte) 94)));
               if (!decompiledSharedTail0) {
@@ -2936,7 +2936,7 @@ final class TutorialController {
                 decompiledSharedTail0 = (ArmiesOfGielinor.obfuscationControl);
               }
               if (decompiledSharedTail0) {
-                fe.a(db.a(true, 469), MatchConditionEntry.a(384, (byte) 94), 137, 32, DisplacedUnitMarker.field_s, nd.field_b, 0, 0);
+                fe.a(db.a(true, 469), MatchConditionEntry.a(384, (byte) 94), 137, 32, DisplacedUnitMarker.field_s, ConsoleValue.field_b, 0, 0);
               }
               fe.c(wv.field_e, db.a(true, 537), MatchConditionEntry.a(416, (byte) 94), 0, true);
             }
@@ -3094,7 +3094,7 @@ final class TutorialController {
           }
           en.field_E.a(param0, 0, var14 + (30 + var9), var7_int, var17, var18, var19, var20, var21, var22);
           en.field_E.a(param5, 0, var15 + (var14 + 30) + var9, var7_int, var17, var18, var19, var20, var21, var22);
-          fe.c(param2, var7_int >> 1, 30, nd.field_b, true);
+          fe.c(param2, var7_int >> 1, 30, ConsoleValue.field_b, true);
           so.field_b.a(5605);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -3434,9 +3434,9 @@ final class TutorialController {
         int var5Lifetime2;
         var13 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          var2_int = og.field_m;
-          if (!(0 <= og.field_m) ||
-            !(og.field_m < RadialSummonItem.field_h.length)) {
+          var2_int = ConsoleExpression.field_m;
+          if (!(0 <= ConsoleExpression.field_m) ||
+            !(ConsoleExpression.field_m < RadialSummonItem.field_h.length)) {
             var2_int = 0;
           }
           var3 = RadialSummonItem.field_h[var2_int];
@@ -3516,7 +3516,7 @@ final class TutorialController {
                   var12 = var8_ref_String__[var11];
                   if (gt.isLocalAccountName(var12, (byte) 111)) {
                     var10 = 1;
-                    var6Lifetime1 = nd.field_b;
+                    var6Lifetime1 = ConsoleValue.field_b;
                   }
                   this.a((byte) 63, var11, var9[var11] / IntrusiveNode.a(-49, var4), var5Lifetime1, var6Lifetime1, var12);
                   var7 = null;
@@ -3527,7 +3527,7 @@ final class TutorialController {
               if (decompiledFrameCompleted0) {
                 if (var10 == 0 &&
                   null != pg.playerProfile) {
-                  var6Lifetime1Lifetime1 = nd.field_b;
+                  var6Lifetime1Lifetime1 = ConsoleValue.field_b;
                   this.a((byte) 63, -1, pg.playerProfile.campaignProgress.getCampaignScore(false, var4) / IntrusiveNode.a(108, var4), var5Lifetime1, var6Lifetime1Lifetime1, mv.localAccountName);
                 }
                 if (var13 != 0) {
@@ -3618,7 +3618,7 @@ final class TutorialController {
           }
           boolean decompiledSharedTail2 = !(!IterableDualNodeDeque.isPointerInBounds(-33, db.a(true, 171), db.a(true, 286), MatchConditionEntry.a(384, (byte) 94), MatchConditionEntry.a(416, (byte) 94)));
           if (!decompiledSharedTail2) {
-            fe.a(db.a(true, 171), MatchConditionEntry.a(384, (byte) 94), 115, 32, DisplacedUnitMarker.field_s, nd.field_b, 0, 0);
+            fe.a(db.a(true, 171), MatchConditionEntry.a(384, (byte) 94), 115, 32, DisplacedUnitMarker.field_s, ConsoleValue.field_b, 0, 0);
             decompiledSharedTail2 = (var8 != 0);
           }
           if (decompiledSharedTail2) {
@@ -3633,7 +3633,7 @@ final class TutorialController {
             decompiledSharedTail1 = (var8 != 0);
           }
           if (decompiledSharedTail1) {
-            fe.a(db.a(true, 44), MatchConditionEntry.a(384, (byte) 94), 115, 32, DisplacedUnitMarker.field_s, nd.field_b, 0, 0);
+            fe.a(db.a(true, 44), MatchConditionEntry.a(384, (byte) 94), 115, 32, DisplacedUnitMarker.field_s, ConsoleValue.field_b, 0, 0);
           }
           fe.c(CampaignRewardPreview.field_b, db.a(true, 101), MatchConditionEntry.a(416, (byte) 94), 0, true);
           if (param0 != 100) {
@@ -3685,7 +3685,7 @@ final class TutorialController {
             }
             SoftwareRaster.a();
             fe.b(l.field_e, db.a(true, 165), MatchConditionEntry.a(76, (byte) 94), 230, true);
-            fe.a(l.field_e, db.a(true, 165), MatchConditionEntry.a(76, (byte) 94), 230, nd.field_b, true);
+            fe.a(l.field_e, db.a(true, 165), MatchConditionEntry.a(76, (byte) 94), 230, ConsoleValue.field_b, true);
             if (var2_int >= 0) {
               discarded$1 = this.a(ts.currentSpellMenu, true, -125, -var2_int + 256);
             }
@@ -3722,7 +3722,7 @@ final class TutorialController {
             this.c(0);
             SoftwareRaster.a();
             fe.b(MapRepository.field_j, db.a(true, 165), MatchConditionEntry.a(76, (byte) 94), 230, true);
-            fe.a(MapRepository.field_j, db.a(true, 165), MatchConditionEntry.a(76, (byte) 94), 230, nd.field_b, true);
+            fe.a(MapRepository.field_j, db.a(true, 165), MatchConditionEntry.a(76, (byte) 94), 230, ConsoleValue.field_b, true);
           }
           SoftwareRaster.a();
           fe.b(db.a(true, 310), MatchConditionEntry.a(60, (byte) 94), 300, 80, EffectPresentation.field_j, jh.field_k, 0, 256);
@@ -3780,12 +3780,12 @@ final class TutorialController {
             }
           }
           fe.b(cp.field_c, db.a(true, 460), MatchConditionEntry.a(76, (byte) 94), true);
-          fe.c(cp.field_c, db.a(true, 460), MatchConditionEntry.a(76, (byte) 94), nd.field_b, true);
+          fe.c(cp.field_c, db.a(true, 460), MatchConditionEntry.a(76, (byte) 94), ConsoleValue.field_b, true);
           fe.b(db.a(true, 310), MatchConditionEntry.a(150, (byte) 94), 300, 170, EffectPresentation.field_j, jh.field_k, 0, 256);
-          fe.b(db.a(true, 310), MatchConditionEntry.a(330, (byte) 94), 145, 90, EffectPresentation.field_j, nd.field_b, 0, 128);
+          fe.b(db.a(true, 310), MatchConditionEntry.a(330, (byte) 94), 145, 90, EffectPresentation.field_j, ConsoleValue.field_b, 0, 128);
           fe.b(db.a(true, 320), MatchConditionEntry.a(370, (byte) 94), 125, 42, EffectPresentation.field_j, jh.field_k, 0, 0);
-          fe.c(ov.field_f, db.a(true, 382), MatchConditionEntry.a(366, (byte) 94), nd.field_b, true);
-          fe.c(dd.a(pg.playerProfile.getAvailableRunes((byte) 48), 82), db.a(true, 382), MatchConditionEntry.a(406, (byte) 94), nd.field_b, true);
+          fe.c(ov.field_f, db.a(true, 382), MatchConditionEntry.a(366, (byte) 94), ConsoleValue.field_b, true);
+          fe.c(dd.a(pg.playerProfile.getAvailableRunes((byte) 48), 82), db.a(true, 382), MatchConditionEntry.a(406, (byte) 94), ConsoleValue.field_b, true);
           if (2 <= BufferedSocket.field_j &&
             CoatOfArms.field_e) {
             rs.field_n.c(pg.playerProfile.getAvailableRunes((byte) 114) + "", db.a(true, 382), MatchConditionEntry.a(369, (byte) 94), 16777215, 0);
@@ -4319,10 +4319,10 @@ final class TutorialController {
             }
             SoftwareRaster.a();
             fe.b(db.a(true, 310), MatchConditionEntry.a(150, (byte) 94), 300, 170, EffectPresentation.field_j, jh.field_k, 0, 128);
-            fe.b(db.a(true, 310), MatchConditionEntry.a(330, (byte) 94), 145, 90, EffectPresentation.field_j, nd.field_b, 0, 128);
+            fe.b(db.a(true, 310), MatchConditionEntry.a(330, (byte) 94), 145, 90, EffectPresentation.field_j, ConsoleValue.field_b, 0, 128);
             fe.b(db.a(true, 320), MatchConditionEntry.a(370, (byte) 94), 125, 42, EffectPresentation.field_j, jh.field_k, 0, 0);
-            fe.c(ov.field_f, db.a(true, 382), MatchConditionEntry.a(366, (byte) 94), nd.field_b, true);
-            fe.c(dd.a(pg.playerProfile.getAvailableRunes((byte) 55), 82), db.a(true, 382), MatchConditionEntry.a(406, (byte) 94), nd.field_b, true);
+            fe.c(ov.field_f, db.a(true, 382), MatchConditionEntry.a(366, (byte) 94), ConsoleValue.field_b, true);
+            fe.c(dd.a(pg.playerProfile.getAvailableRunes((byte) 55), 82), db.a(true, 382), MatchConditionEntry.a(406, (byte) 94), ConsoleValue.field_b, true);
             stackIn_71_0 = BufferedSocket.field_j;
             break;
           }
@@ -4366,12 +4366,12 @@ final class TutorialController {
         String var13Lifetime4;
         String var13Lifetime5;
         try {
-          var10_int = og.field_m;
+          var10_int = ConsoleExpression.field_m;
           if (param6 != 310) {
             this.drawStageItem(true, 56, 5);
           }
-          if (!(og.field_m >= 0) ||
-            !(og.field_m < RadialSummonItem.field_h.length)) {
+          if (!(ConsoleExpression.field_m >= 0) ||
+            !(ConsoleExpression.field_m < RadialSummonItem.field_h.length)) {
             var10_int = 0;
           }
           var11 = RadialSummonItem.field_h[var10_int];
@@ -4539,11 +4539,11 @@ final class TutorialController {
         try {
           if (7 == this.tutorialStage) {
             if (itemIndex == 0 &&
-              ij.field_y == 0) {
+              DebugConsole.field_y == 0) {
               return false;
             }
             if (itemIndex == 2 &&
-              -1 + PortalLossCondition.instructionParagraphs.length == ij.field_y) {
+              -1 + PortalLossCondition.instructionParagraphs.length == DebugConsole.field_y) {
               return false;
             }
           }
@@ -5159,18 +5159,18 @@ final class TutorialController {
           this.b(true);
           if (bw.unitDefinitions[var4_int][11] <= 0) {
             if ((pg.playerProfile.unitUnlockMasks[param0] & 1 << param1) != 0) {
-              fe.c(CampaignMenuButton.field_b, db.a(true, 537), MatchConditionEntry.a(366, (byte) 94), nd.field_b, true);
+              fe.c(CampaignMenuButton.field_b, db.a(true, 537), MatchConditionEntry.a(366, (byte) 94), ConsoleValue.field_b, true);
               if (var6 == 0) {
                 return;
               }
             }
-            fe.c(IntrusiveNode.field_d, db.a(true, 537), MatchConditionEntry.a(366, (byte) 94), nd.field_b, true);
+            fe.c(IntrusiveNode.field_d, db.a(true, 537), MatchConditionEntry.a(366, (byte) 94), ConsoleValue.field_b, true);
             if (var6 == 0) {
               return;
             }
           }
           if (0 == (pg.playerProfile.unitUnlockMasks[param0] & 1 << param1)) {
-            fe.c(this.c(-38, bw.unitDefinitions[var4_int][11]), db.a(true, 537), MatchConditionEntry.a(366, (byte) 94), nd.field_b, true);
+            fe.c(this.c(-38, bw.unitDefinitions[var4_int][11]), db.a(true, 537), MatchConditionEntry.a(366, (byte) 94), ConsoleValue.field_b, true);
             if (pg.playerProfile.unitUnlockMasks[param0] == 0) {
               return;
             }
@@ -5184,14 +5184,14 @@ final class TutorialController {
               decompiledSharedTail0 = (var6 != 0);
             }
             if (decompiledSharedTail0) {
-              fe.a(db.a(true, 469), MatchConditionEntry.a(384, (byte) 94), 137, 32, DisplacedUnitMarker.field_s, nd.field_b, 0, 0);
+              fe.a(db.a(true, 469), MatchConditionEntry.a(384, (byte) 94), 137, 32, DisplacedUnitMarker.field_s, ConsoleValue.field_b, 0, 0);
             }
             fe.c(wv.field_e, db.a(true, 537), MatchConditionEntry.a(416, (byte) 94), 0, true);
             if (var6 == 0) {
               return;
             }
           }
-          fe.c(CampaignMenuButton.field_b, db.a(true, 537), MatchConditionEntry.a(366, (byte) 94), nd.field_b, true);
+          fe.c(CampaignMenuButton.field_b, db.a(true, 537), MatchConditionEntry.a(366, (byte) 94), ConsoleValue.field_b, true);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -5220,13 +5220,13 @@ final class TutorialController {
           var3_int = 44 % ((-32 - param1) / 61);
           if (ClientContextMenu.field_k == 0) {
             var4 = uc.spellDefinitions[param0][0];
-            fe.c(this.c(-38, var4), db.a(true, 537), MatchConditionEntry.a(366, (byte) 94), nd.field_b, true);
+            fe.c(this.c(-38, var4), db.a(true, 537), MatchConditionEntry.a(366, (byte) 94), ConsoleValue.field_b, true);
             if (pg.playerProfile.getAvailableRunes((byte) 125) >= var4 &&
               param0 < pg.playerProfile.spellQuantities.length &&
               pg.playerProfile.spellQuantities[param0] < 250) {
               boolean decompiledSharedTail2 = !(!IterableDualNodeDeque.isPointerInBounds(-33, db.a(true, 469), db.a(true, 606), MatchConditionEntry.a(384, (byte) 94), MatchConditionEntry.a(416, (byte) 94)));
               if (!decompiledSharedTail2) {
-                fe.a(db.a(true, 469), MatchConditionEntry.a(384, (byte) 94), 137, 32, DisplacedUnitMarker.field_s, nd.field_b, 0, 0);
+                fe.a(db.a(true, 469), MatchConditionEntry.a(384, (byte) 94), 137, 32, DisplacedUnitMarker.field_s, ConsoleValue.field_b, 0, 0);
                 decompiledSharedTail2 = (var7 != 0);
               }
               if (decompiledSharedTail2) {
@@ -5263,7 +5263,7 @@ final class TutorialController {
                     decompiledSharedTail1 = (var7 != 0);
                   }
                   if (decompiledSharedTail1) {
-                    fe.a(db.a(true, 469), MatchConditionEntry.a(334, (byte) 94), 137, 32, DisplacedUnitMarker.field_s, nd.field_b, 0, 0);
+                    fe.a(db.a(true, 469), MatchConditionEntry.a(334, (byte) 94), 137, 32, DisplacedUnitMarker.field_s, ConsoleValue.field_b, 0, 0);
                   }
                   fe.c(VertexNormal.field_h, db.a(true, 537), MatchConditionEntry.a(366, (byte) 94), 0, true);
                 }
@@ -5282,7 +5282,7 @@ final class TutorialController {
               decompiledSharedTail0 = (var7 != 0);
             }
             if (decompiledSharedTail0) {
-              fe.a(db.a(true, 469), MatchConditionEntry.a(384, (byte) 94), 137, 32, DisplacedUnitMarker.field_s, nd.field_b, 0, 0);
+              fe.a(db.a(true, 469), MatchConditionEntry.a(384, (byte) 94), 137, 32, DisplacedUnitMarker.field_s, ConsoleValue.field_b, 0, 0);
             }
             fe.c(MeshObject.field_c, db.a(true, 537), MatchConditionEntry.a(416, (byte) 94), 0, true);
             return;
@@ -5454,9 +5454,9 @@ final class TutorialController {
         String var9 = null;
         String var9Lifetime1;
         try {
-          var7_int = og.field_m;
-          if (!(0 <= og.field_m) ||
-            !(RadialSummonItem.field_h.length > og.field_m)) {
+          var7_int = ConsoleExpression.field_m;
+          if (!(0 <= ConsoleExpression.field_m) ||
+            !(RadialSummonItem.field_h.length > ConsoleExpression.field_m)) {
             var7_int = 0;
           }
           var8 = RadialSummonItem.field_h[var7_int];
@@ -5541,7 +5541,7 @@ final class TutorialController {
             19 != this.tutorialStage &&
             4 != this.tutorialStage &&
             this.tutorialStage != 16) {
-            fe.b(db.a(!param0, 0), MatchConditionEntry.a(0, (byte) 94), rs.field_k, se.field_a, HuffmanCodec.field_i, nd.field_b, 0, 0);
+            fe.b(db.a(!param0, 0), MatchConditionEntry.a(0, (byte) 94), rs.field_k, se.field_a, HuffmanCodec.field_i, ConsoleValue.field_b, 0, 0);
           }
           boolean decompiledFrameRemainder0 = true;
           if (19 != this.tutorialStage) {
@@ -5551,37 +5551,37 @@ final class TutorialController {
                   this.tutorialStage != 27 &&
                   28 != this.tutorialStage) {
                   if (18 == this.tutorialStage) {
-                    fe.b(db.a(true, 15), MatchConditionEntry.a(30, (byte) 94), 610, 420, MusicPatch.field_m, nd.field_b, 0, 180);
-                    fe.b(MoveEvent.tutorialLayout.getLeftX(this.tutorialStage, 29), MoveEvent.tutorialLayout.getTopY(this.tutorialStage, (byte) -117) - 10, MoveEvent.tutorialLayout.getRightX((byte) -73, this.tutorialStage) - MoveEvent.tutorialLayout.getLeftX(this.tutorialStage, 29), MoveEvent.tutorialLayout.getBottomY(-6, this.tutorialStage) + (-MoveEvent.tutorialLayout.getTopY(this.tutorialStage, (byte) -125) + 10), MusicPatch.field_m, nd.field_b, 0, 256);
+                    fe.b(db.a(true, 15), MatchConditionEntry.a(30, (byte) 94), 610, 420, MusicPatch.field_m, ConsoleValue.field_b, 0, 180);
+                    fe.b(MoveEvent.tutorialLayout.getLeftX(this.tutorialStage, 29), MoveEvent.tutorialLayout.getTopY(this.tutorialStage, (byte) -117) - 10, MoveEvent.tutorialLayout.getRightX((byte) -73, this.tutorialStage) - MoveEvent.tutorialLayout.getLeftX(this.tutorialStage, 29), MoveEvent.tutorialLayout.getBottomY(-6, this.tutorialStage) + (-MoveEvent.tutorialLayout.getTopY(this.tutorialStage, (byte) -125) + 10), MusicPatch.field_m, ConsoleValue.field_b, 0, 256);
                     this.m(100);
                     fe.b(wb.field_b[this.tutorialStage], db.a(true, 320), MatchConditionEntry.a(30, (byte) 94));
-                    fe.c(wb.field_b[this.tutorialStage], db.a(true, 320), MatchConditionEntry.a(30, (byte) 94), nd.field_b, false);
+                    fe.c(wb.field_b[this.tutorialStage], db.a(true, 320), MatchConditionEntry.a(30, (byte) 94), ConsoleValue.field_b, false);
                     decompiledFrameRemainder0 = (var4 != 0);
                   }
                   if (decompiledFrameRemainder0) {
                     if (this.tutorialStage == 12) {
-                      fe.b(db.a(true, 15), MatchConditionEntry.a(30, (byte) 94), 610, 420, MusicPatch.field_m, nd.field_b, 0, 180);
-                      fe.b(MoveEvent.tutorialLayout.getLeftX(this.tutorialStage, 29), -10 + MoveEvent.tutorialLayout.getTopY(this.tutorialStage, (byte) -118), MoveEvent.tutorialLayout.getRightX((byte) -101, this.tutorialStage) - MoveEvent.tutorialLayout.getLeftX(this.tutorialStage, 29), MoveEvent.tutorialLayout.getBottomY(-6, this.tutorialStage) - MoveEvent.tutorialLayout.getTopY(this.tutorialStage, (byte) -109) + 10, MusicPatch.field_m, nd.field_b, 0, 256);
+                      fe.b(db.a(true, 15), MatchConditionEntry.a(30, (byte) 94), 610, 420, MusicPatch.field_m, ConsoleValue.field_b, 0, 180);
+                      fe.b(MoveEvent.tutorialLayout.getLeftX(this.tutorialStage, 29), -10 + MoveEvent.tutorialLayout.getTopY(this.tutorialStage, (byte) -118), MoveEvent.tutorialLayout.getRightX((byte) -101, this.tutorialStage) - MoveEvent.tutorialLayout.getLeftX(this.tutorialStage, 29), MoveEvent.tutorialLayout.getBottomY(-6, this.tutorialStage) - MoveEvent.tutorialLayout.getTopY(this.tutorialStage, (byte) -109) + 10, MusicPatch.field_m, ConsoleValue.field_b, 0, 256);
                       this.k(-128);
                       stackIn_68_0 = wb.field_b[this.tutorialStage];
                       stackIn_69_1 = !(param0);
                       fe.b(stackIn_68_0, db.a(stackIn_69_1, 320), MatchConditionEntry.a(30, (byte) 94));
-                      fe.c(wb.field_b[this.tutorialStage], db.a(true, 320), MatchConditionEntry.a(30, (byte) 94), nd.field_b, false);
+                      fe.c(wb.field_b[this.tutorialStage], db.a(true, 320), MatchConditionEntry.a(30, (byte) 94), ConsoleValue.field_b, false);
                       decompiledFrameRemainder0 = (var4 != 0);
                     }
                     if (decompiledFrameRemainder0) {
                       if (20 != this.tutorialStage) {
                         if (this.tutorialStage == 13) {
-                          fe.b(db.a(!param0, 15), MatchConditionEntry.a(30, (byte) 94), 610, 420, MusicPatch.field_m, nd.field_b, 0, 180);
-                          fe.b(MoveEvent.tutorialLayout.getLeftX(this.tutorialStage, 29), MoveEvent.tutorialLayout.getTopY(this.tutorialStage, (byte) -127) - 10, MoveEvent.tutorialLayout.getRightX((byte) 115, this.tutorialStage) - MoveEvent.tutorialLayout.getLeftX(this.tutorialStage, 29), MoveEvent.tutorialLayout.getBottomY(-6, this.tutorialStage) - (MoveEvent.tutorialLayout.getTopY(this.tutorialStage, (byte) -114) - 10), MusicPatch.field_m, nd.field_b, 0, 256);
+                          fe.b(db.a(!param0, 15), MatchConditionEntry.a(30, (byte) 94), 610, 420, MusicPatch.field_m, ConsoleValue.field_b, 0, 180);
+                          fe.b(MoveEvent.tutorialLayout.getLeftX(this.tutorialStage, 29), MoveEvent.tutorialLayout.getTopY(this.tutorialStage, (byte) -127) - 10, MoveEvent.tutorialLayout.getRightX((byte) 115, this.tutorialStage) - MoveEvent.tutorialLayout.getLeftX(this.tutorialStage, 29), MoveEvent.tutorialLayout.getBottomY(-6, this.tutorialStage) - (MoveEvent.tutorialLayout.getTopY(this.tutorialStage, (byte) -114) - 10), MusicPatch.field_m, ConsoleValue.field_b, 0, 256);
                           this.i((byte) 41);
                           fe.b(wb.field_b[this.tutorialStage], db.a(true, 320), MatchConditionEntry.a(30, (byte) 94));
-                          fe.c(wb.field_b[this.tutorialStage], db.a(true, 320), MatchConditionEntry.a(30, (byte) 94), nd.field_b, false);
+                          fe.c(wb.field_b[this.tutorialStage], db.a(true, 320), MatchConditionEntry.a(30, (byte) 94), ConsoleValue.field_b, false);
                           decompiledFrameRemainder0 = (var4 != 0);
                         }
                         if (decompiledFrameRemainder0) {
                           if (this.tutorialStage == 0) {
-                            fe.b(MoveEvent.tutorialLayout.getLeftX(this.tutorialStage, 29), MoveEvent.tutorialLayout.getTopY(this.tutorialStage, (byte) -106) - (-MoveEvent.tutorialLayout.getItemSpacing(this.tutorialStage, (byte) -33) - 10), MoveEvent.tutorialLayout.getRightX((byte) -125, this.tutorialStage) - MoveEvent.tutorialLayout.getLeftX(this.tutorialStage, 29), -10 + (MoveEvent.tutorialLayout.getBottomY(-6, this.tutorialStage) - MoveEvent.tutorialLayout.getTopY(this.tutorialStage, (byte) -125) - MoveEvent.tutorialLayout.getItemSpacing(this.tutorialStage, (byte) 113)), MusicPatch.field_m, nd.field_b, 0, 128);
+                            fe.b(MoveEvent.tutorialLayout.getLeftX(this.tutorialStage, 29), MoveEvent.tutorialLayout.getTopY(this.tutorialStage, (byte) -106) - (-MoveEvent.tutorialLayout.getItemSpacing(this.tutorialStage, (byte) -33) - 10), MoveEvent.tutorialLayout.getRightX((byte) -125, this.tutorialStage) - MoveEvent.tutorialLayout.getLeftX(this.tutorialStage, 29), -10 + (MoveEvent.tutorialLayout.getBottomY(-6, this.tutorialStage) - MoveEvent.tutorialLayout.getTopY(this.tutorialStage, (byte) -125) - MoveEvent.tutorialLayout.getItemSpacing(this.tutorialStage, (byte) 113)), MusicPatch.field_m, ConsoleValue.field_b, 0, 128);
                             fe.b(10 + MoveEvent.tutorialLayout.getLeftX(this.tutorialStage, 29), 10 + MoveEvent.tutorialLayout.getTopY(this.tutorialStage, (byte) -104) + (MoveEvent.tutorialLayout.getItemSpacing(this.tutorialStage, (byte) -22) + 10), -20 + MoveEvent.tutorialLayout.getRightX((byte) 115, this.tutorialStage) - MoveEvent.tutorialLayout.getLeftX(this.tutorialStage, 29), MoveEvent.tutorialLayout.getBottomY(-6, this.tutorialStage) + (-MoveEvent.tutorialLayout.getTopY(this.tutorialStage, (byte) -120) - MoveEvent.tutorialLayout.getItemSpacing(this.tutorialStage, (byte) -125) - 10) - 20, MusicPatch.field_m, field_e, 0, 128);
                             var2_int = so.field_b.field_a;
                             ol.field_y.g(var2_int / 2 - ol.field_y.canvasWidth / 2, 50 + MoveEvent.tutorialLayout.getTopY(this.tutorialStage, (byte) -111) - ol.field_y.canvasHeight);
@@ -5595,15 +5595,15 @@ final class TutorialController {
                             if (this.tutorialStage != 5) {
                               if (this.tutorialStage == 22 ||
                                 21 == this.tutorialStage) {
-                                fe.b(db.a(true, 15), MatchConditionEntry.a(30, (byte) 94), 610, 420, MusicPatch.field_m, nd.field_b, 0, 180);
+                                fe.b(db.a(true, 15), MatchConditionEntry.a(30, (byte) 94), 610, 420, MusicPatch.field_m, ConsoleValue.field_b, 0, 180);
                                 MoveEvent.campaignMenu.draw((byte) 17);
-                                fe.b(MoveEvent.tutorialLayout.getLeftX(this.tutorialStage, 29), MoveEvent.tutorialLayout.getTopY(this.tutorialStage, (byte) -119) - 10, MoveEvent.tutorialLayout.getRightX((byte) 103, this.tutorialStage) - MoveEvent.tutorialLayout.getLeftX(this.tutorialStage, 29), MoveEvent.tutorialLayout.getBottomY(-6, this.tutorialStage) - (MoveEvent.tutorialLayout.getTopY(this.tutorialStage, (byte) -119) - 10), MusicPatch.field_m, nd.field_b, 0, 256);
+                                fe.b(MoveEvent.tutorialLayout.getLeftX(this.tutorialStage, 29), MoveEvent.tutorialLayout.getTopY(this.tutorialStage, (byte) -119) - 10, MoveEvent.tutorialLayout.getRightX((byte) 103, this.tutorialStage) - MoveEvent.tutorialLayout.getLeftX(this.tutorialStage, 29), MoveEvent.tutorialLayout.getBottomY(-6, this.tutorialStage) - (MoveEvent.tutorialLayout.getTopY(this.tutorialStage, (byte) -119) - 10), MusicPatch.field_m, ConsoleValue.field_b, 0, 256);
                                 decompiledFrameRemainder0 = (var4 != 0);
                               }
                               if (decompiledFrameRemainder0) {
                                 if (this.tutorialStage == 16) {
                                   BufferedSocket.field_i.a(256);
-                                  fe.b(-3 + MoveEvent.tutorialLayout.getLeftX(16, 29), MoveEvent.tutorialLayout.getTopY(16, (byte) -118) - 3, 6 + (MoveEvent.tutorialLayout.getRightX((byte) -83, 16) - MoveEvent.tutorialLayout.getLeftX(16, 29)), 6 + this.getItemHeight(12, 0), MusicPatch.field_m, nd.field_b, 0, 128);
+                                  fe.b(-3 + MoveEvent.tutorialLayout.getLeftX(16, 29), MoveEvent.tutorialLayout.getTopY(16, (byte) -118) - 3, 6 + (MoveEvent.tutorialLayout.getRightX((byte) -83, 16) - MoveEvent.tutorialLayout.getLeftX(16, 29)), 6 + this.getItemHeight(12, 0), MusicPatch.field_m, ConsoleValue.field_b, 0, 128);
                                   decompiledFrameRemainder0 = (var4 != 0);
                                 }
                                 if (decompiledFrameRemainder0) {
@@ -5618,37 +5618,37 @@ final class TutorialController {
                                         ma.field_Z) {
                                         var2_int -= 32;
                                       }
-                                      fe.b(MoveEvent.tutorialLayout.getLeftX(this.tutorialStage, 29), var2_int - MoveEvent.tutorialLayout.getItemSpacing(this.tutorialStage, (byte) -64), MoveEvent.tutorialLayout.getRightX((byte) 92, this.tutorialStage) - MoveEvent.tutorialLayout.getLeftX(this.tutorialStage, 29), MoveEvent.tutorialLayout.getBottomY(-6, this.tutorialStage) + (-MoveEvent.tutorialLayout.getTopY(this.tutorialStage, (byte) -115) + MoveEvent.tutorialLayout.getItemSpacing(this.tutorialStage, (byte) 112)), MusicPatch.field_m, nd.field_b, 0, 128);
+                                      fe.b(MoveEvent.tutorialLayout.getLeftX(this.tutorialStage, 29), var2_int - MoveEvent.tutorialLayout.getItemSpacing(this.tutorialStage, (byte) -64), MoveEvent.tutorialLayout.getRightX((byte) 92, this.tutorialStage) - MoveEvent.tutorialLayout.getLeftX(this.tutorialStage, 29), MoveEvent.tutorialLayout.getBottomY(-6, this.tutorialStage) + (-MoveEvent.tutorialLayout.getTopY(this.tutorialStage, (byte) -115) + MoveEvent.tutorialLayout.getItemSpacing(this.tutorialStage, (byte) 112)), MusicPatch.field_m, ConsoleValue.field_b, 0, 128);
                                       if (wb.field_b[this.tutorialStage] != null) {
                                         fe.b(wb.field_b[this.tutorialStage], this.getItemLeftX(true, 0) + this.getItemRightX(this.selectionState.itemCount - 1, -3858) >> 1, this.getItemTopY(-1, true));
-                                        fe.c(wb.field_b[this.tutorialStage], this.getItemLeftX(true, 0) + this.getItemRightX(this.selectionState.itemCount - 1, -3858) >> 1, this.getItemTopY(-1, true), nd.field_b, false);
+                                        fe.c(wb.field_b[this.tutorialStage], this.getItemLeftX(true, 0) + this.getItemRightX(this.selectionState.itemCount - 1, -3858) >> 1, this.getItemTopY(-1, true), ConsoleValue.field_b, false);
                                       }
                                       decompiledFrameRemainder0 = (var4 != 0);
                                     }
                                     if (decompiledFrameRemainder0) {
                                       var2_int = MoveEvent.tutorialLayout.getTopY(this.tutorialStage, (byte) -102);
-                                      fe.b(MoveEvent.tutorialLayout.getLeftX(this.tutorialStage, 29), var2_int - MoveEvent.tutorialLayout.getItemSpacing(this.tutorialStage, (byte) -34), MoveEvent.tutorialLayout.getRightX((byte) 97, this.tutorialStage) - MoveEvent.tutorialLayout.getLeftX(this.tutorialStage, 29), (1 + MoveEvent.tutorialStageItems[this.tutorialStage].length) * MoveEvent.tutorialLayout.getItemSpacing(this.tutorialStage, (byte) -121) + (MoveEvent.tutorialLayout.getItemSpacing(this.tutorialStage, (byte) 117) >> 2), MusicPatch.field_m, nd.field_b, 0, 128);
+                                      fe.b(MoveEvent.tutorialLayout.getLeftX(this.tutorialStage, 29), var2_int - MoveEvent.tutorialLayout.getItemSpacing(this.tutorialStage, (byte) -34), MoveEvent.tutorialLayout.getRightX((byte) 97, this.tutorialStage) - MoveEvent.tutorialLayout.getLeftX(this.tutorialStage, 29), (1 + MoveEvent.tutorialStageItems[this.tutorialStage].length) * MoveEvent.tutorialLayout.getItemSpacing(this.tutorialStage, (byte) -121) + (MoveEvent.tutorialLayout.getItemSpacing(this.tutorialStage, (byte) 117) >> 2), MusicPatch.field_m, ConsoleValue.field_b, 0, 128);
                                       if (null != wb.field_b[this.tutorialStage]) {
                                         fe.b(wb.field_b[this.tutorialStage], this.getItemLeftX(true, 0) + this.getItemRightX(this.selectionState.itemCount - 1, -3858) >> 1, this.getItemTopY(-1, true));
                                         stackIn_143_0 = wb.field_b[this.tutorialStage];
                                         stackIn_144_2 = !(param0);
-                                        fe.c(stackIn_143_0, this.getItemLeftX(stackIn_144_2, 0) + this.getItemRightX(-1 + this.selectionState.itemCount, -3858) >> 1, this.getItemTopY(-1, true), nd.field_b, false);
+                                        fe.c(stackIn_143_0, this.getItemLeftX(stackIn_144_2, 0) + this.getItemRightX(-1 + this.selectionState.itemCount, -3858) >> 1, this.getItemTopY(-1, true), ConsoleValue.field_b, false);
                                       }
                                       decompiledFrameRemainder0 = (var4 != 0);
                                     }
                                   }
                                   if (decompiledFrameRemainder0) {
-                                    fe.b(db.a(true, 25), MatchConditionEntry.a(33, (byte) 94), 590, 414, MusicPatch.field_m, nd.field_b, 0, 180);
+                                    fe.b(db.a(true, 25), MatchConditionEntry.a(33, (byte) 94), 590, 414, MusicPatch.field_m, ConsoleValue.field_b, 0, 180);
                                     fe.b(db.a(true, 42), MatchConditionEntry.a(48, (byte) 94), 556, 158, MusicPatch.field_m, jh.field_k, 0, 256);
                                     fe.b(db.a(true, 42), MatchConditionEntry.a(215, (byte) 94), 556, 205, MusicPatch.field_m, jh.field_k, 0, 128);
                                     fe.b(db.a(true, 52), MatchConditionEntry.a(228, (byte) 94), 191, 180, MusicPatch.field_m, jh.field_k, 0, 128);
                                     fe.b(db.a(true, 251), MatchConditionEntry.a(228, (byte) 94), 337, 180, MusicPatch.field_m, jh.field_k, 0, 128);
-                                    fe.b(db.a(!param0, 30), MatchConditionEntry.a(431, (byte) 94), 581, 32, MusicPatch.field_m, nd.field_b, 0, 256);
+                                    fe.b(db.a(!param0, 30), MatchConditionEntry.a(431, (byte) 94), 581, 32, MusicPatch.field_m, ConsoleValue.field_b, 0, 256);
                                     decompiledFrameRemainder0 = (null != wb.field_b[this.tutorialStage]);
                                     if (decompiledFrameRemainder0) {
                                       var2_int = MatchConditionEntry.a(33, (byte) 94);
                                       fe.b(wb.field_b[this.tutorialStage], MoveEvent.tutorialLayout.getLeftX(this.tutorialStage, 29) + MoveEvent.tutorialLayout.getRightX((byte) -63, this.tutorialStage) >> 1, var2_int);
-                                      fe.c(wb.field_b[this.tutorialStage], MoveEvent.tutorialLayout.getLeftX(this.tutorialStage, 29) + MoveEvent.tutorialLayout.getRightX((byte) -77, this.tutorialStage) >> 1, var2_int, nd.field_b, false);
+                                      fe.c(wb.field_b[this.tutorialStage], MoveEvent.tutorialLayout.getLeftX(this.tutorialStage, 29) + MoveEvent.tutorialLayout.getRightX((byte) -77, this.tutorialStage) >> 1, var2_int, ConsoleValue.field_b, false);
                                       decompiledFrameRemainder0 = (var4 != 0);
                                     }
                                   }
@@ -5665,36 +5665,36 @@ final class TutorialController {
                         }
                       }
                       if (decompiledFrameRemainder0) {
-                        fe.b(db.a(true, 15), MatchConditionEntry.a(30, (byte) 94), 610, 420, MusicPatch.field_m, nd.field_b, 0, 180);
-                        fe.b(MoveEvent.tutorialLayout.getLeftX(this.tutorialStage, 29), MoveEvent.tutorialLayout.getTopY(this.tutorialStage, (byte) -108) - 10, MoveEvent.tutorialLayout.getRightX((byte) -85, this.tutorialStage) - MoveEvent.tutorialLayout.getLeftX(this.tutorialStage, 29), 10 + (MoveEvent.tutorialLayout.getBottomY(-6, this.tutorialStage) - MoveEvent.tutorialLayout.getTopY(this.tutorialStage, (byte) -105)), MusicPatch.field_m, nd.field_b, 0, 256);
+                        fe.b(db.a(true, 15), MatchConditionEntry.a(30, (byte) 94), 610, 420, MusicPatch.field_m, ConsoleValue.field_b, 0, 180);
+                        fe.b(MoveEvent.tutorialLayout.getLeftX(this.tutorialStage, 29), MoveEvent.tutorialLayout.getTopY(this.tutorialStage, (byte) -108) - 10, MoveEvent.tutorialLayout.getRightX((byte) -85, this.tutorialStage) - MoveEvent.tutorialLayout.getLeftX(this.tutorialStage, 29), 10 + (MoveEvent.tutorialLayout.getBottomY(-6, this.tutorialStage) - MoveEvent.tutorialLayout.getTopY(this.tutorialStage, (byte) -105)), MusicPatch.field_m, ConsoleValue.field_b, 0, 256);
                         this.l(-23588);
                         fe.b(wb.field_b[this.tutorialStage], db.a(true, 320), MatchConditionEntry.a(30, (byte) 94));
-                        fe.c(wb.field_b[this.tutorialStage], db.a(true, 320), MatchConditionEntry.a(30, (byte) 94), nd.field_b, false);
+                        fe.c(wb.field_b[this.tutorialStage], db.a(true, 320), MatchConditionEntry.a(30, (byte) 94), ConsoleValue.field_b, false);
                         decompiledFrameRemainder0 = (var4 != 0);
                       }
                     }
                   }
                 }
                 if (decompiledFrameRemainder0) {
-                  fe.b(db.a(true, 20), MatchConditionEntry.a(40, (byte) 94), 600, 420, MusicPatch.field_m, nd.field_b, 0, 180);
+                  fe.b(db.a(true, 20), MatchConditionEntry.a(40, (byte) 94), 600, 420, MusicPatch.field_m, ConsoleValue.field_b, 0, 180);
                   fe.b(wb.field_b[this.tutorialStage], db.a(true, 320), MatchConditionEntry.a(40, (byte) 94));
                   stackIn_168_0 = wb.field_b[this.tutorialStage];
                   stackIn_169_1 = !(param0);
-                  fe.c(stackIn_168_0, db.a(stackIn_169_1, 320), MatchConditionEntry.a(40, (byte) 94), nd.field_b, false);
+                  fe.c(stackIn_168_0, db.a(stackIn_169_1, 320), MatchConditionEntry.a(40, (byte) 94), ConsoleValue.field_b, false);
                   decompiledFrameRemainder0 = (var4 != 0);
                 }
               }
               if (decompiledFrameRemainder0) {
-                fe.b(db.a(!param0, 20), MatchConditionEntry.a(40, (byte) 94), 600, 420, MusicPatch.field_m, nd.field_b, 0, 180);
+                fe.b(db.a(!param0, 20), MatchConditionEntry.a(40, (byte) 94), 600, 420, MusicPatch.field_m, ConsoleValue.field_b, 0, 180);
                 fe.b(wb.field_b[this.tutorialStage], db.a(true, 320), MatchConditionEntry.a(40, (byte) 94));
-                fe.c(wb.field_b[this.tutorialStage], db.a(true, 320), MatchConditionEntry.a(40, (byte) 94), nd.field_b, false);
+                fe.c(wb.field_b[this.tutorialStage], db.a(true, 320), MatchConditionEntry.a(40, (byte) 94), ConsoleValue.field_b, false);
                 decompiledFrameRemainder0 = (var4 != 0);
               }
             }
             if (decompiledFrameRemainder0) {
               var2_int = MoveEvent.tutorialLayout.getTopY(this.tutorialStage, (byte) -117);
               var3 = MoveEvent.tutorialLayout.getBottomY(-6, this.tutorialStage) - MoveEvent.tutorialLayout.getTopY(this.tutorialStage, (byte) -119) - (-MoveEvent.tutorialLayout.getItemSpacing(this.tutorialStage, (byte) -66) - (nr.field_e.getParagraphHeight(vd.field_a, 500, 0) >> 1));
-              fe.b(MoveEvent.tutorialLayout.getLeftX(this.tutorialStage, 29), var2_int - MoveEvent.tutorialLayout.getItemSpacing(this.tutorialStage, (byte) 112), MoveEvent.tutorialLayout.getRightX((byte) 94, this.tutorialStage) - MoveEvent.tutorialLayout.getLeftX(this.tutorialStage, 29), var3, MusicPatch.field_m, nd.field_b, 0, 128);
+              fe.b(MoveEvent.tutorialLayout.getLeftX(this.tutorialStage, 29), var2_int - MoveEvent.tutorialLayout.getItemSpacing(this.tutorialStage, (byte) 112), MoveEvent.tutorialLayout.getRightX((byte) 94, this.tutorialStage) - MoveEvent.tutorialLayout.getLeftX(this.tutorialStage, 29), var3, MusicPatch.field_m, ConsoleValue.field_b, 0, 128);
               fe.a(vd.field_a, this.getItemLeftX(true, 0) + this.getItemRightX(-1 + this.selectionState.itemCount, -3858) >> 1, var2_int + 20, 250, 16777215, true);
               stackIn_180_0 = wb.field_b[this.tutorialStage];
               stackIn_180_1 = this.getItemLeftX(true, 0) + this.getItemRightX(-1 + this.selectionState.itemCount, -3858) >> 1;
@@ -5704,14 +5704,14 @@ final class TutorialController {
               fe.b(stackIn_180_0, stackIn_180_1, this.getItemTopY(stackIn_180_3, stackIn_181_4));
               stackIn_184_0 = wb.field_b[this.tutorialStage];
               stackIn_185_2 = !(param0);
-              fe.c(stackIn_184_0, this.getItemLeftX(stackIn_185_2, 0) + this.getItemRightX(this.selectionState.itemCount - 1, -3858) >> 1, this.getItemTopY(-1, true), nd.field_b, false);
+              fe.c(stackIn_184_0, this.getItemLeftX(stackIn_185_2, 0) + this.getItemRightX(this.selectionState.itemCount - 1, -3858) >> 1, this.getItemTopY(-1, true), ConsoleValue.field_b, false);
               decompiledFrameRemainder0 = (var4 != 0);
             }
           }
           if (decompiledFrameRemainder0) {
             var2_intLifetime2 = MoveEvent.tutorialLayout.getTopY(this.tutorialStage, (byte) -124);
             var3Lifetime1 = MoveEvent.tutorialLayout.getBottomY(-6, this.tutorialStage) - MoveEvent.tutorialLayout.getTopY(this.tutorialStage, (byte) -103) - (-MoveEvent.tutorialLayout.getItemSpacing(this.tutorialStage, (byte) 122) - (nr.field_e.getParagraphHeight(mu.field_e, 500, 0) >> 1));
-            fe.b(MoveEvent.tutorialLayout.getLeftX(this.tutorialStage, 29), -MoveEvent.tutorialLayout.getItemSpacing(this.tutorialStage, (byte) 123) + var2_intLifetime2, MoveEvent.tutorialLayout.getRightX((byte) -61, this.tutorialStage) - MoveEvent.tutorialLayout.getLeftX(this.tutorialStage, 29), var3Lifetime1, MusicPatch.field_m, nd.field_b, 0, 128);
+            fe.b(MoveEvent.tutorialLayout.getLeftX(this.tutorialStage, 29), -MoveEvent.tutorialLayout.getItemSpacing(this.tutorialStage, (byte) 123) + var2_intLifetime2, MoveEvent.tutorialLayout.getRightX((byte) -61, this.tutorialStage) - MoveEvent.tutorialLayout.getLeftX(this.tutorialStage, 29), var3Lifetime1, MusicPatch.field_m, ConsoleValue.field_b, 0, 128);
             stackIn_189_0 = mu.field_e;
             stackIn_190_2 = !(param0);
             fe.a(stackIn_189_0, this.getItemLeftX(stackIn_190_2, 0) + this.getItemRightX(-1 + this.selectionState.itemCount, -3858) >> 1, 20 + var2_intLifetime2, 250, 16777215, true);
@@ -5723,7 +5723,7 @@ final class TutorialController {
             fe.b(stackIn_193_0, stackIn_193_1, this.getItemTopY(stackIn_193_3, stackIn_194_4));
             stackIn_197_0 = wb.field_b[this.tutorialStage];
             stackIn_198_2 = !(param0);
-            fe.c(stackIn_197_0, this.getItemLeftX(stackIn_198_2, 0) + this.getItemRightX(-1 + this.selectionState.itemCount, -3858) >> 1, this.getItemTopY(-1, true), nd.field_b, false);
+            fe.c(stackIn_197_0, this.getItemLeftX(stackIn_198_2, 0) + this.getItemRightX(-1 + this.selectionState.itemCount, -3858) >> 1, this.getItemTopY(-1, true), ConsoleValue.field_b, false);
           }
           var2_intLifetime1 = 0;
           if (param0) {
@@ -6055,13 +6055,13 @@ final class TutorialController {
                 if (~var3 != ~wh.field_a) {
                   fe.a(var4, var5, 68, -4 + var2_int, EffectPresentation.field_j, field_e, 0, 128, false);
                 } else {
-                  fe.a(var4, var5, 68, var2_int - 4, EffectPresentation.field_j, nd.field_b, 0, 128, false);
+                  fe.a(var4, var5, 68, var2_int - 4, EffectPresentation.field_j, ConsoleValue.field_b, 0, 128, false);
                 }
                 na.field_F = var3;
               } else if (~wh.field_a != ~var3) {
                 fe.a(var4, var5, 68, var2_int - 4, EffectPresentation.field_j, jh.field_k, 0, 128, false);
               } else {
-                fe.a(var4, var5, 68, -4 + var2_int, EffectPresentation.field_j, nd.field_b, 0, 128, false);
+                fe.a(var4, var5, 68, -4 + var2_int, EffectPresentation.field_j, ConsoleValue.field_b, 0, 128, false);
               }
               wv.field_h[var3].g(db.a(true, 323), MatchConditionEntry.a(var2_int * var3 + 66, (byte) 94));
               var3++;
@@ -6109,7 +6109,7 @@ final class TutorialController {
                   stackIn_59_1 = -1;
                   if (stackIn_59_0 > stackIn_59_1 &&
                     var5Lifetime1 + var4Lifetime1 * 16 == ah.localCoat.colourIndices[kd.field_X]) {
-                    fe.a(var6, var7, 20, 40, EffectPresentation.field_j, nd.field_b, 0, 128, false);
+                    fe.a(var6, var7, 20, 40, EffectPresentation.field_j, ConsoleValue.field_b, 0, 128, false);
                   } else if (kd.field_X > -1 &&
                     ~(var5Lifetime1 + var4Lifetime1 * 16) == ~var3Lifetime1) {
                     fe.a(var6, var7, 20, 40, EffectPresentation.field_j, field_e, 0, 128, false);

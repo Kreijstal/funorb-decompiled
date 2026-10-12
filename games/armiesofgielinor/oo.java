@@ -497,7 +497,7 @@ final class oo {
         try {
           if (null == this.field_i) {
             if (null != VerticalScrollbar.field_Sb) {
-              VerticalScrollbar.field_Sb.a(ef.field_a, 9, 58, 622, 196, 16754688, -1, 1, 1, 0);
+              VerticalScrollbar.field_Sb.a(ConsoleParseException.field_a, 9, 58, 622, 196, 16754688, -1, 1, 1, 0);
             }
             return;
           }
@@ -508,7 +508,7 @@ final class oo {
           var2 = var6;
           if (var2 == null) {
             if (VerticalScrollbar.field_Sb != null) {
-              VerticalScrollbar.field_Sb.a(ef.field_a, 9, 58, 622, 196, 16754688, -1, 1, 1, 0);
+              VerticalScrollbar.field_Sb.a(ConsoleParseException.field_a, 9, 58, 622, 196, 16754688, -1, 1, 1, 0);
             }
           } else {
             var6.draw(9, 58);

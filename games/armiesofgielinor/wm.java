@@ -43,7 +43,7 @@ final class wm {
           uc.a(param11, param19, param5, false, param4);
           pt.c(param0, param2, 56);
           qf.a(param6, param10, param7, param12, param15, -125);
-          dr.a(param16, (byte) 96, param13, param20);
+          ConsoleCommand.a(param16, (byte) 96, param13, param20);
           ek.a(param1, param3, -118, param18);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

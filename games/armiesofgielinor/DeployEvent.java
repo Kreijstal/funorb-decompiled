@@ -200,7 +200,7 @@ final class DeployEvent extends GameEvent {
           var4 = TaggedMapData.field_g.listContent.children;
           if (th.socialListState != 2 &&
             th.socialListState != 1) {
-            TaggedMapData.field_g.scrollContainer.viewport.text = ef.field_a;
+            TaggedMapData.field_g.scrollContainer.viewport.text = ConsoleParseException.field_a;
             TaggedMapData.field_g.inputEnabled = false;
             ArchiveIndex.a(TaggedMapData.field_g.listContent, -71);
             return;

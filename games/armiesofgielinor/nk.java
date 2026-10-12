@@ -63,7 +63,7 @@ final class nk {
           if (param0 <= 79) {
             nk.a((byte) 84);
           }
-          for (var1_intLifetime1 = 0; var1_intLifetime1 < ef.field_c; var1_intLifetime1++) {
+          for (var1_intLifetime1 = 0; var1_intLifetime1 < ConsoleParseException.field_c; var1_intLifetime1++) {
             for (var2 = 0; ResourceRequest.field_y > var2; var2++) {
               var3 = CampaignMenuEntry.field_u[var1_intLifetime1 * ResourceRequest.field_y + var2];
               if (1 == var3) {
@@ -83,7 +83,7 @@ final class nk {
                   CampaignMenuEntry.field_u[var2 + ResourceRequest.field_y * (var1_intLifetime1 - 1)] == 1) {
                   var3 = 1;
                 }
-                if (-1 + ef.field_c == var1_intLifetime1 ||
+                if (-1 + ConsoleParseException.field_c == var1_intLifetime1 ||
                   CampaignMenuEntry.field_u[(var1_intLifetime1 + 1) * ResourceRequest.field_y + var2] == 1) {
                   var3 = 1;
                 }

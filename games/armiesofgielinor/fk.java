@@ -42,7 +42,7 @@ final class fk implements WidgetPainter {
           }
           var4_int = archive.getGroupId(groupName, 110);
           var5 = archive.getFileId((byte) -72, var4_int, fileName);
-          stackIn_3_0 = cb.a(false, archive, var4_int, var5);
+          stackIn_3_0 = ConsoleEvaluationException.a(false, archive, var4_int, var5);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -70,76 +70,76 @@ final class fk implements WidgetPainter {
         }
     }
 
-    final static og a(es param0, int param1) throws ef {
-        og stackIn_2_0 = null;
-        og stackIn_9_0 = null;
-        og stackIn_23_0 = null;
-        og stackIn_29_0 = null;
-        RuntimeException stackIn_36_0 = null;
-        StringBuilder stackIn_36_1 = null;
-        String stackIn_37_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException var2 = null;
-        og var4 = null;
-        og var5 = null;
-        og var6 = null;
+    final static ConsoleExpression parseConsoleExpression(ConsoleTokenCursor cursor, int obfuscationGuard) throws ConsoleParseException {
+        ConsoleExpression guardResult = null;
+        ConsoleExpression literalResult = null;
+        ConsoleExpression emptyCallResult = null;
+        ConsoleExpression callResult = null;
+        RuntimeException failureForContext = null;
+        StringBuilder errorContext = null;
+        String cursorDescription = null;
+        RuntimeException caughtFailure = null;
+        RuntimeException failure = null;
+        ConsoleExpression expression = null;
+        ConsoleExpression openingToken = null;
+        ConsoleExpression separatorToken = null;
         try {
-          if (param1 >= -7) {
-            stackIn_2_0 = (og) null;
-            return stackIn_2_0;
+          if (obfuscationGuard >= -7) {
+            guardResult = (ConsoleExpression) null;
+            return guardResult;
           }
-          var4 = param0.a((byte) 13);
-          if (BattleTutorial.field_x != var4.field_q &&
-            hf.field_h != var4.field_q &&
-            var4.field_q != gg.field_G &&
-            var4.field_q != EquipmentBattleTutorial.field_z) {
-            if (rn.field_c != var4.field_q) {
-              throw new ef(var4.field_s);
+          expression = cursor.readToken((byte) 13);
+          if (BattleTutorial.consoleStringKind != expression.kind &&
+            hf.consoleCharacterKind != expression.kind &&
+            expression.kind != gg.consoleNumberKind &&
+            expression.kind != EquipmentBattleTutorial.consoleBooleanKind) {
+            if (rn.consoleCallKind != expression.kind) {
+              throw new ConsoleParseException(expression.sourceOffset);
             }
-            if (param0.a(126)) {
-              throw new ef(var4.field_s);
+            if (cursor.isAtEnd(126)) {
+              throw new ConsoleParseException(expression.sourceOffset);
             }
-            var5 = param0.a((byte) 13);
-            if (ChatMessage.field_j != var5.field_q) {
-              throw new ef(var5.field_s);
+            openingToken = cursor.readToken((byte) 13);
+            if (ChatMessage.consoleArgumentStartKind != openingToken.kind) {
+              throw new ConsoleParseException(openingToken.sourceOffset);
             }
-            var4.field_k = new NodeDeque();
+            expression.arguments = new NodeDeque();
             while (true) {
-              if (param0.a(127)) {
-                throw new ef(var4.field_s);
+              if (cursor.isAtEnd(127)) {
+                throw new ConsoleParseException(expression.sourceOffset);
               }
-              if (param0.a((byte) 13).field_q == LeaderEscortCondition.field_d) {
-                stackIn_23_0 = var4;
-                return stackIn_23_0;
+              if (cursor.readToken((byte) 13).kind == LeaderEscortCondition.consoleArgumentEndKind) {
+                emptyCallResult = expression;
+                return emptyCallResult;
               }
-              param0.field_a = param0.field_a - 1;
-              var4.field_k.addLast((byte) -119, (IntrusiveNode) (fk.a(param0, -32)));
-              if (param0.a(127)) {
-                throw new ef(var4.field_s);
+              cursor.position = cursor.position - 1;
+              expression.arguments.addLast((byte) -119, (IntrusiveNode) (fk.parseConsoleExpression(cursor, -32)));
+              if (cursor.isAtEnd(127)) {
+                throw new ConsoleParseException(expression.sourceOffset);
               }
-              var6 = param0.a((byte) 13);
-              if (LeaderEscortCondition.field_d == var6.field_q) {
-                stackIn_29_0 = var4;
-                return stackIn_29_0;
+              separatorToken = cursor.readToken((byte) 13);
+              if (LeaderEscortCondition.consoleArgumentEndKind == separatorToken.kind) {
+                callResult = expression;
+                return callResult;
               }
-              if (var6.field_q != sb.field_d) {
-                throw new ef(var6.field_s);
+              if (separatorToken.kind != sb.consoleArgumentCommaKind) {
+                throw new ConsoleParseException(separatorToken.sourceOffset);
               }
             }
           }
-          stackIn_9_0 = var4;
-          return stackIn_9_0;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var2 = decompiledCaughtException;
-          stackIn_36_0 = var2;
-          stackIn_36_1 = new StringBuilder().append("fk.F(");
-          if (param0 == null) {
-            stackIn_37_2 = "null";
+          literalResult = expression;
+          return literalResult;
+        } catch (java.lang.RuntimeException caughtParameter) {
+          caughtFailure = caughtParameter;
+          failure = caughtFailure;
+          failureForContext = failure;
+          errorContext = new StringBuilder().append("fk.F(");
+          if (cursor == null) {
+            cursorDescription = "null";
           } else {
-            stackIn_37_2 = "{...}";
+            cursorDescription = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_36_0), ((StringBuilder) (Object) stackIn_36_1).append(stackIn_37_2).append(',').append(param1).append(')').toString());
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) failureForContext), ((StringBuilder) (Object) errorContext).append(cursorDescription).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 

@@ -322,7 +322,7 @@ abstract class nl extends Widget implements gw {
           IconTextComponent.field_Kb = new ClientUiComponent(0L, (ClientUiComponent) null);
           rj.field_F = new ClientUiComponent(0L, SoundPlaybackHandle.field_p, su.field_b);
           CampaignProgress.field_a = new ClientUiComponent(0L, br.field_e, PcmPlayerService.ratingLabel);
-          MapTile.field_f = new ScrollContainer(0L, new ClientUiComponent(0L, (ClientUiComponent) null), cb.field_c, WeightedLruCache.field_b);
+          MapTile.field_f = new ScrollContainer(0L, new ClientUiComponent(0L, (ClientUiComponent) null), ConsoleEvaluationException.field_c, WeightedLruCache.field_b);
           IconTextComponent.field_Kb.addChild(rj.field_F, 79);
           if (fh.field_c) {
             IconTextComponent.field_Kb.addChild(CampaignProgress.field_a, 69);
@@ -344,13 +344,13 @@ abstract class nl extends Widget implements gw {
           bs.field_a = new ClientUiComponent(0L, CampaignResult.field_a, fw.field_H);
           SphinxActionRequest.field_A = new ClientUiComponent(0L, CampaignResult.field_a, hs.field_D);
           wl.field_K = new ClientUiComponent(0L, br.field_e, RevivalEvent.field_B);
-          CipherPacketBuffer.field_x = new ScrollContainer(0L, new ClientUiComponent(0L, (ClientUiComponent) null), cb.field_c, WeightedLruCache.field_b);
-          fj.field_d = new ClientUiComponent(0L, nd.field_a, l.field_f.toUpperCase());
+          CipherPacketBuffer.field_x = new ScrollContainer(0L, new ClientUiComponent(0L, (ClientUiComponent) null), ConsoleEvaluationException.field_c, WeightedLruCache.field_b);
+          fj.field_d = new ClientUiComponent(0L, ConsoleValue.field_a, l.field_f.toUpperCase());
           fj.field_d.inputEnabled = fh.field_c;
           stackIn_5_0 = null;
           stackIn_5_1 = null;
           stackIn_5_2 = 0L;
-          stackIn_5_3 = nd.field_a;
+          stackIn_5_3 = ConsoleValue.field_a;
           if (!fh.field_c) {
             stackIn_6_0 = null;
             stackIn_6_1 = null;
@@ -384,7 +384,7 @@ abstract class nl extends Widget implements gw {
           qc.field_c = new ClientUiComponent(0L, ArchiveIndex.field_b);
           qc.field_c.addChild(vu.field_Q, 116);
           qc.field_c.addChild(td.field_g, 89);
-          uj.field_l = new ClientUiComponent(0L, cb.field_c);
+          uj.field_l = new ClientUiComponent(0L, ConsoleEvaluationException.field_c);
           uj.field_l.applyStyle(0, eq.field_h);
           uj.field_l.verticalAlignment = 1;
           var16 = uj.field_l;
@@ -394,7 +394,7 @@ abstract class nl extends Widget implements gw {
           gg.field_E.horizontalAlignment = 1;
           di.field_l = new ClientUiComponent(0L, SoundPlaybackHandle.field_p, su.field_b);
           SpellCastEvent.field_D = new ClientUiComponent(0L, br.field_e, PcmPlayerService.ratingLabel);
-          bu.field_a = new ScrollContainer(0L, new ClientUiComponent(0L, (ClientUiComponent) null), cb.field_c, WeightedLruCache.field_b);
+          bu.field_a = new ScrollContainer(0L, new ClientUiComponent(0L, (ClientUiComponent) null), ConsoleEvaluationException.field_c, WeightedLruCache.field_b);
           eb.field_c.addChild(gg.field_E, 72);
           eb.field_c.addChild(di.field_l, 83);
           if (fh.field_c) {
@@ -472,8 +472,8 @@ abstract class nl extends Widget implements gw {
               }
             }
           }
-          lm.field_b = new ClientUiComponent(0L, nd.field_a);
-          so.field_d = new ClientUiComponent(0L, nd.field_a);
+          lm.field_b = new ClientUiComponent(0L, ConsoleValue.field_a);
+          so.field_d = new ClientUiComponent(0L, ConsoleValue.field_a);
           pi.field_N = new ClientUiComponent(0L, ke.field_e);
           pi.field_N.applyStyle(0, eq.field_h);
           var17 = pi.field_N;
@@ -503,7 +503,7 @@ abstract class nl extends Widget implements gw {
           pd.field_c.addChild(so.field_d, 69);
           pd.field_c.addChild(pi.field_N, 91);
           bk.field_f = new ClientUiComponent(0L, UnitModelPreview.field_m, TickCounter.field_d.toUpperCase());
-          dv.field_m = new ClientUiComponent(0L, bw.field_h, dr.field_D.toUpperCase());
+          dv.field_m = new ClientUiComponent(0L, bw.field_h, ConsoleCommand.field_D.toUpperCase());
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -141,7 +141,7 @@ final class CampaignMenu {
         int var4 = 0;
         var4 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          ef.b(-1);
+          ConsoleParseException.b(-1);
           if (rd.field_j != null) {
             rd.field_j.A(111);
           }
@@ -265,7 +265,7 @@ final class CampaignMenu {
           if (param0 < 9) {
             field_s = (Boolean) null;
           }
-          fe.a(this.selectedMissionEntry.title, db.a(true, var8Lifetime1 / 2 + var11), MatchConditionEntry.a(var16, (byte) 94), var8Lifetime1 - 20, nd.field_b, true, 40, 1);
+          fe.a(this.selectedMissionEntry.title, db.a(true, var8Lifetime1 / 2 + var11), MatchConditionEntry.a(var16, (byte) 94), var8Lifetime1 - 20, ConsoleValue.field_b, true, 40, 1);
           var16 += 14;
           rs.field_n.a(var6, db.a(true, var15), MatchConditionEntry.a(var16, (byte) 94), var14, var10, 16777215, 1, 1, 0, 0);
           var16 = var16 + (var9Lifetime1 + 30);
@@ -310,8 +310,8 @@ final class CampaignMenu {
         int var4Lifetime1;
         var8 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          fe.a(db.a(true, 32), MatchConditionEntry.a(71, (byte) 94), 305, 228, MusicPatch.field_m, jh.field_k, 0, 128, ai.field_V, true, nd.field_b);
-          fe.a(db.a(true, 32), MatchConditionEntry.a(321, (byte) 94), 305, 92, MusicPatch.field_m, jh.field_k, 0, 128, SummonAction.field_A, true, nd.field_b);
+          fe.a(db.a(true, 32), MatchConditionEntry.a(71, (byte) 94), 305, 228, MusicPatch.field_m, jh.field_k, 0, 128, ai.field_V, true, ConsoleValue.field_b);
+          fe.a(db.a(true, 32), MatchConditionEntry.a(321, (byte) 94), 305, 92, MusicPatch.field_m, jh.field_k, 0, 128, SummonAction.field_A, true, ConsoleValue.field_b);
           if (null != this.selectedCampaignEntry) {
             if (this.selectedCampaignEntry.entryId == -1) {
               stackIn_8_0 = SummonAction.field_A;
@@ -319,21 +319,21 @@ final class CampaignMenu {
               stackIn_8_0 = this.selectedCampaignEntry.title;
             }
             var2 = stackIn_8_0;
-            fe.a(db.a(true, 346), MatchConditionEntry.a(70, (byte) 94), 262, 343, MusicPatch.field_m, jh.field_k, 0, 128, (String) (var2), true, nd.field_b);
+            fe.a(db.a(true, 346), MatchConditionEntry.a(70, (byte) 94), 262, 343, MusicPatch.field_m, jh.field_k, 0, 128, (String) (var2), true, ConsoleValue.field_b);
             stackIn_11_0 = db.a(true, 354);
             stackIn_11_1 = MatchConditionEntry.a(361, (byte) 94);
             stackIn_11_2 = 246;
             stackIn_11_3 = 41;
             stackIn_11_4 = DisplacedUnitMarker.field_s;
             if (!IterableDualNodeDeque.isPointerInBounds(-33, db.a(true, 354), db.a(true, 354) + 246, MatchConditionEntry.a(361, (byte) 94), MatchConditionEntry.a(361, (byte) 94) + 41)) {
-              stackIn_12_5 = nd.field_b;
+              stackIn_12_5 = ConsoleValue.field_b;
             } else {
               stackIn_12_5 = TutorialController.field_e;
             }
             fe.a(stackIn_11_0, stackIn_11_1, stackIn_11_2, stackIn_11_3, stackIn_11_4, stackIn_12_5, 0, 0);
             var3 = MusicPatch.field_o;
             if (this.selectedCampaignEntry.entryId == -1) {
-              var3 = es.field_b;
+              var3 = ConsoleTokenCursor.field_b;
             }
             fe.c(var3, db.a(true, 477), MatchConditionEntry.a(396, (byte) 94), 0, true);
             var4 = db.a(true, 359);
@@ -395,7 +395,7 @@ final class CampaignMenu {
             break;
           }
           this.hoveredEntry = (CampaignMenuEntry) (var2);
-          fe.a(og.field_u, db.a(true, 320), MatchConditionEntry.a(30, (byte) 94), nd.field_b, 1, false);
+          fe.a(ConsoleExpression.field_u, db.a(true, 320), MatchConditionEntry.a(30, (byte) 94), ConsoleValue.field_b, 1, false);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -482,7 +482,7 @@ final class CampaignMenu {
           stackIn_17_3 = param2.height;
           stackIn_17_4 = EffectPresentation.field_j;
           if (param3) {
-            stackIn_18_5 = nd.field_b;
+            stackIn_18_5 = ConsoleValue.field_b;
           } else {
             stackIn_18_5 = jh.field_k;
           }
@@ -491,7 +491,7 @@ final class CampaignMenu {
             var10 = db.a(true, param2.left + var7);
             var11 = param2.height / 2 + param2.top + rs.field_n.field_v;
             fe.a(param2.title, var10, MatchConditionEntry.a(8 + (param2.top + param2.height / 2), (byte) 94), true);
-            fe.a(param2.title, var10, MatchConditionEntry.a(param2.height / 2 + param2.top + 8, (byte) 94), nd.field_b, true);
+            fe.a(param2.title, var10, MatchConditionEntry.a(param2.height / 2 + param2.top + 8, (byte) 94), ConsoleValue.field_b, true);
             rs.field_n.b(param2.statusText, var10, MatchConditionEntry.a(var11, (byte) 94), 12303291, 1);
           }
           return;
@@ -753,7 +753,7 @@ final class CampaignMenu {
           var13 = var7Lifetime1 - 26;
           var14 = var12;
           var15 = 30 + var11;
-          fe.a(this.selectedMissionEntry.title, db.a(true, var10 + var7Lifetime1 / 2), MatchConditionEntry.a(var15, (byte) 94), var7Lifetime1 - 20, nd.field_b, true, 40, 1);
+          fe.a(this.selectedMissionEntry.title, db.a(true, var10 + var7Lifetime1 / 2), MatchConditionEntry.a(var15, (byte) 94), var7Lifetime1 - 20, ConsoleValue.field_b, true, 40, 1);
           var15 += 14;
           rs.field_n.a(var5, db.a(true, var14), MatchConditionEntry.a(var15, (byte) 94), var13, var9Lifetime1, 16777215, 1, 1, 0, 0);
           var15 = var15 + (30 + var8Lifetime1);
@@ -988,7 +988,7 @@ final class CampaignMenu {
             var5 = 18;
             var6 = 34;
             var6Lifetime1 = 34;
-            fe.a(this.selectedMissionEntry.title, db.a(true, var3Lifetime1 / 2 + 5), MatchConditionEntry.a(var6Lifetime1, (byte) 94), -20 + var3Lifetime1, nd.field_b, true, 40, 1);
+            fe.a(this.selectedMissionEntry.title, db.a(true, var3Lifetime1 / 2 + 5), MatchConditionEntry.a(var6Lifetime1, (byte) 94), -20 + var3Lifetime1, ConsoleValue.field_b, true, 40, 1);
             var6Lifetime1 += 14;
             var7 = this.selectedMissionEntry.mission.getMapLayout(-127);
             var8 = 0;
@@ -1863,7 +1863,7 @@ final class CampaignMenu {
               var6_int++;
             }
             if (decompiledFrameCompleted0) {
-              var3.statusText = fo.a(4800, og.field_l, new String[]{Integer.toString(var4_int), Integer.toString(var5)});
+              var3.statusText = fo.a(4800, ConsoleExpression.field_l, new String[]{Integer.toString(var4_int), Integer.toString(var5)});
               var6 = ps.field_w[var3.entryId];
               var7 = new RgbSprite(var6.canvasWidth, var6.canvasHeight);
               CombatSandbox.a(var7, 3);
@@ -2267,7 +2267,7 @@ final class CampaignMenu {
                 var6 = 225 + var5;
               }
               fe.b(((CampaignMenuEntry) (var3)).title, db.a(true, var6), MatchConditionEntry.a(((CampaignMenuEntry) (var3)).top - 12, (byte) 94), true);
-              fe.c(((CampaignMenuEntry) (var3)).title, db.a(true, var6), MatchConditionEntry.a(((CampaignMenuEntry) (var3)).top - 12, (byte) 94), nd.field_b, true);
+              fe.c(((CampaignMenuEntry) (var3)).title, db.a(true, var6), MatchConditionEntry.a(((CampaignMenuEntry) (var3)).top - 12, (byte) 94), ConsoleValue.field_b, true);
               if (null != var4_ref &&
                 ~this.campaignIndex == ~var4_ref.campaignIndex &&
                 var4_ref.missionId == ((CampaignMenuEntry) (var3)).entryId) {
@@ -2278,7 +2278,7 @@ final class CampaignMenu {
               var7 = stackIn_89_0;
               if (var7 != 0) {
                 fe.b(qf.field_a, db.a(true, ((CampaignMenuEntry) (var3)).left), MatchConditionEntry.a(10 + ((CampaignMenuEntry) (var3)).top, (byte) 94), true);
-                fe.c(qf.field_a, db.a(true, ((CampaignMenuEntry) (var3)).left), MatchConditionEntry.a(((CampaignMenuEntry) (var3)).top + 10, (byte) 94), nd.field_b, true);
+                fe.c(qf.field_a, db.a(true, ((CampaignMenuEntry) (var3)).left), MatchConditionEntry.a(((CampaignMenuEntry) (var3)).top + 10, (byte) 94), ConsoleValue.field_b, true);
               }
               if (this.hoveredEntry != var3) {
                 RadialSummonMenu.playDefaultSoundWithIntGuard(127, ClientUiNode.field_v[1]);

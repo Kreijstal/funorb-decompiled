@@ -3,25 +3,25 @@
  */
 import java.io.*;
 
-final class es {
+final class ConsoleTokenCursor {
     static String[][][] field_c;
     static IndexedSprite[] boneSprites;
-    int field_a;
+    int position;
     static String field_b;
-    private og[] field_e;
+    private ConsoleExpression[] tokens;
 
-    final og a(byte param0) {
-        if (param0 != 13) {
-          this.a(97);
+    final ConsoleExpression readToken(byte obfuscationGuard) {
+        if (obfuscationGuard != 13) {
+          this.isAtEnd(97);
         }
-        int fieldTemp$0 = this.field_a;
-        this.field_a = this.field_a + 1;
-        return this.field_e[fieldTemp$0];
+        int fieldTemp$0 = this.position;
+        this.position = this.position + 1;
+        return this.tokens[fieldTemp$0];
     }
 
     public static void b(int param0) {
         if (param0 > -13) {
-          es.b(-31);
+          ConsoleTokenCursor.b(-31);
         }
         field_b = null;
         boneSprites = null;
@@ -75,11 +75,11 @@ final class es {
         }
     }
 
-    final boolean a(int param0) {
-        if (param0 <= 109) {
+    final boolean isAtEnd(int obfuscationGuard) {
+        if (obfuscationGuard <= 109) {
           boneSprites = (IndexedSprite[]) null;
         }
-        return this.field_a >= this.field_e.length ? true : false;
+        return this.position >= this.tokens.length ? true : false;
     }
 
     final static void a(int param0, int param1, LobbyRoom param2, int param3, boolean param4, int param5, byte param6, int param7) {
@@ -219,7 +219,7 @@ final class es {
                   } else {
                     param7 = var12;
                   }
-                  es.a(param0, param1, param2, param3 + 1, param4, param5, (byte) -72, param7);
+                  ConsoleTokenCursor.a(param0, param1, param2, param3 + 1, param4, param5, (byte) -72, param7);
                   if (fc.field_a) {
                     return;
                   }
@@ -259,7 +259,7 @@ final class es {
               }
             }
             if (var13 != 0) {
-              es.a(param0, param1, param2, param3 + 1, param4, param5, (byte) 120, param7);
+              ConsoleTokenCursor.a(param0, param1, param2, param3 + 1, param4, param5, (byte) 120, param7);
               var11Lifetime1 = 1;
             }
             if (fc.field_a) {
@@ -281,39 +281,39 @@ final class es {
         }
     }
 
-    es(NodeDeque param0) {
-        int incrementValue$2 = 0;
-        int var2_int = 0;
-        og var3 = null;
-        RuntimeException stackIn_7_0 = null;
-        StringBuilder stackIn_7_1 = null;
-        String stackIn_8_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException var2 = null;
-        this.field_a = 0;
+    ConsoleTokenCursor(NodeDeque tokenDeque) {
+        int tokenSlot = 0;
+        int tokenIndex = 0;
+        ConsoleExpression token = null;
+        RuntimeException failureForContext = null;
+        StringBuilder errorContext = null;
+        String dequeDescription = null;
+        RuntimeException caughtFailure = null;
+        RuntimeException failure = null;
+        this.position = 0;
         try {
-          this.field_e = new og[param0.size(false)];
-          var2_int = 0;
-          var3 = (og) (param0.first((byte) 105));
-          while (var3 != null) {
-            var3.unlink(121);
-            incrementValue$2 = var2_int;
-            var2_int++;
-            this.field_e[incrementValue$2] = var3;
-            var3 = (og) (param0.next((byte) 123));
+          this.tokens = new ConsoleExpression[tokenDeque.size(false)];
+          tokenIndex = 0;
+          token = (ConsoleExpression) (tokenDeque.first((byte) 105));
+          while (token != null) {
+            token.unlink(121);
+            tokenSlot = tokenIndex;
+            tokenIndex++;
+            this.tokens[tokenSlot] = token;
+            token = (ConsoleExpression) (tokenDeque.next((byte) 123));
           }
           return;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var2 = decompiledCaughtException;
-          stackIn_7_0 = var2;
-          stackIn_7_1 = new StringBuilder().append("es.<init>(");
-          if (param0 == null) {
-            stackIn_8_2 = "null";
+        } catch (java.lang.RuntimeException caughtParameter) {
+          caughtFailure = caughtParameter;
+          failure = caughtFailure;
+          failureForContext = failure;
+          errorContext = new StringBuilder().append("es.<init>(");
+          if (tokenDeque == null) {
+            dequeDescription = "null";
           } else {
-            stackIn_8_2 = "{...}";
+            dequeDescription = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) failureForContext), ((StringBuilder) (Object) errorContext).append(dequeDescription).append(')').toString());
         }
     }
 

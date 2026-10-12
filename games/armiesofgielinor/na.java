@@ -318,75 +318,75 @@ final class na extends tj implements mf, he {
         }
     }
 
-    final static nd a(dr[] param0, byte param1, nd[] param2, String param3) throws cb {
-        int var4_int = 0;
-        StringBuilder discarded$1 = null;
-        StringBuilder discarded$2 = null;
-        StringBuilder discarded$3 = null;
-        StringBuilder discarded$0 = null;
-        nd stackIn_6_0 = null;
-        RuntimeException stackIn_21_0 = null;
-        StringBuilder stackIn_21_1 = null;
-        String stackIn_22_2 = null;
-        StringBuilder stackIn_24_1 = null;
-        String stackIn_25_2 = null;
-        StringBuilder stackIn_27_1 = null;
-        String stackIn_28_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException var4 = null;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        StringBuilder var8 = null;
-        int var5Lifetime1;
-        var6 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+    final static ConsoleValue invokeConsoleCommand(ConsoleCommand[] commands, byte obfuscationGuard, ConsoleValue[] arguments, String commandName) throws ConsoleEvaluationException {
+        int commandIndex = 0;
+        StringBuilder objectTypeAppendResult = null;
+        StringBuilder primitiveTypeAppendResult = null;
+        StringBuilder separatorAppendResult = null;
+        StringBuilder closingAppendResult = null;
+        ConsoleValue result = null;
+        RuntimeException failureForContext = null;
+        StringBuilder errorContext = null;
+        String commandsDescription = null;
+        StringBuilder errorContextWithCommands = null;
+        String argumentsDescription = null;
+        StringBuilder errorContextWithArguments = null;
+        String nameDescription = null;
+        RuntimeException caughtFailure = null;
+        RuntimeException failure = null;
+        int guardQuotient = 0;
+        int obfuscationControl = 0;
+        int argumentIndex = 0;
+        StringBuilder diagnosticBuilder = null;
+        int initialArgumentIndex;
+        obfuscationControl = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          var5 = 5 / ((-46 - param1) / 37);
-          for (var4_int = 0; param0.length > var4_int; var4_int++) {
-            if (param0[var4_int].a(param3, (byte) 55, param2)) {
-              stackIn_6_0 = param0[var4_int].a(-24872, param2);
-              return stackIn_6_0;
+          guardQuotient = 5 / ((-46 - obfuscationGuard) / 37);
+          for (commandIndex = 0; commands.length > commandIndex; commandIndex++) {
+            if (commands[commandIndex].matches(commandName, (byte) 55, arguments)) {
+              result = commands[commandIndex].execute(-24872, arguments);
+              return result;
             }
           }
-          var8 = new StringBuilder("The method " + param3 + "(");
-          var7 = 0;
-          var5Lifetime1 = var7;
-          while (param2.length > var7) {
-            if (!param2[var7].field_e) {
-              discarded$1 = var8.append(SummonRequest.a(640, param2[var7].field_c.getClass()));
+          diagnosticBuilder = new StringBuilder("The method " + commandName + "(");
+          argumentIndex = 0;
+          initialArgumentIndex = argumentIndex;
+          while (arguments.length > argumentIndex) {
+            if (!arguments[argumentIndex].primitive) {
+              objectTypeAppendResult = diagnosticBuilder.append(SummonRequest.consoleTypeName(640, arguments[argumentIndex].payload.getClass()));
             } else {
-              discarded$2 = var8.append(CampaignMenuEntry.getBoxedPrimitiveType(param2[var7].field_c, (byte) -75).toString());
+              primitiveTypeAppendResult = diagnosticBuilder.append(CampaignMenuEntry.getBoxedPrimitiveType(arguments[argumentIndex].payload, (byte) -75).toString());
             }
-            if (var7 < param2.length - 1) {
-              discarded$3 = var8.append(',');
+            if (argumentIndex < arguments.length - 1) {
+              separatorAppendResult = diagnosticBuilder.append(',');
             }
-            var7++;
+            argumentIndex++;
           }
-          discarded$0 = var8.append(") is undefined.");
-          throw new cb(var8.toString());
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var4 = decompiledCaughtException;
-          stackIn_21_0 = var4;
-          stackIn_21_1 = new StringBuilder().append("na.J(");
-          if (param0 == null) {
-            stackIn_22_2 = "null";
+          closingAppendResult = diagnosticBuilder.append(") is undefined.");
+          throw new ConsoleEvaluationException(diagnosticBuilder.toString());
+        } catch (java.lang.RuntimeException caughtParameter) {
+          caughtFailure = caughtParameter;
+          failure = caughtFailure;
+          failureForContext = failure;
+          errorContext = new StringBuilder().append("na.J(");
+          if (commands == null) {
+            commandsDescription = "null";
           } else {
-            stackIn_22_2 = "{...}";
+            commandsDescription = "{...}";
           }
-          stackIn_24_1 = ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(param1).append(',');
-          if (param2 == null) {
-            stackIn_25_2 = "null";
+          errorContextWithCommands = ((StringBuilder) (Object) errorContext).append(commandsDescription).append(',').append(obfuscationGuard).append(',');
+          if (arguments == null) {
+            argumentsDescription = "null";
           } else {
-            stackIn_25_2 = "{...}";
+            argumentsDescription = "{...}";
           }
-          stackIn_27_1 = ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',');
-          if (param3 == null) {
-            stackIn_28_2 = "null";
+          errorContextWithArguments = ((StringBuilder) (Object) errorContextWithCommands).append(argumentsDescription).append(',');
+          if (commandName == null) {
+            nameDescription = "null";
           } else {
-            stackIn_28_2 = "{...}";
+            nameDescription = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(')').toString());
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) failureForContext), ((StringBuilder) (Object) errorContextWithArguments).append(nameDescription).append(')').toString());
         }
     }
 

@@ -49,7 +49,7 @@ final class mu {
         int[] var16 = null;
         var9 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          var3_int = og.field_m;
+          var3_int = ConsoleExpression.field_m;
           OwnerChangeEvent.quickChatMenuHost = new ClientUiComponent(0L, (ClientUiComponent) null);
           if (param2 == null) {
             var10 = (Throwable) null;

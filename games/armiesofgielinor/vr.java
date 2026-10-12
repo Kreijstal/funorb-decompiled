@@ -24,19 +24,19 @@ final class vr {
         int var3Lifetime1;
         var8 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          gv.field_a = new RgbSprite[es.field_c.length][][];
+          gv.field_a = new RgbSprite[ConsoleTokenCursor.field_c.length][][];
           var9 = "basic";
           var2 = var9;
           var3 = 0;
           if (param1 != 18) {
             return;
           }
-          while (es.field_c.length > var3) {
-            if (es.field_c[var3] != null) {
-              array$0 = new RgbSprite[es.field_c[var3].length][];
+          while (ConsoleTokenCursor.field_c.length > var3) {
+            if (ConsoleTokenCursor.field_c[var3] != null) {
+              array$0 = new RgbSprite[ConsoleTokenCursor.field_c[var3].length][];
               gv.field_a[var3] = array$0;
-              for (var4 = 0; es.field_c[var3].length > var4; var4++) {
-                var5 = es.field_c[var3][var4];
+              for (var4 = 0; ConsoleTokenCursor.field_c[var3].length > var4; var4++) {
+                var5 = ConsoleTokenCursor.field_c[var3][var4];
                 if (var5 != null) {
                   array$1 = new RgbSprite[var5.length];
                   gv.field_a[var3][var4] = array$1;

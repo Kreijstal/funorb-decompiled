@@ -324,7 +324,7 @@ final class ClientContextMenu {
           if (vu.currentRoom != null) {
             return;
           }
-          var6 = ij.getLobbyRoom((byte) 74, this.roomId);
+          var6 = DebugConsole.getLobbyRoom((byte) 74, this.roomId);
           var5 = var6;
           if (var6 == null) {
             return;
@@ -369,7 +369,7 @@ final class ClientContextMenu {
         if (vu.currentRoom != null) {
           return;
         }
-        var7 = ij.getLobbyRoom((byte) 74, this.roomId);
+        var7 = DebugConsole.getLobbyRoom((byte) 74, this.roomId);
         if (var7 == null) {
           return;
         }
@@ -416,7 +416,7 @@ final class ClientContextMenu {
           return true;
         }
         if (18 == actionId) {
-          og.openPrivateQuickChat(this.accountId, 1, this.accountName);
+          ConsoleExpression.openPrivateQuickChat(this.accountId, 1, this.accountName);
           var4Lifetime1 = 84 % ((obfuscationGuard - 30) / 54);
           return true;
         }

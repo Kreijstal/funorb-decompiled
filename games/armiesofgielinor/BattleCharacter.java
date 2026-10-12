@@ -562,7 +562,7 @@ final class BattleCharacter {
                 } else {
                   stackIn_62_4 = -1;
                 }
-                cb.a(stackIn_58_0, stackIn_58_1, stackIn_59_2, stackIn_61_3, stackIn_62_4 * (this.destinationX - (this.field_z[var9Lifetime1] >> 16)), -(this.field_I[var9Lifetime1] >> 16) + 600);
+                ConsoleEvaluationException.a(stackIn_58_0, stackIn_58_1, stackIn_59_2, stackIn_61_3, stackIn_62_4 * (this.destinationX - (this.field_z[var9Lifetime1] >> 16)), -(this.field_I[var9Lifetime1] >> 16) + 600);
               }
             }
             return;

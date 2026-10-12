@@ -210,13 +210,13 @@ final class SphinxActionRequest extends ActionRequest {
           wm.field_c.skinSprites = tq.a(1856141, false, 206, -1, 3, 1127256);
           sh.field_m = new ClientUiComponent(0L, (ClientUiComponent) null);
           sh.field_m.skinSprites = tq.a(11579568, false, 290, -1, 3, 6052956);
-          nd.field_a = new ClientUiComponent(0L, var15);
-          nd.field_a.horizontalAlignment = 1;
-          nd.field_a.heldPressOffsetX = 1;
-          nd.field_a.selectedOffsetX = 1;
-          nd.field_a.heldPressOffsetY = 1;
-          nd.field_a.selectedOffsetY = 1;
-          bw.field_h = new ClientUiComponent(0L, nd.field_a);
+          ConsoleValue.field_a = new ClientUiComponent(0L, var15);
+          ConsoleValue.field_a.horizontalAlignment = 1;
+          ConsoleValue.field_a.heldPressOffsetX = 1;
+          ConsoleValue.field_a.selectedOffsetX = 1;
+          ConsoleValue.field_a.heldPressOffsetY = 1;
+          ConsoleValue.field_a.selectedOffsetY = 1;
+          bw.field_h = new ClientUiComponent(0L, ConsoleValue.field_a);
           ClientUiComponent.field_Q = new ClientUiComponent(0L, DualLinkedNode.field_k);
           ClientUiComponent.field_Q.heldPressOffsetY = 1;
           ClientUiComponent.field_Q.heldPressOffsetX = 1;
@@ -225,7 +225,7 @@ final class SphinxActionRequest extends ActionRequest {
           ClientUiComponent.field_Q.horizontalAlignment = 1;
           QuickChatPhraseRepository.field_d = new ClientUiComponent(0L, ClientUiComponent.field_Q);
           pt.field_X = new ClientUiComponent(0L, ClientUiComponent.field_Q);
-          kd.field_M = new ClientUiComponent(0L, nd.field_a);
+          kd.field_M = new ClientUiComponent(0L, ConsoleValue.field_a);
           rd.field_e = new ClientUiComponent(0L, ClientUiComponent.field_Q);
           PreparedAction.field_o = new ClientUiComponent(0L, ClientUiComponent.field_Q);
           eb.field_a = new ClientUiComponent(0L, ClientUiComponent.field_Q);
@@ -238,10 +238,10 @@ final class SphinxActionRequest extends ActionRequest {
           bw.field_h.skinSprites = wj.a(-12310, fk.loadRgbSpritesByName("mediumbutton", (byte) -125, param1, "lobby"));
           bw.field_h.matchedButtonSkinSprites = wj.a(-12310, fk.loadRgbSpritesByName("mediumbutton_mouseover", (byte) -125, param1, "lobby"));
           bw.field_h.heldPressSkinSprites = wj.a(-12310, fk.loadRgbSpritesByName("mediumbutton_mouseheld", (byte) -124, param1, "lobby"));
-          nd.field_a.skinSprites = wj.a(-12310, fk.loadRgbSpritesByName("bigbutton", (byte) -128, param1, "lobby"));
-          nd.field_a.matchedButtonSkinSprites = wj.a(-12310, fk.loadRgbSpritesByName("bigbutton_mouseover", (byte) -124, param1, "lobby"));
-          nd.field_a.heldPressSkinSprites = wj.a(-12310, fk.loadRgbSpritesByName("bigbutton_mouseheld", (byte) -124, param1, "lobby"));
-          nd.field_a.disabledSkinSprites = wj.a(-12310, fk.loadRgbSpritesByName("bigbutton_disabled", (byte) -126, param1, "lobby"));
+          ConsoleValue.field_a.skinSprites = wj.a(-12310, fk.loadRgbSpritesByName("bigbutton", (byte) -128, param1, "lobby"));
+          ConsoleValue.field_a.matchedButtonSkinSprites = wj.a(-12310, fk.loadRgbSpritesByName("bigbutton_mouseover", (byte) -124, param1, "lobby"));
+          ConsoleValue.field_a.heldPressSkinSprites = wj.a(-12310, fk.loadRgbSpritesByName("bigbutton_mouseheld", (byte) -124, param1, "lobby"));
+          ConsoleValue.field_a.disabledSkinSprites = wj.a(-12310, fk.loadRgbSpritesByName("bigbutton_disabled", (byte) -126, param1, "lobby"));
           QuickChatPhraseRepository.field_d.skinSprites = wj.a(-12310, fk.loadRgbSpritesByName("greenbutton", (byte) -124, param1, "lobby"));
           QuickChatPhraseRepository.field_d.matchedButtonSkinSprites = wj.a(-12310, fk.loadRgbSpritesByName("greenbutton_mouseover", (byte) -126, param1, "lobby"));
           QuickChatPhraseRepository.field_d.heldPressSkinSprites = wj.a(-12310, fk.loadRgbSpritesByName("greenbutton_mouseheld", (byte) -127, param1, "lobby"));
@@ -291,7 +291,7 @@ final class SphinxActionRequest extends ActionRequest {
           wh.field_g.heldPressSprite = GameplayController.a("downbutton_mouseheld", (byte) 51, "lobby", param1);
           wh.field_g.disabledSprite = GameplayController.a("downbutton_disabled", (byte) 51, "lobby", param1);
           WeightedLruCache.field_b = new VerticalScrollbar(0L, no.field_M, wh.field_g, oe.field_Cb, ke.field_c);
-          br.field_g = new SocialListPanel(0L, (ClientUiComponent) null, cb.field_c, WeightedLruCache.field_b, ClientUiComponent.field_Q, (String) null, (String) null);
+          br.field_g = new SocialListPanel(0L, (ClientUiComponent) null, ConsoleEvaluationException.field_c, WeightedLruCache.field_b, ClientUiComponent.field_Q, (String) null, (String) null);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

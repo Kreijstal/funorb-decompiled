@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class oh extends dr {
+final class oh extends ConsoleCommand {
     static wm field_L;
     static RgbSprite[] field_J;
     static boolean[] field_G;
@@ -39,27 +39,27 @@ final class oh extends dr {
         oh.e((byte) 28);
     }
 
-    final nd a(int param0, nd[] param1) {
+    final ConsoleValue execute(int obfuscationGuard, ConsoleValue[] arguments) {
         RuntimeException var3 = null;
-        nd stackIn_2_0 = null;
-        nd stackIn_4_0 = null;
+        ConsoleValue stackIn_2_0 = null;
+        ConsoleValue stackIn_4_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param0 == -24872) {
-            stackIn_4_0 = new nd(DisplacedUnitMarker.b(256, param1[0].a(2)));
+          if (obfuscationGuard == -24872) {
+            stackIn_4_0 = new ConsoleValue(DisplacedUnitMarker.b(256, arguments[0].asInt(2)));
             return stackIn_4_0;
           }
-          stackIn_2_0 = (nd) null;
+          stackIn_2_0 = (ConsoleValue) null;
           return stackIn_2_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
           stackIn_7_0 = var3;
-          stackIn_7_1 = new StringBuilder().append("oh.C(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_7_1 = new StringBuilder().append("oh.C(").append(obfuscationGuard).append(',');
+          if (arguments == null) {
             stackIn_8_2 = "null";
           } else {
             stackIn_8_2 = "{...}";

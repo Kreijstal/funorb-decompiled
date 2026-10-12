@@ -87,7 +87,7 @@ final class j {
           DisplacedUnitMarker.field_t[40] = vg.field_l;
           DisplacedUnitMarker.field_t[32] = ActionRequest.field_r;
           DisplacedUnitMarker.field_t[36] = rj.field_G;
-          DisplacedUnitMarker.field_t[31] = ij.field_C;
+          DisplacedUnitMarker.field_t[31] = DebugConsole.field_C;
           DisplacedUnitMarker.field_t[35] = wd.field_j;
           DisplacedUnitMarker.field_t[47] = qk.field_f;
           DisplacedUnitMarker.field_t[51] = nt.field_p;
@@ -118,7 +118,7 @@ final class j {
           }
           wb.field_b[6] = el.field_a;
           wb.field_b[13] = QuickChatPhrase.field_y;
-          du.field_g = new String[]{ClientContextMenu.field_l, gk.field_N, tv.field_c, tv.field_b, CombatSandbox.field_g, ScrollContainer.field_Kb, DelayedPacket.field_r, r.field_I, we.field_h, kd.field_Q, og.field_t, ByteStorage.field_c, RasterState.field_l, pi.field_P, StateChangeEvent.field_H, ut.field_ib};
+          du.field_g = new String[]{ClientContextMenu.field_l, gk.field_N, tv.field_c, tv.field_b, CombatSandbox.field_g, ScrollContainer.field_Kb, DelayedPacket.field_r, r.field_I, we.field_h, kd.field_Q, ConsoleExpression.field_t, ByteStorage.field_c, RasterState.field_l, pi.field_P, StateChangeEvent.field_H, ut.field_ib};
           wb.field_b[18] = dd.field_g;
           wb.field_b[4] = gg.field_H;
           wb.field_b[14] = ov.field_d;
@@ -127,14 +127,14 @@ final class j {
           wb.field_b[27] = gk.field_P;
           wb.field_b[28] = mh.field_d;
           wb.field_b[23] = lw.field_lb;
-          wb.field_b[1] = cb.field_d;
+          wb.field_b[1] = ConsoleEvaluationException.field_d;
           wb.field_b[22] = MeshObject.field_b;
           wb.field_b[2] = cw.field_b;
           wb.field_b[5] = nl.field_F;
-          wb.field_b[24] = cb.field_d;
+          wb.field_b[24] = ConsoleEvaluationException.field_d;
           wb.field_b[15] = hc.field_w;
           wb.field_b[26] = lb.field_d;
-          wb.field_b[21] = og.field_u;
+          wb.field_b[21] = ConsoleExpression.field_u;
           wb.field_b[7] = kw.field_N;
           wb.field_b[8] = pu.field_h;
           wb.field_b[3] = l.field_g;
@@ -301,7 +301,7 @@ final class j {
               if (var8 == 0) {
                 stackIn_36_2 = ov.field_k;
               } else {
-                stackIn_36_2 = dr.field_x;
+                stackIn_36_2 = ConsoleCommand.field_x;
               }
               stackIn_35_0.text = fo.a(stackIn_35_1, stackIn_36_2, new String[]{so.field_d.text});
               SocialListPanel.field_Lb.inputEnabled = true;
@@ -320,7 +320,7 @@ final class j {
                   dt.field_d[var13] = false;
                   var13++;
                 }
-                es.a(0, tq.gameOptionCount, no.roomSetup, -1, true, -1, (byte) 89, -1);
+                ConsoleTokenCursor.a(0, tq.gameOptionCount, no.roomSetup, -1, true, -1, (byte) 89, -1);
                 if (!(BufferedSocket.field_j < 2) &&
                   br.heldKeys[12]) {
                   fc.field_a = true;
@@ -395,7 +395,7 @@ final class j {
           stackIn_76_1 = true;
           stackIn_77_2 = (param2) && (!param1) && (ChannelGainProfile.field_f);
           ((ClientUiComponent) (Object) stackIn_76_0).updateInput(stackIn_76_1, stackIn_77_2);
-          ij.field_w.tabs.advanceTabSelection(10000);
+          DebugConsole.field_w.tabs.advanceTabSelection(10000);
           if (null != no.roomSetup) {
             if (0 != SocialListPanel.field_Lb.pressedButton) {
               lu.a(-127, param3);

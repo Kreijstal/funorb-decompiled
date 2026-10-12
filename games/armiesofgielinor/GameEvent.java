@@ -393,9 +393,9 @@ abstract class GameEvent extends IntrusiveNode {
             var8 = (122 ^ var6) >> 3;
             var9 = 15 & var6 >> 4;
             if (param3 == -1) {
-              stackIn_14_0 = dr.field_z;
+              stackIn_14_0 = ConsoleCommand.field_z;
             } else {
-              stackIn_14_0 = dr.field_v[param3];
+              stackIn_14_0 = ConsoleCommand.field_v[param3];
             }
             var13 = stackIn_14_0;
             var12 = var13;

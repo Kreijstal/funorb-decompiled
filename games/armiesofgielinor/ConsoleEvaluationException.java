@@ -1,9 +1,9 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class cb extends Exception {
+final class ConsoleEvaluationException extends Exception {
     static String field_d;
-    String field_b;
+    String diagnostic;
     static ClientUiComponent field_c;
     static MusicTrack[] field_a;
 
@@ -41,11 +41,11 @@ final class cb extends Exception {
         }
     }
 
-    cb(String param0) {
+    ConsoleEvaluationException(String diagnostic) {
         try {
-          this.field_b = param0;
+          this.diagnostic = diagnostic;
         } catch (RuntimeException runtimeException) {
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "cb.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "cb.<init>(" + (diagnostic != null ? "{...}" : "null") + ')');
         }
     }
 

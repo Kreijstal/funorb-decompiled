@@ -142,7 +142,7 @@ final class ep {
           var3_int = nr.field_e.a(ts.field_b, new int[]{1000}, var13);
           for (var4 = 0; var4 < var3_int; var4++) {
             var5 = this.a((byte) -90, var4 * 20 + 200);
-            fe.c(var12[var4], this.a(320, 4592), var5, nd.field_b, true);
+            fe.c(var12[var4], this.a(320, 4592), var5, ConsoleValue.field_b, true);
           }
           if (this.field_j != 1) {
             var4Lifetime1 = (this.field_m << 8) / 50;

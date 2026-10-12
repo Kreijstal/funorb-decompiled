@@ -1054,7 +1054,7 @@ public final class ArmiesOfGielinor extends wf {
           if (var3 != null &&
             null == var3.movementPlanner) {
             AnimationSkeleton.field_t.draw(0, 0);
-            fe.c(ManaEvent.field_A, 320, 200, nd.field_b, false);
+            fe.c(ManaEvent.field_A, 320, 200, ConsoleValue.field_b, false);
           }
           this.c(false);
           if (null != oa.field_I) {
@@ -1187,7 +1187,7 @@ public final class ArmiesOfGielinor extends wf {
           vd.a(256);
           lb.a(param0 + 13988);
           CampaignMission.f(0);
-          ij.c(param0 ^ 3);
+          DebugConsole.c(param0 ^ 3);
           ResourceProtocolClient.c((byte) 35);
           DiskCacheWorker.a(true);
           dd.b(-56);
@@ -1539,13 +1539,13 @@ public final class ArmiesOfGielinor extends wf {
           iw.a(-25771);
           vg.a((byte) 89);
           li.a((byte) 74);
-          og.a(true);
-          nd.a((byte) -114);
-          dr.d((byte) 126);
-          ef.a(0);
-          cb.a(125);
+          ConsoleExpression.a(true);
+          ConsoleValue.a((byte) -114);
+          ConsoleCommand.d((byte) 126);
+          ConsoleParseException.a(0);
+          ConsoleEvaluationException.a(125);
           TextCursor.a(param0 - 51);
-          es.b(-119);
+          ConsoleTokenCursor.b(-119);
           TeamRoster.b(-51);
           fo.a(true);
           ClientConnectionState.a((byte) 96);
@@ -2088,7 +2088,7 @@ public final class ArmiesOfGielinor extends wf {
             se.field_h = MusicTrack.load(SummonAction.field_w, "", "Runewars lose");
             var5_int = 0;
             do {
-              if (!(var5_int < cb.field_a.length)) {
+              if (!(var5_int < ConsoleEvaluationException.field_a.length)) {
                 fh.field_b = new MusicTrack[9];
                 fh.field_b[0] = MusicTrack.load(SummonAction.field_w, "", "the terrible tower");
                 fh.field_b[1] = MusicTrack.load(SummonAction.field_w, "", "venture2");
@@ -2102,7 +2102,7 @@ public final class ArmiesOfGielinor extends wf {
                 qf.interfaceMusicTrack = MusicTrack.load(SummonAction.field_w, "", "AoG_interface_guthix");
                 break;
               }
-              cb.field_a[var5_int] = MusicTrack.load(SummonAction.field_w, "", "attack" + (var5_int + 1));
+              ConsoleEvaluationException.field_a[var5_int] = MusicTrack.load(SummonAction.field_w, "", "attack" + (var5_int + 1));
               var5_int++;
             } while (var18 == 0);
             var5 = lk.musicCrossfadeStream.firstSequencer;
@@ -2110,7 +2110,7 @@ public final class ArmiesOfGielinor extends wf {
             var5.prepareTrackSamples(jl.field_d, ep.field_b, 0, DeployRequest.field_B, (byte) 86);
             var5.prepareTrackSamples(jl.field_d, ep.field_b, 0, oh.field_K, (byte) 86);
             var5.prepareTrackSamples(jl.field_d, ep.field_b, 0, se.field_h, (byte) 86);
-            var6 = cb.field_a;
+            var6 = ConsoleEvaluationException.field_a;
             var7_int = 0;
             do {
               if (var7_int >= var6.length) {
@@ -2267,7 +2267,7 @@ public final class ArmiesOfGielinor extends wf {
           } while (var18 == 0);
           var6_array2 = new int[]{13615618, 10121728};
           var7 = new int[]{16184190, 16707943};
-          nd.field_b = jk.a(50, var7, 127, var6_array2);
+          ConsoleValue.field_b = jk.a(50, var7, 127, var6_array2);
           var8_array = new int[]{13619151, 10132122};
           var9 = new int[]{16185078, 16711422};
           TutorialController.field_e = jk.a(100, var9, 123, var8_array);
@@ -2280,7 +2280,7 @@ public final class ArmiesOfGielinor extends wf {
           var14 = new int[]{13369344};
           var15 = new int[]{4456448};
           dh.field_l = jk.a(100, var15, 123, var14);
-          fe.a(0, 0, 640, 480, oh.field_J, nd.field_b);
+          fe.a(0, 0, 640, 480, oh.field_J, ConsoleValue.field_b);
           SocketResourceClient.a((byte) 125, ac.a(iw.field_l, "dials", (byte) -4, "basic"), GameplayController.a("hand", (byte) 51, "basic", iw.field_l));
           IsaacRandom.field_k = fk.loadRgbSpritesByName("arrows", (byte) -124, iw.field_l, "basic");
           pi.field_T = GameplayController.a("isocrosshair", (byte) 51, "basic", iw.field_l);
@@ -2324,7 +2324,7 @@ public final class ArmiesOfGielinor extends wf {
           do {
             if (var17 >= 64) {
               if (BufferedSocket.field_j >= 2) {
-                oa.field_I = new ij(KeyboardInputListener.createDebugCommandRegistry(101), rs.field_n, IntPair.field_m);
+                oa.field_I = new DebugConsole(KeyboardInputListener.createDebugCommandRegistry(101), rs.field_n, IntPair.field_m);
               }
               break;
             }
@@ -2368,8 +2368,8 @@ public final class ArmiesOfGielinor extends wf {
           jt.field_a = 16;
           ClientConnectionState.a(50, true);
           QuickChatPhrase.a(param0 ^ -68, SocialListPanel.field_Ob);
-          DropdownSelector.a(128, 8, rs.field_n.field_z, rs.field_n.field_L + rs.field_n.field_z, rs.field_n, MusicPatch.field_m[0].pixelHeight, 8, 2, 16777215, 240, rs.field_n.field_z, -99, new pn(DisplacedUnitMarker.field_s, nd.field_b, 0, 128, true), 255, new pn(DisplacedUnitMarker.field_s, nd.field_b, 0, 128, true), 320, MusicPatch.field_m[0].pixelWidth, rs.field_n.field_z + rs.field_n.field_L, new pn(MusicPatch.field_m, nd.field_b, 0, 224, false), rs.field_n);
-          wm.a(320, 128, 240, 16777215, rs.field_n.field_z + rs.field_n.field_L, rs.field_n.field_z, new pn(DisplacedUnitMarker.field_s, nd.field_b, 0, 128, true), 8, (byte) 90, 480, 8, rs.field_n.field_L + rs.field_n.field_z, new pn(DisplacedUnitMarker.field_s, nd.field_b, 0, 128, true), MusicPatch.field_m[0].pixelHeight, rs.field_n, 2, MusicPatch.field_m[0].pixelWidth, rs.field_n, 255, rs.field_n.field_z, new pn(MusicPatch.field_m, nd.field_b, 0, 224, false));
+          DropdownSelector.a(128, 8, rs.field_n.field_z, rs.field_n.field_L + rs.field_n.field_z, rs.field_n, MusicPatch.field_m[0].pixelHeight, 8, 2, 16777215, 240, rs.field_n.field_z, -99, new pn(DisplacedUnitMarker.field_s, ConsoleValue.field_b, 0, 128, true), 255, new pn(DisplacedUnitMarker.field_s, ConsoleValue.field_b, 0, 128, true), 320, MusicPatch.field_m[0].pixelWidth, rs.field_n.field_z + rs.field_n.field_L, new pn(MusicPatch.field_m, ConsoleValue.field_b, 0, 224, false), rs.field_n);
+          wm.a(320, 128, 240, 16777215, rs.field_n.field_z + rs.field_n.field_L, rs.field_n.field_z, new pn(DisplacedUnitMarker.field_s, ConsoleValue.field_b, 0, 128, true), 8, (byte) 90, 480, 8, rs.field_n.field_L + rs.field_n.field_z, new pn(DisplacedUnitMarker.field_s, ConsoleValue.field_b, 0, 128, true), MusicPatch.field_m[0].pixelHeight, rs.field_n, 2, MusicPatch.field_m[0].pixelWidth, rs.field_n, 255, rs.field_n.field_z, new pn(MusicPatch.field_m, ConsoleValue.field_b, 0, 224, false));
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -2479,7 +2479,7 @@ public final class ArmiesOfGielinor extends wf {
                 var3 = 8;
               }
             }
-            fe.b(-5, var3 - 10, rs.field_n.a(so.field_a[var2.field_l]) + 62, 48, MusicPatch.field_m, nd.field_b, 0, 128);
+            fe.b(-5, var3 - 10, rs.field_n.a(so.field_a[var2.field_l]) + 62, 48, MusicPatch.field_m, ConsoleValue.field_b, 0, 128);
             DelayedPacket.field_k[var2.field_l].c(8, var3);
             rs.field_n.b(so.field_a[var2.field_l], 42, var3 - (-5 - rs.field_n.field_H), 15658734, -1);
           }

@@ -12,7 +12,7 @@ abstract class MeshObject {
         if (param0 != -8994) {
           return;
         }
-        ij.field_x = param2;
+        DebugConsole.field_x = param2;
         if (KingBlackDragonEvent.field_C != null) {
           KingBlackDragonEvent.field_C.a(param1, param2, (byte) -14);
         }

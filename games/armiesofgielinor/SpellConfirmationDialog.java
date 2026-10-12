@@ -93,14 +93,14 @@ final class SpellConfirmationDialog {
         }
         SoftwareRaster.b(0, 0, var2, var3, 0, 128);
         int var4 = 5 + (rs.field_n.getParagraphHeight(this.prompt, 200, 0) + 30);
-        fe.b(212, -(var4 >> 1) + (-8 + var3 / 2), 216, 16 + var4, MusicPatch.field_m, nd.field_b, 0, 128);
+        fe.b(212, -(var4 >> 1) + (-8 + var3 / 2), 216, 16 + var4, MusicPatch.field_m, ConsoleValue.field_b, 0, 128);
         rs.field_n.a(this.prompt, var2 / 2 - 100, -(var4 >> 1) + var3 / 2, 200, var4, 16777215, 0, 1, 0, 0);
-        int[] var10 = IterableDualNodeDeque.isPointerInBounds(obfuscationGuard - 1619621026, var2 / 2 - 100, 318, -30 + var3 / 2 + (var4 >> 1), (var4 >> 1) + var3 / 2) ? TutorialController.field_e : nd.field_b;
+        int[] var10 = IterableDualNodeDeque.isPointerInBounds(obfuscationGuard - 1619621026, var2 / 2 - 100, 318, -30 + var3 / 2 + (var4 >> 1), (var4 >> 1) + var3 / 2) ? TutorialController.field_e : ConsoleValue.field_b;
         int[] var8 = var10;
         int[] var6 = var8;
         int[] var5 = var6;
         fe.a(-100 + var2 / 2, (var4 >> 1) + (var3 / 2 - 30), 98, 30, DisplacedUnitMarker.field_s, var10, 0, 128, true);
-        int[] var11 = IterableDualNodeDeque.isPointerInBounds(-33, 2 + var2 / 2, var2 / 2 + 100, var3 / 2 - (-(var4 >> 1) + 30), var3 / 2 + (var4 >> 1)) ? TutorialController.field_e : nd.field_b;
+        int[] var11 = IterableDualNodeDeque.isPointerInBounds(-33, 2 + var2 / 2, var2 / 2 + 100, var3 / 2 - (-(var4 >> 1) + 30), var3 / 2 + (var4 >> 1)) ? TutorialController.field_e : ConsoleValue.field_b;
         int[] var9 = var11;
         int[] var7 = var9;
         var5 = var7;

@@ -2773,7 +2773,7 @@ final class CombatPresentation implements EventPresentation {
             this.isCombatViewReady((byte) -96)) {
             stackIn_50_0 = TutorialController.field_e;
           } else {
-            stackIn_50_0 = nd.field_b;
+            stackIn_50_0 = ConsoleValue.field_b;
           }
           var8 = stackIn_50_0;
           fe.a(var6, var7, var4, var5, DisplacedUnitMarker.field_s, var8, 0, 0, true);
@@ -2809,7 +2809,7 @@ final class CombatPresentation implements EventPresentation {
               this.battlefield.playerCoats[this.field_g].a(var6Lifetime1Lifetime1, this.battlefield.playerNames[this.field_g], false, false, var7Lifetime1, false, false, 28);
             }
           }
-          fe.b(0, 0, rs.field_k, se.field_a, HuffmanCodec.field_i, nd.field_b, 0, 0);
+          fe.b(0, 0, rs.field_k, se.field_a, HuffmanCodec.field_i, ConsoleValue.field_b, 0, 0);
           so.field_b.a(5605);
           if (null != MatchConditionEntry.field_p) {
             MatchConditionEntry.field_p.a(-66, this.framebuffer);
@@ -4415,7 +4415,7 @@ final class CombatPresentation implements EventPresentation {
             }
           }
           this.framebuffer = new RgbSprite(640, 480);
-          var4 = cb.field_a[AttackEvent.nextBoundedInt(false, cb.field_a.length, vv.field_b)];
+          var4 = ConsoleEvaluationException.field_a[AttackEvent.nextBoundedInt(false, ConsoleEvaluationException.field_a.length, vv.field_b)];
           TrianglePulse.selectMusicTrackWithDefaultGain(-16147, 50, var4, true);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

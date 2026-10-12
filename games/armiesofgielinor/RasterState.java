@@ -38,7 +38,7 @@ final class RasterState extends IntrusiveNode {
         if (param1 >= 0 &&
           param0 >= 0 &&
           param1 < ResourceRequest.field_y &&
-          ef.field_c > param0) {
+          ConsoleParseException.field_c > param0) {
           if (param4 <= 64) {
             field_l = (String) null;
           }

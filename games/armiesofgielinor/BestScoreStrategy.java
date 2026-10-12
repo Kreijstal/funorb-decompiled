@@ -91,73 +91,73 @@ final class BestScoreStrategy extends AiPlanningStrategy {
         return var2Lifetime1;
     }
 
-    final static og a(byte param0, TextCursor param1) {
-        int fieldTemp$4 = 0;
-        StringBuilder discarded$5 = null;
-        StringBuilder discarded$6 = null;
-        StringBuilder discarded$7 = null;
-        int var2_int = 0;
-        RuntimeException var2 = null;
-        StringBuilder var3 = null;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int stackIn_15_0 = 0;
-        og stackIn_16_0 = null;
-        RuntimeException stackIn_19_0 = null;
-        StringBuilder stackIn_19_1 = null;
-        String stackIn_20_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        int var6Lifetime1;
-        var7 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+    final static ConsoleExpression readQuotedConsoleToken(byte obfuscationGuard, TextCursor cursor) {
+        int rewoundPosition = 0;
+        StringBuilder openingAppendResult = null;
+        StringBuilder escapedAppendResult = null;
+        StringBuilder characterAppendResult = null;
+        int sourceOffset = 0;
+        RuntimeException failure = null;
+        StringBuilder tokenBuilder = null;
+        int openingQuote = 0;
+        int escapeNext = 0;
+        int character = 0;
+        int obfuscationControl = 0;
+        int selectedKind = 0;
+        ConsoleExpression tokenResult = null;
+        RuntimeException failureForContext = null;
+        StringBuilder errorContext = null;
+        String cursorDescription = null;
+        RuntimeException caughtFailure = null;
+        int kind;
+        obfuscationControl = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          fieldTemp$4 = param1.position - 1;
-          param1.position = param1.position - 1;
-          var2_int = fieldTemp$4;
-          var3 = new StringBuilder();
-          var4 = param1.readCharacter(-1);
-          if (param0 <= 95) {
+          rewoundPosition = cursor.position - 1;
+          cursor.position = cursor.position - 1;
+          sourceOffset = rewoundPosition;
+          tokenBuilder = new StringBuilder();
+          openingQuote = cursor.readCharacter(-1);
+          if (obfuscationGuard <= 95) {
             field_h = (String) null;
           }
-          discarded$5 = var3.append((char) var4);
-          var5 = 0;
-          while (!param1.isAtEnd((byte) 16)) {
-            var6 = param1.readCharacter(-1);
-            if (var5 != 0) {
-              var5 = 0;
-              discarded$6 = var3.append((char) var6);
+          openingAppendResult = tokenBuilder.append((char) openingQuote);
+          escapeNext = 0;
+          while (!cursor.isAtEnd((byte) 16)) {
+            character = cursor.readCharacter(-1);
+            if (escapeNext != 0) {
+              escapeNext = 0;
+              escapedAppendResult = tokenBuilder.append((char) character);
               continue;
             }
-            if (var6 != 92) {
-              discarded$7 = var3.append((char) var6);
+            if (character != 92) {
+              characterAppendResult = tokenBuilder.append((char) character);
             } else {
-              var5 = 1;
+              escapeNext = 1;
             }
-            if (var4 != var6) {
+            if (openingQuote != character) {
               continue;
             }
             break;
           }
-          if (var4 != 34) {
-            stackIn_15_0 = hf.field_h;
+          if (openingQuote != 34) {
+            selectedKind = hf.consoleCharacterKind;
           } else {
-            stackIn_15_0 = BattleTutorial.field_x;
+            selectedKind = BattleTutorial.consoleStringKind;
           }
-          var6Lifetime1 = stackIn_15_0;
-          stackIn_16_0 = new og(var6Lifetime1, var2_int, var3.toString());
-          return stackIn_16_0;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var2 = decompiledCaughtException;
-          stackIn_19_0 = var2;
-          stackIn_19_1 = new StringBuilder().append("aw.B(").append(param0).append(',');
-          if (param1 == null) {
-            stackIn_20_2 = "null";
+          kind = selectedKind;
+          tokenResult = new ConsoleExpression(kind, sourceOffset, tokenBuilder.toString());
+          return tokenResult;
+        } catch (java.lang.RuntimeException caughtParameter) {
+          caughtFailure = caughtParameter;
+          failure = caughtFailure;
+          failureForContext = failure;
+          errorContext = new StringBuilder().append("aw.B(").append(obfuscationGuard).append(',');
+          if (cursor == null) {
+            cursorDescription = "null";
           } else {
-            stackIn_20_2 = "{...}";
+            cursorDescription = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) failureForContext), ((StringBuilder) (Object) errorContext).append(cursorDescription).append(')').toString());
         }
     }
 

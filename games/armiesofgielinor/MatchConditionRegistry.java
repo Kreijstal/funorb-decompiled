@@ -99,7 +99,7 @@ final class MatchConditionRegistry {
             244 >= param1 &&
             244 >= param0) {
             for (var4_int = 5; var4_int >= 0; var4_int--) {
-              var5 = nd.field_d[var4_int];
+              var5 = ConsoleValue.field_d[var4_int];
               if (SectorCacheStore.field_j[var5].length <= param2[var5]) {
                 param2[var5] = 0;
               }

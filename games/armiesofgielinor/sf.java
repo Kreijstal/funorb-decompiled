@@ -301,7 +301,7 @@ abstract class sf extends wl {
           if (param2 != 0) {
             field_Q = (String) null;
           }
-          var6_int = og.field_p[param4] + param4;
+          var6_int = ConsoleExpression.field_p[param4] + param4;
           if (cu.field_a) {
             var7_int = CipherPacketBuffer.currentBattlefield.getTileEffects(31, param0, param1, -1);
             var8 = vs.field_e[param4].terrainType;
@@ -320,7 +320,7 @@ abstract class sf extends wl {
                 fe.a(oq.activeStructureShadows[17], -10 + param3, param5 - 25);
               } else {
                 if (vs.field_e[param4].terrainType == 3) {
-                  MidiPcmStream.a((byte) -124, param3 + 30, param4 + og.field_p[param4], 32 + param5);
+                  MidiPcmStream.a((byte) -124, param3 + 30, param4 + ConsoleExpression.field_p[param4], 32 + param5);
                 } else {
                   if (var9 == 1) {
                     fe.a(oq.activeStructureShadows[8 + var6_int % 3], -10 + param3, param5 - 55);
@@ -333,7 +333,7 @@ abstract class sf extends wl {
                           fe.a(oq.activeStructureShadows[var6_int % 8 + 0], param3 - 10, param5 - 35);
                         } else {
                           if (4 == var9) {
-                            ab.a(35 + param5, og.field_p[param4] + param4, param3 + 30, false);
+                            ab.a(35 + param5, ConsoleExpression.field_p[param4] + param4, param3 + 30, false);
                           }
                         }
                       } else {

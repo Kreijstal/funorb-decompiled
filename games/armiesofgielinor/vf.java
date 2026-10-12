@@ -440,7 +440,7 @@ abstract class vf {
                 for (var17_int = 0; var17_int < var7; var17_int++) {
                   dt.field_d[var17_int] = false;
                 }
-                es.a(0, var7, param3, -1, param1, var9, (byte) 103, -1);
+                ConsoleTokenCursor.a(0, var7, param3, -1, param1, var9, (byte) 103, -1);
                 if (BufferedSocket.field_j >= 2 &&
                   br.heldKeys[12]) {
                   fc.field_a = true;

@@ -89,35 +89,35 @@ final class SummonRequest extends ActionRequest {
         field_C = null;
     }
 
-    final static String a(int param0, Class param1) {
-        RuntimeException var2 = null;
-        String stackIn_4_0 = null;
-        String stackIn_6_0 = null;
-        RuntimeException stackIn_9_0 = null;
-        StringBuilder stackIn_9_1 = null;
-        String stackIn_10_2 = null;
-        RuntimeException decompiledCaughtException = null;
+    final static String consoleTypeName(int obfuscationGuard, Class type) {
+        RuntimeException failure = null;
+        String simpleName = null;
+        String arrayName = null;
+        RuntimeException failureForContext = null;
+        StringBuilder errorContext = null;
+        String typeDescription = null;
+        RuntimeException caughtFailure = null;
         try {
-          if (param0 != 640) {
+          if (obfuscationGuard != 640) {
             SummonRequest.a(false, (byte) 44);
           }
-          if (param1.isArray()) {
-            stackIn_6_0 = SummonRequest.a(param0 ^ 0, param1.getComponentType()) + "[]";
-            return stackIn_6_0;
+          if (type.isArray()) {
+            arrayName = SummonRequest.consoleTypeName(obfuscationGuard ^ 0, type.getComponentType()) + "[]";
+            return arrayName;
           }
-          stackIn_4_0 = param1.getName().substring(1 + param1.getName().lastIndexOf("."));
-          return stackIn_4_0;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var2 = decompiledCaughtException;
-          stackIn_9_0 = var2;
-          stackIn_9_1 = new StringBuilder().append("hw.K(").append(param0).append(',');
-          if (param1 == null) {
-            stackIn_10_2 = "null";
+          simpleName = type.getName().substring(1 + type.getName().lastIndexOf("."));
+          return simpleName;
+        } catch (java.lang.RuntimeException caughtParameter) {
+          caughtFailure = caughtParameter;
+          failure = caughtFailure;
+          failureForContext = failure;
+          errorContext = new StringBuilder().append("hw.K(").append(obfuscationGuard).append(',');
+          if (type == null) {
+            typeDescription = "null";
           } else {
-            stackIn_10_2 = "{...}";
+            typeDescription = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) failureForContext), ((StringBuilder) (Object) errorContext).append(typeDescription).append(')').toString());
         }
     }
 

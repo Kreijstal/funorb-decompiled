@@ -29,7 +29,7 @@ final class CombatViewTransition {
         if (ResourceRequest.field_y <= param0) {
           return param2;
         }
-        if (param1 >= ef.field_c) {
+        if (param1 >= ConsoleParseException.field_c) {
           return param2;
         }
         if (param3 < -91) {

@@ -7,7 +7,7 @@ final class sb extends rb implements fb, rp {
     static ClientUiComponent field_i;
     static String field_f;
     static PacketBuffer field_h;
-    static int field_d;
+    static int consoleArgumentCommaKind;
     static ResourceArchive field_e;
 
     public final void b(fn param0, int param1) {
@@ -197,7 +197,7 @@ final class sb extends rb implements fb, rp {
     }
 
     static {
-        field_d = 2;
+        consoleArgumentCommaKind = 2;
         field_f = "You currently have an ongoing mission at this location.<br><Br>You are on turn <col=ffff00><%0></col>. <br><br>Do you wish to resume this mission or do you want to abort it and restart?";
         field_g = new int[]{166};
     }

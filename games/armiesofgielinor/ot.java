@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ot extends dr {
+final class ot extends ConsoleCommand {
     static NodeDeque ignoreEntries;
     static int field_G;
     static String field_H;
@@ -60,27 +60,27 @@ final class ot extends dr {
         super(param0, param1, param2);
     }
 
-    final nd a(int param0, nd[] param1) {
+    final ConsoleValue execute(int obfuscationGuard, ConsoleValue[] arguments) {
         RuntimeException var3 = null;
-        nd stackIn_2_0 = null;
-        nd stackIn_4_0 = null;
+        ConsoleValue stackIn_2_0 = null;
+        ConsoleValue stackIn_4_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param0 == -24872) {
-            stackIn_4_0 = new nd(MidiPcmStream.e(90));
+          if (obfuscationGuard == -24872) {
+            stackIn_4_0 = new ConsoleValue(MidiPcmStream.e(90));
             return stackIn_4_0;
           }
-          stackIn_2_0 = (nd) null;
+          stackIn_2_0 = (ConsoleValue) null;
           return stackIn_2_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
           stackIn_7_0 = var3;
-          stackIn_7_1 = new StringBuilder().append("ot.C(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_7_1 = new StringBuilder().append("ot.C(").append(obfuscationGuard).append(',');
+          if (arguments == null) {
             stackIn_8_2 = "null";
           } else {
             stackIn_8_2 = "{...}";
@@ -114,9 +114,9 @@ final class ot extends dr {
           PaletteRegionMap.field_g.selectSequence(-1, ck.animationSequencesByGroup[sf.unitAnimationGroups[76]][0]);
           ResourceArchive.field_a = NetworkResourceRequest.field_C.camera;
           discarded$1 = new RgbSprite(80, 40);
-          ef.field_c = CipherPacketBuffer.currentBattlefield.mapHeight;
+          ConsoleParseException.field_c = CipherPacketBuffer.currentBattlefield.mapHeight;
           ResourceRequest.field_y = CipherPacketBuffer.currentBattlefield.mapWidth;
-          og.field_p = ResourceArchive.field_a.overlayValues;
+          ConsoleExpression.field_p = ResourceArchive.field_a.overlayValues;
           vs.field_e = CipherPacketBuffer.currentBattlefield.tiles;
           bt.field_f = CipherPacketBuffer.currentBattlefield.mapTheme;
           nk.a((byte) 111);
