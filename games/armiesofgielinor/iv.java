@@ -420,7 +420,7 @@ public abstract class iv extends java.applet.Applet implements Runnable, java.aw
         var4 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           boolean decompiledFrameRemainder0 = true;
-          if (f.field_E >= 10) {
+          if (StrongCacheEntry.field_E >= 10) {
             if (lk.b(true)) {
               if (p.field_b == 0) {
                 tq.a(param1, false, 112);
@@ -438,7 +438,7 @@ public abstract class iv extends java.applet.Applet implements Runnable, java.aw
                     ol.field_z = false;
                     var3_int = 1;
                   }
-                  tl.a(-5790, TurnEffectEvent.field_F, SpellCastEvent.g(-15862), var3_int != 0, dd.a(false));
+                  NodeHashIterator.a(-5790, TurnEffectEvent.field_F, SpellCastEvent.g(-15862), var3_int != 0, dd.a(false));
                 }
               }
             } else {
@@ -451,7 +451,7 @@ public abstract class iv extends java.applet.Applet implements Runnable, java.aw
                   ol.field_z = false;
                   var3_int = 1;
                 }
-                tl.a(-5790, TurnEffectEvent.field_F, SpellCastEvent.g(-15862), var3_int != 0, dd.a(false));
+                NodeHashIterator.a(-5790, TurnEffectEvent.field_F, SpellCastEvent.g(-15862), var3_int != 0, dd.a(false));
               }
             }
           } else {
@@ -460,7 +460,7 @@ public abstract class iv extends java.applet.Applet implements Runnable, java.aw
               ol.field_z = false;
               var3_int = 1;
             }
-            tl.a(-5790, TurnEffectEvent.field_F, SpellCastEvent.g(-15862), var3_int != 0, dd.a(false));
+            NodeHashIterator.a(-5790, TurnEffectEvent.field_F, SpellCastEvent.g(-15862), var3_int != 0, dd.a(false));
           }
           if (param0) {
             field_m = (String) null;

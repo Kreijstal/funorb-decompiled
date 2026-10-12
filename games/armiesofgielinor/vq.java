@@ -95,7 +95,7 @@ final class vq {
           } else if (no.field_J != 2) {
             if (no.field_J == 3) {
               if (!IntPair.field_m.field_e) {
-                var3_int = BattleTutorial.a(pf.field_d, tl.field_a, 7502, TaggedMapData.field_b, du.field_b);
+                var3_int = BattleTutorial.a(pf.field_d, NodeHashIterator.field_a, 7502, TaggedMapData.field_b, du.field_b);
               } else {
                 var3_int = BattleTutorial.a(pf.field_d, ud.field_ab, 7502, TaggedMapData.field_b, du.field_b);
               }
@@ -267,20 +267,20 @@ final class vq {
               }
             }
           }
-          m.field_i = (el.field_c + cp.field_a << 1) * ug.field_c.itemCount;
+          IterableNodeHashTable.field_i = (el.field_c + cp.field_a << 1) * ug.field_c.itemCount;
           var4Lifetime2 = 0;
           var5Lifetime3 = -42 % ((-39 - param2) / 37);
           while (AnimationFrameSet.field_v.length > var4Lifetime2) {
-            stackIn_115_0 = m.field_i;
+            stackIn_115_0 = IterableNodeHashTable.field_i;
             if (0 > TileMetadata.field_h[var4Lifetime2]) {
               stackIn_116_1 = fh.field_e;
             } else {
               stackIn_116_1 = TelepopEvent.field_B;
             }
-            m.field_i = stackIn_115_0 + stackIn_116_1;
+            IterableNodeHashTable.field_i = stackIn_115_0 + stackIn_116_1;
             var4Lifetime2++;
           }
-          od.field_b = -(m.field_i >> 1) + ar.field_C;
+          od.field_b = -(IterableNodeHashTable.field_i >> 1) + ar.field_C;
           lg.field_b = new int[AnimationFrameSet.field_v.length][];
           var4Lifetime3 = 0;
           var5Lifetime4 = od.field_b;

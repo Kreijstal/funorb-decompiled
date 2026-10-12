@@ -5,7 +5,7 @@ final class rf {
     private ResourceArchive field_f;
     static String field_e;
     static je field_d;
-    private ri field_b;
+    private WeightedLruCache field_b;
     private ResourceArchive field_c;
     static String field_a;
 
@@ -180,7 +180,7 @@ final class rf {
     final ar a(int param0, int param1) {
         byte[] var5 = null;
         int var4 = 112 % ((-78 - param1) / 40);
-        ar var3 = (ar) (this.field_b.a((long)param0, (byte) 127));
+        ar var3 = (ar) (this.field_b.get((long)param0, (byte) 127));
         if (var3 != null) {
           return var3;
         }
@@ -194,18 +194,18 @@ final class rf {
           var6.a(new PacketBuffer(var5), (byte) 91);
           if (32768 <= param0) {
             var6.a(true);
-            this.field_b.a(var6, 100, (long)param0);
+            this.field_b.put(var6, 100, (long)param0);
             return var6;
           }
-          this.field_b.a(var6, 100, (long)param0);
+          this.field_b.put(var6, 100, (long)param0);
           return var6;
         }
         if (32768 > param0) {
-          this.field_b.a(var6, 100, (long)param0);
+          this.field_b.put(var6, 100, (long)param0);
           return var6;
         }
         var6.a(true);
-        this.field_b.a(var6, 100, (long)param0);
+        this.field_b.put(var6, 100, (long)param0);
         return var6;
     }
 
@@ -219,7 +219,7 @@ final class rf {
         StringBuilder stackIn_14_1 = null;
         String stackIn_15_2 = null;
         RuntimeException decompiledCaughtException = null;
-        this.field_b = new ri(64);
+        this.field_b = new WeightedLruCache(64);
         try {
           this.field_c = param2;
           this.field_f = param1;

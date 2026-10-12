@@ -185,7 +185,7 @@ final class wd {
           if (null == var2 &&
             !cu.field_c &&
             null == UnitCycler.field_g) {
-            var2 = uq.field_w;
+            var2 = CacheEntry.field_w;
           }
           if (var2 != null) {
             fs.a(MeshObject.field_d, (String) null, (String) (var2), -122, 0);
@@ -282,7 +282,7 @@ final class wd {
           if (param0 <= 19) {
             return false;
           }
-          stackIn_10_0 = (10 <= p.field_b) && (13 <= f.field_E);
+          stackIn_10_0 = (10 <= p.field_b) && (13 <= StrongCacheEntry.field_E);
           return stackIn_10_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

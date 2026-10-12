@@ -1917,7 +1917,7 @@ final class TickCounter {
                 }
                 var2 = fk.a(false, "OWNED_BY");
                 if (null != var2) {
-                  m.field_h = uu.a(var2, (byte) -124);
+                  IterableNodeHashTable.field_h = uu.a(var2, (byte) -124);
                 }
                 var2 = fk.a(false, "OWNED_BY_YOU");
                 if (null != var2) {
@@ -3267,7 +3267,7 @@ final class TickCounter {
                 }
                 var2 = fk.a(false, "LABEL_FAST");
                 if (null != var2) {
-                  uq.field_v = uu.a(var2, (byte) -126);
+                  CacheEntry.field_v = uu.a(var2, (byte) -126);
                 }
                 var2 = fk.a(false, "LABEL_INGAME_SINGLE");
                 if (var2 != null) {
@@ -4791,7 +4791,7 @@ final class TickCounter {
                 }
                 var2 = fk.a(false, "TTREEN_RUNIC");
                 if (var2 != null) {
-                  tl.field_f = uu.a(var2, (byte) 29);
+                  NodeHashIterator.field_f = uu.a(var2, (byte) 29);
                 }
                 var2 = fk.a(false, "TTREEN_SACRIFICIAL");
                 if (null != var2) {
@@ -5003,7 +5003,7 @@ final class TickCounter {
                 }
                 var2 = fk.a(false, "TTREED_CURSE");
                 if (null != var2) {
-                  m.field_g = uu.a(var2, (byte) 22);
+                  IterableNodeHashTable.field_g = uu.a(var2, (byte) 22);
                 }
                 var2 = fk.a(false, "TTREED_SOURCERY");
                 if (null != var2) {

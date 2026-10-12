@@ -86,7 +86,7 @@ final class dd {
     }
 
     final static int a(boolean param0) {
-        if (f.field_E < 2) {
+        if (StrongCacheEntry.field_E < 2) {
           return 0;
         }
         if (param0) {

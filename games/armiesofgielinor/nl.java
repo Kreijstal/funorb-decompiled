@@ -322,7 +322,7 @@ abstract class nl extends Widget implements gw {
           nf.field_Kb = new je(0L, (je) null);
           rj.field_F = new je(0L, te.field_p, su.field_b);
           CampaignProgress.field_a = new je(0L, br.field_e, rh.field_g);
-          MapTile.field_f = new dn(0L, new je(0L, (je) null), cb.field_c, ri.field_b);
+          MapTile.field_f = new dn(0L, new je(0L, (je) null), cb.field_c, WeightedLruCache.field_b);
           nf.field_Kb.a(rj.field_F, 79);
           if (fh.field_c) {
             nf.field_Kb.a(CampaignProgress.field_a, 69);
@@ -344,7 +344,7 @@ abstract class nl extends Widget implements gw {
           bs.field_a = new je(0L, CampaignResult.field_a, fw.field_H);
           SphinxActionRequest.field_A = new je(0L, CampaignResult.field_a, hs.field_D);
           wl.field_K = new je(0L, br.field_e, RevivalEvent.field_B);
-          CipherPacketBuffer.field_x = new dn(0L, new je(0L, (je) null), cb.field_c, ri.field_b);
+          CipherPacketBuffer.field_x = new dn(0L, new je(0L, (je) null), cb.field_c, WeightedLruCache.field_b);
           fj.field_d = new je(0L, nd.field_a, l.field_f.toUpperCase());
           fj.field_d.field_xb = fh.field_c;
           stackIn_5_0 = null;
@@ -394,7 +394,7 @@ abstract class nl extends Widget implements gw {
           gg.field_E.field_Eb = 1;
           di.field_l = new je(0L, te.field_p, su.field_b);
           SpellCastEvent.field_D = new je(0L, br.field_e, rh.field_g);
-          bu.field_a = new dn(0L, new je(0L, (je) null), cb.field_c, ri.field_b);
+          bu.field_a = new dn(0L, new je(0L, (je) null), cb.field_c, WeightedLruCache.field_b);
           eb.field_c.a(gg.field_E, 72);
           eb.field_c.a(di.field_l, 83);
           if (fh.field_c) {

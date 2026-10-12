@@ -44,7 +44,7 @@ abstract class ResourceRequest extends DualLinkedNode {
           var3.participantId = packet.readUnsignedByte(0);
           var3.displayName = packet.readNullCircumfixedString((byte) 121);
           var3.availableUnitTypes = ev.readNullableUnsignedByteArray(packet, (byte) -98);
-          var3.coatOfArms = uq.readSignedCoatOfArms(packet, false);
+          var3.coatOfArms = CacheEntry.readSignedCoatOfArms(packet, false);
           var3.godFavourLevels = gt.readSixUnsignedBytes(-2, packet);
           var3.equippedSpellIds = en.readUnsignedByteArray(packet, (byte) -24);
           stackIn_3_0 = var3;

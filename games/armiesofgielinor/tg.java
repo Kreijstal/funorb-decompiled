@@ -174,7 +174,7 @@ final class tg {
 
     final static void a(ResourceArchive param0, int param1, boolean param2, ResourceArchive param3) {
         try {
-          bk.a(param2, fp.field_Lb, eq.field_h, LeaderEscortCondition.field_f, DualLinkedNode.field_k, -106, ke.field_e, im.field_x, qc.field_e, ri.field_b, PreparedAction.field_o, rd.field_e);
+          bk.a(param2, fp.field_Lb, eq.field_h, LeaderEscortCondition.field_f, DualLinkedNode.field_k, -106, ke.field_e, im.field_x, qc.field_e, WeightedLruCache.field_b, PreparedAction.field_o, rd.field_e);
           dh.field_n = fk.a("chatfilter", (byte) -125, param3, "lobby");
           co.field_k[0] = ar.field_v;
           co.field_k[1] = IterableDualNodeDeque.field_a;

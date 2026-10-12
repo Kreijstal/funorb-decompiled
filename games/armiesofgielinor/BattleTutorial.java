@@ -1598,7 +1598,7 @@ class BattleTutorial {
     }
 
     private final void a(int param0) {
-        uh.a(m.field_a, 124);
+        uh.a(IterableNodeHashTable.field_a, 124);
         if (param0 != 5) {
           this.expandedPanelHeight = 30;
         }
@@ -1617,7 +1617,7 @@ class BattleTutorial {
         if (param0 != -122) {
           this.f((byte) 104);
         }
-        uh.a(f.field_D, 125);
+        uh.a(StrongCacheEntry.field_D, 125);
     }
 
     final void draw(byte obfuscationGuard) {

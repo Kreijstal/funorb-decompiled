@@ -52,7 +52,7 @@ final class s {
             return stackIn_6_0;
           }
           if (param2 == 3) {
-            stackIn_9_0 = fo.a(4800, m.field_b, new String[]{param1});
+            stackIn_9_0 = fo.a(4800, IterableNodeHashTable.field_b, new String[]{param1});
             return stackIn_9_0;
           }
           if (param2 == 4) {

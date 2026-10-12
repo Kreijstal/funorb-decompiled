@@ -375,7 +375,7 @@ abstract class wf extends iv {
           this.a((byte) 113, true);
         }
         if (!wd.a((byte) 60)) {
-          if (f.field_E >= 10) {
+          if (StrongCacheEntry.field_E >= 10) {
             if (!lk.b(true)) {
               StateChangeEvent.e((byte) -84);
             } else {
@@ -563,7 +563,7 @@ abstract class wf extends iv {
         }
         if (gk.field_K != -1 &&
           gk.field_K != 0) {
-          if (f.field_E < 10) {
+          if (StrongCacheEntry.field_E < 10) {
             if (3 == gk.field_K) {
               this.a("js5crc", (byte) -107);
             } else {
@@ -620,11 +620,11 @@ abstract class wf extends iv {
           !MovementPresentation.j(-11)) {
           dd.field_a = false;
         }
-        if (f.field_E == 0 &&
+        if (StrongCacheEntry.field_E == 0 &&
           us.b(94)) {
-          f.field_E = 1;
+          StrongCacheEntry.field_E = 1;
         }
-        if (f.field_E == 1) {
+        if (StrongCacheEntry.field_E == 1) {
           if (og.field_m != 0) {
             nf.field_Nb = nu.a(on.field_n, true);
           }
@@ -632,10 +632,10 @@ abstract class wf extends iv {
           CombatPresentation.field_M = DamageEvent.a(1, wl.field_E, (byte) 122, false, true);
           h.field_g = DamageEvent.a(1, DualLinkedNode.field_t, (byte) 127, false, true);
           gg.field_K = ps.field_u;
-          f.field_E = 2;
+          StrongCacheEntry.field_E = 2;
           ResourceRequest.field_A = CombatPresentation.field_M;
         }
-        if (f.field_E == 2) {
+        if (StrongCacheEntry.field_E == 2) {
           if (null != nf.field_Nb &&
             nf.field_Nb.ensureIndex((byte) 82)) {
             if (!nf.field_Nb.containsGroupName((byte) -128, "")) {
@@ -649,10 +649,10 @@ abstract class wf extends iv {
             }
           }
           if (nf.field_Nb == null) {
-            f.field_E = 3;
+            StrongCacheEntry.field_E = 3;
           }
         }
-        if (f.field_E == 3 &&
+        if (StrongCacheEntry.field_E == 3 &&
           wh.a(ps.field_u, (byte) 127, h.field_g, CombatPresentation.field_M) &&
           wh.a(h.field_g, -27701)) {
           cd.a(12);
@@ -681,16 +681,16 @@ abstract class wf extends iv {
           h.field_g = null;
           p.a(-24602, (java.applet.Applet) (this));
           wl.a(0);
-          f.field_E = 10;
+          StrongCacheEntry.field_E = 10;
         }
-        if (f.field_E == 10) {
+        if (StrongCacheEntry.field_E == 10) {
           if (0 != og.field_m) {
             RegionAnchor.field_o = nu.a(lk.field_p, true);
           }
-          f.field_E = 11;
+          StrongCacheEntry.field_E = 11;
         }
         boolean decompiledFrameRemainder0 = true;
-        if (f.field_E == 11) {
+        if (StrongCacheEntry.field_E == 11) {
           if (RegionAnchor.field_o != null && (!RegionAnchor.field_o.ensureIndex((byte) 82) ||
             !RegionAnchor.field_o.ensureAllGroupsAvailable(-27927))) {
             bn.a((byte) -24, 0.0f, ao.a(db.field_b, true, of.field_Jb, RegionAnchor.field_o));
@@ -698,14 +698,14 @@ abstract class wf extends iv {
           }
           else {
             ts.field_l = true;
-            f.field_E = 12;
+            StrongCacheEntry.field_E = 12;
           }
         }
-        if (f.field_E == 12 &&
+        if (StrongCacheEntry.field_E == 12 &&
           !ts.field_l) {
-          f.field_E = 13;
+          StrongCacheEntry.field_E = 13;
         }
-        if (13 == f.field_E) {
+        if (13 == StrongCacheEntry.field_E) {
           var3Lifetime2 = 1;
           if (null != CombatPresentation.field_G) {
             stackIn_127_0 = (!CombatPresentation.field_G.a(2189)) ? 0 : 1;
@@ -713,7 +713,7 @@ abstract class wf extends iv {
             bn.a((byte) -24, CombatPresentation.field_G.field_d, CombatPresentation.field_G.field_b);
           }
           if (var3Lifetime2 != 0) {
-            f.field_E = 20;
+            StrongCacheEntry.field_E = 20;
           }
         }
         if (!param1 &&

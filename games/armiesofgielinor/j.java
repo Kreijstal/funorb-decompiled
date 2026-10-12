@@ -76,7 +76,7 @@ final class j {
           DisplacedUnitMarker.field_t[23] = ClientConnectionState.field_e;
           DisplacedUnitMarker.field_t[27] = NodeHashTable.field_b;
           DisplacedUnitMarker.field_t[30] = pf.field_e;
-          DisplacedUnitMarker.field_t[20] = tl.field_h;
+          DisplacedUnitMarker.field_t[20] = NodeHashIterator.field_h;
           DisplacedUnitMarker.field_t[18] = InstructionsPanel.field_c;
           DisplacedUnitMarker.field_t[14] = DelayedPacket.field_s[0];
           DisplacedUnitMarker.field_t[15] = DelayedPacket.field_s[1];
@@ -109,7 +109,7 @@ final class j {
           DisplacedUnitMarker.field_t[39] = StateChangeEvent.field_y;
           wb.field_b = new String[29];
           CampaignDefinition.field_m[0] = on.field_o;
-          CampaignDefinition.field_m[2] = uq.field_v;
+          CampaignDefinition.field_m[2] = CacheEntry.field_v;
           CampaignDefinition.field_m[1] = uh.field_b;
           wb.field_b[0] = null;
           wb.field_b[10] = DamageEvent.field_z;

@@ -137,7 +137,7 @@ final class BoundedFile {
                                   SphinxActionRequest.e(0);
                                 } else {
                                   if (-7 == param0) {
-                                    tl.b((byte) -90);
+                                    NodeHashIterator.b((byte) -90);
                                   } else {
                                     if (!param2) {
                                       jg.field_m.f(so.field_b.field_a / 2 - jg.field_m.canvasWidth / 2, -(jg.field_m.canvasHeight / 2) + so.field_b.field_g / 2);

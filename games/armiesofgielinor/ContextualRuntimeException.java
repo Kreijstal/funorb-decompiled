@@ -45,7 +45,7 @@ final class ContextualRuntimeException extends RuntimeException {
         je var7 = null;
         je var3 = null;
         try {
-          tl.field_e = GameplayController.a("display_name_changed", (byte) 51, "basic", param1);
+          NodeHashIterator.field_e = GameplayController.a("display_name_changed", (byte) 51, "basic", param1);
           mw.field_E = new mp(0L, br.field_g, h.field_b, AnimationFrameSet.field_y);
           TaggedMapData.field_g = new mp(0L, br.field_g, lm.field_a, ArchiveIndex.field_u);
           su.field_d = new je(0L, (je) null);

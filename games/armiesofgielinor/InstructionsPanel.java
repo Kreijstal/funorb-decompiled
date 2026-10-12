@@ -2084,7 +2084,7 @@ final class InstructionsPanel {
               return;
             }
             this.a(7 * (var10.second >> 3) + param2, 88, this.firstPreviewModel, (var10.first >> 1) + param0);
-            var6Lifetime1 = ri.terrainDamageTakenPercent[0];
+            var6Lifetime1 = WeightedLruCache.terrainDamageTakenPercent[0];
             var7 = 0;
             this.a(var7, param0, this.firstPreviewUnit.ownerPlayer, var6Lifetime1, 110, this.firstPreviewUnit, this.firstPreviewUnit, param2);
             return;
@@ -2097,7 +2097,7 @@ final class InstructionsPanel {
               return;
             }
             this.a(7 * (var9.second >> 3) + param2, 57, this.secondPreviewModel, param0 + (var9.first >> 1));
-            var6Lifetime2 = ri.terrainDamageTakenPercent[0];
+            var6Lifetime2 = WeightedLruCache.terrainDamageTakenPercent[0];
             var7Lifetime1 = 0;
             this.a(var7Lifetime1, param0, this.firstPreviewUnit.ownerPlayer, var6Lifetime2, 102, this.secondPreviewUnit, this.firstPreviewUnit, param2);
           }

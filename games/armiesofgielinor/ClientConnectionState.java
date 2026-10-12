@@ -92,7 +92,7 @@ final class ClientConnectionState {
             return stackIn_2_0;
           }
           var4 = (String) null;
-          stackIn_4_0 = uq.a((String) null, param2, -20032, 0, 0, param1, false);
+          stackIn_4_0 = CacheEntry.a((String) null, param2, -20032, 0, 0, param1, false);
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

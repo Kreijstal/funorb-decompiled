@@ -157,7 +157,7 @@ final class fq {
           }
           var7 = db.a(param1, -122);
           if (var7 == null) {
-            stackIn_10_0 = fo.a(4800, uq.field_x, new String[]{param1});
+            stackIn_10_0 = fo.a(4800, CacheEntry.field_x, new String[]{param1});
             return stackIn_10_0;
           }
           var7.unlink(-124);

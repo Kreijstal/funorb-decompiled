@@ -265,7 +265,7 @@ final class TurnEffectEvent extends GameEvent {
           ArchiveProvider.field_d = rb.field_b;
           UnitCycler.field_g = new je(0L, param2);
           sb.field_i = new je(0L, param4);
-          f.field_C = new je(0L, (je) null);
+          StrongCacheEntry.field_C = new je(0L, (je) null);
           SummonEvent.field_F = new je(0L, param3);
           UpkeepEvent.field_z = new je(0L, param1);
           UpkeepEvent.field_z.field_Z = IntrusiveNode.field_e;
@@ -275,10 +275,10 @@ final class TurnEffectEvent extends GameEvent {
           qf.field_e = new je(0L, SpellConfirmationDialog.field_i, nk.field_t);
           ed.field_e = new je(0L, SpellConfirmationDialog.field_i);
           UnitCycler.field_g.a(sb.field_i, 103);
-          UnitCycler.field_g.a(f.field_C, 79);
-          f.field_C.a(SummonEvent.field_F, 64);
-          f.field_C.a(qf.field_e, 80);
-          f.field_C.a(ed.field_e, 123);
+          UnitCycler.field_g.a(StrongCacheEntry.field_C, 79);
+          StrongCacheEntry.field_C.a(SummonEvent.field_F, 64);
+          StrongCacheEntry.field_C.a(qf.field_e, 80);
+          StrongCacheEntry.field_C.a(ed.field_e, 123);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

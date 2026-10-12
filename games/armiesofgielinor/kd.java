@@ -187,7 +187,7 @@ final class kd extends tj implements nq, he, mf {
         this.field_H.field_s = oc.field_Jb;
         this.field_V.field_s = CachedArchiveProvider.field_k;
         this.field_K.field_s = WeightedScoreStrategy.field_i;
-        this.field_N.field_s = f.field_A;
+        this.field_N.field_s = StrongCacheEntry.field_A;
         this.field_ab.field_s = rd.field_g;
         this.field_O.a((byte) 16, new uj(this.field_O));
         this.field_I.a((byte) 16, new vl(this.field_I));

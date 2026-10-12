@@ -171,7 +171,7 @@ final class CampaignUnitOverride {
                 }
                 var2 = NodeIterator.a(50, "mu_x_entered_other_game");
                 if (var2 != null) {
-                  m.field_b = uu.a(var2, (byte) -109);
+                  IterableNodeHashTable.field_b = uu.a(var2, (byte) -109);
                 }
                 var2 = NodeIterator.a(50, "mu_x_left_lobby");
                 if (null != var2) {
@@ -763,7 +763,7 @@ final class CampaignUnitOverride {
                 }
                 var2 = NodeIterator.a(param0 ^ -100, "chatviewscrolledup");
                 if (var2 != null) {
-                  uq.field_w = uu.a(var2, (byte) 100);
+                  CacheEntry.field_w = uu.a(var2, (byte) 100);
                 }
                 var2 = NodeIterator.a(param0 + 132, "thisisrunescapeclan");
                 if (var2 != null) {
@@ -1553,7 +1553,7 @@ final class CampaignUnitOverride {
                 }
                 var2 = NodeIterator.a(param0 + 132, "create_age_tooltip");
                 if (var2 != null) {
-                  f.field_A = uu.a(var2, (byte) 50);
+                  StrongCacheEntry.field_A = uu.a(var2, (byte) 50);
                 }
                 var2 = NodeIterator.a(50, "create_optin_news_tooltip");
                 if (var2 != null) {
@@ -1717,7 +1717,7 @@ final class CampaignUnitOverride {
                 }
                 var2 = NodeIterator.a(50, "ignorenotfound");
                 if (null != var2) {
-                  uq.field_x = uu.a(var2, (byte) -127);
+                  CacheEntry.field_x = uu.a(var2, (byte) -127);
                 }
                 var2 = NodeIterator.a(50, "removeignorefirst");
                 if (null != var2) {
@@ -1943,7 +1943,7 @@ final class CampaignUnitOverride {
                 }
                 var2 = NodeIterator.a(50, "login_createaccount");
                 if (null != var2) {
-                  tl.field_h = uu.a(var2, (byte) 26);
+                  NodeHashIterator.field_h = uu.a(var2, (byte) 26);
                 }
                 var2 = NodeIterator.a(param0 + 132, "tohighscores");
                 if (null != var2) {
@@ -2458,7 +2458,7 @@ final class CampaignUnitOverride {
                 }
                 var2 = NodeIterator.a(param0 + 132, "mp_showchat_unread1");
                 if (var2 != null) {
-                  uq.field_y = uu.a(var2, (byte) -124);
+                  CacheEntry.field_y = uu.a(var2, (byte) -124);
                 }
                 var2 = NodeIterator.a(50, "mp_showchat_unread2");
                 if (null != var2) {
@@ -2698,7 +2698,7 @@ final class CampaignUnitOverride {
                 }
                 var2 = NodeIterator.a(50, "fs_unavailable_try_signed_applet");
                 if (null != var2) {
-                  tl.field_a = uu.a(var2, (byte) -113);
+                  NodeHashIterator.field_a = uu.a(var2, (byte) -113);
                 }
                 var2 = NodeIterator.a(50, "fs_focus");
                 if (null != var2) {

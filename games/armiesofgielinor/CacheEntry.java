@@ -1,11 +1,11 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class uq extends DualLinkedNode {
+abstract class CacheEntry extends DualLinkedNode {
     static int[] field_u;
     static String field_v;
     static String field_w;
-    int field_z;
+    int weight;
     static String field_x;
     static String field_y;
 
@@ -214,9 +214,9 @@ abstract class uq extends DualLinkedNode {
         }
     }
 
-    abstract Object b(boolean param0);
+    abstract Object getValue(boolean obfuscationGuard);
 
-    abstract boolean a(boolean param0);
+    abstract boolean isReferenceBacked(boolean obfuscationGuard);
 
     public static void g(int param0) {
         if (param0 >= -11) {
@@ -229,8 +229,8 @@ abstract class uq extends DualLinkedNode {
         field_u = null;
     }
 
-    uq(int param0) {
-        this.field_z = param0;
+    CacheEntry(int weight) {
+        this.weight = weight;
     }
 
     final static CoatOfArms readSignedCoatOfArms(PacketBuffer packet, boolean obfuscationGuard) {
@@ -249,7 +249,7 @@ abstract class uq extends DualLinkedNode {
           var5 = new CoatOfArms();
           var2 = var5;
           if (obfuscationGuard) {
-            uq.g(56);
+            CacheEntry.g(56);
           }
           for (var3 = 0; var3 < 6; var3++) {
             var5.parts[var3] = packet.readByte((byte) 103);

@@ -5483,10 +5483,10 @@ final class Battlefield {
             this.tiles[tileIndex].terrainType == 3) {
             tileIndex = 70;
             if (ArmiesOfGielinor.obfuscationControl) {
-              tileIndex = ri.terrainDamageTakenPercent[this.tiles[tileIndex].terrainType];
+              tileIndex = WeightedLruCache.terrainDamageTakenPercent[this.tiles[tileIndex].terrainType];
             }
           } else {
-            tileIndex = ri.terrainDamageTakenPercent[this.tiles[tileIndex].terrainType];
+            tileIndex = WeightedLruCache.terrainDamageTakenPercent[this.tiles[tileIndex].terrainType];
           }
           if (obfuscationGuard != -4) {
             this.kingBlackDragonSummoned = false;

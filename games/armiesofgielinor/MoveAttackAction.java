@@ -48,7 +48,7 @@ final class MoveAttackAction extends PreparedAction {
           if (!param4) {
             stackIn_4_0 = tg.field_j;
           } else {
-            stackIn_4_0 = tl.field_h;
+            stackIn_4_0 = NodeHashIterator.field_h;
           }
           var6 = stackIn_4_0;
           if (DualNodeDeque.field_f == 0) {

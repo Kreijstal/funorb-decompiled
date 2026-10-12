@@ -135,7 +135,7 @@ final class ud extends sf implements he {
               }
             }
           } else {
-            var3 = tl.field_a;
+            var3 = NodeHashIterator.field_a;
           }
           var4 = new Widget((String) (var3), (qo) null);
           var4.x = 0;

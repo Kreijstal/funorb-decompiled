@@ -1,15 +1,15 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class f extends uq {
+final class StrongCacheEntry extends CacheEntry {
     static int[] field_D;
-    private Object field_B;
+    private Object value;
     static je field_C;
     static int field_E;
     static String field_A;
 
-    final boolean a(boolean param0) {
-        if (!param0) {
+    final boolean isReferenceBacked(boolean obfuscationGuard) {
+        if (!obfuscationGuard) {
           field_E = -65;
           return false;
         }
@@ -21,23 +21,23 @@ final class f extends uq {
         field_D = null;
         field_C = null;
         if (!param0) {
-          f.c(true);
+          StrongCacheEntry.c(true);
         }
     }
 
-    final Object b(boolean param0) {
-        if (param0) {
+    final Object getValue(boolean obfuscationGuard) {
+        if (obfuscationGuard) {
           return (Object) null;
         }
-        return this.field_B;
+        return this.value;
     }
 
-    f(Object param0, int param1) {
-        super(param1);
+    StrongCacheEntry(Object value, int weight) {
+        super(weight);
         try {
-          this.field_B = param0;
+          this.value = value;
         } catch (RuntimeException runtimeException) {
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "f.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "f.<init>(" + (value != null ? "{...}" : "null") + ',' + weight + ')');
         }
     }
 

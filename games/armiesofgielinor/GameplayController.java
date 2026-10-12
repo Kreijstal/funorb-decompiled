@@ -4031,7 +4031,7 @@ final class GameplayController {
               }
               if (decompiledSharedTail0) {
                 if (1 == s.field_d) {
-                  kp.field_k = uq.field_y;
+                  kp.field_k = CacheEntry.field_y;
                   if (var10 != 0) {
                     kp.field_k = lw.field_pb;
                   }
@@ -6686,9 +6686,9 @@ final class GameplayController {
                       if (var20 != 0) {
                         if (this.controlledPlayerId == var13_ref_ne.ownerPlayer) {
                           var2 = GlobalSpell.field_e;
-                          var2 = fo.a(param0 + 4680, m.field_h, new String[]{this.battlefield.getPlayerTeam(var13_ref_ne.ownerPlayer, -1).getTeamName(3)});
+                          var2 = fo.a(param0 + 4680, IterableNodeHashTable.field_h, new String[]{this.battlefield.getPlayerTeam(var13_ref_ne.ownerPlayer, -1).getTeamName(3)});
                         } else {
-                          var2 = fo.a(param0 + 4680, m.field_h, new String[]{this.battlefield.getPlayerTeam(var13_ref_ne.ownerPlayer, -1).getTeamName(3)});
+                          var2 = fo.a(param0 + 4680, IterableNodeHashTable.field_h, new String[]{this.battlefield.getPlayerTeam(var13_ref_ne.ownerPlayer, -1).getTeamName(3)});
                         }
                       }
                     } else {
@@ -6698,7 +6698,7 @@ final class GameplayController {
                         decompiledSharedTail2 = (var20 != 0);
                       }
                       if (decompiledSharedTail2) {
-                        var2 = fo.a(param0 + 4680, m.field_h, new String[]{this.battlefield.getPlayerTeam(var13_ref_ne.ownerPlayer, -1).getTeamName(3)});
+                        var2 = fo.a(param0 + 4680, IterableNodeHashTable.field_h, new String[]{this.battlefield.getPlayerTeam(var13_ref_ne.ownerPlayer, -1).getTeamName(3)});
                       }
                     }
                   }
@@ -6760,13 +6760,13 @@ final class GameplayController {
                   }
                 }
                 if (ml.a(50, 535, 16, false)) {
-                  boolean decompiledSharedTail1 = (ri.terrainDamageTakenPercent[var13_ref_ne.terrainType] != 100);
+                  boolean decompiledSharedTail1 = (WeightedLruCache.terrainDamageTakenPercent[var13_ref_ne.terrainType] != 100);
                   if (!decompiledSharedTail1) {
                     var2 = ek.field_b[1][17];
                     decompiledSharedTail1 = (var20 != 0);
                   }
                   if (decompiledSharedTail1) {
-                    var2 = fo.a(4800, ek.field_b[0][17], new String[]{Integer.toString(ri.terrainDamageTakenPercent[var13_ref_ne.terrainType])});
+                    var2 = fo.a(4800, ek.field_b[0][17], new String[]{Integer.toString(WeightedLruCache.terrainDamageTakenPercent[var13_ref_ne.terrainType])});
                   }
                 }
                 var14 = 23;
@@ -10291,17 +10291,17 @@ final class GameplayController {
           stackIn_67_0 = lp.field_b[17 + param7];
           stackIn_67_1 = 268 + param3;
           stackIn_67_2 = param5 + (-42 + param0);
-          if (ri.terrainDamageTakenPercent[param4.terrainType] < 100) {
+          if (WeightedLruCache.terrainDamageTakenPercent[param4.terrainType] < 100) {
             stackIn_68_3 = 255;
           } else {
             stackIn_68_3 = 128;
           }
           ((IndexedSprite) (Object) stackIn_67_0).b(stackIn_67_1, stackIn_67_2, stackIn_68_3, 0);
           stackIn_71_0 = rs.field_n;
-          stackIn_71_1 = 100 - ri.terrainDamageTakenPercent[param4.terrainType] + "%";
+          stackIn_71_1 = 100 - WeightedLruCache.terrainDamageTakenPercent[param4.terrainType] + "%";
           stackIn_71_2 = 284 + param3;
           stackIn_71_3 = param0 + (param5 - 24);
-          if (ri.terrainDamageTakenPercent[param4.terrainType] < 100) {
+          if (WeightedLruCache.terrainDamageTakenPercent[param4.terrainType] < 100) {
             stackIn_72_4 = 16777215;
           } else {
             stackIn_72_4 = 7829367;

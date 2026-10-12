@@ -50,7 +50,7 @@ final class fd extends IntrusiveNode {
         try {
           this.field_k = param2;
           this.field_p = new AnimationFrameSet(param2);
-          tl.a((byte) -121, param1, param0);
+          NodeHashIterator.a((byte) -121, param1, param0);
           while (!this.field_p.ensureFramesAvailable((byte) -65)) {
           }
           return;

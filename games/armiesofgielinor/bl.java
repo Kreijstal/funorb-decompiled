@@ -3,7 +3,7 @@
  */
 final class bl {
     static String field_a;
-    private ri field_e;
+    private WeightedLruCache field_e;
     static NodeDeque field_h;
     static boolean field_f;
     private ResourceArchive field_c;
@@ -410,7 +410,7 @@ final class bl {
         if (!param1) {
           field_g = (String) null;
         }
-        va var3 = (va) (this.field_e.a((long)param0, (byte) 122));
+        va var3 = (va) (this.field_e.get((long)param0, (byte) 122));
         if (var3 != null) {
           return var3;
         }
@@ -426,7 +426,7 @@ final class bl {
         if (param0 >= 32768) {
           var3.g(30);
         }
-        this.field_e.a(var3, 100, (long)param0);
+        this.field_e.put(var3, 100, (long)param0);
         return var3;
     }
 
@@ -529,7 +529,7 @@ final class bl {
         String stackIn_12_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var4 = null;
-        this.field_e = new ri(64);
+        this.field_e = new WeightedLruCache(64);
         try {
           this.field_c = param2;
           this.field_d = param1;

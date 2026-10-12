@@ -111,9 +111,9 @@ abstract class AiPlanningStrategy {
                   if (var7.field_Nb != null &&
                     !var7.field_Nb.equals("")) {
                     var7.field_Jb.field_W = var11;
-                    var7.field_Jb.field_cb = tl.field_e;
+                    var7.field_Jb.field_cb = NodeHashIterator.field_e;
                     var12 = 1;
-                    var7.field_Jb.a(jn.field_d, -20500, 3 + tl.field_e.canvasWidth, var9, 0);
+                    var7.field_Jb.a(jn.field_d, -20500, 3 + NodeHashIterator.field_e.canvasWidth, var9, 0);
                   }
                   var7.field_Kb.field_wb = var11;
                   var7.field_Qb.field_wb = var11;
@@ -126,7 +126,7 @@ abstract class AiPlanningStrategy {
                   var13 = 0;
                   var14 = -82 + var7.field_gb;
                   if (var12 != 0) {
-                    var13 = tl.field_e.canvasWidth + 3;
+                    var13 = NodeHashIterator.field_e.canvasWidth + 3;
                     var14 = var14 - var13;
                   }
                   stackIn_44_0 = var7.field_Qb;

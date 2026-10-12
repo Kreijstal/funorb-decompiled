@@ -290,8 +290,8 @@ final class SphinxActionRequest extends ActionRequest {
           wh.field_g.field_vb = GameplayController.a("downbutton_mouseover", (byte) 51, "lobby", param1);
           wh.field_g.field_qb = GameplayController.a("downbutton_mouseheld", (byte) 51, "lobby", param1);
           wh.field_g.field_sb = GameplayController.a("downbutton_disabled", (byte) 51, "lobby", param1);
-          ri.field_b = new ll(0L, no.field_M, wh.field_g, oe.field_Cb, ke.field_c);
-          br.field_g = new mp(0L, (je) null, cb.field_c, ri.field_b, je.field_Q, (String) null, (String) null);
+          WeightedLruCache.field_b = new ll(0L, no.field_M, wh.field_g, oe.field_Cb, ke.field_c);
+          br.field_g = new mp(0L, (je) null, cb.field_c, WeightedLruCache.field_b, je.field_Q, (String) null, (String) null);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

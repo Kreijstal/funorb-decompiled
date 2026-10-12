@@ -244,11 +244,11 @@ final class CombatSandbox {
           var19 = new Unit(stackIn_27_2, stackIn_27_3, stackIn_27_4, stackIn_27_5, stackIn_27_6, stackIn_27_7, stackIn_28_8, 0, 0, (Battlefield) null, 0, 0, -1, true, 0);
           var20 = bw.unitDefinitions[var8Lifetime1][0];
           var21 = bw.unitDefinitions[var9][0];
-          var22 = ri.terrainDamageTakenPercent[var11] * (var15 * fk.matchupDamagePercent[var20][var21]) / 10000;
+          var22 = WeightedLruCache.terrainDamageTakenPercent[var11] * (var15 * fk.matchupDamagePercent[var20][var21]) / 10000;
           if (var22 > var17) {
             var22 = var17;
           }
-          var23 = (var17 - var22) * (fk.matchupDamagePercent[var21][var20] * ri.terrainDamageTakenPercent[var10]) / 10000;
+          var23 = (var17 - var22) * (fk.matchupDamagePercent[var21][var20] * WeightedLruCache.terrainDamageTakenPercent[var10]) / 10000;
           this.combatPresentation = new CombatPresentation((Battlefield) null, (BattleCamera) null, (EventPresenter) null);
           this.combatPresentation.a(var22, var19, var23, true, var18);
           le.field_b = new cg();

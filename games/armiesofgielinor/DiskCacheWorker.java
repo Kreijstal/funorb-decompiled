@@ -32,7 +32,7 @@ final class DiskCacheWorker implements Runnable {
           }
           var7 = new gl(param1);
           var8 = new gl(param2);
-          stackIn_4_0 = uq.a(param6, var7, -20032, param5, param4, var8, param3);
+          stackIn_4_0 = CacheEntry.a(param6, var7, -20032, param5, param4, var8, param3);
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

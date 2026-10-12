@@ -3957,7 +3957,7 @@ final class TutorialController {
                 vf.field_f = jq.field_F;
                 kq.field_L = 0;
                 jq.field_F = -1;
-                ri.field_d = GlobalSpell.field_h;
+                WeightedLruCache.field_d = GlobalSpell.field_h;
                 b.field_n = null;
                 GlobalSpell.field_h = 256;
                 this.a((String) null, -1, ve.a((byte) 13, wf.field_q[li.field_q + 1]), (String) null, (byte) -99, GlobalSpell.field_l[1 + li.field_q]);
@@ -3992,12 +3992,12 @@ final class TutorialController {
                 vf.field_f = jq.field_F;
                 jq.field_F = var4Lifetime1;
                 b.field_n = new la(AnimationFrameSet.unitUnlockGroups[li.field_q + 1][jq.field_F]);
-                ri.field_d = GlobalSpell.field_h;
+                WeightedLruCache.field_d = GlobalSpell.field_h;
                 GlobalSpell.field_h = 256;
               } else {
                 vf.field_f = jq.field_F;
                 MoveAttackAction.field_s = li.field_q;
-                ri.field_d = GlobalSpell.field_h;
+                WeightedLruCache.field_d = GlobalSpell.field_h;
                 kq.field_L = 0;
                 jq.field_F = -1;
                 b.field_n = null;
@@ -4192,7 +4192,7 @@ final class TutorialController {
           na.field_F = -1;
           fe.b(db.a(true, 30), MatchConditionEntry.a(50, (byte) 94), 580, 90, EffectPresentation.field_j, jh.field_k, 0, 256);
           var2_int = (int)(-(128.0 * Math.cos((double)GlobalSpell.field_h * 3.141592653589793 / 256.0)) + 128.0);
-          var3 = (int)(128.0 - Math.cos((double)ri.field_d * 3.141592653589793 / 256.0) * 128.0);
+          var3 = (int)(128.0 - Math.cos((double)WeightedLruCache.field_d * 3.141592653589793 / 256.0) * 128.0);
           var4 = (int)(128.0 - 128.0 * Math.cos((double)tf.field_k * 3.141592653589793 / 256.0));
           var5 = (int)(-(128.0 * Math.cos((double)vs.field_f * 3.141592653589793 / 256.0)) + 128.0);
           var6 = -54 / ((-52 - param0) / 42);
@@ -4680,7 +4680,7 @@ final class TutorialController {
                   tf.field_k == 0) {
                   MoveAttackAction.field_s = li.field_q;
                   vf.field_f = jq.field_F;
-                  ri.field_d = GlobalSpell.field_h;
+                  WeightedLruCache.field_d = GlobalSpell.field_h;
                   jq.field_F = -1;
                   li.field_q = li.field_q + 1;
                   GlobalSpell.field_h = 256;
@@ -4870,8 +4870,8 @@ final class TutorialController {
                       if (256 > vs.field_f) {
                         vs.field_f = vs.field_f + var3;
                       }
-                      if (ri.field_d < 256) {
-                        ri.field_d = ri.field_d + var3;
+                      if (WeightedLruCache.field_d < 256) {
+                        WeightedLruCache.field_d = WeightedLruCache.field_d + var3;
                       }
                       if (GlobalSpell.field_h > 0) {
                         GlobalSpell.field_h = GlobalSpell.field_h - var3;

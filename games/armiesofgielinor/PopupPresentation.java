@@ -589,7 +589,7 @@ final class PopupPresentation implements EventPresentation {
           PopupPresentation.h(-19);
         }
         boolean decompiledFrameRemainder0 = true;
-        if (f.field_E >= 20 &&
+        if (StrongCacheEntry.field_E >= 20 &&
           wd.a((byte) 28) && (!(vt.field_n > 0) ||
           du.c(10))) {
           stackIn_9_0 = false;

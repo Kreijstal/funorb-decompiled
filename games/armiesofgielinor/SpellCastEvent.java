@@ -136,7 +136,7 @@ final class SpellCastEvent extends GameEvent {
     }
 
     final static String g(int param0) {
-        if (!(f.field_E >= 2)) {
+        if (!(StrongCacheEntry.field_E >= 2)) {
           return BattleUnitRenderer.field_c;
         }
         if (null != nf.field_Nb) {

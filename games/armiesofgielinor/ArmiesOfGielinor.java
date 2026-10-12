@@ -1434,7 +1434,7 @@ public final class ArmiesOfGielinor extends wf {
           rf.a((byte) -110);
           va.h(-97);
           ar.e((byte) -74);
-          ri.a((byte) -57);
+          WeightedLruCache.a((byte) -57);
           du.b(16);
           ug.a(16);
           uk.d(0);
@@ -1504,15 +1504,15 @@ public final class ArmiesOfGielinor extends wf {
           tn.n(param0 + 72);
           qm.j(param0 + 150);
           nv.l(-24061);
-          m.a(false);
+          IterableNodeHashTable.a(false);
           IterableDualNodeDeque.a(19345);
-          uq.g(param0 ^ 91);
+          CacheEntry.g(param0 ^ 91);
           me.a((byte) -36);
-          f.c(true);
+          StrongCacheEntry.c(true);
           pc.d(35);
           lc.a();
           mu.a(0);
-          tl.a((byte) 100);
+          NodeHashIterator.a((byte) 100);
           DualNodeIterator.a((byte) -121);
           wj.a(true);
           aj.a(param0 + 155);
@@ -1670,7 +1670,7 @@ public final class ArmiesOfGielinor extends wf {
             sh.opcodePayloadLengths[78] = 4;
             sh.opcodePayloadLengths[82] = -2;
             sh.opcodePayloadLengths[79] = 4;
-            ke.field_b = m.field_f;
+            ke.field_b = IterableNodeHashTable.field_f;
             sh.opcodePayloadLengths[73] = 1;
             sh.opcodePayloadLengths[75] = 12;
             sh.opcodePayloadLengths[74] = -1;

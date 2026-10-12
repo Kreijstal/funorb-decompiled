@@ -3,23 +3,23 @@
  */
 import java.util.*;
 
-final class tl implements Iterator {
-    private IntrusiveNode field_d;
+final class NodeHashIterator implements Iterator {
+    private IntrusiveNode cursor;
     static RgbSprite field_e;
-    private int field_b;
-    private IntrusiveNode field_c;
+    private int nextBucket;
+    private IntrusiveNode lastReturned;
     static String field_a;
     static String field_f;
     static me field_i;
-    private m field_g;
+    private IterableNodeHashTable table;
     static String field_h;
 
     public final void remove() {
-        if (this.field_c == null) {
+        if (this.lastReturned == null) {
           throw new IllegalStateException();
         }
-        this.field_c.unlink(42);
-        this.field_c = null;
+        this.lastReturned.unlink(42);
+        this.lastReturned = null;
     }
 
     final static void a(int param0, java.awt.Color param1, String param2, boolean param3, int param4) {
@@ -126,45 +126,45 @@ final class tl implements Iterator {
     }
 
     public final Object next() {
-        int fieldTemp$0 = 0;
-        int var2;
-        IntrusiveNode var3;
-        IntrusiveNode var4;
-        var2 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
-        if (this.field_g.field_c[this.field_b - 1] != this.field_d) {
-          var4 = this.field_d;
-          this.field_d = var4.next;
-          this.field_c = var4;
-          return var4;
+        int bucketIndex = 0;
+        int obfuscationControl;
+        IntrusiveNode firstInBucket;
+        IntrusiveNode nextNode;
+        obfuscationControl = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        if (this.table.buckets[this.nextBucket - 1] != this.cursor) {
+          nextNode = this.cursor;
+          this.cursor = nextNode.next;
+          this.lastReturned = nextNode;
+          return nextNode;
         }
         do {
-          if (this.field_g.field_d <= this.field_b) {
+          if (this.table.bucketCount <= this.nextBucket) {
             return null;
           }
-          fieldTemp$0 = this.field_b;
-          this.field_b = this.field_b + 1;
-          var3 = this.field_g.field_c[fieldTemp$0].next;
-        } while (var3 == this.field_g.field_c[-1 + this.field_b]);
-        this.field_c = var3;
-        this.field_d = var3.next;
-        return var3;
+          bucketIndex = this.nextBucket;
+          this.nextBucket = this.nextBucket + 1;
+          firstInBucket = this.table.buckets[bucketIndex].next;
+        } while (firstInBucket == this.table.buckets[-1 + this.nextBucket]);
+        this.lastReturned = firstInBucket;
+        this.cursor = firstInBucket.next;
+        return firstInBucket;
     }
 
     public final boolean hasNext() {
-        int fieldTemp$0 = 0;
-        int var2;
-        var2 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
-        if (this.field_g.field_c[-1 + this.field_b] != this.field_d) {
+        int bucketIndex = 0;
+        int obfuscationControl;
+        obfuscationControl = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        if (this.table.buckets[-1 + this.nextBucket] != this.cursor) {
           return true;
         }
-        while (this.field_b < this.field_g.field_d) {
-          fieldTemp$0 = this.field_b;
-          this.field_b = this.field_b + 1;
-          if (this.field_g.field_c[fieldTemp$0].next != this.field_g.field_c[this.field_b - 1]) {
-            this.field_d = this.field_g.field_c[this.field_b - 1].next;
+        while (this.nextBucket < this.table.bucketCount) {
+          bucketIndex = this.nextBucket;
+          this.nextBucket = this.nextBucket + 1;
+          if (this.table.buckets[bucketIndex].next != this.table.buckets[this.nextBucket - 1]) {
+            this.cursor = this.table.buckets[this.nextBucket - 1].next;
             return true;
           }
-          this.field_d = this.field_g.field_c[this.field_b - 1];
+          this.cursor = this.table.buckets[this.nextBucket - 1];
         }
         return false;
     }
@@ -190,24 +190,24 @@ final class tl implements Iterator {
         field_h = null;
     }
 
-    private final void c(byte param0) {
-        this.field_c = null;
-        this.field_d = this.field_g.field_c[0].next;
-        if (param0 < -85) {
-          this.field_b = 1;
+    private final void reset(byte obfuscationGuard) {
+        this.lastReturned = null;
+        this.cursor = this.table.buckets[0].next;
+        if (obfuscationGuard < -85) {
+          this.nextBucket = 1;
           return;
         }
-        this.field_c = (IntrusiveNode) null;
-        this.field_b = 1;
+        this.lastReturned = (IntrusiveNode) null;
+        this.nextBucket = 1;
     }
 
-    tl(m param0) {
-        this.field_c = null;
+    NodeHashIterator(IterableNodeHashTable table) {
+        this.lastReturned = null;
         try {
-          this.field_g = param0;
-          this.c((byte) -101);
+          this.table = table;
+          this.reset((byte) -101);
         } catch (RuntimeException runtimeException) {
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "tl.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "tl.<init>(" + (table != null ? "{...}" : "null") + ')');
         }
     }
 
