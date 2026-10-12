@@ -19,11 +19,11 @@ final class BufferedFile {
     private int readBufferLength;
     static RgbSprite[] field_k;
 
-    final static int a(long param0, long param1, byte param2) {
-        if (param2 != 97) {
+    final static int divideFixed16(long numerator, long denominator, byte obfuscationGuard) {
+        if (obfuscationGuard != 97) {
           field_a = (String) null;
         }
-        return (int)((param0 << 16) / param1);
+        return (int)((numerator << 16) / denominator);
     }
 
     final static boolean a(int param0, int param1, boolean param2, int param3, int param4, int param5) {

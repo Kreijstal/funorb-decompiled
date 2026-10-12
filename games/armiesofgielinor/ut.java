@@ -168,7 +168,7 @@ final class ut extends sf implements he {
             var6_int = -1 + var5_ref_String__.length;
             for (var7_int = 0; var7_int < this.field_db.length; var7_int++) {
               var8 = this.field_db[var7_int];
-              if (null != wq.field_a &&
+              if (null != FixedQuaternion.field_a &&
                 var8.field_b == ActionSpell.field_e.field_f &&
                 ActionSpell.field_e.field_n == var8.field_a) {
                 var6_int = var7_int;
@@ -228,7 +228,7 @@ final class ut extends sf implements he {
         if (param0 != -1) {
           return (fw) null;
         }
-        if (wq.field_a != null) {
+        if (FixedQuaternion.field_a != null) {
           return this.field_bb;
         }
         if (ActionSpell.field_e != null &&

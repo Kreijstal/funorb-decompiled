@@ -53,7 +53,7 @@ final class ts {
         try {
           sb.field_i.field_X = param0;
           if (rs.field_t != 2) {
-            ed.field_e.field_X = wq.field_c;
+            ed.field_e.field_X = FixedQuaternion.field_c;
           } else {
             ed.field_e.field_X = bq.field_d;
           }

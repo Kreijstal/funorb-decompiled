@@ -177,19 +177,19 @@ final class EffectPresentation implements EventPresentation {
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          this.camera.field_c[0] = this.presenter.tileIndex % this.mapWidth;
-          this.camera.field_c[1] = this.presenter.tileIndex / this.mapWidth;
-          this.camera.f(-111);
-          this.camera.i(0);
-          this.field_k[1] = this.camera.field_e[1];
-          this.field_k[0] = this.camera.field_e[0];
+          this.camera.gridPosition[0] = this.presenter.tileIndex % this.mapWidth;
+          this.camera.gridPosition[1] = this.presenter.tileIndex / this.mapWidth;
+          this.camera.projectGridToTarget(-111);
+          this.camera.projectTargetToScreen(0);
+          this.field_k[1] = this.camera.screenPosition[1];
+          this.field_k[0] = this.camera.screenPosition[0];
           var3_int = 127 % ((obfuscationGuard + 26) / 48);
           this.presenter.screenX = this.field_k[0];
           this.presenter.screenY = this.field_k[1];
           if (event == null) {
             return;
           }
-          this.finished = this.presenter.unitRenderer.a(this.presenter.screenX + 1, -35, this.presenter.screenY - 6, -1, event.unit);
+          this.finished = this.presenter.unitRenderer.advanceUnitModel(this.presenter.screenX + 1, -35, this.presenter.screenY - 6, -1, event.unit);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -310,7 +310,7 @@ final class EffectPresentation implements EventPresentation {
                 }
                 RadialSummonMenu.$cfr$intArgs$a$6d836999ad61(91, im.field_v[8]);
                 var23_ref.unit.modelAnimationIndex = 5;
-                var23_ref.a(var23_ref.unit, 12);
+                var23_ref.claimUnitModel(var23_ref.unit, 12);
                 this.advanceFrame(var23_ref, (byte) -95);
               } else {
                 if (event.eventKind != 17) {
@@ -330,7 +330,7 @@ final class EffectPresentation implements EventPresentation {
                         return false;
                       }
                       var21_ref.unit.modelAnimationIndex = 2;
-                      var21_ref.a(var21_ref.unit, 12);
+                      var21_ref.claimUnitModel(var21_ref.unit, 12);
                       this.advanceFrame(var21_ref, (byte) -103);
                     } else {
                       if (event.eventKind == 5) {
@@ -344,7 +344,7 @@ final class EffectPresentation implements EventPresentation {
                         var20_ref.unit.modelAnimationIndex = 1;
                         this.presenter.tileIndex = var4;
                         dh.a(var20_ref.unit.unitType, 0, obfuscationGuard ^ 25);
-                        var20_ref.a(var20_ref.unit, 12);
+                        var20_ref.claimUnitModel(var20_ref.unit, 12);
                         this.advanceFrame(var20_ref, (byte) -115);
                       } else {
                         if (12 != event.eventKind &&
@@ -361,7 +361,7 @@ final class EffectPresentation implements EventPresentation {
                               return false;
                             }
                             if (34 == var15.unit.unitType) {
-                              var15.unit.c(75, obfuscationGuard ^ 49);
+                              var15.unit.setModelUnitType(75, obfuscationGuard ^ 49);
                               var15.unit.modelAnimationIndex = 1;
                             } else {
                               if (var15.unit.unitType != 7 &&
@@ -372,7 +372,7 @@ final class EffectPresentation implements EventPresentation {
                               }
                               var15.unit.modelAnimationIndex = 4;
                             }
-                            var15.a(var15.unit, 12);
+                            var15.claimUnitModel(var15.unit, 12);
                             this.advanceFrame(var15, (byte) -75);
                           }
                           decompiledFrameRemainder0 = false;
@@ -388,7 +388,7 @@ final class EffectPresentation implements EventPresentation {
                             return false;
                           }
                           var18_ref.unit.modelAnimationIndex = 8;
-                          var18_ref.a(var18_ref.unit, 12);
+                          var18_ref.claimUnitModel(var18_ref.unit, 12);
                           this.advanceFrame(var18_ref, (byte) -124);
                         }
                       }
@@ -409,7 +409,7 @@ final class EffectPresentation implements EventPresentation {
                     }
                     dh.a(var13.unit.unitType, 0, 32);
                     var13.unit.modelAnimationIndex = 2;
-                    var13.a(var13.unit, 12);
+                    var13.claimUnitModel(var13.unit, 12);
                     this.advanceFrame(var13, (byte) 73);
                   }
                 } else {
@@ -423,7 +423,7 @@ final class EffectPresentation implements EventPresentation {
                     return false;
                   }
                   var11.unit.modelAnimationIndex = 4;
-                  var11.a(var11.unit, 12);
+                  var11.claimUnitModel(var11.unit, 12);
                   this.advanceFrame(var11, (byte) -126);
                 }
               }
@@ -437,7 +437,7 @@ final class EffectPresentation implements EventPresentation {
                 return false;
               }
               var9.unit.modelAnimationIndex = 1;
-              var9.a(var9.unit, 12);
+              var9.claimUnitModel(var9.unit, 12);
               this.advanceFrame(var9, (byte) 123);
             }
           } else {
@@ -454,7 +454,7 @@ final class EffectPresentation implements EventPresentation {
             }
             var7.unit.modelAnimationIndex = 7;
             dh.a(var7.unit.unitType, 5, obfuscationGuard - 25);
-            var7.a(var7.unit, 12);
+            var7.claimUnitModel(var7.unit, 12);
             this.advanceFrame(var7, (byte) 68);
           }
           if (obfuscationGuard == 57) {

@@ -830,7 +830,7 @@ abstract class vf {
         if (rs.field_o == null) {
           return -1;
         }
-        if (param0 >= wi.field_c && wi.field_c + rs.field_o.pixelWidth > param0 && param2 >= ro.field_pb &&
+        if (param0 >= VertexNormal.field_c && VertexNormal.field_c + rs.field_o.pixelWidth > param0 && param2 >= ro.field_pb &&
           !(param2 >= ro.field_pb + rs.field_o.pixelHeight)) {
           return 0;
         }

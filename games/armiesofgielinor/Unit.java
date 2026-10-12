@@ -23,7 +23,7 @@ final class Unit extends IntrusiveNode implements TaggedFieldReader {
     boolean packedFlag512;
     static boolean field_L;
     int bonusStrength;
-    boolean field_u;
+    boolean presentationOwnsModel;
     int movementFlags;
     static String field_y;
     int statusEffectValue;
@@ -109,14 +109,14 @@ final class Unit extends IntrusiveNode implements TaggedFieldReader {
         return this.unitType == 39 ? true : false;
     }
 
-    final void c(int param0, int param1) {
-        if (param1 != 8) {
+    final void setModelUnitType(int modelUnitType, int obfuscationGuard) {
+        if (obfuscationGuard != 8) {
           this.n((byte) 80);
         }
         if (this.modelPreview == null) {
-          this.modelPreview = new UnitModelPreview(this.field_R, param0, this.facingAngle);
+          this.modelPreview = new UnitModelPreview(this.field_R, modelUnitType, this.facingAngle);
         } else {
-          this.modelPreview.setUnitType((byte) 59, param0);
+          this.modelPreview.setUnitType((byte) 59, modelUnitType);
         }
     }
 
@@ -937,7 +937,7 @@ final class Unit extends IntrusiveNode implements TaggedFieldReader {
 
     private final boolean v(int param0) {
         if (param0 != 10) {
-          this.field_u = true;
+          this.presentationOwnsModel = true;
         }
         return (bw.unitDefinitions[this.unitType][10] & 1) > 0 ? true : false;
     }

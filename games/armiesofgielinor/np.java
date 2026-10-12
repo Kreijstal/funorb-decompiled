@@ -168,7 +168,7 @@ final class np extends je {
           if (param0) {
             np.e((byte) 102);
           }
-          for (var2_int = 0; var2_int < param1.field_I; var2_int++) {
+          for (var2_int = 0; var2_int < param1.vertexCount; var2_int++) {
             param1.field_o[var2_int] = 0;
           }
           param1.field_R = ih.field_E;

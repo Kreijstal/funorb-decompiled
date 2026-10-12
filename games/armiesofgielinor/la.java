@@ -16,9 +16,9 @@ final class la {
         int var2;
         int var4;
         var4 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
-        var2 = BestScoreStrategy.field_j[this.field_f].length;
+        var2 = BestScoreStrategy.unitAnimationVariants[this.field_f].length;
         for (var3 = 0; var2 > var3; var3++) {
-          if (BestScoreStrategy.field_j[this.field_f][var3][0] >= 0) {
+          if (BestScoreStrategy.unitAnimationVariants[this.field_f][var3][0] >= 0) {
             return var3;
           }
         }
@@ -119,7 +119,7 @@ final class la {
           this.field_b = 0;
         }
         if (var3 != 0) {
-          if (BestScoreStrategy.field_j[this.field_f][this.field_b][0] < 0) {
+          if (BestScoreStrategy.unitAnimationVariants[this.field_f][this.field_b][0] < 0) {
             this.field_b = this.c((byte) 82);
           }
           this.c(param0 ^ -126);
@@ -196,9 +196,9 @@ final class la {
     private final void c(int param0) {
         if (this.field_b >= 0 &&
           this.field_b < 9) {
-          this.field_a.selectSequence(-1, ck.field_e[sf.field_P[this.field_f]][BestScoreStrategy.field_j[this.field_f][this.field_b][0]]);
+          this.field_a.selectSequence(-1, ck.animationSequencesByGroup[sf.unitAnimationGroups[this.field_f]][BestScoreStrategy.unitAnimationVariants[this.field_f][this.field_b][0]]);
         } else {
-          this.field_a.selectSequence(~param0, ck.field_e[sf.field_P[this.field_f]][0]);
+          this.field_a.selectSequence(~param0, ck.animationSequencesByGroup[sf.unitAnimationGroups[this.field_f]][0]);
         }
         if (param0 != 0) {
           this.a((byte) 11, -94);

@@ -5,7 +5,7 @@ final class BestScoreStrategy extends AiPlanningStrategy {
     static RgbSprite field_m;
     static String field_k;
     static boolean field_l;
-    static int[][][] field_j;
+    static int[][][] unitAnimationVariants;
     static String field_h;
     static wr field_i;
 
@@ -201,7 +201,7 @@ final class BestScoreStrategy extends AiPlanningStrategy {
         field_h = null;
         field_k = null;
         field_m = null;
-        field_j = (int[][][]) null;
+        unitAnimationVariants = (int[][][]) null;
         field_i = null;
     }
 

@@ -57,10 +57,10 @@ abstract class hs extends kb implements gw {
         }
     }
 
-    final static js a(String param0, int param1, String param2) {
-        js var3 = null;
+    final static MeshData a(String param0, int param1, String param2) {
+        MeshData var3 = null;
         RuntimeException var3_ref = null;
-        js stackIn_6_0 = null;
+        MeshData stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;
@@ -71,9 +71,9 @@ abstract class hs extends kb implements gw {
           if (param1 != 235) {
             hs.a(124);
           }
-          var3 = js.a(SummonEvent.field_B, param0, param2);
+          var3 = MeshData.load(SummonEvent.field_B, param0, param2);
           if (var3 != null) {
-            var3.field_B = null;
+            var3.faceTextureIds = null;
           }
           stackIn_6_0 = var3;
           return stackIn_6_0;

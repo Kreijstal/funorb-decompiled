@@ -295,7 +295,7 @@ final class hu {
             break;
           }
           this.field_b[var3] = var4;
-          this.field_i[var3] = param0.a(112);
+          this.field_i[var3] = param0.readSignedSmart(112);
           this.field_q[var3] = param0.e(-23470);
         }
         this.field_p = param0.e(-23470);

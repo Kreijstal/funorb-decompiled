@@ -132,7 +132,7 @@ final class bk {
           SpellConfirmationDialog.field_i = param4;
           CombatEvent.field_A[2] = 9474303;
           fm.field_d[0] = 16764000;
-          ni.field_d = 8421504;
+          MeshObject.field_d = 8421504;
           fm.field_d[1] = 6356832;
           fm.field_d[3] = 16736511;
           CombatEvent.field_A[4] = 16711935;

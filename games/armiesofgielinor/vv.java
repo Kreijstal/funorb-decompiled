@@ -198,7 +198,7 @@ final class vv {
           var8 = CipherPacketBuffer.currentBattlefield.currentPlayer;
         }
         var9 = vs.field_e[param3];
-        if (var12.field_u) {
+        if (var12.presentationOwnsModel) {
           return;
         }
         if (var12.movementSpent) {

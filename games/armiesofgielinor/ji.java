@@ -50,16 +50,16 @@ final class ji {
 
     final static lk a(boolean param0) {
         if (param0) {
-          if (wi.field_f == null) {
-            wi.field_f = new lk(gl.field_e, 20, 0, 0, 0, 11579568, -1, 0, 0, gl.field_e.field_H, -1, 2147483647, true);
+          if (VertexNormal.field_f == null) {
+            VertexNormal.field_f = new lk(gl.field_e, 20, 0, 0, 0, 11579568, -1, 0, 0, gl.field_e.field_H, -1, 2147483647, true);
           }
-          return wi.field_f;
+          return VertexNormal.field_f;
         }
         ji.a(false);
-        if (wi.field_f == null) {
-          wi.field_f = new lk(gl.field_e, 20, 0, 0, 0, 11579568, -1, 0, 0, gl.field_e.field_H, -1, 2147483647, true);
+        if (VertexNormal.field_f == null) {
+          VertexNormal.field_f = new lk(gl.field_e, 20, 0, 0, 0, 11579568, -1, 0, 0, gl.field_e.field_H, -1, 2147483647, true);
         }
-        return wi.field_f;
+        return VertexNormal.field_f;
     }
 
     public static void a(int param0) {

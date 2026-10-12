@@ -192,8 +192,8 @@ final class sh {
           return;
         }
         this.field_k = param1;
-        var3 = sf.field_P[this.field_c];
-        var4 = ck.field_e[var3][this.field_k];
+        var3 = sf.unitAnimationGroups[this.field_c];
+        var4 = ck.animationSequencesByGroup[var3][this.field_k];
         var5 = 81 % ((param0 + 53) / 59);
         this.field_n.selectSequence(-1, var4);
         this.a((byte) 122);

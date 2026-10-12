@@ -122,7 +122,7 @@ final class MovementPresentation implements EventPresentation {
                   var14[0] = 3;
                 }
               }
-              var10.a(var10.unit, obfuscationGuard - 45);
+              var10.claimUnitModel(var10.unit, obfuscationGuard - 45);
               this.a(var17, true, var4);
               this.advanceFrame(var10, (byte) -94);
             }
@@ -143,7 +143,7 @@ final class MovementPresentation implements EventPresentation {
               hs.b(-90, 29);
             }
             var8.unit.modelAnimationIndex = 1;
-            var8.a(var8.unit, 12);
+            var8.claimUnitModel(var8.unit, 12);
             this.advanceFrame(var8, (byte) 58);
           }
           return true;
@@ -177,16 +177,16 @@ final class MovementPresentation implements EventPresentation {
           var8 = wh.a(117);
           var1 = var8;
           var2 = var8.length;
-          if (sf.field_P.length < var2) {
-            var2 = sf.field_P.length;
+          if (sf.unitAnimationGroups.length < var2) {
+            var2 = sf.unitAnimationGroups.length;
           }
           var3 = fd.field_n[0].length;
-          BestScoreStrategy.field_j = new int[var2][var3][];
+          BestScoreStrategy.unitAnimationVariants = new int[var2][var3][];
           if (param0 != -11757) {
             return;
           }
           for (var4 = 0; var4 < var2; var4++) {
-            var5 = sf.field_P[var4];
+            var5 = sf.unitAnimationGroups[var4];
             var6 = jq.field_I[var5];
             PreparedAction.a(var8[var4], var6, var4, 2378077);
           }
@@ -624,7 +624,7 @@ final class MovementPresentation implements EventPresentation {
           } else {
             var4.modelAnimationIndex = 5;
           }
-          this.presenter.unitRenderer.a(1 + this.presenter.screenX, -35, this.presenter.screenY - 6, var3_int, var4);
+          this.presenter.unitRenderer.advanceUnitModel(1 + this.presenter.screenX, -35, this.presenter.screenY - 6, var3_int, var4);
           var5 = 115 / ((obfuscationGuard + 26) / 48);
           this.elapsedFrames = this.elapsedFrames + 1;
           return;
@@ -673,18 +673,18 @@ final class MovementPresentation implements EventPresentation {
         if (param0 <= 12) {
           this.presenter = (EventPresenter) null;
         }
-        this.camera.field_c[1] = this.field_e[1];
-        this.camera.field_c[0] = this.field_e[0];
-        this.camera.f(-88);
-        this.camera.i(0);
-        this.field_c[1] = this.camera.field_e[1];
-        this.field_c[0] = this.camera.field_e[0];
-        this.camera.field_c[1] = this.field_n[1];
-        this.camera.field_c[0] = this.field_n[0];
-        this.camera.f(-54);
-        this.camera.i(0);
-        this.field_m[0] = this.camera.field_e[0];
-        this.field_m[1] = this.camera.field_e[1];
+        this.camera.gridPosition[1] = this.field_e[1];
+        this.camera.gridPosition[0] = this.field_e[0];
+        this.camera.projectGridToTarget(-88);
+        this.camera.projectTargetToScreen(0);
+        this.field_c[1] = this.camera.screenPosition[1];
+        this.field_c[0] = this.camera.screenPosition[0];
+        this.camera.gridPosition[1] = this.field_n[1];
+        this.camera.gridPosition[0] = this.field_n[0];
+        this.camera.projectGridToTarget(-54);
+        this.camera.projectTargetToScreen(0);
+        this.field_m[0] = this.camera.screenPosition[0];
+        this.field_m[1] = this.camera.screenPosition[1];
     }
 
     static {

@@ -310,7 +310,7 @@ final class EventPresenter extends IntrusiveNode {
           this.controller.field_oc == this.event.unit) {
           TeamRoster.field_g.f(var4 + 10, 5 + var5, 128 + (int)(64.0 * Math.sin((double)frameNumber / 3.141592653589793)));
         }
-        this.event.unit.modelPreview.a((byte) -72, false);
+        this.event.unit.modelPreview.drawAtStoredPosition((byte) -72, false);
         return;
     }
 
@@ -368,7 +368,7 @@ final class EventPresenter extends IntrusiveNode {
         if (this.elapsedFrames >= 1000) {
           this.acknowledged = true;
           this.presentation = null;
-          this.event.f(excludedEventKind + 7);
+          this.event.completeAllPresentations(excludedEventKind + 7);
           oo.e(-387);
         }
     }

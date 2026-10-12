@@ -52,11 +52,11 @@ abstract class Spell {
 
     abstract void writePayload(int obfuscationGuard, PacketBuffer packet);
 
-    final static int a(long param0, long param1, int param2) {
-        if (param2 != -1700635440) {
+    final static int multiplyFixed16(long left, long right, int obfuscationGuard) {
+        if (obfuscationGuard != -1700635440) {
           return 126;
         }
-        return (int)(param0 * param1 >> 16);
+        return (int)(left * right >> 16);
     }
 
     static {

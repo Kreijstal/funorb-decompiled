@@ -185,10 +185,10 @@ final class fs {
 
     final static boolean a(boolean param0) {
         if (!param0) {
-          return wq.field_a == null ? ph.field_f : true;
+          return FixedQuaternion.field_a == null ? ph.field_f : true;
         }
         fs.a(15, false, true, 64, -122, 113, -41, -38, 58);
-        return wq.field_a == null ? ph.field_f : true;
+        return FixedQuaternion.field_a == null ? ph.field_f : true;
     }
 
     public static void a(int param0) {

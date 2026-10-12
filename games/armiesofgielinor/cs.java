@@ -6,7 +6,7 @@ final class cs extends sf implements he {
     private kb field_ab;
     private fw field_gb;
     private fw field_Z;
-    static kk[] field_db;
+    static ModelMeshBase[] field_db;
     private long field_fb;
     static int field_Y;
     static String field_X;
@@ -81,7 +81,7 @@ final class cs extends sf implements he {
           return;
         }
         if (param0 != 10) {
-          field_db = (kk[]) null;
+          field_db = (ModelMeshBase[]) null;
           this.field_L = false;
           return;
         }
@@ -129,12 +129,12 @@ final class cs extends sf implements he {
             this.field_ab.field_v = "" + var7;
           }
           if (this.field_L &&
-            null == wq.field_a) {
+            null == FixedQuaternion.field_a) {
             this.n(param0 ^ 32728);
             this.field_G.a(new ud(this.field_G, mp.field_Mb), 0);
           }
-          if (null != wq.field_a &&
-            wq.field_a.field_k) {
+          if (null != FixedQuaternion.field_a &&
+            FixedQuaternion.field_a.field_k) {
             this.n(10);
             this.field_G.a(new ud(this.field_G, mp.field_Mb), param0 ^ 32722);
             return;
@@ -240,7 +240,7 @@ final class cs extends sf implements he {
 
     static {
         field_W = new String[]{"proj_aviansie_axe/aviansie_axe", "proj_arrow/proj_arrow", "proj_cannonball/proj_cannonball", "proj_dart/proj_dart", "proj_grenwall_spikes/proj_grenwall_spikes", "proj_rock/proj_catapultloadimpact", "proj_spear/spear"};
-        field_db = new kk[field_W.length];
+        field_db = new ModelMeshBase[field_W.length];
         field_X = "This item can only be used on a goblin priest.";
         field_cb = new java.math.BigInteger("65537");
         field_eb = "Performance";

@@ -3255,7 +3255,7 @@ final class TickCounter {
                 }
                 var2 = fk.a(false, "LABEL_MORE_OPTIONS");
                 if (var2 != null) {
-                  kg.field_c = uu.a(var2, (byte) -123);
+                  FaceNormal.field_c = uu.a(var2, (byte) -123);
                 }
                 var2 = fk.a(false, "LABEL_SLOW");
                 if (null != var2) {
@@ -3287,7 +3287,7 @@ final class TickCounter {
                 }
                 var2 = fk.a(false, "LABEL_MISSION_SELECTION");
                 if (var2 != null) {
-                  ni.field_b = uu.a(var2, (byte) 84);
+                  MeshObject.field_b = uu.a(var2, (byte) 84);
                 }
                 var2 = fk.a(false, "LABEL_CAMPAIGN_SELECTION");
                 if (var2 != null) {
@@ -3411,7 +3411,7 @@ final class TickCounter {
                 }
                 var2 = fk.a(false, "INTRO_1");
                 if (null != var2) {
-                  wi.field_a = uu.a(var2, (byte) 7);
+                  VertexNormal.field_a = uu.a(var2, (byte) 7);
                 }
                 var2 = fk.a(false, "INTRO_2");
                 if (null != var2) {
@@ -5500,11 +5500,11 @@ final class TickCounter {
                 }
                 var2 = fk.a(false, "LABEL_EQUIP");
                 if (var2 != null) {
-                  wi.field_h = uu.a(var2, (byte) -117);
+                  VertexNormal.field_h = uu.a(var2, (byte) -117);
                 }
                 var2 = fk.a(false, "LABEL_DEQUIP");
                 if (null != var2) {
-                  ni.field_c = uu.a(var2, (byte) 45);
+                  MeshObject.field_c = uu.a(var2, (byte) 45);
                 }
                 var2 = fk.a(false, "caption1");
                 if (null != var2) {
@@ -5731,7 +5731,7 @@ final class TickCounter {
                   l.field_b[17].b(param7, -40 + param3, param0, param8);
                   mv.a(param7 + 20, (byte) -95, ug.field_b + param4, var11, param3);
                   if (var11 > -1) {
-                    ResourceRequest.a(ActionRequest.unitModels[76][var11], false, -40 + param3, PaletteRegionMap.field_g, 128, 150, param7, (js) null, -10374);
+                    ResourceRequest.a(ActionRequest.unitModels[76][var11], false, -40 + param3, PaletteRegionMap.field_g, 128, 150, param7, (MeshData) null, -10374);
                   }
                   l.field_b[16].b(param7, -40 + param3, param0, param8);
                 }
@@ -5739,7 +5739,7 @@ final class TickCounter {
                   if (var11 > -1) {
                     mv.a(param7 + 20, (byte) -74, param4 + ug.field_b, var11, param3);
                   }
-                  ResourceRequest.a(ActionRequest.unitModels[76][var11], false, param3 - 40, PaletteRegionMap.field_g, 128, 150, param7, (js) null, -10374);
+                  ResourceRequest.a(ActionRequest.unitModels[76][var11], false, param3 - 40, PaletteRegionMap.field_g, 128, 150, param7, (MeshData) null, -10374);
                 }
                 if ((var10 != 3 ||
                   var13 != 0) &&

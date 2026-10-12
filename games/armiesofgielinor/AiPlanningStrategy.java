@@ -465,18 +465,18 @@ abstract class AiPlanningStrategy {
           }
           if (decompiledFrameRemainder0) {
             if (ActionSpell.field_e == null) {
-              wq.field_a = dj.a(640, 0, IntPair.field_m, -36, 0, 480);
+              FixedQuaternion.field_a = dj.a(640, 0, IntPair.field_m, -36, 0, 480);
               if (var3 != 0) {
-                wq.field_a = ActionSpell.field_e.c(-1);
+                FixedQuaternion.field_a = ActionSpell.field_e.c(-1);
                 ds.a(2, 99);
               }
             } else {
-              wq.field_a = ActionSpell.field_e.c(-1);
+              FixedQuaternion.field_a = ActionSpell.field_e.c(-1);
               ds.a(2, 99);
             }
-            if (null != wq.field_a) {
+            if (null != FixedQuaternion.field_a) {
               var2_int = 2;
-              lk.a(77, wq.field_a);
+              lk.a(77, FixedQuaternion.field_a);
               if (var3 != 0) {
                 var2_int = 3;
               }

@@ -74,12 +74,12 @@ final class PopupPresentation implements EventPresentation {
         int var5 = 0;
         var5 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          this.camera.field_c[0] = this.presenter.tileIndex % this.field_s;
-          this.camera.field_c[1] = this.presenter.tileIndex / this.field_s;
-          this.camera.f(-48);
-          this.camera.i(0);
-          this.field_q[1] = this.camera.field_e[1];
-          this.field_q[0] = this.camera.field_e[0];
+          this.camera.gridPosition[0] = this.presenter.tileIndex % this.field_s;
+          this.camera.gridPosition[1] = this.presenter.tileIndex / this.field_s;
+          this.camera.projectGridToTarget(-48);
+          this.camera.projectTargetToScreen(0);
+          this.field_q[1] = this.camera.screenPosition[1];
+          this.field_q[0] = this.camera.screenPosition[0];
           this.presenter.screenX = this.field_q[0];
           var3_int = -44 / ((obfuscationGuard + 26) / 48);
           this.elapsedFrames = this.elapsedFrames + 1;

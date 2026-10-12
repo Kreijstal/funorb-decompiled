@@ -51,9 +51,9 @@ final class CombatViewTransition {
         this.field_m = 0;
         this.field_g[1] = this.field_l;
         this.field_g[0] = this.field_c;
-        this.camera.a(1, param1);
-        this.field_a[0] = this.camera.field_e[0];
-        this.field_a[1] = this.camera.field_e[1];
+        this.camera.projectTile(1, param1);
+        this.field_a[0] = this.camera.screenPosition[0];
+        this.field_a[1] = this.camera.screenPosition[1];
         this.field_b[0] = so.field_b.field_a >> 1;
         this.field_b[1] = so.field_b.field_g >> 1;
         this.field_h = false;
@@ -220,9 +220,9 @@ final class CombatViewTransition {
         this.field_g[0] = 16;
         this.field_i[0] = this.field_c;
         this.field_i[1] = this.field_l;
-        this.camera.a(1, param0);
-        this.field_b[1] = this.camera.field_e[1];
-        this.field_b[0] = this.camera.field_e[0];
+        this.camera.projectTile(1, param0);
+        this.field_b[1] = this.camera.screenPosition[1];
+        this.field_b[0] = this.camera.screenPosition[0];
         this.field_h = true;
         int var3 = -107 / ((74 - param1) / 42);
         this.field_a[0] = so.field_b.field_a >> 1;

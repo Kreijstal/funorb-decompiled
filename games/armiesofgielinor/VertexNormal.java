@@ -1,15 +1,15 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class wi {
-    int field_d;
+final class VertexNormal {
+    int x;
     static String field_a;
     static int field_c;
     static String field_h;
-    int field_e;
+    int y;
     static lk field_f;
-    int field_b;
-    int field_g;
+    int z;
+    int contributions;
 
     final static void a(int param0, int param1, boolean param2, int param3, dn param4) {
         int var27_int = 0;

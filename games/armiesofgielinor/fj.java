@@ -204,7 +204,7 @@ final class fj {
 
     final void a(int param0) {
         int fieldTemp$0 = 0;
-        if (null != wq.field_a) {
+        if (null != FixedQuaternion.field_a) {
           return;
         }
         if (df.field_M <= 0) {

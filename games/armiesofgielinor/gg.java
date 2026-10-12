@@ -7,7 +7,7 @@ final class gg extends dr {
     static int field_G;
     static NodeDeque field_F;
     static int field_I;
-    static Random field_J;
+    static Random animationRandom;
     static String field_H;
     static ResourceArchive field_K;
     static je field_E;
@@ -50,7 +50,7 @@ final class gg extends dr {
         field_E = null;
         field_H = null;
         field_F = null;
-        field_J = null;
+        animationRandom = null;
         if (param0 != -2260) {
           gg.g(12);
         }
@@ -61,6 +61,6 @@ final class gg extends dr {
         field_F = new NodeDeque();
         field_H = "Options";
         field_I = 2;
-        field_J = new Random();
+        animationRandom = new Random();
     }
 }

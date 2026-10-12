@@ -6,7 +6,7 @@ class ro extends pt implements he {
     private boolean field_sb;
     static String field_kb;
     private boolean field_wb;
-    static BattleCamera field_ob;
+    static BattleCamera modelProjectionCamera;
     private boolean field_mb;
     static int field_pb;
     static int[] field_lb;
@@ -135,7 +135,7 @@ class ro extends pt implements he {
 
     public static void n(int param0) {
         field_lb = null;
-        field_ob = null;
+        modelProjectionCamera = null;
         field_rb = null;
         if (param0 != 0) {
           return;
@@ -202,7 +202,7 @@ class ro extends pt implements he {
             return true;
           }
           var4_ref_String = UpkeepEvent.field_C.toString();
-          if (kg.a(var4_ref_String, param1 + 134)) {
+          if (FaceNormal.a(var4_ref_String, param1 + 134)) {
             var13 = (String) null;
             var12 = (String) null;
             ta.a((String) null, 2, -18119, (String) null, KingBlackDragonEvent.field_y, 0);

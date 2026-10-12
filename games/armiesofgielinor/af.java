@@ -130,7 +130,7 @@ abstract class af {
               }
               var4 = var4 + param2;
             }
-            wq.a(var4, false);
+            FixedQuaternion.a(var4, false);
             var8 = dv.a(var4, -75, ":", "%3a");
             var9 = dv.a(var8, -110, "@", "%40");
             var10 = dv.a(var9, -68, "&", "%26");

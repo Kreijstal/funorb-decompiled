@@ -7,9 +7,9 @@ final class BattleUnitRenderer {
     private BattleCamera camera;
 
     private final boolean isTileVisible(byte obfuscationGuard, int tileIndex) {
-        this.camera.a(1, tileIndex);
-        int screenX = this.camera.field_e[0];
-        int screenY = this.camera.field_e[1];
+        this.camera.projectTile(1, tileIndex);
+        int screenX = this.camera.screenPosition[0];
+        int screenY = this.camera.screenPosition[1];
         if (obfuscationGuard > -77) {
           Unit var7 = (Unit) null;
           this.refreshUnitModel(-96, -101, (Unit) null);
@@ -38,7 +38,7 @@ final class BattleUnitRenderer {
         return ResourceArchive.field_a.currentPosition[1];
     }
 
-    final boolean a(int param0, int param1, int param2, int param3, Unit param4) {
+    final boolean advanceUnitModel(int screenXOrTileIndex, int obfuscationGuard, int screenY, int yawOverride, Unit unit) {
         int var6_int = 0;
         RuntimeException var6 = null;
         boolean stackIn_18_0 = false;
@@ -47,37 +47,37 @@ final class BattleUnitRenderer {
         String stackIn_24_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param4 == null) {
+          if (unit == null) {
             return true;
           }
-          if (param1 != -35) {
+          if (obfuscationGuard != -35) {
             this.camera = (BattleCamera) null;
           }
-          if (-1 < param3) {
-            param4.facingAngle = param3;
+          if (-1 < yawOverride) {
+            unit.facingAngle = yawOverride;
           }
-          if (null == param4.modelPreview) {
-            var6_int = param4.unitType;
+          if (null == unit.modelPreview) {
+            var6_int = unit.unitType;
             if (var6_int == 34 &&
-              param4.packedFlag8) {
+              unit.packedFlag8) {
               var6_int = 75;
             }
-            param4.modelPreview = new UnitModelPreview(param4.field_R, var6_int, param4.facingAngle);
+            unit.modelPreview = new UnitModelPreview(unit.field_R, var6_int, unit.facingAngle);
           }
-          if (param4.modelPreview == null) {
+          if (unit.modelPreview == null) {
             return true;
           }
-          if (param4.modelAnimationIndex == -1) {
-            param4.modelAnimationIndex = 0;
+          if (unit.modelAnimationIndex == -1) {
+            unit.modelAnimationIndex = 0;
           }
-          stackIn_18_0 = param4.modelPreview.a(param2, param4.modelVisible, param0, param3, param4.modelAnimationIndex, false);
+          stackIn_18_0 = unit.modelPreview.advanceBattleModel(screenY, unit.modelVisible, screenXOrTileIndex, yawOverride, unit.modelAnimationIndex, false);
           return stackIn_18_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = decompiledCaughtException;
           stackIn_23_0 = var6;
-          stackIn_23_1 = new StringBuilder().append("eo.C(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
-          if (param4 == null) {
+          stackIn_23_1 = new StringBuilder().append("eo.C(").append(screenXOrTileIndex).append(',').append(obfuscationGuard).append(',').append(screenY).append(',').append(yawOverride).append(',');
+          if (unit == null) {
             stackIn_24_2 = "null";
           } else {
             stackIn_24_2 = "{...}";
@@ -102,7 +102,7 @@ final class BattleUnitRenderer {
           for (tileIndex = 0; tileCount > tileIndex; tileIndex++) {
             unit = tiles[tileIndex].occupant;
             if (unit != null &&
-              !unit.field_u) {
+              !unit.presentationOwnsModel) {
               this.refreshUnitModel(79, tileIndex, unit);
             }
           }
@@ -204,11 +204,11 @@ final class BattleUnitRenderer {
             BattleUnitRenderer.a(false, (kd) null, (String) null, (String) null, -91, (byte) -105, (String) null);
           }
           if (!unit.modelVisible) {
-            if (!unit.field_u) {
+            if (!unit.presentationOwnsModel) {
               unit.modelPreview = null;
             }
           } else {
-            this.a(tileIndex, -35, -1, -1, unit);
+            this.advanceUnitModel(tileIndex, -35, -1, -1, unit);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

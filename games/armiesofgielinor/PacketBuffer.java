@@ -276,8 +276,8 @@ class PacketBuffer extends IntrusiveNode {
         }
     }
 
-    final int a(int param0) {
-        if (param0 <= 44) {
+    final int readSignedSmart(int obfuscationGuard) {
+        if (obfuscationGuard <= 44) {
           field_n = -101;
         }
         int var2 = this.payload[this.position] & 255;
@@ -772,7 +772,7 @@ class PacketBuffer extends IntrusiveNode {
         byte[] var2 = new byte[this.position];
         int var3 = 0;
         if (obfuscationGuard >= -27) {
-          this.a(97);
+          this.readSignedSmart(97);
         }
         while (var3 < this.position) {
           var2[var3] = this.payload[var3];

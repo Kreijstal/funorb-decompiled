@@ -169,7 +169,7 @@ abstract class GameEvent extends IntrusiveNode {
         this.presentationComplete = true;
         if (null != this.unit &&
           this.eventKind != 19) {
-          this.unit.field_u = false;
+          this.unit.presentationOwnsModel = false;
           this.unit.modelAnimationIndex = 0;
         }
         if (obfuscationGuard > -46) {
@@ -177,7 +177,7 @@ abstract class GameEvent extends IntrusiveNode {
         }
     }
 
-    final void a(Unit param0, int param1) {
+    final void claimUnitModel(Unit unit, int obfuscationGuard) {
         RuntimeException var3 = null;
         Unit var4 = null;
         RuntimeException stackIn_6_0 = null;
@@ -185,23 +185,23 @@ abstract class GameEvent extends IntrusiveNode {
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param1 != 12) {
+          if (obfuscationGuard != 12) {
             var4 = (Unit) null;
-            this.a((Unit) null, -102);
+            this.claimUnitModel((Unit) null, -102);
           }
-          param0.field_u = true;
+          unit.presentationOwnsModel = true;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
           stackIn_6_0 = var3;
           stackIn_6_1 = new StringBuilder().append("oj.J(");
-          if (param0 == null) {
+          if (unit == null) {
             stackIn_7_2 = "null";
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw ig.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
+          throw ig.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 
@@ -347,12 +347,12 @@ abstract class GameEvent extends IntrusiveNode {
         }
     }
 
-    final void f(int param0) {
+    final void completeAllPresentations(int obfuscationGuard) {
         if (this.unit != null) {
-          this.unit.field_u = false;
+          this.unit.presentationOwnsModel = false;
           this.unit.modelAnimationIndex = 0;
         }
-        if (param0 != 6) {
+        if (obfuscationGuard != 6) {
           GameEvent.a((byte) 88);
         }
         this.pendingPresentations = 0;

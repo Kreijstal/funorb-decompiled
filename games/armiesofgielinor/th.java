@@ -6,7 +6,7 @@ final class th {
     static ko[] field_b;
     static int field_a;
 
-    final static boolean a(js param0, int param1) {
+    final static boolean a(MeshData param0, int param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
@@ -19,8 +19,8 @@ final class th {
           if (param1 != -17900) {
             return false;
           }
-          for (var2_int = 0; param0.field_x > var2_int; var2_int++) {
-            if (param0.field_D[var2_int] > 50) {
+          for (var2_int = 0; param0.vertexCount > var2_int; var2_int++) {
+            if (param0.verticesY[var2_int] > 50) {
               return true;
             }
           }

@@ -2635,11 +2635,11 @@ final class GameplayController {
             boolean decompiledFrameCompleted0 = true;
             boolean decompiledFrameRemainder3 = true;
             if (this.field_m) {
-              this.camera.field_c[0] = this.selectedUnit.tileX;
-              this.camera.field_c[1] = this.selectedUnit.tileY;
-              this.camera.c(9470337);
-              var7Lifetime6 = this.camera.field_e[0];
-              var8Lifetime3 = this.camera.field_e[1];
+              this.camera.gridPosition[0] = this.selectedUnit.tileX;
+              this.camera.gridPosition[1] = this.selectedUnit.tileY;
+              this.camera.projectModelAnchor(9470337);
+              var7Lifetime6 = this.camera.screenPosition[0];
+              var8Lifetime3 = this.camera.screenPosition[1];
               var9_ref_int__ = this.battlefield.chosenGods[this.controlledPlayerId];
               if (var9_ref_int__.length != 3) {
                 var10Lifetime3 = 40;
@@ -2684,11 +2684,11 @@ final class GameplayController {
             }
             boolean decompiledFrameRemainder2 = true;
             if (stackIn_388_0) {
-              this.camera.field_c[1] = this.selectedUnit.tileY;
-              this.camera.field_c[0] = this.selectedUnit.tileX;
-              this.camera.c(9470337);
-              var7Lifetime7 = this.camera.field_e[0];
-              var8Lifetime4 = this.camera.field_e[1];
+              this.camera.gridPosition[1] = this.selectedUnit.tileY;
+              this.camera.gridPosition[0] = this.selectedUnit.tileX;
+              this.camera.projectModelAnchor(9470337);
+              var7Lifetime7 = this.camera.screenPosition[0];
+              var8Lifetime4 = this.camera.screenPosition[1];
               if (!wg.a(-33, var7Lifetime7 + 25, var7Lifetime7 + 55, var8Lifetime4 - 8, 7 + var8Lifetime4)) {
                 if (!wg.a(-33, 25 + var7Lifetime7, var7Lifetime7 + 55, 33 + var8Lifetime4, var8Lifetime4 + 48)) {
                   if (wg.a(-33, var7Lifetime7 - 15, 15 + var7Lifetime7, 13 + var8Lifetime4, var8Lifetime4 + 28)) {
@@ -2727,11 +2727,11 @@ final class GameplayController {
               }
             }
             if (this.field_y != -2) {
-              this.camera.field_c[1] = this.field_ec;
-              this.camera.field_c[0] = this.field_X;
-              this.camera.c(9470337);
-              var7Lifetime8 = this.camera.field_e[0] + 24;
-              var8Lifetime5 = this.camera.field_e[1];
+              this.camera.gridPosition[1] = this.field_ec;
+              this.camera.gridPosition[0] = this.field_X;
+              this.camera.projectModelAnchor(9470337);
+              var7Lifetime8 = this.camera.screenPosition[0] + 24;
+              var8Lifetime5 = this.camera.screenPosition[1];
               var9Lifetime5 = -1;
               if (this.godMenu != null) {
                 var9Lifetime5 = this.godMenu.getChoiceAtPoint((byte) -124, TeleportAction.field_z, var7Lifetime8 + 16, BattleTutorial.field_t, var8Lifetime5 + 16);
@@ -2914,11 +2914,11 @@ final class GameplayController {
               this.field_y = -2;
               return;
             }
-            this.camera.field_c[1] = this.field_ec;
-            this.camera.field_c[0] = this.field_X;
-            this.camera.c(9470337);
-            var2_int = 24 + this.camera.field_e[0];
-            var3 = this.camera.field_e[1];
+            this.camera.gridPosition[1] = this.field_ec;
+            this.camera.gridPosition[0] = this.field_X;
+            this.camera.projectModelAnchor(9470337);
+            var2_int = 24 + this.camera.screenPosition[0];
+            var3 = this.camera.screenPosition[1];
             if (null != this.godMenu) {
               this.godMenu.draw(this.battlefield.playerMana[this.controlledPlayerId], -23451, this.field_hc, var2_int, var3);
             }
@@ -2932,11 +2932,11 @@ final class GameplayController {
           }
           if (this.field_F) {
             boolean decompiledFrameRemainder0 = true;
-            this.camera.field_c[1] = this.selectedUnit.tileY;
-            this.camera.field_c[0] = this.selectedUnit.tileX;
-            this.camera.c(9470337);
-            var2_intLifetime1 = this.camera.field_e[0];
-            var3Lifetime1 = this.camera.field_e[1];
+            this.camera.gridPosition[1] = this.selectedUnit.tileY;
+            this.camera.gridPosition[0] = this.selectedUnit.tileX;
+            this.camera.projectModelAnchor(9470337);
+            var2_intLifetime1 = this.camera.screenPosition[0];
+            var3Lifetime1 = this.camera.screenPosition[1];
             if (wg.a(-33, 25 + var2_intLifetime1, 55 + var2_intLifetime1, -8 + var3Lifetime1, 7 + var3Lifetime1)) {
               var4_intLifetime1 = this.d(-92, -1 + this.selectedUnit.tileY, this.selectedUnit.tileX) ? 1 : 0;
               this.a(40, var4_intLifetime1 != 0, var3Lifetime1, 40 + var2_intLifetime1);
@@ -2971,11 +2971,11 @@ final class GameplayController {
           boolean decompiledFrameCompleted0 = true;
           boolean decompiledFrameRemainder1 = true;
           if (this.field_m) {
-            this.camera.field_c[0] = this.selectedUnit.tileX;
-            this.camera.field_c[1] = this.selectedUnit.tileY;
-            this.camera.c(9470337);
-            var2_intLifetime2 = this.camera.field_e[0];
-            var3Lifetime2 = this.camera.field_e[1];
+            this.camera.gridPosition[0] = this.selectedUnit.tileX;
+            this.camera.gridPosition[1] = this.selectedUnit.tileY;
+            this.camera.projectModelAnchor(9470337);
+            var2_intLifetime2 = this.camera.screenPosition[0];
+            var3Lifetime2 = this.camera.screenPosition[1];
             var4 = this.battlefield.chosenGods[this.controlledPlayerId];
             if (var4.length == 3) {
               UnitModelPreview.field_d[1 + this.battlefield.chosenGods[this.controlledPlayerId][1]].g(15 + var2_intLifetime2, 30 + var3Lifetime2);
@@ -4067,7 +4067,7 @@ final class GameplayController {
           this.unitRenderer = null;
           this.unitRenderer = null;
           cu.field_b = null;
-          ro.field_ob = null;
+          ro.modelProjectionCamera = null;
           ef.b(param0 ^ -112);
           if (param0 != 111) {
             this.field_hb = 66;
@@ -5329,7 +5329,7 @@ final class GameplayController {
           }
           if (rs.field_q == 84 &&
             br.field_f[86]) {
-            if (null != wq.field_a) {
+            if (null != FixedQuaternion.field_a) {
               ck.b(-122);
               if (var8 != 0) {
                 ke.field_a = false;
@@ -6920,11 +6920,11 @@ final class GameplayController {
               boolean decompiledFrameRemainder6 = true;
               if (stackIn_758_0 &&
                 var2 == null) {
-                this.camera.field_c[1] = this.selectedUnit.tileY;
-                this.camera.field_c[0] = this.selectedUnit.tileX;
-                this.camera.c(9470337);
-                var13 = this.camera.field_e[0];
-                var14 = this.camera.field_e[1];
+                this.camera.gridPosition[1] = this.selectedUnit.tileY;
+                this.camera.gridPosition[0] = this.selectedUnit.tileX;
+                this.camera.projectModelAnchor(9470337);
+                var13 = this.camera.screenPosition[0];
+                var14 = this.camera.screenPosition[1];
                 if (!wg.a(param0 - 153, 25 + var13, 55 + var13, -8 + var14, 7 + var14)) {
                   if (wg.a(param0 ^ -89, var13 + 25, var13 + 55, var14 + 33, var14 + 48)) {
                     var2 = aj.field_p;
@@ -6952,11 +6952,11 @@ final class GameplayController {
               boolean decompiledFrameRemainder4 = true;
               if (this.field_m &&
                 var2 == null) {
-                this.camera.field_c[0] = this.selectedUnit.tileX;
-                this.camera.field_c[1] = this.selectedUnit.tileY;
-                this.camera.c(9470337);
-                var13 = this.camera.field_e[0];
-                var14 = this.camera.field_e[1];
+                this.camera.gridPosition[0] = this.selectedUnit.tileX;
+                this.camera.gridPosition[1] = this.selectedUnit.tileY;
+                this.camera.projectModelAnchor(9470337);
+                var13 = this.camera.screenPosition[0];
+                var14 = this.camera.screenPosition[1];
                 var15_ref_int__ = this.battlefield.chosenGods[this.controlledPlayerId];
                 if (3 == var15_ref_int__.length) {
                   if (ml.a(var14 + 55, var13 + 40, 25, false)) {
@@ -6998,11 +6998,11 @@ final class GameplayController {
               }
               if ((decompiledFrameRemainder5) &&
                 (stackIn_807_0 != this.field_y)) {
-                this.camera.field_c[0] = this.field_X;
-                this.camera.field_c[1] = this.field_ec;
-                this.camera.c(9470337);
-                var13 = 24 + this.camera.field_e[0];
-                var14 = this.camera.field_e[1];
+                this.camera.gridPosition[0] = this.field_X;
+                this.camera.gridPosition[1] = this.field_ec;
+                this.camera.projectModelAnchor(9470337);
+                var13 = 24 + this.camera.screenPosition[0];
+                var14 = this.camera.screenPosition[1];
                 var15 = -1;
                 if (this.godMenu != null) {
                   var15 = this.godMenu.getChoiceAtPoint((byte) -107, ko.field_b, 16 + var13, AiPlanningStrategy.field_d, 16 + var14);
@@ -7037,11 +7037,11 @@ final class GameplayController {
               if (null == var2 &&
                 !this.field_m &&
                 !this.field_F) {
-                this.camera.field_e[1] = ko.field_b;
-                this.camera.field_e[0] = AiPlanningStrategy.field_d;
-                this.camera.c(false);
-                var13 = this.camera.field_c[0];
-                var14 = this.camera.field_c[1];
+                this.camera.screenPosition[1] = ko.field_b;
+                this.camera.screenPosition[0] = AiPlanningStrategy.field_d;
+                this.camera.screenToGrid(false);
+                var13 = this.camera.gridPosition[0];
+                var14 = this.camera.gridPosition[1];
                 var15 = -1;
                 var16 = var13 + var14 * this.battlefield.mapWidth;
                 var17 = 0;
@@ -7236,7 +7236,7 @@ final class GameplayController {
           this.eventPresenters = new NodeDeque();
           this.camera = new BattleCamera(this.battlefield.mapWidth, this.battlefield.mapHeight);
           this.unitRenderer = new BattleUnitRenderer(this.camera);
-          ro.field_ob = this.camera;
+          ro.modelProjectionCamera = this.camera;
           ot.a(this.battlefield, this.field_Ib, 1, this);
           var2_int = (this.battlefield.mapWidth >> 1) + (this.battlefield.mapWidth >> 1) * this.battlefield.mapWidth;
           if (!param0) {
@@ -7970,12 +7970,12 @@ final class GameplayController {
           var6 = stackIn_19_0;
           if (16 == param0) {
             boolean decompiledFrameRemainder5 = true;
-            this.camera.field_e[0] = AiPlanningStrategy.field_d;
-            this.camera.field_e[1] = ko.field_b;
-            this.camera.c(false);
-            this.camera.c(9470337);
-            var7 = this.camera.field_c[0];
-            var8 = this.camera.field_c[1];
+            this.camera.screenPosition[0] = AiPlanningStrategy.field_d;
+            this.camera.screenPosition[1] = ko.field_b;
+            this.camera.screenToGrid(false);
+            this.camera.projectModelAnchor(9470337);
+            var7 = this.camera.gridPosition[0];
+            var8 = this.camera.gridPosition[1];
             if (this.field_gc <= -1) {
               this.field_ic = -1;
               decompiledFrameRemainder5 = (var6 != 0);
@@ -7990,20 +7990,20 @@ final class GameplayController {
                   decompiledFrameRemainder4 = (var16 != 0);
                 }
                 if (decompiledFrameRemainder4) {
-                  this.camera.field_e[0] = AiPlanningStrategy.field_d;
-                  this.camera.field_e[1] = ko.field_b;
-                  this.camera.c(false);
-                  var9 = this.camera.field_c[0];
-                  var10 = this.camera.field_c[1];
+                  this.camera.screenPosition[0] = AiPlanningStrategy.field_d;
+                  this.camera.screenPosition[1] = ko.field_b;
+                  this.camera.screenToGrid(false);
+                  var9 = this.camera.gridPosition[0];
+                  var10 = this.camera.gridPosition[1];
                   stackIn_40_0 = this.movementPlanner;
                   stackIn_40_1 = var10;
                   stackIn_41_2 = (null != this.field_oc);
                   ((MovementPlanner) (Object) stackIn_40_0).selectTarget(stackIn_40_1, stackIn_41_2, var9, (byte) -125);
                 }
-                this.camera.field_e[0] = AiPlanningStrategy.field_d;
-                this.camera.field_e[1] = ko.field_b;
-                this.camera.c(false);
-                this.camera.c(9470337);
+                this.camera.screenPosition[0] = AiPlanningStrategy.field_d;
+                this.camera.screenPosition[1] = ko.field_b;
+                this.camera.screenToGrid(false);
+                this.camera.projectModelAnchor(9470337);
                 decompiledFrameRemainder5 = (var16 != 0);
               }
             }
@@ -8600,11 +8600,11 @@ final class GameplayController {
                 return;
               }
               if (param0 == 14) {
-                this.camera.field_c[1] = this.field_ec;
-                this.camera.field_c[0] = this.field_X;
-                this.camera.c(9470337);
-                var11Lifetime1Lifetime1 = 24 + this.camera.field_e[0];
-                var12Lifetime1Lifetime1 = this.camera.field_e[1];
+                this.camera.gridPosition[1] = this.field_ec;
+                this.camera.gridPosition[0] = this.field_X;
+                this.camera.projectModelAnchor(9470337);
+                var11Lifetime1Lifetime1 = 24 + this.camera.screenPosition[0];
+                var12Lifetime1Lifetime1 = this.camera.screenPosition[1];
                 var13Lifetime1Lifetime1 = -1;
                 if (this.godMenu != null) {
                   var13Lifetime1Lifetime1 = this.godMenu.getChoiceAtPoint((byte) -122, TeleportAction.field_z, var11Lifetime1Lifetime1 + 16, BattleTutorial.field_t, var12Lifetime1Lifetime1 + 16);
@@ -8617,11 +8617,11 @@ final class GameplayController {
                 }
               }
               if (param0 == 15) {
-                this.camera.field_c[0] = this.field_X;
-                this.camera.field_c[1] = this.field_ec;
-                this.camera.c(9470337);
-                var11Lifetime1Lifetime1 = this.camera.field_e[0] + 24;
-                var12Lifetime1Lifetime1 = this.camera.field_e[1];
+                this.camera.gridPosition[0] = this.field_X;
+                this.camera.gridPosition[1] = this.field_ec;
+                this.camera.projectModelAnchor(9470337);
+                var11Lifetime1Lifetime1 = this.camera.screenPosition[0] + 24;
+                var12Lifetime1Lifetime1 = this.camera.screenPosition[1];
                 var13Lifetime1Lifetime2 = this.unitMenus[this.field_y].getChoiceAtPoint((byte) -113, TeleportAction.field_z, var11Lifetime1Lifetime1 + 16, BattleTutorial.field_t, var12Lifetime1Lifetime1 + 16);
                 if (this.field_lb &&
                   ~this.battlefield.localPlayer != ~this.battlefield.currentPlayer) {
@@ -8634,11 +8634,11 @@ final class GameplayController {
               }
             }
             if (16 == param0) {
-              this.camera.field_e[0] = var8Lifetime2;
-              this.camera.field_e[1] = var9Lifetime1;
-              this.camera.c(false);
-              var9Lifetime1 = this.camera.field_c[1];
-              var8Lifetime2 = this.camera.field_c[0];
+              this.camera.screenPosition[0] = var8Lifetime2;
+              this.camera.screenPosition[1] = var9Lifetime1;
+              this.camera.screenToGrid(false);
+              var9Lifetime1 = this.camera.gridPosition[1];
+              var8Lifetime2 = this.camera.gridPosition[0];
               this.field_y = -2;
               if (!this.battlefield.field_X) {
                 if (-1 < this.field_gc &&
@@ -8659,7 +8659,7 @@ final class GameplayController {
                     var10_ref_jd.unitType != 72) {
                     this.field_oc = this.selectedUnit;
                   }
-                  if (!var10_ref_jd.field_u) {
+                  if (!var10_ref_jd.presentationOwnsModel) {
                     this.a(true, 58, var10_ref_jd);
                   }
                   this.movementPlanner.clearPath(-54);

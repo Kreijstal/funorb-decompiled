@@ -2628,16 +2628,16 @@ final class CombatPresentation implements EventPresentation {
         if (this.field_l == null) {
           return;
         }
-        this.camera.field_c[0] = this.presenter.tileIndex % this.mapWidth;
-        this.camera.field_c[1] = this.presenter.tileIndex / this.mapWidth;
+        this.camera.gridPosition[0] = this.presenter.tileIndex % this.mapWidth;
+        this.camera.gridPosition[1] = this.presenter.tileIndex / this.mapWidth;
         if (param0 != 2) {
           return;
         }
         try {
-          this.camera.f(-106);
-          this.camera.i(0);
-          this.field_l[1] = this.camera.field_e[1];
-          this.field_l[0] = this.camera.field_e[0];
+          this.camera.projectGridToTarget(-106);
+          this.camera.projectTargetToScreen(0);
+          this.field_l[1] = this.camera.screenPosition[1];
+          this.field_l[0] = this.camera.screenPosition[0];
           this.presenter.screenX = this.field_l[0];
           this.presenter.screenY = this.field_l[1];
         } catch (RuntimeException runtimeException) {

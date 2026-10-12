@@ -3,7 +3,7 @@
  */
 final class ck {
     static String field_d;
-    static AnimationSequence[][] field_e;
+    static AnimationSequence[][] animationSequencesByGroup;
     static long field_b;
     static String field_a;
     static RgbSprite[] field_c;
@@ -103,16 +103,16 @@ final class ck {
         if (param0 != 14) {
           return;
         }
-        field_e = (AnimationSequence[][]) null;
+        animationSequencesByGroup = (AnimationSequence[][]) null;
     }
 
     final static void b(int param0) {
-        if (wq.field_a == null) {
+        if (FixedQuaternion.field_a == null) {
           return;
         }
-        dt.a(wq.field_a, 23678);
-        wq.field_a.a(-30918, IntPair.field_m);
-        wq.field_a = null;
+        dt.a(FixedQuaternion.field_a, 23678);
+        FixedQuaternion.field_a.a(-30918, IntPair.field_m);
+        FixedQuaternion.field_a = null;
         if (null != ActionSpell.field_e) {
           ActionSpell.field_e.b(124);
         }
@@ -120,7 +120,7 @@ final class ck {
         if (param0 < -50) {
           return;
         }
-        field_e = (AnimationSequence[][]) null;
+        animationSequencesByGroup = (AnimationSequence[][]) null;
     }
 
     static {

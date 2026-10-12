@@ -150,7 +150,7 @@ final class oc extends je {
               discarded$9 = this.field_Qb.append((char) var2);
             }
           }
-          if (ni.a((byte) -125, (char) var2)) {
+          if (MeshObject.a((byte) -125, (char) var2)) {
             discarded$10 = this.field_Qb.append((char) var2);
             if (84 == rs.field_q) {
               if (this.field_Qb.length() <= 0) {
@@ -233,7 +233,7 @@ final class oc extends je {
               discarded$5 = this.field_Qb.append((char) var2Lifetime1);
             }
           }
-          if (ni.a((byte) -125, (char) var2Lifetime1)) {
+          if (MeshObject.a((byte) -125, (char) var2Lifetime1)) {
             discarded$6 = this.field_Qb.append((char) var2Lifetime1);
             if (84 == rs.field_q) {
               if (this.field_Qb.length() <= 0) {
@@ -316,7 +316,7 @@ final class oc extends je {
             discarded$1 = this.field_Qb.append((char) var2Lifetime2);
           }
         }
-        if (ni.a((byte) -125, (char) var2Lifetime2)) {
+        if (MeshObject.a((byte) -125, (char) var2Lifetime2)) {
           discarded$2 = this.field_Qb.append((char) var2Lifetime2);
           if (84 == rs.field_q) {
             if (this.field_Qb.length() <= 0) {

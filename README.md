@@ -23,7 +23,7 @@ by default for every game. Semantic game-specific names use explicit naming
 rules. Deko's numbered structural-category and type-based names identify
 unresolved purposes honestly; they are not complete semantic deobfuscation.
 
-Armies has 148 reviewed class names, not a complete semantic map. Campaign
+Armies has 154 reviewed class names, not a complete semantic map. Campaign
 loadouts now name unit/spell rewards, equipped slots and cumulative mana bonuses;
 reward previews retain unit-before-spell-before-mana precedence. Campaign menu
 entries, buttons and intrusive hash lookup/traversal now have reviewed names;
@@ -49,6 +49,14 @@ controlled archive provider. The mode-two empty-file null result is preserved.
 Portal summon menus, unit cycling, the turn timer, spell confirmations, battle
 tutorial hints and visible unit-model refresh now have reviewed names. Focused
 menu/cycle/timer/pointer/hint fixtures retain the existing edge behavior.
+
+MeshData/ModelMeshBase and vertex/face normals now expose decoding, normal
+accumulation, skin grouping and geometry-sharing boundaries. FixedQuaternion
+names 16.16 components and normalized rotation composition. Camera projection
+and event-owned model lifetime have names and fixtures, including fallback
+model creation. The pinned forward/inverse rectangular-map offset disagreement
+is retained. These headless checks do not verify rasterized mesh rendering or
+presented FPS.
 
 EquipmentBattleTutorial separately identifies specialist-equipment lessons
 after Eastbridge. Its equipped-slot cursor, god/unit unlock gates and selected

@@ -1,12 +1,12 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class kg {
-    int field_a;
+final class FaceNormal {
+    int y;
     static String field_c;
     static boolean field_d;
-    int field_e;
-    int field_b;
+    int z;
+    int x;
 
     public static void a(byte param0) {
         if (param0 >= -43) {

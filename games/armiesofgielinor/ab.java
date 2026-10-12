@@ -33,7 +33,7 @@ final class ab {
         try {
           for (var2_int = param1; var2_int < param0.length(); var2_int++) {
             var3 = param0.charAt(var2_int);
-            if (!ni.a((byte) -105, (char) var3) &&
+            if (!MeshObject.a((byte) -105, (char) var3) &&
               !mu.a(28799, (char) var3)) {
               return true;
             }

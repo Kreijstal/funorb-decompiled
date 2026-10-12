@@ -105,29 +105,29 @@ final class AnimationPlayer {
         this.ticksRemaining = 0;
     }
 
-    final kk applyCurrentFrame(boolean copyVariant, boolean obfuscationGuard, boolean frameVariant, kk model) {
-        kk var5 = null;
+    final ModelMeshBase applyCurrentFrame(boolean copyVariant, boolean obfuscationGuard, boolean frameVariant, ModelMeshBase model) {
+        ModelMeshBase var5 = null;
         RuntimeException var5_ref = null;
-        kk stackIn_2_0 = null;
-        kk stackIn_5_0 = null;
+        ModelMeshBase stackIn_2_0 = null;
+        ModelMeshBase stackIn_5_0 = null;
         boolean stackIn_5_1 = false;
         boolean stackIn_5_2 = false;
         boolean stackIn_6_3;
-        kk stackIn_7_0 = null;
+        ModelMeshBase stackIn_7_0 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
           if (!obfuscationGuard) {
-            stackIn_2_0 = (kk) null;
+            stackIn_2_0 = (ModelMeshBase) null;
             return stackIn_2_0;
           }
-          stackIn_5_0 = (kk) (model);
+          stackIn_5_0 = (ModelMeshBase) (model);
           stackIn_5_1 = copyVariant;
           stackIn_5_2 = false;
           stackIn_6_3 = !(frameVariant);
-          var5 = ((kk) (Object) stackIn_5_0).a(stackIn_5_1, stackIn_5_2, stackIn_6_3);
+          var5 = ((ModelMeshBase) (Object) stackIn_5_0).a(stackIn_5_1, stackIn_5_2, stackIn_6_3);
           var5.a(IntPair.field_q, this.frameId, (wp) null, -1, 0, 0, frameVariant);
           stackIn_7_0 = var5;
           return stackIn_7_0;

@@ -257,11 +257,11 @@ final class TurnEffectEvent extends GameEvent {
           } else {
             var5 = dc.field_l;
           }
-          fs.a(ni.field_d, (String) null, var5, 112, 0);
-          UpkeepEvent.field_z.field_W = (8355711 & SpellConfirmationDialog.field_i.field_W >> 1) - (ni.field_d >> 1 & 8355711) + ni.field_d;
+          fs.a(MeshObject.field_d, (String) null, var5, 112, 0);
+          UpkeepEvent.field_z.field_W = (8355711 & SpellConfirmationDialog.field_i.field_W >> 1) - (MeshObject.field_d >> 1 & 8355711) + MeshObject.field_d;
           jl.field_b = UpkeepEvent.field_z;
-          UpkeepEvent.field_z.field_T = (8355711 & SpellConfirmationDialog.field_i.field_T >> 1) + (ni.field_d - ((ni.field_d & 16711422) >> 1));
-          UpkeepEvent.field_z.field_wb = -((16711423 & ni.field_d) >> 1) + ni.field_d + ((SpellConfirmationDialog.field_i.field_wb & 16711423) >> 1);
+          UpkeepEvent.field_z.field_T = (8355711 & SpellConfirmationDialog.field_i.field_T >> 1) + (MeshObject.field_d - ((MeshObject.field_d & 16711422) >> 1));
+          UpkeepEvent.field_z.field_wb = -((16711423 & MeshObject.field_d) >> 1) + MeshObject.field_d + ((SpellConfirmationDialog.field_i.field_wb & 16711423) >> 1);
           ArchiveProvider.field_d = rb.field_b;
           UnitCycler.field_g = new je(0L, param2);
           sb.field_i = new je(0L, param4);

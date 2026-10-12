@@ -18,36 +18,36 @@ final class pg {
         return (param0 & -param0) == param0 ? true : false;
     }
 
-    final static AnimationSequence a(int param0, int param1, boolean param2, int param3) {
-        int var7 = 0;
-        int var8 = 0;
+    final static AnimationSequence selectUnitAnimation(int animationIndex, int obfuscationGuard, boolean allowDefaultFallback, int unitType) {
+        int variantOrdinal = 0;
+        int variant = 0;
         int var9 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
-        if (param0 < 0 ||
-          param0 >= 9) {
-          param0 = 0;
+        if (animationIndex < 0 ||
+          animationIndex >= 9) {
+          animationIndex = 0;
         }
-        int[] var13 = BestScoreStrategy.field_j[param3][param0];
-        int[] var11 = var13;
-        int[] var10 = var11;
-        int[] var4 = var10;
-        int var5 = var10[AttackEvent.a(false, var13.length, gg.field_J)];
-        if (var5 >= 0) {
-          return ck.field_e[sf.field_P[param3]][var5];
+        int[] variants = BestScoreStrategy.unitAnimationVariants[unitType][animationIndex];
+        int[] variantsAlias = variants;
+        int[] variantChoices = variantsAlias;
+        int[] slotVariants = variantChoices;
+        int selectedVariant = variantChoices[AttackEvent.a(false, variants.length, gg.animationRandom)];
+        if (selectedVariant >= 0) {
+          return ck.animationSequencesByGroup[sf.unitAnimationGroups[unitType]][selectedVariant];
         }
-        if (param1 != 176) {
+        if (obfuscationGuard != 176) {
           return (AnimationSequence) null;
         }
-        int[] var14 = var4;
-        for (var7 = 0; var7 < var14.length; var7++) {
-          var8 = var14[var7];
-          if (0 <= var8) {
-            return ck.field_e[sf.field_P[param3]][var8];
+        int[] fallbackChoices = slotVariants;
+        for (variantOrdinal = 0; variantOrdinal < fallbackChoices.length; variantOrdinal++) {
+          variant = fallbackChoices[variantOrdinal];
+          if (0 <= variant) {
+            return ck.animationSequencesByGroup[sf.unitAnimationGroups[unitType]][variant];
           }
         }
-        if (!param2) {
+        if (!allowDefaultFallback) {
           return null;
         }
-        return ck.field_e[sf.field_P[param3]][BestScoreStrategy.field_j[param3][0][0]];
+        return ck.animationSequencesByGroup[sf.unitAnimationGroups[unitType]][BestScoreStrategy.unitAnimationVariants[unitType][0][0]];
     }
 
     final static void a(boolean param0) {
@@ -111,7 +111,7 @@ final class pg {
               var5.field_i.a(14, var6, (byte) -128);
             }
             var7 = tn.field_Z;
-            var8 = wq.field_g;
+            var8 = FixedQuaternion.field_g;
             var7.field_i.a(20, var8, (byte) -115);
           }
           if (1 == param1.field_b &&

@@ -67,7 +67,7 @@ final class KingBlackDragonEvent extends GameEvent {
         if (var7 < 0) {
           var7 = CipherPacketBuffer.currentBattlefield.currentPlayer;
         }
-        if (var9.field_u) {
+        if (var9.presentationOwnsModel) {
           return;
         }
         if (null != var9.modelPreview) {
@@ -84,7 +84,7 @@ final class KingBlackDragonEvent extends GameEvent {
               TeamRoster.field_g.f(10 + param2, param4 + 5, (int)(Math.sin((double)ug.field_b / 3.141592653589793) * 64.0) + 128);
             }
           }
-          var9.modelPreview.a((byte) -72, param3);
+          var9.modelPreview.drawAtStoredPosition((byte) -72, param3);
         }
         if (param0 != 1) {
         }

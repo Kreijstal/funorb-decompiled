@@ -95,16 +95,16 @@ final class CoatOfArms {
         int var4_intLifetime1;
         var9 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          ck.field_e = new AnimationSequence[or.field_f.length][];
+          ck.animationSequencesByGroup = new AnimationSequence[or.field_f.length][];
           for (var4_int = param3; or.field_f.length > var4_int; var4_int++) {
             var10 = or.field_f[var4_int];
             var5 = var10;
             var6_int = jq.field_I[var4_int].length;
             array$0 = new AnimationSequence[var6_int];
-            ck.field_e[var4_int] = array$0;
+            ck.animationSequencesByGroup[var4_int] = array$0;
             for (var7 = 0; var6_int > var7; var7++) {
               var8 = jq.field_I[var4_int][var7];
-              ck.field_e[var4_int][var7] = new AnimationSequence(param0, var10, var8);
+              ck.animationSequencesByGroup[var4_int][var7] = new AnimationSequence(param0, var10, var8);
             }
           }
           if (!ta.field_L) {
@@ -123,7 +123,7 @@ final class CoatOfArms {
               var12++;
             }
           }
-          nl.a(param1, ck.field_e, param2, (byte) 126);
+          nl.a(param1, ck.animationSequencesByGroup, param2, (byte) 126);
           nl.a(param1, pv.field_a, param2, (byte) 126);
           MovementPresentation.c(param3 ^ -11757);
           return;

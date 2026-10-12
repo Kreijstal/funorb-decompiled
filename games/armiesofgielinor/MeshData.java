@@ -1,46 +1,46 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class js extends ni {
+final class MeshData extends MeshObject {
     private byte[] field_F;
     private short[] field_k;
-    int[] field_u;
+    int[] verticesZ;
     short[] field_n;
     private byte[] field_z;
     int field_E;
     private byte[] field_I;
-    short[] field_i;
+    short[] faceColors;
     private byte[] field_f;
     private short[] field_s;
-    kg[] field_L;
-    int[] field_o;
-    private int[] field_e;
-    int field_O;
-    int[] field_N;
+    FaceNormal[] faceNormals;
+    int[] faceVertexB;
+    private int[] faceSkinIds;
+    int faceCount;
+    int[] verticesX;
     short[] field_C;
-    byte[] field_p;
-    int field_v;
-    int[][] field_l;
+    byte[] faceRenderTypes;
+    int referencedVertexCapacity;
+    int[][] vertexGroups;
     short[] field_j;
     byte[] field_G;
     byte[] field_t;
-    int[] field_q;
+    int[] faceVertexA;
     short[] field_M;
     private short[] field_K;
     short[] field_A;
-    wi[] field_y;
+    VertexNormal[] vertexNormals;
     private byte[] field_J;
     byte[] field_w;
-    short[] field_B;
-    byte[] field_h;
-    wi[] field_g;
-    int[][] field_H;
-    int field_x;
-    int[] field_r;
-    private int[] field_m;
-    int[] field_D;
+    short[] faceTextureIds;
+    byte[] faceAlpha;
+    VertexNormal[] field_g;
+    int[][] faceGroups;
+    int vertexCount;
+    int[] faceVertexC;
+    private int[] vertexSkinIds;
+    int[] verticesY;
 
-    private final void b(byte[] param0) {
+    private final void decodeLegacyFormat(byte[] encodedMesh) {
         int var2;
         int var3;
         PacketBuffer var4;
@@ -98,12 +98,12 @@ final class js extends ni {
         int var44Lifetime1;
         var2 = 0;
         var3 = 0;
-        var4 = new PacketBuffer(param0);
-        var5 = new PacketBuffer(param0);
-        var6 = new PacketBuffer(param0);
-        var7 = new PacketBuffer(param0);
-        var8 = new PacketBuffer(param0);
-        var4.position = param0.length - 18;
+        var4 = new PacketBuffer(encodedMesh);
+        var5 = new PacketBuffer(encodedMesh);
+        var6 = new PacketBuffer(encodedMesh);
+        var7 = new PacketBuffer(encodedMesh);
+        var8 = new PacketBuffer(encodedMesh);
+        var4.position = encodedMesh.length - 18;
         var9 = var4.readUnsignedShort((byte) -104);
         var10 = var4.readUnsignedShort((byte) -104);
         var11 = var4.readUnsignedByte(0);
@@ -153,15 +153,15 @@ final class js extends ni {
         var21 = var21 + var18;
         var34 = var21;
         var21 = var21 + var19;
-        this.field_x = var9;
-        this.field_O = var10;
+        this.vertexCount = var9;
+        this.faceCount = var10;
         this.field_E = var11;
-        this.field_N = new int[var9];
-        this.field_D = new int[var9];
-        this.field_u = new int[var9];
-        this.field_q = new int[var10];
-        this.field_o = new int[var10];
-        this.field_r = new int[var10];
+        this.verticesX = new int[var9];
+        this.verticesY = new int[var9];
+        this.verticesZ = new int[var9];
+        this.faceVertexA = new int[var10];
+        this.faceVertexB = new int[var10];
+        this.faceVertexC = new int[var10];
         if (var11 > 0) {
           this.field_t = new byte[var11];
           this.field_M = new short[var11];
@@ -169,23 +169,23 @@ final class js extends ni {
           this.field_C = new short[var11];
         }
         if (var16 == 1) {
-          this.field_m = new int[var9];
+          this.vertexSkinIds = new int[var9];
         }
         if (var12 == 1) {
-          this.field_p = new byte[var10];
+          this.faceRenderTypes = new byte[var10];
           this.field_G = new byte[var10];
-          this.field_B = new short[var10];
+          this.faceTextureIds = new short[var10];
         }
         if (var13 == 255) {
           this.field_w = new byte[var10];
         }
         if (var14 == 1) {
-          this.field_h = new byte[var10];
+          this.faceAlpha = new byte[var10];
         }
         if (var15 == 1) {
-          this.field_e = new int[var10];
+          this.faceSkinIds = new int[var10];
         }
-        this.field_i = new short[var10];
+        this.faceColors = new short[var10];
         var4.position = var22;
         var5.position = var32;
         var6.position = var33;
@@ -198,24 +198,24 @@ final class js extends ni {
           var39 = var4.readUnsignedByte(0);
           var40 = 0;
           if ((var39 & 1) != 0) {
-            var40 = var5.a(78);
+            var40 = var5.readSignedSmart(78);
           }
           var41 = 0;
           if ((var39 & 2) != 0) {
-            var41 = var6.a(58);
+            var41 = var6.readSignedSmart(58);
           }
           var42 = 0;
           if ((var39 & 4) != 0) {
-            var42 = var7.a(64);
+            var42 = var7.readSignedSmart(64);
           }
-          this.field_N[var38] = var35 + var40;
-          this.field_D[var38] = var36 + var41;
-          this.field_u[var38] = var37 + var42;
-          var35 = this.field_N[var38];
-          var36 = this.field_D[var38];
-          var37 = this.field_u[var38];
+          this.verticesX[var38] = var35 + var40;
+          this.verticesY[var38] = var36 + var41;
+          this.verticesZ[var38] = var37 + var42;
+          var35 = this.verticesX[var38];
+          var36 = this.verticesY[var38];
+          var37 = this.verticesZ[var38];
           if (var16 == 1) {
-            this.field_m[var38] = var8.readUnsignedByte(0);
+            this.vertexSkinIds[var38] = var8.readUnsignedByte(0);
           }
         }
         var4.position = var30;
@@ -224,23 +224,23 @@ final class js extends ni {
         var7.position = var28;
         var8.position = var25;
         for (var38Lifetime1 = 0; var38Lifetime1 < var10; var38Lifetime1++) {
-          this.field_i[var38Lifetime1] = (short)var4.readUnsignedShort((byte) -104);
+          this.faceColors[var38Lifetime1] = (short)var4.readUnsignedShort((byte) -104);
           if (var12 == 1) {
             var39Lifetime1 = var5.readUnsignedByte(0);
             if ((var39Lifetime1 & 1) != 1) {
-              this.field_p[var38Lifetime1] = (byte) 0;
+              this.faceRenderTypes[var38Lifetime1] = (byte) 0;
             } else {
-              this.field_p[var38Lifetime1] = (byte) 1;
+              this.faceRenderTypes[var38Lifetime1] = (byte) 1;
               var2 = 1;
             }
             if ((var39Lifetime1 & 2) != 2) {
               this.field_G[var38Lifetime1] = (byte)-1;
-              this.field_B[var38Lifetime1] = (short)-1;
+              this.faceTextureIds[var38Lifetime1] = (short)-1;
             } else {
               this.field_G[var38Lifetime1] = (byte)(var39Lifetime1 >> 2);
-              this.field_B[var38Lifetime1] = this.field_i[var38Lifetime1];
-              this.field_i[var38Lifetime1] = (short)127;
-              if (this.field_B[var38Lifetime1] != -1) {
+              this.faceTextureIds[var38Lifetime1] = this.faceColors[var38Lifetime1];
+              this.faceColors[var38Lifetime1] = (short)127;
+              if (this.faceTextureIds[var38Lifetime1] != -1) {
                 var3 = 1;
               }
             }
@@ -249,13 +249,13 @@ final class js extends ni {
             this.field_w[var38Lifetime1] = var6.readByte((byte) -124);
           }
           if (var14 == 1) {
-            this.field_h[var38Lifetime1] = var7.readByte((byte) 126);
+            this.faceAlpha[var38Lifetime1] = var7.readByte((byte) 126);
           }
           if (var15 == 1) {
-            this.field_e[var38Lifetime1] = var8.readUnsignedByte(0);
+            this.faceSkinIds[var38Lifetime1] = var8.readUnsignedByte(0);
           }
         }
-        this.field_v = -1;
+        this.referencedVertexCapacity = -1;
         var4.position = var29;
         var5.position = var23;
         var38Lifetime2 = 0;
@@ -265,62 +265,62 @@ final class js extends ni {
         for (var42Lifetime1 = 0; var42Lifetime1 < var10; var42Lifetime1++) {
           var43 = var5.readUnsignedByte(0);
           if (var43 == 1) {
-            var38Lifetime2 = var4.a(115) + var41Lifetime1;
+            var38Lifetime2 = var4.readSignedSmart(115) + var41Lifetime1;
             var41Lifetime1 = var38Lifetime2;
-            var39Lifetime2 = var4.a(76) + var41Lifetime1;
+            var39Lifetime2 = var4.readSignedSmart(76) + var41Lifetime1;
             var41Lifetime1 = var39Lifetime2;
-            var40Lifetime1 = var4.a(53) + var41Lifetime1;
+            var40Lifetime1 = var4.readSignedSmart(53) + var41Lifetime1;
             var41Lifetime1 = var40Lifetime1;
-            this.field_q[var42Lifetime1] = var38Lifetime2;
-            this.field_o[var42Lifetime1] = var39Lifetime2;
-            this.field_r[var42Lifetime1] = var40Lifetime1;
-            if (var38Lifetime2 > this.field_v) {
-              this.field_v = var38Lifetime2;
+            this.faceVertexA[var42Lifetime1] = var38Lifetime2;
+            this.faceVertexB[var42Lifetime1] = var39Lifetime2;
+            this.faceVertexC[var42Lifetime1] = var40Lifetime1;
+            if (var38Lifetime2 > this.referencedVertexCapacity) {
+              this.referencedVertexCapacity = var38Lifetime2;
             }
-            if (var39Lifetime2 > this.field_v) {
-              this.field_v = var39Lifetime2;
+            if (var39Lifetime2 > this.referencedVertexCapacity) {
+              this.referencedVertexCapacity = var39Lifetime2;
             }
-            if (var40Lifetime1 > this.field_v) {
-              this.field_v = var40Lifetime1;
+            if (var40Lifetime1 > this.referencedVertexCapacity) {
+              this.referencedVertexCapacity = var40Lifetime1;
             }
           }
           if (var43 == 2) {
             var39Lifetime2 = var40Lifetime1;
-            var40Lifetime1 = var4.a(67) + var41Lifetime1;
+            var40Lifetime1 = var4.readSignedSmart(67) + var41Lifetime1;
             var41Lifetime1 = var40Lifetime1;
-            this.field_q[var42Lifetime1] = var38Lifetime2;
-            this.field_o[var42Lifetime1] = var39Lifetime2;
-            this.field_r[var42Lifetime1] = var40Lifetime1;
-            if (var40Lifetime1 > this.field_v) {
-              this.field_v = var40Lifetime1;
+            this.faceVertexA[var42Lifetime1] = var38Lifetime2;
+            this.faceVertexB[var42Lifetime1] = var39Lifetime2;
+            this.faceVertexC[var42Lifetime1] = var40Lifetime1;
+            if (var40Lifetime1 > this.referencedVertexCapacity) {
+              this.referencedVertexCapacity = var40Lifetime1;
             }
           }
           if (var43 == 3) {
             var38Lifetime2 = var40Lifetime1;
-            var40Lifetime1 = var4.a(106) + var41Lifetime1;
+            var40Lifetime1 = var4.readSignedSmart(106) + var41Lifetime1;
             var41Lifetime1 = var40Lifetime1;
-            this.field_q[var42Lifetime1] = var38Lifetime2;
-            this.field_o[var42Lifetime1] = var39Lifetime2;
-            this.field_r[var42Lifetime1] = var40Lifetime1;
-            if (var40Lifetime1 > this.field_v) {
-              this.field_v = var40Lifetime1;
+            this.faceVertexA[var42Lifetime1] = var38Lifetime2;
+            this.faceVertexB[var42Lifetime1] = var39Lifetime2;
+            this.faceVertexC[var42Lifetime1] = var40Lifetime1;
+            if (var40Lifetime1 > this.referencedVertexCapacity) {
+              this.referencedVertexCapacity = var40Lifetime1;
             }
           }
           if (var43 == 4) {
             var44 = var38Lifetime2;
             var38Lifetime2 = var39Lifetime2;
             var39Lifetime2 = var44;
-            var40Lifetime1 = var4.a(109) + var41Lifetime1;
+            var40Lifetime1 = var4.readSignedSmart(109) + var41Lifetime1;
             var41Lifetime1 = var40Lifetime1;
-            this.field_q[var42Lifetime1] = var38Lifetime2;
-            this.field_o[var42Lifetime1] = var39Lifetime2;
-            this.field_r[var42Lifetime1] = var40Lifetime1;
-            if (var40Lifetime1 > this.field_v) {
-              this.field_v = var40Lifetime1;
+            this.faceVertexA[var42Lifetime1] = var38Lifetime2;
+            this.faceVertexB[var42Lifetime1] = var39Lifetime2;
+            this.faceVertexC[var42Lifetime1] = var40Lifetime1;
+            if (var40Lifetime1 > this.referencedVertexCapacity) {
+              this.referencedVertexCapacity = var40Lifetime1;
             }
           }
         }
-        this.field_v = this.field_v + 1;
+        this.referencedVertexCapacity = this.referencedVertexCapacity + 1;
         var4.position = var31;
         for (var42Lifetime2 = 0; var42Lifetime2 < var11; var42Lifetime2++) {
           this.field_t[var42Lifetime2] = (byte) 0;
@@ -335,9 +335,9 @@ final class js extends ni {
           while (var45 < var10) {
             var44Lifetime1 = this.field_G[var45] & 255;
             if (var44Lifetime1 != 255) {
-              if ((this.field_M[var44Lifetime1] & 65535) == this.field_q[var45] &&
-                (this.field_n[var44Lifetime1] & 65535) == this.field_o[var45] &&
-                (this.field_C[var44Lifetime1] & 65535) == this.field_r[var45]) {
+              if ((this.field_M[var44Lifetime1] & 65535) == this.faceVertexA[var45] &&
+                (this.field_n[var44Lifetime1] & 65535) == this.faceVertexB[var45] &&
+                (this.field_C[var44Lifetime1] & 65535) == this.faceVertexC[var45]) {
                 this.field_G[var45] = (byte)-1;
               } else {
                 var42Lifetime3 = 1;
@@ -350,14 +350,14 @@ final class js extends ni {
           }
         }
         if (var3 == 0) {
-          this.field_B = null;
+          this.faceTextureIds = null;
         }
         if (var2 == 0) {
-          this.field_p = null;
+          this.faceRenderTypes = null;
         }
     }
 
-    private final void a(byte[] param0) {
+    private final void decodeExtendedFormat(byte[] encodedMesh) {
         byte dupTemp$0 = 0;
         int stackIn_3_0 = 0;
         int stackIn_6_0 = 0;
@@ -431,14 +431,14 @@ final class js extends ni {
         int var57Lifetime3;
         int var58Lifetime1;
         int var58Lifetime2;
-        var2 = new PacketBuffer(param0);
-        var3 = new PacketBuffer(param0);
-        var4 = new PacketBuffer(param0);
-        var5 = new PacketBuffer(param0);
-        var6 = new PacketBuffer(param0);
-        var7 = new PacketBuffer(param0);
-        var8 = new PacketBuffer(param0);
-        var2.position = param0.length - 23;
+        var2 = new PacketBuffer(encodedMesh);
+        var3 = new PacketBuffer(encodedMesh);
+        var4 = new PacketBuffer(encodedMesh);
+        var5 = new PacketBuffer(encodedMesh);
+        var6 = new PacketBuffer(encodedMesh);
+        var7 = new PacketBuffer(encodedMesh);
+        var8 = new PacketBuffer(encodedMesh);
+        var2.position = encodedMesh.length - 23;
         var9 = var2.readUnsignedShort((byte) -104);
         var10 = var2.readUnsignedShort((byte) -104);
         var11 = var2.readUnsignedByte(0);
@@ -533,38 +533,38 @@ final class js extends ni {
         var48 = var28Lifetime1;
         var28Lifetime1 = var28Lifetime1 + (var26 + var27 * 2);
         var49 = var28Lifetime1;
-        this.field_x = var9;
-        this.field_O = var10;
+        this.vertexCount = var9;
+        this.faceCount = var10;
         this.field_E = var11;
-        this.field_N = new int[var9];
-        this.field_D = new int[var9];
-        this.field_u = new int[var9];
-        this.field_q = new int[var10];
-        this.field_o = new int[var10];
-        this.field_r = new int[var10];
+        this.verticesX = new int[var9];
+        this.verticesY = new int[var9];
+        this.verticesZ = new int[var9];
+        this.faceVertexA = new int[var10];
+        this.faceVertexB = new int[var10];
+        this.faceVertexC = new int[var10];
         if (var19 == 1) {
-          this.field_m = new int[var9];
+          this.vertexSkinIds = new int[var9];
         }
         if (var13 != 0) {
-          this.field_p = new byte[var10];
+          this.faceRenderTypes = new byte[var10];
         }
         if (var15 == 255) {
           this.field_w = new byte[var10];
         }
         if (var16 == 1) {
-          this.field_h = new byte[var10];
+          this.faceAlpha = new byte[var10];
         }
         if (var17 == 1) {
-          this.field_e = new int[var10];
+          this.faceSkinIds = new int[var10];
         }
         if (var18 == 1) {
-          this.field_B = new short[var10];
+          this.faceTextureIds = new short[var10];
         }
         if (var18 == 1 &&
           var11 > 0) {
           this.field_G = new byte[var10];
         }
-        this.field_i = new short[var10];
+        this.faceColors = new short[var10];
         if (var11 > 0) {
           this.field_M = new short[var11];
           this.field_n = new short[var11];
@@ -594,24 +594,24 @@ final class js extends ni {
           var54 = var2.readUnsignedByte(0);
           var55 = 0;
           if ((var54 & 1) != 0) {
-            var55 = var3.a(67);
+            var55 = var3.readSignedSmart(67);
           }
           var56 = 0;
           if ((var54 & 2) != 0) {
-            var56 = var4.a(114);
+            var56 = var4.readSignedSmart(114);
           }
           var57 = 0;
           if ((var54 & 4) != 0) {
-            var57 = var5.a(96);
+            var57 = var5.readSignedSmart(96);
           }
-          this.field_N[var53] = var50 + var55;
-          this.field_D[var53] = var51 + var56;
-          this.field_u[var53] = var52 + var57;
-          var50 = this.field_N[var53];
-          var51 = this.field_D[var53];
-          var52 = this.field_u[var53];
+          this.verticesX[var53] = var50 + var55;
+          this.verticesY[var53] = var51 + var56;
+          this.verticesZ[var53] = var52 + var57;
+          var50 = this.verticesX[var53];
+          var51 = this.verticesY[var53];
+          var52 = this.verticesZ[var53];
           if (var19 == 1) {
-            this.field_m[var53] = var6.readUnsignedByte(0);
+            this.vertexSkinIds[var53] = var6.readUnsignedByte(0);
           }
         }
         var2.position = var39;
@@ -622,31 +622,31 @@ final class js extends ni {
         var7.position = var37;
         var8.position = var38;
         for (var53Lifetime1 = 0; var53Lifetime1 < var10; var53Lifetime1++) {
-          this.field_i[var53Lifetime1] = (short)var2.readUnsignedShort((byte) -104);
+          this.faceColors[var53Lifetime1] = (short)var2.readUnsignedShort((byte) -104);
           if (var13 != 0) {
-            this.field_p[var53Lifetime1] = var3.readByte((byte) 8);
+            this.faceRenderTypes[var53Lifetime1] = var3.readByte((byte) 8);
           }
           if (var15 == 255) {
             this.field_w[var53Lifetime1] = var4.readByte((byte) -101);
           }
           if (var16 == 1) {
-            this.field_h[var53Lifetime1] = var5.readByte((byte) 105);
+            this.faceAlpha[var53Lifetime1] = var5.readByte((byte) 105);
           }
           if (var17 == 1) {
-            this.field_e[var53Lifetime1] = var6.readUnsignedByte(0);
+            this.faceSkinIds[var53Lifetime1] = var6.readUnsignedByte(0);
           }
           if (var18 == 1) {
-            this.field_B[var53Lifetime1] = (short)(var7.readUnsignedShort((byte) -104) - 1);
+            this.faceTextureIds[var53Lifetime1] = (short)(var7.readUnsignedShort((byte) -104) - 1);
           }
           if (this.field_G != null) {
-            if (this.field_B[var53Lifetime1] == -1) {
+            if (this.faceTextureIds[var53Lifetime1] == -1) {
               this.field_G[var53Lifetime1] = (byte)-1;
             } else {
               this.field_G[var53Lifetime1] = (byte)(var8.readUnsignedByte(0) - 1);
             }
           }
         }
-        this.field_v = -1;
+        this.referencedVertexCapacity = -1;
         var2.position = var36;
         var3.position = var31;
         var53Lifetime2 = 0;
@@ -656,62 +656,62 @@ final class js extends ni {
         for (var57Lifetime1 = 0; var57Lifetime1 < var10; var57Lifetime1++) {
           var58 = var3.readUnsignedByte(0);
           if (var58 == 1) {
-            var53Lifetime2 = var2.a(51) + var56Lifetime1;
+            var53Lifetime2 = var2.readSignedSmart(51) + var56Lifetime1;
             var56Lifetime1 = var53Lifetime2;
-            var54Lifetime1 = var2.a(80) + var56Lifetime1;
+            var54Lifetime1 = var2.readSignedSmart(80) + var56Lifetime1;
             var56Lifetime1 = var54Lifetime1;
-            var55Lifetime1 = var2.a(62) + var56Lifetime1;
+            var55Lifetime1 = var2.readSignedSmart(62) + var56Lifetime1;
             var56Lifetime1 = var55Lifetime1;
-            this.field_q[var57Lifetime1] = var53Lifetime2;
-            this.field_o[var57Lifetime1] = var54Lifetime1;
-            this.field_r[var57Lifetime1] = var55Lifetime1;
-            if (var53Lifetime2 > this.field_v) {
-              this.field_v = var53Lifetime2;
+            this.faceVertexA[var57Lifetime1] = var53Lifetime2;
+            this.faceVertexB[var57Lifetime1] = var54Lifetime1;
+            this.faceVertexC[var57Lifetime1] = var55Lifetime1;
+            if (var53Lifetime2 > this.referencedVertexCapacity) {
+              this.referencedVertexCapacity = var53Lifetime2;
             }
-            if (var54Lifetime1 > this.field_v) {
-              this.field_v = var54Lifetime1;
+            if (var54Lifetime1 > this.referencedVertexCapacity) {
+              this.referencedVertexCapacity = var54Lifetime1;
             }
-            if (var55Lifetime1 > this.field_v) {
-              this.field_v = var55Lifetime1;
+            if (var55Lifetime1 > this.referencedVertexCapacity) {
+              this.referencedVertexCapacity = var55Lifetime1;
             }
           }
           if (var58 == 2) {
             var54Lifetime1 = var55Lifetime1;
-            var55Lifetime1 = var2.a(99) + var56Lifetime1;
+            var55Lifetime1 = var2.readSignedSmart(99) + var56Lifetime1;
             var56Lifetime1 = var55Lifetime1;
-            this.field_q[var57Lifetime1] = var53Lifetime2;
-            this.field_o[var57Lifetime1] = var54Lifetime1;
-            this.field_r[var57Lifetime1] = var55Lifetime1;
-            if (var55Lifetime1 > this.field_v) {
-              this.field_v = var55Lifetime1;
+            this.faceVertexA[var57Lifetime1] = var53Lifetime2;
+            this.faceVertexB[var57Lifetime1] = var54Lifetime1;
+            this.faceVertexC[var57Lifetime1] = var55Lifetime1;
+            if (var55Lifetime1 > this.referencedVertexCapacity) {
+              this.referencedVertexCapacity = var55Lifetime1;
             }
           }
           if (var58 == 3) {
             var53Lifetime2 = var55Lifetime1;
-            var55Lifetime1 = var2.a(119) + var56Lifetime1;
+            var55Lifetime1 = var2.readSignedSmart(119) + var56Lifetime1;
             var56Lifetime1 = var55Lifetime1;
-            this.field_q[var57Lifetime1] = var53Lifetime2;
-            this.field_o[var57Lifetime1] = var54Lifetime1;
-            this.field_r[var57Lifetime1] = var55Lifetime1;
-            if (var55Lifetime1 > this.field_v) {
-              this.field_v = var55Lifetime1;
+            this.faceVertexA[var57Lifetime1] = var53Lifetime2;
+            this.faceVertexB[var57Lifetime1] = var54Lifetime1;
+            this.faceVertexC[var57Lifetime1] = var55Lifetime1;
+            if (var55Lifetime1 > this.referencedVertexCapacity) {
+              this.referencedVertexCapacity = var55Lifetime1;
             }
           }
           if (var58 == 4) {
             var59 = var53Lifetime2;
             var53Lifetime2 = var54Lifetime1;
             var54Lifetime1 = var59;
-            var55Lifetime1 = var2.a(118) + var56Lifetime1;
+            var55Lifetime1 = var2.readSignedSmart(118) + var56Lifetime1;
             var56Lifetime1 = var55Lifetime1;
-            this.field_q[var57Lifetime1] = var53Lifetime2;
-            this.field_o[var57Lifetime1] = var54Lifetime1;
-            this.field_r[var57Lifetime1] = var55Lifetime1;
-            if (var55Lifetime1 > this.field_v) {
-              this.field_v = var55Lifetime1;
+            this.faceVertexA[var57Lifetime1] = var53Lifetime2;
+            this.faceVertexB[var57Lifetime1] = var54Lifetime1;
+            this.faceVertexC[var57Lifetime1] = var55Lifetime1;
+            if (var55Lifetime1 > this.referencedVertexCapacity) {
+              this.referencedVertexCapacity = var55Lifetime1;
             }
           }
         }
-        this.field_v = this.field_v + 1;
+        this.referencedVertexCapacity = this.referencedVertexCapacity + 1;
         var2.position = var43;
         var3.position = var44;
         var4.position = var45;
@@ -774,284 +774,284 @@ final class js extends ni {
         }
     }
 
-    final void b() {
-        kg dupTemp$0 = null;
-        int var1;
-        int var2;
-        int var3;
-        int var4;
-        int var5;
-        int var6;
-        int var7;
-        int var8;
-        int var9;
-        int var10;
-        int var11;
-        int var12;
-        int var13;
-        int var14;
-        int var15;
-        kg var16;
-        wi var17;
-        wi var18;
-        wi var19;
-        int var1Lifetime1;
-        if (this.field_y != null) {
+    final void calculateNormals() {
+        FaceNormal dupTemp$0 = null;
+        int vertexIndex;
+        int vertexA;
+        int vertexB;
+        int vertexC;
+        int edgeABX;
+        int edgeABY;
+        int edgeABZ;
+        int edgeACX;
+        int edgeACY;
+        int edgeACZ;
+        int normalX;
+        int normalY;
+        int normalZ;
+        int normalMagnitude;
+        int renderType;
+        FaceNormal faceNormal;
+        VertexNormal normalA;
+        VertexNormal normalB;
+        VertexNormal normalC;
+        int faceIndex;
+        if (this.vertexNormals != null) {
           return;
         }
-        this.field_y = new wi[this.field_v];
-        for (var1 = 0; var1 < this.field_v; var1++) {
-          this.field_y[var1] = new wi();
+        this.vertexNormals = new VertexNormal[this.referencedVertexCapacity];
+        for (vertexIndex = 0; vertexIndex < this.referencedVertexCapacity; vertexIndex++) {
+          this.vertexNormals[vertexIndex] = new VertexNormal();
         }
-        var1Lifetime1 = 0;
+        faceIndex = 0;
         while (true) {
-          if (var1Lifetime1 >= this.field_O) {
+          if (faceIndex >= this.faceCount) {
             return;
           }
-          var2 = this.field_q[var1Lifetime1];
-          var3 = this.field_o[var1Lifetime1];
-          var4 = this.field_r[var1Lifetime1];
-          var5 = this.field_N[var3] - this.field_N[var2];
-          var6 = this.field_D[var3] - this.field_D[var2];
-          var7 = this.field_u[var3] - this.field_u[var2];
-          var8 = this.field_N[var4] - this.field_N[var2];
-          var9 = this.field_D[var4] - this.field_D[var2];
-          var10 = this.field_u[var4] - this.field_u[var2];
-          var11 = var6 * var10 - var9 * var7;
-          var12 = var7 * var8 - var10 * var5;
-          var13 = var5 * var9 - var8 * var6;
+          vertexA = this.faceVertexA[faceIndex];
+          vertexB = this.faceVertexB[faceIndex];
+          vertexC = this.faceVertexC[faceIndex];
+          edgeABX = this.verticesX[vertexB] - this.verticesX[vertexA];
+          edgeABY = this.verticesY[vertexB] - this.verticesY[vertexA];
+          edgeABZ = this.verticesZ[vertexB] - this.verticesZ[vertexA];
+          edgeACX = this.verticesX[vertexC] - this.verticesX[vertexA];
+          edgeACY = this.verticesY[vertexC] - this.verticesY[vertexA];
+          edgeACZ = this.verticesZ[vertexC] - this.verticesZ[vertexA];
+          normalX = edgeABY * edgeACZ - edgeACY * edgeABZ;
+          normalY = edgeABZ * edgeACX - edgeACZ * edgeABX;
+          normalZ = edgeABX * edgeACY - edgeACX * edgeABY;
           while (true) {
-            if (var11 <= 8192 &&
-              var12 <= 8192 &&
-              var13 <= 8192 &&
-              var11 >= -8192 &&
-              var12 >= -8192 &&
-              var13 >= -8192) {
-              var14 = (int)Math.sqrt((double)(var11 * var11 + var12 * var12 + var13 * var13));
-              if (var14 <= 0) {
-                var14 = 1;
+            if (normalX <= 8192 &&
+              normalY <= 8192 &&
+              normalZ <= 8192 &&
+              normalX >= -8192 &&
+              normalY >= -8192 &&
+              normalZ >= -8192) {
+              normalMagnitude = (int)Math.sqrt((double)(normalX * normalX + normalY * normalY + normalZ * normalZ));
+              if (normalMagnitude <= 0) {
+                normalMagnitude = 1;
               }
-              var11 = var11 * 256 / var14;
-              var12 = var12 * 256 / var14;
-              var13 = var13 * 256 / var14;
-              if (this.field_p != null) {
-                var15 = this.field_p[var1Lifetime1];
+              normalX = normalX * 256 / normalMagnitude;
+              normalY = normalY * 256 / normalMagnitude;
+              normalZ = normalZ * 256 / normalMagnitude;
+              if (this.faceRenderTypes != null) {
+                renderType = this.faceRenderTypes[faceIndex];
               } else {
-                var15 = 0;
+                renderType = 0;
               }
-              if (var15 != 0) {
-                if (var15 == 1) {
-                  if (this.field_L == null) {
-                    this.field_L = new kg[this.field_O];
+              if (renderType != 0) {
+                if (renderType == 1) {
+                  if (this.faceNormals == null) {
+                    this.faceNormals = new FaceNormal[this.faceCount];
                   }
-                  dupTemp$0 = new kg();
-                  this.field_L[var1Lifetime1] = dupTemp$0;
-                  var16 = dupTemp$0;
-                  var16.field_b = var11;
-                  var16.field_a = var12;
-                  var16.field_e = var13;
+                  dupTemp$0 = new FaceNormal();
+                  this.faceNormals[faceIndex] = dupTemp$0;
+                  faceNormal = dupTemp$0;
+                  faceNormal.x = normalX;
+                  faceNormal.y = normalY;
+                  faceNormal.z = normalZ;
                 }
               } else {
-                var17 = this.field_y[var2];
-                var17.field_d = var17.field_d + var11;
-                var17.field_e = var17.field_e + var12;
-                var17.field_b = var17.field_b + var13;
-                var17.field_g = var17.field_g + 1;
-                var18 = this.field_y[var3];
-                var18.field_d = var18.field_d + var11;
-                var18.field_e = var18.field_e + var12;
-                var18.field_b = var18.field_b + var13;
-                var18.field_g = var18.field_g + 1;
-                var19 = this.field_y[var4];
-                var19.field_d = var19.field_d + var11;
-                var19.field_e = var19.field_e + var12;
-                var19.field_b = var19.field_b + var13;
-                var19.field_g = var19.field_g + 1;
+                normalA = this.vertexNormals[vertexA];
+                normalA.x = normalA.x + normalX;
+                normalA.y = normalA.y + normalY;
+                normalA.z = normalA.z + normalZ;
+                normalA.contributions = normalA.contributions + 1;
+                normalB = this.vertexNormals[vertexB];
+                normalB.x = normalB.x + normalX;
+                normalB.y = normalB.y + normalY;
+                normalB.z = normalB.z + normalZ;
+                normalB.contributions = normalB.contributions + 1;
+                normalC = this.vertexNormals[vertexC];
+                normalC.x = normalC.x + normalX;
+                normalC.y = normalC.y + normalY;
+                normalC.z = normalC.z + normalZ;
+                normalC.contributions = normalC.contributions + 1;
               }
-              var1Lifetime1++;
+              faceIndex++;
               break;
             }
-            var11 = var11 >> 1;
-            var12 = var12 >> 1;
-            var13 = var13 >> 1;
+            normalX = normalX >> 1;
+            normalY = normalY >> 1;
+            normalZ = normalZ >> 1;
           }
         }
     }
 
-    final static js a(ResourceArchive param0, String param1, String param2) {
-        byte[] var3 = param0.getFileByName(param2, 93, param1);
+    final static MeshData load(ResourceArchive archive, String groupName, String fileName) {
+        byte[] var3 = archive.getFileByName(fileName, 93, groupName);
         if (var3 == null) {
           return null;
         }
-        return new js(var3);
+        return new MeshData(var3);
     }
 
-    final kk a(int param0, int param1, int param2, int param3, int param4) {
-        return (kk) ((Object) new ModelMesh(this, param0, param1, param2, param3, param4));
+    final ModelMeshBase createModel(int ambient, int contrast, int lightX, int lightY, int lightZ) {
+        return (ModelMeshBase) ((Object) new ModelMesh(this, ambient, contrast, lightX, lightY, lightZ));
     }
 
-    final void a() {
+    final void buildSkinGroups() {
         int[] array$2 = null;
         int dupTemp$0 = 0;
         int[] arrayValue$1 = null;
         int[] array$5 = null;
         int dupTemp$3 = 0;
         int[] arrayValue$4 = null;
-        int var2;
-        int var3;
-        int var4;
-        int[] var5;
-        int[] var6;
-        int var4Lifetime1;
-        int var4Lifetime2;
-        int var4Lifetime1Lifetime1;
-        int var2Lifetime1;
-        int var3Lifetime1;
-        if (this.field_m != null) {
-          var5 = new int[256];
-          var2 = 0;
-          for (var3 = 0; var3 < this.field_x; var3++) {
-            var4 = this.field_m[var3];
-            var5[var4] = var5[var4] + 1;
-            if (var4 > var2) {
-              var2 = var4;
+        int maximumVertexSkin;
+        int vertexIndex;
+        int vertexSkinId;
+        int[] vertexCountsBySkin;
+        int[] faceCountsBySkin;
+        int faceSkinId;
+        int groupedVertexSkinId;
+        int groupedFaceSkinId;
+        int maximumFaceSkin;
+        int faceIndex;
+        if (this.vertexSkinIds != null) {
+          vertexCountsBySkin = new int[256];
+          maximumVertexSkin = 0;
+          for (vertexIndex = 0; vertexIndex < this.vertexCount; vertexIndex++) {
+            vertexSkinId = this.vertexSkinIds[vertexIndex];
+            vertexCountsBySkin[vertexSkinId] = vertexCountsBySkin[vertexSkinId] + 1;
+            if (vertexSkinId > maximumVertexSkin) {
+              maximumVertexSkin = vertexSkinId;
             }
           }
-          this.field_l = new int[var2 + 1][];
-          for (var3 = 0; var3 <= var2; var3++) {
-            array$2 = new int[var5[var3]];
-            this.field_l[var3] = array$2;
-            var5[var3] = 0;
+          this.vertexGroups = new int[maximumVertexSkin + 1][];
+          for (vertexIndex = 0; vertexIndex <= maximumVertexSkin; vertexIndex++) {
+            array$2 = new int[vertexCountsBySkin[vertexIndex]];
+            this.vertexGroups[vertexIndex] = array$2;
+            vertexCountsBySkin[vertexIndex] = 0;
           }
-          for (var3 = 0; var3 < this.field_x; var3++) {
-            var4Lifetime2 = this.field_m[var3];
-            dupTemp$0 = var5[var4Lifetime2];
-            arrayValue$1 = this.field_l[var4Lifetime2];
-            var5[var4Lifetime2] = dupTemp$0 + 1;
-            arrayValue$1[dupTemp$0] = var3;
+          for (vertexIndex = 0; vertexIndex < this.vertexCount; vertexIndex++) {
+            groupedVertexSkinId = this.vertexSkinIds[vertexIndex];
+            dupTemp$0 = vertexCountsBySkin[groupedVertexSkinId];
+            arrayValue$1 = this.vertexGroups[groupedVertexSkinId];
+            vertexCountsBySkin[groupedVertexSkinId] = dupTemp$0 + 1;
+            arrayValue$1[dupTemp$0] = vertexIndex;
           }
-          this.field_m = null;
+          this.vertexSkinIds = null;
         }
-        if (this.field_e != null) {
-          var6 = new int[256];
-          var2Lifetime1 = 0;
-          for (var3Lifetime1 = 0; var3Lifetime1 < this.field_O; var3Lifetime1++) {
-            var4Lifetime1 = this.field_e[var3Lifetime1];
-            var6[var4Lifetime1] = var6[var4Lifetime1] + 1;
-            if (var4Lifetime1 > var2Lifetime1) {
-              var2Lifetime1 = var4Lifetime1;
+        if (this.faceSkinIds != null) {
+          faceCountsBySkin = new int[256];
+          maximumFaceSkin = 0;
+          for (faceIndex = 0; faceIndex < this.faceCount; faceIndex++) {
+            faceSkinId = this.faceSkinIds[faceIndex];
+            faceCountsBySkin[faceSkinId] = faceCountsBySkin[faceSkinId] + 1;
+            if (faceSkinId > maximumFaceSkin) {
+              maximumFaceSkin = faceSkinId;
             }
           }
-          this.field_H = new int[var2Lifetime1 + 1][];
-          for (var3Lifetime1 = 0; var3Lifetime1 <= var2Lifetime1; var3Lifetime1++) {
-            array$5 = new int[var6[var3Lifetime1]];
-            this.field_H[var3Lifetime1] = array$5;
-            var6[var3Lifetime1] = 0;
+          this.faceGroups = new int[maximumFaceSkin + 1][];
+          for (faceIndex = 0; faceIndex <= maximumFaceSkin; faceIndex++) {
+            array$5 = new int[faceCountsBySkin[faceIndex]];
+            this.faceGroups[faceIndex] = array$5;
+            faceCountsBySkin[faceIndex] = 0;
           }
-          for (var3Lifetime1 = 0; var3Lifetime1 < this.field_O; var3Lifetime1++) {
-            var4Lifetime1Lifetime1 = this.field_e[var3Lifetime1];
-            dupTemp$3 = var6[var4Lifetime1Lifetime1];
-            arrayValue$4 = this.field_H[var4Lifetime1Lifetime1];
-            var6[var4Lifetime1Lifetime1] = dupTemp$3 + 1;
-            arrayValue$4[dupTemp$3] = var3Lifetime1;
+          for (faceIndex = 0; faceIndex < this.faceCount; faceIndex++) {
+            groupedFaceSkinId = this.faceSkinIds[faceIndex];
+            dupTemp$3 = faceCountsBySkin[groupedFaceSkinId];
+            arrayValue$4 = this.faceGroups[groupedFaceSkinId];
+            faceCountsBySkin[groupedFaceSkinId] = dupTemp$3 + 1;
+            arrayValue$4[dupTemp$3] = faceIndex;
           }
-          this.field_e = null;
+          this.faceSkinIds = null;
         }
     }
 
-    private js(byte[] param0) {
-        this.field_v = 0;
-        this.field_O = 0;
-        this.field_x = 0;
-        if (param0[param0.length - 1] == -1 &&
-          param0[param0.length - 2] == -1) {
-          this.a(param0);
+    private MeshData(byte[] encodedMesh) {
+        this.referencedVertexCapacity = 0;
+        this.faceCount = 0;
+        this.vertexCount = 0;
+        if (encodedMesh[encodedMesh.length - 1] == -1 &&
+          encodedMesh[encodedMesh.length - 2] == -1) {
+          this.decodeExtendedFormat(encodedMesh);
         } else {
-          this.b(param0);
+          this.decodeLegacyFormat(encodedMesh);
         }
     }
 
-    js(js param0, boolean param1, boolean param2, boolean param3, boolean param4) {
+    MeshData(MeshData source, boolean shareVertices, boolean shareFaceColors, boolean shareTextureIds, boolean shareFaceAlpha) {
         int var6;
         int var6Lifetime1;
         int var6Lifetime2;
         int var6Lifetime3;
-        this.field_v = 0;
-        this.field_O = 0;
-        this.field_x = 0;
-        this.field_x = param0.field_x;
-        this.field_v = param0.field_v;
-        this.field_O = param0.field_O;
-        this.field_E = param0.field_E;
-        if (!param1) {
-          this.field_N = new int[this.field_x];
-          this.field_D = new int[this.field_x];
-          this.field_u = new int[this.field_x];
-          for (var6 = 0; var6 < this.field_x; var6++) {
-            this.field_N[var6] = param0.field_N[var6];
-            this.field_D[var6] = param0.field_D[var6];
-            this.field_u[var6] = param0.field_u[var6];
+        this.referencedVertexCapacity = 0;
+        this.faceCount = 0;
+        this.vertexCount = 0;
+        this.vertexCount = source.vertexCount;
+        this.referencedVertexCapacity = source.referencedVertexCapacity;
+        this.faceCount = source.faceCount;
+        this.field_E = source.field_E;
+        if (!shareVertices) {
+          this.verticesX = new int[this.vertexCount];
+          this.verticesY = new int[this.vertexCount];
+          this.verticesZ = new int[this.vertexCount];
+          for (var6 = 0; var6 < this.vertexCount; var6++) {
+            this.verticesX[var6] = source.verticesX[var6];
+            this.verticesY[var6] = source.verticesY[var6];
+            this.verticesZ[var6] = source.verticesZ[var6];
           }
         } else {
-          this.field_N = param0.field_N;
-          this.field_D = param0.field_D;
-          this.field_u = param0.field_u;
+          this.verticesX = source.verticesX;
+          this.verticesY = source.verticesY;
+          this.verticesZ = source.verticesZ;
         }
-        if (!param2) {
-          this.field_i = new short[this.field_O];
-          for (var6Lifetime1 = 0; var6Lifetime1 < this.field_O; var6Lifetime1++) {
-            this.field_i[var6Lifetime1] = param0.field_i[var6Lifetime1];
+        if (!shareFaceColors) {
+          this.faceColors = new short[this.faceCount];
+          for (var6Lifetime1 = 0; var6Lifetime1 < this.faceCount; var6Lifetime1++) {
+            this.faceColors[var6Lifetime1] = source.faceColors[var6Lifetime1];
           }
         } else {
-          this.field_i = param0.field_i;
+          this.faceColors = source.faceColors;
         }
-        if (!param3 &&
-          param0.field_B != null) {
-          this.field_B = new short[this.field_O];
-          for (var6Lifetime2 = 0; var6Lifetime2 < this.field_O; var6Lifetime2++) {
-            this.field_B[var6Lifetime2] = param0.field_B[var6Lifetime2];
+        if (!shareTextureIds &&
+          source.faceTextureIds != null) {
+          this.faceTextureIds = new short[this.faceCount];
+          for (var6Lifetime2 = 0; var6Lifetime2 < this.faceCount; var6Lifetime2++) {
+            this.faceTextureIds[var6Lifetime2] = source.faceTextureIds[var6Lifetime2];
           }
         } else {
-          this.field_B = param0.field_B;
+          this.faceTextureIds = source.faceTextureIds;
         }
-        if (!param4) {
-          this.field_h = new byte[this.field_O];
-          if (param0.field_h != null) {
-            for (var6Lifetime3 = 0; var6Lifetime3 < this.field_O; var6Lifetime3++) {
-              this.field_h[var6Lifetime3] = param0.field_h[var6Lifetime3];
+        if (!shareFaceAlpha) {
+          this.faceAlpha = new byte[this.faceCount];
+          if (source.faceAlpha != null) {
+            for (var6Lifetime3 = 0; var6Lifetime3 < this.faceCount; var6Lifetime3++) {
+              this.faceAlpha[var6Lifetime3] = source.faceAlpha[var6Lifetime3];
             }
           } else {
-            for (var6Lifetime3 = 0; var6Lifetime3 < this.field_O; var6Lifetime3++) {
-              this.field_h[var6Lifetime3] = (byte) 0;
+            for (var6Lifetime3 = 0; var6Lifetime3 < this.faceCount; var6Lifetime3++) {
+              this.faceAlpha[var6Lifetime3] = (byte) 0;
             }
           }
         } else {
-          this.field_h = param0.field_h;
+          this.faceAlpha = source.faceAlpha;
         }
-        this.field_q = param0.field_q;
-        this.field_o = param0.field_o;
-        this.field_r = param0.field_r;
-        this.field_p = param0.field_p;
-        this.field_w = param0.field_w;
-        this.field_G = param0.field_G;
-        this.field_t = param0.field_t;
-        this.field_M = param0.field_M;
-        this.field_n = param0.field_n;
-        this.field_C = param0.field_C;
-        this.field_K = param0.field_K;
-        this.field_s = param0.field_s;
-        this.field_k = param0.field_k;
-        this.field_J = param0.field_J;
-        this.field_f = param0.field_f;
-        this.field_I = param0.field_I;
-        this.field_F = param0.field_F;
-        this.field_z = param0.field_z;
-        this.field_m = param0.field_m;
-        this.field_e = param0.field_e;
-        this.field_l = param0.field_l;
-        this.field_H = param0.field_H;
-        this.field_y = param0.field_y;
-        this.field_L = param0.field_L;
-        this.field_g = param0.field_g;
+        this.faceVertexA = source.faceVertexA;
+        this.faceVertexB = source.faceVertexB;
+        this.faceVertexC = source.faceVertexC;
+        this.faceRenderTypes = source.faceRenderTypes;
+        this.field_w = source.field_w;
+        this.field_G = source.field_G;
+        this.field_t = source.field_t;
+        this.field_M = source.field_M;
+        this.field_n = source.field_n;
+        this.field_C = source.field_C;
+        this.field_K = source.field_K;
+        this.field_s = source.field_s;
+        this.field_k = source.field_k;
+        this.field_J = source.field_J;
+        this.field_f = source.field_f;
+        this.field_I = source.field_I;
+        this.field_F = source.field_F;
+        this.field_z = source.field_z;
+        this.vertexSkinIds = source.vertexSkinIds;
+        this.faceSkinIds = source.faceSkinIds;
+        this.vertexGroups = source.vertexGroups;
+        this.faceGroups = source.faceGroups;
+        this.vertexNormals = source.vertexNormals;
+        this.faceNormals = source.faceNormals;
+        this.field_g = source.field_g;
     }
 }

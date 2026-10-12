@@ -4590,7 +4590,7 @@ final class TutorialController {
             stackIn_11_1 = !(GlobalSpell.a(false));
             var2_int = ((oo) (Object) stackIn_10_0).a(stackIn_11_1, -121);
             if (var2_int == 3) {
-              if (null != wq.field_a) {
+              if (null != FixedQuaternion.field_a) {
                 ck.b(-99);
               }
               rf.a(32767, CombatEvent.d((byte) 65));
@@ -5069,7 +5069,7 @@ final class TutorialController {
           var2_int = 17 % ((26 - param0) / 35);
           if (rs.field_q == 84 &&
             br.field_f[86]) {
-            if (null != wq.field_a) {
+            if (null != FixedQuaternion.field_a) {
               ck.b(-83);
               if (var3 == 0) {
                 return;
@@ -5265,7 +5265,7 @@ final class TutorialController {
                   if (decompiledSharedTail1) {
                     fe.a(db.a(true, 469), MatchConditionEntry.a(334, (byte) 94), 137, 32, DisplacedUnitMarker.field_s, nd.field_b, 0, 0);
                   }
-                  fe.c(wi.field_h, db.a(true, 537), MatchConditionEntry.a(366, (byte) 94), 0, true);
+                  fe.c(VertexNormal.field_h, db.a(true, 537), MatchConditionEntry.a(366, (byte) 94), 0, true);
                 }
                 if (var4Lifetime1 == 0) {
                   return;
@@ -5284,7 +5284,7 @@ final class TutorialController {
             if (decompiledSharedTail0) {
               fe.a(db.a(true, 469), MatchConditionEntry.a(384, (byte) 94), 137, 32, DisplacedUnitMarker.field_s, nd.field_b, 0, 0);
             }
-            fe.c(ni.field_c, db.a(true, 537), MatchConditionEntry.a(416, (byte) 94), 0, true);
+            fe.c(MeshObject.field_c, db.a(true, 537), MatchConditionEntry.a(416, (byte) 94), 0, true);
             return;
           }
           return;

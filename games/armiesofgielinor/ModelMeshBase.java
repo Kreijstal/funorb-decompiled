@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class kk extends ni {
+abstract class ModelMeshBase extends MeshObject {
     private final void a(ig param0, ht param1, ht param2, int param3, int param4, boolean[] param5, boolean param6, boolean param7, int param8, int[] param9) {
         int var11;
         int var12;
@@ -199,7 +199,7 @@ abstract class kk extends ni {
 
     abstract void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, long param7);
 
-    abstract kk a(boolean param0, boolean param1, boolean param2);
+    abstract ModelMeshBase a(boolean param0, boolean param1, boolean param2);
 
     abstract void a(int param0, int[] param1, int param2, int param3, int param4, boolean param5, int param6, int[] param7);
 
@@ -223,7 +223,7 @@ abstract class kk extends ni {
         this.a();
     }
 
-    kk() {
+    ModelMeshBase() {
     }
 
     abstract void a();

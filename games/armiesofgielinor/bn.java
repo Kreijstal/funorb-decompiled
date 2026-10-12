@@ -4,7 +4,7 @@
 final class bn {
     static je field_c;
     static boolean field_e;
-    static kk[] field_a;
+    static ModelMeshBase[] field_a;
     static wc field_f;
     static String field_d;
     static int field_b;
@@ -13,7 +13,7 @@ final class bn {
     final static void a(byte param0, float param1, String param2) {
         try {
           if (param0 != -24) {
-            field_a = (kk[]) null;
+            field_a = (ModelMeshBase[]) null;
           }
           UnitSpell.field_e = param2;
           TelepopEvent.field_C = param1;

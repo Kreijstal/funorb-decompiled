@@ -2,26 +2,26 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class j {
-    private wq field_i;
+    private FixedQuaternion field_i;
     static int[] field_j;
     static int field_b;
     private BattleCamera field_h;
     private int[] field_c;
-    private wq field_f;
+    private FixedQuaternion field_f;
     private int field_g;
-    private wq field_a;
+    private FixedQuaternion field_a;
     static int[] field_e;
     private int field_k;
     static String field_d;
 
     private final void a(int param0) {
-        this.field_a.a((byte) 47, 65536, 0, 0, 1194);
-        this.field_a.a(126);
-        this.field_f.a((byte) 47, 0, 0, 65536, 256);
-        this.field_f.a(91);
-        this.field_a.a(this.field_i, true);
+        this.field_a.setAxisAngle((byte) 47, 65536, 0, 0, 1194);
+        this.field_a.normalize(126);
+        this.field_f.setAxisAngle((byte) 47, 0, 0, 65536, 256);
+        this.field_f.normalize(91);
+        this.field_a.copyInto(this.field_i, true);
         int var2 = -49 % ((-8 - param0) / 62);
-        this.field_i.a(1, this.field_f);
+        this.field_i.prependRotation(1, this.field_f);
     }
 
     private final void a(int param0, int param1, int param2) {
@@ -97,8 +97,8 @@ final class j {
           CampaignDefinition.field_m = new String[3];
           DisplacedUnitMarker.field_t[52] = oa.field_G;
           DisplacedUnitMarker.field_t[38] = PortalLossCondition.field_f;
-          ParasiteEvent.field_A = new String[]{wi.field_a, rf.field_e, je.field_lb, ob.field_P};
-          DisplacedUnitMarker.field_t[43] = kg.field_c;
+          ParasiteEvent.field_A = new String[]{VertexNormal.field_a, rf.field_e, je.field_lb, ob.field_P};
+          DisplacedUnitMarker.field_t[43] = FaceNormal.field_c;
           DisplacedUnitMarker.field_t[33] = gv.field_b;
           DisplacedUnitMarker.field_t[59] = TickCounter.field_e;
           DisplacedUnitMarker.field_t[41] = CorpseConditionMarker.field_x;
@@ -128,7 +128,7 @@ final class j {
           wb.field_b[28] = mh.field_d;
           wb.field_b[23] = lw.field_lb;
           wb.field_b[1] = cb.field_d;
-          wb.field_b[22] = ni.field_b;
+          wb.field_b[22] = MeshObject.field_b;
           wb.field_b[2] = cw.field_b;
           wb.field_b[5] = nl.field_F;
           wb.field_b[24] = cb.field_d;
@@ -178,14 +178,14 @@ final class j {
         try {
           this.field_h.targetPosition[0] = param1;
           this.field_h.targetPosition[1] = param3;
-          this.field_h.a((byte) -49);
-          var6_int = this.field_h.field_h[0];
+          this.field_h.transformTarget((byte) -49);
+          var6_int = this.field_h.transformedPosition[0];
           var7 = param4;
           param2[0] = var6_int;
           if (param0 <= 49) {
             field_e = (int[]) null;
           }
-          var8 = this.field_h.field_h[1];
+          var8 = this.field_h.transformedPosition[1];
           param2[1] = var7;
           param2[2] = var8;
           return;
@@ -426,12 +426,12 @@ final class j {
         try {
           this.field_c = new int[3];
           this.field_h = param1;
-          this.field_a = new wq();
-          this.field_f = new wq();
-          this.field_i = new wq();
+          this.field_a = new FixedQuaternion();
+          this.field_f = new FixedQuaternion();
+          this.field_i = new FixedQuaternion();
           this.a(105);
           this.field_g = param0 << 16;
-          this.field_k = ev.b(-55, this.field_g, so.a(196608, -129));
+          this.field_k = ev.b(-55, this.field_g, so.sqrtFixed16(196608, -129));
           this.a(2, 0, 0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

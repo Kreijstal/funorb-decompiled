@@ -16,18 +16,18 @@ final class UnitModelPreview {
     private boolean projectionVariant;
     private boolean animationAvailable;
 
-    final void a(byte param0, boolean param1) {
+    final void drawAtStoredPosition(byte obfuscationGuard, boolean highlighted) {
         int var4 = 0;
         int var3 = this.screenPosition[0];
         int var4Lifetime1;
-        if (param0 == -72) {
+        if (obfuscationGuard == -72) {
           var4 = this.screenPosition[1];
-          this.drawModel(false, param1, var3, var4);
+          this.drawModel(false, highlighted, var3, var4);
           return;
         }
-        this.a((byte) 11, true);
+        this.drawAtStoredPosition((byte) 11, true);
         var4Lifetime1 = this.screenPosition[1];
-        this.drawModel(false, param1, var3, var4Lifetime1);
+        this.drawModel(false, highlighted, var3, var4Lifetime1);
     }
 
     public static void b(int param0) {
@@ -42,24 +42,24 @@ final class UnitModelPreview {
         field_m = null;
     }
 
-    private final void a(boolean param0, int param1, int param2) {
+    private final void initialize(boolean obfuscationGuard, int yaw, int unitType) {
         this.animationPlayer = new AnimationPlayer(1);
-        if (param0) {
-          this.setUnitType((byte) 125, param2);
+        if (obfuscationGuard) {
+          this.setUnitType((byte) 125, unitType);
           this.animationIndex = -1;
           this.selectAnimation(-23162, 0);
           tm.a();
           this.screenPosition = new int[2];
-          this.yaw = param1;
+          this.yaw = yaw;
           return;
         }
         field_h = (String) null;
-        this.setUnitType((byte) 125, param2);
+        this.setUnitType((byte) 125, unitType);
         this.animationIndex = -1;
         this.selectAnimation(-23162, 0);
         tm.a();
         this.screenPosition = new int[2];
-        this.yaw = param1;
+        this.yaw = yaw;
     }
 
     final void setUnitType(byte obfuscationGuard, int unitType) {
@@ -152,37 +152,37 @@ final class UnitModelPreview {
         field_d = (RgbSprite[]) null;
     }
 
-    private final void b(int param0, int param1, byte param2) {
-        if (param0 == -1) {
-          ro.field_ob.field_b = param1;
-          ro.field_ob.b((byte) 36);
-          ro.field_ob.c(param2 ^ -9470376);
-          param0 = ro.field_ob.field_e[1];
-          param1 = ro.field_ob.field_e[0];
-          param0 += 16;
+    private final void setBattleScreenPosition(int screenY, int screenXOrTileIndex, byte obfuscationGuard) {
+        if (screenY == -1) {
+          ro.modelProjectionCamera.projectionTileIndex = screenXOrTileIndex;
+          ro.modelProjectionCamera.selectProjectionTile((byte) 36);
+          ro.modelProjectionCamera.projectModelAnchor(obfuscationGuard ^ -9470376);
+          screenY = ro.modelProjectionCamera.screenPosition[1];
+          screenXOrTileIndex = ro.modelProjectionCamera.screenPosition[0];
+          screenY += 16;
         }
-        param1 += 32;
-        if (param2 == -39) {
-          this.screenPosition[1] = 7 + param0;
-          this.screenPosition[0] = 7 + param1;
+        screenXOrTileIndex += 32;
+        if (obfuscationGuard == -39) {
+          this.screenPosition[1] = 7 + screenY;
+          this.screenPosition[0] = 7 + screenXOrTileIndex;
           return;
         }
     }
 
-    final boolean a(int param0, boolean param1, int param2, int param3, int param4, boolean param5) {
+    final boolean advanceBattleModel(int screenY, boolean unusedVisible, int screenXOrTileIndex, int yawOverride, int animationIndex, boolean obfuscationGuard) {
         int var7;
-        this.selectAnimation(-23162, param4);
+        this.selectAnimation(-23162, animationIndex);
         if (!this.animationAvailable) {
           return true;
         }
         var7 = this.animationPlayer.advance(-95) ? 1 : 0;
         this.installFrameSet(-298276720);
-        if (param5) {
-          this.a(85, true, -47, -102, 19, false);
+        if (obfuscationGuard) {
+          this.advanceBattleModel(85, true, -47, -102, 19, false);
         }
-        this.b(param0, param2, (byte) -39);
-        if (param3 != -1) {
-          this.yaw = param3;
+        this.setBattleScreenPosition(screenY, screenXOrTileIndex, (byte) -39);
+        if (yawOverride != -1) {
+          this.yaw = yawOverride;
         }
         if (this.animationPlayer.frameChanged) {
         }
@@ -191,7 +191,7 @@ final class UnitModelPreview {
 
     private final void loadSequence(byte obfuscationGuard) {
         this.animationAvailable = true;
-        AnimationSequence var2 = pg.a(this.animationIndex, 176, false, this.unitType);
+        AnimationSequence var2 = pg.selectUnitAnimation(this.animationIndex, 176, false, this.unitType);
         if (var2 == null) {
           this.animationAvailable = false;
           return;
@@ -405,7 +405,7 @@ final class UnitModelPreview {
         String stackIn_6_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          this.a(true, yaw, unitType);
+          this.initialize(true, yaw, unitType);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -422,7 +422,7 @@ final class UnitModelPreview {
     }
 
     UnitModelPreview(int unitType) {
-        this.a(true, 1792, unitType);
+        this.initialize(true, 1792, unitType);
     }
 
     private final void installFrameSet(int obfuscationGuard) {

@@ -51,7 +51,7 @@ final class PlayerProfile {
           if (param1 != -5) {
             PlayerProfile.a(-8, 127, -35, 78, 58, -62, -122);
           }
-          var2_int = ni.field_d;
+          var2_int = MeshObject.field_d;
           if (param0.field_b != 2) {
             if (param0.field_b == 4) {
               var2_intLifetime1 = fm.field_d[param0.field_b];
@@ -71,7 +71,7 @@ final class PlayerProfile {
                 var2_intLifetime1 = fm.field_d[param0.field_b];
               }
             } else {
-              var2_intLifetime1 = ni.field_d;
+              var2_intLifetime1 = MeshObject.field_d;
             }
           }
           stackIn_16_0 = var2_intLifetime1;

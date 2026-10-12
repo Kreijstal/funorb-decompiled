@@ -468,20 +468,20 @@ final class MovementPlanner {
         int var14 = 0;
         var14 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          param0.field_c[0] = this.unit.tileX;
-          param0.field_c[1] = this.unit.tileY;
-          param0.c(9470337);
+          param0.gridPosition[0] = this.unit.tileX;
+          param0.gridPosition[1] = this.unit.tileY;
+          param0.projectModelAnchor(9470337);
           if (param1 != -4) {
             field_v = (String) null;
           }
-          var3_int = param0.field_e[0];
-          var4 = param0.field_e[1];
+          var3_int = param0.screenPosition[0];
+          var4 = param0.screenPosition[1];
           TaggedMapData.field_f[10].g(var3_int, var4);
-          param0.field_c[1] = this.targetY;
-          param0.field_c[0] = this.targetX;
-          param0.c(param1 + 9470341);
-          var5 = param0.field_e[0];
-          var6 = param0.field_e[1];
+          param0.gridPosition[1] = this.targetY;
+          param0.gridPosition[0] = this.targetX;
+          param0.projectModelAnchor(param1 + 9470341);
+          var5 = param0.screenPosition[0];
+          var6 = param0.screenPosition[1];
           var7 = this.getMovementBudget(27732);
           var8 = 0;
           if (!this.directAction) {
@@ -525,11 +525,11 @@ final class MovementPlanner {
                   var4 = var4 + (var12 << 2);
                   var3_int = var3_int + (var11 << 2);
                   if (var8 == 0) {
-                    param0.field_e[1] = var12 + 16 + var4;
-                    param0.field_e[0] = 32 + var3_int + var11;
-                    param0.c(false);
+                    param0.screenPosition[1] = var12 + 16 + var4;
+                    param0.screenPosition[0] = 32 + var3_int + var11;
+                    param0.screenToGrid(false);
                     if (this.actionAllowed &&
-                      this.movementCosts[param0.field_c[0] + param0.field_c[1] * this.mapWidth] > var7) {
+                      this.movementCosts[param0.gridPosition[0] + param0.gridPosition[1] * this.mapWidth] > var7) {
                       var9 = 0;
                       var8 = 1;
                     }

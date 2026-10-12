@@ -547,7 +547,7 @@ class ih extends hn {
           var4 = var2[var3];
           var5 = (Unit) (var4.first((byte) 99));
           while (var5 != null) {
-            var5.field_u = false;
+            var5.presentationOwnsModel = false;
             var5 = (Unit) (var4.next((byte) 123));
           }
         }

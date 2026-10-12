@@ -63,17 +63,17 @@ final class ht {
               if ((var11 & 1) == 0) {
                 field_k[var6] = (short)var12;
               } else {
-                field_k[var6] = (short)var4.a(114);
+                field_k[var6] = (short)var4.readSignedSmart(114);
               }
               if ((var11 & 2) == 0) {
                 field_e[var6] = (short)var12;
               } else {
-                field_e[var6] = (short)var4.a(95);
+                field_e[var6] = (short)var4.readSignedSmart(95);
               }
               if ((var11 & 4) == 0) {
                 field_b[var6] = (short)var12;
               } else {
-                field_b[var6] = (short)var4.a(55);
+                field_b[var6] = (short)var4.readSignedSmart(55);
               }
               field_c[var6] = (byte)(var11 >>> 3 & 3);
               if (var10 == 2) {

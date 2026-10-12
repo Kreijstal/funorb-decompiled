@@ -1,35 +1,35 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ModelMesh extends kk {
+final class ModelMesh extends ModelMeshBase {
     private int[] field_q;
     private int[] field_w;
     int[] field_R;
     private byte[] field_lb;
-    private int field_Y;
+    private int faceCount;
     private short[] field_ab;
     private byte[] field_H;
     private boolean field_k;
-    private int[] field_F;
-    private int[] field_jb;
-    private int[] field_bb;
+    private int[] verticesZ;
+    private int[] faceVertexA;
+    private int[] faceVertexB;
     private int field_l;
     private short field_A;
     int[] field_Z;
     private byte[] field_ob;
-    int field_I;
+    int vertexCount;
     int[] field_o;
     private boolean field_db;
-    private int[][] field_i;
-    private int[] field_G;
-    private int[][] field_S;
-    private int[] field_nb;
+    private int[][] faceGroups;
+    private int[] verticesX;
+    private int[][] vertexGroups;
+    private int[] verticesY;
     private static ModelMesh field_ib;
-    private short[] field_r;
+    private short[] faceColors;
     int[] field_t;
-    private int field_p;
+    private int referencedVertexCapacity;
     private short[] field_g;
-    private int[] field_N;
+    private int[] faceVertexC;
     private short[] field_e;
     private static byte[] field_u;
     private static int[] field_gb;
@@ -71,7 +71,7 @@ final class ModelMesh extends kk {
         int stackIn_5_0 = 0;
         int var1;
         int var2;
-        for (var4 = 0; var4 < this.field_Y; var4++) {
+        for (var4 = 0; var4 < this.faceCount; var4++) {
           if (this.field_ab == null) {
             stackIn_5_0 = -1;
           } else {
@@ -79,7 +79,7 @@ final class ModelMesh extends kk {
           }
           var3 = stackIn_5_0;
           if (var3 == -1) {
-            var1 = this.field_r[var4] & 65535;
+            var1 = this.faceColors[var4] & 65535;
             if (this.field_R[var4] != -1) {
               if (this.field_R[var4] != -2) {
                 var2 = this.field_Z[var4] & -131072;
@@ -169,9 +169,9 @@ final class ModelMesh extends kk {
         var2 = tm.field_c;
         var3 = tm.field_j;
         var4 = 0;
-        var5 = this.field_jb[param0];
-        var6 = this.field_bb[param0];
-        var7 = this.field_N[param0];
+        var5 = this.faceVertexA[param0];
+        var6 = this.faceVertexB[param0];
+        var7 = this.faceVertexC[param0];
         var8 = field_O[var5];
         var9 = field_O[var6];
         var10 = field_O[var7];
@@ -283,7 +283,7 @@ final class ModelMesh extends kk {
             if (this.field_lb != null &&
               this.field_lb[param0] != -1) {
               var20 = this.field_lb[param0] & 255;
-              var17 = this.field_nb[var20];
+              var17 = this.verticesY[var20];
               var18 = this.field_q[var20];
               var19 = this.field_w[var20];
             } else {
@@ -324,7 +324,7 @@ final class ModelMesh extends kk {
           if (this.field_lb != null &&
             this.field_lb[param0] != -1) {
             var20Lifetime1 = this.field_lb[param0] & 255;
-            var17Lifetime1 = this.field_nb[var20Lifetime1];
+            var17Lifetime1 = this.verticesY[var20Lifetime1];
             var18Lifetime1 = this.field_q[var20Lifetime1];
             var19Lifetime1 = this.field_w[var20Lifetime1];
           } else {
@@ -352,17 +352,17 @@ final class ModelMesh extends kk {
         }
     }
 
-    final kk a(boolean param0, boolean param1, boolean param2) {
+    final ModelMeshBase a(boolean param0, boolean param1, boolean param2) {
         if (!param0 &&
-          field_u.length < this.field_Y) {
-          field_u = new byte[this.field_Y + 100];
+          field_u.length < this.faceCount) {
+          field_u = new byte[this.faceCount + 100];
         }
         if (!param1 &&
-          field_C.length < this.field_Y) {
-          field_gb = new int[this.field_Y + 100];
-          field_m = new int[this.field_Y + 100];
-          field_K = new int[this.field_Y + 100];
-          field_C = new short[this.field_Y + 100];
+          field_C.length < this.faceCount) {
+          field_gb = new int[this.faceCount + 100];
+          field_m = new int[this.faceCount + 100];
+          field_K = new int[this.faceCount + 100];
+          field_C = new short[this.faceCount + 100];
         }
         return this.a(param0, param1, field_ib, field_u, field_C, field_gb, field_m, field_K);
     }
@@ -392,7 +392,7 @@ final class ModelMesh extends kk {
     }
 
     final boolean b() {
-        if (this.field_S == null) {
+        if (this.vertexGroups == null) {
           return false;
         }
         field_v = 0;
@@ -403,10 +403,10 @@ final class ModelMesh extends kk {
 
     final void b(int param0, int param1, int param2) {
         int var4 = 0;
-        for (var4 = 0; var4 < this.field_I; var4++) {
-          this.field_G[var4] = this.field_G[var4] * param0 / 128;
+        for (var4 = 0; var4 < this.vertexCount; var4++) {
+          this.verticesX[var4] = this.verticesX[var4] * param0 / 128;
           this.field_o[var4] = this.field_o[var4] * param1 / 128;
-          this.field_F[var4] = this.field_F[var4] * param2 / 128;
+          this.verticesZ[var4] = this.verticesZ[var4] * param2 / 128;
         }
         this.field_k = false;
     }
@@ -427,9 +427,9 @@ final class ModelMesh extends kk {
           this.c(param0);
           return;
         }
-        var2 = this.field_jb[param0];
-        var3 = this.field_bb[param0];
-        var4 = this.field_N[param0];
+        var2 = this.faceVertexA[param0];
+        var3 = this.faceVertexB[param0];
+        var4 = this.faceVertexC[param0];
         tm.field_a = field_s[param0];
         if (this.field_H != null) {
           tm.field_f = this.field_H[param0] & 255;
@@ -441,7 +441,7 @@ final class ModelMesh extends kk {
           if (this.field_lb != null &&
             this.field_lb[param0] != -1) {
             var8 = this.field_lb[param0] & 255;
-            var5 = this.field_nb[var8];
+            var5 = this.verticesY[var8];
             var6 = this.field_q[var8];
             var7 = this.field_w[var8];
           } else {
@@ -474,33 +474,33 @@ final class ModelMesh extends kk {
         return param0;
     }
 
-    private final kk a(boolean param0, boolean param1, ModelMesh param2, byte[] param3, short[] param4, int[] param5, int[] param6, int[] param7) {
+    private final ModelMeshBase a(boolean param0, boolean param1, ModelMesh param2, byte[] param3, short[] param4, int[] param5, int[] param6, int[] param7) {
         int var9;
         int var9Lifetime1;
         int var9Lifetime2;
-        param2.field_I = this.field_I;
-        param2.field_p = this.field_p;
-        param2.field_Y = this.field_Y;
+        param2.vertexCount = this.vertexCount;
+        param2.referencedVertexCapacity = this.referencedVertexCapacity;
+        param2.faceCount = this.faceCount;
         param2.field_l = this.field_l;
-        if (param2.field_G == null ||
-          !(param2.field_G.length >= this.field_I)) {
-          param2.field_G = new int[this.field_I + 100];
-          param2.field_o = new int[this.field_I + 100];
-          param2.field_F = new int[this.field_I + 100];
+        if (param2.verticesX == null ||
+          !(param2.verticesX.length >= this.vertexCount)) {
+          param2.verticesX = new int[this.vertexCount + 100];
+          param2.field_o = new int[this.vertexCount + 100];
+          param2.verticesZ = new int[this.vertexCount + 100];
         }
-        for (var9 = 0; var9 < this.field_I; var9++) {
-          param2.field_G[var9] = this.field_G[var9];
+        for (var9 = 0; var9 < this.vertexCount; var9++) {
+          param2.verticesX[var9] = this.verticesX[var9];
           param2.field_o[var9] = this.field_o[var9];
-          param2.field_F[var9] = this.field_F[var9];
+          param2.verticesZ[var9] = this.verticesZ[var9];
         }
         if (!param0) {
           param2.field_H = param3;
           if (this.field_H != null) {
-            for (var9Lifetime1 = 0; var9Lifetime1 < this.field_Y; var9Lifetime1++) {
+            for (var9Lifetime1 = 0; var9Lifetime1 < this.faceCount; var9Lifetime1++) {
               param2.field_H[var9Lifetime1] = this.field_H[var9Lifetime1];
             }
           } else {
-            for (var9Lifetime1 = 0; var9Lifetime1 < this.field_Y; var9Lifetime1++) {
+            for (var9Lifetime1 = 0; var9Lifetime1 < this.faceCount; var9Lifetime1++) {
               param2.field_H[var9Lifetime1] = (byte) 0;
             }
           }
@@ -508,37 +508,37 @@ final class ModelMesh extends kk {
           param2.field_H = this.field_H;
         }
         if (!param1) {
-          param2.field_r = param4;
+          param2.faceColors = param4;
           param2.field_Z = param5;
           param2.field_t = param6;
           param2.field_R = param7;
-          for (var9Lifetime2 = 0; var9Lifetime2 < this.field_Y; var9Lifetime2++) {
-            param2.field_r[var9Lifetime2] = this.field_r[var9Lifetime2];
+          for (var9Lifetime2 = 0; var9Lifetime2 < this.faceCount; var9Lifetime2++) {
+            param2.faceColors[var9Lifetime2] = this.faceColors[var9Lifetime2];
             param2.field_Z[var9Lifetime2] = this.field_Z[var9Lifetime2];
             param2.field_t[var9Lifetime2] = this.field_t[var9Lifetime2];
             param2.field_R[var9Lifetime2] = this.field_R[var9Lifetime2];
           }
         } else {
-          param2.field_r = this.field_r;
+          param2.faceColors = this.faceColors;
           param2.field_Z = this.field_Z;
           param2.field_t = this.field_t;
           param2.field_R = this.field_R;
         }
-        param2.field_jb = this.field_jb;
-        param2.field_bb = this.field_bb;
-        param2.field_N = this.field_N;
+        param2.faceVertexA = this.faceVertexA;
+        param2.faceVertexB = this.faceVertexB;
+        param2.faceVertexC = this.faceVertexC;
         param2.field_ob = this.field_ob;
         param2.field_lb = this.field_lb;
         param2.field_ab = this.field_ab;
-        param2.field_nb = this.field_nb;
+        param2.verticesY = this.verticesY;
         param2.field_q = this.field_q;
         param2.field_w = this.field_w;
-        param2.field_S = this.field_S;
-        param2.field_i = this.field_i;
+        param2.vertexGroups = this.vertexGroups;
+        param2.faceGroups = this.faceGroups;
         param2.field_e = this.field_e;
         param2.field_g = this.field_g;
         param2.field_k = false;
-        return (kk) ((Object) param2);
+        return (ModelMeshBase) ((Object) param2);
     }
 
     final void a(int param0, int[] param1, int param2, int param3, int param4, boolean param5) {
@@ -591,13 +591,13 @@ final class ModelMesh extends kk {
           field_cb = 0;
           for (var9 = 0; var9 < var7; var9++) {
             var10 = param1[var9];
-            if (var10 < this.field_S.length) {
-              var35 = this.field_S[var10];
+            if (var10 < this.vertexGroups.length) {
+              var35 = this.vertexGroups[var10];
               for (var12 = 0; var12 < var35.length; var12++) {
                 var13 = var35[var12];
-                field_v = field_v + this.field_G[var13];
+                field_v = field_v + this.verticesX[var13];
                 field_mb = field_mb + this.field_o[var13];
-                field_cb = field_cb + this.field_F[var13];
+                field_cb = field_cb + this.verticesZ[var13];
                 var8++;
               }
             }
@@ -616,13 +616,13 @@ final class ModelMesh extends kk {
         if (param0 == 1) {
           for (var8Lifetime1 = 0; var8Lifetime1 < var7; var8Lifetime1++) {
             var9Lifetime1 = param1[var8Lifetime1];
-            if (var9Lifetime1 < this.field_S.length) {
-              var36 = this.field_S[var9Lifetime1];
+            if (var9Lifetime1 < this.vertexGroups.length) {
+              var36 = this.vertexGroups[var9Lifetime1];
               for (var11 = 0; var11 < var36.length; var11++) {
                 var12Lifetime1 = var36[var11];
-                this.field_G[var12Lifetime1] = this.field_G[var12Lifetime1] + param2;
+                this.verticesX[var12Lifetime1] = this.verticesX[var12Lifetime1] + param2;
                 this.field_o[var12Lifetime1] = this.field_o[var12Lifetime1] + param3;
-                this.field_F[var12Lifetime1] = this.field_F[var12Lifetime1] + param4;
+                this.verticesZ[var12Lifetime1] = this.verticesZ[var12Lifetime1] + param4;
               }
             }
           }
@@ -631,37 +631,37 @@ final class ModelMesh extends kk {
         if (param0 == 2) {
           for (var8Lifetime2 = 0; var8Lifetime2 < var7; var8Lifetime2++) {
             var9Lifetime2 = param1[var8Lifetime2];
-            if (var9Lifetime2 < this.field_S.length) {
-              var37 = this.field_S[var9Lifetime2];
+            if (var9Lifetime2 < this.vertexGroups.length) {
+              var37 = this.vertexGroups[var9Lifetime2];
               for (var11Lifetime1 = 0; var11Lifetime1 < var37.length; var11Lifetime1++) {
                 var12Lifetime2 = var37[var11Lifetime1];
-                this.field_G[var12Lifetime2] = this.field_G[var12Lifetime2] - field_v;
+                this.verticesX[var12Lifetime2] = this.verticesX[var12Lifetime2] - field_v;
                 this.field_o[var12Lifetime2] = this.field_o[var12Lifetime2] - field_mb;
-                this.field_F[var12Lifetime2] = this.field_F[var12Lifetime2] - field_cb;
+                this.verticesZ[var12Lifetime2] = this.verticesZ[var12Lifetime2] - field_cb;
                 if (param4 != 0) {
                   var13Lifetime1 = tm.field_n[param4];
                   var14 = tm.field_e[param4];
-                  var15 = this.field_o[var12Lifetime2] * var13Lifetime1 + this.field_G[var12Lifetime2] * var14 + 32767 >> 16;
-                  this.field_o[var12Lifetime2] = this.field_o[var12Lifetime2] * var14 - this.field_G[var12Lifetime2] * var13Lifetime1 + 32767 >> 16;
-                  this.field_G[var12Lifetime2] = var15;
+                  var15 = this.field_o[var12Lifetime2] * var13Lifetime1 + this.verticesX[var12Lifetime2] * var14 + 32767 >> 16;
+                  this.field_o[var12Lifetime2] = this.field_o[var12Lifetime2] * var14 - this.verticesX[var12Lifetime2] * var13Lifetime1 + 32767 >> 16;
+                  this.verticesX[var12Lifetime2] = var15;
                 }
                 if (param2 != 0) {
                   var13Lifetime1Lifetime1 = tm.field_n[param2];
                   var14Lifetime2 = tm.field_e[param2];
-                  var15Lifetime2 = this.field_o[var12Lifetime2] * var14Lifetime2 - this.field_F[var12Lifetime2] * var13Lifetime1Lifetime1 + 32767 >> 16;
-                  this.field_F[var12Lifetime2] = this.field_o[var12Lifetime2] * var13Lifetime1Lifetime1 + this.field_F[var12Lifetime2] * var14Lifetime2 + 32767 >> 16;
+                  var15Lifetime2 = this.field_o[var12Lifetime2] * var14Lifetime2 - this.verticesZ[var12Lifetime2] * var13Lifetime1Lifetime1 + 32767 >> 16;
+                  this.verticesZ[var12Lifetime2] = this.field_o[var12Lifetime2] * var13Lifetime1Lifetime1 + this.verticesZ[var12Lifetime2] * var14Lifetime2 + 32767 >> 16;
                   this.field_o[var12Lifetime2] = var15Lifetime2;
                 }
                 if (param3 != 0) {
                   var13Lifetime1Lifetime2 = tm.field_n[param3];
                   var14Lifetime3 = tm.field_e[param3];
-                  var15Lifetime3 = this.field_F[var12Lifetime2] * var13Lifetime1Lifetime2 + this.field_G[var12Lifetime2] * var14Lifetime3 + 32767 >> 16;
-                  this.field_F[var12Lifetime2] = this.field_F[var12Lifetime2] * var14Lifetime3 - this.field_G[var12Lifetime2] * var13Lifetime1Lifetime2 + 32767 >> 16;
-                  this.field_G[var12Lifetime2] = var15Lifetime3;
+                  var15Lifetime3 = this.verticesZ[var12Lifetime2] * var13Lifetime1Lifetime2 + this.verticesX[var12Lifetime2] * var14Lifetime3 + 32767 >> 16;
+                  this.verticesZ[var12Lifetime2] = this.verticesZ[var12Lifetime2] * var14Lifetime3 - this.verticesX[var12Lifetime2] * var13Lifetime1Lifetime2 + 32767 >> 16;
+                  this.verticesX[var12Lifetime2] = var15Lifetime3;
                 }
-                this.field_G[var12Lifetime2] = this.field_G[var12Lifetime2] + field_v;
+                this.verticesX[var12Lifetime2] = this.verticesX[var12Lifetime2] + field_v;
                 this.field_o[var12Lifetime2] = this.field_o[var12Lifetime2] + field_mb;
-                this.field_F[var12Lifetime2] = this.field_F[var12Lifetime2] + field_cb;
+                this.verticesZ[var12Lifetime2] = this.verticesZ[var12Lifetime2] + field_cb;
               }
             }
           }
@@ -670,19 +670,19 @@ final class ModelMesh extends kk {
         if (param0 == 3) {
           for (var8Lifetime3 = 0; var8Lifetime3 < var7; var8Lifetime3++) {
             var9Lifetime3 = param1[var8Lifetime3];
-            if (var9Lifetime3 < this.field_S.length) {
-              var38 = this.field_S[var9Lifetime3];
+            if (var9Lifetime3 < this.vertexGroups.length) {
+              var38 = this.vertexGroups[var9Lifetime3];
               for (var11Lifetime2 = 0; var11Lifetime2 < var38.length; var11Lifetime2++) {
                 var12Lifetime3 = var38[var11Lifetime2];
-                this.field_G[var12Lifetime3] = this.field_G[var12Lifetime3] - field_v;
+                this.verticesX[var12Lifetime3] = this.verticesX[var12Lifetime3] - field_v;
                 this.field_o[var12Lifetime3] = this.field_o[var12Lifetime3] - field_mb;
-                this.field_F[var12Lifetime3] = this.field_F[var12Lifetime3] - field_cb;
-                this.field_G[var12Lifetime3] = this.field_G[var12Lifetime3] * param2 / 128;
+                this.verticesZ[var12Lifetime3] = this.verticesZ[var12Lifetime3] - field_cb;
+                this.verticesX[var12Lifetime3] = this.verticesX[var12Lifetime3] * param2 / 128;
                 this.field_o[var12Lifetime3] = this.field_o[var12Lifetime3] * param3 / 128;
-                this.field_F[var12Lifetime3] = this.field_F[var12Lifetime3] * param4 / 128;
-                this.field_G[var12Lifetime3] = this.field_G[var12Lifetime3] + field_v;
+                this.verticesZ[var12Lifetime3] = this.verticesZ[var12Lifetime3] * param4 / 128;
+                this.verticesX[var12Lifetime3] = this.verticesX[var12Lifetime3] + field_v;
                 this.field_o[var12Lifetime3] = this.field_o[var12Lifetime3] + field_mb;
-                this.field_F[var12Lifetime3] = this.field_F[var12Lifetime3] + field_cb;
+                this.verticesZ[var12Lifetime3] = this.verticesZ[var12Lifetime3] + field_cb;
               }
             }
           }
@@ -692,14 +692,14 @@ final class ModelMesh extends kk {
           if (param0 != 7) {
             return;
           }
-          if (this.field_i != null) {
+          if (this.faceGroups != null) {
             for (var8Lifetime4 = 0; var8Lifetime4 < var7; var8Lifetime4++) {
               var9Lifetime4 = param1[var8Lifetime4];
-              if (var9Lifetime4 < this.field_i.length) {
-                var40 = this.field_i[var9Lifetime4];
+              if (var9Lifetime4 < this.faceGroups.length) {
+                var40 = this.faceGroups[var9Lifetime4];
                 for (var11Lifetime3 = 0; var11Lifetime3 < var40.length; var11Lifetime3++) {
                   var12Lifetime4 = var40[var11Lifetime3];
-                  var13Lifetime2 = this.field_r[var12Lifetime4] & 65535;
+                  var13Lifetime2 = this.faceColors[var12Lifetime4] & 65535;
                   var14Lifetime1 = var13Lifetime2 >> 10 & 63;
                   var15Lifetime1 = var13Lifetime2 >> 7 & 7;
                   var16 = var13Lifetime2 & 127;
@@ -720,7 +720,7 @@ final class ModelMesh extends kk {
                   } else {
                     var16 = 0;
                   }
-                  this.field_r[var12Lifetime4] = (short)(var14Lifetime1 << 10 | var15Lifetime1 << 7 | var16);
+                  this.faceColors[var12Lifetime4] = (short)(var14Lifetime1 << 10 | var15Lifetime1 << 7 | var16);
                 }
                 this.field_db = true;
               }
@@ -728,12 +728,12 @@ final class ModelMesh extends kk {
             return;
           }
         } else {
-          if (this.field_i != null) {
+          if (this.faceGroups != null) {
             if (this.field_H != null) {
               for (var8Lifetime4 = 0; var8Lifetime4 < var7; var8Lifetime4++) {
                 var9Lifetime4 = param1[var8Lifetime4];
-                if (var9Lifetime4 < this.field_i.length) {
-                  var39 = this.field_i[var9Lifetime4];
+                if (var9Lifetime4 < this.faceGroups.length) {
+                  var39 = this.faceGroups[var9Lifetime4];
                   for (var11Lifetime3 = 0; var11Lifetime3 < var39.length; var11Lifetime3++) {
                     var12Lifetime4 = var39[var11Lifetime3];
                     var13Lifetime2 = (this.field_H[var12Lifetime4] & 255) + param2 * 8;
@@ -777,10 +777,10 @@ final class ModelMesh extends kk {
         var6 = -32768;
         var7 = 0;
         var8 = 0;
-        for (var9 = 0; var9 < this.field_p; var9++) {
-          var10 = this.field_G[var9];
+        for (var9 = 0; var9 < this.referencedVertexCapacity; var9++) {
+          var10 = this.verticesX[var9];
           var11 = this.field_o[var9];
-          var12 = this.field_F[var9];
+          var12 = this.verticesZ[var9];
           if (var10 < var1) {
             var1 = var10;
           }
@@ -849,10 +849,10 @@ final class ModelMesh extends kk {
           var18 = tm.field_n[param3];
           var19 = tm.field_e[param3];
           var20 = param5 * var18 + param6 * var19 >> 16;
-          for (var21 = 0; var21 < this.field_I; var21++) {
-            var22 = this.field_G[var21];
+          for (var21 = 0; var21 < this.vertexCount; var21++) {
+            var22 = this.verticesX[var21];
             var23 = this.field_o[var21];
-            var24 = this.field_F[var21];
+            var24 = this.verticesZ[var21];
             if (param2 != 0) {
               var25 = var23 * var16 + var22 * var17 >> 16;
               var23 = var23 * var17 - var22 * var16 >> 16;
@@ -977,12 +977,12 @@ final class ModelMesh extends kk {
           }
           field_x = 0;
         }
-        for (var8Lifetime1 = 0; var8Lifetime1 < this.field_Y; var8Lifetime1++) {
+        for (var8Lifetime1 = 0; var8Lifetime1 < this.faceCount; var8Lifetime1++) {
           regionExit1: {
             if (this.field_R[var8Lifetime1] != -2) {
-              var9 = this.field_jb[var8Lifetime1];
-              var10 = this.field_bb[var8Lifetime1];
-              var11 = this.field_N[var8Lifetime1];
+              var9 = this.faceVertexA[var8Lifetime1];
+              var10 = this.faceVertexB[var8Lifetime1];
+              var11 = this.faceVertexC[var8Lifetime1];
               var12 = field_B[var9];
               var13 = field_B[var10];
               var14_int = field_B[var11];
@@ -1434,15 +1434,15 @@ final class ModelMesh extends kk {
           field_cb = 0;
           for (var11 = 0; var11 < var9; var11++) {
             var12 = param1[var11];
-            if (var12 < this.field_S.length) {
-              var78 = this.field_S[var12];
+            if (var12 < this.vertexGroups.length) {
+              var78 = this.vertexGroups[var12];
               for (var14 = 0; var14 < var78.length; var14++) {
                 var15 = var78[var14];
                 if (this.field_e == null ||
                   (param6 & this.field_e[var15]) != 0) {
-                  field_v = field_v + this.field_G[var15];
+                  field_v = field_v + this.verticesX[var15];
                   field_mb = field_mb + this.field_o[var15];
-                  field_cb = field_cb + this.field_F[var15];
+                  field_cb = field_cb + this.verticesZ[var15];
                   var10++;
                 }
               }
@@ -1471,15 +1471,15 @@ final class ModelMesh extends kk {
           }
           for (var10Lifetime1Lifetime1 = 0; var10Lifetime1Lifetime1 < var9; var10Lifetime1Lifetime1++) {
             var11Lifetime1Lifetime1 = param1[var10Lifetime1Lifetime1];
-            if (var11Lifetime1Lifetime1 < this.field_S.length) {
-              var79 = this.field_S[var11Lifetime1Lifetime1];
+            if (var11Lifetime1Lifetime1 < this.vertexGroups.length) {
+              var79 = this.vertexGroups[var11Lifetime1Lifetime1];
               for (var13 = 0; var13 < var79.length; var13++) {
                 var14Lifetime1 = var79[var13];
                 if (this.field_e == null ||
                   (param6 & this.field_e[var14Lifetime1]) != 0) {
-                  this.field_G[var14Lifetime1] = this.field_G[var14Lifetime1] + param2;
+                  this.verticesX[var14Lifetime1] = this.verticesX[var14Lifetime1] + param2;
                   this.field_o[var14Lifetime1] = this.field_o[var14Lifetime1] + param3;
-                  this.field_F[var14Lifetime1] = this.field_F[var14Lifetime1] + param4;
+                  this.verticesZ[var14Lifetime1] = this.verticesZ[var14Lifetime1] + param4;
                 }
               }
             }
@@ -1490,39 +1490,39 @@ final class ModelMesh extends kk {
           if (param7 == null) {
             for (var10Lifetime2 = 0; var10Lifetime2 < var9; var10Lifetime2++) {
               var11Lifetime2 = param1[var10Lifetime2];
-              if (var11Lifetime2 < this.field_S.length) {
-                var81 = this.field_S[var11Lifetime2];
+              if (var11Lifetime2 < this.vertexGroups.length) {
+                var81 = this.vertexGroups[var11Lifetime2];
                 for (var13Lifetime1 = 0; var13Lifetime1 < var81.length; var13Lifetime1++) {
                   var14Lifetime2 = var81[var13Lifetime1];
                   if (this.field_e == null ||
                     (param6 & this.field_e[var14Lifetime2]) != 0) {
-                    this.field_G[var14Lifetime2] = this.field_G[var14Lifetime2] - field_v;
+                    this.verticesX[var14Lifetime2] = this.verticesX[var14Lifetime2] - field_v;
                     this.field_o[var14Lifetime2] = this.field_o[var14Lifetime2] - field_mb;
-                    this.field_F[var14Lifetime2] = this.field_F[var14Lifetime2] - field_cb;
+                    this.verticesZ[var14Lifetime2] = this.verticesZ[var14Lifetime2] - field_cb;
                     if (param4 != 0) {
                       var15Lifetime1 = tm.field_n[param4];
                       var16 = tm.field_e[param4];
-                      var17 = this.field_o[var14Lifetime2] * var15Lifetime1 + this.field_G[var14Lifetime2] * var16 + 32767 >> 16;
-                      this.field_o[var14Lifetime2] = this.field_o[var14Lifetime2] * var16 - this.field_G[var14Lifetime2] * var15Lifetime1 + 32767 >> 16;
-                      this.field_G[var14Lifetime2] = var17;
+                      var17 = this.field_o[var14Lifetime2] * var15Lifetime1 + this.verticesX[var14Lifetime2] * var16 + 32767 >> 16;
+                      this.field_o[var14Lifetime2] = this.field_o[var14Lifetime2] * var16 - this.verticesX[var14Lifetime2] * var15Lifetime1 + 32767 >> 16;
+                      this.verticesX[var14Lifetime2] = var17;
                     }
                     if (param2 != 0) {
                       var15Lifetime1 = tm.field_n[param2];
                       var16 = tm.field_e[param2];
-                      var17 = this.field_o[var14Lifetime2] * var16 - this.field_F[var14Lifetime2] * var15Lifetime1 + 32767 >> 16;
-                      this.field_F[var14Lifetime2] = this.field_o[var14Lifetime2] * var15Lifetime1 + this.field_F[var14Lifetime2] * var16 + 32767 >> 16;
+                      var17 = this.field_o[var14Lifetime2] * var16 - this.verticesZ[var14Lifetime2] * var15Lifetime1 + 32767 >> 16;
+                      this.verticesZ[var14Lifetime2] = this.field_o[var14Lifetime2] * var15Lifetime1 + this.verticesZ[var14Lifetime2] * var16 + 32767 >> 16;
                       this.field_o[var14Lifetime2] = var17;
                     }
                     if (param3 != 0) {
                       var15Lifetime1 = tm.field_n[param3];
                       var16 = tm.field_e[param3];
-                      var17 = this.field_F[var14Lifetime2] * var15Lifetime1 + this.field_G[var14Lifetime2] * var16 + 32767 >> 16;
-                      this.field_F[var14Lifetime2] = this.field_F[var14Lifetime2] * var16 - this.field_G[var14Lifetime2] * var15Lifetime1 + 32767 >> 16;
-                      this.field_G[var14Lifetime2] = var17;
+                      var17 = this.verticesZ[var14Lifetime2] * var15Lifetime1 + this.verticesX[var14Lifetime2] * var16 + 32767 >> 16;
+                      this.verticesZ[var14Lifetime2] = this.verticesZ[var14Lifetime2] * var16 - this.verticesX[var14Lifetime2] * var15Lifetime1 + 32767 >> 16;
+                      this.verticesX[var14Lifetime2] = var17;
                     }
-                    this.field_G[var14Lifetime2] = this.field_G[var14Lifetime2] + field_v;
+                    this.verticesX[var14Lifetime2] = this.verticesX[var14Lifetime2] + field_v;
                     this.field_o[var14Lifetime2] = this.field_o[var14Lifetime2] + field_mb;
-                    this.field_F[var14Lifetime2] = this.field_F[var14Lifetime2] + field_cb;
+                    this.verticesZ[var14Lifetime2] = this.verticesZ[var14Lifetime2] + field_cb;
                   }
                 }
               }
@@ -1610,21 +1610,21 @@ final class ModelMesh extends kk {
           var38 = var38 + var12Lifetime2;
           for (var39 = 0; var39 < var9; var39++) {
             var40 = param1[var39];
-            if (var40 < this.field_S.length) {
-              var80 = this.field_S[var40];
+            if (var40 < this.vertexGroups.length) {
+              var80 = this.vertexGroups[var40];
               for (var42 = 0; var42 < var80.length; var42++) {
                 var43 = var80[var42];
                 if (this.field_e == null ||
                   (param6 & this.field_e[var43]) != 0) {
-                  var44 = var63[0] * this.field_G[var43] + var63[1] * this.field_o[var43] + var63[2] * this.field_F[var43] + 16384 >> 15;
-                  var45 = var63[3] * this.field_G[var43] + var63[4] * this.field_o[var43] + var63[5] * this.field_F[var43] + 16384 >> 15;
-                  var46 = var63[6] * this.field_G[var43] + var63[7] * this.field_o[var43] + var63[8] * this.field_F[var43] + 16384 >> 15;
+                  var44 = var63[0] * this.verticesX[var43] + var63[1] * this.field_o[var43] + var63[2] * this.verticesZ[var43] + 16384 >> 15;
+                  var45 = var63[3] * this.verticesX[var43] + var63[4] * this.field_o[var43] + var63[5] * this.verticesZ[var43] + 16384 >> 15;
+                  var46 = var63[6] * this.verticesX[var43] + var63[7] * this.field_o[var43] + var63[8] * this.verticesZ[var43] + 16384 >> 15;
                   var44 = var44 + var36;
                   var45 = var45 + var37;
                   var46 = var46 + var38;
-                  this.field_G[var43] = var44;
+                  this.verticesX[var43] = var44;
                   this.field_o[var43] = var45;
-                  this.field_F[var43] = var46;
+                  this.verticesZ[var43] = var46;
                 }
               }
             }
@@ -1635,16 +1635,16 @@ final class ModelMesh extends kk {
               if (param0 != 7) {
                 return;
               }
-              if (this.field_i != null) {
+              if (this.faceGroups != null) {
                 for (var10Lifetime2 = 0; var10Lifetime2 < var9; var10Lifetime2++) {
                   var11Lifetime2 = param1[var10Lifetime2];
-                  if (var11Lifetime2 < this.field_i.length) {
-                    var85 = this.field_i[var11Lifetime2];
+                  if (var11Lifetime2 < this.faceGroups.length) {
+                    var85 = this.faceGroups[var11Lifetime2];
                     for (var13Lifetime1 = 0; var13Lifetime1 < var85.length; var13Lifetime1++) {
                       var14Lifetime2 = var85[var13Lifetime1];
                       if (this.field_g == null ||
                         (param6 & this.field_g[var14Lifetime2]) != 0) {
-                        var15Lifetime1 = this.field_r[var14Lifetime2] & 65535;
+                        var15Lifetime1 = this.faceColors[var14Lifetime2] & 65535;
                         var16 = var15Lifetime1 >> 10 & 63;
                         var17 = var15Lifetime1 >> 7 & 7;
                         var18 = var15Lifetime1 & 127;
@@ -1665,7 +1665,7 @@ final class ModelMesh extends kk {
                         } else {
                           var18 = 0;
                         }
-                        this.field_r[var14Lifetime2] = (short)(var16 << 10 | var17 << 7 | var18);
+                        this.faceColors[var14Lifetime2] = (short)(var16 << 10 | var17 << 7 | var18);
                       }
                     }
                     this.field_db = true;
@@ -1674,12 +1674,12 @@ final class ModelMesh extends kk {
                 return;
               }
             } else {
-              if (this.field_i != null) {
+              if (this.faceGroups != null) {
                 if (this.field_H != null) {
                   for (var10Lifetime2 = 0; var10Lifetime2 < var9; var10Lifetime2++) {
                     var11Lifetime2 = param1[var10Lifetime2];
-                    if (var11Lifetime2 < this.field_i.length) {
-                      var84 = this.field_i[var11Lifetime2];
+                    if (var11Lifetime2 < this.faceGroups.length) {
+                      var84 = this.faceGroups[var11Lifetime2];
                       for (var13Lifetime1 = 0; var13Lifetime1 < var84.length; var13Lifetime1++) {
                         var14Lifetime2 = var84[var13Lifetime1];
                         if (this.field_g == null ||
@@ -1707,21 +1707,21 @@ final class ModelMesh extends kk {
           if (param7 == null) {
             for (var10Lifetime2 = 0; var10Lifetime2 < var9; var10Lifetime2++) {
               var11Lifetime2 = param1[var10Lifetime2];
-              if (var11Lifetime2 < this.field_S.length) {
-                var83 = this.field_S[var11Lifetime2];
+              if (var11Lifetime2 < this.vertexGroups.length) {
+                var83 = this.vertexGroups[var11Lifetime2];
                 for (var13Lifetime1 = 0; var13Lifetime1 < var83.length; var13Lifetime1++) {
                   var14Lifetime2 = var83[var13Lifetime1];
                   if (this.field_e == null ||
                     (param6 & this.field_e[var14Lifetime2]) != 0) {
-                    this.field_G[var14Lifetime2] = this.field_G[var14Lifetime2] - field_v;
+                    this.verticesX[var14Lifetime2] = this.verticesX[var14Lifetime2] - field_v;
                     this.field_o[var14Lifetime2] = this.field_o[var14Lifetime2] - field_mb;
-                    this.field_F[var14Lifetime2] = this.field_F[var14Lifetime2] - field_cb;
-                    this.field_G[var14Lifetime2] = this.field_G[var14Lifetime2] * param2 / 128;
+                    this.verticesZ[var14Lifetime2] = this.verticesZ[var14Lifetime2] - field_cb;
+                    this.verticesX[var14Lifetime2] = this.verticesX[var14Lifetime2] * param2 / 128;
                     this.field_o[var14Lifetime2] = this.field_o[var14Lifetime2] * param3 / 128;
-                    this.field_F[var14Lifetime2] = this.field_F[var14Lifetime2] * param4 / 128;
-                    this.field_G[var14Lifetime2] = this.field_G[var14Lifetime2] + field_v;
+                    this.verticesZ[var14Lifetime2] = this.verticesZ[var14Lifetime2] * param4 / 128;
+                    this.verticesX[var14Lifetime2] = this.verticesX[var14Lifetime2] + field_v;
                     this.field_o[var14Lifetime2] = this.field_o[var14Lifetime2] + field_mb;
-                    this.field_F[var14Lifetime2] = this.field_F[var14Lifetime2] + field_cb;
+                    this.verticesZ[var14Lifetime2] = this.verticesZ[var14Lifetime2] + field_cb;
                   }
                 }
               }
@@ -1791,21 +1791,21 @@ final class ModelMesh extends kk {
           var32 = var32 + var12Lifetime2;
           for (var33 = 0; var33 < var9; var33++) {
             var34 = param1[var33];
-            if (var34 < this.field_S.length) {
-              var82 = this.field_S[var34];
+            if (var34 < this.vertexGroups.length) {
+              var82 = this.vertexGroups[var34];
               for (var36 = 0; var36 < var82.length; var36++) {
                 var37 = var82[var36];
                 if (this.field_e == null ||
                   (param6 & this.field_e[var37]) != 0) {
-                  var38 = var66[0] * this.field_G[var37] + var66[1] * this.field_o[var37] + var66[2] * this.field_F[var37] + 16384 >> 15;
-                  var39 = var66[3] * this.field_G[var37] + var66[4] * this.field_o[var37] + var66[5] * this.field_F[var37] + 16384 >> 15;
-                  var40 = var66[6] * this.field_G[var37] + var66[7] * this.field_o[var37] + var66[8] * this.field_F[var37] + 16384 >> 15;
+                  var38 = var66[0] * this.verticesX[var37] + var66[1] * this.field_o[var37] + var66[2] * this.verticesZ[var37] + 16384 >> 15;
+                  var39 = var66[3] * this.verticesX[var37] + var66[4] * this.field_o[var37] + var66[5] * this.verticesZ[var37] + 16384 >> 15;
+                  var40 = var66[6] * this.verticesX[var37] + var66[7] * this.field_o[var37] + var66[8] * this.verticesZ[var37] + 16384 >> 15;
                   var38 = var38 + var30;
                   var39 = var39 + var31Lifetime1;
                   var40 = var40 + var32;
-                  this.field_G[var37] = var38;
+                  this.verticesX[var37] = var38;
                   this.field_o[var37] = var39;
-                  this.field_F[var37] = var40;
+                  this.verticesZ[var37] = var40;
                 }
               }
             }
@@ -1814,15 +1814,15 @@ final class ModelMesh extends kk {
     }
 
     private ModelMesh() {
-        this.field_Y = 0;
+        this.faceCount = 0;
         this.field_l = 0;
-        this.field_I = 0;
+        this.vertexCount = 0;
         this.field_k = false;
         this.field_db = false;
-        this.field_p = 0;
+        this.referencedVertexCapacity = 0;
     }
 
-    ModelMesh(js param0, int param1, int param2, int param3, int param4, int param5) {
+    ModelMesh(MeshData param0, int param1, int param2, int param3, int param4, int param5) {
         int dupTemp$1 = 0;
         int incrementValue$0 = 0;
         int var7;
@@ -1832,13 +1832,13 @@ final class ModelMesh extends kk {
         int var10;
         int var11;
         int var12;
-        wi var13;
+        VertexNormal var13;
         int var14;
         int var15;
         int var16;
         int[] var17;
-        kg var18;
-        kg var19;
+        FaceNormal var18;
+        FaceNormal var19;
         int[] var20;
         int var9Lifetime1;
         int var10Lifetime1;
@@ -1847,39 +1847,39 @@ final class ModelMesh extends kk {
         int var11Lifetime2;
         int var10Lifetime1Lifetime1;
         int var10Lifetime1Lifetime2;
-        this.field_Y = 0;
+        this.faceCount = 0;
         this.field_l = 0;
-        this.field_I = 0;
+        this.vertexCount = 0;
         this.field_k = false;
         this.field_db = false;
-        this.field_p = 0;
-        param0.b();
-        param0.a();
-        this.field_I = param0.field_x;
-        this.field_p = param0.field_v;
-        this.field_G = param0.field_N;
-        this.field_o = param0.field_D;
-        this.field_F = param0.field_u;
-        this.field_Y = param0.field_O;
-        this.field_jb = param0.field_q;
-        this.field_bb = param0.field_o;
-        this.field_N = param0.field_r;
+        this.referencedVertexCapacity = 0;
+        param0.calculateNormals();
+        param0.buildSkinGroups();
+        this.vertexCount = param0.vertexCount;
+        this.referencedVertexCapacity = param0.referencedVertexCapacity;
+        this.verticesX = param0.verticesX;
+        this.field_o = param0.verticesY;
+        this.verticesZ = param0.verticesZ;
+        this.faceCount = param0.faceCount;
+        this.faceVertexA = param0.faceVertexA;
+        this.faceVertexB = param0.faceVertexB;
+        this.faceVertexC = param0.faceVertexC;
         this.field_ob = param0.field_w;
-        this.field_H = param0.field_h;
-        this.field_r = param0.field_i;
-        this.field_S = param0.field_l;
-        this.field_i = param0.field_H;
+        this.field_H = param0.faceAlpha;
+        this.faceColors = param0.faceColors;
+        this.vertexGroups = param0.vertexGroups;
+        this.faceGroups = param0.faceGroups;
         this.field_g = param0.field_A;
         this.field_e = param0.field_j;
         var7 = (int)Math.sqrt((double)(param3 * param3 + param4 * param4 + param5 * param5));
         var8 = param2 * var7 >> 8;
-        this.field_Z = new int[this.field_Y];
-        this.field_t = new int[this.field_Y];
-        this.field_R = new int[this.field_Y];
-        if (param0.field_B != null) {
-          this.field_ab = new short[this.field_Y];
-          for (var9 = 0; var9 < this.field_Y; var9++) {
-            var10 = param0.field_B[var9];
+        this.field_Z = new int[this.faceCount];
+        this.field_t = new int[this.faceCount];
+        this.field_R = new int[this.faceCount];
+        if (param0.faceTextureIds != null) {
+          this.field_ab = new short[this.faceCount];
+          for (var9 = 0; var9 < this.faceCount; var9++) {
+            var10 = param0.faceTextureIds[var9];
             if (var10 != -1 &&
               tm.field_o.a(true, var10)) {
               this.field_ab[var9] = (short)var10;
@@ -1895,7 +1895,7 @@ final class ModelMesh extends kk {
           var20 = new int[param0.field_E];
           var17 = var20;
           var9_ref_int__ = var17;
-          for (var10Lifetime1 = 0; var10Lifetime1 < this.field_Y; var10Lifetime1++) {
+          for (var10Lifetime1 = 0; var10Lifetime1 < this.faceCount; var10Lifetime1++) {
             if (param0.field_G[var10Lifetime1] != -1) {
               dupTemp$1 = param0.field_G[var10Lifetime1] & 255;
               var9_ref_int__[dupTemp$1] = var9_ref_int__[dupTemp$1] + 1;
@@ -1908,14 +1908,14 @@ final class ModelMesh extends kk {
               this.field_l = this.field_l + 1;
             }
           }
-          this.field_nb = new int[this.field_l];
+          this.verticesY = new int[this.field_l];
           this.field_q = new int[this.field_l];
           this.field_w = new int[this.field_l];
           var10Lifetime1Lifetime2 = 0;
           for (var11 = 0; var11 < param0.field_E; var11++) {
             if (var20[var11] > 0 &&
               param0.field_t[var11] == 0) {
-              this.field_nb[var10Lifetime1Lifetime2] = param0.field_M[var11] & 65535;
+              this.verticesY[var10Lifetime1Lifetime2] = param0.field_M[var11] & 65535;
               this.field_q[var10Lifetime1Lifetime2] = param0.field_n[var11] & 65535;
               this.field_w[var10Lifetime1Lifetime2] = param0.field_C[var11] & 65535;
               incrementValue$0 = var10Lifetime1Lifetime2;
@@ -1925,8 +1925,8 @@ final class ModelMesh extends kk {
               var20[var11] = -1;
             }
           }
-          this.field_lb = new byte[this.field_Y];
-          for (var11Lifetime2 = 0; var11Lifetime2 < this.field_Y; var11Lifetime2++) {
+          this.field_lb = new byte[this.faceCount];
+          for (var11Lifetime2 = 0; var11Lifetime2 < this.faceCount; var11Lifetime2++) {
             if (param0.field_G[var11Lifetime2] == -1) {
               this.field_lb[var11Lifetime2] = (byte)-1;
             } else {
@@ -1940,14 +1940,14 @@ final class ModelMesh extends kk {
         }
         var16 = 0;
         var9Lifetime1 = var16;
-        while (var16 < this.field_Y) {
-          if (param0.field_p != null) {
-            var10Lifetime2 = param0.field_p[var16];
+        while (var16 < this.faceCount) {
+          if (param0.faceRenderTypes != null) {
+            var10Lifetime2 = param0.faceRenderTypes[var16];
           } else {
             var10Lifetime2 = 0;
           }
-          if (param0.field_h != null) {
-            var11Lifetime1 = param0.field_h[var16];
+          if (param0.faceAlpha != null) {
+            var11Lifetime1 = param0.faceAlpha[var16];
           } else {
             var11Lifetime1 = 0;
           }
@@ -1967,35 +1967,35 @@ final class ModelMesh extends kk {
               if (var10Lifetime2 != 1) {
                 this.field_R[var16] = -2;
               } else {
-                var19 = param0.field_L[var16];
-                var14 = param1 + (param3 * var19.field_b + param4 * var19.field_a + param5 * var19.field_e) / (var8 + var8 / 2);
+                var19 = param0.faceNormals[var16];
+                var14 = param1 + (param3 * var19.x + param4 * var19.y + param5 * var19.z) / (var8 + var8 / 2);
                 this.field_Z[var16] = ModelMesh.d(var14);
                 this.field_R[var16] = -1;
               }
             } else {
               if (param0.field_g != null &&
-                param0.field_g[this.field_jb[var16]] != null) {
-                var13 = param0.field_g[this.field_jb[var16]];
+                param0.field_g[this.faceVertexA[var16]] != null) {
+                var13 = param0.field_g[this.faceVertexA[var16]];
               } else {
-                var13 = param0.field_y[this.field_jb[var16]];
+                var13 = param0.vertexNormals[this.faceVertexA[var16]];
               }
-              var14 = param1 + (param3 * var13.field_d + param4 * var13.field_e + param5 * var13.field_b) / (var8 * var13.field_g);
+              var14 = param1 + (param3 * var13.x + param4 * var13.y + param5 * var13.z) / (var8 * var13.contributions);
               this.field_Z[var16] = ModelMesh.d(var14);
               if (param0.field_g != null &&
-                param0.field_g[this.field_bb[var16]] != null) {
-                var13 = param0.field_g[this.field_bb[var16]];
+                param0.field_g[this.faceVertexB[var16]] != null) {
+                var13 = param0.field_g[this.faceVertexB[var16]];
               } else {
-                var13 = param0.field_y[this.field_bb[var16]];
+                var13 = param0.vertexNormals[this.faceVertexB[var16]];
               }
-              var14 = param1 + (param3 * var13.field_d + param4 * var13.field_e + param5 * var13.field_b) / (var8 * var13.field_g);
+              var14 = param1 + (param3 * var13.x + param4 * var13.y + param5 * var13.z) / (var8 * var13.contributions);
               this.field_t[var16] = ModelMesh.d(var14);
               if (param0.field_g != null &&
-                param0.field_g[this.field_N[var16]] != null) {
-                var13 = param0.field_g[this.field_N[var16]];
+                param0.field_g[this.faceVertexC[var16]] != null) {
+                var13 = param0.field_g[this.faceVertexC[var16]];
               } else {
-                var13 = param0.field_y[this.field_N[var16]];
+                var13 = param0.vertexNormals[this.faceVertexC[var16]];
               }
-              var14 = param1 + (param3 * var13.field_d + param4 * var13.field_e + param5 * var13.field_b) / (var8 * var13.field_g);
+              var14 = param1 + (param3 * var13.x + param4 * var13.y + param5 * var13.z) / (var8 * var13.contributions);
               this.field_R[var16] = ModelMesh.d(var14);
             }
           } else {
@@ -2008,36 +2008,36 @@ final class ModelMesh extends kk {
                   this.field_R[var16] = -1;
                 }
               } else {
-                var18 = param0.field_L[var16];
-                var14 = param1 + (param3 * var18.field_b + param4 * var18.field_a + param5 * var18.field_e) / (var8 + var8 / 2) << 17;
-                this.field_Z[var16] = var14 | ModelMesh.a(param0.field_i[var16] & 65535, var14 >> 17);
+                var18 = param0.faceNormals[var16];
+                var14 = param1 + (param3 * var18.x + param4 * var18.y + param5 * var18.z) / (var8 + var8 / 2) << 17;
+                this.field_Z[var16] = var14 | ModelMesh.a(param0.faceColors[var16] & 65535, var14 >> 17);
                 this.field_R[var16] = -1;
               }
             } else {
-              var15 = param0.field_i[var16] & 65535;
+              var15 = param0.faceColors[var16] & 65535;
               if (param0.field_g != null &&
-                param0.field_g[this.field_jb[var16]] != null) {
-                var13 = param0.field_g[this.field_jb[var16]];
+                param0.field_g[this.faceVertexA[var16]] != null) {
+                var13 = param0.field_g[this.faceVertexA[var16]];
               } else {
-                var13 = param0.field_y[this.field_jb[var16]];
+                var13 = param0.vertexNormals[this.faceVertexA[var16]];
               }
-              var14 = param1 + (param3 * var13.field_d + param4 * var13.field_e + param5 * var13.field_b) / (var8 * var13.field_g) << 17;
+              var14 = param1 + (param3 * var13.x + param4 * var13.y + param5 * var13.z) / (var8 * var13.contributions) << 17;
               this.field_Z[var16] = var14 | ModelMesh.a(var15, var14 >> 17);
               if (param0.field_g != null &&
-                param0.field_g[this.field_bb[var16]] != null) {
-                var13 = param0.field_g[this.field_bb[var16]];
+                param0.field_g[this.faceVertexB[var16]] != null) {
+                var13 = param0.field_g[this.faceVertexB[var16]];
               } else {
-                var13 = param0.field_y[this.field_bb[var16]];
+                var13 = param0.vertexNormals[this.faceVertexB[var16]];
               }
-              var14 = param1 + (param3 * var13.field_d + param4 * var13.field_e + param5 * var13.field_b) / (var8 * var13.field_g) << 17;
+              var14 = param1 + (param3 * var13.x + param4 * var13.y + param5 * var13.z) / (var8 * var13.contributions) << 17;
               this.field_t[var16] = var14 | ModelMesh.a(var15, var14 >> 17);
               if (param0.field_g != null &&
-                param0.field_g[this.field_N[var16]] != null) {
-                var13 = param0.field_g[this.field_N[var16]];
+                param0.field_g[this.faceVertexC[var16]] != null) {
+                var13 = param0.field_g[this.faceVertexC[var16]];
               } else {
-                var13 = param0.field_y[this.field_N[var16]];
+                var13 = param0.vertexNormals[this.faceVertexC[var16]];
               }
-              var14 = param1 + (param3 * var13.field_d + param4 * var13.field_e + param5 * var13.field_b) / (var8 * var13.field_g) << 17;
+              var14 = param1 + (param3 * var13.x + param4 * var13.y + param5 * var13.z) / (var8 * var13.contributions) << 17;
               this.field_R[var16] = var14 | ModelMesh.a(var15, var14 >> 17);
             }
           }

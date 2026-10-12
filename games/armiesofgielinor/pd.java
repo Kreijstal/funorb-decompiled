@@ -7,7 +7,7 @@ final class pd {
     static String field_b;
     static je field_c;
     static int field_e;
-    static js field_d;
+    static MeshData field_d;
     static String field_f;
 
     public static void a(byte param0) {

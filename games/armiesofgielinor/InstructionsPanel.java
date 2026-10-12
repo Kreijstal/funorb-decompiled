@@ -489,7 +489,7 @@ final class InstructionsPanel {
                   mv.a(db.a(true, 20 + param0), (byte) -70, var7, param2, MatchConditionEntry.a(param1, (byte) 94));
                 }
                 if (-1 < param2) {
-                  ResourceRequest.a(ActionRequest.unitModels[76][param2], false, MatchConditionEntry.a(-40 + param1, (byte) 94), this.illustrationAnimation, 128, 150, db.a(true, param0), (js) null, -10374);
+                  ResourceRequest.a(ActionRequest.unitModels[76][param2], false, MatchConditionEntry.a(-40 + param1, (byte) 94), this.illustrationAnimation, 128, 150, db.a(true, param0), (MeshData) null, -10374);
                 }
                 l.field_b[16].draw(db.a(true, param0), MatchConditionEntry.a(param1 - 40, (byte) 94));
                 return;
@@ -864,7 +864,7 @@ final class InstructionsPanel {
     private final void c(int param0, int param1, int param2) {
         if (null != this.auxiliaryPreviewModel) {
           this.auxiliaryPreviewModel.setScreenPosition(db.a(true, 40 + param1), MatchConditionEntry.a(param2 + 50, (byte) 94), (byte) -117);
-          this.auxiliaryPreviewModel.a((byte) -72, false);
+          this.auxiliaryPreviewModel.drawAtStoredPosition((byte) -72, false);
           nb.a(db.a(true, param1), MatchConditionEntry.a(param2 + 38, (byte) 94), (byte) -97, (Unit) null);
         }
         if (param0 != 50) {
@@ -1759,7 +1759,7 @@ final class InstructionsPanel {
         }
         if (var7 != null) {
           var7.setScreenPosition(db.a(true, param5 + 40), MatchConditionEntry.a(param2 + 60, (byte) 94), (byte) -117);
-          var7.a((byte) -72, false);
+          var7.drawAtStoredPosition((byte) -72, false);
         }
         if (param4 != -1) {
           discarded$0 = this.e(-40, -71, -63, -38, 73);
@@ -1775,7 +1775,7 @@ final class InstructionsPanel {
         }
         try {
           param2.setScreenPosition(db.a(true, param3), MatchConditionEntry.a(param0, (byte) 94), (byte) 77);
-          param2.a((byte) -72, false);
+          param2.drawAtStoredPosition((byte) -72, false);
           int var5_int = -57 % ((param1 - 3) / 48);
         } catch (RuntimeException runtimeException) {
           throw ig.addExceptionContext((Throwable) ((Object) runtimeException), "rk.NA(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
@@ -1806,7 +1806,7 @@ final class InstructionsPanel {
         }
         if (this.field_S != null) {
           this.field_S.setScreenPosition(db.a(true, 40 + param2), MatchConditionEntry.a(90 + param0, (byte) 94), (byte) -3);
-          this.field_S.a((byte) -72, false);
+          this.field_S.drawAtStoredPosition((byte) -72, false);
           UnitCycler.a(-10, MatchConditionEntry.a(38 + param0, (byte) 94), db.a(true, param2), (Unit) null);
         }
     }
@@ -2159,18 +2159,18 @@ final class InstructionsPanel {
         int var2;
         AnimationSequence var3;
         this.illustrationAnimation = null;
-        if (null != sf.field_P &&
-          sf.field_P.length > 76) {
-          var2 = sf.field_P[76];
-          if (null != ck.field_e &&
+        if (null != sf.unitAnimationGroups &&
+          sf.unitAnimationGroups.length > 76) {
+          var2 = sf.unitAnimationGroups[76];
+          if (null != ck.animationSequencesByGroup &&
             var2 >= 0 &&
-            ck.field_e.length > var2) {
-            if (null != ck.field_e[var2] &&
-              ck.field_e[var2].length > 0) {
+            ck.animationSequencesByGroup.length > var2) {
+            if (null != ck.animationSequencesByGroup[var2] &&
+              ck.animationSequencesByGroup[var2].length > 0) {
               if (param0 != -11195) {
                 this.nextEnabled = false;
               }
-              var3 = ck.field_e[sf.field_P[76]][0];
+              var3 = ck.animationSequencesByGroup[sf.unitAnimationGroups[76]][0];
               if (var3 == null) {
                 return;
               }

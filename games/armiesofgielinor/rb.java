@@ -65,7 +65,7 @@ abstract class rb implements n {
           }
           boolean decompiledFrameRemainder0 = true;
           if (param4 != null && (param3 != 2 ||
-            wq.a(param0, param1, (byte) -125))) {
+            FixedQuaternion.a(param0, param1, (byte) -125))) {
             stackIn_8_0 = true;
             decompiledFrameRemainder0 = false;
           }

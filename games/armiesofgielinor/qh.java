@@ -27,7 +27,7 @@ final class qh {
           } else {
             nf.field_Kb.field_xb = true;
             MapTile.field_f.field_Nb.field_X = null;
-            wi.a(param1, 255, param3, param5, MapTile.field_f);
+            VertexNormal.a(param1, 255, param3, param5, MapTile.field_f);
           }
         } else {
           if (SoftwareRaster.width == tq.field_c &&
@@ -54,7 +54,7 @@ final class qh {
               } else {
                 nf.field_Kb.field_xb = true;
                 MapTile.field_f.field_Nb.field_X = null;
-                wi.a(param1, 255, param3, param5, MapTile.field_f);
+                VertexNormal.a(param1, 255, param3, param5, MapTile.field_f);
               }
             } else {
               va.field_u = qm.field_L;
@@ -78,11 +78,11 @@ final class qh {
               } else {
                 nf.field_Kb.field_xb = true;
                 MapTile.field_f.field_Nb.field_X = null;
-                wi.a(param1, 255, param3, param5, MapTile.field_f);
+                VertexNormal.a(param1, 255, param3, param5, MapTile.field_f);
               }
             }
             jg.a(0, param3, param6, param1, param2, param4, param5);
-            wi.a(param1, param7 ^ -256, param3, param5, bu.field_a);
+            VertexNormal.a(param1, param7 ^ -256, param3, param5, bu.field_a);
             hg.field_b = hg.field_b + 1;
             return;
           }
@@ -115,10 +115,10 @@ final class qh {
               } else {
                 nf.field_Kb.field_xb = true;
                 MapTile.field_f.field_Nb.field_X = null;
-                wi.a(param1, 255, param3, param5, MapTile.field_f);
+                VertexNormal.a(param1, 255, param3, param5, MapTile.field_f);
               }
               jg.a(0, param3, param6, param1, param2, param4, param5);
-              wi.a(param1, param7 ^ -256, param3, param5, bu.field_a);
+              VertexNormal.a(param1, param7 ^ -256, param3, param5, bu.field_a);
               hg.field_b = hg.field_b + 1;
               return;
             }
@@ -150,7 +150,7 @@ final class qh {
             } else {
               nf.field_Kb.field_xb = true;
               MapTile.field_f.field_Nb.field_X = null;
-              wi.a(param1, 255, param3, param5, MapTile.field_f);
+              VertexNormal.a(param1, 255, param3, param5, MapTile.field_f);
             }
           } else {
             va.field_u = qm.field_L;
@@ -173,7 +173,7 @@ final class qh {
               } else {
                 nf.field_Kb.field_xb = true;
                 MapTile.field_f.field_Nb.field_X = null;
-                wi.a(param1, 255, param3, param5, MapTile.field_f);
+                VertexNormal.a(param1, 255, param3, param5, MapTile.field_f);
               }
             } else {
               pi.field_N.field_O = ke.field_e.field_O;
@@ -187,7 +187,7 @@ final class qh {
               if (!vk.field_f) {
                 nf.field_Kb.field_xb = true;
                 MapTile.field_f.field_Nb.field_X = null;
-                wi.a(param1, 255, param3, param5, MapTile.field_f);
+                VertexNormal.a(param1, 255, param3, param5, MapTile.field_f);
               } else {
                 if (vu.field_M.field_Ub >= vu.field_M.field_nc) {
                   MapTile.field_f.field_Nb.field_X = TelefragEvent.field_y;
@@ -196,14 +196,14 @@ final class qh {
                 } else {
                   nf.field_Kb.field_xb = true;
                   MapTile.field_f.field_Nb.field_X = null;
-                  wi.a(param1, 255, param3, param5, MapTile.field_f);
+                  VertexNormal.a(param1, 255, param3, param5, MapTile.field_f);
                 }
               }
             }
           }
         }
         jg.a(0, param3, param6, param1, param2, param4, param5);
-        wi.a(param1, param7 ^ -256, param3, param5, bu.field_a);
+        VertexNormal.a(param1, param7 ^ -256, param3, param5, bu.field_a);
         hg.field_b = hg.field_b + 1;
     }
 

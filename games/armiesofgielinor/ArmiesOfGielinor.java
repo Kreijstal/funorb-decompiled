@@ -79,13 +79,13 @@ public final class ArmiesOfGielinor extends wf {
           bs.a((byte) -127);
           r.field_u = os.g(4);
           hk.k(128);
-          if (wq.field_a != null &&
-            wq.field_a.field_k) {
+          if (FixedQuaternion.field_a != null &&
+            FixedQuaternion.field_a.field_k) {
             ck.b(-127);
             oi.a(false);
           }
           stackIn_10_1 = 127;
-          stackIn_11_2 = (wq.field_a != null);
+          stackIn_11_2 = (FixedQuaternion.field_a != null);
           this.a(stackIn_10_1, stackIn_11_2);
           if (ts.field_l) {
             this.p(17);
@@ -135,11 +135,11 @@ public final class ArmiesOfGielinor extends wf {
                   this.d(0, false);
                   if (var11 != 0) {
                     stackIn_61_1 = 42;
-                    stackIn_62_2 = (null != wq.field_a);
+                    stackIn_62_2 = (null != FixedQuaternion.field_a);
                     var2_int = this.a((byte) stackIn_61_1, stackIn_62_2);
                     if (1 == var2_int ||
                       var2_int == 2) {
-                      if (null != wq.field_a) {
+                      if (null != FixedQuaternion.field_a) {
                         ck.b(-104);
                       }
                       if (var2_int == 2) {
@@ -152,11 +152,11 @@ public final class ArmiesOfGielinor extends wf {
                 }
               } else {
                 stackIn_61_1 = 42;
-                stackIn_62_2 = (null != wq.field_a);
+                stackIn_62_2 = (null != FixedQuaternion.field_a);
                 var2_int = this.a((byte) stackIn_61_1, stackIn_62_2);
                 if (1 == var2_int ||
                   var2_int == 2) {
-                  if (null != wq.field_a) {
+                  if (null != FixedQuaternion.field_a) {
                     ck.b(-104);
                   }
                   if (var2_int == 2) {
@@ -205,13 +205,13 @@ public final class ArmiesOfGielinor extends wf {
                   s.field_d = 0;
                   ma.field_Z = true;
                   SpellCastAction.field_t = false;
-                  kg.field_d = true;
+                  FaceNormal.field_d = true;
                   jt.field_a = -2;
                   TrianglePulse.a(-16147, 50, DeployRequest.field_B, true);
                   continue;
                 }
                 if (nm.field_o == 15) {
-                  if (kg.field_d) {
+                  if (FaceNormal.field_d) {
                     ut.i((byte) 124);
                     PacketBuffer.i((byte) 109);
                     uk.b(22963);
@@ -219,7 +219,7 @@ public final class ArmiesOfGielinor extends wf {
                     CipherPacketBuffer.a(false, 0, 1, 0);
                     AiUnitPlanner.field_t = true;
                     du.field_h = false;
-                    kg.field_d = false;
+                    FaceNormal.field_d = false;
                     gk.field_H = false;
                     fj.field_c = false;
                     vs.field_j = true;
@@ -231,7 +231,7 @@ public final class ArmiesOfGielinor extends wf {
                   continue;
                 }
                 if (nm.field_o == 10 &&
-                  kg.field_d) {
+                  FaceNormal.field_d) {
                   bl.a((byte) -105);
                   continue;
                 }
@@ -570,7 +570,7 @@ public final class ArmiesOfGielinor extends wf {
               BestScoreStrategy.a(7, 1742);
               TutorialLayout.a(true);
               if (var3Lifetime1 != 1) {
-                if (kg.field_d) {
+                if (FaceNormal.field_d) {
                   du.field_h = false;
                   AiUnitPlanner.field_t = true;
                   vs.field_j = true;
@@ -588,7 +588,7 @@ public final class ArmiesOfGielinor extends wf {
                   rq.field_p[jt.field_a].restoreStageSelection(100, false, 0);
                   gk.field_H = false;
                   fj.field_c = false;
-                  kg.field_d = false;
+                  FaceNormal.field_d = false;
                   uc.a(0);
                 }
                 dn.field_Qb = false;
@@ -609,7 +609,7 @@ public final class ArmiesOfGielinor extends wf {
             if (var2_intLifetime2 != 0) {
               var4Lifetime1 = 1;
             }
-            if (kg.field_d ||
+            if (FaceNormal.field_d ||
               SpellCastAction.field_t ||
               dn.field_Qb) {
               var4Lifetime1 = 1;
@@ -637,7 +637,7 @@ public final class ArmiesOfGielinor extends wf {
         RuntimeException var2 = null;
         try {
           mj.b((byte) -82);
-          if (null != wq.field_a) {
+          if (null != FixedQuaternion.field_a) {
             ck.b(-116);
           }
           pg.a(false);
@@ -734,7 +734,7 @@ public final class ArmiesOfGielinor extends wf {
               boolean decompiledFrameCompleted1 = true;
               boolean decompiledFrameRemainder2 = true;
               if (jt.field_a == -1) {
-                if (!kg.field_d) {
+                if (!FaceNormal.field_d) {
                   if (rd.field_j == null) {
                     CipherPacketBuffer.a(false, 0, 1, jt.field_a);
                     decompiledFrameRemainder2 = (var8 != 0);
@@ -798,7 +798,7 @@ public final class ArmiesOfGielinor extends wf {
             }
             boolean decompiledFrameRemainder1 = true;
             boolean decompiledFrameCompleted0 = true;
-            if (kg.field_d &&
+            if (FaceNormal.field_d &&
               !SpellCastAction.field_t &&
               !dn.field_Qb) {
               if (fj.field_c &&
@@ -856,7 +856,7 @@ public final class ArmiesOfGielinor extends wf {
               }
             }
             if (decompiledFrameCompleted0) {
-              decompiledFrameRemainder1 = !(kg.field_d);
+              decompiledFrameRemainder1 = !(FaceNormal.field_d);
             }
             if (decompiledFrameRemainder1) {
               br.a((byte) -97);
@@ -1065,7 +1065,7 @@ public final class ArmiesOfGielinor extends wf {
               SoftwareRaster.d(0, 0, SoftwareRaster.width, SoftwareRaster.height);
               an.h(1976460609);
               if (obfuscationControl) {
-                if (wq.field_a == null) {
+                if (FixedQuaternion.field_a == null) {
                   stackIn_65_0 = ph.field_f;
                 } else {
                   stackIn_65_0 = true;
@@ -1074,7 +1074,7 @@ public final class ArmiesOfGielinor extends wf {
               }
             }
           } else {
-            if (wq.field_a == null) {
+            if (FixedQuaternion.field_a == null) {
               stackIn_65_0 = ph.field_f;
             } else {
               stackIn_65_0 = true;
@@ -1395,9 +1395,9 @@ public final class ArmiesOfGielinor extends wf {
           br.a(111);
           vt.a(false);
           ng.w(0);
-          ni.a(-66);
-          kg.a((byte) -101);
-          wi.a(param0 - 14619);
+          MeshObject.a(-66);
+          FaceNormal.a((byte) -101);
+          VertexNormal.a(param0 - 14619);
           ig.e(77);
           mv.a((byte) -48);
           ht.a();
@@ -1483,7 +1483,7 @@ public final class ArmiesOfGielinor extends wf {
           AiActionCandidate.f(param0 ^ -123);
           WeightedScoreStrategy.c(-104);
           vf.c(param0 ^ 18);
-          wq.a((byte) -57);
+          FixedQuaternion.a((byte) -57);
           MovementPresentation.g(67);
           EffectPresentation.c(param0 ^ 40);
           ph.a((byte) -54);

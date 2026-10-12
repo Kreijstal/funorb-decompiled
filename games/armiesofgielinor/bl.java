@@ -431,23 +431,23 @@ final class bl {
     }
 
     final static void a(int param0, ResourceArchive param1) {
-        kk[] array$0 = null;
-        js stackIn_23_0 = null;
+        ModelMeshBase[] array$0 = null;
+        MeshData stackIn_23_0 = null;
         RuntimeException stackIn_36_0 = null;
         StringBuilder stackIn_36_1 = null;
         String stackIn_37_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         int var3 = 0;
-        js var5 = null;
+        MeshData var5 = null;
         int var6 = 0;
         int var7 = 0;
         String var8 = null;
         String var9 = null;
-        js var10 = null;
+        MeshData var10 = null;
         String var11 = null;
-        js var12 = null;
-        js var5Lifetime1;
+        MeshData var12 = null;
+        MeshData var5Lifetime1;
         int var6Lifetime1;
         int var3Lifetime1;
         int var6Lifetime2;
@@ -457,7 +457,7 @@ final class bl {
           var9 = "";
           DiskCacheRequest.unitProjectionVariants = new boolean[ActionRequest.field_m.length];
           for (var3 = param0; ActionRequest.field_m.length > var3; var3++) {
-            array$0 = new kk[ActionRequest.field_m[var3].length];
+            array$0 = new ModelMeshBase[ActionRequest.field_m[var3].length];
             ActionRequest.unitModels[var3] = array$0;
             DiskCacheRequest.unitProjectionVariants[var3] = false;
             var8 = ActionRequest.field_m[var3][0];
@@ -470,16 +470,16 @@ final class bl {
               if (th.a(var10, -17900)) {
                 DiskCacheRequest.unitProjectionVariants[var3] = true;
               }
-              if (null != var10.field_p) {
-                for (var6 = 0; var6 < var10.field_O; var6++) {
-                  if (var10.field_p[var6] == 2) {
-                    var10.field_q[var6] = 0;
-                    var10.field_o[var6] = 0;
-                    var10.field_r[var6] = 0;
+              if (null != var10.faceRenderTypes) {
+                for (var6 = 0; var6 < var10.faceCount; var6++) {
+                  if (var10.faceRenderTypes[var6] == 2) {
+                    var10.faceVertexA[var6] = 0;
+                    var10.faceVertexB[var6] = 0;
+                    var10.faceVertexC[var6] = 0;
                   }
                 }
               }
-              ActionRequest.unitModels[var3][0] = var10.a(SummonAction.field_x, fm.field_a, ol.field_A, BattleCharacter.field_t, ni.field_a);
+              ActionRequest.unitModels[var3][0] = var10.createModel(SummonAction.field_x, fm.field_a, ol.field_A, BattleCharacter.field_t, MeshObject.field_a);
               for (var6Lifetime2 = 1; var6Lifetime2 < ActionRequest.field_m[var3].length; var6Lifetime2++) {
                 ActionRequest.unitModels[var3][var6Lifetime2] = null;
               }
@@ -490,17 +490,17 @@ final class bl {
             var12 = hs.a(var11, 235, var9);
             var5Lifetime1 = var12;
             stackIn_23_0 = var12;
-            if (stackIn_23_0.field_p != null) {
-              for (var6Lifetime1 = 0; var6Lifetime1 < var5Lifetime1.field_O; var6Lifetime1++) {
-                if (var5Lifetime1.field_p[var6Lifetime1] == 2) {
-                  var5Lifetime1.field_q[var6Lifetime1] = 0;
-                  var5Lifetime1.field_o[var6Lifetime1] = 0;
-                  var5Lifetime1.field_r[var6Lifetime1] = 0;
+            if (stackIn_23_0.faceRenderTypes != null) {
+              for (var6Lifetime1 = 0; var6Lifetime1 < var5Lifetime1.faceCount; var6Lifetime1++) {
+                if (var5Lifetime1.faceRenderTypes[var6Lifetime1] == 2) {
+                  var5Lifetime1.faceVertexA[var6Lifetime1] = 0;
+                  var5Lifetime1.faceVertexB[var6Lifetime1] = 0;
+                  var5Lifetime1.faceVertexC[var6Lifetime1] = 0;
                 }
               }
             }
-            cs.field_db[var3Lifetime1] = var5Lifetime1.a(SummonAction.field_x, fm.field_a, ol.field_A, BattleCharacter.field_t, ni.field_a);
-            if (((ModelMesh) (cs.field_db[var3Lifetime1])).field_I == 0) {
+            cs.field_db[var3Lifetime1] = var5Lifetime1.createModel(SummonAction.field_x, fm.field_a, ol.field_A, BattleCharacter.field_t, MeshObject.field_a);
+            if (((ModelMesh) (cs.field_db[var3Lifetime1])).vertexCount == 0) {
               cs.field_db[var3Lifetime1] = null;
             }
           }

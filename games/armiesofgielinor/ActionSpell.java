@@ -199,13 +199,13 @@ final class ActionSpell extends Spell {
         so.field_b.a(param1 - 17900);
         ContextualRuntimeException.a((byte) -85, param0 / 2, param2 / 2);
         if (param1 == 23505) {
-          ni.a(-8994, param0, param2);
+          MeshObject.a(-8994, param0, param2);
           CampaignMission.a(param2, -22696, param0);
           pt.c(param0 / 2, param2 / 2, 9);
           return;
         }
         ActionSpell.a(-106, -34, -122);
-        ni.a(-8994, param0, param2);
+        MeshObject.a(-8994, param0, param2);
         CampaignMission.a(param2, -22696, param0);
         pt.c(param0 / 2, param2 / 2, 9);
     }

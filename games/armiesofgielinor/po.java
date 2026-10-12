@@ -81,7 +81,7 @@ final class po {
               return false;
             }
             if (vt.field_l == 2 &&
-              !wq.a(RevivalEvent.field_z, wn.field_db, (byte) 78)) {
+              !FixedQuaternion.a(RevivalEvent.field_z, wn.field_db, (byte) 78)) {
               return false;
             }
             if (vt.field_l != 2 &&
@@ -115,7 +115,7 @@ final class po {
                 return false;
               }
             } else {
-              if (!wq.a(RevivalEvent.field_z, wn.field_db, (byte) 78)) {
+              if (!FixedQuaternion.a(RevivalEvent.field_z, wn.field_db, (byte) 78)) {
                 return false;
               }
               if (vt.field_l != 2 &&
@@ -167,7 +167,7 @@ final class po {
               return false;
             }
           } else {
-            if (!wq.a(RevivalEvent.field_z, wn.field_db, (byte) 78)) {
+            if (!FixedQuaternion.a(RevivalEvent.field_z, wn.field_db, (byte) 78)) {
               return false;
             }
             if (vt.field_l != 2 &&
@@ -207,7 +207,7 @@ final class po {
             return false;
           }
         } else {
-          if (!wq.a(RevivalEvent.field_z, wn.field_db, (byte) 78)) {
+          if (!FixedQuaternion.a(RevivalEvent.field_z, wn.field_db, (byte) 78)) {
             return false;
           }
           if (vt.field_l != 2 &&

@@ -333,9 +333,9 @@ final class ll extends je {
     final static java.awt.Canvas p(int param0) {
         if (param0 != 0) {
           field_Jb = (String) null;
-          return wq.field_a == null ? IndexedSpriteBase.field_b : (java.awt.Canvas) ((Object) wq.field_a);
+          return FixedQuaternion.field_a == null ? IndexedSpriteBase.field_b : (java.awt.Canvas) ((Object) FixedQuaternion.field_a);
         }
-        return wq.field_a == null ? IndexedSpriteBase.field_b : (java.awt.Canvas) ((Object) wq.field_a);
+        return FixedQuaternion.field_a == null ? IndexedSpriteBase.field_b : (java.awt.Canvas) ((Object) FixedQuaternion.field_a);
     }
 
     final boolean o(int param0) {

@@ -364,7 +364,7 @@ final class BattleCharacter {
     }
 
     private final void d(int param0) {
-        this.field_x.selectSequence(-1, pg.a(this.field_y, 176, true, this.modelIndex));
+        this.field_x.selectSequence(-1, pg.selectUnitAnimation(this.field_y, 176, true, this.modelIndex));
         this.a(-313055120);
         if (param0 > -77) {
           this.a(-77, 60);
@@ -653,30 +653,30 @@ final class BattleCharacter {
             }
             if (var2 >= 0 &&
               this.field_y == var2) {
-              if (BestScoreStrategy.field_j != null &&
+              if (BestScoreStrategy.unitAnimationVariants != null &&
                 this.modelIndex >= 0 &&
-                BestScoreStrategy.field_j.length > this.modelIndex) {
-                if (BestScoreStrategy.field_j[this.modelIndex] != null &&
+                BestScoreStrategy.unitAnimationVariants.length > this.modelIndex) {
+                if (BestScoreStrategy.unitAnimationVariants[this.modelIndex] != null &&
                   0 <= var2 &&
-                  var2 < BestScoreStrategy.field_j[this.modelIndex].length) {
-                  if (BestScoreStrategy.field_j[this.modelIndex][this.field_y] != null &&
-                    BestScoreStrategy.field_j[this.modelIndex][this.field_y].length != 0) {
-                    if (BestScoreStrategy.field_j[this.modelIndex][this.field_y][0] < 0) {
+                  var2 < BestScoreStrategy.unitAnimationVariants[this.modelIndex].length) {
+                  if (BestScoreStrategy.unitAnimationVariants[this.modelIndex][this.field_y] != null &&
+                    BestScoreStrategy.unitAnimationVariants[this.modelIndex][this.field_y].length != 0) {
+                    if (BestScoreStrategy.unitAnimationVariants[this.modelIndex][this.field_y][0] < 0) {
                       this.field_F[this.animationState] = 0;
                       return;
                     }
-                    if (null != ck.field_e &&
-                      null != sf.field_P &&
+                    if (null != ck.animationSequencesByGroup &&
+                      null != sf.unitAnimationGroups &&
                       0 <= this.modelIndex &&
-                      sf.field_P.length > this.modelIndex) {
-                      if (sf.field_P[this.modelIndex] >= 0 &&
-                        sf.field_P[this.modelIndex] < ck.field_e.length) {
-                        if (null != ck.field_e[sf.field_P[this.modelIndex]] &&
-                          BestScoreStrategy.field_j[this.modelIndex][this.field_y][0] >= 0 &&
-                          BestScoreStrategy.field_j[this.modelIndex][this.field_y][0] < ck.field_e[sf.field_P[this.modelIndex]].length) {
+                      sf.unitAnimationGroups.length > this.modelIndex) {
+                      if (sf.unitAnimationGroups[this.modelIndex] >= 0 &&
+                        sf.unitAnimationGroups[this.modelIndex] < ck.animationSequencesByGroup.length) {
+                        if (null != ck.animationSequencesByGroup[sf.unitAnimationGroups[this.modelIndex]] &&
+                          BestScoreStrategy.unitAnimationVariants[this.modelIndex][this.field_y][0] >= 0 &&
+                          BestScoreStrategy.unitAnimationVariants[this.modelIndex][this.field_y][0] < ck.animationSequencesByGroup[sf.unitAnimationGroups[this.modelIndex]].length) {
                           var3 = new AnimationPlayer();
                           this.a(-313055120);
-                          var3.selectSequence(-1, ck.field_e[sf.field_P[this.modelIndex]][BestScoreStrategy.field_j[this.modelIndex][this.field_y][0]]);
+                          var3.selectSequence(-1, ck.animationSequencesByGroup[sf.unitAnimationGroups[this.modelIndex]][BestScoreStrategy.unitAnimationVariants[this.modelIndex][this.field_y][0]]);
                           var4 = 0;
                           var5 = 0;
                           var6 = 10000;

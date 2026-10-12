@@ -223,7 +223,7 @@ final class hc {
         this.field_n.a(71);
         this.field_u.a(45);
         this.field_l.c("shift: " + DiskCacheRequest.unitProjectionVariants[this.field_a], 480, 230, 16777215, -1);
-        this.field_l.c("model ID: " + sf.field_P[this.field_a], 480, 242, 16777215, -1);
+        this.field_l.c("model ID: " + sf.unitAnimationGroups[this.field_a], 480, 242, 16777215, -1);
         this.a(false);
         this.e((byte) -25);
         this.field_f.e((byte) 109);
@@ -250,7 +250,7 @@ final class hc {
         int var8;
         int[] var9;
         var8 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
-        var9 = BestScoreStrategy.field_j[this.field_a][param0];
+        var9 = BestScoreStrategy.unitAnimationVariants[this.field_a][param0];
         var3 = var9;
         var4 = var3[AttackEvent.a(false, var9.length, new Random())];
         if (0 <= var4) {
@@ -266,7 +266,7 @@ final class hc {
         if (param1 != -6892) {
           this.d((byte) -91);
         }
-        return BestScoreStrategy.field_j[this.field_a][0][0];
+        return BestScoreStrategy.unitAnimationVariants[this.field_a][0][0];
     }
 
     private final void a(int param0, int param1, int param2) {

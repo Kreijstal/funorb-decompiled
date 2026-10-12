@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class ni {
+abstract class MeshObject {
     static int field_a;
     static String field_b;
     static int field_d;
@@ -20,7 +20,7 @@ abstract class ni {
 
     final static boolean a(byte param0, char param1) {
         if (param0 >= -95) {
-          ni.a(61, 53, 87);
+          MeshObject.a(61, 53, 87);
           if (param1 < 65) {
             if (97 > param1) {
               return false;

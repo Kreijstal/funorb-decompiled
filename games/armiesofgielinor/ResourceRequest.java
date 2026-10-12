@@ -69,7 +69,7 @@ abstract class ResourceRequest extends DualLinkedNode {
         }
     }
 
-    final static void a(kk param0, boolean param1, int param2, AnimationPlayer param3, int param4, int param5, int param6, js param7, int param8) {
+    final static void a(ModelMeshBase param0, boolean param1, int param2, AnimationPlayer param3, int param4, int param5, int param6, MeshData param7, int param8) {
         int stackIn_5_0 = 0;
         RuntimeException stackIn_18_0 = null;
         StringBuilder stackIn_18_1 = null;
@@ -110,7 +110,7 @@ abstract class ResourceRequest extends DualLinkedNode {
             return;
           }
           if (param0 == null) {
-            param0 = param7.a(SummonAction.field_x, fm.field_a, var15, var16, var17);
+            param0 = param7.createModel(SummonAction.field_x, fm.field_a, var15, var16, var17);
           }
           if (param3 != null) {
             param0 = param3.applyCurrentFrame(false, true, false, param0);

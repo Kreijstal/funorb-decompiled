@@ -3,7 +3,7 @@
  */
 abstract class sf extends wl {
     private int field_T;
-    static int[] field_P;
+    static int[] unitAnimationGroups;
     private int field_R;
     private int field_V;
     static String field_Q;
@@ -225,7 +225,7 @@ abstract class sf extends wl {
     }
 
     public static void h(byte param0) {
-        field_P = null;
+        unitAnimationGroups = null;
         field_Q = null;
         if (param0 <= 21) {
           sf.h((byte) -93);
@@ -375,7 +375,7 @@ abstract class sf extends wl {
             var7 = (EventPresenter) (NetworkResourceRequest.field_C.eventPresenters.next((byte) 123));
           }
           if (vs.field_e[param4].occupant != null) {
-            if (vs.field_e[param4].occupant.field_u) {
+            if (vs.field_e[param4].occupant.presentationOwnsModel) {
               return;
             }
             wl.field_N.b(param3, param5);
@@ -406,6 +406,6 @@ abstract class sf extends wl {
 
     static {
         field_Q = "Disruptive behaviour";
-        field_P = new int[]{22, 1, 0, 39, 28, 46, 9, 22, 22, 2, 22, 22, 22, 47, 5, 29, 22, 22, 6, 48, 44, 22, 22, 22, 4, 22, 10, 42, 15, 40, 17, 10, 22, 11, 11, 32, 22, 12, 16, 23, 14, 2, 3, 22, 22, 20, 10, 22, 22, 22, 22, 43, 18, 19, 34, 24, 31, 21, 35, 8, 37, 36, 38, 25, 10, 33, 30, 22, 22, 22, 7, 41, 45, 22, 28, 13, 49, 22, 22, 22, 22, 28, 50, 51, 52, 53, 54, 55, 56, 53};
+        unitAnimationGroups = new int[]{22, 1, 0, 39, 28, 46, 9, 22, 22, 2, 22, 22, 22, 47, 5, 29, 22, 22, 6, 48, 44, 22, 22, 22, 4, 22, 10, 42, 15, 40, 17, 10, 22, 11, 11, 32, 22, 12, 16, 23, 14, 2, 3, 22, 22, 20, 10, 22, 22, 22, 22, 43, 18, 19, 34, 24, 31, 21, 35, 8, 37, 36, 38, 25, 10, 33, 30, 22, 22, 22, 7, 41, 45, 22, 28, 13, 49, 22, 22, 22, 22, 28, 50, 51, 52, 53, 54, 55, 56, 53};
     }
 }

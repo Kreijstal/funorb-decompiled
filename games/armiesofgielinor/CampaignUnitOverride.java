@@ -559,7 +559,7 @@ final class CampaignUnitOverride {
                 }
                 var2 = NodeIterator.a(param0 + 132, "quickchat_lobby");
                 if (null != var2) {
-                  wq.field_g = uu.a(var2, (byte) -96);
+                  FixedQuaternion.field_g = uu.a(var2, (byte) -96);
                 }
                 var2 = NodeIterator.a(50, "message_game");
                 if (null != var2) {
@@ -735,7 +735,7 @@ final class CampaignUnitOverride {
                 }
                 var2 = NodeIterator.a(50, "esc_cancelthisline");
                 if (null != var2) {
-                  wq.field_c = uu.a(var2, (byte) -107);
+                  FixedQuaternion.field_c = uu.a(var2, (byte) -107);
                 }
                 var2 = NodeIterator.a(50, "privatequickchat_from_x");
                 if (var2 != null) {

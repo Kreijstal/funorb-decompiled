@@ -150,7 +150,7 @@ class fn extends fw {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
         String var5 = null;
-        js var6 = null;
+        MeshData var6 = null;
         int var8 = 0;
         String var9 = null;
         var8 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
@@ -177,7 +177,7 @@ class fn extends fw {
             }
           }
           if (param1 == 76) {
-            bn.field_a = new kk[ActionRequest.field_m[param1].length];
+            bn.field_a = new ModelMeshBase[ActionRequest.field_m[param1].length];
             bn.field_a[0] = ActionRequest.unitModels[param1][0];
           }
           for (var4 = 1; var4 < ActionRequest.field_m[param1].length; var4++) {
@@ -188,20 +188,20 @@ class fn extends fw {
                 if (th.a(var6, -17900)) {
                   DiskCacheRequest.unitProjectionVariants[param1] = true;
                 }
-                if (null != var6.field_p) {
-                  for (var7 = 0; var7 < var6.field_O; var7++) {
-                    if (var6.field_p[var7] == 2) {
-                      var6.field_q[var7] = 0;
-                      var6.field_o[var7] = 0;
-                      var6.field_r[var7] = 0;
+                if (null != var6.faceRenderTypes) {
+                  for (var7 = 0; var7 < var6.faceCount; var7++) {
+                    if (var6.faceRenderTypes[var7] == 2) {
+                      var6.faceVertexA[var7] = 0;
+                      var6.faceVertexB[var7] = 0;
+                      var6.faceVertexC[var7] = 0;
                     }
                   }
                 }
-                ActionRequest.unitModels[param1][var4] = var6.a(SummonAction.field_x, fm.field_a, ol.field_A, BattleCharacter.field_t, ni.field_a);
+                ActionRequest.unitModels[param1][var4] = var6.createModel(SummonAction.field_x, fm.field_a, ol.field_A, BattleCharacter.field_t, MeshObject.field_a);
                 if (param1 == 76) {
                   bn.field_a[var4] = ActionRequest.unitModels[param1][var4];
                 }
-                if (0 == ((ModelMesh) (ActionRequest.unitModels[param1][var4])).field_I) {
+                if (0 == ((ModelMesh) (ActionRequest.unitModels[param1][var4])).vertexCount) {
                   ActionRequest.unitModels[param1] = null;
                 }
               }

@@ -188,7 +188,7 @@ final class wd {
             var2 = uq.field_w;
           }
           if (var2 != null) {
-            fs.a(ni.field_d, (String) null, (String) (var2), -122, 0);
+            fs.a(MeshObject.field_d, (String) null, (String) (var2), -122, 0);
           } else {
             var3 = mv.field_d;
             var3 = nt.a(-121, var3);

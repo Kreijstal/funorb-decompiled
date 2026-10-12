@@ -387,7 +387,7 @@ abstract class wf extends iv {
             }
           }
         } else {
-          stackIn_6_1 = (null != wq.field_a);
+          stackIn_6_1 = (null != FixedQuaternion.field_a);
           discarded$7 = this.a(stackIn_6_1, false, (byte) -97);
         }
     }
@@ -512,7 +512,7 @@ abstract class wf extends iv {
         int var3Lifetime2;
         var5 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         if (null != ActionSpell.field_e) {
-          if (null == wq.field_a) {
+          if (null == FixedQuaternion.field_a) {
             var6 = sp.a(0);
             var4 = var6.getSize();
             ActionSpell.field_e.b(var4.height, var4.width, -30514);

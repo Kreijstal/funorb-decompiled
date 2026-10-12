@@ -148,7 +148,7 @@ final class da {
             var7 = var6;
             var8 = jj.a((byte) 103, var7, param2, param0);
             var9 = t.a(var8, param3, (byte) 118);
-            BestScoreStrategy.field_j[param4][param0][var7] = var9;
+            BestScoreStrategy.unitAnimationVariants[param4][param0][var7] = var9;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -235,7 +235,7 @@ final class da {
             return;
           }
           if (1 == var2) {
-            var4_int = var9.a(100);
+            var4_int = var9.readSignedSmart(100);
             var5_ref_rs = (rs) (gg.field_F.first((byte) 107));
             while (var5_ref_rs != null) {
               if (var5_ref_rs.field_r != var3 ||
