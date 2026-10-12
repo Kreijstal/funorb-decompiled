@@ -7,8 +7,8 @@ final class bk {
     static String field_b;
     static tp field_a;
     static String field_c;
-    static NodeDeque field_e;
-    static IndexedSprite[] field_d;
+    static at field_e;
+    static ru[] field_d;
     static String field_h;
 
     final static void a(boolean param0, boolean param1, af param2, int param3, int param4) {
@@ -21,32 +21,32 @@ final class bk {
         int var6 = 0;
         String var7 = null;
         try {
-          CombatEvent.field_L[0] = CampaignMenuButton.field_e.nextInt();
-          CombatEvent.field_L[1] = CampaignMenuButton.field_e.nextInt();
-          vd.field_b.position = 0;
-          CombatEvent.field_L[3] = (int)ts.field_h;
-          CombatEvent.field_L[2] = (int)(ts.field_h >> 32);
-          vd.field_b.writeInt((byte) -69, CombatEvent.field_L[0]);
-          vd.field_b.writeInt((byte) -69, CombatEvent.field_L[1]);
-          vd.field_b.writeInt((byte) -125, CombatEvent.field_L[2]);
-          vd.field_b.writeInt((byte) -89, CombatEvent.field_L[3]);
-          PaletteRegionMap.a(vd.field_b, (byte) -84);
-          vd.field_b.writeShort(true, param4);
+          ag.field_L[0] = iq.field_e.nextInt();
+          ag.field_L[1] = iq.field_e.nextInt();
+          vd.field_b.field_q = 0;
+          ag.field_L[3] = (int)ts.field_h;
+          ag.field_L[2] = (int)(ts.field_h >> 32);
+          vd.field_b.a((byte) -69, ag.field_L[0]);
+          vd.field_b.a((byte) -69, ag.field_L[1]);
+          vd.field_b.a((byte) -125, ag.field_L[2]);
+          vd.field_b.a((byte) -89, ag.field_L[3]);
+          pr.a(vd.field_b, (byte) -84);
+          vd.field_b.b(true, param4);
           param2.a(vd.field_b, -11436);
-          vl.outgoingPacket.position = 0;
+          vl.field_n.field_q = 0;
           if (!param1) {
-            vl.outgoingPacket.writeByte(1, 16);
+            vl.field_n.b(1, 16);
           }
           if (param1 ||
-            ArmiesOfGielinor.obfuscationControl) {
-            vl.outgoingPacket.writeByte(1, 18);
+            ArmiesOfGielinor.field_M) {
+            vl.field_n.b(1, 18);
           }
-          vl.outgoingPacket.position = vl.outgoingPacket.position + 2;
-          var5_int = vl.outgoingPacket.position;
-          vl.outgoingPacket.writeInt((byte) -67, fl.field_e);
-          vl.outgoingPacket.a(an.field_E, 38359632);
+          vl.field_n.field_q = vl.field_n.field_q + 2;
+          var5_int = vl.field_n.field_q;
+          vl.field_n.a((byte) -67, fl.field_e);
+          vl.field_n.a(an.field_E, 38359632);
           var6 = 0;
-          if (BestScoreStrategy.field_l) {
+          if (aw.field_l) {
             var6 = var6 | 1;
           }
           if (ul.field_a) {
@@ -58,17 +58,17 @@ final class bk {
           if (gh.field_P != null) {
             var6 = var6 | 16;
           }
-          vl.outgoingPacket.writeByte(1, var6);
-          var7 = ByteStorage.a(0, CombatEvent.d((byte) -116));
+          vl.field_n.b(1, var6);
+          var7 = mg.a(0, ag.d((byte) -116));
           if (var7 == null) {
             var7 = "";
           }
-          vl.outgoingPacket.b(var7, param3 + 13851);
+          vl.field_n.b(var7, param3 + 13851);
           if (gh.field_P != null) {
-            vl.outgoingPacket.a(gh.field_P, 413740432);
+            vl.field_n.a(gh.field_P, 413740432);
           }
-          fp.a(mu.field_c, cs.field_cb, (byte) 26, vd.field_b, vl.outgoingPacket);
-          vl.outgoingPacket.f(param3 ^ param3, vl.outgoingPacket.position - var5_int);
+          fp.a(mu.field_c, cs.field_cb, (byte) 26, vd.field_b, vl.field_n);
+          vl.field_n.f(param3 ^ param3, vl.field_n.field_q - var5_int);
           hb.$cfr$intArgs$a$e9dea5688aa5(29, -1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -81,11 +81,11 @@ final class bk {
           } else {
             stackIn_29_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_28_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_28_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
-    final static void a(boolean param0, je param1, je param2, BitmapFont param3, je param4, int param5, je param6, je param7, je param8, ll param9, je param10, je param11) {
+    final static void a(boolean param0, je param1, je param2, ka param3, je param4, int param5, je param6, je param7, je param8, ll param9, je param10, je param11) {
         String stackIn_13_0 = null;
         int stackIn_28_0 = 0;
         RuntimeException stackIn_38_0 = null;
@@ -110,62 +110,62 @@ final class bk {
         StringBuilder stackIn_74_1 = null;
         String stackIn_75_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RgbSprite var12 = null;
+        wk var12 = null;
         RuntimeException var12_ref = null;
         int[] var13 = null;
         int[] var14 = null;
         int[] var15 = null;
-        RgbSprite[] var16 = null;
+        wk[] var16 = null;
         int var17 = 0;
         je var18 = null;
         int var19 = 0;
         String var20 = null;
         int var21 = 0;
-        var21 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        var21 = ArmiesOfGielinor.field_M ? 1 : 0;
         try {
-          CombatEvent.field_A[4] = 16711935;
-          CombatEvent.field_A[0] = 16764000;
-          IntrusiveNode.field_e = param3;
-          CombatEvent.field_A[3] = 16736511;
-          CombatEvent.field_A[1] = 6356832;
+          ag.field_A[4] = 16711935;
+          ag.field_A[0] = 16764000;
+          tc.field_e = param3;
+          ag.field_A[3] = 16736511;
+          ag.field_A[1] = 6356832;
           bq.field_c = param0;
-          SpellConfirmationDialog.field_i = param4;
-          CombatEvent.field_A[2] = 9474303;
+          uf.field_i = param4;
+          ag.field_A[2] = 9474303;
           fm.field_d[0] = 16764000;
-          MeshObject.field_d = 8421504;
+          ni.field_d = 8421504;
           fm.field_d[1] = 6356832;
           fm.field_d[3] = 16736511;
-          CombatEvent.field_A[4] = 16711935;
+          ag.field_A[4] = 16711935;
           fm.field_d[2] = 16736352;
-          var12 = new RgbSprite(4, 4);
-          var13 = var12.pixels;
-          var14 = var12.pixels;
-          var15 = var12.pixels;
-          var12.pixels[15] = 7368816;
+          var12 = new wk(4, 4);
+          var13 = var12.field_B;
+          var14 = var12.field_B;
+          var15 = var12.field_B;
+          var12.field_B[15] = 7368816;
           var14[5] = 7368816;
           var13[2] = 7368816;
           var15[8] = 7368816;
-          var16 = new RgbSprite[9];
+          var16 = new wk[9];
           var16[4] = var12;
           var17 = 106 / ((param5 + 53) / 51);
-          CombatEvent.field_I = new je(0L, param7);
+          ag.field_I = new je(0L, param7);
           mp.field_Qb = new je(0L, param8);
-          CombatEvent.field_I.a(mp.field_Qb, 55);
+          ag.field_I.a(mp.field_Qb, 55);
           var18 = new je(0L, (je) null);
-          var18.field_fb = new NodeDeque();
+          var18.field_fb = new at();
           vq.field_a = new dn(0L, var18, param1, param9);
           mp.field_Qb.a(vq.field_a, 126);
           we.field_f = new je(0L, param6);
           mp.field_Qb.a(we.field_f, 110);
-          UpkeepEvent.field_z = new je(0L, param2);
-          UpkeepEvent.field_z.field_Z = IntrusiveNode.field_e;
-          we.field_f.a(UpkeepEvent.field_z, 82);
+          qj.field_z = new je(0L, param2);
+          qj.field_z.field_Z = tc.field_e;
+          we.field_f.a(qj.field_z, 82);
           we.field_f.i(-10027);
           rb.field_b = new je(0L, (je) null);
           rb.field_b.field_G = var16;
           we.field_f.a(rb.field_b, 99);
           jj.field_i = new je[5];
-          ResourceProtocolClient.field_j = new je[5];
+          bp.field_j = new je[5];
           we.field_g = new je[5];
           gt.field_b = new je[5];
           var19 = 0;
@@ -192,16 +192,16 @@ final class bk {
               }
               if (decompiledFrameRemainder0) {
                 gt.field_b[var19] = new je(0L, param10);
-                jj.field_i[var19] = new je(0L, SpellConfirmationDialog.field_i, var20);
+                jj.field_i[var19] = new je(0L, uf.field_i, var20);
                 we.field_g[var19] = new je(0L, (je) null);
                 we.field_g[var19].field_Fb = 1;
-                ResourceProtocolClient.field_j[var19] = new je(0L, SpellConfirmationDialog.field_i);
-                ResourceProtocolClient.field_j[var19].field_Fb = 1;
+                bp.field_j[var19] = new je(0L, uf.field_i);
+                bp.field_j[var19].field_Fb = 1;
                 gt.field_b[var19].a(jj.field_i[var19], 107);
                 gt.field_b[var19].a(we.field_g[var19], 45);
-                gt.field_b[var19].a(ResourceProtocolClient.field_j[var19], 85);
+                gt.field_b[var19].a(bp.field_j[var19], 85);
                 gt.field_b[var19].i(-10027);
-                CombatEvent.field_I.a(gt.field_b[var19], 121);
+                ag.field_I.a(gt.field_b[var19], 121);
                 se.field_d = se.field_d + 1;
               }
               var19++;
@@ -210,16 +210,16 @@ final class bk {
             break;
           }
           if (decompiledNaturalLoopExit0) {
-            UnitLossCondition.field_f = new je(0L, param11);
-            UnitLossCondition.field_f.field_X = CampaignMenu.field_n;
-            CombatEvent.field_I.a(UnitLossCondition.field_f, 42);
-            stackIn_28_0 = TeamRoster.a(4) ? 1 : 0;
+            mc.field_f = new je(0L, param11);
+            mc.field_f.field_X = cv.field_n;
+            ag.field_I.a(mc.field_f, 42);
+            stackIn_28_0 = go.a(4) ? 1 : 0;
           }
           if (stackIn_28_0 != 0 &&
-            !NodeIterator.field_a) {
+            !bb.field_a) {
             return;
           }
-          BestScoreStrategy.field_i = new wr(0, 0, 0, 0);
+          aw.field_i = new wr(0, 0, 0, 0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -285,7 +285,7 @@ final class bk {
           } else {
             stackIn_75_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_38_0), ((StringBuilder) (Object) stackIn_74_1).append(stackIn_75_2).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_38_0), ((StringBuilder) (Object) stackIn_74_1).append(stackIn_75_2).append(')').toString());
         }
     }
 
@@ -317,7 +317,7 @@ final class bk {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -335,7 +335,7 @@ final class bk {
           field_g = null;
           field_f = null;
         } catch (RuntimeException runtimeException) {
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "bk.E(" + param0 + ')');
+          throw ig.a((Throwable) ((Object) runtimeException), "bk.E(" + param0 + ')');
         }
     }
 
@@ -358,7 +358,7 @@ final class bk {
           tn.field_Z.a((int[]) null, 7, 0);
           tn.field_Z.b((byte) 44);
           if (param0) {
-            bk.a(true, (je) null, (je) null, (BitmapFont) null, (je) null, 86, (je) null, (je) null, (je) null, (ll) null, (je) null, (je) null);
+            bk.a(true, (je) null, (je) null, (ka) null, (je) null, 86, (je) null, (je) null, (je) null, (ll) null, (je) null, (je) null);
           }
           var7 = tn.field_Z;
           var8 = param2;
@@ -383,7 +383,7 @@ final class bk {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param6).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param6).append(')').toString());
         }
     }
 

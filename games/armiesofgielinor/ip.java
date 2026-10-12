@@ -2,15 +2,15 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ip {
-    RgbSprite field_j;
+    wk field_j;
     static boolean field_e;
     private int field_g;
     private int field_h;
     private int field_a;
-    RgbSprite[] field_d;
+    wk[] field_d;
     private int field_i;
     private boolean field_f;
-    static RgbSprite[] field_c;
+    static wk[] field_c;
     private int field_b;
 
     final ip a(byte param0, int param1) {
@@ -23,7 +23,7 @@ final class ip {
     }
 
     final void a(kb param0, byte param1, int param2, int param3, ao param4) {
-        BitmapFont stackIn_19_0;
+        ka stackIn_19_0;
         String stackIn_19_1;
         int stackIn_19_2;
         int stackIn_19_3;
@@ -51,17 +51,17 @@ final class ip {
           if (null != this.field_j) {
             var6_int = this.field_i + param0.field_B + param3;
             if (1 == param4.field_n) {
-              var6_int = var6_int + (param0.field_l - this.field_j.canvasWidth) / 2;
+              var6_int = var6_int + (param0.field_l - this.field_j.field_A) / 2;
             }
             var7 = this.field_a + (param2 + param0.field_p);
             if (param4.field_k == 1) {
-              var7 = var7 + (-this.field_j.canvasHeight + param0.field_w) / 2;
+              var7 = var7 + (-this.field_j.field_x + param0.field_w) / 2;
             }
             if (param4.field_n == 2) {
-              var6_int = var6_int + (param0.field_l - this.field_j.canvasWidth);
+              var6_int = var6_int + (param0.field_l - this.field_j.field_A);
             }
             if (param4.field_k == 2) {
-              var7 = var7 + (param0.field_w - this.field_j.canvasHeight);
+              var7 = var7 + (param0.field_w - this.field_j.field_x);
             }
             this.field_j.g(var6_int, var7);
           }
@@ -99,7 +99,7 @@ final class ip {
             } else {
               stackIn_26_8 = this.field_h;
             }
-            ((BitmapFont) (Object) stackIn_19_0).a(stackIn_19_1, stackIn_22_2, stackIn_25_3, stackIn_25_4, stackIn_25_5, stackIn_25_6, stackIn_25_7, stackIn_26_8, param4.field_n, param4.field_k, param4.field_j);
+            ((ka) (Object) stackIn_19_0).a(stackIn_19_1, stackIn_22_2, stackIn_25_3, stackIn_25_4, stackIn_25_5, stackIn_25_6, stackIn_25_7, stackIn_26_8, param4.field_n, param4.field_k, param4.field_j);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -118,7 +118,7 @@ final class ip {
           } else {
             stackIn_34_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_30_0), ((StringBuilder) (Object) stackIn_33_1).append(stackIn_34_2).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_30_0), ((StringBuilder) (Object) stackIn_33_1).append(stackIn_34_2).append(')').toString());
         }
     }
 
@@ -132,11 +132,11 @@ final class ip {
           param1.field_b = this.field_b;
           param1.field_h = this.field_h;
           if (param0) {
-            this.field_d = (RgbSprite[]) null;
+            this.field_d = (wk[]) null;
           }
           param1.field_i = this.field_i;
         } catch (RuntimeException runtimeException) {
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "ip.M(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ig.a((Throwable) ((Object) runtimeException), "ip.M(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -153,7 +153,7 @@ final class ip {
     final ip a(int param0, int param1) {
         this.field_i = param0;
         if (param1 != 1) {
-          this.field_d = (RgbSprite[]) null;
+          this.field_d = (wk[]) null;
           return this;
         }
         return this;
@@ -224,7 +224,7 @@ final class ip {
           } else {
             stackIn_31_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_30_1).append(stackIn_31_2).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_30_1).append(stackIn_31_2).append(')').toString());
         }
     }
 
@@ -258,7 +258,7 @@ final class ip {
         this.field_j = null;
     }
 
-    final ip a(RgbSprite[] param0, int param1) {
+    final ip a(wk[] param0, int param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         RuntimeException stackIn_4_0 = null;
@@ -279,7 +279,7 @@ final class ip {
           } else {
             stackIn_5_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(param1).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -291,7 +291,7 @@ final class ip {
         }
     }
 
-    final static void a(int param0, int param1, boolean param2, int param3, tu param4, RgbSprite[] param5, int param6, String param7, int param8) {
+    final static void a(int param0, int param1, boolean param2, int param3, tu param4, wk[] param5, int param6, String param7, int param8) {
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
         String stackIn_13_2 = null;
@@ -305,9 +305,9 @@ final class ip {
         int var10 = 0;
         int var11 = 0;
         try {
-          var9_int = param4.a(param7) + (param5[0].pixelWidth << 1);
+          var9_int = param4.a(param7) + (param5[0].field_y << 1);
           if (param1 > -92) {
-            field_c = (RgbSprite[]) null;
+            field_c = (wk[]) null;
           }
           var10 = param6 - (var9_int >> 1);
           var11 = param6 + (var9_int >> 1);
@@ -347,7 +347,7 @@ final class ip {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param8).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param8).append(')').toString());
         }
     }
 

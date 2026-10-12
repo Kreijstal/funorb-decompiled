@@ -19,8 +19,8 @@ final class hc {
     static boolean field_i;
     private ia field_n;
     private int field_r;
-    private RgbSprite[] field_c;
-    private RgbSprite[] field_v;
+    private wk[] field_c;
+    private wk[] field_v;
     static int field_q;
     private int field_t;
     private r field_x;
@@ -47,7 +47,7 @@ final class hc {
 
     private final void a(int param0, byte param1) {
         int discarded$0 = 0;
-        int var4 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        int var4 = ArmiesOfGielinor.field_M ? 1 : 0;
         this.field_a = param0;
         this.field_p.b(0, this.field_a);
         this.field_f.a(0, this.field_a);
@@ -97,7 +97,7 @@ final class hc {
 
     private final void a(boolean param0) {
         if (param0) {
-          this.field_v = (RgbSprite[]) null;
+          this.field_v = (wk[]) null;
         }
         int var2 = so.field_b.field_a >> 1;
         int var3 = -this.field_l.field_H + (so.field_b.field_g - (this.field_l.field_L << 1));
@@ -191,22 +191,22 @@ final class hc {
 
     final static void a(int param0, boolean param1) {
         int var2_int = 0;
-        MapTile var3 = null;
-        Unit var4 = null;
+        ne var3 = null;
+        jd var4 = null;
         int var5 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
-        var5 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        var5 = ArmiesOfGielinor.field_M ? 1 : 0;
         try {
           if (param1) {
             hc.a(-115, false);
           }
           for (var2_int = 0; var2_int < vs.field_e.length; var2_int++) {
             var3 = vs.field_e[var2_int];
-            var4 = var3.occupant;
+            var4 = var3.field_c;
             if (var4 != null &&
-              param0 == var4.ownerPlayer) {
-              ResourceArchive.field_a.a((byte) 53, var2_int);
+              param0 == var4.field_O) {
+              kl.field_a.a((byte) 53, var2_int);
               return;
             }
           }
@@ -214,16 +214,16 @@ final class hc {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) var2), "hc.N(" + param0 + ',' + param1 + ')');
+          throw ig.a((Throwable) ((Object) var2), "hc.N(" + param0 + ',' + param1 + ')');
         }
     }
 
     final void c(byte param0) {
-        SoftwareRaster.b();
+        qn.b();
         this.field_n.a(71);
         this.field_u.a(45);
-        this.field_l.c("shift: " + DiskCacheRequest.unitProjectionVariants[this.field_a], 480, 230, 16777215, -1);
-        this.field_l.c("model ID: " + sf.unitAnimationGroups[this.field_a], 480, 242, 16777215, -1);
+        this.field_l.c("shift: " + nh.field_D[this.field_a], 480, 230, 16777215, -1);
+        this.field_l.c("model ID: " + sf.field_P[this.field_a], 480, 242, 16777215, -1);
         this.a(false);
         this.e((byte) -25);
         this.field_f.e((byte) 109);
@@ -249,10 +249,10 @@ final class hc {
         int var7;
         int var8;
         int[] var9;
-        var8 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
-        var9 = BestScoreStrategy.unitAnimationVariants[this.field_a][param0];
+        var8 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var9 = aw.field_j[this.field_a][param0];
         var3 = var9;
-        var4 = var3[AttackEvent.a(false, var9.length, new Random())];
+        var4 = var3[ns.a(false, var9.length, new Random())];
         if (0 <= var4) {
           return var4;
         }
@@ -266,12 +266,12 @@ final class hc {
         if (param1 != -6892) {
           this.d((byte) -91);
         }
-        return BestScoreStrategy.unitAnimationVariants[this.field_a][0][0];
+        return aw.field_j[this.field_a][0][0];
     }
 
     private final void a(int param0, int param1, int param2) {
         int var5;
-        var5 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        var5 = ArmiesOfGielinor.field_M ? 1 : 0;
         if (this.field_p.g((byte) 97) &&
           this.field_p.c(param1, param0 - 1, param2)) {
           this.field_p.j(0);
@@ -376,7 +376,7 @@ final class hc {
         int var11;
         int var12;
         int var13;
-        var13 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        var13 = ArmiesOfGielinor.field_M ? 1 : 0;
         var6 = param3 / 3;
         for (var7 = param0; var7 < 4; var7++) {
           var8 = this.a(param0 - 100, var7);
@@ -400,7 +400,7 @@ final class hc {
         }
     }
 
-    hc(RgbSprite[] param0, RgbSprite[] param1, tu param2, int[] param3, int param4, int param5) {
+    hc(wk[] param0, wk[] param1, tu param2, int[] param3, int param4, int param5) {
         RuntimeException var7 = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
@@ -452,7 +452,7 @@ final class hc {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 

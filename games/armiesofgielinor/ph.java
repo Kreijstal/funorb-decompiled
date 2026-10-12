@@ -27,7 +27,7 @@ final class ph {
         char[] var2Lifetime1;
         int var3Lifetime1;
         int var4Lifetime1;
-        var5 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        var5 = ArmiesOfGielinor.field_M ? 1 : 0;
         try {
           if (Character.isISOControl(param1)) {
             return false;
@@ -49,7 +49,7 @@ final class ph {
             var6 = (String) null;
             ph.a((String) null, (byte) -108);
           }
-          var13 = MovementPresentation.field_i;
+          var13 = qv.field_i;
           var11 = var13;
           var8 = var11;
           var2Lifetime1 = var8;
@@ -66,7 +66,7 @@ final class ph {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) var2_ref), "ph.A(" + param0 + ',' + param1 + ')');
+          throw ig.a((Throwable) ((Object) var2_ref), "ph.A(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -89,7 +89,7 @@ final class ph {
         StringBuilder stackIn_14_1 = null;
         String stackIn_15_2 = null;
         RuntimeException decompiledCaughtException = null;
-        var4 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        var4 = ArmiesOfGielinor.field_M ? 1 : 0;
         try {
           var2_int = param0.charAt(0);
           for (var3 = 1; var3 < param0.length(); var3++) {
@@ -111,7 +111,7 @@ final class ph {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param1).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -136,7 +136,7 @@ final class ph {
           String var5Lifetime5;
           String var5Lifetime6;
           try {
-            TurnTimerDial.field_b = param0;
+            sj.field_b = param0;
             try {
               var6 = param1.getParameter("cookieprefix");
               var5 = var6;
@@ -160,7 +160,7 @@ final class ph {
               decompiledCaughtException = decompiledCaughtParameter0;
               var3 = decompiledCaughtException;
             }
-            MoveAttackAction.a(16058, param1);
+            ld.a(16058, param1);
             return;
           } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
             decompiledCaughtException = decompiledCaughtParameter1;
@@ -178,7 +178,7 @@ final class ph {
             } else {
               stackIn_17_2 = "{...}";
             }
-            throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param2).append(')').toString());
+            throw ig.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param2).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;

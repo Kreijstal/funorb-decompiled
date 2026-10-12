@@ -37,7 +37,7 @@ final class ij extends dv {
         String var12 = null;
         int var9Lifetime1;
         int var10Lifetime1;
-        var11 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        var11 = ArmiesOfGielinor.field_M ? 1 : 0;
         try {
           if (!this.a(-31501)) {
             stackIn_3_0 = super.a(-30847, param1, param2);
@@ -142,11 +142,11 @@ final class ij extends dv {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4_ref = decompiledCaughtException;
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) var4_ref), "ij.S(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw ig.a((Throwable) ((Object) var4_ref), "ij.S(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
-    ij(NodeDeque param0, BitmapFont param1, hd param2) {
+    ij(at param0, ka param1, hd param2) {
         super(param1, param2);
         int incrementValue$3 = 0;
         int var4_int = 0;
@@ -167,12 +167,12 @@ final class ij extends dv {
         try {
           this.field_z = new dr[param0.b(false)];
           var4_int = 0;
-          var5 = (dr) (param0.first((byte) 94));
+          var5 = (dr) (param0.e((byte) 94));
           while (var5 != null) {
             incrementValue$3 = var4_int;
             var4_int++;
             this.field_z[incrementValue$3] = var5;
-            var5 = (dr) (param0.next((byte) 123));
+            var5 = (dr) (param0.a((byte) 123));
           }
           this.a(-1, "# <col=ffaaff>FunOrbConsole (loaded " + this.field_z.length + " methods at " + new Date() + ")</col>");
           return;
@@ -204,7 +204,7 @@ final class ij extends dv {
             stackIn_19_0 = stackIn_15_0;
             stackIn_19_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
         }
     }
 
@@ -217,12 +217,12 @@ final class ij extends dv {
           super.b(-100);
           this.field_o.field_Pb.field_X = var3;
         } catch (RuntimeException runtimeException) {
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "ij.M(" + param0 + ')');
+          throw ig.a((Throwable) ((Object) runtimeException), "ij.M(" + param0 + ')');
         }
     }
 
     final String[] b(boolean param0) {
-        DualNodeDeque discarded$0 = null;
+        ui discarded$0 = null;
         int incrementValue$1 = 0;
         String[] stackIn_27_0 = null;
         RuntimeException decompiledCaughtException = null;
@@ -240,18 +240,18 @@ final class ij extends dv {
         String var12 = null;
         String var13 = null;
         og var14 = null;
-        DualNodeDeque var15 = null;
+        ui var15 = null;
         String var6Lifetime1;
         String var6Lifetime2;
         int var9Lifetime1;
-        var11 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        var11 = ArmiesOfGielinor.field_M ? 1 : 0;
         try {
           var13 = this.field_o.q(0);
           var6 = var13;
           var6Lifetime1 = var13;
           var3 = this.field_o.o(95);
           var4 = vv.a(var13, 114);
-          var5 = DualLinkedNode.a(var3, var4, -122);
+          var5 = ms.a(var3, var4, -122);
           this.field_s.field_S = 0;
           var6Lifetime2 = "";
           if (0 <= var5) {
@@ -265,7 +265,7 @@ final class ij extends dv {
               var9 = var5;
               var10_int = 0;
               while (var9 >= 0) {
-                if (~LeaderEscortCondition.field_d == ~var4[var9].field_q) {
+                if (~gm.field_d == ~var4[var9].field_q) {
                   var10_int++;
                 }
                 if (var4[var9].field_q == mo.field_j) {
@@ -285,9 +285,9 @@ final class ij extends dv {
             }
           }
           var15 = this.a((byte) -75, var6Lifetime2);
-          var8 = new String[var15.size(30578)];
+          var8 = new String[var15.a(30578)];
           var9Lifetime1 = 0;
-          var10 = (dr) (var15.first((byte) 43));
+          var10 = (dr) (var15.a((byte) 43));
           if (!param0) {
             var12 = (String) null;
             discarded$0 = this.a((byte) 83, (String) null);
@@ -296,20 +296,20 @@ final class ij extends dv {
             incrementValue$1 = var9Lifetime1;
             var9Lifetime1++;
             var8[incrementValue$1] = var10.field_A;
-            var10 = (dr) (var15.next(24));
+            var10 = (dr) (var15.c(24));
           }
           stackIn_27_0 = var8;
           return stackIn_27_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) var2), "ij.K(" + param0 + ')');
+          throw ig.a((Throwable) ((Object) var2), "ij.K(" + param0 + ')');
         }
     }
 
     final static au b(byte param0, int param1) {
         au stackIn_2_0 = null;
-        DualLinkedNode stackIn_7_0 = null;
+        ms stackIn_7_0 = null;
         au stackIn_8_0 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
@@ -328,7 +328,7 @@ final class ij extends dv {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) var2), "ij.AA(" + param0 + ',' + param1 + ')');
+          throw ig.a((Throwable) ((Object) var2), "ij.AA(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -354,18 +354,18 @@ final class ij extends dv {
         int var14 = 0;
         String var15 = null;
         og var16 = null;
-        DualNodeDeque var17 = null;
+        ui var17 = null;
         String var6Lifetime1;
         String var6Lifetime2;
         int var12Lifetime1;
-        var14 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        var14 = ArmiesOfGielinor.field_M ? 1 : 0;
         try {
           var15 = this.field_o.q(0);
           var6 = var15;
           var6Lifetime1 = var15;
           var3 = this.field_o.o(-105);
           var4 = vv.a(var15, param0 - 11);
-          var5 = DualLinkedNode.a(var3, var4, -126);
+          var5 = ms.a(var3, var4, -126);
           var6Lifetime2 = "";
           if (0 <= var5) {
             var16 = var4[var5];
@@ -377,7 +377,7 @@ final class ij extends dv {
             }
           }
           var17 = this.a((byte) -75, var6Lifetime2);
-          if (0 == var17.size(30578)) {
+          if (0 == var17.a(30578)) {
             return;
           }
           if (param0 != 122) {
@@ -387,17 +387,17 @@ final class ij extends dv {
           var9 = var6Lifetime2.length();
           var10 = 1;
           var11 = 2147483647;
-          var12_ref_dr = (dr) (var17.first((byte) -110));
+          var12_ref_dr = (dr) (var17.a((byte) -110));
           while (var12_ref_dr != null) {
             if (var11 > var12_ref_dr.field_B.length()) {
               var11 = var12_ref_dr.field_B.length();
             }
-            var12_ref_dr = (dr) (var17.next(24));
+            var12_ref_dr = (dr) (var17.c(24));
           }
           while (var10 != 0) {
             if (var11 > var9) {
-              var12 = ((dr) (var17.first((byte) -112))).field_B.charAt(var9);
-              var13 = (dr) (var17.next(24));
+              var12 = ((dr) (var17.a((byte) -112))).field_B.charAt(var9);
+              var13 = (dr) (var17.c(24));
               while (var13 != null) {
                 stackIn_26_0 = var10;
                 if (~var12 != ~var13.field_B.charAt(var9)) {
@@ -406,7 +406,7 @@ final class ij extends dv {
                   stackIn_27_1 = 1;
                 }
                 var10 = stackIn_26_0 & stackIn_27_1;
-                var13 = (dr) (var17.next(24));
+                var13 = (dr) (var17.c(24));
               }
               var9++;
               if (var10 == 0) {
@@ -421,8 +421,8 @@ final class ij extends dv {
           if (var6Lifetime2.length() + var8.length() == var11) {
             var12Lifetime1++;
             discarded$1 = var8.append("()");
-            if (var17.size(30578) == 1 &&
-              ((dr) (var17.first((byte) 44))).field_u.length == 0) {
+            if (var17.a(30578) == 1 &&
+              ((dr) (var17.a((byte) 44))).field_u.length == 0) {
               var12Lifetime1++;
             }
             this.field_o.a(var15.substring(0, var3) + var8.toString() + var15.substring(var3), (byte) 45);
@@ -435,34 +435,34 @@ final class ij extends dv {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) var2), "ij.J(" + param0 + ')');
+          throw ig.a((Throwable) ((Object) var2), "ij.J(" + param0 + ')');
         }
     }
 
-    private final DualNodeDeque a(byte param0, String param1) {
+    private final ui a(byte param0, String param1) {
         int var4 = 0;
-        DualNodeDeque var3 = null;
+        ui var3 = null;
         int var5 = 0;
-        DualNodeDeque var6 = null;
-        DualNodeDeque stackIn_3_0 = null;
-        DualNodeDeque stackIn_12_0 = null;
+        ui var6 = null;
+        ui stackIn_3_0 = null;
+        ui stackIn_12_0 = null;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
         String stackIn_17_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3_ref = null;
-        var5 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        var5 = ArmiesOfGielinor.field_M ? 1 : 0;
         try {
           if (param0 != -75) {
-            stackIn_3_0 = (DualNodeDeque) null;
+            stackIn_3_0 = (ui) null;
             return stackIn_3_0;
           }
-          var6 = new DualNodeDeque();
+          var6 = new ui();
           var3 = var6;
           for (var4 = 0; var4 < this.field_z.length; var4++) {
             if (this.field_z[var4].field_B.startsWith(param1)) {
-              this.field_z[var4].unlinkSecondary((byte) -76);
-              var6.addLast(this.field_z[var4], false);
+              this.field_z[var4].c((byte) -76);
+              var6.a(this.field_z[var4], false);
             }
           }
           stackIn_12_0 = var3;
@@ -477,14 +477,14 @@ final class ij extends dv {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
         }
     }
 
     final boolean a(String param0, boolean param1) {
         try {
           og var5 = null;
-          NodeDeque var6 = null;
+          at var6 = null;
           es var7 = null;
           RuntimeException stackIn_15_0 = null;
           StringBuilder stackIn_15_1 = null;
@@ -531,7 +531,7 @@ final class ij extends dv {
             } else {
               stackIn_16_2 = "{...}";
             }
-            throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param1).append(')').toString());
+            throw ig.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param1).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -550,7 +550,7 @@ final class ij extends dv {
           field_w = null;
           field_C = null;
         } catch (RuntimeException runtimeException) {
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "ij.W(" + param0 + ')');
+          throw ig.a((Throwable) ((Object) runtimeException), "ij.W(" + param0 + ')');
         }
     }
 

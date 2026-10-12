@@ -6,7 +6,7 @@ final class mp extends je {
     static jl field_Mb;
     je field_Ib;
     je field_Nb;
-    static RgbSprite field_Jb;
+    static wk field_Jb;
     dn field_Kb;
     static bl field_Sb;
     static String field_Pb;
@@ -66,7 +66,7 @@ final class mp extends je {
           this.a(this.field_Ib, 80);
           this.a(this.field_Rb, 111);
         } catch (RuntimeException runtimeException) {
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "mp.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ',' + (param6 != null ? "{...}" : "null") + ')');
+          throw ig.a((Throwable) ((Object) runtimeException), "mp.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ',' + (param6 != null ? "{...}" : "null") + ')');
         }
     }
 

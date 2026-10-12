@@ -9,12 +9,12 @@ final class mo {
     static String[] field_i;
     int field_p;
     static boolean field_w;
-    static RgbSprite[] field_g;
+    static wk[] field_g;
     String field_q;
     static boolean field_r;
-    static RgbSprite field_t;
+    static wk field_t;
     int field_b;
-    static RgbSprite field_s;
+    static wk field_s;
     je field_u;
     static String field_o;
     long field_n;
@@ -85,9 +85,9 @@ final class mo {
           this.field_d = null;
         }
         this.field_a = rh.field_e;
-        this.field_b = MatchConditionEntry.field_k;
-        this.field_k = BestScoreStrategy.field_k;
-        this.field_f = DualNodeDeque.field_b;
+        this.field_b = u.field_k;
+        this.field_k = aw.field_k;
+        this.field_f = ui.field_b;
         this.field_m = gp.field_b;
         this.field_q = qd.field_L;
         this.field_v = ut.field_eb;
@@ -111,7 +111,7 @@ final class mo {
           this.field_h = param4;
           this.field_a = 0;
         } catch (RuntimeException runtimeException) {
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "mo.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ')');
+          throw ig.a((Throwable) ((Object) runtimeException), "mo.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ')');
         }
     }
 

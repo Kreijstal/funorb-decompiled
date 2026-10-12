@@ -4,14 +4,14 @@
 abstract class qc {
     static ro field_a;
     static String field_b;
-    static UiSelectionState field_d;
+    static dl field_d;
     static qc field_h;
     static String field_i;
     static int field_j;
     static je field_e;
     static je field_c;
     static String field_f;
-    static NodeDeque field_g;
+    static at field_g;
 
     public static void a(byte param0) {
         field_i = null;
@@ -35,7 +35,7 @@ abstract class qc {
         field_f = null;
     }
 
-    final static RgbSprite a(int param0, int param1) {
+    final static wk a(int param0, int param1) {
         co var2 = null;
         co var2Lifetime1;
         if (param1 != 8806) {
@@ -46,8 +46,8 @@ abstract class qc {
           if (param0 < 0) {
             return null;
           }
-          if (UnitLossCondition.field_d.length > param0) {
-            var2 = UnitLossCondition.field_d[param0];
+          if (mc.field_d.length > param0) {
+            var2 = mc.field_d[param0];
             return var2.c((byte) -116);
           }
           return null;
@@ -58,8 +58,8 @@ abstract class qc {
         if (param0 < 0) {
           return null;
         }
-        if (UnitLossCondition.field_d.length > param0) {
-          var2Lifetime1 = UnitLossCondition.field_d[param0];
+        if (mc.field_d.length > param0) {
+          var2Lifetime1 = mc.field_d[param0];
           return var2Lifetime1.c((byte) -116);
         }
         return null;

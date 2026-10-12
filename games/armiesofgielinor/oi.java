@@ -59,7 +59,7 @@ final class oi implements kh {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -78,7 +78,7 @@ final class oi implements kh {
         int var6_int = 0;
         RuntimeException var6 = null;
         int var7 = 0;
-        RgbSprite var8 = null;
+        wk var8 = null;
         kb var9 = null;
         try {
           var6_int = param1 + param0.field_B;
@@ -87,11 +87,11 @@ final class oi implements kh {
             this.a((kb) null, 118, -124, false, 7);
           }
           var7 = param0.field_p + param4;
-          StateChangeEvent.a(param0.field_l, var6_int, param0.field_w, -52, var7);
+          qq.a(param0.field_l, var6_int, param0.field_w, -52, var7);
           var8 = db.field_a[1];
           if (param0 instanceof fw &&
             ((fw) (param0)).field_K) {
-            var8.f((param0.field_l - var8.canvasWidth >> 1) + (1 + var6_int), (-var8.canvasHeight + param0.field_w >> 1) + (1 + var7), 256);
+            var8.f((param0.field_l - var8.field_A >> 1) + (1 + var6_int), (-var8.field_x + param0.field_w >> 1) + (1 + var7), 256);
           }
           if (!param0.a(false)) {
             return;
@@ -108,7 +108,7 @@ final class oi implements kh {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 

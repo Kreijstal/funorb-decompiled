@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-class kb extends IntrusiveNode {
+class kb extends tc {
     static int field_A;
     static int[] field_o;
     int field_p;
@@ -56,7 +56,7 @@ class kb extends IntrusiveNode {
           this.field_q = 0;
           int var7_int = 122 / ((param3 + 58) / 53);
         } catch (RuntimeException runtimeException) {
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "kb.JA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+          throw ig.a((Throwable) ((Object) runtimeException), "kb.JA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
     }
 
@@ -85,7 +85,7 @@ class kb extends IntrusiveNode {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var5 = null;
         int var6 = 0;
-        var6 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        var6 = ArmiesOfGielinor.field_M ? 1 : 0;
         try {
           discarded$0 = param3.append(this.getClass().getName()).append("[0x").append(Integer.toHexString(this.hashCode())).append("] @").append(this.field_B).append(",").append(this.field_p).append(" ").append(this.field_l).append("x").append(this.field_w);
           if (this.field_v != null) {
@@ -139,7 +139,7 @@ class kb extends IntrusiveNode {
           } else {
             stackIn_25_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(')').toString());
         }
     }
 
@@ -175,7 +175,7 @@ class kb extends IntrusiveNode {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param5).append(',').append(param6).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param5).append(',').append(param6).append(')').toString());
         }
     }
 
@@ -200,7 +200,7 @@ class kb extends IntrusiveNode {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 
@@ -292,7 +292,7 @@ class kb extends IntrusiveNode {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 
@@ -308,27 +308,27 @@ class kb extends IntrusiveNode {
         wc var23;
         wc var27;
         wc var28;
-        var7 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        var7 = ArmiesOfGielinor.field_M ? 1 : 0;
         this.a(32722, param2, param3, this);
         if (param1 == -6226) {
-          regionExit1: {
+          L0: {
             var5 = this.a(false) ? 1 : 0;
             if (param0) {
               if (el.field_d != 0) {
                 if (var5 == 0) {
-                  if (DeployEvent.field_A != 0) {
-                    if (!this.a(BattleTutorial.field_t, param2, param3, 113, this, TeleportAction.field_z, DeployEvent.field_A)) {
+                  if (tr.field_A != 0) {
+                    if (!this.a(iu.field_t, param2, param3, 113, this, ur.field_z, tr.field_A)) {
                       if (ro.field_ub != 0) {
                         au.field_Ob = ro.field_ub;
-                        OwnerChangeEvent.a(param1 ^ 6225, this.h(21384));
+                        as.a(param1 ^ 6225, this.h(21384));
                         return param0;
                       }
                       if (au.field_Ob == 0) {
                         au.field_Ob = ro.field_ub;
-                        OwnerChangeEvent.a(param1 ^ 6225, this.h(21384));
+                        as.a(param1 ^ 6225, this.h(21384));
                         return param0;
                       }
-                      this.a(param3, this, AiPlanningStrategy.field_d, (byte) -127, ko.field_b, param2);
+                      this.a(param3, this, sm.field_d, (byte) -127, ko.field_b, param2);
                       var21 = bn.field_f;
                       if (var21 != null) {
                         if (var21.field_x instanceof ch) {
@@ -338,26 +338,26 @@ class kb extends IntrusiveNode {
                       }
                       if (var7 != 0 &&
                         var5 != 0 &&
-                        DeployEvent.field_A != 0) {
+                        tr.field_A != 0) {
                         this.f(1);
                       }
                       au.field_Ob = ro.field_ub;
-                      OwnerChangeEvent.a(param1 ^ 6225, this.h(21384));
+                      as.a(param1 ^ 6225, this.h(21384));
                       return param0;
                     }
                     param0 = false;
                   }
                   if (ro.field_ub != 0) {
                     au.field_Ob = ro.field_ub;
-                    OwnerChangeEvent.a(param1 ^ 6225, this.h(21384));
+                    as.a(param1 ^ 6225, this.h(21384));
                     return param0;
                   }
                   if (au.field_Ob == 0) {
                     au.field_Ob = ro.field_ub;
-                    OwnerChangeEvent.a(param1 ^ 6225, this.h(21384));
+                    as.a(param1 ^ 6225, this.h(21384));
                     return param0;
                   }
-                  this.a(param3, this, AiPlanningStrategy.field_d, (byte) -127, ko.field_b, param2);
+                  this.a(param3, this, sm.field_d, (byte) -127, ko.field_b, param2);
                   var23 = bn.field_f;
                   if (var23 != null) {
                     if (var23.field_x instanceof ch) {
@@ -367,36 +367,36 @@ class kb extends IntrusiveNode {
                   }
                   if (var7 == 0) {
                     au.field_Ob = ro.field_ub;
-                    OwnerChangeEvent.a(param1 ^ 6225, this.h(21384));
+                    as.a(param1 ^ 6225, this.h(21384));
                     return param0;
                   }
                   if (var5 == 0) {
                     au.field_Ob = ro.field_ub;
-                    OwnerChangeEvent.a(param1 ^ 6225, this.h(21384));
+                    as.a(param1 ^ 6225, this.h(21384));
                     return param0;
                   }
-                  if (DeployEvent.field_A == 0) {
+                  if (tr.field_A == 0) {
                     au.field_Ob = ro.field_ub;
-                    OwnerChangeEvent.a(param1 ^ 6225, this.h(21384));
+                    as.a(param1 ^ 6225, this.h(21384));
                     return param0;
                   }
                   this.f(1);
                   au.field_Ob = ro.field_ub;
-                  OwnerChangeEvent.a(param1 ^ 6225, this.h(21384));
+                  as.a(param1 ^ 6225, this.h(21384));
                   return param0;
                 }
-                this.a(AiPlanningStrategy.field_d, param2, param3, ko.field_b, el.field_d, param1 + 6327, this);
+                this.a(sm.field_d, param2, param3, ko.field_b, el.field_d, param1 + 6327, this);
               }
-              if (DeployEvent.field_A != 0) {
-                if (!this.a(BattleTutorial.field_t, param2, param3, 113, this, TeleportAction.field_z, DeployEvent.field_A)) {
+              if (tr.field_A != 0) {
+                if (!this.a(iu.field_t, param2, param3, 113, this, ur.field_z, tr.field_A)) {
                   if (var5 == 0) {
                     if (ro.field_ub == 0) {
                       if (au.field_Ob == 0) {
                         au.field_Ob = ro.field_ub;
-                        OwnerChangeEvent.a(param1 ^ 6225, this.h(21384));
+                        as.a(param1 ^ 6225, this.h(21384));
                         return param0;
                       }
-                      this.a(param3, this, AiPlanningStrategy.field_d, (byte) -127, ko.field_b, param2);
+                      this.a(param3, this, sm.field_d, (byte) -127, ko.field_b, param2);
                       var27 = bn.field_f;
                       var6 = var27;
                       if (var27 != null) {
@@ -407,15 +407,15 @@ class kb extends IntrusiveNode {
                       }
                       if (var7 != 0 &&
                         var5 != 0 &&
-                        DeployEvent.field_A != 0) {
+                        tr.field_A != 0) {
                         this.f(1);
                         au.field_Ob = ro.field_ub;
-                        OwnerChangeEvent.a(param1 ^ 6225, this.h(21384));
+                        as.a(param1 ^ 6225, this.h(21384));
                         return param0;
                       }
                     }
                     au.field_Ob = ro.field_ub;
-                    OwnerChangeEvent.a(param1 ^ 6225, this.h(21384));
+                    as.a(param1 ^ 6225, this.h(21384));
                     return param0;
                   }
                   this.f(1);
@@ -427,14 +427,14 @@ class kb extends IntrusiveNode {
                 }
               }
               if (ro.field_ub != 0) {
-                break regionExit1;
+                break L0;
               }
               if (au.field_Ob == 0) {
                 au.field_Ob = ro.field_ub;
-                OwnerChangeEvent.a(param1 ^ 6225, this.h(21384));
+                as.a(param1 ^ 6225, this.h(21384));
                 return param0;
               }
-              this.a(param3, this, AiPlanningStrategy.field_d, (byte) -127, ko.field_b, param2);
+              this.a(param3, this, sm.field_d, (byte) -127, ko.field_b, param2);
               var28 = bn.field_f;
               if (var28 != null) {
                 if (var28.field_x instanceof ch) {
@@ -443,14 +443,14 @@ class kb extends IntrusiveNode {
                 bn.field_f = null;
               }
               if (var7 == 0) {
-                break regionExit1;
+                break L0;
               }
             }
             if (var5 != 0 &&
-              DeployEvent.field_A != 0) {
+              tr.field_A != 0) {
               this.f(1);
               au.field_Ob = ro.field_ub;
-              OwnerChangeEvent.a(param1 ^ 6225, this.h(21384));
+              as.a(param1 ^ 6225, this.h(21384));
               return param0;
             }
           }
@@ -459,8 +459,8 @@ class kb extends IntrusiveNode {
           var5 = this.a(false) ? 1 : 0;
           if (param0) {
             if (el.field_d == 0) {
-              if (DeployEvent.field_A != 0) {
-                if (!this.a(BattleTutorial.field_t, param2, param3, 113, this, TeleportAction.field_z, DeployEvent.field_A)) {
+              if (tr.field_A != 0) {
+                if (!this.a(iu.field_t, param2, param3, 113, this, ur.field_z, tr.field_A)) {
                   if (var5 != 0) {
                     this.f(1);
                     if (var7 != 0) {
@@ -473,15 +473,15 @@ class kb extends IntrusiveNode {
               }
               if (ro.field_ub != 0) {
                 au.field_Ob = ro.field_ub;
-                OwnerChangeEvent.a(param1 ^ 6225, this.h(21384));
+                as.a(param1 ^ 6225, this.h(21384));
                 return param0;
               }
               if (au.field_Ob == 0) {
                 au.field_Ob = ro.field_ub;
-                OwnerChangeEvent.a(param1 ^ 6225, this.h(21384));
+                as.a(param1 ^ 6225, this.h(21384));
                 return param0;
               }
-              this.a(param3, this, AiPlanningStrategy.field_d, (byte) -127, ko.field_b, param2);
+              this.a(param3, this, sm.field_d, (byte) -127, ko.field_b, param2);
               var8 = bn.field_f;
               var6 = var8;
               if (var8 != null) {
@@ -492,28 +492,28 @@ class kb extends IntrusiveNode {
               }
               if (var7 != 0 &&
                 var5 != 0 &&
-                DeployEvent.field_A != 0) {
+                tr.field_A != 0) {
                 this.f(1);
               }
               au.field_Ob = ro.field_ub;
-              OwnerChangeEvent.a(param1 ^ 6225, this.h(21384));
+              as.a(param1 ^ 6225, this.h(21384));
               return param0;
             }
             if (var5 != 0) {
-              this.a(AiPlanningStrategy.field_d, param2, param3, ko.field_b, el.field_d, param1 + 6327, this);
+              this.a(sm.field_d, param2, param3, ko.field_b, el.field_d, param1 + 6327, this);
             }
-            if (DeployEvent.field_A == 0) {
+            if (tr.field_A == 0) {
               if (ro.field_ub != 0) {
                 au.field_Ob = ro.field_ub;
-                OwnerChangeEvent.a(param1 ^ 6225, this.h(21384));
+                as.a(param1 ^ 6225, this.h(21384));
                 return param0;
               }
               if (au.field_Ob == 0) {
                 au.field_Ob = ro.field_ub;
-                OwnerChangeEvent.a(param1 ^ 6225, this.h(21384));
+                as.a(param1 ^ 6225, this.h(21384));
                 return param0;
               }
-              this.a(param3, this, AiPlanningStrategy.field_d, (byte) -127, ko.field_b, param2);
+              this.a(param3, this, sm.field_d, (byte) -127, ko.field_b, param2);
               var10 = bn.field_f;
               var6 = var10;
               if (var10 != null) {
@@ -524,26 +524,26 @@ class kb extends IntrusiveNode {
               }
               if (var7 != 0 &&
                 var5 != 0 &&
-                DeployEvent.field_A != 0) {
+                tr.field_A != 0) {
                 this.f(1);
               }
               au.field_Ob = ro.field_ub;
-              OwnerChangeEvent.a(param1 ^ 6225, this.h(21384));
+              as.a(param1 ^ 6225, this.h(21384));
               return param0;
             }
-            if (!this.a(BattleTutorial.field_t, param2, param3, 113, this, TeleportAction.field_z, DeployEvent.field_A)) {
+            if (!this.a(iu.field_t, param2, param3, 113, this, ur.field_z, tr.field_A)) {
               if (var5 == 0) {
                 if (ro.field_ub != 0) {
                   au.field_Ob = ro.field_ub;
-                  OwnerChangeEvent.a(param1 ^ 6225, this.h(21384));
+                  as.a(param1 ^ 6225, this.h(21384));
                   return param0;
                 }
                 if (au.field_Ob == 0) {
                   au.field_Ob = ro.field_ub;
-                  OwnerChangeEvent.a(param1 ^ 6225, this.h(21384));
+                  as.a(param1 ^ 6225, this.h(21384));
                   return param0;
                 }
-                this.a(param3, this, AiPlanningStrategy.field_d, (byte) -127, ko.field_b, param2);
+                this.a(param3, this, sm.field_d, (byte) -127, ko.field_b, param2);
                 var15 = bn.field_f;
                 if (var15 != null) {
                   if (var15.field_x instanceof ch) {
@@ -553,11 +553,11 @@ class kb extends IntrusiveNode {
                 }
                 if (var7 != 0 &&
                   var5 != 0 &&
-                  DeployEvent.field_A != 0) {
+                  tr.field_A != 0) {
                   this.f(1);
                 }
                 au.field_Ob = ro.field_ub;
-                OwnerChangeEvent.a(param1 ^ 6225, this.h(21384));
+                as.a(param1 ^ 6225, this.h(21384));
                 return param0;
               }
               this.f(1);
@@ -569,15 +569,15 @@ class kb extends IntrusiveNode {
             }
             if (ro.field_ub != 0) {
               au.field_Ob = ro.field_ub;
-              OwnerChangeEvent.a(param1 ^ 6225, this.h(21384));
+              as.a(param1 ^ 6225, this.h(21384));
               return param0;
             }
             if (au.field_Ob == 0) {
               au.field_Ob = ro.field_ub;
-              OwnerChangeEvent.a(param1 ^ 6225, this.h(21384));
+              as.a(param1 ^ 6225, this.h(21384));
               return param0;
             }
-            this.a(param3, this, AiPlanningStrategy.field_d, (byte) -127, ko.field_b, param2);
+            this.a(param3, this, sm.field_d, (byte) -127, ko.field_b, param2);
             var18 = bn.field_f;
             if (var18 != null) {
               if (var18.field_x instanceof ch) {
@@ -587,17 +587,17 @@ class kb extends IntrusiveNode {
             }
             if (var7 == 0) {
               au.field_Ob = ro.field_ub;
-              OwnerChangeEvent.a(param1 ^ 6225, this.h(21384));
+              as.a(param1 ^ 6225, this.h(21384));
               return param0;
             }
           }
           if (var5 != 0 &&
-            DeployEvent.field_A != 0) {
+            tr.field_A != 0) {
             this.f(1);
           }
         }
         au.field_Ob = ro.field_ub;
-        OwnerChangeEvent.a(param1 ^ 6225, this.h(21384));
+        as.a(param1 ^ 6225, this.h(21384));
         return param0;
     }
 
@@ -642,7 +642,7 @@ class kb extends IntrusiveNode {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
         }
     }
 
@@ -699,7 +699,7 @@ class kb extends IntrusiveNode {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -724,7 +724,7 @@ class kb extends IntrusiveNode {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 
@@ -742,7 +742,7 @@ class kb extends IntrusiveNode {
           if (param0 != 32722) {
             return;
           }
-          var5_int = this.b(param0 - 32721, param1, ko.field_b, AiPlanningStrategy.field_d, param2) ? 1 : 0;
+          var5_int = this.b(param0 - 32721, param1, ko.field_b, sm.field_d, param2) ? 1 : 0;
           stackIn_4_0 = var5_int;
           if (this.field_t) {
             stackIn_5_1 = 0;
@@ -769,7 +769,7 @@ class kb extends IntrusiveNode {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
         }
     }
 
@@ -783,7 +783,7 @@ class kb extends IntrusiveNode {
         String var12;
         String var9Lifetime1;
         String var12Lifetime1;
-        var6 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        var6 = ArmiesOfGielinor.field_M ? 1 : 0;
         if (param1 <= -117) {
           var4 = this.g(-31989);
           var5_int = 0;
@@ -875,7 +875,7 @@ class kb extends IntrusiveNode {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 
@@ -890,7 +890,7 @@ class kb extends IntrusiveNode {
           this.field_x = param5;
           this.field_k = param4;
         } catch (RuntimeException runtimeException) {
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "kb.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ')');
+          throw ig.a((Throwable) ((Object) runtimeException), "kb.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ')');
         }
     }
 

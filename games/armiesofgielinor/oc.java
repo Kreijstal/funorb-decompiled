@@ -31,12 +31,12 @@ final class oc extends je {
         StringBuilder discarded$3 = null;
         StringBuilder discarded$4 = null;
         int var4;
-        var4 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        var4 = ArmiesOfGielinor.field_M ? 1 : 0;
         this.a(param0, param1);
         if (!param1) {
           this.field_Mb.field_X = this.field_Qb.toString();
           if (param1 &&
-            0 != DeployEvent.field_A &&
+            0 != tr.field_A &&
             this.field_yb == 0) {
             this.field_Kb = 1;
           }
@@ -46,10 +46,10 @@ final class oc extends je {
           return this.field_Kb;
         }
         while (true) {
-          if (!Unit.i((byte) -51)) {
+          if (!jd.i((byte) -51)) {
             this.field_Mb.field_X = this.field_Qb.toString();
             if (param1 &&
-              0 != DeployEvent.field_A &&
+              0 != tr.field_A &&
               this.field_yb == 0) {
               this.field_Kb = 1;
               if (param0) {
@@ -66,21 +66,21 @@ final class oc extends je {
           }
           if (rs.field_q == 85 &&
             this.field_Qb.length() > 0) {
-            PortalLossCondition.a(' ', -1 + this.field_Qb.length(), this.field_Qb, true);
+            up.a(' ', -1 + this.field_Qb.length(), this.field_Qb, true);
           }
-          if (kv.a(false, (CharSequence) ((Object) this.field_Qb), DualNodeDeque.field_i)) {
-            discarded$1 = this.field_Qb.append(DualNodeDeque.field_i);
+          if (kv.a(false, (CharSequence) ((Object) this.field_Qb), ui.field_i)) {
+            discarded$1 = this.field_Qb.append(ui.field_i);
           } else {
             if (this.field_Qb.length() == 0 &&
-              91 == DualNodeDeque.field_i) {
-              discarded$2 = this.field_Qb.append(DualNodeDeque.field_i);
+              91 == ui.field_i) {
+              discarded$2 = this.field_Qb.append(ui.field_i);
             } else {
               if (this.field_Qb.length() == 1 &&
-                DualNodeDeque.field_i == 35) {
-                discarded$3 = this.field_Qb.append(DualNodeDeque.field_i);
+                ui.field_i == 35) {
+                discarded$3 = this.field_Qb.append(ui.field_i);
               } else {
-                if (DualNodeDeque.field_i == 93) {
-                  discarded$4 = this.field_Qb.append(DualNodeDeque.field_i);
+                if (ui.field_i == 93) {
+                  discarded$4 = this.field_Qb.append(ui.field_i);
                 }
               }
             }
@@ -137,7 +137,7 @@ final class oc extends je {
             }
             return true;
           }
-          var2 = Character.toLowerCase(DualNodeDeque.field_i);
+          var2 = Character.toLowerCase(ui.field_i);
           if (var2 == 32) {
             var2 = 95;
             if (var2 == 95 &&
@@ -150,7 +150,7 @@ final class oc extends je {
               discarded$9 = this.field_Qb.append((char) var2);
             }
           }
-          if (MeshObject.a((byte) -125, (char) var2)) {
+          if (ni.a((byte) -125, (char) var2)) {
             discarded$10 = this.field_Qb.append((char) var2);
             if (84 == rs.field_q) {
               if (this.field_Qb.length() <= 0) {
@@ -220,7 +220,7 @@ final class oc extends je {
             }
             return false;
           }
-          var2Lifetime1 = Character.toLowerCase(DualNodeDeque.field_i);
+          var2Lifetime1 = Character.toLowerCase(ui.field_i);
           if (var2Lifetime1 == 32) {
             var2Lifetime1 = 95;
             if (var2Lifetime1 == 95 &&
@@ -233,7 +233,7 @@ final class oc extends je {
               discarded$5 = this.field_Qb.append((char) var2Lifetime1);
             }
           }
-          if (MeshObject.a((byte) -125, (char) var2Lifetime1)) {
+          if (ni.a((byte) -125, (char) var2Lifetime1)) {
             discarded$6 = this.field_Qb.append((char) var2Lifetime1);
             if (84 == rs.field_q) {
               if (this.field_Qb.length() <= 0) {
@@ -285,7 +285,7 @@ final class oc extends je {
           }
           return false;
         }
-        PortalLossCondition.a(' ', this.field_Qb.length() - 1, this.field_Qb, true);
+        up.a(' ', this.field_Qb.length() - 1, this.field_Qb, true);
         if (this.field_Qb.length() >= 12) {
           if (84 == rs.field_q) {
             if (this.field_Qb.length() <= 0) {
@@ -303,7 +303,7 @@ final class oc extends je {
           }
           return false;
         }
-        var2Lifetime2 = Character.toLowerCase(DualNodeDeque.field_i);
+        var2Lifetime2 = Character.toLowerCase(ui.field_i);
         if (var2Lifetime2 == 32) {
           var2Lifetime2 = 95;
           if (var2Lifetime2 == 95 &&
@@ -316,7 +316,7 @@ final class oc extends je {
             discarded$1 = this.field_Qb.append((char) var2Lifetime2);
           }
         }
-        if (MeshObject.a((byte) -125, (char) var2Lifetime2)) {
+        if (ni.a((byte) -125, (char) var2Lifetime2)) {
           discarded$2 = this.field_Qb.append((char) var2Lifetime2);
           if (84 == rs.field_q) {
             if (this.field_Qb.length() <= 0) {
@@ -433,7 +433,7 @@ final class oc extends je {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
         }
     }
 

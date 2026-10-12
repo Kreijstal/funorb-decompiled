@@ -11,8 +11,8 @@ final class wc extends nl {
     private int field_L;
     private boolean field_I;
     private int field_N;
-    static RgbSprite[] field_Q;
-    static RgbSprite field_J;
+    static wk[] field_Q;
+    static wk field_J;
     private int field_M;
 
     final boolean a(int param0, int param1, int param2, int param3, kb param4, int param5, int param6) {
@@ -53,7 +53,7 @@ final class wc extends nl {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param5).append(',').append(param6).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param5).append(',').append(param6).append(')').toString());
         }
     }
 
@@ -73,7 +73,7 @@ final class wc extends nl {
           if ((!(this.field_E instanceof fw) ||
             ((fw) (this.field_E)).field_I) &&
             this.field_q == 1) {
-            var5_int = -param1 + (AiPlanningStrategy.field_d - this.field_N);
+            var5_int = -param1 + (sm.field_d - this.field_N);
             var6 = -this.field_L + (ko.field_b - param2);
             if (this.field_B != var5_int ||
               this.field_p != var6) {
@@ -129,7 +129,7 @@ final class wc extends nl {
           } else {
             stackIn_32_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_31_0), ((StringBuilder) (Object) stackIn_31_1).append(stackIn_32_2).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_31_0), ((StringBuilder) (Object) stackIn_31_1).append(stackIn_32_2).append(')').toString());
         }
     }
 
@@ -146,7 +146,7 @@ final class wc extends nl {
     final static void a(boolean param0, int param1) {
         td.a(param0, false, 108);
         if (param1 != -49) {
-          field_J = (RgbSprite) null;
+          field_J = (wk) null;
         }
     }
 
@@ -173,7 +173,7 @@ final class wc extends nl {
           super.a(param0, param1, param2, (byte) 73, param4, param5);
           this.field_q = 0;
         } catch (RuntimeException runtimeException) {
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "wc.JA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+          throw ig.a((Throwable) ((Object) runtimeException), "wc.JA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
     }
 
@@ -219,7 +219,7 @@ final class wc extends nl {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
         }
     }
 
@@ -233,9 +233,9 @@ final class wc extends nl {
         if (null != tn.field_Z) {
           tn.field_Z.a((byte) -108, param0);
         }
-        SummonRequest.a(param0, (byte) -89);
-        if (Spell.field_b != null) {
-          Spell.field_b.b(param0, 20);
+        hw.a(param0, (byte) -89);
+        if (ik.field_b != null) {
+          ik.field_b.b(param0, 20);
         }
         qh.a(param0, 0);
     }
@@ -249,7 +249,7 @@ final class wc extends nl {
           this.field_I = param8 ? true : false;
           this.field_E = param6;
         } catch (RuntimeException runtimeException) {
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "wc.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ',' + (param6 != null ? "{...}" : "null") + ',' + param7 + ',' + param8 + ')');
+          throw ig.a((Throwable) ((Object) runtimeException), "wc.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ',' + (param6 != null ? "{...}" : "null") + ',' + param7 + ',' + param8 + ')');
         }
     }
 
@@ -265,7 +265,7 @@ final class wc extends nl {
         String stackIn_26_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
-        var7 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        var7 = ArmiesOfGielinor.field_M ? 1 : 0;
         try {
           var2_long = (long)param1;
           var4 = param0.length();
@@ -308,7 +308,7 @@ final class wc extends nl {
           } else {
             stackIn_26_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(',').append(param1).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(',').append(param1).append(')').toString());
         }
     }
 

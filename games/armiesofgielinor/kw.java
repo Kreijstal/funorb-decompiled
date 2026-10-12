@@ -8,7 +8,7 @@ final class kw extends fw {
     static String field_Q;
     private int field_L;
     static int[] field_M;
-    static int campaignPacketWord0;
+    static int field_R;
 
     final boolean a(int param0, kb param1) {
         RuntimeException var3 = null;
@@ -31,7 +31,7 @@ final class kw extends fw {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 
@@ -44,7 +44,7 @@ final class kw extends fw {
             this.a(107, (kb) null);
           }
         } catch (RuntimeException runtimeException) {
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "kw.P(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw ig.a((Throwable) ((Object) runtimeException), "kw.P(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -69,20 +69,20 @@ final class kw extends fw {
         int var9;
         int var10;
         int var11;
-        RgbSprite var14;
-        RgbSprite var15;
-        RgbSprite var16;
-        RgbSprite var17;
-        RgbSprite var18;
-        RgbSprite var19;
-        RgbSprite var20;
-        RgbSprite var21;
+        wk var14;
+        wk var15;
+        wk var16;
+        wk var17;
+        wk var18;
+        wk var19;
+        wk var20;
+        wk var21;
         int var9Lifetime1;
         int var9Lifetime2;
         int var10Lifetime1;
         int var10Lifetime2;
         gu var8Lifetime1;
-        var11 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        var11 = ArmiesOfGielinor.field_M ? 1 : 0;
         super.a(param0, param1, (byte) -120, param3);
         if (param3 != 0) {
           return;
@@ -95,105 +95,105 @@ final class kw extends fw {
             so.field_e != var8) {
             if (var8 == rn.field_e) {
               var19 = db.field_a[2];
-              var19.f(-(var19.pixelWidth >> 1) + var5, -(var19.pixelHeight >> 1) + var6, 256);
+              var19.f(-(var19.field_y >> 1) + var5, -(var19.field_v >> 1) + var6, 256);
               return;
             }
             if (var8 != oo.field_g) {
               return;
             }
             var20 = db.field_a[1];
-            var20.f(-(var20.pixelWidth >> 1) + var5, var6 - (var20.pixelHeight >> 1), 256);
+            var20.f(-(var20.field_y >> 1) + var5, var6 - (var20.field_v >> 1), 256);
             return;
           }
           var21 = db.field_a[0];
-          var9 = var21.canvasWidth << 1;
-          var10 = var21.canvasHeight << 1;
-          if (null == PreparedAction.field_p) {
-            PreparedAction.field_p = new RgbSprite(var9, var10);
-            CombatSandbox.a(PreparedAction.field_p, 3);
+          var9 = var21.field_A << 1;
+          var10 = var21.field_x << 1;
+          if (null == bd.field_p) {
+            bd.field_p = new wk(var9, var10);
+            vn.a(bd.field_p, 3);
           } else {
-            if (var9 > PreparedAction.field_p.pixelWidth) {
-              PreparedAction.field_p = new RgbSprite(var9, var10);
-              CombatSandbox.a(PreparedAction.field_p, 3);
+            if (var9 > bd.field_p.field_y) {
+              bd.field_p = new wk(var9, var10);
+              vn.a(bd.field_p, 3);
             } else {
-              if (var10 <= PreparedAction.field_p.pixelHeight) {
-                CombatSandbox.a(PreparedAction.field_p, 3);
-                SoftwareRaster.b();
+              if (var10 <= bd.field_p.field_v) {
+                vn.a(bd.field_p, 3);
+                qn.b();
               } else {
-                PreparedAction.field_p = new RgbSprite(var9, var10);
-                CombatSandbox.a(PreparedAction.field_p, 3);
+                bd.field_p = new wk(var9, var10);
+                vn.a(bd.field_p, 3);
               }
             }
           }
-          var21.b(112, 144, var21.canvasWidth << 4, var21.canvasHeight << 4, -this.field_L << 10, 4096);
+          var21.b(112, 144, var21.field_A << 4, var21.field_x << 4, -this.field_L << 10, 4096);
           rf.b(-18862);
-          PreparedAction.field_p.f(-var21.canvasWidth + var5, -var21.canvasHeight + var6, 256);
+          bd.field_p.f(-var21.field_A + var5, -var21.field_x + var6, 256);
           return;
         }
         this.a(105, -107, (byte) -98, -86);
         var8Lifetime1 = this.field_O.a(false);
         if (ad.field_K == var8Lifetime1) {
           var15 = db.field_a[0];
-          var9Lifetime1 = var15.canvasWidth << 1;
-          var10Lifetime1 = var15.canvasHeight << 1;
-          if (null != PreparedAction.field_p &&
-            var9Lifetime1 <= PreparedAction.field_p.pixelWidth &&
-            var10Lifetime1 <= PreparedAction.field_p.pixelHeight) {
-            CombatSandbox.a(PreparedAction.field_p, 3);
-            SoftwareRaster.b();
+          var9Lifetime1 = var15.field_A << 1;
+          var10Lifetime1 = var15.field_x << 1;
+          if (null != bd.field_p &&
+            var9Lifetime1 <= bd.field_p.field_y &&
+            var10Lifetime1 <= bd.field_p.field_v) {
+            vn.a(bd.field_p, 3);
+            qn.b();
           } else {
-            PreparedAction.field_p = new RgbSprite(var9Lifetime1, var10Lifetime1);
-            CombatSandbox.a(PreparedAction.field_p, 3);
+            bd.field_p = new wk(var9Lifetime1, var10Lifetime1);
+            vn.a(bd.field_p, 3);
           }
-          var15.b(112, 144, var15.canvasWidth << 4, var15.canvasHeight << 4, -this.field_L << 10, 4096);
+          var15.b(112, 144, var15.field_A << 4, var15.field_x << 4, -this.field_L << 10, 4096);
           rf.b(-18862);
-          PreparedAction.field_p.f(-var15.canvasWidth + var5, -var15.canvasHeight + var6, 256);
+          bd.field_p.f(-var15.field_A + var5, -var15.field_x + var6, 256);
           return;
         }
         if (so.field_e != var8Lifetime1) {
           if (var8Lifetime1 == rn.field_e) {
             var17 = db.field_a[2];
-            var17.f(-(var17.pixelWidth >> 1) + var5, -(var17.pixelHeight >> 1) + var6, 256);
+            var17.f(-(var17.field_y >> 1) + var5, -(var17.field_v >> 1) + var6, 256);
             return;
           }
           if (var8Lifetime1 != oo.field_g) {
             return;
           }
           var18 = db.field_a[1];
-          var18.f(-(var18.pixelWidth >> 1) + var5, var6 - (var18.pixelHeight >> 1), 256);
+          var18.f(-(var18.field_y >> 1) + var5, var6 - (var18.field_v >> 1), 256);
           return;
         }
         var16 = db.field_a[0];
         var14 = var16;
-        var9Lifetime2 = var16.canvasWidth << 1;
-        var10Lifetime2 = var16.canvasHeight << 1;
-        if (null == PreparedAction.field_p) {
-          PreparedAction.field_p = new RgbSprite(var9Lifetime2, var10Lifetime2);
-          CombatSandbox.a(PreparedAction.field_p, 3);
+        var9Lifetime2 = var16.field_A << 1;
+        var10Lifetime2 = var16.field_x << 1;
+        if (null == bd.field_p) {
+          bd.field_p = new wk(var9Lifetime2, var10Lifetime2);
+          vn.a(bd.field_p, 3);
         } else {
-          if (var9Lifetime2 > PreparedAction.field_p.pixelWidth) {
-            PreparedAction.field_p = new RgbSprite(var9Lifetime2, var10Lifetime2);
-            CombatSandbox.a(PreparedAction.field_p, 3);
+          if (var9Lifetime2 > bd.field_p.field_y) {
+            bd.field_p = new wk(var9Lifetime2, var10Lifetime2);
+            vn.a(bd.field_p, 3);
           } else {
-            if (var10Lifetime2 <= PreparedAction.field_p.pixelHeight) {
-              CombatSandbox.a(PreparedAction.field_p, 3);
-              SoftwareRaster.b();
+            if (var10Lifetime2 <= bd.field_p.field_v) {
+              vn.a(bd.field_p, 3);
+              qn.b();
             } else {
-              PreparedAction.field_p = new RgbSprite(var9Lifetime2, var10Lifetime2);
-              CombatSandbox.a(PreparedAction.field_p, 3);
+              bd.field_p = new wk(var9Lifetime2, var10Lifetime2);
+              vn.a(bd.field_p, 3);
             }
           }
         }
-        var16.b(112, 144, var16.canvasWidth << 4, var16.canvasHeight << 4, -this.field_L << 10, 4096);
+        var16.b(112, 144, var16.field_A << 4, var16.field_x << 4, -this.field_L << 10, 4096);
         rf.b(-18862);
-        PreparedAction.field_p.f(-var16.canvasWidth + var5, -var16.canvasHeight + var6, 256);
+        bd.field_p.f(-var16.field_A + var5, -var16.field_x + var6, 256);
     }
 
     kw(n param0) {
         try {
           this.field_O = param0;
         } catch (RuntimeException runtimeException) {
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "kw.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw ig.a((Throwable) ((Object) runtimeException), "kw.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -204,7 +204,7 @@ final class kw extends fw {
         int var2Lifetime1;
         int var2Lifetime2;
         int var2Lifetime3;
-        var4 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        var4 = ArmiesOfGielinor.field_M ? 1 : 0;
         var3 = -112 % ((param1 + 33) / 51);
         if (param0 <= 0) {
           if (160 <= param0 &&

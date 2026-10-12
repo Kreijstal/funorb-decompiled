@@ -5,7 +5,7 @@ final class oa extends dr {
     static me field_F;
     static String field_G;
     static String field_E;
-    static IndexedSprite[] field_H;
+    static ru[] field_H;
     static ij field_I;
 
     oa(String param0, Class[] param1, String param2) {
@@ -25,7 +25,7 @@ final class oa extends dr {
 
     final static void h(int param0) {
         if (param0 != 2) {
-          field_H = (IndexedSprite[]) null;
+          field_H = (ru[]) null;
           np.a(true, (byte) -113);
           return;
         }
@@ -35,12 +35,12 @@ final class oa extends dr {
     final static void a(int param0, um param1) {
         try {
           if (param1 != null) {
-            TrianglePulse.a(-16147, 50, param1, true);
-            ((wn) (lk.field_e.field_y)).a((byte) -111, 1, CorpseConditionMarker.field_u);
+            hh.a(-16147, 50, param1, true);
+            ((wn) (lk.field_e.field_y)).a((byte) -111, 1, dk.field_u);
           }
           int var2_int = 100 / ((-17 - param0) / 33);
         } catch (RuntimeException runtimeException) {
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "oa.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ig.a((Throwable) ((Object) runtimeException), "oa.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -67,7 +67,7 @@ final class oa extends dr {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 

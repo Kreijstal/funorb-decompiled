@@ -51,7 +51,7 @@ final class uu {
         int var15 = 0;
         int var16 = 0;
         int var17_int = 0;
-        NodeDeque var17 = null;
+        at var17 = null;
         Object var18 = null;
         int var18_int = 0;
         of var18_ref = null;
@@ -68,12 +68,12 @@ final class uu {
         int var13_intLifetime1;
         int var18_intLifetime1;
         var18 = null;
-        var19 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        var19 = ArmiesOfGielinor.field_M ? 1 : 0;
         try {
           if (param3 != 0) {
             uu.a((byte) -86);
           }
-          AnimationSequence.a(InstructionsPanel.field_D, 125);
+          qb.a(rk.field_D, 125);
           if (vu.field_M != null) {
             boolean decompiledFrameRemainder1 = true;
             mp.field_Lb.field_xb = true;
@@ -89,7 +89,7 @@ final class uu {
             var7.field_gb = 0;
             if (!vu.b(false)) {
               var9_ref_String = vu.field_M.field_rc;
-              kd.field_F.field_X = fo.a(4800, CampaignMenu.field_m, new String[]{var9_ref_String}).toUpperCase();
+              kd.field_F.field_X = fo.a(4800, cv.field_m, new String[]{var9_ref_String}).toUpperCase();
               pi.field_N.a(40, param3 - 20500, pd.field_c.field_gb, -40 + pd.field_c.field_ob, 0);
               pi.field_N.field_X = fo.a(4800, wt.field_F, new String[]{var9_ref_String});
               var8 = pi.field_N;
@@ -100,25 +100,25 @@ final class uu {
               var9 = (2 + pd.field_c.field_gb) / 2;
               lm.field_b.a(40, -20500, var9 - 2, -40 + pd.field_c.field_ob, 0);
               if (vu.field_M.field_nc > vu.field_M.field_Ub) {
-                lm.field_b.field_X = TickCounter.field_d.toUpperCase();
+                lm.field_b.field_X = em.field_d.toUpperCase();
                 lm.field_b.field_xb = true;
                 if (var19 != 0) {
-                  lm.field_b.field_X = TelefragEvent.field_y.toUpperCase();
+                  lm.field_b.field_X = kn.field_y.toUpperCase();
                   lm.field_b.field_xb = false;
                 }
               } else {
-                lm.field_b.field_X = TelefragEvent.field_y.toUpperCase();
+                lm.field_b.field_X = kn.field_y.toUpperCase();
                 lm.field_b.field_xb = false;
               }
               lm.field_b.field_G = nd.field_a.field_G;
-              if (0 < AnimationPlayer.field_a) {
-                boolean decompiledSharedTail0 = (1 != AnimationPlayer.field_a);
+              if (0 < vj.field_a) {
+                boolean decompiledSharedTail0 = (1 != vj.field_a);
                 if (!decompiledSharedTail0) {
                   var10_ref_String = vf.field_c;
                   decompiledSharedTail0 = (var19 != 0);
                 }
                 if (decompiledSharedTail0) {
-                  var10_ref_String = fo.a(4800, UnitSpell.field_h, new String[]{Integer.toString(AnimationPlayer.field_a)});
+                  var10_ref_String = fo.a(4800, wa.field_h, new String[]{Integer.toString(vj.field_a)});
                 }
                 if (0 == (16 & hg.field_b) &&
                   !vk.field_f) {
@@ -127,15 +127,15 @@ final class uu {
                 lm.field_b.field_X = lm.field_b.field_X + "<br>" + var10_ref_String;
               }
               so.field_d.a(40, -20500, -var9 + pd.field_c.field_gb, pd.field_c.field_ob - 40, var9);
-              so.field_d.field_X = ArchiveProvider.field_b.toUpperCase();
+              so.field_d.field_X = ew.field_b.toUpperCase();
               var8 = so.field_d;
               stackIn_23_0 = so.field_d;
               stackIn_24_1 = (param4) && (ph.field_d == 0L);
               stackIn_23_0.field_xb = stackIn_24_1;
               var10 = 2;
               if (null != fs.field_d) {
-                if (null == TeleportAction.field_B) {
-                  TeleportAction.field_B = new byte[tq.field_b];
+                if (null == ur.field_B) {
+                  ur.field_B = new byte[tq.field_b];
                   dt.field_d = new boolean[tq.field_b];
                 }
                 var11_int = 0;
@@ -147,12 +147,12 @@ final class uu {
                   dt.field_d[var11_int] = false;
                   var11_int++;
                 } while (var19 == 0);
-                scanLoop1: while (true) {
+                L18: while (true) {
                   if (2 > var10) {
                     var11_int = 0;
                     stackIn_73_0 = 0;
                     if (var19 != 0) {
-                      break scanLoop1;
+                      break L18;
                     }
                     var12 = stackIn_73_0;
                     while (true) {
@@ -165,7 +165,7 @@ final class uu {
                         var13 = var20;
                         stackIn_69_0 = 0;
                         var14_int = stackIn_69_0;
-                        scanLoop2: while (true) {
+                        L25: while (true) {
                           if (var25.length > var14_int) {
                             var15 = var25[var14_int];
                             var16 = var20[1 + var14_int];
@@ -180,12 +180,12 @@ final class uu {
                               var17_int = stackIn_48_0;
                               if (var17_int != var16 &&
                                 var19 == 0) {
-                                break scanLoop2;
+                                break L25;
                               }
                             } else {
                               if (var16 != (vu.field_M.field_pc[var15] & 255) &&
                                 var19 == 0) {
-                                break scanLoop2;
+                                break L25;
                               }
                             }
                             var14_int += 2;
@@ -222,7 +222,7 @@ final class uu {
                       continue;
                     }
                   }
-                  stackIn_73_0 = ~BufferedSocket.field_j;
+                  stackIn_73_0 = ~hi.field_j;
                   break;
                 }
                 if (stackIn_73_0 <= -3 &&
@@ -234,7 +234,7 @@ final class uu {
                 (decompiledFrameRemainder1 = (ep.field_p != null ||
                 null != iv.field_e ||
                 jv.field_d != null ||
-                null != CombatPresentation.field_j))) {
+                null != sk.field_j))) {
                 var11_int = 0;
                 var12 = 0;
                 var13_int = 0;
@@ -261,9 +261,9 @@ final class uu {
                         var11_int = 1;
                       }
                     }
-                    if (CombatPresentation.field_j != null &&
-                      null != CombatPresentation.field_j[var16]) {
-                      var15 = var15 | CombatPresentation.field_j[var16][var17_int];
+                    if (sk.field_j != null &&
+                      null != sk.field_j[var16]) {
+                      var15 = var15 | sk.field_j[var16][var17_int];
                     }
                     if (jv.field_d != null &&
                       jv.field_d[var16] != null) {
@@ -285,15 +285,15 @@ final class uu {
                   var16 = 0;
                 }
                 var17 = bu.field_a.field_Jb.field_fb;
-                var18_ref = (of) (var17.first((byte) 110));
-                scanLoop3: while (true) {
+                var18_ref = (of) (var17.e((byte) 110));
+                L48: while (true) {
                   boolean decompiledFrameRemainder0 = true;
                   if (var18_ref != null) {
                     stackOut_113_0 = var18_ref.k(param3 ^ 0);
                     stackIn_132_0 = stackOut_113_0 ? 1 : 0;
                     stackIn_114_0 = stackOut_113_0;
                     if (var19 != 0) {
-                      break scanLoop3;
+                      break L48;
                     }
                     if (!stackIn_114_0 ||
                       var19 != 0) {
@@ -328,11 +328,11 @@ final class uu {
                       }
                     }
                     if (decompiledFrameRemainder0) {
-                      var18_ref = (of) (var17.next((byte) 123));
+                      var18_ref = (of) (var17.a((byte) 123));
                       continue;
                     }
                   }
-                  stackIn_132_0 = ~BufferedSocket.field_j;
+                  stackIn_132_0 = ~hi.field_j;
                   break;
                 }
                 if (stackIn_132_0 <= -3 &&
@@ -343,12 +343,12 @@ final class uu {
                   so.field_d.field_xb = false;
                   if (so.field_d.field_jb) {
                     if (ij.field_w.field_a.field_Kb != 0) {
-                      ad.field_I = fo.a(4800, Battlefield.field_pb, new String[]{ob.field_O});
+                      ad.field_I = fo.a(4800, ha.field_pb, new String[]{ob.field_O});
                       if (var19 != 0) {
-                        ad.field_I = ResourceArchive.field_f;
+                        ad.field_I = kl.field_f;
                       }
                     } else {
-                      ad.field_I = ResourceArchive.field_f;
+                      ad.field_I = kl.field_f;
                     }
                   }
                 }
@@ -397,7 +397,7 @@ final class uu {
                   } else {
                     var13_ref = rd.field_f;
                     if (var12 == 0) {
-                      var14 = fo.a(param3 ^ 4800, TeamRoster.field_d, new String[]{(String) (var11)});
+                      var14 = fo.a(param3 ^ 4800, go.field_d, new String[]{(String) (var11)});
                       if (var19 != 0) {
                         var14 = ol.field_x + (String) (var11);
                       }
@@ -415,7 +415,7 @@ final class uu {
               if (1 > var9) {
                 var9 = 1;
               }
-              var8.field_X = fo.a(4800, CorpseConditionMarker.field_t, new String[]{Integer.toString(var9)});
+              var8.field_X = fo.a(4800, dk.field_t, new String[]{Integer.toString(var9)});
             }
             gg.field_E.field_X = fo.a(4800, ws.field_T, new String[]{Integer.toString(vu.field_M.field_Ub), Integer.toString(vu.field_M.field_nc)});
           }
@@ -451,7 +451,7 @@ final class uu {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) var5), "uu.D(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw ig.a((Throwable) ((Object) var5), "uu.D(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -477,12 +477,12 @@ final class uu {
           } else {
             stackIn_5_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(param1).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(param1).append(')').toString());
         }
     }
 
     final static void a(int param0, int param1, int param2) {
-        ResourceArchive.field_a.b(param0, param2, (byte) 93);
+        kl.field_a.b(param0, param2, (byte) 93);
         if (param1 >= -22) {
           field_c = (String) null;
         }

@@ -6,9 +6,9 @@ final class ai extends hs {
     private nv field_Q;
     static String field_U;
     qm field_S;
-    static ResourceProtocolClient field_T;
+    static bp field_T;
     static String field_J;
-    static NodeDeque field_P;
+    static at field_P;
     static String field_V;
     static String field_R;
     private boolean field_O;
@@ -38,11 +38,11 @@ final class ai extends hs {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
-    final static int readCompactInt(CipherPacketBuffer packet, boolean obfuscationGuard) {
+    final static int a(bv param0, boolean param1) {
         RuntimeException var2 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;
@@ -50,22 +50,22 @@ final class ai extends hs {
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (!obfuscationGuard) {
+          if (!param1) {
             field_N = (String) null;
           }
-          stackIn_3_0 = de.readTieredSignedInt(-102, packet, 4, 14, 30, 20);
+          stackIn_3_0 = de.a(-102, param0, 4, 14, 30, 20);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
           stackIn_6_0 = var2;
           stackIn_6_1 = new StringBuilder().append("ai.C(");
-          if (packet == null) {
+          if (param0 == null) {
             stackIn_7_2 = "null";
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(obfuscationGuard).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -81,7 +81,7 @@ final class ai extends hs {
             return true;
           }
           if (param5 <= 93) {
-            field_T = (ResourceProtocolClient) null;
+            field_T = (bp) null;
           }
           stackIn_9_0 = (this.a(false)) && (this.c(param4, 959449104));
           return stackIn_9_0;
@@ -95,7 +95,7 @@ final class ai extends hs {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 
@@ -108,7 +108,7 @@ final class ai extends hs {
             field_R = (String) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "ai.B(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw ig.a((Throwable) ((Object) runtimeException), "ai.B(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -121,12 +121,12 @@ final class ai extends hs {
         try {
           this.e((byte) -116);
         } catch (RuntimeException runtimeException) {
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "ai.P(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw ig.a((Throwable) ((Object) runtimeException), "ai.P(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
     private final void f(byte param0) {
-        int var3 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        int var3 = ArmiesOfGielinor.field_M ? 1 : 0;
         if (param0 != -3) {
           return;
         }
@@ -174,7 +174,7 @@ final class ai extends hs {
           this.field_C[2] = (kb) ((Object) dupTemp$0);
           this.d((byte) 120);
         } catch (RuntimeException runtimeException) {
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "ai.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ',' + (param6 != null ? "{...}" : "null") + ')');
+          throw ig.a((Throwable) ((Object) runtimeException), "ai.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ',' + (param6 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -839,6 +839,6 @@ final class ai extends hs {
         field_V = "Campaigns";
         field_N = "Select a unit to use this item on.";
         field_M = 1;
-        field_P = new NodeDeque();
+        field_P = new at();
     }
 }

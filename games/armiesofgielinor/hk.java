@@ -10,7 +10,7 @@ final class hk extends je {
         if (param0 != 102) {
           hk.k(-40);
           this.a(true, true);
-          if (DeployEvent.field_A == 0) {
+          if (tr.field_A == 0) {
             return this.field_Kb.field_yb != 0 ? true : false;
           }
           if (this.field_yb != 0) {
@@ -19,7 +19,7 @@ final class hk extends je {
           return true;
         }
         this.a(true, true);
-        if (DeployEvent.field_A != 0) {
+        if (tr.field_A != 0) {
           if (this.field_yb == 0) {
             return true;
           }
@@ -33,41 +33,41 @@ final class hk extends je {
 
     final static void k(int param0) {
         te var1 = null;
-        int var2 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        int var2 = ArmiesOfGielinor.field_M ? 1 : 0;
         te var1Lifetime1;
         try {
           l.field_a.d();
-          TextCursor.field_e.d();
+          mt.field_e.d();
           qu.field_p = qu.field_p - 1;
           if (param0 != 128) {
             hk.k(94);
           }
           if (qu.field_p == 0) {
             qu.field_p = 200;
-            var1 = (te) (bl.field_h.first((byte) 118));
+            var1 = (te) (bl.field_h.e((byte) 118));
             while (var1 != null) {
               if (!var1.field_k.c(param0 ^ 65408)) {
-                var1.unlink(param0 ^ 247);
+                var1.d(param0 ^ 247);
               }
-              var1 = (te) (bl.field_h.next((byte) 123));
+              var1 = (te) (bl.field_h.a((byte) 123));
             }
             if (null != ts.field_e) {
-              var1Lifetime1 = (te) (ts.field_e.first((byte) 120));
+              var1Lifetime1 = (te) (ts.field_e.e((byte) 120));
               while (var1Lifetime1 != null) {
                 if (!var1Lifetime1.field_k.c(65280)) {
-                  var1Lifetime1.unlink(-126);
+                  var1Lifetime1.d(-126);
                 }
-                var1Lifetime1 = (te) (ts.field_e.next((byte) 123));
+                var1Lifetime1 = (te) (ts.field_e.a((byte) 123));
               }
             }
           }
           if (au.field_Kb != null &&
             !au.field_Kb.g(param0 + 11771)) {
-            MapLayout.field_u = null;
+            lo.field_u = null;
             return;
           }
         } catch (RuntimeException runtimeException) {
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "hk.A(" + param0 + ')');
+          throw ig.a((Throwable) ((Object) runtimeException), "hk.A(" + param0 + ')');
         }
     }
 
@@ -106,7 +106,7 @@ final class hk extends je {
         je var17 = null;
         int var10Lifetime1;
         try {
-          var17 = new je(0L, param1, GameEvent.field_x.toUpperCase());
+          var17 = new je(0L, param1, oj.field_x.toUpperCase());
           var17.field_Eb = 1;
           this.field_Kb = new je(0L, param2);
           var8 = new je(0L, param3);
@@ -114,10 +114,10 @@ final class hk extends je {
           var9.field_Eb = 1;
           var10 = 50;
           var11 = 0;
-          for (var12 = 0; AiUnitPlanner.field_z.length > var12; var12++) {
+          for (var12 = 0; cl.field_z.length > var12; var12++) {
             var13 = new je(0L, param3, bt.field_c[var12]);
-            var14 = new je(0L, param3, AiUnitPlanner.field_z[var12]);
-            var15 = param3.field_Z.a(AiUnitPlanner.field_z[var12]);
+            var14 = new je(0L, param3, cl.field_z[var12]);
+            var15 = param3.field_Z.a(cl.field_z[var12]);
             if (var11 < var15) {
               var11 = var15;
             }
@@ -181,7 +181,7 @@ final class hk extends je {
           } else {
             stackIn_26_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(')').toString());
         }
     }
 

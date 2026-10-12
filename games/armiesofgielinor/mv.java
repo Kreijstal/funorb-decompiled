@@ -4,7 +4,7 @@
 final class mv {
     static sa field_c;
     static boolean field_b;
-    static RgbSprite[] field_a;
+    static wk[] field_a;
     static String field_d;
     static String field_e;
 
@@ -21,7 +21,7 @@ final class mv {
         int var5_intLifetime1;
         int var6Lifetime1;
         int var7Lifetime1;
-        var11 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        var11 = ArmiesOfGielinor.field_M ? 1 : 0;
         try {
           if (param1 >= -40) {
             mv.a(6, (byte) -96, -115, -102, -81);
@@ -81,8 +81,8 @@ final class mv {
             return;
           }
           pv.field_e.b();
-          SoftwareRaster.b();
-          TrianglePulse.field_d.d(0, TrianglePulse.field_d.pixelHeight >> 1, op.field_c[0][param3]);
+          qn.b();
+          hh.field_d.d(0, hh.field_d.field_v >> 1, op.field_c[0][param3]);
           so.field_b.a(5605);
           pv.field_e.d(-20 + param0, -200 + param4, 75, 210, 255);
           pv.field_e.c();
@@ -91,7 +91,7 @@ final class mv {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) var5), "mv.B(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw ig.a((Throwable) ((Object) var5), "mv.B(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 

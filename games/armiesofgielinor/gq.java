@@ -2,39 +2,39 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class gq {
-    final static void a(IndexedSprite param0, int param1, int param2, int param3) {
+    final static void a(ru param0, int param1, int param2, int param3) {
         int var10 = 0;
         int var10Lifetime1;
         int var10Lifetime2;
-        param1 = param1 + param0.offsetX;
-        param2 = param2 + param0.offsetY;
-        int var4 = param1 + param2 * SoftwareRaster.width;
+        param1 = param1 + param0.field_i;
+        param2 = param2 + param0.field_d;
+        int var4 = param1 + param2 * qn.field_l;
         int var5 = 0;
-        int var6 = param0.pixelHeight;
-        int var7 = param0.pixelWidth;
-        int var8 = SoftwareRaster.width - var7;
+        int var6 = param0.field_h;
+        int var7 = param0.field_e;
+        int var8 = qn.field_l - var7;
         int var9 = 0;
-        if (param2 < SoftwareRaster.clipTop) {
-          var10 = SoftwareRaster.clipTop - param2;
+        if (param2 < qn.field_a) {
+          var10 = qn.field_a - param2;
           var6 = var6 - var10;
-          param2 = SoftwareRaster.clipTop;
+          param2 = qn.field_a;
           var5 = var5 + var10 * var7;
-          var4 = var4 + var10 * SoftwareRaster.width;
+          var4 = var4 + var10 * qn.field_l;
         }
-        if (param2 + var6 > SoftwareRaster.clipBottom) {
-          var6 = var6 - (param2 + var6 - SoftwareRaster.clipBottom);
+        if (param2 + var6 > qn.field_f) {
+          var6 = var6 - (param2 + var6 - qn.field_f);
         }
-        if (param1 < SoftwareRaster.clipLeft) {
-          var10Lifetime1 = SoftwareRaster.clipLeft - param1;
+        if (param1 < qn.field_j) {
+          var10Lifetime1 = qn.field_j - param1;
           var7 = var7 - var10Lifetime1;
-          param1 = SoftwareRaster.clipLeft;
+          param1 = qn.field_j;
           var5 = var5 + var10Lifetime1;
           var4 = var4 + var10Lifetime1;
           var9 = var9 + var10Lifetime1;
           var8 = var8 + var10Lifetime1;
         }
-        if (param1 + var7 > SoftwareRaster.clipRight) {
-          var10Lifetime2 = param1 + var7 - SoftwareRaster.clipRight;
+        if (param1 + var7 > qn.field_e) {
+          var10Lifetime2 = param1 + var7 - qn.field_e;
           var7 = var7 - var10Lifetime2;
           var9 = var9 + var10Lifetime2;
           var8 = var8 + var10Lifetime2;
@@ -43,7 +43,7 @@ final class gq {
           var6 <= 0) {
           return;
         }
-        gq.b(SoftwareRaster.pixels, param0.pixelIndices, param0.palette, param3, var5, var4, var7, var6, var8, var9);
+        gq.b(qn.field_d, param0.field_k, param0.field_j, param3, var5, var4, var7, var6, var8, var9);
     }
 
     final static int b(int param0) {
@@ -84,39 +84,39 @@ final class gq {
         return 16711935;
     }
 
-    final static void b(IndexedSprite param0, int param1, int param2, int param3) {
+    final static void b(ru param0, int param1, int param2, int param3) {
         int var10 = 0;
         int var10Lifetime1;
         int var10Lifetime2;
-        param1 = param1 + param0.offsetX;
-        param2 = param2 + param0.offsetY;
-        int var4 = param1 + param2 * SoftwareRaster.width;
+        param1 = param1 + param0.field_i;
+        param2 = param2 + param0.field_d;
+        int var4 = param1 + param2 * qn.field_l;
         int var5 = 0;
-        int var6 = param0.pixelHeight;
-        int var7 = param0.pixelWidth;
-        int var8 = SoftwareRaster.width - var7;
+        int var6 = param0.field_h;
+        int var7 = param0.field_e;
+        int var8 = qn.field_l - var7;
         int var9 = 0;
-        if (param2 < SoftwareRaster.clipTop) {
-          var10 = SoftwareRaster.clipTop - param2;
+        if (param2 < qn.field_a) {
+          var10 = qn.field_a - param2;
           var6 = var6 - var10;
-          param2 = SoftwareRaster.clipTop;
+          param2 = qn.field_a;
           var5 = var5 + var10 * var7;
-          var4 = var4 + var10 * SoftwareRaster.width;
+          var4 = var4 + var10 * qn.field_l;
         }
-        if (param2 + var6 > SoftwareRaster.clipBottom) {
-          var6 = var6 - (param2 + var6 - SoftwareRaster.clipBottom);
+        if (param2 + var6 > qn.field_f) {
+          var6 = var6 - (param2 + var6 - qn.field_f);
         }
-        if (param1 < SoftwareRaster.clipLeft) {
-          var10Lifetime1 = SoftwareRaster.clipLeft - param1;
+        if (param1 < qn.field_j) {
+          var10Lifetime1 = qn.field_j - param1;
           var7 = var7 - var10Lifetime1;
-          param1 = SoftwareRaster.clipLeft;
+          param1 = qn.field_j;
           var5 = var5 + var10Lifetime1;
           var4 = var4 + var10Lifetime1;
           var9 = var9 + var10Lifetime1;
           var8 = var8 + var10Lifetime1;
         }
-        if (param1 + var7 > SoftwareRaster.clipRight) {
-          var10Lifetime2 = param1 + var7 - SoftwareRaster.clipRight;
+        if (param1 + var7 > qn.field_e) {
+          var10Lifetime2 = param1 + var7 - qn.field_e;
           var7 = var7 - var10Lifetime2;
           var9 = var9 + var10Lifetime2;
           var8 = var8 + var10Lifetime2;
@@ -125,7 +125,7 @@ final class gq {
           var6 <= 0) {
           return;
         }
-        gq.a(SoftwareRaster.pixels, param0.pixelIndices, param0.palette, var5, var4, var7, var6, var8, var9, param3);
+        gq.a(qn.field_d, param0.field_k, param0.field_j, var5, var4, var7, var6, var8, var9, param3);
     }
 
     final static int a(int param0) {

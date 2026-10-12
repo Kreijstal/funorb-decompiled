@@ -28,7 +28,7 @@ final class df extends tj implements fb, he {
           }
           this.field_S.k(110);
         } catch (RuntimeException runtimeException) {
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "df.GA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ig.a((Throwable) ((Object) runtimeException), "df.GA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -38,7 +38,7 @@ final class df extends tj implements fb, he {
             df.a(84);
           }
         } catch (RuntimeException runtimeException) {
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "df.CA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw ig.a((Throwable) ((Object) runtimeException), "df.CA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -62,7 +62,7 @@ final class df extends tj implements fb, he {
         RuntimeException decompiledCaughtException = null;
         nu var6 = null;
         RuntimeException var6_ref = null;
-        BitmapFont var7 = null;
+        ka var7 = null;
         String var8 = null;
         pf var9 = null;
         ta var12 = null;
@@ -82,7 +82,7 @@ final class df extends tj implements fb, he {
           this.field_Q = (fn) ((Object) new ma(param0, (qo) (this), 100));
           this.field_S = (fn) ((Object) new ma("", (qo) (this), 20));
           if (!this.field_P) {
-            this.field_O = new fw(ResourceRequest.field_v, (qo) null);
+            this.field_O = new fw(ks.field_v, (qo) null);
             stackIn_18_1 = null;
             stackIn_18_2 = null;
             if (!this.field_F) {
@@ -99,7 +99,7 @@ final class df extends tj implements fb, he {
               this.field_R = new fw(li.field_p, (qo) (this));
             }
           } else {
-            this.field_O = new fw(RegionAnchor.field_k, (qo) null);
+            this.field_O = new fw(a.field_k, (qo) null);
             this.field_N = new fw(dt.field_c, (qo) null);
             this.field_Q.field_I = false;
           }
@@ -119,27 +119,27 @@ final class df extends tj implements fb, he {
           }
           if (!this.field_P) {
             if (this.field_F) {
-              this.field_N.field_s = CombatSandbox.field_e;
+              this.field_N.field_s = vn.field_e;
               this.field_N.field_k = (kh) ((Object) new td());
             } else {
               this.field_N.field_k = (kh) ((Object) new td());
             }
           } else {
-            this.field_N.field_s = VineGrowthAction.field_v;
+            this.field_N.field_s = pe.field_v;
           }
           this.field_p = 15;
           var7 = ArmiesOfGielinor.field_J;
           if (null != this.field_I) {
-            this.field_p = this.field_p + (5 + var7.getParagraphHeight(this.field_I, this.field_l - 40, var7.field_H));
+            this.field_p = this.field_p + (5 + var7.a(this.field_I, this.field_l - 40, var7.field_H));
           }
           var8 = bh.field_J;
-          var9 = ea.a(0, CombatEvent.d((byte) 34));
-          if (var9 != CombatSandbox.field_j) {
+          var9 = ea.a(0, ag.d((byte) 34));
+          if (var9 != vn.field_j) {
             if (var9 == ps.field_y) {
-              var8 = DualNodeDeque.field_h;
+              var8 = ui.field_h;
             }
           } else {
-            var8 = DeployAction.field_t;
+            var8 = pl.field_t;
           }
           dupTemp$0 = new ta(10, this.field_p, this.field_l - 20, 25, this.field_Q, false, 80, 3, var7, 16777215, var8);
           var12 = dupTemp$0;
@@ -202,7 +202,7 @@ final class df extends tj implements fb, he {
           } else {
             stackIn_63_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_59_0), ((StringBuilder) (Object) stackIn_62_1).append(stackIn_63_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_59_0), ((StringBuilder) (Object) stackIn_62_1).append(stackIn_63_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -235,7 +235,7 @@ final class df extends tj implements fb, he {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -247,7 +247,7 @@ final class df extends tj implements fb, he {
           ArmiesOfGielinor.field_J.a(this.field_I, param0 - (-this.field_B - 20), 15 + param1 + this.field_p, -40 + this.field_l, this.field_w, 16777215, -1, 1, 0, ArmiesOfGielinor.field_J.field_H);
         }
         if (this.field_R != null) {
-          SoftwareRaster.e(10 + param0, 134 + param1, -20 + this.field_l, 4210752);
+          qn.e(10 + param0, 134 + param1, -20 + this.field_l, 4210752);
         }
         super.a(param0, param1, (byte) -104, param3);
     }
@@ -259,7 +259,7 @@ final class df extends tj implements fb, he {
         String stackIn_18_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var6 = null;
-        var7 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        var7 = ArmiesOfGielinor.field_M ? 1 : 0;
         try {
           if (param1 != 11) {
             this.m(64);
@@ -268,7 +268,7 @@ final class df extends tj implements fb, he {
             if (this.field_R != param4) {
               if (param4 == this.field_N) {
                 if (this.field_P) {
-                  IntPair.e(17);
+                  ft.e(17);
                 } else {
                   if (!this.field_F) {
                     me.a(param1 ^ 26573);
@@ -294,7 +294,7 @@ final class df extends tj implements fb, he {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
         }
     }
 
@@ -316,18 +316,18 @@ final class df extends tj implements fb, he {
         try {
           int var3_int = 14 % ((param1 + 80) / 33);
         } catch (RuntimeException runtimeException) {
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "df.FA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw ig.a((Throwable) ((Object) runtimeException), "df.FA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
     final static void a(int param0) {
         if (param0 != -20) {
           String var2 = (String) null;
-          df.a((String) null, -20, (ResourceArchive) null, -114, (String) null);
+          df.a((String) null, -20, (kl) null, -114, (String) null);
         }
-        MoveEvent.campaignMenu = new CampaignMenu();
-        EquipmentBattleTutorial.configureTutorialStage(30, 21, 220, 420, 440, 470, new int[]{7}, -121);
-        EquipmentBattleTutorial.configureTutorialStage(30, 22, 490, 610, 20, 50, new int[]{47}, param0 - 55);
+        kr.field_C = new cv();
+        gb.a(30, 21, 220, 420, 440, 470, new int[]{7}, -121);
+        gb.a(30, 22, 490, 610, 20, 50, new int[]{47}, param0 - 55);
     }
 
     final String m(int param0) {
@@ -347,7 +347,7 @@ final class df extends tj implements fb, he {
         if (df.k(30) ||
           !(0 >= this.field_Q.field_v.length()) &&
           !(0 >= this.field_S.field_v.length())) {
-          CampaignProgress.a(this.field_S.field_v, 0, this.field_Q.field_v);
+          cm.a(this.field_S.field_v, 0, this.field_Q.field_v);
         }
     }
 
@@ -355,7 +355,7 @@ final class df extends tj implements fb, he {
         hf.field_a = param0;
     }
 
-    final static String a(String param0, int param1, ResourceArchive param2, int param3, String param4) {
+    final static String a(String param0, int param1, kl param2, int param3, String param4) {
         RuntimeException var5 = null;
         String stackIn_2_0 = null;
         String stackIn_6_0 = null;
@@ -373,11 +373,11 @@ final class df extends tj implements fb, he {
             stackIn_2_0 = (String) null;
             return stackIn_2_0;
           }
-          if (!param2.ensureIndex((byte) 82)) {
+          if (!param2.a((byte) 82)) {
             stackIn_6_0 = (String) (param4);
             return stackIn_6_0;
           }
-          stackIn_8_0 = param0 + " - " + param2.getGroupProgress(param1, (byte) 73) + "%";
+          stackIn_8_0 = param0 + " - " + param2.b(param1, (byte) 73) + "%";
           return stackIn_8_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -401,7 +401,7 @@ final class df extends tj implements fb, he {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
         }
     }
 
@@ -444,7 +444,7 @@ final class df extends tj implements fb, he {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 

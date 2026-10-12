@@ -3,7 +3,7 @@
  */
 import java.io.*;
 
-final class fg extends IntrusiveNode {
+final class fg extends tc {
     static String field_l;
     int field_q;
     static String field_k;
@@ -30,19 +30,19 @@ final class fg extends IntrusiveNode {
         int var7;
         int var8;
         int var9;
-        TileMetadata var10;
+        ca var10;
         int var11;
         int var12;
-        var12 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
-        var7 = param1 + ResourceRequest.field_y * param0;
+        var12 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var7 = param1 + ks.field_y * param0;
         if (param1 >= 0 &&
           param0 >= 0 &&
-          param1 < ResourceRequest.field_y &&
+          param1 < ks.field_y &&
           ef.field_c > param0) {
           if (param4 <= 64) {
             field_l = (String) null;
           }
-          var8 = RegionAnchor.a(16711680, param0, var7, param1);
+          var8 = a.a(16711680, param0, var7, param1);
           var9 = -((var8 & -14033988) >>> 24) + 255;
           var8 = var8 & 16777215;
           if (!param6) {
@@ -53,22 +53,22 @@ final class fg extends IntrusiveNode {
                 } else {
                   po.a((byte) -7, param0, param3, param5, var9, var8, var7, param1);
                   sf.b(param0, param1, 0, param5, var7, param3);
-                  IntrusiveNode.a(62, param1, param0, 19 + param3, var7, 39 + param5);
+                  tc.a(62, param1, param0, 19 + param3, var7, 39 + param5);
                   cw.a(var7, 19 + param3, param5 + 39, -118, param1, param0);
-                  TickCounter.a(var9, false, param0, param3, var7, 0, param1, param5, var8);
-                  var10 = vs.field_e[var7].metadata;
+                  em.a(var9, false, param0, param3, var7, 0, param1, param5, var8);
+                  var10 = vs.field_e[var7].field_n;
                   if (var10 != null &&
-                    (var10.modifierFlags & 1) != 0 &&
-                    -1 < vs.field_e[var7].ownerPlayer) {
-                    var11 = vs.field_e[var7].ownerPlayer;
-                    if (null != CipherPacketBuffer.currentBattlefield) {
-                      var11 = CipherPacketBuffer.currentBattlefield.getPlayerTeamIndex(var11, -1);
+                    (var10.field_c & 1) != 0 &&
+                    -1 < vs.field_e[var7].field_a) {
+                    var11 = vs.field_e[var7].field_a;
+                    if (null != bv.field_w) {
+                      var11 = bv.field_w.o(var11, -1);
                     }
-                    UnitCycler.a(22 + param5, var11, var7 + ug.field_b, 119, param3 + 20);
+                    eu.a(22 + param5, var11, var7 + ug.field_b, 119, param3 + 20);
                   }
                   fs.a(param3, false, false, var9, param5, var7, param1, var8, param0);
-                  if (vs.field_e[var7].hasModifierFlag4((byte) -115)) {
-                    GameEvent.a(param3 + 20, true, ug.field_b + var7, vs.field_e[var7].ownerPlayer, 22 + param5);
+                  if (vs.field_e[var7].e((byte) -115)) {
+                    oj.a(param3 + 20, true, ug.field_b + var7, vs.field_e[var7].field_a, 22 + param5);
                   }
                 }
               } else {
@@ -76,7 +76,7 @@ final class fg extends IntrusiveNode {
                   mq.a(param5, var8, var7, param1, param3, var9, 54, param0);
                 }
                 pk.a(param3, param0, param1, var7, var8, -29403, var9, param5);
-                if (Unit.field_L) {
+                if (jd.field_L) {
                   oh.field_I.g(param5, param3);
                 }
               }
@@ -85,20 +85,20 @@ final class fg extends IntrusiveNode {
             }
           } else {
             if (param2 == 2) {
-              TickCounter.a(var9, true, param0, param3, var7, 0, param1, param5, var8);
+              em.a(var9, true, param0, param3, var7, 0, param1, param5, var8);
               fs.a(param3, false, true, var9, param5, var7, param1, var8, param0);
             }
           }
           return;
         }
         if (param2 == 2) {
-          EquipmentBattleTutorial.a(param0, param1, param5, param3, (byte) 49);
+          gb.a(param0, param1, param5, param3, (byte) 49);
         }
     }
 
     final static void a(byte param0) {
         int var1_int = 0;
-        int var2 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        int var2 = ArmiesOfGielinor.field_M ? 1 : 0;
         int var1_intLifetime1;
         try {
           if (ck.field_c != null) {
@@ -107,10 +107,10 @@ final class fg extends IntrusiveNode {
             }
           }
           var1_intLifetime1 = -93 / ((28 - param0) / 54);
-          PopupPresentation.field_j = null;
+          ql.field_j = null;
           System.gc();
         } catch (RuntimeException runtimeException) {
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "fg.C(" + param0 + ')');
+          throw ig.a((Throwable) ((Object) runtimeException), "fg.C(" + param0 + ')');
         }
     }
 
@@ -139,7 +139,7 @@ final class fg extends IntrusiveNode {
         String stackIn_24_2 = null;
         Throwable decompiledCaughtException = null;
         Exception var10 = null;
-        var12 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        var12 = ArmiesOfGielinor.field_M ? 1 : 0;
         try {
           var5_int = param2.length;
           var6 = new String[var5_int];
@@ -195,7 +195,7 @@ final class fg extends IntrusiveNode {
           } else {
             stackIn_24_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(')').toString());
         }
     }
 
@@ -213,11 +213,11 @@ final class fg extends IntrusiveNode {
           this.field_s = param2;
           this.field_q = param5;
         } catch (RuntimeException runtimeException) {
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "fg.F(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ')');
+          throw ig.a((Throwable) ((Object) runtimeException), "fg.F(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ')');
         }
     }
 
-    final static void a(int param0, CipherPacketBuffer param1) {
+    final static void a(int param0, bv param1) {
         try {
           int var5 = 0;
           int var10_int = 0;
@@ -266,9 +266,9 @@ final class fg extends IntrusiveNode {
           var16 = null;
           var22 = null;
           var23 = null;
-          var12 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+          var12 = ArmiesOfGielinor.field_M ? 1 : 0;
           try {
-            var13 = (dc) (tp.field_e.first((byte) 125));
+            var13 = (dc) (tp.field_e.e((byte) 125));
             var17 = var13;
             if (var17 == null) {
               return;
@@ -295,11 +295,11 @@ final class fg extends IntrusiveNode {
             if (var3 != 0) {
               return;
             }
-            var4 = param1.position;
-            param1.writeInt((byte) -66, var17.field_q);
+            var4 = param1.field_q;
+            param1.a((byte) -66, var17.field_q);
             for (var5 = param0; var17.field_p > var5; var5++) {
               if (var17.field_m[var5] != 0) {
-                param1.writeByte(1, var17.field_m[var5]);
+                param1.b(1, var17.field_m[var5]);
               } else {
                 try {
                   var6_int = var17.field_t[var5];
@@ -308,20 +308,20 @@ final class fg extends IntrusiveNode {
                       var16_ref = (java.lang.reflect.Field) (var17.field_k[var5].field_f);
                       var20 = var16_ref;
                       var20.setInt((Object) null, var17.field_v[var5]);
-                      param1.writeByte(1, 0);
+                      param1.b(1, 0);
                     } else {
                       if (var6_int == 2) {
                         var28 = (java.lang.reflect.Field) (var17.field_k[var5].field_f);
                         var8 = var28.getModifiers();
-                        param1.writeByte(param0 + 1, 0);
-                        param1.writeInt((byte) -79, var8);
+                        param1.b(param0 + 1, 0);
+                        param1.a((byte) -79, var8);
                       }
                     }
                   } else {
                     var27 = (java.lang.reflect.Field) (var17.field_k[var5].field_f);
                     var8 = var27.getInt((Object) null);
-                    param1.writeByte(param0 ^ 1, 0);
-                    param1.writeInt((byte) -75, var8);
+                    param1.b(param0 ^ 1, 0);
+                    param1.a((byte) -75, var8);
                   }
                   if (var6_int == 3) {
                     var29 = (java.lang.reflect.Method) (var17.field_r[var5].field_f);
@@ -333,77 +333,77 @@ final class fg extends IntrusiveNode {
                     }
                     var10 = var29.invoke((Object) null, var9);
                     if (var10 == null) {
-                      param1.writeByte(param0 ^ 1, 0);
+                      param1.b(param0 ^ 1, 0);
                     } else if (var10 instanceof Number) {
-                      param1.writeByte(1, 1);
+                      param1.b(1, 1);
                       param1.a(((Number) (var10)).longValue(), param0 + 38359632);
                     } else if (!(var10 instanceof String)) {
-                      param1.writeByte(1, 4);
+                      param1.b(1, 4);
                     } else {
-                      param1.writeByte(1, 2);
+                      param1.b(1, 2);
                       param1.b((String) (var10), param0 + 13851);
                     }
                   } else {
                     if (4 == var6_int) {
                       var30 = (java.lang.reflect.Method) (var17.field_r[var5].field_f);
                       var8Lifetime1 = var30.getModifiers();
-                      param1.writeByte(param0 ^ 1, 0);
-                      param1.writeInt((byte) -115, var8Lifetime1);
+                      param1.b(param0 ^ 1, 0);
+                      param1.a((byte) -115, var8Lifetime1);
                     }
                   }
                 } catch (java.lang.ClassNotFoundException decompiledCaughtParameter0) {
                   decompiledCaughtException = decompiledCaughtParameter0;
                   var6 = (ClassNotFoundException) (Object) decompiledCaughtException;
-                  param1.writeByte(1, -10);
+                  param1.b(1, -10);
                 } catch (java.io.InvalidClassException decompiledCaughtParameter1) {
                   decompiledCaughtException = decompiledCaughtParameter1;
                   var6_ref = (InvalidClassException) (Object) decompiledCaughtException;
-                  param1.writeByte(1, -11);
+                  param1.b(1, -11);
                 } catch (java.io.StreamCorruptedException decompiledCaughtParameter2) {
                   decompiledCaughtException = decompiledCaughtParameter2;
                   var6_ref2 = (StreamCorruptedException) (Object) decompiledCaughtException;
-                  param1.writeByte(1, -12);
+                  param1.b(1, -12);
                 } catch (java.io.OptionalDataException decompiledCaughtParameter3) {
                   decompiledCaughtException = decompiledCaughtParameter3;
                   var6_ref3 = (OptionalDataException) (Object) decompiledCaughtException;
-                  param1.writeByte(1, -13);
+                  param1.b(1, -13);
                 } catch (java.lang.IllegalAccessException decompiledCaughtParameter4) {
                   decompiledCaughtException = decompiledCaughtParameter4;
                   var6_ref4 = (IllegalAccessException) (Object) decompiledCaughtException;
-                  param1.writeByte(1, -14);
+                  param1.b(1, -14);
                 } catch (java.lang.IllegalArgumentException decompiledCaughtParameter5) {
                   decompiledCaughtException = decompiledCaughtParameter5;
                   var6_ref5 = (IllegalArgumentException) (Object) decompiledCaughtException;
-                  param1.writeByte(1, -15);
+                  param1.b(1, -15);
                 } catch (java.lang.reflect.InvocationTargetException decompiledCaughtParameter6) {
                   decompiledCaughtException = decompiledCaughtParameter6;
                   var6_ref6 = (java.lang.reflect.InvocationTargetException) (Object) decompiledCaughtException;
-                  param1.writeByte(1, -16);
+                  param1.b(1, -16);
                 } catch (java.lang.SecurityException decompiledCaughtParameter7) {
                   decompiledCaughtException = decompiledCaughtParameter7;
                   var6_ref7 = (SecurityException) (Object) decompiledCaughtException;
-                  param1.writeByte(1, -17);
+                  param1.b(1, -17);
                 } catch (java.io.IOException decompiledCaughtParameter8) {
                   decompiledCaughtException = decompiledCaughtParameter8;
                   var6_ref8 = (IOException) (Object) decompiledCaughtException;
-                  param1.writeByte(1, -18);
+                  param1.b(1, -18);
                 } catch (java.lang.NullPointerException decompiledCaughtParameter9) {
                   decompiledCaughtException = decompiledCaughtParameter9;
                   var6_ref9 = (NullPointerException) (Object) decompiledCaughtException;
-                  param1.writeByte(1, -19);
+                  param1.b(1, -19);
                 } catch (java.lang.Exception decompiledCaughtParameter10) {
                   decompiledCaughtException = decompiledCaughtParameter10;
                   var6_ref10 = (Exception) (Object) decompiledCaughtException;
-                  param1.writeByte(1, -20);
+                  param1.b(1, -20);
                 } catch (java.lang.Throwable decompiledCaughtParameter11) {
                   decompiledCaughtException = decompiledCaughtParameter11;
                   var6_ref11 = decompiledCaughtException;
-                  param1.writeByte(1, -21);
+                  param1.b(1, -21);
                 }
               }
             }
             param1.b((byte) -39, var4);
-            var17.unlink(-115);
+            var17.d(-115);
             return;
           } catch (java.lang.RuntimeException decompiledCaughtParameter12) {
             decompiledCaughtException = decompiledCaughtParameter12;
@@ -415,7 +415,7 @@ final class fg extends IntrusiveNode {
             } else {
               stackIn_70_2 = "{...}";
             }
-            throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_69_0), ((StringBuilder) (Object) stackIn_69_1).append(stackIn_70_2).append(')').toString());
+            throw ig.a((Throwable) ((Object) stackIn_69_0), ((StringBuilder) (Object) stackIn_69_1).append(stackIn_70_2).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;

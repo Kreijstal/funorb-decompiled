@@ -6,8 +6,8 @@ final class gh extends tj implements he {
     private int field_J;
     String field_I;
     private boolean field_F;
-    static RgbSprite field_M;
-    BitmapFont field_K;
+    static wk field_M;
+    ka field_K;
     private fw field_E;
     boolean field_H;
     pp field_O;
@@ -39,7 +39,7 @@ final class gh extends tj implements he {
           this.n(107805154);
           this.field_I = param1;
         } catch (RuntimeException runtimeException) {
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "gh.O(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ig.a((Throwable) ((Object) runtimeException), "gh.O(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -90,7 +90,7 @@ final class gh extends tj implements he {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 
@@ -127,7 +127,7 @@ final class gh extends tj implements he {
           this.a((byte) 10, (kb) (this.field_E));
           this.a((byte) 10, (kb) (this.field_N));
         } catch (RuntimeException runtimeException) {
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "gh.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw ig.a((Throwable) ((Object) runtimeException), "gh.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -142,7 +142,7 @@ final class gh extends tj implements he {
           discarded$0 = this.a(-114, (String) null);
         }
         this.field_H = false;
-        this.field_Q.unlink(124);
+        this.field_Q.d(124);
     }
 
     public final void a(int param0, int param1, int param2, int param3, fw param4) {
@@ -153,7 +153,7 @@ final class gh extends tj implements he {
         RuntimeException var6 = null;
         try {
           if (param1 != 11) {
-            this.field_K = (BitmapFont) null;
+            this.field_K = (ka) null;
           }
           if (this.l(11180)) {
             this.k(-128);
@@ -171,7 +171,7 @@ final class gh extends tj implements he {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
         }
     }
 
@@ -179,7 +179,7 @@ final class gh extends tj implements he {
         try {
           super.a(param0, param1, param2, param3);
         } catch (RuntimeException runtimeException) {
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "gh.P(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw ig.a((Throwable) ((Object) runtimeException), "gh.P(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -206,7 +206,7 @@ final class gh extends tj implements he {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param5).append(',').append(param6).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param5).append(',').append(param6).append(')').toString());
         }
     }
 
@@ -230,14 +230,14 @@ final class gh extends tj implements he {
         int[] var17 = null;
         int[] var1Lifetime1;
         int var3Lifetime1;
-        var4 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        var4 = ArmiesOfGielinor.field_M ? 1 : 0;
         try {
-          if (!OwnerChangeEvent.field_B) {
+          if (!as.field_B) {
             if (null == gu.field_b) {
-              gu.field_b = DeployRequest.b(-1, 4);
+              gu.field_b = jc.b(-1, 4);
             }
             if (gu.field_b.field_m) {
-              var12 = BoundedFile.field_e;
+              var12 = ei.field_e;
               var10 = var12;
               var5 = var10;
               var1 = var5;
@@ -257,14 +257,14 @@ final class gh extends tj implements he {
                 var9++;
               }
               gu.field_b = null;
-              OwnerChangeEvent.field_B = true;
-              Unit.m(77);
-              if (rb.a(0, BoundedFile.field_e, 1)) {
-                RevivalEvent.d((byte) 125);
+              as.field_B = true;
+              jd.m(77);
+              if (rb.a(0, ei.field_e, 1)) {
+                rt.d((byte) 125);
               }
             }
-            if (OwnerChangeEvent.field_B) {
-              UpkeepEvent.h(-78);
+            if (as.field_B) {
+              qj.h(-78);
               ws.b(true);
               if (tg.field_a == 9 &&
                 !io.a(i.field_Nb, (byte) 116)) {
@@ -274,30 +274,30 @@ final class gh extends tj implements he {
           }
           if (!im.field_w &&
             !de.field_a) {
-            vl.outgoingPacket.writeCipheredOpcode(32161, 69);
+            vl.field_n.h(32161, 69);
             de.field_a = true;
           }
           if (!ve.field_b &&
             !af.field_c) {
-            vl.outgoingPacket.writeCipheredOpcode(32161, 75);
+            vl.field_n.h(32161, 75);
             af.field_c = true;
           }
           var1_int = -118 / ((16 - param0) / 35);
           if (!sh.field_h) {
-            if (null == RadialSummonItem.field_f) {
-              RadialSummonItem.field_f = fq.a(14663, 6);
+            if (null == jr.field_f) {
+              jr.field_f = fq.a(14663, 6);
             }
-            if (RadialSummonItem.field_f.field_n) {
-              if (null != RadialSummonItem.field_f.field_s) {
-                oe.a(RadialSummonItem.field_f.field_s, 1);
+            if (jr.field_f.field_n) {
+              if (null != jr.field_f.field_s) {
+                oe.a(jr.field_f.field_s, 1);
               }
               if (ps.field_v) {
                 rj.a(1);
               } else {
-                ek.field_d = AnimationFrameSet.field_E >> 2 & 3;
-                stackIn_37_0 = ((AnimationFrameSet.field_E & 1) != 0);
+                ek.field_d = wp.field_E >> 2 & 3;
+                stackIn_37_0 = ((wp.field_E & 1) != 0);
                 cu.field_a = stackIn_37_0;
-                stackIn_40_0 = ((2 & AnimationFrameSet.field_E) != 0);
+                stackIn_40_0 = ((2 & wp.field_E) != 0);
                 uc.field_a = stackIn_40_0;
                 if (3 <= ek.field_d) {
                   ek.field_d = 0;
@@ -310,7 +310,7 @@ final class gh extends tj implements he {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) var1_ref), "gh.E(" + param0 + ')');
+          throw ig.a((Throwable) ((Object) var1_ref), "gh.E(" + param0 + ')');
         }
     }
 
@@ -379,7 +379,7 @@ final class gh extends tj implements he {
         int var7 = 0;
         kb var8 = null;
         int var6_intLifetime1;
-        var7 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        var7 = ArmiesOfGielinor.field_M ? 1 : 0;
         try {
           if (!this.a(false)) {
             return false;
@@ -474,7 +474,7 @@ final class gh extends tj implements he {
           } else {
             stackIn_64_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_63_0), ((StringBuilder) (Object) stackIn_63_1).append(stackIn_64_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_63_0), ((StringBuilder) (Object) stackIn_63_1).append(stackIn_64_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -489,7 +489,7 @@ final class gh extends tj implements he {
         StringBuilder stackIn_12_1 = null;
         String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
-        var5 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        var5 = ArmiesOfGielinor.field_M ? 1 : 0;
         try {
           param1 = param1.toLowerCase();
           for (var3_int = param0; this.field_O.field_W.length > var3_int; var3_int++) {
@@ -511,7 +511,7 @@ final class gh extends tj implements he {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 
@@ -533,7 +533,7 @@ final class gh extends tj implements he {
         return super.h(param0 + 0);
     }
 
-    final static void a(int param0, int param1, int param2, int param3, BitmapFont param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, nr param12, int param13, nr param14, int param15, int param16, int param17, nr param18, BitmapFont param19) {
+    final static void a(int param0, int param1, int param2, int param3, ka param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, nr param12, int param13, nr param14, int param15, int param16, int param17, nr param18, ka param19) {
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -549,14 +549,14 @@ final class gh extends tj implements he {
         RuntimeException var20 = null;
         try {
           uk.field_s = param4;
-          AiPlanner.field_G = param19;
+          ej.field_G = param19;
           kq.a(param3, param17, (byte) 87, param10, param2);
-          CampaignMenu.a((byte) 123, param18, param5, param16);
+          cv.a((byte) 123, param18, param5, param16);
           if (param11 != -99) {
             return;
           }
           op.a(param7, param1, param12, param14, -3, param6);
-          ContextualRuntimeException.a((byte) -85, param15, param9);
+          g.a((byte) -85, param15, param9);
           mi.a(param8, param0, param13, 3815);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -593,7 +593,7 @@ final class gh extends tj implements he {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
         }
     }
 

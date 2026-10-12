@@ -2,34 +2,34 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ot extends dr {
-    static NodeDeque field_E;
+    static at field_E;
     static int field_G;
     static String field_H;
     static String field_F;
 
     final static void a(byte param0, int param1, iw param2) {
-        CipherPacketBuffer var6 = null;
+        bv var6 = null;
         int var4 = 0;
         try {
-          var6 = vl.outgoingPacket;
-          var6.writeCipheredOpcode(32161, param1);
-          var6.position = var6.position + 1;
-          var4 = var6.position;
-          var6.writeByte(param0 ^ 113, 1);
-          var6.writeByte(1, param2.field_r);
+          var6 = vl.field_n;
+          var6.h(32161, param1);
+          var6.field_q = var6.field_q + 1;
+          var4 = var6.field_q;
+          var6.b(param0 ^ 113, 1);
+          var6.b(1, param2.field_r);
           if (param0 != 112) {
             iw var5 = (iw) null;
             ot.a((byte) 26, -53, (iw) null);
           }
-          var6.writeByte(1, param2.field_k);
-          var6.writeInt((byte) -96, param2.field_q);
-          var6.writeInt((byte) -102, param2.field_m);
-          var6.writeInt((byte) -86, param2.field_t);
-          var6.writeInt((byte) -60, param2.field_s);
+          var6.b(1, param2.field_k);
+          var6.a((byte) -96, param2.field_q);
+          var6.a((byte) -102, param2.field_m);
+          var6.a((byte) -86, param2.field_t);
+          var6.a((byte) -60, param2.field_s);
           var6.b((byte) -39, var4);
-          var6.writeByteLengthPrefix(var6.position - var4, 5930);
+          var6.e(var6.field_q - var4, 5930);
         } catch (RuntimeException runtimeException) {
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "ot.D(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw ig.a((Throwable) ((Object) runtimeException), "ot.D(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -85,7 +85,7 @@ final class ot extends dr {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 
@@ -96,8 +96,8 @@ final class ot extends dr {
         field_F = null;
     }
 
-    final static void a(Battlefield param0, dg param1, int param2, GameplayController param3) {
-        RgbSprite discarded$1 = null;
+    final static void a(ha param0, dg param1, int param2, ic param3) {
+        wk discarded$1 = null;
         RuntimeException var4 = null;
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
@@ -108,19 +108,19 @@ final class ot extends dr {
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          NetworkResourceRequest.field_C = param3;
-          CipherPacketBuffer.currentBattlefield = param0;
-          PaletteRegionMap.field_g = new AnimationPlayer(param2);
-          PaletteRegionMap.field_g.selectSequence(-1, ck.animationSequencesByGroup[sf.unitAnimationGroups[76]][0]);
-          ResourceArchive.field_a = NetworkResourceRequest.field_C.camera;
-          discarded$1 = new RgbSprite(80, 40);
-          ef.field_c = CipherPacketBuffer.currentBattlefield.mapHeight;
-          ResourceRequest.field_y = CipherPacketBuffer.currentBattlefield.mapWidth;
-          og.field_p = ResourceArchive.field_a.field_o;
-          vs.field_e = CipherPacketBuffer.currentBattlefield.tiles;
-          bt.field_f = CipherPacketBuffer.currentBattlefield.mapTheme;
+          jf.field_C = param3;
+          bv.field_w = param0;
+          pr.field_g = new vj(param2);
+          pr.field_g.a(-1, ck.field_e[sf.field_P[76]][0]);
+          kl.field_a = jf.field_C.field_M;
+          discarded$1 = new wk(80, 40);
+          ef.field_c = bv.field_w.field_db;
+          ks.field_y = bv.field_w.field_v;
+          og.field_p = kl.field_a.field_o;
+          vs.field_e = bv.field_w.field_Eb;
+          bt.field_f = bv.field_w.field_hb;
           nk.a((byte) 111);
-          Unit.field_L = false;
+          jd.field_L = false;
           ro.field_lb = null;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -145,7 +145,7 @@ final class ot extends dr {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 

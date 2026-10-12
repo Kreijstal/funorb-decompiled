@@ -4,7 +4,7 @@
 final class lp {
     static int[] field_c;
     static int[][] field_a;
-    static IndexedSprite[] field_b;
+    static ru[] field_b;
 
     final static int a(String param0, boolean param1, boolean param2) {
         RuntimeException var3 = null;
@@ -16,13 +16,13 @@ final class lp {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param2) {
-            field_b = (IndexedSprite[]) null;
+            field_b = (ru[]) null;
           }
           if (param1) {
             stackIn_6_0 = uk.field_s.a(param0);
             return stackIn_6_0;
           }
-          stackIn_4_0 = AiPlanner.field_G.a(param0);
+          stackIn_4_0 = ej.field_G.a(param0);
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -34,7 +34,7 @@ final class lp {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -50,9 +50,9 @@ final class lp {
     final static je b(int param0) {
         if (param0 > -122) {
           field_a = (int[][]) null;
-          return TaggedMapData.field_g.field_Nb;
+          return sc.field_g.field_Nb;
         }
-        return TaggedMapData.field_g.field_Nb;
+        return sc.field_g.field_Nb;
     }
 
     static {

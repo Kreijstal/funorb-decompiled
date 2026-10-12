@@ -3,33 +3,33 @@
  */
 final class e {
     static int[] field_a;
-    static RgbSprite[] field_b;
+    static wk[] field_b;
 
     final static void a(byte param0) {
         if (param0 >= -88) {
           e.a((byte) 98);
-          BattleTutorial.field_h = false;
+          iu.field_h = false;
           if (null != qd.field_I) {
             qd.field_I.f((byte) -106);
           }
           if (0 != rs.field_t) {
             rd.b(8445);
-            TelefragEvent.field_z = 0;
+            kn.field_z = 0;
             return;
           }
-          TelefragEvent.field_z = 0;
+          kn.field_z = 0;
           return;
         }
-        BattleTutorial.field_h = false;
+        iu.field_h = false;
         if (null != qd.field_I) {
           qd.field_I.f((byte) -106);
         }
         if (0 == rs.field_t) {
-          TelefragEvent.field_z = 0;
+          kn.field_z = 0;
           return;
         }
         rd.b(8445);
-        TelefragEvent.field_z = 0;
+        kn.field_z = 0;
     }
 
     public static void b(byte param0) {
@@ -73,7 +73,7 @@ final class e {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
         }
     }
 

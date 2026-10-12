@@ -63,7 +63,7 @@ final class ob extends hs {
         int var20 = 0;
         int var14Lifetime1;
         int var15Lifetime1;
-        var20 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        var20 = ArmiesOfGielinor.field_M ? 1 : 0;
         try {
           var5_int = this.field_K[-1 + this.field_K.length];
           var6 = this.field_S[this.field_S.length - 1];
@@ -144,7 +144,7 @@ final class ob extends hs {
           } else {
             stackIn_39_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_38_0), ((StringBuilder) (Object) stackIn_38_1).append(stackIn_39_2).append(',').append(param3).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_38_0), ((StringBuilder) (Object) stackIn_38_1).append(stackIn_39_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -162,7 +162,7 @@ final class ob extends hs {
         try {
           this.field_N = this.field_N + 1;
         } catch (RuntimeException runtimeException) {
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "ob.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw ig.a((Throwable) ((Object) runtimeException), "ob.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -189,7 +189,7 @@ final class ob extends hs {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param5).append(',').append(param6).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param5).append(',').append(param6).append(')').toString());
         }
     }
 
@@ -208,7 +208,7 @@ final class ob extends hs {
         int var9 = 0;
         int var10 = 0;
         int var11 = 0;
-        var11 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        var11 = ArmiesOfGielinor.field_M ? 1 : 0;
         try {
           if (param0 >= 2 &&
             param0 <= 36) {
@@ -269,7 +269,7 @@ final class ob extends hs {
           } else {
             stackIn_42_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_41_0), ((StringBuilder) (Object) stackIn_41_1).append(stackIn_42_2).append(',').append(param3).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_41_0), ((StringBuilder) (Object) stackIn_41_1).append(stackIn_42_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -301,7 +301,7 @@ final class ob extends hs {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var5 = null;
         int[] var7 = null;
-        var6 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        var6 = ArmiesOfGielinor.field_M ? 1 : 0;
         try {
           if (super.a(param0, param1, param2, param3 ^ 0)) {
             return true;
@@ -338,7 +338,7 @@ final class ob extends hs {
           } else {
             stackIn_26_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -359,7 +359,7 @@ final class ob extends hs {
         int var6;
         kb var5;
         kb var7;
-        var6 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        var6 = ArmiesOfGielinor.field_M ? 1 : 0;
         var2 = 0;
         var3 = 0;
         while (var2 < this.field_C.length) {
@@ -391,7 +391,7 @@ final class ob extends hs {
 
     private final void b(int param0, int param1, int param2) {
         int var6 = 0;
-        int var7 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        int var7 = ArmiesOfGielinor.field_M ? 1 : 0;
         int var4 = null == this.field_S ? 0 : this.field_S.length;
         kb[] var5 = new kb[param1 * var4];
         if (null != this.field_C && this.field_C.length > 0 && var5.length > 0 &&
@@ -421,13 +421,13 @@ final class ob extends hs {
           this.a((byte) 78, var10);
           this.a(0, var9);
         } catch (RuntimeException runtimeException) {
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "ob.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ',' + param6 + ')');
+          throw ig.a((Throwable) ((Object) runtimeException), "ob.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ',' + param6 + ')');
         }
     }
 
     private final void a(boolean param0, int param1, int param2) {
         int var6 = 0;
-        int var7 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        int var7 = ArmiesOfGielinor.field_M ? 1 : 0;
         int var4 = this.field_S != null ? this.field_S.length : 0;
         int[] var5 = new int[param2 * var4];
         if (this.field_L != null && 0 < this.field_L.length && var5.length > 0 &&
@@ -449,7 +449,7 @@ final class ob extends hs {
         int var6 = 0;
         int var7 = 0;
         int dupTemp$0 = 0;
-        int var8 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        int var8 = ArmiesOfGielinor.field_M ? 1 : 0;
         try {
           var3_int = null != this.field_S ? this.field_S.length : 0;
           var4 = param1.length;
@@ -466,7 +466,7 @@ final class ob extends hs {
           this.a((byte) 65, var3_int, var4);
           this.c(var4, var3_int, 0);
         } catch (RuntimeException runtimeException) {
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "ob.J(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ig.a((Throwable) ((Object) runtimeException), "ob.J(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -485,7 +485,7 @@ final class ob extends hs {
         int var7 = 0;
         int var8 = 0;
         int dupTemp$0 = 0;
-        int var9 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        int var9 = ArmiesOfGielinor.field_M ? 1 : 0;
         try {
           int var3_int = 85 % ((-2 - param0) / 62);
           var4 = this.field_K != null ? this.field_K.length : 0;
@@ -503,7 +503,7 @@ final class ob extends hs {
           this.b(var4, var5, -20410);
           this.a(true, var4, var5);
         } catch (RuntimeException runtimeException) {
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "ob.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ig.a((Throwable) ((Object) runtimeException), "ob.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

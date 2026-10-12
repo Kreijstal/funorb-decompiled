@@ -3,12 +3,12 @@
  */
 final class gt {
     static je[] field_b;
-    static RgbSprite[] field_c;
+    static wk[] field_c;
     static String field_g;
     static int field_i;
     static String field_a;
     static int[] field_d;
-    static RgbSprite field_e;
+    static wk field_e;
     static String field_h;
     static String[] field_f;
 
@@ -24,7 +24,7 @@ final class gt {
         try {
           var2_int = -112 % ((param1 - 19) / 63);
           var3 = (CharSequence) ((Object) param0);
-          stackIn_1_0 = IntPair.field_p.equals(k.a(var3, false));
+          stackIn_1_0 = ft.field_p.equals(k.a(var3, false));
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -36,7 +36,7 @@ final class gt {
           } else {
             stackIn_5_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(param1).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -68,7 +68,7 @@ final class gt {
             }
             var5 = ng.a(var3, 15026);
             if (var5 == null) {
-              return ArchiveProvider.a(var4, (byte) 104);
+              return ew.a(var4, (byte) 104);
             }
             stackIn_14_0 = var5;
             return stackIn_14_0;
@@ -85,7 +85,7 @@ final class gt {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param1).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -103,28 +103,28 @@ final class gt {
         }
     }
 
-    final static int[] readSixUnsignedBytes(int obfuscationGuard, PacketBuffer packet) {
+    final static int[] a(int param0, vh param1) {
         int var3 = 0;
         int[] var2 = null;
         RuntimeException var2_ref = null;
         int var4 = 0;
-        PacketBuffer var5 = null;
+        vh var5 = null;
         int[] var6 = null;
         int[] stackIn_7_0 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
-        var4 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        var4 = ArmiesOfGielinor.field_M ? 1 : 0;
         try {
           var6 = new int[6];
           var2 = var6;
           for (var3 = 0; var6.length > var3; var3++) {
-            var6[var3] = packet.readUnsignedByte(obfuscationGuard + 2);
+            var6[var3] = param1.k(param0 + 2);
           }
-          if (obfuscationGuard != -2) {
-            var5 = (PacketBuffer) null;
-            gt.readSixUnsignedBytes(115, (PacketBuffer) null);
+          if (param0 != -2) {
+            var5 = (vh) null;
+            gt.a(115, (vh) null);
           }
           stackIn_7_0 = var2;
           return stackIn_7_0;
@@ -132,13 +132,13 @@ final class gt {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
           stackIn_10_0 = var2_ref;
-          stackIn_10_1 = new StringBuilder().append("gt.D(").append(obfuscationGuard).append(',');
-          if (packet == null) {
+          stackIn_10_1 = new StringBuilder().append("gt.D(").append(param0).append(',');
+          if (param1 == null) {
             stackIn_11_2 = "null";
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 

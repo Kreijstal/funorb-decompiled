@@ -7,20 +7,20 @@ final class ao extends lk {
     static String field_x;
     private ip field_v;
 
-    final static void finishTaggedPayload(int headerBitPosition, int obfuscationGuard, int headerBitLength, CipherPacketBuffer packet, int payloadBitLength) {
+    final static void a(int param0, int param1, int param2, bv param3, int param4) {
         try {
-          int var5_int = 58 / ((obfuscationGuard + 86) / 38);
-          if (headerBitLength < payloadBitLength) {
-            packet.setWriteBitPosition(headerBitPosition, (byte) 0);
-            AiInfluenceMap.writeTieredSignedInt(14, 20, payloadBitLength, 30, 1, 4, packet);
+          int var5_int = 58 / ((param1 + 86) / 38);
+          if (param2 < param4) {
+            param3.c(param0, (byte) 0);
+            ir.a(14, 20, param4, 30, 1, 4, param3);
           }
-          packet.setReadBitPosition((byte) -83, payloadBitLength + headerBitLength + headerBitPosition);
+          param3.d((byte) -83, param4 + param2 + param0);
         } catch (RuntimeException runtimeException) {
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "ao.B(" + headerBitPosition + ',' + obfuscationGuard + ',' + headerBitLength + ',' + (packet != null ? "{...}" : "null") + ',' + payloadBitLength + ')');
+          throw ig.a((Throwable) ((Object) runtimeException), "ao.B(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
         }
     }
 
-    final static String a(String param0, boolean param1, String param2, ResourceArchive param3) {
+    final static String a(String param0, boolean param1, String param2, kl param3) {
         RuntimeException var4 = null;
         String stackIn_3_0 = null;
         String stackIn_6_0 = null;
@@ -34,12 +34,12 @@ final class ao extends lk {
         String stackIn_18_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (!param3.ensureIndex((byte) 82)) {
+          if (!param3.a((byte) 82)) {
             stackIn_3_0 = (String) (param0);
             return stackIn_3_0;
           }
           if (param1) {
-            stackIn_8_0 = param2 + " - " + param3.getOverallProgress(0) + "%";
+            stackIn_8_0 = param2 + " - " + param3.a(0) + "%";
             return stackIn_8_0;
           }
           stackIn_6_0 = (String) null;
@@ -66,7 +66,7 @@ final class ao extends lk {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
         }
     }
 
@@ -91,7 +91,7 @@ final class ao extends lk {
             stackIn_3_0 = null;
           }
           var10 = (fw) (stackIn_3_0);
-          CampaignUnitOverride.a(param1 + param0.field_B, param0.field_l + (param0.field_B + param1), param0.field_p + (param4 + param0.field_w), param4 + param0.field_p, (byte) 72);
+          id.a(param1 + param0.field_B, param0.field_l + (param0.field_B + param1), param0.field_p + (param4 + param0.field_w), param4 + param0.field_p, (byte) 72);
           if (param2 >= -79) {
             return;
           }
@@ -146,11 +146,11 @@ final class ao extends lk {
           } else {
             stackIn_34_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_33_0), ((StringBuilder) (Object) stackIn_33_1).append(stackIn_34_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_33_0), ((StringBuilder) (Object) stackIn_33_1).append(stackIn_34_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
-    final void a(int param0, RgbSprite param1) {
+    final void a(int param0, wk param1) {
         int var4 = 0;
         ip[] var3 = null;
         ip var5 = null;
@@ -161,7 +161,7 @@ final class ao extends lk {
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3_ref = null;
-        var6 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        var6 = ArmiesOfGielinor.field_M ? 1 : 0;
         try {
           var7 = this.field_w;
           var3 = var7;
@@ -182,7 +182,7 @@ final class ao extends lk {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 
@@ -191,7 +191,7 @@ final class ao extends lk {
         try {
           param0.a(param1, this, 6);
         } catch (RuntimeException runtimeException) {
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "ao.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw ig.a((Throwable) ((Object) runtimeException), "ao.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -210,7 +210,7 @@ final class ao extends lk {
         var1.a(false);
     }
 
-    final void a(int param0, RgbSprite[] param1) {
+    final void a(int param0, wk[] param1) {
         ip[] var3 = null;
         int var4 = 0;
         ip var5 = null;
@@ -220,7 +220,7 @@ final class ao extends lk {
         String stackIn_12_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3_ref = null;
-        var6 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        var6 = ArmiesOfGielinor.field_M ? 1 : 0;
         try {
           var3 = this.field_w;
           var4 = 0;
@@ -245,7 +245,7 @@ final class ao extends lk {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
         }
     }
 
@@ -258,7 +258,7 @@ final class ao extends lk {
         return dupTemp$0;
     }
 
-    final void a(RgbSprite[] param0, int param1, int param2) {
+    final void a(wk[] param0, int param1, int param2) {
         int var4_int = 0;
         try {
           var4_int = param1;
@@ -266,12 +266,12 @@ final class ao extends lk {
             this.field_w[var4_int] = new ip();
           }
           if (param2 != -7) {
-            RgbSprite[] var5 = (RgbSprite[]) null;
-            this.a((RgbSprite[]) null, 15, 64);
+            wk[] var5 = (wk[]) null;
+            this.a((wk[]) null, 15, 64);
           }
           this.field_w[param1].field_d = param0;
         } catch (RuntimeException runtimeException) {
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "ao.HA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw ig.a((Throwable) ((Object) runtimeException), "ao.HA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -290,7 +290,7 @@ final class ao extends lk {
         ip var6 = null;
         int var7 = 0;
         ao var8 = null;
-        var7 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        var7 = ArmiesOfGielinor.field_M ? 1 : 0;
         try {
           if (param2 != 6) {
             var8 = (ao) null;
@@ -330,7 +330,7 @@ final class ao extends lk {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param2).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param2).append(')').toString());
         }
     }
 

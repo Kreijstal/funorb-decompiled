@@ -25,27 +25,27 @@ final class hf {
     }
 
     final static void a(int param0) {
-        ef.field_d = new String[CampaignMenuEntry.field_F];
+        ef.field_d = new String[cq.field_F];
         ef.field_d[9] = wt.field_E;
         ef.field_d[18] = sf.field_Q;
         ef.field_d[17] = qc.field_b;
         ef.field_d[19] = ih.field_X;
         ef.field_d[11] = pf.field_f;
         ef.field_d[6] = bs.field_c;
-        ef.field_d[13] = EffectPresentation.field_b;
+        ef.field_d[13] = tb.field_b;
         ef.field_d[7] = vs.field_d;
         ef.field_d[21] = dq.field_f;
-        ef.field_d[20] = MatchSetupPanel.field_d;
+        ef.field_d[20] = dm.field_d;
         ef.field_d[16] = tv.field_e;
-        ef.field_d[4] = IntrusiveNode.field_c;
-        ef.field_d[15] = AnimationSkeleton.field_r;
+        ef.field_d[4] = tc.field_c;
+        ef.field_d[15] = ig.field_r;
         if (param0 == 7670) {
           ef.field_d[5] = sa.field_f;
           return;
         }
     }
 
-    final static void a(Battlefield param0, byte param1, boolean param2) {
+    final static void a(ha param0, byte param1, boolean param2) {
         if (param0 == null ||
           param0.field_b) {
           return;
@@ -54,13 +54,13 @@ final class hf {
           if (param1 != 9) {
             field_e = (String) null;
           }
-          param0.a(true, param0.localPlayer);
+          param0.a(true, param0.field_sb);
         } catch (RuntimeException runtimeException) {
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "hf.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw ig.a((Throwable) ((Object) runtimeException), "hf.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
-    final static void a(int param0, RgbSprite[] param1, int param2) {
+    final static void a(int param0, wk[] param1, int param2) {
         int var3_int = 0;
         int var4 = 0;
         RuntimeException stackIn_7_0 = null;
@@ -68,7 +68,7 @@ final class hf {
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
-        var4 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        var4 = ArmiesOfGielinor.field_M ? 1 : 0;
         try {
           for (var3_int = param2; param1.length > var3_int; var3_int++) {
             fn.a(8678, param0, 0, param1[var3_int]);
@@ -84,7 +84,7 @@ final class hf {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param2).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param2).append(')').toString());
         }
     }
 

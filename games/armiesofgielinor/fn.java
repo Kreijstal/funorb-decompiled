@@ -27,7 +27,7 @@ class fn extends fw {
         int var2;
         int var3;
         int var4;
-        var4 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        var4 = ArmiesOfGielinor.field_M ? 1 : 0;
         if (0 == this.field_O) {
           return this.field_O;
         }
@@ -76,7 +76,7 @@ class fn extends fw {
           if (1 == this.field_q) {
             if (this.field_k instanceof pm) {
               var5 = (pm) ((Object) this.field_k);
-              var6 = var5.a((kb) (this), AiPlanningStrategy.field_d, 113, param2, ko.field_b, param1);
+              var6 = var5.a((kb) (this), sm.field_d, 113, param2, ko.field_b, param1);
               if (var6 != -1) {
                 if (this.field_P &&
                   this.field_V > var6 &&
@@ -89,7 +89,7 @@ class fn extends fw {
             this.field_U = vi.b(98);
           }
         } catch (RuntimeException runtimeException) {
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "fn.P(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw ig.a((Throwable) ((Object) runtimeException), "fn.P(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -140,7 +140,7 @@ class fn extends fw {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param2).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -150,10 +150,10 @@ class fn extends fw {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
         String var5 = null;
-        MeshData var6 = null;
+        js var6 = null;
         int var8 = 0;
         String var9 = null;
-        var8 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        var8 = ArmiesOfGielinor.field_M ? 1 : 0;
         try {
           var9 = "";
           if (43 == param1) {
@@ -177,32 +177,32 @@ class fn extends fw {
             }
           }
           if (param1 == 76) {
-            bn.field_a = new ModelMeshBase[ActionRequest.field_m[param1].length];
-            bn.field_a[0] = ActionRequest.unitModels[param1][0];
+            bn.field_a = new kk[mn.field_m[param1].length];
+            bn.field_a[0] = mn.field_k[param1][0];
           }
-          for (var4 = 1; var4 < ActionRequest.field_m[param1].length; var4++) {
-            if (null == ActionRequest.unitModels[param1][var4]) {
-              var5 = ActionRequest.field_m[param1][var4];
+          for (var4 = 1; var4 < mn.field_m[param1].length; var4++) {
+            if (null == mn.field_k[param1][var4]) {
+              var5 = mn.field_m[param1][var4];
               var6 = hs.a(var5, param2 ^ -32697, var9);
               if (var6 != null) {
                 if (th.a(var6, -17900)) {
-                  DiskCacheRequest.unitProjectionVariants[param1] = true;
+                  nh.field_D[param1] = true;
                 }
-                if (null != var6.faceRenderTypes) {
-                  for (var7 = 0; var7 < var6.faceCount; var7++) {
-                    if (var6.faceRenderTypes[var7] == 2) {
-                      var6.faceVertexA[var7] = 0;
-                      var6.faceVertexB[var7] = 0;
-                      var6.faceVertexC[var7] = 0;
+                if (null != var6.field_p) {
+                  for (var7 = 0; var7 < var6.field_O; var7++) {
+                    if (var6.field_p[var7] == 2) {
+                      var6.field_q[var7] = 0;
+                      var6.field_o[var7] = 0;
+                      var6.field_r[var7] = 0;
                     }
                   }
                 }
-                ActionRequest.unitModels[param1][var4] = var6.createModel(SummonAction.field_x, fm.field_a, ol.field_A, BattleCharacter.field_t, MeshObject.field_a);
+                mn.field_k[param1][var4] = var6.a(be.field_x, fm.field_a, ol.field_A, lf.field_t, ni.field_a);
                 if (param1 == 76) {
-                  bn.field_a[var4] = ActionRequest.unitModels[param1][var4];
+                  bn.field_a[var4] = mn.field_k[param1][var4];
                 }
-                if (0 == ((ModelMesh) (ActionRequest.unitModels[param1][var4])).vertexCount) {
-                  ActionRequest.unitModels[param1] = null;
+                if (0 == ((gd) (mn.field_k[param1][var4])).field_I) {
+                  mn.field_k[param1] = null;
                 }
               }
               continue;
@@ -213,7 +213,7 @@ class fn extends fw {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) var3), "fn.R(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw ig.a((Throwable) ((Object) var3), "fn.R(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -346,11 +346,11 @@ class fn extends fw {
           } else {
             stackIn_83_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_82_0), ((StringBuilder) (Object) stackIn_82_1).append(stackIn_83_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_82_0), ((StringBuilder) (Object) stackIn_82_1).append(stackIn_83_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
-    final static void a(int param0, int param1, int param2, RgbSprite param3) {
+    final static void a(int param0, int param1, int param2, wk param3) {
         int var8 = 0;
         int var9 = 0;
         int stackIn_6_0 = 0;
@@ -369,21 +369,21 @@ class fn extends fw {
         int var13 = 0;
         int var14 = 0;
         int var15 = 0;
-        RgbSprite var16 = null;
-        var15 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        wk var16 = null;
+        var15 = ArmiesOfGielinor.field_M ? 1 : 0;
         try {
           param3.i();
           var4_int = 0;
-          var5 = param3.pixelWidth / 2;
+          var5 = param3.field_y / 2;
           if (param0 != 8678) {
-            var16 = (RgbSprite) null;
-            fn.a(-106, -71, -114, (RgbSprite) null);
+            var16 = (wk) null;
+            fn.a(-106, -71, -114, (wk) null);
           }
-          var6 = param3.pixelHeight / 2;
+          var6 = param3.field_v / 2;
           stackIn_6_0 = (var5 >= var6) ? var6 : var5;
           var7 = stackIn_6_0;
-          for (var8 = 0; param3.pixelHeight > var8; var8++) {
-            for (var9 = 0; param3.pixelWidth > var9; var9++) {
+          for (var8 = 0; param3.field_v > var8; var8++) {
+            for (var9 = 0; param3.field_y > var9; var9++) {
               var10 = (int)Math.sqrt((double)((var9 - var5) * (var9 - var5) + (var8 - var6) * (-var6 + var8)));
               if (param2 <= var10) {
                 var10 = -(param1 * (-param2 + var10) / (-param2 + var7)) + param1;
@@ -391,7 +391,7 @@ class fn extends fw {
                 var10 = param1;
               }
               if (0 < var10) {
-                var11 = param3.pixels[var4_int];
+                var11 = param3.field_B[var4_int];
                 if (var11 == 1) {
                   var11 = 0;
                 }
@@ -407,7 +407,7 @@ class fn extends fw {
                 if (255 < var14) {
                   var14 = 255;
                 }
-                param3.pixels[var4_int] = oe.c(oe.c(var12, var13), var14);
+                param3.field_B[var4_int] = oe.c(oe.c(var12, var13), var14);
               }
               var4_int++;
             }
@@ -423,7 +423,7 @@ class fn extends fw {
           } else {
             stackIn_33_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_32_0), ((StringBuilder) (Object) stackIn_32_1).append(stackIn_33_2).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_32_0), ((StringBuilder) (Object) stackIn_32_1).append(stackIn_33_2).append(')').toString());
         }
     }
 
@@ -439,7 +439,7 @@ class fn extends fw {
           this.field_N = true;
           this.field_U = vi.b(-83);
         } catch (RuntimeException runtimeException) {
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "fn.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw ig.a((Throwable) ((Object) runtimeException), "fn.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -460,7 +460,7 @@ class fn extends fw {
         int var7;
         int var8;
         pm var9;
-        var8 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        var8 = ArmiesOfGielinor.field_M ? 1 : 0;
         if (!this.field_N) {
           this.field_r = 0;
           this.field_z = 0;
@@ -549,7 +549,7 @@ class fn extends fw {
           if (!(this.field_k instanceof pm)) {
             return false;
           }
-          var8_int = ((pm) ((Object) this.field_k)).a((kb) (this), AiPlanningStrategy.field_d, 87, param2, ko.field_b, param1);
+          var8_int = ((pm) ((Object) this.field_k)).a((kb) (this), sm.field_d, 87, param2, ko.field_b, param1);
           if (var8_int != -1) {
             stackIn_9_1 = var8_int;
           } else {
@@ -580,7 +580,7 @@ class fn extends fw {
           } else {
             stackIn_25_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param5).append(',').append(param6).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param5).append(',').append(param6).append(')').toString());
         }
     }
 
@@ -678,7 +678,7 @@ class fn extends fw {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param1).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -686,7 +686,7 @@ class fn extends fw {
         int var2;
         int var3;
         int var4;
-        var4 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        var4 = ArmiesOfGielinor.field_M ? 1 : 0;
         if (param0 > -10) {
           return -64;
         }

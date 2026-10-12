@@ -2,11 +2,11 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 class nr {
-    static IndexedSprite[] field_c;
+    static ru[] field_c;
     static d field_e;
     static int[] field_a;
     static String field_d;
-    RgbSprite[] field_b;
+    wk[] field_b;
     static String field_f;
 
     void a(byte param0, int param1, int param2, int param3, int param4) {
@@ -28,7 +28,7 @@ class nr {
         byte[] var3 = null;
         int var5 = 0;
         int var6 = 0;
-        var6 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        var6 = ArmiesOfGielinor.field_M ? 1 : 0;
         try {
           if (param1) {
             field_a = (int[]) null;
@@ -144,7 +144,7 @@ class nr {
           } else {
             stackIn_73_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_72_0), ((StringBuilder) (Object) stackIn_72_1).append(stackIn_73_2).append(',').append(param1).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_72_0), ((StringBuilder) (Object) stackIn_72_1).append(stackIn_73_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -162,11 +162,11 @@ class nr {
         field_f = null;
     }
 
-    nr(RgbSprite[] param0) {
+    nr(wk[] param0) {
         try {
           this.field_b = param0;
         } catch (RuntimeException runtimeException) {
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "nr.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw ig.a((Throwable) ((Object) runtimeException), "nr.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

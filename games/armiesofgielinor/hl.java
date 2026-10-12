@@ -16,20 +16,20 @@ final class hl extends je {
         super(0L, (je) null);
     }
 
-    final static RgbSprite a(boolean param0, int param1, int param2) {
-        int var5 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
-        RgbSprite var3 = new RgbSprite(param2, param2);
+    final static wk a(boolean param0, int param1, int param2) {
+        int var5 = ArmiesOfGielinor.field_M ? 1 : 0;
+        wk var3 = new wk(param2, param2);
         int var4 = 0;
         if (!param0) {
-          while (var3.pixels.length > var4) {
-            var3.pixels[var4] = param1;
+          while (var3.field_B.length > var4) {
+            var3.field_B[var4] = param1;
             var4++;
           }
           return var3;
         }
         field_Lb = (String) null;
-        while (var3.pixels.length > var4) {
-          var3.pixels[var4] = param1;
+        while (var3.field_B.length > var4) {
+          var3.field_B[var4] = param1;
           var4++;
         }
         return var3;

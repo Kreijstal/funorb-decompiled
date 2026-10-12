@@ -18,10 +18,10 @@ final class na extends tj implements mf, he {
         super(0, 0, 496, 0, (kh) null);
         this.field_P = new ma("", (qo) null, 12);
         lk var1 = new lk(gl.field_e, 0, 0, 0, 0, 16777215, -1, 3, 0, ArmiesOfGielinor.field_J.field_H, -1, 2147483647, true);
-        kb var2 = new kb(BattleTutorial.field_u, var1, (qo) null);
+        kb var2 = new kb(iu.field_u, var1, (qo) null);
         this.field_O = new fw(ul.field_f, (qo) null);
         this.field_L = new fw(ac.field_s, (qo) null);
-        this.field_P.field_s = DualLinkedNode.field_m;
+        this.field_P.field_s = ms.field_m;
         this.field_P.a((byte) 16, new uj(this.field_P));
         this.field_O.field_I = false;
         this.field_O.field_k = (kh) ((Object) new nu());
@@ -75,7 +75,7 @@ final class na extends tj implements mf, he {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 
@@ -96,7 +96,7 @@ final class na extends tj implements mf, he {
           }
           this.field_O.field_I = this.a(-29967);
         } catch (RuntimeException runtimeException) {
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "na.P(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw ig.a((Throwable) ((Object) runtimeException), "na.P(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -130,7 +130,7 @@ final class na extends tj implements mf, he {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
         }
     }
 
@@ -151,7 +151,7 @@ final class na extends tj implements mf, he {
         if (!this.a(-29967)) {
           return;
         }
-        TelepopEvent.a(param0, this.field_P.field_v);
+        q.a(param0, this.field_P.field_v);
     }
 
     final static void c(int param0, int param1, int param2, int param3, int param4) {
@@ -177,84 +177,84 @@ final class na extends tj implements mf, he {
         int var12Lifetime2;
         int var12Lifetime3;
         int var13Lifetime1;
-        var14 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        var14 = ArmiesOfGielinor.field_M ? 1 : 0;
         try {
           var5_int = param1 + param0;
           var6 = param3 + param4;
-          if (param1 > SoftwareRaster.clipLeft) {
+          if (param1 > qn.field_j) {
             stackIn_4_0 = param1;
           } else {
-            stackIn_4_0 = SoftwareRaster.clipLeft;
+            stackIn_4_0 = qn.field_j;
           }
           var7 = stackIn_4_0;
-          if (SoftwareRaster.clipTop < param4) {
+          if (qn.field_a < param4) {
             stackIn_7_0 = param4;
           } else {
-            stackIn_7_0 = SoftwareRaster.clipTop;
+            stackIn_7_0 = qn.field_a;
           }
           var8 = stackIn_7_0;
-          if (var5_int >= SoftwareRaster.clipRight) {
-            stackIn_10_0 = SoftwareRaster.clipRight;
+          if (var5_int >= qn.field_e) {
+            stackIn_10_0 = qn.field_e;
           } else {
             stackIn_10_0 = var5_int;
           }
           var9 = stackIn_10_0;
-          if (var6 >= SoftwareRaster.clipBottom) {
-            stackIn_13_0 = SoftwareRaster.clipBottom;
+          if (var6 >= qn.field_f) {
+            stackIn_13_0 = qn.field_f;
           } else {
             stackIn_13_0 = var6;
           }
           var10 = stackIn_13_0;
-          if (param1 >= SoftwareRaster.clipLeft &&
-            param1 < SoftwareRaster.clipRight) {
-            var11 = var8 * SoftwareRaster.width + param1;
+          if (param1 >= qn.field_j &&
+            param1 < qn.field_e) {
+            var11 = var8 * qn.field_l + param1;
             var12 = 1 + var10 - var8 >> 1;
             while (true) {
               var12--;
               if (var12 < 0) {
                 break;
               }
-              SoftwareRaster.pixels[var11] = 16777215;
-              var11 = var11 + 2 * SoftwareRaster.width;
+              qn.field_d[var11] = 16777215;
+              var11 = var11 + 2 * qn.field_l;
             }
           }
-          if (SoftwareRaster.clipTop <= param4 &&
-            SoftwareRaster.clipBottom > var6) {
-            var11Lifetime1 = SoftwareRaster.width * param4 + var7;
+          if (qn.field_a <= param4 &&
+            qn.field_f > var6) {
+            var11Lifetime1 = qn.field_l * param4 + var7;
             var12Lifetime1 = -var7 + var9 + 1 >> 1;
             while (true) {
               var12Lifetime1--;
               if (var12Lifetime1 < 0) {
                 break;
               }
-              SoftwareRaster.pixels[var11Lifetime1] = 16777215;
+              qn.field_d[var11Lifetime1] = 16777215;
               var11Lifetime1 += 2;
             }
           }
           var11Lifetime2 = 72 / ((param2 - 79) / 37);
-          if (SoftwareRaster.clipLeft <= var5_int &&
-            SoftwareRaster.clipRight > var5_int) {
-            var12Lifetime2 = var5_int + SoftwareRaster.width * ((1 & var5_int - param1) + var8);
+          if (qn.field_j <= var5_int &&
+            qn.field_e > var5_int) {
+            var12Lifetime2 = var5_int + qn.field_l * ((1 & var5_int - param1) + var8);
             var13 = 1 + var10 - var8 >> 1;
             while (true) {
               var13--;
               if (var13 < 0) {
                 break;
               }
-              SoftwareRaster.pixels[var12Lifetime2] = 16777215;
-              var12Lifetime2 = var12Lifetime2 + 2 * SoftwareRaster.width;
+              qn.field_d[var12Lifetime2] = 16777215;
+              var12Lifetime2 = var12Lifetime2 + 2 * qn.field_l;
             }
           }
-          if (SoftwareRaster.clipTop <= param4 &&
-            var6 < SoftwareRaster.clipBottom) {
-            var12Lifetime3 = var7 + (SoftwareRaster.width * var6 + (-param4 + var6 & 1));
+          if (qn.field_a <= param4 &&
+            var6 < qn.field_f) {
+            var12Lifetime3 = var7 + (qn.field_l * var6 + (-param4 + var6 & 1));
             var13Lifetime1 = 1 + var9 - var7 >> 1;
             while (true) {
               var13Lifetime1--;
               if (0 > var13Lifetime1) {
                 return;
               }
-              SoftwareRaster.pixels[var12Lifetime3] = 16777215;
+              qn.field_d[var12Lifetime3] = 16777215;
               var12Lifetime3 += 2;
             }
           }
@@ -262,7 +262,7 @@ final class na extends tj implements mf, he {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) var5), "na.D(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw ig.a((Throwable) ((Object) var5), "na.D(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -314,7 +314,7 @@ final class na extends tj implements mf, he {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param6).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param6).append(')').toString());
         }
     }
 
@@ -339,7 +339,7 @@ final class na extends tj implements mf, he {
         int var7 = 0;
         StringBuilder var8 = null;
         int var5Lifetime1;
-        var6 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        var6 = ArmiesOfGielinor.field_M ? 1 : 0;
         try {
           var5 = 5 / ((-46 - param1) / 37);
           for (var4_int = 0; param0.length > var4_int; var4_int++) {
@@ -353,9 +353,9 @@ final class na extends tj implements mf, he {
           var5Lifetime1 = var7;
           while (param2.length > var7) {
             if (!param2[var7].field_e) {
-              discarded$1 = var8.append(SummonRequest.a(640, param2[var7].field_c.getClass()));
+              discarded$1 = var8.append(hw.a(640, param2[var7].field_c.getClass()));
             } else {
-              discarded$2 = var8.append(CampaignMenuEntry.getBoxedPrimitiveType(param2[var7].field_c, (byte) -75).toString());
+              discarded$2 = var8.append(cq.a(param2[var7].field_c, (byte) -75).toString());
             }
             if (var7 < param2.length - 1) {
               discarded$3 = var8.append(',');
@@ -386,7 +386,7 @@ final class na extends tj implements mf, he {
           } else {
             stackIn_28_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(')').toString());
         }
     }
 
@@ -436,29 +436,29 @@ final class na extends tj implements mf, he {
           } else {
             stackIn_6_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(')').toString());
         }
     }
 
-    final static CampaignMission a(CipherPacketBuffer param0, int param1) {
+    final static om a(bv param0, int param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
-        CampaignMission var3 = null;
-        CampaignMission stackIn_2_0 = null;
-        CampaignMission stackIn_4_0 = null;
+        om var3 = null;
+        om stackIn_2_0 = null;
+        om stackIn_4_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 < 3) {
-            stackIn_2_0 = (CampaignMission) null;
+            stackIn_2_0 = (om) null;
             return stackIn_2_0;
           }
-          var2_int = param0.readInt(1);
-          param0.beginBitReading(117);
+          var2_int = param0.i(1);
+          param0.o(117);
           var3 = pf.a(var2_int, (byte) 6, param0);
-          param0.endBitReading(-2);
+          param0.n(-2);
           stackIn_4_0 = var3;
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -471,7 +471,7 @@ final class na extends tj implements mf, he {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -516,7 +516,7 @@ final class na extends tj implements mf, he {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
         }
     }
 
@@ -554,7 +554,7 @@ final class na extends tj implements mf, he {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 

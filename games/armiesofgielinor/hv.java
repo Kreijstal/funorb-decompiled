@@ -3,7 +3,7 @@
  */
 class hv extends fw {
     static int[] field_R;
-    private NodeDeque field_P;
+    private at field_P;
     private String[] field_Q;
     static String field_O;
     private ct field_M;
@@ -39,8 +39,8 @@ class hv extends fw {
         ct var15;
         int var16;
         int var7Lifetime1;
-        var16 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
-        this.field_P = new NodeDeque();
+        var16 = ArmiesOfGielinor.field_M ? 1 : 0;
+        this.field_P = new at();
         var2 = 0;
         var3 = (pm) ((Object) this.field_k);
         var4 = var3.a(-77, (kb) (this));
@@ -81,7 +81,7 @@ class hv extends fw {
             if (var10 != null) {
               ((ct) (var10)).field_k = var15;
             }
-            this.field_P.addLast((byte) -119, (IntrusiveNode) (var15));
+            this.field_P.a((byte) -119, (tc) (var15));
             var10 = var15;
           }
         }
@@ -110,14 +110,14 @@ class hv extends fw {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
     private final ct a(int param0, byte param1, int param2) {
         ct var5 = null;
-        int var6 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
-        ct var4 = (ct) (this.field_P.first((byte) 107));
+        int var6 = ArmiesOfGielinor.field_M ? 1 : 0;
+        ct var4 = (ct) (this.field_P.e((byte) 107));
         while (var4 != null) {
           var5 = var4;
           while (var5 != null) {
@@ -128,7 +128,7 @@ class hv extends fw {
             }
             var5 = var5.field_k;
           }
-          var4 = (ct) (this.field_P.next((byte) 123));
+          var4 = (ct) (this.field_P.a((byte) 123));
         }
         if (param1 == -61) {
           return null;
@@ -145,12 +145,12 @@ class hv extends fw {
           super.a(param0, param1, param2, param3);
           this.field_M = null;
           if (this.field_t) {
-            var5_int = -param1 + (AiPlanningStrategy.field_d - this.field_B);
+            var5_int = -param1 + (sm.field_d - this.field_B);
             var6 = -param2 + ko.field_b - this.field_p;
             this.field_M = this.a(var6, (byte) -61, var5_int);
           }
         } catch (RuntimeException runtimeException) {
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "hv.P(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw ig.a((Throwable) ((Object) runtimeException), "hv.P(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -160,7 +160,7 @@ class hv extends fw {
         try {
           this.field_k = param1;
         } catch (RuntimeException runtimeException) {
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "hv.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ig.a((Throwable) ((Object) runtimeException), "hv.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -209,7 +209,7 @@ class hv extends fw {
         StringBuilder stackIn_15_1 = null;
         String stackIn_16_2 = null;
         RuntimeException decompiledCaughtException = null;
-        var6 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        var6 = ArmiesOfGielinor.field_M ? 1 : 0;
         try {
           if (null == this.field_Q ||
             this.field_Q.length <= param2) {
@@ -239,14 +239,14 @@ class hv extends fw {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
     final void a(int param0, int param1, int param2, int param3) {
         this.a(param2, param0, param3, 8192, ((pm) ((Object) this.field_k)).a((kb) (this), -2));
         if (param1 != 9567) {
-          this.field_P = (NodeDeque) null;
+          this.field_P = (at) null;
         }
     }
 

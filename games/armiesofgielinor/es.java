@@ -5,7 +5,7 @@ import java.io.*;
 
 final class es {
     static String[][][] field_c;
-    static IndexedSprite[] field_d;
+    static ru[] field_d;
     int field_a;
     static String field_b;
     private og[] field_e;
@@ -33,32 +33,32 @@ final class es {
           int var2_int = 0;
           Throwable decompiledCaughtException = null;
           IOException var2 = null;
-          if (ByteStorage.field_e.position >= param1) {
+          if (mg.field_e.field_q >= param1) {
             return true;
           }
           if (param0 >= -63) {
             return true;
           }
-          if (null == MoveAttackRequest.field_z) {
+          if (null == am.field_z) {
             return false;
           }
           try {
-            var2_int = MoveAttackRequest.field_z.available((byte) 43);
+            var2_int = am.field_z.d((byte) 43);
             if (var2_int > 0) {
-              if (param1 - ByteStorage.field_e.position < var2_int) {
-                var2_int = -ByteStorage.field_e.position + param1;
+              if (param1 - mg.field_e.field_q < var2_int) {
+                var2_int = -mg.field_e.field_q + param1;
               }
-              MoveAttackRequest.field_z.readFully(0, ByteStorage.field_e.position, var2_int, ByteStorage.field_e.payload);
-              CampaignMenuButton.field_h = vi.b(46);
-              ByteStorage.field_e.position = ByteStorage.field_e.position + var2_int;
-              if (ByteStorage.field_e.position < param1) {
+              am.field_z.a(0, mg.field_e.field_q, var2_int, mg.field_e.field_o);
+              iq.field_h = vi.b(46);
+              mg.field_e.field_q = mg.field_e.field_q + var2_int;
+              if (mg.field_e.field_q < param1) {
                 return false;
               }
-              ByteStorage.field_e.position = 0;
+              mg.field_e.field_q = 0;
               return true;
             }
             if (0 <= var2_int &&
-              TileMetadata.b(0) <= 30000L) {
+              ca.b(0) <= 30000L) {
               return false;
             }
             dj.a((byte) -127);
@@ -77,7 +77,7 @@ final class es {
 
     final boolean a(int param0) {
         if (param0 <= 109) {
-          field_d = (IndexedSprite[]) null;
+          field_d = (ru[]) null;
         }
         return this.field_a >= this.field_e.length ? true : false;
     }
@@ -109,7 +109,7 @@ final class es {
         int[] var18 = null;
         int var11Lifetime1;
         int var14_intLifetime1;
-        var16 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        var16 = ArmiesOfGielinor.field_M ? 1 : 0;
         try {
           var8_int = -49 % ((2 - param6) / 56);
           if (param3 >= param1) {
@@ -128,11 +128,11 @@ final class es {
               var11_ref_int__ = var17;
               var12 = 0;
               var13 = 0;
-              scanLoop1: while (true) {
+              L19: while (true) {
                 if (var13 >= var18.length) {
                   if (var12 == 0 &&
                     param3 != tq.field_b) {
-                    break scanLoop1;
+                    break L19;
                   }
                   var9_int = 0;
                   for (var13 = 0; var18.length > var13; var13 += 2) {
@@ -145,7 +145,7 @@ final class es {
                       }
                     }
                   }
-                  break scanLoop1;
+                  break L19;
                 }
                 var14_intLifetime1 = var18[var13];
                 var15 = var11_ref_int__[var13 + 1];
@@ -155,15 +155,15 @@ final class es {
                     var12 = 1;
                   } else {
                     if (param3 <= var14_intLifetime1) {
-                      break scanLoop1;
+                      break L19;
                     }
-                    if (var15 != (255 & TeleportAction.field_B[var14_intLifetime1])) {
-                      break scanLoop1;
+                    if (var15 != (255 & ur.field_B[var14_intLifetime1])) {
+                      break L19;
                     }
                   }
                 } else {
                   if (var15 != lm.field_e[param7]) {
-                    break scanLoop1;
+                    break L19;
                   }
                 }
                 var13 += 2;
@@ -194,7 +194,7 @@ final class es {
             } else {
               var11 = 0;
               while (!(var11 >= lm.field_e.length)) {
-                if ((CoatOfArms.field_d[var11 / 8] & 1 << (var11 & 7)) == 0) {
+                if ((ln.field_d[var11 / 8] & 1 << (var11 & 7)) == 0) {
                   var11++;
                   continue;
                 }
@@ -215,7 +215,7 @@ final class es {
               if (var11Lifetime1 == 0) {
                 for (var12 = 0; var12 < var9.length - 1; var12++) {
                   if (-1 != param3) {
-                    TeleportAction.field_B[param3] = (byte)var12;
+                    ur.field_B[param3] = (byte)var12;
                   } else {
                     param7 = var12;
                   }
@@ -231,7 +231,7 @@ final class es {
             if (param3 == -1) {
               param7 = var12;
             } else {
-              TeleportAction.field_B[param3] = (byte)var12;
+              ur.field_B[param3] = (byte)var12;
             }
             if (param3 == -1 &&
               lm.field_e.length == 1) {
@@ -277,11 +277,11 @@ final class es {
           } else {
             stackIn_96_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_95_0), ((StringBuilder) (Object) stackIn_95_1).append(stackIn_96_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_95_0), ((StringBuilder) (Object) stackIn_95_1).append(stackIn_96_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(')').toString());
         }
     }
 
-    es(NodeDeque param0) {
+    es(at param0) {
         int incrementValue$2 = 0;
         int var2_int = 0;
         og var3 = null;
@@ -294,13 +294,13 @@ final class es {
         try {
           this.field_e = new og[param0.b(false)];
           var2_int = 0;
-          var3 = (og) (param0.first((byte) 105));
+          var3 = (og) (param0.e((byte) 105));
           while (var3 != null) {
-            var3.unlink(121);
+            var3.d(121);
             incrementValue$2 = var2_int;
             var2_int++;
             this.field_e[incrementValue$2] = var3;
-            var3 = (og) (param0.next((byte) 123));
+            var3 = (og) (param0.a((byte) 123));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -313,7 +313,7 @@ final class es {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 

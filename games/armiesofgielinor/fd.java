@@ -1,12 +1,12 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class fd extends IntrusiveNode {
+final class fd extends tc {
     int field_k;
-    static ResourceArchive field_m;
+    static kl field_m;
     static String field_o;
     static String field_l;
-    AnimationFrameSet field_p;
+    wp field_p;
     static String[][] field_n;
 
     final static int a(boolean param0, int param1) {
@@ -39,7 +39,7 @@ final class fd extends IntrusiveNode {
         field_l = null;
     }
 
-    fd(ResourceArchive param0, ResourceArchive param1, int param2) {
+    fd(kl param0, kl param1, int param2) {
         RuntimeException var4 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
@@ -49,9 +49,9 @@ final class fd extends IntrusiveNode {
         RuntimeException decompiledCaughtException = null;
         try {
           this.field_k = param2;
-          this.field_p = new AnimationFrameSet(param2);
+          this.field_p = new wp(param2);
           tl.a((byte) -121, param1, param0);
-          while (!this.field_p.ensureFramesAvailable((byte) -65)) {
+          while (!this.field_p.f((byte) -65)) {
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -70,7 +70,7 @@ final class fd extends IntrusiveNode {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param2).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param2).append(')').toString());
         }
     }
 

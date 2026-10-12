@@ -4,7 +4,7 @@
 final class ol extends lu {
     static int field_B;
     static int field_A;
-    static RgbSprite field_y;
+    static wk field_y;
     static og[] field_w;
     static volatile boolean field_z;
     static String field_x;
@@ -33,7 +33,7 @@ final class ol extends lu {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
@@ -53,7 +53,7 @@ final class ol extends lu {
         field_w = null;
     }
 
-    private ol(BitmapFont param0, int param1) {
+    private ol(ka param0, int param1) {
         super(param0, param1);
     }
 

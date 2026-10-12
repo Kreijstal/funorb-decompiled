@@ -21,17 +21,17 @@ final class vi {
           np.field_Qb = new df(param0, param2, false, true, true);
           lt.field_g.a(np.field_Qb, (byte) -77);
         } catch (RuntimeException runtimeException) {
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "vi.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw ig.a((Throwable) ((Object) runtimeException), "vi.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
     final static void a(int param0) {
         int var1 = mj.field_c * mj.field_c;
-        int var2 = -(TurnTimerDial.field_d * TurnTimerDial.field_d) + var1;
-        int var3 = sh.field_l + var2 * (-sh.field_l + EquipmentBattleTutorial.field_y) / var1;
+        int var2 = -(sj.field_d * sj.field_d) + var1;
+        int var3 = sh.field_l + var2 * (-sh.field_l + gb.field_y) / var1;
         if (param0 < -53) {
-          CombatEvent.field_I.a(120, -20500, 640, var3, va.field_u);
-          PlayerProfile.a(-1, mi.field_l, 0, io.field_n, 5, EquipmentBattleTutorial.field_y - 24, 640);
+          ag.field_I.a(120, -20500, 640, var3, va.field_u);
+          hm.a(-1, mi.field_l, 0, io.field_n, 5, gb.field_y - 24, 640);
           return;
         }
     }
@@ -50,10 +50,10 @@ final class vi {
         long var1 = System.currentTimeMillis();
         int var3 = -1 / ((-3 - param0) / 38);
         if (!(var1 >= h.field_a)) {
-          IndexedSpriteBase.field_c = IndexedSpriteBase.field_c + (-var1 + h.field_a);
+          si.field_c = si.field_c + (-var1 + h.field_a);
         }
         h.field_a = var1;
-        return IndexedSpriteBase.field_c + var1;
+        return si.field_c + var1;
     }
 
     static {

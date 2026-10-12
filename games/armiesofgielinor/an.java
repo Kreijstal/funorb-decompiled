@@ -11,7 +11,7 @@ final class an extends dr {
         if (param0 <= 84) {
           return false;
         }
-        return ArchiveIndex.field_g;
+        return jm.field_g;
     }
 
     an(String param0, Class[] param1, String param2) {
@@ -20,18 +20,18 @@ final class an extends dr {
 
     final static void h(int param0) {
         int var2 = 0;
-        int var1 = SummonRequest.a(true);
+        int var1 = hw.a(true);
         int var2Lifetime1;
         if (param0 == 1976460609) {
           var2 = so.a(param0 - 1976435396);
-          sg.field_c.a((byte) -111, var2 + (ov.field_b << 1), co.field_f - b.field_k, var1 + (b.field_k << 1), -ov.field_b + InstructionsPanel.field_r);
-          SpellCastEvent.h(15);
+          sg.field_c.a((byte) -111, var2 + (ov.field_b << 1), co.field_f - b.field_k, var1 + (b.field_k << 1), -ov.field_b + rk.field_r);
+          pj.h(15);
           return;
         }
         an.g(37);
         var2Lifetime1 = so.a(param0 - 1976435396);
-        sg.field_c.a((byte) -111, var2Lifetime1 + (ov.field_b << 1), co.field_f - b.field_k, var1 + (b.field_k << 1), -ov.field_b + InstructionsPanel.field_r);
-        SpellCastEvent.h(15);
+        sg.field_c.a((byte) -111, var2Lifetime1 + (ov.field_b << 1), co.field_f - b.field_k, var1 + (b.field_k << 1), -ov.field_b + rk.field_r);
+        pj.h(15);
     }
 
     final nd a(int param0, nd[] param1) {
@@ -59,7 +59,7 @@ final class an extends dr {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 

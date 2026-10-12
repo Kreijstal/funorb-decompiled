@@ -2,10 +2,10 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class od {
-    static RgbSprite[] field_a;
+    static wk[] field_a;
     static String field_h;
     static String field_e;
-    static RgbSprite[] field_d;
+    static wk[] field_d;
     static String field_f;
     static int field_b;
     static String field_g;
@@ -41,25 +41,25 @@ final class od {
           return var2_ref_byte__Lifetime1;
         }
         if (param0 == 30000 &&
-          GameEvent.field_v > 0) {
-          fieldTemp$3 = GameEvent.field_v - 1;
-          GameEvent.field_v = GameEvent.field_v - 1;
+          oj.field_v > 0) {
+          fieldTemp$3 = oj.field_v - 1;
+          oj.field_v = oj.field_v - 1;
           var2_ref_byte__Lifetime2 = dh.field_j[fieldTemp$3];
-          dh.field_j[GameEvent.field_v] = null;
+          dh.field_j[oj.field_v] = null;
           return var2_ref_byte__Lifetime2;
         }
         if (param1 != 50) {
           return (byte[]) null;
         }
-        if (PacketBuffer.field_k != null) {
-          for (var2 = 0; var2 < NodeDeque.field_b.length; var2++) {
-            if (NodeDeque.field_b[var2] == param0 &&
-              TileMetadata.field_a[var2] > 0) {
-              dupTemp$4 = TileMetadata.field_a[var2] - 1;
-              arrayValue$5 = PacketBuffer.field_k[var2];
-              TileMetadata.field_a[var2] = dupTemp$4;
+        if (vh.field_k != null) {
+          for (var2 = 0; var2 < at.field_b.length; var2++) {
+            if (at.field_b[var2] == param0 &&
+              ca.field_a[var2] > 0) {
+              dupTemp$4 = ca.field_a[var2] - 1;
+              arrayValue$5 = vh.field_k[var2];
+              ca.field_a[var2] = dupTemp$4;
               var3 = arrayValue$5[dupTemp$4];
-              PacketBuffer.field_k[var2][TileMetadata.field_a[var2]] = null;
+              vh.field_k[var2][ca.field_a[var2]] = null;
               return var3;
             }
           }
@@ -106,7 +106,7 @@ final class od {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 
@@ -137,7 +137,7 @@ final class od {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         int var3 = 0;
-        var3 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        var3 = ArmiesOfGielinor.field_M ? 1 : 0;
         try {
           if (param1.length == 100 &&
             af.field_b < 1000) {
@@ -155,19 +155,19 @@ final class od {
             return;
           }
           if (~param1.length == param0 &&
-            GameEvent.field_v < 50) {
-            fieldTemp$3 = GameEvent.field_v;
-            GameEvent.field_v = GameEvent.field_v + 1;
+            oj.field_v < 50) {
+            fieldTemp$3 = oj.field_v;
+            oj.field_v = oj.field_v + 1;
             dh.field_j[fieldTemp$3] = param1;
             return;
           }
-          if (PacketBuffer.field_k != null) {
-            for (var2_int = 0; NodeDeque.field_b.length > var2_int; var2_int++) {
-              if (NodeDeque.field_b[var2_int] == param1.length &&
-                PacketBuffer.field_k[var2_int].length > TileMetadata.field_a[var2_int]) {
-                dupTemp$4 = TileMetadata.field_a[var2_int];
-                arrayValue$5 = PacketBuffer.field_k[var2_int];
-                TileMetadata.field_a[var2_int] = dupTemp$4 + 1;
+          if (vh.field_k != null) {
+            for (var2_int = 0; at.field_b.length > var2_int; var2_int++) {
+              if (at.field_b[var2_int] == param1.length &&
+                vh.field_k[var2_int].length > ca.field_a[var2_int]) {
+                dupTemp$4 = ca.field_a[var2_int];
+                arrayValue$5 = vh.field_k[var2_int];
+                ca.field_a[var2_int] = dupTemp$4 + 1;
                 arrayValue$5[dupTemp$4] = param1;
                 return;
               }
@@ -185,7 +185,7 @@ final class od {
           } else {
             stackIn_27_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(')').toString());
         }
     }
 

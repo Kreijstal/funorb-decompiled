@@ -80,7 +80,7 @@ final class lc {
         return 1.0f - (float)Math.pow(10.0, (double)(-var4 / 20.0f));
     }
 
-    final void a(PacketBuffer param0, gr param1) {
+    final void a(vh param0, gr param1) {
         int var3;
         int var4;
         int var5;
@@ -89,17 +89,17 @@ final class lc {
         int[] var11;
         int var5Lifetime1;
         int var6Lifetime1;
-        var3 = param0.readUnsignedByte(0);
+        var3 = param0.k(0);
         this.field_d[0] = var3 >> 4;
         this.field_d[1] = var3 & 15;
         if (var3 != 0) {
-          this.field_h[0] = param0.readUnsignedShort((byte) -104);
-          this.field_h[1] = param0.readUnsignedShort((byte) -104);
-          var4 = param0.readUnsignedByte(0);
+          this.field_h[0] = param0.e((byte) -104);
+          this.field_h[1] = param0.e((byte) -104);
+          var4 = param0.k(0);
           for (var5 = 0; var5 < 2; var5++) {
             for (var6 = 0; var6 < this.field_d[var5]; var6++) {
-              this.field_b[var5][0][var6] = param0.readUnsignedShort((byte) -104);
-              this.field_c[var5][0][var6] = param0.readUnsignedShort((byte) -104);
+              this.field_b[var5][0][var6] = param0.e((byte) -104);
+              this.field_c[var5][0][var6] = param0.e((byte) -104);
             }
           }
           for (var5Lifetime1 = 0; var5Lifetime1 < 2; var5Lifetime1++) {
@@ -110,8 +110,8 @@ final class lc {
                 this.field_b[var5Lifetime1][1][var7] = this.field_b[var5Lifetime1][0][var7];
                 this.field_c[var5Lifetime1][1][var7] = this.field_c[var5Lifetime1][0][var7];
               } else {
-                this.field_b[var5Lifetime1][1][var7] = param0.readUnsignedShort((byte) -104);
-                this.field_c[var5Lifetime1][1][var7] = param0.readUnsignedShort((byte) -104);
+                this.field_b[var5Lifetime1][1][var7] = param0.e((byte) -104);
+                this.field_c[var5Lifetime1][1][var7] = param0.e((byte) -104);
               }
               var7++;
             }

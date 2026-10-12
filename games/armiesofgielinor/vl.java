@@ -5,12 +5,12 @@ final class vl extends mk {
     static wd field_k;
     static int field_j;
     static String field_o;
-    static CipherPacketBuffer outgoingPacket;
+    static bv field_n;
     static String field_l;
     static String field_p;
-    static String[] battleHintMessages;
+    static String[] field_m;
 
-    final static String a(ResourceArchive param0, int param1, String param2, String param3, String param4) {
+    final static String a(kl param0, int param1, String param2, String param3, String param4) {
         RuntimeException var5 = null;
         String stackIn_2_0 = null;
         String stackIn_6_0 = null;
@@ -30,11 +30,11 @@ final class vl extends mk {
             stackIn_2_0 = (String) null;
             return stackIn_2_0;
           }
-          if (!param0.ensureIndex((byte) 82)) {
+          if (!param0.a((byte) 82)) {
             stackIn_6_0 = (String) (param4);
             return stackIn_6_0;
           }
-          stackIn_8_0 = param2 + " - " + param0.getGroupProgressByName(param3, (byte) 87) + "%";
+          stackIn_8_0 = param2 + " - " + param0.a(param3, (byte) 87) + "%";
           return stackIn_8_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -64,7 +64,7 @@ final class vl extends mk {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
         }
     }
 
@@ -100,7 +100,7 @@ final class vl extends mk {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 
@@ -108,8 +108,8 @@ final class vl extends mk {
         if (!param0) {
           return;
         }
-        outgoingPacket = null;
-        battleHintMessages = null;
+        field_n = null;
+        field_m = null;
         field_p = null;
         field_o = null;
         field_l = null;
@@ -122,7 +122,7 @@ final class vl extends mk {
 
     final static void c(byte param0) {
         if (param0 == 91) {
-          ro.field_vb = c.field_d + " <b>" + DualNodeDeque.field_e + "</b> " + od.field_e + " <b>" + WeightedScoreStrategy.field_m + "</b> " + ts.field_f + "<br>" + "<br>" + ls.field_d;
+          ro.field_vb = c.field_d + " <b>" + ui.field_e + "</b> " + od.field_e + " <b>" + ge.field_m + "</b> " + ts.field_f + "<br>" + "<br>" + ls.field_d;
           return;
         }
     }
@@ -140,7 +140,7 @@ final class vl extends mk {
             vl.c((byte) -118);
           }
           if (this.a(-3137, param1) != rn.field_e) {
-            stackIn_6_0 = CampaignRewardPreview.field_a;
+            stackIn_6_0 = fu.field_a;
             return stackIn_6_0;
           }
           stackIn_4_0 = ArmiesOfGielinor.field_H;
@@ -155,7 +155,7 @@ final class vl extends mk {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 

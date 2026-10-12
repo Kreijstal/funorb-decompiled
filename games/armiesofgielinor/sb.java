@@ -6,16 +6,16 @@ final class sb extends rb implements fb, rp {
     static int[] field_g;
     static je field_i;
     static String field_f;
-    static PacketBuffer field_h;
+    static vh field_h;
     static int field_d;
-    static ResourceArchive field_e;
+    static kl field_e;
 
     public final void b(fn param0, int param1) {
         try {
           int var3_int = -12 / ((-80 - param1) / 33);
           this.a(127);
         } catch (RuntimeException runtimeException) {
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "sb.FA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw ig.a((Throwable) ((Object) runtimeException), "sb.FA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -26,7 +26,7 @@ final class sb extends rb implements fb, rp {
         try {
           this.a(125);
         } catch (RuntimeException runtimeException) {
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "sb.N(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ig.a((Throwable) ((Object) runtimeException), "sb.N(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -61,7 +61,7 @@ final class sb extends rb implements fb, rp {
             this.c(-41);
           }
           var4 = this.field_j.a((byte) -77);
-          var5 = ActionSpell.b(true);
+          var5 = ra.b(true);
           if (var4 >= 1890 &&
             var4 <= var5 - 3) {
             if (dt.a(var4, -24375, var3, var2_int)) {
@@ -69,14 +69,14 @@ final class sb extends rb implements fb, rp {
               return (String) (stackIn_9_0);
             }
           } else {
-            stackIn_6_0 = fo.a(4800, CampaignMenu.field_r, new String[]{"1890", Integer.toString(-3 + var5)});
+            stackIn_6_0 = fo.a(4800, cv.field_r, new String[]{"1890", Integer.toString(-3 + var5)});
             return stackIn_6_0;
           }
         } catch (java.lang.NumberFormatException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = (NumberFormatException) (Object) decompiledCaughtException;
         }
-        return StateChangeEvent.field_z;
+        return qq.field_z;
     }
 
     final static rn a(String param0, byte param1) {
@@ -95,7 +95,7 @@ final class sb extends rb implements fb, rp {
         StringBuilder stackIn_29_1 = null;
         String stackIn_30_2 = null;
         RuntimeException decompiledCaughtException = null;
-        var5 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        var5 = ArmiesOfGielinor.field_M ? 1 : 0;
         try {
           var2_int = param0.length();
           if (0 == var2_int) {
@@ -115,7 +115,7 @@ final class sb extends rb implements fb, rp {
                 return stackIn_18_0;
               }
             } else {
-              if (ArchiveProvider.field_c.indexOf(var4) == -1) {
+              if (ew.field_c.indexOf(var4) == -1) {
                 stackIn_21_0 = ov.field_h;
                 return stackIn_21_0;
               }
@@ -138,7 +138,7 @@ final class sb extends rb implements fb, rp {
           } else {
             stackIn_30_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_29_0), ((StringBuilder) (Object) stackIn_29_1).append(stackIn_30_2).append(',').append(param1).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_29_0), ((StringBuilder) (Object) stackIn_29_1).append(stackIn_30_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -157,7 +157,7 @@ final class sb extends rb implements fb, rp {
           var2_int = this.field_j.l(50);
           var3 = this.field_j.m(-26458);
           var4 = this.field_j.a((byte) -77);
-          var5 = ActionSpell.b(true);
+          var5 = ra.b(true);
           if (var4 < 1890) {
             stackIn_2_0 = rn.field_e;
             return stackIn_2_0;
@@ -189,10 +189,10 @@ final class sb extends rb implements fb, rp {
     public final void a(fn param0, int param1) {
         try {
           if (param1 != 80) {
-            field_h = (PacketBuffer) null;
+            field_h = (vh) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "sb.EA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw ig.a((Throwable) ((Object) runtimeException), "sb.EA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

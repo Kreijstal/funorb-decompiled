@@ -3,17 +3,17 @@
  */
 final class oo {
     private String field_c;
-    private RgbSprite field_b;
+    private wk field_b;
     private int field_p;
-    private IndexedSprite[] field_i;
-    private UiSelectionState field_h;
+    private ru[] field_i;
+    private dl field_h;
     private String[] field_k;
     static byte[][] field_d;
     private int field_n;
     private int field_l;
-    private RgbSprite field_t;
+    private wk field_t;
     private int field_r;
-    private RgbSprite field_m;
+    private wk field_m;
     static int field_a;
     private boolean field_s;
     private int field_f;
@@ -34,11 +34,11 @@ final class oo {
             oo.b(85);
           }
         } catch (RuntimeException runtimeException) {
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "oo.E(" + param0 + ')');
+          throw ig.a((Throwable) ((Object) runtimeException), "oo.E(" + param0 + ')');
         }
     }
 
-    private final void a(String param0, byte param1, IndexedSprite[] param2, java.applet.Applet param3, boolean param4, String[] param5) {
+    private final void a(String param0, byte param1, ru[] param2, java.applet.Applet param3, boolean param4, String[] param5) {
         String var7 = null;
         RuntimeException stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;
@@ -66,7 +66,7 @@ final class oo {
             this.field_r = 2;
           }
           this.field_c = param0;
-          this.field_h = new UiSelectionState(2);
+          this.field_h = new dl(2);
           this.field_k = param5;
           if (param1 != 71) {
             return;
@@ -115,7 +115,7 @@ final class oo {
             stackIn_30_0 = stackIn_26_0;
             stackIn_30_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_30_0), ((StringBuilder) (Object) stackIn_29_1).append(stackIn_30_2).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_30_0), ((StringBuilder) (Object) stackIn_29_1).append(stackIn_30_2).append(')').toString());
         }
     }
 
@@ -132,7 +132,7 @@ final class oo {
         int var6 = 0;
         int[] var7 = null;
         int var4Lifetime1;
-        var6 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        var6 = ArmiesOfGielinor.field_M ? 1 : 0;
         try {
           this.field_l = this.field_l + 65536;
           while (ev.b(-101, qk.field_d, this.field_l) >= 65536) {
@@ -141,7 +141,7 @@ final class oo {
           }
           if (param1 > -95) {
             var7 = (int[]) null;
-            this.a((RgbSprite) null, 114, -82, (String) null, (BitmapFont) null, (int[]) null, 110, 33, 0, 0.8778258562088013f);
+            this.a((wk) null, 114, -82, (String) null, (ka) null, (int[]) null, 110, 33, 0, 0.8778258562088013f);
           }
           var3_int = -1;
           if (this.field_i != null) {
@@ -182,19 +182,19 @@ final class oo {
               this.field_s = true;
             }
           }
-          if (null != ByteStorage.field_d) {
+          if (null != mg.field_d) {
             var4 = 0;
-            if (DeployEvent.field_A != 0 &&
-              TeleportAction.field_z > 257 &&
-              290 > TeleportAction.field_z) {
-              if (9 < BattleTutorial.field_t &&
-                82 > BattleTutorial.field_t) {
+            if (tr.field_A != 0 &&
+              ur.field_z > 257 &&
+              290 > ur.field_z) {
+              if (9 < iu.field_t &&
+                82 > iu.field_t) {
                 var4 = 1;
                 this.field_p = qk.field_c;
                 this.field_s = false;
               }
-              if (558 < BattleTutorial.field_t &&
-                631 > BattleTutorial.field_t) {
+              if (558 < iu.field_t &&
+                631 > iu.field_t) {
                 var4 = 1;
                 this.field_p = qk.field_c;
                 this.field_s = true;
@@ -202,32 +202,32 @@ final class oo {
             }
             if (var4 == 0 &&
               this.field_p > qk.field_a &&
-              257 < TeleportAction.field_z &&
-              290 > TeleportAction.field_z) {
-              if (AiPlanningStrategy.field_d > 9 &&
-                AiPlanningStrategy.field_d < 82) {
+              257 < ur.field_z &&
+              290 > ur.field_z) {
+              if (sm.field_d > 9 &&
+                sm.field_d < 82) {
                 this.field_p = qk.field_a;
               }
-              if (558 < AiPlanningStrategy.field_d &&
-                631 > AiPlanningStrategy.field_d) {
+              if (558 < sm.field_d &&
+                631 > sm.field_d) {
                 this.field_p = qk.field_a;
               }
             }
           }
           if (param0) {
-            this.field_h.updatePointerSelection(0, this.a(BattleTutorial.field_t, TeleportAction.field_z, -387), this.a(AiPlanningStrategy.field_d, ko.field_b, -387));
+            this.field_h.a(0, this.a(iu.field_t, ur.field_z, -387), this.a(sm.field_d, ko.field_b, -387));
             var4Lifetime1 = 0;
-            if (this.field_h.hasActivationInput((byte) 96)) {
-              if (0 == this.field_h.selectedIndex) {
+            if (this.field_h.d((byte) 96)) {
+              if (0 == this.field_h.field_h) {
                 var4Lifetime1 = 1;
               }
-              if (this.field_h.selectedIndex == 1) {
+              if (this.field_h.field_h == 1) {
                 stackIn_73_0 = 2;
                 return stackIn_73_0;
               }
             }
             if (mk.field_h) {
-              while (Unit.i((byte) -71)) {
+              while (jd.i((byte) -71)) {
                 var5 = this.c(127);
                 if (0 == var5) {
                   continue;
@@ -247,7 +247,7 @@ final class oo {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) var3), "oo.C(" + param0 + ',' + param1 + ')');
+          throw ig.a((Throwable) ((Object) var3), "oo.C(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -257,7 +257,7 @@ final class oo {
         RuntimeException var2_ref = null;
         try {
           try {
-            rf.a(32767, CombatEvent.d((byte) 73));
+            rf.a(32767, ag.d((byte) 73));
             if (param0 >= -84) {
               this.field_n = 29;
             }
@@ -270,7 +270,7 @@ final class oo {
         } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
           decompiledCaughtException = decompiledCaughtParameter1;
           var2_ref = (RuntimeException) (Object) decompiledCaughtException;
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) var2_ref), "oo.A(" + param0 + ')');
+          throw ig.a((Throwable) ((Object) var2_ref), "oo.A(" + param0 + ')');
         }
     }
 
@@ -286,14 +286,14 @@ final class oo {
           if (param0 <= 126) {
             discarded$1 = this.c(-121);
           }
-          this.field_h.pollNavigationKeys((byte) -120);
-          if (this.field_h.hasActivationInput((byte) 73)) {
-            if (this.field_h.selectedIndex == 0) {
+          this.field_h.b((byte) -120);
+          if (this.field_h.d((byte) 73)) {
+            if (this.field_h.field_h == 0) {
               this.b((byte) -95);
               stackIn_5_0 = 3;
               return stackIn_5_0;
             }
-            if (this.field_h.selectedIndex == 1) {
+            if (this.field_h.field_h == 1) {
               stackIn_10_0 = 1;
               return stackIn_10_0;
             }
@@ -307,11 +307,11 @@ final class oo {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) var2), "oo.I(" + param0 + ')');
+          throw ig.a((Throwable) ((Object) var2), "oo.I(" + param0 + ')');
         }
     }
 
-    private final void a(int[] param0, int param1, String param2, int param3, BitmapFont param4, byte param5, int param6, int param7) {
+    private final void a(int[] param0, int param1, String param2, int param3, ka param4, byte param5, int param6, int param7) {
         int var9_int = 0;
         int var10 = 0;
         int var11 = 0;
@@ -329,11 +329,11 @@ final class oo {
         String stackIn_21_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var9 = null;
-        var12 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        var12 = ArmiesOfGielinor.field_M ? 1 : 0;
         try {
           rq.a((byte) -56);
           for (var9_int = param7; var9_int < param6; var9_int++) {
-            SoftwareRaster.f(param3, var9_int, param1, var9_int + 1);
+            qn.f(param3, var9_int, param1, var9_int + 1);
             var10 = var9_int * param0.length / param6;
             var11 = param0[param0.length - var10 - 1];
             param4.a(param2, param3, param7, param1, param6, var11, -1, 1, 1, 0);
@@ -371,7 +371,7 @@ final class oo {
             stackIn_21_0 = stackIn_17_0;
             stackIn_21_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(')').toString());
         }
     }
 
@@ -384,15 +384,15 @@ final class oo {
         int var2_intLifetime1;
         int var2_intLifetime2;
         int var3Lifetime1;
-        var4 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        var4 = ArmiesOfGielinor.field_M ? 1 : 0;
         try {
-          SoftwareRaster.a(9, 9, 622, 47, 4540749, 65793);
-          SoftwareRaster.f(9, 257, 622, 33, 2585);
-          SoftwareRaster.a(9, 265, 622, 11, 2585, 1515566);
+          qn.a(9, 9, 622, 47, 4540749, 65793);
+          qn.f(9, 257, 622, 33, 2585);
+          qn.a(9, 265, 622, 11, 2585, 1515566);
           var2_int = 0;
           var3 = 14;
           while (4 > var2_int) {
-            SoftwareRaster.a(var3, 331, 117, 90, 460551, 3881787);
+            qn.a(var3, 331, 117, 90, 460551, 3881787);
             var2_int++;
             var3 += 121;
           }
@@ -402,60 +402,60 @@ final class oo {
           }
           var3Lifetime1 = 299;
           while (var2_intLifetime1 < 2) {
-            SoftwareRaster.a(508, var3Lifetime1, 127, 42, 1130115, 3365268);
-            SoftwareRaster.f(508, 42 + var3Lifetime1, 127, 42, 12410);
+            qn.a(508, var3Lifetime1, 127, 42, 1130115, 3365268);
+            qn.f(508, 42 + var3Lifetime1, 127, 42, 12410);
             var3Lifetime1 += 91;
             var2_intLifetime1++;
           }
           this.d(1439);
           if (null != iw.field_p &&
-            iw.field_p.ensureIndex((byte) 82) &&
-            iw.field_p.ensureGroupAvailableByName(28979, "members_expansion_screen") &&
-            iw.field_p.ensureGroupAvailableByName(28979, "arialish12") &&
-            iw.field_p.ensureGroupAvailableByName(28979, "pump32") &&
+            iw.field_p.a((byte) 82) &&
+            iw.field_p.a(28979, "members_expansion_screen") &&
+            iw.field_p.a(28979, "arialish12") &&
+            iw.field_p.a(28979, "pump32") &&
             bh.field_H != null &&
-            bh.field_H.ensureIndex((byte) 82) &&
-            bh.field_H.ensureGroupAvailableByName(28979, "arialish12") &&
-            bh.field_H.ensureGroupAvailableByName(28979, "pump32")) {
-            UnitLossCondition.field_a = pv.a("members_expansion_screen", "frame", iw.field_p, 24914);
-            ByteStorage.field_d = GameplayController.a("arrow", (byte) 51, "members_expansion_screen", iw.field_p);
+            bh.field_H.a((byte) 82) &&
+            bh.field_H.a(28979, "arialish12") &&
+            bh.field_H.a(28979, "pump32")) {
+            mc.field_a = pv.a("members_expansion_screen", "frame", iw.field_p, 24914);
+            mg.field_d = ic.a("arrow", (byte) 51, "members_expansion_screen", iw.field_p);
             ll.field_Sb = gs.a("arialish12", iw.field_p, bh.field_H, (byte) -53, "");
             kt.field_n = it.a("", iw.field_p, bh.field_H, (byte) -87, "pump32");
-            UnitModelPreview.field_b = DiskCacheRequest.a("benefit_orbs", "members_expansion_screen", iw.field_p, false);
-            ar.field_D = DiskCacheRequest.a("button_text", "members_expansion_screen", iw.field_p, false);
-            DiskCacheRequest.field_G = ac.a(iw.field_p, "button_highlights", (byte) -4, "members_expansion_screen");
+            hr.field_b = nh.a("benefit_orbs", "members_expansion_screen", iw.field_p, false);
+            ar.field_D = nh.a("button_text", "members_expansion_screen", iw.field_p, false);
+            nh.field_G = ac.a(iw.field_p, "button_highlights", (byte) -4, "members_expansion_screen");
             bh.field_H = null;
             iw.field_p = null;
           }
           this.a((byte) -124);
-          if (UnitLossCondition.field_a == null) {
+          if (mc.field_a == null) {
             return;
           }
           this.field_b.g(376, 339);
           this.field_t.g(9, 9);
-          UnitLossCondition.field_a.draw(0, 0);
-          if (ByteStorage.field_d != null) {
-            ByteStorage.field_d.g(9, 257);
-            ByteStorage.field_d.d(558, 257);
+          mc.field_a.a(0, 0);
+          if (mg.field_d != null) {
+            mg.field_d.g(9, 257);
+            mg.field_d.d(558, 257);
             if (ko.field_b > 257 &&
               ko.field_b < 290) {
-              var2_intLifetime2 = (40 * CombatViewTransition.c(this.field_f << 4, 127) >> 16) + 40;
+              var2_intLifetime2 = (40 * sr.c(this.field_f << 4, 127) >> 16) + 40;
               if (var2_intLifetime2 > 0) {
-                if (AiPlanningStrategy.field_d > 9 &&
-                  AiPlanningStrategy.field_d < 82) {
-                  ByteStorage.field_d.f(8, 256, var2_intLifetime2);
-                  ByteStorage.field_d.f(10, 256, var2_intLifetime2);
-                  ByteStorage.field_d.f(8, 258, var2_intLifetime2);
-                  ByteStorage.field_d.f(10, 258, var2_intLifetime2);
+                if (sm.field_d > 9 &&
+                  sm.field_d < 82) {
+                  mg.field_d.f(8, 256, var2_intLifetime2);
+                  mg.field_d.f(10, 256, var2_intLifetime2);
+                  mg.field_d.f(8, 258, var2_intLifetime2);
+                  mg.field_d.f(10, 258, var2_intLifetime2);
                 } else {
-                  if (AiPlanningStrategy.field_d > 558 &&
-                    AiPlanningStrategy.field_d < 631) {
-                    ByteStorage.field_d.h();
-                    ByteStorage.field_d.f(557, 256, var2_intLifetime2);
-                    ByteStorage.field_d.f(559, 256, var2_intLifetime2);
-                    ByteStorage.field_d.f(557, 258, var2_intLifetime2);
-                    ByteStorage.field_d.f(559, 258, var2_intLifetime2);
-                    ByteStorage.field_d.h();
+                  if (sm.field_d > 558 &&
+                    sm.field_d < 631) {
+                    mg.field_d.h();
+                    mg.field_d.f(557, 256, var2_intLifetime2);
+                    mg.field_d.f(559, 256, var2_intLifetime2);
+                    mg.field_d.f(557, 258, var2_intLifetime2);
+                    mg.field_d.f(559, 258, var2_intLifetime2);
+                    mg.field_d.h();
                   }
                 }
               }
@@ -463,37 +463,37 @@ final class oo {
           }
           this.field_m.g(16, 302);
           ll.field_Sb.a(this.field_k[this.field_n], 9, 257, 622, 33, 16754688, -1, 1, 1, 0);
-          UnitModelPreview.field_b.g(30, 330);
+          hr.field_b.g(30, 330);
           ll.field_Sb.a(db.field_e[0], 17, 428, 111, 35, 16754688, -1, 1, 1, 0);
           ll.field_Sb.a(db.field_e[1], 138, 428, 111, 35, 16754688, -1, 1, 1, 0);
           ll.field_Sb.a(db.field_e[2], 259, 428, 111, 35, 16754688, -1, 1, 1, 0);
-          ar.field_D.g((127 - ar.field_D.canvasWidth) / 2 + 508, 315);
-          if (0 != this.field_h.selectedIndex) {
-            if (this.field_h.selectedIndex == 1) {
-              DiskCacheRequest.field_G[1].g(508, 387);
+          ar.field_D.g((127 - ar.field_D.field_A) / 2 + 508, 315);
+          if (0 != this.field_h.field_h) {
+            if (this.field_h.field_h == 1) {
+              nh.field_G[1].g(508, 387);
             }
           } else {
-            DiskCacheRequest.field_G[0].g(508, 299);
+            nh.field_G[0].g(508, 299);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) var2), "oo.G(" + param0 + ')');
+          throw ig.a((Throwable) ((Object) var2), "oo.G(" + param0 + ')');
         }
     }
 
     private final void d(int param0) {
         RuntimeException decompiledCaughtException = null;
-        IndexedSprite var2 = null;
+        ru var2 = null;
         RuntimeException var2_ref = null;
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
-        IndexedSprite var6 = null;
-        IndexedSprite var7 = null;
-        IndexedSprite var2Lifetime1;
-        var5 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        ru var6 = null;
+        ru var7 = null;
+        ru var2Lifetime1;
+        var5 = ArmiesOfGielinor.field_M ? 1 : 0;
         try {
           if (null == this.field_i) {
             if (null != ll.field_Sb) {
@@ -511,18 +511,18 @@ final class oo {
               ll.field_Sb.a(ef.field_a, 9, 58, 622, 196, 16754688, -1, 1, 1, 0);
             }
           } else {
-            var6.draw(9, 58);
+            var6.a(9, 58);
           }
           if (this.field_p < qk.field_a) {
             var7 = this.field_i[this.field_q];
             var2Lifetime1 = var7;
             if (var2Lifetime1 != null) {
-              var3 = this.field_p * (var7.canvasWidth + 60) / qk.field_a;
+              var3 = this.field_p * (var7.field_g + 60) / qk.field_a;
               var4 = var3 - 30;
               if (!this.field_s) {
-                rb.a(58, -1708086482, 9, 256 * (var7.canvasWidth - var4) / 30, var4 * -256 / 30, var7);
+                rb.a(58, -1708086482, 9, 256 * (var7.field_g - var4) / 30, var4 * -256 / 30, var7);
               } else {
-                rb.a(58, param0 ^ -1708085583, 9, var4 * -256 / 30, 256 * (-var4 + var7.canvasWidth) / 30, var7);
+                rb.a(58, param0 ^ -1708085583, 9, var4 * -256 / 30, 256 * (-var4 + var7.field_g) / 30, var7);
               }
             }
           }
@@ -530,11 +530,11 @@ final class oo {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) var2_ref), "oo.M(" + param0 + ')');
+          throw ig.a((Throwable) ((Object) var2_ref), "oo.M(" + param0 + ')');
         }
     }
 
-    private final void a(RgbSprite param0, int param1, int param2, String param3, BitmapFont param4, int[] param5, int param6, int param7, int param8, float param9) {
+    private final void a(wk param0, int param1, int param2, String param3, ka param4, int[] param5, int param6, int param7, int param8, float param9) {
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
@@ -554,19 +554,19 @@ final class oo {
         int var11_int = 0;
         RuntimeException var11 = null;
         int var12 = 0;
-        RgbSprite var13 = null;
+        wk var13 = null;
         try {
           var11_int = (int)((float)param8 / param9);
           var12 = (int)((float)param7 / param9);
-          var13 = new RgbSprite(var11_int, var12);
-          CombatSandbox.a(var13, 3);
+          var13 = new wk(var11_int, var12);
+          vn.a(var13, 3);
           if (param6 >= -108) {
             oo.b(-32);
           }
-          param0.c((int)((float)(-param2) / param9), (int)((float)(-param1) / param9), (int)((float)param0.pixelWidth / param9), (int)((float)param0.pixelHeight / param9));
+          param0.c((int)((float)(-param2) / param9), (int)((float)(-param1) / param9), (int)((float)param0.field_y / param9), (int)((float)param0.field_v / param9));
           this.a(param5, var11_int, param3, 0, param4, (byte) 79, var12, 0);
           rf.b(-18862);
-          CombatSandbox.a(param0, 3);
+          vn.a(param0, 3);
           var13.d(param2, param1, param8, param7);
           rf.b(-18862);
           return;
@@ -607,7 +607,7 @@ final class oo {
             stackIn_20_0 = stackIn_16_0;
             stackIn_20_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param6).append(',').append(param7).append(',').append(param8).append(',').append(param9).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param6).append(',').append(param7).append(',').append(param8).append(',').append(param9).append(')').toString());
         }
     }
 
@@ -619,7 +619,7 @@ final class oo {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var4 = null;
         try {
-          if (UnitLossCondition.field_a == null) {
+          if (mc.field_a == null) {
             stackIn_4_0 = -1;
             return stackIn_4_0;
           }
@@ -645,7 +645,7 @@ final class oo {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) var4), "oo.L(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw ig.a((Throwable) ((Object) var4), "oo.L(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -653,10 +653,10 @@ final class oo {
         RuntimeException runtimeException = null;
         int var2_int = 0;
         int var3 = 0;
-        RgbSprite var5 = null;
+        wk var5 = null;
         String var6 = null;
         String var7 = null;
-        BitmapFont var8 = null;
+        ka var8 = null;
         int[] var9 = null;
         int[] var10 = null;
         int[] var11 = null;
@@ -665,36 +665,36 @@ final class oo {
         try {
           if (this.field_t == null &&
             null != kt.field_n) {
-            this.field_t = new RgbSprite(622, 47);
-            CombatSandbox.a(this.field_t, 3);
-            SoftwareRaster.a(0, 0, 622, 47, 4540749, 65793);
+            this.field_t = new wk(622, 47);
+            vn.a(this.field_t, 3);
+            qn.a(0, 0, 622, 47, 4540749, 65793);
             var2_int = 16448250;
             var3 = 10068666;
-            var12 = DirectByteStorage.a(var3, var2_int, -60);
+            var12 = cj.a(var3, var2_int, -60);
             var11 = var12;
             var9 = var11;
             this.a(var12, 622, this.field_c, 0, kt.field_n, (byte) 66, 47, 0);
             rf.b(-18862);
-            this.field_m = new RgbSprite(475, 24);
-            this.a(this.field_m, -4, 0, UnitModelPreview.field_h, kt.field_n, var9, -124, 24, 475, 0.75f);
+            this.field_m = new wk(475, 24);
+            this.a(this.field_m, -4, 0, hr.field_h, kt.field_n, var9, -124, 24, 475, 0.75f);
             if (param0 >= -103) {
-              var8 = (BitmapFont) null;
-              this.a((int[]) null, -60, (String) null, -5, (BitmapFont) null, (byte) 31, 126, -81);
+              var8 = (ka) null;
+              this.a((int[]) null, -60, (String) null, -5, (ka) null, (byte) 31, 126, -81);
             }
-            var10 = DirectByteStorage.a(526344, 526344, 126);
-            var5 = new RgbSprite(121, 122);
-            CombatSandbox.a(var5, 3);
-            SoftwareRaster.a(0, 0, var5.pixelWidth, var5.pixelHeight / 2, 16180917, 16306250);
-            SoftwareRaster.a(0, var5.pixelHeight / 2, var5.pixelWidth, var5.pixelHeight, 16306250, 15568919);
+            var10 = cj.a(526344, 526344, 126);
+            var5 = new wk(121, 122);
+            vn.a(var5, 3);
+            qn.a(0, 0, var5.field_y, var5.field_v / 2, 16180917, 16306250);
+            qn.a(0, var5.field_v / 2, var5.field_y, var5.field_v, 16306250, 15568919);
             var6 = rv.field_a;
-            var7 = AnimationFrameSet.field_B;
-            this.a(var5, -16, 0, var6, kt.field_n, var10, -112, var5.pixelHeight, var5.pixelWidth, 0.5f);
-            this.a(var5, 20, 0, var7, kt.field_n, var10, -123, var5.pixelHeight, var5.pixelWidth, 0.5f);
-            this.a(var5, 12 - kt.field_n.field_H + var5.pixelHeight / 2, 0, AnimationSequence.field_c[this.field_r], kt.field_n, var10, -125, var5.pixelHeight / 3, var5.pixelWidth, 0.699999988079071f);
+            var7 = wp.field_B;
+            this.a(var5, -16, 0, var6, kt.field_n, var10, -112, var5.field_v, var5.field_y, 0.5f);
+            this.a(var5, 20, 0, var7, kt.field_n, var10, -123, var5.field_v, var5.field_y, 0.5f);
+            this.a(var5, 12 - kt.field_n.field_H + var5.field_v / 2, 0, qb.field_c[this.field_r], kt.field_n, var10, -125, var5.field_v / 3, var5.field_y, 0.699999988079071f);
             rf.b(-18862);
-            this.field_b = new RgbSprite(121, 122);
-            CombatSandbox.a(this.field_b, 3);
-            var5.a(this.field_b.pixelWidth / 2, this.field_b.pixelHeight / 2, -2048, 4096);
+            this.field_b = new wk(121, 122);
+            vn.a(this.field_b, 3);
+            var5.a(this.field_b.field_y / 2, this.field_b.field_v / 2, -2048, 4096);
             rf.b(-18862);
             return;
           }
@@ -702,7 +702,7 @@ final class oo {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "oo.H(" + param0 + ')');
+          throw ig.a((Throwable) ((Object) runtimeException), "oo.H(" + param0 + ')');
         }
     }
 
@@ -714,12 +714,12 @@ final class oo {
         try {
           var7_int = -43 % ((param6 - 19) / 62);
           var8 = 0;
-          if (CombatViewTransition.a(param3 - 1, param5, 2, (byte) -113) == 2 ||
-            4 == CombatViewTransition.a(-1 + param3, param5, 2, (byte) -104)) {
+          if (sr.a(param3 - 1, param5, 2, (byte) -113) == 2 ||
+            4 == sr.a(-1 + param3, param5, 2, (byte) -104)) {
             var8++;
           }
-          if (CombatViewTransition.a(param3, 1 + param5, 2, (byte) -113) == 2 ||
-            CombatViewTransition.a(param3, 1 + param5, 2, (byte) -100) == 4) {
+          if (sr.a(param3, 1 + param5, 2, (byte) -113) == 2 ||
+            sr.a(param3, 1 + param5, 2, (byte) -100) == 4) {
             var8 += 2;
           }
           if ((var8 & 1) > 0) {
@@ -732,7 +732,7 @@ final class oo {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var7 = decompiledCaughtException;
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) var7), "oo.B(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
+          throw ig.a((Throwable) ((Object) var7), "oo.B(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
         }
     }
 
@@ -743,8 +743,8 @@ final class oo {
           if (rd.field_j != null) {
             oa.a(90, rd.field_j.field_d);
           } else {
-            if (SectorCacheStore.field_a != null) {
-              oa.a(102, SectorCacheStore.field_a.field_d);
+            if (bc.field_a != null) {
+              oa.a(102, bc.field_a.field_d);
             }
           }
           if (param0 != -387) {
@@ -754,11 +754,11 @@ final class oo {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) var1), "oo.D(" + param0 + ')');
+          throw ig.a((Throwable) ((Object) var1), "oo.D(" + param0 + ')');
         }
     }
 
-    oo(java.applet.Applet param0, String param1, IndexedSprite[] param2, String[] param3) {
+    oo(java.applet.Applet param0, String param1, ru[] param2, String[] param3) {
         RuntimeException runtimeException = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -819,7 +819,7 @@ final class oo {
             stackIn_19_0 = stackIn_15_0;
             stackIn_19_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
         }
     }
 

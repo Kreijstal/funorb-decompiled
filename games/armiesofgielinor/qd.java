@@ -38,7 +38,7 @@ final class qd extends tj implements nq, he {
         StringBuilder stackIn_12_1 = null;
         String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
-        var6 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        var6 = ArmiesOfGielinor.field_M ? 1 : 0;
         try {
           if (param0 != 0) {
             if (param0 == 1) {
@@ -66,7 +66,7 @@ final class qd extends tj implements nq, he {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 
@@ -100,9 +100,9 @@ final class qd extends tj implements nq, he {
           }
           if (param2) {
             var4 = (uv) null;
-            qd.a((ResourceArchive) null, (byte) 120, (uv) null, -19);
+            qd.a((kl) null, (byte) 120, (uv) null, -19);
           }
-          if (!Battlefield.a(param0, (byte) -26, param1)) {
+          if (!ha.a(param0, (byte) -26, param1)) {
             return true;
           }
           return false;
@@ -122,7 +122,7 @@ final class qd extends tj implements nq, he {
           } else {
             stackIn_34_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_30_0), ((StringBuilder) (Object) stackIn_33_1).append(stackIn_34_2).append(',').append(param2).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_30_0), ((StringBuilder) (Object) stackIn_33_1).append(stackIn_34_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -157,14 +157,14 @@ final class qd extends tj implements nq, he {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
-    final static void a(ResourceArchive param0, byte param1, uv param2, int param3) {
+    final static void a(kl param0, byte param1, uv param2, int param3) {
         try {
-          fw.field_C = tp.getNominalTickRate(-74) * param3 / 1000;
-          DualNodeDeque.a((byte) -124, param0);
+          fw.field_C = tp.b(-74) * param3 / 1000;
+          ui.a((byte) -124, param0);
           jj.a(-93, param0);
           lg.a(32381, param0);
           gs.a(54);
@@ -175,7 +175,7 @@ final class qd extends tj implements nq, he {
           }
           ib.field_j = 0 - fw.field_C;
         } catch (RuntimeException runtimeException) {
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "qd.G(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
+          throw ig.a((Throwable) ((Object) runtimeException), "qd.G(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 
@@ -195,8 +195,8 @@ final class qd extends tj implements nq, he {
           var4 = new lk(ArmiesOfGielinor.field_J, 0, 0, 0, 0, 16777215, -1, 3, 0, ArmiesOfGielinor.field_J.field_H, -1, 2147483647, true);
           this.field_F = new hv(var7, var4);
           this.field_F.field_s = "";
-          this.field_F.a(DiskCacheRequest.field_I, false, 0);
-          this.field_F.a(DiskCacheRequest.field_I, false, 1);
+          this.field_F.a(nh.field_I, false, 0);
+          this.field_F.a(nh.field_I, false, 1);
           this.field_F.field_l = -40 + this.field_l;
           this.field_F.field_x = (qo) (this);
           this.field_F.a(this.field_l - 40, 9567, 26, var3);
@@ -209,7 +209,7 @@ final class qd extends tj implements nq, he {
           this.a((byte) 10, (kb) (this.field_M));
           this.a(0, 300, 0, 8192, var5 + var3 + 55);
         } catch (RuntimeException runtimeException) {
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "qd.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw ig.a((Throwable) ((Object) runtimeException), "qd.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -239,7 +239,7 @@ final class qd extends tj implements nq, he {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
         }
     }
 

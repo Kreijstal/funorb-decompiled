@@ -18,16 +18,16 @@ final class hb {
     final static void a(boolean param0, int param1, int param2, boolean param3, int param4, int param5, int param6, int param7, boolean param8, int param9, boolean param10, boolean param11, boolean param12, int param13) {
         ad.field_I = null;
         oh.e((byte) -128);
-        param11 = FixedQuaternion.a(param11, param9, param6, param2, param7, param13, (byte) -83);
+        param11 = wq.a(param11, param9, param6, param2, param7, param13, (byte) -83);
         qh.a(param11, param4, param1, param3, param5, param9, param0, -1, param12, param10);
         la.a(param3, param4, -1);
         if (!param8) {
           field_b = (String) null;
         } else {
-          UiSelectionState.a(param13, param4, 0, param11);
+          dl.a(param13, param4, 0, param11);
           return;
         }
-        UiSelectionState.a(param13, param4, 0, param11);
+        dl.a(param13, param4, 0, param11);
     }
 
     final static void a(byte param0, int param1) {
@@ -35,38 +35,38 @@ final class hb {
           Throwable decompiledCaughtException = null;
           IOException var2 = null;
           boolean decompiledFrameRemainder0 = true;
-          if (null != MoveAttackRequest.field_z) {
+          if (null != am.field_z) {
             if (param1 >= 0) {
-              decompiledFrameRemainder0 = (ResourceArchive.field_k == ov.field_g);
-              if ((decompiledFrameRemainder0) && (0 == vl.outgoingPacket.position &&
-                (10000L + SummonEvent.field_G) < vi.b(-60))) {
-                vl.outgoingPacket.writeCipheredOpcode(32161, param1);
+              decompiledFrameRemainder0 = (kl.field_k == ov.field_g);
+              if ((decompiledFrameRemainder0) && (0 == vl.field_n.field_q &&
+                (10000L + mb.field_G) < vi.b(-60))) {
+                vl.field_n.h(32161, param1);
               }
             } else {
-              if (0 == vl.outgoingPacket.position &&
-                (10000L + SummonEvent.field_G) < vi.b(-60)) {
-                vl.outgoingPacket.writeCipheredOpcode(32161, param1);
+              if (0 == vl.field_n.field_q &&
+                (10000L + mb.field_G) < vi.b(-60)) {
+                vl.field_n.h(32161, param1);
               }
             }
             if (decompiledFrameRemainder0) {
               if (param0 < 8) {
                 return;
               }
-              if (vl.outgoingPacket.position > 0) {
+              if (vl.field_n.field_q > 0) {
                 try {
-                  MoveAttackRequest.field_z.write(vl.outgoingPacket.payload, (byte) 20, 0, vl.outgoingPacket.position);
-                  SummonEvent.field_G = vi.b(51);
+                  am.field_z.a(vl.field_n.field_o, (byte) 20, 0, vl.field_n.field_q);
+                  mb.field_G = vi.b(51);
                 } catch (java.io.IOException decompiledCaughtParameter0) {
                   decompiledCaughtException = decompiledCaughtParameter0;
                   var2 = (IOException) (Object) decompiledCaughtException;
                   dj.a((byte) -127);
                 }
-                vl.outgoingPacket.position = 0;
+                vl.field_n.field_q = 0;
               }
               return;
             }
           }
-          vl.outgoingPacket.position = 0;
+          vl.field_n.field_q = 0;
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
@@ -85,38 +85,38 @@ final class hb {
           Throwable decompiledCaughtException = null;
           IOException var2 = null;
           boolean decompiledFrameRemainder0 = true;
-          if (null != MoveAttackRequest.field_z) {
+          if (null != am.field_z) {
             if (param1 >= 0) {
-              decompiledFrameRemainder0 = (ResourceArchive.field_k == ov.field_g);
-              if ((decompiledFrameRemainder0) && (0 == vl.outgoingPacket.position &&
-                (10000L + SummonEvent.field_G) < vi.b(-60))) {
-                vl.outgoingPacket.writeCipheredOpcode(32161, param1);
+              decompiledFrameRemainder0 = (kl.field_k == ov.field_g);
+              if ((decompiledFrameRemainder0) && (0 == vl.field_n.field_q &&
+                (10000L + mb.field_G) < vi.b(-60))) {
+                vl.field_n.h(32161, param1);
               }
             } else {
-              if (0 == vl.outgoingPacket.position &&
-                (10000L + SummonEvent.field_G) < vi.b(-60)) {
-                vl.outgoingPacket.writeCipheredOpcode(32161, param1);
+              if (0 == vl.field_n.field_q &&
+                (10000L + mb.field_G) < vi.b(-60)) {
+                vl.field_n.h(32161, param1);
               }
             }
             if (decompiledFrameRemainder0) {
               if (param0 < 8) {
                 return;
               }
-              if (vl.outgoingPacket.position > 0) {
+              if (vl.field_n.field_q > 0) {
                 try {
-                  MoveAttackRequest.field_z.write(vl.outgoingPacket.payload, (byte) 20, 0, vl.outgoingPacket.position);
-                  SummonEvent.field_G = vi.b(51);
+                  am.field_z.a(vl.field_n.field_o, (byte) 20, 0, vl.field_n.field_q);
+                  mb.field_G = vi.b(51);
                 } catch (java.io.IOException decompiledCaughtParameter0) {
                   decompiledCaughtException = decompiledCaughtParameter0;
                   var2 = (IOException) (Object) decompiledCaughtException;
                   dj.a((byte) -127);
                 }
-                vl.outgoingPacket.position = 0;
+                vl.field_n.field_q = 0;
               }
               return;
             }
           }
-          vl.outgoingPacket.position = 0;
+          vl.field_n.field_q = 0;
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {

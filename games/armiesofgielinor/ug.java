@@ -4,29 +4,29 @@
 import java.io.*;
 
 final class ug extends IOException {
-    static UiSelectionState field_c;
+    static dl field_c;
     static int field_b;
     static int field_a;
 
-    final static void a(int param0, Battlefield param1, boolean param2) {
-        int var3_int = param1.localPlayer;
+    final static void a(int param0, ha param1, boolean param2) {
+        int var3_int = param1.field_sb;
         int var4 = param1.a(true, var3_int);
-        System.out.println("--- STATE DUMP REQUESTED - SERVER CHECKSUM: " + Integer.toString(RadialSummonMenu.field_d, 16) + " SERVER CHECKSUM: " + Integer.toString(param1.a(true, var3_int), 16) + " ---");
-        System.out.println(param1.describeBattlefield(var3_int, -248));
+        System.out.println("--- STATE DUMP REQUESTED - SERVER CHECKSUM: " + Integer.toString(ub.field_d, 16) + " SERVER CHECKSUM: " + Integer.toString(param1.a(true, var3_int), 16) + " ---");
+        System.out.println(param1.j(var3_int, -248));
         if (param0 != 0) {
           return;
         }
         try {
-          System.out.println("--- STATE DUMP ENDS: " + Integer.toString(RadialSummonMenu.field_d, 16) + " ---");
-          vl.outgoingPacket.writeCipheredOpcode(32161, 72);
-          vl.outgoingPacket.writeInt((byte) -117, RadialSummonMenu.field_d);
-          vl.outgoingPacket.writeInt((byte) -98, var4);
+          System.out.println("--- STATE DUMP ENDS: " + Integer.toString(ub.field_d, 16) + " ---");
+          vl.field_n.h(32161, 72);
+          vl.field_n.a((byte) -117, ub.field_d);
+          vl.field_n.a((byte) -98, var4);
           if (param2) {
             hb.$cfr$intArgs$a$e9dea5688aa5(116, 0);
             dj.a((byte) -125);
           }
         } catch (RuntimeException runtimeException) {
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "ug.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw ig.a((Throwable) ((Object) runtimeException), "ug.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -48,7 +48,7 @@ final class ug extends IOException {
         CharSequence var10 = null;
         ls[] var11 = null;
         wo var12 = null;
-        var9 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        var9 = ArmiesOfGielinor.field_M ? 1 : 0;
         try {
           if (param2 != -1) {
             var10 = (CharSequence) null;
@@ -105,7 +105,7 @@ final class ug extends IOException {
           } else {
             stackIn_42_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_41_0), ((StringBuilder) (Object) stackIn_41_1).append(stackIn_42_2).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_41_0), ((StringBuilder) (Object) stackIn_41_1).append(stackIn_42_2).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 
@@ -139,14 +139,14 @@ final class ug extends IOException {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 
     public static void a(int param0) {
         field_c = null;
         if (param0 != 16) {
-          field_c = (UiSelectionState) null;
+          field_c = (dl) null;
         }
     }
 
@@ -155,6 +155,6 @@ final class ug extends IOException {
     }
 
     static {
-        field_c = new UiSelectionState(1);
+        field_c = new dl(1);
     }
 }

@@ -5,11 +5,11 @@ import java.util.*;
 
 final class gg extends dr {
     static int field_G;
-    static NodeDeque field_F;
+    static at field_F;
     static int field_I;
-    static Random animationRandom;
+    static Random field_J;
     static String field_H;
-    static ResourceArchive field_K;
+    static kl field_K;
     static je field_E;
 
     final nd a(int param0, nd[] param1) {
@@ -25,7 +25,7 @@ final class gg extends dr {
             var4 = (nd[]) null;
             this.a(-98, (nd[]) null);
           }
-          stackIn_3_0 = new nd(InstructionsPanel.c(-29288));
+          stackIn_3_0 = new nd(rk.c(-29288));
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -37,7 +37,7 @@ final class gg extends dr {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
@@ -50,7 +50,7 @@ final class gg extends dr {
         field_E = null;
         field_H = null;
         field_F = null;
-        animationRandom = null;
+        field_J = null;
         if (param0 != -2260) {
           gg.g(12);
         }
@@ -58,9 +58,9 @@ final class gg extends dr {
 
     static {
         field_G = 6;
-        field_F = new NodeDeque();
+        field_F = new at();
         field_H = "Options";
         field_I = 2;
-        animationRandom = new Random();
+        field_J = new Random();
     }
 }

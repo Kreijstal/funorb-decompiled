@@ -22,25 +22,25 @@ final class hg implements java.awt.event.KeyListener, java.awt.event.FocusListen
             us.field_c = -1;
           }
         } catch (RuntimeException runtimeException) {
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "hg.focusLost(" + (param0 != null ? "{...}" : "null") + ')');
+          throw ig.a((Throwable) ((Object) runtimeException), "hg.focusLost(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final static NodeDeque a(int param0) {
-        NodeDeque var1 = new NodeDeque();
-        var1.addLast((byte) -119, (IntrusiveNode) (new re("hello", new Class[]{}, "Be friendly.")));
-        var1.addLast((byte) -119, (IntrusiveNode) (new ba("printCoat", new Class[]{}, "Print out your current coat of arms in a line ready for the config file.")));
-        var1.addLast((byte) -119, (IntrusiveNode) (new jq("setCoat", new Class[]{String.class}, "Set your coat of arms to one indicated by the format used in the config file (including coat=).")));
+    final static at a(int param0) {
+        at var1 = new at();
+        var1.a((byte) -119, (tc) (new re("hello", new Class[]{}, "Be friendly.")));
+        var1.a((byte) -119, (tc) (new ba("printCoat", new Class[]{}, "Print out your current coat of arms in a line ready for the config file.")));
+        var1.a((byte) -119, (tc) (new jq("setCoat", new Class[]{String.class}, "Set your coat of arms to one indicated by the format used in the config file (including coat=).")));
         int var2 = -43 % ((param0 - 32) / 63);
-        var1.addLast((byte) -119, (IntrusiveNode) (new qa("channelFadeTime", new Class[]{Integer.TYPE}, "Change the time to fade between channel sets in the campaign menu, in milliseconds.")));
-        var1.addLast((byte) -119, (IntrusiveNode) (new oh("channelBaseVolume", new Class[]{Integer.TYPE}, "(From 0 to 256) Change the volume of the base (<=3) channels in the campaign menu when in a campaign map.")));
-        var1.addLast((byte) -119, (IntrusiveNode) (new mw("listMissions", new Class[]{Integer.TYPE}, "List available missions.")));
-        var1.addLast((byte) -119, (IntrusiveNode) (new wt("giveTo", new Class[]{Integer.TYPE}, "Change ownership of a selected tile in the map.")));
-        var1.addLast((byte) -119, (IntrusiveNode) (new qp("defeat", new Class[]{Integer.TYPE, Integer.TYPE, Integer.TYPE}, "Defeat the given player. And specify it as happening in the given number of turns and damage taken")));
-        var1.addLast((byte) -119, (IntrusiveNode) (new an("defeat", new Class[]{Integer.TYPE}, "Defeat the given player.")));
-        var1.addLast((byte) -119, (IntrusiveNode) (new oa("toggleSkip", new Class[]{}, "Toggle Automatically Skipping Player Turns")));
-        var1.addLast((byte) -119, (IntrusiveNode) (new gg("printVictoryConditions", new Class[]{}, "Print out victory conditions for current player")));
-        var1.addLast((byte) -119, (IntrusiveNode) (new ot("fixInvisible", new Class[]{}, "Make invisible units visible")));
+        var1.a((byte) -119, (tc) (new qa("channelFadeTime", new Class[]{Integer.TYPE}, "Change the time to fade between channel sets in the campaign menu, in milliseconds.")));
+        var1.a((byte) -119, (tc) (new oh("channelBaseVolume", new Class[]{Integer.TYPE}, "(From 0 to 256) Change the volume of the base (<=3) channels in the campaign menu when in a campaign map.")));
+        var1.a((byte) -119, (tc) (new mw("listMissions", new Class[]{Integer.TYPE}, "List available missions.")));
+        var1.a((byte) -119, (tc) (new wt("giveTo", new Class[]{Integer.TYPE}, "Change ownership of a selected tile in the map.")));
+        var1.a((byte) -119, (tc) (new qp("defeat", new Class[]{Integer.TYPE, Integer.TYPE, Integer.TYPE}, "Defeat the given player. And specify it as happening in the given number of turns and damage taken")));
+        var1.a((byte) -119, (tc) (new an("defeat", new Class[]{Integer.TYPE}, "Defeat the given player.")));
+        var1.a((byte) -119, (tc) (new oa("toggleSkip", new Class[]{}, "Toggle Automatically Skipping Player Turns")));
+        var1.a((byte) -119, (tc) (new gg("printVictoryConditions", new Class[]{}, "Print out victory conditions for current player")));
+        var1.a((byte) -119, (tc) (new ot("fixInvisible", new Class[]{}, "Make invisible units visible")));
         return var1;
     }
 
@@ -63,7 +63,7 @@ final class hg implements java.awt.event.KeyListener, java.awt.event.FocusListen
             }
             if (us.field_c >= 0 &&
               var2_int >= 0) {
-              SphinxActionRequest.field_x[us.field_c] = ~var2_int;
+              ee.field_x[us.field_c] = ~var2_int;
               us.field_c = 127 & 1 + us.field_c;
               if (cc.field_a == us.field_c) {
                 us.field_c = -1;
@@ -82,7 +82,7 @@ final class hg implements java.awt.event.KeyListener, java.awt.event.FocusListen
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
         }
     }
 
@@ -96,18 +96,18 @@ final class hg implements java.awt.event.KeyListener, java.awt.event.FocusListen
           if (null != va.field_w) {
             var2_int = param0.getKeyChar();
             if (var2_int != 0 && var2_int != 65535 &&
-              AiActionCandidate.a((char) var2_int, 16150)) {
+              jb.a((char) var2_int, 16150)) {
               var3 = 127 & cr.field_Z + 1;
-              if (var3 != SummonAction.field_E) {
+              if (var3 != be.field_E) {
                 gt.field_d[cr.field_Z] = -1;
-                SpellCastAction.field_u[cr.field_Z] = (char)var2_int;
+                ua.field_u[cr.field_Z] = (char)var2_int;
                 cr.field_Z = var3;
               }
             }
           }
           param0.consume();
         } catch (RuntimeException runtimeException) {
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "hg.keyTyped(" + (param0 != null ? "{...}" : "null") + ')');
+          throw ig.a((Throwable) ((Object) runtimeException), "hg.keyTyped(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -135,7 +135,7 @@ final class hg implements java.awt.event.KeyListener, java.awt.event.FocusListen
             }
             if (us.field_c >= 0 &&
               0 <= var2_int) {
-              SphinxActionRequest.field_x[us.field_c] = var2_int;
+              ee.field_x[us.field_c] = var2_int;
               us.field_c = us.field_c + 1 & 127;
               if (cc.field_a == us.field_c) {
                 us.field_c = -1;
@@ -143,9 +143,9 @@ final class hg implements java.awt.event.KeyListener, java.awt.event.FocusListen
             }
             if (var2_int >= 0) {
               var3 = 127 & cr.field_Z + 1;
-              if (var3 != SummonAction.field_E) {
+              if (var3 != be.field_E) {
                 gt.field_d[cr.field_Z] = var2_int;
-                SpellCastAction.field_u[cr.field_Z] = (char)0;
+                ua.field_u[cr.field_Z] = (char)0;
                 cr.field_Z = var3;
               }
             }
@@ -174,7 +174,7 @@ final class hg implements java.awt.event.KeyListener, java.awt.event.FocusListen
           } else {
             stackIn_24_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(')').toString());
         }
     }
 
@@ -186,7 +186,7 @@ final class hg implements java.awt.event.KeyListener, java.awt.event.FocusListen
         StringBuilder stackIn_17_1 = null;
         String stackIn_18_2 = null;
         RuntimeException decompiledCaughtException = null;
-        var3 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        var3 = ArmiesOfGielinor.field_M ? 1 : 0;
         try {
           if (param0 > -5) {
             return true;
@@ -216,7 +216,7 @@ final class hg implements java.awt.event.KeyListener, java.awt.event.FocusListen
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
         }
     }
 

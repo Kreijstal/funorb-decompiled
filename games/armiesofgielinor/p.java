@@ -2,16 +2,16 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class p {
-    private ResourceArchive field_g;
+    private kl field_g;
     static String field_d;
     static int field_b;
     static wd field_a;
     static String field_i;
     static String field_f;
-    private ResourceArchive field_h;
-    private NodeHashTable field_e;
+    private kl field_h;
+    private bg field_e;
     static String field_c;
-    private NodeHashTable field_j;
+    private bg field_j;
 
     private final sn a(String param0, String param1, int param2, int[] param3) {
         int var5_int = 0;
@@ -28,12 +28,12 @@ final class p {
         String stackIn_17_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var5_int = this.field_g.getGroupId(param1, 125);
+          var5_int = this.field_g.a(param1, 125);
           if (var5_int < param2) {
             stackIn_2_0 = null;
             return (sn) (stackIn_2_0);
           }
-          var6 = this.field_g.getFileId((byte) 119, var5_int, param0);
+          var6 = this.field_g.a((byte) 119, var5_int, param0);
           if (var6 < 0) {
             return null;
           }
@@ -61,7 +61,7 @@ final class p {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
         }
     }
 
@@ -74,11 +74,11 @@ final class p {
         String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (this.field_g.getGroupCapacity(-113) == 1) {
+          if (this.field_g.e(-113) == 1) {
             stackIn_2_0 = this.a(0, param1, param2, 0);
             return stackIn_2_0;
           }
-          if (1 == this.field_g.getFileCapacity(param2, -2)) {
+          if (1 == this.field_g.d(param2, -2)) {
             stackIn_6_0 = this.a(0, param1, 0, param2);
             return stackIn_6_0;
           }
@@ -96,7 +96,7 @@ final class p {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param2).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -133,7 +133,7 @@ final class p {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 
@@ -157,7 +157,7 @@ final class p {
           var5_int = param3 ^ (65532 & param2 << 4 | param2 >>> 12);
           var5_int = var5_int | param2 << 16;
           var6 = 4294967296L ^ (long)var5_int;
-          var8 = (sn) (this.field_j.get(-56, var6));
+          var8 = (sn) (this.field_j.a(-56, var6));
           if (var8 != null) {
             stackIn_2_0 = var8;
             return stackIn_2_0;
@@ -167,25 +167,25 @@ final class p {
             stackIn_6_0 = null;
             return (sn) (stackIn_6_0);
           }
-          var9 = (qs) (this.field_e.get(param0 + 648691672, var6));
+          var9 = (qs) (this.field_e.a(param0 + 648691672, var6));
           if (var9 == null) {
             var9 = qs.a(this.field_h, param2, param3);
             if (var9 == null) {
               stackIn_10_0 = null;
               return (sn) (stackIn_10_0);
             }
-            this.field_e.put(var9, var6, param0 + 648691834);
+            this.field_e.a(var9, var6, param0 + 648691834);
           }
           var8Lifetime1 = var9.a(param1);
           if (var8Lifetime1 == null) {
             return null;
           }
-          var9.unlink(param0 + 648691815);
+          var9.d(param0 + 648691815);
           if (param0 != -648691772) {
             stackIn_17_0 = (sn) null;
             return stackIn_17_0;
           }
-          this.field_j.put(var8Lifetime1, var6, 32);
+          this.field_j.a(var8Lifetime1, var6, 32);
           stackIn_19_0 = var8Lifetime1;
           return stackIn_19_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -198,7 +198,7 @@ final class p {
           } else {
             stackIn_23_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -237,7 +237,7 @@ final class p {
           var5_int = (param3 >>> 12 | (1073745919 & param3) << 4) ^ param2;
           var5_int = var5_int | param3 << 16;
           var6 = (long)var5_int;
-          var8 = (sn) (this.field_j.get(param0 ^ -121, var6));
+          var8 = (sn) (this.field_j.a(param0 ^ -121, var6));
           if (var8 != null) {
             stackIn_2_0 = var8;
             return stackIn_2_0;
@@ -258,7 +258,7 @@ final class p {
           }
           var10 = var9.b();
           var8Lifetime1 = var10;
-          this.field_j.put(var8Lifetime1, var6, 77);
+          this.field_j.a(var8Lifetime1, var6, 77);
           if (param1 != null) {
             param1[0] = param1[0] - var10.field_o.length;
           }
@@ -274,7 +274,7 @@ final class p {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -288,11 +288,11 @@ final class p {
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (this.field_h.getGroupCapacity(-111) == 1) {
+          if (this.field_h.e(-111) == 1) {
             stackIn_2_0 = this.b(-648691772, param0, 0, param2);
             return stackIn_2_0;
           }
-          if (this.field_h.getFileCapacity(param2, -2) == 1) {
+          if (this.field_h.d(param2, -2) == 1) {
             stackIn_6_0 = this.b(-648691772, param0, param2, 0);
             return stackIn_6_0;
           }
@@ -308,7 +308,7 @@ final class p {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -342,7 +342,7 @@ final class p {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 
@@ -379,7 +379,7 @@ final class p {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 
@@ -447,14 +447,14 @@ final class p {
         return param0 + "ª";
     }
 
-    p(ResourceArchive param0, ResourceArchive param1) {
-        this.field_e = new NodeHashTable(256);
-        this.field_j = new NodeHashTable(256);
+    p(kl param0, kl param1) {
+        this.field_e = new bg(256);
+        this.field_j = new bg(256);
         try {
           this.field_g = param0;
           this.field_h = param1;
         } catch (RuntimeException runtimeException) {
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "p.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ig.a((Throwable) ((Object) runtimeException), "p.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -474,12 +474,12 @@ final class p {
         String stackIn_17_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var5_int = this.field_h.getGroupId(param3, 108);
+          var5_int = this.field_h.a(param3, 108);
           if (var5_int < 0) {
             stackIn_2_0 = null;
             return (sn) (stackIn_2_0);
           }
-          var6 = this.field_h.getFileId((byte) 119, var5_int, param2);
+          var6 = this.field_h.a((byte) 119, var5_int, param2);
           if (var6 < 0) {
             return null;
           }
@@ -508,7 +508,7 @@ final class p {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
         }
     }
 

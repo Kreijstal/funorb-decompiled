@@ -5,7 +5,7 @@ final class ki {
     static String field_c;
     static tv field_e;
     static String field_f;
-    static ResourceArchive field_b;
+    static kl field_b;
     static String field_a;
     static String[][] field_d;
 

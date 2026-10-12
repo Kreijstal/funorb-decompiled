@@ -3,7 +3,7 @@
  */
 final class td implements kh {
     static je field_g;
-    private BitmapFont field_b;
+    private ka field_b;
     private int field_e;
     static String field_h;
     static sn[][] field_d;
@@ -39,7 +39,7 @@ final class td implements kh {
         int var9 = 0;
         int var10 = 0;
         int var11 = 0;
-        var11 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        var11 = ArmiesOfGielinor.field_M ? 1 : 0;
         try {
           if (param2 > -79) {
             return;
@@ -84,12 +84,12 @@ final class td implements kh {
           } else {
             stackIn_22_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
     final static int a(int param0, byte param1) {
-        int var3 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        int var3 = ArmiesOfGielinor.field_M ? 1 : 0;
         int var2 = param0;
         if (var2 == 59) {
           return 2;
@@ -126,13 +126,13 @@ final class td implements kh {
         this.field_c = 1;
     }
 
-    td(BitmapFont param0, int param1, int param2) {
+    td(ka param0, int param1, int param2) {
         try {
           this.field_b = param0;
           this.field_c = param2;
           this.field_e = param1;
         } catch (RuntimeException runtimeException) {
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "td.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw ig.a((Throwable) ((Object) runtimeException), "td.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 

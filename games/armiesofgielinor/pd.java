@@ -7,7 +7,7 @@ final class pd {
     static String field_b;
     static je field_c;
     static int field_e;
-    static MeshData field_d;
+    static js field_d;
     static String field_f;
 
     public static void a(byte param0) {
@@ -25,13 +25,13 @@ final class pd {
     }
 
     final static int a(int param0, int param1, int param2, int param3) {
-        if (param0 + param3 + param2 <= SoftwareRaster.height) {
+        if (param0 + param3 + param2 <= qn.field_g) {
           return param3 + param2;
         }
         if (param2 - param0 >= param1) {
           return -param0 + param2;
         }
-        return -param0 + SoftwareRaster.height;
+        return -param0 + qn.field_g;
     }
 
     final static boolean a(String param0, int param1) {
@@ -62,11 +62,11 @@ final class pd {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(')').toString());
         }
     }
 
-    final static void a(int param0, int param1, PacketBuffer param2, int param3) {
+    final static void a(int param0, int param1, vh param2, int param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -79,12 +79,12 @@ final class pd {
           var4_int = -123 % ((-11 - param3) / 50);
           if (0 == param0 &&
             param1 == 0) {
-            param2.writeShort(true, 0);
+            param2.b(true, 0);
             return;
           }
           var5 = param0 & 255;
           var6 = param1 & 255;
-          param2.writeShort(true, var6 | var5 << 8);
+          param2.b(true, var6 | var5 << 8);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -96,7 +96,7 @@ final class pd {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param3).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param3).append(')').toString());
         }
     }
 

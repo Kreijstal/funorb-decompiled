@@ -2,9 +2,9 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class cu implements gj {
-    static RgbSprite[] field_d;
+    static wk[] field_d;
     static boolean field_c;
-    static RgbSprite field_b;
+    static wk field_b;
     static boolean field_a;
 
     public static void a(byte param0) {

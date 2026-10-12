@@ -22,7 +22,7 @@ final class qf {
     }
 
     final static void a(int param0, String param1, int param2, byte param3, int param4, int param5, int param6, int param7, hd param8) {
-        MoveAttackRequest.field_x = param5;
+        am.field_x = param5;
         vq.field_d = param2;
         vq.field_c = param8;
         ek.field_e = param4;
@@ -33,12 +33,12 @@ final class qf {
         }
         try {
           er.field_a = param6;
-          LeaderEscortCondition.field_i = param7;
-          ai.field_T = (ResourceProtocolClient) ((Object) new SocketResourceClient());
-          ou.field_h = new DiskCacheWorker(param8);
+          gm.field_i = param7;
+          ai.field_T = (bp) ((Object) new ae());
+          ou.field_h = new vo(param8);
           oi.field_c = new dd(ai.field_T, ou.field_h);
         } catch (RuntimeException runtimeException) {
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "qf.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + (param8 != null ? "{...}" : "null") + ')');
+          throw ig.a((Throwable) ((Object) runtimeException), "qf.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + (param8 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -50,19 +50,19 @@ final class qf {
 
     final static void a(int param0) {
         if (param0 == 56) {
-          KingBlackDragonEvent.field_C.j(-114);
+          rl.field_C.j(-114);
           if (pq.field_a == null) {
-            pq.field_a = new cr(KingBlackDragonEvent.field_C, BestScoreStrategy.field_h);
+            pq.field_a = new cr(rl.field_C, aw.field_h);
           }
-          KingBlackDragonEvent.field_C.a(pq.field_a, 0);
+          rl.field_C.a(pq.field_a, 0);
           return;
         }
         field_d = (int[]) null;
-        KingBlackDragonEvent.field_C.j(-114);
+        rl.field_C.j(-114);
         if (pq.field_a == null) {
-          pq.field_a = new cr(KingBlackDragonEvent.field_C, BestScoreStrategy.field_h);
+          pq.field_a = new cr(rl.field_C, aw.field_h);
         }
-        KingBlackDragonEvent.field_C.a(pq.field_a, 0);
+        rl.field_C.a(pq.field_a, 0);
     }
 
     final static void a(nr param0, int param1, int param2, nr param3, int param4, int param5) {
@@ -74,7 +74,7 @@ final class qf {
           el.field_c = param2;
           cp.field_a = param4;
         } catch (RuntimeException runtimeException) {
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "qf.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ')');
+          throw ig.a((Throwable) ((Object) runtimeException), "qf.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ')');
         }
     }
 

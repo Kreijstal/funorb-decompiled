@@ -5,21 +5,21 @@ import java.util.*;
 
 final class co {
     String field_c;
-    RgbSprite[] field_b;
+    wk[] field_b;
     String field_x;
     String field_a;
     static int[][] field_p;
     int field_d;
     static String[] field_k;
-    IndexedSprite[] field_m;
-    IndexedSprite[] field_w;
+    ru[] field_m;
+    ru[] field_w;
     static int field_h;
     static String field_r;
     static int field_f;
     int[] field_i;
     String field_e;
-    IndexedSprite[] field_g;
-    RgbSprite[] field_u;
+    ru[] field_g;
+    wk[] field_u;
     static String field_j;
     String field_q;
     private sn[] field_t;
@@ -39,10 +39,10 @@ final class co {
         int var5Lifetime1;
         int var6Lifetime1;
         if (!param0) {
-          if (EffectPresentation.field_h[param1] > EffectPresentation.field_h[param2]) {
+          if (tb.field_h[param1] > tb.field_h[param2]) {
             return true;
           }
-          if (EffectPresentation.field_h[param2] > EffectPresentation.field_h[param1]) {
+          if (tb.field_h[param2] > tb.field_h[param1]) {
             return false;
           }
           if (no.field_U[param1] > no.field_U[param2]) {
@@ -50,8 +50,8 @@ final class co {
           }
           boolean decompiledFrameRemainder1 = true;
           if (no.field_U[param1] >= no.field_U[param2]) {
-            var4 = VineGrowthAction.field_s[param2] + AnimationFrameSet.field_w[param2] + TutorialController.field_c[param2];
-            var5 = VineGrowthAction.field_s[param1] + (AnimationFrameSet.field_w[param1] + TutorialController.field_c[param1]);
+            var4 = pe.field_s[param2] + wp.field_w[param2] + ci.field_c[param2];
+            var5 = pe.field_s[param1] + (wp.field_w[param1] + ci.field_c[param1]);
             if (var4 < var5) {
               return true;
             }
@@ -75,13 +75,13 @@ final class co {
         if (no.field_U[param2] > no.field_U[param1]) {
           return false;
         }
-        if (EffectPresentation.field_h[param1] > EffectPresentation.field_h[param2]) {
+        if (tb.field_h[param1] > tb.field_h[param2]) {
           return true;
         }
         boolean decompiledFrameRemainder0 = true;
-        if (EffectPresentation.field_h[param1] >= EffectPresentation.field_h[param2]) {
-          var4Lifetime1 = VineGrowthAction.field_s[param2] + AnimationFrameSet.field_w[param2] + TutorialController.field_c[param2];
-          var5Lifetime1 = VineGrowthAction.field_s[param1] + (AnimationFrameSet.field_w[param1] + TutorialController.field_c[param1]);
+        if (tb.field_h[param1] >= tb.field_h[param2]) {
+          var4Lifetime1 = pe.field_s[param2] + wp.field_w[param2] + ci.field_c[param2];
+          var5Lifetime1 = pe.field_s[param1] + (wp.field_w[param1] + ci.field_c[param1]);
           if (var4Lifetime1 < var5Lifetime1) {
             return true;
           }
@@ -109,7 +109,7 @@ final class co {
         String stackIn_12_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
-        var4 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        var4 = ArmiesOfGielinor.field_M ? 1 : 0;
         try {
           if (null == this.field_o) {
             return;
@@ -133,13 +133,13 @@ final class co {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
         }
     }
 
     final sn b(int param0) {
         int var2 = 27 % ((50 - param0) / 33);
-        return this.field_t[AttackEvent.a(false, this.field_t.length, li.field_n)];
+        return this.field_t[ns.a(false, this.field_t.length, li.field_n)];
     }
 
     public static void a(byte param0) {
@@ -155,7 +155,7 @@ final class co {
         field_j = null;
     }
 
-    final RgbSprite c(byte param0) {
+    final wk c(byte param0) {
         int var2 = -68 / ((53 - param0) / 32);
         return this.c(34);
     }
@@ -177,7 +177,7 @@ final class co {
         StringBuilder stackIn_20_1 = null;
         String stackIn_21_2 = null;
         RuntimeException decompiledCaughtException = null;
-        var9 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        var9 = ArmiesOfGielinor.field_M ? 1 : 0;
         try {
           var11 = new char[param1];
           var10 = var11;
@@ -215,23 +215,23 @@ final class co {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
         }
     }
 
-    final void a(ResourceArchive param0, int param1, ResourceArchive param2) {
+    final void a(kl param0, int param1, kl param2) {
         try {
-          SocketResourceClient.field_u = param2;
+          ae.field_u = param2;
           fd.field_m = param0;
           if (param1 != 0) {
             this.field_a = (String) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "co.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw ig.a((Throwable) ((Object) runtimeException), "co.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final void a(p param0, ResourceArchive param1, ResourceArchive param2, int param3, ih param4) {
+    final void a(p param0, kl param1, kl param2, int param3, ih param4) {
         if (null == this.field_l ||
           param4 == null ||
           param2 == null) {
@@ -244,7 +244,7 @@ final class co {
         try {
           param4.a(param0, param1, param3, this.field_n, (byte) 86);
         } catch (RuntimeException runtimeException) {
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "co.J(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');
+          throw ig.a((Throwable) ((Object) runtimeException), "co.J(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -252,16 +252,16 @@ final class co {
         if (this.field_b != null) {
           return;
         }
-        this.field_w = MapLayout.a(this.field_a, -28106, "basic", SocketResourceClient.field_u);
-        this.field_m = MapLayout.a(this.field_v, -28106, "basic", SocketResourceClient.field_u);
-        this.field_g = MapLayout.a(this.field_q, -28106, "basic", SocketResourceClient.field_u);
-        this.field_u = fk.a(this.field_e, (byte) -128, SocketResourceClient.field_u, "basic");
+        this.field_w = lo.a(this.field_a, -28106, "basic", ae.field_u);
+        this.field_m = lo.a(this.field_v, -28106, "basic", ae.field_u);
+        this.field_g = lo.a(this.field_q, -28106, "basic", ae.field_u);
+        this.field_u = fk.a(this.field_e, (byte) -128, ae.field_u, "basic");
         if (param0 > -63) {
-          this.field_u = (RgbSprite[]) null;
-          this.field_b = fk.a(this.field_c, (byte) -127, SocketResourceClient.field_u, "basic");
+          this.field_u = (wk[]) null;
+          this.field_b = fk.a(this.field_c, (byte) -127, ae.field_u, "basic");
           return;
         }
-        this.field_b = fk.a(this.field_c, (byte) -127, SocketResourceClient.field_u, "basic");
+        this.field_b = fk.a(this.field_c, (byte) -127, ae.field_u, "basic");
     }
 
     final void a(int param0) {
@@ -278,13 +278,13 @@ final class co {
         this.field_g = null;
     }
 
-    private final RgbSprite c(int param0) {
+    private final wk c(int param0) {
         if (param0 != 34) {
-          return (RgbSprite) null;
+          return (wk) null;
         }
-        byte[] var3 = fd.field_m.getFileByName(this.field_x, param0 ^ 108, "");
+        byte[] var3 = fd.field_m.a(this.field_x, param0 ^ 108, "");
         byte[] var2 = var3;
-        return new RgbSprite(var3, (java.awt.Component) ((Object) ll.p(0)));
+        return new wk(var3, (java.awt.Component) ((Object) ll.p(0)));
     }
 
     static {

@@ -5,10 +5,10 @@ final class jv {
     static boolean field_a;
     static int field_c;
     static int[][] field_d;
-    static RgbSprite[] field_b;
+    static wk[] field_b;
     static String field_e;
 
-    final static int getUnitUnlockGroup(boolean obfuscationGuard, int unitType) {
+    final static int a(boolean param0, int param1) {
         int var2_int = 0;
         int var3 = 0;
         RuntimeException var2 = null;
@@ -17,15 +17,15 @@ final class jv {
         int stackIn_11_0 = 0;
         int stackIn_15_0 = 0;
         RuntimeException decompiledCaughtException = null;
-        var4 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        var4 = ArmiesOfGielinor.field_M ? 1 : 0;
         try {
-          if (obfuscationGuard) {
+          if (param0) {
             stackIn_3_0 = -40;
             return stackIn_3_0;
           }
-          for (var2_int = 0; var2_int < AnimationFrameSet.unitUnlockGroups.length; var2_int++) {
-            for (var3 = 0; var3 < AnimationFrameSet.unitUnlockGroups[var2_int].length; var3++) {
-              if (AnimationFrameSet.unitUnlockGroups[var2_int][var3] == unitType) {
+          for (var2_int = 0; var2_int < wp.field_H.length; var2_int++) {
+            for (var3 = 0; var3 < wp.field_H[var2_int].length; var3++) {
+              if (wp.field_H[var2_int][var3] == param1) {
                 stackIn_11_0 = var2_int;
                 return stackIn_11_0;
               }
@@ -36,7 +36,7 @@ final class jv {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) var2), "jv.A(" + obfuscationGuard + ',' + unitType + ')');
+          throw ig.a((Throwable) ((Object) var2), "jv.A(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -59,9 +59,9 @@ final class jv {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param3 <= 26) {
-            field_b = (RgbSprite[]) null;
+            field_b = (wk[]) null;
           }
-          stackIn_3_0 = MapTile.a(-92, aa.a(param0, 100, param2, param1));
+          stackIn_3_0 = ne.a(-92, aa.a(param0, 100, param2, param1));
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -73,7 +73,7 @@ final class jv {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 

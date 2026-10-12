@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class bf extends IntrusiveNode {
+abstract class bf extends tc {
     int field_k;
 
     private bf() throws Throwable {

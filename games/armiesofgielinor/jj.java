@@ -8,9 +8,9 @@ final class jj {
     static String[] field_a;
     static String field_f;
     static String field_e;
-    static ResourceArchive animationFramesArchive;
+    static kl field_c;
     static je[] field_i;
-    static BufferedSocket field_g;
+    static hi field_g;
 
     public static void a(byte param0) {
         field_g = null;
@@ -19,7 +19,7 @@ final class jj {
           jj.a(-113, (String) null);
           field_i = null;
           field_d = null;
-          animationFramesArchive = null;
+          field_c = null;
           field_h = null;
           field_b = null;
           field_a = null;
@@ -29,7 +29,7 @@ final class jj {
         }
         field_i = null;
         field_d = null;
-        animationFramesArchive = null;
+        field_c = null;
         field_h = null;
         field_b = null;
         field_a = null;
@@ -62,7 +62,7 @@ final class jj {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
         }
     }
 
@@ -77,15 +77,15 @@ final class jj {
         String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var4_ref = null;
-        var7 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        var7 = ArmiesOfGielinor.field_M ? 1 : 0;
         try {
           var4 = param2[param3][param1];
           var6 = -73 / ((12 - param0) / 61);
           if (le.a((byte) -125, var4)) {
             var5 = var4;
           } else {
-            if (CampaignMenuButton.a(30, var4)) {
-              var5 = SpellCastAction.a(param3, (byte) 78, var4);
+            if (iq.a(30, var4)) {
+              var5 = ua.a(param3, (byte) 78, var4);
             } else {
               if (!kq.a(var4, false)) {
                 var5 = null;
@@ -106,11 +106,11 @@ final class jj {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param3).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param3).append(')').toString());
         }
     }
 
-    final static void a(byte param0, int param1, PacketBuffer param2, int[] param3) {
+    final static void a(byte param0, int param1, vh param2, int[] param3) {
         RuntimeException stackIn_20_0 = null;
         StringBuilder stackIn_20_1 = null;
         String stackIn_21_2 = null;
@@ -121,13 +121,13 @@ final class jj {
         RuntimeException var4 = null;
         int var5 = 0;
         int var6 = 0;
-        var6 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        var6 = ArmiesOfGielinor.field_M ? 1 : 0;
         try {
           if (param3 != null &&
             param1 != 0) {
             var4_int = 0;
             while (param1 > 3) {
-              param2.writeByte(1, param3[var4_int] | param3[var4_int + 1] << 2 | param3[2 + var4_int] << 4 | param3[3 + var4_int] << 6);
+              param2.b(1, param3[var4_int] | param3[var4_int + 1] << 2 | param3[2 + var4_int] << 4 | param3[3 + var4_int] << 6);
               param1 -= 4;
               var4_int += 4;
             }
@@ -140,7 +140,7 @@ final class jj {
                   var5 = var5 | param3[var4_int + 2] << 4;
                 }
               }
-              param2.writeByte(1, var5);
+              param2.b(1, var5);
             }
             if (param0 > -17) {
               jj.b((byte) -104);
@@ -164,49 +164,49 @@ final class jj {
           } else {
             stackIn_24_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(')').toString());
         }
     }
 
-    final static void a(int param0, ResourceArchive param1) {
+    final static void a(int param0, kl param1) {
         int var3 = 0;
         int var4 = 0;
         pu var5 = null;
         int[] var6 = null;
         int var7 = 0;
-        CipherPacketBuffer var8 = null;
+        bv var8 = null;
         int var9 = 0;
-        CipherPacketBuffer var10 = null;
+        bv var10 = null;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
         String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         int var4Lifetime1;
-        var7 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        var7 = ArmiesOfGielinor.field_M ? 1 : 0;
         try {
-          var8 = new CipherPacketBuffer(param1.getFileByName("", 97, "logo.fo3d"));
+          var8 = new bv(param1.a("", 97, "logo.fo3d"));
           var10 = var8;
-          var3 = var10.readUnsignedByte(0);
-          var10.beginBitReading(90);
+          var3 = var10.k(0);
+          var10.o(90);
           if (param0 > -74) {
             return;
           }
           pg.field_a = fk.a(12, var10);
-          CampaignMenuButton.field_a = new pu[var3];
-          CampaignParticipant.field_s = new int[var3][];
+          iq.field_a = new pu[var3];
+          sd.field_s = new int[var3][];
           for (var4 = 0; var3 > var4; var4++) {
-            CampaignMenuButton.field_a[var4] = GameEvent.a(-86, var8);
+            iq.field_a[var4] = oj.a(-86, var8);
           }
-          var10.endBitReading(-2);
+          var10.n(-2);
           var9 = 0;
           var4Lifetime1 = var9;
           while (var9 < var3) {
-            var5 = CampaignMenuButton.field_a[var9];
+            var5 = iq.field_a[var9];
             var5.a(1, 6, 6, 6, 115);
             var5.a(-3831);
             var6 = new int[]{var5.field_p + var5.field_L >> 1, var5.field_H + var5.field_P >> 1, var5.field_J + var5.field_D >> 1};
-            CampaignParticipant.field_s[var9] = var6;
+            sd.field_s[var9] = var6;
             var5.a(-var6[2], 0, -var6[1], -var6[0]);
             var9++;
           }
@@ -221,15 +221,15 @@ final class jj {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 
     final static void a(int param0) {
-        if (null == ActionSpell.field_e) {
+        if (null == ra.field_e) {
           throw new IllegalStateException("NGR");
         }
-        ActionSpell.field_e.field_h = true;
+        ra.field_e.field_h = true;
         if (param0 != -4223) {
           field_b = (String) null;
           ds.a(1, -54);
@@ -249,7 +249,7 @@ final class jj {
           if (dn.l(0)) {
             return true;
           }
-          if (Spell.field_b != null) {
+          if (ik.field_b != null) {
             stackIn_20_0 = true;
           } else {
             if (vg.a(10)) {
@@ -267,7 +267,7 @@ final class jj {
         if (dn.l(0)) {
           return true;
         }
-        if (Spell.field_b != null) {
+        if (ik.field_b != null) {
           stackIn_10_0 = true;
         } else {
           if (vg.a(10)) {

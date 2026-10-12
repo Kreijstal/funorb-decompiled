@@ -23,12 +23,12 @@ final class ng {
     private int field_u;
     private boolean field_t;
     private int field_m;
-    private RgbSprite[] field_l;
+    private wk[] field_l;
     private nb field_y;
     private nb field_n;
     private int[] field_j;
     private int field_o;
-    private RgbSprite[] field_i;
+    private wk[] field_i;
 
     private final boolean q(int param0) {
         if (this.s(4)) {
@@ -44,7 +44,7 @@ final class ng {
     }
 
     private final int k(int param0) {
-        int var2 = this.field_l[1].canvasHeight;
+        int var2 = this.field_l[1].field_x;
         int var3 = this.field_k + var2;
         if (param0 >= -47) {
           this.field_x = true;
@@ -63,9 +63,9 @@ final class ng {
         int discarded$0 = 0;
         int var2 = this.field_a;
         int var3 = this.field_a + this.field_d;
-        if (!(SoftwareRaster.clipLeft <= var2)) {
-          var3 = var3 + (SoftwareRaster.clipLeft - var2);
-          if (SoftwareRaster.clipRight >= var3) {
+        if (!(qn.field_j <= var2)) {
+          var3 = var3 + (qn.field_j - var2);
+          if (qn.field_e >= var3) {
             return true;
           }
           return false;
@@ -74,9 +74,9 @@ final class ng {
           discarded$0 = this.i(-95);
         }
         var3 = this.field_d + this.field_a;
-        if (!(SoftwareRaster.clipRight >= var3)) {
-          var2 = var2 - (-SoftwareRaster.clipRight + var3);
-          return SoftwareRaster.clipLeft <= var2 ? true : false;
+        if (!(qn.field_e >= var3)) {
+          var2 = var2 - (-qn.field_e + var3);
+          return qn.field_j <= var2 ? true : false;
         }
         return true;
     }
@@ -88,7 +88,7 @@ final class ng {
         String var4;
         int var5;
         int var6;
-        var6 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        var6 = ArmiesOfGielinor.field_M ? 1 : 0;
         var2 = 0;
         if (param0 < 109) {
           discarded$1 = this.i(-54);
@@ -130,7 +130,7 @@ final class ng {
     private final void t(int param0) {
         int var2 = this.o(114);
         int var3 = this.field_e.a(' ') << 1;
-        int var4 = this.field_l[3].canvasWidth + this.field_l[5].canvasWidth;
+        int var4 = this.field_l[3].field_A + this.field_l[5].field_A;
         if (param0 != 0) {
           return;
         }
@@ -156,13 +156,13 @@ final class ng {
         this.field_z = this.field_m + this.field_n.a((byte) 102);
     }
 
-    private final RgbSprite[] c(boolean param0) {
+    private final wk[] c(boolean param0) {
         int var4 = 0;
-        int var5 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        int var5 = ArmiesOfGielinor.field_M ? 1 : 0;
         int var2 = this.field_i.length;
-        RgbSprite[] var3 = new RgbSprite[var2];
+        wk[] var3 = new wk[var2];
         if (param0) {
-          this.field_l = (RgbSprite[]) null;
+          this.field_l = (wk[]) null;
         }
         for (var4 = 0; var2 > var4; var4++) {
           var3[var4] = this.field_i[var4].g();
@@ -219,17 +219,17 @@ final class ng {
           } else {
             stackIn_5_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(')').toString());
         }
     }
 
     private final boolean s(int param0) {
         int var2 = this.field_h;
         int var3 = this.field_h + this.field_g;
-        if (SoftwareRaster.clipTop > var2) {
+        if (qn.field_a > var2) {
           return false;
         }
-        if (var3 > SoftwareRaster.clipBottom) {
+        if (var3 > qn.field_f) {
           return false;
         }
         if (param0 != 4) {
@@ -290,28 +290,28 @@ final class ng {
         if (this.h(-2)) {
           var2 = this.field_a;
           var3 = this.field_a + this.field_d;
-          if (var2 < SoftwareRaster.clipLeft) {
-            var3 = var3 + (SoftwareRaster.clipLeft - var2);
-            if (SoftwareRaster.clipRight >= var3) {
-              var2 = SoftwareRaster.clipLeft;
+          if (var2 < qn.field_j) {
+            var3 = var3 + (qn.field_j - var2);
+            if (qn.field_e >= var3) {
+              var2 = qn.field_j;
               this.field_f = var3 - var2;
               this.field_q = var2;
               return;
             }
           }
           var3Lifetime1 = this.field_a + this.field_d;
-          if (var3Lifetime1 > SoftwareRaster.clipRight) {
-            var2 = var2 - (var3Lifetime1 - SoftwareRaster.clipRight);
-            if (SoftwareRaster.clipLeft <= var2) {
+          if (var3Lifetime1 > qn.field_e) {
+            var2 = var2 - (var3Lifetime1 - qn.field_e);
+            if (qn.field_j <= var2) {
               this.field_q = var2;
-              var3Lifetime1 = SoftwareRaster.clipRight;
+              var3Lifetime1 = qn.field_e;
               this.field_f = -var2 + var3Lifetime1;
               return;
             }
           }
         }
-        this.field_q = SoftwareRaster.clipLeft;
-        this.field_f = SoftwareRaster.clipRight;
+        this.field_q = qn.field_j;
+        this.field_f = qn.field_e;
     }
 
     private final void a(byte param0, int param1, int param2) {
@@ -371,7 +371,7 @@ final class ng {
     private final int i(int param0) {
         int var2 = this.k(-123);
         int var3 = this.field_y.c(param0 + 26786);
-        int var4 = this.field_l[7].canvasHeight;
+        int var4 = this.field_l[7].field_x;
         int var5 = -var3 + (-var4 + (this.field_k + this.field_w));
         int var6 = -var2 + var5 + param0;
         return var6;
@@ -391,7 +391,7 @@ final class ng {
         if (!this.field_y.c(false)) {
           var5 = var5 - this.field_y.c(26787);
         }
-        SoftwareRaster.f(var2, var3, var4, var5, 7829367);
+        qn.f(var2, var3, var4, var5, 7829367);
         i.a(this.field_l, var5, var2, (byte) -47, var3, var4);
     }
 
@@ -420,14 +420,14 @@ final class ng {
         if (param0 >= -55) {
           this.g(82);
         }
-        int var2 = this.field_l[3].canvasWidth;
+        int var2 = this.field_l[3].field_A;
         int var3 = this.field_q + var2;
         return var3;
     }
 
     final boolean D(int param0) {
         if (param0 <= 80) {
-          this.field_i = (RgbSprite[]) null;
+          this.field_i = (wk[]) null;
         }
         return this.field_t;
     }
@@ -454,7 +454,7 @@ final class ng {
         int var3Lifetime1;
         int var4Lifetime1;
         int var5Lifetime1;
-        var6 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        var6 = ArmiesOfGielinor.field_M ? 1 : 0;
         try {
           var2_int = param0.length();
           if (0 == var2_int) {
@@ -526,7 +526,7 @@ final class ng {
           } else {
             stackIn_52_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_51_0), ((StringBuilder) (Object) stackIn_51_1).append(stackIn_52_2).append(',').append(param1).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_51_0), ((StringBuilder) (Object) stackIn_51_1).append(stackIn_52_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -551,7 +551,7 @@ final class ng {
           pq.field_b = param0;
           tn.field_Z = new tg(param1, param8, param7, param3, param4, param6, param2);
         } catch (RuntimeException runtimeException) {
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "ng.FA(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ',' + param6 + ',' + (param7 != null ? "{...}" : "null") + ',' + param8 + ')');
+          throw ig.a((Throwable) ((Object) runtimeException), "ng.FA(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ',' + param6 + ',' + (param7 != null ? "{...}" : "null") + ',' + param8 + ')');
         }
     }
 
@@ -570,30 +570,30 @@ final class ng {
     }
 
     final static void b(boolean param0) {
-        RgbSprite var1 = null;
-        RgbSprite var2 = null;
+        wk var1 = null;
+        wk var2 = null;
         int var3 = 0;
-        int var4 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        int var4 = ArmiesOfGielinor.field_M ? 1 : 0;
         try {
-          var1 = new RgbSprite(540, 140);
-          CombatSandbox.a(var1, 3);
+          var1 = new wk(540, 140);
+          vn.a(var1, 3);
           if (!param0) {
             ng.w(33);
           }
-          TriangleRasterizer.useRasterClip();
-          SoftwareRaster.b();
+          tm.a();
+          qn.b();
           ib.field_j = 0;
           rb.e(9);
           var2 = var1.g();
           for (var3 = 0; 15 > var3; var3++) {
             var2.a(-2, -2, 16777215);
-            SoftwareRaster.c(4, 4, 0, 0, 540, 140);
+            qn.c(4, 4, 0, 0, 540, 140);
           }
           kq.field_P.b();
           var1.h(0, 0);
           rf.b(-18862);
         } catch (RuntimeException runtimeException) {
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "ng.V(" + param0 + ')');
+          throw ig.a((Throwable) ((Object) runtimeException), "ng.V(" + param0 + ')');
         }
     }
 
@@ -612,7 +612,7 @@ final class ng {
     private final int E(int param0) {
         int var2 = this.n(-128);
         int var3 = this.field_n.c(26787);
-        int var4 = this.field_l[5].canvasWidth;
+        int var4 = this.field_l[5].field_A;
         int var5 = -var3 - var4 + (this.field_q + this.field_f);
         int var6 = -var2 + (var5 + param0);
         return var6;
@@ -660,20 +660,20 @@ final class ng {
         if (this.b((byte) -105)) {
           var2 = this.field_h;
           var3 = this.field_g + this.field_h;
-          if (!(SoftwareRaster.clipTop <= var2)) {
-            var3 = var3 + (-var2 + SoftwareRaster.clipTop);
-            if (!(SoftwareRaster.clipBottom < var3)) {
-              var2 = SoftwareRaster.clipTop;
+          if (!(qn.field_a <= var2)) {
+            var3 = var3 + (-var2 + qn.field_a);
+            if (!(qn.field_f < var3)) {
+              var2 = qn.field_a;
               this.field_k = var2;
               this.field_w = var3 - var2;
               return;
             }
           }
           var3Lifetime1 = this.field_h + this.field_g;
-          if (!(SoftwareRaster.clipBottom >= var3Lifetime1)) {
-            var2 = var2 - (-SoftwareRaster.clipBottom + var3Lifetime1);
-            if (!(SoftwareRaster.clipTop > var2)) {
-              var3Lifetime1 = SoftwareRaster.clipBottom;
+          if (!(qn.field_f >= var3Lifetime1)) {
+            var2 = var2 - (-qn.field_f + var3Lifetime1);
+            if (!(qn.field_a > var2)) {
+              var3Lifetime1 = qn.field_f;
               this.field_k = var2;
               this.field_w = var3Lifetime1 - var2;
               return;
@@ -683,8 +683,8 @@ final class ng {
         if (param0 != -4) {
           return;
         }
-        this.field_w = SoftwareRaster.clipBottom;
-        this.field_k = SoftwareRaster.clipTop;
+        this.field_w = qn.field_f;
+        this.field_k = qn.field_a;
     }
 
     private final boolean a(boolean param0) {
@@ -693,10 +693,10 @@ final class ng {
           return true;
         }
         int var3 = this.field_a + this.field_d;
-        if (SoftwareRaster.clipLeft > var2) {
+        if (qn.field_j > var2) {
           return false;
         }
-        if (SoftwareRaster.clipRight < var3) {
+        if (qn.field_e < var3) {
           return false;
         }
         return true;
@@ -706,7 +706,7 @@ final class ng {
         int var8 = 0;
         String var9 = null;
         int var10 = 0;
-        int var11 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        int var11 = ArmiesOfGielinor.field_M ? 1 : 0;
         int var2 = this.k(param0 - 100);
         if (param0 != 3) {
           return;
@@ -715,8 +715,8 @@ final class ng {
         int var4 = this.n(-116);
         int var5 = var4 + this.E(1);
         int var6 = this.field_p;
-        SoftwareRaster.b(this.field_j);
-        SoftwareRaster.b(var4, var2, var5, var3);
+        qn.b(this.field_j);
+        qn.b(var4, var2, var5, var3);
         var4 = -var6 + var4;
         var2 = var2 + this.field_e.field_H;
         int var7 = this.d((byte) -85);
@@ -729,28 +729,28 @@ final class ng {
           this.field_e.b(var9, var4, var2, var10, -1);
           var2 = var2 + var7;
         }
-        SoftwareRaster.a(this.field_j);
+        qn.a(this.field_j);
     }
 
     final static void x(int param0) {
         qf.field_e = null;
-        SummonEvent.field_F = null;
+        mb.field_F = null;
         ed.field_e = null;
         if (jl.field_b != null) {
-          UpkeepEvent.field_z = jl.field_b;
-          rb.field_b = ArchiveProvider.field_d;
-          UpkeepEvent.field_z.field_W = -1;
-          UpkeepEvent.field_z.field_T = -1;
+          qj.field_z = jl.field_b;
+          rb.field_b = ew.field_d;
+          qj.field_z.field_W = -1;
+          qj.field_z.field_T = -1;
           jl.field_b = null;
-          ArchiveProvider.field_d = null;
+          ew.field_d = null;
         }
-        UnitCycler.field_g = null;
+        eu.field_g = null;
         hf.field_c = true;
         sb.field_i = null;
         int var1 = 89 % ((param0 + 51) / 39);
     }
 
-    final static void a(RgbSprite param0, int param1, RgbSprite param2) {
+    final static void a(wk param0, int param1, wk param2) {
         int var3_int = 0;
         int var4 = 0;
         RuntimeException stackIn_7_0 = null;
@@ -760,17 +760,17 @@ final class ng {
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
-        var4 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        var4 = ArmiesOfGielinor.field_M ? 1 : 0;
         try {
-          ds.field_a = new RgbSprite[op.field_c[param1].length];
-          le.field_c = new RgbSprite[op.field_c[0].length];
-          DiskCacheWorker.field_d = param0;
+          ds.field_a = new wk[op.field_c[param1].length];
+          le.field_c = new wk[op.field_c[0].length];
+          vo.field_d = param0;
           im.field_y = param2;
           for (var3_int = 0; op.field_c[0].length > var3_int; var3_int++) {
-            ds.field_a[var3_int] = new RgbSprite(DiskCacheWorker.field_d.pixelWidth, DiskCacheWorker.field_d.pixelHeight);
-            le.field_c[var3_int] = new RgbSprite(im.field_y.pixelWidth, im.field_y.pixelHeight);
+            ds.field_a[var3_int] = new wk(vo.field_d.field_y, vo.field_d.field_v);
+            le.field_c[var3_int] = new wk(im.field_y.field_y, im.field_y.field_v);
             ds.field_a[var3_int].b();
-            DiskCacheWorker.field_d.d(0, 0, op.field_c[0][var3_int]);
+            vo.field_d.d(0, 0, op.field_c[0][var3_int]);
             le.field_c[var3_int].b();
             im.field_y.b(0, 0, op.field_c[0][var3_int]);
           }
@@ -791,7 +791,7 @@ final class ng {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 
@@ -809,7 +809,7 @@ final class ng {
 
     private final void v(int param0) {
         boolean discarded$0 = false;
-        int var3 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        int var3 = ArmiesOfGielinor.field_M ? 1 : 0;
         if (!this.field_x) {
           return;
         }
@@ -831,9 +831,9 @@ final class ng {
         }
     }
 
-    ng(RgbSprite[] param0, RgbSprite[] param1, tu param2, int[] param3, String[] param4, int param5, int param6) {
+    ng(wk[] param0, wk[] param1, tu param2, int[] param3, String[] param4, int param5, int param6) {
         RuntimeException var8 = null;
-        RgbSprite[] var9 = null;
+        wk[] var9 = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
         String stackIn_6_2 = null;
@@ -894,7 +894,7 @@ final class ng {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param5).append(',').append(param6).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param5).append(',').append(param6).append(')').toString());
         }
     }
 
@@ -902,17 +902,17 @@ final class ng {
         int var2 = this.field_h;
         int var4 = 40 / ((param0 - 15) / 45);
         int var3 = this.field_h + this.field_g;
-        if (!(var2 >= SoftwareRaster.clipTop)) {
-          var3 = var3 + (-var2 + SoftwareRaster.clipTop);
-          if (var3 > SoftwareRaster.clipBottom) {
+        if (!(var2 >= qn.field_a)) {
+          var3 = var3 + (-var2 + qn.field_a);
+          if (var3 > qn.field_f) {
             return false;
           }
           return true;
         }
         var3 = this.field_g + this.field_h;
-        if (SoftwareRaster.clipBottom < var3) {
-          var2 = var2 - (var3 - SoftwareRaster.clipBottom);
-          if (SoftwareRaster.clipTop <= var2) {
+        if (qn.field_f < var3) {
+          var2 = var2 - (var3 - qn.field_f);
+          if (qn.field_a <= var2) {
             return true;
           }
           return false;
@@ -922,7 +922,7 @@ final class ng {
 
     final int a(int param0, byte param1, int param2) {
         int var9 = 0;
-        int var10 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        int var10 = ArmiesOfGielinor.field_M ? 1 : 0;
         int var4 = this.n(-60);
         int var5 = this.k(-101);
         int var6 = this.d((byte) -111);
@@ -943,7 +943,7 @@ final class ng {
         if (param0 < 118) {
           this.field_y = (nb) null;
         }
-        int var4 = this.field_l[1].canvasHeight + this.field_l[7].canvasHeight;
+        int var4 = this.field_l[1].field_x + this.field_l[7].field_x;
         int var5 = this.field_y.c(26787);
         this.field_g = var3 + var4 + var5;
     }

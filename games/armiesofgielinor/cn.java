@@ -24,7 +24,7 @@ final class cn extends vf {
           if (du.field_d == mh.field_b) {
             return se.field_g.b(true);
           }
-          return IsaacRandom.field_d;
+          return ga.field_d;
         }
         if (!se.field_g.a((byte) 126)) {
           return se.field_g.b(true);
@@ -32,7 +32,7 @@ final class cn extends vf {
         if (du.field_d == mh.field_b) {
           return se.field_g.b(true);
         }
-        return IsaacRandom.field_d;
+        return ga.field_d;
     }
 
     final void a(int param0) {

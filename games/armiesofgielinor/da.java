@@ -3,34 +3,34 @@
  */
 final class da {
     static sa field_b;
-    static int[][][] instructionIllustrationArguments;
+    static int[][][] field_a;
 
     final static void c(int param0) {
-        DualLinkedNode var1 = null;
-        int var2 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
-        DualLinkedNode var1Lifetime1;
+        ms var1 = null;
+        int var2 = ArmiesOfGielinor.field_M ? 1 : 0;
+        ms var1Lifetime1;
         try {
           vl.field_p = null;
           dj.field_a = 0;
           vg.field_p = 0;
           wh.field_c.b(126);
           ot.field_E.b(81);
-          var1 = DiskCacheRequest.field_K.a((byte) 66);
+          var1 = nh.field_K.a((byte) 66);
           while (var1 != null) {
-            var1.unlinkSecondary((byte) -76);
-            var1 = DiskCacheRequest.field_K.c(1);
+            var1.c((byte) -76);
+            var1 = nh.field_K.c(1);
           }
           if (param0 > -112) {
             da.a(89, true);
           }
           var1Lifetime1 = bk.field_a.a((byte) 66);
           while (var1Lifetime1 != null) {
-            var1Lifetime1.unlinkSecondary((byte) -76);
+            var1Lifetime1.c((byte) -76);
             var1Lifetime1 = bk.field_a.c(1);
           }
           th.field_a = 0;
         } catch (RuntimeException runtimeException) {
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "da.I(" + param0 + ')');
+          throw ig.a((Throwable) ((Object) runtimeException), "da.I(" + param0 + ')');
         }
     }
 
@@ -43,20 +43,20 @@ final class da {
           param1 >= vi.field_a.length) {
           return;
         }
-        RadialSummonMenu.$cfr$intArgs$a$6d836999ad61(106, vi.field_a[param1]);
+        ub.$cfr$intArgs$a$6d836999ad61(106, vi.field_a[param1]);
         if (param0 > -22) {
           da.b(0);
         }
     }
 
     final static void a(int param0) {
-        mv.field_d = ByteStorage.field_e.g(1);
+        mv.field_d = mg.field_e.g(1);
         if (param0 <= 10) {
           String[] var2 = (String[]) null;
           da.a(70, 41, (String[][]) null, (String[]) null, 94);
         }
         CharSequence var3 = (CharSequence) ((Object) mv.field_d);
-        IntPair.field_p = k.a(var3, false);
+        ft.field_p = k.a(var3, false);
     }
 
     final static boolean a(int param0, java.applet.Applet param1) {
@@ -74,9 +74,9 @@ final class da {
           Throwable decompiledCaughtException = null;
           Throwable var2_ref = null;
           RuntimeException var2_ref2 = null;
-          var7 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+          var7 = ArmiesOfGielinor.field_M ? 1 : 0;
           try {
-            if (NodeDeque.field_a) {
+            if (at.field_a) {
               return true;
             }
             try {
@@ -84,7 +84,7 @@ final class da {
               var3 = (String) (lj.a("getcookies", (byte) 81, param1));
               var4 = dj.a(29, ';', var3);
               if (param0 != 23660) {
-                instructionIllustrationArguments = (int[][][]) null;
+                field_a = (int[][][]) null;
               }
               for (var5 = 0; var5 < var4.length; var5++) {
                 var6 = var4[var5].indexOf('=');
@@ -109,7 +109,7 @@ final class da {
             } else {
               stackIn_24_2 = "{...}";
             }
-            throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(')').toString());
+            throw ig.a((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -120,9 +120,9 @@ final class da {
 
     public static void a(boolean param0) {
         if (param0) {
-          instructionIllustrationArguments = (int[][][]) null;
+          field_a = (int[][][]) null;
         }
-        instructionIllustrationArguments = (int[][][]) null;
+        field_a = (int[][][]) null;
         field_b = null;
     }
 
@@ -140,15 +140,15 @@ final class da {
         StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
-        var10 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        var10 = ArmiesOfGielinor.field_M ? 1 : 0;
         try {
-          param0 = Battlefield.b(param0, param4, -4);
+          param0 = ha.b(param0, param4, -4);
           var5_int = param2[param0].length;
           for (var6 = param1; var6 < var5_int; var6++) {
             var7 = var6;
             var8 = jj.a((byte) 103, var7, param2, param0);
             var9 = t.a(var8, param3, (byte) 118);
-            BestScoreStrategy.unitAnimationVariants[param4][param0][var7] = var9;
+            aw.field_j[param4][param0][var7] = var9;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -167,7 +167,7 @@ final class da {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param4).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -178,13 +178,13 @@ final class da {
         if (jj.b((byte) -73)) {
           param1 = false;
         }
-        TileMetadata.a(5295, param1);
+        ca.a(5295, param1);
         jg.a((byte) 102);
     }
 
     final static void b(int param0) {
         t.field_c = kv.k(5);
-        KingBlackDragonEvent.field_C = new gk();
+        rl.field_C = new gk();
         if (param0 != -2) {
           java.applet.Applet var2 = (java.applet.Applet) null;
           da.a(43, (java.applet.Applet) null);
@@ -204,24 +204,24 @@ final class da {
         rs var5_ref_rs = null;
         int[] var6 = null;
         int var8 = 0;
-        CipherPacketBuffer var9 = null;
+        bv var9 = null;
         int[] var10 = null;
         int[] var11 = null;
-        var8 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        var8 = ArmiesOfGielinor.field_M ? 1 : 0;
         try {
-          var9 = ByteStorage.field_e;
-          var2 = var9.readUnsignedByte(0);
+          var9 = mg.field_e;
+          var2 = var9.k(0);
           if (param0 >= -77) {
             return;
           }
-          var3 = var9.readUnsignedByte(0);
+          var3 = var9.k(0);
           if (0 == var2) {
-            var4 = (on) (StateChangeMarker.field_t.first((byte) 96));
+            var4 = (on) (ss.field_t.e((byte) 96));
             if (var4 == null) {
               dj.a((byte) -124);
               return;
             }
-            var5 = fk.field_b - var9.position;
+            var5 = fk.field_b - var9.field_q;
             var11 = var4.field_m;
             var10 = var11;
             var6 = var10;
@@ -229,41 +229,41 @@ final class da {
               var5 = var11.length << 2;
             }
             for (var7 = 0; var5 > var7; var7++) {
-              var6[var7 >> 2] = var6[var7 >> 2] + (var9.readUnsignedByte(0) << rn.a(var7 << 8, 768));
+              var6[var7 >> 2] = var6[var7 >> 2] + (var9.k(0) << rn.a(var7 << 8, 768));
             }
-            var4.unlink(-116);
+            var4.d(-116);
             return;
           }
           if (1 == var2) {
-            var4_int = var9.readSignedSmart(100);
-            var5_ref_rs = (rs) (gg.field_F.first((byte) 107));
+            var4_int = var9.a(100);
+            var5_ref_rs = (rs) (gg.field_F.e((byte) 107));
             while (var5_ref_rs != null) {
               if (var5_ref_rs.field_r != var3 ||
                 var4_int != var5_ref_rs.field_l) {
-                var5_ref_rs = (rs) (gg.field_F.next((byte) 123));
+                var5_ref_rs = (rs) (gg.field_F.a((byte) 123));
                 continue;
               }
               break;
             }
             if (var5_ref_rs != null) {
-              var5_ref_rs.unlink(-105);
+              var5_ref_rs.d(-105);
               return;
             }
             dj.a((byte) -125);
             return;
           }
-          af.a((Throwable) null, 70, "LR1: " + CampaignProgress.b(false));
+          af.a((Throwable) null, 70, "LR1: " + cm.b(false));
           dj.a((byte) -127);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) var1), "da.G(" + param0 + ')');
+          throw ig.a((Throwable) ((Object) var1), "da.G(" + param0 + ')');
         }
     }
 
     static {
         field_b = new sa();
-        instructionIllustrationArguments = new int[][][]{new int[][]{new int[]{-2, -2, -2, -2}}, new int[][]{new int[]{-2, -2, -2, -2}}, new int[][]{new int[]{-2, -2, -2, -2, -2}}, new int[][]{new int[]{-2, -2, -2, -2, -2}}, new int[][]{new int[]{-2, -2, -2, -2, -2}}, new int[][]{new int[]{-2, -2, -2, -1, 0, 3}}, new int[][]{new int[]{-2, -1, 0, 3, -2, -2}}, new int[][]{new int[]{-2, -1, 0, 3, -2}}, new int[][]{new int[]{-2, -2, -2, -2}}, new int[][]{new int[]{-2, -1, 3, -1, 3}, new int[]{-2, -2, -2, -2}}, new int[][]{new int[]{-2, -2, -2, -2, -2, -2}}, new int[][]{new int[]{-2, -1, 0, 3, -2, -2, -2}}, new int[][]{new int[]{-2, -2, -2, -2}}, new int[][]{new int[]{-2, -2, -2, -2}}, new int[][]{new int[]{-2, -2, -2}}, new int[][]{new int[]{-2, -2, -2, -2}}, new int[][]{new int[]{-2, -2, -2, -2}}};
+        field_a = new int[][][]{new int[][]{new int[]{-2, -2, -2, -2}}, new int[][]{new int[]{-2, -2, -2, -2}}, new int[][]{new int[]{-2, -2, -2, -2, -2}}, new int[][]{new int[]{-2, -2, -2, -2, -2}}, new int[][]{new int[]{-2, -2, -2, -2, -2}}, new int[][]{new int[]{-2, -2, -2, -1, 0, 3}}, new int[][]{new int[]{-2, -1, 0, 3, -2, -2}}, new int[][]{new int[]{-2, -1, 0, 3, -2}}, new int[][]{new int[]{-2, -2, -2, -2}}, new int[][]{new int[]{-2, -1, 3, -1, 3}, new int[]{-2, -2, -2, -2}}, new int[][]{new int[]{-2, -2, -2, -2, -2, -2}}, new int[][]{new int[]{-2, -1, 0, 3, -2, -2, -2}}, new int[][]{new int[]{-2, -2, -2, -2}}, new int[][]{new int[]{-2, -2, -2, -2}}, new int[][]{new int[]{-2, -2, -2}}, new int[][]{new int[]{-2, -2, -2, -2}}, new int[][]{new int[]{-2, -2, -2, -2}}};
     }
 }

@@ -4,10 +4,10 @@
 final class bl {
     static String field_a;
     private ri field_e;
-    static NodeDeque field_h;
+    static at field_h;
     static boolean field_f;
-    private ResourceArchive field_c;
-    private ResourceArchive field_d;
+    private kl field_c;
+    private kl field_d;
     static String field_g;
     static boolean field_b;
 
@@ -22,13 +22,13 @@ final class bl {
         if (param0 != 2) {
           field_f = false;
         }
-        if (BoundedFile.field_b) {
+        if (ei.field_b) {
           return null;
         }
-        if (ev.field_a < NodeIterator.field_c) {
+        if (ev.field_a < bb.field_c) {
           return null;
         }
-        if (!(ps.field_E + NodeIterator.field_c <= ev.field_a)) {
+        if (!(ps.field_E + bb.field_c <= ev.field_a)) {
           return ts.field_a;
         }
         return null;
@@ -42,7 +42,7 @@ final class bl {
         try {
           t.a((byte) -118, param0);
         } catch (RuntimeException runtimeException) {
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "bl.G(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw ig.a((Throwable) ((Object) runtimeException), "bl.G(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -60,7 +60,7 @@ final class bl {
         of stackIn_80_0 = null;
         boolean stackIn_81_1 = false;
         RuntimeException decompiledCaughtException = null;
-        CipherPacketBuffer var1 = null;
+        bv var1 = null;
         RuntimeException var1_ref = null;
         int var2 = 0;
         int var3 = 0;
@@ -103,22 +103,22 @@ final class bl {
         var24 = null;
         var17 = null;
         var18 = null;
-        var11 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        var11 = ArmiesOfGielinor.field_M ? 1 : 0;
         try {
-          regionExit1: {
-            var1 = ByteStorage.field_e;
-            var2 = ((PacketBuffer) ((Object) var1)).readUnsignedByte(0);
+          L0: {
+            var1 = mg.field_e;
+            var2 = ((vh) ((Object) var1)).k(0);
             if (var2 != 0 &&
               var2 != 1 &&
               var2 != 2 &&
               var2 != 3 &&
               var2 != 4) {
               if (var2 == 5) {
-                var3_long = ((PacketBuffer) ((Object) var1)).j((byte) -2);
-                var22 = ((PacketBuffer) ((Object) var1)).g(1);
-                var19 = ((PacketBuffer) ((Object) var1)).g(1);
-                var21 = ((PacketBuffer) ((Object) var1)).g(1);
-                var20 = DeployEvent.a((byte) 121, var3_long);
+                var3_long = ((vh) ((Object) var1)).j((byte) -2);
+                var22 = ((vh) ((Object) var1)).g(1);
+                var19 = ((vh) ((Object) var1)).g(1);
+                var21 = ((vh) ((Object) var1)).g(1);
+                var20 = tr.a((byte) 121, var3_long);
                 var8_ref_of = var20;
                 stackIn_10_0 = (var19.equals("")) ? 0 : 1;
                 var9 = stackIn_10_0;
@@ -130,82 +130,82 @@ final class bl {
                     var20.a((byte) 53, var21, var22);
                   }
                 }
-                var8_ref_of.field_Vb = vi.b(82) - (long)((PacketBuffer) ((Object) var1)).readInt(1);
-                var8_ref_of.field_Sb = ((PacketBuffer) ((Object) var1)).readUnsignedShort((byte) -104);
-                var10 = ((PacketBuffer) ((Object) var1)).h(-27);
+                var8_ref_of.field_Vb = vi.b(82) - (long)((vh) ((Object) var1)).i(1);
+                var8_ref_of.field_Sb = ((vh) ((Object) var1)).e((byte) -104);
+                var10 = ((vh) ((Object) var1)).h(-27);
                 stackIn_16_0 = var8_ref_of;
                 stackIn_17_1 = ((1 & var10) != 0);
                 stackIn_16_0.field_Zb = stackIn_17_1;
                 var8_ref_of.field_Xb = var10 >> 1;
-                var8_ref_of.field_Qb = ((PacketBuffer) ((Object) var1)).readUnsignedByte(0);
-                var8_ref_of.field_Ob = ((PacketBuffer) ((Object) var1)).readUnsignedByte(0);
+                var8_ref_of.field_Qb = ((vh) ((Object) var1)).k(0);
+                var8_ref_of.field_Ob = ((vh) ((Object) var1)).k(0);
                 sf.a((byte) -115, var8_ref_of);
-                break regionExit1;
+                break L0;
               }
               if (var2 == 6) {
-                var3_long = ((PacketBuffer) ((Object) var1)).j((byte) -2);
-                var5 = ((PacketBuffer) ((Object) var1)).readUnsignedByte(0);
-                var23 = DeployEvent.a((byte) 121, var3_long);
+                var3_long = ((vh) ((Object) var1)).j((byte) -2);
+                var5 = ((vh) ((Object) var1)).k(0);
+                var23 = tr.a((byte) 121, var3_long);
                 if ((var23 != null)) {
                   if (var23.field_Ub) {
-                    AnimationPlayer.field_a = AnimationPlayer.field_a - 1;
+                    vj.field_a = vj.field_a - 1;
                     var23.field_Ub = false;
                   }
                   if (var5 == 0) {
-                    var23.unlink(126);
+                    var23.d(126);
                   } else {
                     var23.field_Rb = qd.field_K;
                     var23.field_Kb = var5;
                   }
-                  var23.unlinkSecondary((byte) -76);
+                  var23.c((byte) -76);
                 }
               } else {
                 if (var2 == 7) {
-                  var31 = (of) (SummonAction.field_u.first((byte) 106));
+                  var31 = (of) (be.field_u.e((byte) 106));
                   while (var31 != null) {
-                    var31.unlink(122);
-                    var31.unlinkSecondary((byte) -76);
-                    var31 = (of) (SummonAction.field_u.next((byte) 123));
+                    var31.d(122);
+                    var31.c((byte) -76);
+                    var31 = (of) (be.field_u.a((byte) 123));
                   }
-                  AnimationPlayer.field_a = 0;
+                  vj.field_a = 0;
                 } else {
                   if (8 == var2) {
-                    var3 = ((PacketBuffer) ((Object) var1)).readUnsignedShort((byte) -104);
+                    var3 = ((vh) ((Object) var1)).e((byte) -104);
                     var4_ref_au = (au) (qm.field_J.a((byte) -27, (long)var3));
                     if (var4_ref_au == null) {
                       var4_ref_au = new au(tq.field_b);
                       qm.field_J.a(-1, (long)var3, var4_ref_au);
                     }
-                    TrianglePulse.a(var4_ref_au, true, var1, 78);
+                    hh.a(var4_ref_au, true, var1, 78);
                     rf.a(-107, var4_ref_au);
                   } else {
                     if (var2 == 9) {
-                      var3 = ((PacketBuffer) ((Object) var1)).readUnsignedShort((byte) -104);
-                      var4 = ((PacketBuffer) ((Object) var1)).readUnsignedByte(0);
+                      var3 = ((vh) ((Object) var1)).e((byte) -104);
+                      var4 = ((vh) ((Object) var1)).k(0);
                       var32 = (au) (qm.field_J.a((byte) -27, (long)var3));
                       if ((var32 != null)) {
                         if (var4 != 0) {
                           var32.field_Lb = qd.field_K;
                           var32.field_mc = var4;
                         } else {
-                          var32.unlink(118);
+                          var32.d(118);
                         }
-                        var32.unlinkSecondary((byte) -76);
+                        var32.c((byte) -76);
                       }
                     } else {
                       if (var2 == 10) {
-                        var33 = (au) (qc.field_g.first((byte) 105));
+                        var33 = (au) (qc.field_g.e((byte) 105));
                         while (var33 != null) {
-                          var33.unlink(-112);
-                          var33.unlinkSecondary((byte) -76);
-                          var33 = (au) (qc.field_g.next((byte) 123));
+                          var33.d(-112);
+                          var33.c((byte) -76);
+                          var33 = (au) (qc.field_g.a((byte) 123));
                         }
                       } else {
                         if (var2 != 11 &&
                           var2 != 12) {
                           if (var2 == 13) {
-                            var3 = ((PacketBuffer) ((Object) var1)).readUnsignedShort((byte) -104);
-                            var4 = ((PacketBuffer) ((Object) var1)).readUnsignedByte(0);
+                            var3 = ((vh) ((Object) var1)).e((byte) -104);
+                            var4 = ((vh) ((Object) var1)).k(0);
                             var17_ref = (au) (qm.field_J.a((byte) -27, (long)var3));
                             if ((var17_ref != null)) {
                               var17_ref.field_gc = false;
@@ -225,69 +225,69 @@ final class bl {
                                 var2 != 17) {
                                 switch (var2) {
                                   case 18:
-                                    var3_long = ((PacketBuffer) ((Object) var1)).j((byte) -2);
-                                    var27 = ((PacketBuffer) ((Object) var1)).g(1);
-                                    var28 = ((PacketBuffer) ((Object) var1)).g(1);
-                                    var7 = UnitModelPreview.a(var3_long, -79);
+                                    var3_long = ((vh) ((Object) var1)).j((byte) -2);
+                                    var27 = ((vh) ((Object) var1)).g(1);
+                                    var28 = ((vh) ((Object) var1)).g(1);
+                                    var7 = hr.a(var3_long, -79);
                                     if (var7 == null) {
                                       var7 = new of(var27, var28, var3_long);
-                                      UnitCycler.field_e.a(-1, var3_long, var7);
+                                      eu.field_e.a(-1, var3_long, var7);
                                       vu.field_M.field_Ub = vu.field_M.field_Ub + 1;
                                     }
-                                    var7.field_Sb = ((PacketBuffer) ((Object) var1)).readUnsignedShort((byte) -104);
-                                    var8 = ((PacketBuffer) ((Object) var1)).h(120);
+                                    var7.field_Sb = ((vh) ((Object) var1)).e((byte) -104);
+                                    var8 = ((vh) ((Object) var1)).h(120);
                                     var7.field_Xb = var8 >> 1;
                                     stackIn_80_0 = var7;
                                     stackIn_81_1 = ((var8 & 1) != 0);
                                     stackIn_80_0.field_Zb = stackIn_81_1;
-                                    var7.field_Qb = ((PacketBuffer) ((Object) var1)).readUnsignedByte(0);
-                                    var7.field_Ob = ((PacketBuffer) ((Object) var1)).readUnsignedByte(0);
-                                    wl.field_F.addLast((byte) -119, (IntrusiveNode) (var7));
-                                    break regionExit1;
+                                    var7.field_Qb = ((vh) ((Object) var1)).k(0);
+                                    var7.field_Ob = ((vh) ((Object) var1)).k(0);
+                                    wl.field_F.a((byte) -119, (tc) (var7));
+                                    break L0;
                                   case 19:
-                                    var3_long = ((PacketBuffer) ((Object) var1)).j((byte) -2);
-                                    var5 = ((PacketBuffer) ((Object) var1)).readUnsignedByte(0);
-                                    var14 = UnitModelPreview.a(var3_long, -111);
+                                    var3_long = ((vh) ((Object) var1)).j((byte) -2);
+                                    var5 = ((vh) ((Object) var1)).k(0);
+                                    var14 = hr.a(var3_long, -111);
                                     var29 = var14;
                                     if (var14 == null) {
-                                      break regionExit1;
+                                      break L0;
                                     }
                                     if (0 == var5) {
-                                      var29.unlink(68);
+                                      var29.d(68);
                                     } else {
                                       var14.field_Rb = qd.field_K;
                                       var14.field_Kb = var5;
                                     }
-                                    var29.unlinkSecondary((byte) -76);
+                                    var29.c((byte) -76);
                                     vu.field_M.field_Ub = vu.field_M.field_Ub - 1;
-                                    break regionExit1;
+                                    break L0;
                                   case 20:
-                                    TrianglePulse.a(vu.field_M, false, var1, 83);
-                                    break regionExit1;
+                                    hh.a(vu.field_M, false, var1, 83);
+                                    break L0;
                                   case 21:
-                                    var3 = ((PacketBuffer) ((Object) var1)).readUnsignedShort((byte) -104);
+                                    var3 = ((vh) ((Object) var1)).e((byte) -104);
                                     if (var3 == 0) {
                                       ph.field_d = 0L;
-                                      break regionExit1;
+                                      break L0;
                                     }
                                     ph.field_d = vi.b(-59) + (long)var3;
-                                    break regionExit1;
+                                    break L0;
                                   case 22:
-                                    GlobalSpell.field_g = ((PacketBuffer) ((Object) var1)).readUnsignedShort((byte) -104);
-                                    SummonAction.field_s = ((PacketBuffer) ((Object) var1)).h(95);
-                                    break regionExit1;
+                                    al.field_g = ((vh) ((Object) var1)).e((byte) -104);
+                                    be.field_s = ((vh) ((Object) var1)).h(95);
+                                    break L0;
                                   case 23:
-                                    oh.field_H = ((PacketBuffer) ((Object) var1)).j((byte) -2);
-                                    break regionExit1;
+                                    oh.field_H = ((vh) ((Object) var1)).j((byte) -2);
+                                    break L0;
                                   default:
-                                    af.a((Throwable) null, 118, "L1: " + CampaignProgress.b(false));
+                                    af.a((Throwable) null, 118, "L1: " + cm.b(false));
                                     dj.a((byte) -124);
-                                    break regionExit1;
+                                    break L0;
                                 }
                               }
-                              var3_long = ((PacketBuffer) ((Object) var1)).j((byte) -2);
-                              var5 = ((PacketBuffer) ((Object) var1)).readUnsignedByte(0);
-                              var13 = DeployEvent.a((byte) 121, var3_long);
+                              var3_long = ((vh) ((Object) var1)).j((byte) -2);
+                              var5 = ((vh) ((Object) var1)).k(0);
+                              var13 = tr.a((byte) 121, var3_long);
                               var26 = var13;
                               if ((var13 != null)) {
                                 if (var5 != 0) {
@@ -297,7 +297,7 @@ final class bl {
                                 if (var2 != 15) {
                                   if (var26.field_Ub) {
                                     var26.field_Ub = false;
-                                    AnimationPlayer.field_a = AnimationPlayer.field_a - 1;
+                                    vj.field_a = vj.field_a - 1;
                                   }
                                 } else {
                                   var13.field_Wb = false;
@@ -305,15 +305,15 @@ final class bl {
                                 sf.a((byte) 107, var26);
                               }
                             } else {
-                              var3_long = ((PacketBuffer) ((Object) var1)).j((byte) -2);
-                              var25 = DeployEvent.a((byte) 121, var3_long);
+                              var3_long = ((vh) ((Object) var1)).j((byte) -2);
+                              var25 = tr.a((byte) 121, var3_long);
                               if ((var25 != null)) {
                                 if (var2 == 14) {
                                   var25.field_Wb = true;
                                 } else {
                                   if (!var25.field_Ub) {
                                     var25.field_Ub = true;
-                                    AnimationPlayer.field_a = AnimationPlayer.field_a + 1;
+                                    vj.field_a = vj.field_a + 1;
                                   }
                                 }
                                 sf.a((byte) 66, var25);
@@ -321,7 +321,7 @@ final class bl {
                             }
                           }
                         } else {
-                          var3 = ((PacketBuffer) ((Object) var1)).readUnsignedShort((byte) -104);
+                          var3 = ((vh) ((Object) var1)).e((byte) -104);
                           var15 = (au) (qm.field_J.a((byte) -27, (long)var3));
                           var30 = var15;
                           if ((var15 != null)) {
@@ -338,20 +338,20 @@ final class bl {
                   }
                 }
               }
-              break regionExit1;
+              break L0;
             }
-            var3_ref_of = (of) (wl.field_F.first((byte) 93));
+            var3_ref_of = (of) (wl.field_F.e((byte) 93));
             while (var3_ref_of != null) {
-              var3_ref_of.unlink(99);
-              var3_ref_of.unlinkSecondary((byte) -76);
-              var3_ref_of = (of) (wl.field_F.next((byte) 123));
+              var3_ref_of.d(99);
+              var3_ref_of.c((byte) -76);
+              var3_ref_of = (of) (wl.field_F.a((byte) 123));
             }
             var3_ref_of = (of) (oi.field_d.a((byte) 66));
             while (var3_ref_of != null) {
               if (var3_ref_of.field_Wb ||
                 var3_ref_of.field_Ub) {
                 if (var3_ref_of.field_Ub) {
-                  AnimationPlayer.field_a = AnimationPlayer.field_a - 1;
+                  vj.field_a = vj.field_a - 1;
                   var3_ref_of.field_Ub = false;
                 }
                 var3_ref_of.field_Wb = false;
@@ -361,13 +361,13 @@ final class bl {
             }
             if (1 == var2 &&
               vu.field_M != null) {
-              PopupPresentation.field_e = vu.field_M.field_rc;
+              ql.field_e = vu.field_M.field_rc;
             }
             if (4 == var2) {
-              var3 = ((PacketBuffer) ((Object) var1)).readUnsignedShort((byte) -104);
+              var3 = ((vh) ((Object) var1)).e((byte) -104);
               vu.field_M = new au(tq.field_b);
-              vu.field_M.setSecondaryKey(true, (long)var3);
-              TrianglePulse.a(vu.field_M, false, var1, 97);
+              vu.field_M.a(true, (long)var3);
+              hh.a(vu.field_M, false, var1, 97);
               ph.field_d = 0L;
             } else {
               vu.field_M = null;
@@ -381,16 +381,16 @@ final class bl {
               }
             }
             if (3 != var2) {
-              SpellCastAction.field_s = false;
+              ua.field_s = false;
             } else {
-              SpellCastAction.field_s = true;
-              for (var3 = 0; var3 < CoatOfArms.field_d.length; var3++) {
-                CoatOfArms.field_d[var3] = ((PacketBuffer) ((Object) var1)).readByte((byte) -1);
+              ua.field_s = true;
+              for (var3 = 0; var3 < ln.field_d.length; var3++) {
+                ln.field_d[var3] = ((vh) ((Object) var1)).a((byte) -1);
               }
-              DiskCacheRequest.field_E = ((PacketBuffer) ((Object) var1)).readUnsignedByte(0);
-              AiPlanningStrategy.field_b = ((PacketBuffer) ((Object) var1)).readUnsignedByte(0);
+              nh.field_E = ((vh) ((Object) var1)).k(0);
+              sm.field_b = ((vh) ((Object) var1)).k(0);
               for (var3 = 0; tg.field_d.length > var3; var3++) {
-                tg.field_d[var3] = ((PacketBuffer) ((Object) var1)).readByte((byte) -106);
+                tg.field_d[var3] = ((vh) ((Object) var1)).a((byte) -106);
               }
             }
           }
@@ -401,7 +401,7 @@ final class bl {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) var1_ref), "bl.C(" + param0 + ')');
+          throw ig.a((Throwable) ((Object) var1_ref), "bl.C(" + param0 + ')');
         }
     }
 
@@ -415,13 +415,13 @@ final class bl {
           return var3;
         }
         if (param0 >= 32768) {
-          var4 = this.field_c.getFile((byte) 94, 32767 & param0, 0);
+          var4 = this.field_c.a((byte) 94, 32767 & param0, 0);
         } else {
-          var4 = this.field_d.getFile((byte) 98, param0, 0);
+          var4 = this.field_d.a((byte) 98, param0, 0);
         }
         var3 = new va();
         if (var4 != null) {
-          var3.a((byte) -91, new PacketBuffer(var4));
+          var3.a((byte) -91, new vh(var4));
         }
         if (param0 >= 32768) {
           var3.g(30);
@@ -430,37 +430,37 @@ final class bl {
         return var3;
     }
 
-    final static void a(int param0, ResourceArchive param1) {
-        ModelMeshBase[] array$0 = null;
-        MeshData stackIn_23_0 = null;
+    final static void a(int param0, kl param1) {
+        kk[] array$0 = null;
+        js stackIn_23_0 = null;
         RuntimeException stackIn_36_0 = null;
         StringBuilder stackIn_36_1 = null;
         String stackIn_37_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         int var3 = 0;
-        MeshData var5 = null;
+        js var5 = null;
         int var6 = 0;
         int var7 = 0;
         String var8 = null;
         String var9 = null;
-        MeshData var10 = null;
+        js var10 = null;
         String var11 = null;
-        MeshData var12 = null;
-        MeshData var5Lifetime1;
+        js var12 = null;
+        js var5Lifetime1;
         int var6Lifetime1;
         int var3Lifetime1;
         int var6Lifetime2;
-        var7 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        var7 = ArmiesOfGielinor.field_M ? 1 : 0;
         try {
-          SummonEvent.field_B = param1;
+          mb.field_B = param1;
           var9 = "";
-          DiskCacheRequest.unitProjectionVariants = new boolean[ActionRequest.field_m.length];
-          for (var3 = param0; ActionRequest.field_m.length > var3; var3++) {
-            array$0 = new ModelMeshBase[ActionRequest.field_m[var3].length];
-            ActionRequest.unitModels[var3] = array$0;
-            DiskCacheRequest.unitProjectionVariants[var3] = false;
-            var8 = ActionRequest.field_m[var3][0];
+          nh.field_D = new boolean[mn.field_m.length];
+          for (var3 = param0; mn.field_m.length > var3; var3++) {
+            array$0 = new kk[mn.field_m[var3].length];
+            mn.field_k[var3] = array$0;
+            nh.field_D[var3] = false;
+            var8 = mn.field_m[var3][0];
             var10 = hs.a(var8, 235, var9);
             var5 = var10;
             if (var10 != null) {
@@ -468,20 +468,20 @@ final class bl {
                 pd.field_d = var10;
               }
               if (th.a(var10, -17900)) {
-                DiskCacheRequest.unitProjectionVariants[var3] = true;
+                nh.field_D[var3] = true;
               }
-              if (null != var10.faceRenderTypes) {
-                for (var6 = 0; var6 < var10.faceCount; var6++) {
-                  if (var10.faceRenderTypes[var6] == 2) {
-                    var10.faceVertexA[var6] = 0;
-                    var10.faceVertexB[var6] = 0;
-                    var10.faceVertexC[var6] = 0;
+              if (null != var10.field_p) {
+                for (var6 = 0; var6 < var10.field_O; var6++) {
+                  if (var10.field_p[var6] == 2) {
+                    var10.field_q[var6] = 0;
+                    var10.field_o[var6] = 0;
+                    var10.field_r[var6] = 0;
                   }
                 }
               }
-              ActionRequest.unitModels[var3][0] = var10.createModel(SummonAction.field_x, fm.field_a, ol.field_A, BattleCharacter.field_t, MeshObject.field_a);
-              for (var6Lifetime2 = 1; var6Lifetime2 < ActionRequest.field_m[var3].length; var6Lifetime2++) {
-                ActionRequest.unitModels[var3][var6Lifetime2] = null;
+              mn.field_k[var3][0] = var10.a(be.field_x, fm.field_a, ol.field_A, lf.field_t, ni.field_a);
+              for (var6Lifetime2 = 1; var6Lifetime2 < mn.field_m[var3].length; var6Lifetime2++) {
+                mn.field_k[var3][var6Lifetime2] = null;
               }
             }
           }
@@ -490,22 +490,22 @@ final class bl {
             var12 = hs.a(var11, 235, var9);
             var5Lifetime1 = var12;
             stackIn_23_0 = var12;
-            if (stackIn_23_0.faceRenderTypes != null) {
-              for (var6Lifetime1 = 0; var6Lifetime1 < var5Lifetime1.faceCount; var6Lifetime1++) {
-                if (var5Lifetime1.faceRenderTypes[var6Lifetime1] == 2) {
-                  var5Lifetime1.faceVertexA[var6Lifetime1] = 0;
-                  var5Lifetime1.faceVertexB[var6Lifetime1] = 0;
-                  var5Lifetime1.faceVertexC[var6Lifetime1] = 0;
+            if (stackIn_23_0.field_p != null) {
+              for (var6Lifetime1 = 0; var6Lifetime1 < var5Lifetime1.field_O; var6Lifetime1++) {
+                if (var5Lifetime1.field_p[var6Lifetime1] == 2) {
+                  var5Lifetime1.field_q[var6Lifetime1] = 0;
+                  var5Lifetime1.field_o[var6Lifetime1] = 0;
+                  var5Lifetime1.field_r[var6Lifetime1] = 0;
                 }
               }
             }
-            cs.field_db[var3Lifetime1] = var5Lifetime1.createModel(SummonAction.field_x, fm.field_a, ol.field_A, BattleCharacter.field_t, MeshObject.field_a);
-            if (((ModelMesh) (cs.field_db[var3Lifetime1])).vertexCount == 0) {
+            cs.field_db[var3Lifetime1] = var5Lifetime1.a(be.field_x, fm.field_a, ol.field_A, lf.field_t, ni.field_a);
+            if (((gd) (cs.field_db[var3Lifetime1])).field_I == 0) {
               cs.field_db[var3Lifetime1] = null;
             }
           }
           fn.a(false, 76, -32596);
-          TriangleRasterizer.b(0.75f);
+          tm.b(0.75f);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -517,11 +517,11 @@ final class bl {
           } else {
             stackIn_37_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_36_0), ((StringBuilder) (Object) stackIn_36_1).append(stackIn_37_2).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_36_0), ((StringBuilder) (Object) stackIn_36_1).append(stackIn_37_2).append(')').toString());
         }
     }
 
-    bl(int param0, ResourceArchive param1, ResourceArchive param2) {
+    bl(int param0, kl param1, kl param2) {
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;
@@ -534,10 +534,10 @@ final class bl {
           this.field_c = param2;
           this.field_d = param1;
           if (this.field_d != null) {
-            this.field_d.getFileCapacity(0, -2);
+            this.field_d.d(0, -2);
           }
           if (null != this.field_c) {
-            this.field_c.getFileCapacity(0, -2);
+            this.field_c.d(0, -2);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -556,13 +556,13 @@ final class bl {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
         }
     }
 
     static {
         field_a = "Talons and hooks with which to swipe from above, improving aerial attacks.";
-        field_h = new NodeDeque();
+        field_h = new at();
         field_g = "Not yet achieved";
         field_b = true;
     }

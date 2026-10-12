@@ -1,11 +1,11 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class iw extends IntrusiveNode {
+final class iw extends tc {
     int field_m;
-    static ResourceArchive field_p;
+    static kl field_p;
     int field_k;
-    static ResourceArchive field_l;
+    static kl field_l;
     int field_s;
     static String field_o;
     static int field_n;
@@ -17,7 +17,7 @@ final class iw extends IntrusiveNode {
         field_o = null;
         field_p = null;
         if (param0 != -25771) {
-          field_l = (ResourceArchive) null;
+          field_l = (kl) null;
           field_l = null;
           return;
         }

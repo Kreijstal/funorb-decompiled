@@ -78,7 +78,7 @@ final class fp extends je {
         int var15Lifetime1;
         int var14Lifetime2;
         int var15Lifetime2;
-        var40 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        var40 = ArmiesOfGielinor.field_M ? 1 : 0;
         try {
           if (param7 != 120) {
             field_Ib = (String) null;
@@ -161,11 +161,11 @@ final class fp extends je {
               stackIn_41_0 = null;
             }
             var21 = stackIn_41_0;
-            var22 = TileMetadata.field_f[var15Lifetime1];
+            var22 = ca.field_f[var15Lifetime1];
             var23 = fa.field_k[var15Lifetime1];
-            var24 = TileMetadata.field_f[var16];
+            var24 = ca.field_f[var16];
             var25 = fa.field_k[var16];
-            var26 = TileMetadata.field_f[var17];
+            var26 = ca.field_f[var17];
             var27 = fa.field_k[var17];
             if (var18 == var19 &&
               var20 == var19) {
@@ -218,18 +218,18 @@ final class fp extends je {
           } else {
             stackIn_57_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_56_0), ((StringBuilder) (Object) stackIn_56_1).append(stackIn_57_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_56_0), ((StringBuilder) (Object) stackIn_56_1).append(stackIn_57_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(')').toString());
         }
     }
 
-    fp(long param0, RgbSprite param1, RgbSprite param2, int param3, je param4, String param5) {
+    fp(long param0, wk param1, wk param2, int param3, je param4, String param5) {
         this(param0, (je) null, param4, param5);
         try {
           this.field_Jb.field_cb = param2;
           this.field_Jb.field_P = param1;
           this.field_Jb.field_Fb = param3;
         } catch (RuntimeException runtimeException) {
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "fp.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ')');
+          throw ig.a((Throwable) ((Object) runtimeException), "fp.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -237,22 +237,22 @@ final class fp extends je {
         if (param0 >= -110) {
           return (gl) null;
         }
-        String var1 = CombatPresentation.i(-4938);
+        String var1 = sk.i(-4938);
         if (var1 != null &&
           !(var1.indexOf('@') < 0)) {
           var1 = "";
         }
-        return new gl(CombatPresentation.i(-4938), gi.a(false));
+        return new gl(sk.i(-4938), gi.a(false));
     }
 
-    final static void a(java.math.BigInteger param0, java.math.BigInteger param1, byte param2, PacketBuffer param3, PacketBuffer param4) {
+    final static void a(java.math.BigInteger param0, java.math.BigInteger param1, byte param2, vh param3, vh param4) {
         try {
           if (param2 != 26) {
             field_Lb = (je) null;
           }
-          ls.a(param4, 0, param0, 6727, param3.position, param1, param3.payload);
+          ls.a(param4, 0, param0, 6727, param3.field_q, param1, param3.field_o);
         } catch (RuntimeException runtimeException) {
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "fp.G(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ')');
+          throw ig.a((Throwable) ((Object) runtimeException), "fp.G(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -266,7 +266,7 @@ final class fp extends je {
           this.a(this.field_Kb, 58);
           this.i(-10027);
         } catch (RuntimeException runtimeException) {
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "fp.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw ig.a((Throwable) ((Object) runtimeException), "fp.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -283,7 +283,7 @@ final class fp extends je {
         try {
           gh.field_P = param0;
         } catch (RuntimeException runtimeException) {
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "fp.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw ig.a((Throwable) ((Object) runtimeException), "fp.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

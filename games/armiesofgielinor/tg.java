@@ -15,16 +15,16 @@ final class tg {
     static int field_k;
     static int field_a;
     int field_c;
-    static IndexedSprite[] field_b;
+    static ru[] field_b;
     private int field_e;
 
     private final boolean b(int param0, byte param1, int param2) {
         int var5;
-        var5 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        var5 = ArmiesOfGielinor.field_M ? 1 : 0;
         if (param0 != 0) {
           if (param0 != 1) {
             if (param0 == 2) {
-              CombatEvent.a(param2, -48, this.field_c);
+              ag.a(param2, -48, this.field_c);
             } else {
               if (param0 == 3) {
                 pq.a(-119, this.field_c, param2);
@@ -47,7 +47,7 @@ final class tg {
             te.a(param2, this.field_f, (byte) 108);
           }
         } else {
-          ActionSpell.a(this.field_f, param2, 6);
+          ra.a(this.field_f, param2, 6);
         }
         if (param1 == 101) {
           return true;
@@ -82,7 +82,7 @@ final class tg {
               }
               var4_ref = se.a(this.field_m, param0, -127);
             } else {
-              var4_ref = DamageEvent.a(this.field_m, (byte) -27, param0);
+              var4_ref = nw.a(this.field_m, (byte) -27, param0);
             }
           } else {
             var4_ref = op.a(20, this.field_m, param0);
@@ -102,7 +102,7 @@ final class tg {
           return true;
         }
         if (param2 == 5) {
-          var7 = DamageEvent.a(this.field_m, (byte) -27, param0);
+          var7 = nw.a(this.field_m, (byte) -27, param0);
           if (var7 == null) {
             return true;
           }
@@ -163,25 +163,25 @@ final class tg {
           }
           if (param0.field_b == 2) {
             if (cd.field_c == 0) {
-              this.field_i.a(12, SummonRequest.field_C, (byte) -120);
+              this.field_i.a(12, hw.field_C, (byte) -120);
             }
             this.field_i.a(13, ai.field_R, (byte) -119);
           }
         } catch (RuntimeException runtimeException) {
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "tg.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw ig.a((Throwable) ((Object) runtimeException), "tg.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
-    final static void a(ResourceArchive param0, int param1, boolean param2, ResourceArchive param3) {
+    final static void a(kl param0, int param1, boolean param2, kl param3) {
         try {
-          bk.a(param2, fp.field_Lb, eq.field_h, LeaderEscortCondition.field_f, DualLinkedNode.field_k, -106, ke.field_e, im.field_x, qc.field_e, ri.field_b, PreparedAction.field_o, rd.field_e);
+          bk.a(param2, fp.field_Lb, eq.field_h, gm.field_f, ms.field_k, -106, ke.field_e, im.field_x, qc.field_e, ri.field_b, bd.field_o, rd.field_e);
           dh.field_n = fk.a("chatfilter", (byte) -125, param3, "lobby");
           co.field_k[0] = ar.field_v;
           co.field_k[1] = wg.field_a;
           co.field_k[param1] = cd.field_d;
           mu.a(t.field_a, param1 - 2, param0);
         } catch (RuntimeException runtimeException) {
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "tg.N(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw ig.a((Throwable) ((Object) runtimeException), "tg.N(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -194,8 +194,8 @@ final class tg {
           field_l = null;
           return;
         }
-        ResourceArchive var2 = (ResourceArchive) null;
-        tg.a((ResourceArchive) null, 28, false, (ResourceArchive) null);
+        kl var2 = (kl) null;
+        tg.a((kl) null, 28, false, (kl) null);
         field_b = null;
         field_j = null;
         field_n = null;
@@ -211,7 +211,7 @@ final class tg {
         of var10;
         of var11;
         of var4Lifetime1;
-        var6 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        var6 = ArmiesOfGielinor.field_M ? 1 : 0;
         if (param0 != 23899) {
           this.field_e = 127;
           if (this.field_m == null) {
@@ -226,8 +226,8 @@ final class tg {
           if (!vu.b(false)) {
             return;
           }
-          var11 = DeployEvent.a((byte) 121, this.field_f);
-          var4 = UnitModelPreview.a(this.field_f, -86);
+          var11 = tr.a((byte) 121, this.field_f);
+          var4 = hr.a(this.field_f, -86);
           var5 = this.b(param0 - 24004);
           if (var4 != null) {
             if (vu.field_M.field_kc &&
@@ -274,9 +274,9 @@ final class tg {
         if (!vu.b(false)) {
           return;
         }
-        var10 = DeployEvent.a((byte) 121, this.field_f);
+        var10 = tr.a((byte) 121, this.field_f);
         var7 = var10;
-        var4Lifetime1 = UnitModelPreview.a(this.field_f, -86);
+        var4Lifetime1 = hr.a(this.field_f, -86);
         var5 = this.b(param0 - 24004);
         if (var4Lifetime1 != null) {
           if (vu.field_M.field_kc &&
@@ -319,7 +319,7 @@ final class tg {
         au var5;
         au var6;
         au var7;
-        var4 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        var4 = ArmiesOfGielinor.field_M ? 1 : 0;
         if (param0 > 46) {
           if (vu.field_M != null) {
             return;
@@ -331,7 +331,7 @@ final class tg {
           }
           var3 = var6.field_rc;
           if (var6.field_Nb) {
-            this.field_i.a(2, fo.a(4800, ByteStorage.field_b, new String[]{var3}), (byte) -108);
+            this.field_i.a(2, fo.a(4800, mg.field_b, new String[]{var3}), (byte) -108);
             this.field_i.a(3, fo.a(4800, or.field_a, new String[]{var3}), (byte) -120);
             return;
           }
@@ -345,7 +345,7 @@ final class tg {
           if (!var6.field_gc &&
             var6.field_tc) {
             if (!var6.field_kc) {
-              this.field_i.a(2, fo.a(4800, CampaignResult.field_d, new String[]{var3}), (byte) -123);
+              this.field_i.a(2, fo.a(4800, ho.field_d, new String[]{var3}), (byte) -123);
               if (var6.field_gc) {
                 this.field_i.a(3, fo.a(4800, eq.field_j, new String[]{var3}), (byte) -119);
               }
@@ -357,7 +357,7 @@ final class tg {
               }
               return;
             }
-            this.field_i.a(2, fo.a(4800, CampaignResult.field_d, new String[]{var3}), (byte) -123);
+            this.field_i.a(2, fo.a(4800, ho.field_d, new String[]{var3}), (byte) -123);
           }
           if (!var6.field_gc) {
             return;
@@ -375,7 +375,7 @@ final class tg {
         }
         var3 = var7.field_rc;
         if (var7.field_Nb) {
-          this.field_i.a(2, fo.a(4800, ByteStorage.field_b, new String[]{var3}), (byte) -108);
+          this.field_i.a(2, fo.a(4800, mg.field_b, new String[]{var3}), (byte) -108);
           this.field_i.a(3, fo.a(4800, or.field_a, new String[]{var3}), (byte) -120);
           return;
         }
@@ -385,10 +385,10 @@ final class tg {
           if (!var7.field_gc &&
             var7.field_tc) {
             if (!var7.field_kc) {
-              this.field_i.a(2, fo.a(4800, CampaignResult.field_d, new String[]{var3}), (byte) -123);
+              this.field_i.a(2, fo.a(4800, ho.field_d, new String[]{var3}), (byte) -123);
             } else {
               if (var7.field_Sb) {
-                this.field_i.a(2, fo.a(4800, CampaignResult.field_d, new String[]{var3}), (byte) -123);
+                this.field_i.a(2, fo.a(4800, ho.field_d, new String[]{var3}), (byte) -123);
               }
             }
           }
@@ -402,7 +402,7 @@ final class tg {
 
     private final boolean a(int param0, int param1, byte param2) {
         int var4 = 0;
-        int var5 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        int var5 = ArmiesOfGielinor.field_M ? 1 : 0;
         int var4Lifetime1;
         int var4Lifetime2;
         int var4Lifetime3;
@@ -468,13 +468,13 @@ final class tg {
         if (param1 <= 38) {
           tg.a(-18);
           if (param0 == 17) {
-            Spell.field_b = new i(this.field_g.field_V, this.field_g.field_D, this.field_g.field_gb, this.field_g.field_ob, param2, ArchiveIndex.field_b, UnitModelPreview.field_m, uc.field_b, eq.field_h, hs.field_H, DualLinkedNode.field_k, this.field_m, this.field_f);
+            ik.field_b = new i(this.field_g.field_V, this.field_g.field_D, this.field_g.field_gb, this.field_g.field_ob, param2, jm.field_b, hr.field_m, uc.field_b, eq.field_h, hs.field_H, ms.field_k, this.field_m, this.field_f);
             return true;
           }
           return false;
         }
         if (param0 == 17) {
-          Spell.field_b = new i(this.field_g.field_V, this.field_g.field_D, this.field_g.field_gb, this.field_g.field_ob, param2, ArchiveIndex.field_b, UnitModelPreview.field_m, uc.field_b, eq.field_h, hs.field_H, DualLinkedNode.field_k, this.field_m, this.field_f);
+          ik.field_b = new i(this.field_g.field_V, this.field_g.field_D, this.field_g.field_gb, this.field_g.field_ob, param2, jm.field_b, hr.field_m, uc.field_b, eq.field_h, hs.field_H, ms.field_k, this.field_m, this.field_f);
           return true;
         }
         return false;
@@ -491,7 +491,7 @@ final class tg {
 
     final boolean c(byte param0) {
         if (param0 >= -107) {
-          field_b = (IndexedSprite[]) null;
+          field_b = (ru[]) null;
           if (null == this.field_i) {
             return false;
           }
@@ -526,25 +526,25 @@ final class tg {
             var7 = this.b(-97);
             var4 = var7;
             var5 = lg.a(this.field_m, (byte) -34);
-            var6 = IndexedSpriteBase.a(this.field_m, -3404) ? 1 : 0;
+            var6 = si.a(this.field_m, -3404) ? 1 : 0;
             if (var5 == null &&
               var6 == 0) {
               this.field_i.a(4, fo.a(4800, vf.field_l, new String[]{var7}), (byte) -125);
               this.field_i.a(6, fo.a(4800, sq.field_o, new String[]{var7}), (byte) -100);
               if (param0 != null &&
                 param2 != 2 &&
-                !NodeIterator.field_a) {
+                !bb.field_a) {
                 this.field_o = param0;
                 this.field_i.a(19, fo.a(4800, kt.field_m, new String[]{var7}), (byte) -115);
               }
             }
             if (var5 != null) {
               if (!fs.a((byte) 111, this.field_m) &&
-                !NodeIterator.field_a) {
+                !bb.field_a) {
                 if (!vi.field_d) {
                   this.field_i.a(8, fo.a(4800, mi.field_k, new String[]{var7}), (byte) -114);
                 }
-                this.field_i.a(18, fo.a(param1 ^ 4807, DeployRequest.field_w, new String[]{var7}), (byte) -111);
+                this.field_i.a(18, fo.a(param1 ^ 4807, jc.field_w, new String[]{var7}), (byte) -111);
                 if (param0 != null) {
                   this.field_o = param0;
                   this.field_i.a(19, fo.a(4800, kt.field_m, new String[]{var7}), (byte) -115);
@@ -570,7 +570,7 @@ final class tg {
           } else {
             stackIn_31_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_30_0), ((StringBuilder) (Object) stackIn_30_1).append(stackIn_31_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_30_0), ((StringBuilder) (Object) stackIn_30_1).append(stackIn_31_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -590,7 +590,7 @@ final class tg {
 
     tg(je param0, long param1, String param2, String param3, int param4, int param5, int[] param6) {
         try {
-          this.field_i = new np(AnimationSequence.field_h);
+          this.field_i = new np(qb.field_h);
           this.field_o = param6;
           this.field_c = param4;
           this.field_f = param1;
@@ -600,7 +600,7 @@ final class tg {
           this.field_e = param5;
           param0.field_rb = true;
         } catch (RuntimeException runtimeException) {
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "tg.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ',' + (param6 != null ? "{...}" : "null") + ')');
+          throw ig.a((Throwable) ((Object) runtimeException), "tg.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ',' + (param6 != null ? "{...}" : "null") + ')');
         }
     }
 

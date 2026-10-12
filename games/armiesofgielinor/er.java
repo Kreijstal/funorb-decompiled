@@ -17,7 +17,7 @@ final class er {
     final static void b(int param0) {
         if (~p.field_b == param0 ||
           !du.c(10)) {
-          EffectPresentation.d(7);
+          tb.d(7);
           p.field_b = 11;
         }
         dd.field_a = true;
@@ -38,7 +38,7 @@ final class er {
         int var9 = 0;
         int var10 = 0;
         int var11 = 0;
-        var11 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        var11 = ArmiesOfGielinor.field_M ? 1 : 0;
         try {
           if (param3 >= 2 &&
             param3 <= 36) {
@@ -99,14 +99,14 @@ final class er {
           } else {
             stackIn_44_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_43_0), ((StringBuilder) (Object) stackIn_43_1).append(stackIn_44_2).append(',').append(param3).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_43_0), ((StringBuilder) (Object) stackIn_43_1).append(stackIn_44_2).append(',').append(param3).append(')').toString());
         }
     }
 
     final static void a(byte param0) {
         int var1 = -52 % ((param0 + 85) / 37);
-        if (null != KingBlackDragonEvent.field_C) {
-          KingBlackDragonEvent.field_C.k(0);
+        if (null != rl.field_C) {
+          rl.field_C.k(0);
         }
         if (pq.field_a != null) {
           pq.field_a.i((byte) 2);

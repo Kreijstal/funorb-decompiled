@@ -5,53 +5,53 @@ final class ud extends sf implements he {
     static String field_Y;
     static String field_Z;
     static String field_W;
-    static RgbSprite[] field_X;
+    static wk[] field_X;
     static String field_ab;
     private fw field_bb;
 
     final static void b(int param0, boolean param1, int param2, int param3) {
         if (param1) {
-          field_X = (RgbSprite[]) null;
+          field_X = (wk[]) null;
           if (param2 != 0) {
             if (param2 == 1) {
               if (va.field_D == param0) {
                 if (2 == param2 &&
                   cd.field_c != param0) {
                   cd.field_c = param0;
-                  MoveEvent.field_J = true;
-                  SocketResourceClient.a(896, param3);
+                  kr.field_J = true;
+                  ae.a(896, param3);
                 }
                 return;
               }
               va.field_D = param0;
-              MoveEvent.field_J = true;
-              SocketResourceClient.a(896, param3);
+              kr.field_J = true;
+              ae.a(896, param3);
             }
           } else {
             if (param0 != ol.field_B) {
               ol.field_B = param0;
-              MoveEvent.field_J = true;
-              SocketResourceClient.a(896, param3);
+              kr.field_J = true;
+              ae.a(896, param3);
             }
             if (param2 == 1 &&
               va.field_D != param0) {
               va.field_D = param0;
-              MoveEvent.field_J = true;
-              SocketResourceClient.a(896, param3);
+              kr.field_J = true;
+              ae.a(896, param3);
             }
           }
         } else {
           if (param2 == 0 &&
             param0 != ol.field_B) {
             ol.field_B = param0;
-            MoveEvent.field_J = true;
-            SocketResourceClient.a(896, param3);
+            kr.field_J = true;
+            ae.a(896, param3);
           }
           if (param2 == 1 &&
             va.field_D != param0) {
             va.field_D = param0;
-            MoveEvent.field_J = true;
-            SocketResourceClient.a(896, param3);
+            kr.field_J = true;
+            ae.a(896, param3);
           }
         }
         if (2 != param2) {
@@ -61,8 +61,8 @@ final class ud extends sf implements he {
           return;
         }
         cd.field_c = param0;
-        MoveEvent.field_J = true;
-        SocketResourceClient.a(896, param3);
+        kr.field_J = true;
+        ae.a(896, param3);
     }
 
     private final fw a(String param0, qo param1, int param2) {
@@ -104,7 +104,7 @@ final class ud extends sf implements he {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param2).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -120,11 +120,11 @@ final class ud extends sf implements he {
         RuntimeException decompiledCaughtException = null;
         try {
           var3 = null;
-          if (param1 != PlayerProfile.field_h) {
+          if (param1 != hm.field_h) {
             if (mp.field_Mb == param1) {
               this.field_w = this.field_w + 10;
-              var3 = MoveAttackRequest.field_y;
-              if (PaletteRegionMap.b(-108)) {
+              var3 = am.field_y;
+              if (pr.b(-108)) {
                 this.field_w = this.field_w + 20;
                 var3 = field_W;
               }
@@ -162,7 +162,7 @@ final class ud extends sf implements he {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) (stackIn_12_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
+          throw ig.a((Throwable) (stackIn_12_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
         }
     }
 
@@ -191,7 +191,7 @@ final class ud extends sf implements he {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 

@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-final class ac extends IntrusiveNode {
+final class ac extends tc {
     private int field_z;
     private int field_y;
     static String field_u;
@@ -12,7 +12,7 @@ final class ac extends IntrusiveNode {
     static String field_x;
     private int field_v;
     static int field_p;
-    static IndexedSprite[] field_k;
+    static ru[] field_k;
     private int field_l;
     static boolean field_n;
     static int field_m;
@@ -21,7 +21,7 @@ final class ac extends IntrusiveNode {
     private int field_r;
     private int field_o;
 
-    final void a(Battlefield param0, int param1) {
+    final void a(ha param0, int param1) {
         int dupTemp$1 = 0;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
@@ -32,21 +32,21 @@ final class ac extends IntrusiveNode {
           if (param1 != -12614) {
             field_x = (String) null;
           }
-          param0.playerMana[this.field_q] = param0.playerMana[this.field_q] + this.field_w;
-          if (1000000000 < param0.playerMana[this.field_q]) {
-            param0.playerMana[this.field_q] = 1000000000;
+          param0.field_H[this.field_q] = param0.field_H[this.field_q] + this.field_w;
+          if (1000000000 < param0.field_H[this.field_q]) {
+            param0.field_H[this.field_q] = 1000000000;
           }
           if (this.field_y != 3) {
             if (this.field_y != 4) {
-              dupTemp$1 = param0.getPlayerTeamIndex(this.field_q, -1);
-              param0.teamManaCollected[dupTemp$1] = param0.teamManaCollected[dupTemp$1] + this.field_w;
-              if (param0.teamManaCollected[param0.getPlayerTeamIndex(this.field_q, param1 + 12613)] > 1000000000) {
-                param0.teamManaCollected[param0.getPlayerTeamIndex(this.field_q, -1)] = 1000000000;
+              dupTemp$1 = param0.o(this.field_q, -1);
+              param0.field_fb[dupTemp$1] = param0.field_fb[dupTemp$1] + this.field_w;
+              if (param0.field_fb[param0.o(this.field_q, param1 + 12613)] > 1000000000) {
+                param0.field_fb[param0.o(this.field_q, -1)] = 1000000000;
               }
             }
-            this.unlink(96);
+            this.d(96);
           } else {
-            this.unlink(96);
+            this.d(96);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -59,7 +59,7 @@ final class ac extends IntrusiveNode {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param1).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -129,13 +129,13 @@ final class ac extends IntrusiveNode {
         vc.field_k[this.field_t].g(-8 + var4, -8 + var5Lifetime1);
     }
 
-    final void b(Battlefield param0, int param1) {
+    final void b(ha param0, int param1) {
         RuntimeException stackIn_30_0 = null;
         StringBuilder stackIn_30_1 = null;
         String stackIn_31_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
-        Battlefield var4 = null;
+        ha var4 = null;
         try {
           if (this.field_o >= 0) {
             this.field_l = this.field_l + this.field_z;
@@ -151,25 +151,25 @@ final class ac extends IntrusiveNode {
           if (this.field_o == 0) {
             if (this.field_y == 0 &&
               !uu.field_b) {
-              RadialSummonMenu.$cfr$intArgs$a$6d836999ad61(29, el.field_b[0]);
+              ub.$cfr$intArgs$a$6d836999ad61(29, el.field_b[0]);
               ep.field_f = false;
               uu.field_b = true;
             }
             if (this.field_y == 1 &&
               !et.field_d) {
-              RadialSummonMenu.$cfr$intArgs$a$6d836999ad61(50, el.field_b[0]);
+              ub.$cfr$intArgs$a$6d836999ad61(50, el.field_b[0]);
               ep.field_f = false;
               et.field_d = true;
             }
             if (this.field_y == 2 &&
               !wt.field_G) {
-              RadialSummonMenu.$cfr$intArgs$a$6d836999ad61(113, el.field_b[0]);
+              ub.$cfr$intArgs$a$6d836999ad61(113, el.field_b[0]);
               ep.field_f = false;
               wt.field_G = true;
             }
             if (this.field_y == 3 &&
               !ep.field_f) {
-              RadialSummonMenu.$cfr$intArgs$a$6d836999ad61(57, el.field_b[0]);
+              ub.$cfr$intArgs$a$6d836999ad61(57, el.field_b[0]);
               et.field_d = false;
               wt.field_G = false;
               uu.field_b = false;
@@ -180,14 +180,14 @@ final class ac extends IntrusiveNode {
             this.field_o = this.field_o + 1;
           }
           if (param1 != 100) {
-            var4 = (Battlefield) null;
-            this.b((Battlefield) null, -123);
+            var4 = (ha) null;
+            this.b((ha) null, -123);
           }
           if (this.field_o < 100) {
             return;
           }
           this.a(param0, -12614);
-          RadialSummonMenu.$cfr$intArgs$a$6d836999ad61(91, el.field_b[1 + AttackEvent.a(false, 8, li.field_n)]);
+          ub.$cfr$intArgs$a$6d836999ad61(91, el.field_b[1 + ns.a(false, 8, li.field_n)]);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -199,15 +199,15 @@ final class ac extends IntrusiveNode {
           } else {
             stackIn_31_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_30_0), ((StringBuilder) (Object) stackIn_30_1).append(stackIn_31_2).append(',').append(param1).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_30_0), ((StringBuilder) (Object) stackIn_30_1).append(stackIn_31_2).append(',').append(param1).append(')').toString());
         }
     }
 
-    final static RgbSprite[] a(ResourceArchive param0, String param1, byte param2, String param3) {
+    final static wk[] a(kl param0, String param1, byte param2, String param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
-        RgbSprite[] stackIn_3_0 = null;
+        wk[] stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -217,11 +217,11 @@ final class ac extends IntrusiveNode {
         String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var4_int = param0.getGroupId(param3, 124);
+          var4_int = param0.a(param3, 124);
           if (param2 != -4) {
             ac.a((byte) -15);
           }
-          var5 = param0.getFileId((byte) -20, var4_int, param1);
+          var5 = param0.a((byte) -20, var4_int, param1);
           stackIn_3_0 = nk.a(var4_int, (byte) 28, var5, param0);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -246,7 +246,7 @@ final class ac extends IntrusiveNode {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 
@@ -258,7 +258,7 @@ final class ac extends IntrusiveNode {
         this.field_q = param4;
         this.field_w = param6;
         this.field_o = -param5;
-        this.field_t = AttackEvent.a(false, vc.field_k.length, li.field_n);
+        this.field_t = ns.a(false, vc.field_k.length, li.field_n);
         this.field_y = param7;
     }
 

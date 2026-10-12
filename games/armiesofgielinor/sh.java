@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class sh {
-    private AnimationPlayer field_n;
+    private vj field_n;
     private int field_c;
     private boolean field_q;
     static boolean field_h;
@@ -14,8 +14,8 @@ final class sh {
     private int field_p;
     private int field_f;
     static int field_l;
-    private ModelMesh field_e;
-    static ResourceArchive field_j;
+    private gd field_e;
+    static kl field_j;
     private int field_k;
     static int[] field_a;
     private int field_i;
@@ -23,17 +23,17 @@ final class sh {
 
     private final void a(byte param0) {
         int var2 = 0;
-        AnimationFrameSet var3 = null;
-        AnimationFrameSet var3Lifetime1;
+        wp var3 = null;
+        wp var3Lifetime1;
         int var2Lifetime1;
         if (param0 >= 20) {
-          var2 = this.field_n.frameId >> 16;
+          var2 = this.field_n.field_i >> 16;
           var3 = we.a(var2, true);
           io.a(var3, (byte) -34);
           return;
         }
         field_m = (je) null;
-        var2Lifetime1 = this.field_n.frameId >> 16;
+        var2Lifetime1 = this.field_n.field_i >> 16;
         var3Lifetime1 = we.a(var2Lifetime1, true);
         io.a(var3Lifetime1, (byte) -34);
     }
@@ -43,24 +43,24 @@ final class sh {
         if (!this.field_b) {
           return;
         }
-        var2 = this.field_n.advance(-105) ? 1 : 0;
+        var2 = this.field_n.a(-105) ? 1 : 0;
         if (param0 != -19812) {
           this.field_p = -51;
         }
         if (var2 != 0) {
           this.a((byte) -125, this.field_k);
         }
-        if (!this.field_n.frameChanged) {
+        if (!this.field_n.field_c) {
           return;
         }
         if (3 == this.field_o &&
-          this.field_n.frameIndex == je.field_K[this.field_c][0]) {
+          this.field_n.field_m == je.field_K[this.field_c][0]) {
           dh.a(this.field_c, 4, 32);
         }
         if (this.field_o != 4) {
           return;
         }
-        if (this.field_n.frameIndex != je.field_K[this.field_c][1]) {
+        if (this.field_n.field_m != je.field_K[this.field_c][1]) {
           return;
         }
         dh.a(this.field_c, 7, 32);
@@ -78,22 +78,22 @@ final class sh {
 
     final void a(int param0, int param1) {
         this.field_c = param1;
-        if (ActionRequest.unitModels[this.field_c] == null) {
+        if (mn.field_k[this.field_c] == null) {
           this.field_c = 24;
         }
-        this.field_e = (ModelMesh) (ActionRequest.unitModels[this.field_c][param0]);
-        this.field_q = DiskCacheRequest.unitProjectionVariants[this.field_c];
+        this.field_e = (gd) (mn.field_k[this.field_c][param0]);
+        this.field_q = nh.field_D[this.field_c];
     }
 
     final void e(byte param0) {
-        ModelMesh var23 = null;
-        ModelMesh var24_ref = null;
-        ModelMesh var25 = null;
-        ModelMesh var19 = null;
-        ModelMesh var20_ref = null;
-        ModelMesh var21 = null;
-        ModelMesh var22_ref = null;
-        ModelMesh var18_ref = null;
+        gd var23 = null;
+        gd var24_ref = null;
+        gd var25 = null;
+        gd var19 = null;
+        gd var20_ref = null;
+        gd var21 = null;
+        gd var22_ref = null;
+        gd var18_ref = null;
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
@@ -136,18 +136,18 @@ final class sh {
           var11 = (!this.field_q ? 300 : 400) - this.field_f * 2;
           var12 = -400;
           if (this.field_b) {
-            var22_ref = (ModelMesh) (this.field_n.applyCurrentFrame(var2 != 0, true, var3 != 0, this.field_e));
+            var22_ref = (gd) (this.field_n.a(var2 != 0, true, var3 != 0, this.field_e));
             var23 = var22_ref;
-            var22_ref.scaleGeometry(hk.field_Jb[this.field_c], hk.field_Jb[this.field_c], hk.field_Jb[this.field_c]);
-            TriangleRasterizer.useRasterClip();
-            TriangleRasterizer.setProjectionCenter(this.field_i, this.field_g);
+            var22_ref.b(hk.field_Jb[this.field_c], hk.field_Jb[this.field_c], hk.field_Jb[this.field_c]);
+            tm.a();
+            tm.c(this.field_i, this.field_g);
             var23.a(var4, var5, var6, var9, var10, var11, var12);
           } else {
-            TriangleRasterizer.useRasterClip();
-            TriangleRasterizer.setProjectionCenter(this.field_i, this.field_g);
-            var24_ref = (ModelMesh) (this.field_e.a(var2 != 0, false, var3 != 0));
+            tm.a();
+            tm.c(this.field_i, this.field_g);
+            var24_ref = (gd) (this.field_e.a(var2 != 0, false, var3 != 0));
             var25 = var24_ref;
-            var24_ref.scaleGeometry(hk.field_Jb[this.field_c], hk.field_Jb[this.field_c], hk.field_Jb[this.field_c]);
+            var24_ref.b(hk.field_Jb[this.field_c], hk.field_Jb[this.field_c], hk.field_Jb[this.field_c]);
             var25.a(var4, var5, var6, var9, var10, var11, var12);
           }
           return;
@@ -165,37 +165,37 @@ final class sh {
         var11Lifetime1 = (!this.field_q ? 300 : 400) - this.field_f * 2;
         var12Lifetime1 = -400;
         if (this.field_b) {
-          var18_ref = (ModelMesh) (this.field_n.applyCurrentFrame(var2Lifetime1 != 0, true, var3Lifetime1 != 0, this.field_e));
+          var18_ref = (gd) (this.field_n.a(var2Lifetime1 != 0, true, var3Lifetime1 != 0, this.field_e));
           var19 = var18_ref;
-          var18_ref.scaleGeometry(hk.field_Jb[this.field_c], hk.field_Jb[this.field_c], hk.field_Jb[this.field_c]);
-          TriangleRasterizer.useRasterClip();
-          TriangleRasterizer.setProjectionCenter(this.field_i, this.field_g);
+          var18_ref.b(hk.field_Jb[this.field_c], hk.field_Jb[this.field_c], hk.field_Jb[this.field_c]);
+          tm.a();
+          tm.c(this.field_i, this.field_g);
           var19.a(var4Lifetime1, var5Lifetime1, var6Lifetime1, var9Lifetime1, var10Lifetime1, var11Lifetime1, var12Lifetime1);
         } else {
-          TriangleRasterizer.useRasterClip();
-          TriangleRasterizer.setProjectionCenter(this.field_i, this.field_g);
-          var20_ref = (ModelMesh) (this.field_e.a(var2Lifetime1 != 0, false, var3Lifetime1 != 0));
+          tm.a();
+          tm.c(this.field_i, this.field_g);
+          var20_ref = (gd) (this.field_e.a(var2Lifetime1 != 0, false, var3Lifetime1 != 0));
           var21 = var20_ref;
-          var20_ref.scaleGeometry(hk.field_Jb[this.field_c], hk.field_Jb[this.field_c], hk.field_Jb[this.field_c]);
+          var20_ref.b(hk.field_Jb[this.field_c], hk.field_Jb[this.field_c], hk.field_Jb[this.field_c]);
           var21.a(var4Lifetime1, var5Lifetime1, var6Lifetime1, var9Lifetime1, var10Lifetime1, var11Lifetime1, var12Lifetime1);
         }
     }
 
     private final void a(byte param0, int param1) {
         int var3;
-        AnimationSequence var4;
+        qb var4;
         int var5;
         int var6;
         int var7;
-        var7 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        var7 = ArmiesOfGielinor.field_M ? 1 : 0;
         if (!this.field_b) {
           return;
         }
         this.field_k = param1;
-        var3 = sf.unitAnimationGroups[this.field_c];
-        var4 = ck.animationSequencesByGroup[var3][this.field_k];
+        var3 = sf.field_P[this.field_c];
+        var4 = ck.field_e[var3][this.field_k];
         var5 = 81 % ((param0 + 53) / 59);
-        this.field_n.selectSequence(-1, var4);
+        this.field_n.a(-1, var4);
         this.a((byte) 122);
         var6 = this.field_o;
         if (var6 == 1) {
@@ -253,9 +253,9 @@ final class sh {
     final static je d(byte param0) {
         if (param0 < 69) {
           sh.b((byte) 50);
-          return MapTile.field_f.field_Jb;
+          return ne.field_f.field_Jb;
         }
-        return MapTile.field_f.field_Jb;
+        return ne.field_f.field_Jb;
     }
 
     private final void c(byte param0) {
@@ -279,7 +279,7 @@ final class sh {
     }
 
     sh() {
-        this.field_n = new AnimationPlayer(1);
+        this.field_n = new vj(1);
         this.a(0, 0);
         this.a(-28);
         this.a(0, 0, (byte) 115);

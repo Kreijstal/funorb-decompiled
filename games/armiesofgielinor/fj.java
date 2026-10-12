@@ -36,20 +36,20 @@ final class fj {
         this.c((byte) -71);
     }
 
-    final static void a(byte param0, IntrusiveNode param1, IntrusiveNode param2) {
+    final static void a(byte param0, tc param1, tc param2) {
         try {
-          if (param1.previous != null) {
-            param1.unlink(-105);
+          if (param1.field_j != null) {
+            param1.d(-105);
           }
-          param1.previous = param2.previous;
+          param1.field_j = param2.field_j;
           if (param0 != -123) {
             field_a = (String) null;
           }
-          param1.next = param2;
-          param1.previous.next = param1;
-          param1.next.previous = param1;
+          param1.field_b = param2;
+          param1.field_j.field_b = param1;
+          param1.field_b.field_j = param1;
         } catch (RuntimeException runtimeException) {
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "fj.L(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw ig.a((Throwable) ((Object) runtimeException), "fj.L(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -72,7 +72,7 @@ final class fj {
         String stackIn_17_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3_ref = null;
-        var4 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        var4 = ArmiesOfGielinor.field_M ? 1 : 0;
         try {
           if (param2 != -2) {
             return;
@@ -107,7 +107,7 @@ final class fj {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param2).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -171,14 +171,14 @@ final class fj {
     final static void a(java.awt.Component param0, byte param1) {
         try {
           if (param1 != 35) {
-            IntrusiveNode var3 = (IntrusiveNode) null;
-            fj.$cfr$intArgs$a$f94c566f195c(-121, (IntrusiveNode) null, (IntrusiveNode) null);
+            tc var3 = (tc) null;
+            fj.$cfr$intArgs$a$f94c566f195c(-121, (tc) null, (tc) null);
           }
           param0.removeKeyListener(va.field_w);
           param0.removeFocusListener(va.field_w);
           us.field_c = -1;
         } catch (RuntimeException runtimeException) {
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "fj.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw ig.a((Throwable) ((Object) runtimeException), "fj.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -204,7 +204,7 @@ final class fj {
 
     final void a(int param0) {
         int fieldTemp$0 = 0;
-        if (null != FixedQuaternion.field_a) {
+        if (null != wq.field_a) {
           return;
         }
         if (df.field_M <= 0) {
@@ -250,7 +250,7 @@ final class fj {
           this.field_e = bn.field_b;
           this.field_k.a(this.field_n, param0 ^ 32262, this.field_f);
           tq.field_a = false;
-          var2 = dj.a(this.field_f, 0, IntPair.field_m, -71, 0, this.field_n);
+          var2 = dj.a(this.field_f, 0, ft.field_m, -71, 0, this.field_n);
           if (var2 == null) {
             this.b(124);
             return var2;
@@ -260,7 +260,7 @@ final class fj {
         this.field_e = bn.field_b;
         this.field_k.a(this.field_n, param0 ^ 32262, this.field_f);
         tq.field_a = false;
-        var2Lifetime1 = dj.a(this.field_f, 0, IntPair.field_m, -71, 0, this.field_n);
+        var2Lifetime1 = dj.a(this.field_f, 0, ft.field_m, -71, 0, this.field_n);
         if (var2Lifetime1 != null) {
           return var2Lifetime1;
         }
@@ -285,7 +285,7 @@ final class fj {
         int var3Lifetime1;
         int var4Lifetime1;
         int var4Lifetime2;
-        var5 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        var5 = ArmiesOfGielinor.field_M ? 1 : 0;
         var2 = this.field_m;
         if (param0 == 56) {
           var3 = this.field_g;
@@ -430,7 +430,7 @@ final class fj {
           this.field_h = false;
           this.field_o = param6;
         } catch (RuntimeException runtimeException) {
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "fj.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + (param8 != null ? "{...}" : "null") + ')');
+          throw ig.a((Throwable) ((Object) runtimeException), "fj.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + (param8 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -442,20 +442,20 @@ final class fj {
     }
 
     /* Full JVM integer arguments; original narrow signature preserved. */
-    final static void $cfr$intArgs$a$f94c566f195c(int param0, IntrusiveNode param1, IntrusiveNode param2) {
+    final static void $cfr$intArgs$a$f94c566f195c(int param0, tc param1, tc param2) {
         try {
-          if (param1.previous != null) {
-            param1.unlink(-105);
+          if (param1.field_j != null) {
+            param1.d(-105);
           }
-          param1.previous = param2.previous;
+          param1.field_j = param2.field_j;
           if (param0 != -123) {
             field_a = (String) null;
           }
-          param1.next = param2;
-          param1.previous.next = param1;
-          param1.next.previous = param1;
+          param1.field_b = param2;
+          param1.field_j.field_b = param1;
+          param1.field_b.field_j = param1;
         } catch (RuntimeException runtimeException) {
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "fj.L(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw ig.a((Throwable) ((Object) runtimeException), "fj.L(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 }

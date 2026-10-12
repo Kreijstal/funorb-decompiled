@@ -238,7 +238,7 @@ final class nv extends hs implements he {
           } else {
             stackIn_50_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_49_0), ((StringBuilder) (Object) stackIn_49_1).append(stackIn_50_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_49_0), ((StringBuilder) (Object) stackIn_49_1).append(stackIn_50_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -306,7 +306,7 @@ final class nv extends hs implements he {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param7).append(',').append(param8).append(',').append(param9).append(',').append(param10).append(',').append(param11).append(',').append(param12).append(',').append(param13).append(',').append(param14).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param7).append(',').append(param8).append(',').append(param9).append(',').append(param10).append(',').append(param11).append(',').append(param12).append(',').append(param13).append(',').append(param14).append(')').toString());
         }
     }
 
@@ -347,12 +347,12 @@ final class nv extends hs implements he {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
         }
     }
 
     final void a(byte param0, int param1) {
-        int var4 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        int var4 = ArmiesOfGielinor.field_M ? 1 : 0;
         if (param1 < 0) {
           this.field_W = 0;
           if (param0 != -123) {
@@ -385,19 +385,19 @@ final class nv extends hs implements he {
     final static boolean c(int param0, int param1) {
         if (param0 != 0) {
           nv.l(106);
-          if (!(param1 < bw.unitDefinitions.length)) {
+          if (!(param1 < bw.field_m.length)) {
             return false;
           }
-          return 3 == bw.unitDefinitions[param1][0] ? true : false;
+          return 3 == bw.field_m[param1][0] ? true : false;
         }
-        if (!(param1 < bw.unitDefinitions.length)) {
+        if (!(param1 < bw.field_m.length)) {
           return false;
         }
-        return 3 == bw.unitDefinitions[param1][0] ? true : false;
+        return 3 == bw.field_m[param1][0] ? true : false;
     }
 
     private final void e(int param0, int param1) {
-        int var4 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        int var4 = ArmiesOfGielinor.field_M ? 1 : 0;
         int var3 = 123 % ((param0 - 2) / 56);
         if (param1 < 0) {
           this.field_T = 0;
@@ -424,7 +424,7 @@ final class nv extends hs implements he {
         int var7 = 0;
         int var5_intLifetime1;
         int var5_intLifetime2;
-        var7 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        var7 = ArmiesOfGielinor.field_M ? 1 : 0;
         try {
           super.a(param0, param1, param2, param3);
           if ((!(this.field_O.field_E instanceof fw) ||
@@ -454,7 +454,7 @@ final class nv extends hs implements he {
             this.field_P.field_G == 1) {
             if (this.field_M) {
               if (this.field_V) {
-                var5_intLifetime1 = -this.field_B - param1 + (AiPlanningStrategy.field_d - (this.field_O.field_B + (this.field_O.field_l >> 1)));
+                var5_intLifetime1 = -this.field_B - param1 + (sm.field_d - (this.field_O.field_B + (this.field_O.field_l >> 1)));
                 var6 = -param2 + ko.field_b - (this.field_p + this.field_O.field_p + (this.field_O.field_w >> 1));
                 if (Math.abs(var6) > Math.abs(var5_intLifetime1)) {
                   if (0 < var6) {
@@ -478,7 +478,7 @@ final class nv extends hs implements he {
               }
             } else {
               if (this.field_V) {
-                if (param1 + (this.field_O.field_B + (this.field_O.field_l >> 1)) >= AiPlanningStrategy.field_d) {
+                if (param1 + (this.field_O.field_B + (this.field_O.field_l >> 1)) >= sm.field_d) {
                   this.a(this.field_T - this.field_S, (byte) 84);
                 } else {
                   this.a(this.field_T + this.field_S, (byte) 110);
@@ -497,7 +497,7 @@ final class nv extends hs implements he {
           } else {
             stackIn_42_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_41_0), ((StringBuilder) (Object) stackIn_41_1).append(stackIn_42_2).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_41_0), ((StringBuilder) (Object) stackIn_41_1).append(stackIn_42_2).append(')').toString());
         }
     }
 
@@ -654,7 +654,7 @@ final class nv extends hs implements he {
         String stackIn_23_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var6 = null;
-        var7 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        var7 = ArmiesOfGielinor.field_M ? 1 : 0;
         try {
           if (param2 == 1 &&
             this.field_N) {
@@ -692,7 +692,7 @@ final class nv extends hs implements he {
           } else {
             stackIn_23_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(')').toString());
         }
     }
 
@@ -804,7 +804,7 @@ final class nv extends hs implements he {
     }
 
     final void d(byte param0) {
-        int var3 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        int var3 = ArmiesOfGielinor.field_M ? 1 : 0;
         if (param0 < 84) {
           return;
         }

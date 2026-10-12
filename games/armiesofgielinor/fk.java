@@ -7,26 +7,26 @@ final class fk implements kh {
     static String field_f;
     private gh field_c;
     static int field_b;
-    static int[][] matchupDamagePercent;
+    static int[][] field_d;
     static String field_e;
 
     public static void a(boolean param0) {
         field_g = null;
         field_e = null;
         field_a = null;
-        matchupDamagePercent = (int[][]) null;
+        field_d = (int[][]) null;
         if (!param0) {
           field_f = (String) null;
         }
         field_f = null;
     }
 
-    final static RgbSprite[] a(String param0, byte param1, ResourceArchive param2, String param3) {
+    final static wk[] a(String param0, byte param1, kl param2, String param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
         String var6 = null;
-        RgbSprite[] stackIn_3_0 = null;
+        wk[] stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -40,8 +40,8 @@ final class fk implements kh {
             var6 = (String) null;
             fk.a(false, (String) null);
           }
-          var4_int = param2.getGroupId(param3, 110);
-          var5 = param2.getFileId((byte) -72, var4_int, param0);
+          var4_int = param2.a(param3, 110);
+          var5 = param2.a((byte) -72, var4_int, param0);
           stackIn_3_0 = cb.a(false, param2, var4_int, var5);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -66,7 +66,7 @@ final class fk implements kh {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 
@@ -89,10 +89,10 @@ final class fk implements kh {
             return stackIn_2_0;
           }
           var4 = param0.a((byte) 13);
-          if (BattleTutorial.field_x != var4.field_q &&
+          if (iu.field_x != var4.field_q &&
             hf.field_h != var4.field_q &&
             var4.field_q != gg.field_G &&
-            var4.field_q != EquipmentBattleTutorial.field_z) {
+            var4.field_q != gb.field_z) {
             if (rn.field_c != var4.field_q) {
               throw new ef(var4.field_s);
             }
@@ -103,22 +103,22 @@ final class fk implements kh {
             if (mo.field_j != var5.field_q) {
               throw new ef(var5.field_s);
             }
-            var4.field_k = new NodeDeque();
+            var4.field_k = new at();
             while (true) {
               if (param0.a(127)) {
                 throw new ef(var4.field_s);
               }
-              if (param0.a((byte) 13).field_q == LeaderEscortCondition.field_d) {
+              if (param0.a((byte) 13).field_q == gm.field_d) {
                 stackIn_23_0 = var4;
                 return stackIn_23_0;
               }
               param0.field_a = param0.field_a - 1;
-              var4.field_k.addLast((byte) -119, (IntrusiveNode) (fk.a(param0, -32)));
+              var4.field_k.a((byte) -119, (tc) (fk.a(param0, -32)));
               if (param0.a(127)) {
                 throw new ef(var4.field_s);
               }
               var6 = param0.a((byte) 13);
-              if (LeaderEscortCondition.field_d == var6.field_q) {
+              if (gm.field_d == var6.field_q) {
                 stackIn_29_0 = var4;
                 return stackIn_29_0;
               }
@@ -139,7 +139,7 @@ final class fk implements kh {
           } else {
             stackIn_37_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_36_0), ((StringBuilder) (Object) stackIn_36_1).append(stackIn_37_2).append(',').append(param1).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_36_0), ((StringBuilder) (Object) stackIn_36_1).append(stackIn_37_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -147,7 +147,7 @@ final class fk implements kh {
         try {
           this.field_c = param0;
         } catch (RuntimeException runtimeException) {
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "fk.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw ig.a((Throwable) ((Object) runtimeException), "fk.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -170,11 +170,11 @@ final class fk implements kh {
           }
           var6_int = param1 + param0.field_B;
           var7 = param4 + param0.field_p;
-          StateChangeEvent.a(param0.field_l, var6_int, param0.field_w, -127, var7);
+          qq.a(param0.field_l, var6_int, param0.field_w, -127, var7);
           if (param0.a(false)) {
             na.c(-4 + param0.field_l, 2 + var6_int, -67, param0.field_w - 4, 2 + var7);
           }
-          SoftwareRaster.f(var6_int, var7, var6_int + param0.field_l - 2, param0.field_w + var7);
+          qn.f(var6_int, var7, var6_int + param0.field_l - 2, param0.field_w + var7);
           var8 = this.field_c.field_O.j(-6508);
           if (var8 != null) {
             var9 = var8.toString();
@@ -182,10 +182,10 @@ final class fk implements kh {
             if (this.field_c.a(false) &&
               var9.startsWith(this.field_c.field_I)) {
               var10 = this.field_c.field_K.a(this.field_c.field_I);
-              SoftwareRaster.b(var6_int + 2, 2 + var7, var10, -4 + param0.field_w, 2188450, 100);
+              qn.b(var6_int + 2, 2 + var7, var10, -4 + param0.field_w, 2188450, 100);
             }
           }
-          SoftwareRaster.a();
+          qn.a();
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -197,7 +197,7 @@ final class fk implements kh {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -211,7 +211,7 @@ final class fk implements kh {
         RuntimeException decompiledCaughtException = null;
         try {
           if (!param0) {
-            stackIn_4_0 = sb.field_e.getFileByName(param1, 74, "");
+            stackIn_4_0 = sb.field_e.a(param1, 74, "");
             return stackIn_4_0;
           }
           stackIn_2_0 = (byte[]) null;
@@ -226,11 +226,11 @@ final class fk implements kh {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 
-    final static bq[] a(int param0, CipherPacketBuffer param1) {
+    final static bq[] a(int param0, bv param1) {
         int var5 = 0;
         int var2_int = 0;
         RuntimeException var2 = null;
@@ -245,28 +245,28 @@ final class fk implements kh {
         StringBuilder stackIn_14_1 = null;
         String stackIn_15_2 = null;
         RuntimeException decompiledCaughtException = null;
-        var7 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        var7 = ArmiesOfGielinor.field_M ? 1 : 0;
         try {
-          var2_int = param1.readBits(114, 8);
+          var2_int = param1.g(114, 8);
           if (var2_int > 0) {
             stackIn_3_0 = null;
             return (bq[]) (stackIn_3_0);
           }
-          var3 = param1.readBits(55, param0);
+          var3 = param1.g(55, param0);
           var4 = new bq[var3];
           for (var5 = 0; var5 < var3; var5++) {
             if (vq.a(param1, -2)) {
               var6 = new bq();
-              param1.readBits(60, 24);
-              param1.readBits(-107, 24);
-              var6.field_e = param1.readBits(-115, 24);
-              param1.readBits(param0 - 127, 9);
-              param1.readBits(-105, 12);
-              param1.readBits(44, 12);
-              param1.readBits(125, 12);
+              param1.g(60, 24);
+              param1.g(-107, 24);
+              var6.field_e = param1.g(-115, 24);
+              param1.g(param0 - 127, 9);
+              param1.g(-105, 12);
+              param1.g(44, 12);
+              param1.g(125, 12);
               var4[var5] = var6;
             } else {
-              var6_int = param1.readBits(82, cu.a(3, var5 - 1));
+              var6_int = param1.g(82, cu.a(3, var5 - 1));
               var4[var5] = var4[var6_int];
             }
           }
@@ -282,7 +282,7 @@ final class fk implements kh {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
         }
     }
 
@@ -304,7 +304,7 @@ final class fk implements kh {
           Throwable decompiledCaughtException = null;
           Throwable var3_ref = null;
           RuntimeException var3_ref2 = null;
-          var7 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+          var7 = ArmiesOfGielinor.field_M ? 1 : 0;
           try {
             try {
               var3 = (String) (lj.a("getcookies", (byte) -105, param1));
@@ -343,7 +343,7 @@ final class fk implements kh {
             } else {
               stackIn_21_2 = "{...}";
             }
-            throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
+            throw ig.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -356,7 +356,7 @@ final class fk implements kh {
         field_f = "This game has been updated! Please reload this page.";
         field_g = "Players";
         field_a = "No";
-        matchupDamagePercent = new int[][]{new int[]{50, 25, 50, 50, 25, 50, 90, 50}, new int[]{90, 50, 90, 50, 25, 50, 90, 50}, new int[]{50, 25, 50, 90, 90, 50, 90, 50}, new int[]{90, 90, 25, 25, 90, 50, 90, 50}, new int[]{90, 90, 50, 90, 50, 50, 90, 50}, new int[]{50, 50, 50, 50, 50, 50, 50, 50}, new int[]{50, 50, 50, 50, 50, 50, 90, 50}, new int[]{90, 90, 90, 90, 90, 90, 90, 90}};
+        field_d = new int[][]{new int[]{50, 25, 50, 50, 25, 50, 90, 50}, new int[]{90, 50, 90, 50, 25, 50, 90, 50}, new int[]{50, 25, 50, 90, 90, 50, 90, 50}, new int[]{90, 90, 25, 25, 90, 50, 90, 50}, new int[]{90, 90, 50, 90, 50, 50, 90, 50}, new int[]{50, 50, 50, 50, 50, 50, 50, 50}, new int[]{50, 50, 50, 50, 50, 50, 90, 50}, new int[]{90, 90, 90, 90, 90, 90, 90, 90}};
         field_e = "Find opponent";
     }
 }

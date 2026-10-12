@@ -8,7 +8,7 @@ final class tq {
     static int field_b;
 
     final static void a(boolean param0, boolean param1) {
-        GlobalSpell.a(-47, param0);
+        al.a(-47, param0);
         if (param1) {
           tq.a((byte) 89);
           wc.a(param0, true);
@@ -22,60 +22,60 @@ final class tq {
           return;
         }
         if (!param1) {
-          SoftwareRaster.b();
-          DamageEvent.b((byte) 92, param1);
+          qn.b();
+          nw.b((byte) 92, param1);
           return;
         }
-        SoftwareRaster.b(0, 0, SoftwareRaster.width, SoftwareRaster.height, 0, 192);
-        DamageEvent.b((byte) 92, param1);
+        qn.b(0, 0, qn.field_l, qn.field_g, 0, 192);
+        nw.b((byte) 92, param1);
     }
 
     final static void a(int param0, int param1) {
-        CipherPacketBuffer var2 = vl.outgoingPacket;
-        var2.writeCipheredOpcode(32161, param0);
-        var2.writeByte(param1 ^ 1, 1);
-        var2.writeByte(1, param1);
+        bv var2 = vl.field_n;
+        var2.h(32161, param0);
+        var2.b(param1 ^ 1, 1);
+        var2.b(1, param1);
     }
 
-    final static RgbSprite[] a(int param0, boolean param1, int param2, int param3, int param4, int param5) {
-        RgbSprite var11 = null;
-        RgbSprite var12 = null;
-        RgbSprite var13 = null;
+    final static wk[] a(int param0, boolean param1, int param2, int param3, int param4, int param5) {
+        wk var11 = null;
+        wk var12 = null;
+        wk var13 = null;
         Object var14 = null;
-        RgbSprite var16 = null;
-        int[] var18 = SoftwareRaster.pixels;
+        wk var16 = null;
+        int[] var18 = qn.field_d;
         int[] var17 = var18;
         int[] var15 = var17;
         int[] var6 = var15;
-        int var7 = SoftwareRaster.width;
-        int var8 = SoftwareRaster.height;
-        RgbSprite var9 = new RgbSprite(param4, -(2 * param4) + param2);
+        int var7 = qn.field_l;
+        int var8 = qn.field_g;
+        wk var9 = new wk(param4, -(2 * param4) + param2);
         var9.b();
-        SoftwareRaster.a(0, 0, param4, -(2 * param4) + param2, param0, param5);
-        RgbSprite var10 = new RgbSprite(param4, param4);
+        qn.a(0, 0, param4, -(2 * param4) + param2, param0, param5);
+        wk var10 = new wk(param4, param4);
         var10.b();
         if (!param1) {
-          SoftwareRaster.f(0, 0, param4, param4, param0);
-          var11 = new RgbSprite(16, param4);
+          qn.f(0, 0, param4, param4, param0);
+          var11 = new wk(16, param4);
           var11.b();
-          SoftwareRaster.f(0, 0, 16, param4, param0);
-          var12 = new RgbSprite(param4, param4);
+          qn.f(0, 0, 16, param4, param0);
+          var12 = new wk(param4, param4);
           var12.b();
-          SoftwareRaster.f(0, 0, param4, param4, param5);
-          var13 = new RgbSprite(16, param4);
+          qn.f(0, 0, param4, param4, param5);
+          var13 = new wk(16, param4);
           var13.b();
-          SoftwareRaster.f(0, 0, 16, param4, param5);
+          qn.f(0, 0, 16, param4, param5);
           var14 = null;
           if (param3 > 0) {
-            var16 = new RgbSprite(16, 16);
+            var16 = new wk(16, 16);
             var14 = var16;
             var16.b();
-            SoftwareRaster.f(0, 0, 16, 16, param3);
+            qn.f(0, 0, 16, 16, param3);
           }
-          SoftwareRaster.a(var18, var7, var8);
-          return new RgbSprite[]{var10, var11, var10, var9, (RgbSprite) (var14), var9, var12, var13, var12};
+          qn.a(var18, var7, var8);
+          return new wk[]{var10, var11, var10, var9, (wk) (var14), var9, var12, var13, var12};
         }
-        return (RgbSprite[]) null;
+        return (wk[]) null;
     }
 
     public static void a(byte param0) {

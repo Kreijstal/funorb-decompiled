@@ -1,14 +1,14 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class dc extends IntrusiveNode {
+final class dc extends tc {
     static String field_l;
     int field_p;
     int[] field_m;
     int[] field_v;
     wo[] field_k;
     wo[] field_r;
-    static RgbSprite field_n;
+    static wk field_n;
     byte[][][] field_u;
     static String field_s;
     static long field_o;
@@ -20,12 +20,12 @@ final class dc extends IntrusiveNode {
           if (param1 > -25) {
             dc.a(false, false);
           }
-          param0.removeMouseListener(BattleCharacter.field_q);
-          param0.removeMouseMotionListener(BattleCharacter.field_q);
-          param0.removeFocusListener(BattleCharacter.field_q);
+          param0.removeMouseListener(lf.field_q);
+          param0.removeMouseMotionListener(lf.field_q);
+          param0.removeFocusListener(lf.field_q);
           ob.field_J = 0;
         } catch (RuntimeException runtimeException) {
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "dc.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw ig.a((Throwable) ((Object) runtimeException), "dc.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -61,7 +61,7 @@ final class dc extends IntrusiveNode {
 
     static {
         field_l = "Chat is currently disabled.";
-        field_n = new RgbSprite(540, 140);
+        field_n = new wk(540, 140);
         field_s = "High";
     }
 }

@@ -4,7 +4,7 @@
 final class qt {
     static int[] field_c;
     static String field_d;
-    static IndexedSprite field_e;
+    static ru field_e;
     static String field_a;
     static String field_b;
 
@@ -25,7 +25,7 @@ final class qt {
         int var4 = 0;
         int stackIn_7_0 = 0;
         RuntimeException decompiledCaughtException = null;
-        var4 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        var4 = ArmiesOfGielinor.field_M ? 1 : 0;
         try {
           var3_int = 0;
           while (param1 > 0) {
@@ -41,16 +41,16 @@ final class qt {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) var3), "qt.A(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw ig.a((Throwable) ((Object) var3), "qt.A(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
     final static void a(boolean param0) {
-        TriangleRasterizer.useRasterClip();
+        tm.a();
         if (param0) {
           return;
         }
-        TriangleRasterizer.b(0.75f);
+        tm.b(0.75f);
     }
 
     static {

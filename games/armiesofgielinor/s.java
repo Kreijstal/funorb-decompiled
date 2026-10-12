@@ -2,25 +2,25 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class s {
-    static RgbSprite field_c;
-    static NodeDeque field_a;
-    static NodeDeque field_e;
+    static wk field_c;
+    static at field_a;
+    static at field_e;
     static int field_d;
     static String field_b;
 
     final static void a(int param0, int param1, on param2) {
-        CipherPacketBuffer var3 = null;
+        bv var3 = null;
         try {
-          var3 = vl.outgoingPacket;
-          var3.writeCipheredOpcode(32161, param1);
-          var3.writeByte(1, 2);
-          var3.writeByte(1, 0);
+          var3 = vl.field_n;
+          var3.h(32161, param1);
+          var3.b(1, 2);
+          var3.b(1, 0);
           if (param0 <= 125) {
             field_b = (String) null;
           }
-          var3.writeByte(1, param2.field_l);
+          var3.b(1, param2.field_l);
         } catch (RuntimeException runtimeException) {
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "s.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw ig.a((Throwable) ((Object) runtimeException), "s.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -44,7 +44,7 @@ final class s {
         RuntimeException var3 = null;
         try {
           if (param2 == 1) {
-            stackIn_2_0 = fo.a(4800, GrowthEvent.field_B, new String[]{param1});
+            stackIn_2_0 = fo.a(4800, kf.field_B, new String[]{param1});
             return stackIn_2_0;
           }
           if (2 == param2) {
@@ -80,11 +80,11 @@ final class s {
             return stackIn_30_0;
           }
           if (param2 == 11) {
-            stackIn_33_0 = fo.a(4800, Spell.field_a, new String[]{param1});
+            stackIn_33_0 = fo.a(4800, ik.field_a, new String[]{param1});
             return stackIn_33_0;
           }
           if (param2 == 12) {
-            stackIn_37_0 = fo.a(4800, DirectByteStorage.field_i, new String[]{param1});
+            stackIn_37_0 = fo.a(4800, cj.field_i, new String[]{param1});
             return stackIn_37_0;
           }
           if (param2 != 13) {
@@ -102,7 +102,7 @@ final class s {
           } else {
             stackIn_45_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_44_0), ((StringBuilder) (Object) stackIn_44_1).append(stackIn_45_2).append(',').append(param2).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_44_0), ((StringBuilder) (Object) stackIn_44_1).append(stackIn_45_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -115,8 +115,8 @@ final class s {
     }
 
     static {
-        field_a = new NodeDeque();
-        field_e = new NodeDeque();
+        field_a = new at();
+        field_e = new at();
         field_b = "Achievements";
     }
 }

@@ -4,13 +4,13 @@
 final class lb {
     static String field_d;
     static int field_a;
-    static IndexedSprite[] field_e;
+    static ru[] field_e;
     static String field_c;
     static String field_b;
 
     final static void a(byte param0) {
-        ai.field_T.errorCount = 0;
-        ai.field_T.errorCode = 0;
+        ai.field_T.field_q = 0;
+        ai.field_T.field_p = 0;
         if (param0 != -8) {
           field_b = (String) null;
         }
@@ -18,10 +18,10 @@ final class lb {
 
     final static boolean b(int param0) {
         if (param0 != 0) {
-          field_e = (IndexedSprite[]) null;
-          return RadialSummonMenu.field_e;
+          field_e = (ru[]) null;
+          return ub.field_e;
         }
-        return RadialSummonMenu.field_e;
+        return ub.field_e;
     }
 
     public static void a(int param0) {

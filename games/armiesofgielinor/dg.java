@@ -5,7 +5,7 @@ final class dg {
     static String field_b;
     static String field_a;
     static int field_c;
-    private ResourceArchive field_d;
+    private kl field_d;
 
     final static void b(byte param0) {
         int stackIn_5_0 = 0;
@@ -22,7 +22,7 @@ final class dg {
         }
         if (param0 == -61) {
           var1 = 352;
-          stackIn_12_0 = SectorCacheStore.field_j[kd.field_X].length;
+          stackIn_12_0 = bc.field_j[kd.field_X].length;
           stackIn_13_1 = (od.field_c[kd.field_X]) ? 1 : 0;
           var2 = stackIn_12_0 + stackIn_13_1;
           var2 = (var2 / 2 + var2 % 2) * 80;
@@ -35,7 +35,7 @@ final class dg {
         }
         dg.a(38);
         var1Lifetime1 = 352;
-        stackIn_5_0 = SectorCacheStore.field_j[kd.field_X].length;
+        stackIn_5_0 = bc.field_j[kd.field_X].length;
         stackIn_6_1 = (od.field_c[kd.field_X]) ? 1 : 0;
         var2Lifetime1 = stackIn_5_0 + stackIn_6_1;
         var2Lifetime1 = (var2Lifetime1 / 2 + var2Lifetime1 % 2) * 80;
@@ -88,11 +88,11 @@ final class dg {
         co var3Lifetime1;
         if (param0 != mk.field_e) {
           if (!(param1 > mk.field_e)) {
-            var4 = UnitLossCondition.field_d[mk.field_e];
+            var4 = mc.field_d[mk.field_e];
             var3 = var4;
             var4.a(0);
           }
-          var5 = UnitLossCondition.field_d[param0];
+          var5 = mc.field_d[param0];
           var3Lifetime1 = var5;
           var3Lifetime1.b((byte) -118);
           ac.field_k = var3Lifetime1.field_w;
@@ -101,29 +101,29 @@ final class dg {
           mk.field_e = param0;
           l.field_b = var3Lifetime1.field_g;
           oq.field_l = var5.field_b;
-          dd.field_k = ac.field_k[1].toRgbSprite();
+          dd.field_k = ac.field_k[1].a();
           return;
         }
     }
 
     final void b(int param0) {
         int var2 = 0;
-        int var3 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
-        of.field_Mb = MapLayout.a("cantmove", -28106, "basic", this.field_d);
-        bk.field_d = MapLayout.a("attacktargets", -28106, "basic", this.field_d);
-        hq.field_a = MapLayout.a("surround_tiles", -28106, "basic", this.field_d);
+        int var3 = ArmiesOfGielinor.field_M ? 1 : 0;
+        of.field_Mb = lo.a("cantmove", -28106, "basic", this.field_d);
+        bk.field_d = lo.a("attacktargets", -28106, "basic", this.field_d);
+        hq.field_a = lo.a("surround_tiles", -28106, "basic", this.field_d);
         vf.field_j = fk.a("smoke", (byte) -124, this.field_d, "basic");
         jq.field_G = fk.a("kalphites", (byte) -124, this.field_d, "basic");
         for (var2 = param0; jq.field_G.length > var2; var2++) {
           jq.field_G[var2].i();
         }
-        es.field_d = MapLayout.a("bones", param0 - 28106, "basic", this.field_d);
+        es.field_d = lo.a("bones", param0 - 28106, "basic", this.field_d);
         wf.field_B = fk.a("boneshadows", (byte) -124, this.field_d, "basic");
-        TeamRoster.field_g = DiskCacheRequest.a("player_ring", "basic", this.field_d, false);
+        go.field_g = nh.a("player_ring", "basic", this.field_d, false);
         wl.field_N = fk.a("shadows", (byte) -128, this.field_d, "basic")[0];
     }
 
-    dg(ResourceArchive param0) {
+    dg(kl param0) {
         RuntimeException var2 = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
@@ -142,7 +142,7 @@ final class dg {
           } else {
             stackIn_6_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(')').toString());
         }
     }
 

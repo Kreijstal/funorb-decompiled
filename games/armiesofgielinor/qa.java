@@ -38,19 +38,19 @@ final class qa extends dr {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 
     final static void b(int param0, int param1) {
-        BattleUnitRenderer.field_c = wf.field_F[param0];
+        eo.field_c = wf.field_F[param0];
         db.field_b = eq.field_m[param0];
         if (param1 == 1) {
-          of.field_Jb = CorpseConditionMarker.field_s[param0];
+          of.field_Jb = dk.field_s[param0];
           return;
         }
         field_F = true;
-        of.field_Jb = CorpseConditionMarker.field_s[param0];
+        of.field_Jb = dk.field_s[param0];
     }
 
     public static void g(int param0) {

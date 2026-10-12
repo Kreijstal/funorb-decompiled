@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class nt extends IntrusiveNode {
+final class nt extends tc {
     int field_q;
     int field_r;
     static String field_p;
@@ -22,11 +22,11 @@ final class nt extends IntrusiveNode {
 
     final static void a(int param0, int param1, int param2, int param3, int param4) {
         int stackIn_10_0 = 0;
-        RgbSprite stackIn_16_0 = null;
+        wk stackIn_16_0 = null;
         int stackIn_16_1 = 0;
         int stackIn_16_2 = 0;
         int stackIn_17_3 = 0;
-        RgbSprite stackIn_19_0;
+        wk stackIn_19_0;
         int stackIn_19_1;
         int stackIn_19_2;
         int stackIn_19_3;
@@ -39,7 +39,7 @@ final class nt extends IntrusiveNode {
         int var8 = 0;
         int var9 = 0;
         int var8Lifetime1;
-        var9 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        var9 = ArmiesOfGielinor.field_M ? 1 : 0;
         try {
           if (param0 != 894) {
             nt.a((byte) 82);
@@ -85,7 +85,7 @@ final class nt extends IntrusiveNode {
               } else {
                 stackIn_20_4 = 2;
               }
-              ((RgbSprite) (Object) stackIn_19_0).f(stackIn_19_1, stackIn_19_2, stackIn_19_3 * stackIn_20_4);
+              ((wk) (Object) stackIn_19_0).f(stackIn_19_1, stackIn_19_2, stackIn_19_3 * stackIn_20_4);
               var5_int = 3 & (var5_int ^ param1);
               var6++;
             }
@@ -97,7 +97,7 @@ final class nt extends IntrusiveNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) var5), "nt.B(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw ig.a((Throwable) ((Object) var5), "nt.B(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -111,7 +111,7 @@ final class nt extends IntrusiveNode {
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var2_int = ResourceArchive.c(tf.field_l, -76, BufferedSocket.field_j);
+          var2_int = kl.c(tf.field_l, -76, hi.field_j);
           if (var2_int == 1) {
             param1 = "<img=0>" + param1;
           }
@@ -131,7 +131,7 @@ final class nt extends IntrusiveNode {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 

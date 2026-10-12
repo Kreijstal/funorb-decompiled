@@ -67,7 +67,7 @@ final class ut extends sf implements he {
         int var2_intLifetime1;
         int var3Lifetime2;
         try {
-          this.field_db = ma.a(-114, IntPair.field_m);
+          this.field_db = ma.a(-114, ft.field_m);
           if (this.field_db.length > 0) {
             for (var2_int = 0; var2_int < this.field_db.length; var2_int++) {
               if (this.field_db[var2_int] != null) {
@@ -78,9 +78,9 @@ final class ut extends sf implements he {
                     this.field_db[var3] = null;
                   }
                 }
-                if (null != ActionSpell.field_e &&
+                if (null != ra.field_e &&
                   null != this.field_db[var2_int] &&
-                  !ActionSpell.field_e.c(this.field_db[var2_int].field_b, 122, this.field_db[var2_int].field_a)) {
+                  !ra.field_e.c(this.field_db[var2_int].field_b, 122, this.field_db[var2_int].field_a)) {
                   this.field_db[var2_int] = null;
                 }
               }
@@ -101,19 +101,19 @@ final class ut extends sf implements he {
                 this.field_db[incrementValue$0] = var3_ref_ls__[var5];
               }
             }
-            SpellConfirmationDialog.a(this.field_db, 1680474497);
+            uf.a(this.field_db, 1680474497);
           }
           stackIn_31_1 = !(this.field_db.length <= 0);
           this.field_jb = stackIn_31_1;
-          stackIn_34_0 = (!PaletteRegionMap.b(85)) ? 0 : 1;
+          stackIn_34_0 = (!pr.b(85)) ? 0 : 1;
           var2_intLifetime1 = stackIn_34_0;
-          stackIn_37_1 = !(DamageEvent.g(79));
+          stackIn_37_1 = !(nw.g(79));
           this.field_hb = stackIn_37_1;
           stackIn_40_0 = (var2_intLifetime1 != 0) ? 3 : 2;
           var3Lifetime1 = stackIn_40_0;
           if (var2_intLifetime1 == 0) {
-            if (null != ActionSpell.field_e) {
-              stackIn_48_0 = (ActionSpell.field_e.d((byte) 122)) ? 1 : 0;
+            if (null != ra.field_e) {
+              stackIn_48_0 = (ra.field_e.d((byte) 122)) ? 1 : 0;
             } else {
               stackIn_48_0 = 0;
             }
@@ -148,7 +148,7 @@ final class ut extends sf implements he {
           this.a((byte) 10, (kb) (this.field_gb));
           this.field_mb = this.a((qo) (this), oq.field_j, oa.field_H, false);
           if (var2_intLifetime1 != 0) {
-            this.field_Z = this.a((qo) (this), Unit.field_n, dq.field_e, false);
+            this.field_Z = this.a((qo) (this), jd.field_n, dq.field_e, false);
           }
           this.field_bb = this.a((qo) (this), oo.field_e, tg.field_b, false);
           if (var2_intLifetime1 != 0) {
@@ -168,18 +168,18 @@ final class ut extends sf implements he {
             var6_int = -1 + var5_ref_String__.length;
             for (var7_int = 0; var7_int < this.field_db.length; var7_int++) {
               var8 = this.field_db[var7_int];
-              if (null != FixedQuaternion.field_a &&
-                var8.field_b == ActionSpell.field_e.field_f &&
-                ActionSpell.field_e.field_n == var8.field_a) {
+              if (null != wq.field_a &&
+                var8.field_b == ra.field_e.field_f &&
+                ra.field_e.field_n == var8.field_a) {
                 var6_int = var7_int;
               }
               var5_ref_String__[var7_int] = var8.field_b + "<times>" + var8.field_a;
             }
             this.field_lb = new gh(var5_ref_String__, var6_int, 150);
             this.field_lb.a(this.field_bb.field_B + this.field_gb.field_B, 126, this.field_bb.field_w + this.field_bb.field_p + (this.field_gb.field_p - 19), 8192, 18);
-            this.field_D.addFirst(750, this.field_lb);
+            this.field_D.a(750, this.field_lb);
           }
-          this.field_X = this.a((byte) 38, VineGrowthAction.field_w, (qo) (this));
+          this.field_X = this.a((byte) 38, pe.field_w, (qo) (this));
           var5Lifetime1 = this.field_X.field_l / 2 + this.field_X.field_B;
           this.field_X.field_l = 150;
           this.field_X.field_B = -this.field_X.field_l - 20 + var5Lifetime1;
@@ -190,7 +190,7 @@ final class ut extends sf implements he {
           if (var2_intLifetime1 != 0 ||
             var4Lifetime1 != 0) {
             if (var2_intLifetime1 != 0) {
-              stackIn_74_0 = GameEvent.field_l;
+              stackIn_74_0 = oj.field_l;
             } else {
               stackIn_74_0 = fj.field_w;
             }
@@ -220,7 +220,7 @@ final class ut extends sf implements he {
           } else {
             stackIn_81_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_80_0), ((StringBuilder) (Object) stackIn_80_1).append(stackIn_81_2).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_80_0), ((StringBuilder) (Object) stackIn_80_1).append(stackIn_81_2).append(')').toString());
         }
     }
 
@@ -228,11 +228,11 @@ final class ut extends sf implements he {
         if (param0 != -1) {
           return (fw) null;
         }
-        if (FixedQuaternion.field_a != null) {
+        if (wq.field_a != null) {
           return this.field_bb;
         }
-        if (ActionSpell.field_e != null &&
-          ActionSpell.field_e.field_h &&
+        if (ra.field_e != null &&
+          ra.field_e.field_h &&
           this.field_Z != null) {
           return this.field_Z;
         }
@@ -249,12 +249,12 @@ final class ut extends sf implements he {
         int var6_int = 0;
         RuntimeException var6 = null;
         int var7 = 0;
-        IndexedSprite[] var8 = null;
-        var7 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        ru[] var8 = null;
+        var7 = ArmiesOfGielinor.field_M ? 1 : 0;
         try {
           if (param1 != 11) {
-            var8 = (IndexedSprite[]) null;
-            discarded$0 = this.a((qo) null, (String) null, (IndexedSprite[]) null, true);
+            var8 = (ru[]) null;
+            discarded$0 = this.a((qo) null, (String) null, (ru[]) null, true);
           }
           if (param4 == this.field_X) {
             this.n(118);
@@ -275,7 +275,7 @@ final class ut extends sf implements he {
                   if (var6_int == 0 &&
                     param4 == this.field_bb) {
                     if (!this.field_jb) {
-                      this.field_G.a(new ud(this.field_G, PlayerProfile.field_h), 0);
+                      this.field_G.a(new ud(this.field_G, hm.field_h), 0);
                       return;
                     }
                     if (df.field_M <= 0) {
@@ -302,7 +302,7 @@ final class ut extends sf implements he {
           } else {
             stackIn_29_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_28_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_28_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(')').toString());
         }
     }
 
@@ -317,10 +317,10 @@ final class ut extends sf implements he {
 
     private final void r(int param0) {
         int var2 = 0;
-        int var3 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        int var3 = ArmiesOfGielinor.field_M ? 1 : 0;
         if (this.field_mb == this.field_Y) {
           ck.b(param0 - 59);
-          AiActionCandidate.e(param0 ^ -17024);
+          jb.e(param0 ^ -17024);
         } else {
           if (this.field_Y == this.field_Z) {
             ck.b(-109);
@@ -330,10 +330,10 @@ final class ut extends sf implements he {
               if (this.field_lb != null) {
                 var2 = this.field_lb.a((byte) 71);
                 if (var2 >= 0) {
-                  ActionSpell.field_e.a(this.field_db[var2].field_b, this.field_db[var2].field_a, -8717);
+                  ra.field_e.a(this.field_db[var2].field_b, this.field_db[var2].field_a, -8717);
                 }
               }
-              AiPlanningStrategy.a(true, param0 + 8029);
+              sm.a(true, param0 + 8029);
               this.field_G.a(new cs(this.field_G), 0);
             }
           }
@@ -347,7 +347,7 @@ final class ut extends sf implements he {
     private final void q(int param0) {
         int var3 = 0;
         fw var4 = null;
-        int var5 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        int var5 = ArmiesOfGielinor.field_M ? 1 : 0;
         fw[] var6 = this.field_kb;
         fw[] var2 = var6;
         for (var3 = 0; var6.length > var3; var3++) {
@@ -369,12 +369,12 @@ final class ut extends sf implements he {
         if (param2 < pd.field_e) {
           sq.field_k = param2;
         }
-        AnimationFrameSet.field_w[kt.field_p] = param3;
-        TutorialController.field_c[kt.field_p] = param0;
-        VineGrowthAction.field_s[kt.field_p] = param1;
+        wp.field_w[kt.field_p] = param3;
+        ci.field_c[kt.field_p] = param0;
+        pe.field_s[kt.field_p] = param1;
         int var6 = param0 + (param3 + param1);
         int var7 = var6 == 0 ? 0 : 1000 * param3 / var6;
-        EffectPresentation.field_h[kt.field_p] = var7;
+        tb.field_h[kt.field_p] = var7;
         kt.field_p = kt.field_p + 1;
         if (!(sq.field_k <= var7)) {
           sq.field_k = var7;
@@ -387,25 +387,25 @@ final class ut extends sf implements he {
         }
     }
 
-    final static TaggedMapData readTaggedMap(CipherPacketBuffer packet, byte obfuscationGuard, int recordBitLength) {
-        TaggedMapData var3 = null;
+    final static sc a(bv param0, byte param1, int param2) {
+        sc var3 = null;
         RuntimeException var3_ref = null;
-        TaggedMapData stackIn_5_0 = null;
-        TaggedMapData stackIn_7_0 = null;
+        sc stackIn_5_0 = null;
+        sc stackIn_7_0 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (recordBitLength == 0) {
+          if (param2 == 0) {
             return null;
           }
-          if (obfuscationGuard > -31) {
-            stackIn_5_0 = (TaggedMapData) null;
+          if (param1 > -31) {
+            stackIn_5_0 = (sc) null;
             return stackIn_5_0;
           }
-          var3 = new TaggedMapData();
-          no.readTaggedFields(packet, var3, recordBitLength, -24721);
+          var3 = new sc();
+          no.a(param0, var3, param2, -24721);
           stackIn_7_0 = var3;
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -413,12 +413,12 @@ final class ut extends sf implements he {
           var3_ref = decompiledCaughtException;
           stackIn_10_0 = var3_ref;
           stackIn_10_1 = new StringBuilder().append("ut.G(");
-          if (packet == null) {
+          if (param0 == null) {
             stackIn_11_2 = "null";
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(obfuscationGuard).append(',').append(recordBitLength).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -450,20 +450,20 @@ final class ut extends sf implements he {
         int[] var1Lifetime2;
         int var2Lifetime1;
         int var2Lifetime2;
-        var3 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        var3 = ArmiesOfGielinor.field_M ? 1 : 0;
         try {
           mu.field_a = null;
           qc.field_j = 0;
           if (vs.field_j) {
             rd.field_j = null;
             vs.field_j = false;
-            SectorCacheStore.field_a = null;
+            bc.field_a = null;
             ef.b(-1);
           }
           if (pv.field_c) {
             pq.field_f = null;
-            UnitInfoPopup.field_u = new NodeDeque();
-            var10 = BoundedFile.field_e;
+            fi.field_u = new at();
+            var10 = ei.field_e;
             var7 = var10;
             var4 = var7;
             var1 = var4;
@@ -486,11 +486,11 @@ final class ut extends sf implements he {
             }
             pv.field_c = false;
           }
-          if (AiUnitPlanner.field_t) {
-            PacketBuffer.i((byte) -97);
+          if (cl.field_t) {
+            vh.i((byte) -97);
             pu.d(-112);
             da.c(-120);
-            AiUnitPlanner.field_t = false;
+            cl.field_t = false;
           }
           if (param0 < 120) {
             ut.a(-43, 103, -36, -123, (byte) 96, -93);
@@ -499,7 +499,7 @@ final class ut extends sf implements he {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) var1_ref), "ut.A(" + param0 + ')');
+          throw ig.a((Throwable) ((Object) var1_ref), "ut.A(" + param0 + ')');
         }
     }
 
@@ -531,8 +531,8 @@ final class ut extends sf implements he {
               if (this.field_lb != null) {
                 var4 = this.field_lb.a((byte) 71);
                 var5 = this.field_db[var4];
-                if (ActionSpell.field_e.field_f != var5.field_b ||
-                  ActionSpell.field_e.field_n != var5.field_a) {
+                if (ra.field_e.field_f != var5.field_b ||
+                  ra.field_e.field_n != var5.field_a) {
                   this.field_ab.field_I = true;
                 }
                 this.q(-108);
@@ -556,7 +556,7 @@ final class ut extends sf implements he {
           } else {
             stackIn_20_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param1).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -598,7 +598,7 @@ final class ut extends sf implements he {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 
@@ -615,7 +615,7 @@ final class ut extends sf implements he {
         String stackIn_21_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var5_ref = null;
-        var8 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        var8 = ArmiesOfGielinor.field_M ? 1 : 0;
         try {
           super.a(param0, param1, param2, param3);
           if (lk.field_f) {
@@ -630,7 +630,7 @@ final class ut extends sf implements he {
             }
           }
           if (!this.field_hb &&
-            !DamageEvent.g(115)) {
+            !nw.g(115)) {
             this.n(88);
             this.field_G.a(new ut(this.field_G), 0);
           }
@@ -658,7 +658,7 @@ final class ut extends sf implements he {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
         }
     }
 
@@ -681,7 +681,7 @@ final class ut extends sf implements he {
         Object var5 = null;
         int var6 = 0;
         int var7 = 0;
-        var7 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        var7 = ArmiesOfGielinor.field_M ? 1 : 0;
         try {
           var5 = null;
           if (!this.field_mb.a(false)) {
@@ -799,11 +799,11 @@ final class ut extends sf implements he {
           } else {
             stackIn_78_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) (stackIn_77_0), ((StringBuilder) (Object) stackIn_77_1).append(stackIn_78_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw ig.a((Throwable) (stackIn_77_0), ((StringBuilder) (Object) stackIn_77_1).append(stackIn_78_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
-    private final fw a(qo param0, String param1, IndexedSprite[] param2, boolean param3) {
+    private final fw a(qo param0, String param1, ru[] param2, boolean param3) {
         fw var5 = null;
         RuntimeException var5_ref = null;
         ob var6 = null;
@@ -851,7 +851,7 @@ final class ut extends sf implements he {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param3).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param3).append(')').toString());
         }
     }
 

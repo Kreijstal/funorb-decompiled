@@ -7,15 +7,15 @@ final class r extends vt {
     static String field_G;
     static int field_B;
     private boolean field_F;
-    private RgbSprite[] field_H;
+    private wk[] field_H;
     private boolean field_r;
     static boolean field_s;
     private int field_L;
-    private RgbSprite[] field_D;
+    private wk[] field_D;
     private int field_K;
     private int field_A;
     private int[] field_q;
-    static String[] equipmentTutorialMessages;
+    static String[] field_E;
     static String field_J;
     private int field_o;
     private boolean field_x;
@@ -27,7 +27,7 @@ final class r extends vt {
     private tu field_C;
     static String field_w;
 
-    private final RgbSprite k(int param0) {
+    private final wk k(int param0) {
         int var2 = 0;
         if (this.field_p) {
           var2 = 1;
@@ -35,7 +35,7 @@ final class r extends vt {
         if (this.field_r) {
           var2 = 2;
         }
-        RgbSprite var3 = this.field_H[var2];
+        wk var3 = this.field_H[var2];
         if (param0 != 3) {
           this.n(-61);
         }
@@ -128,7 +128,7 @@ final class r extends vt {
     }
 
     private final void a(int param0, boolean param1) {
-        int var4 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        int var4 = ArmiesOfGielinor.field_M ? 1 : 0;
         int var3 = 114 / ((44 - param0) / 34);
         this.field_x = false;
         if (this.field_F) {
@@ -220,15 +220,15 @@ final class r extends vt {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
         }
     }
 
     private final void e(byte param0) {
-        int var2 = this.field_D[3].canvasWidth;
+        int var2 = this.field_D[3].field_A;
         int var3 = this.field_C.a(' ');
         int var4 = this.field_A - (-var2 - var3);
-        int var5 = this.field_D[1].canvasHeight;
+        int var5 = this.field_D[1].field_x;
         if (param0 != 108) {
           this.field_L = -29;
         }
@@ -259,11 +259,11 @@ final class r extends vt {
         int var4 = 0;
         Throwable decompiledCaughtException = null;
         RuntimeException var1_ref = null;
-        var4 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        var4 = ArmiesOfGielinor.field_M ? 1 : 0;
         try {
           var1 = va.field_w;
           synchronized (var1) {
-            SummonAction.field_E = rd.field_d;
+            be.field_E = rd.field_d;
             if (!param0) {
               r.d((byte) 47);
             }
@@ -275,7 +275,7 @@ final class r extends vt {
               us.field_c = cc.field_a;
             } else {
               while (cc.field_a != us.field_c) {
-                var2 = SphinxActionRequest.field_x[cc.field_a];
+                var2 = ee.field_x[cc.field_a];
                 cc.field_a = 127 & 1 + cc.field_a;
                 if (0 > var2) {
                   br.field_f[~var2] = false;
@@ -290,12 +290,12 @@ final class r extends vt {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = (RuntimeException) (Object) decompiledCaughtException;
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) var1_ref), "r.G(" + param0 + ')');
+          throw ig.a((Throwable) ((Object) var1_ref), "r.G(" + param0 + ')');
         }
     }
 
     public static void d(byte param0) {
-        equipmentTutorialMessages = null;
+        field_E = null;
         if (param0 != -11) {
           return;
         }
@@ -334,11 +334,11 @@ final class r extends vt {
     }
 
     private final void c(byte param0) {
-        RgbSprite var2 = this.k(3);
-        int var3 = this.field_D[5].canvasWidth;
-        int var4 = var2.canvasWidth;
+        wk var2 = this.k(3);
+        int var3 = this.field_D[5].field_A;
+        int var4 = var2.field_A;
         int var5 = -var3 + this.field_A - (-this.field_t + var4);
-        int var6 = this.field_D[1].canvasHeight;
+        int var6 = this.field_D[1].field_x;
         if (param0 != -36) {
           return;
         }
@@ -360,7 +360,7 @@ final class r extends vt {
     }
 
     private final void b(boolean param0) {
-        SoftwareRaster.f(this.field_A, this.field_K, this.field_t, this.field_o, 7829367);
+        qn.f(this.field_A, this.field_K, this.field_t, this.field_o, 7829367);
         i.a(this.field_D, this.field_o, this.field_A, (byte) -47, this.field_K, this.field_t);
         if (param0) {
           this.field_q = (int[]) null;
@@ -394,12 +394,12 @@ final class r extends vt {
         if (param0 != -11506) {
           field_G = (String) null;
         }
-        Boolean var1 = CampaignMenu.field_s;
-        CampaignMenu.field_s = null;
+        Boolean var1 = cv.field_s;
+        cv.field_s = null;
         return var1;
     }
 
-    r(RgbSprite[] param0, RgbSprite[] param1, tu param2, int[] param3, String[] param4, int param5, int param6) {
+    r(wk[] param0, wk[] param1, tu param2, int[] param3, String[] param4, int param5, int param6) {
         RuntimeException var8 = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
@@ -458,7 +458,7 @@ final class r extends vt {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param5).append(',').append(param6).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param5).append(',').append(param6).append(')').toString());
         }
     }
 
@@ -468,7 +468,7 @@ final class r extends vt {
         int var3;
         int var4;
         String var4_ref_String;
-        RgbSprite var5;
+        wk var5;
         int var5_int;
         int var6;
         int var7;
@@ -477,7 +477,7 @@ final class r extends vt {
         int var10;
         int var11;
         int var3Lifetime1;
-        var11 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        var11 = ArmiesOfGielinor.field_M ? 1 : 0;
         var2 = 0;
         for (var3 = 0; this.field_z.u(117) > var3; var3++) {
           var4_ref_String = this.field_z.a((byte) -126, var3);
@@ -489,18 +489,18 @@ final class r extends vt {
         if (param0 != 10009) {
           return;
         }
-        var4 = this.field_D[3].canvasWidth + this.field_D[5].canvasWidth;
+        var4 = this.field_D[3].field_A + this.field_D[5].field_A;
         var5 = this.k(3);
-        var6 = var5.canvasWidth;
+        var6 = var5.field_A;
         this.field_t = var6 + var4 + var2 + var3Lifetime1;
         var7 = this.field_C.field_L + this.field_C.field_H;
         var8 = 4;
-        var9 = var5.canvasHeight;
+        var9 = var5.field_x;
         this.field_o = var8 + var7;
         if (var9 > this.field_o) {
           this.field_o = var9;
         }
-        var10 = this.field_D[7].canvasHeight + this.field_D[1].canvasHeight;
+        var10 = this.field_D[7].field_x + this.field_D[1].field_x;
         this.field_o = var10 + this.field_o;
         return;
     }
@@ -508,7 +508,7 @@ final class r extends vt {
     static {
         field_J = "It's a Draw!";
         field_G = "To configure your coat of arms, please log in or create a free account.";
-        equipmentTutorialMessages = new String[]{"Ah, there you are. After your success at Eastbridge, I thought you could use some training in specialist equipment. Rest assured that the items used in this tutorial or in hotseat mode will not be taken from your stock.", "If you click on the equipment icon beside the game statistics it will open up the equipment menu.", "Please pick your gods before we begin the tutorial.", "So, your first bit of kit is called <%0>. <%1> <%2>", "Next on the roster you have <%0>. <%1> <%2>", "In the middle there you see the icon for <%0>. <%1> <%2>", "Okay, here we have <%0>. <%1> <%2>", "And last but not least, you've got <%0>. <%1> <%2>", "Now that you have selected this item, click on the enemy unit you wish to use it on. If you wish to cancel, simply click the right mouse button.", "Now that you have selected this item, click on the allied unit you wish to use it on. If you wish to cancel, simply click the right mouse button.", "Now that you have selected this item, click on a village you've captured. If you wish to cancel, simply click the right mouse button.", "Now that you have selected this item, click on an enemy-occupied tower or village. Don't click on a portal, though - it's hard to cause civil unrest in a random explosion of magical particles. If you wish to cancel for now, simply click the right mouse button.", "Now that you have selected this item, click on the tile you wish to use it on. If you wish to cancel for now, simply click the right mouse button.", "Now that you have selected this item, click on the area you wish to use it on. If you wish to cancel for now, simply click the right mouse button.", "Now that you have selected this item, click where you want to build a bridge. This should be a tile of water with shore on only one side, so the bridge knows which way to unfurl. If you wish to cancel for now, simply click the right mouse button.", "Now that you have selected this item, click on an area containing bones. These bones will become your army of the undead. If you wish to cancel for now, simply click the right mouse button.", "Now that you have selected this item, click on the flying unit you wish to use it on. If you wish to cancel for now, simply click the right mouse button.", "Now that you have selected this item, click on a cyclops. If you don't have one, I'll wait for you to teleport one in. If you wish to cancel for now, simply click the right mouse button.", "Now that you have selected this item, click on a Kalphite Queen. If you don't have one, I'll wait for you to teleport one in. If you wish to cancel for now, simply click the right mouse button.", "Now that you have selected this item, click on a goblin priest. If you don't have one, I'll wait for you to teleport one in. If you wish to cancel for now, simply click the right mouse button.", "Now that you have selected this item, click on an ogre shaman. If you don't have one, I'll wait for you to teleport one in. If you wish to cancel for now, simply click the right mouse button.", "Now that you have selected this item, click on an elf songstress. If you don't have one, I'll wait for you to teleport one in. If you wish to cancel for now, simply click the right mouse button.", "You can use this item right now. Just click the icon for <%0> and you'll see.", "You seem to have brought a shrine spell into battle for a god you aren't actually worshipping. Let's move swiftly on, shall we?", "You seem to have left some empty space in your equipment setup. You don't have to purchase equipment to be trained in it, simply equip it and you can try it here for free. Let's move swiftly on, shall we?", "This item can only be used on a unit that follows a god you have not selected. Let's move on to the next item, shall we?", "To activate this, you must first click on the <%0> icon.", "<%0> In a real battle you can only use each of these items once, but for training purposes I've provided an unlimited supply.", "There you go. Feel free to experiment with this item before moving on.", "As you can see, your unit now has a new movement area highlighted. When you order this unit to move within this area, the item will be used.", "Well, that's your equipment training complete. You're always welcome to return here with different equipment for another lesson.", "Ah, I see you brought more than one <%0>. I've already instructed you in how to use it, so we'll move on when you're ready.", "Oops, you seem to have clicked a different piece of equipment. Let's try again. <%0>", "Oops, you seem to have deselected this equipment. Let's try again. <%0>"};
+        field_E = new String[]{"Ah, there you are. After your success at Eastbridge, I thought you could use some training in specialist equipment. Rest assured that the items used in this tutorial or in hotseat mode will not be taken from your stock.", "If you click on the equipment icon beside the game statistics it will open up the equipment menu.", "Please pick your gods before we begin the tutorial.", "So, your first bit of kit is called <%0>. <%1> <%2>", "Next on the roster you have <%0>. <%1> <%2>", "In the middle there you see the icon for <%0>. <%1> <%2>", "Okay, here we have <%0>. <%1> <%2>", "And last but not least, you've got <%0>. <%1> <%2>", "Now that you have selected this item, click on the enemy unit you wish to use it on. If you wish to cancel, simply click the right mouse button.", "Now that you have selected this item, click on the allied unit you wish to use it on. If you wish to cancel, simply click the right mouse button.", "Now that you have selected this item, click on a village you've captured. If you wish to cancel, simply click the right mouse button.", "Now that you have selected this item, click on an enemy-occupied tower or village. Don't click on a portal, though - it's hard to cause civil unrest in a random explosion of magical particles. If you wish to cancel for now, simply click the right mouse button.", "Now that you have selected this item, click on the tile you wish to use it on. If you wish to cancel for now, simply click the right mouse button.", "Now that you have selected this item, click on the area you wish to use it on. If you wish to cancel for now, simply click the right mouse button.", "Now that you have selected this item, click where you want to build a bridge. This should be a tile of water with shore on only one side, so the bridge knows which way to unfurl. If you wish to cancel for now, simply click the right mouse button.", "Now that you have selected this item, click on an area containing bones. These bones will become your army of the undead. If you wish to cancel for now, simply click the right mouse button.", "Now that you have selected this item, click on the flying unit you wish to use it on. If you wish to cancel for now, simply click the right mouse button.", "Now that you have selected this item, click on a cyclops. If you don't have one, I'll wait for you to teleport one in. If you wish to cancel for now, simply click the right mouse button.", "Now that you have selected this item, click on a Kalphite Queen. If you don't have one, I'll wait for you to teleport one in. If you wish to cancel for now, simply click the right mouse button.", "Now that you have selected this item, click on a goblin priest. If you don't have one, I'll wait for you to teleport one in. If you wish to cancel for now, simply click the right mouse button.", "Now that you have selected this item, click on an ogre shaman. If you don't have one, I'll wait for you to teleport one in. If you wish to cancel for now, simply click the right mouse button.", "Now that you have selected this item, click on an elf songstress. If you don't have one, I'll wait for you to teleport one in. If you wish to cancel for now, simply click the right mouse button.", "You can use this item right now. Just click the icon for <%0> and you'll see.", "You seem to have brought a shrine spell into battle for a god you aren't actually worshipping. Let's move swiftly on, shall we?", "You seem to have left some empty space in your equipment setup. You don't have to purchase equipment to be trained in it, simply equip it and you can try it here for free. Let's move swiftly on, shall we?", "This item can only be used on a unit that follows a god you have not selected. Let's move on to the next item, shall we?", "To activate this, you must first click on the <%0> icon.", "<%0> In a real battle you can only use each of these items once, but for training purposes I've provided an unlimited supply.", "There you go. Feel free to experiment with this item before moving on.", "As you can see, your unit now has a new movement area highlighted. When you order this unit to move within this area, the item will be used.", "Well, that's your equipment training complete. You're always welcome to return here with different equipment for another lesson.", "Ah, I see you brought more than one <%0>. I've already instructed you in how to use it, so we'll move on when you're ready.", "Oops, you seem to have clicked a different piece of equipment. Let's try again. <%0>", "Oops, you seem to have deselected this equipment. Let's try again. <%0>"};
         field_I = "Biggest bully";
         field_B = 2;
         field_w = "Magic robes";

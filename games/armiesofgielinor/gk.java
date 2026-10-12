@@ -6,7 +6,7 @@ final class gk extends nl {
     static String field_L;
     static int field_J;
     static int field_K;
-    private NodeDeque field_M;
+    private at field_M;
     static String field_N;
     static String[] field_O;
     static long field_I;
@@ -14,51 +14,51 @@ final class gk extends nl {
 
     public gk() {
         super(0, 0, te.field_l, ij.field_x, (kh) null, (qo) null);
-        this.field_M = new NodeDeque();
+        this.field_M = new at();
     }
 
     final void a(int param0, int param1, byte param2, int param3) {
-        int var7 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        int var7 = ArmiesOfGielinor.field_M ? 1 : 0;
         if (this.field_k != null) {
           this.field_k.a((kb) (this), param0, -80, true, param1);
         }
-        NodeIterator var5 = new NodeIterator(this.field_M);
+        bb var5 = new bb(this.field_M);
         if (param2 > -82) {
           field_I = -21L;
         }
-        kb var6 = (kb) (var5.last(50));
+        kb var6 = (kb) (var5.a(50));
         while (var6 != null) {
           var6.a(this.field_B + param0, this.field_p + param1, (byte) -121, param3);
-          var6 = (kb) (var5.previous((byte) -112));
+          var6 = (kb) (var5.b((byte) -112));
         }
     }
 
     final wl a(byte param0) {
-        NodeIterator var2;
+        bb var2;
         wl var3;
         int var4;
-        var4 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
-        var2 = new NodeIterator(this.field_M);
+        var4 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var2 = new bb(this.field_M);
         if (param0 != 89) {
           field_N = (String) null;
         }
-        var3 = (wl) (var2.first(param0 - 39));
+        var3 = (wl) (var2.c(param0 - 39));
         while (var3 != null) {
           if (var3.field_L) {
             return var3;
           }
-          var3 = (wl) (var2.next(50));
+          var3 = (wl) (var2.b(50));
         }
         return null;
     }
 
     final void j(int param0) {
-        int var4 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
-        NodeIterator var2 = new NodeIterator(this.field_M);
-        wl var3 = (wl) (var2.first(50));
+        int var4 = ArmiesOfGielinor.field_M ? 1 : 0;
+        bb var2 = new bb(this.field_M);
+        wl var3 = (wl) (var2.c(50));
         while (var3 != null) {
           var3.field_L = false;
-          var3 = (wl) (var2.next(50));
+          var3 = (wl) (var2.b(50));
         }
         this.field_E = null;
         if (param0 >= -85) {
@@ -67,22 +67,22 @@ final class gk extends nl {
     }
 
     final void a(int param0, int param1, byte param2) {
-        int var8 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        int var8 = ArmiesOfGielinor.field_M ? 1 : 0;
         if (param0 == this.field_l &&
           this.field_w == param1) {
           return;
         }
         int var4 = (-this.field_l + param0) / 2;
         int var5 = (-this.field_w + param1) / 2;
-        NodeIterator var6 = new NodeIterator(this.field_M);
-        wl var7 = (wl) (var6.first(50));
+        bb var6 = new bb(this.field_M);
+        wl var7 = (wl) (var6.c(50));
         if (param2 != -14) {
           this.a(-19, 39, (byte) 87, 16);
         }
         while (var7 != null) {
           var7.field_p = var7.field_p + var5;
           var7.field_B = var7.field_B + var4;
-          var7 = (wl) (var6.next(50));
+          var7 = (wl) (var6.b(50));
         }
         this.field_l = param0;
         this.field_w = param1;
@@ -101,7 +101,7 @@ final class gk extends nl {
           }
           dj.field_e = param2;
         } catch (RuntimeException runtimeException) {
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "gk.H(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw ig.a((Throwable) ((Object) runtimeException), "gk.H(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -116,31 +116,31 @@ final class gk extends nl {
     }
 
     final void d(byte param0) {
-        int var5 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
-        NodeIterator var2 = new NodeIterator(this.field_M);
-        wl var3 = (wl) (var2.first(50));
+        int var5 = ArmiesOfGielinor.field_M ? 1 : 0;
+        bb var2 = new bb(this.field_M);
+        wl var3 = (wl) (var2.c(50));
         while (var3 != null) {
           if (var3.a((byte) -1)) {
-            var3.unlink(-116);
+            var3.d(-116);
           }
-          var3 = (wl) (var2.next(50));
+          var3 = (wl) (var2.b(50));
         }
         this.field_E = (kb) ((Object) this.a((byte) 89));
         int var4 = 94 / ((param0 - 30) / 60);
     }
 
     final void k(int param0) {
-        int var4 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
-        NodeIterator var2 = new NodeIterator(this.field_M);
+        int var4 = ArmiesOfGielinor.field_M ? 1 : 0;
+        bb var2 = new bb(this.field_M);
         if (param0 != 0) {
-          this.field_M = (NodeDeque) null;
+          this.field_M = (at) null;
         }
-        wl var3 = (wl) (var2.first(50));
+        wl var3 = (wl) (var2.c(50));
         while (var3 != null) {
           if (var3.k(122)) {
-            var3.unlink(param0 + 37);
+            var3.d(param0 + 37);
           }
-          var3 = (wl) (var2.next(param0 ^ 50));
+          var3 = (wl) (var2.b(param0 ^ 50));
         }
     }
 
@@ -156,11 +156,11 @@ final class gk extends nl {
             throw new IllegalArgumentException();
           }
           var3 = (wl) (param0);
-          this.field_M.addFirst(750, var3);
+          this.field_M.a(750, var3);
           var3.field_L = true;
           var3.a(11, (kb) (this));
           if (param1 != 0) {
-            this.field_M = (NodeDeque) null;
+            this.field_M = (at) null;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -173,19 +173,19 @@ final class gk extends nl {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
         }
     }
 
     final kb a(int param0) {
-        int var4 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
-        NodeIterator var2 = new NodeIterator(this.field_M);
-        wl var3 = (wl) (var2.first(50));
+        int var4 = ArmiesOfGielinor.field_M ? 1 : 0;
+        bb var2 = new bb(this.field_M);
+        wl var3 = (wl) (var2.c(50));
         while (var3 != null) {
           if (var3.field_L) {
             return var3.e((byte) 119);
           }
-          var3 = (wl) (var2.next(param0 + 1898));
+          var3 = (wl) (var2.b(param0 + 1898));
         }
         if (param0 == -1848) {
           return null;

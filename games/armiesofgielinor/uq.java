@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class uq extends DualLinkedNode {
+abstract class uq extends ms {
     static int[] field_u;
     static String field_v;
     static String field_w;
@@ -12,9 +12,9 @@ abstract class uq extends DualLinkedNode {
     final static int a(String param0, gl param1, int param2, int param3, int param4, gl param5, boolean param6) {
         int var12 = 0;
         int stackIn_4_0 = 0;
-        PacketBuffer stackIn_10_0 = null;
+        vh stackIn_10_0 = null;
         String stackIn_11_1 = null;
-        PacketBuffer stackIn_13_0 = null;
+        vh stackIn_13_0 = null;
         String stackIn_14_1 = null;
         int stackIn_31_0 = 0;
         int stackIn_44_0 = 0;
@@ -43,82 +43,82 @@ abstract class uq extends DualLinkedNode {
         int var9Lifetime1;
         int var9Lifetime2;
         int var9Lifetime3;
-        var13 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        var13 = ArmiesOfGielinor.field_M ? 1 : 0;
         try {
           var14 = param1.a(param2 ^ -20049);
           var8 = param5.a(-91);
-          if (null == MoveAttackRequest.field_z &&
-            !EffectPresentation.a(false, 0)) {
+          if (null == am.field_z &&
+            !tb.a(false, 0)) {
             stackIn_4_0 = -1;
             return stackIn_4_0;
           }
           if (ov.field_g == sg.field_a) {
-            vl.outgoingPacket.position = 0;
-            CampaignMenu.field_s = null;
+            vl.field_n.field_q = 0;
+            cv.field_s = null;
             if (param0 != null) {
               var9 = 0;
-              vd.field_b.position = 0;
+              vd.field_b.field_q = 0;
               if (param6) {
                 var9 = var9 | 1;
               }
-              vd.field_b.writeInt((byte) -108, CampaignMenuButton.field_e.nextInt());
-              vd.field_b.writeInt((byte) -52, CampaignMenuButton.field_e.nextInt());
+              vd.field_b.a((byte) -108, iq.field_e.nextInt());
+              vd.field_b.a((byte) -52, iq.field_e.nextInt());
               vd.field_b.a(var14, 413740432);
               vd.field_b.a(var8, 413740432);
               var15 = (CharSequence) ((Object) param0);
               vd.field_b.a(ea.a(param2 + 18820, var15), 413740432);
-              vd.field_b.writeShort(true, param4);
-              vd.field_b.writeByte(1, param3);
-              vd.field_b.writeByte(param2 + 20033, var9);
-              vl.outgoingPacket.writeByte(param2 + 20033, 18);
-              vl.outgoingPacket.position = vl.outgoingPacket.position + 2;
-              var10 = vl.outgoingPacket.position;
-              var11_ref_String = ByteStorage.a(0, CombatEvent.d((byte) 55));
+              vd.field_b.b(true, param4);
+              vd.field_b.b(1, param3);
+              vd.field_b.b(param2 + 20033, var9);
+              vl.field_n.b(param2 + 20033, 18);
+              vl.field_n.field_q = vl.field_n.field_q + 2;
+              var10 = vl.field_n.field_q;
+              var11_ref_String = mg.a(0, ag.d((byte) 55));
               if (var11_ref_String == null) {
                 var11_ref_String = "";
               }
-              vl.outgoingPacket.b(var11_ref_String, param2 + 33883);
-              fp.a(mu.field_c, cs.field_cb, (byte) 26, vd.field_b, vl.outgoingPacket);
-              vl.outgoingPacket.f(0, -var10 + vl.outgoingPacket.position);
+              vl.field_n.b(var11_ref_String, param2 + 33883);
+              fp.a(mu.field_c, cs.field_cb, (byte) 26, vd.field_b, vl.field_n);
+              vl.field_n.f(0, -var10 + vl.field_n.field_q);
             } else {
-              vd.field_b.position = 0;
-              vd.field_b.writeInt((byte) -57, CampaignMenuButton.field_e.nextInt());
-              vd.field_b.writeInt((byte) -54, CampaignMenuButton.field_e.nextInt());
+              vd.field_b.field_q = 0;
+              vd.field_b.a((byte) -57, iq.field_e.nextInt());
+              vd.field_b.a((byte) -54, iq.field_e.nextInt());
               stackIn_10_0 = vd.field_b;
               if (!param1.a((byte) 125)) {
                 stackIn_11_1 = "";
               } else {
                 stackIn_11_1 = var14;
               }
-              ((PacketBuffer) (Object) stackIn_10_0).a(stackIn_11_1, param2 ^ -413754288);
+              ((vh) (Object) stackIn_10_0).a(stackIn_11_1, param2 ^ -413754288);
               stackIn_13_0 = vd.field_b;
               if (param5.a((byte) -111)) {
                 stackIn_14_1 = var8;
               } else {
                 stackIn_14_1 = "";
               }
-              ((PacketBuffer) (Object) stackIn_13_0).a(stackIn_14_1, 413740432);
-              vl.outgoingPacket.writeByte(1, 16);
-              vl.outgoingPacket.position = vl.outgoingPacket.position + 1;
-              var9 = vl.outgoingPacket.position;
-              fp.a(mu.field_c, cs.field_cb, (byte) 26, vd.field_b, vl.outgoingPacket);
-              vl.outgoingPacket.writeByteLengthPrefix(vl.outgoingPacket.position - var9, 5930);
+              ((vh) (Object) stackIn_13_0).a(stackIn_14_1, 413740432);
+              vl.field_n.b(1, 16);
+              vl.field_n.field_q = vl.field_n.field_q + 1;
+              var9 = vl.field_n.field_q;
+              fp.a(mu.field_c, cs.field_cb, (byte) 26, vd.field_b, vl.field_n);
+              vl.field_n.e(vl.field_n.field_q - var9, 5930);
             }
             hb.$cfr$intArgs$a$e9dea5688aa5(54, -1);
-            ov.field_g = DirectByteStorage.field_m;
+            ov.field_g = cj.field_m;
           }
-          if (ov.field_g == DirectByteStorage.field_m &&
+          if (ov.field_g == cj.field_m &&
             es.a(param2 ^ 20080, 1)) {
-            var9Lifetime1 = ByteStorage.field_e.readUnsignedByte(0);
-            ByteStorage.field_e.position = 0;
+            var9Lifetime1 = mg.field_e.k(0);
+            mg.field_e.field_q = 0;
             if (var9Lifetime1 >= 100 &&
               var9Lifetime1 <= 105) {
               ov.field_g = mv.field_c;
               br.field_b = new String[var9Lifetime1 - 100];
             } else {
               if (var9Lifetime1 == 248) {
-                tf.a((byte) -99, CombatEvent.d((byte) -127));
-                lk.field_r = CampaignMission.field_s;
+                tf.a((byte) -99, ag.d((byte) -127));
+                lk.field_r = om.field_s;
                 dj.a((byte) -128);
                 ev.field_b = false;
                 stackIn_31_0 = var9Lifetime1;
@@ -126,8 +126,8 @@ abstract class uq extends DualLinkedNode {
               }
               if (var9Lifetime1 == 99) {
                 es.a(-81, qa.h(1));
-                CampaignMenu.field_s = new Boolean(rr.a((byte) -76, ByteStorage.field_e));
-                ByteStorage.field_e.position = 0;
+                cv.field_s = new Boolean(rr.a((byte) -76, mg.field_e));
+                mg.field_e.field_q = 0;
               } else {
                 fk.field_b = -1;
                 nm.field_o = var9Lifetime1;
@@ -138,12 +138,12 @@ abstract class uq extends DualLinkedNode {
           if (mv.field_c == ov.field_g) {
             var9Lifetime2 = 2;
             if (es.a(-79, var9Lifetime2)) {
-              var10Lifetime1 = ByteStorage.field_e.readUnsignedShort((byte) -104);
-              ByteStorage.field_e.position = 0;
+              var10Lifetime1 = mg.field_e.e((byte) -104);
+              mg.field_e.field_q = 0;
               if (es.a(-83, var10Lifetime1)) {
                 var11 = br.field_b.length;
                 for (var12 = 0; var12 < var11; var12++) {
-                  br.field_b[var12] = ByteStorage.field_e.readNullCircumfixedString((byte) 121);
+                  br.field_b[var12] = mg.field_e.h((byte) 121);
                 }
                 dj.a((byte) -128);
                 ev.field_b = false;
@@ -155,12 +155,12 @@ abstract class uq extends DualLinkedNode {
           if (da.field_b == ov.field_g &&
             jh.g(2)) {
             if (nm.field_o == 255) {
-              var9_ref_String = ByteStorage.field_e.c((byte) -85);
+              var9_ref_String = mg.field_e.c((byte) -85);
               if (var9_ref_String != null) {
-                ph.a(var9_ref_String, CombatEvent.d((byte) -5), false);
+                ph.a(var9_ref_String, ag.d((byte) -5), false);
               }
             } else {
-              lk.field_r = ByteStorage.field_e.g(1);
+              lk.field_r = mg.field_e.g(1);
             }
             dj.a((byte) -127);
             ev.field_b = false;
@@ -170,21 +170,21 @@ abstract class uq extends DualLinkedNode {
           if (param2 != -20032) {
             field_v = (String) null;
           }
-          if (MoveAttackRequest.field_z == null) {
+          if (am.field_z == null) {
             if (ev.field_b) {
-              if (TileMetadata.b(0) > 30000L) {
+              if (ca.b(0) > 30000L) {
                 lk.field_r = gu.field_a;
               } else {
-                lk.field_r = DamageEvent.field_y;
+                lk.field_r = nw.field_y;
               }
               ev.field_b = false;
               stackIn_62_0 = 249;
               return stackIn_62_0;
             }
             var9Lifetime3 = rn.field_d;
-            rn.field_d = AiPlanningStrategy.field_c;
+            rn.field_d = sm.field_c;
             ev.field_b = true;
-            AiPlanningStrategy.field_c = var9Lifetime3;
+            sm.field_c = var9Lifetime3;
           }
           stackIn_65_0 = -1;
           return stackIn_65_0;
@@ -210,7 +210,7 @@ abstract class uq extends DualLinkedNode {
           } else {
             stackIn_75_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_68_0), ((StringBuilder) (Object) stackIn_74_1).append(stackIn_75_2).append(',').append(param6).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_68_0), ((StringBuilder) (Object) stackIn_74_1).append(stackIn_75_2).append(',').append(param6).append(')').toString());
         }
     }
 
@@ -233,27 +233,27 @@ abstract class uq extends DualLinkedNode {
         this.field_z = param0;
     }
 
-    final static CoatOfArms readSignedCoatOfArms(PacketBuffer packet, boolean obfuscationGuard) {
+    final static ln a(vh param0, boolean param1) {
         int var3 = 0;
-        CoatOfArms var2 = null;
+        ln var2 = null;
         RuntimeException var2_ref = null;
         int var4 = 0;
-        CoatOfArms var5 = null;
-        CoatOfArms stackIn_7_0 = null;
+        ln var5 = null;
+        ln stackIn_7_0 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
-        var4 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        var4 = ArmiesOfGielinor.field_M ? 1 : 0;
         try {
-          var5 = new CoatOfArms();
+          var5 = new ln();
           var2 = var5;
-          if (obfuscationGuard) {
+          if (param1) {
             uq.g(56);
           }
           for (var3 = 0; var3 < 6; var3++) {
-            var5.parts[var3] = packet.readByte((byte) 103);
-            var5.colourIndices[var3] = packet.readByte((byte) 120);
+            var5.field_a[var3] = param0.a((byte) 103);
+            var5.field_b[var3] = param0.a((byte) 120);
           }
           stackIn_7_0 = var2;
           return stackIn_7_0;
@@ -262,12 +262,12 @@ abstract class uq extends DualLinkedNode {
           var2_ref = decompiledCaughtException;
           stackIn_10_0 = var2_ref;
           stackIn_10_1 = new StringBuilder().append("uq.E(");
-          if (packet == null) {
+          if (param0 == null) {
             stackIn_11_2 = "null";
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(obfuscationGuard).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(')').toString());
         }
     }
 

@@ -4,7 +4,7 @@
 final class ri {
     private int field_f;
     private int field_a;
-    static int[] terrainDamageTakenPercent;
+    static int[] field_c;
     static int field_d;
     private wg field_e;
     private m field_g;
@@ -19,36 +19,36 @@ final class ri {
         }
         Object var5 = var7.b(false);
         if (var5 == null) {
-          var7.unlink(123);
-          var7.unlinkSecondary((byte) -76);
+          var7.d(123);
+          var7.c((byte) -76);
           this.field_a = this.field_a + var7.field_z;
           return null;
         }
         if (param1 > 121) {
           if (!var7.a(true)) {
             this.field_e.a(-96, var7);
-            var7.secondaryKey = 0L;
+            var7.field_q = 0L;
           } else {
             var6 = new f(var5, var7.field_z);
-            this.field_g.a(var6, false, var7.key);
+            this.field_g.a(var6, false, var7.field_i);
             this.field_e.a(-96, var6);
-            ((uq) ((Object) var6)).secondaryKey = 0L;
-            var7.unlink(97);
-            var7.unlinkSecondary((byte) -76);
+            ((uq) ((Object) var6)).field_q = 0L;
+            var7.d(97);
+            var7.c((byte) -76);
           }
           return var5;
         }
         this.a(-102L, 20);
         if (!var7.a(true)) {
           this.field_e.a(-96, var7);
-          var7.secondaryKey = 0L;
+          var7.field_q = 0L;
         } else {
           var6Lifetime1 = new f(var5, var7.field_z);
-          this.field_g.a(var6Lifetime1, false, var7.key);
+          this.field_g.a(var6Lifetime1, false, var7.field_i);
           this.field_e.a(-96, var6Lifetime1);
-          ((uq) ((Object) var6Lifetime1)).secondaryKey = 0L;
-          var7.unlink(97);
-          var7.unlinkSecondary((byte) -76);
+          ((uq) ((Object) var6Lifetime1)).field_q = 0L;
+          var7.d(97);
+          var7.c((byte) -76);
         }
         return var5;
     }
@@ -61,8 +61,8 @@ final class ri {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != null) {
-            param0.unlink(param1 ^ -115);
-            param0.unlinkSecondary((byte) -76);
+            param0.d(param1 ^ -115);
+            param0.c((byte) -76);
             this.field_a = this.field_a + param0.field_z;
           }
           if (param1 == 0) {
@@ -80,14 +80,14 @@ final class ri {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
         }
     }
 
     private final void a(Object param0, byte param1, int param2, long param3) {
         uq var9 = null;
         f var7 = null;
-        int var8 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        int var8 = ArmiesOfGielinor.field_M ? 1 : 0;
         try {
           if (this.field_f < param2) {
             throw new IllegalStateException();
@@ -102,9 +102,9 @@ final class ri {
           var7 = new f(param0, param2);
           this.field_g.a(var7, false, param3);
           this.field_e.a(-96, var7);
-          ((uq) ((Object) var7)).secondaryKey = 0L;
+          ((uq) ((Object) var7)).field_q = 0L;
         } catch (RuntimeException runtimeException) {
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "ri.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw ig.a((Throwable) ((Object) runtimeException), "ri.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -123,14 +123,14 @@ final class ri {
             this.a(64L, (byte) 125);
           }
         } catch (RuntimeException runtimeException) {
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "ri.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw ig.a((Throwable) ((Object) runtimeException), "ri.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
     public static void a(byte param0) {
         int var1 = -24 % ((14 - param0) / 59);
         field_b = null;
-        terrainDamageTakenPercent = null;
+        field_c = null;
     }
 
     ri(int param0) {
@@ -159,7 +159,7 @@ final class ri {
     }
 
     static {
-        terrainDamageTakenPercent = new int[]{100, 100, 60, 80, 90, 90, 100, 100, 80, 70, 100, 100, 90, 100, 70, 90};
+        field_c = new int[]{100, 100, 60, 80, 90, 90, 100, 100, 80, 70, 100, 100, 90, 100, 70, 90};
         field_d = 0;
     }
 }

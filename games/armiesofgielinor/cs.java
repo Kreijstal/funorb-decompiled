@@ -6,7 +6,7 @@ final class cs extends sf implements he {
     private kb field_ab;
     private fw field_gb;
     private fw field_Z;
-    static ModelMeshBase[] field_db;
+    static kk[] field_db;
     private long field_fb;
     static int field_Y;
     static String field_X;
@@ -31,12 +31,12 @@ final class cs extends sf implements he {
           this.field_ab.field_B = 0;
           this.field_ab.field_p = 20 + (var3.field_p + var3.field_w);
           this.field_ab.field_w = 80;
-          this.field_ab.field_k = (kh) ((Object) new lk(CipherPacketBuffer.field_t, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
+          this.field_ab.field_k = (kh) ((Object) new lk(bv.field_t, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
           this.a((byte) 10, this.field_ab);
-          this.field_Z = this.a(DualNodeDeque.field_e, -63, (qo) (this));
-          this.field_gb = this.a(WeightedScoreStrategy.field_m, -74, (qo) (this));
+          this.field_Z = this.a(ui.field_e, -63, (qo) (this));
+          this.field_gb = this.a(ge.field_m, -74, (qo) (this));
         } catch (RuntimeException runtimeException) {
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "cs.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw ig.a((Throwable) ((Object) runtimeException), "cs.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -72,7 +72,7 @@ final class cs extends sf implements he {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 
@@ -81,7 +81,7 @@ final class cs extends sf implements he {
           return;
         }
         if (param0 != 10) {
-          field_db = (ModelMeshBase[]) null;
+          field_db = (kk[]) null;
           this.field_L = false;
           return;
         }
@@ -129,12 +129,12 @@ final class cs extends sf implements he {
             this.field_ab.field_v = "" + var7;
           }
           if (this.field_L &&
-            null == FixedQuaternion.field_a) {
+            null == wq.field_a) {
             this.n(param0 ^ 32728);
             this.field_G.a(new ud(this.field_G, mp.field_Mb), 0);
           }
-          if (null != FixedQuaternion.field_a &&
-            FixedQuaternion.field_a.field_k) {
+          if (null != wq.field_a &&
+            wq.field_a.field_k) {
             this.n(10);
             this.field_G.a(new ud(this.field_G, mp.field_Mb), param0 ^ 32722);
             return;
@@ -150,7 +150,7 @@ final class cs extends sf implements he {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
         }
     }
 
@@ -164,7 +164,7 @@ final class cs extends sf implements he {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var5 = null;
         kb var7 = null;
-        var6 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        var6 = ArmiesOfGielinor.field_M ? 1 : 0;
         try {
           var5_int = param1;
           if (99 == var5_int) {
@@ -191,7 +191,7 @@ final class cs extends sf implements he {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -234,13 +234,13 @@ final class cs extends sf implements he {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 
     static {
         field_W = new String[]{"proj_aviansie_axe/aviansie_axe", "proj_arrow/proj_arrow", "proj_cannonball/proj_cannonball", "proj_dart/proj_dart", "proj_grenwall_spikes/proj_grenwall_spikes", "proj_rock/proj_catapultloadimpact", "proj_spear/spear"};
-        field_db = new ModelMeshBase[field_W.length];
+        field_db = new kk[field_W.length];
         field_X = "This item can only be used on a goblin priest.";
         field_cb = new java.math.BigInteger("65537");
         field_eb = "Performance";

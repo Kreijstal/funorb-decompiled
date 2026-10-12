@@ -10,7 +10,7 @@ class fw extends kb {
     private boolean field_D;
     static String field_H;
     int field_G;
-    static ResourceArchive field_F;
+    static kl field_F;
     private boolean field_E;
     boolean field_K;
 
@@ -21,8 +21,8 @@ class fw extends kb {
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (null != IsaacRandom.field_g) {
-            IsaacRandom.field_g.field_T.a(100, param1);
+          if (null != ga.field_g) {
+            ga.field_g.field_T.a(100, param1);
           }
           if (null != tj.field_C) {
             tj.field_C.field_M.a(100, param1);
@@ -42,7 +42,7 @@ class fw extends kb {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 
@@ -79,7 +79,7 @@ class fw extends kb {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
         }
     }
 
@@ -94,14 +94,14 @@ class fw extends kb {
             if (this.field_q == ro.field_ub) {
               return;
             }
-            if (this.b(param0 - 32721, param1, ko.field_b, AiPlanningStrategy.field_d, param2) &&
+            if (this.b(param0 - 32721, param1, ko.field_b, sm.field_d, param2) &&
               ro.field_ub == 0) {
-              this.a(this.field_q, AiPlanningStrategy.field_d - param1, ko.field_b - param2, true);
+              this.a(this.field_q, sm.field_d - param1, ko.field_b - param2, true);
             }
-            this.a(param2, param3, AiPlanningStrategy.field_d, (byte) -118, ko.field_b, param1);
+            this.a(param2, param3, sm.field_d, (byte) -118, ko.field_b, param1);
           }
         } catch (RuntimeException runtimeException) {
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "fw.P(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw ig.a((Throwable) ((Object) runtimeException), "fw.P(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -124,7 +124,7 @@ class fw extends kb {
           if (param3 == -12215) {
             return false;
           }
-          field_F = (ResourceArchive) null;
+          field_F = (kl) null;
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -136,7 +136,7 @@ class fw extends kb {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -191,7 +191,7 @@ class fw extends kb {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
         }
     }
 
@@ -233,7 +233,7 @@ class fw extends kb {
           int var7_int = -87 % ((param3 + 58) / 53);
           this.field_q = 0;
         } catch (RuntimeException runtimeException) {
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "fw.JA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+          throw ig.a((Throwable) ((Object) runtimeException), "fw.JA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
     }
 
@@ -271,7 +271,7 @@ class fw extends kb {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param5).append(',').append(param6).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param5).append(',').append(param6).append(')').toString());
         }
     }
 

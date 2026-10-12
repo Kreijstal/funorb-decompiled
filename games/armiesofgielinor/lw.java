@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class lw extends pt {
-    static RgbSprite field_ob;
+    static wk field_ob;
     static String field_nb;
     static String field_lb;
     static int field_mb;
@@ -11,12 +11,12 @@ final class lw extends pt {
 
     final static void a(byte param0, mq param1) {
         try {
-          OwnerChangeEvent.field_E.a(param1, 80);
+          as.field_E.a(param1, 80);
           if (param0 != 79) {
             field_nb = (String) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "lw.K(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ig.a((Throwable) ((Object) runtimeException), "lw.K(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -29,7 +29,7 @@ final class lw extends pt {
           int var3_int = -61 % ((-27 - param1) / 44);
           super.a(param0, (byte) 87);
         } catch (RuntimeException runtimeException) {
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "lw.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw ig.a((Throwable) ((Object) runtimeException), "lw.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

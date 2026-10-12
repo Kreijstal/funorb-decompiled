@@ -8,52 +8,52 @@ final class gu {
     final static boolean a(int param0) {
         int var1 = -61 / ((-54 - param0) / 62);
         if (oa.field_I != null) {
-          return oa.field_I.a(-30847, DualNodeDeque.field_i, rs.field_q);
+          return oa.field_I.a(-30847, ui.field_i, rs.field_q);
         }
         return false;
     }
 
-    final static NodeDeque a(boolean param0, String param1) {
-        NodeDeque var2 = null;
-        TextCursor var3 = null;
+    final static at a(boolean param0, String param1) {
+        at var2 = null;
+        mt var3 = null;
         int var4 = 0;
         int var5 = 0;
-        NodeDeque stackIn_18_0 = null;
+        at stackIn_18_0 = null;
         RuntimeException stackIn_21_0 = null;
         StringBuilder stackIn_21_1 = null;
         String stackIn_22_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2_ref = null;
-        var5 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        var5 = ArmiesOfGielinor.field_M ? 1 : 0;
         try {
           if (param0) {
             gu.a(102);
           }
-          var2 = new NodeDeque();
-          var3 = new TextCursor(param1);
-          while (!var3.isAtEnd((byte) 16)) {
-            var4 = var3.readCharacter(-1);
+          var2 = new at();
+          var3 = new mt(param1);
+          while (!var3.a((byte) 16)) {
+            var4 = var3.b(-1);
             if (Character.isWhitespace((char) var4)) {
               continue;
             }
             if (var4 != 34 &&
               var4 != 39) {
               if (var4 == 40) {
-                var2.addLast((byte) -119, (IntrusiveNode) (new og(mo.field_j, -1 + var3.position)));
+                var2.a((byte) -119, (tc) (new og(mo.field_j, -1 + var3.field_c)));
                 continue;
               }
               if (var4 == 41) {
-                var2.addLast((byte) -119, (IntrusiveNode) (new og(LeaderEscortCondition.field_d, -1 + var3.position)));
+                var2.a((byte) -119, (tc) (new og(gm.field_d, -1 + var3.field_c)));
                 continue;
               }
               if (44 != var4) {
-                var2.addLast((byte) -119, (IntrusiveNode) (bi.a((byte) -118, var3)));
+                var2.a((byte) -119, (tc) (bi.a((byte) -118, var3)));
                 continue;
               }
-              var2.addLast((byte) -119, (IntrusiveNode) (new og(sb.field_d, var3.position - 1)));
+              var2.a((byte) -119, (tc) (new og(sb.field_d, var3.field_c - 1)));
               continue;
             }
-            var2.addLast((byte) -119, (IntrusiveNode) (BestScoreStrategy.a((byte) 121, var3)));
+            var2.a((byte) -119, (tc) (aw.a((byte) 121, var3)));
           }
           stackIn_18_0 = var2;
           return stackIn_18_0;
@@ -67,7 +67,7 @@ final class gu {
           } else {
             stackIn_22_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(')').toString());
         }
     }
 
@@ -80,17 +80,17 @@ final class gu {
     }
 
     final static void a(int param0, int param1) {
-        CipherPacketBuffer var2 = vl.outgoingPacket;
+        bv var2 = vl.field_n;
         if (param0 < -31) {
-          var2.writeCipheredOpcode(32161, param1);
-          var2.writeByte(1, 1);
-          var2.writeByte(1, 0);
+          var2.h(32161, param1);
+          var2.b(1, 1);
+          var2.b(1, 0);
           return;
         }
         field_a = (String) null;
-        var2.writeCipheredOpcode(32161, param1);
-        var2.writeByte(1, 1);
-        var2.writeByte(1, 0);
+        var2.h(32161, param1);
+        var2.b(1, 1);
+        var2.b(1, 0);
     }
 
     public final String toString() {

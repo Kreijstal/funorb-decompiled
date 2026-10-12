@@ -21,9 +21,9 @@ final class fq {
     final static uv a(int param0) {
         if (param0 != 18757) {
           fq.a((byte) 23, -125L);
-          return AnimationSkeleton.field_n;
+          return ig.field_n;
         }
-        return AnimationSkeleton.field_n;
+        return ig.field_n;
     }
 
     public static void a(byte param0) {
@@ -42,7 +42,7 @@ final class fq {
         field_a = null;
     }
 
-    final static void a(NodeDeque param0, String param1, int param2, boolean param3) {
+    final static void a(at param0, String param1, int param2, boolean param3) {
         int var7 = 0;
         int var4_int = 0;
         String[] var5 = null;
@@ -58,7 +58,7 @@ final class fq {
         String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var4 = null;
-        var10 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        var10 = ArmiesOfGielinor.field_M ? 1 : 0;
         try {
           var4_int = rs.field_n.a(param1) + 8;
           if (var4_int <= 200) {
@@ -72,7 +72,7 @@ final class fq {
           for (var7 = param2; var6.length > var7; var7++) {
             var8 = var6[var7];
             var9 = new sq(var8, param3, param0);
-            param0.addLast((byte) -119, (IntrusiveNode) (var9));
+            param0.a((byte) -119, (tc) (var9));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -91,22 +91,22 @@ final class fq {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
     final static String a(byte param0, long param1) {
         int var8 = 0;
         int var9 = 0;
-        PopupPresentation.field_c.setTime(new Date(param1));
-        int var3 = PopupPresentation.field_c.get(7);
-        int var4 = PopupPresentation.field_c.get(5);
-        int var5 = PopupPresentation.field_c.get(2);
-        int var6 = PopupPresentation.field_c.get(1);
-        int var7 = PopupPresentation.field_c.get(11);
+        ql.field_c.setTime(new Date(param1));
+        int var3 = ql.field_c.get(7);
+        int var4 = ql.field_c.get(5);
+        int var5 = ql.field_c.get(2);
+        int var6 = ql.field_c.get(1);
+        int var7 = ql.field_c.get(11);
         if (param0 == -82) {
-          var8 = PopupPresentation.field_c.get(12);
-          var9 = PopupPresentation.field_c.get(13);
+          var8 = ql.field_c.get(12);
+          var9 = ql.field_c.get(13);
           return so.field_c[-1 + var3] + ", " + var4 / 10 + var4 % 10 + "-" + gi.field_c[var5] + "-" + var6 + " " + var7 / 10 + var7 % 10 + ":" + var8 / 10 + var8 % 10 + ":" + var9 / 10 + var9 % 10 + " GMT";
         }
         return (String) null;
@@ -117,20 +117,20 @@ final class fq {
         vg var2Lifetime1;
         if (param0 == 14663) {
           var2 = new vg();
-          oe.field_Bb.addLast((byte) -119, (IntrusiveNode) (var2));
+          oe.field_Bb.a((byte) -119, (tc) (var2));
           tq.a(param1, 0);
           return var2;
         }
         fq.a((byte) -111, -125L);
         var2Lifetime1 = new vg();
-        oe.field_Bb.addLast((byte) -119, (IntrusiveNode) (var2Lifetime1));
+        oe.field_Bb.a((byte) -119, (tc) (var2Lifetime1));
         tq.a(param1, 0);
         return var2Lifetime1;
     }
 
     final static String a(int param0, String param1, boolean param2, String param3) {
         RuntimeException var4 = null;
-        CipherPacketBuffer var5 = null;
+        bv var5 = null;
         int var6 = 0;
         hl var7 = null;
         CharSequence var8 = null;
@@ -148,11 +148,11 @@ final class fq {
         try {
           var8 = (CharSequence) ((Object) param3);
           if (!hg.a((byte) -113, var8)) {
-            stackIn_3_0 = SectorCacheStore.field_d;
+            stackIn_3_0 = bc.field_d;
             return stackIn_3_0;
           }
           if (th.field_a != 2) {
-            stackIn_6_0 = EffectPresentation.field_a;
+            stackIn_6_0 = tb.field_a;
             return stackIn_6_0;
           }
           var7 = db.a(param1, -122);
@@ -160,20 +160,20 @@ final class fq {
             stackIn_10_0 = fo.a(4800, uq.field_x, new String[]{param1});
             return stackIn_10_0;
           }
-          var7.unlink(-124);
-          var7.unlinkSecondary((byte) -76);
+          var7.d(-124);
+          var7.c((byte) -76);
           vg.field_p = vg.field_p - 1;
-          var5 = vl.outgoingPacket;
-          var5.writeCipheredOpcode(32161, param0);
-          var5.position = var5.position + 1;
-          var6 = var5.position;
-          var5.writeByte(1, 3);
+          var5 = vl.field_n;
+          var5.h(32161, param0);
+          var5.field_q = var5.field_q + 1;
+          var6 = var5.field_q;
+          var5.b(1, 3);
           if (param2) {
             stackIn_13_0 = (String) null;
             return stackIn_13_0;
           }
           var5.b(param3, 13851);
-          var5.writeByteLengthPrefix(var5.position - var6, 5930);
+          var5.e(var5.field_q - var6, 5930);
           stackIn_15_0 = null;
           return (String) (stackIn_15_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -192,13 +192,13 @@ final class fq {
           } else {
             stackIn_22_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(')').toString());
         }
     }
 
     final static void b(byte param0) {
-        NodeIterator.field_a = false;
-        vi.field_d = ByteStorage.field_e.readUnsignedByte(0) == 0 ? true : false;
+        bb.field_a = false;
+        vi.field_d = mg.field_e.k(0) == 0 ? true : false;
         if (param0 < 70) {
           field_h = (fa) null;
           return;

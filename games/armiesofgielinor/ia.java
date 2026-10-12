@@ -8,19 +8,19 @@ final class ia {
     private tu field_a;
     private int field_c;
     private String field_d;
-    private RgbSprite[] field_f;
+    private wk[] field_f;
     static int field_g;
     private int field_j;
     private int field_e;
 
     final void a(int param0) {
-        SoftwareRaster.f(this.field_e, this.field_i, this.field_j, this.field_c, 7829367);
+        qn.f(this.field_e, this.field_i, this.field_j, this.field_c, 7829367);
         i.a(this.field_f, this.field_c, this.field_e, (byte) -47, this.field_i, this.field_j);
         if (param0 >= 24) {
           this.b(-11727);
           return;
         }
-        this.field_f = (RgbSprite[]) null;
+        this.field_f = (wk[]) null;
         this.b(-11727);
     }
 
@@ -53,7 +53,7 @@ final class ia {
         StringBuilder var8 = null;
         int var9 = 0;
         int var10 = 0;
-        var11 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        var11 = ArmiesOfGielinor.field_M ? 1 : 0;
         try {
           var4_int = param0.length();
           var5 = param3.length();
@@ -103,7 +103,7 @@ final class ia {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
         }
     }
 
@@ -117,10 +117,10 @@ final class ia {
 
     private final void b(int param0) {
         int var9 = 0;
-        int var2 = this.field_f[3].canvasWidth;
+        int var2 = this.field_f[3].field_A;
         int var3 = this.field_a.a(' ');
         int var4 = var3 + (var2 + this.field_e);
-        int var5 = this.field_f[1].canvasHeight;
+        int var5 = this.field_f[1].field_x;
         int var6 = 2;
         int var7 = this.field_a.field_H;
         int var8 = var5 + this.field_i - (-var6 - var7);
@@ -165,7 +165,7 @@ final class ia {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
@@ -203,28 +203,28 @@ final class ia {
         int var6Lifetime1;
         int var7Lifetime1;
         if (param0 < -92) {
-          var2 = this.field_f[5].canvasWidth + this.field_f[3].canvasWidth;
+          var2 = this.field_f[5].field_A + this.field_f[3].field_A;
           var3 = this.field_a.a(' ') << 1;
           var4 = this.field_a.a(this.field_d);
           this.field_j = var3 + var2 + var4;
-          var5 = this.field_f[1].canvasHeight + this.field_f[7].canvasHeight;
+          var5 = this.field_f[1].field_x + this.field_f[7].field_x;
           var6 = 4;
           var7 = this.field_a.field_L + this.field_a.field_H;
           this.field_c = var6 + (var5 + var7);
           return;
         }
         this.a(94, (byte) 54, -110);
-        var2Lifetime1 = this.field_f[5].canvasWidth + this.field_f[3].canvasWidth;
+        var2Lifetime1 = this.field_f[5].field_A + this.field_f[3].field_A;
         var3Lifetime1 = this.field_a.a(' ') << 1;
         var4Lifetime1 = this.field_a.a(this.field_d);
         this.field_j = var3Lifetime1 + var2Lifetime1 + var4Lifetime1;
-        var5Lifetime1 = this.field_f[1].canvasHeight + this.field_f[7].canvasHeight;
+        var5Lifetime1 = this.field_f[1].field_x + this.field_f[7].field_x;
         var6Lifetime1 = 4;
         var7Lifetime1 = this.field_a.field_L + this.field_a.field_H;
         this.field_c = var6Lifetime1 + (var5Lifetime1 + var7Lifetime1);
     }
 
-    ia(RgbSprite[] param0, tu param1, int[] param2, String param3, int param4, int param5) {
+    ia(wk[] param0, tu param1, int[] param2, String param3, int param4, int param5) {
         RuntimeException var7 = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
@@ -272,7 +272,7 @@ final class ia {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 

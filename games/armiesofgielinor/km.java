@@ -4,7 +4,7 @@
 import java.util.*;
 
 final class km {
-    static IndexedSprite[] field_c;
+    static ru[] field_c;
     private boolean field_b;
     private int field_k;
     int field_d;
@@ -12,15 +12,15 @@ final class km {
     private int field_e;
     private int field_g;
     static String field_a;
-    static RgbSprite[] field_h;
-    private AnimationPlayer field_i;
+    static wk[] field_h;
+    private vj field_i;
     static String[] field_j;
 
-    final static int getCampaignPacketWord0(int obfuscationGuard) {
-        if (obfuscationGuard > -46) {
+    final static int a(int param0) {
+        if (param0 > -46) {
           field_j = (String[]) null;
         }
-        return kw.campaignPacketWord0;
+        return kw.field_R;
     }
 
     final static je c(int param0) {
@@ -36,19 +36,19 @@ final class km {
         int var6;
         int var7;
         int var9;
-        var9 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        var9 = ArmiesOfGielinor.field_M ? 1 : 0;
         if (param3 != -44) {
-          this.field_i = (AnimationPlayer) null;
+          this.field_i = (vj) null;
         }
         for (var8 = 0; var8 < 6; var8++) {
           if (var8 * 8 < this.field_f) {
             if (param2) {
-              var7 = -((this.field_f - var8 * 4) * 2) + (this.field_k + AttackEvent.a(false, var8 + 1, li.field_n));
-              var5 = -(this.field_g - 5 * (-(4 * var8) + this.field_f)) + AttackEvent.a(false, var8 + 1, li.field_n);
+              var7 = -((this.field_f - var8 * 4) * 2) + (this.field_k + ns.a(false, var8 + 1, li.field_n));
+              var5 = -(this.field_g - 5 * (-(4 * var8) + this.field_f)) + ns.a(false, var8 + 1, li.field_n);
               var6 = this.field_d;
             } else {
-              var7 = this.field_k - 2 * (-24 + var8 * 4 + this.field_f) + AttackEvent.a(false, 1 + var8, li.field_n);
-              var5 = -((var8 * 4 + (-24 + this.field_f)) * 5) + (this.field_g + AttackEvent.a(false, var8 + 1, li.field_n));
+              var7 = this.field_k - 2 * (-24 + var8 * 4 + this.field_f) + ns.a(false, 1 + var8, li.field_n);
+              var5 = -((var8 * 4 + (-24 + this.field_f)) * 5) + (this.field_g + ns.a(false, var8 + 1, li.field_n));
               var6 = this.field_d;
             }
             fh.$cfr$intArgs$a$e0bc7fdb2979(var7, -(var8 * 40) + 400, 56, fe.field_o[param0 + 1], -(5 * var8) + 63, var5, var6);
@@ -62,13 +62,13 @@ final class km {
         nt var4;
         int var5;
         nt var4Lifetime1;
-        var5 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
-        var4 = (nt) (s.field_a.first((byte) 112));
+        var5 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var4 = (nt) (s.field_a.e((byte) 112));
         while (var4 != null) {
           if (~var4.field_o == ~param0) {
             return var4;
           }
-          var4 = (nt) (s.field_a.next((byte) 123));
+          var4 = (nt) (s.field_a.a((byte) 123));
         }
         if (param1 < 65) {
           field_j = (String[]) null;
@@ -76,14 +76,14 @@ final class km {
         var4Lifetime1 = new nt();
         var4Lifetime1.field_o = param0;
         var4Lifetime1.field_q = param2;
-        s.field_a.addLast((byte) -119, (IntrusiveNode) (var4Lifetime1));
+        s.field_a.a((byte) -119, (tc) (var4Lifetime1));
         tf.a(param3, var4Lifetime1, (byte) -64);
         return var4Lifetime1;
     }
 
     final boolean b(int param0) {
         if (null != this.field_i) {
-          this.field_i.advance(-94);
+          this.field_i.a(-94);
         }
         int var2 = 36 % ((10 - param0) / 61);
         if (this.field_f > -1) {
@@ -108,7 +108,7 @@ final class km {
 
     private final void a(boolean param0, boolean param1, int param2) {
         int stackIn_8_0 = 0;
-        ModelMesh stackIn_22_0;
+        gd stackIn_22_0;
         int stackIn_22_1;
         int stackIn_22_2;
         int stackIn_22_3;
@@ -116,7 +116,7 @@ final class km {
         int stackIn_22_5;
         int stackIn_23_6 = 0;
         Object var4;
-        ModelMesh var4_ref;
+        gd var4_ref;
         int var5;
         int var6;
         int var7;
@@ -126,14 +126,14 @@ final class km {
         int var11;
         int var12;
         var4 = null;
-        var12 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        var12 = ArmiesOfGielinor.field_M ? 1 : 0;
         if (param2 > ~this.field_f) {
           return;
         }
         if (this.field_i != null) {
-          var4_ref = (ModelMesh) (this.field_i.applyCurrentFrame(false, true, false, cs.field_db[this.field_e]));
+          var4_ref = (gd) (this.field_i.a(false, true, false, cs.field_db[this.field_e]));
         } else {
-          var4_ref = (ModelMesh) (cs.field_db[this.field_e].a(false, false, false));
+          var4_ref = (gd) (cs.field_db[this.field_e].a(false, false, false));
         }
         stackIn_8_0 = (!param0) ? 140 : 1908;
         var5 = stackIn_8_0;
@@ -141,7 +141,7 @@ final class km {
         var7 = 0;
         var8 = 150;
         if (this.field_e == 2) {
-          var4_ref.scaleGeometry(256, 256, 256);
+          var4_ref.b(256, 256, 256);
         }
         if (!param0) {
           var11 = -(this.field_f * 2) + this.field_k;
@@ -170,13 +170,13 @@ final class km {
         } else {
           stackIn_23_6 = var11;
         }
-        ((ModelMesh) (Object) stackIn_22_0).a(stackIn_22_1, stackIn_22_2, stackIn_22_3, stackIn_22_4, stackIn_22_5, stackIn_23_6, var10);
+        ((gd) (Object) stackIn_22_0).a(stackIn_22_1, stackIn_22_2, stackIn_22_3, stackIn_22_4, stackIn_22_5, stackIn_23_6, var10);
         return;
     }
 
     final void a(boolean param0, int param1, boolean param2, int param3) {
         int var6;
-        var6 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        var6 = ArmiesOfGielinor.field_M ? 1 : 0;
         if (param1 != -8) {
           field_j = (String[]) null;
         }
@@ -203,9 +203,9 @@ final class km {
         int var5;
         int var6;
         int var8;
-        var8 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        var8 = ArmiesOfGielinor.field_M ? 1 : 0;
         if (param0 != 6) {
-          km.getCampaignPacketWord0(52);
+          km.a(52);
         }
         for (var7 = 0; var7 < 6; var7++) {
           if (20 * var7 < this.field_f) {
@@ -230,7 +230,7 @@ final class km {
           this.field_b = false;
         }
         if (this.field_i != null) {
-          this.field_i.advance(-96);
+          this.field_i.a(-96);
         }
         this.field_f = this.field_f + 5;
     }
@@ -243,12 +243,12 @@ final class km {
         this.field_k = param1;
         this.field_d = param2;
         if (this.field_e == 0) {
-          this.field_i = new AnimationPlayer(1);
-          this.field_i.selectSequence(-1, pv.field_a[0][0]);
+          this.field_i = new vj(1);
+          this.field_i.a(-1, pv.field_a[0][0]);
         }
         if (this.field_e == 5) {
-          this.field_i = new AnimationPlayer(1);
-          this.field_i.selectSequence(-1, pv.field_a[5][0]);
+          this.field_i = new vj(1);
+          this.field_i.a(-1, pv.field_a[5][0]);
         }
     }
 

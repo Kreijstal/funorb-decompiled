@@ -29,11 +29,11 @@ final class ab {
         StringBuilder stackIn_12_1 = null;
         String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
-        var4 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        var4 = ArmiesOfGielinor.field_M ? 1 : 0;
         try {
           for (var2_int = param1; var2_int < param0.length(); var2_int++) {
             var3 = param0.charAt(var2_int);
-            if (!MeshObject.a((byte) -105, (char) var3) &&
+            if (!ni.a((byte) -105, (char) var3) &&
               !mu.a(28799, (char) var3)) {
               return true;
             }
@@ -49,7 +49,7 @@ final class ab {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -59,20 +59,20 @@ final class ab {
         int var5 = 0;
         int var6 = 0;
         int var9 = 0;
-        RgbSprite var10 = null;
-        RgbSprite var11 = null;
+        wk var10 = null;
+        wk var11 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var4 = null;
-        var9 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        var9 = ArmiesOfGielinor.field_M ? 1 : 0;
         try {
           param1 = param1 | param1 << 8;
           var4_int = param1 >> 1 ^ param1;
           for (var7 = 0; 4 > var7; var7++) {
-            var6 = -64 + (CachedArchiveProvider.field_y[var7][1] + param0 + (param1 & 3));
-            var5 = -44 + ((var4_int & 7) + CachedArchiveProvider.field_y[var7][0] + param2);
+            var6 = -64 + (bm.field_y[var7][1] + param0 + (param1 & 3));
+            var5 = -44 + ((var4_int & 7) + bm.field_y[var7][0] + param2);
             if (0 == var7) {
               var10 = tn.field_eb[16 + param1 % 9];
-              fe.a(var10, var5, -CachedArchiveProvider.field_y[var7][1] + var6);
+              fe.a(var10, var5, -bm.field_y[var7][1] + var6);
             } else {
               var11 = tn.field_eb[25 + param1 % 9];
               fe.a(var11, var5, var6);
@@ -87,7 +87,7 @@ final class ab {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) var4), "ab.C(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw ig.a((Throwable) ((Object) var4), "ab.C(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 

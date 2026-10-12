@@ -2,26 +2,26 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class j {
-    private FixedQuaternion field_i;
+    private wq field_i;
     static int[] field_j;
     static int field_b;
-    private BattleCamera field_h;
+    private v field_h;
     private int[] field_c;
-    private FixedQuaternion field_f;
+    private wq field_f;
     private int field_g;
-    private FixedQuaternion field_a;
+    private wq field_a;
     static int[] field_e;
     private int field_k;
     static String field_d;
 
     private final void a(int param0) {
-        this.field_a.setAxisAngle((byte) 47, 65536, 0, 0, 1194);
-        this.field_a.normalize(126);
-        this.field_f.setAxisAngle((byte) 47, 0, 0, 65536, 256);
-        this.field_f.normalize(91);
-        this.field_a.copyInto(this.field_i, true);
+        this.field_a.a((byte) 47, 65536, 0, 0, 1194);
+        this.field_a.a(126);
+        this.field_f.a((byte) 47, 0, 0, 65536, 256);
+        this.field_f.a(91);
+        this.field_a.a(this.field_i, true);
         int var2 = -49 % ((-8 - param0) / 62);
-        this.field_i.prependRotation(1, this.field_f);
+        this.field_i.a(1, this.field_f);
     }
 
     private final void a(int param0, int param1, int param2) {
@@ -43,82 +43,82 @@ final class j {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
         int var1_intLifetime1;
-        var2 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        var2 = ArmiesOfGielinor.field_M ? 1 : 0;
         try {
-          if (null != DisplacedUnitMarker.field_t) {
+          if (null != il.field_t) {
             return;
           }
-          DisplacedUnitMarker.field_t = new String[60];
-          DisplacedUnitMarker.field_t[24] = ma.field_Y;
-          DisplacedUnitMarker.field_t[11] = tf.field_p;
-          DisplacedUnitMarker.field_t[0] = od.field_g;
-          DisplacedUnitMarker.field_t[1] = la.field_e;
-          DisplacedUnitMarker.field_t[13] = DeployAction.field_v;
-          DisplacedUnitMarker.field_t[7] = gp.field_c;
-          DisplacedUnitMarker.field_t[3] = lb.field_d;
-          DisplacedUnitMarker.field_t[53] = gk.field_P;
-          DisplacedUnitMarker.field_t[6] = AiInfluenceMap.field_k;
-          DisplacedUnitMarker.field_t[9] = PreparedAction.field_k;
-          DisplacedUnitMarker.field_t[8] = null;
-          DisplacedUnitMarker.field_t[4] = el.field_a;
-          DisplacedUnitMarker.field_t[54] = mh.field_d;
-          DisplacedUnitMarker.field_t[2] = sa.field_b;
-          DisplacedUnitMarker.field_t[5] = pq.field_d;
-          DisplacedUnitMarker.field_t[25] = AnimationSkeleton.field_m;
-          DisplacedUnitMarker.field_t[22] = hq.field_d;
-          DisplacedUnitMarker.field_t[16] = InstructionsPanel.field_y;
-          DisplacedUnitMarker.field_t[28] = wf.field_s;
-          DisplacedUnitMarker.field_t[19] = s.field_b;
-          DisplacedUnitMarker.field_t[21] = dv.field_r;
-          DisplacedUnitMarker.field_t[26] = bj.field_l;
-          DisplacedUnitMarker.field_t[46] = hc.field_d;
-          DisplacedUnitMarker.field_t[17] = su.field_c;
-          DisplacedUnitMarker.field_t[23] = sa.field_e;
-          DisplacedUnitMarker.field_t[27] = NodeHashTable.field_b;
-          DisplacedUnitMarker.field_t[30] = pf.field_e;
-          DisplacedUnitMarker.field_t[20] = tl.field_h;
-          DisplacedUnitMarker.field_t[18] = InstructionsPanel.field_c;
-          DisplacedUnitMarker.field_t[14] = qu.field_s[0];
-          DisplacedUnitMarker.field_t[15] = qu.field_s[1];
+          il.field_t = new String[60];
+          il.field_t[24] = ma.field_Y;
+          il.field_t[11] = tf.field_p;
+          il.field_t[0] = od.field_g;
+          il.field_t[1] = la.field_e;
+          il.field_t[13] = pl.field_v;
+          il.field_t[7] = gp.field_c;
+          il.field_t[3] = lb.field_d;
+          il.field_t[53] = gk.field_P;
+          il.field_t[6] = ir.field_k;
+          il.field_t[9] = bd.field_k;
+          il.field_t[8] = null;
+          il.field_t[4] = el.field_a;
+          il.field_t[54] = mh.field_d;
+          il.field_t[2] = sa.field_b;
+          il.field_t[5] = pq.field_d;
+          il.field_t[25] = ig.field_m;
+          il.field_t[22] = hq.field_d;
+          il.field_t[16] = rk.field_y;
+          il.field_t[28] = wf.field_s;
+          il.field_t[19] = s.field_b;
+          il.field_t[21] = dv.field_r;
+          il.field_t[26] = bj.field_l;
+          il.field_t[46] = hc.field_d;
+          il.field_t[17] = su.field_c;
+          il.field_t[23] = sa.field_e;
+          il.field_t[27] = bg.field_b;
+          il.field_t[30] = pf.field_e;
+          il.field_t[20] = tl.field_h;
+          il.field_t[18] = rk.field_c;
+          il.field_t[14] = qu.field_s[0];
+          il.field_t[15] = qu.field_s[1];
           for (var1_int = 55; 59 > var1_int; var1_int++) {
-            DisplacedUnitMarker.field_t[var1_int] = null;
+            il.field_t[var1_int] = null;
           }
-          DisplacedUnitMarker.field_t[42] = nt.field_p;
-          DisplacedUnitMarker.field_t[40] = vg.field_l;
-          DisplacedUnitMarker.field_t[32] = ActionRequest.field_r;
-          DisplacedUnitMarker.field_t[36] = rj.field_G;
-          DisplacedUnitMarker.field_t[31] = ij.field_C;
-          DisplacedUnitMarker.field_t[35] = wd.field_j;
-          DisplacedUnitMarker.field_t[47] = qk.field_f;
-          DisplacedUnitMarker.field_t[51] = nt.field_p;
-          DisplacedUnitMarker.field_t[48] = lw.field_lb;
-          DisplacedUnitMarker.field_t[44] = dd.field_g;
-          DisplacedUnitMarker.field_t[37] = lg.field_c;
-          CampaignDefinition.field_m = new String[3];
-          DisplacedUnitMarker.field_t[52] = oa.field_G;
-          DisplacedUnitMarker.field_t[38] = PortalLossCondition.field_f;
-          ParasiteEvent.field_A = new String[]{VertexNormal.field_a, rf.field_e, je.field_lb, ob.field_P};
-          DisplacedUnitMarker.field_t[43] = FaceNormal.field_c;
-          DisplacedUnitMarker.field_t[33] = gv.field_b;
-          DisplacedUnitMarker.field_t[59] = TickCounter.field_e;
-          DisplacedUnitMarker.field_t[41] = CorpseConditionMarker.field_x;
-          DisplacedUnitMarker.field_t[45] = oa.field_G;
-          DisplacedUnitMarker.field_t[50] = GameEvent.field_u;
-          DisplacedUnitMarker.field_t[34] = pf.field_e;
-          DisplacedUnitMarker.field_t[29] = qm.field_I;
-          DisplacedUnitMarker.field_t[39] = StateChangeEvent.field_y;
+          il.field_t[42] = nt.field_p;
+          il.field_t[40] = vg.field_l;
+          il.field_t[32] = mn.field_r;
+          il.field_t[36] = rj.field_G;
+          il.field_t[31] = ij.field_C;
+          il.field_t[35] = wd.field_j;
+          il.field_t[47] = qk.field_f;
+          il.field_t[51] = nt.field_p;
+          il.field_t[48] = lw.field_lb;
+          il.field_t[44] = dd.field_g;
+          il.field_t[37] = lg.field_c;
+          cf.field_m = new String[3];
+          il.field_t[52] = oa.field_G;
+          il.field_t[38] = up.field_f;
+          md.field_A = new String[]{wi.field_a, rf.field_e, je.field_lb, ob.field_P};
+          il.field_t[43] = kg.field_c;
+          il.field_t[33] = gv.field_b;
+          il.field_t[59] = em.field_e;
+          il.field_t[41] = dk.field_x;
+          il.field_t[45] = oa.field_G;
+          il.field_t[50] = oj.field_u;
+          il.field_t[34] = pf.field_e;
+          il.field_t[29] = qm.field_I;
+          il.field_t[39] = qq.field_y;
           wb.field_b = new String[29];
-          CampaignDefinition.field_m[0] = on.field_o;
-          CampaignDefinition.field_m[2] = uq.field_v;
-          CampaignDefinition.field_m[1] = uh.field_b;
+          cf.field_m[0] = on.field_o;
+          cf.field_m[2] = uq.field_v;
+          cf.field_m[1] = uh.field_b;
           wb.field_b[0] = null;
-          wb.field_b[10] = DamageEvent.field_z;
+          wb.field_b[10] = nw.field_z;
           if (param0 < 81) {
             return;
           }
           wb.field_b[6] = el.field_a;
           wb.field_b[13] = ar.field_y;
-          du.field_g = new String[]{tg.field_l, gk.field_N, tv.field_c, tv.field_b, CombatSandbox.field_g, dn.field_Kb, qu.field_r, r.field_I, we.field_h, kd.field_Q, og.field_t, ByteStorage.field_c, fg.field_l, pi.field_P, StateChangeEvent.field_H, ut.field_ib};
+          du.field_g = new String[]{tg.field_l, gk.field_N, tv.field_c, tv.field_b, vn.field_g, dn.field_Kb, qu.field_r, r.field_I, we.field_h, kd.field_Q, og.field_t, mg.field_c, fg.field_l, pi.field_P, qq.field_H, ut.field_ib};
           wb.field_b[18] = dd.field_g;
           wb.field_b[4] = gg.field_H;
           wb.field_b[14] = ov.field_d;
@@ -128,7 +128,7 @@ final class j {
           wb.field_b[28] = mh.field_d;
           wb.field_b[23] = lw.field_lb;
           wb.field_b[1] = cb.field_d;
-          wb.field_b[22] = MeshObject.field_b;
+          wb.field_b[22] = ni.field_b;
           wb.field_b[2] = cw.field_b;
           wb.field_b[5] = nl.field_F;
           wb.field_b[24] = cb.field_d;
@@ -138,18 +138,18 @@ final class j {
           wb.field_b[7] = kw.field_N;
           wb.field_b[8] = pu.field_h;
           wb.field_b[3] = l.field_g;
-          wb.field_b[11] = DiskCacheRequest.field_J;
-          wb.field_b[19] = PlayerProfile.field_e;
+          wb.field_b[11] = nh.field_J;
+          wb.field_b[19] = hm.field_e;
           wb.field_b[9] = jn.field_e;
-          wb.field_b[20] = CorpseConditionMarker.field_x;
+          wb.field_b[20] = dk.field_x;
           oi.field_a[10] = fo.a(4800, oi.field_a[10], new String[]{Integer.toString(20)});
-          vl.battleHintMessages = new String[6];
-          vl.battleHintMessages[3] = jj.field_f;
-          vl.battleHintMessages[0] = DeployAction.field_C;
-          vl.battleHintMessages[4] = pp.field_Y;
-          vl.battleHintMessages[2] = qt.field_a;
-          vl.battleHintMessages[1] = bk.field_c;
-          vl.battleHintMessages[5] = fa.field_g;
+          vl.field_m = new String[6];
+          vl.field_m[3] = jj.field_f;
+          vl.field_m[0] = pl.field_C;
+          vl.field_m[4] = pp.field_Y;
+          vl.field_m[2] = qt.field_a;
+          vl.field_m[1] = bk.field_c;
+          vl.field_m[5] = fa.field_g;
           var3 = 0;
           var1_intLifetime1 = var3;
           while (jj.field_a.length > var3) {
@@ -162,7 +162,7 @@ final class j {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) var1), "j.C(" + param0 + ')');
+          throw ig.a((Throwable) ((Object) var1), "j.C(" + param0 + ')');
         }
     }
 
@@ -176,16 +176,16 @@ final class j {
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          this.field_h.targetPosition[0] = param1;
-          this.field_h.targetPosition[1] = param3;
-          this.field_h.transformTarget((byte) -49);
-          var6_int = this.field_h.transformedPosition[0];
+          this.field_h.field_k[0] = param1;
+          this.field_h.field_k[1] = param3;
+          this.field_h.a((byte) -49);
+          var6_int = this.field_h.field_h[0];
           var7 = param4;
           param2[0] = var6_int;
           if (param0 <= 49) {
             field_e = (int[]) null;
           }
-          var8 = this.field_h.transformedPosition[1];
+          var8 = this.field_h.field_h[1];
           param2[1] = var7;
           param2[2] = var8;
           return;
@@ -199,7 +199,7 @@ final class j {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -240,9 +240,9 @@ final class j {
         Object var11Lifetime1;
         int var9_intLifetime1;
         int var10Lifetime1;
-        var12 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        var12 = ArmiesOfGielinor.field_M ? 1 : 0;
         try {
-          AnimationSequence.a(PreparedAction.field_r, param0 + 114);
+          qb.a(bd.field_r, param0 + 114);
           if (no.field_K != null) {
             var15 = lm.field_b;
             var17 = var15;
@@ -267,7 +267,7 @@ final class j {
               var10 = 0;
               while (true) {
                 if (lm.field_e.length > var10) {
-                  stackIn_10_0 = ((CoatOfArms.field_d[var10 / 8] & 1 << (var10 & 7)) == 0) ? 0 : 1;
+                  stackIn_10_0 = ((ln.field_d[var10 / 8] & 1 << (var10 & 7)) == 0) ? 0 : 1;
                   var11_int = stackIn_10_0;
                   if (var11_int != 0) {
                     var9_int++;
@@ -288,7 +288,7 @@ final class j {
               }
             }
             so.field_d.field_xb = true;
-            if (!SpellCastAction.field_s) {
+            if (!ua.field_s) {
               stackIn_32_0 = so.field_d;
               if (var8 != 0) {
                 stackIn_33_1 = qp.field_E;
@@ -310,9 +310,9 @@ final class j {
               if (fs.field_d != null) {
                 jp.field_a = false;
                 fc.field_a = false;
-                if (null == TeleportAction.field_B) {
+                if (null == ur.field_B) {
                   dt.field_d = new boolean[tq.field_b];
-                  TeleportAction.field_B = new byte[tq.field_b];
+                  ur.field_B = new byte[tq.field_b];
                 }
                 var13 = 0;
                 var9_intLifetime1 = var13;
@@ -321,7 +321,7 @@ final class j {
                   var13++;
                 }
                 es.a(0, tq.field_b, no.field_K, -1, true, -1, (byte) 89, -1);
-                if (!(BufferedSocket.field_j < 2) &&
+                if (!(hi.field_j < 2) &&
                   br.field_f[12]) {
                   fc.field_a = true;
                 }
@@ -353,12 +353,12 @@ final class j {
                 }
               }
             } else {
-              uj.field_l.field_X = AiActionCandidate.field_v;
+              uj.field_l.field_X = jb.field_v;
               mp.field_Lb.field_xb = false;
               if (var8 != 0) {
                 stackIn_23_0 = p.field_f;
               } else {
-                stackIn_23_0 = PreparedAction.field_l;
+                stackIn_23_0 = bd.field_l;
               }
               var16 = stackIn_23_0;
               var9 = var16;
@@ -401,8 +401,8 @@ final class j {
               lu.a(-127, param3);
             }
             if (so.field_d.field_yb != 0) {
-              if (SpellCastAction.field_s) {
-                ManaEvent.a((byte) 69, param3);
+              if (ua.field_s) {
+                vp.a((byte) 69, param3);
               } else {
                 gs.a(param3, -8006);
               }
@@ -413,11 +413,11 @@ final class j {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) var4), "j.A(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw ig.a((Throwable) ((Object) var4), "j.A(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
-    j(int param0, BattleCamera param1) {
+    j(int param0, v param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
@@ -426,12 +426,12 @@ final class j {
         try {
           this.field_c = new int[3];
           this.field_h = param1;
-          this.field_a = new FixedQuaternion();
-          this.field_f = new FixedQuaternion();
-          this.field_i = new FixedQuaternion();
+          this.field_a = new wq();
+          this.field_f = new wq();
+          this.field_i = new wq();
           this.a(105);
           this.field_g = param0 << 16;
-          this.field_k = ev.b(-55, this.field_g, so.sqrtFixed16(196608, -129));
+          this.field_k = ev.b(-55, this.field_g, so.a(196608, -129));
           this.a(2, 0, 0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -444,7 +444,7 @@ final class j {
           } else {
             stackIn_6_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(')').toString());
         }
     }
 

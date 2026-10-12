@@ -16,7 +16,7 @@ final class ba extends dr {
           if (param0 != -24872) {
             field_E = (String[]) null;
           }
-          stackIn_3_0 = new nd(SkeletonLimitMarker.a((byte) 119));
+          stackIn_3_0 = new nd(kj.a((byte) 119));
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -28,7 +28,7 @@ final class ba extends dr {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
@@ -57,29 +57,29 @@ final class ba extends dr {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
         int var2 = 0;
-        var3 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        var3 = ArmiesOfGielinor.field_M ? 1 : 0;
         try {
           if (param0 > -103) {
             field_F = 107;
           }
           var1_int = 0;
-          while (Unit.i((byte) -52)) {
-            MovementPlanner.field_z.pollNavigationKeys((byte) -120);
-            if (!MovementPlanner.field_z.hasActivationInput((byte) 82)) {
+          while (jd.i((byte) -52)) {
+            nn.field_z.b((byte) -120);
+            if (!nn.field_z.d((byte) 82)) {
               continue;
             }
             var1_int = 1;
           }
-          MovementPlanner.field_z.updatePointerSelection(0, DiskCacheWorker.a((byte) -47, TeleportAction.field_z, BattleTutorial.field_t), DiskCacheWorker.a((byte) 93, ko.field_b, AiPlanningStrategy.field_d));
-          if (MovementPlanner.field_z.hasActivationInput((byte) 46)) {
+          nn.field_z.a(0, vo.a((byte) -47, ur.field_z, iu.field_t), vo.a((byte) 93, ko.field_b, sm.field_d));
+          if (nn.field_z.d((byte) 46)) {
             var1_int = 1;
           }
           var2 = 0;
           if (var1_int != 0 &&
-            MovementPlanner.field_z.selectedIndex >= 0) {
-            var2 = SpellMenuGroup.field_m[MovementPlanner.field_z.selectedIndex];
+            nn.field_z.field_h >= 0) {
+            var2 = rg.field_m[nn.field_z.field_h];
             if (var2 == 2) {
-              CombatPresentation.n(-112);
+              sk.n(-112);
             }
           }
           stackIn_18_0 = var2;
@@ -87,7 +87,7 @@ final class ba extends dr {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) var1), "ba.D(" + param0 + ')');
+          throw ig.a((Throwable) ((Object) var1), "ba.D(" + param0 + ')');
         }
     }
 

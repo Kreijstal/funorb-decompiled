@@ -6,11 +6,11 @@ final class ts {
     static String field_a;
     static boolean field_m;
     static String field_g;
-    static NodeDeque field_e;
+    static at field_e;
     int field_n;
     int[] field_i;
     static long field_h;
-    static SpellMenuGroup currentSpellMenu;
+    static rg field_j;
     static String field_f;
     int field_c;
     static boolean field_l;
@@ -21,7 +21,7 @@ final class ts {
         int var3;
         int var4;
         int var3Lifetime1;
-        var4 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        var4 = ArmiesOfGielinor.field_M ? 1 : 0;
         if (null == this.field_i) {
           return 0;
         }
@@ -53,16 +53,16 @@ final class ts {
         try {
           sb.field_i.field_X = param0;
           if (rs.field_t != 2) {
-            ed.field_e.field_X = FixedQuaternion.field_c;
+            ed.field_e.field_X = wq.field_c;
           } else {
             ed.field_e.field_X = bq.field_d;
           }
           var9_int = 495;
           var10 = 5;
-          SummonEvent.field_F.a(param5, -20500, -10 + var9_int, var10, 5);
-          UpkeepEvent.field_z.a(param5, -20500, -rb.field_b.field_gb + SummonEvent.field_F.field_gb, 0, 0);
+          mb.field_F.a(param5, -20500, -10 + var9_int, var10, 5);
+          qj.field_z.a(param5, -20500, -rb.field_b.field_gb + mb.field_F.field_gb, 0, 0);
           var10 = var10 + (param5 + param2);
-          rb.field_b.a(param5, -20500, rb.field_b.field_gb, 0, UpkeepEvent.field_z.field_gb);
+          rb.field_b.a(param5, -20500, rb.field_b.field_gb, 0, qj.field_z.field_gb);
           qf.field_e.a(param4, -20500, qf.field_e.j(param7 - 15550), var10, 5);
           var11 = ed.field_e.j(param7 ^ 15717);
           ed.field_e.a(param4, -20500, var11, var10, -5 + (var9_int - var11));
@@ -74,9 +74,9 @@ final class ts {
           f.field_C.a(var12, -20500, var9_int, param3, 0);
           f.field_C.field_G = tq.a(11579568, false, f.field_C.field_ob, 2105376, 3, 8421504);
           var12 = var12 + param3;
-          UnitCycler.field_g.a(var12, -20500, var9_int, param8 - var12 / 2, -(var9_int / 2) + param1);
+          eu.field_g.a(var12, -20500, var9_int, param8 - var12 / 2, -(var9_int / 2) + param1);
         } catch (RuntimeException runtimeException) {
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "ts.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ')');
+          throw ig.a((Throwable) ((Object) runtimeException), "ts.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ')');
         }
     }
 
@@ -87,7 +87,7 @@ final class ts {
           td.field_f.b(0);
           return;
         }
-        currentSpellMenu = (SpellMenuGroup) null;
+        field_j = (rg) null;
         td.field_f.a(0, 0);
         td.field_f.b(0);
     }
@@ -105,9 +105,9 @@ final class ts {
         return 0;
     }
 
-    final static void startCampaignMission(CampaignMission mission, int obfuscationGuard, CampaignQuicksave quicksave) {
-        GameplayController stackIn_4_0;
-        GameplayController stackIn_4_1;
+    final static void a(om param0, int param1, sl param2) {
+        ic stackIn_4_0;
+        ic stackIn_4_1;
         boolean stackIn_4_2;
         int stackIn_4_3;
         String[] stackIn_4_4;
@@ -120,8 +120,8 @@ final class ts {
         boolean stackIn_4_11;
         int stackIn_4_12;
         int stackIn_4_13;
-        GameplayController stackIn_5_0;
-        GameplayController stackIn_5_1;
+        ic stackIn_5_0;
+        ic stackIn_5_1;
         boolean stackIn_5_14;
         RuntimeException stackIn_28_0 = null;
         StringBuilder stackIn_28_1 = null;
@@ -134,27 +134,27 @@ final class ts {
         int var4 = 0;
         int var5_int = 0;
         Exception var5 = null;
-        Unit var6 = null;
-        CampaignParticipant var6_ref = null;
+        jd var6 = null;
+        sd var6_ref = null;
         int var7 = 0;
         String[] var8 = null;
-        CampaignParticipant var9 = null;
-        GameplayController stackIn_4_0Lifetime1;
-        GameplayController stackIn_4_1Lifetime1;
-        GameplayController stackIn_5_0Lifetime1;
-        GameplayController stackIn_5_1Lifetime1;
+        sd var9 = null;
+        ic stackIn_4_0Lifetime1;
+        ic stackIn_4_1Lifetime1;
+        ic stackIn_5_0Lifetime1;
+        ic stackIn_5_1Lifetime1;
         int var5_intLifetime1;
-        var7 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        var7 = ArmiesOfGielinor.field_M ? 1 : 0;
         try {
-          regionExit1: {
-            l.activeCampaignMission = mission;
+          L0: {
+            l.field_c = param0;
             pq.field_f = null;
-            var8 = mission.getParticipantNames(-23209);
+            var8 = param0.e(-23209);
             var3 = var8;
             r.field_B = var8.length;
-            var4 = mission.playerSlot;
-            ByteStorage.field_g = obfuscationGuard + r.field_B;
-            td.field_f.a(mission.mapTheme, 0);
+            var4 = param0.field_w;
+            mg.field_g = param1 + r.field_B;
+            td.field_f.a(param0.field_z, 0);
             stackIn_4_0 = null;
             stackIn_4_1 = null;
             stackIn_4_2 = false;
@@ -163,53 +163,53 @@ final class ts {
             stackIn_4_5 = var4;
             stackIn_4_6 = false;
             stackIn_4_7 = td.field_f;
-            stackIn_4_8 = mission.mapSizeSetting;
+            stackIn_4_8 = param0.field_o;
             stackIn_4_9 = ArmiesOfGielinor.field_K;
-            stackIn_4_10 = mission.mapTheme;
+            stackIn_4_10 = param0.field_z;
             stackIn_4_11 = false;
             stackIn_4_12 = 4;
             stackIn_4_13 = 0;
             if (!rf.a(27875)) {
               stackIn_4_0Lifetime1 = null;
               stackIn_4_1Lifetime1 = null;
-              if (BufferedSocket.field_j >= 2) {
+              if (hi.field_j >= 2) {
                 stackIn_5_0 = null;
                 stackIn_5_1 = null;
                 stackIn_5_14 = true;
-                break regionExit1;
+                break L0;
               }
             }
             stackIn_5_0Lifetime1 = null;
             stackIn_5_1Lifetime1 = null;
             stackIn_5_14 = false;
           }
-          rd.field_j = new GameplayController(stackIn_4_2, stackIn_4_3, stackIn_4_4, stackIn_4_5, stackIn_4_6, stackIn_4_7, stackIn_4_8, stackIn_4_9, stackIn_4_10, stackIn_4_11, stackIn_4_12, stackIn_4_13, stackIn_5_14, mission);
-          rd.field_j.battlefield.field_F = true;
-          rd.field_j.battlefield.playerCoats = new CoatOfArms[mission.participantIds.length];
-          for (var5_int = 0; rd.field_j.battlefield.playerCoats.length > var5_int; var5_int++) {
-            if (~var5_int == ~mission.playerSlot) {
-              rd.field_j.battlefield.playerCoats[var5_int] = ah.localCoat;
+          rd.field_j = new ic(stackIn_4_2, stackIn_4_3, stackIn_4_4, stackIn_4_5, stackIn_4_6, stackIn_4_7, stackIn_4_8, stackIn_4_9, stackIn_4_10, stackIn_4_11, stackIn_4_12, stackIn_4_13, stackIn_5_14, param0);
+          rd.field_j.field_xb.field_F = true;
+          rd.field_j.field_xb.field_T = new ln[param0.field_B.length];
+          for (var5_int = 0; rd.field_j.field_xb.field_T.length > var5_int; var5_int++) {
+            if (~var5_int == ~param0.field_w) {
+              rd.field_j.field_xb.field_T[var5_int] = ah.field_a;
             } else {
-              var9 = mission.campaign.participants[mission.participantIds[var5_int]];
+              var9 = param0.field_G.field_q[param0.field_B[var5_int]];
               var6_ref = var9;
-              rd.field_j.battlefield.playerCoats[var5_int] = var9.coatOfArms;
+              rd.field_j.field_xb.field_T[var5_int] = var9.field_q;
             }
           }
-          if ((1 & mission.flags) != 0) {
-            var5_intLifetime1 = -1 + mission.participantIds.length;
-            var6 = (Unit) (rd.field_j.battlefield.getUnitsForPlayer(var5_intLifetime1, ~obfuscationGuard).first((byte) 97));
+          if ((1 & param0.field_k) != 0) {
+            var5_intLifetime1 = -1 + param0.field_B.length;
+            var6 = (jd) (rd.field_j.field_xb.f(var5_intLifetime1, ~param1).e((byte) 97));
             while (var6 != null) {
-              if (var6.strength > 10) {
-                var6.strength = 10;
+              if (var6.field_Y > 10) {
+                var6.field_Y = 10;
               }
-              var6 = (Unit) (rd.field_j.battlefield.getUnitsForPlayer(var5_intLifetime1, ~obfuscationGuard).next((byte) 123));
+              var6 = (jd) (rd.field_j.field_xb.f(var5_intLifetime1, ~param1).a((byte) 123));
             }
           }
-          if (quicksave == null) {
+          if (param2 == null) {
             return;
           }
           try {
-            rd.field_j.restoreCampaignQuicksave((byte) -121, quicksave, mission);
+            rd.field_j.a((byte) -121, param2, param0);
             return;
           } catch (java.lang.Exception decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
@@ -222,24 +222,24 @@ final class ts {
           var3_ref = (RuntimeException) (Object) decompiledCaughtException;
           stackIn_28_0 = var3_ref;
           stackIn_28_1 = new StringBuilder().append("ts.E(");
-          if (mission == null) {
+          if (param0 == null) {
             stackIn_29_2 = "null";
           } else {
             stackIn_29_2 = "{...}";
           }
-          stackIn_31_1 = ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(',').append(obfuscationGuard).append(',');
-          if (quicksave == null) {
+          stackIn_31_1 = ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(',').append(param1).append(',');
+          if (param2 == null) {
             stackIn_32_2 = "null";
           } else {
             stackIn_32_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_28_0), ((StringBuilder) (Object) stackIn_31_1).append(stackIn_32_2).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_28_0), ((StringBuilder) (Object) stackIn_31_1).append(stackIn_32_2).append(')').toString());
         }
     }
 
     public static void b(int param0) {
         field_e = null;
-        currentSpellMenu = null;
+        field_j = null;
         field_k = null;
         if (param0 == -26908) {
           field_a = null;

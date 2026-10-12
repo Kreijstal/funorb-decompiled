@@ -3,44 +3,44 @@
  */
 final class ck {
     static String field_d;
-    static AnimationSequence[][] animationSequencesByGroup;
+    static qb[][] field_e;
     static long field_b;
     static String field_a;
-    static RgbSprite[] field_c;
+    static wk[] field_c;
 
-    final static boolean isStructureTerrain(int terrainType, int obfuscationGuard) {
-        if (obfuscationGuard != -12) {
-          ck.isStructureTerrain(-80, -6);
-          if (terrainType == 8) {
+    final static boolean a(int param0, int param1) {
+        if (param1 != -12) {
+          ck.a(-80, -6);
+          if (param0 == 8) {
             return true;
           }
-          if (terrainType == 9) {
+          if (param0 == 9) {
             return true;
           }
-          if (terrainType == 7) {
+          if (param0 == 7) {
             return true;
           }
-          if (terrainType == 11) {
+          if (param0 == 11) {
             return true;
           }
-          if (terrainType != 14) {
+          if (param0 != 14) {
             return false;
           }
           return true;
         }
-        if (terrainType == 8) {
+        if (param0 == 8) {
           return true;
         }
-        if (terrainType == 9) {
+        if (param0 == 9) {
           return true;
         }
-        if (terrainType == 7) {
+        if (param0 == 7) {
           return true;
         }
-        if (terrainType == 11) {
+        if (param0 == 11) {
           return true;
         }
-        if (terrainType != 14) {
+        if (param0 != 14) {
           return false;
         }
         return true;
@@ -63,16 +63,16 @@ final class ck {
             field_a = (String) null;
           }
           var3 = null;
-          if (null != TurnTimerDial.field_b &&
-            !TurnTimerDial.field_b.equals(param2.getParameter("settings"))) {
-            var3 = TurnTimerDial.field_b;
+          if (null != sj.field_b &&
+            !sj.field_b.equals(param2.getParameter("settings"))) {
+            var3 = sj.field_b;
             var4 = var3;
             var4Lifetime2 = var3;
           }
           var4Lifetime1 = null;
-          if (null != GlobalSpell.field_n &&
-            !GlobalSpell.field_n.equals(param2.getParameter("session"))) {
-            var4Lifetime1 = GlobalSpell.field_n;
+          if (null != al.field_n &&
+            !al.field_n.equals(param2.getParameter("session"))) {
+            var4Lifetime1 = al.field_n;
           }
           stackIn_11_0 = rv.a((String) (var3), (String) (var4Lifetime1), 0, -1, param1);
           return stackIn_11_0;
@@ -92,7 +92,7 @@ final class ck {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) (stackIn_14_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
+          throw ig.a((Throwable) (stackIn_14_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
         }
     }
 
@@ -103,24 +103,24 @@ final class ck {
         if (param0 != 14) {
           return;
         }
-        animationSequencesByGroup = (AnimationSequence[][]) null;
+        field_e = (qb[][]) null;
     }
 
     final static void b(int param0) {
-        if (FixedQuaternion.field_a == null) {
+        if (wq.field_a == null) {
           return;
         }
-        dt.a(FixedQuaternion.field_a, 23678);
-        FixedQuaternion.field_a.a(-30918, IntPair.field_m);
-        FixedQuaternion.field_a = null;
-        if (null != ActionSpell.field_e) {
-          ActionSpell.field_e.b(124);
+        dt.a(wq.field_a, 23678);
+        wq.field_a.a(-30918, ft.field_m);
+        wq.field_a = null;
+        if (null != ra.field_e) {
+          ra.field_e.b(124);
         }
-        IndexedSpriteBase.field_b.requestFocus();
+        si.field_b.requestFocus();
         if (param0 < -50) {
           return;
         }
-        animationSequencesByGroup = (AnimationSequence[][]) null;
+        field_e = (qb[][]) null;
     }
 
     static {

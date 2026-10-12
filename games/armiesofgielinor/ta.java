@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ta extends nl {
-    static NodeDeque field_O;
+    static at field_O;
     private int field_H;
     private int field_S;
     private String field_K;
@@ -13,7 +13,7 @@ final class ta extends nl {
     static String field_M;
     static je field_R;
     private boolean field_J;
-    private BitmapFont field_P;
+    private ka field_P;
 
     final String h(int param0) {
         int var2 = 0;
@@ -58,7 +58,7 @@ final class ta extends nl {
         RuntimeException decompiledCaughtException = null;
         try {
           var6 = new mo(param1, param3, param5, param0, param4);
-          SectorCacheStore.a(param2 ^ -19023, var6);
+          bc.a(param2 ^ -19023, var6);
           if (param2 == -18119) {
             return;
           }
@@ -86,11 +86,11 @@ final class ta extends nl {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param5).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param5).append(')').toString());
         }
     }
 
-    ta(int param0, int param1, int param2, int param3, kb param4, boolean param5, int param6, int param7, BitmapFont param8, int param9, String param10) {
+    ta(int param0, int param1, int param2, int param3, kb param4, boolean param5, int param6, int param7, ka param8, int param9, String param10) {
         super(param0, param1, param2, param3, (kh) null, (qo) null);
         boolean stackIn_4_1 = false;
         int stackIn_10_0 = 0;
@@ -116,7 +116,7 @@ final class ta extends nl {
           stackIn_4_1 = (param5);
           this.field_J = stackIn_4_1;
           var12_int = this.field_S - this.field_H;
-          var13 = this.field_P.getParagraphHeight(param10, var12_int, this.field_P.field_H) + 2 * this.field_H;
+          var13 = this.field_P.a(param10, var12_int, this.field_P.field_H) + 2 * this.field_H;
           if (param3 >= var13) {
             var13 = param3;
           } else {
@@ -152,7 +152,7 @@ final class ta extends nl {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
         }
     }
 
@@ -172,7 +172,7 @@ final class ta extends nl {
     }
 
     static {
-        field_O = new NodeDeque();
+        field_O = new at();
         field_Q = "To <%0>: ";
         field_L = false;
         field_M = "Unpacking music";

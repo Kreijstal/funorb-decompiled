@@ -5,7 +5,7 @@ final class vk {
     static boolean field_f;
     static String field_d;
     static String field_b;
-    static RgbSprite[] field_e;
+    static wk[] field_e;
     static String field_c;
     int[] field_a;
     private static String field_z;
@@ -28,7 +28,7 @@ final class vk {
         field_z = "vk.A(";
         field_b = "Password is valid";
         field_c = "Show all game chat";
-        field_e = new RgbSprite[3];
+        field_e = new wk[3];
         field_d = "RANGE";
     }
 }

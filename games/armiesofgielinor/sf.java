@@ -3,7 +3,7 @@
  */
 abstract class sf extends wl {
     private int field_T;
-    static int[] unitAnimationGroups;
+    static int[] field_P;
     private int field_R;
     private int field_V;
     static String field_Q;
@@ -25,7 +25,7 @@ abstract class sf extends wl {
         int var14;
         int var15;
         int var16;
-        PacketBuffer var17;
+        vh var17;
         int var4Lifetime1;
         int var4Lifetime2;
         int var5Lifetime1;
@@ -40,16 +40,16 @@ abstract class sf extends wl {
         int var9Lifetime2;
         int var12Lifetime1;
         int var13Lifetime1;
-        var16 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
-        SoftwareRaster.a(6 + param0, 35 + param2, this.field_l - 12, this.field_w - 40, 2105376, 0);
+        var16 = ArmiesOfGielinor.field_M ? 1 : 0;
+        qn.a(6 + param0, 35 + param2, this.field_l - 12, this.field_w - 40, 2105376, 0);
         var4 = 35;
         var5 = 211;
         var6 = 194;
         var7 = 0;
         var8 = param2;
         while (var4 > var7) {
-          if (var8 >= SoftwareRaster.clipTop &&
-            var8 < SoftwareRaster.clipBottom) {
+          if (var8 >= qn.field_a &&
+            var8 < qn.field_f) {
             var9 = var5 + var7 * (var6 - var5) / var4;
             var10 = 0;
             var11 = this.field_l;
@@ -62,7 +62,7 @@ abstract class sf extends wl {
                   }
                   var13 = var9 * (462 - var12) / 42;
                   var13 = var13 | (var13 << 8 | var13 << 16);
-                  SoftwareRaster.pixels[var8 * SoftwareRaster.width - (-param0 - var10)] = var13;
+                  qn.field_d[var8 * qn.field_l - (-param0 - var10)] = var13;
                 }
                 var10++;
               }
@@ -78,7 +78,7 @@ abstract class sf extends wl {
                   } else {
                     var15 = var9 * (462 - var14) / 42;
                     var15 = var15 | (var15 << 16 | var15 << 8);
-                    SoftwareRaster.pixels[var11 + param0 + SoftwareRaster.width * var8] = var15;
+                    qn.field_d[var11 + param0 + qn.field_l * var8] = var15;
                   }
                   var11++;
                   continue;
@@ -88,7 +88,7 @@ abstract class sf extends wl {
               var11 = var12Lifetime1;
             }
             var9 = var9 | (var9 << 16 | var9 << 8);
-            SoftwareRaster.e(param0 + var10, var8, -var10 + var11, var9);
+            qn.e(param0 + var10, var8, -var10 + var11, var9);
           }
           var8++;
           var7++;
@@ -101,28 +101,28 @@ abstract class sf extends wl {
         while (var7Lifetime1 < var4Lifetime1) {
           var9Lifetime1 = var5Lifetime1 + var7Lifetime1 * (-var5Lifetime1 + var6Lifetime1) / var4Lifetime1;
           var9Lifetime1 = var9Lifetime1 | (var9Lifetime1 << 16 | var9Lifetime1 << 8);
-          SoftwareRaster.e(param0, var8Lifetime1, 6, var9Lifetime1);
-          SoftwareRaster.e(param0 - (-this.field_l + 6), var8Lifetime1, 6, var9Lifetime1);
+          qn.e(param0, var8Lifetime1, 6, var9Lifetime1);
+          qn.e(param0 - (-this.field_l + 6), var8Lifetime1, 6, var9Lifetime1);
           var7Lifetime1++;
           var8Lifetime1++;
         }
         gt.field_e.g(this.field_l + (param0 - 90), 10 + param2);
-        EquipmentBattleTutorial.a(t.field_d, param0 + 5, param2 + 35, this.field_l - 10, 8941);
-        EquipmentBattleTutorial.a(ip.field_c, param0, -22 + param2 + this.field_w, this.field_l, param1 ^ 1851672364);
+        gb.a(t.field_d, param0 + 5, param2 + 35, this.field_l - 10, 8941);
+        gb.a(ip.field_c, param0, -22 + param2 + this.field_w, this.field_l, param1 ^ 1851672364);
         var4Lifetime2 = this.field_w - 79;
         var6Lifetime2 = 127;
         var5Lifetime2 = 169;
         if (param1 != 1851680193) {
-          var17 = (PacketBuffer) null;
-          sf.a(-110, (String) null, (PacketBuffer) null);
+          var17 = (vh) null;
+          sf.a(-110, (String) null, (vh) null);
         }
         var7Lifetime2 = 0;
         var8Lifetime2 = param2 + 57;
         while (var4Lifetime2 > var7Lifetime2) {
           var9Lifetime2 = (-var5Lifetime2 + var6Lifetime2) * var7Lifetime2 / var4Lifetime2 + var5Lifetime2;
           var9Lifetime2 = var9Lifetime2 | (var9Lifetime2 << 16 | var9Lifetime2 << 8);
-          SoftwareRaster.e(param0, var8Lifetime2, 6, var9Lifetime2);
-          SoftwareRaster.e(param0 + this.field_l - 6, var8Lifetime2, 6, var9Lifetime2);
+          qn.e(param0, var8Lifetime2, 6, var9Lifetime2);
+          qn.e(param0 + this.field_l - 6, var8Lifetime2, 6, var9Lifetime2);
           var7Lifetime2++;
           var8Lifetime2++;
         }
@@ -157,11 +157,11 @@ abstract class sf extends wl {
         return super.a((byte) -1);
     }
 
-    final static int a(int param0, String param1, PacketBuffer param2) {
+    final static int a(int param0, String param1, vh param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
         byte[] var4 = null;
-        PacketBuffer var5 = null;
+        vh var5 = null;
         CharSequence var6 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;
@@ -172,15 +172,15 @@ abstract class sf extends wl {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != 15901) {
-            var5 = (PacketBuffer) null;
-            sf.a(-112, (String) null, (PacketBuffer) null);
+            var5 = (vh) null;
+            sf.a(-112, (String) null, (vh) null);
           }
-          var3_int = param2.position;
+          var3_int = param2.field_q;
           var6 = (CharSequence) ((Object) param1);
           var4 = nr.a(var6, false);
           param2.a(true, var4.length);
-          param2.position = param2.position + ds.field_c.a(0, var4, var4.length, param2.payload, param2.position, (byte) 28);
-          stackIn_3_0 = param2.position - var3_int;
+          param2.field_q = param2.field_q + ds.field_c.a(0, var4, var4.length, param2.field_o, param2.field_q, (byte) 28);
+          stackIn_3_0 = param2.field_q - var3_int;
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -198,7 +198,7 @@ abstract class sf extends wl {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 
@@ -225,7 +225,7 @@ abstract class sf extends wl {
     }
 
     public static void h(byte param0) {
-        unitAnimationGroups = null;
+        field_P = null;
         field_Q = null;
         if (param0 <= 21) {
           sf.h((byte) -93);
@@ -242,20 +242,20 @@ abstract class sf extends wl {
         String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
-        var4 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        var4 = ArmiesOfGielinor.field_M ? 1 : 0;
         try {
-          param1.unlink(-123);
+          param1.d(-123);
           var2_int = -20 % ((param0 + 16) / 62);
-          var3 = (of) (SummonAction.field_u.first((byte) 125));
+          var3 = (of) (be.field_u.e((byte) 125));
           while (var3 != null) {
             if (var3.a(9687, param1)) {
-              var3 = (of) (SummonAction.field_u.next((byte) 123));
+              var3 = (of) (be.field_u.a((byte) 123));
               continue;
             }
             break;
           }
           if (var3 == null) {
-            SummonAction.field_u.addLast((byte) -119, (IntrusiveNode) (param1));
+            be.field_u.a((byte) -119, (tc) (param1));
           } else {
             stackIn_7_0 = -123;
             fj.$cfr$intArgs$a$f94c566f195c(stackIn_7_0, param1, var3);
@@ -271,7 +271,7 @@ abstract class sf extends wl {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 
@@ -280,7 +280,7 @@ abstract class sf extends wl {
     }
 
     final static void b(int param0, int param1, int param2, int param3, int param4, int param5) {
-        RgbSprite stackIn_43_0;
+        wk stackIn_43_0;
         int stackIn_43_1;
         int stackIn_43_2;
         int[][] stackIn_43_3;
@@ -289,37 +289,37 @@ abstract class sf extends wl {
         int var6_int = 0;
         RuntimeException var6 = null;
         int var7_int = 0;
-        EventPresenter var7 = null;
+        vb var7 = null;
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
         int var11 = 0;
         int var8Lifetime1;
         int var9Lifetime1;
-        var11 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        var11 = ArmiesOfGielinor.field_M ? 1 : 0;
         try {
           if (param2 != 0) {
             field_Q = (String) null;
           }
           var6_int = og.field_p[param4] + param4;
           if (cu.field_a) {
-            var7_int = CipherPacketBuffer.currentBattlefield.getTileEffects(31, param0, param1, -1);
-            var8 = vs.field_e[param4].terrainType;
+            var7_int = bv.field_w.b(31, param0, param1, -1);
+            var8 = vs.field_e[param4].field_h;
             if (4 != var8 &&
               6 != var8 &&
               var8 != 2 &&
               (1 & var7_int) != 0) {
-              StateChangeEvent.a(var6_int, param2 ^ -12933, param5, param3);
+              qq.a(var6_int, param2 ^ -12933, param5, param3);
             }
-            if (vs.field_e[param4].hasCorpse(-121)) {
+            if (vs.field_e[param4].c(-121)) {
               fe.a(wf.field_B[var6_int % 4], param3 - 10, -25 + param5);
             }
-            var9 = fn.field_Q[vs.field_e[param4].terrainType];
+            var9 = fn.field_Q[vs.field_e[param4].field_h];
             if (var9 > -1) {
               if (2 == var9) {
                 fe.a(oq.field_l[17], -10 + param3, param5 - 25);
               } else {
-                if (vs.field_e[param4].terrainType == 3) {
+                if (vs.field_e[param4].field_h == 3) {
                   ih.a((byte) -124, param3 + 30, param4 + og.field_p[param4], 32 + param5);
                 } else {
                   if (var9 == 1) {
@@ -346,36 +346,36 @@ abstract class sf extends wl {
             }
             rs.a(26449, param3, param4, param5);
           }
-          var7 = (EventPresenter) (NetworkResourceRequest.field_C.eventPresenters.first((byte) 106));
+          var7 = (vb) (jf.field_C.field_pc.e((byte) 106));
           while (var7 != null) {
-            if (var7.tileIndex == param4) {
-              if (var7.presentationActive) {
-                var7 = (EventPresenter) (NetworkResourceRequest.field_C.eventPresenters.next((byte) 123));
+            if (var7.field_x == param4) {
+              if (var7.field_n) {
+                var7 = (vb) (jf.field_C.field_pc.a((byte) 123));
                 continue;
               }
-              if (null != var7.event.unit &&
-                var7.event.unit.modelPreview != null &&
-                !var7.fullCombatScene) {
-                var8Lifetime1 = var7.event.unit.modelPreview.screenPosition[0];
-                var9Lifetime1 = var7.event.unit.modelPreview.screenPosition[1];
-                var10 = var7.event.unit.ownerPlayer;
-                stackIn_43_0 = TeamRoster.field_g;
+              if (null != var7.field_r.field_w &&
+                var7.field_r.field_w.field_x != null &&
+                !var7.field_z) {
+                var8Lifetime1 = var7.field_r.field_w.field_x.field_e[0];
+                var9Lifetime1 = var7.field_r.field_w.field_x.field_e[1];
+                var10 = var7.field_r.field_w.field_O;
+                stackIn_43_0 = go.field_g;
                 stackIn_43_1 = -30 + var8Lifetime1;
                 stackIn_43_2 = var9Lifetime1 - 15;
                 stackIn_43_3 = op.field_c;
-                if (!CipherPacketBuffer.currentBattlefield.teamGame) {
+                if (!bv.field_w.field_wb) {
                   stackIn_44_4 = 0;
                 } else {
                   stackIn_44_4 = 1;
                 }
-                ((RgbSprite) (Object) stackIn_43_0).b(stackIn_43_1, stackIn_43_2, stackIn_43_3[stackIn_44_4][var10]);
+                ((wk) (Object) stackIn_43_0).b(stackIn_43_1, stackIn_43_2, stackIn_43_3[stackIn_44_4][var10]);
                 wl.field_N.b(var8Lifetime1 - 40, -20 + var9Lifetime1);
               }
             }
-            var7 = (EventPresenter) (NetworkResourceRequest.field_C.eventPresenters.next((byte) 123));
+            var7 = (vb) (jf.field_C.field_pc.a((byte) 123));
           }
-          if (vs.field_e[param4].occupant != null) {
-            if (vs.field_e[param4].occupant.presentationOwnsModel) {
+          if (vs.field_e[param4].field_c != null) {
+            if (vs.field_e[param4].field_c.field_u) {
               return;
             }
             wl.field_N.b(param3, param5);
@@ -384,7 +384,7 @@ abstract class sf extends wl {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = decompiledCaughtException;
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) var6), "sf.JB(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+          throw ig.a((Throwable) ((Object) var6), "sf.JB(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
     }
 
@@ -406,6 +406,6 @@ abstract class sf extends wl {
 
     static {
         field_Q = "Disruptive behaviour";
-        unitAnimationGroups = new int[]{22, 1, 0, 39, 28, 46, 9, 22, 22, 2, 22, 22, 22, 47, 5, 29, 22, 22, 6, 48, 44, 22, 22, 22, 4, 22, 10, 42, 15, 40, 17, 10, 22, 11, 11, 32, 22, 12, 16, 23, 14, 2, 3, 22, 22, 20, 10, 22, 22, 22, 22, 43, 18, 19, 34, 24, 31, 21, 35, 8, 37, 36, 38, 25, 10, 33, 30, 22, 22, 22, 7, 41, 45, 22, 28, 13, 49, 22, 22, 22, 22, 28, 50, 51, 52, 53, 54, 55, 56, 53};
+        field_P = new int[]{22, 1, 0, 39, 28, 46, 9, 22, 22, 2, 22, 22, 22, 47, 5, 29, 22, 22, 6, 48, 44, 22, 22, 22, 4, 22, 10, 42, 15, 40, 17, 10, 22, 11, 11, 32, 22, 12, 16, 23, 14, 2, 3, 22, 22, 20, 10, 22, 22, 22, 22, 43, 18, 19, 34, 24, 31, 21, 35, 8, 37, 36, 38, 25, 10, 33, 30, 22, 22, 22, 7, 41, 45, 22, 28, 13, 49, 22, 22, 22, 22, 28, 50, 51, 52, 53, 54, 55, 56, 53};
     }
 }

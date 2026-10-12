@@ -3,7 +3,7 @@
  */
 final class ll extends je {
     private je field_Ub;
-    static CombatSandbox field_Rb;
+    static vn field_Rb;
     static String field_Jb;
     static char[] field_Nb;
     static String field_Kb;
@@ -79,7 +79,7 @@ final class ll extends je {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
         }
     }
 
@@ -333,9 +333,9 @@ final class ll extends je {
     final static java.awt.Canvas p(int param0) {
         if (param0 != 0) {
           field_Jb = (String) null;
-          return FixedQuaternion.field_a == null ? IndexedSpriteBase.field_b : (java.awt.Canvas) ((Object) FixedQuaternion.field_a);
+          return wq.field_a == null ? si.field_b : (java.awt.Canvas) ((Object) wq.field_a);
         }
-        return FixedQuaternion.field_a == null ? IndexedSpriteBase.field_b : (java.awt.Canvas) ((Object) FixedQuaternion.field_a);
+        return wq.field_a == null ? si.field_b : (java.awt.Canvas) ((Object) wq.field_a);
     }
 
     final boolean o(int param0) {

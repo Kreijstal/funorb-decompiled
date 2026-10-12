@@ -7,7 +7,7 @@ final class jn {
     static int field_d;
     static String field_a;
     static String field_e;
-    static RgbSprite[][] field_b;
+    static wk[][] field_b;
 
     public static void a(int param0) {
         if (param0 > -94) {
@@ -15,7 +15,7 @@ final class jn {
         }
         field_a = null;
         field_f = null;
-        field_b = (RgbSprite[][]) null;
+        field_b = (wk[][]) null;
         field_e = null;
     }
 
@@ -33,7 +33,7 @@ final class jn {
         String stackIn_9_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var10_ref = null;
-        var16 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        var16 = ArmiesOfGielinor.field_M ? 1 : 0;
         try {
           while (true) {
             param5--;
@@ -66,7 +66,7 @@ final class jn {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param8).append(',').append(param9).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param8).append(',').append(param9).append(')').toString());
         }
     }
 

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class mi extends IntrusiveNode {
+final class mi extends tc {
     static byte[] field_r;
     static String field_C;
     int field_D;
@@ -55,8 +55,8 @@ final class mi extends IntrusiveNode {
 
     final static void a(int param0, int param1, int param2, int param3) {
         jv.field_c = param2;
-        DualNodeDeque.field_g = param1;
-        ActionRequest.field_n = param0;
+        ui.field_g = param1;
+        mn.field_n = param0;
         if (param3 != 3815) {
           mi.a(-70, -81, 66, 75);
         }
@@ -65,10 +65,10 @@ final class mi extends IntrusiveNode {
     final static void f(int param0) {
         if (param0 != -28093) {
           mi.a(38);
-          BufferedFile.a((byte) 102);
+          ue.a((byte) 102);
           return;
         }
-        BufferedFile.a((byte) 102);
+        ue.a((byte) 102);
     }
 
     mi() {

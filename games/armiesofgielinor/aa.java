@@ -457,7 +457,7 @@ final class aa extends hn {
         if (this.field_z < 0) {
           if (this.field_o <= 0) {
             this.g();
-            this.unlink(-119);
+            this.d(-119);
             return;
           }
           this.field_z = 0;
@@ -465,7 +465,7 @@ final class aa extends hn {
         if (this.field_z >= var7) {
           if (this.field_o >= 0) {
             this.g();
-            this.unlink(33);
+            this.d(33);
             return;
           }
           this.field_z = var7 - 1;
@@ -592,7 +592,7 @@ final class aa extends hn {
           if (this.field_z >= var7) {
             this.field_z = var7;
             this.g();
-            this.unlink(-127);
+            this.d(-127);
           }
           return;
         }
@@ -602,7 +602,7 @@ final class aa extends hn {
         }
         this.field_z = -1;
         this.g();
-        this.unlink(105);
+        this.d(105);
         return;
     }
 
@@ -711,7 +711,7 @@ final class aa extends hn {
           this.field_t = 0;
           this.field_C = 0;
           this.field_u = 0;
-          this.unlink(73);
+          this.d(73);
           return true;
         }
         if (this.field_u >= var1) {
@@ -971,7 +971,7 @@ final class aa extends hn {
         int var2Lifetime1;
         if (param0 == 0) {
           this.i(0);
-          this.unlink(61);
+          this.d(61);
           return;
         }
         if (this.field_C != 0) {
@@ -1031,7 +1031,7 @@ final class aa extends hn {
         this.field_s = 0;
         this.field_y = 0;
         this.field_u = 0;
-        this.unlink(86);
+        this.d(86);
     }
 
     final static aa b(sn param0, int param1, int param2, int param3) {
@@ -1199,7 +1199,7 @@ final class aa extends hn {
               this.field_t = 0;
               this.field_C = 0;
               this.field_u = 0;
-              this.unlink(41);
+              this.d(41);
               param0 = this.field_s;
             }
             this.field_s = 0;
@@ -1217,7 +1217,7 @@ final class aa extends hn {
         if (this.field_z < 0) {
           if (this.field_o <= 0) {
             this.g();
-            this.unlink(127);
+            this.d(127);
             return;
           }
           this.field_z = 0;
@@ -1225,7 +1225,7 @@ final class aa extends hn {
         if (this.field_z >= var5) {
           if (this.field_o >= 0) {
             this.g();
-            this.unlink(73);
+            this.d(73);
             return;
           }
           this.field_z = var5 - 1;
@@ -1338,7 +1338,7 @@ final class aa extends hn {
           if (this.field_z >= var5) {
             this.field_z = var5;
             this.g();
-            this.unlink(-117);
+            this.d(-117);
           }
           return;
         }
@@ -1347,7 +1347,7 @@ final class aa extends hn {
         }
         this.field_z = -1;
         this.g();
-        this.unlink(81);
+        this.d(81);
     }
 
     private final static int b(byte[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, aa param9) {

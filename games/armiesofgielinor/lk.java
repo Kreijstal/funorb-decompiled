@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 class lk implements kh, pm {
-    BitmapFont field_q;
+    ka field_q;
     int field_m;
     int field_n;
     int field_g;
@@ -23,7 +23,7 @@ class lk implements kh, pm {
     int field_t;
     int field_k;
 
-    lk(BitmapFont param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
+    lk(ka param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
         this(param0, param1, param1, param2, param2, param3, param4, param5, param6, param7, -1, 2147483647, false);
     }
 
@@ -50,7 +50,7 @@ class lk implements kh, pm {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -74,7 +74,7 @@ class lk implements kh, pm {
             this.a((kb) null, -24, 63, -48, 119, -128);
           }
         } catch (RuntimeException runtimeException) {
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "lk.M(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw ig.a((Throwable) ((Object) runtimeException), "lk.M(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -115,7 +115,7 @@ class lk implements kh, pm {
               stackIn_4_3 = var14.field_b[1 + var7].field_n;
             }
             var12 = stackIn_3_0 + Math.min(stackIn_3_1, Math.min(stackIn_3_2, stackIn_4_3));
-            CampaignUnitOverride.a(param2 + param3.field_B, param3.field_B + param2 + param3.field_l, param3.field_w + (param3.field_p + param0), param3.field_p + param0, (byte) 100);
+            id.a(param2 + param3.field_B, param3.field_B + param2 + param3.field_l, param3.field_w + (param3.field_p + param0), param3.field_p + param0, (byte) 100);
             t.field_c.a(this.field_o, var12, var10, (byte) 101, var11, var10);
             rf.b(-18862);
           }
@@ -135,7 +135,7 @@ class lk implements kh, pm {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param4).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -161,7 +161,7 @@ class lk implements kh, pm {
           } else {
             stackIn_5_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(')').toString());
         }
     }
 
@@ -178,7 +178,7 @@ class lk implements kh, pm {
         int var7 = 0;
         int var8 = 0;
         int var7Lifetime1;
-        var8 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        var8 = ArmiesOfGielinor.field_M ? 1 : 0;
         try {
           if (param0.field_u == null) {
             param0.field_u = (ju) ((Object) new ak());
@@ -233,7 +233,7 @@ class lk implements kh, pm {
           } else {
             stackIn_30_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_29_0), ((StringBuilder) (Object) stackIn_29_1).append(stackIn_30_2).append(',').append(param1).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_29_0), ((StringBuilder) (Object) stackIn_29_1).append(stackIn_30_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -261,7 +261,7 @@ class lk implements kh, pm {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -287,7 +287,7 @@ class lk implements kh, pm {
           } else {
             stackIn_5_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -316,7 +316,7 @@ class lk implements kh, pm {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 
@@ -345,7 +345,7 @@ class lk implements kh, pm {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -372,7 +372,7 @@ class lk implements kh, pm {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
@@ -407,7 +407,7 @@ class lk implements kh, pm {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 
@@ -422,7 +422,7 @@ class lk implements kh, pm {
           }
           this.a(param1, -251, param4, param0);
         } catch (RuntimeException runtimeException) {
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "lk.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw ig.a((Throwable) ((Object) runtimeException), "lk.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -449,7 +449,7 @@ class lk implements kh, pm {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
@@ -479,7 +479,7 @@ class lk implements kh, pm {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 
@@ -502,7 +502,7 @@ class lk implements kh, pm {
         int var16 = 0;
         ju var17 = null;
         ju var18 = null;
-        var16 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        var16 = ArmiesOfGielinor.field_M ? 1 : 0;
         try {
           if (param0 != -21259) {
             return;
@@ -524,7 +524,7 @@ class lk implements kh, pm {
           }
           var10 = var18.a(param0 ^ -21259, var8);
           var11 = var18.a(param0 ^ -21259, var9);
-          CampaignUnitOverride.a(param5 + param3.field_B, param3.field_l + (param5 + param3.field_B), param3.field_w + (param4 + param3.field_p), param3.field_p + param4, (byte) 116);
+          id.a(param5 + param3.field_B, param3.field_l + (param5 + param3.field_B), param3.field_w + (param4 + param3.field_p), param3.field_p + param4, (byte) 116);
           for (var12 = var10; var11 >= var12; var12++) {
             var13 = var17.field_b[var12];
             if (~var12 != ~var10) {
@@ -557,7 +557,7 @@ class lk implements kh, pm {
           } else {
             stackIn_27_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 
@@ -583,7 +583,7 @@ class lk implements kh, pm {
             this.field_m = 1;
           }
         } catch (RuntimeException runtimeException) {
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "lk.G(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw ig.a((Throwable) ((Object) runtimeException), "lk.G(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -599,13 +599,13 @@ class lk implements kh, pm {
         int var12 = 0;
         int var13 = 0;
         int var12Lifetime1;
-        var13 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        var13 = ArmiesOfGielinor.field_M ? 1 : 0;
         try {
           if (param7 != 2) {
             this.field_b = -74;
           }
           boolean decompiledFrameRemainder0 = true;
-          CampaignUnitOverride.a(param6.field_B + param2, param6.field_l + param2 + param6.field_B, param6.field_w + (param6.field_p + param1), param6.field_p + param1, (byte) 91);
+          id.a(param6.field_B + param2, param6.field_l + param2 + param6.field_B, param6.field_w + (param6.field_p + param1), param6.field_p + param1, (byte) 91);
           var9_int = this.b(103, param6);
           var10 = this.c(-99, param6);
           if (!this.field_c) {
@@ -652,7 +652,7 @@ class lk implements kh, pm {
           } else {
             stackIn_31_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_30_0), ((StringBuilder) (Object) stackIn_30_1).append(stackIn_31_2).append(',').append(param7).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_30_0), ((StringBuilder) (Object) stackIn_30_1).append(stackIn_31_2).append(',').append(param7).append(')').toString());
         }
     }
 
@@ -679,7 +679,7 @@ class lk implements kh, pm {
           } else {
             stackIn_5_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(param1).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -701,11 +701,11 @@ class lk implements kh, pm {
             return;
           }
           oq.a(27080, (java.awt.Component) ((Object) param1));
-          DisplacedUnitMarker.a((java.awt.Component) ((Object) param1), (byte) 74);
-          if (CampaignMission.field_I == null) {
+          il.a((java.awt.Component) ((Object) param1), (byte) 74);
+          if (om.field_I == null) {
             return;
           }
-          CampaignMission.field_I.a(0, (java.awt.Component) ((Object) param1));
+          om.field_I.a(0, (java.awt.Component) ((Object) param1));
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -717,7 +717,7 @@ class lk implements kh, pm {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
         }
     }
 
@@ -727,13 +727,13 @@ class lk implements kh, pm {
     final static void a(hd param0, int param1, nm param2, byte param3, boolean param4, java.awt.Component param5) {
         try {
           int var6_int = -98 / ((param3 + 3) / 46);
-          TileMetadata.a(param5, 1024, param0, param4, -115, param2, param1, param1);
+          ca.a(param5, 1024, param0, param4, -115, param2, param1, param1);
         } catch (RuntimeException runtimeException) {
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "lk.W(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ')');
+          throw ig.a((Throwable) ((Object) runtimeException), "lk.W(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ')');
         }
     }
 
-    lk(BitmapFont param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, boolean param12) {
+    lk(ka param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, boolean param12) {
         try {
           this.field_g = param3;
           this.field_c = param12 ? true : false;
@@ -749,7 +749,7 @@ class lk implements kh, pm {
           this.field_t = param2;
           this.field_i = param1;
         } catch (RuntimeException runtimeException) {
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "lk.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ',' + param9 + ',' + param10 + ',' + param11 + ',' + param12 + ')');
+          throw ig.a((Throwable) ((Object) runtimeException), "lk.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ',' + param9 + ',' + param10 + ',' + param11 + ',' + param12 + ')');
         }
     }
 

@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 abstract class wf extends iv {
-    static RgbSprite[] field_B;
+    static wk[] field_B;
     static String field_u;
     static int[] field_y;
     static String field_A;
@@ -33,16 +33,16 @@ abstract class wf extends iv {
         }
         og.field_m = this.field_z;
         qa.b(og.field_m, 1);
-        hq.a(param6, 5000, this.field_E, 5000, param2, og.field_m, this.field_C, 0, this.field_t, this.field_o, this.field_p, IntPair.field_m, this.field_x, this.field_G);
-        qf.a(og.field_m, this.field_p, this.field_G, (byte) 103, this.field_C, param6, this.field_E, this.field_t, IntPair.field_m);
+        hq.a(param6, 5000, this.field_E, 5000, param2, og.field_m, this.field_C, 0, this.field_t, this.field_o, this.field_p, ft.field_m, this.field_x, this.field_G);
+        qf.a(og.field_m, this.field_p, this.field_G, (byte) 103, this.field_C, param6, this.field_E, this.field_t, ft.field_m);
         rf.b((byte) 112);
-        CampaignMission.field_I = jk.b(68);
-        lk.a(101, IndexedSpriteBase.field_b);
+        om.field_I = jk.b(68);
+        lk.a(101, si.field_b);
         mo.field_c = param7;
         on.field_n = param5;
         lk.field_p = param0;
         wl.field_E = param1;
-        DualLinkedNode.field_t = param4;
+        ms.field_t = param4;
         this.f((byte) -51);
         df.l(0);
     }
@@ -90,7 +90,7 @@ abstract class wf extends iv {
         if (this.field_i) {
           return -1;
         }
-        if (!MovementPresentation.j(-11)) {
+        if (!qv.j(-11)) {
           return -1;
         }
         if (ol.field_C) {
@@ -99,7 +99,7 @@ abstract class wf extends iv {
         if (param0 >= -15) {
           this.field_o = true;
         }
-        var2 = InstructionsPanel.a((byte) -53, this.field_n, this.field_w, RadialSummonItem.a(-1), CombatPresentation.i(-4938), true);
+        var2 = rk.a((byte) -53, this.field_n, this.field_w, jr.a(-1), sk.i(-4938), true);
         if (var2 == -1) {
           return -1;
         }
@@ -110,11 +110,11 @@ abstract class wf extends iv {
           if (gk.field_K != 0) {
             return var2;
           }
-          DualLinkedNode.e(116);
+          ms.e(116);
           return var2;
         }
         if (var2 != 1) {
-          if (!TurnEffectEvent.field_C) {
+          if (!st.field_C) {
             this.a("reconnect", (byte) -81);
           }
           er.b(-11);
@@ -124,7 +124,7 @@ abstract class wf extends iv {
         } else {
           if (p.field_b == 11 &&
             gk.field_K == 0) {
-            DualLinkedNode.e(116);
+            ms.e(116);
           }
         }
         return var2;
@@ -138,8 +138,8 @@ abstract class wf extends iv {
         if (param0 <= 119) {
           return;
         }
-        String var2 = UnitModelPreview.b((byte) 61);
-        dj.a(CombatEvent.d((byte) 47), 0, var2);
+        String var2 = hr.b((byte) 61);
+        dj.a(ag.d((byte) 47), 0, var2);
     }
 
     private final void m(int param0) {
@@ -180,17 +180,17 @@ abstract class wf extends iv {
           this.a(param1, -26261, 480, 640, param2);
           int var4_int = -77 % ((param0 + 5) / 34);
         } catch (RuntimeException runtimeException) {
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "wf.I(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw ig.a((Throwable) ((Object) runtimeException), "wf.I(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
     private final void n(int param0) {
-        int var2 = ByteStorage.field_e.readUnsignedByte(0);
+        int var2 = mg.field_e.k(0);
         int var3 = (var2 & 1) != 0 ? 1 : 0;
         int var4 = fk.field_b - 1;
         byte[] var5 = new byte[var4];
-        ByteStorage.field_e.a(var4, var5, false, 0);
-        SpellCastAction.a(CombatEvent.d((byte) -125), 87, uu.a(var5, (byte) 127), var3 != 0);
+        mg.field_e.a(var4, var5, false, 0);
+        ua.a(ag.d((byte) -125), 87, uu.a(var5, (byte) 127), var3 != 0);
         if (param0 != 16433) {
           this.j(-76);
         }
@@ -207,33 +207,33 @@ abstract class wf extends iv {
           String var9 = null;
           String var10 = null;
           Boolean var11 = null;
-          PacketBuffer var12 = null;
+          vh var12 = null;
           int var5_intLifetime1;
           int var5_intLifetime2;
-          var8 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+          var8 = ArmiesOfGielinor.field_M ? 1 : 0;
           if (param2 >= -68) {
             this.field_r = true;
           }
-          var4 = IntrusiveNode.a(el.field_d, param0, true, og.field_m);
+          var4 = tc.a(el.field_d, param0, true, og.field_m);
           if (var4 == 0) {
             throw new IllegalStateException();
           }
           if (1 == var4) {
-            var5_int = sa.a(false, CampaignMission.c((byte) -27), fp.l(-117));
+            var5_int = sa.a(false, om.c((byte) -27), fp.l(-117));
             if (var5_int != -1) {
-              AiPlanningStrategy.a(103, br.field_b, lk.field_r, var5_int);
+              sm.a(103, br.field_b, lk.field_r, var5_int);
               lk.field_r = null;
               br.field_b = null;
             }
             var11 = r.l(-11506);
             if (var11 != null) {
-              UiSelectionState.a((byte) 32, var11.booleanValue());
+              dl.a((byte) 32, var11.booleanValue());
             }
           }
           if (2 == var4) {
-            var5_intLifetime1 = DiskCacheWorker.a((byte) -46, CombatPresentation.i(-4938), cn.e(488997228), lb.b(0), this.field_n, qp.e((byte) -127), RadialSummonItem.a(-1));
+            var5_intLifetime1 = vo.a((byte) -46, sk.i(-4938), cn.e(488997228), lb.b(0), this.field_n, qp.e((byte) -127), jr.a(-1));
             if (var5_intLifetime1 != -1) {
-              CampaignMenuEntry.a(lk.field_r, -14, br.field_b, var5_intLifetime1);
+              cq.a(lk.field_r, -14, br.field_b, var5_intLifetime1);
               lk.field_r = null;
               br.field_b = null;
             }
@@ -247,14 +247,14 @@ abstract class wf extends iv {
             if (param1) {
               ol.field_C = false;
             } else {
-              var5_intLifetime2 = InstructionsPanel.a((byte) -53, this.field_n, this.field_w, RadialSummonItem.a(-1), CombatPresentation.i(-4938), false);
+              var5_intLifetime2 = rk.a((byte) -53, this.field_n, this.field_w, jr.a(-1), sk.i(-4938), false);
               if (var5_intLifetime2 != -1) {
                 if (var5_intLifetime2 != 0) {
                   wv.a(lk.field_r, 10, var5_intLifetime2);
                   lk.field_r = null;
                 } else {
                   ck.field_b = dc.field_o;
-                  DualLinkedNode.e(112);
+                  ms.e(112);
                   bl.field_b = false;
                   p.field_b = 10;
                 }
@@ -262,47 +262,47 @@ abstract class wf extends iv {
             }
           }
           if (var4 == 4) {
-            if (BestScoreStrategy.field_l) {
-              bl.a(CombatEvent.d((byte) -116), true);
+            if (aw.field_l) {
+              bl.a(ag.d((byte) -116), true);
             } else {
               bl.field_b = true;
               p.field_b = 10;
             }
           }
           if (5 == var4) {
-            CampaignResult.a(CombatEvent.d((byte) -115), (byte) -3);
+            ho.a(ag.d((byte) -115), (byte) -3);
           }
           if (6 == var4 &&
             it.field_b) {
             p.field_b = 10;
           }
           if (var4 == 7) {
-            ws.a(CombatEvent.d((byte) 53), -126);
+            ws.a(ag.d((byte) 53), -126);
           }
           if (var4 == 8) {
-            bl.a(CombatEvent.d((byte) -120), true);
+            bl.a(ag.d((byte) -120), true);
           }
           if (9 == var4) {
-            ov.a(CombatEvent.d((byte) 48), 11982);
+            ov.a(ag.d((byte) 48), 11982);
           }
           if (10 == var4) {
-            vl.outgoingPacket.writeCipheredOpcode(32161, 17);
+            vl.field_n.h(32161, 17);
           }
           if (11 == var4) {
-            t.a((byte) -118, CombatEvent.d((byte) 7));
+            t.a((byte) -118, ag.d((byte) 7));
           }
           if (var4 == 12) {
-            ActionSpell.a(CombatEvent.d((byte) -123), -69, ob.j(-129));
+            ra.a(ag.d((byte) -123), -69, ob.j(-129));
           }
           if (var4 == 13) {
             try {
               if (fq.field_h == null) {
-                fq.field_h = new fa(IntPair.field_m, new java.net.URL(this.getCodeBase(), "countrylist.ws"), 5000);
+                fq.field_h = new fa(ft.field_m, new java.net.URL(this.getCodeBase(), "countrylist.ws"), 5000);
               }
               if (fq.field_h.b(0)) {
                 var12 = fq.field_h.a(3);
                 if (var12 != null) {
-                  var7 = co.a(0, var12.position, -127, var12.payload);
+                  var7 = co.a(0, var12.field_q, -127, var12.field_o);
                   df.a(var7, -73);
                 } else {
                   var9 = (String) null;
@@ -370,14 +370,14 @@ abstract class wf extends iv {
         int discarded$7 = 0;
         int var3;
         boolean stackIn_6_1 = false;
-        var3 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        var3 = ArmiesOfGielinor.field_M ? 1 : 0;
         if (param0 != 4) {
           this.a((byte) 113, true);
         }
         if (!wd.a((byte) 60)) {
           if (f.field_E >= 10) {
             if (!lk.b(true)) {
-              StateChangeEvent.e((byte) -84);
+              qq.e((byte) -84);
             } else {
               if (p.field_b == 0) {
                 discarded$6 = this.a(false, false, (byte) -92);
@@ -387,7 +387,7 @@ abstract class wf extends iv {
             }
           }
         } else {
-          stackIn_6_1 = (null != FixedQuaternion.field_a);
+          stackIn_6_1 = (null != wq.field_a);
           discarded$7 = this.a(stackIn_6_1, false, (byte) -97);
         }
     }
@@ -398,23 +398,23 @@ abstract class wf extends iv {
         int var2;
         mo var3;
         int var4;
-        var4 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        var4 = ArmiesOfGielinor.field_M ? 1 : 0;
         var2 = nm.field_o;
         if (var2 < 64 &&
           tk.field_f[var2]) {
           if (0 == var2) {
             return;
           }
-          regionExit1: {
+          L1: {
             switch (var2) {
               case 2:
-                LeaderEscortCondition.d(9);
+                gm.d(9);
                 break;
               case 4:
                 da.a((byte) -101);
                 break;
               case 6:
-                AiInfluenceMap.a(true);
+                ir.a(true);
                 break;
               case 16:
                 da.a(67);
@@ -424,27 +424,27 @@ abstract class wf extends iv {
                   var2 != 12) {
                   switch (var2) {
                     case 13:
-                      MatchConditionEntry.a(param0 - 11);
-                      break regionExit1;
+                      u.a(param0 - 11);
+                      break L1;
                     case 17:
                       this.n(16433);
-                      break regionExit1;
+                      break L1;
                     case 18:
                       fq.b((byte) 119);
-                      break regionExit1;
+                      break L1;
                     default:
-                      af.a((Throwable) null, param0 ^ -100, "MGS1: " + CampaignProgress.b(false));
+                      af.a((Throwable) null, param0 ^ -100, "MGS1: " + cm.b(false));
                       dj.a((byte) -124);
-                      break regionExit1;
+                      break L1;
                   }
                 }
                 stackIn_30_0 = -34;
                 stackIn_31_1 = (var2 == 12);
                 var3 = ea.$cfr$intArgs$a$72f70aa7c69d(stackIn_30_0, stackIn_31_1);
-                MapLayout.a(var3, -1);
+                lo.a(var3, -1);
                 break;
               case 8:
-                jh.a(ByteStorage.field_e, IntPair.field_m, fk.field_b, param0 - 13);
+                jh.a(mg.field_e, ft.field_m, fk.field_b, param0 - 13);
                 break;
               case 7:
                 this.e((byte) 127);
@@ -456,16 +456,16 @@ abstract class wf extends iv {
                 jg.e(0);
                 break;
               case 1:
-                InstructionsPanel.e(param0 - 135);
+                rk.e(param0 - 135);
                 break;
             }
           }
           if (param0 != 12) {
-            field_B = (RgbSprite[]) null;
+            field_B = (wk[]) null;
           }
           return;
         }
-        af.a((Throwable) null, -115, "MGS2: " + CampaignProgress.b(false));
+        af.a((Throwable) null, -115, "MGS2: " + cm.b(false));
         dj.a((byte) -126);
     }
 
@@ -493,7 +493,7 @@ abstract class wf extends iv {
           this.k(-13);
         }
         if (param4 <= 6) {
-          field_B = (RgbSprite[]) null;
+          field_B = (wk[]) null;
         }
     }
 
@@ -510,29 +510,29 @@ abstract class wf extends iv {
         java.awt.Container var6;
         int var3Lifetime1;
         int var3Lifetime2;
-        var5 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
-        if (null != ActionSpell.field_e) {
-          if (null == FixedQuaternion.field_a) {
+        var5 = ArmiesOfGielinor.field_M ? 1 : 0;
+        if (null != ra.field_e) {
+          if (null == wq.field_a) {
             var6 = sp.a(0);
             var4 = var6.getSize();
-            ActionSpell.field_e.b(var4.height, var4.width, -30514);
+            ra.field_e.b(var4.height, var4.width, -30514);
           }
-          ActionSpell.field_e.a(0);
+          ra.field_e.a(0);
         }
         r.c(true);
         ds.a((byte) 118);
         if (param0 <= 124) {
           return;
         }
-        if (!PopupPresentation.h(31337) &&
+        if (!ql.h(31337) &&
           p.field_b != 11) {
           pf.a((byte) 73);
         }
-        if (CampaignMission.field_I != null) {
-          el.field_d = CampaignMission.field_I.a(9);
+        if (om.field_I != null) {
+          el.field_d = om.field_I.a(9);
         }
-        if (TeamRoster.a(99)) {
-          var3 = tp.getNominalTickRate(-113) * 1200;
+        if (go.a(99)) {
+          var3 = tp.b(-113) * 1200;
           if (this.field_r ||
             !(var3 >= bs.a((byte) 99)) &&
             !(os.g(4) <= var3)) {
@@ -549,12 +549,12 @@ abstract class wf extends iv {
           0 == gk.field_K) {
           stackIn_25_0 = (gk.field_K != -1) ? 0 : 1;
           var3Lifetime1 = stackIn_25_0;
-          gk.field_K = IntrusiveNode.b(86);
+          gk.field_K = tc.b(86);
           if (var3Lifetime1 != 0 &&
             gk.field_K == 0 &&
             11 == p.field_b &&
-            !MovementPresentation.j(-11)) {
-            DualLinkedNode.e(112);
+            !qv.j(-11)) {
+            ms.e(112);
           }
           if (gk.field_K != -1 &&
             gk.field_K != 0) {
@@ -593,10 +593,10 @@ abstract class wf extends iv {
                       wv.a(wm.field_a, 10, 256);
                     }
                   } else {
-                    wv.a(ResourceArchive.field_d, 10, 256);
+                    wv.a(kl.field_d, 10, 256);
                   }
                 } else {
-                  wv.a(CampaignMenu.field_k, 10, 256);
+                  wv.a(cv.field_k, 10, 256);
                 }
               } else {
                 wv.a(oq.field_k, 10, 256);
@@ -607,7 +607,7 @@ abstract class wf extends iv {
         }
         if ((gk.field_K != -1 &&
           gk.field_K != 0 ||
-          MovementPresentation.j(-11)) &&
+          qv.j(-11)) &&
           jl.field_a <= vi.b(74)) {
           ol.field_C = false;
           if (gk.field_K != -1 &&
@@ -617,7 +617,7 @@ abstract class wf extends iv {
           }
         }
         if (gk.field_K == 0 &&
-          !MovementPresentation.j(-11)) {
+          !qv.j(-11)) {
           dd.field_a = false;
         }
         if (f.field_E == 0 &&
@@ -628,21 +628,21 @@ abstract class wf extends iv {
           if (og.field_m != 0) {
             nf.field_Nb = nu.a(on.field_n, true);
           }
-          ps.field_u = DamageEvent.a(1, mo.field_c, (byte) 119, false, true);
-          CombatPresentation.field_M = DamageEvent.a(1, wl.field_E, (byte) 122, false, true);
-          h.field_g = DamageEvent.a(1, DualLinkedNode.field_t, (byte) 127, false, true);
+          ps.field_u = nw.a(1, mo.field_c, (byte) 119, false, true);
+          sk.field_M = nw.a(1, wl.field_E, (byte) 122, false, true);
+          h.field_g = nw.a(1, ms.field_t, (byte) 127, false, true);
           gg.field_K = ps.field_u;
           f.field_E = 2;
-          ResourceRequest.field_A = CombatPresentation.field_M;
+          ks.field_A = sk.field_M;
         }
         if (f.field_E == 2) {
           if (null != nf.field_Nb &&
-            nf.field_Nb.ensureIndex((byte) 82)) {
-            if (!nf.field_Nb.containsGroupName((byte) -128, "")) {
+            nf.field_Nb.a((byte) 82)) {
+            if (!nf.field_Nb.a((byte) -128, "")) {
               nf.field_Nb = null;
             } else {
-              if (nf.field_Nb.ensureGroupAvailableByName(28979, "")) {
-                CampaignUnitOverride.a((byte) -82, nf.field_Nb);
+              if (nf.field_Nb.a(28979, "")) {
+                id.a((byte) -82, nf.field_Nb);
                 nf.field_Nb = null;
                 wl.a(0);
               }
@@ -653,13 +653,13 @@ abstract class wf extends iv {
           }
         }
         if (f.field_E == 3 &&
-          wh.a(ps.field_u, (byte) 127, h.field_g, CombatPresentation.field_M) &&
+          wh.a(ps.field_u, (byte) 127, h.field_g, sk.field_M) &&
           wh.a(h.field_g, -27701)) {
           cd.a(12);
           vl.c((byte) 91);
           it.field_b = false;
-          UnitSpell.field_e = ef.field_a;
-          StateChangeEvent.a(CombatPresentation.field_M, ps.field_u, h.field_g, 0, BestScoreStrategy.field_l);
+          wa.field_e = ef.field_a;
+          qq.a(sk.field_M, ps.field_u, h.field_g, 0, aw.field_l);
           if (mo.field_r ||
             pd.field_b != null) {
             stackIn_96_0 = 3;
@@ -677,7 +677,7 @@ abstract class wf extends iv {
           }
           qd.a(h.field_g, (byte) 76, pt.field_eb, ko.field_e);
           ps.field_u = null;
-          CombatPresentation.field_M = null;
+          sk.field_M = null;
           h.field_g = null;
           p.a(-24602, (java.applet.Applet) (this));
           wl.a(0);
@@ -685,15 +685,15 @@ abstract class wf extends iv {
         }
         if (f.field_E == 10) {
           if (0 != og.field_m) {
-            RegionAnchor.field_o = nu.a(lk.field_p, true);
+            a.field_o = nu.a(lk.field_p, true);
           }
           f.field_E = 11;
         }
         boolean decompiledFrameRemainder0 = true;
         if (f.field_E == 11) {
-          if (RegionAnchor.field_o != null && (!RegionAnchor.field_o.ensureIndex((byte) 82) ||
-            !RegionAnchor.field_o.ensureAllGroupsAvailable(-27927))) {
-            bn.a((byte) -24, 0.0f, ao.a(db.field_b, true, of.field_Jb, RegionAnchor.field_o));
+          if (a.field_o != null && (!a.field_o.a((byte) 82) ||
+            !a.field_o.d(-27927))) {
+            bn.a((byte) -24, 0.0f, ao.a(db.field_b, true, of.field_Jb, a.field_o));
             decompiledFrameRemainder0 = false;
           }
           else {
@@ -707,10 +707,10 @@ abstract class wf extends iv {
         }
         if (13 == f.field_E) {
           var3Lifetime2 = 1;
-          if (null != CombatPresentation.field_G) {
-            stackIn_127_0 = (!CombatPresentation.field_G.a(2189)) ? 0 : 1;
+          if (null != sk.field_G) {
+            stackIn_127_0 = (!sk.field_G.a(2189)) ? 0 : 1;
             var3Lifetime2 = stackIn_127_0;
-            bn.a((byte) -24, CombatPresentation.field_G.field_d, CombatPresentation.field_G.field_b);
+            bn.a((byte) -24, sk.field_G.field_d, sk.field_G.field_b);
           }
           if (var3Lifetime2 != 0) {
             f.field_E = 20;
@@ -718,9 +718,9 @@ abstract class wf extends iv {
         }
         if (!param1 &&
           tq.field_a) {
-          dt.a(IndexedSpriteBase.field_b, 23678);
+          dt.a(si.field_b, 23678);
           this.c((byte) 87);
-          lk.a(123, IndexedSpriteBase.field_b);
+          lk.a(123, si.field_b);
         }
         if (tk.field_f[8]) {
           pu.b(28704);
@@ -793,7 +793,7 @@ abstract class wf extends iv {
           } else {
             stackIn_25_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(')').toString());
         }
     }
 
@@ -821,7 +821,7 @@ abstract class wf extends iv {
         String var9 = null;
         int var10 = 0;
         og[] var11 = null;
-        var10 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        var10 = ArmiesOfGielinor.field_M ? 1 : 0;
         try {
           var3 = 107 % ((param1 + 11) / 61);
           var11 = vv.a(param0, 119);
@@ -837,13 +837,13 @@ abstract class wf extends iv {
             }
             var8 = stackIn_6_0;
             var9 = param0.substring(var7, var8);
-            if (var6.field_q == BattleTutorial.field_x) {
+            if (var6.field_q == iu.field_x) {
               discarded$0 = var4.append("<col=66ffff>").append(var9).append("</col>");
             } else {
               if (hf.field_h != var6.field_q) {
                 if (var6.field_q != rn.field_c) {
                   if (var6.field_q != gg.field_G) {
-                    if (var6.field_q != EquipmentBattleTutorial.field_z) {
+                    if (var6.field_q != gb.field_z) {
                       discarded$1 = var4.append(var9);
                     } else {
                       discarded$2 = var4.append("<col=33ffaa>").append(var9).append("</col>");
@@ -871,7 +871,7 @@ abstract class wf extends iv {
           } else {
             stackIn_23_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param1).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param1).append(')').toString());
         }
     }
 

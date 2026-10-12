@@ -3,7 +3,7 @@
  */
 final class jq extends dr {
     static String field_E;
-    static RgbSprite[] field_G;
+    static wk[] field_G;
     static int field_F;
     static String[][] field_I;
     static int[] field_H;
@@ -33,51 +33,51 @@ final class jq extends dr {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 
-    final static RgbSprite[] a(boolean param0, int param1, int param2, int param3, boolean param4, int param5) {
-        RgbSprite var13 = null;
-        RgbSprite var14 = null;
-        int[] var16 = SoftwareRaster.pixels;
+    final static wk[] a(boolean param0, int param1, int param2, int param3, boolean param4, int param5) {
+        wk var13 = null;
+        wk var14 = null;
+        int[] var16 = qn.field_d;
         int[] var15 = var16;
         int[] var12 = var15;
         int[] var6 = var12;
-        int var7 = SoftwareRaster.width;
-        int var8 = SoftwareRaster.height;
-        RgbSprite var9 = new RgbSprite(16, param3);
+        int var7 = qn.field_l;
+        int var8 = qn.field_g;
+        wk var9 = new wk(16, param3);
         var9.b();
-        SoftwareRaster.a(0, 0, 16, param3, param5, param1);
+        qn.a(0, 0, 16, param3, param5, param1);
         Object var10 = null;
         Object var11 = null;
         if (param0) {
           var13 = var9.g();
           var10 = var13;
           var13.b();
-          SoftwareRaster.e(0, 0, 5, 0);
-          SoftwareRaster.e(0, 1, 3, 0);
-          SoftwareRaster.e(0, 2, 2, 0);
-          SoftwareRaster.e(0, 3, 1, 0);
-          SoftwareRaster.e(0, 4, 1, 0);
+          qn.e(0, 0, 5, 0);
+          qn.e(0, 1, 3, 0);
+          qn.e(0, 2, 2, 0);
+          qn.e(0, 3, 1, 0);
+          qn.e(0, 4, 1, 0);
         }
         if (param4) {
           var14 = var9.g();
           var11 = var14;
           var14.b();
-          SoftwareRaster.e(11, 0, 5, 0);
-          SoftwareRaster.e(13, 1, 3, 0);
-          SoftwareRaster.e(14, 2, 2, 0);
-          SoftwareRaster.e(15, 3, 1, 0);
-          SoftwareRaster.e(15, 4, 1, 0);
+          qn.e(11, 0, 5, 0);
+          qn.e(13, 1, 3, 0);
+          qn.e(14, 2, 2, 0);
+          qn.e(15, 3, 1, 0);
+          qn.e(15, 4, 1, 0);
         }
         if (param2 == -20600) {
-          SoftwareRaster.a(var16, var7, var8);
-          return new RgbSprite[]{null, null, null, (RgbSprite) (var10), var9, (RgbSprite) (var11), null, null, null};
+          qn.a(var16, var7, var8);
+          return new wk[]{null, null, null, (wk) (var10), var9, (wk) (var11), null, null, null};
         }
         field_I = (String[][]) null;
-        SoftwareRaster.a(var16, var7, var8);
-        return new RgbSprite[]{null, null, null, (RgbSprite) (var10), var9, (RgbSprite) (var11), null, null, null};
+        qn.a(var16, var7, var8);
+        return new wk[]{null, null, null, (wk) (var10), var9, (wk) (var11), null, null, null};
     }
 
     final static int b(int param0, int param1) {

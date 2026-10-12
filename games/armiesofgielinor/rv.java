@@ -33,7 +33,7 @@ final class rv {
           StringBuilder var7 = null;
           Exception var8 = null;
           int var9 = 0;
-          var9 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+          var9 = ArmiesOfGielinor.field_M ? 1 : 0;
           try {
             var5 = param4.getFile();
             var6 = param2;
@@ -131,7 +131,7 @@ final class rv {
             } else {
               stackIn_52_2 = "{...}";
             }
-            throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_45_0), ((StringBuilder) (Object) stackIn_51_1).append(stackIn_52_2).append(')').toString());
+            throw ig.a((Throwable) ((Object) stackIn_45_0), ((StringBuilder) (Object) stackIn_51_1).append(stackIn_52_2).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -150,11 +150,11 @@ final class rv {
 
     final static void a(boolean param0, int param1, int param2, int param3) {
         int var4_int = 0;
-        EventPresenter var4 = null;
+        vb var4 = null;
         int var5 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var4_ref = null;
-        var5 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        var5 = ArmiesOfGielinor.field_M ? 1 : 0;
         try {
           if (param0) {
             field_a = (String) null;
@@ -163,17 +163,17 @@ final class rv {
             if (null != ro.field_lb) {
               for (var4_int = 0; var4_int < ro.field_lb.length; var4_int++) {
                 if (~param3 == ~ro.field_lb[var4_int]) {
-                  TrianglePulse.field_d.d(param2, param1, 80, 40, (int)(64.0 * Math.sin((double)uk.field_n / 3.141592653589793 / 2.0) + 128.0));
+                  hh.field_d.d(param2, param1, 80, 40, (int)(64.0 * Math.sin((double)uk.field_n / 3.141592653589793 / 2.0) + 128.0));
                 }
               }
             }
             vv.a(param2, -96, false, param3, us.a(param3, (byte) 87), param1);
-            var4 = (EventPresenter) (NetworkResourceRequest.field_C.eventPresenters.first((byte) 125));
+            var4 = (vb) (jf.field_C.field_pc.e((byte) 125));
             while (var4 != null) {
-              if (param3 == var4.tileIndex) {
-                var4.draw(ug.field_b, 31785, true);
+              if (param3 == var4.field_x) {
+                var4.a(ug.field_b, 31785, true);
               }
-              var4 = (EventPresenter) (NetworkResourceRequest.field_C.eventPresenters.next((byte) 123));
+              var4 = (vb) (jf.field_C.field_pc.a((byte) 123));
             }
             return;
           }
@@ -181,7 +181,7 @@ final class rv {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4_ref = decompiledCaughtException;
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) var4_ref), "rv.C(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw ig.a((Throwable) ((Object) var4_ref), "rv.C(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 

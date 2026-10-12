@@ -22,7 +22,7 @@ final class lq {
           if (param0 == null) {
             return null;
           }
-          var2 = new nc(param0, j.field_e, CampaignMenuButton.field_g, qm.field_K, c.field_e, MovementPresentation.field_j, AnimationPlayer.field_j);
+          var2 = new nc(param0, j.field_e, iq.field_g, qm.field_K, c.field_e, qv.field_j, vj.field_j);
           if (param1 != 0) {
             stackIn_5_0 = (nc) null;
             return stackIn_5_0;
@@ -40,7 +40,7 @@ final class lq {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -50,7 +50,7 @@ final class lq {
         int var4 = 0;
         int stackIn_13_0 = 0;
         RuntimeException decompiledCaughtException = null;
-        var4 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        var4 = ArmiesOfGielinor.field_M ? 1 : 0;
         try {
           var3_int = 1;
           while (param1 > 1) {
@@ -71,7 +71,7 @@ final class lq {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) var3), "lq.B(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw ig.a((Throwable) ((Object) var3), "lq.B(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 

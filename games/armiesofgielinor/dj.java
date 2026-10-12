@@ -14,7 +14,7 @@ final class dj {
           String var4 = null;
           String var5 = null;
           try {
-            GlobalSpell.field_n = param2;
+            al.field_n = param2;
             try {
               var3 = param0.getParameter("cookieprefix");
               var4 = param0.getParameter("cookiehost");
@@ -25,9 +25,9 @@ final class dj {
               lj.a((byte) -110, param0, "document.cookie=\"" + var5 + "\"");
             } catch (Throwable throwable) {
             }
-            MoveAttackAction.a(16058, param0);
+            ld.a(16058, param0);
           } catch (RuntimeException runtimeException) {
-            throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "dj.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+            throw ig.a((Throwable) ((Object) runtimeException), "dj.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -37,9 +37,9 @@ final class dj {
     }
 
     final static void a(byte param0) {
-        if (null != MoveAttackRequest.field_z) {
-          MoveAttackRequest.field_z.close((byte) -45);
-          MoveAttackRequest.field_z = null;
+        if (null != am.field_z) {
+          am.field_z.c((byte) -45);
+          am.field_z = null;
         }
         if (param0 > -123) {
           field_b = (int[]) null;
@@ -71,7 +71,7 @@ final class dj {
         int var10 = 0;
         int var11 = 0;
         int var12 = 0;
-        var12 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        var12 = ArmiesOfGielinor.field_M ? 1 : 0;
         try {
           var4_int = param1.length();
           var5 = param2.length();
@@ -133,7 +133,7 @@ final class dj {
           } else {
             stackIn_25_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(')').toString());
         }
     }
 
@@ -154,10 +154,10 @@ final class dj {
         StringBuilder stackIn_11_1 = null;
         String stackIn_12_2 = null;
         RuntimeException decompiledCaughtException = null;
-        var10 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        var10 = ArmiesOfGielinor.field_M ? 1 : 0;
         try {
           var11 = (CharSequence) ((Object) param2);
-          var3_int = RevivalEvent.a(var11, 0, param1);
+          var3_int = rt.a(var11, 0, param1);
           var4 = new String[var3_int + 1];
           var5 = 0;
           var6 = 0;
@@ -183,7 +183,7 @@ final class dj {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
         }
     }
 
@@ -228,7 +228,7 @@ final class dj {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 

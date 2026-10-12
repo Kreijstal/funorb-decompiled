@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class rs extends IntrusiveNode {
+final class rs extends tc {
     int field_l;
     static me field_v;
     int field_s;
@@ -10,11 +10,11 @@ final class rs extends IntrusiveNode {
     int field_r;
     static String field_x;
     static tu field_n;
-    static RgbSprite field_o;
+    static wk field_o;
     int field_u;
     static int field_q;
     static int field_k;
-    static RgbSprite[] field_p;
+    static wk[] field_p;
     static int field_t;
 
     final static int a(byte param0, CharSequence param1) {
@@ -29,7 +29,7 @@ final class rs extends IntrusiveNode {
         StringBuilder stackIn_11_1 = null;
         String stackIn_12_2 = null;
         RuntimeException decompiledCaughtException = null;
-        var5 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        var5 = ArmiesOfGielinor.field_M ? 1 : 0;
         try {
           var2_int = param1.length();
           var3 = 0;
@@ -52,7 +52,7 @@ final class rs extends IntrusiveNode {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
         }
     }
 
@@ -75,14 +75,14 @@ final class rs extends IntrusiveNode {
     }
 
     final static void a(int param0, int param1, int param2, int param3) {
-        RgbSprite var5 = null;
+        wk var5 = null;
         if (!cu.field_a) {
           return;
         }
         if (param0 != 26449) {
           return;
         }
-        int var4 = CampaignMenuEntry.field_u[param2];
+        int var4 = cq.field_u[param2];
         if (7 == var4 &&
           5 == (og.field_p[param2] + param2 & 5)) {
           var5 = tn.field_eb[6 + og.field_p[param2] % 8];
@@ -96,7 +96,7 @@ final class rs extends IntrusiveNode {
         param1 = param1 | param1 >>> 2;
         param1 = param1 | param1 >>> 4;
         if (param0 < 75) {
-          field_o = (RgbSprite) null;
+          field_o = (wk) null;
         }
         param1 = param1 | param1 >>> 8;
         param1 = param1 | param1 >>> 16;

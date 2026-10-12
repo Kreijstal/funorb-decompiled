@@ -42,7 +42,7 @@ final class et {
         int var10Lifetime1;
         int var12Lifetime1;
         int var13Lifetime1;
-        var19 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        var19 = ArmiesOfGielinor.field_M ? 1 : 0;
         try {
           var5_int = wl.b((-param3 + param4) * 3, param1 ^ 13329);
           var6 = 3 * param3;
@@ -64,10 +64,10 @@ final class et {
             stackIn_11_0 = stackOut_10_0;
             if (var19 == 0) {
               if (stackIn_11_0) {
-                var12 = TileMetadata.field_f[var9];
+                var12 = ca.field_f[var9];
                 var13 = fa.field_k[var9];
-                var14 = TileMetadata.field_f[var10] - var12;
-                var15 = TileMetadata.field_f[var11] - var12;
+                var14 = ca.field_f[var10] - var12;
+                var15 = ca.field_f[var11] - var12;
                 var16 = -var13 + fa.field_k[var10];
                 var17 = fa.field_k[var11] - var13;
               }
@@ -81,14 +81,14 @@ final class et {
                     if (var14 != -2147483648) {
                       var15 = var14 + (var13Lifetime1 + var12Lifetime1) - var6;
                       stackIn_24_0 = -1;
-                      stackIn_24_1 = MoveAttackRequest.field_K.length;
+                      stackIn_24_1 = am.field_K.length;
                       if (0 <= var7) {
                         stackIn_25_2 = var15 >> var7;
                       } else {
                         stackIn_25_2 = var15 << -var7;
                       }
                       var16 = stackIn_24_0 + (stackIn_24_1 - stackIn_25_2);
-                      var17 = MoveAttackRequest.field_K[var16];
+                      var17 = am.field_K[var16];
                       while (true) {
                         if (var17 >> 4 != 0) {
                           var16--;
@@ -97,13 +97,13 @@ final class et {
                             System.err.println("Out of range!");
                             break;
                           }
-                          var17 = MoveAttackRequest.field_K[var16];
+                          var17 = am.field_K[var16];
                           continue;
                         }
                         stackIn_35_0Lifetime1 = var17 + (var16 << 4);
                         var18 = stackIn_35_0Lifetime1;
                         ab.field_c[var18] = var8;
-                        MoveAttackRequest.field_K[var16] = 1 + var17;
+                        am.field_K[var16] = 1 + var17;
                         if (param0.field_E > 0 &&
                           null != param0.field_K) {
                           dupTemp$0 = param0.field_K[var8];
@@ -149,7 +149,7 @@ final class et {
           } else {
             stackIn_61_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_60_0), ((StringBuilder) (Object) stackIn_60_1).append(stackIn_61_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_60_0), ((StringBuilder) (Object) stackIn_60_1).append(stackIn_61_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -164,15 +164,15 @@ final class et {
         int stackIn_31_0 = 0;
         RuntimeException decompiledCaughtException = null;
         int var1_int = 0;
-        var2 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        var2 = ArmiesOfGielinor.field_M ? 1 : 0;
         try {
-          KingBlackDragonEvent.field_C.a(true, -6226, pf.field_b, UiSelectionState.field_i);
-          KingBlackDragonEvent.field_C.d((byte) -102);
+          rl.field_C.a(true, -6226, pf.field_b, dl.field_i);
+          rl.field_C.d((byte) -102);
           if (param0 != -3) {
             et.a(103);
           }
           do {
-            if (!Unit.i((byte) 80)) {
+            if (!jd.i((byte) 80)) {
               if (cn.field_r == -1) {
                 if (ac.field_n) {
                   stackIn_18_0 = 3;
@@ -195,7 +195,7 @@ final class et {
               }
               break;
             }
-            KingBlackDragonEvent.field_C.a(rs.field_q, DualNodeDeque.field_i, 80);
+            rl.field_C.a(rs.field_q, ui.field_i, 80);
           } while (var2 == 0);
           var1_int = cn.field_r;
           gl.a(param0 ^ -127, -1);
@@ -204,7 +204,7 @@ final class et {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) var1), "et.C(" + param0 + ')');
+          throw ig.a((Throwable) ((Object) var1), "et.C(" + param0 + ')');
         }
     }
 
@@ -220,7 +220,7 @@ final class et {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) var1), "et.D(" + param0 + ')');
+          throw ig.a((Throwable) ((Object) var1), "et.D(" + param0 + ')');
         }
     }
 
@@ -239,7 +239,7 @@ final class et {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) var1), "et.A(" + param0 + ')');
+          throw ig.a((Throwable) ((Object) var1), "et.A(" + param0 + ')');
         }
     }
 

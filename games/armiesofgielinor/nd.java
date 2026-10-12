@@ -48,7 +48,7 @@ final class nd {
 
     public final String toString() {
         if (this.field_e) {
-          return CampaignMenuEntry.getBoxedPrimitiveType(this.field_c, (byte) -75) + "{" + this.field_c + "}";
+          return cq.a(this.field_c, (byte) -75) + "{" + this.field_c + "}";
         }
         if (this.field_c == null) {
           return "null";
@@ -113,7 +113,7 @@ final class nd {
           this.field_c = param0;
           this.field_e = false;
         } catch (RuntimeException runtimeException) {
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "nd.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw ig.a((Throwable) ((Object) runtimeException), "nd.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

@@ -13,7 +13,7 @@ final class eb {
         int var4 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
-        var4 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        var4 = ArmiesOfGielinor.field_M ? 1 : 0;
         try {
           if (76 == param1) {
             return;
@@ -35,14 +35,14 @@ final class eb {
           if (!param2) {
             return;
           }
-          for (var3_int = 1; var3_int < ActionRequest.field_m[param1].length; var3_int++) {
-            ActionRequest.unitModels[param1][var3_int] = null;
+          for (var3_int = 1; var3_int < mn.field_m[param1].length; var3_int++) {
+            mn.field_k[param1][var3_int] = null;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) var3), "eb.A(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw ig.a((Throwable) ((Object) var3), "eb.A(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 

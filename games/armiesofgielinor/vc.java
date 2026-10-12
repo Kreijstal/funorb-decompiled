@@ -1,9 +1,9 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class vc extends IntrusiveNode {
-    static RgbSprite[] field_k;
-    static ResourceArchive field_m;
+final class vc extends tc {
+    static wk[] field_k;
+    static kl field_m;
     byte[] field_n;
     static je field_l;
 
@@ -20,7 +20,7 @@ final class vc extends IntrusiveNode {
         try {
           this.field_n = param0;
         } catch (RuntimeException runtimeException) {
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "vc.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw ig.a((Throwable) ((Object) runtimeException), "vc.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

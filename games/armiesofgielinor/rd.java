@@ -11,7 +11,7 @@ final class rd extends java.awt.Canvas implements java.awt.event.FocusListener {
     static String field_f;
     static je field_e;
     java.awt.Frame field_c;
-    static GameplayController field_j;
+    static ic field_j;
     static long field_i;
 
     public static void a(int param0) {
@@ -33,18 +33,18 @@ final class rd extends java.awt.Canvas implements java.awt.event.FocusListener {
         try {
           this.field_k = true;
         } catch (RuntimeException runtimeException) {
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "rd.focusLost(" + (param0 != null ? "{...}" : "null") + ')');
+          throw ig.a((Throwable) ((Object) runtimeException), "rd.focusLost(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
     final static void b(int param0) {
         if (param0 != 8445) {
           rd.b(33);
-          UpkeepEvent.field_C.setLength(0);
+          qj.field_C.setLength(0);
           rs.field_t = 0;
           return;
         }
-        UpkeepEvent.field_C.setLength(0);
+        qj.field_C.setLength(0);
         rs.field_t = 0;
     }
 
@@ -61,7 +61,7 @@ final class rd extends java.awt.Canvas implements java.awt.event.FocusListener {
             field_f = (String) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "rd.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ig.a((Throwable) ((Object) runtimeException), "rd.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

@@ -8,7 +8,7 @@ final class we {
     static String field_h;
     static byte[] field_a;
     String field_b;
-    ResourceArchive field_c;
+    kl field_c;
     static je field_f;
     static String field_i;
     String field_e;
@@ -34,29 +34,29 @@ final class we {
         return param0 & param1;
     }
 
-    final static AnimationFrameSet a(int param0, boolean param1) {
+    final static wp a(int param0, boolean param1) {
         fd var2;
         int var3;
-        NodeDeque stackIn_5_0 = null;
+        at stackIn_5_0 = null;
         boolean stackIn_6_1 = false;
         if (null == bk.field_e) {
           return null;
         }
         stackIn_5_0 = bk.field_e;
         stackIn_6_1 = (param1) ? false : true;
-        if (((NodeDeque) (Object) stackIn_5_0).b(stackIn_6_1) == 0) {
+        if (((at) (Object) stackIn_5_0).b(stackIn_6_1) == 0) {
           return null;
         }
         if (!param1) {
-          return (AnimationFrameSet) null;
+          return (wp) null;
         }
-        var2 = (fd) (bk.field_e.first((byte) 109));
+        var2 = (fd) (bk.field_e.e((byte) 109));
         while (var2 != null) {
           var3 = var2.field_k;
           if (var3 == param0) {
             return var2.field_p;
           }
-          var2 = (fd) (bk.field_e.next((byte) 123));
+          var2 = (fd) (bk.field_e.a((byte) 123));
         }
         return null;
     }
@@ -71,7 +71,7 @@ final class we {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 == 100) {
-            stackIn_4_0 = MapTile.a(param0 - 145, aa.a(param2, 100, param1));
+            stackIn_4_0 = ne.a(param0 - 145, aa.a(param2, 100, param1));
             return stackIn_4_0;
           }
           stackIn_2_0 = (te) null;
@@ -86,7 +86,7 @@ final class we {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 

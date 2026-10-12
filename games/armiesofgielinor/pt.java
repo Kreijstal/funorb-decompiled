@@ -20,16 +20,16 @@ abstract class pt extends sf {
     final static void c(int param0, int param1, int param2) {
         if (param2 < 1) {
           field_db = (h) null;
-          InstructionsPanel.field_B = param0;
+          rk.field_B = param0;
           ar.field_C = param1;
           return;
         }
-        InstructionsPanel.field_B = param0;
+        rk.field_B = param0;
         ar.field_C = param1;
     }
 
     final void m(int param0) {
-        if (this.field_bb == TeleportAction.field_v) {
+        if (this.field_bb == ur.field_v) {
           return;
         }
         this.field_bb = ki.field_e;
@@ -44,7 +44,7 @@ abstract class pt extends sf {
         int fieldTemp$2 = 0;
         int fieldTemp$3 = 0;
         int var3;
-        var3 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        var3 = ArmiesOfGielinor.field_M ? 1 : 0;
         if (null == this.field_bb) {
           if (param0 == -1) {
             return super.a((byte) -1);
@@ -52,13 +52,13 @@ abstract class pt extends sf {
           this.k(117);
           return super.a((byte) -1);
         }
-        if (TeleportAction.field_v == this.field_bb) {
+        if (ur.field_v == this.field_bb) {
           fieldTemp$2 = this.field_hb + 1;
           this.field_hb = this.field_hb + 1;
           if (this.field_ib != fieldTemp$2) {
             this.field_cb.field_K = 256 - (this.field_hb << 8) / this.field_ib;
           } else {
-            this.field_bb = ContextualRuntimeException.field_c;
+            this.field_bb = g.field_c;
             this.a(this.field_Z, false, this.field_jb.field_w + 12 + this.field_ab, this.field_jb.field_l + 12);
             this.field_hb = 0;
             this.field_cb.field_K = 0;
@@ -138,15 +138,15 @@ abstract class pt extends sf {
         try {
           var3_int = 116 % ((-27 - param1) / 44);
           this.field_jb = param0;
-          if (this.field_bb == ContextualRuntimeException.field_c) {
+          if (this.field_bb == g.field_c) {
             this.a(this.field_Z, false, this.field_jb.field_w + (12 + this.field_ab), 12 + this.field_jb.field_l);
             this.field_hb = 0;
             return;
           }
-          if (this.field_bb == TeleportAction.field_v) {
+          if (this.field_bb == ur.field_v) {
             return;
           }
-          this.field_bb = TeleportAction.field_v;
+          this.field_bb = ur.field_v;
           this.field_hb = 0;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -159,7 +159,7 @@ abstract class pt extends sf {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -193,7 +193,7 @@ abstract class pt extends sf {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -236,14 +236,14 @@ abstract class pt extends sf {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param3).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param3).append(')').toString());
         }
     }
 
     private final void b(int param0, kb param1) {
         try {
           if (this.field_cb != null) {
-            this.field_cb.unlink(92);
+            this.field_cb.d(92);
           }
           if (param1 != null) {
             param1.a(6, param1.field_l, 6 + this.field_ab, 8192, param1.field_w);
@@ -255,7 +255,7 @@ abstract class pt extends sf {
           this.a((byte) 10, (kb) (this.field_cb));
           this.field_jb = null;
         } catch (RuntimeException runtimeException) {
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "pt.G(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ig.a((Throwable) ((Object) runtimeException), "pt.G(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -268,7 +268,7 @@ abstract class pt extends sf {
           this.field_ib = param3;
           this.b(-36, param1);
         } catch (RuntimeException runtimeException) {
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "pt.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw ig.a((Throwable) ((Object) runtimeException), "pt.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 

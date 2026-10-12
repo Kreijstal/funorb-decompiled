@@ -27,27 +27,27 @@ final class us {
         int stackIn_22_0 = 0;
         int var2;
         var2 = -69 % ((param1 + 61) / 59);
-        if (null == NetworkResourceRequest.field_C.selectedUnit) {
+        if (null == jf.field_C.field_T) {
           return 0;
         }
-        if ((4 & NetworkResourceRequest.field_C.movementPlanner.field_e[param0]) == 0) {
+        if ((4 & jf.field_C.field_vb.field_e[param0]) == 0) {
           return 0;
         }
-        if (NetworkResourceRequest.field_C.movementPlanner.field_w) {
+        if (jf.field_C.field_vb.field_w) {
           return 0;
         }
-        if (!NetworkResourceRequest.field_C.selectedUnit.movementSpent) {
-          if ((2 & NetworkResourceRequest.field_C.movementPlanner.field_e[param0]) == 0) {
+        if (!jf.field_C.field_T.field_s) {
+          if ((2 & jf.field_C.field_vb.field_e[param0]) == 0) {
             return 0;
           }
-          stackIn_22_0 = (CipherPacketBuffer.currentBattlefield.currentPlayer != NetworkResourceRequest.field_C.controlledPlayerId) ? 128 : 256;
+          stackIn_22_0 = (bv.field_w.field_gb != jf.field_C.field_q) ? 128 : 256;
           return stackIn_22_0;
         }
-        if (NetworkResourceRequest.field_C.selectedUnit.attacksRemaining == 0) {
-          stackIn_16_0 = (0 == (NetworkResourceRequest.field_C.movementPlanner.field_e[param0] & 2)) ? 0 : 128;
+        if (jf.field_C.field_T.field_B == 0) {
+          stackIn_16_0 = (0 == (jf.field_C.field_vb.field_e[param0] & 2)) ? 0 : 128;
           return stackIn_16_0;
         }
-        stackIn_12_0 = ((NetworkResourceRequest.field_C.movementPlanner.field_e[param0] & 1) == 0) ? 0 : 256;
+        stackIn_12_0 = ((jf.field_C.field_vb.field_e[param0] & 1) == 0) ? 0 : 256;
         return stackIn_12_0;
     }
 

@@ -8,42 +8,42 @@ final class gs implements kh {
 
     final static void a(boolean param0) {
         int var1_int = 0;
-        int var2 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        int var2 = ArmiesOfGielinor.field_M ? 1 : 0;
         try {
-          ds.field_a = new RgbSprite[op.field_c[0].length];
+          ds.field_a = new wk[op.field_c[0].length];
           if (param0) {
             field_a = true;
           }
-          le.field_c = new RgbSprite[op.field_c[0].length];
+          le.field_c = new wk[op.field_c[0].length];
           rq.a((byte) -56);
           for (var1_int = 0; var1_int < op.field_c[0].length; var1_int++) {
-            ds.field_a[var1_int] = new RgbSprite(DiskCacheWorker.field_d.pixelWidth, DiskCacheWorker.field_d.pixelHeight);
-            le.field_c[var1_int] = new RgbSprite(im.field_y.pixelWidth, im.field_y.pixelHeight);
+            ds.field_a[var1_int] = new wk(vo.field_d.field_y, vo.field_d.field_v);
+            le.field_c[var1_int] = new wk(im.field_y.field_y, im.field_y.field_v);
             ds.field_a[var1_int].b();
-            DiskCacheWorker.field_d.d(0, 0, op.field_c[0][var1_int]);
+            vo.field_d.d(0, 0, op.field_c[0][var1_int]);
             le.field_c[var1_int].b();
             im.field_y.b(0, 0, op.field_c[0][var1_int]);
           }
           rf.b(-18862);
         } catch (RuntimeException runtimeException) {
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "gs.F(" + param0 + ')');
+          throw ig.a((Throwable) ((Object) runtimeException), "gs.F(" + param0 + ')');
         }
     }
 
     final static void a(int param0, int param1) {
-        CipherPacketBuffer var2 = vl.outgoingPacket;
-        var2.writeCipheredOpcode(32161, param0);
-        var2.position = var2.position + 1;
-        int var3 = var2.position;
-        var2.writeByte(1, 2);
-        var2.writeBytes(CoatOfArms.field_d, 0, CoatOfArms.field_d.length, 113);
-        var2.writeByte(1, DiskCacheRequest.field_E);
-        var2.writeByte(1, AiPlanningStrategy.field_b);
-        var2.writeBytes(tg.field_d, 0, tg.field_d.length, -72);
+        bv var2 = vl.field_n;
+        var2.h(32161, param0);
+        var2.field_q = var2.field_q + 1;
+        int var3 = var2.field_q;
+        var2.b(1, 2);
+        var2.a(ln.field_d, 0, ln.field_d.length, 113);
+        var2.b(1, nh.field_E);
+        var2.b(1, sm.field_b);
+        var2.a(tg.field_d, 0, tg.field_d.length, -72);
         if (param1 != -8006) {
           field_b = -111;
         }
-        var2.writeByteLengthPrefix(-var3 + var2.position, 5930);
+        var2.e(-var3 + var2.field_q, 5930);
     }
 
     final static void a(int param0) {
@@ -55,9 +55,9 @@ final class gs implements kh {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
         int var1_intLifetime1;
-        var5 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        var5 = ArmiesOfGielinor.field_M ? 1 : 0;
         try {
-          TriangleRasterizer.useRasterClip();
+          tm.a();
           hg.field_a = new int[260];
           fn.field_M = 11;
           var1_int = 0;
@@ -77,7 +77,7 @@ final class gs implements kh {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) var1), "gs.D(" + param0 + ')');
+          throw ig.a((Throwable) ((Object) var1), "gs.D(" + param0 + ')');
         }
     }
 
@@ -86,7 +86,7 @@ final class gs implements kh {
         field_c = null;
     }
 
-    final static tu a(String param0, ResourceArchive param1, ResourceArchive param2, byte param3, String param4) {
+    final static tu a(String param0, kl param1, kl param2, byte param3, String param4) {
         int var5_int = 0;
         RuntimeException var5 = null;
         int var6 = 0;
@@ -102,8 +102,8 @@ final class gs implements kh {
         String stackIn_16_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var5_int = param1.getGroupId(param0, 106);
-          var6 = param1.getFileId((byte) -65, var5_int, param4);
+          var5_int = param1.a(param0, 106);
+          var6 = param1.a((byte) -65, var5_int, param4);
           if (param3 != -53) {
             field_a = true;
           }
@@ -137,7 +137,7 @@ final class gs implements kh {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
         }
     }
 
@@ -156,12 +156,12 @@ final class gs implements kh {
         int var6_intLifetime1;
         int var7Lifetime1;
         int var8Lifetime1;
-        var10 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        var10 = ArmiesOfGielinor.field_M ? 1 : 0;
         try {
           for (var6_int = 0; var6_int <= param0.field_w; var6_int++) {
             var7 = 152 + var6_int * 48 / param0.field_w;
             var8 = var7 | (var7 << 16 | var7 << 8);
-            SoftwareRaster.e(param0.field_B + param1, var6_int + param4 + param0.field_p, param0.field_l, var8);
+            qn.e(param0.field_B + param1, var6_int + param4 + param0.field_p, param0.field_l, var8);
           }
           var6_intLifetime1 = 1;
           if (param2 > -79) {
@@ -172,16 +172,16 @@ final class gs implements kh {
             var7Lifetime1 = var6_intLifetime1 + (-5 + (param1 + param0.field_B)) + (param0.field_l - (param0.field_l >> 1));
             var8Lifetime1 = -(var6_intLifetime1 * 2) + (param0.field_l >> 1);
             var9 = var6_intLifetime1 + (param4 + (param0.field_p + (-4 + param0.field_w >> 1)));
-            if (var9 >= SoftwareRaster.clipTop &&
-              SoftwareRaster.clipBottom > var9) {
-              if (SoftwareRaster.clipLeft < var7Lifetime1) {
-                SoftwareRaster.pixels[var9 * SoftwareRaster.width - (-var7Lifetime1 + 1)] = rn.a(SoftwareRaster.pixels[-1 + (var7Lifetime1 + SoftwareRaster.width * var9)], 16711422) >> 1;
+            if (var9 >= qn.field_a &&
+              qn.field_f > var9) {
+              if (qn.field_j < var7Lifetime1) {
+                qn.field_d[var9 * qn.field_l - (-var7Lifetime1 + 1)] = rn.a(qn.field_d[-1 + (var7Lifetime1 + qn.field_l * var9)], 16711422) >> 1;
               }
-              if (var8Lifetime1 + var7Lifetime1 < SoftwareRaster.clipRight) {
-                SoftwareRaster.pixels[SoftwareRaster.width * var9 + (var7Lifetime1 + var8Lifetime1)] = rn.a(16711422, SoftwareRaster.pixels[SoftwareRaster.width * var9 + var7Lifetime1 + var8Lifetime1]) >> 1;
+              if (var8Lifetime1 + var7Lifetime1 < qn.field_e) {
+                qn.field_d[qn.field_l * var9 + (var7Lifetime1 + var8Lifetime1)] = rn.a(16711422, qn.field_d[qn.field_l * var9 + var7Lifetime1 + var8Lifetime1]) >> 1;
               }
             }
-            SoftwareRaster.e(var7Lifetime1, var9, var8Lifetime1, 0);
+            qn.e(var7Lifetime1, var9, var8Lifetime1, 0);
             var6_intLifetime1++;
           }
           return;
@@ -195,7 +195,7 @@ final class gs implements kh {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -224,24 +224,24 @@ final class gs implements kh {
         qu var5 = null;
         int var6 = 0;
         int var7 = 0;
-        scanLoop1: while (true) {
+        stateLoop: while (true) {
             switch (statePc) {
                 case 0: {
-                    var7 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+                    var7 = ArmiesOfGielinor.field_M ? 1 : 0;
                     statePc = 1;
-                    continue scanLoop1;
+                    continue stateLoop;
                 }
                 case 1: {
                     try {
                         if (param0 == 42) {
                             /* Inlined CFG state: 4. */
                             {
-                                if (ov.field_g != ResourceArchive.field_k) {
+                                if (ov.field_g != kl.field_k) {
                                     /* Inlined CFG state: 6. */
                                     {
                                         stackIn_7_0 = 0;
                                         statePc = 7;
-                                        continue scanLoop1;
+                                        continue stateLoop;
                                     }
                                 } else {
                                     /* Inlined CFG state: 5. */
@@ -256,7 +256,7 @@ final class gs implements kh {
                                             } else {
                                                 statePc = 9;
                                             }
-                                            continue scanLoop1;
+                                            continue stateLoop;
                                         }
                                     }
                                 }
@@ -266,7 +266,7 @@ final class gs implements kh {
                             {
                                 stackIn_3_0 = 0;
                                 statePc = 3;
-                                continue scanLoop1;
+                                continue stateLoop;
                             }
                         }
                     } catch (Throwable stateCaught_1) {
@@ -275,7 +275,7 @@ final class gs implements kh {
                             throw gs.<RuntimeException>$cfr$sneakyThrow(stateCaught_1);
                         }
                         caughtException = stateCaught_1;
-                        continue scanLoop1;
+                        continue stateLoop;
                     }
                 }
                 case 3: {
@@ -286,22 +286,22 @@ final class gs implements kh {
                 }
                 case 9: {
                     try {
-                        if (0 > ByteStorage.field_f) {
+                        if (0 > mg.field_f) {
                             /* Inlined CFG state: 11. */
                             {
-                                var4_ref_qu = (qu) (AnimationPlayer.field_b.first((byte) 127));
+                                var4_ref_qu = (qu) (vj.field_b.e((byte) 127));
                                 if (var4_ref_qu == null) {
                                     statePc = 20;
                                 } else {
                                     statePc = 12;
                                 }
-                                continue scanLoop1;
+                                continue stateLoop;
                             }
                         } else {
                             /* Inlined CFG state: 10. */
                             {
                                 statePc = 19;
-                                continue scanLoop1;
+                                continue stateLoop;
                             }
                         }
                     } catch (Throwable stateCaught_9) {
@@ -310,7 +310,7 @@ final class gs implements kh {
                             throw gs.<RuntimeException>$cfr$sneakyThrow(stateCaught_9);
                         }
                         caughtException = stateCaught_9;
-                        continue scanLoop1;
+                        continue stateLoop;
                     }
                 }
                 case 12: {
@@ -318,18 +318,18 @@ final class gs implements kh {
                         if (~var2_long < ~var4_ref_qu.field_l) {
                             /* Inlined CFG state: 14. */
                             {
-                                var4_ref_qu.unlink(-111);
+                                var4_ref_qu.d(-111);
                                 fk.field_b = var4_ref_qu.field_m.length;
-                                ByteStorage.field_e.position = 0;
+                                mg.field_e.field_q = 0;
                                 var5_int = 0;
                                 statePc = 15;
-                                continue scanLoop1;
+                                continue stateLoop;
                             }
                         } else {
                             /* Inlined CFG state: 13. */
                             {
                                 statePc = 20;
-                                continue scanLoop1;
+                                continue stateLoop;
                             }
                         }
                     } catch (Throwable stateCaught_12) {
@@ -338,7 +338,7 @@ final class gs implements kh {
                             throw gs.<RuntimeException>$cfr$sneakyThrow(stateCaught_12);
                         }
                         caughtException = stateCaught_12;
-                        continue scanLoop1;
+                        continue stateLoop;
                     }
                 }
                 case 15: {
@@ -347,20 +347,20 @@ final class gs implements kh {
                             /* Inlined CFG state: 17. */
                             {
                                 me.field_c = ba.field_F;
-                                ba.field_F = TurnTimerDial.field_e;
-                                TurnTimerDial.field_e = nm.field_o;
+                                ba.field_F = sj.field_e;
+                                sj.field_e = nm.field_o;
                                 nm.field_o = var4_ref_qu.field_o;
                                 stackIn_18_0 = 1;
                                 statePc = 18;
-                                continue scanLoop1;
+                                continue stateLoop;
                             }
                         } else {
                             /* Inlined CFG state: 16. */
                             {
-                                ByteStorage.field_e.payload[var5_int] = var4_ref_qu.field_m[var5_int];
+                                mg.field_e.field_o[var5_int] = var4_ref_qu.field_m[var5_int];
                                 var5_int++;
                                 statePc = 15;
-                                continue scanLoop1;
+                                continue stateLoop;
                             }
                         }
                     } catch (Throwable stateCaught_15) {
@@ -369,34 +369,34 @@ final class gs implements kh {
                             throw gs.<RuntimeException>$cfr$sneakyThrow(stateCaught_15);
                         }
                         caughtException = stateCaught_15;
-                        continue scanLoop1;
+                        continue stateLoop;
                     }
                 }
                 case 18: {
                     return stackIn_18_0 != 0;
                 }
                 case 19: {
-                    stackIn_22_0 = ByteStorage.field_f;
+                    stackIn_22_0 = mg.field_f;
                     statePc = 22;
-                    continue scanLoop1;
+                    continue stateLoop;
                 }
                 case 20: {
-                    stackIn_22_0 = ByteStorage.field_f;
+                    stackIn_22_0 = mg.field_f;
                     statePc = 22;
-                    continue scanLoop1;
+                    continue stateLoop;
                 }
                 case 21: {
                     try {
-                        stackIn_22_0 = ByteStorage.field_f;
+                        stackIn_22_0 = mg.field_f;
                         statePc = 22;
-                        continue scanLoop1;
+                        continue stateLoop;
                     } catch (Throwable stateCaught_21) {
                         statePc = ((Object) stateCaught_21 instanceof RuntimeException ? 43 : -1);
                         if (statePc == -1) {
                             throw gs.<RuntimeException>$cfr$sneakyThrow(stateCaught_21);
                         }
                         caughtException = stateCaught_21;
-                        continue scanLoop1;
+                        continue stateLoop;
                     }
                 }
                 case 22: {
@@ -404,22 +404,22 @@ final class gs implements kh {
                         if (stackIn_22_0 < 0) {
                             /* Inlined CFG state: 24. */
                             {
-                                ByteStorage.field_e.position = 0;
+                                mg.field_e.field_q = 0;
                                 if (es.a(param0 ^ -83, 1)) {
                                     /* Inlined CFG state: 27. */
                                     {
-                                        ByteStorage.field_f = ByteStorage.field_e.readCipheredOpcode(255);
-                                        ByteStorage.field_e.position = 0;
-                                        fk.field_b = param1[ByteStorage.field_f];
+                                        mg.field_f = mg.field_e.m(255);
+                                        mg.field_e.field_q = 0;
+                                        fk.field_b = param1[mg.field_f];
                                         statePc = 28;
-                                        continue scanLoop1;
+                                        continue stateLoop;
                                     }
                                 } else {
                                     /* Inlined CFG state: 25. */
                                     {
                                         stackIn_26_0 = 0;
                                         statePc = 26;
-                                        continue scanLoop1;
+                                        continue stateLoop;
                                     }
                                 }
                             }
@@ -427,7 +427,7 @@ final class gs implements kh {
                             /* Inlined CFG state: 23. */
                             {
                                 statePc = 28;
-                                continue scanLoop1;
+                                continue stateLoop;
                             }
                         }
                     } catch (Throwable stateCaught_22) {
@@ -436,7 +436,7 @@ final class gs implements kh {
                             throw gs.<RuntimeException>$cfr$sneakyThrow(stateCaught_22);
                         }
                         caughtException = stateCaught_22;
-                        continue scanLoop1;
+                        continue stateLoop;
                     }
                 }
                 case 26: {
@@ -449,7 +449,7 @@ final class gs implements kh {
                             {
                                 stackIn_31_0 = 0;
                                 statePc = 31;
-                                continue scanLoop1;
+                                continue stateLoop;
                             }
                         } else {
                             /* Inlined CFG state: 29. */
@@ -462,13 +462,13 @@ final class gs implements kh {
                                         /* Inlined CFG state: 41. */
                                         {
                                             me.field_c = ba.field_F;
-                                            ba.field_F = TurnTimerDial.field_e;
-                                            TurnTimerDial.field_e = nm.field_o;
-                                            nm.field_o = ByteStorage.field_f;
-                                            ByteStorage.field_f = -1;
+                                            ba.field_F = sj.field_e;
+                                            sj.field_e = nm.field_o;
+                                            nm.field_o = mg.field_f;
+                                            mg.field_f = -1;
                                             stackIn_42_0 = 1;
                                             statePc = 42;
-                                            continue scanLoop1;
+                                            continue stateLoop;
                                         }
                                     } else {
                                         /* Inlined CFG state: 33. */
@@ -479,7 +479,7 @@ final class gs implements kh {
                                             } else {
                                                 statePc = 34;
                                             }
-                                            continue scanLoop1;
+                                            continue stateLoop;
                                         }
                                     }
                                 }
@@ -491,7 +491,7 @@ final class gs implements kh {
                             throw gs.<RuntimeException>$cfr$sneakyThrow(stateCaught_28);
                         }
                         caughtException = stateCaught_28;
-                        continue scanLoop1;
+                        continue stateLoop;
                     }
                 }
                 case 31: {
@@ -499,19 +499,19 @@ final class gs implements kh {
                 }
                 case 34: {
                     try {
-                        var4 = (int)((double)var4 + CampaignMenuButton.field_e.nextGaussian() * sp.field_e);
+                        var4 = (int)((double)var4 + iq.field_e.nextGaussian() * sp.field_e);
                         if (0 > var4) {
                             /* Inlined CFG state: 36. */
                             {
                                 var4 = 0;
                                 statePc = 37;
-                                continue scanLoop1;
+                                continue stateLoop;
                             }
                         } else {
                             /* Inlined CFG state: 35. */
                             {
                                 statePc = 37;
-                                continue scanLoop1;
+                                continue stateLoop;
                             }
                         }
                     } catch (Throwable stateCaught_34) {
@@ -520,22 +520,22 @@ final class gs implements kh {
                             throw gs.<RuntimeException>$cfr$sneakyThrow(stateCaught_34);
                         }
                         caughtException = stateCaught_34;
-                        continue scanLoop1;
+                        continue stateLoop;
                     }
                 }
                 case 37: {
                     try {
-                        var5 = new qu(var2_long + (long)var4, ByteStorage.field_f, new byte[fk.field_b]);
+                        var5 = new qu(var2_long + (long)var4, mg.field_f, new byte[fk.field_b]);
                         var6 = 0;
                         statePc = 38;
-                        continue scanLoop1;
+                        continue stateLoop;
                     } catch (Throwable stateCaught_37) {
                         statePc = ((Object) stateCaught_37 instanceof RuntimeException ? 43 : -1);
                         if (statePc == -1) {
                             throw gs.<RuntimeException>$cfr$sneakyThrow(stateCaught_37);
                         }
                         caughtException = stateCaught_37;
-                        continue scanLoop1;
+                        continue stateLoop;
                     }
                 }
                 case 38: {
@@ -543,18 +543,18 @@ final class gs implements kh {
                         if (var6 >= fk.field_b) {
                             /* Inlined CFG state: 40. */
                             {
-                                AnimationPlayer.field_b.addLast((byte) -119, (IntrusiveNode) (var5));
-                                ByteStorage.field_f = -1;
+                                vj.field_b.a((byte) -119, (tc) (var5));
+                                mg.field_f = -1;
                                 statePc = 21;
-                                continue scanLoop1;
+                                continue stateLoop;
                             }
                         } else {
                             /* Inlined CFG state: 39. */
                             {
-                                var5.field_m[var6] = ByteStorage.field_e.payload[var6];
+                                var5.field_m[var6] = mg.field_e.field_o[var6];
                                 var6++;
                                 statePc = 38;
-                                continue scanLoop1;
+                                continue stateLoop;
                             }
                         }
                     } catch (Throwable stateCaught_38) {
@@ -563,7 +563,7 @@ final class gs implements kh {
                             throw gs.<RuntimeException>$cfr$sneakyThrow(stateCaught_38);
                         }
                         caughtException = stateCaught_38;
-                        continue scanLoop1;
+                        continue stateLoop;
                     }
                 }
                 case 42: {
@@ -580,24 +580,24 @@ final class gs implements kh {
                     } else {
                         statePc = 44;
                     }
-                    continue scanLoop1;
+                    continue stateLoop;
                 }
                 case 44: {
                     stackIn_46_0 = stackIn_44_0;
                     stackIn_46_1 = stackIn_44_1;
                     stackIn_46_2 = "{...}";
                     statePc = 46;
-                    continue scanLoop1;
+                    continue stateLoop;
                 }
                 case 45: {
                     stackIn_46_0 = stackIn_45_0;
                     stackIn_46_1 = stackIn_45_1;
                     stackIn_46_2 = "null";
                     statePc = 46;
-                    continue scanLoop1;
+                    continue stateLoop;
                 }
                 case 46: {
-                    throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_46_0), ((StringBuilder) (Object) stackIn_46_1).append(stackIn_46_2).append(')').toString());
+                    throw ig.a((Throwable) ((Object) stackIn_46_0), ((StringBuilder) (Object) stackIn_46_1).append(stackIn_46_2).append(')').toString());
                 }
                 default: throw new IllegalStateException("invalid CFG state " + statePc);
             }

@@ -11,12 +11,12 @@ final class rm {
         return new sn(22050, var1, 22050 * this.field_c / 1000, 22050 * this.field_b / 1000);
     }
 
-    final static rm a(ResourceArchive param0, int param1, int param2) {
-        byte[] var3 = param0.getFile((byte) 119, param2, param1);
+    final static rm a(kl param0, int param1, int param2) {
+        byte[] var3 = param0.a((byte) 119, param2, param1);
         if (var3 == null) {
           return null;
         }
-        return new rm(new PacketBuffer(var3));
+        return new rm(new vh(var3));
     }
 
     private final byte[] a() {
@@ -59,19 +59,19 @@ final class rm {
         return var3;
     }
 
-    private rm(PacketBuffer param0) {
+    private rm(vh param0) {
         int var2 = 0;
         int var3;
         this.field_a = new hu[10];
         for (var2 = 0; var2 < 10; var2++) {
-          var3 = param0.readUnsignedByte(0);
+          var3 = param0.k(0);
           if (var3 != 0) {
-            param0.position = param0.position - 1;
+            param0.field_q = param0.field_q - 1;
             this.field_a[var2] = new hu();
             this.field_a[var2].a(param0);
           }
         }
-        this.field_c = param0.readUnsignedShort((byte) -104);
-        this.field_b = param0.readUnsignedShort((byte) -104);
+        this.field_c = param0.e((byte) -104);
+        this.field_b = param0.e((byte) -104);
     }
 }

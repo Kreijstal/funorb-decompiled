@@ -7,17 +7,17 @@ final class gn {
     private boolean field_b;
 
     final static void a(int param0, wj param1, int param2) {
-        CipherPacketBuffer var3 = null;
+        bv var3 = null;
         try {
-          var3 = vl.outgoingPacket;
-          var3.writeCipheredOpcode(32161, param0);
-          var3.writeByte(1, 5);
-          var3.writeByte(param2 + 1, param2);
-          var3.writeShort(true, param1.field_r);
-          var3.writeByte(1, param1.field_k);
-          var3.writeByte(1, param1.field_p);
+          var3 = vl.field_n;
+          var3.h(32161, param0);
+          var3.b(1, 5);
+          var3.b(param2 + 1, param2);
+          var3.b(true, param1.field_r);
+          var3.b(1, param1.field_k);
+          var3.b(1, param1.field_p);
         } catch (RuntimeException runtimeException) {
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "gn.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw ig.a((Throwable) ((Object) runtimeException), "gn.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -39,7 +39,7 @@ final class gn {
             this.field_c = 9;
           }
         } catch (RuntimeException runtimeException) {
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "gn.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ig.a((Throwable) ((Object) runtimeException), "gn.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -79,7 +79,7 @@ final class gn {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -89,14 +89,14 @@ final class gn {
             String var4 = (String) null;
             this.a((byte) 62, (String) null);
           }
-          this.a((byte) 19, SpellCastEvent.a(593277313, (CharSequence[]) ((Object) param0)));
+          this.a((byte) 19, pj.a(593277313, (CharSequence[]) ((Object) param0)));
         } catch (RuntimeException runtimeException) {
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "gn.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw ig.a((Throwable) ((Object) runtimeException), "gn.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
     final static void d(int param0) {
-        Spell.field_d = new hk(ArchiveIndex.field_b, UnitModelPreview.field_m, uc.field_b, eq.field_h, hs.field_H, DualLinkedNode.field_k);
+        ik.field_d = new hk(jm.field_b, hr.field_m, uc.field_b, eq.field_h, hs.field_H, ms.field_k);
         if (param0 != 5) {
           gn.d(-31);
         }
@@ -117,7 +117,7 @@ final class gn {
     private final void a(int param0) {
         int var2 = 0;
         StringBuilder discarded$0 = null;
-        int var3 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        int var3 = ArmiesOfGielinor.field_M ? 1 : 0;
         for (var2 = param0; var2 < this.field_c; var2++) {
           discarded$0 = this.field_a.append(" ");
         }

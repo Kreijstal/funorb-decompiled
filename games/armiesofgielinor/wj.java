@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class wj extends IntrusiveNode {
+final class wj extends tc {
     int[][] field_m;
     static hd field_n;
     int field_p;
@@ -14,8 +14,8 @@ final class wj extends IntrusiveNode {
 
     public static void a(boolean param0) {
         if (!param0) {
-          RgbSprite[] var2 = (RgbSprite[]) null;
-          wj.a(96, (RgbSprite[]) null);
+          wk[] var2 = (wk[]) null;
+          wj.a(96, (wk[]) null);
           field_n = null;
           return;
         }
@@ -25,31 +25,31 @@ final class wj extends IntrusiveNode {
     wj() {
     }
 
-    final static RgbSprite[] a(int param0, RgbSprite[] param1) {
+    final static wk[] a(int param0, wk[] param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
-        RgbSprite var3 = null;
+        wk var3 = null;
         int var4 = 0;
-        RgbSprite[] stackIn_3_0 = null;
-        RgbSprite[] stackIn_8_0 = null;
+        wk[] stackIn_3_0 = null;
+        wk[] stackIn_8_0 = null;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
         String stackIn_12_2 = null;
         RuntimeException decompiledCaughtException = null;
-        var4 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        var4 = ArmiesOfGielinor.field_M ? 1 : 0;
         try {
           if (param0 != -12310) {
-            stackIn_3_0 = (RgbSprite[]) null;
+            stackIn_3_0 = (wk[]) null;
             return stackIn_3_0;
           }
           for (var2_int = 0; param1.length > var2_int; var2_int++) {
             var3 = param1[var2_int];
-            param1[var2_int].offsetY = 0;
-            var3.offsetX = 0;
-            param1[var2_int].canvasWidth = param1[var2_int].pixelWidth;
-            param1[var2_int].canvasHeight = param1[var2_int].pixelHeight;
+            param1[var2_int].field_z = 0;
+            var3.field_w = 0;
+            param1[var2_int].field_A = param1[var2_int].field_y;
+            param1[var2_int].field_x = param1[var2_int].field_v;
           }
-          stackIn_8_0 = (RgbSprite[]) (param1);
+          stackIn_8_0 = (wk[]) (param1);
           return stackIn_8_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -61,7 +61,7 @@ final class wj extends IntrusiveNode {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
         }
     }
 
@@ -71,8 +71,8 @@ final class wj extends IntrusiveNode {
           Throwable decompiledCaughtException = null;
           if (null != le.field_d) {
             try {
-              le.field_d.seek(-1, 0L);
-              le.field_d.write(24, ByteStorage.field_e.position, (byte) 46, ByteStorage.field_e.payload);
+              le.field_d.a(-1, 0L);
+              le.field_d.a(24, mg.field_e.field_q, (byte) 46, mg.field_e.field_o);
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var1 = (Exception) (Object) decompiledCaughtException;
@@ -81,7 +81,7 @@ final class wj extends IntrusiveNode {
           if (param0 != 0) {
             field_n = (hd) null;
           }
-          ByteStorage.field_e.position = ByteStorage.field_e.position + 24;
+          mg.field_e.field_q = mg.field_e.field_q + 24;
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {

@@ -7,36 +7,36 @@ final class po {
 
     final static void a(byte param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
         int var9 = -78 % ((-51 - param0) / 33);
-        int var8 = CampaignMenuEntry.field_u[param6];
+        int var8 = cq.field_u[param6];
         if (9 != var8) {
           return;
         }
         oo.a(param4, param2, param5, param7, param3, param1, (byte) -103);
-        ac.field_k[ls.a(CombatViewTransition.a(1 + param7, param1 - 1, 2, (byte) -108), 1, CombatViewTransition.a(param7, -1 + param1, 2, (byte) -109), CombatViewTransition.a(param7 + 1, param1, 2, (byte) -94), -57) + 180].b(param3, param2, param4, param5);
-        ac.field_k[ls.a(CombatViewTransition.a(-1 + param7, param1 - 1, 2, (byte) -113), 1, CombatViewTransition.a(param7, param1 - 1, 2, (byte) -116), CombatViewTransition.a(param7 - 1, param1, 2, (byte) -126), -63) + 181].b(param3, param2, param4, param5);
-        ac.field_k[182 + ls.a(CombatViewTransition.a(param7 + 1, 1 + param1, 2, (byte) -124), 1, CombatViewTransition.a(param7, param1 + 1, 2, (byte) -127), CombatViewTransition.a(param7 + 1, param1, 2, (byte) -122), -94)].b(param3, param2, param4, param5);
-        ac.field_k[183 + ls.a(CombatViewTransition.a(param7 - 1, param1 + 1, 2, (byte) -122), 1, CombatViewTransition.a(param7, param1 + 1, 2, (byte) -116), CombatViewTransition.a(-1 + param7, param1, 2, (byte) -114), -118)].b(param3, param2, param4, param5);
+        ac.field_k[ls.a(sr.a(1 + param7, param1 - 1, 2, (byte) -108), 1, sr.a(param7, -1 + param1, 2, (byte) -109), sr.a(param7 + 1, param1, 2, (byte) -94), -57) + 180].b(param3, param2, param4, param5);
+        ac.field_k[ls.a(sr.a(-1 + param7, param1 - 1, 2, (byte) -113), 1, sr.a(param7, param1 - 1, 2, (byte) -116), sr.a(param7 - 1, param1, 2, (byte) -126), -63) + 181].b(param3, param2, param4, param5);
+        ac.field_k[182 + ls.a(sr.a(param7 + 1, 1 + param1, 2, (byte) -124), 1, sr.a(param7, param1 + 1, 2, (byte) -127), sr.a(param7 + 1, param1, 2, (byte) -122), -94)].b(param3, param2, param4, param5);
+        ac.field_k[183 + ls.a(sr.a(param7 - 1, param1 + 1, 2, (byte) -122), 1, sr.a(param7, param1 + 1, 2, (byte) -116), sr.a(-1 + param7, param1, 2, (byte) -114), -118)].b(param3, param2, param4, param5);
     }
 
-    final static TaggedMapData readLengthPrefixedMap(CipherPacketBuffer packet, int obfuscationGuard) {
+    final static sc a(bv param0, int param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
-        TaggedMapData var3 = null;
-        TaggedMapData stackIn_2_0 = null;
-        TaggedMapData stackIn_4_0 = null;
+        sc var3 = null;
+        sc stackIn_2_0 = null;
+        sc stackIn_4_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (obfuscationGuard != -23920) {
-            stackIn_2_0 = (TaggedMapData) null;
+          if (param1 != -23920) {
+            stackIn_2_0 = (sc) null;
             return stackIn_2_0;
           }
-          var2_int = packet.readInt(1);
-          packet.beginBitReading(45);
-          var3 = ut.readTaggedMap(packet, (byte) -85, var2_int);
-          packet.endBitReading(-2);
+          var2_int = param0.i(1);
+          param0.o(45);
+          var3 = ut.a(param0, (byte) -85, var2_int);
+          param0.n(-2);
           stackIn_4_0 = var3;
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -44,12 +44,12 @@ final class po {
           var2 = decompiledCaughtException;
           stackIn_7_0 = var2;
           stackIn_7_1 = new StringBuilder().append("po.C(");
-          if (packet == null) {
+          if (param0 == null) {
             stackIn_8_2 = "null";
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(obfuscationGuard).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -81,7 +81,7 @@ final class po {
               return false;
             }
             if (vt.field_l == 2 &&
-              !FixedQuaternion.a(RevivalEvent.field_z, wn.field_db, (byte) 78)) {
+              !wq.a(rt.field_z, wn.field_db, (byte) 78)) {
               return false;
             }
             if (vt.field_l != 2 &&
@@ -104,7 +104,7 @@ final class po {
             }
             if (vt.field_l != 2) {
               if (vt.field_l == 2) {
-                if (!BestScoreStrategy.a(true)) {
+                if (!aw.a(true)) {
                   return true;
                 }
                 var4 = (String) null;
@@ -115,7 +115,7 @@ final class po {
                 return false;
               }
             } else {
-              if (!FixedQuaternion.a(RevivalEvent.field_z, wn.field_db, (byte) 78)) {
+              if (!wq.a(rt.field_z, wn.field_db, (byte) 78)) {
                 return false;
               }
               if (vt.field_l != 2 &&
@@ -124,20 +124,20 @@ final class po {
               }
             }
           }
-          if (BestScoreStrategy.a(true)) {
+          if (aw.a(true)) {
             var4Lifetime4 = (String) null;
             it.a(vi.field_e, -82, vt.field_l, wn.field_db, param0, (String) null);
           }
           return true;
         }
-        if (rb.a(ma.field_ab, WeightedScoreStrategy.field_h, -17231, no.field_S, rv.field_b)) {
+        if (rb.a(ma.field_ab, ge.field_h, -17231, no.field_S, rv.field_b)) {
           if (2 == no.field_S) {
-            return me.a(param1 ^ 6251, WeightedScoreStrategy.field_h, rv.field_b, ma.field_ab, no.field_S);
+            return me.a(param1 ^ 6251, ge.field_h, rv.field_b, ma.field_ab, no.field_S);
           }
           if (var3 != 0) {
             return false;
           }
-          return me.a(param1 ^ 6251, WeightedScoreStrategy.field_h, rv.field_b, ma.field_ab, no.field_S);
+          return me.a(param1 ^ 6251, ge.field_h, rv.field_b, ma.field_ab, no.field_S);
         }
         if (param1 != 6150) {
           field_a = (String) null;
@@ -156,7 +156,7 @@ final class po {
           }
           if (vt.field_l != 2) {
             if (vt.field_l == 2) {
-              if (!BestScoreStrategy.a(true)) {
+              if (!aw.a(true)) {
                 return true;
               }
               var4Lifetime1 = (String) null;
@@ -167,7 +167,7 @@ final class po {
               return false;
             }
           } else {
-            if (!FixedQuaternion.a(RevivalEvent.field_z, wn.field_db, (byte) 78)) {
+            if (!wq.a(rt.field_z, wn.field_db, (byte) 78)) {
               return false;
             }
             if (vt.field_l != 2 &&
@@ -175,7 +175,7 @@ final class po {
               return false;
             }
           }
-          if (BestScoreStrategy.a(true)) {
+          if (aw.a(true)) {
             var4Lifetime1Lifetime1 = (String) null;
             it.a(vi.field_e, -82, vt.field_l, wn.field_db, param0, (String) null);
           }
@@ -196,7 +196,7 @@ final class po {
         }
         if (vt.field_l != 2) {
           if (vt.field_l == 2) {
-            if (!BestScoreStrategy.a(true)) {
+            if (!aw.a(true)) {
               return true;
             }
             var4Lifetime2 = (String) null;
@@ -207,7 +207,7 @@ final class po {
             return false;
           }
         } else {
-          if (!FixedQuaternion.a(RevivalEvent.field_z, wn.field_db, (byte) 78)) {
+          if (!wq.a(rt.field_z, wn.field_db, (byte) 78)) {
             return false;
           }
           if (vt.field_l != 2 &&
@@ -215,7 +215,7 @@ final class po {
             return false;
           }
         }
-        if (!BestScoreStrategy.a(true)) {
+        if (!aw.a(true)) {
           return true;
         }
         var4Lifetime3 = (String) null;

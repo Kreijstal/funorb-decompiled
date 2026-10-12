@@ -5,7 +5,7 @@ final class of extends je {
     long field_Pb;
     String field_Yb;
     int field_Kb;
-    static IndexedSprite[] field_Mb;
+    static ru[] field_Mb;
     je field_dc;
     boolean field_Wb;
     je field_fc;
@@ -29,11 +29,11 @@ final class of extends je {
 
     final boolean k(int param0) {
         if (param0 == 0) {
-          return !this.isSecondaryLinked((byte) -70) ? true : false;
+          return !this.a((byte) -70) ? true : false;
         }
         of var3 = (of) null;
         this.a(-15, (of) null);
-        return !this.isSecondaryLinked((byte) -70) ? true : false;
+        return !this.a((byte) -70) ? true : false;
     }
 
     final void a(byte param0, String param1, String param2) {
@@ -47,7 +47,7 @@ final class of extends je {
             of.e((byte) -11);
           }
         } catch (RuntimeException runtimeException) {
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "of.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw ig.a((Throwable) ((Object) runtimeException), "of.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -61,7 +61,7 @@ final class of extends je {
           var6 = (CharSequence) ((Object) this.field_cc);
           k.a(var6, false);
         } catch (RuntimeException runtimeException) {
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "of.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw ig.a((Throwable) ((Object) runtimeException), "of.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -116,7 +116,7 @@ final class of extends je {
           } else {
             stackIn_25_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(')').toString());
         }
     }
 
@@ -143,26 +143,26 @@ final class of extends je {
         field_Lb = null;
     }
 
-    final static void uploadQuicksave(Battlefield battlefield, int damageTaken, int unitLossCount, byte obfuscationGuard, int missionId, int campaignIndex) {
-        CampaignQuicksave quicksave = null;
-        int payloadStart = 0;
-        if (DamageEvent.g(121)) {
+    final static void a(ha param0, int param1, int param2, byte param3, int param4, int param5) {
+        sl var9 = null;
+        int var7 = 0;
+        if (nw.g(121)) {
           return;
         }
         try {
-          quicksave = new CampaignQuicksave(campaignIndex, missionId, battlefield, damageTaken, unitLossCount > 0 ? true : false);
-          bu.storedQuicksave = quicksave;
-          vl.outgoingPacket.writeCipheredOpcode(32161, 80);
-          vl.outgoingPacket.position = vl.outgoingPacket.position + 2;
-          if (obfuscationGuard != -80) {
-            Battlefield var8 = (Battlefield) null;
-            of.uploadQuicksave((Battlefield) null, -98, 73, (byte) 105, 55, -24);
+          var9 = new sl(param5, param4, param0, param1, param2 > 0 ? true : false);
+          bu.field_b = var9;
+          vl.field_n.h(32161, 80);
+          vl.field_n.field_q = vl.field_n.field_q + 2;
+          if (param3 != -80) {
+            ha var8 = (ha) null;
+            of.a((ha) null, -98, 73, (byte) 105, 55, -24);
           }
-          payloadStart = vl.outgoingPacket.position;
-          quicksave.write(0, vl.outgoingPacket);
-          vl.outgoingPacket.f(0, vl.outgoingPacket.position - payloadStart);
+          var7 = vl.field_n.field_q;
+          var9.a(0, vl.field_n);
+          vl.field_n.f(0, vl.field_n.field_q - var7);
         } catch (RuntimeException runtimeException) {
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "of.E(" + (battlefield != null ? "{...}" : "null") + ',' + damageTaken + ',' + unitLossCount + ',' + obfuscationGuard + ',' + missionId + ',' + campaignIndex + ')');
+          throw ig.a((Throwable) ((Object) runtimeException), "of.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
     }
 

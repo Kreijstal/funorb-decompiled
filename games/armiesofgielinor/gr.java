@@ -14,10 +14,10 @@ final class gr {
     int field_d;
     private int field_a;
 
-    final void a(PacketBuffer param0) {
-        this.field_d = param0.readUnsignedByte(0);
-        this.field_k = param0.readInt(1);
-        this.field_c = param0.readInt(1);
+    final void a(vh param0) {
+        this.field_d = param0.k(0);
+        this.field_k = param0.i(1);
+        this.field_c = param0.i(1);
         this.b(param0);
     }
 
@@ -48,14 +48,14 @@ final class gr {
         return this.field_a - this.field_e >> 15;
     }
 
-    final void b(PacketBuffer param0) {
+    final void b(vh param0) {
         int var2 = 0;
-        this.field_g = param0.readUnsignedByte(0);
+        this.field_g = param0.k(0);
         this.field_j = new int[this.field_g];
         this.field_i = new int[this.field_g];
         for (var2 = 0; var2 < this.field_g; var2++) {
-          this.field_j[var2] = param0.readUnsignedShort((byte) -104);
-          this.field_i[var2] = param0.readUnsignedShort((byte) -104);
+          this.field_j[var2] = param0.e((byte) -104);
+          this.field_i[var2] = param0.e((byte) -104);
         }
     }
 
