@@ -1429,7 +1429,7 @@ final class GameplayController {
           neutralItemCount = 0;
           neutralItems = new RadialSummonItem[AnimationFrameSet.unitUnlockGroups[0].length - 1];
           if (l.activeCampaignMission != null) {
-            neutralItems = new RadialSummonItem[eb.a((byte) -107, 1 | this.field_Y[0])];
+            neutralItems = new RadialSummonItem[eb.bitCount((byte) -107, 1 | this.field_Y[0])];
           }
           neutralUnitOrdinal = 0;
           boolean decompiledNaturalLoopExit0 = false;
@@ -1466,7 +1466,7 @@ final class GameplayController {
                 return;
               }
               godUnitCount = 0;
-              godUnitItems = new RadialSummonItem[eb.a((byte) -115, this.field_Y[this.battlefield.chosenGods[this.controlledPlayerId][chosenGodOrdinal] + 1])];
+              godUnitItems = new RadialSummonItem[eb.bitCount((byte) -115, this.field_Y[this.battlefield.chosenGods[this.controlledPlayerId][chosenGodOrdinal] + 1])];
               if (var7 != 0) {
                 return;
               }
@@ -2794,7 +2794,7 @@ final class GameplayController {
               this.battlefield.field_G.length > var4_int) {
               var6 = this.battlefield.field_G[var4_int];
             }
-            var7_int = eb.a((byte) -82, var6);
+            var7_int = eb.bitCount((byte) -82, var6);
             var8 = 0;
             var9 = var8 + var7_int * 19;
             if (var9 < 192) {
@@ -5097,7 +5097,7 @@ final class GameplayController {
               this.battlefield.field_G.length > var4_int) {
               var6 = this.battlefield.field_G[var4_int];
             }
-            var7_int = eb.a((byte) -103, var6);
+            var7_int = eb.bitCount((byte) -103, var6);
             var8 = 0;
             var9 = var7_int * 19 + var8;
             if (var9 < 192) {
@@ -6423,7 +6423,7 @@ final class GameplayController {
               if (this.field_fb == 80 &&
                 null != this.selectedUnit) {
                 var13 = this.selectedUnit.l(-27014);
-                var14 = eb.a((byte) -108, var13 >> 2);
+                var14 = eb.bitCount((byte) -108, var13 >> 2);
                 stackIn_335_0 = var14 >> 2;
                 if ((3 & var14) <= 0 &&
                   var14 != 0) {
@@ -6446,7 +6446,7 @@ final class GameplayController {
                     var2 = fo.a(param0 ^ 4792, CoatOfArms.field_c, new String[]{Integer.toString(this.selectedUnit.strength), Integer.toString(this.selectedUnit.maximumStrength)});
                   }
                   if (IterableDualNodeDeque.isPointerInBounds(-33, 312, 342, 39, 79)) {
-                    var2 = fh.field_f[eb.a((byte) -109, 3 & ~var13)];
+                    var2 = fh.field_f[eb.bitCount((byte) -109, 3 & ~var13)];
                   }
                   if (IterableDualNodeDeque.isPointerInBounds(-33, 344, 378, 39, 79)) {
                     var16 = this.selectedUnit.unitType;
@@ -8231,7 +8231,7 @@ final class GameplayController {
               boolean decompiledNaturalLoopExit0 = false;
               while (!(decompiledNaturalLoopExit0 = (var11Lifetime1 >= 6))) {
                 stackIn_276_0 = -1;
-                stackIn_276_1 = ~eb.a((byte) -84, this.field_Y[var11Lifetime1 + 1]);
+                stackIn_276_1 = ~eb.bitCount((byte) -84, this.field_Y[var11Lifetime1 + 1]);
                 if (var16 == 0) {
                   if (stackIn_276_0 > stackIn_276_1) {
                     var10Lifetime1++;
@@ -8249,7 +8249,7 @@ final class GameplayController {
               var12Lifetime1 = 0;
               var13 = 0;
               while (var13 < 6) {
-                if (eb.a((byte) -77, this.field_Y[var13 + 1]) > 0) {
+                if (eb.bitCount((byte) -77, this.field_Y[var13 + 1]) > 0) {
                   var14 = var3_int / 2 + (int)(140.0 * Math.sin(3.141592653589793 * (double)var12Lifetime1 * 2.0 / (double)var10Lifetime1));
                   var15 = (int)(-20.0 + (-Math.cos(2.0 * (3.141592653589793 * (double)var12Lifetime1) / (double)var10Lifetime1) * (double)(140 - var11Lifetime1 / 3) + (double)(var4 / 2)) - (double)(var11Lifetime1 / 2));
                   if (var13 != this.field_e[0] &&
@@ -10869,7 +10869,7 @@ final class GameplayController {
           while (!(decompiledNaturalLoopExit0 = (6 <= var3))) {
             stackIn_11_0 = 0;
             if (var17 == 0) {
-              if (stackIn_11_0 < eb.a((byte) -112, this.field_Y[var3 + 1])) {
+              if (stackIn_11_0 < eb.bitCount((byte) -112, this.field_Y[var3 + 1])) {
                 var2_int++;
               }
               var3++;
@@ -10899,7 +10899,7 @@ final class GameplayController {
           var8 = 0;
           while (var8 < 6) {
             stackIn_57_0 = -1;
-            stackIn_57_1 = ~eb.a((byte) -105, this.field_Y[var8 + 1]);
+            stackIn_57_1 = ~eb.bitCount((byte) -105, this.field_Y[var8 + 1]);
             if (var17 != 0) {
               return;
             }
@@ -10952,7 +10952,7 @@ final class GameplayController {
                   stackIn_81_0 = ~this.field_e[var8Lifetime1];
                   stackIn_81_1 = ~var10Lifetime1;
                   if (stackIn_81_0 != stackIn_81_1) {
-                    if (eb.a((byte) -73, this.field_Y[1 + var10Lifetime1]) > 0) {
+                    if (eb.bitCount((byte) -73, this.field_Y[1 + var10Lifetime1]) > 0) {
                       var9Lifetime1++;
                     }
                     var10Lifetime1++;

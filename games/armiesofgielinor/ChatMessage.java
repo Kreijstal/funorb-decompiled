@@ -84,7 +84,7 @@ final class ChatMessage {
         } else {
           this.responsePhraseIds = null;
         }
-        this.privateMessageIdHigh16 = rh.decodedPrivateMessageIdHigh16;
+        this.privateMessageIdHigh16 = PcmPlayerService.decodedPrivateMessageIdHigh16;
         this.channelId = MatchConditionEntry.decodedChatChannel;
         this.channelLabel = BestScoreStrategy.decodedChatChannelLabel;
         this.systemMessage = DualNodeDeque.decodedChatSystemMessage;

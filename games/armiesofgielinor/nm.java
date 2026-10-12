@@ -195,7 +195,7 @@ final class nm extends PcmStream {
                 return;
               }
               LobbyRoom.field_Kb.j(7);
-              l.field_a.c();
+              l.field_a.flush();
               MapLayout.field_u = param0;
               if (MapLayout.field_u != null) {
                 LobbyRoom.field_Kb.a(2, param1, MapLayout.field_u);

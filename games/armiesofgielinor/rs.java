@@ -90,17 +90,17 @@ final class rs extends IntrusiveNode {
         }
     }
 
-    final static int a(byte param0, int param1) {
-        param1--;
-        param1 = param1 | param1 >>> 1;
-        param1 = param1 | param1 >>> 2;
-        param1 = param1 | param1 >>> 4;
-        if (param0 < 75) {
+    final static int nextPowerOfTwo(byte obfuscationGuard, int value) {
+        value--;
+        value = value | value >>> 1;
+        value = value | value >>> 2;
+        value = value | value >>> 4;
+        if (obfuscationGuard < 75) {
           field_o = (RgbSprite) null;
         }
-        param1 = param1 | param1 >>> 8;
-        param1 = param1 | param1 >>> 16;
-        return param1 + 1;
+        value = value | value >>> 8;
+        value = value | value >>> 16;
+        return value + 1;
     }
 
     private rs() throws Throwable {

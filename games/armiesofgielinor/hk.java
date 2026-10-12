@@ -36,8 +36,8 @@ final class hk extends ClientUiComponent {
         int var2 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         te var1Lifetime1;
         try {
-          l.field_a.d();
-          TextCursor.field_e.d();
+          l.field_a.pump();
+          TextCursor.field_e.pump();
           DelayedPacket.field_p = DelayedPacket.field_p - 1;
           if (param0 != 128) {
             hk.k(94);

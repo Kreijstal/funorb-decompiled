@@ -321,7 +321,7 @@ abstract class nl extends Widget implements gw {
           ResourceRequest.field_u[4] = io.field_p;
           IconTextComponent.field_Kb = new ClientUiComponent(0L, (ClientUiComponent) null);
           rj.field_F = new ClientUiComponent(0L, te.field_p, su.field_b);
-          CampaignProgress.field_a = new ClientUiComponent(0L, br.field_e, rh.field_g);
+          CampaignProgress.field_a = new ClientUiComponent(0L, br.field_e, PcmPlayerService.ratingLabel);
           MapTile.field_f = new ScrollContainer(0L, new ClientUiComponent(0L, (ClientUiComponent) null), cb.field_c, WeightedLruCache.field_b);
           IconTextComponent.field_Kb.addChild(rj.field_F, 79);
           if (fh.field_c) {
@@ -393,7 +393,7 @@ abstract class nl extends Widget implements gw {
           gg.field_E = new ClientUiComponent(0L, eq.field_h);
           gg.field_E.horizontalAlignment = 1;
           di.field_l = new ClientUiComponent(0L, te.field_p, su.field_b);
-          SpellCastEvent.field_D = new ClientUiComponent(0L, br.field_e, rh.field_g);
+          SpellCastEvent.field_D = new ClientUiComponent(0L, br.field_e, PcmPlayerService.ratingLabel);
           bu.field_a = new ScrollContainer(0L, new ClientUiComponent(0L, (ClientUiComponent) null), cb.field_c, WeightedLruCache.field_b);
           eb.field_c.addChild(gg.field_E, 72);
           eb.field_c.addChild(di.field_l, 83);

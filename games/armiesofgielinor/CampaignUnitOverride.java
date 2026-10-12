@@ -243,7 +243,7 @@ final class CampaignUnitOverride {
                 }
                 var2 = NodeIterator.a(50, "mu_lobby_rating");
                 if (var2 != null) {
-                  rh.field_g = uu.a(var2, (byte) 60);
+                  PcmPlayerService.ratingLabel = uu.a(var2, (byte) 60);
                 }
                 var2 = NodeIterator.a(50, "mu_lobby_friend_add");
                 if (null != var2) {

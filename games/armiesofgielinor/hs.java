@@ -146,7 +146,7 @@ abstract class hs extends Widget implements gw {
           ro.field_rb[param2.getUnitCategory(0)].draw(param4 + 9, param7 - 66 + param6);
           var9 = param2.l(-27014);
           SoftwareRaster.b(59 + param4, param7 - 41 + param6, 30, 30, 0, 128);
-          cp.field_e[eb.a((byte) -120, ~var9 & 3)].draw(param4 + 62, param7 - (-param6 + 41));
+          cp.field_e[eb.bitCount((byte) -120, ~var9 & 3)].draw(param4 + 62, param7 - (-param6 + 41));
           var10 = param2.unitType;
           if (var10 == 34 &&
             param2.packedFlag8) {
@@ -193,7 +193,7 @@ abstract class hs extends Widget implements gw {
               SoftwareRaster.a(-35 + (param4 + 308), param7 + param6 - 42, 25, (int)(Math.random() * 16777215.0), 128);
             }
           }
-          var15 = eb.a((byte) -104, var9 >> 2);
+          var15 = eb.bitCount((byte) -104, var9 >> 2);
           if ((var15 & 3) <= 0 &&
             var15 != 0) {
             stackIn_35_0 = 0;

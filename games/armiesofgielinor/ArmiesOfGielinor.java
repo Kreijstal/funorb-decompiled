@@ -200,7 +200,7 @@ public final class ArmiesOfGielinor extends wf {
                   continue;
                 }
                 if (nm.deliveredOpcode == 14) {
-                  RadialSummonItem.a(rs.a((byte) 76, 8), DualNodeIterator.b((byte) -90), 150, CipherPacketBuffer.field_A, rs.a((byte) 95, 1000), et.b(-1), 1024, 6, -84, sh.d((byte) 81));
+                  RadialSummonItem.a(rs.nextPowerOfTwo((byte) 76, 8), DualNodeIterator.b((byte) -90), 150, CipherPacketBuffer.field_A, rs.nextPowerOfTwo((byte) 95, 1000), et.b(-1), 1024, 6, -84, sh.d((byte) 81));
                   ep.a(lp.b(-126), -72, km.c(0));
                   s.field_d = 0;
                   ma.field_Z = true;
@@ -1203,7 +1203,7 @@ public final class ArmiesOfGielinor extends wf {
           ih.f(-128);
           lt.b(-51);
           ev.a(960112080);
-          PcmPlayer.g();
+          PcmPlayer.clearServiceReference();
           NodeHashTable.a(-83);
           mi.a(9480);
           dw.c();
@@ -1387,7 +1387,7 @@ public final class ArmiesOfGielinor extends wf {
           hs.i(0);
           vr.a((byte) -37);
           jj.a((byte) -112);
-          rh.a(-74);
+          PcmPlayerService.releaseLabels(-74);
           TaggedMapData.a(-91);
           tf.a(false);
           BattleCharacter.c(-1);

@@ -272,7 +272,7 @@ final class TriangleRasterizer {
         clipHeight = bottom - top;
         TriangleRasterizer.centerProjection();
         if (scanlineOffsets.length < clipHeight) {
-          scanlineOffsets = new int[rs.a((byte) 84, clipHeight)];
+          scanlineOffsets = new int[rs.nextPowerOfTwo((byte) 84, clipHeight)];
         }
         int var4 = top * SoftwareRaster.width + left;
         for (var5 = 0; var5 < clipHeight; var5++) {

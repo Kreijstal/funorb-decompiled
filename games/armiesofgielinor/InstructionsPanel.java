@@ -657,7 +657,7 @@ final class InstructionsPanel {
             SoftwareRaster.b(99, 25, 30, 30, 0, 128);
             SoftwareRaster.b(52, 25, 30, 30, 0, 128);
             var9_int = param5.l(-27014);
-            cp.field_e[eb.a((byte) -126, ~var9_int & 3)].draw(56, 25);
+            cp.field_e[eb.bitCount((byte) -126, ~var9_int & 3)].draw(56, 25);
           } else {
             if (param6 == null) {
               SoftwareRaster.b(99, 25, 30, 30, 0, 128);

@@ -101,7 +101,7 @@ final class UnitInfoPopup extends IntrusiveNode {
             SoftwareRaster.b(99, 25, 30, 30, 0, 128);
             SoftwareRaster.b(53, 25, 30, 30, 0, 128);
             var9 = this.unit.l(-27014);
-            cp.field_e[eb.a((byte) -97, ~var9 & 3)].draw(56, 25);
+            cp.field_e[eb.bitCount((byte) -97, ~var9 & 3)].draw(56, 25);
           } else {
             if (param0 == null) {
               SoftwareRaster.b(99, 25, 30, 30, 0, 128);

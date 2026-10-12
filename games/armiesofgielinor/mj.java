@@ -18,9 +18,9 @@ final class mj {
 
     final static void b(byte param0) {
         if (l.field_a != null) {
-          l.field_a.f();
+          l.field_a.shutdown();
           if (TextCursor.field_e != null) {
-            TextCursor.field_e.f();
+            TextCursor.field_e.shutdown();
           }
           if (param0 > -79) {
             mj.b((byte) 93);
@@ -29,7 +29,7 @@ final class mj {
           return;
         }
         if (TextCursor.field_e != null) {
-          TextCursor.field_e.f();
+          TextCursor.field_e.shutdown();
         }
         if (param0 <= -79) {
           return;

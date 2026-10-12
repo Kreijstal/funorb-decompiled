@@ -68,7 +68,7 @@ public abstract class iv extends java.applet.Applet implements Runnable, java.aw
         RuntimeException var2_ref = null;
         try {
           if (this == IntKeyLookup.field_a &&
-            !rh.field_c) {
+            !PcmPlayerService.clientShutdownStarted) {
             ol.field_z = true;
             if (se.field_c &&
               -AttackEvent.field_P + vi.monotonicMillis(62) > 1000L) {
@@ -108,7 +108,7 @@ public abstract class iv extends java.applet.Applet implements Runnable, java.aw
         RuntimeException decompiledCaughtException = null;
         try {
           if (IntKeyLookup.field_a == this &&
-            !rh.field_c) {
+            !PcmPlayerService.clientShutdownStarted) {
             ActionRequest.field_s = vi.monotonicMillis(-46);
             nu.a(5000L, 0);
             PacketBuffer.field_s = null;
@@ -171,7 +171,7 @@ public abstract class iv extends java.applet.Applet implements Runnable, java.aw
 
     public final void stop() {
         if (IntKeyLookup.field_a != this ||
-          rh.field_c) {
+          PcmPlayerService.clientShutdownStarted) {
           return;
         }
         try {
@@ -355,10 +355,10 @@ public abstract class iv extends java.applet.Applet implements Runnable, java.aw
         try {
           var3 = this;
           synchronized (var3) {
-            if (rh.field_c) {
+            if (PcmPlayerService.clientShutdownStarted) {
               return;
             }
-            rh.field_c = true;
+            PcmPlayerService.clientShutdownStarted = true;
           }
           if (la.field_g != null) {
             la.field_g.destroy();
@@ -683,7 +683,7 @@ public abstract class iv extends java.applet.Applet implements Runnable, java.aw
 
     public final void start() {
         if (IntKeyLookup.field_a != this ||
-          rh.field_c) {
+          PcmPlayerService.clientShutdownStarted) {
           return;
         }
         try {

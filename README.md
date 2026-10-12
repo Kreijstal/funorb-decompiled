@@ -23,7 +23,7 @@ by default for every game. Semantic game-specific names use explicit naming
 rules. Deko's numbered structural-category and type-based names identify
 unresolved purposes honestly; they are not complete semantic deobfuscation.
 
-Armies has 226 reviewed class names, not a complete semantic map. Shared widget
+Armies has 228 reviewed class names, not a complete semantic map. Shared widget
 bounds, dropdown options/prefix selection, painter dispatch and expansion now
 have reviewed names with pointer, selection and arrow-pixel fixtures. Campaign
 loadouts now name unit/spell rewards, equipped slots and cumulative mana bonuses;
@@ -191,12 +191,16 @@ impulse packet fixtures agree with independent cosine/window mathematics and
 selected exact PCM, including transitions, silence, budget retries and archive/cache
 loading. Production music, arbitrary spectra, channel coupling, exhaustive floors,
 audible playback and full standards compliance remain unverified.
-SoundData, PcmStream, RawPcmStream, PcmStreamMixer, TimedPcmListener and partially
-named PcmPlayer expose sound ownership, graph routing and playback controls.
+SoundData, PcmStream, RawPcmStream, PcmStreamMixer, TimedPcmListener and
+PcmPlayer expose sound ownership, graph routing and playback controls.
 All sixteen raw mixing kernel families have names and deterministic PCM fixtures,
 alongside loops, pan, ramps/fades, nested/inactive mixers and scheduler reset.
-Timed callbacks, full player scheduling/device backends and audible production
-playback remain unverified.
+PcmPlayer now names complete scheduling/buffering/recovery state. Controlled
+fixtures check work/priority selection, queue cleanup, capacity/drain adjustment
+and failure retries. JavaSoundPcmPlayer and PcmPlayerService name output packing
+and lifecycle, with proxy-line and shutdown/error fixtures. Timed callbacks, real
+device opening/driver behavior, logged exception reporting, thread timing and
+audible production playback remain unverified.
 
 Camera overview grouping, centroid bounds, hold state and explicit tile focus
 now have reviewed names, alongside directional panning, dragging and velocity

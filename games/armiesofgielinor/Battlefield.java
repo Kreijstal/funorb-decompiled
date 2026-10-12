@@ -2814,10 +2814,10 @@ final class Battlefield {
         int var8 = 0;
         int var9 = 0;
         var9 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
-        if (~eb.a((byte) -95, 85 & this.eliminatedPlayerMask) == ~(this.playerCount / this.teamCount)) {
+        if (~eb.bitCount((byte) -95, 85 & this.eliminatedPlayerMask) == ~(this.playerCount / this.teamCount)) {
           return false;
         }
-        if (~eb.a((byte) -97, this.eliminatedPlayerMask & 170) == ~(this.playerCount / this.teamCount)) {
+        if (~eb.bitCount((byte) -97, this.eliminatedPlayerMask & 170) == ~(this.playerCount / this.teamCount)) {
           return true;
         }
         var2 = this.i(0, -12710);
@@ -5955,7 +5955,7 @@ final class Battlefield {
           return true;
         }
         if (!this.teamGame) {
-          stackIn_24_0 = (eb.a((byte) -125, this.getSurvivingPlayerMask((byte) 78)) == 1);
+          stackIn_24_0 = (eb.bitCount((byte) -125, this.getSurvivingPlayerMask((byte) 78)) == 1);
           return stackIn_24_0;
         }
         survivingTeams = 0;

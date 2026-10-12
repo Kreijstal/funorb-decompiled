@@ -88,10 +88,10 @@ final class CommunityTabGroup {
         hc.decodedChatIconId = packet.readUnsignedByte(0);
         gk.decodedChatAccountId = packet.readLong((byte) -2);
         if (2 == MatchConditionEntry.decodedChatChannel) {
-          rh.decodedPrivateMessageIdHigh16 = packet.readUnsignedShort((byte) -104);
+          PcmPlayerService.decodedPrivateMessageIdHigh16 = packet.readUnsignedShort((byte) -104);
           th.decodedPrivateMessageIdLow24 = packet.readUnsignedMedium((byte) -13);
         } else {
-          rh.decodedPrivateMessageIdHigh16 = 0;
+          PcmPlayerService.decodedPrivateMessageIdHigh16 = 0;
           th.decodedPrivateMessageIdLow24 = 0;
         }
         separateAccountName = (packet.readUnsignedByte(0) != 1) ? 0 : 1;
@@ -254,10 +254,10 @@ final class CommunityTabGroup {
         hc.decodedChatIconId = packet.readUnsignedByte(0);
         gk.decodedChatAccountId = packet.readLong((byte) -2);
         if (2 == MatchConditionEntry.decodedChatChannel) {
-          rh.decodedPrivateMessageIdHigh16 = packet.readUnsignedShort((byte) -104);
+          PcmPlayerService.decodedPrivateMessageIdHigh16 = packet.readUnsignedShort((byte) -104);
           th.decodedPrivateMessageIdLow24 = packet.readUnsignedMedium((byte) -13);
         } else {
-          rh.decodedPrivateMessageIdHigh16 = 0;
+          PcmPlayerService.decodedPrivateMessageIdHigh16 = 0;
           th.decodedPrivateMessageIdLow24 = 0;
         }
         separateAccountName = (packet.readUnsignedByte(0) != 1) ? 0 : 1;

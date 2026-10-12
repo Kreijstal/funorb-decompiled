@@ -59,19 +59,19 @@ final class eb {
         field_d = null;
     }
 
-    final static int a(byte param0, int param1) {
-        param1 = ((-1431655766 & param1) >>> 1) + (1431655765 & param1);
-        param1 = (param1 & 858993459) + ((param1 & -858993458) >>> 2);
-        param1 = 252645135 & (param1 >>> 4) + param1;
-        if (param0 >= -70) {
+    final static int bitCount(byte obfuscationGuard, int value) {
+        value = ((-1431655766 & value) >>> 1) + (1431655765 & value);
+        value = (value & 858993459) + ((value & -858993458) >>> 2);
+        value = 252645135 & (value >>> 4) + value;
+        if (obfuscationGuard >= -70) {
           field_e = (String) null;
-          param1 = param1 + (param1 >>> 8);
-          param1 = param1 + (param1 >>> 16);
-          return param1 & 255;
+          value = value + (value >>> 8);
+          value = value + (value >>> 16);
+          return value & 255;
         }
-        param1 = param1 + (param1 >>> 8);
-        param1 = param1 + (param1 >>> 16);
-        return param1 & 255;
+        value = value + (value >>> 8);
+        value = value + (value >>> 16);
+        return value & 255;
     }
 
     static {
