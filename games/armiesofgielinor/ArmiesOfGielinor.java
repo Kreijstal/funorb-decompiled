@@ -836,7 +836,7 @@ public final class ArmiesOfGielinor extends wf {
                     } else {
                       stackIn_102_2 = 15;
                     }
-                    if (ja.$cfr$intArgs$a$78278125798b(stackIn_97_0, stackIn_98_1, stackIn_102_2, 13) &&
+                    if (CameraOverviewTarget.$cfr$intArgs$a$78278125798b(stackIn_97_0, stackIn_98_1, stackIn_102_2, 13) &&
                       var8 == 0) {
                       continue;
                     }
@@ -1443,7 +1443,7 @@ public final class ArmiesOfGielinor extends wf {
           vc.a(-119);
           AiInfluenceMap.a(61);
           AiPlanningStrategy.a(-1);
-          ja.e(-93);
+          CameraOverviewTarget.e(-93);
           j.b((byte) 125);
           RadialSummonItem.b(76);
           sq.a(false);

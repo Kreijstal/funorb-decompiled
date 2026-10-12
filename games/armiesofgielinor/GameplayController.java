@@ -21,7 +21,7 @@ final class GameplayController {
     private boolean field_F;
     private int field_i;
     private int[] field_e;
-    private int field_Z;
+    private int cameraFocusTileIndex;
     private int field_n;
     private boolean field_K;
     private int field_ib;
@@ -90,13 +90,13 @@ final class GameplayController {
     private int field_yb;
     private RadialSummonMenu[] unitMenus;
     int field_Jb;
-    private boolean field_Qb;
+    private boolean cameraFocusPending;
     private int field_x;
     private boolean field_a;
     private int field_Sb;
     private boolean field_Xb;
     dg field_Ib;
-    private NodeDeque field_cb;
+    private NodeDeque overviewTargets;
     private int field_Kb;
     private int encodedDamageCheckpoint;
     int field_y;
@@ -480,7 +480,7 @@ final class GameplayController {
           this.battlefield.eliminatedPlayerMask = quicksave.eliminatedPlayerMask;
           tiles = this.battlefield.tiles;
           if (obfuscationGuard > -117) {
-            this.d((byte) -32);
+            this.updateCamera((byte) -32);
           }
           tileIndex = 0;
           boolean decompiledNaturalLoopExit0 = false;
@@ -1737,7 +1737,7 @@ final class GameplayController {
         }
     }
 
-    private final void j(int param0) {
+    private final void rebuildOverviewTargets(int obfuscationGuard) {
         boolean stackIn_7_0 = false;
         int stackIn_13_0 = 0;
         int stackIn_18_0 = 0;
@@ -1757,170 +1757,170 @@ final class GameplayController {
         boolean stackOut_63_0;
         boolean stackOut_27_0;
         boolean stackOut_31_0;
-        NodeDeque var2 = null;
+        NodeDeque controlledUnits = null;
         RuntimeException var2_ref = null;
-        Unit var3_ref_jd = null;
-        int var3 = 0;
-        int var4 = 0;
-        NodeDeque var4_ref_at = null;
-        ja var5 = null;
-        MapTile var5_ref = null;
-        Unit var5_ref2 = null;
-        int var6 = 0;
-        ja var7 = null;
-        int var8 = 0;
-        ja var7Lifetime1;
+        Unit controlledUnit = null;
+        int playerIndex = 0;
+        int controlledUnitGrouped = 0;
+        NodeDeque otherPlayerUnits = null;
+        CameraOverviewTarget controlledUnitTarget = null;
+        MapTile landmarkTile = null;
+        Unit otherUnit = null;
+        int otherUnitGrouped = 0;
+        CameraOverviewTarget otherUnitTarget = null;
+        int obfuscationControl = 0;
+        CameraOverviewTarget landmarkTarget;
         int stackIn_13_0Lifetime1;
         int stackIn_39_0Lifetime1;
         int stackIn_46_0Lifetime1;
         int stackIn_47_0Lifetime1;
         int stackIn_47_1Lifetime1;
         int stackIn_71_0Lifetime1;
-        int var3Lifetime1;
-        int var4Lifetime1;
-        int var6Lifetime1;
-        var8 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        int tileX;
+        int tileY;
+        int landmarkGrouped;
+        obfuscationControl = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          var2 = this.battlefield.unitsByPlayer[this.controlledPlayerId];
-          this.field_cb = new NodeDeque();
-          var3_ref_jd = (Unit) (var2.first((byte) 123));
+          controlledUnits = this.battlefield.unitsByPlayer[this.controlledPlayerId];
+          this.overviewTargets = new NodeDeque();
+          controlledUnit = (Unit) (controlledUnits.first((byte) 123));
           scanLoop1: while (true) {
-            if (var3_ref_jd != null) {
+            if (controlledUnit != null) {
               stackIn_18_0 = 0;
-              if (var8 != 0) {
+              if (obfuscationControl != 0) {
                 break scanLoop1;
               }
-              var4 = stackIn_18_0;
-              var5 = (ja) (this.field_cb.first((byte) 111));
-              while (null != var5) {
-                stackOut_6_0 = var5.a(var3_ref_jd, -4977);
+              controlledUnitGrouped = stackIn_18_0;
+              controlledUnitTarget = (CameraOverviewTarget) (this.overviewTargets.first((byte) 111));
+              while (null != controlledUnitTarget) {
+                stackOut_6_0 = controlledUnitTarget.containsUnit(controlledUnit, -4977);
                 stackIn_13_0 = stackOut_6_0 ? 1 : 0;
                 stackIn_7_0 = stackOut_6_0;
                 if (stackIn_7_0) {
-                  var5.a((byte) -106, var3_ref_jd);
-                  var4 = 1;
+                  controlledUnitTarget.addUnit((byte) -106, controlledUnit);
+                  controlledUnitGrouped = 1;
                 } else {
-                  var5 = (ja) (this.field_cb.next((byte) 123));
+                  controlledUnitTarget = (CameraOverviewTarget) (this.overviewTargets.next((byte) 123));
                   continue;
                 }
                 break;
               }
-              stackIn_13_0Lifetime1 = var4;
+              stackIn_13_0Lifetime1 = controlledUnitGrouped;
               if (stackIn_13_0Lifetime1 == 0) {
-                this.field_cb.addFirst(750, new ja(var3_ref_jd));
+                this.overviewTargets.addFirst(750, new CameraOverviewTarget(controlledUnit));
               }
-              var3_ref_jd = (Unit) (var2.next((byte) 123));
+              controlledUnit = (Unit) (controlledUnits.next((byte) 123));
               continue scanLoop1;
             }
-            stackIn_18_0 = param0;
+            stackIn_18_0 = obfuscationGuard;
             break;
           }
-          var3 = stackIn_18_0;
+          playerIndex = stackIn_18_0;
           scanLoop2: while (true) {
-            stackIn_20_0 = ~var3;
+            stackIn_20_0 = ~playerIndex;
             scanLoop3: while (stackIn_20_0 > ~this.battlefield.playerCount) {
               stackIn_47_0 = ~this.controlledPlayerId;
-              stackIn_47_1 = ~var3;
-              if (var8 != 0) {
+              stackIn_47_1 = ~playerIndex;
+              if (obfuscationControl != 0) {
                 return;
               }
               if (stackIn_47_0 != stackIn_47_1) {
-                var4_ref_at = this.battlefield.unitsByPlayer[var3];
-                var5_ref2 = (Unit) (var4_ref_at.first((byte) 93));
-                while (var5_ref2 != null) {
-                  stackOut_27_0 = var5_ref2.hasMovementFlag1(false);
+                otherPlayerUnits = this.battlefield.unitsByPlayer[playerIndex];
+                otherUnit = (Unit) (otherPlayerUnits.first((byte) 93));
+                while (otherUnit != null) {
+                  stackOut_27_0 = otherUnit.hasMovementFlag1(false);
                   stackIn_20_0 = stackOut_27_0 ? 1 : 0;
                   stackIn_28_0 = stackOut_27_0;
-                  if (var8 != 0) {
+                  if (obfuscationControl != 0) {
                     continue scanLoop3;
                   }
                   if (stackIn_28_0) {
-                    var6 = 0;
-                    var7 = (ja) (this.field_cb.first((byte) 102));
+                    otherUnitGrouped = 0;
+                    otherUnitTarget = (CameraOverviewTarget) (this.overviewTargets.first((byte) 102));
                     while (true) {
-                      if (null != var7) {
-                        stackOut_31_0 = var7.a(var5_ref2, -4977);
+                      if (null != otherUnitTarget) {
+                        stackOut_31_0 = otherUnitTarget.containsUnit(otherUnit, -4977);
                         stackIn_39_0 = stackOut_31_0 ? 1 : 0;
                         stackIn_32_0 = stackOut_31_0;
                         if (stackIn_32_0) {
-                          var6 = 1;
-                          var7.a((byte) -98, var5_ref2);
+                          otherUnitGrouped = 1;
+                          otherUnitTarget.addUnit((byte) -98, otherUnit);
                         } else {
-                          var7 = (ja) (this.field_cb.next((byte) 123));
+                          otherUnitTarget = (CameraOverviewTarget) (this.overviewTargets.next((byte) 123));
                           continue;
                         }
                       }
-                      stackIn_39_0Lifetime1 = var6;
+                      stackIn_39_0Lifetime1 = otherUnitGrouped;
                       if (stackIn_39_0Lifetime1 != 0) {
                         break;
                       }
-                      this.field_cb.addFirst(param0 + 750, new ja(var5_ref2));
+                      this.overviewTargets.addFirst(obfuscationGuard + 750, new CameraOverviewTarget(otherUnit));
                       break;
                     }
                   }
-                  var5_ref2 = (Unit) (var4_ref_at.next((byte) 123));
+                  otherUnit = (Unit) (otherPlayerUnits.next((byte) 123));
                 }
               }
-              var3++;
-              if (var8 == 0) {
+              playerIndex++;
+              if (obfuscationControl == 0) {
                 continue scanLoop2;
               }
               break;
             }
             break;
           }
-          var3Lifetime1 = 0;
+          tileX = 0;
           while (true) {
-            stackIn_46_0 = ~var3Lifetime1;
+            stackIn_46_0 = ~tileX;
             stackIn_47_0Lifetime1 = stackIn_46_0;
             stackIn_47_1Lifetime1 = ~this.battlefield.mapWidth;
             if (stackIn_47_0Lifetime1 <= stackIn_47_1Lifetime1) {
               return;
             }
-            if (var8 != 0) {
+            if (obfuscationControl != 0) {
               return;
             }
-            var4Lifetime1 = 0;
-            while (this.battlefield.mapHeight > var4Lifetime1) {
-              var5_ref = this.battlefield.tiles[this.battlefield.mapWidth * var4Lifetime1 + var3Lifetime1];
-              stackOut_53_0 = var5_ref.isPortal(-118);
+            tileY = 0;
+            while (this.battlefield.mapHeight > tileY) {
+              landmarkTile = this.battlefield.tiles[this.battlefield.mapWidth * tileY + tileX];
+              stackOut_53_0 = landmarkTile.isPortal(-118);
               stackIn_46_0Lifetime1 = stackOut_53_0 ? 1 : 0;
               stackIn_54_0 = stackOut_53_0;
               if (stackIn_54_0 ||
-                var5_ref.hasModifierFlag4((byte) -115) ||
-                var5_ref.hasModifierFlag1(param0 + 12)) {
-                var6Lifetime1 = 0;
-                var7Lifetime1 = (ja) (this.field_cb.first((byte) 123));
+                landmarkTile.hasModifierFlag4((byte) -115) ||
+                landmarkTile.hasModifierFlag1(obfuscationGuard + 12)) {
+                landmarkGrouped = 0;
+                landmarkTarget = (CameraOverviewTarget) (this.overviewTargets.first((byte) 123));
                 while (true) {
-                  if (null != var7Lifetime1) {
-                    stackOut_63_0 = var7Lifetime1.a(var3Lifetime1, var4Lifetime1, (byte) -54);
+                  if (null != landmarkTarget) {
+                    stackOut_63_0 = landmarkTarget.containsTile(tileX, tileY, (byte) -54);
                     stackIn_71_0 = stackOut_63_0 ? 1 : 0;
                     stackIn_64_0 = stackOut_63_0;
                     if (stackIn_64_0) {
-                      var7Lifetime1.b(var3Lifetime1, var4Lifetime1, (byte) 94);
-                      var6Lifetime1 = 1;
+                      landmarkTarget.addTile(tileX, tileY, (byte) 94);
+                      landmarkGrouped = 1;
                     } else {
-                      var7Lifetime1 = (ja) (this.field_cb.next((byte) 123));
+                      landmarkTarget = (CameraOverviewTarget) (this.overviewTargets.next((byte) 123));
                       continue;
                     }
                   }
-                  stackIn_71_0Lifetime1 = var6Lifetime1;
+                  stackIn_71_0Lifetime1 = landmarkGrouped;
                   if (stackIn_71_0Lifetime1 != 0) {
                     break;
                   }
-                  this.field_cb.addFirst(750, new ja(var3Lifetime1, var4Lifetime1));
+                  this.overviewTargets.addFirst(750, new CameraOverviewTarget(tileX, tileY));
                   break;
                 }
               }
-              var4Lifetime1++;
+              tileY++;
             }
-            var3Lifetime1++;
+            tileX++;
             continue;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) var2_ref), "ic.N(" + param0 + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) var2_ref), "ic.N(" + obfuscationGuard + ')');
         }
     }
 
@@ -3303,7 +3303,7 @@ final class GameplayController {
             if (var3 < 0) {
               return;
             }
-            this.camera.a((byte) -127, var3);
+            this.camera.setFocusTile((byte) -127, var3);
           }
           this.field_Pb = true;
           if (param0 != 119) {
@@ -3584,7 +3584,7 @@ final class GameplayController {
             }
           }
           if (param1) {
-            this.d((byte) -42);
+            this.updateCamera((byte) -42);
             if (!jj.b((byte) -73)) {
               this.b(this.b(true), 123);
               if (null == rd.field_j &&
@@ -4060,7 +4060,7 @@ final class GameplayController {
         var5 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           this.eventPresenters.b(param0 ^ 7);
-          this.camera.a((byte) 118, this.eventPresenters);
+          this.camera.followEventPresenters((byte) 118, this.eventPresenters);
           this.battleTutorial = null;
           this.eventPresenters = null;
           this.camera = null;
@@ -4684,7 +4684,7 @@ final class GameplayController {
           var7 = -var4 + (-(2 * (this.field_H - 225)) + AiPlanningStrategy.field_d);
           var8 = var7 * 40 / var2_int;
           var9 = 20 * var6Lifetime1 / var3;
-          this.camera.a(var8, var9, (byte) 68);
+          this.camera.setWorldPosition(var8, var9, (byte) 68);
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -5376,8 +5376,8 @@ final class GameplayController {
               }
               if (!stackIn_144_0) {
                 this.a(true, 58, var4_ref_jd);
-                this.field_Qb = true;
-                this.field_Z = var4_ref_jd.tileX + this.battlefield.mapWidth * var4_ref_jd.tileY;
+                this.cameraFocusPending = true;
+                this.cameraFocusTileIndex = var4_ref_jd.tileX + this.battlefield.mapWidth * var4_ref_jd.tileY;
                 break;
               }
               this.unitCycler.selectNext(48);
@@ -5413,8 +5413,8 @@ final class GameplayController {
               var4_ref_jd = (Unit) (var3_ref_tc);
               if (!var4_ref_jd.movementSpent) {
                 this.a(true, 58, var4_ref_jd);
-                this.field_Z = var4_ref_jd.tileX + this.battlefield.mapWidth * var4_ref_jd.tileY;
-                this.field_Qb = true;
+                this.cameraFocusTileIndex = var4_ref_jd.tileX + this.battlefield.mapWidth * var4_ref_jd.tileY;
+                this.cameraFocusPending = true;
                 if (var8 == 0) {
                   break;
                 }
@@ -7254,7 +7254,7 @@ final class GameplayController {
             if (var3_ref != null) {
               var2_int = this.a((Unit) (var3_ref), (byte) 75);
             }
-            this.camera.a(var2_int, param0);
+            this.camera.snapToTile(var2_int, param0);
           }
           regionExit1: {
             regionExit2: {
@@ -7768,7 +7768,7 @@ final class GameplayController {
               stackIn_238_1 = new StringBuilder().append("total hurt: ").append(this.battlefield.damageTakenByPlayer[this.controlledPlayerId]).append(" lost a unit? ");
               stackIn_239_2 = !(0 >= this.battlefield.unitLossCounts[this.controlledPlayerId]);
               ((tu) (Object) stackIn_238_0).b(((StringBuilder) (Object) stackIn_238_1).append(stackIn_239_2).toString(), 20, 460, 16777215, 1);
-              en.field_E.b("scroll lock? " + this.field_Qb, 20, 470, 16777215, 1);
+              en.field_E.b("scroll lock? " + this.cameraFocusPending, 20, 470, 16777215, 1);
               SoftwareRaster.b(150, 100, 434, 145, 16711935);
             }
             return;
@@ -8853,7 +8853,7 @@ final class GameplayController {
           var5 = AiPlanningStrategy.field_d + 220 - var3 - this.field_H;
           var6 = (var5 + var4Lifetime1) * 40 / var2_int + 0;
           var7 = this.battlefield.mapWidth * 20 + (var4Lifetime1 - var5) * 20 / var2_int;
-          this.camera.a(var6, var7, (byte) 68);
+          this.camera.setWorldPosition(var6, var7, (byte) 68);
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -9031,7 +9031,7 @@ final class GameplayController {
               if (var3 > -1) {
                 this.field_kc = (Unit) (this.battlefield.unitsByPlayer[var3].first((byte) 112));
                 if (this.field_kc != null) {
-                  this.camera.a(this.field_kc.tileX + this.field_kc.tileY * this.battlefield.mapWidth, true);
+                  this.camera.snapToTile(this.field_kc.tileX + this.field_kc.tileY * this.battlefield.mapWidth, true);
                   this.field_Pb = true;
                 }
               }
@@ -9480,7 +9480,7 @@ final class GameplayController {
         }
     }
 
-    private final void d(byte param0) {
+    private final void updateCamera(byte obfuscationGuard) {
         BattleCamera stackIn_7_0 = null;
         int stackIn_8_1 = 0;
         int stackIn_19_0 = 0;
@@ -9493,33 +9493,33 @@ final class GameplayController {
         boolean stackIn_59_6 = false;
         boolean stackIn_66_7 = false;
         boolean stackIn_70_8 = false;
-        ja stackIn_123_0 = null;
+        CameraOverviewTarget stackIn_123_0 = null;
         Object stackIn_135_0 = null;
         int stackIn_135_1 = 0;
         RuntimeException decompiledCaughtException = null;
-        ja stackOut_122_0;
-        int var2_int = 0;
+        CameraOverviewTarget stackOut_122_0;
+        int directionKeysEnabled = 0;
         RuntimeException var2 = null;
-        int var3 = 0;
-        int var4_int = 0;
-        ja var4 = null;
-        int var5 = 0;
-        Object var6 = null;
-        ja var7 = null;
-        int var8 = 0;
-        int var9 = 0;
-        int var5Lifetime1;
-        var9 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        int manualCameraMovement = 0;
+        int cameraPlayerIndex = 0;
+        CameraOverviewTarget overviewTarget = null;
+        int overviewVelocitySettled = 0;
+        Object nearestTarget = null;
+        CameraOverviewTarget candidateTarget = null;
+        int candidateDistance = 0;
+        int obfuscationControl = 0;
+        int nearestDistance;
+        obfuscationControl = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          if (this.field_Qb) {
+          if (this.cameraFocusPending) {
             stackIn_7_0 = this.camera;
             if (!this.field_z) {
               stackIn_8_1 = 40;
             } else {
               stackIn_8_1 = 5;
             }
-            if (((BattleCamera) (Object) stackIn_7_0).a(stackIn_8_1, (byte) 113, this.field_Z)) {
-              this.field_Qb = false;
+            if (((BattleCamera) (Object) stackIn_7_0).moveTowardTile(stackIn_8_1, (byte) 113, this.cameraFocusTileIndex)) {
+              this.cameraFocusPending = false;
               this.a(3, -128);
             }
             return;
@@ -9531,11 +9531,11 @@ final class GameplayController {
             stackIn_19_0 = 1;
           }
           boolean decompiledFrameRemainder4 = true;
-          var2_int = stackIn_19_0;
+          directionKeysEnabled = stackIn_19_0;
           stackIn_26_0 = this.camera;
-          stackIn_26_1 = param0 + 145;
+          stackIn_26_1 = obfuscationGuard + 145;
           if (!br.field_f[99] && (!br.field_f[49] ||
-            var2_int == 0)) {
+            directionKeysEnabled == 0)) {
             stackIn_29_2 = false;
             decompiledFrameRemainder4 = false;
           }
@@ -9545,7 +9545,7 @@ final class GameplayController {
           boolean decompiledFrameRemainder3 = true;
           stackIn_36_3 = ko.field_b;
           if (!br.field_f[98] && (!br.field_f[33] ||
-            var2_int == 0)) {
+            directionKeysEnabled == 0)) {
             stackIn_39_4 = false;
             decompiledFrameRemainder3 = false;
           }
@@ -9554,7 +9554,7 @@ final class GameplayController {
           }
           boolean decompiledFrameRemainder2 = true;
           if (!br.field_f[97] && (!br.field_f[50] ||
-            var2_int == 0)) {
+            directionKeysEnabled == 0)) {
             stackIn_49_5 = false;
             decompiledFrameRemainder2 = false;
           }
@@ -9563,7 +9563,7 @@ final class GameplayController {
           }
           boolean decompiledFrameRemainder1 = true;
           if (!br.field_f[96] && (!br.field_f[48] ||
-            var2_int == 0)) {
+            directionKeysEnabled == 0)) {
             stackIn_59_6 = false;
             decompiledFrameRemainder1 = false;
           }
@@ -9572,107 +9572,107 @@ final class GameplayController {
           }
           stackIn_66_7 = (this.field_Pb) || (this.field_Xb);
           stackIn_70_8 = (ro.field_ub == 2);
-          var3 = ((BattleCamera) (Object) stackIn_26_0).a(stackIn_26_1, stackIn_29_2, stackIn_36_3, stackIn_39_4, stackIn_49_5, stackIn_59_6, stackIn_66_7, stackIn_70_8, AiPlanningStrategy.field_d) ? 1 : 0;
-          if (var3 != 0) {
+          manualCameraMovement = ((BattleCamera) (Object) stackIn_26_0).handleInput(stackIn_26_1, stackIn_29_2, stackIn_36_3, stackIn_39_4, stackIn_49_5, stackIn_59_6, stackIn_66_7, stackIn_70_8, AiPlanningStrategy.field_d) ? 1 : 0;
+          if (manualCameraMovement != 0) {
             this.field_Pb = false;
             this.field_Xb = false;
-            if (null != this.field_cb) {
-              this.field_cb.b(90);
+            if (null != this.overviewTargets) {
+              this.overviewTargets.b(90);
             }
           }
-          if (var3 == 0 &&
+          if (manualCameraMovement == 0 &&
             this.field_H == 240 &&
             ro.field_ub == 1) {
-            var3 = this.m(false) ? 1 : 0;
+            manualCameraMovement = this.m(false) ? 1 : 0;
           }
-          if (param0 != -42) {
+          if (obfuscationGuard != -42) {
             this.l((byte) 23);
           }
           if (this.battlefield.h(-293) &&
             !this.field_z) {
-            var4_int = this.controlledPlayerId;
-            if (0 > var4_int) {
-              var4_int = this.battlefield.currentPlayer;
+            cameraPlayerIndex = this.controlledPlayerId;
+            if (0 > cameraPlayerIndex) {
+              cameraPlayerIndex = this.battlefield.currentPlayer;
             }
-            hc.a(var4_int, false);
-            if (var9 == 0) {
+            hc.a(cameraPlayerIndex, false);
+            if (obfuscationControl == 0) {
               return;
             }
           }
-          if (null != this.field_cb &&
-            var3 == 0) {
+          if (null != this.overviewTargets &&
+            manualCameraMovement == 0) {
             boolean decompiledFrameRemainder0 = true;
-            var4 = (ja) (this.field_cb.first((byte) 104));
-            if (null == var4) {
-              this.field_cb = null;
-              decompiledFrameRemainder0 = (var9 != 0);
+            overviewTarget = (CameraOverviewTarget) (this.overviewTargets.first((byte) 104));
+            if (null == overviewTarget) {
+              this.overviewTargets = null;
+              decompiledFrameRemainder0 = (obfuscationControl != 0);
             }
             if (decompiledFrameRemainder0) {
-              if (!var4.a((byte) 127)) {
-                var5 = this.camera.a(10, (byte) 113, var4.a(this.battlefield.mapWidth, (byte) -57)) ? 1 : 0;
-                if (var5 != 0) {
-                  var4.f(param0 ^ 79);
+              if (!overviewTarget.hasStartedHold((byte) 127)) {
+                overviewVelocitySettled = this.camera.moveTowardTile(10, (byte) 113, overviewTarget.getTileIndex(this.battlefield.mapWidth, (byte) -57)) ? 1 : 0;
+                if (overviewVelocitySettled != 0) {
+                  overviewTarget.startHold(obfuscationGuard ^ 79);
                 }
-                decompiledFrameRemainder0 = (var9 != 0);
+                decompiledFrameRemainder0 = (obfuscationControl != 0);
               }
               if ((decompiledFrameRemainder0) &&
-                (!var4.a(-5))) {
-                var4.unlink(-109);
-                var5Lifetime1 = 2147483647;
-                var6 = null;
-                var7 = (ja) (this.field_cb.first((byte) 111));
+                (!overviewTarget.advanceHold(-5))) {
+                overviewTarget.unlink(-109);
+                nearestDistance = 2147483647;
+                nearestTarget = null;
+                candidateTarget = (CameraOverviewTarget) (this.overviewTargets.first((byte) 111));
                 while (true) {
-                  if (null != var7) {
-                    stackOut_122_0 = var7;
+                  if (null != candidateTarget) {
+                    stackOut_122_0 = candidateTarget;
                     stackIn_135_0 = stackOut_122_0;
                     stackIn_123_0 = stackOut_122_0;
                     stackIn_135_1 = -5;
-                    if (var9 == 0) {
-                      if (((ja) (Object) stackIn_123_0).a(stackIn_135_1, var4)) {
-                        var7.unlink(param0 + 72);
+                    if (obfuscationControl == 0) {
+                      if (((CameraOverviewTarget) (Object) stackIn_123_0).isNearTarget(stackIn_135_1, overviewTarget)) {
+                        candidateTarget.unlink(obfuscationGuard + 72);
                       } else {
-                        var8 = var7.b(2, var4);
-                        if (var8 < var5Lifetime1) {
-                          var5Lifetime1 = var8;
-                          var6 = var7;
+                        candidateDistance = candidateTarget.distanceSquaredTo(2, overviewTarget);
+                        if (candidateDistance < nearestDistance) {
+                          nearestDistance = candidateDistance;
+                          nearestTarget = candidateTarget;
                         }
                       }
-                      var7 = (ja) (this.field_cb.next((byte) 123));
+                      candidateTarget = (CameraOverviewTarget) (this.overviewTargets.next((byte) 123));
                       continue;
                     }
                   } else {
-                    if (var6 == null) {
+                    if (nearestTarget == null) {
                       break;
                     }
-                    stackIn_135_0 = var6;
+                    stackIn_135_0 = nearestTarget;
                     stackIn_135_1 = 77;
                   }
-                  ((ja) stackIn_135_0).unlink(stackIn_135_1);
-                  this.field_cb.addFirst(750, (IntrusiveNode) (var6));
+                  ((CameraOverviewTarget) stackIn_135_0).unlink(stackIn_135_1);
+                  this.overviewTargets.addFirst(750, (IntrusiveNode) (nearestTarget));
                   break;
                 }
               }
             }
-            if (var9 == 0) {
+            if (obfuscationControl == 0) {
               return;
             }
           }
           if (-2 != this.field_y &&
             this.field_Xb) {
-            this.camera.a(-1, (byte) 113, this.battlefield.mapWidth * this.field_ec + this.field_X);
-            if (var9 == 0) {
+            this.camera.moveTowardTile(-1, (byte) 113, this.battlefield.mapWidth * this.field_ec + this.field_X);
+            if (obfuscationControl == 0) {
               return;
             }
           }
           if (this.field_Pb &&
-            var3 == 0) {
-            this.camera.a((byte) 104, this.eventPresenters);
+            manualCameraMovement == 0) {
+            this.camera.followEventPresenters((byte) 104, this.eventPresenters);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) var2), "ic.CA(" + param0 + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) var2), "ic.CA(" + obfuscationGuard + ')');
         }
     }
 
@@ -11729,22 +11729,22 @@ final class GameplayController {
         }
     }
 
-    final void c(int param0, int param1, int param2) {
+    final void focusCameraOnTile(int obfuscationGuard, int tileX, int tileY) {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var4 = null;
         try {
-          this.field_Z = this.battlefield.mapWidth * param2 + param1;
-          if (param0 != 25) {
+          this.cameraFocusTileIndex = this.battlefield.mapWidth * tileY + tileX;
+          if (obfuscationGuard != 25) {
             this.e(-24);
           }
           this.field_Pb = false;
-          this.field_Qb = true;
+          this.cameraFocusPending = true;
           this.field_Xb = false;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) var4), "ic.V(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) var4), "ic.V(" + obfuscationGuard + ',' + tileX + ',' + tileY + ')');
         }
     }
 
@@ -12199,7 +12199,7 @@ final class GameplayController {
           this.field_Ub = new NodeDeque();
           this.field_o = new NodeDeque();
           this.field_Nb = new NodeDeque();
-          this.field_cb = new NodeDeque();
+          this.overviewTargets = new NodeDeque();
           this.field_u = param4;
           this.field_lb = param0;
           this.controlledPlayerId = param3;
@@ -12602,7 +12602,7 @@ final class GameplayController {
           }
           if (decompiledFrameRemainder2) {
             this.unitCycler = new UnitCycler(this.battlefield.unitsByPlayer[this.battlefield.campaignMission.playerSlot]);
-            this.j(0);
+            this.rebuildOverviewTargets(0);
           }
           oa.a(-63, this.field_d);
           return;

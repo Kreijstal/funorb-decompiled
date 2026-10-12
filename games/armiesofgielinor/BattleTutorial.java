@@ -1732,7 +1732,7 @@ class BattleTutorial {
         if (param2 != 26) {
           return;
         }
-        this.controller.c(25, param0, param1);
+        this.controller.focusCameraOnTile(25, param0, param1);
     }
 
     final void clearControlHighlights(byte obfuscationGuard) {

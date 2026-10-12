@@ -4995,7 +4995,7 @@ final class TickCounter {
                 }
                 var2 = fk.a(false, "TTREED_BOLTS");
                 if (var2 != null) {
-                  ja.field_o = uu.a(var2, (byte) 124);
+                  CameraOverviewTarget.field_o = uu.a(var2, (byte) 124);
                 }
                 var2 = fk.a(false, "TTREED_RAINS");
                 if (null != var2) {

@@ -116,7 +116,7 @@ final class ot extends dr {
           discarded$1 = new RgbSprite(80, 40);
           ef.field_c = CipherPacketBuffer.currentBattlefield.mapHeight;
           ResourceRequest.field_y = CipherPacketBuffer.currentBattlefield.mapWidth;
-          og.field_p = ResourceArchive.field_a.field_o;
+          og.field_p = ResourceArchive.field_a.overlayValues;
           vs.field_e = CipherPacketBuffer.currentBattlefield.tiles;
           bt.field_f = CipherPacketBuffer.currentBattlefield.mapTheme;
           nk.a((byte) 111);

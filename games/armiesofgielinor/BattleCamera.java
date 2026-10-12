@@ -5,179 +5,179 @@ import java.util.*;
 
 final class BattleCamera {
     private int[] velocity;
-    private int[] field_n;
+    private int[] viewportOriginGrid;
     private EventPresenter focusedPresenter;
     int[] transformedPosition;
-    private boolean field_q;
-    private int field_i;
+    private boolean eventFocusActive;
+    private int focusWorldY;
     int projectionTileIndex;
-    private int[] field_a;
+    private int[] previousPointer;
     private int mapHeight;
     int[] targetPosition;
     int[] currentPosition;
     int[] screenPosition;
-    int[] field_o;
-    private int[] field_r;
+    int[] overlayValues;
+    private int[] viewportCenterGrid;
     static String field_f;
-    private int field_g;
+    private int focusWorldX;
     int[] gridPosition;
     private int mapWidth;
 
-    private final boolean b(byte param0, int param1) {
-        int var3;
-        int var4;
-        int var5;
-        int var6;
-        int var7;
-        int var8;
+    private final boolean advanceTowardTarget(byte obfuscationGuard, int maximumSpeed) {
+        int targetX;
+        int targetY;
+        int deltaX;
+        int deltaY;
+        int speedLimit;
+        int acceleration;
         boolean stackIn_8_0 = false;
-        this.a(-100, this.targetPosition);
-        var3 = this.targetPosition[0];
-        var4 = this.targetPosition[1];
-        var5 = -this.currentPosition[0] + var3;
-        var6 = -this.currentPosition[1] + var4;
-        var7 = 16;
-        if (param1 > -1) {
-          var7 = param1;
+        this.clampWorldPosition(-100, this.targetPosition);
+        targetX = this.targetPosition[0];
+        targetY = this.targetPosition[1];
+        deltaX = -this.currentPosition[0] + targetX;
+        deltaY = -this.currentPosition[1] + targetY;
+        speedLimit = 16;
+        if (maximumSpeed > -1) {
+          speedLimit = maximumSpeed;
         }
-        var8 = 2;
-        this.velocity[0] = this.a(this.velocity[0], 6198, var5, var8, var7);
-        this.velocity[1] = this.a(this.velocity[1], 6198, var6, var8, var7);
-        if (param0 >= -118) {
+        acceleration = 2;
+        this.velocity[0] = this.adjustAxisVelocity(this.velocity[0], 6198, deltaX, acceleration, speedLimit);
+        this.velocity[1] = this.adjustAxisVelocity(this.velocity[1], 6198, deltaY, acceleration, speedLimit);
+        if (obfuscationGuard >= -118) {
           this.projectGridToTarget(-83);
         }
         this.currentPosition[1] = this.currentPosition[1] + this.velocity[1];
         this.currentPosition[0] = this.currentPosition[0] + this.velocity[0];
-        this.a(-78, this.currentPosition);
-        this.a(false);
-        this.h(-1);
+        this.clampWorldPosition(-78, this.currentPosition);
+        this.updateViewportCenterGrid(false);
+        this.updateViewportOriginGrid(-1);
         stackIn_8_0 = (0 == this.velocity[0]) && (0 == this.velocity[1]);
         return stackIn_8_0;
     }
 
-    private final int a(int param0, int param1, int param2, int param3, int param4) {
+    private final int adjustAxisVelocity(int velocity, int obfuscationGuard, int distance, int acceleration, int maximumSpeed) {
         int stackIn_11_0 = 0;
         int stackIn_15_0 = 0;
         int stackIn_23_0 = 0;
         int stackIn_26_0 = 0;
         int stackIn_32_0 = 0;
         int stackIn_35_0 = 0;
-        int var6;
-        int var7;
-        int var8;
-        int var9;
-        int var10;
-        int var11;
-        int var12;
-        int var13;
-        int var14;
-        var14 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
-        var6 = param0;
-        if (param2 == 0) {
+        int adjustedVelocity;
+        int velocityDirection;
+        int targetDirection;
+        int reversing;
+        int atSpeedLimit;
+        int braking;
+        int canAccelerate;
+        int belowSpeedLimit;
+        int obfuscationControl;
+        obfuscationControl = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        adjustedVelocity = velocity;
+        if (distance == 0) {
           return 0;
         }
-        if (param1 != 6198) {
+        if (obfuscationGuard != 6198) {
           return -40;
         }
-        if (param0 == param2) {
-          return param0;
+        if (velocity == distance) {
+          return velocity;
         }
-        stackIn_11_0 = (param2 < 0) ? -1 : 1;
-        var8 = stackIn_11_0;
-        param2 = param2 * var8;
-        if (param0 == 0) {
-          var7 = var8;
+        stackIn_11_0 = (distance < 0) ? -1 : 1;
+        targetDirection = stackIn_11_0;
+        distance = distance * targetDirection;
+        if (velocity == 0) {
+          velocityDirection = targetDirection;
         } else {
-          stackIn_15_0 = (0 > param0) ? -1 : 1;
-          var7 = stackIn_15_0;
-          param0 = var7 * param0;
+          stackIn_15_0 = (0 > velocity) ? -1 : 1;
+          velocityDirection = stackIn_15_0;
+          velocity = velocityDirection * velocity;
         }
-        if (param2 < param0) {
-          return var8 * param2;
+        if (distance < velocity) {
+          return targetDirection * distance;
         }
-        stackIn_23_0 = (var7 == var8) ? 0 : 1;
-        var9 = stackIn_23_0;
-        stackIn_26_0 = (param4 > param0) ? 0 : 1;
-        var10 = stackIn_26_0;
-        var11 = this.a((byte) -70, param0, param2) ? 1 : 0;
-        if (param3 <= param4 - param0) {
-          stackIn_32_0 = (Math.abs(param2) > param3 + param0) ? 1 : 0;
+        stackIn_23_0 = (velocityDirection == targetDirection) ? 0 : 1;
+        reversing = stackIn_23_0;
+        stackIn_26_0 = (maximumSpeed > velocity) ? 0 : 1;
+        atSpeedLimit = stackIn_26_0;
+        braking = this.shouldBrake((byte) -70, velocity, distance) ? 1 : 0;
+        if (acceleration <= maximumSpeed - velocity) {
+          stackIn_32_0 = (Math.abs(distance) > acceleration + velocity) ? 1 : 0;
         } else {
           stackIn_32_0 = 0;
         }
-        var12 = stackIn_32_0;
-        stackIn_35_0 = (param4 <= param0) ? 0 : 1;
+        canAccelerate = stackIn_32_0;
+        stackIn_35_0 = (maximumSpeed <= velocity) ? 0 : 1;
         regionExit1: {
-          var13 = stackIn_35_0;
-          if (var9 != 0) {
-            var6 = param0 >> 3;
+          belowSpeedLimit = stackIn_35_0;
+          if (reversing != 0) {
+            adjustedVelocity = velocity >> 3;
           } else {
-            if (var10 == 0 &&
-              var11 == 0) {
-              if (var12 != 0) {
-                var6 = param0 + param3;
+            if (atSpeedLimit == 0 &&
+              braking == 0) {
+              if (canAccelerate != 0) {
+                adjustedVelocity = velocity + acceleration;
               } else {
-                if (var13 != 0) {
-                  var6 = param0 + 1;
+                if (belowSpeedLimit != 0) {
+                  adjustedVelocity = velocity + 1;
                   break regionExit1;
                 }
               }
               break regionExit1;
             }
-            var6 = param0 * 7 >> 3;
+            adjustedVelocity = velocity * 7 >> 3;
           }
         }
-        var6 = var6 * var7;
-        return var6;
+        adjustedVelocity = adjustedVelocity * velocityDirection;
+        return adjustedVelocity;
     }
 
-    private final boolean a(boolean param0, boolean param1, int param2, int param3) {
-        if (!param1 ||
-          param2 < 0 ||
-          0 > param3) {
-          this.field_a[0] = param2;
-          this.field_a[1] = param3;
+    private final boolean dragCamera(boolean obfuscationGuard, boolean dragging, int pointerX, int pointerY) {
+        if (!dragging ||
+          pointerX < 0 ||
+          0 > pointerY) {
+          this.previousPointer[0] = pointerX;
+          this.previousPointer[1] = pointerY;
           return false;
         }
-        this.currentPosition[0] = this.currentPosition[0] - (param2 - this.field_a[0]);
-        this.currentPosition[1] = this.currentPosition[1] - (-this.field_a[1] + param3);
-        this.field_a[0] = param2;
-        this.field_a[1] = param3;
-        this.a(-85, this.currentPosition);
-        this.a(!param0 ? true : false);
-        this.h(-1);
-        if (!param0) {
-          this.a((byte) 70, 24);
+        this.currentPosition[0] = this.currentPosition[0] - (pointerX - this.previousPointer[0]);
+        this.currentPosition[1] = this.currentPosition[1] - (-this.previousPointer[1] + pointerY);
+        this.previousPointer[0] = pointerX;
+        this.previousPointer[1] = pointerY;
+        this.clampWorldPosition(-85, this.currentPosition);
+        this.updateViewportCenterGrid(!obfuscationGuard ? true : false);
+        this.updateViewportOriginGrid(-1);
+        if (!obfuscationGuard) {
+          this.setFocusTile((byte) 70, 24);
         }
         return true;
     }
 
-    private final boolean a(byte param0, int param1, int param2) {
-        int var6 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
-        int var4 = param1;
-        int var5 = 0;
-        while (var4 > 0) {
-          var5 = var5 + var4;
-          var4 = 7 * var4 >> 3;
+    private final boolean shouldBrake(byte obfuscationGuard, int speed, int distance) {
+        int obfuscationControl = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        int remainingSpeed = speed;
+        int stoppingDistance = 0;
+        while (remainingSpeed > 0) {
+          stoppingDistance = stoppingDistance + remainingSpeed;
+          remainingSpeed = 7 * remainingSpeed >> 3;
         }
-        if (param0 != -70) {
+        if (obfuscationGuard != -70) {
           return false;
         }
-        if (param2 - var5 <= 0) {
+        if (distance - stoppingDistance <= 0) {
           return true;
         }
         return false;
     }
 
-    final void a(int param0, int param1, byte param2) {
-        this.currentPosition[1] = param1;
-        this.currentPosition[0] = param0;
-        this.a(-93, this.currentPosition);
-        this.a(false);
-        if (param2 <= 54) {
+    final void setWorldPosition(int worldX, int worldY, byte obfuscationGuard) {
+        this.currentPosition[1] = worldY;
+        this.currentPosition[0] = worldX;
+        this.clampWorldPosition(-93, this.currentPosition);
+        this.updateViewportCenterGrid(false);
+        if (obfuscationGuard <= 54) {
           this.mapHeight = -31;
         }
-        this.h(-1);
+        this.updateViewportOriginGrid(-1);
     }
 
     private final int b(int param0, int param1, int param2) {
@@ -189,7 +189,7 @@ final class BattleCamera {
           param2 < this.mapWidth &&
           param0 > -1 &&
           this.mapWidth > param0) {
-          var4 = var4 + this.field_o[param2 + param0 * this.mapWidth];
+          var4 = var4 + this.overlayValues[param2 + param0 * this.mapWidth];
         } else {
           var4 += 255;
         }
@@ -197,7 +197,7 @@ final class BattleCamera {
           this.mapWidth > param2 + 1 &&
           param0 > -1 &&
           param0 < this.mapWidth) {
-          var4 = var4 + this.field_o[this.mapWidth * param0 + 1 + param2];
+          var4 = var4 + this.overlayValues[this.mapWidth * param0 + 1 + param2];
         } else {
           var4 += 255;
         }
@@ -205,7 +205,7 @@ final class BattleCamera {
           this.mapWidth > 1 + param2 &&
           param0 + 1 > -1 &&
           param0 + 1 < this.mapWidth) {
-          var4 = var4 + this.field_o[(1 + param0) * this.mapWidth + (param2 + 1)];
+          var4 = var4 + this.overlayValues[(1 + param0) * this.mapWidth + (param2 + 1)];
         } else {
           var4 += 255;
         }
@@ -216,7 +216,7 @@ final class BattleCamera {
           param2 < this.mapWidth &&
           -1 < param0 + 1 &&
           this.mapWidth > 1 + param0) {
-          var4 = var4 + this.field_o[this.mapWidth * (1 + param0) + param2];
+          var4 = var4 + this.overlayValues[this.mapWidth * (1 + param0) + param2];
         } else {
           var4 += 255;
         }
@@ -227,31 +227,31 @@ final class BattleCamera {
         this.projectGridToTarget(-41);
         this.screenPosition[0] = -this.currentPosition[0] + (this.targetPosition[0] + (so.field_b.field_a >> 1));
         if (obfuscationGuard != 9470337) {
-          this.field_q = false;
+          this.eventFocusActive = false;
         }
         this.screenPosition[1] = -this.currentPosition[1] + (this.targetPosition[1] + (so.field_b.field_g >> 1) - 20);
     }
 
-    final void j(int param0) {
-        if (param0 > -117) {
+    final void refreshViewportGrid(int obfuscationGuard) {
+        if (obfuscationGuard > -117) {
           return;
         }
-        this.a(false);
-        this.h(-1);
+        this.updateViewportCenterGrid(false);
+        this.updateViewportOriginGrid(-1);
     }
 
-    private final void c(byte param0) {
+    private final void storeGridFocus(byte obfuscationGuard) {
         this.projectGridToTarget(-115);
-        if (param0 != -28) {
+        if (obfuscationGuard != -28) {
           field_f = (String) null;
         }
-        this.field_g = this.targetPosition[0];
-        this.field_i = this.targetPosition[1];
-        this.a(false);
-        this.h(param0 + 27);
+        this.focusWorldX = this.targetPosition[0];
+        this.focusWorldY = this.targetPosition[1];
+        this.updateViewportCenterGrid(false);
+        this.updateViewportOriginGrid(obfuscationGuard + 27);
     }
 
-    private final void a(int param0, int[] param1) {
+    private final void clampWorldPosition(int obfuscationGuard, int[] worldPosition) {
         RuntimeException stackIn_21_0 = null;
         StringBuilder stackIn_21_1 = null;
         String stackIn_22_2 = null;
@@ -267,39 +267,39 @@ final class BattleCamera {
         var7 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           var3_int = 40 * this.mapWidth >> 1;
-          if (param0 >= -76) {
+          if (obfuscationGuard >= -76) {
             this.focusedPresenter = (EventPresenter) null;
           }
-          var4 = param1[0] - (var3_int << 1) >> 1;
-          var5 = param1[1] - var3_int;
+          var4 = worldPosition[0] - (var3_int << 1) >> 1;
+          var5 = worldPosition[1] - var3_int;
           if (Math.abs(var4) + Math.abs(var5) > var3_int) {
             var6 = -var3_int + (Math.abs(var4) + Math.abs(var5)) >> 1;
             if (0 >= var4) {
-              param1[0] = param1[0] + (var6 << 1);
+              worldPosition[0] = worldPosition[0] + (var6 << 1);
             } else {
-              param1[0] = param1[0] - (var6 << 1);
+              worldPosition[0] = worldPosition[0] - (var6 << 1);
             }
             if (var5 > 0) {
-              param1[1] = param1[1] - var6;
+              worldPosition[1] = worldPosition[1] - var6;
             } else {
-              param1[1] = param1[1] + var6;
+              worldPosition[1] = worldPosition[1] + var6;
             }
           }
-          var5Lifetime1 = param1[1] - var3_int;
-          var4Lifetime1 = -(var3_int << 1) + param1[0] >> 1;
+          var5Lifetime1 = worldPosition[1] - var3_int;
+          var4Lifetime1 = -(var3_int << 1) + worldPosition[0] >> 1;
           var3_int -= 100;
           if (var3_int < var4Lifetime1) {
-            param1[0] = param1[0] - (-var3_int + var4Lifetime1 << 1);
+            worldPosition[0] = worldPosition[0] - (-var3_int + var4Lifetime1 << 1);
           } else {
             if (var4Lifetime1 < -var3_int) {
-              param1[0] = param1[0] - (var3_int + var4Lifetime1 << 1);
+              worldPosition[0] = worldPosition[0] - (var3_int + var4Lifetime1 << 1);
             }
           }
           if (var5Lifetime1 > var3_int) {
-            param1[1] = param1[1] - (var5Lifetime1 - var3_int);
+            worldPosition[1] = worldPosition[1] - (var5Lifetime1 - var3_int);
           } else {
             if (-var3_int > var5Lifetime1) {
-              param1[1] = param1[1] - (var3_int + var5Lifetime1);
+              worldPosition[1] = worldPosition[1] - (var3_int + var5Lifetime1);
             }
           }
           return;
@@ -307,8 +307,8 @@ final class BattleCamera {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
           stackIn_21_0 = var3;
-          stackIn_21_1 = new StringBuilder().append("v.NA(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_21_1 = new StringBuilder().append("v.NA(").append(obfuscationGuard).append(',');
+          if (worldPosition == null) {
             stackIn_22_2 = "null";
           } else {
             stackIn_22_2 = "{...}";
@@ -342,8 +342,8 @@ final class BattleCamera {
         if (param1 != 1745035905) {
           return;
         }
-        var3 = this.field_n[0];
-        var4 = this.field_n[1];
+        var3 = this.viewportOriginGrid[0];
+        var4 = this.viewportOriginGrid[1];
         var4 -= 3;
         this.gridPosition[0] = var3;
         this.gridPosition[1] = var4;
@@ -403,7 +403,7 @@ final class BattleCamera {
     private final void screenToTarget(int obfuscationGuard) {
         boolean discarded$0 = false;
         if (obfuscationGuard < 88) {
-          discarded$0 = this.a(false, true, 4, 95);
+          discarded$0 = this.dragCamera(false, true, 4, 95);
         }
         int var3 = this.screenPosition[1];
         int var2 = this.screenPosition[0];
@@ -500,15 +500,15 @@ final class BattleCamera {
         }
     }
 
-    private final void h(int param0) {
+    private final void updateViewportOriginGrid(int obfuscationGuard) {
         this.screenPosition[1] = 0;
         this.screenPosition[0] = 0;
         this.screenToGrid(false);
-        if (param0 != -1) {
-          this.a((byte) 54, -118);
+        if (obfuscationGuard != -1) {
+          this.setFocusTile((byte) 54, -118);
         }
-        this.field_n[0] = this.gridPosition[0];
-        this.field_n[1] = this.gridPosition[1];
+        this.viewportOriginGrid[0] = this.gridPosition[0];
+        this.viewportOriginGrid[1] = this.gridPosition[1];
     }
 
     private final void a(int param0, int param1, int param2, boolean param3, boolean param4, int param5, boolean param6, int param7, int param8, int param9) {
@@ -527,9 +527,9 @@ final class BattleCamera {
           param1 < this.mapWidth &&
           param5 < this.mapHeight) {
           if (param3) {
-            var12 = this.field_o[this.mapWidth * param5 + param1];
+            var12 = this.overlayValues[this.mapWidth * param5 + param1];
           } else {
-            var11 = this.field_o[param5 * this.mapWidth + param1];
+            var11 = this.overlayValues[param5 * this.mapWidth + param1];
           }
         }
         if (param0 > -1 &&
@@ -537,13 +537,13 @@ final class BattleCamera {
           param0 < this.mapWidth &&
           param2 < this.mapHeight) {
           if (param3) {
-            var13 = this.field_o[this.mapWidth * param2 + param0];
+            var13 = this.overlayValues[this.mapWidth * param2 + param0];
           } else {
-            var14 = this.field_o[param0 + param2 * this.mapWidth];
+            var14 = this.overlayValues[param0 + param2 * this.mapWidth];
           }
         }
         if (param8 != 1760) {
-          this.field_o = (int[]) null;
+          this.overlayValues = (int[]) null;
         }
         if (!param3) {
           var13 = this.b(param2, -4510, param0);
@@ -555,32 +555,32 @@ final class BattleCamera {
         this.a(-8302, param2, var12, param3, var13, param6, param7, var14, param0, param4, param9, param1, var11, param5);
     }
 
-    private final void a(boolean param0) {
+    private final void updateViewportCenterGrid(boolean obfuscationGuard) {
         this.screenPosition[1] = so.field_b.field_g >> 1;
         this.screenPosition[0] = so.field_b.field_a >> 1;
-        this.screenToGrid(param0);
-        this.field_r[1] = this.gridPosition[1];
-        this.field_r[0] = this.gridPosition[0];
+        this.screenToGrid(obfuscationGuard);
+        this.viewportCenterGrid[1] = this.gridPosition[1];
+        this.viewportCenterGrid[0] = this.gridPosition[0];
     }
 
-    private final boolean a(boolean param0, boolean param1, boolean param2, boolean param3, boolean param4, boolean param5) {
+    private final boolean panCamera(boolean enabled, boolean panDown, boolean suspendInertia, boolean panRight, boolean panLeft, boolean panUp) {
         int var7;
         int var8;
         int var9;
         var9 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         var7 = 0;
-        if (param5 ||
-          param1 ||
-          param4 ||
-          param3) {
+        if (panUp ||
+          panDown ||
+          panLeft ||
+          panRight) {
           var7 = 1;
         }
-        if (!param0) {
+        if (!enabled) {
           return true;
         }
         var8 = 16;
-        if (!param5) {
-          if (!param2 &&
+        if (!panUp) {
+          if (!suspendInertia &&
             this.velocity[1] < 0) {
             this.velocity[1] = this.velocity[1] + 1;
           }
@@ -589,43 +589,43 @@ final class BattleCamera {
             this.velocity[1] = this.velocity[1] - 1;
           }
         }
-        if (param1) {
+        if (panDown) {
           if (this.velocity[1] < var8) {
             this.velocity[1] = this.velocity[1] + 1;
           }
         } else {
-          if (!param2 &&
+          if (!suspendInertia &&
             this.velocity[1] > 0) {
             this.velocity[1] = this.velocity[1] - 1;
           }
         }
-        if (param4) {
+        if (panLeft) {
           if (-var8 < this.velocity[0]) {
             this.velocity[0] = this.velocity[0] - 1;
           }
         } else {
-          if (!param2 &&
+          if (!suspendInertia &&
             this.velocity[0] < 0) {
             this.velocity[0] = this.velocity[0] + 1;
           }
         }
-        if (param3) {
+        if (panRight) {
           if (this.velocity[0] < var8) {
             this.velocity[0] = this.velocity[0] + 1;
           }
         } else {
-          if (!param2 &&
+          if (!suspendInertia &&
             0 < this.velocity[0]) {
             this.velocity[0] = this.velocity[0] - 1;
           }
         }
-        if (!param2 ||
+        if (!suspendInertia ||
           var7 != 0) {
           this.currentPosition[1] = this.currentPosition[1] + this.velocity[1];
           this.currentPosition[0] = this.currentPosition[0] + (this.velocity[0] << 1);
-          this.a(-81, this.currentPosition);
-          this.a(false);
-          this.h(-1);
+          this.clampWorldPosition(-81, this.currentPosition);
+          this.updateViewportCenterGrid(false);
+          this.updateViewportOriginGrid(-1);
         }
         return var7 != 0;
     }
@@ -645,13 +645,13 @@ final class BattleCamera {
         this.gridPosition[gridYSlot] = var5 / 40;
     }
 
-    final void a(int param0, boolean param1) {
-        this.gridPosition[1] = param0 / this.mapWidth;
-        this.gridPosition[0] = param0 - this.mapWidth * this.gridPosition[1];
-        if (!param1) {
+    final void snapToTile(int tileIndex, boolean obfuscationGuard) {
+        this.gridPosition[1] = tileIndex / this.mapWidth;
+        this.gridPosition[0] = tileIndex - this.mapWidth * this.gridPosition[1];
+        if (!obfuscationGuard) {
           this.velocity = (int[]) null;
         }
-        this.b(!param1 ? true : false);
+        this.snapToGrid(!obfuscationGuard ? true : false);
     }
 
     final void screenToGrid(boolean obfuscationGuard) {
@@ -811,7 +811,7 @@ final class BattleCamera {
           }
           if (param0 != -8302) {
             var40 = (int[]) null;
-            this.a(-43, (int[]) null);
+            this.clampWorldPosition(-43, (int[]) null);
           }
           if (param1 > -1 + this.mapHeight) {
             this.a(true, param4, param10, -78, param5, param6, param2, param7, param3, param9, param12);
@@ -932,7 +932,7 @@ final class BattleCamera {
         var19 = so.field_b.field_a;
         var20 = so.field_b.field_g;
         if (param3 >= -51) {
-          this.field_g = -88;
+          this.focusWorldX = -88;
         }
         for (var21 = param5; 40 + param5 > var21; var21++) {
           stackIn_9_0 = 0;
@@ -1011,13 +1011,13 @@ final class BattleCamera {
         field_f = null;
     }
 
-    final boolean a(int param0, boolean param1, int param2, boolean param3, boolean param4, boolean param5, boolean param6, boolean param7, int param8) {
+    final boolean handleInput(int obfuscationGuard, boolean panDown, int pointerY, boolean panUp, boolean panRight, boolean panLeft, boolean suspendInertia, boolean dragging, int pointerX) {
         int var10 = 0;
-        var10 = this.a(true, param7, param8, param2) ? 1 : 0;
+        var10 = this.dragCamera(true, dragging, pointerX, pointerY) ? 1 : 0;
         if (var10 == 0) {
-          var10 = this.a(true, param1, param6, param4, param5, param3) ? 1 : 0;
+          var10 = this.panCamera(true, panDown, suspendInertia, panRight, panLeft, panUp) ? 1 : 0;
         }
-        if (param0 < 88) {
+        if (obfuscationGuard < 88) {
           this.screenToTarget(93);
         }
         return var10 != 0;
@@ -1041,15 +1041,15 @@ final class BattleCamera {
         int var12;
         int var13;
         var13 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
-        var2 = this.field_n[0];
-        var3 = this.field_n[1];
+        var2 = this.viewportOriginGrid[0];
+        var3 = this.viewportOriginGrid[1];
         this.gridPosition[0] = var2;
         var3 -= 3;
         this.gridPosition[1] = var3;
         this.projectGridToTarget(param0 - 242);
         this.projectTargetToScreen(0);
         if (param0 != 200) {
-          this.field_i = 67;
+          this.focusWorldY = 67;
         }
         var4 = 40 + this.screenPosition[0];
         var5 = -20 + this.screenPosition[1];
@@ -1094,17 +1094,17 @@ final class BattleCamera {
         }
     }
 
-    final boolean a(int param0, byte param1, int param2) {
-        this.gridPosition[1] = param2 / this.mapWidth;
-        if (param1 != 113) {
+    final boolean moveTowardTile(int maximumSpeed, byte obfuscationGuard, int tileIndex) {
+        this.gridPosition[1] = tileIndex / this.mapWidth;
+        if (obfuscationGuard != 113) {
           this.screenPosition = (int[]) null;
         }
-        this.gridPosition[0] = -(this.gridPosition[1] * this.mapWidth) + param2;
+        this.gridPosition[0] = -(this.gridPosition[1] * this.mapWidth) + tileIndex;
         this.projectGridToTarget(-62);
-        return this.b((byte) -125, param0);
+        return this.advanceTowardTarget((byte) -125, maximumSpeed);
     }
 
-    final void a(byte param0, NodeDeque param1) {
+    final void followEventPresenters(byte obfuscationGuard, NodeDeque presenters) {
         boolean discarded$0 = false;
         int stackIn_7_0 = 0;
         RuntimeException stackIn_23_0 = null;
@@ -1119,47 +1119,47 @@ final class BattleCamera {
         int var7 = 0;
         var7 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          var3 = (EventPresenter) (param1.d((byte) -77));
+          var3 = (EventPresenter) (presenters.d((byte) -77));
           while (var3 != null) {
             if (var3.tileIndex <= -1) {
-              var3 = (EventPresenter) (param1.b((byte) 73));
+              var3 = (EventPresenter) (presenters.b((byte) 73));
               continue;
             }
             stackIn_7_0 = (var3 != this.focusedPresenter) ? 0 : 1;
             var4 = stackIn_7_0;
             this.focusedPresenter = var3;
             if (var4 == 0) {
-              this.field_q = true;
+              this.eventFocusActive = true;
             }
-            this.field_i = -(so.field_b.field_g >> 1) + var3.screenY + this.currentPosition[1];
-            this.field_g = this.currentPosition[0] + var3.screenX - (so.field_b.field_a >> 1);
-            var5 = this.currentPosition[0] - this.field_g;
-            var6 = -this.field_i + this.currentPosition[1];
+            this.focusWorldY = -(so.field_b.field_g >> 1) + var3.screenY + this.currentPosition[1];
+            this.focusWorldX = this.currentPosition[0] + var3.screenX - (so.field_b.field_a >> 1);
+            var5 = this.currentPosition[0] - this.focusWorldX;
+            var6 = -this.focusWorldY + this.currentPosition[1];
             if (var6 * var6 + var5 * var5 < 40000) {
               if (var4 == 0) {
-                this.field_q = false;
+                this.eventFocusActive = false;
               }
             } else {
-              this.field_q = true;
+              this.eventFocusActive = true;
             }
-            if (!this.field_q) {
+            if (!this.eventFocusActive) {
               return;
             }
             break;
           }
-          this.targetPosition[0] = this.field_g;
-          this.targetPosition[1] = this.field_i;
-          if (param0 <= 99) {
+          this.targetPosition[0] = this.focusWorldX;
+          this.targetPosition[1] = this.focusWorldY;
+          if (obfuscationGuard <= 99) {
             this.b(63, 30, (byte) -17);
           }
-          discarded$0 = this.b((byte) -127, -1);
+          discarded$0 = this.advanceTowardTarget((byte) -127, -1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3_ref = decompiledCaughtException;
           stackIn_23_0 = var3_ref;
-          stackIn_23_1 = new StringBuilder().append("v.F(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_23_1 = new StringBuilder().append("v.F(").append(obfuscationGuard).append(',');
+          if (presenters == null) {
             stackIn_24_2 = "null";
           } else {
             stackIn_24_2 = "{...}";
@@ -1168,11 +1168,11 @@ final class BattleCamera {
         }
     }
 
-    final void a(byte param0, int param1) {
-        this.gridPosition[1] = param1 / this.mapWidth;
-        this.gridPosition[0] = param1 - this.mapWidth * this.gridPosition[1];
-        this.c((byte) -28);
-        int var3 = 121 / ((-71 - param0) / 49);
+    final void setFocusTile(byte obfuscationGuard, int tileIndex) {
+        this.gridPosition[1] = tileIndex / this.mapWidth;
+        this.gridPosition[0] = tileIndex - this.mapWidth * this.gridPosition[1];
+        this.storeGridFocus((byte) -28);
+        int var3 = 121 / ((-71 - obfuscationGuard) / 49);
     }
 
     final void projectTile(int gridYSlot, int tileIndex) {
@@ -1182,57 +1182,57 @@ final class BattleCamera {
         this.projectTargetToScreen(gridYSlot - 1);
     }
 
-    private final void b(int param0) {
+    private final void generateOverlayValues(int obfuscationGuard) {
         int var4 = 0;
         int var5 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
-        int var2 = -71 % ((4 - param0) / 32);
+        int var2 = -71 % ((4 - obfuscationGuard) / 32);
         byte[] var3 = new cn(AttackEvent.a(false, 2147483647, li.field_n), 4, this.mapWidth / 5, this.mapHeight / 5, 7, 0.5f, true).a(this.mapHeight, (byte) 93, this.mapWidth);
-        this.field_o = new int[var3.length];
+        this.overlayValues = new int[var3.length];
         for (var4 = 0; var3.length > var4; var4++) {
-          this.field_o[var4] = 256 - rn.a((int) var3[var4], 255);
+          this.overlayValues[var4] = 256 - rn.a((int) var3[var4], 255);
         }
     }
 
-    private final void b(boolean param0) {
+    private final void snapToGrid(boolean obfuscationGuard) {
         this.projectGridToTarget(-112);
         this.currentPosition[0] = this.targetPosition[0];
         this.currentPosition[1] = this.targetPosition[1];
-        this.field_g = this.targetPosition[0];
-        this.field_i = this.targetPosition[1];
-        this.a(param0);
-        if (param0) {
-          this.a(true);
+        this.focusWorldX = this.targetPosition[0];
+        this.focusWorldY = this.targetPosition[1];
+        this.updateViewportCenterGrid(obfuscationGuard);
+        if (obfuscationGuard) {
+          this.updateViewportCenterGrid(true);
         }
-        this.h(-1);
+        this.updateViewportOriginGrid(-1);
     }
 
     BattleCamera(int mapWidth, int mapHeight) {
-        this.field_i = 0;
-        this.field_g = 0;
-        this.a(mapHeight, mapWidth, -87);
+        this.focusWorldY = 0;
+        this.focusWorldX = 0;
+        this.initialize(mapHeight, mapWidth, -87);
         AiInfluenceMap.field_d = this;
     }
 
-    private final void a(int param0, int param1, int param2) {
+    private final void initialize(int mapHeight, int mapWidth, int obfuscationGuard) {
         this.velocity = new int[2];
-        this.field_n = new int[2];
-        this.field_r = new int[2];
-        this.field_a = new int[2];
+        this.viewportOriginGrid = new int[2];
+        this.viewportCenterGrid = new int[2];
+        this.previousPointer = new int[2];
         this.currentPosition = new int[2];
         this.currentPosition[0] = 40 + 80 * (this.mapWidth >> 1) - 80;
         this.screenPosition = new int[2];
         this.currentPosition[1] = 20 + 40 * (-1 + (this.mapHeight >> 1));
         this.targetPosition = new int[2];
-        if (param2 > -53) {
+        if (obfuscationGuard > -53) {
           return;
         }
         this.transformedPosition = new int[2];
         this.gridPosition = new int[2];
-        this.mapHeight = param0;
-        this.mapWidth = param1;
-        this.b(63);
-        this.a(101, false, so.field_b.field_g >> 1, false, false, false, false, false, so.field_b.field_a >> 1);
-        this.h(-1);
+        this.mapHeight = mapHeight;
+        this.mapWidth = mapWidth;
+        this.generateOverlayValues(63);
+        this.handleInput(101, false, so.field_b.field_g >> 1, false, false, false, false, false, so.field_b.field_a >> 1);
+        this.updateViewportOriginGrid(-1);
     }
 
     final void projectGridToTarget(int obfuscationGuard) {
