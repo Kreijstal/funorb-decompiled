@@ -167,134 +167,134 @@ final class MusicPatch extends IntrusiveNode {
     }
 
     MusicPatch(byte[] packedPatch) {
-        int var11_int = 0;
-        int incrementValue$0 = 0;
-        MusicPatchEnvelope dupTemp$8 = null;
-        int incrementValue$5 = 0;
-        int var25_int = 0;
-        int incrementValue$3 = 0;
-        byte[] stackIn_39_0 = null;
-        byte[] stackIn_42_0 = null;
-        RuntimeException stackIn_204_0 = null;
-        StringBuilder stackIn_204_1 = null;
-        String stackIn_205_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException var2 = null;
-        int var3 = 0;
-        byte[] var4 = null;
-        int var5 = 0;
-        int var6 = 0;
-        byte[] var7 = null;
-        int var8 = 0;
-        int var9 = 0;
-        byte[] var10 = null;
-        byte[] var11 = null;
-        int var12 = 0;
-        int var13_int = 0;
-        MusicPatchEnvelope[] var13 = null;
-        int var14 = 0;
-        int var15_int = 0;
-        byte[] var15 = null;
-        MusicPatchEnvelope var15_ref = null;
-        byte[] var16 = null;
-        int var16_int = 0;
-        int var17 = 0;
-        byte[] var18 = null;
-        int var19 = 0;
-        int var20 = 0;
-        int var21 = 0;
-        int var22 = 0;
-        int var23 = 0;
-        int var24 = 0;
-        Object var25 = null;
-        int var26 = 0;
-        int var27 = 0;
-        int var28 = 0;
-        int var29 = 0;
-        int var30 = 0;
-        int var31 = 0;
-        int var32 = 0;
-        int var33 = 0;
-        int var34 = 0;
-        int var35 = 0;
-        int var37 = 0;
-        PacketBuffer var38 = null;
-        byte[] var39 = null;
-        MusicPatchEnvelope var40 = null;
-        byte[] var41 = null;
-        byte[] var42 = null;
-        byte[] var43 = null;
-        byte[] var44 = null;
-        MusicPatchEnvelope var45 = null;
-        byte[] var46 = null;
-        byte[] var47 = null;
-        MusicPatchEnvelope var48 = null;
-        MusicPatchEnvelope var49 = null;
-        MusicPatchEnvelope var50 = null;
-        MusicPatchEnvelope var51 = null;
-        MusicPatchEnvelope var52 = null;
-        byte[] var53 = null;
-        byte[] var54 = null;
-        byte[] var55 = null;
-        byte[] var56 = null;
-        byte[] var57 = null;
-        byte[] var58 = null;
-        int var5Lifetime1;
-        int var8Lifetime1;
-        int var19Lifetime1;
-        int var19Lifetime2;
-        int var19Lifetime3;
-        int var19Lifetime4;
-        int var19Lifetime5;
-        int var19Lifetime6;
-        int var20Lifetime1;
-        int var20Lifetime2;
-        int var20Lifetime3;
-        int var20Lifetime4;
-        int var20Lifetime5;
-        int var20Lifetime6;
-        int var21Lifetime1;
-        int var21Lifetime2;
-        int var21Lifetime3;
-        int var21Lifetime4;
-        int var23Lifetime1;
-        int var24Lifetime1;
-        int var26Lifetime1;
-        int var27Lifetime1;
-        int var27Lifetime2;
-        int var27Lifetime3;
-        int var27Lifetime4;
-        int var27Lifetime5;
-        int var27Lifetime6;
-        int var27Lifetime7;
-        int var27Lifetime8;
-        int var27Lifetime9;
-        int var27Lifetime10;
-        int var27Lifetime11;
-        int var27Lifetime12;
-        int var28Lifetime1;
-        int var29Lifetime1;
-        int var29Lifetime2;
-        int var29Lifetime3;
-        int var29Lifetime4;
-        int var30Lifetime1;
-        int var31Lifetime1;
-        int var32Lifetime1;
-        int var33Lifetime1;
-        int var34Lifetime1;
-        int var14Lifetime1;
-        int var14Lifetime2;
-        int var14Lifetime3;
-        int var16_intLifetime1;
-        int var29Lifetime5;
-        int var30Lifetime2;
-        int var27Lifetime6Lifetime1;
-        int var27Lifetime7Lifetime1;
-        int var29Lifetime3Lifetime1;
-        int var29Lifetime4Lifetime1;
-        int var30Lifetime1Lifetime1;
-        int var30Lifetime1Lifetime2;
-        int var31Lifetime1Lifetime1;
+        int envelopeRunByteIndex = 0;
+        int newEnvelopeIndex = 0;
+        MusicPatchEnvelope newEnvelope = null;
+        int groupValueByteIndex = 0;
+        int panKey = 0;
+        int panValueByteIndex = 0;
+        byte[] allocatedGainCurve = null;
+        byte[] allocatedPanCurve = null;
+        RuntimeException failureForContext = null;
+        StringBuilder errorContext = null;
+        String patchDescription = null;
+        RuntimeException caughtFailure = null;
+        RuntimeException failure = null;
+        int groupRunCount = 0;
+        byte[] groupRuns = null;
+        int groupRunByteIndex = 0;
+        int panRunCount = 0;
+        byte[] panRuns = null;
+        int panRunByteIndex = 0;
+        int envelopeRunCount = 0;
+        byte[] envelopeRuns = null;
+        byte[] envelopeMap = null;
+        int envelopeCount = 0;
+        int selectedEnvelopeIndex = 0;
+        MusicPatchEnvelope[] envelopeTable = null;
+        int envelopeMapIndex = 0;
+        int envelopeMapCode = 0;
+        byte[] gainCurve = null;
+        MusicPatchEnvelope envelopeBeingAllocated = null;
+        byte[] panCurve = null;
+        int volumePointCount = 0;
+        int sampleRunCount = 0;
+        byte[] sampleRuns = null;
+        int sampleRunByteIndex = 0;
+        int pitchLowKey = 0;
+        int sampleRunIndex = 0;
+        int sampleId = 0;
+        int sampleKey = 0;
+        int groupKey = 0;
+        Object selectedEnvelope = null;
+        int envelopeKey = 0;
+        int gainKey = 0;
+        int gainCurveLevel = 0;
+        int volumeLevelIndex = 0;
+        int nextGainCurveKey = 0;
+        int nextGainCurveLevel = 0;
+        int gainInterpolationNumerator = 0;
+        int gainInterpolationKey = 0;
+        int interpolatedGainLevel = 0;
+        int adjustedPan = 0;
+        int panInterpolationKey = 0;
+        PacketBuffer input = null;
+        byte[] envelopeMapAlias = null;
+        MusicPatchEnvelope envelopeAllocationAlias = null;
+        byte[] sampleRunsAlias = null;
+        byte[] groupRunsAlias = null;
+        byte[] panRunsAlias = null;
+        byte[] envelopeRunsAlias = null;
+        MusicPatchEnvelope envelopeForLevels = null;
+        byte[] gainCurveAlias = null;
+        byte[] panCurveAlias = null;
+        MusicPatchEnvelope envelopeForReleaseTimes = null;
+        MusicPatchEnvelope envelopeForVolumeTimes = null;
+        MusicPatchEnvelope envelopeForKeyScaling = null;
+        MusicPatchEnvelope envelopeForVibratoDepth = null;
+        MusicPatchEnvelope envelopeForVibratoDelay = null;
+        byte[] allocatedEnvelopeMap = null;
+        byte[] allocatedSampleRuns = null;
+        byte[] allocatedGroupRuns = null;
+        byte[] allocatedPanRuns = null;
+        byte[] allocatedEnvelopeRuns = null;
+        byte[] allocatedPanCurveAlias = null;
+        int groupValueCursor;
+        int panValueCursor;
+        int lowPitchAccumulator;
+        int highPitchAccumulator;
+        int releaseTimeAccumulator;
+        int volumeTimeAccumulator;
+        int gainCurveKeyAccumulator;
+        int panCurveKeyAccumulator;
+        int pitchHighKey;
+        int sampleRunRemaining;
+        int groupRunRemaining;
+        int panRunRemaining;
+        int envelopeRunRemaining;
+        int gainRunRemaining;
+        int groupRunIndex;
+        int panRunIndex;
+        int envelopeRunIndex;
+        int gainRunIndex;
+        int exclusiveGroup;
+        int panValue;
+        int gainValue;
+        int envelopeLevelsIndex;
+        int gainCurveLevelIndex;
+        int panCurveLevelIndex;
+        int releaseTimesEnvelopeIndex;
+        int volumeTimesEnvelopeIndex;
+        int gainCurveTimeIndex;
+        int panCurveTimeIndex;
+        int decayEnvelopeIndex;
+        int keyScalingEnvelopeIndex;
+        int vibratoRateEnvelopeIndex;
+        int vibratoDepthEnvelopeIndex;
+        int vibratoDelayEnvelopeIndex;
+        int panCurveOffset;
+        int releaseTimeIndex;
+        int volumeTimeIndex;
+        int gainPrefixKey;
+        int panPrefixKey;
+        int adjustedPrefixPan;
+        int nextPanCurveOffset;
+        int panInterpolationNumerator;
+        int unusedPanInterpolationKey;
+        int interpolatedPanOffset;
+        int allocatedEnvelopeIndex;
+        int gainCurvePointCount;
+        int panCurvePointCount;
+        int releasePointCount;
+        int releaseLevelIndex;
+        int gainSuffixKey;
+        int currentGainCurveKey;
+        int currentPanCurveKey;
+        int gainCurveSegmentIndex;
+        int panCurveSegmentIndex;
+        int nextPanCurveKey;
+        int panSuffixKey;
+        int adjustedSuffixPan;
         try {
           this.notePans = new byte[128];
           this.samples = new PcmSample[128];
@@ -303,376 +303,376 @@ final class MusicPatch extends IntrusiveNode {
           this.sampleIds = new int[128];
           this.envelopes = new MusicPatchEnvelope[128];
           this.noteGains = new byte[128];
-          var38 = new PacketBuffer(packedPatch);
-          for (var3 = 0; var38.payload[var3 + var38.position] != 0; var3++) {
+          input = new PacketBuffer(packedPatch);
+          for (groupRunCount = 0; input.payload[groupRunCount + input.position] != 0; groupRunCount++) {
           }
-          var55 = new byte[var3];
-          var42 = var55;
-          var4 = var42;
-          for (var5 = 0; var5 < var3; var5++) {
-            var4[var5] = var38.readByte((byte) 8);
+          allocatedGroupRuns = new byte[groupRunCount];
+          groupRunsAlias = allocatedGroupRuns;
+          groupRuns = groupRunsAlias;
+          for (groupRunByteIndex = 0; groupRunByteIndex < groupRunCount; groupRunByteIndex++) {
+            groupRuns[groupRunByteIndex] = input.readByte((byte) 8);
           }
-          var3++;
-          var38.position = var38.position + 1;
-          var5Lifetime1 = var38.position;
-          var38.position = var38.position + var3;
-          for (var6 = 0; var38.payload[var6 + var38.position] != 0; var6++) {
+          groupRunCount++;
+          input.position = input.position + 1;
+          groupValueCursor = input.position;
+          input.position = input.position + groupRunCount;
+          for (panRunCount = 0; input.payload[panRunCount + input.position] != 0; panRunCount++) {
           }
-          var56 = new byte[var6];
-          var43 = var56;
-          var7 = var43;
-          for (var8 = 0; var8 < var6; var8++) {
-            var7[var8] = var38.readByte((byte) -120);
+          allocatedPanRuns = new byte[panRunCount];
+          panRunsAlias = allocatedPanRuns;
+          panRuns = panRunsAlias;
+          for (panRunByteIndex = 0; panRunByteIndex < panRunCount; panRunByteIndex++) {
+            panRuns[panRunByteIndex] = input.readByte((byte) -120);
           }
-          var6++;
-          var38.position = var38.position + 1;
-          var8Lifetime1 = var38.position;
-          var38.position = var38.position + var6;
-          for (var9 = 0; var38.payload[var9 + var38.position] != 0; var9++) {
+          panRunCount++;
+          input.position = input.position + 1;
+          panValueCursor = input.position;
+          input.position = input.position + panRunCount;
+          for (envelopeRunCount = 0; input.payload[envelopeRunCount + input.position] != 0; envelopeRunCount++) {
           }
-          var57 = new byte[var9];
-          var44 = var57;
-          var10 = var44;
-          for (var11_int = 0; var9 > var11_int; var11_int++) {
-            var10[var11_int] = var38.readByte((byte) -113);
+          allocatedEnvelopeRuns = new byte[envelopeRunCount];
+          envelopeRunsAlias = allocatedEnvelopeRuns;
+          envelopeRuns = envelopeRunsAlias;
+          for (envelopeRunByteIndex = 0; envelopeRunCount > envelopeRunByteIndex; envelopeRunByteIndex++) {
+            envelopeRuns[envelopeRunByteIndex] = input.readByte((byte) -113);
           }
-          var9++;
-          var38.position = var38.position + 1;
-          var53 = new byte[var9];
-          var39 = var53;
-          var11 = var39;
-          if (var9 > 1) {
-            var53[1] = (byte) 1;
-            var13_int = 1;
-            var12 = 2;
-            for (var14 = 2; var14 < var9; var14++) {
-              var15_int = var38.readUnsignedByte(0);
-              if (var15_int != 0) {
-                if (var15_int <= var13_int) {
-                  var15_int--;
+          envelopeRunCount++;
+          input.position = input.position + 1;
+          allocatedEnvelopeMap = new byte[envelopeRunCount];
+          envelopeMapAlias = allocatedEnvelopeMap;
+          envelopeMap = envelopeMapAlias;
+          if (envelopeRunCount > 1) {
+            allocatedEnvelopeMap[1] = (byte) 1;
+            selectedEnvelopeIndex = 1;
+            envelopeCount = 2;
+            for (envelopeMapIndex = 2; envelopeMapIndex < envelopeRunCount; envelopeMapIndex++) {
+              envelopeMapCode = input.readUnsignedByte(0);
+              if (envelopeMapCode != 0) {
+                if (envelopeMapCode <= selectedEnvelopeIndex) {
+                  envelopeMapCode--;
                 }
-                var13_int = var15_int;
+                selectedEnvelopeIndex = envelopeMapCode;
               } else {
-                incrementValue$0 = var12;
-                var12++;
-                var13_int = incrementValue$0;
+                newEnvelopeIndex = envelopeCount;
+                envelopeCount++;
+                selectedEnvelopeIndex = newEnvelopeIndex;
               }
-              var11[var14] = (byte)var13_int;
+              envelopeMap[envelopeMapIndex] = (byte)selectedEnvelopeIndex;
             }
           } else {
-            var12 = var9;
+            envelopeCount = envelopeRunCount;
           }
-          var13 = new MusicPatchEnvelope[var12];
-          for (var14Lifetime1 = 0; var14Lifetime1 < var13.length; var14Lifetime1++) {
-            dupTemp$8 = new MusicPatchEnvelope();
-            var13[var14Lifetime1] = dupTemp$8;
-            var40 = dupTemp$8;
-            var15_ref = var40;
-            var16_int = var38.readUnsignedByte(0);
-            if (var16_int > 0) {
-              var15_ref.volumeEnvelope = new byte[2 * var16_int];
+          envelopeTable = new MusicPatchEnvelope[envelopeCount];
+          for (allocatedEnvelopeIndex = 0; allocatedEnvelopeIndex < envelopeTable.length; allocatedEnvelopeIndex++) {
+            newEnvelope = new MusicPatchEnvelope();
+            envelopeTable[allocatedEnvelopeIndex] = newEnvelope;
+            envelopeAllocationAlias = newEnvelope;
+            envelopeBeingAllocated = envelopeAllocationAlias;
+            volumePointCount = input.readUnsignedByte(0);
+            if (volumePointCount > 0) {
+              envelopeBeingAllocated.volumeEnvelope = new byte[2 * volumePointCount];
             }
-            var16_intLifetime1 = var38.readUnsignedByte(0);
-            if (0 < var16_intLifetime1) {
-              var15_ref.releaseEnvelope = new byte[2 + var16_intLifetime1 * 2];
-              var40.releaseEnvelope[1] = (byte)64;
+            releasePointCount = input.readUnsignedByte(0);
+            if (0 < releasePointCount) {
+              envelopeBeingAllocated.releaseEnvelope = new byte[2 + releasePointCount * 2];
+              envelopeAllocationAlias.releaseEnvelope[1] = (byte)64;
             }
           }
-          var14Lifetime2 = var38.readUnsignedByte(0);
-          if (var14Lifetime2 <= 0) {
-            stackIn_39_0 = null;
+          gainCurvePointCount = input.readUnsignedByte(0);
+          if (gainCurvePointCount <= 0) {
+            allocatedGainCurve = null;
           } else {
-            stackIn_39_0 = new byte[2 * var14Lifetime2];
+            allocatedGainCurve = new byte[2 * gainCurvePointCount];
           }
-          var46 = stackIn_39_0;
-          var15 = var46;
-          var14Lifetime3 = var38.readUnsignedByte(0);
-          if (0 < var14Lifetime3) {
-            stackIn_42_0 = new byte[var14Lifetime3 * 2];
+          gainCurveAlias = allocatedGainCurve;
+          gainCurve = gainCurveAlias;
+          panCurvePointCount = input.readUnsignedByte(0);
+          if (0 < panCurvePointCount) {
+            allocatedPanCurve = new byte[panCurvePointCount * 2];
           } else {
-            stackIn_42_0 = null;
+            allocatedPanCurve = null;
           }
-          var58 = stackIn_42_0;
-          var47 = var58;
-          var16 = var47;
-          for (var17 = 0; 0 != var38.payload[var38.position + var17]; var17++) {
+          allocatedPanCurveAlias = allocatedPanCurve;
+          panCurveAlias = allocatedPanCurveAlias;
+          panCurve = panCurveAlias;
+          for (sampleRunCount = 0; 0 != input.payload[input.position + sampleRunCount]; sampleRunCount++) {
           }
-          var54 = new byte[var17];
-          var41 = var54;
-          var18 = var41;
-          for (var19 = 0; var19 < var17; var19++) {
-            var18[var19] = var38.readByte((byte) -53);
+          allocatedSampleRuns = new byte[sampleRunCount];
+          sampleRunsAlias = allocatedSampleRuns;
+          sampleRuns = sampleRunsAlias;
+          for (sampleRunByteIndex = 0; sampleRunByteIndex < sampleRunCount; sampleRunByteIndex++) {
+            sampleRuns[sampleRunByteIndex] = input.readByte((byte) -53);
           }
-          var17++;
-          var38.position = var38.position + 1;
-          var19Lifetime1 = 0;
-          for (var20 = 0; 128 > var20; var20++) {
-            var19Lifetime1 = var19Lifetime1 + var38.readUnsignedByte(0);
-            this.pitchAndLoopFlags[var20] = (short)var19Lifetime1;
+          sampleRunCount++;
+          input.position = input.position + 1;
+          lowPitchAccumulator = 0;
+          for (pitchLowKey = 0; 128 > pitchLowKey; pitchLowKey++) {
+            lowPitchAccumulator = lowPitchAccumulator + input.readUnsignedByte(0);
+            this.pitchAndLoopFlags[pitchLowKey] = (short)lowPitchAccumulator;
           }
-          var19Lifetime2 = 0;
-          for (var20Lifetime1 = 0; 128 > var20Lifetime1; var20Lifetime1++) {
-            var19Lifetime2 = var19Lifetime2 + var38.readUnsignedByte(0);
-            this.pitchAndLoopFlags[var20Lifetime1] = (short)(this.pitchAndLoopFlags[var20Lifetime1] + (var19Lifetime2 << 8));
+          highPitchAccumulator = 0;
+          for (pitchHighKey = 0; 128 > pitchHighKey; pitchHighKey++) {
+            highPitchAccumulator = highPitchAccumulator + input.readUnsignedByte(0);
+            this.pitchAndLoopFlags[pitchHighKey] = (short)(this.pitchAndLoopFlags[pitchHighKey] + (highPitchAccumulator << 8));
           }
-          var20Lifetime2 = 0;
-          var21 = 0;
-          var22 = 0;
-          for (var23 = 0; var23 < 128; var23++) {
-            if (0 == var20Lifetime2) {
-              if (var54.length <= var21) {
-                var20Lifetime2 = -1;
+          sampleRunRemaining = 0;
+          sampleRunIndex = 0;
+          sampleId = 0;
+          for (sampleKey = 0; sampleKey < 128; sampleKey++) {
+            if (0 == sampleRunRemaining) {
+              if (allocatedSampleRuns.length <= sampleRunIndex) {
+                sampleRunRemaining = -1;
               } else {
-                var20Lifetime2 = var18[var21++];
+                sampleRunRemaining = sampleRuns[sampleRunIndex++];
               }
-              var22 = var38.readVarInt(110);
+              sampleId = input.readVarInt(110);
             }
-            this.pitchAndLoopFlags[var23] = (short)(this.pitchAndLoopFlags[var23] + (rn.bitwiseAnd(-1 + var22, 2) << 14));
-            this.sampleIds[var23] = var22;
-            var20Lifetime2--;
+            this.pitchAndLoopFlags[sampleKey] = (short)(this.pitchAndLoopFlags[sampleKey] + (rn.bitwiseAnd(-1 + sampleId, 2) << 14));
+            this.sampleIds[sampleKey] = sampleId;
+            sampleRunRemaining--;
           }
-          var20Lifetime3 = 0;
-          var21Lifetime1 = 0;
-          var23Lifetime1 = 0;
-          for (var24 = 0; var24 < 128; var24++) {
-            if (this.sampleIds[var24] != 0) {
-              if (var20Lifetime3 == 0) {
-                incrementValue$5 = var5Lifetime1;
-                var5Lifetime1++;
-                var23Lifetime1 = -1 + var38.payload[incrementValue$5];
-                if (var21Lifetime1 >= var55.length) {
-                  var20Lifetime3 = -1;
+          groupRunRemaining = 0;
+          groupRunIndex = 0;
+          exclusiveGroup = 0;
+          for (groupKey = 0; groupKey < 128; groupKey++) {
+            if (this.sampleIds[groupKey] != 0) {
+              if (groupRunRemaining == 0) {
+                groupValueByteIndex = groupValueCursor;
+                groupValueCursor++;
+                exclusiveGroup = -1 + input.payload[groupValueByteIndex];
+                if (groupRunIndex >= allocatedGroupRuns.length) {
+                  groupRunRemaining = -1;
                 } else {
-                  var20Lifetime3 = var4[var21Lifetime1++];
+                  groupRunRemaining = groupRuns[groupRunIndex++];
                 }
               }
-              var20Lifetime3--;
-              this.exclusiveGroups[var24] = (byte)var23Lifetime1;
+              groupRunRemaining--;
+              this.exclusiveGroups[groupKey] = (byte)exclusiveGroup;
             }
           }
-          var21Lifetime2 = 0;
-          var20Lifetime4 = 0;
-          var24Lifetime1 = 0;
-          for (var25_int = 0; var25_int < 128; var25_int++) {
-            if (this.sampleIds[var25_int] != 0) {
-              if (var20Lifetime4 == 0) {
-                incrementValue$3 = var8Lifetime1;
-                var8Lifetime1++;
-                var24Lifetime1 = 16 + var38.payload[incrementValue$3] << 2;
-                if (var56.length > var21Lifetime2) {
-                  var20Lifetime4 = var7[var21Lifetime2++];
+          panRunIndex = 0;
+          panRunRemaining = 0;
+          panValue = 0;
+          for (panKey = 0; panKey < 128; panKey++) {
+            if (this.sampleIds[panKey] != 0) {
+              if (panRunRemaining == 0) {
+                panValueByteIndex = panValueCursor;
+                panValueCursor++;
+                panValue = 16 + input.payload[panValueByteIndex] << 2;
+                if (allocatedPanRuns.length > panRunIndex) {
+                  panRunRemaining = panRuns[panRunIndex++];
                 } else {
-                  var20Lifetime4 = -1;
+                  panRunRemaining = -1;
                 }
               }
-              var20Lifetime4--;
-              this.notePans[var25_int] = (byte)var24Lifetime1;
+              panRunRemaining--;
+              this.notePans[panKey] = (byte)panValue;
             }
           }
-          var21Lifetime3 = 0;
-          var20Lifetime5 = 0;
-          var25 = null;
-          for (var26 = 0; var26 < 128; var26++) {
-            if (0 != this.sampleIds[var26]) {
-              if (var20Lifetime5 == 0) {
-                var25 = var13[var53[var21Lifetime3]];
-                if (var21Lifetime3 < var57.length) {
-                  var20Lifetime5 = var10[var21Lifetime3++];
+          envelopeRunIndex = 0;
+          envelopeRunRemaining = 0;
+          selectedEnvelope = null;
+          for (envelopeKey = 0; envelopeKey < 128; envelopeKey++) {
+            if (0 != this.sampleIds[envelopeKey]) {
+              if (envelopeRunRemaining == 0) {
+                selectedEnvelope = envelopeTable[allocatedEnvelopeMap[envelopeRunIndex]];
+                if (envelopeRunIndex < allocatedEnvelopeRuns.length) {
+                  envelopeRunRemaining = envelopeRuns[envelopeRunIndex++];
                 } else {
-                  var20Lifetime5 = -1;
+                  envelopeRunRemaining = -1;
                 }
               }
-              this.envelopes[var26] = (MusicPatchEnvelope) (var25);
-              var20Lifetime5--;
+              this.envelopes[envelopeKey] = (MusicPatchEnvelope) (selectedEnvelope);
+              envelopeRunRemaining--;
             }
           }
-          var21Lifetime4 = 0;
-          var20Lifetime6 = 0;
-          var26Lifetime1 = 0;
-          for (var27 = 0; var27 < 128; var27++) {
-            if (var20Lifetime6 == 0) {
-              if (var21Lifetime4 >= var54.length) {
-                var20Lifetime6 = -1;
+          gainRunIndex = 0;
+          gainRunRemaining = 0;
+          gainValue = 0;
+          for (gainKey = 0; gainKey < 128; gainKey++) {
+            if (gainRunRemaining == 0) {
+              if (gainRunIndex >= allocatedSampleRuns.length) {
+                gainRunRemaining = -1;
               } else {
-                var20Lifetime6 = var18[var21Lifetime4++];
+                gainRunRemaining = sampleRuns[gainRunIndex++];
               }
-              if (this.sampleIds[var27] > 0) {
-                var26Lifetime1 = var38.readUnsignedByte(0) + 1;
-              }
-            }
-            this.noteGains[var27] = (byte)var26Lifetime1;
-            var20Lifetime6--;
-          }
-          this.globalGain = var38.readUnsignedByte(0) + 1;
-          for (var27Lifetime1 = 0; var27Lifetime1 < var12; var27Lifetime1++) {
-            var45 = var13[var27Lifetime1];
-            if (null != var45.volumeEnvelope) {
-              for (var29 = 1; var29 < var45.volumeEnvelope.length; var29 += 2) {
-                var45.volumeEnvelope[var29] = var38.readByte((byte) -89);
+              if (this.sampleIds[gainKey] > 0) {
+                gainValue = input.readUnsignedByte(0) + 1;
               }
             }
-            if (null != var45.releaseEnvelope) {
-              for (var29Lifetime5 = 3; var29Lifetime5 < var45.releaseEnvelope.length - 2; var29Lifetime5 += 2) {
-                var45.releaseEnvelope[var29Lifetime5] = var38.readByte((byte) 103);
+            this.noteGains[gainKey] = (byte)gainValue;
+            gainRunRemaining--;
+          }
+          this.globalGain = input.readUnsignedByte(0) + 1;
+          for (envelopeLevelsIndex = 0; envelopeLevelsIndex < envelopeCount; envelopeLevelsIndex++) {
+            envelopeForLevels = envelopeTable[envelopeLevelsIndex];
+            if (null != envelopeForLevels.volumeEnvelope) {
+              for (volumeLevelIndex = 1; volumeLevelIndex < envelopeForLevels.volumeEnvelope.length; volumeLevelIndex += 2) {
+                envelopeForLevels.volumeEnvelope[volumeLevelIndex] = input.readByte((byte) -89);
               }
             }
-          }
-          if (null != var15) {
-            for (var27Lifetime2 = 1; var27Lifetime2 < var46.length; var27Lifetime2 += 2) {
-              var15[var27Lifetime2] = var38.readByte((byte) 111);
-            }
-          }
-          if (var16 != null) {
-            for (var27Lifetime3 = 1; var58.length > var27Lifetime3; var27Lifetime3 += 2) {
-              var16[var27Lifetime3] = var38.readByte((byte) 116);
-            }
-          }
-          for (var27Lifetime4 = 0; var12 > var27Lifetime4; var27Lifetime4++) {
-            var48 = var13[var27Lifetime4];
-            if (null != var48.releaseEnvelope) {
-              var19Lifetime3 = 0;
-              for (var29Lifetime1 = 2; var29Lifetime1 < var48.releaseEnvelope.length; var29Lifetime1 += 2) {
-                var19Lifetime3 = 1 + var19Lifetime3 + var38.readUnsignedByte(0);
-                var48.releaseEnvelope[var29Lifetime1] = (byte)var19Lifetime3;
+            if (null != envelopeForLevels.releaseEnvelope) {
+              for (releaseLevelIndex = 3; releaseLevelIndex < envelopeForLevels.releaseEnvelope.length - 2; releaseLevelIndex += 2) {
+                envelopeForLevels.releaseEnvelope[releaseLevelIndex] = input.readByte((byte) 103);
               }
             }
           }
-          for (var27Lifetime5 = 0; var27Lifetime5 < var12; var27Lifetime5++) {
-            var49 = var13[var27Lifetime5];
-            if (null != var49.volumeEnvelope) {
-              var19Lifetime4 = 0;
-              for (var29Lifetime2 = 2; var29Lifetime2 < var49.volumeEnvelope.length; var29Lifetime2 += 2) {
-                var19Lifetime4 = var38.readUnsignedByte(0) + (1 + var19Lifetime4);
-                var49.volumeEnvelope[var29Lifetime2] = (byte)var19Lifetime4;
+          if (null != gainCurve) {
+            for (gainCurveLevelIndex = 1; gainCurveLevelIndex < gainCurveAlias.length; gainCurveLevelIndex += 2) {
+              gainCurve[gainCurveLevelIndex] = input.readByte((byte) 111);
+            }
+          }
+          if (panCurve != null) {
+            for (panCurveLevelIndex = 1; allocatedPanCurveAlias.length > panCurveLevelIndex; panCurveLevelIndex += 2) {
+              panCurve[panCurveLevelIndex] = input.readByte((byte) 116);
+            }
+          }
+          for (releaseTimesEnvelopeIndex = 0; envelopeCount > releaseTimesEnvelopeIndex; releaseTimesEnvelopeIndex++) {
+            envelopeForReleaseTimes = envelopeTable[releaseTimesEnvelopeIndex];
+            if (null != envelopeForReleaseTimes.releaseEnvelope) {
+              releaseTimeAccumulator = 0;
+              for (releaseTimeIndex = 2; releaseTimeIndex < envelopeForReleaseTimes.releaseEnvelope.length; releaseTimeIndex += 2) {
+                releaseTimeAccumulator = 1 + releaseTimeAccumulator + input.readUnsignedByte(0);
+                envelopeForReleaseTimes.releaseEnvelope[releaseTimeIndex] = (byte)releaseTimeAccumulator;
               }
             }
           }
-          if (var15 != null) {
-            var19Lifetime5 = var38.readUnsignedByte(0);
-            var15[0] = (byte)var19Lifetime5;
-            for (var27Lifetime6 = 2; var27Lifetime6 < var46.length; var27Lifetime6 += 2) {
-              var19Lifetime5 = var19Lifetime5 + 1 + var38.readUnsignedByte(0);
-              var15[var27Lifetime6] = (byte)var19Lifetime5;
-            }
-            var27Lifetime6Lifetime1 = var46[0];
-            var28 = var46[1];
-            for (var29Lifetime3 = 0; var27Lifetime6Lifetime1 > var29Lifetime3; var29Lifetime3++) {
-              this.noteGains[var29Lifetime3] = (byte)(32 + var28 * this.noteGains[var29Lifetime3] >> 6);
-            }
-            for (var29Lifetime3Lifetime1 = 2; var29Lifetime3Lifetime1 < var46.length; var29Lifetime3Lifetime1 += 2) {
-              var30 = var46[var29Lifetime3Lifetime1];
-              var31 = var15[1 + var29Lifetime3Lifetime1];
-              var32 = (-var27Lifetime6Lifetime1 + var30) * var28 + (-var27Lifetime6Lifetime1 + var30) / 2;
-              for (var33 = var27Lifetime6Lifetime1; var30 > var33; var33++) {
-                var34 = MusicPatchPcmStream.floorDivide(-var27Lifetime6Lifetime1 + var30, var32, 1589591487);
-                var32 = var32 + (var31 - var28);
-                this.noteGains[var33] = (byte)(32 + var34 * this.noteGains[var33] >> 6);
+          for (volumeTimesEnvelopeIndex = 0; volumeTimesEnvelopeIndex < envelopeCount; volumeTimesEnvelopeIndex++) {
+            envelopeForVolumeTimes = envelopeTable[volumeTimesEnvelopeIndex];
+            if (null != envelopeForVolumeTimes.volumeEnvelope) {
+              volumeTimeAccumulator = 0;
+              for (volumeTimeIndex = 2; volumeTimeIndex < envelopeForVolumeTimes.volumeEnvelope.length; volumeTimeIndex += 2) {
+                volumeTimeAccumulator = input.readUnsignedByte(0) + (1 + volumeTimeAccumulator);
+                envelopeForVolumeTimes.volumeEnvelope[volumeTimeIndex] = (byte)volumeTimeAccumulator;
               }
-              var28 = var31;
-              var27Lifetime6Lifetime1 = var30;
             }
-            for (var30Lifetime2 = var27Lifetime6Lifetime1; var30Lifetime2 < 128; var30Lifetime2++) {
-              this.noteGains[var30Lifetime2] = (byte)(32 + this.noteGains[var30Lifetime2] * var28 >> 6);
-            }
-            var15 = null;
           }
-          if (null != var16) {
-            var19Lifetime6 = var38.readUnsignedByte(0);
-            var16[0] = (byte)var19Lifetime6;
-            for (var27Lifetime7 = 2; var58.length > var27Lifetime7; var27Lifetime7 += 2) {
-              var19Lifetime6 = var19Lifetime6 + 1 + var38.readUnsignedByte(0);
-              var16[var27Lifetime7] = (byte)var19Lifetime6;
+          if (gainCurve != null) {
+            gainCurveKeyAccumulator = input.readUnsignedByte(0);
+            gainCurve[0] = (byte)gainCurveKeyAccumulator;
+            for (gainCurveTimeIndex = 2; gainCurveTimeIndex < gainCurveAlias.length; gainCurveTimeIndex += 2) {
+              gainCurveKeyAccumulator = gainCurveKeyAccumulator + 1 + input.readUnsignedByte(0);
+              gainCurve[gainCurveTimeIndex] = (byte)gainCurveKeyAccumulator;
             }
-            var27Lifetime7Lifetime1 = var58[0];
-            var28Lifetime1 = var58[1] << 1;
-            for (var29Lifetime4 = 0; var29Lifetime4 < var27Lifetime7Lifetime1; var29Lifetime4++) {
-              var30Lifetime1 = var28Lifetime1 + (255 & this.notePans[var29Lifetime4]);
-              if (var30Lifetime1 < 0) {
-                var30Lifetime1 = 0;
-              }
-              if (var30Lifetime1 > 128) {
-                var30Lifetime1 = 128;
-              }
-              this.notePans[var29Lifetime4] = (byte)var30Lifetime1;
+            currentGainCurveKey = gainCurveAlias[0];
+            gainCurveLevel = gainCurveAlias[1];
+            for (gainPrefixKey = 0; currentGainCurveKey > gainPrefixKey; gainPrefixKey++) {
+              this.noteGains[gainPrefixKey] = (byte)(32 + gainCurveLevel * this.noteGains[gainPrefixKey] >> 6);
             }
-            var29Lifetime4Lifetime1 = 2;
-            while (var29Lifetime4Lifetime1 < var58.length) {
-              var30Lifetime1Lifetime1 = var58[var29Lifetime4Lifetime1];
-              var31Lifetime1 = var16[var29Lifetime4Lifetime1 + 1] << 1;
-              var32Lifetime1 = (-var27Lifetime7Lifetime1 + var30Lifetime1Lifetime1) / 2 + var28Lifetime1 * (-var27Lifetime7Lifetime1 + var30Lifetime1Lifetime1);
-              var37 = var27Lifetime7Lifetime1;
-              var33Lifetime1 = var37;
-              while (var37 < var30Lifetime1Lifetime1) {
-                var34Lifetime1 = MusicPatchPcmStream.floorDivide(-var27Lifetime7Lifetime1 + var30Lifetime1Lifetime1, var32Lifetime1, 1589591487);
-                var35 = var34Lifetime1 + (255 & this.notePans[var37]);
-                if (var35 < 0) {
-                  var35 = 0;
+            for (gainCurveSegmentIndex = 2; gainCurveSegmentIndex < gainCurveAlias.length; gainCurveSegmentIndex += 2) {
+              nextGainCurveKey = gainCurveAlias[gainCurveSegmentIndex];
+              nextGainCurveLevel = gainCurve[1 + gainCurveSegmentIndex];
+              gainInterpolationNumerator = (-currentGainCurveKey + nextGainCurveKey) * gainCurveLevel + (-currentGainCurveKey + nextGainCurveKey) / 2;
+              for (gainInterpolationKey = currentGainCurveKey; nextGainCurveKey > gainInterpolationKey; gainInterpolationKey++) {
+                interpolatedGainLevel = MusicPatchPcmStream.floorDivide(-currentGainCurveKey + nextGainCurveKey, gainInterpolationNumerator, 1589591487);
+                gainInterpolationNumerator = gainInterpolationNumerator + (nextGainCurveLevel - gainCurveLevel);
+                this.noteGains[gainInterpolationKey] = (byte)(32 + interpolatedGainLevel * this.noteGains[gainInterpolationKey] >> 6);
+              }
+              gainCurveLevel = nextGainCurveLevel;
+              currentGainCurveKey = nextGainCurveKey;
+            }
+            for (gainSuffixKey = currentGainCurveKey; gainSuffixKey < 128; gainSuffixKey++) {
+              this.noteGains[gainSuffixKey] = (byte)(32 + this.noteGains[gainSuffixKey] * gainCurveLevel >> 6);
+            }
+            gainCurve = null;
+          }
+          if (null != panCurve) {
+            panCurveKeyAccumulator = input.readUnsignedByte(0);
+            panCurve[0] = (byte)panCurveKeyAccumulator;
+            for (panCurveTimeIndex = 2; allocatedPanCurveAlias.length > panCurveTimeIndex; panCurveTimeIndex += 2) {
+              panCurveKeyAccumulator = panCurveKeyAccumulator + 1 + input.readUnsignedByte(0);
+              panCurve[panCurveTimeIndex] = (byte)panCurveKeyAccumulator;
+            }
+            currentPanCurveKey = allocatedPanCurveAlias[0];
+            panCurveOffset = allocatedPanCurveAlias[1] << 1;
+            for (panPrefixKey = 0; panPrefixKey < currentPanCurveKey; panPrefixKey++) {
+              adjustedPrefixPan = panCurveOffset + (255 & this.notePans[panPrefixKey]);
+              if (adjustedPrefixPan < 0) {
+                adjustedPrefixPan = 0;
+              }
+              if (adjustedPrefixPan > 128) {
+                adjustedPrefixPan = 128;
+              }
+              this.notePans[panPrefixKey] = (byte)adjustedPrefixPan;
+            }
+            panCurveSegmentIndex = 2;
+            while (panCurveSegmentIndex < allocatedPanCurveAlias.length) {
+              nextPanCurveKey = allocatedPanCurveAlias[panCurveSegmentIndex];
+              nextPanCurveOffset = panCurve[panCurveSegmentIndex + 1] << 1;
+              panInterpolationNumerator = (-currentPanCurveKey + nextPanCurveKey) / 2 + panCurveOffset * (-currentPanCurveKey + nextPanCurveKey);
+              panInterpolationKey = currentPanCurveKey;
+              unusedPanInterpolationKey = panInterpolationKey;
+              while (panInterpolationKey < nextPanCurveKey) {
+                interpolatedPanOffset = MusicPatchPcmStream.floorDivide(-currentPanCurveKey + nextPanCurveKey, panInterpolationNumerator, 1589591487);
+                adjustedPan = interpolatedPanOffset + (255 & this.notePans[panInterpolationKey]);
+                if (adjustedPan < 0) {
+                  adjustedPan = 0;
                 }
-                if (128 < var35) {
-                  var35 = 128;
+                if (128 < adjustedPan) {
+                  adjustedPan = 128;
                 }
-                this.notePans[var37] = (byte)var35;
-                var32Lifetime1 = var32Lifetime1 + (var31Lifetime1 - var28Lifetime1);
-                var37++;
+                this.notePans[panInterpolationKey] = (byte)adjustedPan;
+                panInterpolationNumerator = panInterpolationNumerator + (nextPanCurveOffset - panCurveOffset);
+                panInterpolationKey++;
               }
-              var29Lifetime4Lifetime1 += 2;
-              var28Lifetime1 = var31Lifetime1;
-              var27Lifetime7Lifetime1 = var30Lifetime1Lifetime1;
+              panCurveSegmentIndex += 2;
+              panCurveOffset = nextPanCurveOffset;
+              currentPanCurveKey = nextPanCurveKey;
             }
-            var16 = null;
-            for (var30Lifetime1Lifetime2 = var27Lifetime7Lifetime1; var30Lifetime1Lifetime2 < 128; var30Lifetime1Lifetime2++) {
-              var31Lifetime1Lifetime1 = var28Lifetime1 + (this.notePans[var30Lifetime1Lifetime2] & 255);
-              if (var31Lifetime1Lifetime1 < 0) {
-                var31Lifetime1Lifetime1 = 0;
+            panCurve = null;
+            for (panSuffixKey = currentPanCurveKey; panSuffixKey < 128; panSuffixKey++) {
+              adjustedSuffixPan = panCurveOffset + (this.notePans[panSuffixKey] & 255);
+              if (adjustedSuffixPan < 0) {
+                adjustedSuffixPan = 0;
               }
-              if (var31Lifetime1Lifetime1 > 128) {
-                var31Lifetime1Lifetime1 = 128;
+              if (adjustedSuffixPan > 128) {
+                adjustedSuffixPan = 128;
               }
-              this.notePans[var30Lifetime1Lifetime2] = (byte)var31Lifetime1Lifetime1;
+              this.notePans[panSuffixKey] = (byte)adjustedSuffixPan;
             }
           }
-          for (var27Lifetime8 = 0; var12 > var27Lifetime8; var27Lifetime8++) {
-            var13[var27Lifetime8].decayRate = var38.readUnsignedByte(0);
+          for (decayEnvelopeIndex = 0; envelopeCount > decayEnvelopeIndex; decayEnvelopeIndex++) {
+            envelopeTable[decayEnvelopeIndex].decayRate = input.readUnsignedByte(0);
           }
-          for (var27Lifetime9 = 0; var27Lifetime9 < var12; var27Lifetime9++) {
-            var50 = var13[var27Lifetime9];
-            if (var50.volumeEnvelope != null) {
-              var50.volumeKeyScaling = var38.readUnsignedByte(0);
+          for (keyScalingEnvelopeIndex = 0; keyScalingEnvelopeIndex < envelopeCount; keyScalingEnvelopeIndex++) {
+            envelopeForKeyScaling = envelopeTable[keyScalingEnvelopeIndex];
+            if (envelopeForKeyScaling.volumeEnvelope != null) {
+              envelopeForKeyScaling.volumeKeyScaling = input.readUnsignedByte(0);
             }
-            if (null != var50.releaseEnvelope) {
-              var50.releaseKeyScaling = var38.readUnsignedByte(0);
+            if (null != envelopeForKeyScaling.releaseEnvelope) {
+              envelopeForKeyScaling.releaseKeyScaling = input.readUnsignedByte(0);
             }
-            if (0 < var50.decayRate) {
-              var50.decayKeyScaling = var38.readUnsignedByte(0);
-            }
-          }
-          for (var27Lifetime10 = 0; var12 > var27Lifetime10; var27Lifetime10++) {
-            var13[var27Lifetime10].vibratoRate = var38.readUnsignedByte(0);
-          }
-          for (var27Lifetime11 = 0; var27Lifetime11 < var12; var27Lifetime11++) {
-            var51 = var13[var27Lifetime11];
-            if (var51.vibratoRate > 0) {
-              var51.vibratoDepth = var38.readUnsignedByte(0);
+            if (0 < envelopeForKeyScaling.decayRate) {
+              envelopeForKeyScaling.decayKeyScaling = input.readUnsignedByte(0);
             }
           }
-          for (var27Lifetime12 = 0; var27Lifetime12 < var12; var27Lifetime12++) {
-            var52 = var13[var27Lifetime12];
-            if (var52.vibratoDepth > 0) {
-              var52.vibratoDelay = var38.readUnsignedByte(0);
+          for (vibratoRateEnvelopeIndex = 0; envelopeCount > vibratoRateEnvelopeIndex; vibratoRateEnvelopeIndex++) {
+            envelopeTable[vibratoRateEnvelopeIndex].vibratoRate = input.readUnsignedByte(0);
+          }
+          for (vibratoDepthEnvelopeIndex = 0; vibratoDepthEnvelopeIndex < envelopeCount; vibratoDepthEnvelopeIndex++) {
+            envelopeForVibratoDepth = envelopeTable[vibratoDepthEnvelopeIndex];
+            if (envelopeForVibratoDepth.vibratoRate > 0) {
+              envelopeForVibratoDepth.vibratoDepth = input.readUnsignedByte(0);
+            }
+          }
+          for (vibratoDelayEnvelopeIndex = 0; vibratoDelayEnvelopeIndex < envelopeCount; vibratoDelayEnvelopeIndex++) {
+            envelopeForVibratoDelay = envelopeTable[vibratoDelayEnvelopeIndex];
+            if (envelopeForVibratoDelay.vibratoDepth > 0) {
+              envelopeForVibratoDelay.vibratoDelay = input.readUnsignedByte(0);
             }
           }
           return;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var2 = decompiledCaughtException;
-          stackIn_204_0 = var2;
-          stackIn_204_1 = new StringBuilder().append("io.<init>(");
+        } catch (java.lang.RuntimeException caughtParameter) {
+          caughtFailure = caughtParameter;
+          failure = caughtFailure;
+          failureForContext = failure;
+          errorContext = new StringBuilder().append("io.<init>(");
           if (packedPatch == null) {
-            stackIn_205_2 = "null";
+            patchDescription = "null";
           } else {
-            stackIn_205_2 = "{...}";
+            patchDescription = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_204_0), ((StringBuilder) (Object) stackIn_204_1).append(stackIn_205_2).append(')').toString());
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) failureForContext), ((StringBuilder) (Object) errorContext).append(patchDescription).append(')').toString());
         }
     }
 

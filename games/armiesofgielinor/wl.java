@@ -13,41 +13,41 @@ abstract class wl extends tj {
     static String field_I;
     boolean field_L;
 
-    final static MusicPatch a(ResourceArchive param0, int param1, boolean param2) {
-        byte[] var3 = null;
-        RuntimeException var3_ref = null;
-        byte[] var4 = null;
-        Object stackIn_2_0 = null;
-        MusicPatch stackIn_5_0 = null;
-        MusicPatch stackIn_7_0 = null;
-        RuntimeException stackIn_10_0 = null;
-        StringBuilder stackIn_10_1 = null;
-        String stackIn_11_2 = null;
-        RuntimeException decompiledCaughtException = null;
+    final static MusicPatch loadMusicPatch(ResourceArchive archive, int patchId, boolean obfuscationGuard) {
+        byte[] packedPatch = null;
+        RuntimeException failure = null;
+        byte[] packedPatchAlias = null;
+        Object missingPatch = null;
+        MusicPatch guardRejectedPatch = null;
+        MusicPatch decodedPatch = null;
+        RuntimeException failureForContext = null;
+        StringBuilder errorContext = null;
+        String archiveDescription = null;
+        RuntimeException caughtFailure = null;
         try {
-          var4 = param0.getFlatFile(param1, (byte) 81);
-          var3 = var4;
-          if (var4 == null) {
-            stackIn_2_0 = null;
-            return (MusicPatch) (stackIn_2_0);
+          packedPatchAlias = archive.getFlatFile(patchId, (byte) 81);
+          packedPatch = packedPatchAlias;
+          if (packedPatchAlias == null) {
+            missingPatch = null;
+            return (MusicPatch) (missingPatch);
           }
-          if (param2) {
-            stackIn_7_0 = new MusicPatch(var4);
-            return stackIn_7_0;
+          if (obfuscationGuard) {
+            decodedPatch = new MusicPatch(packedPatchAlias);
+            return decodedPatch;
           }
-          stackIn_5_0 = (MusicPatch) null;
-          return stackIn_5_0;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var3_ref = decompiledCaughtException;
-          stackIn_10_0 = var3_ref;
-          stackIn_10_1 = new StringBuilder().append("wl.FA(");
-          if (param0 == null) {
-            stackIn_11_2 = "null";
+          guardRejectedPatch = (MusicPatch) null;
+          return guardRejectedPatch;
+        } catch (java.lang.RuntimeException caughtParameter) {
+          caughtFailure = caughtParameter;
+          failure = caughtFailure;
+          failureForContext = failure;
+          errorContext = new StringBuilder().append("wl.FA(");
+          if (archive == null) {
+            archiveDescription = "null";
           } else {
-            stackIn_11_2 = "{...}";
+            archiveDescription = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) failureForContext), ((StringBuilder) (Object) errorContext).append(archiveDescription).append(',').append(patchId).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 
@@ -174,7 +174,7 @@ abstract class wl extends tj {
         var2 = stackIn_6_0;
         if (param0 < 9) {
           var4 = (ResourceArchive) null;
-          wl.a((ResourceArchive) null, -105, true);
+          wl.loadMusicPatch((ResourceArchive) null, -105, true);
         }
         stackIn_13_0 = (param1) && (sq.c((byte) -103)) && (var2 == 0);
         tq.a(stackIn_13_0, false);
