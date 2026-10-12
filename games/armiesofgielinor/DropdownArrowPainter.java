@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class gs implements kh {
+final class DropdownArrowPainter implements WidgetPainter {
     static int field_b;
     static boolean field_a;
     static String[] field_c;
@@ -141,7 +141,7 @@ final class gs implements kh {
         }
     }
 
-    public final void a(kb param0, int param1, int param2, boolean param3, int param4) {
+    public final void paintWidget(Widget widget, int originX, int obfuscationGuard, boolean renderFlag, int originY) {
         RuntimeException stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;
         String stackIn_18_2 = null;
@@ -158,20 +158,20 @@ final class gs implements kh {
         int var8Lifetime1;
         var10 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          for (var6_int = 0; var6_int <= param0.field_w; var6_int++) {
-            var7 = 152 + var6_int * 48 / param0.field_w;
+          for (var6_int = 0; var6_int <= widget.height; var6_int++) {
+            var7 = 152 + var6_int * 48 / widget.height;
             var8 = var7 | (var7 << 16 | var7 << 8);
-            SoftwareRaster.e(param0.field_B + param1, var6_int + param4 + param0.field_p, param0.field_l, var8);
+            SoftwareRaster.e(widget.x + originX, var6_int + originY + widget.y, widget.width, var8);
           }
           var6_intLifetime1 = 1;
-          if (param2 > -79) {
+          if (obfuscationGuard > -79) {
             var11 = (int[]) null;
-            gs.a((byte) -58, (int[]) null);
+            DropdownArrowPainter.a((byte) -58, (int[]) null);
           }
           while (5 >= var6_intLifetime1) {
-            var7Lifetime1 = var6_intLifetime1 + (-5 + (param1 + param0.field_B)) + (param0.field_l - (param0.field_l >> 1));
-            var8Lifetime1 = -(var6_intLifetime1 * 2) + (param0.field_l >> 1);
-            var9 = var6_intLifetime1 + (param4 + (param0.field_p + (-4 + param0.field_w >> 1)));
+            var7Lifetime1 = var6_intLifetime1 + (-5 + (originX + widget.x)) + (widget.width - (widget.width >> 1));
+            var8Lifetime1 = -(var6_intLifetime1 * 2) + (widget.width >> 1);
+            var9 = var6_intLifetime1 + (originY + (widget.y + (-4 + widget.height >> 1)));
             if (var9 >= SoftwareRaster.clipTop &&
               SoftwareRaster.clipBottom > var9) {
               if (SoftwareRaster.clipLeft < var7Lifetime1) {
@@ -190,12 +190,12 @@ final class gs implements kh {
           var6 = decompiledCaughtException;
           stackIn_17_0 = var6;
           stackIn_17_1 = new StringBuilder().append("gs.C(");
-          if (param0 == null) {
+          if (widget == null) {
             stackIn_18_2 = "null";
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(originX).append(',').append(obfuscationGuard).append(',').append(renderFlag).append(',').append(originY).append(')').toString());
         }
     }
 
@@ -272,7 +272,7 @@ final class gs implements kh {
                     } catch (Throwable stateCaught_1) {
                         statePc = ((Object) stateCaught_1 instanceof RuntimeException ? 43 : -1);
                         if (statePc == -1) {
-                            throw gs.<RuntimeException>$cfr$sneakyThrow(stateCaught_1);
+                            throw DropdownArrowPainter.<RuntimeException>$cfr$sneakyThrow(stateCaught_1);
                         }
                         caughtException = stateCaught_1;
                         continue scanLoop1;
@@ -307,7 +307,7 @@ final class gs implements kh {
                     } catch (Throwable stateCaught_9) {
                         statePc = ((Object) stateCaught_9 instanceof RuntimeException ? 43 : -1);
                         if (statePc == -1) {
-                            throw gs.<RuntimeException>$cfr$sneakyThrow(stateCaught_9);
+                            throw DropdownArrowPainter.<RuntimeException>$cfr$sneakyThrow(stateCaught_9);
                         }
                         caughtException = stateCaught_9;
                         continue scanLoop1;
@@ -335,7 +335,7 @@ final class gs implements kh {
                     } catch (Throwable stateCaught_12) {
                         statePc = ((Object) stateCaught_12 instanceof RuntimeException ? 43 : -1);
                         if (statePc == -1) {
-                            throw gs.<RuntimeException>$cfr$sneakyThrow(stateCaught_12);
+                            throw DropdownArrowPainter.<RuntimeException>$cfr$sneakyThrow(stateCaught_12);
                         }
                         caughtException = stateCaught_12;
                         continue scanLoop1;
@@ -366,7 +366,7 @@ final class gs implements kh {
                     } catch (Throwable stateCaught_15) {
                         statePc = ((Object) stateCaught_15 instanceof RuntimeException ? 43 : -1);
                         if (statePc == -1) {
-                            throw gs.<RuntimeException>$cfr$sneakyThrow(stateCaught_15);
+                            throw DropdownArrowPainter.<RuntimeException>$cfr$sneakyThrow(stateCaught_15);
                         }
                         caughtException = stateCaught_15;
                         continue scanLoop1;
@@ -393,7 +393,7 @@ final class gs implements kh {
                     } catch (Throwable stateCaught_21) {
                         statePc = ((Object) stateCaught_21 instanceof RuntimeException ? 43 : -1);
                         if (statePc == -1) {
-                            throw gs.<RuntimeException>$cfr$sneakyThrow(stateCaught_21);
+                            throw DropdownArrowPainter.<RuntimeException>$cfr$sneakyThrow(stateCaught_21);
                         }
                         caughtException = stateCaught_21;
                         continue scanLoop1;
@@ -433,7 +433,7 @@ final class gs implements kh {
                     } catch (Throwable stateCaught_22) {
                         statePc = ((Object) stateCaught_22 instanceof RuntimeException ? 43 : -1);
                         if (statePc == -1) {
-                            throw gs.<RuntimeException>$cfr$sneakyThrow(stateCaught_22);
+                            throw DropdownArrowPainter.<RuntimeException>$cfr$sneakyThrow(stateCaught_22);
                         }
                         caughtException = stateCaught_22;
                         continue scanLoop1;
@@ -488,7 +488,7 @@ final class gs implements kh {
                     } catch (Throwable stateCaught_28) {
                         statePc = ((Object) stateCaught_28 instanceof RuntimeException ? 43 : -1);
                         if (statePc == -1) {
-                            throw gs.<RuntimeException>$cfr$sneakyThrow(stateCaught_28);
+                            throw DropdownArrowPainter.<RuntimeException>$cfr$sneakyThrow(stateCaught_28);
                         }
                         caughtException = stateCaught_28;
                         continue scanLoop1;
@@ -517,7 +517,7 @@ final class gs implements kh {
                     } catch (Throwable stateCaught_34) {
                         statePc = ((Object) stateCaught_34 instanceof RuntimeException ? 43 : -1);
                         if (statePc == -1) {
-                            throw gs.<RuntimeException>$cfr$sneakyThrow(stateCaught_34);
+                            throw DropdownArrowPainter.<RuntimeException>$cfr$sneakyThrow(stateCaught_34);
                         }
                         caughtException = stateCaught_34;
                         continue scanLoop1;
@@ -532,7 +532,7 @@ final class gs implements kh {
                     } catch (Throwable stateCaught_37) {
                         statePc = ((Object) stateCaught_37 instanceof RuntimeException ? 43 : -1);
                         if (statePc == -1) {
-                            throw gs.<RuntimeException>$cfr$sneakyThrow(stateCaught_37);
+                            throw DropdownArrowPainter.<RuntimeException>$cfr$sneakyThrow(stateCaught_37);
                         }
                         caughtException = stateCaught_37;
                         continue scanLoop1;
@@ -560,7 +560,7 @@ final class gs implements kh {
                     } catch (Throwable stateCaught_38) {
                         statePc = ((Object) stateCaught_38 instanceof RuntimeException ? 43 : -1);
                         if (statePc == -1) {
-                            throw gs.<RuntimeException>$cfr$sneakyThrow(stateCaught_38);
+                            throw DropdownArrowPainter.<RuntimeException>$cfr$sneakyThrow(stateCaught_38);
                         }
                         caughtException = stateCaught_38;
                         continue scanLoop1;

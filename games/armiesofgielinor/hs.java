@@ -3,21 +3,21 @@
  */
 import java.util.*;
 
-abstract class hs extends kb implements gw {
+abstract class hs extends Widget implements gw {
     static String field_D;
-    kb[] field_C;
+    Widget[] field_C;
     static String field_I;
     static fp field_H;
     static int[] field_G;
     static RgbSprite[] field_F;
     static String[] field_E;
 
-    void a(int param0, int param1, int param2, kb param3) {
+    void a(int param0, int param1, int param2, Widget param3) {
         int var6 = 0;
-        kb var7 = null;
+        Widget var7 = null;
         int var8 = 0;
-        kb var9 = null;
-        kb[] var10 = null;
+        Widget var9 = null;
+        Widget[] var10 = null;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
         String stackIn_14_2 = null;
@@ -32,13 +32,13 @@ abstract class hs extends kb implements gw {
           var10 = this.field_C;
           var6 = 0;
           if (param0 != 32722) {
-            var9 = (kb) null;
-            this.a(100, 40, 117, -12, 65, -112, (kb) null);
+            var9 = (Widget) null;
+            this.a(100, 40, 117, -12, 65, -112, (Widget) null);
           }
           while (var6 < var10.length) {
             var7 = var10[var6];
             if (var7 != null) {
-              var7.a(32722, param1 + this.field_B, this.field_p + param2, param3);
+              var7.a(32722, param1 + this.x, this.y + param2, param3);
             }
             var6++;
           }
@@ -374,16 +374,16 @@ abstract class hs extends kb implements gw {
     final int g(int param0) {
         int var4 = 0;
         int var2;
-        kb[] var3;
-        kb var5;
+        Widget[] var3;
+        Widget var5;
         int var7;
-        kb var8;
+        Widget var8;
         int var6;
         var7 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         var2 = 0;
         if (param0 != -31989) {
-          var8 = (kb) null;
-          this.a(-72, 104, -12, -47, (kb) null, 52, 17);
+          var8 = (Widget) null;
+          this.a(-72, 104, -12, -47, (Widget) null, 52, 17);
         }
         var3 = this.field_C;
         for (var4 = 0; var4 < var3.length; var4++) {
@@ -398,13 +398,13 @@ abstract class hs extends kb implements gw {
         return var2;
     }
 
-    boolean a(int param0, int param1, int param2, int param3, int param4, int param5, kb param6) {
+    boolean a(int param0, int param1, int param2, int param3, int param4, int param5, Widget param6) {
         int var9 = 0;
-        kb[] var8 = null;
+        Widget[] var8 = null;
         RuntimeException var8_ref = null;
-        kb var10 = null;
+        Widget var10 = null;
         int var11 = 0;
-        kb[] var12 = null;
+        Widget[] var12 = null;
         RuntimeException stackIn_20_0 = null;
         StringBuilder stackIn_20_1 = null;
         String stackIn_21_2 = null;
@@ -444,12 +444,12 @@ abstract class hs extends kb implements gw {
 
     void a(int param0, int param1, byte param2, int param3) {
         int var5 = 0;
-        kb var6;
+        Widget var6;
         int var7;
         var7 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         if (param3 == 0 &&
-          null != this.field_k) {
-          this.field_k.a((kb) (this), param0, -121, true, param1);
+          null != this.painter) {
+          this.painter.paintWidget((Widget) (this), param0, -121, true, param1);
         }
         if (param2 >= -82) {
           this.f(-101);
@@ -458,25 +458,25 @@ abstract class hs extends kb implements gw {
           for (var5 = -1 + this.field_C.length; var5 >= 0; var5--) {
             var6 = this.field_C[var5];
             if (var6 != null) {
-              var6.a(this.field_B + param0, param1 + this.field_p, (byte) -124, param3);
+              var6.a(this.x + param0, param1 + this.y, (byte) -124, param3);
             }
           }
         }
     }
 
-    final boolean a(kb param0, int param1, boolean param2) {
+    final boolean a(Widget param0, int param1, boolean param2) {
         int var4_int = 0;
         RuntimeException var4 = null;
-        kb var5 = null;
-        kb var6 = null;
+        Widget var5 = null;
+        Widget var6 = null;
         int var7 = 0;
-        kb stackIn_7_0 = null;
+        Widget stackIn_7_0 = null;
         RuntimeException stackIn_25_0 = null;
         StringBuilder stackIn_25_1 = null;
         String stackIn_26_2 = null;
         RuntimeException decompiledCaughtException = null;
-        kb var6Lifetime1;
-        kb var6Lifetime2;
+        Widget var6Lifetime1;
+        Widget var6Lifetime2;
         var7 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           if (this.field_C == null) {
@@ -534,7 +534,7 @@ abstract class hs extends kb implements gw {
             this.a(param3, -121, param1, param0);
           }
           if (param2 != 26477) {
-            this.a((kb) null, -91, '￨', -125);
+            this.a((Widget) null, -91, '￨', -125);
           }
           stackIn_6_0 = (StringBuilder) (param1);
           return stackIn_6_0;
@@ -558,22 +558,22 @@ abstract class hs extends kb implements gw {
         }
     }
 
-    hs(int param0, int param1, int param2, int param3, kh param4) {
+    hs(int param0, int param1, int param2, int param3, WidgetPainter param4) {
         super(param0, param1, param2, param3, param4, (qo) null);
     }
 
-    final boolean a(byte param0, kb param1, int param2) {
+    final boolean a(byte param0, Widget param1, int param2) {
         int var4_int = 0;
         RuntimeException var4 = null;
-        kb var5 = null;
-        kb var6 = null;
+        Widget var5 = null;
+        Widget var6 = null;
         int var7 = 0;
         RuntimeException stackIn_24_0 = null;
         StringBuilder stackIn_24_1 = null;
         String stackIn_25_2 = null;
         RuntimeException decompiledCaughtException = null;
-        kb var6Lifetime1;
-        kb var6Lifetime2;
+        Widget var6Lifetime1;
+        Widget var6Lifetime2;
         var7 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           if (null == this.field_C) {
@@ -614,14 +614,14 @@ abstract class hs extends kb implements gw {
         }
     }
 
-    boolean a(kb param0, int param1, char param2, int param3) {
+    boolean a(Widget param0, int param1, char param2, int param3) {
         int var6 = 0;
-        kb[] var5 = null;
+        Widget[] var5 = null;
         int var5_int = 0;
         RuntimeException var5_ref = null;
-        kb var7 = null;
+        Widget var7 = null;
         int var8 = 0;
-        kb[] var9 = null;
+        Widget[] var9 = null;
         boolean stackIn_16_0 = false;
         RuntimeException stackIn_23_0 = null;
         StringBuilder stackIn_23_1 = null;
@@ -678,9 +678,9 @@ abstract class hs extends kb implements gw {
         int var8 = 0;
         StringBuilder discarded$8 = null;
         StringBuilder discarded$7 = null;
-        kb var7 = null;
+        Widget var7 = null;
         int var9 = 0;
-        kb[] var10 = null;
+        Widget[] var10 = null;
         RuntimeException stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;
         String stackIn_18_2 = null;
@@ -748,8 +748,8 @@ abstract class hs extends kb implements gw {
 
     final String h(int param0) {
         int var3 = 0;
-        kb[] var2;
-        kb var4;
+        Widget[] var2;
+        Widget var4;
         int var6;
         String var5;
         var6 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
@@ -779,13 +779,13 @@ abstract class hs extends kb implements gw {
         return null != this.a((byte) -86) ? true : false;
     }
 
-    boolean a(int param0, int param1, int param2, int param3, kb param4, int param5, int param6) {
+    boolean a(int param0, int param1, int param2, int param3, Widget param4, int param5, int param6) {
         int var9 = 0;
-        kb[] var8 = null;
+        Widget[] var8 = null;
         RuntimeException var8_ref = null;
-        kb var10 = null;
+        Widget var10 = null;
         int var11 = 0;
-        kb[] var12 = null;
+        Widget[] var12 = null;
         RuntimeException stackIn_18_0 = null;
         StringBuilder stackIn_18_1 = null;
         String stackIn_19_2 = null;
@@ -803,7 +803,7 @@ abstract class hs extends kb implements gw {
           for (var9 = 0; var12.length > var9; var9++) {
             var10 = var12[var9];
             if (var10 != null &&
-              var10.a(param0, this.field_B + param1, this.field_p + param2, 108, param4, param5, param6)) {
+              var10.a(param0, this.x + param1, this.y + param2, 108, param4, param5, param6)) {
               return true;
             }
           }
@@ -836,10 +836,10 @@ abstract class hs extends kb implements gw {
 
     final void f(int param0) {
         int var3 = 0;
-        kb[] var2;
-        kb var4;
+        Widget[] var2;
+        Widget var4;
         int var5;
-        kb[] var6;
+        Widget[] var6;
         var5 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         if (param0 != 1) {
           field_D = (String) null;
@@ -854,7 +854,7 @@ abstract class hs extends kb implements gw {
         }
     }
 
-    final boolean a(byte param0, kb param1) {
+    final boolean a(byte param0, Widget param1) {
         RuntimeException var3 = null;
         boolean stackIn_3_0 = false;
         RuntimeException stackIn_6_0 = null;
@@ -881,17 +881,17 @@ abstract class hs extends kb implements gw {
         }
     }
 
-    void a(int param0, int param1, int param2, int param3, int param4) {
-        super.a(param0, param1, param2, param3, param4);
+    void setBounds(int x, int width, int y, int obfuscationGuard, int height) {
+        super.setBounds(x, width, y, obfuscationGuard, height);
         this.d((byte) 121);
     }
 
-    private final kb a(byte param0) {
+    private final Widget a(byte param0) {
         int var3 = 0;
-        kb[] var2;
-        kb var4;
+        Widget[] var2;
+        Widget var4;
         int var5;
-        kb[] var6;
+        Widget[] var6;
         var5 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         if (this.field_C == null) {
           return null;
@@ -906,18 +906,18 @@ abstract class hs extends kb implements gw {
           }
         }
         if (param0 > -64) {
-          return (kb) null;
+          return (Widget) null;
         }
         return null;
     }
 
-    final void a(int param0, kb param1, int param2, byte param3, int param4, int param5) {
+    final void a(int param0, Widget param1, int param2, byte param3, int param4, int param5) {
         int var8 = 0;
-        kb[] var7 = null;
+        Widget[] var7 = null;
         int var9 = 0;
-        kb var10 = null;
+        Widget var10 = null;
         int var11 = 0;
-        kb[] var12 = null;
+        Widget[] var12 = null;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
         String stackIn_13_2 = null;
@@ -934,7 +934,7 @@ abstract class hs extends kb implements gw {
           for (var8 = 0; var12.length > var8; var8++) {
             var10 = var12[var8];
             if (var10 != null) {
-              var10.a(this.field_p + param0, param1, param2, (byte) -126, param4, this.field_B + param5);
+              var10.a(this.y + param0, param1, param2, (byte) -126, param4, this.x + param5);
             }
           }
           return;
@@ -952,13 +952,13 @@ abstract class hs extends kb implements gw {
         }
     }
 
-    boolean a(int param0, kb param1) {
+    boolean a(int param0, Widget param1) {
         int var4 = 0;
-        kb[] var3 = null;
+        Widget[] var3 = null;
         RuntimeException var3_ref = null;
-        kb var5 = null;
+        Widget var5 = null;
         int var6 = 0;
-        kb[] var7 = null;
+        Widget[] var7 = null;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
         String stackIn_16_2 = null;
@@ -992,7 +992,7 @@ abstract class hs extends kb implements gw {
         }
     }
 
-    final boolean b(int param0, kb param1) {
+    final boolean b(int param0, Widget param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         boolean stackIn_1_0 = false;

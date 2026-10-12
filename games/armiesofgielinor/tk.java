@@ -3,7 +3,7 @@
  */
 import java.io.*;
 
-final class tk implements kh {
+final class tk implements WidgetPainter {
     private BitmapFont field_g;
     private int field_e;
     private int field_l;
@@ -73,8 +73,8 @@ final class tk implements kh {
         }
     }
 
-    public final void a(kb param0, int param1, int param2, boolean param3, int param4) {
-        kb stackIn_3_0 = null;
+    public final void paintWidget(Widget widget, int originX, int obfuscationGuard, boolean renderFlag, int originY) {
+        Widget stackIn_3_0 = null;
         RuntimeException stackIn_18_0 = null;
         StringBuilder stackIn_18_1 = null;
         String stackIn_19_2 = null;
@@ -86,25 +86,25 @@ final class tk implements kh {
         int var10 = 0;
         vu var11 = null;
         try {
-          if (param0 instanceof vu) {
-            stackIn_3_0 = (kb) (param0);
+          if (widget instanceof vu) {
+            stackIn_3_0 = (Widget) (widget);
           } else {
             stackIn_3_0 = null;
           }
           var11 = (vu) (stackIn_3_0);
           if (var11 != null) {
-            param3 = param3 & var11.field_I;
+            renderFlag = renderFlag & var11.field_I;
           }
-          if (param2 >= -79) {
+          if (obfuscationGuard >= -79) {
             this.field_e = -101;
           }
           var7 = 5592405;
-          SoftwareRaster.f(param1 + param0.field_B, param0.field_p + param4, param0.field_l, param0.field_w, this.field_l);
-          if (param3) {
+          SoftwareRaster.f(originX + widget.x, widget.y + originY, widget.width, widget.height, this.field_l);
+          if (renderFlag) {
             var7 = 16777215;
           }
-          var8 = this.field_i + (param1 + param0.field_B);
-          var9 = param0.field_p + (param4 + this.field_m);
+          var8 = this.field_i + (originX + widget.x);
+          var9 = widget.y + (originY + this.field_m);
           SoftwareRaster.g(var8, var9, this.field_h, this.field_j, 5592405);
           SoftwareRaster.f(var8, var9, this.field_h, this.field_j, var7);
           if (var11.field_K) {
@@ -113,7 +113,7 @@ final class tk implements kh {
           }
           if (this.field_g != null) {
             var10 = this.field_a + this.field_h + this.field_i;
-            this.field_g.a(param0.field_v, param1 + param0.field_B + var10, param0.field_p + param4 + this.field_k, -this.field_a - var10 + param0.field_l, param0.field_w - (this.field_a << 1), this.field_b, this.field_c, this.field_d, this.field_e, 0);
+            this.field_g.a(widget.field_v, originX + widget.x + var10, widget.y + originY + this.field_k, -this.field_a - var10 + widget.width, widget.height - (this.field_a << 1), this.field_b, this.field_c, this.field_d, this.field_e, 0);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -121,12 +121,12 @@ final class tk implements kh {
           var6 = decompiledCaughtException;
           stackIn_18_0 = var6;
           stackIn_18_1 = new StringBuilder().append("tk.C(");
-          if (param0 == null) {
+          if (widget == null) {
             stackIn_19_2 = "null";
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(originX).append(',').append(obfuscationGuard).append(',').append(renderFlag).append(',').append(originY).append(')').toString());
         }
     }
 

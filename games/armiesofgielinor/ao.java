@@ -70,8 +70,8 @@ final class ao extends lk {
         }
     }
 
-    public final void a(kb param0, int param1, int param2, boolean param3, int param4) {
-        kb stackIn_3_0 = null;
+    public final void paintWidget(Widget widget, int originX, int obfuscationGuard, boolean renderFlag, int originY) {
+        Widget stackIn_3_0 = null;
         RuntimeException stackIn_33_0 = null;
         StringBuilder stackIn_33_1 = null;
         String stackIn_34_2 = null;
@@ -85,55 +85,55 @@ final class ao extends lk {
         ip var13 = null;
         ip var14 = null;
         try {
-          if (param0 instanceof fw) {
-            stackIn_3_0 = (kb) (param0);
+          if (widget instanceof fw) {
+            stackIn_3_0 = (Widget) (widget);
           } else {
             stackIn_3_0 = null;
           }
           var10 = (fw) (stackIn_3_0);
-          CampaignUnitOverride.a(param1 + param0.field_B, param0.field_l + (param0.field_B + param1), param0.field_p + (param4 + param0.field_w), param4 + param0.field_p, (byte) 72);
-          if (param2 >= -79) {
+          CampaignUnitOverride.a(originX + widget.x, widget.width + (widget.x + originX), widget.y + (originY + widget.height), originY + widget.y, (byte) 72);
+          if (obfuscationGuard >= -79) {
             return;
           }
           if (var10 != null) {
-            param3 = param3 & var10.field_I;
+            renderFlag = renderFlag & var10.field_I;
           }
           var7 = this.field_w[0];
           this.field_v.a(false);
-          var7.a(-10265, this.field_v, param1, this, param4, param0);
+          var7.a(-10265, this.field_v, originX, this, originY, widget);
           if (var10 != null) {
             if (var10.field_K) {
               var11 = this.field_w[1];
               if (var11 != null) {
-                var11.a(-10265, this.field_v, param1, this, param4, param0);
+                var11.a(-10265, this.field_v, originX, this, originY, widget);
               }
             }
             if (var10.field_t) {
               var12 = this.field_w[3];
               if (0 != var10.field_q &&
                 var12 != null) {
-                var12.a(-10265, this.field_v, param1, this, param4, param0);
+                var12.a(-10265, this.field_v, originX, this, originY, widget);
               } else {
                 var9 = this.field_w[2];
                 if (var9 != null) {
-                  var9.a(-10265, this.field_v, param1, this, param4, param0);
+                  var9.a(-10265, this.field_v, originX, this, originY, widget);
                 }
               }
             }
           }
-          if (param0.a(false)) {
+          if (widget.a(false)) {
             var13 = this.field_w[5];
             if (var13 != null) {
-              var13.a(-10265, this.field_v, param1, this, param4, param0);
+              var13.a(-10265, this.field_v, originX, this, originY, widget);
             }
           }
-          if (!param3) {
+          if (!renderFlag) {
             var14 = this.field_w[4];
             if (var14 != null) {
-              var14.a(-10265, this.field_v, param1, this, param4, param0);
+              var14.a(-10265, this.field_v, originX, this, originY, widget);
             }
           }
-          this.field_v.a(param0, (byte) 113, param4, param1, this);
+          this.field_v.a(widget, (byte) 113, originY, originX, this);
           rf.b(-18862);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -141,12 +141,12 @@ final class ao extends lk {
           var6 = decompiledCaughtException;
           stackIn_33_0 = var6;
           stackIn_33_1 = new StringBuilder().append("ao.C(");
-          if (param0 == null) {
+          if (widget == null) {
             stackIn_34_2 = "null";
           } else {
             stackIn_34_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_33_0), ((StringBuilder) (Object) stackIn_33_1).append(stackIn_34_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_33_0), ((StringBuilder) (Object) stackIn_33_1).append(stackIn_34_2).append(',').append(originX).append(',').append(obfuscationGuard).append(',').append(renderFlag).append(',').append(originY).append(')').toString());
         }
     }
 

@@ -1323,7 +1323,7 @@ final class CampaignMenu {
           tileWidth = sprite.pixelWidth / layout.mapWidth;
           leftOffset = (sprite.pixelWidth - tileWidth * layout.mapWidth) / 2;
           topOffset = (-(tileWidth * layout.mapHeight) + sprite.pixelHeight) / 2;
-          terrain = new int[][]{kb.field_o};
+          terrain = new int[][]{Widget.field_o};
           participantNames = new String[mission.participantIds.length];
           var14_int = 0;
           while (participantNames.length > var14_int) {

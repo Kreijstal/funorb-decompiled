@@ -145,7 +145,7 @@ final class nu extends lk {
         return tk.a(param0, true, 1, false, false, 1);
     }
 
-    public final void a(kb param0, int param1, int param2, boolean param3, int param4) {
+    public final void paintWidget(Widget widget, int originX, int obfuscationGuard, boolean renderFlag, int originY) {
         int stackIn_6_0 = 0;
         int stackIn_16_0 = 0;
         int stackIn_19_0 = 0;
@@ -157,22 +157,22 @@ final class nu extends lk {
         RuntimeException var6 = null;
         int var7 = 0;
         int var8 = 0;
-        kb var9 = null;
+        Widget var9 = null;
         try {
-          if (!param0.field_t) {
-            stackIn_6_0 = (param0.a(false)) ? 1 : 0;
+          if (!widget.field_t) {
+            stackIn_6_0 = (widget.a(false)) ? 1 : 0;
           } else {
             stackIn_6_0 = 1;
           }
           var6_int = stackIn_6_0;
-          if (param0 instanceof fw) {
-            param3 = param3 & ((fw) (param0)).field_I;
+          if (widget instanceof fw) {
+            renderFlag = renderFlag & ((fw) (widget)).field_I;
           }
-          if (param2 > -79) {
-            var9 = (kb) null;
-            this.a((kb) null, 31, -37, true, 10);
+          if (obfuscationGuard > -79) {
+            var9 = (Widget) null;
+            this.paintWidget((Widget) null, 31, -37, true, 10);
           }
-          if (!param3) {
+          if (!renderFlag) {
             stackIn_16_0 = this.field_y;
           } else {
             if (var6_int != 0) {
@@ -182,22 +182,22 @@ final class nu extends lk {
             }
           }
           var7 = stackIn_16_0;
-          stackIn_19_0 = (!param3) ? 7105644 : 16777215;
+          stackIn_19_0 = (!renderFlag) ? 7105644 : 16777215;
           var8 = stackIn_19_0;
-          wn.a(var7, this.field_v, param0.field_l, param1 + param0.field_B, param0.field_p + param4 + (-this.field_v[0].canvasHeight + param0.field_w >> 1), -3225);
-          this.field_q.a(param0.field_v, param0.field_B + param1, param4 + param0.field_p - 2, param0.field_l, param0.field_w, var8, -1, 1, 1, this.field_q.field_H);
+          wn.a(var7, this.field_v, widget.width, originX + widget.x, widget.y + originY + (-this.field_v[0].canvasHeight + widget.height >> 1), -3225);
+          this.field_q.a(widget.field_v, widget.x + originX, originY + widget.y - 2, widget.width, widget.height, var8, -1, 1, 1, this.field_q.field_H);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = decompiledCaughtException;
           stackIn_23_0 = var6;
           stackIn_23_1 = new StringBuilder().append("nu.C(");
-          if (param0 == null) {
+          if (widget == null) {
             stackIn_24_2 = "null";
           } else {
             stackIn_24_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(',').append(originX).append(',').append(obfuscationGuard).append(',').append(renderFlag).append(',').append(originY).append(')').toString());
         }
     }
 

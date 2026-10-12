@@ -41,7 +41,7 @@ abstract class sf extends wl {
         int var12Lifetime1;
         int var13Lifetime1;
         var16 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
-        SoftwareRaster.a(6 + param0, 35 + param2, this.field_l - 12, this.field_w - 40, 2105376, 0);
+        SoftwareRaster.a(6 + param0, 35 + param2, this.width - 12, this.height - 40, 2105376, 0);
         var4 = 35;
         var5 = 211;
         var6 = 194;
@@ -52,7 +52,7 @@ abstract class sf extends wl {
             var8 < SoftwareRaster.clipBottom) {
             var9 = var5 + var7 * (var6 - var5) / var4;
             var10 = 0;
-            var11 = this.field_l;
+            var11 = this.width;
             if (var7 <= 20) {
               while (20 >= var10) {
                 var12 = (-var10 + 20) * (-var10 + 20) + (-var7 + 20) * (-var7 + 20);
@@ -102,14 +102,14 @@ abstract class sf extends wl {
           var9Lifetime1 = var5Lifetime1 + var7Lifetime1 * (-var5Lifetime1 + var6Lifetime1) / var4Lifetime1;
           var9Lifetime1 = var9Lifetime1 | (var9Lifetime1 << 16 | var9Lifetime1 << 8);
           SoftwareRaster.e(param0, var8Lifetime1, 6, var9Lifetime1);
-          SoftwareRaster.e(param0 - (-this.field_l + 6), var8Lifetime1, 6, var9Lifetime1);
+          SoftwareRaster.e(param0 - (-this.width + 6), var8Lifetime1, 6, var9Lifetime1);
           var7Lifetime1++;
           var8Lifetime1++;
         }
-        gt.field_e.g(this.field_l + (param0 - 90), 10 + param2);
-        EquipmentBattleTutorial.a(t.field_d, param0 + 5, param2 + 35, this.field_l - 10, 8941);
-        EquipmentBattleTutorial.a(ip.field_c, param0, -22 + param2 + this.field_w, this.field_l, param1 ^ 1851672364);
-        var4Lifetime2 = this.field_w - 79;
+        gt.field_e.g(this.width + (param0 - 90), 10 + param2);
+        EquipmentBattleTutorial.a(t.field_d, param0 + 5, param2 + 35, this.width - 10, 8941);
+        EquipmentBattleTutorial.a(ip.field_c, param0, -22 + param2 + this.height, this.width, param1 ^ 1851672364);
+        var4Lifetime2 = this.height - 79;
         var6Lifetime2 = 127;
         var5Lifetime2 = 169;
         if (param1 != 1851680193) {
@@ -122,7 +122,7 @@ abstract class sf extends wl {
           var9Lifetime2 = (-var5Lifetime2 + var6Lifetime2) * var7Lifetime2 / var4Lifetime2 + var5Lifetime2;
           var9Lifetime2 = var9Lifetime2 | (var9Lifetime2 << 16 | var9Lifetime2 << 8);
           SoftwareRaster.e(param0, var8Lifetime2, 6, var9Lifetime2);
-          SoftwareRaster.e(param0 + this.field_l - 6, var8Lifetime2, 6, var9Lifetime2);
+          SoftwareRaster.e(param0 + this.width - 6, var8Lifetime2, 6, var9Lifetime2);
           var7Lifetime2++;
           var8Lifetime2++;
         }
@@ -210,9 +210,9 @@ abstract class sf extends wl {
         this.field_R = 0;
         this.field_U = param2;
         this.field_O = param0;
-        this.field_S = this.field_w;
+        this.field_S = this.height;
         this.field_V = param3;
-        this.field_T = this.field_l;
+        this.field_T = this.width;
         if (param1) {
           this.a(-36, true, -43, -81);
         }

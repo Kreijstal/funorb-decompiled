@@ -11,7 +11,7 @@ abstract class pt extends sf {
     private tv field_bb;
     static h field_db;
     private int field_ab;
-    private kb field_jb;
+    private Widget field_jb;
     private int field_fb;
     static uv field_eb;
     static String field_Y;
@@ -59,7 +59,7 @@ abstract class pt extends sf {
             this.field_cb.field_K = 256 - (this.field_hb << 8) / this.field_ib;
           } else {
             this.field_bb = ContextualRuntimeException.field_c;
-            this.a(this.field_Z, false, this.field_jb.field_w + 12 + this.field_ab, this.field_jb.field_l + 12);
+            this.a(this.field_Z, false, this.field_jb.height + 12 + this.field_ab, this.field_jb.width + 12);
             this.field_hb = 0;
             this.field_cb.field_K = 0;
           }
@@ -113,7 +113,7 @@ abstract class pt extends sf {
           return;
         }
         if (ki.field_e != this.field_bb) {
-          this.a(this.field_jb.field_l + 12, (byte) 98, 12 + (this.field_ab + this.field_jb.field_w));
+          this.a(this.field_jb.width + 12, (byte) 98, 12 + (this.field_ab + this.field_jb.height));
           this.b(107, this.field_jb);
         } else {
           this.field_bb = null;
@@ -128,7 +128,7 @@ abstract class pt extends sf {
         var2Lifetime2 = 71 % ((param0 + 25) / 57);
     }
 
-    void a(kb param0, byte param1) {
+    void a(Widget param0, byte param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         RuntimeException stackIn_7_0 = null;
@@ -139,7 +139,7 @@ abstract class pt extends sf {
           var3_int = 116 % ((-27 - param1) / 44);
           this.field_jb = param0;
           if (this.field_bb == ContextualRuntimeException.field_c) {
-            this.a(this.field_Z, false, this.field_jb.field_w + (12 + this.field_ab), 12 + this.field_jb.field_l);
+            this.a(this.field_Z, false, this.field_jb.height + (12 + this.field_ab), 12 + this.field_jb.width);
             this.field_hb = 0;
             return;
           }
@@ -163,7 +163,7 @@ abstract class pt extends sf {
         }
     }
 
-    boolean a(kb param0, int param1, char param2, int param3) {
+    boolean a(Widget param0, int param1, char param2, int param3) {
         RuntimeException var5 = null;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
@@ -240,27 +240,27 @@ abstract class pt extends sf {
         }
     }
 
-    private final void b(int param0, kb param1) {
+    private final void b(int param0, Widget param1) {
         try {
           if (this.field_cb != null) {
             this.field_cb.unlink(92);
           }
           if (param1 != null) {
-            param1.a(6, param1.field_l, 6 + this.field_ab, 8192, param1.field_w);
+            param1.setBounds(6, param1.width, 6 + this.field_ab, 8192, param1.height);
             this.field_cb = new bh(param1);
           } else {
             this.field_cb = new bh();
           }
           int var3_int = 29 % ((param0 - 24) / 42);
-          this.a((byte) 10, (kb) (this.field_cb));
+          this.a((byte) 10, (Widget) (this.field_cb));
           this.field_jb = null;
         } catch (RuntimeException runtimeException) {
           throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "pt.G(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
-    pt(gk param0, kb param1, int param2, int param3, int param4) {
-        super(param0, param1.field_l + 12, 12 + param2 + param1.field_w);
+    pt(gk param0, Widget param1, int param2, int param3, int param4) {
+        super(param0, param1.width + 12, 12 + param2 + param1.height);
         try {
           this.field_Z = param4;
           this.field_ab = param2;

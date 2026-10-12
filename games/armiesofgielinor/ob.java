@@ -14,11 +14,11 @@ final class ob extends hs {
     static String[] field_M;
     static String field_O;
 
-    final void a(int param0, int param1, int param2, int param3, int param4) {
-        if (param3 != 8192) {
+    final void setBounds(int x, int width, int y, int obfuscationGuard, int height) {
+        if (obfuscationGuard != 8192) {
           field_J = 99;
         }
-        super.a(param0, param1, param2, param3 + 0, param4);
+        super.setBounds(x, width, y, obfuscationGuard + 0, height);
     }
 
     private final void c(int param0, int param1, int param2) {
@@ -36,7 +36,7 @@ final class ob extends hs {
         this.field_L = var5;
     }
 
-    private final void a(int param0, byte param1, kb param2, int param3) {
+    private final void a(int param0, byte param1, Widget param2, int param3) {
         int stackIn_3_0 = 0;
         int stackIn_4_1 = 0;
         int stackIn_7_0 = 0;
@@ -67,7 +67,7 @@ final class ob extends hs {
         try {
           var5_int = this.field_K[-1 + this.field_K.length];
           var6 = this.field_S[this.field_S.length - 1];
-          stackIn_3_0 = this.field_l;
+          stackIn_3_0 = this.width;
           if (param3 > 0) {
             stackIn_4_1 = this.field_K[param3 - 1];
           } else {
@@ -79,19 +79,19 @@ final class ob extends hs {
           } else {
             stackIn_7_0 = this.field_S[-1 + param0];
           }
-          var8 = stackIn_7_0 * this.field_w / var6;
-          var9 = this.field_K[param3] * this.field_l / var5_int;
-          var10 = this.field_w * this.field_S[param0] / var6;
+          var8 = stackIn_7_0 * this.height / var6;
+          var9 = this.field_K[param3] * this.width / var5_int;
+          var10 = this.height * this.field_S[param0] / var6;
           var11 = param0 * this.field_K.length + param3;
           var12 = 48 & this.field_L[var11];
           var13 = 192 & this.field_L[var11];
-          var14 = param2.field_B;
+          var14 = param2.x;
           if (param1 != 65) {
             return;
           }
-          var15 = param2.field_p;
-          var16 = param2.field_l;
-          var17 = param2.field_w;
+          var15 = param2.y;
+          var16 = param2.width;
+          var17 = param2.height;
           if (var9 - var7 > var16 &&
             (this.field_L[var11] & 1) != 0) {
             var16 = -var7 + var9;
@@ -132,7 +132,7 @@ final class ob extends hs {
           }
           var18 = this.field_T;
           var19 = this.field_R;
-          param2.a(var14Lifetime1 + var18, var16 - var18 * 2, var15Lifetime1 + var19, 8192, -(2 * var19) + var17);
+          param2.setBounds(var14Lifetime1 + var18, var16 - var18 * 2, var15Lifetime1 + var19, 8192, -(2 * var19) + var17);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -148,7 +148,7 @@ final class ob extends hs {
         }
     }
 
-    final void a(kb param0, int param1, int param2) {
+    final void a(Widget param0, int param1, int param2) {
         int var4_int = this.field_N % this.field_K.length;
         int var5 = this.field_N / this.field_K.length;
         this.field_L[this.field_N] = param1;
@@ -166,7 +166,7 @@ final class ob extends hs {
         }
     }
 
-    final boolean a(int param0, int param1, int param2, int param3, kb param4, int param5, int param6) {
+    final boolean a(int param0, int param1, int param2, int param3, Widget param4, int param5, int param6) {
         RuntimeException var8 = null;
         boolean stackIn_4_0 = false;
         RuntimeException stackIn_7_0 = null;
@@ -278,7 +278,7 @@ final class ob extends hs {
           field_J = -52;
         }
         int var4 = this.field_K == null ? 0 : this.field_K.length;
-        kb[] var5 = new kb[param2 * var4];
+        Widget[] var5 = new Widget[param2 * var4];
         if (this.field_C != null &&
           this.field_C.length > 0 &&
           var5.length > 0 &&
@@ -288,7 +288,7 @@ final class ob extends hs {
         this.field_C = var5;
     }
 
-    final boolean a(kb param0, int param1, char param2, int param3) {
+    final boolean a(Widget param0, int param1, char param2, int param3) {
         int var5_int = 0;
         int var6 = 0;
         boolean stackIn_12_0 = false;
@@ -357,8 +357,8 @@ final class ob extends hs {
         int var3;
         int var4;
         int var6;
-        kb var5;
-        kb var7;
+        Widget var5;
+        Widget var7;
         var6 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         var2 = 0;
         var3 = 0;
@@ -384,8 +384,8 @@ final class ob extends hs {
           break;
         }
         if (param0 < 84) {
-          var7 = (kb) null;
-          this.a(-86, 103, -38, 9, (kb) null, 3, 102);
+          var7 = (Widget) null;
+          this.a(-86, 103, -38, 9, (Widget) null, 3, 102);
         }
     }
 
@@ -393,7 +393,7 @@ final class ob extends hs {
         int var6 = 0;
         int var7 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         int var4 = null == this.field_S ? 0 : this.field_S.length;
-        kb[] var5 = new kb[param1 * var4];
+        Widget[] var5 = new Widget[param1 * var4];
         if (null != this.field_C && this.field_C.length > 0 && var5.length > 0 &&
           param0 > 0) {
           for (var6 = 0; var4 > var6; var6++) {
@@ -406,7 +406,7 @@ final class ob extends hs {
         this.field_C = var5;
     }
 
-    ob(int param0, int param1, int param2, int param3, kh param4, int param5, int param6) {
+    ob(int param0, int param1, int param2, int param3, WidgetPainter param4, int param5, int param6) {
         super(param0, param1, param2, param3, param4);
         int[] var10 = null;
         int[] var9 = null;

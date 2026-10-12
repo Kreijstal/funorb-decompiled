@@ -43,7 +43,7 @@ final class df extends tj implements fb, he {
     }
 
     df(String param0, String param1, boolean param2, boolean param3, boolean param4) {
-        super(0, 0, 310, 190, (kh) null);
+        super(0, 0, 310, 190, (WidgetPainter) null);
         ta dupTemp$0 = null;
         ta dupTemp$1 = null;
         boolean stackIn_4_1 = false;
@@ -103,15 +103,15 @@ final class df extends tj implements fb, he {
             this.field_N = new fw(dt.field_c, (qo) null);
             this.field_Q.field_I = false;
           }
-          this.field_Q.field_k = (kh) ((Object) new lu(10000536));
-          this.field_S.field_k = (kh) ((Object) new ol(10000536));
+          this.field_Q.painter = (WidgetPainter) ((Object) new lu(10000536));
+          this.field_S.painter = (WidgetPainter) ((Object) new ol(10000536));
           var6 = new nu();
-          this.field_O.field_k = (kh) ((Object) var6);
+          this.field_O.painter = (WidgetPainter) ((Object) var6);
           if (this.field_N != null) {
-            this.field_N.field_k = (kh) ((Object) var6);
+            this.field_N.painter = (WidgetPainter) ((Object) var6);
           }
           if (this.field_R != null) {
-            this.field_R.field_k = (kh) ((Object) var6);
+            this.field_R.painter = (WidgetPainter) ((Object) var6);
           }
           this.field_Q.field_s = de.field_d;
           if (null != this.field_R) {
@@ -120,17 +120,17 @@ final class df extends tj implements fb, he {
           if (!this.field_P) {
             if (this.field_F) {
               this.field_N.field_s = CombatSandbox.field_e;
-              this.field_N.field_k = (kh) ((Object) new td());
+              this.field_N.painter = (WidgetPainter) ((Object) new td());
             } else {
-              this.field_N.field_k = (kh) ((Object) new td());
+              this.field_N.painter = (WidgetPainter) ((Object) new td());
             }
           } else {
             this.field_N.field_s = VineGrowthAction.field_v;
           }
-          this.field_p = 15;
+          this.y = 15;
           var7 = ArmiesOfGielinor.field_J;
           if (null != this.field_I) {
-            this.field_p = this.field_p + (5 + var7.getParagraphHeight(this.field_I, this.field_l - 40, var7.field_H));
+            this.y = this.y + (5 + var7.getParagraphHeight(this.field_I, this.width - 40, var7.field_H));
           }
           var8 = bh.field_J;
           var9 = ea.a(0, CombatEvent.d((byte) 34));
@@ -141,15 +141,15 @@ final class df extends tj implements fb, he {
           } else {
             var8 = DeployAction.field_t;
           }
-          dupTemp$0 = new ta(10, this.field_p, this.field_l - 20, 25, this.field_Q, false, 80, 3, var7, 16777215, var8);
+          dupTemp$0 = new ta(10, this.y, this.width - 20, 25, this.field_Q, false, 80, 3, var7, 16777215, var8);
           var12 = dupTemp$0;
-          this.a((byte) 10, (kb) (dupTemp$0));
-          this.field_p = this.field_p + (((kb) ((Object) var12)).field_w + 5);
-          dupTemp$1 = new ta(10, this.field_p, -20 + this.field_l, 25, this.field_S, false, 80, 3, var7, 16777215, jj.field_h);
+          this.a((byte) 10, (Widget) (dupTemp$0));
+          this.y = this.y + (((Widget) ((Object) var12)).height + 5);
+          dupTemp$1 = new ta(10, this.y, -20 + this.width, 25, this.field_S, false, 80, 3, var7, 16777215, jj.field_h);
           var13 = dupTemp$1;
-          this.a((byte) 10, (kb) (dupTemp$1));
+          this.a((byte) 10, (Widget) (dupTemp$1));
           this.field_O.field_x = (qo) (this);
-          this.field_p = this.field_p + (5 + ((kb) ((Object) var13)).field_w);
+          this.y = this.y + (5 + ((Widget) ((Object) var13)).height);
           if (this.field_R != null) {
             this.field_R.field_x = (qo) (this);
           }
@@ -157,33 +157,33 @@ final class df extends tj implements fb, he {
             this.field_N.field_x = (qo) (this);
           }
           if (null == this.field_R) {
-            this.field_O.a(8, -10 + (this.field_l - 6), this.field_p, 8192, 30);
-            this.field_p = this.field_p + 35;
+            this.field_O.setBounds(8, -10 + (this.width - 6), this.y, 8192, 30);
+            this.y = this.y + 35;
           } else {
-            this.field_O.a(85, this.field_l - 95, this.field_p, 8192, 30);
-            this.field_p = this.field_p + 60;
+            this.field_O.setBounds(85, this.width - 95, this.y, 8192, 30);
+            this.y = this.y + 60;
           }
           if (null != this.field_R) {
-            this.field_R.a(8, -10 + (this.field_l - 6), this.field_p, 8192, 30);
-            this.field_p = this.field_p + 35;
+            this.field_R.setBounds(8, -10 + (this.width - 6), this.y, 8192, 30);
+            this.y = this.y + 35;
           }
           if (this.field_N != null) {
             if (!this.field_P &&
               !this.field_F) {
-              this.field_N.a(8, 40, this.field_p, 8192, 20);
-              this.field_p = this.field_p + 25;
+              this.field_N.setBounds(8, 40, this.y, 8192, 20);
+              this.y = this.y + 25;
             } else {
-              this.field_N.a(8, -16 + this.field_l, this.field_p, 8192, 30);
-              this.field_p = this.field_p + 35;
+              this.field_N.setBounds(8, -16 + this.width, this.y, 8192, 30);
+              this.y = this.y + 35;
             }
           }
-          this.a(0, this.field_l, 0, 8192, 3 + this.field_p);
-          this.a((byte) 10, (kb) (this.field_O));
+          this.setBounds(0, this.width, 0, 8192, 3 + this.y);
+          this.a((byte) 10, (Widget) (this.field_O));
           if (this.field_R != null) {
-            this.a((byte) 10, (kb) (this.field_R));
+            this.a((byte) 10, (Widget) (this.field_R));
           }
           if (this.field_N != null) {
-            this.a((byte) 10, (kb) (this.field_N));
+            this.a((byte) 10, (Widget) (this.field_N));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -215,7 +215,7 @@ final class df extends tj implements fb, he {
         RuntimeException var3 = null;
         try {
           if (this.field_Q == param0) {
-            this.field_S.a(11, (kb) (this));
+            this.field_S.a(11, (Widget) (this));
           }
           if (param1 != 80) {
             var4 = (fn) null;
@@ -244,10 +244,10 @@ final class df extends tj implements fb, he {
           df.a(-77);
         }
         if (null != this.field_I) {
-          ArmiesOfGielinor.field_J.a(this.field_I, param0 - (-this.field_B - 20), 15 + param1 + this.field_p, -40 + this.field_l, this.field_w, 16777215, -1, 1, 0, ArmiesOfGielinor.field_J.field_H);
+          ArmiesOfGielinor.field_J.a(this.field_I, param0 - (-this.x - 20), 15 + param1 + this.y, -40 + this.width, this.height, 16777215, -1, 1, 0, ArmiesOfGielinor.field_J.field_H);
         }
         if (this.field_R != null) {
-          SoftwareRaster.e(10 + param0, 134 + param1, -20 + this.field_l, 4210752);
+          SoftwareRaster.e(10 + param0, 134 + param1, -20 + this.width, 4210752);
         }
         super.a(param0, param1, (byte) -104, param3);
     }
@@ -413,7 +413,7 @@ final class df extends tj implements fb, he {
         this.field_S.k(-79);
     }
 
-    final boolean a(kb param0, int param1, char param2, int param3) {
+    final boolean a(Widget param0, int param1, char param2, int param3) {
         RuntimeException var5 = null;
         boolean stackIn_6_0 = false;
         boolean stackIn_10_0 = false;

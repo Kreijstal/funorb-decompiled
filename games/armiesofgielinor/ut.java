@@ -8,7 +8,7 @@ final class ut extends sf implements he {
     private fw field_mb;
     private fw field_Y;
     private fw field_Z;
-    private gh field_lb;
+    private DropdownSelector field_lb;
     private boolean field_hb;
     static byte[][] field_W;
     private boolean field_jb;
@@ -53,7 +53,7 @@ final class ut extends sf implements he {
         int var6_int = 0;
         String var6 = null;
         fw var6_ref = null;
-        kb var7 = null;
+        Widget var7 = null;
         ls var8 = null;
         String var10 = null;
         Object stackIn_51_0Lifetime1;
@@ -142,10 +142,10 @@ final class ut extends sf implements he {
             stackIn_52_2Lifetime1 = null;
             stackIn_52_4 = 58;
           }
-          this.field_gb = new ob(stackIn_51_3, stackIn_52_4, 410, 105, (kh) null, var3Lifetime1, 1);
+          this.field_gb = new ob(stackIn_51_3, stackIn_52_4, 410, 105, (WidgetPainter) null, var3Lifetime1, 1);
           this.field_gb.field_Q = 83;
           this.field_gb.d(5, 57, 5);
-          this.a((byte) 10, (kb) (this.field_gb));
+          this.a((byte) 10, (Widget) (this.field_gb));
           this.field_mb = this.a((qo) (this), oq.field_j, oa.field_H, false);
           if (var2_intLifetime1 != 0) {
             this.field_Z = this.a((qo) (this), Unit.field_n, dq.field_e, false);
@@ -175,18 +175,18 @@ final class ut extends sf implements he {
               }
               var5_ref_String__[var7_int] = var8.field_b + "<times>" + var8.field_a;
             }
-            this.field_lb = new gh(var5_ref_String__, var6_int, 150);
-            this.field_lb.a(this.field_bb.field_B + this.field_gb.field_B, 126, this.field_bb.field_w + this.field_bb.field_p + (this.field_gb.field_p - 19), 8192, 18);
+            this.field_lb = new DropdownSelector(var5_ref_String__, var6_int, 150);
+            this.field_lb.setBounds(this.field_bb.x + this.field_gb.x, 126, this.field_bb.height + this.field_bb.y + (this.field_gb.y - 19), 8192, 18);
             this.field_D.addFirst(750, this.field_lb);
           }
           this.field_X = this.a((byte) 38, VineGrowthAction.field_w, (qo) (this));
-          var5Lifetime1 = this.field_X.field_l / 2 + this.field_X.field_B;
-          this.field_X.field_l = 150;
-          this.field_X.field_B = -this.field_X.field_l - 20 + var5Lifetime1;
+          var5Lifetime1 = this.field_X.width / 2 + this.field_X.x;
+          this.field_X.width = 150;
+          this.field_X.x = -this.field_X.width - 20 + var5Lifetime1;
           this.field_ab = this.a((byte) 38, nr.field_f, (qo) (this));
           this.field_ab.field_I = false;
-          this.field_ab.field_B = var5Lifetime1 + 20;
-          this.field_ab.field_l = this.field_X.field_l;
+          this.field_ab.x = var5Lifetime1 + 20;
+          this.field_ab.width = this.field_X.width;
           if (var2_intLifetime1 != 0 ||
             var4Lifetime1 != 0) {
             if (var2_intLifetime1 != 0) {
@@ -196,12 +196,12 @@ final class ut extends sf implements he {
             }
             var10 = stackIn_74_0;
             var6 = var10;
-            var7 = new kb(var10, (qo) null);
-            var7.field_p = 163;
-            var7.field_B = 0;
-            var7.field_l = this.field_l;
-            var7.field_w = 80;
-            var7.field_k = (kh) ((Object) new lk(ArmiesOfGielinor.field_J, 20, 20, 0, 10, 16777215, -1, 0, 0, 16, 0, 0, true));
+            var7 = new Widget(var10, (qo) null);
+            var7.y = 163;
+            var7.x = 0;
+            var7.width = this.width;
+            var7.height = 80;
+            var7.painter = (WidgetPainter) ((Object) new lk(ArmiesOfGielinor.field_J, 20, 20, 0, 10, 16777215, -1, 0, 0, 16, 0, 0, true));
             this.a((byte) 10, var7);
           }
           this.field_nb = false;
@@ -328,7 +328,7 @@ final class ut extends sf implements he {
           } else {
             if (this.field_bb == this.field_Y) {
               if (this.field_lb != null) {
-                var2 = this.field_lb.a((byte) 71);
+                var2 = this.field_lb.getSelectedIndex((byte) 71);
                 if (var2 >= 0) {
                   ActionSpell.field_e.a(this.field_db[var2].field_b, this.field_db[var2].field_a, -8717);
                 }
@@ -360,7 +360,7 @@ final class ut extends sf implements he {
     }
 
     final static void a(int param0, int param1, int param2, int param3, byte param4, int param5) {
-        pp.field_R[kt.field_p] = param5;
+        DropdownOptionList.field_R[kt.field_p] = param5;
         vt.field_m[kt.field_p] = kt.field_p;
         no.field_U[kt.field_p] = param2;
         if (df.field_T < param2) {
@@ -507,7 +507,7 @@ final class ut extends sf implements he {
         fw var3 = null;
         int var4 = 0;
         ls var5 = null;
-        kb var6 = null;
+        Widget var6 = null;
         fw stackIn_4_0 = null;
         boolean stackIn_5_1 = false;
         RuntimeException stackIn_19_0 = null;
@@ -517,11 +517,11 @@ final class ut extends sf implements he {
         RuntimeException var3_ref = null;
         try {
           if (param1 != 34) {
-            var6 = (kb) null;
-            this.a(91, 13, -99, (kb) null);
+            var6 = (Widget) null;
+            this.a(91, 13, -99, (Widget) null);
           }
           this.field_Y = param0;
-          param0.a(11, (kb) (this));
+          param0.a(11, (Widget) (this));
           var3 = this.o(-1);
           stackIn_4_0 = this.field_ab;
           stackIn_5_1 = (var3 != param0);
@@ -529,7 +529,7 @@ final class ut extends sf implements he {
           if (this.field_bb == param0) {
             if (var3 == param0) {
               if (this.field_lb != null) {
-                var4 = this.field_lb.a((byte) 71);
+                var4 = this.field_lb.getSelectedIndex((byte) 71);
                 var5 = this.field_db[var4];
                 if (ActionSpell.field_e.field_f != var5.field_b ||
                   ActionSpell.field_e.field_n != var5.field_a) {
@@ -573,13 +573,13 @@ final class ut extends sf implements he {
         RuntimeException decompiledCaughtException = null;
         try {
           var4 = new fw(param1, param2);
-          var4.field_k = (kh) ((Object) new nu());
+          var4.painter = (WidgetPainter) ((Object) new nu());
           if (param0 != 38) {
             field_eb = 126;
           }
-          var5 = this.field_w - 46;
-          var4.a(15, -14 + (this.field_l - 16), var5, 8192, 30);
-          this.a((byte) 10, (kb) (var4));
+          var5 = this.height - 46;
+          var4.setBounds(15, -14 + (this.width - 16), var5, 8192, 30);
+          this.a((byte) 10, (Widget) (var4));
           stackIn_3_0 = var4;
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -602,7 +602,7 @@ final class ut extends sf implements he {
         }
     }
 
-    final void a(int param0, int param1, int param2, kb param3) {
+    final void a(int param0, int param1, int param2, Widget param3) {
         int var6 = 0;
         fw[] var5 = null;
         fw var7 = null;
@@ -625,7 +625,7 @@ final class ut extends sf implements he {
             for (var6 = 0; var6 < var9.length; var6++) {
               var7 = var9[var6];
               if (var7.field_t) {
-                var7.a(param0 ^ 32729, (kb) (this));
+                var7.a(param0 ^ 32729, (Widget) (this));
               }
             }
           }
@@ -635,7 +635,7 @@ final class ut extends sf implements he {
             this.field_G.a(new ut(this.field_G), 0);
           }
           if (null != this.field_lb) {
-            stackIn_14_0 = this.field_lb.l(11180);
+            stackIn_14_0 = this.field_lb.isExpanded(11180);
             if (this.field_nb) {
               stackIn_15_1 = 0;
             } else {
@@ -643,7 +643,7 @@ final class ut extends sf implements he {
             }
             if ((stackIn_14_0 ? 1 : 0) == stackIn_15_1) {
               this.a(this.field_bb, (byte) 34);
-              this.field_nb = this.field_lb.l(11180);
+              this.field_nb = this.field_lb.isExpanded(11180);
               return;
             }
           }
@@ -672,7 +672,7 @@ final class ut extends sf implements he {
         this.field_L = false;
     }
 
-    final boolean a(kb param0, int param1, char param2, int param3) {
+    final boolean a(Widget param0, int param1, char param2, int param3) {
         boolean stackIn_74_0 = false;
         Object stackIn_77_0 = null;
         StringBuilder stackIn_77_1 = null;
@@ -725,37 +725,37 @@ final class ut extends sf implements he {
             case 96:
               if (var5 == this.field_bb) {
                 if (this.field_Z != null) {
-                  this.field_Z.a(11, (kb) (this));
+                  this.field_Z.a(11, (Widget) (this));
                   return true;
                 }
-                this.field_mb.a(param3 + 12226, (kb) (this));
+                this.field_mb.a(param3 + 12226, (Widget) (this));
                 return true;
               }
               if (var5 == this.field_Z) {
-                this.field_mb.a(11, (kb) (this));
+                this.field_mb.a(11, (Widget) (this));
                 return true;
               }
               if (this.field_ab == var5) {
-                this.field_X.a(11, (kb) (this));
+                this.field_X.a(11, (Widget) (this));
                 return true;
               }
               break;
             case 97:
               if (this.field_mb == var5) {
                 if (this.field_Z == null) {
-                  this.field_bb.a(11, (kb) (this));
+                  this.field_bb.a(11, (Widget) (this));
                 } else {
-                  this.field_Z.a(11, (kb) (this));
+                  this.field_Z.a(11, (Widget) (this));
                 }
                 return true;
               }
               if (this.field_Z == var5) {
-                this.field_bb.a(11, (kb) (this));
+                this.field_bb.a(11, (Widget) (this));
                 return true;
               }
               if (var5 == this.field_X &&
                 this.field_ab.field_I) {
-                this.field_ab.a(11, (kb) (this));
+                this.field_ab.a(11, (Widget) (this));
                 return true;
               }
               break;
@@ -766,21 +766,21 @@ final class ut extends sf implements he {
                   break;
                 }
                 if (!this.field_ab.field_I) {
-                  this.field_X.a(param3 ^ -12222, (kb) (this));
+                  this.field_X.a(param3 ^ -12222, (Widget) (this));
                 } else {
-                  this.field_ab.a(11, (kb) (this));
+                  this.field_ab.a(11, (Widget) (this));
                 }
                 return true;
               }
-              this.field_X.a(11, (kb) (this));
+              this.field_X.a(11, (Widget) (this));
               return true;
             case 98:
               if (var5 == this.field_X) {
-                this.field_mb.a(11, (kb) (this));
+                this.field_mb.a(11, (Widget) (this));
                 return true;
               }
               if (this.field_ab == var5) {
-                this.field_bb.a(param3 + 12226, (kb) (this));
+                this.field_bb.a(param3 + 12226, (Widget) (this));
                 return true;
               }
               break;
@@ -819,7 +819,7 @@ final class ut extends sf implements he {
         RuntimeException decompiledCaughtException = null;
         try {
           var5 = new fw(param1, param0);
-          var5.field_k = (kh) ((Object) new ps(param2));
+          var5.painter = (WidgetPainter) ((Object) new ps(param2));
           if (param3) {
             field_W = (byte[][]) null;
           }

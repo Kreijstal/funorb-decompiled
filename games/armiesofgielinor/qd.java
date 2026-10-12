@@ -126,7 +126,7 @@ final class qd extends tj implements nq, he {
         }
     }
 
-    final boolean a(kb param0, int param1, char param2, int param3) {
+    final boolean a(Widget param0, int param1, char param2, int param3) {
         RuntimeException var5 = null;
         boolean stackIn_6_0 = false;
         boolean stackIn_10_0 = false;
@@ -167,7 +167,7 @@ final class qd extends tj implements nq, he {
           DualNodeDeque.a((byte) -124, param0);
           jj.a(-93, param0);
           lg.a(32381, param0);
-          gs.a(54);
+          DropdownArrowPainter.a(54);
           ng.b(true);
           if (param1 <= 70) {
             String var5 = (String) null;
@@ -180,7 +180,7 @@ final class qd extends tj implements nq, he {
     }
 
     qd(oe param0) {
-        super(0, 0, 288, 0, (kh) null);
+        super(0, 0, 288, 0, (WidgetPainter) null);
         String var7 = null;
         int var3 = 0;
         lk var4 = null;
@@ -189,7 +189,7 @@ final class qd extends tj implements nq, he {
         try {
           this.field_H = param0;
           this.field_M = new fw(ro.field_kb, (qo) null);
-          this.field_M.field_k = (kh) ((Object) new nu());
+          this.field_M.painter = (WidgetPainter) ((Object) new nu());
           var7 = fo.a(4800, ih.field_R, new String[]{this.a(-29442), this.a((byte) -117)});
           var3 = 20;
           var4 = new lk(ArmiesOfGielinor.field_J, 0, 0, 0, 0, 16777215, -1, 3, 0, ArmiesOfGielinor.field_J.field_H, -1, 2147483647, true);
@@ -197,17 +197,17 @@ final class qd extends tj implements nq, he {
           this.field_F.field_s = "";
           this.field_F.a(DiskCacheRequest.field_I, false, 0);
           this.field_F.a(DiskCacheRequest.field_I, false, 1);
-          this.field_F.field_l = -40 + this.field_l;
+          this.field_F.width = -40 + this.width;
           this.field_F.field_x = (qo) (this);
-          this.field_F.a(this.field_l - 40, 9567, 26, var3);
-          var3 = var3 + (this.field_F.field_w + 15);
-          this.a((byte) 10, (kb) (this.field_F));
+          this.field_F.a(this.width - 40, 9567, 26, var3);
+          var3 = var3 + (this.field_F.height + 15);
+          this.a((byte) 10, (Widget) (this.field_F));
           var5 = 4;
           var6 = 200;
-          this.field_M.a(-var6 + 300 >> 1, var6, var3, 8192, 40);
+          this.field_M.setBounds(-var6 + 300 >> 1, var6, var3, 8192, 40);
           this.field_M.field_x = (qo) (this);
-          this.a((byte) 10, (kb) (this.field_M));
-          this.a(0, 300, 0, 8192, var5 + var3 + 55);
+          this.a((byte) 10, (Widget) (this.field_M));
+          this.setBounds(0, 300, 0, 8192, var5 + var3 + 55);
         } catch (RuntimeException runtimeException) {
           throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "qd.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }

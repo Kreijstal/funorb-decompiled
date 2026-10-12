@@ -22,7 +22,7 @@ final class ip {
         return this;
     }
 
-    final void a(kb param0, byte param1, int param2, int param3, ao param4) {
+    final void a(Widget param0, byte param1, int param2, int param3, ao param4) {
         BitmapFont stackIn_19_0;
         String stackIn_19_1;
         int stackIn_19_2;
@@ -47,21 +47,21 @@ final class ip {
         RuntimeException var6_ref = null;
         int var7 = 0;
         try {
-          i.a(this.field_d, param0.field_w, param0.field_B + param3, (byte) -47, param2 + param0.field_p, param0.field_l);
+          i.a(this.field_d, param0.height, param0.x + param3, (byte) -47, param2 + param0.y, param0.width);
           if (null != this.field_j) {
-            var6_int = this.field_i + param0.field_B + param3;
+            var6_int = this.field_i + param0.x + param3;
             if (1 == param4.field_n) {
-              var6_int = var6_int + (param0.field_l - this.field_j.canvasWidth) / 2;
+              var6_int = var6_int + (param0.width - this.field_j.canvasWidth) / 2;
             }
-            var7 = this.field_a + (param2 + param0.field_p);
+            var7 = this.field_a + (param2 + param0.y);
             if (param4.field_k == 1) {
-              var7 = var7 + (-this.field_j.canvasHeight + param0.field_w) / 2;
+              var7 = var7 + (-this.field_j.canvasHeight + param0.height) / 2;
             }
             if (param4.field_n == 2) {
-              var6_int = var6_int + (param0.field_l - this.field_j.canvasWidth);
+              var6_int = var6_int + (param0.width - this.field_j.canvasWidth);
             }
             if (param4.field_k == 2) {
-              var7 = var7 + (param0.field_w - this.field_j.canvasHeight);
+              var7 = var7 + (param0.height - this.field_j.canvasHeight);
             }
             this.field_j.g(var6_int, var7);
           }
@@ -77,7 +77,7 @@ final class ip {
             stackIn_19_0 = param4.field_q;
             stackIn_19_1 = var6;
             stackIn_19_2 = param4.field_i + param3;
-            stackIn_19_3 = param0.field_B;
+            stackIn_19_3 = param0.x;
             if (-2147483648 != this.field_i) {
               stackIn_20_4 = this.field_i;
             } else {
@@ -89,9 +89,9 @@ final class ip {
             } else {
               stackIn_23_3 = this.field_a;
             }
-            stackIn_25_3 = stackIn_23_3 + param4.field_g + (param2 + param0.field_p);
-            stackIn_25_4 = -param4.field_t - param4.field_i + param0.field_l;
-            stackIn_25_5 = -param4.field_g + param0.field_w - param4.field_m;
+            stackIn_25_3 = stackIn_23_3 + param4.field_g + (param2 + param0.y);
+            stackIn_25_4 = -param4.field_t - param4.field_i + param0.width;
+            stackIn_25_5 = -param4.field_g + param0.height - param4.field_m;
             stackIn_25_6 = this.field_b;
             stackIn_25_7 = this.field_g;
             if (-2147483648 == this.field_h) {
@@ -159,7 +159,7 @@ final class ip {
         return this;
     }
 
-    final void a(int param0, ip param1, int param2, ao param3, int param4, kb param5) {
+    final void a(int param0, ip param1, int param2, ao param3, int param4, Widget param5) {
         RuntimeException stackIn_24_0 = null;
         StringBuilder stackIn_24_1 = null;
         String stackIn_25_2 = null;
@@ -200,7 +200,7 @@ final class ip {
             return;
           }
           var8 = (ao) null;
-          this.a((kb) null, (byte) -95, -90, -1, (ao) null);
+          this.a((Widget) null, (byte) -95, -90, -1, (ao) null);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -250,7 +250,7 @@ final class ip {
           return;
         }
         ao var3 = (ao) null;
-        this.a((kb) null, (byte) 78, -97, 60, (ao) null);
+        this.a((Widget) null, (byte) 78, -97, 60, (ao) null);
         this.field_g = -1;
         this.field_b = 0;
         this.field_d = null;

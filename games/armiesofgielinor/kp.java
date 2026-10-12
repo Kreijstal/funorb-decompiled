@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class kp implements kh {
+final class kp implements WidgetPainter {
     private int field_f;
     private BitmapFont field_a;
     static String field_k;
@@ -29,9 +29,9 @@ final class kp implements kh {
         return var3;
     }
 
-    public final void a(kb param0, int param1, int param2, boolean param3, int param4) {
+    public final void paintWidget(Widget widget, int originX, int obfuscationGuard, boolean renderFlag, int originY) {
         int var10 = 0;
-        kb stackIn_4_0 = null;
+        Widget stackIn_4_0 = null;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
         String stackIn_17_2 = null;
@@ -44,21 +44,21 @@ final class kp implements kh {
         pi var12 = null;
         var11 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          if (param0 instanceof pi) {
-            stackIn_4_0 = (kb) (param0);
+          if (widget instanceof pi) {
+            stackIn_4_0 = (Widget) (widget);
           } else {
             stackIn_4_0 = null;
           }
           var12 = (pi) (stackIn_4_0);
-          SoftwareRaster.f(param0.field_B + param1, param4 + param0.field_p, param0.field_l, param0.field_w, this.field_d);
+          SoftwareRaster.f(widget.x + originX, originY + widget.y, widget.width, widget.height, this.field_d);
           if (var12 != null) {
           }
-          var7 = param0.field_l - 2 * var12.field_R;
-          var8 = param0.field_B + param1 + var12.field_R;
-          if (param2 > -79) {
+          var7 = widget.width - 2 * var12.field_R;
+          var8 = widget.x + originX + var12.field_R;
+          if (obfuscationGuard > -79) {
             return;
           }
-          var9 = param4 - (-param0.field_p - var12.field_S);
+          var9 = originY - (-widget.y - var12.field_S);
           SoftwareRaster.h(var8, var9, var7 + var8, var9, this.field_b);
           for (var10 = var12.d((byte) -39) - 1; var10 >= 0; var10--) {
             SoftwareRaster.a(var7 * var12.a(var10, (byte) -47) / var12.a(-1) + var8, var9, this.field_h, this.field_f);
@@ -73,12 +73,12 @@ final class kp implements kh {
           var6 = decompiledCaughtException;
           stackIn_16_0 = var6;
           stackIn_16_1 = new StringBuilder().append("kp.C(");
-          if (param0 == null) {
+          if (widget == null) {
             stackIn_17_2 = "null";
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(originX).append(',').append(obfuscationGuard).append(',').append(renderFlag).append(',').append(originY).append(')').toString());
         }
     }
 

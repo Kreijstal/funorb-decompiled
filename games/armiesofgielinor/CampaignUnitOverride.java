@@ -175,7 +175,7 @@ final class CampaignUnitOverride {
                 }
                 var2 = NodeIterator.a(50, "mu_x_left_lobby");
                 if (null != var2) {
-                  pp.field_X = uu.a(var2, (byte) -107);
+                  DropdownOptionList.field_X = uu.a(var2, (byte) -107);
                 }
                 var2 = NodeIterator.a(param0 ^ -100, "mu_x_lost_con");
                 if (var2 != null) {

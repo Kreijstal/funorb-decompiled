@@ -55,7 +55,7 @@ final class bk {
           if (param0) {
             var6 = var6 | 8;
           }
-          if (gh.field_P != null) {
+          if (DropdownSelector.field_P != null) {
             var6 = var6 | 16;
           }
           vl.outgoingPacket.writeByte(1, var6);
@@ -64,8 +64,8 @@ final class bk {
             var7 = "";
           }
           vl.outgoingPacket.b(var7, param3 + 13851);
-          if (gh.field_P != null) {
-            vl.outgoingPacket.a(gh.field_P, 413740432);
+          if (DropdownSelector.field_P != null) {
+            vl.outgoingPacket.a(DropdownSelector.field_P, 413740432);
           }
           fp.a(mu.field_c, cs.field_cb, (byte) 26, vd.field_b, vl.outgoingPacket);
           vl.outgoingPacket.f(param3 ^ param3, vl.outgoingPacket.position - var5_int);

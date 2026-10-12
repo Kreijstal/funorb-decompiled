@@ -1611,27 +1611,27 @@ final class TickCounter {
                 }
                 var2 = fk.a(false, "STATUS_ACCESSORY,0");
                 if (var2 != null) {
-                  gs.field_c[0] = uu.a(var2, (byte) 88);
+                  DropdownArrowPainter.field_c[0] = uu.a(var2, (byte) 88);
                 }
                 var2 = fk.a(false, "STATUS_ACCESSORY,1");
                 if (var2 != null) {
-                  gs.field_c[1] = uu.a(var2, (byte) -94);
+                  DropdownArrowPainter.field_c[1] = uu.a(var2, (byte) -94);
                 }
                 var2 = fk.a(false, "STATUS_ACCESSORY,2");
                 if (null != var2) {
-                  gs.field_c[2] = uu.a(var2, (byte) -99);
+                  DropdownArrowPainter.field_c[2] = uu.a(var2, (byte) -99);
                 }
                 var2 = fk.a(false, "STATUS_ACCESSORY,3");
                 if (null != var2) {
-                  gs.field_c[3] = uu.a(var2, (byte) -108);
+                  DropdownArrowPainter.field_c[3] = uu.a(var2, (byte) -108);
                 }
                 var2 = fk.a(false, "STATUS_ACCESSORY,4");
                 if (null != var2) {
-                  gs.field_c[4] = uu.a(var2, (byte) 91);
+                  DropdownArrowPainter.field_c[4] = uu.a(var2, (byte) 91);
                 }
                 var2 = fk.a(false, "STATUS_ACCESSORY,5");
                 if (var2 != null) {
-                  gs.field_c[5] = uu.a(var2, (byte) -125);
+                  DropdownArrowPainter.field_c[5] = uu.a(var2, (byte) -125);
                 }
                 var2 = fk.a(false, "WEAPON_TYPES,0");
                 if (null != var2) {
@@ -3557,7 +3557,7 @@ final class TickCounter {
                 }
                 var2 = fk.a(false, "CAPTUREGOALORDEFEATLEADER");
                 if (var2 != null) {
-                  pp.field_Y = uu.a(var2, (byte) -93);
+                  DropdownOptionList.field_Y = uu.a(var2, (byte) -93);
                 }
                 var2 = fk.a(false, "PREVENTSUMMONING");
                 if (null != var2) {
@@ -5520,7 +5520,7 @@ final class TickCounter {
                 }
                 var2 = fk.a(false, "caption4");
                 if (var2 != null) {
-                  pp.field_S = uu.a(var2, (byte) 10);
+                  DropdownOptionList.field_S = uu.a(var2, (byte) 10);
                 }
                 var2 = fk.a(false, "caption5");
                 if (null != var2) {
@@ -5697,7 +5697,7 @@ final class TickCounter {
         int var13 = 0;
         var13 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          if (gs.field_a) {
+          if (DropdownArrowPainter.field_a) {
             var9_int = param4 + og.field_p[param4];
             if (vs.field_e[param4].hasExplicitOwner((byte) -79)) {
               var10 = vs.field_e[param4].getExplicitOwner((byte) -102);

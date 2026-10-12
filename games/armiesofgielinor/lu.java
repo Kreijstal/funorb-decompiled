@@ -34,18 +34,18 @@ class lu extends lk {
         var2.writeByte(1, 1);
     }
 
-    public final void a(kb param0, int param1, int param2, boolean param3, int param4) {
+    public final void paintWidget(Widget widget, int originX, int obfuscationGuard, boolean renderFlag, int originY) {
         RuntimeException var6 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param3) {
-            StateChangeEvent.a(param0.field_l, param0.field_B + param1, param0.field_w, 94, param4 + param0.field_p);
+          if (renderFlag) {
+            StateChangeEvent.a(widget.width, widget.x + originX, widget.height, 94, originY + widget.y);
           }
-          super.a(param0, param1, -120, param3, param4);
-          if (param2 <= -79) {
+          super.paintWidget(widget, originX, -120, renderFlag, originY);
+          if (obfuscationGuard <= -79) {
             return;
           }
           lu.a(-66, -37);
@@ -55,12 +55,12 @@ class lu extends lk {
           var6 = decompiledCaughtException;
           stackIn_8_0 = var6;
           stackIn_8_1 = new StringBuilder().append("lu.C(");
-          if (param0 == null) {
+          if (widget == null) {
             stackIn_9_2 = "null";
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(originX).append(',').append(obfuscationGuard).append(',').append(renderFlag).append(',').append(originY).append(')').toString());
         }
     }
 

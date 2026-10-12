@@ -419,7 +419,7 @@ final class oo {
             bh.field_H.ensureGroupAvailableByName(28979, "pump32")) {
             UnitLossCondition.field_a = pv.a("members_expansion_screen", "frame", iw.field_p, 24914);
             ByteStorage.field_d = GameplayController.a("arrow", (byte) 51, "members_expansion_screen", iw.field_p);
-            ll.field_Sb = gs.a("arialish12", iw.field_p, bh.field_H, (byte) -53, "");
+            ll.field_Sb = DropdownArrowPainter.a("arialish12", iw.field_p, bh.field_H, (byte) -53, "");
             kt.field_n = it.a("", iw.field_p, bh.field_H, (byte) -87, "pump32");
             UnitModelPreview.field_b = DiskCacheRequest.a("benefit_orbs", "members_expansion_screen", iw.field_p, false);
             ar.field_D = DiskCacheRequest.a("button_text", "members_expansion_screen", iw.field_p, false);

@@ -4,7 +4,7 @@
 import java.io.*;
 import java.util.*;
 
-class tj extends kb implements gw {
+class tj extends Widget implements gw {
     static na field_C;
     NodeDeque field_D;
 
@@ -16,22 +16,22 @@ class tj extends kb implements gw {
         if (param0 != -31989) {
           this.a(false);
         }
-        kb var4 = (kb) (var3.first(param0 ^ -31943));
+        Widget var4 = (Widget) (var3.first(param0 ^ -31943));
         while (var4 != null) {
           var5 = var4.g(-31989);
           if (var5 > var2) {
             var2 = var5;
           }
-          var4 = (kb) (var3.next(50));
+          var4 = (Widget) (var3.next(50));
         }
         return var2;
     }
 
-    final boolean b(byte param0, kb param1) {
+    final boolean b(byte param0, Widget param1) {
         RuntimeException var3 = null;
-        kb var4 = null;
+        Widget var4 = null;
         NodeIterator var5 = null;
-        kb var6 = null;
+        Widget var6 = null;
         int var7 = 0;
         NodeIterator var8 = null;
         RuntimeException stackIn_21_0 = null;
@@ -47,21 +47,21 @@ class tj extends kb implements gw {
           if (param0 >= -121) {
             tj.d((byte) 127);
           }
-          var4 = (kb) (var8.first(50));
+          var4 = (Widget) (var8.first(50));
           while (var4 != null) {
             if (var4.a(false)) {
               var5 = new NodeIterator(this.field_D);
               var5.a(var4, true);
-              var6 = (kb) (var5.next(50));
+              var6 = (Widget) (var5.next(50));
               while (var6 != null) {
                 if (!var6.a(11, param1)) {
-                  var6 = (kb) (var5.next(50));
+                  var6 = (Widget) (var5.next(50));
                   continue;
                 }
                 return true;
               }
             }
-            var4 = (kb) (var8.next(50));
+            var4 = (Widget) (var8.next(50));
           }
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -84,36 +84,36 @@ class tj extends kb implements gw {
         if (param0 != 1) {
           field_C = (na) null;
         }
-        kb var3 = (kb) (var2.first(50));
+        Widget var3 = (Widget) (var2.first(50));
         while (var3 != null) {
           var3.f(param0 + 0);
-          var3 = (kb) (var2.next(50));
+          var3 = (Widget) (var2.next(50));
         }
     }
 
-    kb e(byte param0) {
+    Widget e(byte param0) {
         NodeIterator var2;
-        kb var3;
+        Widget var3;
         int var4;
         var4 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         var2 = new NodeIterator(this.field_D);
         if (param0 < 24) {
           this.field_D = (NodeDeque) null;
         }
-        var3 = (kb) (var2.first(50));
+        var3 = (Widget) (var2.first(50));
         while (var3 != null) {
           if (var3.a(false)) {
             return var3;
           }
-          var3 = (kb) (var2.next(50));
+          var3 = (Widget) (var2.next(50));
         }
         return null;
     }
 
-    boolean a(int param0, kb param1) {
+    boolean a(int param0, Widget param1) {
         NodeIterator var3 = null;
         RuntimeException var3_ref = null;
-        kb var4 = null;
+        Widget var4 = null;
         int var5 = 0;
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
@@ -125,13 +125,13 @@ class tj extends kb implements gw {
           if (param0 != 11) {
             return true;
           }
-          var4 = (kb) (var3.first(param0 + 39));
+          var4 = (Widget) (var3.first(param0 + 39));
           while (true) {
             if (var4 == null) {
               return false;
             }
             if (!var4.a(param0 ^ 0, param1)) {
-              var4 = (kb) (var3.next(param0 + 39));
+              var4 = (Widget) (var3.next(param0 + 39));
               continue;
             }
             break;
@@ -151,13 +151,13 @@ class tj extends kb implements gw {
         }
     }
 
-    final boolean a(boolean param0, kb param1) {
+    final boolean a(boolean param0, Widget param1) {
         RuntimeException var3 = null;
-        kb var4 = null;
+        Widget var4 = null;
         NodeIterator var5 = null;
-        kb var6 = null;
+        Widget var6 = null;
         int var7 = 0;
-        kb var8 = null;
+        Widget var8 = null;
         NodeIterator var9 = null;
         RuntimeException stackIn_21_0 = null;
         StringBuilder stackIn_21_1 = null;
@@ -166,27 +166,27 @@ class tj extends kb implements gw {
         var7 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           if (param0) {
-            var8 = (kb) null;
-            this.a((kb) null, 21, '￘', -49);
+            var8 = (Widget) null;
+            this.a((Widget) null, 21, '￘', -49);
           }
           if (this.field_D.a(param0)) {
             return false;
           }
           var9 = new NodeIterator(this.field_D);
-          var4 = (kb) (var9.last(50));
+          var4 = (Widget) (var9.last(50));
           while (var4 != null) {
             if (var4.a(false)) {
               var5 = new NodeIterator(this.field_D);
               var5.a(false, var4);
-              var6 = (kb) (var5.previous((byte) -112));
+              var6 = (Widget) (var5.previous((byte) -112));
               while (var6 != null) {
                 if (var6.a(11, param1)) {
                   return true;
                 }
-                var6 = (kb) (var5.previous((byte) -112));
+                var6 = (Widget) (var5.previous((byte) -112));
               }
             }
-            var4 = (kb) (var9.previous((byte) -112));
+            var4 = (Widget) (var9.previous((byte) -112));
           }
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -203,10 +203,10 @@ class tj extends kb implements gw {
         }
     }
 
-    final boolean a(int param0, int param1, int param2, int param3, int param4, int param5, kb param6) {
+    final boolean a(int param0, int param1, int param2, int param3, int param4, int param5, Widget param6) {
         NodeIterator var8 = null;
         RuntimeException var8_ref = null;
-        kb var9 = null;
+        Widget var9 = null;
         int var10 = 0;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
@@ -215,14 +215,14 @@ class tj extends kb implements gw {
         var10 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           var8 = new NodeIterator(this.field_D);
-          var9 = (kb) (var8.first(50));
+          var9 = (Widget) (var8.first(50));
           while (var9 != null) {
             if (var9.c(65280)) {
               if (var9.a(false) &&
                 var9.a(param0, param1, param2, param3, param4, 94, param6)) {
                 return true;
               }
-              var9 = (kb) (var8.next(50));
+              var9 = (Widget) (var8.next(50));
               continue;
             }
             break;
@@ -246,7 +246,7 @@ class tj extends kb implements gw {
         }
     }
 
-    final void a(byte param0, kb param1) {
+    final void a(byte param0, Widget param1) {
         try {
           this.field_D.addLast((byte) -119, (IntrusiveNode) (param1));
           if (param0 != 10) {
@@ -261,13 +261,13 @@ class tj extends kb implements gw {
         String var4 = null;
         int var5 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         NodeIterator var2 = new NodeIterator(this.field_D);
-        kb var3 = (kb) (var2.first(param0 ^ 21434));
+        Widget var3 = (Widget) (var2.first(param0 ^ 21434));
         while (var3 != null) {
           var4 = var3.h(21384);
           if (var4 != null) {
             return var4;
           }
-          var3 = (kb) (var2.next(50));
+          var3 = (Widget) (var2.next(50));
         }
         if (param0 == 21384) {
           return null;
@@ -276,10 +276,10 @@ class tj extends kb implements gw {
         return null;
     }
 
-    boolean a(int param0, int param1, int param2, int param3, kb param4, int param5, int param6) {
+    boolean a(int param0, int param1, int param2, int param3, Widget param4, int param5, int param6) {
         NodeIterator var8 = null;
         RuntimeException var8_ref = null;
-        kb var9 = null;
+        Widget var9 = null;
         int var10 = 0;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
@@ -291,13 +291,13 @@ class tj extends kb implements gw {
             field_C = (na) null;
           }
           var8 = new NodeIterator(this.field_D);
-          var9 = (kb) (var8.first(50));
+          var9 = (Widget) (var8.first(50));
           while (var9 != null) {
             if (var9.c(65280)) {
-              if (var9.a(param0, this.field_B + param1, this.field_p + param2, 107, param4, param5, param6)) {
+              if (var9.a(param0, this.x + param1, this.y + param2, 107, param4, param5, param6)) {
                 return true;
               }
-              var9 = (kb) (var8.next(50));
+              var9 = (Widget) (var8.next(50));
               continue;
             }
             break;
@@ -365,9 +365,9 @@ class tj extends kb implements gw {
         }
     }
 
-    void a(int param0, int param1, int param2, int param3, int param4) {
-        super.a(param0, param1, param2, param3 ^ 0, param4);
-        if (param3 != 8192) {
+    void setBounds(int x, int width, int y, int obfuscationGuard, int height) {
+        super.setBounds(x, width, y, obfuscationGuard ^ 0, height);
+        if (obfuscationGuard != 8192) {
           field_C = (na) null;
         }
         this.i(0);
@@ -378,7 +378,7 @@ class tj extends kb implements gw {
         int var7 = 0;
         StringBuilder discarded$4 = null;
         NodeIterator var5 = null;
-        kb var6 = null;
+        Widget var6 = null;
         int var8 = 0;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
@@ -390,7 +390,7 @@ class tj extends kb implements gw {
         var8 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           var5 = new NodeIterator(this.field_D);
-          var6 = (kb) (var5.first(50));
+          var6 = (Widget) (var5.first(50));
           if (param1 != 81) {
             return;
           }
@@ -400,7 +400,7 @@ class tj extends kb implements gw {
               discarded$4 = param2.append(' ');
             }
             var6.a(1 + param3, param2, 26477, param0);
-            var6 = (kb) (var5.next(50));
+            var6 = (Widget) (var5.next(50));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -423,11 +423,11 @@ class tj extends kb implements gw {
         }
     }
 
-    final void a(int param0, kb param1, int param2, byte param3, int param4, int param5) {
+    final void a(int param0, Widget param1, int param2, byte param3, int param4, int param5) {
         RuntimeException runtimeException = null;
         NodeIterator var7 = null;
         int var8 = 0;
-        kb var9 = null;
+        Widget var9 = null;
         int var10 = 0;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
@@ -437,11 +437,11 @@ class tj extends kb implements gw {
         try {
           var7 = new NodeIterator(this.field_D);
           var8 = -73 / ((-58 - param3) / 53);
-          var9 = (kb) (var7.first(50));
+          var9 = (Widget) (var7.first(50));
           while (var9 != null) {
             if (var9.c(65280)) {
-              var9.a(this.field_p + param0, param1, param2, (byte) -112, param4, param5 + this.field_B);
-              var9 = (kb) (var7.next(50));
+              var9.a(this.y + param0, param1, param2, (byte) -112, param4, param5 + this.x);
+              var9 = (Widget) (var7.next(50));
               continue;
             }
             break;
@@ -461,11 +461,11 @@ class tj extends kb implements gw {
         }
     }
 
-    boolean a(kb param0, int param1, char param2, int param3) {
+    boolean a(Widget param0, int param1, char param2, int param3) {
         RuntimeException var5 = null;
         int var6 = 0;
         int var7 = 0;
-        kb var8 = null;
+        Widget var8 = null;
         NodeIterator var9 = null;
         boolean stackIn_13_0 = false;
         RuntimeException stackIn_20_0 = null;
@@ -475,14 +475,14 @@ class tj extends kb implements gw {
         var7 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           var9 = new NodeIterator(this.field_D);
-          var8 = (kb) (var9.first(50));
+          var8 = (Widget) (var9.first(50));
           while (var8 != null) {
             if (var8.c(65280)) {
               if (var8.a(false) &&
                 var8.a(param0, param1, param2, -12215)) {
                 return true;
               }
-              var8 = (kb) (var9.next(50));
+              var8 = (Widget) (var9.next(50));
               continue;
             }
             break;
@@ -515,10 +515,10 @@ class tj extends kb implements gw {
         }
     }
 
-    void a(int param0, int param1, int param2, kb param3) {
+    void a(int param0, int param1, int param2, Widget param3) {
         RuntimeException runtimeException = null;
         NodeIterator var5 = null;
-        kb var6 = null;
+        Widget var6 = null;
         int var7 = 0;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
@@ -528,11 +528,11 @@ class tj extends kb implements gw {
         try {
           super.a(param0, param1, param2, param3);
           var5 = new NodeIterator(this.field_D);
-          var6 = (kb) (var5.first(50));
+          var6 = (Widget) (var5.first(50));
           while (var6 != null) {
             if (var6.c(param0 + 32558)) {
-              var6.a(32722, this.field_B + param1, param2 + this.field_p, param3);
-              var6 = (kb) (var5.next(50));
+              var6.a(32722, this.x + param1, param2 + this.y, param3);
+              var6 = (Widget) (var5.next(50));
               continue;
             }
             break;
@@ -555,17 +555,17 @@ class tj extends kb implements gw {
     private final void i(int param0) {
         int var4 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         NodeIterator var2 = new NodeIterator(this.field_D);
-        kb var3 = (kb) (var2.first(50));
+        Widget var3 = (Widget) (var2.first(50));
         if (param0 != 0) {
           return;
         }
         while (var3 != null) {
           var3.e(0);
-          var3 = (kb) (var2.next(50));
+          var3 = (Widget) (var2.next(50));
         }
     }
 
-    tj(int param0, int param1, int param2, int param3, kh param4) {
+    tj(int param0, int param1, int param2, int param3, WidgetPainter param4) {
         super(param0, param1, param2, param3, param4, (qo) null);
         this.field_D = new NodeDeque();
     }
@@ -580,14 +580,14 @@ class tj extends kb implements gw {
     void a(int param0, int param1, byte param2, int param3) {
         int var7 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         if (0 == param3 &&
-          null != this.field_k) {
-          this.field_k.a((kb) (this), param0, -94, true, param1);
+          null != this.painter) {
+          this.painter.paintWidget((Widget) (this), param0, -94, true, param1);
         }
         NodeIterator var5 = new NodeIterator(this.field_D);
-        kb var6 = (kb) (var5.last(50));
+        Widget var6 = (Widget) (var5.last(50));
         while (var6 != null) {
-          var6.a(param0 + this.field_B, this.field_p + param1, (byte) -101, param3);
-          var6 = (kb) (var5.previous((byte) -112));
+          var6.a(param0 + this.x, this.y + param1, (byte) -101, param3);
+          var6 = (Widget) (var5.previous((byte) -112));
         }
         if (param2 >= -82) {
           this.i(108);

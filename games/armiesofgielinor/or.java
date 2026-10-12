@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class or implements kh {
+final class or implements WidgetPainter {
     static int field_c;
     private int field_d;
     private int field_m;
@@ -16,7 +16,7 @@ final class or implements kh {
     static String field_j;
     private int field_k;
 
-    public final void a(kb param0, int param1, int param2, boolean param3, int param4) {
+    public final void paintWidget(Widget widget, int originX, int obfuscationGuard, boolean renderFlag, int originY) {
         ws var14 = null;
         int var7 = 0;
         int var8 = 0;
@@ -28,15 +28,15 @@ final class or implements kh {
         int var11Lifetime1;
         int var12Lifetime1;
         try {
-          var14 = param0 instanceof ws ? (ws) (param0) : null;
+          var14 = widget instanceof ws ? (ws) (widget) : null;
           if (var14 == null) {
           }
-          SoftwareRaster.f(param1 + param0.field_B, param4 + param0.field_p, param0.field_l, param0.field_w, this.field_b);
-          var7 = var14.field_S + param0.field_B + param1;
-          if (param2 > -79) {
+          SoftwareRaster.f(originX + widget.x, originY + widget.y, widget.width, widget.height, this.field_b);
+          var7 = var14.field_S + widget.x + originX;
+          if (obfuscationGuard > -79) {
             field_e = (String) null;
           }
-          var8 = param0.field_p + param4 + var14.field_M;
+          var8 = widget.y + originY + var14.field_M;
           SoftwareRaster.a(var7, var8, var14.field_Q, this.field_i);
           if (var14.field_N != -1) {
             var9 = 2.0 * ((double)var14.field_N * 3.141592653589793) / (double)var14.field_L;
@@ -51,10 +51,10 @@ final class or implements kh {
           SoftwareRaster.h(var7, var8, var11Lifetime1 + var7, var8 + var12Lifetime1, 1);
           if (this.field_g != null) {
             var13 = this.field_h + var14.field_Q + var14.field_S;
-            this.field_g.a(param0.field_v, param1 + param0.field_B + var13, this.field_d + param4 + param0.field_p, param0.field_l - this.field_h - var13, param0.field_w - (this.field_h << 1), this.field_m, this.field_l, 1, 1, 0);
+            this.field_g.a(widget.field_v, originX + widget.x + var13, this.field_d + originY + widget.y, widget.width - this.field_h - var13, widget.height - (this.field_h << 1), this.field_m, this.field_l, 1, 1, 0);
           }
         } catch (RuntimeException runtimeException) {
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "or.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "or.C(" + (widget != null ? "{...}" : "null") + ',' + originX + ',' + obfuscationGuard + ',' + renderFlag + ',' + originY + ')');
         }
     }
 

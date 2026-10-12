@@ -52,18 +52,18 @@ final class no extends en {
         return true;
     }
 
-    private final void a(String param0, kb param1, int param2, int param3, int param4) {
+    private final void a(String param0, Widget param1, int param2, int param3, int param4) {
         try {
-          gl.field_e.c(param0, param4 - (-param1.field_B - (param1.field_l >> 1)), param1.field_p + (param2 - 5), param3, -1);
+          gl.field_e.c(param0, param4 - (-param1.x - (param1.width >> 1)), param1.y + (param2 - 5), param3, -1);
         } catch (RuntimeException runtimeException) {
           throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "no.N(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
-    no(kh param0, boolean param1, int param2, int param3, int param4, int param5) {
+    no(WidgetPainter param0, boolean param1, int param2, int param3, int param4, int param5) {
         this(param0, param1);
         try {
-          this.a(param2, param4, param3, 8192, param5);
+          this.setBounds(param2, param4, param3, 8192, param5);
         } catch (RuntimeException runtimeException) {
           throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "no.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
@@ -191,8 +191,8 @@ final class no extends en {
           return;
         }
         if (param2 < -82) {
-          param0 = param0 + this.field_B;
-          param1 = param1 + this.field_p;
+          param0 = param0 + this.x;
+          param1 = param1 + this.y;
           this.a(mi.field_z, this.field_L, param1, 16777215, param0);
           this.a(eb.field_e, this.field_Q, param1, 16777215, param0);
           this.a(BattleTutorial.field_l, this.field_O, param1, 16777215, param0);
@@ -214,41 +214,41 @@ final class no extends en {
         return (String) null;
     }
 
-    private no(kh param0, boolean param1) {
-        super(0, 0, 0, 0, (kh) null);
+    private no(WidgetPainter param0, boolean param1) {
+        super(0, 0, 0, 0, (WidgetPainter) null);
         try {
           this.field_L = (fn) ((Object) new ma("", (qo) null, 2));
           this.field_Q = (fn) ((Object) new ma("", (qo) null, 2));
           this.field_O = (fn) ((Object) new ma("", (qo) null, 4));
-          this.field_O.field_k = param0;
-          this.field_Q.field_k = param0;
-          this.field_L.field_k = param0;
+          this.field_O.painter = param0;
+          this.field_Q.painter = param0;
+          this.field_L.painter = param0;
           this.field_R = param1 ? true : false;
           if (!this.field_R) {
-            this.a((byte) 10, (kb) (this.field_L));
-            this.a((byte) 10, (kb) (this.field_Q));
+            this.a((byte) 10, (Widget) (this.field_L));
+            this.a((byte) 10, (Widget) (this.field_Q));
           } else {
-            this.a((byte) 10, (kb) (this.field_Q));
-            this.a((byte) 10, (kb) (this.field_L));
+            this.a((byte) 10, (Widget) (this.field_Q));
+            this.a((byte) 10, (Widget) (this.field_L));
           }
-          this.a((byte) 10, (kb) (this.field_O));
+          this.a((byte) 10, (Widget) (this.field_O));
         } catch (RuntimeException runtimeException) {
           throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "no.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
-    final void a(int param0, int param1, int param2, int param3, int param4) {
-        super.a(param0, param1, param2, 8192, param4);
-        int var6 = param1 - 130 >> 1;
+    final void setBounds(int x, int width, int y, int obfuscationGuard, int height) {
+        super.setBounds(x, width, y, 8192, height);
+        int var6 = width - 130 >> 1;
         if (this.field_R) {
-          this.field_Q.a(var6, 25, 0, 8192, param4);
-          this.field_L.a(var6 + 45, 25, 0, 8192, param4);
-          this.field_O.a(90 + var6, 40, 0, param3, param4);
+          this.field_Q.setBounds(var6, 25, 0, 8192, height);
+          this.field_L.setBounds(var6 + 45, 25, 0, 8192, height);
+          this.field_O.setBounds(90 + var6, 40, 0, obfuscationGuard, height);
           return;
         }
-        this.field_L.a(var6, 25, 0, 8192, param4);
-        this.field_Q.a(45 + var6, 25, 0, 8192, param4);
-        this.field_O.a(90 + var6, 40, 0, param3, param4);
+        this.field_L.setBounds(var6, 25, 0, 8192, height);
+        this.field_Q.setBounds(45 + var6, 25, 0, 8192, height);
+        this.field_O.setBounds(90 + var6, 40, 0, obfuscationGuard, height);
     }
 
     final int a(byte param0) {

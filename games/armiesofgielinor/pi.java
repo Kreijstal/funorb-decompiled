@@ -32,7 +32,7 @@ final class pi extends fw {
         return this.field_Q.a(param0 ^ 85);
     }
 
-    final boolean a(int param0, int param1, int param2, int param3, kb param4, int param5, int param6) {
+    final boolean a(int param0, int param1, int param2, int param3, Widget param4, int param5, int param6) {
         int var12 = 0;
         RuntimeException stackIn_32_0 = null;
         StringBuilder stackIn_32_1 = null;
@@ -54,7 +54,7 @@ final class pi extends fw {
             return false;
           }
           var8_int = -param1 + (param0 - this.field_R);
-          var9 = -(this.field_R * 2) + this.field_l;
+          var9 = -(this.field_R * 2) + this.width;
           if (var8_int > var9) {
             var8_int = var9;
           }
@@ -101,8 +101,8 @@ final class pi extends fw {
         if (param0 == -1) {
           return this.field_L;
         }
-        kb var3 = (kb) null;
-        this.a(104, -75, 118, -4, (kb) null, 10, 30);
+        Widget var3 = (Widget) null;
+        this.a(104, -75, 118, -4, (Widget) null, 10, 30);
         return this.field_L;
     }
 

@@ -23,7 +23,9 @@ by default for every game. Semantic game-specific names use explicit naming
 rules. Deko's numbered structural-category and type-based names identify
 unresolved purposes honestly; they are not complete semantic deobfuscation.
 
-Armies has 159 reviewed class names, not a complete semantic map. Campaign
+Armies has 164 reviewed class names, not a complete semantic map. Shared widget
+bounds, dropdown options/prefix selection, painter dispatch and expansion now
+have reviewed names with pointer, selection and arrow-pixel fixtures. Campaign
 loadouts now name unit/spell rewards, equipped slots and cumulative mana bonuses;
 reward previews retain unit-before-spell-before-mana precedence. Campaign menu
 entries, buttons and intrusive hash lookup/traversal now have reviewed names;
@@ -90,7 +92,8 @@ mesh transforms, decoder cleanup and flat/constant-shade rasterization now have
 reviewed names and fixtures. Matrix-backed rotation/scale and full animation
 rendering remain unverified. Battlefield elimination and AI equipped-spell
 planning now use reconstructed control flow from the pinned generic compiler.
-Only gs.java retains a dispatcher fallback. AI candidate scoring/window fixtures
+Only DropdownArrowPainter.java retains a dispatcher fallback, in its unrelated
+static packet poller. AI candidate scoring/window fixtures
 cover damage spells, with selection and live casts still unverified.
 
 Steel has 33 reviewed class names. Its controlled raw/named core checks cover
@@ -102,7 +105,10 @@ hash lookups have independent expectations. Archive/provider roots and versioned
 index decoding now have names and raw/gzip, sparse-ID and retention fixtures. Three dispatcher files remain.
 Particle integration, terrain contact, cyclic reuse and deferred removal now
 have reviewed names and fixtures. Guided projectile launch/coasting is checked;
-its tracking/turning phase and rendered effects remain unverified.
+8192-unit angle and 16.16 trig helpers now have names and mathematical fixtures.
+Guided steering checks cover turn limits, target refresh/removal and the coasting
+boundary. The initial-direction reversal branch, rendered effects and full
+collision behavior remain unverified.
 
 ## Reproduce
 

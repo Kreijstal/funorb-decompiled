@@ -4,27 +4,27 @@
 final class fl {
     int field_s;
     int field_d;
-    kh field_i;
+    WidgetPainter field_i;
     private int field_v;
     int field_x;
     BitmapFont field_m;
     static h field_u;
-    kh field_j;
+    WidgetPainter field_j;
     static int field_e;
-    kh field_k;
+    WidgetPainter field_k;
     int field_c;
     int field_a;
     private boolean field_g;
     int field_n;
-    kh field_w;
-    kh field_t;
+    WidgetPainter field_w;
+    WidgetPainter field_t;
     int field_h;
     int field_b;
     int field_o;
-    kh field_p;
+    WidgetPainter field_p;
     static String field_l;
     int field_r;
-    kh field_q;
+    WidgetPainter field_q;
     static int[] field_f;
 
     final static void a(Battlefield param0, int param1) {
@@ -167,7 +167,7 @@ final class fl {
             var12 = -var5_int + (SoftwareRaster.width - var9);
           }
           if (!param0) {
-            this.field_w = (kh) null;
+            this.field_w = (WidgetPainter) null;
           }
           var13Lifetime1 = 32 + param1 - this.field_m.field_z;
           if (SoftwareRaster.height < var6 + var13Lifetime1 + var10) {
@@ -235,7 +235,7 @@ final class fl {
         ao var14Lifetime2;
         try {
           var17 = new lk(param1, 2, 2, 2236962, 1, 1, 1, param1.field_L + (param1.field_H + 2));
-          this.field_t = (kh) ((Object) var17);
+          this.field_t = (WidgetPainter) ((Object) var17);
           var17.field_d = 16777215;
           var4 = new ao();
           var17.a(var4, 24978);
@@ -262,21 +262,21 @@ final class fl {
           var5[4] = (RgbSprite) ((Object) var18);
           var4.a(4, (byte) -105).a(true, (byte) 66).a(var5, param0 - 13421900);
           var4.a(5, (byte) -113).a(ByteStorage.a(65793, 0, (byte) -125, 0, 0), -126).a(true, (byte) 121).a(-1, (byte) -109);
-          this.field_j = (kh) ((Object) var4);
+          this.field_j = (WidgetPainter) ((Object) var4);
           var6 = new ao(var4, true);
           var6.field_n = 0;
           var7 = new ao(var4, true);
           var7.field_n = 0;
           var7.a(-128, ak.b(8947848, 5));
           var7.a(1, (byte) -85).a(ak.b(11184810, 5), 67).a(2236962, (byte) -127);
-          this.field_i = (kh) ((Object) new tk(param1, 2, 2, 16777215, -1, 5, 5, 15, 15, 4473924));
+          this.field_i = (WidgetPainter) ((Object) new tk(param1, 2, 2, 16777215, -1, 5, 5, 15, 15, 4473924));
           discarded$0 = new or(param1, 2, 2, 16777215, -1, 16777215, 16729156, 4473924);
           discarded$1 = new kp(param1, 16777215, -1, 125269879, 4473924, 3, 268435455);
           var8 = new ao();
           var17.a(var8, param0 ^ 13413726);
           var8.a(0, (byte) -128).a(BufferedFile.a(7829367, 15658734, param0 ^ 13421773, 10066329), 36).a(1118481, (byte) 27).b(-1, param0 ^ 13421751);
           var8.a(4, (byte) -108).a(true, (byte) 104).a(var5, -126);
-          this.field_w = (kh) ((Object) var8);
+          this.field_w = (WidgetPainter) ((Object) var8);
           var9 = new RgbSprite[9];
           var10 = new RgbSprite[9];
           var9[4] = new RgbSprite(2, 1);
@@ -288,8 +288,8 @@ final class fl {
           var12 = new ao();
           var11.a(var9, 0, param0 - 13421779);
           var12.a(var10, 0, param0 - 13421779);
-          this.field_k = (kh) ((Object) var12);
-          this.field_p = (kh) ((Object) var4);
+          this.field_k = (WidgetPainter) ((Object) var12);
+          this.field_p = (WidgetPainter) ((Object) var4);
           var13 = new RgbSprite(7, 4);
           var13.pixels = new int[]{8947848, 8947848, 8947848, 13421772, 8947848, 8947848, 8947848, 8947848, 8947848, param0, 13421772, 13421772, 8947848, 8947848, 8947848, 13421772, 13421772, 13421772, 13421772, 13421772, 8947848, 13421772, 13421772, 13421772, 13421772, 13421772, 13421772, 13421772};
           this.field_a = 10;

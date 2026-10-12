@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-class fw extends kb {
+class fw extends Widget {
     boolean field_I;
     static int field_C;
     static int[] field_J;
@@ -46,7 +46,7 @@ class fw extends kb {
         }
     }
 
-    boolean a(int param0, kb param1) {
+    boolean a(int param0, Widget param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
@@ -66,7 +66,7 @@ class fw extends kb {
           this.field_E = true;
           if (this.field_x != null &&
             this.field_x instanceof ie) {
-            ((ie) (this.field_x)).a((kb) (this), this.field_E, (byte) -41);
+            ((ie) (this.field_x)).a((Widget) (this), this.field_E, (byte) -41);
           }
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -83,7 +83,7 @@ class fw extends kb {
         }
     }
 
-    void a(int param0, int param1, int param2, kb param3) {
+    void a(int param0, int param1, int param2, Widget param3) {
         try {
           super.a(param0 + 0, param1, param2, param3);
           this.field_G = 0;
@@ -94,7 +94,7 @@ class fw extends kb {
             if (this.field_q == ro.field_ub) {
               return;
             }
-            if (this.b(param0 - 32721, param1, ko.field_b, AiPlanningStrategy.field_d, param2) &&
+            if (this.containsPointer(param0 - 32721, param1, ko.field_b, AiPlanningStrategy.field_d, param2) &&
               ro.field_ub == 0) {
               this.a(this.field_q, AiPlanningStrategy.field_d - param1, ko.field_b - param2, true);
             }
@@ -109,7 +109,7 @@ class fw extends kb {
         this(param0, t.field_c.field_j, param1);
     }
 
-    boolean a(kb param0, int param1, char param2, int param3) {
+    boolean a(Widget param0, int param1, char param2, int param3) {
         RuntimeException var5 = null;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
@@ -216,7 +216,7 @@ class fw extends kb {
         }
     }
 
-    fw(String param0, kh param1, qo param2) {
+    fw(String param0, WidgetPainter param1, qo param2) {
         super(param0, param1, param2);
         this.field_I = true;
         this.field_D = true;
@@ -224,7 +224,7 @@ class fw extends kb {
         this.field_G = 0;
     }
 
-    final void a(int param0, kb param1, int param2, byte param3, int param4, int param5) {
+    final void a(int param0, Widget param1, int param2, byte param3, int param4, int param5) {
         try {
           if (this.field_x != null &&
             this.field_x instanceof qe) {
@@ -237,16 +237,16 @@ class fw extends kb {
         }
     }
 
-    boolean a(int param0, int param1, int param2, int param3, kb param4, int param5, int param6) {
+    boolean a(int param0, int param1, int param2, int param3, Widget param4, int param5, int param6) {
         RuntimeException var8 = null;
-        kb var9 = null;
+        Widget var9 = null;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
         String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
           if (this.field_I &&
-            this.b(1, param1, param5, param0, param2)) {
+            this.containsPointer(1, param1, param5, param0, param2)) {
             this.a(11, param4);
             this.field_q = param6;
             if (null != this.field_x &&
@@ -258,8 +258,8 @@ class fw extends kb {
           if (param3 > 103) {
             return false;
           }
-          var9 = (kb) null;
-          this.a(67, -21, 92, 52, (kb) null, -105, -128);
+          var9 = (Widget) null;
+          this.a(67, -21, 92, 52, (Widget) null, -105, -128);
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -275,7 +275,7 @@ class fw extends kb {
         }
     }
 
-    fw(int param0, int param1, int param2, int param3, kh param4, qo param5) {
+    fw(int param0, int param1, int param2, int param3, WidgetPainter param4, qo param5) {
         super(param0, param1, param2, param3, param4, param5);
         this.field_I = true;
         this.field_D = true;
@@ -306,7 +306,7 @@ class fw extends kb {
           return;
         }
         if (this.field_x instanceof ie) {
-          ((ie) (this.field_x)).a((kb) (this), this.field_E, (byte) -41);
+          ((ie) (this.field_x)).a((Widget) (this), this.field_E, (byte) -41);
           if (param0 == 1) {
             return;
           }
@@ -326,7 +326,7 @@ class fw extends kb {
         this.field_D = true;
         this.field_E = false;
         this.field_G = 0;
-        this.field_k = t.field_c.field_q;
+        this.painter = t.field_c.field_q;
     }
 
     static {

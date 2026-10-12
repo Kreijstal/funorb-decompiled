@@ -51,7 +51,7 @@ final class pk extends hv {
         try {
           this.field_Z = param0;
           this.field_L = param1;
-          this.a(param2, param4, param3, 8192, param5);
+          this.setBounds(param2, param4, param3, 8192, param5);
         } catch (RuntimeException runtimeException) {
           throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "pk.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
@@ -94,9 +94,9 @@ final class pk extends hv {
           field_W = (String) null;
         }
         var6Lifetime1 = this.field_Z.a(false);
-        var8 = (pm) ((Object) this.field_k);
-        var9 = param0 + this.field_B;
-        var10 = var8.a(-18033, param1, (kb) (this)) + (var8.a(-69, (kb) (this)).a((byte) 27) >> 1);
+        var8 = (pm) ((Object) this.painter);
+        var9 = param0 + this.x;
+        var10 = var8.a(-18033, param1, (Widget) (this)) + (var8.a(-69, (Widget) (this)).a((byte) 27) >> 1);
         if (var6Lifetime1 == ad.field_K) {
           var18 = db.field_a[0];
           var11 = var18.canvasWidth << 1;
@@ -163,7 +163,7 @@ final class pk extends hv {
         return;
     }
 
-    final boolean a(int param0, kb param1) {
+    final boolean a(int param0, Widget param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -325,7 +325,7 @@ final class pk extends hv {
         field_V = null;
     }
 
-    final void a(int param0, int param1, int param2, kb param3) {
+    final void a(int param0, int param1, int param2, Widget param3) {
         try {
           this.field_U = this.field_U + 1;
           super.a(param0, param1, param2, param3);

@@ -722,35 +722,35 @@ final class ResourceArchive {
         }
     }
 
-    final static int a(int param0, int param1, int param2) {
-        if (param1 != 200) {
+    final static int atan2Angle8192(int deltaY, int obfuscationGuard, int deltaX) {
+        if (obfuscationGuard != 200) {
           ResourceArchive.b(false);
         }
-        if (param2 == 0) {
-          if (param0 == 0) {
+        if (deltaX == 0) {
+          if (deltaY == 0) {
             return 0;
           }
-          if (0 > param0) {
+          if (0 > deltaY) {
             return -2048;
           }
           return 2048;
         }
-        if (0 > param2) {
-          if (param0 == 0) {
+        if (0 > deltaX) {
+          if (deltaY == 0) {
             return 4096;
           }
-          if (param0 < 0) {
-            return rb.a(-param2, 2048, -param0) - 4096;
+          if (deltaY < 0) {
+            return rb.firstQuadrantAngle8192(-deltaX, 2048, -deltaY) - 4096;
           }
-          return 4096 - rb.a(-param2, 2048, param0);
+          return 4096 - rb.firstQuadrantAngle8192(-deltaX, 2048, deltaY);
         }
-        if (0 == param0) {
+        if (0 == deltaY) {
           return 0;
         }
-        if (param0 < 0) {
-          return -rb.a(param2, 2048, -param0);
+        if (deltaY < 0) {
+          return -rb.firstQuadrantAngle8192(deltaX, 2048, -deltaY);
         }
-        return rb.a(param2, 2048, param0);
+        return rb.firstQuadrantAngle8192(deltaX, 2048, deltaY);
     }
 
     final byte[] getFile(int groupId, byte obfuscationGuard, int fileId) {

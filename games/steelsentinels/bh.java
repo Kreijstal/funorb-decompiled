@@ -898,7 +898,7 @@ final class bh {
           var15 = 4;
           var14 = 256;
         }
-        var9Lifetime2 = jh.a(param3 >> 3, 4096) * 100 >> 16;
+        var9Lifetime2 = jh.sine16(param3 >> 3, 4096) * 100 >> 16;
         if (var13 < 1) {
           var13 = 1;
         }
@@ -909,7 +909,7 @@ final class bh {
           var17 = 5;
           var18 = 1;
         }
-        var10Lifetime2 = -kg.a(param3 >> 3, (byte) -101) * 100 >> 16;
+        var10Lifetime2 = -kg.cosine16(param3 >> 3, (byte) -101) * 100 >> 16;
         var13Lifetime1 = 100;
         if (null != IsaacRandom.field_f[param0 - 17]) {
           var19_int = IsaacRandom.field_f[param0 - 17][0];
@@ -1193,7 +1193,7 @@ final class bh {
           if (1 > var9) {
             var9 = 1;
           }
-          var5Lifetime2 = jh.a(param2.aimAngle >> 3, 4096) * 100 >> 16;
+          var5Lifetime2 = jh.sine16(param2.aimAngle >> 3, 4096) * 100 >> 16;
           if (var4_int == 6) {
             var12 = 32;
             var10 = 512;
@@ -1201,7 +1201,7 @@ final class bh {
             var13 = 5;
             var14 = 1;
           }
-          var6Lifetime2 = -kg.a(param2.aimAngle >> 3, (byte) -87) * 100 >> 16;
+          var6Lifetime2 = -kg.cosine16(param2.aimAngle >> 3, (byte) -87) * 100 >> 16;
           var9Lifetime1 = 100;
           if (null != IsaacRandom.field_f[-17 + param1.componentId]) {
             var15_int = -param1.field_G + IsaacRandom.field_f[param1.componentId - 17][0];

@@ -15,35 +15,35 @@ final class na extends tj implements mf, he {
     static int[] field_J;
 
     public na() {
-        super(0, 0, 496, 0, (kh) null);
+        super(0, 0, 496, 0, (WidgetPainter) null);
         this.field_P = new ma("", (qo) null, 12);
         lk var1 = new lk(gl.field_e, 0, 0, 0, 0, 16777215, -1, 3, 0, ArmiesOfGielinor.field_J.field_H, -1, 2147483647, true);
-        kb var2 = new kb(BattleTutorial.field_u, var1, (qo) null);
+        Widget var2 = new Widget(BattleTutorial.field_u, var1, (qo) null);
         this.field_O = new fw(ul.field_f, (qo) null);
         this.field_L = new fw(ac.field_s, (qo) null);
         this.field_P.field_s = DualLinkedNode.field_m;
         this.field_P.a((byte) 16, new uj(this.field_P));
         this.field_O.field_I = false;
-        this.field_O.field_k = (kh) ((Object) new nu());
-        this.field_L.field_k = (kh) ((Object) new td());
-        this.field_P.field_k = (kh) ((Object) new lu(10000536));
+        this.field_O.painter = (WidgetPainter) ((Object) new nu());
+        this.field_L.painter = (WidgetPainter) ((Object) new td());
+        this.field_P.painter = (WidgetPainter) ((Object) new lu(10000536));
         int var3 = 20;
         int var4 = 4;
         int var5 = 200;
-        var2.a(20, 270, var3, 8192, 50);
+        var2.setBounds(20, 270, var3, 8192, 50);
         var3 += 50;
         this.a((byte) 10, var2);
         var3 = var3 + (5 + this.a(-124, fq.field_k, dn.field_Ob, 170, var3, this.field_P));
-        this.field_O.a(496 - var5 >> 1, var5, var3, 8192, 40);
-        this.field_L.a(var4 + 3, 60, var3 + 15, 8192, 40);
+        this.field_O.setBounds(496 - var5 >> 1, var5, var3, 8192, 40);
+        this.field_L.setBounds(var4 + 3, 60, var3 + 15, 8192, 40);
         this.field_L.field_x = (qo) (this);
         this.field_O.field_x = (qo) (this);
-        this.a((byte) 10, (kb) (this.field_O));
-        this.a((byte) 10, (kb) (this.field_L));
+        this.a((byte) 10, (Widget) (this.field_O));
+        this.a((byte) 10, (Widget) (this.field_L));
         this.field_M = new kv((mf) (this));
-        this.field_M.a(60 + (this.field_P.field_B + this.field_P.field_l), -60 + (-this.field_P.field_B + (this.field_l - this.field_P.field_l)), 20, 8192, 150);
-        this.a((byte) 10, (kb) (this.field_M));
-        this.a(0, 496, 0, 8192, var4 + var3 + 55);
+        this.field_M.setBounds(60 + (this.field_P.x + this.field_P.width), -60 + (-this.field_P.x + (this.width - this.field_P.width)), 20, 8192, 150);
+        this.a((byte) 10, (Widget) (this.field_M));
+        this.setBounds(0, 496, 0, 8192, var4 + var3 + 55);
     }
 
     public final void a(int param0, int param1, int param2, int param3, fw param4) {
@@ -84,11 +84,11 @@ final class na extends tj implements mf, he {
         ((uj) (this.field_P.a(param0 - 918933514))).g(50);
         if (param0 != -116) {
           String var3 = (String) null;
-          discarded$0 = this.a(-47, 45, (String) null, (kb) null, 47, (String) null, -7);
+          discarded$0 = this.a(-47, 45, (String) null, (Widget) null, 47, (String) null, -7);
         }
     }
 
-    final void a(int param0, int param1, int param2, kb param3) {
+    final void a(int param0, int param1, int param2, Widget param3) {
         try {
           super.a(param0 ^ 0, param1, param2, param3);
           if (param0 != 32722) {
@@ -266,7 +266,7 @@ final class na extends tj implements mf, he {
         }
     }
 
-    private final int a(int param0, int param1, String param2, kb param3, int param4, String param5, int param6) {
+    private final int a(int param0, int param1, String param2, Widget param3, int param4, String param5, int param6) {
         RuntimeException var8 = null;
         pk var9 = null;
         ta var10 = null;
@@ -282,12 +282,12 @@ final class na extends tj implements mf, he {
         RuntimeException decompiledCaughtException = null;
         try {
           var10 = new ta(20, param0, 120 + param4, 25, param3, false, 120, 3, ArmiesOfGielinor.field_J, 16777215, param2);
-          this.a((byte) 10, (kb) (var10));
-          var9 = new pk(((eg) ((Object) param3)).a(-918933630), param5, 126, param0 + var10.field_w, param4 + 25, param1);
+          this.a((byte) 10, (Widget) (var10));
+          var9 = new pk(((eg) ((Object) param3)).a(-918933630), param5, 126, param0 + var10.height, param4 + 25, param1);
           var9.field_x = (qo) (this);
-          this.a((byte) 10, (kb) (var9));
+          this.a((byte) 10, (Widget) (var9));
           if (param6 < -59) {
-            stackIn_4_0 = var9.field_w + var10.field_w;
+            stackIn_4_0 = var9.height + var10.height;
             return stackIn_4_0;
           }
           stackIn_2_0 = 6;
@@ -411,7 +411,7 @@ final class na extends tj implements mf, he {
         ma var3 = null;
         RuntimeException var3_ref = null;
         String var4 = null;
-        kb var5 = null;
+        Widget var5 = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
         String stackIn_6_2 = null;
@@ -423,8 +423,8 @@ final class na extends tj implements mf, he {
           if (param0 == -1) {
             return;
           }
-          var5 = (kb) null;
-          this.a((kb) null, 40, '\034', 104);
+          var5 = (Widget) null;
+          this.a((Widget) null, 40, '\034', 104);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -475,7 +475,7 @@ final class na extends tj implements mf, he {
         }
     }
 
-    private final int a(int param0, String param1, String param2, int param3, int param4, kb param5) {
+    private final int a(int param0, String param1, String param2, int param3, int param4, Widget param5) {
         RuntimeException var7 = null;
         int stackIn_2_0 = 0;
         int stackIn_4_0 = 0;
@@ -520,7 +520,7 @@ final class na extends tj implements mf, he {
         }
     }
 
-    final boolean a(kb param0, int param1, char param2, int param3) {
+    final boolean a(Widget param0, int param1, char param2, int param3) {
         RuntimeException var5 = null;
         boolean stackIn_6_0 = false;
         boolean stackIn_12_0 = false;

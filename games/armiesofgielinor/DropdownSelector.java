@@ -1,19 +1,19 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class gh extends tj implements he {
+final class DropdownSelector extends tj implements he {
     static String field_P;
-    private int field_J;
-    String field_I;
+    private int collapsedHeight;
+    String typedPrefix;
     private boolean field_F;
     static RgbSprite field_M;
-    BitmapFont field_K;
-    private fw field_E;
-    boolean field_H;
-    pp field_O;
-    private fw field_N;
-    private int field_G;
-    ai field_Q;
+    BitmapFont font;
+    private fw textButton;
+    boolean expanded;
+    DropdownOptionList optionList;
+    private fw arrowButton;
+    private int maximumDropdownHeight;
+    ai dropdownViewport;
 
     public static void a(int param0) {
         field_M = null;
@@ -24,20 +24,20 @@ final class gh extends tj implements he {
     }
 
     private final void a(boolean param0, String param1) {
-        if (null == this.field_O.field_W) {
+        if (null == this.optionList.options) {
           return;
         }
-        int var3_int = this.a(0, param1.toLowerCase());
+        int var3_int = this.findOptionPrefix(0, param1.toLowerCase());
         if (var3_int == -1) {
           return;
         }
         try {
-          this.field_O.field_T = var3_int;
+          this.optionList.selectedIndex = var3_int;
           if (!param0) {
             this.field_F = true;
           }
-          this.n(107805154);
-          this.field_I = param1;
+          this.ensureSelectionVisible(107805154);
+          this.typedPrefix = param1;
         } catch (RuntimeException runtimeException) {
           throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "gh.O(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -46,23 +46,23 @@ final class gh extends tj implements he {
     final boolean a(boolean param0) {
         boolean stackIn_7_0 = false;
         if (param0) {
-          this.field_J = -22;
+          this.collapsedHeight = -22;
         }
         stackIn_7_0 = (this.field_F) || (super.a(false));
         return stackIn_7_0;
     }
 
     private final void a(int param0, int param1, byte param2, int param3, int param4) {
-        super.a(param3, param4, param1, 8192, param0);
+        super.setBounds(param3, param4, param1, 8192, param0);
         int var6 = 2 % ((-8 - param2) / 44);
-        this.field_E.a(0, param4 - 20, 0, 8192, this.field_J);
-        this.field_N.a(param4 - 20, 20, 0, 8192, this.field_J);
-        if (this.field_H) {
-          this.field_Q.a(0, param4, this.field_J, 8192, param0 - this.field_J);
+        this.textButton.setBounds(0, param4 - 20, 0, 8192, this.collapsedHeight);
+        this.arrowButton.setBounds(param4 - 20, 20, 0, 8192, this.collapsedHeight);
+        if (this.expanded) {
+          this.dropdownViewport.setBounds(0, param4, this.collapsedHeight, 8192, param0 - this.collapsedHeight);
         }
     }
 
-    final boolean a(int param0, kb param1) {
+    final boolean a(int param0, Widget param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
@@ -73,11 +73,11 @@ final class gh extends tj implements he {
           if (param0 != 11) {
             return true;
           }
-          this.field_I = "";
+          this.typedPrefix = "";
           this.field_F = true;
           if (null != this.field_x &&
             this.field_x instanceof ie) {
-            ((ie) (this.field_x)).a((kb) (this), this.field_F, (byte) -41);
+            ((ie) (this.field_x)).a((Widget) (this), this.field_F, (byte) -41);
           }
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -99,50 +99,50 @@ final class gh extends tj implements he {
           ((rp) ((Object) this.field_x)).a(-109, this);
         }
         if (param0 <= 4) {
-          gh.a(-40);
+          DropdownSelector.a(-40);
         }
     }
 
-    final boolean l(int param0) {
-        if (param0 != 11180) {
-          kb var3 = (kb) null;
-          this.a(-2, 83, 58, (kb) null);
+    final boolean isExpanded(int obfuscationGuard) {
+        if (obfuscationGuard != 11180) {
+          Widget var3 = (Widget) null;
+          this.a(-2, 83, 58, (Widget) null);
         }
-        return this.field_H;
+        return this.expanded;
     }
 
-    gh(Object[] param0, int param1, int param2) {
-        super(0, 0, 0, 0, (kh) null);
-        this.field_I = "";
-        this.field_K = ArmiesOfGielinor.field_J;
+    DropdownSelector(Object[] options, int selectedIndex, int maximumDropdownHeight) {
+        super(0, 0, 0, 0, (WidgetPainter) null);
+        this.typedPrefix = "";
+        this.font = ArmiesOfGielinor.field_J;
         try {
-          this.field_O = new pp(this, this.field_K, param0, param1);
-          this.field_H = false;
-          this.field_O.field_x = (qo) (this);
-          this.field_G = param2;
-          this.field_E = new fw("", new fk(this), (qo) (this));
-          this.field_N = new fw();
-          this.field_N.field_k = (kh) ((Object) new gs());
-          this.field_N.field_x = (qo) (this);
-          this.a((byte) 10, (kb) (this.field_E));
-          this.a((byte) 10, (kb) (this.field_N));
+          this.optionList = new DropdownOptionList(this, this.font, options, selectedIndex);
+          this.expanded = false;
+          this.optionList.field_x = (qo) (this);
+          this.maximumDropdownHeight = maximumDropdownHeight;
+          this.textButton = new fw("", new fk(this), (qo) (this));
+          this.arrowButton = new fw();
+          this.arrowButton.painter = (WidgetPainter) ((Object) new DropdownArrowPainter());
+          this.arrowButton.field_x = (qo) (this);
+          this.a((byte) 10, (Widget) (this.textButton));
+          this.a((byte) 10, (Widget) (this.arrowButton));
         } catch (RuntimeException runtimeException) {
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "gh.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "gh.<init>(" + (options != null ? "{...}" : "null") + ',' + selectedIndex + ',' + maximumDropdownHeight + ')');
         }
     }
 
-    private final void k(int param0) {
+    private final void closeDropdown(int obfuscationGuard) {
         int discarded$0 = 0;
-        if (!this.l(11180)) {
+        if (!this.isExpanded(11180)) {
           return;
         }
-        this.a(this.field_J, this.field_p, (byte) -97, this.field_B, this.field_l);
-        if (param0 >= -66) {
+        this.a(this.collapsedHeight, this.y, (byte) -97, this.x, this.width);
+        if (obfuscationGuard >= -66) {
           String var3 = (String) null;
-          discarded$0 = this.a(-114, (String) null);
+          discarded$0 = this.findOptionPrefix(-114, (String) null);
         }
-        this.field_H = false;
-        this.field_Q.unlink(124);
+        this.expanded = false;
+        this.dropdownViewport.unlink(124);
     }
 
     public final void a(int param0, int param1, int param2, int param3, fw param4) {
@@ -153,12 +153,12 @@ final class gh extends tj implements he {
         RuntimeException var6 = null;
         try {
           if (param1 != 11) {
-            this.field_K = (BitmapFont) null;
+            this.font = (BitmapFont) null;
           }
-          if (this.l(11180)) {
-            this.k(-128);
+          if (this.isExpanded(11180)) {
+            this.closeDropdown(-128);
           } else {
-            this.m(param1 - 11);
+            this.openDropdown(param1 - 11);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -175,7 +175,7 @@ final class gh extends tj implements he {
         }
     }
 
-    final void a(int param0, int param1, int param2, kb param3) {
+    final void a(int param0, int param1, int param2, Widget param3) {
         try {
           super.a(param0, param1, param2, param3);
         } catch (RuntimeException runtimeException) {
@@ -183,7 +183,7 @@ final class gh extends tj implements he {
         }
     }
 
-    final boolean a(int param0, int param1, int param2, int param3, kb param4, int param5, int param6) {
+    final boolean a(int param0, int param1, int param2, int param3, Widget param4, int param5, int param6) {
         RuntimeException var8 = null;
         boolean stackIn_3_0 = false;
         RuntimeException stackIn_6_0 = null;
@@ -314,14 +314,14 @@ final class gh extends tj implements he {
         }
     }
 
-    final int a(byte param0) {
-        if (param0 != 71) {
+    final int getSelectedIndex(byte obfuscationGuard) {
+        if (obfuscationGuard != 71) {
           return -94;
         }
-        return this.field_O.field_T;
+        return this.optionList.selectedIndex;
     }
 
-    private final void n(int param0) {
+    private final void ensureSelectionVisible(int obfuscationGuard) {
         int var2;
         int var3;
         int var4;
@@ -331,20 +331,20 @@ final class gh extends tj implements he {
         int var8;
         int var7Lifetime1;
         int var8Lifetime1;
-        if (this.l(11180) &&
-          this.field_O.field_T != -1 &&
-          null != this.field_O.field_W &&
-          null != this.field_Q.field_K) {
-          var2 = this.field_Q.field_S.field_w;
-          var3 = this.field_O.field_Z;
-          var4 = this.field_O.field_w - var2;
+        if (this.isExpanded(11180) &&
+          this.optionList.selectedIndex != -1 &&
+          null != this.optionList.options &&
+          null != this.dropdownViewport.field_K) {
+          var2 = this.dropdownViewport.field_S.height;
+          var3 = this.optionList.rowHeight;
+          var4 = this.optionList.height - var2;
           if (var4 <= 0) {
             return;
           }
-          var5 = var3 * this.field_O.field_T;
-          var6 = var5 + this.field_Q.field_S.field_E.field_p;
+          var5 = var3 * this.optionList.selectedIndex;
+          var6 = var5 + this.dropdownViewport.field_S.field_E.y;
           var7 = var2 >> 2;
-          if (param0 != 107805154) {
+          if (obfuscationGuard != 107805154) {
             return;
           }
           if (var6 < var7) {
@@ -352,7 +352,7 @@ final class gh extends tj implements he {
             if (var8 < 0) {
               var8 = 0;
             }
-            this.field_Q.field_K.field_W = var8;
+            this.dropdownViewport.field_K.field_W = var8;
           }
           var7Lifetime1 = -var3 + (3 * var2 >> 2);
           if (var7Lifetime1 < var6) {
@@ -360,13 +360,13 @@ final class gh extends tj implements he {
             if (var8Lifetime1 > 65536) {
               var8Lifetime1 = 65536;
             }
-            this.field_Q.field_K.field_W = var8Lifetime1;
+            this.dropdownViewport.field_K.field_W = var8Lifetime1;
           }
           return;
         }
     }
 
-    final boolean a(kb param0, int param1, char param2, int param3) {
+    final boolean a(Widget param0, int param1, char param2, int param3) {
         boolean stackIn_60_0 = false;
         RuntimeException stackIn_63_0 = null;
         StringBuilder stackIn_63_1 = null;
@@ -377,7 +377,7 @@ final class gh extends tj implements he {
         String var6 = null;
         int var6_int = 0;
         int var7 = 0;
-        kb var8 = null;
+        Widget var8 = null;
         int var6_intLifetime1;
         var7 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
@@ -385,84 +385,84 @@ final class gh extends tj implements he {
             return false;
           }
           boolean decompiledFrameRemainder0 = true;
-          if (this.field_O.field_W != null) {
-            var5_int = this.field_O.field_W.length;
+          if (this.optionList.options != null) {
+            var5_int = this.optionList.options.length;
             if (param1 != 99 &&
               param1 != 98) {
               if (param1 != 105 &&
                 param1 != 104) {
                 if (param1 == 84) {
-                  if (!this.field_H) {
-                    this.m(0);
+                  if (!this.expanded) {
+                    this.openDropdown(0);
                   } else {
-                    this.k(-116);
+                    this.closeDropdown(-116);
                   }
                   return true;
                 }
                 if (param1 == 85) {
-                  var6_int = this.field_I.length();
+                  var6_int = this.typedPrefix.length();
                   if (var6_int <= 0) {
                     return true;
                   }
-                  this.field_I = this.field_I.substring(0, var6_int - 1);
+                  this.typedPrefix = this.typedPrefix.substring(0, var6_int - 1);
                   return true;
                 }
                 decompiledFrameRemainder0 = !(32 > param2);
                 if ((decompiledFrameRemainder0) &&
                   (decompiledFrameRemainder0 = !(param2 >= 128))) {
-                  var6 = this.field_I + param2;
+                  var6 = this.typedPrefix + param2;
                   this.a(true, var6);
                   return true;
                 }
               }
               if (decompiledFrameRemainder0) {
-                if (!this.l(param3 + 23395)) {
-                  this.m(0);
+                if (!this.isExpanded(param3 + 23395)) {
+                  this.openDropdown(0);
                 }
-                var6_intLifetime1 = this.field_Q.field_S.field_w / this.field_O.field_Z;
+                var6_intLifetime1 = this.dropdownViewport.field_S.height / this.optionList.rowHeight;
                 if (105 != param1) {
-                  this.field_O.field_T = this.field_O.field_T - var6_intLifetime1;
+                  this.optionList.selectedIndex = this.optionList.selectedIndex - var6_intLifetime1;
                 } else {
-                  this.field_O.field_T = this.field_O.field_T + var6_intLifetime1;
+                  this.optionList.selectedIndex = this.optionList.selectedIndex + var6_intLifetime1;
                 }
-                if (0 > this.field_O.field_T) {
-                  this.field_O.field_T = 0;
+                if (0 > this.optionList.selectedIndex) {
+                  this.optionList.selectedIndex = 0;
                 }
-                if (var5_int <= this.field_O.field_T) {
-                  this.field_O.field_T = -1 + var5_int;
+                if (var5_int <= this.optionList.selectedIndex) {
+                  this.optionList.selectedIndex = -1 + var5_int;
                 }
-                this.n(param3 ^ -107796053);
+                this.ensureSelectionVisible(param3 ^ -107796053);
                 return true;
               }
             }
             if (decompiledFrameRemainder0) {
-              if (!this.l(11180)) {
-                this.m(0);
+              if (!this.isExpanded(11180)) {
+                this.openDropdown(0);
               }
               if (param1 != 99) {
-                this.field_O.field_T = this.field_O.field_T - 1;
+                this.optionList.selectedIndex = this.optionList.selectedIndex - 1;
               } else {
-                this.field_O.field_T = this.field_O.field_T + 1;
+                this.optionList.selectedIndex = this.optionList.selectedIndex + 1;
               }
-              if (this.field_O.field_T < 0) {
-                this.field_O.field_T = 0;
+              if (this.optionList.selectedIndex < 0) {
+                this.optionList.selectedIndex = 0;
               }
-              if (this.field_O.field_T >= var5_int) {
-                this.field_O.field_T = var5_int - 1;
+              if (this.optionList.selectedIndex >= var5_int) {
+                this.optionList.selectedIndex = var5_int - 1;
               }
-              this.n(107805154);
+              this.ensureSelectionVisible(107805154);
               return true;
             }
           }
           if (param3 != -12215) {
-            var8 = (kb) null;
-            this.a((kb) null, -8, 'd', 65);
+            var8 = (Widget) null;
+            this.a((Widget) null, -8, 'd', 65);
           }
           if (param1 != 80) {
             stackIn_60_0 = super.a(param0, param1, param2, -12215);
             return stackIn_60_0;
           }
-          this.k(param3 + 12094);
+          this.closeDropdown(param3 + 12094);
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -478,7 +478,7 @@ final class gh extends tj implements he {
         }
     }
 
-    private final int a(int param0, String param1) {
+    private final int findOptionPrefix(int startIndex, String prefix) {
         int var3_int = 0;
         RuntimeException var3 = null;
         String var4 = null;
@@ -491,10 +491,10 @@ final class gh extends tj implements he {
         RuntimeException decompiledCaughtException = null;
         var5 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          param1 = param1.toLowerCase();
-          for (var3_int = param0; this.field_O.field_W.length > var3_int; var3_int++) {
-            var4 = this.field_O.field_W[var3_int].toString().toLowerCase();
-            if (var4.startsWith(param1)) {
+          prefix = prefix.toLowerCase();
+          for (var3_int = startIndex; this.optionList.options.length > var3_int; var3_int++) {
+            var4 = this.optionList.options[var3_int].toString().toLowerCase();
+            if (var4.startsWith(prefix)) {
               stackIn_6_0 = var3_int;
               return stackIn_6_0;
             }
@@ -505,8 +505,8 @@ final class gh extends tj implements he {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
           stackIn_12_0 = var3;
-          stackIn_12_1 = new StringBuilder().append("gh.K(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_12_1 = new StringBuilder().append("gh.K(").append(startIndex).append(',');
+          if (prefix == null) {
             stackIn_13_2 = "null";
           } else {
             stackIn_13_2 = "{...}";
@@ -522,13 +522,13 @@ final class gh extends tj implements he {
         if (param0 != 21384) {
           return (String) null;
         }
-        if (this.l(11180) &&
-          this.field_Q.field_t &&
-          -1 != this.field_O.field_O) {
-          return this.field_O.field_W[this.field_O.field_O].toString();
+        if (this.isExpanded(11180) &&
+          this.dropdownViewport.field_t &&
+          -1 != this.optionList.hoveredIndex) {
+          return this.optionList.options[this.optionList.hoveredIndex].toString();
         }
-        if (this.field_O.j(-6508) != null) {
-          return this.field_O.j(-6508).toString();
+        if (this.optionList.getSelectedOption(-6508) != null) {
+          return this.optionList.getSelectedOption(-6508).toString();
         }
         return super.h(param0 + 0);
     }
@@ -597,42 +597,42 @@ final class gh extends tj implements he {
         }
     }
 
-    private final void m(int param0) {
-        int var2 = this.field_O.a((byte) -126);
+    private final void openDropdown(int obfuscationGuard) {
+        int var2 = this.optionList.a((byte) -126);
         int var3 = var2;
         int var4 = 0;
-        if (this.field_G < var3) {
-          var3 = this.field_G;
+        if (this.maximumDropdownHeight < var3) {
+          var3 = this.maximumDropdownHeight;
           var4 = 1;
         }
-        this.a(var3 + this.field_J, this.field_p, (byte) 50, this.field_B, this.field_l);
-        this.field_O.a(0, this.field_l, param0, param0 ^ 8192, var2);
-        this.field_Q = new ai(0, 0, 0, 0, new fc(), this.field_O, (kh) null);
+        this.a(var3 + this.collapsedHeight, this.y, (byte) 50, this.x, this.width);
+        this.optionList.setBounds(0, this.width, obfuscationGuard, obfuscationGuard ^ 8192, var2);
+        this.dropdownViewport = new ai(0, 0, 0, 0, new fc(), this.optionList, (WidgetPainter) null);
         if (var4 != 0) {
-          this.field_Q.a((byte) 118, true, lw.n(param0 ^ 0));
+          this.dropdownViewport.a((byte) 118, true, lw.n(obfuscationGuard ^ 0));
         }
-        this.field_Q.a(0, this.field_l, this.field_J, param0 + 8192, this.field_w - this.field_J);
-        this.field_H = true;
-        this.a((byte) 10, (kb) (this.field_Q));
-        this.n(107805154);
+        this.dropdownViewport.setBounds(0, this.width, this.collapsedHeight, obfuscationGuard + 8192, this.height - this.collapsedHeight);
+        this.expanded = true;
+        this.a((byte) 10, (Widget) (this.dropdownViewport));
+        this.ensureSelectionVisible(107805154);
     }
 
     final void f(int param0) {
         this.field_F = false;
         super.f(param0 + 0);
         if (param0 != 1) {
-          this.field_G = -4;
+          this.maximumDropdownHeight = -4;
         }
     }
 
-    final void a(int param0, int param1, int param2, int param3, int param4) {
+    final void setBounds(int x, int width, int y, int obfuscationGuard, int height) {
         int discarded$0 = 0;
-        this.field_J = param4;
-        if (param3 != 8192) {
+        this.collapsedHeight = height;
+        if (obfuscationGuard != 8192) {
           String var7 = (String) null;
-          discarded$0 = this.a(20, (String) null);
+          discarded$0 = this.findOptionPrefix(20, (String) null);
         }
-        this.a(param4, param2, (byte) 107, param0, param1);
+        this.a(height, y, (byte) 107, x, width);
     }
 
     static {

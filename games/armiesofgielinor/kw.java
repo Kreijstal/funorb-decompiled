@@ -10,7 +10,7 @@ final class kw extends fw {
     static int[] field_M;
     static int campaignPacketWord0;
 
-    final boolean a(int param0, kb param1) {
+    final boolean a(int param0, Widget param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
@@ -35,13 +35,13 @@ final class kw extends fw {
         }
     }
 
-    final void a(int param0, int param1, int param2, kb param3) {
+    final void a(int param0, int param1, int param2, Widget param3) {
         try {
           this.field_L = this.field_L + 1;
           super.a(param0 ^ 0, param1, param2, param3);
           if (param0 != 32722) {
-            kb var6 = (kb) null;
-            this.a(107, (kb) null);
+            Widget var6 = (Widget) null;
+            this.a(107, (Widget) null);
           }
         } catch (RuntimeException runtimeException) {
           throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "kw.P(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
@@ -87,8 +87,8 @@ final class kw extends fw {
         if (param3 != 0) {
           return;
         }
-        var5 = this.field_B + (param0 + (this.field_l >> 1));
-        var6 = this.field_p + param1 + (this.field_w >> 1);
+        var5 = this.x + (param0 + (this.width >> 1));
+        var6 = this.y + param1 + (this.height >> 1);
         if (param2 <= -82) {
           var8 = this.field_O.a(false);
           if (ad.field_K != var8 &&

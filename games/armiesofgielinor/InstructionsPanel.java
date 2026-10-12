@@ -2387,7 +2387,7 @@ final class InstructionsPanel {
               es.a(-90, 1)) {
               var6_intLifetime1 = ByteStorage.field_e.readUnsignedByte(param0 + 53);
               ByteStorage.field_e.position = 0;
-              gh.field_P = null;
+              DropdownSelector.field_P = null;
               nm.field_o = var6_intLifetime1;
               if (var6_intLifetime1 != 0 &&
                 var6_intLifetime1 != 1) {

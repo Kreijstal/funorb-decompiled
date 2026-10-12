@@ -146,7 +146,7 @@ final class j {
           vl.battleHintMessages = new String[6];
           vl.battleHintMessages[3] = jj.field_f;
           vl.battleHintMessages[0] = DeployAction.field_C;
-          vl.battleHintMessages[4] = pp.field_Y;
+          vl.battleHintMessages[4] = DropdownOptionList.field_Y;
           vl.battleHintMessages[2] = qt.field_a;
           vl.battleHintMessages[1] = bk.field_c;
           vl.battleHintMessages[5] = fa.field_g;
@@ -404,7 +404,7 @@ final class j {
               if (SpellCastAction.field_s) {
                 ManaEvent.a((byte) 69, param3);
               } else {
-                gs.a(param3, -8006);
+                DropdownArrowPainter.a(param3, -8006);
               }
             }
             vf.a(1, true, param3, no.field_K);

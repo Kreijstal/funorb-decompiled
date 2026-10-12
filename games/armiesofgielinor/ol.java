@@ -10,7 +10,7 @@ final class ol extends lu {
     static String field_x;
     static boolean field_C;
 
-    final String d(int param0, kb param1) {
+    final String d(int param0, Widget param1) {
         RuntimeException var3 = null;
         String stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;

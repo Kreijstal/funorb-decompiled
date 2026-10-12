@@ -12,7 +12,7 @@ final class ws extends fw {
     int field_M;
     static String field_T;
 
-    final boolean a(int param0, int param1, int param2, int param3, kb param4, int param5, int param6) {
+    final boolean a(int param0, int param1, int param2, int param3, Widget param4, int param5, int param6) {
         RuntimeException stackIn_21_0 = null;
         StringBuilder stackIn_21_1 = null;
         String stackIn_22_2 = null;
@@ -31,8 +31,8 @@ final class ws extends fw {
             field_O = 36;
             return false;
           }
-          var8_int = param0 + (-this.field_B + (-param1 - this.field_S));
-          var9 = param5 - this.field_M + (-this.field_p - param2);
+          var8_int = param0 + (-this.x + (-param1 - this.field_S));
+          var9 = param5 - this.field_M + (-this.y - param2);
           if (var8_int * var8_int + var9 * var9 < this.field_Q * this.field_Q) {
             var10 = Math.atan2((double)var9, (double)var8_int) - BattleCharacter.field_b;
             if (!(0.0 > var10)) {

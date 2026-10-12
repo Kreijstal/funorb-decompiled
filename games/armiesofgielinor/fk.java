@@ -1,11 +1,11 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class fk implements kh {
+final class fk implements WidgetPainter {
     static String field_a;
     static String field_g;
     static String field_f;
-    private gh field_c;
+    private DropdownSelector field_c;
     static int field_b;
     static int[][] matchupDamagePercent;
     static String field_e;
@@ -143,7 +143,7 @@ final class fk implements kh {
         }
     }
 
-    fk(gh param0) {
+    fk(DropdownSelector param0) {
         try {
           this.field_c = param0;
         } catch (RuntimeException runtimeException) {
@@ -151,7 +151,7 @@ final class fk implements kh {
         }
     }
 
-    public final void a(kb param0, int param1, int param2, boolean param3, int param4) {
+    public final void paintWidget(Widget widget, int originX, int obfuscationGuard, boolean renderFlag, int originY) {
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
         String stackIn_14_2 = null;
@@ -164,25 +164,25 @@ final class fk implements kh {
         int var10 = 0;
         String var11 = null;
         try {
-          if (param2 > -79) {
+          if (obfuscationGuard > -79) {
             var11 = (String) null;
             fk.a((byte) -28, (java.applet.Applet) null, (String) null);
           }
-          var6_int = param1 + param0.field_B;
-          var7 = param4 + param0.field_p;
-          StateChangeEvent.a(param0.field_l, var6_int, param0.field_w, -127, var7);
-          if (param0.a(false)) {
-            na.c(-4 + param0.field_l, 2 + var6_int, -67, param0.field_w - 4, 2 + var7);
+          var6_int = originX + widget.x;
+          var7 = originY + widget.y;
+          StateChangeEvent.a(widget.width, var6_int, widget.height, -127, var7);
+          if (widget.a(false)) {
+            na.c(-4 + widget.width, 2 + var6_int, -67, widget.height - 4, 2 + var7);
           }
-          SoftwareRaster.f(var6_int, var7, var6_int + param0.field_l - 2, param0.field_w + var7);
-          var8 = this.field_c.field_O.j(-6508);
+          SoftwareRaster.f(var6_int, var7, var6_int + widget.width - 2, widget.height + var7);
+          var8 = this.field_c.optionList.getSelectedOption(-6508);
           if (var8 != null) {
             var9 = var8.toString();
-            this.field_c.field_K.b(var9, 2 + var6_int, -1 + var7 + (param0.field_w + this.field_c.field_K.field_H >> 1), 10000536, -1);
+            this.field_c.font.b(var9, 2 + var6_int, -1 + var7 + (widget.height + this.field_c.font.field_H >> 1), 10000536, -1);
             if (this.field_c.a(false) &&
-              var9.startsWith(this.field_c.field_I)) {
-              var10 = this.field_c.field_K.a(this.field_c.field_I);
-              SoftwareRaster.b(var6_int + 2, 2 + var7, var10, -4 + param0.field_w, 2188450, 100);
+              var9.startsWith(this.field_c.typedPrefix)) {
+              var10 = this.field_c.font.a(this.field_c.typedPrefix);
+              SoftwareRaster.b(var6_int + 2, 2 + var7, var10, -4 + widget.height, 2188450, 100);
             }
           }
           SoftwareRaster.a();
@@ -192,12 +192,12 @@ final class fk implements kh {
           var6 = decompiledCaughtException;
           stackIn_13_0 = var6;
           stackIn_13_1 = new StringBuilder().append("fk.C(");
-          if (param0 == null) {
+          if (widget == null) {
             stackIn_14_2 = "null";
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(originX).append(',').append(obfuscationGuard).append(',').append(renderFlag).append(',').append(originY).append(')').toString());
         }
     }
 

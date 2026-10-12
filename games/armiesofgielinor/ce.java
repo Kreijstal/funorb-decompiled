@@ -16,7 +16,7 @@ final class ce extends tj implements he {
     static int[] turnDurationTicks;
     private fw field_L;
 
-    final boolean a(kb param0, int param1, char param2, int param3) {
+    final boolean a(Widget param0, int param1, char param2, int param3) {
         RuntimeException var5 = null;
         boolean stackIn_6_0 = false;
         boolean stackIn_9_0 = false;
@@ -59,15 +59,15 @@ final class ce extends tj implements he {
     }
 
     final void a(int param0, int param1, byte param2, int param3) {
-        int var5 = param0 + this.field_B;
-        int var6 = this.field_p + param1;
+        int var5 = param0 + this.x;
+        int var6 = this.y + param1;
         if (param2 < -82) {
-          ArmiesOfGielinor.field_J.a(aq.field_a, 20 + var5, var6 + 20, -40 + this.field_l, -50 + this.field_w, 16777215, -1, 1, 0, ArmiesOfGielinor.field_J.field_H);
+          ArmiesOfGielinor.field_J.a(aq.field_a, 20 + var5, var6 + 20, -40 + this.width, -50 + this.height, 16777215, -1, 1, 0, ArmiesOfGielinor.field_J.field_H);
           super.a(param0, param1, (byte) -107, param3);
           return;
         }
         field_F = (RgbSprite[]) null;
-        ArmiesOfGielinor.field_J.a(aq.field_a, 20 + var5, var6 + 20, -40 + this.field_l, -50 + this.field_w, 16777215, -1, 1, 0, ArmiesOfGielinor.field_J.field_H);
+        ArmiesOfGielinor.field_J.a(aq.field_a, 20 + var5, var6 + 20, -40 + this.width, -50 + this.height, 16777215, -1, 1, 0, ArmiesOfGielinor.field_J.field_H);
         super.a(param0, param1, (byte) -107, param3);
     }
 
@@ -90,28 +90,28 @@ final class ce extends tj implements he {
     }
 
     public ce() {
-        super(0, 0, 476, 225, (kh) null);
+        super(0, 0, 476, 225, (WidgetPainter) null);
         this.field_L = new fw(li.field_p, (qo) null);
         this.field_G = new fw(pt.field_Y, (qo) null);
         this.field_E = new fw(pi.field_O, (qo) null);
         nu var1 = new nu();
-        this.field_L.field_k = (kh) ((Object) var1);
-        this.field_G.field_k = (kh) ((Object) var1);
-        this.field_E.field_k = (kh) ((Object) var1);
+        this.field_L.painter = (WidgetPainter) ((Object) var1);
+        this.field_G.painter = (WidgetPainter) ((Object) var1);
+        this.field_E.painter = (WidgetPainter) ((Object) var1);
         int var2 = 4;
         int var3 = 326;
         int var4 = -var2 + var3 >> 1;
-        this.field_G.a(this.field_l - var3 >> 1, var4, this.field_w - 48 - var2, 8192, 30);
-        this.field_E.a((-var3 + this.field_l >> 1) + var4 + var2, var4, -var2 + this.field_w - 48, 8192, 30);
-        this.field_L.a(-var3 + this.field_l >> 1, var3, -(2 * var2) + this.field_w - 78, 8192, 30);
+        this.field_G.setBounds(this.width - var3 >> 1, var4, this.height - 48 - var2, 8192, 30);
+        this.field_E.setBounds((-var3 + this.width >> 1) + var4 + var2, var4, -var2 + this.height - 48, 8192, 30);
+        this.field_L.setBounds(-var3 + this.width >> 1, var3, -(2 * var2) + this.height - 78, 8192, 30);
         this.field_G.field_x = (qo) (this);
         this.field_L.field_x = (qo) (this);
         this.field_E.field_x = (qo) (this);
         this.field_L.field_s = hb.field_b;
         this.field_E.field_s = CombatSandbox.field_e;
-        this.a((byte) 10, (kb) (this.field_G));
-        this.a((byte) 10, (kb) (this.field_L));
-        this.a((byte) 10, (kb) (this.field_E));
+        this.a((byte) 10, (Widget) (this.field_G));
+        this.a((byte) 10, (Widget) (this.field_L));
+        this.a((byte) 10, (Widget) (this.field_E));
     }
 
     public final void a(int param0, int param1, int param2, int param3, fw param4) {

@@ -227,7 +227,7 @@ final class kk {
         return ~GameplayController.field_G == ~nf.field_b.field_fc ? true : false;
     }
 
-    final static int a(int param0, int param1, int param2) {
+    final static int approximateVectorLength(int deltaY, int deltaX, int obfuscationGuard) {
         int stackIn_41_0 = 0;
         int stackIn_45_0 = 0;
         int stackIn_50_0 = 0;
@@ -235,99 +235,99 @@ final class kk {
         int var4;
         int var4Lifetime1;
         int var4Lifetime2;
-        if (param2 != -22967) {
+        if (obfuscationGuard != -22967) {
           field_e = (String) null;
         }
-        var4 = param1 >> 31;
-        param1 = param1 + var4 ^ var4;
-        var4Lifetime1 = param0 >> 31;
-        param0 = param0 + var4Lifetime1 ^ var4Lifetime1;
+        var4 = deltaX >> 31;
+        deltaX = deltaX + var4 ^ var4;
+        var4Lifetime1 = deltaY >> 31;
+        deltaY = deltaY + var4Lifetime1 ^ var4Lifetime1;
         var3 = 0;
-        if (param0 > param1) {
-          var4Lifetime2 = param1;
-          param1 = param0;
-          param0 = var4Lifetime2;
+        if (deltaY > deltaX) {
+          var4Lifetime2 = deltaX;
+          deltaX = deltaY;
+          deltaY = var4Lifetime2;
         }
-        if (param1 >= 32768) {
-          if (1073741824 <= param1) {
+        if (deltaX >= 32768) {
+          if (1073741824 <= deltaX) {
             var3 += 16;
-            param1 = param1 >> 16;
+            deltaX = deltaX >> 16;
           }
-          if (4194304 <= param1) {
-            param1 = param1 >> 8;
+          if (4194304 <= deltaX) {
+            deltaX = deltaX >> 8;
             var3 += 8;
           }
-          if (param1 >= 262144) {
-            param1 = param1 >> 4;
+          if (deltaX >= 262144) {
+            deltaX = deltaX >> 4;
             var3 += 4;
           }
-          if (param1 >= 65536) {
+          if (deltaX >= 65536) {
             var3 += 2;
-            param1 = param1 >> 2;
+            deltaX = deltaX >> 2;
           }
-          if (param1 >= 32768) {
-            param1 = param1 >> 1;
+          if (deltaX >= 32768) {
+            deltaX = deltaX >> 1;
             var3++;
           }
-          param0 = param0 >> var3;
+          deltaY = deltaY >> var3;
         }
-        if (param0 << 5 < param1) {
-          return param1 << var3;
+        if (deltaY << 5 < deltaX) {
+          return deltaX << var3;
         }
-        param1 = param0 * param0 + param1 * param1;
-        if (65536 > param1) {
-          if (param1 < 256) {
-            if (0 > param1) {
+        deltaX = deltaY * deltaY + deltaX * deltaX;
+        if (65536 > deltaX) {
+          if (deltaX < 256) {
+            if (0 > deltaX) {
               return -1;
             }
-            return td.field_Xb[param1] >> 12;
+            return td.field_Xb[deltaX] >> 12;
           }
-          if (param1 < 4096) {
-            if (param1 >= 1024) {
-              return td.field_Xb[param1 >> 4] >> 10;
+          if (deltaX < 4096) {
+            if (deltaX >= 1024) {
+              return td.field_Xb[deltaX >> 4] >> 10;
             }
-            return td.field_Xb[param1 >> 2] >> 11;
+            return td.field_Xb[deltaX >> 2] >> 11;
           }
-          if (16384 <= param1) {
-            return td.field_Xb[param1 >> 8] >> 8;
+          if (16384 <= deltaX) {
+            return td.field_Xb[deltaX >> 8] >> 8;
           }
-          return td.field_Xb[param1 >> 6] >> 9;
+          return td.field_Xb[deltaX >> 6] >> 9;
         }
-        if (param1 < 16777216) {
-          if (1048576 > param1) {
-            if (param1 < 262144) {
-              return td.field_Xb[param1 >> 10] >> 7;
+        if (deltaX < 16777216) {
+          if (1048576 > deltaX) {
+            if (deltaX < 262144) {
+              return td.field_Xb[deltaX >> 10] >> 7;
             }
-            return td.field_Xb[param1 >> 12] >> 6;
+            return td.field_Xb[deltaX >> 12] >> 6;
           }
-          if (param1 < 4194304) {
-            return td.field_Xb[param1 >> 14] >> 5;
+          if (deltaX < 4194304) {
+            return td.field_Xb[deltaX >> 14] >> 5;
           }
-          return td.field_Xb[param1 >> 16] >> 4;
+          return td.field_Xb[deltaX >> 16] >> 4;
         }
-        if (param1 >= 268435456) {
-          if (1073741824 <= param1) {
-            return td.field_Xb[param1 >> 24] << var3;
+        if (deltaX >= 268435456) {
+          if (1073741824 <= deltaX) {
+            return td.field_Xb[deltaX >> 24] << var3;
           }
           if (var3 >= 1) {
-            stackIn_50_0 = td.field_Xb[param1 >> 22] << -1 + var3;
+            stackIn_50_0 = td.field_Xb[deltaX >> 22] << -1 + var3;
           } else {
-            stackIn_50_0 = td.field_Xb[param1 >> 22] >> -var3 + 1;
+            stackIn_50_0 = td.field_Xb[deltaX >> 22] >> -var3 + 1;
           }
           return stackIn_50_0;
         }
-        if (67108864 > param1) {
+        if (67108864 > deltaX) {
           if (3 <= var3) {
-            stackIn_45_0 = td.field_Xb[param1 >> 18] << -3 + var3;
+            stackIn_45_0 = td.field_Xb[deltaX >> 18] << -3 + var3;
           } else {
-            stackIn_45_0 = td.field_Xb[param1 >> 18] >> 3 - var3;
+            stackIn_45_0 = td.field_Xb[deltaX >> 18] >> 3 - var3;
           }
           return stackIn_45_0;
         }
         if (var3 >= 2) {
-          stackIn_41_0 = td.field_Xb[param1 >> 20] << var3 - 2;
+          stackIn_41_0 = td.field_Xb[deltaX >> 20] << var3 - 2;
         } else {
-          stackIn_41_0 = td.field_Xb[param1 >> 20] >> 2 - var3;
+          stackIn_41_0 = td.field_Xb[deltaX >> 20] >> 2 - var3;
         }
         return stackIn_41_0;
     }

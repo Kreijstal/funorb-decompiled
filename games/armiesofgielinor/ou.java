@@ -351,7 +351,7 @@ final class ou {
                   var20 = param0.field_f[var18];
                   var21 = param0.field_x[var18];
                   ArmiesOfGielinor.field_I[var18] = var12 * var20 + (var19 * var9 + var21 * var15) >> 16;
-                  kb.field_m[var18] = var16 * var21 + var10 * var19 + var20 * var13 >> 16;
+                  Widget.field_m[var18] = var16 * var21 + var10 * var19 + var20 * var13 >> 16;
                   rj.field_Q[var18] = var14 * var20 + (var11 * var19 + var17 * var21) >> 16;
                   var18++;
                   break scanLoop1;
@@ -438,7 +438,7 @@ final class ou {
                 var20 = param0.field_f[var18];
                 var21 = param0.field_x[var18];
                 ArmiesOfGielinor.field_I[var18] = var12 * var20 + (var19 * var9 + var21 * var15) >> 16;
-                kb.field_m[var18] = var16 * var21 + var10 * var19 + var20 * var13 >> 16;
+                Widget.field_m[var18] = var16 * var21 + var10 * var19 + var20 * var13 >> 16;
                 rj.field_Q[var18] = var14 * var20 + (var11 * var19 + var17 * var21) >> 16;
                 var18++;
               } while (var30 == 0);

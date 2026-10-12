@@ -12,12 +12,12 @@ final class jh {
     static String field_e;
     static String field_g;
 
-    final static int a(int param0, int param1) {
-        param0 = param0 & 8191;
-        if (param1 > param0) {
-          return param0 >= 2048 ? hk.field_Zb[4096 - param0] : hk.field_Zb[param0];
+    final static int sine16(int angle, int halfTurnBoundary) {
+        angle = angle & 8191;
+        if (halfTurnBoundary > angle) {
+          return angle >= 2048 ? hk.quarterSine16[4096 - angle] : hk.quarterSine16[angle];
         }
-        return param0 >= 6144 ? -hk.field_Zb[-param0 + 8192] : -hk.field_Zb[param0 - 4096];
+        return angle >= 6144 ? -hk.quarterSine16[-angle + 8192] : -hk.quarterSine16[angle - 4096];
     }
 
     public static void a(int param0) {

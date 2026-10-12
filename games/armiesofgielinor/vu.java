@@ -14,10 +14,10 @@ final class vu extends fw {
         super.a(param0, param1, param2, param3);
     }
 
-    private vu(String param0, kh param1, qo param2) {
+    private vu(String param0, WidgetPainter param1, qo param2) {
         super(param0, param1, param2);
         try {
-          this.field_k = t.field_c.field_i;
+          this.painter = t.field_c.field_i;
         } catch (RuntimeException runtimeException) {
           throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "vu.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
@@ -52,7 +52,7 @@ final class vu extends fw {
     private vu(String param0, qo param1) {
         this(param0, t.field_c.field_j, param1);
         try {
-          this.field_k = t.field_c.field_i;
+          this.painter = t.field_c.field_i;
         } catch (RuntimeException runtimeException) {
           throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "vu.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

@@ -163,7 +163,7 @@ final class nv extends hs implements he {
         }
     }
 
-    final boolean a(kb param0, int param1, char param2, int param3) {
+    final boolean a(Widget param0, int param1, char param2, int param3) {
         RuntimeException stackIn_49_0 = null;
         StringBuilder stackIn_49_1 = null;
         String stackIn_50_2 = null;
@@ -242,7 +242,7 @@ final class nv extends hs implements he {
         }
     }
 
-    nv(int param0, int param1, int param2, int param3, kh param4, kh param5, kh param6, int param7, int param8, int param9, int param10, boolean param11, boolean param12, int param13, int param14) {
+    nv(int param0, int param1, int param2, int param3, WidgetPainter param4, WidgetPainter param5, WidgetPainter param6, int param7, int param8, int param9, int param10, boolean param11, boolean param12, int param13, int param14) {
         super(param0, param1, param2, param3, param4);
         wc dupTemp$0 = null;
         fw dupTemp$1 = null;
@@ -267,13 +267,13 @@ final class nv extends hs implements he {
         this.field_R = 8192;
         this.field_S = 8192;
         try {
-          this.field_C = new kb[6];
-          dupTemp$0 = new wc(param0, param1, param7, param8, (kh) null, (qo) null, new fw(0, 0, param7, param8, param6, (qo) null), false, false);
+          this.field_C = new Widget[6];
+          dupTemp$0 = new wc(param0, param1, param7, param8, (WidgetPainter) null, (qo) null, new fw(0, 0, param7, param8, param6, (qo) null), false, false);
           this.field_O = dupTemp$0;
-          this.field_C[0] = (kb) ((Object) dupTemp$0);
+          this.field_C[0] = (Widget) ((Object) dupTemp$0);
           dupTemp$1 = new fw(param0, param1, param7, param8, param5, (qo) null);
           this.field_P = dupTemp$1;
-          this.field_C[1] = (kb) ((Object) dupTemp$1);
+          this.field_C[1] = (Widget) ((Object) dupTemp$1);
           stackIn_4_1 = (param12);
           this.field_M = stackIn_4_1;
           this.field_X = param9;
@@ -282,7 +282,7 @@ final class nv extends hs implements he {
           this.field_V = stackIn_7_1;
           this.e(-86, param13);
           this.a((byte) -123, param14);
-          this.a(param0, param2, param1, 8192, param3);
+          this.setBounds(param0, param2, param1, 8192, param3);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -312,15 +312,15 @@ final class nv extends hs implements he {
 
     private final void n(int param0) {
         int var3 = 0;
-        int var2 = this.field_Z == null ? this.field_P.field_p : this.field_Z.field_p + this.field_Z.field_w;
+        int var2 = this.field_Z == null ? this.field_P.y : this.field_Z.y + this.field_Z.height;
         if (param0 == 16695) {
-          var3 = this.field_ab != null ? -this.field_O.field_w + this.field_ab.field_p : -this.field_O.field_w + this.field_P.field_p + this.field_P.field_w;
-          this.field_O.field_p = var2 + ((-var2 + var3) * this.field_W >> 16);
+          var3 = this.field_ab != null ? -this.field_O.height + this.field_ab.y : -this.field_O.height + this.field_P.y + this.field_P.height;
+          this.field_O.y = var2 + ((-var2 + var3) * this.field_W >> 16);
           return;
         }
     }
 
-    final boolean a(int param0, kb param1) {
+    final boolean a(int param0, Widget param1) {
         wc var3 = null;
         RuntimeException var3_ref = null;
         RuntimeException stackIn_11_0 = null;
@@ -333,7 +333,7 @@ final class nv extends hs implements he {
           }
           var3 = this.field_O;
           if (var3 != null &&
-            ((kb) ((Object) var3)).a(param0 ^ 0, param1)) {
+            ((Widget) ((Object) var3)).a(param0 ^ 0, param1)) {
             return true;
           }
           return false;
@@ -413,7 +413,7 @@ final class nv extends hs implements he {
         this.m(1681504464);
     }
 
-    final void a(int param0, int param1, int param2, kb param3) {
+    final void a(int param0, int param1, int param2, Widget param3) {
         RuntimeException stackIn_41_0 = null;
         StringBuilder stackIn_41_1 = null;
         String stackIn_42_2 = null;
@@ -454,8 +454,8 @@ final class nv extends hs implements he {
             this.field_P.field_G == 1) {
             if (this.field_M) {
               if (this.field_V) {
-                var5_intLifetime1 = -this.field_B - param1 + (AiPlanningStrategy.field_d - (this.field_O.field_B + (this.field_O.field_l >> 1)));
-                var6 = -param2 + ko.field_b - (this.field_p + this.field_O.field_p + (this.field_O.field_w >> 1));
+                var5_intLifetime1 = -this.x - param1 + (AiPlanningStrategy.field_d - (this.field_O.x + (this.field_O.width >> 1)));
+                var6 = -param2 + ko.field_b - (this.y + this.field_O.y + (this.field_O.height >> 1));
                 if (Math.abs(var6) > Math.abs(var5_intLifetime1)) {
                   if (0 < var6) {
                     this.d(this.field_R + this.field_W, param0 ^ 32722);
@@ -470,7 +470,7 @@ final class nv extends hs implements he {
                   }
                 }
               } else {
-                if ((this.field_O.field_w >> 1) + (param2 + this.field_O.field_p) >= ko.field_b) {
+                if ((this.field_O.height >> 1) + (param2 + this.field_O.y) >= ko.field_b) {
                   this.d(-this.field_R + this.field_W, param0 ^ 32722);
                 } else {
                   this.d(this.field_R + this.field_W, 0);
@@ -478,7 +478,7 @@ final class nv extends hs implements he {
               }
             } else {
               if (this.field_V) {
-                if (param1 + (this.field_O.field_B + (this.field_O.field_l >> 1)) >= AiPlanningStrategy.field_d) {
+                if (param1 + (this.field_O.x + (this.field_O.width >> 1)) >= AiPlanningStrategy.field_d) {
                   this.a(this.field_T - this.field_S, (byte) 84);
                 } else {
                   this.a(this.field_T + this.field_S, (byte) 110);
@@ -743,20 +743,20 @@ final class nv extends hs implements he {
         if (!param0) {
           return -2;
         }
-        return (this.field_O.field_w << 16) / this.field_P.field_w;
+        return (this.field_O.height << 16) / this.field_P.height;
     }
 
     final void a(int param0, byte param1, int param2) {
         int var4 = 0;
         if (param0 <= param2) {
-          this.field_O.a(this.field_O.field_B, this.field_P.field_l, this.field_O.field_p, 8192, this.field_O.field_w);
+          this.field_O.setBounds(this.field_O.x, this.field_P.width, this.field_O.y, 8192, this.field_O.height);
           this.a((byte) 11, false);
         } else {
-          var4 = this.field_P.field_l * param2 / param0;
+          var4 = this.field_P.width * param2 / param0;
           if (var4 < this.field_X) {
             var4 = this.field_X;
           }
-          this.field_O.a(this.field_O.field_B, var4, this.field_O.field_p, 8192, this.field_O.field_w);
+          this.field_O.setBounds(this.field_O.x, var4, this.field_O.y, 8192, this.field_O.height);
           this.a((byte) 11, true);
         }
         if (param1 == 124) {
@@ -766,10 +766,10 @@ final class nv extends hs implements he {
     }
 
     private final void k(int param0) {
-        int var2 = null == this.field_U ? this.field_P.field_B : this.field_U.field_l + this.field_U.field_B;
-        int var3 = null == this.field_Y ? -this.field_O.field_l + (this.field_P.field_l + this.field_P.field_B) : -this.field_O.field_l + this.field_Y.field_B;
+        int var2 = null == this.field_U ? this.field_P.x : this.field_U.width + this.field_U.x;
+        int var3 = null == this.field_Y ? -this.field_O.width + (this.field_P.width + this.field_P.x) : -this.field_O.width + this.field_Y.x;
         if (param0 >= 96) {
-          this.e(116, var3 > var2 ? (-var2 + this.field_O.field_B << 16) / (-var2 + var3) : 0);
+          this.e(116, var3 > var2 ? (-var2 + this.field_O.x << 16) / (-var2 + var3) : 0);
           return;
         }
     }
@@ -777,14 +777,14 @@ final class nv extends hs implements he {
     final void b(int param0, int param1, int param2) {
         int var4 = 0;
         if (param2 <= param0) {
-          this.field_O.a(this.field_O.field_B, this.field_O.field_l, this.field_O.field_p, 8192, this.field_P.field_w);
+          this.field_O.setBounds(this.field_O.x, this.field_O.width, this.field_O.y, 8192, this.field_P.height);
           this.b((byte) 124, false);
         } else {
-          var4 = param0 * this.field_P.field_w / param2;
+          var4 = param0 * this.field_P.height / param2;
           if (this.field_L > var4) {
             var4 = this.field_L;
           }
-          this.field_O.a(this.field_O.field_B, this.field_O.field_l, this.field_O.field_p, 8192, var4);
+          this.field_O.setBounds(this.field_O.x, this.field_O.width, this.field_O.y, 8192, var4);
           this.b((byte) 127, true);
         }
         if (param1 == -13127) {
@@ -795,10 +795,10 @@ final class nv extends hs implements he {
 
     private final void j(int param0) {
         int var3 = 0;
-        int var2 = null != this.field_Z ? this.field_Z.field_p + this.field_Z.field_w : this.field_P.field_p;
+        int var2 = null != this.field_Z ? this.field_Z.y + this.field_Z.height : this.field_P.y;
         if (param0 == 0) {
-          var3 = this.field_ab != null ? -this.field_O.field_w + this.field_ab.field_p : this.field_P.field_p - (-this.field_P.field_w + this.field_O.field_w);
-          this.a((byte) -123, var2 >= var3 ? 0 : (-var2 + this.field_O.field_p << 16) / (-var2 + var3));
+          var3 = this.field_ab != null ? -this.field_O.height + this.field_ab.y : this.field_P.y - (-this.field_P.height + this.field_O.height);
+          this.a((byte) -123, var2 >= var3 ? 0 : (-var2 + this.field_O.y << 16) / (-var2 + var3));
           return;
         }
     }
@@ -809,84 +809,84 @@ final class nv extends hs implements he {
           return;
         }
         if (this.field_U == null) {
-          this.field_P.field_B = 0;
+          this.field_P.x = 0;
         } else {
-          this.field_U.field_B = 0;
-          this.field_U.field_p = this.field_w - this.field_U.field_w >> 1;
-          this.field_P.field_B = this.field_U.field_l + this.field_U.field_B;
+          this.field_U.x = 0;
+          this.field_U.y = this.height - this.field_U.height >> 1;
+          this.field_P.x = this.field_U.width + this.field_U.x;
         }
         if (null == this.field_Y) {
-          this.field_P.field_l = -this.field_P.field_B + this.field_l;
+          this.field_P.width = -this.field_P.x + this.width;
           this.m(1681504464);
           if (null == this.field_Z) {
-            this.field_P.field_p = 0;
+            this.field_P.y = 0;
           } else {
-            this.field_Z.field_p = 0;
-            this.field_Z.field_B = this.field_l - this.field_Z.field_l >> 1;
-            this.field_P.field_p = this.field_Z.field_p + this.field_Z.field_w;
+            this.field_Z.y = 0;
+            this.field_Z.x = this.width - this.field_Z.width >> 1;
+            this.field_P.y = this.field_Z.y + this.field_Z.height;
           }
           if (this.field_ab == null) {
-            this.field_P.field_w = this.field_w - this.field_P.field_p;
+            this.field_P.height = this.height - this.field_P.y;
           } else {
-            this.field_ab.field_B = this.field_l - this.field_ab.field_l >> 1;
-            this.field_ab.field_p = this.field_w - this.field_ab.field_w;
-            this.field_P.field_w = -this.field_ab.field_w - this.field_P.field_p + this.field_w;
+            this.field_ab.x = this.width - this.field_ab.width >> 1;
+            this.field_ab.y = this.height - this.field_ab.height;
+            this.field_P.height = -this.field_ab.height - this.field_P.y + this.height;
           }
           this.n(16695);
           if (!this.field_M) {
-            this.field_O.field_w = this.field_P.field_w;
-            this.field_O.field_p = 0;
+            this.field_O.height = this.field_P.height;
+            this.field_O.y = 0;
           }
           if (!this.field_V) {
-            this.field_O.field_B = 0;
-            this.field_O.field_l = this.field_P.field_l;
+            this.field_O.x = 0;
+            this.field_O.width = this.field_P.width;
           }
           this.field_O.e(0);
           return;
         }
-        this.field_Y.field_B = -this.field_Y.field_l + this.field_l;
-        this.field_Y.field_p = -this.field_Y.field_w + this.field_w >> 1;
-        this.field_P.field_l = -this.field_P.field_B + (this.field_l - this.field_Y.field_l);
+        this.field_Y.x = -this.field_Y.width + this.width;
+        this.field_Y.y = -this.field_Y.height + this.height >> 1;
+        this.field_P.width = -this.field_P.x + (this.width - this.field_Y.width);
         this.m(1681504464);
         if (null != this.field_Z) {
-          this.field_Z.field_p = 0;
-          this.field_Z.field_B = this.field_l - this.field_Z.field_l >> 1;
-          this.field_P.field_p = this.field_Z.field_p + this.field_Z.field_w;
+          this.field_Z.y = 0;
+          this.field_Z.x = this.width - this.field_Z.width >> 1;
+          this.field_P.y = this.field_Z.y + this.field_Z.height;
           if (this.field_ab == null) {
-            this.field_P.field_w = this.field_w - this.field_P.field_p;
+            this.field_P.height = this.height - this.field_P.y;
           } else {
-            this.field_ab.field_B = this.field_l - this.field_ab.field_l >> 1;
-            this.field_ab.field_p = this.field_w - this.field_ab.field_w;
-            this.field_P.field_w = -this.field_ab.field_w - this.field_P.field_p + this.field_w;
+            this.field_ab.x = this.width - this.field_ab.width >> 1;
+            this.field_ab.y = this.height - this.field_ab.height;
+            this.field_P.height = -this.field_ab.height - this.field_P.y + this.height;
           }
           this.n(16695);
           if (!this.field_M) {
-            this.field_O.field_w = this.field_P.field_w;
-            this.field_O.field_p = 0;
+            this.field_O.height = this.field_P.height;
+            this.field_O.y = 0;
           }
           if (!this.field_V) {
-            this.field_O.field_B = 0;
-            this.field_O.field_l = this.field_P.field_l;
+            this.field_O.x = 0;
+            this.field_O.width = this.field_P.width;
           }
           this.field_O.e(0);
           return;
         }
-        this.field_P.field_p = 0;
+        this.field_P.y = 0;
         if (this.field_ab == null) {
-          this.field_P.field_w = this.field_w - this.field_P.field_p;
+          this.field_P.height = this.height - this.field_P.y;
         } else {
-          this.field_ab.field_B = this.field_l - this.field_ab.field_l >> 1;
-          this.field_ab.field_p = this.field_w - this.field_ab.field_w;
-          this.field_P.field_w = -this.field_ab.field_w - this.field_P.field_p + this.field_w;
+          this.field_ab.x = this.width - this.field_ab.width >> 1;
+          this.field_ab.y = this.height - this.field_ab.height;
+          this.field_P.height = -this.field_ab.height - this.field_P.y + this.height;
         }
         this.n(16695);
         if (!this.field_M) {
-          this.field_O.field_w = this.field_P.field_w;
-          this.field_O.field_p = 0;
+          this.field_O.height = this.field_P.height;
+          this.field_O.y = 0;
         }
         if (!this.field_V) {
-          this.field_O.field_B = 0;
-          this.field_O.field_l = this.field_P.field_l;
+          this.field_O.x = 0;
+          this.field_O.width = this.field_P.width;
         }
         this.field_O.e(0);
     }
@@ -897,15 +897,15 @@ final class nv extends hs implements he {
         int var2Lifetime1;
         int var3Lifetime1;
         if (param0 == 1681504464) {
-          var2 = null == this.field_U ? this.field_P.field_B : this.field_U.field_B + this.field_U.field_l;
-          var3 = null != this.field_Y ? -this.field_O.field_l + this.field_Y.field_B : this.field_P.field_l + this.field_P.field_B - this.field_O.field_l;
-          this.field_O.field_B = var2 + ((-var2 + var3) * this.field_T >> 16);
+          var2 = null == this.field_U ? this.field_P.x : this.field_U.x + this.field_U.width;
+          var3 = null != this.field_Y ? -this.field_O.width + this.field_Y.x : this.field_P.width + this.field_P.x - this.field_O.width;
+          this.field_O.x = var2 + ((-var2 + var3) * this.field_T >> 16);
           return;
         }
         this.field_P = (fw) null;
-        var2Lifetime1 = null == this.field_U ? this.field_P.field_B : this.field_U.field_B + this.field_U.field_l;
-        var3Lifetime1 = null != this.field_Y ? -this.field_O.field_l + this.field_Y.field_B : this.field_P.field_l + this.field_P.field_B - this.field_O.field_l;
-        this.field_O.field_B = var2Lifetime1 + ((-var2Lifetime1 + var3Lifetime1) * this.field_T >> 16);
+        var2Lifetime1 = null == this.field_U ? this.field_P.x : this.field_U.x + this.field_U.width;
+        var3Lifetime1 = null != this.field_Y ? -this.field_O.width + this.field_Y.x : this.field_P.width + this.field_P.x - this.field_O.width;
+        this.field_O.x = var2Lifetime1 + ((-var2Lifetime1 + var3Lifetime1) * this.field_T >> 16);
     }
 
     static {

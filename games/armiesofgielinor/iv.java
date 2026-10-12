@@ -200,8 +200,8 @@ public abstract class iv extends java.applet.Applet implements Runnable, java.aw
           try {
             try {
               if (IntKeyLookup.field_a != null) {
-                gs.field_b = gs.field_b + 1;
-                if (gs.field_b >= 3) {
+                DropdownArrowPainter.field_b = DropdownArrowPainter.field_b + 1;
+                if (DropdownArrowPainter.field_b >= 3) {
                   this.a("alreadyloaded", (byte) -85);
                   return;
                 }
@@ -623,12 +623,12 @@ public abstract class iv extends java.applet.Applet implements Runnable, java.aw
                     }
                   }
                   if (decompiledFrameRemainder0) {
-                    kb.field_A = qc.field_h.a(-125, rd.field_i);
+                    Widget.field_A = qc.field_h.a(-125, rd.field_i);
                     stackIn_102_0 = 0;
                   }
                   var3 = stackIn_102_0;
                   do {
-                    if (!(kb.field_A > var3)) {
+                    if (!(Widget.field_A > var3)) {
                       this.c(-11);
                       MapTile.a(IntPair.field_m, IndexedSpriteBase.field_b, true);
                       break;

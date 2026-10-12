@@ -55,7 +55,7 @@ abstract class wl extends tj {
         if (param1 < 95) {
           field_K = (je) null;
         }
-        this.a(te.field_l - param0 >> 1, param0, ij.field_x - param2 >> 1, 8192, param2);
+        this.setBounds(te.field_l - param0 >> 1, param0, ij.field_x - param2 >> 1, 8192, param2);
     }
 
     public static void f(byte param0) {
@@ -76,24 +76,24 @@ abstract class wl extends tj {
           if (param3 != 0) {
             return;
           }
-          this.b(this.field_B + param0, 1851680193, param1 + this.field_p);
+          this.b(this.x + param0, 1851680193, param1 + this.y);
           super.a(param0, param1, (byte) -121, param3);
           return;
         }
         if (TutorialLayout.field_b == null ||
-          !(this.field_l <= TutorialLayout.field_b.pixelWidth) ||
-          !(TutorialLayout.field_b.pixelHeight >= this.field_w)) {
-          TutorialLayout.field_b = new RgbSprite(this.field_l, this.field_w);
+          !(this.width <= TutorialLayout.field_b.pixelWidth) ||
+          !(TutorialLayout.field_b.pixelHeight >= this.height)) {
+          TutorialLayout.field_b = new RgbSprite(this.width, this.height);
         }
         CombatSandbox.a(TutorialLayout.field_b, 3);
         SoftwareRaster.b();
         this.b(0, 1851680193, 0);
-        super.a(-param0 - this.field_B, -param1 - this.field_p, (byte) -106, param3);
+        super.a(-param0 - this.x, -param1 - this.y, (byte) -106, param3);
         rf.b(-18862);
         if (param2 >= -82) {
           field_J = (String) null;
         }
-        TutorialLayout.field_b.e(this.field_B + param0, this.field_p + param1, this.field_H);
+        TutorialLayout.field_b.e(this.x + param0, this.y + param1, this.field_H);
     }
 
     final static int b(int param0, int param1) {
@@ -144,16 +144,16 @@ abstract class wl extends tj {
         return stackIn_12_0;
     }
 
-    final kb e(byte param0) {
+    final Widget e(byte param0) {
         int discarded$0 = 0;
-        kb var2 = super.e((byte) 66);
+        Widget var2 = super.e((byte) 66);
         if (var2 != null) {
           return var2;
         }
         if (param0 < 24) {
           discarded$0 = this.g((byte) -91);
         }
-        return (kb) (this);
+        return (Widget) (this);
     }
 
     final static void a(int param0, boolean param1) {
@@ -218,7 +218,7 @@ abstract class wl extends tj {
     abstract void b(int param0, int param1, int param2);
 
     wl(gk param0, int param1, int param2) {
-        super(te.field_l - param1 >> 1, ij.field_x - param2 >> 1, param1, param2, (kh) null);
+        super(te.field_l - param1 >> 1, ij.field_x - param2 >> 1, param1, param2, (WidgetPainter) null);
         try {
           this.field_G = param0;
           this.field_L = false;
@@ -240,7 +240,7 @@ abstract class wl extends tj {
           for (var1_intLifetime1 = 0; var1_intLifetime1 < 32; var1_intLifetime1++) {
             CampaignMission.field_r[var1_intLifetime1] = 0L;
           }
-          kb.field_A = 0;
+          Widget.field_A = 0;
         } catch (RuntimeException runtimeException) {
           throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "wl.GA(" + param0 + ')');
         }

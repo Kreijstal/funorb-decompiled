@@ -2236,6 +2236,14 @@
       "renamedSymbol": "F:BattleTerrain.spawnPositions:[I"
     },
     {
+      "symbol": "F:hk.field_Zb:[I",
+      "originalName": "field_Zb",
+      "to": "quarterSine16",
+      "evidence": "hk.java: Literal quarter-wave sine values at 8192 angle units per turn, scaled by 65536.",
+      "confidence": "reviewed",
+      "renamedSymbol": "F:hk.quarterSine16:[I"
+    },
+    {
       "symbol": "F:ie.field_b:[I",
       "originalName": "field_b",
       "to": "memory",
@@ -3676,6 +3684,14 @@
       "renamedSymbol": "M:ResourceArchive.loadPackedGroup(II)V"
     },
     {
+      "symbol": "M:cm.a(III)I",
+      "originalName": "a",
+      "to": "atan2Angle8192",
+      "evidence": "cm.java: Combines axis/quadrant cases with first-quadrant atan lookup to produce signed 8192-unit angles.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:ResourceArchive.atan2Angle8192(III)I"
+    },
+    {
       "symbol": "M:cm.a(IILjava/lang/String;)I",
       "originalName": "a",
       "to": "getFileId",
@@ -3738,6 +3754,14 @@
       "evidence": "cm.java: Reviewed archive index access, case-folded name lookup, group progress or file storage data flow.",
       "confidence": "reviewed",
       "renamedSymbol": "M:ResourceArchive.isValidGroup(IZ)Z"
+    },
+    {
+      "symbol": "M:df.a(II)I",
+      "originalName": "a",
+      "to": "atanFixed16ToAngle8192",
+      "evidence": "df.java: Maps signed 16.16 tangent ratios through the existing quantized atan lookup.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:df.atanFixed16ToAngle8192(II)I"
     },
     {
       "symbol": "M:ee.b(B)V",
@@ -3996,6 +4020,14 @@
       "renamedSymbol": "M:Explosion.advanceExplosion(Z)V"
     },
     {
+      "symbol": "M:jh.a(II)I",
+      "originalName": "a",
+      "to": "sine16",
+      "evidence": "jh.java: Wraps angles modulo 8192 and mirrors quarter-sine values; callers pass the half-turn boundary 4096.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:jh.sine16(II)I"
+    },
+    {
       "symbol": "M:jk.a(IB)I",
       "originalName": "a",
       "to": "get",
@@ -4018,6 +4050,14 @@
       "evidence": "kd.java: Unlinks the secondary intrusive links.",
       "confidence": "reviewed",
       "renamedSymbol": "M:DualNode.unlinkDual(I)V"
+    },
+    {
+      "symbol": "M:kg.a(IB)I",
+      "originalName": "a",
+      "to": "cosine16",
+      "evidence": "kg.java: Wraps angles modulo 8192 and mirrors the quarter-sine lookup to return 16.16 cosine.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:kg.cosine16(IB)I"
     },
     {
       "symbol": "M:kj.a(IB)V",
@@ -4074,6 +4114,14 @@
       "evidence": "kj.java: Rounds readBitPosition up to the next byte for subsequent byte reads.",
       "confidence": "reviewed",
       "renamedSymbol": "M:CipherPacketBuffer.endBitReading(B)V"
+    },
+    {
+      "symbol": "M:kk.a(III)I",
+      "originalName": "a",
+      "to": "approximateVectorLength",
+      "evidence": "kk.java: Computes a table-based approximate vector magnitude with scaling, integer truncation and original overflow behavior.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:kk.approximateVectorLength(III)I"
     },
     {
       "symbol": "M:ln.a([BB)[B",
@@ -4300,6 +4348,14 @@
       "renamedSymbol": "M:DualNodeDeque.removeFirst(I)LDualNode;"
     },
     {
+      "symbol": "M:rb.a(III)I",
+      "originalName": "a",
+      "to": "firstQuadrantAngle8192",
+      "evidence": "rb.java: Reduces nonnegative X/Y by their ratio and mirrors around the quarter-turn angle.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:rb.firstQuadrantAngle8192(III)I"
+    },
+    {
       "symbol": "M:uh.a(B)Lck;",
       "originalName": "a",
       "to": "next",
@@ -4468,6 +4524,30 @@
       "renamedSymbol": "P:ResourceArchive.loadPackedGroup(II)V#1"
     },
     {
+      "symbol": "P:cm.a(III)I#0",
+      "originalName": "param0",
+      "to": "deltaY",
+      "evidence": "cm.java: Combines axis/quadrant cases with first-quadrant atan lookup to produce signed 8192-unit angles.",
+      "confidence": "reviewed",
+      "renamedSymbol": "P:ResourceArchive.atan2Angle8192(III)I#0"
+    },
+    {
+      "symbol": "P:cm.a(III)I#1",
+      "originalName": "param1",
+      "to": "obfuscationGuard",
+      "evidence": "cm.java: Combines axis/quadrant cases with first-quadrant atan lookup to produce signed 8192-unit angles.",
+      "confidence": "reviewed",
+      "renamedSymbol": "P:ResourceArchive.atan2Angle8192(III)I#1"
+    },
+    {
+      "symbol": "P:cm.a(III)I#2",
+      "originalName": "param2",
+      "to": "deltaX",
+      "evidence": "cm.java: Combines axis/quadrant cases with first-quadrant atan lookup to produce signed 8192-unit angles.",
+      "confidence": "reviewed",
+      "renamedSymbol": "P:ResourceArchive.atan2Angle8192(III)I#2"
+    },
+    {
       "symbol": "P:cm.a(IILjava/lang/String;)I#0",
       "originalName": "param0",
       "to": "groupId",
@@ -4594,6 +4674,22 @@
       "evidence": "cm.java: Reviewed archive index access, case-folded name lookup, group progress or file storage data flow.",
       "confidence": "reviewed",
       "renamedSymbol": "P:ResourceArchive.isValidGroup(IZ)Z#1"
+    },
+    {
+      "symbol": "P:df.a(II)I#0",
+      "originalName": "param0",
+      "to": "obfuscationGuard",
+      "evidence": "df.java: Maps signed 16.16 tangent ratios through the existing quantized atan lookup.",
+      "confidence": "reviewed",
+      "renamedSymbol": "P:df.atanFixed16ToAngle8192(II)I#0"
+    },
+    {
+      "symbol": "P:df.a(II)I#1",
+      "originalName": "param1",
+      "to": "tangent16",
+      "evidence": "df.java: Maps signed 16.16 tangent ratios through the existing quantized atan lookup.",
+      "confidence": "reviewed",
+      "renamedSymbol": "P:df.atanFixed16ToAngle8192(II)I#1"
     },
     {
       "symbol": "P:ee.b(B)V#0",
@@ -5100,6 +5196,22 @@
       "renamedSymbol": "P:SentinelCommand.<init>(III)V#2"
     },
     {
+      "symbol": "P:jh.a(II)I#0",
+      "originalName": "param0",
+      "to": "angle",
+      "evidence": "jh.java: Wraps angles modulo 8192 and mirrors quarter-sine values; callers pass the half-turn boundary 4096.",
+      "confidence": "reviewed",
+      "renamedSymbol": "P:jh.sine16(II)I#0"
+    },
+    {
+      "symbol": "P:jh.a(II)I#1",
+      "originalName": "param1",
+      "to": "halfTurnBoundary",
+      "evidence": "jh.java: Wraps angles modulo 8192 and mirrors quarter-sine values; callers pass the half-turn boundary 4096.",
+      "confidence": "reviewed",
+      "renamedSymbol": "P:jh.sine16(II)I#1"
+    },
+    {
       "symbol": "P:jk.<init>([I)V#0",
       "originalName": "param0",
       "to": "keys",
@@ -5170,6 +5282,22 @@
       "evidence": "kd.java: Unlinks the secondary intrusive links.",
       "confidence": "reviewed",
       "renamedSymbol": "P:DualNode.unlinkDual(I)V#0"
+    },
+    {
+      "symbol": "P:kg.a(IB)I#0",
+      "originalName": "param0",
+      "to": "angle",
+      "evidence": "kg.java: Wraps angles modulo 8192 and mirrors the quarter-sine lookup to return 16.16 cosine.",
+      "confidence": "reviewed",
+      "renamedSymbol": "P:kg.cosine16(IB)I#0"
+    },
+    {
+      "symbol": "P:kg.a(IB)I#1",
+      "originalName": "param1",
+      "to": "obfuscationGuard",
+      "evidence": "kg.java: Wraps angles modulo 8192 and mirrors the quarter-sine lookup to return 16.16 cosine.",
+      "confidence": "reviewed",
+      "renamedSymbol": "P:kg.cosine16(IB)I#1"
     },
     {
       "symbol": "P:kj.a(IB)V#0",
@@ -5274,6 +5402,30 @@
       "evidence": "kj.java: Rounds readBitPosition up to the next byte for subsequent byte reads.",
       "confidence": "reviewed",
       "renamedSymbol": "P:CipherPacketBuffer.endBitReading(B)V#0"
+    },
+    {
+      "symbol": "P:kk.a(III)I#0",
+      "originalName": "param0",
+      "to": "deltaY",
+      "evidence": "kk.java: Computes a table-based approximate vector magnitude with scaling, integer truncation and original overflow behavior.",
+      "confidence": "reviewed",
+      "renamedSymbol": "P:kk.approximateVectorLength(III)I#0"
+    },
+    {
+      "symbol": "P:kk.a(III)I#1",
+      "originalName": "param1",
+      "to": "deltaX",
+      "evidence": "kk.java: Computes a table-based approximate vector magnitude with scaling, integer truncation and original overflow behavior.",
+      "confidence": "reviewed",
+      "renamedSymbol": "P:kk.approximateVectorLength(III)I#1"
+    },
+    {
+      "symbol": "P:kk.a(III)I#2",
+      "originalName": "param2",
+      "to": "obfuscationGuard",
+      "evidence": "kk.java: Computes a table-based approximate vector magnitude with scaling, integer truncation and original overflow behavior.",
+      "confidence": "reviewed",
+      "renamedSymbol": "P:kk.approximateVectorLength(III)I#2"
     },
     {
       "symbol": "P:ln.a([BB)[B#0",
@@ -5722,6 +5874,30 @@
       "evidence": "ra.java: Reviewed secondary-link insertion, iteration or unlinking. Clearing these links does not remove primary collection membership.",
       "confidence": "reviewed",
       "renamedSymbol": "P:DualNodeDeque.removeFirst(I)LDualNode;#0"
+    },
+    {
+      "symbol": "P:rb.a(III)I#0",
+      "originalName": "param0",
+      "to": "deltaX",
+      "evidence": "rb.java: Reduces nonnegative X/Y by their ratio and mirrors around the quarter-turn angle.",
+      "confidence": "reviewed",
+      "renamedSymbol": "P:rb.firstQuadrantAngle8192(III)I#0"
+    },
+    {
+      "symbol": "P:rb.a(III)I#1",
+      "originalName": "param1",
+      "to": "obfuscationGuard",
+      "evidence": "rb.java: Reduces nonnegative X/Y by their ratio and mirrors around the quarter-turn angle.",
+      "confidence": "reviewed",
+      "renamedSymbol": "P:rb.firstQuadrantAngle8192(III)I#1"
+    },
+    {
+      "symbol": "P:rb.a(III)I#2",
+      "originalName": "param2",
+      "to": "deltaY",
+      "evidence": "rb.java: Reduces nonnegative X/Y by their ratio and mirrors around the quarter-turn angle.",
+      "confidence": "reviewed",
+      "renamedSymbol": "P:rb.firstQuadrantAngle8192(III)I#2"
     },
     {
       "symbol": "P:uh.<init>(I)V#0",
@@ -26677,9 +26853,9 @@
     },
     {
       "symbol": "F:hk.field_Zb:[I",
-      "renamedSymbol": "F:hk.field_Zb:[I",
+      "renamedSymbol": "F:hk.quarterSine16:[I",
       "originalName": "field_Zb",
-      "renamedName": "field_Zb",
+      "renamedName": "quarterSine16",
       "declaration": {
         "file": "hk.java",
         "start": 695,
@@ -158974,7 +159150,7 @@
     },
     {
       "symbol": "L:kg.a(IB)I#0",
-      "renamedSymbol": "L:kg.a(IB)I#0",
+      "renamedSymbol": "L:kg.cosine16(IB)I#0",
       "originalName": "stackIn_5_0",
       "renamedName": "stackIn_5_0",
       "declaration": {
@@ -158985,7 +159161,7 @@
     },
     {
       "symbol": "L:kg.a(IB)I#1",
-      "renamedSymbol": "L:kg.a(IB)I#1",
+      "renamedSymbol": "L:kg.cosine16(IB)I#1",
       "originalName": "stackIn_9_0",
       "renamedName": "stackIn_9_0",
       "declaration": {
@@ -158996,7 +159172,7 @@
     },
     {
       "symbol": "L:kg.a(IB)I#2",
-      "renamedSymbol": "L:kg.a(IB)I#2",
+      "renamedSymbol": "L:kg.cosine16(IB)I#2",
       "originalName": "stackIn_15_0",
       "renamedName": "stackIn_15_0",
       "declaration": {
@@ -159007,7 +159183,7 @@
     },
     {
       "symbol": "L:kg.a(IB)I#3",
-      "renamedSymbol": "L:kg.a(IB)I#3",
+      "renamedSymbol": "L:kg.cosine16(IB)I#3",
       "originalName": "stackIn_19_0",
       "renamedName": "stackIn_19_0",
       "declaration": {
@@ -160052,7 +160228,7 @@
     },
     {
       "symbol": "L:kk.a(III)I#0",
-      "renamedSymbol": "L:kk.a(III)I#0",
+      "renamedSymbol": "L:kk.approximateVectorLength(III)I#0",
       "originalName": "stackIn_41_0",
       "renamedName": "stackIn_41_0",
       "declaration": {
@@ -160063,7 +160239,7 @@
     },
     {
       "symbol": "L:kk.a(III)I#1",
-      "renamedSymbol": "L:kk.a(III)I#1",
+      "renamedSymbol": "L:kk.approximateVectorLength(III)I#1",
       "originalName": "stackIn_45_0",
       "renamedName": "stackIn_45_0",
       "declaration": {
@@ -160074,7 +160250,7 @@
     },
     {
       "symbol": "L:kk.a(III)I#2",
-      "renamedSymbol": "L:kk.a(III)I#2",
+      "renamedSymbol": "L:kk.approximateVectorLength(III)I#2",
       "originalName": "stackIn_50_0",
       "renamedName": "stackIn_50_0",
       "declaration": {
@@ -160085,7 +160261,7 @@
     },
     {
       "symbol": "L:kk.a(III)I#3",
-      "renamedSymbol": "L:kk.a(III)I#3",
+      "renamedSymbol": "L:kk.approximateVectorLength(III)I#3",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -160096,7 +160272,7 @@
     },
     {
       "symbol": "L:kk.a(III)I#4",
-      "renamedSymbol": "L:kk.a(III)I#4",
+      "renamedSymbol": "L:kk.approximateVectorLength(III)I#4",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -160107,7 +160283,7 @@
     },
     {
       "symbol": "L:kk.a(III)I#5",
-      "renamedSymbol": "L:kk.a(III)I#5",
+      "renamedSymbol": "L:kk.approximateVectorLength(III)I#5",
       "originalName": "var4Lifetime1",
       "renamedName": "var4Lifetime1",
       "declaration": {
@@ -160118,7 +160294,7 @@
     },
     {
       "symbol": "L:kk.a(III)I#6",
-      "renamedSymbol": "L:kk.a(III)I#6",
+      "renamedSymbol": "L:kk.approximateVectorLength(III)I#6",
       "originalName": "var4Lifetime2",
       "renamedName": "var4Lifetime2",
       "declaration": {
@@ -287113,9 +287289,9 @@
     },
     {
       "symbol": "M:cm.a(III)I",
-      "renamedSymbol": "M:ResourceArchive.a(III)I",
+      "renamedSymbol": "M:ResourceArchive.atan2Angle8192(III)I",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "atan2Angle8192",
       "declaration": {
         "file": "cm.java",
         "start": 26316,
@@ -288268,9 +288444,9 @@
     },
     {
       "symbol": "M:df.a(II)I",
-      "renamedSymbol": "M:df.a(II)I",
+      "renamedSymbol": "M:df.atanFixed16ToAngle8192(II)I",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "atanFixed16ToAngle8192",
       "declaration": {
         "file": "df.java",
         "start": 2448,
@@ -297453,9 +297629,9 @@
     },
     {
       "symbol": "M:jh.a(II)I",
-      "renamedSymbol": "M:jh.a(II)I",
+      "renamedSymbol": "M:jh.sine16(II)I",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "sine16",
       "declaration": {
         "file": "jh.java",
         "start": 310,
@@ -298949,9 +299125,9 @@
     },
     {
       "symbol": "M:kg.a(IB)I",
-      "renamedSymbol": "M:kg.a(IB)I",
+      "renamedSymbol": "M:kg.cosine16(IB)I",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "cosine16",
       "declaration": {
         "file": "kg.java",
         "start": 5604,
@@ -299356,9 +299532,9 @@
     },
     {
       "symbol": "M:kk.a(III)I",
-      "renamedSymbol": "M:kk.a(III)I",
+      "renamedSymbol": "M:kk.approximateVectorLength(III)I",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "approximateVectorLength",
       "declaration": {
         "file": "kk.java",
         "start": 7765,
@@ -309256,9 +309432,9 @@
     },
     {
       "symbol": "M:rb.a(III)I",
-      "renamedSymbol": "M:rb.a(III)I",
+      "renamedSymbol": "M:rb.firstQuadrantAngle8192(III)I",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "firstQuadrantAngle8192",
       "declaration": {
         "file": "rb.java",
         "start": 362,
@@ -325426,9 +325602,9 @@
     },
     {
       "symbol": "P:cm.a(III)I#0",
-      "renamedSymbol": "P:ResourceArchive.a(III)I#0",
+      "renamedSymbol": "P:ResourceArchive.atan2Angle8192(III)I#0",
       "originalName": "param0",
-      "renamedName": "param0",
+      "renamedName": "deltaY",
       "declaration": {
         "file": "cm.java",
         "start": 26322,
@@ -325437,9 +325613,9 @@
     },
     {
       "symbol": "P:cm.a(III)I#1",
-      "renamedSymbol": "P:ResourceArchive.a(III)I#1",
+      "renamedSymbol": "P:ResourceArchive.atan2Angle8192(III)I#1",
       "originalName": "param1",
-      "renamedName": "param1",
+      "renamedName": "obfuscationGuard",
       "declaration": {
         "file": "cm.java",
         "start": 26334,
@@ -325448,9 +325624,9 @@
     },
     {
       "symbol": "P:cm.a(III)I#2",
-      "renamedSymbol": "P:ResourceArchive.a(III)I#2",
+      "renamedSymbol": "P:ResourceArchive.atan2Angle8192(III)I#2",
       "originalName": "param2",
-      "renamedName": "param2",
+      "renamedName": "deltaX",
       "declaration": {
         "file": "cm.java",
         "start": 26346,
@@ -328770,9 +328946,9 @@
     },
     {
       "symbol": "P:df.a(II)I#0",
-      "renamedSymbol": "P:df.a(II)I#0",
+      "renamedSymbol": "P:df.atanFixed16ToAngle8192(II)I#0",
       "originalName": "param0",
-      "renamedName": "param0",
+      "renamedName": "obfuscationGuard",
       "declaration": {
         "file": "df.java",
         "start": 2454,
@@ -328781,9 +328957,9 @@
     },
     {
       "symbol": "P:df.a(II)I#1",
-      "renamedSymbol": "P:df.a(II)I#1",
+      "renamedSymbol": "P:df.atanFixed16ToAngle8192(II)I#1",
       "originalName": "param1",
-      "renamedName": "param1",
+      "renamedName": "tangent16",
       "declaration": {
         "file": "df.java",
         "start": 2466,
@@ -353333,9 +353509,9 @@
     },
     {
       "symbol": "P:jh.a(II)I#0",
-      "renamedSymbol": "P:jh.a(II)I#0",
+      "renamedSymbol": "P:jh.sine16(II)I#0",
       "originalName": "param0",
-      "renamedName": "param0",
+      "renamedName": "angle",
       "declaration": {
         "file": "jh.java",
         "start": 316,
@@ -353344,9 +353520,9 @@
     },
     {
       "symbol": "P:jh.a(II)I#1",
-      "renamedSymbol": "P:jh.a(II)I#1",
+      "renamedSymbol": "P:jh.sine16(II)I#1",
       "originalName": "param1",
-      "renamedName": "param1",
+      "renamedName": "halfTurnBoundary",
       "declaration": {
         "file": "jh.java",
         "start": 328,
@@ -356490,9 +356666,9 @@
     },
     {
       "symbol": "P:kg.a(IB)I#0",
-      "renamedSymbol": "P:kg.a(IB)I#0",
+      "renamedSymbol": "P:kg.cosine16(IB)I#0",
       "originalName": "param0",
-      "renamedName": "param0",
+      "renamedName": "angle",
       "declaration": {
         "file": "kg.java",
         "start": 5610,
@@ -356501,9 +356677,9 @@
     },
     {
       "symbol": "P:kg.a(IB)I#1",
-      "renamedSymbol": "P:kg.a(IB)I#1",
+      "renamedSymbol": "P:kg.cosine16(IB)I#1",
       "originalName": "param1",
-      "renamedName": "param1",
+      "renamedName": "obfuscationGuard",
       "declaration": {
         "file": "kg.java",
         "start": 5623,
@@ -357546,9 +357722,9 @@
     },
     {
       "symbol": "P:kk.a(III)I#0",
-      "renamedSymbol": "P:kk.a(III)I#0",
+      "renamedSymbol": "P:kk.approximateVectorLength(III)I#0",
       "originalName": "param0",
-      "renamedName": "param0",
+      "renamedName": "deltaY",
       "declaration": {
         "file": "kk.java",
         "start": 7771,
@@ -357557,9 +357733,9 @@
     },
     {
       "symbol": "P:kk.a(III)I#1",
-      "renamedSymbol": "P:kk.a(III)I#1",
+      "renamedSymbol": "P:kk.approximateVectorLength(III)I#1",
       "originalName": "param1",
-      "renamedName": "param1",
+      "renamedName": "deltaX",
       "declaration": {
         "file": "kk.java",
         "start": 7783,
@@ -357568,9 +357744,9 @@
     },
     {
       "symbol": "P:kk.a(III)I#2",
-      "renamedSymbol": "P:kk.a(III)I#2",
+      "renamedSymbol": "P:kk.approximateVectorLength(III)I#2",
       "originalName": "param2",
-      "renamedName": "param2",
+      "renamedName": "obfuscationGuard",
       "declaration": {
         "file": "kk.java",
         "start": 7795,
@@ -383836,9 +384012,9 @@
     },
     {
       "symbol": "P:rb.a(III)I#0",
-      "renamedSymbol": "P:rb.a(III)I#0",
+      "renamedSymbol": "P:rb.firstQuadrantAngle8192(III)I#0",
       "originalName": "param0",
-      "renamedName": "param0",
+      "renamedName": "deltaX",
       "declaration": {
         "file": "rb.java",
         "start": 368,
@@ -383847,9 +384023,9 @@
     },
     {
       "symbol": "P:rb.a(III)I#1",
-      "renamedSymbol": "P:rb.a(III)I#1",
+      "renamedSymbol": "P:rb.firstQuadrantAngle8192(III)I#1",
       "originalName": "param1",
-      "renamedName": "param1",
+      "renamedName": "obfuscationGuard",
       "declaration": {
         "file": "rb.java",
         "start": 380,
@@ -383858,9 +384034,9 @@
     },
     {
       "symbol": "P:rb.a(III)I#2",
-      "renamedSymbol": "P:rb.a(III)I#2",
+      "renamedSymbol": "P:rb.firstQuadrantAngle8192(III)I#2",
       "originalName": "param2",
-      "renamedName": "param2",
+      "renamedName": "deltaY",
       "declaration": {
         "file": "rb.java",
         "start": 392,
@@ -411014,7 +411190,7 @@
       "original": "bh.java",
       "renamed": "bh.java",
       "inputSha256": "58a0ebcf5633dc7a337af05348caa5c11a4ae6a9ca2df3cc699f3ad34f8a159b",
-      "outputSha256": "d51eb6a699949ef4226249eb483fa6c5e721d58c17eb50cfebdb6f0b12538460",
+      "outputSha256": "4fdbfbeabd336ff927bb642d57e28db8d066c9357ed3df74d86478c14e32d274",
       "edits": [
         {
           "start": 385,
@@ -412060,6 +412236,20 @@
           "renamed": "worldY"
         },
         {
+          "start": 29306,
+          "end": 29307,
+          "symbol": "M:jh.a(II)I",
+          "original": "a",
+          "renamed": "sine16"
+        },
+        {
+          "start": 29568,
+          "end": 29569,
+          "symbol": "M:kg.a(IB)I",
+          "original": "a",
+          "renamed": "cosine16"
+        },
+        {
           "start": 29659,
           "end": 29661,
           "symbol": "C:ie",
@@ -412655,11 +412845,25 @@
           "renamed": "aimAngle"
         },
         {
+          "start": 38341,
+          "end": 38342,
+          "symbol": "M:jh.a(II)I",
+          "original": "a",
+          "renamed": "sine16"
+        },
+        {
           "start": 38350,
           "end": 38357,
           "symbol": "F:je.field_B:I",
           "original": "field_B",
           "renamed": "aimAngle"
+        },
+        {
+          "start": 38574,
+          "end": 38575,
+          "symbol": "M:kg.a(IB)I",
+          "original": "a",
+          "renamed": "cosine16"
         },
         {
           "start": 38583,
@@ -416661,7 +416865,7 @@
       "original": "cm.java",
       "renamed": "ResourceArchive.java",
       "inputSha256": "abe48b32ba14cec768dee7254020675c38853ea52ba69465a20b74d02213424e",
-      "outputSha256": "5de635d6752cd4ca450db2b63d0066b9f67de251a32359308d903f53b88f0c01",
+      "outputSha256": "1901ecaf3aebbf1f4df12b764f4b3119fd940a587081546326604768f8f3a71e",
       "edits": [
         {
           "start": 50,
@@ -418036,11 +418240,186 @@
           "renamed": "ResourceArchive"
         },
         {
+          "start": 26316,
+          "end": 26317,
+          "symbol": "M:cm.a(III)I",
+          "original": "a",
+          "renamed": "atan2Angle8192"
+        },
+        {
+          "start": 26322,
+          "end": 26328,
+          "symbol": "P:cm.a(III)I#0",
+          "original": "param0",
+          "renamed": "deltaY"
+        },
+        {
+          "start": 26334,
+          "end": 26340,
+          "symbol": "P:cm.a(III)I#1",
+          "original": "param1",
+          "renamed": "obfuscationGuard"
+        },
+        {
+          "start": 26346,
+          "end": 26352,
+          "symbol": "P:cm.a(III)I#2",
+          "original": "param2",
+          "renamed": "deltaX"
+        },
+        {
+          "start": 26368,
+          "end": 26374,
+          "symbol": "P:cm.a(III)I#1",
+          "original": "param1",
+          "renamed": "obfuscationGuard"
+        },
+        {
           "start": 26395,
           "end": 26397,
           "symbol": "C:cm",
           "original": "cm",
           "renamed": "ResourceArchive"
+        },
+        {
+          "start": 26430,
+          "end": 26436,
+          "symbol": "P:cm.a(III)I#2",
+          "original": "param2",
+          "renamed": "deltaX"
+        },
+        {
+          "start": 26459,
+          "end": 26465,
+          "symbol": "P:cm.a(III)I#0",
+          "original": "param0",
+          "renamed": "deltaY"
+        },
+        {
+          "start": 26526,
+          "end": 26532,
+          "symbol": "P:cm.a(III)I#0",
+          "original": "param0",
+          "renamed": "deltaY"
+        },
+        {
+          "start": 26623,
+          "end": 26629,
+          "symbol": "P:cm.a(III)I#2",
+          "original": "param2",
+          "renamed": "deltaX"
+        },
+        {
+          "start": 26647,
+          "end": 26653,
+          "symbol": "P:cm.a(III)I#0",
+          "original": "param0",
+          "renamed": "deltaY"
+        },
+        {
+          "start": 26713,
+          "end": 26719,
+          "symbol": "P:cm.a(III)I#0",
+          "original": "param0",
+          "renamed": "deltaY"
+        },
+        {
+          "start": 26749,
+          "end": 26750,
+          "symbol": "M:rb.a(III)I",
+          "original": "a",
+          "renamed": "firstQuadrantAngle8192"
+        },
+        {
+          "start": 26752,
+          "end": 26758,
+          "symbol": "P:cm.a(III)I#2",
+          "original": "param2",
+          "renamed": "deltaX"
+        },
+        {
+          "start": 26767,
+          "end": 26773,
+          "symbol": "P:cm.a(III)I#0",
+          "original": "param0",
+          "renamed": "deltaY"
+        },
+        {
+          "start": 26822,
+          "end": 26823,
+          "symbol": "M:rb.a(III)I",
+          "original": "a",
+          "renamed": "firstQuadrantAngle8192"
+        },
+        {
+          "start": 26825,
+          "end": 26831,
+          "symbol": "P:cm.a(III)I#2",
+          "original": "param2",
+          "renamed": "deltaX"
+        },
+        {
+          "start": 26839,
+          "end": 26845,
+          "symbol": "P:cm.a(III)I#0",
+          "original": "param0",
+          "renamed": "deltaY"
+        },
+        {
+          "start": 26875,
+          "end": 26881,
+          "symbol": "P:cm.a(III)I#0",
+          "original": "param0",
+          "renamed": "deltaY"
+        },
+        {
+          "start": 26927,
+          "end": 26933,
+          "symbol": "P:cm.a(III)I#0",
+          "original": "param0",
+          "renamed": "deltaY"
+        },
+        {
+          "start": 26962,
+          "end": 26963,
+          "symbol": "M:rb.a(III)I",
+          "original": "a",
+          "renamed": "firstQuadrantAngle8192"
+        },
+        {
+          "start": 26964,
+          "end": 26970,
+          "symbol": "P:cm.a(III)I#2",
+          "original": "param2",
+          "renamed": "deltaX"
+        },
+        {
+          "start": 26979,
+          "end": 26985,
+          "symbol": "P:cm.a(III)I#0",
+          "original": "param0",
+          "renamed": "deltaY"
+        },
+        {
+          "start": 27016,
+          "end": 27017,
+          "symbol": "M:rb.a(III)I",
+          "original": "a",
+          "renamed": "firstQuadrantAngle8192"
+        },
+        {
+          "start": 27018,
+          "end": 27024,
+          "symbol": "P:cm.a(III)I#2",
+          "original": "param2",
+          "renamed": "deltaX"
+        },
+        {
+          "start": 27032,
+          "end": 27038,
+          "symbol": "P:cm.a(III)I#0",
+          "original": "param0",
+          "renamed": "deltaY"
         },
         {
           "start": 27065,
@@ -420008,7 +420387,7 @@
       "original": "df.java",
       "renamed": "df.java",
       "inputSha256": "0c0d23eb2b6c09fc9cae75f76d6b397b455bb76d2a97bc0c806de9e3b6742d35",
-      "outputSha256": "c11d9f69f2c8c4481c0e3e309f7dad47aec17dac997303d5b24b8f7a88dc6007",
+      "outputSha256": "8818b705a88fa690e330412acabda3c36ed2963dcc2d26ce0f5e7a2d7eb2aa8a",
       "edits": [
         {
           "start": 937,
@@ -420037,6 +420416,132 @@
           "symbol": "C:fa",
           "original": "fa",
           "renamed": "ArchiveProvider"
+        },
+        {
+          "start": 2448,
+          "end": 2449,
+          "symbol": "M:df.a(II)I",
+          "original": "a",
+          "renamed": "atanFixed16ToAngle8192"
+        },
+        {
+          "start": 2454,
+          "end": 2460,
+          "symbol": "P:df.a(II)I#0",
+          "original": "param0",
+          "renamed": "obfuscationGuard"
+        },
+        {
+          "start": 2466,
+          "end": 2472,
+          "symbol": "P:df.a(II)I#1",
+          "original": "param1",
+          "renamed": "tangent16"
+        },
+        {
+          "start": 2488,
+          "end": 2494,
+          "symbol": "P:df.a(II)I#0",
+          "original": "param0",
+          "renamed": "obfuscationGuard"
+        },
+        {
+          "start": 2556,
+          "end": 2562,
+          "symbol": "P:df.a(II)I#1",
+          "original": "param1",
+          "renamed": "tangent16"
+        },
+        {
+          "start": 2587,
+          "end": 2593,
+          "symbol": "P:df.a(II)I#1",
+          "original": "param1",
+          "renamed": "tangent16"
+        },
+        {
+          "start": 2656,
+          "end": 2662,
+          "symbol": "P:df.a(II)I#1",
+          "original": "param1",
+          "renamed": "tangent16"
+        },
+        {
+          "start": 2709,
+          "end": 2715,
+          "symbol": "P:df.a(II)I#1",
+          "original": "param1",
+          "renamed": "tangent16"
+        },
+        {
+          "start": 2759,
+          "end": 2765,
+          "symbol": "P:df.a(II)I#1",
+          "original": "param1",
+          "renamed": "tangent16"
+        },
+        {
+          "start": 2801,
+          "end": 2807,
+          "symbol": "P:df.a(II)I#1",
+          "original": "param1",
+          "renamed": "tangent16"
+        },
+        {
+          "start": 2868,
+          "end": 2874,
+          "symbol": "P:df.a(II)I#1",
+          "original": "param1",
+          "renamed": "tangent16"
+        },
+        {
+          "start": 2906,
+          "end": 2912,
+          "symbol": "P:df.a(II)I#1",
+          "original": "param1",
+          "renamed": "tangent16"
+        },
+        {
+          "start": 2935,
+          "end": 2941,
+          "symbol": "P:df.a(II)I#1",
+          "original": "param1",
+          "renamed": "tangent16"
+        },
+        {
+          "start": 3002,
+          "end": 3008,
+          "symbol": "P:df.a(II)I#1",
+          "original": "param1",
+          "renamed": "tangent16"
+        },
+        {
+          "start": 3051,
+          "end": 3057,
+          "symbol": "P:df.a(II)I#1",
+          "original": "param1",
+          "renamed": "tangent16"
+        },
+        {
+          "start": 3097,
+          "end": 3103,
+          "symbol": "P:df.a(II)I#1",
+          "original": "param1",
+          "renamed": "tangent16"
+        },
+        {
+          "start": 3137,
+          "end": 3143,
+          "symbol": "P:df.a(II)I#1",
+          "original": "param1",
+          "renamed": "tangent16"
+        },
+        {
+          "start": 3200,
+          "end": 3206,
+          "symbol": "P:df.a(II)I#1",
+          "original": "param1",
+          "renamed": "tangent16"
         }
       ]
     },
@@ -421010,7 +421515,7 @@
       "original": "dn.java",
       "renamed": "dn.java",
       "inputSha256": "b7e6fcd5570b8d217a33915a6d13fc3431e5b41908d6fef9359807b743a71ad1",
-      "outputSha256": "4e55491068b69da763d4f4a1115e87737153f7ff205017f5a6e8623a0bddef88",
+      "outputSha256": "ba5001b298147c312f65eb58ce82adc599c002fd82d4061d949f8e48b4e57a73",
       "edits": [
         {
           "start": 61,
@@ -426683,6 +427188,34 @@
           "renamed": "RgbSprite"
         },
         {
+          "start": 127818,
+          "end": 127819,
+          "symbol": "M:jh.a(II)I",
+          "original": "a",
+          "renamed": "sine16"
+        },
+        {
+          "start": 127855,
+          "end": 127856,
+          "symbol": "M:kg.a(IB)I",
+          "original": "a",
+          "renamed": "cosine16"
+        },
+        {
+          "start": 128012,
+          "end": 128013,
+          "symbol": "M:jh.a(II)I",
+          "original": "a",
+          "renamed": "sine16"
+        },
+        {
+          "start": 128049,
+          "end": 128050,
+          "symbol": "M:kg.a(IB)I",
+          "original": "a",
+          "renamed": "cosine16"
+        },
+        {
           "start": 129551,
           "end": 129553,
           "symbol": "C:wk",
@@ -427533,7 +428066,7 @@
       "original": "ee.java",
       "renamed": "CombatWorld.java",
       "inputSha256": "6bc708ebd080211ebe7caf6c62a17acddc67ea4f0fb707df4446101195ab2f54",
-      "outputSha256": "41e93292bab6b53fcf80a152950c72ff4c3686e816dd6d61da0a2d7403398431",
+      "outputSha256": "c311b9b63a98d3ff6e751ea5ec517626cffcb612b56663fb87b6c830a89d69bf",
       "edits": [
         {
           "start": 50,
@@ -439207,6 +439740,20 @@
           "renamed": "aimAngle"
         },
         {
+          "start": 176311,
+          "end": 176312,
+          "symbol": "M:jh.a(II)I",
+          "original": "a",
+          "renamed": "sine16"
+        },
+        {
+          "start": 176381,
+          "end": 176382,
+          "symbol": "M:kg.a(IB)I",
+          "original": "a",
+          "renamed": "cosine16"
+        },
+        {
           "start": 177024,
           "end": 177031,
           "symbol": "F:je.field_B:I",
@@ -448273,7 +448820,7 @@
       "original": "ff.java",
       "renamed": "ff.java",
       "inputSha256": "c939dd5d605eb9920fb37b5da85aab4c3a975373cbe597b91f2dcbfaa47d37dc",
-      "outputSha256": "fdbe7b2299277371225130cb50bdcfe2a704f039bfe66728f3595f611a18e770",
+      "outputSha256": "af9305a57f73156924ee7c11c269fbd06a951c7c8149fcb9b3367585d3b0d064",
       "edits": [
         {
           "start": 103,
@@ -449263,11 +449810,39 @@
           "renamed": "SoftwareRaster"
         },
         {
+          "start": 50028,
+          "end": 50029,
+          "symbol": "M:kg.a(IB)I",
+          "original": "a",
+          "renamed": "cosine16"
+        },
+        {
+          "start": 50085,
+          "end": 50086,
+          "symbol": "M:jh.a(II)I",
+          "original": "a",
+          "renamed": "sine16"
+        },
+        {
           "start": 50135,
           "end": 50137,
           "symbol": "C:pb",
           "original": "pb",
           "renamed": "SoftwareRaster"
+        },
+        {
+          "start": 50169,
+          "end": 50170,
+          "symbol": "M:kg.a(IB)I",
+          "original": "a",
+          "renamed": "cosine16"
+        },
+        {
+          "start": 50218,
+          "end": 50219,
+          "symbol": "M:jh.a(II)I",
+          "original": "a",
+          "renamed": "sine16"
         },
         {
           "start": 50294,
@@ -449277,11 +449852,39 @@
           "renamed": "SoftwareRaster"
         },
         {
+          "start": 50316,
+          "end": 50317,
+          "symbol": "M:kg.a(IB)I",
+          "original": "a",
+          "renamed": "cosine16"
+        },
+        {
+          "start": 50381,
+          "end": 50382,
+          "symbol": "M:jh.a(II)I",
+          "original": "a",
+          "renamed": "sine16"
+        },
+        {
           "start": 50523,
           "end": 50525,
           "symbol": "C:pb",
           "original": "pb",
           "renamed": "SoftwareRaster"
+        },
+        {
+          "start": 50549,
+          "end": 50550,
+          "symbol": "M:kg.a(IB)I",
+          "original": "a",
+          "renamed": "cosine16"
+        },
+        {
+          "start": 50618,
+          "end": 50619,
+          "symbol": "M:jh.a(II)I",
+          "original": "a",
+          "renamed": "sine16"
         },
         {
           "start": 50871,
@@ -470137,7 +470740,7 @@
       "original": "hk.java",
       "renamed": "hk.java",
       "inputSha256": "530f1c4c599dcdcc6752b7b80959d7278b3f44e337307fd019a72863b2cb0b6f",
-      "outputSha256": "e7313c7f3ae69aab45d6890396938624ebf13a72d136c7a8dea3681e47b52c3b",
+      "outputSha256": "16f69dfcf8e742c8efc6c8abfa13c5512bd597bbb2f5a9e6b56cd9a51f223bfb",
       "edits": [
         {
           "start": 61,
@@ -470238,6 +470841,13 @@
           "renamed": "SceneWidget"
         },
         {
+          "start": 695,
+          "end": 703,
+          "symbol": "F:hk.field_Zb:[I",
+          "original": "field_Zb",
+          "renamed": "quarterSine16"
+        },
+        {
           "start": 709,
           "end": 711,
           "symbol": "C:gh",
@@ -470285,6 +470895,20 @@
           "symbol": "F:SteelSentinels.field_G:I",
           "original": "field_G",
           "renamed": "obfuscationControl"
+        },
+        {
+          "start": 3868,
+          "end": 3876,
+          "symbol": "F:hk.field_Zb:[I",
+          "original": "field_Zb",
+          "renamed": "quarterSine16"
+        },
+        {
+          "start": 4252,
+          "end": 4260,
+          "symbol": "F:hk.field_Zb:[I",
+          "original": "field_Zb",
+          "renamed": "quarterSine16"
         },
         {
           "start": 8200,
@@ -470355,6 +470979,13 @@
           "symbol": "M:ul.a(B)Lck;",
           "original": "a",
           "renamed": "next"
+        },
+        {
+          "start": 10721,
+          "end": 10729,
+          "symbol": "F:hk.field_Zb:[I",
+          "original": "field_Zb",
+          "renamed": "quarterSine16"
         }
       ]
     },
@@ -480524,7 +481155,7 @@
       "original": "jh.java",
       "renamed": "jh.java",
       "inputSha256": "43e4ed5ea703d5d9f5bcc858e2c48f3f1aa90bd79643ec54c684f8427b6c4d28",
-      "outputSha256": "56e1f9bf1e848960702217047177a48c77cb02ddf6738047be5e42eb0ea2c10c",
+      "outputSha256": "b3b69ed76862c928f9086ed462fcb69476094bd6657fdbbb990105ccc0c7532f",
       "edits": [
         {
           "start": 193,
@@ -480532,6 +481163,125 @@
           "symbol": "C:wk",
           "original": "wk",
           "renamed": "RgbSprite"
+        },
+        {
+          "start": 310,
+          "end": 311,
+          "symbol": "M:jh.a(II)I",
+          "original": "a",
+          "renamed": "sine16"
+        },
+        {
+          "start": 316,
+          "end": 322,
+          "symbol": "P:jh.a(II)I#0",
+          "original": "param0",
+          "renamed": "angle"
+        },
+        {
+          "start": 328,
+          "end": 334,
+          "symbol": "P:jh.a(II)I#1",
+          "original": "param1",
+          "renamed": "halfTurnBoundary"
+        },
+        {
+          "start": 346,
+          "end": 352,
+          "symbol": "P:jh.a(II)I#0",
+          "original": "param0",
+          "renamed": "angle"
+        },
+        {
+          "start": 355,
+          "end": 361,
+          "symbol": "P:jh.a(II)I#0",
+          "original": "param0",
+          "renamed": "angle"
+        },
+        {
+          "start": 382,
+          "end": 388,
+          "symbol": "P:jh.a(II)I#1",
+          "original": "param1",
+          "renamed": "halfTurnBoundary"
+        },
+        {
+          "start": 391,
+          "end": 397,
+          "symbol": "P:jh.a(II)I#0",
+          "original": "param0",
+          "renamed": "angle"
+        },
+        {
+          "start": 418,
+          "end": 424,
+          "symbol": "P:jh.a(II)I#0",
+          "original": "param0",
+          "renamed": "angle"
+        },
+        {
+          "start": 438,
+          "end": 446,
+          "symbol": "F:hk.field_Zb:[I",
+          "original": "field_Zb",
+          "renamed": "quarterSine16"
+        },
+        {
+          "start": 454,
+          "end": 460,
+          "symbol": "P:jh.a(II)I#0",
+          "original": "param0",
+          "renamed": "angle"
+        },
+        {
+          "start": 467,
+          "end": 475,
+          "symbol": "F:hk.field_Zb:[I",
+          "original": "field_Zb",
+          "renamed": "quarterSine16"
+        },
+        {
+          "start": 476,
+          "end": 482,
+          "symbol": "P:jh.a(II)I#0",
+          "original": "param0",
+          "renamed": "angle"
+        },
+        {
+          "start": 510,
+          "end": 516,
+          "symbol": "P:jh.a(II)I#0",
+          "original": "param0",
+          "renamed": "angle"
+        },
+        {
+          "start": 531,
+          "end": 539,
+          "symbol": "F:hk.field_Zb:[I",
+          "original": "field_Zb",
+          "renamed": "quarterSine16"
+        },
+        {
+          "start": 541,
+          "end": 547,
+          "symbol": "P:jh.a(II)I#0",
+          "original": "param0",
+          "renamed": "angle"
+        },
+        {
+          "start": 562,
+          "end": 570,
+          "symbol": "F:hk.field_Zb:[I",
+          "original": "field_Zb",
+          "renamed": "quarterSine16"
+        },
+        {
+          "start": 571,
+          "end": 577,
+          "symbol": "P:jh.a(II)I#0",
+          "original": "param0",
+          "renamed": "angle"
         }
       ]
     },
@@ -490932,7 +491682,7 @@
       "original": "kg.java",
       "renamed": "kg.java",
       "inputSha256": "ae491b6eff01bb5d499da8ed6afc48beab5a4996fb7f3b7e6d2570dc2ddc1b30",
-      "outputSha256": "e52ca180192b703e885831316c800cc40c14029f3657550ab09212536bd73059",
+      "outputSha256": "05ed5e819af61a6387b703a614034b65a72709e85d581a63091b2113c039174d",
       "edits": [
         {
           "start": 61,
@@ -490977,6 +491727,13 @@
           "renamed": "SceneWidget"
         },
         {
+          "start": 3159,
+          "end": 3160,
+          "symbol": "M:kg.a(IB)I",
+          "original": "a",
+          "renamed": "cosine16"
+        },
+        {
           "start": 4422,
           "end": 4429,
           "symbol": "F:SteelSentinels.field_G:I",
@@ -490989,6 +491746,202 @@
           "symbol": "C:gh",
           "original": "gh",
           "renamed": "SceneWidget"
+        },
+        {
+          "start": 5604,
+          "end": 5605,
+          "symbol": "M:kg.a(IB)I",
+          "original": "a",
+          "renamed": "cosine16"
+        },
+        {
+          "start": 5610,
+          "end": 5616,
+          "symbol": "P:kg.a(IB)I#0",
+          "original": "param0",
+          "renamed": "angle"
+        },
+        {
+          "start": 5623,
+          "end": 5629,
+          "symbol": "P:kg.a(IB)I#1",
+          "original": "param1",
+          "renamed": "obfuscationGuard"
+        },
+        {
+          "start": 5759,
+          "end": 5765,
+          "symbol": "P:kg.a(IB)I#0",
+          "original": "param0",
+          "renamed": "angle"
+        },
+        {
+          "start": 5768,
+          "end": 5774,
+          "symbol": "P:kg.a(IB)I#0",
+          "original": "param0",
+          "renamed": "angle"
+        },
+        {
+          "start": 5795,
+          "end": 5801,
+          "symbol": "P:kg.a(IB)I#1",
+          "original": "param1",
+          "renamed": "obfuscationGuard"
+        },
+        {
+          "start": 5825,
+          "end": 5831,
+          "symbol": "P:kg.a(IB)I#0",
+          "original": "param0",
+          "renamed": "angle"
+        },
+        {
+          "start": 5865,
+          "end": 5871,
+          "symbol": "P:kg.a(IB)I#0",
+          "original": "param0",
+          "renamed": "angle"
+        },
+        {
+          "start": 5907,
+          "end": 5915,
+          "symbol": "F:hk.field_Zb:[I",
+          "original": "field_Zb",
+          "renamed": "quarterSine16"
+        },
+        {
+          "start": 5923,
+          "end": 5929,
+          "symbol": "P:kg.a(IB)I#0",
+          "original": "param0",
+          "renamed": "angle"
+        },
+        {
+          "start": 5986,
+          "end": 5994,
+          "symbol": "F:hk.field_Zb:[I",
+          "original": "field_Zb",
+          "renamed": "quarterSine16"
+        },
+        {
+          "start": 5995,
+          "end": 6001,
+          "symbol": "P:kg.a(IB)I#0",
+          "original": "param0",
+          "renamed": "angle"
+        },
+        {
+          "start": 6084,
+          "end": 6090,
+          "symbol": "P:kg.a(IB)I#0",
+          "original": "param0",
+          "renamed": "angle"
+        },
+        {
+          "start": 6132,
+          "end": 6140,
+          "symbol": "F:hk.field_Zb:[I",
+          "original": "field_Zb",
+          "renamed": "quarterSine16"
+        },
+        {
+          "start": 6149,
+          "end": 6155,
+          "symbol": "P:kg.a(IB)I#0",
+          "original": "param0",
+          "renamed": "angle"
+        },
+        {
+          "start": 6208,
+          "end": 6216,
+          "symbol": "F:hk.field_Zb:[I",
+          "original": "field_Zb",
+          "renamed": "quarterSine16"
+        },
+        {
+          "start": 6218,
+          "end": 6224,
+          "symbol": "P:kg.a(IB)I#0",
+          "original": "param0",
+          "renamed": "angle"
+        },
+        {
+          "start": 6327,
+          "end": 6333,
+          "symbol": "P:kg.a(IB)I#0",
+          "original": "param0",
+          "renamed": "angle"
+        },
+        {
+          "start": 6365,
+          "end": 6371,
+          "symbol": "P:kg.a(IB)I#0",
+          "original": "param0",
+          "renamed": "angle"
+        },
+        {
+          "start": 6404,
+          "end": 6412,
+          "symbol": "F:hk.field_Zb:[I",
+          "original": "field_Zb",
+          "renamed": "quarterSine16"
+        },
+        {
+          "start": 6420,
+          "end": 6426,
+          "symbol": "P:kg.a(IB)I#0",
+          "original": "param0",
+          "renamed": "angle"
+        },
+        {
+          "start": 6478,
+          "end": 6486,
+          "symbol": "F:hk.field_Zb:[I",
+          "original": "field_Zb",
+          "renamed": "quarterSine16"
+        },
+        {
+          "start": 6487,
+          "end": 6493,
+          "symbol": "P:kg.a(IB)I#0",
+          "original": "param0",
+          "renamed": "angle"
+        },
+        {
+          "start": 6567,
+          "end": 6573,
+          "symbol": "P:kg.a(IB)I#0",
+          "original": "param0",
+          "renamed": "angle"
+        },
+        {
+          "start": 6612,
+          "end": 6620,
+          "symbol": "F:hk.field_Zb:[I",
+          "original": "field_Zb",
+          "renamed": "quarterSine16"
+        },
+        {
+          "start": 6629,
+          "end": 6635,
+          "symbol": "P:kg.a(IB)I#0",
+          "original": "param0",
+          "renamed": "angle"
+        },
+        {
+          "start": 6683,
+          "end": 6691,
+          "symbol": "F:hk.field_Zb:[I",
+          "original": "field_Zb",
+          "renamed": "quarterSine16"
+        },
+        {
+          "start": 6693,
+          "end": 6699,
+          "symbol": "P:kg.a(IB)I#0",
+          "original": "param0",
+          "renamed": "angle"
         },
         {
           "start": 6774,
@@ -492119,7 +493072,7 @@
       "original": "kk.java",
       "renamed": "kk.java",
       "inputSha256": "16ea70ae42f8fbeab2c0938414303b7c5c0d7e0231d8697e022df47649c41349",
-      "outputSha256": "16a21d4dc0f1ccae5ffd80819643bdcda62160888b348c33b5d4def48b2bb20c",
+      "outputSha256": "6ed1db082b0b128d4bd89be2eab73166d4ee674e0f56fcde7fdc69079deff1ba",
       "edits": [
         {
           "start": 172,
@@ -492260,6 +493213,510 @@
           "symbol": "C:nb",
           "original": "nb",
           "renamed": "GameplayController"
+        },
+        {
+          "start": 7765,
+          "end": 7766,
+          "symbol": "M:kk.a(III)I",
+          "original": "a",
+          "renamed": "approximateVectorLength"
+        },
+        {
+          "start": 7771,
+          "end": 7777,
+          "symbol": "P:kk.a(III)I#0",
+          "original": "param0",
+          "renamed": "deltaY"
+        },
+        {
+          "start": 7783,
+          "end": 7789,
+          "symbol": "P:kk.a(III)I#1",
+          "original": "param1",
+          "renamed": "deltaX"
+        },
+        {
+          "start": 7795,
+          "end": 7801,
+          "symbol": "P:kk.a(III)I#2",
+          "original": "param2",
+          "renamed": "obfuscationGuard"
+        },
+        {
+          "start": 7997,
+          "end": 8003,
+          "symbol": "P:kk.a(III)I#2",
+          "original": "param2",
+          "renamed": "obfuscationGuard"
+        },
+        {
+          "start": 8077,
+          "end": 8083,
+          "symbol": "P:kk.a(III)I#1",
+          "original": "param1",
+          "renamed": "deltaX"
+        },
+        {
+          "start": 8099,
+          "end": 8105,
+          "symbol": "P:kk.a(III)I#1",
+          "original": "param1",
+          "renamed": "deltaX"
+        },
+        {
+          "start": 8108,
+          "end": 8114,
+          "symbol": "P:kk.a(III)I#1",
+          "original": "param1",
+          "renamed": "deltaX"
+        },
+        {
+          "start": 8154,
+          "end": 8160,
+          "symbol": "P:kk.a(III)I#0",
+          "original": "param0",
+          "renamed": "deltaY"
+        },
+        {
+          "start": 8176,
+          "end": 8182,
+          "symbol": "P:kk.a(III)I#0",
+          "original": "param0",
+          "renamed": "deltaY"
+        },
+        {
+          "start": 8185,
+          "end": 8191,
+          "symbol": "P:kk.a(III)I#0",
+          "original": "param0",
+          "renamed": "deltaY"
+        },
+        {
+          "start": 8255,
+          "end": 8261,
+          "symbol": "P:kk.a(III)I#0",
+          "original": "param0",
+          "renamed": "deltaY"
+        },
+        {
+          "start": 8264,
+          "end": 8270,
+          "symbol": "P:kk.a(III)I#1",
+          "original": "param1",
+          "renamed": "deltaX"
+        },
+        {
+          "start": 8300,
+          "end": 8306,
+          "symbol": "P:kk.a(III)I#1",
+          "original": "param1",
+          "renamed": "deltaX"
+        },
+        {
+          "start": 8318,
+          "end": 8324,
+          "symbol": "P:kk.a(III)I#1",
+          "original": "param1",
+          "renamed": "deltaX"
+        },
+        {
+          "start": 8327,
+          "end": 8333,
+          "symbol": "P:kk.a(III)I#0",
+          "original": "param0",
+          "renamed": "deltaY"
+        },
+        {
+          "start": 8345,
+          "end": 8351,
+          "symbol": "P:kk.a(III)I#0",
+          "original": "param0",
+          "renamed": "deltaY"
+        },
+        {
+          "start": 8391,
+          "end": 8397,
+          "symbol": "P:kk.a(III)I#1",
+          "original": "param1",
+          "renamed": "deltaX"
+        },
+        {
+          "start": 8438,
+          "end": 8444,
+          "symbol": "P:kk.a(III)I#1",
+          "original": "param1",
+          "renamed": "deltaX"
+        },
+        {
+          "start": 8484,
+          "end": 8490,
+          "symbol": "P:kk.a(III)I#1",
+          "original": "param1",
+          "renamed": "deltaX"
+        },
+        {
+          "start": 8493,
+          "end": 8499,
+          "symbol": "P:kk.a(III)I#1",
+          "original": "param1",
+          "renamed": "deltaX"
+        },
+        {
+          "start": 8544,
+          "end": 8550,
+          "symbol": "P:kk.a(III)I#1",
+          "original": "param1",
+          "renamed": "deltaX"
+        },
+        {
+          "start": 8566,
+          "end": 8572,
+          "symbol": "P:kk.a(III)I#1",
+          "original": "param1",
+          "renamed": "deltaX"
+        },
+        {
+          "start": 8575,
+          "end": 8581,
+          "symbol": "P:kk.a(III)I#1",
+          "original": "param1",
+          "renamed": "deltaX"
+        },
+        {
+          "start": 8637,
+          "end": 8643,
+          "symbol": "P:kk.a(III)I#1",
+          "original": "param1",
+          "renamed": "deltaX"
+        },
+        {
+          "start": 8669,
+          "end": 8675,
+          "symbol": "P:kk.a(III)I#1",
+          "original": "param1",
+          "renamed": "deltaX"
+        },
+        {
+          "start": 8678,
+          "end": 8684,
+          "symbol": "P:kk.a(III)I#1",
+          "original": "param1",
+          "renamed": "deltaX"
+        },
+        {
+          "start": 8740,
+          "end": 8746,
+          "symbol": "P:kk.a(III)I#1",
+          "original": "param1",
+          "renamed": "deltaX"
+        },
+        {
+          "start": 8794,
+          "end": 8800,
+          "symbol": "P:kk.a(III)I#1",
+          "original": "param1",
+          "renamed": "deltaX"
+        },
+        {
+          "start": 8803,
+          "end": 8809,
+          "symbol": "P:kk.a(III)I#1",
+          "original": "param1",
+          "renamed": "deltaX"
+        },
+        {
+          "start": 8842,
+          "end": 8848,
+          "symbol": "P:kk.a(III)I#1",
+          "original": "param1",
+          "renamed": "deltaX"
+        },
+        {
+          "start": 8873,
+          "end": 8879,
+          "symbol": "P:kk.a(III)I#1",
+          "original": "param1",
+          "renamed": "deltaX"
+        },
+        {
+          "start": 8882,
+          "end": 8888,
+          "symbol": "P:kk.a(III)I#1",
+          "original": "param1",
+          "renamed": "deltaX"
+        },
+        {
+          "start": 8937,
+          "end": 8943,
+          "symbol": "P:kk.a(III)I#0",
+          "original": "param0",
+          "renamed": "deltaY"
+        },
+        {
+          "start": 8946,
+          "end": 8952,
+          "symbol": "P:kk.a(III)I#0",
+          "original": "param0",
+          "renamed": "deltaY"
+        },
+        {
+          "start": 8984,
+          "end": 8990,
+          "symbol": "P:kk.a(III)I#0",
+          "original": "param0",
+          "renamed": "deltaY"
+        },
+        {
+          "start": 8998,
+          "end": 9004,
+          "symbol": "P:kk.a(III)I#1",
+          "original": "param1",
+          "renamed": "deltaX"
+        },
+        {
+          "start": 9025,
+          "end": 9031,
+          "symbol": "P:kk.a(III)I#1",
+          "original": "param1",
+          "renamed": "deltaX"
+        },
+        {
+          "start": 9059,
+          "end": 9065,
+          "symbol": "P:kk.a(III)I#1",
+          "original": "param1",
+          "renamed": "deltaX"
+        },
+        {
+          "start": 9068,
+          "end": 9074,
+          "symbol": "P:kk.a(III)I#0",
+          "original": "param0",
+          "renamed": "deltaY"
+        },
+        {
+          "start": 9077,
+          "end": 9083,
+          "symbol": "P:kk.a(III)I#0",
+          "original": "param0",
+          "renamed": "deltaY"
+        },
+        {
+          "start": 9086,
+          "end": 9092,
+          "symbol": "P:kk.a(III)I#1",
+          "original": "param1",
+          "renamed": "deltaX"
+        },
+        {
+          "start": 9095,
+          "end": 9101,
+          "symbol": "P:kk.a(III)I#1",
+          "original": "param1",
+          "renamed": "deltaX"
+        },
+        {
+          "start": 9123,
+          "end": 9129,
+          "symbol": "P:kk.a(III)I#1",
+          "original": "param1",
+          "renamed": "deltaX"
+        },
+        {
+          "start": 9147,
+          "end": 9153,
+          "symbol": "P:kk.a(III)I#1",
+          "original": "param1",
+          "renamed": "deltaX"
+        },
+        {
+          "start": 9183,
+          "end": 9189,
+          "symbol": "P:kk.a(III)I#1",
+          "original": "param1",
+          "renamed": "deltaX"
+        },
+        {
+          "start": 9263,
+          "end": 9269,
+          "symbol": "P:kk.a(III)I#1",
+          "original": "param1",
+          "renamed": "deltaX"
+        },
+        {
+          "start": 9304,
+          "end": 9310,
+          "symbol": "P:kk.a(III)I#1",
+          "original": "param1",
+          "renamed": "deltaX"
+        },
+        {
+          "start": 9337,
+          "end": 9343,
+          "symbol": "P:kk.a(III)I#1",
+          "original": "param1",
+          "renamed": "deltaX"
+        },
+        {
+          "start": 9388,
+          "end": 9394,
+          "symbol": "P:kk.a(III)I#1",
+          "original": "param1",
+          "renamed": "deltaX"
+        },
+        {
+          "start": 9453,
+          "end": 9459,
+          "symbol": "P:kk.a(III)I#1",
+          "original": "param1",
+          "renamed": "deltaX"
+        },
+        {
+          "start": 9508,
+          "end": 9514,
+          "symbol": "P:kk.a(III)I#1",
+          "original": "param1",
+          "renamed": "deltaX"
+        },
+        {
+          "start": 9549,
+          "end": 9555,
+          "symbol": "P:kk.a(III)I#1",
+          "original": "param1",
+          "renamed": "deltaX"
+        },
+        {
+          "start": 9609,
+          "end": 9615,
+          "symbol": "P:kk.a(III)I#1",
+          "original": "param1",
+          "renamed": "deltaX"
+        },
+        {
+          "start": 9650,
+          "end": 9656,
+          "symbol": "P:kk.a(III)I#1",
+          "original": "param1",
+          "renamed": "deltaX"
+        },
+        {
+          "start": 9695,
+          "end": 9701,
+          "symbol": "P:kk.a(III)I#1",
+          "original": "param1",
+          "renamed": "deltaX"
+        },
+        {
+          "start": 9721,
+          "end": 9727,
+          "symbol": "P:kk.a(III)I#1",
+          "original": "param1",
+          "renamed": "deltaX"
+        },
+        {
+          "start": 9773,
+          "end": 9779,
+          "symbol": "P:kk.a(III)I#1",
+          "original": "param1",
+          "renamed": "deltaX"
+        },
+        {
+          "start": 9838,
+          "end": 9844,
+          "symbol": "P:kk.a(III)I#1",
+          "original": "param1",
+          "renamed": "deltaX"
+        },
+        {
+          "start": 9884,
+          "end": 9890,
+          "symbol": "P:kk.a(III)I#1",
+          "original": "param1",
+          "renamed": "deltaX"
+        },
+        {
+          "start": 9935,
+          "end": 9941,
+          "symbol": "P:kk.a(III)I#1",
+          "original": "param1",
+          "renamed": "deltaX"
+        },
+        {
+          "start": 9996,
+          "end": 10002,
+          "symbol": "P:kk.a(III)I#1",
+          "original": "param1",
+          "renamed": "deltaX"
+        },
+        {
+          "start": 10038,
+          "end": 10044,
+          "symbol": "P:kk.a(III)I#1",
+          "original": "param1",
+          "renamed": "deltaX"
+        },
+        {
+          "start": 10089,
+          "end": 10095,
+          "symbol": "P:kk.a(III)I#1",
+          "original": "param1",
+          "renamed": "deltaX"
+        },
+        {
+          "start": 10130,
+          "end": 10136,
+          "symbol": "P:kk.a(III)I#1",
+          "original": "param1",
+          "renamed": "deltaX"
+        },
+        {
+          "start": 10231,
+          "end": 10237,
+          "symbol": "P:kk.a(III)I#1",
+          "original": "param1",
+          "renamed": "deltaX"
+        },
+        {
+          "start": 10317,
+          "end": 10323,
+          "symbol": "P:kk.a(III)I#1",
+          "original": "param1",
+          "renamed": "deltaX"
+        },
+        {
+          "start": 10421,
+          "end": 10427,
+          "symbol": "P:kk.a(III)I#1",
+          "original": "param1",
+          "renamed": "deltaX"
+        },
+        {
+          "start": 10497,
+          "end": 10503,
+          "symbol": "P:kk.a(III)I#1",
+          "original": "param1",
+          "renamed": "deltaX"
+        },
+        {
+          "start": 10583,
+          "end": 10589,
+          "symbol": "P:kk.a(III)I#1",
+          "original": "param1",
+          "renamed": "deltaX"
+        },
+        {
+          "start": 10725,
+          "end": 10731,
+          "symbol": "P:kk.a(III)I#1",
+          "original": "param1",
+          "renamed": "deltaX"
+        },
+        {
+          "start": 10806,
+          "end": 10812,
+          "symbol": "P:kk.a(III)I#1",
+          "original": "param1",
+          "renamed": "deltaX"
         },
         {
           "start": 10903,
@@ -495710,7 +497167,7 @@
       "original": "mb.java",
       "renamed": "Sentinel.java",
       "inputSha256": "9354ba2747e7a8b0c5811e5312a0ba12fdee193b9ece567e326e4873f358f164",
-      "outputSha256": "dd0e7627cc113a7cc4c943e70013dcce9acbe005617032820c487d2f5be55ef0",
+      "outputSha256": "3d5034e496ceb6d4da456895ae3aafc9b798fb272e73afebabaa0d4111f46fc1",
       "edits": [
         {
           "start": 50,
@@ -500368,11 +501825,25 @@
           "renamed": "worldY"
         },
         {
+          "start": 52610,
+          "end": 52611,
+          "symbol": "M:jh.a(II)I",
+          "original": "a",
+          "renamed": "sine16"
+        },
+        {
           "start": 52618,
           "end": 52625,
           "symbol": "F:nk.field_y:I",
           "original": "field_y",
           "renamed": "rotation"
+        },
+        {
+          "start": 52695,
+          "end": 52696,
+          "symbol": "M:kg.a(IB)I",
+          "original": "a",
+          "renamed": "cosine16"
         },
         {
           "start": 52703,
@@ -505037,11 +506508,25 @@
           "renamed": "simulationTick"
         },
         {
+          "start": 91173,
+          "end": 91174,
+          "symbol": "M:jh.a(II)I",
+          "original": "a",
+          "renamed": "sine16"
+        },
+        {
           "start": 91182,
           "end": 91189,
           "symbol": "F:je.field_B:I",
           "original": "field_B",
           "renamed": "aimAngle"
+        },
+        {
+          "start": 91231,
+          "end": 91232,
+          "symbol": "M:kg.a(IB)I",
+          "original": "a",
+          "renamed": "cosine16"
         },
         {
           "start": 91240,
@@ -511967,6 +513452,13 @@
           "symbol": "C:pb",
           "original": "pb",
           "renamed": "SoftwareRaster"
+        },
+        {
+          "start": 150827,
+          "end": 150828,
+          "symbol": "M:jh.a(II)I",
+          "original": "a",
+          "renamed": "sine16"
         },
         {
           "start": 150840,
@@ -540159,7 +541651,7 @@
       "original": "nk.java",
       "renamed": "ArticulatedPart.java",
       "inputSha256": "443b5792554ee4576af65e4fa6b37030782fdf48f20d3b26ecf9776c387414e5",
-      "outputSha256": "8726dd0afa8bc0a782ee2a92f78a6ea0ebe0eba732ba9eb20744988281ab0e65",
+      "outputSha256": "ec030fda28ad16ee94c199a57c5d982623924eabd2912458b1cd3f732b161ebc",
       "edits": [
         {
           "start": 50,
@@ -540813,6 +542305,20 @@
           "renamed": "instructions"
         },
         {
+          "start": 4075,
+          "end": 4076,
+          "symbol": "M:jh.a(II)I",
+          "original": "a",
+          "renamed": "sine16"
+        },
+        {
+          "start": 4144,
+          "end": 4145,
+          "symbol": "M:kg.a(IB)I",
+          "original": "a",
+          "renamed": "cosine16"
+        },
+        {
           "start": 4232,
           "end": 4239,
           "symbol": "F:nk.field_I:[Lqd;",
@@ -540888,6 +542394,20 @@
           "symbol": "F:qd.field_d:Lnk;",
           "original": "field_d",
           "renamed": "attachedPart"
+        },
+        {
+          "start": 5867,
+          "end": 5868,
+          "symbol": "M:jh.a(II)I",
+          "original": "a",
+          "renamed": "sine16"
+        },
+        {
+          "start": 5959,
+          "end": 5960,
+          "symbol": "M:kg.a(IB)I",
+          "original": "a",
+          "renamed": "cosine16"
         },
         {
           "start": 6023,
@@ -541051,11 +542571,25 @@
           "renamed": "instructions"
         },
         {
+          "start": 7565,
+          "end": 7566,
+          "symbol": "M:jh.a(II)I",
+          "original": "a",
+          "renamed": "sine16"
+        },
+        {
           "start": 7572,
           "end": 7579,
           "symbol": "F:nk.field_I:[Lqd;",
           "original": "field_I",
           "renamed": "instructions"
+        },
+        {
+          "start": 7678,
+          "end": 7679,
+          "symbol": "M:kg.a(IB)I",
+          "original": "a",
+          "renamed": "cosine16"
         },
         {
           "start": 7685,
@@ -541586,6 +543120,20 @@
           "renamed": "instructions"
         },
         {
+          "start": 17564,
+          "end": 17565,
+          "symbol": "M:jh.a(II)I",
+          "original": "a",
+          "renamed": "sine16"
+        },
+        {
+          "start": 17617,
+          "end": 17618,
+          "symbol": "M:kg.a(IB)I",
+          "original": "a",
+          "renamed": "cosine16"
+        },
+        {
           "start": 17704,
           "end": 17711,
           "symbol": "F:nk.field_I:[Lqd;",
@@ -541739,6 +543287,20 @@
           "symbol": "F:nk.field_I:[Lqd;",
           "original": "field_I",
           "renamed": "instructions"
+        },
+        {
+          "start": 20541,
+          "end": 20542,
+          "symbol": "M:jh.a(II)I",
+          "original": "a",
+          "renamed": "sine16"
+        },
+        {
+          "start": 20601,
+          "end": 20602,
+          "symbol": "M:kg.a(IB)I",
+          "original": "a",
+          "renamed": "cosine16"
         },
         {
           "start": 20694,
@@ -541986,11 +543548,25 @@
           "renamed": "attachedPart"
         },
         {
+          "start": 25364,
+          "end": 25365,
+          "symbol": "M:jh.a(II)I",
+          "original": "a",
+          "renamed": "sine16"
+        },
+        {
           "start": 25372,
           "end": 25379,
           "symbol": "F:nk.field_y:I",
           "original": "field_y",
           "renamed": "rotation"
+        },
+        {
+          "start": 25435,
+          "end": 25436,
+          "symbol": "M:kg.a(IB)I",
+          "original": "a",
+          "renamed": "cosine16"
         },
         {
           "start": 25443,
@@ -549031,7 +550607,7 @@
       "original": "pm.java",
       "renamed": "pm.java",
       "inputSha256": "a906ff59e5dfd794fe0be4812b4583d984afaa4517f4b8af1a8a3734d21043a8",
-      "outputSha256": "ca8200d559a93e3b4b8d5d3c10a8163e56cef2054b732a4b1198a9238cf2a031",
+      "outputSha256": "acac56d8c0bfc6ba19cc6c6a62b3633dab3941d6f677d84ca906f696b651d1b3",
       "edits": [
         {
           "start": 278,
@@ -549228,6 +550804,20 @@
           "symbol": "F:SteelSentinels.field_G:I",
           "original": "field_G",
           "renamed": "obfuscationControl"
+        },
+        {
+          "start": 21088,
+          "end": 21089,
+          "symbol": "M:jh.a(II)I",
+          "original": "a",
+          "renamed": "sine16"
+        },
+        {
+          "start": 21146,
+          "end": 21147,
+          "symbol": "M:kg.a(IB)I",
+          "original": "a",
+          "renamed": "cosine16"
         },
         {
           "start": 21435,
@@ -555153,8 +556743,163 @@
       "original": "rb.java",
       "renamed": "rb.java",
       "inputSha256": "b5756c99dc83fc0f2d47206152ac12537531ab6bb5662c5ed22734a79946780a",
-      "outputSha256": "b5756c99dc83fc0f2d47206152ac12537531ab6bb5662c5ed22734a79946780a",
-      "edits": []
+      "outputSha256": "28969519639d1c49a72f8ba2728c7aac4bd263b4d6e04d7b792c6e762f319252",
+      "edits": [
+        {
+          "start": 362,
+          "end": 363,
+          "symbol": "M:rb.a(III)I",
+          "original": "a",
+          "renamed": "firstQuadrantAngle8192"
+        },
+        {
+          "start": 368,
+          "end": 374,
+          "symbol": "P:rb.a(III)I#0",
+          "original": "param0",
+          "renamed": "deltaX"
+        },
+        {
+          "start": 380,
+          "end": 386,
+          "symbol": "P:rb.a(III)I#1",
+          "original": "param1",
+          "renamed": "obfuscationGuard"
+        },
+        {
+          "start": 392,
+          "end": 398,
+          "symbol": "P:rb.a(III)I#2",
+          "original": "param2",
+          "renamed": "deltaY"
+        },
+        {
+          "start": 414,
+          "end": 420,
+          "symbol": "P:rb.a(III)I#1",
+          "original": "param1",
+          "renamed": "obfuscationGuard"
+        },
+        {
+          "start": 445,
+          "end": 446,
+          "symbol": "M:rb.a(III)I",
+          "original": "a",
+          "renamed": "firstQuadrantAngle8192"
+        },
+        {
+          "start": 476,
+          "end": 482,
+          "symbol": "P:rb.a(III)I#0",
+          "original": "param0",
+          "renamed": "deltaX"
+        },
+        {
+          "start": 485,
+          "end": 491,
+          "symbol": "P:rb.a(III)I#2",
+          "original": "param2",
+          "renamed": "deltaY"
+        },
+        {
+          "start": 524,
+          "end": 525,
+          "symbol": "M:df.a(II)I",
+          "original": "a",
+          "renamed": "atanFixed16ToAngle8192"
+        },
+        {
+          "start": 534,
+          "end": 540,
+          "symbol": "P:rb.a(III)I#0",
+          "original": "param0",
+          "renamed": "deltaX"
+        },
+        {
+          "start": 550,
+          "end": 556,
+          "symbol": "P:rb.a(III)I#2",
+          "original": "param2",
+          "renamed": "deltaY"
+        },
+        {
+          "start": 591,
+          "end": 592,
+          "symbol": "M:df.a(II)I",
+          "original": "a",
+          "renamed": "atanFixed16ToAngle8192"
+        },
+        {
+          "start": 601,
+          "end": 607,
+          "symbol": "P:rb.a(III)I#2",
+          "original": "param2",
+          "renamed": "deltaY"
+        },
+        {
+          "start": 617,
+          "end": 623,
+          "symbol": "P:rb.a(III)I#0",
+          "original": "param0",
+          "renamed": "deltaX"
+        },
+        {
+          "start": 648,
+          "end": 654,
+          "symbol": "P:rb.a(III)I#0",
+          "original": "param0",
+          "renamed": "deltaX"
+        },
+        {
+          "start": 657,
+          "end": 663,
+          "symbol": "P:rb.a(III)I#2",
+          "original": "param2",
+          "renamed": "deltaY"
+        },
+        {
+          "start": 694,
+          "end": 695,
+          "symbol": "M:df.a(II)I",
+          "original": "a",
+          "renamed": "atanFixed16ToAngle8192"
+        },
+        {
+          "start": 704,
+          "end": 710,
+          "symbol": "P:rb.a(III)I#0",
+          "original": "param0",
+          "renamed": "deltaX"
+        },
+        {
+          "start": 720,
+          "end": 726,
+          "symbol": "P:rb.a(III)I#2",
+          "original": "param2",
+          "renamed": "deltaY"
+        },
+        {
+          "start": 757,
+          "end": 758,
+          "symbol": "M:df.a(II)I",
+          "original": "a",
+          "renamed": "atanFixed16ToAngle8192"
+        },
+        {
+          "start": 767,
+          "end": 773,
+          "symbol": "P:rb.a(III)I#2",
+          "original": "param2",
+          "renamed": "deltaY"
+        },
+        {
+          "start": 783,
+          "end": 789,
+          "symbol": "P:rb.a(III)I#0",
+          "original": "param0",
+          "renamed": "deltaX"
+        }
+      ]
     },
     {
       "original": "rc.java",
@@ -592908,7 +594653,7 @@
       "original": "wl.java",
       "renamed": "Projectile.java",
       "inputSha256": "eca35aa2e8feeb43b62cf3077c209fd6a6753dbd57ffe18696eced95b701d1ee",
-      "outputSha256": "7093ba1cfdb3d44c1e88ab24db2379128ddc80e56f005a4c0d8c74a7271e32a2",
+      "outputSha256": "1eade53c79444c5e94d8326fa3aecebe6a4b1063e19049dc1be3add09e005d2e",
       "edits": [
         {
           "start": 50,
@@ -596054,6 +597799,13 @@
           "renamed": "velocityX"
         },
         {
+          "start": 38973,
+          "end": 38974,
+          "symbol": "M:jh.a(II)I",
+          "original": "a",
+          "renamed": "sine16"
+        },
+        {
           "start": 38998,
           "end": 39005,
           "symbol": "F:wl.field_B:Lee;",
@@ -596080,6 +597832,13 @@
           "symbol": "F:wl.field_F:I",
           "original": "field_F",
           "renamed": "velocityY"
+        },
+        {
+          "start": 39112,
+          "end": 39113,
+          "symbol": "M:kg.a(IB)I",
+          "original": "a",
+          "renamed": "cosine16"
         },
         {
           "start": 39137,
@@ -596194,6 +597953,13 @@
           "renamed": "velocityX"
         },
         {
+          "start": 40096,
+          "end": 40097,
+          "symbol": "M:jh.a(II)I",
+          "original": "a",
+          "renamed": "sine16"
+        },
+        {
           "start": 40121,
           "end": 40128,
           "symbol": "F:wl.field_B:Lee;",
@@ -596220,6 +597986,13 @@
           "symbol": "F:wl.field_F:I",
           "original": "field_F",
           "renamed": "velocityY"
+        },
+        {
+          "start": 40235,
+          "end": 40236,
+          "symbol": "M:kg.a(IB)I",
+          "original": "a",
+          "renamed": "cosine16"
         },
         {
           "start": 40260,
@@ -597020,6 +598793,13 @@
           "renamed": "velocityX"
         },
         {
+          "start": 45979,
+          "end": 45980,
+          "symbol": "M:jh.a(II)I",
+          "original": "a",
+          "renamed": "sine16"
+        },
+        {
           "start": 46005,
           "end": 46012,
           "symbol": "F:wl.field_B:Lee;",
@@ -597046,6 +598826,13 @@
           "symbol": "F:wl.field_F:I",
           "original": "field_F",
           "renamed": "velocityY"
+        },
+        {
+          "start": 46114,
+          "end": 46115,
+          "symbol": "M:kg.a(IB)I",
+          "original": "a",
+          "renamed": "cosine16"
         },
         {
           "start": 46121,
@@ -597188,6 +598975,13 @@
           "renamed": "velocityX"
         },
         {
+          "start": 46992,
+          "end": 46993,
+          "symbol": "M:jh.a(II)I",
+          "original": "a",
+          "renamed": "sine16"
+        },
+        {
           "start": 46999,
           "end": 47006,
           "symbol": "F:wl.field_B:Lee;",
@@ -597214,6 +599008,13 @@
           "symbol": "F:wl.field_F:I",
           "original": "field_F",
           "renamed": "velocityY"
+        },
+        {
+          "start": 47128,
+          "end": 47129,
+          "symbol": "M:kg.a(IB)I",
+          "original": "a",
+          "renamed": "cosine16"
         },
         {
           "start": 47135,
@@ -598882,6 +600683,13 @@
           "renamed": "ResourceArchive"
         },
         {
+          "start": 63774,
+          "end": 63775,
+          "symbol": "M:cm.a(III)I",
+          "original": "a",
+          "renamed": "atan2Angle8192"
+        },
+        {
           "start": 63776,
           "end": 63780,
           "symbol": "L:wl.a(BI)Z#3",
@@ -598908,6 +600716,13 @@
           "symbol": "C:cm",
           "original": "cm",
           "renamed": "ResourceArchive"
+        },
+        {
+          "start": 63820,
+          "end": 63821,
+          "symbol": "M:cm.a(III)I",
+          "original": "a",
+          "renamed": "atan2Angle8192"
         },
         {
           "start": 63827,
@@ -598950,6 +600765,13 @@
           "symbol": "L:wl.a(BI)Z#8",
           "original": "var9",
           "renamed": "speed"
+        },
+        {
+          "start": 63942,
+          "end": 63943,
+          "symbol": "M:kk.a(III)I",
+          "original": "a",
+          "renamed": "approximateVectorLength"
         },
         {
           "start": 63949,
@@ -599162,6 +600984,13 @@
           "renamed": "velocityX"
         },
         {
+          "start": 64798,
+          "end": 64799,
+          "symbol": "M:kg.a(IB)I",
+          "original": "a",
+          "renamed": "cosine16"
+        },
+        {
           "start": 64800,
           "end": 64808,
           "symbol": "L:wl.a(BI)Z#6",
@@ -599181,6 +601010,13 @@
           "symbol": "F:wl.field_F:I",
           "original": "field_F",
           "renamed": "velocityY"
+        },
+        {
+          "start": 64867,
+          "end": 64868,
+          "symbol": "M:jh.a(II)I",
+          "original": "a",
+          "renamed": "sine16"
         },
         {
           "start": 64869,
@@ -601753,6 +603589,13 @@
           "renamed": "velocityX"
         },
         {
+          "start": 80404,
+          "end": 80405,
+          "symbol": "M:jh.a(II)I",
+          "original": "a",
+          "renamed": "sine16"
+        },
+        {
           "start": 80447,
           "end": 80454,
           "symbol": "F:wl.field_B:Lee;",
@@ -601807,6 +603650,13 @@
           "symbol": "F:wl.field_F:I",
           "original": "field_F",
           "renamed": "velocityY"
+        },
+        {
+          "start": 80678,
+          "end": 80679,
+          "symbol": "M:kg.a(IB)I",
+          "original": "a",
+          "renamed": "cosine16"
         },
         {
           "start": 80721,
@@ -606195,10 +608045,10 @@
       "commit": "1655ca853d0d4027018f3efcdc37be76ab7895f4",
       "subdirectory": "games/steelsentinels"
     },
-    "rulesSha256": "f27d32f70fb075a6118b8a580c86cdbaa27c9497f6aa7780692e3d79983bb8aa",
+    "rulesSha256": "d145cfb21ef03a0e13d76b1df728ea38a6dfb027de924a9460c2c2aae825d206",
     "generatorSha256": "c87ba8382ad34d3c3c57003e11e034e8eb16f2f20a91985e9179c7253427aab7",
     "inputTreeSha256": "2713f45b1bf8186a4a2e4c283f1b1cca876716cb17a00318e3d87ceaa13e5399",
-    "outputTreeSha256": "66a26c531daaa56b494611897026c35411ceac471f5ca5ca6ecb3c0e8e8ed5b4",
+    "outputTreeSha256": "b937189f3a4d494ba1c5cc87bdfc692f10c9c46b51223b9a501b30fd913cab3f",
     "jdk": "openjdk version \"11.0.32.1\" 2026-08-18\nOpenJDK Runtime Environment (build 11.0.32.1+1)\nOpenJDK 64-Bit Server VM (build 11.0.32.1+1, mixed mode)",
     "classpath": [
       {
@@ -606218,7 +608068,7 @@
       "labelEdits": 1234,
       "runtimeEquivalenceVerified": false,
       "gameplayCore": {
-        "checks": 23162,
+        "checks": 40109,
         "rawNamedIdentical": true,
         "independentExpectations": true,
         "headlessClientBoundary": true,
@@ -606226,7 +608076,9 @@
         "particleMotionFixtures": true,
         "cyclicParticleReuseFixtures": true,
         "guidedLaunchFixtures": true,
-        "traceSha256": "a41b78bca69c3633098c2c7269d5b55572cf6020791563c3ad8b1a86236ae69b"
+        "guidedSteeringFixtures": true,
+        "trigonometricFixtures": true,
+        "traceSha256": "c5c643ed6a7880aca7a6e204cbf2df1b92fd3b4e7b00253385cdb54baae22fde"
       }
     }
   },

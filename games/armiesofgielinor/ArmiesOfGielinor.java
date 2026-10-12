@@ -147,7 +147,7 @@ public final class ArmiesOfGielinor extends wf {
                       }
                     }
                     this.d(0, true);
-                    gh.f((byte) -67);
+                    DropdownSelector.f((byte) -67);
                   }
                 }
               } else {
@@ -165,11 +165,11 @@ public final class ArmiesOfGielinor extends wf {
                 }
                 this.d(0, true);
                 if (var11 != 0) {
-                  gh.f((byte) -67);
+                  DropdownSelector.f((byte) -67);
                 }
               }
             } else {
-              gh.f((byte) -67);
+              DropdownSelector.f((byte) -67);
             }
           }
           boolean decompiledFrameCompleted0 = true;
@@ -188,7 +188,7 @@ public final class ArmiesOfGielinor extends wf {
           }
           if (decompiledFrameCompleted0) {
             boolean decompiledNaturalLoopExit0 = false;
-            while (!(decompiledNaturalLoopExit0 = (!gs.a((byte) 42, sh.field_a)))) {
+            while (!(decompiledNaturalLoopExit0 = (!DropdownArrowPainter.a((byte) 42, sh.field_a)))) {
               stackIn_337_0 = nm.field_o;
               stackIn_337_1 = 9;
               if (var11 == 0) {
@@ -1373,14 +1373,14 @@ public final class ArmiesOfGielinor extends wf {
           or.a(false);
           kp.a(2);
           lk.a((byte) 58);
-          kb.c((byte) -124);
+          Widget.c((byte) -124);
           nl.i(-98);
           ju.a(param0 - 51);
           ut.p(0);
           ls.a(-121);
           vq.a((byte) 107);
           sf.h((byte) 58);
-          gh.a(param0 - 11763);
+          DropdownSelector.a(param0 - 11763);
           fw.i(0);
           ob.e((byte) 68);
           tj.d((byte) -89);
@@ -1578,11 +1578,11 @@ public final class ArmiesOfGielinor extends wf {
           jl.a(-125);
           ip.a(param0 ^ 36);
           ts.b(param0 ^ 26972);
-          gs.a((byte) 86);
+          DropdownArrowPainter.a((byte) 86);
           fc.a(param0 ^ 43);
           fk.a(true);
           kq.a(param0 ^ -3);
-          pp.b(false);
+          DropdownOptionList.b(false);
           uj.h(29151);
           vl.b(true);
           kt.g(param0 ^ -55);
@@ -1625,7 +1625,7 @@ public final class ArmiesOfGielinor extends wf {
           do {
             if (!(CorpseConditionMarker.field_u.field_a.length > var5)) {
               lk.a(IntPair.field_m, 22050, var4, (byte) 68, true, (java.awt.Component) ((Object) IndexedSpriteBase.field_b));
-              kb.field_o = new int[7];
+              Widget.field_o = new int[7];
               break;
             }
             CorpseConditionMarker.field_u.field_a[var5] = 256;
@@ -1636,7 +1636,7 @@ public final class ArmiesOfGielinor extends wf {
             stackIn_10_0 = var5;
             stackIn_10_1 = 7;
             if (stackIn_10_0 < stackIn_10_1) {
-              kb.field_o[var5] = 0;
+              Widget.field_o[var5] = 0;
               stackIn_26_0 = ~var5;
               if (var7 == 0) {
                 if (stackIn_26_0 > -5) {
@@ -1645,7 +1645,7 @@ public final class ArmiesOfGielinor extends wf {
                     stackIn_10_0 = ~bw.unitDefinitions[AnimationFrameSet.unitUnlockGroups[var5][var6]][11];
                     stackIn_10_1 = -1;
                     if (stackIn_10_0 == stackIn_10_1) {
-                      kb.field_o[var5] = oe.c(kb.field_o[var5], 1 << var6);
+                      Widget.field_o[var5] = oe.c(Widget.field_o[var5], 1 << var6);
                     }
                     var6++;
                   }
@@ -2170,8 +2170,8 @@ public final class ArmiesOfGielinor extends wf {
           }
           bn.a((byte) -24, 90.0f, SectorCacheStore.field_i);
           this.a(0);
-          rs.field_n = gs.a(var4, gg.field_K, ResourceRequest.field_A, (byte) -53, "");
-          en.field_E = gs.a("basic", iw.field_l, sh.field_j, (byte) -53, "smallfont");
+          rs.field_n = DropdownArrowPainter.a(var4, gg.field_K, ResourceRequest.field_A, (byte) -53, "");
+          en.field_E = DropdownArrowPainter.a("basic", iw.field_l, sh.field_j, (byte) -53, "smallfont");
           TrianglePulse.field_i = it.a("introfont", iw.field_l, sh.field_j, (byte) -87, "basic");
           nr.field_e = TurnEffectEvent.a("runewarsfont", sh.field_j, iw.field_l, "basic", -2088);
           fe.a(nr.field_e);
@@ -2185,7 +2185,7 @@ public final class ArmiesOfGielinor extends wf {
           MapLayout.a("armouricons", -28106, "basic", iw.field_l);
           lb.field_e = MapLayout.a("special_icons", -28106, "basic", iw.field_l);
           TrianglePulse.field_d = GameplayController.a("godspark", (byte) 51, "basic", iw.field_l);
-          gh.field_M = DiskCacheRequest.a("mapbutton", "basic", iw.field_l, false);
+          DropdownSelector.field_M = DiskCacheRequest.a("mapbutton", "basic", iw.field_l, false);
           DiskCacheRequest.a("endturnbutton", "basic", iw.field_l, false);
           ul.field_g = DiskCacheRequest.a("buttonring", "basic", iw.field_l, false);
           e.field_b = ac.a(iw.field_l, "lozenge", (byte) -4, "basic");
@@ -2368,7 +2368,7 @@ public final class ArmiesOfGielinor extends wf {
           jt.field_a = 16;
           sa.a(50, true);
           ar.a(param0 ^ -68, mp.field_Ob);
-          gh.a(128, 8, rs.field_n.field_z, rs.field_n.field_L + rs.field_n.field_z, rs.field_n, io.field_m[0].pixelHeight, 8, 2, 16777215, 240, rs.field_n.field_z, -99, new pn(DisplacedUnitMarker.field_s, nd.field_b, 0, 128, true), 255, new pn(DisplacedUnitMarker.field_s, nd.field_b, 0, 128, true), 320, io.field_m[0].pixelWidth, rs.field_n.field_z + rs.field_n.field_L, new pn(io.field_m, nd.field_b, 0, 224, false), rs.field_n);
+          DropdownSelector.a(128, 8, rs.field_n.field_z, rs.field_n.field_L + rs.field_n.field_z, rs.field_n, io.field_m[0].pixelHeight, 8, 2, 16777215, 240, rs.field_n.field_z, -99, new pn(DisplacedUnitMarker.field_s, nd.field_b, 0, 128, true), 255, new pn(DisplacedUnitMarker.field_s, nd.field_b, 0, 128, true), 320, io.field_m[0].pixelWidth, rs.field_n.field_z + rs.field_n.field_L, new pn(io.field_m, nd.field_b, 0, 224, false), rs.field_n);
           wm.a(320, 128, 240, 16777215, rs.field_n.field_z + rs.field_n.field_L, rs.field_n.field_z, new pn(DisplacedUnitMarker.field_s, nd.field_b, 0, 128, true), 8, (byte) 90, 480, 8, rs.field_n.field_L + rs.field_n.field_z, new pn(DisplacedUnitMarker.field_s, nd.field_b, 0, 128, true), io.field_m[0].pixelHeight, rs.field_n, 2, io.field_m[0].pixelWidth, rs.field_n, 255, rs.field_n.field_z, new pn(io.field_m, nd.field_b, 0, 224, false));
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

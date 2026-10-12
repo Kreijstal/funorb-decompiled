@@ -25,12 +25,12 @@ final class ad extends tj implements he {
         RuntimeException decompiledCaughtException = null;
         try {
           var4 = new fw(param0, param1);
-          var4.field_k = (kh) ((Object) new nu());
-          var5 = this.field_w - 2;
+          var4.painter = (WidgetPainter) ((Object) new nu());
+          var5 = this.height - 2;
           var6 = -98 / ((24 - param2) / 44);
-          this.a(0, this.field_l, 0, 8192, this.field_w + 34);
-          var4.a(7, this.field_l - 14, var5, 8192, 30);
-          this.a((byte) 10, (kb) (var4));
+          this.setBounds(0, this.width, 0, 8192, this.height + 34);
+          var4.setBounds(7, this.width - 14, var5, 8192, 30);
+          this.a((byte) 10, (Widget) (var4));
           stackIn_1_0 = var4;
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -105,7 +105,7 @@ final class ad extends tj implements he {
     }
 
     ad(ro param0, BitmapFont param1, String param2) {
-        super(0, 0, 288, 0, (kh) null);
+        super(0, 0, 288, 0, (WidgetPainter) null);
         int var4_int = 0;
         this.field_E = 0;
         try {
@@ -113,7 +113,7 @@ final class ad extends tj implements he {
           this.field_L = param0;
           this.field_J = param1;
           var4_int = this.field_G != null ? this.field_J.getParagraphHeight(this.field_G, 260, this.field_J.field_H) : 0;
-          this.a(0, 288, 0, 8192, 22 + var4_int);
+          this.setBounds(0, 288, 0, 8192, 22 + var4_int);
         } catch (RuntimeException runtimeException) {
           throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "ad.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
@@ -121,7 +121,7 @@ final class ad extends tj implements he {
 
     final void a(int param0, int param1, byte param2, int param3) {
         super.a(param0, param1, (byte) -123, param3);
-        this.field_J.a(this.field_G, 14 + param0 + this.field_B, this.field_p + param1 + 10, -28 + this.field_l, this.field_w, 16777215, -1, 0, 0, this.field_J.field_H);
+        this.field_J.a(this.field_G, 14 + param0 + this.x, this.y + param1 + 10, -28 + this.width, this.height, 16777215, -1, 0, 0, this.field_J.field_H);
         if (param2 > -82) {
           ad.a((byte) 73);
         }

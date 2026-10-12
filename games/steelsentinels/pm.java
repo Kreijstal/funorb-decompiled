@@ -581,8 +581,8 @@ final class pm extends dl implements fd, ae {
           var5Lifetime1 = nm.field_s[11] >> 8;
           var6Lifetime1 = vn.field_h << 4;
           var7Lifetime1 = 0;
-          var8Lifetime1 = jh.a(var6Lifetime1, 4096) >> 8;
-          var9Lifetime1 = kg.a(var6Lifetime1, (byte) -84) >> 8;
+          var8Lifetime1 = jh.sine16(var6Lifetime1, 4096) >> 8;
+          var9Lifetime1 = kg.cosine16(var6Lifetime1, (byte) -84) >> 8;
           if (-1 != oh.field_f &&
             pi.field_c != -1) {
             var8Lifetime1 = -pi.field_c + 240;

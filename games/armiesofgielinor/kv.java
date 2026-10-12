@@ -34,15 +34,15 @@ final class kv extends tj implements he {
             this.field_E = new fw[var3_int + 1];
             for (var5 = 0; var5 < var3_int; var5++) {
               this.field_E[var5] = new fw(this.field_H[var5], (qo) (this));
-              this.field_E[var5].field_k = (kh) ((Object) var4);
+              this.field_E[var5].painter = (WidgetPainter) ((Object) var4);
               this.field_E[var5].field_s = wl.field_J;
-              this.field_E[var5].a(0, 80, 20 + 16 * var5, 8192, 15);
-              this.a((byte) 10, (kb) (this.field_E[var5]));
+              this.field_E[var5].setBounds(0, 80, 20 + 16 * var5, 8192, 15);
+              this.a((byte) 10, (Widget) (this.field_E[var5]));
             }
             this.field_E[var3_int] = new fw(h.field_h, (qo) (this));
-            this.field_E[var3_int].field_k = (kh) ((Object) var4);
-            this.field_E[var3_int].a(0, param0, var3_int * 16 + 16 + 20, param0 ^ 8292, 15);
-            this.a((byte) 10, (kb) (this.field_E[var3_int]));
+            this.field_E[var3_int].painter = (WidgetPainter) ((Object) var4);
+            this.field_E[var3_int].setBounds(0, param0, var3_int * 16 + 16 + 20, param0 ^ 8292, 15);
+            this.a((byte) 10, (Widget) (this.field_E[var3_int]));
             return;
           }
           this.field_H = null;
@@ -105,7 +105,7 @@ final class kv extends tj implements he {
           kv.b(true);
         }
         if (this.field_H != null) {
-          var5.a(we.field_i, param0 + this.field_B, param1 + this.field_p, this.field_l, 20, 16777215, -1, 0, 0, var5.field_L + var5.field_H);
+          var5.a(we.field_i, param0 + this.x, param1 + this.y, this.width, 20, 16777215, -1, 0, 0, var5.field_L + var5.field_H);
         }
     }
 
@@ -151,7 +151,7 @@ final class kv extends tj implements he {
         }
     }
 
-    final boolean a(kb param0, int param1, char param2, int param3) {
+    final boolean a(Widget param0, int param1, char param2, int param3) {
         RuntimeException var5 = null;
         boolean stackIn_8_0 = false;
         boolean stackIn_12_0 = false;
@@ -190,7 +190,7 @@ final class kv extends tj implements he {
     }
 
     kv(mf param0) {
-        super(0, 0, 0, 0, (kh) null);
+        super(0, 0, 0, 0, (WidgetPainter) null);
         try {
           this.field_G = param0;
         } catch (RuntimeException runtimeException) {

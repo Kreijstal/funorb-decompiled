@@ -13,23 +13,23 @@ final class gk extends nl {
     static String field_P;
 
     public gk() {
-        super(0, 0, te.field_l, ij.field_x, (kh) null, (qo) null);
+        super(0, 0, te.field_l, ij.field_x, (WidgetPainter) null, (qo) null);
         this.field_M = new NodeDeque();
     }
 
     final void a(int param0, int param1, byte param2, int param3) {
         int var7 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
-        if (this.field_k != null) {
-          this.field_k.a((kb) (this), param0, -80, true, param1);
+        if (this.painter != null) {
+          this.painter.paintWidget((Widget) (this), param0, -80, true, param1);
         }
         NodeIterator var5 = new NodeIterator(this.field_M);
         if (param2 > -82) {
           field_I = -21L;
         }
-        kb var6 = (kb) (var5.last(50));
+        Widget var6 = (Widget) (var5.last(50));
         while (var6 != null) {
-          var6.a(this.field_B + param0, this.field_p + param1, (byte) -121, param3);
-          var6 = (kb) (var5.previous((byte) -112));
+          var6.a(this.x + param0, this.y + param1, (byte) -121, param3);
+          var6 = (Widget) (var5.previous((byte) -112));
         }
     }
 
@@ -68,24 +68,24 @@ final class gk extends nl {
 
     final void a(int param0, int param1, byte param2) {
         int var8 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
-        if (param0 == this.field_l &&
-          this.field_w == param1) {
+        if (param0 == this.width &&
+          this.height == param1) {
           return;
         }
-        int var4 = (-this.field_l + param0) / 2;
-        int var5 = (-this.field_w + param1) / 2;
+        int var4 = (-this.width + param0) / 2;
+        int var5 = (-this.height + param1) / 2;
         NodeIterator var6 = new NodeIterator(this.field_M);
         wl var7 = (wl) (var6.first(50));
         if (param2 != -14) {
           this.a(-19, 39, (byte) 87, 16);
         }
         while (var7 != null) {
-          var7.field_p = var7.field_p + var5;
-          var7.field_B = var7.field_B + var4;
+          var7.y = var7.y + var5;
+          var7.x = var7.x + var4;
           var7 = (wl) (var6.next(50));
         }
-        this.field_l = param0;
-        this.field_w = param1;
+        this.width = param0;
+        this.height = param1;
     }
 
     final static void a(int param0, String param1, long param2) {
@@ -125,7 +125,7 @@ final class gk extends nl {
           }
           var3 = (wl) (var2.next(50));
         }
-        this.field_E = (kb) ((Object) this.a((byte) 89));
+        this.field_E = (Widget) ((Object) this.a((byte) 89));
         int var4 = 94 / ((param0 - 30) / 60);
     }
 
@@ -144,7 +144,7 @@ final class gk extends nl {
         }
     }
 
-    final void a(kb param0, int param1) {
+    final void a(Widget param0, int param1) {
         wl var3 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
@@ -158,7 +158,7 @@ final class gk extends nl {
           var3 = (wl) (param0);
           this.field_M.addFirst(750, var3);
           var3.field_L = true;
-          var3.a(11, (kb) (this));
+          var3.a(11, (Widget) (this));
           if (param1 != 0) {
             this.field_M = (NodeDeque) null;
           }
@@ -177,7 +177,7 @@ final class gk extends nl {
         }
     }
 
-    final kb a(int param0) {
+    final Widget a(int param0) {
         int var4 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         NodeIterator var2 = new NodeIterator(this.field_M);
         wl var3 = (wl) (var2.first(50));

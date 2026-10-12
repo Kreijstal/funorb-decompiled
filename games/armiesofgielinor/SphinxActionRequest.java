@@ -113,9 +113,9 @@ final class SphinxActionRequest extends ActionRequest {
           mi.field_l = 4;
           io.field_n = 2;
           jn.field_d = 15;
-          var7 = gs.a("lobby", param1, param4, (byte) -53, "largefont");
-          t.field_a = gs.a("lobby", param1, param4, (byte) -53, "generalfont");
-          LeaderEscortCondition.field_f = gs.a("lobby", param1, param4, (byte) -53, "chatfont");
+          var7 = DropdownArrowPainter.a("lobby", param1, param4, (byte) -53, "largefont");
+          t.field_a = DropdownArrowPainter.a("lobby", param1, param4, (byte) -53, "generalfont");
+          LeaderEscortCondition.field_f = DropdownArrowPainter.a("lobby", param1, param4, (byte) -53, "chatfont");
           var7.a(var5, var24);
           t.field_a.a(var5, var24);
           LeaderEscortCondition.field_f.a(var5, var24);

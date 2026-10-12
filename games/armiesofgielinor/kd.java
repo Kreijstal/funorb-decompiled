@@ -171,7 +171,7 @@ final class kd extends tj implements nq, he, mf {
     }
 
     public kd() {
-        super(0, 0, 496, 0, (kh) null);
+        super(0, 0, 496, 0, (WidgetPainter) null);
         this.field_O = new ma("", (qo) null, 12);
         this.field_I = new ma("", (qo) null, 100);
         this.field_H = new ma("", (qo) null, 100);
@@ -196,17 +196,17 @@ final class kd extends tj implements nq, he, mf {
         this.field_K.a((byte) 16, new di(this.field_K, this.field_V));
         this.field_N.a((byte) 16, new jh(this.field_N));
         this.field_bb.field_I = false;
-        this.field_bb.field_k = (kh) ((Object) new nu());
-        this.field_G.field_k = (kh) ((Object) new td());
-        this.field_O.field_k = (kh) ((Object) new lu(10000536));
+        this.field_bb.painter = (WidgetPainter) ((Object) new nu());
+        this.field_G.painter = (WidgetPainter) ((Object) new td());
+        this.field_O.painter = (WidgetPainter) ((Object) new lu(10000536));
         lu dupTemp$0 = new lu(10000536);
-        this.field_H.field_k = (kh) ((Object) dupTemp$0);
-        this.field_I.field_k = (kh) ((Object) dupTemp$0);
-        this.field_N.field_k = (kh) ((Object) new lu(10000536));
-        this.field_ab.field_k = (kh) ((Object) new oi());
+        this.field_H.painter = (WidgetPainter) ((Object) dupTemp$0);
+        this.field_I.painter = (WidgetPainter) ((Object) dupTemp$0);
+        this.field_N.painter = (WidgetPainter) ((Object) new lu(10000536));
+        this.field_ab.painter = (WidgetPainter) ((Object) new oi());
         ol dupTemp$1 = new ol(10000536);
-        this.field_K.field_k = (kh) ((Object) dupTemp$1);
-        this.field_V.field_k = (kh) ((Object) dupTemp$1);
+        this.field_K.painter = (WidgetPainter) ((Object) dupTemp$1);
+        this.field_V.painter = (WidgetPainter) ((Object) dupTemp$1);
         String var2 = fo.a(4800, StateChangeEvent.field_D, new String[]{this.m(150), this.l(29406)});
         int var3 = 20;
         var3 = var3 + this.a(tn.field_X, var3, 170, (byte) 18, this.field_I);
@@ -215,30 +215,30 @@ final class kd extends tj implements nq, he, mf {
         var3 = var3 + (this.a(TurnEffectEvent.field_B, this.field_K, 170, tf.field_m, 210, var3) + 5);
         var3 = var3 + (5 + this.a(dn.field_Ob, this.field_O, 170, fq.field_k, 210, var3));
         var3 = var3 + this.a(var3, this.field_N, 170, field_S, 27270);
-        ta var4 = new ta(46, var3, this.field_l - 90, 25, this.field_ab, true, this.field_l - 120, 5, gl.field_e, 11579568, wg.field_c);
-        this.a((byte) 10, (kb) (var4));
-        var3 = var3 + var4.field_w;
+        ta var4 = new ta(46, var3, this.width - 90, 25, this.field_ab, true, this.width - 120, 5, gl.field_e, 11579568, wg.field_c);
+        this.a((byte) 10, (Widget) (var4));
+        var3 = var3 + var4.height;
         lk var5 = new lk(ArmiesOfGielinor.field_J, 0, 0, 0, 0, 16777215, -1, 0, 0, ArmiesOfGielinor.field_J.field_H, -1, 2147483647, true);
         this.field_W = new hv(var2, var5);
         this.field_W.field_s = "";
         this.field_W.a(DiskCacheRequest.field_I, false, 0);
         this.field_W.a(DiskCacheRequest.field_I, false, 1);
         this.field_W.field_x = (qo) (this);
-        this.field_W.a(this.field_l - 90, 9567, 46, var3);
-        var3 = var3 + (this.field_W.field_w + 15);
-        this.a((byte) 10, (kb) (this.field_W));
+        this.field_W.a(this.width - 90, 9567, 46, var3);
+        var3 = var3 + (this.field_W.height + 15);
+        this.a((byte) 10, (Widget) (this.field_W));
         int var6 = 4;
         int var7 = 200;
-        this.field_bb.a(496 - var7 >> 1, var7, var3, 8192, 40);
-        this.field_G.a(var6 + 3, 60, 15 + var3, 8192, 40);
+        this.field_bb.setBounds(496 - var7 >> 1, var7, var3, 8192, 40);
+        this.field_G.setBounds(var6 + 3, 60, 15 + var3, 8192, 40);
         this.field_G.field_x = (qo) (this);
         this.field_bb.field_x = (qo) (this);
-        this.a((byte) 10, (kb) (this.field_bb));
-        this.a((byte) 10, (kb) (this.field_G));
+        this.a((byte) 10, (Widget) (this.field_bb));
+        this.a((byte) 10, (Widget) (this.field_G));
         this.field_T = new kv((mf) (this));
-        this.field_T.a(this.field_O.field_B - (-this.field_O.field_l - 60), this.field_l + (-this.field_O.field_B - this.field_O.field_l - 60), this.field_O.field_p + 20, 8192, 150);
-        this.a((byte) 10, (kb) (this.field_T));
-        this.a(0, 496, 0, 8192, var3 + (55 + var6));
+        this.field_T.setBounds(this.field_O.x - (-this.field_O.width - 60), this.width + (-this.field_O.x - this.field_O.width - 60), this.field_O.y + 20, 8192, 150);
+        this.a((byte) 10, (Widget) (this.field_T));
+        this.setBounds(0, 496, 0, 8192, var3 + (55 + var6));
     }
 
     private final String m(int param0) {
@@ -344,7 +344,7 @@ final class kd extends tj implements nq, he, mf {
         }
     }
 
-    private final int a(int param0, kb param1, int param2, String param3, int param4) {
+    private final int a(int param0, Widget param1, int param2, String param3, int param4) {
         RuntimeException var6 = null;
         kw var7 = null;
         ta var8 = null;
@@ -362,11 +362,11 @@ final class kd extends tj implements nq, he, mf {
             stackIn_2_0 = -80;
             return stackIn_2_0;
           }
-          this.a((byte) 10, (kb) (var8));
+          this.a((byte) 10, (Widget) (var8));
           var7 = new kw(((eg) ((Object) param1)).a(-918933630));
-          this.a((byte) 10, (kb) (var7));
-          var7.a(3 + var8.field_l + var8.field_B, 15, var8.field_p + (-15 + var8.field_w >> 1), 8192, 15);
-          stackIn_4_0 = var8.field_w;
+          this.a((byte) 10, (Widget) (var7));
+          var7.setBounds(3 + var8.width + var8.x, 15, var8.y + (-15 + var8.height >> 1), 8192, 15);
+          stackIn_4_0 = var8.height;
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -421,7 +421,7 @@ final class kd extends tj implements nq, he, mf {
         }
     }
 
-    final void a(int param0, int param1, int param2, kb param3) {
+    final void a(int param0, int param1, int param2, Widget param3) {
         try {
           super.a(param0, param1, param2, param3);
           this.field_bb.field_I = this.k(param0 ^ 32673);
@@ -454,7 +454,7 @@ final class kd extends tj implements nq, he, mf {
         return false;
     }
 
-    final boolean a(kb param0, int param1, char param2, int param3) {
+    final boolean a(Widget param0, int param1, char param2, int param3) {
         RuntimeException var5 = null;
         boolean stackIn_7_0 = false;
         boolean stackIn_11_0 = false;
@@ -496,7 +496,7 @@ final class kd extends tj implements nq, he, mf {
         ((uj) (this.field_O.a(-918933630))).g(50);
     }
 
-    private final int a(boolean param0, int param1, kb param2, String param3, int param4, String param5, int param6) {
+    private final int a(boolean param0, int param1, Widget param2, String param3, int param4, String param5, int param6) {
         RuntimeException var8 = null;
         pk var9 = null;
         ta var10 = null;
@@ -511,11 +511,11 @@ final class kd extends tj implements nq, he, mf {
         RuntimeException decompiledCaughtException = null;
         try {
           var10 = new ta(20, param6, 120 + param1, 25, param2, param0, 120, 3, ArmiesOfGielinor.field_J, 16777215, param3);
-          this.a((byte) 10, (kb) (var10));
-          var9 = new pk(((eg) ((Object) param2)).a(-918933630), param5, 126, var10.field_w + param6, param1 + 50, param4);
+          this.a((byte) 10, (Widget) (var10));
+          var9 = new pk(((eg) ((Object) param2)).a(-918933630), param5, 126, var10.height + param6, param1 + 50, param4);
           var9.field_x = (qo) (this);
-          this.a((byte) 10, (kb) (var9));
-          stackIn_1_0 = var10.field_w + var9.field_w;
+          this.a((byte) 10, (Widget) (var9));
+          stackIn_1_0 = var10.height + var9.height;
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -543,7 +543,7 @@ final class kd extends tj implements nq, he, mf {
         }
     }
 
-    private final int a(String param0, kb param1, int param2, String param3, int param4, int param5) {
+    private final int a(String param0, Widget param1, int param2, String param3, int param4, int param5) {
         RuntimeException var7 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;
@@ -586,7 +586,7 @@ final class kd extends tj implements nq, he, mf {
         }
     }
 
-    private final int a(String param0, int param1, int param2, byte param3, kb param4) {
+    private final int a(String param0, int param1, int param2, byte param3, Widget param4) {
         ta var6 = null;
         RuntimeException var6_ref = null;
         int stackIn_3_0 = 0;
@@ -598,11 +598,11 @@ final class kd extends tj implements nq, he, mf {
         RuntimeException decompiledCaughtException = null;
         try {
           var6 = new ta(20, param1, param2 + 120, 25, param4, false, 120, 3, ArmiesOfGielinor.field_J, 16777215, param0);
-          this.a((byte) 10, (kb) (var6));
+          this.a((byte) 10, (Widget) (var6));
           if (param3 != 18) {
             this.field_G = (fw) null;
           }
-          stackIn_3_0 = var6.field_w;
+          stackIn_3_0 = var6.height;
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -76,30 +76,30 @@ final class df extends fe {
         return wi.field_y;
     }
 
-    final static int a(int param0, int param1) {
-        if (param0 != -3720) {
+    final static int atanFixed16ToAngle8192(int obfuscationGuard, int tangent16) {
+        if (obfuscationGuard != -3720) {
           field_J = (String) null;
-          if (param1 >= 0) {
-            if (param1 > 65536) {
-              return 2048 - vn.field_m[134217728 / param1];
+          if (tangent16 >= 0) {
+            if (tangent16 > 65536) {
+              return 2048 - vn.field_m[134217728 / tangent16];
             }
-            return vn.field_m[param1 >> 5];
+            return vn.field_m[tangent16 >> 5];
           }
-          if (-65536 <= param1) {
-            return -vn.field_m[-param1 >> 5];
+          if (-65536 <= tangent16) {
+            return -vn.field_m[-tangent16 >> 5];
           }
-          return vn.field_m[134217728 / -param1] - 2048;
+          return vn.field_m[134217728 / -tangent16] - 2048;
         }
-        if (param1 >= 0) {
-          if (param1 > 65536) {
-            return 2048 - vn.field_m[134217728 / param1];
+        if (tangent16 >= 0) {
+          if (tangent16 > 65536) {
+            return 2048 - vn.field_m[134217728 / tangent16];
           }
-          return vn.field_m[param1 >> 5];
+          return vn.field_m[tangent16 >> 5];
         }
-        if (-65536 <= param1) {
-          return -vn.field_m[-param1 >> 5];
+        if (-65536 <= tangent16) {
+          return -vn.field_m[-tangent16 >> 5];
         }
-        return vn.field_m[134217728 / -param1] - 2048;
+        return vn.field_m[134217728 / -tangent16] - 2048;
     }
 
     final int g(int param0) {

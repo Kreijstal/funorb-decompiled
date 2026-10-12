@@ -3,9 +3,9 @@
  */
 import java.util.*;
 
-abstract class nl extends kb implements gw {
+abstract class nl extends Widget implements gw {
     static String field_D;
-    kb field_E;
+    Widget field_E;
     static String field_F;
     static String field_G;
     static String field_C;
@@ -15,12 +15,12 @@ abstract class nl extends kb implements gw {
           this.field_E.e(0);
         }
         if (!param0) {
-          kb var3 = (kb) null;
-          this.a(-121, -73, 76, 99, (kb) null, -116, -36);
+          Widget var3 = (Widget) null;
+          this.a(-121, -73, 76, 99, (Widget) null, -116, -36);
         }
     }
 
-    final boolean a(int param0, int param1, int param2, int param3, int param4, int param5, kb param6) {
+    final boolean a(int param0, int param1, int param2, int param3, int param4, int param5, Widget param6) {
         RuntimeException var8 = null;
         boolean stackIn_7_0 = false;
         RuntimeException stackIn_10_0 = null;
@@ -47,8 +47,8 @@ abstract class nl extends kb implements gw {
         }
     }
 
-    void a(int param0, int param1, int param2, kb param3) {
-        kb var6 = null;
+    void a(int param0, int param1, int param2, Widget param3) {
+        Widget var6 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
@@ -57,11 +57,11 @@ abstract class nl extends kb implements gw {
         try {
           super.a(param0 + 0, param1, param2, param3);
           if (param0 != 32722) {
-            var6 = (kb) null;
-            this.a(-74, (kb) null, -57, (byte) -35, 30, 107);
+            var6 = (Widget) null;
+            this.a(-74, (Widget) null, -57, (byte) -35, 30, 107);
           }
           if (this.field_E != null) {
-            this.field_E.a(32722, this.field_B + param1, param2 + this.field_p, param3);
+            this.field_E.a(32722, this.x + param1, param2 + this.y, param3);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -78,7 +78,7 @@ abstract class nl extends kb implements gw {
         }
     }
 
-    void a(int param0, kb param1, int param2, byte param3, int param4, int param5) {
+    void a(int param0, Widget param1, int param2, byte param3, int param4, int param5) {
         int var7_int = 0;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
@@ -88,7 +88,7 @@ abstract class nl extends kb implements gw {
         try {
           var7_int = -82 % ((param3 + 58) / 53);
           if (this.field_E != null) {
-            this.field_E.a(param0 + this.field_p, param1, param2, (byte) 109, param4, this.field_B + param5);
+            this.field_E.a(param0 + this.y, param1, param2, (byte) 109, param4, this.x + param5);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -205,17 +205,17 @@ abstract class nl extends kb implements gw {
 
     final int g(int param0) {
         if (param0 != -31989) {
-          kb var3 = (kb) null;
-          this.a(87, 114, -83, (kb) null);
+          Widget var3 = (Widget) null;
+          this.a(87, 114, -83, (Widget) null);
         }
         return this.field_E != null ? this.field_E.g(-31989) : 0;
     }
 
-    nl(int param0, int param1, int param2, int param3, kh param4, qo param5) {
+    nl(int param0, int param1, int param2, int param3, WidgetPainter param4, qo param5) {
         super(param0, param1, param2, param3, param4, param5);
     }
 
-    boolean a(int param0, int param1, int param2, int param3, kb param4, int param5, int param6) {
+    boolean a(int param0, int param1, int param2, int param3, Widget param4, int param5, int param6) {
         RuntimeException var8 = null;
         boolean stackIn_6_0 = false;
         RuntimeException stackIn_9_0 = null;
@@ -226,7 +226,7 @@ abstract class nl extends kb implements gw {
           if (param3 <= 103) {
             field_C = (String) null;
           }
-          stackIn_6_0 = (null != this.field_E) && (this.field_E.a(param0, param1 + this.field_B, param2 + this.field_p, 125, param4, param5, param6));
+          stackIn_6_0 = (null != this.field_E) && (this.field_E.a(param0, param1 + this.x, param2 + this.y, 125, param4, param5, param6));
           return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -579,8 +579,8 @@ abstract class nl extends kb implements gw {
         }
     }
 
-    kb a(int param0) {
-        kb var2 = this.field_E;
+    Widget a(int param0) {
+        Widget var2 = this.field_E;
         if (var2 != null &&
           var2.a(false)) {
           return var2;
@@ -588,21 +588,21 @@ abstract class nl extends kb implements gw {
         if (param0 == -1848) {
           return null;
         }
-        kb var3 = (kb) null;
-        this.a(-40, -59, -4, 58, 32, -127, (kb) null);
+        Widget var3 = (Widget) null;
+        this.a(-40, -59, -4, 58, 32, -127, (Widget) null);
         return null;
     }
 
     void a(int param0, int param1, byte param2, int param3) {
         if (param3 == 0 &&
-          this.field_k != null) {
-          this.field_k.a((kb) (this), param0, -94, true, param1);
+          this.painter != null) {
+          this.painter.paintWidget((Widget) (this), param0, -94, true, param1);
         }
         if (param2 > -82) {
           return;
         }
         if (this.field_E != null) {
-          this.field_E.a(this.field_B + param0, this.field_p + param1, (byte) -118, param3);
+          this.field_E.a(this.x + param0, this.y + param1, (byte) -118, param3);
         }
     }
 
@@ -638,7 +638,7 @@ abstract class nl extends kb implements gw {
         field_F = null;
     }
 
-    private final boolean b(int param0, kb param1) {
+    private final boolean b(int param0, Widget param1) {
         RuntimeException var3 = null;
         boolean stackIn_8_0 = false;
         RuntimeException stackIn_11_0 = null;
@@ -665,7 +665,7 @@ abstract class nl extends kb implements gw {
         }
     }
 
-    final boolean a(kb param0, int param1, char param2, int param3) {
+    final boolean a(Widget param0, int param1, char param2, int param3) {
         int var5_int = 0;
         RuntimeException var5 = null;
         String[] var6 = null;
@@ -721,8 +721,8 @@ abstract class nl extends kb implements gw {
         }
     }
 
-    final void a(int param0, int param1, int param2, int param3, int param4) {
-        super.a(param0, param1, param2, param3, param4);
+    final void setBounds(int x, int width, int y, int obfuscationGuard, int height) {
+        super.setBounds(x, width, y, obfuscationGuard, height);
         this.b(true);
     }
 
@@ -813,7 +813,7 @@ abstract class nl extends kb implements gw {
         }
     }
 
-    final boolean a(int param0, kb param1) {
+    final boolean a(int param0, Widget param1) {
         RuntimeException var3 = null;
         boolean stackIn_6_0 = false;
         RuntimeException stackIn_9_0 = null;
@@ -840,7 +840,7 @@ abstract class nl extends kb implements gw {
         }
     }
 
-    private final boolean a(kb param0, byte param1) {
+    private final boolean a(Widget param0, byte param1) {
         RuntimeException var3 = null;
         boolean stackIn_8_0 = false;
         RuntimeException stackIn_11_0 = null;

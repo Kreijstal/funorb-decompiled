@@ -2478,7 +2478,7 @@ final class TutorialController {
                 wh.field_a = var4;
                 if (wh.field_a != kd.field_X) {
                   dd.field_e = 0;
-                  kb.field_n = 0;
+                  Widget.field_n = 0;
                   kd.field_X = wh.field_a;
                   dg.b((byte) -61);
                 }
@@ -2496,7 +2496,7 @@ final class TutorialController {
           if (stackIn_58_0 < stackIn_58_1) {
             wh.field_a = var2_int;
             if (kd.field_X != wh.field_a) {
-              kb.field_n = 0;
+              Widget.field_n = 0;
               kd.field_X = wh.field_a;
               dd.field_e = 0;
               dg.b((byte) -61);

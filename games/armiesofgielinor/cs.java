@@ -3,7 +3,7 @@
  */
 final class cs extends sf implements he {
     static String[] field_W;
-    private kb field_ab;
+    private Widget field_ab;
     private fw field_gb;
     private fw field_Z;
     static ModelMeshBase[] field_db;
@@ -16,22 +16,22 @@ final class cs extends sf implements he {
 
     cs(gk param0) {
         super(param0, 200, 200);
-        kb var3 = null;
+        Widget var3 = null;
         try {
           this.field_fb = vi.b(-95);
-          var3 = new kb(ro.field_vb, (qo) null);
-          var3.field_p = 50;
-          var3.field_w = 100;
-          var3.field_l = this.field_l;
-          var3.field_B = 0;
-          var3.field_k = (kh) ((Object) new lk(gl.field_e, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
+          var3 = new Widget(ro.field_vb, (qo) null);
+          var3.y = 50;
+          var3.height = 100;
+          var3.width = this.width;
+          var3.x = 0;
+          var3.painter = (WidgetPainter) ((Object) new lk(gl.field_e, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
           this.a((byte) 10, var3);
-          this.field_ab = new kb(ro.field_vb, (qo) null);
-          this.field_ab.field_l = this.field_l;
-          this.field_ab.field_B = 0;
-          this.field_ab.field_p = 20 + (var3.field_p + var3.field_w);
-          this.field_ab.field_w = 80;
-          this.field_ab.field_k = (kh) ((Object) new lk(CipherPacketBuffer.field_t, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
+          this.field_ab = new Widget(ro.field_vb, (qo) null);
+          this.field_ab.width = this.width;
+          this.field_ab.x = 0;
+          this.field_ab.y = 20 + (var3.y + var3.height);
+          this.field_ab.height = 80;
+          this.field_ab.painter = (WidgetPainter) ((Object) new lk(CipherPacketBuffer.field_t, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
           this.a((byte) 10, this.field_ab);
           this.field_Z = this.a(DualNodeDeque.field_e, -63, (qo) (this));
           this.field_gb = this.a(WeightedScoreStrategy.field_m, -74, (qo) (this));
@@ -106,7 +106,7 @@ final class cs extends sf implements he {
         field_cb = null;
     }
 
-    final void a(int param0, int param1, int param2, kb param3) {
+    final void a(int param0, int param1, int param2, Widget param3) {
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
         String stackIn_15_2 = null;
@@ -154,7 +154,7 @@ final class cs extends sf implements he {
         }
     }
 
-    final boolean a(kb param0, int param1, char param2, int param3) {
+    final boolean a(Widget param0, int param1, char param2, int param3) {
         int var5_int = 0;
         int var6 = 0;
         boolean stackIn_12_0 = false;
@@ -163,21 +163,21 @@ final class cs extends sf implements he {
         String stackIn_16_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var5 = null;
-        kb var7 = null;
+        Widget var7 = null;
         var6 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           var5_int = param1;
           if (99 == var5_int) {
-            this.field_gb.a(11, (kb) (this));
+            this.field_gb.a(11, (Widget) (this));
             return true;
           }
           if (var5_int == 98) {
-            this.field_Z.a(11, (kb) (this));
+            this.field_Z.a(11, (Widget) (this));
             return true;
           }
           if (param3 != -12215) {
-            var7 = (kb) null;
-            this.a((kb) null, 104, 'ﾑ', 60);
+            var7 = (Widget) null;
+            this.a((Widget) null, 104, 'ﾑ', 60);
           }
           stackIn_12_0 = super.a(param0, param1, param2, -12215);
           return stackIn_12_0;
@@ -209,11 +209,11 @@ final class cs extends sf implements he {
         RuntimeException decompiledCaughtException = null;
         try {
           var4 = new fw(param0, param2);
-          var4.field_k = (kh) ((Object) new nu());
-          var5 = this.field_w - 6;
-          this.field_w = this.field_w + 38;
-          var4.a(15, -30 + this.field_l, var5, 8192, 30);
-          this.a((byte) 10, (kb) (var4));
+          var4.painter = (WidgetPainter) ((Object) new nu());
+          var5 = this.height - 6;
+          this.height = this.height + 38;
+          var4.setBounds(15, -30 + this.width, var5, 8192, 30);
+          this.a((byte) 10, (Widget) (var4));
           this.e(0);
           var6 = 121 % ((1 - param1) / 62);
           stackIn_1_0 = var4;

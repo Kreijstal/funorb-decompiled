@@ -1365,14 +1365,14 @@ final class ff extends ma {
               ((BitmapFont) ((Object) var8_ref)).a(tk.field_s, var27, 14 + var28 + var29, 1044724, 0);
               var11 = 8192 * var11 / 65536;
               for (var30 = var11; var30 < var12; var30 += 100) {
-                SoftwareRaster.d(var27, var28, var29 * kg.a(var30, (byte) -76) / 65536 + var27, var28 + var29 * jh.a(var30, 4096) / 65536, 1044724);
-                SoftwareRaster.d(var27, var28 + 1, var27 + kg.a(var30, (byte) -82) * var29 / 65536, var29 * jh.a(var30, 4096) / 65536 + 1 + var28, 1044724);
+                SoftwareRaster.d(var27, var28, var29 * kg.cosine16(var30, (byte) -76) / 65536 + var27, var28 + var29 * jh.sine16(var30, 4096) / 65536, 1044724);
+                SoftwareRaster.d(var27, var28 + 1, var27 + kg.cosine16(var30, (byte) -82) * var29 / 65536, var29 * jh.sine16(var30, 4096) / 65536 + 1 + var28, 1044724);
               }
-              SoftwareRaster.d(var27, var28, kg.a(var12, (byte) -82) * var29 / 65536 + var27, var28 + var29 * jh.a(var12, 4096) / 65536, 1044724);
+              SoftwareRaster.d(var27, var28, kg.cosine16(var12, (byte) -82) * var29 / 65536 + var27, var28 + var29 * jh.sine16(var12, 4096) / 65536, 1044724);
               if (var10 >= 0) {
                 var21 = var21 + (18 + var29);
               }
-              SoftwareRaster.d(var27, 1 + var28, kg.a(var12, (byte) -77) * var29 / 65536 + var27, 1 + var28 + var29 * jh.a(var12, 4096) / 65536, 1044724);
+              SoftwareRaster.d(var27, 1 + var28, kg.cosine16(var12, (byte) -77) * var29 / 65536 + var27, 1 + var28 + var29 * jh.sine16(var12, 4096) / 65536, 1044724);
             }
             if ((fg.field_Ob & 16) != 0) {
               d.a(var21 - 10, var22 + 10, 17, false, var9);

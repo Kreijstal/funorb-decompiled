@@ -19,7 +19,7 @@ final class sb extends rb implements fb, rp {
         }
     }
 
-    public final void a(int param0, gh param1) {
+    public final void a(int param0, DropdownSelector param1) {
         if (param0 > -82) {
           return;
         }

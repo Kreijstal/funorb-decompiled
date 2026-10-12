@@ -40,7 +40,7 @@ final class mw extends dr {
           rb.field_b.a(param4, -20500, rb.field_b.field_gb, 0, param2 + UpkeepEvent.field_z.field_gb);
           vq.field_a.a(5, false, 2 + param2 + (485 + param1), 2, param1, 5, -5 + var7);
           if (null != BestScoreStrategy.field_i) {
-            BestScoreStrategy.field_i.a(vq.field_a.field_S, vq.field_a.field_gb, vq.field_a.field_ab, param5 ^ 8193, vq.field_a.field_ob);
+            BestScoreStrategy.field_i.setBounds(vq.field_a.field_S, vq.field_a.field_gb, vq.field_a.field_ab, param5 ^ 8193, vq.field_a.field_ob);
           }
           var8 = -var6_int + (-param2 + CombatEvent.field_I.field_gb);
           var9 = var8 / 2;

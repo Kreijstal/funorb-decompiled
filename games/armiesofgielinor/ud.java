@@ -79,11 +79,11 @@ final class ud extends sf implements he {
         RuntimeException decompiledCaughtException = null;
         try {
           var4 = new fw(param0, param1);
-          var4.field_k = (kh) ((Object) new nu());
-          var5 = this.field_w - 6;
-          this.field_w = this.field_w + 38;
-          var4.a(15, -16 + (-14 + this.field_l), var5, 8192, 30);
-          this.a((byte) 10, (kb) (var4));
+          var4.painter = (WidgetPainter) ((Object) new nu());
+          var5 = this.height - 6;
+          this.height = this.height + 38;
+          var4.setBounds(15, -16 + (-14 + this.width), var5, 8192, 30);
+          this.a((byte) 10, (Widget) (var4));
           this.e(0);
           var6 = -126 / ((-6 - param2) / 40);
           stackIn_1_0 = var4;
@@ -111,7 +111,7 @@ final class ud extends sf implements he {
     ud(gk param0, jl param1) {
         super(param0, 200, 150);
         Object var3 = null;
-        kb var4 = null;
+        Widget var4 = null;
         Object stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
         String stackIn_13_2 = null;
@@ -122,27 +122,27 @@ final class ud extends sf implements he {
           var3 = null;
           if (param1 != PlayerProfile.field_h) {
             if (mp.field_Mb == param1) {
-              this.field_w = this.field_w + 10;
+              this.height = this.height + 10;
               var3 = MoveAttackRequest.field_y;
               if (PaletteRegionMap.b(-108)) {
-                this.field_w = this.field_w + 20;
+                this.height = this.height + 20;
                 var3 = field_W;
               }
             } else {
               if (param1 == tn.field_cb) {
-                this.field_w = this.field_w + 30;
+                this.height = this.height + 30;
                 var3 = hb.field_a;
               }
             }
           } else {
             var3 = tl.field_a;
           }
-          var4 = new kb((String) (var3), (qo) null);
-          var4.field_B = 0;
-          var4.field_p = 50;
-          var4.field_l = this.field_l;
-          var4.field_w = 80;
-          var4.field_k = (kh) ((Object) new lk(gl.field_e, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
+          var4 = new Widget((String) (var3), (qo) null);
+          var4.x = 0;
+          var4.y = 50;
+          var4.width = this.width;
+          var4.height = 80;
+          var4.painter = (WidgetPainter) ((Object) new lk(gl.field_e, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
           this.a((byte) 10, var4);
           this.field_bb = this.a(pd.field_f, (qo) (this), 93);
           return;

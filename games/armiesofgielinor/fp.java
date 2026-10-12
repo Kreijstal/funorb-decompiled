@@ -97,7 +97,7 @@ final class fp extends je {
           var8 = var41;
           var65 = new int[param1.field_t];
           var62 = ArmiesOfGielinor.field_I;
-          var63 = kb.field_m;
+          var63 = Widget.field_m;
           var64 = rj.field_Q;
           for (var13 = 0; var13 < param1.field_t; var13++) {
             var14 = var62[var13] * param5 + (param3 * var63[var13] + param2 * var64[var13]) >> 8;
@@ -281,7 +281,7 @@ final class fp extends je {
           return;
         }
         try {
-          gh.field_P = param0;
+          DropdownSelector.field_P = param0;
         } catch (RuntimeException runtimeException) {
           throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "fp.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

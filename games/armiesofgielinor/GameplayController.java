@@ -4160,9 +4160,9 @@ final class GameplayController {
             return;
           }
           if (this.battlefield.mapSizeSetting != 4) {
-            gh.field_M.g(110, 10);
+            DropdownSelector.field_M.g(110, 10);
             if (ml.a(29, 129, 19, false)) {
-              gh.field_M.f(110, 10, 128);
+              DropdownSelector.field_M.f(110, 10, 128);
             }
             ul.field_g.g(110, 10);
           }
@@ -6544,7 +6544,7 @@ final class GameplayController {
                         }
                         if (0 < this.selectedUnit.accessoryType) {
                           if (wg.a(-33, -((var16 & 3) * 30) + 487, 517 - 30 * (3 & var16), 30 * (var16 >> 2) + 39, 30 * (var16 >> 2) + 79)) {
-                            var2 = gs.field_c[this.selectedUnit.accessoryType];
+                            var2 = DropdownArrowPainter.field_c[this.selectedUnit.accessoryType];
                           }
                           var16++;
                         }
@@ -12215,7 +12215,7 @@ final class GameplayController {
             var16_int++;
           } while (var26 == 0);
           if (0 >= df.field_M) {
-            this.field_Y = kb.field_o;
+            this.field_Y = Widget.field_o;
             if (var26 != 0) {
               this.field_Y = pg.playerProfile.unitUnlockMasks;
             }
@@ -12311,7 +12311,7 @@ final class GameplayController {
           }
           if ((decompiledFrameCompleted3) &&
             (decompiledFrameCompleted2)) {
-            gs.a(false);
+            DropdownArrowPainter.a(false);
           }
           if (decompiledFrameCompleted3) {
             stackIn_66_0 = this;

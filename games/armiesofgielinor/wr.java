@@ -10,19 +10,19 @@ final class wr extends hs implements he {
     final void a(int param0, int param1, byte param2, int param3) {
         super.a(param0, param1, (byte) -114, param3);
         if (param2 >= -82) {
-          kb var6 = (kb) null;
-          this.a(51, -1, -80, (kb) null);
+          Widget var6 = (Widget) null;
+          this.a(51, -1, -80, (Widget) null);
         }
-        gl.field_e.b(mq.field_Nb, param0 - (-this.field_B - 4), 4 + (param1 + this.field_p) + gl.field_e.field_H, 16777215, -1);
+        gl.field_e.b(mq.field_Nb, param0 - (-this.x - 4), 4 + (param1 + this.y) + gl.field_e.field_H, 16777215, -1);
     }
 
     wr(int param0, int param1, int param2, int param3) {
-        super(param0, param1, param2, param3, (kh) null);
+        super(param0, param1, param2, param3, (WidgetPainter) null);
         this.field_M = new no(new lu(10000536), c.field_c, 0, 0, 140, 25);
         this.field_M.a((byte) -101, new sb());
         this.field_K = new fw(ro.field_kb, (qo) (this));
-        this.field_C = new kb[]{(kb) ((Object) this.field_M), (kb) ((Object) this.field_K)};
-        this.field_K.field_k = (kh) ((Object) new nu());
+        this.field_C = new Widget[]{(Widget) ((Object) this.field_M), (Widget) ((Object) this.field_K)};
+        this.field_K.painter = (WidgetPainter) ((Object) new nu());
         this.e(0);
     }
 
@@ -31,8 +31,8 @@ final class wr extends hs implements he {
         if (param0 < 84) {
           this.field_M = (no) null;
         }
-        this.field_M.a(-var2 + this.field_l >> 1, 140, -25 + (this.field_w + 20) >> 1, 8192, 25);
-        this.field_K.a(10 + ((-var2 + this.field_l >> 1) + 140), 100, 2 + (-30 + this.field_w + 20 >> 1), 8192, 30);
+        this.field_M.setBounds(-var2 + this.width >> 1, 140, -25 + (this.height + 20) >> 1, 8192, 25);
+        this.field_K.setBounds(10 + ((-var2 + this.width >> 1) + 140), 100, 2 + (-30 + this.height + 20 >> 1), 8192, 30);
     }
 
     final static void a(byte param0, String param1) {
@@ -82,7 +82,7 @@ final class wr extends hs implements he {
         return stackIn_8_0;
     }
 
-    final void a(int param0, int param1, int param2, kb param3) {
+    final void a(int param0, int param1, int param2, Widget param3) {
         try {
           super.a(param0, param1, param2, param3);
           this.field_K.field_I = this.field_M.a(-918933630).a(false) == oo.field_g ? true : false;

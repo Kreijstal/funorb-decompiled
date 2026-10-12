@@ -13,14 +13,14 @@ final class CorpseConditionMarker extends PreparedAction {
         int stackIn_19_0 = 0;
         int stackIn_20_1 = 0;
         if (kd.field_X < 0) {
-          kb.field_n = 0;
+          Widget.field_n = 0;
           dd.field_e = 0;
           return;
         }
-        dd.field_e = dd.field_e + kb.field_n;
+        dd.field_e = dd.field_e + Widget.field_n;
         if (dd.field_e < 0) {
           dd.field_e = 0;
-          kb.field_n = 0;
+          Widget.field_n = 0;
         }
         if (param0 != -28309) {
           field_u = (vk) null;
@@ -28,17 +28,17 @@ final class CorpseConditionMarker extends PreparedAction {
         if (uk.field_q < dd.field_e &&
           -1 < uk.field_q) {
           dd.field_e = uk.field_q;
-          kb.field_n = 0;
+          Widget.field_n = 0;
         } else {
           if (uk.field_q == -1) {
             dd.field_e = 0;
           }
         }
         if (param1 &&
-          kb.field_n != 0) {
-          stackIn_19_0 = kb.field_n;
-          stackIn_20_1 = (kb.field_n > 0) ? -1 : 1;
-          kb.field_n = stackIn_19_0 + stackIn_20_1;
+          Widget.field_n != 0) {
+          stackIn_19_0 = Widget.field_n;
+          stackIn_20_1 = (Widget.field_n > 0) ? -1 : 1;
+          Widget.field_n = stackIn_19_0 + stackIn_20_1;
         }
     }
 

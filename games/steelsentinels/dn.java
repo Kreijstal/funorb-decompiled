@@ -3250,14 +3250,14 @@ final class dn extends SceneWidget {
         int[] stackIn_4_0 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var3_int = jh.a(param1, 4096);
-          var4 = kg.a(param1, (byte) -83);
+          var3_int = jh.sine16(param1, 4096);
+          var4 = kg.cosine16(param1, (byte) -83);
           if (param2 <= 61) {
             stackIn_2_0 = (int[]) null;
             return stackIn_2_0;
           }
-          var5 = jh.a(param0, 4096);
-          var6 = kg.a(param0, (byte) -101);
+          var5 = jh.sine16(param0, 4096);
+          var6 = kg.cosine16(param0, (byte) -101);
           var7 = (int)((long)var3_int * (long)var5 >> 16);
           var8 = (int)((long)var6 * (long)var3_int >> 16);
           var9 = (int)((long)var5 * (long)var4 >> 16);

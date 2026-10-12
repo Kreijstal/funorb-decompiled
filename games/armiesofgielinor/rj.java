@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class rj extends kb {
+final class rj extends Widget {
     private static int[] field_M;
     private int field_C;
     private int field_P;
@@ -28,16 +28,16 @@ final class rj extends kb {
         int var11 = 0;
         int var12 = 0;
         int var13 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
-        RgbSprite var14 = new RgbSprite(this.field_C * 2, this.field_w);
+        RgbSprite var14 = new RgbSprite(this.field_C * 2, this.height);
         int var8Lifetime1;
         int var9Lifetime1;
         int var12Lifetime1;
         CombatSandbox.a(var14, 3);
-        int var5 = this.field_w >> 1;
+        int var5 = this.height >> 1;
         if (param1 >= -54) {
           return (RgbSprite) null;
         }
-        for (var6 = 0; var6 < this.field_w; var6++) {
+        for (var6 = 0; var6 < this.height; var6++) {
           var7 = (this.field_C * 2 - 1) * (var6 >> 1) % (this.field_C * 2);
           var8 = param2 & 16711935;
           var9 = 65280 & param2;
@@ -56,8 +56,8 @@ final class rj extends kb {
         return var14;
     }
 
-    final void a(int param0, int param1, int param2, int param3, int param4) {
-        super.a(param0, param1, param2, param3, param4);
+    final void setBounds(int x, int width, int y, int obfuscationGuard, int height) {
+        super.setBounds(x, width, y, obfuscationGuard, height);
         this.i(3);
     }
 
@@ -85,8 +85,8 @@ final class rj extends kb {
         int var9 = 0;
         var9 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          var5_int = param3 + this.field_l;
-          CampaignUnitOverride.a(this.field_J.pixelWidth + param3, -this.field_J.pixelWidth + var5_int, param1 + this.field_w, param1, (byte) 87);
+          var5_int = param3 + this.width;
+          CampaignUnitOverride.a(this.field_J.pixelWidth + param3, -this.field_J.pixelWidth + var5_int, param1 + this.height, param1, (byte) 87);
           var6 = -this.field_N + param3;
           var7 = -123 / ((param0 + 26) / 40);
           while (var6 < var5_int) {
@@ -104,7 +104,7 @@ final class rj extends kb {
           }
           if (-this.field_J.pixelWidth + var5_int <= SoftwareRaster.clipRight) {
             CombatSandbox.a(this.field_K, 3);
-            for (var8 = -this.field_J.pixelWidth + this.field_l + this.field_N; var8 > this.field_C * 2; var8 = var8 - this.field_C * 2) {
+            for (var8 = -this.field_J.pixelWidth + this.width + this.field_N; var8 > this.field_C * 2; var8 = var8 - this.field_C * 2) {
             }
             param2.g(-var8, 0);
             param2.g(-var8 + this.field_C * 2, 0);
@@ -201,17 +201,17 @@ final class rj extends kb {
         if (0 != param3) {
           return;
         }
-        int var5 = this.field_B + param0;
-        int var6 = param1 + this.field_p;
+        int var5 = this.x + param0;
+        int var6 = param1 + this.y;
         this.a(-77, var6, this.field_O[0], var5);
         if (65536 > this.field_D) {
-          CampaignUnitOverride.a((this.field_l * this.field_D >> 16) + var5, var5 + this.field_l, this.field_w + var6, var6, (byte) 74);
+          CampaignUnitOverride.a((this.width * this.field_D >> 16) + var5, var5 + this.width, this.height + var6, var6, (byte) 74);
           this.a(-103, var6, this.field_O[1], var5);
           rf.b(-18862);
         }
     }
 
-    final void a(int param0, int param1, int param2, kb param3) {
+    final void a(int param0, int param1, int param2, Widget param3) {
         RgbSprite discarded$1 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
@@ -270,15 +270,15 @@ final class rj extends kb {
         double var6 = 0.0;
         int var8 = 0;
         int var9 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
-        int var2 = this.field_w >> 1;
-        RgbSprite var3 = new RgbSprite(var2, this.field_w);
+        int var2 = this.height >> 1;
+        RgbSprite var3 = new RgbSprite(var2, this.height);
         CombatSandbox.a(var3, param0 - 747);
         if (param0 != 750) {
           return (RgbSprite) null;
         }
-        for (var4 = 0; var4 < this.field_w; var4++) {
+        for (var4 = 0; var4 < this.height; var4++) {
           for (var5 = 0; var2 > var5; var5++) {
-            var6 = (double)var5 * (double)var5 / (double)((-var4 + this.field_w) * var4);
+            var6 = (double)var5 * (double)var5 / (double)((-var4 + this.height) * var4);
             var8 = 1;
             if (var6 < 1.0) {
               var6 = Math.sqrt(-var6 + 1.0);
@@ -298,7 +298,7 @@ final class rj extends kb {
         if (param0 != 3) {
           field_Q = (int[]) null;
         }
-        this.field_K = new RgbSprite(this.field_w >> 1, this.field_w);
+        this.field_K = new RgbSprite(this.height >> 1, this.height);
     }
 
     final static void d(byte param0) {
@@ -319,7 +319,7 @@ final class rj extends kb {
         this.field_P = param7;
         this.field_C = param4;
         this.field_E = param8;
-        this.a(param0, param2, param1, 8192, param3);
+        this.setBounds(param0, param2, param1, 8192, param3);
     }
 
     static {

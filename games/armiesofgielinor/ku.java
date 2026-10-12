@@ -29,14 +29,14 @@ final class ku extends nl {
         return null;
     }
 
-    final void a(int param0, kb param1, int param2, byte param3, int param4, int param5) {
+    final void a(int param0, Widget param1, int param2, byte param3, int param4, int param5) {
         wc var9 = null;
         try {
           super.a(param0, param1, param2, (byte) 42, param4, param5);
           int var8 = -111 % ((-58 - param3) / 53);
           var9 = bn.field_f;
           if (var9 != null &&
-            this.b(1, param5, param4, param2, param0)) {
+            this.containsPointer(1, param5, param4, param2, param0)) {
             if (!(this.field_x instanceof ch)) {
               if (!(var9.field_x instanceof ch)) {
                 return;
@@ -65,7 +65,7 @@ final class ku extends nl {
         }
     }
 
-    private ku(int param0, int param1, int param2, int param3, kh param4, qo param5, kb param6) {
+    private ku(int param0, int param1, int param2, int param3, WidgetPainter param4, qo param5, Widget param6) {
         super(param0, param1, param2, param3, param4, param5);
         try {
           this.field_E = param6;

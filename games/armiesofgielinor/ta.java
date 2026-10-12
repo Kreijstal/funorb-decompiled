@@ -90,8 +90,8 @@ final class ta extends nl {
         }
     }
 
-    ta(int param0, int param1, int param2, int param3, kb param4, boolean param5, int param6, int param7, BitmapFont param8, int param9, String param10) {
-        super(param0, param1, param2, param3, (kh) null, (qo) null);
+    ta(int param0, int param1, int param2, int param3, Widget param4, boolean param5, int param6, int param7, BitmapFont param8, int param9, String param10) {
+        super(param0, param1, param2, param3, (WidgetPainter) null, (qo) null);
         boolean stackIn_4_1 = false;
         int stackIn_10_0 = 0;
         RuntimeException stackIn_14_0 = null;
@@ -120,7 +120,7 @@ final class ta extends nl {
           if (param3 >= var13) {
             var13 = param3;
           } else {
-            this.a(param0, param2, param1, 8192, var13);
+            this.setBounds(param0, param2, param1, 8192, var13);
           }
           if (!this.field_J) {
             stackIn_10_0 = 2 * this.field_H + this.field_S;
@@ -128,7 +128,7 @@ final class ta extends nl {
             stackIn_10_0 = 0;
           }
           var14 = stackIn_10_0;
-          this.field_E.a(var14, param2 + (-this.field_S - this.field_H * 3), (var13 - param3 >> 1) + this.field_H, 8192, param3 - 2 * this.field_H);
+          this.field_E.setBounds(var14, param2 + (-this.field_S - this.field_H * 3), (var13 - param3 >> 1) + this.field_H, 8192, param3 - 2 * this.field_H);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -157,14 +157,14 @@ final class ta extends nl {
     }
 
     final void a(int param0, int param1, byte param2, int param3) {
-        int var5 = this.field_B + param0;
-        int var6 = param1 + this.field_p;
+        int var5 = this.x + param0;
+        int var6 = param1 + this.y;
         super.a(param0, param1, (byte) -90, param3);
         if (param3 != 0) {
           return;
         }
-        int var7 = this.field_J ? -(2 * this.field_H) + (-this.field_S + this.field_l) : 0;
-        this.field_P.a(this.field_K, this.field_H + var7 + var5, this.field_H + var6, this.field_S - this.field_H, -(this.field_H * 2) + this.field_w, this.field_I, -1, !this.field_J ? 2 : 0, 1, this.field_P.field_H);
+        int var7 = this.field_J ? -(2 * this.field_H) + (-this.field_S + this.width) : 0;
+        this.field_P.a(this.field_K, this.field_H + var7 + var5, this.field_H + var6, this.field_S - this.field_H, -(this.field_H * 2) + this.height, this.field_I, -1, !this.field_J ? 2 : 0, 1, this.field_P.field_H);
         if (param2 <= -82) {
           return;
         }

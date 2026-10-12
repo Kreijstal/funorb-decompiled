@@ -110,8 +110,8 @@ final class ArticulatedPart extends DualNode {
           if (var14 == 0) {
             if (stackIn_5_0 != null &&
               this.instructions[var8].field_u) {
-              var9 = 16 * jh.a(8192 * -var7 / 65536, 4096) / 65536;
-              var10 = 16 * kg.a(8192 * -var7 / 65536, (byte) -74) / 65536;
+              var9 = 16 * jh.sine16(8192 * -var7 / 65536, 4096) / 65536;
+              var10 = 16 * kg.cosine16(8192 * -var7 / 65536, (byte) -74) / 65536;
               var11 = (hj.field_w * ((this.instructions[var8].field_r - this.field_E) * var9 + (this.instructions[var8].field_s - this.field_G) * var10) >> 16) + param2;
               var12 = param3 + ((-(var9 * (this.instructions[var8].field_s - this.field_G)) + var10 * (-this.field_E + this.instructions[var8].field_r)) * hj.field_w >> 16);
               var13 = var7 + this.instructions[var8].field_n;
@@ -151,8 +151,8 @@ final class ArticulatedPart extends DualNode {
           if (var14 == 0) {
             if (this.instructions[var15].field_q != -1 ||
               null != this.instructions[var15].attachedPart) {
-              var10Lifetime1 = jh.a(8192 * -var7 / 65536, param4 + 4047) * 16 / 65536;
-              var11Lifetime1 = 16 * kg.a(-var7 * 8192 / 65536, (byte) -82) / 65536;
+              var10Lifetime1 = jh.sine16(8192 * -var7 / 65536, param4 + 4047) * 16 / 65536;
+              var11Lifetime1 = 16 * kg.cosine16(-var7 * 8192 / 65536, (byte) -82) / 65536;
               this.instructions[var15].field_k = (((-this.field_G + this.instructions[var15].field_s) * var11Lifetime1 + var10Lifetime1 * (-this.field_E + this.instructions[var15].field_r)) * hj.field_w >> 16) + param2;
               this.instructions[var15].field_l = ((var11Lifetime1 * (this.instructions[var15].field_r - this.field_E) - var10Lifetime1 * (-this.field_G + this.instructions[var15].field_s)) * hj.field_w >> 16) + param3;
               this.instructions[var15].field_f = var7 + this.instructions[var15].field_n;
@@ -174,8 +174,8 @@ final class ArticulatedPart extends DualNode {
                   if (lh.field_t < this.instructions[var15].field_l + var8Lifetime1) {
                     lh.field_t = this.instructions[var15].field_l + var8Lifetime1;
                   }
-                  var10Lifetime1Lifetime1 = jh.a(this.instructions[var15].field_f * 8192 / 65536, 4096) * 16 / 65536;
-                  var11Lifetime1Lifetime1 = kg.a(this.instructions[var15].field_f * 8192 / 65536, (byte) -68) * 16 / 65536;
+                  var10Lifetime1Lifetime1 = jh.sine16(this.instructions[var15].field_f * 8192 / 65536, 4096) * 16 / 65536;
+                  var11Lifetime1Lifetime1 = kg.cosine16(this.instructions[var15].field_f * 8192 / 65536, (byte) -68) * 16 / 65536;
                 }
               } else {
                 this.a((byte) -69, param1, this.instructions[var15].field_f, var15, this.instructions[var15].field_k, param0, this.instructions[var15].field_l);
@@ -480,8 +480,8 @@ final class ArticulatedPart extends DualNode {
             if (var13 == 0) {
               if (stackIn_27_0 != stackIn_9_1 &&
                 this.instructions[var8].field_u) {
-                var9 = jh.a(-var7 / 8, 4096) / 256;
-                var10 = kg.a(-var7 / 8, (byte) -103) / 256;
+                var9 = jh.sine16(-var7 / 8, 4096) / 256;
+                var10 = kg.cosine16(-var7 / 8, (byte) -103) / 256;
                 var11 = param3 * (hj.field_w * ((this.instructions[var8].field_r - this.field_E) * var9 + (this.instructions[var8].field_s - this.field_G) * var10) >> 20) + param1;
                 var12 = ((-((this.instructions[var8].field_s - this.field_G) * var9) + (-this.field_E + this.instructions[var8].field_r) * var10) * hj.field_w >> 20) + param2;
                 this.instructions[var8].attachedPart.a((byte) 122, var11, var12, param3);
@@ -551,8 +551,8 @@ final class ArticulatedPart extends DualNode {
           if (var13 == 0) {
             if (null != this.instructions[var14].attachedPart &&
               !this.instructions[var14].field_u) {
-              var9Lifetime1 = jh.a(-var7 / 8, 4096) / 256;
-              var10Lifetime1 = kg.a(-var7 / 8, (byte) -71) / 256;
+              var9Lifetime1 = jh.sine16(-var7 / 8, 4096) / 256;
+              var10Lifetime1 = kg.cosine16(-var7 / 8, (byte) -71) / 256;
               var11Lifetime1 = param3 * (hj.field_w * ((this.instructions[var14].field_r - this.field_E) * var9Lifetime1 + var10Lifetime1 * (-this.field_G + this.instructions[var14].field_s)) >> 20) + param1;
               var12Lifetime1 = param2 + (hj.field_w * ((this.instructions[var14].field_r - this.field_E) * var10Lifetime1 - var9Lifetime1 * (-this.field_G + this.instructions[var14].field_s)) >> 20);
               this.instructions[var14].attachedPart.a((byte) 101, var11Lifetime1, var12Lifetime1, param3);
@@ -677,8 +677,8 @@ final class ArticulatedPart extends DualNode {
         while (var5 < this.instructions.length) {
           if (var10 == 0) {
             if (null != this.instructions[var5].attachedPart) {
-              var6 = 32 * jh.a(-this.rotation * 8192 / 65536, 4096) / 65536;
-              var7 = kg.a(-this.rotation * 8192 / 65536, (byte) -68) * 32 / 65536;
+              var6 = 32 * jh.sine16(-this.rotation * 8192 / 65536, 4096) / 65536;
+              var7 = kg.cosine16(-this.rotation * 8192 / 65536, (byte) -68) * 32 / 65536;
               var8 = param1 + ((-this.field_E + this.instructions[var5].field_r) * var6 + var7 * (this.instructions[var5].field_s - this.field_G)) * param2;
               var9 = param3 + (-this.field_E + this.instructions[var5].field_r) * var7 - var6 * (this.instructions[var5].field_s - this.field_G);
               this.instructions[var5].attachedPart.b((byte) -128, var8, param2, var9);

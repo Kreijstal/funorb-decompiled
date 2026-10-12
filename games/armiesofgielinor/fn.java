@@ -67,16 +67,16 @@ class fn extends fw {
         }
     }
 
-    void a(int param0, int param1, int param2, kb param3) {
+    void a(int param0, int param1, int param2, Widget param3) {
         pm var5 = null;
         int var6 = 0;
         try {
           super.a(param0, param1, param2, param3);
           this.l(param0 - 32722);
           if (1 == this.field_q) {
-            if (this.field_k instanceof pm) {
-              var5 = (pm) ((Object) this.field_k);
-              var6 = var5.a((kb) (this), AiPlanningStrategy.field_d, 113, param2, ko.field_b, param1);
+            if (this.painter instanceof pm) {
+              var5 = (pm) ((Object) this.painter);
+              var6 = var5.a((Widget) (this), AiPlanningStrategy.field_d, 113, param2, ko.field_b, param1);
               if (var6 != -1) {
                 if (this.field_P &&
                   this.field_V > var6 &&
@@ -217,7 +217,7 @@ class fn extends fw {
         }
     }
 
-    final boolean a(kb param0, int param1, char param2, int param3) {
+    final boolean a(Widget param0, int param1, char param2, int param3) {
         int dupTemp$0 = 0;
         int stackIn_27_1 = 0;
         int stackIn_34_1 = 0;
@@ -433,7 +433,7 @@ class fn extends fw {
         this.field_P = false;
         this.field_V = -1;
         try {
-          this.field_k = t.field_c.field_w;
+          this.painter = t.field_c.field_w;
           this.field_R = param2;
           this.a(true, param0, -27934);
           this.field_N = true;
@@ -466,16 +466,16 @@ class fn extends fw {
           this.field_z = 0;
           return;
         }
-        if (!(this.field_k instanceof pm)) {
+        if (!(this.painter instanceof pm)) {
           return;
         }
-        var9 = (pm) ((Object) this.field_k);
-        var3 = var9.a(-100, (kb) (this));
+        var9 = (pm) ((Object) this.painter);
+        var3 = var9.a(-100, (Widget) (this));
         if (param0 != 0) {
           discarded$0 = this.e((byte) -33);
         }
         var4 = var3.a(false);
-        var5 = var9.b(66, (kb) (this));
+        var5 = var9.b(66, (Widget) (this));
         var6 = var9.a(true) >> 1;
         if (-var6 + var5 > var4) {
           this.field_z = 0;
@@ -529,7 +529,7 @@ class fn extends fw {
         }
     }
 
-    final boolean a(int param0, int param1, int param2, int param3, kb param4, int param5, int param6) {
+    final boolean a(int param0, int param1, int param2, int param3, Widget param4, int param5, int param6) {
         int stackIn_9_1 = 0;
         boolean stackIn_12_1 = false;
         RuntimeException stackIn_24_0 = null;
@@ -546,10 +546,10 @@ class fn extends fw {
           if (!super.a(param0, param1, param2, 119, param4, param5, param6)) {
             return false;
           }
-          if (!(this.field_k instanceof pm)) {
+          if (!(this.painter instanceof pm)) {
             return false;
           }
-          var8_int = ((pm) ((Object) this.field_k)).a((kb) (this), AiPlanningStrategy.field_d, 87, param2, ko.field_b, param1);
+          var8_int = ((pm) ((Object) this.painter)).a((Widget) (this), AiPlanningStrategy.field_d, 87, param2, ko.field_b, param1);
           if (var8_int != -1) {
             stackIn_9_1 = var8_int;
           } else {
@@ -598,17 +598,17 @@ class fn extends fw {
         if (param2 > -82) {
           return;
         }
-        if (this.field_k != null &&
+        if (this.painter != null &&
           param3 == 0) {
-          this.field_k.a((kb) (this), param0, -128, this.field_I, param1);
-          if (this.field_k instanceof pm) {
-            var8 = (pm) ((Object) this.field_k);
+          this.painter.paintWidget((Widget) (this), param0, -128, this.field_I, param1);
+          if (this.painter instanceof pm) {
+            var8 = (pm) ((Object) this.painter);
             if (this.field_O != this.field_L) {
-              var8.a(-21259, this.field_O, this.field_L, (kb) (this), param1, param0);
+              var8.a(-21259, this.field_O, this.field_L, (Widget) (this), param1, param0);
             }
             var6 = vi.b(-126);
             if ((var6 - this.field_U) % 1000L < 500L) {
-              var8.a(param1, 1024, param0, (kb) (this), this.field_O);
+              var8.a(param1, 1024, param0, (Widget) (this), this.field_O);
             }
           }
         }
@@ -619,11 +619,11 @@ class fn extends fw {
           Throwable decompiledCaughtException = null;
           String var2 = null;
           Exception var2_ref = null;
-          kb var3 = null;
+          Widget var3 = null;
           try {
             if (param0 != -104) {
-              var3 = (kb) null;
-              this.a((kb) null, -59, 'x', 71);
+              var3 = (Widget) null;
+              this.a((Widget) null, -59, 'x', 71);
             }
             var2 = (String) (java.awt.Toolkit.getDefaultToolkit().getSystemClipboard().getContents((Object) null).getTransferData(java.awt.datatransfer.DataFlavor.stringFlavor));
             this.j(param0 + 1104);

@@ -29,14 +29,14 @@ final class tn extends sf implements he {
 
     tn(gk param0) {
         super(param0, 200, 130);
-        kb var2 = null;
+        Widget var2 = null;
         try {
-          var2 = new kb(SummonRequest.field_z, (qo) null);
-          var2.field_w = 80;
-          var2.field_l = this.field_l;
-          var2.field_B = 0;
-          var2.field_p = 50;
-          var2.field_k = (kh) ((Object) new lk(gl.field_e, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
+          var2 = new Widget(SummonRequest.field_z, (qo) null);
+          var2.height = 80;
+          var2.width = this.width;
+          var2.x = 0;
+          var2.y = 50;
+          var2.painter = (WidgetPainter) ((Object) new lk(gl.field_e, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
           this.a((byte) 10, var2);
           if (DamageEvent.g(98)) {
             this.field_fb = this.a((qo) (this), true, tg.field_j);
@@ -107,11 +107,11 @@ final class tn extends sf implements he {
           if (!param1) {
             tn.a(false, -22, 101);
           }
-          var4.field_k = (kh) ((Object) new nu());
-          var5 = -6 + this.field_w;
-          this.field_w = this.field_w + 38;
-          var4.a(15, -14 + this.field_l - 16, var5, 8192, 30);
-          this.a((byte) 10, (kb) (var4));
+          var4.painter = (WidgetPainter) ((Object) new nu());
+          var5 = -6 + this.height;
+          this.height = this.height + 38;
+          var4.setBounds(15, -14 + this.width - 16, var5, 8192, 30);
+          this.a((byte) 10, (Widget) (var4));
           this.e(0);
           stackIn_3_0 = var4;
           return stackIn_3_0;
@@ -135,7 +135,7 @@ final class tn extends sf implements he {
         }
     }
 
-    final boolean a(kb param0, int param1, char param2, int param3) {
+    final boolean a(Widget param0, int param1, char param2, int param3) {
         RuntimeException var5 = null;
         boolean stackIn_12_0 = false;
         RuntimeException stackIn_15_0 = null;
@@ -145,10 +145,10 @@ final class tn extends sf implements he {
         try {
           if (98 == param1) {
             if (this.field_fb == null) {
-              this.field_bb.a(11, (kb) (this));
+              this.field_bb.a(11, (Widget) (this));
               return true;
             }
-            this.field_fb.a(11, (kb) (this));
+            this.field_fb.a(11, (Widget) (this));
             return true;
           }
           if (param3 != -12215) {
@@ -158,7 +158,7 @@ final class tn extends sf implements he {
             stackIn_12_0 = super.a(param0, param1, param2, param3 + 0);
             return stackIn_12_0;
           }
-          this.field_bb.a(11, (kb) (this));
+          this.field_bb.a(11, (Widget) (this));
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -159,7 +159,7 @@ final class rv {
           if (param0) {
             field_a = (String) null;
           }
-          if (gs.field_a) {
+          if (DropdownArrowPainter.field_a) {
             if (null != ro.field_lb) {
               for (var4_int = 0; var4_int < ro.field_lb.length; var4_int++) {
                 if (~param3 == ~ro.field_lb[var4_int]) {

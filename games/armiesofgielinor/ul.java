@@ -41,22 +41,22 @@ final class ul {
               var9 = -56 % ((-5 - param0) / 50);
               return;
             }
-            kb.field_n = kb.field_n + 1;
+            Widget.field_n = Widget.field_n + 1;
             if (var8 > 0) {
-              kb.field_n = kb.field_n + var8;
+              Widget.field_n = Widget.field_n + var8;
             }
-            if (15 < kb.field_n) {
-              kb.field_n = 15;
+            if (15 < Widget.field_n) {
+              Widget.field_n = 15;
             }
             CorpseConditionMarker.a(-28309, false);
             return;
           }
-          kb.field_n = kb.field_n - 1;
+          Widget.field_n = Widget.field_n - 1;
           if (var8 < 0) {
-            kb.field_n = kb.field_n + var8;
+            Widget.field_n = Widget.field_n + var8;
           }
-          if (kb.field_n < -15) {
-            kb.field_n = -15;
+          if (Widget.field_n < -15) {
+            Widget.field_n = -15;
           }
           CorpseConditionMarker.a(-28309, false);
           return;
@@ -585,7 +585,7 @@ final class ul {
 
     final static void a(IndexedSprite[] param0, byte param1, ArmiesOfGielinor param2) {
         try {
-          br.field_a = new oo(param2, bi.field_c, param0, new String[]{BufferedSocket.field_a, LeaderEscortCondition.field_b, IntPair.field_o, pp.field_S, bj.field_q});
+          br.field_a = new oo(param2, bi.field_c, param0, new String[]{BufferedSocket.field_a, LeaderEscortCondition.field_b, IntPair.field_o, DropdownOptionList.field_S, bj.field_q});
           if (param1 <= 56) {
             field_g = (RgbSprite) null;
           }

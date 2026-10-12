@@ -3,7 +3,7 @@
  */
 class kq extends fw {
     static int field_L;
-    private kb field_Q;
+    private Widget field_Q;
     static me field_M;
     static je field_N;
     static RgbSprite field_P;
@@ -172,7 +172,7 @@ class kq extends fw {
         }
     }
 
-    kq(kb param0) {
+    kq(Widget param0) {
         try {
           this.field_Q = param0;
         } catch (RuntimeException runtimeException) {
@@ -207,7 +207,7 @@ class kq extends fw {
         }
     }
 
-    final boolean a(int param0, kb param1) {
+    final boolean a(int param0, Widget param1) {
         RuntimeException var3 = null;
         boolean stackIn_3_0 = false;
         RuntimeException stackIn_6_0 = null;

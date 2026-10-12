@@ -79,8 +79,8 @@ final class qu extends IntrusiveNode {
     }
 
     final static void a(int param0, int param1, int param2) {
-        if (pp.field_R == null) {
-          pp.field_R = new int[param2 * 2];
+        if (DropdownOptionList.field_R == null) {
+          DropdownOptionList.field_R = new int[param2 * 2];
           if (no.field_U == null ||
             !(param2 <= no.field_U.length)) {
             no.field_U = new int[param2 * 2];
@@ -145,7 +145,7 @@ final class qu extends IntrusiveNode {
             }
           }
         } else {
-          if (pp.field_R.length >= param2) {
+          if (DropdownOptionList.field_R.length >= param2) {
             if (no.field_U == null ||
               !(param2 <= no.field_U.length)) {
               no.field_U = new int[param2 * 2];
@@ -210,7 +210,7 @@ final class qu extends IntrusiveNode {
               }
             }
           } else {
-            pp.field_R = new int[param2 * 2];
+            DropdownOptionList.field_R = new int[param2 * 2];
             if (no.field_U == null ||
               !(param2 <= no.field_U.length)) {
               no.field_U = new int[param2 * 2];

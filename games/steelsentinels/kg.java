@@ -72,7 +72,7 @@ final class kg extends SceneWidget {
             param3.repaint();
           }
           if (param2 != 28594) {
-            kg.a(35, (byte) -13);
+            kg.cosine16(35, (byte) -13);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
@@ -138,41 +138,41 @@ final class kg extends SceneWidget {
         this.a(param2, param4, (byte) 126);
     }
 
-    final static int a(int param0, byte param1) {
+    final static int cosine16(int angle, byte obfuscationGuard) {
         int stackIn_5_0 = 0;
         int stackIn_9_0 = 0;
         int stackIn_15_0 = 0;
         int stackIn_19_0 = 0;
-        param0 = param0 & 8191;
-        if (param1 < -67) {
-          if (param0 < 4096) {
-            if (2048 > param0) {
-              stackIn_19_0 = hk.field_Zb[2048 - param0];
+        angle = angle & 8191;
+        if (obfuscationGuard < -67) {
+          if (angle < 4096) {
+            if (2048 > angle) {
+              stackIn_19_0 = hk.quarterSine16[2048 - angle];
             } else {
-              stackIn_19_0 = -hk.field_Zb[param0 - 2048];
+              stackIn_19_0 = -hk.quarterSine16[angle - 2048];
             }
             return stackIn_19_0;
           }
-          if (param0 >= 6144) {
-            stackIn_15_0 = hk.field_Zb[-6144 + param0];
+          if (angle >= 6144) {
+            stackIn_15_0 = hk.quarterSine16[-6144 + angle];
           } else {
-            stackIn_15_0 = -hk.field_Zb[-param0 + 6144];
+            stackIn_15_0 = -hk.quarterSine16[-angle + 6144];
           }
           return stackIn_15_0;
         }
         kg.a(61, 53, -111);
-        if (param0 < 4096) {
-          if (2048 > param0) {
-            stackIn_9_0 = hk.field_Zb[2048 - param0];
+        if (angle < 4096) {
+          if (2048 > angle) {
+            stackIn_9_0 = hk.quarterSine16[2048 - angle];
           } else {
-            stackIn_9_0 = -hk.field_Zb[param0 - 2048];
+            stackIn_9_0 = -hk.quarterSine16[angle - 2048];
           }
           return stackIn_9_0;
         }
-        if (param0 >= 6144) {
-          stackIn_5_0 = hk.field_Zb[-6144 + param0];
+        if (angle >= 6144) {
+          stackIn_5_0 = hk.quarterSine16[-6144 + angle];
         } else {
-          stackIn_5_0 = -hk.field_Zb[-param0 + 6144];
+          stackIn_5_0 = -hk.quarterSine16[-angle + 6144];
         }
         return stackIn_5_0;
     }

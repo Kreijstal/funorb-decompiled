@@ -69,7 +69,7 @@ abstract class en extends tj implements eg {
         }
     }
 
-    en(int param0, int param1, int param2, int param3, kh param4) {
+    en(int param0, int param1, int param2, int param3, WidgetPainter param4) {
         super(param0, param1, param2, param3, param4);
     }
 

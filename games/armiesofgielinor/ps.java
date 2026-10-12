@@ -63,7 +63,7 @@ final class ps extends lk {
         field_D = null;
     }
 
-    public final void a(kb param0, int param1, int param2, boolean param3, int param4) {
+    public final void paintWidget(Widget widget, int originX, int obfuscationGuard, boolean renderFlag, int originY) {
         int stackIn_8_0 = 0;
         int stackIn_14_0 = 0;
         int stackIn_19_0 = 0;
@@ -81,18 +81,18 @@ final class ps extends lk {
         int var12 = 0;
         int var13 = 0;
         try {
-          SoftwareRaster.b(param0.field_B + param1, param4 + param0.field_p, param0.field_l, param0.field_w, 10197915);
-          if (param2 > -79) {
+          SoftwareRaster.b(widget.x + originX, originY + widget.y, widget.width, widget.height, 10197915);
+          if (obfuscationGuard > -79) {
             field_A = (String) null;
           }
-          if (param3) {
-            stackIn_8_0 = (((fw) (param0)).field_K) ? 1 : 0;
+          if (renderFlag) {
+            stackIn_8_0 = (((fw) (widget)).field_K) ? 1 : 0;
           } else {
             stackIn_8_0 = 0;
           }
           var6_int = stackIn_8_0;
-          if (param3) {
-            stackIn_14_0 = (param0.a(false)) ? 1 : 0;
+          if (renderFlag) {
+            stackIn_14_0 = (widget.a(false)) ? 1 : 0;
           } else {
             stackIn_14_0 = 0;
           }
@@ -107,23 +107,23 @@ final class ps extends lk {
             var8 = var8 | 1;
           }
           var10 = this.field_B[var8];
-          var11 = param1 + param0.field_B + (-var10.pixelWidth + param0.field_l) / 2;
-          var12 = (-var10.pixelHeight + param0.field_w) / 2 + param4 + param0.field_p;
-          var13 = param0.field_B + (param1 + param0.field_l / 2);
+          var11 = originX + widget.x + (-var10.pixelWidth + widget.width) / 2;
+          var12 = (-var10.pixelHeight + widget.height) / 2 + originY + widget.y;
+          var13 = widget.x + (originX + widget.width / 2);
           var10.draw(var11, var12);
-          this.field_q.c(this.d(0, param0), var13, param4, var9, -1);
+          this.field_q.c(this.d(0, widget), var13, originY, var9, -1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = decompiledCaughtException;
           stackIn_26_0 = var6;
           stackIn_26_1 = new StringBuilder().append("ps.C(");
-          if (param0 == null) {
+          if (widget == null) {
             stackIn_27_2 = "null";
           } else {
             stackIn_27_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(',').append(originX).append(',').append(obfuscationGuard).append(',').append(renderFlag).append(',').append(originY).append(')').toString());
         }
     }
 

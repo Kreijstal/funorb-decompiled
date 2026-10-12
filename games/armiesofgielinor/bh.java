@@ -33,7 +33,7 @@ final class bh extends nl {
     }
 
     public bh() {
-        super(0, 0, 0, 0, (kh) null, (qo) null);
+        super(0, 0, 0, 0, (WidgetPainter) null, (qo) null);
         this.field_K = 256;
     }
 
@@ -48,28 +48,28 @@ final class bh extends nl {
           return;
         }
         if (this.field_K == 256) {
-          this.field_E.a(this.field_B + param0, param1 + this.field_p, (byte) -125, param3);
+          this.field_E.a(this.x + param0, param1 + this.y, (byte) -125, param3);
           return;
         }
-        RgbSprite var6 = new RgbSprite(this.field_E.field_l, this.field_E.field_w);
+        RgbSprite var6 = new RgbSprite(this.field_E.width, this.field_E.height);
         if (param2 < -82) {
           CombatSandbox.a(var6, 3);
           this.field_E.a(0, 0, (byte) -86, param3);
           rf.b(-18862);
-          var6.e(this.field_B + param0, param1 + this.field_p, this.field_K);
+          var6.e(this.x + param0, param1 + this.y, this.field_K);
           return;
         }
         field_M = (String[]) null;
         CombatSandbox.a(var6, 3);
         this.field_E.a(0, 0, (byte) -86, param3);
         rf.b(-18862);
-        var6.e(this.field_B + param0, param1 + this.field_p, this.field_K);
+        var6.e(this.x + param0, param1 + this.y, this.field_K);
     }
 
-    bh(kb param0) {
-        super(param0.field_B, param0.field_p, param0.field_l, param0.field_w, (kh) null, (qo) null);
+    bh(Widget param0) {
+        super(param0.x, param0.y, param0.width, param0.height, (WidgetPainter) null, (qo) null);
         try {
-          param0.a(0, this.field_l, 0, 8192, this.field_w);
+          param0.setBounds(0, this.width, 0, 8192, this.height);
           this.field_K = 256;
           this.field_E = param0;
         } catch (RuntimeException runtimeException) {

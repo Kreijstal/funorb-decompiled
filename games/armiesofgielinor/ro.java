@@ -58,7 +58,7 @@ class ro extends pt implements he {
         }
     }
 
-    final boolean a(kb param0, int param1, char param2, int param3) {
+    final boolean a(Widget param0, int param1, char param2, int param3) {
         RuntimeException var5 = null;
         boolean stackIn_6_0 = false;
         RuntimeException stackIn_9_0 = null;
@@ -99,7 +99,7 @@ class ro extends pt implements he {
           this.field_nb = param1;
           this.field_tb = new rj(13, 50, 274, 30, 15, 2113632, 4210752);
           this.field_tb.field_R = true;
-          this.a((byte) 10, (kb) (this.field_tb));
+          this.a((byte) 10, (Widget) (this.field_tb));
         } catch (RuntimeException runtimeException) {
           throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "ro.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
         }
