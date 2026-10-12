@@ -1414,7 +1414,7 @@ public final class ArmiesOfGielinor extends wf {
           ek.a(236611664);
           ResourceRequest.e((byte) -126);
           is.a((byte) -5);
-          VorbisSample.b();
+          VorbisSample.releaseSetup();
           bq.a(30156);
           pu.a((byte) -114);
           uc.a((byte) -39);

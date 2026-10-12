@@ -311,12 +311,12 @@ final class DualNodeDeque {
     final static void a(byte param0, ResourceArchive param1) {
         VorbisSample var2 = null;
         try {
-          VorbisSample.a(param1.getFileByName("", 96, "headers.packvorbis"));
+          VorbisSample.decodeSetup(param1.getFileByName("", 96, "headers.packvorbis"));
           var2 = VorbisSample.loadByName(param1, "jagex logo2.packvorbis", "");
           if (param0 >= -102) {
             DualNodeDeque.a(-11, -82, (byte) 79, 117, -17);
           }
-          var2.c();
+          var2.decodeAllToPcm();
         } catch (RuntimeException runtimeException) {
           throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "ui.G(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
