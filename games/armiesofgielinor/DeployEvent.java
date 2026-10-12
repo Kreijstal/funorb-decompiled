@@ -160,7 +160,7 @@ final class DeployEvent extends GameEvent {
         }
     }
 
-    final static void a(int param0, boolean param1, int param2) {
+    final static void updateIgnoreListControls(int obfuscationGuard, boolean enableCapture, int visibleRows) {
         ScrollContainer stackIn_5_0;
         boolean stackIn_5_1;
         int stackIn_5_2;
@@ -174,7 +174,7 @@ final class DeployEvent extends GameEvent {
         RuntimeException var3 = null;
         NodeDeque var4 = null;
         Object var5 = null;
-        hl var6 = null;
+        SocialListEntry var6 = null;
         int var7 = 0;
         int var8 = 0;
         int var9 = 0;
@@ -188,18 +188,18 @@ final class DeployEvent extends GameEvent {
         ClientContextMenu var17 = null;
         var15 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          if (param0 >= -67) {
+          if (obfuscationGuard >= -67) {
             field_G = (String) null;
           }
           stackIn_5_0 = TaggedMapData.field_g.field_Kb;
-          stackIn_5_1 = param1;
-          stackIn_5_2 = (2 + jn.field_d) * (3 * param2);
+          stackIn_5_1 = enableCapture;
+          stackIn_5_2 = (2 + jn.field_d) * (3 * visibleRows);
           stackIn_5_3 = jn.field_d + 2;
           stackIn_6_4 = (PointerInputHandler.contextMenuScrollContainer == TaggedMapData.field_g.field_Kb);
           var3_int = ((ScrollContainer) (Object) stackIn_5_0).updateContentLayout(stackIn_5_1, stackIn_5_2, stackIn_5_3, stackIn_6_4, 0, 2) ? 1 : 0;
           var4 = TaggedMapData.field_g.field_Nb.children;
-          if (th.field_a != 2 &&
-            th.field_a != 1) {
+          if (th.socialListState != 2 &&
+            th.socialListState != 1) {
             TaggedMapData.field_g.field_Kb.viewport.text = ef.field_a;
             TaggedMapData.field_g.inputEnabled = false;
             ArchiveIndex.a(TaggedMapData.field_g.field_Nb, -71);
@@ -208,25 +208,25 @@ final class DeployEvent extends GameEvent {
           TaggedMapData.field_g.field_Kb.viewport.text = null;
           TaggedMapData.field_g.inputEnabled = true;
           var5 = null;
-          var6 = (hl) (var4.first((byte) 110));
+          var6 = (SocialListEntry) (var4.first((byte) 110));
           while (var6 != null) {
             var7 = 0;
             if (var6.children == null) {
-              var6.field_Qb = new ClientUiComponent(0L, IsaacRandom.field_i);
-              var6.addChild(var6.field_Qb, 114);
-              var6.field_Jb = new ClientUiComponent(0L, IsaacRandom.field_i);
-              var6.addChild(var6.field_Jb, 113);
+              var6.nameComponent = new ClientUiComponent(0L, IsaacRandom.field_i);
+              var6.addChild(var6.nameComponent, 114);
+              var6.previousNameComponent = new ClientUiComponent(0L, IsaacRandom.field_i);
+              var6.addChild(var6.previousNameComponent, 113);
               var6.inheritVisualStateForDescendants(-10027);
               var7 = 1;
             }
             var6.width = TaggedMapData.field_g.field_Nb.width;
-            var6.field_Qb.setBounds(jn.field_d, -20500, var6.width, 0, 0);
+            var6.nameComponent.setBounds(jn.field_d, -20500, var6.width, 0, 0);
             var8 = 0;
-            if (null != var6.field_Nb &&
-              !var6.field_Nb.equals("")) {
-              var6.field_Jb.sprite = NodeHashIterator.field_e;
-              var6.field_Jb.matchedButtonTextColour = 16737894;
-              var6.field_Jb.setBounds(jn.field_d, -20500, NodeHashIterator.field_e.canvasWidth + 3, 0, 0);
+            if (null != var6.previousDisplayName &&
+              !var6.previousDisplayName.equals("")) {
+              var6.previousNameComponent.sprite = NodeHashIterator.field_e;
+              var6.previousNameComponent.matchedButtonTextColour = 16737894;
+              var6.previousNameComponent.setBounds(jn.field_d, -20500, NodeHashIterator.field_e.canvasWidth + 3, 0, 0);
               var8 = 1;
             }
             var9 = 0;
@@ -235,33 +235,33 @@ final class DeployEvent extends GameEvent {
               var9 = 3 + NodeHashIterator.field_e.canvasWidth;
               var10 = var10 - var9;
             }
-            stackIn_21_0 = var6.field_Qb;
+            stackIn_21_0 = var6.nameComponent;
             if (var10 <= 0) {
-              stackIn_22_1 = var6.field_Mb;
+              stackIn_22_1 = var6.displayName;
             } else {
-              stackIn_22_1 = BitmapFont.a(var6.field_Qb.font, var6.field_Mb, var10);
+              stackIn_22_1 = BitmapFont.a(var6.nameComponent.font, var6.displayName, var10);
             }
             stackIn_21_0.text = stackIn_22_1;
-            stackIn_25_0 = (var6.field_Qb.text.equals(var6.field_Mb)) ? 0 : 1;
+            stackIn_25_0 = (var6.nameComponent.text.equals(var6.displayName)) ? 0 : 1;
             var11 = stackIn_25_0;
-            var6.field_Qb.setBounds(jn.field_d, -20500, var10, 0, var9);
+            var6.nameComponent.setBounds(jn.field_d, -20500, var10, 0, var9);
             if (var3_int == 0) {
               var6.pendingHeightDelta = -var6.height + jn.field_d;
             }
             if (var7 != 0) {
               TaggedMapData.field_g.field_Nb.positionAfter(var6, true, 2, (ClientUiComponent) (var5));
             }
-            if (var6.field_Jb != null &&
-              var6.field_Jb.heldButtonMatches) {
-              ad.field_I = var6.field_Nb;
+            if (var6.previousNameComponent != null &&
+              var6.previousNameComponent.heldButtonMatches) {
+              ad.field_I = var6.previousDisplayName;
             } else {
-              if (var6.field_Qb.heldButtonMatches &&
+              if (var6.nameComponent.heldButtonMatches &&
                 var11 != 0) {
-                ad.field_I = var6.field_Mb;
+                ad.field_I = var6.displayName;
               }
             }
             if (0 != var6.pressedButton) {
-              ng.openClientContextMenu(TaggedMapData.field_g.field_Kb, var6, (int[]) null, var6.field_Mb, -1, -110, -1, var6.field_Pb, 0L);
+              ng.openClientContextMenu(TaggedMapData.field_g.field_Kb, var6, (int[]) null, var6.displayName, -1, -110, -1, var6.accountName, 0L);
               var16 = tn.activeContextMenu;
               var13_ref_String = ArchiveIndex.field_u;
               var16.menu.addTextAction(7, var13_ref_String, (byte) -100);
@@ -271,7 +271,7 @@ final class DeployEvent extends GameEvent {
               var17.menu.layoutPopup(0, var14, 0, (byte) -118, var13);
             }
             var5 = var6;
-            var6 = (hl) (var4.next((byte) 123));
+            var6 = (SocialListEntry) (var4.next((byte) 123));
           }
           if (0 != TaggedMapData.field_g.field_Ib.pressedButton) {
             EffectPresentation.field_e = new oc(TaggedMapData.field_g.field_Ib.screenX, TaggedMapData.field_g.field_Ib.screenY, TaggedMapData.field_g.field_Ib.width, TaggedMapData.field_g.field_Ib.height, iw.field_o, kq.field_N, eq.field_h, eq.field_h);
@@ -286,7 +286,7 @@ final class DeployEvent extends GameEvent {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) var3), "tr.D(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) var3), "tr.D(" + obfuscationGuard + ',' + enableCapture + ',' + visibleRows + ')');
         }
     }
 

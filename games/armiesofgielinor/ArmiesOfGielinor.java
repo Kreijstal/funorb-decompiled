@@ -317,7 +317,7 @@ public final class ArmiesOfGielinor extends wf {
                     stackIn_337_0 = ~nm.deliveredOpcode;
                     stackIn_337_1 = -65;
                     if (stackIn_337_0 == stackIn_337_1 &&
-                      gt.a(var8[var10_int], (byte) 121)) {
+                      gt.isLocalAccountName(var8[var10_int], (byte) 121)) {
                       var9 = var10_int;
                     }
                     var10_int++;
@@ -1450,7 +1450,7 @@ public final class ArmiesOfGielinor extends wf {
           DeployAction.a(true);
           c.a(param0 + 157);
           SummonAction.a((byte) 113);
-          k.a(param0 ^ 75);
+          AccountNameNormalizer.a(param0 ^ 75);
           bw.a(-28911);
           StateChangeMarker.a((byte) -3);
           DisplacedUnitMarker.e(1223);
@@ -1533,7 +1533,7 @@ public final class ArmiesOfGielinor extends wf {
           oi.b(true);
           bh.c(false);
           ps.c(false);
-          hl.k(param0 - 4103);
+          SocialListEntry.k(param0 - 4103);
           we.a((byte) 120);
           b.a(true);
           iw.a(-25771);
@@ -1816,7 +1816,7 @@ public final class ArmiesOfGielinor extends wf {
           if (decompiledFrameCompleted0) {
             if (param0 ||
               var6 != 0) {
-              var4_ref_String = mv.field_d;
+              var4_ref_String = mv.localAccountName;
               var3 = new String[2];
               if (var4_ref_String == null) {
                 var4_ref_String = BoundedFile.field_i;

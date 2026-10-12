@@ -16,7 +16,7 @@ final class jj {
         field_g = null;
         if (param0 >= -106) {
           String var2 = (String) null;
-          jj.a(-113, (String) null);
+          jj.isFriend(-113, (String) null);
           field_i = null;
           field_d = null;
           animationFramesArchive = null;
@@ -37,7 +37,7 @@ final class jj {
         field_f = null;
     }
 
-    final static boolean a(int param0, String param1) {
+    final static boolean isFriend(int obfuscationGuard, String name) {
         RuntimeException var2 = null;
         String var3 = null;
         boolean stackIn_5_0 = false;
@@ -46,18 +46,18 @@ final class jj {
         String stackIn_9_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param0 < 18) {
+          if (obfuscationGuard < 18) {
             var3 = (String) null;
-            jj.a(93, (String) null);
+            jj.isFriend(93, (String) null);
           }
-          stackIn_5_0 = (lg.a(param1, (byte) -34) != null);
+          stackIn_5_0 = (lg.findFriend(name, (byte) -34) != null);
           return stackIn_5_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
           stackIn_8_0 = var2;
-          stackIn_8_1 = new StringBuilder().append("jj.C(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_8_1 = new StringBuilder().append("jj.C(").append(obfuscationGuard).append(',');
+          if (name == null) {
             stackIn_9_2 = "null";
           } else {
             stackIn_9_2 = "{...}";
@@ -260,7 +260,7 @@ final class jj {
           return stackIn_20_0;
         }
         var2 = (String) null;
-        jj.a(47, (String) null);
+        jj.isFriend(47, (String) null);
         if (tn.activeContextMenu != null) {
           return true;
         }

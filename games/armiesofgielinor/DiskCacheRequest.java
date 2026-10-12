@@ -12,7 +12,7 @@ final class DiskCacheRequest extends ResourceRequest {
     int operation;
     SectorCacheStore store;
     static int field_E;
-    static DualNodeHashTable field_K;
+    static DualNodeHashTable friendsByName;
 
     final static RgbSprite a(String param0, String param1, ResourceArchive param2, boolean param3) {
         int var4_int = 0;
@@ -78,7 +78,7 @@ final class DiskCacheRequest extends ResourceRequest {
           return;
         }
         field_H = null;
-        field_K = null;
+        friendsByName = null;
     }
 
     DiskCacheRequest() {

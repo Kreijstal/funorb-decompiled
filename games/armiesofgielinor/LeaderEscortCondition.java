@@ -213,7 +213,7 @@ final class LeaderEscortCondition implements MatchCondition {
               var6 = var4_ref.field_k;
               th.field_b[0].field_d = false;
               var7 = var4_ref.field_p;
-              th.field_b[0].field_f = mv.field_d;
+              th.field_b[0].field_f = mv.localAccountName;
               th.field_b[0].field_c = null;
               for (var8_int = 1; var8_int < var5; var8_int++) {
                 th.field_b[var8_int].field_f = var27.readNullTerminatedString(param0 ^ 8);
@@ -257,8 +257,8 @@ final class LeaderEscortCondition implements MatchCondition {
                     }
                   }
                   if (var21 != null &&
-                    gt.a(var21, (byte) 125)) {
-                    var8[1][var13] = mv.field_d;
+                    gt.isLocalAccountName(var21, (byte) 125)) {
+                    var8[1][var13] = mv.localAccountName;
                     var9[1][var13] = null;
                     var31[1][var13] = var22;
                     var13++;

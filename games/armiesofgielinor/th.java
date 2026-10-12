@@ -4,7 +4,7 @@
 final class th {
     static int field_c;
     static ko[] field_b;
-    static int field_a;
+    static int socialListState;
 
     final static boolean a(MeshData param0, int param1) {
         int var2_int = 0;

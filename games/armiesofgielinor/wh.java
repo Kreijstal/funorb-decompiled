@@ -9,7 +9,7 @@ final class wh {
     static ClientUiComponent field_g;
     static boolean field_f;
     static String field_d;
-    static NodeDeque field_c;
+    static NodeDeque friendEntries;
 
     final static boolean a(ResourceArchive param0, byte param1, ResourceArchive param2, ResourceArchive param3) {
         RuntimeException var4 = null;
@@ -100,13 +100,13 @@ final class wh {
         field_g = null;
         field_d = null;
         if (param0 == 0) {
-          field_c = null;
+          friendEntries = null;
           field_e = null;
           field_h = null;
           return;
         }
         field_a = 83;
-        field_c = null;
+        friendEntries = null;
         field_e = null;
         field_h = null;
     }

@@ -26,167 +26,167 @@ final class MatchConditionEntry extends IntrusiveNode {
         }
     }
 
-    final static void a(int param0) {
-        int fieldTemp$1 = 0;
-        int fieldTemp$0 = 0;
+    final static void processSocialListUpdate(int obfuscationGuard) {
+        int newIgnoreOrder = 0;
+        int newFriendOrder = 0;
         int stackIn_12_0 = 0;
         boolean stackIn_56_0 = false;
         int stackIn_63_0 = 0;
         RuntimeException decompiledCaughtException = null;
         boolean stackOut_55_0;
-        CipherPacketBuffer var1 = null;
+        CipherPacketBuffer packet = null;
         RuntimeException var1_ref = null;
-        int var2 = 0;
-        Object var3 = null;
-        int var3_int = 0;
-        int var4 = 0;
-        String var4_ref_String = null;
-        String var5 = null;
-        hl var6 = null;
-        hl var7 = null;
-        String var7_ref = null;
-        String var8 = null;
-        int var9 = 0;
-        Object var3Lifetime1;
-        String var4_ref_StringLifetime1;
-        String var5Lifetime1;
-        hl var6Lifetime1;
-        var9 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        int updateType = 0;
+        Object initialLocation = null;
+        int hasSeparateAccountName = 0;
+        int chatFilterBits = 0;
+        String ignoreDisplayName = null;
+        String ignoreAccountName = null;
+        SocialListEntry ignoreEntry = null;
+        SocialListEntry nextFriend = null;
+        String previousIgnoreName = null;
+        String ignoreNameKey = null;
+        int obfuscationControl = 0;
+        Object friendLocation;
+        String friendDisplayName;
+        String previousFriendName;
+        SocialListEntry friendEntry;
+        obfuscationControl = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          var1 = ByteStorage.incomingPacket;
-          var2 = var1.readUnsignedByte(0);
-          if (var2 == 0) {
-            if (null == bk.field_a) {
-              bk.field_a = new DualNodeHashTable(128);
-              vg.field_p = 0;
+          packet = ByteStorage.incomingPacket;
+          updateType = packet.readUnsignedByte(0);
+          if (updateType == 0) {
+            if (null == bk.ignoredAccountsByName) {
+              bk.ignoredAccountsByName = new DualNodeHashTable(128);
+              vg.ignoreCount = 0;
             }
-            stackIn_12_0 = (1 != var1.readUnsignedByte(0)) ? 0 : 1;
-            var3_int = stackIn_12_0;
-            var4_ref_String = var1.readNullTerminatedString(1);
-            if (var3_int == 0) {
-              var5 = var4_ref_String;
+            stackIn_12_0 = (1 != packet.readUnsignedByte(0)) ? 0 : 1;
+            hasSeparateAccountName = stackIn_12_0;
+            ignoreDisplayName = packet.readNullTerminatedString(1);
+            if (hasSeparateAccountName == 0) {
+              ignoreAccountName = ignoreDisplayName;
             }
-            if (var3_int != 0 ||
-              var9 != 0) {
-              var5 = var1.readNullTerminatedString(1);
+            if (hasSeparateAccountName != 0 ||
+              obfuscationControl != 0) {
+              ignoreAccountName = packet.readNullTerminatedString(1);
             }
-            var6 = db.a(var4_ref_String, -124);
-            var7_ref = var1.readNullTerminatedString(1);
-            var8 = k.a((CharSequence) ((Object) var4_ref_String), false);
-            if (null == var8) {
-              var8 = var4_ref_String;
+            ignoreEntry = db.findIgnoredAccount(ignoreDisplayName, -124);
+            previousIgnoreName = packet.readNullTerminatedString(1);
+            ignoreNameKey = AccountNameNormalizer.normalize((CharSequence) ((Object) ignoreDisplayName), false);
+            if (null == ignoreNameKey) {
+              ignoreNameKey = ignoreDisplayName;
             }
-            if (null == var6) {
-              var6 = db.a(var7_ref, param0 - 47);
-              if (null != var6) {
-                bk.field_a.put(-1, (long)var8.hashCode(), var6);
+            if (null == ignoreEntry) {
+              ignoreEntry = db.findIgnoredAccount(previousIgnoreName, obfuscationGuard - 47);
+              if (null != ignoreEntry) {
+                bk.ignoredAccountsByName.put(-1, (long)ignoreNameKey.hashCode(), ignoreEntry);
               }
             }
-            if (null == var6) {
-              var6 = new hl();
-              bk.field_a.put(-1, (long)var8.hashCode(), var6);
-              fieldTemp$1 = vg.field_p;
-              vg.field_p = vg.field_p + 1;
-              var6.field_Ob = fieldTemp$1;
-              ot.field_E.addLast((byte) -119, (IntrusiveNode) (var6));
+            if (null == ignoreEntry) {
+              ignoreEntry = new SocialListEntry();
+              bk.ignoredAccountsByName.put(-1, (long)ignoreNameKey.hashCode(), ignoreEntry);
+              newIgnoreOrder = vg.ignoreCount;
+              vg.ignoreCount = vg.ignoreCount + 1;
+              ignoreEntry.orderIndex = newIgnoreOrder;
+              ot.ignoreEntries.addLast((byte) -119, (IntrusiveNode) (ignoreEntry));
             }
-            var6.field_Nb = var7_ref;
-            var6.field_Pb = var5;
-            var6.field_Mb = var4_ref_String;
+            ignoreEntry.previousDisplayName = previousIgnoreName;
+            ignoreEntry.accountName = ignoreAccountName;
+            ignoreEntry.displayName = ignoreDisplayName;
             return;
           }
-          if (var2 != 1) {
-            if (var2 == 2) {
-              if (th.field_a == 1) {
-                th.field_a = 2;
+          if (updateType != 1) {
+            if (updateType == 2) {
+              if (th.socialListState == 1) {
+                th.socialListState = 2;
               }
               return;
             }
-            if (var2 == 3) {
-              if (th.field_a == 2) {
-                th.field_a = 1;
+            if (updateType == 3) {
+              if (th.socialListState == 2) {
+                th.socialListState = 1;
               }
               return;
             }
-            if (param0 != 1) {
+            if (obfuscationGuard != 1) {
               MatchConditionEntry.a((byte) -118);
             }
-            if (var2 != 4) {
+            if (updateType != 4) {
               af.a((Throwable) null, -66, "F1: " + CampaignProgress.b(false));
               dj.a((byte) -125);
               return;
             }
-            th.field_a = 1;
-            var3 = var1.readNullTerminatedString(1);
-            vl.field_p = ((String) (var3)).intern();
-            var4 = var1.readUnsignedByte(0);
-            ClientUiNode.b(var4, param0 - 27499);
+            th.socialListState = 1;
+            initialLocation = packet.readNullTerminatedString(1);
+            vl.currentLocationLabel = ((String) (initialLocation)).intern();
+            chatFilterBits = packet.readUnsignedByte(0);
+            ClientUiNode.b(chatFilterBits, obfuscationGuard - 27499);
             return;
           }
-          if (DiskCacheRequest.field_K == null) {
-            DiskCacheRequest.field_K = new DualNodeHashTable(128);
-            dj.field_a = 0;
+          if (DiskCacheRequest.friendsByName == null) {
+            DiskCacheRequest.friendsByName = new DualNodeHashTable(128);
+            dj.friendCount = 0;
           }
-          var3Lifetime1 = var1.readNullTerminatedString(1);
-          if (((String) (var3Lifetime1)).equals("")) {
-            var3Lifetime1 = null;
+          friendLocation = packet.readNullTerminatedString(1);
+          if (((String) (friendLocation)).equals("")) {
+            friendLocation = null;
           }
-          var4_ref_StringLifetime1 = var1.readNullTerminatedString(1);
-          var5Lifetime1 = var1.readNullTerminatedString(1);
-          var6Lifetime1 = lg.a(var4_ref_StringLifetime1, (byte) -34);
-          if (null == var6Lifetime1) {
-            var6Lifetime1 = lg.a(var5Lifetime1, (byte) -34);
-            if (null != var6Lifetime1) {
-              DiskCacheRequest.field_K.put(-1, (long)k.a((CharSequence) ((Object) var4_ref_StringLifetime1), false).hashCode(), var6Lifetime1);
+          friendDisplayName = packet.readNullTerminatedString(1);
+          previousFriendName = packet.readNullTerminatedString(1);
+          friendEntry = lg.findFriend(friendDisplayName, (byte) -34);
+          if (null == friendEntry) {
+            friendEntry = lg.findFriend(previousFriendName, (byte) -34);
+            if (null != friendEntry) {
+              DiskCacheRequest.friendsByName.put(-1, (long)AccountNameNormalizer.normalize((CharSequence) ((Object) friendDisplayName), false).hashCode(), friendEntry);
             }
           }
-          if (var6Lifetime1 == null) {
-            var6Lifetime1 = new hl();
-            DiskCacheRequest.field_K.put(-1, (long)k.a((CharSequence) ((Object) var4_ref_StringLifetime1), false).hashCode(), var6Lifetime1);
-            fieldTemp$0 = dj.field_a;
-            dj.field_a = dj.field_a + 1;
-            var6Lifetime1.field_Ob = fieldTemp$0;
-            wh.field_c.addLast((byte) -119, (IntrusiveNode) (var6Lifetime1));
+          if (friendEntry == null) {
+            friendEntry = new SocialListEntry();
+            DiskCacheRequest.friendsByName.put(-1, (long)AccountNameNormalizer.normalize((CharSequence) ((Object) friendDisplayName), false).hashCode(), friendEntry);
+            newFriendOrder = dj.friendCount;
+            dj.friendCount = dj.friendCount + 1;
+            friendEntry.orderIndex = newFriendOrder;
+            wh.friendEntries.addLast((byte) -119, (IntrusiveNode) (friendEntry));
           }
-          if (var3Lifetime1 != null) {
-            var3Lifetime1 = ((String) (var3Lifetime1)).intern();
+          if (friendLocation != null) {
+            friendLocation = ((String) (friendLocation)).intern();
           }
-          var6Lifetime1.field_Ib = (String) (var3Lifetime1);
-          var6Lifetime1.field_Nb = var5Lifetime1;
-          var6Lifetime1.field_Mb = var4_ref_StringLifetime1;
-          var6Lifetime1.unlink(-124);
-          var7 = (hl) (wh.field_c.first((byte) 111));
+          friendEntry.locationLabel = (String) (friendLocation);
+          friendEntry.previousDisplayName = previousFriendName;
+          friendEntry.displayName = friendDisplayName;
+          friendEntry.unlink(-124);
+          nextFriend = (SocialListEntry) (wh.friendEntries.first((byte) 111));
           scanLoop1: while (true) {
             boolean decompiledFrameRemainder0 = true;
-            if (null != var7) {
-              stackOut_55_0 = wd.a(false, var6Lifetime1, var7);
+            if (null != nextFriend) {
+              stackOut_55_0 = wd.isFriendOrderedAfter(false, friendEntry, nextFriend);
               stackIn_63_0 = stackOut_55_0 ? 1 : 0;
               stackIn_56_0 = stackOut_55_0;
-              decompiledFrameRemainder0 = (var9 == 0);
+              decompiledFrameRemainder0 = (obfuscationControl == 0);
               if ((decompiledFrameRemainder0) &&
                 (stackIn_56_0)) {
-                var7 = (hl) (wh.field_c.next((byte) 123));
+                nextFriend = (SocialListEntry) (wh.friendEntries.next((byte) 123));
                 continue;
               }
             }
             if (decompiledFrameRemainder0) {
-              if (null == var7) {
+              if (null == nextFriend) {
                 break scanLoop1;
               }
               stackIn_63_0 = -123;
             }
-            fj.$cfr$intArgs$a$f94c566f195c(stackIn_63_0, var6Lifetime1, var7);
-            if (var9 == 0) {
+            fj.$cfr$intArgs$a$f94c566f195c(stackIn_63_0, friendEntry, nextFriend);
+            if (obfuscationControl == 0) {
               return;
             }
             break;
           }
-          wh.field_c.addLast((byte) -119, (IntrusiveNode) (var6Lifetime1));
+          wh.friendEntries.addLast((byte) -119, (IntrusiveNode) (friendEntry));
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) var1_ref), "u.B(" + param0 + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) var1_ref), "u.B(" + obfuscationGuard + ')');
         }
     }
 

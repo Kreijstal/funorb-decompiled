@@ -122,7 +122,7 @@ final class ea {
           try {
             var9 = ce.quickChatPhrases.getPhrase(var5, -124);
             dg.field_b = var9.getPreviewText((byte) 97);
-            if (gp.field_b.equals(mv.field_d)) {
+            if (gp.field_b.equals(mv.localAccountName)) {
               stackIn_22_0 = null;
             } else {
               stackIn_22_0 = var9.linkedPhraseIds;
@@ -288,7 +288,7 @@ final class ea {
           try {
             var9 = ce.quickChatPhrases.getPhrase(var5, -124);
             dg.field_b = var9.getPreviewText((byte) 97);
-            if (gp.field_b.equals(mv.field_d)) {
+            if (gp.field_b.equals(mv.localAccountName)) {
               stackIn_22_0 = null;
             } else {
               stackIn_22_0 = var9.linkedPhraseIds;

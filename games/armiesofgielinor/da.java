@@ -5,32 +5,32 @@ final class da {
     static ClientConnectionState field_b;
     static int[][][] instructionIllustrationArguments;
 
-    final static void c(int param0) {
+    final static void clearSocialLists(int obfuscationGuard) {
         DualLinkedNode var1 = null;
         int var2 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         DualLinkedNode var1Lifetime1;
         try {
-          vl.field_p = null;
-          dj.field_a = 0;
-          vg.field_p = 0;
-          wh.field_c.clear(126);
-          ot.field_E.clear(81);
-          var1 = DiskCacheRequest.field_K.first((byte) 66);
+          vl.currentLocationLabel = null;
+          dj.friendCount = 0;
+          vg.ignoreCount = 0;
+          wh.friendEntries.clear(126);
+          ot.ignoreEntries.clear(81);
+          var1 = DiskCacheRequest.friendsByName.first((byte) 66);
           while (var1 != null) {
             var1.unlinkSecondary((byte) -76);
-            var1 = DiskCacheRequest.field_K.next(1);
+            var1 = DiskCacheRequest.friendsByName.next(1);
           }
-          if (param0 > -112) {
+          if (obfuscationGuard > -112) {
             da.a(89, true);
           }
-          var1Lifetime1 = bk.field_a.first((byte) 66);
+          var1Lifetime1 = bk.ignoredAccountsByName.first((byte) 66);
           while (var1Lifetime1 != null) {
             var1Lifetime1.unlinkSecondary((byte) -76);
-            var1Lifetime1 = bk.field_a.next(1);
+            var1Lifetime1 = bk.ignoredAccountsByName.next(1);
           }
-          th.field_a = 0;
+          th.socialListState = 0;
         } catch (RuntimeException runtimeException) {
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "da.I(" + param0 + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "da.I(" + obfuscationGuard + ')');
         }
     }
 
@@ -49,14 +49,14 @@ final class da {
         }
     }
 
-    final static void a(int param0) {
-        mv.field_d = ByteStorage.incomingPacket.readNullTerminatedString(1);
-        if (param0 <= 10) {
+    final static void readLocalAccountName(int obfuscationGuard) {
+        mv.localAccountName = ByteStorage.incomingPacket.readNullTerminatedString(1);
+        if (obfuscationGuard <= 10) {
           String[] var2 = (String[]) null;
           da.a(70, 41, (String[][]) null, (String[]) null, 94);
         }
-        CharSequence var3 = (CharSequence) ((Object) mv.field_d);
-        IntPair.field_p = k.a(var3, false);
+        CharSequence var3 = (CharSequence) ((Object) mv.localAccountName);
+        IntPair.localAccountNameKey = AccountNameNormalizer.normalize(var3, false);
     }
 
     final static boolean a(int param0, java.applet.Applet param1) {

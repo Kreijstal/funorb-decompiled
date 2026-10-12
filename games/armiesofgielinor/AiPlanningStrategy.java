@@ -10,7 +10,7 @@ abstract class AiPlanningStrategy {
     static int pointerX;
     private NodeDeque recycledCandidates;
 
-    final static hl a(int param0, int param1, boolean param2) {
+    final static SocialListEntry updateFriendListControls(int obfuscationGuard, int visibleRows, boolean enableCapture) {
         ScrollContainer stackIn_4_0;
         boolean stackIn_4_1;
         int stackIn_4_2;
@@ -28,7 +28,7 @@ abstract class AiPlanningStrategy {
         NodeDeque var4 = null;
         Object var5 = null;
         Object var6 = null;
-        hl var7 = null;
+        SocialListEntry var7 = null;
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
@@ -46,21 +46,21 @@ abstract class AiPlanningStrategy {
         var19 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           stackIn_4_0 = mw.field_E.field_Kb;
-          stackIn_4_1 = param2;
-          stackIn_4_2 = (jn.field_d * 3 + 6) * param1;
+          stackIn_4_1 = enableCapture;
+          stackIn_4_2 = (jn.field_d * 3 + 6) * visibleRows;
           stackIn_4_3 = 2 + jn.field_d;
           stackIn_5_4 = (mw.field_E.field_Kb == PointerInputHandler.contextMenuScrollContainer);
           var3_int = ((ScrollContainer) (Object) stackIn_4_0).updateContentLayout(stackIn_4_1, stackIn_4_2, stackIn_4_3, stackIn_5_4, 0, 2) ? 1 : 0;
           var4 = mw.field_E.field_Nb.children;
-          if (param0 <= 20) {
+          if (obfuscationGuard <= 20) {
             AiPlanningStrategy.a(-8, (String[]) null, (String) null, -108);
           }
           boolean decompiledFrameRemainder1 = true;
           var5 = null;
-          if (th.field_a != 2) {
+          if (th.socialListState != 2) {
             su.field_d.inputEnabled = false;
             bn.field_c.text = fm.field_c;
-            if (1 != th.field_a) {
+            if (1 != th.socialListState) {
               mw.field_E.field_Kb.viewport.text = ef.field_a;
               if (var19 != 0) {
                 mw.field_E.field_Kb.viewport.text = TeleportAction.field_u;
@@ -73,30 +73,30 @@ abstract class AiPlanningStrategy {
           }
           if (decompiledFrameRemainder1) {
             su.field_d.inputEnabled = true;
-            bn.field_c.text = fo.a(4800, ps.field_A, new String[]{vl.field_p});
+            bn.field_c.text = fo.a(4800, ps.field_A, new String[]{vl.currentLocationLabel});
             mw.field_E.field_Kb.viewport.text = null;
             var6 = null;
-            var7 = (hl) (var4.first((byte) 109));
+            var7 = (SocialListEntry) (var4.first((byte) 109));
             while (true) {
               boolean decompiledFrameRemainder0 = true;
               if (var7 != null) {
                 var8 = 0;
                 if (var19 == 0) {
                   if (null == var7.children) {
-                    var7.field_Qb = new ClientUiComponent(0L, IsaacRandom.field_i);
-                    var7.addChild(var7.field_Qb, 87);
-                    var7.field_Kb = new ClientUiComponent(0L, ws.field_P);
-                    var7.addChild(var7.field_Kb, 96);
-                    var7.field_Jb = new ClientUiComponent(0L, IsaacRandom.field_i);
-                    var7.addChild(var7.field_Jb, 69);
-                    var7.field_Kb.horizontalAlignment = 2;
+                    var7.nameComponent = new ClientUiComponent(0L, IsaacRandom.field_i);
+                    var7.addChild(var7.nameComponent, 87);
+                    var7.locationComponent = new ClientUiComponent(0L, ws.field_P);
+                    var7.addChild(var7.locationComponent, 96);
+                    var7.previousNameComponent = new ClientUiComponent(0L, IsaacRandom.field_i);
+                    var7.addChild(var7.previousNameComponent, 69);
+                    var7.locationComponent.horizontalAlignment = 2;
                     var7.inheritVisualStateForDescendants(-10027);
                     var8 = 1;
                   }
                   var7.width = mw.field_E.field_Nb.width;
                   var9 = 0;
-                  if (null != var7.field_Ib) {
-                    if (vl.field_p != var7.field_Ib) {
+                  if (null != var7.locationLabel) {
+                    if (vl.currentLocationLabel != var7.locationLabel) {
                       var11 = 16777062;
                       var10 = 13421568;
                     } else {
@@ -108,44 +108,44 @@ abstract class AiPlanningStrategy {
                     var11 = 16737894;
                   }
                   var12 = 0;
-                  if (var7.field_Nb != null &&
-                    !var7.field_Nb.equals("")) {
-                    var7.field_Jb.matchedButtonTextColour = var11;
-                    var7.field_Jb.sprite = NodeHashIterator.field_e;
+                  if (var7.previousDisplayName != null &&
+                    !var7.previousDisplayName.equals("")) {
+                    var7.previousNameComponent.matchedButtonTextColour = var11;
+                    var7.previousNameComponent.sprite = NodeHashIterator.field_e;
                     var12 = 1;
-                    var7.field_Jb.setBounds(jn.field_d, -20500, 3 + NodeHashIterator.field_e.canvasWidth, var9, 0);
+                    var7.previousNameComponent.setBounds(jn.field_d, -20500, 3 + NodeHashIterator.field_e.canvasWidth, var9, 0);
                   }
-                  var7.field_Kb.selectedTextColour = var11;
-                  var7.field_Qb.selectedTextColour = var11;
-                  var7.field_Kb.textColour = var10;
-                  var7.field_Qb.textColour = var10;
-                  var7.field_Kb.matchedButtonTextColour = var11;
-                  var7.field_Qb.matchedButtonTextColour = var11;
-                  var7.field_Kb.heldPressTextColour = var11;
-                  var7.field_Qb.heldPressTextColour = var11;
+                  var7.locationComponent.selectedTextColour = var11;
+                  var7.nameComponent.selectedTextColour = var11;
+                  var7.locationComponent.textColour = var10;
+                  var7.nameComponent.textColour = var10;
+                  var7.locationComponent.matchedButtonTextColour = var11;
+                  var7.nameComponent.matchedButtonTextColour = var11;
+                  var7.locationComponent.heldPressTextColour = var11;
+                  var7.nameComponent.heldPressTextColour = var11;
                   var13 = 0;
                   var14 = -82 + var7.width;
                   if (var12 != 0) {
                     var13 = NodeHashIterator.field_e.canvasWidth + 3;
                     var14 = var14 - var13;
                   }
-                  stackIn_44_0 = var7.field_Qb;
+                  stackIn_44_0 = var7.nameComponent;
                   if (var14 <= 0) {
-                    stackIn_45_1 = var7.field_Mb;
+                    stackIn_45_1 = var7.displayName;
                   } else {
-                    stackIn_45_1 = BitmapFont.a(var7.field_Qb.font, var7.field_Mb, var14);
+                    stackIn_45_1 = BitmapFont.a(var7.nameComponent.font, var7.displayName, var14);
                   }
                   stackIn_44_0.text = stackIn_45_1;
-                  var7.field_Qb.setBounds(jn.field_d, -20500, var14, var9, var13);
-                  stackIn_48_0 = var7.field_Kb;
-                  if (null != var7.field_Ib) {
-                    stackIn_49_1 = var7.field_Ib;
+                  var7.nameComponent.setBounds(jn.field_d, -20500, var14, var9, var13);
+                  stackIn_48_0 = var7.locationComponent;
+                  if (null != var7.locationLabel) {
+                    stackIn_49_1 = var7.locationLabel;
                   } else {
                     stackIn_49_1 = BattleTutorial.field_i;
                   }
                   stackIn_48_0.text = stackIn_49_1;
-                  var7.field_Kb.setBounds(jn.field_d, -20500, 80, var9, -80 + var7.width);
-                  stackIn_53_0 = (var7.field_Qb.text.equals(var7.field_Mb)) ? 0 : 1;
+                  var7.locationComponent.setBounds(jn.field_d, -20500, 80, var9, -80 + var7.width);
+                  stackIn_53_0 = (var7.nameComponent.text.equals(var7.displayName)) ? 0 : 1;
                   var15 = stackIn_53_0;
                   var9 = var9 + jn.field_d;
                   if (var3_int == 0) {
@@ -155,18 +155,18 @@ abstract class AiPlanningStrategy {
                     mw.field_E.field_Nb.positionAfter(var7, true, 2, (ClientUiComponent) (var6));
                   }
                   var6 = var7;
-                  if (var7.field_Jb != null &&
-                    var7.field_Jb.heldButtonMatches) {
-                    ad.field_I = var7.field_Nb;
+                  if (var7.previousNameComponent != null &&
+                    var7.previousNameComponent.heldButtonMatches) {
+                    ad.field_I = var7.previousDisplayName;
                   } else if (var7.pressedButton == 0) {
-                    if (var7.field_Qb.heldButtonMatches &&
+                    if (var7.nameComponent.heldButtonMatches &&
                       var15 != 0) {
-                      ad.field_I = var7.field_Mb;
+                      ad.field_I = var7.displayName;
                     }
                   } else {
-                    var16 = var7.field_Mb;
+                    var16 = var7.displayName;
                     ng.openClientContextMenu(mw.field_E.field_Kb, var7, (int[]) null, (String) null, -1, 84, -1, var16, 0L);
-                    if (null != var7.field_Ib &&
+                    if (null != var7.locationLabel &&
                       !fs.a((byte) 110, tn.activeContextMenu.accountName) &&
                       !NodeIterator.field_a) {
                       if (!vi.field_d) {
@@ -180,7 +180,7 @@ abstract class AiPlanningStrategy {
                     }
                     var5 = var7;
                   }
-                  var7 = (hl) (var4.next((byte) 123));
+                  var7 = (SocialListEntry) (var4.next((byte) 123));
                   continue;
                 }
               } else {
@@ -201,11 +201,11 @@ abstract class AiPlanningStrategy {
             }
           }
           stackIn_102_0 = var5;
-          return (hl) (stackIn_102_0);
+          return (SocialListEntry) (stackIn_102_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) var3), "sm.H(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) var3), "sm.H(" + obfuscationGuard + ',' + visibleRows + ',' + enableCapture + ')');
         }
     }
 
@@ -346,7 +346,7 @@ abstract class AiPlanningStrategy {
             fw.a(-1, (String[]) null);
           }
           if (param0 <= 28) {
-            AiPlanningStrategy.a(-35, -5, true);
+            AiPlanningStrategy.updateFriendListControls(-35, -5, true);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

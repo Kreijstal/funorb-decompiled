@@ -419,7 +419,7 @@ final class ak extends ju {
         if (param1 == 5) {
           var3 = new RgbSprite[9];
           var2 = var3;
-          var3[4] = hl.a(false, param0, 64);
+          var3[4] = SocialListEntry.a(false, param0, 64);
           return var2;
         }
         return (RgbSprite[]) null;

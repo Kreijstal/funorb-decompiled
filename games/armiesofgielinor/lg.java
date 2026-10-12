@@ -17,7 +17,7 @@ final class lg {
         try {
           if (param0 != 32381) {
             String var5 = (String) null;
-            lg.a((String) null, (byte) 32);
+            lg.findFriend((String) null, (byte) 32);
           }
           var2 = new RgbSprite(param1.getFileByName("", 49, "final_frame.jpg"), (java.awt.Component) ((Object) IndexedSpriteBase.field_b));
           var3 = var2.pixelWidth;
@@ -40,49 +40,49 @@ final class lg {
         this(-1, 1000000, 1000000);
     }
 
-    final static hl a(String param0, byte param1) {
-        String var2 = null;
-        hl var3 = null;
-        String var4 = null;
-        int var5 = 0;
-        CharSequence var6 = null;
-        CharSequence var7 = null;
+    final static SocialListEntry findFriend(String name, byte obfuscationGuard) {
+        String nameKey = null;
+        SocialListEntry friend = null;
+        String candidateNameKey = null;
+        int obfuscationControl = 0;
+        CharSequence nameCharacters = null;
+        CharSequence candidateCharacters = null;
         Object stackIn_7_0 = null;
-        hl stackIn_19_0 = null;
+        SocialListEntry stackIn_19_0 = null;
         RuntimeException stackIn_24_0 = null;
         StringBuilder stackIn_24_1 = null;
         String stackIn_25_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2_ref = null;
-        var5 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        obfuscationControl = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          if (DiskCacheRequest.field_K == null) {
+          if (DiskCacheRequest.friendsByName == null) {
             return null;
           }
-          if (param0 == null) {
+          if (name == null) {
             return null;
           }
-          if (0 == param0.length()) {
+          if (0 == name.length()) {
             stackIn_7_0 = null;
-            return (hl) (stackIn_7_0);
+            return (SocialListEntry) (stackIn_7_0);
           }
-          var6 = (CharSequence) ((Object) param0);
-          var2 = k.a(var6, false);
-          if (param1 != -34) {
+          nameCharacters = (CharSequence) ((Object) name);
+          nameKey = AccountNameNormalizer.normalize(nameCharacters, false);
+          if (obfuscationGuard != -34) {
             lg.a((byte) 5);
           }
-          if (var2 == null) {
+          if (nameKey == null) {
             return null;
           }
-          var3 = (hl) (DiskCacheRequest.field_K.get((byte) -27, (long)var2.hashCode()));
-          while (var3 != null) {
-            var7 = (CharSequence) ((Object) var3.field_Mb);
-            var4 = k.a(var7, false);
-            if (var4.equals(var2)) {
-              stackIn_19_0 = var3;
+          friend = (SocialListEntry) (DiskCacheRequest.friendsByName.get((byte) -27, (long)nameKey.hashCode()));
+          while (friend != null) {
+            candidateCharacters = (CharSequence) ((Object) friend.displayName);
+            candidateNameKey = AccountNameNormalizer.normalize(candidateCharacters, false);
+            if (candidateNameKey.equals(nameKey)) {
+              stackIn_19_0 = friend;
               return stackIn_19_0;
             }
-            var3 = (hl) (DiskCacheRequest.field_K.getNextMatch(-348));
+            friend = (SocialListEntry) (DiskCacheRequest.friendsByName.getNextMatch(-348));
           }
           return null;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -90,12 +90,12 @@ final class lg {
           var2_ref = decompiledCaughtException;
           stackIn_24_0 = var2_ref;
           stackIn_24_1 = new StringBuilder().append("lg.D(");
-          if (param0 == null) {
+          if (name == null) {
             stackIn_25_2 = "null";
           } else {
             stackIn_25_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param1).append(')').toString());
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 
@@ -202,7 +202,7 @@ final class lg {
           return;
         }
         String var2 = (String) null;
-        lg.a((String) null, (byte) 37);
+        lg.findFriend((String) null, (byte) 37);
         field_c = null;
     }
 

@@ -10,35 +10,35 @@ final class FixedQuaternion {
     static rd field_a;
     private int z;
 
-    final static boolean a(long param0, String param1, byte param2) {
+    final static boolean isOnlineFriendOrRoomMember(long accountId, String name, byte obfuscationGuard) {
         int var4_int = 0;
         RuntimeException var4 = null;
-        hl var5 = null;
+        SocialListEntry var5 = null;
         boolean stackIn_8_0 = false;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
         String stackIn_12_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var4_int = 95 % ((-83 - param2) / 33);
-          var5 = lg.a(param1, (byte) -34);
+          var4_int = 95 % ((-83 - obfuscationGuard) / 33);
+          var5 = lg.findFriend(name, (byte) -34);
           if (var5 != null &&
-            var5.field_Ib != null) {
+            var5.locationLabel != null) {
             return true;
           }
-          stackIn_8_0 = (vu.currentRoom != null) && (null != UnitModelPreview.getCurrentRoomPlayer(param0, -77));
+          stackIn_8_0 = (vu.currentRoom != null) && (null != UnitModelPreview.getCurrentRoomPlayer(accountId, -77));
           return stackIn_8_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
           stackIn_11_0 = var4;
-          stackIn_11_1 = new StringBuilder().append("wq.H(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_11_1 = new StringBuilder().append("wq.H(").append(accountId).append(',');
+          if (name == null) {
             stackIn_12_2 = "null";
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param2).append(')').toString());
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 
@@ -129,7 +129,7 @@ final class FixedQuaternion {
           return;
         }
         String var8 = (String) null;
-        FixedQuaternion.a(-48L, (String) null, (byte) -22);
+        FixedQuaternion.isOnlineFriendOrRoomMember(-48L, (String) null, (byte) -22);
     }
 
     final static boolean a(boolean param0, int param1, int param2, int param3, int param4, int param5, byte param6) {
@@ -170,7 +170,7 @@ final class FixedQuaternion {
           return;
         }
         String var3 = (String) null;
-        FixedQuaternion.a(71L, (String) null, (byte) 79);
+        FixedQuaternion.isOnlineFriendOrRoomMember(71L, (String) null, (byte) 79);
         System.out.println("Error: " + dv.a(param0, -87, "%0a", "\n"));
     }
 

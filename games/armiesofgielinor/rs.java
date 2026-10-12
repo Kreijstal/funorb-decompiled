@@ -56,12 +56,12 @@ final class rs extends IntrusiveNode {
         }
     }
 
-    final static boolean a(char param0, byte param1) {
+    final static boolean isAccountNameSeparator(char character, byte obfuscationGuard) {
         boolean stackIn_9_0 = false;
-        if (param1 > -11) {
+        if (obfuscationGuard > -11) {
           return true;
         }
-        stackIn_9_0 = (param0 == 160) || (param0 == 32) || (param0 == 95) || (param0 == 45);
+        stackIn_9_0 = (character == 160) || (character == 32) || (character == 95) || (character == 45);
         return stackIn_9_0;
     }
 

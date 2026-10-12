@@ -26,13 +26,13 @@ final class rn {
     final static String b(boolean param0) {
         if (!param0) {
           rn.a(true);
-          if (null != mv.field_d) {
-            return mv.field_d;
+          if (null != mv.localAccountName) {
+            return mv.localAccountName;
           }
           return "";
         }
-        if (null != mv.field_d) {
-          return mv.field_d;
+        if (null != mv.localAccountName) {
+          return mv.localAccountName;
         }
         return "";
     }

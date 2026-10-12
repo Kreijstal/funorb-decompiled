@@ -8,13 +8,13 @@ final class pv {
     static RgbSprite field_e;
     static AnimationSequence[][] field_a;
 
-    final static char a(int param0, char param1) {
+    final static char foldAccountNameCharacter(int obfuscationGuard, char character) {
         int var2;
         int var3;
         int var2Lifetime1;
         var3 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
-        if (param0 > 114) {
-          var2 = param1;
+        if (obfuscationGuard > 114) {
+          var2 = character;
           if (var2 != 32) {
             if (var2 == 160) {
               return '_';
@@ -26,7 +26,7 @@ final class pv {
               if (var2 != 91 &&
                 93 != var2) {
                 if (var2 == 35) {
-                  return param1;
+                  return character;
                 }
                 if (var2 != 224) {
                   if (var2 == 225) {
@@ -93,7 +93,7 @@ final class pv {
                                       return 'n';
                                     }
                                     if (var2 != 223) {
-                                      return Character.toLowerCase(param1);
+                                      return Character.toLowerCase(character);
                                     }
                                     return 'b';
                                   }
@@ -113,13 +113,13 @@ final class pv {
                 }
                 return 'a';
               }
-              return param1;
+              return character;
             }
           }
           return '_';
         }
         field_b = 59;
-        var2Lifetime1 = param1;
+        var2Lifetime1 = character;
         if (var2Lifetime1 != 32) {
           if (var2Lifetime1 == 160) {
             return '_';
@@ -216,7 +216,7 @@ final class pv {
                                                 return 'n';
                                               }
                                               if (var2Lifetime1 != 223) {
-                                                return Character.toLowerCase(param1);
+                                                return Character.toLowerCase(character);
                                               }
                                               return 'b';
                                             }
@@ -242,7 +242,7 @@ final class pv {
               }
               return 'a';
             }
-            return param1;
+            return character;
           }
         }
         return '_';

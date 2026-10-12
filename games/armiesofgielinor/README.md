@@ -2,7 +2,7 @@
 
 Java here is the single published version. Rebuild from pinned raw Git input using Deko’s `readable/reproduce-armiesofgielinor.mjs`. The current reverse dictionary is `../../decompilation/armiesofgielinor-naming.json`.
 
-This gameplay naming pass reviews 198 class identities across all 542 compiled classes. Other class/member names remain unresolved. Unresolved packed flags use bit-position names without guessing gameplay effects. Renamed identifiers have no opaque suffixes; the dictionary records their original identities.
+This gameplay naming pass reviews 200 class identities across all 542 compiled classes. Other class/member names remain unresolved. Unresolved packed flags use bit-position names without guessing gameplay effects. Renamed identifiers have no opaque suffixes; the dictionary records their original identities.
 
 Widget, WidgetPainter, DropdownSelector, DropdownOptionList and DropdownArrowPainter expose the shared UI bounds and dropdown flow. Controlled fixtures check half-open base hit bounds, case-insensitive first-prefix matching, option validation/selection and the arrow painter’s pixels. The option-list hit override retains its different inclusive edges; complete interactive menu behavior remains unverified.
 
@@ -16,6 +16,7 @@ Widget, WidgetPainter, DropdownSelector, DropdownOptionList and DropdownArrowPai
 | [TabbedPanel](TabbedPanel.java) | Retained tab panels, integer tab geometry and active-panel switching. |
 | [ClientContextMenu](ClientContextMenu.java) / [ChatMessage](ChatMessage.java) | Context targets, lobby/social/chat dispatch and retained chat-message identity/text/filter state. |
 | [ReportAbuseDialog](ReportAbuseDialog.java) / [IconLabelControl](IconLabelControl.java) | Abuse-report rule/name/mute controls and icon/label composition. |
+| [SocialListEntry](SocialListEntry.java) / [AccountNameNormalizer](AccountNameNormalizer.java) | Shared friend/ignore rows, canonical lookup keys and name validation. |
 | [QuickChatCategory](QuickChatCategory.java) / [QuickChatPhrase](QuickChatPhrase.java) / [QuickChatCommandDefinition](QuickChatCommandDefinition.java) | Quick-chat category/phrase decoding, shortcuts and command definition arguments. |
 | [QuickChatCategoryRepository](QuickChatCategoryRepository.java) / [QuickChatPhraseRepository](QuickChatPhraseRepository.java) | Local/global quick-chat archives and cached definition lookup. |
 | [WeightedLruCache](WeightedLruCache.java) / [CacheEntry](CacheEntry.java) / [StrongCacheEntry](StrongCacheEntry.java) | Weighted retained values, LRU eviction and reference-backed entry promotion. |
@@ -158,13 +159,25 @@ ClientContextMenu retains account/display/room/channel metadata, a source compon
 
 | Outgoing payload | Byte framing after the caller-supplied ciphered opcode |
 | --- | --- |
+| Friend / ignore change | u8 length, u8 command 0/1/2/3 (add friend/remove friend/add ignore/remove ignore), zero-terminated supplied account name. Caller opcode is shared by this command family. |
 | Player admission / cancellation | u8 length 9, u8 command 6/7, u64 account ID. Invite/accept and kick/withdraw/reject meaning depends on the current room/player state. |
 | Room admission / cancellation / spectating / watch | u8 length 3, u8 command 8/9/10/11, low u16 room ID. Watch action 16 supplies room ID zero. |
 | Abuse report (separate opcode) | u8 length, u64 account ID, zero-terminated target name, u8 offence ID, u8 mute flag. No admission command byte is added. |
 
 ReportAbuseDialog exposes target/account, rule buttons, optional mute selection and waiting/cancellation. Context action 17 opens this report control; action 19 uses the retained quick-chat context for auto-response. IconLabelControl names selected/unselected icon and label composition and row measurement/layout. Real constructor/getter/cancellation fixtures verify the report control and inherited icon visual state. Abuse-report byte fixtures preserve byte narrowing and NUL-name failure after opcode, reserved length and account ID have already advanced the cursor; the reserved length remains unfilled on that failure. Complete social-action, report-click and rendered-dialog paths remain unverified, and these fixtures never deliver reports or requests to a server.
 
-ChatMessage names channel/account/display identity, text/channel label, context ID, optional quick-chat values and row component. The system-message constructor sets systemMessage and zero sender/identity/icon state. Filter priority is 2 for system messages or private-channel messages with an icon, 1 for self or an enabled friend context, otherwise 0; false guard clears displayName. Controlled constructor/self/other/system/icon fixtures verify the tested branches with friend-context lookup disabled. Duplicate identity-word meanings, decoded-chat snapshots, friend lookup, prefix rendering and complete chat delivery remain unverified.
+ChatMessage names channel/account/display identity, text/channel label, context ID, optional quick-chat values and row component. The system-message constructor sets systemMessage and zero sender/identity/icon state. Filter priority is 2 for system messages or private-channel messages with an icon, 1 for self or an enabled friend context, otherwise 0; false guard clears displayName. Controlled constructor/self/other/system/icon fixtures and a retained friend-row fixture verify filtering. Duplicate identity-word meanings, decoded-chat snapshots, prefix rendering and complete chat delivery remain unverified.
+
+SocialListEntry is shared by friends and ignored accounts, with separate secondary-name indexes and primary display lists. AccountNameNormalizer.normalize trims space/NBSP/underscore/hyphen, checks the trimmed span before filtering (1–12 characters), drops unsupported characters and folds the fixed alphabet. Sharp-s folds to b. Social request validation separately rejects unsupported original characters and trailing separators. Name lookup scans all equal-hash entries; ignored-account lookup falls back to exact raw names when no canonical key exists. Native fixtures cover canonicalization, actual equal-hash names an/c0, renamed row reuse/reindexing and friend-aware chat filtering.
+
+| Incoming social subtype | Payload after subtype byte |
+| --- | --- |
+| 0 | u8 separate-account-name flag (only 1 is true), zero-terminated display name, optional account name, previous display name. Adds/updates ignored-account row. |
+| 1 | Zero-terminated location label (empty means offline), current display name and previous display name. Adds/updates friend row, interns the location and reorders the display list. |
+| 2/3 | No further payload; 2 changes state 1 to 2, 3 changes state 2 to 1. Other states stay unchanged. |
+| 4 | Zero-terminated current location label and u8 packed chat filters. Sets state 1, interns the location and applies the original filter masks/clamps. |
+
+Friend ordering uses order-index difference plus ±200 biases for reference-identical current-location labels and null/offline labels. The reference comparison is preserved: equal text in a different String object does not get the same-location bias. Incoming records intern labels. Removing a friend immediately unlinks both memberships, decrements friendCount and subtracts one from each later displayed row orderIndex, even when sorting makes that index negative. Removing an ignored account immediately unlinks/decrements without renumbering survivors; display-name lookup and the account name written to the packet remain separate. Adds leave local rows unchanged pending an incoming update. Guarded partial frames, rejection without writes, free/entitled friend limits of 100/200, ignore limit 100 and reset of both indexes/lists are tested. Live delivery, unknown-subtype disconnects, the complete malformed social packet matrix and rendered list controls remain unverified.
 
 QuickChatMenu retains supplied ID/shortcut/submenu arrays and mutates label entries with shortcut markup. Row height derives from font metrics; setCollapseTicks uses the original unclamped ticks-squared interpolation over 144. Shortcut activation opens a submenu, and internal key code 85 closes it when that child has no deeper open item. resetSelection clears press/selection state and unlinks an active submenu from the overlay. Native fixtures use real menu/item constructors and verify animation, shortcut opening, back navigation and recursive category menu construction. Missing phrase shortcuts start at character 2, then 3; this original numbering is preserved. Selection/message context integer meanings, message dispatch and rendered interaction remain unverified.
 

@@ -2460,9 +2460,9 @@ final class InstructionsPanel {
                   }
                 }
               }
-              mv.field_d = ByteStorage.incomingPacket.readNullTerminatedString(1);
-              var11 = (CharSequence) ((Object) mv.field_d);
-              IntPair.field_p = k.a(var11, false);
+              mv.localAccountName = ByteStorage.incomingPacket.readNullTerminatedString(1);
+              var11 = (CharSequence) ((Object) mv.localAccountName);
+              IntPair.localAccountNameKey = AccountNameNormalizer.normalize(var11, false);
               vt.field_n = ByteStorage.incomingPacket.readUnsignedByte(0);
               ov.connectionState = ResourceArchive.connectedState;
               if (CampaignRewardPreview.field_g.a((byte) 50) != pt.field_db) {

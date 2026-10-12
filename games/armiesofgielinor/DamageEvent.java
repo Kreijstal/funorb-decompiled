@@ -251,7 +251,7 @@ final class DamageEvent extends GameEvent {
         }
     }
 
-    final static String a(String param0, byte param1, int param2) {
+    final static String requestRemoveFriend(String name, byte obfuscationGuard, int packetOpcode) {
         String stackIn_3_0 = null;
         String stackIn_7_0 = null;
         String stackIn_10_0 = null;
@@ -261,50 +261,50 @@ final class DamageEvent extends GameEvent {
         String stackIn_21_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
-        int var5 = 0;
-        int var6 = 0;
-        hl var7 = null;
-        hl var8 = null;
-        CipherPacketBuffer var9 = null;
-        CharSequence var10 = null;
-        var6 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        int payloadStart = 0;
+        int obfuscationControl = 0;
+        SocialListEntry subsequentFriend = null;
+        SocialListEntry friend = null;
+        CipherPacketBuffer packet = null;
+        CharSequence nameCharacters = null;
+        obfuscationControl = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          var10 = (CharSequence) ((Object) param0);
-          if (!hg.a((byte) -31, var10)) {
+          nameCharacters = (CharSequence) ((Object) name);
+          if (!hg.isValidSocialTargetName((byte) -31, nameCharacters)) {
             stackIn_3_0 = SectorCacheStore.field_d;
             return stackIn_3_0;
           }
-          if (th.field_a != 2) {
+          if (th.socialListState != 2) {
             stackIn_7_0 = PopupPresentation.field_l;
             return stackIn_7_0;
           }
-          var8 = lg.a(param0, (byte) -34);
-          if (var8 == null) {
-            stackIn_10_0 = fo.a(4800, TaggedMapData.field_d, new String[]{param0});
+          friend = lg.findFriend(name, (byte) -34);
+          if (friend == null) {
+            stackIn_10_0 = fo.a(4800, TaggedMapData.field_d, new String[]{name});
             return stackIn_10_0;
           }
-          wh.field_c.startForwardAt(true, var8);
+          wh.friendEntries.startForwardAt(true, friend);
           while (true) {
-            var7 = (hl) (wh.field_c.next((byte) 123));
-            if (var7 != null) {
-              var7.field_Ob = var7.field_Ob - 1;
+            subsequentFriend = (SocialListEntry) (wh.friendEntries.next((byte) 123));
+            if (subsequentFriend != null) {
+              subsequentFriend.orderIndex = subsequentFriend.orderIndex - 1;
               continue;
             }
             break;
           }
-          var8.unlink(param1 ^ -103);
-          if (param1 != -27) {
+          friend.unlink(obfuscationGuard ^ -103);
+          if (obfuscationGuard != -27) {
             field_y = (String) null;
           }
-          var8.unlinkSecondary((byte) -76);
-          dj.field_a = dj.field_a - 1;
-          var9 = vl.outgoingPacket;
-          var9.writeCipheredOpcode(32161, param2);
-          var9.position = var9.position + 1;
-          var5 = var9.position;
-          var9.writeByte(1, 1);
-          var9.b(param0, 13851);
-          var9.writeByteLengthPrefix(var9.position - var5, 5930);
+          friend.unlinkSecondary((byte) -76);
+          dj.friendCount = dj.friendCount - 1;
+          packet = vl.outgoingPacket;
+          packet.writeCipheredOpcode(32161, packetOpcode);
+          packet.position = packet.position + 1;
+          payloadStart = packet.position;
+          packet.writeByte(1, 1);
+          packet.b(name, 13851);
+          packet.writeByteLengthPrefix(packet.position - payloadStart, 5930);
           stackIn_17_0 = null;
           return (String) (stackIn_17_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -312,12 +312,12 @@ final class DamageEvent extends GameEvent {
           var3 = decompiledCaughtException;
           stackIn_20_0 = var3;
           stackIn_20_1 = new StringBuilder().append("nw.E(");
-          if (param0 == null) {
+          if (name == null) {
             stackIn_21_2 = "null";
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(obfuscationGuard).append(',').append(packetOpcode).append(')').toString());
         }
     }
 

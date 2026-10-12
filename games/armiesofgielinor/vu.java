@@ -46,7 +46,7 @@ final class vu extends fw {
         if (param0 != 6) {
           field_P = (String) null;
         }
-        return FixedQuaternion.a(dj.field_e, wm.field_b, (byte) -116);
+        return FixedQuaternion.isOnlineFriendOrRoomMember(dj.field_e, wm.field_b, (byte) -116);
     }
 
     private vu(String param0, qo param1) {

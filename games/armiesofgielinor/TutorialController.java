@@ -471,7 +471,7 @@ final class TutorialController {
             ud.field_X = new RgbSprite[pc.field_k.length];
             var2_int = 0;
             while (!(pc.field_k.length <= var2_int)) {
-              ud.field_X[var2_int] = DeathEvent.a(ah.localCoat.colourIndices, pc.field_k[var2_int], mv.field_d, GrowthEvent.b(param0, -6583));
+              ud.field_X[var2_int] = DeathEvent.a(ah.localCoat.colourIndices, pc.field_k[var2_int], mv.localAccountName, GrowthEvent.b(param0, -6583));
               var2_int++;
               if (var4 != 0) {
                 decompiledFrameCompleted0 = false;
@@ -523,7 +523,7 @@ final class TutorialController {
           stackIn_32_1 = true;
           stackIn_32_2 = pc.field_k[ah.field_b];
           stackIn_32_3 = ah.localCoat.colourIndices;
-          stackIn_32_4 = mv.field_d;
+          stackIn_32_4 = mv.localAccountName;
           stackIn_33_5 = !(pg.playerProfile.getUnlockLevel(0) > ah.field_b);
           uh.a(stackIn_32_0, stackIn_32_1, stackIn_32_2, stackIn_32_3, stackIn_32_4, stackIn_33_5, db.a(true, 50));
           SoftwareRaster.a();
@@ -850,7 +850,7 @@ final class TutorialController {
                     if (null != var8[var11]) {
                       var5 = field_e;
                       var12 = var8[var11];
-                      if (gt.a(var12, (byte) 94)) {
+                      if (gt.isLocalAccountName(var12, (byte) 94)) {
                         var5 = nd.field_b;
                         var10 = 1;
                       }
@@ -867,7 +867,7 @@ final class TutorialController {
                   }
                   var5 = nd.field_b;
                 }
-                this.a(var5, AnimationFrameSet.field_z.field_k, -1, var4, AnimationFrameSet.field_z.field_s, AnimationFrameSet.field_z.field_m, 310, AnimationFrameSet.field_z.field_r, mv.field_d);
+                this.a(var5, AnimationFrameSet.field_z.field_k, -1, var4, AnimationFrameSet.field_z.field_s, AnimationFrameSet.field_z.field_m, 310, AnimationFrameSet.field_z.field_r, mv.localAccountName);
                 break;
               }
               if (var13 != 0) {
@@ -3514,7 +3514,7 @@ final class TutorialController {
                 if (stackIn_39_0 != null) {
                   var6Lifetime1 = field_e;
                   var12 = var8_ref_String__[var11];
-                  if (gt.a(var12, (byte) 111)) {
+                  if (gt.isLocalAccountName(var12, (byte) 111)) {
                     var10 = 1;
                     var6Lifetime1 = nd.field_b;
                   }
@@ -3528,7 +3528,7 @@ final class TutorialController {
                 if (var10 == 0 &&
                   null != pg.playerProfile) {
                   var6Lifetime1Lifetime1 = nd.field_b;
-                  this.a((byte) 63, -1, pg.playerProfile.campaignProgress.getCampaignScore(false, var4) / IntrusiveNode.a(108, var4), var5Lifetime1, var6Lifetime1Lifetime1, mv.field_d);
+                  this.a((byte) 63, -1, pg.playerProfile.campaignProgress.getCampaignScore(false, var4) / IntrusiveNode.a(108, var4), var5Lifetime1, var6Lifetime1Lifetime1, mv.localAccountName);
                 }
                 if (var13 != 0) {
                   var7 = SocketResourceClient.field_s;
@@ -6038,7 +6038,7 @@ final class TutorialController {
         var8 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           fe.a(db.a(true, 40), MatchConditionEntry.a(60, (byte) 94), 264, 260, EffectPresentation.field_j, jh.field_k, 0, 128, false);
-          na.field_F = ah.localCoat.a(db.a(true, 55), 0, AiPlanningStrategy.pointerX, wh.field_a, mv.field_d, MatchConditionEntry.a(70, (byte) 94), ko.pointerY);
+          na.field_F = ah.localCoat.a(db.a(true, 55), 0, AiPlanningStrategy.pointerX, wh.field_a, mv.localAccountName, MatchConditionEntry.a(70, (byte) 94), ko.pointerY);
           var2_int = 44;
           var3 = 0;
           boolean decompiledNaturalLoopExit0 = false;

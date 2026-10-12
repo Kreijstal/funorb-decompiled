@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ot extends dr {
-    static NodeDeque field_E;
+    static NodeDeque ignoreEntries;
     static int field_G;
     static String field_H;
     static String field_F;
@@ -90,7 +90,7 @@ final class ot extends dr {
     }
 
     public static void e(byte param0) {
-        field_E = null;
+        ignoreEntries = null;
         field_H = null;
         int var1 = -2 % ((param0 + 35) / 35);
         field_F = null;

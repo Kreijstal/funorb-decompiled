@@ -642,22 +642,22 @@ final class kd extends tj implements nq, he, mf {
                 var4 = EffectPresentation.field_e.text;
               } else {
                 var6 = (CharSequence) ((Object) EffectPresentation.field_e.text);
-                var4 = k.a(var6, false);
+                var4 = AccountNameNormalizer.normalize(var6, false);
                 var5 = var4;
                 var5Lifetime2 = var4;
               }
               var5Lifetime1 = null;
               if (0 == ut.field_fb) {
-                var5Lifetime1 = op.a(20, var4, param1);
+                var5Lifetime1 = op.requestAddFriend(20, var4, param1);
               }
               if (ut.field_fb == 1) {
-                var5Lifetime1 = DamageEvent.a(var4, (byte) -27, param1);
+                var5Lifetime1 = DamageEvent.requestRemoveFriend(var4, (byte) -27, param1);
               }
               if (ut.field_fb == 2) {
-                var5Lifetime1 = se.a(var4, param1, param0 - 83);
+                var5Lifetime1 = se.requestAddIgnoredAccount(var4, param1, param0 - 83);
               }
               if (ut.field_fb == 3) {
-                var5Lifetime1 = fq.a(param1, var4, false, var4);
+                var5Lifetime1 = fq.requestRemoveIgnoredAccount(param1, var4, false, var4);
               }
               if (var5Lifetime1 != null) {
                 ta.a((String) null, 2, param0 ^ -18117, var4, (String) (var5Lifetime1), 0);

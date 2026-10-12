@@ -780,7 +780,7 @@ final class AiInfluenceMap {
           var4 = var14.readUnsignedByte(0);
           if (var4 != 0) {
             var5 = var3.field_q;
-            LeaderEscortCondition.field_a[0] = mv.field_d;
+            LeaderEscortCondition.field_a[0] = mv.localAccountName;
             for (var6_int = 1; var6_int < var4; var6_int++) {
               LeaderEscortCondition.field_a[var6_int] = var14.readNullTerminatedString(1);
             }
@@ -814,7 +814,7 @@ final class AiInfluenceMap {
               var7[0][1 + 4 * var10] = AnimationFrameSet.field_w[var11];
               var7[0][var10 * 4 + 2] = TutorialController.field_c[var11];
               var7[0][3 + var10 * 4] = VineGrowthAction.field_s[var11];
-              if (gt.a(LeaderEscortCondition.field_a[var11], (byte) 121) &&
+              if (gt.isLocalAccountName(LeaderEscortCondition.field_a[var11], (byte) 121) &&
                 0 == TutorialController.field_c[var11] + AnimationFrameSet.field_w[var11] + VineGrowthAction.field_s[var11]) {
                 var6[0][var10] = null;
                 var10--;
@@ -832,7 +832,7 @@ final class AiInfluenceMap {
               var7[1][var13 * 4 + 1] = AnimationFrameSet.field_w[var11Lifetime1];
               var7[1][var13 * 4 + 2] = TutorialController.field_c[var11Lifetime1];
               var7[1][var13 * 4 + 3] = VineGrowthAction.field_s[var11Lifetime1];
-              if (gt.a(LeaderEscortCondition.field_a[var11Lifetime1], (byte) 109) &&
+              if (gt.isLocalAccountName(LeaderEscortCondition.field_a[var11Lifetime1], (byte) 109) &&
                 VineGrowthAction.field_s[var11Lifetime1] + (AnimationFrameSet.field_w[var11Lifetime1] + TutorialController.field_c[var11Lifetime1]) == 0) {
                 var6[1][var13] = null;
                 var13--;

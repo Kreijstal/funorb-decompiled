@@ -35,7 +35,7 @@ final class hq {
             ByteStorage.incomingPacket = new CipherPacketBuffer(param3);
             vl.outgoingPacket = new CipherPacketBuffer(param1);
             io.field_t = param5;
-            k.field_c = param10;
+            AccountNameNormalizer.field_c = param10;
             BestScoreStrategy.field_l = param9;
             AiPlanningStrategy.field_c = param2;
             wj.field_n = param11;

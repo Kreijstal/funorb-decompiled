@@ -5,7 +5,7 @@ final class mv {
     static ClientConnectionState field_c;
     static boolean field_b;
     static RgbSprite[] field_a;
-    static String field_d;
+    static String localAccountName;
     static String field_e;
 
     final static void a(int param0, byte param1, int param2, int param3, int param4) {
@@ -101,7 +101,7 @@ final class mv {
         }
         field_a = null;
         field_c = null;
-        field_d = null;
+        localAccountName = null;
         field_e = null;
     }
 

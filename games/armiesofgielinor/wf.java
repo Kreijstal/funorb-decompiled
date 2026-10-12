@@ -417,14 +417,14 @@ abstract class wf extends iv {
                 AiInfluenceMap.a(true);
                 break;
               case 16:
-                da.a(67);
+                da.readLocalAccountName(67);
                 break;
               default:
                 if (var2 != 11 &&
                   var2 != 12) {
                   switch (var2) {
                     case 13:
-                      MatchConditionEntry.a(param0 - 11);
+                      MatchConditionEntry.processSocialListUpdate(param0 - 11);
                       break regionExit1;
                     case 17:
                       this.n(16433);

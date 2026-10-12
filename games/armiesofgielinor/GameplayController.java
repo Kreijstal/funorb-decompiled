@@ -5774,7 +5774,7 @@ final class GameplayController {
               }
               stackIn_38_0 = ah.localCoat;
               stackIn_38_1 = var5_int - 56 + var6 / 2;
-              stackIn_38_2 = mv.field_d;
+              stackIn_38_2 = mv.localAccountName;
               stackIn_38_3 = false;
               stackIn_38_4 = false;
               stackIn_38_5 = 190 + ah.localCoat.getMissingPartOffset((byte) 125);
@@ -5865,10 +5865,10 @@ final class GameplayController {
                 decompiledFrameRemainder0 = (decompiledRegionSelector0 != 0);
                 if ((decompiledFrameRemainder0) &&
                   (var12 != 0)) {
-                  ah.localCoat.a(var6 / 2 - 56 + var5_int, mv.field_d, false, false, ah.localCoat.getMissingPartOffset((byte) -39) + 190, true, false, 34);
+                  ah.localCoat.a(var6 / 2 - 56 + var5_int, mv.localAccountName, false, false, ah.localCoat.getMissingPartOffset((byte) -39) + 190, true, false, 34);
                 }
               } else {
-                ah.localCoat.a(var6 / 2 - 56 + var5_int, mv.field_d, false, false, ah.localCoat.getMissingPartOffset((byte) -39) + 190, true, false, 34);
+                ah.localCoat.a(var6 / 2 - 56 + var5_int, mv.localAccountName, false, false, ah.localCoat.getMissingPartOffset((byte) -39) + 190, true, false, 34);
               }
             }
           }
@@ -11303,7 +11303,7 @@ final class GameplayController {
             var2_int++;
           } while (var3 == 0);
           if (!DamageEvent.g(79)) {
-            this.battlefield.playerNames[0] = mv.field_d;
+            this.battlefield.playerNames[0] = mv.localAccountName;
             if (var3 != 0) {
               this.battlefield.playerNames[0] = BoundedFile.field_i;
             }
@@ -11954,7 +11954,7 @@ final class GameplayController {
             var2_int++;
           } while (var3 == 0);
           if (!DamageEvent.g(76)) {
-            this.battlefield.playerNames[0] = mv.field_d;
+            this.battlefield.playerNames[0] = mv.localAccountName;
             if (var3 != 0) {
               this.battlefield.playerNames[0] = BoundedFile.field_i;
             }

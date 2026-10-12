@@ -124,7 +124,7 @@ final class wm {
             AnimationPlayer.field_g > var5) {
             var10_int = kp.a(var8_ref_mo.channelId, -125);
             if (var8_ref_mo.getFilterPriority(true) >= var10_int && (var8_ref_mo.systemMessage ||
-              !IndexedSpriteBase.a(var8_ref_mo.accountName, -3404))) {
+              !IndexedSpriteBase.isIgnoredAccount(var8_ref_mo.accountName, -3404))) {
               var9 = 1;
             }
           }

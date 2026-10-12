@@ -113,9 +113,9 @@ final class vr {
             field_a = (int[]) null;
           }
           var5 = (CharSequence) ((Object) param1);
-          var3 = k.a(var5, false);
+          var3 = AccountNameNormalizer.normalize(var5, false);
           var6 = (CharSequence) ((Object) param2);
-          var4 = k.a(var6, false);
+          var4 = AccountNameNormalizer.normalize(var6, false);
           if (var3 == null &&
             var4 == null) {
             return true;

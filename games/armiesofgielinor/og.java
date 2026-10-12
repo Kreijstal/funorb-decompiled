@@ -74,7 +74,7 @@ final class og extends IntrusiveNode {
           qd.field_G = param2;
           rs.field_t = 2;
           var5 = (CharSequence) ((Object) param2);
-          wm.field_b = k.a(var5, false);
+          wm.field_b = AccountNameNormalizer.normalize(var5, false);
           dj.field_e = param0;
           TrianglePulse.a((byte) 118);
           if (param1 != 1) {

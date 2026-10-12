@@ -35,8 +35,8 @@ final class ChatMessage {
           if (oh.localAccountId == this.accountId) {
             return 1;
           }
-          if (th.field_a == 2 &&
-            jj.a(82, this.accountName)) {
+          if (th.socialListState == 2 &&
+            jj.isFriend(82, this.accountName)) {
             return 1;
           }
           return 0;

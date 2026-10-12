@@ -245,18 +245,18 @@ final class ep {
           if (null == param0.children) {
             param0.children = new NodeDeque();
           }
-          if (null == DiskCacheRequest.field_K) {
-            DiskCacheRequest.field_K = new DualNodeHashTable(64);
+          if (null == DiskCacheRequest.friendsByName) {
+            DiskCacheRequest.friendsByName = new DualNodeHashTable(64);
           }
           if (param1 > -20) {
             field_o = -46;
           }
-          if (bk.field_a == null) {
-            bk.field_a = new DualNodeHashTable(64);
+          if (bk.ignoredAccountsByName == null) {
+            bk.ignoredAccountsByName = new DualNodeHashTable(64);
           }
-          ot.field_E = param0.children;
-          wh.field_c = param2.children;
-          da.c(-123);
+          ot.ignoreEntries = param0.children;
+          wh.friendEntries = param2.children;
+          da.clearSocialLists(-123);
         } catch (RuntimeException runtimeException) {
           throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "ep.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }

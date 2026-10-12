@@ -224,13 +224,13 @@ final class CampaignMenuEntry extends IntrusiveNode {
     final static RgbSprite[] a(int param0, int param1, int param2, byte param3, int param4) {
         RgbSprite[] var6 = new RgbSprite[9];
         RgbSprite[] var5 = var6;
-        RgbSprite dupTemp$0 = hl.a(false, param2, param1);
+        RgbSprite dupTemp$0 = SocialListEntry.a(false, param2, param1);
         var6[6] = dupTemp$0;
         var5[3] = dupTemp$0;
         var5[2] = dupTemp$0;
         var5[1] = dupTemp$0;
         var5[0] = dupTemp$0;
-        RgbSprite dupTemp$1 = hl.a(false, param4, param1);
+        RgbSprite dupTemp$1 = SocialListEntry.a(false, param4, param1);
         var6[8] = dupTemp$1;
         var5[7] = dupTemp$1;
         var5[5] = dupTemp$1;
@@ -238,7 +238,7 @@ final class CampaignMenuEntry extends IntrusiveNode {
           CampaignMenuEntry.a(111);
         }
         if (param0 != 0) {
-          var6[4] = hl.a(false, param0, 64);
+          var6[4] = SocialListEntry.a(false, param0, 64);
         }
         return var5;
     }

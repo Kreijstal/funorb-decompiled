@@ -42,7 +42,7 @@ final class LobbyPlayer extends ClientUiComponent {
           this.displayName = displayName;
           this.accountName = accountName;
           var5 = (CharSequence) ((Object) this.accountName);
-          k.a(var5, false);
+          AccountNameNormalizer.normalize(var5, false);
           if (obfuscationGuard != 53) {
             LobbyPlayer.e((byte) -11);
           }
@@ -59,7 +59,7 @@ final class LobbyPlayer extends ClientUiComponent {
           this.accountName = accountName;
           this.displayName = displayName;
           var6 = (CharSequence) ((Object) this.accountName);
-          k.a(var6, false);
+          AccountNameNormalizer.normalize(var6, false);
         } catch (RuntimeException runtimeException) {
           throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "of.<init>(" + (accountName != null ? "{...}" : "null") + ',' + (displayName != null ? "{...}" : "null") + ',' + accountId + ')');
         }

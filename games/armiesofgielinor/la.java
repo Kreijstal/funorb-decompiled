@@ -70,12 +70,12 @@ final class la {
         }
     }
 
-    final static void a(boolean param0, int param1, int param2) {
+    final static void updateSocialListControls(boolean enableCapture, int visibleRows, int obfuscationGuard) {
         ClientContextMenu var4 = null;
         String var5_ref_String = null;
         int var5 = 0;
         int var6 = 0;
-        hl var3 = AiPlanningStrategy.a(param2 + 76, param1, param0);
+        SocialListEntry var3 = AiPlanningStrategy.updateFriendListControls(obfuscationGuard + 76, visibleRows, enableCapture);
         ClientContextMenu var4Lifetime1;
         if (var3 != null) {
           tn.activeContextMenu.addPlayerAdmissionActions(23899, false);
@@ -87,8 +87,8 @@ final class la {
           var6 = TeleportAction.pointerPressY;
           var4Lifetime1.menu.layoutPopup(0, var6, 0, (byte) -118, var5);
         }
-        DeployEvent.a(-115, param0, param1);
-        if (param2 != -1) {
+        DeployEvent.updateIgnoreListControls(-115, enableCapture, visibleRows);
+        if (obfuscationGuard != -1) {
           field_g = (java.applet.Applet) null;
         }
     }

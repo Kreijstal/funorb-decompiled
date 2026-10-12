@@ -5,7 +5,7 @@ final class IntPair extends IntrusiveNode {
     int first;
     static String field_l;
     static String field_o;
-    static String field_p;
+    static String localAccountNameKey;
     int second;
     static AnimationFrameSet field_q;
     static PlatformTaskService field_m;
@@ -16,7 +16,7 @@ final class IntPair extends IntrusiveNode {
         }
         field_m = null;
         field_q = null;
-        field_p = null;
+        localAccountNameKey = null;
         field_l = null;
         field_o = null;
     }
@@ -25,7 +25,7 @@ final class IntPair extends IntrusiveNode {
         int var6 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         RgbSprite[] var7 = new RgbSprite[9];
         RgbSprite[] var4 = var7;
-        var7[0] = hl.a(false, param2, param3);
+        var7[0] = SocialListEntry.a(false, param2, param3);
         int var5 = 1;
         if (param1 > -8) {
           IntPair.e(-23);
@@ -34,7 +34,7 @@ final class IntPair extends IntrusiveNode {
           var4[var5] = var4[0];
           var5++;
         }
-        var4[4] = hl.a(false, param0, 64);
+        var4[4] = SocialListEntry.a(false, param0, 64);
         return var4;
     }
 

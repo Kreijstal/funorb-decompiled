@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class vg extends IntrusiveNode {
-    static int field_p;
+    static int ignoreCount;
     static RgbSprite[] field_q;
     byte[] field_s;
     static String field_t;

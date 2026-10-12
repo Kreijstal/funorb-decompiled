@@ -178,7 +178,7 @@ final class hg implements java.awt.event.KeyListener, java.awt.event.FocusListen
         }
     }
 
-    final static boolean a(byte param0, CharSequence param1) {
+    final static boolean isValidSocialTargetName(byte obfuscationGuard, CharSequence name) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
@@ -188,18 +188,18 @@ final class hg implements java.awt.event.KeyListener, java.awt.event.FocusListen
         RuntimeException decompiledCaughtException = null;
         var3 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          if (param0 > -5) {
+          if (obfuscationGuard > -5) {
             return true;
           }
-          if (!wn.a(param1, 1, true)) {
+          if (!wn.hasValidAccountNameShape(name, 1, true)) {
             return false;
           }
           var2_int = 0;
           while (true) {
-            if (var2_int >= param1.length()) {
+            if (var2_int >= name.length()) {
               return true;
             }
-            if (ph.a(-48, param1.charAt(var2_int))) {
+            if (ph.isAccountNameCharacter(-48, name.charAt(var2_int))) {
               var2_int++;
               continue;
             }
@@ -210,8 +210,8 @@ final class hg implements java.awt.event.KeyListener, java.awt.event.FocusListen
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
           stackIn_17_0 = var2;
-          stackIn_17_1 = new StringBuilder().append("hg.B(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_17_1 = new StringBuilder().append("hg.B(").append(obfuscationGuard).append(',');
+          if (name == null) {
             stackIn_18_2 = "null";
           } else {
             stackIn_18_2 = "{...}";

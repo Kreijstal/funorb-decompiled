@@ -1263,7 +1263,7 @@ final class TickCounter {
                 }
                 var2 = fk.a(false, "DIFFICULTY");
                 if (null != var2) {
-                  k.field_b = uu.a(var2, (byte) 66);
+                  AccountNameNormalizer.field_b = uu.a(var2, (byte) 66);
                 }
                 var2 = fk.a(false, "BESTSCORE");
                 if (null != var2) {
@@ -3079,19 +3079,19 @@ final class TickCounter {
                 }
                 var2 = fk.a(false, "directions,0");
                 if (null != var2) {
-                  k.field_a[0] = uu.a(var2, (byte) 82);
+                  AccountNameNormalizer.field_a[0] = uu.a(var2, (byte) 82);
                 }
                 var2 = fk.a(false, "directions,1");
                 if (null != var2) {
-                  k.field_a[1] = uu.a(var2, (byte) 121);
+                  AccountNameNormalizer.field_a[1] = uu.a(var2, (byte) 121);
                 }
                 var2 = fk.a(false, "directions,2");
                 if (var2 != null) {
-                  k.field_a[2] = uu.a(var2, (byte) 8);
+                  AccountNameNormalizer.field_a[2] = uu.a(var2, (byte) 8);
                 }
                 var2 = fk.a(false, "directions,3");
                 if (var2 != null) {
-                  k.field_a[3] = uu.a(var2, (byte) 48);
+                  AccountNameNormalizer.field_a[3] = uu.a(var2, (byte) 48);
                 }
                 var2 = fk.a(false, "SLASH");
                 if (var2 != null) {
@@ -4803,7 +4803,7 @@ final class TickCounter {
                 }
                 var2 = fk.a(false, "TTREEN_RANGED");
                 if (null != var2) {
-                  hl.field_Lb = uu.a(var2, (byte) -120);
+                  SocialListEntry.field_Lb = uu.a(var2, (byte) -120);
                 }
                 var2 = fk.a(false, "TTREEN_MAGIC");
                 if (null != var2) {

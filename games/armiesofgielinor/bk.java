@@ -5,7 +5,7 @@ final class bk {
     static ClientUiComponent field_f;
     static String field_g;
     static String field_b;
-    static DualNodeHashTable field_a;
+    static DualNodeHashTable ignoredAccountsByName;
     static String field_c;
     static NodeDeque field_e;
     static IndexedSprite[] field_d;
@@ -322,7 +322,7 @@ final class bk {
     }
 
     public static void a(boolean param0) {
-        field_a = null;
+        ignoredAccountsByName = null;
         field_e = null;
         field_b = null;
         field_h = null;

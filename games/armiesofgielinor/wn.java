@@ -14,7 +14,7 @@ final class wn extends ih {
     private vk field_hb;
     static String field_bb;
 
-    final static boolean a(CharSequence param0, int param1, boolean param2) {
+    final static boolean hasValidAccountNameShape(CharSequence name, int minimumLength, boolean allowRepeatedSeparators) {
         int var6 = 0;
         int var3_int = 0;
         RuntimeException var3 = null;
@@ -28,27 +28,27 @@ final class wn extends ih {
         RuntimeException decompiledCaughtException = null;
         var8 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          if (param0 == null) {
+          if (name == null) {
             return false;
           }
-          var3_int = param0.length();
-          if (var3_int >= param1 &&
+          var3_int = name.length();
+          if (var3_int >= minimumLength &&
             var3_int <= 12) {
-            var4 = k.a(param0, false);
+            var4 = AccountNameNormalizer.normalize(name, false);
             if (var4 != null &&
               var4.length() >= 1) {
-              if (!rs.a(var4.charAt(0), (byte) -111) &&
-                !rs.a(var4.charAt(var4.length() - 1), (byte) -74)) {
+              if (!rs.isAccountNameSeparator(var4.charAt(0), (byte) -111) &&
+                !rs.isAccountNameSeparator(var4.charAt(var4.length() - 1), (byte) -74)) {
                 var5 = 0;
-                for (var6 = 0; var6 < param0.length(); var6++) {
-                  var7 = param0.charAt(var6);
-                  if (rs.a((char) var7, (byte) -42)) {
+                for (var6 = 0; var6 < name.length(); var6++) {
+                  var7 = name.charAt(var6);
+                  if (rs.isAccountNameSeparator((char) var7, (byte) -42)) {
                     var5++;
                   } else {
                     var5 = 0;
                   }
                   if (2 <= var5 &&
-                    !param2) {
+                    !allowRepeatedSeparators) {
                     return false;
                   }
                 }
@@ -67,12 +67,12 @@ final class wn extends ih {
           var3 = decompiledCaughtException;
           stackIn_37_0 = var3;
           stackIn_37_1 = new StringBuilder().append("wn.AB(");
-          if (param0 == null) {
+          if (name == null) {
             stackIn_38_2 = "null";
           } else {
             stackIn_38_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_37_0), ((StringBuilder) (Object) stackIn_37_1).append(stackIn_38_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_37_0), ((StringBuilder) (Object) stackIn_37_1).append(stackIn_38_2).append(',').append(minimumLength).append(',').append(allowRepeatedSeparators).append(')').toString());
         }
     }
 
@@ -148,7 +148,7 @@ final class wn extends ih {
     public static void c(byte param0) {
         if (param0 != 52) {
           CharSequence var2 = (CharSequence) null;
-          wn.a((CharSequence) null, -50, false);
+          wn.hasValidAccountNameShape((CharSequence) null, -50, false);
         }
         field_kb = null;
         field_jb = null;

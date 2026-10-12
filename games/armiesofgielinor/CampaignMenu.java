@@ -1047,7 +1047,7 @@ final class CampaignMenu {
               stackIn_31_0 = this.selectedMissionEntry;
             }
             var15 = stackIn_31_0.mission;
-            rs.field_n.a(k.field_b + var15.difficulty, db.a(true, var5), MatchConditionEntry.a(var6Lifetime1, (byte) 94), var4Lifetime1, 472, 16776960, 1, 0, 0, 0);
+            rs.field_n.a(AccountNameNormalizer.field_b + var15.difficulty, db.a(true, var5), MatchConditionEntry.a(var6Lifetime1, (byte) 94), var4Lifetime1, 472, 16776960, 1, 0, 0, 0);
             var6Lifetime1 = var6Lifetime1 + rs.field_n.field_v;
             var16Lifetime1 = 1;
             if (this.selectedMissionEntry.statusText != null) {

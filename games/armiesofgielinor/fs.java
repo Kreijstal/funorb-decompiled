@@ -103,7 +103,7 @@ final class fs {
           if (rs.field_t == 2 &&
             null != wm.field_b) {
             var3 = (CharSequence) ((Object) param1);
-            if (wm.field_b.equals(k.a(var3, false))) {
+            if (wm.field_b.equals(AccountNameNormalizer.normalize(var3, false))) {
               return true;
             }
           }

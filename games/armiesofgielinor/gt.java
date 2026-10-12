@@ -12,7 +12,7 @@ final class gt {
     static String field_h;
     static String[] field_f;
 
-    final static boolean a(String param0, byte param1) {
+    final static boolean isLocalAccountName(String name, byte obfuscationGuard) {
         int var2_int = 0;
         RuntimeException var2 = null;
         CharSequence var3 = null;
@@ -22,21 +22,21 @@ final class gt {
         String stackIn_5_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var2_int = -112 % ((param1 - 19) / 63);
-          var3 = (CharSequence) ((Object) param0);
-          stackIn_1_0 = IntPair.field_p.equals(k.a(var3, false));
+          var2_int = -112 % ((obfuscationGuard - 19) / 63);
+          var3 = (CharSequence) ((Object) name);
+          stackIn_1_0 = IntPair.localAccountNameKey.equals(AccountNameNormalizer.normalize(var3, false));
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
           stackIn_4_0 = var2;
           stackIn_4_1 = new StringBuilder().append("gt.B(");
-          if (param0 == null) {
+          if (name == null) {
             stackIn_5_2 = "null";
           } else {
             stackIn_5_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(param1).append(')').toString());
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 

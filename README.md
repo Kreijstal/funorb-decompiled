@@ -23,7 +23,7 @@ by default for every game. Semantic game-specific names use explicit naming
 rules. Deko's numbered structural-category and type-based names identify
 unresolved purposes honestly; they are not complete semantic deobfuscation.
 
-Armies has 198 reviewed class names, not a complete semantic map. Shared widget
+Armies has 200 reviewed class names, not a complete semantic map. Shared widget
 bounds, dropdown options/prefix selection, painter dispatch and expansion now
 have reviewed names with pointer, selection and arrow-pixel fixtures. Campaign
 loadouts now name unit/spell rewards, equipped slots and cumulative mana bonuses;
@@ -106,6 +106,13 @@ controls. The reading guide adds outgoing commands 6–11 and report framing.
 Native byte fixtures verify lengths, IDs, controlled cipher output, repeated
 watch suppression and NUL-name partial writes. Constructor/control fixtures pass;
 live request/report delivery and complete rendered interaction remain unverified.
+
+SocialListEntry and AccountNameNormalizer now expose friend/ignore records,
+canonical lookup keys, collision scans, renamed-row reuse, interned location
+ordering and reset. The guide documents social update subtypes 0–4 and outgoing
+commands 0–3, including immediate local removal and distinct display/account
+names. Native fixtures cover these paths; live delivery and rendered social-list
+interaction remain unverified.
 
 Camera overview grouping, centroid bounds, hold state and explicit tile focus
 now have reviewed names, alongside directional panning, dragging and velocity

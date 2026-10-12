@@ -9,7 +9,7 @@ final class ph {
     static String field_a;
     static boolean field_f;
 
-    final static boolean a(int param0, char param1) {
+    final static boolean isAccountNameCharacter(int obfuscationGuard, char character) {
         char[] var2 = null;
         int var3 = 0;
         int var4 = 0;
@@ -29,10 +29,10 @@ final class ph {
         int var4Lifetime1;
         var5 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          if (Character.isISOControl(param1)) {
+          if (Character.isISOControl(character)) {
             return false;
           }
-          if (bi.a(param1, -31000)) {
+          if (bi.a(character, -31000)) {
             return true;
           }
           var12 = VerticalScrollbar.field_Nb;
@@ -41,11 +41,11 @@ final class ph {
           var2 = var7;
           for (var3 = 0; var3 < var12.length; var3++) {
             var4 = var12[var3];
-            if (~var4 == ~param1) {
+            if (~var4 == ~character) {
               return true;
             }
           }
-          if (param0 >= -8) {
+          if (obfuscationGuard >= -8) {
             var6 = (String) null;
             ph.a((String) null, (byte) -108);
           }
@@ -57,7 +57,7 @@ final class ph {
           var3Lifetime1 = var9;
           while (var13.length > var9) {
             var4Lifetime1 = var13[var9];
-            if (param1 == var4Lifetime1) {
+            if (character == var4Lifetime1) {
               return true;
             }
             var9++;
@@ -66,7 +66,7 @@ final class ph {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) var2_ref), "ph.A(" + param0 + ',' + param1 + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) var2_ref), "ph.A(" + obfuscationGuard + ',' + character + ')');
         }
     }
 
@@ -142,7 +142,7 @@ final class ph {
               var5 = var6;
               var5Lifetime1 = var6;
               if (param2) {
-                ph.a(103, '\013');
+                ph.isAccountNameCharacter(103, '\013');
               }
               var4 = param1.getParameter("cookiehost");
               var5Lifetime2 = var4;

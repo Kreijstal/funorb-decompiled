@@ -76,7 +76,7 @@ final class op {
         }
     }
 
-    final static String a(int param0, String param1, int param2) {
+    final static String requestAddFriend(int obfuscationGuard, String name, int packetOpcode) {
         String stackIn_2_0 = null;
         String stackIn_6_0 = null;
         String stackIn_9_0 = null;
@@ -91,64 +91,64 @@ final class op {
         String stackIn_33_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
-        int var4 = 0;
-        CipherPacketBuffer var5 = null;
-        CharSequence var6 = null;
+        int payloadStart = 0;
+        CipherPacketBuffer packet = null;
+        CharSequence nameCharacters = null;
         try {
-          var6 = (CharSequence) ((Object) param1);
-          if (!hg.a((byte) -18, var6)) {
+          nameCharacters = (CharSequence) ((Object) name);
+          if (!hg.isValidSocialTargetName((byte) -18, nameCharacters)) {
             stackIn_2_0 = SectorCacheStore.field_d;
             return stackIn_2_0;
           }
-          if (2 != th.field_a) {
+          if (2 != th.socialListState) {
             stackIn_6_0 = iv.field_c;
             return stackIn_6_0;
           }
-          if (gt.a(param1, (byte) -89)) {
+          if (gt.isLocalAccountName(name, (byte) -89)) {
             stackIn_9_0 = MoveAttackRequest.field_F;
             return stackIn_9_0;
           }
-          if (jj.a(param0 ^ 58, param1)) {
-            stackIn_13_0 = fo.a(4800, ReportAbuseDialog.field_Ob, new String[]{param1});
+          if (jj.isFriend(obfuscationGuard ^ 58, name)) {
+            stackIn_13_0 = fo.a(4800, ReportAbuseDialog.field_Ob, new String[]{name});
             return stackIn_13_0;
           }
-          if (dj.field_a >= 100 &&
+          if (dj.friendCount >= 100 &&
             df.field_M <= 0) {
             stackIn_18_0 = MapLayout.field_m;
             return stackIn_18_0;
           }
-          if (dj.field_a >= 200) {
+          if (dj.friendCount >= 200) {
             stackIn_21_0 = MapLayout.field_m;
             return stackIn_21_0;
           }
-          if (IndexedSpriteBase.a(param1, -3404)) {
-            stackIn_24_0 = fo.a(4800, km.field_a, new String[]{param1});
+          if (IndexedSpriteBase.isIgnoredAccount(name, -3404)) {
+            stackIn_24_0 = fo.a(4800, km.field_a, new String[]{name});
             return stackIn_24_0;
           }
-          var5 = vl.outgoingPacket;
-          var5.writeCipheredOpcode(32161, param2);
-          var5.position = var5.position + 1;
-          var4 = var5.position;
-          var5.writeByte(1, 0);
-          if (param0 != 20) {
+          packet = vl.outgoingPacket;
+          packet.writeCipheredOpcode(32161, packetOpcode);
+          packet.position = packet.position + 1;
+          payloadStart = packet.position;
+          packet.writeByte(1, 0);
+          if (obfuscationGuard != 20) {
             stackIn_27_0 = (String) null;
             return stackIn_27_0;
           }
-          var5.b(param1, 13851);
-          var5.writeByteLengthPrefix(-var4 + var5.position, 5930);
+          packet.b(name, 13851);
+          packet.writeByteLengthPrefix(-payloadStart + packet.position, 5930);
           stackIn_29_0 = null;
           return (String) (stackIn_29_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
           stackIn_32_0 = var3;
-          stackIn_32_1 = new StringBuilder().append("op.B(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_32_1 = new StringBuilder().append("op.B(").append(obfuscationGuard).append(',');
+          if (name == null) {
             stackIn_33_2 = "null";
           } else {
             stackIn_33_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_32_0), ((StringBuilder) (Object) stackIn_32_1).append(stackIn_33_2).append(',').append(param2).append(')').toString());
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_32_0), ((StringBuilder) (Object) stackIn_32_1).append(stackIn_33_2).append(',').append(packetOpcode).append(')').toString());
         }
     }
 

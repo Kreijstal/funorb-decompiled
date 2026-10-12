@@ -4,7 +4,7 @@
 final class dj {
     static long field_e;
     static int[] field_b;
-    static int field_a;
+    static int friendCount;
     static String[] field_d;
     static String[] field_c;
 

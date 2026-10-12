@@ -489,7 +489,7 @@ final class ut extends sf implements he {
           if (AiUnitPlanner.field_t) {
             PacketBuffer.i((byte) -97);
             pu.d(-112);
-            da.c(-120);
+            da.clearSocialLists(-120);
             AiUnitPlanner.field_t = false;
           }
           if (param0 < 120) {

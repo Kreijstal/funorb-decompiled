@@ -117,7 +117,7 @@ final class kv extends tj implements he {
         String stackIn_22_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (!ph.a(-19, param2)) {
+          if (!ph.isAccountNameCharacter(-19, param2)) {
             return false;
           }
           if (param1 == null) {
@@ -130,7 +130,7 @@ final class kv extends tj implements he {
           if (var3_int >= 12) {
             return false;
           }
-          if (!rs.a(param2, (byte) -87)) {
+          if (!rs.isAccountNameSeparator(param2, (byte) -87)) {
             return true;
           }
           if (var3_int != 0) {

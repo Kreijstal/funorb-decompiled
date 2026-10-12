@@ -1,18 +1,18 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class hl extends ClientUiComponent {
+final class SocialListEntry extends ClientUiComponent {
     static String field_Lb;
-    String field_Pb;
-    ClientUiComponent field_Kb;
-    ClientUiComponent field_Qb;
-    ClientUiComponent field_Jb;
-    int field_Ob;
-    String field_Mb;
-    String field_Nb;
-    String field_Ib;
+    String accountName;
+    ClientUiComponent locationComponent;
+    ClientUiComponent nameComponent;
+    ClientUiComponent previousNameComponent;
+    int orderIndex;
+    String displayName;
+    String previousDisplayName;
+    String locationLabel;
 
-    hl() {
+    SocialListEntry() {
         super(0L, (ClientUiComponent) null);
     }
 
@@ -40,7 +40,7 @@ final class hl extends ClientUiComponent {
         if (param0 == -4175) {
           return;
         }
-        hl.a(true, -43, 13);
+        SocialListEntry.a(true, -43, 13);
     }
 
     static {

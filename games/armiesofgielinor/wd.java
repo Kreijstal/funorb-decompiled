@@ -85,55 +85,55 @@ final class wd {
         }
     }
 
-    final static boolean a(boolean param0, hl param1, hl param2) {
-        int var3_int = 0;
+    final static boolean isFriendOrderedAfter(boolean obfuscationGuard, SocialListEntry entry, SocialListEntry other) {
+        int orderDifference = 0;
         RuntimeException var3 = null;
-        int var4 = 0;
+        int obfuscationControl = 0;
         RuntimeException stackIn_30_0 = null;
         StringBuilder stackIn_30_1 = null;
         String stackIn_31_2 = null;
         StringBuilder stackIn_34_1 = null;
         String stackIn_35_2 = null;
         RuntimeException decompiledCaughtException = null;
-        var4 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        obfuscationControl = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          var3_int = param1.field_Ob - param2.field_Ob;
-          if (vl.field_p != param1.field_Ib) {
-            if (param1.field_Ib == null) {
-              var3_int += 200;
-              if (var4 != 0) {
-                var3_int -= 200;
+          orderDifference = entry.orderIndex - other.orderIndex;
+          if (vl.currentLocationLabel != entry.locationLabel) {
+            if (entry.locationLabel == null) {
+              orderDifference += 200;
+              if (obfuscationControl != 0) {
+                orderDifference -= 200;
               }
             }
           } else {
-            var3_int -= 200;
+            orderDifference -= 200;
           }
-          if (vl.field_p != param2.field_Ib) {
-            if (null == param2.field_Ib) {
-              var3_int -= 200;
-              if (var4 != 0) {
-                var3_int += 200;
+          if (vl.currentLocationLabel != other.locationLabel) {
+            if (null == other.locationLabel) {
+              orderDifference -= 200;
+              if (obfuscationControl != 0) {
+                orderDifference += 200;
               }
             }
           } else {
-            var3_int += 200;
+            orderDifference += 200;
           }
-          if (!param0) {
-            return !(0 >= var3_int);
+          if (!obfuscationGuard) {
+            return !(0 >= orderDifference);
           }
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
           stackIn_30_0 = var3;
-          stackIn_30_1 = new StringBuilder().append("wd.B(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_30_1 = new StringBuilder().append("wd.B(").append(obfuscationGuard).append(',');
+          if (entry == null) {
             stackIn_31_2 = "null";
           } else {
             stackIn_31_2 = "{...}";
           }
           stackIn_34_1 = ((StringBuilder) (Object) stackIn_30_1).append(stackIn_31_2).append(',');
-          if (param2 == null) {
+          if (other == null) {
             stackIn_35_2 = "null";
           } else {
             stackIn_35_2 = "{...}";
@@ -169,7 +169,7 @@ final class wd {
           }
           if (rs.field_t == 2 &&
             !vu.j(6)) {
-            if (!jj.a(62, wm.field_b)) {
+            if (!jj.isFriend(62, wm.field_b)) {
               var2 = fo.a(4800, DiskCacheWorker.field_h, new String[]{qd.field_G});
               if (var10 != 0) {
                 var2 = fo.a(4800, pt.field_gb, new String[]{qd.field_G});
@@ -190,7 +190,7 @@ final class wd {
           if (var2 != null) {
             fs.a(MeshObject.field_d, (String) null, (String) (var2), -122, 0);
           } else {
-            var3 = mv.field_d;
+            var3 = mv.localAccountName;
             var3 = nt.a(-121, var3);
             var4 = "";
             var5 = "|";

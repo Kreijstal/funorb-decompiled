@@ -154,7 +154,7 @@ final class EffectPresentation implements EventPresentation {
     final static boolean a(boolean param0, int param1) {
         long dupTemp$2 = 0L;
         if (kd.field_J == null) {
-          kd.field_J = wj.field_n.openSocketAsync(rn.field_d, (byte) 120, k.field_c);
+          kd.field_J = wj.field_n.openSocketAsync(rn.field_d, (byte) 120, AccountNameNormalizer.field_c);
         }
         if (param1 == kd.field_J.status) {
           return false;

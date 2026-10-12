@@ -7,7 +7,7 @@ final class vl extends mk {
     static String field_o;
     static CipherPacketBuffer outgoingPacket;
     static String field_l;
-    static String field_p;
+    static String currentLocationLabel;
     static String[] battleHintMessages;
 
     final static String a(ResourceArchive param0, int param1, String param2, String param3, String param4) {
@@ -110,7 +110,7 @@ final class vl extends mk {
         }
         outgoingPacket = null;
         battleHintMessages = null;
-        field_p = null;
+        currentLocationLabel = null;
         field_o = null;
         field_l = null;
         field_k = null;

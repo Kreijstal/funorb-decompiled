@@ -56,7 +56,7 @@ final class QuickChatCommandDefinition {
           rs.field_t = param4;
           qd.field_G = param1;
           var7 = (CharSequence) ((Object) param1);
-          wm.field_b = k.a(var7, false);
+          wm.field_b = AccountNameNormalizer.normalize(var7, false);
           dj.field_e = param3;
           var6 = fg.a(-11, uj.field_n, param2, vs.field_g, hf.field_f);
           vs.a(256, var6);

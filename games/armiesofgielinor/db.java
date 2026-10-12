@@ -103,63 +103,63 @@ final class db {
         return true;
     }
 
-    final static hl a(String param0, int param1) {
-        String var2 = null;
-        hl var3 = null;
-        String var4 = null;
-        int var5 = 0;
-        CharSequence var6 = null;
-        CharSequence var7 = null;
+    final static SocialListEntry findIgnoredAccount(String name, int obfuscationGuard) {
+        String nameKey = null;
+        SocialListEntry ignoredAccount = null;
+        String candidateNameKey = null;
+        int obfuscationControl = 0;
+        CharSequence nameCharacters = null;
+        CharSequence candidateCharacters = null;
         Object stackIn_3_0 = null;
-        hl stackIn_14_0 = null;
+        SocialListEntry stackIn_14_0 = null;
         RuntimeException stackIn_19_0 = null;
         StringBuilder stackIn_19_1 = null;
         String stackIn_20_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2_ref = null;
-        var5 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        obfuscationControl = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          if (null == bk.field_a) {
+          if (null == bk.ignoredAccountsByName) {
             stackIn_3_0 = null;
-            return (hl) (stackIn_3_0);
+            return (SocialListEntry) (stackIn_3_0);
           }
-          var6 = (CharSequence) ((Object) param0);
-          var2 = k.a(var6, false);
-          if (var2 == null) {
-            var2 = param0;
+          nameCharacters = (CharSequence) ((Object) name);
+          nameKey = AccountNameNormalizer.normalize(nameCharacters, false);
+          if (nameKey == null) {
+            nameKey = name;
           }
-          var3 = (hl) (bk.field_a.get((byte) -27, (long)var2.hashCode()));
-          if (param1 > -40) {
+          ignoredAccount = (SocialListEntry) (bk.ignoredAccountsByName.get((byte) -27, (long)nameKey.hashCode()));
+          if (obfuscationGuard > -40) {
             db.a(-88);
           }
           while (true) {
-            if (var3 == null) {
+            if (ignoredAccount == null) {
               return null;
             }
-            var7 = (CharSequence) ((Object) var3.field_Mb);
-            var4 = k.a(var7, false);
-            if (var4 == null) {
-              var4 = var3.field_Mb;
+            candidateCharacters = (CharSequence) ((Object) ignoredAccount.displayName);
+            candidateNameKey = AccountNameNormalizer.normalize(candidateCharacters, false);
+            if (candidateNameKey == null) {
+              candidateNameKey = ignoredAccount.displayName;
             }
-            if (!var4.equals(var2)) {
-              var3 = (hl) (bk.field_a.getNextMatch(-348));
+            if (!candidateNameKey.equals(nameKey)) {
+              ignoredAccount = (SocialListEntry) (bk.ignoredAccountsByName.getNextMatch(-348));
               continue;
             }
             break;
           }
-          stackIn_14_0 = var3;
+          stackIn_14_0 = ignoredAccount;
           return stackIn_14_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
           stackIn_19_0 = var2_ref;
           stackIn_19_1 = new StringBuilder().append("db.D(");
-          if (param0 == null) {
+          if (name == null) {
             stackIn_20_2 = "null";
           } else {
             stackIn_20_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param1).append(')').toString());
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 

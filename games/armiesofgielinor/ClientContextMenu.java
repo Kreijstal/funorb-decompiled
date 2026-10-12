@@ -73,19 +73,19 @@ final class ClientContextMenu {
                 if (actionId != 7) {
                   return false;
                 }
-                var5 = fq.a(socialPacketOpcode, this.displayName, false, this.accountName);
+                var5 = fq.requestRemoveIgnoredAccount(socialPacketOpcode, this.displayName, false, this.accountName);
                 if (var5 == null) {
                   return true;
                 }
                 ta.a((String) null, 2, -18119, this.accountName, var5, 0);
                 return true;
               }
-              var4_ref = se.a(this.accountName, socialPacketOpcode, -127);
+              var4_ref = se.requestAddIgnoredAccount(this.accountName, socialPacketOpcode, -127);
             } else {
-              var4_ref = DamageEvent.a(this.accountName, (byte) -27, socialPacketOpcode);
+              var4_ref = DamageEvent.requestRemoveFriend(this.accountName, (byte) -27, socialPacketOpcode);
             }
           } else {
-            var4_ref = op.a(20, this.accountName, socialPacketOpcode);
+            var4_ref = op.requestAddFriend(20, this.accountName, socialPacketOpcode);
           }
           if (var4_ref == null) {
             return true;
@@ -94,7 +94,7 @@ final class ClientContextMenu {
           return true;
         }
         if (actionId == 4) {
-          var6 = op.a(20, this.accountName, socialPacketOpcode);
+          var6 = op.requestAddFriend(20, this.accountName, socialPacketOpcode);
           if (var6 == null) {
             return true;
           }
@@ -102,7 +102,7 @@ final class ClientContextMenu {
           return true;
         }
         if (actionId == 5) {
-          var7 = DamageEvent.a(this.accountName, (byte) -27, socialPacketOpcode);
+          var7 = DamageEvent.requestRemoveFriend(this.accountName, (byte) -27, socialPacketOpcode);
           if (var7 == null) {
             return true;
           }
@@ -110,7 +110,7 @@ final class ClientContextMenu {
           return true;
         }
         if (actionId == 6) {
-          var9 = se.a(this.accountName, socialPacketOpcode, -127);
+          var9 = se.requestAddIgnoredAccount(this.accountName, socialPacketOpcode, -127);
           if (var9 == null) {
             return true;
           }
@@ -120,7 +120,7 @@ final class ClientContextMenu {
         if (actionId != 7) {
           return false;
         }
-        var8 = fq.a(socialPacketOpcode, this.displayName, false, this.accountName);
+        var8 = fq.requestRemoveIgnoredAccount(socialPacketOpcode, this.displayName, false, this.accountName);
         if (var8 == null) {
           return true;
         }
@@ -517,16 +517,16 @@ final class ClientContextMenu {
         RuntimeException decompiledCaughtException = null;
         String var4 = null;
         RuntimeException var4_ref = null;
-        hl var5 = null;
+        SocialListEntry var5 = null;
         int var6 = 0;
         String var7 = null;
         try {
           if (null != this.accountName && (this.accountId != oh.localAccountId ||
-            2 == chatChannel) && 2 == th.field_a) {
+            2 == chatChannel) && 2 == th.socialListState) {
             var7 = this.getTargetDisplayName(-97);
             var4 = var7;
-            var5 = lg.a(this.accountName, (byte) -34);
-            var6 = IndexedSpriteBase.a(this.accountName, -3404) ? 1 : 0;
+            var5 = lg.findFriend(this.accountName, (byte) -34);
+            var6 = IndexedSpriteBase.isIgnoredAccount(this.accountName, -3404) ? 1 : 0;
             if (var5 == null &&
               var6 == 0) {
               this.menu.addTextAction(4, fo.a(4800, vf.field_l, new String[]{var7}), (byte) -125);

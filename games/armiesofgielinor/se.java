@@ -11,11 +11,11 @@ final class se {
     static int field_a;
     static boolean field_c;
 
-    final static String a(String param0, int param1, int param2) {
+    final static String requestAddIgnoredAccount(String name, int packetOpcode, int obfuscationGuard) {
         RuntimeException var3 = null;
-        int var4 = 0;
-        CipherPacketBuffer var5 = null;
-        CharSequence var6 = null;
+        int payloadStart = 0;
+        CipherPacketBuffer packet = null;
+        CharSequence nameCharacters = null;
         String stackIn_5_0 = null;
         String stackIn_8_0 = null;
         String stackIn_11_0 = null;
@@ -28,41 +28,41 @@ final class se {
         String stackIn_26_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param2 > -29) {
+          if (obfuscationGuard > -29) {
             se.a(93);
           }
-          var6 = (CharSequence) ((Object) param0);
-          if (!hg.a((byte) -90, var6)) {
+          nameCharacters = (CharSequence) ((Object) name);
+          if (!hg.isValidSocialTargetName((byte) -90, nameCharacters)) {
             stackIn_5_0 = SectorCacheStore.field_d;
             return stackIn_5_0;
           }
-          if (gt.a(param0, (byte) -114)) {
+          if (gt.isLocalAccountName(name, (byte) -114)) {
             stackIn_8_0 = MoveAttackRequest.field_F;
             return stackIn_8_0;
           }
-          if (2 != th.field_a) {
+          if (2 != th.socialListState) {
             stackIn_11_0 = ct.field_m;
             return stackIn_11_0;
           }
-          if (IndexedSpriteBase.a(param0, -3404)) {
-            stackIn_14_0 = fo.a(4800, ts.field_k, new String[]{param0});
+          if (IndexedSpriteBase.isIgnoredAccount(name, -3404)) {
+            stackIn_14_0 = fo.a(4800, ts.field_k, new String[]{name});
             return stackIn_14_0;
           }
-          if (vg.field_p >= 100) {
+          if (vg.ignoreCount >= 100) {
             stackIn_17_0 = wh.field_d;
             return stackIn_17_0;
           }
-          if (jj.a(89, param0)) {
-            stackIn_20_0 = fo.a(4800, PopupPresentation.field_p, new String[]{param0});
+          if (jj.isFriend(89, name)) {
+            stackIn_20_0 = fo.a(4800, PopupPresentation.field_p, new String[]{name});
             return stackIn_20_0;
           }
-          var5 = vl.outgoingPacket;
-          var5.writeCipheredOpcode(32161, param1);
-          var5.position = var5.position + 1;
-          var4 = var5.position;
-          var5.writeByte(1, 2);
-          var5.b(param0, 13851);
-          var5.writeByteLengthPrefix(var5.position - var4, 5930);
+          packet = vl.outgoingPacket;
+          packet.writeCipheredOpcode(32161, packetOpcode);
+          packet.position = packet.position + 1;
+          payloadStart = packet.position;
+          packet.writeByte(1, 2);
+          packet.b(name, 13851);
+          packet.writeByteLengthPrefix(packet.position - payloadStart, 5930);
           stackIn_22_0 = null;
           return (String) (stackIn_22_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -70,12 +70,12 @@ final class se {
           var3 = decompiledCaughtException;
           stackIn_25_0 = var3;
           stackIn_25_1 = new StringBuilder().append("se.A(");
-          if (param0 == null) {
+          if (name == null) {
             stackIn_26_2 = "null";
           } else {
             stackIn_26_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(',').append(packetOpcode).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 

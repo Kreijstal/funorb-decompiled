@@ -35,7 +35,7 @@ final class fq {
           return;
         }
         String var2 = (String) null;
-        fq.a(-122, (String) null, true, (String) null);
+        fq.requestRemoveIgnoredAccount(-122, (String) null, true, (String) null);
         field_k = null;
         field_h = null;
         field_f = null;
@@ -128,12 +128,12 @@ final class fq {
         return var2Lifetime1;
     }
 
-    final static String a(int param0, String param1, boolean param2, String param3) {
+    final static String requestRemoveIgnoredAccount(int packetOpcode, String displayName, boolean obfuscationGuard, String accountName) {
         RuntimeException var4 = null;
-        CipherPacketBuffer var5 = null;
-        int var6 = 0;
-        hl var7 = null;
-        CharSequence var8 = null;
+        CipherPacketBuffer packet = null;
+        int payloadStart = 0;
+        SocialListEntry ignoredAccount = null;
+        CharSequence accountNameCharacters = null;
         String stackIn_3_0 = null;
         String stackIn_6_0 = null;
         String stackIn_10_0 = null;
@@ -146,48 +146,48 @@ final class fq {
         String stackIn_22_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var8 = (CharSequence) ((Object) param3);
-          if (!hg.a((byte) -113, var8)) {
+          accountNameCharacters = (CharSequence) ((Object) accountName);
+          if (!hg.isValidSocialTargetName((byte) -113, accountNameCharacters)) {
             stackIn_3_0 = SectorCacheStore.field_d;
             return stackIn_3_0;
           }
-          if (th.field_a != 2) {
+          if (th.socialListState != 2) {
             stackIn_6_0 = EffectPresentation.field_a;
             return stackIn_6_0;
           }
-          var7 = db.a(param1, -122);
-          if (var7 == null) {
-            stackIn_10_0 = fo.a(4800, CacheEntry.field_x, new String[]{param1});
+          ignoredAccount = db.findIgnoredAccount(displayName, -122);
+          if (ignoredAccount == null) {
+            stackIn_10_0 = fo.a(4800, CacheEntry.field_x, new String[]{displayName});
             return stackIn_10_0;
           }
-          var7.unlink(-124);
-          var7.unlinkSecondary((byte) -76);
-          vg.field_p = vg.field_p - 1;
-          var5 = vl.outgoingPacket;
-          var5.writeCipheredOpcode(32161, param0);
-          var5.position = var5.position + 1;
-          var6 = var5.position;
-          var5.writeByte(1, 3);
-          if (param2) {
+          ignoredAccount.unlink(-124);
+          ignoredAccount.unlinkSecondary((byte) -76);
+          vg.ignoreCount = vg.ignoreCount - 1;
+          packet = vl.outgoingPacket;
+          packet.writeCipheredOpcode(32161, packetOpcode);
+          packet.position = packet.position + 1;
+          payloadStart = packet.position;
+          packet.writeByte(1, 3);
+          if (obfuscationGuard) {
             stackIn_13_0 = (String) null;
             return stackIn_13_0;
           }
-          var5.b(param3, 13851);
-          var5.writeByteLengthPrefix(var5.position - var6, 5930);
+          packet.b(accountName, 13851);
+          packet.writeByteLengthPrefix(packet.position - payloadStart, 5930);
           stackIn_15_0 = null;
           return (String) (stackIn_15_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
           stackIn_18_0 = var4;
-          stackIn_18_1 = new StringBuilder().append("fq.B(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_18_1 = new StringBuilder().append("fq.B(").append(packetOpcode).append(',');
+          if (displayName == null) {
             stackIn_19_2 = "null";
           } else {
             stackIn_19_2 = "{...}";
           }
-          stackIn_21_1 = ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param2).append(',');
-          if (param3 == null) {
+          stackIn_21_1 = ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(obfuscationGuard).append(',');
+          if (accountName == null) {
             stackIn_22_2 = "null";
           } else {
             stackIn_22_2 = "{...}";
