@@ -6,7 +6,7 @@ final class oh extends dr {
     static RgbSprite[] field_J;
     static boolean[] field_G;
     static String field_F;
-    static um field_K;
+    static MusicTrack field_K;
     static RgbSprite field_I;
     static int field_E;
     static long localAccountId;

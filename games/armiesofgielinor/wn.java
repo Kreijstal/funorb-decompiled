@@ -84,8 +84,8 @@ final class wn extends ih {
         super.a(param0, param1, (byte) -28);
         this.field_S[param1] = param0 << 12;
         if (param2 > -13) {
-          um var5 = (um) null;
-          this.a(true, (byte) 40, true, (um) null);
+          MusicTrack var5 = (MusicTrack) null;
+          this.a(true, (byte) 40, true, (MusicTrack) null);
         }
     }
 
@@ -302,7 +302,7 @@ final class wn extends ih {
         }
     }
 
-    final synchronized void a(boolean param0, byte param1, boolean param2, um param3) {
+    final synchronized void a(boolean param0, byte param1, boolean param2, MusicTrack param3) {
         try {
           if (param1 > -78) {
             this.field_hb = (vk) null;

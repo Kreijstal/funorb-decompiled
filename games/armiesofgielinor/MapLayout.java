@@ -10,7 +10,7 @@ final class MapLayout extends IntrusiveNode {
     static QuickChatCommandDefinition field_q;
     int mapHeight;
     int playerCapacity;
-    static um field_u;
+    static MusicTrack field_u;
     static String field_m;
     static String field_o;
 

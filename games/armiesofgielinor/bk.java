@@ -289,7 +289,7 @@ final class bk {
         }
     }
 
-    final static void a(int param0, int param1, um param2, int param3, boolean param4) {
+    final static void a(int param0, int param1, MusicTrack param2, int param3, boolean param4) {
         nm stackIn_3_0 = null;
         int stackIn_3_1 = 0;
         boolean stackIn_4_2 = false;
@@ -304,7 +304,7 @@ final class bk {
           stackIn_4_2 = !(param4);
           ((nm) (Object) stackIn_3_0).a(stackIn_3_1, stackIn_4_2, param2, param3 - 20608, param1, 1000000);
           if (param3 != 20607) {
-            bk.a(117, -8, (um) null, 124, false);
+            bk.a(117, -8, (MusicTrack) null, 124, false);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -11,7 +11,7 @@ final class SocialListPanel extends ClientUiComponent {
     static QuickChatCategoryRepository quickChatCategories;
     static String field_Pb;
     static ClientUiComponent field_Lb;
-    static um field_Ob;
+    static MusicTrack field_Ob;
     static ClientUiComponent field_Qb;
 
     SocialListPanel(long key, SocialListPanel style, String addLabel, String removeLabel) {

@@ -84,14 +84,14 @@ final class ac extends IntrusiveNode {
             var4 = 210;
             var5 = 30;
             if (this.field_o >= 0) {
-              vc.field_k[this.field_t].g(-8 + var4, -8 + var5);
+              MusicPatchUsage.manaStarSprites[this.field_t].g(-8 + var4, -8 + var5);
               return;
             }
             return;
           }
           if (this.field_o < 0) {
             if (this.field_o >= 0) {
-              vc.field_k[this.field_t].g(-8 + var4, -8 + var5);
+              MusicPatchUsage.manaStarSprites[this.field_t].g(-8 + var4, -8 + var5);
               return;
             }
             return;
@@ -99,7 +99,7 @@ final class ac extends IntrusiveNode {
           var5 = (this.field_o * 30 + var5 * (-this.field_o + 100)) / 100;
           var4 = (var4 * (100 - this.field_o) + 210 * this.field_o) / 100;
           if (this.field_o >= 0) {
-            vc.field_k[this.field_t].g(-8 + var4, -8 + var5);
+            MusicPatchUsage.manaStarSprites[this.field_t].g(-8 + var4, -8 + var5);
             return;
           }
           return;
@@ -109,7 +109,7 @@ final class ac extends IntrusiveNode {
           var4 = 210;
           var5Lifetime1 = 30;
           if (this.field_o >= 0) {
-            vc.field_k[this.field_t].g(-8 + var4, -8 + var5Lifetime1);
+            MusicPatchUsage.manaStarSprites[this.field_t].g(-8 + var4, -8 + var5Lifetime1);
             return;
           }
           return;
@@ -118,7 +118,7 @@ final class ac extends IntrusiveNode {
           if (this.field_o < 0) {
             return;
           }
-          vc.field_k[this.field_t].g(-8 + var4, -8 + var5Lifetime1);
+          MusicPatchUsage.manaStarSprites[this.field_t].g(-8 + var4, -8 + var5Lifetime1);
           return;
         }
         var5Lifetime1 = (this.field_o * 30 + var5Lifetime1 * (-this.field_o + 100)) / 100;
@@ -126,7 +126,7 @@ final class ac extends IntrusiveNode {
         if (this.field_o < 0) {
           return;
         }
-        vc.field_k[this.field_t].g(-8 + var4, -8 + var5Lifetime1);
+        MusicPatchUsage.manaStarSprites[this.field_t].g(-8 + var4, -8 + var5Lifetime1);
     }
 
     final void b(Battlefield param0, int param1) {
@@ -258,7 +258,7 @@ final class ac extends IntrusiveNode {
         this.field_q = param4;
         this.field_w = param6;
         this.field_o = -param5;
-        this.field_t = AttackEvent.nextBoundedInt(false, vc.field_k.length, li.field_n);
+        this.field_t = AttackEvent.nextBoundedInt(false, MusicPatchUsage.manaStarSprites.length, li.field_n);
         this.field_y = param7;
     }
 

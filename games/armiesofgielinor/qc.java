@@ -40,7 +40,7 @@ abstract class qc {
         BattlefieldTheme var2Lifetime1;
         if (param1 != 8806) {
           field_h = (qc) null;
-          if (vc.field_m == null) {
+          if (MusicPatchUsage.backgroundArchive == null) {
             return null;
           }
           if (param0 < 0) {
@@ -52,7 +52,7 @@ abstract class qc {
           }
           return null;
         }
-        if (vc.field_m == null) {
+        if (MusicPatchUsage.backgroundArchive == null) {
           return null;
         }
         if (param0 < 0) {

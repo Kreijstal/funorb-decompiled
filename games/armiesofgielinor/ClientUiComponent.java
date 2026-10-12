@@ -577,7 +577,7 @@ class ClientUiComponent extends ClientUiNode {
           if (param0 < 13) {
             return;
           }
-          vc.field_l.setBounds(-2 + pd.field_c.height - 70, -20500, pd.field_c.width, 30, 0);
+          MusicPatchUsage.gameOptionsGrid.setBounds(-2 + pd.field_c.height - 70, -20500, pd.field_c.width, 30, 0);
           var2_int = 3 + tq.gameOptionCount;
           if (2 > lm.field_e.length) {
             var2_int--;
@@ -585,15 +585,15 @@ class ClientUiComponent extends ClientUiNode {
           if (param1) {
             var2_int--;
           }
-          var3 = -2 + (-15 + (-5 + vc.field_l.height + (2 + (1 + var2_int) / 2))) / (var2_int + 1);
+          var3 = -2 + (-15 + (-5 + MusicPatchUsage.gameOptionsGrid.height + (2 + (1 + var2_int) / 2))) / (var2_int + 1);
           if (var3 > 30) {
             var3 = 30;
           }
-          var4 = -5 + (vc.field_l.height - (5 + (var3 + 2) * var2_int));
+          var4 = -5 + (MusicPatchUsage.gameOptionsGrid.height - (5 + (var3 + 2) * var2_int));
           if (var4 > 40) {
             var4 = 40;
           }
-          BattleTutorial.field_d.setBounds(var4, -20500, vc.field_l.width - 5 - 5, 5, 5);
+          BattleTutorial.field_d.setBounds(var4, -20500, MusicPatchUsage.gameOptionsGrid.width - 5 - 5, 5, 5);
           var5 = 5 + var4 + 2;
           for (var6 = 0; 4 + tq.gameOptionCount > var6; var6++) {
             if ((var6 != 1 ||

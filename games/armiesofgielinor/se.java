@@ -4,7 +4,7 @@
 final class se {
     static String field_b;
     static int field_e;
-    static um field_h;
+    static MusicTrack field_h;
     static boolean field_f;
     static fo field_g;
     static int field_d;

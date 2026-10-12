@@ -104,7 +104,7 @@ final class GameplayController {
     private int field_C;
     int remainingTurnTicks;
     private int field_nb;
-    um field_d;
+    MusicTrack field_d;
     private boolean field_l;
     private int field_U;
     private int field_H;
@@ -1498,7 +1498,7 @@ final class GameplayController {
         int stackIn_15_0 = 0;
         int stackIn_20_0 = 0;
         int stackIn_20_1 = 0;
-        um stackIn_23_2 = null;
+        MusicTrack stackIn_23_2 = null;
         int stackIn_31_0 = 0;
         int stackIn_74_0 = 0;
         int stackIn_74_1 = 0;
@@ -2907,7 +2907,7 @@ final class GameplayController {
         var8 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           if (param0 > -6) {
-            this.field_d = (um) null;
+            this.field_d = (MusicTrack) null;
           }
           if (this.field_y != -2) {
             if (0 == this.battlefield.getSummoningGodMaskAt(this.field_X, -27300, this.field_ec, this.controlledPlayerId)) {
@@ -4997,7 +4997,7 @@ final class GameplayController {
           this.field_W = this.selectedUnit;
           this.field_ab = this.field_h;
           if (param1 != 58) {
-            this.field_d = (um) null;
+            this.field_d = (MusicTrack) null;
           }
           this.field_lc = false;
           this.field_h = -1;

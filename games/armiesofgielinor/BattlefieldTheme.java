@@ -27,7 +27,7 @@ final class BattlefieldTheme {
     String foliageSpriteFile;
     String[] ambientSoundNames;
     String musicTrackName;
-    um musicTrack;
+    MusicTrack musicTrack;
 
     final static boolean a(boolean param0, int param1, int param2, int param3) {
         boolean stackIn_16_0 = false;
@@ -237,7 +237,7 @@ final class BattlefieldTheme {
           musicArchive == null) {
           return;
         }
-        this.musicTrack = um.a(musicArchive, "", this.musicTrackName);
+        this.musicTrack = MusicTrack.load(musicArchive, "", this.musicTrackName);
         if (null == this.musicTrack) {
           return;
         }

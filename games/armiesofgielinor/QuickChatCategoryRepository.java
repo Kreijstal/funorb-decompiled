@@ -132,7 +132,7 @@ final class QuickChatCategoryRepository {
                 }
                 var8_ref_of.lastActivityMillis = vi.monotonicMillis(82) - (long)((PacketBuffer) ((Object) var1)).readInt(1);
                 var8_ref_of.rating = ((PacketBuffer) ((Object) var1)).readUnsignedShort((byte) -104);
-                var10 = ((PacketBuffer) ((Object) var1)).h(-27);
+                var10 = ((PacketBuffer) ((Object) var1)).readVarInt(-27);
                 stackIn_16_0 = var8_ref_of;
                 stackIn_17_1 = ((1 & var10) != 0);
                 stackIn_16_0.packedFlag0 = stackIn_17_1;
@@ -235,7 +235,7 @@ final class QuickChatCategoryRepository {
                                       vu.currentRoom.playerCount = vu.currentRoom.playerCount + 1;
                                     }
                                     var7.rating = ((PacketBuffer) ((Object) var1)).readUnsignedShort((byte) -104);
-                                    var8 = ((PacketBuffer) ((Object) var1)).h(120);
+                                    var8 = ((PacketBuffer) ((Object) var1)).readVarInt(120);
                                     var7.ratedGamesPlayed = var8 >> 1;
                                     stackIn_80_0 = var7;
                                     stackIn_81_1 = ((var8 & 1) != 0);
@@ -274,7 +274,7 @@ final class QuickChatCategoryRepository {
                                     break regionExit1;
                                   case 22:
                                     GlobalSpell.field_g = ((PacketBuffer) ((Object) var1)).readUnsignedShort((byte) -104);
-                                    SummonAction.field_s = ((PacketBuffer) ((Object) var1)).h(95);
+                                    SummonAction.field_s = ((PacketBuffer) ((Object) var1)).readVarInt(95);
                                     break regionExit1;
                                   case 23:
                                     oh.localAccountId = ((PacketBuffer) ((Object) var1)).readLong((byte) -2);

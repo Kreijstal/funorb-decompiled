@@ -403,7 +403,7 @@ abstract class nl extends Widget implements gw {
           eb.field_c.addChild(bu.field_a, 109);
           SocialListPanel.field_Lb = new ClientUiComponent(0L, kd.field_M, DeployAction.field_v.toUpperCase());
           kd.field_F = new ClientUiComponent(0L, SummonAction.field_y);
-          vc.field_l = new ClientUiComponent(0L, sh.field_m);
+          MusicPatchUsage.gameOptionsGrid = new ClientUiComponent(0L, sh.field_m);
           BattleTutorial.field_d = new ClientUiComponent(0L, rn.field_a, EffectPresentation.field_d.toUpperCase());
           KingBlackDragonEvent.field_z = new ClientUiComponent[param1 + 4];
           pu.field_k = new IconTextComponent[4 + param1][];
@@ -485,16 +485,16 @@ abstract class nl extends Widget implements gw {
           var17.horizontalAlignment = 1;
           pd.field_c = new ClientUiComponent(0L, (ClientUiComponent) null);
           pd.field_c.addChild(kd.field_F, 44);
-          pd.field_c.addChild(vc.field_l, 68);
-          vc.field_l.addChild(BattleTutorial.field_d, 106);
+          pd.field_c.addChild(MusicPatchUsage.gameOptionsGrid, 68);
+          MusicPatchUsage.gameOptionsGrid.addChild(BattleTutorial.field_d, 106);
           for (var18Lifetime2 = 0; var18Lifetime2 < param1 + 4; var18Lifetime2++) {
             if ((var18Lifetime2 != 1 ||
               !(2 > lm.field_e.length)) && (var18Lifetime2 != 3 ||
               !(BoundedFile.field_h <= 1))) {
-              vc.field_l.addChild(KingBlackDragonEvent.field_z[var18Lifetime2], 86);
+              MusicPatchUsage.gameOptionsGrid.addChild(KingBlackDragonEvent.field_z[var18Lifetime2], 86);
               for (var19 = 0; var19 < pu.field_k[var18Lifetime2].length; var19++) {
                 if (pu.field_k[var18Lifetime2][var19] != null) {
-                  vc.field_l.addChild(pu.field_k[var18Lifetime2][var19], 48);
+                  MusicPatchUsage.gameOptionsGrid.addChild(pu.field_k[var18Lifetime2][var19], 48);
                 }
               }
             }

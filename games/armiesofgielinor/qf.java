@@ -5,7 +5,7 @@ final class qf {
     static String field_b;
     static ClientUiComponent field_e;
     static int[] field_d;
-    static um field_f;
+    static MusicTrack field_f;
     static String field_g;
     static String field_a;
     static String field_c;

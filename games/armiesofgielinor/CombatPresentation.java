@@ -4383,7 +4383,7 @@ final class CombatPresentation implements EventPresentation {
 
     CombatPresentation(Battlefield battlefield, BattleCamera camera, EventPresenter presenter) {
         RuntimeException runtimeException = null;
-        um var4 = null;
+        MusicTrack var4 = null;
         RuntimeException stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;
         String stackIn_18_2 = null;

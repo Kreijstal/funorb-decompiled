@@ -151,9 +151,9 @@ final class CampaignMenu {
           rd.field_j = null;
           SectorCacheStore.field_a = null;
           System.gc();
-          vk.field_e[0] = new RgbSprite(vc.field_m.getFileByName("campaign_1.jpg", -105, ""), (java.awt.Component) ((Object) VerticalScrollbar.p(0)));
-          vk.field_e[1] = new RgbSprite(vc.field_m.getFileByName("campaign_2.jpg", 13, ""), (java.awt.Component) ((Object) VerticalScrollbar.p(0)));
-          vk.field_e[2] = new RgbSprite(vc.field_m.getFileByName("campaign_3.jpg", -91, ""), (java.awt.Component) ((Object) VerticalScrollbar.p(0)));
+          vk.field_e[0] = new RgbSprite(MusicPatchUsage.backgroundArchive.getFileByName("campaign_1.jpg", -105, ""), (java.awt.Component) ((Object) VerticalScrollbar.p(0)));
+          vk.field_e[1] = new RgbSprite(MusicPatchUsage.backgroundArchive.getFileByName("campaign_2.jpg", 13, ""), (java.awt.Component) ((Object) VerticalScrollbar.p(0)));
+          vk.field_e[2] = new RgbSprite(MusicPatchUsage.backgroundArchive.getFileByName("campaign_3.jpg", -91, ""), (java.awt.Component) ((Object) VerticalScrollbar.p(0)));
           mu.field_g = new IndexedSprite[3][3];
           var2_int = 0;
           while (3 > var2_int) {

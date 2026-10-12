@@ -3,7 +3,7 @@
  */
 final class fh {
     private boolean field_g;
-    static um[] field_b;
+    static MusicTrack[] field_b;
     static boolean field_c;
     private int field_h;
     static String[] field_f;

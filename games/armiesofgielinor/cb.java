@@ -5,7 +5,7 @@ final class cb extends Exception {
     static String field_d;
     String field_b;
     static ClientUiComponent field_c;
-    static um[] field_a;
+    static MusicTrack[] field_a;
 
     public static void a(int param0) {
         field_d = null;
@@ -85,6 +85,6 @@ final class cb extends Exception {
 
     static {
         field_d = "Options";
-        field_a = new um[6];
+        field_a = new MusicTrack[6];
     }
 }

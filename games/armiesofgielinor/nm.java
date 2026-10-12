@@ -14,13 +14,13 @@ final class nm extends PcmStream {
     ih field_w;
     ih field_D;
     private int[] field_E;
-    private um field_p;
-    private um field_q;
+    private MusicTrack field_p;
+    private MusicTrack field_q;
     private int[] field_t;
     static ResourceArchive field_s;
     private int field_v;
     private int field_G;
-    private um field_A;
+    private MusicTrack field_A;
 
     final void render(int[] output, int outputOffset, int frameCount) {
         int localTemp$0 = 0;
@@ -173,7 +173,7 @@ final class nm extends PcmStream {
         }
     }
 
-    final static void a(um param0, boolean param1, int param2, byte param3) {
+    final static void a(MusicTrack param0, boolean param1, int param2, byte param3) {
         Object var4 = null;
         RuntimeException stackIn_20_0 = null;
         StringBuilder stackIn_20_1 = null;
@@ -296,7 +296,7 @@ final class nm extends PcmStream {
         }
     }
 
-    final synchronized void a(int param0, boolean param1, um param2, int param3, int param4, int param5) {
+    final synchronized void a(int param0, boolean param1, MusicTrack param2, int param3, int param4, int param5) {
         boolean stackIn_19_1 = false;
         int stackIn_33_0 = 0;
         ih stackIn_43_0 = null;

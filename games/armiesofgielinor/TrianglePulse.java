@@ -60,7 +60,7 @@ final class TrianglePulse {
         }
     }
 
-    final static void a(int param0, int param1, um param2, boolean param3) {
+    final static void a(int param0, int param1, MusicTrack param2, boolean param3) {
         if (param0 != -16147) {
           return;
         }

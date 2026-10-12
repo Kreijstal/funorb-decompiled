@@ -127,11 +127,11 @@ class PacketBuffer extends IntrusiveNode {
         }
     }
 
-    final void d(int param0, int param1) {
-        this.payload[-param1 + this.position - 4] = (byte)(param1 >> 24);
-        this.payload[this.position - (param1 + 3)] = (byte)(param1 >> 16);
-        this.payload[-param1 + this.position - 2] = (byte)(param1 >> 8);
-        this.payload[param0 - param1 + this.position] = (byte)param1;
+    final void writeIntLengthPrefix(int obfuscationGuard, int length) {
+        this.payload[-length + this.position - 4] = (byte)(length >> 24);
+        this.payload[this.position - (length + 3)] = (byte)(length >> 16);
+        this.payload[-length + this.position - 2] = (byte)(length >> 8);
+        this.payload[obfuscationGuard - length + this.position] = (byte)length;
     }
 
     final void writeBytes(byte[] source, int sourceOffset, int length, int obfuscationGuard) {
@@ -528,23 +528,23 @@ class PacketBuffer extends IntrusiveNode {
         }
     }
 
-    final void c(int param0, int param1) {
-        if (param0 != -49) {
+    final void writeVarInt(int obfuscationGuard, int value) {
+        if (obfuscationGuard != -49) {
           return;
         }
-        if ((-128 & param1) != 0) {
-          if ((param1 & -16384) != 0) {
-            if (0 != (-2097152 & param1)) {
-              if ((param1 & -268435456) != 0) {
-                this.writeByte(1, param1 >>> 28 | 128);
+        if ((-128 & value) != 0) {
+          if ((value & -16384) != 0) {
+            if (0 != (-2097152 & value)) {
+              if ((value & -268435456) != 0) {
+                this.writeByte(1, value >>> 28 | 128);
               }
-              this.writeByte(1, (param1 | 268669197) >>> 21);
+              this.writeByte(1, (value | 268669197) >>> 21);
             }
-            this.writeByte(1, (2106399 | param1) >>> 14);
+            this.writeByte(1, (2106399 | value) >>> 14);
           }
-          this.writeByte(1, (param1 | 16422) >>> 7);
+          this.writeByte(1, (value | 16422) >>> 7);
         }
-        this.writeByte(1, 127 & param1);
+        this.writeByte(1, 127 & value);
     }
 
     final int b(byte param0, int param1) {
@@ -579,25 +579,25 @@ class PacketBuffer extends IntrusiveNode {
         }
     }
 
-    final int h(int param0) {
-        int fieldTemp$1 = 0;
-        int var2;
-        int var3;
-        int var4;
-        int var5;
-        var5 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
-        var3 = 106 % ((param0 - 50) / 41);
-        int fieldTemp$0 = this.position;
+    final int readVarInt(int obfuscationGuard) {
+        int continuationByteIndex = 0;
+        int nextByte;
+        int guardRemainder;
+        int value;
+        int unusedObfuscationControl;
+        unusedObfuscationControl = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        guardRemainder = 106 % ((obfuscationGuard - 50) / 41);
+        int firstByteIndex = this.position;
         this.position = this.position + 1;
-        var2 = this.payload[fieldTemp$0];
-        var4 = 0;
-        while (var2 < 0) {
-          var4 = (var2 & 127 | var4) << 7;
-          fieldTemp$1 = this.position;
+        nextByte = this.payload[firstByteIndex];
+        value = 0;
+        while (nextByte < 0) {
+          value = (nextByte & 127 | value) << 7;
+          continuationByteIndex = this.position;
           this.position = this.position + 1;
-          var2 = this.payload[fieldTemp$1];
+          nextByte = this.payload[continuationByteIndex];
         }
-        return var2 | var4;
+        return nextByte | value;
     }
 
     final int readUnsignedByte(int obfuscationGuard) {
@@ -807,7 +807,7 @@ class PacketBuffer extends IntrusiveNode {
         var6 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           if (obfuscationGuard != 0) {
-            this.d(74, 42);
+            this.writeIntLengthPrefix(74, 42);
           }
           for (var5_int = destinationOffset; var5_int < destinationOffset + length; var5_int++) {
             fieldTemp$0 = this.position;

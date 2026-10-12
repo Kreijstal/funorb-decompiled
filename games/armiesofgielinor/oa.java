@@ -32,7 +32,7 @@ final class oa extends dr {
         ContextActionMenu.a(true, (byte) -113);
     }
 
-    final static void a(int param0, um param1) {
+    final static void a(int param0, MusicTrack param1) {
         try {
           if (param1 != null) {
             TrianglePulse.a(-16147, 50, param1, true);

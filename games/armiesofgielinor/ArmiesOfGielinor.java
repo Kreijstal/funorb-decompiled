@@ -1206,7 +1206,7 @@ public final class ArmiesOfGielinor extends wf {
           PcmPlayer.clearServiceReference();
           NodeHashTable.a(-83);
           mi.a(9480);
-          dw.c();
+          MidiFileReader.releaseMessageTable();
           os.f(1048575);
           dj.b((byte) 116);
           it.a(param0 + 76);
@@ -1440,7 +1440,7 @@ public final class ArmiesOfGielinor extends wf {
           uk.d(0);
           dh.c(-117);
           SynthesizerVoice.releaseScratch();
-          vc.a(-119);
+          MusicPatchUsage.releaseUiReferences(-119);
           AiInfluenceMap.a(61);
           AiPlanningStrategy.a(-1);
           CameraOverviewTarget.e(-93);
@@ -1718,7 +1718,7 @@ public final class ArmiesOfGielinor extends wf {
           ce.field_M = nu.a(19, true);
           oh.field_M = nu.a(20, true);
           fw.field_F = nu.a(22, true);
-          vc.field_m = DamageEvent.a(0, 21, (byte) 127, false, false);
+          MusicPatchUsage.backgroundArchive = DamageEvent.a(0, 21, (byte) 127, false, false);
           AiInfluenceMap.field_f = nu.a(23, true);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -1899,14 +1899,14 @@ public final class ArmiesOfGielinor extends wf {
         ih var5 = null;
         IndexedSprite[] var5_array = null;
         BattlefieldTheme[] var5_array2 = null;
-        um[] var6 = null;
+        MusicTrack[] var6 = null;
         BattlefieldTheme[] var6_array = null;
         int[] var6_array2 = null;
         int var6_int = 0;
         int var7_int = 0;
         int[] var7 = null;
         BattlefieldTheme var7_ref = null;
-        um var8 = null;
+        MusicTrack var8 = null;
         BattlefieldTheme var8_ref = null;
         int[] var8_array = null;
         int[] var9 = null;
@@ -1963,8 +1963,8 @@ public final class ArmiesOfGielinor extends wf {
                                             fw.field_F.ensureAllGroupsAvailable(-27927)) {
                                             if (AiInfluenceMap.field_f.ensureIndex((byte) 82) &&
                                               AiInfluenceMap.field_f.ensureAllGroupsAvailable(-27927)) {
-                                              if (vc.field_m.ensureIndex((byte) 82) &&
-                                                vc.field_m.ensureAllGroupsAvailable(-27927)) {
+                                              if (MusicPatchUsage.backgroundArchive.ensureIndex((byte) 82) &&
+                                                MusicPatchUsage.backgroundArchive.ensureAllGroupsAvailable(-27927)) {
                                                 if (!this.q(-46)) {
                                                   return false;
                                                 }
@@ -2018,7 +2018,7 @@ public final class ArmiesOfGielinor extends wf {
                                                 } while (var18 == 0);
                                                 return false;
                                               }
-                                              bn.a((byte) -24, 69.0f, ao.a(cr.field_eb, true, en.field_G, vc.field_m));
+                                              bn.a((byte) -24, 69.0f, ao.a(cr.field_eb, true, en.field_G, MusicPatchUsage.backgroundArchive));
                                               return false;
                                             }
                                             bn.a((byte) -24, 66.0f, ao.a(cr.field_eb, true, en.field_G, AiInfluenceMap.field_f));
@@ -2082,27 +2082,27 @@ public final class ArmiesOfGielinor extends wf {
           if (null != SummonAction.field_w) {
             bn.a((byte) -24, 75.0f, ta.field_M);
             this.a(0);
-            SocialListPanel.field_Ob = um.a(SummonAction.field_w, "", "Runewars Titlescreen");
-            DeployRequest.field_B = um.a(SummonAction.field_w, "", "legion");
-            oh.field_K = um.a(SummonAction.field_w, "", "Runewars win");
-            se.field_h = um.a(SummonAction.field_w, "", "Runewars lose");
+            SocialListPanel.field_Ob = MusicTrack.load(SummonAction.field_w, "", "Runewars Titlescreen");
+            DeployRequest.field_B = MusicTrack.load(SummonAction.field_w, "", "legion");
+            oh.field_K = MusicTrack.load(SummonAction.field_w, "", "Runewars win");
+            se.field_h = MusicTrack.load(SummonAction.field_w, "", "Runewars lose");
             var5_int = 0;
             do {
               if (!(var5_int < cb.field_a.length)) {
-                fh.field_b = new um[9];
-                fh.field_b[0] = um.a(SummonAction.field_w, "", "the terrible tower");
-                fh.field_b[1] = um.a(SummonAction.field_w, "", "venture2");
-                fh.field_b[2] = um.a(SummonAction.field_w, "", "the other side");
-                fh.field_b[3] = um.a(SummonAction.field_w, "", "the shadow");
-                fh.field_b[4] = um.a(SummonAction.field_w, "", "faithless");
-                fh.field_b[5] = um.a(SummonAction.field_w, "", "kingdom");
-                fh.field_b[6] = um.a(SummonAction.field_w, "", "fight or flight");
-                fh.field_b[7] = um.a(SummonAction.field_w, "", "soul wars");
-                fh.field_b[8] = um.a(SummonAction.field_w, "", "brain_barrelchest_battle");
-                qf.field_f = um.a(SummonAction.field_w, "", "AoG_interface_guthix");
+                fh.field_b = new MusicTrack[9];
+                fh.field_b[0] = MusicTrack.load(SummonAction.field_w, "", "the terrible tower");
+                fh.field_b[1] = MusicTrack.load(SummonAction.field_w, "", "venture2");
+                fh.field_b[2] = MusicTrack.load(SummonAction.field_w, "", "the other side");
+                fh.field_b[3] = MusicTrack.load(SummonAction.field_w, "", "the shadow");
+                fh.field_b[4] = MusicTrack.load(SummonAction.field_w, "", "faithless");
+                fh.field_b[5] = MusicTrack.load(SummonAction.field_w, "", "kingdom");
+                fh.field_b[6] = MusicTrack.load(SummonAction.field_w, "", "fight or flight");
+                fh.field_b[7] = MusicTrack.load(SummonAction.field_w, "", "soul wars");
+                fh.field_b[8] = MusicTrack.load(SummonAction.field_w, "", "brain_barrelchest_battle");
+                qf.field_f = MusicTrack.load(SummonAction.field_w, "", "AoG_interface_guthix");
                 break;
               }
-              cb.field_a[var5_int] = um.a(SummonAction.field_w, "", "attack" + (var5_int + 1));
+              cb.field_a[var5_int] = MusicTrack.load(SummonAction.field_w, "", "attack" + (var5_int + 1));
               var5_int++;
             } while (var18 == 0);
             var5 = lk.field_e.field_w;
@@ -2235,7 +2235,7 @@ public final class ArmiesOfGielinor extends wf {
           CampaignDefinition.field_t = pv.a("basic", "statboxbg", iw.field_l, 24914);
           qt.field_e = pv.a("basic", "popupbg", iw.field_l, 24914);
           vq.field_b = pv.a("basic", "gameinfobg", iw.field_l, 24914);
-          vc.field_k = fk.loadRgbSpritesByName("manastars", (byte) -127, iw.field_l, "basic");
+          MusicPatchUsage.manaStarSprites = fk.loadRgbSpritesByName("manastars", (byte) -127, iw.field_l, "basic");
           TrianglePulse.field_f = GameplayController.a("manaicon", (byte) 51, "basic", iw.field_l);
           od.field_d = fk.loadRgbSpritesByName("overlayicons", (byte) -125, iw.field_l, "basic");
           mv.field_a = fk.loadRgbSpritesByName("bloodsplat", (byte) -126, iw.field_l, "basic");
@@ -2248,12 +2248,12 @@ public final class ArmiesOfGielinor extends wf {
           ChatMessage.field_s = GameplayController.a("wait_icon", (byte) 51, "basic", iw.field_l);
           ChatMessage.field_s.a();
           kt.field_o = fk.loadRgbSpritesByName("diamondscale", (byte) -128, iw.field_l, "basic");
-          jg.field_m = new RgbSprite(vc.field_m.getFileByName("menu_background.jpg", -123, ""), (java.awt.Component) ((Object) VerticalScrollbar.p(0)));
+          jg.field_m = new RgbSprite(MusicPatchUsage.backgroundArchive.getFileByName("menu_background.jpg", -123, ""), (java.awt.Component) ((Object) VerticalScrollbar.p(0)));
           var6_array = UnitLossCondition.battlefieldThemes;
           var7_int = 0;
           do {
             if (var6_array.length <= var7_int) {
-              BufferedSocket.field_i = new ep(vc.field_m);
+              BufferedSocket.field_i = new ep(MusicPatchUsage.backgroundArchive);
               HuffmanCodec.field_i = CampaignMission.a((byte) -125, "frame_outer", "basic", iw.field_l);
               io.field_m = CampaignMission.a((byte) 83, "frame_inner", "basic", iw.field_l);
               oh.field_J = CampaignMission.a((byte) 83, "frame_ingame", "basic", iw.field_l);
@@ -2262,7 +2262,7 @@ public final class ArmiesOfGielinor extends wf {
               break;
             }
             var8_ref = var6_array[var7_int];
-            var8_ref.setResourceArchives(vc.field_m, 0, iw.field_l);
+            var8_ref.setResourceArchives(MusicPatchUsage.backgroundArchive, 0, iw.field_l);
             var7_int++;
           } while (var18 == 0);
           var6_array2 = new int[]{13615618, 10121728};

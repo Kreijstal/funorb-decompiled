@@ -23,7 +23,7 @@ by default for every game. Semantic game-specific names use explicit naming
 rules. Deko's numbered structural-category and type-based names identify
 unresolved purposes honestly; they are not complete semantic deobfuscation.
 
-Armies has 228 reviewed class names, not a complete semantic map. Shared widget
+Armies has 231 reviewed class names, not a complete semantic map. Shared widget
 bounds, dropdown options/prefix selection, painter dispatch and expansion now
 have reviewed names with pointer, selection and arrow-pixel fixtures. Campaign
 loadouts now name unit/spell rewards, equipped slots and cumulative mana bonuses;
@@ -201,6 +201,12 @@ and failure retries. JavaSoundPcmPlayer and PcmPlayerService name output packing
 and lifecycle, with proxy-line and shutdown/error fixtures. Timed callbacks, real
 device opening/driver behavior, logged exception reporting, thread timing and
 audible production playback remain unverified.
+MidiFileReader, MusicTrack and MusicPatchUsage name event timing/running status,
+packed music reconstruction and bank/program note masks. Independent encoded
+fixtures cover channel messages, tempo/track order, reset/cleanup, all packed
+channel-event/controller columns, note-mask ownership and named archive loading.
+Full MIDI compliance, malformed inputs, channel synthesis and production music
+remain unverified.
 
 Camera overview grouping, centroid bounds, hold state and explicit tile focus
 now have reviewed names, alongside directional panning, dragging and velocity

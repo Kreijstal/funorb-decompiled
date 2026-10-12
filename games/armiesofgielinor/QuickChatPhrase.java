@@ -13,7 +13,7 @@ final class QuickChatPhrase extends DualLinkedNode {
     private int[] commandIds;
     static String field_x;
 
-    final static void a(int param0, um param1) {
+    final static void a(int param0, MusicTrack param1) {
         try {
           ku.a((byte) -93, true, param1);
           if (param0 != 2) {

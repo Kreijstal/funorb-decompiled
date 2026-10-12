@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 class ih extends PcmStream {
-    private dw field_q;
+    private MidiFileReader field_q;
     private int[] field_u;
     static int[] field_E;
     static nj field_H;
@@ -38,7 +38,7 @@ class ih extends PcmStream {
     private long field_Y;
     private os field_Q;
     private boolean field_y;
-    private um field_B;
+    private MusicTrack field_B;
     private int field_L;
 
     private final void a(byte param0) {
@@ -73,25 +73,25 @@ class ih extends PcmStream {
               if (stackIn_23_0 > stackIn_23_1) {
                 this.field_t = this.field_L;
                 this.field_K = -1;
-                this.field_Y = this.field_q.b(this.field_t);
+                this.field_Y = this.field_q.tickTime(this.field_t);
               }
             }
             return;
           }
-          while (var3 == this.field_q.field_i[var2]) {
-            this.field_q.d(var2);
-            var6 = this.field_q.c(var2);
+          while (var3 == this.field_q.trackTicks[var2]) {
+            this.field_q.seekTrack(var2);
+            var6 = this.field_q.readMessage(var2);
             if (var6 != 1) {
               if (0 != (var6 & 128)) {
                 this.a((byte) 127, var6);
               }
-              this.field_q.f(var2);
-              this.field_q.a(var2);
+              this.field_q.readDelta(var2);
+              this.field_q.saveTrackPosition(var2);
               continue;
             }
-            this.field_q.a();
-            this.field_q.a(var2);
-            if (this.field_q.b()) {
+            this.field_q.markTrackDone();
+            this.field_q.saveTrackPosition(var2);
+            if (this.field_q.isDone()) {
               if (null != this.field_B) {
                 this.a(param0 - 34, this.field_Z, this.field_B);
                 this.a((byte) 36);
@@ -99,18 +99,18 @@ class ih extends PcmStream {
               }
               if (this.field_Z &&
                 var3 != 0) {
-                this.field_q.a(var4);
+                this.field_q.reset(var4);
               } else {
                 this.a(true, true);
-                this.field_q.f();
+                this.field_q.release();
                 return;
               }
             }
             break;
           }
-          var2 = this.field_q.e();
-          var3 = this.field_q.field_i[var2];
-          var4 = this.field_q.b(var3);
+          var2 = this.field_q.nextTrack();
+          var3 = this.field_q.trackTicks[var2];
+          var4 = this.field_q.tickTime(var3);
         }
     }
 
@@ -250,7 +250,7 @@ class ih extends PcmStream {
         return null;
     }
 
-    synchronized void a(boolean param0, byte param1, boolean param2, um param3) {
+    synchronized void a(boolean param0, byte param1, boolean param2, MusicTrack param3) {
         int var5_int = 0;
         int var6 = 0;
         int var7 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
@@ -259,18 +259,18 @@ class ih extends PcmStream {
           return;
         }
         try {
-          this.field_q.a(param3.field_k);
+          this.field_q.parse(param3.midiBytes);
           this.field_z = 0L;
           this.field_Z = param0 ? true : false;
-          var5_int = this.field_q.d();
+          var5_int = this.field_q.trackCount();
           for (var6 = 0; var6 < var5_int; var6++) {
-            this.field_q.d(var6);
-            this.field_q.f(var6);
-            this.field_q.a(var6);
+            this.field_q.seekTrack(var6);
+            this.field_q.readDelta(var6);
+            this.field_q.saveTrackPosition(var6);
           }
-          this.field_K = this.field_q.e();
-          this.field_t = this.field_q.field_i[this.field_K];
-          this.field_Y = this.field_q.b(this.field_t);
+          this.field_K = this.field_q.nextTrack();
+          this.field_t = this.field_q.trackTicks[this.field_K];
+          this.field_Y = this.field_q.tickTime(this.field_t);
         } catch (RuntimeException runtimeException) {
           throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "ih.EA(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
@@ -292,7 +292,7 @@ class ih extends PcmStream {
         }
     }
 
-    final synchronized boolean a(SoundCache param0, ResourceArchive param1, int param2, um param3, byte param4) {
+    final synchronized boolean a(SoundCache param0, ResourceArchive param1, int param2, MusicTrack param3, byte param4) {
         int stackIn_20_0 = 0;
         RuntimeException stackIn_23_0 = null;
         StringBuilder stackIn_23_1 = null;
@@ -305,14 +305,14 @@ class ih extends PcmStream {
         int var6_int = 0;
         RuntimeException var6 = null;
         Object var7 = null;
-        vc var8 = null;
+        MusicPatchUsage var8 = null;
         int var9 = 0;
         int var11 = 0;
         io var12 = null;
         io var13 = null;
         var11 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          param3.b();
+          param3.buildPatchUsage();
           var6_int = 1;
           var7 = null;
           if (param2 > 0) {
@@ -321,7 +321,7 @@ class ih extends PcmStream {
           if (param4 != 86) {
             return true;
           }
-          var8 = (vc) (param3.field_l.first(1));
+          var8 = (MusicPatchUsage) (param3.patchUsage.first(1));
           while (var8 != null) {
             var9 = (int)var8.key;
             var12 = (io) (this.field_T.get(-27, (long)var9));
@@ -329,23 +329,23 @@ class ih extends PcmStream {
               var13 = wl.a(param1, var9, true);
               if (var13 != null) {
                 this.field_T.put(var13, (long)var9, 24);
-                if (!var13.a(param4 + 10922, var8.field_n, (int[]) (var7), param0)) {
+                if (!var13.a(param4 + 10922, var8.notes, (int[]) (var7), param0)) {
                   var6_int = 0;
                 }
               } else {
                 var6_int = 0;
               }
             } else {
-              if (!var12.a(param4 + 10922, var8.field_n, (int[]) (var7), param0)) {
+              if (!var12.a(param4 + 10922, var8.notes, (int[]) (var7), param0)) {
                 var6_int = 0;
-                var8 = (vc) (param3.field_l.next((byte) 115));
+                var8 = (MusicPatchUsage) (param3.patchUsage.next((byte) 115));
                 continue;
               }
             }
-            var8 = (vc) (param3.field_l.next((byte) 115));
+            var8 = (MusicPatchUsage) (param3.patchUsage.next((byte) 115));
           }
           if (var6_int != 0) {
-            param3.a();
+            param3.releasePatchUsage();
           }
           stackIn_20_0 = var6_int;
           return stackIn_20_0 != 0;
@@ -401,8 +401,8 @@ class ih extends PcmStream {
         RuntimeException var4 = null;
         var8 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          if (this.field_q.g()) {
-            var4_int = this.field_U * this.field_q.field_c / PcmPlayer.outputSampleRate;
+          if (this.field_q.isReady()) {
+            var4_int = this.field_U * this.field_q.division / PcmPlayer.outputSampleRate;
             while (true) {
               var5 = this.field_z + (long)frameCount * (long)var4_int;
               if (0L <= -var5 + this.field_Y) {
@@ -415,7 +415,7 @@ class ih extends PcmStream {
               this.a((byte) 36);
               outputOffset = outputOffset + var7;
               frameCount = frameCount - var7;
-              if (this.field_q.g()) {
+              if (this.field_q.isReady()) {
                 continue;
               }
               this.field_Q.render(output, outputOffset, frameCount);
@@ -488,7 +488,7 @@ class ih extends PcmStream {
     private final void b(boolean param0, int param1) {
         mi var3;
         int var4;
-        um var5;
+        MusicTrack var5;
         var4 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         if (0 != (2 & this.field_o[param1])) {
           var3 = (mi) (this.field_Q.field_p.first((byte) 89));
@@ -506,8 +506,8 @@ class ih extends PcmStream {
           }
         }
         if (param0) {
-          var5 = (um) null;
-          this.a((SoundCache) null, (ResourceArchive) null, -24, (um) null, (byte) 111);
+          var5 = (MusicTrack) null;
+          this.a((SoundCache) null, (ResourceArchive) null, -24, (MusicTrack) null, (byte) 111);
         }
     }
 
@@ -1065,8 +1065,8 @@ class ih extends PcmStream {
         int var6;
         boolean decompiledFrameCompleted0 = true;
         var6 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
-        if (this.field_q.g()) {
-          var2 = this.field_q.field_c * this.field_U / PcmPlayer.outputSampleRate;
+        if (this.field_q.isReady()) {
+          var2 = this.field_q.division * this.field_U / PcmPlayer.outputSampleRate;
           while (true) {
             var3 = this.field_z + (long)frameCount * (long)var2;
             if (-var3 + this.field_Y >= 0L) {
@@ -1078,7 +1078,7 @@ class ih extends PcmStream {
             this.field_Q.skip(var5);
             frameCount = frameCount - var5;
             this.a((byte) 36);
-            if (this.field_q.g()) {
+            if (this.field_q.isReady()) {
               continue;
             }
             this.field_Q.skip(frameCount);
@@ -1171,7 +1171,7 @@ class ih extends PcmStream {
         return;
     }
 
-    final synchronized void a(int param0, boolean param1, um param2) {
+    final synchronized void a(int param0, boolean param1, MusicTrack param2) {
         try {
           this.a(param1, (byte) -113, true, param2);
           if (param0 != 2) {
@@ -1183,11 +1183,11 @@ class ih extends PcmStream {
     }
 
     private final synchronized void a(boolean param0, int param1) {
-        this.field_q.f();
+        this.field_q.release();
         this.field_B = null;
         if (param1 != -128) {
-          um var4 = (um) null;
-          this.a(-112, true, (um) null);
+          MusicTrack var4 = (MusicTrack) null;
+          this.a(-112, true, (MusicTrack) null);
         }
         this.a(true, param0);
     }
@@ -1196,7 +1196,7 @@ class ih extends PcmStream {
         if (param0 != 11899) {
           this.field_C = (int[]) null;
         }
-        return this.field_q.g();
+        return this.field_q.isReady();
     }
 
     private final void a(int param0, byte param1) {
@@ -1345,7 +1345,7 @@ class ih extends PcmStream {
         this.field_D = new int[16];
         this.field_V = new int[16];
         this.field_J = new int[16];
-        this.field_q = new dw();
+        this.field_q = new MidiFileReader();
         this.field_Q = new os(this);
         this.field_T = new NodeHashTable(128);
         this.a(256, -1, (byte) -116);
@@ -1373,7 +1373,7 @@ class ih extends PcmStream {
         this.field_D = new int[16];
         this.field_V = new int[16];
         this.field_J = new int[16];
-        this.field_q = new dw();
+        this.field_q = new MidiFileReader();
         this.field_Q = new os(this);
         try {
           this.field_T = param0.field_T;

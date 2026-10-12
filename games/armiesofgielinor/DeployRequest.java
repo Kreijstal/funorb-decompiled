@@ -5,7 +5,7 @@ final class DeployRequest extends ActionRequest {
     private int deployModifier;
     static String[] field_v;
     static String field_x;
-    static um field_B;
+    static MusicTrack field_B;
     private int tileX;
     static String field_w;
     private int tileY;
