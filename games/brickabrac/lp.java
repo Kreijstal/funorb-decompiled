@@ -49,7 +49,7 @@ class lp extends fe implements en {
     final static boolean n(int param0) {
         if (param0 != -5) {
           field_yb = (jp[]) null;
-          if (!mj.a((byte) -80)) {
+          if (!LegacyUtf8Decoder.a((byte) -80)) {
             return false;
           }
           if (0 == (de.field_x & 8)) {
@@ -57,7 +57,7 @@ class lp extends fe implements en {
           }
           return false;
         }
-        if (!mj.a((byte) -80)) {
+        if (!LegacyUtf8Decoder.a((byte) -80)) {
           return false;
         }
         if (0 == (de.field_x & 8)) {

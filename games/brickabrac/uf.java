@@ -229,7 +229,7 @@ final class uf {
     final static String a(String param0, int param1, String param2, int param3) {
         RuntimeException var4 = null;
         int var5 = 0;
-        pi var6 = null;
+        BitPacketBuffer var6 = null;
         int var7 = 0;
         mp var8 = null;
         CharSequence var9 = null;
@@ -263,12 +263,12 @@ final class uf {
           var8.d(3);
           fo.field_h = fo.field_h - 1;
           var6 = k.field_h;
-          var6.e(-13413, param1);
-          var6.field_l = var6.field_l + 1;
-          var7 = var6.field_l;
-          var6.a(16, 3);
-          var6.a(param0, -1);
-          var6.d((byte) 117, -var7 + var6.field_l);
+          var6.writeCipheredOpcode(-13413, param1);
+          var6.position = var6.position + 1;
+          var7 = var6.position;
+          var6.writeByte(16, 3);
+          var6.writeCp1252String(param0, -1);
+          var6.backfillByteLength((byte) 117, -var7 + var6.position);
           stackIn_11_0 = null;
           return (String) (stackIn_11_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

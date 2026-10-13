@@ -12,12 +12,12 @@ final class ef extends IOException {
     static String field_c;
 
     final static void a(int param0, int param1) {
-        pi var2 = null;
+        BitPacketBuffer var2 = null;
         if (param0 == -22809) {
           var2 = k.field_h;
-          var2.e(-13413, param1);
-          var2.a(-5, 1);
-          var2.a(param0 ^ 22903, 1);
+          var2.writeCipheredOpcode(-13413, param1);
+          var2.writeByte(-5, 1);
+          var2.writeByte(param0 ^ 22903, 1);
           return;
         }
     }

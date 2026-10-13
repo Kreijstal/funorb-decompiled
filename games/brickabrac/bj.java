@@ -64,13 +64,13 @@ abstract class bj extends jc {
         this.field_O = this.field_t;
     }
 
-    final static String a(int param0, byte param1, wq param2) {
+    final static String a(int param0, byte param1, PacketBuffer param2) {
         int var3_int = 0;
         Exception var3 = null;
         RuntimeException var3_ref = null;
         byte[] var4 = null;
         String var5 = null;
-        wq var6 = null;
+        PacketBuffer var6 = null;
         String stackIn_5_0 = null;
         String stackIn_7_0 = null;
         RuntimeException stackIn_10_0 = null;
@@ -80,16 +80,16 @@ abstract class bj extends jc {
         try {
           try {
             if (param1 < 36) {
-              var6 = (wq) null;
-              bj.a(61, (byte) 3, (wq) null);
+              var6 = (PacketBuffer) null;
+              bj.a(61, (byte) 3, (PacketBuffer) null);
             }
-            var3_int = param2.k(-32768);
+            var3_int = param2.readUnsignedSmart(-32768);
             if (param0 < var3_int) {
               var3_int = param0;
             }
             var4 = new byte[var3_int];
-            param2.field_l = param2.field_l + so.field_d.a(var3_int, 0, param2.field_l, true, var4, param2.field_k);
-            var5 = df.a(var3_int, -110, var4, 0);
+            param2.position = param2.position + so.field_d.a(var3_int, 0, param2.position, true, var4, param2.data);
+            var5 = df.decodeCp1252(var3_int, -110, var4, 0);
             stackIn_5_0 = var5;
             return stackIn_5_0;
           } catch (java.lang.Exception decompiledCaughtParameter0) {

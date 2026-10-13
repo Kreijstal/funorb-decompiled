@@ -128,16 +128,16 @@ final class bk extends IntrusiveNode {
         int var5 = 0;
         int var6_int = 0;
         byte[] var6 = null;
-        wq var2 = new wq(param0);
-        this.field_j = var2.e(255);
-        this.field_o = var2.e(255);
-        this.field_G = var2.e(255);
-        this.field_J = var2.e(255);
+        PacketBuffer var2 = new PacketBuffer(param0);
+        this.field_j = var2.readInt(255);
+        this.field_o = var2.readInt(255);
+        this.field_G = var2.readInt(255);
+        this.field_J = var2.readInt(255);
         if (this.field_J < 0) {
           this.field_J = ~this.field_J;
           this.field_q = true;
         }
-        int var3 = var2.e(255);
+        int var3 = var2.readInt(255);
         if (var3 < 0) {
           throw new IOException();
         }
@@ -145,11 +145,11 @@ final class bk extends IntrusiveNode {
         for (var4 = 0; var4 < var3; var4++) {
           var5 = 0;
           do {
-            var6_int = var2.l(255);
+            var6_int = var2.readUnsignedByte(255);
             var5 = var5 + var6_int;
           } while (var6_int >= 255);
           var6 = new byte[var5];
-          var2.a(0, var6, 115, var5);
+          var2.readBytes(0, var6, 115, var5);
           this.field_l[var4] = var6;
         }
     }

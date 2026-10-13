@@ -30,7 +30,7 @@ final class nn {
           if (8 != param2 ||
             var5 != 0) {
             if (18 == param2) {
-              pi.a(21846, this.field_e, this.field_i);
+              BitPacketBuffer.a(21846, this.field_e, this.field_i);
             }
             if (18 != param2 ||
               var5 != 0) {
@@ -586,7 +586,7 @@ final class nn {
                 }
                 var2 = nk.a("mu_chat_game_show_all", (byte) -14);
                 if (null != var2) {
-                  mj.field_a = q.a(var2, (byte) 99);
+                  LegacyUtf8Decoder.field_a = q.a(var2, (byte) 99);
                 }
                 var2 = nk.a("mu_chat_game_friends_only", (byte) 117);
                 if (var2 != null) {
@@ -722,7 +722,7 @@ final class nn {
                 }
                 var2 = nk.a("kick", (byte) -113);
                 if (var2 != null) {
-                  mj.field_b = q.a(var2, (byte) 89);
+                  LegacyUtf8Decoder.field_b = q.a(var2, (byte) 89);
                 }
                 var2 = nk.a("inviting_x", (byte) 101);
                 if (var2 != null) {
@@ -930,7 +930,7 @@ final class nn {
                 }
                 var2 = nk.a("gameopt_membersonly", (byte) -128);
                 if (var2 != null) {
-                  wq.field_m = q.a(var2, (byte) 80);
+                  PacketBuffer.field_m = q.a(var2, (byte) 80);
                 }
                 var2 = nk.a("gameopt_1moreratedgame", (byte) 55);
                 if (var2 != null) {
@@ -2010,7 +2010,7 @@ final class nn {
                 }
                 var2 = nk.a("unpacking_soundeffects", (byte) 73);
                 if (var2 != null) {
-                  pi.field_s = q.a(var2, (byte) 78);
+                  BitPacketBuffer.field_s = q.a(var2, (byte) 78);
                 }
                 var2 = nk.a("unpacking_music", (byte) 9);
                 if (null != var2) {

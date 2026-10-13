@@ -249,11 +249,11 @@ final class dn extends h {
 
     final static void b(int param0, int param1, int param2) {
         int var3 = -51 / ((-23 - param1) / 62);
-        pi var4 = k.field_h;
-        var4.e(-13413, param2);
-        var4.a(-100, 3);
-        var4.a(-15, 10);
-        var4.b((byte) 122, param0);
+        BitPacketBuffer var4 = k.field_h;
+        var4.writeCipheredOpcode(-13413, param2);
+        var4.writeByte(-100, 3);
+        var4.writeByte(-15, 10);
+        var4.writeShort((byte) 122, param0);
     }
 
     final StringBuilder a(int param0, Hashtable param1, int param2, StringBuilder param3) {

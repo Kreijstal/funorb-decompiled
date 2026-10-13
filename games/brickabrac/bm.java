@@ -159,7 +159,7 @@ final class bm {
         StringBuilder stackIn_20_1 = null;
         String stackIn_21_2 = null;
         RuntimeException decompiledCaughtException = null;
-        pi var2 = null;
+        BitPacketBuffer var2 = null;
         RuntimeException var2_ref = null;
         int var3 = 0;
         int var4 = 0;
@@ -168,9 +168,9 @@ final class bm {
         int var7 = 0;
         var7 = BrickABrac.field_J ? 1 : 0;
         try {
-          var2 = new pi(param1.a(-72, "logo.fo3d", ""));
-          var3 = var2.l(param0 + 325);
-          var2.n(param0 - 47);
+          var2 = new BitPacketBuffer(param1.a(-72, "logo.fo3d", ""));
+          var3 = var2.readUnsignedByte(param0 + 325);
+          var2.beginBitRead(param0 - 47);
           um.field_o = rk.a(var2, 24);
           gg.field_i = new fr[var3];
           rn.field_e = new int[var3][];
@@ -180,7 +180,7 @@ final class bm {
           var4 = 0;
           do {
             if (var4 >= var3) {
-              var2.f((byte) 116);
+              var2.finishBitRead((byte) 116);
               break;
             }
             gg.field_i[var4] = hc.a(16, var2);

@@ -490,7 +490,7 @@ final class PlayerBoard extends IntrusiveNode {
         return -1;
     }
 
-    final void a(boolean param0, wq param1, int param2) {
+    final void a(boolean param0, PacketBuffer param1, int param2) {
         int var6_int = 0;
         int stackIn_30_0 = 0;
         RuntimeException stackIn_34_0 = null;
@@ -522,29 +522,29 @@ final class PlayerBoard extends IntrusiveNode {
         int var10Lifetime1;
         var12 = BrickABrac.field_J ? 1 : 0;
         try {
-          this.field_Z = param1.l(255);
-          this.field_P = param1.i(65280);
-          this.simulationTick = param1.e(255);
+          this.field_Z = param1.readUnsignedByte(255);
+          this.field_P = param1.readUnsignedShort(65280);
+          this.simulationTick = param1.readInt(255);
           this.snapshotHistory.latestIndex = -1 + this.simulationTick / 5;
-          this.score = param1.e((byte) -34);
-          this.field_qb = param1.l(255);
-          this.field_rb = param1.l(255);
-          this.field_m = param1.i(65280);
-          this.field_Q = param1.i(65280);
-          this.field_p = param1.i(65280);
+          this.score = param1.readUnsignedMedium((byte) -34);
+          this.field_qb = param1.readUnsignedByte(255);
+          this.field_rb = param1.readUnsignedByte(255);
+          this.field_m = param1.readUnsignedShort(65280);
+          this.field_Q = param1.readUnsignedShort(65280);
+          this.field_p = param1.readUnsignedShort(65280);
           this.field_W = 0;
           var4_int = 0;
-          var5_int = param1.e(255);
+          var5_int = param1.readInt(255);
           while (var4_int < var5_int) {
             this.e(118);
             var4_int++;
           }
-          this.field_n = param1.i(65280);
+          this.field_n = param1.readUnsignedShort(65280);
           var4_intLifetime1 = this.field_n % 16;
           var5 = new NodeDeque[3];
           for (var6_int = 0; var6_int < var5.length; var6_int++) {
             var5[var6_int] = new NodeDeque();
-            var7 = param1.i(65280);
+            var7 = param1.readUnsignedShort(65280);
             for (var8 = 0; var7 > var8; var8++) {
               var13 = new Brick();
               var13.readBodySnapshot(92, param1);
@@ -553,7 +553,7 @@ final class PlayerBoard extends IntrusiveNode {
             }
           }
           var6 = new NodeDeque();
-          var7Lifetime1 = param1.i(65280);
+          var7Lifetime1 = param1.readUnsignedShort(65280);
           for (var8Lifetime1 = 0; var8Lifetime1 < var7Lifetime1; var8Lifetime1++) {
             var14 = new BrickMotionPath();
             var14.readBodySnapshot(114, param1);
@@ -562,20 +562,20 @@ final class PlayerBoard extends IntrusiveNode {
           this.a(var6, 9, var5);
           this.queuedBalls.clear((byte) -79);
           this.activeBalls.clear((byte) -118);
-          var8Lifetime2 = param1.l(255);
+          var8Lifetime2 = param1.readUnsignedByte(255);
           for (var9 = 0; var8Lifetime2 > var9; var9++) {
             var15 = new Ball();
             var15.readBodySnapshot(110, param1);
             this.queuedBalls.addLast(var15, (byte) 3);
           }
-          var8Lifetime3 = param1.l(255);
+          var8Lifetime3 = param1.readUnsignedByte(255);
           for (var9Lifetime1 = 0; var8Lifetime3 > var9Lifetime1; var9Lifetime1++) {
             var16 = new Ball();
             var16.readBodySnapshot(107, param1);
             this.activeBalls.addLast(var16, (byte) 3);
           }
           this.fallingPowerUps.clear((byte) -63);
-          var9Lifetime2 = param1.l(255);
+          var9Lifetime2 = param1.readUnsignedByte(255);
           for (var10 = 0; var9Lifetime2 > var10; var10++) {
             var11 = new PowerUp();
             var11.readBodySnapshot(97, param1);
@@ -583,18 +583,18 @@ final class PlayerBoard extends IntrusiveNode {
           }
           this.paddle.readBodySnapshot(100, param1);
           this.field_C.clear((byte) -83);
-          this.field_k = param1.e(255);
-          this.field_R = param1.e(255);
+          this.field_k = param1.readInt(255);
+          this.field_R = param1.readInt(255);
           this.f(1000);
           if (param0) {
             return;
           }
           for (var10Lifetime1 = 3; var10Lifetime1 < 29; var10Lifetime1++) {
-            this.field_o[var10Lifetime1] = (byte)param1.l(255);
+            this.field_o[var10Lifetime1] = (byte)param1.readUnsignedByte(255);
           }
-          this.field_r = param1.i(65280);
-          this.field_M = param1.i(65280);
-          this.field_p = param1.e(255);
+          this.field_r = param1.readUnsignedShort(65280);
+          this.field_M = param1.readUnsignedShort(65280);
+          this.field_p = param1.readInt(255);
           this.field_G = this.field_p + this.boardOffset << 8;
           stackIn_30_0 = (1 == param2) ? 15 : 9;
           kj.a(stackIn_30_0, this.brickGroups[2], 16);

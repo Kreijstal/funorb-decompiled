@@ -106,7 +106,7 @@ final class GameplayScreen extends GameScreen {
         this.g(41);
     }
 
-    final void a(pi param0, boolean param1, int param2) {
+    final void a(BitPacketBuffer param0, boolean param1, int param2) {
         int var4_int = 0;
         int var5 = 0;
         RuntimeException stackIn_6_0 = null;
@@ -115,11 +115,11 @@ final class GameplayScreen extends GameScreen {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var4 = null;
         try {
-          var4_int = param0.l(255);
-          this.match.playerBoards[var4_int].field_V = param0.j(48);
+          var4_int = param0.readUnsignedByte(255);
+          this.match.playerBoards[var4_int].field_V = param0.readMedium(48);
           var5 = -101 % ((param2 - 26) / 60);
           if (param1) {
-            this.match.playerBoards[var4_int].field_zb = param0.l(255);
+            this.match.playerBoards[var4_int].field_zb = param0.readUnsignedByte(255);
             this.match.playerMaskThree = this.match.playerMaskThree | 1 << var4_int;
           } else {
             this.match.playerMaskTwo = this.match.playerMaskTwo | 1 << var4_int;
@@ -139,12 +139,12 @@ final class GameplayScreen extends GameScreen {
         }
     }
 
-    final void a(byte param0, pi param1) {
+    final void a(byte param0, BitPacketBuffer param1) {
         PlayerBoard dupTemp$0 = null;
         try {
           dupTemp$0 = this.match.playerBoards[this.field_k];
           dupTemp$0.field_E = dupTemp$0.field_E + 5;
-          this.match.playerBoards[this.field_k].field_p = param1.i(65280);
+          this.match.playerBoards[this.field_k].field_p = param1.readUnsignedShort(65280);
           if (param0 != 33) {
             PlayerBoard var4 = (PlayerBoard) null;
             this.a((byte) 15, (PlayerBoard) null);
@@ -659,7 +659,7 @@ final class GameplayScreen extends GameScreen {
         }
     }
 
-    final void a(byte param0, pi param1, boolean param2) {
+    final void a(byte param0, BitPacketBuffer param1, boolean param2) {
         int var6_int = 0;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
@@ -672,24 +672,24 @@ final class GameplayScreen extends GameScreen {
         int var7 = 0;
         var7 = BrickABrac.field_J ? 1 : 0;
         try {
-          var4_int = param1.l(255);
+          var4_int = param1.readUnsignedByte(255);
           if (this.match.playerCount <= var4_int) {
-            rk.a("K1: (" + var4_int + "/" + param1.field_l + ") " + eq.c((byte) -110), (Throwable) null, param0 + 125);
+            rk.a("K1: (" + var4_int + "/" + param1.position + ") " + eq.c((byte) -110), (Throwable) null, param0 + 125);
             hn.a((byte) 89);
             return;
           }
           var5 = new p();
-          var5.field_k = param1.i(65280);
-          param1.n(-79);
+          var5.field_k = param1.readUnsignedShort(65280);
+          param1.beginBitRead(-79);
           for (var6_int = 0; var6_int < 5; var6_int++) {
-            var5.field_n[var6_int] = param1.c(3, (byte) 117);
+            var5.field_n[var6_int] = param1.readBits(3, (byte) 117);
           }
           if (param0 != -15) {
             this.b(-25, 35, 50);
           }
-          param1.f((byte) 100);
+          param1.finishBitRead((byte) 100);
           if (param2) {
-            var5.field_m = param1.e(255);
+            var5.field_m = param1.readInt(255);
             var5.field_l = true;
           }
           var6 = this.match.playerBoards[var4_int];
@@ -711,7 +711,7 @@ final class GameplayScreen extends GameScreen {
         }
     }
 
-    final void a(int param0, pi param1) {
+    final void a(int param0, BitPacketBuffer param1) {
         int var3_int = 0;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
@@ -719,8 +719,8 @@ final class GameplayScreen extends GameScreen {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
         try {
-          var3_int = param1.l(param0 ^ 18615);
-          this.match.playerBoards[var3_int].field_V = param1.j(48);
+          var3_int = param1.readUnsignedByte(param0 ^ 18615);
+          this.match.playerBoards[var3_int].field_V = param1.readMedium(48);
           this.match.playerMaskOne = this.match.playerMaskOne | 1 << var3_int;
           if (param0 != 18504) {
             field_u = (mh) null;
@@ -744,15 +744,15 @@ final class GameplayScreen extends GameScreen {
         int var6 = 0;
         int var7 = BrickABrac.field_J ? 1 : 0;
         int var4 = 17 % ((29 - param0) / 57);
-        k.field_h.e(-13413, !param2 ? 68 : 69);
-        k.field_h.p(62);
+        k.field_h.writeCipheredOpcode(-13413, !param2 ? 68 : 69);
+        k.field_h.beginBitWrite(62);
         PlayerBoard var5 = this.match.playerBoards[param1];
         for (var6 = 0; var6 < 5; var6++) {
-          k.field_h.a(3, -17566, var5.field_vb[var6]);
+          k.field_h.writeBits(3, -17566, var5.field_vb[var6]);
         }
-        k.field_h.q(-105);
+        k.field_h.finishBitWrite(-105);
         if (param2) {
-          k.field_h.a(var5.a(true, (StringBuilder) null) ^ var5.e(122), (byte) -79);
+          k.field_h.writeInt(var5.a(true, (StringBuilder) null) ^ var5.e(122), (byte) -79);
         }
     }
 
@@ -1050,7 +1050,7 @@ final class GameplayScreen extends GameScreen {
         }
         this.match.playerMaskOne = this.match.playerMaskOne | 1 << this.field_k;
         int var2 = 116 % ((param0 + 55) / 62);
-        k.field_h.e(-13413, 66);
+        k.field_h.writeCipheredOpcode(-13413, 66);
     }
 
     private final void a(boolean param0, int param1, int param2) {
@@ -1101,7 +1101,7 @@ final class GameplayScreen extends GameScreen {
         sk.a(var3, 0, var4, 2, param1, -12665);
     }
 
-    final void a(pi param0, int param1) {
+    final void a(BitPacketBuffer param0, int param1) {
         int var3_int = 0;
         byte dupTemp$0 = 0;
         boolean stackIn_5_0 = false;
@@ -1115,7 +1115,7 @@ final class GameplayScreen extends GameScreen {
         var4 = BrickABrac.field_J ? 1 : 0;
         try {
           for (var3_int = param1; this.match.playerCount > var3_int; var3_int++) {
-            dupTemp$0 = param0.b(true);
+            dupTemp$0 = param0.readByte(true);
             this.match.field_m[var3_int] = dupTemp$0;
             stackIn_5_0 = op.field_a;
             stackIn_6_1 = !(0 > dupTemp$0);
@@ -1484,15 +1484,15 @@ final class GameplayScreen extends GameScreen {
         }
     }
 
-    final void a(pi param0, byte param1) {
+    final void a(BitPacketBuffer param0, byte param1) {
         int var3_int = 0;
         int var4 = 0;
         int var5 = 0;
         PowerUp var6 = null;
         try {
-          var3_int = param0.l(255);
-          var4 = param0.l(255);
-          var5 = param0.e(255);
+          var3_int = param0.readUnsignedByte(255);
+          var4 = param0.readUnsignedByte(255);
+          var5 = param0.readInt(255);
           var6 = new PowerUp(0, 0, var4);
           int var7 = 102 / ((-65 - param1) / 34);
           var6.activationTick = var5;
@@ -1669,7 +1669,7 @@ final class GameplayScreen extends GameScreen {
           if (~tn.field_C != ~var5[var7Lifetime2]) {
             gr.b(var5[var7Lifetime2], -28463);
           }
-          pi.a((byte) 90, var6Lifetime1, var5[var7Lifetime2], var15[var7Lifetime2], this.match, var14[var7Lifetime2]);
+          BitPacketBuffer.drawBoard((byte) 90, var6Lifetime1, var5[var7Lifetime2], var15[var7Lifetime2], this.match, var14[var7Lifetime2]);
           var6Lifetime1++;
           var6Lifetime1 = var6Lifetime1 % this.match.playerCount;
         }
@@ -1788,7 +1788,7 @@ final class GameplayScreen extends GameScreen {
         if (!this.field_p) {
           throw new IllegalStateException();
         }
-        k.field_h.e(-13413, 67);
+        k.field_h.writeCipheredOpcode(-13413, 67);
         int var2 = 68 % ((param0 + 65) / 59);
     }
 

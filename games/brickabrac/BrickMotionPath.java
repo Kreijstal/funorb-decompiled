@@ -63,11 +63,11 @@ final class BrickMotionPath extends MovingBody {
         this.waypoints = new NodeDeque();
     }
 
-    final void readBodySnapshot(int obfuscationGuard, wq packet) {
+    final void readBodySnapshot(int obfuscationGuard, PacketBuffer packet) {
         int var3_int = 0;
         MotionWaypoint var4 = null;
         int var5 = 0;
-        wq var6 = null;
+        PacketBuffer var6 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;
@@ -75,13 +75,13 @@ final class BrickMotionPath extends MovingBody {
         RuntimeException var3 = null;
         var5 = BrickABrac.field_J ? 1 : 0;
         try {
-          this.waypointCount = packet.l(255);
+          this.waypointCount = packet.readUnsignedByte(255);
           this.waypoints.clear((byte) -72);
           this.durationTicks = 0;
           var3_int = 0;
           if (obfuscationGuard < 89) {
-            var6 = (wq) null;
-            this.readBodySnapshot(-40, (wq) null);
+            var6 = (PacketBuffer) null;
+            this.readBodySnapshot(-40, (PacketBuffer) null);
           }
           while (this.waypointCount > var3_int) {
             var4 = new MotionWaypoint();

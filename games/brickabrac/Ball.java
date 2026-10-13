@@ -121,17 +121,17 @@ final class Ball extends CircleBody {
         }
     }
 
-    final void readBodySnapshot(int obfuscationGuard, wq packet) {
+    final void readBodySnapshot(int obfuscationGuard, PacketBuffer packet) {
         super.readBodySnapshot(107, packet);
-        this.contactCount = packet.e(255);
+        this.contactCount = packet.readInt(255);
         if (obfuscationGuard < 89) {
           return;
         }
         try {
-          this.penetrationTicks = packet.i(65280);
-          this.phaseTicks = packet.a(126);
-          this.launchAngle = packet.a(126);
-          this.brickBounceCount = packet.c((byte) -82);
+          this.penetrationTicks = packet.readUnsignedShort(65280);
+          this.phaseTicks = packet.readShort(126);
+          this.launchAngle = packet.readShort(126);
+          this.brickBounceCount = packet.readVarInt((byte) -82);
         } catch (RuntimeException runtimeException) {
           throw qb.a((Throwable) ((Object) runtimeException), "vn.L(" + obfuscationGuard + ',' + (packet != null ? "{...}" : "null") + ')');
         }

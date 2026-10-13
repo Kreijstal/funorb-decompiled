@@ -247,7 +247,7 @@ final class q {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 > 69) {
-            stackIn_4_0 = df.a(param0.length, 117, param0, 0);
+            stackIn_4_0 = df.decodeCp1252(param0.length, 117, param0, 0);
             return stackIn_4_0;
           }
           stackIn_2_0 = (String) null;

@@ -11,7 +11,7 @@ final class eo extends tl {
     private java.nio.ByteBuffer field_j;
     static String field_l;
 
-    final static boolean a(boolean param0, pi param1) {
+    final static boolean a(boolean param0, BitPacketBuffer param1) {
         RuntimeException var2 = null;
         boolean stackIn_5_0 = false;
         RuntimeException stackIn_8_0 = null;
@@ -22,7 +22,7 @@ final class eo extends tl {
           if (param0) {
             eo.c(-28);
           }
-          stackIn_5_0 = (1 == param1.c(1, (byte) 127));
+          stackIn_5_0 = (1 == param1.readBits(1, (byte) 127));
           return stackIn_5_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

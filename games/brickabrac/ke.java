@@ -945,7 +945,7 @@ public abstract class ke extends java.applet.Applet implements Runnable, java.aw
         StringBuilder stackIn_15_1 = null;
         String stackIn_16_2 = null;
         RuntimeException decompiledCaughtException = null;
-        pi var3 = null;
+        BitPacketBuffer var3 = null;
         RuntimeException var3_ref = null;
         int var4 = 0;
         int var5 = 0;
@@ -953,31 +953,31 @@ public abstract class ke extends java.applet.Applet implements Runnable, java.aw
         var6 = BrickABrac.field_J ? 1 : 0;
         try {
           var3 = k.field_h;
-          var3.e(param2 ^ -3818, param0);
-          var3.field_l = var3.field_l + 1;
-          var4 = var3.field_l;
-          var3.a(106, 1);
-          var3.b((byte) 116, param1.field_m);
-          var3.b((byte) 112, param1.field_o);
-          var3.b((byte) 127, param1.field_q);
-          var3.a(param1.field_k, (byte) -79);
-          var3.a(param1.field_n, (byte) -79);
-          var3.a(param1.field_r, (byte) -79);
+          var3.writeCipheredOpcode(param2 ^ -3818, param0);
+          var3.position = var3.position + 1;
+          var4 = var3.position;
+          var3.writeByte(106, 1);
+          var3.writeShort((byte) 116, param1.field_m);
+          var3.writeShort((byte) 112, param1.field_o);
+          var3.writeShort((byte) 127, param1.field_q);
+          var3.writeInt(param1.field_k, (byte) -79);
+          var3.writeInt(param1.field_n, (byte) -79);
+          var3.writeInt(param1.field_r, (byte) -79);
           if (param2 != 14989) {
             field_f = (String) null;
           }
-          var3.a(param1.field_j, (byte) -79);
-          var3.a(-28, param1.field_i.length);
+          var3.writeInt(param1.field_j, (byte) -79);
+          var3.writeByte(-28, param1.field_i.length);
           var5 = 0;
           while (var5 < param1.field_i.length) {
-            var3.a(param1.field_i[var5], (byte) -79);
+            var3.writeInt(param1.field_i[var5], (byte) -79);
             var5++;
             if (var6 != 0) {
               return;
             }
           }
-          var3.d(3, var4);
-          var3.d((byte) 113, var3.field_l - var4);
+          var3.appendCrc32(3, var4);
+          var3.backfillByteLength((byte) 113, var3.position - var4);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

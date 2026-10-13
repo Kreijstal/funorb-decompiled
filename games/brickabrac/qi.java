@@ -140,28 +140,28 @@ final class qi extends d {
         int var2 = 0;
         int[] var3 = null;
         int[] var4 = null;
-        pi var5 = null;
+        BitPacketBuffer var5 = null;
         int var6 = 0;
         int var8 = 0;
         int[] var10 = null;
         int[] var11 = null;
         e var12 = null;
         al var13 = null;
-        pi var14 = null;
+        BitPacketBuffer var14 = null;
         al var15 = null;
         var8 = BrickABrac.field_J ? 1 : 0;
         try {
           var14 = jl.field_e;
-          var2 = var14.l(255);
+          var2 = var14.readUnsignedByte(255);
           if (param0 == ~var2) {
             var11 = Ball.d(8);
             var3 = var11;
             var10 = var11;
             var4 = var10;
             var5 = var14;
-            var6 = ((wq) ((Object) var5)).l(255);
+            var6 = ((PacketBuffer) ((Object) var5)).readUnsignedByte(255);
             for (var7 = 0; var6 > var7; var7++) {
-              var10[var7] = ((wq) ((Object) var5)).e(pn.a(param0, -256));
+              var10[var7] = ((PacketBuffer) ((Object) var5)).readInt(pn.a(param0, -256));
             }
             var13 = (al) (ej.field_F.first(param0 - 84));
             if (var13 == null) {

@@ -80,7 +80,7 @@ final class so {
         }
         var3 = new kn();
         if (var4 != null) {
-          var3.a(new wq(var4), -29539);
+          var3.a(new PacketBuffer(var4), -29539);
         }
         if (param0 >= 32768) {
           var3.c((byte) -124);
@@ -148,7 +148,7 @@ final class so {
           var15 = var21;
           var13 = var15;
           var5 = var13;
-          var16 = wq.a("basic", param0, "gamefont", param3 - 946744493);
+          var16 = PacketBuffer.a("basic", param0, "gamefont", param3 - 946744493);
           sn.a(param3 ^ 29068, var21, 1);
           ma.field_O = fc.a(0, var21, 0, var16, 0, 1);
           ma.field_O.field_M = bg.field_n;
@@ -158,7 +158,7 @@ final class so {
           var17 = var22;
           var14 = var17;
           var5Lifetime1 = var14;
-          var18 = wq.a("kartika13", param1, "", -946715356);
+          var18 = PacketBuffer.a("kartika13", param1, "", -946715356);
           ob.field_D = fc.a(0, var22, 0, var18, 0, 1);
           ob.field_D.field_M = bg.field_n;
           ce.field_e = fc.a(1, var22, 0, var18, 0, 1);
@@ -180,7 +180,7 @@ final class so {
           af.field_A = kf.a("button_frame", "basic", param0, -91);
           Ball.field_G = kf.a("button_raised", "basic", param0, 103);
           pe.field_k = kf.a("button_depressed", "basic", param0, -104);
-          si.field_c = wq.a("basic", param0, "achievements_large", -946715356);
+          si.field_c = PacketBuffer.a("basic", param0, "achievements_large", -946715356);
           vq.field_F = pl.a("basic", "unachieved", (byte) 97, param1);
           pg.field_p = pl.a("basic", "orbcoin", (byte) 122, param1);
           pl.a("basic", "locked", (byte) -45, param1);
@@ -214,7 +214,7 @@ final class so {
           }
           re.field_k = pl.a("basic", "ball", (byte) 121, param0);
           Ball.field_D = pl.a("basic", "steelball", (byte) 98, param0);
-          h.field_C = wq.a("basic", param0, "brickset", -946715356);
+          h.field_C = PacketBuffer.a("basic", param0, "brickset", -946715356);
           dg.field_b = cr.a("basic", param0, "paddlecaps", param3 - 29135);
           qg.field_D = cr.a("basic", param0, "paddleseg", 2);
           dk.field_R = pl.a("basic", "paddlecentre", (byte) 100, param0);
@@ -234,8 +234,8 @@ final class so {
           ap.field_a = pl.a("basic", "frame_bubble_point", (byte) -120, param0);
           ln.field_j = bd.a("basic", "rosette_sml", param0, (byte) -8);
           IntHistoryBuffer.field_l = bd.a("basic", "rosette_lrg", param0, (byte) -8);
-          me.field_a = wq.a("basic", param0, "podium2", -946715356);
-          pl.field_f = wq.a("basic", param0, "podium3", param3 ^ -946719499);
+          me.field_a = PacketBuffer.a("basic", param0, "podium2", -946715356);
+          pl.field_f = PacketBuffer.a("basic", param0, "podium3", param3 ^ -946719499);
           BrickMotionPath.field_r = cr.a("basic", param0, "podium_happy", 2);
           e.field_q = cr.a("basic", param0, "podium_sad", param3 ^ 29139);
           qh.field_e = um.a("basic", "congratulations", 1593955777, param0);

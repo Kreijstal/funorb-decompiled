@@ -132,17 +132,17 @@ final class eh {
         byte dupTemp$1 = 0;
         byte[] stackIn_30_0 = null;
         int stackIn_30_1 = 0;
-        wq stackIn_30_2 = null;
+        PacketBuffer stackIn_30_2 = null;
         boolean stackIn_31_3;
         byte[] stackIn_40_0 = null;
         int stackIn_40_1 = 0;
-        wq stackIn_40_2 = null;
+        PacketBuffer stackIn_40_2 = null;
         boolean stackIn_41_3 = false;
         int stackIn_43_0 = 0;
         int stackIn_44_1 = 0;
         byte[] stackIn_54_0 = null;
         int stackIn_54_1 = 0;
-        wq stackIn_54_2 = null;
+        PacketBuffer stackIn_54_2 = null;
         boolean stackIn_55_3 = false;
         int stackIn_57_0 = 0;
         int stackIn_58_1 = 0;
@@ -164,8 +164,8 @@ final class eh {
         int var13 = 0;
         int var14 = 0;
         int var15 = 0;
-        wq var16 = null;
-        wq var17 = null;
+        PacketBuffer var16 = null;
+        PacketBuffer var17 = null;
         byte[] var18 = null;
         byte[] var19 = null;
         byte[] var20 = null;
@@ -177,10 +177,10 @@ final class eh {
         int var4Lifetime5;
         var15 = BrickABrac.field_J ? 1 : 0;
         try {
-          var16 = new wq(param0);
+          var16 = new PacketBuffer(param0);
           var17 = var16;
-          var17.field_l = -2 + param0.length;
-          nl.field_c = var17.i(65280);
+          var17.position = -2 + param0.length;
+          nl.field_c = var17.readUnsignedShort(65280);
           cn.field_a = new byte[nl.field_c][];
           jh.field_b = new int[nl.field_c];
           dl.field_d = new int[nl.field_c];
@@ -188,26 +188,26 @@ final class eh {
           tm.field_b = new boolean[nl.field_c];
           bj.field_S = new byte[nl.field_c][];
           ag.field_K = new int[nl.field_c];
-          var17.field_l = -(8 * nl.field_c) + (-7 + param0.length);
-          cf.field_d = var17.i(65280);
-          ek.field_db = var17.i(65280);
-          var3 = 1 + (var17.l(255) & 255);
+          var17.position = -(8 * nl.field_c) + (-7 + param0.length);
+          cf.field_d = var17.readUnsignedShort(65280);
+          ek.field_db = var17.readUnsignedShort(65280);
+          var3 = 1 + (var17.readUnsignedByte(255) & 255);
           for (var4 = 0; nl.field_c > var4; var4++) {
-            ag.field_K[var4] = var16.i(65280);
+            ag.field_K[var4] = var16.readUnsignedShort(65280);
           }
           for (var4Lifetime1 = 0; nl.field_c > var4Lifetime1; var4Lifetime1++) {
-            dl.field_d[var4Lifetime1] = var17.i(65280);
+            dl.field_d[var4Lifetime1] = var17.readUnsignedShort(65280);
           }
           for (var4Lifetime2 = 0; nl.field_c > var4Lifetime2; var4Lifetime2++) {
-            jh.field_b[var4Lifetime2] = var17.i(65280);
+            jh.field_b[var4Lifetime2] = var17.readUnsignedShort(65280);
           }
           for (var4Lifetime3 = 0; var4Lifetime3 < nl.field_c; var4Lifetime3++) {
-            gg.field_t[var4Lifetime3] = var17.i(65280);
+            gg.field_t[var4Lifetime3] = var17.readUnsignedShort(65280);
           }
-          var17.field_l = -(3 * (var3 - 1)) + (-(nl.field_c * 8) + param0.length - 7);
+          var17.position = -(3 * (var3 - 1)) + (-(nl.field_c * 8) + param0.length - 7);
           qp.field_c = new int[var3];
           for (var4Lifetime4 = 1; var3 > var4Lifetime4; var4Lifetime4++) {
-            qp.field_c[var4Lifetime4] = var17.e((byte) -34);
+            qp.field_c[var4Lifetime4] = var17.readUnsignedMedium((byte) -34);
             if (0 == qp.field_c[var4Lifetime4]) {
               qp.field_c[var4Lifetime4] = 1;
             }
@@ -215,7 +215,7 @@ final class eh {
           if (param1) {
             field_d = (String) null;
           }
-          var17.field_l = 0;
+          var17.position = 0;
           for (var4Lifetime5 = 0; var4Lifetime5 < nl.field_c; var4Lifetime5++) {
             var5 = jh.field_b[var4Lifetime5];
             var6 = gg.field_t[var4Lifetime5];
@@ -229,10 +229,10 @@ final class eh {
             var9 = var19;
             bj.field_S[var4Lifetime5] = var21;
             var10 = 0;
-            var11 = var17.l(255);
+            var11 = var17.readUnsignedByte(255);
             if ((1 & var11) == 0) {
               for (var12 = 0; var12 < var7; var12++) {
-                var8[var12] = var17.b(true);
+                var8[var12] = var17.readByte(true);
               }
               if ((2 & var11) != 0) {
                 for (var12 = 0; var12 < var7; var12++) {
@@ -240,7 +240,7 @@ final class eh {
                   stackIn_54_1 = var12;
                   stackIn_54_2 = var17;
                   stackIn_55_3 = !(param1);
-                  dupTemp$0 = ((wq) (Object) stackIn_54_2).b(stackIn_55_3);
+                  dupTemp$0 = ((PacketBuffer) (Object) stackIn_54_2).readByte(stackIn_55_3);
                   stackIn_54_0[stackIn_54_1] = dupTemp$0;
                   var13 = dupTemp$0;
                   stackIn_57_0 = var10;
@@ -259,7 +259,7 @@ final class eh {
                   stackIn_30_1 = var12 + var13 * var5;
                   stackIn_30_2 = var17;
                   stackIn_31_3 = !(param1);
-                  stackIn_30_0[stackIn_30_1] = ((wq) (Object) stackIn_30_2).b(stackIn_31_3);
+                  stackIn_30_0[stackIn_30_1] = ((PacketBuffer) (Object) stackIn_30_2).readByte(stackIn_31_3);
                 }
               }
               if ((2 & var11) != 0) {
@@ -269,7 +269,7 @@ final class eh {
                     stackIn_40_1 = var12 + var13 * var5;
                     stackIn_40_2 = var17;
                     stackIn_41_3 = !(param1);
-                    dupTemp$1 = ((wq) (Object) stackIn_40_2).b(stackIn_41_3);
+                    dupTemp$1 = ((PacketBuffer) (Object) stackIn_40_2).readByte(stackIn_41_3);
                     stackIn_40_0[stackIn_40_1] = dupTemp$1;
                     var14 = dupTemp$1;
                     stackIn_43_0 = var10;
@@ -301,14 +301,14 @@ final class eh {
     }
 
     final static void a(boolean param0, int param1) {
-        pi var2 = k.field_h;
-        var2.e(-13413, param1);
+        BitPacketBuffer var2 = k.field_h;
+        var2.writeCipheredOpcode(-13413, param1);
         if (!param0) {
           eh.a('￪', (byte) -120);
         }
-        var2.a(-101, 2);
-        var2.a(-103, 4);
-        var2.a(-109, qf.p(248));
+        var2.writeByte(-101, 2);
+        var2.writeByte(-103, 4);
+        var2.writeByte(-109, qf.p(248));
     }
 
     final void a(int param0, int param1, int param2, int param3, int param4, int param5) {

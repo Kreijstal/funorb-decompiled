@@ -11,7 +11,7 @@ final class hc {
     static String field_b;
     static int[] field_e;
 
-    final static fr a(int param0, pi param1) {
+    final static fr a(int param0, BitPacketBuffer param1) {
         int var7 = 0;
         fr stackIn_26_0 = null;
         RuntimeException stackIn_29_0 = null;
@@ -27,23 +27,23 @@ final class hc {
         int var8 = 0;
         var8 = BrickABrac.field_J ? 1 : 0;
         try {
-          var2_int = param1.c(8, (byte) 62);
+          var2_int = param1.readBits(8, (byte) 62);
           if (0 < var2_int) {
             throw new IllegalStateException("" + var2_int);
           }
           var3 = eo.a(false, param1) ? 1 : 0;
           var4 = eo.a(false, param1) ? 1 : 0;
           var5 = new fr();
-          var5.field_w = (short)param1.c(16, (byte) -114);
+          var5.field_w = (short)param1.readBits(16, (byte) -114);
           var5.field_B = uj.a((byte) -67, var5.field_B, param1, 16);
           var5.field_Q = uj.a((byte) -117, var5.field_Q, param1, 16);
           var5.field_P = uj.a((byte) -110, var5.field_P, param1, param0);
-          var5.field_C = (short)param1.c(16, (byte) 79);
+          var5.field_C = (short)param1.readBits(16, (byte) 79);
           var5.field_G = uj.a((byte) -64, var5.field_G, param1, 16);
           var5.field_b = uj.a((byte) -74, var5.field_b, param1, 16);
           var5.field_c = uj.a((byte) -124, var5.field_c, param1, 16);
           if (var3 != 0) {
-            var5.field_o = (short)param1.c(16, (byte) 52);
+            var5.field_o = (short)param1.readBits(16, (byte) 52);
             var5.field_n = uj.a((byte) -107, var5.field_n, param1, 16);
             var5.field_H = uj.a((byte) -77, var5.field_H, param1, 16);
             var5.field_a = uj.a((byte) -117, var5.field_a, param1, 16);
@@ -52,7 +52,7 @@ final class hc {
             var5.field_t = uj.a((byte) -61, var5.field_t, param1, 16);
           }
           if (var4 != 0) {
-            param1.c(16, (byte) 101);
+            param1.readBits(16, (byte) 101);
             var5.field_z = uj.a((byte) -122, var5.field_z, param1, 16);
             var5.field_m = uj.a((byte) -92, var5.field_m, param1, 16);
             var5.field_K = uj.a((byte) -123, var5.field_K, param1, 16);
@@ -167,7 +167,7 @@ final class hc {
         int var7_intLifetime3;
         var18 = BrickABrac.field_J ? 1 : 0;
         try {
-          var20 = wq.a("lobby", param3, "crowns", -946715356);
+          var20 = PacketBuffer.a("lobby", param3, "crowns", -946715356);
           var5 = var20;
           mq.field_g = var20.length;
           if (param1 != null) {

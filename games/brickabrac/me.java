@@ -39,7 +39,7 @@ final class me {
     final static String a(String param0, int param1, int param2) {
         RuntimeException var3 = null;
         int var4 = 0;
-        pi var5 = null;
+        BitPacketBuffer var5 = null;
         CharSequence var6 = null;
         String stackIn_2_0 = null;
         String stackIn_5_0 = null;
@@ -79,12 +79,12 @@ final class me {
             return stackIn_19_0;
           }
           var5 = k.field_h;
-          var5.e(-13413, param1);
-          var5.field_l = var5.field_l + 1;
-          var4 = var5.field_l;
-          var5.a(84, 2);
-          var5.a(param0, param2 ^ -3);
-          var5.d((byte) 119, -var4 + var5.field_l);
+          var5.writeCipheredOpcode(-13413, param1);
+          var5.position = var5.position + 1;
+          var4 = var5.position;
+          var5.writeByte(84, 2);
+          var5.writeCp1252String(param0, param2 ^ -3);
+          var5.backfillByteLength((byte) 119, -var4 + var5.position);
           stackIn_21_0 = null;
           return (String) (stackIn_21_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

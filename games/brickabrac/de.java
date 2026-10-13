@@ -88,7 +88,7 @@ final class de extends km {
           return;
         }
         if (null == this.field_r) {
-          this.field_r = wq.a("benefits", this.field_u, "members_benefits_screenshots", -946715356);
+          this.field_r = PacketBuffer.a("benefits", this.field_u, "members_benefits_screenshots", -946715356);
           return;
         }
         if (ff.field_c != null) {

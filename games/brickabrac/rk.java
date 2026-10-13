@@ -242,7 +242,7 @@ final class rk extends mh {
         }
     }
 
-    final static dc[] a(pi param0, int param1) {
+    final static dc[] a(BitPacketBuffer param0, int param1) {
         int var5 = 0;
         int var2_int = 0;
         RuntimeException var2 = null;
@@ -259,7 +259,7 @@ final class rk extends mh {
         RuntimeException decompiledCaughtException = null;
         var7 = BrickABrac.field_J ? 1 : 0;
         try {
-          var2_int = param0.c(8, (byte) -85);
+          var2_int = param0.readBits(8, (byte) -85);
           if (var2_int > 0) {
             stackIn_3_0 = null;
             return (dc[]) (stackIn_3_0);
@@ -267,21 +267,21 @@ final class rk extends mh {
           if (param1 != 24) {
             field_Tb = (String) null;
           }
-          var3 = param0.c(12, (byte) 85);
+          var3 = param0.readBits(12, (byte) 85);
           var4 = new dc[var3];
           for (var5 = 0; var5 < var3; var5++) {
             if (eo.a(false, param0)) {
               var6 = new dc();
-              param0.c(24, (byte) -115);
-              param0.c(24, (byte) 107);
-              var6.field_a = param0.c(24, (byte) -86);
-              param0.c(9, (byte) 110);
-              param0.c(12, (byte) -113);
-              param0.c(12, (byte) -91);
-              param0.c(12, (byte) -112);
+              param0.readBits(24, (byte) -115);
+              param0.readBits(24, (byte) 107);
+              var6.field_a = param0.readBits(24, (byte) -86);
+              param0.readBits(9, (byte) 110);
+              param0.readBits(12, (byte) -113);
+              param0.readBits(12, (byte) -91);
+              param0.readBits(12, (byte) -112);
               var4[var5] = var6;
             } else {
-              var6_int = param0.c(dj.a(-1 + var5, 15), (byte) 98);
+              var6_int = param0.readBits(dj.a(-1 + var5, 15), (byte) 98);
               var4[var5] = var4[var6_int];
             }
           }

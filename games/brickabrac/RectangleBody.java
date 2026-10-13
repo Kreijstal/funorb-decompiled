@@ -7,7 +7,7 @@ class RectangleBody extends MovingBody {
     static jp field_p;
     int width256;
     static mh field_q;
-    static wq field_r;
+    static PacketBuffer field_r;
 
     boolean resolveCircleCollision(CircleBody circle, byte obfuscationGuard) {
         RuntimeException stackIn_67_0 = null;

@@ -87,7 +87,7 @@ final class ck extends IntrusiveNode {
         tb.field_eb = null;
         dj.field_d = 0;
         c.field_i = un.field_e;
-        pi.field_q = 0;
+        BitPacketBuffer.field_q = 0;
         cm.field_s = false;
         kb.field_Sb = false;
         jl.field_a = 1;

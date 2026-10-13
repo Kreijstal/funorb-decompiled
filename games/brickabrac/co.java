@@ -7,7 +7,7 @@ final class co {
     static String[] field_f;
     private java.math.BigInteger field_i;
     private jq[] field_k;
-    private wq field_b;
+    private PacketBuffer field_b;
     static String field_e;
     private ih field_a;
     private da field_c;
@@ -49,7 +49,7 @@ final class co {
         java.math.BigInteger var7_ref_java_math_BigInteger;
         int var8;
         ve var9;
-        wq var11;
+        PacketBuffer var11;
         byte[] var12;
         java.math.BigInteger var13;
         byte[] var14;
@@ -67,14 +67,14 @@ final class co {
         if (this.field_c.field_u) {
           return false;
         }
-        var11 = new wq(this.field_c.c((byte) 56));
-        var11.field_l = 5;
-        var3 = var11.l(255);
-        var11.field_l = var11.field_l + 72 * var3;
-        var14 = new byte[var11.field_k.length - var11.field_l];
+        var11 = new PacketBuffer(this.field_c.c((byte) 56));
+        var11.position = 5;
+        var3 = var11.readUnsignedByte(255);
+        var11.position = var11.position + 72 * var3;
+        var14 = new byte[var11.data.length - var11.position];
         var12 = var14;
         var4 = var12;
-        var11.a(0, var4, 127, var14.length);
+        var11.readBytes(0, var4, 127, var14.length);
         if (null != this.field_i &&
           null != this.field_g) {
           var13 = new java.math.BigInteger(var14);
@@ -86,7 +86,7 @@ final class co {
         if (var5.length != 65) {
           throw new RuntimeException();
         }
-        var16 = jd.a(var11.field_k, 5, -14970, var11.field_l - var14.length - 5);
+        var16 = jd.a(var11.data, 5, -14970, var11.position - var14.length - 5);
         for (var7 = 0; 64 > var7; var7++) {
           if (var16[var7] != var5[var7 + 1]) {
             throw new RuntimeException();
@@ -145,12 +145,12 @@ final class co {
               stackIn_9_0 = this.field_k[param3];
               return stackIn_9_0;
             }
-            this.field_b.field_l = param3 * 72 + 6;
+            this.field_b.position = param3 * 72 + 6;
             var6_int = -124 / ((param0 + 71) / 38);
-            var7 = this.field_b.e(255);
-            var8 = this.field_b.e(255);
+            var7 = this.field_b.readInt(255);
+            var8 = this.field_b.readInt(255);
             var14 = new byte[64];
-            this.field_b.a(0, var14, 122, 64);
+            this.field_b.readBytes(0, var14, 122, 64);
             var10 = new jq(param3, param4, param2, this.field_a, this.field_h, var7, var14, var8, param1);
             this.field_k[param3] = var10;
             stackIn_11_0 = var10;

@@ -182,10 +182,10 @@ final class e extends IntrusiveNode {
           vq.field_I = new jp(var3, var4 * 3 / 4);
           vq.field_I.g();
           var2.d(0, 0);
-          pi.field_t = new jp(var3, -vq.field_I.field_C + var4);
-          pi.field_t.g();
+          BitPacketBuffer.field_t = new jp(var3, -vq.field_I.field_C + var4);
+          BitPacketBuffer.field_t.g();
           var2.d(0, -vq.field_I.field_C);
-          pi.field_t.field_F = vq.field_I.field_C;
+          BitPacketBuffer.field_t.field_F = vq.field_I.field_C;
           sc.b(-104);
         } catch (RuntimeException runtimeException) {
           throw qb.a((Throwable) ((Object) runtimeException), "e.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');

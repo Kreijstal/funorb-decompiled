@@ -11,7 +11,7 @@ final class tm {
     static String field_d;
     static int field_g;
 
-    final static void a(wq param0, int param1, byte param2, java.math.BigInteger param3, int param4, byte[] param5, java.math.BigInteger param6) {
+    final static void a(PacketBuffer param0, int param1, byte param2, java.math.BigInteger param3, int param4, byte[] param5, java.math.BigInteger param6) {
         RuntimeException stackIn_24_0 = null;
         StringBuilder stackIn_24_1 = null;
         String stackIn_25_2 = null;
@@ -44,32 +44,32 @@ final class tm {
             var8[var9] = bg.field_p.nextInt();
           }
           if (vh.field_N == null ||
-            !(vh.field_N.field_k.length >= var7_int)) {
-            vh.field_N = new wq(var7_int);
+            !(vh.field_N.data.length >= var7_int)) {
+            vh.field_N = new PacketBuffer(var7_int);
           }
-          vh.field_N.field_l = 0;
-          vh.field_N.a(param5, -1, param4, param1);
-          vh.field_N.f((byte) -74, var7_int);
-          vh.field_N.a(18146, var13);
+          vh.field_N.position = 0;
+          vh.field_N.writeBytes(param5, -1, param4, param1);
+          vh.field_N.padToPosition((byte) -74, var7_int);
+          vh.field_N.encryptBlocks(18146, var13);
           if (null == RectangleBody.field_r ||
-            !(RectangleBody.field_r.field_k.length >= 100)) {
-            RectangleBody.field_r = new wq(100);
+            !(RectangleBody.field_r.data.length >= 100)) {
+            RectangleBody.field_r = new PacketBuffer(100);
           }
-          RectangleBody.field_r.field_l = 0;
-          RectangleBody.field_r.a(21, 10);
+          RectangleBody.field_r.position = 0;
+          RectangleBody.field_r.writeByte(21, 10);
           if (param2 <= 115) {
             tm.a(-128, (byte) -47);
           }
           var11 = 0;
           var9Lifetime1 = var11;
           while (4 > var11) {
-            RectangleBody.field_r.a(var13[var11], (byte) -79);
+            RectangleBody.field_r.writeInt(var13[var11], (byte) -79);
             var11++;
           }
-          RectangleBody.field_r.b((byte) 122, param1);
-          RectangleBody.field_r.a(param3, param6, 19775);
-          param0.a(RectangleBody.field_r.field_k, -1, 0, RectangleBody.field_r.field_l);
-          param0.a(vh.field_N.field_k, -1, 0, vh.field_N.field_l);
+          RectangleBody.field_r.writeShort((byte) 122, param1);
+          RectangleBody.field_r.applyRsa(param3, param6, 19775);
+          param0.writeBytes(RectangleBody.field_r.data, -1, 0, RectangleBody.field_r.position);
+          param0.writeBytes(vh.field_N.data, -1, 0, vh.field_N.position);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -130,17 +130,17 @@ final class tm {
                 var4 = 0;
               }
             }
-            if (0 < k.field_h.field_l) {
-              var14 = new byte[k.field_h.field_l];
+            if (0 < k.field_h.position) {
+              var14 = new byte[k.field_h.position];
               var11 = var14;
               var8 = var11;
               var17 = var8;
               for (var6 = 0; var14.length > var6; var6++) {
-                var8[var6] = k.field_h.field_k[var6];
+                var8[var6] = k.field_h.data[var6];
               }
-              var6_ref_pg = new pg(var2_long + (long)var4, k.field_h.field_l, var17);
+              var6_ref_pg = new pg(var2_long + (long)var4, k.field_h.position, var17);
               hg.field_a.addLast(var6_ref_pg, (byte) 3);
-              k.field_h.field_l = 0;
+              k.field_h.position = 0;
             }
             var9 = (pg) (hg.field_a.first(-62));
             var13 = var9;
@@ -150,10 +150,10 @@ final class tm {
               var10 = 0;
               var6Lifetime1 = var10;
               while (var10 < var13.field_r) {
-                k.field_h.field_k[var10] = var9.field_l[var10];
+                k.field_h.data[var10] = var9.field_l[var10];
                 var10++;
               }
-              k.field_h.field_l = var13.field_r;
+              k.field_h.position = var13.field_r;
             }
           }
           if (param0 != 110) {
@@ -187,7 +187,7 @@ final class tm {
         }
         if (param1 != 18) {
           java.math.BigInteger var3 = (java.math.BigInteger) null;
-          tm.a((wq) null, 46, (byte) -64, (java.math.BigInteger) null, -75, (byte[]) null, (java.math.BigInteger) null);
+          tm.a((PacketBuffer) null, 46, (byte) -64, (java.math.BigInteger) null, -75, (byte[]) null, (java.math.BigInteger) null);
         }
         if (param0 == 1) {
           var2 = md.field_v;

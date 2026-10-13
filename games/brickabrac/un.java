@@ -36,25 +36,25 @@ final class un {
         return 1900 + new Date().getYear();
     }
 
-    final static void a(byte param0, wq param1) {
+    final static void a(byte param0, PacketBuffer param1) {
         int var2_int = 0;
         int var2_intLifetime1;
         int var2_intLifetime2;
         try {
-          vh.field_U = param1.i(65280) << 5;
-          var2_int = param1.l(255);
+          vh.field_U = param1.readUnsignedShort(65280) << 5;
+          var2_int = param1.readUnsignedByte(255);
           fh.field_c = 1835008 & var2_int << 18;
           int var3 = -32 % ((param0 + 69) / 37);
           vh.field_U = vh.field_U + (var2_int >> 3);
-          fh.field_c = fh.field_c + (param1.i(65280) << 2);
-          var2_intLifetime1 = param1.l(255);
+          fh.field_c = fh.field_c + (param1.readUnsignedShort(65280) << 2);
+          var2_intLifetime1 = param1.readUnsignedByte(255);
           sf.field_Z = 2064384 & var2_intLifetime1 << 15;
           fh.field_c = fh.field_c + (var2_intLifetime1 >> 6);
-          sf.field_Z = sf.field_Z + (param1.l(255) << 7);
-          var2_intLifetime2 = param1.l(255);
+          sf.field_Z = sf.field_Z + (param1.readUnsignedByte(255) << 7);
+          var2_intLifetime2 = param1.readUnsignedByte(255);
           sf.field_Z = sf.field_Z + (var2_intLifetime2 >> 1);
           vj.field_c = 65536 & var2_intLifetime2 << 16;
-          vj.field_c = vj.field_c + param1.i(65280);
+          vj.field_c = vj.field_c + param1.readUnsignedShort(65280);
         } catch (RuntimeException runtimeException) {
           throw qb.a((Throwable) ((Object) runtimeException), "un.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

@@ -109,7 +109,7 @@ final class wl extends d {
         int var11 = 0;
         int var12 = 0;
         int var13 = 0;
-        pi var14 = null;
+        BitPacketBuffer var14 = null;
         int var6_intLifetime1;
         int var9Lifetime1;
         int var10Lifetime1;
@@ -117,7 +117,7 @@ final class wl extends d {
         var12 = BrickABrac.field_J ? 1 : 0;
         try {
           var14 = jl.field_e;
-          var2 = var14.l(255);
+          var2 = var14.readUnsignedByte(255);
           var3 = (cq) (fk.field_f.first(-7));
           while (var3 != null) {
             if (var3.field_m != var2) {
@@ -130,12 +130,12 @@ final class wl extends d {
             hn.a((byte) 64);
             return;
           }
-          var4 = var14.l(255);
+          var4 = var14.readUnsignedByte(255);
           if (var4 != 0) {
             vq.field_B[0] = tb.field_cb;
             var5 = var3.field_s;
             for (var6_int = 1; var4 > var6_int; var6_int++) {
-              vq.field_B[var6_int] = var14.d(-1);
+              vq.field_B[var6_int] = var14.readCp1252String(-1);
             }
             tk.a((byte) 75, var4, var5);
             for (var6_intLifetime1 = 0; var4 > var6_intLifetime1; var6_intLifetime1++) {
@@ -210,10 +210,10 @@ final class wl extends d {
     final static int a(String param0, boolean param1, int param2, m param3, int param4, m param5, int param6) {
         int var12 = 0;
         int stackIn_6_0 = 0;
-        wq stackIn_11_0 = null;
+        PacketBuffer stackIn_11_0 = null;
         int stackIn_11_1 = 0;
         String stackIn_12_2 = null;
-        wq stackIn_14_0 = null;
+        PacketBuffer stackIn_14_0 = null;
         int stackIn_14_1 = 0;
         String stackIn_15_2 = null;
         int stackIn_33_0 = 0;
@@ -252,38 +252,38 @@ final class wl extends d {
             stackIn_6_0 = -1;
             return stackIn_6_0;
           }
-          if (rf.field_b == pi.field_u) {
-            k.field_h.field_l = 0;
+          if (rf.field_b == BitPacketBuffer.field_u) {
+            k.field_h.position = 0;
             af.field_r = null;
             if (param0 != null) {
               var9 = 0;
               if (param1) {
                 var9 = var9 | 1;
               }
-              tq.field_f.field_l = 0;
-              tq.field_f.a(ji.field_e.nextInt(), (byte) -79);
-              tq.field_f.a(ji.field_e.nextInt(), (byte) -79);
-              tq.field_f.a(param6 ^ 4, var14);
-              tq.field_f.a(0, var8);
+              tq.field_f.position = 0;
+              tq.field_f.writeInt(ji.field_e.nextInt(), (byte) -79);
+              tq.field_f.writeInt(ji.field_e.nextInt(), (byte) -79);
+              tq.field_f.writePrefixedCp1252String(param6 ^ 4, var14);
+              tq.field_f.writePrefixedCp1252String(0, var8);
               var15 = (CharSequence) ((Object) param0);
-              tq.field_f.a(0, he.a(var15, -58));
-              tq.field_f.b((byte) 113, param4);
-              tq.field_f.a(89, param2);
-              tq.field_f.a(127, var9);
-              k.field_h.a(53, 18);
-              k.field_h.field_l = k.field_h.field_l + 2;
-              var10 = k.field_h.field_l;
+              tq.field_f.writePrefixedCp1252String(0, he.a(var15, -58));
+              tq.field_f.writeShort((byte) 113, param4);
+              tq.field_f.writeByte(89, param2);
+              tq.field_f.writeByte(127, var9);
+              k.field_h.writeByte(53, 18);
+              k.field_h.position = k.field_h.position + 2;
+              var10 = k.field_h.position;
               var11_ref_String = dj.a(true, uc.e((byte) -75));
               if (var11_ref_String == null) {
                 var11_ref_String = "";
               }
-              k.field_h.a(var11_ref_String, -1);
+              k.field_h.writeCp1252String(var11_ref_String, -1);
               dq.a(k.field_h, tq.field_f, Ball.field_F, (byte) -72, to.field_g);
-              k.field_h.c(-var10 + k.field_h.field_l, 255);
+              k.field_h.backfillShortLength(-var10 + k.field_h.position, 255);
             } else {
-              tq.field_f.field_l = 0;
-              tq.field_f.a(ji.field_e.nextInt(), (byte) -79);
-              tq.field_f.a(ji.field_e.nextInt(), (byte) -79);
+              tq.field_f.position = 0;
+              tq.field_f.writeInt(ji.field_e.nextInt(), (byte) -79);
+              tq.field_f.writeInt(ji.field_e.nextInt(), (byte) -79);
               stackIn_11_0 = tq.field_f;
               stackIn_11_1 = 0;
               if (!param3.a((byte) 116)) {
@@ -291,7 +291,7 @@ final class wl extends d {
               } else {
                 stackIn_12_2 = var14;
               }
-              ((wq) (Object) stackIn_11_0).a(stackIn_11_1, stackIn_12_2);
+              ((PacketBuffer) (Object) stackIn_11_0).writePrefixedCp1252String(stackIn_11_1, stackIn_12_2);
               stackIn_14_0 = tq.field_f;
               stackIn_14_1 = param6 - 4;
               if (!param5.a((byte) 120)) {
@@ -299,20 +299,20 @@ final class wl extends d {
               } else {
                 stackIn_15_2 = var8;
               }
-              ((wq) (Object) stackIn_14_0).a(stackIn_14_1, stackIn_15_2);
-              k.field_h.a(-10, 16);
-              k.field_h.field_l = k.field_h.field_l + 1;
-              var9 = k.field_h.field_l;
+              ((PacketBuffer) (Object) stackIn_14_0).writePrefixedCp1252String(stackIn_14_1, stackIn_15_2);
+              k.field_h.writeByte(-10, 16);
+              k.field_h.position = k.field_h.position + 1;
+              var9 = k.field_h.position;
               dq.a(k.field_h, tq.field_f, Ball.field_F, (byte) -72, to.field_g);
-              k.field_h.d((byte) 119, k.field_h.field_l - var9);
+              k.field_h.backfillByteLength((byte) 119, k.field_h.position - var9);
             }
             cr.a(-1, 10000);
             rf.field_b = ck.field_k;
           }
           if (ck.field_k == rf.field_b &&
             vd.a(20, 1)) {
-            var9Lifetime1 = jl.field_e.l(255);
-            jl.field_e.field_l = 0;
+            var9Lifetime1 = jl.field_e.readUnsignedByte(255);
+            jl.field_e.position = 0;
             if (var9Lifetime1 >= 100 &&
               var9Lifetime1 <= 105) {
               rf.field_b = o.field_g;
@@ -329,7 +329,7 @@ final class wl extends d {
               if (var9Lifetime1 == 99) {
                 vd.a(20, oc.d((byte) -59));
                 af.field_r = new Boolean(kd.a(-2, jl.field_e));
-                jl.field_e.field_l = 0;
+                jl.field_e.position = 0;
               } else {
                 si.field_a = var9Lifetime1;
                 rf.field_b = vj.field_e;
@@ -340,12 +340,12 @@ final class wl extends d {
           if (rf.field_b == o.field_g) {
             var9Lifetime2 = 2;
             if (vd.a(20, var9Lifetime2)) {
-              var10Lifetime1 = jl.field_e.i(65280);
-              jl.field_e.field_l = 0;
+              var10Lifetime1 = jl.field_e.readUnsignedShort(65280);
+              jl.field_e.position = 0;
               if (vd.a(20, var10Lifetime1)) {
                 var11 = co.field_f.length;
                 for (var12 = 0; var11 > var12; var12++) {
-                  co.field_f[var12] = jl.field_e.f(pn.a(param6, 251));
+                  co.field_f[var12] = jl.field_e.readPrefixedCp1252String(pn.a(param6, 251));
                 }
                 hn.a((byte) 79);
                 pf.field_d = false;
@@ -357,12 +357,12 @@ final class wl extends d {
           if (vj.field_e == rf.field_b &&
             um.b((byte) -92)) {
             if (si.field_a == 255) {
-              var9_ref_String = jl.field_e.m(param6 - 4);
+              var9_ref_String = jl.field_e.readNullableCp1252String(param6 - 4);
               if (var9_ref_String != null) {
                 ui.a(param6 ^ -55, uc.e((byte) -120), var9_ref_String);
               }
             } else {
-              eo.field_e = jl.field_e.d(-1);
+              eo.field_e = jl.field_e.readCp1252String(-1);
             }
             hn.a((byte) 106);
             pf.field_d = false;

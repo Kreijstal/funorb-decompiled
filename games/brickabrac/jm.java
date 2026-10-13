@@ -255,7 +255,7 @@ final class jm {
         int var5_int = 0;
         int[] var6 = null;
         int var8 = 0;
-        pi var10 = null;
+        BitPacketBuffer var10 = null;
         int[] var11 = null;
         int[] var12 = null;
         var8 = BrickABrac.field_J ? 1 : 0;
@@ -264,15 +264,15 @@ final class jm {
           if (param0 != 22) {
             field_l = (String) null;
           }
-          var2 = var10.l(255);
-          var3 = var10.l(param0 + 233);
+          var2 = var10.readUnsignedByte(255);
+          var3 = var10.readUnsignedByte(param0 + 233);
           if (var2 == 0) {
             var4_ref_pe = (pe) (ob.field_F.first(-37));
             if (var4_ref_pe == null) {
               hn.a((byte) 57);
               return;
             }
-            var5_int = ga.field_j - var10.field_l;
+            var5_int = ga.field_j - var10.position;
             var12 = var4_ref_pe.field_m;
             var11 = var12;
             var6 = var11;
@@ -280,14 +280,14 @@ final class jm {
               var5_int = var12.length << 2;
             }
             for (var7 = 0; var5_int > var7; var7++) {
-              var6[var7 >> 2] = var6[var7 >> 2] + (var10.l(255) << (ik.a(3, var7) << 8));
+              var6[var7 >> 2] = var6[var7 >> 2] + (var10.readUnsignedByte(255) << (ik.a(3, var7) << 8));
             }
             var4_ref_pe.field_v = true;
             var4_ref_pe.unlink((byte) 111);
             return;
           }
           if (var2 == 1) {
-            var4 = var10.c(-1342);
+            var4 = var10.readSignedSmart(-1342);
             var5 = (pn) (qa.field_t.first(-19));
             while (var5 != null) {
               if (var3 != var5.field_p ||

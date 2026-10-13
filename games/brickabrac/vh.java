@@ -6,7 +6,7 @@ final class vh extends d {
     int field_K;
     int field_W;
     static String field_V;
-    static wq field_N;
+    static PacketBuffer field_N;
     static boolean field_L;
     int field_Q;
     static cd field_X;

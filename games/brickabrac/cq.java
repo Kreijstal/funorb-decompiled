@@ -39,7 +39,7 @@ final class cq extends IntrusiveNode {
           return (char)var2;
         }
         if (var2 < 160) {
-          var3 = ai.field_r[-128 + var2];
+          var3 = ai.cp1252Extensions[-128 + var2];
           if (var3 == 0) {
             var3 = 63;
           }
@@ -117,15 +117,15 @@ final class cq extends IntrusiveNode {
           r.field_A = be.field_a;
           if (!r.field_A) {
             hd.a(true);
-            pi.field_q = jj.field_d;
+            BitPacketBuffer.field_q = jj.field_d;
           } else {
             if (param3.field_b.field_h != 0) {
               hd.a(true);
-              pi.field_q = jj.field_d;
+              BitPacketBuffer.field_q = jj.field_d;
             } else {
               if (param2 > 0) {
                 hd.a(true);
-                pi.field_q = jj.field_d;
+                BitPacketBuffer.field_q = jj.field_d;
               }
             }
           }

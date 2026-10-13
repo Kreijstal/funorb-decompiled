@@ -27,32 +27,32 @@ final class c {
         field_e = null;
         field_c = null;
         if (!param0) {
-          wq var2 = (wq) null;
-          c.a(6, -63, 125, -38, (wq) null);
+          PacketBuffer var2 = (PacketBuffer) null;
+          c.a(6, -63, 125, -38, (PacketBuffer) null);
           return;
         }
     }
 
     final static void a(int param0, String param1, byte param2, int param3, int param4, String param5) {
-        pi var9 = null;
+        BitPacketBuffer var9 = null;
         int var8 = 0;
         try {
           var9 = k.field_h;
-          pi var6 = var9;
+          BitPacketBuffer var6 = var9;
           int var7 = -44 / ((-59 - param2) / 38);
-          var9.e(-13413, param4);
-          var9.field_l = var9.field_l + 1;
-          var8 = var9.field_l;
-          var9.a(86, param3);
+          var9.writeCipheredOpcode(-13413, param4);
+          var9.position = var9.position + 1;
+          var8 = var9.position;
+          var9.writeByte(86, param3);
           if (param3 == 2) {
-            var9.a(param1, -1);
+            var9.writeCp1252String(param1, -1);
           }
           if (param5 != null) {
             md.a(26152, param5, var9);
           } else {
-            var9.b((byte) 123, param0);
+            var9.writeShort((byte) 123, param0);
           }
-          var9.d((byte) 116, var9.field_l - var8);
+          var9.backfillByteLength((byte) 116, var9.position - var8);
         } catch (RuntimeException runtimeException) {
           throw qb.a((Throwable) ((Object) runtimeException), "c.I(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ')');
         }
@@ -323,13 +323,13 @@ final class c {
         an.field_h = an.field_h + 1;
     }
 
-    final static void a(int param0, int param1, int param2, int param3, wq param4) {
+    final static void a(int param0, int param1, int param2, int param3, PacketBuffer param4) {
         try {
-          param4.a(33, param1);
-          param4.b((byte) 115, 17);
-          param4.b((byte) 120, param0);
-          param4.b((byte) 107, param2);
-          param4.a(5, param3);
+          param4.writeByte(33, param1);
+          param4.writeShort((byte) 115, 17);
+          param4.writeShort((byte) 120, param0);
+          param4.writeShort((byte) 107, param2);
+          param4.writeByte(5, param3);
         } catch (RuntimeException runtimeException) {
           throw qb.a((Throwable) ((Object) runtimeException), "c.H(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');
         }

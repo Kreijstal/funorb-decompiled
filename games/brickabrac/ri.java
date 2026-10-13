@@ -151,7 +151,7 @@ final class ri extends ib implements en {
         }
     }
 
-    final static byte[] a(byte[] param0, int param1, pi param2, int param3) {
+    final static byte[] a(byte[] param0, int param1, BitPacketBuffer param2, int param3) {
         int var4_int = 0;
         int var5 = 0;
         int var6 = 0;
@@ -172,7 +172,7 @@ final class ri extends ib implements en {
             stackIn_3_0 = (byte[]) null;
             return stackIn_3_0;
           }
-          var4_int = param2.c(param1, (byte) -112);
+          var4_int = param2.readBits(param1, (byte) -112);
           if (var4_int == 0) {
             return null;
           }
@@ -180,11 +180,11 @@ final class ri extends ib implements en {
             param0.length != var4_int) {
             param0 = new byte[var4_int];
           }
-          var5 = param2.c(3, (byte) 98);
-          var6 = (byte)param2.c(8, (byte) 31);
+          var5 = param2.readBits(3, (byte) 98);
+          var6 = (byte)param2.readBits(8, (byte) 31);
           if (0 < var5) {
             for (var7 = 0; var7 < var4_int; var7++) {
-              param0[var7] = (byte)(var6 + param2.c(var5, (byte) 107));
+              param0[var7] = (byte)(var6 + param2.readBits(var5, (byte) 107));
             }
           } else {
             for (var7 = 0; var7 < var4_int; var7++) {

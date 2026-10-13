@@ -3,7 +3,7 @@
  */
 final class tq {
     static boolean field_c;
-    static wq field_f;
+    static PacketBuffer field_f;
     static String field_b;
     static String field_a;
     static nc field_d;
@@ -87,7 +87,7 @@ final class tq {
     }
 
     static {
-        field_f = new wq(256);
+        field_f = new PacketBuffer(256);
         field_b = "Quick Chat lobby";
         field_g = "Offensive account name";
         field_a = "Please remove <%0> from your friend list first.";

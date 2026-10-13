@@ -13,7 +13,7 @@ final class kn extends tk {
     int[] field_v;
     char[] field_w;
 
-    private final void a(int param0, wq param1, int param2) {
+    private final void a(int param0, PacketBuffer param1, int param2) {
         char[] stackIn_9_0 = null;
         int stackIn_9_1 = 0;
         char stackIn_10_2 = 0;
@@ -35,15 +35,15 @@ final class kn extends tk {
             field_z = -79;
           }
           if (1 == param2) {
-            this.field_D = param1.d(-1);
+            this.field_D = param1.readCp1252String(-1);
           } else {
             if (param2 == 2) {
-              var4_int = param1.l(255);
+              var4_int = param1.readUnsignedByte(255);
               this.field_x = new int[var4_int];
               this.field_w = new char[var4_int];
               for (var5 = 0; var5 < var4_int; var5++) {
-                this.field_x[var5] = param1.i(65280);
-                var6 = param1.b(true);
+                this.field_x[var5] = param1.readUnsignedShort(65280);
+                var6 = param1.readByte(true);
                 stackIn_9_0 = this.field_w;
                 stackIn_9_1 = var5;
                 if (0 == var6) {
@@ -54,12 +54,12 @@ final class kn extends tk {
                 stackIn_9_0[stackIn_9_1] = stackIn_10_2;
               }
             } else if (param2 == 3) {
-              var4_int = param1.l(255);
+              var4_int = param1.readUnsignedByte(255);
               this.field_u = new char[var4_int];
               this.field_v = new int[var4_int];
               for (var5 = 0; var4_int > var5; var5++) {
-                this.field_v[var5] = param1.i(65280);
-                var6 = param1.b(true);
+                this.field_v[var5] = param1.readUnsignedShort(65280);
+                var6 = param1.readByte(true);
                 stackIn_16_0 = this.field_u;
                 stackIn_16_1 = var5;
                 if (0 == var6) {
@@ -98,7 +98,7 @@ final class kn extends tk {
         }
     }
 
-    final void a(wq param0, int param1) {
+    final void a(PacketBuffer param0, int param1) {
         int var3_int = 0;
         int var4 = 0;
         RuntimeException stackIn_9_0 = null;
@@ -112,7 +112,7 @@ final class kn extends tk {
             field_E = (String[]) null;
           }
           while (true) {
-            var3_int = param0.l(255);
+            var3_int = param0.readUnsignedByte(255);
             if (0 == var3_int) {
               return;
             }

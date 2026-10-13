@@ -560,7 +560,7 @@ abstract class h extends oc implements sd {
             return stackIn_3_0;
           }
           if (var2_int > 64) {
-            stackIn_6_0 = pi.field_r;
+            stackIn_6_0 = BitPacketBuffer.field_r;
             return stackIn_6_0;
           }
           if (param0.charAt(0) == 34) {

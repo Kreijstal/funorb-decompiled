@@ -13,13 +13,13 @@ class bo extends ff {
         return (me[]) null;
     }
 
-    final void a(int param0, wq param1) {
+    final void a(int param0, PacketBuffer param1) {
         if (param0 != 0) {
           return;
         }
         try {
-          param1.a(-23054, this.field_m);
-          param1.a(false, this.field_k);
+          param1.writeLong(-23054, this.field_m);
+          param1.writeBase38Name(false, this.field_k);
         } catch (RuntimeException runtimeException) {
           throw qb.a((Throwable) ((Object) runtimeException), "bo.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

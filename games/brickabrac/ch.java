@@ -21,7 +21,7 @@ final class ch {
         int fieldTemp$0 = 0;
         int stackIn_12_0 = 0;
         RuntimeException decompiledCaughtException = null;
-        pi var1 = null;
+        BitPacketBuffer var1 = null;
         RuntimeException var1_ref = null;
         int var2 = 0;
         Object var3 = null;
@@ -41,24 +41,24 @@ final class ch {
         var9 = BrickABrac.field_J ? 1 : 0;
         try {
           var1 = jl.field_e;
-          var2 = var1.l(255);
+          var2 = var1.readUnsignedByte(255);
           if (0 == var2) {
             if (null == tf.field_d) {
               tf.field_d = new mk(128);
               fo.field_h = 0;
             }
-            stackIn_12_0 = (1 != var1.l(255)) ? 0 : 1;
+            stackIn_12_0 = (1 != var1.readUnsignedByte(255)) ? 0 : 1;
             var3_int = stackIn_12_0;
-            var4_ref_String = var1.d(-1);
+            var4_ref_String = var1.readCp1252String(-1);
             if (var3_int != 0) {
-              var5 = var1.d(-1);
+              var5 = var1.readCp1252String(-1);
             }
             if (var3_int == 0 ||
               var9 != 0) {
               var5 = var4_ref_String;
             }
             var6 = jf.a(0, var4_ref_String);
-            var7_ref = var1.d(-1);
+            var7_ref = var1.readCp1252String(-1);
             var8 = gb.a((CharSequence) ((Object) var4_ref_String), 69);
             if (null == var8) {
               var8 = var4_ref_String;
@@ -97,9 +97,9 @@ final class ch {
             }
             if (var2 == 4) {
               wk.field_m = 1;
-              var3 = var1.d(-1);
+              var3 = var1.readCp1252String(-1);
               rk.field_Tb = ((String) (var3)).intern();
-              var4 = var1.l(255);
+              var4 = var1.readUnsignedByte(255);
               wn.a(2, var4);
               return;
             }
@@ -114,12 +114,12 @@ final class ch {
             of.field_i = new mk(128);
             ol.field_w = 0;
           }
-          var3Lifetime1 = var1.d(-1);
+          var3Lifetime1 = var1.readCp1252String(-1);
           if (((String) (var3Lifetime1)).equals("")) {
             var3Lifetime1 = null;
           }
-          var4_ref_StringLifetime1 = var1.d(-1);
-          var5Lifetime1 = var1.d(-1);
+          var4_ref_StringLifetime1 = var1.readCp1252String(-1);
+          var5Lifetime1 = var1.readCp1252String(-1);
           var6Lifetime1 = pf.a(false, var4_ref_StringLifetime1);
           if (var6Lifetime1 == null) {
             var6Lifetime1 = pf.a(false, var5Lifetime1);

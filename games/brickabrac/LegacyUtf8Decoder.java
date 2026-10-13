@@ -1,21 +1,21 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class mj {
+final class LegacyUtf8Decoder {
     static jp field_d;
     static mh field_c;
     static String field_b;
     static String field_a;
 
-    public static void b(byte param0) {
+    public static void clearStaticReferences(byte obfuscationGuard) {
         field_c = null;
         field_a = null;
-        int var1 = -69 / ((param0 - 66) / 57);
+        int var1 = -69 / ((obfuscationGuard - 66) / 57);
         field_b = null;
         field_d = null;
     }
 
-    final static String a(byte param0, int param1, int param2, byte[] param3) {
+    final static String decode(byte obfuscationGuard, int length, int offset, byte[] data) {
         int incrementValue$0 = 0;
         int incrementValue$1 = 0;
         int incrementValue$2 = 0;
@@ -43,30 +43,30 @@ final class mj {
         char[] var13 = null;
         var10 = BrickABrac.field_J ? 1 : 0;
         try {
-          var13 = new char[param1];
+          var13 = new char[length];
           var12 = var13;
           var11 = var12;
           var4 = var11;
           var5 = 0;
-          if (param0 >= -89) {
+          if (obfuscationGuard >= -89) {
             stackIn_3_0 = (String) null;
             return stackIn_3_0;
           }
-          var6 = param2;
-          var7 = param1 + param2;
+          var6 = offset;
+          var7 = length + offset;
           while (var6 < var7) {
             boolean decompiledFrameRemainder0 = true;
             incrementValue$0 = var6;
             var6++;
-            var8 = 255 & param3[incrementValue$0];
+            var8 = 255 & data[incrementValue$0];
             if (var8 >= 128) {
               if (var8 >= 192) {
                 if (224 > var8) {
                   if (var6 < var7 &&
-                    (param3[var6] & 192) == 128) {
+                    (data[var6] & 192) == 128) {
                     incrementValue$1 = var6;
                     var6++;
-                    var9 = 63 & param3[incrementValue$1] | 1984 & var8 << 6;
+                    var9 = 63 & data[incrementValue$1] | 1984 & var8 << 6;
                     if (!(var9 >= 128)) {
                       var9 = 65533;
                     }
@@ -79,16 +79,16 @@ final class mj {
                   if (240 <= var8) {
                     if (var8 < 248) {
                       if (var7 > var6 + 2 &&
-                        (param3[var6] & 192) == 128 &&
-                        (param3[var6 + 1] & 192) == 128 &&
-                        (192 & param3[2 + var6]) == 128) {
+                        (data[var6] & 192) == 128 &&
+                        (data[var6 + 1] & 192) == 128 &&
+                        (192 & data[2 + var6]) == 128) {
                         incrementValue$2 = var6;
                         var6++;
                         incrementValue$3 = var6;
                         var6++;
                         incrementValue$4 = var6;
                         var6++;
-                        var9 = param3[incrementValue$2] << 12 & 258048 | 1835008 & var8 << 18 | 4032 & param3[incrementValue$3] << 6 | param3[incrementValue$4] & 63;
+                        var9 = data[incrementValue$2] << 12 & 258048 | 1835008 & var8 << 18 | 4032 & data[incrementValue$3] << 6 | data[incrementValue$4] & 63;
                         if (var9 >= 65536 &&
                           var9 <= 1114111) {
                           var9 = 65533;
@@ -105,13 +105,13 @@ final class mj {
                     }
                   } else {
                     if (var6 + 1 < var7 &&
-                      (param3[var6] & 192) == 128 &&
-                      (192 & param3[var6 + 1]) == 128) {
+                      (data[var6] & 192) == 128 &&
+                      (192 & data[var6 + 1]) == 128) {
                       incrementValue$5 = var6;
                       var6++;
                       incrementValue$6 = var6;
                       var6++;
-                      var9 = (param3[incrementValue$5] & 63) << 6 | (15 & var8) << 12 | param3[incrementValue$6] & 63;
+                      var9 = (data[incrementValue$5] & 63) << 6 | (15 & var8) << 12 | data[incrementValue$6] & 63;
                       if (!(var9 >= 2048)) {
                         var9 = 65533;
                       }
@@ -138,8 +138,8 @@ final class mj {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4_ref = decompiledCaughtException;
           stackIn_45_0 = var4_ref;
-          stackIn_45_1 = new StringBuilder().append("mj.B(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
-          if (param3 == null) {
+          stackIn_45_1 = new StringBuilder().append("mj.B(").append(obfuscationGuard).append(',').append(length).append(',').append(offset).append(',');
+          if (data == null) {
             stackIn_46_2 = "null";
           } else {
             stackIn_46_2 = "{...}";
@@ -159,7 +159,7 @@ final class mj {
         cc.field_H = param3;
         if (param2) {
           byte[] var5 = (byte[]) null;
-          mj.a((byte) 117, 3, -87, (byte[]) null);
+          LegacyUtf8Decoder.decode((byte) 117, 3, -87, (byte[]) null);
         }
     }
 

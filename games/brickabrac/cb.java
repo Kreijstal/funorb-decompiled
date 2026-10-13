@@ -87,7 +87,7 @@ final class cb extends k {
     }
 
     final static void b(boolean param0) {
-        k.field_h.e(-13413, 9);
+        k.field_h.writeCipheredOpcode(-13413, 9);
         vh.field_L = param0 ? true : false;
     }
 

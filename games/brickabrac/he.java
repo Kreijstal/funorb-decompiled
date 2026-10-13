@@ -83,7 +83,7 @@ final class he extends ib implements en {
         this.a(this.field_J, true);
     }
 
-    final static void a(wq param0, byte param1) {
+    final static void a(PacketBuffer param0, byte param1) {
         try {
           int var4 = 0;
           RuntimeException runtimeException = null;
@@ -132,7 +132,7 @@ final class he extends ib implements en {
             if (param1 > -41) {
               field_H = (oh) null;
             }
-            param0.a(var10, -1, 0, 24);
+            param0.writeBytes(var10, -1, 0, 24);
             return;
           } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
             decompiledCaughtException = decompiledCaughtParameter1;
@@ -246,7 +246,7 @@ final class he extends ib implements en {
 
     public final void a(int param0, int param1, byte param2, int param3, d param4) {
         int var7 = 0;
-        wq var8 = null;
+        PacketBuffer var8 = null;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
         String stackIn_13_2 = null;
@@ -255,8 +255,8 @@ final class he extends ib implements en {
         var7 = BrickABrac.field_J ? 1 : 0;
         try {
           if (param2 > -22) {
-            var8 = (wq) null;
-            he.a((wq) null, (byte) -62);
+            var8 = (PacketBuffer) null;
+            he.a((PacketBuffer) null, (byte) -62);
           }
           if (this.field_K == param4) {
             MotionWaypoint.d(-117);

@@ -325,7 +325,7 @@ final class ka extends IntrusiveNode {
               var13.field_Vb.field_Y = var25_int;
               if (param1 == vp.field_u) {
                 if (!o.field_e.field_Rb) {
-                  var13.field_cc.field_Mb = mj.field_b;
+                  var13.field_cc.field_Mb = LegacyUtf8Decoder.field_b;
                 }
               } else if (!var13.field_Qb) {
                 if (!var13.field_fc) {
@@ -373,15 +373,15 @@ final class ka extends IntrusiveNode {
               if (var13.field_Rb.field_kb &&
                 var23 != 0) {
                 ep.field_e = var13.field_Yb;
-                if (null != wq.field_i &&
-                  wq.field_i[var13.field_Zb] != null) {
-                  ep.field_e = ep.field_e + " - " + wq.field_i[var13.field_Zb];
+                if (null != PacketBuffer.field_i &&
+                  PacketBuffer.field_i[var13.field_Zb] != null) {
+                  ep.field_e = ep.field_e + " - " + PacketBuffer.field_i[var13.field_Zb];
                 }
               } else {
                 if (var13.field_Rb.field_kb &&
-                  null != wq.field_i &&
-                  wq.field_i[var13.field_Zb] != null) {
-                  ep.field_e = wq.field_i[var13.field_Zb];
+                  null != PacketBuffer.field_i &&
+                  PacketBuffer.field_i[var13.field_Zb] != null) {
+                  ep.field_e = PacketBuffer.field_i[var13.field_Zb];
                 }
               }
               var20 = var20 + np.field_a;

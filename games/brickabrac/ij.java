@@ -209,7 +209,7 @@ final class ij implements wb {
               var2 = var2 != 0 & wo.a(2) ? 1 : 0;
             }
           } else {
-            ai.a((byte) 24, 82.0f, pi.field_s);
+            ai.a((byte) 24, 82.0f, BitPacketBuffer.field_s);
             sl.field_C.g(123);
             o.c(123);
           }

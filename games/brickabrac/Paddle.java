@@ -238,18 +238,18 @@ final class Paddle extends RectangleBody {
         }
     }
 
-    final void readBodySnapshot(int obfuscationGuard, wq packet) {
+    final void readBodySnapshot(int obfuscationGuard, PacketBuffer packet) {
         super.readBodySnapshot(94, packet);
-        this.sizeStage = packet.l(255);
+        this.sizeStage = packet.readUnsignedByte(255);
         if (obfuscationGuard <= 89) {
           return;
         }
         try {
           this.reboundSpeedStage = 15 & this.sizeStage >> 4;
           this.sizeStage = this.sizeStage & 15;
-          this.field_w = packet.i(65280);
-          this.catchTicks = packet.i(65280);
-          this.field_H = packet.i(65280);
+          this.field_w = packet.readUnsignedShort(65280);
+          this.catchTicks = packet.readUnsignedShort(65280);
+          this.field_H = packet.readUnsignedShort(65280);
           this.width256 = 32 + (6 * this.sizeStage + 8) << 8;
         } catch (RuntimeException runtimeException) {
           throw qb.a((Throwable) ((Object) runtimeException), "vo.L(" + obfuscationGuard + ',' + (packet != null ? "{...}" : "null") + ')');

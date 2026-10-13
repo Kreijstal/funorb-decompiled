@@ -119,20 +119,20 @@ final class ma extends h {
     }
 
     final static void b(byte param0, int param1) {
-        pi var2 = null;
-        pi var2Lifetime1;
+        BitPacketBuffer var2 = null;
+        BitPacketBuffer var2Lifetime1;
         if (param0 <= -49) {
           var2 = k.field_h;
-          var2.e(-13413, param1);
-          var2.a(27, 1);
-          var2.a(127, 2);
+          var2.writeCipheredOpcode(-13413, param1);
+          var2.writeByte(27, 1);
+          var2.writeByte(127, 2);
           return;
         }
         ma.b((byte) -23, -84);
         var2Lifetime1 = k.field_h;
-        var2Lifetime1.e(-13413, param1);
-        var2Lifetime1.a(27, 1);
-        var2Lifetime1.a(127, 2);
+        var2Lifetime1.writeCipheredOpcode(-13413, param1);
+        var2Lifetime1.writeByte(27, 1);
+        var2Lifetime1.writeByte(127, 2);
     }
 
     static {

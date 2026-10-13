@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class kk {
-    static int[] field_g;
+    static int[] bitMasks;
     static String field_a;
     static mh field_b;
     static int[] field_e;
@@ -36,7 +36,7 @@ final class kk {
           return;
         }
         field_e = null;
-        field_g = null;
+        bitMasks = null;
     }
 
     final static void a(boolean param0, String param1) {
@@ -94,7 +94,7 @@ final class kk {
     }
 
     static {
-        field_g = new int[]{0, 1, 3, 7, 15, 31, 63, 127, 255, 511, 1023, 2047, 4095, 8191, 16383, 32767, 65535, 131071, 262143, 524287, 1048575, 2097151, 4194303, 8388607, 16777215, 33554431, 67108863, 134217727, 268435455, 536870911, 1073741823, 2147483647, -1};
+        bitMasks = new int[]{0, 1, 3, 7, 15, 31, 63, 127, 255, 511, 1023, 2047, 4095, 8191, 16383, 32767, 65535, 131071, 262143, 524287, 1048575, 2097151, 4194303, 8388607, 16777215, 33554431, 67108863, 134217727, 268435455, 536870911, 1073741823, 2147483647, -1};
         field_e = new int[12];
         field_d = "Accept invitation to <%0>'s game";
         field_c = "You cannot chat to <%0> because <%0> is not in your friend list.";

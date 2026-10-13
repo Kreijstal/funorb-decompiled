@@ -25,7 +25,7 @@ final class sm {
           Throwable decompiledCaughtException = null;
           int var1_int = 0;
           IOException var1 = null;
-          wq var2 = null;
+          PacketBuffer var2 = null;
           if (vd.field_f.field_i >= 4) {
             if (-1 == vd.field_f.field_f) {
               return 3;
@@ -51,11 +51,11 @@ final class sm {
             }
             if (GameplayScreen.field_j == 2) {
               dm.field_d = new wh((java.net.Socket) (fc.field_e.field_e), ec.field_P);
-              var2 = new wq(13);
+              var2 = new PacketBuffer(13);
               c.a(vb.field_S, 12, nb.field_a, u.field_g, var2);
-              var2.a(param0 ^ 119, 15);
-              var2.a(fi.field_t, (byte) -79);
-              dm.field_d.a(var2.field_k, true, 13, 0);
+              var2.writeByte(param0 ^ 119, 15);
+              var2.writeInt(fi.field_t, (byte) -79);
+              dm.field_d.a(var2.data, true, 13, 0);
               GameplayScreen.field_j = GameplayScreen.field_j + 1;
               ff.field_b = ue.a(false) + 30000L;
             }

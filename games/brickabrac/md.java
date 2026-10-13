@@ -76,7 +76,7 @@ final class md extends km {
         }
     }
 
-    final static int a(int param0, String param1, wq param2) {
+    final static int a(int param0, String param1, PacketBuffer param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
         byte[] var4 = null;
@@ -90,13 +90,13 @@ final class md extends km {
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var3_int = param2.field_l;
+          var3_int = param2.position;
           var5 = (CharSequence) ((Object) param1);
           var4 = uj.a(var5, false);
-          param2.b(-1, var4.length);
-          param2.field_l = param2.field_l + so.field_d.a((byte) -119, var4.length, 0, param2.field_k, param2.field_l, var4);
+          param2.writeUnsignedSmart(-1, var4.length);
+          param2.position = param2.position + so.field_d.a((byte) -119, var4.length, 0, param2.data, param2.position, var4);
           if (param0 == 26152) {
-            stackIn_4_0 = param2.field_l - var3_int;
+            stackIn_4_0 = param2.position - var3_int;
             return stackIn_4_0;
           }
           stackIn_2_0 = -117;

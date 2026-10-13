@@ -7,7 +7,7 @@ final class ad implements Runnable {
     private ql field_h;
     private DataInputStream field_k;
     private java.net.URL field_a;
-    private wq field_f;
+    private PacketBuffer field_f;
     private int field_c;
     private tg field_g;
     static jp field_b;
@@ -50,8 +50,8 @@ final class ad implements Runnable {
         try {
           long dupTemp$1 = 0L;
           IOException var2 = null;
-          pi var4 = null;
-          pi var5 = null;
+          BitPacketBuffer var4 = null;
+          BitPacketBuffer var5 = null;
           int stackIn_11_0 = 0;
           Throwable decompiledCaughtException = null;
           if (param1 != 10000) {
@@ -71,15 +71,15 @@ final class ad implements Runnable {
           } else {
             try {
               eq.field_g = new wh((java.net.Socket) (qm.field_d.field_e), lh.field_s);
-              k.field_h.field_l = 0;
+              k.field_h.position = 0;
               var4 = jl.field_e;
               var5 = var4;
               stackIn_11_0 = (!param0) ? -1 : -2;
               r.field_z = stackIn_11_0;
               we.field_a = stackIn_11_0;
               mh.field_gb = stackIn_11_0;
-              rf.field_b = pi.field_u;
-              var5.field_l = 0;
+              rf.field_b = BitPacketBuffer.field_u;
+              var5.position = 0;
               c.a(ko.field_e, 12, pe.field_r, fe.field_ob, k.field_h);
               cr.a(-1, 10000);
             } catch (java.io.IOException decompiledCaughtParameter0) {
@@ -109,16 +109,16 @@ final class ad implements Runnable {
           Throwable decompiledCaughtException = null;
           var4 = BrickABrac.field_J ? 1 : 0;
           try {
-            while (this.field_f.field_k.length > this.field_f.field_l) {
-              var1_int = this.field_k.read(this.field_f.field_k, this.field_f.field_l, -this.field_f.field_l + this.field_f.field_k.length);
+            while (this.field_f.data.length > this.field_f.position) {
+              var1_int = this.field_k.read(this.field_f.data, this.field_f.position, -this.field_f.position + this.field_f.data.length);
               if (0 <= var1_int) {
-                this.field_f.field_l = this.field_f.field_l + var1_int;
+                this.field_f.position = this.field_f.position + var1_int;
                 continue;
               }
               break;
             }
-            if (this.field_f.field_l == this.field_f.field_k.length) {
-              throw ad.<RuntimeException>$cfr$sneakyThrow(new Exception("HG1: " + this.field_f.field_k.length + " " + this.field_a));
+            if (this.field_f.position == this.field_f.data.length) {
+              throw ad.<RuntimeException>$cfr$sneakyThrow(new Exception("HG1: " + this.field_f.data.length + " " + this.field_a));
             }
             var1 = this;
             synchronized (var1) {
@@ -193,7 +193,7 @@ final class ad implements Runnable {
               var3.write(uj.a(var5, false));
               this.field_k = new DataInputStream(var4.getInputStream());
             }
-            this.field_f.field_l = 0;
+            this.field_f.position = 0;
             decompiledRegionSelector0 = 0;
           } catch (java.io.IOException decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
@@ -239,7 +239,7 @@ final class ad implements Runnable {
         }
     }
 
-    final wq a(byte param0) {
+    final PacketBuffer a(byte param0) {
         if (param0 < 95) {
           this.a(-111);
           if (this.field_c == 3) {
@@ -257,7 +257,7 @@ final class ad implements Runnable {
         try {
           this.field_g = param0;
           this.field_a = param1;
-          this.field_f = new wq(param2);
+          this.field_f = new PacketBuffer(param2);
         } catch (RuntimeException runtimeException) {
           throw qb.a((Throwable) ((Object) runtimeException), "ad.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }

@@ -242,26 +242,26 @@ final class mp extends mh {
         try {
           lc.field_a[0] = ji.field_e.nextInt();
           lc.field_a[1] = ji.field_e.nextInt();
-          tq.field_f.field_l = 0;
+          tq.field_f.position = 0;
           lc.field_a[3] = (int)bj.field_ab;
           lc.field_a[2] = (int)(bj.field_ab >> 32);
-          tq.field_f.a(lc.field_a[0], (byte) -79);
-          tq.field_f.a(lc.field_a[1], (byte) -79);
-          tq.field_f.a(lc.field_a[2], (byte) -79);
-          tq.field_f.a(lc.field_a[3], (byte) -79);
+          tq.field_f.writeInt(lc.field_a[0], (byte) -79);
+          tq.field_f.writeInt(lc.field_a[1], (byte) -79);
+          tq.field_f.writeInt(lc.field_a[2], (byte) -79);
+          tq.field_f.writeInt(lc.field_a[3], (byte) -79);
           he.a(tq.field_f, (byte) -95);
-          tq.field_f.b((byte) 113, param0);
+          tq.field_f.writeShort((byte) 113, param0);
           param1.a(0, tq.field_f);
-          k.field_h.field_l = 0;
+          k.field_h.position = 0;
           if (!param2) {
-            k.field_h.a(94, 16);
+            k.field_h.writeByte(94, 16);
           } else {
-            k.field_h.a(-4, 18);
+            k.field_h.writeByte(-4, 18);
           }
-          k.field_h.field_l = k.field_h.field_l + 2;
-          var5_int = k.field_h.field_l;
-          k.field_h.a(rp.field_x, (byte) -79);
-          k.field_h.a(-23054, ud.field_E);
+          k.field_h.position = k.field_h.position + 2;
+          var5_int = k.field_h.position;
+          k.field_h.writeInt(rp.field_x, (byte) -79);
+          k.field_h.writeLong(-23054, ud.field_E);
           var6 = 0;
           if (qb.field_u) {
             var6 = var6 | 1;
@@ -278,17 +278,17 @@ final class mp extends mh {
           if (param4) {
             return;
           }
-          k.field_h.a(-105, var6);
+          k.field_h.writeByte(-105, var6);
           var7 = dj.a(true, uc.e((byte) -101));
           if (var7 == null) {
             var7 = "";
           }
-          k.field_h.a(var7, -1);
+          k.field_h.writeCp1252String(var7, -1);
           if (null != ai.field_t) {
-            k.field_h.a(0, ai.field_t);
+            k.field_h.writePrefixedCp1252String(0, ai.field_t);
           }
           dq.a(k.field_h, tq.field_f, Ball.field_F, (byte) -72, to.field_g);
-          k.field_h.c(k.field_h.field_l - var5_int, 255);
+          k.field_h.backfillShortLength(k.field_h.position - var5_int, 255);
           cr.a(-1, 10000);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -191,7 +191,7 @@ final class sj {
         id stackIn_139_0 = null;
         boolean stackIn_140_1 = false;
         RuntimeException decompiledCaughtException = null;
-        pi var1 = null;
+        BitPacketBuffer var1 = null;
         RuntimeException var1_ref = null;
         int var2 = 0;
         long var3 = 0L;
@@ -240,17 +240,17 @@ final class sj {
         try {
           regionExit1: {
             var1 = jl.field_e;
-            var2 = ((wq) ((Object) var1)).l(255);
+            var2 = ((PacketBuffer) ((Object) var1)).readUnsignedByte(255);
             if (var2 != 0 &&
               var2 != 1 &&
               var2 != 2 &&
               var2 != 3 &&
               4 != var2) {
               if (var2 == 5) {
-                var3 = ((wq) ((Object) var1)).g(-32768);
-                var29 = ((wq) ((Object) var1)).d(-1);
-                var6 = ((wq) ((Object) var1)).d(-1);
-                var30 = ((wq) ((Object) var1)).d(-1);
+                var3 = ((PacketBuffer) ((Object) var1)).readLong(-32768);
+                var29 = ((PacketBuffer) ((Object) var1)).readCp1252String(-1);
+                var6 = ((PacketBuffer) ((Object) var1)).readCp1252String(-1);
+                var30 = ((PacketBuffer) ((Object) var1)).readCp1252String(-1);
                 var31 = ab.a((byte) 96, var3);
                 var8 = var31;
                 stackIn_133_0 = (var6.equals("")) ? 0 : 1;
@@ -263,21 +263,21 @@ final class sj {
                   var8 = new id(var29, var30, var3);
                   eq.field_m.a(var3, var8, 86);
                 }
-                var8.field_Xb = ue.a(false) - (long)((wq) ((Object) var1)).e(255);
-                var8.field_Wb = ((wq) ((Object) var1)).i(65280);
-                var10 = ((wq) ((Object) var1)).c((byte) 110);
+                var8.field_Xb = ue.a(false) - (long)((PacketBuffer) ((Object) var1)).readInt(255);
+                var8.field_Wb = ((PacketBuffer) ((Object) var1)).readUnsignedShort(65280);
+                var10 = ((PacketBuffer) ((Object) var1)).readVarInt((byte) 110);
                 var8.field_ac = var10 >> 1;
                 stackIn_139_0 = var8;
                 stackIn_140_1 = ((1 & var10) != 0);
                 stackIn_139_0.field_ec = stackIn_140_1;
-                var8.field_Zb = ((wq) ((Object) var1)).l(255);
-                var8.field_Ub = ((wq) ((Object) var1)).l(255);
+                var8.field_Zb = ((PacketBuffer) ((Object) var1)).readUnsignedByte(255);
+                var8.field_Ub = ((PacketBuffer) ((Object) var1)).readUnsignedByte(255);
                 wl.a(var8, 17574);
                 break regionExit1;
               }
               if (var2 == 6) {
-                var3 = ((wq) ((Object) var1)).g(param0 ^ -32735);
-                var5 = ((wq) ((Object) var1)).l(255);
+                var3 = ((PacketBuffer) ((Object) var1)).readLong(param0 ^ -32735);
+                var5 = ((PacketBuffer) ((Object) var1)).readUnsignedByte(255);
                 var21 = ab.a((byte) 96, var3);
                 if ((var21 != null)) {
                   if (var21.field_fc) {
@@ -303,7 +303,7 @@ final class sj {
                   uf.field_c = 0;
                 } else {
                   if (var2 == 8) {
-                    var3_int = ((wq) ((Object) var1)).i(65280);
+                    var3_int = ((PacketBuffer) ((Object) var1)).readUnsignedShort(65280);
                     var4_ref_om = (om) (pn.field_i.a((long)var3_int, -1));
                     if (var4_ref_om == null) {
                       var4_ref_om = new om(cq.field_p);
@@ -313,8 +313,8 @@ final class sj {
                     ic.a(true, var4_ref_om);
                   } else {
                     if (9 == var2) {
-                      var3_int = ((wq) ((Object) var1)).i(65280);
-                      var4 = ((wq) ((Object) var1)).l(255);
+                      var3_int = ((PacketBuffer) ((Object) var1)).readUnsignedShort(65280);
+                      var4 = ((PacketBuffer) ((Object) var1)).readUnsignedByte(255);
                       var32 = (om) (pn.field_i.a((long)var3_int, -1));
                       if ((var32 != null)) {
                         if (var4 == 0) {
@@ -337,8 +337,8 @@ final class sj {
                         if (var2 != 11 &&
                           var2 != 12) {
                           if (var2 == 13) {
-                            var3_int = ((wq) ((Object) var1)).i(65280);
-                            var4 = ((wq) ((Object) var1)).l(255);
+                            var3_int = ((PacketBuffer) ((Object) var1)).readUnsignedShort(65280);
+                            var4 = ((PacketBuffer) ((Object) var1)).readUnsignedByte(255);
                             var18_ref = (om) (pn.field_i.a((long)var3_int, param0 - 34));
                             if ((var18_ref != null)) {
                               var16 = var18_ref;
@@ -358,28 +358,28 @@ final class sj {
                                 var2 != 17) {
                                 switch (var2) {
                                   case 18:
-                                    var3 = ((wq) ((Object) var1)).g(-32768);
-                                    var26 = ((wq) ((Object) var1)).d(param0 - 34);
-                                    var27 = ((wq) ((Object) var1)).d(param0 - 34);
+                                    var3 = ((PacketBuffer) ((Object) var1)).readLong(-32768);
+                                    var26 = ((PacketBuffer) ((Object) var1)).readCp1252String(param0 - 34);
+                                    var27 = ((PacketBuffer) ((Object) var1)).readCp1252String(param0 - 34);
                                     var7 = ac.a(var3, 2);
                                     if (var7 == null) {
                                       var7 = new id(var26, var27, var3);
                                       BrickABrac.field_F.a(var3, var7, 48);
                                       o.field_e.field_cc = o.field_e.field_cc + 1;
                                     }
-                                    var7.field_Wb = ((wq) ((Object) var1)).i(65280);
-                                    var8_int = ((wq) ((Object) var1)).c((byte) 127);
+                                    var7.field_Wb = ((PacketBuffer) ((Object) var1)).readUnsignedShort(65280);
+                                    var8_int = ((PacketBuffer) ((Object) var1)).readVarInt((byte) 127);
                                     stackIn_111_0 = var7;
                                     stackIn_112_1 = (0 != (var8_int & 1));
                                     stackIn_111_0.field_ec = stackIn_112_1;
                                     var7.field_ac = var8_int >> 1;
-                                    var7.field_Zb = ((wq) ((Object) var1)).l(param0 ^ 222);
-                                    var7.field_Ub = ((wq) ((Object) var1)).l(param0 + 222);
+                                    var7.field_Zb = ((PacketBuffer) ((Object) var1)).readUnsignedByte(param0 ^ 222);
+                                    var7.field_Ub = ((PacketBuffer) ((Object) var1)).readUnsignedByte(param0 + 222);
                                     mp.field_Tb.addLast(var7, (byte) 3);
                                     break regionExit1;
                                   case 19:
-                                    var3 = ((wq) ((Object) var1)).g(-32768);
-                                    var5 = ((wq) ((Object) var1)).l(255);
+                                    var3 = ((PacketBuffer) ((Object) var1)).readLong(-32768);
+                                    var5 = ((PacketBuffer) ((Object) var1)).readUnsignedByte(255);
                                     var14 = ac.a(var3, 2);
                                     var25 = var14;
                                     if (var14 == null) {
@@ -398,7 +398,7 @@ final class sj {
                                     eb.a(o.field_e, var1, 0, false);
                                     break regionExit1;
                                   case 21:
-                                    var3_int = ((wq) ((Object) var1)).i(65280);
+                                    var3_int = ((PacketBuffer) ((Object) var1)).readUnsignedShort(65280);
                                     if (var3_int != 0) {
                                       ic.field_b = (long)var3_int + ue.a(false);
                                       break regionExit1;
@@ -406,11 +406,11 @@ final class sj {
                                     ic.field_b = 0L;
                                     break regionExit1;
                                   case 22:
-                                    m.field_h = ((wq) ((Object) var1)).i(65280);
-                                    ko.field_s = ((wq) ((Object) var1)).c((byte) 119);
+                                    m.field_h = ((PacketBuffer) ((Object) var1)).readUnsignedShort(65280);
+                                    ko.field_s = ((PacketBuffer) ((Object) var1)).readVarInt((byte) 119);
                                     break regionExit1;
                                   case 23:
-                                    oc.field_p = ((wq) ((Object) var1)).g(-32768);
+                                    oc.field_p = ((PacketBuffer) ((Object) var1)).readLong(-32768);
                                     break regionExit1;
                                   default:
                                     rk.a("L1: " + eq.c((byte) -121), (Throwable) null, 108);
@@ -418,8 +418,8 @@ final class sj {
                                     break regionExit1;
                                 }
                               }
-                              var3 = ((wq) ((Object) var1)).g(-32768);
-                              var5 = ((wq) ((Object) var1)).l(param0 ^ 222);
+                              var3 = ((PacketBuffer) ((Object) var1)).readLong(-32768);
+                              var5 = ((PacketBuffer) ((Object) var1)).readUnsignedByte(param0 ^ 222);
                               var15 = ab.a((byte) 96, var3);
                               var28 = var15;
                               if ((var15 != null)) {
@@ -438,7 +438,7 @@ final class sj {
                                 wl.a(var28, 17574);
                               }
                             } else {
-                              var3 = ((wq) ((Object) var1)).g(param0 ^ -32735);
+                              var3 = ((PacketBuffer) ((Object) var1)).readLong(param0 ^ -32735);
                               var24 = ab.a((byte) 96, var3);
                               if ((var24 != null)) {
                                 if (var2 != 14) {
@@ -454,7 +454,7 @@ final class sj {
                             }
                           }
                         } else {
-                          var3_int = ((wq) ((Object) var1)).i(65280);
+                          var3_int = ((PacketBuffer) ((Object) var1)).readUnsignedShort(65280);
                           var20_ref = (om) (pn.field_i.a((long)var3_int, -1));
                           var23 = var20_ref;
                           if ((var23 != null)) {
@@ -497,7 +497,7 @@ final class sj {
               pk.field_g = o.field_e.field_Fc;
             }
             if (4 == var2) {
-              var3_int = ((wq) ((Object) var1)).i(65280);
+              var3_int = ((PacketBuffer) ((Object) var1)).readUnsignedShort(65280);
               o.field_e = new om(cq.field_p);
               o.field_e.a((long)var3_int, -105);
               eb.a(o.field_e, var1, 0, false);
@@ -518,12 +518,12 @@ final class sj {
             } else {
               fh.field_d = true;
               for (var3_int = 0; var3_int < rh.field_d.length; var3_int++) {
-                rh.field_d[var3_int] = ((wq) ((Object) var1)).b(true);
+                rh.field_d[var3_int] = ((PacketBuffer) ((Object) var1)).readByte(true);
               }
-              bb.field_e = ((wq) ((Object) var1)).l(255);
-              mf.field_c = ((wq) ((Object) var1)).l(param0 + 222);
+              bb.field_e = ((PacketBuffer) ((Object) var1)).readUnsignedByte(255);
+              mf.field_c = ((PacketBuffer) ((Object) var1)).readUnsignedByte(param0 + 222);
               for (var3_int = 0; var3_int < lj.field_p.length; var3_int++) {
-                lj.field_p[var3_int] = ((wq) ((Object) var1)).b(true);
+                lj.field_p[var3_int] = ((PacketBuffer) ((Object) var1)).readByte(true);
               }
             }
           }

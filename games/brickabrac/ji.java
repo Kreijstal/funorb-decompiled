@@ -157,7 +157,7 @@ final class ji implements Iterable {
             return stackIn_3_0;
           }
           if (255 < var2_int) {
-            stackIn_7_0 = pi.field_r;
+            stackIn_7_0 = BitPacketBuffer.field_r;
             return stackIn_7_0;
           }
           var3 = qb.a((byte) -11, param0, '.');

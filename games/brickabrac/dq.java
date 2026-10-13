@@ -6,9 +6,9 @@ final class dq {
     static String field_c;
     static int field_b;
 
-    final static void a(wq param0, wq param1, java.math.BigInteger param2, byte param3, java.math.BigInteger param4) {
+    final static void a(PacketBuffer param0, PacketBuffer param1, java.math.BigInteger param2, byte param3, java.math.BigInteger param4) {
         try {
-          tm.a(param0, param1.field_l, (byte) 126, param2, 0, param1.field_k, param4);
+          tm.a(param0, param1.position, (byte) 126, param2, 0, param1.data, param4);
           if (param3 != -72) {
             dq.a((byte) -97);
           }
@@ -25,7 +25,7 @@ final class dq {
         field_a = null;
     }
 
-    final static int a(NodeDeque[] param0, boolean param1, wq param2, NodeDeque param3, kq param4, ga param5) {
+    final static int a(NodeDeque[] param0, boolean param1, PacketBuffer param2, NodeDeque param3, kq param4, ga param5) {
         int var11 = 0;
         int stackIn_21_0 = 0;
         int stackIn_24_0 = 0;
@@ -66,16 +66,16 @@ final class dq {
           }
           if (!param1) {
             var14 = (java.math.BigInteger) null;
-            dq.a((wq) null, (wq) null, (java.math.BigInteger) null, (byte) 57, (java.math.BigInteger) null);
+            dq.a((PacketBuffer) null, (PacketBuffer) null, (java.math.BigInteger) null, (byte) 57, (java.math.BigInteger) null);
           }
           if (!param3.isEmpty(false)) {
             throw new IllegalArgumentException();
           }
-          var6_intLifetime1 = param2.e(255);
+          var6_intLifetime1 = param2.readInt(255);
           if (var6_intLifetime1 > 5) {
             throw new IllegalArgumentException();
           }
-          var7 = param2.e(255);
+          var7 = param2.readInt(255);
           if (3 < var6_intLifetime1) {
             param4.field_p = var7 >>> 8;
             var7 = var7 & 255;
@@ -88,7 +88,7 @@ final class dq {
             stackIn_24_0 = (var8 != 0) ? 15 : 9;
             kj.a(stackIn_24_0, param0[2], 16);
             for (var9 = 0; param0.length > var9; var9++) {
-              var10 = param2.e(255);
+              var10 = param2.readInt(255);
               for (var11 = 0; var10 > var11; var11++) {
                 var12 = new Brick();
                 var12.readBodySnapshot(91, param2);
@@ -96,7 +96,7 @@ final class dq {
               }
             }
           } else {
-            var8 = param2.e(255);
+            var8 = param2.readInt(255);
             for (var9 = 0; var8 > var9; var9++) {
               var15 = new Brick();
               if (var6_intLifetime1 != 0) {
@@ -104,12 +104,12 @@ final class dq {
                   var15.readBodySnapshot(101, param2);
                 }
               } else {
-                var15.x256 = param2.e(255);
-                var15.y256 = param2.e(255);
-                var15.velocityX256 = param2.e(255);
-                var15.velocityY256 = param2.e(255);
-                var15.typeId = param2.e(255);
-                var15.flags = param2.e(255);
+                var15.x256 = param2.readInt(255);
+                var15.y256 = param2.readInt(255);
+                var15.velocityX256 = param2.readInt(255);
+                var15.velocityY256 = param2.readInt(255);
+                var15.typeId = param2.readInt(255);
+                var15.flags = param2.readInt(255);
               }
               param0[0].addLast(var15, (byte) 3);
             }
@@ -122,7 +122,7 @@ final class dq {
             }
           }
           if (var6_intLifetime1 > 1) {
-            var8Lifetime1 = param2.e(255);
+            var8Lifetime1 = param2.readInt(255);
             for (var9Lifetime1 = 0; var8Lifetime1 > var9Lifetime1; var9Lifetime1++) {
               var16 = new BrickMotionPath();
               var16.readBodySnapshot(90, param2);
@@ -130,7 +130,7 @@ final class dq {
             }
           }
           if (var6_intLifetime1 > 4) {
-            param2.a((byte) 24);
+            param2.readLegacyUtf8String((byte) 24);
           }
           stackIn_55_0 = var7;
           return stackIn_55_0;

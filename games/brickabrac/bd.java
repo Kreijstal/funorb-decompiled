@@ -191,10 +191,10 @@ final class bd implements ub {
     }
 
     final static void a(int param0, int param1) {
-        pi var2 = k.field_h;
-        var2.e(-13413, param0);
-        var2.a(-119, 1);
-        var2.a(-127, 0);
+        BitPacketBuffer var2 = k.field_h;
+        var2.writeCipheredOpcode(-13413, param0);
+        var2.writeByte(-119, 1);
+        var2.writeByte(-127, 0);
         if (param1 >= 63) {
           return;
         }

@@ -146,7 +146,7 @@ final class dg implements ub {
             if (var6Lifetime3 < 20) {
               var7Lifetime3 = 256 * var6Lifetime3 / 20;
             }
-            pi.field_t.b(15 + var3, 10 + var4, var5 * var7Lifetime3 >> 8);
+            BitPacketBuffer.field_t.b(15 + var3, 10 + var4, var5 * var7Lifetime3 >> 8);
           }
           return;
         }
@@ -183,7 +183,7 @@ final class dg implements ub {
           if (var6Lifetime2 < 20) {
             var7Lifetime2 = 256 * var6Lifetime2 / 20;
           }
-          pi.field_t.b(15 + var3, 10 + var4, var5 * var7Lifetime2 >> 8);
+          BitPacketBuffer.field_t.b(15 + var3, 10 + var4, var5 * var7Lifetime2 >> 8);
         }
         return;
     }

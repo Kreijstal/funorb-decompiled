@@ -95,8 +95,8 @@ abstract class ld extends km {
         var5 = 0;
         var6 = 0;
         scanLoop1: while (true) {
-          if (pi.field_o.length > var6) {
-            var7 = pi.field_o[var6];
+          if (BitPacketBuffer.field_o.length > var6) {
+            var7 = BitPacketBuffer.field_o[var6];
             if (0 <= var7) {
               var8 = 320;
               var9 = var2;

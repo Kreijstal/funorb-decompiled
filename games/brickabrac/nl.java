@@ -51,9 +51,9 @@ final class nl {
               var2_long > var4_ref_pg.field_j) {
               var4_ref_pg.unlink((byte) 111);
               ga.field_j = var4_ref_pg.field_l.length;
-              jl.field_e.field_l = 0;
+              jl.field_e.position = 0;
               for (var5_int = 0; ga.field_j > var5_int; var5_int++) {
-                jl.field_e.field_k[var5_int] = var4_ref_pg.field_l[var5_int];
+                jl.field_e.data[var5_int] = var4_ref_pg.field_l[var5_int];
               }
               r.field_z = we.field_a;
               we.field_a = mh.field_gb;
@@ -64,12 +64,12 @@ final class nl {
           }
           while (true) {
             if (0 > ob.field_I) {
-              jl.field_e.field_l = 0;
+              jl.field_e.position = 0;
               if (!vd.a(20, 1)) {
                 return false;
               }
-              ob.field_I = jl.field_e.d(true);
-              jl.field_e.field_l = 0;
+              ob.field_I = jl.field_e.readCipheredOpcode(true);
+              jl.field_e.position = 0;
               ga.field_j = param0[ob.field_I];
             }
             if (!um.b((byte) -104)) {
@@ -92,7 +92,7 @@ final class nl {
             }
             var5 = new pg(var2_long + (long)var4, ob.field_I, new byte[ga.field_j]);
             for (var6 = 0; ga.field_j > var6; var6++) {
-              var5.field_l[var6] = jl.field_e.field_k[var6];
+              var5.field_l[var6] = jl.field_e.data[var6];
             }
             al.field_m.addLast(var5, (byte) 3);
             ob.field_I = -1;

@@ -24,7 +24,7 @@ class um implements ub, qe {
     static jp[] field_l;
     private boolean field_n;
 
-    final static void a(int param0, wq param1, byte param2, tg param3) {
+    final static void a(int param0, PacketBuffer param1, byte param2, tg param3) {
         try {
           int var6 = 0;
           int var12_int = 0;
@@ -64,8 +64,8 @@ class um implements ub, qe {
           var15 = BrickABrac.field_J ? 1 : 0;
           try {
             var19 = new bg();
-            var19.field_s = param1.l(255);
-            var19.field_i = param1.e(255);
+            var19.field_s = param1.readUnsignedByte(255);
+            var19.field_i = param1.readInt(255);
             var19.field_q = new int[var19.field_s];
             var19.field_k = new int[var19.field_s];
             var19.field_t = new int[var19.field_s];
@@ -75,28 +75,28 @@ class um implements ub, qe {
             var19.field_j = new ql[var19.field_s];
             for (var6 = 0; var19.field_s > var6; var6++) {
               try {
-                var7_int = param1.l(255);
+                var7_int = param1.readUnsignedByte(255);
                 if (0 != var7_int &&
                   1 != var7_int &&
                   var7_int != 2) {
                   if (3 == var7_int ||
                     var7_int == 4) {
-                    var21 = param1.d(-1);
-                    var22 = param1.d(-1);
-                    var10 = param1.l(255);
+                    var21 = param1.readCp1252String(-1);
+                    var22 = param1.readCp1252String(-1);
+                    var10 = param1.readUnsignedByte(255);
                     var11 = new String[var10];
                     for (var12_int = 0; var12_int < var10; var12_int++) {
-                      var11[var12_int] = param1.d(-1);
+                      var11[var12_int] = param1.readCp1252String(-1);
                     }
                     var23 = new byte[var10][];
                     var20 = var23;
                     var12 = var20;
                     if (var7_int == 3) {
                       for (var13_int = 0; var10 > var13_int; var13_int++) {
-                        var14 = param1.e(255);
+                        var14 = param1.readInt(255);
                         array$0 = new byte[var14];
                         var12[var13_int] = array$0;
-                        param1.a(0, var23[var13_int], 115, var14);
+                        param1.readBytes(0, var23[var13_int], 115, var14);
                       }
                     }
                     var19.field_t[var6] = var7_int;
@@ -111,13 +111,13 @@ class um implements ub, qe {
                     var19.field_m[var6] = var23;
                   }
                 } else {
-                  var16 = param1.d(-1);
+                  var16 = param1.readCp1252String(-1);
                   var8 = var16;
-                  var17 = param1.d(-1);
+                  var17 = param1.readCp1252String(-1);
                   var9 = var17;
                   var10 = 0;
                   if (var7_int == 1) {
-                    var10 = param1.e(255);
+                    var10 = param1.readInt(255);
                   }
                   var19.field_t[var6] = var7_int;
                   var19.field_q[var6] = var10;
@@ -398,10 +398,10 @@ class um implements ub, qe {
         if (param0 != 200) {
           field_b = (mh) null;
         }
-        pi var2 = k.field_h;
-        var2.e(param0 ^ -13485, param1);
-        var2.a(87, 1);
-        var2.a(-121, 3);
+        BitPacketBuffer var2 = k.field_h;
+        var2.writeCipheredOpcode(param0 ^ -13485, param1);
+        var2.writeByte(87, 1);
+        var2.writeByte(-121, 3);
     }
 
     final static boolean b(byte param0) {
@@ -409,8 +409,8 @@ class um implements ub, qe {
           if (!vd.a(20, 1)) {
             return false;
           }
-          ga.field_j = jl.field_e.l(255);
-          jl.field_e.field_l = 0;
+          ga.field_j = jl.field_e.readUnsignedByte(255);
+          jl.field_e.position = 0;
         }
         if (param0 > -40) {
           field_l = (jp[]) null;
@@ -419,8 +419,8 @@ class um implements ub, qe {
           if (!vd.a(20, 2)) {
             return false;
           }
-          ga.field_j = jl.field_e.i(65280);
-          jl.field_e.field_l = 0;
+          ga.field_j = jl.field_e.readUnsignedShort(65280);
+          jl.field_e.position = 0;
         }
         return vd.a(20, ga.field_j);
     }

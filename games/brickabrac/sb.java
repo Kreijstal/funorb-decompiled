@@ -211,7 +211,7 @@ final class sb implements vc {
         int var5Lifetime10;
         int var5Lifetime11;
         if (param0 == 16769381) {
-          if (mj.a((byte) 121)) {
+          if (LegacyUtf8Decoder.a((byte) 121)) {
             stackIn_300_0 = (!lp.n(param0 - 16769386)) ? 0 : 1;
           } else {
             stackIn_300_0 = 0;
@@ -344,7 +344,7 @@ final class sb implements vc {
           return;
         }
         this.field_a = 50;
-        if (!mj.a((byte) 121)) {
+        if (!LegacyUtf8Decoder.a((byte) 121)) {
           var2Lifetime1 = 0;
           var3Lifetime1 = gp.field_d.field_db;
           if (!n.field_d) {
@@ -1012,11 +1012,11 @@ final class sb implements vc {
               stackIn_49_11 = (so.a((byte) -35) <= 50) ? false : true;
               dc.a(stackIn_45_0, stackIn_46_1, stackIn_48_2, stackIn_48_3, stackIn_48_4, stackIn_48_5, stackIn_48_6, stackIn_48_7, stackIn_48_8 != 0, stackIn_48_9, stackIn_48_10, stackIn_49_11);
               if (sl.field_w) {
-                k.field_h.e(-13413, 64);
+                k.field_h.writeCipheredOpcode(-13413, 64);
                 sl.field_w = false;
               }
               if (tq.field_c) {
-                k.field_h.e(-13413, 10);
+                k.field_h.writeCipheredOpcode(-13413, 10);
                 tq.field_c = false;
               }
               return;
@@ -1055,11 +1055,11 @@ final class sb implements vc {
           stackIn_68_11 = (so.a((byte) -35) <= 50) ? false : true;
           dc.a(stackIn_64_0, stackIn_65_1, stackIn_67_2, stackIn_67_3, stackIn_67_4, stackIn_67_5, stackIn_67_6, stackIn_67_7, stackIn_67_8 != 0, stackIn_67_9, stackIn_67_10, stackIn_68_11);
           if (sl.field_w) {
-            k.field_h.e(-13413, 64);
+            k.field_h.writeCipheredOpcode(-13413, 64);
             sl.field_w = false;
           }
           if (tq.field_c) {
-            k.field_h.e(-13413, 10);
+            k.field_h.writeCipheredOpcode(-13413, 10);
             tq.field_c = false;
           }
           return;
@@ -1147,11 +1147,11 @@ final class sb implements vc {
             }
           }
           if (sl.field_w) {
-            k.field_h.e(-13413, 64);
+            k.field_h.writeCipheredOpcode(-13413, 64);
             sl.field_w = false;
           }
           if (tq.field_c) {
-            k.field_h.e(-13413, 10);
+            k.field_h.writeCipheredOpcode(-13413, 10);
             tq.field_c = false;
           }
           return;
@@ -1246,11 +1246,11 @@ final class sb implements vc {
                 stackIn_162_11 = (so.a((byte) -35) <= 50) ? false : true;
                 dc.a(stackIn_158_0, stackIn_159_1, stackIn_161_2, stackIn_161_3, stackIn_161_4, stackIn_161_5, stackIn_161_6, stackIn_161_7, stackIn_161_8 != 0, stackIn_161_9, stackIn_161_10, stackIn_162_11);
                 if (sl.field_w) {
-                  k.field_h.e(-13413, 64);
+                  k.field_h.writeCipheredOpcode(-13413, 64);
                   sl.field_w = false;
                 }
                 if (tq.field_c) {
-                  k.field_h.e(-13413, 10);
+                  k.field_h.writeCipheredOpcode(-13413, 10);
                   tq.field_c = false;
                 }
                 return;
@@ -1311,11 +1311,11 @@ final class sb implements vc {
                 stackIn_203_11 = (so.a((byte) -35) <= 50) ? false : true;
                 dc.a(stackIn_199_0, stackIn_200_1, stackIn_202_2, stackIn_202_3, stackIn_202_4, stackIn_202_5, stackIn_202_6, stackIn_202_7, stackIn_202_8 != 0, stackIn_202_9, stackIn_202_10, stackIn_203_11);
                 if (sl.field_w) {
-                  k.field_h.e(-13413, 64);
+                  k.field_h.writeCipheredOpcode(-13413, 64);
                   sl.field_w = false;
                 }
                 if (tq.field_c) {
-                  k.field_h.e(-13413, 10);
+                  k.field_h.writeCipheredOpcode(-13413, 10);
                   tq.field_c = false;
                 }
                 return;
@@ -1348,13 +1348,13 @@ final class sb implements vc {
           }
         }
         if (sl.field_w) {
-          k.field_h.e(-13413, 64);
+          k.field_h.writeCipheredOpcode(-13413, 64);
           sl.field_w = false;
         }
         if (!tq.field_c) {
           return;
         }
-        k.field_h.e(-13413, 10);
+        k.field_h.writeCipheredOpcode(-13413, 10);
         tq.field_c = false;
     }
 
@@ -1373,11 +1373,11 @@ final class sb implements vc {
 
     final static void a(mf param0, mf param1, int param2) {
         int var4 = 0;
-        wq var8 = null;
-        wq var9 = null;
-        wq var10 = null;
-        wq var11 = null;
-        wq var7 = null;
+        PacketBuffer var8 = null;
+        PacketBuffer var9 = null;
+        PacketBuffer var10 = null;
+        PacketBuffer var11 = null;
+        PacketBuffer var7 = null;
         int var3_int = param0.a("", false);
         if (param2 != 2) {
           return;
@@ -1385,17 +1385,17 @@ final class sb implements vc {
         try {
           na.field_L = new nc[2];
           var4 = 0;
-          var8 = new wq(param0.a(param2 ^ 118, "single", ""));
+          var8 = new PacketBuffer(param0.a(param2 ^ 118, "single", ""));
           var9 = var8;
           na.field_L[0] = mq.a((byte) 76, param0, var9, var3_int, 0, 0, var4);
           var4 = var4 + na.field_L[0].field_i;
-          var10 = new wq(param0.a(121, "hotseat", ""));
+          var10 = new PacketBuffer(param0.a(121, "hotseat", ""));
           qh.field_b = mq.a((byte) -115, param0, var10, var3_int, -1, -1, -1);
-          var11 = new wq(param0.a(100, "multiplayer", ""));
+          var11 = new PacketBuffer(param0.a(100, "multiplayer", ""));
           tq.field_d = mq.a((byte) -97, param0, var11, var3_int, -1, -1, -1);
           tq.field_d.a(qh.field_b, false);
           var3_int = param1.a("", false);
-          var7 = new wq(param1.a(-88, "single", ""));
+          var7 = new PacketBuffer(param1.a(-88, "single", ""));
           na.field_L[1] = mq.a((byte) 94, param1, var7, var3_int, 1, 1, var4);
         } catch (RuntimeException runtimeException) {
           throw qb.a((Throwable) ((Object) runtimeException), "sb.H(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');

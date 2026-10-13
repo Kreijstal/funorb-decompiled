@@ -23,12 +23,12 @@ final class qa extends ki {
         if (!i.field_m.a("ninja", -28138)) {
           return false;
         }
-        mj.field_d = pl.a("ninja", "ninja_near", (byte) -24, i.field_m);
+        LegacyUtf8Decoder.field_d = pl.a("ninja", "ninja_near", (byte) -24, i.field_m);
         ap.field_f = pl.a("ninja", "ninja_mid", (byte) -128, i.field_m);
         hn.field_b = pl.a("ninja", "ninja_far", (byte) 127, i.field_m);
         hc.field_g = pl.a("ninja", "ninja_small", (byte) -81, i.field_m);
         ObjectHistoryBuffer.field_q = pl.a("ninja", "ninja_character", (byte) -105, i.field_m);
-        nk.field_h = jh.a(0, mj.field_d);
+        nk.field_h = jh.a(0, LegacyUtf8Decoder.field_d);
         mp.field_Zb = jh.a(0, ap.field_f);
         rh.field_c = jh.a(0, hn.field_b);
         pl.a(hn.field_b, 0);
@@ -52,7 +52,7 @@ final class qa extends ki {
           aa.a(0, hn.field_b, true, param3, var6, 1);
           var6.a(this.field_m, param3, (byte) 78);
         }
-        tl.a(var6.field_p, (byte) -78, param2, 640, mj.field_d, ap.field_f, param1, 0, param3, param4, 1);
+        tl.a(var6.field_p, (byte) -78, param2, 640, LegacyUtf8Decoder.field_d, ap.field_f, param1, 0, param3, param4, 1);
     }
 
     qa(int param0, String param1, String param2, int param3) {
@@ -72,7 +72,7 @@ final class qa extends ki {
     final boolean b(byte param0) {
         if (param0 >= -91) {
           qa.a(-41, -77, (byte) -108, -18);
-          if (null == mj.field_d) {
+          if (null == LegacyUtf8Decoder.field_d) {
             return false;
           }
           if (ap.field_f == null) {
@@ -86,7 +86,7 @@ final class qa extends ki {
           }
           return false;
         }
-        if (null == mj.field_d) {
+        if (null == LegacyUtf8Decoder.field_d) {
           return false;
         }
         if (ap.field_f == null) {

@@ -866,7 +866,7 @@ class oc extends IntrusiveNode {
 
     final static void a(int param0, int param1, long param2, int param3, boolean param4, String param5) {
         int var7_int = 0;
-        pi stackIn_2_0 = null;
+        BitPacketBuffer stackIn_2_0 = null;
         int stackIn_2_1 = 0;
         int stackIn_3_2 = 0;
         RuntimeException stackIn_8_0 = null;
@@ -875,12 +875,12 @@ class oc extends IntrusiveNode {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var7 = null;
         try {
-          k.field_h.e(-13413, param1);
-          k.field_h.field_l = k.field_h.field_l + 1;
-          var7_int = k.field_h.field_l;
-          k.field_h.a(-23054, param2);
-          k.field_h.a(param5, param3 - 2);
-          k.field_h.a(31, param0);
+          k.field_h.writeCipheredOpcode(-13413, param1);
+          k.field_h.position = k.field_h.position + 1;
+          var7_int = k.field_h.position;
+          k.field_h.writeLong(-23054, param2);
+          k.field_h.writeCp1252String(param5, param3 - 2);
+          k.field_h.writeByte(31, param0);
           stackIn_2_0 = k.field_h;
           stackIn_2_1 = -105;
           if (!param4) {
@@ -888,8 +888,8 @@ class oc extends IntrusiveNode {
           } else {
             stackIn_3_2 = 1;
           }
-          ((pi) (Object) stackIn_2_0).a(stackIn_2_1, stackIn_3_2);
-          k.field_h.d((byte) 114, -var7_int + k.field_h.field_l);
+          ((BitPacketBuffer) (Object) stackIn_2_0).writeByte(stackIn_2_1, stackIn_3_2);
+          k.field_h.backfillByteLength((byte) 114, -var7_int + k.field_h.position);
           if (param3 != 1) {
             field_k = (jg) null;
           }

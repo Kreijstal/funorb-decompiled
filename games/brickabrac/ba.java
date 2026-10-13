@@ -62,11 +62,11 @@ class ba extends tk {
           hn.a((byte) 106);
           return;
         }
-        pi var2 = jl.field_e;
-        var2.e(255);
-        var2.e(255);
-        var2.e(255);
-        var2.e(255);
+        BitPacketBuffer var2 = jl.field_e;
+        var2.readInt(255);
+        var2.readInt(255);
+        var2.readInt(255);
+        var2.readInt(255);
         if (param0 == -1) {
           var1.unlink((byte) 111);
           return;

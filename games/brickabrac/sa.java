@@ -76,7 +76,7 @@ abstract class sa extends qg implements vc {
         var4 = BrickABrac.field_J ? 1 : 0;
         var2 = gd.a((byte) 0);
         if (r.c((byte) -84)) {
-          pk.a((byte) 68, var2, mj.a((byte) -81));
+          pk.a((byte) 68, var2, LegacyUtf8Decoder.a((byte) -81));
           return;
         }
         if (!un.field_f) {
@@ -143,7 +143,7 @@ abstract class sa extends qg implements vc {
         }
     }
 
-    abstract boolean a(pi param0, byte param1, int param2);
+    abstract boolean a(BitPacketBuffer param0, byte param1, int param2);
 
     final static void a(int param0, bi param1, String param2, int param3, int param4, int param5, int param6) {
         int var7_int = 0;

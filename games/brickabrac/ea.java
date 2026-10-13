@@ -69,25 +69,25 @@ final class ea {
 
     final static void a(int param0, int param1) {
         int var4 = 0;
-        pi var2 = k.field_h;
+        BitPacketBuffer var2 = k.field_h;
         int var4Lifetime1;
-        var2.e(-13413, param1);
-        var2.field_l = var2.field_l + 1;
-        int var3 = var2.field_l;
-        var2.a(71, 5);
-        var2.a(param0 ^ 10903, o.field_e.field_jc);
+        var2.writeCipheredOpcode(-13413, param1);
+        var2.position = var2.position + 1;
+        int var3 = var2.position;
+        var2.writeByte(71, 5);
+        var2.writeByte(param0 ^ 10903, o.field_e.field_jc);
         if (param0 == -11008) {
           var4 = o.field_e.field_kc + (o.field_e.field_wc << 6);
-          var2.a(15, var4);
-          var2.a(o.field_e.field_Tb, -1, 0, o.field_e.field_Tb.length);
-          var2.d((byte) 118, -var3 + var2.field_l);
+          var2.writeByte(15, var4);
+          var2.writeBytes(o.field_e.field_Tb, -1, 0, o.field_e.field_Tb.length);
+          var2.backfillByteLength((byte) 118, -var3 + var2.position);
           return;
         }
         ea.a(109, -29);
         var4Lifetime1 = o.field_e.field_kc + (o.field_e.field_wc << 6);
-        var2.a(15, var4Lifetime1);
-        var2.a(o.field_e.field_Tb, -1, 0, o.field_e.field_Tb.length);
-        var2.d((byte) 118, -var3 + var2.field_l);
+        var2.writeByte(15, var4Lifetime1);
+        var2.writeBytes(o.field_e.field_Tb, -1, 0, o.field_e.field_Tb.length);
+        var2.backfillByteLength((byte) 118, -var3 + var2.position);
     }
 
     final static java.awt.Container b(int param0) {

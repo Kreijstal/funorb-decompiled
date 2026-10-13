@@ -44,16 +44,16 @@ final class pl {
     }
 
     final static void a(int param0, byte[] param1, int param2, boolean param3, int param4, byte param5) {
-        pi var6 = null;
+        BitPacketBuffer var6 = null;
         int var7 = 0;
         int var8 = 0;
         try {
           var6 = k.field_h;
-          var6.e(-13413, param0);
-          var6.field_l = var6.field_l + 1;
-          var7 = var6.field_l;
-          var6.a(15, 4);
-          var6.a(81, param2);
+          var6.writeCipheredOpcode(-13413, param0);
+          var6.position = var6.position + 1;
+          var7 = var6.position;
+          var6.writeByte(15, 4);
+          var6.writeByte(81, param2);
           if (param5 >= -55) {
             field_b = (int[]) null;
           }
@@ -61,9 +61,9 @@ final class pl {
           if (param3) {
             var8 += 128;
           }
-          var6.a(46, var8);
-          var6.a(param1, -1, 0, param1.length);
-          var6.d((byte) 123, -var7 + var6.field_l);
+          var6.writeByte(46, var8);
+          var6.writeBytes(param1, -1, 0, param1.length);
+          var6.backfillByteLength((byte) 123, -var7 + var6.position);
         } catch (RuntimeException runtimeException) {
           throw qb.a((Throwable) ((Object) runtimeException), "pl.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }

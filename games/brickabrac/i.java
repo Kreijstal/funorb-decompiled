@@ -71,7 +71,7 @@ final class i extends IntrusiveNode {
         byte[] var5_ref_byte__ = null;
         byte[] var6 = null;
         Object var7 = null;
-        wq var9 = null;
+        PacketBuffer var9 = null;
         byte[] var10 = null;
         byte[] var11 = null;
         byte[] var12 = null;
@@ -80,20 +80,20 @@ final class i extends IntrusiveNode {
           if (!param0) {
             field_l = (String) null;
           }
-          var9 = new wq(param1);
-          var3 = var9.l(255);
-          var4 = var9.e(255);
+          var9 = new PacketBuffer(param1);
+          var3 = var9.readUnsignedByte(255);
+          var4 = var9.readInt(255);
           if (0 <= var4 && (bq.field_d == 0 ||
             !(var4 > bq.field_d))) {
             if (var3 == 0) {
               var12 = new byte[var4];
               var10 = var12;
               var5_ref_byte__ = var10;
-              var9.a(0, var12, 126, var4);
+              var9.readBytes(0, var12, 126, var4);
               stackIn_9_0 = var5_ref_byte__;
               return stackIn_9_0;
             }
-            var5 = var9.e(255);
+            var5 = var9.readInt(255);
             if (var5 >= 0 && (bq.field_d == 0 ||
               !(var5 > bq.field_d))) {
               var13 = new byte[var5];
@@ -128,14 +128,14 @@ final class i extends IntrusiveNode {
     }
 
     final static void a(int param0, pe param1, int param2) {
-        pi var3 = null;
+        BitPacketBuffer var3 = null;
         try {
           var3 = k.field_h;
-          var3.e(-13413, param0);
+          var3.writeCipheredOpcode(-13413, param0);
           int var4 = 29 / ((-57 - param2) / 59);
-          var3.a(114, 2);
-          var3.a(-126, 0);
-          var3.a(73, param1.field_w);
+          var3.writeByte(114, 2);
+          var3.writeByte(-126, 0);
+          var3.writeByte(73, param1.field_w);
         } catch (RuntimeException runtimeException) {
           throw qb.a((Throwable) ((Object) runtimeException), "i.I(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }

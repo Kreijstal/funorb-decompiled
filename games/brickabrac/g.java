@@ -24,12 +24,12 @@ final class g extends k {
     final static void e(byte param0) {
         if (param0 <= -77) {
           um.field_e = false;
-          qo.field_I = jl.field_e.l(255) == 0 ? true : false;
+          qo.field_I = jl.field_e.readUnsignedByte(255) == 0 ? true : false;
           return;
         }
         field_m = (String) null;
         um.field_e = false;
-        qo.field_I = jl.field_e.l(255) == 0 ? true : false;
+        qo.field_I = jl.field_e.readUnsignedByte(255) == 0 ? true : false;
     }
 
     private final boolean b(int param0, String param1) {

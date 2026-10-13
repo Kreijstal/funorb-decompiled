@@ -162,8 +162,8 @@ final class wg extends java.awt.Canvas implements java.awt.event.FocusListener {
               wd.field_F[var4_int].field_Mb = rh.field_e[var6];
             }
           }
-          if (mj.field_c.field_L != 0) {
-            CircleBody.field_p = new am(mj.field_c.field_Eb, mj.field_c.field_db, mj.field_c.field_Ib, mj.field_c.field_cb, param1, re.field_m, rf.field_c, am.field_Zb, ad.field_l, of.field_k, tk.field_t, (String) null, 0L);
+          if (LegacyUtf8Decoder.field_c.field_L != 0) {
+            CircleBody.field_p = new am(LegacyUtf8Decoder.field_c.field_Eb, LegacyUtf8Decoder.field_c.field_db, LegacyUtf8Decoder.field_c.field_Ib, LegacyUtf8Decoder.field_c.field_cb, param1, re.field_m, rf.field_c, am.field_Zb, ad.field_l, of.field_k, tk.field_t, (String) null, 0L);
           }
           var9 = sj.a(om.field_oc, np.field_a, -13294, param0);
           if (var9 != null) {

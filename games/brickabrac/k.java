@@ -3,7 +3,7 @@
  */
 abstract class k extends pj implements hf {
     static String field_i;
-    static pi field_h;
+    static BitPacketBuffer field_h;
     static String field_j;
     private vb field_g;
 
@@ -33,7 +33,7 @@ abstract class k extends pj implements hf {
         RuntimeException var3 = null;
         try {
           if (param1 > -39) {
-            field_h = (pi) null;
+            field_h = (BitPacketBuffer) null;
             this.a(false);
           } else {
             this.a(false);

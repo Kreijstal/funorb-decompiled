@@ -34,7 +34,7 @@ final class mq {
         di.a((byte) -114);
     }
 
-    final static nc a(byte param0, mf param1, wq param2, int param3, int param4, int param5, int param6) {
+    final static nc a(byte param0, mf param1, PacketBuffer param2, int param3, int param4, int param5, int param6) {
         int dupTemp$1 = 0;
         RuntimeException var7 = null;
         int var8 = 0;
@@ -55,7 +55,7 @@ final class mq {
         try {
           var12 = new nc(param4, param6, param5);
           var13 = var12;
-          dupTemp$1 = param2.i(65280);
+          dupTemp$1 = param2.readUnsignedShort(65280);
           var13.field_i = dupTemp$1;
           var8 = dupTemp$1;
           var13.field_j = new byte[var8][];

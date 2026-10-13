@@ -654,7 +654,7 @@ final class ip extends ki {
                         }
                       }
                     } else {
-                      var21 = wq.field_m;
+                      var21 = PacketBuffer.field_m;
                     }
                   } else {
                     var21 = fe.field_ib;

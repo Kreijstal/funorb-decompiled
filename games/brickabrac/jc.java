@@ -282,12 +282,12 @@ abstract class jc extends ib {
             return;
           }
           if (param1 == 2) {
-            if ((pi.field_q & 1 << param0) != 0) {
+            if ((BitPacketBuffer.field_q & 1 << param0) != 0) {
               return;
             }
             kf.field_k = param0;
             ga.field_i = 6;
-            if (0 == pi.field_q &&
+            if (0 == BitPacketBuffer.field_q &&
               !kb.field_Sb) {
               ga.field_i = 5;
               tb.field_eb = tb.field_db + "<br><br>" + sl.field_A[kf.field_k];
@@ -296,7 +296,7 @@ abstract class jc extends ib {
               tb.field_eb = sl.field_A[kf.field_k];
             }
             pp.field_a = -1;
-            pi.field_q = pi.field_q | 1 << param0;
+            BitPacketBuffer.field_q = BitPacketBuffer.field_q | 1 << param0;
             kb.field_Sb = true;
             mn.field_v = de.field_x;
             return;

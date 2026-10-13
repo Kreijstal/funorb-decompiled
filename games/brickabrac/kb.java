@@ -129,7 +129,7 @@ final class kb extends mh {
             field_Tb = (String) null;
           }
           if (var2_int > 63) {
-            stackIn_8_0 = pi.field_r;
+            stackIn_8_0 = BitPacketBuffer.field_r;
             return stackIn_8_0;
           }
           for (var3 = 0; var2_int > var3; var3++) {

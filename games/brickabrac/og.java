@@ -1509,7 +1509,7 @@ final class og extends mh {
           ve.a(5);
           qc.a(param0 + 14569);
           if (vg.a(param0 - 104)) {
-            k.field_h.e(-13413, 1);
+            k.field_h.writeCipheredOpcode(-13413, 1);
             cr.a(0, 10000);
           }
           hn.a((byte) 53);

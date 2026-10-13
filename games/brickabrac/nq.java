@@ -43,7 +43,7 @@ final class nq extends IntrusiveNode {
           wm.field_a = (dh) ((Object) si.a((byte) -126, "commonui", "arezzo14bold", param3, param0));
           var17 = new jp(param1.a(122, "button.gif", ""), (java.awt.Component) ((Object) kj.field_D));
           uo.a((byte) 29, param3, "dropdown", "commonui");
-          var5 = wq.a("commonui", param3, "screen_options", param2 ^ 946715361);
+          var5 = PacketBuffer.a("commonui", param3, "screen_options", param2 ^ 946715361);
           mq.field_b = new tp[4];
           cd.field_b = new tp[4];
           ng.field_d = new tp[4];

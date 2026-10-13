@@ -62,7 +62,7 @@ final class uo {
     }
 
     final static void a(eg param0, int param1, byte param2) {
-        pi var3 = null;
+        BitPacketBuffer var3 = null;
         RuntimeException var3_ref = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
@@ -70,12 +70,12 @@ final class uo {
         RuntimeException decompiledCaughtException = null;
         try {
           var3 = k.field_h;
-          var3.e(-13413, param1);
-          var3.a(58, 5);
-          var3.a(param2 ^ -55, 0);
-          var3.b((byte) 120, param0.field_l);
-          var3.a(-116, param0.field_q);
-          var3.a(-99, param0.field_p);
+          var3.writeCipheredOpcode(-13413, param1);
+          var3.writeByte(58, 5);
+          var3.writeByte(param2 ^ -55, 0);
+          var3.writeShort((byte) 120, param0.field_l);
+          var3.writeByte(-116, param0.field_q);
+          var3.writeByte(-99, param0.field_p);
           if (param2 == 68) {
             return;
           }

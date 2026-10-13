@@ -3,7 +3,7 @@
  */
 final class da extends hb {
     static byte[][] field_L;
-    wq field_D;
+    PacketBuffer field_D;
     static int field_G;
     static jp[] field_E;
     static int[] field_C;
@@ -18,8 +18,8 @@ final class da extends hb {
         if (this.field_u) {
           throw new RuntimeException();
         }
-        if (this.field_D.field_l >= this.field_D.field_k.length - this.field_F) {
-          return this.field_D.field_k;
+        if (this.field_D.position >= this.field_D.data.length - this.field_F) {
+          return this.field_D.data;
         }
         throw new RuntimeException();
     }
@@ -151,12 +151,12 @@ final class da extends hb {
           if (null == this.field_D) {
             return 0;
           }
-          return this.field_D.field_l * 100 / (-this.field_F + this.field_D.field_k.length);
+          return this.field_D.position * 100 / (-this.field_F + this.field_D.data.length);
         }
         if (null == this.field_D) {
           return 0;
         }
-        return this.field_D.field_l * 100 / (-this.field_F + this.field_D.field_k.length);
+        return this.field_D.position * 100 / (-this.field_F + this.field_D.data.length);
     }
 
     static {

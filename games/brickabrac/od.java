@@ -155,7 +155,7 @@ final class od extends java.awt.Canvas {
             return true;
           }
           if (param0 != 0) {
-            var6 = ai.field_r;
+            var6 = ai.cp1252Extensions;
             var2 = var6;
             var3 = 0;
             while (var3 < var6.length) {

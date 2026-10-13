@@ -33,10 +33,10 @@ final class wa {
         return this.field_j - this.field_b >> 15;
     }
 
-    final void b(wq param0) {
-        this.field_k = param0.l(255);
-        this.field_a = param0.e(255);
-        this.field_i = param0.e(255);
+    final void b(PacketBuffer param0) {
+        this.field_k = param0.readUnsignedByte(255);
+        this.field_a = param0.readInt(255);
+        this.field_i = param0.readInt(255);
         this.a(param0);
     }
 
@@ -48,14 +48,14 @@ final class wa {
         this.field_g = 0;
     }
 
-    final void a(wq param0) {
+    final void a(PacketBuffer param0) {
         int var2 = 0;
-        this.field_c = param0.l(255);
+        this.field_c = param0.readUnsignedByte(255);
         this.field_d = new int[this.field_c];
         this.field_f = new int[this.field_c];
         for (var2 = 0; var2 < this.field_c; var2++) {
-          this.field_d[var2] = param0.i(65280);
-          this.field_f[var2] = param0.i(65280);
+          this.field_d[var2] = param0.readUnsignedShort(65280);
+          this.field_f[var2] = param0.readUnsignedShort(65280);
         }
     }
 

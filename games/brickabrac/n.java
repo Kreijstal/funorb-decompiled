@@ -77,14 +77,14 @@ final class n {
           if (go.field_a != null) {
             try {
               go.field_a.a(0, 0L);
-              go.field_a.a(jl.field_e.field_k, jl.field_e.field_l, 24, -1);
+              go.field_a.a(jl.field_e.data, jl.field_e.position, 24, -1);
             } catch (Exception exception) {
             }
           }
           if (param0 != -1) {
             field_a = (String) null;
           }
-          jl.field_e.field_l = jl.field_e.field_l + 24;
+          jl.field_e.position = jl.field_e.position + 24;
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {

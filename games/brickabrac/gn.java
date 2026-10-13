@@ -20,14 +20,14 @@ final class gn extends ld {
     }
 
     final static void a(int param0, cq param1, int param2) {
-        pi var3 = k.field_h;
+        BitPacketBuffer var3 = k.field_h;
         if (param0 != -21167) {
           return;
         }
         try {
-          var3.e(-13413, param2);
-          var3.a(-113, param1.field_m);
-          var3.a(param0 ^ 21215, param1.field_s);
+          var3.writeCipheredOpcode(-13413, param2);
+          var3.writeByte(-113, param1.field_m);
+          var3.writeByte(param0 ^ 21215, param1.field_s);
         } catch (RuntimeException runtimeException) {
           throw qb.a((Throwable) ((Object) runtimeException), "gn.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
@@ -52,10 +52,10 @@ final class gn extends ld {
     }
 
     final static void a(int param0, int param1, ln param2) {
-        pi var3 = null;
+        BitPacketBuffer var3 = null;
         RuntimeException var3_ref = null;
         int var4 = 0;
-        pi var5 = null;
+        BitPacketBuffer var5 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;
@@ -63,20 +63,20 @@ final class gn extends ld {
         try {
           var5 = k.field_h;
           var3 = var5;
-          var5.e(-13413, param0);
-          var5.field_l = var5.field_l + 1;
-          var4 = var5.field_l;
-          var5.a(-125, 1);
+          var5.writeCipheredOpcode(-13413, param0);
+          var5.position = var5.position + 1;
+          var4 = var5.position;
+          var5.writeByte(-125, 1);
           if (null == param2.field_i) {
-            var5.a(-11, 0);
+            var5.writeByte(-11, 0);
           } else {
-            var5.a(-108, param2.field_i.length);
-            var5.a(param2.field_i, -1, 0, param2.field_i.length);
+            var5.writeByte(-108, param2.field_i.length);
+            var5.writeBytes(param2.field_i, -1, 0, param2.field_i.length);
           }
-          var5.d(3, var4);
-          var5.field_l = var5.field_l - 4;
-          param2.field_m = var5.e(255);
-          var5.d((byte) 121, -var4 + var5.field_l);
+          var5.appendCrc32(3, var4);
+          var5.position = var5.position - 4;
+          param2.field_m = var5.readInt(255);
+          var5.backfillByteLength((byte) 121, -var4 + var5.position);
           if (param1 > 113) {
             return;
           }

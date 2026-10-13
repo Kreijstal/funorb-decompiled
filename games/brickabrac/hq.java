@@ -42,21 +42,21 @@ final class hq extends km {
         if (og.h(-26090)) {
           return;
         }
-        pi var4 = k.field_h;
-        var4.e(-13413, 16);
-        var4.field_l = var4.field_l + 1;
-        int var5 = var4.field_l;
-        var4.a(-126, 0);
-        var4.b((byte) 120, param0);
-        var4.a(113, param1);
+        BitPacketBuffer var4 = k.field_h;
+        var4.writeCipheredOpcode(-13413, 16);
+        var4.position = var4.position + 1;
+        int var5 = var4.position;
+        var4.writeByte(-126, 0);
+        var4.writeShort((byte) 120, param0);
+        var4.writeByte(113, param1);
         if (param2 == 532) {
-          var4.b((byte) 127, param3);
-          var4.d((byte) 121, -var5 + var4.field_l);
+          var4.writeShort((byte) 127, param3);
+          var4.backfillByteLength((byte) 121, -var5 + var4.position);
           return;
         }
         field_s = (jp[]) null;
-        var4.b((byte) 127, param3);
-        var4.d((byte) 121, -var5 + var4.field_l);
+        var4.writeShort((byte) 127, param3);
+        var4.backfillByteLength((byte) 121, -var5 + var4.position);
     }
 
     final static og a(int[] param0, mh param1, mh param2, mh param3, byte param4) {
@@ -147,7 +147,7 @@ final class hq extends km {
     }
 
     final static void a(fa param0, int param1, int param2) {
-        pi var3 = null;
+        BitPacketBuffer var3 = null;
         RuntimeException var3_ref = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
@@ -155,9 +155,9 @@ final class hq extends km {
         RuntimeException decompiledCaughtException = null;
         try {
           var3 = k.field_h;
-          var3.e(-13413, param1);
-          var3.a(85, param0.field_i);
-          var3.b((byte) 122, param0.field_k);
+          var3.writeCipheredOpcode(-13413, param1);
+          var3.writeByte(85, param0.field_i);
+          var3.writeShort((byte) 122, param0.field_k);
           if (param2 == 49) {
             return;
           }

@@ -46,10 +46,10 @@ final class MotionWaypoint extends MovingBody {
         gg.field_t = null;
     }
 
-    final void readBodySnapshot(int obfuscationGuard, wq packet) {
+    final void readBodySnapshot(int obfuscationGuard, PacketBuffer packet) {
         try {
           super.readBodySnapshot(100, packet);
-          this.durationTicks = packet.i(65280);
+          this.durationTicks = packet.readUnsignedShort(65280);
           if (obfuscationGuard <= 89) {
             field_p = (jp) null;
           }

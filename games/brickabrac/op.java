@@ -11,7 +11,7 @@ final class op implements java.awt.event.KeyListener, java.awt.event.FocusListen
         int var6 = 0;
         mp var7 = null;
         mp var8 = null;
-        pi var9 = null;
+        BitPacketBuffer var9 = null;
         CharSequence var10 = null;
         String stackIn_3_0 = null;
         String stackIn_6_0 = null;
@@ -50,12 +50,12 @@ final class op implements java.awt.event.KeyListener, java.awt.event.FocusListen
           var8.d(3);
           ol.field_w = ol.field_w - 1;
           var9 = k.field_h;
-          var9.e(-13413, param0);
-          var9.field_l = var9.field_l + 1;
-          var5 = var9.field_l;
-          var9.a(-13, 1);
-          var9.a(param2, -1);
-          var9.d((byte) 118, -var5 + var9.field_l);
+          var9.writeCipheredOpcode(-13413, param0);
+          var9.position = var9.position + 1;
+          var5 = var9.position;
+          var9.writeByte(-13, 1);
+          var9.writeCp1252String(param2, -1);
+          var9.backfillByteLength((byte) 118, -var5 + var9.position);
           stackIn_14_0 = null;
           return (String) (stackIn_14_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

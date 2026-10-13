@@ -19,7 +19,7 @@ final class vd {
           if (param0 != 20) {
             vd.a(-79);
           }
-          if (param1 <= jl.field_e.field_l) {
+          if (param1 <= jl.field_e.position) {
             return true;
           }
           if (null == eq.field_g) {
@@ -38,16 +38,16 @@ final class vd {
               hn.a((byte) 123);
               return false;
             }
-            if (var2_int > param1 - jl.field_e.field_l) {
-              var2_int = -jl.field_e.field_l + param1;
+            if (var2_int > param1 - jl.field_e.position) {
+              var2_int = -jl.field_e.position + param1;
             }
-            eq.field_g.a(param0 + 25806, jl.field_e.field_k, var2_int, jl.field_e.field_l);
+            eq.field_g.a(param0 + 25806, jl.field_e.data, var2_int, jl.field_e.position);
             oj.field_t = ue.a(false);
-            jl.field_e.field_l = jl.field_e.field_l + var2_int;
-            if (param1 > jl.field_e.field_l) {
+            jl.field_e.position = jl.field_e.position + var2_int;
+            if (param1 > jl.field_e.position) {
               return false;
             }
-            jl.field_e.field_l = 0;
+            jl.field_e.position = 0;
             return true;
           } catch (java.io.IOException decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;

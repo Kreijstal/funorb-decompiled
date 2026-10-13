@@ -322,35 +322,35 @@ final class cr extends oc {
           if (eq.field_g != null) {
             if (0 <= param0) {
               decompiledFrameRemainder0 = (q.field_i == rf.field_b);
-              if ((decompiledFrameRemainder0) && (k.field_h.field_l == 0 &&
+              if ((decompiledFrameRemainder0) && (k.field_h.position == 0 &&
                 BrickMotionPath.field_q + 10000L < ue.a(false))) {
-                k.field_h.e(-13413, param0);
+                k.field_h.writeCipheredOpcode(-13413, param0);
               }
             } else {
-              if (k.field_h.field_l == 0 &&
+              if (k.field_h.position == 0 &&
                 BrickMotionPath.field_q + 10000L < ue.a(false)) {
-                k.field_h.e(-13413, param0);
+                k.field_h.writeCipheredOpcode(-13413, param0);
               }
             }
             if (decompiledFrameRemainder0) {
               if (param1 != 10000) {
                 return;
               }
-              if (0 < k.field_h.field_l) {
+              if (0 < k.field_h.position) {
                 try {
-                  eq.field_g.a(k.field_h.field_k, true, k.field_h.field_l, 0);
+                  eq.field_g.a(k.field_h.data, true, k.field_h.position, 0);
                   BrickMotionPath.field_q = ue.a(false);
                 } catch (java.io.IOException decompiledCaughtParameter0) {
                   decompiledCaughtException = decompiledCaughtParameter0;
                   var2 = (IOException) (Object) decompiledCaughtException;
                   hn.a((byte) 92);
                 }
-                k.field_h.field_l = 0;
+                k.field_h.position = 0;
               }
               return;
             }
           }
-          k.field_h.field_l = 0;
+          k.field_h.position = 0;
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {

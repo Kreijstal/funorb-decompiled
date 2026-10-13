@@ -11,13 +11,13 @@ final class rf {
     static n field_b;
 
     final static void a(int param0, long param1, boolean param2) {
-        pi var4 = k.field_h;
-        var4.e(-13413, param0);
-        var4.field_l = var4.field_l + 1;
-        int var5 = var4.field_l;
-        var4.a(96, 7);
-        var4.a(-23054, param1);
-        var4.d((byte) 113, -var5 + var4.field_l);
+        BitPacketBuffer var4 = k.field_h;
+        var4.writeCipheredOpcode(-13413, param0);
+        var4.position = var4.position + 1;
+        int var5 = var4.position;
+        var4.writeByte(96, 7);
+        var4.writeLong(-23054, param1);
+        var4.backfillByteLength((byte) 113, -var5 + var4.position);
         if (param2) {
           return;
         }

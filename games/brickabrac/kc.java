@@ -87,38 +87,38 @@ final class kc extends IntrusiveNode {
         int stackIn_11_0 = 0;
         int[] stackIn_24_0 = null;
         Throwable decompiledCaughtException = null;
-        pi var2 = null;
+        BitPacketBuffer var2 = null;
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
         Exception var6 = null;
         int var7 = 0;
-        pi var8 = null;
+        BitPacketBuffer var8 = null;
         wd var9 = null;
         var7 = BrickABrac.field_J ? 1 : 0;
         var8 = jl.field_e;
         var2 = var8;
-        var3 = var8.l(param0 + 188);
+        var3 = var8.readUnsignedByte(param0 + 188);
         gj.field_a = 127 & var3;
         if (param0 != 67) {
           kc.a(73, true);
         }
         stackIn_5_0 = ((var3 & 128) != 0);
         ji.field_f = stackIn_5_0;
-        nh.field_b = var8.l(255);
-        an.field_k = var8.g(-32768);
+        nh.field_b = var8.readUnsignedByte(255);
+        an.field_k = var8.readLong(-32768);
         if (gj.field_a == 2) {
-          gb.field_h = var8.i(65280);
-          vq.field_H = var8.e((byte) -34);
+          gb.field_h = var8.readUnsignedShort(65280);
+          vq.field_H = var8.readUnsignedMedium((byte) -34);
         } else {
           gb.field_h = 0;
           vq.field_H = 0;
         }
-        stackIn_11_0 = (var8.l(255) != 1) ? 0 : 1;
+        stackIn_11_0 = (var8.readUnsignedByte(255) != 1) ? 0 : 1;
         var4 = stackIn_11_0;
-        dp.field_t = var8.d(-1);
+        dp.field_t = var8.readCp1252String(-1);
         if (var4 != 0) {
-          nd.field_g = var8.d(-1);
+          nd.field_g = var8.readCp1252String(-1);
         } else {
           nd.field_g = dp.field_t;
         }
@@ -127,15 +127,15 @@ final class kc extends IntrusiveNode {
           ka.field_E = 0;
           sl.field_y = null;
         } else {
-          ka.field_E = var8.i(param0 ^ 65347);
-          sl.field_y = var8.d(-1);
+          ka.field_E = var8.readUnsignedShort(param0 ^ 65347);
+          sl.field_y = var8.readCp1252String(-1);
         }
         if (!param1) {
           gd.field_d = bj.a(80, (byte) 76, var8);
           rn.field_m = null;
           return new gb(param1);
         }
-        var5 = var8.i(65280);
+        var5 = var8.readUnsignedShort(65280);
         try {
           var9 = nh.field_c.a(var5, true);
           gd.field_d = var9.h(-3);
@@ -172,38 +172,38 @@ final class kc extends IntrusiveNode {
         int stackIn_11_0 = 0;
         int[] stackIn_24_0 = null;
         Throwable decompiledCaughtException = null;
-        pi var2 = null;
+        BitPacketBuffer var2 = null;
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
         Exception var6 = null;
         int var7 = 0;
-        pi var8 = null;
+        BitPacketBuffer var8 = null;
         wd var9 = null;
         var7 = BrickABrac.field_J ? 1 : 0;
         var8 = jl.field_e;
         var2 = var8;
-        var3 = var8.l(param0 + 188);
+        var3 = var8.readUnsignedByte(param0 + 188);
         gj.field_a = 127 & var3;
         if (param0 != 67) {
           kc.a(73, true);
         }
         stackIn_5_0 = ((var3 & 128) != 0);
         ji.field_f = stackIn_5_0;
-        nh.field_b = var8.l(255);
-        an.field_k = var8.g(-32768);
+        nh.field_b = var8.readUnsignedByte(255);
+        an.field_k = var8.readLong(-32768);
         if (gj.field_a == 2) {
-          gb.field_h = var8.i(65280);
-          vq.field_H = var8.e((byte) -34);
+          gb.field_h = var8.readUnsignedShort(65280);
+          vq.field_H = var8.readUnsignedMedium((byte) -34);
         } else {
           gb.field_h = 0;
           vq.field_H = 0;
         }
-        stackIn_11_0 = (var8.l(255) != 1) ? 0 : 1;
+        stackIn_11_0 = (var8.readUnsignedByte(255) != 1) ? 0 : 1;
         var4 = stackIn_11_0;
-        dp.field_t = var8.d(-1);
+        dp.field_t = var8.readCp1252String(-1);
         if (var4 != 0) {
-          nd.field_g = var8.d(-1);
+          nd.field_g = var8.readCp1252String(-1);
         } else {
           nd.field_g = dp.field_t;
         }
@@ -212,15 +212,15 @@ final class kc extends IntrusiveNode {
           ka.field_E = 0;
           sl.field_y = null;
         } else {
-          ka.field_E = var8.i(param0 ^ 65347);
-          sl.field_y = var8.d(-1);
+          ka.field_E = var8.readUnsignedShort(param0 ^ 65347);
+          sl.field_y = var8.readCp1252String(-1);
         }
         if (!param1) {
           gd.field_d = bj.a(80, (byte) 76, var8);
           rn.field_m = null;
           return new gb(param1);
         }
-        var5 = var8.i(65280);
+        var5 = var8.readUnsignedShort(65280);
         try {
           var9 = nh.field_c.a(var5, true);
           gd.field_d = var9.h(-3);

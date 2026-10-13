@@ -61,7 +61,7 @@ final class wd extends tk {
         return var2.toString();
     }
 
-    private final void a(int param0, int param1, wq param2) {
+    private final void a(int param0, int param1, PacketBuffer param2) {
         int[] array$0 = null;
         int var8 = 0;
         RuntimeException stackIn_22_0 = null;
@@ -81,24 +81,24 @@ final class wd extends tk {
           }
           if (param0 != 1) {
             if (param0 == 2) {
-              var4_int = param2.l(255);
+              var4_int = param2.readUnsignedByte(255);
               this.field_u = new int[var4_int];
               for (var5 = 0; var5 < var4_int; var5++) {
-                this.field_u[var5] = param2.i(65280);
+                this.field_u[var5] = param2.readUnsignedShort(65280);
               }
             } else if (param0 == 3) {
-              var4_int = param2.l(255);
+              var4_int = param2.readUnsignedByte(255);
               this.field_B = new int[var4_int];
               this.field_A = new int[var4_int][];
               for (var5 = 0; var4_int > var5; var5++) {
-                var6 = param2.i(65280);
+                var6 = param2.readUnsignedShort(65280);
                 var7 = Ball.a(var6, (byte) 84);
                 if (var7 != null) {
                   this.field_B[var5] = var6;
                   array$0 = new int[var7.field_g];
                   this.field_A[var5] = array$0;
                   for (var8 = 0; var7.field_g > var8; var8++) {
-                    this.field_A[var5][var8] = param2.i(65280);
+                    this.field_A[var5][var8] = param2.readUnsignedShort(65280);
                   }
                 }
               }
@@ -108,7 +108,7 @@ final class wd extends tk {
               }
             }
           } else {
-            this.field_y = qb.a((byte) -63, param2.d(-1), '<');
+            this.field_y = qb.a((byte) -63, param2.readCp1252String(-1), '<');
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -125,7 +125,7 @@ final class wd extends tk {
         }
     }
 
-    final void a(wq param0, int param1) {
+    final void a(PacketBuffer param0, int param1) {
         int var3_int = 0;
         int var4 = 0;
         RuntimeException stackIn_9_0 = null;
@@ -139,7 +139,7 @@ final class wd extends tk {
             this.g(-2);
           }
           while (true) {
-            var3_int = param0.l(255);
+            var3_int = param0.readUnsignedByte(255);
             if (var3_int == 0) {
               return;
             }
@@ -219,7 +219,7 @@ final class wd extends tk {
         if (1 == param1) {
           var18 = bm.field_d;
           var20 = ef.field_b[0];
-          var19 = mj.field_a;
+          var19 = LegacyUtf8Decoder.field_a;
           var18.field_d.a(var19, param0 ^ 864, 11, var20);
           var21 = bm.field_d;
           var23 = ef.field_b[1];

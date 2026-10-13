@@ -14,8 +14,8 @@ final class eb extends ff {
     public static void a(boolean param0) {
         field_r = (int[][]) null;
         if (param0) {
-          wq var2 = (wq) null;
-          eb.a((om) null, (wq) null, -20, false);
+          PacketBuffer var2 = (PacketBuffer) null;
+          eb.a((om) null, (PacketBuffer) null, -20, false);
         }
         field_m = null;
         field_p = (String[][]) null;
@@ -29,7 +29,7 @@ final class eb extends ff {
         return vh.field_X;
     }
 
-    final static void a(om param0, wq param1, int param2, boolean param3) {
+    final static void a(om param0, PacketBuffer param1, int param2, boolean param3) {
         int var8 = 0;
         om stackIn_6_0 = null;
         boolean stackIn_7_1 = false;
@@ -60,11 +60,11 @@ final class eb extends ff {
         var9 = BrickABrac.field_J ? 1 : 0;
         try {
           if (param3) {
-            param0.field_cc = param1.l(255);
+            param0.field_cc = param1.readUnsignedByte(255);
           }
-          param0.field_jc = param1.l(255);
-          param0.field_kc = param1.l(param2 ^ 255);
-          var4_int = param1.l(255);
+          param0.field_jc = param1.readUnsignedByte(255);
+          param0.field_kc = param1.readUnsignedByte(param2 ^ 255);
+          var4_int = param1.readUnsignedByte(255);
           stackIn_6_0 = (om) (param0);
           stackIn_7_1 = ((var4_int & 128) != 0);
           stackIn_6_0.field_bc = stackIn_7_1;
@@ -89,24 +89,24 @@ final class eb extends ff {
           stackIn_22_0.field_wc = stackIn_23_1;
           stackIn_26_0 = ((4 & var4_int) == 0) ? 0 : 1;
           var5 = stackIn_26_0;
-          param1.a(0, param0.field_Tb, param2 ^ 125, param0.field_Tb.length);
+          param1.readBytes(0, param0.field_Tb, param2 ^ 125, param0.field_Tb.length);
           stackIn_29_0 = ((var4_int & 2) == 0) ? 0 : 1;
           var6 = stackIn_29_0;
-          param0.field_vc = param1.i(65280);
-          param0.field_qc = ue.a(false) - (long)param1.e(255);
+          param0.field_vc = param1.readUnsignedShort(65280);
+          param0.field_qc = ue.a(false) - (long)param1.readInt(255);
           if (var5 != 0) {
-            param0.field_yc = param1.e(255);
+            param0.field_yc = param1.readInt(255);
           } else {
             param0.field_yc = -1;
           }
-          param0.field_xc = param1.g(-32768);
-          var7 = param1.field_l;
-          param0.field_Fc = param1.d(~param2);
+          param0.field_xc = param1.readLong(-32768);
+          var7 = param1.position;
+          param0.field_Fc = param1.readCp1252String(~param2);
           if (var6 != 0) {
             param0.field_Qb = new String[param0.field_cc];
-            param1.field_l = var7;
+            param1.position = var7;
             for (var8 = 0; param0.field_cc > var8; var8++) {
-              param0.field_Qb[var8] = param1.d(-1);
+              param0.field_Qb[var8] = param1.readCp1252String(-1);
             }
             return;
           }
@@ -141,10 +141,10 @@ final class eb extends ff {
         }
     }
 
-    final void a(int param0, wq param1) {
+    final void a(int param0, PacketBuffer param1) {
         try {
-          param1.a(param0, this.field_k);
-          param1.a(false, this.field_o);
+          param1.writePrefixedCp1252String(param0, this.field_k);
+          param1.writeBase38Name(false, this.field_o);
         } catch (RuntimeException runtimeException) {
           throw qb.a((Throwable) ((Object) runtimeException), "eb.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

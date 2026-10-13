@@ -40,8 +40,8 @@ final class im {
           IOException var15 = null;
           RuntimeException var15_ref = null;
           try {
-            jl.field_e = new pi(param4);
-            k.field_h = new pi(param5);
+            jl.field_e = new BitPacketBuffer(param4);
+            k.field_h = new BitPacketBuffer(param5);
             fe.field_ob = param6;
             tq.field_h = param1;
             lh.field_s = param8;
@@ -109,11 +109,11 @@ final class im {
         }
     }
 
-    final void a(byte[] param0, int param1, wq param2) {
+    final void a(byte[] param0, int param1, PacketBuffer param2) {
         try {
           try {
-            if (param2.field_k[param2.field_l] != 31 ||
-              -117 != param2.field_k[param2.field_l + 1]) {
+            if (param2.data[param2.position] != 31 ||
+              -117 != param2.data[param2.position + 1]) {
               throw new RuntimeException("");
             }
             if (this.field_b == null) {
@@ -123,7 +123,7 @@ final class im {
               im.b(-99);
             }
             try {
-              this.field_b.setInput(param2.field_k, param2.field_l + 10, param2.field_k.length + (-8 - param2.field_l) - 10);
+              this.field_b.setInput(param2.data, param2.position + 10, param2.data.length + (-8 - param2.position) - 10);
               this.field_b.inflate(param0);
             } catch (Exception exception) {
               this.field_b.reset();

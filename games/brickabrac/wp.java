@@ -236,23 +236,23 @@ final class wp {
               stackIn_5_0 = -1;
               return stackIn_5_0;
             }
-            if (pi.field_u == rf.field_b) {
+            if (BitPacketBuffer.field_u == rf.field_b) {
               if (param1) {
                 var10 = (String) null;
                 cg.field_s = he.a(sl.field_v, 20, false, param5, (String) null);
               } else {
                 cg.field_s = ih.a(param0, false, param5, (byte) -109);
               }
-              k.field_h.field_l = 0;
-              k.field_h.a(28, 14);
-              k.field_h.a(107, cg.field_s.a(13).field_a);
+              k.field_h.position = 0;
+              k.field_h.writeByte(28, 14);
+              k.field_h.writeByte(107, cg.field_s.a(13).field_a);
               cr.a(-1, 10000);
               rf.field_b = GameScreen.field_c;
             }
             if (rf.field_b == GameScreen.field_c &&
               vd.a(20, 1)) {
-              var6_int = jl.field_e.l(255);
-              jl.field_e.field_l = 0;
+              var6_int = jl.field_e.readUnsignedByte(255);
+              jl.field_e.position = 0;
               if (var6_int == 0) {
                 rf.field_b = dc.field_f;
               } else {
@@ -263,18 +263,18 @@ final class wp {
             }
             if (rf.field_b == dc.field_f &&
               vd.a(20, 8)) {
-              bj.field_ab = jl.field_e.g(-32768);
-              jl.field_e.field_l = 0;
+              bj.field_ab = jl.field_e.readLong(-32768);
+              jl.field_e.position = 0;
               mp.a(param4, cg.field_s, param1, param3, false);
               rf.field_b = rq.field_c;
             }
             boolean decompiledFrameRemainder0 = true;
             if (rf.field_b == rq.field_c &&
               vd.a(20, 1)) {
-              var6_intLifetime1 = jl.field_e.l(255);
+              var6_intLifetime1 = jl.field_e.readUnsignedByte(255);
               ai.field_t = null;
               si.field_a = var6_intLifetime1;
-              jl.field_e.field_l = 0;
+              jl.field_e.position = 0;
               if (var6_intLifetime1 != 0 &&
                 var6_intLifetime1 != 1) {
                 if (var6_intLifetime1 != 8) {
@@ -296,13 +296,13 @@ final class wp {
             }
             if (rf.field_b == fo.field_g &&
               um.b((byte) -80)) {
-              sl.field_v = jl.field_e.g(-32768);
+              sl.field_v = jl.field_e.readLong(-32768);
               gd.field_b = param5;
-              kb.field_Yb = jl.field_e.l(255);
-              gh.field_f = jl.field_e.l(255);
-              go.field_c = jl.field_e.i(65280);
-              var11 = jl.field_e.m(0);
-              var7 = jl.field_e.l(255);
+              kb.field_Yb = jl.field_e.readUnsignedByte(255);
+              gh.field_f = jl.field_e.readUnsignedByte(255);
+              go.field_c = jl.field_e.readUnsignedShort(65280);
+              var11 = jl.field_e.readNullableCp1252String(0);
+              var7 = jl.field_e.readUnsignedByte(255);
               if ((var7 & 1) != 0) {
                 n.a(-1);
               }
@@ -320,19 +320,19 @@ final class wp {
               stackIn_53_0 = ((16 & var7) != 0);
               ii.field_j = stackIn_53_0;
               if (ec.field_O) {
-                jl.field_e.l(255);
-                jl.field_e.l(255);
-                jl.field_e.e(255);
-                ta.field_f = jl.field_e.i(65280);
+                jl.field_e.readUnsignedByte(255);
+                jl.field_e.readUnsignedByte(255);
+                jl.field_e.readInt(255);
+                ta.field_f = jl.field_e.readUnsignedShort(65280);
                 gg.field_q = new byte[ta.field_f];
                 for (var8 = 0; ta.field_f > var8; var8++) {
-                  gg.field_q[var8] = jl.field_e.b(true);
+                  gg.field_q[var8] = jl.field_e.readByte(true);
                 }
               }
-              tb.field_cb = jl.field_e.d(-1);
+              tb.field_cb = jl.field_e.readCp1252String(-1);
               var12 = (CharSequence) ((Object) tb.field_cb);
               ih.field_d = gb.a(var12, 65);
-              fp.field_x = jl.field_e.l(255);
+              fp.field_x = jl.field_e.readUnsignedByte(255);
               rf.field_b = q.field_i;
               if (cg.field_s.a(13) == vh.field_X) {
                 uc.field_k.a(100, uc.e((byte) -66));
@@ -364,11 +364,11 @@ final class wp {
               if (go.field_c > 0) {
                 qb.field_u = true;
               }
-              k.field_h.a(lc.field_a, -98);
+              k.field_h.initializeOpcodeCipher(lc.field_a, -98);
               for (var8Lifetime1 = 0; var8Lifetime1 < 4; var8Lifetime1++) {
                 lc.field_a[var8Lifetime1] = lc.field_a[var8Lifetime1] + 50;
               }
-              jl.field_e.a(lc.field_a, -62);
+              jl.field_e.initializeOpcodeCipher(lc.field_a, -62);
               stackIn_81_0 = si.field_a;
               return stackIn_81_0;
             }
@@ -387,7 +387,7 @@ final class wp {
               if (si.field_a == 7) {
                 si.field_a = 3;
               }
-              eo.field_e = jl.field_e.d(-1);
+              eo.field_e = jl.field_e.readCp1252String(-1);
               pf.field_d = false;
               stackIn_95_0 = si.field_a;
               return stackIn_95_0;

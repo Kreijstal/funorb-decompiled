@@ -22,7 +22,7 @@ final class br extends mh {
     final static void a(int param0, byte param1, int param2) {
         om var6 = null;
         om var7 = null;
-        pi var4 = null;
+        BitPacketBuffer var4 = null;
         if (re.field_i != param2) {
           var6 = (om) (pn.field_i.a((long)re.field_i, -1));
           var7 = var6;
@@ -31,10 +31,10 @@ final class br extends mh {
           }
           re.field_i = param2;
           var4 = k.field_h;
-          var4.e(-13413, param0);
-          var4.a(-29, 3);
-          var4.a(-127, 11);
-          var4.b((byte) 121, param2);
+          var4.writeCipheredOpcode(-13413, param0);
+          var4.writeByte(-29, 3);
+          var4.writeByte(-127, 11);
+          var4.writeShort((byte) 121, param2);
         }
         int var3 = 20 / ((55 - param1) / 62);
     }

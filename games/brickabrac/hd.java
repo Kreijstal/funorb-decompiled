@@ -22,16 +22,16 @@ final class hd {
     }
 
     final static void a(long param0, int param1, int param2) {
-        pi var4 = k.field_h;
-        var4.e(-13413, param2);
-        var4.field_l = var4.field_l + 1;
-        int var5 = var4.field_l;
-        var4.a(-115, 6);
+        BitPacketBuffer var4 = k.field_h;
+        var4.writeCipheredOpcode(-13413, param2);
+        var4.position = var4.position + 1;
+        int var5 = var4.position;
+        var4.writeByte(-115, 6);
         if (param1 <= 35) {
           hd.a(true);
         }
-        var4.a(-23054, param0);
-        var4.d((byte) 121, -var5 + var4.field_l);
+        var4.writeLong(-23054, param0);
+        var4.backfillByteLength((byte) 121, -var5 + var4.position);
     }
 
     final static void a(int param0, ta param1, int param2, int param3) {

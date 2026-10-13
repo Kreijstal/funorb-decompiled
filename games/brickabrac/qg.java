@@ -74,7 +74,7 @@ abstract class qg extends ke {
         ap.a((byte) 117, kj.field_D);
         nd.field_c = param4;
         lc.field_i = param5;
-        wq.field_j = param1;
+        PacketBuffer.field_j = param1;
         o.field_f = param6;
         ea.field_c = param2;
         if (param0 != 39) {
@@ -323,7 +323,7 @@ abstract class qg extends ke {
           int var8 = 0;
           String var9 = null;
           Boolean var11 = null;
-          wq var12 = null;
+          PacketBuffer var12 = null;
           int var5_intLifetime1;
           int var5_intLifetime2;
           var8 = BrickABrac.field_J ? 1 : 0;
@@ -402,7 +402,7 @@ abstract class qg extends ke {
             NodeDeque.a(uc.e((byte) -108), (byte) -106);
           }
           if (var4 == 10) {
-            k.field_h.e(-13413, 17);
+            k.field_h.writeCipheredOpcode(-13413, 17);
           }
           if (var4 == 11) {
             mi.a((byte) -123, uc.e((byte) -93));
@@ -418,7 +418,7 @@ abstract class qg extends ke {
               if (po.field_e.a(1)) {
                 var12 = po.field_e.a((byte) 100);
                 if (var12 != null) {
-                  var7 = df.a(var12.field_l, 97, var12.field_k, 0);
+                  var7 = df.decodeCp1252(var12.position, 97, var12.data, 0);
                   hi.a(85, var7);
                 } else {
                   var9 = (String) null;
@@ -813,7 +813,7 @@ abstract class qg extends ke {
         }
         if (field_A == param1) {
           if (cd.field_e != 0) {
-            wl.field_K = aj.a(wq.field_j, true);
+            wl.field_K = aj.a(PacketBuffer.field_j, true);
           }
           ma.field_P = bq.a(-6, 1, true, nd.field_c, false);
           vh.field_S = bq.a(-6, 1, true, ea.field_c, false);
@@ -924,14 +924,14 @@ abstract class qg extends ke {
     }
 
     private final void a(byte param0) {
-        int var2 = jl.field_e.l(255);
+        int var2 = jl.field_e.readUnsignedByte(255);
         int var3 = (1 & var2) != 0 ? 1 : 0;
         int var4 = -1 + ga.field_j;
         byte[] var5 = new byte[var4];
         if (param0 != 120) {
           return;
         }
-        jl.field_e.a(false, 0, var4, var5);
+        jl.field_e.readCipheredBytes(false, 0, var4, var5);
         fk.a((byte) 114, uc.e((byte) -73), q.a(var5, (byte) 70), var3 != 0);
     }
 

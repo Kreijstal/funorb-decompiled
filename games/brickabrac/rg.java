@@ -27,7 +27,7 @@ final class rg {
         }
         var3 = new wd();
         if (var4 != null) {
-          var3.a(new wq(var4), -3);
+          var3.a(new PacketBuffer(var4), -3);
         }
         if (param0 >= 32768) {
           var3.g(-126);

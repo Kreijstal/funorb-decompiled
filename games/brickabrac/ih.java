@@ -12,11 +12,11 @@ abstract class ih {
     lq field_c;
     int field_b;
     long field_o;
-    wq field_m;
+    PacketBuffer field_m;
     byte field_h;
     volatile int field_i;
     volatile int field_f;
-    wq field_l;
+    PacketBuffer field_l;
     da field_e;
 
     abstract void a(byte param0);
@@ -192,11 +192,11 @@ abstract class ih {
         this.field_n = new lq();
         this.field_a = new lq();
         this.field_c = new lq();
-        this.field_m = new wq(6);
+        this.field_m = new PacketBuffer(6);
         this.field_i = 0;
         this.field_h = (byte) 0;
         this.field_f = 0;
-        this.field_l = new wq(10);
+        this.field_l = new PacketBuffer(10);
     }
 
     static {

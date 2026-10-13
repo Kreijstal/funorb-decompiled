@@ -101,7 +101,7 @@ final class td extends ki {
         } else {
           var6 = PowerUp.a(this.field_m, param3, -20777);
           if (!var6.a((byte) -84, param3, this.field_m)) {
-            pi.a(se.field_k, var6, param3, 1, (byte) 18, 0);
+            BitPacketBuffer.a(se.field_k, var6, param3, 1, (byte) 18, 0);
             var6.a(this.field_m, param3, (byte) 78);
           }
           ko.a(-91, -7, pb.field_j, param1, var6.field_p, param3, 640, 1, param4, param2, cp.field_I);
@@ -130,7 +130,7 @@ final class td extends ki {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param5 == 10792131) {
-            stackIn_4_0 = dq.a(param0, true, new wq(param1), param3, param2, param4);
+            stackIn_4_0 = dq.a(param0, true, new PacketBuffer(param1), param3, param2, param4);
             return stackIn_4_0;
           }
           stackIn_2_0 = 21;
@@ -192,7 +192,7 @@ final class td extends ki {
         } else {
           var6 = kd.a(this.field_m, param3, (byte) -111);
           if (!var6.a((byte) -84, param3, this.field_m)) {
-            pi.a(RectangleBody.field_p, var6, param3, 2, (byte) 119, -14);
+            BitPacketBuffer.a(RectangleBody.field_p, var6, param3, 2, (byte) 119, -14);
             var6.a(this.field_m, param3, (byte) 78);
           }
           ko.a(-113, -14, cg.field_q, param4, var6.field_p, param3, 306, 2, param2, param0, gq.field_Sb);

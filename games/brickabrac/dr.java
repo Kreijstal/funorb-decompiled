@@ -11,7 +11,7 @@ final class dr {
         if (var3 == null) {
           return null;
         }
-        return new dr(new wq(var3));
+        return new dr(new PacketBuffer(var3));
     }
 
     final oe a() {
@@ -59,19 +59,19 @@ final class dr {
         return var3;
     }
 
-    private dr(wq param0) {
+    private dr(PacketBuffer param0) {
         int var2 = 0;
         int var3;
         this.field_b = new qq[10];
         for (var2 = 0; var2 < 10; var2++) {
-          var3 = param0.l(255);
+          var3 = param0.readUnsignedByte(255);
           if (var3 != 0) {
-            param0.field_l = param0.field_l - 1;
+            param0.position = param0.position - 1;
             this.field_b[var2] = new qq();
             this.field_b[var2].a(param0);
           }
         }
-        this.field_c = param0.i(65280);
-        this.field_a = param0.i(65280);
+        this.field_c = param0.readUnsignedShort(65280);
+        this.field_a = param0.readUnsignedShort(65280);
     }
 }

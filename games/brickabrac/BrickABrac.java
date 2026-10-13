@@ -145,7 +145,7 @@ public final class BrickABrac extends sa {
         return stackIn_8_0;
     }
 
-    final boolean a(pi param0, byte param1, int param2) {
+    final boolean a(BitPacketBuffer param0, byte param1, int param2) {
         int var8_int = 0;
         int fieldTemp$0 = 0;
         int var10 = 0;
@@ -157,7 +157,7 @@ public final class BrickABrac extends sa {
         boolean stackIn_75_1 = false;
         GameplayScreen stackIn_99_0 = null;
         int stackIn_99_1 = 0;
-        pi stackIn_99_2 = null;
+        BitPacketBuffer stackIn_99_2 = null;
         boolean stackIn_100_3;
         RuntimeException stackIn_137_0 = null;
         StringBuilder stackIn_137_1 = null;
@@ -182,7 +182,7 @@ public final class BrickABrac extends sa {
         int[] var19 = null;
         int[] var21 = null;
         int[] var23 = null;
-        pi var25 = null;
+        BitPacketBuffer var25 = null;
         int[] var26 = null;
         int[] var27 = null;
         int[] var28 = null;
@@ -209,7 +209,7 @@ public final class BrickABrac extends sa {
             sk.i((byte) -113);
             vh.field_L = false;
             ng.a(false, param1 + 66, 11);
-            kk.a(true, param0.d(-1));
+            kk.a(true, param0.readCp1252String(-1));
             return true;
           }
           if (14 == param2) {
@@ -247,9 +247,9 @@ public final class BrickABrac extends sa {
             var18 = var4;
             var5_array = var18;
             var25 = param0;
-            var7 = ((wq) ((Object) var25)).l(255);
+            var7 = ((PacketBuffer) ((Object) var25)).readUnsignedByte(255);
             for (var8_int = 0; var7 > var8_int; var8_int++) {
-              var18[var8_int] = ((wq) ((Object) var25)).e(255);
+              var18[var8_int] = ((PacketBuffer) ((Object) var25)).readInt(255);
             }
             var34 = var4;
             var26 = var34;
@@ -353,7 +353,7 @@ public final class BrickABrac extends sa {
                   return true;
                 }
                 if (si.field_a == 70) {
-                  pe.field_o.match.field_j = param0.l(255);
+                  pe.field_o.match.field_j = param0.readUnsignedByte(255);
                   if (pe.field_o != null) {
                     fr.a(1);
                   }
@@ -361,7 +361,7 @@ public final class BrickABrac extends sa {
                 }
                 decompiledFrameRemainder0 = (si.field_a == 71);
                 if (decompiledFrameRemainder0) {
-                  pe.field_o.field_v = param0.l(255);
+                  pe.field_o.field_v = param0.readUnsignedByte(255);
                   if (pe.field_o != null) {
                     fr.a(1);
                   }
@@ -371,7 +371,7 @@ public final class BrickABrac extends sa {
               if (decompiledFrameRemainder0) {
                 stackIn_99_0 = pe.field_o;
                 stackIn_99_1 = -15;
-                stackIn_99_2 = (pi) (param0);
+                stackIn_99_2 = (BitPacketBuffer) (param0);
                 stackIn_100_3 = (si.field_a == 74);
                 ((GameplayScreen) (Object) stackIn_99_0).a((byte) stackIn_99_1, stackIn_99_2, stackIn_100_3);
                 return true;
@@ -383,18 +383,18 @@ public final class BrickABrac extends sa {
             return true;
           }
           sk.i((byte) -125);
-          stackIn_44_0 = (param0.l(255) == 0) ? 0 : 1;
+          stackIn_44_0 = (param0.readUnsignedByte(255) == 0) ? 0 : 1;
           var4_int = stackIn_44_0;
-          var30 = new String[param0.l(255)];
+          var30 = new String[param0.readUnsignedByte(255)];
           var5 = var30;
-          var6Lifetime1 = param0.b(true);
+          var6Lifetime1 = param0.readByte(true);
           for (var7 = 0; var30.length > var7; var7++) {
-            var5[var7] = param0.f(255);
+            var5[var7] = param0.readPrefixedCp1252String(255);
           }
           if (var6Lifetime1 < 0) {
             var6Lifetime1 = -2;
           }
-          var7 = param0.e(param1 ^ 208);
+          var7 = param0.readInt(param1 ^ 208);
           var8 = new fo(new int[]{var7});
           var39 = new int[var30.length];
           var32 = var39;
@@ -403,7 +403,7 @@ public final class BrickABrac extends sa {
             var9[var10] = var8.b(105);
           }
           var49 = kk.a(false, tq.field_d.field_i, var8);
-          var11 = param0.b(true);
+          var11 = param0.readByte(true);
           var12 = new oi(tq.field_d, var49, var11);
           var13 = var8.a(-37880252, 11);
           oa.field_Sb = rd.a(var13, (byte) 19);
@@ -417,7 +417,7 @@ public final class BrickABrac extends sa {
           var15 = stackIn_56_0;
           pe.field_o = new GameplayScreen(true, var4_int != 0, var30, var6Lifetime1, var15, var12, var39, var50);
           stackIn_58_0 = pe.field_o;
-          stackIn_59_1 = (param0.l(255) == 0);
+          stackIn_59_1 = (param0.readUnsignedByte(255) == 0);
           stackIn_58_0.field_q = stackIn_59_1;
           if (!pe.field_o.field_q) {
             pe.field_o.field_x = 0;
@@ -572,7 +572,7 @@ public final class BrickABrac extends sa {
         fo.a(2);
         sc.a(81);
         ue.a((byte) -114);
-        pi.o(60);
+        BitPacketBuffer.clearStaticReferences(60);
         ap.a(!param0 ? true : false);
         nh.b(120);
         qg.k(-113);
@@ -598,7 +598,7 @@ public final class BrickABrac extends sa {
         mf.a(false);
         t.a(-11470);
         wm.a(108);
-        wq.h(0);
+        PacketBuffer.clearStaticStrings(0);
         wn.c((byte) -41);
         vg.b(13);
         rd.a((byte) 46);
@@ -728,7 +728,7 @@ public final class BrickABrac extends sa {
         ta.a(0);
         np.a(true);
         rn.b(57);
-        mj.b((byte) 124);
+        LegacyUtf8Decoder.clearStaticReferences((byte) 124);
         cp.j((byte) -113);
         tb.m(-48);
         bh.n(28);

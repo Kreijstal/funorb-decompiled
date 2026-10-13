@@ -66,50 +66,50 @@ abstract class MovingBody extends IntrusiveNode {
         this.typeId = typeId;
     }
 
-    void readBodySnapshot(int obfuscationGuard, wq packet) {
+    void readBodySnapshot(int obfuscationGuard, PacketBuffer packet) {
         RuntimeException stackIn_18_0 = null;
         StringBuilder stackIn_18_1 = null;
         String stackIn_19_2 = null;
         RuntimeException decompiledCaughtException = null;
-        int var3_int = 0;
+        int header = 0;
         RuntimeException var3 = null;
         int var4 = 0;
         int var5 = 0;
-        int var6 = 0;
+        int gridColumn = 0;
         int var7 = 0;
         var7 = BrickABrac.field_J ? 1 : 0;
         try {
-          var3_int = packet.l(255);
-          if (0 != (128 & var3_int)) {
-            var4 = packet.l(255);
-            var5 = (var3_int & 7) << 3;
+          header = packet.readUnsignedByte(255);
+          if (0 != (128 & header)) {
+            var4 = packet.readUnsignedByte(255);
+            var5 = (header & 7) << 3;
             var5 = var5 | (224 & var4) >> 5;
-            var6 = 31 & var4;
-            this.x256 = var6 * 34 << 8;
+            gridColumn = 31 & var4;
+            this.x256 = gridColumn * 34 << 8;
             this.y256 = var5 * 16 << 8;
           } else {
-            var4 = var3_int & 12;
-            var5 = var3_int & 3;
-            this.x256 = var4 << 14 | packet.i(65280);
-            this.y256 = var5 << 16 | packet.i(65280);
+            var4 = header & 12;
+            var5 = header & 3;
+            this.x256 = var4 << 14 | packet.readUnsignedShort(65280);
+            this.y256 = var5 << 16 | packet.readUnsignedShort(65280);
           }
-          if ((64 & var3_int) == 0) {
+          if ((64 & header) == 0) {
             this.velocityX256 = 0;
             this.velocityY256 = 0;
           } else {
-            this.velocityX256 = packet.a(127);
-            this.velocityY256 = packet.a(127);
+            this.velocityX256 = packet.readShort(127);
+            this.velocityY256 = packet.readShort(127);
           }
-          if ((var3_int & 32) == 0) {
+          if ((header & 32) == 0) {
             this.stateWord = 0;
           } else {
-            this.stateWord = packet.l(255);
+            this.stateWord = packet.readUnsignedByte(255);
           }
           if (obfuscationGuard < 89) {
             return;
           }
-          if ((var3_int & 16) != 0) {
-            this.typeId = packet.l(255);
+          if ((header & 16) != 0) {
+            this.typeId = packet.readUnsignedByte(255);
           } else {
             this.typeId = 0;
           }

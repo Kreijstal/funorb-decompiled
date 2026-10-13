@@ -3,7 +3,7 @@
  */
 final class ai extends ki {
     static String field_t;
-    static char[] field_r;
+    static char[] cp1252Extensions;
     static boolean field_s;
 
     final void a(byte param0, int param1, int param2, int param3) {
@@ -58,7 +58,7 @@ final class ai extends ki {
         try {
           ri.field_N = param2;
           if (param0 != 24) {
-            ai.a((byte) 116, (wq) null);
+            ai.a((byte) 116, (PacketBuffer) null);
           }
           ep.field_a = param1;
           return;
@@ -76,7 +76,7 @@ final class ai extends ki {
         }
     }
 
-    final static wk a(byte param0, wq param1) {
+    final static wk a(byte param0, PacketBuffer param1) {
         wk var2 = null;
         RuntimeException var2_ref = null;
         wk stackIn_4_0 = null;
@@ -192,7 +192,7 @@ final class ai extends ki {
           return;
         }
         try {
-          field_r = null;
+          cp1252Extensions = null;
         } catch (RuntimeException runtimeException) {
           throw qb.a((Throwable) ((Object) runtimeException), "ai.N(" + param0 + ')');
         }
@@ -326,9 +326,9 @@ final class ai extends ki {
             break;
           }
           if (decompiledNaturalLoopExit0) {
-            mj.field_c = new mh(0L, param4);
-            mj.field_c.field_Mb = vh.field_Y;
-            gp.field_d.a(mj.field_c, 0);
+            LegacyUtf8Decoder.field_c = new mh(0L, param4);
+            LegacyUtf8Decoder.field_c.field_Mb = vh.field_Y;
+            gp.field_d.a(LegacyUtf8Decoder.field_c, 0);
             stackIn_34_0 = ik.a(false) ? 1 : 0;
           }
           if (stackIn_34_0 != 0 &&
@@ -411,7 +411,7 @@ final class ai extends ki {
         RuntimeException var6_ref = null;
         try {
           if (!param0) {
-            field_r = (char[]) null;
+            cp1252Extensions = (char[]) null;
           }
           if (!this.b((byte) -97)) {
             lb.g(param4, param2, 640, 480, bg.field_u[param3], 928072);
@@ -434,7 +434,7 @@ final class ai extends ki {
     }
 
     static {
-        field_r = new char[]{'€', '\0', '‚', 'ƒ', '„', '…', '†', '‡', 'ˆ', '‰', 'Š', '‹', 'Œ', '\0', 'Ž', '\0', '\0', '‘', '’', '“', '”', '•', '–', '—', '˜', '™', 'š', '›', 'œ', '\0', 'ž', 'Ÿ'};
+        cp1252Extensions = new char[]{'€', '\0', '‚', 'ƒ', '„', '…', '†', '‡', 'ˆ', '‰', 'Š', '‹', 'Œ', '\0', 'Ž', '\0', '\0', '‘', '’', '“', '”', '•', '–', '—', '˜', '™', 'š', '›', 'œ', '\0', 'ž', 'Ÿ'};
         field_s = false;
     }
 }

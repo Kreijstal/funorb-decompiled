@@ -1,42 +1,42 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class pi extends wq {
+final class BitPacketBuffer extends PacketBuffer {
     static jp field_t;
-    private fo field_v;
-    private int field_n;
+    private fo opcodeCipher;
+    private int writeBitsRemaining;
     static String field_s;
-    private int field_p;
+    private int bitPosition;
     static int[] field_o;
     static lo field_r;
     static n field_u;
     static int field_q;
 
-    final void p(int param0) {
-        this.field_k[this.field_l] = (byte) 0;
-        this.field_n = 8;
-        if (param0 < 51) {
-          this.q(126);
+    final void beginBitWrite(int obfuscationGuard) {
+        this.data[this.position] = (byte) 0;
+        this.writeBitsRemaining = 8;
+        if (obfuscationGuard < 51) {
+          this.finishBitWrite(126);
         }
     }
 
-    pi(byte[] param0) {
-        super(param0);
+    BitPacketBuffer(byte[] data) {
+        super(data);
     }
 
-    final void a(int[] param0, int param1) {
+    final void initializeOpcodeCipher(int[] seed, int obfuscationGuard) {
         try {
-          this.field_v = new fo(param0);
-          int var3_int = -50 / ((param1 - 22) / 37);
+          this.opcodeCipher = new fo(seed);
+          int var3_int = -50 / ((obfuscationGuard - 22) / 37);
         } catch (RuntimeException runtimeException) {
-          throw qb.a((Throwable) ((Object) runtimeException), "pi.UA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw qb.a((Throwable) ((Object) runtimeException), "pi.UA(" + (seed != null ? "{...}" : "null") + ',' + obfuscationGuard + ')');
         }
     }
 
-    public static void o(int param0) {
+    public static void clearStaticReferences(int obfuscationGuard) {
         field_t = null;
         field_o = null;
-        if (param0 != 60) {
+        if (obfuscationGuard != 60) {
           field_s = (String) null;
         }
         field_r = null;
@@ -44,27 +44,27 @@ final class pi extends wq {
         field_s = null;
     }
 
-    pi(int param0) {
-        super(param0);
+    BitPacketBuffer(int capacity) {
+        super(capacity);
     }
 
-    final void n(int param0) {
-        if (param0 > -74) {
+    final void beginBitRead(int obfuscationGuard) {
+        if (obfuscationGuard > -74) {
           field_u = (n) null;
         }
-        this.field_p = 8 * this.field_l;
+        this.bitPosition = 8 * this.position;
     }
 
-    final void e(int param0, int param1) {
-        int fieldTemp$0 = this.field_l;
-        this.field_l = this.field_l + 1;
-        this.field_k[fieldTemp$0] = (byte)(param1 + this.field_v.b(111));
-        if (param0 != -13413) {
-          this.f((byte) -89);
+    final void writeCipheredOpcode(int obfuscationGuard, int opcode) {
+        int fieldTemp$0 = this.position;
+        this.position = this.position + 1;
+        this.data[fieldTemp$0] = (byte)(opcode + this.opcodeCipher.b(111));
+        if (obfuscationGuard != -13413) {
+          this.finishBitRead((byte) -89);
         }
     }
 
-    final static void a(byte param0, int param1, int param2, int param3, MultiplayerMatch param4, int param5) {
+    final static void drawBoard(byte obfuscationGuard, int playerId, int scaleDivisor, int destinationY, MultiplayerMatch match, int destinationX) {
         int stackIn_8_0 = 0;
         int stackIn_16_0 = 0;
         RuntimeException stackIn_74_0 = null;
@@ -103,21 +103,21 @@ final class pi extends wq {
         var25 = null;
         var21 = BrickABrac.field_J ? 1 : 0;
         try {
-          var24 = param4.playerBoards[param1];
+          var24 = match.playerBoards[playerId];
           var7 = var24.paddle;
           var8 = var24.boardWidth;
           var9 = var24.field_wb;
-          lb.e(param5, param3, param5 + var8 / param2, var9 / param2 + param3);
+          lb.e(destinationX, destinationY, destinationX + var8 / scaleDivisor, var9 / scaleDivisor + destinationY);
           if (var24.brickGroups != null) {
-            jo.a(param2, var24, param1, param4, param5, 30, param3);
+            jo.a(scaleDivisor, var24, playerId, match, destinationX, 30, destinationY);
           }
           if (var24.field_M != -1) {
             var10_double = (double)(500 - var24.field_M);
             var10_double = (var10_double / 666.0 + 1.0) * (var10_double / 10.0);
             var10_double = 30.0 * Math.sin(var10_double) + 60.0;
-            lb.d(param5, param3, var8 / param2, var9 - param2, 16724787, (int)var10_double);
+            lb.d(destinationX, destinationY, var8 / scaleDivisor, var9 - scaleDivisor, 16724787, (int)var10_double);
           }
-          stackIn_8_0 = (((param4.playerMaskTwo | param4.playerMaskOne | param4.playerMaskThree) & 1 << param1) == 0) ? 0 : 1;
+          stackIn_8_0 = (((match.playerMaskTwo | match.playerMaskOne | match.playerMaskThree) & 1 << playerId) == 0) ? 0 : 1;
           var10 = stackIn_8_0;
           if (var24.field_Z == 2 &&
             var10 == 0) {
@@ -139,7 +139,7 @@ final class pi extends wq {
                 if (var18 < var14) {
                   var19 = var12_ref_vn.centerXHistory256.get(var13, 1);
                   var20 = var12_ref_vn.centerYHistory256.get(var13, 1);
-                  lb.a((param5 << 4) + (var19 >> 4) / param2, (var20 >> 4) / param2 + (param3 << 4), var17 / param2 >> 4, var15, ag.field_M);
+                  lb.a((destinationX << 4) + (var19 >> 4) / scaleDivisor, (var20 >> 4) / scaleDivisor + (destinationY << 4), var17 / scaleDivisor >> 4, var15, ag.field_M);
                   var15 = var15 - var16;
                   var17 = var17 * 252 >> 8;
                   var13--;
@@ -149,25 +149,25 @@ final class pi extends wq {
                 break;
               }
               if (var12_ref_vn.contactCount >= 40) {
-                al.a((var12_ref_vn.radius256 >> 8) / param2 + (param3 + (var12_ref_vn.y256 >> 8) / param2), 40 / param2, 256, sa.a(100 * de.field_x, -4097) * 10 >> 16, 123, 20 / param2, (var12_ref_vn.x256 >> 8) / param2 + param5 + (var12_ref_vn.radius256 >> 8) / param2);
-                la.a((var12_ref_vn.x256 + var12_ref_vn.radius256 >> 4) / param2 + (param5 << 4), (param3 << 4) + (var12_ref_vn.y256 + var12_ref_vn.radius256 >> 4) / param2, (var12_ref_vn.radius256 >> 3) / param2, 4, 3, lj.field_n, var24.simulationTick / 5);
+                al.a((var12_ref_vn.radius256 >> 8) / scaleDivisor + (destinationY + (var12_ref_vn.y256 >> 8) / scaleDivisor), 40 / scaleDivisor, 256, sa.a(100 * de.field_x, -4097) * 10 >> 16, 123, 20 / scaleDivisor, (var12_ref_vn.x256 >> 8) / scaleDivisor + destinationX + (var12_ref_vn.radius256 >> 8) / scaleDivisor);
+                la.a((var12_ref_vn.x256 + var12_ref_vn.radius256 >> 4) / scaleDivisor + (destinationX << 4), (destinationY << 4) + (var12_ref_vn.y256 + var12_ref_vn.radius256 >> 4) / scaleDivisor, (var12_ref_vn.radius256 >> 3) / scaleDivisor, 4, 3, lj.field_n, var24.simulationTick / 5);
               }
-              kq.a(var12_ref_vn, (byte) -119, param2, param5, param3);
+              kq.a(var12_ref_vn, (byte) -119, scaleDivisor, destinationX, destinationY);
               var12_ref_vn = (Ball) (var24.activeBalls.next((byte) 116));
             }
             var26 = (Ball) (var24.queuedBalls.first(-76));
             while (var26 != null) {
-              kq.a(var26, (byte) -119, param2, param5, param3);
+              kq.a(var26, (byte) -119, scaleDivisor, destinationX, destinationY);
               var26 = (Ball) (var24.queuedBalls.next((byte) 116));
             }
             var12_ref_ge = (PowerUp) (var24.fallingPowerUps.first(-113));
             while (var12_ref_ge != null) {
-              we.field_b[var12_ref_ge.typeId].c(param5 + (var12_ref_ge.x256 >> 8) / param2, (var12_ref_ge.y256 >> 8) / param2 + param3);
+              we.field_b[var12_ref_ge.typeId].c(destinationX + (var12_ref_ge.x256 >> 8) / scaleDivisor, (var12_ref_ge.y256 >> 8) / scaleDivisor + destinationY);
               var12_ref_ge = (PowerUp) (var24.fallingPowerUps.next((byte) 116));
             }
             var12_ref_il = (il) (var24.field_C.first(-20));
             while (var12_ref_il != null) {
-              la.a((var12_ref_il.x256 >> 4) / param2 + (param5 << 4), (var12_ref_il.y256 >> 4) / param2 + (param3 << 4), (var12_ref_il.radius256 >> 4) / param2, var12_ref_il.field_v);
+              la.a((var12_ref_il.x256 >> 4) / scaleDivisor + (destinationX << 4), (var12_ref_il.y256 >> 4) / scaleDivisor + (destinationY << 4), (var12_ref_il.radius256 >> 4) / scaleDivisor, var12_ref_il.field_v);
               var12_ref_il = (il) (var24.field_C.next((byte) 116));
             }
           }
@@ -175,14 +175,14 @@ final class pi extends wq {
             var24.field_Z == 4 ||
             var24.field_Z == 1) &&
             var10 == 0) {
-            oj.a(kb.a(param4, param1, 127, var24), var7, param2, param3, (byte) 107, var24, param5);
+            oj.a(kb.a(match, playerId, 127, var24), var7, scaleDivisor, destinationY, (byte) 107, var24, destinationX);
           }
           var27 = (kc) (var24.field_x.first(-30));
           while (var27 != null) {
-            var27.a(param2, param5, param3, true);
+            var27.a(scaleDivisor, destinationX, destinationY, true);
             var27 = (kc) (var24.field_x.next((byte) 116));
           }
-          if (param4.playerCount == 1 &&
+          if (match.playerCount == 1 &&
             var24.field_Z == 1) {
             var12 = 256;
             if (var24.field_P < 25) {
@@ -203,27 +203,27 @@ final class pi extends wq {
             ja.a((byte) -104, jk.field_u, var8, var9, var24);
           }
           if (null != var24.field_w) {
-            jg.a(param5, var24, var24.field_w, param2, 25, param3);
+            jg.a(destinationX, var24, var24.field_w, scaleDivisor, 25, destinationY);
           }
           if (var24.field_D != null) {
-            jg.a(param5, var24, var24.field_D, param2, 25, param3);
+            jg.a(destinationX, var24, var24.field_D, scaleDivisor, 25, destinationY);
           }
           var28 = (ScorePopup) (var24.scorePopups.first(-81));
-          if (param0 < 14) {
+          if (obfuscationGuard < 14) {
             return;
           }
           while (var28 != null) {
-            cn.a(var28, var24, 10030, param5, param3);
+            cn.a(var28, var24, 10030, destinationX, destinationY);
             var28 = (ScorePopup) (var24.scorePopups.next((byte) 116));
           }
-          if (0 != (param4.playerMaskThree & 1 << param1)) {
-            cp.a(param5, var8, var9, (byte) 126, var24, param3, param2);
+          if (0 != (match.playerMaskThree & 1 << playerId)) {
+            cp.a(destinationX, var8, var9, (byte) 126, var24, destinationY, scaleDivisor);
           }
-          if (0 != (1 << param1 & param4.playerMaskTwo)) {
-            bm.a(param5, param3, var9, var24, var8, param2, ci.field_s.toLowerCase(), (byte) 123);
+          if (0 != (1 << playerId & match.playerMaskTwo)) {
+            bm.a(destinationX, destinationY, var9, var24, var8, scaleDivisor, ci.field_s.toLowerCase(), (byte) 123);
           }
-          if ((param4.playerMaskOne & 1 << param1) != 0) {
-            bm.a(param5, param3, var9, var24, var8, param2, t.field_h.toLowerCase(), (byte) 76);
+          if ((match.playerMaskOne & 1 << playerId) != 0) {
+            bm.a(destinationX, destinationY, var9, var24, var8, scaleDivisor, t.field_h.toLowerCase(), (byte) 76);
           }
           lb.a();
           return;
@@ -231,63 +231,63 @@ final class pi extends wq {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = decompiledCaughtException;
           stackIn_74_0 = var6;
-          stackIn_74_1 = new StringBuilder().append("pi.FB(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
-          if (param4 == null) {
+          stackIn_74_1 = new StringBuilder().append("pi.FB(").append(obfuscationGuard).append(',').append(playerId).append(',').append(scaleDivisor).append(',').append(destinationY).append(',');
+          if (match == null) {
             stackIn_75_2 = "null";
           } else {
             stackIn_75_2 = "{...}";
           }
-          throw qb.a((Throwable) ((Object) stackIn_74_0), ((StringBuilder) (Object) stackIn_74_1).append(stackIn_75_2).append(',').append(param5).append(')').toString());
+          throw qb.a((Throwable) ((Object) stackIn_74_0), ((StringBuilder) (Object) stackIn_74_1).append(stackIn_75_2).append(',').append(destinationX).append(')').toString());
         }
     }
 
-    final void a(int param0, int param1, int param2) {
+    final void writeBits(int bitCount, int obfuscationGuard, int value) {
         int fieldTemp$1 = 0;
         int fieldTemp$0 = 0;
         int var5;
         var5 = BrickABrac.field_J ? 1 : 0;
-        param2 = param2 & kk.field_g[param0];
-        if (param1 != -17566) {
-          this.f((byte) 28);
+        value = value & kk.bitMasks[bitCount];
+        if (obfuscationGuard != -17566) {
+          this.finishBitRead((byte) 28);
         }
-        while (this.field_n < param0) {
-          param0 = param0 - this.field_n;
-          fieldTemp$1 = this.field_l;
-          this.field_l = this.field_l + 1;
-          this.field_k[fieldTemp$1] = (byte)(this.field_k[fieldTemp$1] + (param2 >>> param0));
-          this.field_k[this.field_l] = (byte) 0;
-          this.field_n = 8;
+        while (this.writeBitsRemaining < bitCount) {
+          bitCount = bitCount - this.writeBitsRemaining;
+          fieldTemp$1 = this.position;
+          this.position = this.position + 1;
+          this.data[fieldTemp$1] = (byte)(this.data[fieldTemp$1] + (value >>> bitCount));
+          this.data[this.position] = (byte) 0;
+          this.writeBitsRemaining = 8;
         }
-        if (this.field_n == param0) {
-          fieldTemp$0 = this.field_l;
-          this.field_l = this.field_l + 1;
-          this.field_k[fieldTemp$0] = (byte)(this.field_k[fieldTemp$0] + param2);
-          this.field_k[this.field_l] = (byte) 0;
-          this.field_n = 8;
+        if (this.writeBitsRemaining == bitCount) {
+          fieldTemp$0 = this.position;
+          this.position = this.position + 1;
+          this.data[fieldTemp$0] = (byte)(this.data[fieldTemp$0] + value);
+          this.data[this.position] = (byte) 0;
+          this.writeBitsRemaining = 8;
         } else {
-          this.field_n = this.field_n - param0;
-          this.field_k[this.field_l] = (byte)(this.field_k[this.field_l] + (param2 << this.field_n));
+          this.writeBitsRemaining = this.writeBitsRemaining - bitCount;
+          this.data[this.position] = (byte)(this.data[this.position] + (value << this.writeBitsRemaining));
         }
     }
 
-    final int d(boolean param0) {
-        if (!param0) {
+    final int readCipheredOpcode(boolean obfuscationGuard) {
+        if (!obfuscationGuard) {
           field_r = (lo) null;
         }
-        int fieldTemp$0 = this.field_l;
-        this.field_l = this.field_l + 1;
-        return 255 & this.field_k[fieldTemp$0] - this.field_v.b(99);
+        int fieldTemp$0 = this.position;
+        this.position = this.position + 1;
+        return 255 & this.data[fieldTemp$0] - this.opcodeCipher.b(99);
     }
 
-    final void f(byte param0) {
-        this.field_l = (this.field_p + 7) / 8;
-        if (param0 < 69) {
+    final void finishBitRead(byte obfuscationGuard) {
+        this.position = (this.bitPosition + 7) / 8;
+        if (obfuscationGuard < 69) {
           pb var3 = (pb) null;
-          pi.a((jp) null, (pb) null, 39, 118, (byte) 103, -79);
+          BitPacketBuffer.a((jp) null, (pb) null, 39, 118, (byte) 103, -79);
         }
     }
 
-    final void a(boolean param0, int param1, int param2, byte[] param3) {
+    final void readCipheredBytes(boolean obfuscationGuard, int destinationOffset, int length, byte[] destination) {
         int fieldTemp$0 = 0;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
@@ -300,14 +300,14 @@ final class pi extends wq {
         var6 = BrickABrac.field_J ? 1 : 0;
         try {
           var5_int = 0;
-          if (param0) {
+          if (obfuscationGuard) {
             var7 = (byte[]) null;
-            this.a(true, 24, -63, (byte[]) null);
+            this.readCipheredBytes(true, 24, -63, (byte[]) null);
           }
-          while (var5_int < param2) {
-            fieldTemp$0 = this.field_l;
-            this.field_l = this.field_l + 1;
-            param3[param1 + var5_int] = (byte)(this.field_k[fieldTemp$0] - this.field_v.b(126));
+          while (var5_int < length) {
+            fieldTemp$0 = this.position;
+            this.position = this.position + 1;
+            destination[destinationOffset + var5_int] = (byte)(this.data[fieldTemp$0] - this.opcodeCipher.b(126));
             var5_int++;
           }
           return;
@@ -315,8 +315,8 @@ final class pi extends wq {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
           stackIn_8_0 = var5;
-          stackIn_8_1 = new StringBuilder().append("pi.GB(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
-          if (param3 == null) {
+          stackIn_8_1 = new StringBuilder().append("pi.GB(").append(obfuscationGuard).append(',').append(destinationOffset).append(',').append(length).append(',');
+          if (destination == null) {
             stackIn_9_2 = "null";
           } else {
             stackIn_9_2 = "{...}";
@@ -332,42 +332,42 @@ final class pi extends wq {
           param0.c((param1.field_i - param0.field_x) / 2, -(75 / param3) - param0.field_z + (param5 + param1.field_q));
           sc.b(-102);
           if (param4 < 6) {
-            pi.o(102);
+            BitPacketBuffer.clearStaticReferences(102);
           }
         } catch (RuntimeException runtimeException) {
           throw qb.a((Throwable) ((Object) runtimeException), "pi.LB(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
     }
 
-    final int c(int param0, byte param1) {
-        int incrementValue$0 = 0;
+    final int readBits(int bitCount, byte obfuscationGuard) {
+        int previousByteIndex = 0;
         int var7 = BrickABrac.field_J ? 1 : 0;
-        int var4 = 84 % ((-27 - param1) / 58);
-        int var3 = this.field_p >> 3;
-        int var5 = -(7 & this.field_p) + 8;
-        int var6 = 0;
-        this.field_p = this.field_p + param0;
-        while (param0 > var5) {
-          incrementValue$0 = var3;
-          var3++;
-          var6 = var6 + ((kk.field_g[var5] & this.field_k[incrementValue$0]) << param0 - var5);
-          param0 = param0 - var5;
-          var5 = 8;
+        int var4 = 84 % ((-27 - obfuscationGuard) / 58);
+        int byteIndex = this.bitPosition >> 3;
+        int availableBits = -(7 & this.bitPosition) + 8;
+        int value = 0;
+        this.bitPosition = this.bitPosition + bitCount;
+        while (bitCount > availableBits) {
+          previousByteIndex = byteIndex;
+          byteIndex++;
+          value = value + ((kk.bitMasks[availableBits] & this.data[previousByteIndex]) << bitCount - availableBits);
+          bitCount = bitCount - availableBits;
+          availableBits = 8;
         }
-        if (var5 == param0) {
-          var6 = var6 + (this.field_k[var3] & kk.field_g[var5]);
+        if (availableBits == bitCount) {
+          value = value + (this.data[byteIndex] & kk.bitMasks[availableBits]);
         } else {
-          var6 = var6 + (this.field_k[var3] >> -param0 + var5 & kk.field_g[param0]);
+          value = value + (this.data[byteIndex] >> -bitCount + availableBits & kk.bitMasks[bitCount]);
         }
-        return var6;
+        return value;
     }
 
-    final void q(int param0) {
-        if (8 > this.field_n) {
-          this.field_n = 8;
-          this.field_l = this.field_l + 1;
+    final void finishBitWrite(int obfuscationGuard) {
+        if (8 > this.writeBitsRemaining) {
+          this.writeBitsRemaining = 8;
+          this.position = this.position + 1;
         }
-        int var2 = 53 % ((param0 + 14) / 35);
+        int var2 = 53 % ((obfuscationGuard + 14) / 35);
     }
 
     final static void a(int param0, String param1, long param2) {

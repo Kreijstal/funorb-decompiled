@@ -7,7 +7,7 @@ final class df {
     static String field_c;
     static jp[] field_a;
 
-    final static String a(int param0, int param1, byte[] param2, int param3) {
+    final static String decodeCp1252(int length, int obfuscationGuard, byte[] data, int offset) {
         int var7 = 0;
         int incrementValue$1 = 0;
         int var4_int = 0;
@@ -26,17 +26,17 @@ final class df {
         RuntimeException var4 = null;
         var10 = BrickABrac.field_J ? 1 : 0;
         try {
-          var4_int = 62 / ((param1 + 48) / 54);
-          var12 = new char[param0];
+          var4_int = 62 / ((obfuscationGuard + 48) / 54);
+          var12 = new char[length];
           var11 = var12;
           var5 = var11;
           var6 = 0;
-          for (var7 = 0; param0 > var7; var7++) {
-            var8 = param2[param3 + var7] & 255;
+          for (var7 = 0; length > var7; var7++) {
+            var8 = data[offset + var7] & 255;
             if (var8 != 0) {
               if (var8 >= 128 &&
                 var8 < 160) {
-                var9 = ai.field_r[-128 + var8];
+                var9 = ai.cp1252Extensions[-128 + var8];
                 if (var9 == 0) {
                   var9 = 63;
                 }
@@ -53,13 +53,13 @@ final class df {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
           stackIn_18_0 = var4;
-          stackIn_18_1 = new StringBuilder().append("df.G(").append(param0).append(',').append(param1).append(',');
-          if (param2 == null) {
+          stackIn_18_1 = new StringBuilder().append("df.G(").append(length).append(',').append(obfuscationGuard).append(',');
+          if (data == null) {
             stackIn_19_2 = "null";
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw qb.a((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param3).append(')').toString());
+          throw qb.a((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(offset).append(')').toString());
         }
     }
 
@@ -114,37 +114,37 @@ final class df {
         int var4 = 0;
         int var4Lifetime1;
         if (param1 == 103) {
-          tq.field_f.field_l = 0;
-          tq.field_f.a(-112, 12);
-          tq.field_f.a(ji.field_e.nextInt(), (byte) -79);
-          tq.field_f.a(ji.field_e.nextInt(), (byte) -79);
-          tq.field_f.a(-104, param2);
-          tq.field_f.a(50, param3);
-          tq.field_f.b((byte) 124, param0);
-          tq.field_f.a(Ball.field_F, to.field_g, param1 + 19672);
-          k.field_h.e(param1 ^ -13316, 18);
-          fieldTemp$0 = k.field_h.field_l + 1;
-          k.field_h.field_l = k.field_h.field_l + 1;
+          tq.field_f.position = 0;
+          tq.field_f.writeByte(-112, 12);
+          tq.field_f.writeInt(ji.field_e.nextInt(), (byte) -79);
+          tq.field_f.writeInt(ji.field_e.nextInt(), (byte) -79);
+          tq.field_f.writeByte(-104, param2);
+          tq.field_f.writeByte(50, param3);
+          tq.field_f.writeShort((byte) 124, param0);
+          tq.field_f.applyRsa(Ball.field_F, to.field_g, param1 + 19672);
+          k.field_h.writeCipheredOpcode(param1 ^ -13316, 18);
+          fieldTemp$0 = k.field_h.position + 1;
+          k.field_h.position = k.field_h.position + 1;
           var4 = fieldTemp$0;
-          k.field_h.a(tq.field_f.field_k, -1, 0, tq.field_f.field_l);
-          k.field_h.d((byte) 125, k.field_h.field_l - var4);
+          k.field_h.writeBytes(tq.field_f.data, -1, 0, tq.field_f.position);
+          k.field_h.backfillByteLength((byte) 125, k.field_h.position - var4);
           return;
         }
         field_c = (String) null;
-        tq.field_f.field_l = 0;
-        tq.field_f.a(-112, 12);
-        tq.field_f.a(ji.field_e.nextInt(), (byte) -79);
-        tq.field_f.a(ji.field_e.nextInt(), (byte) -79);
-        tq.field_f.a(-104, param2);
-        tq.field_f.a(50, param3);
-        tq.field_f.b((byte) 124, param0);
-        tq.field_f.a(Ball.field_F, to.field_g, param1 + 19672);
-        k.field_h.e(param1 ^ -13316, 18);
-        int fieldTemp$1 = k.field_h.field_l + 1;
-        k.field_h.field_l = k.field_h.field_l + 1;
+        tq.field_f.position = 0;
+        tq.field_f.writeByte(-112, 12);
+        tq.field_f.writeInt(ji.field_e.nextInt(), (byte) -79);
+        tq.field_f.writeInt(ji.field_e.nextInt(), (byte) -79);
+        tq.field_f.writeByte(-104, param2);
+        tq.field_f.writeByte(50, param3);
+        tq.field_f.writeShort((byte) 124, param0);
+        tq.field_f.applyRsa(Ball.field_F, to.field_g, param1 + 19672);
+        k.field_h.writeCipheredOpcode(param1 ^ -13316, 18);
+        int fieldTemp$1 = k.field_h.position + 1;
+        k.field_h.position = k.field_h.position + 1;
         var4Lifetime1 = fieldTemp$1;
-        k.field_h.a(tq.field_f.field_k, -1, 0, tq.field_f.field_l);
-        k.field_h.d((byte) 125, k.field_h.field_l - var4Lifetime1);
+        k.field_h.writeBytes(tq.field_f.data, -1, 0, tq.field_f.position);
+        k.field_h.backfillByteLength((byte) 125, k.field_h.position - var4Lifetime1);
     }
 
     static {

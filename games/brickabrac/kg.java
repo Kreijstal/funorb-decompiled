@@ -141,7 +141,7 @@ final class kg implements Runnable {
                 vj.field_a[var13].a(-param5 + (var7Lifetime1 - param5), param5, var10, param2, (byte) 64);
                 wd.field_F[var13].a(-param5 - param5 + var7Lifetime1, param5, var11, -var11 + var9 - param1, (byte) 64);
               } else {
-                mj.field_c.a(var7Lifetime1, var14, var6_int, var9, (byte) 64);
+                LegacyUtf8Decoder.field_c.a(var7Lifetime1, var14, var6_int, var9, (byte) 64);
               }
             }
           }

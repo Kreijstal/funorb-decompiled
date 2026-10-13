@@ -100,22 +100,22 @@ final class jk extends ki {
     }
 
     final static void a(int param0, byte param1) {
-        pi var2 = k.field_h;
-        var2.e(param1 ^ -13319, param0);
-        var2.field_l = var2.field_l + 1;
-        int var3 = var2.field_l;
-        var2.a(6, 2);
-        var2.a(rh.field_d, param1 - 99, 0, rh.field_d.length);
-        var2.a(-125, bb.field_e);
-        var2.a(param1 ^ -12, mf.field_c);
+        BitPacketBuffer var2 = k.field_h;
+        var2.writeCipheredOpcode(param1 ^ -13319, param0);
+        var2.position = var2.position + 1;
+        int var3 = var2.position;
+        var2.writeByte(6, 2);
+        var2.writeBytes(rh.field_d, param1 - 99, 0, rh.field_d.length);
+        var2.writeByte(-125, bb.field_e);
+        var2.writeByte(param1 ^ -12, mf.field_c);
         if (param1 == 98) {
-          var2.a(lj.field_p, -1, 0, lj.field_p.length);
-          var2.d((byte) 126, -var3 + var2.field_l);
+          var2.writeBytes(lj.field_p, -1, 0, lj.field_p.length);
+          var2.backfillByteLength((byte) 126, -var3 + var2.position);
           return;
         }
         jk.d((byte) 3);
-        var2.a(lj.field_p, -1, 0, lj.field_p.length);
-        var2.d((byte) 126, -var3 + var2.field_l);
+        var2.writeBytes(lj.field_p, -1, 0, lj.field_p.length);
+        var2.backfillByteLength((byte) 126, -var3 + var2.position);
     }
 
     final void a(int param0, byte param1, int param2, int param3, int param4) {

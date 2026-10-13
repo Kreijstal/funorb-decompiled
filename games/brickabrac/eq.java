@@ -63,7 +63,7 @@ final class eq {
           var1 = var6 + ":";
           for (var2 = 0; var2 < ga.field_j; var2++) {
             var7 = var1 + ' ';
-            var3 = 255 & jl.field_e.field_k[var2];
+            var3 = 255 & jl.field_e.data[var2];
             var4 = var3 >> 4;
             var3 = var3 & 15;
             if (var4 >= 10) {

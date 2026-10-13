@@ -4,7 +4,7 @@
 final class jl {
     static long field_c;
     static int field_b;
-    static pi field_e;
+    static BitPacketBuffer field_e;
     static jp field_d;
     static int field_a;
 
@@ -163,7 +163,7 @@ final class jl {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
         int var4 = 0;
-        pi var5 = null;
+        BitPacketBuffer var5 = null;
         CharSequence var6 = null;
         try {
           var6 = (CharSequence) ((Object) param1);
@@ -200,12 +200,12 @@ final class jl {
             field_c = -99L;
           }
           var5 = k.field_h;
-          var5.e(-13413, param2);
-          var5.field_l = var5.field_l + 1;
-          var4 = var5.field_l;
-          var5.a(-107, 0);
-          var5.a(param1, param0 - 24944);
-          var5.d((byte) 122, -var4 + var5.field_l);
+          var5.writeCipheredOpcode(-13413, param2);
+          var5.position = var5.position + 1;
+          var4 = var5.position;
+          var5.writeByte(-107, 0);
+          var5.writeCp1252String(param1, param0 - 24944);
+          var5.backfillByteLength((byte) 122, -var4 + var5.position);
           stackIn_28_0 = null;
           return (String) (stackIn_28_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

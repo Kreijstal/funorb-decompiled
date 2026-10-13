@@ -28,18 +28,18 @@ final class il extends CircleBody {
         }
     }
 
-    final void readBodySnapshot(int obfuscationGuard, wq packet) {
+    final void readBodySnapshot(int obfuscationGuard, PacketBuffer packet) {
         try {
           super.readBodySnapshot(123, packet);
-          this.radius256 = packet.l(255) << 8;
-          this.field_C = packet.l(255);
-          this.field_E = packet.i(65280);
+          this.radius256 = packet.readUnsignedByte(255) << 8;
+          this.field_C = packet.readUnsignedByte(255);
+          this.field_E = packet.readUnsignedShort(65280);
           if (obfuscationGuard <= 89) {
             IntrusiveNode var4 = (IntrusiveNode) null;
             il.a((IntrusiveNode) null, 19, (IntrusiveNode) null);
           }
-          this.field_w = packet.i(65280);
-          this.field_y = packet.i(65280);
+          this.field_w = packet.readUnsignedShort(65280);
+          this.field_y = packet.readUnsignedShort(65280);
         } catch (RuntimeException runtimeException) {
           throw qb.a((Throwable) ((Object) runtimeException), "il.L(" + obfuscationGuard + ',' + (packet != null ? "{...}" : "null") + ')');
         }

@@ -30,7 +30,7 @@ final class pa extends ta {
           pp.a(param5, param4, (byte) 19);
           cp.a(param15, param2, param13, 73, param17, param19);
           hd.a(117, param7, param10, param1);
-          mj.a(param12, param9, false, param8);
+          LegacyUtf8Decoder.a(param12, param9, false, param8);
           if (param20 != 10) {
             pa.a(true);
           }

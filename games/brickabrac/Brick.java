@@ -411,8 +411,8 @@ final class Brick extends RectangleBody {
         this.sourceWaypointIndex = this.sourceWaypointIndex + 1;
         this.sourceWaypointIndex = nextSourceIndex % this.waypoints.length;
         if (obfuscationGuard <= 61) {
-          wq var3 = (wq) null;
-          this.readBodySnapshot(-99, (wq) null);
+          PacketBuffer var3 = (PacketBuffer) null;
+          this.readBodySnapshot(-99, (PacketBuffer) null);
         }
         this.motionElapsedTicks = this.motionElapsedTicks % this.pathDurationTicks;
         this.segmentElapsedTicks = 0;
@@ -451,7 +451,7 @@ final class Brick extends RectangleBody {
         return -1;
     }
 
-    final void readBodySnapshot(int obfuscationGuard, wq packet) {
+    final void readBodySnapshot(int obfuscationGuard, PacketBuffer packet) {
         BrickMotionPath var4 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
@@ -464,14 +464,14 @@ final class Brick extends RectangleBody {
             this.attachMotionPath((BrickMotionPath) null, (byte) 44);
           }
           super.readBodySnapshot(93, packet);
-          this.pendingTypeId = packet.b(true);
+          this.pendingTypeId = packet.readByte(true);
           if (this.pendingTypeId > 0) {
-            this.transitionCode = packet.l(255);
+            this.transitionCode = packet.readUnsignedByte(255);
           }
-          this.flags = packet.l(255) & 255;
+          this.flags = packet.readUnsignedByte(255) & 255;
           if ((4 & this.flags) != 0) {
-            this.field_M = packet.l(255);
-            this.motionElapsedTicks = packet.i(65280);
+            this.field_M = packet.readUnsignedByte(255);
+            this.motionElapsedTicks = packet.readUnsignedShort(65280);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

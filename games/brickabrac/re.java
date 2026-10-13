@@ -251,7 +251,7 @@ final class re {
         ln var4 = null;
         Object var5 = null;
         int var6 = 0;
-        pi var9 = null;
+        BitPacketBuffer var9 = null;
         byte[] var13 = null;
         RuntimeException decompiledCaughtException = null;
         var6 = BrickABrac.field_J ? 1 : 0;
@@ -260,10 +260,10 @@ final class re {
             return;
           }
           var9 = jl.field_e;
-          var2 = var9.l(255);
+          var2 = var9.readUnsignedByte(255);
           if (0 != var2) {
             if (var2 == 1) {
-              var3 = var9.e(255);
+              var3 = var9.readInt(255);
               var4 = (ln) (ie.field_v.first(-37));
               while (var4 != null) {
                 if (var3 != var4.field_m) {
@@ -287,15 +287,15 @@ final class re {
               hn.a((byte) 76);
               return;
             }
-            var4_int = var9.l(255);
+            var4_int = var9.readUnsignedByte(255);
             if (var4_int == 0) {
               var5 = null;
             } else {
               var13 = new byte[var4_int];
-              var9.a(0, var13, 116, var4_int);
+              var9.readBytes(0, var13, 116, var4_int);
             }
-            var9.field_l = var9.field_l + 4;
-            if (!var9.d((byte) -27)) {
+            var9.position = var9.position + 4;
+            if (!var9.verifyCrc32((byte) -27)) {
               hn.a((byte) 86);
               return;
             }

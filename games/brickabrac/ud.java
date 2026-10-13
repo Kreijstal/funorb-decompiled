@@ -364,23 +364,23 @@ final class ud extends km {
     }
 
     final static void a(int param0, e param1, byte param2) {
-        pi var6 = null;
+        BitPacketBuffer var6 = null;
         int var4 = 0;
         try {
           var6 = k.field_h;
-          var6.e(-13413, param0);
-          var6.field_l = var6.field_l + 1;
-          var4 = var6.field_l;
-          var6.a(116, 1);
-          var6.a(-116, param1.field_o);
-          var6.a(-103, param1.field_i);
-          var6.a(param1.field_k, (byte) -79);
-          var6.a(param1.field_n, (byte) -79);
-          var6.a(param1.field_m, (byte) -79);
-          var6.a(param1.field_p, (byte) -79);
+          var6.writeCipheredOpcode(-13413, param0);
+          var6.position = var6.position + 1;
+          var4 = var6.position;
+          var6.writeByte(116, 1);
+          var6.writeByte(-116, param1.field_o);
+          var6.writeByte(-103, param1.field_i);
+          var6.writeInt(param1.field_k, (byte) -79);
+          var6.writeInt(param1.field_n, (byte) -79);
+          var6.writeInt(param1.field_m, (byte) -79);
+          var6.writeInt(param1.field_p, (byte) -79);
           int var5 = -68 / ((param2 + 15) / 63);
-          var6.d(3, var4);
-          var6.d((byte) 117, var6.field_l - var4);
+          var6.appendCrc32(3, var4);
+          var6.backfillByteLength((byte) 117, var6.position - var4);
         } catch (RuntimeException runtimeException) {
           throw qb.a((Throwable) ((Object) runtimeException), "ud.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }

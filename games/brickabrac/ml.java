@@ -43,13 +43,13 @@ final class ml {
     }
 
     final static void a(int param0, int param1) {
-        pi var2 = k.field_h;
-        var2.e(-13413, param0);
-        var2.a(-21, 1);
+        BitPacketBuffer var2 = k.field_h;
+        var2.writeCipheredOpcode(-13413, param0);
+        var2.writeByte(-21, 1);
         if (param1 != -1) {
           field_f = 16;
         }
-        var2.a(-111, 0);
+        var2.writeByte(-111, 0);
     }
 
     final int a(byte param0, int param1) {

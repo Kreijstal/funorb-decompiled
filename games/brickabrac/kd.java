@@ -24,7 +24,7 @@ final class kd {
         return so.a(0, param1, param0, cr.field_N);
     }
 
-    final static boolean a(int param0, wq param1) {
+    final static boolean a(int param0, PacketBuffer param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
@@ -35,7 +35,7 @@ final class kd {
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var2_int = param1.l(param0 + 257);
+          var2_int = param1.readUnsignedByte(param0 + 257);
           stackIn_3_0 = (~var2_int != param0) ? 0 : 1;
           var3 = stackIn_3_0;
           stackIn_4_0 = var3;

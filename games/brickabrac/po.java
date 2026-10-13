@@ -154,9 +154,9 @@ final class po {
           for (var2 = 0; var2 < sk.field_I; var2++) {
             fh.field_h[var2] = var4.playerNames[var2];
           }
-          pi.field_o = new int[var5.field_m.length];
+          BitPacketBuffer.field_o = new int[var5.field_m.length];
           for (var2Lifetime1 = 0; var5.field_m.length > var2Lifetime1; var2Lifetime1++) {
-            pi.field_o[var2Lifetime1] = var5.field_m[var2Lifetime1];
+            BitPacketBuffer.field_o[var2Lifetime1] = var5.field_m[var2Lifetime1];
           }
           da.field_C = new int[sk.field_I];
           for (var2Lifetime2 = 0; var2Lifetime2 < sk.field_I; var2Lifetime2++) {
@@ -165,7 +165,7 @@ final class po {
           stackIn_13_0 = !(ci.field_r);
           wk.field_p = stackIn_13_0;
           if (!eg.field_k) {
-            for (var2Lifetime3 = 0; pi.field_o.length > var2Lifetime3; var2Lifetime3++) {
+            for (var2Lifetime3 = 0; BitPacketBuffer.field_o.length > var2Lifetime3; var2Lifetime3++) {
               stackIn_18_0 = wk.field_p;
               stackIn_19_1 = (~pe.field_o.field_k == ~var5.field_m[var2Lifetime3]);
               wk.field_p = stackIn_18_0 | stackIn_19_1;

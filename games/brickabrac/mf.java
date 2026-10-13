@@ -670,10 +670,10 @@ final class mf {
         byte[] var23 = null;
         int[] var24 = null;
         byte[] var25 = null;
-        wq var26 = null;
+        PacketBuffer var26 = null;
         byte[] var27 = null;
-        wq var29 = null;
-        wq var31 = null;
+        PacketBuffer var29 = null;
+        PacketBuffer var31 = null;
         int[] var32 = null;
         byte[][] var33 = null;
         int[] var34 = null;
@@ -725,8 +725,8 @@ final class mf {
             var35 = be.a(false, this.field_j[param2], true);
             var25 = var35;
             var9 = var25;
-            var26 = new wq(var35);
-            var26.a(param1, 5, var26.field_k.length, (byte) 85);
+            var26 = new PacketBuffer(var35);
+            var26.decryptBlocks(param1, 5, var26.data.length, (byte) 85);
             decompiledFrameRemainder0 = false;
           }
           else {
@@ -754,14 +754,14 @@ final class mf {
               var11--;
               var12 = var23[var11] & 255;
               var11 = var11 - var12 * (var5_int * 4);
-              var29 = new wq(var43);
+              var29 = new PacketBuffer(var43);
               var14_int = 0;
               var15_int = 0;
-              var29.field_l = var11;
+              var29.position = var11;
               for (var16 = 0; var16 < var12; var16++) {
                 var17 = 0;
                 for (var18 = 0; var5_int > var18; var18++) {
-                  var17 = var17 + var29.e(255);
+                  var17 = var17 + var29.readInt(255);
                   if (var6 == null) {
                     var19 = var18;
                   } else {
@@ -777,13 +777,13 @@ final class mf {
                 return true;
               }
               var44 = new byte[var14_int];
-              var29.field_l = var11;
+              var29.position = var11;
               var14_intLifetime1 = 0;
               var17 = 0;
               for (var18 = 0; var12 > var18; var18++) {
                 var19 = 0;
                 for (var20 = 0; var5_int > var20; var20++) {
-                  var19 = var19 + var29.e(255);
+                  var19 = var19 + var29.readInt(255);
                   if (var6 == null) {
                     var21 = var20;
                   } else {
@@ -802,15 +802,15 @@ final class mf {
               var11--;
               var12 = 255 & var23[var11];
               var11 = var11 - var5_int * var12 * 4;
-              var31 = new wq(var43);
-              var31.field_l = var11;
+              var31 = new PacketBuffer(var43);
+              var31.position = var11;
               var39 = new int[var5_int];
               var32 = var39;
               var14 = var32;
               for (var15_int = 0; var15_int < var12; var15_int++) {
                 var16 = 0;
                 for (var17 = 0; var17 < var5_int; var17++) {
-                  var16 = var16 + var31.e(255);
+                  var16 = var16 + var31.readInt(255);
                   var14[var17] = var14[var17] + var16;
                 }
               }
@@ -822,12 +822,12 @@ final class mf {
                 var15[var16] = array$1;
                 var39[var16] = 0;
               }
-              var31.field_l = var11;
+              var31.position = var11;
               var16 = 0;
               for (var17 = 0; var12 > var17; var17++) {
                 var18 = 0;
                 for (var19 = 0; var5_int > var19; var19++) {
-                  var18 = var18 + var31.e(255);
+                  var18 = var18 + var31.readInt(255);
                   pm.a(var43, var16, var40[var19], var39[var19], var18);
                   var16 = var16 + var18;
                   var14[var19] = var14[var19] + var18;
