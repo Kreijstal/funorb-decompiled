@@ -69,7 +69,7 @@ final class Unit extends IntrusiveNode implements TaggedFieldReader {
         if (param0 >= -94) {
           this.attacksMade = -85;
         }
-        return (2 & bw.unitDefinitions[this.unitType][10]) > 0 ? true : false;
+        return (2 & WhirlpoolHasher.unitDefinitions[this.unitType][10]) > 0 ? true : false;
     }
 
     final int packStatusFlags(byte obfuscationGuard) {
@@ -155,7 +155,7 @@ final class Unit extends IntrusiveNode implements TaggedFieldReader {
           var5 = this.battlefield.getUnitAt(((Unit) (var3)).tileY, true, -1 + ((Unit) (var3)).tileX);
           stackIn_6_0 = var4;
           if (var5 != null &&
-            0 != (8 & bw.unitDefinitions[var5.unitType][10])) {
+            0 != (8 & WhirlpoolHasher.unitDefinitions[var5.unitType][10])) {
             stackIn_7_1 = 1;
           } else {
             stackIn_7_1 = 0;
@@ -164,7 +164,7 @@ final class Unit extends IntrusiveNode implements TaggedFieldReader {
           var6 = this.battlefield.getUnitAt(((Unit) (var3)).tileY, true, 1 + ((Unit) (var3)).tileX);
           stackIn_10_0 = var4Lifetime1;
           if (var6 != null &&
-            (8 & bw.unitDefinitions[var6.unitType][10]) != 0) {
+            (8 & WhirlpoolHasher.unitDefinitions[var6.unitType][10]) != 0) {
             stackIn_11_1 = 1;
           } else {
             stackIn_11_1 = 0;
@@ -173,7 +173,7 @@ final class Unit extends IntrusiveNode implements TaggedFieldReader {
           var7 = this.battlefield.getUnitAt(1 + ((Unit) (var3)).tileY, true, ((Unit) (var3)).tileX);
           stackIn_14_0 = var4Lifetime2;
           if (var7 != null &&
-            (bw.unitDefinitions[var7.unitType][10] & 8) != 0) {
+            (WhirlpoolHasher.unitDefinitions[var7.unitType][10] & 8) != 0) {
             stackIn_15_1 = 1;
           } else {
             stackIn_15_1 = 0;
@@ -182,7 +182,7 @@ final class Unit extends IntrusiveNode implements TaggedFieldReader {
           var8 = this.battlefield.getUnitAt(-1 + ((Unit) (var3)).tileY, true, ((Unit) (var3)).tileX);
           stackIn_18_0 = var4Lifetime3;
           if (var8 != null &&
-            0 != (bw.unitDefinitions[var8.unitType][10] & 8)) {
+            0 != (WhirlpoolHasher.unitDefinitions[var8.unitType][10] & 8)) {
             stackIn_19_1 = 1;
           } else {
             stackIn_19_1 = 0;
@@ -204,7 +204,7 @@ final class Unit extends IntrusiveNode implements TaggedFieldReader {
         if (obfuscationGuard != -79) {
           this.getEquipmentId((byte) -122);
         }
-        int var2 = bw.unitDefinitions[this.unitType][6];
+        int var2 = WhirlpoolHasher.unitDefinitions[this.unitType][6];
         if (this.packedFlag8 &&
           this.unitType == 34) {
           var2 = 2;
@@ -227,7 +227,7 @@ final class Unit extends IntrusiveNode implements TaggedFieldReader {
         if (obfuscationGuard != -21428) {
           return false;
         }
-        stackIn_7_0 = !((512 & bw.unitDefinitions[this.unitType][10]) <= 0) || (this.accessoryType == 1);
+        stackIn_7_0 = !((512 & WhirlpoolHasher.unitDefinitions[this.unitType][10]) <= 0) || (this.accessoryType == 1);
         return stackIn_7_0;
     }
 
@@ -250,7 +250,7 @@ final class Unit extends IntrusiveNode implements TaggedFieldReader {
         int var2;
         boolean stackIn_5_0 = false;
         var2 = 106 % ((80 - obfuscationGuard) / 34);
-        stackIn_5_0 = !((bw.unitDefinitions[this.unitType][10] & 2048) <= 0) || (this.accessoryType == 2);
+        stackIn_5_0 = !((WhirlpoolHasher.unitDefinitions[this.unitType][10] & 2048) <= 0) || (this.accessoryType == 2);
         return stackIn_5_0;
     }
 
@@ -386,7 +386,7 @@ final class Unit extends IntrusiveNode implements TaggedFieldReader {
           this.packedFlag8) {
           return true;
         }
-        stackIn_11_0 = (bw.unitDefinitions[this.unitType][0] == 4) || (bw.unitDefinitions[this.unitType][0] == 3) || (bw.unitDefinitions[this.unitType][0] == 2) || !((2048 & bw.unitDefinitions[this.unitType][10]) <= 0) || (this.accessoryType == 2);
+        stackIn_11_0 = (WhirlpoolHasher.unitDefinitions[this.unitType][0] == 4) || (WhirlpoolHasher.unitDefinitions[this.unitType][0] == 3) || (WhirlpoolHasher.unitDefinitions[this.unitType][0] == 2) || !((2048 & WhirlpoolHasher.unitDefinitions[this.unitType][10]) <= 0) || (this.accessoryType == 2);
         return stackIn_11_0;
     }
 
@@ -450,7 +450,7 @@ final class Unit extends IntrusiveNode implements TaggedFieldReader {
         if (param0 >= -99) {
           return true;
         }
-        return 0 < (8 & bw.unitDefinitions[this.unitType][10]) ? true : false;
+        return 0 < (8 & WhirlpoolHasher.unitDefinitions[this.unitType][10]) ? true : false;
     }
 
     final String q(byte param0) {
@@ -535,7 +535,7 @@ final class Unit extends IntrusiveNode implements TaggedFieldReader {
           this.statusEffectValue = -127;
         }
         stackIn_4_0 = this.meleeLifeSteal;
-        stackIn_5_1 = ((256 & bw.unitDefinitions[this.unitType][10]) <= 0) ? false : true;
+        stackIn_5_1 = ((256 & WhirlpoolHasher.unitDefinitions[this.unitType][10]) <= 0) ? false : true;
         stackIn_9_0 = (stackIn_4_0 | stackIn_5_1) && (!this.hasMovementFlag1(false));
         return stackIn_9_0;
     }
@@ -770,7 +770,7 @@ final class Unit extends IntrusiveNode implements TaggedFieldReader {
         if (param0 < 123) {
           this.isSeaSlug((byte) -126);
         }
-        return (32 & bw.unitDefinitions[this.unitType][10]) > 0 ? true : false;
+        return (32 & WhirlpoolHasher.unitDefinitions[this.unitType][10]) > 0 ? true : false;
     }
 
     final boolean hasMovementTarget(int obfuscationGuard) {
@@ -790,7 +790,7 @@ final class Unit extends IntrusiveNode implements TaggedFieldReader {
         if (obfuscationGuard != 0) {
           this.hasMovementTarget(82);
         }
-        return bw.unitDefinitions[this.unitType][0];
+        return WhirlpoolHasher.unitDefinitions[this.unitType][0];
     }
 
     final int getEquipmentId(byte obfuscationGuard) {
@@ -807,7 +807,7 @@ final class Unit extends IntrusiveNode implements TaggedFieldReader {
         if (obfuscationGuard > -92) {
           this.bonusStrength = -12;
         }
-        return (64 & bw.unitDefinitions[this.unitType][10]) > 0 ? true : false;
+        return (64 & WhirlpoolHasher.unitDefinitions[this.unitType][10]) > 0 ? true : false;
     }
 
     final Unit copyDetached(boolean obfuscationGuard) {
@@ -875,7 +875,7 @@ final class Unit extends IntrusiveNode implements TaggedFieldReader {
         if (param0 <= 41) {
           return false;
         }
-        stackIn_7_0 = (0 != (bw.unitDefinitions[this.unitType][10] & 4096)) || (this.accessoryType == 3);
+        stackIn_7_0 = (0 != (WhirlpoolHasher.unitDefinitions[this.unitType][10] & 4096)) || (this.accessoryType == 3);
         return stackIn_7_0;
     }
 
@@ -907,7 +907,7 @@ final class Unit extends IntrusiveNode implements TaggedFieldReader {
         int var2;
         int var3;
         var3 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
-        var2 = bw.unitDefinitions[this.unitType][7];
+        var2 = WhirlpoolHasher.unitDefinitions[this.unitType][7];
         if (this.packedFlag8 &&
           this.unitType == 34) {
           var2 = 7;
@@ -939,7 +939,7 @@ final class Unit extends IntrusiveNode implements TaggedFieldReader {
         if (param0 != 10) {
           this.presentationOwnsModel = true;
         }
-        return (bw.unitDefinitions[this.unitType][10] & 1) > 0 ? true : false;
+        return (WhirlpoolHasher.unitDefinitions[this.unitType][10] & 1) > 0 ? true : false;
     }
 
     final boolean grantsGrowthOnDeath(int obfuscationGuard) {
@@ -958,7 +958,7 @@ final class Unit extends IntrusiveNode implements TaggedFieldReader {
         if (param0 != 105) {
           return true;
         }
-        return (bw.unitDefinitions[this.unitType][10] & 16) > 0 ? true : false;
+        return (WhirlpoolHasher.unitDefinitions[this.unitType][10] & 16) > 0 ? true : false;
     }
 
     final static void m(int param0) {

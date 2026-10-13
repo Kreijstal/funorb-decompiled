@@ -356,7 +356,7 @@ public final class ArmiesOfGielinor extends NetworkGameShell {
                     ViewportManager.field_c = true;
                     FullscreenFocusCanvas.gameplayController = var10;
                     ConsolePanel.a(true);
-                    bw.d(7242);
+                    WhirlpoolHasher.d(7242);
                     pc.b((byte) 16);
                   }
                   SoftwareRaster.b();
@@ -525,7 +525,7 @@ public final class ArmiesOfGielinor extends NetworkGameShell {
                     if (null == FullscreenFocusCanvas.gameplayController) {
                       continue;
                     }
-                    bw.d(7242);
+                    WhirlpoolHasher.d(7242);
                     continue;
                   }
                   if (MusicCrossfadeStream.deliveredOpcode == 73) {
@@ -533,7 +533,7 @@ public final class ArmiesOfGielinor extends NetworkGameShell {
                     if (null == FullscreenFocusCanvas.gameplayController) {
                       continue;
                     }
-                    bw.d(7242);
+                    WhirlpoolHasher.d(7242);
                     continue;
                   }
                 }
@@ -563,7 +563,7 @@ public final class ArmiesOfGielinor extends NetworkGameShell {
             if (var3Lifetime1 == 0 ||
               var3Lifetime1 == 1) {
               SphinxActionRequest.a(2, (byte) 37);
-              bw.a(127, 3);
+              WhirlpoolHasher.a(127, 3);
               ah.a((byte) 33, 4);
               op.a(5, true);
               SpellCastEvent.b(6, -32666);
@@ -1364,8 +1364,8 @@ public final class ArmiesOfGielinor extends NetworkGameShell {
           ud.n(12213);
           se.a(0);
           ByteStorage.b(9892);
-          pb.a();
-          nk.b((byte) 75);
+          Bzip2Decoder.releaseSharedState();
+          Bzip2State.b((byte) 75);
           dc.a(540);
           BoundedFile.a(-98);
           CheckBoxWidgetPainter.a((byte) -100);
@@ -1451,7 +1451,7 @@ public final class ArmiesOfGielinor extends NetworkGameShell {
           c.a(obfuscationGuard + 157);
           SummonAction.a((byte) 113);
           AccountNameNormalizer.a(obfuscationGuard ^ 75);
-          bw.a(-28911);
+          WhirlpoolHasher.a(-28911);
           StateChangeMarker.a((byte) -3);
           DisplacedUnitMarker.e(1223);
           DeployEvent.g(-125);
@@ -1642,7 +1642,7 @@ public final class ArmiesOfGielinor extends NetworkGameShell {
                 if (stackIn_26_0 > -5) {
                   var6 = 0;
                   while (!(var6 >= AnimationFrameSet.unitUnlockGroups[var5].length)) {
-                    stackIn_10_0 = ~bw.unitDefinitions[AnimationFrameSet.unitUnlockGroups[var5][var6]][11];
+                    stackIn_10_0 = ~WhirlpoolHasher.unitDefinitions[AnimationFrameSet.unitUnlockGroups[var5][var6]][11];
                     stackIn_10_1 = -1;
                     if (stackIn_10_0 == stackIn_10_1) {
                       Widget.field_o[var5] = AccountRegistrationDialog.bitwiseOr(Widget.field_o[var5], 1 << var6);

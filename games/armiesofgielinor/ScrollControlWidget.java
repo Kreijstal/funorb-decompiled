@@ -385,15 +385,15 @@ final class ScrollControlWidget extends ArrayWidgetContainer implements WidgetAc
     final static boolean c(int param0, int param1) {
         if (param0 != 0) {
           ScrollControlWidget.l(106);
-          if (!(param1 < bw.unitDefinitions.length)) {
+          if (!(param1 < WhirlpoolHasher.unitDefinitions.length)) {
             return false;
           }
-          return 3 == bw.unitDefinitions[param1][0] ? true : false;
+          return 3 == WhirlpoolHasher.unitDefinitions[param1][0] ? true : false;
         }
-        if (!(param1 < bw.unitDefinitions.length)) {
+        if (!(param1 < WhirlpoolHasher.unitDefinitions.length)) {
           return false;
         }
-        return 3 == bw.unitDefinitions[param1][0] ? true : false;
+        return 3 == WhirlpoolHasher.unitDefinitions[param1][0] ? true : false;
     }
 
     private final void setHorizontalPosition(int obfuscationGuard, int position) {

@@ -380,7 +380,7 @@ abstract class SingleChildWidgetContainer extends Widget implements WidgetContai
           ToggleWidget.field_Q = new ClientUiComponent(0L, eq.field_h);
           ToggleWidget.field_Q.horizontalAlignment = 1;
           ToggleWidget.field_Q.verticalAlignment = 0;
-          LinkButtonPainter.field_g = new ClientUiComponent(0L, bw.field_h, LineOfSightGrid.field_f.toUpperCase());
+          LinkButtonPainter.field_g = new ClientUiComponent(0L, WhirlpoolHasher.field_h, LineOfSightGrid.field_f.toUpperCase());
           GameClock.field_c = new ClientUiComponent(0L, ArchiveIndex.field_b);
           GameClock.field_c.addChild(ToggleWidget.field_Q, 116);
           GameClock.field_c.addChild(LinkButtonPainter.field_g, 89);
@@ -503,7 +503,7 @@ abstract class SingleChildWidgetContainer extends Widget implements WidgetContai
           pd.field_c.addChild(so.field_d, 69);
           pd.field_c.addChild(pi.field_N, 91);
           bk.field_f = new ClientUiComponent(0L, UnitModelPreview.field_m, TickCounter.field_d.toUpperCase());
-          ConsolePanel.field_m = new ClientUiComponent(0L, bw.field_h, ConsoleCommand.field_D.toUpperCase());
+          ConsolePanel.field_m = new ClientUiComponent(0L, WhirlpoolHasher.field_h, ConsoleCommand.field_D.toUpperCase());
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

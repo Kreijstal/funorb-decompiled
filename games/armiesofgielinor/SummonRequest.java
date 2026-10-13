@@ -24,7 +24,7 @@ final class SummonRequest extends ActionRequest {
           if (param1) {
             SummonRequest.a((byte) 111);
           }
-          stackIn_3_0 = nk.a(false, param0, (byte) -95);
+          stackIn_3_0 = Bzip2State.a(false, param0, (byte) -95);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -204,7 +204,7 @@ final class SummonRequest extends ActionRequest {
             battlefield.mapTheme == 2) {
             this.unitType = 81;
           }
-          requiredGod = bw.unitDefinitions[this.unitType][1];
+          requiredGod = WhirlpoolHasher.unitDefinitions[this.unitType][1];
           if (requiredGod != -1) {
             godSelected = 0;
             chosenGods = battlefield.chosenGods[this.actingPlayer];
@@ -237,7 +237,7 @@ final class SummonRequest extends ActionRequest {
           if (obfuscationGuard < 31) {
             field_y = (String) null;
           }
-          summoningBonus = battlefield.a(bw.unitDefinitions[this.unitType][1], this.tileY, this.tileX, 0, this.actingPlayer, bw.unitDefinitions[this.unitType][2]);
+          summoningBonus = battlefield.a(WhirlpoolHasher.unitDefinitions[this.unitType][1], this.tileY, this.tileX, 0, this.actingPlayer, WhirlpoolHasher.unitDefinitions[this.unitType][2]);
           stackIn_31_0 = new SummonAction(this.tileX, this.tileY, this.unitType, summoningBonus, this.actingPlayer);
           return (PreparedAction) ((Object) stackIn_31_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -6,7 +6,7 @@ import java.util.*;
 class InteractiveWidget extends Widget {
     boolean enabled;
     static int field_C;
-    static int[] field_J;
+    static int[] bzip2TraversalTable;
     private boolean focusable;
     static String field_H;
     int lastActivationButton;
@@ -142,7 +142,7 @@ class InteractiveWidget extends Widget {
 
     public static void i(int param0) {
         field_H = null;
-        field_J = null;
+        bzip2TraversalTable = null;
         if (param0 != 0) {
           return;
         }

@@ -727,7 +727,7 @@ final class CampaignUnitOverride {
                 }
                 var2 = NodeIterator.a(50, "tab_hidechattemporarily");
                 if (var2 != null) {
-                  nk.field_t = uu.a(var2, (byte) 51);
+                  Bzip2State.field_t = uu.a(var2, (byte) 51);
                 }
                 var2 = NodeIterator.a(param0 + 132, "esc_cancelprivatemessage");
                 if (var2 != null) {

@@ -156,7 +156,7 @@ final class AiUnitPlanner extends IntrusiveNode {
               if (0.0f != this.field_x) {
                 var17_int = 1000000;
                 var18 = -3.4028234663852886e+38f;
-                stackIn_46_0 = (bw.unitDefinitions[this.unit.unitType][0] != 4) ? 0 : 1;
+                stackIn_46_0 = (WhirlpoolHasher.unitDefinitions[this.unit.unitType][0] != 4) ? 0 : 1;
                 var19_int = stackIn_46_0;
                 var20_int = this.unit.getMaximumAttackRange(3257);
                 var21_int = this.unit.getMinimumAttackRange((byte) -79);

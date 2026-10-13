@@ -216,7 +216,7 @@ final class SphinxActionRequest extends ActionRequest {
           ConsoleValue.field_a.selectedOffsetX = 1;
           ConsoleValue.field_a.heldPressOffsetY = 1;
           ConsoleValue.field_a.selectedOffsetY = 1;
-          bw.field_h = new ClientUiComponent(0L, ConsoleValue.field_a);
+          WhirlpoolHasher.field_h = new ClientUiComponent(0L, ConsoleValue.field_a);
           ClientUiComponent.field_Q = new ClientUiComponent(0L, DualLinkedNode.field_k);
           ClientUiComponent.field_Q.heldPressOffsetY = 1;
           ClientUiComponent.field_Q.heldPressOffsetX = 1;
@@ -235,9 +235,9 @@ final class SphinxActionRequest extends ActionRequest {
           ClientUiComponent.field_Q.selectedSkinSprites = dupTemp$0;
           ClientUiComponent.field_Q.heldPressSkinSprites = dupTemp$0;
           ClientUiComponent.field_Q.disabledSkinSprites = wj.a(-12310, fk.loadRgbSpritesByName("smallbutton_disabled", (byte) -127, param1, "lobby"));
-          bw.field_h.skinSprites = wj.a(-12310, fk.loadRgbSpritesByName("mediumbutton", (byte) -125, param1, "lobby"));
-          bw.field_h.matchedButtonSkinSprites = wj.a(-12310, fk.loadRgbSpritesByName("mediumbutton_mouseover", (byte) -125, param1, "lobby"));
-          bw.field_h.heldPressSkinSprites = wj.a(-12310, fk.loadRgbSpritesByName("mediumbutton_mouseheld", (byte) -124, param1, "lobby"));
+          WhirlpoolHasher.field_h.skinSprites = wj.a(-12310, fk.loadRgbSpritesByName("mediumbutton", (byte) -125, param1, "lobby"));
+          WhirlpoolHasher.field_h.matchedButtonSkinSprites = wj.a(-12310, fk.loadRgbSpritesByName("mediumbutton_mouseover", (byte) -125, param1, "lobby"));
+          WhirlpoolHasher.field_h.heldPressSkinSprites = wj.a(-12310, fk.loadRgbSpritesByName("mediumbutton_mouseheld", (byte) -124, param1, "lobby"));
           ConsoleValue.field_a.skinSprites = wj.a(-12310, fk.loadRgbSpritesByName("bigbutton", (byte) -128, param1, "lobby"));
           ConsoleValue.field_a.matchedButtonSkinSprites = wj.a(-12310, fk.loadRgbSpritesByName("bigbutton_mouseover", (byte) -124, param1, "lobby"));
           ConsoleValue.field_a.heldPressSkinSprites = wj.a(-12310, fk.loadRgbSpritesByName("bigbutton_mouseheld", (byte) -124, param1, "lobby"));

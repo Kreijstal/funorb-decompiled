@@ -765,7 +765,7 @@ final class Battlefield {
           }
         }
         var8 = 0;
-        var9 = bw.unitDefinitions[param2][4] + param6;
+        var9 = WhirlpoolHasher.unitDefinitions[param2][4] + param6;
         if (this.getUnitAt(param3, true, param1) != null) {
           this.getUnitAt(param3, true, param1).unlink(param4 ^ 91);
         }
@@ -855,14 +855,14 @@ final class Battlefield {
         if (param0) {
           return;
         }
-        this.playerMana[param5] = this.playerMana[param5] - bw.unitDefinitions[param2][8];
+        this.playerMana[param5] = this.playerMana[param5] - WhirlpoolHasher.unitDefinitions[param2][8];
         if (this.field_b) {
-          this.field_ub[param5] = this.field_ub[param5] + bw.unitDefinitions[param2][8];
+          this.field_ub[param5] = this.field_ub[param5] + WhirlpoolHasher.unitDefinitions[param2][8];
           this.d(param5, this.field_ub[param5], 106, 10);
         }
         boolean decompiledFrameRemainder0 = true;
-        var12Lifetime1 = bw.unitDefinitions[param2][2];
-        var13 = bw.unitDefinitions[param2][1];
+        var12Lifetime1 = WhirlpoolHasher.unitDefinitions[param2][2];
+        var13 = WhirlpoolHasher.unitDefinitions[param2][1];
         var14 = this.tiles[this.mapWidth * param3 + param1];
         if ((var13 == -1) &&
           (decompiledFrameRemainder0 = (var12Lifetime1 == this.godFavourLevels[param5][6])) &&
@@ -2198,7 +2198,7 @@ final class Battlefield {
               }
             }
             if (effectiveAttackerType >= 0 &&
-              bw.unitDefinitions.length > effectiveAttackerType) {
+              WhirlpoolHasher.unitDefinitions.length > effectiveAttackerType) {
               maximumRange = attacker.getMaximumAttackRange(3257);
               minimumRange = attacker.getMinimumAttackRange((byte) -79);
               if (attacker.unitType != 81 &&
@@ -2249,7 +2249,7 @@ final class Battlefield {
               if (meleeRange != 0 && (!(defenderDamage >= defenderUnit.bonusStrength + defenderUnit.strength) ||
                 defender.statusEffectType == 7 ||
                 8 == defender.statusEffectType)) {
-                defenderMinimumRange = bw.unitDefinitions[defenderUnit.unitType][6];
+                defenderMinimumRange = WhirlpoolHasher.unitDefinitions[defenderUnit.unitType][6];
                 if (defenderMinimumRange > 1) {
                   attackerDamage = this.scaleIncomingDamage(attackerUnit, (byte) -123, defenderDamageMask, this.computeAttackPower(attackOriginY + targetDeltaY, defenderDamage, attackOriginX + targetDeltaX, var23, defenderUnit, (byte) -128) * 3 / 20 + defenderEquipmentBonus);
                 }
@@ -3339,25 +3339,25 @@ final class Battlefield {
         var12 = this.getSummoningFavourAt(tileY, (byte) 118, tileX, playerId);
         var11 = var12;
         var7 = var11;
-        var8 = bw.unitDefinitions[unitType][1];
+        var8 = WhirlpoolHasher.unitDefinitions[unitType][1];
         var9 = b.getUnitUnlockOrdinal(false, unitType);
         if (unitType != 74 &&
           unitType >= 8 &&
           0 == (1 << var9 & this.godUnitUnlockMasks[playerId][var8 + 1])) {
           return 4;
         }
-        if (!this.f(bw.unitDefinitions[unitType][8], this.playerMana[playerId], 0)) {
+        if (!this.f(WhirlpoolHasher.unitDefinitions[unitType][8], this.playerMana[playerId], 0)) {
           var6 = var6 | 1;
         }
-        if (bw.unitDefinitions[unitType][1] == -1) {
+        if (WhirlpoolHasher.unitDefinitions[unitType][1] == -1) {
           var10 = var12[6];
           if (ArmiesOfGielinor.obfuscationControl) {
-            var10 = var7[bw.unitDefinitions[unitType][1]];
+            var10 = var7[WhirlpoolHasher.unitDefinitions[unitType][1]];
           }
         } else {
-          var10 = var7[bw.unitDefinitions[unitType][1]];
+          var10 = var7[WhirlpoolHasher.unitDefinitions[unitType][1]];
         }
-        if (!this.a(var10, true, bw.unitDefinitions[unitType][2])) {
+        if (!this.a(var10, true, WhirlpoolHasher.unitDefinitions[unitType][2])) {
           var6 = var6 | 2;
         }
         return var6;
@@ -4105,7 +4105,7 @@ final class Battlefield {
                 var11 = var26.tileY;
                 var12 = var26.unitType;
                 var21.occupant = null;
-                var30 = bw.unitDefinitions[var12];
+                var30 = WhirlpoolHasher.unitDefinitions[var12];
                 decompiledFrameRemainder3 = !(var9 < 0);
                 if ((decompiledFrameRemainder3) &&
                   (decompiledFrameRemainder3 = !(this.playerCount <= var9))) {
@@ -4378,26 +4378,26 @@ final class Battlefield {
         var11 = var12;
         var10 = var11;
         var6 = var10;
-        var7 = bw.unitDefinitions[unitType][1];
+        var7 = WhirlpoolHasher.unitDefinitions[unitType][1];
         var8 = b.getUnitUnlockOrdinal(false, unitType);
         if (unitType != 74 &&
           unitType >= 8 &&
           0 == (this.godUnitUnlockMasks[playerId][1 + var7] & 1 << var8)) {
           return false;
         }
-        if (this.f(bw.unitDefinitions[unitType][8], this.playerMana[playerId], 0)) {
+        if (this.f(WhirlpoolHasher.unitDefinitions[unitType][8], this.playerMana[playerId], 0)) {
           var10Lifetime1 = var6;
-          if (-1 == bw.unitDefinitions[unitType][1]) {
+          if (-1 == WhirlpoolHasher.unitDefinitions[unitType][1]) {
             var9 = var12[6];
             if (ArmiesOfGielinor.obfuscationControl) {
               var10Lifetime1Lifetime1 = var6;
-              var9 = var10Lifetime1Lifetime1[bw.unitDefinitions[unitType][1]];
+              var9 = var10Lifetime1Lifetime1[WhirlpoolHasher.unitDefinitions[unitType][1]];
             }
           } else {
             var10Lifetime1Lifetime1 = var6;
-            var9 = var10Lifetime1Lifetime1[bw.unitDefinitions[unitType][1]];
+            var9 = var10Lifetime1Lifetime1[WhirlpoolHasher.unitDefinitions[unitType][1]];
           }
-          if (this.a(var9, true, bw.unitDefinitions[unitType][2])) {
+          if (this.a(var9, true, WhirlpoolHasher.unitDefinitions[unitType][2])) {
             return true;
           }
         }
@@ -5477,7 +5477,7 @@ final class Battlefield {
             stackIn_7_0 = 100;
             return stackIn_7_0;
           }
-          stackIn_11_0 = (bw.unitDefinitions[unit.unitType][1] != 2) ? 0 : 1;
+          stackIn_11_0 = (WhirlpoolHasher.unitDefinitions[unit.unitType][1] != 2) ? 0 : 1;
           var4_int = stackIn_11_0;
           if (var4_int != 0 &&
             this.tiles[tileIndex].terrainType == 3) {

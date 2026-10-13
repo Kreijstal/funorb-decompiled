@@ -124,7 +124,7 @@ abstract class el {
                   ph.field_c.a((byte) -71, var9, var12);
                 }
               } else {
-                pb.a(var12, var5_int, encodedContainer, var4, 9);
+                Bzip2Decoder.decompress(var12, var5_int, encodedContainer, var4, 9);
               }
               stackIn_21_0 = var6;
               return stackIn_21_0;

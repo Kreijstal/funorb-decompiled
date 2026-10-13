@@ -352,8 +352,8 @@ final class MovementPlanner {
           this.actionAllowed = false;
           return;
         }
-        maximumAttackRange = bw.unitDefinitions[this.unit.unitType][7];
-        minimumAttackRange = bw.unitDefinitions[this.unit.unitType][6];
+        maximumAttackRange = WhirlpoolHasher.unitDefinitions[this.unit.unitType][7];
+        minimumAttackRange = WhirlpoolHasher.unitDefinitions[this.unit.unitType][6];
         if (obfuscationGuard != -120) {
           this.mapHeight = 82;
         }
@@ -380,7 +380,7 @@ final class MovementPlanner {
           }
         }
         if ((1 & this.attackTargetMask[targetY * this.mapWidth + targetX]) != 1) {
-          bestMovementCost = 3 * bw.unitDefinitions[this.unit.unitType][3];
+          bestMovementCost = 3 * WhirlpoolHasher.unitDefinitions[this.unit.unitType][3];
           if (this.unit.packedFlag8 &&
             this.unit.unitType != 0) {
             bestMovementCost = 0;
@@ -618,7 +618,7 @@ final class MovementPlanner {
         if (obfuscationGuard != 27732) {
           discarded$0 = this.choosePredecessorDirection(-31, (byte) 81, -84, 42);
         }
-        int var2 = 3 * bw.unitDefinitions[this.unitType][3];
+        int var2 = 3 * WhirlpoolHasher.unitDefinitions[this.unitType][3];
         if (this.spellId > -1 &&
           18 == uc.spellDefinitions[this.spellId][5]) {
           var2 = var2 << 1;
@@ -711,7 +711,7 @@ final class MovementPlanner {
             return;
           }
           if (this.unitType == 51) {
-            this.fillDirectRangeCosts(true, bw.unitDefinitions[this.unitType][3], 112);
+            this.fillDirectRangeCosts(true, WhirlpoolHasher.unitDefinitions[this.unitType][3], 112);
             return;
           }
           movementBudget = this.getMovementBudget(27732);
@@ -796,7 +796,7 @@ final class MovementPlanner {
               }
             }
           }
-          category4Visibility = (4 != bw.unitDefinitions[unit.unitType][0]) ? 0 : 1;
+          category4Visibility = (4 != WhirlpoolHasher.unitDefinitions[unit.unitType][0]) ? 0 : 1;
           ignoreBlockingTerrain = category4Visibility;
           category4TargetsAllowed = (!this.unit.canAttackFlying((byte) 102)) ? 0 : 1;
           allowCategory4Targets = category4TargetsAllowed;

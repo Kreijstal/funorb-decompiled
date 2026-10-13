@@ -222,7 +222,7 @@ final class ac extends IntrusiveNode {
             ac.a((byte) -15);
           }
           var5 = param0.getFileId((byte) -20, var4_int, param1);
-          stackIn_3_0 = nk.a(var4_int, (byte) 28, var5, param0);
+          stackIn_3_0 = Bzip2State.a(var4_int, (byte) 28, var5, param0);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

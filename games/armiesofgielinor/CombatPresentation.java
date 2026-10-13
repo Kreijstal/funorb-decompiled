@@ -511,7 +511,7 @@ final class CombatPresentation implements EventPresentation {
                 var8 = var6.bonusStrength + var6.strength;
                 var9 = var6.maximumStrength + var6.bonusStrength;
                 this.field_e = var6.ownerPlayer;
-                this.field_J = bw.unitDefinitions[var6.unitType][9];
+                this.field_J = WhirlpoolHasher.unitDefinitions[var6.unitType][9];
                 if (0 < ToggleWidget.field_N[this.field_J] * var8 % var9) {
                   stackIn_37_1 = 1;
                 } else {
@@ -542,7 +542,7 @@ final class CombatPresentation implements EventPresentation {
                   this.field_q = true;
                 }
                 this.field_g = var7.ownerPlayer;
-                this.field_u = bw.unitDefinitions[var7.unitType][9];
+                this.field_u = WhirlpoolHasher.unitDefinitions[var7.unitType][9];
                 if (ToggleWidget.field_N[this.field_u] * var8Lifetime1 % var9Lifetime1 <= 0) {
                   stackIn_67_1 = 0;
                 } else {
@@ -598,7 +598,7 @@ final class CombatPresentation implements EventPresentation {
                   }
                   if (decompiledFrameRemainder1) {
                     if (var6.getUnitCategory(obfuscationGuard ^ 57) == 3) {
-                      this.field_z = 8 + bw.unitDefinitions[var6.unitType][1];
+                      this.field_z = 8 + WhirlpoolHasher.unitDefinitions[var6.unitType][1];
                       decompiledFrameRemainder1 = (var10 != 0);
                     }
                     if (decompiledFrameRemainder1) {
@@ -3999,7 +3999,7 @@ final class CombatPresentation implements EventPresentation {
           }
           stackIn_17_0 = (param4.strength > param2) ? 0 : 1;
           var7 = stackIn_17_0;
-          stackIn_21_1 = !(1 >= bw.unitDefinitions[param4.unitType][7]);
+          stackIn_21_1 = !(1 >= WhirlpoolHasher.unitDefinitions[param4.unitType][7]);
           this.field_d = stackIn_21_1;
           if (param4.unitType == 34 &&
             param4.packedFlag8) {
@@ -4011,7 +4011,7 @@ final class CombatPresentation implements EventPresentation {
           if (this.field_d) {
             param2 = 0;
           }
-          this.field_J = bw.unitDefinitions[param4.unitType][9];
+          this.field_J = WhirlpoolHasher.unitDefinitions[param4.unitType][9];
           if (ToggleWidget.field_N[this.field_J] * param4.strength % param4.maximumStrength <= 0) {
             stackIn_38_1 = 0;
           } else {
@@ -4035,7 +4035,7 @@ final class CombatPresentation implements EventPresentation {
             param1.packedFlag8) {
             this.field_q = true;
           }
-          this.field_u = bw.unitDefinitions[param1.unitType][9];
+          this.field_u = WhirlpoolHasher.unitDefinitions[param1.unitType][9];
           stackIn_62_1 = param1.strength * ToggleWidget.field_N[this.field_u] / param1.maximumStrength;
           if (ToggleWidget.field_N[this.field_u] * param1.strength % param1.maximumStrength <= 0) {
             stackIn_63_2 = 0;
@@ -4082,7 +4082,7 @@ final class CombatPresentation implements EventPresentation {
             }
             if (decompiledFrameRemainder3) {
               if (param4.getUnitCategory(0) == 3) {
-                this.field_z = bw.unitDefinitions[param4.unitType][1] + 8;
+                this.field_z = WhirlpoolHasher.unitDefinitions[param4.unitType][1] + 8;
                 decompiledFrameRemainder3 = (var9 != 0);
               }
               if (decompiledFrameRemainder3) {

@@ -20,7 +20,7 @@ final class SummonAction extends PreparedAction {
 
     final void applyToBattlefield(int obfuscationGuard, Battlefield battlefield) {
         try {
-          this.summoningBonus = battlefield.a(bw.unitDefinitions[this.unitType][1], this.tileY, this.tileX, 0, this.actingPlayer, bw.unitDefinitions[this.unitType][2]);
+          this.summoningBonus = battlefield.a(WhirlpoolHasher.unitDefinitions[this.unitType][1], this.tileY, this.tileX, 0, this.actingPlayer, WhirlpoolHasher.unitDefinitions[this.unitType][2]);
           if (obfuscationGuard != 64) {
             CharSequence var4 = (CharSequence) null;
             SummonAction.a(-2, (CharSequence) null, false);

@@ -4008,7 +4008,7 @@ final class TutorialController {
                 var6 = "";
                 var6Lifetime1 = ut.field_cb[var5];
                 var7 = AlphaWidgetContainer.field_M[var5];
-                this.a(var7, bw.unitDefinitions[var5][0], ve.a((byte) 13, ScrollContainer.unitDisplayNames[var5]), this.f(var5, 8), (byte) 116, var6Lifetime1);
+                this.a(var7, WhirlpoolHasher.unitDefinitions[var5][0], ve.a((byte) 13, ScrollContainer.unitDisplayNames[var5]), this.f(var5, 8), (byte) 116, var6Lifetime1);
               } else {
                 this.a((String) null, -1, ve.a((byte) 13, NetworkGameShell.field_q[li.field_q + 1]), (String) null, (byte) -55, GlobalSpell.field_l[li.field_q + 1]);
               }
@@ -4031,7 +4031,7 @@ final class TutorialController {
                 var2_intLifetime2 = 0;
                 while (true) {
                   if (var2_intLifetime2 < AnimationFrameSet.unitUnlockGroups[li.field_q + 1].length) {
-                    stackIn_72_0 = bw.unitDefinitions[AnimationFrameSet.unitUnlockGroups[li.field_q + 1][var2_intLifetime2]][11];
+                    stackIn_72_0 = WhirlpoolHasher.unitDefinitions[AnimationFrameSet.unitUnlockGroups[li.field_q + 1][var2_intLifetime2]][11];
                     if (var8 == 0) {
                       if (stackIn_72_0 == 0) {
                         pg.playerProfile.unitUnlockMasks[li.field_q] = AccountRegistrationDialog.bitwiseOr(pg.playerProfile.unitUnlockMasks[li.field_q], 1 << var2_intLifetime2);
@@ -4048,7 +4048,7 @@ final class TutorialController {
                 if ((var8 != 0) && (SetCoatConsoleCommand.field_F > -1 &&
                   0 < pg.playerProfile.unitUnlockMasks[li.field_q + 1] &&
                   0 == (pg.playerProfile.unitUnlockMasks[1 + li.field_q] & 1 << SetCoatConsoleCommand.field_F) &&
-                  pg.playerProfile.getAvailableRunes((byte) 91) >= bw.unitDefinitions[SetCoatConsoleCommand.field_F][11])) {
+                  pg.playerProfile.getAvailableRunes((byte) 91) >= WhirlpoolHasher.unitDefinitions[SetCoatConsoleCommand.field_F][11])) {
                   EmailValidator.outgoingPacket.writeCipheredOpcode(32161, 70);
                   EmailValidator.outgoingPacket.writeShort(true, AnimationFrameSet.unitUnlockGroups[1 + li.field_q][SetCoatConsoleCommand.field_F]);
                   RadialSummonMenu.playDefaultSoundWithIntGuard(62, ClientUiNode.field_v[14]);
@@ -4059,7 +4059,7 @@ final class TutorialController {
               if (SetCoatConsoleCommand.field_F > -1 &&
                 0 < pg.playerProfile.unitUnlockMasks[li.field_q + 1] &&
                 0 == (pg.playerProfile.unitUnlockMasks[1 + li.field_q] & 1 << SetCoatConsoleCommand.field_F) &&
-                pg.playerProfile.getAvailableRunes((byte) 91) >= bw.unitDefinitions[SetCoatConsoleCommand.field_F][11]) {
+                pg.playerProfile.getAvailableRunes((byte) 91) >= WhirlpoolHasher.unitDefinitions[SetCoatConsoleCommand.field_F][11]) {
                 EmailValidator.outgoingPacket.writeCipheredOpcode(32161, 70);
                 EmailValidator.outgoingPacket.writeShort(true, AnimationFrameSet.unitUnlockGroups[1 + li.field_q][SetCoatConsoleCommand.field_F]);
                 RadialSummonMenu.playDefaultSoundWithIntGuard(62, ClientUiNode.field_v[14]);
@@ -5157,7 +5157,7 @@ final class TutorialController {
           var4_int = AnimationFrameSet.unitUnlockGroups[param0][param1];
           var5 = 69 % ((14 - param2) / 40);
           this.b(true);
-          if (bw.unitDefinitions[var4_int][11] <= 0) {
+          if (WhirlpoolHasher.unitDefinitions[var4_int][11] <= 0) {
             if ((pg.playerProfile.unitUnlockMasks[param0] & 1 << param1) != 0) {
               fe.c(CampaignMenuButton.field_b, db.a(true, 537), MatchConditionEntry.a(366, (byte) 94), ConsoleValue.field_b, true);
               if (var6 == 0) {
@@ -5170,11 +5170,11 @@ final class TutorialController {
             }
           }
           if (0 == (pg.playerProfile.unitUnlockMasks[param0] & 1 << param1)) {
-            fe.c(this.c(-38, bw.unitDefinitions[var4_int][11]), db.a(true, 537), MatchConditionEntry.a(366, (byte) 94), ConsoleValue.field_b, true);
+            fe.c(this.c(-38, WhirlpoolHasher.unitDefinitions[var4_int][11]), db.a(true, 537), MatchConditionEntry.a(366, (byte) 94), ConsoleValue.field_b, true);
             if (pg.playerProfile.unitUnlockMasks[param0] == 0) {
               return;
             }
-            if (pg.playerProfile.getAvailableRunes((byte) 78) < bw.unitDefinitions[var4_int][11]) {
+            if (pg.playerProfile.getAvailableRunes((byte) 78) < WhirlpoolHasher.unitDefinitions[var4_int][11]) {
               return;
             }
             boolean decompiledSharedTail0 = !(IterableDualNodeDeque.isPointerInBounds(-33, db.a(true, 469), db.a(true, 606), MatchConditionEntry.a(384, (byte) 94), MatchConditionEntry.a(416, (byte) 94)));
@@ -5856,7 +5856,7 @@ final class TutorialController {
         String stackIn_9_0 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var3 = bw.unitDefinitions[param0];
+          var3 = WhirlpoolHasher.unitDefinitions[param0];
           var4 = var3[2];
           var5 = var3[3];
           var6 = var3[4];
@@ -5866,8 +5866,8 @@ final class TutorialController {
           var10 = var3[param1];
           if (param0 == 34) {
             var11 = var8;
-            var8 = bw.unitDefinitions[75][6];
-            var9 = bw.unitDefinitions[75][7];
+            var8 = WhirlpoolHasher.unitDefinitions[75][6];
+            var9 = WhirlpoolHasher.unitDefinitions[75][7];
             stackIn_9_0 = EmailCheckResult.a(param1 ^ 4808, EmailValidator.field_l, new String[]{Integer.toString(var4), Integer.toString(var5), Integer.toString(var6), Integer.toString(var7), Integer.toString(var11), Integer.toString(var8), Integer.toString(var9), Integer.toString(var10)});
             return stackIn_9_0;
           }

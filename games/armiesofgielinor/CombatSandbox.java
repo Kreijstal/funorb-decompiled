@@ -196,9 +196,9 @@ final class CombatSandbox {
             var13 = 1;
             var8Lifetime1 = 7;
           }
-          var14 = bw.unitDefinitions[var8Lifetime1][4];
+          var14 = WhirlpoolHasher.unitDefinitions[var8Lifetime1][4];
           var15 = var14 / (1 + this.field_l[4].getSelectedIndex(5));
-          var16 = bw.unitDefinitions[var9][4];
+          var16 = WhirlpoolHasher.unitDefinitions[var9][4];
           var17 = var16 / (1 + this.field_l[5].getSelectedIndex(5));
           if (var15 == 0) {
             var15++;
@@ -242,8 +242,8 @@ final class CombatSandbox {
             stackIn_28_8 = 8;
           }
           var19 = new Unit(stackIn_27_2, stackIn_27_3, stackIn_27_4, stackIn_27_5, stackIn_27_6, stackIn_27_7, stackIn_28_8, 0, 0, (Battlefield) null, 0, 0, -1, true, 0);
-          var20 = bw.unitDefinitions[var8Lifetime1][0];
-          var21 = bw.unitDefinitions[var9][0];
+          var20 = WhirlpoolHasher.unitDefinitions[var8Lifetime1][0];
+          var21 = WhirlpoolHasher.unitDefinitions[var9][0];
           var22 = WeightedLruCache.terrainDamageTakenPercent[var11] * (var15 * fk.matchupDamagePercent[var20][var21]) / 10000;
           if (var22 > var17) {
             var22 = var17;

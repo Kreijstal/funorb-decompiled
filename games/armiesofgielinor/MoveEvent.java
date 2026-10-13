@@ -429,7 +429,7 @@ final class MoveEvent extends GameEvent {
               }
               if (var7 > 0) {
                 battlefield.refreshTileEffectsNear(this.startY, this.startX, obfuscationGuard + 26661, var7);
-                nk.a((byte) 101);
+                Bzip2State.a((byte) 101);
               }
               if (var12 != 0) {
                 var6.movementSpent = true;

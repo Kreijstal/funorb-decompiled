@@ -212,7 +212,7 @@ final class MoveAttackRequest extends ActionRequest {
               return stackIn_16_0;
             }
             if (!var17.movementSpent) {
-              stackIn_20_0 = 3 * bw.unitDefinitions[var16.unitType][3];
+              stackIn_20_0 = 3 * WhirlpoolHasher.unitDefinitions[var16.unitType][3];
             } else {
               stackIn_20_0 = 0;
             }
@@ -288,8 +288,8 @@ final class MoveAttackRequest extends ActionRequest {
             stackIn_68_0 = (0 <= this.targetDeltaY) ? 1 : -1;
             var10 = stackIn_68_0;
             var11 = var9Lifetime1 * this.targetDeltaX + this.targetDeltaY * var10;
-            var12 = bw.unitDefinitions[var17.unitType][6];
-            var13 = bw.unitDefinitions[var17.unitType][7];
+            var12 = WhirlpoolHasher.unitDefinitions[var17.unitType][6];
+            var13 = WhirlpoolHasher.unitDefinitions[var17.unitType][7];
             if (var17.packedFlag8 &&
               var17.unitType == 34) {
               var12 = 2;
@@ -333,7 +333,7 @@ final class MoveAttackRequest extends ActionRequest {
                   this.targetDeltaY = 0;
                 }
               } else {
-                stackIn_97_0 = (bw.unitDefinitions[var17.unitType][0] != 4) ? 0 : 1;
+                stackIn_97_0 = (WhirlpoolHasher.unitDefinitions[var17.unitType][0] != 4) ? 0 : 1;
                 var14 = stackIn_97_0;
                 if (!battlefield.lineOfSightGrid.computeVisibility(var6, this.targetDeltaX + var5, var5, var14 != 0, var13, this.targetDeltaY + var6, (byte) 81)) {
                   this.targetDeltaX = 0;

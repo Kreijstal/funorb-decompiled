@@ -33,7 +33,7 @@ final class SpellCastAction extends PreparedAction {
         int var5_int = 0;
         byte[] var4 = null;
         RuntimeException var4_ref = null;
-        bw var5 = null;
+        WhirlpoolHasher var5 = null;
         byte[] var6 = null;
         int var7 = 0;
         String var8 = null;
@@ -54,15 +54,15 @@ final class SpellCastAction extends PreparedAction {
           } else {
             var4 = param2;
           }
-          var5 = new bw();
-          var5.b(200);
-          var5.a((byte) -57, (long)(8 * param1), var4);
+          var5 = new WhirlpoolHasher();
+          var5.reset(200);
+          var5.updateBits((byte) -57, (long)(8 * param1), var4);
           if (param0 != -18423) {
             var8 = (String) null;
             SpellCastAction.a(44, (byte) 45, (String) null);
           }
           var6 = new byte[64];
-          var5.a(var6, 0, true);
+          var5.finishDigest(var6, 0, true);
           stackIn_9_0 = var6;
           return stackIn_9_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

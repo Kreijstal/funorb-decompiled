@@ -771,7 +771,7 @@ final class AiPlanner extends IntrusiveNode implements UnitObserver {
         var12 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         var4 = 0.0f;
         var5 = 0;
-        var6 = bw.unitDefinitions[unitType][0];
+        var6 = WhirlpoolHasher.unitDefinitions[unitType][0];
         var4 = var4 + this.weights[43] * (this.field_K[8][tileIndex] * (float)fk.matchupDamagePercent[var6][0]);
         if (var5 != 0) {
           System.out.println("Analyzing " + ScrollContainer.unitDisplayNames[unitType] + " base score " + var4);
@@ -1507,7 +1507,7 @@ final class AiPlanner extends IntrusiveNode implements UnitObserver {
                   var18 != 34 &&
                   var18 != 51 &&
                   var18 != 27) {
-                  var19 = bw.unitDefinitions[var18][1];
+                  var19 = WhirlpoolHasher.unitDefinitions[var18][1];
                   if ((var36Lifetime1.terrainType != 11 ||
                     var36Lifetime1.godId == var19) &&
                     (-1 != var19 ||
@@ -1522,19 +1522,19 @@ final class AiPlanner extends IntrusiveNode implements UnitObserver {
                     }
                     if (var21 != 0) {
                       var22 = 0.0f;
-                      var23 = bw.unitDefinitions[var18][4];
+                      var23 = WhirlpoolHasher.unitDefinitions[var18][4];
                       var22 = var22 + (float)var23 * this.weights[26];
                       var22Lifetime1 = this.scoreSummoningAtTile(var18, 1, var13_intLifetime1);
-                      var25 = bw.unitDefinitions[var18][1];
+                      var25 = WhirlpoolHasher.unitDefinitions[var18][1];
                       if (var25 != -1) {
                         var24 = var15[var25];
-                        if (var24 == bw.unitDefinitions[var18][2]) {
+                        if (var24 == WhirlpoolHasher.unitDefinitions[var18][2]) {
                           var22Lifetime1 = var22Lifetime1 + (float)var24 * this.weights[23];
                         }
                       }
-                      var22Lifetime1 = var22Lifetime1 - this.weights[25] * (float)bw.unitDefinitions[var18][8] * 0.029999999329447746f;
-                      var26 = bw.unitDefinitions[var18][10];
-                      var27 = bw.unitDefinitions[var18][12];
+                      var22Lifetime1 = var22Lifetime1 - this.weights[25] * (float)WhirlpoolHasher.unitDefinitions[var18][8] * 0.029999999329447746f;
+                      var26 = WhirlpoolHasher.unitDefinitions[var18][10];
+                      var27 = WhirlpoolHasher.unitDefinitions[var18][12];
                       if (18 == var27) {
                         var22Lifetime1 = var22Lifetime1 - this.weights[45];
                       }
@@ -1597,7 +1597,7 @@ final class AiPlanner extends IntrusiveNode implements UnitObserver {
                 if (0 > var14) {
                   return;
                 }
-                this.field_q = this.field_q + bw.unitDefinitions[var14][8];
+                this.field_q = this.field_q + WhirlpoolHasher.unitDefinitions[var14][8];
               }
             }
           }

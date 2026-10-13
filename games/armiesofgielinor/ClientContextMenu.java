@@ -33,12 +33,12 @@ final class ClientContextMenu {
                   ov.writeSpectateRoomRequest(packetOpcode, 3, this.roomId);
                 } else {
                   if (actionId == 15) {
-                    bw.writeWatchedRoomRequest(packetOpcode, this.roomId, (byte) -116);
+                    WhirlpoolHasher.writeWatchedRoomRequest(packetOpcode, this.roomId, (byte) -116);
                   } else {
                     if (actionId != 16) {
                       return false;
                     }
-                    bw.writeWatchedRoomRequest(packetOpcode, 0, (byte) -116);
+                    WhirlpoolHasher.writeWatchedRoomRequest(packetOpcode, 0, (byte) -116);
                   }
                 }
               }

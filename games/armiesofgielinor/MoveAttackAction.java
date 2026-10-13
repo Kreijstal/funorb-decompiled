@@ -354,7 +354,7 @@ final class MoveAttackAction extends PreparedAction {
             this.targetDeltaY = 0;
           } else {
             this.defenderSnapshot = defender.copyDetached(false);
-            var10_int = bw.unitDefinitions[this.movingUnit.unitType][9];
+            var10_int = WhirlpoolHasher.unitDefinitions[this.movingUnit.unitType][9];
             stackIn_4_1 = this.movingUnit.strength * ToggleWidget.field_N[var10_int] / this.movingUnit.maximumStrength;
             if (this.movingUnit.strength * ToggleWidget.field_N[var10_int] % this.movingUnit.maximumStrength != 0) {
               stackIn_5_2 = 1;
@@ -362,7 +362,7 @@ final class MoveAttackAction extends PreparedAction {
               stackIn_5_2 = 0;
             }
             this.attackerAnimationCount = stackIn_4_1 + stackIn_5_2;
-            var11 = bw.unitDefinitions[this.defenderSnapshot.unitType][9];
+            var11 = WhirlpoolHasher.unitDefinitions[this.defenderSnapshot.unitType][9];
             if (0 != this.defenderSnapshot.strength * ToggleWidget.field_N[var11] % this.defenderSnapshot.maximumStrength) {
               stackIn_8_1 = 1;
             } else {

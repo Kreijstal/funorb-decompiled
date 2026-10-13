@@ -568,7 +568,7 @@ final class BattleCharacter {
             return;
           }
           if (this.field_w == 0) {
-            var9Lifetime1Lifetime1 = bw.unitDefinitions[this.unitType][1] + 1;
+            var9Lifetime1Lifetime1 = WhirlpoolHasher.unitDefinitions[this.unitType][1] + 1;
             var12 = 0;
             var10Lifetime1 = var12;
             while (var12 < lb.field_a) {

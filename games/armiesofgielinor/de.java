@@ -319,8 +319,8 @@ final class de {
               boolean decompiledFrameRemainder1 = true;
               if (uc.spellDefinitions[spellId][4] == 2 &&
                 19 == uc.spellDefinitions[spellId][5]) {
-                if (uc.spellDefinitions[spellId][6] < bw.unitDefinitions[var7.unitType][2]) {
-                  stackIn_154_0 = EmailCheckResult.a(4800, sq.field_s, new String[]{Integer.toString(uc.spellDefinitions[spellId][6]), Integer.toString(bw.unitDefinitions[var7.unitType][2])});
+                if (uc.spellDefinitions[spellId][6] < WhirlpoolHasher.unitDefinitions[var7.unitType][2]) {
+                  stackIn_154_0 = EmailCheckResult.a(4800, sq.field_s, new String[]{Integer.toString(uc.spellDefinitions[spellId][6]), Integer.toString(WhirlpoolHasher.unitDefinitions[var7.unitType][2])});
                   return stackIn_154_0;
                 }
                 if (var7.packedFlag256) {
@@ -403,7 +403,7 @@ final class de {
                   return stackIn_219_0;
                 }
                 if (uc.spellDefinitions[spellId][6] == 6 &&
-                  (64 & bw.unitDefinitions[var7.unitType][10]) != 0) {
+                  (64 & WhirlpoolHasher.unitDefinitions[var7.unitType][10]) != 0) {
                   stackIn_224_0 = BattleTutorial.field_r;
                   return stackIn_224_0;
                 }
@@ -438,7 +438,7 @@ final class de {
                 if (2 == uc.spellDefinitions[spellId][5]) {
                   if (var7.getUnitCategory(0) != 4 &&
                     !var7.canAttackFlying((byte) -83) &&
-                    bw.unitDefinitions[var7.unitType][7] <= 1) {
+                    WhirlpoolHasher.unitDefinitions[var7.unitType][7] <= 1) {
                     if (var7.unitType == 34 &&
                       var7.packedFlag8) {
                       stackIn_262_0 = 1;

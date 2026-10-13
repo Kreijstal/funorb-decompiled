@@ -1606,7 +1606,7 @@ class BattleTutorial {
 
     private final void spawnEnemyWave(int secondUnitBonus) {
         this.controller.battlefield.tiles[9 + this.controller.battlefield.mapWidth * 12].terrainType = 10;
-        nk.a((byte) 106);
+        Bzip2State.a((byte) 106);
         this.controller.battlefield.pendingEvents.addLast((byte) -119, (IntrusiveNode) (new SummonEvent(0, 9, 12, -4, 1)));
         this.controller.battlefield.pendingEvents.addLast((byte) -119, (IntrusiveNode) (new SummonEvent(0, 15, 13, secondUnitBonus, 1)));
         this.controller.battlefield.pendingEvents.addLast((byte) -119, (IntrusiveNode) (new SummonEvent(5, 16, 17, 0, 1)));

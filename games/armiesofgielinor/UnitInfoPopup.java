@@ -118,7 +118,7 @@ final class UnitInfoPopup extends IntrusiveNode {
           var9Lifetime1 = this.screenX - param3 - 75;
           var10 = this.screenY - (param4 + 80);
           SpellConfirmationDialog.field_j.drawWithOpacity(var9Lifetime1, var10, -this.fadeOffset + 32 << 3);
-          var11 = bw.unitDefinitions[this.unit.unitType][12];
+          var11 = WhirlpoolHasher.unitDefinitions[this.unit.unitType][12];
           if (var11 != -1) {
             PreparedAction.a(32 - this.fadeOffset << 3, true, var9Lifetime1 + 96, e.field_b, 40, 60 + var10);
             if (var11 < lb.field_e.length) {

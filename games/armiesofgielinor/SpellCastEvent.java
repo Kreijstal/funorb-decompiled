@@ -222,7 +222,7 @@ final class SpellCastEvent extends GameEvent {
           destinationTerrain = tiles[destinationIndex].terrainType;
           var15 = 0;
           var16 = 0;
-          stackIn_12_0 = (bw.unitDefinitions[unit.unitType][1] != 2) ? 0 : 1;
+          stackIn_12_0 = (WhirlpoolHasher.unitDefinitions[unit.unitType][1] != 2) ? 0 : 1;
           kind2Override = stackIn_12_0;
           costThreeOverride = unit.r((byte) 55) ? 1 : 0;
           costOneOverride = unit.o((byte) 98) ? 1 : 0;
@@ -298,7 +298,7 @@ final class SpellCastEvent extends GameEvent {
           }
           if (2 == destinationTerrain &&
             unit.unitType == 62) {
-            destinationCost = 3 * bw.unitDefinitions[62][3];
+            destinationCost = 3 * WhirlpoolHasher.unitDefinitions[62][3];
           }
           if (destinationCost >= sourceCost) {
             stackIn_78_0 = destinationCost;

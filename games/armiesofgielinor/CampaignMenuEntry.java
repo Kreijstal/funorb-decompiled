@@ -299,7 +299,7 @@ final class CampaignMenuEntry extends IntrusiveNode {
                 availableUnits = participant.availableUnitTypes;
                 for (availableUnitIndex = 0; availableUnits.length > availableUnitIndex; availableUnitIndex++) {
                   unitType = availableUnits[availableUnitIndex];
-                  availableCategory = bw.unitDefinitions[unitType][0];
+                  availableCategory = WhirlpoolHasher.unitDefinitions[unitType][0];
                   if (this.previewUnitCategories.get(-96, (long)availableCategory) == null) {
                     this.previewUnitCategories.put(new IntrusiveNode(), (long)availableCategory, 126);
                   }

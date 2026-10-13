@@ -1,42 +1,42 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class nk {
-    int field_f;
+final class Bzip2State {
+    int originalPointer;
     static String field_t;
-    int[][] field_r;
-    byte[] field_v;
-    byte[] field_n;
-    byte[][] field_c;
-    int[] field_B;
-    byte[] field_e;
-    int field_I;
-    boolean[] field_l;
-    byte[] field_d;
-    int[] field_y;
+    int[][] huffmanBase;
+    byte[] output;
+    byte[] sequenceToByte;
+    byte[][] codeLengths;
+    int[] cumulativeFrequencies;
+    byte[] input;
+    int totalInputBytes;
+    boolean[] inUseGroups;
+    byte[] selectors;
+    int[] minimumCodeLengths;
     static byte[] field_C;
-    int field_i;
-    int field_j;
+    int outputIndex;
+    int traversalIndex;
     static int field_m;
-    byte[] field_o;
-    int field_b;
-    int field_q;
-    int field_L;
-    int[] field_u;
-    int field_g;
-    int field_z;
-    int field_E;
-    int field_a;
-    int[] field_h;
-    byte field_K;
-    int field_x;
-    byte[] field_s;
-    int[][] field_k;
-    int[][] field_H;
-    int field_w;
-    int field_J;
-    int field_F;
-    boolean[] field_p;
+    byte[] mtfSymbols;
+    int bitBuffer;
+    int inputIndex;
+    int outputRemaining;
+    int[] byteFrequencies;
+    int blockSize100k;
+    int blockLength;
+    int currentByte;
+    int blockUsed;
+    int[] mtfBases;
+    byte pendingRunByte;
+    int inUseCount;
+    byte[] selectorMtf;
+    int[][] huffmanPermutation;
+    int[][] huffmanLimits;
+    int pendingRunLength;
+    int bitsAvailable;
+    int totalOutputBytes;
+    boolean[] inUse;
 
     public static void b(byte param0) {
         field_t = null;
@@ -61,7 +61,7 @@ final class nk {
             CampaignMenuEntry.field_u[var1_int] = QuickChatCategory.field_G[vs.field_e[var1_int].terrainType];
           }
           if (param0 <= 79) {
-            nk.a((byte) 84);
+            Bzip2State.a((byte) 84);
           }
           for (var1_intLifetime1 = 0; var1_intLifetime1 < ConsoleParseException.field_c; var1_intLifetime1++) {
             for (var2 = 0; ResourceRequest.field_y > var2; var2++) {
@@ -114,7 +114,7 @@ final class nk {
         try {
           var3 = SummonAction.a(-127, param1, param0);
           if (param2 > -34) {
-            nk.b((byte) -25);
+            Bzip2State.b((byte) -25);
           }
           if (var3 != null) {
             stackIn_6_0 = var3;
@@ -179,23 +179,23 @@ final class nk {
         }
     }
 
-    nk() {
-        this.field_l = new boolean[16];
-        this.field_c = new byte[6][258];
-        this.field_o = new byte[4096];
-        this.field_y = new int[6];
-        this.field_u = new int[256];
-        this.field_i = 0;
-        this.field_n = new byte[256];
-        this.field_H = new int[6][258];
-        this.field_d = new byte[18002];
-        this.field_s = new byte[18002];
-        this.field_r = new int[6][258];
-        this.field_B = new int[257];
-        this.field_h = new int[16];
-        this.field_q = 0;
-        this.field_k = new int[6][258];
-        this.field_p = new boolean[256];
+    Bzip2State() {
+        this.inUseGroups = new boolean[16];
+        this.codeLengths = new byte[6][258];
+        this.mtfSymbols = new byte[4096];
+        this.minimumCodeLengths = new int[6];
+        this.byteFrequencies = new int[256];
+        this.outputIndex = 0;
+        this.sequenceToByte = new byte[256];
+        this.huffmanLimits = new int[6][258];
+        this.selectors = new byte[18002];
+        this.selectorMtf = new byte[18002];
+        this.huffmanBase = new int[6][258];
+        this.cumulativeFrequencies = new int[257];
+        this.mtfBases = new int[16];
+        this.inputIndex = 0;
+        this.huffmanPermutation = new int[6][258];
+        this.inUse = new boolean[256];
     }
 
     static {

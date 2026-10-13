@@ -156,7 +156,7 @@ final class DeployRequest extends ActionRequest {
             stackIn_8_0 = null;
             return (PreparedAction) (stackIn_8_0);
           }
-          if (0 >= (bw.unitDefinitions[var5.unitType][10] & 1024)) {
+          if (0 >= (WhirlpoolHasher.unitDefinitions[var5.unitType][10] & 1024)) {
             discarded$8 = this.formatDeployRejection(new String[]{"unit at ", TutorialController.formatCoordinatePair(this.tileX, 0, this.tileY), " cannot deploy"}, false);
             stackIn_11_0 = null;
             return (PreparedAction) (stackIn_11_0);

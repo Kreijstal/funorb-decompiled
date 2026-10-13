@@ -467,10 +467,10 @@ final class MusicCrossfadeStream extends PcmStream {
             dh.field_k.drawPixels(NumericDateInputWidget.field_T.x, 0);
           }
           stackIn_6_0 = NumericDateInputWidget.field_T;
-          stackIn_7_1 = (param1) && (!bw.field_g);
+          stackIn_7_1 = (param1) && (!WhirlpoolHasher.field_g);
           ((ClientUiComponent) (Object) stackIn_6_0).draw(stackIn_7_1, 20);
           stackIn_10_0 = ov.field_i;
-          stackIn_11_1 = (param1) && (!bw.field_g);
+          stackIn_11_1 = (param1) && (!WhirlpoolHasher.field_g);
           ((ClientUiComponent) (Object) stackIn_10_0).draw(stackIn_11_1, 20);
         }
         if (param0 != 95) {

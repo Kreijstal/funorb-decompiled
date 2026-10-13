@@ -958,10 +958,10 @@ final class InstructionsPanel {
         if (unitType < 0) {
           return null;
         }
-        if (unitType >= bw.unitDefinitions.length) {
+        if (unitType >= WhirlpoolHasher.unitDefinitions.length) {
           return null;
         }
-        int maximumStrength = bw.unitDefinitions[unitType][4];
+        int maximumStrength = WhirlpoolHasher.unitDefinitions[unitType][4];
         int strength = -1 + maximumStrength;
         if (strength <= 0) {
           strength = 1;
@@ -2441,9 +2441,9 @@ final class InstructionsPanel {
                   ByteStorage.incomingPacket.readUnsignedByte(param0 ^ -53);
                   ByteStorage.incomingPacket.readInt(param0 + 54);
                   LobbyPlayer.field_Nb = ByteStorage.incomingPacket.readUnsignedShort((byte) -104);
-                  nk.field_C = new byte[LobbyPlayer.field_Nb];
+                  Bzip2State.field_C = new byte[LobbyPlayer.field_Nb];
                   for (var8 = 0; LobbyPlayer.field_Nb > var8; var8++) {
-                    nk.field_C[var8] = ByteStorage.incomingPacket.readByte((byte) -49);
+                    Bzip2State.field_C[var8] = ByteStorage.incomingPacket.readByte((byte) -49);
                   }
                 }
               } else {
@@ -2454,9 +2454,9 @@ final class InstructionsPanel {
                   ByteStorage.incomingPacket.readUnsignedByte(param0 ^ -53);
                   ByteStorage.incomingPacket.readInt(param0 + 54);
                   LobbyPlayer.field_Nb = ByteStorage.incomingPacket.readUnsignedShort((byte) -104);
-                  nk.field_C = new byte[LobbyPlayer.field_Nb];
+                  Bzip2State.field_C = new byte[LobbyPlayer.field_Nb];
                   for (var8 = 0; LobbyPlayer.field_Nb > var8; var8++) {
-                    nk.field_C[var8] = ByteStorage.incomingPacket.readByte((byte) -49);
+                    Bzip2State.field_C[var8] = ByteStorage.incomingPacket.readByte((byte) -49);
                   }
                 }
               }

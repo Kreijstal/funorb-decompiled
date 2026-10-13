@@ -43,7 +43,7 @@ final class AiInfluenceMap {
           var19.tileX = param7;
           var19.tileY = param6;
           this.a(var19, 120);
-          var10 = 3 * bw.unitDefinitions[var18.unitType][3];
+          var10 = 3 * WhirlpoolHasher.unitDefinitions[var18.unitType][3];
           for (var12 = this.minimumY; var12 <= this.maximumY; var12++) {
             var11 = this.minimumX + this.mapWidth * var12;
             for (var13 = this.minimumX; var13 <= this.maximumX; var13++) {
@@ -218,7 +218,7 @@ final class AiInfluenceMap {
           var6 = param3.canCaptureStructures(-21428) ? 1 : 0;
           this.a(param3, 124);
           var7 = 0;
-          var8 = bw.unitDefinitions[param3.unitType][7];
+          var8 = WhirlpoolHasher.unitDefinitions[param3.unitType][7];
           this.maximumY = Math.min(this.maximumY + var8, this.mapHeight - 1);
           this.maximumX = Math.min(var8 + this.maximumX, this.mapWidth - 1);
           this.minimumY = Math.max(-var8 + this.minimumY, 0);
@@ -365,7 +365,7 @@ final class AiInfluenceMap {
           if (param1 < 118) {
             this.minimumX = -1;
           }
-          var3_intLifetime1 = 3 * bw.unitDefinitions[param0.unitType][3];
+          var3_intLifetime1 = 3 * WhirlpoolHasher.unitDefinitions[param0.unitType][3];
           var4 = 0;
           while (500 > var4) {
             var5 = 0;
@@ -626,10 +626,10 @@ final class AiInfluenceMap {
             stackIn_3_0 = 115;
             return stackIn_3_0;
           }
-          stackIn_7_0 = (bw.unitDefinitions[param1.unitType][0] != 4) ? 0 : 1;
+          stackIn_7_0 = (WhirlpoolHasher.unitDefinitions[param1.unitType][0] != 4) ? 0 : 1;
           var8 = stackIn_7_0;
-          var9 = bw.unitDefinitions[param1.unitType][6];
-          var10 = bw.unitDefinitions[param1.unitType][7];
+          var9 = WhirlpoolHasher.unitDefinitions[param1.unitType][6];
+          var10 = WhirlpoolHasher.unitDefinitions[param1.unitType][7];
           for (var11 = -var10; var11 <= var10; var11++) {
             for (var12 = -var10; var10 >= var12; var12++) {
               var13 = Math.abs(var11) + Math.abs(var12);
@@ -706,10 +706,10 @@ final class AiInfluenceMap {
             var9 = var11;
             var4 = var9;
             for (var5 = 0; 75 > var5; var5++) {
-              var6 = bw.unitDefinitions[var5][0];
-              var7 = bw.unitDefinitions[var5][3];
+              var6 = WhirlpoolHasher.unitDefinitions[var5][0];
+              var7 = WhirlpoolHasher.unitDefinitions[var5][3];
               if (var12[var6] == 0 ||
-                !(bw.unitDefinitions[var12[var6]][3] >= var7)) {
+                !(WhirlpoolHasher.unitDefinitions[var12[var6]][3] >= var7)) {
                 var12[var6] = var5;
               }
             }
@@ -791,10 +791,10 @@ final class AiInfluenceMap {
                 var3.field_r = RevivalEvent.field_D;
                 var3.field_s = ov.field_e;
                 var3.field_k = la.field_d;
-                var3.field_m = nk.field_m;
-                ut.a(RevivalEvent.field_D, nk.field_m, ov.field_e, la.field_d, (byte) 127, var6_intLifetime1);
+                var3.field_m = Bzip2State.field_m;
+                ut.a(RevivalEvent.field_D, Bzip2State.field_m, ov.field_e, la.field_d, (byte) 127, var6_intLifetime1);
               } else {
-                ut.a(RevivalEvent.field_D, nk.field_m, ov.field_e, la.field_d, (byte) 125, var6_intLifetime1);
+                ut.a(RevivalEvent.field_D, Bzip2State.field_m, ov.field_e, la.field_d, (byte) 125, var6_intLifetime1);
               }
             }
             ArchiveIndex.a(var5, 0);

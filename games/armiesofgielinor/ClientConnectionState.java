@@ -4,9 +4,9 @@
 final class ClientConnectionState {
     static String field_b;
     static String field_d;
-    static long[][] field_g;
+    static long[][] whirlpoolRoundTables;
     static int[] field_i;
-    static long[] field_h;
+    static long[] whirlpoolRoundConstants;
     static String field_f;
     static String field_e;
     static RgbSprite field_a;
@@ -44,9 +44,9 @@ final class ClientConnectionState {
     public static void a(byte param0) {
         field_b = null;
         field_i = null;
-        field_g = (long[][]) null;
+        whirlpoolRoundTables = (long[][]) null;
         field_a = null;
-        field_h = null;
+        whirlpoolRoundConstants = null;
         field_c = null;
         if (param0 != 96) {
           field_d = (String) null;
@@ -153,10 +153,10 @@ final class ClientConnectionState {
         field_b = "Return to game";
         field_d = "Weapons";
         field_i = new int[]{2, 17, 18, 36, 37, 38, 6, 5, 12, 13};
-        field_g = new long[8][256];
+        whirlpoolRoundTables = new long[8][256];
         field_f = "Staff impersonation";
         field_e = "Next";
-        field_h = new long[11];
+        whirlpoolRoundConstants = new long[11];
         field_c = "Lobby";
         int var0 = 0;
         while (var0 < 256) {
@@ -176,18 +176,18 @@ final class ClientConnectionState {
                 var10 = var10 ^ 285L;
             }
             var12 = var10 ^ var2;
-            field_g[0][var0] = DualNodeHashTable.a(var12, DualNodeHashTable.a(DualNodeHashTable.a(var8 << 16, DualNodeHashTable.a(DualNodeHashTable.a(var2 << 32, DualNodeHashTable.a(var6 << 40, DualNodeHashTable.a(var2 << 48, var2 << 56))), var10 << 24)), var4 << 8));
+            whirlpoolRoundTables[0][var0] = DualNodeHashTable.a(var12, DualNodeHashTable.a(DualNodeHashTable.a(var8 << 16, DualNodeHashTable.a(DualNodeHashTable.a(var2 << 32, DualNodeHashTable.a(var6 << 40, DualNodeHashTable.a(var2 << 48, var2 << 56))), var10 << 24)), var4 << 8));
             for (var14 = 1; var14 < 8; var14++) {
-                field_g[var14][var0] = DualNodeHashTable.a(field_g[-1 + var14][var0] << 56, field_g[-1 + var14][var0] >>> 8);
+                whirlpoolRoundTables[var14][var0] = DualNodeHashTable.a(whirlpoolRoundTables[-1 + var14][var0] << 56, whirlpoolRoundTables[-1 + var14][var0] >>> 8);
             }
             var0++;
         }
-        field_h[0] = 0L;
+        whirlpoolRoundConstants[0] = 0L;
         int var15 = 1;
         var0 = var15;
         while (var15 <= 10) {
             var1 = -8 + var15 * 8;
-            field_h[var15] = BufferedFile.a(we.a(field_g[7][7 + var1], 255L), BufferedFile.a(we.a(65280L, field_g[6][var1 + 6]), BufferedFile.a(we.a(field_g[5][var1 + 5], 16711680L), BufferedFile.a(we.a(4278190080L, field_g[4][var1 + 4]), BufferedFile.a(we.a(field_g[3][var1 + 3], 1095216660480L), BufferedFile.a(we.a(280375465082880L, field_g[2][var1 + 2]), BufferedFile.a(we.a(71776119061217280L, field_g[1][1 + var1]), we.a(-72057594037927936L, field_g[0][var1]))))))));
+            whirlpoolRoundConstants[var15] = BufferedFile.a(we.a(whirlpoolRoundTables[7][7 + var1], 255L), BufferedFile.a(we.a(65280L, whirlpoolRoundTables[6][var1 + 6]), BufferedFile.a(we.a(whirlpoolRoundTables[5][var1 + 5], 16711680L), BufferedFile.a(we.a(4278190080L, whirlpoolRoundTables[4][var1 + 4]), BufferedFile.a(we.a(whirlpoolRoundTables[3][var1 + 3], 1095216660480L), BufferedFile.a(we.a(280375465082880L, whirlpoolRoundTables[2][var1 + 2]), BufferedFile.a(we.a(71776119061217280L, whirlpoolRoundTables[1][1 + var1]), we.a(-72057594037927936L, whirlpoolRoundTables[0][var1]))))))));
             var15++;
         }
     }

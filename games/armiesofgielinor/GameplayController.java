@@ -3610,7 +3610,7 @@ final class GameplayController {
                 this.field_O = true;
               }
               if (((EventPresenter) (var3)).event.eventKind == 24) {
-                nk.a((byte) 96);
+                Bzip2State.a((byte) 96);
               }
               if (((EventPresenter) (var3)).event.presentationComplete) {
                 ((EventPresenter) (var3)).event.applyToBattlefield(this.battlefield, -26661);
@@ -4240,7 +4240,7 @@ final class GameplayController {
           var5_int = param3;
           var6 = param0;
           param3 = 75;
-          DraggableWidgetContainer.field_J.drawTintedGrayscale(var5_int - 73, var6 - 73, TutorialLayout.field_g[bw.unitDefinitions[param1][1] + 1]);
+          DraggableWidgetContainer.field_J.drawTintedGrayscale(var5_int - 73, var6 - 73, TutorialLayout.field_g[WhirlpoolHasher.unitDefinitions[param1][1] + 1]);
           param0 = 75;
           fe.a(var5_int - 50, -46 + var6, 100, 30, AgeValidator.field_l, 128);
           fe.a(-50 + var5_int, var6 + 1, 100, 15, AgeValidator.field_l, 128);
@@ -4252,51 +4252,51 @@ final class GameplayController {
           DateInputWidget.field_E.drawText(UiSelectionState.field_d, param3 - 45, -4 + param0, 16777215, -1);
           var7 = (int)(Math.sin((double)NanoGameClock.field_n / 3.141592653589793 / 2.0) * 64.0 + 128.0);
           var7 = var7 << 16 | 65283 & var7 << 6;
-          stackIn_4_0 = bw.unitDefinitions[param1][2];
-          if (param2 > bw.unitDefinitions[param1][1]) {
+          stackIn_4_0 = WhirlpoolHasher.unitDefinitions[param1][2];
+          if (param2 > WhirlpoolHasher.unitDefinitions[param1][1]) {
             stackIn_5_1 = this.field_hc[6];
           } else {
-            stackIn_5_1 = this.field_hc[bw.unitDefinitions[param1][1]];
+            stackIn_5_1 = this.field_hc[WhirlpoolHasher.unitDefinitions[param1][1]];
           }
           stackIn_9_0 = (stackIn_4_0 <= stackIn_5_1) ? 0 : 1;
           var8 = stackIn_9_0;
-          stackIn_13_0 = (bw.unitDefinitions[param1][8] <= this.battlefield.playerMana[this.controlledPlayerId]) ? 0 : 1;
+          stackIn_13_0 = (WhirlpoolHasher.unitDefinitions[param1][8] <= this.battlefield.playerMana[this.controlledPlayerId]) ? 0 : 1;
           var9 = stackIn_13_0;
           if (var8 != 0) {
-            DateInputWidget.field_E.drawText(Integer.toString(bw.unitDefinitions[param1][2]), -13 + param3, param0 - 4, var7, -1);
+            DateInputWidget.field_E.drawText(Integer.toString(WhirlpoolHasher.unitDefinitions[param1][2]), -13 + param3, param0 - 4, var7, -1);
           }
           if (var8 == 0 ||
             var11 != 0) {
-            DateInputWidget.field_E.drawText(Integer.toString(bw.unitDefinitions[param1][2]), -13 + param3, -4 + param0, 7864064, -1);
+            DateInputWidget.field_E.drawText(Integer.toString(WhirlpoolHasher.unitDefinitions[param1][2]), -13 + param3, -4 + param0, 7864064, -1);
           }
           DateInputWidget.field_E.drawRightAligned(bt.field_d, 45 + param3, param0 - 4, 16777215, -1);
           if (var9 == 0) {
-            DateInputWidget.field_E.drawRightAligned(Integer.toString(bw.unitDefinitions[param1][8]), 28 + param3, -4 + param0, 7864064, -1);
+            DateInputWidget.field_E.drawRightAligned(Integer.toString(WhirlpoolHasher.unitDefinitions[param1][8]), 28 + param3, -4 + param0, 7864064, -1);
           }
           if (var9 != 0 ||
             var11 != 0) {
-            DateInputWidget.field_E.drawRightAligned(Integer.toString(bw.unitDefinitions[param1][8]), 28 + param3, param0 - 4, var7, -1);
+            DateInputWidget.field_E.drawRightAligned(Integer.toString(WhirlpoolHasher.unitDefinitions[param1][8]), 28 + param3, param0 - 4, var7, -1);
           }
           DateInputWidget.field_E.drawText(TextFieldValidator.field_i, param3 - 45, param0 + 12, 16777215, -1);
           DateInputWidget.field_E.drawText(lq.field_a, param3 - 45, 29 + param0, 16777215, -1);
           DateInputWidget.field_E.drawText(ChannelGainProfile.field_d, -45 + param3, param0 + 46, 16777215, -1);
-          DateInputWidget.field_E.drawRightAligned(Integer.toString(bw.unitDefinitions[param1][4] + this.battlefield.a((byte) 11, bw.unitDefinitions[param1][1], this.controlledPlayerId)), param3 + 45, 12 + param0, 16763904, -1);
-          DateInputWidget.field_E.drawRightAligned(Integer.toString(bw.unitDefinitions[param1][3]), param3 + 45, param0 + 29, 16763904, -1);
+          DateInputWidget.field_E.drawRightAligned(Integer.toString(WhirlpoolHasher.unitDefinitions[param1][4] + this.battlefield.a((byte) 11, WhirlpoolHasher.unitDefinitions[param1][1], this.controlledPlayerId)), param3 + 45, 12 + param0, 16763904, -1);
+          DateInputWidget.field_E.drawRightAligned(Integer.toString(WhirlpoolHasher.unitDefinitions[param1][3]), param3 + 45, param0 + 29, 16763904, -1);
           if (34 != param1) {
-            if (bw.unitDefinitions[param1][6] != bw.unitDefinitions[param1][7]) {
-              DateInputWidget.field_E.drawRightAligned(EmailCheckResult.a(4800, LinkButtonPainter.field_a, new String[]{Integer.toString(bw.unitDefinitions[param1][6]), Integer.toString(bw.unitDefinitions[param1][7])}), 45 + param3, param0 + 46, 16763904, -1);
+            if (WhirlpoolHasher.unitDefinitions[param1][6] != WhirlpoolHasher.unitDefinitions[param1][7]) {
+              DateInputWidget.field_E.drawRightAligned(EmailCheckResult.a(4800, LinkButtonPainter.field_a, new String[]{Integer.toString(WhirlpoolHasher.unitDefinitions[param1][6]), Integer.toString(WhirlpoolHasher.unitDefinitions[param1][7])}), 45 + param3, param0 + 46, 16763904, -1);
               if (var11 != 0) {
-                DateInputWidget.field_E.drawRightAligned(Integer.toString(bw.unitDefinitions[param1][6]), param3 + 45, 46 + param0, 16763904, -1);
-                DateInputWidget.field_E.drawRightAligned(EmailCheckResult.a(param2 ^ 4800, AiPlanningStrategy.field_e, new String[]{Integer.toString(bw.unitDefinitions[param1][6]), Integer.toString(bw.unitDefinitions[75][6]), Integer.toString(bw.unitDefinitions[75][7])}), param3 + 45, 46 + param0, 16763904, -1);
+                DateInputWidget.field_E.drawRightAligned(Integer.toString(WhirlpoolHasher.unitDefinitions[param1][6]), param3 + 45, 46 + param0, 16763904, -1);
+                DateInputWidget.field_E.drawRightAligned(EmailCheckResult.a(param2 ^ 4800, AiPlanningStrategy.field_e, new String[]{Integer.toString(WhirlpoolHasher.unitDefinitions[param1][6]), Integer.toString(WhirlpoolHasher.unitDefinitions[75][6]), Integer.toString(WhirlpoolHasher.unitDefinitions[75][7])}), param3 + 45, 46 + param0, 16763904, -1);
               }
             } else {
-              DateInputWidget.field_E.drawRightAligned(Integer.toString(bw.unitDefinitions[param1][6]), param3 + 45, 46 + param0, 16763904, -1);
+              DateInputWidget.field_E.drawRightAligned(Integer.toString(WhirlpoolHasher.unitDefinitions[param1][6]), param3 + 45, 46 + param0, 16763904, -1);
               if (var11 != 0) {
-                DateInputWidget.field_E.drawRightAligned(EmailCheckResult.a(param2 ^ 4800, AiPlanningStrategy.field_e, new String[]{Integer.toString(bw.unitDefinitions[param1][6]), Integer.toString(bw.unitDefinitions[75][6]), Integer.toString(bw.unitDefinitions[75][7])}), param3 + 45, 46 + param0, 16763904, -1);
+                DateInputWidget.field_E.drawRightAligned(EmailCheckResult.a(param2 ^ 4800, AiPlanningStrategy.field_e, new String[]{Integer.toString(WhirlpoolHasher.unitDefinitions[param1][6]), Integer.toString(WhirlpoolHasher.unitDefinitions[75][6]), Integer.toString(WhirlpoolHasher.unitDefinitions[75][7])}), param3 + 45, 46 + param0, 16763904, -1);
               }
             }
           } else {
-            DateInputWidget.field_E.drawRightAligned(EmailCheckResult.a(param2 ^ 4800, AiPlanningStrategy.field_e, new String[]{Integer.toString(bw.unitDefinitions[param1][6]), Integer.toString(bw.unitDefinitions[75][6]), Integer.toString(bw.unitDefinitions[75][7])}), param3 + 45, 46 + param0, 16763904, -1);
+            DateInputWidget.field_E.drawRightAligned(EmailCheckResult.a(param2 ^ 4800, AiPlanningStrategy.field_e, new String[]{Integer.toString(WhirlpoolHasher.unitDefinitions[param1][6]), Integer.toString(WhirlpoolHasher.unitDefinitions[75][6]), Integer.toString(WhirlpoolHasher.unitDefinitions[75][7])}), param3 + 45, 46 + param0, 16763904, -1);
           }
           so.field_b.a(5605);
           SpellConfirmationDialog.field_j.g(1);
@@ -4309,7 +4309,7 @@ final class GameplayController {
             var9 != 0 || var11 != 0) {
             pg.field_c.drawWithBrightness(var5_int - 78, var6 - 78, 10);
           }
-          ProgressMessageDialog.field_rb[bw.unitDefinitions[param1][0]].draw(var5_int - 8, var6 - 71);
+          ProgressMessageDialog.field_rb[WhirlpoolHasher.unitDefinitions[param1][0]].draw(var5_int - 8, var6 - 71);
           if (null != AlphaWidgetContainer.field_M[param1]) {
             var10 = DateInputWidget.field_E.getParagraphHeight(AlphaWidgetContainer.field_M[param1], 220, 0);
             fe.b(-120 + var5_int, 130 + var6, 240, 20 + var10, MusicPatch.field_m, TutorialController.field_e, 0, 192);
@@ -5555,7 +5555,7 @@ final class GameplayController {
             var4 = 40;
             stackIn_332_0 = (!br.heldKeys[81]) ? 0 : 1;
             var5 = stackIn_332_0;
-            var6 = bw.unitDefinitions[var4][4];
+            var6 = WhirlpoolHasher.unitDefinitions[var4][4];
             var7 = new Unit(var2_int, var3Lifetime3, var4, var5, var6, var6, 1, 0, 0, this.battlefield, 0, 0, -1, false, 0);
             this.battlefield.registerUnit(8288, var7);
           }
@@ -6454,8 +6454,8 @@ final class GameplayController {
                       var16 == 34) {
                       var16 = 75;
                     }
-                    var17 = bw.unitDefinitions[var16][6];
-                    var18 = bw.unitDefinitions[var16][7];
+                    var17 = WhirlpoolHasher.unitDefinitions[var16][6];
+                    var18 = WhirlpoolHasher.unitDefinitions[var16][7];
                     if (this.selectedUnit.packedFlag8 &&
                       this.selectedUnit.unitType == 34 &&
                       3 == this.selectedUnit.getEquipmentCategory(param0 ^ 20696)) {
@@ -6494,7 +6494,7 @@ final class GameplayController {
                     }
                   }
                   var16 = 0;
-                  var17 = bw.unitDefinitions[this.selectedUnit.unitType][12];
+                  var17 = WhirlpoolHasher.unitDefinitions[this.selectedUnit.unitType][12];
                   if (IterableDualNodeDeque.isPointerInBounds(-33, 525, 555, 39, 79)) {
                     if (var17 == -1) {
                       var2 = du.field_f;
@@ -7105,8 +7105,8 @@ final class GameplayController {
                             decompiledFrameRemainder13 = (var20 != 0);
                           }
                           if ((decompiledFrameRemainder13) &&
-                            (decompiledFrameRemainder13 = !(bw.unitDefinitions[this.selectedUnit.unitType][3] * 3 >= this.movementPlanner.movementCosts[var16]))) {
-                            if (this.movementPlanner.movementCostsThroughOwnUnits[var16] <= bw.unitDefinitions[this.selectedUnit.unitType][3] * 3) {
+                            (decompiledFrameRemainder13 = !(WhirlpoolHasher.unitDefinitions[this.selectedUnit.unitType][3] * 3 >= this.movementPlanner.movementCosts[var16]))) {
+                            if (this.movementPlanner.movementCostsThroughOwnUnits[var16] <= WhirlpoolHasher.unitDefinitions[this.selectedUnit.unitType][3] * 3) {
                               var2 = op.field_g;
                               decompiledFrameRemainder13 = (var20 != 0);
                             }

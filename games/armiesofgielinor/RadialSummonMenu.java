@@ -90,12 +90,12 @@ final class RadialSummonMenu {
                 this.items[var7].draw(godFavourLevels[-1 + this.items[var7].godGroupId], originY + 16, false, originX + 16);
               }
             } else {
-              if (-1 != bw.unitDefinitions[this.items[var7].choiceId][1]) {
-                var6_int = godFavourLevels[bw.unitDefinitions[this.items[var7].choiceId][1]];
+              if (-1 != WhirlpoolHasher.unitDefinitions[this.items[var7].choiceId][1]) {
+                var6_int = godFavourLevels[WhirlpoolHasher.unitDefinitions[this.items[var7].choiceId][1]];
               }
               stackIn_9_0 = this.items[var7];
-              if (mana >= bw.unitDefinitions[this.items[var7].choiceId][8] &&
-                var6_int >= bw.unitDefinitions[this.items[var7].choiceId][2]) {
+              if (mana >= WhirlpoolHasher.unitDefinitions[this.items[var7].choiceId][8] &&
+                var6_int >= WhirlpoolHasher.unitDefinitions[this.items[var7].choiceId][2]) {
                 stackIn_10_1 = 1;
               } else {
                 stackIn_10_1 = 0;

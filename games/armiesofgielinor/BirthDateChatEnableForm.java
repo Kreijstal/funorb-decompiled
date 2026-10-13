@@ -41,7 +41,7 @@ final class BirthDateChatEnableForm extends ArrayWidgetContainer implements Widg
         int var4 = 0;
         int var5 = 0;
         try {
-          bw.field_g = true;
+          WhirlpoolHasher.field_g = true;
           ToggleWidget.field_Q.text = param1;
           var2_int = so.field_b.field_a;
           var3 = so.field_b.field_g;

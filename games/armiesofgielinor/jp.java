@@ -70,13 +70,13 @@ final class jp {
           la.field_d = la.field_d + (var2_int >> 3);
           RevivalEvent.field_D = RevivalEvent.field_D + (param0.readUnsignedShort((byte) -104) << 2);
           var2_intLifetime1 = param0.readUnsignedByte(0);
-          nk.field_m = 2064384 & var2_intLifetime1 << 15;
+          Bzip2State.field_m = 2064384 & var2_intLifetime1 << 15;
           RevivalEvent.field_D = RevivalEvent.field_D + (var2_intLifetime1 >> 6);
-          nk.field_m = nk.field_m + (param0.readUnsignedByte(0) << 7);
+          Bzip2State.field_m = Bzip2State.field_m + (param0.readUnsignedByte(0) << 7);
           int var3 = 16 % ((param1 + 45) / 34);
           var2_intLifetime2 = param0.readUnsignedByte(0);
           ov.field_e = (1 & var2_intLifetime2) << 16;
-          nk.field_m = nk.field_m + (var2_intLifetime2 >> 1);
+          Bzip2State.field_m = Bzip2State.field_m + (var2_intLifetime2 >> 1);
           ov.field_e = ov.field_e + param0.readUnsignedShort((byte) -104);
         } catch (RuntimeException runtimeException) {
           throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "jp.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');

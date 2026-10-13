@@ -94,7 +94,7 @@ final class TurnEffectEvent extends GameEvent {
                 if (!battlefield.field_b) {
                   break regionExit1;
                 }
-                battlefield.d(this.unit.ownerPlayer, -bw.unitDefinitions[this.unit.unitType][4] + this.unit.strength, obfuscationGuard ^ -26714, 8);
+                battlefield.d(this.unit.ownerPlayer, -WhirlpoolHasher.unitDefinitions[this.unit.unitType][4] + this.unit.strength, obfuscationGuard ^ -26714, 8);
                 if (var4 == 0) {
                   break regionExit1;
                 }
@@ -111,7 +111,7 @@ final class TurnEffectEvent extends GameEvent {
               if (!battlefield.field_b) {
                 break regionExit1;
               }
-              battlefield.d(this.unit.ownerPlayer, this.unit.strength - bw.unitDefinitions[this.unit.unitType][4], 95, 8);
+              battlefield.d(this.unit.ownerPlayer, this.unit.strength - WhirlpoolHasher.unitDefinitions[this.unit.unitType][4], 95, 8);
               if (var4 == 0) {
                 break regionExit1;
               }
@@ -272,7 +272,7 @@ final class TurnEffectEvent extends GameEvent {
           SummonEvent.field_F.addChild(UpkeepEvent.field_z, 102);
           DebouncedValidator.field_b = new ClientUiComponent(0L, ArchiveProvider.field_d);
           SummonEvent.field_F.addChild(DebouncedValidator.field_b, 66);
-          qf.field_e = new ClientUiComponent(0L, SpellConfirmationDialog.field_i, nk.field_t);
+          qf.field_e = new ClientUiComponent(0L, SpellConfirmationDialog.field_i, Bzip2State.field_t);
           ed.field_e = new ClientUiComponent(0L, SpellConfirmationDialog.field_i);
           UnitCycler.field_g.addChild(DateOfBirthValidator.field_i, 103);
           UnitCycler.field_g.addChild(StrongCacheEntry.field_C, 79);

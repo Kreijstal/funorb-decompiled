@@ -125,7 +125,7 @@ class kq extends InteractiveWidget {
           if (var8.accessoryType == 0) {
             return null;
           }
-          var6Lifetime2 = bw.field_f[var7.accessoryType];
+          var6Lifetime2 = WhirlpoolHasher.field_f[var7.accessoryType];
           array$2 = new String[3];
           stackIn_41_0 = 4800;
           stackIn_41_1 = MusicPatch.field_u;

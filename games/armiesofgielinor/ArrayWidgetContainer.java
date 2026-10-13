@@ -152,8 +152,8 @@ abstract class ArrayWidgetContainer extends Widget implements WidgetContainerMar
             param2.packedFlag8) {
             var10 = 75;
           }
-          var11 = bw.unitDefinitions[var10][6];
-          var12 = bw.unitDefinitions[var10][7];
+          var11 = WhirlpoolHasher.unitDefinitions[var10][6];
+          var12 = WhirlpoolHasher.unitDefinitions[var10][7];
           if (param2.packedFlag8 &&
             34 == param2.unitType) {
             var12 = 7;
@@ -185,7 +185,7 @@ abstract class ArrayWidgetContainer extends Widget implements WidgetContainerMar
           }
           var13 = 0;
           SoftwareRaster.a(307 + param4 - 20, param7 - 26 + param6, 17, 0, 128);
-          var14 = bw.unitDefinitions[param2.unitType][12];
+          var14 = WhirlpoolHasher.unitDefinitions[param2.unitType][12];
           if (var14 > -1) {
             if (var14 < lb.field_e.length) {
               lb.field_e[var14].draw(-35 + (308 + param4), -42 + param6 + param7);
@@ -247,7 +247,7 @@ abstract class ArrayWidgetContainer extends Widget implements WidgetContainerMar
             var13++;
           }
           if (param2.packedFlag256) {
-            BattleCharacter.field_h[122 + bw.unitDefinitions[param2.unitType][2]].drawHalfSize(param4 + (235 - (var13 & 3) * 30), param7 - 36 - (-param6 - (var13 >> 2) * 30));
+            BattleCharacter.field_h[122 + WhirlpoolHasher.unitDefinitions[param2.unitType][2]].drawHalfSize(param4 + (235 - (var13 & 3) * 30), param7 - 36 - (-param6 - (var13 >> 2) * 30));
             km.field_h[0].drawHalfSize(param4 + 233 - 30 * (var13 & 3), param7 - 37 - (-param6 - (var13 >> 2) * 30));
             var13++;
           }

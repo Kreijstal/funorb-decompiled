@@ -127,7 +127,7 @@ final class TileMetadata implements TaggedFieldReader {
 
     final static void a(int param0, boolean param1) {
         if (ModalDialogHost.field_J > 0 &&
-          bw.field_g) {
+          WhirlpoolHasher.field_g) {
           SoftwareRaster.d(0, 0, SoftwareRaster.width, CombatEvent.field_I.screenY);
           GameClock.field_c.draw(param1, 20);
         }
