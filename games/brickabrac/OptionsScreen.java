@@ -91,7 +91,7 @@ final class OptionsScreen extends FramedMenuScreen {
         if (obfuscationGuard > -14) {
           return;
         }
-        al.a(this.screenId, 19);
+        AchievementMaskRequest.a(this.screenId, 19);
         this.drawMenuFrame(68);
         this.a(0);
     }

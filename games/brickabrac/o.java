@@ -8,7 +8,7 @@ final class o {
     static String field_a;
     static mm field_b;
     static th field_h;
-    static int field_d;
+    static int enabledFeatureMask;
     static dk field_c;
 
     final static boolean d(int param0) {
@@ -106,6 +106,6 @@ final class o {
         field_a = "Destroy the flashing bricks to get power-ups!";
         field_g = new n();
         field_h = new th(6, 0, 4, 2);
-        field_d = 0;
+        enabledFeatureMask = 0;
     }
 }

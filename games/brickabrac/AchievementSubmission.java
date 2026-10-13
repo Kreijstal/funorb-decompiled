@@ -1,15 +1,15 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class e extends IntrusiveNode {
-    int field_k;
+final class AchievementSubmission extends IntrusiveNode {
+    int resultWordOne;
     static RgbSprite[] field_l;
     static String field_j;
-    int field_o;
-    int field_p;
-    int field_n;
-    int field_m;
-    int field_i;
+    int achievementId;
+    int resultWordFour;
+    int resultWordTwo;
+    int resultWordThree;
+    int submissionByte;
     static RgbSprite[] field_q;
 
     final static og a(mh param0, mh param1, kn param2, int param3, mh param4) {
@@ -70,7 +70,7 @@ final class e extends IntrusiveNode {
           var8 = new String[var7];
           if (param3 != 4) {
             var18 = (ResourceArchive) null;
-            e.a((ResourceArchive) null, 30);
+            AchievementSubmission.a((ResourceArchive) null, 30);
           }
           var22 = new char[var7];
           var20 = var22;
@@ -84,7 +84,7 @@ final class e extends IntrusiveNode {
               var13_ref_kn = pj.field_c.a(param2.field_x[var12], (byte) 124);
               var8[var12] = var13_ref_kn.field_D;
               var9[var12] = param2.field_w[var12];
-              var11[var12] = e.a(param0, param1, var13_ref_kn, 4, param4);
+              var11[var12] = AchievementSubmission.a(param0, param1, var13_ref_kn, 4, param4);
             }
           }
           if (param2.field_v != null) {
@@ -156,7 +156,7 @@ final class e extends IntrusiveNode {
           var10 = (int)((long)var4 * (long)var6 >> 16);
           return new int[]{0, 0, 0, var6, 0, var5, var7, var4, -var8, -var9, var3, var10};
         }
-        e.a(118, 72, 44);
+        AchievementSubmission.a(118, 72, 44);
         var9 = (int)((long)var5 * (long)var4 >> 16);
         var10 = (int)((long)var4 * (long)var6 >> 16);
         return new int[]{0, 0, 0, var6, 0, var5, var7, var4, -var8, -var9, var3, var10};
@@ -192,13 +192,13 @@ final class e extends IntrusiveNode {
         }
     }
 
-    e(int param0, int param1, int param2, int param3, int param4, int param5) {
-        this.field_m = param4;
-        this.field_o = param0;
-        this.field_k = param2;
-        this.field_p = param5;
-        this.field_i = param1;
-        this.field_n = param3;
+    AchievementSubmission(int achievementId, int submissionByte, int resultWordOne, int resultWordTwo, int resultWordThree, int resultWordFour) {
+        this.resultWordThree = resultWordThree;
+        this.achievementId = achievementId;
+        this.resultWordOne = resultWordOne;
+        this.resultWordFour = resultWordFour;
+        this.submissionByte = submissionByte;
+        this.resultWordTwo = resultWordTwo;
     }
 
     static {

@@ -118,19 +118,19 @@ final class ma extends h {
         return (String) null;
     }
 
-    final static void b(byte param0, int param1) {
+    final static void sendAchievementMaskRequest(byte obfuscationGuard, int opcode) {
         BitPacketBuffer var2 = null;
         BitPacketBuffer var2Lifetime1;
-        if (param0 <= -49) {
+        if (obfuscationGuard <= -49) {
           var2 = k.outgoingPackets;
-          var2.writeCipheredOpcode(-13413, param1);
+          var2.writeCipheredOpcode(-13413, opcode);
           var2.writeByte(27, 1);
           var2.writeByte(127, 2);
           return;
         }
-        ma.b((byte) -23, -84);
+        ma.sendAchievementMaskRequest((byte) -23, -84);
         var2Lifetime1 = k.outgoingPackets;
-        var2Lifetime1.writeCipheredOpcode(-13413, param1);
+        var2Lifetime1.writeCipheredOpcode(-13413, opcode);
         var2Lifetime1.writeByte(27, 1);
         var2Lifetime1.writeByte(127, 2);
     }

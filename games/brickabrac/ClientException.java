@@ -56,7 +56,7 @@ final class ClientException extends RuntimeException {
               var8 = 1414 * var7.field_G / (30 * param3.playerCount);
               var8 = var8 + (MembershipBenefitsScreen.clientTick + 294 << 7);
               var8 = var8 >> 8;
-              stackIn_7_0 = var7.field_H;
+              stackIn_7_0 = var7.characterIndex;
               stackIn_7_1 = false;
               stackIn_7_2 = var7.field_M;
               stackIn_7_3 = var8;

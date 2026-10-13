@@ -5,7 +5,7 @@ final class ej extends sl {
     private Object field_N;
     static tq field_P;
     static String field_M;
-    static NodeDeque field_F;
+    static NodeDeque pendingAchievementMaskRequests;
     static lp field_I;
     static int[] field_E;
     static double packetDelayJitter;
@@ -37,7 +37,7 @@ final class ej extends sl {
         field_M = null;
         field_L = (RgbSprite[][]) null;
         field_P = null;
-        field_F = null;
+        pendingAchievementMaskRequests = null;
         if (param0 == 928072) {
           field_K = null;
           field_H = null;
@@ -78,7 +78,7 @@ final class ej extends sl {
         field_E[4] = 5;
         field_E[10] = 2;
         packetDelayJitter = 0.0;
-        field_F = new NodeDeque();
+        pendingAchievementMaskRequests = new NodeDeque();
         field_K = "Only show game chat from my friends";
         field_O = 480;
         field_H = "Resign";

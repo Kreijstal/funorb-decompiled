@@ -278,7 +278,7 @@ final class nn {
                 }
                 var2 = nk.a("mu_chat_friends", (byte) -127);
                 if (null != var2) {
-                  e.field_j = MenuButton.a(var2, (byte) 125);
+                  AchievementSubmission.field_j = MenuButton.a(var2, (byte) 125);
                 }
                 var2 = nk.a("mu_chat_off", (byte) -122);
                 if (var2 != null) {
@@ -490,7 +490,7 @@ final class nn {
                 }
                 var2 = nk.a("add_x_to_friends", (byte) 4);
                 if (null != var2) {
-                  al.field_l = MenuButton.a(var2, (byte) 108);
+                  AchievementMaskRequest.field_l = MenuButton.a(var2, (byte) 108);
                 }
                 var2 = nk.a("add_x_to_ignore", (byte) 52);
                 if (var2 != null) {
@@ -3230,7 +3230,7 @@ final class nn {
             var6 = AchievementBrowserScreen.a(121, this.field_e) ? 1 : 0;
             if (var5 == null &&
               var6 == 0) {
-              this.field_d.a(rd.a(al.field_l, new String[]{var4}, (byte) 103), 4, (byte) 105);
+              this.field_d.a(rd.a(AchievementMaskRequest.field_l, new String[]{var4}, (byte) 103), 4, (byte) 105);
               this.field_d.a(rd.a(ob.field_H, new String[]{var4}, (byte) 103), 6, (byte) 110);
               if (null != param0 &&
                 2 != param2 &&

@@ -25,7 +25,7 @@ final class ed {
           ef.field_b = cr.loadRgbSpritesByName("lobby", param1, "chatfilter", 2);
           rh.field_e[0] = mc.field_a;
           rh.field_e[2] = TableRowSubmission.field_s;
-          rh.field_e[1] = e.field_j;
+          rh.field_e[1] = AchievementSubmission.field_j;
           hk.a(rd.field_e, (byte) 90, param2);
         } catch (RuntimeException runtimeException) {
           throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "ed.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');

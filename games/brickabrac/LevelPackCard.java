@@ -17,18 +17,18 @@ final class LevelPackCard {
     static int field_i;
     private String caption;
 
-    final static boolean a(int param0, int param1) {
-        if (param1 >= -26) {
+    final static boolean hasFeatureBit(int featureId, int obfuscationGuard) {
+        if (obfuscationGuard >= -26) {
           field_n = (int[]) null;
-          if (-1 == param0) {
+          if (-1 == featureId) {
             return true;
           }
-          return (1 << param0 & o.field_d) != 0 ? true : false;
+          return (1 << featureId & o.enabledFeatureMask) != 0 ? true : false;
         }
-        if (-1 == param0) {
+        if (-1 == featureId) {
           return true;
         }
-        return (1 << param0 & o.field_d) != 0 ? true : false;
+        return (1 << featureId & o.enabledFeatureMask) != 0 ? true : false;
     }
 
     final static void a(String[][] param0, IndexedSprite[] param1, byte param2, String[] param3, int param4, String[] param5, String[][] param6, ResourceArchive param7, ResourceArchive param8, ResourceArchive param9, int[] param10, RgbSprite[][] param11, int param12, boolean param13, RgbSprite[][] param14, byte[] param15, byte[] param16, int[] param17, int param18) {

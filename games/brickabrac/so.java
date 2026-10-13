@@ -196,7 +196,7 @@ final class so {
           bf.field_L = PlayerInputBatch.a(-12, var19, 8, 9838226);
           qh.field_c = PlayerInputBatch.a(-12, var19, 12, 9838226);
           var8 = null;
-          e.field_l = new RgbSprite[IntrusiveHashTable.achievementSourceIcons.length];
+          AchievementSubmission.field_l = new RgbSprite[IntrusiveHashTable.achievementSourceIcons.length];
           pa.field_h = new RgbSprite[IntrusiveHashTable.achievementSourceIcons.length];
           var20 = new RgbSprite(LevelCompleteScreen.field_F.canvasWidth / 4, LevelCompleteScreen.field_F.canvasHeight / 4);
           for (var10_int = 0; var10_int < IntrusiveHashTable.achievementSourceIcons.length; var10_int++) {
@@ -204,7 +204,7 @@ final class so {
             Rasterizer2D.clear();
             IntrusiveHashTable.achievementSourceIcons[var10_int].drawQuarter(0, 0);
             BallPulseEffect.framebuffer.bindRaster((byte) 101);
-            e.field_l[var10_int] = PlayerInputBatch.a(-12, var20, 8, 9838226);
+            AchievementSubmission.field_l[var10_int] = PlayerInputBatch.a(-12, var20, 8, 9838226);
             pa.field_h[var10_int] = PlayerInputBatch.a(LevelResultSubmission.a(param3, -29147), var20, 12, 9838226);
           }
           CircleBody.field_t = new RgbSprite[lo.field_c.length][];
@@ -224,9 +224,9 @@ final class so {
           kb.field_Ub = cr.loadRgbSpritesByName("basic", param0, "characters_fm", 2);
           GzipInflater.field_a = cr.loadRgbSpritesByName("basic", param0, "lever_game", param3 - 29135);
           IntrusiveNode.field_f = cr.loadRgbSpritesByName("basic", param0, "eyes_game", 2);
-          tf.field_g = cr.loadRgbSpritesByName("basic", param0, "track_heads", 2);
+          tf.trackHeads = cr.loadRgbSpritesByName("basic", param0, "track_heads", 2);
           ef.field_e = cr.loadRgbSpritesByName("basic", param0, "characters_small", 2);
-          ScorePopup.field_k = cr.loadRgbSpritesByName("basic", param0, "character_heads", param3 ^ 29139);
+          ScorePopup.characterHeads = cr.loadRgbSpritesByName("basic", param0, "character_heads", param3 ^ 29139);
           cn.field_e = cr.loadRgbSpritesByName("basic", param0, "lever_small", 2);
           ScorePopup.field_r = cr.loadRgbSpritesByName("basic", param0, "lever_small_choc", 2);
           lp.field_yb = cr.loadRgbSpritesByName("basic", param0, "lever_small_space", param3 ^ 29139);
@@ -237,7 +237,7 @@ final class so {
           me.field_a = PacketBuffer.a("basic", param0, "podium2", -946715356);
           pl.field_f = PacketBuffer.a("basic", param0, "podium3", param3 ^ -946719499);
           BrickMotionPath.field_r = cr.loadRgbSpritesByName("basic", param0, "podium_happy", 2);
-          e.field_q = cr.loadRgbSpritesByName("basic", param0, "podium_sad", param3 ^ 29139);
+          AchievementSubmission.field_q = cr.loadRgbSpritesByName("basic", param0, "podium_sad", param3 ^ 29139);
           qh.field_e = um.a("basic", "congratulations", 1593955777, param0);
           pa.field_m = new RgbSprite[h.field_C.length];
           for (var10_intLifetime2 = 0; var10_intLifetime2 < pa.field_m.length; var10_intLifetime2++) {
@@ -319,13 +319,13 @@ final class so {
           for (var10_intLifetime11 = 0; var10_intLifetime11 < ed.field_b.length; var10_intLifetime11++) {
             ed.field_b[var10_intLifetime11] = OptionsScreen.a(2, 2, Integer.toString(-var10_intLifetime11 + 3), true);
           }
-          BoundedFile.field_a = new RgbSprite[tf.field_g.length];
+          BoundedFile.field_a = new RgbSprite[tf.trackHeads.length];
           for (var10_intLifetime12 = 0; BoundedFile.field_a.length > var10_intLifetime12; var10_intLifetime12++) {
-            BoundedFile.field_a[var10_intLifetime12] = PlayerInputBatch.a(LevelResultSubmission.a(param3, -29147), tf.field_g[var10_intLifetime12], 14, 16755200);
+            BoundedFile.field_a[var10_intLifetime12] = PlayerInputBatch.a(LevelResultSubmission.a(param3, -29147), tf.trackHeads[var10_intLifetime12], 14, 16755200);
           }
-          lk.field_n = new RgbSprite[tf.field_g.length];
+          lk.field_n = new RgbSprite[tf.trackHeads.length];
           for (var10_intLifetime13 = 0; var10_intLifetime13 < lk.field_n.length; var10_intLifetime13++) {
-            lk.field_n[var10_intLifetime13] = DelayedPacket.a(tf.field_g[var10_intLifetime13], 20, LevelResultSubmission.a(param3, -13351));
+            lk.field_n[var10_intLifetime13] = DelayedPacket.a(tf.trackHeads[var10_intLifetime13], 20, LevelResultSubmission.a(param3, -13351));
           }
           rk.field_Sb = ap.field_a.copy();
           rk.field_Sb.rotateCounterclockwise();

@@ -204,7 +204,7 @@ final class SecondaryHashTable {
     }
 
     static {
-        earnedAchievementMask = Ball.d(8);
+        earnedAchievementMask = Ball.createAchievementMask(8);
         field_a = "Wipe out: cancels out any positive power-ups.";
     }
 }

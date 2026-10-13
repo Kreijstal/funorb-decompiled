@@ -76,7 +76,7 @@ final class kk {
           if (obfuscationGuard) {
             field_e = (int[]) null;
           }
-          AppletGameShell.a(var3, (byte) 39, random);
+          AppletGameShell.shuffleFivePasses(var3, (byte) 39, random);
           stackIn_11_0 = var3;
           return stackIn_11_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

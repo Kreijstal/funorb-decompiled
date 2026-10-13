@@ -216,7 +216,7 @@ public abstract class AppletGameShell extends java.applet.Applet implements Runn
         }
     }
 
-    final static void a(int[] param0, byte param1, IsaacGenerator param2) {
+    final static void shuffleFivePasses(int[] values, byte obfuscationGuard, IsaacGenerator random) {
         RuntimeException runtimeException = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -225,8 +225,8 @@ public abstract class AppletGameShell extends java.applet.Applet implements Runn
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          MovingBody.shuffleValues(-122, param0, 5, param2);
-          if (param1 != 39) {
+          MovingBody.shuffleValues(-122, values, 5, random);
+          if (obfuscationGuard != 39) {
             AppletGameShell.copyBytes(false, (byte[]) null);
           }
           return;
@@ -235,13 +235,13 @@ public abstract class AppletGameShell extends java.applet.Applet implements Runn
           runtimeException = decompiledCaughtException;
           stackIn_6_0 = runtimeException;
           stackIn_6_1 = new StringBuilder().append("ke.U(");
-          if (param0 == null) {
+          if (values == null) {
             stackIn_7_2 = "null";
           } else {
             stackIn_7_2 = "{...}";
           }
-          stackIn_10_1 = ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(',');
-          if (param2 == null) {
+          stackIn_10_1 = ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(obfuscationGuard).append(',');
+          if (random == null) {
             stackIn_11_2 = "null";
           } else {
             stackIn_11_2 = "{...}";
@@ -547,7 +547,7 @@ public abstract class AppletGameShell extends java.applet.Applet implements Runn
         try {
           field_m = null;
           if (param0 != 19254) {
-            AppletGameShell.a((int[]) null, (byte) -57, (IsaacGenerator) null);
+            AppletGameShell.shuffleFivePasses((int[]) null, (byte) -57, (IsaacGenerator) null);
           }
           field_b = null;
           field_f = null;
@@ -840,7 +840,7 @@ public abstract class AppletGameShell extends java.applet.Applet implements Runn
           var6 = field_n.get(1);
           var7 = field_n.get(11);
           if (param0 != -75) {
-            AppletGameShell.a((int[]) null, (byte) -75, (IsaacGenerator) null);
+            AppletGameShell.shuffleFivePasses((int[]) null, (byte) -75, (IsaacGenerator) null);
           }
           var8 = field_n.get(12);
           var9 = field_n.get(13);

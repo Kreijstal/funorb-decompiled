@@ -321,9 +321,9 @@ final class gq extends mh {
         var4 = BrickABrac.field_J ? 1 : 0;
         try {
           if (bd.field_b == null) {
-            bd.field_b = LevelPackLoader.a((byte) 107, 4);
+            bd.field_b = LevelPackLoader.requestAchievementMask((byte) 107, 4);
           }
-          if (!bd.field_b.field_i) {
+          if (!bd.field_b.complete) {
             var1_int = -62 / ((param0 + 18) / 47);
             return false;
           }
@@ -331,7 +331,7 @@ final class gq extends mh {
           var10 = var12;
           var5 = var10;
           var1 = var5;
-          var16 = bd.field_b.field_k;
+          var16 = bd.field_b.achievementMask;
           for (var3 = 0; 8 > var3; var3++) {
             var5[var3] = LevelSelectScreen.d(var12[var3], var16[var3]);
           }
@@ -339,7 +339,7 @@ final class gq extends mh {
           var11 = var13;
           var7 = var11;
           var1Lifetime1 = var7;
-          var17 = bd.field_b.field_k;
+          var17 = bd.field_b.achievementMask;
           var9 = 0;
           var3Lifetime1 = var9;
           while (var9 < 8) {

@@ -171,12 +171,12 @@ public final class BrickABrac extends InteractiveGameClient {
         int var5_int = 0;
         int var6 = 0;
         int var7 = 0;
-        IsaacGenerator var8 = null;
-        int[] var9 = null;
-        int var11 = 0;
-        LevelSequence var12 = null;
-        int var13 = 0;
-        int var15 = 0;
+        IsaacGenerator matchRandom = null;
+        int[] seedWords = null;
+        int repeatMode = 0;
+        LevelSequence configuration = null;
+        int backgroundSelector = 0;
+        int localPlayerMask = 0;
         int var16 = 0;
         int[] var18 = null;
         int[] var19 = null;
@@ -187,22 +187,22 @@ public final class BrickABrac extends InteractiveGameClient {
         int[] var27 = null;
         int[] var28 = null;
         int[] var29 = null;
-        String[] var30 = null;
+        String[] playerNames = null;
         int[] var32 = null;
         int[] var34 = null;
         int[] var35 = null;
         int[] var36 = null;
         int[] var37 = null;
-        int[] var39 = null;
+        int[] randomSeeds = null;
         int[] var46 = null;
         int[] var47 = null;
         int[] var48 = null;
         int[] var49 = null;
-        int[] var50 = null;
+        int[] characterOrder = null;
         int[] var5_arrayLifetime1;
         int[] var5_arrayLifetime2;
         int[] var5_arrayLifetime3;
-        int var6Lifetime1;
+        int localPlayerId;
         var16 = field_J ? 1 : 0;
         try {
           if (9 == opcode) {
@@ -241,7 +241,7 @@ public final class BrickABrac extends InteractiveGameClient {
             return true;
           }
           if (opcode == 72) {
-            var35 = Ball.d(8);
+            var35 = Ball.createAchievementMask(8);
             var27 = var35;
             var4 = var27;
             var18 = var4;
@@ -385,37 +385,37 @@ public final class BrickABrac extends InteractiveGameClient {
           sk.finishScreenTransition((byte) -125);
           stackIn_44_0 = (packet.readUnsignedByte(255) == 0) ? 0 : 1;
           var4_int = stackIn_44_0;
-          var30 = new String[packet.readUnsignedByte(255)];
-          var5 = var30;
-          var6Lifetime1 = packet.readByte(true);
-          for (var7 = 0; var30.length > var7; var7++) {
+          playerNames = new String[packet.readUnsignedByte(255)];
+          var5 = playerNames;
+          localPlayerId = packet.readByte(true);
+          for (var7 = 0; playerNames.length > var7; var7++) {
             var5[var7] = packet.readPrefixedCp1252String(255);
           }
-          if (var6Lifetime1 < 0) {
-            var6Lifetime1 = -2;
+          if (localPlayerId < 0) {
+            localPlayerId = -2;
           }
           var7 = packet.readInt(obfuscationGuard ^ 208);
-          var8 = new IsaacGenerator(new int[]{var7});
-          var39 = new int[var30.length];
-          var32 = var39;
-          var9 = var32;
-          for (var10 = 0; var10 < var30.length; var10++) {
-            var9[var10] = var8.nextInt(105);
+          matchRandom = new IsaacGenerator(new int[]{var7});
+          randomSeeds = new int[playerNames.length];
+          var32 = randomSeeds;
+          seedWords = var32;
+          for (var10 = 0; var10 < playerNames.length; var10++) {
+            seedWords[var10] = matchRandom.nextInt(105);
           }
-          var49 = kk.createIndexOrder(false, tq.field_d.levelCount, var8);
-          var11 = packet.readByte(true);
-          var12 = new LevelSequence(tq.field_d, var49, var11);
-          var13 = var8.nextBoundedInt(-37880252, 11);
-          oa.field_Sb = rd.a(var13, (byte) 19);
-          var50 = id.a(var8, false);
+          var49 = kk.createIndexOrder(false, tq.field_d.levelCount, matchRandom);
+          repeatMode = packet.readByte(true);
+          configuration = new LevelSequence(tq.field_d, var49, repeatMode);
+          backgroundSelector = matchRandom.nextBoundedInt(-37880252, 11);
+          oa.field_Sb = rd.a(backgroundSelector, (byte) 19);
+          characterOrder = id.createCharacterOrder(matchRandom, false);
           fj.field_Ub = null;
-          if (0 <= var6Lifetime1) {
-            stackIn_56_0 = 1 << var6Lifetime1;
+          if (0 <= localPlayerId) {
+            stackIn_56_0 = 1 << localPlayerId;
           } else {
             stackIn_56_0 = 0;
           }
-          var15 = stackIn_56_0;
-          IntArrayRequest.gameplayScreen = new GameplayScreen(true, var4_int != 0, var30, var6Lifetime1, var15, var12, var39, var50);
+          localPlayerMask = stackIn_56_0;
+          IntArrayRequest.gameplayScreen = new GameplayScreen(true, var4_int != 0, playerNames, localPlayerId, localPlayerMask, configuration, randomSeeds, characterOrder);
           stackIn_58_0 = IntArrayRequest.gameplayScreen;
           stackIn_59_1 = (packet.readUnsignedByte(255) == 0);
           stackIn_58_0.snapshotsReady = stackIn_59_1;
@@ -876,8 +876,8 @@ public final class BrickABrac extends InteractiveGameClient {
         sk.a(51550);
         SoundPlayback.a((byte) 49);
         po.b(-81);
-        al.a(28391);
-        e.a(105);
+        AchievementMaskRequest.a(28391);
+        AchievementSubmission.a(105);
         pa.c(5);
         tq.a(1024);
         oh.a((byte) 83);

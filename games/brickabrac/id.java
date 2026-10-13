@@ -62,44 +62,44 @@ final class id extends mh {
         }
     }
 
-    final static int[] a(IsaacGenerator param0, boolean param1) {
-        int var4 = 0;
-        int var2_int = 0;
+    final static int[] createCharacterOrder(IsaacGenerator random, boolean obfuscationGuard) {
+        int index = 0;
+        int characterCount = 0;
         RuntimeException var2 = null;
-        int[] var3 = null;
-        int var5 = 0;
+        int[] order = null;
+        int clientBranchFlag = 0;
         int[] stackIn_9_0 = null;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
         String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
-        var5 = BrickABrac.field_J ? 1 : 0;
+        clientBranchFlag = BrickABrac.field_J ? 1 : 0;
         try {
-          var2_int = tf.field_g.length;
-          if (!LevelPackCard.a(0, -107)) {
-            var2_int--;
+          characterCount = tf.trackHeads.length;
+          if (!LevelPackCard.hasFeatureBit(0, -107)) {
+            characterCount--;
           }
-          var3 = new int[var2_int];
-          for (var4 = 0; var3.length > var4; var4++) {
-            var3[var4] = var4;
+          order = new int[characterCount];
+          for (index = 0; order.length > index; index++) {
+            order[index] = index;
           }
-          if (param1) {
+          if (obfuscationGuard) {
             field_Sb = (String) null;
           }
-          AppletGameShell.a(var3, (byte) 39, param0);
-          stackIn_9_0 = var3;
+          AppletGameShell.shuffleFivePasses(order, (byte) 39, random);
+          stackIn_9_0 = order;
           return stackIn_9_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
           stackIn_12_0 = var2;
           stackIn_12_1 = new StringBuilder().append("id.A(");
-          if (param0 == null) {
+          if (random == null) {
             stackIn_13_2 = "null";
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw qb.addExceptionContext((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(')').toString());
+          throw qb.addExceptionContext((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 

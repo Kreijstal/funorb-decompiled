@@ -89,7 +89,7 @@ final class vj {
         String[] var3 = null;
         mh[] var4 = null;
         try {
-          var3 = new String[]{param0, e.field_j, pl.field_e};
+          var3 = new String[]{param0, AchievementSubmission.field_j, pl.field_e};
           var4 = new mh[]{param1, rg.field_c, (mh) ((Object) f.field_c)};
           this.field_d = new oa(0L, eh.field_n, var3, hd.field_c, var4, 0);
         } catch (RuntimeException runtimeException) {

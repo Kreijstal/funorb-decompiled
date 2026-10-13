@@ -205,11 +205,11 @@ final class om extends mh {
           param2 += 7;
           PowerUpWarning.a(5 + param2, param4, param8, -34, 4 + var10Lifetime1);
           param2 += 306;
-          var18 = ef.field_e[param4.field_H];
+          var18 = ef.field_e[param4.characterIndex];
           var11 = var18;
           var11.drawTransparent(-var18.canvasWidth + param2 + 5, 480 - var18.canvasHeight);
-          if (param4.field_H != 2) {
-            if (param4.field_H != 5) {
+          if (param4.characterIndex != 2) {
+            if (param4.characterIndex != 5) {
               var12 = cn.field_e;
             } else {
               var12 = lp.field_yb;
@@ -354,11 +354,11 @@ final class om extends mh {
           param2 += 7;
           PowerUpWarning.a(5 + param2, param4, param8, -34, 4 + var10Lifetime1);
           param2 += 306;
-          var18 = ef.field_e[param4.field_H];
+          var18 = ef.field_e[param4.characterIndex];
           var11 = var18;
           var11.drawTransparent(-var18.canvasWidth + param2 + 5, 480 - var18.canvasHeight);
-          if (param4.field_H != 2) {
-            if (param4.field_H != 5) {
+          if (param4.characterIndex != 2) {
+            if (param4.characterIndex != 5) {
               var12 = cn.field_e;
             } else {
               var12 = lp.field_yb;

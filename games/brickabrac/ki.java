@@ -248,7 +248,7 @@ abstract class ki {
           for (var4_int = 0; this.field_c.length > var4_int; var4_int++) {
             this.field_c[var4_int] = var4_int;
           }
-          AppletGameShell.a(this.field_c, (byte) 39, hi.field_w);
+          AppletGameShell.shuffleFivePasses(this.field_c, (byte) 39, hi.field_w);
         } catch (RuntimeException runtimeException) {
           throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "ki.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }

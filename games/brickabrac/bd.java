@@ -3,7 +3,7 @@
  */
 final class bd implements ub {
     static String field_a;
-    static al field_b;
+    static AchievementMaskRequest field_b;
 
     final static void a(int param0, boolean param1) {
         if (!param1) {
@@ -16,7 +16,7 @@ final class bd implements ub {
 
     public static void a(boolean param0) {
         if (!param0) {
-          field_b = (al) null;
+          field_b = (AchievementMaskRequest) null;
           field_a = null;
           field_b = null;
           return;

@@ -46,7 +46,7 @@ final class BallPulseEffect extends IntrusiveNode {
           }
           ck.a(-2196, param0);
           bm.a((byte) -70, param0);
-          e.a(param0, 115);
+          AchievementSubmission.a(param0, 115);
           ScorePopup.a(-37);
           fl.e(-41);
           MatchResultScreen.field_t = -BoundedFile.field_i + 0;
@@ -58,7 +58,7 @@ final class BallPulseEffect extends IntrusiveNode {
     final void draw(int scaleDivisor, int destinationX, int destinationY, boolean obfuscationGuard) {
         int var5 = (int)((Math.exp((double)((float)(-this.ageTicks) / 20.0f)) - Math.exp(-2.0)) * 200.0);
         int var6 = this.pulseSize((byte) 116);
-        al.a(destinationY + (this.y256 >> 8) / scaleDivisor, var6 / (scaleDivisor << 1), (-this.ageTicks + 40 << 8) / 40, var5, -94, var6 / scaleDivisor, (this.x256 >> 8) / scaleDivisor + destinationX);
+        AchievementMaskRequest.a(destinationY + (this.y256 >> 8) / scaleDivisor, var6 / (scaleDivisor << 1), (-this.ageTicks + 40 << 8) / 40, var5, -94, var6 / scaleDivisor, (this.x256 >> 8) / scaleDivisor + destinationX);
         if (obfuscationGuard) {
           return;
         }

@@ -133,73 +133,73 @@ final class qi extends d {
         return this.field_P;
     }
 
-    final static void a(int param0) {
-        int var7 = 0;
+    final static void handleAchievementResponse(int obfuscationGuard) {
+        int wordIndex = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
-        int var2 = 0;
-        int[] var3 = null;
+        int responseType = 0;
+        int[] achievementMask = null;
         int[] var4 = null;
         BitPacketBuffer var5 = null;
-        int var6 = 0;
-        int var8 = 0;
+        int wordCount = 0;
+        int clientBranchFlag = 0;
         int[] var10 = null;
         int[] var11 = null;
-        e var12 = null;
-        al var13 = null;
-        BitPacketBuffer var14 = null;
-        al var15 = null;
-        var8 = BrickABrac.field_J ? 1 : 0;
+        AchievementSubmission submission = null;
+        AchievementMaskRequest maskRequest = null;
+        BitPacketBuffer packet = null;
+        AchievementMaskRequest emptyMaskRequest = null;
+        clientBranchFlag = BrickABrac.field_J ? 1 : 0;
         try {
-          var14 = jl.incomingPackets;
-          var2 = var14.readUnsignedByte(255);
-          if (param0 == ~var2) {
-            var11 = Ball.d(8);
-            var3 = var11;
+          packet = jl.incomingPackets;
+          responseType = packet.readUnsignedByte(255);
+          if (obfuscationGuard == ~responseType) {
+            var11 = Ball.createAchievementMask(8);
+            achievementMask = var11;
             var10 = var11;
             var4 = var10;
-            var5 = var14;
-            var6 = ((PacketBuffer) ((Object) var5)).readUnsignedByte(255);
-            for (var7 = 0; var6 > var7; var7++) {
-              var10[var7] = ((PacketBuffer) ((Object) var5)).readInt(LevelResultSubmission.a(param0, -256));
+            var5 = packet;
+            wordCount = ((PacketBuffer) ((Object) var5)).readUnsignedByte(255);
+            for (wordIndex = 0; wordCount > wordIndex; wordIndex++) {
+              var10[wordIndex] = ((PacketBuffer) ((Object) var5)).readInt(LevelResultSubmission.a(obfuscationGuard, -256));
             }
-            var13 = (al) (ej.field_F.first(param0 - 84));
-            if (var13 == null) {
+            maskRequest = (AchievementMaskRequest) (ej.pendingAchievementMaskRequests.first(obfuscationGuard - 84));
+            if (maskRequest == null) {
               hn.a((byte) 102);
               return;
             }
-            var13.field_i = true;
-            var13.field_k = var3;
-            var13.unlink((byte) 111);
+            maskRequest.complete = true;
+            maskRequest.achievementMask = achievementMask;
+            maskRequest.unlink((byte) 111);
             return;
           }
-          if (1 == var2) {
-            var12 = (e) (na.field_Q.first(param0 ^ 86));
-            if (var12 == null) {
+          if (1 == responseType) {
+            submission = (AchievementSubmission) (na.pendingAchievementSubmissions.first(obfuscationGuard ^ 86));
+            if (submission == null) {
               hn.a((byte) 103);
               return;
             }
-            var12.unlink((byte) 111);
+            submission.unlink((byte) 111);
             return;
           }
-          if (var2 != 2) {
+          if (responseType != 2) {
             rk.a("A1: " + eq.c((byte) -92), (Throwable) null, 88);
             hn.a((byte) 52);
             return;
           }
-          var15 = (al) (ej.field_F.first(-42));
-          if (var15 == null) {
+          emptyMaskRequest = (AchievementMaskRequest) (ej.pendingAchievementMaskRequests.first(-42));
+          if (emptyMaskRequest == null) {
             hn.a((byte) 119);
             return;
           }
-          var15.field_k = Ball.d(8);
-          var15.field_i = true;
-          var15.unlink((byte) 111);
+          emptyMaskRequest.achievementMask = Ball.createAchievementMask(8);
+          emptyMaskRequest.complete = true;
+          emptyMaskRequest.unlink((byte) 111);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw qb.addExceptionContext((Throwable) ((Object) var1), "qi.A(" + param0 + ')');
+          throw qb.addExceptionContext((Throwable) ((Object) var1), "qi.A(" + obfuscationGuard + ')');
         }
     }
 

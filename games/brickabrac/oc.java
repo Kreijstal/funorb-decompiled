@@ -601,10 +601,10 @@ class oc extends IntrusiveNode {
     final static void c(byte param0) {
         if (param0 >= -12) {
           oc.a(89, -103, -10, (PlayerBoard) null, (MultiplayerMatch) null, (byte) 67);
-          o.field_d = 0;
+          o.enabledFeatureMask = 0;
           return;
         }
-        o.field_d = 0;
+        o.enabledFeatureMask = 0;
     }
 
     final static void a(PlatformServices param0, byte param1, java.awt.Canvas param2) {

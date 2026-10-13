@@ -320,7 +320,7 @@ final class hc {
           MatchCompleteScreen.field_x = new mh(0L, fm.field_b);
           GzipInflater.field_d = new mh(0L, MessageScreen.field_r);
           OptionsScreen.field_u = new mh(0L, MessageScreen.field_r);
-          al.field_n = new mh(0L, MessageScreen.field_r);
+          AchievementMaskRequest.field_n = new mh(0L, MessageScreen.field_r);
           MessageScreen.field_r.field_Jb = GameConnectionShell.a(cr.loadRgbSpritesByName("lobby", param3, "smallbutton", 2), (byte) -119);
           MessageScreen.field_r.field_Gb = GameConnectionShell.a(cr.loadRgbSpritesByName("lobby", param3, "smallbutton_mouseover", 2), (byte) -114);
           dupTemp$0 = GameConnectionShell.a(cr.loadRgbSpritesByName("lobby", param3, "smallbutton_active", 2), (byte) -102);
@@ -344,12 +344,12 @@ final class hc {
           MatchCompleteScreen.field_x.field_Gb = GameConnectionShell.a(cr.loadRgbSpritesByName("lobby", param3, "backbutton_mouseover", 2), (byte) -103);
           MatchCompleteScreen.field_x.field_D = GameConnectionShell.a(cr.loadRgbSpritesByName("lobby", param3, "backbutton_mouseheld", 2), (byte) -122);
           MatchCompleteScreen.field_x.field_Ab = GameConnectionShell.a(cr.loadRgbSpritesByName("lobby", param3, "backbutton_disabled", 2), (byte) -107);
-          al.field_n.field_Jb = GameConnectionShell.a(cr.loadRgbSpritesByName("lobby", param3, "gameoptionbutton", 2), (byte) -115);
-          al.field_n.field_Gb = GameConnectionShell.a(cr.loadRgbSpritesByName("lobby", param3, "gameoptionbutton_mouseover", 2), (byte) -114);
+          AchievementMaskRequest.field_n.field_Jb = GameConnectionShell.a(cr.loadRgbSpritesByName("lobby", param3, "gameoptionbutton", 2), (byte) -115);
+          AchievementMaskRequest.field_n.field_Gb = GameConnectionShell.a(cr.loadRgbSpritesByName("lobby", param3, "gameoptionbutton_mouseover", 2), (byte) -114);
           dupTemp$1 = GameConnectionShell.a(cr.loadRgbSpritesByName("lobby", param3, "gameoptionbutton_active", 2), (byte) -112);
-          al.field_n.field_pb = dupTemp$1;
-          al.field_n.field_D = dupTemp$1;
-          al.field_n.field_Ab = GameConnectionShell.a(cr.loadRgbSpritesByName("lobby", param3, "gameoptionbutton_disabled", 2), (byte) -116);
+          AchievementMaskRequest.field_n.field_pb = dupTemp$1;
+          AchievementMaskRequest.field_n.field_D = dupTemp$1;
+          AchievementMaskRequest.field_n.field_Ab = GameConnectionShell.a(cr.loadRgbSpritesByName("lobby", param3, "gameoptionbutton_disabled", 2), (byte) -116);
           GzipInflater.field_d.field_Jb = GameConnectionShell.a(cr.loadRgbSpritesByName("lobby", param3, "chatbutton", 2), (byte) -103);
           GzipInflater.field_d.field_Gb = GameConnectionShell.a(cr.loadRgbSpritesByName("lobby", param3, "chatbutton_mouseover", 2), (byte) -113);
           dupTemp$2 = GameConnectionShell.a(cr.loadRgbSpritesByName("lobby", param3, "chatbutton_active", 2), (byte) -125);

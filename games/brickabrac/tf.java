@@ -4,7 +4,7 @@
 final class tf {
     static String[] field_f;
     static boolean field_h;
-    static RgbSprite[] field_g;
+    static RgbSprite[] trackHeads;
     static byte[] cacheSectorScratch;
     static RgbSprite[] field_c;
     static int[] javaKeyCodeMap;
@@ -71,7 +71,7 @@ final class tf {
           javaKeyCodeMap = null;
           cacheSectorScratch = null;
           field_f = null;
-          field_g = null;
+          trackHeads = null;
           field_e = null;
           field_d = null;
           field_c = null;
@@ -82,7 +82,7 @@ final class tf {
         javaKeyCodeMap = null;
         cacheSectorScratch = null;
         field_f = null;
-        field_g = null;
+        trackHeads = null;
         field_e = null;
         field_d = null;
         field_c = null;

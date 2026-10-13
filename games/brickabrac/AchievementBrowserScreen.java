@@ -128,7 +128,7 @@ abstract class AchievementBrowserScreen extends MenuScreen {
             ob.field_D.drawLeft(na.field_N, 209, var6, 2, -1);
           }
         }
-        al.a(this.screenId, 19);
+        AchievementMaskRequest.a(this.screenId, 19);
         this.a(0);
     }
 

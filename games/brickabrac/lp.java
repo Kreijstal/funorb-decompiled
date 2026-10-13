@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 class lp extends fe implements en {
-    static NodeDeque field_wb;
+    static NodeDeque queuedAchievementSubmissions;
     private boolean field_Bb;
     private boolean field_vb;
     private boolean field_tb;
@@ -231,7 +231,7 @@ class lp extends fe implements en {
     }
 
     public static void o(int param0) {
-        field_wb = null;
+        queuedAchievementSubmissions = null;
         field_ub = null;
         currentScreen = null;
         field_Ab = null;
@@ -246,7 +246,7 @@ class lp extends fe implements en {
     }
 
     static {
-        field_wb = new NodeDeque();
+        queuedAchievementSubmissions = new NodeDeque();
         field_xb = new qh();
     }
 }

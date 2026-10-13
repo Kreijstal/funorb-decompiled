@@ -100,19 +100,19 @@ final class LevelPackLoader {
         return IsaacGenerator.field_b.field_Rb;
     }
 
-    final static al a(byte param0, int param1) {
-        al var2 = null;
-        al var2Lifetime1;
-        if (param0 > 37) {
-          var2 = new al();
-          ej.field_F.addLast(var2, (byte) 3);
-          ma.b((byte) -112, param1);
+    final static AchievementMaskRequest requestAchievementMask(byte obfuscationGuard, int opcode) {
+        AchievementMaskRequest var2 = null;
+        AchievementMaskRequest var2Lifetime1;
+        if (obfuscationGuard > 37) {
+          var2 = new AchievementMaskRequest();
+          ej.pendingAchievementMaskRequests.addLast(var2, (byte) 3);
+          ma.sendAchievementMaskRequest((byte) -112, opcode);
           return var2;
         }
-        LevelPackLoader.a((byte) -67, -39);
-        var2Lifetime1 = new al();
-        ej.field_F.addLast(var2Lifetime1, (byte) 3);
-        ma.b((byte) -112, param1);
+        LevelPackLoader.requestAchievementMask((byte) -67, -39);
+        var2Lifetime1 = new AchievementMaskRequest();
+        ej.pendingAchievementMaskRequests.addLast(var2Lifetime1, (byte) 3);
+        ma.sendAchievementMaskRequest((byte) -112, opcode);
         return var2Lifetime1;
     }
 

@@ -1172,7 +1172,7 @@ final class MultiplayerMatch {
         return this.resultsReady;
     }
 
-    MultiplayerMatch(String[] param0, int param1, LevelSequence param2, int[] param3, int[] param4) {
+    MultiplayerMatch(String[] playerNames, int localPlayerMask, LevelSequence configuration, int[] randomSeeds, int[] characterOrder) {
         int var8 = 0;
         int stackIn_4_0 = 0;
         Paddle stackIn_8_0 = null;
@@ -1191,15 +1191,15 @@ final class MultiplayerMatch {
         RuntimeException var6 = null;
         int var7 = 0;
         try {
-          this.playerCount = param0.length;
-          this.playerNames = param0;
-          this.configuration = param2;
+          this.playerCount = playerNames.length;
+          this.playerNames = playerNames;
+          this.configuration = configuration;
           this.playerBoards = new PlayerBoard[this.playerCount];
           stackIn_4_0 = (this.playerCount >= 2) ? 306 : 510;
           var6_int = stackIn_4_0;
           var7 = 0;
           for (var8 = 0; this.playerCount > var8; var8++) {
-            this.playerBoards[var8] = new PlayerBoard(var6_int, var8 * 30, var7, param3[var8], param4[var8]);
+            this.playerBoards[var8] = new PlayerBoard(var6_int, var8 * 30, var7, randomSeeds[var8], characterOrder[var8]);
             stackIn_8_0 = this.playerBoards[var8].paddle;
             if (1 < this.playerCount) {
               stackIn_9_1 = 102400;
@@ -1207,7 +1207,7 @@ final class MultiplayerMatch {
               stackIn_9_1 = 114688;
             }
             stackIn_8_0.y256 = stackIn_9_1;
-            if ((param1 & 1 << var8) != 0) {
+            if ((localPlayerMask & 1 << var8) != 0) {
               var7++;
             }
           }
@@ -1219,25 +1219,25 @@ final class MultiplayerMatch {
           var6 = decompiledCaughtException;
           stackIn_16_0 = var6;
           stackIn_16_1 = new StringBuilder().append("ak.<init>(");
-          if (param0 == null) {
+          if (playerNames == null) {
             stackIn_17_2 = "null";
           } else {
             stackIn_17_2 = "{...}";
           }
-          stackIn_19_1 = ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param1).append(',');
-          if (param2 == null) {
+          stackIn_19_1 = ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(localPlayerMask).append(',');
+          if (configuration == null) {
             stackIn_20_2 = "null";
           } else {
             stackIn_20_2 = "{...}";
           }
           stackIn_22_1 = ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',');
-          if (param3 == null) {
+          if (randomSeeds == null) {
             stackIn_23_2 = "null";
           } else {
             stackIn_23_2 = "{...}";
           }
           stackIn_25_1 = ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',');
-          if (param4 == null) {
+          if (characterOrder == null) {
             stackIn_26_2 = "null";
           } else {
             stackIn_26_2 = "{...}";

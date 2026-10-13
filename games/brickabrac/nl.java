@@ -46,7 +46,7 @@ final class nl {
           nowMillis = MonotonicTime.nowMillis(false);
           if (0 != MonotonicTime.packetDelayMillis &&
             ob.pendingPacketOpcode < 0) {
-            queuedPacket = (DelayedPacket) (al.delayedPackets.first(-124));
+            queuedPacket = (DelayedPacket) (AchievementMaskRequest.delayedPackets.first(-124));
             if (queuedPacket != null &&
               nowMillis > queuedPacket.deliverAfterMillis) {
               queuedPacket.unlink((byte) 111);
@@ -94,7 +94,7 @@ final class nl {
             for (receivedByteIndex = 0; ga.incomingPacketLength > receivedByteIndex; receivedByteIndex++) {
               delayedPacket.data[receivedByteIndex] = jl.incomingPackets.data[receivedByteIndex];
             }
-            al.delayedPackets.addLast(delayedPacket, (byte) 3);
+            AchievementMaskRequest.delayedPackets.addLast(delayedPacket, (byte) 3);
             ob.pendingPacketOpcode = -1;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -92,7 +92,7 @@ final class LevelSelectScreen extends MenuScreen {
         int var5;
         int var6;
         super.drawScreen((byte) -101);
-        al.a(13, 19);
+        AchievementMaskRequest.a(13, 19);
         GzipInflater.a(550, 5, 33, 5, 140, (byte) -106, 45);
         GzipInflater.a(160, 5, 243, 5, 178, (byte) -88, 45);
         GzipInflater.a(385, 5, 243, 5, 178, (byte) -124, 210);
@@ -287,8 +287,8 @@ final class LevelSelectScreen extends MenuScreen {
           return om.field_pc;
         }
         if (!param0) {
-          e var2 = (e) null;
-          LevelSelectScreen.a(67, (e) null, (byte) 80);
+          AchievementSubmission var2 = (AchievementSubmission) null;
+          LevelSelectScreen.sendAchievementSubmission(67, (AchievementSubmission) null, (byte) 80);
         }
         if (!ma.field_I.b(96)) {
           return om.field_pc;
@@ -363,26 +363,26 @@ final class LevelSelectScreen extends MenuScreen {
         return false;
     }
 
-    final static void a(int param0, e param1, byte param2) {
-        BitPacketBuffer var6 = null;
-        int var4 = 0;
+    final static void sendAchievementSubmission(int opcode, AchievementSubmission submission, byte obfuscationGuard) {
+        BitPacketBuffer packet = null;
+        int payloadStart = 0;
         try {
-          var6 = k.outgoingPackets;
-          var6.writeCipheredOpcode(-13413, param0);
-          var6.position = var6.position + 1;
-          var4 = var6.position;
-          var6.writeByte(116, 1);
-          var6.writeByte(-116, param1.field_o);
-          var6.writeByte(-103, param1.field_i);
-          var6.writeInt(param1.field_k, (byte) -79);
-          var6.writeInt(param1.field_n, (byte) -79);
-          var6.writeInt(param1.field_m, (byte) -79);
-          var6.writeInt(param1.field_p, (byte) -79);
-          int var5 = -68 / ((param2 + 15) / 63);
-          var6.appendCrc32(3, var4);
-          var6.backfillByteLength((byte) 117, var6.position - var4);
+          packet = k.outgoingPackets;
+          packet.writeCipheredOpcode(-13413, opcode);
+          packet.position = packet.position + 1;
+          payloadStart = packet.position;
+          packet.writeByte(116, 1);
+          packet.writeByte(-116, submission.achievementId);
+          packet.writeByte(-103, submission.submissionByte);
+          packet.writeInt(submission.resultWordOne, (byte) -79);
+          packet.writeInt(submission.resultWordTwo, (byte) -79);
+          packet.writeInt(submission.resultWordThree, (byte) -79);
+          packet.writeInt(submission.resultWordFour, (byte) -79);
+          int var5 = -68 / ((obfuscationGuard + 15) / 63);
+          packet.appendCrc32(3, payloadStart);
+          packet.backfillByteLength((byte) 117, packet.position - payloadStart);
         } catch (RuntimeException runtimeException) {
-          throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "ud.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "ud.C(" + opcode + ',' + (submission != null ? "{...}" : "null") + ',' + obfuscationGuard + ')');
         }
     }
 

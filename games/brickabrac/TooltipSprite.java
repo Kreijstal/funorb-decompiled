@@ -106,7 +106,7 @@ final class TooltipSprite extends IntrusiveNode {
           jk.field_w.f();
         }
         if (param0 < 39) {
-          TooltipSprite.a(-13, -69);
+          TooltipSprite.resendPendingAchievements(-13, -69);
         }
     }
 
@@ -126,32 +126,32 @@ final class TooltipSprite extends IntrusiveNode {
         ng.field_b = 0;
     }
 
-    final static void a(int param0, int param1) {
+    final static void resendPendingAchievements(int opcode, int obfuscationGuard) {
         IntrusiveNode var2 = null;
         int var3 = 0;
-        e var4 = null;
+        AchievementSubmission var4 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2_ref = null;
         var3 = BrickABrac.field_J ? 1 : 0;
         try {
-          if (param1 != 13330) {
+          if (obfuscationGuard != 13330) {
             field_n = (String) null;
           }
-          var4 = (e) (na.field_Q.first(-37));
+          var4 = (AchievementSubmission) (na.pendingAchievementSubmissions.first(-37));
           while (var4 != null) {
-            LevelSelectScreen.a(param0, var4, (byte) 80);
-            var4 = (e) (na.field_Q.next((byte) 116));
+            LevelSelectScreen.sendAchievementSubmission(opcode, var4, (byte) 80);
+            var4 = (AchievementSubmission) (na.pendingAchievementSubmissions.next((byte) 116));
           }
-          var2 = ej.field_F.first(param1 ^ -13402);
+          var2 = ej.pendingAchievementMaskRequests.first(obfuscationGuard ^ -13402);
           while (var2 != null) {
-            ma.b((byte) -85, param0);
-            var2 = ej.field_F.next((byte) 116);
+            ma.sendAchievementMaskRequest((byte) -85, opcode);
+            var2 = ej.pendingAchievementMaskRequests.next((byte) 116);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw qb.addExceptionContext((Throwable) ((Object) var2_ref), "nq.C(" + param0 + ',' + param1 + ')');
+          throw qb.addExceptionContext((Throwable) ((Object) var2_ref), "nq.C(" + opcode + ',' + obfuscationGuard + ')');
         }
     }
 

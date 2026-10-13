@@ -65,7 +65,7 @@ final class AchievementsScreen extends AchievementBrowserScreen {
         }
         boolean decompiledFrameRemainder0 = true;
         if (achievementId != 22 &&
-          26 != achievementId && (LevelPackCard.a(0, -93) ||
+          26 != achievementId && (LevelPackCard.hasFeatureBit(0, -93) ||
           achievementId != 16 &&
           achievementId != 41)) {
           stackIn_13_0 = false;

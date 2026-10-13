@@ -76,9 +76,9 @@ final class Ball extends CircleBody {
         this.centerYHistory256 = new IntHistoryBuffer(50);
     }
 
-    final static int[] d(int param0) {
-        if (param0 != 8) {
-          Ball.d(-23);
+    final static int[] createAchievementMask(int obfuscationGuard) {
+        if (obfuscationGuard != 8) {
+          Ball.createAchievementMask(-23);
           return new int[8];
         }
         return new int[8];

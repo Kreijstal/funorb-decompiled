@@ -290,7 +290,7 @@ final class AchievementIcon extends IntrusiveNode {
             }
           } else {
             if (this.achievementId == nf.hoveredAchievementId) {
-              e.field_l[this.achievementId].f(this.x, this.y, 256);
+              AchievementSubmission.field_l[this.achievementId].f(this.x, this.y, 256);
               if (this.cachedThumbnail == null ||
                 this.thumbnailIsPlaceholder) {
                 var11 = IntrusiveHashTable.achievementSourceIcons[this.achievementId];

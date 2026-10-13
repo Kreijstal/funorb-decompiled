@@ -121,7 +121,7 @@ final class hk extends ib implements hf, en {
             hk.i((byte) 86);
           }
           Rasterizer2D.bind(var14, var5, var6);
-          fe.field_kb = e.a(SoftwareFramebuffer.field_e, ArchiveIndex.field_j, var4, 4, cp.field_K);
+          fe.field_kb = AchievementSubmission.a(SoftwareFramebuffer.field_e, ArchiveIndex.field_j, var4, 4, cp.field_K);
           wd.field_w.field_bb = new NodeDeque();
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -97,15 +97,15 @@ final class df {
         return (dividend + var3) / divisor - var3;
     }
 
-    final static void a(e param0, int param1, int param2) {
+    final static void submitAchievement(AchievementSubmission submission, int opcode, int obfuscationGuard) {
         try {
-          if (param2 != -161) {
+          if (obfuscationGuard != -161) {
             field_b = (String) null;
           }
-          na.field_Q.addLast(param0, (byte) 3);
-          LevelSelectScreen.a(param1, param0, (byte) 119);
+          na.pendingAchievementSubmissions.addLast(submission, (byte) 3);
+          LevelSelectScreen.sendAchievementSubmission(opcode, submission, (byte) 119);
         } catch (RuntimeException runtimeException) {
-          throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "df.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "df.D(" + (submission != null ? "{...}" : "null") + ',' + opcode + ',' + obfuscationGuard + ')');
         }
     }
 

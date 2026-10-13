@@ -1,10 +1,10 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class al extends IntrusiveNode {
-    int[] field_k;
+final class AchievementMaskRequest extends IntrusiveNode {
+    int[] achievementMask;
     static NodeDeque delayedPackets;
-    boolean field_i;
+    boolean complete;
     static mh field_n;
     static GameUiLifecycle uiLifecycle;
     static String field_l;
@@ -28,8 +28,8 @@ final class al extends IntrusiveNode {
         gj.field_c[param0].drawTransparent((640 - gj.field_c[param0].canvasWidth) / 2, param1);
     }
 
-    al() {
-        this.field_i = false;
+    AchievementMaskRequest() {
+        this.complete = false;
     }
 
     static {

@@ -262,7 +262,7 @@ final class pl {
 
     static {
         field_e = "Ignore";
-        pendingAchievementMask = Ball.d(8);
+        pendingAchievementMask = Ball.createAchievementMask(8);
         keyChangeWriteIndex = 0;
         field_c = new String[]{"All scores", "My scores", "Best each"};
     }

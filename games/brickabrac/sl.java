@@ -197,33 +197,33 @@ abstract class sl extends DualLinkNode {
           gb.field_l[0] = new mh(0L, wi.field_n, ro.field_H);
           MatchCompleteScreen.field_A[0] = new rk[6];
           for (var17_int = 0; var17_int < 5; var17_int++) {
-            MatchCompleteScreen.field_A[0][1 + var17_int] = new rk(0L, al.field_n, (mh) null, DualLinkNode.field_t, GameClock.field_f[var17_int], AchievementsScreen.field_H[var17_int]);
+            MatchCompleteScreen.field_A[0][1 + var17_int] = new rk(0L, AchievementMaskRequest.field_n, (mh) null, DualLinkNode.field_t, GameClock.field_f[var17_int], AchievementsScreen.field_H[var17_int]);
           }
           if (2 <= w.field_n.length) {
             gb.field_l[1] = new mh(0L, wi.field_n, og.field_ac);
             array$0 = new rk[1 + w.field_n.length];
             MatchCompleteScreen.field_A[1] = array$0;
-            MatchCompleteScreen.field_A[1][0] = new rk(0L, al.field_n, (mh) null, DualLinkNode.field_t, (RgbSprite) null, ni.field_Pb);
+            MatchCompleteScreen.field_A[1][0] = new rk(0L, AchievementMaskRequest.field_n, (mh) null, DualLinkNode.field_t, (RgbSprite) null, ni.field_Pb);
             for (var17_intLifetime1 = 0; var17_intLifetime1 < w.field_n.length; var17_intLifetime1++) {
-              MatchCompleteScreen.field_A[1][var17_intLifetime1 + 1] = new rk(0L, al.field_n, (mh) null, DualLinkNode.field_t, (RgbSprite) null, Integer.toString(w.field_n[var17_intLifetime1]));
+              MatchCompleteScreen.field_A[1][var17_intLifetime1 + 1] = new rk(0L, AchievementMaskRequest.field_n, (mh) null, DualLinkNode.field_t, (RgbSprite) null, Integer.toString(w.field_n[var17_intLifetime1]));
             }
           }
           gb.field_l[2] = new mh(0L, wi.field_n, PlayerInputBatch.field_j);
-          MatchCompleteScreen.field_A[2] = new rk[]{new rk(0L, al.field_n, (mh) null, DualLinkNode.field_t, (RgbSprite) null, ni.field_Pb), new rk(0L, al.field_n, (mh) null, DualLinkNode.field_t, Ball.field_K[0], MenuSelection.field_a), new rk(0L, al.field_n, (mh) null, DualLinkNode.field_t, Ball.field_K[1], hh.field_f)};
+          MatchCompleteScreen.field_A[2] = new rk[]{new rk(0L, AchievementMaskRequest.field_n, (mh) null, DualLinkNode.field_t, (RgbSprite) null, ni.field_Pb), new rk(0L, AchievementMaskRequest.field_n, (mh) null, DualLinkNode.field_t, Ball.field_K[0], MenuSelection.field_a), new rk(0L, AchievementMaskRequest.field_n, (mh) null, DualLinkNode.field_t, Ball.field_K[1], hh.field_f)};
           if (1 < IntArrayRequest.field_t) {
             gb.field_l[3] = new mh(0L, wi.field_n, uc.field_r);
             array$1 = new rk[IntArrayRequest.field_t + 1];
             MatchCompleteScreen.field_A[3] = array$1;
-            MatchCompleteScreen.field_A[3][0] = new rk(0L, al.field_n, (mh) null, DualLinkNode.field_t, (RgbSprite) null, ni.field_Pb);
+            MatchCompleteScreen.field_A[3][0] = new rk(0L, AchievementMaskRequest.field_n, (mh) null, DualLinkNode.field_t, (RgbSprite) null, ni.field_Pb);
             for (var17_intLifetime2 = 0; var17_intLifetime2 < IntArrayRequest.field_t; var17_intLifetime2++) {
-              MatchCompleteScreen.field_A[3][var17_intLifetime2 + 1] = new rk(0L, al.field_n, (mh) null, DualLinkNode.field_t, (RgbSprite) null, GzipInflater.field_c[var17_intLifetime2]);
+              MatchCompleteScreen.field_A[3][var17_intLifetime2 + 1] = new rk(0L, AchievementMaskRequest.field_n, (mh) null, DualLinkNode.field_t, (RgbSprite) null, GzipInflater.field_c[var17_intLifetime2]);
             }
           }
           for (var17_intLifetime3 = 0; param13 > var17_intLifetime3; var17_intLifetime3++) {
             gb.field_l[var17_intLifetime3 + 4] = new mh(0L, wi.field_n, rg.field_b[var17_intLifetime3]);
             array$2 = new rk[ik.a((int) MouseInput.field_c[var17_intLifetime3], 255) + 1];
             MatchCompleteScreen.field_A[4 + var17_intLifetime3] = array$2;
-            MatchCompleteScreen.field_A[4 + var17_intLifetime3][0] = new rk(0L, al.field_n, (mh) null, DualLinkNode.field_t, (RgbSprite) null, ni.field_Pb);
+            MatchCompleteScreen.field_A[4 + var17_intLifetime3][0] = new rk(0L, AchievementMaskRequest.field_n, (mh) null, DualLinkNode.field_t, (RgbSprite) null, ni.field_Pb);
             for (var18 = 0; (255 & MouseInput.field_c[var17_intLifetime3]) > var18; var18++) {
               if (ki.field_k != null) {
                 if (ki.field_k[var17_intLifetime3] == null) {
@@ -243,7 +243,7 @@ abstract class sl extends DualLinkNode {
               } else {
                 var20 = null;
               }
-              MatchCompleteScreen.field_A[4 + var17_intLifetime3][var18 + 1] = new rk(0L, al.field_n, (mh) null, DualLinkNode.field_t, (RgbSprite) (var19_ref), (String) (var20));
+              MatchCompleteScreen.field_A[4 + var17_intLifetime3][var18 + 1] = new rk(0L, AchievementMaskRequest.field_n, (mh) null, DualLinkNode.field_t, (RgbSprite) (var19_ref), (String) (var20));
             }
           }
           for (var17_intLifetime4 = 0; 4 + param13 > var17_intLifetime4; var17_intLifetime4++) {

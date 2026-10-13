@@ -10,7 +10,7 @@ final class ScorePopup extends IntrusiveNode {
     static ResourceArchive field_l;
     static hl field_m;
     static int field_p;
-    static RgbSprite[] field_k;
+    static RgbSprite[] characterHeads;
     int remainingTicks;
 
     final static void a(int param0) {
@@ -48,7 +48,7 @@ final class ScorePopup extends IntrusiveNode {
 
     public static void a(byte param0) {
         field_l = null;
-        field_k = null;
+        characterHeads = null;
         field_m = null;
         if (param0 >= -41) {
           return;
@@ -75,7 +75,7 @@ final class ScorePopup extends IntrusiveNode {
 
     final static int a(int param0, int param1) {
         if (param0 != 255) {
-          field_k = (RgbSprite[]) null;
+          characterHeads = (RgbSprite[]) null;
         }
         return la.a(param1, 255, 255);
     }

@@ -220,7 +220,7 @@ final class RankingsScreen extends MenuScreen {
         var9 = BrickABrac.field_J ? 1 : 0;
         super.drawScreen((byte) -101);
         GzipInflater.a(550, 5, 243, 5, 140, (byte) -62, 45);
-        al.a(this.screenId, 19);
+        AchievementMaskRequest.a(this.screenId, 19);
         this.a(0);
         if (og.h(-26090)) {
           bo.a((byte) 97, na.field_N);

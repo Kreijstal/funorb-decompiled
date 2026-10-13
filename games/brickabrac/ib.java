@@ -430,7 +430,7 @@ class ib extends oc implements sd {
           var7 = 11 - (3 * BrickABrac.c(2048, var9_intLifetime3) >> 16);
           var8 = 8 - (InteractiveGameClient.sine8192(var9_intLifetime3, -4097) * 3 >> 16);
         }
-        var9 = tf.field_g[param0];
+        var9 = tf.trackHeads[param0];
         param6 = param6 + (-(var9.canvasWidth / 2) + var7);
         param5 = param5 + (-(var9.canvasHeight / 2) + var8);
         if (param4) {

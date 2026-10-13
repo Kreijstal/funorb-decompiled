@@ -51,7 +51,7 @@ final class PlayerBoard extends IntrusiveNode {
     int field_J;
     boolean field_tb;
     int positionWord;
-    int field_H;
+    int characterIndex;
     int bubbleTick;
     int messageTicks;
     private Brick[] portalBricks;
@@ -906,7 +906,7 @@ final class PlayerBoard extends IntrusiveNode {
         return this.field_o[param1] == 0 ? true : false;
     }
 
-    PlayerBoard(int boardWidth, int initialBoardOffset, int controlSet, int randomSeed, int initialState) {
+    PlayerBoard(int boardWidth, int initialBoardOffset, int controlSet, int randomSeed, int characterIndex) {
         this.outgoingInputMasks = new int[5];
         this.controlMask = 0;
         this.incomingInputBatches = new NodeDeque();
@@ -938,7 +938,7 @@ final class PlayerBoard extends IntrusiveNode {
         this.field_xb = new int[29];
         this.snapshotHistory = new ObjectHistoryBuffer(500);
         this.b(16387, 0);
-        this.field_H = initialState;
+        this.characterIndex = characterIndex;
         if (HighscoresScreen.field_w == null) {
           HighscoresScreen.field_w = new int[2][3];
           HighscoresScreen.field_w[0][2] = aq.field_e;

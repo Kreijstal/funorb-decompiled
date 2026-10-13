@@ -8,7 +8,7 @@ final class na extends ug {
     private vb field_M;
     static LevelPack[] field_L;
     static String field_N;
-    static NodeDeque field_Q;
+    static NodeDeque pendingAchievementSubmissions;
 
     final void a(int param0, int param1, int param2, byte param3, int param4) {
         super.a(param0, param1, param2, (byte) -119, param4);
@@ -165,7 +165,7 @@ final class na extends ug {
           return true;
         }
         if (param0 != -124) {
-          field_Q = (NodeDeque) null;
+          pendingAchievementSubmissions = (NodeDeque) null;
         }
         if (this.field_O.field_A != null &&
           this.field_O.field_A.length() != 0) {
@@ -757,7 +757,7 @@ final class na extends ug {
     public static void k(byte param0) {
         int var1 = 13 / ((-32 - param0) / 57);
         field_L = null;
-        field_Q = null;
+        pendingAchievementSubmissions = null;
         field_N = null;
     }
 
@@ -797,6 +797,6 @@ final class na extends ug {
 
     static {
         field_N = "Create a free account to start using this feature";
-        field_Q = new NodeDeque();
+        pendingAchievementSubmissions = new NodeDeque();
     }
 }

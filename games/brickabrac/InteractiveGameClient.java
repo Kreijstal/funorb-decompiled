@@ -117,7 +117,7 @@ abstract class InteractiveGameClient extends GameConnectionShell implements vc {
 
     final void registerUiLifecycle(int obfuscationGuard, GameUiLifecycle lifecycle) {
         try {
-          al.uiLifecycle = lifecycle;
+          AchievementMaskRequest.uiLifecycle = lifecycle;
           this.configureCommonPackets(8, true);
           this.enablePacketOne(obfuscationGuard ^ 3156);
           this.enableCommonPacket(2);
@@ -402,7 +402,7 @@ abstract class InteractiveGameClient extends GameConnectionShell implements vc {
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
-        e var5 = null;
+        AchievementSubmission var5 = null;
         var4 = BrickABrac.field_J ? 1 : 0;
         if (null != ua.field_d &&
           ua.field_d.focusLossPending) {
@@ -415,7 +415,7 @@ abstract class InteractiveGameClient extends GameConnectionShell implements vc {
           field_E = false;
         }
         if (lo.field_d) {
-          al.uiLifecycle.prepareUiAssets(true);
+          AchievementMaskRequest.uiLifecycle.prepareUiAssets(true);
           lo.field_d = false;
         }
         if (r.c((byte) -87)) {
@@ -428,9 +428,9 @@ abstract class InteractiveGameClient extends GameConnectionShell implements vc {
         this.dispatchIncomingPackets(true);
         if (!un.field_f) {
           MouseWheelSource.a(GameplayAudioEvent.mouseWheelDelta, (byte) 112);
-          decompiledFrameRemainder0 = !(!al.uiLifecycle.pollUiBootstrap((byte) -54));
+          decompiledFrameRemainder0 = !(!AchievementMaskRequest.uiLifecycle.pollUiBootstrap((byte) -54));
           if (decompiledFrameRemainder0) {
-            al.uiLifecycle.initializeUi(false);
+            AchievementMaskRequest.uiLifecycle.initializeUi(false);
             un.field_f = true;
             decompiledFrameRemainder0 = (var4 != 0);
           }
@@ -443,7 +443,7 @@ abstract class InteractiveGameClient extends GameConnectionShell implements vc {
             decompiledSharedTail0 = (var4 != 0);
           }
           if ((decompiledSharedTail0) &&
-            (al.uiLifecycle.pollUiReady(23570))) {
+            (AchievementMaskRequest.uiLifecycle.pollUiReady(23570))) {
             um.field_t = true;
             this.p(1);
             mc.a((byte) 126);
@@ -451,13 +451,13 @@ abstract class InteractiveGameClient extends GameConnectionShell implements vc {
         }
         if (!og.h(-26090)) {
           do {
-            var5 = (e) (lp.field_wb.removeFirst(3));
+            var5 = (AchievementSubmission) (lp.queuedAchievementSubmissions.removeFirst(3));
             if (var5 == null) {
               if (var4 == 0) {
                 break;
               }
             } else {
-              df.a(var5, 4, -161);
+              df.submitAchievement(var5, 4, -161);
             }
           } while (var4 == 0);
         }

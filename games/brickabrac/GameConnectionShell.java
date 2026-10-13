@@ -259,7 +259,7 @@ abstract class GameConnectionShell extends AppletGameShell {
             ff.a((byte) -61, 3);
           }
           if (uf.enabledCommonPackets[3]) {
-            TooltipSprite.a(4, 13330);
+            TooltipSprite.resendPendingAchievements(4, 13330);
           }
           if (uf.enabledCommonPackets[4]) {
             ui.a(5, (byte) 115);
@@ -557,7 +557,7 @@ abstract class GameConnectionShell extends AppletGameShell {
                   }
                 }
               } else {
-                qi.a(-1);
+                qi.handleAchievementResponse(-1);
               }
             } else {
               f.handleTableResponse((byte) 7);

@@ -653,7 +653,7 @@ final class HighscoresScreen extends MenuScreen {
         int var10Lifetime1;
         var12 = BrickABrac.field_J ? 1 : 0;
         super.drawScreen((byte) -38);
-        al.a(this.screenId, 19);
+        AchievementMaskRequest.a(this.screenId, 19);
         this.a(0);
         if (og.h(-26090)) {
           GzipInflater.a(550, 5, 243, 5, 140, (byte) -108, 45);

@@ -126,7 +126,7 @@ abstract class MatchResultScreen extends MenuScreen {
                 }
               }
               if (var5 != 0) {
-                stackIn_27_0 = e.field_q;
+                stackIn_27_0 = AchievementSubmission.field_q;
               } else {
                 stackIn_27_0 = BrickMotionPath.field_r;
               }

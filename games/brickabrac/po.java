@@ -160,7 +160,7 @@ final class po {
           }
           ArchiveNetworkRequest.field_C = new int[sk.field_I];
           for (var2Lifetime2 = 0; var2Lifetime2 < sk.field_I; var2Lifetime2++) {
-            ArchiveNetworkRequest.field_C[var2Lifetime2] = var5.playerBoards[var2Lifetime2].field_H;
+            ArchiveNetworkRequest.field_C[var2Lifetime2] = var5.playerBoards[var2Lifetime2].characterIndex;
           }
           stackIn_13_0 = !(ci.field_r);
           LevelMetadata.field_p = stackIn_13_0;
