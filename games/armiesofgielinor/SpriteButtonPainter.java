@@ -1,12 +1,12 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class nu extends BitmapTextWidgetPainter {
-    private RgbSprite[] field_v;
-    private int field_y;
-    private int field_x;
+final class SpriteButtonPainter extends BitmapTextWidgetPainter {
+    private RgbSprite[] backgroundSprites;
+    private int disabledTint;
+    private int normalTint;
     static int[] field_z;
-    private int field_u;
+    private int highlightTint;
     static String field_w;
 
     public static void a(int param0) {
@@ -83,7 +83,7 @@ final class nu extends BitmapTextWidgetPainter {
           participants = campaign.participants;
           participantThenMissionIndex = 0;
           if (obfuscationGuard != 23948) {
-            nu.a(49L, 110);
+            SpriteButtonPainter.a(49L, 110);
           }
           while (participantThenMissionIndex < participants.length) {
             participant = participants[participantThenMissionIndex];
@@ -122,7 +122,7 @@ final class nu extends BitmapTextWidgetPainter {
         }
     }
 
-    public nu() {
+    public SpriteButtonPainter() {
         this(2188450, 2591221, 9543);
     }
 
@@ -140,7 +140,7 @@ final class nu extends BitmapTextWidgetPainter {
 
     final static ResourceArchive a(int param0, boolean param1) {
         if (!param1) {
-          nu.a(-81L, -76);
+          SpriteButtonPainter.a(-81L, -76);
         }
         return tk.a(param0, true, 1, false, false, 1);
     }
@@ -173,18 +173,18 @@ final class nu extends BitmapTextWidgetPainter {
             this.paintWidget((Widget) null, 31, -37, true, 10);
           }
           if (!renderFlag) {
-            stackIn_16_0 = this.field_y;
+            stackIn_16_0 = this.disabledTint;
           } else {
             if (var6_int != 0) {
-              stackIn_16_0 = this.field_u;
+              stackIn_16_0 = this.highlightTint;
             } else {
-              stackIn_16_0 = this.field_x;
+              stackIn_16_0 = this.normalTint;
             }
           }
           var7 = stackIn_16_0;
           stackIn_19_0 = (!renderFlag) ? 7105644 : 16777215;
           var8 = stackIn_19_0;
-          AdaptiveMidiPcmStream.a(var7, this.field_v, widget.width, originX + widget.x, widget.y + originY + (-this.field_v[0].canvasHeight + widget.height >> 1), -3225);
+          AdaptiveMidiPcmStream.a(var7, this.backgroundSprites, widget.width, originX + widget.x, widget.y + originY + (-this.backgroundSprites[0].canvasHeight + widget.height >> 1), -3225);
           this.font.drawParagraph(widget.text, widget.x + originX, originY + widget.y - 2, widget.width, widget.height, var8, -1, 1, 1, this.font.maxAscent);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -201,12 +201,12 @@ final class nu extends BitmapTextWidgetPainter {
         }
     }
 
-    private nu(int param0, int param1, int param2) {
-        this.field_x = param0;
-        this.field_v = NodeIterator.field_b;
-        this.field_u = param1;
+    private SpriteButtonPainter(int normalTint, int highlightTint, int disabledTint) {
+        this.normalTint = normalTint;
+        this.backgroundSprites = NodeIterator.field_b;
+        this.highlightTint = highlightTint;
         this.font = CipherPacketBuffer.field_t;
-        this.field_y = param2;
+        this.disabledTint = disabledTint;
     }
 
     static {

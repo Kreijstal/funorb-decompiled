@@ -5,7 +5,7 @@ import java.io.*;
 import java.util.*;
 
 class DequeWidgetContainer extends Widget implements WidgetContainerMarker {
-    static na field_C;
+    static AccountNameSelectionForm field_C;
     NodeDeque children;
 
     final int getMaximumRenderLayer(int obfuscationGuard) {
@@ -82,7 +82,7 @@ class DequeWidgetContainer extends Widget implements WidgetContainerMarker {
         int var4 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         NodeIterator var2 = new NodeIterator(this.children);
         if (obfuscationGuard != 1) {
-          field_C = (na) null;
+          field_C = (AccountNameSelectionForm) null;
         }
         Widget var3 = (Widget) (var2.first(50));
         while (var3 != null) {
@@ -288,7 +288,7 @@ class DequeWidgetContainer extends Widget implements WidgetContainerMarker {
         obfuscationControl = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           if (obfuscationGuard <= 103) {
-            field_C = (na) null;
+            field_C = (AccountNameSelectionForm) null;
           }
           iterator = new NodeIterator(this.children);
           child = (Widget) (iterator.first(50));
@@ -368,7 +368,7 @@ class DequeWidgetContainer extends Widget implements WidgetContainerMarker {
     void setBounds(int x, int width, int y, int obfuscationGuard, int height) {
         super.setBounds(x, width, y, obfuscationGuard ^ 0, height);
         if (obfuscationGuard != 8192) {
-          field_C = (na) null;
+          field_C = (AccountNameSelectionForm) null;
         }
         this.refreshChildLayouts(0);
     }

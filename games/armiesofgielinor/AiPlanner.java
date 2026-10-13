@@ -1373,7 +1373,7 @@ final class AiPlanner extends IntrusiveNode implements UnitObserver {
               if (var5_ref.shouldFollow((byte) -87, var4_ref)) {
                 var5_ref.unlink(-122);
                 var3_int = 1;
-                ro.a(var4_ref, var5_ref, true);
+                ProgressMessageDialog.a(var4_ref, var5_ref, true);
               }
               var5_ref = var4_ref;
             }
@@ -1637,7 +1637,7 @@ final class AiPlanner extends IntrusiveNode implements UnitObserver {
         if (!MusicPatchPcmStream.e(-1)) {
           return false;
         }
-        stackIn_22_0 = (!ro.b(param3, (byte) -59, param0)) ? 0 : 1;
+        stackIn_22_0 = (!ProgressMessageDialog.b(param3, (byte) -59, param0)) ? 0 : 1;
         var4 = stackIn_22_0;
         if (80 == rs.keyCode ||
           84 == rs.keyCode) {

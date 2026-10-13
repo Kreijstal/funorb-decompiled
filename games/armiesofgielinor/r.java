@@ -284,7 +284,7 @@ final class r extends vt {
                 br.heldKeys[keyEvent] = true;
               }
             }
-            rd.keyEventFrameEndIndex = cr.keyEventWriteIndex;
+            rd.keyEventFrameEndIndex = ProgressDialog.keyEventWriteIndex;
           }
           return;
         } catch (java.lang.RuntimeException caughtParameter) {

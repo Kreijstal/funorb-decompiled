@@ -92,7 +92,7 @@ final class ModalDialogHost extends SingleChildWidgetContainer {
         CharSequence var5 = null;
         try {
           rs.outgoingChatChannel = 2;
-          qd.chatRecipientName = recipientName;
+          RegistrationAgreementPane.chatRecipientName = recipientName;
           var5 = (CharSequence) ((Object) recipientName);
           wm.chatRecipientNameKey = AccountNameNormalizer.normalize(var5, false);
           hf.textChatActive = true;

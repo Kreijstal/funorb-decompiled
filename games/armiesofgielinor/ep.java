@@ -281,7 +281,7 @@ final class ep {
         }
         var17 = new int[SoftwareRaster.height];
         var4 = -param0;
-        var4 = var4 + kv.field_F;
+        var4 = var4 + NameSuggestionList.field_F;
         var5 = -1;
         for (var6 = us.field_a; var6 < 16; var6++) {
           var7 = var4;
@@ -313,7 +313,7 @@ final class ep {
               fe.a(ck.field_c[var6], var11, 0, var8, var12, var9, var17);
             } else {
               us.field_a = 1 + var6;
-              kv.field_F = kv.field_F + (var9 << 4);
+              NameSuggestionList.field_F = NameSuggestionList.field_F + (var9 << 4);
               ck.field_c[var6] = null;
             }
             continue;
@@ -349,20 +349,20 @@ final class ep {
           }
           try {
             if (LabeledWidgetContainer.field_N == 0) {
-              kd.field_R = vq.field_c.openSocketAsync(LeaderEscortCondition.field_i, (byte) 114, db.field_c);
+              AccountRegistrationForm.field_R = vq.field_c.openSocketAsync(LeaderEscortCondition.field_i, (byte) 114, db.field_c);
               LabeledWidgetContainer.field_N = LabeledWidgetContainer.field_N + 1;
             }
             if (LabeledWidgetContainer.field_N == 1) {
-              if (2 == kd.field_R.status) {
+              if (2 == AccountRegistrationForm.field_R.status) {
                 stackIn_13_0 = OwnerChangeEvent.a(-1, (byte) 101);
                 return stackIn_13_0;
               }
-              if (1 == kd.field_R.status) {
+              if (1 == AccountRegistrationForm.field_R.status) {
                 LabeledWidgetContainer.field_N = LabeledWidgetContainer.field_N + 1;
               }
             }
             if (LabeledWidgetContainer.field_N == 2) {
-              jj.field_g = new BufferedSocket((java.net.Socket) (kd.field_R.result), vq.field_c);
+              jj.field_g = new BufferedSocket((java.net.Socket) (AccountRegistrationForm.field_R.result), vq.field_c);
               var2 = new PacketBuffer(13);
               it.a(hq.field_e, false, MoveAttackRequest.field_x, var2, ek.field_e);
               var2.writeByte(1, 15);
@@ -388,7 +388,7 @@ final class ep {
             }
             if (4 == LabeledWidgetContainer.field_N) {
               ScrollWidgetContainer.field_T.attachTransport(jj.field_g, TextLineLayout.field_m, -68);
-              kd.field_R = null;
+              AccountRegistrationForm.field_R = null;
               LabeledWidgetContainer.field_N = 0;
               jj.field_g = null;
               stackIn_34_0 = 0;
@@ -456,7 +456,7 @@ final class ep {
         this.field_c = 0;
         this.field_l = 0;
         try {
-          kv.field_F = 0;
+          NameSuggestionList.field_F = 0;
           PopupPresentation.field_j = param0;
           us.field_a = 0;
           this.field_d = 301.25;

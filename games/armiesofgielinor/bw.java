@@ -90,7 +90,7 @@ final class bw {
             var8 = param2[var5_int] << var6 & 255 | (255 & param2[1 + var5_int]) >>> -var6 + 8;
             if (0 <= var8 &&
               var8 < 256) {
-              this.field_i[this.field_d] = (byte)oe.bitwiseOr((int) this.field_i[this.field_d], var8 >>> var7);
+              this.field_i[this.field_d] = (byte)AccountRegistrationDialog.bitwiseOr((int) this.field_i[this.field_d], var8 >>> var7);
               this.field_d = this.field_d + 1;
               this.field_c = this.field_c + (8 - var7);
               if (this.field_c == 512) {
@@ -110,7 +110,7 @@ final class bw {
             var8Lifetime1 = 0;
           } else {
             var8Lifetime1 = param2[var5_int] << var6 & 255;
-            this.field_i[this.field_d] = (byte)oe.bitwiseOr((int) this.field_i[this.field_d], var8Lifetime1 >>> var7);
+            this.field_i[this.field_d] = (byte)AccountRegistrationDialog.bitwiseOr((int) this.field_i[this.field_d], var8Lifetime1 >>> var7);
           }
           if (param1 + (long)var7 >= 8L) {
             this.field_c = this.field_c + (8 - var7);
@@ -151,7 +151,7 @@ final class bw {
         try {
           var4 = (aj) (GameEvent.field_r.first((byte) 110));
           while (var4 != null) {
-            wr.a((byte) -71, var4, param1);
+            BirthDateChatEnableForm.a((byte) -71, var4, param1);
             var4 = (aj) (GameEvent.field_r.next((byte) 123));
           }
           var5 = (wj) (BattleCharacter.field_c.first((byte) 117));
@@ -315,7 +315,7 @@ final class bw {
         int var8 = 0;
         var8 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          this.field_i[this.field_d] = (byte)oe.bitwiseOr((int) this.field_i[this.field_d], 128 >>> rn.bitwiseAnd(this.field_c, 7));
+          this.field_i[this.field_d] = (byte)AccountRegistrationDialog.bitwiseOr((int) this.field_i[this.field_d], 128 >>> rn.bitwiseAnd(this.field_c, 7));
           this.field_d = this.field_d + 1;
           if (32 < this.field_d) {
             while (64 > this.field_d) {

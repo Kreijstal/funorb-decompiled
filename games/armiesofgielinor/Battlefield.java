@@ -873,7 +873,7 @@ final class Battlefield {
           (var13 != -1 ||
           var16 != 0)) {
           boolean decompiledFrameCompleted0 = true;
-          this.field_U[param5] = oe.bitwiseOr(this.field_U[param5], 1 << var13);
+          this.field_U[param5] = AccountRegistrationDialog.bitwiseOr(this.field_U[param5], 1 << var13);
           if (7 == var14.terrainType &&
             var12Lifetime1 == this.godFavourLevels[param5][var13]) {
             var15 = 0;
@@ -1300,7 +1300,7 @@ final class Battlefield {
                     if (var8.unitType == 59) {
                       stackIn_26_0 = (!var8.packedFlag32) ? 0 : 1;
                       if (stackIn_26_0 + ps.field_C[2] >= var7) {
-                        param0[var9] = oe.bitwiseOr(param0[var9], 4);
+                        param0[var9] = AccountRegistrationDialog.bitwiseOr(param0[var9], 4);
                       }
                     }
                     if (var8.unitType == 53) {
@@ -1311,7 +1311,7 @@ final class Battlefield {
                         stackIn_32_1 = 0;
                       }
                       if (stackIn_31_0 >= ~(stackIn_32_1 + ps.field_C[3])) {
-                        param0[var9] = oe.bitwiseOr(param0[var9], 8);
+                        param0[var9] = AccountRegistrationDialog.bitwiseOr(param0[var9], 8);
                       }
                     }
                     if (var8.unitType == 43) {
@@ -1323,7 +1323,7 @@ final class Battlefield {
                       }
                       if (stackIn_38_0 <= stackIn_39_1 + ps.field_C[4] &&
                         0 < var7) {
-                        param0[var9] = oe.bitwiseOr(param0[var9], 16);
+                        param0[var9] = AccountRegistrationDialog.bitwiseOr(param0[var9], 16);
                       }
                     }
                     if (var8.unitType == 63) {
@@ -1334,7 +1334,7 @@ final class Battlefield {
                         stackIn_46_1 = 0;
                       }
                       if ((stackIn_45_0 + stackIn_46_1) >= var7) {
-                        param0[var9] = oe.bitwiseOr(param0[var9], 1);
+                        param0[var9] = AccountRegistrationDialog.bitwiseOr(param0[var9], 1);
                       }
                     }
                     if (58 == var8.unitType) {
@@ -1345,7 +1345,7 @@ final class Battlefield {
                         stackIn_52_1 = 1;
                       }
                       if ((stackIn_51_0 + stackIn_52_1) >= var7) {
-                        param0[var9] = oe.bitwiseOr(param0[var9], 2);
+                        param0[var9] = AccountRegistrationDialog.bitwiseOr(param0[var9], 2);
                       }
                     }
                   }
@@ -2268,12 +2268,12 @@ final class Battlefield {
               if (var23.bonusStrength + var23.strength <= attackerDamage &&
                 attacker.statusEffectType != 7 &&
                 attacker.statusEffectType != 8) {
-                combatPrediction[2] = oe.bitwiseOr(combatPrediction[2], 1);
+                combatPrediction[2] = AccountRegistrationDialog.bitwiseOr(combatPrediction[2], 1);
               }
               if (defenderDamage >= defenderUnit.strength + defenderUnit.bonusStrength &&
                 7 != defender.statusEffectType &&
                 defender.statusEffectType != 8) {
-                combatPrediction[2] = oe.bitwiseOr(combatPrediction[2], 2);
+                combatPrediction[2] = AccountRegistrationDialog.bitwiseOr(combatPrediction[2], 2);
               }
               stackIn_133_0 = combatPrediction;
               return stackIn_133_0;

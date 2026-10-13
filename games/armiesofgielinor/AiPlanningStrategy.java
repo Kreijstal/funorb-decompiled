@@ -157,11 +157,11 @@ abstract class AiPlanningStrategy {
                   var6 = var7;
                   if (var7.previousNameComponent != null &&
                     var7.previousNameComponent.heldButtonMatches) {
-                    ad.field_I = var7.previousDisplayName;
+                    DialogMessagePane.field_I = var7.previousDisplayName;
                   } else if (var7.pressedButton == 0) {
                     if (var7.nameComponent.heldButtonMatches &&
                       var15 != 0) {
-                      ad.field_I = var7.displayName;
+                      DialogMessagePane.field_I = var7.displayName;
                     }
                   } else {
                     var16 = var7.displayName;

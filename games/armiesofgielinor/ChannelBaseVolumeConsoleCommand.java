@@ -30,7 +30,7 @@ final class ChannelBaseVolumeConsoleCommand extends ConsoleCommand {
         if (PopupPresentation.field_e != null) {
           var2 = PopupPresentation.field_e;
           String var1 = var2;
-          wr.a((byte) 68, EmailCheckResult.a(4800, ActionSpell.field_l, new String[]{var2}));
+          BirthDateChatEnableForm.a((byte) 68, EmailCheckResult.a(4800, ActionSpell.field_l, new String[]{var2}));
           PopupPresentation.field_e = null;
         }
         if (param0 <= -127) {

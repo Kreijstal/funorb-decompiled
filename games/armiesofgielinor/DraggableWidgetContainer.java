@@ -144,7 +144,7 @@ final class DraggableWidgetContainer extends SingleChildWidgetContainer {
     }
 
     final static void a(boolean param0, int param1) {
-        td.a(param0, false, 108);
+        LinkButtonPainter.a(param0, false, 108);
         if (param1 != -49) {
           field_J = (RgbSprite) null;
         }
@@ -227,8 +227,8 @@ final class DraggableWidgetContainer extends SingleChildWidgetContainer {
         if (!param1) {
           return;
         }
-        if (null != ad.field_I) {
-          op.a(-116, ad.field_I);
+        if (null != DialogMessagePane.field_I) {
+          op.a(-116, DialogMessagePane.field_I);
         }
         if (null != tn.activeContextMenu) {
           tn.activeContextMenu.draw((byte) -108, param0);

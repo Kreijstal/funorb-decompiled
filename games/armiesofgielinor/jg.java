@@ -20,15 +20,15 @@ final class jg extends IntrusiveNode {
         if (param2 != 512) {
           jg.a((byte) 13);
         }
-        int var5 = kd.field_Z[param4][param3];
+        int var5 = AccountRegistrationForm.field_Z[param4][param3];
         if (var5 > -1) {
-          var6 = AttackEvent.nextBoundedInt(false, td.field_d[var5].length, li.field_n);
-          if (td.field_d[var5][var6] != null &&
-            td.field_d[var5][var6].samples.length != 0) {
+          var6 = AttackEvent.nextBoundedInt(false, LinkButtonPainter.field_d[var5].length, li.field_n);
+          if (LinkButtonPainter.field_d[var5][var6] != null &&
+            LinkButtonPainter.field_d[var5][var6].samples.length != 0) {
             param0 = 512 - (param0 - 800);
             param1 = 512 + (param1 <= 512 ? param1 < -512 ? -512 : param1 : 512) >> 2;
             param0 = ((param0 <= 512 ? param0 : 512) >> 2) + 120;
-            jv.playSoundWithPan(td.field_d[var5][var6], param1, param0, (byte) 87);
+            jv.playSoundWithPan(LinkButtonPainter.field_d[var5][var6], param1, param0, (byte) 87);
           }
         }
     }
@@ -222,7 +222,7 @@ final class jg extends IntrusiveNode {
               var45.verticalAlignment = 1;
               for (var18_int = 0; tq.gameOptionCount > var18_int; var18_int++) {
                 var12.optionIcons[var18_int] = new ClientUiComponent(0L, (ClientUiComponent) null);
-                if ((var14 & 1 << var18_int + na.field_E) != 0) {
+                if ((var14 & 1 << var18_int + AccountNameSelectionForm.field_E) != 0) {
                   var12.optionIconContainer.addChild(var12.optionIcons[var18_int], 39);
                 }
                 var12.optionIcons[var18_int].verticalAlignment = 1;
@@ -373,7 +373,7 @@ final class jg extends IntrusiveNode {
               var12.ownerNameComponent.setBounds(jn.field_d, -20500, 78, var31, 70);
               if (var12.ownerNameComponent.heldButtonMatches &&
                 !var12.ownerNameComponent.text.equals(var32)) {
-                ad.field_I = var32;
+                DialogMessagePane.field_I = var32;
               }
               var12.playerCountComponent.text = Integer.toString(var12.playerCount);
               if (!var12.allowsAdmissionRequests) {
@@ -437,7 +437,7 @@ final class jg extends IntrusiveNode {
               if (TextLayout.field_a != null) {
                 for (var36Lifetime1 = 0; var36Lifetime1 < tq.gameOptionCount; var36Lifetime1++) {
                   if (TextLayout.field_a[var36Lifetime1] != null &&
-                    (1 << var36Lifetime1 + na.field_E & var14Lifetime1) != 0) {
+                    (1 << var36Lifetime1 + AccountNameSelectionForm.field_E & var14Lifetime1) != 0) {
                     var42 = TextLayout.field_a[var36Lifetime1][var12.gameOptions[var36Lifetime1] & 255];
                     var54 = var42;
                     var12.optionIcons[var36Lifetime1].sprite = var42;
@@ -505,7 +505,7 @@ final class jg extends IntrusiveNode {
             if (var33 != null) {
               var34_intLifetime1 = var12.field_Wb.font.getLineCount(var33, var12.width - MusicPatchNode.field_l - MusicPatchNode.field_l);
               var12.field_Wb.text = var33;
-              var12.field_Wb.textOpacity = var12.notificationTicks * 256 / qd.lobbyNotificationDuration;
+              var12.field_Wb.textOpacity = var12.notificationTicks * 256 / RegistrationAgreementPane.lobbyNotificationDuration;
               var12.field_Wb.setBounds(jn.field_d * var34_intLifetime1, -20500, var12.width - MusicPatchNode.field_l * 2, var31, MusicPatchNode.field_l);
               var31 = var31 + var34_intLifetime1 * jn.field_d;
             }
@@ -527,9 +527,9 @@ final class jg extends IntrusiveNode {
                   }
                 }
                 if (var35 != null) {
-                  ad.field_I = GridWidgetContainer.field_M[var34_intLifetime2] + " - " + (String) (var35);
+                  DialogMessagePane.field_I = GridWidgetContainer.field_M[var34_intLifetime2] + " - " + (String) (var35);
                 } else {
-                  ad.field_I = GridWidgetContainer.field_M[var34_intLifetime2];
+                  DialogMessagePane.field_I = GridWidgetContainer.field_M[var34_intLifetime2];
                 }
               }
             }
@@ -539,7 +539,7 @@ final class jg extends IntrusiveNode {
               } else {
                 var34 = ResourceRequest.field_u[var12.gameType];
               }
-              ad.field_I = ToggleWidget.field_P + " - " + var34;
+              DialogMessagePane.field_I = ToggleWidget.field_P + " - " + var34;
             }
             if (var12.ratedIcon.heldButtonMatches) {
               if (var12.rated) {
@@ -547,7 +547,7 @@ final class jg extends IntrusiveNode {
               } else {
                 stackIn_156_0 = CampaignProgress.field_c;
               }
-              ad.field_I = stackIn_156_0;
+              DialogMessagePane.field_I = stackIn_156_0;
             }
             if (var12.field_ec.heldButtonMatches) {
               if (!var12.joinable &&
@@ -560,7 +560,7 @@ final class jg extends IntrusiveNode {
               } else {
                 stackIn_166_0 = AttackEvent.field_K;
               }
-              ad.field_I = stackIn_166_0;
+              DialogMessagePane.field_I = stackIn_166_0;
             }
             if (var12.spectatorIcon.heldButtonMatches) {
               if (var12.spectatorMode != 2) {
@@ -568,7 +568,7 @@ final class jg extends IntrusiveNode {
               } else {
                 stackIn_171_0 = BitmapTextLayout.field_e;
               }
-              ad.field_I = stackIn_171_0;
+              DialogMessagePane.field_I = stackIn_171_0;
             }
             boolean decompiledFrameRemainder0 = true;
             if (var12.pressedButton != 0) {

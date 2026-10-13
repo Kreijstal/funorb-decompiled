@@ -98,7 +98,7 @@ public final class ArmiesOfGielinor extends wf {
           if (PopupPresentation.h(31337)) {
             this.g((byte) 4);
             if (PopupPresentation.h(31337)) {
-              if (AccountNameCheckResult.a((byte) 105)) {
+              if (AccountRequestResult.a((byte) 105)) {
                 discarded$0 = this.c(-100, false);
               }
               return;
@@ -332,7 +332,7 @@ public final class ArmiesOfGielinor extends wf {
                   stackIn_194_4 = var8;
                   stackIn_194_5 = var9;
                   stackIn_194_6 = var4Lifetime2;
-                  stackIn_194_7 = td.field_f;
+                  stackIn_194_7 = LinkButtonPainter.field_f;
                   stackIn_194_8 = -1;
                   stackIn_194_9 = 0;
                   stackIn_194_10 = -1;
@@ -671,19 +671,19 @@ public final class ArmiesOfGielinor extends wf {
                     MusicCrossfadeStream.field_s.ensureAllGroupsAvailable(-27927)) {
                     return true;
                   }
-                  bn.a((byte) -24, 67.0f, ao.a(cr.field_eb, true, DateInputWidget.field_G, MusicCrossfadeStream.field_s));
+                  bn.a((byte) -24, 67.0f, ao.a(ProgressDialog.field_eb, true, DateInputWidget.field_G, MusicCrossfadeStream.field_s));
                   return false;
                 }
-                bn.a((byte) -24, 67.0f, ao.a(cr.field_eb, true, DateInputWidget.field_G, bi.field_f));
+                bn.a((byte) -24, 67.0f, ao.a(ProgressDialog.field_eb, true, DateInputWidget.field_G, bi.field_f));
                 return false;
               }
-              bn.a((byte) -24, 67.0f, EmailValidator.a(op.field_b, 0, DateInputWidget.field_G, "", cr.field_eb));
+              bn.a((byte) -24, 67.0f, EmailValidator.a(op.field_b, 0, DateInputWidget.field_G, "", ProgressDialog.field_eb));
               return false;
             }
-            bn.a((byte) -24, 67.0f, ao.a(cr.field_eb, true, DateInputWidget.field_G, ReportAbuseDialog.field_Lb));
+            bn.a((byte) -24, 67.0f, ao.a(ProgressDialog.field_eb, true, DateInputWidget.field_G, ReportAbuseDialog.field_Lb));
             return false;
           }
-          bn.a((byte) -24, 67.0f, ao.a(cr.field_eb, true, DateInputWidget.field_G, ki.field_b));
+          bn.a((byte) -24, 67.0f, ao.a(ProgressDialog.field_eb, true, DateInputWidget.field_G, ki.field_b));
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -1222,14 +1222,14 @@ public final class ArmiesOfGielinor extends wf {
           hq.a((byte) -73);
           ModalDialog.f((byte) 97);
           ModalDialogHost.l(17);
-          oe.j((byte) 126);
-          cr.n(260);
+          AccountRegistrationDialog.j((byte) 126);
+          ProgressDialog.n(260);
           StandardContentDialog.j((byte) 49);
-          ro.n(0);
-          kd.f((byte) 19);
+          ProgressMessageDialog.n(0);
+          AccountRegistrationForm.f((byte) 19);
           ce.k(param0 ^ -11944);
           df.b(true);
-          na.f((byte) -117);
+          AccountNameSelectionForm.f((byte) -117);
           gl.a(true);
           fl.a((byte) 82);
           uu.a((byte) 30);
@@ -1467,14 +1467,14 @@ public final class ArmiesOfGielinor extends wf {
           ValidatedTextWidget.g((byte) -127);
           EditableTextWidget.m(32);
           ContentTransitionDialog.i(param0);
-          rj.a((byte) -85);
-          kv.b(true);
+          StripedProgressWidget.a((byte) -85);
+          NameSuggestionList.b(true);
           HotspotTextWidget.b(true);
           kw.b(true);
           ValidationStatusWidget.c(false);
           ToggleWidget.a(58);
           TextFieldValidator.f(-1);
-          qd.k(-15);
+          RegistrationAgreementPane.k(-15);
           ws.a(param0 + 197);
           pi.a((byte) -63);
           AttackEvent.a(false);
@@ -1526,8 +1526,8 @@ public final class ArmiesOfGielinor extends wf {
           CampaignMenuButton.c(param0 ^ -72);
           CampaignMenuEntry.a(-101);
           bj.a(param0 ^ -72);
-          nu.a(-26601);
-          td.a(-127);
+          SpriteButtonPainter.a(-26601);
+          LinkButtonPainter.a(-127);
           TextEntryWidgetPainter.a(1);
           MaskedTextEntryPainter.b((byte) 117);
           oi.b(true);
@@ -1551,8 +1551,8 @@ public final class ArmiesOfGielinor extends wf {
           ClientConnectionState.a((byte) 96);
           DelayedPacket.a(param0 + 1);
           wm.a(-10743);
-          AccountNameCheckResult.a(200);
-          ad.a((byte) 63);
+          AccountRequestResult.a(200);
+          DialogMessagePane.a((byte) 63);
           RasterState.a(-22856);
           CampaignResult.a((byte) -116);
           RegionAnchor.a(true);
@@ -1645,7 +1645,7 @@ public final class ArmiesOfGielinor extends wf {
                     stackIn_10_0 = ~bw.unitDefinitions[AnimationFrameSet.unitUnlockGroups[var5][var6]][11];
                     stackIn_10_1 = -1;
                     if (stackIn_10_0 == stackIn_10_1) {
-                      Widget.field_o[var5] = oe.bitwiseOr(Widget.field_o[var5], 1 << var6);
+                      Widget.field_o[var5] = AccountRegistrationDialog.bitwiseOr(Widget.field_o[var5], 1 << var6);
                     }
                     var6++;
                   }
@@ -1702,24 +1702,24 @@ public final class ArmiesOfGielinor extends wf {
             RegionAnchor.field_o = null;
             ModalDialog.a(0);
           }
-          bt.field_e = nu.a(3, true);
+          bt.field_e = SpriteButtonPainter.a(3, true);
           iw.field_l = DamageEvent.a(0, 5, (byte) 102, false, false);
-          sh.field_j = nu.a(6, true);
-          br.field_d = nu.a(7, true);
-          SpellConfirmationDialog.field_f = nu.a(8, true);
-          ep.field_b = nu.a(9, true);
-          SummonAction.field_w = nu.a(10, true);
-          CorpseConditionMarker.field_w = nu.a(11, true);
-          ki.field_b = nu.a(12, true);
-          op.field_b = nu.a(15, true);
-          bi.field_f = nu.a(14, true);
-          MusicCrossfadeStream.field_s = nu.a(param0, true);
-          ReportAbuseDialog.field_Lb = nu.a(18, true);
-          ce.field_M = nu.a(19, true);
-          ChannelBaseVolumeConsoleCommand.field_M = nu.a(20, true);
-          InteractiveWidget.field_F = nu.a(22, true);
+          sh.field_j = SpriteButtonPainter.a(6, true);
+          br.field_d = SpriteButtonPainter.a(7, true);
+          SpellConfirmationDialog.field_f = SpriteButtonPainter.a(8, true);
+          ep.field_b = SpriteButtonPainter.a(9, true);
+          SummonAction.field_w = SpriteButtonPainter.a(10, true);
+          CorpseConditionMarker.field_w = SpriteButtonPainter.a(11, true);
+          ki.field_b = SpriteButtonPainter.a(12, true);
+          op.field_b = SpriteButtonPainter.a(15, true);
+          bi.field_f = SpriteButtonPainter.a(14, true);
+          MusicCrossfadeStream.field_s = SpriteButtonPainter.a(param0, true);
+          ReportAbuseDialog.field_Lb = SpriteButtonPainter.a(18, true);
+          ce.field_M = SpriteButtonPainter.a(19, true);
+          ChannelBaseVolumeConsoleCommand.field_M = SpriteButtonPainter.a(20, true);
+          InteractiveWidget.field_F = SpriteButtonPainter.a(22, true);
           MusicPatchUsage.backgroundArchive = DamageEvent.a(0, 21, (byte) 127, false, false);
-          AiInfluenceMap.field_f = nu.a(23, true);
+          AiInfluenceMap.field_f = SpriteButtonPainter.a(23, true);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -1746,7 +1746,7 @@ public final class ArmiesOfGielinor extends wf {
             return (BinaryBitmapFont) (stackIn_5_0);
           }
           var2 = new BinaryBitmapFont(param0, j.decodedSpriteOffsetXs, CampaignMenuButton.decodedSpriteOffsetYs, ClippedWidgetContainer.decodedSpriteWidths, c.decodedSpriteHeights, AnimationPlayer.decodedSpriteIndices);
-          rj.releaseSpriteDecodeBuffers((byte) 124);
+          StripedProgressWidget.releaseSpriteDecodeBuffers((byte) 124);
           stackIn_7_0 = var2;
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -1824,7 +1824,7 @@ public final class ArmiesOfGielinor extends wf {
               var3[1] = vs.field_b;
               var3[0] = var4_ref_String;
             }
-            td.field_f.selectTheme(wf.field_D, 0);
+            LinkButtonPainter.field_f.selectTheme(wf.field_D, 0);
             ChannelFadeTimeConsoleCommand.field_F = false;
             var4 = 0;
           }
@@ -1838,7 +1838,7 @@ public final class ArmiesOfGielinor extends wf {
           stackIn_20_4 = var3;
           stackIn_20_5 = 0;
           stackIn_20_6 = false;
-          stackIn_20_7 = td.field_f;
+          stackIn_20_7 = LinkButtonPainter.field_f;
           if (!IntrusiveNode.field_h) {
             stackIn_21_0 = null;
             stackIn_21_1 = null;
@@ -2018,25 +2018,25 @@ public final class ArmiesOfGielinor extends wf {
                                                 } while (var18 == 0);
                                                 return false;
                                               }
-                                              bn.a((byte) -24, 69.0f, ao.a(cr.field_eb, true, DateInputWidget.field_G, MusicPatchUsage.backgroundArchive));
+                                              bn.a((byte) -24, 69.0f, ao.a(ProgressDialog.field_eb, true, DateInputWidget.field_G, MusicPatchUsage.backgroundArchive));
                                               return false;
                                             }
-                                            bn.a((byte) -24, 66.0f, ao.a(cr.field_eb, true, DateInputWidget.field_G, AiInfluenceMap.field_f));
+                                            bn.a((byte) -24, 66.0f, ao.a(ProgressDialog.field_eb, true, DateInputWidget.field_G, AiInfluenceMap.field_f));
                                             return false;
                                           }
-                                          bn.a((byte) -24, 63.0f, ao.a(cr.field_eb, true, DateInputWidget.field_G, InteractiveWidget.field_F));
+                                          bn.a((byte) -24, 63.0f, ao.a(ProgressDialog.field_eb, true, DateInputWidget.field_G, InteractiveWidget.field_F));
                                           return false;
                                         }
-                                        bn.a((byte) -24, 61.0f, ao.a(cr.field_eb, true, DateInputWidget.field_G, ChannelBaseVolumeConsoleCommand.field_M));
+                                        bn.a((byte) -24, 61.0f, ao.a(ProgressDialog.field_eb, true, DateInputWidget.field_G, ChannelBaseVolumeConsoleCommand.field_M));
                                         return false;
                                       }
-                                      bn.a((byte) -24, 58.0f, ao.a(cr.field_eb, true, DateInputWidget.field_G, ce.field_M));
+                                      bn.a((byte) -24, 58.0f, ao.a(ProgressDialog.field_eb, true, DateInputWidget.field_G, ce.field_M));
                                       return false;
                                     }
-                                    bn.a((byte) -24, 56.0f, ao.a(cr.field_eb, true, DateInputWidget.field_G, CorpseConditionMarker.field_w));
+                                    bn.a((byte) -24, 56.0f, ao.a(ProgressDialog.field_eb, true, DateInputWidget.field_G, CorpseConditionMarker.field_w));
                                     return false;
                                   }
-                                  bn.a((byte) -24, 54.0f, EmailValidator.a(bt.field_e, 0, DateInputWidget.field_G, "", cr.field_eb));
+                                  bn.a((byte) -24, 54.0f, EmailValidator.a(bt.field_e, 0, DateInputWidget.field_G, "", ProgressDialog.field_eb));
                                   return false;
                                 }
                                 bn.a((byte) -24, 52.0f, EmailValidator.a(sh.field_j, 0, QuickChatPhraseRepository.field_a, "basic", is.field_f));
@@ -2194,7 +2194,7 @@ public final class ArmiesOfGielinor extends wf {
           EventPresenter.field_t = DiskCacheRequest.loadRgbSpriteByName("bubblepoint", "basic", iw.field_l, false);
           ii.field_a = ac.a(iw.field_l, "actionbuttons", (byte) -4, "basic");
           od.field_a = ac.a(iw.field_l, "info_icons", (byte) -4, "basic");
-          ro.field_rb = MapLayout.loadIndexedSpritesByName("trait_icons", -28106, "basic", iw.field_l);
+          ProgressMessageDialog.field_rb = MapLayout.loadIndexedSpritesByName("trait_icons", -28106, "basic", iw.field_l);
           lp.field_b = MapLayout.loadIndexedSpritesByName("terrain_icons", -28106, "basic", iw.field_l);
           sg.field_b = MapLayout.loadIndexedSpritesByName("compare_icons", -28106, "basic", iw.field_l);
           CampaignRewardPreview.field_e = DiskCacheRequest.loadRgbSpriteByName("mapf", "basic", iw.field_l, false);
@@ -2380,7 +2380,7 @@ public final class ArmiesOfGielinor extends wf {
 
     final static void b(int param0, boolean param1) {
         RuntimeException runtimeException = null;
-        wr var2 = null;
+        BirthDateChatEnableForm var2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
           CombatEvent.field_I.draw(param1, param0 ^ 20);

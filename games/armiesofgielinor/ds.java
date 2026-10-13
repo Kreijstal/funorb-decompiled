@@ -21,7 +21,7 @@ final class ds {
         Object var1 = null;
         var1 = BattleCharacter.pointerInputHandler;
         synchronized (var1) {
-          ro.pointerButton = GridWidgetContainer.heldPointerButton;
+          ProgressMessageDialog.pointerButton = GridWidgetContainer.heldPointerButton;
           av.pointerIdleTicks = av.pointerIdleTicks + 1;
           AiPlanningStrategy.pointerX = DiskCacheRequest.livePointerX;
           ko.pointerY = ResourceArchive.livePointerY;

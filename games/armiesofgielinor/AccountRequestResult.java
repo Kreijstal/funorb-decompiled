@@ -1,16 +1,16 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class AccountNameCheckResult {
-    int field_d;
+final class AccountRequestResult {
+    int statusCode;
     static RgbSprite field_k;
     boolean accepted;
-    String[] field_c;
+    String[] suggestedNames;
     static String field_l;
     static String field_j;
     static int field_b;
     String errorText;
-    boolean field_h;
+    boolean requiresAgreement;
     static String field_g;
     static String field_e;
     static String field_f;
@@ -159,7 +159,7 @@ final class AccountNameCheckResult {
         var10 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           if (param0) {
-            AccountNameCheckResult.a((byte) -13);
+            AccountRequestResult.a((byte) -13);
           }
           var1 = null;
           var2 = null;
@@ -170,12 +170,12 @@ final class AccountNameCheckResult {
           if (rs.outgoingChatChannel == 2 &&
             !ToggleWidget.isChatRecipientAvailable(6)) {
             if (!jj.isFriend(62, wm.chatRecipientNameKey)) {
-              var2 = EmailCheckResult.a(4800, DiskCacheWorker.field_h, new String[]{qd.chatRecipientName});
+              var2 = EmailCheckResult.a(4800, DiskCacheWorker.field_h, new String[]{RegistrationAgreementPane.chatRecipientName});
               if (var10 != 0) {
-                var2 = EmailCheckResult.a(4800, ContentTransitionDialog.field_gb, new String[]{qd.chatRecipientName});
+                var2 = EmailCheckResult.a(4800, ContentTransitionDialog.field_gb, new String[]{RegistrationAgreementPane.chatRecipientName});
               }
             } else {
-              var2 = EmailCheckResult.a(4800, ContentTransitionDialog.field_gb, new String[]{qd.chatRecipientName});
+              var2 = EmailCheckResult.a(4800, ContentTransitionDialog.field_gb, new String[]{RegistrationAgreementPane.chatRecipientName});
             }
             if (BattleTutorial.quickChatMenuVisible) {
               LabeledWidgetContainer.appendSystemChatMessage((String) null, 2, -18119, (String) null, (String) (var2), 0);
@@ -197,7 +197,7 @@ final class AccountNameCheckResult {
             var6 = rs.outgoingChatChannel;
             var7 = 0;
             if (var6 == 2) {
-              var4 = EmailCheckResult.a(4800, LabeledWidgetContainer.field_Q, new String[]{qd.chatRecipientName});
+              var4 = EmailCheckResult.a(4800, LabeledWidgetContainer.field_Q, new String[]{RegistrationAgreementPane.chatRecipientName});
               var8 = EmailCheckResult.a(4800, ov.field_l, new String[]{var3});
               var7 = DebouncedValidator.field_b.width + UpkeepEvent.field_z.width - 485 - (-IntrusiveNode.field_e.textWidth(var8) + IntrusiveNode.field_e.textWidth(var4));
               if (var7 < 0) {
@@ -262,7 +262,7 @@ final class AccountNameCheckResult {
               DebouncedValidator.field_b.heldButtonMatches = false;
             }
             if (DebouncedValidator.field_b.heldButtonMatches) {
-              var1 = EmailCheckResult.a(4800, MusicPatchPcmStream.field_q, new String[]{var3, qd.chatRecipientName});
+              var1 = EmailCheckResult.a(4800, MusicPatchPcmStream.field_q, new String[]{var3, RegistrationAgreementPane.chatRecipientName});
             }
           }
           stackIn_96_0 = var1;
@@ -291,7 +291,7 @@ final class AccountNameCheckResult {
         }
     }
 
-    AccountNameCheckResult(boolean accepted) {
+    AccountRequestResult(boolean accepted) {
         try {
           this.accepted = accepted;
         } catch (RuntimeException runtimeException) {

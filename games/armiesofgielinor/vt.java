@@ -21,10 +21,10 @@ abstract class vt extends IntrusiveNode {
           return false;
         }
         if (param3 > 25) {
-          return ro.b(param1, (byte) -59, param2);
+          return ProgressMessageDialog.b(param1, (byte) -59, param2);
         }
         field_k = (RgbSprite) null;
-        return ro.b(param1, (byte) -59, param2);
+        return ProgressMessageDialog.b(param1, (byte) -59, param2);
     }
 
     public static void a(boolean param0) {

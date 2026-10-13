@@ -253,11 +253,11 @@ final class DeployEvent extends GameEvent {
             }
             if (var6.previousNameComponent != null &&
               var6.previousNameComponent.heldButtonMatches) {
-              ad.field_I = var6.previousDisplayName;
+              DialogMessagePane.field_I = var6.previousDisplayName;
             } else {
               if (var6.nameComponent.heldButtonMatches &&
                 var11 != 0) {
-                ad.field_I = var6.displayName;
+                DialogMessagePane.field_I = var6.displayName;
               }
             }
             if (0 != var6.pressedButton) {

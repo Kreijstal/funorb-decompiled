@@ -351,7 +351,7 @@ final class CampaignUnitOverride {
                 }
                 var2 = NodeIterator.a(50, "rm_x_from_friends");
                 if (var2 != null) {
-                  na.field_K = uu.a(var2, (byte) -99);
+                  AccountNameSelectionForm.field_K = uu.a(var2, (byte) -99);
                 }
                 var2 = NodeIterator.a(50, "rm_x_from_ignore");
                 if (var2 != null) {
@@ -395,7 +395,7 @@ final class CampaignUnitOverride {
                 }
                 var2 = NodeIterator.a(param0 + 132, "mu_gameopt_withdraw_invite_to_x");
                 if (var2 != null) {
-                  oe.field_zb = uu.a(var2, (byte) -118);
+                  AccountRegistrationDialog.field_zb = uu.a(var2, (byte) -118);
                 }
                 var2 = NodeIterator.a(50, "mu_gameopt_accept_x_into_game");
                 if (var2 != null) {
@@ -691,7 +691,7 @@ final class CampaignUnitOverride {
                 }
                 var2 = NodeIterator.a(50, "multiconst_friends");
                 if (null != var2) {
-                  kd.field_L = uu.a(var2, (byte) -96);
+                  AccountRegistrationForm.field_L = uu.a(var2, (byte) -96);
                 }
                 var2 = NodeIterator.a(50, "multiconst_similar_rating");
                 if (null != var2) {
@@ -1425,7 +1425,7 @@ final class CampaignUnitOverride {
                 }
                 var2 = NodeIterator.a(50, "create_age");
                 if (null != var2) {
-                  kd.field_S = uu.a(var2, (byte) -123);
+                  AccountRegistrationForm.field_S = uu.a(var2, (byte) -123);
                 }
                 var2 = NodeIterator.a(50, "create_u13_email");
                 if (var2 != null) {
@@ -1601,7 +1601,7 @@ final class CampaignUnitOverride {
                 }
                 var2 = NodeIterator.a(50, "create_alert_nameleadingspace");
                 if (var2 != null) {
-                  kd.field_U = uu.a(var2, (byte) 103);
+                  AccountRegistrationForm.field_U = uu.a(var2, (byte) 103);
                 }
                 var2 = NodeIterator.a(50, "create_alert_doublespace");
                 if (var2 != null) {
@@ -1793,7 +1793,7 @@ final class CampaignUnitOverride {
                 }
                 var2 = NodeIterator.a(50, "waitingfor_extradata");
                 if (var2 != null) {
-                  cr.field_eb = uu.a(var2, (byte) -100);
+                  ProgressDialog.field_eb = uu.a(var2, (byte) -100);
                 }
                 var2 = NodeIterator.a(param0 ^ -100, "waitingfor_languages");
                 if (null != var2) {
@@ -2102,7 +2102,7 @@ final class CampaignUnitOverride {
                 }
                 var2 = NodeIterator.a(50, "cont");
                 if (null != var2) {
-                  ro.field_kb = uu.a(var2, (byte) -110);
+                  ProgressMessageDialog.field_kb = uu.a(var2, (byte) -110);
                 }
                 var2 = NodeIterator.a(50, "continue_spectating");
                 if (var2 != null) {
@@ -2274,7 +2274,7 @@ final class CampaignUnitOverride {
                 }
                 var2 = NodeIterator.a(50, "achieved");
                 if (null != var2) {
-                  AccountNameCheckResult.field_f = uu.a(var2, (byte) -120);
+                  AccountRequestResult.field_f = uu.a(var2, (byte) -120);
                 }
                 var2 = NodeIterator.a(50, "orbpoints");
                 if (var2 != null) {
@@ -2534,7 +2534,7 @@ final class CampaignUnitOverride {
                 }
                 var2 = NodeIterator.a(param0 + 132, "rating_noratings");
                 if (null != var2) {
-                  AccountNameCheckResult.field_l = uu.a(var2, (byte) 102);
+                  AccountRequestResult.field_l = uu.a(var2, (byte) 102);
                 }
                 var2 = NodeIterator.a(50, "rating_rating");
                 if (null != var2) {

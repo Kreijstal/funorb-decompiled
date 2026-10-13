@@ -19,14 +19,14 @@ final class cs extends ResizableModalDialog implements WidgetActivationListener 
         Widget var3 = null;
         try {
           this.field_fb = vi.monotonicMillis(-95);
-          var3 = new Widget(ro.field_vb, (WidgetListener) null);
+          var3 = new Widget(ProgressMessageDialog.field_vb, (WidgetListener) null);
           var3.y = 50;
           var3.height = 100;
           var3.width = this.width;
           var3.x = 0;
           var3.painter = (WidgetPainter) ((Object) new BitmapTextWidgetPainter(gl.field_e, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
           this.addChild((byte) 10, var3);
-          this.field_ab = new Widget(ro.field_vb, (WidgetListener) null);
+          this.field_ab = new Widget(ProgressMessageDialog.field_vb, (WidgetListener) null);
           this.field_ab.width = this.width;
           this.field_ab.x = 0;
           this.field_ab.y = 20 + (var3.y + var3.height);
@@ -209,7 +209,7 @@ final class cs extends ResizableModalDialog implements WidgetActivationListener 
         RuntimeException decompiledCaughtException = null;
         try {
           var4 = new InteractiveWidget(param0, param2);
-          var4.painter = (WidgetPainter) ((Object) new nu());
+          var4.painter = (WidgetPainter) ((Object) new SpriteButtonPainter());
           var5 = this.height - 6;
           this.height = this.height + 38;
           var4.setBounds(15, -30 + this.width, var5, 8192, 30);

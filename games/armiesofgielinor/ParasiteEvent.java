@@ -47,9 +47,9 @@ final class ParasiteEvent extends GameEvent {
           for (var6 = 0; var3 > var6; var6++) {
             var5[var6] = MovementPresentation.decodedSpritePalette[rn.bitwiseAnd(255, (int) var4[var6])];
           }
-          var1[var2] = new RgbSprite(lg.decodedSpriteCanvasWidth, wr.decodedSpriteCanvasHeight, j.decodedSpriteOffsetXs[var2], CampaignMenuButton.decodedSpriteOffsetYs[var2], ClippedWidgetContainer.decodedSpriteWidths[var2], c.decodedSpriteHeights[var2], var5);
+          var1[var2] = new RgbSprite(lg.decodedSpriteCanvasWidth, BirthDateChatEnableForm.decodedSpriteCanvasHeight, j.decodedSpriteOffsetXs[var2], CampaignMenuButton.decodedSpriteOffsetYs[var2], ClippedWidgetContainer.decodedSpriteWidths[var2], c.decodedSpriteHeights[var2], var5);
         }
-        rj.releaseSpriteDecodeBuffers((byte) 106);
+        StripedProgressWidget.releaseSpriteDecodeBuffers((byte) 106);
         if (obfuscationGuard >= 1) {
           return var1;
         }

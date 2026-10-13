@@ -706,14 +706,14 @@ class PacketBuffer extends IntrusiveNode {
         return "";
     }
 
-    final void a(int param0, java.math.BigInteger param1, java.math.BigInteger param2) {
+    final void encryptRsa(int obfuscationGuard, java.math.BigInteger exponent, java.math.BigInteger modulus) {
         int var4_int = 0;
         byte[] var5 = null;
         java.math.BigInteger var6 = null;
         java.math.BigInteger var7 = null;
         byte[] var8 = null;
         try {
-          if (param0 != -5247) {
+          if (obfuscationGuard != -5247) {
             String var9 = (String) null;
             this.a(-2, (String) null);
           }
@@ -722,13 +722,13 @@ class PacketBuffer extends IntrusiveNode {
           var5 = new byte[var4_int];
           this.readBytes(0, var4_int, 0, var5);
           var6 = new java.math.BigInteger(var5);
-          var7 = var6.modPow(param1, param2);
+          var7 = var6.modPow(exponent, modulus);
           var8 = var7.toByteArray();
           this.position = 0;
           this.writeShort(true, var8.length);
           this.writeBytes(var8, 0, var8.length, 115);
         } catch (RuntimeException runtimeException) {
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "vh.TA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "vh.TA(" + obfuscationGuard + ',' + (exponent != null ? "{...}" : "null") + ',' + (modulus != null ? "{...}" : "null") + ')');
         }
     }
 

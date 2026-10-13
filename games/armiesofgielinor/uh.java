@@ -28,7 +28,7 @@ final class uh {
 
     final static void a(int[] param0, int param1) {
         try {
-          ro.field_lb = param0;
+          ProgressMessageDialog.field_lb = param0;
           int var2_int = 102 % ((69 - param1) / 54);
         } catch (RuntimeException runtimeException) {
           throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "uh.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');

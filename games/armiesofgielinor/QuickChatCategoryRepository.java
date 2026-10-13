@@ -154,7 +154,7 @@ final class QuickChatCategoryRepository {
                   if (var5 == 0) {
                     var23.unlink(126);
                   } else {
-                    var23.notificationTicks = qd.lobbyNotificationDuration;
+                    var23.notificationTicks = RegistrationAgreementPane.lobbyNotificationDuration;
                     var23.notificationCode = var5;
                   }
                   var23.unlinkSecondary((byte) -76);
@@ -185,7 +185,7 @@ final class QuickChatCategoryRepository {
                       var32 = (LobbyRoom) (ClippedWidgetContainer.lobbyRoomsById.get((byte) -27, (long)var3));
                       if ((var32 != null)) {
                         if (var4 != 0) {
-                          var32.notificationTicks = qd.lobbyNotificationDuration;
+                          var32.notificationTicks = RegistrationAgreementPane.lobbyNotificationDuration;
                           var32.notificationCode = var4;
                         } else {
                           var32.unlink(118);
@@ -214,7 +214,7 @@ final class QuickChatCategoryRepository {
                               var12.invitationReceived = false;
                               if (var4 != 0) {
                                 var17_ref.notificationCode = var4;
-                                var17_ref.notificationTicks = qd.lobbyNotificationDuration;
+                                var17_ref.notificationTicks = RegistrationAgreementPane.lobbyNotificationDuration;
                               }
                               QuickChatPhraseRepository.insertLobbyRoomSorted(-127, var17_ref);
                             }
@@ -255,7 +255,7 @@ final class QuickChatCategoryRepository {
                                     if (0 == var5) {
                                       var29.unlink(68);
                                     } else {
-                                      var14.notificationTicks = qd.lobbyNotificationDuration;
+                                      var14.notificationTicks = RegistrationAgreementPane.lobbyNotificationDuration;
                                       var14.notificationCode = var5;
                                     }
                                     var29.unlinkSecondary((byte) -76);
@@ -291,7 +291,7 @@ final class QuickChatCategoryRepository {
                               var26 = var13;
                               if ((var13 != null)) {
                                 if (var5 != 0) {
-                                  var13.notificationTicks = qd.lobbyNotificationDuration;
+                                  var13.notificationTicks = RegistrationAgreementPane.lobbyNotificationDuration;
                                   var13.notificationCode = var5;
                                 }
                                 if (var2 != 15) {

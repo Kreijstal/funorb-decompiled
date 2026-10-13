@@ -1,43 +1,43 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class oe extends ro implements WidgetActivationListener {
-    private boolean field_Ab;
-    private kd field_xb;
+final class AccountRegistrationDialog extends ProgressMessageDialog implements WidgetActivationListener {
+    private boolean resultReceived;
+    private AccountRegistrationForm registrationForm;
     static NodeDeque field_Bb;
-    private boolean field_yb;
+    private boolean terminalFailure;
     static ClientUiComponent field_Cb;
     static String field_zb;
 
     final boolean advanceDialogAnimation(byte obfuscationGuard) {
-        AccountNameCheckResult var2;
-        AccountNameCheckResult var3;
-        AccountNameCheckResult var2Lifetime1;
+        AccountRequestResult var2;
+        AccountRequestResult var3;
+        AccountRequestResult var2Lifetime1;
         if (obfuscationGuard == -1) {
           if (!this.open) {
             return super.advanceDialogAnimation((byte) -1);
           }
-          if (this.field_Ab) {
+          if (this.resultReceived) {
             return super.advanceDialogAnimation((byte) -1);
           }
           var2 = ki.a(-61440);
           if (var2 == null) {
             return super.advanceDialogAnimation((byte) -1);
           }
-          this.a(false, (byte) -53, var2);
+          this.handleRegistrationResult(false, (byte) -53, var2);
           return super.advanceDialogAnimation((byte) -1);
         }
-        var3 = (AccountNameCheckResult) null;
-        this.a(true, (byte) 54, (AccountNameCheckResult) null);
+        var3 = (AccountRequestResult) null;
+        this.handleRegistrationResult(true, (byte) 54, (AccountRequestResult) null);
         if (!this.open) {
           return super.advanceDialogAnimation((byte) -1);
         }
-        if (this.field_Ab) {
+        if (this.resultReceived) {
           return super.advanceDialogAnimation((byte) -1);
         }
         var2Lifetime1 = ki.a(-61440);
         if (var2Lifetime1 != null) {
-          this.a(false, (byte) -53, var2Lifetime1);
+          this.handleRegistrationResult(false, (byte) -53, var2Lifetime1);
         }
         return super.advanceDialogAnimation((byte) -1);
     }
@@ -49,10 +49,10 @@ final class oe extends ro implements WidgetActivationListener {
         int var1 = 18 / ((-35 - param0) / 35);
     }
 
-    final void k(byte param0) {
-        this.a(true, (byte) -103, DisplacedUnitMarker.a(-1, 248, ResourceProtocolClient.field_m));
-        if (param0 >= -81) {
-          this.field_Ab = false;
+    final void showUnavailable(byte obfuscationGuard) {
+        this.handleRegistrationResult(true, (byte) -103, DisplacedUnitMarker.a(-1, 248, ResourceProtocolClient.field_m));
+        if (obfuscationGuard >= -81) {
+          this.resultReceived = false;
         }
     }
 
@@ -85,86 +85,86 @@ final class oe extends ro implements WidgetActivationListener {
     }
 
     public final void widgetActivated(int pointerX, int obfuscationGuard, int button, int pointerY, InteractiveWidget widget) {
-        if (this.field_yb) {
-          td.a(false, true, 21);
+        if (this.terminalFailure) {
+          LinkButtonPainter.a(false, true, 21);
           return;
         }
         try {
           bt.b(obfuscationGuard ^ obfuscationGuard);
-          this.b(true);
+          this.closeDialog(true);
         } catch (RuntimeException runtimeException) {
           throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "oe.N(" + pointerX + ',' + obfuscationGuard + ',' + button + ',' + pointerY + ',' + (widget != null ? "{...}" : "null") + ')');
         }
     }
 
-    private final void a(boolean param0, byte param1, AccountNameCheckResult param2) {
+    private final void handleRegistrationResult(boolean obfuscationGuard, byte resultGuard, AccountRequestResult result) {
         RuntimeException stackIn_33_0 = null;
         StringBuilder stackIn_33_1 = null;
         String stackIn_34_2 = null;
         RuntimeException decompiledCaughtException = null;
-        String var4 = null;
-        RuntimeException var4_ref = null;
-        ad var5 = null;
-        int var6 = 0;
-        var6 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        String message = null;
+        RuntimeException failure = null;
+        DialogMessagePane messagePane = null;
+        int obfuscationControl = 0;
+        obfuscationControl = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          this.field_Ab = true;
-          if (!param2.accepted) {
-            if (null == param2.field_c) {
-              var4 = param2.errorText;
-              if (param2.field_d == 248) {
-                if (!param0) {
+          this.resultReceived = true;
+          if (!result.accepted) {
+            if (null == result.suggestedNames) {
+              message = result.errorText;
+              if (result.statusCode == 248) {
+                if (!obfuscationGuard) {
                   NumericDateInputWidget.b(false);
                 }
-                var4 = ResourceProtocolClient.field_m;
-                this.field_yb = true;
+                message = ResourceProtocolClient.field_m;
+                this.terminalFailure = true;
               }
             } else {
-              var4 = AccountNamePrompt.field_Ob;
-              if (null != this.field_xb) {
-                this.field_xb.a((byte) -116);
+              message = AccountNamePrompt.field_Ob;
+              if (null != this.registrationForm) {
+                this.registrationForm.refreshNamesRequested((byte) -116);
               }
             }
           } else {
-            var4 = eq.field_i;
+            message = eq.field_i;
           }
-          if (param1 >= -2) {
-            this.field_xb = (kd) null;
+          if (resultGuard >= -2) {
+            this.registrationForm = (AccountRegistrationForm) null;
           }
-          var5 = new ad((ro) (this), CipherPacketBuffer.field_t, var4);
-          if (param2.accepted) {
-            if (param2.field_h) {
-              this.replaceContent(new qd(this), (byte) -81);
+          messagePane = new DialogMessagePane((ProgressMessageDialog) (this), CipherPacketBuffer.field_t, message);
+          if (result.accepted) {
+            if (result.requiresAgreement) {
+              this.replaceContent(new RegistrationAgreementPane(this), (byte) -81);
               return;
             }
-            var5.a(ro.field_kb, (WidgetListener) (this), (byte) -61);
+            messagePane.addListenerButton(ProgressMessageDialog.field_kb, (WidgetListener) (this), (byte) -61);
           } else {
-            if (!this.field_yb) {
-              if (param2.field_d != 5) {
-                var5.a(fj.field_a, -1, 1);
+            if (!this.terminalFailure) {
+              if (result.statusCode != 5) {
+                messagePane.addActionButton(fj.field_a, -1, 1);
               } else {
-                var5.a(QuickChatCommandDefinition.field_d, 11, 1);
-                var5.a(dt.field_c, 17, 1);
+                messagePane.addActionButton(QuickChatCommandDefinition.field_d, 11, 1);
+                messagePane.addActionButton(dt.field_c, 17, 1);
               }
             } else {
-              var5.a(ro.field_kb, (WidgetListener) (this), (byte) 110);
+              messagePane.addListenerButton(ProgressMessageDialog.field_kb, (WidgetListener) (this), (byte) 110);
             }
-            if (param2.field_d == 3) {
-              var5.a(SoundPlaybackHandle.field_m, 7, 1);
+            if (result.statusCode == 3) {
+              messagePane.addActionButton(SoundPlaybackHandle.field_m, 7, 1);
             } else {
-              if (6 == param2.field_d) {
-                var5.a(CombatEvent.field_O, 9, 1);
+              if (6 == result.statusCode) {
+                messagePane.addActionButton(CombatEvent.field_O, 9, 1);
               }
             }
           }
-          this.replaceContent(var5, (byte) -110);
+          this.replaceContent(messagePane, (byte) -110);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          var4_ref = decompiledCaughtException;
-          stackIn_33_0 = var4_ref;
-          stackIn_33_1 = new StringBuilder().append("oe.U(").append(param0).append(',').append(param1).append(',');
-          if (param2 == null) {
+          failure = decompiledCaughtException;
+          stackIn_33_0 = failure;
+          stackIn_33_1 = new StringBuilder().append("oe.U(").append(obfuscationGuard).append(',').append(resultGuard).append(',');
+          if (result == null) {
             stackIn_34_2 = "null";
           } else {
             stackIn_34_2 = "{...}";
@@ -173,12 +173,12 @@ final class oe extends ro implements WidgetActivationListener {
         }
     }
 
-    oe(ModalDialogHost param0, kd param1) {
-        super(param0, CipherPacketBuffer.field_t, wm.field_d, false, false);
+    AccountRegistrationDialog(ModalDialogHost host, AccountRegistrationForm registrationForm) {
+        super(host, CipherPacketBuffer.field_t, wm.field_d, false, false);
         try {
-          this.field_xb = param1;
+          this.registrationForm = registrationForm;
         } catch (RuntimeException runtimeException) {
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "oe.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "oe.<init>(" + (host != null ? "{...}" : "null") + ',' + (registrationForm != null ? "{...}" : "null") + ')');
         }
     }
 

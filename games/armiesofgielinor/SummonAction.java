@@ -85,10 +85,10 @@ final class SummonAction extends PreparedAction {
                 if (0 >= var5) {
                   return null;
                 }
-                stackIn_37_0 = kd.field_U;
+                stackIn_37_0 = AccountRegistrationForm.field_U;
                 return stackIn_37_0;
               }
-              stackIn_19_0 = kd.field_U;
+              stackIn_19_0 = AccountRegistrationForm.field_U;
               return stackIn_19_0;
             }
             stackIn_14_0 = pu.field_G;

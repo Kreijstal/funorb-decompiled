@@ -60,7 +60,7 @@ final class TurnTimerDial {
                   var8 = var8 + var10;
                   var8 = var8 & -16711936;
                   var9 = var9 & 16711680;
-                  SoftwareRaster.pixels[var5] = oe.bitwiseOr(var9, var8) >>> 8;
+                  SoftwareRaster.pixels[var5] = AccountRegistrationDialog.bitwiseOr(var9, var8) >>> 8;
                 }
               }
               var4++;
@@ -201,19 +201,19 @@ final class TurnTimerDial {
         int var6 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           wh.field_f = false;
-          td.field_d = new PcmSample[cr.field_W.length][];
+          LinkButtonPainter.field_d = new PcmSample[ProgressDialog.field_W.length][];
           int var2_int = 93 / ((27 - param0) / 62);
-          for (var3 = 0; cr.field_W.length > var3; var3++) {
-            array$0 = new PcmSample[cr.field_W[var3].length];
-            td.field_d[var3] = array$0;
-            for (var4 = 0; cr.field_W[var3].length > var4; var4++) {
-              var5 = param1.getSoundEffectByName(cr.field_W[var3][var4], (byte) -97, "");
+          for (var3 = 0; ProgressDialog.field_W.length > var3; var3++) {
+            array$0 = new PcmSample[ProgressDialog.field_W[var3].length];
+            LinkButtonPainter.field_d[var3] = array$0;
+            for (var4 = 0; ProgressDialog.field_W[var3].length > var4; var4++) {
+              var5 = param1.getSoundEffectByName(ProgressDialog.field_W[var3][var4], (byte) -97, "");
               if (var5 == null) {
-                var5 = param1.getMusicSampleByName((byte) -127, "", cr.field_W[var3][var4]);
+                var5 = param1.getMusicSampleByName((byte) -127, "", ProgressDialog.field_W[var3][var4]);
               }
               if (var5 != null) {
               }
-              td.field_d[var3][var4] = var5;
+              LinkButtonPainter.field_d[var3][var4] = var5;
             }
           }
           ke.a((byte) 90, param1);

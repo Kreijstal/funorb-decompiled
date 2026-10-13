@@ -269,16 +269,16 @@ final class VertexNormal {
               var12.ratingComponent.setBounds(jn.field_d, -20500, 40, var19, var12.width - 40);
               if (var12.nameComponent.heldButtonMatches &&
                 var22 != 0) {
-                ad.field_I = var12.displayName;
+                DialogMessagePane.field_I = var12.displayName;
                 if (DeployRequest.field_v != null &&
                   DeployRequest.field_v[var12.chatIconId] != null) {
-                  ad.field_I = ad.field_I + " - " + DeployRequest.field_v[var12.chatIconId];
+                  DialogMessagePane.field_I = DialogMessagePane.field_I + " - " + DeployRequest.field_v[var12.chatIconId];
                 }
               } else {
                 if (var12.nameComponent.heldButtonMatches &&
                   DeployRequest.field_v != null &&
                   null != DeployRequest.field_v[var12.chatIconId]) {
-                  ad.field_I = DeployRequest.field_v[var12.chatIconId];
+                  DialogMessagePane.field_I = DeployRequest.field_v[var12.chatIconId];
                 }
               }
               var19 = var19 + jn.field_d;
@@ -290,7 +290,7 @@ final class VertexNormal {
             var24Lifetime1 = var23;
             if (var23 != null) {
               var24_intLifetime1 = var12.field_fc.font.getLineCount(var23, -MusicPatchNode.field_l + (var12.width - MusicPatchNode.field_l));
-              var12.field_fc.textOpacity = var12.notificationTicks * 256 / qd.lobbyNotificationDuration;
+              var12.field_fc.textOpacity = var12.notificationTicks * 256 / RegistrationAgreementPane.lobbyNotificationDuration;
               var12.field_fc.text = var23;
               var12.field_fc.setBounds(var24_intLifetime1 * jn.field_d, -20500, var12.width - 2 * MusicPatchNode.field_l, var19, MusicPatchNode.field_l);
               var19 = var19 + jn.field_d * var24_intLifetime1;
@@ -463,7 +463,7 @@ final class VertexNormal {
                   var27 = ToggleWidget.currentRoom.ownerName;
                   var24Lifetime2 = (String) (var24Lifetime2) + "<br>" + EmailCheckResult.a(param1 ^ 4671, DirectByteStorage.field_l, new String[]{var27});
                 }
-                ad.field_I = (String) (var24Lifetime2);
+                DialogMessagePane.field_I = (String) (var24Lifetime2);
               }
             }
             var12 = (LobbyPlayer) (var10.next((byte) 123));

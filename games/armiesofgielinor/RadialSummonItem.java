@@ -240,7 +240,7 @@ final class RadialSummonItem {
           ModalDialog.currentRoomPlayers = param5.children;
           ModalDialog.currentRoomPlayers.clear(122);
           UnitCycler.currentRoomPlayersById = new DualNodeHashTable(param0);
-          qd.lobbyNotificationDuration = param2;
+          RegistrationAgreementPane.lobbyNotificationDuration = param2;
           ph.field_d = 0L;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

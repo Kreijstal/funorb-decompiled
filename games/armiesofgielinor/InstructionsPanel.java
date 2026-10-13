@@ -663,11 +663,11 @@ final class InstructionsPanel {
               SoftwareRaster.b(99, 25, 30, 30, 0, 128);
             } else {
               SoftwareRaster.b(37, 25, 92, 30, 0, 128);
-              ro.field_rb[param6.getUnitCategory(0)].draw(43, 32);
+              ProgressMessageDialog.field_rb[param6.getUnitCategory(0)].draw(43, 32);
               sg.field_b[this.a(param6.getUnitCategory(0), (byte) -6, param5.getUnitCategory(0))].draw(75, 32);
             }
           }
-          ro.field_rb[param5.getUnitCategory(0)].draw(106, 32);
+          ProgressMessageDialog.field_rb[param5.getUnitCategory(0)].draw(106, 32);
           DateInputWidget.field_E.drawCentered(100 - param3 + "%", 20, 45, 16777215, -1);
           EventPresenter.field_t.b(68, 60, ConsoleValue.field_b[-1 + ConsoleValue.field_b.length]);
           so.field_b.a(5605);
@@ -1824,7 +1824,7 @@ final class InstructionsPanel {
     }
 
     private final IndexedSprite f(int param0, int param1) {
-        IndexedSprite[] var4 = ro.field_rb;
+        IndexedSprite[] var4 = ProgressMessageDialog.field_rb;
         IndexedSprite[] var3 = var4;
         if (param1 < param0) {
           return null;

@@ -1,20 +1,20 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class ro extends ContentTransitionDialog implements WidgetActivationListener {
-    private rj field_tb;
+class ProgressMessageDialog extends ContentTransitionDialog implements WidgetActivationListener {
+    private StripedProgressWidget progressBar;
     private boolean field_sb;
     static String field_kb;
-    private boolean field_wb;
+    private boolean successfulOutcome;
     static BattleCamera modelProjectionCamera;
     private boolean field_mb;
     static int field_pb;
     static int[] field_lb;
-    private boolean field_qb;
+    private boolean resultShown;
     static String field_vb;
     static int pointerButton;
     static IndexedSprite[] field_rb;
-    private BitmapFont field_nb;
+    private BitmapFont font;
 
     final static void a(IntrusiveNode param0, IntrusiveNode param1, boolean param2) {
         IntrusiveNode var4 = null;
@@ -35,7 +35,7 @@ class ro extends ContentTransitionDialog implements WidgetActivationListener {
           param1.next.previous = param1;
           if (!param2) {
             var4 = (IntrusiveNode) null;
-            ro.a((IntrusiveNode) null, (IntrusiveNode) null, false);
+            ProgressMessageDialog.a((IntrusiveNode) null, (IntrusiveNode) null, false);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -73,7 +73,7 @@ class ro extends ContentTransitionDialog implements WidgetActivationListener {
             stackIn_6_0 = super.handleKey(rootWidget, keyCode, character, -12215);
             return stackIn_6_0;
           }
-          this.b(true);
+          this.closeDialog(true);
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -89,27 +89,27 @@ class ro extends ContentTransitionDialog implements WidgetActivationListener {
         }
     }
 
-    ro(ModalDialogHost param0, BitmapFont param1, String param2, boolean param3, boolean param4) {
-        super(param0, new ad((ro) null, param1, param2), 77, 10, 10);
+    ProgressMessageDialog(ModalDialogHost host, BitmapFont font, String message, boolean closeFlowA, boolean closeFlowB) {
+        super(host, new DialogMessagePane((ProgressMessageDialog) null, font, message), 77, 10, 10);
         try {
-          this.field_qb = false;
-          this.field_mb = param3 ? true : false;
-          this.field_wb = false;
-          this.field_sb = param4 ? true : false;
-          this.field_nb = param1;
-          this.field_tb = new rj(13, 50, 274, 30, 15, 2113632, 4210752);
-          this.field_tb.field_R = true;
-          this.addChild((byte) 10, (Widget) (this.field_tb));
+          this.resultShown = false;
+          this.field_mb = closeFlowA ? true : false;
+          this.successfulOutcome = false;
+          this.field_sb = closeFlowB ? true : false;
+          this.font = font;
+          this.progressBar = new StripedProgressWidget(13, 50, 274, 30, 15, 2113632, 4210752);
+          this.progressBar.animated = true;
+          this.addChild((byte) 10, (Widget) (this.progressBar));
         } catch (RuntimeException runtimeException) {
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "ro.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "ro.<init>(" + (host != null ? "{...}" : "null") + ',' + (font != null ? "{...}" : "null") + ',' + (message != null ? "{...}" : "null") + ',' + closeFlowA + ',' + closeFlowB + ')');
         }
     }
 
-    final void b(boolean param0) {
+    final void closeDialog(boolean obfuscationGuard) {
         if (!this.open) {
           return;
         }
-        if (!param0) {
+        if (!obfuscationGuard) {
           field_rb = (IndexedSprite[]) null;
           this.open = false;
           if (this.field_mb) {
@@ -220,7 +220,7 @@ class ro extends ContentTransitionDialog implements WidgetActivationListener {
           if (kp.getChatFilter(var5, param1 ^ -97) == 2) {
             ud.setChatFilter(1, false, var5, param2);
           }
-          it.writeChatMessage(-1, -83, rs.outgoingChatChannel, qd.chatRecipientName, param0, var4_ref_String);
+          it.writeChatMessage(-1, -83, rs.outgoingChatChannel, RegistrationAgreementPane.chatRecipientName, param0, var4_ref_String);
           rd.clearChatText(8445);
           return true;
         }
@@ -252,7 +252,7 @@ class ro extends ContentTransitionDialog implements WidgetActivationListener {
         var16 = nt.a(param1 - 47, var17);
         var18 = var16;
         if (rs.outgoingChatChannel == 2) {
-          var56 = (CharSequence) ((Object) qd.chatRecipientName);
+          var56 = (CharSequence) ((Object) RegistrationAgreementPane.chatRecipientName);
           var20 = EmailCheckResult.a(4800, LabeledWidgetContainer.field_Q, new String[]{ug.a(16, var56)});
           var8 = EmailCheckResult.a(4800, ov.field_l, new String[]{var16});
           var9 = IntrusiveNode.field_e.textWidth(var20);
@@ -326,14 +326,14 @@ class ro extends ContentTransitionDialog implements WidgetActivationListener {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var6 = null;
         try {
-          if (this.field_wb) {
+          if (this.successfulOutcome) {
             gl.a(122, 3);
-            this.b(true);
+            this.closeDialog(true);
           } else {
             ActionSpell.a(CombatEvent.d((byte) -125), -113, "tochangedisplayname.ws");
           }
           if (obfuscationGuard != 11) {
-            ro.n(46);
+            ProgressMessageDialog.n(46);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -350,79 +350,79 @@ class ro extends ContentTransitionDialog implements WidgetActivationListener {
         }
     }
 
-    final void o(int param0) {
-        ad var2 = null;
-        if (param0 == 4259) {
-          this.field_tb.c(4210752, 2121792, 27178);
-          var2 = new ad(this, this.field_nb, QuickChatCategory.field_B);
-          var2.a(ClientConnectionState.field_b, 15, 1);
+    final void showConnectionFailure(int obfuscationGuard) {
+        DialogMessagePane var2 = null;
+        if (obfuscationGuard == 4259) {
+          this.progressBar.setColours(4210752, 2121792, 27178);
+          var2 = new DialogMessagePane(this, this.font, QuickChatCategory.field_B);
+          var2.addActionButton(ClientConnectionState.field_b, 15, 1);
           this.replaceContent(var2, (byte) -108);
           return;
         }
     }
 
-    final void a(int param0, byte param1, String param2) {
-        boolean stackIn_7_1 = false;
-        ad stackIn_12_0 = null;
-        String stackIn_13_1 = null;
+    final void showResult(int statusCode, byte obfuscationGuard, String message) {
+        boolean success = false;
+        DialogMessagePane paneAlias = null;
+        String buttonLabel = null;
         RuntimeException stackIn_27_0 = null;
         StringBuilder stackIn_27_1 = null;
         String stackIn_28_2 = null;
         RuntimeException decompiledCaughtException = null;
-        ad var4 = null;
-        RuntimeException var4_ref = null;
-        int var5 = 0;
-        ad var6 = null;
-        var5 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        DialogMessagePane messagePane = null;
+        RuntimeException failure = null;
+        int obfuscationControl = 0;
+        DialogMessagePane pane = null;
+        obfuscationControl = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          if (this.field_qb) {
+          if (this.resultShown) {
             return;
           }
-          this.field_qb = true;
-          stackIn_7_1 = (param0 == 256);
-          this.field_wb = stackIn_7_1;
-          this.field_tb.c(4210752, 8405024, 27178);
-          var6 = new ad(this, this.field_nb, param2);
-          var4 = var6;
-          if (5 == param0) {
-            var6.a(QuickChatCommandDefinition.field_d, 11, 1);
-            var6.a(dt.field_c, 17, param1 ^ 99);
+          this.resultShown = true;
+          success = (statusCode == 256);
+          this.successfulOutcome = success;
+          this.progressBar.setColours(4210752, 8405024, 27178);
+          pane = new DialogMessagePane(this, this.font, message);
+          messagePane = pane;
+          if (5 == statusCode) {
+            pane.addActionButton(QuickChatCommandDefinition.field_d, 11, 1);
+            pane.addActionButton(dt.field_c, 17, obfuscationGuard ^ 99);
           } else {
-            if (param0 != 256) {
-              stackIn_12_0 = var6;
+            if (statusCode != 256) {
+              paneAlias = pane;
               if (this.field_mb) {
-                stackIn_13_1 = RegionAnchor.field_k;
+                buttonLabel = RegionAnchor.field_k;
               } else {
-                stackIn_13_1 = fj.field_a;
+                buttonLabel = fj.field_a;
               }
-              ((ad) (Object) stackIn_12_0).a(stackIn_13_1, -1, param1 ^ 99);
+              ((DialogMessagePane) (Object) paneAlias).addActionButton(buttonLabel, -1, obfuscationGuard ^ 99);
             } else {
-              var6.a(RegionAnchor.field_k, (WidgetListener) (this), (byte) -89);
+              pane.addListenerButton(RegionAnchor.field_k, (WidgetListener) (this), (byte) -89);
             }
           }
-          if (param0 == 3) {
-            var6.a(SoundPlaybackHandle.field_m, 7, 1);
+          if (statusCode == 3) {
+            pane.addActionButton(SoundPlaybackHandle.field_m, 7, 1);
           } else {
-            if (param0 != 4) {
-              if (param0 != 6) {
-                if (param0 == 9) {
-                  var6.a(BattleTutorial.field_b, (WidgetListener) (this), (byte) -55);
+            if (statusCode != 4) {
+              if (statusCode != 6) {
+                if (statusCode == 9) {
+                  pane.addListenerButton(BattleTutorial.field_b, (WidgetListener) (this), (byte) -55);
                 }
               } else {
-                var6.a(CombatEvent.field_O, 9, 1);
+                pane.addActionButton(CombatEvent.field_O, 9, 1);
               }
             } else {
-              var6.a(IconTextComponent.field_Jb, 8, 1);
+              pane.addActionButton(IconTextComponent.field_Jb, 8, 1);
             }
           }
-          this.replaceContent(var6, param1);
+          this.replaceContent(pane, obfuscationGuard);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          var4_ref = decompiledCaughtException;
-          stackIn_27_0 = var4_ref;
-          stackIn_27_1 = new StringBuilder().append("ro.KA(").append(param0).append(',').append(param1).append(',');
-          if (param2 == null) {
+          failure = decompiledCaughtException;
+          stackIn_27_0 = failure;
+          stackIn_27_1 = new StringBuilder().append("ro.KA(").append(statusCode).append(',').append(obfuscationGuard).append(',');
+          if (message == null) {
             stackIn_28_2 = "null";
           } else {
             stackIn_28_2 = "{...}";

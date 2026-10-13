@@ -86,9 +86,9 @@ final class j {
           DisplacedUnitMarker.field_t[42] = nt.field_p;
           DisplacedUnitMarker.field_t[40] = vg.field_l;
           DisplacedUnitMarker.field_t[32] = ActionRequest.field_r;
-          DisplacedUnitMarker.field_t[36] = rj.field_G;
+          DisplacedUnitMarker.field_t[36] = StripedProgressWidget.field_G;
           DisplacedUnitMarker.field_t[31] = DebugConsole.field_C;
-          DisplacedUnitMarker.field_t[35] = AccountNameCheckResult.field_j;
+          DisplacedUnitMarker.field_t[35] = AccountRequestResult.field_j;
           DisplacedUnitMarker.field_t[47] = qk.field_f;
           DisplacedUnitMarker.field_t[51] = nt.field_p;
           DisplacedUnitMarker.field_t[48] = StandardContentDialog.field_lb;
@@ -118,7 +118,7 @@ final class j {
           }
           wb.field_b[6] = el.field_a;
           wb.field_b[13] = QuickChatPhrase.field_y;
-          du.field_g = new String[]{ClientContextMenu.field_l, ModalDialogHost.field_N, tv.field_c, tv.field_b, CombatSandbox.field_g, ScrollContainer.field_Kb, DelayedPacket.field_r, r.field_I, we.field_h, kd.field_Q, ConsoleExpression.field_t, ByteStorage.field_c, RasterState.field_l, pi.field_P, StateChangeEvent.field_H, ut.field_ib};
+          du.field_g = new String[]{ClientContextMenu.field_l, ModalDialogHost.field_N, tv.field_c, tv.field_b, CombatSandbox.field_g, ScrollContainer.field_Kb, DelayedPacket.field_r, r.field_I, we.field_h, AccountRegistrationForm.field_Q, ConsoleExpression.field_t, ByteStorage.field_c, RasterState.field_l, pi.field_P, StateChangeEvent.field_H, ut.field_ib};
           wb.field_b[18] = dd.field_g;
           wb.field_b[4] = PrintVictoryConditionsConsoleCommand.field_H;
           wb.field_b[14] = ov.field_d;
@@ -254,7 +254,7 @@ final class j {
             pi.field_N.height = 0;
             var6 = pi.field_N;
             var6.width = 0;
-            kd.field_F.text = uu.field_a.toUpperCase();
+            AccountRegistrationForm.field_F.text = uu.field_a.toUpperCase();
             var7 = (2 + pd.field_c.width) / 2;
             pi.field_N.setBounds(40, param0 - 20501, var7 - 2, -40 + pd.field_c.height, 0);
             so.field_d.setBounds(40, param0 ^ -20499, -var7 + pd.field_c.width, -40 + pd.field_c.height, var7);
@@ -349,7 +349,7 @@ final class j {
                       }
                     }
                   }
-                  ad.field_I = "<col=A00000>" + kp.field_e + "<br>" + ov.field_j + (String) (var9);
+                  DialogMessagePane.field_I = "<col=A00000>" + kp.field_e + "<br>" + ov.field_j + (String) (var9);
                 }
               }
             } else {

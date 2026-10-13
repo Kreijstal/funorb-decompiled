@@ -76,7 +76,7 @@ final class ValidationStatusWidget extends HotspotTextWidget {
         ValidationState iconState;
         obfuscationControl = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         state = this.validationSource.getValidationState(false);
-        if (ad.validationWaiting != state &&
+        if (DialogMessagePane.validationWaiting != state &&
           state != so.validationChecking) {
           displayText = this.validationSource.getValidationMessage((byte) 55);
           if (displayText == null) {
@@ -97,7 +97,7 @@ final class ValidationStatusWidget extends HotspotTextWidget {
         textPainter = (TextWidgetPainter) ((Object) this.painter);
         iconX = originX + this.x;
         iconCenterY = textPainter.getTextTop(-18033, originY, (Widget) (this)) + (textPainter.getTextLayout(-69, (Widget) (this)).getHeight((byte) 27) >> 1);
-        if (iconState == ad.validationWaiting) {
+        if (iconState == DialogMessagePane.validationWaiting) {
           waitingIcon = db.validationStatusIcons[0];
           waitingSpriteWidth = waitingIcon.canvasWidth << 1;
           waitingSpriteHeight = waitingIcon.canvasHeight << 1;

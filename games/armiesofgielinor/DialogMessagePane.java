@@ -1,22 +1,22 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ad extends DequeWidgetContainer implements WidgetActivationListener {
-    private ro field_L;
-    private BitmapFont field_J;
+final class DialogMessagePane extends DequeWidgetContainer implements WidgetActivationListener {
+    private ProgressMessageDialog dialog;
+    private BitmapFont font;
     static ValidationState validationWaiting;
-    private String field_G;
-    private int field_E;
-    private int[] field_F;
-    private InteractiveWidget[] field_H;
+    private String message;
+    private int actionCount;
+    private int[] actionIds;
+    private InteractiveWidget[] actionButtons;
     static String field_I;
 
-    final InteractiveWidget a(String param0, WidgetListener param1, byte param2) {
-        InteractiveWidget var4 = null;
-        RuntimeException var4_ref = null;
-        int var5 = 0;
-        int var6 = 0;
-        InteractiveWidget stackIn_1_0 = null;
+    final InteractiveWidget addListenerButton(String text, WidgetListener listener, byte obfuscationGuard) {
+        InteractiveWidget button = null;
+        RuntimeException failure = null;
+        int buttonY = 0;
+        int guardQuotient = 0;
+        InteractiveWidget buttonResult = null;
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
         String stackIn_5_2 = null;
@@ -24,52 +24,52 @@ final class ad extends DequeWidgetContainer implements WidgetActivationListener 
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var4 = new InteractiveWidget(param0, param1);
-          var4.painter = (WidgetPainter) ((Object) new nu());
-          var5 = this.height - 2;
-          var6 = -98 / ((24 - param2) / 44);
+          button = new InteractiveWidget(text, listener);
+          button.painter = (WidgetPainter) ((Object) new SpriteButtonPainter());
+          buttonY = this.height - 2;
+          guardQuotient = -98 / ((24 - obfuscationGuard) / 44);
           this.setBounds(0, this.width, 0, 8192, this.height + 34);
-          var4.setBounds(7, this.width - 14, var5, 8192, 30);
-          this.addChild((byte) 10, (Widget) (var4));
-          stackIn_1_0 = var4;
-          return stackIn_1_0;
+          button.setBounds(7, this.width - 14, buttonY, 8192, 30);
+          this.addChild((byte) 10, (Widget) (button));
+          buttonResult = button;
+          return buttonResult;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          var4_ref = decompiledCaughtException;
-          stackIn_4_0 = var4_ref;
+          failure = decompiledCaughtException;
+          stackIn_4_0 = failure;
           stackIn_4_1 = new StringBuilder().append("ad.D(");
-          if (param0 == null) {
+          if (text == null) {
             stackIn_5_2 = "null";
           } else {
             stackIn_5_2 = "{...}";
           }
           stackIn_7_1 = ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',');
-          if (param1 == null) {
+          if (listener == null) {
             stackIn_8_2 = "null";
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param2).append(')').toString());
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 
-    private final void b(int param0, int param1) {
-        int var6 = 0;
-        int var7 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
-        if (this.field_E >= param0) {
+    private final void growActions(int count, int obfuscationGuard) {
+        int actionIndex = 0;
+        int obfuscationControl = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        if (this.actionCount >= count) {
           return;
         }
-        int var4 = -57 % ((44 - param1) / 34);
-        InteractiveWidget[] var8 = new InteractiveWidget[param0];
-        InteractiveWidget[] var3 = var8;
-        int[] var5 = new int[param0];
-        for (var6 = 0; var6 < this.field_E; var6++) {
-          var8[var6] = this.field_H[var6];
-          var5[var6] = this.field_F[var6];
+        int guardRemainder = -57 % ((44 - obfuscationGuard) / 34);
+        InteractiveWidget[] newButtons = new InteractiveWidget[count];
+        InteractiveWidget[] buttonArrayAlias = newButtons;
+        int[] newActionIds = new int[count];
+        for (actionIndex = 0; actionIndex < this.actionCount; actionIndex++) {
+          newButtons[actionIndex] = this.actionButtons[actionIndex];
+          newActionIds[actionIndex] = this.actionIds[actionIndex];
         }
-        this.field_H = var3;
-        this.field_E = param0;
-        this.field_F = var5;
+        this.actionButtons = buttonArrayAlias;
+        this.actionCount = count;
+        this.actionIds = newActionIds;
     }
 
     public static void a(byte param0) {
@@ -85,45 +85,45 @@ final class ad extends DequeWidgetContainer implements WidgetActivationListener 
         int var7 = 0;
         int var8 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          for (var6_int = 0; this.field_E > var6_int; var6_int++) {
-            if (this.field_H[var6_int] == widget) {
-              var7 = this.field_F[var6_int];
+          for (var6_int = 0; this.actionCount > var6_int; var6_int++) {
+            if (this.actionButtons[var6_int] == widget) {
+              var7 = this.actionIds[var6_int];
               if (var7 != -1) {
-                gl.a(123, this.field_F[var6_int]);
+                gl.a(123, this.actionIds[var6_int]);
                 break;
               }
-              this.field_L.b(true);
+              this.dialog.closeDialog(true);
               break;
             }
           }
           if (obfuscationGuard != 11) {
-            this.field_F = (int[]) null;
+            this.actionIds = (int[]) null;
           }
         } catch (RuntimeException runtimeException) {
           throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "ad.N(" + pointerX + ',' + obfuscationGuard + ',' + button + ',' + pointerY + ',' + (widget != null ? "{...}" : "null") + ')');
         }
     }
 
-    ad(ro param0, BitmapFont param1, String param2) {
+    DialogMessagePane(ProgressMessageDialog dialog, BitmapFont font, String message) {
         super(0, 0, 288, 0, (WidgetPainter) null);
-        int var4_int = 0;
-        this.field_E = 0;
+        int messageHeight = 0;
+        this.actionCount = 0;
         try {
-          this.field_G = param2;
-          this.field_L = param0;
-          this.field_J = param1;
-          var4_int = this.field_G != null ? this.field_J.getParagraphHeight(this.field_G, 260, this.field_J.maxAscent) : 0;
-          this.setBounds(0, 288, 0, 8192, 22 + var4_int);
-        } catch (RuntimeException runtimeException) {
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "ad.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
+          this.message = message;
+          this.dialog = dialog;
+          this.font = font;
+          messageHeight = this.message != null ? this.font.getParagraphHeight(this.message, 260, this.font.maxAscent) : 0;
+          this.setBounds(0, 288, 0, 8192, 22 + messageHeight);
+        } catch (RuntimeException failure) {
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) failure), "ad.<init>(" + (dialog != null ? "{...}" : "null") + ',' + (font != null ? "{...}" : "null") + ',' + (message != null ? "{...}" : "null") + ')');
         }
     }
 
     final void drawWidget(int originX, int originY, byte obfuscationGuard, int renderLayer) {
         super.drawWidget(originX, originY, (byte) -123, renderLayer);
-        this.field_J.drawParagraph(this.field_G, 14 + originX + this.x, this.y + originY + 10, -28 + this.width, this.height, 16777215, -1, 0, 0, this.field_J.maxAscent);
+        this.font.drawParagraph(this.message, 14 + originX + this.x, this.y + originY + 10, -28 + this.width, this.height, 16777215, -1, 0, 0, this.font.maxAscent);
         if (obfuscationGuard > -82) {
-          ad.a((byte) 73);
+          DialogMessagePane.a((byte) 73);
         }
     }
 
@@ -187,15 +187,15 @@ final class ad extends DequeWidgetContainer implements WidgetActivationListener 
         }
     }
 
-    final void a(String param0, int param1, int param2) {
-        int var4_int = 0;
+    final void addActionButton(String text, int actionId, int increment) {
+        int actionIndex = 0;
         try {
-          var4_int = this.field_E;
-          this.b(var4_int + param2, -104);
-          this.field_H[var4_int] = this.a(param0, (WidgetListener) (this), (byte) 104);
-          this.field_F[var4_int] = param1;
-        } catch (RuntimeException runtimeException) {
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "ad.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          actionIndex = this.actionCount;
+          this.growActions(actionIndex + increment, -104);
+          this.actionButtons[actionIndex] = this.addListenerButton(text, (WidgetListener) (this), (byte) 104);
+          this.actionIds[actionIndex] = actionId;
+        } catch (RuntimeException failure) {
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) failure), "ad.B(" + (text != null ? "{...}" : "null") + ',' + actionId + ',' + increment + ')');
         }
     }
 

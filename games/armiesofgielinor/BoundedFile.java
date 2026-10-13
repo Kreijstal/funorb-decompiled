@@ -48,17 +48,17 @@ final class BoundedFile {
         }
     }
 
-    final static AccountNameCheckResult a(int param0, String[] param1) {
-        AccountNameCheckResult var2 = null;
+    final static AccountRequestResult a(int param0, String[] param1) {
+        AccountRequestResult var2 = null;
         RuntimeException var2_ref = null;
-        AccountNameCheckResult stackIn_3_0 = null;
+        AccountRequestResult stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var2 = new AccountNameCheckResult(false);
-          var2.field_c = param1;
+          var2 = new AccountRequestResult(false);
+          var2.suggestedNames = param1;
           if (param0 != 2) {
             BoundedFile.a(33, true, false, true);
           }

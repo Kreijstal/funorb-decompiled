@@ -1,13 +1,13 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class td implements WidgetPainter {
+final class LinkButtonPainter implements WidgetPainter {
     static ClientUiComponent field_g;
-    private BitmapFont field_b;
-    private int field_e;
+    private BitmapFont font;
+    private int horizontalAlignment;
     static String field_h;
     static PcmSample[][] field_d;
-    private int field_c;
+    private int verticalAlignment;
     static BattleGraphicsAssets field_f;
     static String field_a;
 
@@ -51,27 +51,27 @@ final class td implements WidgetPainter {
             stackIn_7_0 = 3249872;
           }
           var6_int = stackIn_7_0;
-          this.field_b.drawParagraph("<u=" + Integer.toString(var6_int, 16) + ">" + widget.text + "</u>", widget.x + originX, widget.y + originY, widget.width, widget.height, var6_int, -1, this.field_e, this.field_c, this.field_b.maxAscent + this.field_b.maxDescent);
+          this.font.drawParagraph("<u=" + Integer.toString(var6_int, 16) + ">" + widget.text + "</u>", widget.x + originX, widget.y + originY, widget.width, widget.height, var6_int, -1, this.horizontalAlignment, this.verticalAlignment, this.font.maxAscent + this.font.maxDescent);
           if (widget.isFocused(false)) {
-            var7 = this.field_b.textWidth(widget.text);
-            var8 = this.field_b.maxAscent + this.field_b.maxDescent;
+            var7 = this.font.textWidth(widget.text);
+            var8 = this.font.maxAscent + this.font.maxDescent;
             var9 = originX + widget.x;
-            if (this.field_e == 2) {
+            if (this.horizontalAlignment == 2) {
               var9 = var9 + (-var7 + widget.width);
             } else {
-              if (this.field_e == 1) {
+              if (this.horizontalAlignment == 1) {
                 var9 = var9 + (widget.width - var7 >> 1);
               }
             }
             var10 = originY + widget.y;
-            if (this.field_c == 2) {
+            if (this.verticalAlignment == 2) {
               var10 = var10 + (widget.height - var8);
             } else {
-              if (this.field_c == 1) {
+              if (this.verticalAlignment == 1) {
                 var10 = var10 + (widget.height - var8 >> 1);
               }
             }
-            na.c(4 + var7, -2 + var9, -70, var8, 2 + var10);
+            AccountNameSelectionForm.c(4 + var7, -2 + var9, -70, var8, 2 + var10);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -116,23 +116,23 @@ final class td implements WidgetPainter {
         String var4 = (String) null;
         rn.a(3, (String) null, param0, param1);
         if (param2 <= 4) {
-          td.a(46, (byte) -104);
+          LinkButtonPainter.a(46, (byte) -104);
         }
     }
 
-    public td() {
-        this.field_b = ArmiesOfGielinor.field_J;
-        this.field_e = 1;
-        this.field_c = 1;
+    public LinkButtonPainter() {
+        this.font = ArmiesOfGielinor.field_J;
+        this.horizontalAlignment = 1;
+        this.verticalAlignment = 1;
     }
 
-    td(BitmapFont param0, int param1, int param2) {
+    LinkButtonPainter(BitmapFont font, int horizontalAlignment, int verticalAlignment) {
         try {
-          this.field_b = param0;
-          this.field_c = param2;
-          this.field_e = param1;
+          this.font = font;
+          this.verticalAlignment = verticalAlignment;
+          this.horizontalAlignment = horizontalAlignment;
         } catch (RuntimeException runtimeException) {
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "td.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "td.<init>(" + (font != null ? "{...}" : "null") + ',' + horizontalAlignment + ',' + verticalAlignment + ')');
         }
     }
 

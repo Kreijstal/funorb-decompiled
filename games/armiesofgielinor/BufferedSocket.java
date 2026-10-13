@@ -290,7 +290,7 @@ final class BufferedSocket implements Runnable {
           }
           if (this.writerTask != null) {
             while (this.writerTask.status == 0) {
-              nu.a(1L, 0);
+              SpriteButtonPainter.a(1L, 0);
             }
             if (this.writerTask.status == 1) {
               try {

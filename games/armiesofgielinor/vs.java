@@ -18,9 +18,9 @@ final class vs {
           return;
         }
         try {
-          qd.activeQuickChatMenu = menu;
+          RegistrationAgreementPane.activeQuickChatMenu = menu;
           OwnerChangeEvent.quickChatMenuHost.children.clear(75);
-          OwnerChangeEvent.quickChatMenuHost.addChild(qd.activeQuickChatMenu, 105);
+          OwnerChangeEvent.quickChatMenuHost.addChild(RegistrationAgreementPane.activeQuickChatMenu, 105);
           if (obfuscationGuard != 256) {
             field_j = true;
           }

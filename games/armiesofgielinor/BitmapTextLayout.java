@@ -119,7 +119,7 @@ final class BitmapTextLayout extends TextLayout {
               } else {
                 spacingStep = 0;
               }
-              kd.computeCaretPositions(spacingStep, lineText, line, font, (byte) 84);
+              AccountRegistrationForm.computeCaretPositions(spacingStep, lineText, line, font, (byte) 84);
             }
             baselineY = baselineY + lineHeight;
             this.lines[lineIndex] = line;
@@ -169,7 +169,7 @@ final class BitmapTextLayout extends TextLayout {
           lineAlias = line;
           lineAlias.caretXs[0] = right - font.textWidth(text);
           lineAlias.caretXs[text.length()] = right;
-          kd.computeCaretPositions(0, text, lineAlias, font, (byte) 97);
+          AccountRegistrationForm.computeCaretPositions(0, text, lineAlias, font, (byte) 97);
         } catch (RuntimeException failure) {
           throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) failure), "ak.J(" + right + ',' + (text != null ? "{...}" : "null") + ',' + (font != null ? "{...}" : "null") + ',' + obfuscationGuard + ',' + baselineY + ')');
         }
@@ -250,7 +250,7 @@ final class BitmapTextLayout extends TextLayout {
           textWidth = font.textWidth(text);
           line.caretXs[0] = -(textWidth >> 1) + centerX;
           line.caretXs[text.length()] = centerX + (textWidth >> 1);
-          kd.computeCaretPositions(0, text, line, font, (byte) 103);
+          AccountRegistrationForm.computeCaretPositions(0, text, line, font, (byte) 103);
           if (obfuscationGuard > 6) {
             return;
           }
@@ -344,7 +344,7 @@ final class BitmapTextLayout extends TextLayout {
           lineAlias = line;
           line.caretXs[0] = left;
           lineAlias.caretXs[text.length()] = left + font.textWidth(text);
-          kd.computeCaretPositions(0, text, lineAlias, font, (byte) 83);
+          AccountRegistrationForm.computeCaretPositions(0, text, lineAlias, font, (byte) 83);
         } catch (RuntimeException failure) {
           throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) failure), "ak.R(" + (text != null ? "{...}" : "null") + ',' + horizontalAlignment + ',' + (font != null ? "{...}" : "null") + ',' + baselineY + ',' + left + ')');
         }
@@ -378,7 +378,7 @@ final class BitmapTextLayout extends TextLayout {
         VineGrowthAction.field_x.setBounds(40, -20500, ov.field_i.width - var3, -40 + ov.field_i.height, var3);
     }
 
-    final static void a(int param0, int param1, int param2, int param3) {
+    final static void sendBirthDateForChat(int day, int monthIndex, int year, int obfuscationGuard) {
         int fieldTemp$0 = 0;
         int var4 = 0;
         int var4Lifetime1;
@@ -386,31 +386,31 @@ final class BitmapTextLayout extends TextLayout {
         vd.field_b.writeByte(1, 12);
         vd.field_b.writeInt((byte) -128, CampaignMenuButton.connectionRandom.nextInt());
         vd.field_b.writeInt((byte) -75, CampaignMenuButton.connectionRandom.nextInt());
-        if (param3 == 30) {
-          vd.field_b.writeByte(1, param0);
-          vd.field_b.writeByte(1, param1);
-          vd.field_b.writeShort(true, param2);
-          vd.field_b.a(-5247, cs.field_cb, mu.field_c);
+        if (obfuscationGuard == 30) {
+          vd.field_b.writeByte(1, day);
+          vd.field_b.writeByte(1, monthIndex);
+          vd.field_b.writeShort(true, year);
+          vd.field_b.encryptRsa(-5247, cs.field_cb, mu.field_c);
           EmailValidator.outgoingPacket.writeCipheredOpcode(32161, 18);
           fieldTemp$0 = EmailValidator.outgoingPacket.position + 1;
           EmailValidator.outgoingPacket.position = EmailValidator.outgoingPacket.position + 1;
           var4 = fieldTemp$0;
-          EmailValidator.outgoingPacket.writeBytes(vd.field_b.payload, 0, vd.field_b.position, param3 + 69);
-          EmailValidator.outgoingPacket.writeByteLengthPrefix(-var4 + EmailValidator.outgoingPacket.position, param3 + 5900);
+          EmailValidator.outgoingPacket.writeBytes(vd.field_b.payload, 0, vd.field_b.position, obfuscationGuard + 69);
+          EmailValidator.outgoingPacket.writeByteLengthPrefix(-var4 + EmailValidator.outgoingPacket.position, obfuscationGuard + 5900);
           return;
         }
         ResourceArchive var5 = (ResourceArchive) null;
         BitmapTextLayout.a(81, (ResourceArchive) null, -36, 38);
-        vd.field_b.writeByte(1, param0);
-        vd.field_b.writeByte(1, param1);
-        vd.field_b.writeShort(true, param2);
-        vd.field_b.a(-5247, cs.field_cb, mu.field_c);
+        vd.field_b.writeByte(1, day);
+        vd.field_b.writeByte(1, monthIndex);
+        vd.field_b.writeShort(true, year);
+        vd.field_b.encryptRsa(-5247, cs.field_cb, mu.field_c);
         EmailValidator.outgoingPacket.writeCipheredOpcode(32161, 18);
         int fieldTemp$1 = EmailValidator.outgoingPacket.position + 1;
         EmailValidator.outgoingPacket.position = EmailValidator.outgoingPacket.position + 1;
         var4Lifetime1 = fieldTemp$1;
-        EmailValidator.outgoingPacket.writeBytes(vd.field_b.payload, 0, vd.field_b.position, param3 + 69);
-        EmailValidator.outgoingPacket.writeByteLengthPrefix(-var4Lifetime1 + EmailValidator.outgoingPacket.position, param3 + 5900);
+        EmailValidator.outgoingPacket.writeBytes(vd.field_b.payload, 0, vd.field_b.position, obfuscationGuard + 69);
+        EmailValidator.outgoingPacket.writeByteLengthPrefix(-var4Lifetime1 + EmailValidator.outgoingPacket.position, obfuscationGuard + 5900);
     }
 
     final static RgbSprite[] b(int param0, int param1) {

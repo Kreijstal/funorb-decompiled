@@ -7,7 +7,7 @@ final class BestScoreStrategy extends AiPlanningStrategy {
     static boolean field_l;
     static int[][][] unitAnimationVariants;
     static String field_h;
-    static wr field_i;
+    static BirthDateChatEnableForm field_i;
 
     final static boolean a(boolean param0) {
         long var1;

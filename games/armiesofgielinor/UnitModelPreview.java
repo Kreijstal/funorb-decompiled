@@ -154,11 +154,11 @@ final class UnitModelPreview {
 
     private final void setBattleScreenPosition(int screenY, int screenXOrTileIndex, byte obfuscationGuard) {
         if (screenY == -1) {
-          ro.modelProjectionCamera.projectionTileIndex = screenXOrTileIndex;
-          ro.modelProjectionCamera.selectProjectionTile((byte) 36);
-          ro.modelProjectionCamera.projectModelAnchor(obfuscationGuard ^ -9470376);
-          screenY = ro.modelProjectionCamera.screenPosition[1];
-          screenXOrTileIndex = ro.modelProjectionCamera.screenPosition[0];
+          ProgressMessageDialog.modelProjectionCamera.projectionTileIndex = screenXOrTileIndex;
+          ProgressMessageDialog.modelProjectionCamera.selectProjectionTile((byte) 36);
+          ProgressMessageDialog.modelProjectionCamera.projectModelAnchor(obfuscationGuard ^ -9470376);
+          screenY = ProgressMessageDialog.modelProjectionCamera.screenPosition[1];
+          screenXOrTileIndex = ProgressMessageDialog.modelProjectionCamera.screenPosition[0];
           screenY += 16;
         }
         screenXOrTileIndex += 32;

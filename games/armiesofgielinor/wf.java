@@ -374,7 +374,7 @@ abstract class wf extends iv {
         if (param0 != 4) {
           this.a((byte) 113, true);
         }
-        if (!AccountNameCheckResult.a((byte) 60)) {
+        if (!AccountRequestResult.a((byte) 60)) {
           if (StrongCacheEntry.field_E >= 10) {
             if (!BitmapTextWidgetPainter.b(true)) {
               StateChangeEvent.e((byte) -84);
@@ -626,7 +626,7 @@ abstract class wf extends iv {
         }
         if (StrongCacheEntry.field_E == 1) {
           if (ConsoleExpression.field_m != 0) {
-            IconTextComponent.field_Nb = nu.a(on.field_n, true);
+            IconTextComponent.field_Nb = SpriteButtonPainter.a(on.field_n, true);
           }
           ps.field_u = DamageEvent.a(1, ChatMessage.field_c, (byte) 119, false, true);
           CombatPresentation.field_M = DamageEvent.a(1, ModalDialog.field_E, (byte) 122, false, true);
@@ -675,7 +675,7 @@ abstract class wf extends iv {
             ContentTransitionDialog.field_eb = MusicPatchEnvelope.getEffectsMixer(18757);
             ko.field_e = nb.c((byte) 111);
           }
-          qd.a(h.field_g, (byte) 76, ContentTransitionDialog.field_eb, ko.field_e);
+          RegistrationAgreementPane.a(h.field_g, (byte) 76, ContentTransitionDialog.field_eb, ko.field_e);
           ps.field_u = null;
           CombatPresentation.field_M = null;
           h.field_g = null;
@@ -685,7 +685,7 @@ abstract class wf extends iv {
         }
         if (StrongCacheEntry.field_E == 10) {
           if (0 != ConsoleExpression.field_m) {
-            RegionAnchor.field_o = nu.a(BitmapTextWidgetPainter.field_p, true);
+            RegionAnchor.field_o = SpriteButtonPainter.a(BitmapTextWidgetPainter.field_p, true);
           }
           StrongCacheEntry.field_E = 11;
         }

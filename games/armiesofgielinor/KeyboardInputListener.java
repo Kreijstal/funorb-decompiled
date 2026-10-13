@@ -97,11 +97,11 @@ final class KeyboardInputListener implements java.awt.event.KeyListener, java.aw
             characterCode = event.getKeyChar();
             if (characterCode != 0 && characterCode != 65535 &&
               AiActionCandidate.a((char) characterCode, 16150)) {
-              nextEventIndex = 127 & cr.keyEventWriteIndex + 1;
+              nextEventIndex = 127 & ProgressDialog.keyEventWriteIndex + 1;
               if (nextEventIndex != SummonAction.keyEventReadIndex) {
-                gt.keyEventCodes[cr.keyEventWriteIndex] = -1;
-                SpellCastAction.keyEventCharacters[cr.keyEventWriteIndex] = (char)characterCode;
-                cr.keyEventWriteIndex = nextEventIndex;
+                gt.keyEventCodes[ProgressDialog.keyEventWriteIndex] = -1;
+                SpellCastAction.keyEventCharacters[ProgressDialog.keyEventWriteIndex] = (char)characterCode;
+                ProgressDialog.keyEventWriteIndex = nextEventIndex;
               }
             }
           }
@@ -142,11 +142,11 @@ final class KeyboardInputListener implements java.awt.event.KeyListener, java.aw
               }
             }
             if (mappedKeyCode >= 0) {
-              nextEventIndex = 127 & cr.keyEventWriteIndex + 1;
+              nextEventIndex = 127 & ProgressDialog.keyEventWriteIndex + 1;
               if (nextEventIndex != SummonAction.keyEventReadIndex) {
-                gt.keyEventCodes[cr.keyEventWriteIndex] = mappedKeyCode;
-                SpellCastAction.keyEventCharacters[cr.keyEventWriteIndex] = (char)0;
-                cr.keyEventWriteIndex = nextEventIndex;
+                gt.keyEventCodes[ProgressDialog.keyEventWriteIndex] = mappedKeyCode;
+                SpellCastAction.keyEventCharacters[ProgressDialog.keyEventWriteIndex] = (char)0;
+                ProgressDialog.keyEventWriteIndex = nextEventIndex;
               }
             }
             modifiers = event.getModifiers();

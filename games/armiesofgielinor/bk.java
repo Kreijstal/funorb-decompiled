@@ -219,7 +219,7 @@ final class bk {
             !NodeIterator.field_a) {
             return;
           }
-          BestScoreStrategy.field_i = new wr(0, 0, 0, 0);
+          BestScoreStrategy.field_i = new BirthDateChatEnableForm(0, 0, 0, 0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

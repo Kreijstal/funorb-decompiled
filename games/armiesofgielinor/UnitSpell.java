@@ -487,7 +487,7 @@ final class UnitSpell extends Spell {
             UnitSpell.a(-25, (ok) null);
           }
           GameEvent.field_r.addLast((byte) -119, (IntrusiveNode) (param2));
-          wr.a((byte) -57, param2, param0);
+          BirthDateChatEnableForm.a((byte) -57, param2, param0);
         } catch (RuntimeException runtimeException) {
           throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "wa.U(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }

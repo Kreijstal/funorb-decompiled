@@ -247,7 +247,7 @@ final class ClientContextMenu {
             return;
           }
           if (var11.invitationSent) {
-            this.menu.addTextAction(1, EmailCheckResult.a(4800, oe.field_zb, new String[]{var5}), (byte) -124);
+            this.menu.addTextAction(1, EmailCheckResult.a(4800, AccountRegistrationDialog.field_zb, new String[]{var5}), (byte) -124);
           } else {
             if (!includeJoinRequests) {
               this.menu.addTextAction(0, EmailCheckResult.a(4800, ValidationStatusWidget.field_W, new String[]{var5}), (byte) -118);
@@ -296,7 +296,7 @@ final class ClientContextMenu {
           return;
         }
         if (var10.invitationSent) {
-          this.menu.addTextAction(1, EmailCheckResult.a(4800, oe.field_zb, new String[]{var5}), (byte) -124);
+          this.menu.addTextAction(1, EmailCheckResult.a(4800, AccountRegistrationDialog.field_zb, new String[]{var5}), (byte) -124);
         } else {
           if (!includeJoinRequests) {
             this.menu.addTextAction(0, EmailCheckResult.a(4800, ValidationStatusWidget.field_W, new String[]{var5}), (byte) -118);
@@ -550,7 +550,7 @@ final class ClientContextMenu {
                   this.menu.addTextAction(19, EmailCheckResult.a(4800, EmailConfirmationValidator.field_m, new String[]{var7}), (byte) -115);
                 }
               }
-              this.menu.addTextAction(5, EmailCheckResult.a(4800, na.field_K, new String[]{var7}), (byte) -111);
+              this.menu.addTextAction(5, EmailCheckResult.a(4800, AccountNameSelectionForm.field_K, new String[]{var7}), (byte) -111);
             }
             if (var6 != 0) {
               this.menu.addTextAction(7, EmailCheckResult.a(4800, ToggleTurnSkipConsoleCommand.field_E, new String[]{var7}), (byte) -102);

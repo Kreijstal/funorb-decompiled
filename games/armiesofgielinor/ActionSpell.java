@@ -107,10 +107,10 @@ final class ActionSpell extends Spell {
               mutationVariant = mutationSelector;
               if (0 == mutationVariant) {
                 cg.campaignPacketWord2 = cg.campaignPacketWord2 + 1;
-                kw.campaignPacketWord0 = kw.campaignPacketWord0 - wr.campaignPacketWord3;
+                kw.campaignPacketWord0 = kw.campaignPacketWord0 - BirthDateChatEnableForm.campaignPacketWord3;
               } else {
                 if (1 == mutationVariant) {
-                  wr.campaignPacketWord3 = wr.campaignPacketWord3 + 1;
+                  BirthDateChatEnableForm.campaignPacketWord3 = BirthDateChatEnableForm.campaignPacketWord3 + 1;
                   ii.campaignPacketWord1 = ii.campaignPacketWord1 + cg.campaignPacketWord2;
                 } else {
                   if (mutationVariant == 2) {
@@ -125,18 +125,18 @@ final class ActionSpell extends Spell {
                               throw new IllegalStateException("");
                             }
                             ii.campaignPacketWord1 = ii.campaignPacketWord1 - cg.campaignPacketWord2;
-                            wr.campaignPacketWord3 = wr.campaignPacketWord3 - 1;
+                            BirthDateChatEnableForm.campaignPacketWord3 = BirthDateChatEnableForm.campaignPacketWord3 - 1;
                           } else {
-                            kw.campaignPacketWord0 = kw.campaignPacketWord0 + wr.campaignPacketWord3;
+                            kw.campaignPacketWord0 = kw.campaignPacketWord0 + BirthDateChatEnableForm.campaignPacketWord3;
                             cg.campaignPacketWord2 = cg.campaignPacketWord2 - 1;
                           }
                         } else {
                           cg.campaignPacketWord2 = cg.campaignPacketWord2 + 1;
-                          kw.campaignPacketWord0 = kw.campaignPacketWord0 - wr.campaignPacketWord3;
+                          kw.campaignPacketWord0 = kw.campaignPacketWord0 - BirthDateChatEnableForm.campaignPacketWord3;
                         }
                       } else {
                         ii.campaignPacketWord1 = ii.campaignPacketWord1 + cg.campaignPacketWord2;
-                        wr.campaignPacketWord3 = wr.campaignPacketWord3 + 1;
+                        BirthDateChatEnableForm.campaignPacketWord3 = BirthDateChatEnableForm.campaignPacketWord3 + 1;
                       }
                     } else {
                       kw.campaignPacketWord0 = kw.campaignPacketWord0 + BattleTutorial.pointerPressX;
@@ -195,7 +195,7 @@ final class ActionSpell extends Spell {
         so.field_b = null;
         int[] var4 = (int[]) null;
         SoftwareRaster.setTarget((int[]) null, 0, 0);
-        so.field_b = rj.a(param0, param2, 1423111778, (java.awt.Component) ((Object) IndexedSpriteBase.field_b));
+        so.field_b = StripedProgressWidget.a(param0, param2, 1423111778, (java.awt.Component) ((Object) IndexedSpriteBase.field_b));
         so.field_b.a(param1 - 17900);
         ContextualRuntimeException.a((byte) -85, param0 / 2, param2 / 2);
         if (param1 == 23505) {

@@ -8,7 +8,7 @@ final class ConsoleParseException extends Exception {
     static String field_a;
 
     final static void b(int param0) {
-        ro.field_lb = null;
+        ProgressMessageDialog.field_lb = null;
         CipherPacketBuffer.currentBattlefield = null;
         ConsoleExpression.field_p = null;
         vs.field_e = null;

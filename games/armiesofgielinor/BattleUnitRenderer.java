@@ -201,7 +201,7 @@ final class BattleUnitRenderer {
           unit.modelVisible = this.isTileVisible((byte) -81, tileIndex);
           if (obfuscationGuard <= 42) {
             var5 = (String) null;
-            BattleUnitRenderer.a(false, (kd) null, (String) null, (String) null, -91, (byte) -105, (String) null);
+            BattleUnitRenderer.a(false, (AccountRegistrationForm) null, (String) null, (String) null, -91, (byte) -105, (String) null);
           }
           if (!unit.modelVisible) {
             if (!unit.presentationOwnsModel) {
@@ -225,10 +225,10 @@ final class BattleUnitRenderer {
         }
     }
 
-    final static boolean a(boolean param0, kd param1, String param2, String param3, int param4, byte param5, String param6) {
+    final static boolean a(boolean param0, AccountRegistrationForm param1, String param2, String param3, int param4, byte param5, String param6) {
         RuntimeException var7 = null;
         int var8 = 0;
-        oe var9 = null;
+        AccountRegistrationDialog var9 = null;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
         String stackIn_14_2 = null;
@@ -243,7 +243,7 @@ final class BattleUnitRenderer {
           if (nb.nameCheckResultConsumed != ChannelBaseVolumeConsoleCommand.field_L) {
             return false;
           }
-          var9 = new oe(KingBlackDragonEvent.field_C, param1);
+          var9 = new AccountRegistrationDialog(KingBlackDragonEvent.field_C, param1);
           KingBlackDragonEvent.field_C.showDialog(var9, 0);
           if (!AnimationSkeleton.a(-8327)) {
             cd.field_e = param3;
@@ -254,7 +254,7 @@ final class BattleUnitRenderer {
             RadialSummonMenu.field_e = param0;
             qk.field_b = param2;
           } else {
-            var9.k((byte) -119);
+            var9.showUnavailable((byte) -119);
           }
           var8 = 114 / ((21 - param5) / 52);
           return true;

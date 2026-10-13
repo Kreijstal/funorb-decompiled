@@ -37,7 +37,7 @@ final class MovementPresentation implements EventPresentation {
 
     private final void h(int param0) {
         if (this.presenter.event.eventKind != 7) {
-          this.field_f = nu.field_z[ek.field_d];
+          this.field_f = SpriteButtonPainter.field_z[ek.field_d];
         } else {
           this.field_f = 50;
         }

@@ -121,7 +121,7 @@ final class FixInvisibleUnitsConsoleCommand extends ConsoleCommand {
           bt.field_f = CipherPacketBuffer.currentBattlefield.mapTheme;
           nk.a((byte) 111);
           Unit.field_L = false;
-          ro.field_lb = null;
+          ProgressMessageDialog.field_lb = null;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

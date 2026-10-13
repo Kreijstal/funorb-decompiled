@@ -29,17 +29,17 @@ final class dc extends IntrusiveNode {
         }
     }
 
-    final static AccountNameCheckResult a(boolean param0, boolean param1) {
-        AccountNameCheckResult var2 = null;
-        AccountNameCheckResult var2Lifetime1;
+    final static AccountRequestResult a(boolean param0, boolean param1) {
+        AccountRequestResult var2 = null;
+        AccountRequestResult var2Lifetime1;
         if (!param1) {
-          var2 = new AccountNameCheckResult(true);
-          var2.field_h = param0 ? true : false;
+          var2 = new AccountRequestResult(true);
+          var2.requiresAgreement = param0 ? true : false;
           return var2;
         }
         dc.a(false, false);
-        var2Lifetime1 = new AccountNameCheckResult(true);
-        var2Lifetime1.field_h = param0 ? true : false;
+        var2Lifetime1 = new AccountRequestResult(true);
+        var2Lifetime1.requiresAgreement = param0 ? true : false;
         return var2Lifetime1;
     }
 

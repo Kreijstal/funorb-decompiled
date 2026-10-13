@@ -172,7 +172,7 @@ final class fk implements WidgetPainter {
           var7 = originY + widget.y;
           StateChangeEvent.a(widget.width, var6_int, widget.height, -127, var7);
           if (widget.isFocused(false)) {
-            na.c(-4 + widget.width, 2 + var6_int, -67, widget.height - 4, 2 + var7);
+            AccountNameSelectionForm.c(-4 + widget.width, 2 + var6_int, -67, widget.height - 4, 2 + var7);
           }
           SoftwareRaster.setClip(var6_int, var7, var6_int + widget.width - 2, widget.height + var7);
           var8 = this.field_c.optionList.getSelectedOption(-6508);

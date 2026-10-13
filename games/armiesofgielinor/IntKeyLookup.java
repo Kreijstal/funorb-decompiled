@@ -50,13 +50,13 @@ final class IntKeyLookup {
         int var3 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         IndexedSprite[] var1 = new IndexedSprite[iw.decodedSpriteCount];
         for (var2 = 0; var2 < iw.decodedSpriteCount; var2++) {
-          var1[var2] = new IndexedSprite(lg.decodedSpriteCanvasWidth, wr.decodedSpriteCanvasHeight, j.decodedSpriteOffsetXs[var2], CampaignMenuButton.decodedSpriteOffsetYs[var2], ClippedWidgetContainer.decodedSpriteWidths[var2], c.decodedSpriteHeights[var2], AnimationPlayer.decodedSpriteIndices[var2], MovementPresentation.decodedSpritePalette);
+          var1[var2] = new IndexedSprite(lg.decodedSpriteCanvasWidth, BirthDateChatEnableForm.decodedSpriteCanvasHeight, j.decodedSpriteOffsetXs[var2], CampaignMenuButton.decodedSpriteOffsetYs[var2], ClippedWidgetContainer.decodedSpriteWidths[var2], c.decodedSpriteHeights[var2], AnimationPlayer.decodedSpriteIndices[var2], MovementPresentation.decodedSpritePalette);
         }
         if (obfuscationGuard < 102) {
           BattlefieldTheme[] var4 = (BattlefieldTheme[]) null;
           IntKeyLookup.a((BattlefieldTheme[]) null, (byte) -34);
         }
-        rj.releaseSpriteDecodeBuffers((byte) 103);
+        StripedProgressWidget.releaseSpriteDecodeBuffers((byte) 103);
         return var1;
     }
 

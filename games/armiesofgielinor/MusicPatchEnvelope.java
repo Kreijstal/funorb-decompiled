@@ -117,13 +117,13 @@ final class MusicPatchEnvelope {
         vg var2Lifetime1;
         if (param0 == 14663) {
           var2 = new vg();
-          oe.field_Bb.addLast((byte) -119, (IntrusiveNode) (var2));
+          AccountRegistrationDialog.field_Bb.addLast((byte) -119, (IntrusiveNode) (var2));
           tq.a(param1, 0);
           return var2;
         }
         MusicPatchEnvelope.a((byte) -111, -125L);
         var2Lifetime1 = new vg();
-        oe.field_Bb.addLast((byte) -119, (IntrusiveNode) (var2Lifetime1));
+        AccountRegistrationDialog.field_Bb.addLast((byte) -119, (IntrusiveNode) (var2Lifetime1));
         tq.a(param1, 0);
         return var2Lifetime1;
     }

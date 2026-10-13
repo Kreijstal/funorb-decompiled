@@ -97,7 +97,7 @@ final class GiveTileConsoleCommand extends ConsoleCommand {
         int stackIn_12_9;
         boolean stackIn_14_10 = false;
         int var3;
-        ad.advanceLobbyNotifications(-117);
+        DialogMessagePane.advanceLobbyNotifications(-117);
         if (ToggleWidget.currentRoom != null) {
           stackIn_6_0 = (r.c(ToggleWidget.currentRoom.playerCount, 2)) ? 1 : 0;
         } else {

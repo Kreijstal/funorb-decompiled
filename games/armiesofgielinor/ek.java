@@ -11,8 +11,8 @@ final class ek {
 
     final static void a(byte param0) {
         if (qc.field_a != null) {
-          qc.field_a.b(true);
-          DequeWidgetContainer.field_C = new na();
+          qc.field_a.closeDialog(true);
+          DequeWidgetContainer.field_C = new AccountNameSelectionForm();
           if (param0 > -22) {
             ek.a(-112);
             lt.field_g.replaceContent(DequeWidgetContainer.field_C, (byte) -88);
@@ -21,7 +21,7 @@ final class ek {
           lt.field_g.replaceContent(DequeWidgetContainer.field_C, (byte) -88);
           return;
         }
-        DequeWidgetContainer.field_C = new na();
+        DequeWidgetContainer.field_C = new AccountNameSelectionForm();
         if (param0 <= -22) {
           lt.field_g.replaceContent(DequeWidgetContainer.field_C, (byte) -88);
           return;

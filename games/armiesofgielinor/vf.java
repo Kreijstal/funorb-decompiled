@@ -192,9 +192,9 @@ abstract class vf {
             }
             if (pu.field_k[0][2].hovered) {
               if (!ToggleWidget.isCurrentRoomOwner(false)) {
-                ad.field_I = EmailCheckResult.a(4800, op.field_a, new String[]{ToggleWidget.currentRoom.ownerName});
+                DialogMessagePane.field_I = EmailCheckResult.a(4800, op.field_a, new String[]{ToggleWidget.currentRoom.ownerName});
               } else {
-                ad.field_I = ActionSpell.field_f;
+                DialogMessagePane.field_I = ActionSpell.field_f;
               }
             }
             decompiledFrameRemainder1 = !(lm.field_e.length < 2);
@@ -216,7 +216,7 @@ abstract class vf {
           }
           if ((decompiledFrameRemainder1) &&
             (decompiledFrameRemainder0)) {
-            CoatOfArms.field_d[var7 / 8] = (byte)oe.bitwiseOr((int) CoatOfArms.field_d[var7 / 8], 1 << var7 % 8);
+            CoatOfArms.field_d[var7 / 8] = (byte)AccountRegistrationDialog.bitwiseOr((int) CoatOfArms.field_d[var7 / 8], 1 << var7 % 8);
           }
           if (decompiledFrameRemainder1) {
             stackIn_64_0 = (param1) ? -1 : 0;
@@ -327,7 +327,7 @@ abstract class vf {
                 }
                 var8 = stackIn_153_0;
                 if (var8 != null) {
-                  ad.field_I = var8;
+                  DialogMessagePane.field_I = var8;
                 }
               }
               stackIn_158_0 = var29;
@@ -596,7 +596,7 @@ abstract class vf {
                   }
                 }
                 if (var20 != null) {
-                  ad.field_I = (String) (var20);
+                  DialogMessagePane.field_I = (String) (var20);
                 }
               }
               if (param1) {
@@ -830,8 +830,8 @@ abstract class vf {
         if (rs.field_o == null) {
           return -1;
         }
-        if (param0 >= VertexNormal.field_c && VertexNormal.field_c + rs.field_o.pixelWidth > param0 && param2 >= ro.field_pb &&
-          !(param2 >= ro.field_pb + rs.field_o.pixelHeight)) {
+        if (param0 >= VertexNormal.field_c && VertexNormal.field_c + rs.field_o.pixelWidth > param0 && param2 >= ProgressMessageDialog.field_pb &&
+          !(param2 >= ProgressMessageDialog.field_pb + rs.field_o.pixelHeight)) {
           return 0;
         }
         if (param0 >= BattlefieldTheme.field_h && BattlefieldTheme.field_h + rs.field_o.pixelWidth > param0 && ug.field_a <= param2 &&

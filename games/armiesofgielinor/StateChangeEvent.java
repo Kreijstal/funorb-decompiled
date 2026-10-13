@@ -230,10 +230,10 @@ final class StateChangeEvent extends GameEvent {
         int var2 = 0;
         int var3 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          AccountNameCheckResult.field_b = rs.field_n.textWidth(DisplacedUnitMarker.field_t[17]) + 20;
+          AccountRequestResult.field_b = rs.field_n.textWidth(DisplacedUnitMarker.field_t[17]) + 20;
           var1_int = rs.field_n.textWidth(DisplacedUnitMarker.field_t[18]);
-          if (AccountNameCheckResult.field_b < var1_int) {
-            AccountNameCheckResult.field_b = var1_int;
+          if (AccountRequestResult.field_b < var1_int) {
+            AccountRequestResult.field_b = var1_int;
           }
           if (MoveEvent.instructionsPanel == null) {
             MoveEvent.instructionsPanel = new InstructionsPanel();
@@ -466,7 +466,7 @@ final class StateChangeEvent extends GameEvent {
     }
 
     final static void a(ResourceArchive param0, ResourceArchive param1, ResourceArchive param2, int param3, boolean param4) {
-        se.emailCheckResult = cr.a("", 4210752);
+        se.emailCheckResult = ProgressDialog.createEmailCheckResult("", 4210752);
         se.emailCheckResult.setResult(false, true);
         if (param3 != 0) {
           return;

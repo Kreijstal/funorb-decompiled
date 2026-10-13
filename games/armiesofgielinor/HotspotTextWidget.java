@@ -267,7 +267,7 @@ class HotspotTextWidget extends InteractiveWidget {
           textLeft = textPainter.getTextLeft((Widget) (this), originX, (byte) -123);
           textTop = textPainter.getTextTop(-18033, originY, (Widget) (this));
           do {
-            na.c(2 + region.width, textLeft - (-region.left + 2), 116, 2 + region.height, -2 + (region.top + textTop));
+            AccountNameSelectionForm.c(2 + region.width, textLeft - (-region.left + 2), 116, 2 + region.height, -2 + (region.top + textTop));
             region = region.nextRegion;
           } while (region != null);
         }

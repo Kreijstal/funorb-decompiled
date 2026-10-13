@@ -414,7 +414,7 @@ final class DiskCacheWorker implements Runnable {
         try {
           var2 = threadLauncher.startThreadAsync(5, 0, (Runnable) (this));
           while (0 == var2.status) {
-            nu.a(10L, 0);
+            SpriteButtonPainter.a(10L, 0);
           }
           if (var2.status == 2) {
             throw new RuntimeException();

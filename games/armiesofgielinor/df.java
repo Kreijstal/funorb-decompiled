@@ -60,7 +60,7 @@ final class df extends DequeWidgetContainer implements EditableTextWidgetListene
         StringBuilder stackIn_62_1 = null;
         String stackIn_63_2 = null;
         RuntimeException decompiledCaughtException = null;
-        nu var6 = null;
+        SpriteButtonPainter var6 = null;
         RuntimeException var6_ref = null;
         BitmapFont var7 = null;
         String var8 = null;
@@ -105,7 +105,7 @@ final class df extends DequeWidgetContainer implements EditableTextWidgetListene
           }
           this.field_Q.painter = (WidgetPainter) ((Object) new TextEntryWidgetPainter(10000536));
           this.field_S.painter = (WidgetPainter) ((Object) new MaskedTextEntryPainter(10000536));
-          var6 = new nu();
+          var6 = new SpriteButtonPainter();
           this.field_O.painter = (WidgetPainter) ((Object) var6);
           if (this.field_N != null) {
             this.field_N.painter = (WidgetPainter) ((Object) var6);
@@ -120,9 +120,9 @@ final class df extends DequeWidgetContainer implements EditableTextWidgetListene
           if (!this.field_P) {
             if (this.field_F) {
               this.field_N.tooltipText = CombatSandbox.field_e;
-              this.field_N.painter = (WidgetPainter) ((Object) new td());
+              this.field_N.painter = (WidgetPainter) ((Object) new LinkButtonPainter());
             } else {
-              this.field_N.painter = (WidgetPainter) ((Object) new td());
+              this.field_N.painter = (WidgetPainter) ((Object) new LinkButtonPainter());
             }
           } else {
             this.field_N.tooltipText = VineGrowthAction.field_v;

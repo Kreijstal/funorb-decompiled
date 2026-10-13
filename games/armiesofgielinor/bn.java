@@ -173,7 +173,7 @@ final class bn {
           }
           MovementPresentation.a(param3, TextCursor.field_d, 0, true, DeployEvent.field_F, 5623);
         }
-        if (td.field_g.pressedButton != 0) {
+        if (LinkButtonPainter.field_g.pressedButton != 0) {
           bw.field_g = false;
         }
     }

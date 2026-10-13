@@ -225,7 +225,7 @@ final class SphinxActionRequest extends ActionRequest {
           ClientUiComponent.field_Q.horizontalAlignment = 1;
           QuickChatPhraseRepository.field_d = new ClientUiComponent(0L, ClientUiComponent.field_Q);
           ContentTransitionDialog.field_X = new ClientUiComponent(0L, ClientUiComponent.field_Q);
-          kd.field_M = new ClientUiComponent(0L, ConsoleValue.field_a);
+          AccountRegistrationForm.field_M = new ClientUiComponent(0L, ConsoleValue.field_a);
           rd.field_e = new ClientUiComponent(0L, ClientUiComponent.field_Q);
           PreparedAction.field_o = new ClientUiComponent(0L, ClientUiComponent.field_Q);
           eb.field_a = new ClientUiComponent(0L, ClientUiComponent.field_Q);
@@ -248,10 +248,10 @@ final class SphinxActionRequest extends ActionRequest {
           ContentTransitionDialog.field_X.skinSprites = wj.a(-12310, fk.loadRgbSpritesByName("redbutton", (byte) -128, param1, "lobby"));
           ContentTransitionDialog.field_X.matchedButtonSkinSprites = wj.a(-12310, fk.loadRgbSpritesByName("redbutton_mouseover", (byte) -127, param1, "lobby"));
           ContentTransitionDialog.field_X.heldPressSkinSprites = wj.a(-12310, fk.loadRgbSpritesByName("redbutton_mouseheld", (byte) -126, param1, "lobby"));
-          kd.field_M.skinSprites = wj.a(-12310, fk.loadRgbSpritesByName("backbutton", (byte) -124, param1, "lobby"));
-          kd.field_M.matchedButtonSkinSprites = wj.a(-12310, fk.loadRgbSpritesByName("backbutton_mouseover", (byte) -124, param1, "lobby"));
-          kd.field_M.heldPressSkinSprites = wj.a(-12310, fk.loadRgbSpritesByName("backbutton_mouseheld", (byte) -128, param1, "lobby"));
-          kd.field_M.disabledSkinSprites = wj.a(-12310, fk.loadRgbSpritesByName("backbutton_disabled", (byte) -124, param1, "lobby"));
+          AccountRegistrationForm.field_M.skinSprites = wj.a(-12310, fk.loadRgbSpritesByName("backbutton", (byte) -124, param1, "lobby"));
+          AccountRegistrationForm.field_M.matchedButtonSkinSprites = wj.a(-12310, fk.loadRgbSpritesByName("backbutton_mouseover", (byte) -124, param1, "lobby"));
+          AccountRegistrationForm.field_M.heldPressSkinSprites = wj.a(-12310, fk.loadRgbSpritesByName("backbutton_mouseheld", (byte) -128, param1, "lobby"));
+          AccountRegistrationForm.field_M.disabledSkinSprites = wj.a(-12310, fk.loadRgbSpritesByName("backbutton_disabled", (byte) -124, param1, "lobby"));
           eb.field_a.skinSprites = wj.a(-12310, fk.loadRgbSpritesByName("gameoptionbutton", (byte) -128, param1, "lobby"));
           eb.field_a.matchedButtonSkinSprites = wj.a(-12310, fk.loadRgbSpritesByName("gameoptionbutton_mouseover", (byte) -126, param1, "lobby"));
           dupTemp$1 = wj.a(-12310, fk.loadRgbSpritesByName("gameoptionbutton_active", (byte) -128, param1, "lobby"));
@@ -270,11 +270,11 @@ final class SphinxActionRequest extends ActionRequest {
           PreparedAction.field_o.heldPressSkinSprites = dupTemp$3;
           var17 = fk.loadRgbSpritesByName("checkbox", (byte) -124, param1, "lobby");
           ArrayWidgetContainer.field_H = new IconLabelControl(0L, var17[1], var17[0], 1, DualLinkedNode.field_k, (String) null);
-          oe.field_Cb = new ClientUiComponent(0L, (ClientUiComponent) null);
-          oe.field_Cb.skinSprites = it.a(17, GameplayController.a("slideregion", (byte) 51, "lobby", param1));
-          oe.field_Cb.matchedButtonSkinSprites = it.a(17, GameplayController.a("slideregion_mouseover", (byte) 51, "lobby", param1));
-          oe.field_Cb.heldPressSkinSprites = it.a(17, GameplayController.a("slideregion_mouseheld", (byte) 51, "lobby", param1));
-          oe.field_Cb.disabledSkinSprites = it.a(17, GameplayController.a("slideregion_disabled", (byte) 51, "lobby", param1));
+          AccountRegistrationDialog.field_Cb = new ClientUiComponent(0L, (ClientUiComponent) null);
+          AccountRegistrationDialog.field_Cb.skinSprites = it.a(17, GameplayController.a("slideregion", (byte) 51, "lobby", param1));
+          AccountRegistrationDialog.field_Cb.matchedButtonSkinSprites = it.a(17, GameplayController.a("slideregion_mouseover", (byte) 51, "lobby", param1));
+          AccountRegistrationDialog.field_Cb.heldPressSkinSprites = it.a(17, GameplayController.a("slideregion_mouseheld", (byte) 51, "lobby", param1));
+          AccountRegistrationDialog.field_Cb.disabledSkinSprites = it.a(17, GameplayController.a("slideregion_disabled", (byte) 51, "lobby", param1));
           ke.field_c = new ClientUiComponent(0L, (ClientUiComponent) null);
           ke.field_c.skinSprites = wj.a(-12310, fk.loadRgbSpritesByName("dragbar", (byte) -126, param1, "lobby"));
           ke.field_c.matchedButtonSkinSprites = wj.a(-12310, fk.loadRgbSpritesByName("dragbar_mouseover", (byte) -127, param1, "lobby"));
@@ -290,7 +290,7 @@ final class SphinxActionRequest extends ActionRequest {
           wh.field_g.matchedButtonSprite = GameplayController.a("downbutton_mouseover", (byte) 51, "lobby", param1);
           wh.field_g.heldPressSprite = GameplayController.a("downbutton_mouseheld", (byte) 51, "lobby", param1);
           wh.field_g.disabledSprite = GameplayController.a("downbutton_disabled", (byte) 51, "lobby", param1);
-          WeightedLruCache.field_b = new VerticalScrollbar(0L, NumericDateInputWidget.field_M, wh.field_g, oe.field_Cb, ke.field_c);
+          WeightedLruCache.field_b = new VerticalScrollbar(0L, NumericDateInputWidget.field_M, wh.field_g, AccountRegistrationDialog.field_Cb, ke.field_c);
           br.field_g = new SocialListPanel(0L, (ClientUiComponent) null, ConsoleEvaluationException.field_c, WeightedLruCache.field_b, ClientUiComponent.field_Q, (String) null, (String) null);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

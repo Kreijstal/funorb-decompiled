@@ -197,7 +197,7 @@ final class ls {
             var11++;
           }
           ArmiesOfGielinor.field_L.writeShort(true, param4);
-          ArmiesOfGielinor.field_L.a(-5247, param5, param2);
+          ArmiesOfGielinor.field_L.encryptRsa(-5247, param5, param2);
           param0.writeBytes(ArmiesOfGielinor.field_L.payload, 0, ArmiesOfGielinor.field_L.position, 99);
           param0.writeBytes(DateOfBirthValidator.field_h.payload, 0, DateOfBirthValidator.field_h.position, 109);
           return;

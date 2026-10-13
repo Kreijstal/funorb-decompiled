@@ -716,7 +716,7 @@ final class EditableTextField extends ClientUiComponent {
               }
               this.lastPressMillis = pressMillis;
             } else {
-              if (ro.pointerButton == 1 &&
+              if (ProgressMessageDialog.pointerButton == 1 &&
                 this.pointerSelecting) {
                 if (!this.wordSelectionDrag) {
                   this.caretIndex = pointerCharacterIndex;
@@ -799,7 +799,7 @@ final class EditableTextField extends ClientUiComponent {
             return stackIn_3_0;
           }
           for (characterIndex = this.caretIndex - 1; 0 < characterIndex; characterIndex--) {
-            if (!wr.isTextNavigationSeparator(this.textBuffer.charAt(-1 + characterIndex), (byte) 95)) {
+            if (!BirthDateChatEnableForm.isTextNavigationSeparator(this.textBuffer.charAt(-1 + characterIndex), (byte) 95)) {
               continue;
             }
             break;
@@ -832,7 +832,7 @@ final class EditableTextField extends ClientUiComponent {
             return stackIn_5_0;
           }
           for (characterIndex = 1 + this.caretIndex; textLength > characterIndex; characterIndex++) {
-            if (!wr.isTextNavigationSeparator(this.textBuffer.charAt(characterIndex - 1), (byte) 95)) {
+            if (!BirthDateChatEnableForm.isTextNavigationSeparator(this.textBuffer.charAt(characterIndex - 1), (byte) 95)) {
               continue;
             }
             break;

@@ -98,7 +98,7 @@ final class IconLabelControl extends ClientUiComponent {
           var65 = new int[param1.field_t];
           var62 = ArmiesOfGielinor.field_I;
           var63 = Widget.field_m;
-          var64 = rj.field_Q;
+          var64 = StripedProgressWidget.field_Q;
           for (var13 = 0; var13 < param1.field_t; var13++) {
             var14 = var62[var13] * param5 + (param3 * var63[var13] + param2 * var64[var13]) >> 8;
             if (var14 < 0) {
@@ -181,7 +181,7 @@ final class IconLabelControl extends ClientUiComponent {
               var32 = var30 & 65280;
               var33 = -1090453760 & var32 * var28 >>> 8 | (var28 * var31 & -16711859) >>> 8;
               var33 = var33 + 65793 * var29;
-              oe.a(-6, var22, var27, var24, var25, 8355711 & var33 >> 1, var23, var26);
+              AccountRegistrationDialog.a(-6, var22, var27, var24, var25, 8355711 & var33 >> 1, var23, var26);
             } else {
               var28 = var55[var18];
               var29 = var55[var19];

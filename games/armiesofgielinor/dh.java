@@ -88,33 +88,33 @@ final class dh extends bi implements java.awt.image.ImageProducer, java.awt.imag
         int var3Lifetime1;
         int var4Lifetime1;
         if (param2 == 32) {
-          var3 = kd.field_Z[param0][param1];
+          var3 = AccountRegistrationForm.field_Z[param0][param1];
           if (var3 <= -1) {
             return;
           }
-          var4 = AttackEvent.nextBoundedInt(false, td.field_d[var3].length, li.field_n);
-          if (null == td.field_d[var3][var4]) {
+          var4 = AttackEvent.nextBoundedInt(false, LinkButtonPainter.field_d[var3].length, li.field_n);
+          if (null == LinkButtonPainter.field_d[var3][var4]) {
             return;
           }
-          if (0 == td.field_d[var3][var4].samples.length) {
+          if (0 == LinkButtonPainter.field_d[var3][var4].samples.length) {
             return;
           }
-          RadialSummonMenu.playDefaultSoundWithIntGuard(52, td.field_d[var3][var4]);
+          RadialSummonMenu.playDefaultSoundWithIntGuard(52, LinkButtonPainter.field_d[var3][var4]);
           return;
         }
         field_l = (int[]) null;
-        var3Lifetime1 = kd.field_Z[param0][param1];
+        var3Lifetime1 = AccountRegistrationForm.field_Z[param0][param1];
         if (var3Lifetime1 <= -1) {
           return;
         }
-        var4Lifetime1 = AttackEvent.nextBoundedInt(false, td.field_d[var3Lifetime1].length, li.field_n);
-        if (null == td.field_d[var3Lifetime1][var4Lifetime1]) {
+        var4Lifetime1 = AttackEvent.nextBoundedInt(false, LinkButtonPainter.field_d[var3Lifetime1].length, li.field_n);
+        if (null == LinkButtonPainter.field_d[var3Lifetime1][var4Lifetime1]) {
           return;
         }
-        if (0 == td.field_d[var3Lifetime1][var4Lifetime1].samples.length) {
+        if (0 == LinkButtonPainter.field_d[var3Lifetime1][var4Lifetime1].samples.length) {
           return;
         }
-        RadialSummonMenu.playDefaultSoundWithIntGuard(52, td.field_d[var3Lifetime1][var4Lifetime1]);
+        RadialSummonMenu.playDefaultSoundWithIntGuard(52, LinkButtonPainter.field_d[var3Lifetime1][var4Lifetime1]);
     }
 
     public static void c(int param0) {
@@ -142,7 +142,7 @@ final class dh extends bi implements java.awt.image.ImageProducer, java.awt.imag
         try {
           if (se.emailCheckResult.isComplete((byte) 124) &&
             !email.equals(se.emailCheckResult.getEmail(true))) {
-            se.emailCheckResult = cr.a(email, obfuscationGuard ^ 4210691);
+            se.emailCheckResult = ProgressDialog.createEmailCheckResult(email, obfuscationGuard ^ 4210691);
           }
           if (obfuscationGuard != 67) {
             field_i = (String) null;

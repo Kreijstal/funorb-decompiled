@@ -107,11 +107,11 @@ final class UnitInfoPopup extends IntrusiveNode {
               SoftwareRaster.b(99, 25, 30, 30, 0, 128);
             } else {
               SoftwareRaster.b(37, 25, 92, 30, 0, 128);
-              ro.field_rb[param0.getUnitCategory(0)].draw(43, 32);
+              ProgressMessageDialog.field_rb[param0.getUnitCategory(0)].draw(43, 32);
               sg.field_b[this.a(param0.getUnitCategory(0), this.unit.getUnitCategory(param2 - 5), -46)].draw(75, 32);
             }
           }
-          ro.field_rb[this.unit.getUnitCategory(0)].draw(106, 32);
+          ProgressMessageDialog.field_rb[this.unit.getUnitCategory(0)].draw(106, 32);
           DateInputWidget.field_E.drawCentered(-param5.getDamageTakenPercent(param5.mapWidth * this.unit.tileY + this.unit.tileX, param2 - 9, this.unit) + 100 + "%", 20, 45, 16777215, -1);
           EventPresenter.field_t.b(68, 60, ConsoleValue.field_b[-1 + ConsoleValue.field_b.length]);
           so.field_b.a(param2 + 5600);

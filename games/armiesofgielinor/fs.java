@@ -129,7 +129,7 @@ final class fs {
         int var7Lifetime1;
         int var8Lifetime1;
         int var9Lifetime1;
-        if (!(0 <= kd.field_X)) {
+        if (!(0 <= AccountRegistrationForm.field_X)) {
           return -2;
         }
         if (param2 > param4) {
@@ -159,9 +159,9 @@ final class fs {
           if (param4 > var8) {
             var9++;
           }
-          var9 = var9 + (od.field_c[kd.field_X] ? -1 : 0);
+          var9 = var9 + (od.field_c[AccountRegistrationForm.field_X] ? -1 : 0);
           if (var9 > -2 &&
-            var9 < SectorCacheStore.field_j[kd.field_X].length) {
+            var9 < SectorCacheStore.field_j[AccountRegistrationForm.field_X].length) {
             return var9;
           }
           return -3;
@@ -175,9 +175,9 @@ final class fs {
         if (param4 > var8Lifetime1) {
           var9Lifetime1++;
         }
-        var9Lifetime1 = var9Lifetime1 + (od.field_c[kd.field_X] ? -1 : 0);
+        var9Lifetime1 = var9Lifetime1 + (od.field_c[AccountRegistrationForm.field_X] ? -1 : 0);
         if (var9Lifetime1 > -2 &&
-          var9Lifetime1 < SectorCacheStore.field_j[kd.field_X].length) {
+          var9Lifetime1 < SectorCacheStore.field_j[AccountRegistrationForm.field_X].length) {
           return var9Lifetime1;
         }
         return -3;

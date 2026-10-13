@@ -16,14 +16,14 @@ final class BattleGraphicsAssets {
         int var2;
         int var1Lifetime1;
         int var2Lifetime1;
-        if (kd.field_X < 0) {
+        if (AccountRegistrationForm.field_X < 0) {
           uk.field_q = -1;
           return;
         }
         if (param0 == -61) {
           var1 = 352;
-          stackIn_12_0 = SectorCacheStore.field_j[kd.field_X].length;
-          stackIn_13_1 = (od.field_c[kd.field_X]) ? 1 : 0;
+          stackIn_12_0 = SectorCacheStore.field_j[AccountRegistrationForm.field_X].length;
+          stackIn_13_1 = (od.field_c[AccountRegistrationForm.field_X]) ? 1 : 0;
           var2 = stackIn_12_0 + stackIn_13_1;
           var2 = (var2 / 2 + var2 % 2) * 80;
           if (-80 + (var1 + 8) >= var2) {
@@ -35,8 +35,8 @@ final class BattleGraphicsAssets {
         }
         BattleGraphicsAssets.a(38);
         var1Lifetime1 = 352;
-        stackIn_5_0 = SectorCacheStore.field_j[kd.field_X].length;
-        stackIn_6_1 = (od.field_c[kd.field_X]) ? 1 : 0;
+        stackIn_5_0 = SectorCacheStore.field_j[AccountRegistrationForm.field_X].length;
+        stackIn_6_1 = (od.field_c[AccountRegistrationForm.field_X]) ? 1 : 0;
         var2Lifetime1 = stackIn_5_0 + stackIn_6_1;
         var2Lifetime1 = (var2Lifetime1 / 2 + var2Lifetime1 % 2) * 80;
         if (-80 + (var1Lifetime1 + 8) >= var2Lifetime1) {

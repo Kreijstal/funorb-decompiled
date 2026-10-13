@@ -110,7 +110,7 @@ public abstract class iv extends java.applet.Applet implements Runnable, java.aw
           if (IntKeyLookup.field_a == this &&
             !PcmPlayerService.clientShutdownStarted) {
             ActionRequest.field_s = vi.monotonicMillis(-46);
-            nu.a(5000L, 0);
+            SpriteButtonPainter.a(5000L, 0);
             PacketBuffer.field_s = null;
             this.a(false, -1251);
             return;
@@ -226,7 +226,7 @@ public abstract class iv extends java.applet.Applet implements Runnable, java.aw
               var8 = IntPair.field_m.startThreadAsync(1, 0, (Runnable) (this));
               while (true) {
                 if (var8.status == 0) {
-                  nu.a(10L, param3 ^ 10);
+                  SpriteButtonPainter.a(10L, param3 ^ 10);
                   if (var9 == 0) {
                     continue;
                   }
@@ -609,7 +609,7 @@ public abstract class iv extends java.applet.Applet implements Runnable, java.aw
                 }
                 AgeValidator.c((byte) -76);
                 this.c((byte) 87);
-                so.field_b = rj.a(bn.field_b, dt.field_a, 1423111778, (java.awt.Component) ((Object) IndexedSpriteBase.field_b));
+                so.field_b = StripedProgressWidget.a(bn.field_b, dt.field_a, 1423111778, (java.awt.Component) ((Object) IndexedSpriteBase.field_b));
                 this.a(false);
                 qc.field_h = DraggableWidgetContainer.c(false);
                 do {

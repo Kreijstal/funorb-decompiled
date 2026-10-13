@@ -12,7 +12,7 @@ final class CorpseConditionMarker extends PreparedAction {
     final static void a(int param0, boolean param1) {
         int stackIn_19_0 = 0;
         int stackIn_20_1 = 0;
-        if (kd.field_X < 0) {
+        if (AccountRegistrationForm.field_X < 0) {
           Widget.field_n = 0;
           dd.field_e = 0;
           return;

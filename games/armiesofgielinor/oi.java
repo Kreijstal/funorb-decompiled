@@ -96,7 +96,7 @@ final class oi implements WidgetPainter {
           if (!widget.isFocused(false)) {
             return;
           }
-          na.c(widget.width - 4, var6_int + 2, 124, -4 + widget.height, 2 + var7);
+          AccountNameSelectionForm.c(widget.width - 4, var6_int + 2, 124, -4 + widget.height, 2 + var7);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

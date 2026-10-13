@@ -183,13 +183,13 @@ final class da {
     }
 
     final static void b(int param0) {
-        t.field_c = kv.k(5);
+        t.field_c = NameSuggestionList.k(5);
         KingBlackDragonEvent.field_C = new ModalDialogHost();
         if (param0 != -2) {
           java.applet.Applet var2 = (java.applet.Applet) null;
           da.a(43, (java.applet.Applet) null);
         }
-        td.a(true, true, param0 + 25);
+        LinkButtonPainter.a(true, true, param0 + 25);
     }
 
     final static void a(byte param0) {

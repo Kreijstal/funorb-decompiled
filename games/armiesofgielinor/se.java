@@ -113,22 +113,22 @@ final class se {
             for (var6_int = 0; var6_int < var3; var6_int++) {
               var9[var6_int] = MovementPresentation.decodedSpritePalette[rn.bitwiseAnd(255, (int) var20[var6_int])];
             }
-            var1[var2] = new RgbSprite(lg.decodedSpriteCanvasWidth, wr.decodedSpriteCanvasHeight, j.decodedSpriteOffsetXs[var2], CampaignMenuButton.decodedSpriteOffsetYs[var2], ClippedWidgetContainer.decodedSpriteWidths[var2], c.decodedSpriteHeights[var2], var21);
+            var1[var2] = new RgbSprite(lg.decodedSpriteCanvasWidth, BirthDateChatEnableForm.decodedSpriteCanvasHeight, j.decodedSpriteOffsetXs[var2], CampaignMenuButton.decodedSpriteOffsetYs[var2], ClippedWidgetContainer.decodedSpriteWidths[var2], c.decodedSpriteHeights[var2], var21);
           } else {
             var22 = CampaignMenuEntry.decodedSpriteAlphas[var2];
             var16 = new int[var3];
             var13 = var16;
             var6 = var13;
             for (var7 = 0; var3 > var7; var7++) {
-              var6[var7] = oe.bitwiseOr(MovementPresentation.decodedSpritePalette[rn.bitwiseAnd((int) var20[var7], 255)], rn.bitwiseAnd((int) var22[var7], 255) << 24);
+              var6[var7] = AccountRegistrationDialog.bitwiseOr(MovementPresentation.decodedSpritePalette[rn.bitwiseAnd((int) var20[var7], 255)], rn.bitwiseAnd((int) var22[var7], 255) << 24);
             }
-            var1[var2] = (RgbSprite) ((Object) new nj(lg.decodedSpriteCanvasWidth, wr.decodedSpriteCanvasHeight, j.decodedSpriteOffsetXs[var2], CampaignMenuButton.decodedSpriteOffsetYs[var2], ClippedWidgetContainer.decodedSpriteWidths[var2], c.decodedSpriteHeights[var2], var16));
+            var1[var2] = (RgbSprite) ((Object) new nj(lg.decodedSpriteCanvasWidth, BirthDateChatEnableForm.decodedSpriteCanvasHeight, j.decodedSpriteOffsetXs[var2], CampaignMenuButton.decodedSpriteOffsetYs[var2], ClippedWidgetContainer.decodedSpriteWidths[var2], c.decodedSpriteHeights[var2], var16));
           }
         }
         if (param0 != 32) {
           return (RgbSprite[]) null;
         }
-        rj.releaseSpriteDecodeBuffers((byte) 101);
+        StripedProgressWidget.releaseSpriteDecodeBuffers((byte) 101);
         return var1;
     }
 

@@ -79,7 +79,7 @@ final class ud extends ResizableModalDialog implements WidgetActivationListener 
         RuntimeException decompiledCaughtException = null;
         try {
           var4 = new InteractiveWidget(param0, param1);
-          var4.painter = (WidgetPainter) ((Object) new nu());
+          var4.painter = (WidgetPainter) ((Object) new SpriteButtonPainter());
           var5 = this.height - 6;
           this.height = this.height + 38;
           var4.setBounds(15, -16 + (-14 + this.width), var5, 8192, 30);

@@ -769,7 +769,7 @@ final class BattleCharacter {
         RuntimeException decompiledCaughtException = null;
         try {
           var5 = -81 % ((obfuscationGuard - 51) / 60);
-          mission = na.a(packet, 44);
+          mission = AccountNameSelectionForm.a(packet, 44);
           mission.campaign = campaign;
           mission.mapArchive = archive;
           stackIn_1_0 = mission;

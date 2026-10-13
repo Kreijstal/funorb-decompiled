@@ -573,7 +573,7 @@ final class ut extends ResizableModalDialog implements WidgetActivationListener 
         RuntimeException decompiledCaughtException = null;
         try {
           var4 = new InteractiveWidget(param1, param2);
-          var4.painter = (WidgetPainter) ((Object) new nu());
+          var4.painter = (WidgetPainter) ((Object) new SpriteButtonPainter());
           if (param0 != 38) {
             decodedChatContextId = 126;
           }

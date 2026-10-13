@@ -98,18 +98,18 @@ final class CipherPacketBuffer extends PacketBuffer {
         if (obfuscationGuard == -16807) {
           while (this.writeBitsRemaining < bitCount) {
             bitCount = bitCount - this.writeBitsRemaining;
-            this.payload[this.position] = (byte)oe.bitwiseOr(value >>> bitCount, rn.bitwiseAnd((int) this.payload[this.position], 255 << this.writeBitsRemaining));
+            this.payload[this.position] = (byte)AccountRegistrationDialog.bitwiseOr(value >>> bitCount, rn.bitwiseAnd((int) this.payload[this.position], 255 << this.writeBitsRemaining));
             this.writeBitsRemaining = 8;
             this.position = this.position + 1;
           }
           if (bitCount == this.writeBitsRemaining) {
-            this.payload[this.position] = (byte)oe.bitwiseOr(value, rn.bitwiseAnd((int) this.payload[this.position], 255 << this.writeBitsRemaining));
+            this.payload[this.position] = (byte)AccountRegistrationDialog.bitwiseOr(value, rn.bitwiseAnd((int) this.payload[this.position], 255 << this.writeBitsRemaining));
             this.position = this.position + 1;
             this.writeBitsRemaining = 8;
           } else {
             var4 = -bitCount + this.writeBitsRemaining;
             var5 = ~(GameEvent.bitMasks[bitCount] << var4);
-            this.payload[this.position] = (byte)oe.bitwiseOr(rn.bitwiseAnd(var5, (int) this.payload[this.position]), value << var4);
+            this.payload[this.position] = (byte)AccountRegistrationDialog.bitwiseOr(rn.bitwiseAnd(var5, (int) this.payload[this.position]), value << var4);
             this.writeBitsRemaining = this.writeBitsRemaining - bitCount;
             return;
           }
@@ -118,18 +118,18 @@ final class CipherPacketBuffer extends PacketBuffer {
         this.setReadBitPosition((byte) -128, -74);
         while (this.writeBitsRemaining < bitCount) {
           bitCount = bitCount - this.writeBitsRemaining;
-          this.payload[this.position] = (byte)oe.bitwiseOr(value >>> bitCount, rn.bitwiseAnd((int) this.payload[this.position], 255 << this.writeBitsRemaining));
+          this.payload[this.position] = (byte)AccountRegistrationDialog.bitwiseOr(value >>> bitCount, rn.bitwiseAnd((int) this.payload[this.position], 255 << this.writeBitsRemaining));
           this.writeBitsRemaining = 8;
           this.position = this.position + 1;
         }
         if (bitCount == this.writeBitsRemaining) {
-          this.payload[this.position] = (byte)oe.bitwiseOr(value, rn.bitwiseAnd((int) this.payload[this.position], 255 << this.writeBitsRemaining));
+          this.payload[this.position] = (byte)AccountRegistrationDialog.bitwiseOr(value, rn.bitwiseAnd((int) this.payload[this.position], 255 << this.writeBitsRemaining));
           this.position = this.position + 1;
           this.writeBitsRemaining = 8;
         } else {
           var4Lifetime1 = -bitCount + this.writeBitsRemaining;
           var5Lifetime1 = ~(GameEvent.bitMasks[bitCount] << var4Lifetime1);
-          this.payload[this.position] = (byte)oe.bitwiseOr(rn.bitwiseAnd(var5Lifetime1, (int) this.payload[this.position]), value << var4Lifetime1);
+          this.payload[this.position] = (byte)AccountRegistrationDialog.bitwiseOr(rn.bitwiseAnd(var5Lifetime1, (int) this.payload[this.position]), value << var4Lifetime1);
           this.writeBitsRemaining = this.writeBitsRemaining - bitCount;
           return;
         }

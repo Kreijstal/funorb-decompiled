@@ -54,7 +54,7 @@ final class QuickChatCommandDefinition {
             channelId = 0;
           }
           rs.outgoingChatChannel = channelId;
-          qd.chatRecipientName = recipientName;
+          RegistrationAgreementPane.chatRecipientName = recipientName;
           recipientCharacters = (CharSequence) ((Object) recipientName);
           wm.chatRecipientNameKey = AccountNameNormalizer.normalize(recipientCharacters, false);
           dj.chatRecipientAccountId = accountId;

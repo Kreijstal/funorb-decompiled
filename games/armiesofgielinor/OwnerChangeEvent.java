@@ -49,7 +49,7 @@ final class OwnerChangeEvent extends GameEvent {
     final static int a(int param0, byte param1) {
         int var3 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         LabeledWidgetContainer.field_N = 0;
-        kd.field_R = null;
+        AccountRegistrationForm.field_R = null;
         jj.field_g = null;
         int var2 = LeaderEscortCondition.field_i;
         LeaderEscortCondition.field_i = er.field_a;

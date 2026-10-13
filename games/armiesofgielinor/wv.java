@@ -69,7 +69,7 @@ class wv extends af {
               if (se.field_f) {
                 param0 = SummonAction.field_D;
               }
-              qc.field_a.a(param2, (byte) 98, param0);
+              qc.field_a.showResult(param2, (byte) 98, param0);
             }
             if (param2 != 256 &&
               10 != param2 &&

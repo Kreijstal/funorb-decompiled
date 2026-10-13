@@ -89,7 +89,7 @@ final class ChatMessage {
         this.channelLabel = BestScoreStrategy.decodedChatChannelLabel;
         this.systemMessage = DualNodeDeque.decodedChatSystemMessage;
         this.accountName = gp.decodedChatAccountName;
-        this.displayName = qd.decodedChatDisplayName;
+        this.displayName = RegistrationAgreementPane.decodedChatDisplayName;
         this.contextId = ut.decodedChatContextId;
         this.privateMessageIdLow24 = th.decodedPrivateMessageIdLow24;
         this.chatIconId = hc.decodedChatIconId;

@@ -51,7 +51,7 @@ final class cd {
             var4.unlink(-102);
             return;
           }
-          var3_ref_vg = (vg) (oe.field_Bb.first((byte) 98));
+          var3_ref_vg = (vg) (AccountRegistrationDialog.field_Bb.first((byte) 98));
           if (var3_ref_vg == null) {
             dj.a((byte) -126);
             return;
@@ -100,13 +100,13 @@ final class cd {
             return true;
           }
           if (rs.keyCode == 102) {
-            qd.activeQuickChatMenu.resetSelection((byte) -106);
+            RegistrationAgreementPane.activeQuickChatMenu.resetSelection((byte) -106);
             return true;
           }
-          if (qd.activeQuickChatMenu == null) {
+          if (RegistrationAgreementPane.activeQuickChatMenu == null) {
             return false;
           }
-          if (qd.activeQuickChatMenu.handleKeyboard(param2, param0, param1)) {
+          if (RegistrationAgreementPane.activeQuickChatMenu.handleKeyboard(param2, param0, param1)) {
             return true;
           }
           return false;
@@ -116,13 +116,13 @@ final class cd {
           return true;
         }
         if (rs.keyCode == 102) {
-          qd.activeQuickChatMenu.resetSelection((byte) -106);
+          RegistrationAgreementPane.activeQuickChatMenu.resetSelection((byte) -106);
           return true;
         }
-        if (qd.activeQuickChatMenu == null) {
+        if (RegistrationAgreementPane.activeQuickChatMenu == null) {
           return false;
         }
-        if (qd.activeQuickChatMenu.handleKeyboard(param2, param0, param1)) {
+        if (RegistrationAgreementPane.activeQuickChatMenu.handleKeyboard(param2, param0, param1)) {
           return true;
         }
         return false;

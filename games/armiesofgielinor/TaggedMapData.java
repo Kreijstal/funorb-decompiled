@@ -49,7 +49,7 @@ final class TaggedMapData implements TaggedFieldReader {
             return;
           }
           if (150 <= PasswordValidator.field_j) {
-            AccountNameCheckResult.field_k.e(var3 + 15, var4 + 10, var5);
+            AccountRequestResult.field_k.e(var3 + 15, var4 + 10, var5);
           } else {
             dc.field_n.h(var3, var4);
           }
@@ -102,7 +102,7 @@ final class TaggedMapData implements TaggedFieldReader {
           return;
         }
         if (150 <= PasswordValidator.field_j) {
-          AccountNameCheckResult.field_k.e(var3 + 15, var4 + 10, var5);
+          AccountRequestResult.field_k.e(var3 + 15, var4 + 10, var5);
           var6Lifetime1 = -125 + PasswordValidator.field_j;
           if (var6Lifetime1 <= 0) {
             var6Lifetime1 = PasswordValidator.field_j - 140;

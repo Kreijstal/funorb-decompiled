@@ -120,7 +120,7 @@ class DualLinkedNode extends IntrusiveNode {
           ac.field_n = false;
           BestScoreStrategy.field_h = null;
           if (fh.field_i) {
-            qc.field_a.o(4259);
+            qc.field_a.showConnectionFailure(4259);
             return;
           }
           var1 = vt.field_n;
@@ -132,7 +132,7 @@ class DualLinkedNode extends IntrusiveNode {
             }
             BestScoreStrategy.field_h = SpellCastEvent.a(593277313, new CharSequence[]{(CharSequence) ((Object) BestScoreStrategy.field_h), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) c.field_a)});
           }
-          qc.field_a.b(true);
+          qc.field_a.closeDialog(true);
           qf.a(56);
           return;
         }
@@ -140,7 +140,7 @@ class DualLinkedNode extends IntrusiveNode {
         ac.field_n = false;
         BestScoreStrategy.field_h = null;
         if (fh.field_i) {
-          qc.field_a.o(4259);
+          qc.field_a.showConnectionFailure(4259);
         } else {
           var1 = vt.field_n;
           if (var1 > 0) {
@@ -151,7 +151,7 @@ class DualLinkedNode extends IntrusiveNode {
             }
             BestScoreStrategy.field_h = SpellCastEvent.a(593277313, new CharSequence[]{(CharSequence) ((Object) BestScoreStrategy.field_h), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) c.field_a)});
           }
-          qc.field_a.b(true);
+          qc.field_a.closeDialog(true);
           qf.a(56);
         }
     }

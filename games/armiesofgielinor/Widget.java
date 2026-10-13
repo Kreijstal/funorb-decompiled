@@ -318,13 +318,13 @@ class Widget extends IntrusiveNode {
                 if (var5 == 0) {
                   if (DeployEvent.pointerPressButton != 0) {
                     if (!this.pointerPressed(BattleTutorial.pointerPressX, param2, param3, 113, this, TeleportAction.pointerPressY, DeployEvent.pointerPressButton)) {
-                      if (ro.pointerButton != 0) {
-                        LobbyRoom.field_Ob = ro.pointerButton;
+                      if (ProgressMessageDialog.pointerButton != 0) {
+                        LobbyRoom.field_Ob = ProgressMessageDialog.pointerButton;
                         OwnerChangeEvent.a(param1 ^ 6225, this.getTooltipText(21384));
                         return param0;
                       }
                       if (LobbyRoom.field_Ob == 0) {
-                        LobbyRoom.field_Ob = ro.pointerButton;
+                        LobbyRoom.field_Ob = ProgressMessageDialog.pointerButton;
                         OwnerChangeEvent.a(param1 ^ 6225, this.getTooltipText(21384));
                         return param0;
                       }
@@ -341,19 +341,19 @@ class Widget extends IntrusiveNode {
                         DeployEvent.pointerPressButton != 0) {
                         this.blur(1);
                       }
-                      LobbyRoom.field_Ob = ro.pointerButton;
+                      LobbyRoom.field_Ob = ProgressMessageDialog.pointerButton;
                       OwnerChangeEvent.a(param1 ^ 6225, this.getTooltipText(21384));
                       return param0;
                     }
                     param0 = false;
                   }
-                  if (ro.pointerButton != 0) {
-                    LobbyRoom.field_Ob = ro.pointerButton;
+                  if (ProgressMessageDialog.pointerButton != 0) {
+                    LobbyRoom.field_Ob = ProgressMessageDialog.pointerButton;
                     OwnerChangeEvent.a(param1 ^ 6225, this.getTooltipText(21384));
                     return param0;
                   }
                   if (LobbyRoom.field_Ob == 0) {
-                    LobbyRoom.field_Ob = ro.pointerButton;
+                    LobbyRoom.field_Ob = ProgressMessageDialog.pointerButton;
                     OwnerChangeEvent.a(param1 ^ 6225, this.getTooltipText(21384));
                     return param0;
                   }
@@ -366,22 +366,22 @@ class Widget extends IntrusiveNode {
                     bn.draggedWidget = null;
                   }
                   if (var7 == 0) {
-                    LobbyRoom.field_Ob = ro.pointerButton;
+                    LobbyRoom.field_Ob = ProgressMessageDialog.pointerButton;
                     OwnerChangeEvent.a(param1 ^ 6225, this.getTooltipText(21384));
                     return param0;
                   }
                   if (var5 == 0) {
-                    LobbyRoom.field_Ob = ro.pointerButton;
+                    LobbyRoom.field_Ob = ProgressMessageDialog.pointerButton;
                     OwnerChangeEvent.a(param1 ^ 6225, this.getTooltipText(21384));
                     return param0;
                   }
                   if (DeployEvent.pointerPressButton == 0) {
-                    LobbyRoom.field_Ob = ro.pointerButton;
+                    LobbyRoom.field_Ob = ProgressMessageDialog.pointerButton;
                     OwnerChangeEvent.a(param1 ^ 6225, this.getTooltipText(21384));
                     return param0;
                   }
                   this.blur(1);
-                  LobbyRoom.field_Ob = ro.pointerButton;
+                  LobbyRoom.field_Ob = ProgressMessageDialog.pointerButton;
                   OwnerChangeEvent.a(param1 ^ 6225, this.getTooltipText(21384));
                   return param0;
                 }
@@ -390,9 +390,9 @@ class Widget extends IntrusiveNode {
               if (DeployEvent.pointerPressButton != 0) {
                 if (!this.pointerPressed(BattleTutorial.pointerPressX, param2, param3, 113, this, TeleportAction.pointerPressY, DeployEvent.pointerPressButton)) {
                   if (var5 == 0) {
-                    if (ro.pointerButton == 0) {
+                    if (ProgressMessageDialog.pointerButton == 0) {
                       if (LobbyRoom.field_Ob == 0) {
-                        LobbyRoom.field_Ob = ro.pointerButton;
+                        LobbyRoom.field_Ob = ProgressMessageDialog.pointerButton;
                         OwnerChangeEvent.a(param1 ^ 6225, this.getTooltipText(21384));
                         return param0;
                       }
@@ -409,12 +409,12 @@ class Widget extends IntrusiveNode {
                         var5 != 0 &&
                         DeployEvent.pointerPressButton != 0) {
                         this.blur(1);
-                        LobbyRoom.field_Ob = ro.pointerButton;
+                        LobbyRoom.field_Ob = ProgressMessageDialog.pointerButton;
                         OwnerChangeEvent.a(param1 ^ 6225, this.getTooltipText(21384));
                         return param0;
                       }
                     }
-                    LobbyRoom.field_Ob = ro.pointerButton;
+                    LobbyRoom.field_Ob = ProgressMessageDialog.pointerButton;
                     OwnerChangeEvent.a(param1 ^ 6225, this.getTooltipText(21384));
                     return param0;
                   }
@@ -426,11 +426,11 @@ class Widget extends IntrusiveNode {
                   param0 = false;
                 }
               }
-              if (ro.pointerButton != 0) {
+              if (ProgressMessageDialog.pointerButton != 0) {
                 break regionExit1;
               }
               if (LobbyRoom.field_Ob == 0) {
-                LobbyRoom.field_Ob = ro.pointerButton;
+                LobbyRoom.field_Ob = ProgressMessageDialog.pointerButton;
                 OwnerChangeEvent.a(param1 ^ 6225, this.getTooltipText(21384));
                 return param0;
               }
@@ -449,7 +449,7 @@ class Widget extends IntrusiveNode {
             if (var5 != 0 &&
               DeployEvent.pointerPressButton != 0) {
               this.blur(1);
-              LobbyRoom.field_Ob = ro.pointerButton;
+              LobbyRoom.field_Ob = ProgressMessageDialog.pointerButton;
               OwnerChangeEvent.a(param1 ^ 6225, this.getTooltipText(21384));
               return param0;
             }
@@ -471,13 +471,13 @@ class Widget extends IntrusiveNode {
                   param0 = false;
                 }
               }
-              if (ro.pointerButton != 0) {
-                LobbyRoom.field_Ob = ro.pointerButton;
+              if (ProgressMessageDialog.pointerButton != 0) {
+                LobbyRoom.field_Ob = ProgressMessageDialog.pointerButton;
                 OwnerChangeEvent.a(param1 ^ 6225, this.getTooltipText(21384));
                 return param0;
               }
               if (LobbyRoom.field_Ob == 0) {
-                LobbyRoom.field_Ob = ro.pointerButton;
+                LobbyRoom.field_Ob = ProgressMessageDialog.pointerButton;
                 OwnerChangeEvent.a(param1 ^ 6225, this.getTooltipText(21384));
                 return param0;
               }
@@ -495,7 +495,7 @@ class Widget extends IntrusiveNode {
                 DeployEvent.pointerPressButton != 0) {
                 this.blur(1);
               }
-              LobbyRoom.field_Ob = ro.pointerButton;
+              LobbyRoom.field_Ob = ProgressMessageDialog.pointerButton;
               OwnerChangeEvent.a(param1 ^ 6225, this.getTooltipText(21384));
               return param0;
             }
@@ -503,13 +503,13 @@ class Widget extends IntrusiveNode {
               this.handleWheel(AiPlanningStrategy.pointerX, param2, param3, ko.pointerY, el.field_d, param1 + 6327, this);
             }
             if (DeployEvent.pointerPressButton == 0) {
-              if (ro.pointerButton != 0) {
-                LobbyRoom.field_Ob = ro.pointerButton;
+              if (ProgressMessageDialog.pointerButton != 0) {
+                LobbyRoom.field_Ob = ProgressMessageDialog.pointerButton;
                 OwnerChangeEvent.a(param1 ^ 6225, this.getTooltipText(21384));
                 return param0;
               }
               if (LobbyRoom.field_Ob == 0) {
-                LobbyRoom.field_Ob = ro.pointerButton;
+                LobbyRoom.field_Ob = ProgressMessageDialog.pointerButton;
                 OwnerChangeEvent.a(param1 ^ 6225, this.getTooltipText(21384));
                 return param0;
               }
@@ -527,19 +527,19 @@ class Widget extends IntrusiveNode {
                 DeployEvent.pointerPressButton != 0) {
                 this.blur(1);
               }
-              LobbyRoom.field_Ob = ro.pointerButton;
+              LobbyRoom.field_Ob = ProgressMessageDialog.pointerButton;
               OwnerChangeEvent.a(param1 ^ 6225, this.getTooltipText(21384));
               return param0;
             }
             if (!this.pointerPressed(BattleTutorial.pointerPressX, param2, param3, 113, this, TeleportAction.pointerPressY, DeployEvent.pointerPressButton)) {
               if (var5 == 0) {
-                if (ro.pointerButton != 0) {
-                  LobbyRoom.field_Ob = ro.pointerButton;
+                if (ProgressMessageDialog.pointerButton != 0) {
+                  LobbyRoom.field_Ob = ProgressMessageDialog.pointerButton;
                   OwnerChangeEvent.a(param1 ^ 6225, this.getTooltipText(21384));
                   return param0;
                 }
                 if (LobbyRoom.field_Ob == 0) {
-                  LobbyRoom.field_Ob = ro.pointerButton;
+                  LobbyRoom.field_Ob = ProgressMessageDialog.pointerButton;
                   OwnerChangeEvent.a(param1 ^ 6225, this.getTooltipText(21384));
                   return param0;
                 }
@@ -556,7 +556,7 @@ class Widget extends IntrusiveNode {
                   DeployEvent.pointerPressButton != 0) {
                   this.blur(1);
                 }
-                LobbyRoom.field_Ob = ro.pointerButton;
+                LobbyRoom.field_Ob = ProgressMessageDialog.pointerButton;
                 OwnerChangeEvent.a(param1 ^ 6225, this.getTooltipText(21384));
                 return param0;
               }
@@ -567,13 +567,13 @@ class Widget extends IntrusiveNode {
             } else {
               param0 = false;
             }
-            if (ro.pointerButton != 0) {
-              LobbyRoom.field_Ob = ro.pointerButton;
+            if (ProgressMessageDialog.pointerButton != 0) {
+              LobbyRoom.field_Ob = ProgressMessageDialog.pointerButton;
               OwnerChangeEvent.a(param1 ^ 6225, this.getTooltipText(21384));
               return param0;
             }
             if (LobbyRoom.field_Ob == 0) {
-              LobbyRoom.field_Ob = ro.pointerButton;
+              LobbyRoom.field_Ob = ProgressMessageDialog.pointerButton;
               OwnerChangeEvent.a(param1 ^ 6225, this.getTooltipText(21384));
               return param0;
             }
@@ -586,7 +586,7 @@ class Widget extends IntrusiveNode {
               bn.draggedWidget = null;
             }
             if (var7 == 0) {
-              LobbyRoom.field_Ob = ro.pointerButton;
+              LobbyRoom.field_Ob = ProgressMessageDialog.pointerButton;
               OwnerChangeEvent.a(param1 ^ 6225, this.getTooltipText(21384));
               return param0;
             }
@@ -596,7 +596,7 @@ class Widget extends IntrusiveNode {
             this.blur(1);
           }
         }
-        LobbyRoom.field_Ob = ro.pointerButton;
+        LobbyRoom.field_Ob = ProgressMessageDialog.pointerButton;
         OwnerChangeEvent.a(param1 ^ 6225, this.getTooltipText(21384));
         return param0;
     }

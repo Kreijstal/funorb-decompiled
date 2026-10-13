@@ -161,7 +161,7 @@ final class AttackEvent extends GameEvent {
           throw new IllegalStateException();
         }
         if (null != qc.field_a) {
-          qc.field_a.b(true);
+          qc.field_a.closeDialog(true);
         }
         String var1 = BattleGraphicsAssets.a(-123);
         ContextActionMenu.field_Qb = new df(var1, (String) null, true, false, false);

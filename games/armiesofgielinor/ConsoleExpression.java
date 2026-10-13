@@ -71,7 +71,7 @@ final class ConsoleExpression extends IntrusiveNode {
     final static void openPrivateQuickChat(long accountId, int obfuscationGuard, String recipientName) {
         CharSequence var5 = null;
         try {
-          qd.chatRecipientName = recipientName;
+          RegistrationAgreementPane.chatRecipientName = recipientName;
           rs.outgoingChatChannel = 2;
           var5 = (CharSequence) ((Object) recipientName);
           wm.chatRecipientNameKey = AccountNameNormalizer.normalize(var5, false);
@@ -125,7 +125,7 @@ final class ConsoleExpression extends IntrusiveNode {
                 argumentValues[argumentSlot] = argument.evaluate(1, commands);
                 argument = (ConsoleExpression) (this.arguments.next((byte) 123));
               }
-              callResult = na.invokeConsoleCommand(commands, (byte) 2, argumentValuesAlias, this.text);
+              callResult = AccountNameSelectionForm.invokeConsoleCommand(commands, (byte) 2, argumentValuesAlias, this.text);
               return callResult;
             }
             if (this.kind == PrintVictoryConditionsConsoleCommand.consoleNumberKind) {

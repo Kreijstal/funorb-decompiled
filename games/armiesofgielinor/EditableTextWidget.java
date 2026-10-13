@@ -407,7 +407,7 @@ class EditableTextWidget extends InteractiveWidget {
                 if (255 < var14) {
                   var14 = 255;
                 }
-                param3.pixels[var4_int] = oe.bitwiseOr(oe.bitwiseOr(var12, var13), var14);
+                param3.pixels[var4_int] = AccountRegistrationDialog.bitwiseOr(AccountRegistrationDialog.bitwiseOr(var12, var13), var14);
               }
               var4_int++;
             }

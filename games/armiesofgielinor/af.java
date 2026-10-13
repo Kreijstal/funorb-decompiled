@@ -154,7 +154,7 @@ abstract class af {
             }
             var5 = ((PlatformTaskService) (Object) stackIn_12_0).openUrlStreamAsync(new java.net.URL(stackIn_12_3, ((StringBuilder) (Object) stackIn_12_4).append(stackIn_13_5).append("&v1=").append(PlatformTaskService.javaVendor).append("&v2=").append(PlatformTaskService.javaVersion).append("&e=").append(var11).toString()), false);
             while (var5.status == 0) {
-              nu.a(1L, 0);
+              SpriteButtonPainter.a(1L, 0);
             }
             if (var5.status != 1) {
               return;
@@ -181,7 +181,7 @@ abstract class af {
         try {
           se.field_f = param0;
           ac.field_n = true;
-          qc.field_a = new ro(KingBlackDragonEvent.field_C, CipherPacketBuffer.field_t, param1, fh.field_i, se.field_f);
+          qc.field_a = new ProgressMessageDialog(KingBlackDragonEvent.field_C, CipherPacketBuffer.field_t, param1, fh.field_i, se.field_f);
           KingBlackDragonEvent.field_C.showDialog(qc.field_a, param2 ^ param2);
         } catch (RuntimeException runtimeException) {
           throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "af.K(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');

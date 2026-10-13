@@ -9,7 +9,7 @@ final class ki {
     static String field_a;
     static String[][] field_d;
 
-    final static AccountNameCheckResult a(int param0) {
+    final static AccountRequestResult a(int param0) {
         if (nb.nameCheckResultConsumed == ChannelBaseVolumeConsoleCommand.field_L) {
           throw new IllegalStateException();
         }

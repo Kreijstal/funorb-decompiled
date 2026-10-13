@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class EmailValidator extends TextFieldValidator {
-    static AccountNameCheckResult accountNameCheckResult;
+    static AccountRequestResult accountNameCheckResult;
     static int field_j;
     static String field_o;
     static CipherPacketBuffer outgoingPacket;
@@ -122,7 +122,7 @@ final class EmailValidator extends TextFieldValidator {
 
     final static void c(byte param0) {
         if (param0 == 91) {
-          ro.field_vb = c.field_d + " <b>" + DualNodeDeque.field_e + "</b> " + od.field_e + " <b>" + WeightedScoreStrategy.field_m + "</b> " + TextLineLayout.field_f + "<br>" + "<br>" + ls.field_d;
+          ProgressMessageDialog.field_vb = c.field_d + " <b>" + DualNodeDeque.field_e + "</b> " + od.field_e + " <b>" + WeightedScoreStrategy.field_m + "</b> " + TextLineLayout.field_f + "<br>" + "<br>" + ls.field_d;
           return;
         }
     }

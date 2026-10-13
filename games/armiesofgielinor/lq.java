@@ -27,7 +27,7 @@ final class lq {
             stackIn_5_0 = (AntialiasedBitmapFont) null;
             return stackIn_5_0;
           }
-          rj.releaseSpriteDecodeBuffers((byte) 117);
+          StripedProgressWidget.releaseSpriteDecodeBuffers((byte) 117);
           stackIn_7_0 = var2;
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

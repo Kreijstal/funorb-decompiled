@@ -58,7 +58,7 @@ final class b extends IntrusiveNode {
           CampaignMenuEntry.decodedSpriteAlphas = new byte[iw.decodedSpriteCount][];
           packetAlias.position = -(iw.decodedSpriteCount * 8) - 7 + encodedSheet.length;
           lg.decodedSpriteCanvasWidth = packetAlias.readUnsignedShort((byte) -104);
-          wr.decodedSpriteCanvasHeight = packetAlias.readUnsignedShort((byte) -104);
+          BirthDateChatEnableForm.decodedSpriteCanvasHeight = packetAlias.readUnsignedShort((byte) -104);
           paletteSize = 1 + (255 & packetAlias.readUnsignedByte(obfuscationGuard + 1));
           for (offsetXIndex = 0; iw.decodedSpriteCount > offsetXIndex; offsetXIndex++) {
             j.decodedSpriteOffsetXs[offsetXIndex] = packet.readUnsignedShort((byte) -104);

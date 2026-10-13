@@ -430,7 +430,7 @@ final class BufferedFile {
     }
 
     final static void a(byte param0) {
-        t.field_c = kv.k(5);
+        t.field_c = NameSuggestionList.k(5);
         if (param0 < 78) {
           BufferedFile.a(59, -15, 35, -65);
         }

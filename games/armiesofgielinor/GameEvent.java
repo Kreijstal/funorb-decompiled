@@ -318,7 +318,7 @@ abstract class GameEvent extends IntrusiveNode {
             var6.field_u = SpellCastRequest.a(var6.field_u, 16, param1, 10064);
           }
           if (vq.a(param1, -2)) {
-            var6.field_K = kd.a(16, param1, var6.field_K, (byte) -122);
+            var6.field_K = AccountRegistrationForm.a(16, param1, var6.field_K, (byte) -122);
             var7 = 0;
             for (var8 = 0; var8 < var6.field_K.length; var8++) {
               if ((var6.field_K[var8] & 255) > var7) {

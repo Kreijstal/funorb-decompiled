@@ -58,7 +58,7 @@ final class ValidatedTextWidget extends EditableTextWidget implements Validation
           }
           var8 = param1.getDisplayModesAsync(-20681);
           while (0 == var8.status) {
-            nu.a(10L, 0);
+            SpriteButtonPainter.a(10L, 0);
           }
           if (2 == var8.status) {
             stackIn_9_0 = new ls[]{};

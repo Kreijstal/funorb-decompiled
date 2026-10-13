@@ -9,8 +9,8 @@ final class e {
         if (obfuscationGuard >= -88) {
           e.closeQuickChatMenu((byte) 98);
           BattleTutorial.quickChatMenuVisible = false;
-          if (null != qd.activeQuickChatMenu) {
-            qd.activeQuickChatMenu.resetSelection((byte) -106);
+          if (null != RegistrationAgreementPane.activeQuickChatMenu) {
+            RegistrationAgreementPane.activeQuickChatMenu.resetSelection((byte) -106);
           }
           if (0 != rs.outgoingChatChannel) {
             rd.clearChatText(8445);
@@ -21,8 +21,8 @@ final class e {
           return;
         }
         BattleTutorial.quickChatMenuVisible = false;
-        if (null != qd.activeQuickChatMenu) {
-          qd.activeQuickChatMenu.resetSelection((byte) -106);
+        if (null != RegistrationAgreementPane.activeQuickChatMenu) {
+          RegistrationAgreementPane.activeQuickChatMenu.resetSelection((byte) -106);
         }
         if (0 == rs.outgoingChatChannel) {
           TelefragEvent.field_z = 0;

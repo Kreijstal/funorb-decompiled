@@ -95,7 +95,7 @@ final class de {
             return stackIn_4_0;
           }
           if (0 < battlefield.e(20, actingPlayer, spellId)) {
-            stackIn_8_0 = EmailCheckResult.a(4800, kv.field_I, new String[]{Integer.toString(uc.spellDefinitions[spellId][1] + 1)});
+            stackIn_8_0 = EmailCheckResult.a(4800, NameSuggestionList.field_I, new String[]{Integer.toString(uc.spellDefinitions[spellId][1] + 1)});
             return stackIn_8_0;
           }
           if (uc.spellDefinitions[spellId][3] == 4) {
@@ -211,7 +211,7 @@ final class de {
                     return stackIn_300_0;
                   }
                   if (actingPlayer == var7.ownerPlayer) {
-                    stackIn_304_0 = na.field_N;
+                    stackIn_304_0 = AccountNameSelectionForm.field_N;
                     return stackIn_304_0;
                   }
                 }

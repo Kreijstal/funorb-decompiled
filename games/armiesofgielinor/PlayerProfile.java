@@ -197,8 +197,8 @@ final class PlayerProfile {
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
         OwnerChangeEvent.quickChatMenuHost.setBounds(param5, -20500, param6, param2, param4);
-        if (qd.activeQuickChatMenu != null) {
-          qd.activeQuickChatMenu.layoutMenu(param1, param3, param5, -TelefragEvent.field_z + param1, param5, param0 ^ 6518);
+        if (RegistrationAgreementPane.activeQuickChatMenu != null) {
+          RegistrationAgreementPane.activeQuickChatMenu.layoutMenu(param1, param3, param5, -TelefragEvent.field_z + param1, param5, param0 ^ 6518);
         }
         if (param0 != -1) {
           field_i = (String[]) null;

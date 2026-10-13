@@ -12,7 +12,7 @@ final class vi {
     final static void a(String param0, int param1, String param2) {
         try {
           if (null != qc.field_a) {
-            qc.field_a.b(true);
+            qc.field_a.closeDialog(true);
           }
           if (param1 != 640) {
             String var4 = (String) null;

@@ -82,7 +82,7 @@ abstract class ArchiveProvider {
               if (var17 == 0) {
                 var23[var11] = 0;
               } else {
-                var8[var11] = oe.bitwiseOr(oe.bitwiseOr(rn.bitwiseAnd(var14 / var17, 16711680), oe.bitwiseOr(var18Lifetime1 << 24, rn.bitwiseAnd(255, var15 / var17))), rn.bitwiseAnd(var16 / var17, 65280));
+                var8[var11] = AccountRegistrationDialog.bitwiseOr(AccountRegistrationDialog.bitwiseOr(rn.bitwiseAnd(var14 / var17, 16711680), AccountRegistrationDialog.bitwiseOr(var18Lifetime1 << 24, rn.bitwiseAnd(255, var15 / var17))), rn.bitwiseAnd(var16 / var17, 65280));
               }
               var11++;
               var12 += 4;

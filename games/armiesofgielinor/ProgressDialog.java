@@ -1,18 +1,18 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class cr extends ResizableModalDialog {
+final class ProgressDialog extends ResizableModalDialog {
     static String field_eb;
-    private boolean field_ab;
+    private boolean error;
     static String field_bb;
-    private String field_cb;
-    private rj field_Y;
+    private String progressText;
+    private StripedProgressWidget progressBar;
     static String[][] field_W;
     static int keyEventWriteIndex;
-    private boolean field_db;
-    private String field_X;
+    private boolean freezeNormalAnimation;
+    private String description;
 
-    final static EmailCheckResult a(String param0, int param1) {
+    final static EmailCheckResult createEmailCheckResult(String email, int obfuscationGuard) {
         RuntimeException var2 = null;
         EmailCheckResult stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
@@ -20,31 +20,31 @@ final class cr extends ResizableModalDialog {
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param1 != 4210752) {
+          if (obfuscationGuard != 4210752) {
             field_bb = (String) null;
           }
-          stackIn_3_0 = new EmailCheckResult(param0);
+          stackIn_3_0 = new EmailCheckResult(email);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
           stackIn_6_0 = var2;
           stackIn_6_1 = new StringBuilder().append("cr.G(");
-          if (param0 == null) {
+          if (email == null) {
             stackIn_7_2 = "null";
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 
     final void drawDialogBackground(int x, int obfuscationGuard, int y) {
         super.drawDialogBackground(x, obfuscationGuard, y);
-        CipherPacketBuffer.field_t.drawCentered(this.field_cb, (this.width >> 1) + x, y + 103, 16777215, -1);
-        if (null != this.field_X) {
+        CipherPacketBuffer.field_t.drawCentered(this.progressText, (this.width >> 1) + x, y + 103, 16777215, -1);
+        if (null != this.description) {
           SoftwareRaster.e(20 + x, -7 + (120 + y), 260, 8421504);
-          CipherPacketBuffer.field_t.drawParagraph(this.field_X, 20 + x, y + 120 + 8, 260, 100, 16777215, -1, 1, 0, CipherPacketBuffer.field_t.maxAscent);
+          CipherPacketBuffer.field_t.drawParagraph(this.description, 20 + x, y + 120 + 8, 260, 100, 16777215, -1, 1, 0, CipherPacketBuffer.field_t.maxAscent);
         }
     }
 
@@ -55,57 +55,57 @@ final class cr extends ResizableModalDialog {
           field_bb = null;
           return;
         }
-        cr.n(-8);
+        ProgressDialog.n(-8);
         field_W = (String[][]) null;
         field_bb = null;
     }
 
-    final void a(float param0, int param1, boolean param2, String param3) {
-        RuntimeException var5 = null;
-        String var6 = null;
-        int stackIn_5_0 = 0;
-        int stackIn_8_1 = 0;
-        boolean stackIn_13_1 = false;
+    final void setProgress(float percent, int obfuscationGuard, boolean error, String text) {
+        RuntimeException failure = null;
+        String guardEmail = null;
+        int previousNormalFlag = 0;
+        int normalFlag = 0;
+        boolean errorMode = false;
         RuntimeException stackIn_21_0 = null;
         StringBuilder stackIn_21_1 = null;
         String stackIn_22_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param1 != 30) {
-            var6 = (String) null;
-            cr.a((String) null, -94);
+          if (obfuscationGuard != 30) {
+            guardEmail = (String) null;
+            ProgressDialog.createEmailCheckResult((String) null, -94);
           }
-          stackIn_5_0 = (this.field_ab) ? 0 : 1;
-          if (param2) {
-            stackIn_8_1 = 0;
+          previousNormalFlag = (this.error) ? 0 : 1;
+          if (error) {
+            normalFlag = 0;
           } else {
-            stackIn_8_1 = 1;
+            normalFlag = 1;
           }
-          if (stackIn_5_0 == stackIn_8_1) {
-            this.field_Y.field_D = (int)(param0 / 100.0f * 65536.0f);
-            this.field_cb = param3;
+          if (previousNormalFlag == normalFlag) {
+            this.progressBar.filledFraction = (int)(percent / 100.0f * 65536.0f);
+            this.progressText = text;
             return;
           }
-          stackIn_13_1 = (param2);
-          this.field_ab = stackIn_13_1;
-          if (this.field_ab) {
-            this.field_Y.c(4210752, 8405024, 27178);
-            this.field_Y.field_R = true;
+          errorMode = (error);
+          this.error = errorMode;
+          if (this.error) {
+            this.progressBar.setColours(4210752, 8405024, 27178);
+            this.progressBar.animated = true;
           } else {
-            this.field_Y.c(4210752, 2113632, 27178);
-            if (this.field_db) {
-              this.field_Y.field_R = false;
+            this.progressBar.setColours(4210752, 2113632, 27178);
+            if (this.freezeNormalAnimation) {
+              this.progressBar.animated = false;
             }
           }
-          this.field_Y.field_D = (int)(param0 / 100.0f * 65536.0f);
-          this.field_cb = param3;
+          this.progressBar.filledFraction = (int)(percent / 100.0f * 65536.0f);
+          this.progressText = text;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          var5 = decompiledCaughtException;
-          stackIn_21_0 = var5;
-          stackIn_21_1 = new StringBuilder().append("cr.A(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
-          if (param3 == null) {
+          failure = decompiledCaughtException;
+          stackIn_21_0 = failure;
+          stackIn_21_1 = new StringBuilder().append("cr.A(").append(percent).append(',').append(obfuscationGuard).append(',').append(error).append(',');
+          if (text == null) {
             stackIn_22_2 = "null";
           } else {
             stackIn_22_2 = "{...}";
@@ -114,30 +114,30 @@ final class cr extends ResizableModalDialog {
         }
     }
 
-    cr(ModalDialogHost param0, String param1) {
-        super(param0, 300, 120);
-        int var3_int = 0;
+    ProgressDialog(ModalDialogHost host, String description) {
+        super(host, 300, 120);
+        int descriptionHeight = 0;
         try {
-          this.field_X = param1;
-          if (this.field_X != null) {
-            var3_int = CipherPacketBuffer.field_t.getParagraphHeight(this.field_X, 260, CipherPacketBuffer.field_t.maxAscent);
-            this.setCenteredSize(300, (byte) 100, 150 + var3_int);
+          this.description = description;
+          if (this.description != null) {
+            descriptionHeight = CipherPacketBuffer.field_t.getParagraphHeight(this.description, 260, CipherPacketBuffer.field_t.maxAscent);
+            this.setCenteredSize(300, (byte) 100, 150 + descriptionHeight);
           }
-          this.field_Y = new rj(13, 50, 274, 30, 15, 2113632, 4210752);
-          this.field_db = false;
-          this.field_ab = false;
-          this.field_Y.field_R = true;
-          this.addChild((byte) 10, (Widget) (this.field_Y));
-        } catch (RuntimeException runtimeException) {
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "cr.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          this.progressBar = new StripedProgressWidget(13, 50, 274, 30, 15, 2113632, 4210752);
+          this.freezeNormalAnimation = false;
+          this.error = false;
+          this.progressBar.animated = true;
+          this.addChild((byte) 10, (Widget) (this.progressBar));
+        } catch (RuntimeException failure) {
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) failure), "cr.<init>(" + (host != null ? "{...}" : "null") + ',' + (description != null ? "{...}" : "null") + ')');
         }
     }
 
-    final void i(byte param0) {
-        this.field_db = true;
-        this.field_Y.field_R = false;
-        if (param0 < 1) {
-          this.field_cb = (String) null;
+    final void freezeNormalProgressAnimation(byte obfuscationGuard) {
+        this.freezeNormalAnimation = true;
+        this.progressBar.animated = false;
+        if (obfuscationGuard < 1) {
+          this.progressText = (String) null;
         }
     }
 

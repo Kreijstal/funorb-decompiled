@@ -9,7 +9,7 @@ final class IsaacRandom {
     private int accumulator;
     static RgbSprite[] field_a;
     private int lastResult;
-    static kd field_g;
+    static AccountRegistrationForm field_g;
     private int remainingResults;
     static String field_d;
     private int generationCounter;

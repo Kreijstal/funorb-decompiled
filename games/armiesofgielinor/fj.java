@@ -80,10 +80,10 @@ final class fj {
           while (true) {
             var3 = param1.exitFullscreenAsync((byte) -68, param0);
             while (var3.status == 0) {
-              nu.a(10L, 0);
+              SpriteButtonPainter.a(10L, 0);
             }
             if (var3.status != 1) {
-              nu.a(100L, 0);
+              SpriteButtonPainter.a(100L, 0);
               continue;
             }
             break;

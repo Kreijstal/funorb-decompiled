@@ -36,22 +36,22 @@ final class DisplacedUnitMarker extends PreparedAction {
         }
     }
 
-    final static AccountNameCheckResult a(int param0, int param1, String param2) {
-        AccountNameCheckResult var3 = null;
+    final static AccountRequestResult a(int param0, int param1, String param2) {
+        AccountRequestResult var3 = null;
         RuntimeException var3_ref = null;
-        AccountNameCheckResult stackIn_2_0 = null;
-        AccountNameCheckResult stackIn_4_0 = null;
+        AccountRequestResult stackIn_2_0 = null;
+        AccountRequestResult stackIn_4_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != -1) {
-            stackIn_2_0 = (AccountNameCheckResult) null;
+            stackIn_2_0 = (AccountRequestResult) null;
             return stackIn_2_0;
           }
-          var3 = new AccountNameCheckResult(false);
-          var3.field_d = param1;
+          var3 = new AccountRequestResult(false);
+          var3.statusCode = param1;
           var3.errorText = param2;
           stackIn_4_0 = var3;
           return stackIn_4_0;

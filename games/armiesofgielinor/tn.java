@@ -107,7 +107,7 @@ final class tn extends ResizableModalDialog implements WidgetActivationListener 
           if (!param1) {
             tn.a(false, -22, 101);
           }
-          var4.painter = (WidgetPainter) ((Object) new nu());
+          var4.painter = (WidgetPainter) ((Object) new SpriteButtonPainter());
           var5 = -6 + this.height;
           this.height = this.height + 38;
           var4.setBounds(15, -14 + this.width - 16, var5, 8192, 30);
@@ -223,9 +223,9 @@ final class tn extends ResizableModalDialog implements WidgetActivationListener 
                 var10 >> 8 == var11) {
                 if (var11 < 128) {
                   var11 = var11 << 1;
-                  var4[var8] = oe.bitwiseOr(var12, oe.bitwiseOr(oe.bitwiseOr(rn.bitwiseAnd(var5 * var11, -16777164) >>> 8, rn.bitwiseAnd(var11 * var6, 16711832) >>> 8), rn.bitwiseAnd(var7 * var11 >>> 8, 754974975)));
+                  var4[var8] = AccountRegistrationDialog.bitwiseOr(var12, AccountRegistrationDialog.bitwiseOr(AccountRegistrationDialog.bitwiseOr(rn.bitwiseAnd(var5 * var11, -16777164) >>> 8, rn.bitwiseAnd(var11 * var6, 16711832) >>> 8), rn.bitwiseAnd(var7 * var11 >>> 8, 754974975)));
                 } else {
-                  var4[var8] = oe.bitwiseOr(oe.bitwiseOr(oe.bitwiseOr(rn.bitwiseAnd((256 - var11) * var5 + var11 * 16711680 - 2139095040 >>> 7, 1727987712), rn.bitwiseAnd(8355863, (-var11 + 256) * var6 + (var11 - 128) * 65280) >>> 7), (256 - var11) * var7 + 255 * var11 - 32640 >>> 7), var12);
+                  var4[var8] = AccountRegistrationDialog.bitwiseOr(AccountRegistrationDialog.bitwiseOr(AccountRegistrationDialog.bitwiseOr(rn.bitwiseAnd((256 - var11) * var5 + var11 * 16711680 - 2139095040 >>> 7, 1727987712), rn.bitwiseAnd(8355863, (-var11 + 256) * var6 + (var11 - 128) * 65280) >>> 7), (256 - var11) * var7 + 255 * var11 - 32640 >>> 7), var12);
                 }
               }
             }

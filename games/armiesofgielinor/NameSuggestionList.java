@@ -1,63 +1,63 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class kv extends DequeWidgetContainer implements WidgetActivationListener {
-    private String[] field_H;
+final class NameSuggestionList extends DequeWidgetContainer implements WidgetActivationListener {
+    private String[] names;
     static String field_J;
-    private InteractiveWidget[] field_E;
-    private mf field_G;
+    private InteractiveWidget[] buttons;
+    private NameSuggestionListener listener;
     static String field_I;
     static int field_F;
 
-    final void a(int param0, String[] param1) {
-        int var4_int = 0;
-        int var5 = 0;
-        RuntimeException stackIn_16_0 = null;
-        StringBuilder stackIn_16_1 = null;
-        String stackIn_17_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        int var3_int = 0;
-        RuntimeException var3 = null;
-        td var4 = null;
-        int var6 = 0;
-        var6 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+    final void setSuggestions(int obfuscationGuard, String[] suggestions) {
+        int nameIndex = 0;
+        int buttonIndex = 0;
+        RuntimeException failureForContext = null;
+        StringBuilder errorContext = null;
+        String suggestionDescription = null;
+        RuntimeException caughtFailure = null;
+        int nameCount = 0;
+        RuntimeException failure = null;
+        LinkButtonPainter buttonPainter = null;
+        int obfuscationControl = 0;
+        obfuscationControl = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          this.children.clear(param0 - 11);
-          if (param1 != null &&
-            param1.length != 0) {
-            var3_int = param1.length;
-            this.field_H = new String[var3_int];
-            for (var4_int = 0; var4_int < var3_int; var4_int++) {
-              this.field_H[var4_int] = ug.a(GrowthEvent.bitwiseXor(param0, 116), (CharSequence) ((Object) param1[var4_int])).replace(' ', ' ');
+          this.children.clear(obfuscationGuard - 11);
+          if (suggestions != null &&
+            suggestions.length != 0) {
+            nameCount = suggestions.length;
+            this.names = new String[nameCount];
+            for (nameIndex = 0; nameIndex < nameCount; nameIndex++) {
+              this.names[nameIndex] = ug.a(GrowthEvent.bitwiseXor(obfuscationGuard, 116), (CharSequence) ((Object) suggestions[nameIndex])).replace(' ', ' ');
             }
-            var4 = new td(ArmiesOfGielinor.field_J, 0, 1);
-            this.field_E = new InteractiveWidget[var3_int + 1];
-            for (var5 = 0; var5 < var3_int; var5++) {
-              this.field_E[var5] = new InteractiveWidget(this.field_H[var5], (WidgetListener) (this));
-              this.field_E[var5].painter = (WidgetPainter) ((Object) var4);
-              this.field_E[var5].tooltipText = ModalDialog.field_J;
-              this.field_E[var5].setBounds(0, 80, 20 + 16 * var5, 8192, 15);
-              this.addChild((byte) 10, (Widget) (this.field_E[var5]));
+            buttonPainter = new LinkButtonPainter(ArmiesOfGielinor.field_J, 0, 1);
+            this.buttons = new InteractiveWidget[nameCount + 1];
+            for (buttonIndex = 0; buttonIndex < nameCount; buttonIndex++) {
+              this.buttons[buttonIndex] = new InteractiveWidget(this.names[buttonIndex], (WidgetListener) (this));
+              this.buttons[buttonIndex].painter = (WidgetPainter) ((Object) buttonPainter);
+              this.buttons[buttonIndex].tooltipText = ModalDialog.field_J;
+              this.buttons[buttonIndex].setBounds(0, 80, 20 + 16 * buttonIndex, 8192, 15);
+              this.addChild((byte) 10, (Widget) (this.buttons[buttonIndex]));
             }
-            this.field_E[var3_int] = new InteractiveWidget(h.field_h, (WidgetListener) (this));
-            this.field_E[var3_int].painter = (WidgetPainter) ((Object) var4);
-            this.field_E[var3_int].setBounds(0, param0, var3_int * 16 + 16 + 20, param0 ^ 8292, 15);
-            this.addChild((byte) 10, (Widget) (this.field_E[var3_int]));
+            this.buttons[nameCount] = new InteractiveWidget(h.field_h, (WidgetListener) (this));
+            this.buttons[nameCount].painter = (WidgetPainter) ((Object) buttonPainter);
+            this.buttons[nameCount].setBounds(0, obfuscationGuard, nameCount * 16 + 16 + 20, obfuscationGuard ^ 8292, 15);
+            this.addChild((byte) 10, (Widget) (this.buttons[nameCount]));
             return;
           }
-          this.field_H = null;
+          this.names = null;
           return;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var3 = decompiledCaughtException;
-          stackIn_16_0 = var3;
-          stackIn_16_1 = new StringBuilder().append("kv.A(").append(param0).append(',');
-          if (param1 == null) {
-            stackIn_17_2 = "null";
+        } catch (java.lang.RuntimeException caughtParameter) {
+          caughtFailure = caughtParameter;
+          failure = caughtFailure;
+          failureForContext = failure;
+          errorContext = new StringBuilder().append("kv.A(").append(obfuscationGuard).append(',');
+          if (suggestions == null) {
+            suggestionDescription = "null";
           } else {
-            stackIn_17_2 = "{...}";
+            suggestionDescription = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) failureForContext), ((StringBuilder) (Object) errorContext).append(suggestionDescription).append(')').toString());
         }
     }
 
@@ -102,14 +102,14 @@ final class kv extends DequeWidgetContainer implements WidgetActivationListener 
         }
         BitmapFont var5 = ArmiesOfGielinor.field_J;
         if (obfuscationGuard > -82) {
-          kv.b(true);
+          NameSuggestionList.b(true);
         }
-        if (this.field_H != null) {
+        if (this.names != null) {
           var5.drawParagraph(we.field_i, originX + this.x, originY + this.y, this.width, 20, 16777215, -1, 0, 0, var5.maxDescent + var5.maxAscent);
         }
     }
 
-    final static boolean a(boolean param0, CharSequence param1, char param2) {
+    final static boolean canAppendAccountNameCharacter(boolean obfuscationGuard, CharSequence text, char character) {
         int var3_int = 0;
         RuntimeException var3 = null;
         RuntimeException stackIn_21_0 = null;
@@ -117,20 +117,20 @@ final class kv extends DequeWidgetContainer implements WidgetActivationListener 
         String stackIn_22_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (!ph.isAccountNameCharacter(-19, param2)) {
+          if (!ph.isAccountNameCharacter(-19, character)) {
             return false;
           }
-          if (param1 == null) {
+          if (text == null) {
             return false;
           }
-          var3_int = param1.length();
-          if (param0) {
+          var3_int = text.length();
+          if (obfuscationGuard) {
             field_F = 103;
           }
           if (var3_int >= 12) {
             return false;
           }
-          if (!rs.isAccountNameSeparator(param2, (byte) -87)) {
+          if (!rs.isAccountNameSeparator(character, (byte) -87)) {
             return true;
           }
           if (var3_int != 0) {
@@ -141,13 +141,13 @@ final class kv extends DequeWidgetContainer implements WidgetActivationListener 
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
           stackIn_21_0 = var3;
-          stackIn_21_1 = new StringBuilder().append("kv.D(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_21_1 = new StringBuilder().append("kv.D(").append(obfuscationGuard).append(',');
+          if (text == null) {
             stackIn_22_2 = "null";
           } else {
             stackIn_22_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(param2).append(')').toString());
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(character).append(')').toString());
         }
     }
 
@@ -189,41 +189,41 @@ final class kv extends DequeWidgetContainer implements WidgetActivationListener 
         }
     }
 
-    kv(mf param0) {
+    NameSuggestionList(NameSuggestionListener listener) {
         super(0, 0, 0, 0, (WidgetPainter) null);
         try {
-          this.field_G = param0;
+          this.listener = listener;
         } catch (RuntimeException runtimeException) {
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "kv.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "kv.<init>(" + (listener != null ? "{...}" : "null") + ')');
         }
     }
 
     public final void widgetActivated(int pointerX, int obfuscationGuard, int button, int pointerY, InteractiveWidget widget) {
-        int var6_int = 0;
-        int var7 = 0;
+        int nameIndex = 0;
+        int obfuscationControl = 0;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
         String stackIn_16_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException var6 = null;
-        var7 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        RuntimeException failure = null;
+        obfuscationControl = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           if (obfuscationGuard != 11) {
-            kv.a(false, (CharSequence) null, 'ﾪ');
+            NameSuggestionList.canAppendAccountNameCharacter(false, (CharSequence) null, 'ﾪ');
           }
-          for (var6_int = 0; this.field_H.length > var6_int; var6_int++) {
-            if (widget == this.field_E[var6_int]) {
-              this.field_G.a(-1, this.field_H[var6_int]);
+          for (nameIndex = 0; this.names.length > nameIndex; nameIndex++) {
+            if (widget == this.buttons[nameIndex]) {
+              this.listener.nameSelected(-1, this.names[nameIndex]);
             }
           }
-          if (this.field_E[this.field_H.length] == widget) {
-            this.field_G.a((byte) -116);
+          if (this.buttons[this.names.length] == widget) {
+            this.listener.refreshNamesRequested((byte) -116);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          var6 = decompiledCaughtException;
-          stackIn_15_0 = var6;
+          failure = decompiledCaughtException;
+          stackIn_15_0 = failure;
           stackIn_15_1 = new StringBuilder().append("kv.N(").append(pointerX).append(',').append(obfuscationGuard).append(',').append(button).append(',').append(pointerY).append(',');
           if (widget == null) {
             stackIn_16_2 = "null";

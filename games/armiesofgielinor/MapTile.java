@@ -44,7 +44,7 @@ final class MapTile implements TaggedFieldReader {
           }
           for (var3_int = 0; var3_int < 50; var3_int++) {
             if (null != param0.eventQueue.peekEvent()) {
-              nu.a(1L, 0);
+              SpriteButtonPainter.a(1L, 0);
               continue;
             }
             break;

@@ -6,11 +6,11 @@ final class ji {
     static String field_b;
     static int[] field_c;
 
-    final static AccountNameCheckResult pollAccountNameCheck(int obfuscationGuard, String name) {
+    final static AccountRequestResult pollAccountNameCheck(int obfuscationGuard, String name) {
         RuntimeException failure = null;
         Object pendingResult = null;
         Object queuedResult = null;
-        AccountNameCheckResult completedResult = null;
+        AccountRequestResult completedResult = null;
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
         String stackIn_15_2 = null;
@@ -21,7 +21,7 @@ final class ji {
           }
           if (mh.accountNameCheckState == du.nameCheckPending) {
             pendingResult = null;
-            return (AccountNameCheckResult) (pendingResult);
+            return (AccountRequestResult) (pendingResult);
           }
           if (mh.accountNameCheckState == lm.nameCheckComplete &&
             name.equals(AgeValidator.requestedAccountName)) {
@@ -33,7 +33,7 @@ final class ji {
           mh.accountNameCheckState = du.nameCheckPending;
           EmailValidator.accountNameCheckResult = null;
           queuedResult = null;
-          return (AccountNameCheckResult) (queuedResult);
+          return (AccountRequestResult) (queuedResult);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           failure = decompiledCaughtException;

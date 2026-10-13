@@ -143,7 +143,7 @@ abstract class ArrayWidgetContainer extends Widget implements WidgetContainerMar
           fe.a(var8, -param3 + (param4 + 42), param6 - 43 + param7, 16777215, true);
           SoftwareRaster.a();
           fe.c(param2.strength + param2.bonusStrength + "/" + param2.maximumStrength, param4 + 272, param6 - (42 - param7), 16777215, param1);
-          ro.field_rb[param2.getUnitCategory(0)].draw(param4 + 9, param7 - 66 + param6);
+          ProgressMessageDialog.field_rb[param2.getUnitCategory(0)].draw(param4 + 9, param7 - 66 + param6);
           var9 = param2.l(-27014);
           SoftwareRaster.b(59 + param4, param7 - 41 + param6, 30, 30, 0, 128);
           cp.field_e[eb.bitCount((byte) -120, ~var9 & 3)].draw(param4 + 62, param7 - (-param6 + 41));
@@ -178,7 +178,7 @@ abstract class ArrayWidgetContainer extends Widget implements WidgetContainerMar
           }
           if (var11 != var12) {
             SoftwareRaster.b(param4 + 92, param7 - 41 + param6, 39, 30, 0, 128);
-            fe.c(EmailCheckResult.a(4800, td.field_a, new String[]{Integer.toString(var11), Integer.toString(var12)}), param4 + 111, param7 - 41 + (param6 + 30), 16777215, true);
+            fe.c(EmailCheckResult.a(4800, LinkButtonPainter.field_a, new String[]{Integer.toString(var11), Integer.toString(var12)}), param4 + 111, param7 - 41 + (param6 + 30), 16777215, true);
           } else {
             SoftwareRaster.b(96 + param4, -41 - (-param6 - param7), 30, 30, 0, 128);
             fe.c(Integer.toString(var11), param4 + 111, -41 - (-param6 - (param7 + 30)), 16777215, true);
@@ -252,7 +252,7 @@ abstract class ArrayWidgetContainer extends Widget implements WidgetContainerMar
             var13++;
           }
           if (param2.packedFlag32) {
-            BattleCharacter.field_h[j.field_j[td.a(param2.unitType, (byte) -125)]].h(-((3 & var13) * 30) + 235 + param4, 30 * (var13 >> 2) + param7 + param6 - 36);
+            BattleCharacter.field_h[j.field_j[LinkButtonPainter.a(param2.unitType, (byte) -125)]].h(-((3 & var13) * 30) + 235 + param4, 30 * (var13 >> 2) + param7 + param6 - 36);
             km.field_h[0].h(-((var13 & 3) * 30) + (param4 + 233), param6 - 37 + (param7 + (var13 >> 2) * 30));
             var13++;
           }

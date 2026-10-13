@@ -34,7 +34,7 @@ final class ConsoleTextNode extends IntrusiveNode {
     }
 
     final static void a(boolean param0) {
-        IsaacRandom.field_g = new kd();
+        IsaacRandom.field_g = new AccountRegistrationForm();
         if (param0) {
           ConsoleTextNode.pushRasterState((byte) 79);
           lt.field_g.replaceContent(IsaacRandom.field_g, (byte) 78);

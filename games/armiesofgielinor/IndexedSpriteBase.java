@@ -15,10 +15,10 @@ abstract class IndexedSpriteBase {
     final static void b(int param0) {
         if (param0 != 13829) {
           field_c = 27L;
-          ro.field_lb = null;
+          ProgressMessageDialog.field_lb = null;
           return;
         }
-        ro.field_lb = null;
+        ProgressMessageDialog.field_lb = null;
     }
 
     final static boolean isIgnoredAccount(String name, int obfuscationGuard) {

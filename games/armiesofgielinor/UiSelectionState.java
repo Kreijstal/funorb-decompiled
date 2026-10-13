@@ -209,9 +209,9 @@ final class UiSelectionState {
           if (var9 != null) {
             pg.openChatMessageContextMenu(0, var9);
           }
-          var8 = AccountNameCheckResult.a(false);
+          var8 = AccountRequestResult.a(false);
           if (var8 != null) {
-            ad.field_I = var8;
+            DialogMessagePane.field_I = var8;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -238,14 +238,14 @@ final class UiSelectionState {
           this.repeatCountdown = UnitCycler.field_a;
         }
         if (this.pressedPointerButton != 0 &&
-          0 != ro.pointerButton) {
+          0 != ProgressMessageDialog.pointerButton) {
           if (this.repeatCountdown <= 0) {
             this.repeatCountdown = GameEvent.field_k;
           }
           this.repeatCountdown = this.repeatCountdown - 1;
         }
         if (DeployEvent.pointerPressButton == 0 &&
-          ro.pointerButton == 0) {
+          ProgressMessageDialog.pointerButton == 0) {
           this.pressedPointerButton = 0;
         }
         if (this.pressedPointerButton == 0 && (this.pointerDrivenSelection ||

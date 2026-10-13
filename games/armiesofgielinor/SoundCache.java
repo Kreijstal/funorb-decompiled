@@ -5,7 +5,7 @@ final class SoundCache {
     private ResourceArchive soundEffectArchive;
     static String field_d;
     static int field_b;
-    static AccountNameCheckResult field_a;
+    static AccountRequestResult field_a;
     static String field_i;
     static String field_f;
     private ResourceArchive musicSampleArchive;
@@ -83,7 +83,7 @@ final class SoundCache {
             return stackIn_6_0;
           }
           if (!obfuscationGuard) {
-            field_a = (AccountNameCheckResult) null;
+            field_a = (AccountRequestResult) null;
           }
           throw new RuntimeException();
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

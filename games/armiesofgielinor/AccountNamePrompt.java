@@ -68,7 +68,7 @@ final class AccountNamePrompt extends ClientUiComponent {
             this.nameBuffer.length() > 0) {
             PortalLossCondition.a(' ', -1 + this.nameBuffer.length(), this.nameBuffer, true);
           }
-          if (kv.a(false, (CharSequence) ((Object) this.nameBuffer), DualNodeDeque.typedCharacter)) {
+          if (NameSuggestionList.canAppendAccountNameCharacter(false, (CharSequence) ((Object) this.nameBuffer), DualNodeDeque.typedCharacter)) {
             discarded$1 = this.nameBuffer.append(DualNodeDeque.typedCharacter);
           } else {
             if (this.nameBuffer.length() == 0 &&

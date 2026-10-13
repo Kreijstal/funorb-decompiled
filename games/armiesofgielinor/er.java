@@ -109,7 +109,7 @@ final class er {
           KingBlackDragonEvent.field_C.snapAndPruneDialogs(0);
         }
         if (PointerInputHandler.field_a != null) {
-          PointerInputHandler.field_a.i((byte) 2);
+          PointerInputHandler.field_a.freezeNormalProgressAnimation((byte) 2);
         }
         qh.a((byte) 124);
     }

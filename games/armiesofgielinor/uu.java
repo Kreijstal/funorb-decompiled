@@ -89,14 +89,14 @@ final class uu {
             var7.width = 0;
             if (!ToggleWidget.isCurrentRoomOwner(false)) {
               var9_ref_String = ToggleWidget.currentRoom.ownerName;
-              kd.field_F.text = EmailCheckResult.a(4800, CampaignMenu.field_m, new String[]{var9_ref_String}).toUpperCase();
+              AccountRegistrationForm.field_F.text = EmailCheckResult.a(4800, CampaignMenu.field_m, new String[]{var9_ref_String}).toUpperCase();
               pi.field_N.setBounds(40, param3 - 20500, pd.field_c.width, -40 + pd.field_c.height, 0);
               pi.field_N.text = EmailCheckResult.a(4800, GiveTileConsoleCommand.field_F, new String[]{var9_ref_String});
               var8 = pi.field_N;
               decompiledFrameRemainder1 = (var19 != 0);
             }
             if (decompiledFrameRemainder1) {
-              kd.field_F.text = DualNodeHashTable.field_f.toUpperCase();
+              AccountRegistrationForm.field_F.text = DualNodeHashTable.field_f.toUpperCase();
               var9 = (2 + pd.field_c.width) / 2;
               lm.field_b.setBounds(40, -20500, var9 - 2, -40 + pd.field_c.height, 0);
               if (ToggleWidget.currentRoom.playerCapacity > ToggleWidget.currentRoom.playerCount) {
@@ -343,12 +343,12 @@ final class uu {
                   so.field_d.inputEnabled = false;
                   if (so.field_d.hovered) {
                     if (DebugConsole.field_w.tabs.activeTab != 0) {
-                      ad.field_I = EmailCheckResult.a(4800, Battlefield.field_pb, new String[]{GridWidgetContainer.field_O});
+                      DialogMessagePane.field_I = EmailCheckResult.a(4800, Battlefield.field_pb, new String[]{GridWidgetContainer.field_O});
                       if (var19 != 0) {
-                        ad.field_I = ResourceArchive.field_f;
+                        DialogMessagePane.field_I = ResourceArchive.field_f;
                       }
                     } else {
-                      ad.field_I = ResourceArchive.field_f;
+                      DialogMessagePane.field_I = ResourceArchive.field_f;
                     }
                   }
                 }
@@ -405,7 +405,7 @@ final class uu {
                       var14 = MaskedTextEntryPainter.field_x + (String) (var11);
                     }
                   }
-                  ad.field_I = "<col=A00000>" + var13_ref + "<br>" + var14;
+                  DialogMessagePane.field_I = "<col=A00000>" + var13_ref + "<br>" + var14;
                 }
               }
             }

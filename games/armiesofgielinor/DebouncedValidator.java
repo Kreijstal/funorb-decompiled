@@ -249,7 +249,7 @@ abstract class DebouncedValidator implements ValidationSource {
           return lq.validationEmpty;
         }
         if (!((350L + this.lastChangeMillis) <= vi.monotonicMillis(-96))) {
-          return ad.validationWaiting;
+          return DialogMessagePane.validationWaiting;
         }
         return this.evaluateState(118);
     }

@@ -1,44 +1,44 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class kd extends DequeWidgetContainer implements TextHotspotListener, WidgetActivationListener, mf {
+final class AccountRegistrationForm extends DequeWidgetContainer implements TextHotspotListener, WidgetActivationListener, NameSuggestionListener {
     static String field_U;
-    kv field_T;
+    NameSuggestionList suggestions;
     static ClientUiComponent field_M;
     static int[][] field_Z;
     static PlatformTask field_J;
-    private ValidatedTextWidget field_I;
-    private ValidatedTextWidget field_K;
-    private HotspotTextWidget field_W;
-    private InteractiveWidget field_bb;
-    private ValidatedTextWidget field_H;
-    private ValidatedTextWidget field_O;
+    private ValidatedTextWidget emailInput;
+    private ValidatedTextWidget passwordConfirmationInput;
+    private HotspotTextWidget agreementText;
+    private InteractiveWidget submitButton;
+    private ValidatedTextWidget emailConfirmationInput;
+    private ValidatedTextWidget nameInput;
     static String field_Y;
-    private ToggleWidget field_ab;
+    private ToggleWidget emailOptInToggle;
     static int field_X;
-    private ValidatedTextWidget field_V;
+    private ValidatedTextWidget passwordInput;
     static String field_Q;
     static ClientUiComponent field_F;
     static PlatformTask field_R;
     static String field_L;
     static String field_S;
     static String field_E;
-    private InteractiveWidget field_G;
-    private ValidatedTextWidget field_N;
+    private InteractiveWidget backButton;
+    private ValidatedTextWidget ageInput;
 
-    public final void a(int param0, String param1) {
+    public final void nameSelected(int obfuscationGuard, String name) {
         ValidatedTextWidget var3 = null;
         String var4 = null;
         try {
-          if (param0 != -1) {
+          if (obfuscationGuard != -1) {
             byte[] var5 = (byte[]) null;
-            kd.a(11, (CipherPacketBuffer) null, (byte[]) null, (byte) -8);
+            AccountRegistrationForm.a(11, (CipherPacketBuffer) null, (byte[]) null, (byte) -8);
           }
-          var3 = this.field_O;
-          var4 = param1;
+          var3 = this.nameInput;
+          var4 = name;
           ((EditableTextWidget) ((Object) var3)).setText(false, var4, -27934);
         } catch (RuntimeException runtimeException) {
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "kd.I(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "kd.I(" + obfuscationGuard + ',' + (name != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -61,7 +61,7 @@ final class kd extends DequeWidgetContainer implements TextHotspotListener, Widg
         try {
           if (param3 > -101) {
             var9 = (byte[]) null;
-            kd.a(-26, (CipherPacketBuffer) null, (byte[]) null, (byte) -65);
+            AccountRegistrationForm.a(-26, (CipherPacketBuffer) null, (byte[]) null, (byte) -65);
           }
           var4_int = param1.readBits(-122, param0);
           if (var4_int == 0) {
@@ -170,74 +170,74 @@ final class kd extends DequeWidgetContainer implements TextHotspotListener, Widg
         }
     }
 
-    public kd() {
+    public AccountRegistrationForm() {
         super(0, 0, 496, 0, (WidgetPainter) null);
-        this.field_O = new ValidatedTextWidget("", (WidgetListener) null, 12);
-        this.field_I = new ValidatedTextWidget("", (WidgetListener) null, 100);
-        this.field_H = new ValidatedTextWidget("", (WidgetListener) null, 100);
-        this.field_V = new ValidatedTextWidget("", (WidgetListener) null, 20);
-        this.field_K = new ValidatedTextWidget("", (WidgetListener) null, 20);
-        this.field_N = new ValidatedTextWidget("", (WidgetListener) null, 3);
+        this.nameInput = new ValidatedTextWidget("", (WidgetListener) null, 12);
+        this.emailInput = new ValidatedTextWidget("", (WidgetListener) null, 100);
+        this.emailConfirmationInput = new ValidatedTextWidget("", (WidgetListener) null, 100);
+        this.passwordInput = new ValidatedTextWidget("", (WidgetListener) null, 20);
+        this.passwordConfirmationInput = new ValidatedTextWidget("", (WidgetListener) null, 20);
+        this.ageInput = new ValidatedTextWidget("", (WidgetListener) null, 3);
         int var1 = 1;
-        this.field_ab = new ToggleWidget("", (WidgetListener) null, var1 != 0);
-        this.field_bb = new InteractiveWidget(ed.field_c, (WidgetListener) null);
-        this.field_G = new InteractiveWidget(ContentTransitionDialog.field_Y, (WidgetListener) null);
-        this.field_O.tooltipText = DualLinkedNode.field_m;
-        this.field_I.tooltipText = NodeIterator.field_d;
-        this.field_H.tooltipText = AccountNamePrompt.field_Jb;
-        this.field_V.tooltipText = CachedArchiveProvider.field_k;
-        this.field_K.tooltipText = WeightedScoreStrategy.field_i;
-        this.field_N.tooltipText = StrongCacheEntry.field_A;
-        this.field_ab.tooltipText = rd.field_g;
-        this.field_O.setValidationSource((byte) 16, new AccountNameAvailabilityValidator(this.field_O));
-        this.field_I.setValidationSource((byte) 16, new EmailValidator(this.field_I));
-        this.field_H.setValidationSource((byte) 16, new EmailConfirmationValidator(this.field_H, this.field_I));
-        this.field_V.setValidationSource((byte) 16, new PasswordValidator(this.field_V, this.field_O, this.field_I));
-        this.field_K.setValidationSource((byte) 16, new MatchingTextValidator(this.field_K, this.field_V));
-        this.field_N.setValidationSource((byte) 16, new AgeValidator(this.field_N));
-        this.field_bb.enabled = false;
-        this.field_bb.painter = (WidgetPainter) ((Object) new nu());
-        this.field_G.painter = (WidgetPainter) ((Object) new td());
-        this.field_O.painter = (WidgetPainter) ((Object) new TextEntryWidgetPainter(10000536));
+        this.emailOptInToggle = new ToggleWidget("", (WidgetListener) null, var1 != 0);
+        this.submitButton = new InteractiveWidget(ed.field_c, (WidgetListener) null);
+        this.backButton = new InteractiveWidget(ContentTransitionDialog.field_Y, (WidgetListener) null);
+        this.nameInput.tooltipText = DualLinkedNode.field_m;
+        this.emailInput.tooltipText = NodeIterator.field_d;
+        this.emailConfirmationInput.tooltipText = AccountNamePrompt.field_Jb;
+        this.passwordInput.tooltipText = CachedArchiveProvider.field_k;
+        this.passwordConfirmationInput.tooltipText = WeightedScoreStrategy.field_i;
+        this.ageInput.tooltipText = StrongCacheEntry.field_A;
+        this.emailOptInToggle.tooltipText = rd.field_g;
+        this.nameInput.setValidationSource((byte) 16, new AccountNameAvailabilityValidator(this.nameInput));
+        this.emailInput.setValidationSource((byte) 16, new EmailValidator(this.emailInput));
+        this.emailConfirmationInput.setValidationSource((byte) 16, new EmailConfirmationValidator(this.emailConfirmationInput, this.emailInput));
+        this.passwordInput.setValidationSource((byte) 16, new PasswordValidator(this.passwordInput, this.nameInput, this.emailInput));
+        this.passwordConfirmationInput.setValidationSource((byte) 16, new MatchingTextValidator(this.passwordConfirmationInput, this.passwordInput));
+        this.ageInput.setValidationSource((byte) 16, new AgeValidator(this.ageInput));
+        this.submitButton.enabled = false;
+        this.submitButton.painter = (WidgetPainter) ((Object) new SpriteButtonPainter());
+        this.backButton.painter = (WidgetPainter) ((Object) new LinkButtonPainter());
+        this.nameInput.painter = (WidgetPainter) ((Object) new TextEntryWidgetPainter(10000536));
         TextEntryWidgetPainter dupTemp$0 = new TextEntryWidgetPainter(10000536);
-        this.field_H.painter = (WidgetPainter) ((Object) dupTemp$0);
-        this.field_I.painter = (WidgetPainter) ((Object) dupTemp$0);
-        this.field_N.painter = (WidgetPainter) ((Object) new TextEntryWidgetPainter(10000536));
-        this.field_ab.painter = (WidgetPainter) ((Object) new oi());
+        this.emailConfirmationInput.painter = (WidgetPainter) ((Object) dupTemp$0);
+        this.emailInput.painter = (WidgetPainter) ((Object) dupTemp$0);
+        this.ageInput.painter = (WidgetPainter) ((Object) new TextEntryWidgetPainter(10000536));
+        this.emailOptInToggle.painter = (WidgetPainter) ((Object) new oi());
         MaskedTextEntryPainter dupTemp$1 = new MaskedTextEntryPainter(10000536);
-        this.field_K.painter = (WidgetPainter) ((Object) dupTemp$1);
-        this.field_V.painter = (WidgetPainter) ((Object) dupTemp$1);
+        this.passwordConfirmationInput.painter = (WidgetPainter) ((Object) dupTemp$1);
+        this.passwordInput.painter = (WidgetPainter) ((Object) dupTemp$1);
         String var2 = EmailCheckResult.a(4800, StateChangeEvent.field_D, new String[]{this.m(150), this.l(29406)});
         int var3 = 20;
-        var3 = var3 + this.a(tn.field_X, var3, 170, (byte) 18, this.field_I);
-        var3 = var3 + (this.a(false, 170, this.field_H, TrianglePulse.field_j, 20, "", var3) + 5);
-        var3 = var3 + this.a(jj.field_h, var3, 170, (byte) 18, this.field_V);
-        var3 = var3 + (this.a(TurnEffectEvent.field_B, this.field_K, 170, tf.field_m, 210, var3) + 5);
-        var3 = var3 + (5 + this.a(ScrollContainer.field_Ob, this.field_O, 170, MusicPatchEnvelope.field_k, 210, var3));
-        var3 = var3 + this.a(var3, this.field_N, 170, field_S, 27270);
-        LabeledWidgetContainer var4 = new LabeledWidgetContainer(46, var3, this.width - 90, 25, this.field_ab, true, this.width - 120, 5, gl.field_e, 11579568, IterableDualNodeDeque.field_c);
+        var3 = var3 + this.a(tn.field_X, var3, 170, (byte) 18, this.emailInput);
+        var3 = var3 + (this.a(false, 170, this.emailConfirmationInput, TrianglePulse.field_j, 20, "", var3) + 5);
+        var3 = var3 + this.a(jj.field_h, var3, 170, (byte) 18, this.passwordInput);
+        var3 = var3 + (this.a(TurnEffectEvent.field_B, this.passwordConfirmationInput, 170, tf.field_m, 210, var3) + 5);
+        var3 = var3 + (5 + this.a(ScrollContainer.field_Ob, this.nameInput, 170, MusicPatchEnvelope.field_k, 210, var3));
+        var3 = var3 + this.a(var3, this.ageInput, 170, field_S, 27270);
+        LabeledWidgetContainer var4 = new LabeledWidgetContainer(46, var3, this.width - 90, 25, this.emailOptInToggle, true, this.width - 120, 5, gl.field_e, 11579568, IterableDualNodeDeque.field_c);
         this.addChild((byte) 10, (Widget) (var4));
         var3 = var3 + var4.height;
         BitmapTextWidgetPainter var5 = new BitmapTextWidgetPainter(ArmiesOfGielinor.field_J, 0, 0, 0, 0, 16777215, -1, 0, 0, ArmiesOfGielinor.field_J.maxAscent, -1, 2147483647, true);
-        this.field_W = new HotspotTextWidget(var2, var5);
-        this.field_W.tooltipText = "";
-        this.field_W.setHotspotTooltip(DiskCacheRequest.field_I, false, 0);
-        this.field_W.setHotspotTooltip(DiskCacheRequest.field_I, false, 1);
-        this.field_W.listener = (WidgetListener) (this);
-        this.field_W.setTextBounds(this.width - 90, 9567, 46, var3);
-        var3 = var3 + (this.field_W.height + 15);
-        this.addChild((byte) 10, (Widget) (this.field_W));
+        this.agreementText = new HotspotTextWidget(var2, var5);
+        this.agreementText.tooltipText = "";
+        this.agreementText.setHotspotTooltip(DiskCacheRequest.field_I, false, 0);
+        this.agreementText.setHotspotTooltip(DiskCacheRequest.field_I, false, 1);
+        this.agreementText.listener = (WidgetListener) (this);
+        this.agreementText.setTextBounds(this.width - 90, 9567, 46, var3);
+        var3 = var3 + (this.agreementText.height + 15);
+        this.addChild((byte) 10, (Widget) (this.agreementText));
         int var6 = 4;
         int var7 = 200;
-        this.field_bb.setBounds(496 - var7 >> 1, var7, var3, 8192, 40);
-        this.field_G.setBounds(var6 + 3, 60, 15 + var3, 8192, 40);
-        this.field_G.listener = (WidgetListener) (this);
-        this.field_bb.listener = (WidgetListener) (this);
-        this.addChild((byte) 10, (Widget) (this.field_bb));
-        this.addChild((byte) 10, (Widget) (this.field_G));
-        this.field_T = new kv((mf) (this));
-        this.field_T.setBounds(this.field_O.x - (-this.field_O.width - 60), this.width + (-this.field_O.x - this.field_O.width - 60), this.field_O.y + 20, 8192, 150);
-        this.addChild((byte) 10, (Widget) (this.field_T));
+        this.submitButton.setBounds(496 - var7 >> 1, var7, var3, 8192, 40);
+        this.backButton.setBounds(var6 + 3, 60, 15 + var3, 8192, 40);
+        this.backButton.listener = (WidgetListener) (this);
+        this.submitButton.listener = (WidgetListener) (this);
+        this.addChild((byte) 10, (Widget) (this.submitButton));
+        this.addChild((byte) 10, (Widget) (this.backButton));
+        this.suggestions = new NameSuggestionList((NameSuggestionListener) (this));
+        this.suggestions.setBounds(this.nameInput.x - (-this.nameInput.width - 60), this.width + (-this.nameInput.x - this.nameInput.width - 60), this.nameInput.y + 20, 8192, 150);
+        this.addChild((byte) 10, (Widget) (this.suggestions));
         this.setBounds(0, 496, 0, 8192, var3 + (55 + var6));
     }
 
@@ -248,39 +248,39 @@ final class kd extends DequeWidgetContainer implements TextHotspotListener, Widg
         return "<u=2164A2><col=2164A2>";
     }
 
-    private final boolean a(boolean param0, ValidationProvider param1) {
-        ValidationSource var3 = null;
-        RuntimeException var3_ref = null;
-        ValidationState var4 = null;
+    private final boolean isFieldReady(boolean obfuscationGuard, ValidationProvider field) {
+        ValidationSource source = null;
+        RuntimeException failure = null;
+        ValidationState state = null;
         RuntimeException stackIn_20_0 = null;
         StringBuilder stackIn_20_1 = null;
         String stackIn_21_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (!param0) {
+          if (!obfuscationGuard) {
             return false;
           }
-          var3 = param1.getValidationSource(-918933630);
-          if (var3 == null) {
+          source = field.getValidationSource(-918933630);
+          if (source == null) {
             return true;
           }
-          var4 = var3.getValidationState(false);
-          if (var4 == rn.validationInvalid) {
+          state = source.getValidationState(false);
+          if (state == rn.validationInvalid) {
             return false;
           }
-          if (var4 == ad.validationWaiting) {
+          if (state == DialogMessagePane.validationWaiting) {
             return false;
           }
-          if (lq.validationEmpty != var4) {
+          if (lq.validationEmpty != state) {
             return true;
           }
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          var3_ref = decompiledCaughtException;
-          stackIn_20_0 = var3_ref;
-          stackIn_20_1 = new StringBuilder().append("kd.B(").append(param0).append(',');
-          if (param1 == null) {
+          failure = decompiledCaughtException;
+          stackIn_20_0 = failure;
+          stackIn_20_1 = new StringBuilder().append("kd.B(").append(obfuscationGuard).append(',');
+          if (field == null) {
             stackIn_21_2 = "null";
           } else {
             stackIn_21_2 = "{...}";
@@ -298,7 +298,7 @@ final class kd extends DequeWidgetContainer implements TextHotspotListener, Widg
         field_Z = (int[][]) null;
         field_Q = null;
         if (param0 != 19) {
-          kd.f((byte) -98);
+          AccountRegistrationForm.f((byte) -98);
         }
         field_Y = null;
         field_R = null;
@@ -397,13 +397,13 @@ final class kd extends DequeWidgetContainer implements TextHotspotListener, Widg
         RuntimeException var6 = null;
         try {
           if (obfuscationGuard != 11) {
-            this.field_I = (ValidatedTextWidget) null;
+            this.emailInput = (ValidatedTextWidget) null;
           }
-          if (this.field_G == widget) {
+          if (this.backButton == widget) {
             PrintCoatConsoleCommand.g(111);
           } else {
-            if (widget == this.field_bb) {
-              discarded$1 = this.a(-1);
+            if (widget == this.submitButton) {
+              discarded$1 = this.submitRegistration(-1);
             }
           }
           return;
@@ -424,7 +424,7 @@ final class kd extends DequeWidgetContainer implements TextHotspotListener, Widg
     final void updatePointer(int obfuscationGuard, int originX, int originY, Widget rootWidget) {
         try {
           super.updatePointer(obfuscationGuard, originX, originY, rootWidget);
-          this.field_bb.enabled = this.k(obfuscationGuard ^ 32673);
+          this.submitButton.enabled = this.isFormReady(obfuscationGuard ^ 32673);
         } catch (RuntimeException runtimeException) {
           throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "kd.P(" + obfuscationGuard + ',' + originX + ',' + originY + ',' + (rootWidget != null ? "{...}" : "null") + ')');
         }
@@ -432,22 +432,22 @@ final class kd extends DequeWidgetContainer implements TextHotspotListener, Widg
 
     private final String l(int param0) {
         if (param0 != 29406) {
-          kd.a(109, -112, true);
+          AccountRegistrationForm.a(109, -112, true);
         }
         return "</col></u>";
     }
 
-    private final boolean k(int param0) {
-        String var3;
-        if (this.a(true, (ValidationProvider) (this.field_O)) &&
-          this.a(true, (ValidationProvider) (this.field_I)) &&
-          this.a(true, (ValidationProvider) (this.field_H)) &&
-          this.a(true, (ValidationProvider) (this.field_V)) &&
-          this.a(true, (ValidationProvider) (this.field_K)) &&
-          this.a(true, (ValidationProvider) (this.field_N))) {
-          if (param0 <= 96) {
-            var3 = (String) null;
-            this.a(6, (String) null);
+    private final boolean isFormReady(int obfuscationGuard) {
+        String guardName;
+        if (this.isFieldReady(true, (ValidationProvider) (this.nameInput)) &&
+          this.isFieldReady(true, (ValidationProvider) (this.emailInput)) &&
+          this.isFieldReady(true, (ValidationProvider) (this.emailConfirmationInput)) &&
+          this.isFieldReady(true, (ValidationProvider) (this.passwordInput)) &&
+          this.isFieldReady(true, (ValidationProvider) (this.passwordConfirmationInput)) &&
+          this.isFieldReady(true, (ValidationProvider) (this.ageInput))) {
+          if (obfuscationGuard <= 96) {
+            guardName = (String) null;
+            this.nameSelected(6, (String) null);
           }
           return true;
         }
@@ -489,11 +489,11 @@ final class kd extends DequeWidgetContainer implements TextHotspotListener, Widg
         }
     }
 
-    public final void a(byte param0) {
-        if (param0 != -116) {
+    public final void refreshNamesRequested(byte obfuscationGuard) {
+        if (obfuscationGuard != -116) {
           return;
         }
-        ((AccountNameAvailabilityValidator) (this.field_O.getValidationSource(-918933630))).invalidateNameCheck(50);
+        ((AccountNameAvailabilityValidator) (this.nameInput.getValidationSource(-918933630))).invalidateNameCheck(50);
     }
 
     private final int a(boolean param0, int param1, Widget param2, String param3, int param4, String param5, int param6) {
@@ -600,7 +600,7 @@ final class kd extends DequeWidgetContainer implements TextHotspotListener, Widg
           var6 = new LabeledWidgetContainer(20, param1, param2 + 120, 25, param4, false, 120, 3, ArmiesOfGielinor.field_J, 16777215, param0);
           this.addChild((byte) 10, (Widget) (var6));
           if (param3 != 18) {
-            this.field_G = (InteractiveWidget) null;
+            this.backButton = (InteractiveWidget) null;
           }
           stackIn_3_0 = var6.height;
           return stackIn_3_0;
@@ -672,16 +672,16 @@ final class kd extends DequeWidgetContainer implements TextHotspotListener, Widg
         }
     }
 
-    private final boolean a(int param0) {
-        if (!this.k(97)) {
+    private final boolean submitRegistration(int fallbackAge) {
+        if (!this.isFormReady(97)) {
           return false;
         }
-        int var2 = param0;
+        int age = fallbackAge;
         try {
-          var2 = Integer.parseInt(this.field_N.text);
-        } catch (NumberFormatException numberFormatException) {
+          age = Integer.parseInt(this.ageInput.text);
+        } catch (NumberFormatException parseFailure) {
         }
-        return BattleUnitRenderer.a(this.field_ab.active, this, this.field_V.text, this.field_I.text, var2, (byte) -110, this.field_O.text);
+        return BattleUnitRenderer.a(this.emailOptInToggle.active, this, this.passwordInput.text, this.emailInput.text, age, (byte) -110, this.nameInput.text);
     }
 
     static {

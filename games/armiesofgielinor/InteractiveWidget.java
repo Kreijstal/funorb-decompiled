@@ -22,10 +22,10 @@ class InteractiveWidget extends Widget {
         RuntimeException decompiledCaughtException = null;
         try {
           if (null != IsaacRandom.field_g) {
-            IsaacRandom.field_g.field_T.a(100, param1);
+            IsaacRandom.field_g.suggestions.setSuggestions(100, param1);
           }
           if (null != DequeWidgetContainer.field_C) {
-            DequeWidgetContainer.field_C.field_M.a(100, param1);
+            DequeWidgetContainer.field_C.suggestions.setSuggestions(100, param1);
           }
           if (param0 == -1) {
             return;
@@ -91,11 +91,11 @@ class InteractiveWidget extends Widget {
             field_C = -124;
           }
           if (this.pressedButton != 0) {
-            if (this.pressedButton == ro.pointerButton) {
+            if (this.pressedButton == ProgressMessageDialog.pointerButton) {
               return;
             }
             if (this.containsPointer(obfuscationGuard - 32721, originX, ko.pointerY, AiPlanningStrategy.pointerX, originY) &&
-              ro.pointerButton == 0) {
+              ProgressMessageDialog.pointerButton == 0) {
               this.activate(this.pressedButton, AiPlanningStrategy.pointerX - originX, ko.pointerY - originY, true);
             }
             this.pointerReleased(originY, rootWidget, AiPlanningStrategy.pointerX, (byte) -118, ko.pointerY, originX);

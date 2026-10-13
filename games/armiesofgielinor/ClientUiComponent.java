@@ -436,10 +436,10 @@ class ClientUiComponent extends ClientUiNode {
         }
         pointerInsideClip = (!QuickChatCategoryRepository.field_f) && (SoftwareRaster.clipLeft <= AiPlanningStrategy.pointerX) && (SoftwareRaster.clipRight > AiPlanningStrategy.pointerX) && (SoftwareRaster.clipTop <= ko.pointerY) && (SoftwareRaster.clipBottom > ko.pointerY);
         this.hovered = pointerInsideClip;
-        if (ro.pointerButton == 0) {
+        if (ProgressMessageDialog.pointerButton == 0) {
           this.heldPressButton = 0;
         }
-        buttonMatches = (this.hovered) && (ro.pointerButton == this.heldPressButton) && (inputAllowed);
+        buttonMatches = (this.hovered) && (ProgressMessageDialog.pointerButton == this.heldPressButton) && (inputAllowed);
         this.heldButtonMatches = buttonMatches;
         if (null != this.children) {
           child = (ClientUiComponent) (this.children.last((byte) -82));
@@ -573,7 +573,7 @@ class ClientUiComponent extends ClientUiNode {
           SpellCastEvent.field_D.setBounds(18, -20500, 42 + jn.field_c, 2 + jn.field_d, -40 + (eb.field_c.width - jn.field_c - 2));
           bu.field_a.setLayout(0, false, eb.field_c.width, 2, jn.field_c, 20 + (2 + jn.field_d), -20 + (-2 + (-jn.field_d + eb.field_c.height)));
           SocialListPanel.field_Lb.setBounds(40, -20500, BitmapTextWidgetPainter.field_a.width, BitmapTextWidgetPainter.field_a.height - 40, 0);
-          kd.field_F.setBounds(30, -20500, pd.field_c.width, 0, 0);
+          AccountRegistrationForm.field_F.setBounds(30, -20500, pd.field_c.width, 0, 0);
           if (param0 < 13) {
             return;
           }

@@ -1,13 +1,13 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class qd extends DequeWidgetContainer implements TextHotspotListener, WidgetActivationListener {
+final class RegistrationAgreementPane extends DequeWidgetContainer implements TextHotspotListener, WidgetActivationListener {
     static String chatRecipientName;
     static int lobbyNotificationDuration;
     static QuickChatMenu activeQuickChatMenu;
-    private HotspotTextWidget field_F;
-    private oe field_H;
-    private InteractiveWidget field_M;
+    private HotspotTextWidget agreementText;
+    private AccountRegistrationDialog dialog;
+    private InteractiveWidget continueButton;
     static String decodedChatDisplayName;
     static String field_J;
 
@@ -16,7 +16,7 @@ final class qd extends DequeWidgetContainer implements TextHotspotListener, Widg
         chatRecipientName = null;
         activeQuickChatMenu = null;
         if (param0 != -15) {
-          qd.k(71);
+          RegistrationAgreementPane.k(71);
           field_J = null;
           return;
         }
@@ -25,7 +25,7 @@ final class qd extends DequeWidgetContainer implements TextHotspotListener, Widg
 
     private final String a(byte param0) {
         if (param0 != -117) {
-          this.field_M = (InteractiveWidget) null;
+          this.continueButton = (InteractiveWidget) null;
           return "</col></u>";
         }
         return "</col></u>";
@@ -54,7 +54,7 @@ final class qd extends DequeWidgetContainer implements TextHotspotListener, Widg
           if (obfuscationGuard > 102) {
             return;
           }
-          this.field_F = (HotspotTextWidget) null;
+          this.agreementText = (HotspotTextWidget) null;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -100,7 +100,7 @@ final class qd extends DequeWidgetContainer implements TextHotspotListener, Widg
           }
           if (obfuscationGuard) {
             var4 = (PcmStreamMixer) null;
-            qd.a((ResourceArchive) null, (byte) 120, (PcmStreamMixer) null, -19);
+            RegistrationAgreementPane.a((ResourceArchive) null, (byte) 120, (PcmStreamMixer) null, -19);
           }
           if (!Battlefield.passwordContainsCompactNameVariant(password, (byte) -26, name)) {
             return true;
@@ -171,7 +171,7 @@ final class qd extends DequeWidgetContainer implements TextHotspotListener, Widg
           ng.b(true);
           if (param1 <= 70) {
             String var5 = (String) null;
-            qd.isPasswordAllowedForName((String) null, (String) null, true);
+            RegistrationAgreementPane.isPasswordAllowedForName((String) null, (String) null, true);
           }
           PasswordValidator.field_j = 0 - InteractiveWidget.field_C;
         } catch (RuntimeException runtimeException) {
@@ -179,7 +179,7 @@ final class qd extends DequeWidgetContainer implements TextHotspotListener, Widg
         }
     }
 
-    qd(oe param0) {
+    RegistrationAgreementPane(AccountRegistrationDialog dialog) {
         super(0, 0, 288, 0, (WidgetPainter) null);
         String var7 = null;
         int var3 = 0;
@@ -187,29 +187,29 @@ final class qd extends DequeWidgetContainer implements TextHotspotListener, Widg
         int var5 = 0;
         int var6 = 0;
         try {
-          this.field_H = param0;
-          this.field_M = new InteractiveWidget(ro.field_kb, (WidgetListener) null);
-          this.field_M.painter = (WidgetPainter) ((Object) new nu());
+          this.dialog = dialog;
+          this.continueButton = new InteractiveWidget(ProgressMessageDialog.field_kb, (WidgetListener) null);
+          this.continueButton.painter = (WidgetPainter) ((Object) new SpriteButtonPainter());
           var7 = EmailCheckResult.a(4800, MidiPcmStream.field_R, new String[]{this.a(-29442), this.a((byte) -117)});
           var3 = 20;
           var4 = new BitmapTextWidgetPainter(ArmiesOfGielinor.field_J, 0, 0, 0, 0, 16777215, -1, 3, 0, ArmiesOfGielinor.field_J.maxAscent, -1, 2147483647, true);
-          this.field_F = new HotspotTextWidget(var7, var4);
-          this.field_F.tooltipText = "";
-          this.field_F.setHotspotTooltip(DiskCacheRequest.field_I, false, 0);
-          this.field_F.setHotspotTooltip(DiskCacheRequest.field_I, false, 1);
-          this.field_F.width = -40 + this.width;
-          this.field_F.listener = (WidgetListener) (this);
-          this.field_F.setTextBounds(this.width - 40, 9567, 26, var3);
-          var3 = var3 + (this.field_F.height + 15);
-          this.addChild((byte) 10, (Widget) (this.field_F));
+          this.agreementText = new HotspotTextWidget(var7, var4);
+          this.agreementText.tooltipText = "";
+          this.agreementText.setHotspotTooltip(DiskCacheRequest.field_I, false, 0);
+          this.agreementText.setHotspotTooltip(DiskCacheRequest.field_I, false, 1);
+          this.agreementText.width = -40 + this.width;
+          this.agreementText.listener = (WidgetListener) (this);
+          this.agreementText.setTextBounds(this.width - 40, 9567, 26, var3);
+          var3 = var3 + (this.agreementText.height + 15);
+          this.addChild((byte) 10, (Widget) (this.agreementText));
           var5 = 4;
           var6 = 200;
-          this.field_M.setBounds(-var6 + 300 >> 1, var6, var3, 8192, 40);
-          this.field_M.listener = (WidgetListener) (this);
-          this.addChild((byte) 10, (Widget) (this.field_M));
+          this.continueButton.setBounds(-var6 + 300 >> 1, var6, var3, 8192, 40);
+          this.continueButton.listener = (WidgetListener) (this);
+          this.addChild((byte) 10, (Widget) (this.continueButton));
           this.setBounds(0, 300, 0, 8192, var5 + var3 + 55);
         } catch (RuntimeException runtimeException) {
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "qd.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "qd.<init>(" + (dialog != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -223,11 +223,11 @@ final class qd extends DequeWidgetContainer implements TextHotspotListener, Widg
           if (obfuscationGuard != 11) {
             decodedChatDisplayName = (String) null;
           }
-          if (widget != this.field_M) {
+          if (widget != this.continueButton) {
             return;
           }
           bt.b(0);
-          this.field_H.b(true);
+          this.dialog.closeDialog(true);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

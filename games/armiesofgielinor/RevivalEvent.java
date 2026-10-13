@@ -160,7 +160,7 @@ final class RevivalEvent extends GameEvent {
         if (obfuscationGuard != 0) {
           return 45;
         }
-        return wr.campaignPacketWord3;
+        return BirthDateChatEnableForm.campaignPacketWord3;
     }
 
     final void applyToBattlefield(Battlefield battlefield, int obfuscationGuard) {
@@ -194,10 +194,10 @@ final class RevivalEvent extends GameEvent {
             field_B = (String) null;
           }
           ep.a(!param0, param1, param2);
-          if (null == ad.field_I) {
+          if (null == DialogMessagePane.field_I) {
             return;
           }
-          op.a(-110, ad.field_I);
+          op.a(-110, DialogMessagePane.field_I);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

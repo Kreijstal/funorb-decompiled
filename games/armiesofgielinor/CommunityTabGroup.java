@@ -96,9 +96,9 @@ final class CommunityTabGroup {
         }
         separateAccountName = (packet.readUnsignedByte(0) != 1) ? 0 : 1;
         hasSeparateAccountName = separateAccountName;
-        qd.decodedChatDisplayName = packet.readNullTerminatedString(1);
+        RegistrationAgreementPane.decodedChatDisplayName = packet.readNullTerminatedString(1);
         if (hasSeparateAccountName == 0) {
-          gp.decodedChatAccountName = qd.decodedChatDisplayName;
+          gp.decodedChatAccountName = RegistrationAgreementPane.decodedChatDisplayName;
         } else {
           gp.decodedChatAccountName = packet.readNullTerminatedString(1);
         }
@@ -262,9 +262,9 @@ final class CommunityTabGroup {
         }
         separateAccountName = (packet.readUnsignedByte(0) != 1) ? 0 : 1;
         hasSeparateAccountName = separateAccountName;
-        qd.decodedChatDisplayName = packet.readNullTerminatedString(1);
+        RegistrationAgreementPane.decodedChatDisplayName = packet.readNullTerminatedString(1);
         if (hasSeparateAccountName == 0) {
-          gp.decodedChatAccountName = qd.decodedChatDisplayName;
+          gp.decodedChatAccountName = RegistrationAgreementPane.decodedChatDisplayName;
         } else {
           gp.decodedChatAccountName = packet.readNullTerminatedString(1);
         }

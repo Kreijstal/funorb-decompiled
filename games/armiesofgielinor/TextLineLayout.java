@@ -81,15 +81,15 @@ final class TextLineLayout {
     }
 
     final static void a(byte param0) {
-        td.field_f = new BattleGraphicsAssets(iw.field_l);
+        LinkButtonPainter.field_f = new BattleGraphicsAssets(iw.field_l);
         if (param0 < -36) {
-          td.field_f.selectTheme(0, 0);
-          td.field_f.loadBasicSprites(0);
+          LinkButtonPainter.field_f.selectTheme(0, 0);
+          LinkButtonPainter.field_f.loadBasicSprites(0);
           return;
         }
         currentSpellMenu = (SpellMenuGroup) null;
-        td.field_f.selectTheme(0, 0);
-        td.field_f.loadBasicSprites(0);
+        LinkButtonPainter.field_f.selectTheme(0, 0);
+        LinkButtonPainter.field_f.loadBasicSprites(0);
     }
 
     final int getRightEdge(int obfuscationGuard) {
@@ -154,7 +154,7 @@ final class TextLineLayout {
             r.field_B = var8.length;
             var4 = mission.playerSlot;
             ByteStorage.field_g = obfuscationGuard + r.field_B;
-            td.field_f.selectTheme(mission.mapTheme, 0);
+            LinkButtonPainter.field_f.selectTheme(mission.mapTheme, 0);
             stackIn_4_0 = null;
             stackIn_4_1 = null;
             stackIn_4_2 = false;
@@ -162,7 +162,7 @@ final class TextLineLayout {
             stackIn_4_4 = var3;
             stackIn_4_5 = var4;
             stackIn_4_6 = false;
-            stackIn_4_7 = td.field_f;
+            stackIn_4_7 = LinkButtonPainter.field_f;
             stackIn_4_8 = mission.mapSizeSetting;
             stackIn_4_9 = ArmiesOfGielinor.field_K;
             stackIn_4_10 = mission.mapTheme;

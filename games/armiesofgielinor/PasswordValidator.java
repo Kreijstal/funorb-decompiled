@@ -105,7 +105,7 @@ final class PasswordValidator extends TextFieldValidator {
           if (obfuscationGuard != -3137) {
             field_j = 109;
           }
-          if (!qd.isPasswordAllowedForName(lowerPassword, lowerName, false)) {
+          if (!RegistrationAgreementPane.isPasswordAllowedForName(lowerPassword, lowerName, false)) {
             nameInvalidState = rn.validationInvalid;
             return nameInvalidState;
           }
@@ -212,19 +212,19 @@ final class PasswordValidator extends TextFieldValidator {
           ClientConnectionState.field_a.e(-29 + param2 + (param5 >> 1), param7 + (param1 + param8 + 9), 128);
           ClientConnectionState.field_a.e(11 + ((param5 >> 1) + param2), 9 + param1 + (param8 - 40), 128);
           ClientConnectionState.field_a.c();
-          if (kd.field_X < 0) {
+          if (AccountRegistrationForm.field_X < 0) {
             stackIn_18_0 = var9_int;
             return stackIn_18_0;
           }
           var10 = param8 - (dd.field_e - 44);
           var11 = 0;
-          if (od.field_c[kd.field_X]) {
+          if (od.field_c[AccountRegistrationForm.field_X]) {
             var11 = -1;
           }
           var12_int = 0;
           scanLoop1: while (true) {
-            stackIn_25_0 = (!od.field_c[kd.field_X]) ? 0 : 1;
-            if (stackIn_25_0 + SectorCacheStore.field_j[kd.field_X].length > var12_int) {
+            stackIn_25_0 = (!od.field_c[AccountRegistrationForm.field_X]) ? 0 : 1;
+            if (stackIn_25_0 + SectorCacheStore.field_j[AccountRegistrationForm.field_X].length > var12_int) {
               SoftwareRaster.setClip(8 + param2, 44 + param8, param2 + param5 - 8, param1 + (param8 - 40 - 4));
               if (var12_int % 2 != 1) {
                 stackIn_29_0 = 0;
@@ -235,7 +235,7 @@ final class PasswordValidator extends TextFieldValidator {
               var14 = 1 + var10;
               if (var11 != param6) {
                 if (var9_int == var11) {
-                  stackIn_40_0 = kd.field_X;
+                  stackIn_40_0 = AccountRegistrationForm.field_X;
                   stackIn_40_1 = pg.playerProfile.getUnlockLevel(param7 ^ -40);
                   stackIn_41_2 = !(2 > BufferedSocket.field_j);
                   if (!BufferedFile.a(stackIn_40_0, stackIn_40_1, stackIn_41_2, var11, -1208926000, BoundedFile.field_e[0])) {
@@ -244,7 +244,7 @@ final class PasswordValidator extends TextFieldValidator {
                     fe.a(var13, var14, -9 + (param5 >> 1), 78, MusicPatch.field_m, TutorialController.field_e, 0, 128, false);
                   }
                 } else {
-                  stackIn_34_0 = kd.field_X;
+                  stackIn_34_0 = AccountRegistrationForm.field_X;
                   stackIn_34_1 = pg.playerProfile.getUnlockLevel(0);
                   stackIn_35_2 = !(BufferedSocket.field_j < 2);
                   if (!BufferedFile.a(stackIn_34_0, stackIn_34_1, stackIn_35_2, var11, -1208926000, BoundedFile.field_e[0])) {
@@ -277,10 +277,10 @@ final class PasswordValidator extends TextFieldValidator {
                 stackIn_53_3 = -44 + (param8 + param1);
               }
               SoftwareRaster.setClip(stackIn_52_0, stackIn_52_1, stackIn_52_2, stackIn_53_3);
-              if ((uh.field_e[kd.field_X][1] >> 1) + var10 >= 0) {
+              if ((uh.field_e[AccountRegistrationForm.field_X][1] >> 1) + var10 >= 0) {
                 if (var11 > -1) {
-                  if (kd.field_X != 1) {
-                    if (kd.field_X == 2) {
+                  if (AccountRegistrationForm.field_X != 1) {
+                    if (AccountRegistrationForm.field_X == 2) {
                       stackIn_76_0 = SectorCacheStore.field_j[2][var11];
                       if (var12_int % 2 == 0) {
                         stackIn_77_1 = 0;
@@ -289,7 +289,7 @@ final class PasswordValidator extends TextFieldValidator {
                       }
                       ((IndexedSprite) (Object) stackIn_76_0).c(stackIn_77_1 + (param5 / 4 + param2) - (uh.field_e[2][0] >> 3), 40 + (var10 - (uh.field_e[2][1] >> 3)));
                     } else {
-                      if (kd.field_X == 3) {
+                      if (AccountRegistrationForm.field_X == 3) {
                         stackIn_72_0 = SectorCacheStore.field_j[3][var11];
                         if (var12_int % 2 != 0) {
                           stackIn_73_1 = param5 / 2;
@@ -298,15 +298,15 @@ final class PasswordValidator extends TextFieldValidator {
                         }
                         ((IndexedSprite) (Object) stackIn_72_0).draw(stackIn_73_1 - (uh.field_e[3][0] >> 3) + param2 + param5 / 4, -(uh.field_e[3][1] >> 1) + (40 + var10));
                       } else {
-                        stackIn_68_0 = SectorCacheStore.field_j[kd.field_X][var11];
+                        stackIn_68_0 = SectorCacheStore.field_j[AccountRegistrationForm.field_X][var11];
                         stackIn_68_1 = param5 / 4 + param2;
-                        stackIn_68_2 = uh.field_e[kd.field_X][0] / 4;
+                        stackIn_68_2 = uh.field_e[AccountRegistrationForm.field_X][0] / 4;
                         if (var12_int % 2 != 0) {
                           stackIn_69_3 = param5 / 2;
                         } else {
                           stackIn_69_3 = 0;
                         }
-                        ((IndexedSprite) (Object) stackIn_68_0).d(stackIn_68_1 - (stackIn_68_2 - stackIn_69_3), var10 + 40 - (uh.field_e[kd.field_X][1] >> 2));
+                        ((IndexedSprite) (Object) stackIn_68_0).d(stackIn_68_1 - (stackIn_68_2 - stackIn_69_3), var10 + 40 - (uh.field_e[AccountRegistrationForm.field_X][1] >> 2));
                       }
                     }
                   } else {
@@ -342,24 +342,24 @@ final class PasswordValidator extends TextFieldValidator {
             break;
           }
           SoftwareRaster.a();
-          if (kd.field_X > -1) {
-            stackIn_87_0 = kd.field_X;
+          if (AccountRegistrationForm.field_X > -1) {
+            stackIn_87_0 = AccountRegistrationForm.field_X;
             stackIn_87_1 = pg.playerProfile.getUnlockLevel(0);
             stackIn_88_2 = !(BufferedSocket.field_j < 2);
             if (!BufferedFile.a(stackIn_87_0, stackIn_87_1, stackIn_88_2, var9_int, -1208926000, BoundedFile.field_e[0])) {
               param4 += 10;
               param3 += 30;
               var12 = null;
-              if (el.field_f[kd.field_X][var9_int] <= pg.playerProfile.getUnlockLevel(param7 ^ -40)) {
-                if (ve.field_a[kd.field_X][var9_int] < 0) {
+              if (el.field_f[AccountRegistrationForm.field_X][var9_int] <= pg.playerProfile.getUnlockLevel(param7 ^ -40)) {
+                if (ve.field_a[AccountRegistrationForm.field_X][var9_int] < 0) {
                   var12 = "Unavailable to lowly players";
                 } else {
-                  if ((ve.field_a[kd.field_X][var9_int] & 504) != 504) {
+                  if ((ve.field_a[AccountRegistrationForm.field_X][var9_int] & 504) != 504) {
                     var13Lifetime1 = 0;
                     var18 = 0;
                     var14Lifetime1 = var18;
                     while (16 > var18) {
-                      if (0 != (1 << var18 & ve.field_a[kd.field_X][var9_int])) {
+                      if (0 != (1 << var18 & ve.field_a[AccountRegistrationForm.field_X][var9_int])) {
                         if (var13Lifetime1 != 0 &&
                           var12 != null) {
                           var12 = EmailCheckResult.a(param7 + 4840, ModalDialogHost.field_L, new String[]{(String) (var12), so.field_a[var18]});
@@ -375,7 +375,7 @@ final class PasswordValidator extends TextFieldValidator {
                   }
                 }
               } else {
-                var12 = EmailCheckResult.a(4800, VerticalScrollbar.field_Jb, new String[]{Integer.toString(el.field_f[kd.field_X][var9_int])});
+                var12 = EmailCheckResult.a(4800, VerticalScrollbar.field_Jb, new String[]{Integer.toString(el.field_f[AccountRegistrationForm.field_X][var9_int])});
               }
               if (var12 != null) {
                 var19 = EmailCheckResult.a(4800, BattlefieldTheme.field_s, new String[]{(String) (var12)});
@@ -467,19 +467,19 @@ final class PasswordValidator extends TextFieldValidator {
           return;
         }
         OwnerChangeEvent.quickChatMenuHost.updateInput(true, param1);
-        int var4 = qd.activeQuickChatMenu.hasPressedItem((byte) 91) ? 1 : 0;
+        int var4 = RegistrationAgreementPane.activeQuickChatMenu.hasPressedItem((byte) 91) ? 1 : 0;
         if (DeployEvent.pointerPressButton != 0 &&
           var4 == 0) {
           param1 = false;
           DelayedPacket.e(-3);
         }
         if (param1) {
-          qd.activeQuickChatMenu.advanceMenu(param3, (byte) -42, param2);
+          RegistrationAgreementPane.activeQuickChatMenu.advanceMenu(param3, (byte) -42, param2);
         }
         if (var4 != 0) {
           OwnerChangeEvent.quickChatMenuHost.updateInput(true, param1);
         }
-        int var5 = qd.activeQuickChatMenu.getOpenMenuWidth((byte) -123) + qd.activeQuickChatMenu.screenX;
+        int var5 = RegistrationAgreementPane.activeQuickChatMenu.getOpenMenuWidth((byte) -123) + RegistrationAgreementPane.activeQuickChatMenu.screenX;
         if (var5 > 640) {
           TelefragEvent.field_z = TelefragEvent.field_z + 5;
         } else {

@@ -122,10 +122,10 @@ final class SpellCastEvent extends GameEvent {
           if (param1 != -32666) {
             field_D = (ClientUiComponent) null;
           }
-          var2 = oe.field_Bb.first((byte) 105);
+          var2 = AccountRegistrationDialog.field_Bb.first((byte) 105);
           while (var2 != null) {
             tq.a(param0, 0);
-            var2 = oe.field_Bb.next((byte) 123);
+            var2 = AccountRegistrationDialog.field_Bb.next((byte) 123);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -161,7 +161,7 @@ final class SpellCastEvent extends GameEvent {
           return QuickChatPhraseRepository.field_a + " - " + CombatPresentation.field_M.getGroupProgressByName("commonui", (byte) 122) + "%";
         }
         if (!h.field_g.ensureIndex((byte) 82)) {
-          return cr.field_eb;
+          return ProgressDialog.field_eb;
         }
         if (!h.field_g.ensureAllGroupsAvailable(param0 ^ 20707)) {
           return DateInputWidget.field_G + " - " + h.field_g.getOverallProgress(0) + "%";

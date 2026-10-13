@@ -139,7 +139,7 @@ final class FixedQuaternion {
           jt.a(param6 - 32133, param0, param4, param3);
           if (null != tn.activeContextMenu) {
             if (!tn.activeContextMenu.pollAndDispatch(param1, (byte) 103, param4, param5, param0)) {
-              kd.a(param6 ^ -81, param4, param0);
+              AccountRegistrationForm.a(param6 ^ -81, param4, param0);
               wm.a(0, param2, param0);
               param0 = false;
               if (param6 != -83) {
@@ -152,7 +152,7 @@ final class FixedQuaternion {
             param0 = false;
             FixInvisibleUnitsConsoleCommand.g(76);
           }
-          kd.a(param6 ^ -81, param4, param0);
+          AccountRegistrationForm.a(param6 ^ -81, param4, param0);
           wm.a(0, param2, param0);
           param0 = false;
         }

@@ -43,7 +43,7 @@ final class DelayedPacket extends IntrusiveNode {
         controllerAlias.battlefield.eliminatePlayer(10001, playerId, false);
         kw.campaignPacketWord0 = 2297;
         cg.campaignPacketWord2 = 72584621;
-        wr.campaignPacketWord3 = 224;
+        BirthDateChatEnableForm.campaignPacketWord3 = 224;
         ii.campaignPacketWord1 = 4452;
         int turnsTaken = controller.battlefield.playerTurnCounts[controller.controlledPlayerId];
         int damageTaken = controller.battlefield.damageTakenByPlayer[controller.controlledPlayerId];

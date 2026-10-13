@@ -89,7 +89,7 @@ final class QuickChatMenu extends ClientUiComponent {
           }
           return this.activeSubmenu.handleKeyboard(false, selectionContext, messageContext);
         }
-        if (null == this.activeSubmenu && this == qd.activeQuickChatMenu &&
+        if (null == this.activeSubmenu && this == RegistrationAgreementPane.activeQuickChatMenu &&
           var4 != 0) {
           e.closeQuickChatMenu((byte) -101);
           return true;
@@ -168,8 +168,8 @@ final class QuickChatMenu extends ClientUiComponent {
                 ud.setChatFilter(1, false, var6, selectionContext);
               }
               String var8 = (String) null;
-              it.writeChatMessage(var5, -91, rs.outgoingChatChannel, qd.chatRecipientName, messageContext, (String) null);
-              AgeValidator.rememberLastQuickChat(qd.chatRecipientName, dj.chatRecipientAccountId, var5, rs.outgoingChatChannel, obfuscationGuard ^ 4124);
+              it.writeChatMessage(var5, -91, rs.outgoingChatChannel, RegistrationAgreementPane.chatRecipientName, messageContext, (String) null);
+              AgeValidator.rememberLastQuickChat(RegistrationAgreementPane.chatRecipientName, dj.chatRecipientAccountId, var5, rs.outgoingChatChannel, obfuscationGuard ^ 4124);
               e.closeQuickChatMenu((byte) -126);
               wf.g(-20873);
             }

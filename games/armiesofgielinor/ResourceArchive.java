@@ -512,7 +512,7 @@ final class ResourceArchive {
           }
           stackIn_5_0 = (DeployEvent.pointerPressButton != 1) ? 0 : 1;
           var3 = stackIn_5_0;
-          stackIn_8_0 = (ro.pointerButton != 1) ? 0 : 1;
+          stackIn_8_0 = (ProgressMessageDialog.pointerButton != 1) ? 0 : 1;
           var4 = stackIn_8_0;
           TurnEffectEvent.field_z.a(87, var4 != 0, var3 != 0, var1_int, var2, el.field_d);
           while (true) {

@@ -91,7 +91,7 @@ final class kw extends InteractiveWidget {
         var6 = this.y + originY + (this.height >> 1);
         if (obfuscationGuard <= -82) {
           var8 = this.field_O.getValidationState(false);
-          if (ad.validationWaiting != var8 &&
+          if (DialogMessagePane.validationWaiting != var8 &&
             so.validationChecking != var8) {
             if (var8 == rn.validationInvalid) {
               var19 = db.validationStatusIcons[2];
@@ -132,7 +132,7 @@ final class kw extends InteractiveWidget {
         }
         this.drawWidget(105, -107, (byte) -98, -86);
         var8Lifetime1 = this.field_O.getValidationState(false);
-        if (ad.validationWaiting == var8Lifetime1) {
+        if (DialogMessagePane.validationWaiting == var8Lifetime1) {
           var15 = db.validationStatusIcons[0];
           var9Lifetime1 = var15.canvasWidth << 1;
           var10Lifetime1 = var15.canvasHeight << 1;

@@ -82,7 +82,7 @@ final class ug extends IOException {
           }
           var12 = param3.a(true, param5, param4, param1, param0);
           while (var12.status == 0) {
-            nu.a(10L, 0);
+            SpriteButtonPainter.a(10L, 0);
           }
           var7 = (java.awt.Frame) (var12.result);
           if (var7 == null) {

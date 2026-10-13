@@ -1227,7 +1227,7 @@ final class TickCounter {
                 }
                 var2 = fk.a(false, "LABEL_AWARD_KBDSUMMONER");
                 if (null != var2) {
-                  kd.field_Q = uu.a(var2, (byte) 54);
+                  AccountRegistrationForm.field_Q = uu.a(var2, (byte) 54);
                 }
                 var2 = fk.a(false, "LABEL_AWARD_MANASPEND");
                 if (var2 != null) {
@@ -1291,7 +1291,7 @@ final class TickCounter {
                 }
                 var2 = fk.a(false, "QUICKSAVE_PROGRESS");
                 if (var2 != null) {
-                  AccountNameCheckResult.field_e = uu.a(var2, (byte) -113);
+                  AccountRequestResult.field_e = uu.a(var2, (byte) -113);
                 }
                 var2 = fk.a(false, "QUICKSAVING");
                 if (var2 != null) {
@@ -1335,7 +1335,7 @@ final class TickCounter {
                 }
                 var2 = fk.a(false, "CONTINUEMISSION");
                 if (var2 != null) {
-                  kd.field_Y = uu.a(var2, (byte) -96);
+                  AccountRegistrationForm.field_Y = uu.a(var2, (byte) -96);
                 }
                 var2 = fk.a(false, "RESTARTMISSION");
                 if (null != var2) {
@@ -1475,7 +1475,7 @@ final class TickCounter {
                 }
                 var2 = fk.a(false, "ACTION_NONE");
                 if (null != var2) {
-                  kv.field_J = uu.a(var2, (byte) 34);
+                  NameSuggestionList.field_J = uu.a(var2, (byte) 34);
                 }
                 var2 = fk.a(false, "ACTION_NOTYOURS");
                 if (null != var2) {
@@ -1607,7 +1607,7 @@ final class TickCounter {
                 }
                 var2 = fk.a(false, "STATUS_MITOSE");
                 if (var2 != null) {
-                  td.field_h = uu.a(var2, (byte) 82);
+                  LinkButtonPainter.field_h = uu.a(var2, (byte) 82);
                 }
                 var2 = fk.a(false, "STATUS_ACCESSORY,0");
                 if (var2 != null) {
@@ -1705,7 +1705,7 @@ final class TickCounter {
                 }
                 var2 = fk.a(false, "BUTTON_TEAMCHATOFF");
                 if (var2 != null) {
-                  kd.field_E = uu.a(var2, (byte) 34);
+                  AccountRegistrationForm.field_E = uu.a(var2, (byte) 34);
                 }
                 var2 = fk.a(false, "BUTTON_EQUIPMENT");
                 if (null != var2) {
@@ -1777,7 +1777,7 @@ final class TickCounter {
                 }
                 var2 = fk.a(false, "MANA_COUNTER_VICTORY");
                 if (var2 != null) {
-                  cr.field_bb = uu.a(var2, (byte) -108);
+                  ProgressDialog.field_bb = uu.a(var2, (byte) -108);
                 }
                 var2 = fk.a(false, "MANA_COUNTER_VICTORY2");
                 if (null != var2) {
@@ -2413,7 +2413,7 @@ final class TickCounter {
                 }
                 var2 = fk.a(false, "TXT_RANGES");
                 if (var2 != null) {
-                  td.field_a = uu.a(var2, (byte) 121);
+                  LinkButtonPainter.field_a = uu.a(var2, (byte) 121);
                 }
                 var2 = fk.a(false, "TXT_RANGES2");
                 if (null != var2) {
@@ -3239,11 +3239,11 @@ final class TickCounter {
                 }
                 var2 = fk.a(false, "LABEL_OPTIONS");
                 if (var2 != null) {
-                  AccountNameCheckResult.field_j = uu.a(var2, (byte) 36);
+                  AccountRequestResult.field_j = uu.a(var2, (byte) 36);
                 }
                 var2 = fk.a(false, "LABEL_QUALITY");
                 if (null != var2) {
-                  rj.field_G = uu.a(var2, (byte) -117);
+                  StripedProgressWidget.field_G = uu.a(var2, (byte) -117);
                 }
                 var2 = fk.a(false, "LABEL_SKIPBATTLES");
                 if (null != var2) {
@@ -3431,7 +3431,7 @@ final class TickCounter {
                 }
                 var2 = fk.a(false, "TEXT_OFF");
                 if (var2 != null) {
-                  qd.field_J = uu.a(var2, (byte) -124);
+                  RegistrationAgreementPane.field_J = uu.a(var2, (byte) -124);
                 }
                 var2 = fk.a(false, "TUT_TEXT,0");
                 if (null != var2) {
@@ -3641,7 +3641,7 @@ final class TickCounter {
                 }
                 var2 = fk.a(false, "MESSAGE_QUIT");
                 if (null != var2) {
-                  AccountNameCheckResult.field_g = uu.a(var2, (byte) -126);
+                  AccountRequestResult.field_g = uu.a(var2, (byte) -126);
                 }
                 var2 = fk.a(false, "MESSAGE_DEAD");
                 if (var2 != null) {
@@ -4751,7 +4751,7 @@ final class TickCounter {
                 }
                 var2 = fk.a(false, "TTREEN_SPELLS");
                 if (null != var2) {
-                  na.field_I = uu.a(var2, (byte) 17);
+                  AccountNameSelectionForm.field_I = uu.a(var2, (byte) 17);
                 }
                 var2 = fk.a(false, "TTREEN_POTIONS");
                 if (var2 != null) {
@@ -5035,7 +5035,7 @@ final class TickCounter {
                 }
                 var2 = fk.a(false, "TERROR_NOTYET");
                 if (var2 != null) {
-                  kv.field_I = uu.a(var2, (byte) -111);
+                  NameSuggestionList.field_I = uu.a(var2, (byte) -111);
                 }
                 var2 = fk.a(false, "TERROR_NOTENOUGHRUNES");
                 if (null != var2) {
@@ -5107,7 +5107,7 @@ final class TickCounter {
                 }
                 var2 = fk.a(false, "TERROR_NOTOTHER");
                 if (var2 != null) {
-                  na.field_N = uu.a(var2, (byte) -126);
+                  AccountNameSelectionForm.field_N = uu.a(var2, (byte) -126);
                 }
                 var2 = fk.a(false, "TERROR_NOTFLAT");
                 if (var2 != null) {
@@ -5496,7 +5496,7 @@ final class TickCounter {
                 }
                 var2 = fk.a(false, "LABEL_STOREBUTTON");
                 if (var2 != null) {
-                  nu.field_w = uu.a(var2, (byte) -113);
+                  SpriteButtonPainter.field_w = uu.a(var2, (byte) -113);
                 }
                 var2 = fk.a(false, "LABEL_EQUIP");
                 if (var2 != null) {

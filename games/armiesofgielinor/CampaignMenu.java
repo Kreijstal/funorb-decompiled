@@ -234,7 +234,7 @@ final class CampaignMenu {
           var2 = DropTargetWidgetContainer.getStoredQuicksave(111);
           var3 = QuickChatPhrase.getCampaignMission(var2.campaignIndex, var2.missionId, 0);
           var4 = Battlefield.a(var3.participantIds.length, var2.snapshotBytes, false);
-          var5 = EmailCheckResult.a(4800, AccountNameCheckResult.field_e, new String[]{var3.name, Integer.toString(var4)});
+          var5 = EmailCheckResult.a(4800, AccountRequestResult.field_e, new String[]{var3.name, Integer.toString(var4)});
           var6 = EmailCheckResult.a(4800, BufferedSocket.field_h, new String[]{var5});
           if (this.field_h == null) {
             var7 = 164;
@@ -519,13 +519,13 @@ final class CampaignMenu {
         try {
           var3_int = 12 % ((param2 + 16) / 40);
           if (0 == param1) {
-            nu.loadCampaign(23948, param0, 0);
+            SpriteButtonPainter.loadCampaign(23948, param0, 0);
             if (!ArmiesOfGielinor.obfuscationControl) {
               return;
             }
           }
-          nu.loadCampaign(23948, param0, 1);
-          nu.loadCampaign(23948, param0, 2);
+          SpriteButtonPainter.loadCampaign(23948, param0, 1);
+          SpriteButtonPainter.loadCampaign(23948, param0, 2);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -730,7 +730,7 @@ final class CampaignMenu {
           }
           if (decompiledSharedTail0) {
             var6 = 164;
-            var7 = nr.field_e.textWidth(kd.field_Y) / 2 + 26;
+            var7 = nr.field_e.textWidth(AccountRegistrationForm.field_Y) / 2 + 26;
             if (var6 < var7) {
               var6 = var7;
             }
@@ -758,7 +758,7 @@ final class CampaignMenu {
           rs.field_n.drawParagraph(var5, db.a(true, var14), MatchConditionEntry.a(var15, (byte) 94), var13, var9Lifetime1, 16777215, 1, 1, 0, 0);
           var15 = var15 + (30 + var8Lifetime1);
           if (null == this.field_c) {
-            this.field_c = new CampaignMenuButton(kd.field_Y, var14, var15, var6);
+            this.field_c = new CampaignMenuButton(AccountRegistrationForm.field_Y, var14, var15, var6);
           }
           this.field_c.draw(param0 - 26);
           var15 += 40;
@@ -1025,7 +1025,7 @@ final class CampaignMenu {
                 continue scanLoop1;
               }
               fe.b(db.a(true, var5 + var8Lifetime1), MatchConditionEntry.a(var6Lifetime1, (byte) 94), var9Lifetime1 * var7.mapWidth, var7.mapHeight * var10Lifetime1, MusicPatch.field_m, TutorialController.field_e, 0, 0);
-              var6Lifetime1 = var6Lifetime1 + (124 + ro.field_rb[0].canvasHeight);
+              var6Lifetime1 = var6Lifetime1 + (124 + ProgressMessageDialog.field_rb[0].canvasHeight);
               stackIn_26_0 = 18;
               break;
             }
@@ -1034,8 +1034,8 @@ final class CampaignMenu {
             boolean decompiledNaturalLoopExit0 = false;
             while (!(decompiledNaturalLoopExit0 = (var16_ref_tc == null))) {
               var17Lifetime1 = (int)var16_ref_tc.key;
-              ro.field_rb[var17Lifetime1].draw(db.a(true, var15_intLifetime1), MatchConditionEntry.a(var6Lifetime1 - ro.field_rb[var17Lifetime1].canvasHeight, (byte) 94));
-              var15_intLifetime1 = var15_intLifetime1 + ro.field_rb[var17Lifetime1].canvasWidth;
+              ProgressMessageDialog.field_rb[var17Lifetime1].draw(db.a(true, var15_intLifetime1), MatchConditionEntry.a(var6Lifetime1 - ProgressMessageDialog.field_rb[var17Lifetime1].canvasHeight, (byte) 94));
+              var15_intLifetime1 = var15_intLifetime1 + ProgressMessageDialog.field_rb[var17Lifetime1].canvasWidth;
               stackIn_31_0 = this.selectedMissionEntry;
               if (var29 == 0) {
                 var16_ref_tc = ((NodeHashTable) (Object) stackIn_31_0.previewUnitCategories).next((byte) 77);
@@ -1515,7 +1515,7 @@ final class CampaignMenu {
             br.heldKeys[81]) {
             kw.campaignPacketWord0 = 2297;
             cg.campaignPacketWord2 = 72584621;
-            wr.campaignPacketWord3 = 224;
+            BirthDateChatEnableForm.campaignPacketWord3 = 224;
             ii.campaignPacketWord1 = 4452;
             var2 = br.getCampaign(this.campaignIndex, (byte) -125).missions;
             var3_int = 0;
@@ -1575,7 +1575,7 @@ final class CampaignMenu {
                     if (!decompiledSharedTail0) {
                       cg.campaignPacketWord2 = 72584621;
                       ii.campaignPacketWord1 = 4452;
-                      wr.campaignPacketWord3 = 224;
+                      BirthDateChatEnableForm.campaignPacketWord3 = 224;
                       kw.campaignPacketWord0 = 2297;
                       hc.campaignMetricMutationCounter = hc.campaignMetricMutationCounter + 1;
                       hc.campaignMetricMutationCounter = hc.campaignMetricMutationCounter + (ko.pointerY ^ AiPlanningStrategy.pointerX);
@@ -2358,7 +2358,7 @@ final class CampaignMenu {
                   var11.left = 45;
                   var12 = QuickChatPhrase.getCampaignMission(var10_ref_sl.campaignIndex, var10_ref_sl.missionId, 0);
                   var13_int = Battlefield.a(var12.participantIds.length, var10_ref_sl.snapshotBytes, false);
-                  var14 = EmailCheckResult.a(4800, AccountNameCheckResult.field_e, new String[]{var12.name, Integer.toString(var13_int)});
+                  var14 = EmailCheckResult.a(4800, AccountRequestResult.field_e, new String[]{var12.name, Integer.toString(var13_int)});
                   var11.title = var12.campaign.name;
                   var11.selectable = true;
                   var11.mission = var12;

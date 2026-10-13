@@ -1017,7 +1017,7 @@ final class Unit extends IntrusiveNode implements TaggedFieldReader {
           var1Lifetime1 = var8;
           var25 = ConsoleTextNode.field_n;
           for (var3Lifetime1 = 0; var3Lifetime1 < 8; var3Lifetime1++) {
-            var8[var3Lifetime1] = oe.bitwiseOr(var18[var3Lifetime1], var25[var3Lifetime1]);
+            var8[var3Lifetime1] = AccountRegistrationDialog.bitwiseOr(var18[var3Lifetime1], var25[var3Lifetime1]);
           }
           var19 = ReportAbuseDialog.field_Nb;
           var15 = var19;
@@ -1027,7 +1027,7 @@ final class Unit extends IntrusiveNode implements TaggedFieldReader {
           var3Lifetime2 = 0;
           var4 = 124 % ((-63 - param0) / 63);
           while (var3Lifetime2 < 8) {
-            var10[var3Lifetime2] = oe.bitwiseOr(var19[var3Lifetime2], var26[var3Lifetime2]);
+            var10[var3Lifetime2] = AccountRegistrationDialog.bitwiseOr(var19[var3Lifetime2], var26[var3Lifetime2]);
             var3Lifetime2++;
           }
           var20 = ConsoleTextNode.field_n;

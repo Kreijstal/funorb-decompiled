@@ -316,14 +316,14 @@ abstract class SingleChildWidgetContainer extends Widget implements WidgetContai
           ResourceRequest.field_u = new String[5];
           ResourceRequest.field_u[1] = pc.field_i;
           ResourceRequest.field_u[3] = ek.field_f;
-          ResourceRequest.field_u[2] = kd.field_L;
+          ResourceRequest.field_u[2] = AccountRegistrationForm.field_L;
           ResourceRequest.field_u[0] = AttackEvent.field_D;
           ResourceRequest.field_u[4] = MusicPatch.field_p;
           IconTextComponent.field_Kb = new ClientUiComponent(0L, (ClientUiComponent) null);
-          rj.field_F = new ClientUiComponent(0L, SoundPlaybackHandle.field_p, su.field_b);
+          StripedProgressWidget.field_F = new ClientUiComponent(0L, SoundPlaybackHandle.field_p, su.field_b);
           CampaignProgress.field_a = new ClientUiComponent(0L, br.field_e, PcmPlayerService.ratingLabel);
           MapTile.field_f = new ScrollContainer(0L, new ClientUiComponent(0L, (ClientUiComponent) null), ConsoleEvaluationException.field_c, WeightedLruCache.field_b);
-          IconTextComponent.field_Kb.addChild(rj.field_F, 79);
+          IconTextComponent.field_Kb.addChild(StripedProgressWidget.field_F, 79);
           if (fh.field_c) {
             IconTextComponent.field_Kb.addChild(CampaignProgress.field_a, 69);
           }
@@ -335,7 +335,7 @@ abstract class SingleChildWidgetContainer extends Widget implements WidgetContai
           var25.horizontalAlignment = 1;
           t.field_g = new ClientUiComponent(0L, eq.field_h);
           t.field_g.horizontalAlignment = 1;
-          cp.field_d = new ClientUiComponent(0L, kd.field_M, eq.field_e.toUpperCase());
+          cp.field_d = new ClientUiComponent(0L, AccountRegistrationForm.field_M, eq.field_e.toUpperCase());
           ClientContextMenu.field_n = new ClientUiComponent(0L, SummonAction.field_y, nr.field_d.toUpperCase());
           LobbyPlayer.field_Lb = new ClientUiComponent(0L, sh.field_m);
           r.field_v = new ClientUiComponent(0L, SoundPlaybackHandle.field_p, IntrusiveNode.field_a);
@@ -380,10 +380,10 @@ abstract class SingleChildWidgetContainer extends Widget implements WidgetContai
           ToggleWidget.field_Q = new ClientUiComponent(0L, eq.field_h);
           ToggleWidget.field_Q.horizontalAlignment = 1;
           ToggleWidget.field_Q.verticalAlignment = 0;
-          td.field_g = new ClientUiComponent(0L, bw.field_h, LineOfSightGrid.field_f.toUpperCase());
+          LinkButtonPainter.field_g = new ClientUiComponent(0L, bw.field_h, LineOfSightGrid.field_f.toUpperCase());
           qc.field_c = new ClientUiComponent(0L, ArchiveIndex.field_b);
           qc.field_c.addChild(ToggleWidget.field_Q, 116);
-          qc.field_c.addChild(td.field_g, 89);
+          qc.field_c.addChild(LinkButtonPainter.field_g, 89);
           AccountNameAvailabilityValidator.field_l = new ClientUiComponent(0L, ConsoleEvaluationException.field_c);
           AccountNameAvailabilityValidator.field_l.applyStyle(0, eq.field_h);
           AccountNameAvailabilityValidator.field_l.verticalAlignment = 1;
@@ -401,8 +401,8 @@ abstract class SingleChildWidgetContainer extends Widget implements WidgetContai
             eb.field_c.addChild(SpellCastEvent.field_D, 107);
           }
           eb.field_c.addChild(bu.field_a, 109);
-          SocialListPanel.field_Lb = new ClientUiComponent(0L, kd.field_M, DeployAction.field_v.toUpperCase());
-          kd.field_F = new ClientUiComponent(0L, SummonAction.field_y);
+          SocialListPanel.field_Lb = new ClientUiComponent(0L, AccountRegistrationForm.field_M, DeployAction.field_v.toUpperCase());
+          AccountRegistrationForm.field_F = new ClientUiComponent(0L, SummonAction.field_y);
           MusicPatchUsage.gameOptionsGrid = new ClientUiComponent(0L, sh.field_m);
           BattleTutorial.field_d = new ClientUiComponent(0L, rn.field_a, EffectPresentation.field_d.toUpperCase());
           KingBlackDragonEvent.field_z = new ClientUiComponent[param1 + 4];
@@ -484,7 +484,7 @@ abstract class SingleChildWidgetContainer extends Widget implements WidgetContai
           }
           var17.horizontalAlignment = 1;
           pd.field_c = new ClientUiComponent(0L, (ClientUiComponent) null);
-          pd.field_c.addChild(kd.field_F, 44);
+          pd.field_c.addChild(AccountRegistrationForm.field_F, 44);
           pd.field_c.addChild(MusicPatchUsage.gameOptionsGrid, 68);
           MusicPatchUsage.gameOptionsGrid.addChild(BattleTutorial.field_d, 106);
           for (var18Lifetime2 = 0; var18Lifetime2 < param1 + 4; var18Lifetime2++) {

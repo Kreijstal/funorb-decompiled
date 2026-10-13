@@ -10,7 +10,7 @@ final class AccountNameAvailabilityValidator extends TextFieldValidator {
     static int field_j;
 
     final ValidationState validateText(int obfuscationGuard, String text) {
-        AccountNameCheckResult result = null;
+        AccountRequestResult result = null;
         RuntimeException failure = null;
         CharSequence candidateName = null;
         ValidationState invalidSyntaxState = null;
@@ -63,7 +63,7 @@ final class AccountNameAvailabilityValidator extends TextFieldValidator {
     final String describeText(byte obfuscationGuard, String text) {
         String syntaxMessage = null;
         RuntimeException failure = null;
-        AccountNameCheckResult result = null;
+        AccountRequestResult result = null;
         CharSequence candidateName = null;
         String syntaxDiagnostic = null;
         String rejectedDiagnostic = null;
@@ -133,10 +133,10 @@ final class AccountNameAvailabilityValidator extends TextFieldValidator {
 
     final static QuickChatCommandDefinition[] getQuickChatCommands(byte obfuscationGuard) {
         if (obfuscationGuard > 100) {
-          return new QuickChatCommandDefinition[]{jk.field_b, na.field_G, ToggleTurnSkipConsoleCommand.field_F, PacketBuffer.field_l, NodeHashIterator.field_i, MovementPlanner.field_c, ab.field_d, lg.field_e, du.field_e, Widget.field_y, MapLayout.field_q, IconTextComponent.field_Ib, rs.field_v, kq.field_M};
+          return new QuickChatCommandDefinition[]{jk.field_b, AccountNameSelectionForm.field_G, ToggleTurnSkipConsoleCommand.field_F, PacketBuffer.field_l, NodeHashIterator.field_i, MovementPlanner.field_c, ab.field_d, lg.field_e, du.field_e, Widget.field_y, MapLayout.field_q, IconTextComponent.field_Ib, rs.field_v, kq.field_M};
         }
         AccountNameAvailabilityValidator.h(67);
-        return new QuickChatCommandDefinition[]{jk.field_b, na.field_G, ToggleTurnSkipConsoleCommand.field_F, PacketBuffer.field_l, NodeHashIterator.field_i, MovementPlanner.field_c, ab.field_d, lg.field_e, du.field_e, Widget.field_y, MapLayout.field_q, IconTextComponent.field_Ib, rs.field_v, kq.field_M};
+        return new QuickChatCommandDefinition[]{jk.field_b, AccountNameSelectionForm.field_G, ToggleTurnSkipConsoleCommand.field_F, PacketBuffer.field_l, NodeHashIterator.field_i, MovementPlanner.field_c, ab.field_d, lg.field_e, du.field_e, Widget.field_y, MapLayout.field_q, IconTextComponent.field_Ib, rs.field_v, kq.field_M};
     }
 
     AccountNameAvailabilityValidator(EditableTextWidget input) {

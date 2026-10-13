@@ -989,7 +989,7 @@ class MidiPcmStream extends PcmStream {
         }
         if (controller == 64) {
           if (controlValue >= 64) {
-            this.channelFlags[controlChannel] = oe.bitwiseOr(this.channelFlags[controlChannel], 1);
+            this.channelFlags[controlChannel] = AccountRegistrationDialog.bitwiseOr(this.channelFlags[controlChannel], 1);
           } else {
             this.channelFlags[controlChannel] = rn.bitwiseAnd(this.channelFlags[controlChannel], -2);
           }
@@ -999,7 +999,7 @@ class MidiPcmStream extends PcmStream {
             this.releasePortamentoNotes(false, controlChannel);
             this.channelFlags[controlChannel] = rn.bitwiseAnd(this.channelFlags[controlChannel], -3);
           } else {
-            this.channelFlags[controlChannel] = oe.bitwiseOr(this.channelFlags[controlChannel], 2);
+            this.channelFlags[controlChannel] = AccountRegistrationDialog.bitwiseOr(this.channelFlags[controlChannel], 2);
           }
         }
         if (controller == 99) {
@@ -1046,7 +1046,7 @@ class MidiPcmStream extends PcmStream {
             this.resetRetriggerPhases(controlChannel, (byte) -66);
             this.channelFlags[controlChannel] = rn.bitwiseAnd(this.channelFlags[controlChannel], -5);
           } else {
-            this.channelFlags[controlChannel] = oe.bitwiseOr(this.channelFlags[controlChannel], 4);
+            this.channelFlags[controlChannel] = AccountRegistrationDialog.bitwiseOr(this.channelFlags[controlChannel], 4);
           }
         }
         if (controller == 17) {

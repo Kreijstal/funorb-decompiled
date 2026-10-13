@@ -243,7 +243,7 @@ final class DropdownSelector extends DequeWidgetContainer implements WidgetActiv
               var1 = var5;
               var16 = ValidationState.field_b.field_l;
               for (var3 = 0; var3 < 8; var3++) {
-                var5[var3] = oe.bitwiseOr(var12[var3], var16[var3]);
+                var5[var3] = AccountRegistrationDialog.bitwiseOr(var12[var3], var16[var3]);
               }
               var13 = ReportAbuseDialog.field_Nb;
               var11 = var13;
@@ -289,10 +289,10 @@ final class DropdownSelector extends DequeWidgetContainer implements WidgetActiv
             }
             if (RadialSummonItem.field_f.field_n) {
               if (null != RadialSummonItem.field_f.field_s) {
-                oe.a(RadialSummonItem.field_f.field_s, 1);
+                AccountRegistrationDialog.a(RadialSummonItem.field_f.field_s, 1);
               }
               if (ps.field_v) {
-                rj.a(1);
+                StripedProgressWidget.a(1);
               } else {
                 ek.field_d = AnimationFrameSet.field_E >> 2 & 3;
                 stackIn_37_0 = ((AnimationFrameSet.field_E & 1) != 0);

@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class PointerInputHandler implements java.awt.event.MouseListener, java.awt.event.MouseMotionListener, java.awt.event.FocusListener {
-    static cr field_a;
+    static ProgressDialog field_a;
     static aj field_f;
     static String field_e;
     static ScrollContainer contextMenuScrollContainer;
@@ -143,7 +143,7 @@ final class PointerInputHandler implements java.awt.event.MouseListener, java.aw
           ug.field_b = ug.field_b + 1;
           return;
         }
-        field_a = (cr) null;
+        field_a = (ProgressDialog) null;
         PaletteRegionMap.field_g.advance(-99);
         ug.field_b = ug.field_b + 1;
     }

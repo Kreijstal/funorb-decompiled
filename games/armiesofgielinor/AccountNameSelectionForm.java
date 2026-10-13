@@ -1,48 +1,48 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class na extends DequeWidgetContainer implements mf, WidgetActivationListener {
+final class AccountNameSelectionForm extends DequeWidgetContainer implements NameSuggestionListener, WidgetActivationListener {
     static QuickChatCommandDefinition field_G;
-    private ValidatedTextWidget field_P;
+    private ValidatedTextWidget nameInput;
     static int field_E;
-    kv field_M;
+    NameSuggestionList suggestions;
     static String field_K;
-    private InteractiveWidget field_L;
+    private InteractiveWidget cancelButton;
     static String field_I;
     static int field_F;
-    private InteractiveWidget field_O;
+    private InteractiveWidget submitButton;
     static String field_N;
     static int[] field_J;
 
-    public na() {
+    public AccountNameSelectionForm() {
         super(0, 0, 496, 0, (WidgetPainter) null);
-        this.field_P = new ValidatedTextWidget("", (WidgetListener) null, 12);
+        this.nameInput = new ValidatedTextWidget("", (WidgetListener) null, 12);
         BitmapTextWidgetPainter var1 = new BitmapTextWidgetPainter(gl.field_e, 0, 0, 0, 0, 16777215, -1, 3, 0, ArmiesOfGielinor.field_J.maxAscent, -1, 2147483647, true);
         Widget var2 = new Widget(BattleTutorial.field_u, var1, (WidgetListener) null);
-        this.field_O = new InteractiveWidget(LineOfSightGrid.field_f, (WidgetListener) null);
-        this.field_L = new InteractiveWidget(ac.field_s, (WidgetListener) null);
-        this.field_P.tooltipText = DualLinkedNode.field_m;
-        this.field_P.setValidationSource((byte) 16, new AccountNameAvailabilityValidator(this.field_P));
-        this.field_O.enabled = false;
-        this.field_O.painter = (WidgetPainter) ((Object) new nu());
-        this.field_L.painter = (WidgetPainter) ((Object) new td());
-        this.field_P.painter = (WidgetPainter) ((Object) new TextEntryWidgetPainter(10000536));
+        this.submitButton = new InteractiveWidget(LineOfSightGrid.field_f, (WidgetListener) null);
+        this.cancelButton = new InteractiveWidget(ac.field_s, (WidgetListener) null);
+        this.nameInput.tooltipText = DualLinkedNode.field_m;
+        this.nameInput.setValidationSource((byte) 16, new AccountNameAvailabilityValidator(this.nameInput));
+        this.submitButton.enabled = false;
+        this.submitButton.painter = (WidgetPainter) ((Object) new SpriteButtonPainter());
+        this.cancelButton.painter = (WidgetPainter) ((Object) new LinkButtonPainter());
+        this.nameInput.painter = (WidgetPainter) ((Object) new TextEntryWidgetPainter(10000536));
         int var3 = 20;
         int var4 = 4;
         int var5 = 200;
         var2.setBounds(20, 270, var3, 8192, 50);
         var3 += 50;
         this.addChild((byte) 10, var2);
-        var3 = var3 + (5 + this.a(-124, MusicPatchEnvelope.field_k, ScrollContainer.field_Ob, 170, var3, this.field_P));
-        this.field_O.setBounds(496 - var5 >> 1, var5, var3, 8192, 40);
-        this.field_L.setBounds(var4 + 3, 60, var3 + 15, 8192, 40);
-        this.field_L.listener = (WidgetListener) (this);
-        this.field_O.listener = (WidgetListener) (this);
-        this.addChild((byte) 10, (Widget) (this.field_O));
-        this.addChild((byte) 10, (Widget) (this.field_L));
-        this.field_M = new kv((mf) (this));
-        this.field_M.setBounds(60 + (this.field_P.x + this.field_P.width), -60 + (-this.field_P.x + (this.width - this.field_P.width)), 20, 8192, 150);
-        this.addChild((byte) 10, (Widget) (this.field_M));
+        var3 = var3 + (5 + this.a(-124, MusicPatchEnvelope.field_k, ScrollContainer.field_Ob, 170, var3, this.nameInput));
+        this.submitButton.setBounds(496 - var5 >> 1, var5, var3, 8192, 40);
+        this.cancelButton.setBounds(var4 + 3, 60, var3 + 15, 8192, 40);
+        this.cancelButton.listener = (WidgetListener) (this);
+        this.submitButton.listener = (WidgetListener) (this);
+        this.addChild((byte) 10, (Widget) (this.submitButton));
+        this.addChild((byte) 10, (Widget) (this.cancelButton));
+        this.suggestions = new NameSuggestionList((NameSuggestionListener) (this));
+        this.suggestions.setBounds(60 + (this.nameInput.x + this.nameInput.width), -60 + (-this.nameInput.x + (this.width - this.nameInput.width)), 20, 8192, 150);
+        this.addChild((byte) 10, (Widget) (this.suggestions));
         this.setBounds(0, 496, 0, 8192, var4 + var3 + 55);
     }
 
@@ -54,16 +54,16 @@ final class na extends DequeWidgetContainer implements mf, WidgetActivationListe
         RuntimeException decompiledCaughtException = null;
         try {
           if (obfuscationGuard != 11) {
-            this.field_L = (InteractiveWidget) null;
+            this.cancelButton = (InteractiveWidget) null;
           }
-          if (widget == this.field_L) {
+          if (widget == this.cancelButton) {
             MapRepository.b((byte) 115);
             return;
           }
-          if (widget != this.field_O) {
+          if (widget != this.submitButton) {
             return;
           }
-          this.b(false);
+          this.submitName(false);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -79,10 +79,10 @@ final class na extends DequeWidgetContainer implements mf, WidgetActivationListe
         }
     }
 
-    public final void a(byte param0) {
+    public final void refreshNamesRequested(byte obfuscationGuard) {
         int discarded$0 = 0;
-        ((AccountNameAvailabilityValidator) (this.field_P.getValidationSource(param0 - 918933514))).invalidateNameCheck(50);
-        if (param0 != -116) {
+        ((AccountNameAvailabilityValidator) (this.nameInput.getValidationSource(obfuscationGuard - 918933514))).invalidateNameCheck(50);
+        if (obfuscationGuard != -116) {
           String var3 = (String) null;
           discarded$0 = this.a(-47, 45, (String) null, (Widget) null, 47, (String) null, -7);
         }
@@ -92,40 +92,40 @@ final class na extends DequeWidgetContainer implements mf, WidgetActivationListe
         try {
           super.updatePointer(obfuscationGuard ^ 0, originX, originY, rootWidget);
           if (obfuscationGuard != 32722) {
-            this.field_O = (InteractiveWidget) null;
+            this.submitButton = (InteractiveWidget) null;
           }
-          this.field_O.enabled = this.a(-29967);
+          this.submitButton.enabled = this.isFormValid(-29967);
         } catch (RuntimeException runtimeException) {
           throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "na.P(" + obfuscationGuard + ',' + originX + ',' + originY + ',' + (rootWidget != null ? "{...}" : "null") + ')');
         }
     }
 
-    private final boolean a(boolean param0, ValidationProvider param1) {
-        ValidationSource var3 = null;
-        RuntimeException var3_ref = null;
-        ValidationState var4 = null;
-        boolean stackIn_10_0 = false;
+    private final boolean isFieldValid(boolean obfuscationGuard, ValidationProvider field) {
+        ValidationSource source = null;
+        RuntimeException failure = null;
+        ValidationState state = null;
+        boolean valid = false;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
         String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (!param0) {
+          if (!obfuscationGuard) {
             return false;
           }
-          var3 = param1.getValidationSource(-918933630);
-          if (var3 == null) {
+          source = field.getValidationSource(-918933630);
+          if (source == null) {
             return true;
           }
-          var4 = var3.getValidationState(false);
-          stackIn_10_0 = (var4 == oo.validationValid);
-          return stackIn_10_0;
+          state = source.getValidationState(false);
+          valid = (state == oo.validationValid);
+          return valid;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          var3_ref = decompiledCaughtException;
-          stackIn_13_0 = var3_ref;
-          stackIn_13_1 = new StringBuilder().append("na.K(").append(param0).append(',');
-          if (param1 == null) {
+          failure = decompiledCaughtException;
+          stackIn_13_0 = failure;
+          stackIn_13_1 = new StringBuilder().append("na.K(").append(obfuscationGuard).append(',');
+          if (field == null) {
             stackIn_14_2 = "null";
           } else {
             stackIn_14_2 = "{...}";
@@ -134,24 +134,24 @@ final class na extends DequeWidgetContainer implements mf, WidgetActivationListe
         }
     }
 
-    private final boolean a(int param0) {
-        if (param0 != -29967) {
+    private final boolean isFormValid(int obfuscationGuard) {
+        if (obfuscationGuard != -29967) {
           return false;
         }
-        if (!this.a(true, (ValidationProvider) (this.field_P))) {
+        if (!this.isFieldValid(true, (ValidationProvider) (this.nameInput))) {
           return false;
         }
         return true;
     }
 
-    private final void b(boolean param0) {
-        if (param0) {
+    private final void submitName(boolean obfuscationGuard) {
+        if (obfuscationGuard) {
           return;
         }
-        if (!this.a(-29967)) {
+        if (!this.isFormValid(-29967)) {
           return;
         }
-        TelepopEvent.a(param0, this.field_P.text);
+        TelepopEvent.a(obfuscationGuard, this.nameInput.text);
     }
 
     final static void c(int param0, int param1, int param2, int param3, int param4) {
@@ -407,7 +407,7 @@ final class na extends DequeWidgetContainer implements mf, WidgetActivationListe
         field_G = null;
     }
 
-    public final void a(int param0, String param1) {
+    public final void nameSelected(int obfuscationGuard, String name) {
         ValidatedTextWidget var3 = null;
         RuntimeException var3_ref = null;
         String var4 = null;
@@ -417,10 +417,10 @@ final class na extends DequeWidgetContainer implements mf, WidgetActivationListe
         String stackIn_6_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var3 = this.field_P;
-          var4 = param1;
+          var3 = this.nameInput;
+          var4 = name;
           ((EditableTextWidget) ((Object) var3)).setText(false, var4, -27934);
-          if (param0 == -1) {
+          if (obfuscationGuard == -1) {
             return;
           }
           var5 = (Widget) null;
@@ -430,8 +430,8 @@ final class na extends DequeWidgetContainer implements mf, WidgetActivationListe
           decompiledCaughtException = decompiledCaughtParameter0;
           var3_ref = decompiledCaughtException;
           stackIn_5_0 = var3_ref;
-          stackIn_5_1 = new StringBuilder().append("na.I(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_5_1 = new StringBuilder().append("na.I(").append(obfuscationGuard).append(',');
+          if (name == null) {
             stackIn_6_2 = "null";
           } else {
             stackIn_6_2 = "{...}";

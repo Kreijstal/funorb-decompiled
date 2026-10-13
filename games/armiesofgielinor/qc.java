@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 abstract class qc {
-    static ro field_a;
+    static ProgressMessageDialog field_a;
     static String field_b;
     static UiSelectionState field_d;
     static qc field_h;
@@ -72,7 +72,7 @@ abstract class qc {
         if (param0 < -124) {
           var4 = this.b((byte) -103);
           if (var4 > 0L) {
-            nu.a(var4, 0);
+            SpriteButtonPainter.a(var4, 0);
           }
           return this.a(param1, 0);
         }
