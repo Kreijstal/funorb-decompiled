@@ -1251,7 +1251,7 @@ final class TickCounter {
                 }
                 var2 = fk.a(false, "LABEL_AWARD_MOSTCRUEL");
                 if (null != var2) {
-                  ut.field_ib = uu.a(var2, (byte) 63);
+                  DisplaySettingsDialog.field_ib = uu.a(var2, (byte) 63);
                 }
                 var2 = fk.a(false, "BONUS_MANA_DESCRIPTION");
                 if (null != var2) {
@@ -1519,7 +1519,7 @@ final class TickCounter {
                 }
                 var2 = fk.a(false, "STATUS_RANGE");
                 if (null != var2) {
-                  ud.field_Y = uu.a(var2, (byte) -120);
+                  FullscreenStatusDialog.field_Y = uu.a(var2, (byte) -120);
                 }
                 var2 = fk.a(false, "STATUS_RANGES");
                 if (null != var2) {
@@ -1929,7 +1929,7 @@ final class TickCounter {
                 }
                 var2 = fk.a(false, "NO_MANA");
                 if (null != var2) {
-                  ps.field_x = uu.a(var2, (byte) -92);
+                  DisplayModeOptionPainter.field_x = uu.a(var2, (byte) -92);
                 }
                 var2 = fk.a(false, "terrainicontext,0,0");
                 if (var2 != null) {
@@ -2663,303 +2663,303 @@ final class TickCounter {
                 }
                 var2 = fk.a(false, "descriptions,0");
                 if (var2 != null) {
-                  ut.field_cb[0] = uu.a(var2, (byte) -107);
+                  DisplaySettingsDialog.field_cb[0] = uu.a(var2, (byte) -107);
                 }
                 var2 = fk.a(false, "descriptions,1");
                 if (var2 != null) {
-                  ut.field_cb[1] = uu.a(var2, (byte) -92);
+                  DisplaySettingsDialog.field_cb[1] = uu.a(var2, (byte) -92);
                 }
                 var2 = fk.a(false, "descriptions,2");
                 if (var2 != null) {
-                  ut.field_cb[2] = uu.a(var2, (byte) -97);
+                  DisplaySettingsDialog.field_cb[2] = uu.a(var2, (byte) -97);
                 }
                 var2 = fk.a(false, "descriptions,3");
                 if (null != var2) {
-                  ut.field_cb[3] = uu.a(var2, (byte) -106);
+                  DisplaySettingsDialog.field_cb[3] = uu.a(var2, (byte) -106);
                 }
                 var2 = fk.a(false, "descriptions,4");
                 if (var2 != null) {
-                  ut.field_cb[4] = uu.a(var2, (byte) 45);
+                  DisplaySettingsDialog.field_cb[4] = uu.a(var2, (byte) 45);
                 }
                 var2 = fk.a(false, "descriptions,5");
                 if (null != var2) {
-                  ut.field_cb[5] = uu.a(var2, (byte) 109);
+                  DisplaySettingsDialog.field_cb[5] = uu.a(var2, (byte) 109);
                 }
                 var2 = fk.a(false, "descriptions,6");
                 if (null != var2) {
-                  ut.field_cb[6] = uu.a(var2, (byte) 45);
+                  DisplaySettingsDialog.field_cb[6] = uu.a(var2, (byte) 45);
                 }
                 var2 = fk.a(false, "descriptions,7");
                 if (null != var2) {
-                  ut.field_cb[7] = uu.a(var2, (byte) 61);
+                  DisplaySettingsDialog.field_cb[7] = uu.a(var2, (byte) 61);
                 }
                 var2 = fk.a(false, "descriptions,8");
                 if (null != var2) {
-                  ut.field_cb[8] = uu.a(var2, (byte) -112);
+                  DisplaySettingsDialog.field_cb[8] = uu.a(var2, (byte) -112);
                 }
                 var2 = fk.a(false, "descriptions,9");
                 if (null != var2) {
-                  ut.field_cb[9] = uu.a(var2, (byte) -99);
+                  DisplaySettingsDialog.field_cb[9] = uu.a(var2, (byte) -99);
                 }
                 var2 = fk.a(false, "descriptions,10");
                 if (null != var2) {
-                  ut.field_cb[10] = uu.a(var2, (byte) 126);
+                  DisplaySettingsDialog.field_cb[10] = uu.a(var2, (byte) 126);
                 }
                 var2 = fk.a(false, "descriptions,11");
                 if (var2 != null) {
-                  ut.field_cb[11] = uu.a(var2, (byte) 85);
+                  DisplaySettingsDialog.field_cb[11] = uu.a(var2, (byte) 85);
                 }
                 var2 = fk.a(false, "descriptions,12");
                 if (var2 != null) {
-                  ut.field_cb[12] = uu.a(var2, (byte) -102);
+                  DisplaySettingsDialog.field_cb[12] = uu.a(var2, (byte) -102);
                 }
                 var2 = fk.a(false, "descriptions,13");
                 if (null != var2) {
-                  ut.field_cb[13] = uu.a(var2, (byte) -115);
+                  DisplaySettingsDialog.field_cb[13] = uu.a(var2, (byte) -115);
                 }
                 var2 = fk.a(false, "descriptions,14");
                 if (null != var2) {
-                  ut.field_cb[14] = uu.a(var2, (byte) -92);
+                  DisplaySettingsDialog.field_cb[14] = uu.a(var2, (byte) -92);
                 }
                 var2 = fk.a(false, "descriptions,15");
                 if (null != var2) {
-                  ut.field_cb[15] = uu.a(var2, (byte) -118);
+                  DisplaySettingsDialog.field_cb[15] = uu.a(var2, (byte) -118);
                 }
                 var2 = fk.a(false, "descriptions,16");
                 if (null != var2) {
-                  ut.field_cb[16] = uu.a(var2, (byte) -115);
+                  DisplaySettingsDialog.field_cb[16] = uu.a(var2, (byte) -115);
                 }
                 var2 = fk.a(false, "descriptions,17");
                 if (null != var2) {
-                  ut.field_cb[17] = uu.a(var2, (byte) -93);
+                  DisplaySettingsDialog.field_cb[17] = uu.a(var2, (byte) -93);
                 }
                 var2 = fk.a(false, "descriptions,18");
                 if (null != var2) {
-                  ut.field_cb[18] = uu.a(var2, (byte) 30);
+                  DisplaySettingsDialog.field_cb[18] = uu.a(var2, (byte) 30);
                 }
                 var2 = fk.a(false, "descriptions,19");
                 if (var2 != null) {
-                  ut.field_cb[19] = uu.a(var2, (byte) 95);
+                  DisplaySettingsDialog.field_cb[19] = uu.a(var2, (byte) 95);
                 }
                 var2 = fk.a(false, "descriptions,20");
                 if (null != var2) {
-                  ut.field_cb[20] = uu.a(var2, (byte) -101);
+                  DisplaySettingsDialog.field_cb[20] = uu.a(var2, (byte) -101);
                 }
                 var2 = fk.a(false, "descriptions,21");
                 if (null != var2) {
-                  ut.field_cb[21] = uu.a(var2, (byte) -95);
+                  DisplaySettingsDialog.field_cb[21] = uu.a(var2, (byte) -95);
                 }
                 var2 = fk.a(false, "descriptions,22");
                 if (null != var2) {
-                  ut.field_cb[22] = uu.a(var2, (byte) 86);
+                  DisplaySettingsDialog.field_cb[22] = uu.a(var2, (byte) 86);
                 }
                 var2 = fk.a(false, "descriptions,23");
                 if (null != var2) {
-                  ut.field_cb[23] = uu.a(var2, (byte) 86);
+                  DisplaySettingsDialog.field_cb[23] = uu.a(var2, (byte) 86);
                 }
                 var2 = fk.a(false, "descriptions,24");
                 if (null != var2) {
-                  ut.field_cb[24] = uu.a(var2, (byte) -128);
+                  DisplaySettingsDialog.field_cb[24] = uu.a(var2, (byte) -128);
                 }
                 var2 = fk.a(false, "descriptions,25");
                 if (null != var2) {
-                  ut.field_cb[25] = uu.a(var2, (byte) 49);
+                  DisplaySettingsDialog.field_cb[25] = uu.a(var2, (byte) 49);
                 }
                 var2 = fk.a(false, "descriptions,26");
                 if (null != var2) {
-                  ut.field_cb[26] = uu.a(var2, (byte) 68);
+                  DisplaySettingsDialog.field_cb[26] = uu.a(var2, (byte) 68);
                 }
                 var2 = fk.a(false, "descriptions,27");
                 if (null != var2) {
-                  ut.field_cb[27] = uu.a(var2, (byte) 21);
+                  DisplaySettingsDialog.field_cb[27] = uu.a(var2, (byte) 21);
                 }
                 var2 = fk.a(false, "descriptions,28");
                 if (var2 != null) {
-                  ut.field_cb[28] = uu.a(var2, (byte) -117);
+                  DisplaySettingsDialog.field_cb[28] = uu.a(var2, (byte) -117);
                 }
                 var2 = fk.a(false, "descriptions,29");
                 if (var2 != null) {
-                  ut.field_cb[29] = uu.a(var2, (byte) 98);
+                  DisplaySettingsDialog.field_cb[29] = uu.a(var2, (byte) 98);
                 }
                 var2 = fk.a(false, "descriptions,30");
                 if (null != var2) {
-                  ut.field_cb[30] = uu.a(var2, (byte) 41);
+                  DisplaySettingsDialog.field_cb[30] = uu.a(var2, (byte) 41);
                 }
                 var2 = fk.a(false, "descriptions,31");
                 if (null != var2) {
-                  ut.field_cb[31] = uu.a(var2, (byte) -113);
+                  DisplaySettingsDialog.field_cb[31] = uu.a(var2, (byte) -113);
                 }
                 var2 = fk.a(false, "descriptions,32");
                 if (null != var2) {
-                  ut.field_cb[32] = uu.a(var2, (byte) 38);
+                  DisplaySettingsDialog.field_cb[32] = uu.a(var2, (byte) 38);
                 }
                 var2 = fk.a(false, "descriptions,33");
                 if (null != var2) {
-                  ut.field_cb[33] = uu.a(var2, (byte) -114);
+                  DisplaySettingsDialog.field_cb[33] = uu.a(var2, (byte) -114);
                 }
                 var2 = fk.a(false, "descriptions,34");
                 if (null != var2) {
-                  ut.field_cb[34] = uu.a(var2, (byte) 113);
+                  DisplaySettingsDialog.field_cb[34] = uu.a(var2, (byte) 113);
                 }
                 var2 = fk.a(false, "descriptions,35");
                 if (null != var2) {
-                  ut.field_cb[35] = uu.a(var2, (byte) -119);
+                  DisplaySettingsDialog.field_cb[35] = uu.a(var2, (byte) -119);
                 }
                 var2 = fk.a(false, "descriptions,36");
                 if (var2 != null) {
-                  ut.field_cb[36] = uu.a(var2, (byte) 91);
+                  DisplaySettingsDialog.field_cb[36] = uu.a(var2, (byte) 91);
                 }
                 var2 = fk.a(false, "descriptions,37");
                 if (null != var2) {
-                  ut.field_cb[37] = uu.a(var2, (byte) 88);
+                  DisplaySettingsDialog.field_cb[37] = uu.a(var2, (byte) 88);
                 }
                 var2 = fk.a(false, "descriptions,38");
                 if (var2 != null) {
-                  ut.field_cb[38] = uu.a(var2, (byte) -100);
+                  DisplaySettingsDialog.field_cb[38] = uu.a(var2, (byte) -100);
                 }
                 var2 = fk.a(false, "descriptions,39");
                 if (var2 != null) {
-                  ut.field_cb[39] = uu.a(var2, (byte) 15);
+                  DisplaySettingsDialog.field_cb[39] = uu.a(var2, (byte) 15);
                 }
                 var2 = fk.a(false, "descriptions,40");
                 if (var2 != null) {
-                  ut.field_cb[40] = uu.a(var2, (byte) 99);
+                  DisplaySettingsDialog.field_cb[40] = uu.a(var2, (byte) 99);
                 }
                 var2 = fk.a(false, "descriptions,41");
                 if (null != var2) {
-                  ut.field_cb[41] = uu.a(var2, (byte) 84);
+                  DisplaySettingsDialog.field_cb[41] = uu.a(var2, (byte) 84);
                 }
                 var2 = fk.a(false, "descriptions,42");
                 if (null != var2) {
-                  ut.field_cb[42] = uu.a(var2, (byte) -99);
+                  DisplaySettingsDialog.field_cb[42] = uu.a(var2, (byte) -99);
                 }
                 var2 = fk.a(false, "descriptions,43");
                 if (var2 != null) {
-                  ut.field_cb[43] = uu.a(var2, (byte) 32);
+                  DisplaySettingsDialog.field_cb[43] = uu.a(var2, (byte) 32);
                 }
                 var2 = fk.a(false, "descriptions,44");
                 if (null != var2) {
-                  ut.field_cb[44] = uu.a(var2, (byte) -94);
+                  DisplaySettingsDialog.field_cb[44] = uu.a(var2, (byte) -94);
                 }
                 var2 = fk.a(false, "descriptions,45");
                 if (null != var2) {
-                  ut.field_cb[45] = uu.a(var2, (byte) 10);
+                  DisplaySettingsDialog.field_cb[45] = uu.a(var2, (byte) 10);
                 }
                 var2 = fk.a(false, "descriptions,46");
                 if (null != var2) {
-                  ut.field_cb[46] = uu.a(var2, (byte) 46);
+                  DisplaySettingsDialog.field_cb[46] = uu.a(var2, (byte) 46);
                 }
                 var2 = fk.a(false, "descriptions,47");
                 if (var2 != null) {
-                  ut.field_cb[47] = uu.a(var2, (byte) 2);
+                  DisplaySettingsDialog.field_cb[47] = uu.a(var2, (byte) 2);
                 }
                 var2 = fk.a(false, "descriptions,48");
                 if (var2 != null) {
-                  ut.field_cb[48] = uu.a(var2, (byte) -101);
+                  DisplaySettingsDialog.field_cb[48] = uu.a(var2, (byte) -101);
                 }
                 var2 = fk.a(false, "descriptions,49");
                 if (var2 != null) {
-                  ut.field_cb[49] = uu.a(var2, (byte) 24);
+                  DisplaySettingsDialog.field_cb[49] = uu.a(var2, (byte) 24);
                 }
                 var2 = fk.a(false, "descriptions,50");
                 if (var2 != null) {
-                  ut.field_cb[50] = uu.a(var2, (byte) -97);
+                  DisplaySettingsDialog.field_cb[50] = uu.a(var2, (byte) -97);
                 }
                 var2 = fk.a(false, "descriptions,51");
                 if (var2 != null) {
-                  ut.field_cb[51] = uu.a(var2, (byte) -100);
+                  DisplaySettingsDialog.field_cb[51] = uu.a(var2, (byte) -100);
                 }
                 var2 = fk.a(false, "descriptions,52");
                 if (var2 != null) {
-                  ut.field_cb[52] = uu.a(var2, (byte) 115);
+                  DisplaySettingsDialog.field_cb[52] = uu.a(var2, (byte) 115);
                 }
                 var2 = fk.a(false, "descriptions,53");
                 if (var2 != null) {
-                  ut.field_cb[53] = uu.a(var2, (byte) 5);
+                  DisplaySettingsDialog.field_cb[53] = uu.a(var2, (byte) 5);
                 }
                 var2 = fk.a(false, "descriptions,54");
                 if (var2 != null) {
-                  ut.field_cb[54] = uu.a(var2, (byte) -121);
+                  DisplaySettingsDialog.field_cb[54] = uu.a(var2, (byte) -121);
                 }
                 var2 = fk.a(false, "descriptions,55");
                 if (null != var2) {
-                  ut.field_cb[55] = uu.a(var2, (byte) 90);
+                  DisplaySettingsDialog.field_cb[55] = uu.a(var2, (byte) 90);
                 }
                 var2 = fk.a(false, "descriptions,56");
                 if (var2 != null) {
-                  ut.field_cb[56] = uu.a(var2, (byte) 120);
+                  DisplaySettingsDialog.field_cb[56] = uu.a(var2, (byte) 120);
                 }
                 var2 = fk.a(false, "descriptions,57");
                 if (var2 != null) {
-                  ut.field_cb[57] = uu.a(var2, (byte) 42);
+                  DisplaySettingsDialog.field_cb[57] = uu.a(var2, (byte) 42);
                 }
                 var2 = fk.a(false, "descriptions,58");
                 if (null != var2) {
-                  ut.field_cb[58] = uu.a(var2, (byte) -95);
+                  DisplaySettingsDialog.field_cb[58] = uu.a(var2, (byte) -95);
                 }
                 var2 = fk.a(false, "descriptions,59");
                 if (var2 != null) {
-                  ut.field_cb[59] = uu.a(var2, (byte) -93);
+                  DisplaySettingsDialog.field_cb[59] = uu.a(var2, (byte) -93);
                 }
                 var2 = fk.a(false, "descriptions,60");
                 if (null != var2) {
-                  ut.field_cb[60] = uu.a(var2, (byte) -93);
+                  DisplaySettingsDialog.field_cb[60] = uu.a(var2, (byte) -93);
                 }
                 var2 = fk.a(false, "descriptions,61");
                 if (var2 != null) {
-                  ut.field_cb[61] = uu.a(var2, (byte) 22);
+                  DisplaySettingsDialog.field_cb[61] = uu.a(var2, (byte) 22);
                 }
                 var2 = fk.a(false, "descriptions,62");
                 if (null != var2) {
-                  ut.field_cb[62] = uu.a(var2, (byte) -96);
+                  DisplaySettingsDialog.field_cb[62] = uu.a(var2, (byte) -96);
                 }
                 var2 = fk.a(false, "descriptions,63");
                 if (null != var2) {
-                  ut.field_cb[63] = uu.a(var2, (byte) 12);
+                  DisplaySettingsDialog.field_cb[63] = uu.a(var2, (byte) 12);
                 }
                 var2 = fk.a(false, "descriptions,64");
                 if (var2 != null) {
-                  ut.field_cb[64] = uu.a(var2, (byte) 108);
+                  DisplaySettingsDialog.field_cb[64] = uu.a(var2, (byte) 108);
                 }
                 var2 = fk.a(false, "descriptions,65");
                 if (null != var2) {
-                  ut.field_cb[65] = uu.a(var2, (byte) -124);
+                  DisplaySettingsDialog.field_cb[65] = uu.a(var2, (byte) -124);
                 }
                 var2 = fk.a(false, "descriptions,66");
                 if (var2 != null) {
-                  ut.field_cb[66] = uu.a(var2, (byte) -124);
+                  DisplaySettingsDialog.field_cb[66] = uu.a(var2, (byte) -124);
                 }
                 var2 = fk.a(false, "descriptions,67");
                 if (var2 != null) {
-                  ut.field_cb[67] = uu.a(var2, (byte) -114);
+                  DisplaySettingsDialog.field_cb[67] = uu.a(var2, (byte) -114);
                 }
                 var2 = fk.a(false, "descriptions,68");
                 if (null != var2) {
-                  ut.field_cb[68] = uu.a(var2, (byte) -113);
+                  DisplaySettingsDialog.field_cb[68] = uu.a(var2, (byte) -113);
                 }
                 var2 = fk.a(false, "descriptions,69");
                 if (var2 != null) {
-                  ut.field_cb[69] = uu.a(var2, (byte) 109);
+                  DisplaySettingsDialog.field_cb[69] = uu.a(var2, (byte) 109);
                 }
                 var2 = fk.a(false, "descriptions,70");
                 if (null != var2) {
-                  ut.field_cb[70] = uu.a(var2, (byte) -109);
+                  DisplaySettingsDialog.field_cb[70] = uu.a(var2, (byte) -109);
                 }
                 var2 = fk.a(false, "descriptions,71");
                 if (null != var2) {
-                  ut.field_cb[71] = uu.a(var2, (byte) -109);
+                  DisplaySettingsDialog.field_cb[71] = uu.a(var2, (byte) -109);
                 }
                 var2 = fk.a(false, "descriptions,72");
                 if (null != var2) {
-                  ut.field_cb[72] = uu.a(var2, (byte) -121);
+                  DisplaySettingsDialog.field_cb[72] = uu.a(var2, (byte) -121);
                 }
                 var2 = fk.a(false, "descriptions,73");
                 if (null != var2) {
-                  ut.field_cb[73] = uu.a(var2, (byte) 87);
+                  DisplaySettingsDialog.field_cb[73] = uu.a(var2, (byte) 87);
                 }
                 var2 = fk.a(false, "descriptions,74");
                 if (null != var2) {
-                  ut.field_cb[74] = uu.a(var2, (byte) 97);
+                  DisplaySettingsDialog.field_cb[74] = uu.a(var2, (byte) 97);
                 }
                 var2 = fk.a(false, "NO_PASSIVE");
                 if (null != var2) {
@@ -3391,7 +3391,7 @@ final class TickCounter {
                 }
                 var2 = fk.a(false, "RESULTS_PERFORMANCE");
                 if (null != var2) {
-                  cs.field_eb = uu.a(var2, (byte) -111);
+                  FullscreenConfirmationDialog.field_eb = uu.a(var2, (byte) -111);
                 }
                 var2 = fk.a(false, "RESULTS_TURNSUSED");
                 if (null != var2) {
@@ -5095,7 +5095,7 @@ final class TickCounter {
                 }
                 var2 = fk.a(false, "TERROR_NOTGOBLIN");
                 if (null != var2) {
-                  cs.field_X = uu.a(var2, (byte) 110);
+                  FullscreenConfirmationDialog.field_X = uu.a(var2, (byte) 110);
                 }
                 var2 = fk.a(false, "TERROR_NOTMOVED");
                 if (var2 != null) {

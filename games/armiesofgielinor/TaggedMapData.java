@@ -266,14 +266,14 @@ final class TaggedMapData implements TaggedFieldReader {
               if (encodedLength <= 0) {
                 return;
               }
-              this.mapWidth = (int)tn.readTaggedInteger(false, encodedLength, packet);
+              this.mapWidth = (int)FullscreenMembershipDialog.readTaggedInteger(false, encodedLength, packet);
             } else {
               if (!fieldName.equals("h")) {
                 if (fieldName.equals("them")) {
                   if (0 >= encodedLength) {
                     return;
                   }
-                  this.mapTheme = (int)tn.readTaggedInteger(false, encodedLength, packet);
+                  this.mapTheme = (int)FullscreenMembershipDialog.readTaggedInteger(false, encodedLength, packet);
                   return;
                 }
                 if (!fieldName.equals("map")) {
@@ -295,14 +295,14 @@ final class TaggedMapData implements TaggedFieldReader {
                 }
               } else {
                 if (0 < encodedLength) {
-                  this.mapHeight = (int)tn.readTaggedInteger(false, encodedLength, packet);
+                  this.mapHeight = (int)FullscreenMembershipDialog.readTaggedInteger(false, encodedLength, packet);
                   return;
                 }
               }
             }
           } else {
             if (0 < encodedLength) {
-              this.playerCount = (int)tn.readTaggedInteger(false, encodedLength, packet);
+              this.playerCount = (int)FullscreenMembershipDialog.readTaggedInteger(false, encodedLength, packet);
             }
           }
           return;

@@ -146,7 +146,7 @@ final class LobbyPlayer extends ClientUiComponent {
     final static void uploadQuicksave(Battlefield battlefield, int damageTaken, int unitLossCount, byte obfuscationGuard, int missionId, int campaignIndex) {
         CampaignQuicksave quicksave = null;
         int payloadStart = 0;
-        if (DamageEvent.g(121)) {
+        if (DamageEvent.isGuestSession(121)) {
           return;
         }
         try {

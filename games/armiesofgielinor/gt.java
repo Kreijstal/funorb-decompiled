@@ -73,7 +73,7 @@ final class gt {
             stackIn_14_0 = var5;
             return stackIn_14_0;
           }
-          stackIn_4_0 = tn.field_ab;
+          stackIn_4_0 = FullscreenMembershipDialog.field_ab;
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

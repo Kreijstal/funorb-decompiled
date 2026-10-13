@@ -78,11 +78,11 @@ final class la {
         SocialListEntry var3 = AiPlanningStrategy.updateFriendListControls(obfuscationGuard + 76, visibleRows, enableCapture);
         ClientContextMenu var4Lifetime1;
         if (var3 != null) {
-          tn.activeContextMenu.addPlayerAdmissionActions(23899, false);
-          var4 = tn.activeContextMenu;
+          FullscreenMembershipDialog.activeContextMenu.addPlayerAdmissionActions(23899, false);
+          var4 = FullscreenMembershipDialog.activeContextMenu;
           var5_ref_String = AnimationFrameSet.field_y;
           var4.menu.addTextAction(5, var5_ref_String, (byte) -109);
-          var4Lifetime1 = tn.activeContextMenu;
+          var4Lifetime1 = FullscreenMembershipDialog.activeContextMenu;
           var5 = BattleTutorial.pointerPressX;
           var6 = TeleportAction.pointerPressY;
           var4Lifetime1.menu.layoutPopup(0, var6, 0, (byte) -118, var5);

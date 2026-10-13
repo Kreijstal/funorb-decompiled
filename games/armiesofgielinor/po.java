@@ -35,7 +35,7 @@ final class po {
           }
           var2_int = packet.readInt(1);
           packet.beginBitReading(45);
-          var3 = ut.readTaggedMap(packet, (byte) -85, var2_int);
+          var3 = DisplaySettingsDialog.readTaggedMap(packet, (byte) -85, var2_int);
           packet.endBitReading(-2);
           stackIn_4_0 = var3;
           return stackIn_4_0;

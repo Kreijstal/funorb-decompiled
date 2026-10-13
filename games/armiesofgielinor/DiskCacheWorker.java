@@ -253,7 +253,7 @@ final class DiskCacheWorker implements Runnable {
         if (obfuscationGuard != 1) {
           field_e = (String) null;
         }
-        if (DamageEvent.g(76)) {
+        if (DamageEvent.isGuestSession(76)) {
           return;
         }
         try {

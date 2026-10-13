@@ -19,7 +19,7 @@ final class LoginMethod {
             if (FixedQuaternion.fullscreenCanvas != null &&
               FixedQuaternion.fullscreenCanvas.focusLost) {
               ck.b(-110);
-              SphinxActionRequest.field_v.showDialog(new ud(SphinxActionRequest.field_v, SocialListPanel.field_Mb), 0);
+              SphinxActionRequest.field_v.showDialog(new FullscreenStatusDialog(SphinxActionRequest.field_v, SocialListPanel.field_Mb), 0);
             }
             return;
           }

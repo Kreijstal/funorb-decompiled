@@ -137,8 +137,8 @@ final class FixedQuaternion {
         String var8Lifetime1;
         if (jj.b((byte) -73)) {
           jt.a(param6 - 32133, param0, param4, param3);
-          if (null != tn.activeContextMenu) {
-            if (!tn.activeContextMenu.pollAndDispatch(param1, (byte) 103, param4, param5, param0)) {
+          if (null != FullscreenMembershipDialog.activeContextMenu) {
+            if (!FullscreenMembershipDialog.activeContextMenu.pollAndDispatch(param1, (byte) 103, param4, param5, param0)) {
               AccountRegistrationForm.a(param6 ^ -81, param4, param0);
               wm.a(0, param2, param0);
               param0 = false;

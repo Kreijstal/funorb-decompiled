@@ -467,11 +467,11 @@ final class TutorialController {
         try {
           boolean decompiledFrameCompleted0 = true;
           AccountNameSelectionForm.field_F = -1;
-          if (null == ud.field_X) {
-            ud.field_X = new RgbSprite[pc.field_k.length];
+          if (null == FullscreenStatusDialog.field_X) {
+            FullscreenStatusDialog.field_X = new RgbSprite[pc.field_k.length];
             var2_int = 0;
             while (!(pc.field_k.length <= var2_int)) {
-              ud.field_X[var2_int] = DeathEvent.a(ah.localCoat.colourIndices, pc.field_k[var2_int], mv.localAccountName, GrowthEvent.bitwiseXor(param0, -6583));
+              FullscreenStatusDialog.field_X[var2_int] = DeathEvent.a(ah.localCoat.colourIndices, pc.field_k[var2_int], mv.localAccountName, GrowthEvent.bitwiseXor(param0, -6583));
               var2_int++;
               if (var4 != 0) {
                 decompiledFrameCompleted0 = false;
@@ -495,7 +495,7 @@ final class TutorialController {
               if (pg.playerProfile.getUnlockLevel(0) <= var2_int) {
                 TeamRoster.field_e.drawAdditive(db.a(true, var2_int * 57 + 26), MatchConditionEntry.a(60, (byte) 94), 64);
               }
-              stackIn_23_0 = ud.field_X[var2_int];
+              stackIn_23_0 = FullscreenStatusDialog.field_X[var2_int];
               stackIn_23_1 = db.a(true, 34 + var2_int * 57);
               stackIn_23_2 = MatchConditionEntry.a(64, (byte) 94);
               if (var2_int >= pg.playerProfile.getUnlockLevel(0)) {
@@ -816,7 +816,7 @@ final class TutorialController {
             var2_int = 0;
           }
           var3 = RadialSummonItem.field_h[var2_int];
-          if (DamageEvent.g(126)) {
+          if (DamageEvent.isGuestSession(126)) {
             this.b(320);
             return;
           }
@@ -1315,7 +1315,7 @@ final class TutorialController {
                                                                                                                                               if (!this.selectionState.hasActivationInput((byte) 49)) {
                                                                                                                                                 return;
                                                                                                                                               }
-                                                                                                                                              if (DamageEvent.g(123)) {
+                                                                                                                                              if (DamageEvent.isGuestSession(123)) {
                                                                                                                                                 MoveAttackAction.a(0, bi.field_e, param0, (byte) 90, true);
                                                                                                                                                 if (var9 == 0) {
                                                                                                                                                   return;
@@ -1357,7 +1357,7 @@ final class TutorialController {
                                                                                                                                           if (!this.selectionState.hasActivationInput((byte) 48)) {
                                                                                                                                             return;
                                                                                                                                           }
-                                                                                                                                          if (DamageEvent.g(116)) {
+                                                                                                                                          if (DamageEvent.isGuestSession(116)) {
                                                                                                                                             MoveAttackAction.a(0, SpellMenuGroup.field_l, param0, (byte) 90, true);
                                                                                                                                             if (var9 == 0) {
                                                                                                                                               return;
@@ -1664,7 +1664,7 @@ final class TutorialController {
                                                                                         if (!this.selectionState.hasActivationInput((byte) 124)) {
                                                                                           return;
                                                                                         }
-                                                                                        if (!DamageEvent.g(param1 + 89)) {
+                                                                                        if (!DamageEvent.isGuestSession(param1 + 89)) {
                                                                                           var6 = param0 ? 1 : 0;
                                                                                           CipherPacketBuffer.a(var6 != 0, 13, 1, jt.field_a);
                                                                                           if (var9 == 0) {
@@ -1742,7 +1742,7 @@ final class TutorialController {
                                                                             if (!this.selectionState.hasActivationInput((byte) 85)) {
                                                                               return;
                                                                             }
-                                                                            ps.field_v = true;
+                                                                            DisplayModeOptionPainter.field_v = true;
                                                                             stackIn_421_0 = !(cu.field_a);
                                                                             cu.field_a = stackIn_421_0;
                                                                             StripedProgressWidget.a(param1 ^ 1);
@@ -1755,7 +1755,7 @@ final class TutorialController {
                                                                           }
                                                                           stackIn_431_0 = !(uc.field_a);
                                                                           uc.field_a = stackIn_431_0;
-                                                                          ps.field_v = true;
+                                                                          DisplayModeOptionPainter.field_v = true;
                                                                           StripedProgressWidget.a(1);
                                                                           if (var9 == 0) {
                                                                             return;
@@ -1765,7 +1765,7 @@ final class TutorialController {
                                                                           return;
                                                                         }
                                                                         ek.field_d = ek.field_d + 1;
-                                                                        ps.field_v = true;
+                                                                        DisplayModeOptionPainter.field_v = true;
                                                                         if (ek.field_d == 3) {
                                                                           ek.field_d = 0;
                                                                         }
@@ -2668,7 +2668,7 @@ final class TutorialController {
     final static void h(byte param0) {
         try {
           SphinxActionRequest.field_v.closeAllDialogs(-128);
-          SphinxActionRequest.field_v.showDialog(new ut(SphinxActionRequest.field_v), 0);
+          SphinxActionRequest.field_v.showDialog(new DisplaySettingsDialog(SphinxActionRequest.field_v), 0);
           if (param0 < 44) {
             TutorialController.h((byte) -22);
           }
@@ -2832,7 +2832,7 @@ final class TutorialController {
           var6 = stackIn_44_0;
           if (var6 == -1) {
             rs.field_n.drawCentered(ck.field_a, db.a(true, 279) + 154, MatchConditionEntry.a(200, (byte) 94) + 112, 16777215, -1);
-            if (!DamageEvent.g(95)) {
+            if (!DamageEvent.isGuestSession(95)) {
               return;
             }
             fe.a(eq.field_n, db.a(true, 420), MatchConditionEntry.a(386, (byte) 94), 350, 16777215, true);
@@ -2889,7 +2889,7 @@ final class TutorialController {
           do {
             if (var14 >= var13) {
               var10 = MatchConditionEntry.a(385, (byte) 94);
-              rs.field_n.drawText(FullscreenFocusCanvas.field_h + ps.field_D[var6], db.a(true, 272), var10, 16777215, -1);
+              rs.field_n.drawText(FullscreenFocusCanvas.field_h + DisplayModeOptionPainter.field_D[var6], db.a(true, 272), var10, 16777215, -1);
               rs.field_n.drawText(DiskCacheWorker.field_e, db.a(true, 392), var10, 16777215, -1);
               var14 = db.a(true, rs.field_n.textWidth(DiskCacheWorker.field_e) + 392);
               break;
@@ -3341,11 +3341,11 @@ final class TutorialController {
             stackIn_8_0 = var3_int - MoveEvent.tutorialLayout.getItemSpacing(this.tutorialStage, (byte) 106);
             return stackIn_8_0;
           }
-          if ((!DamageEvent.g(97) ||
+          if ((!DamageEvent.isGuestSession(97) ||
             this.tutorialStage != 8) &&
             9 != this.tutorialStage) {
             if (6 == this.tutorialStage &&
-              !DamageEvent.g(78)) {
+              !DamageEvent.isGuestSession(78)) {
               if (itemIndex < 2) {
                 stackIn_28_0 = var3_int;
                 return stackIn_28_0;
@@ -3440,7 +3440,7 @@ final class TutorialController {
             var2_int = 0;
           }
           var3 = RadialSummonItem.field_h[var2_int];
-          if (DamageEvent.g(123)) {
+          if (DamageEvent.isGuestSession(123)) {
             this.b(320);
             return;
           }
@@ -4006,7 +4006,7 @@ final class TutorialController {
               if (SetCoatConsoleCommand.field_F > -1) {
                 var5 = AnimationFrameSet.unitUnlockGroups[1 + li.field_q][SetCoatConsoleCommand.field_F];
                 var6 = "";
-                var6Lifetime1 = ut.field_cb[var5];
+                var6Lifetime1 = DisplaySettingsDialog.field_cb[var5];
                 var7 = AlphaWidgetContainer.field_M[var5];
                 this.a(var7, WhirlpoolHasher.unitDefinitions[var5][0], ve.a((byte) 13, ScrollContainer.unitDisplayNames[var5]), this.f(var5, 8), (byte) 116, var6Lifetime1);
               } else {
@@ -5088,7 +5088,7 @@ final class TutorialController {
             }
             if (decompiledFrameRemainder0) {
               if (jt.field_a == 6 &&
-                !DamageEvent.g(79)) {
+                !DamageEvent.isGuestSession(79)) {
                 this.a(98);
                 decompiledFrameRemainder0 = (var3 != 0);
               }
@@ -5310,8 +5310,8 @@ final class TutorialController {
         RuntimeException var3 = null;
         try {
           if ((this.tutorialStage != 6 ||
-            DamageEvent.g(121)) &&
-            (!DamageEvent.g(108) ||
+            DamageEvent.isGuestSession(121)) &&
+            (!DamageEvent.isGuestSession(108) ||
             8 != this.tutorialStage &&
             9 != this.tutorialStage)) {
             if (!obfuscationGuard) {
@@ -5968,8 +5968,8 @@ final class TutorialController {
             field_f = (String[]) null;
           }
           if ((this.tutorialStage != 6 ||
-            DamageEvent.g(obfuscationGuard + 3964)) &&
-            (!DamageEvent.g(77) ||
+            DamageEvent.isGuestSession(obfuscationGuard + 3964)) &&
+            (!DamageEvent.isGuestSession(77) ||
             this.tutorialStage != 8 &&
             this.tutorialStage != 9)) {
             if (13 != this.tutorialStage &&

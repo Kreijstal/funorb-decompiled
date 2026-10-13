@@ -73,7 +73,7 @@ abstract class AiPlanningStrategy {
           }
           if (decompiledFrameRemainder1) {
             su.field_d.inputEnabled = true;
-            bn.field_c.text = EmailCheckResult.a(4800, ps.field_A, new String[]{EmailValidator.currentLocationLabel});
+            bn.field_c.text = EmailCheckResult.a(4800, DisplayModeOptionPainter.field_A, new String[]{EmailValidator.currentLocationLabel});
             ListMissionsConsoleCommand.field_E.scrollContainer.viewport.text = null;
             var6 = null;
             var7 = (SocialListEntry) (var4.first((byte) 109));
@@ -167,14 +167,14 @@ abstract class AiPlanningStrategy {
                     var16 = var7.displayName;
                     SpriteDropdownMenu.openClientContextMenu(ListMissionsConsoleCommand.field_E.scrollContainer, var7, (int[]) null, (String) null, -1, 84, -1, var16, 0L);
                     if (null != var7.locationLabel &&
-                      !fs.isActivePrivateTextRecipient((byte) 110, tn.activeContextMenu.accountName) &&
+                      !fs.isActivePrivateTextRecipient((byte) 110, FullscreenMembershipDialog.activeContextMenu.accountName) &&
                       !NodeIterator.field_a) {
                       if (!vi.field_d) {
-                        var17 = tn.activeContextMenu;
+                        var17 = FullscreenMembershipDialog.activeContextMenu;
                         var18 = EmailCheckResult.a(4800, MusicPatchNode.field_k, new String[]{var16});
                         var17.menu.addTextAction(8, var18, (byte) -115);
                       }
-                      var17Lifetime1 = tn.activeContextMenu;
+                      var17Lifetime1 = FullscreenMembershipDialog.activeContextMenu;
                       var18Lifetime1 = EmailCheckResult.a(4800, DeployRequest.field_w, new String[]{var16});
                       var17Lifetime1.menu.addTextAction(18, var18Lifetime1, (byte) -100);
                     }
@@ -190,13 +190,13 @@ abstract class AiPlanningStrategy {
                 }
               }
               if (decompiledFrameRemainder0) {
-                ut.field_fb = 0;
+                DisplaySettingsDialog.field_fb = 0;
               }
               if (ListMissionsConsoleCommand.field_E.removeButton.pressedButton == 0) {
                 break;
               }
               EffectPresentation.field_e = new AccountNamePrompt(ListMissionsConsoleCommand.field_E.removeButton.screenX, ListMissionsConsoleCommand.field_E.removeButton.screenY, ListMissionsConsoleCommand.field_E.removeButton.width, ListMissionsConsoleCommand.field_E.removeButton.height, se.field_b, kq.field_N, eq.field_h, eq.field_h);
-              ut.field_fb = 1;
+              DisplaySettingsDialog.field_fb = 1;
               break;
             }
           }
@@ -454,7 +454,7 @@ abstract class AiPlanningStrategy {
         try {
           boolean decompiledFrameRemainder0 = true;
           if (0 >= LoginForm.memberEntitlementValue) {
-            if (DamageEvent.g(80)) {
+            if (DamageEvent.isGuestSession(80)) {
               var2_int = 0;
               decompiledFrameRemainder0 = (var3 != 0);
             }

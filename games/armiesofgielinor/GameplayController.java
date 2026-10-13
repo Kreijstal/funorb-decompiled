@@ -177,8 +177,8 @@ final class GameplayController {
             fe.c(this.battlefield.campaignMission.name, db.a(true, 320), MatchConditionEntry.a(80, (byte) 94), ConsoleValue.field_b, true);
           }
           fe.b(db.a(true, param1), MatchConditionEntry.a(param0, (byte) 94), 223, var8, MusicPatch.field_m, ConsoleValue.field_b, 0, 180);
-          fe.b(cs.field_eb, db.a(true, param1 + 111), MatchConditionEntry.a(param0 + 18, (byte) 94), true);
-          fe.c(cs.field_eb, db.a(true, 111 + param1), MatchConditionEntry.a(18 + param0, (byte) 94), ConsoleValue.field_b, true);
+          fe.b(FullscreenConfirmationDialog.field_eb, db.a(true, param1 + 111), MatchConditionEntry.a(param0 + 18, (byte) 94), true);
+          fe.c(FullscreenConfirmationDialog.field_eb, db.a(true, 111 + param1), MatchConditionEntry.a(18 + param0, (byte) 94), ConsoleValue.field_b, true);
           var10 = param1 + 55;
           var11 = var10 + 100;
           var12 = 50 + param0;
@@ -6490,7 +6490,7 @@ final class GameplayController {
                       decompiledSharedTail3 = (var20 != 0);
                     }
                     if (decompiledSharedTail3) {
-                      var2 = EmailCheckResult.a(param0 ^ 4792, ud.field_Y, new String[]{Integer.toString(var17)});
+                      var2 = EmailCheckResult.a(param0 ^ 4792, FullscreenStatusDialog.field_Y, new String[]{Integer.toString(var17)});
                     }
                   }
                   var16 = 0;
@@ -6753,10 +6753,10 @@ final class GameplayController {
                   if (0 < var14) {
                     var2 = EmailCheckResult.a(4800, vg.field_t, new String[]{Integer.toString(var14)});
                     if (var20 != 0) {
-                      var2 = ps.field_x;
+                      var2 = DisplayModeOptionPainter.field_x;
                     }
                   } else {
-                    var2 = ps.field_x;
+                    var2 = DisplayModeOptionPainter.field_x;
                   }
                 }
                 if (TabbedPanel.a(50, 535, 16, false)) {
@@ -11302,7 +11302,7 @@ final class GameplayController {
             this.aiPlanners[var2_int] = null;
             var2_int++;
           } while (var3 == 0);
-          if (!DamageEvent.g(79)) {
+          if (!DamageEvent.isGuestSession(79)) {
             this.battlefield.playerNames[0] = mv.localAccountName;
             if (var3 != 0) {
               this.battlefield.playerNames[0] = BoundedFile.field_i;
@@ -11953,7 +11953,7 @@ final class GameplayController {
             this.battlefield.godFavourLevels[this.controlledPlayerId][this.battlefield.chosenGods[this.controlledPlayerId][var2_int]] = 1;
             var2_int++;
           } while (var3 == 0);
-          if (!DamageEvent.g(76)) {
+          if (!DamageEvent.isGuestSession(76)) {
             this.battlefield.playerNames[0] = mv.localAccountName;
             if (var3 != 0) {
               this.battlefield.playerNames[0] = BoundedFile.field_i;
@@ -11994,7 +11994,7 @@ final class GameplayController {
           if (!this.field_lb) {
             if (l.activeCampaignMission == null) {
               var3_int = 0;
-              if (!DamageEvent.g(124)) {
+              if (!DamageEvent.isGuestSession(124)) {
                 stackIn_12_0 = (this.field_Yb != 2) ? var3_int : 18;
                 var4 = stackIn_12_0;
                 var5 = param1 ? 1 : 0;

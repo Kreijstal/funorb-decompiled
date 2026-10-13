@@ -9,7 +9,7 @@ final class QuickChatCategoryRepository {
     private ResourceArchive globalArchive;
     private ResourceArchive localArchive;
     static String field_g;
-    static boolean field_b;
+    static boolean guestSession;
 
     final static void a(boolean param0, int param1) {
         tq.a(param0, true, param1 ^ -81);
@@ -28,7 +28,7 @@ final class QuickChatCategoryRepository {
         if (RasterViewportResizeHandler.field_a < NodeIterator.field_c) {
           return null;
         }
-        if (!(ps.field_E + NodeIterator.field_c <= RasterViewportResizeHandler.field_a)) {
+        if (!(DisplayModeOptionPainter.field_E + NodeIterator.field_c <= RasterViewportResizeHandler.field_a)) {
           return TextLineLayout.field_a;
         }
         return null;
@@ -485,8 +485,8 @@ final class QuickChatCategoryRepository {
               }
             }
           }
-          for (var3Lifetime1 = 0; var3Lifetime1 < cs.field_W.length; var3Lifetime1++) {
-            var11 = cs.field_W[var3Lifetime1];
+          for (var3Lifetime1 = 0; var3Lifetime1 < FullscreenConfirmationDialog.field_W.length; var3Lifetime1++) {
+            var11 = FullscreenConfirmationDialog.field_W[var3Lifetime1];
             var12 = ArrayWidgetContainer.a(var11, 235, var9);
             var5Lifetime1 = var12;
             stackIn_23_0 = var12;
@@ -499,9 +499,9 @@ final class QuickChatCategoryRepository {
                 }
               }
             }
-            cs.field_db[var3Lifetime1] = var5Lifetime1.createModel(SummonAction.field_x, fm.field_a, MaskedTextEntryPainter.field_A, BattleCharacter.field_t, MeshObject.field_a);
-            if (((ModelMesh) (cs.field_db[var3Lifetime1])).vertexCount == 0) {
-              cs.field_db[var3Lifetime1] = null;
+            FullscreenConfirmationDialog.field_db[var3Lifetime1] = var5Lifetime1.createModel(SummonAction.field_x, fm.field_a, MaskedTextEntryPainter.field_A, BattleCharacter.field_t, MeshObject.field_a);
+            if (((ModelMesh) (FullscreenConfirmationDialog.field_db[var3Lifetime1])).vertexCount == 0) {
+              FullscreenConfirmationDialog.field_db[var3Lifetime1] = null;
             }
           }
           EditableTextWidget.a(false, 76, -32596);
@@ -564,6 +564,6 @@ final class QuickChatCategoryRepository {
         field_a = "Talons and hooks with which to swipe from above, improving aerial attacks.";
         soundHandles = new NodeDeque();
         field_g = "Not yet achieved";
-        field_b = true;
+        guestSession = true;
     }
 }

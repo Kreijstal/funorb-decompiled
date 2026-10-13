@@ -291,7 +291,7 @@ final class DropdownSelector extends DequeWidgetContainer implements WidgetActiv
               if (null != RadialSummonItem.field_f.field_s) {
                 AccountRegistrationDialog.a(RadialSummonItem.field_f.field_s, 1);
               }
-              if (ps.field_v) {
+              if (DisplayModeOptionPainter.field_v) {
                 StripedProgressWidget.a(1);
               } else {
                 ek.field_d = AnimationFrameSet.field_E >> 2 & 3;

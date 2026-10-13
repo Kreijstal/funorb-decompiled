@@ -1,213 +1,213 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ut extends ResizableModalDialog implements WidgetActivationListener {
-    private InteractiveWidget field_bb;
+final class DisplaySettingsDialog extends ResizableModalDialog implements WidgetActivationListener {
+    private InteractiveWidget fullscreenModeButton;
     static String field_ib;
-    private InteractiveWidget field_ab;
-    private InteractiveWidget field_mb;
-    private InteractiveWidget field_Y;
-    private InteractiveWidget field_Z;
-    private DropdownSelector field_lb;
-    private boolean field_hb;
+    private InteractiveWidget applyButton;
+    private InteractiveWidget classicModeButton;
+    private InteractiveWidget selectedModeButton;
+    private InteractiveWidget resizableModeButton;
+    private DropdownSelector displayModeDropdown;
+    private boolean nonGuestAtOpen;
     static byte[][] field_W;
-    private boolean field_jb;
-    private GridWidgetContainer field_gb;
+    private boolean hasFullscreenModes;
+    private GridWidgetContainer modeGrid;
     static int decodedChatContextId;
     static String[] field_cb;
     static int field_fb;
-    private InteractiveWidget[] field_kb;
-    private FullscreenDisplayMode[] field_db;
-    private boolean field_nb;
-    private InteractiveWidget field_X;
+    private InteractiveWidget[] modeButtons;
+    private FullscreenDisplayMode[] displayModes;
+    private boolean dropdownWasExpanded;
+    private InteractiveWidget backButton;
 
-    ut(ModalDialogHost param0) {
-        super(param0, 430, 254);
-        int incrementValue$0 = 0;
-        int var7_int = 0;
-        boolean stackIn_31_1 = false;
-        int stackIn_34_0 = 0;
-        boolean stackIn_37_1 = false;
-        int stackIn_40_0 = 0;
-        int stackIn_48_0 = 0;
+    DisplaySettingsDialog(ModalDialogHost host) {
+        super(host, 430, 254);
+        int retainedModeSlot = 0;
+        int modeLabelIndex = 0;
+        boolean fullscreenModesAvailable = false;
+        int resizeAvailableFlag = 0;
+        boolean nonGuestSnapshot = false;
+        int modeColumnCount = 0;
+        int resizeHeapBlockedFlag = 0;
         Object stackIn_51_0;
         GridWidgetContainer stackIn_51_1;
         GridWidgetContainer stackIn_51_2;
-        int stackIn_51_3;
+        int modeGridX;
         GridWidgetContainer stackIn_52_1 = null;
         GridWidgetContainer stackIn_52_2 = null;
-        int stackIn_52_4 = 0;
-        int stackIn_57_1 = 0;
-        String stackIn_74_0 = null;
+        int modeGridY = 0;
+        int modeButtonCount = 0;
+        String restrictionMessageValue = null;
         RuntimeException stackIn_80_0 = null;
         StringBuilder stackIn_80_1 = null;
         String stackIn_81_2 = null;
         RuntimeException decompiledCaughtException = null;
-        int var2_int = 0;
+        int modeCounter = 0;
         RuntimeException var2 = null;
-        int var3 = 0;
-        FullscreenDisplayMode[] var3_ref_ls__ = null;
-        int var4 = 0;
-        int var5 = 0;
-        String[] var5_ref_String__ = null;
-        int var6_int = 0;
-        String var6 = null;
-        InteractiveWidget var6_ref = null;
-        Widget var7 = null;
-        FullscreenDisplayMode var8 = null;
-        String var10 = null;
+        int duplicateModeIndex = 0;
+        FullscreenDisplayMode[] unfilteredModes = null;
+        int retainedModeIndex = 0;
+        int sourceModeIndex = 0;
+        String[] modeLabels = null;
+        int selectedModeIndex = 0;
+        String restrictionMessage = null;
+        InteractiveWidget currentMode = null;
+        Widget restrictionLabel = null;
+        FullscreenDisplayMode mode = null;
+        String restrictionText = null;
         Object stackIn_51_0Lifetime1;
         GridWidgetContainer stackIn_51_1Lifetime1;
         GridWidgetContainer stackIn_51_2Lifetime1;
         GridWidgetContainer stackIn_52_1Lifetime1;
         GridWidgetContainer stackIn_52_2Lifetime1;
-        int var3Lifetime1;
-        int var4Lifetime1;
-        int var5Lifetime1;
-        int var2_intLifetime1;
-        int var3Lifetime2;
+        int gridColumns;
+        int resizeHeapBlocked;
+        int actionCenterX;
+        int resizeAvailable;
+        int modeCountIndex;
         try {
-          this.field_db = ValidatedTextWidget.getFullscreenDisplayModes(-114, IntPair.field_m);
-          if (this.field_db.length > 0) {
-            for (var2_int = 0; var2_int < this.field_db.length; var2_int++) {
-              if (this.field_db[var2_int] != null) {
-                for (var3 = var2_int + 1; this.field_db.length > var3; var3++) {
-                  if (null != this.field_db[var3] &&
-                    this.field_db[var3].width == this.field_db[var2_int].width &&
-                    this.field_db[var3].height == this.field_db[var2_int].height) {
-                    this.field_db[var3] = null;
+          this.displayModes = ValidatedTextWidget.getFullscreenDisplayModes(-114, IntPair.field_m);
+          if (this.displayModes.length > 0) {
+            for (modeCounter = 0; modeCounter < this.displayModes.length; modeCounter++) {
+              if (this.displayModes[modeCounter] != null) {
+                for (duplicateModeIndex = modeCounter + 1; this.displayModes.length > duplicateModeIndex; duplicateModeIndex++) {
+                  if (null != this.displayModes[duplicateModeIndex] &&
+                    this.displayModes[duplicateModeIndex].width == this.displayModes[modeCounter].width &&
+                    this.displayModes[duplicateModeIndex].height == this.displayModes[modeCounter].height) {
+                    this.displayModes[duplicateModeIndex] = null;
                   }
                 }
                 if (null != ActionSpell.viewportManager &&
-                  null != this.field_db[var2_int] &&
-                  !ActionSpell.viewportManager.acceptsDimensions(this.field_db[var2_int].width, 122, this.field_db[var2_int].height)) {
-                  this.field_db[var2_int] = null;
+                  null != this.displayModes[modeCounter] &&
+                  !ActionSpell.viewportManager.acceptsDimensions(this.displayModes[modeCounter].width, 122, this.displayModes[modeCounter].height)) {
+                  this.displayModes[modeCounter] = null;
                 }
               }
             }
-            var2_int = 0;
-            for (var3Lifetime2 = 0; var3Lifetime2 < this.field_db.length; var3Lifetime2++) {
-              if (this.field_db[var3Lifetime2] != null) {
-                var2_int++;
+            modeCounter = 0;
+            for (modeCountIndex = 0; modeCountIndex < this.displayModes.length; modeCountIndex++) {
+              if (this.displayModes[modeCountIndex] != null) {
+                modeCounter++;
               }
             }
-            var3_ref_ls__ = this.field_db;
-            this.field_db = new FullscreenDisplayMode[var2_int];
-            var4 = 0;
-            for (var5 = 0; var5 < var3_ref_ls__.length; var5++) {
-              if (var3_ref_ls__[var5] != null) {
-                incrementValue$0 = var4;
-                var4++;
-                this.field_db[incrementValue$0] = var3_ref_ls__[var5];
+            unfilteredModes = this.displayModes;
+            this.displayModes = new FullscreenDisplayMode[modeCounter];
+            retainedModeIndex = 0;
+            for (sourceModeIndex = 0; sourceModeIndex < unfilteredModes.length; sourceModeIndex++) {
+              if (unfilteredModes[sourceModeIndex] != null) {
+                retainedModeSlot = retainedModeIndex;
+                retainedModeIndex++;
+                this.displayModes[retainedModeSlot] = unfilteredModes[sourceModeIndex];
               }
             }
-            SpellConfirmationDialog.a(this.field_db, 1680474497);
+            SpellConfirmationDialog.a(this.displayModes, 1680474497);
           }
-          stackIn_31_1 = !(this.field_db.length <= 0);
-          this.field_jb = stackIn_31_1;
-          stackIn_34_0 = (!PaletteRegionMap.b(85)) ? 0 : 1;
-          var2_intLifetime1 = stackIn_34_0;
-          stackIn_37_1 = !(DamageEvent.g(79));
-          this.field_hb = stackIn_37_1;
-          stackIn_40_0 = (var2_intLifetime1 != 0) ? 3 : 2;
-          var3Lifetime1 = stackIn_40_0;
-          if (var2_intLifetime1 == 0) {
+          fullscreenModesAvailable = !(this.displayModes.length <= 0);
+          this.hasFullscreenModes = fullscreenModesAvailable;
+          resizeAvailableFlag = (!PaletteRegionMap.b(85)) ? 0 : 1;
+          resizeAvailable = resizeAvailableFlag;
+          nonGuestSnapshot = !(DamageEvent.isGuestSession(79));
+          this.nonGuestAtOpen = nonGuestSnapshot;
+          modeColumnCount = (resizeAvailable != 0) ? 3 : 2;
+          gridColumns = modeColumnCount;
+          if (resizeAvailable == 0) {
             if (null != ActionSpell.viewportManager) {
-              stackIn_48_0 = (ActionSpell.viewportManager.isResizeBlockedByHeap((byte) 122)) ? 1 : 0;
+              resizeHeapBlockedFlag = (ActionSpell.viewportManager.isResizeBlockedByHeap((byte) 122)) ? 1 : 0;
             } else {
-              stackIn_48_0 = 0;
+              resizeHeapBlockedFlag = 0;
             }
           } else {
-            stackIn_48_0 = 0;
+            resizeHeapBlockedFlag = 0;
           }
-          boolean decompiledFrameRemainder0 = true;
-          var4Lifetime1 = stackIn_48_0;
+          boolean useRaisedModeGrid = true;
+          resizeHeapBlocked = resizeHeapBlockedFlag;
           stackIn_51_0 = this;
           stackIn_51_1 = null;
           stackIn_51_2 = null;
-          stackIn_51_3 = 10;
-          if (var2_intLifetime1 == 0) {
+          modeGridX = 10;
+          if (resizeAvailable == 0) {
             stackIn_51_0Lifetime1 = this;
             stackIn_51_1Lifetime1 = null;
             stackIn_51_2Lifetime1 = null;
-            if (var4Lifetime1 == 0) {
+            if (resizeHeapBlocked == 0) {
               stackIn_52_1 = null;
               stackIn_52_2 = null;
-              stackIn_52_4 = 75;
-              decompiledFrameRemainder0 = false;
+              modeGridY = 75;
+              useRaisedModeGrid = false;
             }
           }
-          if (decompiledFrameRemainder0) {
+          if (useRaisedModeGrid) {
             stackIn_52_1Lifetime1 = null;
             stackIn_52_2Lifetime1 = null;
-            stackIn_52_4 = 58;
+            modeGridY = 58;
           }
-          this.field_gb = new GridWidgetContainer(stackIn_51_3, stackIn_52_4, 410, 105, (WidgetPainter) null, var3Lifetime1, 1);
-          this.field_gb.field_Q = 83;
-          this.field_gb.setCellInsets(5, 57, 5);
-          this.addChild((byte) 10, (Widget) (this.field_gb));
-          this.field_mb = this.a((WidgetListener) (this), oq.field_j, ToggleTurnSkipConsoleCommand.field_H, false);
-          if (var2_intLifetime1 != 0) {
-            this.field_Z = this.a((WidgetListener) (this), Unit.field_n, HuffmanCodec.field_e, false);
+          this.modeGrid = new GridWidgetContainer(modeGridX, modeGridY, 410, 105, (WidgetPainter) null, gridColumns, 1);
+          this.modeGrid.field_Q = 83;
+          this.modeGrid.setCellInsets(5, 57, 5);
+          this.addChild((byte) 10, (Widget) (this.modeGrid));
+          this.classicModeButton = this.createModeButton((WidgetListener) (this), oq.field_j, ToggleTurnSkipConsoleCommand.field_H, false);
+          if (resizeAvailable != 0) {
+            this.resizableModeButton = this.createModeButton((WidgetListener) (this), Unit.field_n, HuffmanCodec.field_e, false);
           }
-          this.field_bb = this.a((WidgetListener) (this), oo.field_e, ClientContextMenu.field_b, false);
-          if (var2_intLifetime1 != 0) {
-            stackIn_57_1 = 3;
+          this.fullscreenModeButton = this.createModeButton((WidgetListener) (this), oo.field_e, ClientContextMenu.field_b, false);
+          if (resizeAvailable != 0) {
+            modeButtonCount = 3;
           } else {
-            stackIn_57_1 = 2;
+            modeButtonCount = 2;
           }
-          this.field_kb = new InteractiveWidget[stackIn_57_1];
-          this.field_kb[0] = this.field_mb;
-          if (var2_intLifetime1 != 0) {
-            this.field_kb[2] = this.field_Z;
+          this.modeButtons = new InteractiveWidget[modeButtonCount];
+          this.modeButtons[0] = this.classicModeButton;
+          if (resizeAvailable != 0) {
+            this.modeButtons[2] = this.resizableModeButton;
           }
-          this.field_kb[1] = this.field_bb;
-          if (this.field_jb &&
-            var2_intLifetime1 != 0) {
-            var5_ref_String__ = new String[this.field_db.length];
-            var6_int = -1 + var5_ref_String__.length;
-            for (var7_int = 0; var7_int < this.field_db.length; var7_int++) {
-              var8 = this.field_db[var7_int];
+          this.modeButtons[1] = this.fullscreenModeButton;
+          if (this.hasFullscreenModes &&
+            resizeAvailable != 0) {
+            modeLabels = new String[this.displayModes.length];
+            selectedModeIndex = -1 + modeLabels.length;
+            for (modeLabelIndex = 0; modeLabelIndex < this.displayModes.length; modeLabelIndex++) {
+              mode = this.displayModes[modeLabelIndex];
               if (null != FixedQuaternion.fullscreenCanvas &&
-                var8.width == ActionSpell.viewportManager.fullscreenWidth &&
-                ActionSpell.viewportManager.fullscreenHeight == var8.height) {
-                var6_int = var7_int;
+                mode.width == ActionSpell.viewportManager.fullscreenWidth &&
+                ActionSpell.viewportManager.fullscreenHeight == mode.height) {
+                selectedModeIndex = modeLabelIndex;
               }
-              var5_ref_String__[var7_int] = var8.width + "<times>" + var8.height;
+              modeLabels[modeLabelIndex] = mode.width + "<times>" + mode.height;
             }
-            this.field_lb = new DropdownSelector(var5_ref_String__, var6_int, 150);
-            this.field_lb.setBounds(this.field_bb.x + this.field_gb.x, 126, this.field_bb.height + this.field_bb.y + (this.field_gb.y - 19), 8192, 18);
-            this.children.addFirst(750, this.field_lb);
+            this.displayModeDropdown = new DropdownSelector(modeLabels, selectedModeIndex, 150);
+            this.displayModeDropdown.setBounds(this.fullscreenModeButton.x + this.modeGrid.x, 126, this.fullscreenModeButton.height + this.fullscreenModeButton.y + (this.modeGrid.y - 19), 8192, 18);
+            this.children.addFirst(750, this.displayModeDropdown);
           }
-          this.field_X = this.a((byte) 38, VineGrowthAction.field_w, (WidgetListener) (this));
-          var5Lifetime1 = this.field_X.width / 2 + this.field_X.x;
-          this.field_X.width = 150;
-          this.field_X.x = -this.field_X.width - 20 + var5Lifetime1;
-          this.field_ab = this.a((byte) 38, nr.field_f, (WidgetListener) (this));
-          this.field_ab.enabled = false;
-          this.field_ab.x = var5Lifetime1 + 20;
-          this.field_ab.width = this.field_X.width;
-          if (var2_intLifetime1 != 0 ||
-            var4Lifetime1 != 0) {
-            if (var2_intLifetime1 != 0) {
-              stackIn_74_0 = GameEvent.field_l;
+          this.backButton = this.createActionButton((byte) 38, VineGrowthAction.field_w, (WidgetListener) (this));
+          actionCenterX = this.backButton.width / 2 + this.backButton.x;
+          this.backButton.width = 150;
+          this.backButton.x = -this.backButton.width - 20 + actionCenterX;
+          this.applyButton = this.createActionButton((byte) 38, nr.field_f, (WidgetListener) (this));
+          this.applyButton.enabled = false;
+          this.applyButton.x = actionCenterX + 20;
+          this.applyButton.width = this.backButton.width;
+          if (resizeAvailable != 0 ||
+            resizeHeapBlocked != 0) {
+            if (resizeAvailable != 0) {
+              restrictionMessageValue = GameEvent.field_l;
             } else {
-              stackIn_74_0 = ViewportManager.field_w;
+              restrictionMessageValue = ViewportManager.field_w;
             }
-            var10 = stackIn_74_0;
-            var6 = var10;
-            var7 = new Widget(var10, (WidgetListener) null);
-            var7.y = 163;
-            var7.x = 0;
-            var7.width = this.width;
-            var7.height = 80;
-            var7.painter = (WidgetPainter) ((Object) new BitmapTextWidgetPainter(ArmiesOfGielinor.field_J, 20, 20, 0, 10, 16777215, -1, 0, 0, 16, 0, 0, true));
-            this.addChild((byte) 10, var7);
+            restrictionText = restrictionMessageValue;
+            restrictionMessage = restrictionText;
+            restrictionLabel = new Widget(restrictionText, (WidgetListener) null);
+            restrictionLabel.y = 163;
+            restrictionLabel.x = 0;
+            restrictionLabel.width = this.width;
+            restrictionLabel.height = 80;
+            restrictionLabel.painter = (WidgetPainter) ((Object) new BitmapTextWidgetPainter(ArmiesOfGielinor.field_J, 20, 20, 0, 10, 16777215, -1, 0, 0, 16, 0, 0, true));
+            this.addChild((byte) 10, restrictionLabel);
           }
-          this.field_nb = false;
-          var6_ref = this.o(-1);
-          if (var6_ref != null) {
-            var6_ref.active = true;
+          this.dropdownWasExpanded = false;
+          currentMode = this.currentModeButton(-1);
+          if (currentMode != null) {
+            currentMode.active = true;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -215,7 +215,7 @@ final class ut extends ResizableModalDialog implements WidgetActivationListener 
           var2 = decompiledCaughtException;
           stackIn_80_0 = var2;
           stackIn_80_1 = new StringBuilder().append("ut.<init>(");
-          if (param0 == null) {
+          if (host == null) {
             stackIn_81_2 = "null";
           } else {
             stackIn_81_2 = "{...}";
@@ -224,19 +224,19 @@ final class ut extends ResizableModalDialog implements WidgetActivationListener 
         }
     }
 
-    private final InteractiveWidget o(int param0) {
-        if (param0 != -1) {
+    private final InteractiveWidget currentModeButton(int obfuscationGuard) {
+        if (obfuscationGuard != -1) {
           return (InteractiveWidget) null;
         }
         if (FixedQuaternion.fullscreenCanvas != null) {
-          return this.field_bb;
+          return this.fullscreenModeButton;
         }
         if (ActionSpell.viewportManager != null &&
           ActionSpell.viewportManager.resizeEnabled &&
-          this.field_Z != null) {
-          return this.field_Z;
+          this.resizableModeButton != null) {
+          return this.resizableModeButton;
         }
-        return this.field_mb;
+        return this.classicModeButton;
     }
 
     public final void widgetActivated(int pointerX, int obfuscationGuard, int button, int pointerY, InteractiveWidget widget) {
@@ -254,39 +254,39 @@ final class ut extends ResizableModalDialog implements WidgetActivationListener 
         try {
           if (obfuscationGuard != 11) {
             var8 = (IndexedSprite[]) null;
-            discarded$0 = this.a((WidgetListener) null, (String) null, (IndexedSprite[]) null, true);
+            discarded$0 = this.createModeButton((WidgetListener) null, (String) null, (IndexedSprite[]) null, true);
           }
-          if (widget == this.field_X) {
-            this.n(118);
+          if (widget == this.backButton) {
+            this.closeSettings(118);
           } else {
-            if (widget == this.field_ab) {
-              this.r(obfuscationGuard - 12);
+            if (widget == this.applyButton) {
+              this.applySelectedMode(obfuscationGuard - 12);
             } else {
-              if (widget == this.field_mb) {
-                this.a(widget, (byte) 34);
+              if (widget == this.classicModeButton) {
+                this.selectMode(widget, (byte) 34);
               } else {
-                if (widget != this.field_Z) {
-                  if (this.field_lb != null) {
-                    stackIn_14_0 = (this.field_lb.hovered) ? 1 : 0;
+                if (widget != this.resizableModeButton) {
+                  if (this.displayModeDropdown != null) {
+                    stackIn_14_0 = (this.displayModeDropdown.hovered) ? 1 : 0;
                   } else {
                     stackIn_14_0 = 0;
                   }
                   var6_int = stackIn_14_0;
                   if (var6_int == 0 &&
-                    widget == this.field_bb) {
-                    if (!this.field_jb) {
-                      this.host.showDialog(new ud(this.host, PlayerProfile.field_h), 0);
+                    widget == this.fullscreenModeButton) {
+                    if (!this.hasFullscreenModes) {
+                      this.host.showDialog(new FullscreenStatusDialog(this.host, PlayerProfile.field_h), 0);
                       return;
                     }
                     if (LoginForm.memberEntitlementValue <= 0) {
-                      this.host.showDialog(new tn(this.host), 0);
+                      this.host.showDialog(new FullscreenMembershipDialog(this.host), 0);
                       return;
                     }
-                    this.a(widget, (byte) 34);
+                    this.selectMode(widget, (byte) 34);
                     return;
                   }
                 } else {
-                  this.a(widget, (byte) 34);
+                  this.selectMode(widget, (byte) 34);
                 }
               }
             }
@@ -315,47 +315,47 @@ final class ut extends ResizableModalDialog implements WidgetActivationListener 
         qk.field_a = param0 * 100 / 150;
     }
 
-    private final void r(int param0) {
-        int var2 = 0;
-        int var3 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
-        if (this.field_mb == this.field_Y) {
-          ck.b(param0 - 59);
-          AiActionCandidate.e(param0 ^ -17024);
+    private final void applySelectedMode(int obfuscationGuard) {
+        int selectedModeIndex = 0;
+        int obfuscationControl = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        if (this.classicModeButton == this.selectedModeButton) {
+          ck.b(obfuscationGuard - 59);
+          AiActionCandidate.e(obfuscationGuard ^ -17024);
         } else {
-          if (this.field_Y == this.field_Z) {
+          if (this.selectedModeButton == this.resizableModeButton) {
             ck.b(-109);
             jj.a(-4223);
           } else {
-            if (this.field_bb == this.field_Y) {
-              if (this.field_lb != null) {
-                var2 = this.field_lb.getSelectedIndex((byte) 71);
-                if (var2 >= 0) {
-                  ActionSpell.viewportManager.setFullscreenSize(this.field_db[var2].width, this.field_db[var2].height, -8717);
+            if (this.fullscreenModeButton == this.selectedModeButton) {
+              if (this.displayModeDropdown != null) {
+                selectedModeIndex = this.displayModeDropdown.getSelectedIndex((byte) 71);
+                if (selectedModeIndex >= 0) {
+                  ActionSpell.viewportManager.setFullscreenSize(this.displayModes[selectedModeIndex].width, this.displayModes[selectedModeIndex].height, -8717);
                 }
               }
-              AiPlanningStrategy.a(true, param0 + 8029);
-              this.host.showDialog(new cs(this.host), 0);
+              AiPlanningStrategy.a(true, obfuscationGuard + 8029);
+              this.host.showDialog(new FullscreenConfirmationDialog(this.host), 0);
             }
           }
         }
-        if (param0 != -1) {
-          this.field_Y = (InteractiveWidget) null;
+        if (obfuscationGuard != -1) {
+          this.selectedModeButton = (InteractiveWidget) null;
         }
-        this.field_ab.enabled = false;
+        this.applyButton.enabled = false;
     }
 
-    private final void q(int param0) {
-        int var3 = 0;
-        InteractiveWidget var4 = null;
-        int var5 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
-        InteractiveWidget[] var6 = this.field_kb;
-        InteractiveWidget[] var2 = var6;
-        for (var3 = 0; var6.length > var3; var3++) {
-          var4 = var6[var3];
-          var4.active = this.field_Y == var4 ? true : false;
+    private final void refreshModeHighlights(int obfuscationGuard) {
+        int optionIndex = 0;
+        InteractiveWidget option = null;
+        int obfuscationControl = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        InteractiveWidget[] modeOptions = this.modeButtons;
+        InteractiveWidget[] optionsReference = modeOptions;
+        for (optionIndex = 0; modeOptions.length > optionIndex; optionIndex++) {
+          option = modeOptions[optionIndex];
+          option.active = this.selectedModeButton == option ? true : false;
         }
-        if (param0 > -37) {
-          this.field_nb = true;
+        if (obfuscationGuard > -37) {
+          this.dropdownWasExpanded = true;
         }
     }
 
@@ -380,7 +380,7 @@ final class ut extends ResizableModalDialog implements WidgetActivationListener 
           sq.field_k = var7;
         }
         if (param4 <= 120) {
-          ut.i((byte) 86);
+          DisplaySettingsDialog.i((byte) 86);
         }
         if (se.field_e < var7) {
           se.field_e = var7;
@@ -493,7 +493,7 @@ final class ut extends ResizableModalDialog implements WidgetActivationListener 
             AiUnitPlanner.field_t = false;
           }
           if (param0 < 120) {
-            ut.a(-43, 103, -36, -123, (byte) 96, -93);
+            DisplaySettingsDialog.a(-43, 103, -36, -123, (byte) 96, -93);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -503,47 +503,47 @@ final class ut extends ResizableModalDialog implements WidgetActivationListener 
         }
     }
 
-    private final void a(InteractiveWidget param0, byte param1) {
-        InteractiveWidget var3 = null;
-        int var4 = 0;
-        FullscreenDisplayMode var5 = null;
-        Widget var6 = null;
-        InteractiveWidget stackIn_4_0 = null;
-        boolean stackIn_5_1 = false;
+    private final void selectMode(InteractiveWidget modeButton, byte obfuscationGuard) {
+        InteractiveWidget currentMode = null;
+        int selectedModeIndex = 0;
+        FullscreenDisplayMode selectedMode = null;
+        Widget unusedGuardWidget = null;
+        InteractiveWidget applyControl = null;
+        boolean modeChanged = false;
         RuntimeException stackIn_19_0 = null;
         StringBuilder stackIn_19_1 = null;
         String stackIn_20_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3_ref = null;
         try {
-          if (param1 != 34) {
-            var6 = (Widget) null;
+          if (obfuscationGuard != 34) {
+            unusedGuardWidget = (Widget) null;
             this.updatePointer(91, 13, -99, (Widget) null);
           }
-          this.field_Y = param0;
-          param0.takeFocus(11, (Widget) (this));
-          var3 = this.o(-1);
-          stackIn_4_0 = this.field_ab;
-          stackIn_5_1 = (var3 != param0);
-          stackIn_4_0.enabled = stackIn_5_1;
-          if (this.field_bb == param0) {
-            if (var3 == param0) {
-              if (this.field_lb != null) {
-                var4 = this.field_lb.getSelectedIndex((byte) 71);
-                var5 = this.field_db[var4];
-                if (ActionSpell.viewportManager.fullscreenWidth != var5.width ||
-                  ActionSpell.viewportManager.fullscreenHeight != var5.height) {
-                  this.field_ab.enabled = true;
+          this.selectedModeButton = modeButton;
+          modeButton.takeFocus(11, (Widget) (this));
+          currentMode = this.currentModeButton(-1);
+          applyControl = this.applyButton;
+          modeChanged = (currentMode != modeButton);
+          applyControl.enabled = modeChanged;
+          if (this.fullscreenModeButton == modeButton) {
+            if (currentMode == modeButton) {
+              if (this.displayModeDropdown != null) {
+                selectedModeIndex = this.displayModeDropdown.getSelectedIndex((byte) 71);
+                selectedMode = this.displayModes[selectedModeIndex];
+                if (ActionSpell.viewportManager.fullscreenWidth != selectedMode.width ||
+                  ActionSpell.viewportManager.fullscreenHeight != selectedMode.height) {
+                  this.applyButton.enabled = true;
                 }
-                this.q(-108);
+                this.refreshModeHighlights(-108);
               } else {
-                this.q(-108);
+                this.refreshModeHighlights(-108);
               }
             } else {
-              this.q(-108);
+              this.refreshModeHighlights(-108);
             }
           } else {
-            this.q(-108);
+            this.refreshModeHighlights(-108);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -551,16 +551,16 @@ final class ut extends ResizableModalDialog implements WidgetActivationListener 
           var3_ref = decompiledCaughtException;
           stackIn_19_0 = var3_ref;
           stackIn_19_1 = new StringBuilder().append("ut.U(");
-          if (param0 == null) {
+          if (modeButton == null) {
             stackIn_20_2 = "null";
           } else {
             stackIn_20_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param1).append(')').toString());
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 
-    private final InteractiveWidget a(byte param0, String param1, WidgetListener param2) {
+    private final InteractiveWidget createActionButton(byte obfuscationGuard, String text, WidgetListener listener) {
         InteractiveWidget var4 = null;
         RuntimeException var4_ref = null;
         int var5 = 0;
@@ -572,9 +572,9 @@ final class ut extends ResizableModalDialog implements WidgetActivationListener 
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var4 = new InteractiveWidget(param1, param2);
+          var4 = new InteractiveWidget(text, listener);
           var4.painter = (WidgetPainter) ((Object) new SpriteButtonPainter());
-          if (param0 != 38) {
+          if (obfuscationGuard != 38) {
             decodedChatContextId = 126;
           }
           var5 = this.height - 46;
@@ -586,14 +586,14 @@ final class ut extends ResizableModalDialog implements WidgetActivationListener 
           decompiledCaughtException = decompiledCaughtParameter0;
           var4_ref = decompiledCaughtException;
           stackIn_6_0 = var4_ref;
-          stackIn_6_1 = new StringBuilder().append("ut.C(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_6_1 = new StringBuilder().append("ut.C(").append(obfuscationGuard).append(',');
+          if (text == null) {
             stackIn_7_2 = "null";
           } else {
             stackIn_7_2 = "{...}";
           }
           stackIn_9_1 = ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',');
-          if (param2 == null) {
+          if (listener == null) {
             stackIn_10_2 = "null";
           } else {
             stackIn_10_2 = "{...}";
@@ -620,7 +620,7 @@ final class ut extends ResizableModalDialog implements WidgetActivationListener 
           super.updatePointer(obfuscationGuard, originX, originY, rootWidget);
           if (BitmapTextWidgetPainter.pointerChangedSnapshot) {
             rootWidget.blur(1);
-            var9 = this.field_kb;
+            var9 = this.modeButtons;
             var5 = var9;
             for (var6 = 0; var6 < var9.length; var6++) {
               var7 = var9[var6];
@@ -629,21 +629,21 @@ final class ut extends ResizableModalDialog implements WidgetActivationListener 
               }
             }
           }
-          if (!this.field_hb &&
-            !DamageEvent.g(115)) {
-            this.n(88);
-            this.host.showDialog(new ut(this.host), 0);
+          if (!this.nonGuestAtOpen &&
+            !DamageEvent.isGuestSession(115)) {
+            this.closeSettings(88);
+            this.host.showDialog(new DisplaySettingsDialog(this.host), 0);
           }
-          if (null != this.field_lb) {
-            stackIn_14_0 = this.field_lb.isExpanded(11180);
-            if (this.field_nb) {
+          if (null != this.displayModeDropdown) {
+            stackIn_14_0 = this.displayModeDropdown.isExpanded(11180);
+            if (this.dropdownWasExpanded) {
               stackIn_15_1 = 0;
             } else {
               stackIn_15_1 = 1;
             }
             if ((stackIn_14_0 ? 1 : 0) == stackIn_15_1) {
-              this.a(this.field_bb, (byte) 34);
-              this.field_nb = this.field_lb.isExpanded(11180);
+              this.selectMode(this.fullscreenModeButton, (byte) 34);
+              this.dropdownWasExpanded = this.displayModeDropdown.isExpanded(11180);
               return;
             }
           }
@@ -662,9 +662,9 @@ final class ut extends ResizableModalDialog implements WidgetActivationListener 
         }
     }
 
-    private final void n(int param0) {
-        if (param0 < 79) {
-          this.field_bb = (InteractiveWidget) null;
+    private final void closeSettings(int obfuscationGuard) {
+        if (obfuscationGuard < 79) {
+          this.fullscreenModeButton = (InteractiveWidget) null;
         }
         if (!this.open) {
           return;
@@ -684,103 +684,103 @@ final class ut extends ResizableModalDialog implements WidgetActivationListener 
         var7 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           var5 = null;
-          if (!this.field_mb.isFocused(false)) {
-            if (this.field_Z != null &&
-              this.field_Z.isFocused(false)) {
-              var5 = this.field_Z;
+          if (!this.classicModeButton.isFocused(false)) {
+            if (this.resizableModeButton != null &&
+              this.resizableModeButton.isFocused(false)) {
+              var5 = this.resizableModeButton;
             } else {
-              if (this.field_bb.isFocused(false)) {
-                var5 = this.field_bb;
+              if (this.fullscreenModeButton.isFocused(false)) {
+                var5 = this.fullscreenModeButton;
               } else {
-                if (!this.field_X.isFocused(false)) {
-                  if (this.field_ab.isFocused(false)) {
-                    var5 = this.field_ab;
+                if (!this.backButton.isFocused(false)) {
+                  if (this.applyButton.isFocused(false)) {
+                    var5 = this.applyButton;
                   } else {
-                    if (this.field_mb.active) {
-                      var5 = this.field_mb;
+                    if (this.classicModeButton.active) {
+                      var5 = this.classicModeButton;
                     } else {
-                      if (null != this.field_Z &&
-                        this.field_Z.active) {
-                        var5 = this.field_Z;
+                      if (null != this.resizableModeButton &&
+                        this.resizableModeButton.active) {
+                        var5 = this.resizableModeButton;
                       } else {
-                        if (this.field_bb.active) {
-                          var5 = this.field_bb;
+                        if (this.fullscreenModeButton.active) {
+                          var5 = this.fullscreenModeButton;
                         }
                       }
                     }
                   }
                 } else {
-                  var5 = this.field_X;
+                  var5 = this.backButton;
                 }
               }
             }
           } else {
-            var5 = this.field_mb;
+            var5 = this.classicModeButton;
           }
           if (obfuscationGuard != -12215) {
-            ut.i((byte) 84);
+            DisplaySettingsDialog.i((byte) 84);
           }
           var6 = keyCode;
           switch (var6) {
             case 96:
-              if (var5 == this.field_bb) {
-                if (this.field_Z != null) {
-                  this.field_Z.takeFocus(11, (Widget) (this));
+              if (var5 == this.fullscreenModeButton) {
+                if (this.resizableModeButton != null) {
+                  this.resizableModeButton.takeFocus(11, (Widget) (this));
                   return true;
                 }
-                this.field_mb.takeFocus(obfuscationGuard + 12226, (Widget) (this));
+                this.classicModeButton.takeFocus(obfuscationGuard + 12226, (Widget) (this));
                 return true;
               }
-              if (var5 == this.field_Z) {
-                this.field_mb.takeFocus(11, (Widget) (this));
+              if (var5 == this.resizableModeButton) {
+                this.classicModeButton.takeFocus(11, (Widget) (this));
                 return true;
               }
-              if (this.field_ab == var5) {
-                this.field_X.takeFocus(11, (Widget) (this));
+              if (this.applyButton == var5) {
+                this.backButton.takeFocus(11, (Widget) (this));
                 return true;
               }
               break;
             case 97:
-              if (this.field_mb == var5) {
-                if (this.field_Z == null) {
-                  this.field_bb.takeFocus(11, (Widget) (this));
+              if (this.classicModeButton == var5) {
+                if (this.resizableModeButton == null) {
+                  this.fullscreenModeButton.takeFocus(11, (Widget) (this));
                 } else {
-                  this.field_Z.takeFocus(11, (Widget) (this));
+                  this.resizableModeButton.takeFocus(11, (Widget) (this));
                 }
                 return true;
               }
-              if (this.field_Z == var5) {
-                this.field_bb.takeFocus(11, (Widget) (this));
+              if (this.resizableModeButton == var5) {
+                this.fullscreenModeButton.takeFocus(11, (Widget) (this));
                 return true;
               }
-              if (var5 == this.field_X &&
-                this.field_ab.enabled) {
-                this.field_ab.takeFocus(11, (Widget) (this));
+              if (var5 == this.backButton &&
+                this.applyButton.enabled) {
+                this.applyButton.takeFocus(11, (Widget) (this));
                 return true;
               }
               break;
             case 99:
-              if (this.field_mb != var5 &&
-                this.field_Z != var5) {
-                if (var5 != this.field_bb) {
+              if (this.classicModeButton != var5 &&
+                this.resizableModeButton != var5) {
+                if (var5 != this.fullscreenModeButton) {
                   break;
                 }
-                if (!this.field_ab.enabled) {
-                  this.field_X.takeFocus(obfuscationGuard ^ -12222, (Widget) (this));
+                if (!this.applyButton.enabled) {
+                  this.backButton.takeFocus(obfuscationGuard ^ -12222, (Widget) (this));
                 } else {
-                  this.field_ab.takeFocus(11, (Widget) (this));
+                  this.applyButton.takeFocus(11, (Widget) (this));
                 }
                 return true;
               }
-              this.field_X.takeFocus(11, (Widget) (this));
+              this.backButton.takeFocus(11, (Widget) (this));
               return true;
             case 98:
-              if (var5 == this.field_X) {
-                this.field_mb.takeFocus(11, (Widget) (this));
+              if (var5 == this.backButton) {
+                this.classicModeButton.takeFocus(11, (Widget) (this));
                 return true;
               }
-              if (this.field_ab == var5) {
-                this.field_bb.takeFocus(obfuscationGuard + 12226, (Widget) (this));
+              if (this.applyButton == var5) {
+                this.fullscreenModeButton.takeFocus(obfuscationGuard + 12226, (Widget) (this));
                 return true;
               }
               break;
@@ -803,7 +803,7 @@ final class ut extends ResizableModalDialog implements WidgetActivationListener 
         }
     }
 
-    private final InteractiveWidget a(WidgetListener param0, String param1, IndexedSprite[] param2, boolean param3) {
+    private final InteractiveWidget createModeButton(WidgetListener listener, String text, IndexedSprite[] stateIcons, boolean obfuscationGuard) {
         InteractiveWidget var5 = null;
         RuntimeException var5_ref = null;
         GridWidgetContainer var6 = null;
@@ -818,15 +818,15 @@ final class ut extends ResizableModalDialog implements WidgetActivationListener 
         String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var5 = new InteractiveWidget(param1, param0);
-          var5.painter = (WidgetPainter) ((Object) new ps(param2));
-          if (param3) {
+          var5 = new InteractiveWidget(text, listener);
+          var5.painter = (WidgetPainter) ((Object) new DisplayModeOptionPainter(stateIcons));
+          if (obfuscationGuard) {
             field_W = (byte[][]) null;
           }
-          var6 = this.field_gb;
+          var6 = this.modeGrid;
           var7 = var5;
           var6.addCell(var7, var6.field_Q, 0);
-          this.field_gb.refreshLayout(0);
+          this.modeGrid.refreshLayout(0);
           stackIn_3_0 = var5;
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -834,24 +834,24 @@ final class ut extends ResizableModalDialog implements WidgetActivationListener 
           var5_ref = decompiledCaughtException;
           stackIn_6_0 = var5_ref;
           stackIn_6_1 = new StringBuilder().append("ut.E(");
-          if (param0 == null) {
+          if (listener == null) {
             stackIn_7_2 = "null";
           } else {
             stackIn_7_2 = "{...}";
           }
           stackIn_9_1 = ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',');
-          if (param1 == null) {
+          if (text == null) {
             stackIn_10_2 = "null";
           } else {
             stackIn_10_2 = "{...}";
           }
           stackIn_12_1 = ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',');
-          if (param2 == null) {
+          if (stateIcons == null) {
             stackIn_13_2 = "null";
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param3).append(')').toString());
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 

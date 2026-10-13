@@ -28,6 +28,6 @@ final class qk {
 
     static {
         field_f = "Single-Player";
-        ut.a(50, (byte) 122);
+        DisplaySettingsDialog.a(50, (byte) 122);
     }
 }

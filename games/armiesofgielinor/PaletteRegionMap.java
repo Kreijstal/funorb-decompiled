@@ -139,11 +139,11 @@ final class PaletteRegionMap {
         try {
           var13_int = -103 % ((-17 - param11) / 52);
           var14 = new ClientUiComponent(0L, (ClientUiComponent) null);
-          var14.skinSprites = tn.a(true, param12, param3);
-          var14.matchedButtonSkinSprites = tn.a(true, param4, param8);
-          var14.heldPressSkinSprites = tn.a(true, param1, param7);
-          var14.selectedSkinSprites = tn.a(true, param10, param9);
-          var14.disabledSkinSprites = tn.a(true, param2, param0);
+          var14.skinSprites = FullscreenMembershipDialog.a(true, param12, param3);
+          var14.matchedButtonSkinSprites = FullscreenMembershipDialog.a(true, param4, param8);
+          var14.heldPressSkinSprites = FullscreenMembershipDialog.a(true, param1, param7);
+          var14.selectedSkinSprites = FullscreenMembershipDialog.a(true, param10, param9);
+          var14.disabledSkinSprites = FullscreenMembershipDialog.a(true, param2, param0);
           var14.textColour = param5;
           var14.font = param6;
           stackIn_1_0 = var14;

@@ -421,17 +421,17 @@ final class ClientContextMenu {
           return true;
         }
         if (actionId == 11) {
-          ud.setChatFilter(0, false, this.chatChannel, filterContext);
+          FullscreenStatusDialog.setChatFilter(0, false, this.chatChannel, filterContext);
           var4Lifetime2 = 84 % ((obfuscationGuard - 30) / 54);
           return true;
         }
         if (actionId == 12) {
-          ud.setChatFilter(1, false, this.chatChannel, filterContext);
+          FullscreenStatusDialog.setChatFilter(1, false, this.chatChannel, filterContext);
           var4Lifetime3 = 84 % ((obfuscationGuard - 30) / 54);
           return true;
         }
         if (13 == actionId) {
-          ud.setChatFilter(2, false, this.chatChannel, filterContext);
+          FullscreenStatusDialog.setChatFilter(2, false, this.chatChannel, filterContext);
           var4Lifetime4 = 84 % ((obfuscationGuard - 30) / 54);
           return true;
         }

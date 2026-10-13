@@ -2467,7 +2467,7 @@ final class InstructionsPanel {
               ov.connectionState = ResourceArchive.connectedState;
               if (CampaignRewardPreview.field_g.a((byte) 50) != ContentTransitionDialog.field_db) {
                 if (CampaignRewardPreview.field_g.a((byte) -11) == fl.field_u) {
-                  ps.usernameLoginMethod.persistLoginMethod(param0 - 84, CombatEvent.d((byte) -120));
+                  DisplayModeOptionPainter.usernameLoginMethod.persistLoginMethod(param0 - 84, CombatEvent.d((byte) -120));
                 }
               } else {
                 CombatSandbox.emailLoginMethod.persistLoginMethod(param0 - 84, CombatEvent.d((byte) -127));

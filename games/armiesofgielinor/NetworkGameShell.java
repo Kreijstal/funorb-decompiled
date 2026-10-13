@@ -255,7 +255,7 @@ abstract class NetworkGameShell extends GameAppletShell {
                 } else {
                   ck.field_b = dc.field_o;
                   DualLinkedNode.e(112);
-                  QuickChatCategoryRepository.field_b = false;
+                  QuickChatCategoryRepository.guestSession = false;
                   SoundCache.field_b = 10;
                 }
               }
@@ -265,7 +265,7 @@ abstract class NetworkGameShell extends GameAppletShell {
             if (BestScoreStrategy.field_l) {
               QuickChatCategoryRepository.a(CombatEvent.d((byte) -116), true);
             } else {
-              QuickChatCategoryRepository.field_b = true;
+              QuickChatCategoryRepository.guestSession = true;
               SoundCache.field_b = 10;
             }
           }
@@ -628,10 +628,10 @@ abstract class NetworkGameShell extends GameAppletShell {
           if (ConsoleExpression.field_m != 0) {
             IconTextComponent.field_Nb = SpriteButtonPainter.a(on.field_n, true);
           }
-          ps.field_u = DamageEvent.a(1, ChatMessage.field_c, (byte) 119, false, true);
+          DisplayModeOptionPainter.field_u = DamageEvent.a(1, ChatMessage.field_c, (byte) 119, false, true);
           CombatPresentation.field_M = DamageEvent.a(1, ModalDialog.field_E, (byte) 122, false, true);
           h.field_g = DamageEvent.a(1, DualLinkedNode.field_t, (byte) 127, false, true);
-          PrintVictoryConditionsConsoleCommand.field_K = ps.field_u;
+          PrintVictoryConditionsConsoleCommand.field_K = DisplayModeOptionPainter.field_u;
           StrongCacheEntry.field_E = 2;
           ResourceRequest.field_A = CombatPresentation.field_M;
         }
@@ -653,13 +653,13 @@ abstract class NetworkGameShell extends GameAppletShell {
           }
         }
         if (StrongCacheEntry.field_E == 3 &&
-          wh.a(ps.field_u, (byte) 127, h.field_g, CombatPresentation.field_M) &&
+          wh.a(DisplayModeOptionPainter.field_u, (byte) 127, h.field_g, CombatPresentation.field_M) &&
           wh.a(h.field_g, -27701)) {
           cd.a(12);
           EmailValidator.c((byte) 91);
           it.field_b = false;
           UnitSpell.field_e = ConsoleParseException.field_a;
-          StateChangeEvent.a(CombatPresentation.field_M, ps.field_u, h.field_g, 0, BestScoreStrategy.field_l);
+          StateChangeEvent.a(CombatPresentation.field_M, DisplayModeOptionPainter.field_u, h.field_g, 0, BestScoreStrategy.field_l);
           if (ChatMessage.field_r ||
             pd.field_b != null) {
             loginGuard = 3;
@@ -676,7 +676,7 @@ abstract class NetworkGameShell extends GameAppletShell {
             ko.field_e = SpriteScrollBar.c((byte) 111);
           }
           RegistrationAgreementPane.a(h.field_g, (byte) 76, ContentTransitionDialog.field_eb, ko.field_e);
-          ps.field_u = null;
+          DisplayModeOptionPainter.field_u = null;
           CombatPresentation.field_M = null;
           h.field_g = null;
           SoundCache.a(-24602, (java.applet.Applet) (this));

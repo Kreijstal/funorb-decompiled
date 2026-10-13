@@ -29,12 +29,12 @@ final class QuickChatPhraseRepository {
     final static boolean a(int param0) {
         if (param0 != 27875) {
           field_d = (ClientUiComponent) null;
-          if (!DamageEvent.g(81)) {
+          if (!DamageEvent.isGuestSession(81)) {
             return LoginForm.memberEntitlementValue <= 0 ? true : false;
           }
           return true;
         }
-        if (DamageEvent.g(81)) {
+        if (DamageEvent.isGuestSession(81)) {
           return true;
         }
         if (LoginForm.memberEntitlementValue > 0) {

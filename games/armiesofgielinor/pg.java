@@ -106,11 +106,11 @@ final class pg {
             null == ToggleWidget.currentRoom &&
             NumericDateInputWidget.roomSetup == null) {
             if (!vi.field_d) {
-              var5 = tn.activeContextMenu;
+              var5 = FullscreenMembershipDialog.activeContextMenu;
               var6 = wh.field_b;
               var5.menu.addTextAction(14, var6, (byte) -128);
             }
-            var7 = tn.activeContextMenu;
+            var7 = FullscreenMembershipDialog.activeContextMenu;
             var8 = FixedQuaternion.field_g;
             var7.menu.addTextAction(20, var8, (byte) -115);
           }
@@ -119,20 +119,20 @@ final class pg {
             ToggleWidget.currentRoom != null &&
             message.contextId == ToggleWidget.currentRoom.getRoomId((byte) -88)) {
             if (!vi.field_d) {
-              var9 = tn.activeContextMenu;
+              var9 = FullscreenMembershipDialog.activeContextMenu;
               var10 = CampaignMenu.field_q;
               var9.menu.addTextAction(14, var10, (byte) -108);
             }
-            var11 = tn.activeContextMenu;
+            var11 = FullscreenMembershipDialog.activeContextMenu;
             var12 = CampaignMenuEntry.field_E;
             var11.menu.addTextAction(20, var12, (byte) -117);
           }
-          tn.activeContextMenu.addRoomAdmissionActions((byte) 68);
-          tn.activeContextMenu.addPlayerAdmissionActions(obfuscationGuard + 23899, false);
-          tn.activeContextMenu.addSocialActions(message.responsePhraseIds, 7, message.channelId);
-          tn.activeContextMenu.addReportAction((byte) 92);
-          tn.activeContextMenu.addChatFilterActions(message, 0);
-          var13 = tn.activeContextMenu;
+          FullscreenMembershipDialog.activeContextMenu.addRoomAdmissionActions((byte) 68);
+          FullscreenMembershipDialog.activeContextMenu.addPlayerAdmissionActions(obfuscationGuard + 23899, false);
+          FullscreenMembershipDialog.activeContextMenu.addSocialActions(message.responsePhraseIds, 7, message.channelId);
+          FullscreenMembershipDialog.activeContextMenu.addReportAction((byte) 92);
+          FullscreenMembershipDialog.activeContextMenu.addChatFilterActions(message, 0);
+          var13 = FullscreenMembershipDialog.activeContextMenu;
           var3 = BattleTutorial.pointerPressX;
           var4 = TeleportAction.pointerPressY;
           var13.menu.layoutPopup(0, var4, obfuscationGuard, (byte) -118, var3);

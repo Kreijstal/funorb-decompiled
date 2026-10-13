@@ -118,7 +118,7 @@ final class MapTile implements TaggedFieldReader {
           } else {
             if (fieldName.equals("own")) {
               if (encodedLength > 0) {
-                this.ownerPlayer = (int)tn.readTaggedInteger(false, encodedLength, packet);
+                this.ownerPlayer = (int)FullscreenMembershipDialog.readTaggedInteger(false, encodedLength, packet);
               }
             } else {
               if (!fieldName.equals("type")) {
@@ -128,7 +128,7 @@ final class MapTile implements TaggedFieldReader {
                 }
               } else {
                 if (encodedLength > 0) {
-                  this.terrainType = (int)tn.readTaggedInteger(false, encodedLength, packet);
+                  this.terrainType = (int)FullscreenMembershipDialog.readTaggedInteger(false, encodedLength, packet);
                 }
               }
             }

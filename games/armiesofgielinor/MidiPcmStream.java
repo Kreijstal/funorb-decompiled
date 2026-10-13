@@ -1233,7 +1233,7 @@ class MidiPcmStream extends PcmStream {
           for (var7 = 0; var7 < 4; var7++) {
             var6 = -64 + (param3 + (CachedArchiveProvider.field_y[var7][1] + (param2 & 3)));
             var5 = (var4_int & 7) + (CachedArchiveProvider.field_y[var7][0] + param1) - 44;
-            var8 = tn.activeFoliageShadows[0 + param2 % 6];
+            var8 = FullscreenMembershipDialog.activeFoliageShadows[0 + param2 % 6];
             fe.a(var8, var5, var6);
             var4_int = var4_int >> 1;
             param2 = param2 >> 1;

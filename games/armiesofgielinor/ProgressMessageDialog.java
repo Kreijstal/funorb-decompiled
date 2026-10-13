@@ -218,7 +218,7 @@ class ProgressMessageDialog extends ContentTransitionDialog implements WidgetAct
             var5 = 1;
           }
           if (kp.getChatFilter(var5, param1 ^ -97) == 2) {
-            ud.setChatFilter(1, false, var5, param2);
+            FullscreenStatusDialog.setChatFilter(1, false, var5, param2);
           }
           it.writeChatMessage(-1, -83, rs.outgoingChatChannel, RegistrationAgreementPane.chatRecipientName, param0, var4_ref_String);
           FullscreenFocusCanvas.clearChatText(8445);

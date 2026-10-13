@@ -390,7 +390,7 @@ final class BitmapTextLayout extends TextLayout {
           vd.field_b.writeByte(1, day);
           vd.field_b.writeByte(1, monthIndex);
           vd.field_b.writeShort(true, year);
-          vd.field_b.encryptRsa(-5247, cs.field_cb, mu.field_c);
+          vd.field_b.encryptRsa(-5247, FullscreenConfirmationDialog.field_cb, mu.field_c);
           EmailValidator.outgoingPacket.writeCipheredOpcode(32161, 18);
           fieldTemp$0 = EmailValidator.outgoingPacket.position + 1;
           EmailValidator.outgoingPacket.position = EmailValidator.outgoingPacket.position + 1;
@@ -404,7 +404,7 @@ final class BitmapTextLayout extends TextLayout {
         vd.field_b.writeByte(1, day);
         vd.field_b.writeByte(1, monthIndex);
         vd.field_b.writeShort(true, year);
-        vd.field_b.encryptRsa(-5247, cs.field_cb, mu.field_c);
+        vd.field_b.encryptRsa(-5247, FullscreenConfirmationDialog.field_cb, mu.field_c);
         EmailValidator.outgoingPacket.writeCipheredOpcode(32161, 18);
         int fieldTemp$1 = EmailValidator.outgoingPacket.position + 1;
         EmailValidator.outgoingPacket.position = EmailValidator.outgoingPacket.position + 1;

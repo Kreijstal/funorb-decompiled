@@ -238,14 +238,14 @@ final class AccountRequestResult {
               if ((decompiledSharedTail0) &&
                 (vi.field_d)) {
                 var5 = "";
-                var4 = "<col=999999>" + var4 + ps.field_z + "</col>";
+                var4 = "<col=999999>" + var4 + DisplayModeOptionPainter.field_z + "</col>";
               }
               var9 = IntrusiveNode.field_e.textWidth(var4);
               if (!us.a(true)) {
                 if (UpkeepEvent.field_z.heldButtonMatches &&
                   var9 > (-UpkeepEvent.field_z.screenX + AiPlanningStrategy.pointerX)) {
                   if (!NodeIterator.field_a) {
-                    var1 = ps.field_z;
+                    var1 = DisplayModeOptionPainter.field_z;
                   } else {
                     var1 = "Broken!";
                   }

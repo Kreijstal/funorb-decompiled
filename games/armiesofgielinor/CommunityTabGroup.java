@@ -103,14 +103,14 @@ final class CommunityTabGroup {
           gp.decodedChatAccountName = packet.readNullTerminatedString(1);
         }
         if (MatchConditionEntry.decodedChatChannel == 1) {
-          ut.decodedChatContextId = packet.readUnsignedShort((byte) -104);
+          DisplaySettingsDialog.decodedChatContextId = packet.readUnsignedShort((byte) -104);
           BestScoreStrategy.decodedChatChannelLabel = packet.readNullTerminatedString(1);
         } else {
           if (MatchConditionEntry.decodedChatChannel == 4) {
-            ut.decodedChatContextId = packet.readUnsignedShort((byte) -104);
+            DisplaySettingsDialog.decodedChatContextId = packet.readUnsignedShort((byte) -104);
             BestScoreStrategy.decodedChatChannelLabel = packet.readNullTerminatedString(1);
           } else {
-            ut.decodedChatContextId = 0;
+            DisplaySettingsDialog.decodedChatContextId = 0;
             BestScoreStrategy.decodedChatChannelLabel = null;
           }
         }
@@ -269,14 +269,14 @@ final class CommunityTabGroup {
           gp.decodedChatAccountName = packet.readNullTerminatedString(1);
         }
         if (MatchConditionEntry.decodedChatChannel == 1) {
-          ut.decodedChatContextId = packet.readUnsignedShort((byte) -104);
+          DisplaySettingsDialog.decodedChatContextId = packet.readUnsignedShort((byte) -104);
           BestScoreStrategy.decodedChatChannelLabel = packet.readNullTerminatedString(1);
         } else {
           if (MatchConditionEntry.decodedChatChannel == 4) {
-            ut.decodedChatContextId = packet.readUnsignedShort((byte) -104);
+            DisplaySettingsDialog.decodedChatContextId = packet.readUnsignedShort((byte) -104);
             BestScoreStrategy.decodedChatChannelLabel = packet.readNullTerminatedString(1);
           } else {
-            ut.decodedChatContextId = 0;
+            DisplaySettingsDialog.decodedChatContextId = 0;
             BestScoreStrategy.decodedChatChannelLabel = null;
           }
         }

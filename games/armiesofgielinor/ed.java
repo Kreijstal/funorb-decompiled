@@ -32,7 +32,7 @@ final class ed {
     }
 
     final static void a(boolean param0) {
-        if (!QuickChatCategoryRepository.field_b) {
+        if (!QuickChatCategoryRepository.guestSession) {
           throw new IllegalStateException();
         }
         it.field_b = true;

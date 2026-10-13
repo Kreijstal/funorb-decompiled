@@ -1,12 +1,12 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ps extends BitmapTextWidgetPainter {
+final class DisplayModeOptionPainter extends BitmapTextWidgetPainter {
     static ResourceArchive field_u;
     static int field_E;
     static RgbSprite[] field_w;
     static String field_x;
-    private IndexedSprite[] field_B;
+    private IndexedSprite[] stateIcons;
     static int[] field_D;
     static LoginMethod usernameLoginMethod;
     static String field_A;
@@ -55,7 +55,7 @@ final class ps extends BitmapTextWidgetPainter {
           field_D = null;
           return;
         }
-        ps.a(-117, false);
+        DisplayModeOptionPainter.a(-117, false);
         field_x = null;
         field_z = null;
         field_u = null;
@@ -64,54 +64,54 @@ final class ps extends BitmapTextWidgetPainter {
     }
 
     public final void paintWidget(Widget widget, int originX, int obfuscationGuard, boolean renderFlag, int originY) {
-        int stackIn_8_0 = 0;
-        int stackIn_14_0 = 0;
-        int stackIn_19_0 = 0;
+        int activeStateFlag = 0;
+        int focusStateFlag = 0;
+        int captionColourValue = 0;
         RuntimeException stackIn_26_0 = null;
         StringBuilder stackIn_26_1 = null;
         String stackIn_27_2 = null;
         RuntimeException decompiledCaughtException = null;
-        int var6_int = 0;
+        int activeState = 0;
         RuntimeException var6 = null;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        IndexedSprite var10 = null;
-        int var11 = 0;
-        int var12 = 0;
-        int var13 = 0;
+        int focusedState = 0;
+        int iconState = 0;
+        int captionColour = 0;
+        IndexedSprite icon = null;
+        int iconX = 0;
+        int iconY = 0;
+        int captionCenterX = 0;
         try {
           SoftwareRaster.b(widget.x + originX, originY + widget.y, widget.width, widget.height, 10197915);
           if (obfuscationGuard > -79) {
             field_A = (String) null;
           }
           if (renderFlag) {
-            stackIn_8_0 = (((InteractiveWidget) (widget)).active) ? 1 : 0;
+            activeStateFlag = (((InteractiveWidget) (widget)).active) ? 1 : 0;
           } else {
-            stackIn_8_0 = 0;
+            activeStateFlag = 0;
           }
-          var6_int = stackIn_8_0;
+          activeState = activeStateFlag;
           if (renderFlag) {
-            stackIn_14_0 = (widget.isFocused(false)) ? 1 : 0;
+            focusStateFlag = (widget.isFocused(false)) ? 1 : 0;
           } else {
-            stackIn_14_0 = 0;
+            focusStateFlag = 0;
           }
-          var7 = stackIn_14_0;
-          var8 = 0;
-          if (var7 != 0) {
-            var8 = var8 | 2;
+          focusedState = focusStateFlag;
+          iconState = 0;
+          if (focusedState != 0) {
+            iconState = iconState | 2;
           }
-          stackIn_19_0 = (var6_int == 0) ? 16777215 : 2394342;
-          var9 = stackIn_19_0;
-          if (var6_int != 0) {
-            var8 = var8 | 1;
+          captionColourValue = (activeState == 0) ? 16777215 : 2394342;
+          captionColour = captionColourValue;
+          if (activeState != 0) {
+            iconState = iconState | 1;
           }
-          var10 = this.field_B[var8];
-          var11 = originX + widget.x + (-var10.pixelWidth + widget.width) / 2;
-          var12 = (-var10.pixelHeight + widget.height) / 2 + originY + widget.y;
-          var13 = widget.x + (originX + widget.width / 2);
-          var10.draw(var11, var12);
-          this.font.drawCentered(this.getDisplayText(0, widget), var13, originY, var9, -1);
+          icon = this.stateIcons[iconState];
+          iconX = originX + widget.x + (-icon.pixelWidth + widget.width) / 2;
+          iconY = (-icon.pixelHeight + widget.height) / 2 + originY + widget.y;
+          captionCenterX = widget.x + (originX + widget.width / 2);
+          icon.draw(iconX, iconY);
+          this.font.drawCentered(this.getDisplayText(0, widget), captionCenterX, originY, captionColour, -1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -147,7 +147,7 @@ final class ps extends BitmapTextWidgetPainter {
     final static void a(int param0, ResourceArchive param1, ResourceArchive param2) {
         try {
           if (param0 < 30) {
-            ps.c(false);
+            DisplayModeOptionPainter.c(false);
           }
           iw.field_p = param2;
           AlphaWidgetContainer.field_H = param1;
@@ -156,12 +156,12 @@ final class ps extends BitmapTextWidgetPainter {
         }
     }
 
-    ps(IndexedSprite[] param0) {
+    DisplayModeOptionPainter(IndexedSprite[] stateIcons) {
         try {
-          this.field_B = param0;
+          this.stateIcons = stateIcons;
           this.font = ArmiesOfGielinor.field_J;
         } catch (RuntimeException runtimeException) {
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "ps.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "ps.<init>(" + (stateIcons != null ? "{...}" : "null") + ')');
         }
     }
 

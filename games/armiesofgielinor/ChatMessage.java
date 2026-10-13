@@ -90,7 +90,7 @@ final class ChatMessage {
         this.systemMessage = DualNodeDeque.decodedChatSystemMessage;
         this.accountName = gp.decodedChatAccountName;
         this.displayName = RegistrationAgreementPane.decodedChatDisplayName;
-        this.contextId = ut.decodedChatContextId;
+        this.contextId = DisplaySettingsDialog.decodedChatContextId;
         this.privateMessageIdLow24 = th.decodedPrivateMessageIdLow24;
         this.chatIconId = UnitModelViewer.decodedChatIconId;
         this.accountId = ModalDialogHost.decodedChatAccountId;

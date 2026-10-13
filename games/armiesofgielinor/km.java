@@ -131,9 +131,9 @@ final class km {
           return;
         }
         if (this.field_i != null) {
-          var4_ref = (ModelMesh) (this.field_i.applyCurrentFrame(false, true, false, cs.field_db[this.field_e]));
+          var4_ref = (ModelMesh) (this.field_i.applyCurrentFrame(false, true, false, FullscreenConfirmationDialog.field_db[this.field_e]));
         } else {
-          var4_ref = (ModelMesh) (cs.field_db[this.field_e].a(false, false, false));
+          var4_ref = (ModelMesh) (FullscreenConfirmationDialog.field_db[this.field_e].a(false, false, false));
         }
         stackIn_8_0 = (!param0) ? 140 : 1908;
         var5 = stackIn_8_0;

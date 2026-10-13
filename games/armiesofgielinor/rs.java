@@ -85,7 +85,7 @@ final class rs extends IntrusiveNode {
         int var4 = CampaignMenuEntry.field_u[param2];
         if (7 == var4 &&
           5 == (ConsoleExpression.field_p[param2] + param2 & 5)) {
-          var5 = tn.activeFoliageShadows[6 + ConsoleExpression.field_p[param2] % 8];
+          var5 = FullscreenMembershipDialog.activeFoliageShadows[6 + ConsoleExpression.field_p[param2] % 8];
           fe.a(var5, -10 + param1, -30 + param3);
         }
     }

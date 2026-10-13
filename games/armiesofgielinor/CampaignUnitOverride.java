@@ -479,7 +479,7 @@ final class CampaignUnitOverride {
                 }
                 var2 = NodeIterator.a(50, "you_are_on_x_server");
                 if (var2 != null) {
-                  ps.field_A = uu.a(var2, (byte) -99);
+                  DisplayModeOptionPainter.field_A = uu.a(var2, (byte) -99);
                 }
                 var2 = NodeIterator.a(50, "rated_game");
                 if (var2 != null) {
@@ -843,7 +843,7 @@ final class CampaignUnitOverride {
                 }
                 var2 = NodeIterator.a(param0 + 132, "gameopt_youneed1ratedgame");
                 if (var2 != null) {
-                  tn.field_Y = uu.a(var2, (byte) -111);
+                  FullscreenMembershipDialog.field_Y = uu.a(var2, (byte) -111);
                 }
                 var2 = NodeIterator.a(50, "gameopt_playerhasntunlocked");
                 if (null != var2) {
@@ -1417,7 +1417,7 @@ final class CampaignUnitOverride {
                 }
                 var2 = NodeIterator.a(50, "create_email");
                 if (var2 != null) {
-                  tn.field_X = uu.a(var2, (byte) -95);
+                  FullscreenMembershipDialog.field_X = uu.a(var2, (byte) -95);
                 }
                 var2 = NodeIterator.a(50, "create_email_confirm");
                 if (null != var2) {
@@ -2466,7 +2466,7 @@ final class CampaignUnitOverride {
                 }
                 var2 = NodeIterator.a(50, "click_to_quickchat");
                 if (var2 != null) {
-                  ps.field_z = uu.a(var2, (byte) 65);
+                  DisplayModeOptionPainter.field_z = uu.a(var2, (byte) 65);
                 }
                 var2 = NodeIterator.a(50, "autorespond");
                 if (null != var2) {
@@ -2694,7 +2694,7 @@ final class CampaignUnitOverride {
                 }
                 var2 = NodeIterator.a(50, "fs_unavailable");
                 if (null != var2) {
-                  ud.field_ab = uu.a(var2, (byte) 70);
+                  FullscreenStatusDialog.field_ab = uu.a(var2, (byte) 70);
                 }
                 var2 = NodeIterator.a(50, "fs_unavailable_try_signed_applet");
                 if (null != var2) {
@@ -2706,7 +2706,7 @@ final class CampaignUnitOverride {
                 }
                 var2 = NodeIterator.a(param0 ^ -100, "fs_focus_or_resolution");
                 if (var2 != null) {
-                  ud.field_W = uu.a(var2, (byte) 120);
+                  FullscreenStatusDialog.field_W = uu.a(var2, (byte) 120);
                 }
                 var2 = NodeIterator.a(param0 ^ -100, "fs_timeout");
                 if (null != var2) {

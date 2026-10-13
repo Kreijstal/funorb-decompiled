@@ -145,14 +145,14 @@ final class SpellCastEvent extends GameEvent {
           }
           return LobbyPlayer.field_Jb;
         }
-        if (!ps.field_u.ensureIndex((byte) 82)) {
+        if (!DisplayModeOptionPainter.field_u.ensureIndex((byte) 82)) {
           return TileMetadata.field_i;
         }
         if (param0 != -15862) {
           return (String) null;
         }
-        if (!ps.field_u.ensureGroupAvailableByName(28979, "commonui")) {
-          return Battlefield.field_nb + " - " + ps.field_u.getGroupProgressByName("commonui", (byte) -34) + "%";
+        if (!DisplayModeOptionPainter.field_u.ensureGroupAvailableByName(28979, "commonui")) {
+          return Battlefield.field_nb + " - " + DisplayModeOptionPainter.field_u.getGroupProgressByName("commonui", (byte) -34) + "%";
         }
         if (!CombatPresentation.field_M.ensureIndex((byte) 82)) {
           return is.field_f;

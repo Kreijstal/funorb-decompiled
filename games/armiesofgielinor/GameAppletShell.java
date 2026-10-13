@@ -800,7 +800,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
             IndexedSpriteBase.field_b.setSize(bn.viewportWidth, dt.viewportHeight);
             IndexedSpriteBase.field_b.setVisible(true);
             if (null != ContextualRuntimeException.field_f &&
-              cs.field_bb == null) {
+              FullscreenConfirmationDialog.field_bb == null) {
               frameInsets = ContextualRuntimeException.field_f.getInsets();
               IndexedSpriteBase.field_b.setLocation(DualNodeIterator.canvasOffsetX + frameInsets.left, mh.field_c + frameInsets.top);
               if (ArmiesOfGielinor.obfuscationControl) {
@@ -838,8 +838,8 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
             IndexedSpriteBase.field_b.getParent().remove((java.awt.Component) ((Object) IndexedSpriteBase.field_b));
           }
           boolean decompiledFrameRemainder0 = true;
-          if (cs.field_bb != null) {
-            var2 = cs.field_bb;
+          if (FullscreenConfirmationDialog.field_bb != null) {
+            var2 = FullscreenConfirmationDialog.field_bb;
             decompiledFrameRemainder0 = (var4 != 0);
           }
           if (decompiledFrameRemainder0) {

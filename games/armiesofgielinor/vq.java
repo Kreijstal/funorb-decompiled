@@ -97,7 +97,7 @@ final class vq {
               if (!IntPair.field_m.privilegedServicesEnabled) {
                 var3_int = BattleTutorial.a(LoginMethod.field_d, NodeHashIterator.field_a, 7502, TaggedMapData.field_b, du.field_b);
               } else {
-                var3_int = BattleTutorial.a(LoginMethod.field_d, ud.field_ab, 7502, TaggedMapData.field_b, du.field_b);
+                var3_int = BattleTutorial.a(LoginMethod.field_d, FullscreenStatusDialog.field_ab, 7502, TaggedMapData.field_b, du.field_b);
               }
               var4 = var3_int + 2;
               TileMetadata.field_h = new int[var4];

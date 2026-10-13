@@ -93,10 +93,10 @@ final class dd {
           field_a = false;
         }
         if (0 == ConsoleExpression.field_m) {
-          if (!ps.field_u.ensureIndex((byte) 82)) {
+          if (!DisplayModeOptionPainter.field_u.ensureIndex((byte) 82)) {
             return 20;
           }
-          if (!ps.field_u.ensureGroupAvailableByName(28979, "commonui")) {
+          if (!DisplayModeOptionPainter.field_u.ensureGroupAvailableByName(28979, "commonui")) {
             return 40;
           }
           if (!CombatPresentation.field_M.ensureIndex((byte) 82)) {
@@ -123,10 +123,10 @@ final class dd {
               return 29;
             }
           }
-          if (!ps.field_u.ensureIndex((byte) 82)) {
+          if (!DisplayModeOptionPainter.field_u.ensureIndex((byte) 82)) {
             return 43;
           }
-          if (!ps.field_u.ensureGroupAvailableByName(28979, "commonui")) {
+          if (!DisplayModeOptionPainter.field_u.ensureGroupAvailableByName(28979, "commonui")) {
             return 57;
           }
           if (!CombatPresentation.field_M.ensureIndex((byte) 82)) {

@@ -209,7 +209,7 @@ final class AccountRegistrationForm extends DequeWidgetContainer implements Text
         this.passwordInput.painter = (WidgetPainter) ((Object) dupTemp$1);
         String var2 = EmailCheckResult.a(4800, StateChangeEvent.field_D, new String[]{this.m(150), this.l(29406)});
         int var3 = 20;
-        var3 = var3 + this.a(tn.field_X, var3, 170, (byte) 18, this.emailInput);
+        var3 = var3 + this.a(FullscreenMembershipDialog.field_X, var3, 170, (byte) 18, this.emailInput);
         var3 = var3 + (this.a(false, 170, this.emailConfirmationInput, TrianglePulse.field_j, 20, "", var3) + 5);
         var3 = var3 + this.a(jj.field_h, var3, 170, (byte) 18, this.passwordInput);
         var3 = var3 + (this.a(TurnEffectEvent.field_B, this.passwordConfirmationInput, 170, tf.field_m, 210, var3) + 5);
@@ -647,16 +647,16 @@ final class AccountRegistrationForm extends DequeWidgetContainer implements Text
                 var5Lifetime2 = var4;
               }
               var5Lifetime1 = null;
-              if (0 == ut.field_fb) {
+              if (0 == DisplaySettingsDialog.field_fb) {
                 var5Lifetime1 = op.requestAddFriend(20, var4, param1);
               }
-              if (ut.field_fb == 1) {
+              if (DisplaySettingsDialog.field_fb == 1) {
                 var5Lifetime1 = DamageEvent.requestRemoveFriend(var4, (byte) -27, param1);
               }
-              if (ut.field_fb == 2) {
+              if (DisplaySettingsDialog.field_fb == 2) {
                 var5Lifetime1 = se.requestAddIgnoredAccount(var4, param1, param0 - 83);
               }
-              if (ut.field_fb == 3) {
+              if (DisplaySettingsDialog.field_fb == 3) {
                 var5Lifetime1 = MusicPatchEnvelope.requestRemoveIgnoredAccount(param1, var4, false, var4);
               }
               if (var5Lifetime1 != null) {
@@ -664,7 +664,7 @@ final class AccountRegistrationForm extends DequeWidgetContainer implements Text
               }
             }
             EffectPresentation.field_e = null;
-            ut.field_fb = -1;
+            DisplaySettingsDialog.field_fb = -1;
           }
         }
         if (param0 != 2) {

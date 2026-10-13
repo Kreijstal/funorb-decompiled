@@ -262,10 +262,10 @@ final class DeployEvent extends GameEvent {
             }
             if (0 != var6.pressedButton) {
               SpriteDropdownMenu.openClientContextMenu(TaggedMapData.field_g.scrollContainer, var6, (int[]) null, var6.displayName, -1, -110, -1, var6.accountName, 0L);
-              var16 = tn.activeContextMenu;
+              var16 = FullscreenMembershipDialog.activeContextMenu;
               var13_ref_String = ArchiveIndex.field_u;
               var16.menu.addTextAction(7, var13_ref_String, (byte) -100);
-              var17 = tn.activeContextMenu;
+              var17 = FullscreenMembershipDialog.activeContextMenu;
               var13 = BattleTutorial.pointerPressX;
               var14 = TeleportAction.pointerPressY;
               var17.menu.layoutPopup(0, var14, 0, (byte) -118, var13);
@@ -275,13 +275,13 @@ final class DeployEvent extends GameEvent {
           }
           if (0 != TaggedMapData.field_g.addButton.pressedButton) {
             EffectPresentation.field_e = new AccountNamePrompt(TaggedMapData.field_g.addButton.screenX, TaggedMapData.field_g.addButton.screenY, TaggedMapData.field_g.addButton.width, TaggedMapData.field_g.addButton.height, iw.field_o, kq.field_N, eq.field_h, eq.field_h);
-            ut.field_fb = 2;
+            DisplaySettingsDialog.field_fb = 2;
           }
           if (TaggedMapData.field_g.removeButton.pressedButton == 0) {
             return;
           }
           EffectPresentation.field_e = new AccountNamePrompt(TaggedMapData.field_g.removeButton.screenX, TaggedMapData.field_g.removeButton.screenY, TaggedMapData.field_g.removeButton.width, TaggedMapData.field_g.removeButton.height, StandardContentDialog.field_kb, kq.field_N, eq.field_h, eq.field_h);
-          ut.field_fb = 3;
+          DisplaySettingsDialog.field_fb = 3;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

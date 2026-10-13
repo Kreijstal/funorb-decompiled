@@ -244,10 +244,10 @@ final class StripedProgressWidget extends Widget {
     }
 
     final static void a(int param0) {
-        if (DamageEvent.g(125)) {
+        if (DamageEvent.isGuestSession(125)) {
           return;
         }
-        if (!ps.field_v) {
+        if (!DisplayModeOptionPainter.field_v) {
           return;
         }
         byte[] var2 = new byte[2];
@@ -261,7 +261,7 @@ final class StripedProgressWidget extends Widget {
           var2[1] = (byte)AccountRegistrationDialog.bitwiseOr((int) var2[1], 1);
         }
         MusicCrossfadeStream.a(0, 6, var2);
-        ps.field_v = false;
+        DisplayModeOptionPainter.field_v = false;
     }
 
     private final RgbSprite createCapMask(int obfuscationGuard) {

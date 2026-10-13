@@ -96,7 +96,7 @@ final class BattleGraphicsAssets {
           nextAlias = nextTheme;
           nextAlias.loadSpriteSheets((byte) -118);
           ac.activeTerrainSprites = nextAlias.terrainSprites;
-          tn.activeFoliageShadows = nextAlias.foliageShadowSprites;
+          FullscreenMembershipDialog.activeFoliageShadows = nextAlias.foliageShadowSprites;
           nr.activeFoliageSprites = nextAlias.foliageSprites;
           TextFieldValidator.currentThemeId = themeId;
           l.activeStructureSprites = nextAlias.structureSprites;

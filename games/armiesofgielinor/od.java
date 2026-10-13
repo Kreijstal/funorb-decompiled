@@ -27,8 +27,8 @@ final class od {
           af.field_b > 0) {
           fieldTemp$0 = af.field_b - 1;
           af.field_b = af.field_b - 1;
-          var2_ref_byte__ = ut.field_W[fieldTemp$0];
-          ut.field_W[af.field_b] = null;
+          var2_ref_byte__ = DisplaySettingsDialog.field_W[fieldTemp$0];
+          DisplaySettingsDialog.field_W[af.field_b] = null;
           return var2_ref_byte__;
         }
         if (param0 == 5000 &&
@@ -143,7 +143,7 @@ final class od {
             af.field_b < 1000) {
             fieldTemp$0 = af.field_b;
             af.field_b = af.field_b + 1;
-            ut.field_W[fieldTemp$0] = param1;
+            DisplaySettingsDialog.field_W[fieldTemp$0] = param1;
             return;
           }
           if (param1.length == 5000 &&

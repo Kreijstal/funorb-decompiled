@@ -839,10 +839,10 @@ final class Battlefield {
             }
           }}
         if (param2 == 58) {
-          var8 = ps.field_C[1];
+          var8 = DisplayModeOptionPainter.field_C[1];
         }
         if (param2 == 63) {
-          var8 = ps.field_C[0];
+          var8 = DisplayModeOptionPainter.field_C[0];
         }
         if (param2 == 59 ||
           param2 == 53 ||
@@ -1299,7 +1299,7 @@ final class Battlefield {
                     var9 = this.getPlayerTeamIndex(var8.ownerPlayer, param1 - 12535);
                     if (var8.unitType == 59) {
                       stackIn_26_0 = (!var8.packedFlag32) ? 0 : 1;
-                      if (stackIn_26_0 + ps.field_C[2] >= var7) {
+                      if (stackIn_26_0 + DisplayModeOptionPainter.field_C[2] >= var7) {
                         param0[var9] = AccountRegistrationDialog.bitwiseOr(param0[var9], 4);
                       }
                     }
@@ -1310,7 +1310,7 @@ final class Battlefield {
                       } else {
                         stackIn_32_1 = 0;
                       }
-                      if (stackIn_31_0 >= ~(stackIn_32_1 + ps.field_C[3])) {
+                      if (stackIn_31_0 >= ~(stackIn_32_1 + DisplayModeOptionPainter.field_C[3])) {
                         param0[var9] = AccountRegistrationDialog.bitwiseOr(param0[var9], 8);
                       }
                     }
@@ -1321,13 +1321,13 @@ final class Battlefield {
                       } else {
                         stackIn_39_1 = 1;
                       }
-                      if (stackIn_38_0 <= stackIn_39_1 + ps.field_C[4] &&
+                      if (stackIn_38_0 <= stackIn_39_1 + DisplayModeOptionPainter.field_C[4] &&
                         0 < var7) {
                         param0[var9] = AccountRegistrationDialog.bitwiseOr(param0[var9], 16);
                       }
                     }
                     if (var8.unitType == 63) {
-                      stackIn_45_0 = ps.field_C[0];
+                      stackIn_45_0 = DisplayModeOptionPainter.field_C[0];
                       if (var8.packedFlag32) {
                         stackIn_46_1 = 1;
                       } else {
@@ -1338,7 +1338,7 @@ final class Battlefield {
                       }
                     }
                     if (58 == var8.unitType) {
-                      stackIn_51_0 = ps.field_C[1];
+                      stackIn_51_0 = DisplayModeOptionPainter.field_C[1];
                       if (!var8.packedFlag32) {
                         stackIn_52_1 = 0;
                       } else {

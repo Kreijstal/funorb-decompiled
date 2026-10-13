@@ -165,7 +165,7 @@ final class QuickChatMenu extends ClientUiComponent {
                 var6 = 1;
               }
               if (kp.getChatFilter(var6, 114) == 2) {
-                ud.setChatFilter(1, false, var6, selectionContext);
+                FullscreenStatusDialog.setChatFilter(1, false, var6, selectionContext);
               }
               String var8 = (String) null;
               it.writeChatMessage(var5, -91, rs.outgoingChatChannel, RegistrationAgreementPane.chatRecipientName, messageContext, (String) null);
@@ -199,7 +199,7 @@ final class QuickChatMenu extends ClientUiComponent {
         if (var9 == 7) {
           pv.field_b = var9;
           gt.field_i = var9;
-          cs.field_Y = var9;
+          FullscreenConfirmationDialog.field_Y = var9;
           ContextActionMenu.field_Wb = var9;
           QuickChatCategory.field_z = var9;
           ConsoleTextNode.field_m = var9;
@@ -220,7 +220,7 @@ final class QuickChatMenu extends ClientUiComponent {
             }
           }
           if (var11 != 0) {
-            cs.field_Y = CampaignMenuEntry.field_u[param2 - 1];
+            FullscreenConfirmationDialog.field_Y = CampaignMenuEntry.field_u[param2 - 1];
           }
           if (var12 != 0) {
             SpellConfirmationDialog.field_e = CampaignMenuEntry.field_u[1 + param2];
@@ -236,9 +236,9 @@ final class QuickChatMenu extends ClientUiComponent {
             }
           }
           ac.activeTerrainSprites[FullscreenDisplayMode.a(ConsoleTextNode.field_m, j.field_b, pv.field_b, SpellConfirmationDialog.field_e, -26) + (0 + var9)].b(param0, param4, param5, param1);
-          ac.activeTerrainSprites[var9 - (-1 - FullscreenDisplayMode.a(ContextActionMenu.field_Wb, j.field_b, pv.field_b, cs.field_Y, -87))].b(param0, param4, param5, param1);
+          ac.activeTerrainSprites[var9 - (-1 - FullscreenDisplayMode.a(ContextActionMenu.field_Wb, j.field_b, pv.field_b, FullscreenConfirmationDialog.field_Y, -87))].b(param0, param4, param5, param1);
           ac.activeTerrainSprites[2 + var9 + FullscreenDisplayMode.a(gt.field_i, j.field_b, QuickChatCategory.field_z, SpellConfirmationDialog.field_e, -68)].b(param0, param4, param5, param1);
-          ac.activeTerrainSprites[3 + (var9 + FullscreenDisplayMode.a(ChannelBaseVolumeConsoleCommand.field_E, j.field_b, QuickChatCategory.field_z, cs.field_Y, -72))].b(param0, param4, param5, param1);
+          ac.activeTerrainSprites[3 + (var9 + FullscreenDisplayMode.a(ChannelBaseVolumeConsoleCommand.field_E, j.field_b, QuickChatCategory.field_z, FullscreenConfirmationDialog.field_Y, -72))].b(param0, param4, param5, param1);
           if (cu.field_a &&
             var8 == 0 &&
             (ConsoleExpression.field_p[param2] + param2 & 5) == 5) {
@@ -299,19 +299,19 @@ final class QuickChatMenu extends ClientUiComponent {
         }
         try {
           if (0 == param1) {
-            var8 = tn.activeContextMenu;
+            var8 = FullscreenMembershipDialog.activeContextMenu;
             var10 = dh.field_n[0];
             var28 = var10;
             var28Lifetime3 = var10;
             var9 = EmailValidator.field_o;
             var8.menu.addIconAction(false, var9, 11, var10);
-            var11 = tn.activeContextMenu;
+            var11 = FullscreenMembershipDialog.activeContextMenu;
             var13 = dh.field_n[1];
             var28Lifetime4 = var13;
             var28Lifetime5 = var13;
             var12 = li.field_m;
             var11.menu.addIconAction(false, var12, 12, var13);
-            var14 = tn.activeContextMenu;
+            var14 = FullscreenMembershipDialog.activeContextMenu;
             var16 = dh.field_n[2];
             var28Lifetime6 = var16;
             var28Lifetime7 = var16;
@@ -319,19 +319,19 @@ final class QuickChatMenu extends ClientUiComponent {
             var14.menu.addIconAction(param2, var15, 13, var16);
           }
           if (param1 == 1) {
-            var17 = tn.activeContextMenu;
+            var17 = FullscreenMembershipDialog.activeContextMenu;
             var19 = dh.field_n[0];
             var28Lifetime1 = var19;
             var28Lifetime1Lifetime1 = var19;
             var18 = ChannelGainProfile.field_c;
             var17.menu.addIconAction(false, var18, 11, var19);
-            var20 = tn.activeContextMenu;
+            var20 = FullscreenMembershipDialog.activeContextMenu;
             var22 = dh.field_n[1];
             var28Lifetime1Lifetime2 = var22;
             var28Lifetime1Lifetime3 = var22;
             var21 = fd.field_l;
             var20.menu.addIconAction(param2, var21, 12, var22);
-            var23 = tn.activeContextMenu;
+            var23 = FullscreenMembershipDialog.activeContextMenu;
             var25 = dh.field_n[2];
             var28Lifetime1Lifetime4 = var25;
             var28Lifetime1Lifetime5 = var25;
@@ -339,20 +339,20 @@ final class QuickChatMenu extends ClientUiComponent {
             var23.menu.addIconAction(false, var24, 13, var25);
           }
           if (param1 == 2) {
-            var26 = tn.activeContextMenu;
+            var26 = FullscreenMembershipDialog.activeContextMenu;
             var28Lifetime2 = dh.field_n[0];
             var27 = SocketResourceClient.field_v;
             var26.menu.addIconAction(param2, var27, 11, var28Lifetime2);
-            var29 = tn.activeContextMenu;
+            var29 = FullscreenMembershipDialog.activeContextMenu;
             var31 = dh.field_n[1];
             var30 = jj.field_e;
             var29.menu.addIconAction(param2, var30, 12, var31);
-            var32 = tn.activeContextMenu;
+            var32 = FullscreenMembershipDialog.activeContextMenu;
             var34 = dh.field_n[2];
             var33 = ScrollWidgetContainer.field_R;
             var32.menu.addIconAction(false, var33, 13, var34);
           }
-          var35 = tn.activeContextMenu;
+          var35 = FullscreenMembershipDialog.activeContextMenu;
           var4 = param0.screenX;
           var5 = param0.screenY;
           var6 = param0.width;

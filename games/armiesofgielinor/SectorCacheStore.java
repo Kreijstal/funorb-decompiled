@@ -164,8 +164,8 @@ final class SectorCacheStore {
                     return false;
                   }
                   this.indexFile.seek(-1, (long)(entryId * 6));
-                  this.indexFile.readFully(0, tn.field_db, (byte) -103, 6);
-                  var7_int = ((255 & tn.field_db[3]) << 16) + (tn.field_db[4] << 8 & 65280) + (tn.field_db[5] & 255);
+                  this.indexFile.readFully(0, FullscreenMembershipDialog.field_db, (byte) -103, 6);
+                  var7_int = ((255 & FullscreenMembershipDialog.field_db[3]) << 16) + (FullscreenMembershipDialog.field_db[4] << 8 & 65280) + (FullscreenMembershipDialog.field_db[5] & 255);
                   if (var7_int <= 0 ||
                     !((long)var7_int <= this.dataFile.length(true) / 520L)) {
                     return false;
@@ -176,15 +176,15 @@ final class SectorCacheStore {
                     var7_int = 1;
                   }
                 }
-                tn.field_db[2] = (byte)length;
-                tn.field_db[5] = (byte)var7_int;
-                tn.field_db[3] = (byte)(var7_int >> 16);
-                tn.field_db[1] = (byte)(length >> 8);
-                tn.field_db[4] = (byte)(var7_int >> 8);
+                FullscreenMembershipDialog.field_db[2] = (byte)length;
+                FullscreenMembershipDialog.field_db[5] = (byte)var7_int;
+                FullscreenMembershipDialog.field_db[3] = (byte)(var7_int >> 16);
+                FullscreenMembershipDialog.field_db[1] = (byte)(length >> 8);
+                FullscreenMembershipDialog.field_db[4] = (byte)(var7_int >> 8);
                 var8 = 27 / ((66 - obfuscationGuard) / 35);
-                tn.field_db[0] = (byte)(length >> 16);
+                FullscreenMembershipDialog.field_db[0] = (byte)(length >> 16);
                 this.indexFile.seek(-1, (long)(entryId * 6));
-                this.indexFile.write(6, 0, (byte) 56, tn.field_db);
+                this.indexFile.write(6, 0, (byte) 56, FullscreenMembershipDialog.field_db);
                 var9 = 0;
                 var10 = 0;
                 scanLoop1: while (true) {
@@ -195,7 +195,7 @@ final class SectorCacheStore {
                       this.dataFile.seek(-1, (long)(520 * var7_int));
                       if (65535 >= entryId) {
                         try {
-                          this.dataFile.readFully(0, tn.field_db, (byte) -103, 8);
+                          this.dataFile.readFully(0, FullscreenMembershipDialog.field_db, (byte) -103, 8);
                           decompiledRegionSelector0 = 0;
                         } catch (java.io.EOFException decompiledCaughtParameter0) {
                           decompiledCaughtException = decompiledCaughtParameter0;
@@ -205,13 +205,13 @@ final class SectorCacheStore {
                         if (decompiledRegionSelector0 != 0) {
                           break scanLoop1;
                         }
-                        var13 = (tn.field_db[3] & 255) + (65280 & tn.field_db[2] << 8);
-                        var11 = (255 & tn.field_db[6]) + ((16711680 & tn.field_db[4] << 16) + (tn.field_db[5] << 8 & 65280));
-                        var12 = (255 & tn.field_db[1]) + ((255 & tn.field_db[0]) << 8);
-                        var14 = tn.field_db[7] & 255;
+                        var13 = (FullscreenMembershipDialog.field_db[3] & 255) + (65280 & FullscreenMembershipDialog.field_db[2] << 8);
+                        var11 = (255 & FullscreenMembershipDialog.field_db[6]) + ((16711680 & FullscreenMembershipDialog.field_db[4] << 16) + (FullscreenMembershipDialog.field_db[5] << 8 & 65280));
+                        var12 = (255 & FullscreenMembershipDialog.field_db[1]) + ((255 & FullscreenMembershipDialog.field_db[0]) << 8);
+                        var14 = FullscreenMembershipDialog.field_db[7] & 255;
                       } else {
                         try {
-                          this.dataFile.readFully(0, tn.field_db, (byte) -103, 10);
+                          this.dataFile.readFully(0, FullscreenMembershipDialog.field_db, (byte) -103, 10);
                           decompiledRegionSelector1 = 0;
                         } catch (java.io.EOFException decompiledCaughtParameter1) {
                           decompiledCaughtException = decompiledCaughtParameter1;
@@ -221,10 +221,10 @@ final class SectorCacheStore {
                         if (decompiledRegionSelector1 != 0) {
                           break scanLoop1;
                         }
-                        var11 = (255 & tn.field_db[8]) + (16711680 & tn.field_db[6] << 16) + (65280 & tn.field_db[7] << 8);
-                        var12 = (255 & tn.field_db[3]) + ((tn.field_db[1] << 16 & 16711680) + (((255 & tn.field_db[0]) << 24) + ((255 & tn.field_db[2]) << 8)));
-                        var14 = tn.field_db[9] & 255;
-                        var13 = ((255 & tn.field_db[4]) << 8) + (tn.field_db[5] & 255);
+                        var11 = (255 & FullscreenMembershipDialog.field_db[8]) + (16711680 & FullscreenMembershipDialog.field_db[6] << 16) + (65280 & FullscreenMembershipDialog.field_db[7] << 8);
+                        var12 = (255 & FullscreenMembershipDialog.field_db[3]) + ((FullscreenMembershipDialog.field_db[1] << 16 & 16711680) + (((255 & FullscreenMembershipDialog.field_db[0]) << 24) + ((255 & FullscreenMembershipDialog.field_db[2]) << 8)));
+                        var14 = FullscreenMembershipDialog.field_db[9] & 255;
+                        var13 = ((255 & FullscreenMembershipDialog.field_db[4]) << 8) + (FullscreenMembershipDialog.field_db[5] & 255);
                       }
                       if ((entryId == var12 &&
                         var10 == var13 &&
@@ -251,18 +251,18 @@ final class SectorCacheStore {
                       var11 = 0;
                     }
                     if (entryId > 65535) {
-                      tn.field_db[6] = (byte)(var11 >> 16);
-                      tn.field_db[0] = (byte)(entryId >> 24);
-                      tn.field_db[3] = (byte)entryId;
-                      tn.field_db[4] = (byte)(var10 >> 8);
-                      tn.field_db[9] = (byte)this.archiveId;
-                      tn.field_db[1] = (byte)(entryId >> 16);
-                      tn.field_db[7] = (byte)(var11 >> 8);
-                      tn.field_db[2] = (byte)(entryId >> 8);
-                      tn.field_db[5] = (byte)var10;
-                      tn.field_db[8] = (byte)var11;
+                      FullscreenMembershipDialog.field_db[6] = (byte)(var11 >> 16);
+                      FullscreenMembershipDialog.field_db[0] = (byte)(entryId >> 24);
+                      FullscreenMembershipDialog.field_db[3] = (byte)entryId;
+                      FullscreenMembershipDialog.field_db[4] = (byte)(var10 >> 8);
+                      FullscreenMembershipDialog.field_db[9] = (byte)this.archiveId;
+                      FullscreenMembershipDialog.field_db[1] = (byte)(entryId >> 16);
+                      FullscreenMembershipDialog.field_db[7] = (byte)(var11 >> 8);
+                      FullscreenMembershipDialog.field_db[2] = (byte)(entryId >> 8);
+                      FullscreenMembershipDialog.field_db[5] = (byte)var10;
+                      FullscreenMembershipDialog.field_db[8] = (byte)var11;
                       this.dataFile.seek(-1, (long)(var7_int * 520));
-                      this.dataFile.write(10, 0, (byte) 63, tn.field_db);
+                      this.dataFile.write(10, 0, (byte) 63, FullscreenMembershipDialog.field_db);
                       var12 = -var9 + length;
                       if (510 < var12) {
                         var12 = 510;
@@ -270,16 +270,16 @@ final class SectorCacheStore {
                       this.dataFile.write(var12, var9, (byte) 110, bytes);
                       var9 = var9 + var12;
                     } else {
-                      tn.field_db[2] = (byte)(var10 >> 8);
-                      tn.field_db[0] = (byte)(entryId >> 8);
-                      tn.field_db[3] = (byte)var10;
-                      tn.field_db[1] = (byte)entryId;
-                      tn.field_db[7] = (byte)this.archiveId;
-                      tn.field_db[4] = (byte)(var11 >> 16);
-                      tn.field_db[6] = (byte)var11;
-                      tn.field_db[5] = (byte)(var11 >> 8);
+                      FullscreenMembershipDialog.field_db[2] = (byte)(var10 >> 8);
+                      FullscreenMembershipDialog.field_db[0] = (byte)(entryId >> 8);
+                      FullscreenMembershipDialog.field_db[3] = (byte)var10;
+                      FullscreenMembershipDialog.field_db[1] = (byte)entryId;
+                      FullscreenMembershipDialog.field_db[7] = (byte)this.archiveId;
+                      FullscreenMembershipDialog.field_db[4] = (byte)(var11 >> 16);
+                      FullscreenMembershipDialog.field_db[6] = (byte)var11;
+                      FullscreenMembershipDialog.field_db[5] = (byte)(var11 >> 8);
                       this.dataFile.seek(-1, (long)(var7_int * 520));
-                      this.dataFile.write(8, 0, (byte) 44, tn.field_db);
+                      this.dataFile.write(8, 0, (byte) 44, FullscreenMembershipDialog.field_db);
                       var12 = length - var9;
                       if (var12 > 512) {
                         var12 = 512;
@@ -357,9 +357,9 @@ final class SectorCacheStore {
                 return (byte[]) (stackIn_3_0);
               }
               this.indexFile.seek(-1, (long)(6 * entryId));
-              this.indexFile.readFully(0, tn.field_db, (byte) -103, 6);
-              entryLength = (tn.field_db[0] << 16 & 16711680) + (tn.field_db[1] << 8 & 65280) + (tn.field_db[2] & 255);
-              sector = (tn.field_db[3] << 16 & 16711680) - (-(65280 & tn.field_db[4] << 8) - (255 & tn.field_db[5]));
+              this.indexFile.readFully(0, FullscreenMembershipDialog.field_db, (byte) -103, 6);
+              entryLength = (FullscreenMembershipDialog.field_db[0] << 16 & 16711680) + (FullscreenMembershipDialog.field_db[1] << 8 & 65280) + (FullscreenMembershipDialog.field_db[2] & 255);
+              sector = (FullscreenMembershipDialog.field_db[3] << 16 & 16711680) - (-(65280 & FullscreenMembershipDialog.field_db[4] << 8) - (255 & FullscreenMembershipDialog.field_db[5]));
               if (0 > entryLength) {
                 return null;
               }
@@ -386,21 +386,21 @@ final class SectorCacheStore {
                     payloadLength = 510;
                   }
                   headerLength = 10;
-                  this.dataFile.readFully(0, tn.field_db, (byte) -103, payloadLength + headerLength);
-                  headerChunkIndex = (65280 & tn.field_db[4] << 8) + (tn.field_db[5] & 255);
-                  headerArchiveId = tn.field_db[9] & 255;
-                  nextSector = ((tn.field_db[7] & 255) << 8) + (16711680 & tn.field_db[6] << 16) + (255 & tn.field_db[8]);
-                  headerEntryId = ((tn.field_db[0] & 255) << 24) - (-((tn.field_db[1] & 255) << 16) - ((tn.field_db[2] & 255) << 8)) + (tn.field_db[3] & 255);
+                  this.dataFile.readFully(0, FullscreenMembershipDialog.field_db, (byte) -103, payloadLength + headerLength);
+                  headerChunkIndex = (65280 & FullscreenMembershipDialog.field_db[4] << 8) + (FullscreenMembershipDialog.field_db[5] & 255);
+                  headerArchiveId = FullscreenMembershipDialog.field_db[9] & 255;
+                  nextSector = ((FullscreenMembershipDialog.field_db[7] & 255) << 8) + (16711680 & FullscreenMembershipDialog.field_db[6] << 16) + (255 & FullscreenMembershipDialog.field_db[8]);
+                  headerEntryId = ((FullscreenMembershipDialog.field_db[0] & 255) << 24) - (-((FullscreenMembershipDialog.field_db[1] & 255) << 16) - ((FullscreenMembershipDialog.field_db[2] & 255) << 8)) + (FullscreenMembershipDialog.field_db[3] & 255);
                 } else {
                   headerLength = 8;
                   if (payloadLength > 512) {
                     payloadLength = 512;
                   }
-                  this.dataFile.readFully(0, tn.field_db, (byte) -103, headerLength + payloadLength);
-                  headerEntryId = (255 & tn.field_db[1]) + ((tn.field_db[0] & 255) << 8);
-                  headerChunkIndex = (255 & tn.field_db[3]) + ((tn.field_db[2] & 255) << 8);
-                  headerArchiveId = tn.field_db[7] & 255;
-                  nextSector = (tn.field_db[6] & 255) + ((255 & tn.field_db[5]) << 8) + (16711680 & tn.field_db[4] << 16);
+                  this.dataFile.readFully(0, FullscreenMembershipDialog.field_db, (byte) -103, headerLength + payloadLength);
+                  headerEntryId = (255 & FullscreenMembershipDialog.field_db[1]) + ((FullscreenMembershipDialog.field_db[0] & 255) << 8);
+                  headerChunkIndex = (255 & FullscreenMembershipDialog.field_db[3]) + ((FullscreenMembershipDialog.field_db[2] & 255) << 8);
+                  headerArchiveId = FullscreenMembershipDialog.field_db[7] & 255;
+                  nextSector = (FullscreenMembershipDialog.field_db[6] & 255) + ((255 & FullscreenMembershipDialog.field_db[5]) << 8) + (16711680 & FullscreenMembershipDialog.field_db[4] << 16);
                 }
                 if (headerEntryId != entryId) {
                   return null;
@@ -424,7 +424,7 @@ final class SectorCacheStore {
                 for (var16 = headerLength; var16 < readEnd; var16++) {
                   incrementValue$2 = bytesRead;
                   bytesRead++;
-                  bytes[incrementValue$2] = tn.field_db[var16];
+                  bytes[incrementValue$2] = FullscreenMembershipDialog.field_db[var16];
                 }
               }
               stackIn_49_0 = bytes;

@@ -91,7 +91,7 @@ final class ActionSpell extends Spell {
         int var10 = 0;
         var10 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          if (DamageEvent.g(117)) {
+          if (DamageEvent.isGuestSession(117)) {
             return;
           }
           campaignIndex = mission.campaign.campaignIndex;

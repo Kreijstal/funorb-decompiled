@@ -142,7 +142,7 @@ final class UiSelectionState {
           UnitAnimationPreview.field_h &&
           ve.field_b &&
           mv.field_b) ||
-          DamageEvent.g(105));
+          DamageEvent.isGuestSession(105));
         return stackIn_12_0;
     }
 

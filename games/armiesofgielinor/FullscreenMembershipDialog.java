@@ -1,10 +1,10 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class tn extends ResizableModalDialog implements WidgetActivationListener {
-    private InteractiveWidget field_bb;
+final class FullscreenMembershipDialog extends ResizableModalDialog implements WidgetActivationListener {
+    private InteractiveWidget closeButton;
     static rn field_ab;
-    private InteractiveWidget field_fb;
+    private InteractiveWidget membersButton;
     static RgbSprite[] activeFoliageShadows;
     static jl field_cb;
     static byte[] field_db;
@@ -27,8 +27,8 @@ final class tn extends ResizableModalDialog implements WidgetActivationListener 
         field_cb = null;
     }
 
-    tn(ModalDialogHost param0) {
-        super(param0, 200, 130);
+    FullscreenMembershipDialog(ModalDialogHost host) {
+        super(host, 200, 130);
         Widget var2 = null;
         try {
           var2 = new Widget(SummonRequest.field_z, (WidgetListener) null);
@@ -38,12 +38,12 @@ final class tn extends ResizableModalDialog implements WidgetActivationListener 
           var2.y = 50;
           var2.painter = (WidgetPainter) ((Object) new BitmapTextWidgetPainter(gl.field_e, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
           this.addChild((byte) 10, var2);
-          if (DamageEvent.g(98)) {
-            this.field_fb = this.a((WidgetListener) (this), true, ClientContextMenu.field_j);
+          if (DamageEvent.isGuestSession(98)) {
+            this.membersButton = this.createNoticeButton((WidgetListener) (this), true, ClientContextMenu.field_j);
           }
-          this.field_bb = this.a((WidgetListener) (this), true, pd.field_f);
+          this.closeButton = this.createNoticeButton((WidgetListener) (this), true, pd.field_f);
         } catch (RuntimeException runtimeException) {
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "tn.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "tn.<init>(" + (host != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -57,13 +57,13 @@ final class tn extends ResizableModalDialog implements WidgetActivationListener 
           if (obfuscationGuard != 11) {
             field_W = (int[][]) null;
           }
-          if (widget != this.field_fb) {
-            if (widget == this.field_bb) {
-              this.o(1);
+          if (widget != this.membersButton) {
+            if (widget == this.closeButton) {
+              this.closeMembershipNotice(1);
             }
           } else {
             ed.a(false);
-            this.o(obfuscationGuard - 10);
+            this.closeMembershipNotice(obfuscationGuard - 10);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -80,10 +80,10 @@ final class tn extends ResizableModalDialog implements WidgetActivationListener 
         }
     }
 
-    private final void o(int param0) {
-        if (param0 != 1) {
+    private final void closeMembershipNotice(int obfuscationGuard) {
+        if (obfuscationGuard != 1) {
           CipherPacketBuffer var3 = (CipherPacketBuffer) null;
-          tn.readTaggedInteger(false, 35, (CipherPacketBuffer) null);
+          FullscreenMembershipDialog.readTaggedInteger(false, 35, (CipherPacketBuffer) null);
         }
         if (!this.open) {
           return;
@@ -91,7 +91,7 @@ final class tn extends ResizableModalDialog implements WidgetActivationListener 
         this.open = false;
     }
 
-    private final InteractiveWidget a(WidgetListener param0, boolean param1, String param2) {
+    private final InteractiveWidget createNoticeButton(WidgetListener listener, boolean obfuscationGuard, String text) {
         InteractiveWidget var4 = null;
         RuntimeException var4_ref = null;
         int var5 = 0;
@@ -103,9 +103,9 @@ final class tn extends ResizableModalDialog implements WidgetActivationListener 
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var4 = new InteractiveWidget(param2, param0);
-          if (!param1) {
-            tn.a(false, -22, 101);
+          var4 = new InteractiveWidget(text, listener);
+          if (!obfuscationGuard) {
+            FullscreenMembershipDialog.a(false, -22, 101);
           }
           var4.painter = (WidgetPainter) ((Object) new SpriteButtonPainter());
           var5 = -6 + this.height;
@@ -120,13 +120,13 @@ final class tn extends ResizableModalDialog implements WidgetActivationListener 
           var4_ref = decompiledCaughtException;
           stackIn_6_0 = var4_ref;
           stackIn_6_1 = new StringBuilder().append("tn.G(");
-          if (param0 == null) {
+          if (listener == null) {
             stackIn_7_2 = "null";
           } else {
             stackIn_7_2 = "{...}";
           }
-          stackIn_9_1 = ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(',');
-          if (param2 == null) {
+          stackIn_9_1 = ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(obfuscationGuard).append(',');
+          if (text == null) {
             stackIn_10_2 = "null";
           } else {
             stackIn_10_2 = "{...}";
@@ -144,11 +144,11 @@ final class tn extends ResizableModalDialog implements WidgetActivationListener 
         RuntimeException decompiledCaughtException = null;
         try {
           if (98 == keyCode) {
-            if (this.field_fb == null) {
-              this.field_bb.takeFocus(11, (Widget) (this));
+            if (this.membersButton == null) {
+              this.closeButton.takeFocus(11, (Widget) (this));
               return true;
             }
-            this.field_fb.takeFocus(11, (Widget) (this));
+            this.membersButton.takeFocus(11, (Widget) (this));
             return true;
           }
           if (obfuscationGuard != -12215) {
@@ -158,7 +158,7 @@ final class tn extends ResizableModalDialog implements WidgetActivationListener 
             stackIn_12_0 = super.handleKey(rootWidget, keyCode, character, obfuscationGuard + 0);
             return stackIn_12_0;
           }
-          this.field_bb.takeFocus(11, (Widget) (this));
+          this.closeButton.takeFocus(11, (Widget) (this));
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -277,7 +277,7 @@ final class tn extends ResizableModalDialog implements WidgetActivationListener 
     final static RgbSprite[] a(boolean param0, int param1, int param2) {
         if (!param0) {
           CipherPacketBuffer var4 = (CipherPacketBuffer) null;
-          tn.readTaggedInteger(false, 58, (CipherPacketBuffer) null);
+          FullscreenMembershipDialog.readTaggedInteger(false, 58, (CipherPacketBuffer) null);
         }
         return IntPair.a(param1, (byte) -114, param2, 1);
     }

@@ -508,7 +508,7 @@ final class SpriteDropdownMenu {
               }
             }
             if (decompiledFrameRemainder0) {
-              if (-1 == ud.field_Z.indexOf(var5Lifetime1)) {
+              if (-1 == FullscreenStatusDialog.field_Z.indexOf(var5Lifetime1)) {
                 stackIn_45_0 = ov.field_h;
                 return stackIn_45_0;
               }
@@ -549,7 +549,7 @@ final class SpriteDropdownMenu {
         try {
           int var10_int = -119 % ((obfuscationGuard + 47) / 32);
           PointerInputHandler.contextMenuScrollContainer = scrollContainer;
-          tn.activeContextMenu = new ClientContextMenu(sourceComponent, accountId, accountName, displayName, roomId, chatChannel, quickChatContext);
+          FullscreenMembershipDialog.activeContextMenu = new ClientContextMenu(sourceComponent, accountId, accountName, displayName, roomId, chatChannel, quickChatContext);
         } catch (RuntimeException runtimeException) {
           throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "ng.FA(" + (scrollContainer != null ? "{...}" : "null") + ',' + (sourceComponent != null ? "{...}" : "null") + ',' + (quickChatContext != null ? "{...}" : "null") + ',' + (displayName != null ? "{...}" : "null") + ',' + roomId + ',' + obfuscationGuard + ',' + chatChannel + ',' + (accountName != null ? "{...}" : "null") + ',' + accountId + ')');
         }

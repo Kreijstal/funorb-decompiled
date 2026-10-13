@@ -34,9 +34,9 @@ final class FixInvisibleUnitsConsoleCommand extends ConsoleCommand {
     }
 
     final static void g(int param0) {
-        if (tn.activeContextMenu != null) {
-          if (tn.activeContextMenu.sourceComponent == null) {
-            tn.activeContextMenu = null;
+        if (FullscreenMembershipDialog.activeContextMenu != null) {
+          if (FullscreenMembershipDialog.activeContextMenu.sourceComponent == null) {
+            FullscreenMembershipDialog.activeContextMenu = null;
             if (param0 != 76) {
               FixInvisibleUnitsConsoleCommand.e((byte) -104);
               PointerInputHandler.contextMenuScrollContainer = null;
@@ -45,9 +45,9 @@ final class FixInvisibleUnitsConsoleCommand extends ConsoleCommand {
             PointerInputHandler.contextMenuScrollContainer = null;
             return;
           }
-          tn.activeContextMenu.sourceComponent.selected = false;
+          FullscreenMembershipDialog.activeContextMenu.sourceComponent.selected = false;
         }
-        tn.activeContextMenu = null;
+        FullscreenMembershipDialog.activeContextMenu = null;
         if (param0 == 76) {
           PointerInputHandler.contextMenuScrollContainer = null;
           return;

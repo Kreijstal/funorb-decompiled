@@ -509,7 +509,7 @@ final class MovementPresentation implements EventPresentation {
         if (param0 != -11) {
           return false;
         }
-        stackIn_7_0 = (SoundCache.field_b >= 10) && (!QuickChatCategoryRepository.field_b) && (!TeamRoster.a(-103));
+        stackIn_7_0 = (SoundCache.field_b >= 10) && (!QuickChatCategoryRepository.guestSession) && (!TeamRoster.a(-103));
         return stackIn_7_0;
     }
 

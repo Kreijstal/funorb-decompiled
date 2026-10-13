@@ -341,7 +341,7 @@ final class StateChangeEvent extends GameEvent {
     }
 
     final static void sendProgressRecord(byte obfuscationGuard, int recordId, int flag, int counter) {
-        if (DamageEvent.g(98)) {
+        if (DamageEvent.isGuestSession(98)) {
           return;
         }
         CipherPacketBuffer var4 = EmailValidator.outgoingPacket;

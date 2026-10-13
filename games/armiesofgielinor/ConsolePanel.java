@@ -344,7 +344,7 @@ abstract class ConsolePanel implements ap {
 
     private final ClientUiComponent createBorderStyle(int obfuscationGuard, int borderColour, int fillColour) {
         ClientUiComponent style = new ClientUiComponent(0L, (ClientUiComponent) null);
-        style.skinSprites = tn.a(true, borderColour, fillColour);
+        style.skinSprites = FullscreenMembershipDialog.a(true, borderColour, fillColour);
         if (obfuscationGuard != 5592405) {
           this.outputScroll = (ScrollContainer) null;
         }
@@ -524,7 +524,7 @@ abstract class ConsolePanel implements ap {
 
     private final ClientUiComponent createSolidStyle(boolean obfuscationGuard, int colour) {
         ClientUiComponent style = new ClientUiComponent();
-        style.skinSprites = tn.a(obfuscationGuard, 0, colour);
+        style.skinSprites = FullscreenMembershipDialog.a(obfuscationGuard, 0, colour);
         return style;
     }
 

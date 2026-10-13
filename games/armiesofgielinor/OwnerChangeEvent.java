@@ -251,7 +251,7 @@ final class OwnerChangeEvent extends GameEvent {
           if (decompiledFrameRemainder0) {
             if (!BoundedFile.field_b) {
               if (NodeIterator.field_c <= RasterViewportResizeHandler.field_a) {
-                stackIn_17_0 = (NodeIterator.field_c + ps.field_E > RasterViewportResizeHandler.field_a) ? 1 : 0;
+                stackIn_17_0 = (NodeIterator.field_c + DisplayModeOptionPainter.field_E > RasterViewportResizeHandler.field_a) ? 1 : 0;
               } else {
                 stackIn_17_0 = 0;
               }

@@ -100,7 +100,7 @@ final class NodeIterator {
     }
 
     final static boolean a(int param0, int param1, int param2, int param3) {
-        if (null == tn.activeContextMenu) {
+        if (null == FullscreenMembershipDialog.activeContextMenu) {
           if (null != Spell.field_b &&
             Spell.field_b.isWaitingForChoice(18585)) {
             Spell.field_b = null;
@@ -111,7 +111,7 @@ final class NodeIterator {
             field_b = (RgbSprite[]) null;
           }
         } else {
-          if (tn.activeContextMenu.isWaitingForAction((byte) -121)) {
+          if (FullscreenMembershipDialog.activeContextMenu.isWaitingForAction((byte) -121)) {
             FixInvisibleUnitsConsoleCommand.g(76);
             return true;
           }

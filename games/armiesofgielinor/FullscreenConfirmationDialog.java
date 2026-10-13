@@ -1,24 +1,24 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class cs extends ResizableModalDialog implements WidgetActivationListener {
+final class FullscreenConfirmationDialog extends ResizableModalDialog implements WidgetActivationListener {
     static String[] field_W;
-    private Widget field_ab;
-    private InteractiveWidget field_gb;
-    private InteractiveWidget field_Z;
+    private Widget countdownLabel;
+    private InteractiveWidget cancelButton;
+    private InteractiveWidget acceptButton;
     static ModelMeshBase[] field_db;
-    private long field_fb;
+    private long startedAtMillis;
     static int field_Y;
     static String field_X;
     static java.awt.Frame field_bb;
     static java.math.BigInteger field_cb;
     static String field_eb;
 
-    cs(ModalDialogHost param0) {
-        super(param0, 200, 200);
+    FullscreenConfirmationDialog(ModalDialogHost host) {
+        super(host, 200, 200);
         Widget var3 = null;
         try {
-          this.field_fb = vi.monotonicMillis(-95);
+          this.startedAtMillis = vi.monotonicMillis(-95);
           var3 = new Widget(ProgressMessageDialog.field_vb, (WidgetListener) null);
           var3.y = 50;
           var3.height = 100;
@@ -26,17 +26,17 @@ final class cs extends ResizableModalDialog implements WidgetActivationListener 
           var3.x = 0;
           var3.painter = (WidgetPainter) ((Object) new BitmapTextWidgetPainter(gl.field_e, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
           this.addChild((byte) 10, var3);
-          this.field_ab = new Widget(ProgressMessageDialog.field_vb, (WidgetListener) null);
-          this.field_ab.width = this.width;
-          this.field_ab.x = 0;
-          this.field_ab.y = 20 + (var3.y + var3.height);
-          this.field_ab.height = 80;
-          this.field_ab.painter = (WidgetPainter) ((Object) new BitmapTextWidgetPainter(CipherPacketBuffer.field_t, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
-          this.addChild((byte) 10, this.field_ab);
-          this.field_Z = this.a(DualNodeDeque.field_e, -63, (WidgetListener) (this));
-          this.field_gb = this.a(WeightedScoreStrategy.field_m, -74, (WidgetListener) (this));
+          this.countdownLabel = new Widget(ProgressMessageDialog.field_vb, (WidgetListener) null);
+          this.countdownLabel.width = this.width;
+          this.countdownLabel.x = 0;
+          this.countdownLabel.y = 20 + (var3.y + var3.height);
+          this.countdownLabel.height = 80;
+          this.countdownLabel.painter = (WidgetPainter) ((Object) new BitmapTextWidgetPainter(CipherPacketBuffer.field_t, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
+          this.addChild((byte) 10, this.countdownLabel);
+          this.acceptButton = this.createConfirmationButton(DualNodeDeque.field_e, -63, (WidgetListener) (this));
+          this.cancelButton = this.createConfirmationButton(WeightedScoreStrategy.field_m, -74, (WidgetListener) (this));
         } catch (RuntimeException runtimeException) {
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "cs.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "cs.<init>(" + (host != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -48,12 +48,12 @@ final class cs extends ResizableModalDialog implements WidgetActivationListener 
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (widget == this.field_Z) {
-            this.n(10);
+          if (widget == this.acceptButton) {
+            this.closeConfirmation(10);
           } else {
-            if (widget == this.field_gb) {
+            if (widget == this.cancelButton) {
               ck.b(-65);
-              this.n(10);
+              this.closeConfirmation(10);
             }
           }
           if (obfuscationGuard == 11) {
@@ -76,11 +76,11 @@ final class cs extends ResizableModalDialog implements WidgetActivationListener 
         }
     }
 
-    private final void n(int param0) {
+    private final void closeConfirmation(int obfuscationGuard) {
         if (!this.open) {
           return;
         }
-        if (param0 != 10) {
+        if (obfuscationGuard != 10) {
           field_db = (ModelMeshBase[]) null;
           this.open = false;
           return;
@@ -98,7 +98,7 @@ final class cs extends ResizableModalDialog implements WidgetActivationListener 
           field_cb = null;
           return;
         }
-        cs.b(false);
+        FullscreenConfirmationDialog.b(false);
         field_db = null;
         field_X = null;
         field_W = null;
@@ -111,32 +111,32 @@ final class cs extends ResizableModalDialog implements WidgetActivationListener 
         StringBuilder stackIn_14_1 = null;
         String stackIn_15_2 = null;
         RuntimeException decompiledCaughtException = null;
-        long var5_long = 0L;
+        long elapsedMillis = 0L;
         RuntimeException var5 = null;
-        int var7 = 0;
+        int remainingSeconds = 0;
         try {
           super.updatePointer(obfuscationGuard, originX, originY, rootWidget);
           if (BitmapTextWidgetPainter.pointerChangedSnapshot) {
             rootWidget.blur(obfuscationGuard - 32721);
           }
-          var5_long = vi.monotonicMillis(92) - this.field_fb;
-          var7 = (int)((10999L - var5_long) / 1000L);
-          if (0 >= var7) {
+          elapsedMillis = vi.monotonicMillis(92) - this.startedAtMillis;
+          remainingSeconds = (int)((10999L - elapsedMillis) / 1000L);
+          if (0 >= remainingSeconds) {
             ck.b(-62);
-            this.n(10);
-            this.host.showDialog(new ud(this.host, tn.field_cb), 0);
+            this.closeConfirmation(10);
+            this.host.showDialog(new FullscreenStatusDialog(this.host, FullscreenMembershipDialog.field_cb), 0);
           } else {
-            this.field_ab.text = "" + var7;
+            this.countdownLabel.text = "" + remainingSeconds;
           }
           if (this.open &&
             null == FixedQuaternion.fullscreenCanvas) {
-            this.n(obfuscationGuard ^ 32728);
-            this.host.showDialog(new ud(this.host, SocialListPanel.field_Mb), 0);
+            this.closeConfirmation(obfuscationGuard ^ 32728);
+            this.host.showDialog(new FullscreenStatusDialog(this.host, SocialListPanel.field_Mb), 0);
           }
           if (null != FixedQuaternion.fullscreenCanvas &&
             FixedQuaternion.fullscreenCanvas.focusLost) {
-            this.n(10);
-            this.host.showDialog(new ud(this.host, SocialListPanel.field_Mb), obfuscationGuard ^ 32722);
+            this.closeConfirmation(10);
+            this.host.showDialog(new FullscreenStatusDialog(this.host, SocialListPanel.field_Mb), obfuscationGuard ^ 32722);
             return;
           }
           return;
@@ -168,11 +168,11 @@ final class cs extends ResizableModalDialog implements WidgetActivationListener 
         try {
           var5_int = keyCode;
           if (99 == var5_int) {
-            this.field_gb.takeFocus(11, (Widget) (this));
+            this.cancelButton.takeFocus(11, (Widget) (this));
             return true;
           }
           if (var5_int == 98) {
-            this.field_Z.takeFocus(11, (Widget) (this));
+            this.acceptButton.takeFocus(11, (Widget) (this));
             return true;
           }
           if (obfuscationGuard != -12215) {
@@ -195,7 +195,7 @@ final class cs extends ResizableModalDialog implements WidgetActivationListener 
         }
     }
 
-    private final InteractiveWidget a(String param0, int param1, WidgetListener param2) {
+    private final InteractiveWidget createConfirmationButton(String text, int obfuscationGuard, WidgetListener listener) {
         InteractiveWidget var4 = null;
         RuntimeException var4_ref = null;
         int var5 = 0;
@@ -208,14 +208,14 @@ final class cs extends ResizableModalDialog implements WidgetActivationListener 
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var4 = new InteractiveWidget(param0, param2);
+          var4 = new InteractiveWidget(text, listener);
           var4.painter = (WidgetPainter) ((Object) new SpriteButtonPainter());
           var5 = this.height - 6;
           this.height = this.height + 38;
           var4.setBounds(15, -30 + this.width, var5, 8192, 30);
           this.addChild((byte) 10, (Widget) (var4));
           this.refreshLayout(0);
-          var6 = 121 % ((1 - param1) / 62);
+          var6 = 121 % ((1 - obfuscationGuard) / 62);
           stackIn_1_0 = var4;
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -223,13 +223,13 @@ final class cs extends ResizableModalDialog implements WidgetActivationListener 
           var4_ref = decompiledCaughtException;
           stackIn_4_0 = var4_ref;
           stackIn_4_1 = new StringBuilder().append("cs.C(");
-          if (param0 == null) {
+          if (text == null) {
             stackIn_5_2 = "null";
           } else {
             stackIn_5_2 = "{...}";
           }
-          stackIn_7_1 = ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(param1).append(',');
-          if (param2 == null) {
+          stackIn_7_1 = ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(obfuscationGuard).append(',');
+          if (listener == null) {
             stackIn_8_2 = "null";
           } else {
             stackIn_8_2 = "{...}";

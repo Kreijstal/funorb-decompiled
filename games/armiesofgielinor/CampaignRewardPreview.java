@@ -75,7 +75,7 @@ final class CampaignRewardPreview {
           }
           if (rewardUnitTypes != null) {
             this.title = ScrollContainer.unitDisplayNames[rewardUnitTypes[0]];
-            this.description = ut.field_cb[rewardUnitTypes[0]];
+            this.description = DisplaySettingsDialog.field_cb[rewardUnitTypes[0]];
           } else {
             if (-1 == rewardSpellId) {
               if (manaBonusPercent > 0) {

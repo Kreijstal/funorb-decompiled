@@ -200,7 +200,7 @@ final class CombatPresentation implements EventPresentation {
             if (var8 > -1) {
               param0[var8] = param0[var9];
               param0[var9] = null;
-              param0[var8].currentX = tn.field_W[param1][var8];
+              param0[var8].currentX = FullscreenMembershipDialog.field_W[param1][var8];
               param0[var8].currentY = kw.field_P[param1][var8];
             }
             return;
@@ -733,7 +733,7 @@ final class CombatPresentation implements EventPresentation {
                     stackIn_204_3 = null;
                     stackIn_204_4 = this.field_c;
                     stackIn_204_5 = true;
-                    stackIn_204_6 = tn.field_W[this.field_J][var8Lifetime1];
+                    stackIn_204_6 = FullscreenMembershipDialog.field_W[this.field_J][var8Lifetime1];
                     stackIn_204_7 = kw.field_P[this.field_J][var8Lifetime1];
                     stackIn_204_8 = this.field_d;
                     if (this.field_d) {
@@ -766,7 +766,7 @@ final class CombatPresentation implements EventPresentation {
                     stackIn_214_3 = null;
                     stackIn_214_4 = this.field_c;
                     stackIn_214_5 = true;
-                    stackIn_214_6 = tn.field_W[this.field_J][var8Lifetime1];
+                    stackIn_214_6 = FullscreenMembershipDialog.field_W[this.field_J][var8Lifetime1];
                     stackIn_214_7 = kw.field_P[this.field_J][var8Lifetime1];
                     stackIn_214_8 = this.field_d;
                     if (!this.field_d) {
@@ -788,7 +788,7 @@ final class CombatPresentation implements EventPresentation {
                 if ((decompiledFrameRemainder4) &&
                   (decompiledFrameCompleted4)) {
                   while (true) {
-                    stackIn_227_0[stackIn_227_1] = new BattleCharacter(this.field_a, false, tn.field_W[this.field_u][var8Lifetime1], kw.field_P[this.field_u][var8Lifetime1], this.field_d, 0);
+                    stackIn_227_0[stackIn_227_1] = new BattleCharacter(this.field_a, false, FullscreenMembershipDialog.field_W[this.field_u][var8Lifetime1], kw.field_P[this.field_u][var8Lifetime1], this.field_d, 0);
                     var8Lifetime1++;
                     if (var10 != 0) {
                       decompiledFrameCompleted3 = false;
@@ -807,7 +807,7 @@ final class CombatPresentation implements EventPresentation {
                   if (!this.field_o) {
                     var8Lifetime1 = 0;
                     while (var8Lifetime1 < this.field_w) {
-                      this.defenders[var8Lifetime1] = new BattleCharacter(this.field_a, false, tn.field_W[this.field_u][var8Lifetime1], kw.field_P[this.field_u][var8Lifetime1], this.field_d, 0);
+                      this.defenders[var8Lifetime1] = new BattleCharacter(this.field_a, false, FullscreenMembershipDialog.field_W[this.field_u][var8Lifetime1], kw.field_P[this.field_u][var8Lifetime1], this.field_d, 0);
                       var8Lifetime1++;
                       if (var10 != 0) {
                         decompiledFrameCompleted1 = false;
@@ -824,7 +824,7 @@ final class CombatPresentation implements EventPresentation {
                     while (var8Lifetime1 < this.field_w) {
                       stackIn_227_0Lifetime1 = this.defenders;
                       stackIn_227_1Lifetime1 = var8Lifetime1;
-                      stackIn_227_0Lifetime1[stackIn_227_1Lifetime1] = new BattleCharacter(this.field_a, false, tn.field_W[this.field_u][var8Lifetime1], kw.field_P[this.field_u][var8Lifetime1], this.field_d, 0);
+                      stackIn_227_0Lifetime1[stackIn_227_1Lifetime1] = new BattleCharacter(this.field_a, false, FullscreenMembershipDialog.field_W[this.field_u][var8Lifetime1], kw.field_P[this.field_u][var8Lifetime1], this.field_d, 0);
                       var8Lifetime1++;
                       if (var10 != 0) {
                         decompiledFrameCompleted0 = false;
@@ -2972,7 +2972,7 @@ final class CombatPresentation implements EventPresentation {
             if (var8 > -1) {
               param4[var9] = param4[var8];
               param4[var8] = null;
-              param4[var9].currentX = tn.field_W[param2][var9];
+              param4[var9].currentX = FullscreenMembershipDialog.field_W[param2][var9];
               param4[var9].currentY = kw.field_P[param2][var9];
             }
             return;
@@ -4221,7 +4221,7 @@ final class CombatPresentation implements EventPresentation {
               stackIn_207_3 = null;
               stackIn_207_4 = this.field_c;
               stackIn_207_5 = true;
-              stackIn_207_6 = tn.field_W[this.field_J][var8];
+              stackIn_207_6 = FullscreenMembershipDialog.field_W[this.field_J][var8];
               stackIn_207_7 = kw.field_P[this.field_J][var8];
               stackIn_207_8 = this.field_d;
               if (!this.field_d) {
@@ -4264,7 +4264,7 @@ final class CombatPresentation implements EventPresentation {
               stackIn_220_3 = null;
               stackIn_220_4 = this.field_c;
               stackIn_220_5 = true;
-              stackIn_220_6 = tn.field_W[this.field_J][var8];
+              stackIn_220_6 = FullscreenMembershipDialog.field_W[this.field_J][var8];
               stackIn_220_7 = kw.field_P[this.field_J][var8];
               stackIn_220_8 = this.field_d;
               if (!this.field_d) {
@@ -4296,7 +4296,7 @@ final class CombatPresentation implements EventPresentation {
           if ((decompiledFrameRemainder0) &&
             (decompiledFrameCompleted4)) {
             while (true) {
-              stackIn_236_0[stackIn_236_1] = new BattleCharacter(this.field_a, false, tn.field_W[this.field_u][var8], kw.field_P[this.field_u][var8], this.field_d, 0);
+              stackIn_236_0[stackIn_236_1] = new BattleCharacter(this.field_a, false, FullscreenMembershipDialog.field_W[this.field_u][var8], kw.field_P[this.field_u][var8], this.field_d, 0);
               var8++;
               if (var9 != 0) {
                 decompiledFrameCompleted3 = false;
@@ -4315,7 +4315,7 @@ final class CombatPresentation implements EventPresentation {
             if (!this.field_o) {
               var8 = 0;
               while (var8 < this.field_w) {
-                this.defenders[var8] = new BattleCharacter(this.field_a, false, tn.field_W[this.field_u][var8], kw.field_P[this.field_u][var8], this.field_d, 0);
+                this.defenders[var8] = new BattleCharacter(this.field_a, false, FullscreenMembershipDialog.field_W[this.field_u][var8], kw.field_P[this.field_u][var8], this.field_d, 0);
                 var8++;
                 if (var9 != 0) {
                   decompiledFrameCompleted1 = false;
@@ -4332,7 +4332,7 @@ final class CombatPresentation implements EventPresentation {
               while (this.field_w > var8) {
                 stackIn_236_0Lifetime1 = this.defenders;
                 stackIn_236_1Lifetime1 = var8;
-                stackIn_236_0Lifetime1[stackIn_236_1Lifetime1] = new BattleCharacter(this.field_a, false, tn.field_W[this.field_u][var8], kw.field_P[this.field_u][var8], this.field_d, 0);
+                stackIn_236_0Lifetime1[stackIn_236_1Lifetime1] = new BattleCharacter(this.field_a, false, FullscreenMembershipDialog.field_W[this.field_u][var8], kw.field_P[this.field_u][var8], this.field_d, 0);
                 var8++;
                 if (var9 != 0) {
                   decompiledFrameCompleted0 = false;

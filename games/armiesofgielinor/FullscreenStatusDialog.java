@@ -1,13 +1,13 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ud extends ResizableModalDialog implements WidgetActivationListener {
+final class FullscreenStatusDialog extends ResizableModalDialog implements WidgetActivationListener {
     static String field_Y;
     static String field_Z;
     static String field_W;
     static RgbSprite[] field_X;
     static String field_ab;
-    private InteractiveWidget field_bb;
+    private InteractiveWidget closeButton;
 
     final static void setChatFilter(int filterValue, boolean obfuscationGuard, int channelId, int packetOpcode) {
         if (obfuscationGuard) {
@@ -65,7 +65,7 @@ final class ud extends ResizableModalDialog implements WidgetActivationListener 
         SocketResourceClient.a(896, packetOpcode);
     }
 
-    private final InteractiveWidget a(String param0, WidgetListener param1, int param2) {
+    private final InteractiveWidget createCloseButton(String text, WidgetListener listener, int obfuscationGuard) {
         InteractiveWidget var4 = null;
         RuntimeException var4_ref = null;
         int var5 = 0;
@@ -78,14 +78,14 @@ final class ud extends ResizableModalDialog implements WidgetActivationListener 
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var4 = new InteractiveWidget(param0, param1);
+          var4 = new InteractiveWidget(text, listener);
           var4.painter = (WidgetPainter) ((Object) new SpriteButtonPainter());
           var5 = this.height - 6;
           this.height = this.height + 38;
           var4.setBounds(15, -16 + (-14 + this.width), var5, 8192, 30);
           this.addChild((byte) 10, (Widget) (var4));
           this.refreshLayout(0);
-          var6 = -126 / ((-6 - param2) / 40);
+          var6 = -126 / ((-6 - obfuscationGuard) / 40);
           stackIn_1_0 = var4;
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -93,23 +93,23 @@ final class ud extends ResizableModalDialog implements WidgetActivationListener 
           var4_ref = decompiledCaughtException;
           stackIn_4_0 = var4_ref;
           stackIn_4_1 = new StringBuilder().append("ud.E(");
-          if (param0 == null) {
+          if (text == null) {
             stackIn_5_2 = "null";
           } else {
             stackIn_5_2 = "{...}";
           }
           stackIn_7_1 = ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',');
-          if (param1 == null) {
+          if (listener == null) {
             stackIn_8_2 = "null";
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param2).append(')').toString());
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 
-    ud(ModalDialogHost param0, jl param1) {
-        super(param0, 200, 150);
+    FullscreenStatusDialog(ModalDialogHost host, jl statusToken) {
+        super(host, 200, 150);
         Object var3 = null;
         Widget var4 = null;
         Object stackIn_12_0 = null;
@@ -120,8 +120,8 @@ final class ud extends ResizableModalDialog implements WidgetActivationListener 
         RuntimeException decompiledCaughtException = null;
         try {
           var3 = null;
-          if (param1 != PlayerProfile.field_h) {
-            if (SocialListPanel.field_Mb == param1) {
+          if (statusToken != PlayerProfile.field_h) {
+            if (SocialListPanel.field_Mb == statusToken) {
               this.height = this.height + 10;
               var3 = MoveAttackRequest.field_y;
               if (PaletteRegionMap.b(-108)) {
@@ -129,7 +129,7 @@ final class ud extends ResizableModalDialog implements WidgetActivationListener 
                 var3 = field_W;
               }
             } else {
-              if (param1 == tn.field_cb) {
+              if (statusToken == FullscreenMembershipDialog.field_cb) {
                 this.height = this.height + 30;
                 var3 = hb.field_a;
               }
@@ -144,20 +144,20 @@ final class ud extends ResizableModalDialog implements WidgetActivationListener 
           var4.height = 80;
           var4.painter = (WidgetPainter) ((Object) new BitmapTextWidgetPainter(gl.field_e, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
           this.addChild((byte) 10, var4);
-          this.field_bb = this.a(pd.field_f, (WidgetListener) (this), 93);
+          this.closeButton = this.createCloseButton(pd.field_f, (WidgetListener) (this), 93);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
           stackIn_12_0 = var3;
           stackIn_12_1 = new StringBuilder().append("ud.<init>(");
-          if (param0 == null) {
+          if (host == null) {
             stackIn_13_2 = "null";
           } else {
             stackIn_13_2 = "{...}";
           }
           stackIn_15_1 = ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',');
-          if (param1 == null) {
+          if (statusToken == null) {
             stackIn_16_2 = "null";
           } else {
             stackIn_16_2 = "{...}";
@@ -176,10 +176,10 @@ final class ud extends ResizableModalDialog implements WidgetActivationListener 
           if (obfuscationGuard != 11) {
             field_Z = (String) null;
           }
-          if (widget != this.field_bb) {
+          if (widget != this.closeButton) {
             return;
           }
-          this.i((byte) 60);
+          this.closeStatusNotice((byte) 60);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -204,7 +204,7 @@ final class ud extends ResizableModalDialog implements WidgetActivationListener 
           field_ab = null;
           return;
         }
-        ud.n(4);
+        FullscreenStatusDialog.n(4);
         field_X = null;
         field_Y = null;
         field_Z = null;
@@ -212,9 +212,9 @@ final class ud extends ResizableModalDialog implements WidgetActivationListener 
         field_ab = null;
     }
 
-    private final void i(byte param0) {
-        if (param0 != 60) {
-          ud.n(-98);
+    private final void closeStatusNotice(byte obfuscationGuard) {
+        if (obfuscationGuard != 60) {
+          FullscreenStatusDialog.n(-98);
           if (!this.open) {
             return;
           }

@@ -243,7 +243,7 @@ final class jj {
         boolean stackIn_10_0 = false;
         boolean stackIn_20_0 = false;
         if (param0 == -73) {
-          if (tn.activeContextMenu != null) {
+          if (FullscreenMembershipDialog.activeContextMenu != null) {
             return true;
           }
           if (ScrollContainer.l(0)) {
@@ -261,7 +261,7 @@ final class jj {
         }
         var2 = (String) null;
         jj.isFriend(47, (String) null);
-        if (tn.activeContextMenu != null) {
+        if (FullscreenMembershipDialog.activeContextMenu != null) {
           return true;
         }
         if (ScrollContainer.l(0)) {

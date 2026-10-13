@@ -47,14 +47,14 @@ final class TileMetadata implements TaggedFieldReader {
                 if (0 >= encodedLength) {
                   return;
                 }
-                this.ownerPlayer = (int)tn.readTaggedInteger(false, encodedLength, packet);
+                this.ownerPlayer = (int)FullscreenMembershipDialog.readTaggedInteger(false, encodedLength, packet);
                 return;
               }
               if (fieldName.equals("tag")) {
                 if (encodedLength <= 0) {
                   return;
                 }
-                this.tag = (int)tn.readTaggedInteger(false, encodedLength, packet);
+                this.tag = (int)FullscreenMembershipDialog.readTaggedInteger(false, encodedLength, packet);
                 return;
               }
               if (!fieldName.equals("god")) {
@@ -63,11 +63,11 @@ final class TileMetadata implements TaggedFieldReader {
               if (0 >= encodedLength) {
                 return;
               }
-              this.godId = (int)tn.readTaggedInteger(false, encodedLength, packet);
+              this.godId = (int)FullscreenMembershipDialog.readTaggedInteger(false, encodedLength, packet);
               return;
             }
             if (encodedLength > 0) {
-              this.modifierFlags = (int)tn.readTaggedInteger(false, encodedLength, packet);
+              this.modifierFlags = (int)FullscreenMembershipDialog.readTaggedInteger(false, encodedLength, packet);
               return;
             }
           }
@@ -122,7 +122,7 @@ final class TileMetadata implements TaggedFieldReader {
         if (obfuscationGuard != 0) {
           TileMetadata.getLoginMethods(-90);
         }
-        return new LoginMethod[]{CombatSandbox.emailLoginMethod, ps.usernameLoginMethod, MatchConditionEntry.defaultLoginMethod};
+        return new LoginMethod[]{CombatSandbox.emailLoginMethod, DisplayModeOptionPainter.usernameLoginMethod, MatchConditionEntry.defaultLoginMethod};
     }
 
     final static void a(int param0, boolean param1) {

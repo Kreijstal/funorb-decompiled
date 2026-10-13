@@ -226,7 +226,7 @@ final class qh {
         if (obfuscationGuard != 27) {
           return;
         }
-        if (!DamageEvent.g(81)) {
+        if (!DamageEvent.isGuestSession(81)) {
           EmailValidator.outgoingPacket.writeCipheredOpcode(32161, 81);
           bu.storedQuicksave = null;
         }

@@ -14,7 +14,7 @@ final class SpellCastAction extends PreparedAction {
         if (param0 != 8) {
           return;
         }
-        ps.a(param1, true);
+        DisplayModeOptionPainter.a(param1, true);
     }
 
     final void applyToBattlefield(int obfuscationGuard, Battlefield battlefield) {

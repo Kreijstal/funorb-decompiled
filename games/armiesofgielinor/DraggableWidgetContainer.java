@@ -230,8 +230,8 @@ final class DraggableWidgetContainer extends SingleChildWidgetContainer {
         if (null != DialogMessagePane.field_I) {
           op.a(-116, DialogMessagePane.field_I);
         }
-        if (null != tn.activeContextMenu) {
-          tn.activeContextMenu.draw((byte) -108, param0);
+        if (null != FullscreenMembershipDialog.activeContextMenu) {
+          FullscreenMembershipDialog.activeContextMenu.draw((byte) -108, param0);
         }
         SummonRequest.a(param0, (byte) -89);
         if (Spell.field_b != null) {

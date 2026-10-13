@@ -67,7 +67,7 @@ final class bk {
           if (DropdownSelector.field_P != null) {
             EmailValidator.outgoingPacket.a(DropdownSelector.field_P, 413740432);
           }
-          IconLabelControl.a(mu.field_c, cs.field_cb, (byte) 26, vd.field_b, EmailValidator.outgoingPacket);
+          IconLabelControl.a(mu.field_c, FullscreenConfirmationDialog.field_cb, (byte) 26, vd.field_b, EmailValidator.outgoingPacket);
           EmailValidator.outgoingPacket.f(param3 ^ param3, EmailValidator.outgoingPacket.position - var5_int);
           hb.$cfr$intArgs$a$e9dea5688aa5(29, -1);
           return;
@@ -354,13 +354,13 @@ final class bk {
         RuntimeException var7_ref = null;
         try {
           SpriteDropdownMenu.openClientContextMenu(param5, param4, (int[]) null, param4.displayName, -1, 111, -1, param4.accountName, param4.accountId);
-          tn.activeContextMenu.addPlayerAdmissionActions(23899, true);
-          tn.activeContextMenu.addSocialActions((int[]) null, 7, 0);
-          tn.activeContextMenu.addReportAction((byte) 44);
+          FullscreenMembershipDialog.activeContextMenu.addPlayerAdmissionActions(23899, true);
+          FullscreenMembershipDialog.activeContextMenu.addSocialActions((int[]) null, 7, 0);
+          FullscreenMembershipDialog.activeContextMenu.addReportAction((byte) 44);
           if (param0) {
             bk.a(true, (ClientUiComponent) null, (ClientUiComponent) null, (BitmapFont) null, (ClientUiComponent) null, 86, (ClientUiComponent) null, (ClientUiComponent) null, (ClientUiComponent) null, (VerticalScrollbar) null, (ClientUiComponent) null, (ClientUiComponent) null);
           }
-          var7 = tn.activeContextMenu;
+          var7 = FullscreenMembershipDialog.activeContextMenu;
           var8 = param2;
           var9 = param6;
           var10 = param3;

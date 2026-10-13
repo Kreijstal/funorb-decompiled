@@ -792,9 +792,9 @@ final class AiInfluenceMap {
                 var3.field_s = ov.field_e;
                 var3.field_k = la.field_d;
                 var3.field_m = Bzip2State.field_m;
-                ut.a(RevivalEvent.field_D, Bzip2State.field_m, ov.field_e, la.field_d, (byte) 127, var6_intLifetime1);
+                DisplaySettingsDialog.a(RevivalEvent.field_D, Bzip2State.field_m, ov.field_e, la.field_d, (byte) 127, var6_intLifetime1);
               } else {
-                ut.a(RevivalEvent.field_D, Bzip2State.field_m, ov.field_e, la.field_d, (byte) 125, var6_intLifetime1);
+                DisplaySettingsDialog.a(RevivalEvent.field_D, Bzip2State.field_m, ov.field_e, la.field_d, (byte) 125, var6_intLifetime1);
               }
             }
             ArchiveIndex.a(var5, 0);

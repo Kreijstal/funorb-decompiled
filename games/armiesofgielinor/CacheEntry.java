@@ -78,7 +78,7 @@ abstract class CacheEntry extends DualLinkedNode {
                 var11_ref_String = "";
               }
               EmailValidator.outgoingPacket.writeNullTerminatedString(var11_ref_String, param2 + 33883);
-              IconLabelControl.a(mu.field_c, cs.field_cb, (byte) 26, vd.field_b, EmailValidator.outgoingPacket);
+              IconLabelControl.a(mu.field_c, FullscreenConfirmationDialog.field_cb, (byte) 26, vd.field_b, EmailValidator.outgoingPacket);
               EmailValidator.outgoingPacket.f(0, -var10 + EmailValidator.outgoingPacket.position);
             } else {
               vd.field_b.position = 0;
@@ -101,7 +101,7 @@ abstract class CacheEntry extends DualLinkedNode {
               EmailValidator.outgoingPacket.writeByte(1, 16);
               EmailValidator.outgoingPacket.position = EmailValidator.outgoingPacket.position + 1;
               var9 = EmailValidator.outgoingPacket.position;
-              IconLabelControl.a(mu.field_c, cs.field_cb, (byte) 26, vd.field_b, EmailValidator.outgoingPacket);
+              IconLabelControl.a(mu.field_c, FullscreenConfirmationDialog.field_cb, (byte) 26, vd.field_b, EmailValidator.outgoingPacket);
               EmailValidator.outgoingPacket.writeByteLengthPrefix(EmailValidator.outgoingPacket.position - var9, 5930);
             }
             hb.$cfr$intArgs$a$e9dea5688aa5(54, -1);

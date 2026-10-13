@@ -271,7 +271,7 @@ final class de {
                         }
                       } else {
                         if (53 != var7.unitType) {
-                          stackIn_117_0 = cs.field_X;
+                          stackIn_117_0 = FullscreenConfirmationDialog.field_X;
                           return stackIn_117_0;
                         }
                         if (var7.packedFlag32) {

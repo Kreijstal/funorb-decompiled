@@ -58,7 +58,7 @@ final class CampaignMenuButton {
     }
 
     final static void b(int param0) {
-        if (!QuickChatCategoryRepository.field_b) {
+        if (!QuickChatCategoryRepository.guestSession) {
           throw new IllegalStateException();
         }
         it.field_b = true;

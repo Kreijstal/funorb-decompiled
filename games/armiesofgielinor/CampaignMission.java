@@ -50,7 +50,7 @@ final class CampaignMission extends IntrusiveNode implements TaggedFieldReader {
               if (encodedLength <= 0) {
                 return;
               }
-              this.flags = (int)tn.readTaggedInteger(false, encodedLength, packet);
+              this.flags = (int)FullscreenMembershipDialog.readTaggedInteger(false, encodedLength, packet);
             } else {
               if (fieldName.equals("name")) {
                 if (encodedLength <= 0) {
@@ -62,7 +62,7 @@ final class CampaignMission extends IntrusiveNode implements TaggedFieldReader {
               if (!fieldName.equals("key")) {
                 if (fieldName.equals("pos")) {
                   if (encodedLength > 0) {
-                    this.playerSlot = (int)tn.readTaggedInteger(false, encodedLength, packet);
+                    this.playerSlot = (int)FullscreenMembershipDialog.readTaggedInteger(false, encodedLength, packet);
                     return;
                   }
                 } else {
@@ -71,7 +71,7 @@ final class CampaignMission extends IntrusiveNode implements TaggedFieldReader {
                       if (0 >= encodedLength) {
                         return;
                       }
-                      tn.readTaggedInteger(false, encodedLength, packet);
+                      FullscreenMembershipDialog.readTaggedInteger(false, encodedLength, packet);
                       return;
                     }
                     if (!fieldName.equals("mid")) {
@@ -82,12 +82,12 @@ final class CampaignMission extends IntrusiveNode implements TaggedFieldReader {
                         var5_int = ScrollWidgetContainer.readCompactInt(packet, true);
                         this.neighborMissionIds = new int[var5_int];
                         for (var6 = 0; var6 < var5_int; var6++) {
-                          this.neighborMissionIds[var6] = (int)tn.readTaggedInteger(false, 2, packet);
+                          this.neighborMissionIds[var6] = (int)FullscreenMembershipDialog.readTaggedInteger(false, 2, packet);
                         }
                       } else {
                         if (fieldName.equals("mpsz")) {
                           if (0 < encodedLength) {
-                            this.mapSizeSetting = (int)tn.readTaggedInteger(false, encodedLength, packet);
+                            this.mapSizeSetting = (int)FullscreenMembershipDialog.readTaggedInteger(false, encodedLength, packet);
                             return;
                           }
                         } else {
@@ -99,7 +99,7 @@ final class CampaignMission extends IntrusiveNode implements TaggedFieldReader {
                               var5_int = ScrollWidgetContainer.readCompactInt(packet, true);
                               this.participantIds = new int[var5_int];
                               for (var6 = 0; var5_int > var6; var6++) {
-                                this.participantIds[var6] = (int)tn.readTaggedInteger(false, 2, packet);
+                                this.participantIds[var6] = (int)FullscreenMembershipDialog.readTaggedInteger(false, 2, packet);
                               }
                             } else {
                               if (!fieldName.equals("rwd")) {
@@ -107,14 +107,14 @@ final class CampaignMission extends IntrusiveNode implements TaggedFieldReader {
                                   if (0 >= encodedLength) {
                                     return;
                                   }
-                                  this.manaBonusPercent = (int)tn.readTaggedInteger(false, encodedLength, packet);
+                                  this.manaBonusPercent = (int)FullscreenMembershipDialog.readTaggedInteger(false, encodedLength, packet);
                                   return;
                                 }
                                 if (fieldName.equals("tr")) {
                                   if (encodedLength <= 0) {
                                     return;
                                   }
-                                  this.rewardSpellId = (int)tn.readTaggedInteger(false, encodedLength, packet);
+                                  this.rewardSpellId = (int)FullscreenMembershipDialog.readTaggedInteger(false, encodedLength, packet);
                                   return;
                                 }
                                 if (!fieldName.equals("df")) {
@@ -129,12 +129,12 @@ final class CampaignMission extends IntrusiveNode implements TaggedFieldReader {
                                     if (0 >= encodedLength) {
                                       return;
                                     }
-                                    this.scoreTurnTarget = (int)tn.readTaggedInteger(false, encodedLength, packet);
+                                    this.scoreTurnTarget = (int)FullscreenMembershipDialog.readTaggedInteger(false, encodedLength, packet);
                                     return;
                                   }
                                   if (fieldName.equals("gd")) {
                                     if (encodedLength > 0) {
-                                      this.scoreDamageTarget = (int)tn.readTaggedInteger(false, encodedLength, packet);
+                                      this.scoreDamageTarget = (int)FullscreenMembershipDialog.readTaggedInteger(false, encodedLength, packet);
                                       return;
                                     }
                                   } else {
@@ -142,12 +142,12 @@ final class CampaignMission extends IntrusiveNode implements TaggedFieldReader {
                                       if (0 >= encodedLength) {
                                         return;
                                       }
-                                      tn.readTaggedInteger(false, encodedLength, packet);
+                                      FullscreenMembershipDialog.readTaggedInteger(false, encodedLength, packet);
                                       return;
                                     }
                                     if (fieldName.equals("song")) {
                                       if (encodedLength > 0) {
-                                        this.musicId = (int)tn.readTaggedInteger(false, encodedLength, packet);
+                                        this.musicId = (int)FullscreenMembershipDialog.readTaggedInteger(false, encodedLength, packet);
                                         return;
                                       }
                                     } else {
@@ -158,14 +158,14 @@ final class CampaignMission extends IntrusiveNode implements TaggedFieldReader {
                                         var5_int = ScrollWidgetContainer.readCompactInt(packet, true);
                                         this.teamAssignments = new int[var5_int];
                                         for (var6 = 0; var5_int > var6; var6++) {
-                                          this.teamAssignments[var6] = (int)tn.readTaggedInteger(false, 2, packet);
+                                          this.teamAssignments[var6] = (int)FullscreenMembershipDialog.readTaggedInteger(false, 2, packet);
                                         }
                                       }
                                     }
                                   }
                                 } else {
                                   if (0 < encodedLength) {
-                                    this.difficulty = (int)tn.readTaggedInteger(false, encodedLength, packet);
+                                    this.difficulty = (int)FullscreenMembershipDialog.readTaggedInteger(false, encodedLength, packet);
                                     return;
                                   }
                                 }
@@ -174,14 +174,14 @@ final class CampaignMission extends IntrusiveNode implements TaggedFieldReader {
                                   var5_int = ScrollWidgetContainer.readCompactInt(packet, true);
                                   this.rewardUnitTypes = new int[var5_int];
                                   for (var6 = 0; var6 < var5_int; var6++) {
-                                    this.rewardUnitTypes[var6] = (int)tn.readTaggedInteger(false, 2, packet);
+                                    this.rewardUnitTypes[var6] = (int)FullscreenMembershipDialog.readTaggedInteger(false, 2, packet);
                                   }
                                 }
                               }
                             }
                           } else {
                             if (encodedLength > 0) {
-                              this.mapTheme = (int)tn.readTaggedInteger(false, encodedLength, packet);
+                              this.mapTheme = (int)FullscreenMembershipDialog.readTaggedInteger(false, encodedLength, packet);
                               return;
                             }
                           }
@@ -189,13 +189,13 @@ final class CampaignMission extends IntrusiveNode implements TaggedFieldReader {
                       }
                     } else {
                       if (0 < encodedLength) {
-                        this.mapResourceId = (int)tn.readTaggedInteger(false, encodedLength, packet);
+                        this.mapResourceId = (int)FullscreenMembershipDialog.readTaggedInteger(false, encodedLength, packet);
                         return;
                       }
                     }
                   } else {
                     if (encodedLength > 0) {
-                      this.field_A = (int)tn.readTaggedInteger(false, encodedLength, packet);
+                      this.field_A = (int)FullscreenMembershipDialog.readTaggedInteger(false, encodedLength, packet);
                       return;
                     }
                   }
@@ -209,7 +209,7 @@ final class CampaignMission extends IntrusiveNode implements TaggedFieldReader {
             }
           } else {
             if (encodedLength > 0) {
-              this.missionId = (int)tn.readTaggedInteger(false, encodedLength, packet);
+              this.missionId = (int)FullscreenMembershipDialog.readTaggedInteger(false, encodedLength, packet);
               return;
             }
           }

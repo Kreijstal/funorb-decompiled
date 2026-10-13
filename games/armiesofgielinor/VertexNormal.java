@@ -361,7 +361,7 @@ final class VertexNormal {
                   if (var7 > var12.ratedGamesPlayed) {
                     var25_int = -var12.ratedGamesPlayed + var7;
                     if (var25_int == 1) {
-                      var24Lifetime2 = tn.field_Y;
+                      var24Lifetime2 = FullscreenMembershipDialog.field_Y;
                     }
                     var24Lifetime2 = EmailCheckResult.a(4800, GlobalSpell.field_j, new String[]{null, Integer.toString(var25_int)});
                   } else {

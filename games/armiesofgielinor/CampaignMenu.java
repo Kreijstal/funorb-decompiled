@@ -1864,7 +1864,7 @@ final class CampaignMenu {
             }
             if (decompiledFrameCompleted0) {
               var3.statusText = EmailCheckResult.a(4800, ConsoleExpression.field_l, new String[]{Integer.toString(var4_int), Integer.toString(var5)});
-              var6 = ps.field_w[var3.entryId];
+              var6 = DisplayModeOptionPainter.field_w[var3.entryId];
               var7 = new RgbSprite(var6.canvasWidth, var6.canvasHeight);
               CombatSandbox.a(var7, 3);
               var6.drawPixels(0, 0);

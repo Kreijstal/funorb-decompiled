@@ -173,7 +173,7 @@ public final class ArmiesOfGielinor extends NetworkGameShell {
             }
           }
           boolean decompiledFrameCompleted0 = true;
-          if (!DamageEvent.g(100)) {
+          if (!DamageEvent.isGuestSession(100)) {
             while (true) {
               var2 = (iw) (UnitInfoPopup.field_u.popFirst(0));
               if (var2 == null) {
@@ -193,7 +193,7 @@ public final class ArmiesOfGielinor extends NetworkGameShell {
               stackIn_337_1 = 9;
               if (var11 == 0) {
                 if (stackIn_337_0 == stackIn_337_1) {
-                  ut.i((byte) 123);
+                  DisplaySettingsDialog.i((byte) 123);
                   SpellCastAction.field_t = false;
                   CipherPacketBuffer.a(false, 11, 1, jt.field_a);
                   PaletteRegionMap.field_i = ByteStorage.incomingPacket.readNullTerminatedString(1);
@@ -212,7 +212,7 @@ public final class ArmiesOfGielinor extends NetworkGameShell {
                 }
                 if (MusicCrossfadeStream.deliveredOpcode == 15) {
                   if (FaceNormal.field_d) {
-                    ut.i((byte) 124);
+                    DisplaySettingsDialog.i((byte) 124);
                     PacketBuffer.i((byte) 109);
                     NanoGameClock.b(22963);
                     SoftwareRaster.b();
@@ -300,7 +300,7 @@ public final class ArmiesOfGielinor extends NetworkGameShell {
                 }
                 if (MusicCrossfadeStream.deliveredOpcode == 64 ||
                   MusicCrossfadeStream.deliveredOpcode == 65) {
-                  ut.i((byte) 123);
+                  DisplaySettingsDialog.i((byte) 123);
                   var2_intLifetime1Lifetime1 = ByteStorage.incomingPacket.readUnsignedByte(0);
                   var3 = ByteStorage.incomingPacket.readUnsignedByte(0);
                   stackIn_176_0 = ((1 & var3) == 0) ? 0 : 1;
@@ -584,7 +584,7 @@ public final class ArmiesOfGielinor extends NetworkGameShell {
                     PaletteRegionMap.field_i = ContextualRuntimeException.field_d;
                     CipherPacketBuffer.a(false, 11, 1, 0);
                   }
-                  ut.i((byte) 126);
+                  DisplaySettingsDialog.i((byte) 126);
                   ConsoleTextNode.field_p[jt.field_a].restoreStageSelection(100, false, 0);
                   ModalDialogHost.field_H = false;
                   ViewportManager.field_c = false;
@@ -793,7 +793,7 @@ public final class ArmiesOfGielinor extends NetworkGameShell {
               }
               if ((decompiledFrameRemainder3) &&
                 (50 == GameClock.field_j)) {
-                ut.i((byte) 127);
+                DisplaySettingsDialog.i((byte) 127);
               }
             }
             boolean decompiledFrameRemainder1 = true;
@@ -915,7 +915,7 @@ public final class ArmiesOfGielinor extends NetworkGameShell {
                 }
               }
               if (decompiledFrameRemainder4) {
-                if (!DamageEvent.g(119)) {
+                if (!DamageEvent.isGuestSession(119)) {
                   if (PointerInputHandler.field_f != null) {
                     UnitSpell.a(3, 1, PointerInputHandler.field_f);
                   }
@@ -929,7 +929,7 @@ public final class ArmiesOfGielinor extends NetworkGameShell {
                     CipherPacketBuffer.a(false, -4, 1, jt.field_a);
                   }
                   if (MusicCrossfadeStream.a(jt.field_a, true)) {
-                    ut.i((byte) 125);
+                    DisplaySettingsDialog.i((byte) 125);
                   }
                 }
                 pg.field_f = QuickChatMenu.field_Wb;
@@ -1040,7 +1040,7 @@ public final class ArmiesOfGielinor extends NetworkGameShell {
             mu.field_a.a(obfuscationGuard ^ 8, GameClock.field_j);
             GameClock.field_j = GameClock.field_j + 1;
             if (50 == GameClock.field_j) {
-              ut.i((byte) 126);
+              DisplaySettingsDialog.i((byte) 126);
             }
           }
           if (!MusicPatch.field_w ||
@@ -1361,7 +1361,7 @@ public final class ArmiesOfGielinor extends NetworkGameShell {
           lq.a(-31320);
           TrianglePulse.b(16);
           TickCounter.a(1);
-          ud.n(12213);
+          FullscreenStatusDialog.n(12213);
           se.a(0);
           ByteStorage.b(9892);
           Bzip2Decoder.releaseSharedState();
@@ -1376,7 +1376,7 @@ public final class ArmiesOfGielinor extends NetworkGameShell {
           Widget.c((byte) -124);
           SingleChildWidgetContainer.i(-98);
           TextLayout.a(obfuscationGuard - 51);
-          ut.p(0);
+          DisplaySettingsDialog.p(0);
           FullscreenDisplayMode.a(-121);
           vq.a((byte) 107);
           ResizableModalDialog.h((byte) 58);
@@ -1500,8 +1500,8 @@ public final class ArmiesOfGielinor extends NetworkGameShell {
           BitmapTextLayout.c(true);
           DraggableWidgetContainer.j(0);
           DropTargetWidgetContainer.k(obfuscationGuard ^ -36);
-          cs.b(true);
-          tn.n(obfuscationGuard + 72);
+          FullscreenConfirmationDialog.b(true);
+          FullscreenMembershipDialog.n(obfuscationGuard + 72);
           ClippedWidgetContainer.j(obfuscationGuard + 150);
           ScrollControlWidget.l(-24061);
           IterableNodeHashTable.a(false);
@@ -1532,7 +1532,7 @@ public final class ArmiesOfGielinor extends NetworkGameShell {
           MaskedTextEntryPainter.b((byte) 117);
           oi.b(true);
           AlphaWidgetContainer.c(false);
-          ps.c(false);
+          DisplayModeOptionPainter.c(false);
           SocialListEntry.k(obfuscationGuard - 4103);
           we.a((byte) 120);
           b.a(true);
@@ -2221,12 +2221,12 @@ public final class ArmiesOfGielinor extends NetworkGameShell {
           gt.field_c = ac.a(iw.field_l, "godframes", (byte) -4, "basic");
           GuestPlayConfirmationForm.field_F = ac.a(iw.field_l, "godglows", (byte) -4, "basic");
           BufferedFile.field_k = ac.a(iw.field_l, "godframeglows", (byte) -4, "basic");
-          tn.a((byte) 80, UnitModelPreview.field_d);
+          FullscreenMembershipDialog.a((byte) 80, UnitModelPreview.field_d);
           hf.a(128, GuestPlayConfirmationForm.field_F, 0);
           TeamRoster.field_e = new RgbSprite(71, 71);
           EditableTextWidget.a(8678, 256, 15, TeamRoster.field_e);
-          tn.a((byte) 105, GuestPlayConfirmationForm.field_F);
-          tn.a((byte) 124, BufferedFile.field_k);
+          FullscreenMembershipDialog.a((byte) 105, GuestPlayConfirmationForm.field_F);
+          FullscreenMembershipDialog.a((byte) 124, BufferedFile.field_k);
           MaskedTextEntryPainter.field_y = DiskCacheRequest.loadRgbSpriteByName("logo", "basic", iw.field_l, false);
           km.field_h = ac.a(iw.field_l, "summonrings", (byte) -4, "basic");
           jv.field_b = fk.loadRgbSpritesByName("chatbubbles", (byte) -128, iw.field_l, "basic");
@@ -2286,9 +2286,9 @@ public final class ArmiesOfGielinor extends NetworkGameShell {
           pi.field_T = GameplayController.a("isocrosshair", (byte) 51, "basic", iw.field_l);
           SpriteDropdownMenu.a(GameplayController.a("glowray", (byte) 51, "basic", iw.field_l), 0, GameplayController.a("glowspark", (byte) 51, "basic", iw.field_l));
           MoveAttackRequest.field_C = fk.loadRgbSpritesByName("medals", (byte) -127, iw.field_l, "campaign");
-          ps.field_w[0] = DiskCacheRequest.loadRgbSpriteByName("campaign_1_glow", "campaign", iw.field_l, false);
-          ps.field_w[1] = DiskCacheRequest.loadRgbSpriteByName("campaign_2_glow", "campaign", iw.field_l, false);
-          ps.field_w[2] = DiskCacheRequest.loadRgbSpriteByName("campaign_3_glow", "campaign", iw.field_l, false);
+          DisplayModeOptionPainter.field_w[0] = DiskCacheRequest.loadRgbSpriteByName("campaign_1_glow", "campaign", iw.field_l, false);
+          DisplayModeOptionPainter.field_w[1] = DiskCacheRequest.loadRgbSpriteByName("campaign_2_glow", "campaign", iw.field_l, false);
+          DisplayModeOptionPainter.field_w[2] = DiskCacheRequest.loadRgbSpriteByName("campaign_3_glow", "campaign", iw.field_l, false);
           DelayedPacket.field_k = MapLayout.loadIndexedSpritesByName("achievements_large", -28106, "basic", iw.field_l);
           MoveAttackRequest.field_A = GameplayController.a("unachieved", (byte) 51, "basic", PrintVictoryConditionsConsoleCommand.field_K);
           DeathEvent.field_A = GameplayController.a("locked", (byte) 51, "basic", PrintVictoryConditionsConsoleCommand.field_K);
@@ -2314,7 +2314,7 @@ public final class ArmiesOfGielinor extends NetworkGameShell {
             dh.field_k = GameplayController.a("lobby_game_logo", (byte) 51, "basic", iw.field_l);
             QuickChatPhrase.a(var16, bs.field_b, (byte) 53, MoveAttackRequest.field_B, 4, PrintVictoryConditionsConsoleCommand.field_K, ResourceRequest.field_A, CipherPacketBuffer.field_A, LoginMethod.field_a, new int[]{10, 10, 10, 10, 10, 10, 10, 10, 10, 10}, true, LoginMethod.field_a.length, DropTargetWidgetContainer.field_L, km.field_c, CorpseConditionMarker.field_w, ki.field_d, var16);
             la.initializeChatHistory((byte) 30, 200);
-            ps.a(124, ResourceRequest.field_A, PrintVictoryConditionsConsoleCommand.field_K);
+            DisplayModeOptionPainter.a(124, ResourceRequest.field_A, PrintVictoryConditionsConsoleCommand.field_K);
           }
           UnitAnimationPreview.field_j = null;
           ResourceRequest.field_A = null;
