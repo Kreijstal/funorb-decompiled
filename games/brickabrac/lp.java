@@ -13,7 +13,7 @@ class lp extends fe implements en {
     static qh field_xb;
     private TextFont field_sb;
     static GameScreen currentScreen;
-    static tg field_ub;
+    static PlatformServices field_ub;
 
     final boolean a(int param0, byte param1, oc param2, char param3) {
         RuntimeException var5 = null;

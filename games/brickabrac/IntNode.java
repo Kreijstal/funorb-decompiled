@@ -25,7 +25,7 @@ final class IntNode extends IntrusiveNode {
     public IntNode() {
     }
 
-    final static void a(int param0, tg param1, Object param2) {
+    final static void a(int param0, PlatformServices param1, Object param2) {
         int var3_int = 0;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
@@ -38,11 +38,11 @@ final class IntNode extends IntrusiveNode {
         int var4 = 0;
         var4 = BrickABrac.field_J ? 1 : 0;
         try {
-          if (param1.field_p == null) {
+          if (param1.eventQueue == null) {
             return;
           }
           for (var3_int = 0; var3_int < 50; var3_int++) {
-            if (null != param1.field_p.peekEvent()) {
+            if (null != param1.eventQueue.peekEvent()) {
               wj.a(param0 + 4192, 1L);
               continue;
             }
@@ -53,7 +53,7 @@ final class IntNode extends IntrusiveNode {
           }
           try {
             if (param2 != null) {
-              param1.field_p.postEvent((java.awt.AWTEvent) ((Object) new java.awt.event.ActionEvent(param2, 1001, "dummy")));
+              param1.eventQueue.postEvent((java.awt.AWTEvent) ((Object) new java.awt.event.ActionEvent(param2, 1001, "dummy")));
             }
           } catch (java.lang.Exception decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
@@ -179,7 +179,7 @@ final class IntNode extends IntrusiveNode {
           }
           if (param1 != -119) {
             var7 = (Object) null;
-            IntNode.a(-14, (tg) null, (Object) null);
+            IntNode.a(-14, (PlatformServices) null, (Object) null);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

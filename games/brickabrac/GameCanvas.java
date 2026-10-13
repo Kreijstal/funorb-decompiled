@@ -94,7 +94,7 @@ final class GameCanvas extends java.awt.Canvas implements java.awt.event.FocusLi
         field_d = null;
     }
 
-    final void a(tg param0, int param1) {
+    final void a(PlatformServices param0, int param1) {
         try {
           sq.a(param0, -20954, this.window);
           int var3_int = -13 / ((param1 - 82) / 32);
@@ -136,7 +136,7 @@ final class GameCanvas extends java.awt.Canvas implements java.awt.event.FocusLi
             hc.field_f = hc.field_f + 1;
           }
           if (kc.field_q.field_f != ej.field_O) {
-            rn.field_h = rn.field_h + (-ej.field_O + kc.field_q.field_f);
+            BoundedFile.field_h = BoundedFile.field_h + (-ej.field_O + kc.field_q.field_f);
             ej.field_O = kc.field_q.field_f;
           }
           if (param2 <= ~hc.field_f) {

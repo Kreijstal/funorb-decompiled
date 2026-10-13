@@ -336,18 +336,18 @@ final class HighscoresScreen extends MenuScreen {
             var3 = 0;
             for (var4 = 0; var17.field_s > var4; var4++) {
               if (null != var13.field_j[var4]) {
-                if (var13.field_j[var4].field_f == 2) {
+                if (var13.field_j[var4].status == 2) {
                   var13.field_k[var4] = -5;
                 }
-                if (0 == var13.field_j[var4].field_f) {
+                if (0 == var13.field_j[var4].status) {
                   var3 = 1;
                 }
               }
               if (var13.field_l[var4] != null) {
-                if (2 == var13.field_l[var4].field_f) {
+                if (2 == var13.field_l[var4].status) {
                   var13.field_k[var4] = -6;
                 }
-                if (0 == var13.field_l[var4].field_f) {
+                if (0 == var13.field_l[var4].status) {
                   var3 = 1;
                 }
               }
@@ -362,19 +362,19 @@ final class HighscoresScreen extends MenuScreen {
                 try {
                   var6_int = var17.field_t[var5];
                   if (var6_int == 0) {
-                    var15 = (java.lang.reflect.Field) (var17.field_j[var5].field_e);
+                    var15 = (java.lang.reflect.Field) (var17.field_j[var5].result);
                     var8 = var15.getInt((Object) null);
                     param0.writeByte(-7, 0);
                     param0.writeInt(var8, (byte) -79);
                   } else {
                     if (var6_int == 1) {
-                      var16_ref = (java.lang.reflect.Field) (var17.field_j[var5].field_e);
+                      var16_ref = (java.lang.reflect.Field) (var17.field_j[var5].result);
                       var19 = var16_ref;
                       var19.setInt((Object) null, var17.field_q[var5]);
                       param0.writeByte(-15, 0);
                     } else {
                       if (var6_int == 2) {
-                        var26 = (java.lang.reflect.Field) (var17.field_j[var5].field_e);
+                        var26 = (java.lang.reflect.Field) (var17.field_j[var5].result);
                         var8 = var26.getModifiers();
                         param0.writeByte(param1 - 4, 0);
                         param0.writeInt(var8, (byte) -79);
@@ -382,7 +382,7 @@ final class HighscoresScreen extends MenuScreen {
                     }
                   }
                   if (var6_int == 3) {
-                    var28 = (java.lang.reflect.Method) (var17.field_l[var5].field_e);
+                    var28 = (java.lang.reflect.Method) (var17.field_l[var5].result);
                     var25 = var17.field_m[var5];
                     var9 = new Object[var25.length];
                     for (var10_int = 0; var25.length > var10_int; var10_int++) {
@@ -403,7 +403,7 @@ final class HighscoresScreen extends MenuScreen {
                     }
                   } else {
                     if (var6_int == 4) {
-                      var27 = (java.lang.reflect.Method) (var17.field_l[var5].field_e);
+                      var27 = (java.lang.reflect.Method) (var17.field_l[var5].result);
                       var8Lifetime1 = var27.getModifiers();
                       param0.writeByte(-123, 0);
                       param0.writeInt(var8Lifetime1, (byte) -79);
@@ -678,7 +678,7 @@ final class HighscoresScreen extends MenuScreen {
         if (rf.field_g != null &&
           rf.field_g.field_o) {
           if (null == rf.field_g.field_i) {
-            var4_ref = rn.field_d;
+            var4_ref = BoundedFile.field_d;
           } else {
             var4_ref = ArchiveNetworkRequest.field_J;
             var5 = rf.field_g.field_i[this.scoreFilterIndex];

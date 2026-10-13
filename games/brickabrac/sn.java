@@ -134,7 +134,7 @@ final class sn extends ki {
     final static void b(byte param0, int param1) {
         int var2 = 0;
         int var3 = 0;
-        rn.field_h = param1;
+        BoundedFile.field_h = param1;
         if (hj.field_Yb != hc.field_f) {
           var2 = hj.field_Yb * hj.field_Yb;
           var3 = var2 - hc.field_f * hc.field_f;

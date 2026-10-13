@@ -210,7 +210,7 @@ class DualLinkNode extends IntrusiveNode {
           !(ga.field_l.length >= param1)) {
           ga.field_l = new boolean[2 * param1];
         }
-        rn.field_l = -2147483648;
+        BoundedFile.field_l = -2147483648;
         if (param0 < 0) {
           return;
         }

@@ -134,7 +134,7 @@ final class gb {
         this.field_o = ka.field_E;
         this.field_f = field_h;
         if (param0) {
-          this.field_g = rn.field_m;
+          this.field_g = BoundedFile.field_m;
         } else {
           this.field_g = null;
         }

@@ -286,24 +286,24 @@ final class w {
             var2_intLifetime1++;
           }
           this.a(true);
-          if (jg.field_d != null &&
-            jg.field_d.ensureIndex((byte) -127) &&
-            jg.field_d.ensureGroupAvailableByName("members_expansion_screen", -28138) &&
-            jg.field_d.ensureGroupAvailableByName("arialish12", -28138) &&
-            jg.field_d.ensureGroupAvailableByName("pump32", -28138) &&
+          if (BufferedFile.field_d != null &&
+            BufferedFile.field_d.ensureIndex((byte) -127) &&
+            BufferedFile.field_d.ensureGroupAvailableByName("members_expansion_screen", -28138) &&
+            BufferedFile.field_d.ensureGroupAvailableByName("arialish12", -28138) &&
+            BufferedFile.field_d.ensureGroupAvailableByName("pump32", -28138) &&
             fe.field_jb != null &&
             fe.field_jb.ensureIndex((byte) -127) &&
             fe.field_jb.ensureGroupAvailableByName("arialish12", -28138) &&
             fe.field_jb.ensureGroupAvailableByName("pump32", -28138)) {
-            AchievementsScreen.field_J = uo.loadIndexedSpriteByName((byte) 29, jg.field_d, "frame", "members_expansion_screen");
-            ll.field_c = pl.loadRgbSpriteByName("members_expansion_screen", "arrow", (byte) 111, jg.field_d);
-            ch.field_c = TooltipSprite.a((byte) -37, "arialish12", jg.field_d, fe.field_jb, "");
-            co.field_j = IntrusiveHashTable.a((byte) -107, "pump32", "", jg.field_d, fe.field_jb);
-            MainMenuScreen.field_u = um.a("members_expansion_screen", "benefit_orbs", 1593955777, jg.field_d);
-            LevelPack.field_e = um.a("members_expansion_screen", "button_text", 1593955777, jg.field_d);
-            sf.field_V = bd.loadRgbSpritesByName("members_expansion_screen", "button_highlights", jg.field_d, (byte) -8);
+            AchievementsScreen.field_J = uo.loadIndexedSpriteByName((byte) 29, BufferedFile.field_d, "frame", "members_expansion_screen");
+            ll.field_c = pl.loadRgbSpriteByName("members_expansion_screen", "arrow", (byte) 111, BufferedFile.field_d);
+            ch.field_c = TooltipSprite.a((byte) -37, "arialish12", BufferedFile.field_d, fe.field_jb, "");
+            co.field_j = IntrusiveHashTable.a((byte) -107, "pump32", "", BufferedFile.field_d, fe.field_jb);
+            MainMenuScreen.field_u = um.a("members_expansion_screen", "benefit_orbs", 1593955777, BufferedFile.field_d);
+            LevelPack.field_e = um.a("members_expansion_screen", "button_text", 1593955777, BufferedFile.field_d);
+            sf.field_V = bd.loadRgbSpritesByName("members_expansion_screen", "button_highlights", BufferedFile.field_d, (byte) -8);
             fe.field_jb = null;
-            jg.field_d = null;
+            BufferedFile.field_d = null;
           }
           this.a(475);
           if (null == AchievementsScreen.field_J) {

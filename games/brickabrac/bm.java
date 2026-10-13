@@ -173,7 +173,7 @@ final class bm {
           var2.beginBitRead(param0 - 47);
           um.field_o = rk.a(var2, 24);
           gg.field_i = new fr[var3];
-          rn.field_e = new int[var3][];
+          BoundedFile.field_e = new int[var3][];
           if (param0 != -70) {
             return;
           }
@@ -192,7 +192,7 @@ final class bm {
             var5.a(6, 127, 1, 6, 6);
             var5.c(param0 + 93);
             var6 = new int[]{var5.field_N + var5.field_f >> 1, var5.field_d + var5.field_y >> 1, var5.field_x + var5.field_q >> 1};
-            rn.field_e[var4] = var6;
+            BoundedFile.field_e[var4] = var6;
             var5.a(-var6[2], param0 ^ -70, -var6[0], -var6[1]);
             var4++;
             if (var7 != 0) {

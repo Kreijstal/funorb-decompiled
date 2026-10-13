@@ -74,7 +74,7 @@ final class rk extends mh {
 
     final static void a(String param0, Throwable param1, int param2) {
         try {
-          tg stackIn_16_0;
+          PlatformServices stackIn_16_0;
           int stackIn_16_1;
           java.net.URL stackIn_16_2;
           java.net.URL stackIn_16_3;
@@ -86,7 +86,7 @@ final class rk extends mh {
           Throwable decompiledCaughtException = null;
           String var3 = null;
           Exception var3_ref = null;
-          ql var4 = null;
+          PlatformTask var4 = null;
           DataInputStream var5 = null;
           int var6 = 0;
           String var7 = null;
@@ -131,12 +131,12 @@ final class rk extends mh {
               stackIn_17_3 = null;
               stackIn_17_6 = ua.field_a;
             }
-            var4 = ((tg) (Object) stackIn_16_0).a((byte) stackIn_16_1, new java.net.URL(stackIn_16_4, ((StringBuilder) (Object) stackIn_16_5).append(stackIn_17_6).append("&v1=").append(tg.field_g).append("&v2=").append(tg.field_o).append("&e=").append(var10).toString()));
-            while (var4.field_f == 0) {
+            var4 = ((PlatformServices) (Object) stackIn_16_0).a((byte) stackIn_16_1, new java.net.URL(stackIn_16_4, ((StringBuilder) (Object) stackIn_16_5).append(stackIn_17_6).append("&v1=").append(PlatformServices.javaVendor).append("&v2=").append(PlatformServices.javaVersion).append("&e=").append(var10).toString()));
+            while (var4.status == 0) {
               wj.a(-125, 1L);
             }
-            if (var4.field_f == 1) {
-              var5 = (DataInputStream) (var4.field_e);
+            if (var4.status == 1) {
+              var5 = (DataInputStream) (var4.result);
               var5.read();
               var5.close();
             }

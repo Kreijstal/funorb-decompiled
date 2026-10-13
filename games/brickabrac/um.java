@@ -24,7 +24,7 @@ class um implements ub, qe {
     static RgbSprite[] field_l;
     private boolean field_n;
 
-    final static void a(int param0, PacketBuffer param1, byte param2, tg param3) {
+    final static void a(int param0, PacketBuffer param1, byte param2, PlatformServices param3) {
         try {
           int var6 = 0;
           int var12_int = 0;
@@ -70,9 +70,9 @@ class um implements ub, qe {
             var19.field_k = new int[var19.field_s];
             var19.field_t = new int[var19.field_s];
             var5 = 24 / ((-6 - param2) / 53);
-            var19.field_l = new ql[var19.field_s];
+            var19.field_l = new PlatformTask[var19.field_s];
             var19.field_m = new byte[var19.field_s][][];
-            var19.field_j = new ql[var19.field_s];
+            var19.field_j = new PlatformTask[var19.field_s];
             for (var6 = 0; var19.field_s > var6; var6++) {
               try {
                 var7_int = param1.readUnsignedByte(255);
@@ -107,7 +107,7 @@ class um implements ub, qe {
                       var13[var18] = pj.a(var11[var18], true);
                       var18++;
                     }
-                    var19.field_l[var6] = param3.a(23311, pj.a(var21, true), var13, var22);
+                    var19.field_l[var6] = param3.lookupMethod(23311, pj.a(var21, true), var13, var22);
                     var19.field_m[var6] = var23;
                   }
                 } else {
@@ -121,7 +121,7 @@ class um implements ub, qe {
                   }
                   var19.field_t[var6] = var7_int;
                   var19.field_q[var6] = var10;
-                  var19.field_j[var6] = param3.a(124, pj.a(var16, true), var17);
+                  var19.field_j[var6] = param3.lookupField(124, pj.a(var16, true), var17);
                 }
               } catch (java.lang.ClassNotFoundException decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;

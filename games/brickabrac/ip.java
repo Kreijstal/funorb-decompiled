@@ -777,7 +777,7 @@ final class ip extends ki {
                 stackIn_401_0.field_eb = stackIn_402_1;
                 var9++;
               }
-              stackIn_404_0Lifetime1 = var6Lifetime2 + (255 & jg.field_c[var7]);
+              stackIn_404_0Lifetime1 = var6Lifetime2 + (255 & BufferedFile.field_c[var7]);
               var6Lifetime2 = stackIn_404_0Lifetime1;
               var7++;
               continue scanLoop1;

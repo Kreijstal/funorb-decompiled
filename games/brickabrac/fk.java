@@ -512,7 +512,7 @@ final class fk {
           java.net.MalformedURLException var5 = null;
           try {
             var4_int = 60 / ((1 - param0) / 62);
-            if (tg.field_b.startsWith("win") &&
+            if (PlatformServices.osNameLowercase.startsWith("win") &&
               ie.a(param2, false)) {
               return;
             }

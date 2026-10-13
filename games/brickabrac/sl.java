@@ -179,11 +179,11 @@ abstract class sl extends DualLinkNode {
           ji.field_b = new mh(0L, (mh) null);
           um.field_b = new mh(0L, ad.field_l);
           um.field_b.field_S = 1;
-          rn.field_g = new mh(0L, MainMenuScreen.field_t, n.field_a);
+          BoundedFile.field_g = new mh(0L, MainMenuScreen.field_t, n.field_a);
           wd.field_E = new mh(0L, ik.field_a, pf.field_c);
           TimedSplashScreen.field_u = new mm(0L, new mh(0L, (mh) null), am.field_Qb, ic.field_c);
           ji.field_b.a(um.field_b, 0);
-          ji.field_b.a(rn.field_g, 0);
+          ji.field_b.a(BoundedFile.field_g, 0);
           if (vd.field_e) {
             ji.field_b.a(wd.field_E, 0);
           }

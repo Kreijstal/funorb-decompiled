@@ -39,7 +39,7 @@ final class kc extends IntrusiveNode {
 
     final static void a(ResourceArchive param0, AudioMixer param1, int param2, int param3) {
         try {
-          rn.field_i = wn.a((byte) -98) * param2 / 1000;
+          BoundedFile.field_i = wn.a((byte) -98) * param2 / 1000;
           if (param3 < 91) {
             AudioMixer var5 = (AudioMixer) null;
             kc.a((ResourceArchive) null, (AudioMixer) null, -127, -72);
@@ -49,7 +49,7 @@ final class kc extends IntrusiveNode {
           e.a(param0, 115);
           ScorePopup.a(-37);
           fl.e(-41);
-          MatchResultScreen.field_t = -rn.field_i + 0;
+          MatchResultScreen.field_t = -BoundedFile.field_i + 0;
         } catch (RuntimeException runtimeException) {
           throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "kc.D(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
         }
@@ -132,7 +132,7 @@ final class kc extends IntrusiveNode {
         }
         if (!param1) {
           gd.field_d = bj.a(80, (byte) 76, var8);
-          rn.field_m = null;
+          BoundedFile.field_m = null;
           return new gb(param1);
         }
         var5 = var8.readUnsignedShort(65280);
@@ -144,12 +144,12 @@ final class kc extends IntrusiveNode {
           } else {
             stackIn_24_0 = var9.field_u;
           }
-          rn.field_m = stackIn_24_0;
+          BoundedFile.field_m = stackIn_24_0;
         } catch (java.lang.Exception decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = (Exception) (Object) decompiledCaughtException;
           rk.a("CC1", (Throwable) ((Object) var6), param0 ^ 16);
-          rn.field_m = null;
+          BoundedFile.field_m = null;
           gd.field_d = null;
           return new gb(param1);
         }
@@ -217,7 +217,7 @@ final class kc extends IntrusiveNode {
         }
         if (!param1) {
           gd.field_d = bj.a(80, (byte) 76, var8);
-          rn.field_m = null;
+          BoundedFile.field_m = null;
           return new gb(param1);
         }
         var5 = var8.readUnsignedShort(65280);
@@ -229,12 +229,12 @@ final class kc extends IntrusiveNode {
           } else {
             stackIn_24_0 = var9.field_u;
           }
-          rn.field_m = stackIn_24_0;
+          BoundedFile.field_m = stackIn_24_0;
         } catch (java.lang.Exception decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = (Exception) (Object) decompiledCaughtException;
           rk.a("CC1", (Throwable) ((Object) var6), param0 ^ 16);
-          rn.field_m = null;
+          BoundedFile.field_m = null;
           gd.field_d = null;
           return new gb(param1);
         }

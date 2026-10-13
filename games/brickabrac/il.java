@@ -205,7 +205,7 @@ final class il extends CircleBody {
         this.stateWord = this.stateWord + 1;
     }
 
-    final static void a(ie param0, tg param1, int param2, int param3, int param4, int param5, java.awt.Component param6, boolean param7) {
+    final static void a(ie param0, PlatformServices param1, int param2, int param3, int param4, int param5, java.awt.Component param6, boolean param7) {
         try {
           PcmPlayer.a(param2, param7, 10);
           DirectByteStorage.field_f = PcmPlayer.a(param1, param6, 0, param4);
@@ -269,7 +269,7 @@ final class il extends CircleBody {
         try {
           if (obfuscationGuard <= 79) {
             var4 = (java.awt.Component) null;
-            il.a((ie) null, (tg) null, 83, 59, 15, -106, (java.awt.Component) null, true);
+            il.a((ie) null, (PlatformServices) null, 83, 59, 15, -106, (java.awt.Component) null, true);
           }
           var3_int = super.computeSyncChecksum(120, diagnostics) ^ -72674834;
           if (diagnostics != null) {

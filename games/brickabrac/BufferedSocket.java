@@ -7,14 +7,14 @@ final class BufferedSocket implements Runnable {
     private int writePosition;
     private java.net.Socket socket;
     private boolean writeFailed;
-    private tg taskScheduler;
+    private PlatformServices taskScheduler;
     private byte[] outputBuffer;
     private boolean closed;
     private OutputStream output;
     static int field_m;
     private int readPosition;
     private InputStream input;
-    private ql writerTask;
+    private PlatformTask writerTask;
     private int bufferCapacity;
     static mh field_h;
 
@@ -66,7 +66,7 @@ final class BufferedSocket implements Runnable {
               }
             }
             if (null == this.writerTask) {
-              this.writerTask = this.taskScheduler.a(3, (Runnable) (this), (byte) -69);
+              this.writerTask = this.taskScheduler.startThread(3, (Runnable) (this), (byte) -69);
             }
             this.notifyAll();
           }
@@ -219,7 +219,7 @@ final class BufferedSocket implements Runnable {
         }
     }
 
-    BufferedSocket(java.net.Socket socket, tg taskScheduler) throws IOException {
+    BufferedSocket(java.net.Socket socket, PlatformServices taskScheduler) throws IOException {
         this(socket, taskScheduler, 5000);
     }
 
@@ -242,12 +242,12 @@ final class BufferedSocket implements Runnable {
             this.notifyAll();
           }
           if (this.writerTask != null) {
-            while (this.writerTask.field_f == 0) {
+            while (this.writerTask.status == 0) {
               wj.a(-127, 1L);
             }
-            if (this.writerTask.field_f == 1) {
+            if (this.writerTask.status == 1) {
               try {
-                ((Thread) (this.writerTask.field_e)).join();
+                ((Thread) (this.writerTask.result)).join();
               } catch (InterruptedException interruptedException) {
               }
             }
@@ -296,7 +296,7 @@ final class BufferedSocket implements Runnable {
         return this.input.available();
     }
 
-    private BufferedSocket(java.net.Socket socket, tg taskScheduler, int bufferCapacity) throws IOException {
+    private BufferedSocket(java.net.Socket socket, PlatformServices taskScheduler, int bufferCapacity) throws IOException {
         this.writeFailed = false;
         this.closed = false;
         this.readPosition = 0;

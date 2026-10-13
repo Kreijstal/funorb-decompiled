@@ -520,7 +520,7 @@ final class ResourceArchive {
           fileId < 0 ||
           groupId >= this.index.fileCapacities.length ||
           fileId >= this.index.fileCapacities[groupId]) {
-          if (!rn.field_n) {
+          if (!BoundedFile.field_n) {
             return false;
           }
           throw new IllegalArgumentException(groupId + " " + fileId);
@@ -537,7 +537,7 @@ final class ResourceArchive {
           0 != this.index.fileCapacities[groupId]) {
           return true;
         }
-        if (rn.field_n) {
+        if (BoundedFile.field_n) {
           throw new IllegalArgumentException(Integer.toString(groupId));
         }
         return false;

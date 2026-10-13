@@ -135,7 +135,7 @@ final class ar {
                   var9 = 0;
                   break;
                 }
-                param7 = param7 + (255 & jg.field_c[param4]);
+                param7 = param7 + (255 & BufferedFile.field_c[param4]);
               }
             }
             var10Lifetime1 = 0;

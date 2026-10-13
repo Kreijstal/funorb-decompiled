@@ -15,7 +15,7 @@ abstract class ff {
 
     abstract void a(int param0, PacketBuffer param1);
 
-    final static GameCanvas a(int param0, int param1, int param2, int param3, boolean param4, tg param5) {
+    final static GameCanvas a(int param0, int param1, int param2, int param3, boolean param4, PlatformServices param5) {
         java.awt.Frame var6 = null;
         RuntimeException var6_ref = null;
         GameCanvas var7 = null;

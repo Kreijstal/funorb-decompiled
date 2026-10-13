@@ -34,7 +34,7 @@ final class MessageScreen extends MenuScreen {
           cf.field_c[wi.field_m] = param2;
           fj.field_Pb[wi.field_m] = wi.field_m;
           ec.field_N[wi.field_m] = param0;
-          if (param0 <= rn.field_l) {
+          if (param0 <= BoundedFile.field_l) {
             if (pe.field_u > param0) {
               ba.field_w = param0;
             }
@@ -87,7 +87,7 @@ final class MessageScreen extends MenuScreen {
         cf.field_c[wi.field_m] = param2;
         fj.field_Pb[wi.field_m] = wi.field_m;
         ec.field_N[wi.field_m] = param0;
-        if (param0 <= rn.field_l) {
+        if (param0 <= BoundedFile.field_l) {
           if (pe.field_u > param0) {
             ba.field_w = param0;
           }

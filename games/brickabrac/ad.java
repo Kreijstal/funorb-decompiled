@@ -4,33 +4,33 @@
 import java.io.*;
 
 final class ad implements Runnable {
-    private ql field_h;
+    private PlatformTask field_h;
     private DataInputStream field_k;
     private java.net.URL field_a;
     private PacketBuffer field_f;
     private int field_c;
-    private tg field_g;
+    private PlatformServices field_g;
     static RgbSprite field_b;
     static um field_e;
-    private ql field_d;
+    private PlatformTask field_d;
     static int field_j;
-    private ql field_i;
+    private PlatformTask field_i;
     static mh field_l;
 
     protected final void finalize() {
         if (this.field_d != null) {
-          if (null != this.field_d.field_e) {
+          if (null != this.field_d.result) {
             try {
-              ((DataInputStream) (this.field_d.field_e)).close();
+              ((DataInputStream) (this.field_d.result)).close();
             } catch (Exception exception) {
             }
           }
           this.field_d = null;
         }
         if (this.field_i != null) {
-          if (this.field_i.field_e != null) {
+          if (this.field_i.result != null) {
             try {
-              ((java.net.Socket) (this.field_i.field_e)).close();
+              ((java.net.Socket) (this.field_i.result)).close();
             } catch (Exception exception) {
             }
           }
@@ -60,17 +60,17 @@ final class ad implements Runnable {
           if (null == qm.field_d) {
             qm.field_d = FramedMenuScreen.field_s.a(tq.field_h, (byte) 120, dl.field_b);
           }
-          if (qm.field_d.field_f == 0) {
+          if (qm.field_d.status == 0) {
             return false;
           }
           dupTemp$1 = ue.a(false);
           BrickMotionPath.field_q = dupTemp$1;
           oj.field_t = dupTemp$1;
-          if (qm.field_d.field_f != 1) {
+          if (qm.field_d.status != 1) {
             rf.field_b = mc.field_e;
           } else {
             try {
-              eq.field_g = new BufferedSocket((java.net.Socket) (qm.field_d.field_e), FramedMenuScreen.field_s);
+              eq.field_g = new BufferedSocket((java.net.Socket) (qm.field_d.result), FramedMenuScreen.field_s);
               k.field_h.position = 0;
               var4 = jl.field_e;
               var5 = var4;
@@ -157,10 +157,10 @@ final class ad implements Runnable {
           if (null == this.field_d) {
             this.field_d = this.field_g.a((byte) 73, this.field_a);
           }
-          if (this.field_d.field_f == 0) {
+          if (this.field_d.status == 0) {
             return false;
           }
-          if (this.field_d.field_f != 1) {
+          if (this.field_d.status != 1) {
             this.field_d = null;
             this.field_c = this.field_c + 1;
             return false;
@@ -170,10 +170,10 @@ final class ad implements Runnable {
           if (null == this.field_i) {
             this.field_i = this.field_g.a(this.field_a.getHost(), (byte) 120, 443);
           }
-          if (0 == this.field_i.field_f) {
+          if (0 == this.field_i.status) {
             return false;
           }
-          if (this.field_i.field_f != 1) {
+          if (this.field_i.status != 1) {
             this.field_c = this.field_c + 1;
             this.field_i = null;
             return false;
@@ -182,10 +182,10 @@ final class ad implements Runnable {
         if (null == this.field_k) {
           try {
             if (this.field_c == 0) {
-              this.field_k = (DataInputStream) (this.field_d.field_e);
+              this.field_k = (DataInputStream) (this.field_d.result);
             }
             if (this.field_c == 1) {
-              var4 = (java.net.Socket) (this.field_i.field_e);
+              var4 = (java.net.Socket) (this.field_i.result);
               var4.setSoTimeout(10000);
               var3 = var4.getOutputStream();
               var3.write(17);
@@ -204,12 +204,12 @@ final class ad implements Runnable {
           }
           if (decompiledRegionSelector0 == 0) {
             if (null == this.field_h) {
-              this.field_h = this.field_g.a(5, (Runnable) (this), (byte) -72);
+              this.field_h = this.field_g.startThread(5, (Runnable) (this), (byte) -72);
             }
-            if (this.field_h.field_f == 0) {
+            if (this.field_h.status == 0) {
               return false;
             }
-            if (this.field_h.field_f == param0) {
+            if (this.field_h.status == param0) {
               return false;
             }
             this.finalize();
@@ -218,12 +218,12 @@ final class ad implements Runnable {
           }
         }
         if (null == this.field_h) {
-          this.field_h = this.field_g.a(5, (Runnable) (this), (byte) -72);
+          this.field_h = this.field_g.startThread(5, (Runnable) (this), (byte) -72);
         }
-        if (this.field_h.field_f == 0) {
+        if (this.field_h.status == 0) {
           return false;
         }
-        if (this.field_h.field_f != param0) {
+        if (this.field_h.status != param0) {
           this.finalize();
           this.field_c = this.field_c + 1;
         }
@@ -253,7 +253,7 @@ final class ad implements Runnable {
         return null;
     }
 
-    ad(tg param0, java.net.URL param1, int param2) {
+    ad(PlatformServices param0, java.net.URL param1, int param2) {
         try {
           this.field_g = param0;
           this.field_a = param1;

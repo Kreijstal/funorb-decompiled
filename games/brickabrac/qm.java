@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class qm {
-    static ql field_d;
+    static PlatformTask field_d;
     static String field_b;
     static int field_a;
     static String field_e;

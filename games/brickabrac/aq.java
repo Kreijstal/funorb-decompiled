@@ -4,7 +4,7 @@
 final class aq implements Runnable {
     volatile boolean field_b;
     volatile boolean field_a;
-    tg field_c;
+    PlatformServices field_c;
     volatile PcmPlayer[] field_d;
     static int field_e;
     private static String field_z;

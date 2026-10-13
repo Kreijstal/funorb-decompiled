@@ -4,11 +4,11 @@
 import java.io.*;
 
 final class FileCacheStore {
-    private jg dataFile;
+    private BufferedFile dataFile;
     static String field_e;
     private int storeId;
     private int maxEntryBytes;
-    private jg indexFile;
+    private BufferedFile indexFile;
 
     public static void a(byte param0) {
         field_e = null;
@@ -95,60 +95,60 @@ final class FileCacheStore {
           Throwable decompiledCaughtException = null;
           Object var6 = null;
           RuntimeException var6_ref = null;
-          int var7_int = 0;
+          int sector = 0;
           IOException var7 = null;
-          int var8 = 0;
-          int var9 = 0;
-          int var10 = 0;
-          int var11 = 0;
-          int var12 = 0;
-          int var13 = 0;
+          int bytesWritten = 0;
+          int chunkIndex = 0;
+          int nextSector = 0;
+          int headerEntryOrPayloadLength = 0;
+          int headerChunkIndex = 0;
+          int headerStoreId = 0;
           EOFException var14 = null;
-          int var16 = 0;
-          var16 = BrickABrac.field_J ? 1 : 0;
+          int clientBranchFlag = 0;
+          clientBranchFlag = BrickABrac.field_J ? 1 : 0;
           try {
             var6 = this.dataFile;
             synchronized (var6) {
               try {
                 if (reuseSectors) {
-                  if ((long)(6 + entryId * 6) > this.indexFile.a((byte) 115)) {
+                  if ((long)(6 + entryId * 6) > this.indexFile.length((byte) 115)) {
                     return false;
                   }
-                  this.indexFile.a(0, (long)(entryId * 6));
-                  this.indexFile.a(6, 0, 120, tf.field_b);
-                  var7_int = (255 & tf.field_b[5]) + ((255 & tf.field_b[3]) << 16) + (65280 & tf.field_b[4] << 8);
-                  if (0 >= var7_int ||
-                    !((long)var7_int <= this.dataFile.a((byte) 71) / 520L)) {
+                  this.indexFile.seek(0, (long)(entryId * 6));
+                  this.indexFile.readFully(6, 0, 120, tf.cacheSectorScratch);
+                  sector = (255 & tf.cacheSectorScratch[5]) + ((255 & tf.cacheSectorScratch[3]) << 16) + (65280 & tf.cacheSectorScratch[4] << 8);
+                  if (0 >= sector ||
+                    !((long)sector <= this.dataFile.length((byte) 71) / 520L)) {
                     return false;
                   }
                 } else {
-                  var7_int = (int)((519L + this.dataFile.a((byte) 62)) / 520L);
-                  if (0 == var7_int) {
-                    var7_int = 1;
+                  sector = (int)((519L + this.dataFile.length((byte) 62)) / 520L);
+                  if (0 == sector) {
+                    sector = 1;
                   }
                 }
-                tf.field_b[0] = (byte)(length >> 16);
-                tf.field_b[4] = (byte)(var7_int >> 8);
-                tf.field_b[5] = (byte)var7_int;
-                tf.field_b[2] = (byte)length;
+                tf.cacheSectorScratch[0] = (byte)(length >> 16);
+                tf.cacheSectorScratch[4] = (byte)(sector >> 8);
+                tf.cacheSectorScratch[5] = (byte)sector;
+                tf.cacheSectorScratch[2] = (byte)length;
                 if (!obfuscationGuard) {
                   FileCacheStore.a((byte) 8);
                 }
-                tf.field_b[1] = (byte)(length >> 8);
-                tf.field_b[3] = (byte)(var7_int >> 16);
-                this.indexFile.a(0, (long)(entryId * 6));
-                this.indexFile.a(tf.field_b, 0, 6, -1);
-                var8 = 0;
-                var9 = 0;
+                tf.cacheSectorScratch[1] = (byte)(length >> 8);
+                tf.cacheSectorScratch[3] = (byte)(sector >> 16);
+                this.indexFile.seek(0, (long)(entryId * 6));
+                this.indexFile.write(tf.cacheSectorScratch, 0, 6, -1);
+                bytesWritten = 0;
+                chunkIndex = 0;
                 scanLoop1: while (true) {
-                  if (length > var8) {
+                  if (length > bytesWritten) {
                     boolean decompiledFrameRemainder0 = true;
-                    var10 = 0;
+                    nextSector = 0;
                     if (reuseSectors) {
-                      this.dataFile.a(0, (long)(520 * var7_int));
+                      this.dataFile.seek(0, (long)(520 * sector));
                       if (65535 >= entryId) {
                         try {
-                          this.dataFile.a(8, 0, 121, tf.field_b);
+                          this.dataFile.readFully(8, 0, 121, tf.cacheSectorScratch);
                           decompiledRegionSelector0 = 0;
                         } catch (java.io.EOFException decompiledCaughtParameter0) {
                           decompiledCaughtException = decompiledCaughtParameter0;
@@ -158,13 +158,13 @@ final class FileCacheStore {
                         if (decompiledRegionSelector0 != 0) {
                           break scanLoop1;
                         }
-                        var13 = 255 & tf.field_b[7];
-                        var12 = (tf.field_b[2] << 8 & 65280) + (255 & tf.field_b[3]);
-                        var10 = ((255 & tf.field_b[5]) << 8) + ((tf.field_b[4] & 255) << 16) + (tf.field_b[6] & 255);
-                        var11 = ((255 & tf.field_b[0]) << 8) + (255 & tf.field_b[1]);
+                        headerStoreId = 255 & tf.cacheSectorScratch[7];
+                        headerChunkIndex = (tf.cacheSectorScratch[2] << 8 & 65280) + (255 & tf.cacheSectorScratch[3]);
+                        nextSector = ((255 & tf.cacheSectorScratch[5]) << 8) + ((tf.cacheSectorScratch[4] & 255) << 16) + (tf.cacheSectorScratch[6] & 255);
+                        headerEntryOrPayloadLength = ((255 & tf.cacheSectorScratch[0]) << 8) + (255 & tf.cacheSectorScratch[1]);
                       } else {
                         try {
-                          this.dataFile.a(10, 0, 119, tf.field_b);
+                          this.dataFile.readFully(10, 0, 119, tf.cacheSectorScratch);
                           decompiledRegionSelector1 = 0;
                         } catch (java.io.EOFException decompiledCaughtParameter1) {
                           decompiledCaughtException = decompiledCaughtParameter1;
@@ -174,74 +174,74 @@ final class FileCacheStore {
                         if (decompiledRegionSelector1 != 0) {
                           break scanLoop1;
                         }
-                        var11 = ((tf.field_b[2] & 255) << 8) + ((16711680 & tf.field_b[1] << 16) + (-16777216 & tf.field_b[0] << 24)) + (tf.field_b[3] & 255);
-                        var10 = (255 & tf.field_b[8]) + ((tf.field_b[6] << 16 & 16711680) + (tf.field_b[7] << 8 & 65280));
-                        var12 = (255 & tf.field_b[5]) + ((255 & tf.field_b[4]) << 8);
-                        var13 = tf.field_b[9] & 255;
+                        headerEntryOrPayloadLength = ((tf.cacheSectorScratch[2] & 255) << 8) + ((16711680 & tf.cacheSectorScratch[1] << 16) + (-16777216 & tf.cacheSectorScratch[0] << 24)) + (tf.cacheSectorScratch[3] & 255);
+                        nextSector = (255 & tf.cacheSectorScratch[8]) + ((tf.cacheSectorScratch[6] << 16 & 16711680) + (tf.cacheSectorScratch[7] << 8 & 65280));
+                        headerChunkIndex = (255 & tf.cacheSectorScratch[5]) + ((255 & tf.cacheSectorScratch[4]) << 8);
+                        headerStoreId = tf.cacheSectorScratch[9] & 255;
                       }
-                      if ((entryId == var11 &&
-                        var12 == var9 &&
-                        this.storeId == var13) &&
-                        (decompiledFrameRemainder0 = (!(var10 >= 0) ||
-                        !((long)var10 <= (this.dataFile.a((byte) 29) / 520L))))) {
+                      if ((entryId == headerEntryOrPayloadLength &&
+                        headerChunkIndex == chunkIndex &&
+                        this.storeId == headerStoreId) &&
+                        (decompiledFrameRemainder0 = (!(nextSector >= 0) ||
+                        !((long)nextSector <= (this.dataFile.length((byte) 29) / 520L))))) {
                         return false;
                       }
                       if (decompiledFrameRemainder0) {
                         return false;
                       }
                     }
-                    if (0 == var10) {
-                      var10 = (int)((519L + this.dataFile.a((byte) 85)) / 520L);
+                    if (0 == nextSector) {
+                      nextSector = (int)((519L + this.dataFile.length((byte) 85)) / 520L);
                       reuseSectors = false;
-                      if (var10 == 0) {
-                        var10++;
+                      if (nextSector == 0) {
+                        nextSector++;
                       }
-                      if (var7_int == var10) {
-                        var10++;
+                      if (sector == nextSector) {
+                        nextSector++;
                       }
                     }
-                    if (length - var8 <= 512) {
-                      var10 = 0;
+                    if (length - bytesWritten <= 512) {
+                      nextSector = 0;
                     }
                     if (entryId <= 65535) {
-                      tf.field_b[6] = (byte)var10;
-                      tf.field_b[1] = (byte)entryId;
-                      tf.field_b[5] = (byte)(var10 >> 8);
-                      tf.field_b[0] = (byte)(entryId >> 8);
-                      tf.field_b[3] = (byte)var9;
-                      tf.field_b[2] = (byte)(var9 >> 8);
-                      tf.field_b[7] = (byte)this.storeId;
-                      tf.field_b[4] = (byte)(var10 >> 16);
-                      this.dataFile.a(0, (long)(520 * var7_int));
-                      this.dataFile.a(tf.field_b, 0, 8, -1);
-                      var11 = length - var8;
-                      if (var11 > 512) {
-                        var11 = 512;
+                      tf.cacheSectorScratch[6] = (byte)nextSector;
+                      tf.cacheSectorScratch[1] = (byte)entryId;
+                      tf.cacheSectorScratch[5] = (byte)(nextSector >> 8);
+                      tf.cacheSectorScratch[0] = (byte)(entryId >> 8);
+                      tf.cacheSectorScratch[3] = (byte)chunkIndex;
+                      tf.cacheSectorScratch[2] = (byte)(chunkIndex >> 8);
+                      tf.cacheSectorScratch[7] = (byte)this.storeId;
+                      tf.cacheSectorScratch[4] = (byte)(nextSector >> 16);
+                      this.dataFile.seek(0, (long)(520 * sector));
+                      this.dataFile.write(tf.cacheSectorScratch, 0, 8, -1);
+                      headerEntryOrPayloadLength = length - bytesWritten;
+                      if (headerEntryOrPayloadLength > 512) {
+                        headerEntryOrPayloadLength = 512;
                       }
-                      this.dataFile.a(data, var8, var11, -1);
-                      var8 = var8 + var11;
+                      this.dataFile.write(data, bytesWritten, headerEntryOrPayloadLength, -1);
+                      bytesWritten = bytesWritten + headerEntryOrPayloadLength;
                     } else {
-                      tf.field_b[5] = (byte)var9;
-                      tf.field_b[8] = (byte)var10;
-                      tf.field_b[1] = (byte)(entryId >> 16);
-                      tf.field_b[6] = (byte)(var10 >> 16);
-                      tf.field_b[0] = (byte)(entryId >> 24);
-                      tf.field_b[9] = (byte)this.storeId;
-                      tf.field_b[7] = (byte)(var10 >> 8);
-                      tf.field_b[2] = (byte)(entryId >> 8);
-                      tf.field_b[3] = (byte)entryId;
-                      tf.field_b[4] = (byte)(var9 >> 8);
-                      this.dataFile.a(0, (long)(520 * var7_int));
-                      this.dataFile.a(tf.field_b, 0, 10, -1);
-                      var11 = length - var8;
-                      if (510 < var11) {
-                        var11 = 510;
+                      tf.cacheSectorScratch[5] = (byte)chunkIndex;
+                      tf.cacheSectorScratch[8] = (byte)nextSector;
+                      tf.cacheSectorScratch[1] = (byte)(entryId >> 16);
+                      tf.cacheSectorScratch[6] = (byte)(nextSector >> 16);
+                      tf.cacheSectorScratch[0] = (byte)(entryId >> 24);
+                      tf.cacheSectorScratch[9] = (byte)this.storeId;
+                      tf.cacheSectorScratch[7] = (byte)(nextSector >> 8);
+                      tf.cacheSectorScratch[2] = (byte)(entryId >> 8);
+                      tf.cacheSectorScratch[3] = (byte)entryId;
+                      tf.cacheSectorScratch[4] = (byte)(chunkIndex >> 8);
+                      this.dataFile.seek(0, (long)(520 * sector));
+                      this.dataFile.write(tf.cacheSectorScratch, 0, 10, -1);
+                      headerEntryOrPayloadLength = length - bytesWritten;
+                      if (510 < headerEntryOrPayloadLength) {
+                        headerEntryOrPayloadLength = 510;
                       }
-                      this.dataFile.a(data, var8, var11, -1);
-                      var8 = var8 + var11;
+                      this.dataFile.write(data, bytesWritten, headerEntryOrPayloadLength, -1);
+                      bytesWritten = bytesWritten + headerEntryOrPayloadLength;
                     }
-                    var9++;
-                    var7_int = var10;
+                    chunkIndex++;
+                    sector = nextSector;
                     continue;
                   }
                   break;
@@ -274,112 +274,112 @@ final class FileCacheStore {
 
     final byte[] read(int obfuscationGuard, int entryId) {
         try {
-          int var16 = 0;
+          int sectorByteIndex = 0;
           int incrementValue$2 = 0;
           Object var3 = null;
           Object var3_ref = null;
-          int var4_int = 0;
+          int entryLength = 0;
           IOException var4 = null;
-          int var5 = 0;
-          byte[] var6 = null;
-          int var7 = 0;
-          int var8 = 0;
-          int var9 = 0;
-          int var10 = 0;
-          int var11 = 0;
-          int var12 = 0;
-          int var13 = 0;
-          int var14 = 0;
-          int var15 = 0;
+          int sector = 0;
+          byte[] data = null;
+          int bytesRead = 0;
+          int chunkIndex = 0;
+          int payloadLength = 0;
+          int headerEntryId = 0;
+          int headerChunkIndex = 0;
+          int nextSector = 0;
+          int headerStoreId = 0;
+          int headerSize = 0;
+          int sectorDataEnd = 0;
           Throwable var17 = null;
-          int var18 = 0;
+          int clientBranchFlag = 0;
           Object stackIn_3_0 = null;
           Object stackIn_37_0 = null;
           Object stackIn_43_0 = null;
           byte[] stackIn_50_0 = null;
           Object stackIn_53_0 = null;
           Throwable decompiledCaughtException = null;
-          var18 = BrickABrac.field_J ? 1 : 0;
+          clientBranchFlag = BrickABrac.field_J ? 1 : 0;
           var3_ref = this.dataFile;
           synchronized (var3_ref) {
             try {
-              if ((long)(6 * entryId + 6) > this.indexFile.a((byte) 53)) {
+              if ((long)(6 * entryId + 6) > this.indexFile.length((byte) 53)) {
                 stackIn_3_0 = null;
                 return (byte[]) (stackIn_3_0);
               }
-              this.indexFile.a(0, (long)(entryId * 6));
-              this.indexFile.a(6, 0, 127, tf.field_b);
-              var4_int = (tf.field_b[2] & 255) + ((tf.field_b[1] & 255) << 8) + (16711680 & tf.field_b[0] << 16);
-              var5 = (tf.field_b[5] & 255) + (tf.field_b[3] << 16 & 16711680) + ((tf.field_b[4] & 255) << 8);
-              if (var4_int < 0) {
+              this.indexFile.seek(0, (long)(entryId * 6));
+              this.indexFile.readFully(6, 0, 127, tf.cacheSectorScratch);
+              entryLength = (tf.cacheSectorScratch[2] & 255) + ((tf.cacheSectorScratch[1] & 255) << 8) + (16711680 & tf.cacheSectorScratch[0] << 16);
+              sector = (tf.cacheSectorScratch[5] & 255) + (tf.cacheSectorScratch[3] << 16 & 16711680) + ((tf.cacheSectorScratch[4] & 255) << 8);
+              if (entryLength < 0) {
                 return null;
               }
-              if (this.maxEntryBytes < var4_int) {
+              if (this.maxEntryBytes < entryLength) {
                 return null;
               }
-              if (var5 <= 0) {
+              if (sector <= 0) {
                 return null;
               }
-              if ((long)var5 > (this.dataFile.a((byte) 66) / 520L)) {
+              if ((long)sector > (this.dataFile.length((byte) 66) / 520L)) {
                 return null;
               }
-              var6 = new byte[var4_int];
-              var7 = 0;
-              var8 = obfuscationGuard;
-              while (var7 < var4_int) {
-                if (var5 == 0) {
+              data = new byte[entryLength];
+              bytesRead = 0;
+              chunkIndex = obfuscationGuard;
+              while (bytesRead < entryLength) {
+                if (sector == 0) {
                   return null;
                 }
-                this.dataFile.a(0, (long)(520 * var5));
-                var9 = var4_int - var7;
+                this.dataFile.seek(0, (long)(520 * sector));
+                payloadLength = entryLength - bytesRead;
                 if (entryId <= 65535) {
-                  if (512 < var9) {
-                    var9 = 512;
+                  if (512 < payloadLength) {
+                    payloadLength = 512;
                   }
-                  var14 = 8;
-                  this.dataFile.a(var9 + var14, 0, 126, tf.field_b);
-                  var10 = ((tf.field_b[0] & 255) << 8) + (tf.field_b[1] & 255);
-                  var13 = tf.field_b[7] & 255;
-                  var11 = (tf.field_b[3] & 255) + ((tf.field_b[2] & 255) << 8);
-                  var12 = ((tf.field_b[4] & 255) << 16) - (-((255 & tf.field_b[5]) << 8) - (tf.field_b[6] & 255));
+                  headerSize = 8;
+                  this.dataFile.readFully(payloadLength + headerSize, 0, 126, tf.cacheSectorScratch);
+                  headerEntryId = ((tf.cacheSectorScratch[0] & 255) << 8) + (tf.cacheSectorScratch[1] & 255);
+                  headerStoreId = tf.cacheSectorScratch[7] & 255;
+                  headerChunkIndex = (tf.cacheSectorScratch[3] & 255) + ((tf.cacheSectorScratch[2] & 255) << 8);
+                  nextSector = ((tf.cacheSectorScratch[4] & 255) << 16) - (-((255 & tf.cacheSectorScratch[5]) << 8) - (tf.cacheSectorScratch[6] & 255));
                 } else {
-                  var14 = 10;
-                  if (510 < var9) {
-                    var9 = 510;
+                  headerSize = 10;
+                  if (510 < payloadLength) {
+                    payloadLength = 510;
                   }
-                  this.dataFile.a(var14 + var9, 0, obfuscationGuard ^ 117, tf.field_b);
-                  var11 = ((255 & tf.field_b[4]) << 8) + (255 & tf.field_b[5]);
-                  var13 = tf.field_b[9] & 255;
-                  var12 = ((255 & tf.field_b[7]) << 8) + ((tf.field_b[6] & 255) << 16) + (tf.field_b[8] & 255);
-                  var10 = (tf.field_b[3] & 255) + (((tf.field_b[1] & 255) << 16) + (tf.field_b[0] << 24 & -16777216) + (tf.field_b[2] << 8 & 65280));
+                  this.dataFile.readFully(headerSize + payloadLength, 0, obfuscationGuard ^ 117, tf.cacheSectorScratch);
+                  headerChunkIndex = ((255 & tf.cacheSectorScratch[4]) << 8) + (255 & tf.cacheSectorScratch[5]);
+                  headerStoreId = tf.cacheSectorScratch[9] & 255;
+                  nextSector = ((255 & tf.cacheSectorScratch[7]) << 8) + ((tf.cacheSectorScratch[6] & 255) << 16) + (tf.cacheSectorScratch[8] & 255);
+                  headerEntryId = (tf.cacheSectorScratch[3] & 255) + (((tf.cacheSectorScratch[1] & 255) << 16) + (tf.cacheSectorScratch[0] << 24 & -16777216) + (tf.cacheSectorScratch[2] << 8 & 65280));
                 }
-                if (entryId != var10) {
+                if (entryId != headerEntryId) {
                   return null;
                 }
-                if (var8 != var11) {
+                if (chunkIndex != headerChunkIndex) {
                   return null;
                 }
-                if (var13 != this.storeId) {
+                if (headerStoreId != this.storeId) {
                   stackIn_37_0 = null;
                   return (byte[]) (stackIn_37_0);
                 }
-                if (var12 < 0) {
+                if (nextSector < 0) {
                   return null;
                 }
-                if ((long)var12 > this.dataFile.a((byte) 70) / 520L) {
+                if ((long)nextSector > this.dataFile.length((byte) 70) / 520L) {
                   stackIn_43_0 = null;
                   return (byte[]) (stackIn_43_0);
                 }
-                var15 = var14 + var9;
-                var8++;
-                for (var16 = var14; var16 < var15; var16++) {
-                  incrementValue$2 = var7;
-                  var7++;
-                  var6[incrementValue$2] = tf.field_b[var16];
+                sectorDataEnd = headerSize + payloadLength;
+                chunkIndex++;
+                for (sectorByteIndex = headerSize; sectorByteIndex < sectorDataEnd; sectorByteIndex++) {
+                  incrementValue$2 = bytesRead;
+                  bytesRead++;
+                  data[incrementValue$2] = tf.cacheSectorScratch[sectorByteIndex];
                 }
-                var5 = var12;
+                sector = nextSector;
               }
-              stackIn_50_0 = var6;
+              stackIn_50_0 = data;
               return stackIn_50_0;
             } catch (java.io.IOException decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
@@ -395,7 +395,7 @@ final class FileCacheStore {
         }
     }
 
-    FileCacheStore(int storeId, jg dataFile, jg indexFile, int maxEntryBytes) {
+    FileCacheStore(int storeId, BufferedFile dataFile, BufferedFile indexFile, int maxEntryBytes) {
         this.dataFile = null;
         this.maxEntryBytes = 65000;
         this.indexFile = null;

@@ -9,7 +9,7 @@ final class LevelPackLoader {
     static String field_d;
     static IndexedSprite[] field_b;
     static int field_g;
-    static tg field_e;
+    static PlatformServices field_e;
     static RgbSprite field_f;
 
     public static void b(int param0) {

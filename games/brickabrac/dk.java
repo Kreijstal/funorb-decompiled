@@ -595,7 +595,7 @@ final class dk extends ib implements ha, en, vf {
         this.field_M.field_z = rf.field_d;
         this.field_H.field_z = ResourceArchive.field_e;
         this.field_O.field_z = IntKeyIndex.field_a;
-        this.field_L.field_z = rn.field_b;
+        this.field_L.field_z = BoundedFile.field_b;
         this.field_S.field_z = hc.field_d;
         this.field_N.field_z = ok.field_e;
         this.field_J.a(new fl(this.field_J), (byte) -68);

@@ -34,15 +34,15 @@ final class hm {
         try {
           wc.field_e = param9;
           oc.field_p = -1L;
-          jg.field_c = param2;
+          BufferedFile.field_c = param2;
           cq.field_p = param2.length;
           fh.field_d = false;
           rh.field_d = new byte[(wc.field_e + 7) / 8];
           o.field_e = null;
           nl.field_f = null;
           var10_int = 0;
-          for (var11 = 0; jg.field_c.length > var11; var11++) {
-            var10_int = var10_int + (jg.field_c[var11] & 255);
+          for (var11 = 0; BufferedFile.field_c.length > var11; var11++) {
+            var10_int = var10_int + (BufferedFile.field_c[var11] & 255);
           }
           var10_int = (7 + var10_int) / 8;
           lj.field_p = new byte[var10_int];

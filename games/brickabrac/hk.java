@@ -19,8 +19,8 @@ final class hk extends ib implements hf, en {
     private vb field_T;
 
     final static void a(byte param0) {
-        if (MatchResultScreen.field_t != -rn.field_i + 0 &&
-          -rn.field_i + 250 != MatchResultScreen.field_t) {
+        if (MatchResultScreen.field_t != -BoundedFile.field_i + 0 &&
+          -BoundedFile.field_i + 250 != MatchResultScreen.field_t) {
         }
         MatchResultScreen.field_t = MatchResultScreen.field_t + 1;
         int var1 = -127 / ((29 - param0) / 32);

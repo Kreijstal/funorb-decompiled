@@ -28,7 +28,7 @@ final class cr extends oc {
         this(param0, param1, param2, param3, param4, param5, param6, 8355711 & param5 >> 1, (param6 & 16711422) >> 1);
     }
 
-    final static void a(int param0, int param1, int param2, int param3, tg param4, String param5, int param6, int param7, int param8) {
+    final static void a(int param0, int param1, int param2, int param3, PlatformServices param4, String param5, int param6, int param7, int param8) {
         ec.field_P = param4;
         fi.field_t = param7;
         vb.field_S = param0;

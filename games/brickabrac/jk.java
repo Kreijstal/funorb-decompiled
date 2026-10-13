@@ -70,7 +70,7 @@ final class jk extends ki {
           sc.popRaster(-81);
           to.field_e = jh.a(0, wm.field_b);
           GameplayScreen.field_l = jh.a(0, hk.field_Q);
-          jg.field_a = jh.a(0, n.field_c);
+          BufferedFile.field_a = jh.a(0, n.field_c);
           ig.field_P = jh.a(0, vj.field_b);
           uo.field_d = new RgbSprite(go.field_d.canvasWidth / 2, go.field_d.canvasHeight);
           IndexedSpriteGeometry.pushSpriteRaster(-83, uo.field_d);
@@ -78,7 +78,7 @@ final class jk extends ki {
           sc.popRaster(-114);
           pl.a(n.field_c, 0);
           pl.a(vj.field_b, 0);
-          pl.a(jg.field_a, 0);
+          pl.a(BufferedFile.field_a, 0);
           pl.a(ig.field_P, 0);
           pl.a(go.field_d, 0);
           pl.a(uo.field_d, 0);
@@ -128,7 +128,7 @@ final class jk extends ki {
           }
           var8 = kd.a(this.field_m, param3, (byte) 106);
           if (!var8.matchesCacheKeys((byte) -84, param3, this.field_m)) {
-            hh.a(jg.field_a, -13, 2, var8, -8562, param3, ig.field_P);
+            hh.a(BufferedFile.field_a, -13, 2, var8, -8562, param3, ig.field_P);
             var8.setCacheKeys(this.field_m, param3, (byte) 78);
           }
           il.a(param4, to.field_e, var8.sprite, 2, 2, GameplayScreen.field_l, -13, param3, param0, param2, uo.field_d, 306);
@@ -140,7 +140,7 @@ final class jk extends ki {
         }
         RasterCacheSurface var9 = kd.a(this.field_m, param3, (byte) 106);
         if (!var9.matchesCacheKeys((byte) -84, param3, this.field_m)) {
-          hh.a(jg.field_a, -13, 2, var9, -8562, param3, ig.field_P);
+          hh.a(BufferedFile.field_a, -13, 2, var9, -8562, param3, ig.field_P);
           var9.setCacheKeys(this.field_m, param3, (byte) 78);
         }
         il.a(param4, to.field_e, var9.sprite, 2, 2, GameplayScreen.field_l, -13, param3, param0, param2, uo.field_d, 306);

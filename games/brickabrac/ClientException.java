@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ClientException extends RuntimeException {
-    static jg[] field_g;
+    static BufferedFile[] field_g;
     Throwable originalCause;
     String context;
     static RgbSprite field_b;

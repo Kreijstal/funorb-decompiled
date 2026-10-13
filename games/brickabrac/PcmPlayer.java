@@ -277,7 +277,7 @@ class PcmPlayer {
     void e() throws Exception {
     }
 
-    final static PcmPlayer a(tg param0, java.awt.Component param1, int param2, int param3) {
+    final static PcmPlayer a(PlatformServices param0, java.awt.Component param1, int param2, int param3) {
         try {
           pd var4 = null;
           Throwable var4_ref = null;
@@ -317,7 +317,7 @@ class PcmPlayer {
                 field_c == null) {
                 field_c = new aq();
                 field_c.field_c = param0;
-                param0.a(field_l, (Runnable) ((Object) field_c), (byte) -94);
+                param0.startThread(field_l, (Runnable) ((Object) field_c), (byte) -94);
               }
               if (field_c != null) {
                 if (field_c.field_d[param2] != null) {

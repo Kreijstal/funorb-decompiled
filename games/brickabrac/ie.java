@@ -333,7 +333,7 @@ final class ie extends AudioStream {
         var4 = BrickABrac.field_J ? 1 : 0;
         try {
           try {
-            if (!tg.field_b.startsWith("win")) {
+            if (!PlatformServices.osNameLowercase.startsWith("win")) {
               return false;
             }
             if (!param0.startsWith("http://") &&

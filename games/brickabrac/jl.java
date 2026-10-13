@@ -104,7 +104,7 @@ final class jl {
             var17 = gg.field_i[var16];
             fk.a(var16, (byte) 77);
             for (var18 = 0; var18 < 3; var18++) {
-              MatchResultScreen.field_w[var18] = MatchResultScreen.field_w[var18] + rn.field_e[var15][var18];
+              MatchResultScreen.field_w[var18] = MatchResultScreen.field_w[var18] + BoundedFile.field_e[var15][var18];
             }
             ka.a(kk.field_e, -16283, MatchResultScreen.field_w, false, true, var17, false);
             mp.a(var14, var7Lifetime1, var12Lifetime1, var9Lifetime1, var17, (byte) -105, var13Lifetime1, var8Lifetime1);

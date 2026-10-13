@@ -5,7 +5,7 @@ final class bg extends IntrusiveNode {
     byte[][][] field_m;
     int field_s;
     static java.security.SecureRandom field_p;
-    ql[] field_j;
+    PlatformTask[] field_j;
     int[] field_q;
     static int[] field_u;
     static int field_r;
@@ -13,7 +13,7 @@ final class bg extends IntrusiveNode {
     static String field_o;
     static int[][] field_n;
     int[] field_k;
-    ql[] field_l;
+    PlatformTask[] field_l;
     int field_i;
 
     final static int a(int param0, int param1, int param2) {

@@ -286,7 +286,7 @@ final class wn {
           if (param2 != 0) {
             wn.a(79, -114);
           }
-          jg.field_d = param0;
+          BufferedFile.field_d = param0;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

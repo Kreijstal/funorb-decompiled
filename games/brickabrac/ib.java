@@ -435,7 +435,7 @@ class ib extends oc implements sd {
         param5 = param5 + (-(var9.canvasHeight / 2) + var8);
         if (param4) {
           nb.a(-111, param5, param6, lk.field_n[param0]);
-          rn.field_a[param0].f(param6, param5, 256);
+          BoundedFile.field_a[param0].f(param6, param5, 256);
         }
         var9.drawTransparent(param6, param5);
         return;

@@ -41,16 +41,16 @@ final class sm {
               GameplayScreen.field_j = GameplayScreen.field_j + 1;
             }
             if (1 == GameplayScreen.field_j) {
-              if (IndexedSpriteGeometry.field_e.field_f == 2) {
+              if (IndexedSpriteGeometry.field_e.status == 2) {
                 stackIn_15_0 = Brick.a((byte) 41, -1);
                 return stackIn_15_0;
               }
-              if (IndexedSpriteGeometry.field_e.field_f == 1) {
+              if (IndexedSpriteGeometry.field_e.status == 1) {
                 GameplayScreen.field_j = GameplayScreen.field_j + 1;
               }
             }
             if (GameplayScreen.field_j == 2) {
-              MouseInput.field_d = new BufferedSocket((java.net.Socket) (IndexedSpriteGeometry.field_e.field_e), ec.field_P);
+              MouseInput.field_d = new BufferedSocket((java.net.Socket) (IndexedSpriteGeometry.field_e.result), ec.field_P);
               var2 = new PacketBuffer(13);
               c.a(vb.field_S, 12, nb.field_a, u.field_g, var2);
               var2.writeByte(param0 ^ 119, 15);

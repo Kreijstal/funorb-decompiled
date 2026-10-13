@@ -97,7 +97,7 @@ public abstract class ke extends java.applet.Applet implements Runnable, java.aw
 
     final void a(int param0, int param1, int param2, int param3, int param4, String param5, int param6) {
         try {
-          tg dupTemp$0 = null;
+          PlatformServices dupTemp$0 = null;
           RuntimeException stackIn_21_0 = null;
           StringBuilder stackIn_21_1 = null;
           String stackIn_22_2 = null;
@@ -105,7 +105,7 @@ public abstract class ke extends java.applet.Applet implements Runnable, java.aw
           int var8_int = 0;
           Throwable var8 = null;
           RuntimeException var8_ref = null;
-          ql var9 = null;
+          PlatformTask var9 = null;
           int var10 = 0;
           var10 = BrickABrac.field_J ? 1 : 0;
           try {
@@ -129,12 +129,12 @@ public abstract class ke extends java.applet.Applet implements Runnable, java.aw
               be.field_g = param2;
               mc.field_d = param2;
               mk.field_i = uc.e((byte) -64);
-              dupTemp$0 = new tg(param0, param5, param6, true);
+              dupTemp$0 = new PlatformServices(param0, param5, param6, true);
               lp.field_ub = dupTemp$0;
               LevelPackLoader.field_e = dupTemp$0;
-              var9 = lp.field_ub.a(1, (Runnable) (this), (byte) -124);
+              var9 = lp.field_ub.startThread(1, (Runnable) (this), (byte) -124);
               while (true) {
-                if (var9.field_f == 0) {
+                if (var9.status == 0) {
                   wj.a(-125, 10L);
                   if (var10 == 0) {
                     continue;
@@ -313,11 +313,11 @@ public abstract class ke extends java.applet.Applet implements Runnable, java.aw
               boolean decompiledFrameRemainder3 = true;
               boolean decompiledFrameRemainder2 = true;
               boolean decompiledFrameCompleted0 = true;
-              if (null != tg.field_g) {
-                var1 = tg.field_g.toLowerCase();
+              if (null != PlatformServices.javaVendor) {
+                var1 = PlatformServices.javaVendor.toLowerCase();
                 if (((String) (var1)).indexOf("sun") != -1 ||
                   ((String) (var1)).indexOf("apple") != -1) {
-                  var2 = tg.field_o;
+                  var2 = PlatformServices.javaVersion;
                   if (var2.equals("1.1") ||
                     var2.startsWith("1.1.") ||
                     var2.equals("1.2") ||
@@ -359,8 +359,8 @@ public abstract class ke extends java.applet.Applet implements Runnable, java.aw
                 }
               }
               if (((decompiledFrameRemainder3) && (decompiledFrameCompleted0)) &&
-                (decompiledFrameRemainder2 = (tg.field_o != null))) {
-                stackIn_66_0 = tg.field_o.startsWith("1.");
+                (decompiledFrameRemainder2 = (PlatformServices.javaVersion != null))) {
+                stackIn_66_0 = PlatformServices.javaVersion.startsWith("1.");
               }
               if ((decompiledFrameRemainder3) &&
                 (decompiledFrameRemainder2) &&
@@ -369,8 +369,8 @@ public abstract class ke extends java.applet.Applet implements Runnable, java.aw
                 var2_int = 0;
                 while (true) {
                   boolean decompiledFrameRemainder1 = true;
-                  if (var1_int < tg.field_o.length()) {
-                    var3 = tg.field_o.charAt(var1_int);
+                  if (var1_int < PlatformServices.javaVersion.length()) {
+                    var3 = PlatformServices.javaVersion.charAt(var1_int);
                     stackIn_79_0 = ~var3;
                     stackIn_79_1 = -49;
                     decompiledFrameRemainder1 = (var5 == 0);
@@ -397,7 +397,7 @@ public abstract class ke extends java.applet.Applet implements Runnable, java.aw
                 if (sl.field_x != null) {
                   var1 = sl.field_x;
                 }
-                var2_ref = tg.field_x;
+                var2_ref = PlatformServices.field_x;
                 if (var2_ref != null) {
                   try {
                     var2_ref.invoke(var1, new Object[]{Boolean.TRUE});
@@ -413,8 +413,8 @@ public abstract class ke extends java.applet.Applet implements Runnable, java.aw
                 MenuSelection.field_b = ja.a((byte) 123);
                 do {
                   boolean decompiledFrameRemainder0 = true;
-                  if (0L != jg.field_k) {
-                    stackIn_98_0 = $cfr$lcmp(jg.field_k, ue.a(false));
+                  if (0L != BufferedFile.field_k) {
+                    stackIn_98_0 = $cfr$lcmp(BufferedFile.field_k, ue.a(false));
                     decompiledFrameRemainder0 = (var5 == 0);
                     if ((decompiledFrameRemainder0) &&
                       (stackIn_98_0 <= 0)) {
@@ -535,7 +535,7 @@ public abstract class ke extends java.applet.Applet implements Runnable, java.aw
           return;
         }
         try {
-          jg.field_k = ue.a(false) + 4000L;
+          BufferedFile.field_k = ue.a(false) + 4000L;
         } catch (RuntimeException runtimeException) {
           throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "ke.stop()");
         }
@@ -602,7 +602,7 @@ public abstract class ke extends java.applet.Applet implements Runnable, java.aw
           }
           if (lp.field_ub != null) {
             try {
-              lp.field_ub.a(true);
+              lp.field_ub.shutdown(true);
             } catch (java.lang.Exception decompiledCaughtParameter2) {
               decompiledCaughtException = decompiledCaughtParameter2;
               var4_ref = (Exception) (Object) decompiledCaughtException;
@@ -803,7 +803,7 @@ public abstract class ke extends java.applet.Applet implements Runnable, java.aw
         try {
           if (this == so.field_f &&
             !ai.field_s) {
-            jg.field_k = ue.a(false);
+            BufferedFile.field_k = ue.a(false);
             wj.a(-127, 5000L);
             LevelPackLoader.field_e = null;
             this.a(false, 46);
@@ -887,7 +887,7 @@ public abstract class ke extends java.applet.Applet implements Runnable, java.aw
           return;
         }
         try {
-          jg.field_k = 0L;
+          BufferedFile.field_k = 0L;
         } catch (RuntimeException runtimeException) {
           throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "ke.start()");
         }

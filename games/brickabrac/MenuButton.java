@@ -85,7 +85,7 @@ final class MenuButton {
                 stackIn_36_2 = array$0;
                 stackIn_36_3 = 0;
                 if (!be.field_a) {
-                  stackIn_37_4 = jg.field_q;
+                  stackIn_37_4 = BufferedFile.field_q;
                 } else {
                   stackIn_37_4 = lk.field_q;
                 }

@@ -135,7 +135,7 @@ final class CacheIoRequest extends ResourceRequest {
           co.a(stackIn_4_0, false);
           sb.field_c.a(qa.field_w.field_Ib, 0, 88, 0, -40 + qa.field_w.field_cb - 2);
           um.field_b.a(np.field_a, 0, 0, ji.field_b.field_Ib, (byte) 64);
-          stackIn_6_0 = rn.field_g;
+          stackIn_6_0 = BoundedFile.field_g;
           stackIn_6_1 = 18;
           stackIn_6_2 = np.field_a + 2;
           stackIn_6_3 = 0;

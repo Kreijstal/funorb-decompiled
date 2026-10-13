@@ -8,7 +8,7 @@ final class ec extends ib implements en {
     private d[] field_I;
     private int field_M;
     static boolean field_O;
-    static tg field_P;
+    static PlatformServices field_P;
     static int[] field_N;
     private String field_R;
     static String field_S;

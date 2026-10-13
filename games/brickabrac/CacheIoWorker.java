@@ -339,20 +339,20 @@ final class CacheIoWorker implements Runnable {
         field_e = null;
     }
 
-    CacheIoWorker(tg param0) {
-        ql var2 = null;
+    CacheIoWorker(PlatformServices param0) {
+        PlatformTask var2 = null;
         this.queue = new SecondaryNodeQueue();
         this.shutdownRequested = false;
         this.queuedCount = 0;
         try {
-          var2 = param0.a(5, (Runnable) (this), (byte) -72);
-          while (var2.field_f == 0) {
+          var2 = param0.startThread(5, (Runnable) (this), (byte) -72);
+          while (var2.status == 0) {
             wj.a(-124, 10L);
           }
-          if (var2.field_f == 2) {
+          if (var2.status == 2) {
             throw new RuntimeException();
           }
-          this.thread = (Thread) (var2.field_e);
+          this.thread = (Thread) (var2.result);
         } catch (RuntimeException runtimeException) {
           throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "kg.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }

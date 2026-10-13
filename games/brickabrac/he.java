@@ -110,8 +110,8 @@ final class he extends ib implements en {
             var2 = var8;
             if (go.field_a != null) {
               try {
-                go.field_a.a(0, 0L);
-                go.field_a.a(var9, (byte) -29);
+                go.field_a.seek(0, 0L);
+                go.field_a.readFully(var9, (byte) -29);
                 for (var3_int = 0; var3_int < 24; var3_int++) {
                   if (var10[var3_int] == 0) {
                     continue;

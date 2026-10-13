@@ -1688,7 +1688,7 @@ final class nn {
                 }
                 var2 = nk.a("create_password_confirm_tooltip", (byte) 21);
                 if (var2 != null) {
-                  rn.field_b = MenuButton.a(var2, (byte) 73);
+                  BoundedFile.field_b = MenuButton.a(var2, (byte) 73);
                 }
                 var2 = nk.a("create_email_tooltip", (byte) 119);
                 if (null != var2) {
@@ -2186,7 +2186,7 @@ final class nn {
                 }
                 var2 = nk.a("off", (byte) 125);
                 if (var2 != null) {
-                  jg.field_q = MenuButton.a(var2, (byte) 110);
+                  BufferedFile.field_q = MenuButton.a(var2, (byte) 110);
                 }
                 var2 = nk.a("previous", (byte) 56);
                 if (null != var2) {
@@ -2698,7 +2698,7 @@ final class nn {
                 }
                 var2 = nk.a("rating_drawn", (byte) 62);
                 if (null != var2) {
-                  jg.field_p = MenuButton.a(var2, (byte) 126);
+                  BufferedFile.field_p = MenuButton.a(var2, (byte) 126);
                 }
                 var2 = nk.a("benefits_fullscreen", (byte) 37);
                 if (var2 != null) {
@@ -2976,7 +2976,7 @@ final class nn {
                 }
                 var2 = nk.a("serviceunavailable", (byte) 85);
                 if (var2 != null) {
-                  rn.field_d = MenuButton.a(var2, (byte) 104);
+                  BoundedFile.field_d = MenuButton.a(var2, (byte) 104);
                 }
                 var2 = nk.a("createtouse", (byte) 40);
                 if (var2 != null) {

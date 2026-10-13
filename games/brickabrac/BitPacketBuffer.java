@@ -203,10 +203,10 @@ final class BitPacketBuffer extends PacketBuffer {
             ja.a((byte) -104, jk.field_u, var8, var9, var24);
           }
           if (null != var24.field_w) {
-            jg.a(destinationX, var24, var24.field_w, scaleDivisor, 25, destinationY);
+            BufferedFile.a(destinationX, var24, var24.field_w, scaleDivisor, 25, destinationY);
           }
           if (var24.field_D != null) {
-            jg.a(destinationX, var24, var24.field_D, scaleDivisor, 25, destinationY);
+            BufferedFile.a(destinationX, var24, var24.field_D, scaleDivisor, 25, destinationY);
           }
           var28 = (ScorePopup) (var24.scorePopups.first(-81));
           if (obfuscationGuard < 14) {

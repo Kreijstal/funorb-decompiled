@@ -69,7 +69,7 @@ abstract class qg extends ke {
         hk.a(cd.field_e, (byte) 125);
         GzipInflater.a(param7, this.field_x, this.field_q, this.field_B, 5000, 5000, cd.field_e, this.field_o, lp.field_ub, (byte) 123, param3, this.field_w, this.field_p, this.field_v);
         cr.a(param7, cd.field_e, param0 + 3, this.field_v, lp.field_ub, this.field_x, this.field_p, this.field_o, this.field_B);
-        rn.patchJavaKeyCodeMap(59);
+        BoundedFile.patchJavaKeyCodeMap(59);
         qa.mouseWheelSource = ea.createMouseWheelSource(60);
         ap.a((byte) 117, CacheIoRequest.field_D);
         nd.field_c = param4;

@@ -168,11 +168,11 @@ final class ik implements Iterator {
           var3 = -90 / ((param0 + 28) / 50);
           while (var2 < var1.field_s) {
             if (var5.field_j[var2] != null &&
-              0 == var5.field_j[var2].field_f) {
+              0 == var5.field_j[var2].status) {
               return false;
             }
             if (var5.field_l[var2] != null &&
-              var5.field_l[var2].field_f == 0) {
+              var5.field_l[var2].status == 0) {
               return false;
             }
             var2++;

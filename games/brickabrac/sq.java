@@ -6,8 +6,8 @@ final class sq {
     static String field_a;
     static kb field_c;
 
-    final static void a(tg param0, int param1, java.awt.Frame param2) {
-        ql var3 = null;
+    final static void a(PlatformServices param0, int param1, java.awt.Frame param2) {
+        PlatformTask var3 = null;
         int var4 = 0;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
@@ -20,10 +20,10 @@ final class sq {
         try {
           while (true) {
             var3 = param0.a(10, param2);
-            while (var3.field_f == 0) {
+            while (var3.status == 0) {
               wj.a(param1 ^ 20898, 10L);
             }
-            if (var3.field_f != 1) {
+            if (var3.status != 1) {
               wj.a(-128, 100L);
               continue;
             }
@@ -201,22 +201,22 @@ final class sq {
         if (!pf.field_f) {
           if (!param0) {
             if (GzipInflater.field_g) {
-              if (d.field_H != rn.field_c) {
+              if (d.field_H != BoundedFile.field_c) {
                 bq.field_b.field_l.setLength(0);
                 DelegatingCanvas.a(-9, (long)d.field_H, bq.field_b.field_l);
                 discarded$9 = bq.field_b.field_l.append(" fps");
-                rn.field_c = d.field_H;
+                BoundedFile.field_c = d.field_H;
               }
               ff.field_d.addLast(bq.field_b, (byte) 3);
             }
           } else {
             sq.a(15);
             if (GzipInflater.field_g) {
-              if (d.field_H != rn.field_c) {
+              if (d.field_H != BoundedFile.field_c) {
                 bq.field_b.field_l.setLength(0);
                 DelegatingCanvas.a(-9, (long)d.field_H, bq.field_b.field_l);
                 discarded$8 = bq.field_b.field_l.append(" fps");
-                rn.field_c = d.field_H;
+                BoundedFile.field_c = d.field_H;
               }
               ff.field_d.addLast(bq.field_b, (byte) 3);
             }
@@ -239,22 +239,22 @@ final class sq {
           ff.field_d.addLast(bj.field_P, (byte) 3);
           if (!param0) {
             if (GzipInflater.field_g) {
-              if (d.field_H != rn.field_c) {
+              if (d.field_H != BoundedFile.field_c) {
                 bq.field_b.field_l.setLength(0);
                 DelegatingCanvas.a(-9, (long)d.field_H, bq.field_b.field_l);
                 discarded$13 = bq.field_b.field_l.append(" fps");
-                rn.field_c = d.field_H;
+                BoundedFile.field_c = d.field_H;
               }
               ff.field_d.addLast(bq.field_b, (byte) 3);
             }
           } else {
             sq.a(15);
             if (GzipInflater.field_g) {
-              if (d.field_H != rn.field_c) {
+              if (d.field_H != BoundedFile.field_c) {
                 bq.field_b.field_l.setLength(0);
                 DelegatingCanvas.a(-9, (long)d.field_H, bq.field_b.field_l);
                 discarded$12 = bq.field_b.field_l.append(" fps");
-                rn.field_c = d.field_H;
+                BoundedFile.field_c = d.field_H;
               }
               ff.field_d.addLast(bq.field_b, (byte) 3);
             }
@@ -265,22 +265,22 @@ final class sq {
           ff.field_d.addLast(bj.field_P, (byte) 3);
           if (!param0) {
             if (GzipInflater.field_g) {
-              if (d.field_H != rn.field_c) {
+              if (d.field_H != BoundedFile.field_c) {
                 bq.field_b.field_l.setLength(0);
                 DelegatingCanvas.a(-9, (long)d.field_H, bq.field_b.field_l);
                 discarded$14 = bq.field_b.field_l.append(" fps");
-                rn.field_c = d.field_H;
+                BoundedFile.field_c = d.field_H;
               }
               ff.field_d.addLast(bq.field_b, (byte) 3);
             }
           } else {
             sq.a(15);
             if (GzipInflater.field_g) {
-              if (d.field_H != rn.field_c) {
+              if (d.field_H != BoundedFile.field_c) {
                 bq.field_b.field_l.setLength(0);
                 DelegatingCanvas.a(-9, (long)d.field_H, bq.field_b.field_l);
                 discarded$15 = bq.field_b.field_l.append(" fps");
-                rn.field_c = d.field_H;
+                BoundedFile.field_c = d.field_H;
               }
               ff.field_d.addLast(bq.field_b, (byte) 3);
             }
@@ -297,22 +297,22 @@ final class sq {
         ff.field_d.addLast(bj.field_P, (byte) 3);
         if (!param0) {
           if (GzipInflater.field_g) {
-            if (d.field_H != rn.field_c) {
+            if (d.field_H != BoundedFile.field_c) {
               bq.field_b.field_l.setLength(0);
               DelegatingCanvas.a(-9, (long)d.field_H, bq.field_b.field_l);
               discarded$18 = bq.field_b.field_l.append(" fps");
-              rn.field_c = d.field_H;
+              BoundedFile.field_c = d.field_H;
             }
             ff.field_d.addLast(bq.field_b, (byte) 3);
           }
         } else {
           sq.a(15);
           if (GzipInflater.field_g) {
-            if (d.field_H != rn.field_c) {
+            if (d.field_H != BoundedFile.field_c) {
               bq.field_b.field_l.setLength(0);
               DelegatingCanvas.a(-9, (long)d.field_H, bq.field_b.field_l);
               discarded$19 = bq.field_b.field_l.append(" fps");
-              rn.field_c = d.field_H;
+              BoundedFile.field_c = d.field_H;
             }
             ff.field_d.addLast(bq.field_b, (byte) 3);
           }

@@ -412,7 +412,7 @@ final class eh {
         }
     }
 
-    final static java.awt.Frame a(int param0, tg param1, int param2, int param3, int param4, int param5) {
+    final static java.awt.Frame a(int param0, PlatformServices param1, int param2, int param3, int param4, int param5) {
         int var8 = 0;
         Object stackIn_7_0 = null;
         Object stackIn_38_0 = null;
@@ -427,7 +427,7 @@ final class eh {
         java.awt.Frame var7 = null;
         int var9 = 0;
         hg[] var10 = null;
-        ql var11 = null;
+        PlatformTask var11 = null;
         var9 = BrickABrac.field_J ? 1 : 0;
         try {
           if (!param1.b(-122)) {
@@ -456,17 +456,17 @@ final class eh {
             }
           }
           var11 = param1.a(param0, -35, param2, param4, param5);
-          while (0 == var11.field_f) {
+          while (0 == var11.status) {
             wj.a(-126, 10L);
           }
-          var7 = (java.awt.Frame) (var11.field_e);
+          var7 = (java.awt.Frame) (var11.result);
           if (param3 <= 80) {
             eh.a('4', (byte) 78);
           }
           if (var7 == null) {
             return null;
           }
-          if (var11.field_f != 2) {
+          if (var11.status != 2) {
             stackIn_40_0 = var7;
             return stackIn_40_0;
           }

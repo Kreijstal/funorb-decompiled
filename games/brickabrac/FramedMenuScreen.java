@@ -4,7 +4,7 @@
 class FramedMenuScreen extends MenuScreen {
     static String field_r;
     static String field_t;
-    static tg field_s;
+    static PlatformServices field_s;
 
     FramedMenuScreen(int screenId, int buttonLeft, int buttonRight, int buttonTop, int buttonSpacing, int[] actionIds) {
         super(screenId, buttonLeft, buttonRight, buttonTop, buttonSpacing, actionIds);

@@ -29,7 +29,7 @@ final class GzipInflater {
         ResourceRequest.a(param6, param3, param4, 2, 196, param2, param0, 76, param1);
     }
 
-    final static void a(int param0, String param1, boolean param2, int param3, int param4, int param5, int param6, int param7, tg param8, byte param9, boolean param10, long param11, int param12, int param13) {
+    final static void a(int param0, String param1, boolean param2, int param3, int param4, int param5, int param6, int param7, PlatformServices param8, byte param9, boolean param10, long param11, int param12, int param13) {
         try {
           RuntimeException stackIn_15_0 = null;
           StringBuilder stackIn_15_1 = null;
@@ -60,7 +60,7 @@ final class GzipInflater {
               return;
             }
             try {
-              go.field_a = new jg(FramedMenuScreen.field_s.field_k, 64, 0);
+              go.field_a = new BufferedFile(FramedMenuScreen.field_s.field_k, 64, 0);
               return;
             } catch (java.io.IOException decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;

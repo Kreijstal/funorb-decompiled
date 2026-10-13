@@ -56,7 +56,7 @@ final class DualLinkDeque implements Iterable {
           if (CircleBody.field_p != null) {
             return true;
           }
-          if (!jg.b(true)) {
+          if (!BufferedFile.b(true)) {
             return false;
           }
           return true;
@@ -70,7 +70,7 @@ final class DualLinkDeque implements Iterable {
         if (CircleBody.field_p != null) {
           return true;
         }
-        if (!jg.b(true)) {
+        if (!BufferedFile.b(true)) {
           return false;
         }
         return true;

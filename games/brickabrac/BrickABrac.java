@@ -644,7 +644,7 @@ public final class BrickABrac extends sa {
         ed.a(-104);
         ki.a((byte) 7);
         rb.a((byte) -116);
-        jg.a(-54);
+        BufferedFile.a(-54);
         hc.a(-61);
         m.c(2);
         f.a(1);
@@ -727,7 +727,7 @@ public final class BrickABrac extends sa {
         TimedSplashScreen.f(0);
         ta.a(0);
         np.a(true);
-        rn.b(57);
+        BoundedFile.b(57);
         LegacyUtf8Decoder.clearStaticReferences((byte) 124);
         cp.j((byte) -113);
         tb.m(-48);

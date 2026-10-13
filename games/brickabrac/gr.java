@@ -50,7 +50,7 @@ final class gr {
         RuntimeException var2 = null;
         var3 = BrickABrac.field_J ? 1 : 0;
         try {
-          ti.a(rn.field_l, pe.field_u, wi.field_m, true, 97, param1, 0);
+          ti.a(BoundedFile.field_l, pe.field_u, wi.field_m, true, 97, param1, 0);
           if (param0 != 12429) {
             gr.a(22, -5);
           }

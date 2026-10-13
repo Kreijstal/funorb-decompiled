@@ -319,9 +319,9 @@ final class so {
           for (var10_intLifetime11 = 0; var10_intLifetime11 < ed.field_b.length; var10_intLifetime11++) {
             ed.field_b[var10_intLifetime11] = OptionsScreen.a(2, 2, Integer.toString(-var10_intLifetime11 + 3), true);
           }
-          rn.field_a = new RgbSprite[tf.field_g.length];
-          for (var10_intLifetime12 = 0; rn.field_a.length > var10_intLifetime12; var10_intLifetime12++) {
-            rn.field_a[var10_intLifetime12] = p.a(pn.a(param3, -29147), tf.field_g[var10_intLifetime12], 14, 16755200);
+          BoundedFile.field_a = new RgbSprite[tf.field_g.length];
+          for (var10_intLifetime12 = 0; BoundedFile.field_a.length > var10_intLifetime12; var10_intLifetime12++) {
+            BoundedFile.field_a[var10_intLifetime12] = p.a(pn.a(param3, -29147), tf.field_g[var10_intLifetime12], 14, 16755200);
           }
           lk.field_n = new RgbSprite[tf.field_g.length];
           for (var10_intLifetime13 = 0; var10_intLifetime13 < lk.field_n.length; var10_intLifetime13++) {

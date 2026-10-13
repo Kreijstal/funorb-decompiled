@@ -13,7 +13,7 @@ final class lj extends IntrusiveNode {
     static TextFont field_r;
     static int field_i;
 
-    final static hg[] a(boolean param0, tg param1) {
+    final static hg[] a(boolean param0, PlatformServices param1) {
         int var5 = 0;
         hg[] stackIn_4_0 = null;
         hg[] stackIn_10_0 = null;
@@ -28,7 +28,7 @@ final class lj extends IntrusiveNode {
         hg[] var4 = null;
         hg var6 = null;
         int var7 = 0;
-        ql var8 = null;
+        PlatformTask var8 = null;
         int[] var9 = null;
         int[] var10 = null;
         var7 = BrickABrac.field_J ? 1 : 0;
@@ -38,10 +38,10 @@ final class lj extends IntrusiveNode {
             return stackIn_4_0;
           }
           var8 = param1.a(0);
-          while (var8.field_f == 0) {
+          while (var8.status == 0) {
             wj.a(-128, 10L);
           }
-          if (var8.field_f == 2) {
+          if (var8.status == 2) {
             stackIn_10_0 = new hg[]{};
             return stackIn_10_0;
           }
@@ -49,7 +49,7 @@ final class lj extends IntrusiveNode {
             stackIn_13_0 = (hg[]) null;
             return stackIn_13_0;
           }
-          var10 = (int[]) (var8.field_e);
+          var10 = (int[]) (var8.result);
           var9 = var10;
           var3 = var9;
           var4 = new hg[var10.length >> 2];
@@ -176,8 +176,8 @@ final class lj extends IntrusiveNode {
         BufferedSocket.field_m = param2;
         TooltipSprite.field_i = param0;
         if (param3 != 0) {
-          tg var6 = (tg) null;
-          lj.a(true, (tg) null);
+          PlatformServices var6 = (PlatformServices) null;
+          lj.a(true, (PlatformServices) null);
         }
         field_i = param1;
     }

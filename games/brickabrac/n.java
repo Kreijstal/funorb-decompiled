@@ -76,8 +76,8 @@ final class n {
         try {
           if (go.field_a != null) {
             try {
-              go.field_a.a(0, 0L);
-              go.field_a.a(jl.field_e.data, jl.field_e.position, 24, -1);
+              go.field_a.seek(0, 0L);
+              go.field_a.write(jl.field_e.data, jl.field_e.position, 24, -1);
             } catch (Exception exception) {
             }
           }

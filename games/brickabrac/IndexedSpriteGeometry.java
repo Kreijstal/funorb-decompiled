@@ -3,7 +3,7 @@
  */
 abstract class IndexedSpriteGeometry {
     int height;
-    static ql field_e;
+    static PlatformTask field_e;
     static String field_c;
     int canvasHeight;
     int offsetX;

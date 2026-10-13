@@ -84,7 +84,7 @@ final class GameplayAudioEvent extends IntrusiveNode {
             }
             if (oc.field_k != null) {
               try {
-                oc.field_k.a(false);
+                oc.field_k.close(false);
               } catch (java.io.IOException decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
                 iOException = (IOException) (Object) decompiledCaughtException;
@@ -94,7 +94,7 @@ final class GameplayAudioEvent extends IntrusiveNode {
               for (var1_int = 0; var1_int < ClientException.field_g.length; var1_int++) {
                 if (null != ClientException.field_g[var1_int]) {
                   try {
-                    ClientException.field_g[var1_int].a(false);
+                    ClientException.field_g[var1_int].close(false);
                   } catch (java.io.IOException decompiledCaughtParameter1) {
                     decompiledCaughtException = decompiledCaughtParameter1;
                     var2 = (IOException) (Object) decompiledCaughtException;

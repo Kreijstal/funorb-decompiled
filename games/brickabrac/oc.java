@@ -6,7 +6,7 @@ import java.util.*;
 class oc extends IntrusiveNode {
     int field_r;
     ep field_j;
-    static jg field_k;
+    static BufferedFile field_k;
     int field_n;
     int field_s;
     static String[] field_v;
@@ -607,7 +607,7 @@ class oc extends IntrusiveNode {
         o.field_d = 0;
     }
 
-    final static void a(tg param0, byte param1, java.awt.Canvas param2) {
+    final static void a(PlatformServices param0, byte param1, java.awt.Canvas param2) {
         try {
           sj.field_f = new ie();
           sj.field_f.b(0, 9, 128);
@@ -891,7 +891,7 @@ class oc extends IntrusiveNode {
           ((BitPacketBuffer) (Object) stackIn_2_0).writeByte(stackIn_2_1, stackIn_3_2);
           k.field_h.backfillByteLength((byte) 114, -var7_int + k.field_h.position);
           if (param3 != 1) {
-            field_k = (jg) null;
+            field_k = (BufferedFile) null;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
