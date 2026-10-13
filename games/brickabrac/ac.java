@@ -89,7 +89,7 @@ final class ac {
             var8 = param0[1].canvasWidth;
             param0[0].e(param2, param1, param4);
             param0[2].e(param3 + (param2 - var7), param1, param4);
-            Rasterizer2D.saveClip(pb.field_n);
+            Rasterizer2D.saveClip(RasterCacheSurface.field_n);
             Rasterizer2D.intersectClip(param2 + var6_int, param1, -var7 + param2 + param3, param1 + param0[1].canvasHeight);
             var9 = param2 + var6_int;
             var10 = -var7 + param3 + param2;
@@ -99,7 +99,7 @@ final class ac {
             for (param2 = var9; param2 < var10; param2 = param2 + var8) {
               param0[1].e(param2, param1, param4);
             }
-            Rasterizer2D.restoreClip(pb.field_n);
+            Rasterizer2D.restoreClip(RasterCacheSurface.field_n);
             return;
           }
           return;
@@ -113,7 +113,7 @@ final class ac {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw qb.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw qb.addExceptionContext((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 
@@ -123,7 +123,7 @@ final class ac {
         try {
           this.field_g = param0;
         } catch (RuntimeException runtimeException) {
-          throw qb.a((Throwable) ((Object) runtimeException), "ac.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "ac.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

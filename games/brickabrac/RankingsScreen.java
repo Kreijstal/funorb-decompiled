@@ -91,17 +91,17 @@ final class RankingsScreen extends MenuScreen {
         }
     }
 
-    final static void a(pb param0, int param1, int param2, RgbSprite param3, int param4, int param5) {
+    final static void a(RasterCacheSurface param0, int param1, int param2, RgbSprite param3, int param4, int param5) {
         try {
-          IndexedSpriteGeometry.a(-59, param0.field_p);
+          IndexedSpriteGeometry.pushSpriteRaster(-59, param0.sprite);
           if (param5 < 39) {
             RankingsScreen.a(true, 49, true);
           }
-          Rasterizer2D.fillVerticalGradient(0, 0, param0.field_i, param0.field_q, kg.field_i[param4], 16777215);
-          param3.b((-param3.canvasWidth + param0.field_i) / 2 - 50 / param1, -(189 / param1) + (-param3.canvasHeight + param0.field_q) + param2, 55, 83);
-          sc.b(-94);
+          Rasterizer2D.fillVerticalGradient(0, 0, param0.width, param0.height, kg.field_i[param4], 16777215);
+          param3.b((-param3.canvasWidth + param0.width) / 2 - 50 / param1, -(189 / param1) + (-param3.canvasHeight + param0.height) + param2, 55, 83);
+          sc.popRaster(-94);
         } catch (RuntimeException runtimeException) {
-          throw qb.a((Throwable) ((Object) runtimeException), "lf.G(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ')');
+          throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "lf.G(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ')');
         }
     }
 
@@ -155,7 +155,7 @@ final class RankingsScreen extends MenuScreen {
     final static void f(int param0) {
         if (param0 != -1) {
           RgbSprite var2 = (RgbSprite) null;
-          RankingsScreen.a((pb) null, -117, -10, (RgbSprite) null, -120, 52);
+          RankingsScreen.a((RasterCacheSurface) null, -117, -10, (RgbSprite) null, -120, 52);
         }
         ag.f((byte) 122);
     }

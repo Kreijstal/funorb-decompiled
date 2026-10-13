@@ -53,7 +53,7 @@ abstract class ug extends ib implements je {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw qb.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param9).append(',').append(param10).append(',').append(param11).append(',').append(param12).append(')').toString());
+          throw qb.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param9).append(',').append(param10).append(',').append(param11).append(',').append(param12).append(')').toString());
         }
     }
 
@@ -76,7 +76,7 @@ abstract class ug extends ib implements je {
             this.field_H = (an) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw qb.a((Throwable) ((Object) runtimeException), "ug.N(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "ug.N(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

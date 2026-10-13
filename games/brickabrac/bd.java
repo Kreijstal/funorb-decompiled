@@ -33,7 +33,7 @@ final class bd implements ub {
           }
           ke.a(param0, param2, param1 + 14964);
         } catch (RuntimeException runtimeException) {
-          throw qb.a((Throwable) ((Object) runtimeException), "bd.F(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "bd.F(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -97,11 +97,11 @@ final class bd implements ub {
           } else {
             stackIn_36_2 = "{...}";
           }
-          throw qb.a((Throwable) ((Object) stackIn_35_0), ((StringBuilder) (Object) stackIn_35_1).append(stackIn_36_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw qb.addExceptionContext((Throwable) ((Object) stackIn_35_0), ((StringBuilder) (Object) stackIn_35_1).append(stackIn_36_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
-    final static RgbSprite[] a(String param0, String param1, mf param2, byte param3) {
+    final static RgbSprite[] loadRgbSpritesByName(String groupName, String fileName, mf archive, byte obfuscationGuard) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -116,37 +116,37 @@ final class bd implements ub {
         String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var4_int = param2.a(param0, false);
-          if (param3 != -8) {
+          var4_int = archive.a(groupName, false);
+          if (obfuscationGuard != -8) {
             stackIn_2_0 = (RgbSprite[]) null;
             return stackIn_2_0;
           }
-          var5 = param2.a(var4_int, -46, param1);
-          stackIn_4_0 = qa.a(var5, var4_int, param2, true);
+          var5 = archive.a(var4_int, -46, fileName);
+          stackIn_4_0 = qa.loadRgbSprites(var5, var4_int, archive, true);
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
           stackIn_7_0 = var4;
           stackIn_7_1 = new StringBuilder().append("bd.C(");
-          if (param0 == null) {
+          if (groupName == null) {
             stackIn_8_2 = "null";
           } else {
             stackIn_8_2 = "{...}";
           }
           stackIn_10_1 = ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',');
-          if (param1 == null) {
+          if (fileName == null) {
             stackIn_11_2 = "null";
           } else {
             stackIn_11_2 = "{...}";
           }
           stackIn_13_1 = ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',');
-          if (param2 == null) {
+          if (archive == null) {
             stackIn_14_2 = "null";
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw qb.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param3).append(')').toString());
+          throw qb.addExceptionContext((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 
@@ -186,7 +186,7 @@ final class bd implements ub {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw qb.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param4).append(')').toString());
+          throw qb.addExceptionContext((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param4).append(')').toString());
         }
     }
 

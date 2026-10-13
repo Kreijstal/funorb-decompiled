@@ -21,7 +21,7 @@ abstract class hb extends DualLinkNode {
           param0.field_v = new int[]{-1};
           param0.field_u = new char[]{(char)63};
         } catch (RuntimeException runtimeException) {
-          throw qb.a((Throwable) ((Object) runtimeException), "hb.G(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "hb.G(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

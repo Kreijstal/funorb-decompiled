@@ -17,18 +17,18 @@ final class sc {
         field_a = null;
     }
 
-    final static void b(int param0) {
-        if (param0 > -75) {
+    final static void popRaster(int obfuscationGuard) {
+        if (obfuscationGuard > -75) {
           return;
         }
-        ii var1 = (ii) (hi.field_v.removeLast(113));
-        if (var1 == null) {
+        RasterSnapshot snapshot = (RasterSnapshot) (hi.rasterStack.removeLast(113));
+        if (snapshot == null) {
           throw new IllegalStateException();
         }
-        Rasterizer2D.bind(var1.field_i, var1.field_m, var1.field_p);
-        Rasterizer2D.setClip(var1.field_n, var1.field_o, var1.field_t, var1.field_k);
-        var1.field_i = null;
-        fr.field_M.addLast(var1, (byte) 3);
+        Rasterizer2D.bind(snapshot.pixels, snapshot.width, snapshot.height);
+        Rasterizer2D.setClip(snapshot.clipLeft, snapshot.clipTop, snapshot.clipRight, snapshot.clipBottom);
+        snapshot.pixels = null;
+        fr.rasterSnapshotPool.addLast(snapshot, (byte) 3);
     }
 
     static {

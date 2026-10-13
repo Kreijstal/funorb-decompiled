@@ -305,7 +305,7 @@ final class MenuSelection {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
-          throw qb.a((Throwable) ((Object) runtimeException), "re.P(" + param0 + ')');
+          throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "re.P(" + param0 + ')');
         }
     }
 

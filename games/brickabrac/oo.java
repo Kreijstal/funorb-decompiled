@@ -26,7 +26,7 @@ final class oo extends ki {
     }
 
     final void a(int param0, byte param1, int param2, int param3, int param4) {
-        pb var7 = null;
+        RasterCacheSurface var7 = null;
         if (param1 > -84) {
           this.b(33);
           if (!this.b((byte) -128)) {
@@ -34,29 +34,29 @@ final class oo extends ki {
             return;
           }
           var7 = kd.a(this.field_m, param3, (byte) -50);
-          if (!var7.a((byte) -84, param3, this.field_m)) {
+          if (!var7.matchesCacheKeys((byte) -84, param3, this.field_m)) {
             SoundPlayback.a(-35, 26746, var7, param3, 2, rg.field_f);
-            var7.a(this.field_m, param3, (byte) 78);
+            var7.setCacheKeys(this.field_m, param3, (byte) 78);
           } else {
-            ua.a(th.field_i, param2, 306, param0, ek.field_hb, 79, var7.field_p, param4, param3, 2, up.field_w, -35);
+            ua.a(th.field_i, param2, 306, param0, ek.field_hb, 79, var7.sprite, param4, param3, 2, up.field_w, -35);
             return;
           }
-          ua.a(th.field_i, param2, 306, param0, ek.field_hb, 79, var7.field_p, param4, param3, 2, up.field_w, -35);
+          ua.a(th.field_i, param2, 306, param0, ek.field_hb, 79, var7.sprite, param4, param3, 2, up.field_w, -35);
           return;
         }
         if (!this.b((byte) -128)) {
           Rasterizer2D.fillRectangle(param2, param0, 306, 480, 16777215);
           return;
         }
-        pb var8 = kd.a(this.field_m, param3, (byte) -50);
-        if (!var8.a((byte) -84, param3, this.field_m)) {
+        RasterCacheSurface var8 = kd.a(this.field_m, param3, (byte) -50);
+        if (!var8.matchesCacheKeys((byte) -84, param3, this.field_m)) {
           SoundPlayback.a(-35, 26746, var8, param3, 2, rg.field_f);
-          var8.a(this.field_m, param3, (byte) 78);
+          var8.setCacheKeys(this.field_m, param3, (byte) 78);
         } else {
-          ua.a(th.field_i, param2, 306, param0, ek.field_hb, 79, var8.field_p, param4, param3, 2, up.field_w, -35);
+          ua.a(th.field_i, param2, 306, param0, ek.field_hb, 79, var8.sprite, param4, param3, 2, up.field_w, -35);
           return;
         }
-        ua.a(th.field_i, param2, 306, param0, ek.field_hb, 79, var8.field_p, param4, param3, 2, up.field_w, -35);
+        ua.a(th.field_i, param2, 306, param0, ek.field_hb, 79, var8.sprite, param4, param3, 2, up.field_w, -35);
     }
 
     final RgbSprite a(boolean param0, int param1) {
@@ -72,23 +72,23 @@ final class oo extends ki {
         if (!AchievementIcon.field_m.a("chocolate", -28138)) {
           return false;
         }
-        nl.field_d = pl.a("chocolate", "chocolate_near", (byte) 114, AchievementIcon.field_m);
-        field_x = pl.a("chocolate", "chocolate_mid", (byte) 123, AchievementIcon.field_m);
-        ad.field_b = pl.a("chocolate", "chocolate_spires", (byte) -53, AchievementIcon.field_m);
-        rg.field_f = pl.a("chocolate", "chocolate_far", (byte) 127, AchievementIcon.field_m);
+        nl.field_d = pl.loadRgbSpriteByName("chocolate", "chocolate_near", (byte) 114, AchievementIcon.field_m);
+        field_x = pl.loadRgbSpriteByName("chocolate", "chocolate_mid", (byte) 123, AchievementIcon.field_m);
+        ad.field_b = pl.loadRgbSpriteByName("chocolate", "chocolate_spires", (byte) -53, AchievementIcon.field_m);
+        rg.field_f = pl.loadRgbSpriteByName("chocolate", "chocolate_far", (byte) 127, AchievementIcon.field_m);
         th.field_i = jh.a(0, nl.field_d);
         ek.field_hb = jh.a(0, field_x);
         up.field_w = jh.a(0, ad.field_b);
-        u.field_c = pl.a("chocolate", "chocolate_small_far", (byte) -36, AchievementIcon.field_m);
-        dj.field_a = pl.a("chocolate", "chocolate_small_near", (byte) -69, AchievementIcon.field_m);
-        dc.field_c = pl.a("chocolate", "chocolate_character", (byte) 101, AchievementIcon.field_m);
-        Brick.field_I[0] = cr.a("chocolate", AchievementIcon.field_m, "choc_caps", 2);
-        aj.field_a[0] = cr.a("chocolate", AchievementIcon.field_m, "choc_segs", 2);
-        lm.field_e[0] = pl.a("chocolate", "choc_centre", (byte) -126, AchievementIcon.field_m);
+        u.field_c = pl.loadRgbSpriteByName("chocolate", "chocolate_small_far", (byte) -36, AchievementIcon.field_m);
+        dj.field_a = pl.loadRgbSpriteByName("chocolate", "chocolate_small_near", (byte) -69, AchievementIcon.field_m);
+        dc.field_c = pl.loadRgbSpriteByName("chocolate", "chocolate_character", (byte) 101, AchievementIcon.field_m);
+        Brick.field_I[0] = cr.loadRgbSpritesByName("chocolate", AchievementIcon.field_m, "choc_caps", 2);
+        aj.field_a[0] = cr.loadRgbSpritesByName("chocolate", AchievementIcon.field_m, "choc_segs", 2);
+        lm.field_e[0] = pl.loadRgbSpriteByName("chocolate", "choc_centre", (byte) -126, AchievementIcon.field_m);
         Brick.field_I[1] = ig.a(Brick.field_I[0], param0);
         aj.field_a[1] = ig.a(aj.field_a[0], param0);
         lm.field_e[1] = pl.a(-16371, lm.field_e[0]);
-        gq.field_Ub = cr.a("chocolate", AchievementIcon.field_m, "choc_lever", 2);
+        gq.field_Ub = cr.loadRgbSpritesByName("chocolate", AchievementIcon.field_m, "choc_lever", 2);
         return true;
     }
 
@@ -139,14 +139,14 @@ final class oo extends ki {
     }
 
     final void a(boolean param0, int param1, int param2, int param3, int param4) {
-        pb var6 = null;
+        RasterCacheSurface var6 = null;
         if (this.b((byte) -112)) {
           var6 = PowerUp.a(this.field_m, param3, -20777);
-          if (!var6.a((byte) -84, param3, this.field_m)) {
+          if (!var6.matchesCacheKeys((byte) -84, param3, this.field_m)) {
             SoundPlayback.a(0, 26746, var6, param3, 1, rg.field_f);
-            var6.a(this.field_m, param3, (byte) 78);
+            var6.setCacheKeys(this.field_m, param3, (byte) 78);
           }
-          ua.a(nl.field_d, param4, 640, param2, field_x, 95, var6.field_p, param1, param3, 1, ad.field_b, 0);
+          ua.a(nl.field_d, param4, 640, param2, field_x, 95, var6.sprite, param1, param3, 1, ad.field_b, 0);
           if (!param0) {
             field_t = (String) null;
             return;
@@ -172,7 +172,7 @@ final class oo extends ki {
           lm.field_e = new RgbSprite[2];
           Brick.field_I = new RgbSprite[2][];
         } catch (RuntimeException runtimeException) {
-          throw qb.a((Throwable) ((Object) runtimeException), "oo.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
+          throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "oo.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 
@@ -253,7 +253,7 @@ final class oo extends ki {
             } else {
               stackIn_9_2 = "{...}";
             }
-            throw qb.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
+            throw qb.addExceptionContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;

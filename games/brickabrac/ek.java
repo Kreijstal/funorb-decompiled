@@ -8,7 +8,7 @@ final class ek extends bj implements en {
     static int field_kb;
     static String field_gb;
     static int keyChangeReadIndex;
-    static int field_db;
+    static int decodedCanvasHeight;
     static RgbSprite field_hb;
     private d field_ib;
     static String[] field_eb;
@@ -57,7 +57,7 @@ final class ek extends bj implements en {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw qb.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw qb.addExceptionContext((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 
@@ -115,7 +115,7 @@ final class ek extends bj implements en {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw qb.a((Throwable) (stackIn_12_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
+          throw qb.addExceptionContext((Throwable) (stackIn_12_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
         }
     }
 
@@ -166,7 +166,7 @@ final class ek extends bj implements en {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw qb.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+          throw qb.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 
@@ -206,7 +206,7 @@ final class ek extends bj implements en {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw qb.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
+          throw qb.addExceptionContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
         }
     }
 
@@ -245,7 +245,7 @@ final class ek extends bj implements en {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw qb.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param2).append(')').toString());
+          throw qb.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param2).append(')').toString());
         }
     }
 

@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class nl {
-    static int field_c;
+    static int decodedSpriteCount;
     static RgbSprite field_d;
     static mf field_a;
     static om field_f;
@@ -107,7 +107,7 @@ final class nl {
           } else {
             stackIn_39_2 = "{...}";
           }
-          throw qb.a((Throwable) ((Object) stackIn_38_0), ((StringBuilder) (Object) stackIn_38_1).append(stackIn_39_2).append(',').append(param1).append(')').toString());
+          throw qb.addExceptionContext((Throwable) ((Object) stackIn_38_0), ((StringBuilder) (Object) stackIn_38_1).append(stackIn_39_2).append(',').append(param1).append(')').toString());
         }
     }
 

@@ -31,7 +31,7 @@ final class LevelMetadata extends IntrusiveNode {
           this.attributeWord = packet.readInt(obfuscationGuard ^ -12869);
           this.title = packet.readLegacyUtf8String((byte) 24);
         } catch (RuntimeException runtimeException) {
-          throw qb.a((Throwable) ((Object) runtimeException), "wk.B(" + obfuscationGuard + ',' + (packet != null ? "{...}" : "null") + ')');
+          throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "wk.B(" + obfuscationGuard + ',' + (packet != null ? "{...}" : "null") + ')');
         }
     }
 

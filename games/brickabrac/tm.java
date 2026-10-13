@@ -3,7 +3,7 @@
  */
 final class tm {
     private static long[] field_c;
-    static boolean[] field_b;
+    static boolean[] decodedSpriteHasAlpha;
     static String field_h;
     static NodeDeque field_f;
     static int field_a;
@@ -99,7 +99,7 @@ final class tm {
           } else {
             stackIn_34_2 = "{...}";
           }
-          throw qb.a((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_33_1).append(stackIn_34_2).append(')').toString());
+          throw qb.addExceptionContext((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_33_1).append(stackIn_34_2).append(')').toString());
         }
     }
 
@@ -157,14 +157,14 @@ final class tm {
             }
           }
           if (param0 != 110) {
-            field_b = (boolean[]) null;
+            decodedSpriteHasAlpha = (boolean[]) null;
           }
           cr.a(param1, 10000);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw qb.a((Throwable) ((Object) var2), "tm.D(" + param0 + ',' + param1 + ')');
+          throw qb.addExceptionContext((Throwable) ((Object) var2), "tm.D(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -174,7 +174,7 @@ final class tm {
         if (!param0) {
           return;
         }
-        field_b = null;
+        decodedSpriteHasAlpha = null;
         field_f = null;
         field_e = null;
         field_d = null;

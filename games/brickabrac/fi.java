@@ -10,7 +10,7 @@ final class fi extends ki {
     static String field_v;
 
     final void a(int param0, byte param1, int param2, int param3, int param4) {
-        pb var8 = null;
+        RasterCacheSurface var8 = null;
         if (param1 >= -84) {
           this.a(false, 56, -90, -99, 75);
           if (!this.b((byte) -111)) {
@@ -18,27 +18,27 @@ final class fi extends ki {
             return;
           }
           var8 = kd.a(this.field_m, param3, (byte) 107);
-          if (!var8.a((byte) -84, param3, this.field_m)) {
+          if (!var8.matchesCacheKeys((byte) -84, param3, this.field_m)) {
             dk.a(2, param3, var8, -35, 23275, Brick.field_K);
-            var8.a(this.field_m, param3, (byte) 78);
-            SpriteGeometry.a(var8.field_p, 306, param0, param2, param3, param4, un.field_d, 2, jl.field_d, 1, -35);
+            var8.setCacheKeys(this.field_m, param3, (byte) 78);
+            SpriteGeometry.a(var8.sprite, 306, param0, param2, param3, param4, un.field_d, 2, jl.field_d, 1, -35);
             return;
           }
-          SpriteGeometry.a(var8.field_p, 306, param0, param2, param3, param4, un.field_d, 2, jl.field_d, 1, -35);
+          SpriteGeometry.a(var8.sprite, 306, param0, param2, param3, param4, un.field_d, 2, jl.field_d, 1, -35);
           return;
         }
         if (!this.b((byte) -111)) {
           Rasterizer2D.fillVerticalGradient(param2, param0, 306, 480, pf.field_b[param3], 16777215);
           return;
         }
-        pb var9 = kd.a(this.field_m, param3, (byte) 107);
-        if (var9.a((byte) -84, param3, this.field_m)) {
-          SpriteGeometry.a(var9.field_p, 306, param0, param2, param3, param4, un.field_d, 2, jl.field_d, 1, -35);
+        RasterCacheSurface var9 = kd.a(this.field_m, param3, (byte) 107);
+        if (var9.matchesCacheKeys((byte) -84, param3, this.field_m)) {
+          SpriteGeometry.a(var9.sprite, 306, param0, param2, param3, param4, un.field_d, 2, jl.field_d, 1, -35);
           return;
         }
         dk.a(2, param3, var9, -35, 23275, Brick.field_K);
-        var9.a(this.field_m, param3, (byte) 78);
-        SpriteGeometry.a(var9.field_p, 306, param0, param2, param3, param4, un.field_d, 2, jl.field_d, 1, -35);
+        var9.setCacheKeys(this.field_m, param3, (byte) 78);
+        SpriteGeometry.a(var9.sprite, 306, param0, param2, param3, param4, un.field_d, 2, jl.field_d, 1, -35);
     }
 
     final void a(byte param0, int param1, int param2, int param3) {
@@ -97,7 +97,7 @@ final class fi extends ki {
           ObjectHistoryBuffer.field_o = new RgbSprite[2][];
           ja.field_a = new RgbSprite[2][];
         } catch (RuntimeException runtimeException) {
-          throw qb.a((Throwable) ((Object) runtimeException), "fi.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
+          throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "fi.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 
@@ -142,19 +142,19 @@ final class fi extends ki {
           }
           return;
         }
-        pb var6 = PowerUp.a(this.field_m, param3, -20777);
-        if (!var6.a((byte) -84, param3, this.field_m)) {
+        RasterCacheSurface var6 = PowerUp.a(this.field_m, param3, -20777);
+        if (!var6.matchesCacheKeys((byte) -84, param3, this.field_m)) {
           dk.a(1, param3, var6, 0, 23275, hk.field_I);
-          var6.a(this.field_m, param3, (byte) 78);
+          var6.setCacheKeys(this.field_m, param3, (byte) 78);
         } else {
-          SpriteGeometry.a(var6.field_p, 640, param2, param4, param3, param1, s.field_d, 1, kc.field_r, 1, 0);
+          SpriteGeometry.a(var6.sprite, 640, param2, param4, param3, param1, s.field_d, 1, kc.field_r, 1, 0);
           if (!param0) {
             this.a(false);
             return;
           }
           return;
         }
-        SpriteGeometry.a(var6.field_p, 640, param2, param4, param3, param1, s.field_d, 1, kc.field_r, 1, 0);
+        SpriteGeometry.a(var6.sprite, 640, param2, param4, param3, param1, s.field_d, 1, kc.field_r, 1, 0);
         if (param0) {
           return;
         }
@@ -163,16 +163,16 @@ final class fi extends ki {
 
     final boolean a(boolean param0) {
         if (AchievementIcon.field_m.a("arctic", -28138)) {
-          s.field_d = pl.a("arctic", "arctic_near", (byte) 117, AchievementIcon.field_m);
-          kc.field_r = pl.a("arctic", "arctic_mid", (byte) -79, AchievementIcon.field_m);
-          hk.field_I = pl.a("arctic", "arctic_far", (byte) 112, AchievementIcon.field_m);
-          be.field_d = pl.a("arctic", "arctic_small", (byte) -44, AchievementIcon.field_m);
+          s.field_d = pl.loadRgbSpriteByName("arctic", "arctic_near", (byte) 117, AchievementIcon.field_m);
+          kc.field_r = pl.loadRgbSpriteByName("arctic", "arctic_mid", (byte) -79, AchievementIcon.field_m);
+          hk.field_I = pl.loadRgbSpriteByName("arctic", "arctic_far", (byte) 112, AchievementIcon.field_m);
+          be.field_d = pl.loadRgbSpriteByName("arctic", "arctic_small", (byte) -44, AchievementIcon.field_m);
           un.field_d = jh.a(0, s.field_d);
           jl.field_d = jh.a(0, kc.field_r);
           Brick.field_K = jh.a(0, hk.field_I);
-          ObjectHistoryBuffer.field_o[0] = cr.a("arctic", AchievementIcon.field_m, "arctic_caps", 2);
-          ja.field_a[0] = cr.a("arctic", AchievementIcon.field_m, "arctic_segs", 2);
-          ga.field_k[0] = pl.a("arctic", "arctic_centre", (byte) -115, AchievementIcon.field_m);
+          ObjectHistoryBuffer.field_o[0] = cr.loadRgbSpritesByName("arctic", AchievementIcon.field_m, "arctic_caps", 2);
+          ja.field_a[0] = cr.loadRgbSpritesByName("arctic", AchievementIcon.field_m, "arctic_segs", 2);
+          ga.field_k[0] = pl.loadRgbSpriteByName("arctic", "arctic_centre", (byte) -115, AchievementIcon.field_m);
           ObjectHistoryBuffer.field_o[1] = ig.a(ObjectHistoryBuffer.field_o[0], param0);
           ja.field_a[1] = ig.a(ja.field_a[0], false);
           ga.field_k[1] = pl.a(-16371, ga.field_k[0]);

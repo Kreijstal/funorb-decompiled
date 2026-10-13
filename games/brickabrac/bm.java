@@ -150,7 +150,7 @@ final class bm {
           } else {
             stackIn_59_2 = "{...}";
           }
-          throw qb.a((Throwable) ((Object) stackIn_58_0), ((StringBuilder) (Object) stackIn_58_1).append(stackIn_59_2).append(')').toString());
+          throw qb.addExceptionContext((Throwable) ((Object) stackIn_58_0), ((StringBuilder) (Object) stackIn_58_1).append(stackIn_59_2).append(')').toString());
         }
     }
 
@@ -210,7 +210,7 @@ final class bm {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw qb.a((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
+          throw qb.addExceptionContext((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
         }
     }
 
@@ -266,7 +266,7 @@ final class bm {
           } else {
             stackIn_23_2 = "{...}";
           }
-          throw qb.a((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param7).append(')').toString());
+          throw qb.addExceptionContext((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param7).append(')').toString());
         }
     }
 
@@ -404,7 +404,7 @@ final class bm {
           } else {
             stackIn_90_2 = "{...}";
           }
-          throw qb.a((Throwable) ((Object) stackIn_89_0), ((StringBuilder) (Object) stackIn_89_1).append(stackIn_90_2).append(')').toString());
+          throw qb.addExceptionContext((Throwable) ((Object) stackIn_89_0), ((StringBuilder) (Object) stackIn_89_1).append(stackIn_90_2).append(')').toString());
         }
     }
 
@@ -489,7 +489,7 @@ final class bm {
           } else {
             stackIn_35_2 = "{...}";
           }
-          throw qb.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_34_1).append(stackIn_35_2).append(')').toString());
+          throw qb.addExceptionContext((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_34_1).append(stackIn_35_2).append(')').toString());
         }
     }
 
@@ -502,7 +502,7 @@ final class bm {
           int var1_int = -21 / ((param0 + 44) / 60);
           field_a = (byte[][][]) null;
         } catch (RuntimeException runtimeException) {
-          throw qb.a((Throwable) ((Object) runtimeException), "bm.F(" + param0 + ')');
+          throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "bm.F(" + param0 + ')');
         }
     }
 

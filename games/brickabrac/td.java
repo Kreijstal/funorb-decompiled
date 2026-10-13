@@ -23,7 +23,7 @@ final class td extends ki {
           np.field_c = new RgbSprite[2][];
           kg.field_a = new RgbSprite[2][];
         } catch (RuntimeException runtimeException) {
-          throw qb.a((Throwable) ((Object) runtimeException), "td.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
+          throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "td.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 
@@ -31,7 +31,7 @@ final class td extends ki {
         if (param0 > -91) {
           return true;
         }
-        if (pb.field_j == null) {
+        if (RasterCacheSurface.field_j == null) {
           return false;
         }
         if (null == cp.field_I) {
@@ -50,16 +50,16 @@ final class td extends ki {
         if (!AchievementIcon.field_m.a("volcanic", -28138)) {
           return false;
         }
-        pb.field_j = pl.a("volcanic", "volcanic_near", (byte) -127, AchievementIcon.field_m);
-        cp.field_I = pl.a("volcanic", "volcanic_mid", (byte) -73, AchievementIcon.field_m);
-        se.field_k = pl.a("volcanic", "volcanic_far", (byte) -125, AchievementIcon.field_m);
-        mc.field_f = pl.a("volcanic", "volcanic_small", (byte) -77, AchievementIcon.field_m);
-        cg.field_q = jh.a(0, pb.field_j);
+        RasterCacheSurface.field_j = pl.loadRgbSpriteByName("volcanic", "volcanic_near", (byte) -127, AchievementIcon.field_m);
+        cp.field_I = pl.loadRgbSpriteByName("volcanic", "volcanic_mid", (byte) -73, AchievementIcon.field_m);
+        se.field_k = pl.loadRgbSpriteByName("volcanic", "volcanic_far", (byte) -125, AchievementIcon.field_m);
+        mc.field_f = pl.loadRgbSpriteByName("volcanic", "volcanic_small", (byte) -77, AchievementIcon.field_m);
+        cg.field_q = jh.a(0, RasterCacheSurface.field_j);
         gq.field_Sb = jh.a(0, cp.field_I);
         RectangleBody.field_p = jh.a(0, se.field_k);
-        kg.field_a[0] = cr.a("volcanic", AchievementIcon.field_m, "volcanic_caps", 2);
-        np.field_c[0] = cr.a("volcanic", AchievementIcon.field_m, "volcanic_segs", 2);
-        LevelList.field_e[0] = pl.a("volcanic", "volcanic_centre", (byte) -67, AchievementIcon.field_m);
+        kg.field_a[0] = cr.loadRgbSpritesByName("volcanic", AchievementIcon.field_m, "volcanic_caps", 2);
+        np.field_c[0] = cr.loadRgbSpritesByName("volcanic", AchievementIcon.field_m, "volcanic_segs", 2);
+        LevelList.field_e[0] = pl.loadRgbSpriteByName("volcanic", "volcanic_centre", (byte) -67, AchievementIcon.field_m);
         kg.field_a[1] = ig.a(kg.field_a[0], false);
         np.field_c[1] = ig.a(np.field_c[0], param0);
         LevelList.field_e[1] = pl.a(-16371, LevelList.field_e[0]);
@@ -95,16 +95,16 @@ final class td extends ki {
     }
 
     final void a(boolean param0, int param1, int param2, int param3, int param4) {
-        pb var6 = null;
+        RasterCacheSurface var6 = null;
         if (!this.b((byte) -92)) {
           Rasterizer2D.fillVerticalGradient(param4, param2, 640, 480, hh.field_c[param3], 10792131);
         } else {
           var6 = PowerUp.a(this.field_m, param3, -20777);
-          if (!var6.a((byte) -84, param3, this.field_m)) {
+          if (!var6.matchesCacheKeys((byte) -84, param3, this.field_m)) {
             BitPacketBuffer.a(se.field_k, var6, param3, 1, (byte) 18, 0);
-            var6.a(this.field_m, param3, (byte) 78);
+            var6.setCacheKeys(this.field_m, param3, (byte) 78);
           }
-          ko.a(-91, -7, pb.field_j, param1, var6.field_p, param3, 640, 1, param4, param2, cp.field_I);
+          ko.a(-91, -7, RasterCacheSurface.field_j, param1, var6.sprite, param3, 640, 1, param4, param2, cp.field_I);
         }
         if (!param0) {
           field_v = (mh) null;
@@ -169,7 +169,7 @@ final class td extends ki {
           } else {
             stackIn_20_2 = "{...}";
           }
-          throw qb.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(obfuscationGuard).append(')').toString());
+          throw qb.addExceptionContext((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 
@@ -186,16 +186,16 @@ final class td extends ki {
     }
 
     final void a(int param0, byte param1, int param2, int param3, int param4) {
-        pb var6 = null;
+        RasterCacheSurface var6 = null;
         if (!this.b((byte) -120)) {
           Rasterizer2D.fillVerticalGradient(param2, param0, 306, 480, hh.field_c[param3], 10792131);
         } else {
           var6 = kd.a(this.field_m, param3, (byte) -111);
-          if (!var6.a((byte) -84, param3, this.field_m)) {
+          if (!var6.matchesCacheKeys((byte) -84, param3, this.field_m)) {
             BitPacketBuffer.a(RectangleBody.field_p, var6, param3, 2, (byte) 119, -14);
-            var6.a(this.field_m, param3, (byte) 78);
+            var6.setCacheKeys(this.field_m, param3, (byte) 78);
           }
-          ko.a(-113, -14, cg.field_q, param4, var6.field_p, param3, 306, 2, param2, param0, gq.field_Sb);
+          ko.a(-113, -14, cg.field_q, param4, var6.sprite, param3, 306, 2, param2, param0, gq.field_Sb);
         }
         if (param1 >= -84) {
           field_v = (mh) null;
@@ -221,7 +221,7 @@ final class td extends ki {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw qb.a((Throwable) ((Object) var1_ref), "td.M(" + param0 + ')');
+          throw qb.addExceptionContext((Throwable) ((Object) var1_ref), "td.M(" + param0 + ')');
         }
     }
 
@@ -263,7 +263,7 @@ final class td extends ki {
             } else {
               stackIn_9_2 = "{...}";
             }
-            throw qb.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
+            throw qb.addExceptionContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;

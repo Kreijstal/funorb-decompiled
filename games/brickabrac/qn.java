@@ -119,7 +119,7 @@ final class qn {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw qb.a((Throwable) ((Object) var2), "qn.I(" + param0 + ',' + param1 + ')');
+          throw qb.addExceptionContext((Throwable) ((Object) var2), "qn.I(" + param0 + ',' + param1 + ')');
         }
     }
 

@@ -138,7 +138,7 @@ final class e extends IntrusiveNode {
           } else {
             stackIn_41_2 = "{...}";
           }
-          throw qb.a((Throwable) ((Object) stackIn_31_0), ((StringBuilder) (Object) stackIn_40_1).append(stackIn_41_2).append(')').toString());
+          throw qb.addExceptionContext((Throwable) ((Object) stackIn_31_0), ((StringBuilder) (Object) stackIn_40_1).append(stackIn_41_2).append(')').toString());
         }
     }
 
@@ -178,7 +178,7 @@ final class e extends IntrusiveNode {
           var3 = var2.width;
           int var5 = -121 % ((-17 - param1) / 52);
           var4 = var2.height;
-          HighscorePackSelector.d(-99);
+          HighscorePackSelector.pushRaster(-99);
           LevelCompleteScreen.field_I = new RgbSprite(var3, var4 * 3 / 4);
           LevelCompleteScreen.field_I.bindRasterTarget();
           var2.drawAt(0, 0);
@@ -186,9 +186,9 @@ final class e extends IntrusiveNode {
           BitPacketBuffer.field_t.bindRasterTarget();
           var2.drawAt(0, -LevelCompleteScreen.field_I.height);
           BitPacketBuffer.field_t.offsetY = LevelCompleteScreen.field_I.height;
-          sc.b(-104);
+          sc.popRaster(-104);
         } catch (RuntimeException runtimeException) {
-          throw qb.a((Throwable) ((Object) runtimeException), "e.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "e.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

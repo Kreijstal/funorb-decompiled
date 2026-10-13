@@ -142,7 +142,7 @@ final class SaveResultsPromptScreen extends MenuScreen {
           } else {
             stackIn_24_2 = "{...}";
           }
-          throw qb.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(',').append(param4).append(')').toString());
+          throw qb.addExceptionContext((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -173,7 +173,7 @@ final class SaveResultsPromptScreen extends MenuScreen {
           } else {
             stackIn_6_2 = "{...}";
           }
-          throw qb.a((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw qb.addExceptionContext((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -211,7 +211,7 @@ final class SaveResultsPromptScreen extends MenuScreen {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3_ref = decompiledCaughtException;
-          throw qb.a((Throwable) ((Object) var3_ref), "hq.E(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw qb.addExceptionContext((Throwable) ((Object) var3_ref), "hq.E(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 

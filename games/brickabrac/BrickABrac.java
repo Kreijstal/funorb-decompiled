@@ -441,7 +441,7 @@ public final class BrickABrac extends sa {
           } else {
             stackIn_138_2 = "{...}";
           }
-          throw qb.a((Throwable) ((Object) stackIn_137_0), ((StringBuilder) (Object) stackIn_137_1).append(stackIn_138_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw qb.addExceptionContext((Throwable) ((Object) stackIn_137_0), ((StringBuilder) (Object) stackIn_137_1).append(stackIn_138_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -565,7 +565,7 @@ public final class BrickABrac extends sa {
         LevelSelectScreen.f((byte) -115);
         MatchResultScreen.g(-25617);
         la.a((byte) -75);
-        v.a(false);
+        ClientException.a(false);
         KeyboardInput.a((byte) -42);
         IntNode.a((byte) -115);
         NodeDeque.b((byte) 100);
@@ -883,11 +883,11 @@ public final class BrickABrac extends sa {
         oh.a((byte) 83);
         fa.a((byte) -102);
         nj.a(0);
-        pb.a((byte) 121);
+        RasterCacheSurface.a((byte) 121);
         me.a(100);
         cm.b((byte) -121);
         eb.a(false);
-        ii.a(20888);
+        RasterSnapshot.a(20888);
         ck.a(30850);
         TooltipSprite.a((byte) -77);
         OptionsScreen.c(false);

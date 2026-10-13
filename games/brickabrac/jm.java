@@ -58,7 +58,7 @@ final class jm {
             } else {
               stackIn_9_2 = "{...}";
             }
-            throw qb.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+            throw qb.addExceptionContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -197,7 +197,7 @@ final class jm {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw qb.a((Throwable) ((Object) var3), "jm.B(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw qb.addExceptionContext((Throwable) ((Object) var3), "jm.B(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -218,8 +218,8 @@ final class jm {
             stackIn_5_0 = (AlphaFont) null;
             return stackIn_5_0;
           }
-          var2 = new AlphaFont(param0, ag.field_K, dl.field_d, jh.field_b, gg.field_t, qp.field_c, cn.field_a);
-          MotionWaypoint.d((byte) 96);
+          var2 = new AlphaFont(param0, ag.decodedSpriteOffsetX, dl.decodedSpriteOffsetY, jh.decodedSpriteWidths, gg.decodedSpriteHeights, qp.decodedSpritePalette, cn.decodedSpriteIndices);
+          MotionWaypoint.clearDecodedSpriteData((byte) 96);
           stackIn_7_0 = var2;
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -232,7 +232,7 @@ final class jm {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw qb.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(')').toString());
+          throw qb.addExceptionContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -310,7 +310,7 @@ final class jm {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw qb.a((Throwable) ((Object) var1), "jm.D(" + param0 + ')');
+          throw qb.addExceptionContext((Throwable) ((Object) var1), "jm.D(" + param0 + ')');
         }
     }
 

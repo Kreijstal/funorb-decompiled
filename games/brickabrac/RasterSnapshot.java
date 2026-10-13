@@ -1,34 +1,34 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ii extends IntrusiveNode {
-    int field_o;
+final class RasterSnapshot extends IntrusiveNode {
+    int clipTop;
     static String field_l;
-    int field_p;
+    int height;
     static boolean field_j;
     static int field_q;
     static String[] field_r;
-    int field_n;
-    int field_k;
-    int field_m;
+    int clipLeft;
+    int clipBottom;
+    int width;
     static String field_s;
-    int field_t;
-    int[] field_i;
+    int clipRight;
+    int[] pixels;
 
-    final void a(int[] param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
-        this.field_k = param7;
-        this.field_m = param2;
-        this.field_n = param1;
-        this.field_o = param6;
-        this.field_p = param3;
-        this.field_t = param5;
-        if (param4 != -161) {
+    final void capture(int[] pixels, int clipLeft, int width, int height, int obfuscationGuard, int clipRight, int clipTop, int clipBottom) {
+        this.clipBottom = clipBottom;
+        this.width = width;
+        this.clipLeft = clipLeft;
+        this.clipTop = clipTop;
+        this.height = height;
+        this.clipRight = clipRight;
+        if (obfuscationGuard != -161) {
           return;
         }
         try {
-          this.field_i = param0;
+          this.pixels = pixels;
         } catch (RuntimeException runtimeException) {
-          throw qb.a((Throwable) ((Object) runtimeException), "ii.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ')');
+          throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "ii.A(" + (pixels != null ? "{...}" : "null") + ',' + clipLeft + ',' + width + ',' + height + ',' + obfuscationGuard + ',' + clipRight + ',' + clipTop + ',' + clipBottom + ')');
         }
     }
 
@@ -101,7 +101,7 @@ final class ii extends IntrusiveNode {
         field_s = null;
     }
 
-    ii() {
+    RasterSnapshot() {
     }
 
     static {

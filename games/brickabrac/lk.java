@@ -55,7 +55,7 @@ final class lk extends AudioStream {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw qb.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(offset).append(',').append(frames).append(')').toString());
+          throw qb.addExceptionContext((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(offset).append(',').append(frames).append(')').toString());
         }
     }
 
@@ -186,7 +186,7 @@ final class lk extends AudioStream {
           } else {
             stackIn_32_2 = "{...}";
           }
-          throw qb.a((Throwable) ((Object) stackIn_28_0), ((StringBuilder) (Object) stackIn_31_1).append(stackIn_32_2).append(')').toString());
+          throw qb.addExceptionContext((Throwable) ((Object) stackIn_28_0), ((StringBuilder) (Object) stackIn_31_1).append(stackIn_32_2).append(')').toString());
         }
     }
 
@@ -240,7 +240,7 @@ final class lk extends AudioStream {
           } else {
             stackIn_20_2 = "{...}";
           }
-          throw qb.a((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
+          throw qb.addExceptionContext((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
         }
     }
 
@@ -294,7 +294,7 @@ final class lk extends AudioStream {
         try {
           this.field_r = param0;
         } catch (RuntimeException runtimeException) {
-          throw qb.a((Throwable) ((Object) runtimeException), "lk.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "lk.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

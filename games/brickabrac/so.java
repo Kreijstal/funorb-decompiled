@@ -10,9 +10,9 @@ final class so {
     private mf field_g;
     private mf field_c;
 
-    final static pb a(int param0, int param1, int param2, NodeDeque param3) {
+    final static RasterCacheSurface a(int param0, int param1, int param2, NodeDeque param3) {
         Object var4 = null;
-        pb var5 = null;
+        RasterCacheSurface var5 = null;
         NodeDeque var6 = null;
         Object stackIn_11_0 = null;
         Object stackIn_14_0 = null;
@@ -25,21 +25,21 @@ final class so {
             var6 = (NodeDeque) null;
             so.a(8, 113, -81, (NodeDeque) null);
           }
-          var5 = (pb) (param3.first(-15));
+          var5 = (RasterCacheSurface) (param3.first(-15));
           while (var5 != null) {
-            if (!var5.a((byte) -84, param1, param2)) {
-              var5 = (pb) (param3.next((byte) 116));
+            if (!var5.matchesCacheKeys((byte) -84, param1, param2)) {
+              var5 = (RasterCacheSurface) (param3.next((byte) 116));
               continue;
             }
             var4 = var5;
             break;
           }
           if (var4 == null) {
-            var4 = (pb) (param3.removeLast(127));
+            var4 = (RasterCacheSurface) (param3.removeLast(127));
           }
           param3.addFirst(true, (IntrusiveNode) (var4));
           stackIn_11_0 = var4;
-          return (pb) (stackIn_11_0);
+          return (RasterCacheSurface) (stackIn_11_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
@@ -50,7 +50,7 @@ final class so {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw qb.a((Throwable) (stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
+          throw qb.addExceptionContext((Throwable) (stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
         }
     }
 
@@ -142,8 +142,8 @@ final class so {
         int var11Lifetime3;
         var12 = BrickABrac.field_J ? 1 : 0;
         try {
-          RankingsScreen.field_t = uo.a((byte) 29, param0, "splash", "basic");
-          er.field_b = pl.a("basic", "lobby_game_logo", (byte) 110, param0);
+          RankingsScreen.field_t = uo.loadIndexedSpriteByName((byte) 29, param0, "splash", "basic");
+          er.field_b = pl.loadRgbSpriteByName("basic", "lobby_game_logo", (byte) 110, param0);
           var21 = param2.a(-86, "basic", "gamefont");
           var15 = var21;
           var13 = var15;
@@ -163,7 +163,7 @@ final class so {
           ob.field_D.palettes = bg.field_n;
           ce.field_e = IndexedSpriteGeometry.a(1, var22, 0, var18, 0, 1);
           ce.field_e.palettes = bg.field_n;
-          gj.field_c = bd.a("basic", "menu_overlays", param0, (byte) -8);
+          gj.field_c = bd.loadRgbSpritesByName("basic", "menu_overlays", param0, (byte) -8);
           for (var7_int = 0; gj.field_c.length > var7_int; var7_int++) {
             gj.field_c[var7_int] = qg.a(gj.field_c[var7_int], 1);
             if (gj.field_c[var7_int].width == 0 ||
@@ -176,14 +176,14 @@ final class so {
           t.field_d[4] = null;
           var7 = cd.field_h;
           var7[4] = null;
-          pl.a("basic", "frame_bracket", (byte) 106, param0);
+          pl.loadRgbSpriteByName("basic", "frame_bracket", (byte) 106, param0);
           AchievementBrowserScreen.field_A = kf.a("button_frame", "basic", param0, -91);
           Ball.field_G = kf.a("button_raised", "basic", param0, 103);
           pe.field_k = kf.a("button_depressed", "basic", param0, -104);
           IntrusiveHashTable.achievementSourceIcons = PacketBuffer.a("basic", param0, "achievements_large", -946715356);
-          LevelCompleteScreen.field_F = pl.a("basic", "unachieved", (byte) 97, param1);
-          pg.field_p = pl.a("basic", "orbcoin", (byte) 122, param1);
-          pl.a("basic", "locked", (byte) -45, param1);
+          LevelCompleteScreen.field_F = pl.loadRgbSpriteByName("basic", "unachieved", (byte) 97, param1);
+          pg.field_p = pl.loadRgbSpriteByName("basic", "orbcoin", (byte) 122, param1);
+          pl.loadRgbSpriteByName("basic", "locked", (byte) -45, param1);
           nj.field_z = new RgbSprite(32, 32);
           nj.field_z.bindRasterTarget();
           pg.field_p.c(0, 0, 32, 32);
@@ -210,34 +210,34 @@ final class so {
           CircleBody.field_t = new RgbSprite[lo.field_c.length][];
           var9 = null;
           for (var10_intLifetime1 = 0; lo.field_c.length > var10_intLifetime1; var10_intLifetime1++) {
-            CircleBody.field_t[var10_intLifetime1] = cr.a("basic", param0, lo.field_c[var10_intLifetime1], 2);
+            CircleBody.field_t[var10_intLifetime1] = cr.loadRgbSpritesByName("basic", param0, lo.field_c[var10_intLifetime1], 2);
           }
-          MenuSelection.field_k = pl.a("basic", "ball", (byte) 121, param0);
-          Ball.field_D = pl.a("basic", "steelball", (byte) 98, param0);
+          MenuSelection.field_k = pl.loadRgbSpriteByName("basic", "ball", (byte) 121, param0);
+          Ball.field_D = pl.loadRgbSpriteByName("basic", "steelball", (byte) 98, param0);
           h.field_C = PacketBuffer.a("basic", param0, "brickset", -946715356);
-          dg.field_b = cr.a("basic", param0, "paddlecaps", param3 - 29135);
-          qg.field_D = cr.a("basic", param0, "paddleseg", 2);
-          dk.field_R = pl.a("basic", "paddlecentre", (byte) 100, param0);
-          gg.field_p = cr.a("basic", param0, "powerup", 2);
-          LevelPackSelectScreen.field_r = pl.a("basic", "powerupbar", (byte) 104, param0);
-          ch.field_l = pl.a("basic", "heart", (byte) -108, param0);
-          kb.field_Ub = cr.a("basic", param0, "characters_fm", 2);
-          im.field_a = cr.a("basic", param0, "lever_game", param3 - 29135);
-          IntrusiveNode.field_f = cr.a("basic", param0, "eyes_game", 2);
-          tf.field_g = cr.a("basic", param0, "track_heads", 2);
-          ef.field_e = cr.a("basic", param0, "characters_small", 2);
-          ScorePopup.field_k = cr.a("basic", param0, "character_heads", param3 ^ 29139);
-          cn.field_e = cr.a("basic", param0, "lever_small", 2);
-          ScorePopup.field_r = cr.a("basic", param0, "lever_small_choc", 2);
-          lp.field_yb = cr.a("basic", param0, "lever_small_space", param3 ^ 29139);
+          dg.field_b = cr.loadRgbSpritesByName("basic", param0, "paddlecaps", param3 - 29135);
+          qg.field_D = cr.loadRgbSpritesByName("basic", param0, "paddleseg", 2);
+          dk.field_R = pl.loadRgbSpriteByName("basic", "paddlecentre", (byte) 100, param0);
+          gg.field_p = cr.loadRgbSpritesByName("basic", param0, "powerup", 2);
+          LevelPackSelectScreen.field_r = pl.loadRgbSpriteByName("basic", "powerupbar", (byte) 104, param0);
+          ch.field_l = pl.loadRgbSpriteByName("basic", "heart", (byte) -108, param0);
+          kb.field_Ub = cr.loadRgbSpritesByName("basic", param0, "characters_fm", 2);
+          im.field_a = cr.loadRgbSpritesByName("basic", param0, "lever_game", param3 - 29135);
+          IntrusiveNode.field_f = cr.loadRgbSpritesByName("basic", param0, "eyes_game", 2);
+          tf.field_g = cr.loadRgbSpritesByName("basic", param0, "track_heads", 2);
+          ef.field_e = cr.loadRgbSpritesByName("basic", param0, "characters_small", 2);
+          ScorePopup.field_k = cr.loadRgbSpritesByName("basic", param0, "character_heads", param3 ^ 29139);
+          cn.field_e = cr.loadRgbSpritesByName("basic", param0, "lever_small", 2);
+          ScorePopup.field_r = cr.loadRgbSpritesByName("basic", param0, "lever_small_choc", 2);
+          lp.field_yb = cr.loadRgbSpritesByName("basic", param0, "lever_small_space", param3 ^ 29139);
           qi.field_K = kf.a("frame_bubble", "basic", param0, -105);
-          ap.field_a = pl.a("basic", "frame_bubble_point", (byte) -120, param0);
-          ln.field_j = bd.a("basic", "rosette_sml", param0, (byte) -8);
-          IntHistoryBuffer.field_l = bd.a("basic", "rosette_lrg", param0, (byte) -8);
+          ap.field_a = pl.loadRgbSpriteByName("basic", "frame_bubble_point", (byte) -120, param0);
+          ln.field_j = bd.loadRgbSpritesByName("basic", "rosette_sml", param0, (byte) -8);
+          IntHistoryBuffer.field_l = bd.loadRgbSpritesByName("basic", "rosette_lrg", param0, (byte) -8);
           me.field_a = PacketBuffer.a("basic", param0, "podium2", -946715356);
           pl.field_f = PacketBuffer.a("basic", param0, "podium3", param3 ^ -946719499);
-          BrickMotionPath.field_r = cr.a("basic", param0, "podium_happy", 2);
-          e.field_q = cr.a("basic", param0, "podium_sad", param3 ^ 29139);
+          BrickMotionPath.field_r = cr.loadRgbSpritesByName("basic", param0, "podium_happy", 2);
+          e.field_q = cr.loadRgbSpritesByName("basic", param0, "podium_sad", param3 ^ 29139);
           qh.field_e = um.a("basic", "congratulations", 1593955777, param0);
           pa.field_m = new RgbSprite[h.field_C.length];
           for (var10_intLifetime2 = 0; var10_intLifetime2 < pa.field_m.length; var10_intLifetime2++) {
@@ -288,12 +288,12 @@ final class so {
           for (var10_intLifetime8 = 0; IntHistoryBuffer.field_l.length > var10_intLifetime8; var10_intLifetime8++) {
             IntHistoryBuffer.field_l[var10_intLifetime8].trimTransparentBorders();
           }
-          um.field_p = pl.a("basic", "character_menu", (byte) -62, param0);
-          pa.field_j = pl.a("basic", "character_menu_eyes", (byte) -120, param0);
-          gr.field_d = cr.a("basic", param0, "lever_menu", 2);
+          um.field_p = pl.loadRgbSpriteByName("basic", "character_menu", (byte) -62, param0);
+          pa.field_j = pl.loadRgbSpriteByName("basic", "character_menu_eyes", (byte) -120, param0);
+          gr.field_d = cr.loadRgbSpritesByName("basic", param0, "lever_menu", 2);
           nl.field_b = um.a("basic", "logo", 1593955777, param0);
-          g.field_l = cr.a("basic", param0, "sliders", 2);
-          mp.field_Vb = cr.a("basic", param0, "arrow_level", param3 ^ 29139);
+          g.field_l = cr.loadRgbSpritesByName("basic", param0, "sliders", 2);
+          mp.field_Vb = cr.loadRgbSpritesByName("basic", param0, "arrow_level", param3 ^ 29139);
           pa.field_l = new RgbSprite[mp.field_Vb.length];
           for (var10_intLifetime9 = 0; mp.field_Vb.length > var10_intLifetime9; var10_intLifetime9++) {
             dupTemp$0 = mp.field_Vb[var10_intLifetime9].copy();
@@ -302,19 +302,19 @@ final class so {
             var11_ref_jp.rotateCounterclockwise();
           }
           un.field_e = new IndexedSprite[7];
-          un.field_e[0] = uo.a((byte) 29, param0, "p1_key_right", "basic");
-          un.field_e[1] = uo.a((byte) 29, param0, "p1_key_left", "basic");
-          un.field_e[2] = uo.a((byte) 29, param0, "p1_key_launch", "basic");
-          un.field_e[3] = uo.a((byte) 29, param0, "p2_key_right", "basic");
-          un.field_e[4] = uo.a((byte) 29, param0, "p2_key_left", "basic");
-          un.field_e[5] = uo.a((byte) 29, param0, "p2_key_launch", "basic");
-          un.field_e[6] = uo.a((byte) 29, param0, "key_enter", "basic");
+          un.field_e[0] = uo.loadIndexedSpriteByName((byte) 29, param0, "p1_key_right", "basic");
+          un.field_e[1] = uo.loadIndexedSpriteByName((byte) 29, param0, "p1_key_left", "basic");
+          un.field_e[2] = uo.loadIndexedSpriteByName((byte) 29, param0, "p1_key_launch", "basic");
+          un.field_e[3] = uo.loadIndexedSpriteByName((byte) 29, param0, "p2_key_right", "basic");
+          un.field_e[4] = uo.loadIndexedSpriteByName((byte) 29, param0, "p2_key_left", "basic");
+          un.field_e[5] = uo.loadIndexedSpriteByName((byte) 29, param0, "p2_key_launch", "basic");
+          un.field_e[6] = uo.loadIndexedSpriteByName((byte) 29, param0, "key_enter", "basic");
           nd.field_f = new int[58];
           for (var10_intLifetime10 = 0; nd.field_f.length > var10_intLifetime10; var10_intLifetime10++) {
             nd.field_f[var10_intLifetime10] = 14;
           }
           jk.field_u = lg.a(2, mo.field_N, -1);
-          v.field_b = lg.a(2, ci.field_s.toUpperCase(), -1);
+          ClientException.field_b = lg.a(2, ci.field_s.toUpperCase(), -1);
           ed.field_b = new RgbSprite[3];
           for (var10_intLifetime11 = 0; var10_intLifetime11 < ed.field_b.length; var10_intLifetime11++) {
             ed.field_b[var10_intLifetime11] = OptionsScreen.a(2, 2, Integer.toString(-var10_intLifetime11 + 3), true);
@@ -329,12 +329,12 @@ final class so {
           }
           rk.field_Sb = ap.field_a.copy();
           rk.field_Sb.rotateCounterclockwise();
-          dg.field_e = pl.a("basic", "shutter", (byte) 110, param0);
+          dg.field_e = pl.loadRgbSpriteByName("basic", "shutter", (byte) 110, param0);
           cq.field_o = new RgbSprite(dg.field_e.canvasWidth / 2, dg.field_e.canvasHeight / 2);
           cq.field_o.bindRasterTarget();
           dg.field_e.a(0, 0);
           kc.field_q.a((byte) 118);
-          var10 = pl.a("basic", "flame", (byte) 107, param0);
+          var10 = pl.loadRgbSpriteByName("basic", "flame", (byte) 107, param0);
           hc.field_a = new RgbSprite[2][4];
           ip.field_v = new RgbSprite[2][4];
           for (var11 = 0; var11 < 4; var11++) {
@@ -348,13 +348,13 @@ final class so {
             hc.field_a[1][var11] = hc.field_a[0][var11].copyFlippedHorizontal();
           }
           kc.field_q.a((byte) 127);
-          SaveResultsPromptScreen.packCardIcons = bd.a("basic", "expansion_icons", param0, (byte) -8);
+          SaveResultsPromptScreen.packCardIcons = bd.loadRgbSpritesByName("basic", "expansion_icons", param0, (byte) -8);
           da.packSelectorIcons = new RgbSprite[SaveResultsPromptScreen.packCardIcons.length];
           for (var11Lifetime1 = 0; var11Lifetime1 < SaveResultsPromptScreen.packCardIcons.length; var11Lifetime1++) {
             da.packSelectorIcons[var11Lifetime1] = new RgbSprite(SaveResultsPromptScreen.packCardIcons[var11Lifetime1].canvasWidth / 2, SaveResultsPromptScreen.packCardIcons[var11Lifetime1].canvasHeight / 2);
-            IndexedSpriteGeometry.a(-59, da.packSelectorIcons[var11Lifetime1]);
+            IndexedSpriteGeometry.pushSpriteRaster(-59, da.packSelectorIcons[var11Lifetime1]);
             SaveResultsPromptScreen.packCardIcons[var11Lifetime1].a(0, 0);
-            sc.b(-89);
+            sc.popRaster(-89);
           }
           cm.field_r = new RgbSprite[SaveResultsPromptScreen.packCardIcons.length];
           for (var11Lifetime2 = 0; SaveResultsPromptScreen.packCardIcons.length > var11Lifetime2; var11Lifetime2++) {
@@ -393,7 +393,7 @@ final class so {
           } else {
             stackIn_77_2 = "{...}";
           }
-          throw qb.a((Throwable) ((Object) stackIn_67_0), ((StringBuilder) (Object) stackIn_76_1).append(stackIn_77_2).append(')').toString());
+          throw qb.addExceptionContext((Throwable) ((Object) stackIn_67_0), ((StringBuilder) (Object) stackIn_76_1).append(stackIn_77_2).append(')').toString());
         }
     }
 
@@ -432,7 +432,7 @@ final class so {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw qb.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
+          throw qb.addExceptionContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
         }
     }
 

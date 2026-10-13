@@ -161,7 +161,7 @@ final class wn {
                   !um.field_e) {
                   if (!qo.field_I) {
                     var17 = bm.field_d;
-                    var18 = rd.a(v.field_c, new String[]{var16}, (byte) 103);
+                    var18 = rd.a(ClientException.field_c, new String[]{var16}, (byte) 103);
                     var17.field_d.a(var18, 8, (byte) 84);
                   }
                   var17Lifetime1 = bm.field_d;
@@ -202,7 +202,7 @@ final class wn {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw qb.a((Throwable) ((Object) var3), "wn.C(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw qb.addExceptionContext((Throwable) ((Object) var3), "wn.C(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -269,7 +269,7 @@ final class wn {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = (RuntimeException) (Object) decompiledCaughtException;
-          throw qb.a((Throwable) ((Object) var1_ref), "wn.E(" + obfuscationGuard + ')');
+          throw qb.addExceptionContext((Throwable) ((Object) var1_ref), "wn.E(" + obfuscationGuard + ')');
         }
     }
 
@@ -304,7 +304,7 @@ final class wn {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw qb.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param2).append(')').toString());
+          throw qb.addExceptionContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -315,7 +315,7 @@ final class wn {
           field_c = null;
           field_a = null;
         } catch (RuntimeException runtimeException) {
-          throw qb.a((Throwable) ((Object) runtimeException), "wn.F(" + param0 + ')');
+          throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "wn.F(" + param0 + ')');
         }
     }
 
@@ -331,7 +331,7 @@ final class wn {
         String stackIn_15_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (!ln.a(-123, param3, param2, param0)) {
+          if (!ln.decodeSpritesFromArchive(-123, param3, param2, param0)) {
             stackIn_4_0 = null;
             return (hl) (stackIn_4_0);
           }
@@ -354,7 +354,7 @@ final class wn {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw qb.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw qb.addExceptionContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -371,7 +371,7 @@ final class wn {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw qb.a((Throwable) ((Object) var2), "wn.B(" + param0 + ',' + param1 + ')');
+          throw qb.addExceptionContext((Throwable) ((Object) var2), "wn.B(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -395,7 +395,7 @@ final class wn {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw qb.a((Throwable) ((Object) var2), "wn.H(" + param0 + ',' + param1 + ')');
+          throw qb.addExceptionContext((Throwable) ((Object) var2), "wn.H(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -412,7 +412,7 @@ final class wn {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw qb.a((Throwable) ((Object) var1), "wn.A(" + param0 + ')');
+          throw qb.addExceptionContext((Throwable) ((Object) var1), "wn.A(" + param0 + ')');
         }
     }
 

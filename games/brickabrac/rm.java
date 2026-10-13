@@ -42,8 +42,8 @@ final class rm implements bp {
             stackIn_5_0 = null;
             return (hl) (stackIn_5_0);
           }
-          var2 = new hl(param1, ag.field_K, dl.field_d, jh.field_b, gg.field_t, cn.field_a);
-          MotionWaypoint.d((byte) 96);
+          var2 = new hl(param1, ag.decodedSpriteOffsetX, dl.decodedSpriteOffsetY, jh.decodedSpriteWidths, gg.decodedSpriteHeights, cn.decodedSpriteIndices);
+          MotionWaypoint.clearDecodedSpriteData((byte) 96);
           stackIn_7_0 = var2;
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -56,7 +56,7 @@ final class rm implements bp {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw qb.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw qb.addExceptionContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 
@@ -83,7 +83,7 @@ final class rm implements bp {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw qb.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
+          throw qb.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
         }
     }
 

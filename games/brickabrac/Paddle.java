@@ -74,7 +74,7 @@ final class Paddle extends RectangleBody {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw qb.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+          throw qb.addExceptionContext((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 
@@ -204,7 +204,7 @@ final class Paddle extends RectangleBody {
           } else {
             stackIn_25_2 = "{...}";
           }
-          throw qb.a((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(')').toString());
+          throw qb.addExceptionContext((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(')').toString());
         }
     }
 
@@ -252,7 +252,7 @@ final class Paddle extends RectangleBody {
           this.field_H = packet.readUnsignedShort(65280);
           this.width256 = 32 + (6 * this.sizeStage + 8) << 8;
         } catch (RuntimeException runtimeException) {
-          throw qb.a((Throwable) ((Object) runtimeException), "vo.L(" + obfuscationGuard + ',' + (packet != null ? "{...}" : "null") + ')');
+          throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "vo.L(" + obfuscationGuard + ',' + (packet != null ? "{...}" : "null") + ')');
         }
     }
 

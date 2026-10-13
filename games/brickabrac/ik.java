@@ -137,7 +137,7 @@ final class ik implements Iterator {
           } else {
             stackIn_22_2 = "{...}";
           }
-          throw qb.a((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(')').toString());
+          throw qb.addExceptionContext((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(')').toString());
         }
     }
 
@@ -181,7 +181,7 @@ final class ik implements Iterator {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw qb.a((Throwable) ((Object) var1_ref), "ik.C(" + param0 + ')');
+          throw qb.addExceptionContext((Throwable) ((Object) var1_ref), "ik.C(" + param0 + ')');
         }
     }
 
@@ -212,7 +212,7 @@ final class ik implements Iterator {
           this.field_e = param0;
           this.b(-101);
         } catch (RuntimeException runtimeException) {
-          throw qb.a((Throwable) ((Object) runtimeException), "ik.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "ik.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

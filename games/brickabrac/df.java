@@ -59,7 +59,7 @@ final class df {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw qb.a((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(offset).append(')').toString());
+          throw qb.addExceptionContext((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(offset).append(')').toString());
         }
     }
 
@@ -105,7 +105,7 @@ final class df {
           na.field_Q.addLast(param0, (byte) 3);
           LevelSelectScreen.a(param1, param0, (byte) 119);
         } catch (RuntimeException runtimeException) {
-          throw qb.a((Throwable) ((Object) runtimeException), "df.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "df.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 

@@ -135,7 +135,7 @@ final class GameplayScreen extends GameScreen {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw qb.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw qb.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -150,7 +150,7 @@ final class GameplayScreen extends GameScreen {
             this.a((byte) 15, (PlayerBoard) null);
           }
         } catch (RuntimeException runtimeException) {
-          throw qb.a((Throwable) ((Object) runtimeException), "qj.M(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "qj.M(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -707,7 +707,7 @@ final class GameplayScreen extends GameScreen {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw qb.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param2).append(')').toString());
+          throw qb.addExceptionContext((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -736,7 +736,7 @@ final class GameplayScreen extends GameScreen {
           } else {
             stackIn_6_2 = "{...}";
           }
-          throw qb.a((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(')').toString());
+          throw qb.addExceptionContext((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(')').toString());
         }
     }
 
@@ -1133,7 +1133,7 @@ final class GameplayScreen extends GameScreen {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw qb.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(')').toString());
+          throw qb.addExceptionContext((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -1442,7 +1442,7 @@ final class GameplayScreen extends GameScreen {
           } else {
             stackIn_114_2 = "{...}";
           }
-          throw qb.a((Throwable) ((Object) stackIn_110_0), ((StringBuilder) (Object) stackIn_113_1).append(stackIn_114_2).append(')').toString());
+          throw qb.addExceptionContext((Throwable) ((Object) stackIn_110_0), ((StringBuilder) (Object) stackIn_113_1).append(stackIn_114_2).append(')').toString());
         }
     }
 
@@ -1480,7 +1480,7 @@ final class GameplayScreen extends GameScreen {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw qb.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw qb.addExceptionContext((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -1498,7 +1498,7 @@ final class GameplayScreen extends GameScreen {
           var6.activationTick = var5;
           this.match.playerBoards[var3_int].powerUpHistory.append(var6, (byte) -39);
         } catch (RuntimeException runtimeException) {
-          throw qb.a((Throwable) ((Object) runtimeException), "qj.G(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "qj.G(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -1546,7 +1546,7 @@ final class GameplayScreen extends GameScreen {
           } else {
             stackIn_23_2 = "{...}";
           }
-          throw qb.a((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(')').toString());
+          throw qb.addExceptionContext((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(')').toString());
         }
     }
 
@@ -1643,12 +1643,12 @@ final class GameplayScreen extends GameScreen {
               var15 = var3;
               MovingBody.a((byte) 124, 153 + var14[var7], var14[var7], var15[var7], 233 + var15[var7]);
               oa.field_Sb.a((byte) -102, var6, var14[var7], var15[var7]);
-              sc.b(-79);
+              sc.popRaster(-79);
             } else {
               MovingBody.a((byte) 76, 306 + var14[var7], var14[var7], var15[var7], var15[var7] + 480);
               var9Lifetime3 = (-(2 * (var13.x256 + var13.width256 / 2 << 8)) + 20054016) / 306;
               oa.field_Sb.a(var15[var7], (byte) -107, var14[var7], var6, var9Lifetime3 / 2);
-              sc.b(-122);
+              sc.popRaster(-122);
             }
             var6++;
             var6 = var6 % this.match.playerCount;
@@ -1757,11 +1757,11 @@ final class GameplayScreen extends GameScreen {
         }
         if (this.match.playerCount > 1 &&
           ((this.match.playerMaskTwo | this.match.playerMaskOne) & 1 << this.field_m) == 0) {
-          v.a(var2[0], 424, false, this.match, this.field_m, var3[0]);
+          ClientException.a(var2[0], 424, false, this.match, this.field_m, var3[0]);
         }
         if (this.match.playerCount == 2 &&
           0 == (1 << 1 - this.field_m & (this.match.playerMaskTwo | this.match.playerMaskOne))) {
-          v.a(var2[1], 424, false, this.match, 1 - this.field_m, var3[1]);
+          ClientException.a(var2[1], 424, false, this.match, 1 - this.field_m, var3[1]);
         }
         var19 = kh.field_e[this.match.playerCount - 1];
         var6Lifetime2 = this.field_m;
@@ -1903,7 +1903,7 @@ final class GameplayScreen extends GameScreen {
           } else {
             stackIn_41_2 = "{...}";
           }
-          throw qb.a((Throwable) ((Object) stackIn_31_0), ((StringBuilder) (Object) stackIn_40_1).append(stackIn_41_2).append(')').toString());
+          throw qb.addExceptionContext((Throwable) ((Object) stackIn_31_0), ((StringBuilder) (Object) stackIn_40_1).append(stackIn_41_2).append(')').toString());
         }
     }
 

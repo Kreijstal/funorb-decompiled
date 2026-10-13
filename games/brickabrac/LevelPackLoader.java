@@ -84,7 +84,7 @@ final class LevelPackLoader {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw qb.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(archiveSelector).append(',').append(packId).append(',').append(completionWord).append(',').append(scoreOffset).append(')').toString());
+          throw qb.addExceptionContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(archiveSelector).append(',').append(packId).append(',').append(completionWord).append(',').append(scoreOffset).append(')').toString());
         }
     }
 

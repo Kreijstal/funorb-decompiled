@@ -77,7 +77,7 @@ final class MembershipBenefitsScreen extends MenuScreen {
         try {
           this.archive = archive;
         } catch (RuntimeException runtimeException) {
-          throw qb.a((Throwable) ((Object) runtimeException), "de.<init>(" + (archive != null ? "{...}" : "null") + ')');
+          throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "de.<init>(" + (archive != null ? "{...}" : "null") + ')');
         }
     }
 

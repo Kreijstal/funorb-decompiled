@@ -158,7 +158,7 @@ abstract class dj {
             } else {
               stackIn_19_2 = "{...}";
             }
-            throw qb.a((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
+            throw qb.addExceptionContext((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -179,7 +179,7 @@ abstract class dj {
         kd.field_d[6] = pg.field_i;
         kd.field_d[20] = c.field_n;
         kd.field_d[7] = nk.field_i;
-        kd.field_d[17] = pb.field_l;
+        kd.field_d[17] = RasterCacheSurface.field_l;
         kd.field_d[19] = tq.field_g;
         kd.field_d[param0] = ed.field_a;
         kd.field_d[11] = AchievementsScreen.field_I;

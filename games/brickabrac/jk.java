@@ -58,24 +58,24 @@ final class jk extends ki {
           return true;
         }
         if (AchievementIcon.field_m.a("water", -28138)) {
-          go.field_d = pl.a("water", "water_rays", (byte) 116, AchievementIcon.field_m);
-          wm.field_b = pl.a("water", "water_near", (byte) 105, AchievementIcon.field_m);
-          hk.field_Q = pl.a("water", "water_mid", (byte) 109, AchievementIcon.field_m);
-          n.field_c = pl.a("water", "water_far", (byte) -121, AchievementIcon.field_m);
-          pk.field_a = pl.a("water", "water_small", (byte) 112, AchievementIcon.field_m);
-          sn.field_t = pl.a("water", "water_character", (byte) -43, AchievementIcon.field_m);
+          go.field_d = pl.loadRgbSpriteByName("water", "water_rays", (byte) 116, AchievementIcon.field_m);
+          wm.field_b = pl.loadRgbSpriteByName("water", "water_near", (byte) 105, AchievementIcon.field_m);
+          hk.field_Q = pl.loadRgbSpriteByName("water", "water_mid", (byte) 109, AchievementIcon.field_m);
+          n.field_c = pl.loadRgbSpriteByName("water", "water_far", (byte) -121, AchievementIcon.field_m);
+          pk.field_a = pl.loadRgbSpriteByName("water", "water_small", (byte) 112, AchievementIcon.field_m);
+          sn.field_t = pl.loadRgbSpriteByName("water", "water_character", (byte) -43, AchievementIcon.field_m);
           vj.field_b = new RgbSprite(n.field_c.canvasWidth, n.field_c.canvasHeight);
-          IndexedSpriteGeometry.a(-49, vj.field_b);
+          IndexedSpriteGeometry.pushSpriteRaster(-49, vj.field_b);
           n.field_c.g(0, 0);
-          sc.b(-81);
+          sc.popRaster(-81);
           to.field_e = jh.a(0, wm.field_b);
           GameplayScreen.field_l = jh.a(0, hk.field_Q);
           jg.field_a = jh.a(0, n.field_c);
           ig.field_P = jh.a(0, vj.field_b);
           uo.field_d = new RgbSprite(go.field_d.canvasWidth / 2, go.field_d.canvasHeight);
-          IndexedSpriteGeometry.a(-83, uo.field_d);
+          IndexedSpriteGeometry.pushSpriteRaster(-83, uo.field_d);
           go.field_d.a(0, 0, go.field_d.canvasWidth / 2, go.field_d.canvasHeight);
-          sc.b(-114);
+          sc.popRaster(-114);
           pl.a(n.field_c, 0);
           pl.a(vj.field_b, 0);
           pl.a(jg.field_a, 0);
@@ -119,7 +119,7 @@ final class jk extends ki {
     }
 
     final void a(int param0, byte param1, int param2, int param3, int param4) {
-        pb var8 = null;
+        RasterCacheSurface var8 = null;
         if (param1 > -84) {
           this.a((byte) -90, 97, -35, 25);
           if (!this.b((byte) -95)) {
@@ -127,27 +127,27 @@ final class jk extends ki {
             return;
           }
           var8 = kd.a(this.field_m, param3, (byte) 106);
-          if (!var8.a((byte) -84, param3, this.field_m)) {
+          if (!var8.matchesCacheKeys((byte) -84, param3, this.field_m)) {
             hh.a(jg.field_a, -13, 2, var8, -8562, param3, ig.field_P);
-            var8.a(this.field_m, param3, (byte) 78);
+            var8.setCacheKeys(this.field_m, param3, (byte) 78);
           }
-          il.a(param4, to.field_e, var8.field_p, 2, 2, GameplayScreen.field_l, -13, param3, param0, param2, uo.field_d, 306);
+          il.a(param4, to.field_e, var8.sprite, 2, 2, GameplayScreen.field_l, -13, param3, param0, param2, uo.field_d, 306);
           return;
         }
         if (!this.b((byte) -95)) {
           Rasterizer2D.fillVerticalGradient(param2, param0, 306, 480, um.field_u[param3], 928072);
           return;
         }
-        pb var9 = kd.a(this.field_m, param3, (byte) 106);
-        if (!var9.a((byte) -84, param3, this.field_m)) {
+        RasterCacheSurface var9 = kd.a(this.field_m, param3, (byte) 106);
+        if (!var9.matchesCacheKeys((byte) -84, param3, this.field_m)) {
           hh.a(jg.field_a, -13, 2, var9, -8562, param3, ig.field_P);
-          var9.a(this.field_m, param3, (byte) 78);
+          var9.setCacheKeys(this.field_m, param3, (byte) 78);
         }
-        il.a(param4, to.field_e, var9.field_p, 2, 2, GameplayScreen.field_l, -13, param3, param0, param2, uo.field_d, 306);
+        il.a(param4, to.field_e, var9.sprite, 2, 2, GameplayScreen.field_l, -13, param3, param0, param2, uo.field_d, 306);
     }
 
     final void a(boolean param0, int param1, int param2, int param3, int param4) {
-        pb var7 = null;
+        RasterCacheSurface var7 = null;
         if (!param0) {
           field_w = (PcmPlayer) null;
           if (!this.b((byte) -112)) {
@@ -155,23 +155,23 @@ final class jk extends ki {
             return;
           }
           var7 = PowerUp.a(this.field_m, param3, -20777);
-          if (!var7.a((byte) -84, param3, this.field_m)) {
+          if (!var7.matchesCacheKeys((byte) -84, param3, this.field_m)) {
             hh.a(n.field_c, 0, 1, var7, -8562, param3, vj.field_b);
-            var7.a(this.field_m, param3, (byte) 78);
+            var7.setCacheKeys(this.field_m, param3, (byte) 78);
           }
-          il.a(param1, wm.field_b, var7.field_p, 1, 2, hk.field_Q, 0, param3, param2, param4, go.field_d, 640);
+          il.a(param1, wm.field_b, var7.sprite, 1, 2, hk.field_Q, 0, param3, param2, param4, go.field_d, 640);
           return;
         }
         if (!this.b((byte) -112)) {
           Rasterizer2D.fillVerticalGradient(param4, param2, 640, 480, um.field_u[param3], 928072);
           return;
         }
-        pb var8 = PowerUp.a(this.field_m, param3, -20777);
-        if (!var8.a((byte) -84, param3, this.field_m)) {
+        RasterCacheSurface var8 = PowerUp.a(this.field_m, param3, -20777);
+        if (!var8.matchesCacheKeys((byte) -84, param3, this.field_m)) {
           hh.a(n.field_c, 0, 1, var8, -8562, param3, vj.field_b);
-          var8.a(this.field_m, param3, (byte) 78);
+          var8.setCacheKeys(this.field_m, param3, (byte) 78);
         }
-        il.a(param1, wm.field_b, var8.field_p, 1, 2, hk.field_Q, 0, param3, param2, param4, go.field_d, 640);
+        il.a(param1, wm.field_b, var8.sprite, 1, 2, hk.field_Q, 0, param3, param2, param4, go.field_d, 640);
     }
 
     final void a(byte param0, int param1, int param2, int param3) {

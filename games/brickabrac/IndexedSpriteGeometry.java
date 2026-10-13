@@ -11,16 +11,16 @@ abstract class IndexedSpriteGeometry {
     int width;
     int canvasWidth;
 
-    final static void a(int param0, RgbSprite param1) {
+    final static void pushSpriteRaster(int obfuscationGuard, RgbSprite sprite) {
         try {
-          HighscorePackSelector.d(-99);
-          Rasterizer2D.bind(param1.pixels, param1.canvasWidth, param1.canvasHeight);
-          if (param0 > -46) {
+          HighscorePackSelector.pushRaster(-99);
+          Rasterizer2D.bind(sprite.pixels, sprite.canvasWidth, sprite.canvasHeight);
+          if (obfuscationGuard > -46) {
             IndexedSprite[] var3 = (IndexedSprite[]) null;
             IndexedSpriteGeometry.a(79, (byte[]) null, 74, (IndexedSprite[]) null, -94, -115);
           }
         } catch (RuntimeException runtimeException) {
-          throw qb.a((Throwable) ((Object) runtimeException), "fc.K(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "fc.K(" + obfuscationGuard + ',' + (sprite != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -195,7 +195,7 @@ abstract class IndexedSpriteGeometry {
           } else {
             stackIn_37_2 = "{...}";
           }
-          throw qb.a((Throwable) ((Object) stackIn_33_0), ((StringBuilder) (Object) stackIn_36_1).append(stackIn_37_2).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw qb.addExceptionContext((Throwable) ((Object) stackIn_33_0), ((StringBuilder) (Object) stackIn_36_1).append(stackIn_37_2).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 

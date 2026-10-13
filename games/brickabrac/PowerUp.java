@@ -20,7 +20,7 @@ final class PowerUp extends CircleBody {
           }
           pl.keyChangeWriteIndex = -1;
         } catch (RuntimeException runtimeException) {
-          throw qb.a((Throwable) ((Object) runtimeException), "ge.F(" + obfuscationGuard + ',' + (component != null ? "{...}" : "null") + ')');
+          throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "ge.F(" + obfuscationGuard + ',' + (component != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -40,7 +40,7 @@ final class PowerUp extends CircleBody {
         this(x256, y256, typeId, 0);
     }
 
-    final static pb a(int param0, int param1, int param2) {
+    final static RasterCacheSurface a(int param0, int param1, int param2) {
         if (param2 != -20777) {
           java.awt.Component var4 = (java.awt.Component) null;
           PowerUp.detachKeyboardInput(58, (java.awt.Component) null);
@@ -81,7 +81,7 @@ final class PowerUp extends CircleBody {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw qb.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw qb.addExceptionContext((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 
@@ -277,7 +277,7 @@ final class PowerUp extends CircleBody {
           } else {
             stackIn_81_2 = "{...}";
           }
-          throw qb.a((Throwable) ((Object) stackIn_80_0), ((StringBuilder) (Object) stackIn_80_1).append(stackIn_81_2).append(',').append(obfuscationGuard).append(')').toString());
+          throw qb.addExceptionContext((Throwable) ((Object) stackIn_80_0), ((StringBuilder) (Object) stackIn_80_1).append(stackIn_81_2).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 

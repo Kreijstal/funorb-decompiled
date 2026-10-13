@@ -9,7 +9,7 @@ final class ip extends ki {
     static String[] field_u;
 
     final void a(boolean param0, int param1, int param2, int param3, int param4) {
-        pb var7;
+        RasterCacheSurface var7;
         if (!param0) {
           field_v = (RgbSprite[][]) null;
         }
@@ -17,19 +17,19 @@ final class ip extends ki {
           Rasterizer2D.fillVerticalGradient(param4, param2, 640, 480, ro.field_x[param3], 16777215);
           if (BrickABrac.field_J) {
             var7 = PowerUp.a(this.field_m, param3, -20777);
-            if (!var7.a((byte) -84, param3, this.field_m)) {
+            if (!var7.matchesCacheKeys((byte) -84, param3, this.field_m)) {
               ih.a(var7, np.field_d, param3, 1, 0, true);
-              var7.a(this.field_m, param3, (byte) 78);
+              var7.setCacheKeys(this.field_m, param3, (byte) 78);
             }
-            ef.a(var7.field_p, dg.field_g, param4, false, param1, param2, 0, param3, 1, 640, ch.field_f);
+            ef.a(var7.sprite, dg.field_g, param4, false, param1, param2, 0, param3, 1, 640, ch.field_f);
           }
         } else {
           var7 = PowerUp.a(this.field_m, param3, -20777);
-          if (!var7.a((byte) -84, param3, this.field_m)) {
+          if (!var7.matchesCacheKeys((byte) -84, param3, this.field_m)) {
             ih.a(var7, np.field_d, param3, 1, 0, true);
-            var7.a(this.field_m, param3, (byte) 78);
+            var7.setCacheKeys(this.field_m, param3, (byte) 78);
           }
-          ef.a(var7.field_p, dg.field_g, param4, false, param1, param2, 0, param3, 1, 640, ch.field_f);
+          ef.a(var7.sprite, dg.field_g, param4, false, param1, param2, 0, param3, 1, 640, ch.field_f);
         }
     }
 
@@ -802,7 +802,7 @@ final class ip extends ki {
           } else {
             stackIn_416_2 = "{...}";
           }
-          throw qb.a((Throwable) ((Object) stackIn_415_0), ((StringBuilder) (Object) stackIn_415_1).append(stackIn_416_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw qb.addExceptionContext((Throwable) ((Object) stackIn_415_0), ((StringBuilder) (Object) stackIn_415_1).append(stackIn_416_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -852,7 +852,7 @@ final class ip extends ki {
             stackIn_11_0 = stackIn_6_0;
             stackIn_11_2 = "{...}";
           }
-          throw qb.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param3).append(')').toString());
+          throw qb.addExceptionContext((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -897,24 +897,24 @@ final class ip extends ki {
     }
 
     final void a(int param0, byte param1, int param2, int param3, int param4) {
-        pb var7;
+        RasterCacheSurface var7;
         if (!this.b((byte) -95)) {
           Rasterizer2D.fillVerticalGradient(param2, param0, 306, 480, ro.field_x[param3], 16777215);
           if (BrickABrac.field_J) {
             var7 = kd.a(this.field_m, param3, (byte) -121);
-            if (!var7.a((byte) -84, param3, this.field_m)) {
+            if (!var7.matchesCacheKeys((byte) -84, param3, this.field_m)) {
               ih.a(var7, ib.field_E, param3, 2, -13, true);
-              var7.a(this.field_m, param3, (byte) 78);
+              var7.setCacheKeys(this.field_m, param3, (byte) 78);
             }
-            ef.a(var7.field_p, fk.field_e, param2, false, param4, param0, -13, param3, 2, 306, sl.field_D);
+            ef.a(var7.sprite, fk.field_e, param2, false, param4, param0, -13, param3, 2, 306, sl.field_D);
           }
         } else {
           var7 = kd.a(this.field_m, param3, (byte) -121);
-          if (!var7.a((byte) -84, param3, this.field_m)) {
+          if (!var7.matchesCacheKeys((byte) -84, param3, this.field_m)) {
             ih.a(var7, ib.field_E, param3, 2, -13, true);
-            var7.a(this.field_m, param3, (byte) 78);
+            var7.setCacheKeys(this.field_m, param3, (byte) 78);
           }
-          ef.a(var7.field_p, fk.field_e, param2, false, param4, param0, -13, param3, 2, 306, sl.field_D);
+          ef.a(var7.sprite, fk.field_e, param2, false, param4, param0, -13, param3, 2, 306, sl.field_D);
         }
         if (param1 >= -84) {
           field_t = (String) null;
@@ -925,17 +925,17 @@ final class ip extends ki {
         if (!AchievementIcon.field_m.a("jungle", -28138)) {
           return false;
         }
-        ch.field_f = pl.a("jungle", "jungle_near", (byte) -39, AchievementIcon.field_m);
-        dg.field_g = pl.a("jungle", "jungle_mid", (byte) -67, AchievementIcon.field_m);
-        np.field_d = pl.a("jungle", "jungle_far", (byte) -46, AchievementIcon.field_m);
-        Brick.field_w = pl.a("jungle", "jungle_small", (byte) -109, AchievementIcon.field_m);
+        ch.field_f = pl.loadRgbSpriteByName("jungle", "jungle_near", (byte) -39, AchievementIcon.field_m);
+        dg.field_g = pl.loadRgbSpriteByName("jungle", "jungle_mid", (byte) -67, AchievementIcon.field_m);
+        np.field_d = pl.loadRgbSpriteByName("jungle", "jungle_far", (byte) -46, AchievementIcon.field_m);
+        Brick.field_w = pl.loadRgbSpriteByName("jungle", "jungle_small", (byte) -109, AchievementIcon.field_m);
         sl.field_D = jh.a(0, ch.field_f);
         fk.field_e = jh.a(0, dg.field_g);
         ib.field_E = jh.a(0, np.field_d);
-        ep.field_h = pl.a("jungle", "jungle_character", (byte) -119, AchievementIcon.field_m);
-        DualLinkNode.field_l[0] = cr.a("jungle", AchievementIcon.field_m, "jungle_caps", 2);
-        DualLinkIterator.field_g[0] = cr.a("jungle", AchievementIcon.field_m, "jungle_segs", 2);
-        up.field_A[0] = pl.a("jungle", "jungle_centre", (byte) -110, AchievementIcon.field_m);
+        ep.field_h = pl.loadRgbSpriteByName("jungle", "jungle_character", (byte) -119, AchievementIcon.field_m);
+        DualLinkNode.field_l[0] = cr.loadRgbSpritesByName("jungle", AchievementIcon.field_m, "jungle_caps", 2);
+        DualLinkIterator.field_g[0] = cr.loadRgbSpritesByName("jungle", AchievementIcon.field_m, "jungle_segs", 2);
+        up.field_A[0] = pl.loadRgbSpriteByName("jungle", "jungle_centre", (byte) -110, AchievementIcon.field_m);
         DualLinkNode.field_l[1] = ig.a(DualLinkNode.field_l[0], false);
         DualLinkIterator.field_g[1] = ig.a(DualLinkIterator.field_g[0], param0);
         up.field_A[1] = pl.a(-16371, up.field_A[0]);

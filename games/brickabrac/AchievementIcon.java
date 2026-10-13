@@ -38,7 +38,7 @@ final class AchievementIcon extends IntrusiveNode {
           ob.field_D.drawRight(param0 + "%", mf.field_d[3], param1, param5, -1);
           ob.field_D.drawRight(param7 + "%", mf.field_d[4], param1, param5, -1);
         } catch (RuntimeException runtimeException) {
-          throw qb.a((Throwable) ((Object) runtimeException), "i.H(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ')');
+          throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "i.H(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ')');
         }
     }
 
@@ -123,7 +123,7 @@ final class AchievementIcon extends IntrusiveNode {
           } else {
             stackIn_27_2 = "{...}";
           }
-          throw qb.a((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(')').toString());
+          throw qb.addExceptionContext((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(')').toString());
         }
     }
 
@@ -137,7 +137,7 @@ final class AchievementIcon extends IntrusiveNode {
           var3.writeByte(-126, 0);
           var3.writeByte(73, param1.field_w);
         } catch (RuntimeException runtimeException) {
-          throw qb.a((Throwable) ((Object) runtimeException), "i.I(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "i.I(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -247,7 +247,7 @@ final class AchievementIcon extends IntrusiveNode {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw qb.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw qb.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
@@ -283,9 +283,9 @@ final class AchievementIcon extends IntrusiveNode {
               this.thumbnailIsPlaceholder) {
               var12 = IntrusiveHashTable.achievementSourceIcons[this.achievementId];
               this.cachedThumbnail = new RgbSprite(var12.canvasWidth / 4, var12.canvasHeight / 4);
-              IndexedSpriteGeometry.a(-119, this.cachedThumbnail);
+              IndexedSpriteGeometry.pushSpriteRaster(-119, this.cachedThumbnail);
               var12.drawQuarter(0, 0);
-              sc.b(-89);
+              sc.popRaster(-89);
               this.thumbnailIsPlaceholder = false;
             }
           } else {
@@ -295,9 +295,9 @@ final class AchievementIcon extends IntrusiveNode {
                 this.thumbnailIsPlaceholder) {
                 var11 = IntrusiveHashTable.achievementSourceIcons[this.achievementId];
                 this.cachedThumbnail = new RgbSprite(var11.canvasWidth / 4, var11.canvasHeight / 4);
-                IndexedSpriteGeometry.a(-119, this.cachedThumbnail);
+                IndexedSpriteGeometry.pushSpriteRaster(-119, this.cachedThumbnail);
                 var11.drawQuarter(0, 0);
-                sc.b(-89);
+                sc.popRaster(-89);
                 this.thumbnailIsPlaceholder = false;
               }
             } else {
@@ -305,9 +305,9 @@ final class AchievementIcon extends IntrusiveNode {
                 this.thumbnailIsPlaceholder) {
                 var13 = IntrusiveHashTable.achievementSourceIcons[this.achievementId];
                 this.cachedThumbnail = new RgbSprite(var13.canvasWidth / 4, var13.canvasHeight / 4);
-                IndexedSpriteGeometry.a(-119, this.cachedThumbnail);
+                IndexedSpriteGeometry.pushSpriteRaster(-119, this.cachedThumbnail);
                 var13.drawQuarter(0, 0);
-                sc.b(-89);
+                sc.popRaster(-89);
                 this.thumbnailIsPlaceholder = false;
               }
             }
@@ -318,17 +318,17 @@ final class AchievementIcon extends IntrusiveNode {
               if (this.cachedThumbnail == null) {
                 var6 = LevelCompleteScreen.field_F;
                 this.cachedThumbnail = new RgbSprite(var6.canvasWidth / 4, var6.canvasHeight / 4);
-                IndexedSpriteGeometry.a(-76, this.cachedThumbnail);
+                IndexedSpriteGeometry.pushSpriteRaster(-76, this.cachedThumbnail);
                 var6.e(0, 0);
-                sc.b(-110);
+                sc.popRaster(-110);
                 this.thumbnailIsPlaceholder = true;
               } else {
                 if (!this.thumbnailIsPlaceholder) {
                   var7 = LevelCompleteScreen.field_F;
                   this.cachedThumbnail = new RgbSprite(var7.canvasWidth / 4, var7.canvasHeight / 4);
-                  IndexedSpriteGeometry.a(-76, this.cachedThumbnail);
+                  IndexedSpriteGeometry.pushSpriteRaster(-76, this.cachedThumbnail);
                   var7.e(0, 0);
-                  sc.b(-110);
+                  sc.popRaster(-110);
                   this.thumbnailIsPlaceholder = true;
                 }
               }
@@ -345,17 +345,17 @@ final class AchievementIcon extends IntrusiveNode {
           if (this.cachedThumbnail == null) {
             var10 = LevelCompleteScreen.field_F;
             this.cachedThumbnail = new RgbSprite(var10.canvasWidth / 4, var10.canvasHeight / 4);
-            IndexedSpriteGeometry.a(-76, this.cachedThumbnail);
+            IndexedSpriteGeometry.pushSpriteRaster(-76, this.cachedThumbnail);
             var10.e(0, 0);
-            sc.b(-110);
+            sc.popRaster(-110);
             this.thumbnailIsPlaceholder = true;
           } else {
             if (!this.thumbnailIsPlaceholder) {
               var10 = LevelCompleteScreen.field_F;
               this.cachedThumbnail = new RgbSprite(var10.canvasWidth / 4, var10.canvasHeight / 4);
-              IndexedSpriteGeometry.a(-76, this.cachedThumbnail);
+              IndexedSpriteGeometry.pushSpriteRaster(-76, this.cachedThumbnail);
               var10.e(0, 0);
-              sc.b(-110);
+              sc.popRaster(-110);
               this.thumbnailIsPlaceholder = true;
             }
           }

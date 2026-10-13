@@ -3,7 +3,7 @@
  */
 final class cf {
     static byte[][] field_b;
-    static int field_d;
+    static int decodedCanvasWidth;
     static int field_a;
     static int[] field_c;
 

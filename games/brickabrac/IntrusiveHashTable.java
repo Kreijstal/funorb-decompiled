@@ -71,7 +71,7 @@ final class IntrusiveHashTable {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw qb.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
+          throw qb.addExceptionContext((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
         }
     }
 
@@ -255,7 +255,7 @@ final class IntrusiveHashTable {
           node.next.previous = node;
           node.key = key;
         } catch (RuntimeException runtimeException) {
-          throw qb.a((Throwable) ((Object) runtimeException), "si.H(" + obfuscationGuard + ',' + (node != null ? "{...}" : "null") + ',' + key + ')');
+          throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "si.H(" + obfuscationGuard + ',' + (node != null ? "{...}" : "null") + ',' + key + ')');
         }
     }
 

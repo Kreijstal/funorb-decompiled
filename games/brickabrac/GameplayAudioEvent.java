@@ -50,7 +50,7 @@ final class GameplayAudioEvent extends IntrusiveNode {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw qb.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param1).append(')').toString());
+          throw qb.addExceptionContext((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -90,11 +90,11 @@ final class GameplayAudioEvent extends IntrusiveNode {
                 iOException = (IOException) (Object) decompiledCaughtException;
               }
             }
-            if (null != v.field_g) {
-              for (var1_int = 0; var1_int < v.field_g.length; var1_int++) {
-                if (null != v.field_g[var1_int]) {
+            if (null != ClientException.field_g) {
+              for (var1_int = 0; var1_int < ClientException.field_g.length; var1_int++) {
+                if (null != ClientException.field_g[var1_int]) {
                   try {
-                    v.field_g[var1_int].a(false);
+                    ClientException.field_g[var1_int].a(false);
                   } catch (java.io.IOException decompiledCaughtParameter1) {
                     decompiledCaughtException = decompiledCaughtParameter1;
                     var2 = (IOException) (Object) decompiledCaughtException;
@@ -107,7 +107,7 @@ final class GameplayAudioEvent extends IntrusiveNode {
           } catch (java.lang.RuntimeException decompiledCaughtParameter2) {
             decompiledCaughtException = decompiledCaughtParameter2;
             var1 = (RuntimeException) (Object) decompiledCaughtException;
-            throw qb.a((Throwable) ((Object) var1), "qc.E(" + param0 + ')');
+            throw qb.addExceptionContext((Throwable) ((Object) var1), "qc.E(" + param0 + ')');
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -142,7 +142,7 @@ final class GameplayAudioEvent extends IntrusiveNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw qb.a((Throwable) ((Object) var1), "qc.D(" + param0 + ')');
+          throw qb.addExceptionContext((Throwable) ((Object) var1), "qc.D(" + param0 + ')');
         }
     }
 

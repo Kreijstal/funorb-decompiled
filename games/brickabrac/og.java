@@ -136,7 +136,7 @@ final class og extends mh {
           } else {
             stackIn_54_2 = "{...}";
           }
-          throw qb.a((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_53_1).append(stackIn_54_2).append(',').append(param16).append(')').toString());
+          throw qb.addExceptionContext((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_53_1).append(stackIn_54_2).append(',').append(param16).append(')').toString());
         }
     }
 
@@ -167,7 +167,7 @@ final class og extends mh {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw qb.a((Throwable) ((Object) var3), "og.E(" + param0 + ',' + param1 + ')');
+          throw qb.addExceptionContext((Throwable) ((Object) var3), "og.E(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -222,7 +222,7 @@ final class og extends mh {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
-          throw qb.a((Throwable) ((Object) runtimeException), "og.B(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "og.B(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -239,7 +239,7 @@ final class og extends mh {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw qb.a((Throwable) ((Object) var1), "og.JA(" + param0 + ')');
+          throw qb.addExceptionContext((Throwable) ((Object) var1), "og.JA(" + param0 + ')');
         }
     }
 
@@ -282,7 +282,7 @@ final class og extends mh {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
-          throw qb.a((Throwable) ((Object) runtimeException), "og.H(" + param0 + ')');
+          throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "og.H(" + param0 + ')');
         }
     }
 
@@ -339,7 +339,7 @@ final class og extends mh {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw qb.a((Throwable) ((Object) var2), "og.A(" + param0 + ')');
+          throw qb.addExceptionContext((Throwable) ((Object) var2), "og.A(" + param0 + ')');
         }
     }
 
@@ -407,7 +407,7 @@ final class og extends mh {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
-          throw qb.a((Throwable) ((Object) var5), "og.I(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw qb.addExceptionContext((Throwable) ((Object) var5), "og.I(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -525,7 +525,7 @@ final class og extends mh {
           } else {
             stackIn_50_2 = "{...}";
           }
-          throw qb.a((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_49_1).append(stackIn_50_2).append(')').toString());
+          throw qb.addExceptionContext((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_49_1).append(stackIn_50_2).append(')').toString());
         }
     }
 
@@ -743,7 +743,7 @@ final class og extends mh {
           }
           var2Lifetime6 = gr.a(true, "expansion_installed");
           if (var2Lifetime6 != null) {
-            ii.field_s = MenuButton.a(var2Lifetime6, (byte) 115);
+            RasterSnapshot.field_s = MenuButton.a(var2Lifetime6, (byte) 115);
           }
           var2Lifetime7 = gr.a(true, "achievement_names,0");
           if (var2Lifetime7 != null) {
@@ -1443,7 +1443,7 @@ final class og extends mh {
           } else {
             stackIn_794_2 = "{...}";
           }
-          throw qb.a((Throwable) ((Object) stackIn_793_0), ((StringBuilder) (Object) stackIn_793_1).append(stackIn_794_2).append(')').toString());
+          throw qb.addExceptionContext((Throwable) ((Object) stackIn_793_0), ((StringBuilder) (Object) stackIn_793_1).append(stackIn_794_2).append(')').toString());
         }
         if (ke.field_l != 0) {
           BrickABrac.field_J = (var3 == 0);
@@ -1490,7 +1490,7 @@ final class og extends mh {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var7 = decompiledCaughtException;
-          throw qb.a((Throwable) ((Object) var7), "og.C(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+          throw qb.addExceptionContext((Throwable) ((Object) var7), "og.C(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
     }
 
@@ -1517,7 +1517,7 @@ final class og extends mh {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw qb.a((Throwable) ((Object) var1), "og.K(" + param0 + ')');
+          throw qb.addExceptionContext((Throwable) ((Object) var1), "og.K(" + param0 + ')');
         }
     }
 
@@ -1581,7 +1581,7 @@ final class og extends mh {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
-          throw qb.a((Throwable) ((Object) var4), "og.D(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw qb.addExceptionContext((Throwable) ((Object) var4), "og.D(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -1606,7 +1606,7 @@ final class og extends mh {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw qb.a((Throwable) ((Object) var2), "og.G(" + param0 + ')');
+          throw qb.addExceptionContext((Throwable) ((Object) var2), "og.G(" + param0 + ')');
         }
     }
 
@@ -1619,7 +1619,7 @@ final class og extends mh {
           field_ac = null;
           field_gc = null;
         } catch (RuntimeException runtimeException) {
-          throw qb.a((Throwable) ((Object) runtimeException), "og.F(" + param0 + ')');
+          throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "og.F(" + param0 + ')');
         }
     }
 
@@ -1689,7 +1689,7 @@ final class og extends mh {
           } else {
             stackIn_29_2 = "{...}";
           }
-          throw qb.a((Throwable) ((Object) stackIn_28_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
+          throw qb.addExceptionContext((Throwable) ((Object) stackIn_28_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
         }
     }
 

@@ -50,7 +50,7 @@ final class dk extends ib implements ha, en, vf {
           }
           var6 = stackIn_4_0;
           if (LevelSelectScreen.field_v == 0) {
-            var7 = qb.a(ii.field_r, 480, param4 ^ -17, oc.field_m, var11);
+            var7 = qb.a(RasterSnapshot.field_r, 480, param4 ^ -17, oc.field_m, var11);
             var8 = var7 + 3;
             MenuSelection.field_q = new int[var8];
             kn.field_E = new String[var8];
@@ -59,7 +59,7 @@ final class dk extends ib implements ha, en, vf {
             }
             hi.field_A = new int[2];
             for (var9 = 0; var7 > var9; var9++) {
-              kn.field_E[var9] = ii.field_r[var9];
+              kn.field_E[var9] = RasterSnapshot.field_r[var9];
             }
             kn.field_E[-3 + var8] = "";
             kn.field_E[var8 - 2] = var6;
@@ -72,7 +72,7 @@ final class dk extends ib implements ha, en, vf {
             if (LevelSelectScreen.field_v != 1) {
               throw new IllegalArgumentException();
             }
-            var7 = qb.a(ii.field_r, 480, param4 - 109, oc.field_m, var11);
+            var7 = qb.a(RasterSnapshot.field_r, 480, param4 - 109, oc.field_m, var11);
             var8 = 2 + var7;
             MenuSelection.field_q = new int[var8];
             kn.field_E = new String[var8];
@@ -81,7 +81,7 @@ final class dk extends ib implements ha, en, vf {
             }
             hi.field_A = new int[1];
             for (var9 = 0; var7 > var9; var9++) {
-              kn.field_E[var9] = ii.field_r[var9];
+              kn.field_E[var9] = RasterSnapshot.field_r[var9];
             }
             kn.field_E[var8 - 2] = "";
             kn.field_E[-1 + var8] = LevelSequence.field_a;
@@ -134,7 +134,7 @@ final class dk extends ib implements ha, en, vf {
           } else {
             stackIn_48_2 = "{...}";
           }
-          throw qb.a((Throwable) ((Object) stackIn_47_0), ((StringBuilder) (Object) stackIn_47_1).append(stackIn_48_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw qb.addExceptionContext((Throwable) ((Object) stackIn_47_0), ((StringBuilder) (Object) stackIn_47_1).append(stackIn_48_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -171,31 +171,31 @@ final class dk extends ib implements ha, en, vf {
         return "<u=2164A2><col=2164A2>";
     }
 
-    final static RgbSprite a(int param0, mf param1, int param2, int param3) {
+    final static RgbSprite loadRgbSprite(int obfuscationGuard, mf archive, int groupId, int fileId) {
         RuntimeException var4 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param0 != -873) {
+          if (obfuscationGuard != -873) {
             field_R = (RgbSprite) null;
           }
-          if (ln.a(-123, param3, param1, param2)) {
-            return n.a((byte) 21);
+          if (ln.decodeSpritesFromArchive(-123, fileId, archive, groupId)) {
+            return n.buildRgbSprite((byte) 21);
           }
           return null;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
           stackIn_8_0 = var4;
-          stackIn_8_1 = new StringBuilder().append("dk.H(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_8_1 = new StringBuilder().append("dk.H(").append(obfuscationGuard).append(',');
+          if (archive == null) {
             stackIn_9_2 = "null";
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw qb.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw qb.addExceptionContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(groupId).append(',').append(fileId).append(')').toString());
         }
     }
 
@@ -233,7 +233,7 @@ final class dk extends ib implements ha, en, vf {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw qb.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
+          throw qb.addExceptionContext((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
         }
     }
 
@@ -266,7 +266,7 @@ final class dk extends ib implements ha, en, vf {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw qb.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw qb.addExceptionContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 
@@ -316,7 +316,7 @@ final class dk extends ib implements ha, en, vf {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw qb.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param6).append(')').toString());
+          throw qb.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param6).append(')').toString());
         }
     }
 
@@ -353,7 +353,7 @@ final class dk extends ib implements ha, en, vf {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw qb.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw qb.addExceptionContext((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -396,7 +396,7 @@ final class dk extends ib implements ha, en, vf {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw qb.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw qb.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -421,7 +421,7 @@ final class dk extends ib implements ha, en, vf {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw qb.a((Throwable) ((Object) var1), "dk.U(" + param0 + ')');
+          throw qb.addExceptionContext((Throwable) ((Object) var1), "dk.U(" + param0 + ')');
         }
     }
 
@@ -452,21 +452,21 @@ final class dk extends ib implements ha, en, vf {
           } else {
             stackIn_6_2 = "{...}";
           }
-          throw qb.a((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(',').append(param1).append(')').toString());
+          throw qb.addExceptionContext((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(',').append(param1).append(')').toString());
         }
     }
 
-    final static void a(int param0, int param1, pb param2, int param3, int param4, RgbSprite param5) {
-        IndexedSpriteGeometry.a(-85, param2.field_p);
-        Rasterizer2D.fillVerticalGradient(0, 0, param2.field_i, param2.field_q, pf.field_b[param1], 16777215);
+    final static void a(int param0, int param1, RasterCacheSurface param2, int param3, int param4, RgbSprite param5) {
+        IndexedSpriteGeometry.pushSpriteRaster(-85, param2.sprite);
+        Rasterizer2D.fillVerticalGradient(0, 0, param2.width, param2.height, pf.field_b[param1], 16777215);
         if (param4 != 23275) {
           return;
         }
         try {
-          param5.b((-param5.canvasWidth + param2.field_i) / 2, -(342 / param0) + (-param5.canvasHeight + param2.field_q), 55, 83);
-          sc.b(-84);
+          param5.b((-param5.canvasWidth + param2.width) / 2, -(342 / param0) + (-param5.canvasHeight + param2.height), 55, 83);
+          sc.popRaster(-84);
         } catch (RuntimeException runtimeException) {
-          throw qb.a((Throwable) ((Object) runtimeException), "dk.M(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ')');
+          throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "dk.M(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -501,7 +501,7 @@ final class dk extends ib implements ha, en, vf {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw qb.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param3).append(')').toString());
+          throw qb.addExceptionContext((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -525,7 +525,7 @@ final class dk extends ib implements ha, en, vf {
           super.a(param0, param1, param2, param3);
           this.field_Q.field_J = this.h(10000536);
         } catch (RuntimeException runtimeException) {
-          throw qb.a((Throwable) ((Object) runtimeException), "dk.WA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "dk.WA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -568,7 +568,7 @@ final class dk extends ib implements ha, en, vf {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw qb.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param5).append(')').toString());
+          throw qb.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param5).append(')').toString());
         }
     }
 
@@ -687,7 +687,7 @@ final class dk extends ib implements ha, en, vf {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw qb.a((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
+          throw qb.addExceptionContext((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
         }
     }
 

@@ -26,23 +26,23 @@ final class ScorePopup extends IntrusiveNode {
         try {
           mg.c();
           LevelPackCard.field_k = 11;
-          v.field_a = new int[260];
+          ClientException.field_a = new int[260];
           var2 = -120 / ((param0 - 32) / 49);
           for (var1_int = 0; var1_int < 256; var1_int++) {
             var3 = 15.0;
-            v.field_a[var1_int] = (int)(Math.pow((double)((float)var1_int / 256.0f), var3) * 255.0);
+            ClientException.field_a[var1_int] = (int)(Math.pow((double)((float)var1_int / 256.0f), var3) * 255.0);
           }
           var6 = 256;
           var1_intLifetime1 = var6;
-          while (v.field_a.length > var6) {
-            v.field_a[var6] = 255;
+          while (ClientException.field_a.length > var6) {
+            ClientException.field_a[var6] = 255;
             var6++;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw qb.a((Throwable) ((Object) var1), "ul.D(" + param0 + ')');
+          throw qb.addExceptionContext((Throwable) ((Object) var1), "ul.D(" + param0 + ')');
         }
     }
 
@@ -69,7 +69,7 @@ final class ScorePopup extends IntrusiveNode {
           dc.field_e.a(param2, !param3 ? true : false, param0, (byte) 22, 1000000, param1);
           int var5_int = 88 / ((-16 - param4) / 38);
         } catch (RuntimeException runtimeException) {
-          throw qb.a((Throwable) ((Object) runtimeException), "ul.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "ul.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 

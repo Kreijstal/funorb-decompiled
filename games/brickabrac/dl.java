@@ -5,7 +5,7 @@ import java.io.*;
 
 abstract class dl {
     static int field_f;
-    static int[] field_d;
+    static int[] decodedSpriteOffsetY;
     int field_c;
     static int field_b;
     String field_a;
@@ -14,7 +14,7 @@ abstract class dl {
     abstract java.net.Socket a(int param0) throws IOException;
 
     public static void b(int param0) {
-        field_d = null;
+        decodedSpriteOffsetY = null;
         field_e = null;
         if (param0 != -9125) {
           field_b = 15;

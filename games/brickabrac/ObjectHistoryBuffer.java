@@ -98,7 +98,7 @@ final class ObjectHistoryBuffer extends IntrusiveNode {
           } else {
             stackIn_31_2 = "{...}";
           }
-          throw qb.a((Throwable) ((Object) stackIn_30_0), ((StringBuilder) (Object) stackIn_30_1).append(stackIn_31_2).append(')').toString());
+          throw qb.addExceptionContext((Throwable) ((Object) stackIn_30_0), ((StringBuilder) (Object) stackIn_30_1).append(stackIn_31_2).append(')').toString());
         }
     }
 
@@ -123,7 +123,7 @@ final class ObjectHistoryBuffer extends IntrusiveNode {
           this.latestIndex = this.latestIndex + 1;
           this.entries[nextIndex % this.capacity] = value;
         } catch (RuntimeException runtimeException) {
-          throw qb.a((Throwable) ((Object) runtimeException), "ao.A(" + (value != null ? "{...}" : "null") + ',' + obfuscationGuard + ')');
+          throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "ao.A(" + (value != null ? "{...}" : "null") + ',' + obfuscationGuard + ')');
         }
     }
 

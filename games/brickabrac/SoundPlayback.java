@@ -9,17 +9,17 @@ final class SoundPlayback extends IntrusiveNode {
     static String field_k;
     IntrusiveNode sourceNode;
 
-    final static void a(int param0, int param1, pb param2, int param3, int param4, RgbSprite param5) {
+    final static void a(int param0, int param1, RasterCacheSurface param2, int param3, int param4, RgbSprite param5) {
         try {
-          IndexedSpriteGeometry.a(-89, param2.field_p);
-          la.a(param5, (-param5.canvasWidth + param2.field_i) / 2, -param5.canvasHeight + (param0 + param2.field_q), MatchCompleteScreen.field_C[param3]);
-          sc.b(-95);
+          IndexedSpriteGeometry.pushSpriteRaster(-89, param2.sprite);
+          la.a(param5, (-param5.canvasWidth + param2.width) / 2, -param5.canvasHeight + (param0 + param2.height), MatchCompleteScreen.field_C[param3]);
+          sc.popRaster(-95);
           if (param1 != 26746) {
             RgbSprite var7 = (RgbSprite) null;
-            SoundPlayback.a(-125, 69, (pb) null, 30, 70, (RgbSprite) null);
+            SoundPlayback.a(-125, 69, (RasterCacheSurface) null, 30, 70, (RgbSprite) null);
           }
         } catch (RuntimeException runtimeException) {
-          throw qb.a((Throwable) ((Object) runtimeException), "l.C(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ')');
+          throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "l.C(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -123,7 +123,7 @@ final class SoundPlayback extends IntrusiveNode {
           } else {
             stackIn_44_2 = "{...}";
           }
-          throw qb.a((Throwable) ((Object) stackIn_43_0), ((StringBuilder) (Object) stackIn_43_1).append(stackIn_44_2).append(',').append(param2).append(')').toString());
+          throw qb.addExceptionContext((Throwable) ((Object) stackIn_43_0), ((StringBuilder) (Object) stackIn_43_1).append(stackIn_44_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -134,7 +134,7 @@ final class SoundPlayback extends IntrusiveNode {
           this.sourceNode = sourceNode;
           this.stream.setGain(128 + this.baseGain * ki.masterSoundGain >> 8);
         } catch (RuntimeException runtimeException) {
-          throw qb.a((Throwable) ((Object) runtimeException), "l.<init>(" + (stream != null ? "{...}" : "null") + ',' + (sourceNode != null ? "{...}" : "null") + ')');
+          throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "l.<init>(" + (stream != null ? "{...}" : "null") + ',' + (sourceNode != null ? "{...}" : "null") + ')');
         }
     }
 

@@ -76,7 +76,7 @@ final class nn {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
-          throw qb.a((Throwable) ((Object) var4), "nn.B(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw qb.addExceptionContext((Throwable) ((Object) var4), "nn.B(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -124,7 +124,7 @@ final class nn {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw qb.a((Throwable) ((Object) var2_ref), "nn.L(" + param0 + ')');
+          throw qb.addExceptionContext((Throwable) ((Object) var2_ref), "nn.L(" + param0 + ')');
         }
     }
 
@@ -152,7 +152,7 @@ final class nn {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw qb.a((Throwable) ((Object) var2_ref), "nn.M(" + param0 + ')');
+          throw qb.addExceptionContext((Throwable) ((Object) var2_ref), "nn.M(" + param0 + ')');
         }
     }
 
@@ -161,7 +161,7 @@ final class nn {
           this.field_d.a(true, param1);
           int var3_int = 11 % ((param0 + 91) / 34);
         } catch (RuntimeException runtimeException) {
-          throw qb.a((Throwable) ((Object) runtimeException), "nn.H(" + param0 + ',' + param1 + ')');
+          throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "nn.H(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -506,7 +506,7 @@ final class nn {
                 }
                 var2 = nk.a("send_pm_to_x", (byte) -108);
                 if (null != var2) {
-                  v.field_c = MenuButton.a(var2, (byte) 82);
+                  ClientException.field_c = MenuButton.a(var2, (byte) 82);
                 }
                 var2 = nk.a("send_qc_to_x", (byte) -115);
                 if (var2 != null) {
@@ -550,7 +550,7 @@ final class nn {
                 }
                 var2 = nk.a("mu_gameopt_reject_x_from_game", (byte) 123);
                 if (null != var2) {
-                  pb.field_o = MenuButton.a(var2, (byte) 90);
+                  RasterCacheSurface.field_o = MenuButton.a(var2, (byte) 90);
                 }
                 var2 = nk.a("mu_gameopt_invite_x_to_game", (byte) -128);
                 if (null != var2) {
@@ -574,7 +574,7 @@ final class nn {
                 }
                 var2 = nk.a("mu_chat_lobby_friends_only", (byte) -127);
                 if (null != var2) {
-                  ii.field_l = MenuButton.a(var2, (byte) 74);
+                  RasterSnapshot.field_l = MenuButton.a(var2, (byte) 74);
                 }
                 var2 = nk.a("mu_chat_lobby_friends", (byte) 16);
                 if (null != var2) {
@@ -1124,7 +1124,7 @@ final class nn {
                 }
                 var2 = nk.a("rule_1_1", (byte) 2);
                 if (null != var2) {
-                  pb.field_l = MenuButton.a(var2, (byte) 108);
+                  RasterCacheSurface.field_l = MenuButton.a(var2, (byte) 108);
                 }
                 var2 = nk.a("rule_1_2", (byte) -115);
                 if (var2 != null) {
@@ -3200,7 +3200,7 @@ final class nn {
                   } else {
                     stackIn_2600_2 = "{...}";
                   }
-                  throw qb.a((Throwable) ((Object) stackIn_2599_0), ((StringBuilder) (Object) stackIn_2599_1).append(stackIn_2600_2).append(',').append(param1).append(')').toString());
+                  throw qb.addExceptionContext((Throwable) ((Object) stackIn_2599_0), ((StringBuilder) (Object) stackIn_2599_1).append(stackIn_2600_2).append(',').append(param1).append(')').toString());
                 }
                 if (var3 != 0) {
                   var4 = ke.field_l;
@@ -3243,7 +3243,7 @@ final class nn {
               if (!m.a(13134, this.field_e) &&
                 !um.field_e) {
                 if (!qo.field_I) {
-                  this.field_d.a(rd.a(v.field_c, new String[]{var4}, (byte) 103), 8, (byte) 80);
+                  this.field_d.a(rd.a(ClientException.field_c, new String[]{var4}, (byte) 103), 8, (byte) 80);
                 }
                 this.field_d.a(rd.a(qm.field_b, new String[]{var4}, (byte) 103), 18, (byte) 104);
                 if (null != param0) {
@@ -3271,7 +3271,7 @@ final class nn {
           } else {
             stackIn_54_2 = "{...}";
           }
-          throw qb.a((Throwable) ((Object) stackIn_53_0), ((StringBuilder) (Object) stackIn_53_1).append(stackIn_54_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw qb.addExceptionContext((Throwable) ((Object) stackIn_53_0), ((StringBuilder) (Object) stackIn_53_1).append(stackIn_54_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -3316,7 +3316,7 @@ final class nn {
               if (param1 &&
                 var3.field_fc) {
                 this.field_d.a(rd.a(mc.field_b, new String[]{var5}, (byte) 103), 0, (byte) 112);
-                this.field_d.a(rd.a(pb.field_o, new String[]{var5}, (byte) 103), 1, (byte) 116);
+                this.field_d.a(rd.a(RasterCacheSurface.field_o, new String[]{var5}, (byte) 103), 1, (byte) 116);
                 if (var6 == 0) {
                   return;
                 }
@@ -3328,7 +3328,7 @@ final class nn {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3_ref = decompiledCaughtException;
-          throw qb.a((Throwable) ((Object) var3_ref), "nn.C(" + param0 + ',' + param1 + ')');
+          throw qb.addExceptionContext((Throwable) ((Object) var3_ref), "nn.C(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -3349,7 +3349,7 @@ final class nn {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw qb.a((Throwable) ((Object) var2_ref), "nn.K(" + param0 + ')');
+          throw qb.addExceptionContext((Throwable) ((Object) var2_ref), "nn.K(" + param0 + ')');
         }
     }
 
@@ -3366,7 +3366,7 @@ final class nn {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw qb.a((Throwable) ((Object) var2), "nn.N(" + param0 + ')');
+          throw qb.addExceptionContext((Throwable) ((Object) var2), "nn.N(" + param0 + ')');
         }
     }
 
@@ -3391,7 +3391,7 @@ final class nn {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = decompiledCaughtException;
-          throw qb.a((Throwable) ((Object) var6), "nn.J(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw qb.addExceptionContext((Throwable) ((Object) var6), "nn.J(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -3429,7 +3429,7 @@ final class nn {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4_ref2 = decompiledCaughtException;
-          throw qb.a((Throwable) ((Object) var4_ref2), "nn.D(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw qb.addExceptionContext((Throwable) ((Object) var4_ref2), "nn.D(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -3486,7 +3486,7 @@ final class nn {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
-          throw qb.a((Throwable) ((Object) var4), "nn.G(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw qb.addExceptionContext((Throwable) ((Object) var4), "nn.G(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -3499,7 +3499,7 @@ final class nn {
         try {
           field_g = null;
         } catch (RuntimeException runtimeException) {
-          throw qb.a((Throwable) ((Object) runtimeException), "nn.A(" + param0 + ')');
+          throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "nn.A(" + param0 + ')');
         }
     }
 
@@ -3518,7 +3518,7 @@ final class nn {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
-          throw qb.a((Throwable) ((Object) var4), "nn.E(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw qb.addExceptionContext((Throwable) ((Object) var4), "nn.E(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -3573,7 +3573,7 @@ final class nn {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw qb.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
+          throw qb.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
         }
     }
 
@@ -3590,7 +3590,7 @@ final class nn {
           this.field_a = param0.field_c;
           if (param0.field_c == 0) {
             if (InstructionsScreen.field_r == 0) {
-              this.field_d.a(ii.field_l, 12, (byte) 81);
+              this.field_d.a(RasterSnapshot.field_l, 12, (byte) 81);
             }
             this.field_d.a(co.field_e, 13, (byte) 87);
           }
@@ -3620,7 +3620,7 @@ final class nn {
           } else {
             stackIn_33_2 = "{...}";
           }
-          throw qb.a((Throwable) ((Object) stackIn_32_0), ((StringBuilder) (Object) stackIn_32_1).append(stackIn_33_2).append(',').append(param1).append(')').toString());
+          throw qb.addExceptionContext((Throwable) ((Object) stackIn_32_0), ((StringBuilder) (Object) stackIn_32_1).append(stackIn_33_2).append(',').append(param1).append(')').toString());
         }
     }
 

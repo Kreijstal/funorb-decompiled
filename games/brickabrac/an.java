@@ -64,7 +64,7 @@ final class an extends pj implements hf, ph {
             field_i = (th) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw qb.a((Throwable) ((Object) runtimeException), "an.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "an.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -75,7 +75,7 @@ final class an extends pj implements hf, ph {
             this.c(113);
           }
         } catch (RuntimeException runtimeException) {
-          throw qb.a((Throwable) ((Object) runtimeException), "an.I(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "an.I(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -127,7 +127,7 @@ final class an extends pj implements hf, ph {
           }
           mm.field_Sb = 0;
         } catch (RuntimeException runtimeException) {
-          throw qb.a((Throwable) ((Object) runtimeException), "an.R(" + param0 + ')');
+          throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "an.R(" + param0 + ')');
         }
     }
 

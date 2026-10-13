@@ -54,7 +54,7 @@ abstract class MovingBody extends IntrusiveNode {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw qb.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
+          throw qb.addExceptionContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
         }
     }
 
@@ -124,7 +124,7 @@ abstract class MovingBody extends IntrusiveNode {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw qb.a((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
+          throw qb.addExceptionContext((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
         }
     }
 
@@ -142,7 +142,7 @@ abstract class MovingBody extends IntrusiveNode {
         RuntimeException decompiledCaughtException = null;
         var3 = BrickABrac.field_J ? 1 : 0;
         try {
-          mf.field_f.a(v.field_e, DualLinkNode.field_r, -114, true);
+          mf.field_f.a(ClientException.field_e, DualLinkNode.field_r, -114, true);
           mf.field_f.i(79);
           while (jl.pollKeyEvent((byte) 5)) {
             mf.field_f.a(go.currentKeyCharacter, dc.currentKeyCode, true);
@@ -175,7 +175,7 @@ abstract class MovingBody extends IntrusiveNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw qb.a((Throwable) ((Object) var1), "vi.J(" + param0 + ')');
+          throw qb.addExceptionContext((Throwable) ((Object) var1), "vi.J(" + param0 + ')');
         }
     }
 
@@ -516,7 +516,7 @@ abstract class MovingBody extends IntrusiveNode {
           } else {
             stackIn_79_2 = "{...}";
           }
-          throw qb.a((Throwable) ((Object) stackIn_78_0), ((StringBuilder) (Object) stackIn_78_1).append(stackIn_79_2).append(',').append(param10).append(',').append(param11).append(',').append(param12).append(',').append(param13).append(',').append(param14).append(',').append(param15).append(',').append(param16).append(')').toString());
+          throw qb.addExceptionContext((Throwable) ((Object) stackIn_78_0), ((StringBuilder) (Object) stackIn_78_1).append(stackIn_79_2).append(',').append(param10).append(',').append(param11).append(',').append(param12).append(',').append(param13).append(',').append(param14).append(',').append(param15).append(',').append(param16).append(')').toString());
         }
     }
 
@@ -543,7 +543,7 @@ abstract class MovingBody extends IntrusiveNode {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw qb.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw qb.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
@@ -556,7 +556,7 @@ abstract class MovingBody extends IntrusiveNode {
     }
 
     final static void a(byte param0, int param1, int param2, int param3, int param4) {
-        HighscorePackSelector.d(-99);
+        HighscorePackSelector.pushRaster(-99);
         Rasterizer2D.intersectClip(param2, param3, param1, param4);
         if (param0 < 68) {
           field_n = (String) null;

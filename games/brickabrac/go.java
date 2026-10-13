@@ -41,14 +41,14 @@ final class go {
               var6 = new ve(255, oc.field_k, new jg(ec.field_P.field_m, 12000, 0), 2097152);
             }
             if (oc.field_k != null) {
-              if (v.field_g == null) {
-                v.field_g = new jg[ec.field_P.field_s.length];
+              if (ClientException.field_g == null) {
+                ClientException.field_g = new jg[ec.field_P.field_s.length];
               }
-              if (v.field_g[param1] == null) {
-                v.field_g[param1] = new jg(ec.field_P.field_s[param1], 12000, 0);
+              if (ClientException.field_g[param1] == null) {
+                ClientException.field_g[param1] = new jg(ec.field_P.field_s[param1], 12000, 0);
                 ec.field_P.field_s[param1] = null;
               }
-              var7 = new ve(param1, oc.field_k, v.field_g[param1], 2097152);
+              var7 = new ve(param1, oc.field_k, ClientException.field_g[param1], 2097152);
             }
             if (!param5) {
               go.a(78);

@@ -163,7 +163,7 @@ final class ch {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw qb.a((Throwable) ((Object) var1_ref), "ch.C(" + param0 + ')');
+          throw qb.addExceptionContext((Throwable) ((Object) var1_ref), "ch.C(" + param0 + ')');
         }
     }
 
@@ -190,7 +190,7 @@ final class ch {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw qb.a((Throwable) ((Object) var1), "ch.B(" + param0 + ')');
+          throw qb.addExceptionContext((Throwable) ((Object) var1), "ch.B(" + param0 + ')');
         }
     }
 
@@ -204,7 +204,7 @@ final class ch {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
-          throw qb.a((Throwable) ((Object) var4), "ch.A(" + param0 + ',' + param1 + ')');
+          throw qb.addExceptionContext((Throwable) ((Object) var4), "ch.A(" + param0 + ',' + param1 + ')');
         }
     }
 

@@ -93,10 +93,10 @@ abstract class sl extends DualLinkNode {
           ff.field_i = param14;
           pf.field_i = param11;
           ki.field_k = param9;
-          dj.field_f = cr.a("lobby", param7, "gameprivacy", 2);
-          bq.field_c = cr.a("lobby", param7, "ratedgame", 2);
-          uo.field_c = cr.a("lobby", param7, "opentome", 2);
-          Ball.field_K = cr.a("lobby", param7, "allowspectators", 2);
+          dj.field_f = cr.loadRgbSpritesByName("lobby", param7, "gameprivacy", 2);
+          bq.field_c = cr.loadRgbSpritesByName("lobby", param7, "ratedgame", 2);
+          uo.field_c = cr.loadRgbSpritesByName("lobby", param7, "opentome", 2);
+          Ball.field_K = cr.loadRgbSpritesByName("lobby", param7, "allowspectators", 2);
           AchievementsScreen.field_H = new String[5];
           AchievementsScreen.field_H[3] = cm.field_u;
           AchievementsScreen.field_H[1] = t.field_e;
@@ -358,7 +358,7 @@ abstract class sl extends DualLinkNode {
           } else {
             stackIn_108_2 = "{...}";
           }
-          throw qb.a((Throwable) ((Object) stackIn_77_0), ((StringBuilder) (Object) stackIn_107_1).append(stackIn_108_2).append(')').toString());
+          throw qb.addExceptionContext((Throwable) ((Object) stackIn_77_0), ((StringBuilder) (Object) stackIn_107_1).append(stackIn_108_2).append(')').toString());
         }
     }
 

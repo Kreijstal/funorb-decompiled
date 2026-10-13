@@ -123,11 +123,11 @@ final class eh {
           var19 = new up(var4, true);
           var19.a(-1553, var13);
         } catch (RuntimeException runtimeException) {
-          throw qb.a((Throwable) ((Object) runtimeException), "eh.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "eh.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
-    final static void a(byte[] param0, boolean param1) {
+    final static void decodeSpriteData(byte[] data, boolean obfuscationGuard) {
         byte dupTemp$0 = 0;
         byte dupTemp$1 = 0;
         byte[] stackIn_30_0 = null;
@@ -151,139 +151,139 @@ final class eh {
         String stackIn_64_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
-        int var3 = 0;
+        int paletteSize = 0;
         int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        byte[] var8 = null;
-        byte[] var9 = null;
-        int var10 = 0;
-        int var11 = 0;
+        int spriteWidth = 0;
+        int spriteHeight = 0;
+        int pixelCount = 0;
+        byte[] indices = null;
+        byte[] alpha = null;
+        int hasNonopaqueAlpha = 0;
+        int layoutFlags = 0;
         int var12 = 0;
         int var13 = 0;
         int var14 = 0;
-        int var15 = 0;
-        PacketBuffer var16 = null;
-        PacketBuffer var17 = null;
+        int clientBranchFlag = 0;
+        PacketBuffer packet = null;
+        PacketBuffer metadataPacket = null;
         byte[] var18 = null;
         byte[] var19 = null;
         byte[] var20 = null;
         byte[] var21 = null;
-        int var4Lifetime1;
-        int var4Lifetime2;
-        int var4Lifetime3;
-        int var4Lifetime4;
-        int var4Lifetime5;
-        var15 = BrickABrac.field_J ? 1 : 0;
+        int offsetYIndex;
+        int widthIndex;
+        int heightIndex;
+        int paletteIndex;
+        int spriteIndex;
+        clientBranchFlag = BrickABrac.field_J ? 1 : 0;
         try {
-          var16 = new PacketBuffer(param0);
-          var17 = var16;
-          var17.position = -2 + param0.length;
-          nl.field_c = var17.readUnsignedShort(65280);
-          cn.field_a = new byte[nl.field_c][];
-          jh.field_b = new int[nl.field_c];
-          dl.field_d = new int[nl.field_c];
-          gg.field_t = new int[nl.field_c];
-          tm.field_b = new boolean[nl.field_c];
-          bj.field_S = new byte[nl.field_c][];
-          ag.field_K = new int[nl.field_c];
-          var17.position = -(8 * nl.field_c) + (-7 + param0.length);
-          cf.field_d = var17.readUnsignedShort(65280);
-          ek.field_db = var17.readUnsignedShort(65280);
-          var3 = 1 + (var17.readUnsignedByte(255) & 255);
-          for (var4 = 0; nl.field_c > var4; var4++) {
-            ag.field_K[var4] = var16.readUnsignedShort(65280);
+          packet = new PacketBuffer(data);
+          metadataPacket = packet;
+          metadataPacket.position = -2 + data.length;
+          nl.decodedSpriteCount = metadataPacket.readUnsignedShort(65280);
+          cn.decodedSpriteIndices = new byte[nl.decodedSpriteCount][];
+          jh.decodedSpriteWidths = new int[nl.decodedSpriteCount];
+          dl.decodedSpriteOffsetY = new int[nl.decodedSpriteCount];
+          gg.decodedSpriteHeights = new int[nl.decodedSpriteCount];
+          tm.decodedSpriteHasAlpha = new boolean[nl.decodedSpriteCount];
+          bj.decodedSpriteAlpha = new byte[nl.decodedSpriteCount][];
+          ag.decodedSpriteOffsetX = new int[nl.decodedSpriteCount];
+          metadataPacket.position = -(8 * nl.decodedSpriteCount) + (-7 + data.length);
+          cf.decodedCanvasWidth = metadataPacket.readUnsignedShort(65280);
+          ek.decodedCanvasHeight = metadataPacket.readUnsignedShort(65280);
+          paletteSize = 1 + (metadataPacket.readUnsignedByte(255) & 255);
+          for (var4 = 0; nl.decodedSpriteCount > var4; var4++) {
+            ag.decodedSpriteOffsetX[var4] = packet.readUnsignedShort(65280);
           }
-          for (var4Lifetime1 = 0; nl.field_c > var4Lifetime1; var4Lifetime1++) {
-            dl.field_d[var4Lifetime1] = var17.readUnsignedShort(65280);
+          for (offsetYIndex = 0; nl.decodedSpriteCount > offsetYIndex; offsetYIndex++) {
+            dl.decodedSpriteOffsetY[offsetYIndex] = metadataPacket.readUnsignedShort(65280);
           }
-          for (var4Lifetime2 = 0; nl.field_c > var4Lifetime2; var4Lifetime2++) {
-            jh.field_b[var4Lifetime2] = var17.readUnsignedShort(65280);
+          for (widthIndex = 0; nl.decodedSpriteCount > widthIndex; widthIndex++) {
+            jh.decodedSpriteWidths[widthIndex] = metadataPacket.readUnsignedShort(65280);
           }
-          for (var4Lifetime3 = 0; var4Lifetime3 < nl.field_c; var4Lifetime3++) {
-            gg.field_t[var4Lifetime3] = var17.readUnsignedShort(65280);
+          for (heightIndex = 0; heightIndex < nl.decodedSpriteCount; heightIndex++) {
+            gg.decodedSpriteHeights[heightIndex] = metadataPacket.readUnsignedShort(65280);
           }
-          var17.position = -(3 * (var3 - 1)) + (-(nl.field_c * 8) + param0.length - 7);
-          qp.field_c = new int[var3];
-          for (var4Lifetime4 = 1; var3 > var4Lifetime4; var4Lifetime4++) {
-            qp.field_c[var4Lifetime4] = var17.readUnsignedMedium((byte) -34);
-            if (0 == qp.field_c[var4Lifetime4]) {
-              qp.field_c[var4Lifetime4] = 1;
+          metadataPacket.position = -(3 * (paletteSize - 1)) + (-(nl.decodedSpriteCount * 8) + data.length - 7);
+          qp.decodedSpritePalette = new int[paletteSize];
+          for (paletteIndex = 1; paletteSize > paletteIndex; paletteIndex++) {
+            qp.decodedSpritePalette[paletteIndex] = metadataPacket.readUnsignedMedium((byte) -34);
+            if (0 == qp.decodedSpritePalette[paletteIndex]) {
+              qp.decodedSpritePalette[paletteIndex] = 1;
             }
           }
-          if (param1) {
+          if (obfuscationGuard) {
             field_d = (String) null;
           }
-          var17.position = 0;
-          for (var4Lifetime5 = 0; var4Lifetime5 < nl.field_c; var4Lifetime5++) {
-            var5 = jh.field_b[var4Lifetime5];
-            var6 = gg.field_t[var4Lifetime5];
-            var7 = var5 * var6;
-            var20 = new byte[var7];
+          metadataPacket.position = 0;
+          for (spriteIndex = 0; spriteIndex < nl.decodedSpriteCount; spriteIndex++) {
+            spriteWidth = jh.decodedSpriteWidths[spriteIndex];
+            spriteHeight = gg.decodedSpriteHeights[spriteIndex];
+            pixelCount = spriteWidth * spriteHeight;
+            var20 = new byte[pixelCount];
             var18 = var20;
-            var8 = var18;
-            cn.field_a[var4Lifetime5] = var20;
-            var21 = new byte[var7];
+            indices = var18;
+            cn.decodedSpriteIndices[spriteIndex] = var20;
+            var21 = new byte[pixelCount];
             var19 = var21;
-            var9 = var19;
-            bj.field_S[var4Lifetime5] = var21;
-            var10 = 0;
-            var11 = var17.readUnsignedByte(255);
-            if ((1 & var11) == 0) {
-              for (var12 = 0; var12 < var7; var12++) {
-                var8[var12] = var17.readByte(true);
+            alpha = var19;
+            bj.decodedSpriteAlpha[spriteIndex] = var21;
+            hasNonopaqueAlpha = 0;
+            layoutFlags = metadataPacket.readUnsignedByte(255);
+            if ((1 & layoutFlags) == 0) {
+              for (var12 = 0; var12 < pixelCount; var12++) {
+                indices[var12] = metadataPacket.readByte(true);
               }
-              if ((2 & var11) != 0) {
-                for (var12 = 0; var12 < var7; var12++) {
-                  stackIn_54_0 = var9;
+              if ((2 & layoutFlags) != 0) {
+                for (var12 = 0; var12 < pixelCount; var12++) {
+                  stackIn_54_0 = alpha;
                   stackIn_54_1 = var12;
-                  stackIn_54_2 = var17;
-                  stackIn_55_3 = !(param1);
+                  stackIn_54_2 = metadataPacket;
+                  stackIn_55_3 = !(obfuscationGuard);
                   dupTemp$0 = ((PacketBuffer) (Object) stackIn_54_2).readByte(stackIn_55_3);
                   stackIn_54_0[stackIn_54_1] = dupTemp$0;
                   var13 = dupTemp$0;
-                  stackIn_57_0 = var10;
+                  stackIn_57_0 = hasNonopaqueAlpha;
                   if (var13 == -1) {
                     stackIn_58_1 = 0;
                   } else {
                     stackIn_58_1 = 1;
                   }
-                  var10 = stackIn_57_0 | stackIn_58_1;
+                  hasNonopaqueAlpha = stackIn_57_0 | stackIn_58_1;
                 }
               }
             } else {
-              for (var12 = 0; var5 > var12; var12++) {
-                for (var13 = 0; var13 < var6; var13++) {
-                  stackIn_30_0 = var8;
-                  stackIn_30_1 = var12 + var13 * var5;
-                  stackIn_30_2 = var17;
-                  stackIn_31_3 = !(param1);
+              for (var12 = 0; spriteWidth > var12; var12++) {
+                for (var13 = 0; var13 < spriteHeight; var13++) {
+                  stackIn_30_0 = indices;
+                  stackIn_30_1 = var12 + var13 * spriteWidth;
+                  stackIn_30_2 = metadataPacket;
+                  stackIn_31_3 = !(obfuscationGuard);
                   stackIn_30_0[stackIn_30_1] = ((PacketBuffer) (Object) stackIn_30_2).readByte(stackIn_31_3);
                 }
               }
-              if ((2 & var11) != 0) {
-                for (var12 = 0; var12 < var5; var12++) {
-                  for (var13 = 0; var6 > var13; var13++) {
-                    stackIn_40_0 = var9;
-                    stackIn_40_1 = var12 + var13 * var5;
-                    stackIn_40_2 = var17;
-                    stackIn_41_3 = !(param1);
+              if ((2 & layoutFlags) != 0) {
+                for (var12 = 0; var12 < spriteWidth; var12++) {
+                  for (var13 = 0; spriteHeight > var13; var13++) {
+                    stackIn_40_0 = alpha;
+                    stackIn_40_1 = var12 + var13 * spriteWidth;
+                    stackIn_40_2 = metadataPacket;
+                    stackIn_41_3 = !(obfuscationGuard);
                     dupTemp$1 = ((PacketBuffer) (Object) stackIn_40_2).readByte(stackIn_41_3);
                     stackIn_40_0[stackIn_40_1] = dupTemp$1;
                     var14 = dupTemp$1;
-                    stackIn_43_0 = var10;
+                    stackIn_43_0 = hasNonopaqueAlpha;
                     if (-1 == var14) {
                       stackIn_44_1 = 0;
                     } else {
                       stackIn_44_1 = 1;
                     }
-                    var10 = stackIn_43_0 | stackIn_44_1;
+                    hasNonopaqueAlpha = stackIn_43_0 | stackIn_44_1;
                   }
                 }
               }
             }
-            tm.field_b[var4Lifetime5] = var10 != 0;
+            tm.decodedSpriteHasAlpha[spriteIndex] = hasNonopaqueAlpha != 0;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -291,12 +291,12 @@ final class eh {
           var2 = decompiledCaughtException;
           stackIn_63_0 = var2;
           stackIn_63_1 = new StringBuilder().append("eh.J(");
-          if (param0 == null) {
+          if (data == null) {
             stackIn_64_2 = "null";
           } else {
             stackIn_64_2 = "{...}";
           }
-          throw qb.a((Throwable) ((Object) stackIn_63_0), ((StringBuilder) (Object) stackIn_63_1).append(stackIn_64_2).append(',').append(param1).append(')').toString());
+          throw qb.addExceptionContext((Throwable) ((Object) stackIn_63_0), ((StringBuilder) (Object) stackIn_63_1).append(stackIn_64_2).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 
@@ -354,7 +354,7 @@ final class eh {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw qb.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw qb.addExceptionContext((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -384,7 +384,7 @@ final class eh {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw qb.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
+          throw qb.addExceptionContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
         }
     }
 
@@ -483,7 +483,7 @@ final class eh {
           } else {
             stackIn_44_2 = "{...}";
           }
-          throw qb.a((Throwable) ((Object) stackIn_43_0), ((StringBuilder) (Object) stackIn_43_1).append(stackIn_44_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw qb.addExceptionContext((Throwable) ((Object) stackIn_43_0), ((StringBuilder) (Object) stackIn_43_1).append(stackIn_44_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 
@@ -565,7 +565,7 @@ final class eh {
           } else {
             stackIn_30_2 = "{...}";
           }
-          throw qb.a((Throwable) ((Object) stackIn_29_0), ((StringBuilder) (Object) stackIn_29_1).append(stackIn_30_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw qb.addExceptionContext((Throwable) ((Object) stackIn_29_0), ((StringBuilder) (Object) stackIn_29_1).append(stackIn_30_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 

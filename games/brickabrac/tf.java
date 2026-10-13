@@ -58,7 +58,7 @@ final class tf {
             }
           }
         } catch (RuntimeException runtimeException) {
-          throw qb.a((Throwable) ((Object) runtimeException), "tf.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "tf.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -148,20 +148,20 @@ final class tf {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw qb.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
+          throw qb.addExceptionContext((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
         }
     }
 
-    final static void a(int param0, int param1, pb param2, int param3, int param4, RgbSprite param5) {
+    final static void a(int param0, int param1, RasterCacheSurface param2, int param3, int param4, RgbSprite param5) {
         try {
-          IndexedSpriteGeometry.a(-68, param2.field_p);
-          Rasterizer2D.fillRectangle(0, 0, param2.field_i, param2.field_q, 16777215);
+          IndexedSpriteGeometry.pushSpriteRaster(-68, param2.sprite);
+          Rasterizer2D.fillRectangle(0, 0, param2.width, param2.height, 16777215);
           int var6_int = -110 / ((param4 - 62) / 39);
-          param5.drawTransparent((-param5.canvasWidth + param2.field_i) / 2, param2.field_q + (param0 - (param5.canvasHeight - 5 / param3)));
-          la.a(0, 0, param2.field_i, param2.field_q, IntrusiveNode.field_h[param1], 11970969, 152);
-          sc.b(-112);
+          param5.drawTransparent((-param5.canvasWidth + param2.width) / 2, param2.height + (param0 - (param5.canvasHeight - 5 / param3)));
+          la.a(0, 0, param2.width, param2.height, IntrusiveNode.field_h[param1], 11970969, 152);
+          sc.popRaster(-112);
         } catch (RuntimeException runtimeException) {
-          throw qb.a((Throwable) ((Object) runtimeException), "tf.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ')');
+          throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "tf.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ')');
         }
     }
 

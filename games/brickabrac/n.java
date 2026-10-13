@@ -68,7 +68,7 @@ final class n {
           } else {
             stackIn_22_2 = "{...}";
           }
-          throw qb.a((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(')').toString());
+          throw qb.addExceptionContext((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(')').toString());
         }
     }
 
@@ -96,20 +96,20 @@ final class n {
         throw new IllegalStateException();
     }
 
-    final static RgbSprite a(byte param0) {
+    final static RgbSprite buildRgbSprite(byte obfuscationGuard) {
         int var4_int = 0;
         int var5 = BrickABrac.field_J ? 1 : 0;
-        int var1 = jh.field_b[0] * gg.field_t[0];
-        if (param0 != 21) {
+        int var1 = jh.decodedSpriteWidths[0] * gg.decodedSpriteHeights[0];
+        if (obfuscationGuard != 21) {
           n.b(-24);
         }
-        byte[] var2 = cn.field_a[0];
+        byte[] var2 = cn.decodedSpriteIndices[0];
         int[] var3 = new int[var1];
         for (var4_int = 0; var1 > var4_int; var4_int++) {
-          var3[var4_int] = qp.field_c[ik.a(255, (int) var2[var4_int])];
+          var3[var4_int] = qp.decodedSpritePalette[ik.a(255, (int) var2[var4_int])];
         }
-        RgbSprite var4 = new RgbSprite(cf.field_d, ek.field_db, ag.field_K[0], dl.field_d[0], jh.field_b[0], gg.field_t[0], var3);
-        MotionWaypoint.d((byte) 96);
+        RgbSprite var4 = new RgbSprite(cf.decodedCanvasWidth, ek.decodedCanvasHeight, ag.decodedSpriteOffsetX[0], dl.decodedSpriteOffsetY[0], jh.decodedSpriteWidths[0], gg.decodedSpriteHeights[0], var3);
+        MotionWaypoint.clearDecodedSpriteData((byte) 96);
         return var4;
     }
 
@@ -333,7 +333,7 @@ final class n {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
-          throw qb.a((Throwable) ((Object) var4), "n.D(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw qb.addExceptionContext((Throwable) ((Object) var4), "n.D(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 

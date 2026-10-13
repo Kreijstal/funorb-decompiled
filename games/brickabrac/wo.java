@@ -152,7 +152,7 @@ final class wo {
             wo.a(25, -97, (RgbSprite) null, -16, -115, 10, -8, 2, (RgbSprite) null, (RgbSprite) null, -69);
           }
         } catch (RuntimeException runtimeException) {
-          throw qb.a((Throwable) ((Object) runtimeException), "wo.B(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + (param8 != null ? "{...}" : "null") + ',' + (param9 != null ? "{...}" : "null") + ',' + param10 + ')');
+          throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "wo.B(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + (param8 != null ? "{...}" : "null") + ',' + (param9 != null ? "{...}" : "null") + ',' + param10 + ')');
         }
     }
 

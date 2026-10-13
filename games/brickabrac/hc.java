@@ -88,7 +88,7 @@ final class hc {
           } else {
             stackIn_30_2 = "{...}";
           }
-          throw qb.a((Throwable) ((Object) stackIn_29_0), ((StringBuilder) (Object) stackIn_29_1).append(stackIn_30_2).append(')').toString());
+          throw qb.addExceptionContext((Throwable) ((Object) stackIn_29_0), ((StringBuilder) (Object) stackIn_29_1).append(stackIn_30_2).append(')').toString());
         }
     }
 
@@ -120,7 +120,7 @@ final class hc {
           }
           c.field_a = 0;
         } catch (RuntimeException runtimeException) {
-          throw qb.a((Throwable) ((Object) runtimeException), "hc.D(" + param0 + ')');
+          throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "hc.D(" + param0 + ')');
         }
     }
 
@@ -229,21 +229,21 @@ final class hc {
           var10.field_Q = 1;
           var11.field_S = 1;
           qh.field_j = new mh(0L, var8);
-          qh.field_j.field_Jb = qg.a(cr.a("lobby", param3, "heading", 2), (byte) -117);
+          qh.field_j.field_Jb = qg.a(cr.loadRgbSpritesByName("lobby", param3, "heading", 2), (byte) -117);
           lp.field_Ab = new mh(0L, (mh) null);
           lp.field_Ab.field_Jb = TimedSplashScreen.a(false, (byte) 83, 8421504, 120, 4210752, false);
           f.field_a = new mh(0L, (mh) null);
           f.field_a.field_Jb = na.a(false, 6316128, 3, 6316128, 114, 1);
           ij.field_c = new mh(0L, (mh) null);
-          ij.field_c.field_Jb = qg.a(cr.a("lobby", param3, "popup", 2), (byte) -114);
-          var12 = qg.a(cr.a("lobby", param3, "popup_mouseover", 2), (byte) -117);
-          var13 = cr.a("lobby", param3, "button", 2);
-          var14 = qg.a(cr.a("lobby", param3, "tab_active", 2), (byte) -110);
+          ij.field_c.field_Jb = qg.a(cr.loadRgbSpritesByName("lobby", param3, "popup", 2), (byte) -114);
+          var12 = qg.a(cr.loadRgbSpritesByName("lobby", param3, "popup_mouseover", 2), (byte) -117);
+          var13 = cr.loadRgbSpritesByName("lobby", param3, "button", 2);
+          var14 = qg.a(cr.loadRgbSpritesByName("lobby", param3, "tab_active", 2), (byte) -110);
           rf.field_c = new mh(0L, var8);
           rf.field_c.field_Jb = var14;
           am.field_Zb = new mh(0L, (mh) null);
-          am.field_Zb.field_wb = pl.a("lobby", "closebutton", (byte) -90, param3);
-          am.field_Zb.field_T = pl.a("lobby", "closebutton_mouseover", (byte) 119, param3);
+          am.field_Zb.field_wb = pl.loadRgbSpriteByName("lobby", "closebutton", (byte) -90, param3);
+          am.field_Zb.field_T = pl.loadRgbSpriteByName("lobby", "closebutton_mouseover", (byte) 119, param3);
           lj.field_k = new mh(0L, var8);
           lj.field_k.field_Jb = TimedSplashScreen.a(true, (byte) 57, 3815994, 40, 2039583, true);
           MainMenuScreen.field_t = new mh(0L, var10);
@@ -280,7 +280,7 @@ final class hc {
           OptionsScreen.field_v.a((byte) -82, DualLinkNode.field_t);
           vb.field_K = new mh(0L, wi.field_n);
           vb.field_K.a((byte) -72, DualLinkNode.field_t);
-          var16 = cr.a("lobby", param3, "button_mouseover", 2);
+          var16 = cr.loadRgbSpritesByName("lobby", param3, "button_mouseover", 2);
           ce.field_b = new br(ij.field_c, var12, ad.field_l, DualLinkNode.field_t, 3, 2, kn.field_z, 3, np.field_a);
           fi.field_s = new mh(0L, DualLinkNode.field_t);
           fi.field_s.field_E = 1;
@@ -289,14 +289,14 @@ final class hc {
           fi.field_s.field_Gb = var16;
           fi.field_s.field_Jb = var13;
           fi.field_s.field_rb = 1;
-          fi.field_s.field_D = cr.a("lobby", param3, "button_mouseheld", 2);
-          fi.field_s.field_pb = cr.a("lobby", param3, "button_active", 2);
-          fi.field_s.field_Ab = cr.a("lobby", param3, "button_disabled", 2);
+          fi.field_s.field_D = cr.loadRgbSpritesByName("lobby", param3, "button_mouseheld", 2);
+          fi.field_s.field_pb = cr.loadRgbSpritesByName("lobby", param3, "button_active", 2);
+          fi.field_s.field_Ab = cr.loadRgbSpritesByName("lobby", param3, "button_disabled", 2);
           fi.field_s.field_S = 1;
           eh.field_n = new mh(0L, DualLinkNode.field_t);
           eh.field_n.field_S = 1;
-          eh.field_n.field_Jb = qg.a(cr.a("lobby", param3, "tab_inactive", 2), (byte) -119);
-          eh.field_n.field_Gb = qg.a(cr.a("lobby", param3, "tab_mouseover", 2), (byte) -124);
+          eh.field_n.field_Jb = qg.a(cr.loadRgbSpritesByName("lobby", param3, "tab_inactive", 2), (byte) -119);
+          eh.field_n.field_Gb = qg.a(cr.loadRgbSpritesByName("lobby", param3, "tab_mouseover", 2), (byte) -124);
           eh.field_n.field_pb = var14;
           hd.field_c = new mh(0L, (mh) null);
           hd.field_c.field_Jb = na.a(false, 1127256, 3, 1856141, 206, -1);
@@ -321,67 +321,67 @@ final class hc {
           im.field_d = new mh(0L, MessageScreen.field_r);
           OptionsScreen.field_u = new mh(0L, MessageScreen.field_r);
           al.field_n = new mh(0L, MessageScreen.field_r);
-          MessageScreen.field_r.field_Jb = qg.a(cr.a("lobby", param3, "smallbutton", 2), (byte) -119);
-          MessageScreen.field_r.field_Gb = qg.a(cr.a("lobby", param3, "smallbutton_mouseover", 2), (byte) -114);
-          dupTemp$0 = qg.a(cr.a("lobby", param3, "smallbutton_active", 2), (byte) -102);
+          MessageScreen.field_r.field_Jb = qg.a(cr.loadRgbSpritesByName("lobby", param3, "smallbutton", 2), (byte) -119);
+          MessageScreen.field_r.field_Gb = qg.a(cr.loadRgbSpritesByName("lobby", param3, "smallbutton_mouseover", 2), (byte) -114);
+          dupTemp$0 = qg.a(cr.loadRgbSpritesByName("lobby", param3, "smallbutton_active", 2), (byte) -102);
           MessageScreen.field_r.field_pb = dupTemp$0;
           MessageScreen.field_r.field_D = dupTemp$0;
-          MessageScreen.field_r.field_Ab = qg.a(cr.a("lobby", param3, "smallbutton_disabled", 2), (byte) -120);
-          ij.field_b.field_Jb = qg.a(cr.a("lobby", param3, "mediumbutton", 2), (byte) -102);
-          ij.field_b.field_Gb = qg.a(cr.a("lobby", param3, "mediumbutton_mouseover", 2), (byte) -105);
-          ij.field_b.field_D = qg.a(cr.a("lobby", param3, "mediumbutton_mouseheld", 2), (byte) -123);
-          fm.field_b.field_Jb = qg.a(cr.a("lobby", param3, "bigbutton", 2), (byte) -114);
-          fm.field_b.field_Gb = qg.a(cr.a("lobby", param3, "bigbutton_mouseover", 2), (byte) -120);
-          fm.field_b.field_D = qg.a(cr.a("lobby", param3, "bigbutton_mouseheld", 2), (byte) -114);
-          fm.field_b.field_Ab = qg.a(cr.a("lobby", param3, "bigbutton_disabled", 2), (byte) -106);
-          ok.field_d.field_Jb = qg.a(cr.a("lobby", param3, "greenbutton", 2), (byte) -127);
-          ok.field_d.field_Gb = qg.a(cr.a("lobby", param3, "greenbutton_mouseover", 2), (byte) -126);
-          ok.field_d.field_D = qg.a(cr.a("lobby", param3, "greenbutton_mouseheld", 2), (byte) -119);
-          MotionWaypoint.field_s.field_Jb = qg.a(cr.a("lobby", param3, "redbutton", 2), (byte) -105);
-          MotionWaypoint.field_s.field_Gb = qg.a(cr.a("lobby", param3, "redbutton_mouseover", 2), (byte) -106);
-          MotionWaypoint.field_s.field_D = qg.a(cr.a("lobby", param3, "redbutton_mouseheld", 2), (byte) -121);
-          MatchCompleteScreen.field_x.field_Jb = qg.a(cr.a("lobby", param3, "backbutton", 2), (byte) -127);
-          MatchCompleteScreen.field_x.field_Gb = qg.a(cr.a("lobby", param3, "backbutton_mouseover", 2), (byte) -103);
-          MatchCompleteScreen.field_x.field_D = qg.a(cr.a("lobby", param3, "backbutton_mouseheld", 2), (byte) -122);
-          MatchCompleteScreen.field_x.field_Ab = qg.a(cr.a("lobby", param3, "backbutton_disabled", 2), (byte) -107);
-          al.field_n.field_Jb = qg.a(cr.a("lobby", param3, "gameoptionbutton", 2), (byte) -115);
-          al.field_n.field_Gb = qg.a(cr.a("lobby", param3, "gameoptionbutton_mouseover", 2), (byte) -114);
-          dupTemp$1 = qg.a(cr.a("lobby", param3, "gameoptionbutton_active", 2), (byte) -112);
+          MessageScreen.field_r.field_Ab = qg.a(cr.loadRgbSpritesByName("lobby", param3, "smallbutton_disabled", 2), (byte) -120);
+          ij.field_b.field_Jb = qg.a(cr.loadRgbSpritesByName("lobby", param3, "mediumbutton", 2), (byte) -102);
+          ij.field_b.field_Gb = qg.a(cr.loadRgbSpritesByName("lobby", param3, "mediumbutton_mouseover", 2), (byte) -105);
+          ij.field_b.field_D = qg.a(cr.loadRgbSpritesByName("lobby", param3, "mediumbutton_mouseheld", 2), (byte) -123);
+          fm.field_b.field_Jb = qg.a(cr.loadRgbSpritesByName("lobby", param3, "bigbutton", 2), (byte) -114);
+          fm.field_b.field_Gb = qg.a(cr.loadRgbSpritesByName("lobby", param3, "bigbutton_mouseover", 2), (byte) -120);
+          fm.field_b.field_D = qg.a(cr.loadRgbSpritesByName("lobby", param3, "bigbutton_mouseheld", 2), (byte) -114);
+          fm.field_b.field_Ab = qg.a(cr.loadRgbSpritesByName("lobby", param3, "bigbutton_disabled", 2), (byte) -106);
+          ok.field_d.field_Jb = qg.a(cr.loadRgbSpritesByName("lobby", param3, "greenbutton", 2), (byte) -127);
+          ok.field_d.field_Gb = qg.a(cr.loadRgbSpritesByName("lobby", param3, "greenbutton_mouseover", 2), (byte) -126);
+          ok.field_d.field_D = qg.a(cr.loadRgbSpritesByName("lobby", param3, "greenbutton_mouseheld", 2), (byte) -119);
+          MotionWaypoint.field_s.field_Jb = qg.a(cr.loadRgbSpritesByName("lobby", param3, "redbutton", 2), (byte) -105);
+          MotionWaypoint.field_s.field_Gb = qg.a(cr.loadRgbSpritesByName("lobby", param3, "redbutton_mouseover", 2), (byte) -106);
+          MotionWaypoint.field_s.field_D = qg.a(cr.loadRgbSpritesByName("lobby", param3, "redbutton_mouseheld", 2), (byte) -121);
+          MatchCompleteScreen.field_x.field_Jb = qg.a(cr.loadRgbSpritesByName("lobby", param3, "backbutton", 2), (byte) -127);
+          MatchCompleteScreen.field_x.field_Gb = qg.a(cr.loadRgbSpritesByName("lobby", param3, "backbutton_mouseover", 2), (byte) -103);
+          MatchCompleteScreen.field_x.field_D = qg.a(cr.loadRgbSpritesByName("lobby", param3, "backbutton_mouseheld", 2), (byte) -122);
+          MatchCompleteScreen.field_x.field_Ab = qg.a(cr.loadRgbSpritesByName("lobby", param3, "backbutton_disabled", 2), (byte) -107);
+          al.field_n.field_Jb = qg.a(cr.loadRgbSpritesByName("lobby", param3, "gameoptionbutton", 2), (byte) -115);
+          al.field_n.field_Gb = qg.a(cr.loadRgbSpritesByName("lobby", param3, "gameoptionbutton_mouseover", 2), (byte) -114);
+          dupTemp$1 = qg.a(cr.loadRgbSpritesByName("lobby", param3, "gameoptionbutton_active", 2), (byte) -112);
           al.field_n.field_pb = dupTemp$1;
           al.field_n.field_D = dupTemp$1;
-          al.field_n.field_Ab = qg.a(cr.a("lobby", param3, "gameoptionbutton_disabled", 2), (byte) -116);
-          im.field_d.field_Jb = qg.a(cr.a("lobby", param3, "chatbutton", 2), (byte) -103);
-          im.field_d.field_Gb = qg.a(cr.a("lobby", param3, "chatbutton_mouseover", 2), (byte) -113);
-          dupTemp$2 = qg.a(cr.a("lobby", param3, "chatbutton_active", 2), (byte) -125);
+          al.field_n.field_Ab = qg.a(cr.loadRgbSpritesByName("lobby", param3, "gameoptionbutton_disabled", 2), (byte) -116);
+          im.field_d.field_Jb = qg.a(cr.loadRgbSpritesByName("lobby", param3, "chatbutton", 2), (byte) -103);
+          im.field_d.field_Gb = qg.a(cr.loadRgbSpritesByName("lobby", param3, "chatbutton_mouseover", 2), (byte) -113);
+          dupTemp$2 = qg.a(cr.loadRgbSpritesByName("lobby", param3, "chatbutton_active", 2), (byte) -125);
           im.field_d.field_pb = dupTemp$2;
           im.field_d.field_D = dupTemp$2;
-          OptionsScreen.field_u.field_Jb = qg.a(cr.a("lobby", param3, "chatfilterbutton", 2), (byte) -119);
-          OptionsScreen.field_u.field_Gb = qg.a(cr.a("lobby", param3, "chatfilterbutton_mouseover", 2), (byte) -106);
-          dupTemp$3 = qg.a(cr.a("lobby", param3, "chatfilterbutton_active", 2), (byte) -105);
+          OptionsScreen.field_u.field_Jb = qg.a(cr.loadRgbSpritesByName("lobby", param3, "chatfilterbutton", 2), (byte) -119);
+          OptionsScreen.field_u.field_Gb = qg.a(cr.loadRgbSpritesByName("lobby", param3, "chatfilterbutton_mouseover", 2), (byte) -106);
+          dupTemp$3 = qg.a(cr.loadRgbSpritesByName("lobby", param3, "chatfilterbutton_active", 2), (byte) -105);
           OptionsScreen.field_u.field_pb = dupTemp$3;
           OptionsScreen.field_u.field_D = dupTemp$3;
-          var17 = cr.a("lobby", param3, "checkbox", 2);
+          var17 = cr.loadRgbSpritesByName("lobby", param3, "checkbox", 2);
           BlankScreen.field_k = new ni(0L, var17[1], var17[0], 1, DualLinkNode.field_t, (String) null);
           kb.field_Vb = new mh(0L, (mh) null);
-          kb.field_Vb.field_Jb = HighscorePackSelector.a(pl.a("lobby", "slideregion", (byte) -95, param3), -52);
-          kb.field_Vb.field_Gb = HighscorePackSelector.a(pl.a("lobby", "slideregion_mouseover", (byte) 104, param3), -71);
-          kb.field_Vb.field_D = HighscorePackSelector.a(pl.a("lobby", "slideregion_mouseheld", (byte) 118, param3), -86);
-          kb.field_Vb.field_Ab = HighscorePackSelector.a(pl.a("lobby", "slideregion_disabled", (byte) -47, param3), -39);
+          kb.field_Vb.field_Jb = HighscorePackSelector.a(pl.loadRgbSpriteByName("lobby", "slideregion", (byte) -95, param3), -52);
+          kb.field_Vb.field_Gb = HighscorePackSelector.a(pl.loadRgbSpriteByName("lobby", "slideregion_mouseover", (byte) 104, param3), -71);
+          kb.field_Vb.field_D = HighscorePackSelector.a(pl.loadRgbSpriteByName("lobby", "slideregion_mouseheld", (byte) 118, param3), -86);
+          kb.field_Vb.field_Ab = HighscorePackSelector.a(pl.loadRgbSpriteByName("lobby", "slideregion_disabled", (byte) -47, param3), -39);
           RankingsScreen.field_s = new mh(0L, (mh) null);
-          RankingsScreen.field_s.field_Jb = qg.a(cr.a("lobby", param3, "dragbar", 2), (byte) -102);
-          RankingsScreen.field_s.field_Gb = qg.a(cr.a("lobby", param3, "dragbar_mouseover", 2), (byte) -119);
-          RankingsScreen.field_s.field_D = qg.a(cr.a("lobby", param3, "dragbar_mouseheld", 2), (byte) -120);
-          RankingsScreen.field_s.field_Ab = qg.a(cr.a("lobby", param3, "dragbar_disabled", 2), (byte) -123);
+          RankingsScreen.field_s.field_Jb = qg.a(cr.loadRgbSpritesByName("lobby", param3, "dragbar", 2), (byte) -102);
+          RankingsScreen.field_s.field_Gb = qg.a(cr.loadRgbSpritesByName("lobby", param3, "dragbar_mouseover", 2), (byte) -119);
+          RankingsScreen.field_s.field_D = qg.a(cr.loadRgbSpritesByName("lobby", param3, "dragbar_mouseheld", 2), (byte) -120);
+          RankingsScreen.field_s.field_Ab = qg.a(cr.loadRgbSpritesByName("lobby", param3, "dragbar_disabled", 2), (byte) -123);
           oo.field_u = new mh(0L, (mh) null);
-          oo.field_u.field_wb = pl.a("lobby", "upbutton", (byte) -90, param3);
-          oo.field_u.field_T = pl.a("lobby", "upbutton_mouseover", (byte) -125, param3);
-          oo.field_u.field_tb = pl.a("lobby", "upbutton_mouseheld", (byte) 125, param3);
-          oo.field_u.field_Hb = pl.a("lobby", "upbutton_disabled", (byte) -114, param3);
+          oo.field_u.field_wb = pl.loadRgbSpriteByName("lobby", "upbutton", (byte) -90, param3);
+          oo.field_u.field_T = pl.loadRgbSpriteByName("lobby", "upbutton_mouseover", (byte) -125, param3);
+          oo.field_u.field_tb = pl.loadRgbSpriteByName("lobby", "upbutton_mouseheld", (byte) 125, param3);
+          oo.field_u.field_Hb = pl.loadRgbSpriteByName("lobby", "upbutton_disabled", (byte) -114, param3);
           MessageScreen.field_s = new mh(0L, (mh) null);
-          MessageScreen.field_s.field_wb = pl.a("lobby", "downbutton", (byte) 99, param3);
-          MessageScreen.field_s.field_T = pl.a("lobby", "downbutton_mouseover", (byte) -109, param3);
-          MessageScreen.field_s.field_tb = pl.a("lobby", "downbutton_mouseheld", (byte) 97, param3);
-          MessageScreen.field_s.field_Hb = pl.a("lobby", "downbutton_disabled", (byte) 104, param3);
+          MessageScreen.field_s.field_wb = pl.loadRgbSpriteByName("lobby", "downbutton", (byte) 99, param3);
+          MessageScreen.field_s.field_T = pl.loadRgbSpriteByName("lobby", "downbutton_mouseover", (byte) -109, param3);
+          MessageScreen.field_s.field_tb = pl.loadRgbSpriteByName("lobby", "downbutton_mouseheld", (byte) 97, param3);
+          MessageScreen.field_s.field_Hb = pl.loadRgbSpriteByName("lobby", "downbutton_disabled", (byte) 104, param3);
           ic.field_c = new fj(0L, oo.field_u, MessageScreen.field_s, kb.field_Vb, RankingsScreen.field_s);
           rq.field_b = new hj(0L, (mh) null, am.field_Qb, ic.field_c, MessageScreen.field_r, (String) null, (String) null);
           return;
@@ -413,7 +413,7 @@ final class hc {
           } else {
             stackIn_38_2 = "{...}";
           }
-          throw qb.a((Throwable) ((Object) stackIn_28_0), ((StringBuilder) (Object) stackIn_37_1).append(stackIn_38_2).append(')').toString());
+          throw qb.addExceptionContext((Throwable) ((Object) stackIn_28_0), ((StringBuilder) (Object) stackIn_37_1).append(stackIn_38_2).append(')').toString());
         }
     }
 

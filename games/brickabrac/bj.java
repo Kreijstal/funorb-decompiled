@@ -10,7 +10,7 @@ abstract class bj extends jc {
     private int field_R;
     private int field_Z;
     static cd field_Y;
-    static byte[][] field_S;
+    static byte[][] decodedSpriteAlpha;
     static eh field_T;
     static String field_V;
     static long field_ab;
@@ -21,7 +21,7 @@ abstract class bj extends jc {
           return;
         }
         if (param0 != 20) {
-          field_S = (byte[][]) null;
+          decodedSpriteAlpha = (byte[][]) null;
         }
         this.a(true, this.field_R, this.field_Q);
         this.field_Z = 0;
@@ -108,7 +108,7 @@ abstract class bj extends jc {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw qb.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw qb.addExceptionContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 
@@ -262,7 +262,7 @@ abstract class bj extends jc {
         }
         field_V = null;
         field_T = null;
-        field_S = (byte[][]) null;
+        decodedSpriteAlpha = (byte[][]) null;
         field_U = null;
         field_Y = null;
     }

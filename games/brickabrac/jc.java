@@ -27,7 +27,7 @@ abstract class jc extends ib {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw qb.a((Throwable) ((Object) var2), "jc.OB(" + param0 + ')');
+          throw qb.addExceptionContext((Throwable) ((Object) var2), "jc.OB(" + param0 + ')');
         }
     }
 
@@ -51,7 +51,7 @@ abstract class jc extends ib {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw qb.a((Throwable) ((Object) var2), "jc.H(" + param0 + ')');
+          throw qb.addExceptionContext((Throwable) ((Object) var2), "jc.H(" + param0 + ')');
         }
     }
 
@@ -63,7 +63,7 @@ abstract class jc extends ib {
             field_M = (NodeDeque) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw qb.a((Throwable) ((Object) runtimeException), "jc.W(" + param0 + ')');
+          throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "jc.W(" + param0 + ')');
         }
     }
 
@@ -87,17 +87,17 @@ abstract class jc extends ib {
             !(this.field_s <= nl.field_e.height)) {
             nl.field_e = new RgbSprite(this.field_t, this.field_s);
           }
-          IndexedSpriteGeometry.a(-109, nl.field_e);
+          IndexedSpriteGeometry.pushSpriteRaster(-109, nl.field_e);
           Rasterizer2D.clear();
           this.b(0, param3 ^ -281, 0);
           super.a(-param0 - this.field_w, -param1 - this.field_o, param2, param3);
-          sc.b(-117);
+          sc.popRaster(-117);
           nl.field_e.b(param1 + this.field_o, param0 + this.field_w, this.field_L);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
-          throw qb.a((Throwable) ((Object) runtimeException), "jc.J(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "jc.J(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -116,7 +116,7 @@ abstract class jc extends ib {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw qb.a((Throwable) ((Object) var2_ref), "jc.GB(" + param0 + ')');
+          throw qb.addExceptionContext((Throwable) ((Object) var2_ref), "jc.GB(" + param0 + ')');
         }
     }
 
@@ -142,7 +142,7 @@ abstract class jc extends ib {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw qb.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw qb.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -153,7 +153,7 @@ abstract class jc extends ib {
           }
           this.a(param1, -param2 + SpriteGeometry.field_y >> 1, r.field_w - param1 >> 1, (byte) -119, param2);
         } catch (RuntimeException runtimeException) {
-          throw qb.a((Throwable) ((Object) runtimeException), "jc.V(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "jc.V(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -182,7 +182,7 @@ abstract class jc extends ib {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw qb.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
+          throw qb.addExceptionContext((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -200,7 +200,7 @@ abstract class jc extends ib {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw qb.a((Throwable) ((Object) var2), "jc.E(" + param0 + ')');
+          throw qb.addExceptionContext((Throwable) ((Object) var2), "jc.E(" + param0 + ')');
         }
     }
 
@@ -362,7 +362,7 @@ abstract class jc extends ib {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw qb.a((Throwable) ((Object) var3), "jc.NB(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw qb.addExceptionContext((Throwable) ((Object) var3), "jc.NB(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 

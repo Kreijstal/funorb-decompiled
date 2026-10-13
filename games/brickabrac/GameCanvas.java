@@ -13,7 +13,7 @@ final class GameCanvas extends java.awt.Canvas implements java.awt.event.FocusLi
         try {
           this.focusLossPending = true;
         } catch (RuntimeException runtimeException) {
-          throw qb.a((Throwable) ((Object) runtimeException), "wg.focusLost(" + (param0 != null ? "{...}" : "null") + ')');
+          throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "wg.focusLost(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -60,7 +60,7 @@ final class GameCanvas extends java.awt.Canvas implements java.awt.event.FocusLi
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw qb.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param6).append(')').toString());
+          throw qb.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param6).append(')').toString());
         }
     }
 
@@ -99,7 +99,7 @@ final class GameCanvas extends java.awt.Canvas implements java.awt.event.FocusLi
           sq.a(param0, -20954, this.window);
           int var3_int = -13 / ((param1 - 82) / 32);
         } catch (RuntimeException runtimeException) {
-          throw qb.a((Throwable) ((Object) runtimeException), "wg.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "wg.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -117,7 +117,7 @@ final class GameCanvas extends java.awt.Canvas implements java.awt.event.FocusLi
             return;
           }
         } catch (RuntimeException runtimeException) {
-          throw qb.a((Throwable) ((Object) runtimeException), "wg.E(" + obfuscationGuard + ',' + (screen != null ? "{...}" : "null") + ')');
+          throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "wg.E(" + obfuscationGuard + ',' + (screen != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -178,7 +178,7 @@ final class GameCanvas extends java.awt.Canvas implements java.awt.event.FocusLi
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
-          throw qb.a((Throwable) ((Object) var4), "wg.B(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw qb.addExceptionContext((Throwable) ((Object) var4), "wg.B(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 

@@ -1,10 +1,10 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class v extends RuntimeException {
+final class ClientException extends RuntimeException {
     static jg[] field_g;
-    Throwable field_f;
-    String field_d;
+    Throwable originalCause;
+    String context;
     static RgbSprite field_b;
     static int field_e;
     static String field_c;
@@ -19,7 +19,7 @@ final class v extends RuntimeException {
 
     public static void a(boolean param0) {
         if (param0) {
-          v.a(-93);
+          ClientException.buildRgbSprites(-93);
         }
         field_g = null;
         field_b = null;
@@ -27,9 +27,9 @@ final class v extends RuntimeException {
         field_a = null;
     }
 
-    v(Throwable param0, String param1) {
-        this.field_f = param0;
-        this.field_d = param1;
+    ClientException(Throwable originalCause, String context) {
+        this.originalCause = originalCause;
+        this.context = context;
     }
 
     final static void a(int param0, int param1, boolean param2, MultiplayerMatch param3, int param4, int param5) {
@@ -75,11 +75,11 @@ final class v extends RuntimeException {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw qb.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw qb.addExceptionContext((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 
-    final static RgbSprite[] a(int param0) {
+    final static RgbSprite[] buildRgbSprites(int obfuscationGuard) {
         int var2 = 0;
         int var6 = 0;
         int var7 = 0;
@@ -97,22 +97,22 @@ final class v extends RuntimeException {
         byte[] var21;
         int[] var22;
         var8 = BrickABrac.field_J ? 1 : 0;
-        var1 = new RgbSprite[nl.field_c];
-        if (param0 != -835) {
-          v.a(false);
+        var1 = new RgbSprite[nl.decodedSpriteCount];
+        if (obfuscationGuard != -835) {
+          ClientException.a(false);
         }
-        for (var2 = 0; var2 < nl.field_c; var2++) {
-          var3 = gg.field_t[var2] * jh.field_b[var2];
-          var21 = cn.field_a[var2];
-          if (!tm.field_b[var2]) {
+        for (var2 = 0; var2 < nl.decodedSpriteCount; var2++) {
+          var3 = gg.decodedSpriteHeights[var2] * jh.decodedSpriteWidths[var2];
+          var21 = cn.decodedSpriteIndices[var2];
+          if (!tm.decodedSpriteHasAlpha[var2]) {
             var10 = new int[var3];
             var22 = var10;
             for (var6 = 0; var6 < var3; var6++) {
-              var10[var6] = qp.field_c[ik.a((int) var21[var6], 255)];
+              var10[var6] = qp.decodedSpritePalette[ik.a((int) var21[var6], 255)];
             }
-            var1[var2] = new RgbSprite(cf.field_d, ek.field_db, ag.field_K[var2], dl.field_d[var2], jh.field_b[var2], gg.field_t[var2], var22);
+            var1[var2] = new RgbSprite(cf.decodedCanvasWidth, ek.decodedCanvasHeight, ag.decodedSpriteOffsetX[var2], dl.decodedSpriteOffsetY[var2], jh.decodedSpriteWidths[var2], gg.decodedSpriteHeights[var2], var22);
           } else {
-            var15 = bj.field_S[var2];
+            var15 = bj.decodedSpriteAlpha[var2];
             var11 = var15;
             var9 = var11;
             var5 = var9;
@@ -120,12 +120,12 @@ final class v extends RuntimeException {
             var13 = var17;
             var6_ref_int__ = var13;
             for (var7 = 0; var3 > var7; var7++) {
-              var6_ref_int__[var7] = LevelSelectScreen.d(ik.a(255, (int) var15[var7]) << 24, qp.field_c[ik.a(255, (int) var21[var7])]);
+              var6_ref_int__[var7] = LevelSelectScreen.d(ik.a(255, (int) var15[var7]) << 24, qp.decodedSpritePalette[ik.a(255, (int) var21[var7])]);
             }
-            var1[var2] = (RgbSprite) ((Object) new ArgbSprite(cf.field_d, ek.field_db, ag.field_K[var2], dl.field_d[var2], jh.field_b[var2], gg.field_t[var2], var17));
+            var1[var2] = (RgbSprite) ((Object) new ArgbSprite(cf.decodedCanvasWidth, ek.decodedCanvasHeight, ag.decodedSpriteOffsetX[var2], dl.decodedSpriteOffsetY[var2], jh.decodedSpriteWidths[var2], gg.decodedSpriteHeights[var2], var17));
           }
         }
-        MotionWaypoint.d((byte) 96);
+        MotionWaypoint.clearDecodedSpriteData((byte) 96);
         return var1;
     }
 

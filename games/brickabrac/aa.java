@@ -27,7 +27,7 @@ final class aa {
         return Paddle.field_x;
     }
 
-    final static void a(int param0, RgbSprite param1, boolean param2, int param3, pb param4, int param5) {
+    final static void a(int param0, RgbSprite param1, boolean param2, int param3, RasterCacheSurface param4, int param5) {
         RuntimeException var6 = null;
         int stackIn_2_0 = 0;
         int stackIn_3_1 = 0;
@@ -39,8 +39,8 @@ final class aa {
         String stackIn_15_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          IndexedSpriteGeometry.a(-109, param4.field_p);
-          Rasterizer2D.fillVerticalGradient(0, 0, param4.field_i, param4.field_q, fj.field_Sb[param3], 0);
+          IndexedSpriteGeometry.pushSpriteRaster(-109, param4.sprite);
+          Rasterizer2D.fillVerticalGradient(0, 0, param4.width, param4.height, fj.field_Sb[param3], 0);
           stackIn_2_0 = -120;
           if (param5 == 1) {
             stackIn_3_1 = 13;
@@ -52,8 +52,8 @@ final class aa {
           } else {
             stackIn_6_2 = 20;
           }
-          og.a(stackIn_2_0, stackIn_3_1, stackIn_6_2, param1, 16777215, (param4.field_i - param1.canvasWidth) / 2, 10 / param5 - param1.canvasHeight + (480 + param0));
-          sc.b(-86);
+          og.a(stackIn_2_0, stackIn_3_1, stackIn_6_2, param1, 16777215, (param4.width - param1.canvasWidth) / 2, 10 / param5 - param1.canvasHeight + (480 + param0));
+          sc.popRaster(-86);
           if (param2) {
             return;
           }
@@ -75,12 +75,12 @@ final class aa {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw qb.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param5).append(')').toString());
+          throw qb.addExceptionContext((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param5).append(')').toString());
         }
     }
 
     final static void a(byte param0) {
-        pb var2;
+        RasterCacheSurface var2;
         if (param0 >= 23) {
           if (hc.field_f > 0) {
             hc.field_f = hc.field_f - 1;
@@ -94,8 +94,8 @@ final class aa {
           }
           return;
         }
-        var2 = (pb) null;
-        aa.a(90, (RgbSprite) null, false, 114, (pb) null, 94);
+        var2 = (RasterCacheSurface) null;
+        aa.a(90, (RgbSprite) null, false, 114, (RasterCacheSurface) null, 94);
         if (hc.field_f > 0) {
           hc.field_f = hc.field_f - 1;
         }
@@ -146,7 +146,7 @@ final class aa {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw qb.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param2).append(')').toString());
+          throw qb.addExceptionContext((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param2).append(')').toString());
         }
     }
 

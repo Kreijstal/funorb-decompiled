@@ -45,14 +45,14 @@ final class wl extends d {
           if (ik.field_c != null &&
             ik.field_c.width >= var9 &&
             var10 <= ik.field_c.height) {
-            IndexedSpriteGeometry.a(-114, ik.field_c);
+            IndexedSpriteGeometry.pushSpriteRaster(-114, ik.field_c);
             Rasterizer2D.clear();
           } else {
             ik.field_c = new RgbSprite(var9, var10);
-            IndexedSpriteGeometry.a(-87, ik.field_c);
+            IndexedSpriteGeometry.pushSpriteRaster(-87, ik.field_c);
           }
           var12.a(112, 144, var12.canvasWidth << 4, var12.canvasHeight << 4, -this.field_P << 10, 4096);
-          sc.b(-104);
+          sc.popRaster(-104);
           ik.field_c.f(-var12.canvasWidth + var5, -var12.canvasHeight + var6, 256);
         }
     }
@@ -62,7 +62,7 @@ final class wl extends d {
           this.field_P = this.field_P + 1;
           super.a(param0, param1, param2, param3);
         } catch (RuntimeException runtimeException) {
-          throw qb.a((Throwable) ((Object) runtimeException), "wl.WA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "wl.WA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -87,7 +87,7 @@ final class wl extends d {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw qb.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw qb.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
@@ -203,7 +203,7 @@ final class wl extends d {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw qb.a((Throwable) ((Object) var1), "wl.C(" + param0 + ')');
+          throw qb.addExceptionContext((Throwable) ((Object) var1), "wl.C(" + param0 + ')');
         }
     }
 
@@ -412,7 +412,7 @@ final class wl extends d {
           } else {
             stackIn_74_2 = "{...}";
           }
-          throw qb.a((Throwable) ((Object) stackIn_67_0), ((StringBuilder) (Object) stackIn_73_1).append(stackIn_74_2).append(',').append(param6).append(')').toString());
+          throw qb.addExceptionContext((Throwable) ((Object) stackIn_67_0), ((StringBuilder) (Object) stackIn_73_1).append(stackIn_74_2).append(',').append(param6).append(')').toString());
         }
     }
 
@@ -468,7 +468,7 @@ final class wl extends d {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw qb.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(')').toString());
+          throw qb.addExceptionContext((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -476,7 +476,7 @@ final class wl extends d {
         try {
           this.field_M = param0;
         } catch (RuntimeException runtimeException) {
-          throw qb.a((Throwable) ((Object) runtimeException), "wl.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "wl.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

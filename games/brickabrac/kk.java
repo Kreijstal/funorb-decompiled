@@ -10,19 +10,19 @@ final class kk {
     static String field_d;
     static String field_f;
 
-    final static IndexedSprite[] a(byte param0) {
+    final static IndexedSprite[] buildIndexedSprites(byte obfuscationGuard) {
         int var2 = 0;
         int var3 = BrickABrac.field_J ? 1 : 0;
-        IndexedSprite[] var1 = new IndexedSprite[nl.field_c];
-        for (var2 = 0; nl.field_c > var2; var2++) {
-          var1[var2] = new IndexedSprite(cf.field_d, ek.field_db, ag.field_K[var2], dl.field_d[var2], jh.field_b[var2], gg.field_t[var2], cn.field_a[var2], qp.field_c);
+        IndexedSprite[] var1 = new IndexedSprite[nl.decodedSpriteCount];
+        for (var2 = 0; nl.decodedSpriteCount > var2; var2++) {
+          var1[var2] = new IndexedSprite(cf.decodedCanvasWidth, ek.decodedCanvasHeight, ag.decodedSpriteOffsetX[var2], dl.decodedSpriteOffsetY[var2], jh.decodedSpriteWidths[var2], gg.decodedSpriteHeights[var2], cn.decodedSpriteIndices[var2], qp.decodedSpritePalette);
         }
-        if (param0 == -2) {
-          MotionWaypoint.d((byte) 96);
+        if (obfuscationGuard == -2) {
+          MotionWaypoint.clearDecodedSpriteData((byte) 96);
           return var1;
         }
         kk.a(-77);
-        MotionWaypoint.d((byte) 96);
+        MotionWaypoint.clearDecodedSpriteData((byte) 96);
         return var1;
     }
 
@@ -46,7 +46,7 @@ final class kk {
           }
           qn.messageText = text;
         } catch (RuntimeException runtimeException) {
-          throw qb.a((Throwable) ((Object) runtimeException), "kk.A(" + obfuscationGuard + ',' + (text != null ? "{...}" : "null") + ')');
+          throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "kk.A(" + obfuscationGuard + ',' + (text != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -89,7 +89,7 @@ final class kk {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw qb.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
+          throw qb.addExceptionContext((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
         }
     }
 

@@ -245,7 +245,7 @@ final class LevelSelectScreen extends MenuScreen {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw qb.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param2).append(')').toString());
+          throw qb.addExceptionContext((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -263,12 +263,12 @@ final class LevelSelectScreen extends MenuScreen {
         return true;
     }
 
-    final static IndexedSprite c(boolean param0) {
-        if (param0) {
+    final static IndexedSprite buildIndexedSprite(boolean obfuscationGuard) {
+        if (obfuscationGuard) {
           return (IndexedSprite) null;
         }
-        IndexedSprite var1 = new IndexedSprite(cf.field_d, ek.field_db, ag.field_K[0], dl.field_d[0], jh.field_b[0], gg.field_t[0], cn.field_a[0], qp.field_c);
-        MotionWaypoint.d((byte) 96);
+        IndexedSprite var1 = new IndexedSprite(cf.decodedCanvasWidth, ek.decodedCanvasHeight, ag.decodedSpriteOffsetX[0], dl.decodedSpriteOffsetY[0], jh.decodedSpriteWidths[0], gg.decodedSpriteHeights[0], cn.decodedSpriteIndices[0], qp.decodedSpritePalette);
+        MotionWaypoint.clearDecodedSpriteData((byte) 96);
         return var1;
     }
 
@@ -317,7 +317,7 @@ final class LevelSelectScreen extends MenuScreen {
           this.layoutButtons(true);
           this.levelList = new LevelList(20, 0, 1, (MenuScreen) (this), this.buttons[1], this.pack);
         } catch (RuntimeException runtimeException) {
-          throw qb.a((Throwable) ((Object) runtimeException), "ud.<init>(" + screenId + ',' + (actionIds != null ? "{...}" : "null") + ',' + packIndex + ')');
+          throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "ud.<init>(" + screenId + ',' + (actionIds != null ? "{...}" : "null") + ',' + packIndex + ')');
         }
     }
 
@@ -382,7 +382,7 @@ final class LevelSelectScreen extends MenuScreen {
           var6.appendCrc32(3, var4);
           var6.backfillByteLength((byte) 117, var6.position - var4);
         } catch (RuntimeException runtimeException) {
-          throw qb.a((Throwable) ((Object) runtimeException), "ud.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "ud.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 

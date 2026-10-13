@@ -21,7 +21,7 @@ final class mo extends ag implements en {
 
     mo(int param0, int param1, int param2, int param3) {
         super(param0, param1, param2, param3, (ub) null);
-        this.field_P = new na(new r(10000536), ii.field_j, 0, 0, 140, 25);
+        this.field_P = new na(new r(10000536), RasterSnapshot.field_j, 0, 0, 140, 25);
         this.field_P.a(new an(), (byte) -12);
         this.field_Q = new d(ri.field_L, (uh) (this));
         this.field_H = new oc[]{(oc) ((Object) this.field_P), (oc) ((Object) this.field_Q)};
@@ -45,7 +45,7 @@ final class mo extends ag implements en {
             mo.d(true);
           }
         } catch (RuntimeException runtimeException) {
-          throw qb.a((Throwable) ((Object) runtimeException), "mo.Q(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');
+          throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "mo.Q(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -54,7 +54,7 @@ final class mo extends ag implements en {
           super.a(param0, param1, param2, param3);
           this.field_Q.field_J = this.field_P.a(-11011).b((byte) -31) == DualLinkIterator.field_c ? true : false;
         } catch (RuntimeException runtimeException) {
-          throw qb.a((Throwable) ((Object) runtimeException), "mo.WA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "mo.WA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 

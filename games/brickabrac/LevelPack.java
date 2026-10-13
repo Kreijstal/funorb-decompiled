@@ -40,7 +40,7 @@ final class LevelPack {
           this.levelCount = this.levelCount + extra.levelCount;
           this.levelData = var3;
         } catch (RuntimeException runtimeException) {
-          throw qb.a((Throwable) ((Object) runtimeException), "nc.D(" + (extra != null ? "{...}" : "null") + ',' + obfuscationGuard + ')');
+          throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "nc.D(" + (extra != null ? "{...}" : "null") + ',' + obfuscationGuard + ')');
         }
     }
 
@@ -103,7 +103,7 @@ final class LevelPack {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw qb.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
+          throw qb.addExceptionContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
         }
     }
 

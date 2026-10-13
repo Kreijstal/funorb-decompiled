@@ -26,7 +26,7 @@ final class ai extends ki {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
-          throw qb.a((Throwable) ((Object) runtimeException), "ai.G(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "ai.G(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -45,7 +45,7 @@ final class ai extends ki {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw qb.a((Throwable) ((Object) var2), "ai.H(" + param0 + ')');
+          throw qb.addExceptionContext((Throwable) ((Object) var2), "ai.H(" + param0 + ')');
         }
     }
 
@@ -72,7 +72,7 @@ final class ai extends ki {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw qb.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
+          throw qb.addExceptionContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
         }
     }
 
@@ -102,7 +102,7 @@ final class ai extends ki {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw qb.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
+          throw qb.addExceptionContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
         }
     }
 
@@ -113,11 +113,11 @@ final class ai extends ki {
           if (!AchievementIcon.field_m.a("paris", -28138)) {
             return false;
           }
-          qa.field_y = pl.a("paris", "paris_near", (byte) -51, AchievementIcon.field_m);
-          th.field_c = pl.a("paris", "paris_mid", (byte) 98, AchievementIcon.field_m);
-          bf.field_K = pl.a("paris", "paris_far", (byte) -100, AchievementIcon.field_m);
-          pl.field_a = pl.a("paris", "paris_small", (byte) 108, AchievementIcon.field_m);
-          kc.field_p = pl.a("paris", "paris_character", (byte) -43, AchievementIcon.field_m);
+          qa.field_y = pl.loadRgbSpriteByName("paris", "paris_near", (byte) -51, AchievementIcon.field_m);
+          th.field_c = pl.loadRgbSpriteByName("paris", "paris_mid", (byte) 98, AchievementIcon.field_m);
+          bf.field_K = pl.loadRgbSpriteByName("paris", "paris_far", (byte) -100, AchievementIcon.field_m);
+          pl.field_a = pl.loadRgbSpriteByName("paris", "paris_small", (byte) 108, AchievementIcon.field_m);
+          kc.field_p = pl.loadRgbSpriteByName("paris", "paris_character", (byte) -43, AchievementIcon.field_m);
           IntrusiveHashTable.field_i = jh.a(0, qa.field_y);
           if (param0) {
             ai.a((mh) null, (TextFont) null, (mh) null, (mh) null, (mh) null, (mh) null, (mh) null, (mh) null, (byte) 19, false, (fj) null, (mh) null);
@@ -132,7 +132,7 @@ final class ai extends ki {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw qb.a((Throwable) ((Object) var2), "ai.F(" + param0 + ')');
+          throw qb.addExceptionContext((Throwable) ((Object) var2), "ai.F(" + param0 + ')');
         }
     }
 
@@ -141,7 +141,7 @@ final class ai extends ki {
     }
 
     final void a(int param0, byte param1, int param2, int param3, int param4) {
-        pb var6 = null;
+        RasterCacheSurface var6 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var6_ref = null;
         try {
@@ -152,11 +152,11 @@ final class ai extends ki {
           }
           if (decompiledSharedTail0) {
             var6 = kd.a(this.field_m, param3, (byte) -34);
-            if (!var6.a((byte) -84, param3, this.field_m)) {
+            if (!var6.matchesCacheKeys((byte) -84, param3, this.field_m)) {
               ej.a(0, MembershipBenefitsScreen.field_s, 2, 0, param3, var6);
-              var6.a(this.field_m, param3, (byte) 78);
+              var6.setCacheKeys(this.field_m, param3, (byte) 78);
             }
-            wo.a(param0, param4, jk.field_t, 118, 306, 0, param2, 2, IntrusiveHashTable.field_i, var6.field_p, param3);
+            wo.a(param0, param4, jk.field_t, 118, 306, 0, param2, 2, IntrusiveHashTable.field_i, var6.sprite, param3);
           }
           if (param1 >= -84) {
             ai.a((byte) -61, -0.03386414423584938f, (String) null);
@@ -165,7 +165,7 @@ final class ai extends ki {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6_ref = decompiledCaughtException;
-          throw qb.a((Throwable) ((Object) var6_ref), "ai.C(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw qb.addExceptionContext((Throwable) ((Object) var6_ref), "ai.C(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -182,7 +182,7 @@ final class ai extends ki {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw qb.a((Throwable) ((Object) var2), "ai.E(" + param0 + ')');
+          throw qb.addExceptionContext((Throwable) ((Object) var2), "ai.E(" + param0 + ')');
         }
     }
 
@@ -194,7 +194,7 @@ final class ai extends ki {
         try {
           cp1252Extensions = null;
         } catch (RuntimeException runtimeException) {
-          throw qb.a((Throwable) ((Object) runtimeException), "ai.N(" + param0 + ')');
+          throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "ai.N(" + param0 + ')');
         }
     }
 
@@ -401,12 +401,12 @@ final class ai extends ki {
           } else {
             stackIn_81_2 = "{...}";
           }
-          throw qb.a((Throwable) ((Object) stackIn_44_0), ((StringBuilder) (Object) stackIn_80_1).append(stackIn_81_2).append(')').toString());
+          throw qb.addExceptionContext((Throwable) ((Object) stackIn_44_0), ((StringBuilder) (Object) stackIn_80_1).append(stackIn_81_2).append(')').toString());
         }
     }
 
     final void a(boolean param0, int param1, int param2, int param3, int param4) {
-        pb var6 = null;
+        RasterCacheSurface var6 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var6_ref = null;
         try {
@@ -420,16 +420,16 @@ final class ai extends ki {
             }
           }
           var6 = PowerUp.a(this.field_m, param3, -20777);
-          if (!var6.a((byte) -84, param3, this.field_m)) {
+          if (!var6.matchesCacheKeys((byte) -84, param3, this.field_m)) {
             ej.a(0, bf.field_K, 1, 0, param3, var6);
-            var6.a(this.field_m, param3, (byte) 78);
+            var6.setCacheKeys(this.field_m, param3, (byte) 78);
           }
-          wo.a(param2, param1, th.field_c, 127, 640, 0, param4, 1, qa.field_y, var6.field_p, param3);
+          wo.a(param2, param1, th.field_c, 127, 640, 0, param4, 1, qa.field_y, var6.sprite, param3);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6_ref = decompiledCaughtException;
-          throw qb.a((Throwable) ((Object) var6_ref), "ai.K(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw qb.addExceptionContext((Throwable) ((Object) var6_ref), "ai.K(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 

@@ -91,7 +91,7 @@ final class pq extends IntrusiveNode {
           } else {
             stackIn_34_2 = "{...}";
           }
-          throw qb.a((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_33_1).append(stackIn_34_2).append(')').toString());
+          throw qb.addExceptionContext((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_33_1).append(stackIn_34_2).append(')').toString());
         }
     }
 
@@ -190,7 +190,7 @@ final class pq extends IntrusiveNode {
           ej.field_I = new lp(mf.field_f, wm.field_a, param1, cg.field_l, ln.field_l);
           mf.field_f.a(-80, ej.field_I);
         } catch (RuntimeException runtimeException) {
-          throw qb.a((Throwable) ((Object) runtimeException), "pq.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "pq.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -708,7 +708,7 @@ final class pq extends IntrusiveNode {
           } else {
             stackIn_205_2 = "{...}";
           }
-          throw qb.a((Throwable) ((Object) stackIn_204_0), ((StringBuilder) (Object) stackIn_204_1).append(stackIn_205_2).append(')').toString());
+          throw qb.addExceptionContext((Throwable) ((Object) stackIn_204_0), ((StringBuilder) (Object) stackIn_204_1).append(stackIn_205_2).append(')').toString());
         }
     }
 

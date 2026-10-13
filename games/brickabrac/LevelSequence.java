@@ -17,7 +17,7 @@ final class LevelSequence {
         try {
           td.decodeLevelBytes(brickGroups, this.pack.levelData[this.order[levelIndex % this.period]], levelState, motionPaths, unusedContext, 10792131);
         } catch (RuntimeException runtimeException) {
-          throw qb.a((Throwable) ((Object) runtimeException), "oi.G(" + (unusedContext != null ? "{...}" : "null") + ',' + (levelState != null ? "{...}" : "null") + ',' + (motionPaths != null ? "{...}" : "null") + ',' + levelIndex + ',' + obfuscationGuard + ',' + (brickGroups != null ? "{...}" : "null") + ')');
+          throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "oi.G(" + (unusedContext != null ? "{...}" : "null") + ',' + (levelState != null ? "{...}" : "null") + ',' + (motionPaths != null ? "{...}" : "null") + ',' + levelIndex + ',' + obfuscationGuard + ',' + (brickGroups != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -122,7 +122,7 @@ final class LevelSequence {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw qb.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(period).append(')').toString());
+          throw qb.addExceptionContext((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(period).append(')').toString());
         }
     }
 

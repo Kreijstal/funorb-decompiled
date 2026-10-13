@@ -85,7 +85,7 @@ final class rd {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw qb.a((Throwable) ((Object) var1), "rd.E(" + param0 + ')');
+          throw qb.addExceptionContext((Throwable) ((Object) var1), "rd.E(" + param0 + ')');
         }
     }
 
@@ -221,7 +221,7 @@ final class rd {
           } else {
             stackIn_34_2 = "{...}";
           }
-          throw qb.a((Throwable) ((Object) stackIn_30_0), ((StringBuilder) (Object) stackIn_33_1).append(stackIn_34_2).append(',').append(param2).append(')').toString());
+          throw qb.addExceptionContext((Throwable) ((Object) stackIn_30_0), ((StringBuilder) (Object) stackIn_33_1).append(stackIn_34_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -232,20 +232,20 @@ final class rd {
         int[] var5 = null;
         int var6 = 0;
         int var7 = BrickABrac.field_J ? 1 : 0;
-        RgbSprite[] var1 = new RgbSprite[nl.field_c];
-        for (var2 = 0; var2 < nl.field_c; var2++) {
-          var3 = jh.field_b[var2] * gg.field_t[var2];
-          var4 = cn.field_a[var2];
+        RgbSprite[] var1 = new RgbSprite[nl.decodedSpriteCount];
+        for (var2 = 0; var2 < nl.decodedSpriteCount; var2++) {
+          var3 = jh.decodedSpriteWidths[var2] * gg.decodedSpriteHeights[var2];
+          var4 = cn.decodedSpriteIndices[var2];
           var5 = new int[var3];
           for (var6 = 0; var6 < var3; var6++) {
-            var5[var6] = qp.field_c[ik.a((int) var4[var6], 255)];
+            var5[var6] = qp.decodedSpritePalette[ik.a((int) var4[var6], 255)];
           }
-          var1[var2] = new RgbSprite(cf.field_d, ek.field_db, ag.field_K[var2], dl.field_d[var2], jh.field_b[var2], gg.field_t[var2], var5);
+          var1[var2] = new RgbSprite(cf.decodedCanvasWidth, ek.decodedCanvasHeight, ag.decodedSpriteOffsetX[var2], dl.decodedSpriteOffsetY[var2], jh.decodedSpriteWidths[var2], gg.decodedSpriteHeights[var2], var5);
         }
         if (param0 < 93) {
           return (RgbSprite[]) null;
         }
-        MotionWaypoint.d((byte) 96);
+        MotionWaypoint.clearDecodedSpriteData((byte) 96);
         return var1;
     }
 

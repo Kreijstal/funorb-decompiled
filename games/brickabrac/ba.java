@@ -28,8 +28,8 @@ class ba extends DualLinkNode {
             stackIn_2_0 = (IndexedSprite[]) null;
             return stackIn_2_0;
           }
-          if (ln.a(-125, param1, param3, param0)) {
-            stackIn_7_0 = kk.a((byte) -2);
+          if (ln.decodeSpritesFromArchive(-125, param1, param3, param0)) {
+            stackIn_7_0 = kk.buildIndexedSprites((byte) -2);
             return stackIn_7_0;
           }
           stackIn_5_0 = null;
@@ -44,7 +44,7 @@ class ba extends DualLinkNode {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw qb.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw qb.addExceptionContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 
@@ -107,7 +107,7 @@ class ba extends DualLinkNode {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw qb.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw qb.addExceptionContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 

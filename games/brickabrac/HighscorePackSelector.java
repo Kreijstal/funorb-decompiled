@@ -61,20 +61,20 @@ final class HighscorePackSelector {
           } else {
             stackIn_5_2 = "{...}";
           }
-          throw qb.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(param1).append(')').toString());
+          throw qb.addExceptionContext((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(param1).append(')').toString());
         }
     }
 
-    final static void d(int param0) {
-        if (param0 != -99) {
+    final static void pushRaster(int obfuscationGuard) {
+        if (obfuscationGuard != -99) {
           field_g = (String) null;
         }
-        ii var1 = (ii) (fr.field_M.removeLast(127));
-        if (var1 == null) {
-          var1 = new ii();
+        RasterSnapshot snapshot = (RasterSnapshot) (fr.rasterSnapshotPool.removeLast(127));
+        if (snapshot == null) {
+          snapshot = new RasterSnapshot();
         }
-        var1.a(Rasterizer2D.pixels, Rasterizer2D.clipLeft, Rasterizer2D.width, Rasterizer2D.height, param0 ^ 194, Rasterizer2D.clipRight, Rasterizer2D.clipTop, Rasterizer2D.clipBottom);
-        hi.field_v.addLast(var1, (byte) 3);
+        snapshot.capture(Rasterizer2D.pixels, Rasterizer2D.clipLeft, Rasterizer2D.width, Rasterizer2D.height, obfuscationGuard ^ 194, Rasterizer2D.clipRight, Rasterizer2D.clipTop, Rasterizer2D.clipBottom);
+        hi.rasterStack.addLast(snapshot, (byte) 3);
     }
 
     final static mp a(int param0, String param1) {
@@ -133,7 +133,7 @@ final class HighscorePackSelector {
           } else {
             stackIn_22_2 = "{...}";
           }
-          throw qb.a((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(')').toString());
+          throw qb.addExceptionContext((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(')').toString());
         }
     }
 
@@ -223,7 +223,7 @@ final class HighscorePackSelector {
           this.buttonIndex = buttonIndex;
           this.owner = owner;
         } catch (RuntimeException runtimeException) {
-          throw qb.a((Throwable) ((Object) runtimeException), "jf.<init>(" + (owner != null ? "{...}" : "null") + ',' + buttonIndex + ',' + packCount + ')');
+          throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "jf.<init>(" + (owner != null ? "{...}" : "null") + ',' + buttonIndex + ',' + packCount + ')');
         }
     }
 

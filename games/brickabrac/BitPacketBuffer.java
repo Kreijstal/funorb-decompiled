@@ -29,7 +29,7 @@ final class BitPacketBuffer extends PacketBuffer {
           this.opcodeCipher = new IsaacGenerator(seed);
           int var3_int = -50 / ((obfuscationGuard - 22) / 37);
         } catch (RuntimeException runtimeException) {
-          throw qb.a((Throwable) ((Object) runtimeException), "pi.UA(" + (seed != null ? "{...}" : "null") + ',' + obfuscationGuard + ')');
+          throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "pi.UA(" + (seed != null ? "{...}" : "null") + ',' + obfuscationGuard + ')');
         }
     }
 
@@ -197,7 +197,7 @@ final class BitPacketBuffer extends PacketBuffer {
             w.field_r.b(7 + (-w.field_r.width + 510) / 2, 260, var12);
           }
           if (3 == var24.field_Z) {
-            ja.a((byte) -113, v.field_b, var8, var9, var24);
+            ja.a((byte) -113, ClientException.field_b, var8, var9, var24);
           }
           if (var24.field_Z == 5) {
             ja.a((byte) -104, jk.field_u, var8, var9, var24);
@@ -237,7 +237,7 @@ final class BitPacketBuffer extends PacketBuffer {
           } else {
             stackIn_75_2 = "{...}";
           }
-          throw qb.a((Throwable) ((Object) stackIn_74_0), ((StringBuilder) (Object) stackIn_74_1).append(stackIn_75_2).append(',').append(destinationX).append(')').toString());
+          throw qb.addExceptionContext((Throwable) ((Object) stackIn_74_0), ((StringBuilder) (Object) stackIn_74_1).append(stackIn_75_2).append(',').append(destinationX).append(')').toString());
         }
     }
 
@@ -282,8 +282,8 @@ final class BitPacketBuffer extends PacketBuffer {
     final void finishBitRead(byte obfuscationGuard) {
         this.position = (this.bitPosition + 7) / 8;
         if (obfuscationGuard < 69) {
-          pb var3 = (pb) null;
-          BitPacketBuffer.a((RgbSprite) null, (pb) null, 39, 118, (byte) 103, -79);
+          RasterCacheSurface var3 = (RasterCacheSurface) null;
+          BitPacketBuffer.a((RgbSprite) null, (RasterCacheSurface) null, 39, 118, (byte) 103, -79);
         }
     }
 
@@ -321,21 +321,21 @@ final class BitPacketBuffer extends PacketBuffer {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw qb.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
+          throw qb.addExceptionContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
         }
     }
 
-    final static void a(RgbSprite param0, pb param1, int param2, int param3, byte param4, int param5) {
+    final static void a(RgbSprite param0, RasterCacheSurface param1, int param2, int param3, byte param4, int param5) {
         try {
-          IndexedSpriteGeometry.a(-102, param1.field_p);
-          Rasterizer2D.fillVerticalGradient(0, 0, param1.field_i, param1.field_q, hh.field_c[param2], 10792131);
-          param0.drawTransparent((param1.field_i - param0.canvasWidth) / 2, -(75 / param3) - param0.canvasHeight + (param5 + param1.field_q));
-          sc.b(-102);
+          IndexedSpriteGeometry.pushSpriteRaster(-102, param1.sprite);
+          Rasterizer2D.fillVerticalGradient(0, 0, param1.width, param1.height, hh.field_c[param2], 10792131);
+          param0.drawTransparent((param1.width - param0.canvasWidth) / 2, -(75 / param3) - param0.canvasHeight + (param5 + param1.height));
+          sc.popRaster(-102);
           if (param4 < 6) {
             BitPacketBuffer.clearStaticReferences(102);
           }
         } catch (RuntimeException runtimeException) {
-          throw qb.a((Throwable) ((Object) runtimeException), "pi.LB(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+          throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "pi.LB(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
     }
 
@@ -383,7 +383,7 @@ final class BitPacketBuffer extends PacketBuffer {
           qn.field_n = param2;
           di.a((byte) -120);
         } catch (RuntimeException runtimeException) {
-          throw qb.a((Throwable) ((Object) runtimeException), "pi.JB(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "pi.JB(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 

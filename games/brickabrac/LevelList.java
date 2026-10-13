@@ -170,7 +170,7 @@ final class LevelList {
           } else {
             stackIn_26_2 = "{...}";
           }
-          throw qb.a((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(',').append(param3).append(')').toString());
+          throw qb.addExceptionContext((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -212,7 +212,7 @@ final class LevelList {
           }
           break;
         }
-        sc.b(-106);
+        sc.popRaster(-106);
         return;
     }
 
@@ -417,7 +417,7 @@ final class LevelList {
           } else {
             stackIn_73_2 = "{...}";
           }
-          throw qb.a((Throwable) ((Object) stackIn_72_0), ((StringBuilder) (Object) stackIn_72_1).append(stackIn_73_2).append(',').append(param1).append(')').toString());
+          throw qb.addExceptionContext((Throwable) ((Object) stackIn_72_0), ((StringBuilder) (Object) stackIn_72_1).append(stackIn_73_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -439,7 +439,7 @@ final class LevelList {
           }
           this.scrollStep = 3 * this.rowHeight / 2;
         } catch (RuntimeException runtimeException) {
-          throw qb.a((Throwable) ((Object) runtimeException), "uj.<init>(" + rowHeight + ',' + rowGap + ',' + buttonIndex + ',' + (owner != null ? "{...}" : "null") + ',' + (viewport != null ? "{...}" : "null") + ',' + (pack != null ? "{...}" : "null") + ')');
+          throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "uj.<init>(" + rowHeight + ',' + rowGap + ',' + buttonIndex + ',' + (owner != null ? "{...}" : "null") + ',' + (viewport != null ? "{...}" : "null") + ',' + (pack != null ? "{...}" : "null") + ')');
         }
     }
 

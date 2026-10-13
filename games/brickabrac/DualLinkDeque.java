@@ -40,7 +40,7 @@ final class DualLinkDeque implements Iterable {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw qb.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
+          throw qb.addExceptionContext((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
         }
     }
 
@@ -99,7 +99,7 @@ final class DualLinkDeque implements Iterable {
           node.secondaryPrevious.secondaryNext = node;
           node.secondaryNext.secondaryPrevious = node;
         } catch (RuntimeException runtimeException) {
-          throw qb.a((Throwable) ((Object) runtimeException), "gp.E(" + (node != null ? "{...}" : "null") + ',' + obfuscationGuard + ')');
+          throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "gp.E(" + (node != null ? "{...}" : "null") + ',' + obfuscationGuard + ')');
         }
     }
 

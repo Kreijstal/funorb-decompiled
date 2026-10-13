@@ -14,14 +14,14 @@ final class ej extends sl {
     static RgbSprite[][] field_L;
     static String field_H;
 
-    final static void a(int param0, RgbSprite param1, int param2, int param3, int param4, pb param5) {
+    final static void a(int param0, RgbSprite param1, int param2, int param3, int param4, RasterCacheSurface param5) {
         try {
-          IndexedSpriteGeometry.a(-53, param5.field_p);
-          Rasterizer2D.fillVerticalGradient(param0, 0, param5.field_i, param5.field_q, bg.field_u[param4], 928072);
-          param1.b(-(30 / param2) + (param5.field_i - param1.canvasWidth) / 2, -(66 / param2) + (-param1.canvasHeight + param3 + param5.field_q), 0, 208);
-          sc.b(-101);
+          IndexedSpriteGeometry.pushSpriteRaster(-53, param5.sprite);
+          Rasterizer2D.fillVerticalGradient(param0, 0, param5.width, param5.height, bg.field_u[param4], 928072);
+          param1.b(-(30 / param2) + (param5.width - param1.canvasWidth) / 2, -(66 / param2) + (-param1.canvasHeight + param3 + param5.height), 0, 208);
+          sc.popRaster(-101);
         } catch (RuntimeException runtimeException) {
-          throw qb.a((Throwable) ((Object) runtimeException), "ej.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ')');
+          throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "ej.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -51,7 +51,7 @@ final class ej extends sl {
         try {
           this.field_N = param0;
         } catch (RuntimeException runtimeException) {
-          throw qb.a((Throwable) ((Object) runtimeException), "ej.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "ej.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -59,8 +59,8 @@ final class ej extends sl {
         if (param0 == 1) {
           return this.field_N;
         }
-        pb var3 = (pb) null;
-        ej.a(-50, (RgbSprite) null, -35, 2, 119, (pb) null);
+        RasterCacheSurface var3 = (RasterCacheSurface) null;
+        ej.a(-50, (RgbSprite) null, -35, 2, 119, (RasterCacheSurface) null);
         return this.field_N;
     }
 

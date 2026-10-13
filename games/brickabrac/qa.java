@@ -23,11 +23,11 @@ final class qa extends ki {
         if (!AchievementIcon.field_m.a("ninja", -28138)) {
           return false;
         }
-        LegacyUtf8Decoder.field_d = pl.a("ninja", "ninja_near", (byte) -24, AchievementIcon.field_m);
-        ap.field_f = pl.a("ninja", "ninja_mid", (byte) -128, AchievementIcon.field_m);
-        hn.field_b = pl.a("ninja", "ninja_far", (byte) 127, AchievementIcon.field_m);
-        hc.field_g = pl.a("ninja", "ninja_small", (byte) -81, AchievementIcon.field_m);
-        ObjectHistoryBuffer.field_q = pl.a("ninja", "ninja_character", (byte) -105, AchievementIcon.field_m);
+        LegacyUtf8Decoder.field_d = pl.loadRgbSpriteByName("ninja", "ninja_near", (byte) -24, AchievementIcon.field_m);
+        ap.field_f = pl.loadRgbSpriteByName("ninja", "ninja_mid", (byte) -128, AchievementIcon.field_m);
+        hn.field_b = pl.loadRgbSpriteByName("ninja", "ninja_far", (byte) 127, AchievementIcon.field_m);
+        hc.field_g = pl.loadRgbSpriteByName("ninja", "ninja_small", (byte) -81, AchievementIcon.field_m);
+        ObjectHistoryBuffer.field_q = pl.loadRgbSpriteByName("ninja", "ninja_character", (byte) -105, AchievementIcon.field_m);
         nk.field_h = jh.a(0, LegacyUtf8Decoder.field_d);
         mp.field_Zb = jh.a(0, ap.field_f);
         rh.field_c = jh.a(0, hn.field_b);
@@ -47,12 +47,12 @@ final class qa extends ki {
           Rasterizer2D.fillVerticalGradient(param4, param2, 640, 480, fj.field_Sb[param3], 0);
           return;
         }
-        pb var6 = PowerUp.a(this.field_m, param3, -20777);
-        if (!var6.a((byte) -84, param3, this.field_m)) {
+        RasterCacheSurface var6 = PowerUp.a(this.field_m, param3, -20777);
+        if (!var6.matchesCacheKeys((byte) -84, param3, this.field_m)) {
           aa.a(0, hn.field_b, true, param3, var6, 1);
-          var6.a(this.field_m, param3, (byte) 78);
+          var6.setCacheKeys(this.field_m, param3, (byte) 78);
         }
-        tl.a(var6.field_p, (byte) -78, param2, 640, LegacyUtf8Decoder.field_d, ap.field_f, param1, 0, param3, param4, 1);
+        tl.a(var6.sprite, (byte) -78, param2, 640, LegacyUtf8Decoder.field_d, ap.field_f, param1, 0, param3, param4, 1);
     }
 
     qa(int param0, String param1, String param2, int param3) {
@@ -101,7 +101,7 @@ final class qa extends ki {
         return false;
     }
 
-    final static RgbSprite[] a(int param0, int param1, mf param2, boolean param3) {
+    final static RgbSprite[] loadRgbSprites(int fileId, int groupId, mf archive, boolean obfuscationGuard) {
         RuntimeException var4 = null;
         mf var5 = null;
         Object stackIn_4_0 = null;
@@ -111,12 +111,12 @@ final class qa extends ki {
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (!param3) {
+          if (!obfuscationGuard) {
             var5 = (mf) null;
-            qa.a(-20, -51, (mf) null, true);
+            qa.loadRgbSprites(-20, -51, (mf) null, true);
           }
-          if (ln.a(-97, param0, param2, param1)) {
-            stackIn_6_0 = v.a(-835);
+          if (ln.decodeSpritesFromArchive(-97, fileId, archive, groupId)) {
+            stackIn_6_0 = ClientException.buildRgbSprites(-835);
             return stackIn_6_0;
           }
           stackIn_4_0 = null;
@@ -125,13 +125,13 @@ final class qa extends ki {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
           stackIn_9_0 = var4;
-          stackIn_9_1 = new StringBuilder().append("qa.M(").append(param0).append(',').append(param1).append(',');
-          if (param2 == null) {
+          stackIn_9_1 = new StringBuilder().append("qa.M(").append(fileId).append(',').append(groupId).append(',');
+          if (archive == null) {
             stackIn_10_2 = "null";
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw qb.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param3).append(')').toString());
+          throw qb.addExceptionContext((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 
@@ -154,30 +154,30 @@ final class qa extends ki {
           Rasterizer2D.fillVerticalGradient(param2, param0, 306, 480, fj.field_Sb[param3], 0);
           if (param1 > -84) {
             var7 = (mf) null;
-            qa.a(90, 38, (mf) null, true);
+            qa.loadRgbSprites(90, 38, (mf) null, true);
             return;
           }
           return;
         }
-        pb var8 = kd.a(this.field_m, param3, (byte) 120);
-        if (!var8.a((byte) -84, param3, this.field_m)) {
+        RasterCacheSurface var8 = kd.a(this.field_m, param3, (byte) 120);
+        if (!var8.matchesCacheKeys((byte) -84, param3, this.field_m)) {
           aa.a(0, rh.field_c, true, param3, var8, 2);
-          var8.a(this.field_m, param3, (byte) 78);
+          var8.setCacheKeys(this.field_m, param3, (byte) 78);
         } else {
-          tl.a(var8.field_p, (byte) -78, param0, 306, nk.field_h, mp.field_Zb, param4, 0, param3, param2, 2);
+          tl.a(var8.sprite, (byte) -78, param0, 306, nk.field_h, mp.field_Zb, param4, 0, param3, param2, 2);
           if (param1 > -84) {
             var7Lifetime1 = (mf) null;
-            qa.a(90, 38, (mf) null, true);
+            qa.loadRgbSprites(90, 38, (mf) null, true);
             return;
           }
           return;
         }
-        tl.a(var8.field_p, (byte) -78, param0, 306, nk.field_h, mp.field_Zb, param4, 0, param3, param2, 2);
+        tl.a(var8.sprite, (byte) -78, param0, 306, nk.field_h, mp.field_Zb, param4, 0, param3, param2, 2);
         if (param1 <= -84) {
           return;
         }
         var7Lifetime2 = (mf) null;
-        qa.a(90, 38, (mf) null, true);
+        qa.loadRgbSprites(90, 38, (mf) null, true);
     }
 
     final void a(byte param0, int param1, int param2, int param3) {

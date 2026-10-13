@@ -41,7 +41,7 @@ final class BlankScreen extends GameScreen {
           }
           wd.field_w.a(param1, 0);
         } catch (RuntimeException runtimeException) {
-          throw qb.a((Throwable) ((Object) runtimeException), "of.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "of.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

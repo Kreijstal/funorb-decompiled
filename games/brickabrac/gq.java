@@ -351,7 +351,7 @@ final class gq extends mh {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw qb.a((Throwable) ((Object) var1_ref), "gq.B(" + param0 + ')');
+          throw qb.addExceptionContext((Throwable) ((Object) var1_ref), "gq.B(" + param0 + ')');
         }
     }
 
@@ -438,7 +438,7 @@ final class gq extends mh {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw qb.a((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
+          throw qb.addExceptionContext((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
         }
     }
 

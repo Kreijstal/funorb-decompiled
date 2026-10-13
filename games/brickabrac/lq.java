@@ -22,14 +22,14 @@ final class lq {
           }
           if (param1) {
             mf var4 = (mf) null;
-            lq.a(-17, 78, 86, (mf) null);
+            lq.loadIndexedSprite(-17, 78, 86, (mf) null);
           }
           param0.secondaryNext = this.field_g;
           param0.secondaryPrevious = this.field_g.secondaryPrevious;
           param0.secondaryPrevious.secondaryNext = param0;
           param0.secondaryNext.secondaryPrevious = param0;
         } catch (RuntimeException runtimeException) {
-          throw qb.a((Throwable) ((Object) runtimeException), "lq.I(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "lq.I(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -128,11 +128,11 @@ final class lq {
             field_a = (String) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw qb.a((Throwable) ((Object) runtimeException), "lq.G(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ')');
+          throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "lq.G(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final static IndexedSprite a(int param0, int param1, int param2, mf param3) {
+    final static IndexedSprite loadIndexedSprite(int obfuscationGuard, int groupId, int fileId, mf archive) {
         RuntimeException var4 = null;
         Object stackIn_2_0 = null;
         IndexedSprite stackIn_6_0 = null;
@@ -141,26 +141,26 @@ final class lq {
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (!ln.a(-105, param2, param3, param1)) {
+          if (!ln.decodeSpritesFromArchive(-105, fileId, archive, groupId)) {
             stackIn_2_0 = null;
             return (IndexedSprite) (stackIn_2_0);
           }
-          if (param0 != 0) {
+          if (obfuscationGuard != 0) {
             lq.d(-20);
           }
-          stackIn_6_0 = LevelSelectScreen.c(false);
+          stackIn_6_0 = LevelSelectScreen.buildIndexedSprite(false);
           return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
           stackIn_9_0 = var4;
-          stackIn_9_1 = new StringBuilder().append("lq.E(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
-          if (param3 == null) {
+          stackIn_9_1 = new StringBuilder().append("lq.E(").append(obfuscationGuard).append(',').append(groupId).append(',').append(fileId).append(',');
+          if (archive == null) {
             stackIn_10_2 = "null";
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw qb.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+          throw qb.addExceptionContext((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 

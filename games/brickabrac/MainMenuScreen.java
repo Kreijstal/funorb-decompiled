@@ -65,7 +65,7 @@ final class MainMenuScreen extends MenuScreen {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = decompiledCaughtException;
-          throw qb.a((Throwable) ((Object) var6), "rp.D(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+          throw qb.addExceptionContext((Throwable) ((Object) var6), "rp.D(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
     }
 
@@ -113,9 +113,9 @@ final class MainMenuScreen extends MenuScreen {
           fieldTemp$0 = c.field_g - 1;
           c.field_g = c.field_g - 1;
           if (0 == fieldTemp$0) {
-            IndexedSpriteGeometry.a(-59, field_s);
+            IndexedSpriteGeometry.pushSpriteRaster(-59, field_s);
             pa.a(true);
-            sc.b(-96);
+            sc.popRaster(-96);
             if (IntrusiveHashTable.field_k != null) {
               pe.field_n = IntrusiveHashTable.field_k.field_m;
             }
@@ -222,7 +222,7 @@ final class MainMenuScreen extends MenuScreen {
         this.tooltipSprites = new NodeDeque();
         int var1 = 468;
         var1 = var1 - da.packSelectorIcons[1].canvasHeight;
-        this.tooltipSprites.addLast(new TooltipSprite(12, var1, da.packSelectorIcons[1], rd.a(ii.field_s, new String[]{qn.packNames[1]}, (byte) 103)), (byte) 3);
+        this.tooltipSprites.addLast(new TooltipSprite(12, var1, da.packSelectorIcons[1], rd.a(RasterSnapshot.field_s, new String[]{qn.packNames[1]}, (byte) 103)), (byte) 3);
     }
 
     final static void a(byte param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int[] param8, int param9) {
@@ -272,7 +272,7 @@ final class MainMenuScreen extends MenuScreen {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw qb.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param9).append(')').toString());
+          throw qb.addExceptionContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param9).append(')').toString());
         }
     }
 

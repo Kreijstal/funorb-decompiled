@@ -34,14 +34,14 @@ final class fq {
             var7 = param3[1].canvasWidth;
             param3[0].drawTransparent(param4, param1);
             param3[2].drawTransparent(param4 + param0 - var6, param1);
-            Rasterizer2D.saveClip(pb.field_n);
+            Rasterizer2D.saveClip(RasterCacheSurface.field_n);
             Rasterizer2D.intersectClip(param4 + var5_int, param1, param0 + param4 - var6, param3[1].canvasHeight + param1);
             var8 = param4 + var5_int;
             var9 = param4 - (-param0 + var6);
             for (param4 = var8; var9 > param4; param4 = param4 + var7) {
               param3[1].drawTransparent(param4, param1);
             }
-            Rasterizer2D.restoreClip(pb.field_n);
+            Rasterizer2D.restoreClip(RasterCacheSurface.field_n);
             return;
           }
           return;
@@ -55,7 +55,7 @@ final class fq {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw qb.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param4).append(')').toString());
+          throw qb.addExceptionContext((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param4).append(')').toString());
         }
     }
 

@@ -39,7 +39,7 @@ final class pl {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw qb.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw qb.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
@@ -65,7 +65,7 @@ final class pl {
           var6.writeBytes(param1, -1, 0, param1.length);
           var6.backfillByteLength((byte) 123, -var7 + var6.position);
         } catch (RuntimeException runtimeException) {
-          throw qb.a((Throwable) ((Object) runtimeException), "pl.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+          throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "pl.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
     }
 
@@ -73,7 +73,7 @@ final class pl {
         field_f = null;
         if (param0 != 0) {
           mf var2 = (mf) null;
-          pl.a((String) null, (String) null, (byte) -53, (mf) null);
+          pl.loadRgbSpriteByName((String) null, (String) null, (byte) -53, (mf) null);
         }
         field_c = null;
         field_a = null;
@@ -164,7 +164,7 @@ final class pl {
           } else {
             stackIn_25_2 = "{...}";
           }
-          throw qb.a((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param1).append(')').toString());
+          throw qb.addExceptionContext((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -174,11 +174,11 @@ final class pl {
           param0.addMouseMotionListener(lj.mouseInput);
           if (param1 != 7282) {
             mf var3 = (mf) null;
-            pl.a((String) null, (String) null, (byte) 8, (mf) null);
+            pl.loadRgbSpriteByName((String) null, (String) null, (byte) 8, (mf) null);
           }
           param0.addFocusListener(lj.mouseInput);
         } catch (RuntimeException runtimeException) {
-          throw qb.a((Throwable) ((Object) runtimeException), "pl.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "pl.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -210,11 +210,11 @@ final class pl {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw qb.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param2).append(')').toString());
+          throw qb.addExceptionContext((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param2).append(')').toString());
         }
     }
 
-    final static RgbSprite a(String param0, String param1, byte param2, mf param3) {
+    final static RgbSprite loadRgbSpriteByName(String groupName, String fileName, byte obfuscationGuard, mf archive) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -229,34 +229,34 @@ final class pl {
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var4_int = param3.a(param0, false);
-          var5 = param3.a(var4_int, -108, param1);
-          var6 = 116 % ((40 - param2) / 57);
-          stackIn_1_0 = dk.a(-873, param3, var4_int, var5);
+          var4_int = archive.a(groupName, false);
+          var5 = archive.a(var4_int, -108, fileName);
+          var6 = 116 % ((40 - obfuscationGuard) / 57);
+          stackIn_1_0 = dk.loadRgbSprite(-873, archive, var4_int, var5);
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
           stackIn_4_0 = var4;
           stackIn_4_1 = new StringBuilder().append("pl.D(");
-          if (param0 == null) {
+          if (groupName == null) {
             stackIn_5_2 = "null";
           } else {
             stackIn_5_2 = "{...}";
           }
           stackIn_7_1 = ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',');
-          if (param1 == null) {
+          if (fileName == null) {
             stackIn_8_2 = "null";
           } else {
             stackIn_8_2 = "{...}";
           }
-          stackIn_10_1 = ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param2).append(',');
-          if (param3 == null) {
+          stackIn_10_1 = ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(obfuscationGuard).append(',');
+          if (archive == null) {
             stackIn_11_2 = "null";
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw qb.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw qb.addExceptionContext((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 

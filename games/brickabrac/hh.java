@@ -25,7 +25,7 @@ final class hh {
         field_b = null;
     }
 
-    final static void a(RgbSprite param0, int param1, int param2, pb param3, int param4, int param5, RgbSprite param6) {
+    final static void a(RgbSprite param0, int param1, int param2, RasterCacheSurface param3, int param4, int param5, RgbSprite param6) {
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -36,14 +36,14 @@ final class hh {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var7 = null;
         try {
-          IndexedSpriteGeometry.a(-72, param3.field_p);
-          Rasterizer2D.fillVerticalGradient(0, 0, param3.field_i, param3.field_q, um.field_u[param5], 928072);
-          og.a(-124, 128, 8, param0, 16777215, (-param0.canvasWidth + param3.field_i) / 2, 85 + (param1 - param0.canvasHeight));
+          IndexedSpriteGeometry.pushSpriteRaster(-72, param3.sprite);
+          Rasterizer2D.fillVerticalGradient(0, 0, param3.width, param3.height, um.field_u[param5], 928072);
+          og.a(-124, 128, 8, param0, 16777215, (-param0.canvasWidth + param3.width) / 2, 85 + (param1 - param0.canvasHeight));
           if (param4 != -8562) {
             return;
           }
-          og.a(-113, 8, 128, param6, 16777215, (param3.field_i - param0.canvasWidth) / 2, 480 + param1 + (-param0.canvasHeight + 60 / param2));
-          sc.b(-90);
+          og.a(-113, 8, 128, param6, 16777215, (param3.width - param0.canvasWidth) / 2, 480 + param1 + (-param0.canvasHeight + 60 / param2));
+          sc.popRaster(-90);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -67,7 +67,7 @@ final class hh {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw qb.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw qb.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 
@@ -102,7 +102,7 @@ final class hh {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw qb.a((Throwable) ((Object) var3), "hh.A(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw qb.addExceptionContext((Throwable) ((Object) var3), "hh.A(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 

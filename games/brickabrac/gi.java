@@ -8,20 +8,20 @@ final class gi extends ki {
     static String field_t;
 
     final void a(boolean param0, int param1, int param2, int param3, int param4) {
-        pb var6 = null;
+        RasterCacheSurface var6 = null;
         if (this.b((byte) -127)) {
           var6 = PowerUp.a(this.field_m, param3, -20777);
-          if (!var6.a((byte) -84, param3, this.field_m)) {
+          if (!var6.matchesCacheKeys((byte) -84, param3, this.field_m)) {
             RankingsScreen.a(var6, 1, 0, OptionsScreen.field_B, param3, 100);
-            var6.a(this.field_m, param3, (byte) 78);
-            sa.a((byte) 119, wn.field_b, param2, 1, lj.field_q, var6.field_p, param1, 640, 0, param4);
+            var6.setCacheKeys(this.field_m, param3, (byte) 78);
+            sa.a((byte) 119, wn.field_b, param2, 1, lj.field_q, var6.sprite, param1, 640, 0, param4);
             if (!param0) {
               field_u = (String) null;
               return;
             }
             return;
           }
-          sa.a((byte) 119, wn.field_b, param2, 1, lj.field_q, var6.field_p, param1, 640, 0, param4);
+          sa.a((byte) 119, wn.field_b, param2, 1, lj.field_q, var6.sprite, param1, 640, 0, param4);
           if (!param0) {
             field_u = (String) null;
             return;
@@ -57,16 +57,16 @@ final class gi extends ki {
 
     final boolean a(boolean param0) {
         if (AchievementIcon.field_m.a("desert", -28138)) {
-          wn.field_b = pl.a("desert", "desert_near", (byte) 107, AchievementIcon.field_m);
-          lj.field_q = pl.a("desert", "desert_mid", (byte) -121, AchievementIcon.field_m);
-          OptionsScreen.field_B = pl.a("desert", "desert_far", (byte) 122, AchievementIcon.field_m);
-          ce.field_c = pl.a("desert", "desert_small", (byte) 99, AchievementIcon.field_m);
+          wn.field_b = pl.loadRgbSpriteByName("desert", "desert_near", (byte) 107, AchievementIcon.field_m);
+          lj.field_q = pl.loadRgbSpriteByName("desert", "desert_mid", (byte) -121, AchievementIcon.field_m);
+          OptionsScreen.field_B = pl.loadRgbSpriteByName("desert", "desert_far", (byte) 122, AchievementIcon.field_m);
+          ce.field_c = pl.loadRgbSpriteByName("desert", "desert_small", (byte) 99, AchievementIcon.field_m);
           lq.field_d = jh.a(0, wn.field_b);
           oc.field_x = jh.a(0, lj.field_q);
           pp.field_b = jh.a(0, OptionsScreen.field_B);
-          im.field_f[0] = cr.a("desert", AchievementIcon.field_m, "desert_caps", 2);
-          pk.field_e[0] = cr.a("desert", AchievementIcon.field_m, "desert_segs", 2);
-          um.field_l[0] = pl.a("desert", "desert_centre", (byte) 110, AchievementIcon.field_m);
+          im.field_f[0] = cr.loadRgbSpritesByName("desert", AchievementIcon.field_m, "desert_caps", 2);
+          pk.field_e[0] = cr.loadRgbSpritesByName("desert", AchievementIcon.field_m, "desert_segs", 2);
+          um.field_l[0] = pl.loadRgbSpriteByName("desert", "desert_centre", (byte) 110, AchievementIcon.field_m);
           im.field_f[1] = ig.a(im.field_f[0], param0);
           pk.field_e[1] = ig.a(pk.field_e[0], false);
           um.field_l[1] = pl.a(-16371, um.field_l[0]);
@@ -107,7 +107,7 @@ final class gi extends ki {
     }
 
     final void a(int param0, byte param1, int param2, int param3, int param4) {
-        pb var7 = null;
+        RasterCacheSurface var7 = null;
         if (param1 >= -84) {
           field_u = (String) null;
           if (!this.b((byte) -123)) {
@@ -115,29 +115,29 @@ final class gi extends ki {
             return;
           }
           var7 = kd.a(this.field_m, param3, (byte) -74);
-          if (!var7.a((byte) -84, param3, this.field_m)) {
+          if (!var7.matchesCacheKeys((byte) -84, param3, this.field_m)) {
             RankingsScreen.a(var7, 2, -13, pp.field_b, param3, 102);
-            var7.a(this.field_m, param3, (byte) 78);
+            var7.setCacheKeys(this.field_m, param3, (byte) 78);
           } else {
-            sa.a((byte) 86, lq.field_d, param0, 2, oc.field_x, var7.field_p, param4, 306, -13, param2);
+            sa.a((byte) 86, lq.field_d, param0, 2, oc.field_x, var7.sprite, param4, 306, -13, param2);
             return;
           }
-          sa.a((byte) 86, lq.field_d, param0, 2, oc.field_x, var7.field_p, param4, 306, -13, param2);
+          sa.a((byte) 86, lq.field_d, param0, 2, oc.field_x, var7.sprite, param4, 306, -13, param2);
           return;
         }
         if (!this.b((byte) -123)) {
           Rasterizer2D.fillVerticalGradient(param2, param0, 306, 480, kg.field_i[param3], 16777215);
           return;
         }
-        pb var8 = kd.a(this.field_m, param3, (byte) -74);
-        if (!var8.a((byte) -84, param3, this.field_m)) {
+        RasterCacheSurface var8 = kd.a(this.field_m, param3, (byte) -74);
+        if (!var8.matchesCacheKeys((byte) -84, param3, this.field_m)) {
           RankingsScreen.a(var8, 2, -13, pp.field_b, param3, 102);
-          var8.a(this.field_m, param3, (byte) 78);
+          var8.setCacheKeys(this.field_m, param3, (byte) 78);
         } else {
-          sa.a((byte) 86, lq.field_d, param0, 2, oc.field_x, var8.field_p, param4, 306, -13, param2);
+          sa.a((byte) 86, lq.field_d, param0, 2, oc.field_x, var8.sprite, param4, 306, -13, param2);
           return;
         }
-        sa.a((byte) 86, lq.field_d, param0, 2, oc.field_x, var8.field_p, param4, 306, -13, param2);
+        sa.a((byte) 86, lq.field_d, param0, 2, oc.field_x, var8.sprite, param4, 306, -13, param2);
     }
 
     gi(int param0, String param1, String param2, int param3) {
@@ -147,7 +147,7 @@ final class gi extends ki {
           um.field_l = new RgbSprite[2];
           pk.field_e = new RgbSprite[2][];
         } catch (RuntimeException runtimeException) {
-          throw qb.a((Throwable) ((Object) runtimeException), "gi.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
+          throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "gi.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 

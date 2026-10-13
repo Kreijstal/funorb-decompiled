@@ -3,7 +3,7 @@
  */
 final class cn {
     static int field_c;
-    static byte[][] field_a;
+    static byte[][] decodedSpriteIndices;
     static RgbSprite[] field_e;
     static int field_d;
     static String field_b;
@@ -41,7 +41,7 @@ final class cn {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw qb.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(height).append(',').append(transitionBitIndex).append(',').append(x).append(',').append(achievementId).append(',').append(transitionBit).append(')').toString());
+          throw qb.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(height).append(',').append(transitionBitIndex).append(',').append(x).append(',').append(achievementId).append(',').append(transitionBit).append(')').toString());
         }
     }
 
@@ -53,13 +53,13 @@ final class cn {
             cn.a((ScorePopup) null, (PlayerBoard) null, -6, -71, 111);
           }
         } catch (RuntimeException runtimeException) {
-          throw qb.a((Throwable) ((Object) runtimeException), "cn.B(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "cn.B(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
     public static void a(int param0) {
         field_e = null;
-        field_a = (byte[][]) null;
+        decodedSpriteIndices = (byte[][]) null;
         field_b = null;
         if (param0 < 97) {
           PlayerBoard var2 = (PlayerBoard) null;

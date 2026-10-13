@@ -63,7 +63,7 @@ final class Brick extends RectangleBody {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw qb.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
+          throw qb.addExceptionContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
         }
     }
 
@@ -102,7 +102,7 @@ final class Brick extends RectangleBody {
           }
           this.segmentElapsedTicks = -segmentStartTick + this.motionElapsedTicks;
         } catch (RuntimeException runtimeException) {
-          throw qb.a((Throwable) ((Object) runtimeException), "on.Q(" + (path != null ? "{...}" : "null") + ',' + obfuscationGuard + ')');
+          throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "on.Q(" + (path != null ? "{...}" : "null") + ',' + obfuscationGuard + ')');
         }
     }
 
@@ -147,7 +147,7 @@ final class Brick extends RectangleBody {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw qb.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(obfuscationGuard).append(')').toString());
+          throw qb.addExceptionContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 
@@ -159,7 +159,7 @@ final class Brick extends RectangleBody {
             Brick.a((byte) -120, -81);
           }
         } catch (RuntimeException runtimeException) {
-          throw qb.a((Throwable) ((Object) runtimeException), "on.P(" + (path != null ? "{...}" : "null") + ',' + includeVelocity + ',' + obfuscationGuard + ')');
+          throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "on.P(" + (path != null ? "{...}" : "null") + ',' + includeVelocity + ',' + obfuscationGuard + ')');
         }
     }
 
@@ -346,7 +346,7 @@ final class Brick extends RectangleBody {
           } else {
             stackIn_74_2 = "{...}";
           }
-          throw qb.a((Throwable) ((Object) stackIn_70_0), ((StringBuilder) (Object) stackIn_73_1).append(stackIn_74_2).append(')').toString());
+          throw qb.addExceptionContext((Throwable) ((Object) stackIn_70_0), ((StringBuilder) (Object) stackIn_73_1).append(stackIn_74_2).append(')').toString());
         }
     }
 
@@ -384,7 +384,7 @@ final class Brick extends RectangleBody {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw qb.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(obfuscationGuard).append(')').toString());
+          throw qb.addExceptionContext((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 
@@ -484,7 +484,7 @@ final class Brick extends RectangleBody {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw qb.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw qb.addExceptionContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 

@@ -2,7 +2,7 @@
 
 Java here is the single published version. Rebuild with Deko’s `readable/reproduce-brickabrac.mjs`. The reverse dictionary is `../../decompilation/brickabrac-naming.json`.
 
-This pass reviews 85 class identities across 420 compiled classes. Other names remain unresolved. Numbered state masks/words identify observed storage without guessing server semantics. Identifiers have no opaque suffixes; reversal recovers original bytes.
+This pass reviews 88 class identities across 420 compiled classes. Other names remain unresolved. Numbered state masks/words identify observed storage without guessing server semantics. Identifiers have no opaque suffixes; reversal recovers original bytes.
 
 | Start here | Follow |
 | --- | --- |
@@ -35,6 +35,7 @@ This pass reviews 85 class identities across 420 compiled classes. Other names r
 | [AudioMixer](AudioMixer.java) / [AudioMixerListener](AudioMixerListener.java) / [SoundPlayback](SoundPlayback.java) / [PcmPlayer](PcmPlayer.java) | Stream mixing/listeners, playback gain association and output/scheduling boundary. |
 | [IndexedSpriteGeometry](IndexedSpriteGeometry.java) / [IndexedSprite](IndexedSprite.java) | Palette image crop/canvas geometry, unsigned indices, draw modes and quarter-size averaging. |
 | [TextFont](TextFont.java) / [PaletteFont](PaletteFont.java) / [AlphaFont](AlphaFont.java) | Text metrics/layout and palette versus alpha-coverage glyph rendering. |
+| [RasterSnapshot](RasterSnapshot.java) / [RasterCacheSurface](RasterCacheSurface.java) / [ClientException](ClientException.java) | Nested raster state, cache surfaces and client exception context. |
 
 | Registered menu ID | Screen |
 | --- | --- |
@@ -73,5 +74,7 @@ Icon fixtures cover signed rounded-quarter movement, delayed transition-bit clea
 Audio fixtures mix synthetic children and real PCM streams in memory. They cover fill versus skip, child traversal/removal and scheduling reset; sample ownership/rates, cursor clamping, mono/stereo forward/reverse aligned output, equal-power/negative pan, forward half-sample interpolation, finite/indefinite wrap and ping-pong loops, gain ramps/fade unlink, setters and master-gain associations. Integer.MIN_VALUE remains the fade sentinel. Listener callbacks, device I/O, MIDI synthesis, reverse interpolation, ramped output kernels and real playback remain unverified; the original listener private throwing constructor is retained.
 
 Indexed sprite fixtures cover clipping/crop placement, unsigned indices, transparent/opaque/alpha modes, quarter averages and RGB expansion. Font fixtures construct controlled real glyph/metric data, check tags/entities, wrapping, inline images, alignment and clipped palette/coverage glyph output. They preserve signed packed-blend high bytes, AlphaFont caller-array mutation and negative-index failures, and ellipsis truncation’s extra dropped character/short-budget bounds failure. Extended contour/kerning metrics, shadow glyphs, justification, paragraph layout, thumbnail regeneration and complete rendered menus remain unverified.
+
+Raster fixtures cover nested pixel/dimension/clip restoration, pooled reference release/reuse, empty-stack rejection and cache keys. Synthetic sprite assets cover row/column layout and optional alpha, palette black-to1 correction, RGB/ARGB choice, indexed sharing and single-RGB alpha omission. Materializers clear six index/palette/geometry arrays but retain alpha planes/flags and scalar metadata. Exception fixtures preserve separate stored throwable/context, standard null message/cause and wrapper reuse. Archive retrieval, malformed asset recovery, thumbnail regeneration and complete image-backed menus remain unverified.
 
 Decompiler source commit: 1d183d3ba75fc0a8cd3af1544591b8c463c0e1ff. Tracked-source Git tar SHA-256: 7230d95fc7b957c8c56c76ed8203e42c1808e0084711cfd0495f47d8a692e8cd. This identifies decompiler source, not a gamepack JAR.

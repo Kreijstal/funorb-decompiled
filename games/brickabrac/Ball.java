@@ -66,7 +66,7 @@ final class Ball extends CircleBody {
             this.centerXHistory256 = (IntHistoryBuffer) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw qb.a((Throwable) ((Object) runtimeException), "vn.P(" + (paddle != null ? "{...}" : "null") + ',' + obfuscationGuard + ')');
+          throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "vn.P(" + (paddle != null ? "{...}" : "null") + ',' + obfuscationGuard + ')');
         }
     }
 
@@ -117,7 +117,7 @@ final class Ball extends CircleBody {
         try {
           this.positionOnPaddle(paddle, 0);
         } catch (RuntimeException runtimeException) {
-          throw qb.a((Throwable) ((Object) runtimeException), "vn.<init>(" + (paddle != null ? "{...}" : "null") + ',' + launchAngle + ',' + speed + ')');
+          throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "vn.<init>(" + (paddle != null ? "{...}" : "null") + ',' + launchAngle + ',' + speed + ')');
         }
     }
 
@@ -133,7 +133,7 @@ final class Ball extends CircleBody {
           this.launchAngle = packet.readShort(126);
           this.brickBounceCount = packet.readVarInt((byte) -82);
         } catch (RuntimeException runtimeException) {
-          throw qb.a((Throwable) ((Object) runtimeException), "vn.L(" + obfuscationGuard + ',' + (packet != null ? "{...}" : "null") + ')');
+          throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "vn.L(" + obfuscationGuard + ',' + (packet != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -174,7 +174,7 @@ final class Ball extends CircleBody {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw qb.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+          throw qb.addExceptionContext((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 

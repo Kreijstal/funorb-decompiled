@@ -25,7 +25,7 @@ final class pn extends IntrusiveNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw qb.a((Throwable) ((Object) var2), "pn.D(" + param0 + ',' + param1 + ')');
+          throw qb.addExceptionContext((Throwable) ((Object) var2), "pn.D(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -162,7 +162,7 @@ final class pn extends IntrusiveNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw qb.a((Throwable) (var1), "pn.B(" + param0 + ')');
+          throw qb.addExceptionContext((Throwable) (var1), "pn.B(" + param0 + ')');
         }
     }
 
@@ -178,7 +178,7 @@ final class pn extends IntrusiveNode {
             pn.a(-11);
           }
         } catch (RuntimeException runtimeException) {
-          throw qb.a((Throwable) ((Object) runtimeException), "pn.C(" + param0 + ')');
+          throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "pn.C(" + param0 + ')');
         }
     }
 
@@ -197,7 +197,7 @@ final class pn extends IntrusiveNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw qb.a((Throwable) ((Object) var2), "pn.A(" + param0 + ',' + param1 + ')');
+          throw qb.addExceptionContext((Throwable) ((Object) var2), "pn.A(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -210,7 +210,7 @@ final class pn extends IntrusiveNode {
           this.field_l = param4;
           this.field_k = param5;
         } catch (RuntimeException runtimeException) {
-          throw qb.a((Throwable) ((Object) runtimeException), "pn.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+          throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "pn.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
     }
 

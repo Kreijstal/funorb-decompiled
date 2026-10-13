@@ -78,7 +78,7 @@ final class sk extends h {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw qb.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw qb.addExceptionContext((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 
@@ -147,7 +147,7 @@ final class sk extends h {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw qb.a((Throwable) ((Object) var1_ref), "sk.B(" + param0 + ')');
+          throw qb.addExceptionContext((Throwable) ((Object) var1_ref), "sk.B(" + param0 + ')');
         }
     }
 
@@ -166,9 +166,9 @@ final class sk extends h {
           return;
         }
         RgbSprite var6 = new RgbSprite(this.field_E.field_t, this.field_E.field_s);
-        IndexedSpriteGeometry.a(-113, var6);
+        IndexedSpriteGeometry.pushSpriteRaster(-113, var6);
         this.field_E.a(0, 0, param2, param3);
-        sc.b(param3 ^ 119);
+        sc.popRaster(param3 ^ 119);
         var6.b(param1 + this.field_o, param0 + this.field_w, this.field_K);
     }
 
@@ -206,7 +206,7 @@ final class sk extends h {
           } else {
             stackIn_5_2 = "{...}";
           }
-          throw qb.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(')').toString());
+          throw qb.addExceptionContext((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(')').toString());
         }
     }
 
@@ -217,7 +217,7 @@ final class sk extends h {
           this.field_K = 256;
           this.field_E = param0;
         } catch (RuntimeException runtimeException) {
-          throw qb.a((Throwable) ((Object) runtimeException), "sk.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "sk.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

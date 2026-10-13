@@ -4,7 +4,7 @@
 final class jh {
     static String[] field_e;
     static int field_a;
-    static int[] field_b;
+    static int[] decodedSpriteWidths;
     static RgbSprite field_d;
     static String field_c;
 
@@ -33,14 +33,14 @@ final class jh {
           } else {
             stackIn_5_2 = "{...}";
           }
-          throw qb.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(')').toString());
+          throw qb.addExceptionContext((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(')').toString());
         }
     }
 
     public static void a(byte param0) {
         int var1 = 54 / ((-65 - param0) / 48);
         field_d = null;
-        field_b = null;
+        decodedSpriteWidths = null;
         field_c = null;
         field_e = null;
     }
@@ -68,7 +68,7 @@ final class jh {
           param1.field_cb = 0;
           param1.field_C = 0;
         } catch (RuntimeException runtimeException) {
-          throw qb.a((Throwable) ((Object) runtimeException), "jh.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "jh.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

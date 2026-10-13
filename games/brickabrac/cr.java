@@ -45,7 +45,7 @@ final class cr extends oc {
           Brick.field_x = new kg(param4);
           dp.field_v = new co(vd.field_f, Brick.field_x);
         } catch (RuntimeException runtimeException) {
-          throw qb.a((Throwable) ((Object) runtimeException), "cr.I(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ',' + param6 + ',' + param7 + ',' + param8 + ')');
+          throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "cr.I(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ',' + param6 + ',' + param7 + ',' + param8 + ')');
         }
     }
 
@@ -71,23 +71,23 @@ final class cr extends oc {
             param2.drawTransparent(var6, param1);
             var6 = var6 + param2.width;
           }
-          sc.b(-103);
+          sc.popRaster(-103);
           if (param0 + this.field_G.width >= Rasterizer2D.clipLeft) {
-            IndexedSpriteGeometry.a(-112, this.field_C);
+            IndexedSpriteGeometry.pushSpriteRaster(-112, this.field_C);
             param2.drawTransparent(-this.field_K, 0);
             param2.drawTransparent(this.field_H * 2 - this.field_K, 0);
             this.field_O.b(0, 0);
-            sc.b(-109);
+            sc.popRaster(-109);
             this.field_C.drawTransparent(param0, param1);
           }
           if (Rasterizer2D.clipRight >= var5_int - this.field_G.width) {
-            IndexedSpriteGeometry.a(-51, this.field_C);
+            IndexedSpriteGeometry.pushSpriteRaster(-51, this.field_C);
             for (var7 = this.field_t - this.field_G.width + this.field_K; var7 > 2 * this.field_H; var7 = var7 - this.field_H * 2) {
             }
             param2.drawTransparent(-var7, 0);
             param2.drawTransparent(-var7 + 2 * this.field_H, 0);
             this.field_G.b(0, 0);
-            sc.b(-117);
+            sc.popRaster(-117);
             this.field_C.drawTransparent(var5_int - this.field_G.width, param1);
             return;
           }
@@ -102,7 +102,7 @@ final class cr extends oc {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw qb.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param3).append(')').toString());
+          throw qb.addExceptionContext((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -175,7 +175,7 @@ final class cr extends oc {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw qb.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw qb.addExceptionContext((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -190,7 +190,7 @@ final class cr extends oc {
           return (RgbSprite) null;
         }
         RgbSprite var3 = new RgbSprite(var2, this.field_s);
-        IndexedSpriteGeometry.a(-67, var3);
+        IndexedSpriteGeometry.pushSpriteRaster(-67, var3);
         for (var4 = 0; this.field_s > var4; var4++) {
           for (var5 = 0; var2 > var5; var5++) {
             var6 = (double)var5 * (double)var5 / (double)(var4 * (this.field_s - var4));
@@ -202,7 +202,7 @@ final class cr extends oc {
             Rasterizer2D.setPixel(var5, var4, var8 << 16 | (var8 << 8 | var8));
           }
         }
-        sc.b(-111);
+        sc.popRaster(-111);
         return var3;
     }
 
@@ -220,7 +220,7 @@ final class cr extends oc {
         int var9Lifetime1;
         int var10Lifetime1;
         int var13Lifetime1;
-        IndexedSpriteGeometry.a(-102, var5);
+        IndexedSpriteGeometry.pushSpriteRaster(-102, var5);
         int var6 = this.field_s >> 1;
         for (var7 = 0; var7 < this.field_s; var7++) {
           var8 = (var7 >> 1) * (-1 + this.field_H * 2) % (this.field_H * 2);
@@ -237,11 +237,11 @@ final class cr extends oc {
           Rasterizer2D.drawHorizontalLine(this.field_H + var8, var7, this.field_H, var13Lifetime1);
           Rasterizer2D.drawHorizontalLine(var8 - this.field_H, var7, this.field_H, var13Lifetime1);
         }
-        sc.b(-110);
+        sc.popRaster(-110);
         return var5;
     }
 
-    final static RgbSprite[] a(String param0, mf param1, String param2, int param3) {
+    final static RgbSprite[] loadRgbSpritesByName(String groupName, mf archive, String fileName, int obfuscationGuard) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -255,36 +255,36 @@ final class cr extends oc {
         String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param3 != 2) {
+          if (obfuscationGuard != 2) {
             field_N = (NodeDeque) null;
           }
-          var4_int = param1.a(param0, false);
-          var5 = param1.a(var4_int, param3 ^ -31, param2);
-          stackIn_3_0 = DualLinkIterator.a(var5, param3 ^ -23174, var4_int, param1);
+          var4_int = archive.a(groupName, false);
+          var5 = archive.a(var4_int, obfuscationGuard ^ -31, fileName);
+          stackIn_3_0 = DualLinkIterator.loadRgbSprites(var5, obfuscationGuard ^ -23174, var4_int, archive);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
           stackIn_6_0 = var4;
           stackIn_6_1 = new StringBuilder().append("cr.B(");
-          if (param0 == null) {
+          if (groupName == null) {
             stackIn_7_2 = "null";
           } else {
             stackIn_7_2 = "{...}";
           }
           stackIn_9_1 = ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',');
-          if (param1 == null) {
+          if (archive == null) {
             stackIn_10_2 = "null";
           } else {
             stackIn_10_2 = "{...}";
           }
           stackIn_12_1 = ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',');
-          if (param2 == null) {
+          if (fileName == null) {
             stackIn_13_2 = "null";
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw qb.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param3).append(')').toString());
+          throw qb.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 
@@ -307,7 +307,7 @@ final class cr extends oc {
         if (65536 > this.field_L) {
           MovingBody.a((byte) 118, this.field_t + var5, var5 + (this.field_L * this.field_t >> 16), var6, this.field_s + var6);
           this.a(var5, var6, this.field_P[1], param3 ^ 92);
-          sc.b(-102);
+          sc.popRaster(-102);
         }
         if (param3 != -11) {
           this.field_J = true;

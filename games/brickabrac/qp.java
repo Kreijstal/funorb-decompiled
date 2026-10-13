@@ -5,12 +5,12 @@ final class qp {
     static String field_a;
     static mh field_f;
     static IndexedSprite[] field_e;
-    static int[] field_c;
+    static int[] decodedSpritePalette;
     static String field_b;
     static String field_d;
 
     public static void a(boolean param0) {
-        field_c = null;
+        decodedSpritePalette = null;
         field_b = null;
         field_a = null;
         if (!param0) {

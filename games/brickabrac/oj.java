@@ -41,7 +41,7 @@ final class oj extends ep {
           var8.field_g[param0.length()] = param3 + (var7 >> 1);
           dn.a(25293, param0, var8, 0, param2);
         } catch (RuntimeException runtimeException) {
-          throw qb.a((Throwable) ((Object) runtimeException), "oj.J(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
+          throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "oj.J(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -152,7 +152,7 @@ final class oj extends ep {
               }
             }
           }
-          sc.b(-123);
+          sc.popRaster(-123);
           var2 = -63 / ((70 - param1) / 49);
           return;
         }
@@ -188,12 +188,12 @@ final class oj extends ep {
             stackIn_31_2 = (param0) && (!hc.field_c);
             ((mh) (Object) stackIn_30_0).a(stackIn_30_1, stackIn_31_2);
           }
-          sc.b(-123);
+          sc.popRaster(-123);
           var2Lifetime1 = -63 / ((70 - param1) / 49);
           return;
         }
         if (eg.field_m <= 0) {
-          sc.b(-123);
+          sc.popRaster(-123);
           var2Lifetime2 = -63 / ((70 - param1) / 49);
           return;
         }
@@ -206,7 +206,7 @@ final class oj extends ep {
           stackIn_43_1 = true;
           stackIn_44_2 = (param0) && (!hc.field_c);
           ((mh) (Object) stackIn_43_0).a(stackIn_43_1, stackIn_44_2);
-          sc.b(-123);
+          sc.popRaster(-123);
           var2Lifetime3 = -63 / ((70 - param1) / 49);
           return;
         }
@@ -219,7 +219,7 @@ final class oj extends ep {
         stackIn_52_1 = true;
         stackIn_53_2 = (param0) && (!hc.field_c);
         ((mh) (Object) stackIn_52_0).a(stackIn_52_1, stackIn_53_2);
-        sc.b(-123);
+        sc.popRaster(-123);
         var2Lifetime4 = -63 / ((70 - param1) / 49);
         return;
     }
@@ -246,7 +246,7 @@ final class oj extends ep {
           var8.field_g[param3.length()] = param0.measureText(param3) + param2;
           dn.a(param4 ^ 25293, param3, var8, 0, param0);
         } catch (RuntimeException runtimeException) {
-          throw qb.a((Throwable) ((Object) runtimeException), "oj.N(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
+          throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "oj.N(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
         }
     }
 
@@ -354,7 +354,7 @@ final class oj extends ep {
           } else {
             stackIn_48_2 = "{...}";
           }
-          throw qb.a((Throwable) ((Object) stackIn_44_0), ((StringBuilder) (Object) stackIn_47_1).append(stackIn_48_2).append(',').append(param6).append(')').toString());
+          throw qb.addExceptionContext((Throwable) ((Object) stackIn_44_0), ((StringBuilder) (Object) stackIn_47_1).append(stackIn_48_2).append(',').append(param6).append(')').toString());
         }
     }
 
@@ -396,7 +396,7 @@ final class oj extends ep {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw qb.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw qb.addExceptionContext((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -441,7 +441,7 @@ final class oj extends ep {
           var10.field_g[param0.length()] = param2;
           dn.a(25293, param0, var10, 0, param1);
         } catch (RuntimeException runtimeException) {
-          throw qb.a((Throwable) ((Object) runtimeException), "oj.L(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "oj.L(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -636,7 +636,7 @@ final class oj extends ep {
           } else {
             stackIn_49_2 = "{...}";
           }
-          throw qb.a((Throwable) ((Object) stackIn_45_0), ((StringBuilder) (Object) stackIn_48_1).append(stackIn_49_2).append(')').toString());
+          throw qb.addExceptionContext((Throwable) ((Object) stackIn_45_0), ((StringBuilder) (Object) stackIn_48_1).append(stackIn_49_2).append(')').toString());
         }
     }
 

@@ -19,7 +19,7 @@ final class pp {
         int var10;
         String var11;
         int var13;
-        v var14;
+        ClientException var14;
         StringWriter var15;
         String var16;
         String var17;
@@ -48,10 +48,10 @@ final class pp {
         String var11Lifetime5Lifetime1;
         String var11Lifetime5Lifetime2;
         var13 = BrickABrac.field_J ? 1 : 0;
-        if (param1 instanceof v) {
-          var14 = (v) ((Object) param1);
-          param1 = var14.field_f;
-          var2 = var14.field_d + " | ";
+        if (param1 instanceof ClientException) {
+          var14 = (ClientException) ((Object) param1);
+          param1 = var14.originalCause;
+          var2 = var14.context + " | ";
           var11 = var2;
           var2 = var11;
           var11Lifetime6 = var2;
@@ -156,7 +156,7 @@ final class pp {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw qb.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw qb.addExceptionContext((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 
@@ -213,7 +213,7 @@ final class pp {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw qb.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
+          throw qb.addExceptionContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
         }
     }
 
@@ -254,7 +254,7 @@ final class pp {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw qb.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(')').toString());
+          throw qb.addExceptionContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(')').toString());
         }
     }
 

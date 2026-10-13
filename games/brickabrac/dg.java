@@ -73,7 +73,7 @@ final class dg implements ub {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw qb.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param4).append(')').toString());
+          throw qb.addExceptionContext((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -111,7 +111,7 @@ final class dg implements ub {
         if (MatchResultScreen.field_t > 200) {
           var5 = (-MatchResultScreen.field_t + 250 << 8) / 50;
         }
-        IndexedSpriteGeometry.a(-90, me.field_b);
+        IndexedSpriteGeometry.pushSpriteRaster(-90, me.field_b);
         mg.c();
         if (!param0) {
           Rasterizer2D.clear();
@@ -119,7 +119,7 @@ final class dg implements ub {
           if (256 > var5) {
             Rasterizer2D.fillRectangleAlpha(0, 0, Rasterizer2D.width, Rasterizer2D.height, 0, 256 - var5);
           }
-          sc.b(-96);
+          sc.popRaster(-96);
           if (MatchResultScreen.field_t < 150) {
             me.field_b.a(var3, var4);
           } else {
@@ -156,7 +156,7 @@ final class dg implements ub {
         if (256 > var5) {
           Rasterizer2D.fillRectangleAlpha(0, 0, Rasterizer2D.width, Rasterizer2D.height, 0, 256 - var5);
         }
-        sc.b(-96);
+        sc.popRaster(-96);
         if (MatchResultScreen.field_t < 150) {
           me.field_b.a(var3, var4);
         } else {
@@ -239,7 +239,7 @@ final class dg implements ub {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw qb.a((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param8).append(',').append(param9).append(')').toString());
+          throw qb.addExceptionContext((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param8).append(',').append(param9).append(')').toString());
         }
     }
 
@@ -253,7 +253,7 @@ final class dg implements ub {
           this.field_c = param5;
           this.field_l = param3;
         } catch (RuntimeException runtimeException) {
-          throw qb.a((Throwable) ((Object) runtimeException), "dg.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
+          throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "dg.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
         }
     }
 

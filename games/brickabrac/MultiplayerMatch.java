@@ -61,7 +61,7 @@ final class MultiplayerMatch {
           } else {
             stackIn_20_2 = "{...}";
           }
-          throw qb.a((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(obfuscationGuard).append(')').toString());
+          throw qb.addExceptionContext((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 
@@ -865,7 +865,7 @@ final class MultiplayerMatch {
           } else {
             stackIn_395_2 = "{...}";
           }
-          throw qb.a((Throwable) ((Object) stackIn_388_0), ((StringBuilder) (Object) stackIn_394_1).append(stackIn_395_2).append(',').append(param3).append(')').toString());
+          throw qb.addExceptionContext((Throwable) ((Object) stackIn_388_0), ((StringBuilder) (Object) stackIn_394_1).append(stackIn_395_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -897,7 +897,7 @@ final class MultiplayerMatch {
           }
           param2.paddle.resolveCircleCollision(param0, (byte) 110);
         } catch (RuntimeException runtimeException) {
-          throw qb.a((Throwable) ((Object) runtimeException), "ak.J(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "ak.J(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -1150,7 +1150,7 @@ final class MultiplayerMatch {
           } else {
             stackIn_111_2 = "{...}";
           }
-          throw qb.a((Throwable) ((Object) stackIn_104_0), ((StringBuilder) (Object) stackIn_110_1).append(stackIn_111_2).append(')').toString());
+          throw qb.addExceptionContext((Throwable) ((Object) stackIn_104_0), ((StringBuilder) (Object) stackIn_110_1).append(stackIn_111_2).append(')').toString());
         }
     }
 
@@ -1242,7 +1242,7 @@ final class MultiplayerMatch {
           } else {
             stackIn_26_2 = "{...}";
           }
-          throw qb.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(')').toString());
+          throw qb.addExceptionContext((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(')').toString());
         }
     }
 

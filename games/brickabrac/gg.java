@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class gg extends IntrusiveNode {
-    static int[] field_t;
+    static int[] decodedSpriteHeights;
     int field_j;
     int field_r;
     int field_s;
@@ -19,7 +19,7 @@ final class gg extends IntrusiveNode {
     public static void a(byte param0) {
         int var1 = 127 % ((-74 - param0) / 42);
         field_o = null;
-        field_t = null;
+        decodedSpriteHeights = null;
         field_q = null;
         field_m = null;
         field_p = null;

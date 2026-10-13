@@ -72,7 +72,7 @@ final class InstructionsScreen extends MenuScreen {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw qb.a((Throwable) ((Object) var1), "md.C(" + param0 + ')');
+          throw qb.addExceptionContext((Throwable) ((Object) var1), "md.C(" + param0 + ')');
         }
     }
 
@@ -117,7 +117,7 @@ final class InstructionsScreen extends MenuScreen {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw qb.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw qb.addExceptionContext((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 
@@ -325,7 +325,7 @@ final class InstructionsScreen extends MenuScreen {
         if (obfuscationGuard >= -14) {
           InstructionsScreen.g((byte) 61);
         }
-        nn.field_g.drawRight(pb.a(this.pageIndex, 4), 581, -12 + (nn.field_g.capHeight + 373), 0, -1);
+        nn.field_g.drawRight(RasterCacheSurface.a(this.pageIndex, 4), 581, -12 + (nn.field_g.capHeight + 373), 0, -1);
         this.a(0);
     }
 
@@ -336,7 +336,7 @@ final class InstructionsScreen extends MenuScreen {
           component.addKeyListener(DualLinkDeque.keyboardInput);
           component.addFocusListener(DualLinkDeque.keyboardInput);
         } catch (RuntimeException runtimeException) {
-          throw qb.a((Throwable) ((Object) runtimeException), "md.G(" + obfuscationGuard + ',' + (component != null ? "{...}" : "null") + ')');
+          throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "md.G(" + obfuscationGuard + ',' + (component != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -434,7 +434,7 @@ final class InstructionsScreen extends MenuScreen {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw qb.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(')').toString());
+          throw qb.addExceptionContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(')').toString());
         }
     }
 

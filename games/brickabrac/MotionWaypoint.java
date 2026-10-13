@@ -29,21 +29,21 @@ final class MotionWaypoint extends MovingBody {
         bq.a(false, param0, (byte) 104);
     }
 
-    final static void d(byte param0) {
-        ag.field_K = null;
-        dl.field_d = null;
-        if (param0 == 96) {
-          cn.field_a = (byte[][]) null;
-          jh.field_b = null;
-          qp.field_c = null;
-          gg.field_t = null;
+    final static void clearDecodedSpriteData(byte obfuscationGuard) {
+        ag.decodedSpriteOffsetX = null;
+        dl.decodedSpriteOffsetY = null;
+        if (obfuscationGuard == 96) {
+          cn.decodedSpriteIndices = (byte[][]) null;
+          jh.decodedSpriteWidths = null;
+          qp.decodedSpritePalette = null;
+          gg.decodedSpriteHeights = null;
           return;
         }
         field_p = (RgbSprite) null;
-        cn.field_a = (byte[][]) null;
-        jh.field_b = null;
-        qp.field_c = null;
-        gg.field_t = null;
+        cn.decodedSpriteIndices = (byte[][]) null;
+        jh.decodedSpriteWidths = null;
+        qp.decodedSpritePalette = null;
+        gg.decodedSpriteHeights = null;
     }
 
     final void readBodySnapshot(int obfuscationGuard, PacketBuffer packet) {
@@ -54,7 +54,7 @@ final class MotionWaypoint extends MovingBody {
             field_p = (RgbSprite) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw qb.a((Throwable) ((Object) runtimeException), "ee.L(" + obfuscationGuard + ',' + (packet != null ? "{...}" : "null") + ')');
+          throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "ee.L(" + obfuscationGuard + ',' + (packet != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -94,7 +94,7 @@ final class MotionWaypoint extends MovingBody {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw qb.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw qb.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 

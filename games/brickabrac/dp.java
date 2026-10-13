@@ -30,7 +30,7 @@ final class dp extends ki {
     }
 
     final void a(boolean param0, int param1, int param2, int param3, int param4) {
-        pb var7 = null;
+        RasterCacheSurface var7 = null;
         if (!param0) {
           this.a(-127, false);
           if (!this.b((byte) -106)) {
@@ -38,23 +38,23 @@ final class dp extends ki {
             return;
           }
           var7 = PowerUp.a(this.field_m, param3, -20777);
-          if (!var7.a((byte) -84, param3, this.field_m)) {
+          if (!var7.matchesCacheKeys((byte) -84, param3, this.field_m)) {
             s.a(ch.field_m, 1, param3, th.field_j, var7, 0, (byte) -86, va.field_b);
-            var7.a(this.field_m, param3, (byte) 78);
+            var7.setCacheKeys(this.field_m, param3, (byte) 78);
           }
-          qh.a(1, 0, ni.field_Ub, param1, nf.field_U, 67, 640, param4, var7.field_p, param2);
+          qh.a(1, 0, ni.field_Ub, param1, nf.field_U, 67, 640, param4, var7.sprite, param2);
           return;
         }
         if (!this.b((byte) -106)) {
           Rasterizer2D.fillVerticalGradient(param4, param2, 640, 480, kg.field_d[param3], 22953);
           return;
         }
-        pb var8 = PowerUp.a(this.field_m, param3, -20777);
-        if (!var8.a((byte) -84, param3, this.field_m)) {
+        RasterCacheSurface var8 = PowerUp.a(this.field_m, param3, -20777);
+        if (!var8.matchesCacheKeys((byte) -84, param3, this.field_m)) {
           s.a(ch.field_m, 1, param3, th.field_j, var8, 0, (byte) -86, va.field_b);
-          var8.a(this.field_m, param3, (byte) 78);
+          var8.setCacheKeys(this.field_m, param3, (byte) 78);
         }
-        qh.a(1, 0, ni.field_Ub, param1, nf.field_U, 67, 640, param4, var8.field_p, param2);
+        qh.a(1, 0, ni.field_Ub, param1, nf.field_U, 67, 640, param4, var8.sprite, param2);
     }
 
     final RgbSprite[] a(int param0, boolean param1) {
@@ -68,19 +68,19 @@ final class dp extends ki {
         if (!AchievementIcon.field_m.a("halloween", -28138)) {
           return false;
         }
-        nf.field_U = pl.a("halloween", "halloween_near", (byte) -116, AchievementIcon.field_m);
-        ni.field_Ub = pl.a("halloween", "halloween_mid", (byte) 116, AchievementIcon.field_m);
-        dj.field_e = pl.a("halloween", "halloween_far", (byte) 120, AchievementIcon.field_m);
-        LevelPackLoader.field_f = pl.a("halloween", "halloween_small", (byte) 105, AchievementIcon.field_m);
-        MotionWaypoint.field_p = pl.a("halloween", "halloween_moon", (byte) 102, AchievementIcon.field_m);
+        nf.field_U = pl.loadRgbSpriteByName("halloween", "halloween_near", (byte) -116, AchievementIcon.field_m);
+        ni.field_Ub = pl.loadRgbSpriteByName("halloween", "halloween_mid", (byte) 116, AchievementIcon.field_m);
+        dj.field_e = pl.loadRgbSpriteByName("halloween", "halloween_far", (byte) 120, AchievementIcon.field_m);
+        LevelPackLoader.field_f = pl.loadRgbSpriteByName("halloween", "halloween_small", (byte) 105, AchievementIcon.field_m);
+        MotionWaypoint.field_p = pl.loadRgbSpriteByName("halloween", "halloween_moon", (byte) 102, AchievementIcon.field_m);
         va.field_b = jh.a(0, nf.field_U);
         field_u = jh.a(0, ni.field_Ub);
         ch.field_m = jh.a(0, dj.field_e);
         th.field_j = jh.a(0, MotionWaypoint.field_p);
-        ba.field_A = pl.a("halloween", "halloween_character", (byte) -106, AchievementIcon.field_m);
-        ej.field_L[0] = cr.a("halloween", AchievementIcon.field_m, "halloween_caps", 2);
-        qg.field_r[0] = cr.a("halloween", AchievementIcon.field_m, "halloween_segs", 2);
-        ap.field_c[0] = pl.a("halloween", "halloween_centre", (byte) -118, AchievementIcon.field_m);
+        ba.field_A = pl.loadRgbSpriteByName("halloween", "halloween_character", (byte) -106, AchievementIcon.field_m);
+        ej.field_L[0] = cr.loadRgbSpritesByName("halloween", AchievementIcon.field_m, "halloween_caps", 2);
+        qg.field_r[0] = cr.loadRgbSpritesByName("halloween", AchievementIcon.field_m, "halloween_segs", 2);
+        ap.field_c[0] = pl.loadRgbSpriteByName("halloween", "halloween_centre", (byte) -118, AchievementIcon.field_m);
         ej.field_L[1] = ig.a(ej.field_L[0], param0);
         qg.field_r[1] = ig.a(qg.field_r[0], param0);
         ap.field_c[1] = pl.a(-16371, ap.field_c[0]);
@@ -94,26 +94,26 @@ final class dp extends ki {
         return 128;
     }
 
-    final static void a(int param0, int param1, boolean param2, int param3, RgbSprite param4, pb param5) {
+    final static void a(int param0, int param1, boolean param2, int param3, RgbSprite param4, RasterCacheSurface param5) {
         try {
-          IndexedSpriteGeometry.a(-95, param5.field_p);
+          IndexedSpriteGeometry.pushSpriteRaster(-95, param5.sprite);
           Rasterizer2D.clear();
-          param4.b(-(60 / param0) + (-param4.canvasWidth + param5.field_i) / 2, -param4.canvasHeight + param1 - (-param5.field_q + 130 / param0), 0, 208);
-          la.a(0, 0, param5.field_i, param5.field_q, 0, nj.field_G[param3], 96);
+          param4.b(-(60 / param0) + (-param4.canvasWidth + param5.width) / 2, -param4.canvasHeight + param1 - (-param5.height + 130 / param0), 0, 208);
+          la.a(0, 0, param5.width, param5.height, 0, nj.field_G[param3], 96);
           if (param2) {
-            pb var7 = (pb) null;
-            dp.a(82, 29, true, -26, (RgbSprite) null, (pb) null);
+            RasterCacheSurface var7 = (RasterCacheSurface) null;
+            dp.a(82, 29, true, -26, (RgbSprite) null, (RasterCacheSurface) null);
           }
-          sc.b(-80);
+          sc.popRaster(-80);
         } catch (RuntimeException runtimeException) {
-          throw qb.a((Throwable) ((Object) runtimeException), "dp.A(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ')');
+          throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "dp.A(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ')');
         }
     }
 
     final boolean b(byte param0) {
         boolean stackIn_19_0 = false;
         boolean stackIn_40_0 = false;
-        pb var3;
+        RasterCacheSurface var3;
         if (param0 <= -91) {
           if (nf.field_U == null) {
             return false;
@@ -142,8 +142,8 @@ final class dp extends ki {
           stackIn_40_0 = (ap.field_c != null);
           return stackIn_40_0;
         }
-        var3 = (pb) null;
-        dp.a(62, -82, true, -61, (RgbSprite) null, (pb) null);
+        var3 = (RasterCacheSurface) null;
+        dp.a(62, -82, true, -61, (RgbSprite) null, (RasterCacheSurface) null);
         if (nf.field_U == null) {
           return false;
         }
@@ -179,12 +179,12 @@ final class dp extends ki {
           ej.field_L = new RgbSprite[2][];
           ap.field_c = new RgbSprite[2];
         } catch (RuntimeException runtimeException) {
-          throw qb.a((Throwable) ((Object) runtimeException), "dp.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
+          throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "dp.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 
     final void a(int param0, byte param1, int param2, int param3, int param4) {
-        pb var7 = null;
+        RasterCacheSurface var7 = null;
         if (param1 >= -84) {
           this.a(true);
           if (!this.b((byte) -126)) {
@@ -192,27 +192,27 @@ final class dp extends ki {
             return;
           }
           var7 = kd.a(this.field_m, param3, (byte) 116);
-          if (!var7.a((byte) -84, param3, this.field_m)) {
+          if (!var7.matchesCacheKeys((byte) -84, param3, this.field_m)) {
             s.a(ch.field_m, 2, param3, th.field_j, var7, -13, (byte) -96, va.field_b);
-            var7.a(this.field_m, param3, (byte) 78);
-            qh.a(2, -13, field_u, param4, va.field_b, 62, 306, param2, var7.field_p, param0);
+            var7.setCacheKeys(this.field_m, param3, (byte) 78);
+            qh.a(2, -13, field_u, param4, va.field_b, 62, 306, param2, var7.sprite, param0);
             return;
           }
-          qh.a(2, -13, field_u, param4, va.field_b, 62, 306, param2, var7.field_p, param0);
+          qh.a(2, -13, field_u, param4, va.field_b, 62, 306, param2, var7.sprite, param0);
           return;
         }
         if (!this.b((byte) -126)) {
           Rasterizer2D.fillVerticalGradient(param2, param0, 306, 480, kg.field_d[param3], 22953);
           return;
         }
-        pb var8 = kd.a(this.field_m, param3, (byte) 116);
-        if (var8.a((byte) -84, param3, this.field_m)) {
-          qh.a(2, -13, field_u, param4, va.field_b, 62, 306, param2, var8.field_p, param0);
+        RasterCacheSurface var8 = kd.a(this.field_m, param3, (byte) 116);
+        if (var8.matchesCacheKeys((byte) -84, param3, this.field_m)) {
+          qh.a(2, -13, field_u, param4, va.field_b, 62, 306, param2, var8.sprite, param0);
           return;
         }
         s.a(ch.field_m, 2, param3, th.field_j, var8, -13, (byte) -96, va.field_b);
-        var8.a(this.field_m, param3, (byte) 78);
-        qh.a(2, -13, field_u, param4, va.field_b, 62, 306, param2, var8.field_p, param0);
+        var8.setCacheKeys(this.field_m, param3, (byte) 78);
+        qh.a(2, -13, field_u, param4, va.field_b, 62, 306, param2, var8.sprite, param0);
     }
 
     final RgbSprite a(boolean param0, int param1) {

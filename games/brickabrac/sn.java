@@ -14,7 +14,7 @@ final class sn extends ki {
           param5.drawTransparent(-(23 / param1) + (10 * param2 >> 16) + (param6 + (-param5.canvasHeight + param3) / 2), -param5.canvasHeight + param9 + (param8 + param4));
           param0.drawTransparent(-(279 / param1) + (param3 - param0.canvasHeight) / 2 + (param6 + (20 * param2 >> 16)), -param0.canvasHeight + param9 + (param8 + param4));
         } catch (RuntimeException runtimeException) {
-          throw qb.a((Throwable) ((Object) runtimeException), "sn.I(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ',' + param6 + ',' + param7 + ',' + param8 + ',' + param9 + ',' + (param10 != null ? "{...}" : "null") + ',' + param11 + ',' + (param12 != null ? "{...}" : "null") + ')');
+          throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "sn.I(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ',' + param6 + ',' + param7 + ',' + param8 + ',' + param9 + ',' + (param10 != null ? "{...}" : "null") + ',' + param11 + ',' + (param12 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -54,7 +54,7 @@ final class sn extends ki {
           rd.field_d = new RgbSprite[2][];
           kh.field_d = new RgbSprite[2][];
         } catch (RuntimeException runtimeException) {
-          throw qb.a((Throwable) ((Object) runtimeException), "sn.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
+          throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "sn.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 
@@ -74,14 +74,14 @@ final class sn extends ki {
     }
 
     final void a(int param0, byte param1, int param2, int param3, int param4) {
-        pb var6 = null;
+        RasterCacheSurface var6 = null;
         if (this.b((byte) -116)) {
           var6 = kd.a(this.field_m, param3, (byte) -47);
-          if (!var6.a((byte) -84, param3, this.field_m)) {
+          if (!var6.matchesCacheKeys((byte) -84, param3, this.field_m)) {
             tf.a(-10, param3, var6, 2, -119, hg.field_g);
-            var6.a(this.field_m, param3, (byte) 78);
+            var6.setCacheKeys(this.field_m, param3, (byte) 78);
           }
-          sn.a(t.field_a, 2, param4, 306, -10, IntrusiveNode.field_d, param2, 5, param0, 480, er.field_d, param3, var6.field_p);
+          sn.a(t.field_a, 2, param4, 306, -10, IntrusiveNode.field_d, param2, 5, param0, 480, er.field_d, param3, var6.sprite);
         } else {
           Rasterizer2D.fillRectangle(param2, param0, 306, 480, 16777215);
         }
@@ -91,7 +91,7 @@ final class sn extends ki {
     }
 
     final void a(boolean param0, int param1, int param2, int param3, int param4) {
-        pb var6 = null;
+        RasterCacheSurface var6 = null;
         if (!param0) {
           sn.b((byte) -60, 50);
         }
@@ -99,11 +99,11 @@ final class sn extends ki {
           Rasterizer2D.fillRectangle(param4, param2, 640, 480, 16777215);
         } else {
           var6 = PowerUp.a(this.field_m, param3, -20777);
-          if (!var6.a((byte) -84, param3, this.field_m)) {
+          if (!var6.matchesCacheKeys((byte) -84, param3, this.field_m)) {
             tf.a(0, param3, var6, 1, 114, sf.field_cb);
-            var6.a(this.field_m, param3, (byte) 78);
+            var6.setCacheKeys(this.field_m, param3, (byte) 78);
           }
-          sn.a(sf.field_Y, 1, param1, 640, 0, AchievementBrowserScreen.field_D, param4, 5, param2, 480, IntNode.field_o, param3, var6.field_p);
+          sn.a(sf.field_Y, 1, param1, 640, 0, AchievementBrowserScreen.field_D, param4, 5, param2, 480, IntNode.field_o, param3, var6.sprite);
         }
     }
 
@@ -111,18 +111,18 @@ final class sn extends ki {
         if (!AchievementIcon.field_m.a("construct", -28138)) {
           return false;
         }
-        sf.field_Y = pl.a("construct", "construction_near", (byte) 124, AchievementIcon.field_m);
-        AchievementBrowserScreen.field_D = pl.a("construct", "construction_mid", (byte) 102, AchievementIcon.field_m);
-        sf.field_cb = pl.a("construct", "construction_far", (byte) -93, AchievementIcon.field_m);
-        IntNode.field_o = pl.a("construct", "construction_smoke", (byte) -128, AchievementIcon.field_m);
-        MenuSelection.field_h = pl.a("construct", "construction_small", (byte) -74, AchievementIcon.field_m);
+        sf.field_Y = pl.loadRgbSpriteByName("construct", "construction_near", (byte) 124, AchievementIcon.field_m);
+        AchievementBrowserScreen.field_D = pl.loadRgbSpriteByName("construct", "construction_mid", (byte) 102, AchievementIcon.field_m);
+        sf.field_cb = pl.loadRgbSpriteByName("construct", "construction_far", (byte) -93, AchievementIcon.field_m);
+        IntNode.field_o = pl.loadRgbSpriteByName("construct", "construction_smoke", (byte) -128, AchievementIcon.field_m);
+        MenuSelection.field_h = pl.loadRgbSpriteByName("construct", "construction_small", (byte) -74, AchievementIcon.field_m);
         t.field_a = jh.a(0, sf.field_Y);
         IntrusiveNode.field_d = jh.a(0, AchievementBrowserScreen.field_D);
         hg.field_g = jh.a(0, sf.field_cb);
         er.field_d = jh.a(0, IntNode.field_o);
-        rd.field_d[0] = cr.a("construct", AchievementIcon.field_m, "construction_caps", 2);
-        kh.field_d[0] = cr.a("construct", AchievementIcon.field_m, "construction_segs", 2);
-        sk.field_J[0] = pl.a("construct", "construction_centre", (byte) 127, AchievementIcon.field_m);
+        rd.field_d[0] = cr.loadRgbSpritesByName("construct", AchievementIcon.field_m, "construction_caps", 2);
+        kh.field_d[0] = cr.loadRgbSpritesByName("construct", AchievementIcon.field_m, "construction_segs", 2);
+        sk.field_J[0] = pl.loadRgbSpriteByName("construct", "construction_centre", (byte) 127, AchievementIcon.field_m);
         rd.field_d[1] = ig.a(rd.field_d[0], false);
         kh.field_d[1] = ig.a(kh.field_d[0], param0);
         sk.field_J[1] = pl.a(-16371, sk.field_J[0]);
@@ -191,7 +191,7 @@ final class sn extends ki {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw qb.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param2).append(')').toString());
+          throw qb.addExceptionContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param2).append(')').toString());
         }
     }
 

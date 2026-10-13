@@ -111,7 +111,7 @@ final class mp extends mh {
             }
             var14Lifetime2 = stackIn_17_0;
             var15 = var61[var13] * param0 + (var62[var13] * param6 + var63[var13] * param2) >> 8;
-            stackIn_19_0 = v.field_a;
+            stackIn_19_0 = ClientException.field_a;
             if (var15 >= 0) {
               stackIn_20_1 = var15;
             } else {
@@ -211,7 +211,7 @@ final class mp extends mh {
           } else {
             stackIn_55_2 = "{...}";
           }
-          throw qb.a((Throwable) ((Object) stackIn_54_0), ((StringBuilder) (Object) stackIn_54_1).append(stackIn_55_2).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(')').toString());
+          throw qb.addExceptionContext((Throwable) ((Object) stackIn_54_0), ((StringBuilder) (Object) stackIn_54_1).append(stackIn_55_2).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(')').toString());
         }
     }
 
@@ -301,7 +301,7 @@ final class mp extends mh {
           } else {
             stackIn_23_2 = "{...}";
           }
-          throw qb.a((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw qb.addExceptionContext((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 

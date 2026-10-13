@@ -18,7 +18,7 @@ final class s {
           }
           this.a((String) null, param2, param3, param0, -1, 99);
         } catch (RuntimeException runtimeException) {
-          throw qb.a((Throwable) ((Object) runtimeException), "s.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "s.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -62,7 +62,7 @@ final class s {
           this.a(param1, param0, param3, param4, -1, -90);
           int var6_int = -82 / ((73 - param2) / 51);
         } catch (RuntimeException runtimeException) {
-          throw qb.a((Throwable) ((Object) runtimeException), "s.A(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ')');
+          throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "s.A(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -91,7 +91,7 @@ final class s {
           this.field_b = this.field_b + 1;
           this.field_f[fieldTemp$0] = var9;
         } catch (RuntimeException runtimeException) {
-          throw qb.a((Throwable) ((Object) runtimeException), "s.J(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ')');
+          throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "s.J(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ')');
         }
     }
 
@@ -112,7 +112,7 @@ final class s {
           return;
         }
         RgbSprite var2 = (RgbSprite) null;
-        s.a((RgbSprite) null, -53, 56, (RgbSprite) null, (pb) null, -22, (byte) -5, (RgbSprite) null);
+        s.a((RgbSprite) null, -53, 56, (RgbSprite) null, (RasterCacheSurface) null, -22, (byte) -5, (RgbSprite) null);
         IsaacGenerator.field_b.a(2, (byte) -118, Ball.field_A.field_Ib, 0, 20, ec.field_J, Ball.field_A.field_cb - 20);
     }
 
@@ -121,7 +121,7 @@ final class s {
         return tn.field_m != null ? true : false;
     }
 
-    final static void a(RgbSprite param0, int param1, int param2, RgbSprite param3, pb param4, int param5, byte param6, RgbSprite param7) {
+    final static void a(RgbSprite param0, int param1, int param2, RgbSprite param3, RasterCacheSurface param4, int param5, byte param6, RgbSprite param7) {
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
         String stackIn_5_2 = null;
@@ -135,12 +135,12 @@ final class s {
         int var8_int = 0;
         RuntimeException var8 = null;
         try {
-          IndexedSpriteGeometry.a(-72, param4.field_p);
-          Rasterizer2D.fillVerticalGradient(0, 0, param4.field_i, param4.field_q, kg.field_d[param2], 22953);
-          param3.drawTransparent((-param3.canvasWidth + param4.field_i) / 2 - 147 / param1, 480 + param5 - param7.canvasHeight);
-          param0.b(-(80 / param1) + (param4.field_i - param0.canvasWidth) / 2, -(201 / param1) + (param4.field_q + param5) - param0.canvasHeight, 41, 110);
+          IndexedSpriteGeometry.pushSpriteRaster(-72, param4.sprite);
+          Rasterizer2D.fillVerticalGradient(0, 0, param4.width, param4.height, kg.field_d[param2], 22953);
+          param3.drawTransparent((-param3.canvasWidth + param4.width) / 2 - 147 / param1, 480 + param5 - param7.canvasHeight);
+          param0.b(-(80 / param1) + (param4.width - param0.canvasWidth) / 2, -(201 / param1) + (param4.height + param5) - param0.canvasHeight, 41, 110);
           var8_int = -97 / ((param6 - 54) / 61);
-          sc.b(-95);
+          sc.popRaster(-95);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -170,7 +170,7 @@ final class s {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw qb.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
+          throw qb.addExceptionContext((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
         }
     }
 
@@ -217,7 +217,7 @@ final class s {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw qb.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
+          throw qb.addExceptionContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
         }
     }
 

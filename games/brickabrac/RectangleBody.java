@@ -208,7 +208,7 @@ class RectangleBody extends MovingBody {
           } else {
             stackIn_68_2 = "{...}";
           }
-          throw qb.a((Throwable) ((Object) stackIn_67_0), ((StringBuilder) (Object) stackIn_67_1).append(stackIn_68_2).append(',').append(obfuscationGuard).append(')').toString());
+          throw qb.addExceptionContext((Throwable) ((Object) stackIn_67_0), ((StringBuilder) (Object) stackIn_67_1).append(stackIn_68_2).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 
@@ -286,7 +286,7 @@ class RectangleBody extends MovingBody {
           } else {
             stackIn_32_2 = "{...}";
           }
-          throw qb.a((Throwable) ((Object) stackIn_31_0), ((StringBuilder) (Object) stackIn_31_1).append(stackIn_32_2).append(',').append(obfuscationGuard).append(')').toString());
+          throw qb.addExceptionContext((Throwable) ((Object) stackIn_31_0), ((StringBuilder) (Object) stackIn_31_1).append(stackIn_32_2).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 
@@ -299,7 +299,7 @@ class RectangleBody extends MovingBody {
           circle.x256 = oh.field_f;
           circle.y256 = mm.field_Tb;
         } catch (RuntimeException runtimeException) {
-          throw qb.a((Throwable) ((Object) runtimeException), "bn.E(" + obfuscationGuard + ',' + (board != null ? "{...}" : "null") + ',' + (circle != null ? "{...}" : "null") + ')');
+          throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "bn.E(" + obfuscationGuard + ',' + (board != null ? "{...}" : "null") + ',' + (circle != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -335,7 +335,7 @@ class RectangleBody extends MovingBody {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw qb.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw qb.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 

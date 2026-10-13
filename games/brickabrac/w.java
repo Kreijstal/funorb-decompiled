@@ -150,7 +150,7 @@ final class w {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw qb.a((Throwable) ((Object) var3), "w.H(" + param0 + ',' + param1 + ')');
+          throw qb.addExceptionContext((Throwable) ((Object) var3), "w.H(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -201,7 +201,7 @@ final class w {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw qb.a((Throwable) ((Object) var2_ref), "w.B(" + param0 + ')');
+          throw qb.addExceptionContext((Throwable) ((Object) var2_ref), "w.B(" + param0 + ')');
         }
     }
 
@@ -219,18 +219,18 @@ final class w {
           if (this.field_l == null &&
             null != co.field_j) {
             this.field_l = new RgbSprite(622, 47);
-            IndexedSpriteGeometry.a(-49, this.field_l);
+            IndexedSpriteGeometry.pushSpriteRaster(-49, this.field_l);
             Rasterizer2D.fillVerticalGradient(0, 0, 622, 47, 4540749, 65793);
             var2_int = 16448250;
             var3 = 10068666;
             var16 = lk.a(param0 - 580, var2_int, var3);
             this.a(47, 0, this.field_f, var16, co.field_j, 622, 0, 0);
-            sc.b(param0 - 592);
+            sc.popRaster(param0 - 592);
             this.field_e = new RgbSprite(param0, 24);
             this.a(co.field_j, -4, 0.75f, (byte) 124, 475, va.field_c, var16, 24, this.field_e, 0);
             var17 = lk.a(-124, 526344, 526344);
             var5 = new RgbSprite(121, 122);
-            IndexedSpriteGeometry.a(param0 ^ -388, var5);
+            IndexedSpriteGeometry.pushSpriteRaster(param0 ^ -388, var5);
             Rasterizer2D.fillVerticalGradient(0, 0, var5.width, var5.height / 2, 16180917, 16306250);
             Rasterizer2D.fillVerticalGradient(0, var5.height / 2, var5.width, var5.height, 16306250, 15568919);
             var6 = tl.field_a;
@@ -238,18 +238,18 @@ final class w {
             this.a(co.field_j, -16, 0.5f, (byte) 118, var5.width, var6, var17, var5.height, var5, 0);
             this.a(co.field_j, 20, 0.5f, (byte) 105, var5.width, var7, var17, var5.height, var5, 0);
             this.a(co.field_j, -co.field_j.ascent + (var5.height / 2 + 12), 0.699999988079071f, (byte) 62, var5.width, uo.field_e[this.field_c], var17, var5.height / 3, var5, 0);
-            sc.b(-119);
+            sc.popRaster(-119);
             this.field_p = new RgbSprite(121, 122);
-            IndexedSpriteGeometry.a(-115, this.field_p);
+            IndexedSpriteGeometry.pushSpriteRaster(-115, this.field_p);
             var5.e(this.field_p.width / 2, this.field_p.height / 2, -2048, 4096);
-            sc.b(-108);
+            sc.popRaster(-108);
             return;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
-          throw qb.a((Throwable) ((Object) runtimeException), "w.I(" + param0 + ')');
+          throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "w.I(" + param0 + ')');
         }
     }
 
@@ -295,13 +295,13 @@ final class w {
             fe.field_jb.a((byte) -127) &&
             fe.field_jb.a("arialish12", -28138) &&
             fe.field_jb.a("pump32", -28138)) {
-            AchievementsScreen.field_J = uo.a((byte) 29, jg.field_d, "frame", "members_expansion_screen");
-            ll.field_c = pl.a("members_expansion_screen", "arrow", (byte) 111, jg.field_d);
+            AchievementsScreen.field_J = uo.loadIndexedSpriteByName((byte) 29, jg.field_d, "frame", "members_expansion_screen");
+            ll.field_c = pl.loadRgbSpriteByName("members_expansion_screen", "arrow", (byte) 111, jg.field_d);
             ch.field_c = TooltipSprite.a((byte) -37, "arialish12", jg.field_d, fe.field_jb, "");
             co.field_j = IntrusiveHashTable.a((byte) -107, "pump32", "", jg.field_d, fe.field_jb);
             MainMenuScreen.field_u = um.a("members_expansion_screen", "benefit_orbs", 1593955777, jg.field_d);
             LevelPack.field_e = um.a("members_expansion_screen", "button_text", 1593955777, jg.field_d);
-            sf.field_V = bd.a("members_expansion_screen", "button_highlights", jg.field_d, (byte) -8);
+            sf.field_V = bd.loadRgbSpritesByName("members_expansion_screen", "button_highlights", jg.field_d, (byte) -8);
             fe.field_jb = null;
             jg.field_d = null;
           }
@@ -357,7 +357,7 @@ final class w {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw qb.a((Throwable) ((Object) var2), "w.M(" + param0 + ')');
+          throw qb.addExceptionContext((Throwable) ((Object) var2), "w.M(" + param0 + ')');
         }
     }
 
@@ -379,7 +379,7 @@ final class w {
         } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
           decompiledCaughtException = decompiledCaughtParameter1;
           var2_ref = (RuntimeException) (Object) decompiledCaughtException;
-          throw qb.a((Throwable) ((Object) var2_ref), "w.K(" + param0 + ')');
+          throw qb.addExceptionContext((Throwable) ((Object) var2_ref), "w.K(" + param0 + ')');
         }
     }
 
@@ -414,7 +414,7 @@ final class w {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw qb.a((Throwable) ((Object) var2), "w.L(" + param0 + ')');
+          throw qb.addExceptionContext((Throwable) ((Object) var2), "w.L(" + param0 + ')');
         }
     }
 
@@ -446,13 +446,13 @@ final class w {
           }
           var12 = (int)((float)param7 / param2);
           var13 = new RgbSprite(var11_int, var12);
-          IndexedSpriteGeometry.a(-116, var13);
+          IndexedSpriteGeometry.pushSpriteRaster(-116, var13);
           param8.a((int)((float)(-param9) / param2), (int)((float)(-param1) / param2), (int)((float)param8.width / param2), (int)((float)param8.height / param2));
           this.a(var12, 0, param5, param6, param0, var11_int, 0, 0);
-          sc.b(-104);
-          IndexedSpriteGeometry.a(-126, param8);
+          sc.popRaster(-104);
+          IndexedSpriteGeometry.pushSpriteRaster(-126, param8);
           var13.c(param9, param1, param4, param7);
-          sc.b(-93);
+          sc.popRaster(-93);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -491,7 +491,7 @@ final class w {
             stackIn_20_0 = stackIn_16_0;
             stackIn_20_2 = "{...}";
           }
-          throw qb.a((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param9).append(')').toString());
+          throw qb.addExceptionContext((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param9).append(')').toString());
         }
     }
 
@@ -572,7 +572,7 @@ final class w {
             stackIn_31_0 = stackIn_27_0;
             stackIn_31_2 = "{...}";
           }
-          throw qb.a((Throwable) ((Object) stackIn_31_0), ((StringBuilder) (Object) stackIn_30_1).append(stackIn_31_2).append(')').toString());
+          throw qb.addExceptionContext((Throwable) ((Object) stackIn_31_0), ((StringBuilder) (Object) stackIn_30_1).append(stackIn_31_2).append(')').toString());
         }
     }
 
@@ -597,7 +597,7 @@ final class w {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw qb.a((Throwable) ((Object) var3), "w.F(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw qb.addExceptionContext((Throwable) ((Object) var3), "w.F(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -610,7 +610,7 @@ final class w {
           }
           field_n = null;
         } catch (RuntimeException runtimeException) {
-          throw qb.a((Throwable) ((Object) runtimeException), "w.C(" + param0 + ')');
+          throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "w.C(" + param0 + ')');
         }
     }
 
@@ -625,7 +625,7 @@ final class w {
           rg.field_k = null;
           ik.field_b = null;
         } catch (RuntimeException runtimeException) {
-          throw qb.a((Throwable) ((Object) runtimeException), "w.N(" + param0 + ')');
+          throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "w.N(" + param0 + ')');
         }
     }
 
@@ -662,7 +662,7 @@ final class w {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw qb.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
+          throw qb.addExceptionContext((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
         }
     }
 
@@ -686,7 +686,7 @@ final class w {
         RuntimeException var9 = null;
         var12 = BrickABrac.field_J ? 1 : 0;
         try {
-          HighscorePackSelector.d(-99);
+          HighscorePackSelector.pushRaster(-99);
           if (param7 != 0) {
             return;
           }
@@ -696,7 +696,7 @@ final class w {
             var11 = param3[param3.length - (var10 + 1)];
             param4.a(param2, param1, param6, param5, param0, var11, -1, 1, 1, 0);
           }
-          sc.b(-102);
+          sc.popRaster(-102);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -726,7 +726,7 @@ final class w {
             stackIn_21_0 = stackIn_17_0;
             stackIn_21_2 = "{...}";
           }
-          throw qb.a((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(')').toString());
+          throw qb.addExceptionContext((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(')').toString());
         }
     }
 
@@ -764,7 +764,7 @@ final class w {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
-          throw qb.a((Throwable) ((Object) var4), "w.D(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw qb.addExceptionContext((Throwable) ((Object) var4), "w.D(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -829,7 +829,7 @@ final class w {
             stackIn_19_0 = stackIn_15_0;
             stackIn_19_2 = "{...}";
           }
-          throw qb.a((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
+          throw qb.addExceptionContext((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
         }
     }
 

@@ -37,7 +37,7 @@ final class fr {
     short[] field_b;
     short field_w;
     private boolean field_r;
-    static NodeDeque field_M;
+    static NodeDeque rasterSnapshotPool;
     short[] field_a;
     short[] field_G;
     static int field_k;
@@ -69,7 +69,7 @@ final class fr {
         mh var6 = null;
         mh var3 = null;
         try {
-          ok.field_g = pl.a("basic", "display_name_changed", (byte) 109, param0);
+          ok.field_g = pl.loadRgbSpriteByName("basic", "display_name_changed", (byte) 109, param0);
           GameScreen.field_f = new hj(0L, rq.field_b, hk.field_J, oo.field_y);
           f.field_c = new hj(0L, rq.field_b, MatchCompleteScreen.field_z, ng.field_e);
           rg.field_c = new mh(0L, (mh) null);
@@ -96,7 +96,7 @@ final class fr {
           f.field_c.field_Qb.field_Qb.field_Q = 1;
           var3.field_S = 1;
         } catch (RuntimeException runtimeException) {
-          throw qb.a((Throwable) ((Object) runtimeException), "fr.I(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "fr.I(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -111,7 +111,7 @@ final class fr {
           }
           tn.a(param1.capHeight, param1.descent + param1.capHeight, 256, param2.capHeight, param2.descent + param2.capHeight);
         } catch (RuntimeException runtimeException) {
-          throw qb.a((Throwable) ((Object) runtimeException), "fr.K(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
+          throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "fr.K(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 
@@ -130,7 +130,7 @@ final class fr {
     }
 
     public static void b(byte param0) {
-        field_M = null;
+        rasterSnapshotPool = null;
         if (param0 != -52) {
           field_l = (int[]) null;
         }
@@ -152,7 +152,7 @@ final class fr {
           return;
         }
         if (param0 != 1) {
-          field_M = (NodeDeque) null;
+          rasterSnapshotPool = (NodeDeque) null;
         }
         if (pe.gameplayScreen.field_n) {
           if ((pe.gameplayScreen.match.field_j & 1 << pe.gameplayScreen.field_k) != 0) {
@@ -250,7 +250,7 @@ final class fr {
           eo.field_k = new hk(param2, param1, false, true, param0);
           rj.field_c.b((byte) 114, eo.field_k);
         } catch (RuntimeException runtimeException) {
-          throw qb.a((Throwable) ((Object) runtimeException), "fr.H(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "fr.H(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -268,7 +268,7 @@ final class fr {
     }
 
     static {
-        field_M = new NodeDeque();
+        rasterSnapshotPool = new NodeDeque();
         field_e = new PcmSound[8];
         field_l = new int[]{44, 45, 8, 23};
     }

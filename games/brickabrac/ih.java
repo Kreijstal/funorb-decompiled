@@ -62,7 +62,7 @@ abstract class ih {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw qb.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param3).append(')').toString());
+          throw qb.addExceptionContext((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -81,7 +81,7 @@ abstract class ih {
           g.field_m = param0;
           bd.a(param1, true);
         } catch (RuntimeException runtimeException) {
-          throw qb.a((Throwable) ((Object) runtimeException), "ih.M(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "ih.M(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -102,18 +102,18 @@ abstract class ih {
         field_d = null;
     }
 
-    final static void a(pb param0, RgbSprite param1, int param2, int param3, int param4, boolean param5) {
+    final static void a(RasterCacheSurface param0, RgbSprite param1, int param2, int param3, int param4, boolean param5) {
         try {
-          IndexedSpriteGeometry.a(-77, param0.field_p);
-          Rasterizer2D.fillVerticalGradient(0, 0, param0.field_i, param0.field_q, ro.field_x[param2], 16777215);
-          param1.b((-param1.canvasWidth + param0.field_i) / 2 - 30 / param3, -param1.canvasHeight + param4 + (param0.field_q - 200 / param3), 55, 110);
-          sc.b(-117);
+          IndexedSpriteGeometry.pushSpriteRaster(-77, param0.sprite);
+          Rasterizer2D.fillVerticalGradient(0, 0, param0.width, param0.height, ro.field_x[param2], 16777215);
+          param1.b((-param1.canvasWidth + param0.width) / 2 - 30 / param3, -param1.canvasHeight + param4 + (param0.height - 200 / param3), 55, 110);
+          sc.popRaster(-117);
           if (!param5) {
             RgbSprite var7 = (RgbSprite) null;
-            ih.a((pb) null, (RgbSprite) null, 100, 125, 72, false);
+            ih.a((RasterCacheSurface) null, (RgbSprite) null, 100, 125, 72, false);
           }
         } catch (RuntimeException runtimeException) {
-          throw qb.a((Throwable) ((Object) runtimeException), "ih.K(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+          throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "ih.K(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
     }
 
@@ -165,7 +165,7 @@ abstract class ih {
         try {
           pq.a(0, ep.field_d, param0);
         } catch (RuntimeException runtimeException) {
-          throw qb.a((Throwable) ((Object) runtimeException), "ih.T(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
+          throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "ih.T(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 

@@ -26,25 +26,25 @@ class ta {
         if (param0 != 13874) {
           ta.a(-46);
         }
-        var1 = jh.field_b[0] * gg.field_t[0];
-        var16 = cn.field_a[0];
-        if (!tm.field_b[0]) {
+        var1 = jh.decodedSpriteWidths[0] * gg.decodedSpriteHeights[0];
+        var16 = cn.decodedSpriteIndices[0];
+        if (!tm.decodedSpriteHasAlpha[0]) {
           var8 = new int[var1];
           for (var5_int = 0; var5_int < var1; var5_int++) {
-            var8[var5_int] = qp.field_c[ik.a((int) var16[var5_int], 255)];
+            var8[var5_int] = qp.decodedSpritePalette[ik.a((int) var16[var5_int], 255)];
           }
-          var3 = new RgbSprite(cf.field_d, ek.field_db, ag.field_K[0], dl.field_d[0], jh.field_b[0], gg.field_t[0], var8);
+          var3 = new RgbSprite(cf.decodedCanvasWidth, ek.decodedCanvasHeight, ag.decodedSpriteOffsetX[0], dl.decodedSpriteOffsetY[0], jh.decodedSpriteWidths[0], gg.decodedSpriteHeights[0], var8);
         } else {
-          var17 = bj.field_S[0];
+          var17 = bj.decodedSpriteAlpha[0];
           var13 = new int[var1];
           var11 = var13;
           var5 = var11;
           for (var6 = 0; var6 < var1; var6++) {
-            var5[var6] = LevelSelectScreen.d(qp.field_c[ik.a((int) var16[var6], 255)], ik.a(-16777216, var17[var6] << 24));
+            var5[var6] = LevelSelectScreen.d(qp.decodedSpritePalette[ik.a((int) var16[var6], 255)], ik.a(-16777216, var17[var6] << 24));
           }
-          var3 = new ArgbSprite(cf.field_d, ek.field_db, ag.field_K[0], dl.field_d[0], jh.field_b[0], gg.field_t[0], var13);
+          var3 = new ArgbSprite(cf.decodedCanvasWidth, ek.decodedCanvasHeight, ag.decodedSpriteOffsetX[0], dl.decodedSpriteOffsetY[0], jh.decodedSpriteWidths[0], gg.decodedSpriteHeights[0], var13);
         }
-        MotionWaypoint.d((byte) 96);
+        MotionWaypoint.clearDecodedSpriteData((byte) 96);
         return (RgbSprite) (var3);
     }
 
@@ -83,7 +83,7 @@ class ta {
         try {
           this.field_b = param0;
         } catch (RuntimeException runtimeException) {
-          throw qb.a((Throwable) ((Object) runtimeException), "ta.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "ta.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

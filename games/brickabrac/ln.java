@@ -39,7 +39,7 @@ final class ln extends IntrusiveNode {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw qb.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw qb.addExceptionContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -79,10 +79,10 @@ final class ln extends IntrusiveNode {
           og.field_gc = param0;
           ji.field_a = param6;
           for (var7_int = 0; var7_int < 2; var7_int++) {
-            ip.field_s.addLast(new pb(960, 480), (byte) 3);
+            ip.field_s.addLast(new RasterCacheSurface(960, 480), (byte) 3);
           }
           for (var7_intLifetime1 = 0; var7_intLifetime1 < 2; var7_intLifetime1++) {
-            cr.field_N.addLast(new pb(1280, 480), (byte) 3);
+            cr.field_N.addLast(new RasterCacheSurface(1280, 480), (byte) 3);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -125,11 +125,11 @@ final class ln extends IntrusiveNode {
           } else {
             stackIn_28_2 = "{...}";
           }
-          throw qb.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(')').toString());
+          throw qb.addExceptionContext((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(')').toString());
         }
     }
 
-    final static boolean a(int param0, int param1, mf param2, int param3) {
+    final static boolean decodeSpritesFromArchive(int obfuscationGuard, int fileId, mf archive, int groupId) {
         byte[] var4 = null;
         RuntimeException var4_ref = null;
         byte[] var5 = null;
@@ -138,27 +138,27 @@ final class ln extends IntrusiveNode {
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param0 >= -87) {
+          if (obfuscationGuard >= -87) {
             field_j = (RgbSprite[]) null;
           }
-          var5 = param2.a(param1, param3, 4);
+          var5 = archive.a(fileId, groupId, 4);
           var4 = var5;
           if (var5 == null) {
             return false;
           }
-          eh.a(var5, false);
+          eh.decodeSpriteData(var5, false);
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4_ref = decompiledCaughtException;
           stackIn_10_0 = var4_ref;
-          stackIn_10_1 = new StringBuilder().append("ln.C(").append(param0).append(',').append(param1).append(',');
-          if (param2 == null) {
+          stackIn_10_1 = new StringBuilder().append("ln.C(").append(obfuscationGuard).append(',').append(fileId).append(',');
+          if (archive == null) {
             stackIn_11_2 = "null";
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw qb.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param3).append(')').toString());
+          throw qb.addExceptionContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(groupId).append(')').toString());
         }
     }
 

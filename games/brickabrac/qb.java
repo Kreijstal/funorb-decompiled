@@ -12,31 +12,31 @@ final class qb extends ki {
     static String field_t;
 
     final void a(int param0, byte param1, int param2, int param3, int param4) {
-        pb var6 = null;
+        RasterCacheSurface var6 = null;
         if (param1 >= -84) {
           field_v = (mh) null;
         }
         if (this.b((byte) -122)) {
           var6 = kd.a(this.field_m, param3, (byte) -36);
-          if (!var6.a((byte) -84, param3, this.field_m)) {
+          if (!var6.matchesCacheKeys((byte) -84, param3, this.field_m)) {
             qf.a(param3, var6, 2, MainMenuScreen.field_w, -13, false);
-            var6.a(this.field_m, param3, (byte) 78);
+            var6.setCacheKeys(this.field_m, param3, (byte) 78);
           }
-          dg.a(-899814320, 306, param2, cr.field_D, var6.field_p, param0, 2, ep.field_b, param4, -13);
+          dg.a(-899814320, 306, param2, cr.field_D, var6.sprite, param0, 2, ep.field_b, param4, -13);
         } else {
           Rasterizer2D.fillVerticalGradient(param2, param0, 306, 480, rm.field_d[param3], 22953);
         }
     }
 
     final void a(boolean param0, int param1, int param2, int param3, int param4) {
-        pb var7 = null;
+        RasterCacheSurface var7 = null;
         if (this.b((byte) -106)) {
           var7 = PowerUp.a(this.field_m, param3, -20777);
-          if (!var7.a((byte) -84, param3, this.field_m)) {
+          if (!var7.matchesCacheKeys((byte) -84, param3, this.field_m)) {
             qf.a(param3, var7, 1, MouseInput.field_f, 0, !param0 ? true : false);
-            var7.a(this.field_m, param3, (byte) 78);
+            var7.setCacheKeys(this.field_m, param3, (byte) 78);
           }
-          dg.a(-899814320, 640, param4, LevelPackCard.field_e, var7.field_p, param2, 1, rm.field_f, param1, 0);
+          dg.a(-899814320, 640, param4, LevelPackCard.field_e, var7.sprite, param2, 1, rm.field_f, param1, 0);
         } else {
           Rasterizer2D.fillVerticalGradient(param4, param2, 640, 480, rm.field_d[param3], 22953);
         }
@@ -80,7 +80,7 @@ final class qb extends ki {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw qb.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw qb.addExceptionContext((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -101,10 +101,10 @@ final class qb extends ki {
         if (!AchievementIcon.field_m.a("farm", -28138)) {
           return false;
         }
-        LevelPackCard.field_e = pl.a("farm", "farm_near", (byte) 103, AchievementIcon.field_m);
-        rm.field_f = pl.a("farm", "farm_mid", (byte) -63, AchievementIcon.field_m);
-        MouseInput.field_f = pl.a("farm", "farm_far", (byte) -78, AchievementIcon.field_m);
-        MultiplayerExitScreen.field_z = pl.a("farm", "farm_small", (byte) 106, AchievementIcon.field_m);
+        LevelPackCard.field_e = pl.loadRgbSpriteByName("farm", "farm_near", (byte) 103, AchievementIcon.field_m);
+        rm.field_f = pl.loadRgbSpriteByName("farm", "farm_mid", (byte) -63, AchievementIcon.field_m);
+        MouseInput.field_f = pl.loadRgbSpriteByName("farm", "farm_far", (byte) -78, AchievementIcon.field_m);
+        MultiplayerExitScreen.field_z = pl.loadRgbSpriteByName("farm", "farm_small", (byte) 106, AchievementIcon.field_m);
         if (param0) {
           qb.g(-29);
         }
@@ -172,7 +172,7 @@ final class qb extends ki {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw qb.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param2).append(')').toString());
+          throw qb.addExceptionContext((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -268,7 +268,7 @@ final class qb extends ki {
           } else {
             stackIn_38_2 = "{...}";
           }
-          throw qb.a((Throwable) ((Object) stackIn_31_0), ((StringBuilder) (Object) stackIn_37_1).append(stackIn_38_2).append(')').toString());
+          throw qb.addExceptionContext((Throwable) ((Object) stackIn_31_0), ((StringBuilder) (Object) stackIn_37_1).append(stackIn_38_2).append(')').toString());
         }
     }
 
@@ -278,20 +278,20 @@ final class qb extends ki {
         field_y = null;
         if (param0 != 0) {
           String var2 = (String) null;
-          qb.a((Throwable) null, (String) null);
+          qb.addExceptionContext((Throwable) null, (String) null);
         }
         field_x = null;
         field_r = null;
         field_s = null;
     }
 
-    final static v a(Throwable param0, String param1) {
-        v var2 = null;
-        if (!(param0 instanceof v)) {
-          var2 = new v(param0, param1);
+    final static ClientException addExceptionContext(Throwable cause, String context) {
+        ClientException var2 = null;
+        if (!(cause instanceof ClientException)) {
+          var2 = new ClientException(cause, context);
         } else {
-          var2 = (v) ((Object) param0);
-          var2.field_d = var2.field_d + ' ' + param1;
+          var2 = (ClientException) ((Object) cause);
+          var2.context = var2.context + ' ' + context;
         }
         return var2;
     }

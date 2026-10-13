@@ -19,7 +19,7 @@ final class kd {
         field_a = null;
     }
 
-    final static pb a(int param0, int param1, byte param2) {
+    final static RasterCacheSurface a(int param0, int param1, byte param2) {
         int var3 = 117 / ((param2 - 38) / 63);
         return so.a(0, param1, param0, cr.field_N);
     }
@@ -50,7 +50,7 @@ final class kd {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw qb.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw qb.addExceptionContext((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 

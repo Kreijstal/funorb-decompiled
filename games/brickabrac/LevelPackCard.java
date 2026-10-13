@@ -161,7 +161,7 @@ final class LevelPackCard {
           } else {
             stackIn_45_2 = "{...}";
           }
-          throw qb.a((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_44_1).append(stackIn_45_2).append(',').append(param18).append(')').toString());
+          throw qb.addExceptionContext((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_44_1).append(stackIn_45_2).append(',').append(param18).append(')').toString());
         }
     }
 
@@ -222,7 +222,7 @@ final class LevelPackCard {
           this.caption = qn.packNames[this.packIndex].toLowerCase();
           this.icon = SaveResultsPromptScreen.packCardIcons[this.packIndex];
         } catch (RuntimeException runtimeException) {
-          throw qb.a((Throwable) ((Object) runtimeException), "lc.<init>(" + (owner != null ? "{...}" : "null") + ',' + (viewport != null ? "{...}" : "null") + ',' + buttonIndex + ',' + packIndex + ')');
+          throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "lc.<init>(" + (owner != null ? "{...}" : "null") + ',' + (viewport != null ? "{...}" : "null") + ',' + buttonIndex + ',' + packIndex + ')');
         }
     }
 

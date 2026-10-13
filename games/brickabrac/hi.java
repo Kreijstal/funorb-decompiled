@@ -3,7 +3,7 @@
  */
 final class hi extends um {
     private int field_z;
-    static NodeDeque field_v;
+    static NodeDeque rasterStack;
     static int[] field_A;
     private int field_y;
     private int field_x;
@@ -108,7 +108,7 @@ final class hi extends um {
           var3 = 0;
         }
         if (param0) {
-          field_v = (NodeDeque) null;
+          rasterStack = (NodeDeque) null;
           if (ng.field_b == 0 &&
             null != nl.field_f) {
             var3 = 0;
@@ -157,7 +157,7 @@ final class hi extends um {
           }
           var4 = go.currentKeyCharacter;
           stackIn_41_0 = !param0;
-          if (!ii.a(stackIn_41_0, (char) var4)) {
+          if (!RasterSnapshot.a(stackIn_41_0, (char) var4)) {
             return false;
           }
           if (var3 == 0) {
@@ -266,7 +266,7 @@ final class hi extends um {
             }
             var4Lifetime1 = go.currentKeyCharacter;
             stackIn_103_0 = !param0;
-            if (!ii.a(stackIn_103_0, (char) var4Lifetime1)) {
+            if (!RasterSnapshot.a(stackIn_103_0, (char) var4Lifetime1)) {
               return false;
             }
             if (var3 != 0 &&
@@ -375,7 +375,7 @@ final class hi extends um {
         }
         var4Lifetime2 = go.currentKeyCharacter;
         stackIn_160_0 = !param0;
-        if (!ii.a(stackIn_160_0, (char) var4Lifetime2)) {
+        if (!RasterSnapshot.a(stackIn_160_0, (char) var4Lifetime2)) {
           return false;
         }
         if (var3 == 0) {
@@ -513,7 +513,7 @@ final class hi extends um {
           } else {
             stackIn_24_2 = "{...}";
           }
-          throw qb.a((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(',').append(param4).append(')').toString());
+          throw qb.addExceptionContext((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -527,12 +527,12 @@ final class hi extends um {
             field_A = (int[]) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw qb.a((Throwable) ((Object) runtimeException), "hi.EA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "hi.EA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     public static void c(byte param0) {
-        field_v = null;
+        rasterStack = null;
         field_w = null;
         field_A = null;
         if (param0 > -82) {
@@ -549,6 +549,6 @@ final class hi extends um {
     }
 
     static {
-        field_v = new NodeDeque();
+        rasterStack = new NodeDeque();
     }
 }

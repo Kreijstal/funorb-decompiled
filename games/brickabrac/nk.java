@@ -26,7 +26,7 @@ final class nk {
             } else {
               ok.a(0);
             }
-            sm.field_b = ii.field_q;
+            sm.field_b = RasterSnapshot.field_q;
           }
           if (param0 >= 20) {
             return;
@@ -34,7 +34,7 @@ final class nk {
           field_c = (RgbSprite) null;
           return;
         }
-        if (sm.field_b == ii.field_q) {
+        if (sm.field_b == RasterSnapshot.field_q) {
           if (!og.h(-26090)) {
             if (fj.field_Ub != null) {
               bd.a(3, (byte) 25, fj.field_Ub);
@@ -154,7 +154,7 @@ final class nk {
           } else {
             stackIn_22_2 = "{...}";
           }
-          throw qb.a((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(param2).append(')').toString());
+          throw qb.addExceptionContext((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -191,7 +191,7 @@ final class nk {
             } else {
               stackIn_9_2 = "{...}";
             }
-            throw qb.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
+            throw qb.addExceptionContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -222,7 +222,7 @@ final class nk {
           } else {
             stackIn_5_2 = "{...}";
           }
-          throw qb.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(param1).append(')').toString());
+          throw qb.addExceptionContext((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(param1).append(')').toString());
         }
     }
 

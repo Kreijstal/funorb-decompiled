@@ -144,7 +144,7 @@ final class LegacyUtf8Decoder {
           } else {
             stackIn_46_2 = "{...}";
           }
-          throw qb.a((Throwable) ((Object) stackIn_45_0), ((StringBuilder) (Object) stackIn_45_1).append(stackIn_46_2).append(')').toString());
+          throw qb.addExceptionContext((Throwable) ((Object) stackIn_45_0), ((StringBuilder) (Object) stackIn_45_1).append(stackIn_46_2).append(')').toString());
         }
     }
 

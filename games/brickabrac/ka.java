@@ -111,7 +111,7 @@ final class ka extends IntrusiveNode {
           } else {
             stackIn_73_2 = "{...}";
           }
-          throw qb.a((Throwable) ((Object) stackIn_72_0), ((StringBuilder) (Object) stackIn_72_1).append(stackIn_73_2).append(',').append(param1).append(')').toString());
+          throw qb.addExceptionContext((Throwable) ((Object) stackIn_72_0), ((StringBuilder) (Object) stackIn_72_1).append(stackIn_73_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -569,7 +569,7 @@ final class ka extends IntrusiveNode {
           } else {
             stackIn_372_2 = "{...}";
           }
-          throw qb.a((Throwable) ((Object) stackIn_371_0), ((StringBuilder) (Object) stackIn_371_1).append(stackIn_372_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw qb.addExceptionContext((Throwable) ((Object) stackIn_371_0), ((StringBuilder) (Object) stackIn_371_1).append(stackIn_372_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -587,7 +587,7 @@ final class ka extends IntrusiveNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw qb.a((Throwable) ((Object) var1), "ka.A(" + param0 + ')');
+          throw qb.addExceptionContext((Throwable) ((Object) var1), "ka.A(" + param0 + ')');
         }
     }
 
@@ -601,7 +601,7 @@ final class ka extends IntrusiveNode {
         try {
           this.field_G = null;
         } catch (RuntimeException runtimeException) {
-          throw qb.a((Throwable) ((Object) runtimeException), "ka.B(" + param0 + ')');
+          throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "ka.B(" + param0 + ')');
         }
     }
 
@@ -629,7 +629,7 @@ final class ka extends IntrusiveNode {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw qb.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw qb.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
@@ -646,7 +646,7 @@ final class ka extends IntrusiveNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw qb.a((Throwable) ((Object) var1), "ka.E(" + param0 + ')');
+          throw qb.addExceptionContext((Throwable) ((Object) var1), "ka.E(" + param0 + ')');
         }
     }
 
@@ -858,7 +858,7 @@ final class ka extends IntrusiveNode {
           } else {
             stackIn_79_2 = "{...}";
           }
-          throw qb.a((Throwable) ((Object) stackIn_70_0), ((StringBuilder) (Object) stackIn_78_1).append(stackIn_79_2).append(',').append(param6).append(')').toString());
+          throw qb.addExceptionContext((Throwable) ((Object) stackIn_70_0), ((StringBuilder) (Object) stackIn_78_1).append(stackIn_79_2).append(',').append(param6).append(')').toString());
         }
     }
 

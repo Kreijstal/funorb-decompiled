@@ -7,17 +7,17 @@ final class qf extends lp implements en {
     static int field_Cb;
     private boolean field_Fb;
 
-    final static void a(int param0, pb param1, int param2, RgbSprite param3, int param4, boolean param5) {
+    final static void a(int param0, RasterCacheSurface param1, int param2, RgbSprite param3, int param4, boolean param5) {
         try {
           if (param5) {
             field_Cb = -58;
           }
-          IndexedSpriteGeometry.a(-77, param1.field_p);
-          Rasterizer2D.fillVerticalGradient(0, 0, param1.field_i, param1.field_q, rm.field_d[param0], 22953);
-          param3.b((-param3.canvasWidth + param1.field_i) / 2 - 80 / param2, -param3.canvasHeight + (param1.field_q + param4 - 201 / param2), 41, 110);
-          sc.b(-107);
+          IndexedSpriteGeometry.pushSpriteRaster(-77, param1.sprite);
+          Rasterizer2D.fillVerticalGradient(0, 0, param1.width, param1.height, rm.field_d[param0], 22953);
+          param3.b((-param3.canvasWidth + param1.width) / 2 - 80 / param2, -param3.canvasHeight + (param1.height + param4 - 201 / param2), 41, 110);
+          sc.popRaster(-107);
         } catch (RuntimeException runtimeException) {
-          throw qb.a((Throwable) ((Object) runtimeException), "qf.I(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ')');
+          throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "qf.I(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ')');
         }
     }
 
@@ -52,7 +52,7 @@ final class qf extends lp implements en {
         try {
           this.field_Eb = param1;
         } catch (RuntimeException runtimeException) {
-          throw qb.a((Throwable) ((Object) runtimeException), "qf.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "qf.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -72,7 +72,7 @@ final class qf extends lp implements en {
           ek.l(64);
           this.m(17);
         } catch (RuntimeException runtimeException) {
-          throw qb.a((Throwable) ((Object) runtimeException), "qf.Q(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');
+          throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "qf.Q(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -153,7 +153,7 @@ final class qf extends lp implements en {
           } else {
             stackIn_32_2 = "{...}";
           }
-          throw qb.a((Throwable) ((Object) stackIn_31_0), ((StringBuilder) (Object) stackIn_31_1).append(stackIn_32_2).append(',').append(param2).append(')').toString());
+          throw qb.addExceptionContext((Throwable) ((Object) stackIn_31_0), ((StringBuilder) (Object) stackIn_31_1).append(stackIn_32_2).append(',').append(param2).append(')').toString());
         }
     }
 

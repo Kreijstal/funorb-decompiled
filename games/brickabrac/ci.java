@@ -8,17 +8,17 @@ final class ci extends ki {
     static boolean field_t;
 
     final void a(boolean param0, int param1, int param2, int param3, int param4) {
-        pb var8 = null;
+        RasterCacheSurface var8 = null;
         if (param0) {
           if (!this.b((byte) -102)) {
             Rasterizer2D.fillRectangle(param4, param2, 640, 480, 0);
           } else {
             var8 = PowerUp.a(this.field_m, param3, -20777);
-            if (!var8.a((byte) -84, param3, this.field_m)) {
+            if (!var8.matchesCacheKeys((byte) -84, param3, this.field_m)) {
               dp.a(1, 0, !param0 ? true : false, param3, ng.field_a, var8);
-              var8.a(this.field_m, param3, (byte) 78);
+              var8.setCacheKeys(this.field_m, param3, (byte) 78);
             }
-            AchievementBrowserScreen.a(om.field_fc, param4, param1, param3, 640, 0, 0, var8.field_p, 1, pn.field_m, param2);
+            AchievementBrowserScreen.a(om.field_fc, param4, param1, param3, 640, 0, 0, var8.sprite, 1, pn.field_m, param2);
           }
           return;
         }
@@ -27,12 +27,12 @@ final class ci extends ki {
           Rasterizer2D.fillRectangle(param4, param2, 640, 480, 0);
           return;
         }
-        pb var7 = PowerUp.a(this.field_m, param3, -20777);
-        if (!var7.a((byte) -84, param3, this.field_m)) {
+        RasterCacheSurface var7 = PowerUp.a(this.field_m, param3, -20777);
+        if (!var7.matchesCacheKeys((byte) -84, param3, this.field_m)) {
           dp.a(1, 0, !param0 ? true : false, param3, ng.field_a, var7);
-          var7.a(this.field_m, param3, (byte) 78);
+          var7.setCacheKeys(this.field_m, param3, (byte) 78);
         }
-        AchievementBrowserScreen.a(om.field_fc, param4, param1, param3, 640, 0, 0, var7.field_p, 1, pn.field_m, param2);
+        AchievementBrowserScreen.a(om.field_fc, param4, param1, param3, 640, 0, 0, var7.sprite, 1, pn.field_m, param2);
     }
 
     final RgbSprite[] b(int param0) {
@@ -44,18 +44,18 @@ final class ci extends ki {
     }
 
     final void a(int param0, byte param1, int param2, int param3, int param4) {
-        pb var8 = null;
-        pb var7 = null;
+        RasterCacheSurface var8 = null;
+        RasterCacheSurface var7 = null;
         if (param1 <= -84) {
           if (!this.b((byte) -101)) {
             Rasterizer2D.fillRectangle(param2, param0, 306, 480, 0);
           } else {
             var8 = kd.a(this.field_m, param3, (byte) 125);
-            if (!var8.a((byte) -84, param3, this.field_m)) {
+            if (!var8.matchesCacheKeys((byte) -84, param3, this.field_m)) {
               dp.a(2, 0, false, param3, kh.field_b, var8);
-              var8.a(this.field_m, param3, (byte) 78);
+              var8.setCacheKeys(this.field_m, param3, (byte) 78);
             }
-            AchievementBrowserScreen.a(jh.field_d, param2, param4, param3, 306, 0, 0, var8.field_p, 2, lk.field_t, param0);
+            AchievementBrowserScreen.a(jh.field_d, param2, param4, param3, 306, 0, 0, var8.sprite, 2, lk.field_t, param0);
           }
           return;
         }
@@ -64,11 +64,11 @@ final class ci extends ki {
           Rasterizer2D.fillRectangle(param2, param0, 306, 480, 0);
         } else {
           var7 = kd.a(this.field_m, param3, (byte) 125);
-          if (!var7.a((byte) -84, param3, this.field_m)) {
+          if (!var7.matchesCacheKeys((byte) -84, param3, this.field_m)) {
             dp.a(2, 0, false, param3, kh.field_b, var7);
-            var7.a(this.field_m, param3, (byte) 78);
+            var7.setCacheKeys(this.field_m, param3, (byte) 78);
           }
-          AchievementBrowserScreen.a(jh.field_d, param2, param4, param3, 306, 0, 0, var7.field_p, 2, lk.field_t, param0);
+          AchievementBrowserScreen.a(jh.field_d, param2, param4, param3, 306, 0, 0, var7.sprite, 2, lk.field_t, param0);
         }
     }
 
@@ -94,19 +94,19 @@ final class ci extends ki {
         if (!AchievementIcon.field_m.a("space", -28138)) {
           return false;
         }
-        om.field_fc = pl.a("space", "space_near", (byte) -91, AchievementIcon.field_m);
-        pn.field_m = pl.a("space", "space_mid", (byte) 115, AchievementIcon.field_m);
-        ng.field_a = pl.a("space", "space_far", (byte) -98, AchievementIcon.field_m);
-        rf.field_a = pl.a("space", "space_small", (byte) -90, AchievementIcon.field_m);
+        om.field_fc = pl.loadRgbSpriteByName("space", "space_near", (byte) -91, AchievementIcon.field_m);
+        pn.field_m = pl.loadRgbSpriteByName("space", "space_mid", (byte) 115, AchievementIcon.field_m);
+        ng.field_a = pl.loadRgbSpriteByName("space", "space_far", (byte) -98, AchievementIcon.field_m);
+        rf.field_a = pl.loadRgbSpriteByName("space", "space_small", (byte) -90, AchievementIcon.field_m);
         ng.field_a.bindRasterTarget();
         Rasterizer2D.a(7136, 6592, 1600, 128, sq.field_b);
         if (!param0) {
           kc.field_q.a((byte) 100);
-          pk.field_f = pl.a("space", "space_character", (byte) -50, AchievementIcon.field_m);
+          pk.field_f = pl.loadRgbSpriteByName("space", "space_character", (byte) -50, AchievementIcon.field_m);
           jh.field_d = jh.a(0, om.field_fc);
           lk.field_t = jh.a(0, pn.field_m);
           kh.field_b = jh.a(0, ng.field_a);
-          b.field_b = cr.a("space", AchievementIcon.field_m, "space_lever", 2);
+          b.field_b = cr.loadRgbSpritesByName("space", AchievementIcon.field_m, "space_lever", 2);
           return true;
         }
         return false;
@@ -182,7 +182,7 @@ final class ci extends ki {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw qb.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
+          throw qb.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
         }
     }
 
