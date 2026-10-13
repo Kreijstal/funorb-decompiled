@@ -12,8 +12,8 @@ final class AlphaWidgetContainer extends SingleChildWidgetContainer {
     final static String setMusicProfileTransitionMillis(int durationMillis, byte obfuscationGuard) {
         String previousDurationText = null;
         if (obfuscationGuard == 74) {
-          previousDurationText = "old time: " + wf.musicProfileTransitionMillis;
-          wf.musicProfileTransitionMillis = durationMillis;
+          previousDurationText = "old time: " + NetworkGameShell.musicProfileTransitionMillis;
+          NetworkGameShell.musicProfileTransitionMillis = durationMillis;
           return previousDurationText;
         }
         return (String) null;

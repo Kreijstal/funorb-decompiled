@@ -43,7 +43,7 @@ final class ChannelFadeTimeConsoleCommand extends ConsoleCommand {
     }
 
     final static void b(int param0, int param1) {
-        BattleUnitRenderer.field_c = wf.field_F[param0];
+        BattleUnitRenderer.field_c = NetworkGameShell.field_F[param0];
         db.field_b = eq.field_m[param0];
         if (param1 == 1) {
           LobbyPlayer.field_Jb = CorpseConditionMarker.field_s[param0];

@@ -25,7 +25,7 @@ final class bw {
               DisplacedUnitMarker.field_t[12] = CampaignUnitOverride.field_c;
             } else {
               if ((1 << FullscreenFocusCanvas.gameplayController.controlledPlayerId | FullscreenFocusCanvas.gameplayController.field_hb) != (1 << FullscreenFocusCanvas.gameplayController.battlefield.playerCount) - 1) {
-                DisplacedUnitMarker.field_t[12] = fa.field_e;
+                DisplacedUnitMarker.field_t[12] = BoundedUrlRequest.field_e;
               } else {
                 DisplacedUnitMarker.field_t[12] = TabbedPanel.field_Nb;
               }

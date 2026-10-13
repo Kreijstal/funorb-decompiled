@@ -137,7 +137,7 @@ final class DebugConsole extends ConsolePanel {
           else {
             this.input.setCollapsedSelection(1 + caretIndex, false);
           }
-          vs.highlightedConsoleInput = wf.highlightConsoleSyntax(this.input.getText(0), -101);
+          vs.highlightedConsoleInput = NetworkGameShell.highlightConsoleSyntax(this.input.getText(0), -101);
           return true;
         } catch (java.lang.RuntimeException caughtParameter) {
           caughtFailure = caughtParameter;

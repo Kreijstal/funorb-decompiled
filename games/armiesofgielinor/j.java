@@ -67,7 +67,7 @@ final class j {
           DisplacedUnitMarker.field_t[25] = AnimationSkeleton.field_m;
           DisplacedUnitMarker.field_t[22] = hq.field_d;
           DisplacedUnitMarker.field_t[16] = InstructionsPanel.field_y;
-          DisplacedUnitMarker.field_t[28] = wf.field_s;
+          DisplacedUnitMarker.field_t[28] = NetworkGameShell.field_s;
           DisplacedUnitMarker.field_t[19] = s.field_b;
           DisplacedUnitMarker.field_t[21] = ConsolePanel.field_r;
           DisplacedUnitMarker.field_t[26] = bj.field_l;
@@ -149,7 +149,7 @@ final class j {
           EmailValidator.battleHintMessages[4] = DropdownOptionList.field_Y;
           EmailValidator.battleHintMessages[2] = qt.field_a;
           EmailValidator.battleHintMessages[1] = bk.field_c;
-          EmailValidator.battleHintMessages[5] = fa.field_g;
+          EmailValidator.battleHintMessages[5] = BoundedUrlRequest.field_g;
           var3 = 0;
           var1_intLifetime1 = var3;
           while (jj.field_a.length > var3) {

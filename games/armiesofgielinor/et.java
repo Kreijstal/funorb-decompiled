@@ -65,11 +65,11 @@ final class et {
             if (var19 == 0) {
               if (stackIn_11_0) {
                 var12 = TileMetadata.field_f[var9];
-                var13 = fa.field_k[var9];
+                var13 = BoundedUrlRequest.field_k[var9];
                 var14 = TileMetadata.field_f[var10] - var12;
                 var15 = TileMetadata.field_f[var11] - var12;
-                var16 = -var13 + fa.field_k[var10];
-                var17 = fa.field_k[var11] - var13;
+                var16 = -var13 + BoundedUrlRequest.field_k[var10];
+                var17 = BoundedUrlRequest.field_k[var11] - var13;
               }
               if (!stackIn_11_0 ||
                 !(var17 * var14 - var15 * var16 >= 0)) {

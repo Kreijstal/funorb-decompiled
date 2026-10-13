@@ -312,7 +312,7 @@ abstract class ResizableModalDialog extends ModalDialog {
               StateChangeEvent.a(var6_int, param2 ^ -12933, param5, param3);
             }
             if (vs.field_e[param4].hasCorpse(-121)) {
-              fe.a(wf.boneShadowSprites[var6_int % 4], param3 - 10, -25 + param5);
+              fe.a(NetworkGameShell.boneShadowSprites[var6_int % 4], param3 - 10, -25 + param5);
             }
             var9 = EditableTextWidget.field_Q[vs.field_e[param4].terrainType];
             if (var9 > -1) {

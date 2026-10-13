@@ -97,7 +97,7 @@ final class AccountNameAvailabilityValidator extends TextFieldValidator {
           if (obfuscationGuard < 89) {
             this.invalidateNameCheck(5);
           }
-          acceptedDiagnostic = fa.field_d;
+          acceptedDiagnostic = BoundedUrlRequest.field_d;
           return acceptedDiagnostic;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -21,10 +21,10 @@ final class DamageEvent extends GameEvent {
 
     final static ResourceArchive a(int param0, int param1, byte param2, boolean param3, boolean param4) {
         if (param2 >= 98) {
-          return tk.a(param1, param4, 1, false, param3, param0);
+          return CheckBoxWidgetPainter.a(param1, param4, 1, false, param3, param0);
         }
         field_z = (String) null;
-        return tk.a(param1, param4, 1, false, param3, param0);
+        return CheckBoxWidgetPainter.a(param1, param4, 1, false, param3, param0);
     }
 
     final boolean a(NodeDeque param0, byte param1, GameplayController param2) {

@@ -1363,31 +1363,31 @@ final class TickCounter {
                 }
                 var2 = fk.a(false, "godnames,0");
                 if (null != var2) {
-                  wf.field_q[0] = uu.a(var2, (byte) 5);
+                  NetworkGameShell.field_q[0] = uu.a(var2, (byte) 5);
                 }
                 var2 = fk.a(false, "godnames,1");
                 if (null != var2) {
-                  wf.field_q[1] = uu.a(var2, (byte) -108);
+                  NetworkGameShell.field_q[1] = uu.a(var2, (byte) -108);
                 }
                 var2 = fk.a(false, "godnames,2");
                 if (null != var2) {
-                  wf.field_q[2] = uu.a(var2, (byte) 99);
+                  NetworkGameShell.field_q[2] = uu.a(var2, (byte) 99);
                 }
                 var2 = fk.a(false, "godnames,3");
                 if (null != var2) {
-                  wf.field_q[3] = uu.a(var2, (byte) 114);
+                  NetworkGameShell.field_q[3] = uu.a(var2, (byte) 114);
                 }
                 var2 = fk.a(false, "godnames,4");
                 if (var2 != null) {
-                  wf.field_q[4] = uu.a(var2, (byte) -128);
+                  NetworkGameShell.field_q[4] = uu.a(var2, (byte) -128);
                 }
                 var2 = fk.a(false, "godnames,5");
                 if (var2 != null) {
-                  wf.field_q[5] = uu.a(var2, (byte) 10);
+                  NetworkGameShell.field_q[5] = uu.a(var2, (byte) 10);
                 }
                 var2 = fk.a(false, "godnames,6");
                 if (var2 != null) {
-                  wf.field_q[6] = uu.a(var2, (byte) 121);
+                  NetworkGameShell.field_q[6] = uu.a(var2, (byte) 121);
                 }
                 var2 = fk.a(false, "goddescriptions,0");
                 if (var2 != null) {
@@ -1455,7 +1455,7 @@ final class TickCounter {
                 }
                 var2 = fk.a(false, "ACTION_ATTACK");
                 if (null != var2) {
-                  wf.field_A = uu.a(var2, (byte) -114);
+                  NetworkGameShell.field_A = uu.a(var2, (byte) -114);
                 }
                 var2 = fk.a(false, "ACTION_NEEDMOVEFIRST");
                 if (null != var2) {
@@ -1901,7 +1901,7 @@ final class TickCounter {
                 }
                 var2 = fk.a(false, "GUARD");
                 if (null != var2) {
-                  fa.field_f = uu.a(var2, (byte) 109);
+                  BoundedUrlRequest.field_f = uu.a(var2, (byte) 109);
                 }
                 var2 = fk.a(false, "EXIT");
                 if (null != var2) {
@@ -3207,7 +3207,7 @@ final class TickCounter {
                 }
                 var2 = fk.a(false, "LABEL_PLAYERS");
                 if (null != var2) {
-                  wf.field_s = uu.a(var2, (byte) 89);
+                  NetworkGameShell.field_s = uu.a(var2, (byte) 89);
                 }
                 var2 = fk.a(false, "LABEL_NUM_AI_PLAYERS");
                 if (var2 != null) {
@@ -3569,7 +3569,7 @@ final class TickCounter {
                 }
                 var2 = fk.a(false, "ESCORTLEADER");
                 if (var2 != null) {
-                  fa.field_g = uu.a(var2, (byte) 81);
+                  BoundedUrlRequest.field_g = uu.a(var2, (byte) 81);
                 }
                 var2 = fk.a(false, "CLOSE");
                 if (var2 != null) {

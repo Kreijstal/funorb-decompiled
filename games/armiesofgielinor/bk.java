@@ -178,7 +178,7 @@ final class bk {
                 if (bq.field_c) {
                   stackIn_13_0 = ClientConnectionState.field_c;
                 } else {
-                  stackIn_13_0 = wf.field_u;
+                  stackIn_13_0 = NetworkGameShell.field_u;
                 }
                 var20 = stackIn_13_0;
               } else if (var19 == 1 &&

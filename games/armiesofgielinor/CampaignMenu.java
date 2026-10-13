@@ -848,7 +848,7 @@ final class CampaignMenu {
               targetGains[targetChannel] = targetGain;
               enabledChannelIndex++;
             }
-            ((AdaptiveMidiPcmStream) (BitmapTextWidgetPainter.musicCrossfadeStream.selectedSequencer)).rampToProfile((byte) 48, wf.musicProfileTransitionMillis, profile);
+            ((AdaptiveMidiPcmStream) (BitmapTextWidgetPainter.musicCrossfadeStream.selectedSequencer)).rampToProfile((byte) 48, NetworkGameShell.musicProfileTransitionMillis, profile);
             return;
           }
           return;

@@ -162,11 +162,11 @@ final class IconLabelControl extends ClientUiComponent {
             }
             var21 = stackIn_41_0;
             var22 = TileMetadata.field_f[var15Lifetime1];
-            var23 = fa.field_k[var15Lifetime1];
+            var23 = BoundedUrlRequest.field_k[var15Lifetime1];
             var24 = TileMetadata.field_f[var16];
-            var25 = fa.field_k[var16];
+            var25 = BoundedUrlRequest.field_k[var16];
             var26 = TileMetadata.field_f[var17];
-            var27 = fa.field_k[var17];
+            var27 = BoundedUrlRequest.field_k[var17];
             if (var18 == var19 &&
               var20 == var19) {
               var28 = var55[var18];

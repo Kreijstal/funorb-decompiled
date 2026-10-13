@@ -362,7 +362,7 @@ final class MapRepository {
                 FullscreenDisplayMode.field_c[var23] = -2147483648;
               } else {
                 TileMetadata.field_f[var23] = var21 + var27 / var29;
-                fa.field_k[var23] = var28 / var29 + var22;
+                BoundedUrlRequest.field_k[var23] = var28 / var29 + var22;
                 FullscreenDisplayMode.field_c[var23] = var29;
                 if (var29 > var8) {
                   var8 = var29;

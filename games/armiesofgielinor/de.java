@@ -101,13 +101,13 @@ final class de {
           if (uc.spellDefinitions[spellId][3] == 4) {
             if (uc.spellDefinitions[spellId][5] == 1) {
               if (0 == battlefield.godFavourLevels[actingPlayer][uc.spellDefinitions[spellId][6]]) {
-                stackIn_21_0 = EmailCheckResult.a(4800, RegionAnchor.field_n, new String[]{wf.field_q[1 + uc.spellDefinitions[spellId][6]]});
+                stackIn_21_0 = EmailCheckResult.a(4800, RegionAnchor.field_n, new String[]{NetworkGameShell.field_q[1 + uc.spellDefinitions[spellId][6]]});
                 return stackIn_21_0;
               }
               if (battlefield.godFavourLevels[actingPlayer][uc.spellDefinitions[spellId][6]] < 5) {
                 return null;
               }
-              stackIn_25_0 = EmailCheckResult.a(4800, rr.field_b, new String[]{wf.field_q[uc.spellDefinitions[spellId][6] + 1]});
+              stackIn_25_0 = EmailCheckResult.a(4800, rr.field_b, new String[]{NetworkGameShell.field_q[uc.spellDefinitions[spellId][6] + 1]});
               return stackIn_25_0;
             }
             if (uc.spellDefinitions[spellId][5] != 2) {

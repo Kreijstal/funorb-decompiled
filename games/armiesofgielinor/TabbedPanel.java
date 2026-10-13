@@ -201,7 +201,7 @@ final class TabbedPanel extends ClientUiComponent {
               op.field_c[0][2] = lp.field_c[0];
             }
           } else {
-            stackIn_5_0 = (!var9[1].equalsIgnoreCase(wf.field_q[1])) ? 2 : 1;
+            stackIn_5_0 = (!var9[1].equalsIgnoreCase(NetworkGameShell.field_q[1])) ? 2 : 1;
             var3 = stackIn_5_0;
             op.field_c[0][var3] = lp.field_c[0];
             stackIn_8_0 = (1 != var3) ? 1 : 2;

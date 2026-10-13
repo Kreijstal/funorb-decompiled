@@ -118,7 +118,7 @@ final class BattleGraphicsAssets {
           SetCoatConsoleCommand.kalphiteSprites[spriteIndex].normalizeCanvas();
         }
         ConsoleTokenCursor.boneSprites = MapLayout.loadIndexedSpritesByName("bones", obfuscationGuard - 28106, "basic", this.basicArchive);
-        wf.boneShadowSprites = fk.loadRgbSpritesByName("boneshadows", (byte) -124, this.basicArchive, "basic");
+        NetworkGameShell.boneShadowSprites = fk.loadRgbSpritesByName("boneshadows", (byte) -124, this.basicArchive, "basic");
         TeamRoster.playerRingSprite = DiskCacheRequest.loadRgbSpriteByName("player_ring", "basic", this.basicArchive, false);
         ModalDialog.groundShadowSprite = fk.loadRgbSpritesByName("shadows", (byte) -128, this.basicArchive, "basic")[0];
     }

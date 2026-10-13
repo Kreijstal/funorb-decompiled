@@ -1521,7 +1521,7 @@ final class Battlefield {
             stackIn_9_0 = var5;
             if (var6 == 0) {
               if (stackIn_9_0 >= 0) {
-                output.a(new String[]{"god: ", wf.field_q[var5 + 1], " level: ", Integer.toString(this.godFavourLevels[playerId][var5])}, (byte) -57);
+                output.a(new String[]{"god: ", NetworkGameShell.field_q[var5 + 1], " level: ", Integer.toString(this.godFavourLevels[playerId][var5])}, (byte) -57);
               }
               var4_int++;
               continue;

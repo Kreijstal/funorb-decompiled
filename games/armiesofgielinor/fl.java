@@ -269,7 +269,7 @@ final class fl {
           var7.horizontalAlignment = 0;
           var7.a(-128, BitmapTextLayout.b(8947848, 5));
           var7.a(1, (byte) -85).a(BitmapTextLayout.b(11184810, 5), 67).a(2236962, (byte) -127);
-          this.field_i = (WidgetPainter) ((Object) new tk(param1, 2, 2, 16777215, -1, 5, 5, 15, 15, 4473924));
+          this.field_i = (WidgetPainter) ((Object) new CheckBoxWidgetPainter(param1, 2, 2, 16777215, -1, 5, 5, 15, 15, 4473924));
           discarded$0 = new or(param1, 2, 2, 16777215, -1, 16777215, 16729156, 4473924);
           discarded$1 = new kp(param1, 16777215, -1, 125269879, 4473924, 3, 268435455);
           var8 = new ao();

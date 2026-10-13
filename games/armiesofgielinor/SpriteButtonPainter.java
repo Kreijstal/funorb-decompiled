@@ -142,7 +142,7 @@ final class SpriteButtonPainter extends BitmapTextWidgetPainter {
         if (!param1) {
           SpriteButtonPainter.a(-81L, -76);
         }
-        return tk.a(param0, true, 1, false, false, 1);
+        return CheckBoxWidgetPainter.a(param0, true, 1, false, false, 1);
     }
 
     public final void paintWidget(Widget widget, int originX, int obfuscationGuard, boolean renderFlag, int originY) {

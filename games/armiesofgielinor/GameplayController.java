@@ -6908,7 +6908,7 @@ final class GameplayController {
                     var19 = var13_ref_int__[var16];
                     var4 = 1;
                     if (var19 > -1) {
-                      var2 = EmailCheckResult.a(param0 + 4680, PointerInputHandler.field_c, new String[]{wf.field_q[var19 + 1], Integer.toString(this.battlefield.godFavourLevels[this.controlledPlayerId][var19])});
+                      var2 = EmailCheckResult.a(param0 + 4680, PointerInputHandler.field_c, new String[]{NetworkGameShell.field_q[var19 + 1], Integer.toString(this.battlefield.godFavourLevels[this.controlledPlayerId][var19])});
                     }
                   }
                   var16++;
@@ -6960,14 +6960,14 @@ final class GameplayController {
                 var15_ref_int__ = this.battlefield.chosenGods[this.controlledPlayerId];
                 if (3 == var15_ref_int__.length) {
                   if (TabbedPanel.a(var14 + 55, var13 + 40, 25, false)) {
-                    var2 = EmailCheckResult.a(param0 ^ 4792, SpellConfirmationDialog.field_g, new String[]{wf.field_q[1 + this.battlefield.chosenGods[this.controlledPlayerId][1]]});
+                    var2 = EmailCheckResult.a(param0 ^ 4792, SpellConfirmationDialog.field_g, new String[]{NetworkGameShell.field_q[1 + this.battlefield.chosenGods[this.controlledPlayerId][1]]});
                   }
                   if (TabbedPanel.a(var14, 80 + var13, 25, false)) {
-                    var2 = EmailCheckResult.a(4800, SpellConfirmationDialog.field_g, new String[]{wf.field_q[this.battlefield.chosenGods[this.controlledPlayerId][2] + 1]});
+                    var2 = EmailCheckResult.a(4800, SpellConfirmationDialog.field_g, new String[]{NetworkGameShell.field_q[this.battlefield.chosenGods[this.controlledPlayerId][2] + 1]});
                   }
                   decompiledFrameRemainder4 = !(!TabbedPanel.a(var14, var13, 25, false));
                   if (decompiledFrameRemainder4) {
-                    var2 = EmailCheckResult.a(4800, SpellConfirmationDialog.field_g, new String[]{wf.field_q[1 + this.battlefield.chosenGods[this.controlledPlayerId][0]]});
+                    var2 = EmailCheckResult.a(4800, SpellConfirmationDialog.field_g, new String[]{NetworkGameShell.field_q[1 + this.battlefield.chosenGods[this.controlledPlayerId][0]]});
                     decompiledFrameRemainder4 = (var20 != 0);
                   }
                 }
@@ -6985,7 +6985,7 @@ final class GameplayController {
                       break;
                     }
                     if (stackIn_798_0) {
-                      var2 = EmailCheckResult.a(param0 + 4680, SpellConfirmationDialog.field_g, new String[]{wf.field_q[var15_ref_int__[var18] + 1]});
+                      var2 = EmailCheckResult.a(param0 + 4680, SpellConfirmationDialog.field_g, new String[]{NetworkGameShell.field_q[var15_ref_int__[var18] + 1]});
                     }
                     var17 = var17 + var16;
                     var18++;
@@ -7009,12 +7009,12 @@ final class GameplayController {
                 }
                 if (var15 > -1) {
                   if (var15 != 0) {
-                    var2 = wf.field_q[1 + this.battlefield.chosenGods[this.controlledPlayerId][-1 + var15]];
+                    var2 = NetworkGameShell.field_q[1 + this.battlefield.chosenGods[this.controlledPlayerId][-1 + var15]];
                     if (var20 != 0) {
-                      var2 = wf.field_q[0];
+                      var2 = NetworkGameShell.field_q[0];
                     }
                   } else {
-                    var2 = wf.field_q[0];
+                    var2 = NetworkGameShell.field_q[0];
                   }
                 }
                 if (null == var2 &&
@@ -7085,7 +7085,7 @@ final class GameplayController {
                         if ((decompiledFrameRemainder13) &&
                           (decompiledFrameRemainder13 = (!(this.selectedUnit.movementSpent) ||
                           (1 & this.movementPlanner.attackTargetMask[var16]) != 0))) {
-                          var2 = wf.field_A;
+                          var2 = NetworkGameShell.field_A;
                           decompiledFrameRemainder13 = (var20 != 0);
                         }
                       }

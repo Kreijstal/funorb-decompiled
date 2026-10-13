@@ -143,7 +143,7 @@ final class CampaignUnitOverride {
                 }
                 var2 = NodeIterator.a(50, "mu_chat_public");
                 if (null != var2) {
-                  wf.field_u = uu.a(var2, (byte) 8);
+                  NetworkGameShell.field_u = uu.a(var2, (byte) 8);
                 }
                 var2 = NodeIterator.a(50, "mu_chat_ignore");
                 if (null != var2) {
@@ -451,7 +451,7 @@ final class CampaignUnitOverride {
                 }
                 var2 = NodeIterator.a(50, "mu_chat_game_hide");
                 if (var2 != null) {
-                  fa.field_c = uu.a(var2, (byte) -126);
+                  BoundedUrlRequest.field_c = uu.a(var2, (byte) -126);
                 }
                 var2 = NodeIterator.a(50, "mu_chat_pm_show_all");
                 if (var2 != null) {
@@ -1589,7 +1589,7 @@ final class CampaignUnitOverride {
                 }
                 var2 = NodeIterator.a(50, "create_username_available");
                 if (null != var2) {
-                  fa.field_d = uu.a(var2, (byte) -120);
+                  BoundedUrlRequest.field_d = uu.a(var2, (byte) -120);
                 }
                 var2 = NodeIterator.a(50, "create_alert_namelength");
                 if (null != var2) {
@@ -2346,7 +2346,7 @@ final class CampaignUnitOverride {
                 }
                 var2 = NodeIterator.a(50, "mp_offerrematch_unrated");
                 if (var2 != null) {
-                  fa.field_e = uu.a(var2, (byte) 47);
+                  BoundedUrlRequest.field_e = uu.a(var2, (byte) 47);
                 }
                 var2 = NodeIterator.a(50, "mp_acceptrematch");
                 if (null != var2) {

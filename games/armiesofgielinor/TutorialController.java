@@ -389,9 +389,9 @@ final class TutorialController {
               if (IterableDualNodeDeque.isPointerInBounds(-33, db.a(param0, 34), db.a(param0, 292), MatchConditionEntry.a(64, (byte) 94), MatchConditionEntry.a(380, (byte) 94))) {
                 discarded$0 = this.a(CachedArchiveProvider.spellMenuRoot, true, var3Lifetime1, 0, 0, 97);
               }
-              if (fa.field_j != 2 &&
+              if (BoundedUrlRequest.field_j != 2 &&
                 IterableDualNodeDeque.isPointerInBounds(-33, db.a(true, 279), db.a(true, 293), MatchConditionEntry.a(68 + MapRepository.field_c, (byte) 94), MatchConditionEntry.a(60 - (-MapRepository.field_c - 24), (byte) 94))) {
-                fa.field_j = 2;
+                BoundedUrlRequest.field_j = 2;
                 RgbSpriteBase.field_u = -MapRepository.field_c + (-68 + ko.pointerY);
               }
               if (IterableDualNodeDeque.isPointerInBounds(-33, db.a(true, 469), db.a(param0, 606), MatchConditionEntry.a(384, (byte) 94), MatchConditionEntry.a(416, (byte) 94))) {
@@ -429,10 +429,10 @@ final class TutorialController {
               return;
             }
           }
-          if (1 != fa.field_j &&
+          if (1 != BoundedUrlRequest.field_j &&
             IterableDualNodeDeque.isPointerInBounds(-33, db.a(true, 589), db.a(param0, 603), MatchConditionEntry.a(ep.field_o + 158, (byte) 94), MatchConditionEntry.a(150 - (-ep.field_o - 24), (byte) 94))) {
             RgbSpriteBase.field_u = ko.pointerY - (158 + ep.field_o);
-            fa.field_j = 1;
+            BoundedUrlRequest.field_j = 1;
           }
           if (!param0) {
             this.c(94);
@@ -628,7 +628,7 @@ final class TutorialController {
             SoftwareRaster.setClip(db.a(true, 314), MatchConditionEntry.a(158, (byte) 94), db.a(param0, 606), MatchConditionEntry.a(311, (byte) 94));
             BattleUnitRenderer.field_a.drawTransparent(db.a(true, 326), MatchConditionEntry.a(-var2_int + 154, (byte) 94));
           }
-          if (1 == fa.field_j) {
+          if (1 == BoundedUrlRequest.field_j) {
             if (ProgressMessageDialog.pointerButton == 1) {
               var3 = -158 - RgbSpriteBase.field_u + ko.pointerY;
               if (0 > var3) {
@@ -652,10 +652,10 @@ final class TutorialController {
                 }
               }
               if (var4 != 0) {
-                fa.field_j = -1;
+                BoundedUrlRequest.field_j = -1;
               }
             } else {
-              fa.field_j = -1;
+              BoundedUrlRequest.field_j = -1;
             }
           }
           SoftwareRaster.a();
@@ -1634,7 +1634,7 @@ final class TutorialController {
                                                                                               }
                                                                                               SetCoatConsoleCommand.field_F = -1;
                                                                                               li.field_q = -1;
-                                                                                              this.a((String) null, -1, wf.field_q[0], (String) null, (byte) -64, GlobalSpell.field_l[0]);
+                                                                                              this.a((String) null, -1, NetworkGameShell.field_q[0], (String) null, (byte) -64, GlobalSpell.field_l[0]);
                                                                                               var6 = param0 ? 1 : 0;
                                                                                               CipherPacketBuffer.a(var6 != 0, 12, 1, 0);
                                                                                               if (var9 == 0) {
@@ -1654,7 +1654,7 @@ final class TutorialController {
                                                                                           }
                                                                                           li.field_q = -1;
                                                                                           SetCoatConsoleCommand.field_F = -1;
-                                                                                          this.a((String) null, -1, wf.field_q[0], (String) null, (byte) -99, GlobalSpell.field_l[0]);
+                                                                                          this.a((String) null, -1, NetworkGameShell.field_q[0], (String) null, (byte) -99, GlobalSpell.field_l[0]);
                                                                                           var6 = param0 ? 1 : 0;
                                                                                           CipherPacketBuffer.a(var6 != 0, 12, 1, 0);
                                                                                           if (var9 == 0) {
@@ -2254,7 +2254,7 @@ final class TutorialController {
               var9 == 0) {
               return;
             }
-            wf.field_D = var6Lifetime1;
+            NetworkGameShell.field_D = var6Lifetime1;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -2655,7 +2655,7 @@ final class TutorialController {
           if (MoveEvent.matchSetupPanel == null) {
             return;
           }
-          MoveEvent.matchSetupPanel.setOptions(this.selectionState.selectedIndex, (byte) -28, t.field_e, wf.field_D, vg.field_m, ByteStorage.field_g, r.field_B, this.f(true));
+          MoveEvent.matchSetupPanel.setOptions(this.selectionState.selectedIndex, (byte) -28, t.field_e, NetworkGameShell.field_D, vg.field_m, ByteStorage.field_g, r.field_B, this.f(true));
           var2_int = -9 % ((61 - param0) / 60);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -3960,7 +3960,7 @@ final class TutorialController {
                 WeightedLruCache.field_d = GlobalSpell.field_h;
                 b.field_n = null;
                 GlobalSpell.field_h = 256;
-                this.a((String) null, -1, ve.a((byte) 13, wf.field_q[li.field_q + 1]), (String) null, (byte) -99, GlobalSpell.field_l[1 + li.field_q]);
+                this.a((String) null, -1, ve.a((byte) 13, NetworkGameShell.field_q[li.field_q + 1]), (String) null, (byte) -99, GlobalSpell.field_l[1 + li.field_q]);
                 return;
               }
               var2_int++;
@@ -4010,7 +4010,7 @@ final class TutorialController {
                 var7 = AlphaWidgetContainer.field_M[var5];
                 this.a(var7, bw.unitDefinitions[var5][0], ve.a((byte) 13, ScrollContainer.unitDisplayNames[var5]), this.f(var5, 8), (byte) 116, var6Lifetime1);
               } else {
-                this.a((String) null, -1, ve.a((byte) 13, wf.field_q[li.field_q + 1]), (String) null, (byte) -55, GlobalSpell.field_l[li.field_q + 1]);
+                this.a((String) null, -1, ve.a((byte) 13, NetworkGameShell.field_q[li.field_q + 1]), (String) null, (byte) -55, GlobalSpell.field_l[li.field_q + 1]);
               }
               RadialSummonMenu.playDefaultSoundWithIntGuard(100, ClientUiNode.field_v[12]);
               return;
@@ -4067,9 +4067,9 @@ final class TutorialController {
               }
             }
           }
-          if (fa.field_j != 1 &&
+          if (BoundedUrlRequest.field_j != 1 &&
             IterableDualNodeDeque.isPointerInBounds(-33, db.a(true, 589), db.a(true, 603), MatchConditionEntry.a(158 + ep.field_o, (byte) 94), MatchConditionEntry.a(150 + (ep.field_o + 24), (byte) 94))) {
-            fa.field_j = 1;
+            BoundedUrlRequest.field_j = 1;
             RgbSpriteBase.field_u = -ep.field_o - (158 - ko.pointerY);
           }
           return;
@@ -4492,9 +4492,9 @@ final class TutorialController {
         var3 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           boolean decompiledFrameRemainder0 = true;
-          if (fa.field_j == 2) {
+          if (BoundedUrlRequest.field_j == 2) {
             if (ProgressMessageDialog.pointerButton != 1) {
-              fa.field_j = -1;
+              BoundedUrlRequest.field_j = -1;
               decompiledFrameRemainder0 = (var3 != 0);
             }
             if (decompiledFrameRemainder0) {

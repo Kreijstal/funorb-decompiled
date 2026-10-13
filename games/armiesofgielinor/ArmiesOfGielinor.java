@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-public final class ArmiesOfGielinor extends wf {
+public final class ArmiesOfGielinor extends NetworkGameShell {
     static String[] field_N;
     static int field_K;
     static PacketBuffer field_L;
@@ -86,7 +86,7 @@ public final class ArmiesOfGielinor extends wf {
           }
           stackIn_10_1 = 127;
           stackIn_11_2 = (FixedQuaternion.fullscreenCanvas != null);
-          this.a(stackIn_10_1, stackIn_11_2);
+          this.advanceSharedClient(stackIn_10_1, stackIn_11_2);
           if (TextLineLayout.field_l) {
             this.p(17);
             TextLineLayout.field_l = false;
@@ -96,7 +96,7 @@ public final class ArmiesOfGielinor extends wf {
             return;
           }
           if (PopupPresentation.h(31337)) {
-            this.g((byte) 4);
+            this.advanceAccountUi((byte) 4);
             if (PopupPresentation.h(31337)) {
               if (AccountRequestResult.a((byte) 105)) {
                 discarded$0 = this.c(-100, false);
@@ -136,7 +136,7 @@ public final class ArmiesOfGielinor extends wf {
                   if (var11 != 0) {
                     stackIn_61_1 = 42;
                     stackIn_62_2 = (null != FixedQuaternion.fullscreenCanvas);
-                    var2_int = this.a((byte) stackIn_61_1, stackIn_62_2);
+                    var2_int = this.processAccountUi((byte) stackIn_61_1, stackIn_62_2);
                     if (1 == var2_int ||
                       var2_int == 2) {
                       if (null != FixedQuaternion.fullscreenCanvas) {
@@ -153,7 +153,7 @@ public final class ArmiesOfGielinor extends wf {
               } else {
                 stackIn_61_1 = 42;
                 stackIn_62_2 = (null != FixedQuaternion.fullscreenCanvas);
-                var2_int = this.a((byte) stackIn_61_1, stackIn_62_2);
+                var2_int = this.processAccountUi((byte) stackIn_61_1, stackIn_62_2);
                 if (1 == var2_int ||
                   var2_int == 2) {
                   if (null != FixedQuaternion.fullscreenCanvas) {
@@ -537,7 +537,7 @@ public final class ArmiesOfGielinor extends wf {
                     continue;
                   }
                 }
-                this.j(12);
+                this.dispatchSharedPacket(12);
                 continue;
               }
               break;
@@ -559,7 +559,7 @@ public final class ArmiesOfGielinor extends wf {
           }
           var2_intLifetime2 = stackIn_348_0;
           if (MovementPresentation.j(-11)) {
-            var3Lifetime1 = this.h((byte) -116);
+            var3Lifetime1 = this.pollGameConnection((byte) -116);
             if (var3Lifetime1 == 0 ||
               var3Lifetime1 == 1) {
               SphinxActionRequest.a(2, (byte) 37);
@@ -694,7 +694,7 @@ public final class ArmiesOfGielinor extends wf {
 
     public final void init() {
         try {
-          this.a((byte) 31, 25, "armiesofgielinor");
+          this.startDefaultApplet((byte) 31, 25, "armiesofgielinor");
         } catch (RuntimeException runtimeException) {
           throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "ArmiesOfGielinor.init()");
         }
@@ -1152,10 +1152,10 @@ public final class ArmiesOfGielinor extends wf {
           gv.b(93);
           fe.b();
           vi.a(true);
-          wf.h(71);
+          NetworkGameShell.releaseSharedShellGlobals(71);
           ContextualRuntimeException.c(1);
           GameAppletShell.d(105);
-          fa.a((byte) 100);
+          BoundedUrlRequest.a((byte) 100);
           PointerInputHandler.a((byte) -79);
           el.b(-8834);
           SoftwareRaster.d();
@@ -1368,7 +1368,7 @@ public final class ArmiesOfGielinor extends wf {
           nk.b((byte) 75);
           dc.a(540);
           BoundedFile.a(-98);
-          tk.a((byte) -100);
+          CheckBoxWidgetPainter.a((byte) -100);
           ao.b((byte) -120);
           or.a(false);
           kp.a(2);
@@ -1593,7 +1593,7 @@ public final class ArmiesOfGielinor extends wf {
           ValidationState.b(-16356);
           DebouncedValidator.d(65280);
           rn.a(false);
-          this.field_p = null;
+          this.serverHost = null;
         } catch (RuntimeException runtimeException) {
           throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "ArmiesOfGielinor.GA(" + obfuscationGuard + ')');
         }
@@ -1614,7 +1614,7 @@ public final class ArmiesOfGielinor extends wf {
         var7 = obfuscationControl ? 1 : 0;
         try {
           li.field_n = new Random(vi.monotonicMillis(-108));
-          this.a(4, 68, 24, 2, -119, 0, 1);
+          this.initializeDefaultSharedServices(4, 68, 24, 2, -119, 0, 1);
           UnitSpell.installViewportResizeListener(52, new BattleViewportResizeHandler());
           var2 = new AdaptiveMidiPcmStream();
           var3 = new AdaptiveMidiPcmStream(var2);
@@ -1655,7 +1655,7 @@ public final class ArmiesOfGielinor extends wf {
               }
             } else {
               UnitLossCondition.battlefieldThemes = TeleportAction.createThemeCatalog(-10128);
-              this.a(true, false, true, true, 55, false, true);
+              this.configureOptionalPacketHandlers(true, false, true, true, 55, false, true);
               jv.field_d = pi.field_M;
               sh.opcodePayloadLengths[65] = -2;
               stackIn_26_0 = obfuscationGuard ? 1 : 0;
@@ -1824,7 +1824,7 @@ public final class ArmiesOfGielinor extends wf {
               var3[1] = vs.field_b;
               var3[0] = var4_ref_String;
             }
-            LinkButtonPainter.field_f.selectTheme(wf.field_D, 0);
+            LinkButtonPainter.field_f.selectTheme(NetworkGameShell.field_D, 0);
             ChannelFadeTimeConsoleCommand.field_F = false;
             var4 = 0;
           }
@@ -1852,7 +1852,7 @@ public final class ArmiesOfGielinor extends wf {
             stackIn_21_0Lifetime1 = null;
             stackIn_21_1Lifetime1 = null;
             stackIn_24_9 = field_K;
-            stackIn_24_10 = wf.field_D;
+            stackIn_24_10 = NetworkGameShell.field_D;
             stackIn_24_11 = false;
             stackIn_24_12 = 4;
             stackIn_24_13 = var4;

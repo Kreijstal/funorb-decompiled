@@ -171,7 +171,7 @@ final class QuickChatMenu extends ClientUiComponent {
               it.writeChatMessage(var5, -91, rs.outgoingChatChannel, RegistrationAgreementPane.chatRecipientName, messageContext, (String) null);
               AgeValidator.rememberLastQuickChat(RegistrationAgreementPane.chatRecipientName, dj.chatRecipientAccountId, var5, rs.outgoingChatChannel, obfuscationGuard ^ 4124);
               e.closeQuickChatMenu((byte) -126);
-              wf.g(-20873);
+              NetworkGameShell.resetIdleTracking(-20873);
             }
           }
         }
@@ -335,7 +335,7 @@ final class QuickChatMenu extends ClientUiComponent {
             var25 = dh.field_n[2];
             var28Lifetime1Lifetime4 = var25;
             var28Lifetime1Lifetime5 = var25;
-            var24 = fa.field_c;
+            var24 = BoundedUrlRequest.field_c;
             var23.menu.addIconAction(false, var24, 13, var25);
           }
           if (param1 == 2) {

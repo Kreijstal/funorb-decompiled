@@ -11,7 +11,7 @@ final class MusicPatchEnvelope {
     byte[] volumeEnvelope;
     int decayRate;
     static String field_a;
-    static fa field_h;
+    static BoundedUrlRequest field_h;
     int decayKeyScaling;
     static String[] field_f;
     byte[] releaseEnvelope;
@@ -200,7 +200,7 @@ final class MusicPatchEnvelope {
         NodeIterator.field_a = false;
         vi.field_d = ByteStorage.incomingPacket.readUnsignedByte(0) == 0 ? true : false;
         if (param0 < 70) {
-          field_h = (fa) null;
+          field_h = (BoundedUrlRequest) null;
           return;
         }
     }

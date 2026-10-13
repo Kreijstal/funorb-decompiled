@@ -67,7 +67,7 @@ final class ws extends InteractiveWidget {
 
     final static void b(boolean param0) {
         if (param0) {
-          SummonRequest.a((byte) 52, wf.field_y, 6);
+          SummonRequest.a((byte) 52, NetworkGameShell.field_y, 6);
           SummonRequest.a((byte) 33, sh.field_r, 26);
           MoveEvent.tutorialLayout.setTopY(MoveEvent.tutorialLayout.getTopY(26, (byte) -107) + 30, 26, (byte) 126);
           SummonRequest.a((byte) 111, pu.field_B, 8);
@@ -87,7 +87,7 @@ final class ws extends InteractiveWidget {
           return;
         }
         field_P = (ClientUiComponent) null;
-        SummonRequest.a((byte) 52, wf.field_y, 6);
+        SummonRequest.a((byte) 52, NetworkGameShell.field_y, 6);
         SummonRequest.a((byte) 33, sh.field_r, 26);
         MoveEvent.tutorialLayout.setTopY(MoveEvent.tutorialLayout.getTopY(26, (byte) -107) + 30, 26, (byte) 126);
         SummonRequest.a((byte) 111, pu.field_B, 8);
