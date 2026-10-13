@@ -201,7 +201,7 @@ final class pf implements ub {
         RuntimeException var20 = null;
         try {
           hc.a((byte) 113, param12, param9, param7, param19);
-          fr.a(param7, (byte) 121);
+          Mesh3D.a(param7, (byte) 121);
           if (param4 != -27460) {
             field_i = 90;
           }

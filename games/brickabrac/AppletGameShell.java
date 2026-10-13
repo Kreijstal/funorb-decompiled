@@ -349,7 +349,7 @@ public abstract class AppletGameShell extends java.applet.Applet implements Runn
                     }
                     if (decompiledFrameCompleted0) {
                       var4 = var2.substring(6, var3);
-                      if (dc.a((CharSequence) ((Object) var4), -102) &&
+                      if (MeshAttributeRecord.a((CharSequence) ((Object) var4), -102) &&
                         !(fl.a((CharSequence) ((Object) var4), -28734) >= 10)) {
                         this.a("wrongjava", 4000);
                         decompiledFrameRemainder3 = (var5 != 0);

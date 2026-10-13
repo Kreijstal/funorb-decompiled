@@ -138,19 +138,19 @@ final class qn {
         JungleBackground.field_r = new IsaacGenerator(new int[]{(int)MonotonicTime.nowMillis(false)});
         PauseMenuScreen.field_x = param1;
         if (param4 == -6532) {
-          fr.field_k = param3;
+          Mesh3D.field_k = param3;
           lg.field_L = param2;
           wo.field_a = param0;
           FarmBackground.field_w = lg.field_L - PauseMenuScreen.field_x;
-          ag.field_E = -fr.field_k + wo.field_a;
+          ag.field_E = -Mesh3D.field_k + wo.field_a;
           return;
         }
         qn.b(109);
-        fr.field_k = param3;
+        Mesh3D.field_k = param3;
         lg.field_L = param2;
         wo.field_a = param0;
         FarmBackground.field_w = lg.field_L - PauseMenuScreen.field_x;
-        ag.field_E = -fr.field_k + wo.field_a;
+        ag.field_E = -Mesh3D.field_k + wo.field_a;
     }
 
     final GameCanvas a(boolean param0) {

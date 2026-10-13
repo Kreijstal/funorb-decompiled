@@ -81,7 +81,7 @@ final class ChocolateBackground extends BackgroundScene {
         up.field_w = jh.a(0, CappedUrlRequest.chocolateSpiresSprite);
         u.chocolateSmallFarSprite = pl.loadRgbSpriteByName("chocolate", "chocolate_small_far", (byte) -36, AchievementIcon.field_m);
         GameClock.chocolateSmallNearSprite = pl.loadRgbSpriteByName("chocolate", "chocolate_small_near", (byte) -69, AchievementIcon.field_m);
-        dc.chocolateCharacterSprite = pl.loadRgbSpriteByName("chocolate", "chocolate_character", (byte) 101, AchievementIcon.field_m);
+        MeshAttributeRecord.chocolateCharacterSprite = pl.loadRgbSpriteByName("chocolate", "chocolate_character", (byte) 101, AchievementIcon.field_m);
         Brick.chocCapsSprites[0] = cr.loadRgbSpritesByName("chocolate", AchievementIcon.field_m, "choc_caps", 2);
         aj.chocSegsSprites[0] = cr.loadRgbSpritesByName("chocolate", AchievementIcon.field_m, "choc_segs", 2);
         IntKeyIndex.chocCentreSprites[0] = pl.loadRgbSpriteByName("chocolate", "choc_centre", (byte) -126, AchievementIcon.field_m);
@@ -95,9 +95,9 @@ final class ChocolateBackground extends BackgroundScene {
     final RgbSprite c(byte param0) {
         if (param0 >= -74) {
           this.drawFullBackground(false, 35, 0, 38, 68);
-          return dc.chocolateCharacterSprite;
+          return MeshAttributeRecord.chocolateCharacterSprite;
         }
-        return dc.chocolateCharacterSprite;
+        return MeshAttributeRecord.chocolateCharacterSprite;
     }
 
     final RgbSprite[] a(int param0, boolean param1) {
@@ -195,7 +195,7 @@ final class ChocolateBackground extends BackgroundScene {
             return false;
           }
           if (null != GameClock.chocolateSmallNearSprite) {
-            return null != dc.chocolateCharacterSprite ? true : false;
+            return null != MeshAttributeRecord.chocolateCharacterSprite ? true : false;
           }
           return false;
         }
@@ -215,7 +215,7 @@ final class ChocolateBackground extends BackgroundScene {
           return false;
         }
         if (null != GameClock.chocolateSmallNearSprite) {
-          return null != dc.chocolateCharacterSprite ? true : false;
+          return null != MeshAttributeRecord.chocolateCharacterSprite ? true : false;
         }
         return false;
     }

@@ -256,7 +256,7 @@ final class n {
                 stackIn_32_1 = ma.field_G;
               }
               stackIn_31_0.field_Mb = rd.a(stackIn_32_1, new String[]{dn.field_K.field_Mb}, (byte) 103);
-              dc.field_g = true;
+              MeshAttributeRecord.field_g = true;
               AppletGameShell.field_e.field_Mb = mp.field_Pb;
               GameUiController.field_e.field_eb = true;
               if (br.field_bc != null) {
@@ -265,7 +265,7 @@ final class n {
                   h.field_D = new boolean[cq.field_p];
                 }
                 MusicVoiceMixer.field_s = false;
-                dc.field_g = false;
+                MeshAttributeRecord.field_g = false;
                 var13 = 0;
                 var9_intLifetime1 = var13;
                 while (cq.field_p > var13) {
@@ -275,10 +275,10 @@ final class n {
                 ar.a(true, nl.field_f, -1, -1, -1, 0, cq.field_p, 0);
                 if (!(kb.field_Yb < 2) &&
                   IntArrayRequest.heldKeys[12]) {
-                  dc.field_g = true;
+                  MeshAttributeRecord.field_g = true;
                 }
               }
-              if (!dc.field_g) {
+              if (!MeshAttributeRecord.field_g) {
                 dn.field_K.field_eb = false;
                 if (dn.field_K.field_G) {
                   var9 = null;

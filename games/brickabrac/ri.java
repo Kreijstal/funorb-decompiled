@@ -151,65 +151,65 @@ final class ri extends ib implements en {
         }
     }
 
-    final static byte[] a(byte[] param0, int param1, BitPacketBuffer param2, int param3) {
-        int var4_int = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        byte[] stackIn_3_0 = null;
-        byte[] stackIn_19_0 = null;
-        RuntimeException stackIn_22_0 = null;
-        StringBuilder stackIn_22_1 = null;
-        String stackIn_23_2 = null;
-        StringBuilder stackIn_25_1 = null;
-        String stackIn_26_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException var4 = null;
-        var8 = BrickABrac.field_J ? 1 : 0;
+    final static byte[] readPackedByteArray(byte[] reuse, int lengthBits, BitPacketBuffer packet, int obfuscationGuard) {
+        int count = 0;
+        int valueBits = 0;
+        int base = 0;
+        int element = 0;
+        int unusedGameFlag = 0;
+        byte[] invalidGuardResult = null;
+        byte[] result = null;
+        RuntimeException failureContext = null;
+        StringBuilder contextBuilder = null;
+        String reuseSummary = null;
+        StringBuilder packetContext = null;
+        String packetSummary = null;
+        RuntimeException caughtFailure = null;
+        RuntimeException failure = null;
+        unusedGameFlag = BrickABrac.field_J ? 1 : 0;
         try {
-          if (param3 != 20) {
-            stackIn_3_0 = (byte[]) null;
-            return stackIn_3_0;
+          if (obfuscationGuard != 20) {
+            invalidGuardResult = (byte[]) null;
+            return invalidGuardResult;
           }
-          var4_int = param2.readBits(param1, (byte) -112);
-          if (var4_int == 0) {
+          count = packet.readBits(lengthBits, (byte) -112);
+          if (count == 0) {
             return null;
           }
-          if (param0 == null ||
-            param0.length != var4_int) {
-            param0 = new byte[var4_int];
+          if (reuse == null ||
+            reuse.length != count) {
+            reuse = new byte[count];
           }
-          var5 = param2.readBits(3, (byte) 98);
-          var6 = (byte)param2.readBits(8, (byte) 31);
-          if (0 < var5) {
-            for (var7 = 0; var7 < var4_int; var7++) {
-              param0[var7] = (byte)(var6 + param2.readBits(var5, (byte) 107));
+          valueBits = packet.readBits(3, (byte) 98);
+          base = (byte)packet.readBits(8, (byte) 31);
+          if (0 < valueBits) {
+            for (element = 0; element < count; element++) {
+              reuse[element] = (byte)(base + packet.readBits(valueBits, (byte) 107));
             }
           } else {
-            for (var7 = 0; var7 < var4_int; var7++) {
-              param0[var7] = (byte)var6;
+            for (element = 0; element < count; element++) {
+              reuse[element] = (byte)base;
             }
           }
-          stackIn_19_0 = (byte[]) (param0);
-          return stackIn_19_0;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var4 = decompiledCaughtException;
-          stackIn_22_0 = var4;
-          stackIn_22_1 = new StringBuilder().append("ri.W(");
-          if (param0 == null) {
-            stackIn_23_2 = "null";
+          result = (byte[]) (reuse);
+          return result;
+        } catch (java.lang.RuntimeException caughtParameter) {
+          caughtFailure = caughtParameter;
+          failure = caughtFailure;
+          failureContext = failure;
+          contextBuilder = new StringBuilder().append("ri.W(");
+          if (reuse == null) {
+            reuseSummary = "null";
           } else {
-            stackIn_23_2 = "{...}";
+            reuseSummary = "{...}";
           }
-          stackIn_25_1 = ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param1).append(',');
-          if (param2 == null) {
-            stackIn_26_2 = "null";
+          packetContext = ((StringBuilder) (Object) contextBuilder).append(reuseSummary).append(',').append(lengthBits).append(',');
+          if (packet == null) {
+            packetSummary = "null";
           } else {
-            stackIn_26_2 = "{...}";
+            packetSummary = "{...}";
           }
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(',').append(param3).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) failureContext), ((StringBuilder) (Object) packetContext).append(packetSummary).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 

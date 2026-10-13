@@ -108,7 +108,7 @@ final class kf extends k {
         RuntimeException decompiledCaughtException = null;
         try {
           var5 = (CharSequence) ((Object) param0);
-          if (!dc.a(var5, -125)) {
+          if (!MeshAttributeRecord.a(var5, -125)) {
             stackIn_2_0 = lp.field_xb;
             return stackIn_2_0;
           }

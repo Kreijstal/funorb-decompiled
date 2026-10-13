@@ -16,14 +16,14 @@ final class mp extends mh {
     static RgbSprite field_Zb;
     mh field_Yb;
 
-    final static void a(int param0, int param1, int param2, int param3, fr param4, byte param5, int param6, int param7) {
+    final static void a(int param0, int param1, int param2, int param3, Mesh3D param4, byte param5, int param6, int param7) {
         int stackIn_17_0 = 0;
         int[] stackIn_19_0 = null;
         int stackIn_20_1 = 0;
         int stackIn_26_0 = 0;
         int stackIn_29_0 = 0;
         int stackIn_32_0 = 0;
-        dc stackIn_39_0 = null;
+        MeshAttributeRecord stackIn_39_0 = null;
         int stackIn_45_0 = 0;
         int stackIn_49_0 = 0;
         RuntimeException stackIn_54_0 = null;
@@ -40,7 +40,7 @@ final class mp extends mh {
         int var18 = 0;
         int var19 = 0;
         int var20 = 0;
-        dc var21 = null;
+        MeshAttributeRecord var21 = null;
         int var22 = 0;
         int var23 = 0;
         int var24 = 0;
@@ -61,7 +61,7 @@ final class mp extends mh {
         int var39 = 0;
         int var40 = 0;
         int[] var41 = null;
-        fr var44 = null;
+        Mesh3D var44 = null;
         int[] var49 = null;
         int[] var54 = null;
         byte[] var60 = null;
@@ -80,22 +80,22 @@ final class mp extends mh {
           if (param5 != -105) {
             return;
           }
-          if (null != var44.field_p &&
-            var44.field_A > 1) {
-            var60 = var44.field_p;
+          if (null != var44.faceGroups &&
+            var44.faceGroupCount > 1) {
+            var60 = var44.faceGroups;
             h.a(0, 0, (byte) 114, var60, AppletGameShell.field_m);
           } else {
             ArchiveNetworkClient.f((byte) 94);
           }
-          var54 = new int[param4.field_o];
+          var54 = new int[param4.directionCount];
           var49 = var54;
           var41 = var49;
           var8 = var41;
-          var64 = new int[param4.field_o];
+          var64 = new int[param4.directionCount];
           var63 = wl.field_R;
           var62 = ff.field_f;
           var61 = nn.field_h;
-          for (var13 = 0; param4.field_o > var13; var13++) {
+          for (var13 = 0; param4.directionCount > var13; var13++) {
             var14 = var61[var13] * param3 + param7 * var62[var13] + var63[var13] * param1 >> 8;
             if (0 > var14) {
               var14 = -var14;
@@ -124,9 +124,9 @@ final class mp extends mh {
           }
           for (var13Lifetime1 = 0; var13Lifetime1 < mc.field_c; var13Lifetime1++) {
             var14Lifetime1 = ek.field_jb[var13Lifetime1];
-            var15Lifetime1 = param4.field_G[var14Lifetime1];
-            var16 = param4.field_b[var14Lifetime1];
-            var17 = param4.field_c[var14Lifetime1];
+            var15Lifetime1 = param4.faceVertexA[var14Lifetime1];
+            var16 = param4.faceVertexB[var14Lifetime1];
+            var17 = param4.faceVertexC[var14Lifetime1];
             if (wl.field_R.length <= param4.field_v[var14Lifetime1]) {
               stackIn_26_0 = -1;
             } else {
@@ -166,7 +166,7 @@ final class mp extends mh {
               var28 = var54[var18];
               var29 = var64[var18];
               if (var21 != null) {
-                stackIn_49_0 = var21.field_a;
+                stackIn_49_0 = var21.encodedWord24;
               } else {
                 stackIn_49_0 = 8355711;
               }
@@ -184,7 +184,7 @@ final class mp extends mh {
               var32 = var64[var19];
               var33 = var64[var20];
               if (var21 != null) {
-                stackIn_45_0 = var21.field_a;
+                stackIn_45_0 = var21.encodedWord24;
               } else {
                 stackIn_45_0 = 8355711;
               }

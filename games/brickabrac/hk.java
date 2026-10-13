@@ -277,7 +277,7 @@ final class hk extends ib implements hf, en {
                 }
               }
             } else {
-              fr.d(-1);
+              Mesh3D.d(-1);
             }
           } else {
             this.a(25);
@@ -484,7 +484,7 @@ final class hk extends ib implements hf, en {
     }
 
     private final void a(int param0) {
-        if (fr.a((byte) 114) ||
+        if (Mesh3D.a((byte) 114) ||
           !(this.field_P.field_A.length() <= 0) &&
           !(0 >= this.field_T.field_A.length())) {
           HighscoresScreen.a(this.field_P.field_A, 11455, this.field_T.field_A);

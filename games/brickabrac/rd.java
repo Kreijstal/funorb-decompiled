@@ -157,7 +157,7 @@ final class rd {
                 break;
               }
               var7_ref_String = param0.substring(2 + var6_int, var5);
-              if (!dc.a((CharSequence) ((Object) var7_ref_String), -43)) {
+              if (!MeshAttributeRecord.a((CharSequence) ((Object) var7_ref_String), -43)) {
                 continue;
               }
               if (var5 >= var3_int) {
@@ -190,7 +190,7 @@ final class rd {
               break;
             }
             var9 = param0.substring(2 + var8Lifetime1, var5Lifetime1);
-            if (!dc.a((CharSequence) ((Object) var9), param2 ^ -23)) {
+            if (!MeshAttributeRecord.a((CharSequence) ((Object) var9), param2 ^ -23)) {
               continue;
             }
             if (var3_int <= var5Lifetime1) {

@@ -262,7 +262,7 @@ final class he extends ib implements en {
             MotionWaypoint.d(-117);
           } else {
             if (this.field_I == param4) {
-              fr.d(-1);
+              Mesh3D.d(-1);
             } else {
               if (param4 == this.field_J) {
                 NewAchievementsScreen.f(967);

@@ -1,9 +1,9 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class dc {
+final class MeshAttributeRecord {
     static n field_f;
-    int field_a;
+    int encodedWord24;
     static MusicCrossfadeStream musicCrossfadeStream;
     static int currentKeyCode;
     static RgbSprite chocolateCharacterSprite;

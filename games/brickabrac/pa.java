@@ -25,7 +25,7 @@ final class pa extends ta {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var21 = null;
         try {
-          fr.a(param6, param16, param3, true);
+          Mesh3D.a(param6, param16, param3, true);
           MusicCrossfadeStream.a(param11, param14, 256, param18, param0);
           pp.a(param5, param4, (byte) 19);
           cp.a(param15, param2, param13, 73, param17, param19);

@@ -405,7 +405,7 @@ final class w {
             }
           }
           var2_int = 83 % ((param0 + 17) / 51);
-          if (13 != dc.currentKeyCode) {
+          if (13 != MeshAttributeRecord.currentKeyCode) {
             stackIn_15_0 = 0;
             return stackIn_15_0;
           }
@@ -517,7 +517,7 @@ final class w {
         try {
           var7 = param5.getParameter("currency");
           if (var7 != null &&
-            dc.a((CharSequence) ((Object) var7), -53)) {
+            MeshAttributeRecord.a((CharSequence) ((Object) var7), -53)) {
             this.field_c = fl.a((CharSequence) ((Object) var7), -28734);
           } else {
             this.field_c = 2;

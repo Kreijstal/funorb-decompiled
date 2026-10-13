@@ -98,7 +98,7 @@ final class LevelList {
         ag.buttonLabels[22] = d.field_D;
         sl.field_A[13] = TimedSplashScreen.field_s;
         hm.field_b = new String[]{mi.field_a, qm.field_c, oa.field_Pb, s.field_a};
-        sl.field_A[16] = dc.field_d;
+        sl.field_A[16] = MeshAttributeRecord.field_d;
         qn.packNames = new String[]{vh.field_T, oc.field_u};
         eh.field_e = new String[]{ag.field_C, bh.field_ub, qo.field_P, bq.field_f, jh.field_c};
         ar.field_a = new String[]{kk.field_a};
@@ -110,67 +110,67 @@ final class LevelList {
         sl.field_A[18] = GameScreen.field_g;
     }
 
-    final static short[] a(byte param0, short[] param1, BitPacketBuffer param2, int param3) {
-        int var4_int = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        short[] stackIn_3_0 = null;
-        Object stackIn_6_0 = null;
-        short[] stackIn_19_0 = null;
-        RuntimeException stackIn_22_0 = null;
-        StringBuilder stackIn_22_1 = null;
-        String stackIn_23_2 = null;
-        StringBuilder stackIn_25_1 = null;
-        String stackIn_26_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException var4 = null;
-        var8 = BrickABrac.field_J ? 1 : 0;
+    final static short[] readPackedShortArray(byte obfuscationGuard, short[] reuse, BitPacketBuffer packet, int lengthBits) {
+        int count = 0;
+        int valueBits = 0;
+        int base = 0;
+        int element = 0;
+        int unusedGameFlag = 0;
+        short[] invalidGuardResult = null;
+        Object emptyResult = null;
+        short[] result = null;
+        RuntimeException failureContext = null;
+        StringBuilder contextBuilder = null;
+        String reuseSummary = null;
+        StringBuilder packetContext = null;
+        String packetSummary = null;
+        RuntimeException caughtFailure = null;
+        RuntimeException failure = null;
+        unusedGameFlag = BrickABrac.field_J ? 1 : 0;
         try {
-          if (param0 >= -53) {
-            stackIn_3_0 = (short[]) null;
-            return stackIn_3_0;
+          if (obfuscationGuard >= -53) {
+            invalidGuardResult = (short[]) null;
+            return invalidGuardResult;
           }
-          var4_int = param2.readBits(param3, (byte) 61);
-          if (var4_int == 0) {
-            stackIn_6_0 = null;
-            return (short[]) (stackIn_6_0);
+          count = packet.readBits(lengthBits, (byte) 61);
+          if (count == 0) {
+            emptyResult = null;
+            return (short[]) (emptyResult);
           }
-          if (param1 == null ||
-            param1.length != var4_int) {
-            param1 = new short[var4_int];
+          if (reuse == null ||
+            reuse.length != count) {
+            reuse = new short[count];
           }
-          var5 = param2.readBits(4, (byte) 122);
-          var6 = (short)param2.readBits(16, (byte) 94);
-          if (var5 <= 0) {
-            for (var7 = 0; var7 < var4_int; var7++) {
-              param1[var7] = (short)var6;
+          valueBits = packet.readBits(4, (byte) 122);
+          base = (short)packet.readBits(16, (byte) 94);
+          if (valueBits <= 0) {
+            for (element = 0; element < count; element++) {
+              reuse[element] = (short)base;
             }
           } else {
-            for (var7 = 0; var4_int > var7; var7++) {
-              param1[var7] = (short)(param2.readBits(var5, (byte) 91) + var6);
+            for (element = 0; count > element; element++) {
+              reuse[element] = (short)(packet.readBits(valueBits, (byte) 91) + base);
             }
           }
-          stackIn_19_0 = (short[]) (param1);
-          return stackIn_19_0;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var4 = decompiledCaughtException;
-          stackIn_22_0 = var4;
-          stackIn_22_1 = new StringBuilder().append("uj.E(").append(param0).append(',');
-          if (param1 == null) {
-            stackIn_23_2 = "null";
+          result = (short[]) (reuse);
+          return result;
+        } catch (java.lang.RuntimeException caughtParameter) {
+          caughtFailure = caughtParameter;
+          failure = caughtFailure;
+          failureContext = failure;
+          contextBuilder = new StringBuilder().append("uj.E(").append(obfuscationGuard).append(',');
+          if (reuse == null) {
+            reuseSummary = "null";
           } else {
-            stackIn_23_2 = "{...}";
+            reuseSummary = "{...}";
           }
-          stackIn_25_1 = ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',');
-          if (param2 == null) {
-            stackIn_26_2 = "null";
+          packetContext = ((StringBuilder) (Object) contextBuilder).append(reuseSummary).append(',');
+          if (packet == null) {
+            packetSummary = "null";
           } else {
-            stackIn_26_2 = "{...}";
+            packetSummary = "{...}";
           }
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(',').append(param3).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) failureContext), ((StringBuilder) (Object) packetContext).append(packetSummary).append(',').append(lengthBits).append(')').toString());
         }
     }
 

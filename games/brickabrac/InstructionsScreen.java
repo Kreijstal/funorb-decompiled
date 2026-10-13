@@ -30,7 +30,7 @@ final class InstructionsScreen extends MenuScreen {
             if (mh.field_H.isActivated((byte) 113)) {
               var1_int = 1;
             }
-            if (dc.currentKeyCode != 13) {
+            if (MeshAttributeRecord.currentKeyCode != 13) {
               continue;
             }
             var2 = 1;

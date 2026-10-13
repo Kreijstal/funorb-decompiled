@@ -117,7 +117,7 @@ final class hi extends um {
             !FileCacheStore.b(-21835160)) {
             var3 = 0;
           }
-          if (dc.currentKeyCode == 84) {
+          if (MeshAttributeRecord.currentKeyCode == 84) {
             if (var3 == 0) {
               if (ng.field_b != 0) {
                 fl.b(!param0);
@@ -148,7 +148,7 @@ final class hi extends um {
             }
             return true;
           }
-          if (85 == dc.currentKeyCode) {
+          if (85 == MeshAttributeRecord.currentKeyCode) {
             if (var3 != 0 &&
               OptionsScreen.field_A.length() > 0) {
               MessageScreen.a(' ', OptionsScreen.field_A, -1 + OptionsScreen.field_A.length(), false);
@@ -223,7 +223,7 @@ final class hi extends um {
               !FileCacheStore.b(-21835160)) {
               var3 = 0;
             }
-            if (dc.currentKeyCode == 84) {
+            if (MeshAttributeRecord.currentKeyCode == 84) {
               if (var3 == 0) {
                 if (ng.field_b != 0) {
                   fl.b(!param0);
@@ -257,7 +257,7 @@ final class hi extends um {
               }
               return true;
             }
-            if (85 == dc.currentKeyCode) {
+            if (85 == MeshAttributeRecord.currentKeyCode) {
               if (var3 != 0 &&
                 OptionsScreen.field_A.length() > 0) {
                 MessageScreen.a(' ', OptionsScreen.field_A, -1 + OptionsScreen.field_A.length(), false);
@@ -330,7 +330,7 @@ final class hi extends um {
           !FileCacheStore.b(-21835160)) {
           var3 = 0;
         }
-        if (dc.currentKeyCode == 84) {
+        if (MeshAttributeRecord.currentKeyCode == 84) {
           if (var3 == 0) {
             if (ng.field_b != 0) {
               fl.b(!param0);
@@ -363,7 +363,7 @@ final class hi extends um {
           }
           return true;
         }
-        if (85 == dc.currentKeyCode) {
+        if (85 == MeshAttributeRecord.currentKeyCode) {
           if (var3 == 0) {
             return true;
           }

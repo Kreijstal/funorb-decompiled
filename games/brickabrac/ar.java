@@ -47,7 +47,7 @@ final class ar {
                   decompiledFrameCompleted2 = false;
                   break;
                 }
-                dc.field_g = true;
+                MeshAttributeRecord.field_g = true;
                 decompiledFrameCompleted1 = false;
                 break;
               }
@@ -158,7 +158,7 @@ final class ar {
                     param3 = var11;
                   }
                   ar.a(param0, param1, param2, param3, 1 + param4, 0, param6, param7);
-                  if (dc.field_g) {
+                  if (MeshAttributeRecord.field_g) {
                     return;
                   }
                 }
@@ -198,7 +198,7 @@ final class ar {
                 ar.a(param0, param1, param2, param3, param4 + 1, 0, param6, param7);
                 var10Lifetime1 = 1;
               }
-              if (dc.field_g) {
+              if (MeshAttributeRecord.field_g) {
                 return;
               }
               var11++;

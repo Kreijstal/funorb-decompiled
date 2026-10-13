@@ -63,12 +63,12 @@ final class MotionWaypoint extends MovingBody {
         String var2Lifetime1;
         if (param0 < -45) {
           var2 = (String) null;
-          fr.a(true, (String) null, "");
+          Mesh3D.a(true, (String) null, "");
           return;
         }
         field_s = (mh) null;
         var2Lifetime1 = (String) null;
-        fr.a(true, (String) null, "");
+        Mesh3D.a(true, (String) null, "");
     }
 
     final int computeSyncChecksum(int obfuscationGuard, StringBuilder diagnostics) {

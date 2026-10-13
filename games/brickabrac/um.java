@@ -15,7 +15,7 @@ class um implements ub, qe {
     int field_r;
     int field_m;
     int field_i;
-    static dc[] field_o;
+    static MeshAttributeRecord[] field_o;
     private int field_g;
     static boolean field_e;
     int field_f;

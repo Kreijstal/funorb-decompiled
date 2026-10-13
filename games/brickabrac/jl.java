@@ -15,7 +15,7 @@ final class jl {
         int var1_int = 0;
         int[] var2 = null;
         int var3 = 0;
-        fr var4_ref_fr = null;
+        Mesh3D var4_ref_fr = null;
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
@@ -29,7 +29,7 @@ final class jl {
         int var13 = 0;
         int var14 = 0;
         int var16 = 0;
-        fr var17 = null;
+        Mesh3D var17 = null;
         int var19 = 0;
         int[] var20 = null;
         int[] var21 = null;
@@ -47,17 +47,17 @@ final class jl {
         var19 = BrickABrac.field_J ? 1 : 0;
         try {
           kk.field_e = new int[]{0, 0, -8144, 65536, 0, 0, 0, -65536, 0, 0, 0, 65536};
-          var1_int = gg.field_i.length;
+          var1_int = gg.logoMeshes.length;
           var21 = new int[var1_int];
           var20 = var21;
           var2 = var20;
           for (var3 = 0; var3 < var1_int; var3++) {
-            var4_ref_fr = gg.field_i[var3];
-            var4_ref_fr.c(23);
+            var4_ref_fr = gg.logoMeshes[var3];
+            var4_ref_fr.ensureBounds(23);
             HuffmanCodec.a(var3, (byte) 77);
-            var5 = var4_ref_fr.field_f + var4_ref_fr.field_N >> 1;
-            var6 = var4_ref_fr.field_d + var4_ref_fr.field_y >> 1;
-            var7 = var4_ref_fr.field_x + var4_ref_fr.field_q >> 1;
+            var5 = var4_ref_fr.minX + var4_ref_fr.maxX >> 1;
+            var6 = var4_ref_fr.maxY + var4_ref_fr.minY >> 1;
+            var7 = var4_ref_fr.maxZ + var4_ref_fr.minZ >> 1;
             var8 = kk.field_e[9] >> 2;
             var9 = kk.field_e[10] >> 2;
             var10_int = kk.field_e[11] >> 2;
@@ -93,18 +93,18 @@ final class jl {
           var12Lifetime1 = (int)((double)var12Lifetime1 * var10Lifetime1);
           var13Lifetime1 = (int)((double)var13Lifetime1 * var10Lifetime1);
           var14 = (int)((double)var14 * var10Lifetime1);
-          for (var15 = 0; gg.field_i.length > var15; var15++) {
+          for (var15 = 0; gg.logoMeshes.length > var15; var15++) {
             var16 = 0;
-            for (var17_int = 1; var17_int < gg.field_i.length; var17_int++) {
+            for (var17_int = 1; var17_int < gg.logoMeshes.length; var17_int++) {
               if (var21[var16] < var21[var17_int]) {
                 var16 = var17_int;
               }
             }
             var21[var16] = -2147483648;
-            var17 = gg.field_i[var16];
+            var17 = gg.logoMeshes[var16];
             HuffmanCodec.a(var16, (byte) 77);
             for (var18 = 0; var18 < 3; var18++) {
-              MatchResultScreen.field_w[var18] = MatchResultScreen.field_w[var18] + BoundedFile.field_e[var15][var18];
+              MatchResultScreen.field_w[var18] = MatchResultScreen.field_w[var18] + BoundedFile.logoOriginalCenters[var15][var18];
             }
             MusicVoice.a(kk.field_e, -16283, MatchResultScreen.field_w, false, true, var17, false);
             mp.a(var14, var7Lifetime1, var12Lifetime1, var9Lifetime1, var17, (byte) -105, var13Lifetime1, var8Lifetime1);
@@ -128,7 +128,7 @@ final class jl {
           if (IntrusiveHashTable.keyEventReadIndex == fm.keyEventFrameEnd) {
             return false;
           }
-          dc.currentKeyCode = ef.keyEventCodes[IntrusiveHashTable.keyEventReadIndex];
+          MeshAttributeRecord.currentKeyCode = ef.keyEventCodes[IntrusiveHashTable.keyEventReadIndex];
           go.currentKeyCharacter = TimedSplashScreen.keyEventCharacters[IntrusiveHashTable.keyEventReadIndex];
           if (obfuscationGuard != 5) {
             return true;

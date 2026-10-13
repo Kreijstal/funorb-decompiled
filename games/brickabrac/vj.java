@@ -51,7 +51,7 @@ final class vj {
         Throwable decompiledCaughtException = null;
         try {
           var4_int = -2 / ((41 - param2) / 40);
-          if (null != dc.musicCrossfadeStream) {
+          if (null != MeshAttributeRecord.musicCrossfadeStream) {
             ScorePopup.a(1048576, param3, param1, param0, -104);
           }
           if (null == m.musicSynthesizer) {

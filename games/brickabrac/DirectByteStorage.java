@@ -11,7 +11,7 @@ final class DirectByteStorage extends ByteStorage {
     private java.nio.ByteBuffer buffer;
     static String field_l;
 
-    final static boolean a(boolean param0, BitPacketBuffer param1) {
+    final static boolean readPacketFlag(boolean obfuscationGuard, BitPacketBuffer packet) {
         RuntimeException var2 = null;
         boolean stackIn_5_0 = false;
         RuntimeException stackIn_8_0 = null;
@@ -19,17 +19,17 @@ final class DirectByteStorage extends ByteStorage {
         String stackIn_9_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param0) {
+          if (obfuscationGuard) {
             DirectByteStorage.c(-28);
           }
-          stackIn_5_0 = (1 == param1.readBits(1, (byte) 127));
+          stackIn_5_0 = (1 == packet.readBits(1, (byte) 127));
           return stackIn_5_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
           stackIn_8_0 = var2;
-          stackIn_8_1 = new StringBuilder().append("eo.F(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_8_1 = new StringBuilder().append("eo.F(").append(obfuscationGuard).append(',');
+          if (packet == null) {
             stackIn_9_2 = "null";
           } else {
             stackIn_9_2 = "{...}";

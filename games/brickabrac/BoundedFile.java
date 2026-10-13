@@ -5,7 +5,7 @@ import java.io.*;
 
 final class BoundedFile {
     static int[] field_m;
-    static int[][] field_e;
+    static int[][] logoOriginalCenters;
     private long maxLength;
     static int field_c;
     static String field_d;
@@ -92,7 +92,7 @@ final class BoundedFile {
 
     final long length(int obfuscationGuard) throws IOException {
         if (obfuscationGuard > -91) {
-          field_e = (int[][]) null;
+          logoOriginalCenters = (int[][]) null;
           return this.file.length();
         }
         return this.file.length();
@@ -100,7 +100,7 @@ final class BoundedFile {
 
     public static void b(int param0) {
         field_g = null;
-        field_e = (int[][]) null;
+        logoOriginalCenters = (int[][]) null;
         if (param0 == 57) {
           field_b = null;
           field_d = null;

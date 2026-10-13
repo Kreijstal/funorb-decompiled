@@ -190,8 +190,8 @@ final class SoundCache {
         if (null != m.musicSynthesizer) {
           m.musicSynthesizer.setMasterGain(param1, false);
         }
-        if (null != dc.musicCrossfadeStream) {
-          dc.musicCrossfadeStream.setMasterGain(true, param1);
+        if (null != MeshAttributeRecord.musicCrossfadeStream) {
+          MeshAttributeRecord.musicCrossfadeStream.setMasterGain(true, param1);
         }
         if (param0 != 1) {
           field_i = (String) null;
@@ -254,14 +254,14 @@ final class SoundCache {
               var6_int = jl.incomingPackets.readUnsignedByte(255);
               jl.incomingPackets.position = 0;
               if (var6_int == 0) {
-                rf.field_b = dc.field_f;
+                rf.field_b = MeshAttributeRecord.field_f;
               } else {
                 IntrusiveHashTable.currentPacketOpcode = var6_int;
                 ga.incomingPacketLength = -1;
                 rf.field_b = MenuScreen.field_k;
               }
             }
-            if (rf.field_b == dc.field_f &&
+            if (rf.field_b == MeshAttributeRecord.field_f &&
               vd.ensureGamePacketBytes(20, 8)) {
               bj.field_ab = jl.incomingPackets.readLong(-32768);
               jl.incomingPackets.position = 0;

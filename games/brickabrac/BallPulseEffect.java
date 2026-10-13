@@ -45,7 +45,7 @@ final class BallPulseEffect extends IntrusiveNode {
             BallPulseEffect.a((ResourceArchive) null, (AudioMixer) null, -127, -72);
           }
           ck.a(-2196, param0);
-          bm.a((byte) -70, param0);
+          bm.loadLogoMeshes((byte) -70, param0);
           AchievementSubmission.a(param0, 115);
           ScorePopup.a(-37);
           fl.e(-41);

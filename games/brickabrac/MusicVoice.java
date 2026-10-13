@@ -650,7 +650,7 @@ final class MusicVoice extends IntrusiveNode {
         }
     }
 
-    final static void a(int[] param0, int param1, int[] param2, boolean param3, boolean param4, fr param5, boolean param6) {
+    final static void a(int[] param0, int param1, int[] param2, boolean param3, boolean param4, Mesh3D param5, boolean param6) {
         int stackIn_65_0 = 0;
         int stackIn_65_1 = 0;
         RuntimeException stackIn_70_0 = null;
@@ -733,10 +733,10 @@ final class MusicVoice extends IntrusiveNode {
           var22Lifetime2 = mg.field_a;
           var23Lifetime2 = 0;
           scanLoop1: while (true) {
-            if (param5.field_w > var23Lifetime2) {
-              var24Lifetime1 = param5.field_B[var23Lifetime2];
-              var25Lifetime1 = param5.field_Q[var23Lifetime2];
-              var26Lifetime1 = param5.field_P[var23Lifetime2];
+            if (param5.vertexCount > var23Lifetime2) {
+              var24Lifetime1 = param5.vertexX[var23Lifetime2];
+              var25Lifetime1 = param5.vertexY[var23Lifetime2];
+              var26Lifetime1 = param5.vertexZ[var23Lifetime2];
               var27Lifetime1 = var9 + (var24Lifetime1 * var12 + var15 * var25Lifetime1 + var26Lifetime1 * var18 >> -LevelPackCard.field_k + 16);
               var28Lifetime1 = var10 + (var26Lifetime1 * var19 + var24Lifetime1 * var13 + var25Lifetime1 * var16 >> -LevelPackCard.field_k + 16);
               var29Lifetime1 = var11 + (var24Lifetime1 * var14 + var17 * var25Lifetime1 + var26Lifetime1 * var20 >> 16);
@@ -775,7 +775,7 @@ final class MusicVoice extends IntrusiveNode {
                 null != param5.field_s &&
                 param5.field_i != null) {
                 var23Lifetime2 = 0;
-                while (!(param5.field_C <= var23Lifetime2)) {
+                while (!(param5.faceCount <= var23Lifetime2)) {
                   var24Lifetime1 = param5.field_F[var23Lifetime2];
                   var25Lifetime1 = param5.field_E[var23Lifetime2];
                   var26Lifetime1 = param5.field_O[var23Lifetime2];
@@ -811,7 +811,7 @@ final class MusicVoice extends IntrusiveNode {
                 var16 = param2[10];
                 var17 = param2[11];
                 var18 = 0;
-                while (!(var18 >= param5.field_o)) {
+                while (!(var18 >= param5.directionCount)) {
                   stackIn_65_0 = ~var18;
                   stackIn_65_1 = ~wl.field_R.length;
                   if (var30 != 0) {
@@ -820,9 +820,9 @@ final class MusicVoice extends IntrusiveNode {
                   if (stackIn_65_0 <= stackIn_65_1) {
                     break;
                   }
-                  var19 = param5.field_n[var18];
-                  var20 = param5.field_H[var18];
-                  var21Lifetime2 = param5.field_a[var18];
+                  var19 = param5.directionX[var18];
+                  var20 = param5.directionY[var18];
+                  var21Lifetime2 = param5.directionZ[var18];
                   wl.field_R[var18] = var21Lifetime2 * var15 + (var9 * var19 + var20 * var12) >> 16;
                   ff.field_f[var18] = var21Lifetime2 * var16 + var13 * var20 + var19 * var10 >> 16;
                   nn.field_h[var18] = var19 * var11 - (-(var20 * var14) - var21Lifetime2 * var17) >> 16;

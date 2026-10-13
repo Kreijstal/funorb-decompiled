@@ -69,7 +69,7 @@ final class HighscorePackSelector {
         if (obfuscationGuard != -99) {
           field_g = (String) null;
         }
-        RasterSnapshot snapshot = (RasterSnapshot) (fr.rasterSnapshotPool.removeLast(127));
+        RasterSnapshot snapshot = (RasterSnapshot) (Mesh3D.rasterSnapshotPool.removeLast(127));
         if (snapshot == null) {
           snapshot = new RasterSnapshot();
         }

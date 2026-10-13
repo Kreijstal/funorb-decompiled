@@ -7,7 +7,7 @@ final class gg extends IntrusiveNode {
     int field_r;
     int field_s;
     static RgbSprite field_o;
-    static fr[] field_i;
+    static Mesh3D[] logoMeshes;
     gg field_k;
     static byte[] field_q;
     static String field_l;
@@ -24,7 +24,7 @@ final class gg extends IntrusiveNode {
         field_m = null;
         field_p = null;
         field_l = null;
-        field_i = null;
+        logoMeshes = null;
     }
 
     gg(int param0, int param1, int param2, int param3, int param4) {

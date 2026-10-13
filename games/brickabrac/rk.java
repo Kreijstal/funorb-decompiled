@@ -242,62 +242,62 @@ final class rk extends mh {
         }
     }
 
-    final static dc[] a(BitPacketBuffer param0, int param1) {
-        int var5 = 0;
-        int var2_int = 0;
-        RuntimeException var2 = null;
-        int var3 = 0;
-        dc[] var4 = null;
-        int var6_int = 0;
-        dc var6 = null;
-        int var7 = 0;
-        Object stackIn_3_0 = null;
-        dc[] stackIn_13_0 = null;
-        RuntimeException stackIn_16_0 = null;
-        StringBuilder stackIn_16_1 = null;
-        String stackIn_17_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        var7 = BrickABrac.field_J ? 1 : 0;
+    final static MeshAttributeRecord[] decodeMeshAttributeRecords(BitPacketBuffer packet, int obfuscationGuard) {
+        int recordIndex = 0;
+        int version = 0;
+        RuntimeException failure = null;
+        int count = 0;
+        MeshAttributeRecord[] records = null;
+        int referenceIndex = 0;
+        MeshAttributeRecord record = null;
+        int unusedGameFlag = 0;
+        Object unsupportedResult = null;
+        MeshAttributeRecord[] result = null;
+        RuntimeException failureContext = null;
+        StringBuilder contextBuilder = null;
+        String packetSummary = null;
+        RuntimeException caughtFailure = null;
+        unusedGameFlag = BrickABrac.field_J ? 1 : 0;
         try {
-          var2_int = param0.readBits(8, (byte) -85);
-          if (var2_int > 0) {
-            stackIn_3_0 = null;
-            return (dc[]) (stackIn_3_0);
+          version = packet.readBits(8, (byte) -85);
+          if (version > 0) {
+            unsupportedResult = null;
+            return (MeshAttributeRecord[]) (unsupportedResult);
           }
-          if (param1 != 24) {
+          if (obfuscationGuard != 24) {
             field_Tb = (String) null;
           }
-          var3 = param0.readBits(12, (byte) 85);
-          var4 = new dc[var3];
-          for (var5 = 0; var5 < var3; var5++) {
-            if (DirectByteStorage.a(false, param0)) {
-              var6 = new dc();
-              param0.readBits(24, (byte) -115);
-              param0.readBits(24, (byte) 107);
-              var6.field_a = param0.readBits(24, (byte) -86);
-              param0.readBits(9, (byte) 110);
-              param0.readBits(12, (byte) -113);
-              param0.readBits(12, (byte) -91);
-              param0.readBits(12, (byte) -112);
-              var4[var5] = var6;
+          count = packet.readBits(12, (byte) 85);
+          records = new MeshAttributeRecord[count];
+          for (recordIndex = 0; recordIndex < count; recordIndex++) {
+            if (DirectByteStorage.readPacketFlag(false, packet)) {
+              record = new MeshAttributeRecord();
+              packet.readBits(24, (byte) -115);
+              packet.readBits(24, (byte) 107);
+              record.encodedWord24 = packet.readBits(24, (byte) -86);
+              packet.readBits(9, (byte) 110);
+              packet.readBits(12, (byte) -113);
+              packet.readBits(12, (byte) -91);
+              packet.readBits(12, (byte) -112);
+              records[recordIndex] = record;
             } else {
-              var6_int = param0.readBits(GameClock.a(-1 + var5, 15), (byte) 98);
-              var4[var5] = var4[var6_int];
+              referenceIndex = packet.readBits(GameClock.a(-1 + recordIndex, 15), (byte) 98);
+              records[recordIndex] = records[referenceIndex];
             }
           }
-          stackIn_13_0 = var4;
-          return stackIn_13_0;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var2 = decompiledCaughtException;
-          stackIn_16_0 = var2;
-          stackIn_16_1 = new StringBuilder().append("rk.B(");
-          if (param0 == null) {
-            stackIn_17_2 = "null";
+          result = records;
+          return result;
+        } catch (java.lang.RuntimeException caughtParameter) {
+          caughtFailure = caughtParameter;
+          failure = caughtFailure;
+          failureContext = failure;
+          contextBuilder = new StringBuilder().append("rk.B(");
+          if (packet == null) {
+            packetSummary = "null";
           } else {
-            stackIn_17_2 = "{...}";
+            packetSummary = "{...}";
           }
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param1).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) failureContext), ((StringBuilder) (Object) contextBuilder).append(packetSummary).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 

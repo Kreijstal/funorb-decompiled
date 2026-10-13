@@ -48,7 +48,7 @@ final class gq extends mh {
             this.field_Tb = 1;
             return this.field_Tb;
           }
-          if (dc.currentKeyCode == 85 &&
+          if (MeshAttributeRecord.currentKeyCode == 85 &&
             this.field_Vb.length() > 0) {
             MessageScreen.a(' ', this.field_Vb, -1 + this.field_Vb.length(), false);
           }
@@ -69,8 +69,8 @@ final class gq extends mh {
               }
             }
           }
-          if (dc.currentKeyCode != 84) {
-            if (dc.currentKeyCode == 13) {
+          if (MeshAttributeRecord.currentKeyCode != 84) {
+            if (MeshAttributeRecord.currentKeyCode == 13) {
               return 1;
             }
             continue;
@@ -100,7 +100,7 @@ final class gq extends mh {
         if (this.field_Tb != 0) {
           return false;
         }
-        if (dc.currentKeyCode != 85) {
+        if (MeshAttributeRecord.currentKeyCode != 85) {
           if (12 > this.field_Vb.length()) {
             var2 = Character.toLowerCase(go.currentKeyCharacter);
             if (var2 == 32) {
@@ -112,7 +112,7 @@ final class gq extends mh {
             }
             if (ni.b(true, (char) var2)) {
               discarded$7 = this.field_Vb.append((char) var2);
-              if (dc.currentKeyCode == 84) {
+              if (MeshAttributeRecord.currentKeyCode == 84) {
                 if (this.field_Vb.length() > 0) {
                   this.field_Mb = this.field_Vb.toString();
                   this.field_Tb = 2;
@@ -120,7 +120,7 @@ final class gq extends mh {
                   this.field_Tb = 1;
                 }
               }
-              if (dc.currentKeyCode != param0) {
+              if (MeshAttributeRecord.currentKeyCode != param0) {
                 return true;
               }
               this.field_Tb = 1;
@@ -128,7 +128,7 @@ final class gq extends mh {
             }
             if (eh.a((char) var2, (byte) 83)) {
               discarded$8 = this.field_Vb.append((char) var2);
-              if (dc.currentKeyCode == 84) {
+              if (MeshAttributeRecord.currentKeyCode == 84) {
                 if (this.field_Vb.length() > 0) {
                   this.field_Mb = this.field_Vb.toString();
                   this.field_Tb = 2;
@@ -136,13 +136,13 @@ final class gq extends mh {
                   this.field_Tb = 1;
                 }
               }
-              if (dc.currentKeyCode == param0) {
+              if (MeshAttributeRecord.currentKeyCode == param0) {
                 this.field_Tb = 1;
               }
               return true;
             }
           }
-          if (dc.currentKeyCode == 84) {
+          if (MeshAttributeRecord.currentKeyCode == 84) {
             if (this.field_Vb.length() <= 0) {
               this.field_Tb = 1;
             } else {
@@ -150,7 +150,7 @@ final class gq extends mh {
               this.field_Tb = 2;
             }
           }
-          if (dc.currentKeyCode == param0) {
+          if (MeshAttributeRecord.currentKeyCode == param0) {
             this.field_Tb = 1;
           }
           return true;
@@ -167,7 +167,7 @@ final class gq extends mh {
             }
             if (ni.b(true, (char) var2Lifetime1)) {
               discarded$4 = this.field_Vb.append((char) var2Lifetime1);
-              if (dc.currentKeyCode == 84) {
+              if (MeshAttributeRecord.currentKeyCode == 84) {
                 if (this.field_Vb.length() > 0) {
                   this.field_Mb = this.field_Vb.toString();
                   this.field_Tb = 2;
@@ -175,7 +175,7 @@ final class gq extends mh {
                   this.field_Tb = 1;
                 }
               }
-              if (dc.currentKeyCode != param0) {
+              if (MeshAttributeRecord.currentKeyCode != param0) {
                 return true;
               }
               this.field_Tb = 1;
@@ -183,7 +183,7 @@ final class gq extends mh {
             }
             if (eh.a((char) var2Lifetime1, (byte) 83)) {
               discarded$5 = this.field_Vb.append((char) var2Lifetime1);
-              if (dc.currentKeyCode == 84) {
+              if (MeshAttributeRecord.currentKeyCode == 84) {
                 if (this.field_Vb.length() > 0) {
                   this.field_Mb = this.field_Vb.toString();
                   this.field_Tb = 2;
@@ -191,13 +191,13 @@ final class gq extends mh {
                   this.field_Tb = 1;
                 }
               }
-              if (dc.currentKeyCode == param0) {
+              if (MeshAttributeRecord.currentKeyCode == param0) {
                 this.field_Tb = 1;
               }
               return true;
             }
           }
-          if (dc.currentKeyCode == 84) {
+          if (MeshAttributeRecord.currentKeyCode == 84) {
             if (this.field_Vb.length() <= 0) {
               this.field_Tb = 1;
             } else {
@@ -205,14 +205,14 @@ final class gq extends mh {
               this.field_Tb = 2;
             }
           }
-          if (dc.currentKeyCode == param0) {
+          if (MeshAttributeRecord.currentKeyCode == param0) {
             this.field_Tb = 1;
           }
           return true;
         }
         MessageScreen.a(' ', this.field_Vb, -1 + this.field_Vb.length(), false);
         if (12 <= this.field_Vb.length()) {
-          if (dc.currentKeyCode == 84) {
+          if (MeshAttributeRecord.currentKeyCode == 84) {
             if (this.field_Vb.length() <= 0) {
               this.field_Tb = 1;
             } else {
@@ -220,7 +220,7 @@ final class gq extends mh {
               this.field_Tb = 2;
             }
           }
-          if (dc.currentKeyCode != param0) {
+          if (MeshAttributeRecord.currentKeyCode != param0) {
             return true;
           }
           this.field_Tb = 1;
@@ -236,7 +236,7 @@ final class gq extends mh {
         }
         if (ni.b(true, (char) var2Lifetime2)) {
           discarded$2 = this.field_Vb.append((char) var2Lifetime2);
-          if (dc.currentKeyCode == 84) {
+          if (MeshAttributeRecord.currentKeyCode == 84) {
             if (this.field_Vb.length() > 0) {
               this.field_Mb = this.field_Vb.toString();
               this.field_Tb = 2;
@@ -244,17 +244,17 @@ final class gq extends mh {
               this.field_Tb = 1;
             }
           }
-          if (dc.currentKeyCode == param0) {
+          if (MeshAttributeRecord.currentKeyCode == param0) {
             this.field_Tb = 1;
           }
           return true;
         }
         if (eh.a((char) var2Lifetime2, (byte) 83)) {
           discarded$1 = this.field_Vb.append((char) var2Lifetime2);
-          if (dc.currentKeyCode == 84) {
+          if (MeshAttributeRecord.currentKeyCode == 84) {
             if (this.field_Vb.length() <= 0) {
               this.field_Tb = 1;
-              if (dc.currentKeyCode == param0) {
+              if (MeshAttributeRecord.currentKeyCode == param0) {
                 this.field_Tb = 1;
               }
               return true;
@@ -262,13 +262,13 @@ final class gq extends mh {
             this.field_Mb = this.field_Vb.toString();
             this.field_Tb = 2;
           }
-          if (dc.currentKeyCode != param0) {
+          if (MeshAttributeRecord.currentKeyCode != param0) {
             return true;
           }
           this.field_Tb = 1;
           return true;
         }
-        if (dc.currentKeyCode == 84) {
+        if (MeshAttributeRecord.currentKeyCode == 84) {
           if (this.field_Vb.length() <= 0) {
             this.field_Tb = 1;
           } else {
@@ -276,7 +276,7 @@ final class gq extends mh {
             this.field_Tb = 2;
           }
         }
-        if (dc.currentKeyCode != param0) {
+        if (MeshAttributeRecord.currentKeyCode != param0) {
           return true;
         }
         this.field_Tb = 1;

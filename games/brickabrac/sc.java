@@ -28,7 +28,7 @@ final class sc {
         Rasterizer2D.bind(snapshot.pixels, snapshot.width, snapshot.height);
         Rasterizer2D.setClip(snapshot.clipLeft, snapshot.clipTop, snapshot.clipRight, snapshot.clipBottom);
         snapshot.pixels = null;
-        fr.rasterSnapshotPool.addLast(snapshot, (byte) 3);
+        Mesh3D.rasterSnapshotPool.addLast(snapshot, (byte) 3);
     }
 
     static {

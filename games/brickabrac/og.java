@@ -1398,7 +1398,7 @@ final class og extends mh {
           }
           var2Lifetime169 = gr.a(true, "explain_extra_bricks");
           if (var2Lifetime169 != null) {
-            dc.field_d = MenuButton.a(var2Lifetime169, (byte) 111);
+            MeshAttributeRecord.field_d = MenuButton.a(var2Lifetime169, (byte) 111);
           }
           var2Lifetime170 = gr.a(true, "explain_grow");
           if (var2Lifetime170 != null) {
@@ -1533,7 +1533,7 @@ final class og extends mh {
         int var7 = 0;
         var7 = BrickABrac.field_J ? 1 : 0;
         try {
-          stackIn_5_0 = (dc.currentKeyCode != 85) ? 0 : 1;
+          stackIn_5_0 = (MeshAttributeRecord.currentKeyCode != 85) ? 0 : 1;
           var4_int = stackIn_5_0;
           if (this.field_Vb != null) {
             if (var4_int != 0 &&

@@ -91,7 +91,7 @@ final class AchievementsScreen extends AchievementBrowserScreen {
     }
 
     AchievementsScreen() {
-        super(8, fr.field_l);
+        super(8, Mesh3D.field_l);
         this.achievementMask = SecondaryHashTable.earnedAchievementMask;
     }
 

@@ -40,11 +40,11 @@ final class MenuSelection {
         this.keyCode = 0;
         this.activationCode = 0;
         if (~this.heldCode == obfuscationGuard) {
-          this.keyCode = dc.currentKeyCode;
+          this.keyCode = MeshAttributeRecord.currentKeyCode;
         }
         if (0 != this.heldCode) {
           if (this.heldCode == 0 &&
-            dc.currentKeyCode == 97) {
+            MeshAttributeRecord.currentKeyCode == 97) {
             this.selectedIndex = this.selectedIndex + 1;
             this.pointerDriven = false;
             if (this.itemCount <= this.selectedIndex) {
@@ -52,11 +52,11 @@ final class MenuSelection {
             }
           }
         } else {
-          if (96 != dc.currentKeyCode) {
+          if (96 != MeshAttributeRecord.currentKeyCode) {
             if (this.heldCode != 0) {
               if (this.heldCode == 0) {
-                if (dc.currentKeyCode != 98 &&
-                  dc.currentKeyCode != 99) {
+                if (MeshAttributeRecord.currentKeyCode != 98 &&
+                  MeshAttributeRecord.currentKeyCode != 99) {
                   return;
                 }
                 this.pointerDriven = false;
@@ -66,10 +66,10 @@ final class MenuSelection {
               }
               return;
             }
-            if (dc.currentKeyCode != 97) {
+            if (MeshAttributeRecord.currentKeyCode != 97) {
               if (this.heldCode == 0) {
-                if (dc.currentKeyCode != 98 &&
-                  dc.currentKeyCode != 99) {
+                if (MeshAttributeRecord.currentKeyCode != 98 &&
+                  MeshAttributeRecord.currentKeyCode != 99) {
                   return;
                 }
                 this.pointerDriven = false;
@@ -85,8 +85,8 @@ final class MenuSelection {
               this.selectedIndex = 0;
             }
             if (this.heldCode == 0) {
-              if (dc.currentKeyCode != 98 &&
-                dc.currentKeyCode != 99) {
+              if (MeshAttributeRecord.currentKeyCode != 98 &&
+                MeshAttributeRecord.currentKeyCode != 99) {
                 return;
               }
               this.pointerDriven = false;
@@ -100,7 +100,7 @@ final class MenuSelection {
             this.selectedIndex = this.selectedIndex - 1;
             this.pointerDriven = false;
             if (this.heldCode == 0 &&
-              dc.currentKeyCode == 97) {
+              MeshAttributeRecord.currentKeyCode == 97) {
               this.selectedIndex = this.selectedIndex + 1;
               this.pointerDriven = false;
               if (this.itemCount <= this.selectedIndex) {
@@ -108,8 +108,8 @@ final class MenuSelection {
               }
             }
             if (this.heldCode == 0) {
-              if (dc.currentKeyCode != 98 &&
-                dc.currentKeyCode != 99) {
+              if (MeshAttributeRecord.currentKeyCode != 98 &&
+                MeshAttributeRecord.currentKeyCode != 99) {
                 return;
               }
               this.pointerDriven = false;
@@ -126,7 +126,7 @@ final class MenuSelection {
             if (this.heldCode != 0) {
               return;
             }
-            if (dc.currentKeyCode == 98) {
+            if (MeshAttributeRecord.currentKeyCode == 98) {
               this.pointerDriven = false;
               if (0 <= this.selectedIndex) {
                 return;
@@ -134,7 +134,7 @@ final class MenuSelection {
               this.selectedIndex = fallbackIndex;
               return;
             }
-            if (dc.currentKeyCode != 99) {
+            if (MeshAttributeRecord.currentKeyCode != 99) {
               return;
             }
             this.pointerDriven = false;
@@ -143,11 +143,11 @@ final class MenuSelection {
             }
             return;
           }
-          if (dc.currentKeyCode != 97) {
+          if (MeshAttributeRecord.currentKeyCode != 97) {
             if (this.heldCode != 0) {
               return;
             }
-            if (dc.currentKeyCode == 98) {
+            if (MeshAttributeRecord.currentKeyCode == 98) {
               this.pointerDriven = false;
               if (0 <= this.selectedIndex) {
                 return;
@@ -155,7 +155,7 @@ final class MenuSelection {
               this.selectedIndex = fallbackIndex;
               return;
             }
-            if (dc.currentKeyCode != 99) {
+            if (MeshAttributeRecord.currentKeyCode != 99) {
               return;
             }
             this.pointerDriven = false;
@@ -168,8 +168,8 @@ final class MenuSelection {
           this.pointerDriven = false;
           if (this.itemCount > this.selectedIndex) {
             if (this.heldCode == 0) {
-              if (dc.currentKeyCode != 98 &&
-                dc.currentKeyCode != 99) {
+              if (MeshAttributeRecord.currentKeyCode != 98 &&
+                MeshAttributeRecord.currentKeyCode != 99) {
                 return;
               }
               this.pointerDriven = false;
@@ -184,8 +184,8 @@ final class MenuSelection {
         if (this.heldCode != 0) {
           return;
         }
-        if (dc.currentKeyCode != 98 &&
-          dc.currentKeyCode != 99) {
+        if (MeshAttributeRecord.currentKeyCode != 98 &&
+          MeshAttributeRecord.currentKeyCode != 99) {
           return;
         }
         this.pointerDriven = false;
@@ -200,10 +200,10 @@ final class MenuSelection {
         this.activationCode = 0;
         this.keyCode = 0;
         if (this.heldCode == 0) {
-          this.keyCode = dc.currentKeyCode;
+          this.keyCode = MeshAttributeRecord.currentKeyCode;
         }
         if (obfuscationGuard == ~this.heldCode &&
-          dc.currentKeyCode == 98) {
+          MeshAttributeRecord.currentKeyCode == 98) {
           if (this.selectedIndex <= 0) {
             this.selectedIndex = this.itemCount;
           }
@@ -213,7 +213,7 @@ final class MenuSelection {
         if (this.heldCode != 0) {
           return;
         }
-        if (dc.currentKeyCode != 99) {
+        if (MeshAttributeRecord.currentKeyCode != 99) {
           return;
         }
         this.selectedIndex = this.selectedIndex + 1;
@@ -576,7 +576,7 @@ final class MenuSelection {
           this.pressCode = 0;
           this.activationCode = 0;
           if (this.heldCode == 0) {
-            this.keyCode = dc.currentKeyCode;
+            this.keyCode = MeshAttributeRecord.currentKeyCode;
             return;
           }
           return;
@@ -587,7 +587,7 @@ final class MenuSelection {
         if (this.heldCode != 0) {
           return;
         }
-        this.keyCode = dc.currentKeyCode;
+        this.keyCode = MeshAttributeRecord.currentKeyCode;
     }
 
     final static int e(byte param0) {

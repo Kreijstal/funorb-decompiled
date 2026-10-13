@@ -525,7 +525,7 @@ final class JungleBackground extends BackgroundScene {
                   stackIn_261_0 = 1;
                 }
                 var16Lifetime1 = stackIn_261_0;
-                dc.field_g = true;
+                MeshAttributeRecord.field_g = true;
                 if (var16Lifetime1 == 0 &&
                   var9 >= 0 &&
                   br.field_bc != null && (!param2 ||
@@ -534,7 +534,7 @@ final class JungleBackground extends BackgroundScene {
                     h.field_D = new boolean[cq.field_p];
                     qo.field_J = new byte[cq.field_p];
                   }
-                  dc.field_g = false;
+                  MeshAttributeRecord.field_g = false;
                   MusicVoiceMixer.field_s = false;
                   var17_int = 0;
                   while (true) {
@@ -546,9 +546,9 @@ final class JungleBackground extends BackgroundScene {
                     ar.a(param2, param1, var9, -1, -1, 0, var7, 0);
                     if (2 <= kb.field_Yb &&
                       IntArrayRequest.heldKeys[12]) {
-                      dc.field_g = true;
+                      MeshAttributeRecord.field_g = true;
                     }
-                    if (dc.field_g) {
+                    if (MeshAttributeRecord.field_g) {
                       break;
                     }
                     var16Lifetime1 = 1;
@@ -660,7 +660,7 @@ final class JungleBackground extends BackgroundScene {
                     var21 = fe.field_ib;
                   }
                   if (var4_int != 0 &&
-                    !dc.field_g) {
+                    !MeshAttributeRecord.field_g) {
                     var22 = null;
                     var23 = 0;
                     if (MusicVoiceMixer.field_s) {
@@ -769,7 +769,7 @@ final class JungleBackground extends BackgroundScene {
                 if ((decompiledFrameRemainder0) &&
                   (decompiledFrameCompleted0)) {
                   stackIn_395_0 = var17;
-                  stackIn_396_1 = (dc.field_g) && ((byte)var9 == param1.field_Tb[var7]);
+                  stackIn_396_1 = (MeshAttributeRecord.field_g) && ((byte)var9 == param1.field_Tb[var7]);
                   stackIn_395_0.field_Nb = stackIn_396_1;
                 }
                 stackIn_401_0 = var17;

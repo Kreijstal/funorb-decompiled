@@ -45,11 +45,11 @@ abstract class InteractiveGameClient extends GameConnectionShell implements vc {
 
     final static boolean a(int param0, int param1, int param2) {
         boolean stackIn_10_0 = false;
-        if (dc.currentKeyCode == 13) {
+        if (MeshAttributeRecord.currentKeyCode == 13) {
           th.b(param1 ^ 103);
           return true;
         }
-        if (dc.currentKeyCode == param1) {
+        if (MeshAttributeRecord.currentKeyCode == param1) {
           hd.field_a.f((byte) 41);
           return true;
         }
@@ -243,7 +243,7 @@ abstract class InteractiveGameClient extends GameConnectionShell implements vc {
                   while (true) {
                     stackIn_39_0 = jl.pollKeyEvent((byte) 5);
                     if (stackIn_39_0) {
-                      stackIn_76_0 = dc.currentKeyCode;
+                      stackIn_76_0 = MeshAttributeRecord.currentKeyCode;
                       stackIn_76_1 = -1;
                       if (var5 != 0) {
                         if (stackIn_76_0 < stackIn_76_1) {
@@ -256,20 +256,20 @@ abstract class InteractiveGameClient extends GameConnectionShell implements vc {
                         break;
                       }
                       if (stackIn_76_0 == stackIn_76_1) {
-                        if (-1 == dc.currentKeyCode &&
+                        if (-1 == MeshAttributeRecord.currentKeyCode &&
                           var3 != -1) {
-                          dc.currentKeyCode = var3;
+                          MeshAttributeRecord.currentKeyCode = var3;
                           var3 = -1;
                         }
                       } else {
-                        if (uf.b(-102, dc.currentKeyCode)) {
-                          var3 = dc.currentKeyCode;
+                        if (uf.b(-102, MeshAttributeRecord.currentKeyCode)) {
+                          var3 = MeshAttributeRecord.currentKeyCode;
                           continue;
                         }
                       }
                       var4 = 0;
                       while (var4 < kp.field_d.size()) {
-                        stackIn_39_0 = ((vc) (kp.field_d.elementAt(var4))).handleGameKey(dc.currentKeyCode, go.currentKeyCharacter, -81);
+                        stackIn_39_0 = ((vc) (kp.field_d.elementAt(var4))).handleGameKey(MeshAttributeRecord.currentKeyCode, go.currentKeyCharacter, -81);
                         if (!stackIn_39_0) {
                           var4++;
                           continue;

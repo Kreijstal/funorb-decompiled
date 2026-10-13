@@ -11,84 +11,84 @@ final class hc {
     static String field_b;
     static int[] field_e;
 
-    final static fr a(int param0, BitPacketBuffer param1) {
-        int var7 = 0;
-        fr stackIn_26_0 = null;
-        RuntimeException stackIn_29_0 = null;
-        StringBuilder stackIn_29_1 = null;
-        String stackIn_30_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        int var2_int = 0;
-        RuntimeException var2 = null;
-        int var3 = 0;
-        int var4 = 0;
-        fr var5 = null;
-        int var6 = 0;
-        int var8 = 0;
-        var8 = BrickABrac.field_J ? 1 : 0;
+    final static Mesh3D decodeMesh(int zArrayLengthBits, BitPacketBuffer packet) {
+        int face = 0;
+        Mesh3D result = null;
+        RuntimeException failureContext = null;
+        StringBuilder contextBuilder = null;
+        String packetSummary = null;
+        RuntimeException caughtFailure = null;
+        int version = 0;
+        RuntimeException failure = null;
+        int hasDirections = 0;
+        int hasExtraChannels = 0;
+        Mesh3D mesh = null;
+        int maximumGroup = 0;
+        int unusedGameFlag = 0;
+        unusedGameFlag = BrickABrac.field_J ? 1 : 0;
         try {
-          var2_int = param1.readBits(8, (byte) 62);
-          if (0 < var2_int) {
-            throw new IllegalStateException("" + var2_int);
+          version = packet.readBits(8, (byte) 62);
+          if (0 < version) {
+            throw new IllegalStateException("" + version);
           }
-          var3 = DirectByteStorage.a(false, param1) ? 1 : 0;
-          var4 = DirectByteStorage.a(false, param1) ? 1 : 0;
-          var5 = new fr();
-          var5.field_w = (short)param1.readBits(16, (byte) -114);
-          var5.field_B = LevelList.a((byte) -67, var5.field_B, param1, 16);
-          var5.field_Q = LevelList.a((byte) -117, var5.field_Q, param1, 16);
-          var5.field_P = LevelList.a((byte) -110, var5.field_P, param1, param0);
-          var5.field_C = (short)param1.readBits(16, (byte) 79);
-          var5.field_G = LevelList.a((byte) -64, var5.field_G, param1, 16);
-          var5.field_b = LevelList.a((byte) -74, var5.field_b, param1, 16);
-          var5.field_c = LevelList.a((byte) -124, var5.field_c, param1, 16);
-          if (var3 != 0) {
-            var5.field_o = (short)param1.readBits(16, (byte) 52);
-            var5.field_n = LevelList.a((byte) -107, var5.field_n, param1, 16);
-            var5.field_H = LevelList.a((byte) -77, var5.field_H, param1, 16);
-            var5.field_a = LevelList.a((byte) -117, var5.field_a, param1, 16);
-            var5.field_v = LevelList.a((byte) -68, var5.field_v, param1, 16);
-            var5.field_h = LevelList.a((byte) -80, var5.field_h, param1, 16);
-            var5.field_t = LevelList.a((byte) -61, var5.field_t, param1, 16);
+          hasDirections = DirectByteStorage.readPacketFlag(false, packet) ? 1 : 0;
+          hasExtraChannels = DirectByteStorage.readPacketFlag(false, packet) ? 1 : 0;
+          mesh = new Mesh3D();
+          mesh.vertexCount = (short)packet.readBits(16, (byte) -114);
+          mesh.vertexX = LevelList.readPackedShortArray((byte) -67, mesh.vertexX, packet, 16);
+          mesh.vertexY = LevelList.readPackedShortArray((byte) -117, mesh.vertexY, packet, 16);
+          mesh.vertexZ = LevelList.readPackedShortArray((byte) -110, mesh.vertexZ, packet, zArrayLengthBits);
+          mesh.faceCount = (short)packet.readBits(16, (byte) 79);
+          mesh.faceVertexA = LevelList.readPackedShortArray((byte) -64, mesh.faceVertexA, packet, 16);
+          mesh.faceVertexB = LevelList.readPackedShortArray((byte) -74, mesh.faceVertexB, packet, 16);
+          mesh.faceVertexC = LevelList.readPackedShortArray((byte) -124, mesh.faceVertexC, packet, 16);
+          if (hasDirections != 0) {
+            mesh.directionCount = (short)packet.readBits(16, (byte) 52);
+            mesh.directionX = LevelList.readPackedShortArray((byte) -107, mesh.directionX, packet, 16);
+            mesh.directionY = LevelList.readPackedShortArray((byte) -77, mesh.directionY, packet, 16);
+            mesh.directionZ = LevelList.readPackedShortArray((byte) -117, mesh.directionZ, packet, 16);
+            mesh.field_v = LevelList.readPackedShortArray((byte) -68, mesh.field_v, packet, 16);
+            mesh.field_h = LevelList.readPackedShortArray((byte) -80, mesh.field_h, packet, 16);
+            mesh.field_t = LevelList.readPackedShortArray((byte) -61, mesh.field_t, packet, 16);
           }
-          if (var4 != 0) {
-            param1.readBits(16, (byte) 101);
-            var5.field_z = LevelList.a((byte) -122, var5.field_z, param1, 16);
-            var5.field_m = LevelList.a((byte) -92, var5.field_m, param1, 16);
-            var5.field_K = LevelList.a((byte) -123, var5.field_K, param1, 16);
-            var5.field_j = LevelList.a((byte) -104, var5.field_j, param1, 16);
-            var5.field_J = LevelList.a((byte) -124, var5.field_J, param1, 16);
+          if (hasExtraChannels != 0) {
+            packet.readBits(16, (byte) 101);
+            mesh.field_z = LevelList.readPackedShortArray((byte) -122, mesh.field_z, packet, 16);
+            mesh.field_m = LevelList.readPackedShortArray((byte) -92, mesh.field_m, packet, 16);
+            mesh.field_K = LevelList.readPackedShortArray((byte) -123, mesh.field_K, packet, 16);
+            mesh.field_j = LevelList.readPackedShortArray((byte) -104, mesh.field_j, packet, 16);
+            mesh.field_J = LevelList.readPackedShortArray((byte) -124, mesh.field_J, packet, 16);
           }
-          if (DirectByteStorage.a(false, param1)) {
-            var5.field_L = LevelList.a((byte) -65, var5.field_L, param1, 16);
+          if (DirectByteStorage.readPacketFlag(false, packet)) {
+            mesh.field_L = LevelList.readPackedShortArray((byte) -65, mesh.field_L, packet, 16);
           }
-          if (DirectByteStorage.a(false, param1)) {
-            var5.field_p = ri.a(var5.field_p, 16, param1, 20);
-            var6 = 0;
-            for (var7 = 0; var5.field_p.length > var7; var7++) {
-              if ((var5.field_p[var7] & 255) > var6) {
-                var6 = 255 & var5.field_p[var7];
+          if (DirectByteStorage.readPacketFlag(false, packet)) {
+            mesh.faceGroups = ri.readPackedByteArray(mesh.faceGroups, 16, packet, 20);
+            maximumGroup = 0;
+            for (face = 0; mesh.faceGroups.length > face; face++) {
+              if ((mesh.faceGroups[face] & 255) > maximumGroup) {
+                maximumGroup = 255 & mesh.faceGroups[face];
               }
             }
-            if (var6 != 0) {
-              var5.field_A = (byte)(1 + var6);
+            if (maximumGroup != 0) {
+              mesh.faceGroupCount = (byte)(1 + maximumGroup);
             } else {
-              var5.field_p = null;
+              mesh.faceGroups = null;
             }
           }
-          stackIn_26_0 = var5;
-          return stackIn_26_0;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var2 = decompiledCaughtException;
-          stackIn_29_0 = var2;
-          stackIn_29_1 = new StringBuilder().append("hc.C(").append(param0).append(',');
-          if (param1 == null) {
-            stackIn_30_2 = "null";
+          result = mesh;
+          return result;
+        } catch (java.lang.RuntimeException caughtParameter) {
+          caughtFailure = caughtParameter;
+          failure = caughtFailure;
+          failureContext = failure;
+          contextBuilder = new StringBuilder().append("hc.C(").append(zArrayLengthBits).append(',');
+          if (packet == null) {
+            packetSummary = "null";
           } else {
-            stackIn_30_2 = "{...}";
+            packetSummary = "{...}";
           }
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_29_0), ((StringBuilder) (Object) stackIn_29_1).append(stackIn_30_2).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) failureContext), ((StringBuilder) (Object) contextBuilder).append(packetSummary).append(')').toString());
         }
     }
 

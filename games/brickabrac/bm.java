@@ -9,7 +9,7 @@ final class bm {
     static String field_e;
     static int field_c;
 
-    final static void a(boolean param0, int param1, int param2, boolean param3, fr param4) {
+    final static void a(boolean param0, int param1, int param2, boolean param3, Mesh3D param4) {
         byte dupTemp$0 = 0;
         int stackIn_22_0 = 0;
         int stackIn_32_0 = 0;
@@ -48,17 +48,17 @@ final class bm {
           var6 = param1 * 3;
           PowerUpWarning.a(0);
           var7 = var5_int - 10;
-          if (param4.field_A > 0 &&
-            null != param4.field_p) {
+          if (param4.faceGroupCount > 0 &&
+            null != param4.faceGroups) {
             qi.a((byte) 109);
           }
           mc.field_c = 0;
           var8 = 0;
           boolean decompiledNaturalLoopExit0 = false;
-          while (!(decompiledNaturalLoopExit0 = (!(param4.field_C > var8)))) {
-            var9 = param4.field_G[var8];
-            var10 = param4.field_b[var8];
-            var11 = param4.field_c[var8];
+          while (!(decompiledNaturalLoopExit0 = (!(param4.faceCount > var8)))) {
+            var9 = param4.faceVertexA[var8];
+            var10 = param4.faceVertexB[var8];
+            var11 = param4.faceVertexC[var8];
             stackIn_41_0 = param0;
             if (var19 == 0) {
               if (stackIn_41_0) {
@@ -102,9 +102,9 @@ final class bm {
                         var18 = stackIn_32_0Lifetime1 + stackIn_32_1Lifetime1;
                         ek.field_jb[var18] = var8;
                         ArcticBackground.field_w[var16] = var17 + 1;
-                        if (param4.field_A > 0 &&
-                          param4.field_p != null) {
-                          dupTemp$0 = param4.field_p[var8];
+                        if (param4.faceGroupCount > 0 &&
+                          param4.faceGroups != null) {
+                          dupTemp$0 = param4.faceGroups[var8];
                           AppletGameShell.field_m[dupTemp$0] = AppletGameShell.field_m[dupTemp$0] + 1;
                         }
                         mc.field_c = mc.field_c + 1;
@@ -125,8 +125,8 @@ final class bm {
           if (stackIn_41_0) {
             field_e = (String) null;
           }
-          if (0 < param4.field_A &&
-            param4.field_p != null) {
+          if (0 < param4.faceGroupCount &&
+            param4.faceGroups != null) {
             var8Lifetime1 = 0;
             var9Lifetime1 = 0;
             while (!(var9Lifetime1 >= AppletGameShell.field_m.length)) {
@@ -154,7 +154,7 @@ final class bm {
         }
     }
 
-    final static void a(byte param0, ResourceArchive param1) {
+    final static void loadLogoMeshes(byte obfuscationGuard, ResourceArchive archive) {
         RuntimeException stackIn_20_0 = null;
         StringBuilder stackIn_20_1 = null;
         String stackIn_21_2 = null;
@@ -163,18 +163,18 @@ final class bm {
         RuntimeException var2_ref = null;
         int var3 = 0;
         int var4 = 0;
-        fr var5 = null;
+        Mesh3D var5 = null;
         int[] var6 = null;
         int var7 = 0;
         var7 = BrickABrac.field_J ? 1 : 0;
         try {
-          var2 = new BitPacketBuffer(param1.takeFileByName(-72, "logo.fo3d", ""));
-          var3 = var2.readUnsignedByte(param0 + 325);
-          var2.beginBitRead(param0 - 47);
-          um.field_o = rk.a(var2, 24);
-          gg.field_i = new fr[var3];
-          BoundedFile.field_e = new int[var3][];
-          if (param0 != -70) {
+          var2 = new BitPacketBuffer(archive.takeFileByName(-72, "logo.fo3d", ""));
+          var3 = var2.readUnsignedByte(obfuscationGuard + 325);
+          var2.beginBitRead(obfuscationGuard - 47);
+          um.field_o = rk.decodeMeshAttributeRecords(var2, 24);
+          gg.logoMeshes = new Mesh3D[var3];
+          BoundedFile.logoOriginalCenters = new int[var3][];
+          if (obfuscationGuard != -70) {
             return;
           }
           var4 = 0;
@@ -183,17 +183,17 @@ final class bm {
               var2.finishBitRead((byte) 116);
               break;
             }
-            gg.field_i[var4] = hc.a(16, var2);
+            gg.logoMeshes[var4] = hc.decodeMesh(16, var2);
             var4++;
           } while (var7 == 0);
           var4 = 0;
           while (var4 < var3) {
-            var5 = gg.field_i[var4];
-            var5.a(6, 127, 1, 6, 6);
-            var5.c(param0 + 93);
-            var6 = new int[]{var5.field_N + var5.field_f >> 1, var5.field_d + var5.field_y >> 1, var5.field_x + var5.field_q >> 1};
-            BoundedFile.field_e[var4] = var6;
-            var5.a(-var6[2], param0 ^ -70, -var6[0], -var6[1]);
+            var5 = gg.logoMeshes[var4];
+            var5.scaleVertices(6, 127, 1, 6, 6);
+            var5.ensureBounds(obfuscationGuard + 93);
+            var6 = new int[]{var5.maxX + var5.minX >> 1, var5.maxY + var5.minY >> 1, var5.maxZ + var5.minZ >> 1};
+            BoundedFile.logoOriginalCenters[var4] = var6;
+            var5.translateVerticesFrom(-var6[2], obfuscationGuard ^ -70, -var6[0], -var6[1]);
             var4++;
             if (var7 != 0) {
               return;
@@ -204,8 +204,8 @@ final class bm {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
           stackIn_20_0 = var2_ref;
-          stackIn_20_1 = new StringBuilder().append("bm.E(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_20_1 = new StringBuilder().append("bm.E(").append(obfuscationGuard).append(',');
+          if (archive == null) {
             stackIn_21_2 = "null";
           } else {
             stackIn_21_2 = "{...}";
@@ -303,7 +303,7 @@ final class bm {
               if (alternateLoopFlag != event.eventCode) {
                 if (event.eventCode != 0) {
                   if (event.eventCode == 2) {
-                    sound = fr.field_e[ChocolateBackground.field_w.nextBoundedInt(-37880252, fr.field_e.length)];
+                    sound = Mesh3D.field_e[ChocolateBackground.field_w.nextBoundedInt(-37880252, Mesh3D.field_e.length)];
                   } else {
                     if (event.eventCode != 4) {
                       if (event.eventCode == 5) {

@@ -1,67 +1,67 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class fr {
-    byte[] field_p;
-    short[] field_n;
+final class Mesh3D {
+    byte[] faceGroups;
+    short[] directionX;
     int[] field_s;
-    int field_d;
-    byte field_A;
-    int field_y;
-    short field_C;
+    int maxY;
+    byte faceGroupCount;
+    int minY;
+    short faceCount;
     int[] field_I;
     short[] field_L;
-    short[] field_P;
+    short[] vertexZ;
     int[] field_i;
-    short[] field_H;
+    short[] directionY;
     short[] field_m;
     short[] field_z;
     int[] field_O;
     short[] field_K;
     short[] field_v;
     int[] field_u;
-    short field_o;
+    short directionCount;
     short[] field_J;
-    short[] field_Q;
-    int field_x;
-    int field_f;
+    short[] vertexY;
+    int maxZ;
+    int minX;
     int[] field_D;
     int[] field_F;
-    int field_q;
-    int field_N;
+    int minZ;
+    int maxX;
     short[] field_h;
     int[] field_g;
     int[] field_E;
-    short[] field_c;
+    short[] faceVertexC;
     short[] field_j;
-    short[] field_b;
-    short field_w;
-    private boolean field_r;
+    short[] faceVertexB;
+    short vertexCount;
+    private boolean boundsValid;
     static NodeDeque rasterSnapshotPool;
-    short[] field_a;
-    short[] field_G;
+    short[] directionZ;
+    short[] faceVertexA;
     static int field_k;
-    short[] field_B;
+    short[] vertexX;
     static int[] field_l;
     static PcmSound[] field_e;
     short[] field_t;
 
     final static boolean a(byte param0) {
         if (param0 <= 33) {
-          fr.d(-80);
+          Mesh3D.d(-80);
         }
         return NanoGameClock.field_l;
     }
 
-    final void a(int param0, int param1, int param2, int param3) {
-        int var5 = 0;
-        int var6 = BrickABrac.field_J ? 1 : 0;
-        for (var5 = param1; this.field_w > var5; var5++) {
-          this.field_B[var5] = (short)(this.field_B[var5] + param2);
-          this.field_Q[var5] = (short)(this.field_Q[var5] + param3);
-          this.field_P[var5] = (short)(this.field_P[var5] + param0);
+    final void translateVerticesFrom(int deltaZ, int firstVertex, int deltaX, int deltaY) {
+        int vertex = 0;
+        int unusedGameFlag = BrickABrac.field_J ? 1 : 0;
+        for (vertex = firstVertex; this.vertexCount > vertex; vertex++) {
+          this.vertexX[vertex] = (short)(this.vertexX[vertex] + deltaX);
+          this.vertexY[vertex] = (short)(this.vertexY[vertex] + deltaY);
+          this.vertexZ[vertex] = (short)(this.vertexZ[vertex] + deltaZ);
         }
-        this.b(-107);
+        this.invalidateBounds(-107);
     }
 
     final static void a(ResourceArchive param0, byte param1) {
@@ -115,18 +115,18 @@ final class fr {
         }
     }
 
-    final void a(int param0, int param1, int param2, int param3, int param4) {
-        int var6 = 0;
-        int var7 = BrickABrac.field_J ? 1 : 0;
-        if (param1 <= 124) {
+    final void scaleVertices(int scaleX, int obfuscationGuard, int divisor, int scaleZ, int scaleY) {
+        int vertex = 0;
+        int unusedGameFlag = BrickABrac.field_J ? 1 : 0;
+        if (obfuscationGuard <= 124) {
           return;
         }
-        for (var6 = 0; var6 < this.field_w; var6++) {
-          this.field_B[var6] = (short)(param0 * this.field_B[var6] / param2);
-          this.field_Q[var6] = (short)(param4 * this.field_Q[var6] / param2);
-          this.field_P[var6] = (short)(param3 * this.field_P[var6] / param2);
+        for (vertex = 0; vertex < this.vertexCount; vertex++) {
+          this.vertexX[vertex] = (short)(scaleX * this.vertexX[vertex] / divisor);
+          this.vertexY[vertex] = (short)(scaleY * this.vertexY[vertex] / divisor);
+          this.vertexZ[vertex] = (short)(scaleZ * this.vertexZ[vertex] / divisor);
         }
-        this.b(-122);
+        this.invalidateBounds(-122);
     }
 
     public static void b(byte param0) {
@@ -138,10 +138,10 @@ final class fr {
         field_l = null;
     }
 
-    private final void b(int param0) {
-        this.field_r = false;
-        if (param0 >= -84) {
-          this.b(-62);
+    private final void invalidateBounds(int obfuscationGuard) {
+        this.boundsValid = false;
+        if (obfuscationGuard >= -84) {
+          this.invalidateBounds(-62);
         }
     }
 
@@ -185,61 +185,61 @@ final class fr {
         }
     }
 
-    final void c(int param0) {
-        int var8 = 0;
-        int var2;
-        int var3;
-        int var4;
-        int var5;
-        int var6;
-        int var7;
-        int var9;
-        int var10;
-        int var11;
-        int var12;
-        var12 = BrickABrac.field_J ? 1 : 0;
-        if (this.field_r) {
+    final void ensureBounds(int obfuscationGuard) {
+        int vertex = 0;
+        int minimumX;
+        int minimumY;
+        int minimumZ;
+        int maximumX;
+        int maximumY;
+        int maximumZ;
+        int x;
+        int y;
+        int z;
+        int unusedGameFlag;
+        unusedGameFlag = BrickABrac.field_J ? 1 : 0;
+        if (this.boundsValid) {
           return;
         }
-        this.field_r = true;
-        var2 = 32767;
-        var3 = 32767;
-        var4 = 32767;
-        var5 = -32768;
-        if (param0 != 23) {
+        this.boundsValid = true;
+        minimumX = 32767;
+        minimumY = 32767;
+        minimumZ = 32767;
+        maximumX = -32768;
+        if (obfuscationGuard != 23) {
           return;
         }
-        var6 = -32768;
-        var7 = -32768;
-        for (var8 = 0; this.field_w > var8; var8++) {
-          var9 = this.field_B[var8];
-          var10 = this.field_Q[var8];
-          var11 = this.field_P[var8];
-          if (var10 < var3) {
-            var3 = var10;
+        maximumY = -32768;
+        maximumZ = -32768;
+        for (vertex = 0; this.vertexCount > vertex; vertex++) {
+          x = this.vertexX[vertex];
+          y = this.vertexY[vertex];
+          z = this.vertexZ[vertex];
+          if (y < minimumY) {
+            minimumY = y;
           }
-          if (var10 > var6) {
-            var6 = var10;
+          if (y > maximumY) {
+            maximumY = y;
           }
-          if (var9 < var2) {
-            var2 = var9;
+          if (x < minimumX) {
+            minimumX = x;
           }
-          if (var9 > var5) {
-            var5 = var9;
+          if (x > maximumX) {
+            maximumX = x;
           }
-          if (var7 < var11) {
-            var7 = var11;
+          if (maximumZ < z) {
+            maximumZ = z;
           }
-          if (var11 < var4) {
-            var4 = var11;
+          if (z < minimumZ) {
+            minimumZ = z;
           }
         }
-        this.field_x = var7;
-        this.field_f = var2;
-        this.field_y = var3;
-        this.field_q = var4;
-        this.field_d = var6;
-        this.field_N = var5;
+        this.maxZ = maximumZ;
+        this.minX = minimumX;
+        this.minY = minimumY;
+        this.minZ = minimumZ;
+        this.maxY = maximumY;
+        this.maxX = maximumX;
     }
 
     final static void a(boolean param0, String param1, String param2) {
@@ -262,9 +262,9 @@ final class fr {
         rj.field_c.b((byte) 120, o.field_c);
     }
 
-    fr() {
-        this.field_A = (byte) 0;
-        this.field_r = false;
+    Mesh3D() {
+        this.faceGroupCount = (byte) 0;
+        this.boundsValid = false;
     }
 
     static {

@@ -142,7 +142,7 @@ final class br extends mh {
         if (-2 != this.field_dc) {
           return false;
         }
-        if (dc.currentKeyCode == 13) {
+        if (MeshAttributeRecord.currentKeyCode == 13) {
           this.field_dc = -1;
           var2 = -81 % ((-25 - param0) / 41);
           return true;

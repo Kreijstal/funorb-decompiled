@@ -355,7 +355,7 @@ public final class BrickABrac extends InteractiveGameClient {
                 if (IntrusiveHashTable.currentPacketOpcode == 70) {
                   IntArrayRequest.gameplayScreen.match.field_j = packet.readUnsignedByte(255);
                   if (IntArrayRequest.gameplayScreen != null) {
-                    fr.a(1);
+                    Mesh3D.a(1);
                   }
                   return true;
                 }
@@ -363,7 +363,7 @@ public final class BrickABrac extends InteractiveGameClient {
                 if (decompiledFrameRemainder0) {
                   IntArrayRequest.gameplayScreen.field_v = packet.readUnsignedByte(255);
                   if (IntArrayRequest.gameplayScreen != null) {
-                    fr.a(1);
+                    Mesh3D.a(1);
                   }
                   return true;
                 }
@@ -424,7 +424,7 @@ public final class BrickABrac extends InteractiveGameClient {
           }
           if (IntrusiveHashTable.currentPacketOpcode == 64) {
             AchievementIcon.c((byte) 32);
-            fr.a(obfuscationGuard ^ 46);
+            Mesh3D.a(obfuscationGuard ^ 46);
           }
           ed.field_d = false;
           r.field_A = false;
@@ -748,8 +748,8 @@ public final class BrickABrac extends InteractiveGameClient {
         um.a(31292);
         mg.b();
         VorbisSample.releaseScratch();
-        dc.a(-9669);
-        fr.b((byte) -52);
+        MeshAttributeRecord.a(-9669);
+        Mesh3D.b((byte) -52);
         sh.a(125);
         fm.a((byte) 68);
         gj.a(-27956);
