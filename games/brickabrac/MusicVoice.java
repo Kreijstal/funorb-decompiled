@@ -88,7 +88,7 @@ final class MusicVoice extends IntrusiveNode {
           LevelCompleteScreen.field_J = param0;
           if (!th.field_h &&
             go.field_e < MonotonicTime.field_e &&
-            kb.pointerChanged) {
+            QuickChatHelpDialog.pointerChanged) {
             b.field_a = ChocolateBackground.field_v;
             go.field_e = 0;
             CappedUrlRequest.field_j = ll.field_b;
@@ -229,8 +229,8 @@ final class MusicVoice extends IntrusiveNode {
           if (decompiledFrameCompleted0) {
             stackIn_68_0 = (ScrollPane) (param1);
             stackIn_68_1 = 2;
-            stackIn_68_2 = param3 * 4 * (2 + np.field_a);
-            stackIn_68_3 = np.field_a * 2 + 4;
+            stackIn_68_2 = param3 * 4 * (2 + np.uiRowHeight);
+            stackIn_68_3 = np.uiRowHeight * 2 + 4;
             stackIn_68_4 = 22676;
             stackIn_68_5 = param0;
             stackIn_69_6 = (param1 == o.field_b);
@@ -333,7 +333,7 @@ final class MusicVoice extends IntrusiveNode {
                 } else {
                   var13.field_Rb.text = rd.a(ce.field_g, new String[]{var21}, (byte) 103);
                   var13.field_Vb.text = JungleBackground.field_t;
-                  var13.field_cc.text = gq.field_Wb;
+                  var13.field_cc.text = NameEntryPopup.field_Wb;
                 }
               } else {
                 var13.field_Rb.text = rd.a(ll.field_a, new String[]{var21}, (byte) 103);
@@ -345,7 +345,7 @@ final class MusicVoice extends IntrusiveNode {
                 ~oc.field_p != ~var13.field_gc) {
                 if (null != var13.field_Vb.text) {
                   var27 = var13.field_Vb.getContentWidth(123) + 2 * om.field_oc;
-                  var13.field_Vb.setBounds(np.field_a, var20, var26_int, var27, (byte) 64);
+                  var13.field_Vb.setBounds(np.uiRowHeight, var20, var26_int, var27, (byte) 64);
                   var26_int = var26_int + var27;
                 }
                 if (var13.field_cc.text != null) {
@@ -354,12 +354,12 @@ final class MusicVoice extends IntrusiveNode {
                   } else {
                     var27Lifetime2 = var13.field_cc.getContentWidth(99) + 2 * om.field_oc;
                   }
-                  var13.field_cc.setBounds(np.field_a, var20, var26_int, var27Lifetime2, (byte) 64);
+                  var13.field_cc.setBounds(np.uiRowHeight, var20, var26_int, var27Lifetime2, (byte) 64);
                   var26_int = var26_int + var27Lifetime2;
                 }
               }
               stackIn_155_0 = var13.field_Rb;
-              stackIn_155_1 = np.field_a;
+              stackIn_155_1 = np.uiRowHeight;
               stackIn_155_2 = var20;
               stackIn_155_3 = var26_int;
               if (vd.field_e) {
@@ -369,7 +369,7 @@ final class MusicVoice extends IntrusiveNode {
               }
               ((UiComponent) (Object) stackIn_155_0).setBounds(stackIn_155_1, stackIn_155_2, stackIn_155_3, -stackIn_156_4 + var13.width - var26_int, (byte) 64);
               var13.field_dc.text = Integer.toString(var13.field_Wb);
-              var13.field_dc.setBounds(np.field_a, var20, -40 + var13.width, 40, (byte) 64);
+              var13.field_dc.setBounds(np.uiRowHeight, var20, -40 + var13.width, 40, (byte) 64);
               if (var13.field_Rb.activeInside &&
                 var23 != 0) {
                 ep.field_e = var13.field_Yb;
@@ -384,15 +384,15 @@ final class MusicVoice extends IntrusiveNode {
                   ep.field_e = PacketBuffer.field_i[var13.field_Zb];
                 }
               }
-              var20 = var20 + np.field_a;
+              var20 = var20 + np.uiRowHeight;
             }
             var24 = SoundPlayback.a((byte) -110, var21, var13.field_kc);
             if (null != var24) {
               var25_intLifetime1 = var13.field_Tb.font.countWrappedLines(var24, -om.field_oc + var13.width - om.field_oc);
               var13.field_Tb.textAlpha256 = var13.field_ic * 256 / cm.field_o;
               var13.field_Tb.text = var24;
-              var13.field_Tb.setBounds(var25_intLifetime1 * np.field_a, var20, om.field_oc, var13.width - 2 * om.field_oc, (byte) 64);
-              var20 = var20 + np.field_a * var25_intLifetime1;
+              var13.field_Tb.setBounds(var25_intLifetime1 * np.uiRowHeight, var20, om.field_oc, var13.width - 2 * om.field_oc, (byte) 64);
+              var20 = var20 + np.uiRowHeight * var25_intLifetime1;
             }
             if (var9 == 0) {
               var13.remainingHeight = var20 - var13.height;
@@ -543,7 +543,7 @@ final class MusicVoice extends IntrusiveNode {
                     if (var27Lifetime1 == 0) {
                       var25 = (String) (var25) + "<br>" + rd.a(id.field_bc, new String[]{(String) (var26)}, (byte) 103);
                     } else {
-                      var25 = (String) (var25) + "<br>" + kb.field_Rb + (String) (var26);
+                      var25 = (String) (var25) + "<br>" + QuickChatHelpDialog.field_Rb + (String) (var26);
                     }
                   }
                   break;

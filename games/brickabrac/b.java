@@ -14,7 +14,7 @@ final class b {
         }
         try {
           param1.removeFocusListener(PowerUpWarning.mouseInput);
-          kb.liveHeldButton = 0;
+          QuickChatHelpDialog.liveHeldButton = 0;
         } catch (RuntimeException runtimeException) {
           throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "b.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

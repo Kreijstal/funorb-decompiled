@@ -106,8 +106,8 @@ final class MatchCompleteScreen extends MatchResultScreen {
         try {
           for (var2_int = param1; var2_int < param0.length(); var2_int++) {
             var3 = param0.charAt(var2_int);
-            if (!StateIconLabel.b(true, (char) var3) &&
-              !eh.a((char) var3, (byte) 95)) {
+            if (!StateIconLabel.isAsciiLetter(true, (char) var3) &&
+              !eh.isAsciiDigit((char) var3, (byte) 95)) {
               return true;
             }
           }

@@ -33,7 +33,7 @@ class r extends um {
           if (param0 < 72) {
             r.a((byte) 33, 79);
           }
-          var2_int = qp.a(kb.field_Yb, gh.field_f, (byte) -22);
+          var2_int = qp.a(QuickChatHelpDialog.field_Yb, gh.field_f, (byte) -22);
           if (var2_int == 1) {
             param1 = "<img=0>" + param1;
           }
@@ -66,7 +66,7 @@ class r extends um {
           if (GameConnectionShell.clientStage < 20) {
             return true;
           }
-          if (!kb.i(7457)) {
+          if (!QuickChatHelpDialog.i(7457)) {
             return true;
           }
           if (OptionsScreen.field_x <= 0) {
@@ -80,7 +80,7 @@ class r extends um {
         if (GameConnectionShell.clientStage < 20) {
           return true;
         }
-        if (!kb.i(7457)) {
+        if (!QuickChatHelpDialog.i(7457)) {
           return true;
         }
         if (OptionsScreen.field_x <= 0) {

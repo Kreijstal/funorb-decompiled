@@ -288,7 +288,7 @@ abstract class jc extends ib {
             kf.field_k = param0;
             ga.field_i = 6;
             if (0 == BitPacketBuffer.field_q &&
-              !kb.field_Sb) {
+              !QuickChatHelpDialog.field_Sb) {
               ga.field_i = 5;
               tb.field_eb = tb.field_db + "<br><br>" + sl.field_A[kf.field_k];
             } else {
@@ -297,7 +297,7 @@ abstract class jc extends ib {
             }
             pp.field_a = -1;
             BitPacketBuffer.field_q = BitPacketBuffer.field_q | 1 << param0;
-            kb.field_Sb = true;
+            QuickChatHelpDialog.field_Sb = true;
             SpriteGeometry.field_v = MembershipBenefitsScreen.clientTick;
             return;
           }
@@ -352,7 +352,7 @@ abstract class jc extends ib {
                 ArchiveNetworkRequest.field_G = pp.field_a;
                 ga.field_i = 10;
                 rf.field_f = true;
-                tb.field_eb = kb.field_Tb;
+                tb.field_eb = QuickChatHelpDialog.field_Tb;
                 pp.field_a = -1;
                 return;
               }

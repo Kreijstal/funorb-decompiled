@@ -19,7 +19,7 @@ final class MusicCrossfadeStream extends AudioStream {
     private MidiSynthesizer secondarySynthesizer;
     static String field_B;
     private boolean returnWhenTrackEnds;
-    static gq field_m;
+    static NameEntryPopup nameEntryPopup;
     static volatile boolean field_A;
     static String field_w;
 
@@ -363,7 +363,7 @@ final class MusicCrossfadeStream extends AudioStream {
           MusicCrossfadeStream.c(-21);
         }
         field_B = null;
-        field_m = null;
+        nameEntryPopup = null;
         field_n = null;
         field_w = null;
     }

@@ -24,18 +24,18 @@ final class SoundCache {
         Object var6Lifetime1;
         Object var6Lifetime2;
         var3 = -76 / ((81 - param0) / 37);
-        if (MusicCrossfadeStream.field_m != null) {
-          var4 = MusicCrossfadeStream.field_m.a(param2, (byte) 95);
+        if (MusicCrossfadeStream.nameEntryPopup != null) {
+          var4 = MusicCrossfadeStream.nameEntryPopup.updateAndPollNameInput(param2, (byte) 95);
           if (var4 != 0) {
             if (2 == var4 &&
-              MusicCrossfadeStream.field_m.text != null &&
-              !MusicCrossfadeStream.field_m.text.equals("")) {
-              if (MusicCrossfadeStream.field_m.text.charAt(0) == 91) {
-                var5 = MusicCrossfadeStream.field_m.text;
+              MusicCrossfadeStream.nameEntryPopup.text != null &&
+              !MusicCrossfadeStream.nameEntryPopup.text.equals("")) {
+              if (MusicCrossfadeStream.nameEntryPopup.text.charAt(0) == 91) {
+                var5 = MusicCrossfadeStream.nameEntryPopup.text;
                 var6 = var5;
                 var6Lifetime2 = var5;
               } else {
-                var8 = (CharSequence) ((Object) MusicCrossfadeStream.field_m.text);
+                var8 = (CharSequence) ((Object) MusicCrossfadeStream.nameEntryPopup.text);
                 var5 = gb.a(var8, 57);
               }
               var6Lifetime1 = null;
@@ -56,10 +56,10 @@ final class SoundCache {
                 SoundCache.a((byte) 92, 0, (String) null, (String) (var6Lifetime1), var5, 2);
               }
               GameUiController.field_d = -1;
-              MusicCrossfadeStream.field_m = null;
+              MusicCrossfadeStream.nameEntryPopup = null;
             } else {
               GameUiController.field_d = -1;
-              MusicCrossfadeStream.field_m = null;
+              MusicCrossfadeStream.nameEntryPopup = null;
             }
           }
         }
@@ -298,7 +298,7 @@ final class SoundCache {
               um.ensureGamePacketBody((byte) -80)) {
               sl.field_v = jl.incomingPackets.readLong(-32768);
               gd.field_b = param5;
-              kb.field_Yb = jl.incomingPackets.readUnsignedByte(255);
+              QuickChatHelpDialog.field_Yb = jl.incomingPackets.readUnsignedByte(255);
               gh.field_f = jl.incomingPackets.readUnsignedByte(255);
               go.field_c = jl.incomingPackets.readUnsignedShort(65280);
               var11 = jl.incomingPackets.readNullableCp1252String(0);

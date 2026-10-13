@@ -83,7 +83,7 @@ final class MessageScreen extends MenuScreen {
           return;
         }
         var8 = (StringBuilder) null;
-        MessageScreen.a('￰', (StringBuilder) null, -124, false);
+        MessageScreen.resizeAndFillTextBuffer('￰', (StringBuilder) null, -124, false);
         cf.field_c[wi.field_m] = param2;
         VerticalScrollbar.field_Pb[wi.field_m] = wi.field_m;
         ec.field_N[wi.field_m] = param0;
@@ -134,7 +134,7 @@ final class MessageScreen extends MenuScreen {
           ng.field_b = param2;
           DualLinkNode.field_p = param0;
           var5 = (CharSequence) ((Object) param0);
-          kb.field_Qb = gb.a(var5, param2 ^ 103);
+          QuickChatHelpDialog.field_Qb = gb.a(var5, param2 ^ 103);
           qn.field_n = param1;
           MatchResultScreen.field_s = true;
         } catch (RuntimeException runtimeException) {
@@ -152,11 +152,11 @@ final class MessageScreen extends MenuScreen {
           return;
         }
         StringBuilder var5 = (StringBuilder) null;
-        MessageScreen.a('3', (StringBuilder) null, 57, true);
+        MessageScreen.resizeAndFillTextBuffer('3', (StringBuilder) null, 57, true);
         super.onEnter(usePointer, initialSelection, 103);
     }
 
-    final static StringBuilder a(char param0, StringBuilder param1, int param2, boolean param3) {
+    final static StringBuilder resizeAndFillTextBuffer(char fillCharacter, StringBuilder buffer, int length, boolean returnNull) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -169,30 +169,30 @@ final class MessageScreen extends MenuScreen {
         RuntimeException decompiledCaughtException = null;
         var6 = BrickABrac.field_J ? 1 : 0;
         try {
-          var4_int = param1.length();
-          param1.setLength(param2);
+          var4_int = buffer.length();
+          buffer.setLength(length);
           var5 = var4_int;
-          if (param3) {
+          if (returnNull) {
             stackIn_3_0 = (StringBuilder) null;
             return stackIn_3_0;
           }
-          while (param2 > var5) {
-            param1.setCharAt(var5, param0);
+          while (length > var5) {
+            buffer.setCharAt(var5, fillCharacter);
             var5++;
           }
-          stackIn_7_0 = (StringBuilder) (param1);
+          stackIn_7_0 = (StringBuilder) (buffer);
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
           stackIn_10_0 = var4;
-          stackIn_10_1 = new StringBuilder().append("uk.C(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_10_1 = new StringBuilder().append("uk.C(").append(fillCharacter).append(',');
+          if (buffer == null) {
             stackIn_11_2 = "null";
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(length).append(',').append(returnNull).append(')').toString());
         }
     }
 

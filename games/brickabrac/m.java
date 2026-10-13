@@ -35,7 +35,7 @@ final class m {
         return false;
     }
 
-    final static boolean a(boolean param0, char param1) {
+    final static boolean isNameCharacter(boolean obfuscationGuard, char character) {
         char[] var2 = null;
         int var3 = 0;
         int var4 = 0;
@@ -48,31 +48,31 @@ final class m {
         int var4Lifetime1;
         var5 = BrickABrac.field_J ? 1 : 0;
         try {
-          if (Character.isISOControl(param1)) {
+          if (Character.isISOControl(character)) {
             return false;
           }
-          if (AlignedIconLabel.a((byte) -125, param1)) {
+          if (AlignedIconLabel.isAsciiAlphanumeric((byte) -125, character)) {
             return true;
           }
-          if (!param0) {
+          if (!obfuscationGuard) {
             m.a(-100);
           }
-          var6 = ce.field_f;
+          var6 = ce.nameCharacterExtensions;
           var2 = var6;
           for (var3 = 0; var6.length > var3; var3++) {
             var4 = var6[var3];
-            if (~param1 == ~var4) {
+            if (~character == ~var4) {
               return true;
             }
           }
-          var2Lifetime1 = IntrusiveHashTable.field_n;
+          var2Lifetime1 = IntrusiveHashTable.nameSyntaxCharacters;
           var3Lifetime1 = 0;
           while (true) {
             if (var2Lifetime1.length <= var3Lifetime1) {
               return false;
             }
             var4Lifetime1 = var2Lifetime1[var3Lifetime1];
-            if (var4Lifetime1 != param1) {
+            if (var4Lifetime1 != character) {
               var3Lifetime1++;
               continue;
             }
@@ -82,7 +82,7 @@ final class m {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) var2_ref), "m.D(" + param0 + ',' + param1 + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) var2_ref), "m.D(" + obfuscationGuard + ',' + character + ')');
         }
     }
 
@@ -98,9 +98,9 @@ final class m {
             return false;
           }
           if (ng.field_b == 2 &&
-            kb.field_Qb != null) {
+            QuickChatHelpDialog.field_Qb != null) {
             var3 = (CharSequence) ((Object) param1);
-            if (kb.field_Qb.equals(gb.a(var3, param0 - 13073))) {
+            if (QuickChatHelpDialog.field_Qb.equals(gb.a(var3, param0 - 13073))) {
               if (param0 == 13134) {
                 return true;
               }

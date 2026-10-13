@@ -49,7 +49,7 @@ final class ArchiveNetworkClient extends ArchiveFetchClient {
           if (var4 != null) {
             var5.drawTransparent(-3 + (640 - (var4.canvasWidth + var5.canvasWidth) / 2), -var4.canvasHeight + 480 - 10 + 45);
           }
-          var6 = kb.a(param1, 0, 100, param2);
+          var6 = QuickChatHelpDialog.a(param1, 0, 100, param2);
           var7 = oa.currentBackground.b(param0 ^ -746);
           if (var7 != null) {
             var9 = var7[var6];

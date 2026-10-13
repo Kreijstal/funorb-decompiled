@@ -58,7 +58,7 @@ final class sk extends h {
           IntArrayRequest.gameplayScreen.snapshotsReady = true;
           stackIn_10_0 = IntArrayRequest.gameplayScreen;
           stackIn_10_1 = IntArrayRequest.gameplayScreen.suppressResultSubmission;
-          stackIn_11_2 = (kb.field_Yb >= 2) && (param3 == 1) && (GameConnectionShell.field_t);
+          stackIn_11_2 = (QuickChatHelpDialog.field_Yb >= 2) && (param3 == 1) && (GameConnectionShell.field_t);
           stackIn_10_0.suppressResultSubmission = stackIn_10_1 | stackIn_11_2;
           ng.requestScreen(param4, 103, -1);
           return;

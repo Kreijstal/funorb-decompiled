@@ -581,7 +581,7 @@ abstract class TextFont extends DualLinkNode {
         if (text == null) {
           return 0;
         }
-        MessageScreen.a(' ', wrapScratch, 0, false);
+        MessageScreen.resizeAndFillTextBuffer(' ', wrapScratch, 0, false);
         var4 = 0;
         var5 = 0;
         var6 = -1;

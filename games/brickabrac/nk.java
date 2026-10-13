@@ -116,7 +116,7 @@ final class nk {
         }
     }
 
-    final static boolean a(char param0, CharSequence param1, boolean param2) {
+    final static boolean canAppendNameCharacter(char character, CharSequence buffer, boolean obfuscationGuard) {
         int var3_int = 0;
         RuntimeException var3 = null;
         RuntimeException stackIn_21_0 = null;
@@ -124,20 +124,20 @@ final class nk {
         String stackIn_22_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (!m.a(true, param0)) {
+          if (!m.isNameCharacter(true, character)) {
             return false;
           }
-          if (param1 == null) {
+          if (buffer == null) {
             return false;
           }
-          var3_int = param1.length();
+          var3_int = buffer.length();
           if (12 <= var3_int) {
             return false;
           }
-          if (param2) {
+          if (obfuscationGuard) {
             field_e = (String) null;
           }
-          if (!ik.a((byte) -9, param0)) {
+          if (!ik.isNameSeparator((byte) -9, character)) {
             return true;
           }
           if (0 != var3_int) {
@@ -148,13 +148,13 @@ final class nk {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
           stackIn_21_0 = var3;
-          stackIn_21_1 = new StringBuilder().append("nk.B(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_21_1 = new StringBuilder().append("nk.B(").append(character).append(',');
+          if (buffer == null) {
             stackIn_22_2 = "null";
           } else {
             stackIn_22_2 = "{...}";
           }
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(param2).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 

@@ -419,7 +419,7 @@ final class GameplayScreen extends GameScreen {
           var20 = this.match.playerBoards[0];
           if (var20.levelIndex > this.field_i) {
             var9_long = MonotonicTime.nowMillis(false);
-            this.a(gq.field_Yb, this.field_i, var9_long - fl.field_l, true, 1000);
+            this.a(NameEntryPopup.field_Yb, this.field_i, var9_long - fl.field_l, true, 1000);
             fl.field_l = var9_long;
             this.field_i = var20.levelIndex;
             this.queueLevelResult(this.match.configuration.pack, var20.score, (byte) -125, var20.levelIndex);
@@ -605,7 +605,7 @@ final class GameplayScreen extends GameScreen {
             !this.suppressResultSubmission) {
             this.a(pp.a(this.match.playerBoards[0], (byte) 115, this.match), false);
             this.e(0);
-            this.a(gq.field_Yb, this.field_r, -fl.field_l + MonotonicTime.nowMillis(false), false, 1000);
+            this.a(NameEntryPopup.field_Yb, this.field_r, -fl.field_l + MonotonicTime.nowMillis(false), false, 1000);
             jj.field_d = jj.field_d | ja.a(this.progressBaseLevel, this.match.configuration, -1 + this.field_r, true);
             stackIn_8_0 = (hh.unlockedLevelCounts[0] == 0);
             be.field_a = stackIn_8_0;
@@ -1825,7 +1825,7 @@ final class GameplayScreen extends GameScreen {
           this.networkedMatch = stackIn_7_1;
           this.localPlayerMask = localPlayerMask;
           this.localPlayerId = localPlayerId;
-          stackIn_10_1 = !(kb.field_Yb < 2);
+          stackIn_10_1 = !(QuickChatHelpDialog.field_Yb < 2);
           this.field_y = stackIn_10_1;
           var14 = pl.pendingAchievementMask;
           var13 = var14;
@@ -1872,7 +1872,7 @@ final class GameplayScreen extends GameScreen {
           be.field_j = 0;
           KeyboardInput.hasNonnegativeResult = false;
           fl.field_l = MonotonicTime.nowMillis(false);
-          gq.field_Yb = configuration.pack.packId;
+          NameEntryPopup.field_Yb = configuration.pack.packId;
           DualLinkNode.field_q = configuration.getPeriod(96);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

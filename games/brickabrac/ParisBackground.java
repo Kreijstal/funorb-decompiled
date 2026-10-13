@@ -300,7 +300,7 @@ final class ParisBackground extends BackgroundScene {
                 }
               } else {
                 if (!th.field_d) {
-                  stackIn_30_0 = kb.field_Wb;
+                  stackIn_30_0 = QuickChatHelpDialog.field_Wb;
                 } else {
                   stackIn_30_0 = ArcticBackground.field_u;
                 }

@@ -165,7 +165,7 @@ final class GameCanvas extends java.awt.Canvas implements java.awt.event.FocusLi
           if (LegacyUtf8Decoder.field_c.pressedButton != 0) {
             CircleBody.field_p = new am(LegacyUtf8Decoder.field_c.screenX, LegacyUtf8Decoder.field_c.screenY, LegacyUtf8Decoder.field_c.width, LegacyUtf8Decoder.field_c.height, param1, MenuSelection.field_m, rf.field_c, am.field_Zb, CappedUrlRequest.field_l, BlankScreen.field_k, DualLinkNode.field_t, (String) null, 0L);
           }
-          var9 = sj.a(om.field_oc, np.field_a, -13294, param0);
+          var9 = sj.a(om.field_oc, np.uiRowHeight, -13294, param0);
           if (var9 != null) {
             ScrollPaneWithFooter.a(0, var9);
           }

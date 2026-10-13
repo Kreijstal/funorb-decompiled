@@ -77,11 +77,11 @@ final class ScrollPaneWithFooter extends UiComponent {
             if (!qo.field_I) {
               var5 = bm.field_d;
               var6 = LevelPackSelectScreen.field_x;
-              var5.field_d.a(var6, 14, (byte) 84);
+              var5.contextMenu.addAction(var6, 14, (byte) 84);
             }
             var7 = bm.field_d;
             var8 = tq.field_b;
-            var7.field_d.a(var8, 20, (byte) 118);
+            var7.contextMenu.addAction(var8, 20, (byte) 118);
           }
           if (param1.field_c == 1 &&
             !cb.e(-128) &&
@@ -90,11 +90,11 @@ final class ScrollPaneWithFooter extends UiComponent {
             if (!qo.field_I) {
               var9 = bm.field_d;
               var10 = hc.field_b;
-              var9.field_d.a(var10, 14, (byte) 120);
+              var9.contextMenu.addAction(var10, 14, (byte) 120);
             }
             var11 = bm.field_d;
             var12 = MultiplayerExitScreen.field_y;
-            var11.field_d.a(var12, 20, (byte) 103);
+            var11.contextMenu.addAction(var12, 20, (byte) 103);
           }
           bm.field_d.a(true);
           bm.field_d.a(true, false);
@@ -104,7 +104,7 @@ final class ScrollPaneWithFooter extends UiComponent {
           var13 = bm.field_d;
           var3 = tb.pressX;
           var4 = qo.pressY;
-          var13.field_d.a(var4, -101, 0, param0, var3);
+          var13.contextMenu.layoutAtAnchor(var4, -101, 0, param0, var3);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

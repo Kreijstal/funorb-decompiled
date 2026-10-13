@@ -460,7 +460,7 @@ abstract class GameConnectionShell extends AppletGameShell {
         if (param0) {
           this.serverNumber = -15;
         }
-        if (kb.i(7457)) {
+        if (QuickChatHelpDialog.i(7457)) {
           stackIn_13_1 = (ua.field_d != null);
           discarded$1 = this.a(stackIn_13_1, (byte) 46, false);
         } else {
@@ -820,7 +820,7 @@ abstract class GameConnectionShell extends AppletGameShell {
           ja.field_c = bq.a(-6, 1, true, o.field_f, false);
           wn.field_c = vh.field_S;
           clientStage = 2;
-          gq.field_Rb = ma.field_P;
+          NameEntryPopup.field_Rb = ma.field_P;
         }
         if (2 == clientStage) {
           if (null != wl.field_K &&

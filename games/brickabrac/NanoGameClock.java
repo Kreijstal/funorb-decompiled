@@ -44,11 +44,11 @@ final class NanoGameClock extends GameClock {
         kp.field_a = Rasterizer2D.width;
         Brick.e(-67);
         ap.field_b.a(fe.field_gb.width, 0, 80, 0, fe.field_gb.height - 40 - 2);
-        dn.field_N.setBounds(np.field_a, 0, 0, RectangleBody.field_q.width, (byte) 64);
+        dn.field_N.setBounds(np.uiRowHeight, 0, 0, RectangleBody.field_q.width, (byte) 64);
         if (param0 <= 16) {
           field_l = true;
         }
-        int var1 = np.field_a + 2;
+        int var1 = np.uiRowHeight + 2;
         Ball.field_A.setBounds(-(!vd.field_e ? 0 : var1) + RectangleBody.field_q.height, !vd.field_e ? 0 : var1, 0, RectangleBody.field_q.width, (byte) 64);
         s.b(124);
         HighscorePackSelector.field_k.setBounds(40, fe.field_gb.height - 40, 0, fe.field_gb.width, (byte) 64);

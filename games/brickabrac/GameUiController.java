@@ -43,7 +43,7 @@ final class GameUiController implements GameUiLifecycle {
         RgbSprite[] var4 = (RgbSprite[]) null;
         nh.a((RgbSprite[]) null, 240, 8, 320, 0, nn.field_g, 2, 0, 1, AchievementBrowserScreen.field_A, 0, Ball.field_G, 2, (byte) -110, 8);
         MusicVoice.a(20, -97, 20, var2);
-        oa.a(HighscorePackSelector.field_d, CircleBody.field_t, 2, PlayerBoard.field_jb, DualLinkNode.field_k, wn.field_c, (RgbSprite[][]) null, gq.field_Rb, true, 1, jb.field_I, PlayerBoard.field_jb, wd.field_C, qh.field_h, 22287);
+        oa.a(HighscorePackSelector.field_d, CircleBody.field_t, 2, PlayerBoard.field_jb, DualLinkNode.field_k, wn.field_c, (RgbSprite[][]) null, NameEntryPopup.field_Rb, true, 1, jb.field_I, PlayerBoard.field_jb, wd.field_C, qh.field_h, 22287);
         ea.field_g = true;
         c.field_e = er.field_b;
         LevelResultSubmission.b(-9, 200);
@@ -85,7 +85,7 @@ final class GameUiController implements GameUiLifecycle {
     public final boolean pollUiReady(int obfuscationGuard) {
         boolean stackIn_15_0 = false;
         if (!ResourceRequest.field_y) {
-          ResourceRequest.field_y = gq.d((byte) -126);
+          ResourceRequest.field_y = NameEntryPopup.d((byte) -126);
         }
         if (!jc.field_H) {
           jc.field_H = this.pollSavedProgress((byte) 127);
@@ -157,12 +157,12 @@ final class GameUiController implements GameUiLifecycle {
         nl.field_a = aj.a(11, true);
         IntHistoryBuffer.field_i = aj.a(12, true);
         wd.field_C = aj.a(13, true);
-        wn.a(gq.field_Rb, wn.field_c, 0);
+        wn.a(NameEntryPopup.field_Rb, wn.field_c, 0);
         bh.field_tb = new s(82);
-        bh.field_tb.a(tm.field_e, "basic", 125, ib.field_F, gq.field_Rb);
-        bh.field_tb.a(tm.field_e, "lobby", 126, ib.field_F, gq.field_Rb);
+        bh.field_tb.a(tm.field_e, "basic", 125, ib.field_F, NameEntryPopup.field_Rb);
+        bh.field_tb.a(tm.field_e, "lobby", 126, ib.field_F, NameEntryPopup.field_Rb);
         bh.field_tb.a(tm.field_e, "lobby", 124, ib.field_F, wn.field_c);
-        bh.field_tb.a(tm.field_e, "kartika13", 125, ib.field_F, gq.field_Rb);
+        bh.field_tb.a(tm.field_e, "kartika13", 125, ib.field_F, NameEntryPopup.field_Rb);
         bh.field_tb.a(tm.field_e, "basic", 126, ib.field_F, BackgroundScene.field_f);
         bh.field_tb.a(vh.field_P, "basic", -126, m.field_k, ScorePopup.field_l);
         bh.field_tb.a(vh.field_P, "kartika13", 127, m.field_k, wn.field_c);
@@ -201,7 +201,7 @@ final class GameUiController implements GameUiLifecycle {
               } else {
                 ParisBackground.a((byte) 24, 90.0f, MessageScreen.field_u);
                 sl.field_C.renderClient(106);
-                so.a(BackgroundScene.field_f, gq.field_Rb, ScorePopup.field_l, 29137, wn.field_c);
+                so.a(BackgroundScene.field_f, NameEntryPopup.field_Rb, ScorePopup.field_l, 29137, wn.field_c);
               }
             } else {
               ParisBackground.a((byte) 24, 88.0f, sf.field_bb);

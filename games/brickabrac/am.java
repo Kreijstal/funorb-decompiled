@@ -242,7 +242,7 @@ final class am extends UiComponent {
             this.field_Xb.addChild(this.field_Yb, 0);
             this.field_Yb.textSuffix = "|";
             if (!(gh.field_f < 5) ||
-              !(kb.field_Yb < 2)) {
+              !(QuickChatHelpDialog.field_Yb < 2)) {
               regionExit1: {
                 stackIn_8_0 = this;
                 stackIn_8_1 = null;
@@ -253,7 +253,7 @@ final class am extends UiComponent {
                   stackIn_8_0Lifetime1 = this;
                   stackIn_8_1Lifetime1 = null;
                   stackIn_8_2Lifetime1 = null;
-                  if (2 > kb.field_Yb) {
+                  if (2 > QuickChatHelpDialog.field_Yb) {
                     stackIn_9_0 = this;
                     stackIn_9_1 = null;
                     stackIn_9_2 = null;
@@ -361,16 +361,16 @@ final class am extends UiComponent {
             this.field_Ub.setBounds(24, 0, 0, var19 + 13 + 13, (byte) 64);
             this.field_Vb.setBounds(15, 5, this.field_Ub.width - 20, 15, (byte) 64);
             var21 = 10;
-            this.field_Rb.setBounds(np.field_a * 2, var21, 13, var19, (byte) 64);
-            var21 = var21 + np.field_a * 2;
-            this.field_Pb.setBounds(2 * np.field_a, var21, 13, var19, (byte) 64);
-            var21 = var21 + (np.field_a * 2 + 10);
-            this.field_Yb.setBounds(np.field_a, var21, 0, 0, (byte) 64);
-            var21 = var21 + (10 + np.field_a);
+            this.field_Rb.setBounds(np.uiRowHeight * 2, var21, 13, var19, (byte) 64);
+            var21 = var21 + np.uiRowHeight * 2;
+            this.field_Pb.setBounds(2 * np.uiRowHeight, var21, 13, var19, (byte) 64);
+            var21 = var21 + (np.uiRowHeight * 2 + 10);
+            this.field_Yb.setBounds(np.uiRowHeight, var21, 0, 0, (byte) 64);
+            var21 = var21 + (10 + np.uiRowHeight);
             if (this.field_bc != null) {
               var20Lifetime3 = this.field_bc.measureIconLabelWidth((byte) 11, 4);
-              this.field_bc.setIconLabelBounds(var20Lifetime3, 4, np.field_a, var21, true, (-var20Lifetime3 + var19) / 2 + 13);
-              var21 = var21 + (np.field_a + 10);
+              this.field_bc.setIconLabelBounds(var20Lifetime3, 4, np.uiRowHeight, var21, true, (-var20Lifetime3 + var19) / 2 + 13);
+              var21 = var21 + (np.uiRowHeight + 10);
             }
             var28[0].setBounds(var17Lifetime5, var21, 13, var16Lifetime2, (byte) 64);
             var28[1].setBounds(var17Lifetime5, var21, var16Lifetime2 + 13 + 13, var16Lifetime2, (byte) 64);
@@ -380,26 +380,26 @@ final class am extends UiComponent {
             this.field_Xb.frameSprites = na.a(false, 8421504, 3, 11579568, this.field_Xb.height, 2105376);
             var23 = 13 + var19 + 13;
             var24 = 10 + var22 + 24 + var17Lifetime5;
-            var25 = OptionsScreen.a(-1, var23, param0, param2);
-            var26 = br.a(var24, param1, param3, 120);
+            var25 = OptionsScreen.choosePopupX(-1, var23, param0, param2);
+            var26 = ContextMenu.choosePopupY(var24, param1, param3, 120);
             this.setBounds(var24, var26, var25, var23, (byte) 64);
             return;
           }
-          this.field_Rb = new UiComponent(0L, param8, br.field_Ub);
+          this.field_Rb = new UiComponent(0L, param8, ContextMenu.field_Ub);
           this.field_Rb.textColor = 11184810;
           this.field_Rb.horizontalAlignment = 1;
           this.field_Xb.addChild(this.field_Rb, 0);
           var15_int = 226;
           var16Lifetime1 = 10;
           var17Lifetime1 = this.field_Rb.font.countWrappedLines(this.field_Rb.text, var15_int);
-          this.field_Rb.setBounds(np.field_a * var17Lifetime1, var16Lifetime1, 13, var15_int, (byte) 64);
-          var16Lifetime1 = var16Lifetime1 + var17Lifetime1 * np.field_a;
+          this.field_Rb.setBounds(np.uiRowHeight * var17Lifetime1, var16Lifetime1, 13, var15_int, (byte) 64);
+          var16Lifetime1 = var16Lifetime1 + var17Lifetime1 * np.uiRowHeight;
           this.field_Xb.setBounds(10 + var16Lifetime1, 24, 0, 13 + (var15_int + 13), (byte) 64);
           this.field_Xb.frameSprites = na.a(false, 8421504, 3, 11579568, this.field_Xb.height, 2105376);
           var18Lifetime1 = var15_int + 13 + 13;
           var19Lifetime1 = var16Lifetime1 + 34;
-          var20Lifetime1 = OptionsScreen.a(-1, var18Lifetime1, param0, param2);
-          var21Lifetime1 = br.a(var19Lifetime1, param1, param3, -93);
+          var20Lifetime1 = OptionsScreen.choosePopupX(-1, var18Lifetime1, param0, param2);
+          var21Lifetime1 = ContextMenu.choosePopupY(var19Lifetime1, param1, param3, -93);
           this.setBounds(var19Lifetime1, var21Lifetime1, var20Lifetime1, var18Lifetime1, (byte) 64);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

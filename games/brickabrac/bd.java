@@ -64,12 +64,12 @@ final class bd implements ub {
           var4 = gb.a(param0, 67);
           if (var4 != null &&
             var4.length() >= 1) {
-            if (!ik.a((byte) -9, var4.charAt(0)) &&
-              !ik.a((byte) -9, var4.charAt(var4.length() - 1))) {
+            if (!ik.isNameSeparator((byte) -9, var4.charAt(0)) &&
+              !ik.isNameSeparator((byte) -9, var4.charAt(var4.length() - 1))) {
               var5 = 0;
               for (var6 = param1; param0.length() > var6; var6++) {
                 var7 = param0.charAt(var6);
-                if (!ik.a((byte) -9, (char) var7)) {
+                if (!ik.isNameSeparator((byte) -9, (char) var7)) {
                   var5 = 0;
                 } else {
                   var5++;

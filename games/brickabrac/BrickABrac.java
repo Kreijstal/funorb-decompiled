@@ -215,7 +215,7 @@ public final class BrickABrac extends InteractiveGameClient {
           if (14 == opcode) {
             sk.finishScreenTransition((byte) -116);
             hm.a(LevelPack.c(obfuscationGuard ^ -71), (byte) 86, qh.field_h, LevelPackLoader.c(0), 150, VerticalScrollbar.a(2000, (byte) -54), aj.a(1345), VerticalScrollbar.a(8, (byte) -53), 1024, jb.field_I.length);
-            hn.a(FramedMenuScreen.f(115), kb.h(obfuscationGuard - 45), obfuscationGuard ^ 12);
+            hn.a(FramedMenuScreen.f(115), QuickChatHelpDialog.h(obfuscationGuard - 45), obfuscationGuard ^ 12);
             vh.field_L = false;
             MonotonicTime.field_c = true;
             ng.requestScreen(false, 113, -2);
@@ -659,7 +659,7 @@ public final class BrickABrac extends InteractiveGameClient {
         VerticalScrollbar.e((byte) 33);
         ba.a((byte) -115);
         UiComponent.c((byte) 88);
-        br.h(21);
+        ContextMenu.h(21);
         ScrollPaneWithFooter.h(-48);
         nn.a(0);
         am.k(8421504);
@@ -688,7 +688,7 @@ public final class BrickABrac extends InteractiveGameClient {
         AlignedIconLabel.d((byte) 21);
         u.a(2);
         oa.h(47);
-        gq.d(false);
+        NameEntryPopup.d(false);
         sb.a((byte) -102);
         qp.a(false);
         o.b(31583);
@@ -766,7 +766,7 @@ public final class BrickABrac extends InteractiveGameClient {
         d.g(-66);
         oc.c(-14711);
         ep.a(obfuscationGuard);
-        kb.d((byte) 98);
+        QuickChatHelpDialog.d((byte) 98);
         jl.a(31186);
         bj.i(111);
         jc.a((byte) -17);

@@ -531,7 +531,7 @@ abstract class MenuScreen extends GameScreen {
               if (var8 == 34) {
                 if (!(!this.selection.isActivated((byte) 113))) {
                   var8 = 13;
-                  if (gq.field_Yb == 1) {
+                  if (NameEntryPopup.field_Yb == 1) {
                     var8 = 15;
                   }
                   ng.requestScreen(inputFlag, obfuscationGuard ^ 25, var8);

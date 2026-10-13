@@ -55,15 +55,15 @@ final class StateIconLabel extends UiComponent {
         }
     }
 
-    final static boolean b(boolean param0, char param1) {
+    final static boolean isAsciiLetter(boolean obfuscationGuard, char character) {
         boolean stackIn_10_0 = false;
-        if (!param0) {
+        if (!obfuscationGuard) {
           field_Pb = (String) null;
         }
-        stackIn_10_0 = ((!(param1 < 65) &&
-          !(90 < param1)) ||
-          (!(param1 < 97) &&
-          !(122 < param1)));
+        stackIn_10_0 = ((!(character < 65) &&
+          !(90 < character)) ||
+          (!(character < 97) &&
+          !(122 < character)));
         return stackIn_10_0;
     }
 

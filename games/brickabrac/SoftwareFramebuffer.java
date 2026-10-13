@@ -17,7 +17,7 @@ abstract class SoftwareFramebuffer {
           return;
         }
         ef.a(param0 ^ -54);
-        CacheIoWorker.a((byte) 93, om.field_oc, ef.field_b[0].canvasWidth, np.field_a, ec.field_J, MenuSelection.field_g);
+        CacheIoWorker.a((byte) 93, om.field_oc, ef.field_b[0].canvasWidth, np.uiRowHeight, ec.field_J, MenuSelection.field_g);
     }
 
     final void bindRaster(byte obfuscationGuard) {

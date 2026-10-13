@@ -507,7 +507,7 @@ final class JungleBackground extends BackgroundScene {
                   }
                   var13 = stackIn_248_0;
                 }
-                if (kb.field_Yb >= 2 &&
+                if (QuickChatHelpDialog.field_Yb >= 2 &&
                   IntArrayRequest.heldKeys[12]) {
                   var11 = 0;
                   var12 = 0;
@@ -528,7 +528,7 @@ final class JungleBackground extends BackgroundScene {
                 MeshAttributeRecord.field_g = true;
                 if (var16Lifetime1 == 0 &&
                   var9 >= 0 &&
-                  br.field_bc != null && (!param2 ||
+                  ContextMenu.field_bc != null && (!param2 ||
                   !fh.field_d)) {
                   if (qo.field_J == null) {
                     h.field_D = new boolean[cq.field_p];
@@ -544,7 +544,7 @@ final class JungleBackground extends BackgroundScene {
                       continue;
                     }
                     ar.a(param2, param1, var9, -1, -1, 0, var7, 0);
-                    if (2 <= kb.field_Yb &&
+                    if (2 <= QuickChatHelpDialog.field_Yb &&
                       IntArrayRequest.heldKeys[12]) {
                       MeshAttributeRecord.field_g = true;
                     }

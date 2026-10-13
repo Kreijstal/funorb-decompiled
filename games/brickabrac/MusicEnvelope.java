@@ -99,8 +99,8 @@ final class MusicEnvelope {
         try {
           stackIn_3_0 = f.field_c.scrollPane;
           stackIn_3_1 = 2;
-          stackIn_3_2 = param2 * (np.field_a * 3 + 6);
-          stackIn_3_3 = np.field_a + 2;
+          stackIn_3_2 = param2 * (np.uiRowHeight * 3 + 6);
+          stackIn_3_3 = np.uiRowHeight + 2;
           stackIn_3_4 = 22676;
           stackIn_3_5 = param0;
           stackIn_4_6 = (o.field_b == f.field_c.scrollPane);
@@ -131,14 +131,14 @@ final class MusicEnvelope {
               var7 = 1;
             }
             var6.width = f.field_c.content.width;
-            var6.field_Xb.setBounds(np.field_a, 0, 0, var6.width, (byte) 64);
+            var6.field_Xb.setBounds(np.uiRowHeight, 0, 0, var6.width, (byte) 64);
             var8 = 0;
             if (null != var6.field_Qb &&
               !var6.field_Qb.equals("")) {
               var6.field_Yb.sprite = ok.field_g;
               var6.field_Yb.activeTextColor = 16737894;
               var8 = 1;
-              var6.field_Yb.setBounds(np.field_a, 0, 0, ok.field_g.canvasWidth + 3, (byte) 64);
+              var6.field_Yb.setBounds(np.uiRowHeight, 0, 0, ok.field_g.canvasWidth + 3, (byte) 64);
             }
             var9 = 0;
             var10 = var6.width;
@@ -155,9 +155,9 @@ final class MusicEnvelope {
             stackIn_20_0.text = stackIn_21_1;
             stackIn_24_0 = (var6.field_Xb.text.equals(var6.field_Rb)) ? 0 : 1;
             var11 = stackIn_24_0;
-            var6.field_Xb.setBounds(np.field_a, 0, var9, var10, (byte) 64);
+            var6.field_Xb.setBounds(np.uiRowHeight, 0, var9, var10, (byte) 64);
             if (var3_int == 0) {
-              var6.remainingHeight = np.field_a - var6.height;
+              var6.remainingHeight = np.uiRowHeight - var6.height;
             }
             if (var7 != 0) {
               f.field_c.content.placeBelow((UiComponent) (var5), 2, var6, 17290);
@@ -175,23 +175,23 @@ final class MusicEnvelope {
               SpriteGeometry.a(-1, var6, f.field_c.scrollPane, (int[]) null, var6.field_ac, -1, (byte) -58, 0L, var6.field_Rb);
               var16 = bm.field_d;
               var13_ref_String = ng.field_e;
-              var16.field_d.a(var13_ref_String, 7, (byte) 126);
+              var16.contextMenu.addAction(var13_ref_String, 7, (byte) 126);
               var17 = bm.field_d;
               var13 = tb.pressX;
               var14 = qo.pressY;
-              var17.field_d.a(var14, -126, 0, 0, var13);
+              var17.contextMenu.layoutAtAnchor(var14, -126, 0, 0, var13);
             }
             var5 = var6;
             var6 = (mp) (var4.next((byte) 116));
           }
           if (f.field_c.leftFooter.pressedButton != 0) {
-            MusicCrossfadeStream.field_m = new gq(f.field_c.leftFooter.screenX, f.field_c.leftFooter.screenY, f.field_c.leftFooter.width, f.field_c.leftFooter.height, CacheIoWorker.field_e, GameUiController.field_c, CappedUrlRequest.field_l, CappedUrlRequest.field_l);
+            MusicCrossfadeStream.nameEntryPopup = new NameEntryPopup(f.field_c.leftFooter.screenX, f.field_c.leftFooter.screenY, f.field_c.leftFooter.width, f.field_c.leftFooter.height, CacheIoWorker.field_e, GameUiController.field_c, CappedUrlRequest.field_l, CappedUrlRequest.field_l);
             GameUiController.field_d = 2;
           }
           if (0 == f.field_c.rightFooter.pressedButton) {
             return;
           }
-          MusicCrossfadeStream.field_m = new gq(f.field_c.rightFooter.screenX, f.field_c.rightFooter.screenY, f.field_c.rightFooter.width, f.field_c.rightFooter.height, MultiplayerExitScreen.field_A, GameUiController.field_c, CappedUrlRequest.field_l, CappedUrlRequest.field_l);
+          MusicCrossfadeStream.nameEntryPopup = new NameEntryPopup(f.field_c.rightFooter.screenX, f.field_c.rightFooter.screenY, f.field_c.rightFooter.width, f.field_c.rightFooter.height, MultiplayerExitScreen.field_A, GameUiController.field_c, CappedUrlRequest.field_l, CappedUrlRequest.field_l);
           GameUiController.field_d = 3;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

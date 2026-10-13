@@ -536,7 +536,7 @@ class UiComponent extends ba {
         if (Character.isISOControl(param1)) {
           return false;
         }
-        if (AlignedIconLabel.a((byte) -95, param1)) {
+        if (AlignedIconLabel.isAsciiAlphanumeric((byte) -95, param1)) {
           return true;
         }
         if (param1 != 45 &&

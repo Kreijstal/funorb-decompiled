@@ -197,12 +197,12 @@ final class ik implements Iterator {
         field_a = null;
     }
 
-    final static boolean a(byte param0, char param1) {
+    final static boolean isNameSeparator(byte obfuscationGuard, char character) {
         boolean stackIn_9_0 = false;
-        if (param0 != -9) {
-          ik.a((byte) -124, 'V');
+        if (obfuscationGuard != -9) {
+          ik.isNameSeparator((byte) -124, 'V');
         }
-        stackIn_9_0 = (param1 == 160) || (param1 == 32) || (param1 == 95) || (param1 == 45);
+        stackIn_9_0 = (character == 160) || (character == 32) || (character == 95) || (character == 45);
         return stackIn_9_0;
     }
 

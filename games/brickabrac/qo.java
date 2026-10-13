@@ -282,7 +282,7 @@ final class qo extends ib implements vf, en {
         if (!this.h((byte) 92)) {
           return;
         }
-        kb.a(this.field_L.field_A, -96);
+        QuickChatHelpDialog.a(this.field_L.field_A, -96);
         if (param0 != 28462) {
           this.field_Q = (d) null;
           return;

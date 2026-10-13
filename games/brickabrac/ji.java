@@ -173,7 +173,7 @@ final class ji implements Iterable {
               return stackIn_18_0;
             }
             var6 = var4[var5];
-            var7 = kb.a(param1 ^ 95, var6);
+            var7 = QuickChatHelpDialog.a(param1 ^ 95, var6);
             if (var7 == null) {
               var5++;
               continue;

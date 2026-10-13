@@ -202,47 +202,47 @@ final class wd extends DualLinkNode {
           var29 = var11;
           var29Lifetime2 = var11;
           var10 = ro.field_m;
-          var9.field_d.a(var10, 108, 11, var11);
+          var9.contextMenu.addIconAction(var10, 108, 11, var11);
           var12 = bm.field_d;
           var14 = ef.field_b[1];
           var29Lifetime3 = var14;
           var29Lifetime4 = var14;
           var13 = DirectByteStorage.field_l;
-          var12.field_d.a(var13, 105, 12, var14);
+          var12.contextMenu.addIconAction(var13, 105, 12, var14);
           var15 = bm.field_d;
           var17 = ef.field_b[2];
           var29Lifetime5 = var17;
           var29Lifetime6 = var17;
           var16 = co.field_e;
-          var15.field_d.a(var16, 112, 13, var17);
+          var15.contextMenu.addIconAction(var16, 112, 13, var17);
         }
         if (1 == param1) {
           var18 = bm.field_d;
           var20 = ef.field_b[0];
           var19 = LegacyUtf8Decoder.field_a;
-          var18.field_d.a(var19, param0 ^ 864, 11, var20);
+          var18.contextMenu.addIconAction(var19, param0 ^ 864, 11, var20);
           var21 = bm.field_d;
           var23 = ef.field_b[1];
           var22 = DualLinkNode.field_m;
-          var21.field_d.a(var22, 123, 12, var23);
+          var21.contextMenu.addIconAction(var22, 123, 12, var23);
           var24 = bm.field_d;
           var26 = ef.field_b[2];
           var25 = CacheIoWorker.field_b;
-          var24.field_d.a(var25, param0 ^ 843, 13, var26);
+          var24.contextMenu.addIconAction(var25, param0 ^ 843, 13, var26);
         }
         if (param1 == 2) {
           var27 = bm.field_d;
           var29Lifetime1 = ef.field_b[0];
           var28 = ObjectHistoryBuffer.field_l;
-          var27.field_d.a(var28, param0 - 686, 11, var29Lifetime1);
+          var27.contextMenu.addIconAction(var28, param0 - 686, 11, var29Lifetime1);
           var30 = bm.field_d;
           var32 = ef.field_b[1];
           var31 = lg.field_M;
-          var30.field_d.a(var31, param0 - 720, 12, var32);
+          var30.contextMenu.addIconAction(var31, param0 - 720, 12, var32);
           var33 = bm.field_d;
           var35 = ef.field_b[2];
           var34 = ac.field_b;
-          var33.field_d.a(var34, param0 - 708, 13, var35);
+          var33.contextMenu.addIconAction(var34, param0 - 708, 13, var35);
         }
         nn var36 = bm.field_d;
         int var4 = param2.screenX;
@@ -253,7 +253,7 @@ final class wd extends DualLinkNode {
         try {
           var6 = param2.width;
           var7 = param2.height;
-          var36.field_d.a(var5, -124, var7, var6, var4);
+          var36.contextMenu.layoutAtAnchor(var5, -124, var7, var6, var4);
         } catch (RuntimeException runtimeException) {
           throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "wd.C(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }

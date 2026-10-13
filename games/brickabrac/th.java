@@ -33,7 +33,7 @@ final class th {
         String stackIn_16_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (!kb.a(param1, -3, param4, param0, param2)) {
+          if (!QuickChatHelpDialog.a(param1, -3, param4, param0, param2)) {
             return false;
           }
           if (param2 == 1) {
@@ -42,7 +42,7 @@ final class th {
           DualLinkNode.field_p = param4;
           ng.field_b = param2;
           var7 = (CharSequence) ((Object) param4);
-          kb.field_Qb = gb.a(var7, 64);
+          QuickChatHelpDialog.field_Qb = gb.a(var7, 64);
           qn.field_n = param1;
           var6 = SaveResultsPromptScreen.a(param0, cp.field_K, ArchiveIndex.field_j, SoftwareFramebuffer.field_e, (byte) -78);
           if (param3) {

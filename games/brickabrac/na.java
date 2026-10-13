@@ -134,18 +134,18 @@ final class na extends ug {
     final static boolean j(byte param0) {
         if (param0 != -60) {
           na.a(true, 76, -125, -71, 104, -123);
-          if (MusicCrossfadeStream.field_m == null) {
+          if (MusicCrossfadeStream.nameEntryPopup == null) {
             return false;
           }
-          if (MusicCrossfadeStream.field_m.h(param0 ^ -55)) {
+          if (MusicCrossfadeStream.nameEntryPopup.handleNormalizedNameKey(param0 ^ -55)) {
             return true;
           }
           return false;
         }
-        if (MusicCrossfadeStream.field_m == null) {
+        if (MusicCrossfadeStream.nameEntryPopup == null) {
           return false;
         }
-        if (MusicCrossfadeStream.field_m.h(param0 ^ -55)) {
+        if (MusicCrossfadeStream.nameEntryPopup.handleNormalizedNameKey(param0 ^ -55)) {
           return true;
         }
         return false;
@@ -252,7 +252,7 @@ final class na extends ug {
             if (go.field_c > 0) {
               ml.a(param3, -1);
             } else {
-              if (kb.field_Yb >= 2 &&
+              if (QuickChatHelpDialog.field_Yb >= 2 &&
                 IntArrayRequest.heldKeys[12]) {
                 ml.a(param3, -1);
               }

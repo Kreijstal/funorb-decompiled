@@ -172,7 +172,7 @@ abstract class GameClock {
         kd.field_d[18] = ta.field_c;
         kd.field_d[4] = BackgroundRegistry.field_a;
         kd.field_d[16] = oj.field_o;
-        kd.field_d[21] = br.field_Rb;
+        kd.field_d[21] = ContextMenu.field_Rb;
         kd.field_d[5] = k.field_i;
         kd.field_d[15] = DualLinkNode.field_i;
         kd.field_d[9] = sh.field_b;

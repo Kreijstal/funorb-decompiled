@@ -259,7 +259,7 @@ final class n {
               MeshAttributeRecord.field_g = true;
               AppletGameShell.field_e.text = mp.field_Pb;
               GameUiController.field_e.enabled = true;
-              if (br.field_bc != null) {
+              if (ContextMenu.field_bc != null) {
                 if (null == qo.field_J) {
                   qo.field_J = new byte[cq.field_p];
                   h.field_D = new boolean[cq.field_p];
@@ -273,7 +273,7 @@ final class n {
                   var13++;
                 }
                 ar.a(true, nl.field_f, -1, -1, -1, 0, cq.field_p, 0);
-                if (!(kb.field_Yb < 2) &&
+                if (!(QuickChatHelpDialog.field_Yb < 2) &&
                   IntArrayRequest.heldKeys[12]) {
                   MeshAttributeRecord.field_g = true;
                 }

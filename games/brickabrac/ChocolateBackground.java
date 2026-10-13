@@ -88,7 +88,7 @@ final class ChocolateBackground extends BackgroundScene {
         Brick.chocCapsSprites[1] = ig.a(Brick.chocCapsSprites[0], obfuscationGuard);
         aj.chocSegsSprites[1] = ig.a(aj.chocSegsSprites[0], obfuscationGuard);
         IntKeyIndex.chocCentreSprites[1] = pl.a(-16371, IntKeyIndex.chocCentreSprites[0]);
-        gq.chocLeverSprites = cr.loadRgbSpritesByName("chocolate", AchievementIcon.field_m, "choc_lever", 2);
+        NameEntryPopup.chocLeverSprites = cr.loadRgbSpritesByName("chocolate", AchievementIcon.field_m, "choc_lever", 2);
         return true;
     }
 
@@ -133,9 +133,9 @@ final class ChocolateBackground extends BackgroundScene {
     final RgbSprite[] b(int param0) {
         if (param0 >= -12) {
           field_r = false;
-          return gq.chocLeverSprites;
+          return NameEntryPopup.chocLeverSprites;
         }
-        return gq.chocLeverSprites;
+        return NameEntryPopup.chocLeverSprites;
     }
 
     final void drawFullBackground(boolean obfuscationGuard, int scroll16, int destinationY, int colorIndex, int destinationX) {

@@ -22,7 +22,7 @@ final class bg extends IntrusiveNode {
           if (param2 != 1) {
             return rh.field_b[param2];
           }
-          if (gq.b(param0, -1)) {
+          if (NameEntryPopup.b(param0, -1)) {
             return 29;
           }
           return rh.field_b[param2];
@@ -30,7 +30,7 @@ final class bg extends IntrusiveNode {
         if (param2 != 1) {
           return rh.field_b[param2];
         }
-        if (gq.b(param0, -1)) {
+        if (NameEntryPopup.b(param0, -1)) {
           return 29;
         }
         return rh.field_b[param2];

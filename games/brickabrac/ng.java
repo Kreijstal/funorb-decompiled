@@ -44,20 +44,20 @@ final class ng {
     final static void a(byte param0, boolean param1) {
         if (param0 > -64) {
           ng.a((byte) -25);
-          if (null == sq.field_c) {
+          if (null == sq.quickChatHelpDialog) {
             return;
           }
-          if (sq.field_c.a((byte) 79, param1)) {
-            sq.field_c = null;
+          if (sq.quickChatHelpDialog.updateAndPollDismissal((byte) 79, param1)) {
+            sq.quickChatHelpDialog = null;
             return;
           }
           return;
         }
-        if (null == sq.field_c) {
+        if (null == sq.quickChatHelpDialog) {
           return;
         }
-        if (sq.field_c.a((byte) 79, param1)) {
-          sq.field_c = null;
+        if (sq.quickChatHelpDialog.updateAndPollDismissal((byte) 79, param1)) {
+          sq.quickChatHelpDialog = null;
           return;
         }
     }

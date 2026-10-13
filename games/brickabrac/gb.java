@@ -48,14 +48,14 @@ final class gb {
           var2_int = 0;
           var3 = param0.length();
           while (var2_int < var3) {
-            if (ik.a((byte) -9, param0.charAt(var2_int))) {
+            if (ik.isNameSeparator((byte) -9, param0.charAt(var2_int))) {
               var2_int++;
               continue;
             }
             break;
           }
           while (var3 > var2_int) {
-            if (ik.a((byte) -9, param0.charAt(var3 - 1))) {
+            if (ik.isNameSeparator((byte) -9, param0.charAt(var3 - 1))) {
               var3--;
               continue;
             }
@@ -75,7 +75,7 @@ final class gb {
           }
           for (var6 = var2_int; var6 < var3; var6++) {
             var7 = param0.charAt(var6);
-            if (m.a(true, (char) var7)) {
+            if (m.isNameCharacter(true, (char) var7)) {
               var8 = HighscoresScreen.a(207, (char) var7);
               if (0 != var8) {
                 discarded$0 = var5.append((char) var8);

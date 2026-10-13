@@ -221,7 +221,7 @@ final class so {
           gg.field_p = cr.loadRgbSpritesByName("basic", param0, "powerup", 2);
           LevelPackSelectScreen.field_r = pl.loadRgbSpriteByName("basic", "powerupbar", (byte) 104, param0);
           ch.field_l = pl.loadRgbSpriteByName("basic", "heart", (byte) -108, param0);
-          kb.field_Ub = cr.loadRgbSpritesByName("basic", param0, "characters_fm", 2);
+          QuickChatHelpDialog.field_Ub = cr.loadRgbSpritesByName("basic", param0, "characters_fm", 2);
           GzipInflater.field_a = cr.loadRgbSpritesByName("basic", param0, "lever_game", param3 - 29135);
           IntrusiveNode.field_f = cr.loadRgbSpritesByName("basic", param0, "eyes_game", 2);
           tf.trackHeads = cr.loadRgbSpritesByName("basic", param0, "track_heads", 2);

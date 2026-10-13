@@ -25,10 +25,10 @@ final class MouseInput implements java.awt.event.MouseListener, java.awt.event.M
             MonotonicTime.nowMillis(false);
             if (javax.swing.SwingUtilities.isRightMouseButton(event)) {
               mi.livePressedButton = 2;
-              kb.liveHeldButton = 2;
+              QuickChatHelpDialog.liveHeldButton = 2;
             } else {
               mi.livePressedButton = 1;
-              kb.liveHeldButton = 1;
+              QuickChatHelpDialog.liveHeldButton = 1;
             }
             var2_int = event.getModifiers();
             kn.livePointerChanged = true;
@@ -97,7 +97,7 @@ final class MouseInput implements java.awt.event.MouseListener, java.awt.event.M
           if (PowerUpWarning.mouseInput == null) {
             return;
           }
-          kb.liveHeldButton = 0;
+          QuickChatHelpDialog.liveHeldButton = 0;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -148,7 +148,7 @@ final class MouseInput implements java.awt.event.MouseListener, java.awt.event.M
         try {
           if (null != PowerUpWarning.mouseInput) {
             gr.pointerIdleTicks = 0;
-            kb.liveHeldButton = 0;
+            QuickChatHelpDialog.liveHeldButton = 0;
             kn.livePointerChanged = true;
             var2_int = event.getModifiers();
             if ((var2_int & 8) != 0) {

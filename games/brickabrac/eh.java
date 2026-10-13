@@ -304,7 +304,7 @@ final class eh {
         BitPacketBuffer var2 = k.outgoingPackets;
         var2.writeCipheredOpcode(-13413, param1);
         if (!param0) {
-          eh.a('￪', (byte) -120);
+          eh.isAsciiDigit('￪', (byte) -120);
         }
         var2.writeByte(-101, 2);
         var2.writeByte(-103, 4);
@@ -388,12 +388,12 @@ final class eh {
         }
     }
 
-    final static boolean a(char param0, byte param1) {
+    final static boolean isAsciiDigit(char character, byte obfuscationGuard) {
         boolean stackIn_6_0 = false;
-        if (param1 <= 27) {
+        if (obfuscationGuard <= 27) {
           return true;
         }
-        stackIn_6_0 = (param0 >= 48) && (param0 <= 57);
+        stackIn_6_0 = (character >= 48) && (character <= 57);
         return stackIn_6_0;
     }
 
@@ -403,9 +403,9 @@ final class eh {
     }
 
     final static void a(boolean param0, boolean param1) {
-        if (sq.field_c != null) {
+        if (sq.quickChatHelpDialog != null) {
           Rasterizer2D.darkenRectangle(Rasterizer2D.clipLeft, Rasterizer2D.clipTop, Rasterizer2D.clipRight - Rasterizer2D.clipLeft, Rasterizer2D.clipBottom - Rasterizer2D.clipTop);
-          sq.field_c.drawRoot(true, param0);
+          sq.quickChatHelpDialog.drawRoot(true, param0);
         }
         if (!param1) {
           field_k = -26;
@@ -461,7 +461,7 @@ final class eh {
           }
           var7 = (java.awt.Frame) (var11.result);
           if (param3 <= 80) {
-            eh.a('4', (byte) 78);
+            eh.isAsciiDigit('4', (byte) 78);
           }
           if (var7 == null) {
             return null;

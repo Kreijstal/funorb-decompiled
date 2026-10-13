@@ -47,8 +47,8 @@ final class wn {
         try {
           stackIn_4_0 = GameScreen.field_f.scrollPane;
           stackIn_4_1 = 2;
-          stackIn_4_2 = param1 * (6 + 3 * np.field_a);
-          stackIn_4_3 = np.field_a + 2;
+          stackIn_4_2 = param1 * (6 + 3 * np.uiRowHeight);
+          stackIn_4_3 = np.uiRowHeight + 2;
           stackIn_4_4 = 22676;
           stackIn_4_5 = param0;
           stackIn_5_6 = (GameScreen.field_f.scrollPane == o.field_b);
@@ -102,7 +102,7 @@ final class wn {
                 !var7.field_Qb.equals("")) {
                 var7.field_Yb.sprite = ok.field_g;
                 var7.field_Yb.activeTextColor = var11;
-                var7.field_Yb.setBounds(np.field_a, var9, 0, 3 + ok.field_g.canvasWidth, (byte) 64);
+                var7.field_Yb.setBounds(np.uiRowHeight, var9, 0, 3 + ok.field_g.canvasWidth, (byte) 64);
                 var12 = 1;
               }
               var7.field_Wb.capturedTextColor = var11;
@@ -126,7 +126,7 @@ final class wn {
                 stackIn_34_1 = var7.field_Rb;
               }
               stackIn_33_0.text = stackIn_34_1;
-              var7.field_Xb.setBounds(np.field_a, var9, var13, var14, (byte) 64);
+              var7.field_Xb.setBounds(np.uiRowHeight, var9, var13, var14, (byte) 64);
               stackIn_37_0 = var7.field_Wb;
               if (var7.field_Ub != null) {
                 stackIn_38_1 = var7.field_Ub;
@@ -134,10 +134,10 @@ final class wn {
                 stackIn_38_1 = ec.field_S;
               }
               stackIn_37_0.text = stackIn_38_1;
-              var7.field_Wb.setBounds(np.field_a, var9, -80 + var7.width, 80, (byte) 64);
+              var7.field_Wb.setBounds(np.uiRowHeight, var9, -80 + var7.width, 80, (byte) 64);
               stackIn_42_0 = (var7.field_Xb.text.equals(var7.field_Rb)) ? 0 : 1;
               var15 = stackIn_42_0;
-              var9 = var9 + np.field_a;
+              var9 = var9 + np.uiRowHeight;
               if (var3_int == 0) {
                 var7.remainingHeight = var9 - var7.height;
               }
@@ -162,11 +162,11 @@ final class wn {
                   if (!qo.field_I) {
                     var17 = bm.field_d;
                     var18 = rd.a(ClientException.field_c, new String[]{var16}, (byte) 103);
-                    var17.field_d.a(var18, 8, (byte) 84);
+                    var17.contextMenu.addAction(var18, 8, (byte) 84);
                   }
                   var17Lifetime1 = bm.field_d;
                   var18Lifetime1 = rd.a(qm.field_b, new String[]{var16}, (byte) 103);
-                  var17Lifetime1.field_d.a(var18Lifetime1, 18, (byte) 97);
+                  var17Lifetime1.contextMenu.addAction(var18Lifetime1, 18, (byte) 97);
                 }
                 var5 = var7;
               }
@@ -174,11 +174,11 @@ final class wn {
             }
             if (decompiledFrameCompleted0) {
               if (GameScreen.field_f.leftFooter.pressedButton != 0) {
-                MusicCrossfadeStream.field_m = new gq(GameScreen.field_f.leftFooter.screenX, GameScreen.field_f.leftFooter.screenY, GameScreen.field_f.leftFooter.width, GameScreen.field_f.leftFooter.height, ArchiveNetworkClient.field_t, GameUiController.field_c, CappedUrlRequest.field_l, CappedUrlRequest.field_l);
+                MusicCrossfadeStream.nameEntryPopup = new NameEntryPopup(GameScreen.field_f.leftFooter.screenX, GameScreen.field_f.leftFooter.screenY, GameScreen.field_f.leftFooter.width, GameScreen.field_f.leftFooter.height, ArchiveNetworkClient.field_t, GameUiController.field_c, CappedUrlRequest.field_l, CappedUrlRequest.field_l);
                 GameUiController.field_d = 0;
               }
               if (0 != GameScreen.field_f.rightFooter.pressedButton) {
-                MusicCrossfadeStream.field_m = new gq(GameScreen.field_f.rightFooter.screenX, GameScreen.field_f.rightFooter.screenY, GameScreen.field_f.rightFooter.width, GameScreen.field_f.rightFooter.height, TableDataRequest.field_j, GameUiController.field_c, CappedUrlRequest.field_l, CappedUrlRequest.field_l);
+                MusicCrossfadeStream.nameEntryPopup = new NameEntryPopup(GameScreen.field_f.rightFooter.screenX, GameScreen.field_f.rightFooter.screenY, GameScreen.field_f.rightFooter.width, GameScreen.field_f.rightFooter.height, TableDataRequest.field_j, GameUiController.field_c, CappedUrlRequest.field_l, CappedUrlRequest.field_l);
                 GameUiController.field_d = 1;
               }
             }

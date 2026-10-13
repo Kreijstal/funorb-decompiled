@@ -175,7 +175,7 @@ final class BitPacketBuffer extends PacketBuffer {
             var24.boardState == 4 ||
             var24.boardState == 1) &&
             var10 == 0) {
-            oj.a(kb.a(match, playerId, 127, var24), var7, scaleDivisor, destinationY, (byte) 107, var24, destinationX);
+            oj.a(QuickChatHelpDialog.a(match, playerId, 127, var24), var7, scaleDivisor, destinationY, (byte) 107, var24, destinationX);
           }
           var27 = (BallPulseEffect) (var24.ballPulses.first(-30));
           while (var27 != null) {
@@ -379,7 +379,7 @@ final class BitPacketBuffer extends PacketBuffer {
         try {
           DualLinkNode.field_p = param1;
           var5 = (CharSequence) ((Object) param1);
-          kb.field_Qb = gb.a(var5, 96);
+          QuickChatHelpDialog.field_Qb = gb.a(var5, 96);
           qn.field_n = param2;
           di.a((byte) -120);
         } catch (RuntimeException runtimeException) {

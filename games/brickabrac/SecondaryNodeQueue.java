@@ -11,7 +11,7 @@ final class SecondaryNodeQueue {
     static String field_a;
 
     final static void d(int param0) {
-        MusicCrossfadeStream.field_m = null;
+        MusicCrossfadeStream.nameEntryPopup = null;
         int var1 = -1 / ((42 - param0) / 59);
     }
 

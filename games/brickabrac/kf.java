@@ -204,8 +204,8 @@ final class kf extends k {
             var4 = gb.a(param1, param2 + 111);
             if (var4 != null &&
               var4.length() >= 1) {
-              if (!ik.a((byte) -9, var4.charAt(0)) &&
-                !ik.a((byte) -9, var4.charAt(-1 + var4.length()))) {
+              if (!ik.isNameSeparator((byte) -9, var4.charAt(0)) &&
+                !ik.isNameSeparator((byte) -9, var4.charAt(-1 + var4.length()))) {
                 var5 = 0;
                 if (param2 != 3) {
                   stackIn_22_0 = (String) null;
@@ -213,7 +213,7 @@ final class kf extends k {
                 }
                 for (var6 = 0; var6 < param1.length(); var6++) {
                   var7 = param1.charAt(var6);
-                  if (ik.a((byte) -9, (char) var7)) {
+                  if (ik.isNameSeparator((byte) -9, (char) var7)) {
                     var5++;
                   } else {
                     var5 = 0;

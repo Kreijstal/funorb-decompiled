@@ -863,8 +863,8 @@ class um implements ub, qe {
         try {
           stackIn_3_0 = rl.field_e;
           stackIn_3_1 = 2;
-          stackIn_3_2 = (np.field_a * 4 + 8) * param3;
-          stackIn_3_3 = 2 * (2 + np.field_a);
+          stackIn_3_2 = (np.uiRowHeight * 4 + 8) * param3;
+          stackIn_3_3 = 2 * (2 + np.uiRowHeight);
           stackIn_3_4 = 22676;
           stackIn_3_5 = param2;
           stackIn_4_6 = (rl.field_e == o.field_b);
@@ -1078,12 +1078,12 @@ class um implements ub, qe {
                 }
               }
               if (null == var13.field_nc.text) {
-                var13.field_Ac.setBounds(np.field_a, var32, 0, 68, (byte) 64);
+                var13.field_Ac.setBounds(np.uiRowHeight, var32, 0, 68, (byte) 64);
               } else {
-                var13.field_nc.setBounds(np.field_a, var32, 0, 68, (byte) 64);
+                var13.field_nc.setBounds(np.uiRowHeight, var32, 0, 68, (byte) 64);
               }
               var13.field_Vb.text = TextFont.truncateText(var13.field_Vb.font, var33, 78);
-              var13.field_Vb.setBounds(np.field_a, var32, 70, 78, (byte) 64);
+              var13.field_Vb.setBounds(np.uiRowHeight, var32, 70, 78, (byte) 64);
               if (var13.field_Vb.activeInside &&
                 !var13.field_Vb.text.equals(var33)) {
                 ep.field_e = var33;
@@ -1091,19 +1091,19 @@ class um implements ub, qe {
               var13.field_tc.text = Integer.toString(var13.field_cc);
               if (!var13.field_Dc) {
                 var13.field_tc.horizontalAlignment = 1;
-                var13.field_tc.setBounds(np.field_a, var32, 150, 48, (byte) 64);
+                var13.field_tc.setBounds(np.uiRowHeight, var32, 150, 48, (byte) 64);
               } else {
                 var13.field_Cc.text = "/" + var13.field_jc;
                 var13.field_tc.horizontalAlignment = 2;
                 var34_int = (348 - var13.field_Cc.font.measureText("/")) / 2;
-                var13.field_tc.setBounds(np.field_a, var32, 150, -150 + var34_int, (byte) 64);
-                var13.field_Cc.setBounds(np.field_a, var32, var34_int, 198 - var34_int, (byte) 64);
+                var13.field_tc.setBounds(np.uiRowHeight, var32, 150, -150 + var34_int, (byte) 64);
+                var13.field_Cc.setBounds(np.uiRowHeight, var32, var34_int, 198 - var34_int, (byte) 64);
               }
               var13.field_mc.text = Integer.toString(var13.field_vc);
-              var13.field_mc.setBounds(np.field_a, var32, 200, 48, (byte) 64);
+              var13.field_mc.setBounds(np.uiRowHeight, var32, 200, 48, (byte) 64);
               stackIn_66_0 = (!vd.field_e) ? 200 : 250;
               var34_intLifetime1 = stackIn_66_0;
-              var13.field_ec.setBounds(np.field_a, var32, var34_intLifetime1, -2 + (365 - var34_intLifetime1), (byte) 64);
+              var13.field_ec.setBounds(np.uiRowHeight, var32, var34_intLifetime1, -2 + (365 - var34_intLifetime1), (byte) 64);
               var35_int = kn.field_z;
               if ((var15Lifetime1 & 1 << BackgroundRegistry.field_c) != 0) {
                 var51_ref = GameClock.field_f[var13.field_kc];
@@ -1186,8 +1186,8 @@ class um implements ub, qe {
                   var13.field_zc.text = var40 + ":" + var39_int / 10 + var39_int % 10;
                 }
               }
-              var13.field_zc.setBounds(np.field_a, var32, 365, var13.width - 365, (byte) 64);
-              var32 = var32 + np.field_a;
+              var13.field_zc.setBounds(np.uiRowHeight, var32, 365, var13.width - 365, (byte) 64);
+              var32 = var32 + np.uiRowHeight;
               if (var13.field_Qb != null) {
                 var32 += 2;
                 var38 = new StringBuilder(64);
@@ -1200,18 +1200,18 @@ class um implements ub, qe {
                 var39 = var38.toString();
                 var13.field_Ub.text = var39;
                 var40Lifetime1 = var13.field_Ub.font.countWrappedLines(var39, var13.width - var13.field_Ub.textInset * 2);
-                var13.field_Ub.setBounds(np.field_a * var40Lifetime1, var32, 0, var13.width, (byte) 64);
-                var32 = var32 + np.field_a * var40Lifetime1;
+                var13.field_Ub.setBounds(np.uiRowHeight * var40Lifetime1, var32, 0, var13.width, (byte) 64);
+                var32 = var32 + np.uiRowHeight * var40Lifetime1;
               }
               if (var13.field_Pb) {
                 var13.field_ic.text = rd.a(r.field_y, new String[]{var33}, (byte) 103);
-                var13.field_ic.setBounds(np.field_a, var32, om.field_oc, -(om.field_oc * 2) + var13.width, (byte) 64);
-                var32 = var32 + np.field_a;
+                var13.field_ic.setBounds(np.uiRowHeight, var32, om.field_oc, -(om.field_oc * 2) + var13.width, (byte) 64);
+                var32 = var32 + np.uiRowHeight;
               }
               if (var13.field_dc) {
                 var13.field_Sb.text = rd.a(aj.field_b, new String[]{var33}, (byte) 103);
-                var13.field_Sb.setBounds(np.field_a, var32, om.field_oc, -(om.field_oc * 2) + var13.width, (byte) 64);
-                var32 = var32 + np.field_a;
+                var13.field_Sb.setBounds(np.uiRowHeight, var32, om.field_oc, -(om.field_oc * 2) + var13.width, (byte) 64);
+                var32 = var32 + np.uiRowHeight;
               }
             }
             var34 = NodeDeque.a(var13.field_Zb, var33, -15);
@@ -1221,8 +1221,8 @@ class um implements ub, qe {
               var35_intLifetime1 = var13.field_gc.font.countWrappedLines(var34, -om.field_oc + (var13.width - om.field_oc));
               var13.field_gc.text = var34;
               var13.field_gc.textAlpha256 = var13.field_Wb * 256 / cm.field_o;
-              var13.field_gc.setBounds(np.field_a * var35_intLifetime1, var32, om.field_oc, var13.width - 2 * om.field_oc, (byte) 64);
-              var32 = var32 + np.field_a * var35_intLifetime1;
+              var13.field_gc.setBounds(np.uiRowHeight * var35_intLifetime1, var32, om.field_oc, var13.width - 2 * om.field_oc, (byte) 64);
+              var32 = var32 + np.uiRowHeight * var35_intLifetime1;
             }
             if (var7_int == 0) {
               var13.remainingHeight = -var13.height + var32;

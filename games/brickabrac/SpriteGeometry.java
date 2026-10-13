@@ -43,7 +43,7 @@ abstract class SpriteGeometry extends DualLinkNode {
           var9 = param1;
           var10 = param6;
           var11 = param0;
-          var12.field_d.a(var9, -79, var11, var10, var8);
+          var12.contextMenu.layoutAtAnchor(var9, -79, var11, var10, var8);
         } catch (RuntimeException runtimeException) {
           throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "mn.D(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ',' + param6 + ')');
         }

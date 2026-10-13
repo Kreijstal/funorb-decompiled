@@ -55,7 +55,7 @@ final class VolcanicBackground extends BackgroundScene {
         ByteArrayNode.volcanicFarSprite = pl.loadRgbSpriteByName("volcanic", "volcanic_far", (byte) -125, AchievementIcon.field_m);
         mc.volcanicSmallSprite = pl.loadRgbSpriteByName("volcanic", "volcanic_small", (byte) -77, AchievementIcon.field_m);
         NanoGameClock.field_q = jh.a(0, RasterCacheSurface.volcanicNearSprite);
-        gq.field_Sb = jh.a(0, cp.volcanicMidSprite);
+        NameEntryPopup.field_Sb = jh.a(0, cp.volcanicMidSprite);
         RectangleBody.field_p = jh.a(0, ByteArrayNode.volcanicFarSprite);
         CacheIoWorker.volcanicCapsSprites[0] = cr.loadRgbSpritesByName("volcanic", AchievementIcon.field_m, "volcanic_caps", 2);
         np.volcanicSegsSprites[0] = cr.loadRgbSpritesByName("volcanic", AchievementIcon.field_m, "volcanic_segs", 2);
@@ -195,7 +195,7 @@ final class VolcanicBackground extends BackgroundScene {
             BitPacketBuffer.a(RectangleBody.field_p, var6, colorIndex, 2, (byte) 119, -14);
             var6.setCacheKeys(this.sceneId, colorIndex, (byte) 78);
           }
-          ArchiveIndex.a(-113, -14, NanoGameClock.field_q, scroll16, var6.sprite, colorIndex, 306, 2, destinationX, destinationY, gq.field_Sb);
+          ArchiveIndex.a(-113, -14, NanoGameClock.field_q, scroll16, var6.sprite, colorIndex, 306, 2, destinationX, destinationY, NameEntryPopup.field_Sb);
         }
         if (obfuscationGuard >= -84) {
           field_v = (UiComponent) null;

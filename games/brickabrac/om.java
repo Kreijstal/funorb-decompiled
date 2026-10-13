@@ -217,7 +217,7 @@ final class om extends UiComponent {
           } else {
             var12 = ScorePopup.field_r;
           }
-          var13 = var12[kb.a(param8, param6, 87, param4)];
+          var13 = var12[QuickChatHelpDialog.a(param8, param6, 87, param4)];
           var13.drawTransparent(-8 + param2 - (var18.canvasWidth + var13.canvasWidth) / 2, -var13.canvasHeight + 480 + 10);
           if (param1 != -103) {
             field_hc = 38;
@@ -366,7 +366,7 @@ final class om extends UiComponent {
           } else {
             var12 = ScorePopup.field_r;
           }
-          var13 = var12[kb.a(param8, param6, 87, param4)];
+          var13 = var12[QuickChatHelpDialog.a(param8, param6, 87, param4)];
           var13.drawTransparent(-8 + param2 - (var18.canvasWidth + var13.canvasWidth) / 2, -var13.canvasHeight + 480 + 10);
           if (param1 != -103) {
             field_hc = 38;

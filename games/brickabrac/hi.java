@@ -151,7 +151,7 @@ final class hi extends um {
           if (85 == MeshAttributeRecord.currentKeyCode) {
             if (var3 != 0 &&
               OptionsScreen.field_A.length() > 0) {
-              MessageScreen.a(' ', OptionsScreen.field_A, -1 + OptionsScreen.field_A.length(), false);
+              MessageScreen.resizeAndFillTextBuffer(' ', OptionsScreen.field_A, -1 + OptionsScreen.field_A.length(), false);
             }
             return true;
           }
@@ -214,7 +214,7 @@ final class hi extends um {
           if (var5Lifetime4 >= CachedArchiveSource.field_y.measureText(OptionsScreen.field_A.toString())) {
             return true;
           }
-          MessageScreen.a(' ', OptionsScreen.field_A, -1 + OptionsScreen.field_A.length(), false);
+          MessageScreen.resizeAndFillTextBuffer(' ', OptionsScreen.field_A, -1 + OptionsScreen.field_A.length(), false);
           return true;
         }
         if (ng.field_b == 0) {
@@ -260,7 +260,7 @@ final class hi extends um {
             if (85 == MeshAttributeRecord.currentKeyCode) {
               if (var3 != 0 &&
                 OptionsScreen.field_A.length() > 0) {
-                MessageScreen.a(' ', OptionsScreen.field_A, -1 + OptionsScreen.field_A.length(), false);
+                MessageScreen.resizeAndFillTextBuffer(' ', OptionsScreen.field_A, -1 + OptionsScreen.field_A.length(), false);
               }
               return true;
             }
@@ -319,7 +319,7 @@ final class hi extends um {
                 }
               }
               if (var5Lifetime1Lifetime1 < CachedArchiveSource.field_y.measureText(OptionsScreen.field_A.toString())) {
-                MessageScreen.a(' ', OptionsScreen.field_A, -1 + OptionsScreen.field_A.length(), false);
+                MessageScreen.resizeAndFillTextBuffer(' ', OptionsScreen.field_A, -1 + OptionsScreen.field_A.length(), false);
               }
             }
             return true;
@@ -370,7 +370,7 @@ final class hi extends um {
           if (OptionsScreen.field_A.length() <= 0) {
             return true;
           }
-          MessageScreen.a(' ', OptionsScreen.field_A, -1 + OptionsScreen.field_A.length(), false);
+          MessageScreen.resizeAndFillTextBuffer(' ', OptionsScreen.field_A, -1 + OptionsScreen.field_A.length(), false);
           return true;
         }
         var4Lifetime2 = go.currentKeyCharacter;
@@ -403,7 +403,7 @@ final class hi extends um {
             var7Lifetime9 = var20Lifetime2;
             var5Lifetime3 = var5Lifetime3 - CachedArchiveSource.field_y.measureText(var20Lifetime2);
             if (var5Lifetime3 < CachedArchiveSource.field_y.measureText(OptionsScreen.field_A.toString())) {
-              MessageScreen.a(' ', OptionsScreen.field_A, -1 + OptionsScreen.field_A.length(), false);
+              MessageScreen.resizeAndFillTextBuffer(' ', OptionsScreen.field_A, -1 + OptionsScreen.field_A.length(), false);
             }
             return true;
           }
@@ -415,7 +415,7 @@ final class hi extends um {
             var20Lifetime2Lifetime1 = var7Lifetime9 + var19Lifetime2 + ": ";
             var5Lifetime3 = var5Lifetime3 - CachedArchiveSource.field_y.measureText(var20Lifetime2Lifetime1);
             if (var5Lifetime3 < CachedArchiveSource.field_y.measureText(OptionsScreen.field_A.toString())) {
-              MessageScreen.a(' ', OptionsScreen.field_A, -1 + OptionsScreen.field_A.length(), false);
+              MessageScreen.resizeAndFillTextBuffer(' ', OptionsScreen.field_A, -1 + OptionsScreen.field_A.length(), false);
             }
             return true;
           }
@@ -424,7 +424,7 @@ final class hi extends um {
             var20Lifetime2Lifetime2 = var7Lifetime9 + var19Lifetime2 + ": ";
             var5Lifetime3 = var5Lifetime3 - CachedArchiveSource.field_y.measureText(var20Lifetime2Lifetime2);
             if (var5Lifetime3 < CachedArchiveSource.field_y.measureText(OptionsScreen.field_A.toString())) {
-              MessageScreen.a(' ', OptionsScreen.field_A, -1 + OptionsScreen.field_A.length(), false);
+              MessageScreen.resizeAndFillTextBuffer(' ', OptionsScreen.field_A, -1 + OptionsScreen.field_A.length(), false);
             }
             return true;
           }
@@ -433,7 +433,7 @@ final class hi extends um {
             var20Lifetime2Lifetime3 = var7Lifetime9 + var19Lifetime2 + ": ";
             var5Lifetime3 = var5Lifetime3 - CachedArchiveSource.field_y.measureText(var20Lifetime2Lifetime3);
             if (var5Lifetime3 < CachedArchiveSource.field_y.measureText(OptionsScreen.field_A.toString())) {
-              MessageScreen.a(' ', OptionsScreen.field_A, -1 + OptionsScreen.field_A.length(), false);
+              MessageScreen.resizeAndFillTextBuffer(' ', OptionsScreen.field_A, -1 + OptionsScreen.field_A.length(), false);
             }
             return true;
           }
@@ -459,7 +459,7 @@ final class hi extends um {
         if (var5Lifetime3 >= CachedArchiveSource.field_y.measureText(OptionsScreen.field_A.toString())) {
           return true;
         }
-        MessageScreen.a(' ', OptionsScreen.field_A, -1 + OptionsScreen.field_A.length(), false);
+        MessageScreen.resizeAndFillTextBuffer(' ', OptionsScreen.field_A, -1 + OptionsScreen.field_A.length(), false);
         return true;
     }
 

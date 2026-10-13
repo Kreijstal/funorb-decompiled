@@ -50,17 +50,17 @@ final class AlignedIconLabel extends UiComponent {
         }
     }
 
-    final static boolean a(byte param0, char param1) {
+    final static boolean isAsciiAlphanumeric(byte obfuscationGuard, char character) {
         boolean stackIn_13_0 = false;
-        if (param0 >= -58) {
+        if (obfuscationGuard >= -58) {
           return false;
         }
-        stackIn_13_0 = ((!(param1 < 48) &&
-          !(param1 > 57)) ||
-          (!(param1 < 65) &&
-          !(param1 > 90)) ||
-          (!(param1 < 97) &&
-          !(122 < param1)));
+        stackIn_13_0 = ((!(character < 48) &&
+          !(character > 57)) ||
+          (!(character < 65) &&
+          !(character > 90)) ||
+          (!(character < 97) &&
+          !(122 < character)));
         return stackIn_13_0;
     }
 
@@ -96,7 +96,7 @@ final class AlignedIconLabel extends UiComponent {
           var6 = BrickABrac.field_J ? 1 : 0;
           try {
             if (param2 <= 27) {
-              AlignedIconLabel.a((byte) -93, 'K');
+              AlignedIconLabel.isAsciiAlphanumeric((byte) -93, 'K');
             }
             var3 = "";
             if (param1 != null) {
@@ -153,7 +153,7 @@ final class AlignedIconLabel extends UiComponent {
 
     final int measureIconLabelWidth(int gap, int obfuscationGuard, int inset) {
         if (obfuscationGuard != 24) {
-          AlignedIconLabel.a((byte) 108, '￱');
+          AlignedIconLabel.isAsciiAlphanumeric((byte) 108, '￱');
         }
         int iconWidth = -gap;
         if (this.icon != null) {

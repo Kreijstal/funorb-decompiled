@@ -118,7 +118,7 @@ final class s {
 
     final static boolean a(int param0) {
         int var1 = -86 / ((28 - param0) / 42);
-        return MusicCrossfadeStream.field_m != null ? true : false;
+        return MusicCrossfadeStream.nameEntryPopup != null ? true : false;
     }
 
     final static void a(RgbSprite param0, int param1, int param2, RgbSprite param3, RasterCacheSurface param4, int param5, byte param6, RgbSprite param7) {

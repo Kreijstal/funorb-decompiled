@@ -9,7 +9,7 @@ final class nn {
     int field_b;
     private String field_k;
     static String field_f;
-    br field_d;
+    ContextMenu contextMenu;
     String field_e;
     private int field_a;
     static int[] worldDirectionZ;
@@ -95,24 +95,24 @@ final class nn {
             if (var2 != null) {
               var3 = var2.field_Fc;
               if (var2.field_Pb) {
-                this.field_d.a(rd.a(kk.field_d, new String[]{var3}, (byte) 103), 2, (byte) 76);
-                this.field_d.a(rd.a(np.field_f, new String[]{var3}, (byte) 103), 3, (byte) 107);
+                this.contextMenu.addAction(rd.a(kk.field_d, new String[]{var3}, (byte) 103), 2, (byte) 76);
+                this.contextMenu.addAction(rd.a(np.field_f, new String[]{var3}, (byte) 103), 3, (byte) 107);
                 decompiledFrameRemainder0 = (var4 != 0);
               }
               if (decompiledFrameRemainder0) {
                 if (!var2.field_uc) {
                   if ((!var2.field_dc) && (var2.field_Dc) && (!var2.field_Rb ||
                     var2.field_uc)) {
-                    this.field_d.a(rd.a(qp.field_a, new String[]{var3}, (byte) 103), 2, (byte) 105);
+                    this.contextMenu.addAction(rd.a(qp.field_a, new String[]{var3}, (byte) 103), 2, (byte) 105);
                     if (var4 != 0) {
-                      this.field_d.a(rd.a(d.field_G, new String[]{var3}, (byte) 103), 2, (byte) 126);
+                      this.contextMenu.addAction(rd.a(d.field_G, new String[]{var3}, (byte) 103), 2, (byte) 126);
                     }
                   }
                 } else {
-                  this.field_d.a(rd.a(d.field_G, new String[]{var3}, (byte) 103), 2, (byte) 126);
+                  this.contextMenu.addAction(rd.a(d.field_G, new String[]{var3}, (byte) 103), 2, (byte) 126);
                 }
                 if (var2.field_dc) {
-                  this.field_d.a(rd.a(rm.field_b, new String[]{var3}, (byte) 103), 3, (byte) 87);
+                  this.contextMenu.addAction(rd.a(rm.field_b, new String[]{var3}, (byte) 103), 3, (byte) 87);
                 }
               }
             }
@@ -158,7 +158,7 @@ final class nn {
 
     final void a(byte param0, boolean param1) {
         try {
-          this.field_d.drawRoot(true, param1);
+          this.contextMenu.drawRoot(true, param1);
           int var3_int = 11 % ((param0 + 91) / 34);
         } catch (RuntimeException runtimeException) {
           throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "nn.H(" + param0 + ',' + param1 + ')');
@@ -290,7 +290,7 @@ final class nn {
                 }
                 var2 = nk.a("mu_chat_public", (byte) 15);
                 if (null != var2) {
-                  kb.field_Wb = MenuButton.a(var2, (byte) 118);
+                  QuickChatHelpDialog.field_Wb = MenuButton.a(var2, (byte) 118);
                 }
                 var2 = nk.a("mu_chat_ignore", (byte) -115);
                 if (var2 != null) {
@@ -738,7 +738,7 @@ final class nn {
                 }
                 var2 = nk.a("reject", (byte) -113);
                 if (var2 != null) {
-                  gq.field_Wb = MenuButton.a(var2, (byte) 112);
+                  NameEntryPopup.field_Wb = MenuButton.a(var2, (byte) 112);
                 }
                 var2 = nk.a("invite", (byte) -123);
                 if (null != var2) {
@@ -1006,7 +1006,7 @@ final class nn {
                 }
                 var2 = nk.a("gameopt_trychanging2", (byte) 64);
                 if (null != var2) {
-                  kb.field_Rb = MenuButton.a(var2, (byte) 102);
+                  QuickChatHelpDialog.field_Rb = MenuButton.a(var2, (byte) 102);
                 }
                 var2 = nk.a("gameopt_needchanging1", (byte) 89);
                 if (var2 != null) {
@@ -1048,7 +1048,7 @@ final class nn {
                 }
                 var2 = nk.a("gameopt_inviteplayers_or_trychanging1", (byte) -115);
                 if (null != var2) {
-                  br.field_ac = MenuButton.a(var2, (byte) 115);
+                  ContextMenu.field_ac = MenuButton.a(var2, (byte) 115);
                 }
                 var2 = nk.a("gameopt_inviteplayers_or_trychanging2", (byte) -117);
                 if (null != var2) {
@@ -1080,7 +1080,7 @@ final class nn {
                 }
                 var2 = nk.a("ra_intro_no_name", (byte) 96);
                 if (null != var2) {
-                  br.field_Ub = MenuButton.a(var2, (byte) 112);
+                  ContextMenu.field_Ub = MenuButton.a(var2, (byte) 112);
                 }
                 var2 = nk.a("ra_explanation", (byte) 21);
                 if (var2 != null) {
@@ -1148,7 +1148,7 @@ final class nn {
                 }
                 var2 = nk.a("rule_2_1", (byte) -114);
                 if (var2 != null) {
-                  br.field_Rb = MenuButton.a(var2, (byte) 90);
+                  ContextMenu.field_Rb = MenuButton.a(var2, (byte) 90);
                 }
                 var2 = nk.a("rule_2_2", (byte) -15);
                 if (null != var2) {
@@ -3230,31 +3230,31 @@ final class nn {
             var6 = AchievementBrowserScreen.a(121, this.field_e) ? 1 : 0;
             if (var5 == null &&
               var6 == 0) {
-              this.field_d.a(rd.a(AchievementMaskRequest.field_l, new String[]{var4}, (byte) 103), 4, (byte) 105);
-              this.field_d.a(rd.a(ob.field_H, new String[]{var4}, (byte) 103), 6, (byte) 110);
+              this.contextMenu.addAction(rd.a(AchievementMaskRequest.field_l, new String[]{var4}, (byte) 103), 4, (byte) 105);
+              this.contextMenu.addAction(rd.a(ob.field_H, new String[]{var4}, (byte) 103), 6, (byte) 110);
               if (null != param0 &&
                 2 != param2 &&
                 !um.field_e) {
                 this.field_c = param0;
-                this.field_d.a(rd.a(cn.field_b, new String[]{var4}, (byte) 103), 19, (byte) 95);
+                this.contextMenu.addAction(rd.a(cn.field_b, new String[]{var4}, (byte) 103), 19, (byte) 95);
               }
             }
             if (null != var5) {
               if (!m.a(13134, this.field_e) &&
                 !um.field_e) {
                 if (!qo.field_I) {
-                  this.field_d.a(rd.a(ClientException.field_c, new String[]{var4}, (byte) 103), 8, (byte) 80);
+                  this.contextMenu.addAction(rd.a(ClientException.field_c, new String[]{var4}, (byte) 103), 8, (byte) 80);
                 }
-                this.field_d.a(rd.a(qm.field_b, new String[]{var4}, (byte) 103), 18, (byte) 104);
+                this.contextMenu.addAction(rd.a(qm.field_b, new String[]{var4}, (byte) 103), 18, (byte) 104);
                 if (null != param0) {
                   this.field_c = param0;
-                  this.field_d.a(rd.a(cn.field_b, new String[]{var4}, (byte) 103), 19, (byte) 72);
+                  this.contextMenu.addAction(rd.a(cn.field_b, new String[]{var4}, (byte) 103), 19, (byte) 72);
                 }
               }
-              this.field_d.a(rd.a(sj.field_g, new String[]{var4}, (byte) 103), 5, (byte) 106);
+              this.contextMenu.addAction(rd.a(sj.field_g, new String[]{var4}, (byte) 103), 5, (byte) 106);
             }
             if (var6 != 0) {
-              this.field_d.a(rd.a(ri.field_O, new String[]{var4}, (byte) 103), 7, (byte) 82);
+              this.contextMenu.addAction(rd.a(ri.field_O, new String[]{var4}, (byte) 103), 7, (byte) 82);
             }
           }
           if (param1 > -68) {
@@ -3299,7 +3299,7 @@ final class nn {
                 o.field_e.field_yc < 0) {
                 return;
               }
-              this.field_d.a(rd.a(cq.field_q, new String[]{var5}, (byte) 103), 1, (byte) 94);
+              this.contextMenu.addAction(rd.a(cq.field_q, new String[]{var5}, (byte) 103), 1, (byte) 94);
               if (var6 == 0) {
                 return;
               }
@@ -3308,20 +3308,20 @@ final class nn {
               o.field_e.field_Dc &&
               o.field_e.field_jc > o.field_e.field_cc) {
               if (var3.field_Qb) {
-                this.field_d.a(rd.a(hm.field_c, new String[]{var5}, (byte) 103), 1, (byte) 108);
+                this.contextMenu.addAction(rd.a(hm.field_c, new String[]{var5}, (byte) 103), 1, (byte) 108);
                 if (var6 == 0) {
                   return;
                 }
               }
               if (param1 &&
                 var3.field_fc) {
-                this.field_d.a(rd.a(mc.field_b, new String[]{var5}, (byte) 103), 0, (byte) 112);
-                this.field_d.a(rd.a(RasterCacheSurface.field_o, new String[]{var5}, (byte) 103), 1, (byte) 116);
+                this.contextMenu.addAction(rd.a(mc.field_b, new String[]{var5}, (byte) 103), 0, (byte) 112);
+                this.contextMenu.addAction(rd.a(RasterCacheSurface.field_o, new String[]{var5}, (byte) 103), 1, (byte) 116);
                 if (var6 == 0) {
                   return;
                 }
               }
-              this.field_d.a(rd.a(ResourceRequest.field_A, new String[]{var5}, (byte) 103), 0, (byte) 126);
+              this.contextMenu.addAction(rd.a(ResourceRequest.field_A, new String[]{var5}, (byte) 103), 0, (byte) 126);
             }
           }
           return;
@@ -3343,7 +3343,7 @@ final class nn {
           if (null != this.field_e &&
             this.field_i != oc.field_p) {
             var2 = this.c(-12688);
-            this.field_d.a(rd.a(DesertBackground.field_t, new String[]{var2}, (byte) 103), 17, (byte) 107);
+            this.contextMenu.addAction(rd.a(DesertBackground.field_t, new String[]{var2}, (byte) 103), 17, (byte) 107);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -3361,7 +3361,7 @@ final class nn {
           if (param0 != 2099) {
             this.a((gb) null, -34);
           }
-          stackIn_10_0 = (this.field_d != null) && (this.field_d.i(94));
+          stackIn_10_0 = (this.contextMenu != null) && (this.contextMenu.handleCancelKey(94));
           return stackIn_10_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -3379,7 +3379,7 @@ final class nn {
         RuntimeException var6 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var6_int = this.field_d.a((byte) -60, param4);
+          var6_int = this.contextMenu.updateAndPollAction((byte) -60, param4);
           if (param0 == var6_int) {
             return false;
           }
@@ -3457,14 +3457,14 @@ final class nn {
                   if (param2 != 10 ||
                     var5 != 0) {
                     if (param2 == 15) {
-                      br.a(param1, (byte) -34, this.field_b);
+                      ContextMenu.a(param1, (byte) -34, this.field_b);
                     }
                     if (param2 != 15 ||
                       var5 != 0) {
                       if (param2 != 16) {
                         return false;
                       }
-                      br.a(param1, (byte) 120, 0);
+                      ContextMenu.a(param1, (byte) 120, 0);
                       if (var5 != 0) {
                         jb.b(this.field_b, param1, param0 + 11815);
                         rf.a(param1, this.field_i, true);
@@ -3512,7 +3512,7 @@ final class nn {
             return true;
           }
           if (param0 < 121) {
-            this.field_d = (br) null;
+            this.contextMenu = (ContextMenu) null;
           }
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -3535,7 +3535,7 @@ final class nn {
         String stackIn_19_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          this.field_d = new br(ce.field_b);
+          this.contextMenu = new ContextMenu(ce.field_b);
           this.field_i = param1;
           this.field_j = param0;
           this.field_a = param5;
@@ -3590,24 +3590,24 @@ final class nn {
           this.field_a = param0.field_c;
           if (param0.field_c == 0) {
             if (InstructionsScreen.field_r == 0) {
-              this.field_d.a(RasterSnapshot.field_l, 12, (byte) 81);
+              this.contextMenu.addAction(RasterSnapshot.field_l, 12, (byte) 81);
             }
-            this.field_d.a(co.field_e, 13, (byte) 87);
+            this.contextMenu.addAction(co.field_e, 13, (byte) 87);
           }
           if (param1 >= -70) {
             return;
           }
           if (param0.field_c == 1) {
             if (InstructionsScreen.field_v == 0) {
-              this.field_d.a(ej.field_K, 12, (byte) 107);
+              this.contextMenu.addAction(ej.field_K, 12, (byte) 107);
             }
-            this.field_d.a(CacheIoWorker.field_b, 13, (byte) 82);
+            this.contextMenu.addAction(CacheIoWorker.field_b, 13, (byte) 82);
           }
           if (param0.field_c == 2) {
             if (to.field_a == 0) {
-              this.field_d.a(qp.field_d, 12, (byte) 121);
+              this.contextMenu.addAction(qp.field_d, 12, (byte) 121);
             }
-            this.field_d.a(ac.field_b, 13, (byte) 118);
+            this.contextMenu.addAction(ac.field_b, 13, (byte) 118);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

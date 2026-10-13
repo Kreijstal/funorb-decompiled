@@ -397,7 +397,7 @@ final class nh {
               stackIn_24_1 = (param4) && (ic.field_b == 0L);
               stackIn_23_0.enabled = stackIn_24_1;
               var10 = 2;
-              if (null != br.field_bc) {
+              if (null != ContextMenu.field_bc) {
                 if (qo.field_J == null) {
                   h.field_D = new boolean[cq.field_p];
                   qo.field_J = new byte[cq.field_p];
@@ -420,10 +420,10 @@ final class nh {
                     }
                     var12 = stackIn_73_0;
                     while (true) {
-                      stackIn_39_0 = br.field_bc.length;
+                      stackIn_39_0 = ContextMenu.field_bc.length;
                       stackIn_39_1 = var12;
                       if (stackIn_39_0 > stackIn_39_1) {
-                        var26 = br.field_bc[var12];
+                        var26 = ContextMenu.field_bc[var12];
                         var24 = var26;
                         var21 = var24;
                         var13_ref_int__ = var21;
@@ -489,7 +489,7 @@ final class nh {
                   stackIn_73_0 = 2;
                   break;
                 }
-                if (!(stackIn_73_0 > kb.field_Yb) &&
+                if (!(stackIn_73_0 > QuickChatHelpDialog.field_Yb) &&
                   IntArrayRequest.heldKeys[12]) {
                   var10 = 2;
                 }
@@ -527,7 +527,7 @@ final class nh {
                   if (stackIn_87_0 != ~var10) {
                     var13_ref_String = bh.field_rb;
                     if (var12 == 0) {
-                      var14_ref_String = rd.a(br.field_ac, new String[]{(String) (var11_ref)}, (byte) 103);
+                      var14_ref_String = rd.a(ContextMenu.field_ac, new String[]{(String) (var11_ref)}, (byte) 103);
                       if (var19 != 0) {
                         var14_ref_String = ff.field_e + (String) (var11_ref);
                       }
@@ -652,7 +652,7 @@ final class nh {
                   stackIn_153_0 = 2;
                   break;
                 }
-                if (stackIn_153_0 <= kb.field_Yb &&
+                if (stackIn_153_0 <= QuickChatHelpDialog.field_Yb &&
                   IntArrayRequest.heldKeys[12]) {
                   var16 = 0;
                 }

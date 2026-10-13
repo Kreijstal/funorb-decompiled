@@ -72,14 +72,14 @@ final class OptionsScreen extends FramedMenuScreen {
         }
     }
 
-    final static int a(int param0, int param1, int param2, int param3) {
-        if (Rasterizer2D.width >= param2 + param1) {
-          return param2;
+    final static int choosePopupX(int obfuscationGuard, int popupWidth, int anchorX, int anchorWidth) {
+        if (Rasterizer2D.width >= anchorX + popupWidth) {
+          return anchorX;
         }
-        if (param0 >= ~(-param1 + (param2 + param3))) {
-          return param2 + param3 - param1;
+        if (obfuscationGuard >= ~(-popupWidth + (anchorX + anchorWidth))) {
+          return anchorX + anchorWidth - popupWidth;
         }
-        return Rasterizer2D.width - param1;
+        return Rasterizer2D.width - popupWidth;
     }
 
     OptionsScreen() {

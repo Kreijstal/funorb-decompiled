@@ -61,7 +61,7 @@ final class hd {
         tb.field_eb = null;
         rf.field_f = true;
         pp.field_a = 12;
-        kb.field_Sb = true;
+        QuickChatHelpDialog.field_Sb = true;
         wl.field_N = true;
         wc.field_b = true;
         c.field_i = un.field_e;

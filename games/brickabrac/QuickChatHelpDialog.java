@@ -1,11 +1,11 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class kb extends UiComponent {
+final class QuickChatHelpDialog extends UiComponent {
     static boolean pointerChanged;
     static String field_Wb;
     static String field_Rb;
-    private UiComponent field_ac;
+    private UiComponent closeButton;
     static volatile int liveHeldButton;
     static boolean field_Sb;
     static String field_Tb;
@@ -28,7 +28,7 @@ final class kb extends UiComponent {
         try {
           if (param1 != -3) {
             var7 = (PlayerBoard) null;
-            kb.a((MultiplayerMatch) null, 109, -70, (PlayerBoard) null);
+            QuickChatHelpDialog.a((MultiplayerMatch) null, 109, -70, (PlayerBoard) null);
           }
           boolean decompiledFrameRemainder0 = true;
           if (param3 != null && (param4 != 2 ||
@@ -60,15 +60,15 @@ final class kb extends UiComponent {
         }
     }
 
-    final boolean a(byte param0, boolean param1) {
-        if (param0 < 63) {
-          kb.h(-91);
+    final boolean updateAndPollDismissal(byte obfuscationGuard, boolean unusedInputFlag) {
+        if (obfuscationGuard < 63) {
+          QuickChatHelpDialog.h(-91);
           this.updateRoot(true, -15211);
           if (BackgroundScene.pressedButton == 0) {
-            return this.field_ac.pressedButton != 0 ? true : false;
+            return this.closeButton.pressedButton != 0 ? true : false;
           }
           if (this.pressedButton != 0) {
-            return this.field_ac.pressedButton != 0 ? true : false;
+            return this.closeButton.pressedButton != 0 ? true : false;
           }
           return true;
         }
@@ -77,9 +77,9 @@ final class kb extends UiComponent {
           if (this.pressedButton == 0) {
             return true;
           }
-          return this.field_ac.pressedButton != 0 ? true : false;
+          return this.closeButton.pressedButton != 0 ? true : false;
         }
-        if (this.field_ac.pressedButton == 0) {
+        if (this.closeButton.pressedButton == 0) {
           return false;
         }
         return true;
@@ -162,8 +162,8 @@ final class kb extends UiComponent {
         }
     }
 
-    kb(UiComponent param0, UiComponent param1, UiComponent param2, UiComponent param3, UiComponent param4, UiComponent param5) {
-        int var12 = 0;
+    QuickChatHelpDialog(UiComponent unusedStyle, UiComponent titleStyle, UiComponent closeStyle, UiComponent textStyle, UiComponent unusedIconStyle, UiComponent unusedLabelStyle) {
+        int shortcutIndex = 0;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
@@ -179,87 +179,87 @@ final class kb extends UiComponent {
         String stackIn_26_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var7 = null;
-        UiComponent var8 = null;
-        UiComponent var9 = null;
-        int var10 = 0;
-        int var11 = 0;
-        UiComponent var13 = null;
-        UiComponent var14 = null;
-        int var15 = 0;
-        UiComponent var17 = null;
-        int var10Lifetime1;
+        UiComponent body = null;
+        UiComponent subtitle = null;
+        int nextRowY = 0;
+        int maximumDescriptionWidth = 0;
+        UiComponent shortcutLabel = null;
+        UiComponent descriptionLabel = null;
+        int descriptionWidth = 0;
+        UiComponent title = null;
+        int unusedCenteredY;
         try {
-          var17 = new UiComponent(0L, param1, ng.field_c.toUpperCase());
-          var17.horizontalAlignment = 1;
-          this.field_ac = new UiComponent(0L, param2);
-          var8 = new UiComponent(0L, param3);
-          var9 = new UiComponent(0L, param3, DelegatingCanvas.field_b);
-          var9.horizontalAlignment = 1;
-          var10 = 50;
-          var11 = 0;
-          for (var12 = 0; MenuSelection.field_p.length > var12; var12++) {
-            var13 = new UiComponent(0L, param3, qo.field_M[var12]);
-            var14 = new UiComponent(0L, param3, MenuSelection.field_p[var12]);
-            var15 = param3.font.measureText(MenuSelection.field_p[var12]);
-            var13.setBounds(15, var10, 20, 65, (byte) 64);
-            if (var15 > var11) {
-              var11 = var15;
+          title = new UiComponent(0L, titleStyle, ng.field_c.toUpperCase());
+          title.horizontalAlignment = 1;
+          this.closeButton = new UiComponent(0L, closeStyle);
+          body = new UiComponent(0L, textStyle);
+          subtitle = new UiComponent(0L, textStyle, DelegatingCanvas.field_b);
+          subtitle.horizontalAlignment = 1;
+          nextRowY = 50;
+          maximumDescriptionWidth = 0;
+          for (shortcutIndex = 0; MenuSelection.field_p.length > shortcutIndex; shortcutIndex++) {
+            shortcutLabel = new UiComponent(0L, textStyle, qo.field_M[shortcutIndex]);
+            descriptionLabel = new UiComponent(0L, textStyle, MenuSelection.field_p[shortcutIndex]);
+            descriptionWidth = textStyle.font.measureText(MenuSelection.field_p[shortcutIndex]);
+            shortcutLabel.setBounds(15, nextRowY, 20, 65, (byte) 64);
+            if (descriptionWidth > maximumDescriptionWidth) {
+              maximumDescriptionWidth = descriptionWidth;
             }
-            var14.setBounds(15, var10, 90, 640, (byte) 64);
-            var8.addChild(var13, 0);
-            var8.addChild(var14, 0);
-            var10 += 30;
+            descriptionLabel.setBounds(15, nextRowY, 90, 640, (byte) 64);
+            body.addChild(shortcutLabel, 0);
+            body.addChild(descriptionLabel, 0);
+            nextRowY += 30;
           }
-          var17.setBounds(24, 0, 0, 20 + var11 + 90, (byte) 64);
-          var10 += 15;
-          this.setBounds(var17.height + var10, 100, 100, var17.width, (byte) 64);
-          this.field_ac.setBounds(15, 5, -20 + var17.width, 15, (byte) 64);
-          var8.setBounds(this.height - var17.height, var17.height, 0, this.width, (byte) 64);
-          var9.setBounds(15, 20, 0, this.width, (byte) 64);
-          var8.frameSprites = na.a(false, 8421504, 3, 11579568, var8.height, 2105376);
-          var17.addChild(this.field_ac, 0);
-          var8.addChild(var9, 0);
-          this.addChild(var17, 0);
-          this.addChild(var8, 0);
+          title.setBounds(24, 0, 0, 20 + maximumDescriptionWidth + 90, (byte) 64);
+          nextRowY += 15;
+          this.setBounds(title.height + nextRowY, 100, 100, title.width, (byte) 64);
+          this.closeButton.setBounds(15, 5, -20 + title.width, 15, (byte) 64);
+          body.setBounds(this.height - title.height, title.height, 0, this.width, (byte) 64);
+          subtitle.setBounds(15, 20, 0, this.width, (byte) 64);
+          body.frameSprites = na.a(false, 8421504, 3, 11579568, body.height, 2105376);
+          title.addChild(this.closeButton, 0);
+          body.addChild(subtitle, 0);
+          this.addChild(title, 0);
+          this.addChild(body, 0);
           this.localX = -(this.width >> 1) + 320;
-          var10Lifetime1 = 240 - (this.height >> 1);
+          unusedCenteredY = 240 - (this.height >> 1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var7 = decompiledCaughtException;
           stackIn_10_0 = var7;
           stackIn_10_1 = new StringBuilder().append("kb.<init>(");
-          if (param0 == null) {
+          if (unusedStyle == null) {
             stackIn_11_2 = "null";
           } else {
             stackIn_11_2 = "{...}";
           }
           stackIn_13_1 = ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',');
-          if (param1 == null) {
+          if (titleStyle == null) {
             stackIn_14_2 = "null";
           } else {
             stackIn_14_2 = "{...}";
           }
           stackIn_16_1 = ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',');
-          if (param2 == null) {
+          if (closeStyle == null) {
             stackIn_17_2 = "null";
           } else {
             stackIn_17_2 = "{...}";
           }
           stackIn_19_1 = ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',');
-          if (param3 == null) {
+          if (textStyle == null) {
             stackIn_20_2 = "null";
           } else {
             stackIn_20_2 = "{...}";
           }
           stackIn_22_1 = ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',');
-          if (param4 == null) {
+          if (unusedIconStyle == null) {
             stackIn_23_2 = "null";
           } else {
             stackIn_23_2 = "{...}";
           }
           stackIn_25_1 = ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',');
-          if (param5 == null) {
+          if (unusedLabelStyle == null) {
             stackIn_26_2 = "null";
           } else {
             stackIn_26_2 = "{...}";
@@ -318,7 +318,7 @@ final class kb extends UiComponent {
           var4_int = stackIn_3_0;
           if (param2 <= 63) {
             var5 = (int[]) null;
-            kb.a(-35L, 83, (String) null, (int[]) null, -41);
+            QuickChatHelpDialog.a(-35L, 83, (String) null, (int[]) null, -41);
           }
           if (var4_int == 0 &&
             param3.boardState == 2 && (!r.field_A ||

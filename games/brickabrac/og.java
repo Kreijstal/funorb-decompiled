@@ -1334,7 +1334,7 @@ final class og extends UiComponent {
           }
           var2Lifetime153 = gr.a(true, "explain_fall_out");
           if (var2Lifetime153 != null) {
-            kb.field_Tb = MenuButton.a(var2Lifetime153, (byte) 85);
+            QuickChatHelpDialog.field_Tb = MenuButton.a(var2Lifetime153, (byte) 85);
           }
           var2Lifetime154 = gr.a(!param0, "explain_ball_charge");
           if (null != var2Lifetime154) {

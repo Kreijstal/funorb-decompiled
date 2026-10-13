@@ -200,7 +200,7 @@ final class hc {
               }
             }
           }
-          np.field_a = 15;
+          np.uiRowHeight = 15;
           MenuSelection.field_g = 2;
           om.field_oc = 4;
           if (param0 < 102) {
@@ -217,12 +217,12 @@ final class hc {
           var8 = new UiComponent(0L, (UiComponent) null);
           var8.font = (TextFont) ((Object) var7);
           var8.textColor = 16777215;
-          var8.lineSpacing = np.field_a;
+          var8.lineSpacing = np.uiRowHeight;
           var8.verticalAlignment = 1;
           var9 = var8;
           var9.horizontalAlignment = 1;
           var10 = new UiComponent(0L, (UiComponent) null);
-          var10.lineSpacing = np.field_a;
+          var10.lineSpacing = np.uiRowHeight;
           var10.textColor = 16777215;
           var10.font = (TextFont) ((Object) rd.field_e);
           var11 = var10;
@@ -258,7 +258,7 @@ final class hc {
           CappedUrlRequest.field_l = new UiComponent(0L, (UiComponent) null);
           CappedUrlRequest.field_l.verticalAlignment = 1;
           CappedUrlRequest.field_l.font = (TextFont) ((Object) rd.field_e);
-          CappedUrlRequest.field_l.lineSpacing = np.field_a;
+          CappedUrlRequest.field_l.lineSpacing = np.uiRowHeight;
           CappedUrlRequest.field_l.textColor = 13421772;
           DualLinkNode.field_t = new UiComponent(0L, CappedUrlRequest.field_l);
           DualLinkNode.field_t.capturedTextColor = 16777215;
@@ -269,7 +269,7 @@ final class hc {
           var15 = new UiComponent(0L, DualLinkNode.field_t);
           var15.font = (TextFont) ((Object) var7);
           var15.textColor = 16777215;
-          var15.lineSpacing = np.field_a;
+          var15.lineSpacing = np.uiRowHeight;
           Paddle.field_C = new UiComponent(0L, CappedUrlRequest.field_l);
           Paddle.field_C.frameSprites = TimedSplashScreen.a(false, (byte) 94, 2236962, 16, 2236962, false);
           Paddle.field_C.textInset = 2;
@@ -281,7 +281,7 @@ final class hc {
           vb.field_K = new UiComponent(0L, wi.field_n);
           vb.field_K.copyStyle((byte) -72, DualLinkNode.field_t);
           var16 = cr.loadRgbSpritesByName("lobby", param3, "button_mouseover", 2);
-          ce.field_b = new br(GameUiController.field_c, var12, CappedUrlRequest.field_l, DualLinkNode.field_t, 3, 2, kn.field_z, 3, np.field_a);
+          ce.field_b = new ContextMenu(GameUiController.field_c, var12, CappedUrlRequest.field_l, DualLinkNode.field_t, 3, 2, kn.field_z, 3, np.uiRowHeight);
           ArcticBackground.field_s = new UiComponent(0L, DualLinkNode.field_t);
           ArcticBackground.field_s.capturedOffsetY = 1;
           ArcticBackground.field_s.capturedOffsetX = 1;
@@ -362,11 +362,11 @@ final class hc {
           OptionsScreen.field_u.capturedFrameSprites = dupTemp$3;
           var17 = cr.loadRgbSpritesByName("lobby", param3, "checkbox", 2);
           BlankScreen.field_k = new StateIconLabel(0L, var17[1], var17[0], 1, DualLinkNode.field_t, (String) null);
-          kb.field_Vb = new UiComponent(0L, (UiComponent) null);
-          kb.field_Vb.frameSprites = HighscorePackSelector.a(pl.loadRgbSpriteByName("lobby", "slideregion", (byte) -95, param3), -52);
-          kb.field_Vb.activeFrameSprites = HighscorePackSelector.a(pl.loadRgbSpriteByName("lobby", "slideregion_mouseover", (byte) 104, param3), -71);
-          kb.field_Vb.capturedFrameSprites = HighscorePackSelector.a(pl.loadRgbSpriteByName("lobby", "slideregion_mouseheld", (byte) 118, param3), -86);
-          kb.field_Vb.disabledFrameSprites = HighscorePackSelector.a(pl.loadRgbSpriteByName("lobby", "slideregion_disabled", (byte) -47, param3), -39);
+          QuickChatHelpDialog.field_Vb = new UiComponent(0L, (UiComponent) null);
+          QuickChatHelpDialog.field_Vb.frameSprites = HighscorePackSelector.a(pl.loadRgbSpriteByName("lobby", "slideregion", (byte) -95, param3), -52);
+          QuickChatHelpDialog.field_Vb.activeFrameSprites = HighscorePackSelector.a(pl.loadRgbSpriteByName("lobby", "slideregion_mouseover", (byte) 104, param3), -71);
+          QuickChatHelpDialog.field_Vb.capturedFrameSprites = HighscorePackSelector.a(pl.loadRgbSpriteByName("lobby", "slideregion_mouseheld", (byte) 118, param3), -86);
+          QuickChatHelpDialog.field_Vb.disabledFrameSprites = HighscorePackSelector.a(pl.loadRgbSpriteByName("lobby", "slideregion_disabled", (byte) -47, param3), -39);
           RankingsScreen.field_s = new UiComponent(0L, (UiComponent) null);
           RankingsScreen.field_s.frameSprites = GameConnectionShell.a(cr.loadRgbSpritesByName("lobby", param3, "dragbar", 2), (byte) -102);
           RankingsScreen.field_s.activeFrameSprites = GameConnectionShell.a(cr.loadRgbSpritesByName("lobby", param3, "dragbar_mouseover", 2), (byte) -119);
@@ -382,7 +382,7 @@ final class hc {
           MessageScreen.field_s.activeSprite = pl.loadRgbSpriteByName("lobby", "downbutton_mouseover", (byte) -109, param3);
           MessageScreen.field_s.capturedSprite = pl.loadRgbSpriteByName("lobby", "downbutton_mouseheld", (byte) 97, param3);
           MessageScreen.field_s.disabledSprite = pl.loadRgbSpriteByName("lobby", "downbutton_disabled", (byte) 104, param3);
-          ic.field_c = new VerticalScrollbar(0L, ChocolateBackground.field_u, MessageScreen.field_s, kb.field_Vb, RankingsScreen.field_s);
+          ic.field_c = new VerticalScrollbar(0L, ChocolateBackground.field_u, MessageScreen.field_s, QuickChatHelpDialog.field_Vb, RankingsScreen.field_s);
           rq.field_b = new ScrollPaneWithFooter(0L, (UiComponent) null, am.field_Qb, ic.field_c, MessageScreen.field_r, (String) null, (String) null);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -243,7 +243,7 @@ class DualLinkNode extends IntrusiveNode {
             if (param0.length() <= var2_int) {
               return true;
             }
-            if (m.a(true, param0.charAt(var2_int))) {
+            if (m.isNameCharacter(true, param0.charAt(var2_int))) {
               var2_int++;
               continue;
             }

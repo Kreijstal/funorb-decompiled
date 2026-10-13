@@ -24,7 +24,7 @@ abstract class BackgroundScene {
         if (param0 > -74) {
           return (RgbSprite) null;
         }
-        return kb.field_Ub[gb.backgroundVariant];
+        return QuickChatHelpDialog.field_Ub[gb.backgroundVariant];
     }
 
     final PcmSound[] pollSoundEffects(int obfuscationGuard) {

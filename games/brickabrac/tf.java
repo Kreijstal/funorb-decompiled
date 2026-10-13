@@ -110,27 +110,27 @@ final class tf {
           var4_int = 47 / ((param2 + 13) / 51);
           SpriteGeometry.a(-1, param0, rl.field_e, (int[]) null, (String) null, param0.e((byte) -14), (byte) -58, 0L, (String) null);
           if (param0.field_Rb && (param0.field_wc == 2 ||
-            !(kb.field_Yb < 2))) {
+            !(QuickChatHelpDialog.field_Yb < 2))) {
             var9 = bm.field_d;
             var10 = rd.a(LevelResultSubmission.field_s, new String[]{param3}, (byte) 103);
-            var9.field_d.a(var10, 10, (byte) 91);
+            var9.contextMenu.addAction(var10, 10, (byte) 91);
           }
           bm.field_d.a(true);
           if (param1) {
             if (bm.field_d.field_b == MenuSelection.field_i) {
               var13 = bm.field_d;
               var14 = rd.a(co.field_d, new String[]{param3}, (byte) 103);
-              var13.field_d.a(var14, 16, (byte) 90);
+              var13.contextMenu.addAction(var14, 16, (byte) 90);
             } else {
               var11 = bm.field_d;
               var12 = rd.a(Paddle.field_G, new String[]{param3}, (byte) 103);
-              var11.field_d.a(var12, 15, (byte) 116);
+              var11.contextMenu.addAction(var12, 15, (byte) 116);
             }
           }
           var15 = bm.field_d;
           var6 = tb.pressX;
           var7 = qo.pressY;
-          var15.field_d.a(var7, -102, 0, 0, var6);
+          var15.contextMenu.layoutAtAnchor(var7, -102, 0, 0, var6);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

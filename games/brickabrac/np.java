@@ -7,7 +7,7 @@ final class np {
     static int field_b;
     static RgbSprite jungleFarSprite;
     static RgbSprite[][] volcanicSegsSprites;
-    static int field_a;
+    static int uiRowHeight;
 
     final static void b(boolean param0) {
         bj.field_T = sh.a((byte) 84);

@@ -134,10 +134,10 @@ final class CacheIoRequest extends ResourceRequest {
           }
           co.a(stackIn_4_0, false);
           sb.field_c.a(NinjaBackground.field_w.width, 0, 88, 0, -40 + NinjaBackground.field_w.height - 2);
-          um.field_b.setBounds(np.field_a, 0, 0, ji.field_b.width, (byte) 64);
+          um.field_b.setBounds(np.uiRowHeight, 0, 0, ji.field_b.width, (byte) 64);
           stackIn_6_0 = BoundedFile.field_g;
           stackIn_6_1 = 18;
-          stackIn_6_2 = np.field_a + 2;
+          stackIn_6_2 = np.uiRowHeight + 2;
           stackIn_6_3 = 0;
           stackIn_6_4 = ji.field_b.width;
           if (!vd.field_e) {
@@ -149,8 +149,8 @@ final class CacheIoRequest extends ResourceRequest {
           if (!param0) {
             field_D = (java.awt.Canvas) null;
           }
-          wd.field_E.setBounds(18, np.field_a + 2, -40 + (-2 + ji.field_b.width) - ec.field_J, 42 + ec.field_J, (byte) 64);
-          TimedSplashScreen.field_u.setScrollPaneBounds(2, (byte) -109, ji.field_b.width, 0, np.field_a + 2 + 20, ec.field_J, -2 + ji.field_b.height - (np.field_a + 20));
+          wd.field_E.setBounds(18, np.uiRowHeight + 2, -40 + (-2 + ji.field_b.width) - ec.field_J, 42 + ec.field_J, (byte) 64);
+          TimedSplashScreen.field_u.setScrollPaneBounds(2, (byte) -109, ji.field_b.width, 0, np.uiRowHeight + 2 + 20, ec.field_J, -2 + ji.field_b.height - (np.uiRowHeight + 20));
           GameUiController.field_e.setBounds(40, -40 + NinjaBackground.field_w.height, 0, NinjaBackground.field_w.width, (byte) 64);
           ba.field_v.setBounds(30, 0, 0, MultiplayerMatch.field_d.width, (byte) 64);
           rg.field_e.setBounds(-2 + (-40 + MultiplayerMatch.field_d.height) - 30, 30, 0, MultiplayerMatch.field_d.width, (byte) 64);

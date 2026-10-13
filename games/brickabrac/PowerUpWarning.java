@@ -150,7 +150,7 @@ final class PowerUpWarning extends IntrusiveNode {
           }
           if (null != param0.field_g) {
             ig.field_K = param0.field_m;
-            kb.field_Zb = param0.field_k;
+            QuickChatHelpDialog.field_Zb = param0.field_k;
             r.field_x = param0.field_c;
             ResourceRequest.field_z = param0.field_g;
           }

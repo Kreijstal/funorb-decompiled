@@ -17,11 +17,11 @@ final class sg extends k {
         Object var1 = null;
         var1 = PowerUpWarning.mouseInput;
         synchronized (var1) {
-          cb.heldButton = kb.liveHeldButton;
+          cb.heldButton = QuickChatHelpDialog.liveHeldButton;
           gr.pointerIdleTicks = gr.pointerIdleTicks + 1;
           MusicPatch.pointerX = DirectByteStorage.livePointerX;
           po.pointerY = ep.livePointerY;
-          kb.pointerChanged = kn.livePointerChanged;
+          QuickChatHelpDialog.pointerChanged = kn.livePointerChanged;
           kn.livePointerChanged = false;
           BackgroundScene.pressedButton = mi.livePressedButton;
           tb.pressX = SoundPlayback.livePressX;

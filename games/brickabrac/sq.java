@@ -4,7 +4,7 @@
 final class sq {
     static int[] field_b;
     static String field_a;
-    static kb field_c;
+    static QuickChatHelpDialog quickChatHelpDialog;
 
     final static void a(PlatformServices param0, int param1, java.awt.Frame param2) {
         PlatformTask var3 = null;
@@ -34,7 +34,7 @@ final class sq {
           if (param1 == -20954) {
             return;
           }
-          field_c = (kb) null;
+          quickChatHelpDialog = (QuickChatHelpDialog) null;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -143,20 +143,20 @@ final class sq {
         if (param0 > 31) {
           return new m(IndexedSpriteGeometry.a(57), ga.c(30794));
         }
-        field_c = (kb) null;
+        quickChatHelpDialog = (QuickChatHelpDialog) null;
         return new m(IndexedSpriteGeometry.a(57), ga.c(30794));
     }
 
     public static void a(byte param0) {
         if (param0 == -11) {
           field_a = null;
-          field_c = null;
+          quickChatHelpDialog = null;
           field_b = null;
           return;
         }
         field_b = (int[]) null;
         field_a = null;
-        field_c = null;
+        quickChatHelpDialog = null;
         field_b = null;
     }
 
@@ -171,11 +171,11 @@ final class sq {
           bm.field_d.a(true, false);
           var4_ref_nn = bm.field_d;
           var5_ref_String = ChocolateBackground.field_y;
-          var4_ref_nn.field_d.a(var5_ref_String, 5, (byte) 104);
+          var4_ref_nn.contextMenu.addAction(var5_ref_String, 5, (byte) 104);
           var4_ref_nnLifetime1 = bm.field_d;
           var5 = tb.pressX;
           var6 = qo.pressY;
-          var4_ref_nnLifetime1.field_d.a(var6, -98, 0, 0, var5);
+          var4_ref_nnLifetime1.contextMenu.layoutAtAnchor(var6, -98, 0, 0, var5);
         }
         int var4 = -44 % ((-3 - param2) / 50);
         MusicEnvelope.a(param0, true, param1);

@@ -59,7 +59,7 @@ abstract class fe extends bj {
           super.j(param0);
           return;
         }
-        if (this.field_nb != gq.field_Xb) {
+        if (this.field_nb != NameEntryPopup.field_Xb) {
           this.a(true, this.field_db + 12 + this.field_eb.field_s, 12 + this.field_eb.field_t);
           this.a((byte) 56, this.field_eb);
         } else {
@@ -85,7 +85,7 @@ abstract class fe extends bj {
             return super.h(0);
           }
           if (this.field_nb != bh.field_qb) {
-            if (this.field_nb != gq.field_Xb) {
+            if (this.field_nb != NameEntryPopup.field_Xb) {
               return super.h(0);
             }
             fieldTemp$0 = this.field_fb + 1;
@@ -114,7 +114,7 @@ abstract class fe extends bj {
           return super.h(0);
         }
         if (this.field_nb != bh.field_qb) {
-          if (this.field_nb != gq.field_Xb) {
+          if (this.field_nb != NameEntryPopup.field_Xb) {
             return super.h(0);
           }
           fieldTemp$2 = this.field_fb + 1;
@@ -166,7 +166,7 @@ abstract class fe extends bj {
           return;
         }
         this.field_fb = 0;
-        this.field_nb = gq.field_Xb;
+        this.field_nb = NameEntryPopup.field_Xb;
         this.a((byte) 56, this.field_eb);
         this.field_eb = null;
         this.field_mb.field_K = 0;

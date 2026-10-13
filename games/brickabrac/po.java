@@ -15,7 +15,7 @@ final class po {
         if (!param0) {
           return;
         }
-        sq.field_c = new kb(MenuSelection.field_m, rf.field_c, am.field_Zb, CappedUrlRequest.field_l, BlankScreen.field_k, DualLinkNode.field_t);
+        sq.quickChatHelpDialog = new QuickChatHelpDialog(MenuSelection.field_m, rf.field_c, am.field_Zb, CappedUrlRequest.field_l, BlankScreen.field_k, DualLinkNode.field_t);
     }
 
     public static void b(int param0) {

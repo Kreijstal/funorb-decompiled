@@ -344,7 +344,7 @@ final class MenuSelection {
             }
             if (this.heldCode == 0) {
               if (!this.pointerDriven &&
-                !kb.pointerChanged) {
+                !QuickChatHelpDialog.pointerChanged) {
                 return;
               }
               if (heldIndex < 0) {
@@ -370,7 +370,7 @@ final class MenuSelection {
             }
             if (this.heldCode == 0) {
               if (!this.pointerDriven &&
-                !kb.pointerChanged) {
+                !QuickChatHelpDialog.pointerChanged) {
                 return;
               }
               if (heldIndex < 0) {
@@ -400,7 +400,7 @@ final class MenuSelection {
           }
           if (this.heldCode == 0) {
             if (!this.pointerDriven &&
-              !kb.pointerChanged) {
+              !QuickChatHelpDialog.pointerChanged) {
               return;
             }
             if (heldIndex < 0) {
@@ -436,7 +436,7 @@ final class MenuSelection {
                 return;
               }
               if (!this.pointerDriven &&
-                !kb.pointerChanged) {
+                !QuickChatHelpDialog.pointerChanged) {
                 return;
               }
               decompiledFrameRemainder1 = false;
@@ -450,7 +450,7 @@ final class MenuSelection {
               return;
             }
             if (!this.pointerDriven &&
-              !kb.pointerChanged) {
+              !QuickChatHelpDialog.pointerChanged) {
               return;
             }
           }
@@ -475,7 +475,7 @@ final class MenuSelection {
                 return;
               }
               if (!this.pointerDriven &&
-                !kb.pointerChanged) {
+                !QuickChatHelpDialog.pointerChanged) {
                 return;
               }
               decompiledFrameRemainder0 = false;
@@ -489,7 +489,7 @@ final class MenuSelection {
               return;
             }
             if (!this.pointerDriven &&
-              !kb.pointerChanged) {
+              !QuickChatHelpDialog.pointerChanged) {
               return;
             }
           }
@@ -515,7 +515,7 @@ final class MenuSelection {
           if (cb.heldButton != 0) {
             if (this.heldCode == 0) {
               if (!this.pointerDriven &&
-                !kb.pointerChanged) {
+                !QuickChatHelpDialog.pointerChanged) {
                 return;
               }
               if (heldIndex >= 0) {
@@ -551,7 +551,7 @@ final class MenuSelection {
             }
             this.selectedIndex = -1;
           } else {
-            if (kb.pointerChanged) {
+            if (QuickChatHelpDialog.pointerChanged) {
               if (heldIndex < 0) {
                 if (!this.pointerDriven) {
                   return;

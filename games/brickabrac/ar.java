@@ -42,7 +42,7 @@ final class ar {
             var8_int = 1;
             var9 = 0;
             while (true) {
-              if (br.field_bc.length <= var9) {
+              if (ContextMenu.field_bc.length <= var9) {
                 if (var8_int == 0) {
                   decompiledFrameCompleted2 = false;
                   break;
@@ -51,7 +51,7 @@ final class ar {
                 decompiledFrameCompleted1 = false;
                 break;
               }
-              var19 = br.field_bc[var9];
+              var19 = ContextMenu.field_bc[var9];
               var17 = var19;
               var10_ref_int__ = var17;
               var11 = 0;
