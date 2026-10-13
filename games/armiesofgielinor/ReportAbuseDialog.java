@@ -340,7 +340,7 @@ final class ReportAbuseDialog extends ClientUiComponent {
         var2[2] = 16777215;
         var2[0] = 1;
         var2[1] = param0;
-        TurnEffectEvent.field_z = new hc(ChannelBaseVolumeConsoleCommand.field_J, IsaacRandom.field_k, rs.field_n, var2, 0, 0);
+        TurnEffectEvent.field_z = new UnitModelViewer(ChannelBaseVolumeConsoleCommand.field_J, IsaacRandom.field_k, rs.field_n, var2, 0, 0);
     }
 
     final boolean isMuteSelected(int obfuscationGuard) {

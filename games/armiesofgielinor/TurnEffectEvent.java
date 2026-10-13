@@ -9,7 +9,7 @@ final class TurnEffectEvent extends GameEvent {
     static String field_y;
     static boolean field_C;
     static String field_A;
-    static hc field_z;
+    static UnitModelViewer field_z;
 
     final void applyToBattlefield(Battlefield battlefield, int obfuscationGuard) {
         RuntimeException stackIn_86_0 = null;

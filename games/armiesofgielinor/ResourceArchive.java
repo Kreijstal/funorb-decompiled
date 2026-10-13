@@ -514,7 +514,7 @@ final class ResourceArchive {
           var3 = stackIn_5_0;
           stackIn_8_0 = (ProgressMessageDialog.pointerButton != 1) ? 0 : 1;
           var4 = stackIn_8_0;
-          TurnEffectEvent.field_z.a(87, var4 != 0, var3 != 0, var1_int, var2, el.field_d);
+          TurnEffectEvent.field_z.updateInput(87, var4 != 0, var3 != 0, var1_int, var2, el.field_d);
           while (true) {
             if (!Unit.pollKeyEvent((byte) -61)) {
               return;

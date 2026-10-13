@@ -7223,7 +7223,7 @@ final class Battlefield {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3_ref = null;
         try {
-          name = ia.a(name, '_', 3, "");
+          name = SpriteFramedLabel.a(name, '_', 3, "");
           if (obfuscationGuard != -26) {
             return true;
           }

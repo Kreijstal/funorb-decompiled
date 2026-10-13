@@ -3,7 +3,7 @@
  */
 abstract class ContentTransitionDialog extends ResizableModalDialog {
     private int resizeDuration;
-    static String[] field_W;
+    static String[] unitAnimationSlotNames;
     static ClientUiComponent field_X;
     private int fadeOutDuration;
     private int transitionTick;
@@ -95,7 +95,7 @@ abstract class ContentTransitionDialog extends ResizableModalDialog {
         field_db = null;
         field_gb = null;
         field_eb = null;
-        field_W = null;
+        unitAnimationSlotNames = null;
         field_Y = null;
         if (param0 != -72) {
           return;
@@ -273,7 +273,7 @@ abstract class ContentTransitionDialog extends ResizableModalDialog {
     }
 
     static {
-        field_W = new String[]{"ready", "walk", "run", "attack", "ranged", "jeer", "defend", "death"};
+        unitAnimationSlotNames = new String[]{"ready", "walk", "run", "attack", "ranged", "jeer", "defend", "death"};
         field_db = new h(3);
         field_Y = "Go Back";
         field_gb = "You cannot chat to <%0> because <%0> is offline in your friend list.";

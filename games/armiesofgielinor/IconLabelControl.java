@@ -128,7 +128,7 @@ final class IconLabelControl extends ClientUiComponent {
           }
           var44 = 0;
           var13Lifetime1 = var44;
-          while (var44 < hc.field_q) {
+          while (var44 < UnitModelViewer.field_q) {
             var14Lifetime1 = ab.field_c[var44];
             var15Lifetime1 = param1.field_c[var14Lifetime1];
             var16 = param1.field_j[var14Lifetime1];

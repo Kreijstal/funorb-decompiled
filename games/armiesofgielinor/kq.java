@@ -165,7 +165,7 @@ class kq extends InteractiveWidget {
         StandardContentDialog.field_mb = param4;
         jg.field_k = param0;
         cn.field_o = param1;
-        ia.field_g = param3;
+        SpriteFramedLabel.field_g = param3;
         if (param2 != 87) {
           Battlefield var6 = (Battlefield) null;
           kq.getSpellConfirmationPrompt(-11, 19, 8, (Battlefield) null, -83);

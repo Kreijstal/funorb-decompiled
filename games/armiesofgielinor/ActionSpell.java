@@ -100,10 +100,10 @@ final class ActionSpell extends Spell {
           if (!(pg.playerProfile.campaignProgress.getMissionScore(campaignIndex, -63, missionId) >= candidateScore) ||
             candidateScore == 1) {
             if (1 < candidateScore) {
-              hc.campaignMetricMutationCounter = hc.campaignMetricMutationCounter + 1;
-              hc.campaignMetricMutationCounter = hc.campaignMetricMutationCounter + (ko.pointerY ^ AiPlanningStrategy.pointerX);
-              hc.campaignMetricMutationCounter = Math.abs(hc.campaignMetricMutationCounter);
-              mutationSelector = hc.campaignMetricMutationCounter % 8;
+              UnitModelViewer.campaignMetricMutationCounter = UnitModelViewer.campaignMetricMutationCounter + 1;
+              UnitModelViewer.campaignMetricMutationCounter = UnitModelViewer.campaignMetricMutationCounter + (ko.pointerY ^ AiPlanningStrategy.pointerX);
+              UnitModelViewer.campaignMetricMutationCounter = Math.abs(UnitModelViewer.campaignMetricMutationCounter);
+              mutationSelector = UnitModelViewer.campaignMetricMutationCounter % 8;
               mutationVariant = mutationSelector;
               if (0 == mutationVariant) {
                 cg.campaignPacketWord2 = cg.campaignPacketWord2 + 1;

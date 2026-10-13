@@ -208,8 +208,8 @@ final class SphinxActionRequest extends ActionRequest {
           h.field_d.selectedSkinSprites = var14;
           wm.field_c = new ClientUiComponent(0L, (ClientUiComponent) null);
           wm.field_c.skinSprites = tq.a(1856141, false, 206, -1, 3, 1127256);
-          sh.field_m = new ClientUiComponent(0L, (ClientUiComponent) null);
-          sh.field_m.skinSprites = tq.a(11579568, false, 290, -1, 3, 6052956);
+          UnitAnimationPreview.field_m = new ClientUiComponent(0L, (ClientUiComponent) null);
+          UnitAnimationPreview.field_m.skinSprites = tq.a(11579568, false, 290, -1, 3, 6052956);
           ConsoleValue.field_a = new ClientUiComponent(0L, var15);
           ConsoleValue.field_a.horizontalAlignment = 1;
           ConsoleValue.field_a.heldPressOffsetX = 1;
@@ -364,7 +364,7 @@ final class SphinxActionRequest extends ActionRequest {
     }
 
     final static void e(int param0) {
-        TurnEffectEvent.field_z.c((byte) -115);
+        TurnEffectEvent.field_z.drawViewer((byte) -115);
         if (param0 != 0) {
           SphinxActionRequest.f(64);
           return;

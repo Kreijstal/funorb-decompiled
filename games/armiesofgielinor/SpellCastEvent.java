@@ -91,7 +91,7 @@ final class SpellCastEvent extends GameEvent {
               var2 = var2 + FullscreenFocusCanvas.field_b;
             }
             if (0 <= var4) {
-              NanoGameClock.field_s.drawText(var6, var8, ia.field_g + var2, var5, -1);
+              NanoGameClock.field_s.drawText(var6, var8, SpriteFramedLabel.field_g + var2, var5, -1);
               var2 = var2 + (jg.field_k + QuickChatPhrase.field_w + FullscreenFocusCanvas.field_b);
             } else {
               AiPlanner.field_G.drawText(var6, var8, var2 + StandardContentDialog.field_mb, var5, -1);

@@ -38,10 +38,10 @@ final class ve {
               var6 = Character.toLowerCase((char) var6);
             } else {
               if (var4 == 2) {
-                var6 = hc.a(98, (char) var6);
+                var6 = UnitModelViewer.a(98, (char) var6);
               } else {
                 if (Character.isUpperCase((char) var6)) {
-                  var6 = hc.a(98, (char) var6);
+                  var6 = UnitModelViewer.a(98, (char) var6);
                 }
               }
             }

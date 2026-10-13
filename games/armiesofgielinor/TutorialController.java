@@ -115,7 +115,7 @@ final class TutorialController {
             return;
           }
           var4 = ValidationStatusWidget.field_V;
-          var4 = var4 + " " + ia.a(EmailCheckResult.a(param0 ^ 4800, QuickChatPhrase.a(var2_int != 0, false, (byte) -115, var3 != 0), new String[]{ConsolePanel.field_r}), '#', param0 ^ 3, "<br><br>");
+          var4 = var4 + " " + SpriteFramedLabel.a(EmailCheckResult.a(param0 ^ 4800, QuickChatPhrase.a(var2_int != 0, false, (byte) -115, var3 != 0), new String[]{ConsolePanel.field_r}), '#', param0 ^ 3, "<br><br>");
           fe.b(40, 180, 560, 150, MusicPatch.field_m, ConsoleValue.field_b, param0, 128);
           rs.field_n.drawParagraph(var4, 80, 200, 480, 300, 16777215, -1, 1, 0, 30);
           return;

@@ -335,7 +335,7 @@ final class DiskCacheWorker implements Runnable {
           DiskCacheWorker.a(-87, -49, 69, -51, 90, -121, false);
         }
         if (so.field_b.field_g != EquipmentBattleTutorial.field_y) {
-          sh.field_l = sh.field_l + (so.field_b.field_g - EquipmentBattleTutorial.field_y);
+          UnitAnimationPreview.field_l = UnitAnimationPreview.field_l + (so.field_b.field_g - EquipmentBattleTutorial.field_y);
           EquipmentBattleTutorial.field_y = so.field_b.field_g;
         }
         if (!(TurnTimerDial.field_d <= 0)) {

@@ -68,12 +68,12 @@ final class ws extends InteractiveWidget {
     final static void b(boolean param0) {
         if (param0) {
           SummonRequest.a((byte) 52, NetworkGameShell.field_y, 6);
-          SummonRequest.a((byte) 33, sh.field_r, 26);
+          SummonRequest.a((byte) 33, UnitAnimationPreview.field_r, 26);
           MoveEvent.tutorialLayout.setTopY(MoveEvent.tutorialLayout.getTopY(26, (byte) -107) + 30, 26, (byte) 126);
           SummonRequest.a((byte) 111, pu.field_B, 8);
-          SummonRequest.a((byte) 67, sh.field_r, 27);
+          SummonRequest.a((byte) 67, UnitAnimationPreview.field_r, 27);
           MoveEvent.tutorialLayout.setTopY(30 + MoveEvent.tutorialLayout.getTopY(27, (byte) -126), 27, (byte) 125);
-          SummonRequest.a((byte) 78, sh.field_r, 28);
+          SummonRequest.a((byte) 78, UnitAnimationPreview.field_r, 28);
           MoveEvent.tutorialLayout.setTopY(MoveEvent.tutorialLayout.getTopY(28, (byte) -122) + 30, 28, (byte) 120);
           SummonRequest.a((byte) 45, pu.field_B, 9);
           if (!QuickChatPhraseRepository.a(27875)) {
@@ -88,12 +88,12 @@ final class ws extends InteractiveWidget {
         }
         field_P = (ClientUiComponent) null;
         SummonRequest.a((byte) 52, NetworkGameShell.field_y, 6);
-        SummonRequest.a((byte) 33, sh.field_r, 26);
+        SummonRequest.a((byte) 33, UnitAnimationPreview.field_r, 26);
         MoveEvent.tutorialLayout.setTopY(MoveEvent.tutorialLayout.getTopY(26, (byte) -107) + 30, 26, (byte) 126);
         SummonRequest.a((byte) 111, pu.field_B, 8);
-        SummonRequest.a((byte) 67, sh.field_r, 27);
+        SummonRequest.a((byte) 67, UnitAnimationPreview.field_r, 27);
         MoveEvent.tutorialLayout.setTopY(30 + MoveEvent.tutorialLayout.getTopY(27, (byte) -126), 27, (byte) 125);
-        SummonRequest.a((byte) 78, sh.field_r, 28);
+        SummonRequest.a((byte) 78, UnitAnimationPreview.field_r, 28);
         MoveEvent.tutorialLayout.setTopY(MoveEvent.tutorialLayout.getTopY(28, (byte) -122) + 30, 28, (byte) 120);
         SummonRequest.a((byte) 45, pu.field_B, 9);
         if (!QuickChatPhraseRepository.a(27875)) {

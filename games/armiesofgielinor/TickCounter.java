@@ -3211,7 +3211,7 @@ final class TickCounter {
                 }
                 var2 = fk.a(false, "LABEL_NUM_AI_PLAYERS");
                 if (var2 != null) {
-                  hc.field_d = uu.a(var2, (byte) 87);
+                  UnitModelViewer.field_d = uu.a(var2, (byte) 87);
                 }
                 var2 = fk.a(false, "LABEL_MAPTYPE");
                 if (var2 != null) {
@@ -3331,7 +3331,7 @@ final class TickCounter {
                 }
                 var2 = fk.a(false, "LABEL_BENEFITS");
                 if (var2 != null) {
-                  hc.field_w = uu.a(var2, (byte) 93);
+                  UnitModelViewer.field_w = uu.a(var2, (byte) 93);
                 }
                 var2 = fk.a(false, "LABEL_SETTINGS_INGAME");
                 if (null != var2) {

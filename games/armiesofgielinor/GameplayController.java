@@ -1555,12 +1555,12 @@ final class GameplayController {
               currentTurns = turnsTaken;
               previousDamage = 996394 ^ this.encodedDamageCheckpoint;
               previousTurns = this.encodedTurnCheckpoint ^ 996394;
-              hc.campaignMetricMutationCounter = hc.campaignMetricMutationCounter + 1;
-              hc.campaignMetricMutationCounter = hc.campaignMetricMutationCounter + (AiPlanningStrategy.pointerX ^ ko.pointerY);
-              hc.campaignMetricMutationCounter = Math.abs(hc.campaignMetricMutationCounter);
+              UnitModelViewer.campaignMetricMutationCounter = UnitModelViewer.campaignMetricMutationCounter + 1;
+              UnitModelViewer.campaignMetricMutationCounter = UnitModelViewer.campaignMetricMutationCounter + (AiPlanningStrategy.pointerX ^ ko.pointerY);
+              UnitModelViewer.campaignMetricMutationCounter = Math.abs(UnitModelViewer.campaignMetricMutationCounter);
               damageDelta = -previousDamage + currentDamageThenSpecialUnitCount;
               turnDelta = -previousTurns + currentTurns;
-              mutationSelector = hc.campaignMetricMutationCounter % 4;
+              mutationSelector = UnitModelViewer.campaignMetricMutationCounter % 4;
               mutationVariant = mutationSelector;
               switch ((var15 == 0
                 || mutationVariant == 0
@@ -8345,14 +8345,14 @@ final class GameplayController {
                     }
                     if (stackIn_413_0 == stackIn_413_1) {
                       if (IterableDualNodeDeque.isPointerInBounds(-33, var3_int - 64, var3_int, var10Lifetime1Lifetime2, 60 + var10Lifetime1Lifetime2)) {
-                        hc.a(var11Lifetime1Lifetime1, false);
+                        UnitModelViewer.a(var11Lifetime1Lifetime1, false);
                         this.field_Pb = true;
                         return;
                       }
                       var10Lifetime1Lifetime2 += 60;
                     } else {
                       if (IterableDualNodeDeque.isPointerInBounds(-33, -50 + var3_int, var3_int, var10Lifetime1Lifetime2, 30 + var10Lifetime1Lifetime2)) {
-                        hc.a(var11Lifetime1Lifetime1, false);
+                        UnitModelViewer.a(var11Lifetime1Lifetime1, false);
                         this.field_Pb = true;
                       }
                       var10Lifetime1Lifetime2 += 30;
@@ -8388,7 +8388,7 @@ final class GameplayController {
                         if (stackIn_367_0Lifetime1 != stackIn_367_1Lifetime1) {
                           if (this.battlefield.getPlayerTeamIndex(var12Lifetime1Lifetime1, -1) == var11Lifetime1Lifetime1) {
                             if (IterableDualNodeDeque.isPointerInBounds(-33, var3_int - 60 - 14, var3_int - 58, var10Lifetime1Lifetime2, 30 + var10Lifetime1Lifetime2)) {
-                              hc.a(var12Lifetime1Lifetime1, false);
+                              UnitModelViewer.a(var12Lifetime1Lifetime1, false);
                               this.field_Pb = true;
                               return;
                             }
@@ -8396,7 +8396,7 @@ final class GameplayController {
                           }
                         } else {
                           if (IterableDualNodeDeque.isPointerInBounds(-33, var3_int - 60 - 28, -28 + var3_int, var10Lifetime1Lifetime2, 60 + var10Lifetime1Lifetime2)) {
-                            hc.a(var12Lifetime1Lifetime1, false);
+                            UnitModelViewer.a(var12Lifetime1Lifetime1, false);
                             this.field_Pb = true;
                             return;
                           }
@@ -8414,7 +8414,7 @@ final class GameplayController {
                         stackIn_367_1Lifetime1 = this.battlefield.getPlayerTeamIndex(var13Lifetime1, -1);
                         if (stackIn_367_0Lifetime1 == stackIn_367_1Lifetime1) {
                           if (IterableDualNodeDeque.isPointerInBounds(-33, var12Lifetime1Lifetime1, var12Lifetime1Lifetime1 + 30, var10Lifetime1Lifetime2, 30 + var10Lifetime1Lifetime2)) {
-                            hc.a(var13Lifetime1, false);
+                            UnitModelViewer.a(var13Lifetime1, false);
                             this.field_Pb = true;
                             return;
                           }
@@ -9351,12 +9351,12 @@ final class GameplayController {
                 currentTurnsThenMutationVariant = turnsTaken;
                 damageCheckpoint = previousDamage;
                 turnCheckpoint = previousTurns;
-                hc.campaignMetricMutationCounter = hc.campaignMetricMutationCounter + 1;
-                hc.campaignMetricMutationCounter = hc.campaignMetricMutationCounter + (ko.pointerY ^ AiPlanningStrategy.pointerX);
-                hc.campaignMetricMutationCounter = Math.abs(hc.campaignMetricMutationCounter);
+                UnitModelViewer.campaignMetricMutationCounter = UnitModelViewer.campaignMetricMutationCounter + 1;
+                UnitModelViewer.campaignMetricMutationCounter = UnitModelViewer.campaignMetricMutationCounter + (ko.pointerY ^ AiPlanningStrategy.pointerX);
+                UnitModelViewer.campaignMetricMutationCounter = Math.abs(UnitModelViewer.campaignMetricMutationCounter);
                 damageDelta = -damageCheckpoint + currentDamageThenMutationSelector;
                 turnDelta = -turnCheckpoint + currentTurnsThenMutationVariant;
-                deltaMutationSelector = hc.campaignMetricMutationCounter % 4;
+                deltaMutationSelector = UnitModelViewer.campaignMetricMutationCounter % 4;
                 deltaMutationVariant = deltaMutationSelector;
                 if ((deltaMutationVariant != 0 ||
                   var14 != 0) &&
@@ -9407,10 +9407,10 @@ final class GameplayController {
                 return;
               }
             }
-            hc.campaignMetricMutationCounter = hc.campaignMetricMutationCounter + 1;
-            hc.campaignMetricMutationCounter = hc.campaignMetricMutationCounter + (ko.pointerY ^ AiPlanningStrategy.pointerX);
-            hc.campaignMetricMutationCounter = Math.abs(hc.campaignMetricMutationCounter);
-            currentDamageThenMutationSelector = hc.campaignMetricMutationCounter % 8;
+            UnitModelViewer.campaignMetricMutationCounter = UnitModelViewer.campaignMetricMutationCounter + 1;
+            UnitModelViewer.campaignMetricMutationCounter = UnitModelViewer.campaignMetricMutationCounter + (ko.pointerY ^ AiPlanningStrategy.pointerX);
+            UnitModelViewer.campaignMetricMutationCounter = Math.abs(UnitModelViewer.campaignMetricMutationCounter);
+            currentDamageThenMutationSelector = UnitModelViewer.campaignMetricMutationCounter % 8;
             currentTurnsThenMutationVariant = currentDamageThenMutationSelector;
             switch ((var14 == 0
               || currentTurnsThenMutationVariant == 0
@@ -9594,7 +9594,7 @@ final class GameplayController {
             if (0 > cameraPlayerIndex) {
               cameraPlayerIndex = this.battlefield.currentPlayer;
             }
-            hc.a(cameraPlayerIndex, false);
+            UnitModelViewer.a(cameraPlayerIndex, false);
             if (obfuscationControl == 0) {
               return;
             }

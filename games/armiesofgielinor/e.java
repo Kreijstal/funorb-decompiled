@@ -52,7 +52,7 @@ final class e {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3_ref = null;
         try {
-          name = ia.a(name, '_', 3, "");
+          name = SpriteFramedLabel.a(name, '_', 3, "");
           var4 = 90 / ((39 - obfuscationGuard) / 35);
           var3 = IconTextComponent.a(true, password);
           stackIn_5_0 = (name.indexOf(password) != -1) || (name.indexOf(var3) != -1);

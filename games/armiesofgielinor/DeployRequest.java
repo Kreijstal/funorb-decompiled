@@ -32,7 +32,7 @@ final class DeployRequest extends ActionRequest {
           for (var4 = 0; var2_int > var4; var4++) {
             var5 = param0.charAt(var4);
             if (var4 == 0) {
-              var5 = hc.a(98, (char) var5);
+              var5 = UnitModelViewer.a(98, (char) var5);
             } else {
               var5 = Character.toLowerCase((char) var5);
             }

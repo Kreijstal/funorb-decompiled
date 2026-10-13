@@ -337,7 +337,7 @@ abstract class SingleChildWidgetContainer extends Widget implements WidgetContai
           t.field_g.horizontalAlignment = 1;
           cp.field_d = new ClientUiComponent(0L, AccountRegistrationForm.field_M, eq.field_e.toUpperCase());
           ClientContextMenu.field_n = new ClientUiComponent(0L, SummonAction.field_y, nr.field_d.toUpperCase());
-          LobbyPlayer.field_Lb = new ClientUiComponent(0L, sh.field_m);
+          LobbyPlayer.field_Lb = new ClientUiComponent(0L, UnitAnimationPreview.field_m);
           SpriteDropdownControl.field_v = new ClientUiComponent(0L, SoundPlaybackHandle.field_p, IntrusiveNode.field_a);
           ek.field_c = new ClientUiComponent(0L, CampaignResult.field_a, wb.field_c);
           CombatViewTransition.field_p = new ClientUiComponent(0L, CampaignResult.field_a, fk.field_g);
@@ -403,7 +403,7 @@ abstract class SingleChildWidgetContainer extends Widget implements WidgetContai
           eb.field_c.addChild(bu.field_a, 109);
           SocialListPanel.field_Lb = new ClientUiComponent(0L, AccountRegistrationForm.field_M, DeployAction.field_v.toUpperCase());
           AccountRegistrationForm.field_F = new ClientUiComponent(0L, SummonAction.field_y);
-          MusicPatchUsage.gameOptionsGrid = new ClientUiComponent(0L, sh.field_m);
+          MusicPatchUsage.gameOptionsGrid = new ClientUiComponent(0L, UnitAnimationPreview.field_m);
           BattleTutorial.field_d = new ClientUiComponent(0L, rn.field_a, EffectPresentation.field_d.toUpperCase());
           KingBlackDragonEvent.field_z = new ClientUiComponent[param1 + 4];
           pu.field_k = new IconTextComponent[4 + param1][];

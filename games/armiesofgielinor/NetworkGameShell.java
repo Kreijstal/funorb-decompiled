@@ -344,23 +344,23 @@ abstract class NetworkGameShell extends GameAppletShell {
     }
 
     private final void configureSharedPacketLengths(byte obfuscationGuard) {
-        sh.opcodePayloadLengths[9] = -1;
-        sh.opcodePayloadLengths[7] = -1;
-        sh.opcodePayloadLengths[1] = 16;
-        sh.opcodePayloadLengths[18] = 1;
+        UnitAnimationPreview.opcodePayloadLengths[9] = -1;
+        UnitAnimationPreview.opcodePayloadLengths[7] = -1;
+        UnitAnimationPreview.opcodePayloadLengths[1] = 16;
+        UnitAnimationPreview.opcodePayloadLengths[18] = 1;
         if (obfuscationGuard == -51) {
-          sh.opcodePayloadLengths[13] = -1;
-          sh.opcodePayloadLengths[4] = -1;
-          sh.opcodePayloadLengths[12] = -1;
-          sh.opcodePayloadLengths[6] = -2;
-          sh.opcodePayloadLengths[5] = -1;
-          sh.opcodePayloadLengths[3] = -1;
-          sh.opcodePayloadLengths[11] = -1;
-          sh.opcodePayloadLengths[16] = -1;
-          sh.opcodePayloadLengths[8] = -2;
-          sh.opcodePayloadLengths[17] = -1;
-          sh.opcodePayloadLengths[10] = -1;
-          sh.opcodePayloadLengths[2] = -2;
+          UnitAnimationPreview.opcodePayloadLengths[13] = -1;
+          UnitAnimationPreview.opcodePayloadLengths[4] = -1;
+          UnitAnimationPreview.opcodePayloadLengths[12] = -1;
+          UnitAnimationPreview.opcodePayloadLengths[6] = -2;
+          UnitAnimationPreview.opcodePayloadLengths[5] = -1;
+          UnitAnimationPreview.opcodePayloadLengths[3] = -1;
+          UnitAnimationPreview.opcodePayloadLengths[11] = -1;
+          UnitAnimationPreview.opcodePayloadLengths[16] = -1;
+          UnitAnimationPreview.opcodePayloadLengths[8] = -2;
+          UnitAnimationPreview.opcodePayloadLengths[17] = -1;
+          UnitAnimationPreview.opcodePayloadLengths[10] = -1;
+          UnitAnimationPreview.opcodePayloadLengths[2] = -2;
           return;
         }
     }
@@ -668,7 +668,7 @@ abstract class NetworkGameShell extends GameAppletShell {
             offerGuestPlay = !(ChatMessage.field_r);
             rn.openLoginDialog(loginGuard, loginDescription, showRegistration, offerGuestPlay);
           }
-          if (hc.field_i) {
+          if (UnitModelViewer.field_i) {
             MatchingTextValidator.c((byte) -128);
           }
           if (null == ContentTransitionDialog.field_eb) {
@@ -773,7 +773,7 @@ abstract class NetworkGameShell extends GameAppletShell {
             if (affiliateText != null) {
               this.affiliateId = Integer.parseInt(affiliateText);
             }
-            hc.field_i = Boolean.valueOf(this.getParameter("simplemode")).booleanValue();
+            UnitModelViewer.field_i = Boolean.valueOf(this.getParameter("simplemode")).booleanValue();
             this.startAppletShell(width, 32, cacheName, 10, this.gameCrc, cacheIndexCount, height);
           } catch (java.lang.Exception caughtStartupFailure) {
             caughtFailure = caughtStartupFailure;

@@ -283,7 +283,7 @@ final class DropdownSelector extends DequeWidgetContainer implements WidgetActiv
             af.field_c = true;
           }
           var1_int = -118 / ((16 - param0) / 35);
-          if (!sh.field_h) {
+          if (!UnitAnimationPreview.field_h) {
             if (null == RadialSummonItem.field_f) {
               RadialSummonItem.field_f = MusicPatchEnvelope.a(14663, 6);
             }
@@ -303,7 +303,7 @@ final class DropdownSelector extends DequeWidgetContainer implements WidgetActiv
                   ek.field_d = 0;
                 }
               }
-              sh.field_h = true;
+              UnitAnimationPreview.field_h = true;
             }
           }
           return;

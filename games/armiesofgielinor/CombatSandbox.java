@@ -7,19 +7,19 @@ final class CombatSandbox {
     private RgbSprite[] field_f;
     private int field_c;
     static LoginMethod emailLoginMethod;
-    private ia field_d;
-    private ia field_a;
+    private SpriteFramedLabel field_d;
+    private SpriteFramedLabel field_a;
     private SpriteDropdownControl[] field_l;
     private BinaryBitmapFont field_m;
-    private ia field_h;
+    private SpriteFramedLabel field_h;
     static String field_g;
     static String field_e;
     private RgbSprite[] field_b;
 
     private final void b(byte param0) {
-        this.field_d = new ia(this.field_b, this.field_m, this.field_i, "Attacker", 0, 0);
-        this.field_h = new ia(this.field_b, this.field_m, this.field_i, "Defender", 0, 0);
-        this.field_a = new ia(this.field_b, this.field_m, this.field_i, "Run Attack", 0, 0);
+        this.field_d = new SpriteFramedLabel(this.field_b, this.field_m, this.field_i, "Attacker", 0, 0);
+        this.field_h = new SpriteFramedLabel(this.field_b, this.field_m, this.field_i, "Defender", 0, 0);
+        this.field_a = new SpriteFramedLabel(this.field_b, this.field_m, this.field_i, "Run Attack", 0, 0);
         this.field_l = new SpriteDropdownControl[6];
         this.field_l[0] = new SpriteDropdownControl(this.field_b, this.field_f, this.field_m, this.field_i, af.field_a, 0, 0);
         this.field_l[1] = new SpriteDropdownControl(this.field_b, this.field_f, this.field_m, this.field_i, af.field_a, 0, 0);
@@ -27,14 +27,14 @@ final class CombatSandbox {
         this.field_l[3] = new SpriteDropdownControl(this.field_b, this.field_f, this.field_m, this.field_i, TextLineLayout.field_d, 0, 0);
         this.field_l[4] = new SpriteDropdownControl(this.field_b, this.field_f, this.field_m, this.field_i, PlayerProfile.field_i, 0, 0);
         if (param0 != -49) {
-          this.field_a = (ia) null;
+          this.field_a = (SpriteFramedLabel) null;
         }
         this.field_l[5] = new SpriteDropdownControl(this.field_b, this.field_f, this.field_m, this.field_i, PlayerProfile.field_i, 0, 0);
     }
 
     private final int a(int param0, byte param1) {
         if (param0 == 0) {
-          return this.field_d.c(-29408);
+          return this.field_d.getWidth(-29408);
         }
         if (param1 != -42) {
           emailLoginMethod = (LoginMethod) null;
@@ -46,7 +46,7 @@ final class CombatSandbox {
           return this.field_l[2].getWidth(-18332);
         }
         if (param0 == 3) {
-          return this.field_h.c(-29408);
+          return this.field_h.getWidth(-29408);
         }
         if (4 == param0) {
           return this.field_l[1].getWidth(-18332);
@@ -55,7 +55,7 @@ final class CombatSandbox {
           return this.field_l[3].getWidth(-18332);
         }
         if (6 == param0) {
-          return this.field_a.c(-29408);
+          return this.field_a.getWidth(-29408);
         }
         if (param0 == 7) {
           return this.field_l[4].getWidth(-18332);
@@ -89,7 +89,7 @@ final class CombatSandbox {
 
     private final void a(int param0, int param1, int param2, int param3) {
         if (param2 == 0) {
-          this.field_d.a(param3, (byte) 55, param0);
+          this.field_d.setPosition(param3, (byte) 55, param0);
         }
         if (param2 == 1) {
           this.field_l[0].setPosition(-84, param0, param3);
@@ -98,7 +98,7 @@ final class CombatSandbox {
           this.field_l[2].setPosition(-71, param0, param3);
         }
         if (param2 == 3) {
-          this.field_h.a(param3, (byte) 127, param0);
+          this.field_h.setPosition(param3, (byte) 127, param0);
         }
         if (param2 == 4) {
           this.field_l[1].setPosition(-59, param0, param3);
@@ -110,7 +110,7 @@ final class CombatSandbox {
           this.field_l[3].setPosition(87, param0, param3);
         }
         if (param2 == 6) {
-          this.field_a.a(param3, (byte) 107, param0);
+          this.field_a.setPosition(param3, (byte) 107, param0);
         }
         if (param2 == 7) {
           this.field_l[4].setPosition(-57, param0, param3);
@@ -172,7 +172,7 @@ final class CombatSandbox {
         if (var7 != 0) {
           this.c((byte) -95);
         }
-        if (this.field_a.a(param4, 0, param2) &&
+        if (this.field_a.containsPointer(param4, 0, param2) &&
           param0) {
           var8Lifetime1 = this.field_l[0].getSelectedIndex(5);
           var9 = this.field_l[1].getSelectedIndex(5);
@@ -331,9 +331,9 @@ final class CombatSandbox {
         if (null != this.combatPresentation) {
           this.combatPresentation.drawBaseLayer((byte) -120);
         } else {
-          this.field_d.a(113);
-          this.field_h.a(71);
-          this.field_a.a(53);
+          this.field_d.drawLabel(113);
+          this.field_h.drawLabel(71);
+          this.field_a.drawLabel(53);
           this.b(0);
         }
         this.a(0);
@@ -347,7 +347,7 @@ final class CombatSandbox {
 
     private final int a(byte param0, int param1) {
         if (0 == param1) {
-          return this.field_d.a((byte) -25);
+          return this.field_d.getHeight((byte) -25);
         }
         if (param1 == 1) {
           return this.field_l[0].getHeight(true);
@@ -356,7 +356,7 @@ final class CombatSandbox {
           return this.field_l[2].getHeight(true);
         }
         if (param1 == 3) {
-          return this.field_h.a((byte) -63);
+          return this.field_h.getHeight((byte) -63);
         }
         if (param1 == 4) {
           return this.field_l[1].getHeight(true);
@@ -365,7 +365,7 @@ final class CombatSandbox {
           return this.field_l[3].getHeight(true);
         }
         if (6 == param1) {
-          return this.field_a.a((byte) -127);
+          return this.field_a.getHeight((byte) -127);
         }
         if (param1 == 7) {
           return this.field_l[4].getHeight(true);

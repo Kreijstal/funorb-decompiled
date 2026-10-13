@@ -1577,10 +1577,10 @@ final class CampaignMenu {
                       ii.campaignPacketWord1 = 4452;
                       BirthDateChatEnableForm.campaignPacketWord3 = 224;
                       kw.campaignPacketWord0 = 2297;
-                      hc.campaignMetricMutationCounter = hc.campaignMetricMutationCounter + 1;
-                      hc.campaignMetricMutationCounter = hc.campaignMetricMutationCounter + (ko.pointerY ^ AiPlanningStrategy.pointerX);
-                      hc.campaignMetricMutationCounter = Math.abs(hc.campaignMetricMutationCounter);
-                      var5 = hc.campaignMetricMutationCounter % 4;
+                      UnitModelViewer.campaignMetricMutationCounter = UnitModelViewer.campaignMetricMutationCounter + 1;
+                      UnitModelViewer.campaignMetricMutationCounter = UnitModelViewer.campaignMetricMutationCounter + (ko.pointerY ^ AiPlanningStrategy.pointerX);
+                      UnitModelViewer.campaignMetricMutationCounter = Math.abs(UnitModelViewer.campaignMetricMutationCounter);
+                      var5 = UnitModelViewer.campaignMetricMutationCounter % 4;
                       var6 = var5;
                       switch ((var7 == 0
                         || var6 == 0

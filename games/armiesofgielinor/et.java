@@ -52,7 +52,7 @@ final class et {
             param0.field_K != null) {
             la.d((byte) 111);
           }
-          hc.field_q = 0;
+          UnitModelViewer.field_q = 0;
           var8 = 0;
           boolean decompiledNaturalLoopExit0 = false;
           while (!(decompiledNaturalLoopExit0 = (!(param0.field_q > var8)))) {
@@ -109,7 +109,7 @@ final class et {
                           dupTemp$0 = param0.field_K[var8];
                           jp.field_g[dupTemp$0] = jp.field_g[dupTemp$0] + 1;
                         }
-                        hc.field_q = hc.field_q + 1;
+                        UnitModelViewer.field_q = UnitModelViewer.field_q + 1;
                         break;
                       }
                     }

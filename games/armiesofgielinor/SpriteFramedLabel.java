@@ -1,34 +1,34 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ia {
-    private int field_i;
-    private int[] field_h;
-    private boolean field_b;
-    private BinaryBitmapFont field_a;
-    private int field_c;
-    private String field_d;
-    private RgbSprite[] field_f;
+final class SpriteFramedLabel {
+    private int y;
+    private int[] colours;
+    private boolean highlighted;
+    private BinaryBitmapFont font;
+    private int height;
+    private String text;
+    private RgbSprite[] frameSprites;
     static int field_g;
-    private int field_j;
-    private int field_e;
+    private int width;
+    private int x;
 
-    final void a(int param0) {
-        SoftwareRaster.f(this.field_e, this.field_i, this.field_j, this.field_c, 7829367);
-        ReportAbuseDialog.drawNineSlice(this.field_f, this.field_c, this.field_e, (byte) -47, this.field_i, this.field_j);
-        if (param0 >= 24) {
-          this.b(-11727);
+    final void drawLabel(int obfuscationGuard) {
+        SoftwareRaster.f(this.x, this.y, this.width, this.height, 7829367);
+        ReportAbuseDialog.drawNineSlice(this.frameSprites, this.height, this.x, (byte) -47, this.y, this.width);
+        if (obfuscationGuard >= 24) {
+          this.drawText(-11727);
           return;
         }
-        this.field_f = (RgbSprite[]) null;
-        this.b(-11727);
+        this.frameSprites = (RgbSprite[]) null;
+        this.drawText(-11727);
     }
 
-    final int a(byte param0) {
-        if (param0 >= -10) {
+    final int getHeight(byte obfuscationGuard) {
+        if (obfuscationGuard >= -10) {
           return -87;
         }
-        return this.field_c;
+        return this.height;
     }
 
     final static String a(String param0, char param1, int param2, String param3) {
@@ -61,7 +61,7 @@ final class ia {
           var7 = var5 - 1;
           if (param2 != 3) {
             var12 = (String) null;
-            ia.a((String) null, '(', -2, (String) null);
+            SpriteFramedLabel.a((String) null, '(', -2, (String) null);
           }
           if (0 != var7) {
             var8_int = 0;
@@ -107,60 +107,60 @@ final class ia {
         }
     }
 
-    private final void e(int param0) {
-        this.field_b = false;
-        if (param0 < 12) {
+    private final void resetHighlight(int obfuscationGuard) {
+        this.highlighted = false;
+        if (obfuscationGuard < 12) {
           String var3 = (String) null;
-          this.a((byte) -122, (String) null);
+          this.setText((byte) -122, (String) null);
         }
     }
 
-    private final void b(int param0) {
-        int var9 = 0;
-        int var2 = this.field_f[3].canvasWidth;
-        int var3 = this.field_a.characterWidth(' ');
-        int var4 = var3 + (var2 + this.field_e);
-        int var5 = this.field_f[1].canvasHeight;
-        int var6 = 2;
-        int var7 = this.field_a.maxAscent;
-        int var8 = var5 + this.field_i - (-var6 - var7);
-        if (param0 == -11727) {
-          var9 = this.field_h[0];
-          if (this.field_b) {
-            var9 = this.field_h[1];
+    private final void drawText(int obfuscationGuard) {
+        int textColour = 0;
+        int leftBorderWidth = this.frameSprites[3].canvasWidth;
+        int spaceWidth = this.font.characterWidth(' ');
+        int textX = spaceWidth + (leftBorderWidth + this.x);
+        int topBorderHeight = this.frameSprites[1].canvasHeight;
+        int topPadding = 2;
+        int fontAscent = this.font.maxAscent;
+        int baselineY = topBorderHeight + this.y - (-topPadding - fontAscent);
+        if (obfuscationGuard == -11727) {
+          textColour = this.colours[0];
+          if (this.highlighted) {
+            textColour = this.colours[1];
           }
-          this.field_a.drawText(this.field_d, var4, var8, var9, -1);
+          this.font.drawText(this.text, textX, baselineY, textColour, -1);
           return;
         }
     }
 
-    final boolean a(int param0, int param1, int param2) {
-        if (param1 == 0) {
-          return ChatMessage.a(param0, this.field_e, this.field_i, param2, this.field_j, (byte) 94, this.field_c);
+    final boolean containsPointer(int pointerY, int obfuscationGuard, int pointerX) {
+        if (obfuscationGuard == 0) {
+          return ChatMessage.a(pointerY, this.x, this.y, pointerX, this.width, (byte) 94, this.height);
         }
-        this.field_i = 33;
-        return ChatMessage.a(param0, this.field_e, this.field_i, param2, this.field_j, (byte) 94, this.field_c);
+        this.y = 33;
+        return ChatMessage.a(pointerY, this.x, this.y, pointerX, this.width, (byte) 94, this.height);
     }
 
-    private final void a(byte param0, String param1) {
+    private final void setText(byte obfuscationGuard, String text) {
         RuntimeException var3 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          this.field_d = param1;
-          if (param0 != 20) {
-            this.e(99);
+          this.text = text;
+          if (obfuscationGuard != 20) {
+            this.resetHighlight(99);
           }
-          this.d(-94);
+          this.measureLabel(-94);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
           stackIn_6_0 = var3;
-          stackIn_6_1 = new StringBuilder().append("ia.F(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_6_1 = new StringBuilder().append("ia.F(").append(obfuscationGuard).append(',');
+          if (text == null) {
             stackIn_7_2 = "null";
           } else {
             stackIn_7_2 = "{...}";
@@ -169,62 +169,62 @@ final class ia {
         }
     }
 
-    final void a(int param0, byte param1, int param2) {
-        if (param1 >= 45) {
-          this.field_i = param0;
-          this.field_e = param2;
+    final void setPosition(int y, byte obfuscationGuard, int x) {
+        if (obfuscationGuard >= 45) {
+          this.y = y;
+          this.x = x;
           return;
         }
-        this.a(-31, (byte) 34, -5);
-        this.field_i = param0;
-        this.field_e = param2;
+        this.setPosition(-31, (byte) 34, -5);
+        this.y = y;
+        this.x = x;
     }
 
-    final int c(int param0) {
-        if (param0 == -29408) {
-          return this.field_j;
+    final int getWidth(int obfuscationGuard) {
+        if (obfuscationGuard == -29408) {
+          return this.width;
         }
         String var3 = (String) null;
-        ia.a((String) null, 'd', -85, (String) null);
-        return this.field_j;
+        SpriteFramedLabel.a((String) null, 'd', -85, (String) null);
+        return this.width;
     }
 
-    private final void d(int param0) {
-        int var2 = 0;
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var2Lifetime1;
-        int var3Lifetime1;
-        int var4Lifetime1;
-        int var5Lifetime1;
-        int var6Lifetime1;
-        int var7Lifetime1;
-        if (param0 < -92) {
-          var2 = this.field_f[5].canvasWidth + this.field_f[3].canvasWidth;
-          var3 = this.field_a.characterWidth(' ') << 1;
-          var4 = this.field_a.textWidth(this.field_d);
-          this.field_j = var3 + var2 + var4;
-          var5 = this.field_f[1].canvasHeight + this.field_f[7].canvasHeight;
-          var6 = 4;
-          var7 = this.field_a.maxDescent + this.field_a.maxAscent;
-          this.field_c = var6 + (var5 + var7);
+    private final void measureLabel(int obfuscationGuard) {
+        int sideBorderWidth = 0;
+        int spacePadding = 0;
+        int textWidth = 0;
+        int verticalBorderHeight = 0;
+        int verticalPadding = 0;
+        int fontHeight = 0;
+        int alternateSideBorderWidth;
+        int alternateSpacePadding;
+        int alternateTextWidth;
+        int alternateVerticalBorderHeight;
+        int alternateVerticalPadding;
+        int alternateFontHeight;
+        if (obfuscationGuard < -92) {
+          sideBorderWidth = this.frameSprites[5].canvasWidth + this.frameSprites[3].canvasWidth;
+          spacePadding = this.font.characterWidth(' ') << 1;
+          textWidth = this.font.textWidth(this.text);
+          this.width = spacePadding + sideBorderWidth + textWidth;
+          verticalBorderHeight = this.frameSprites[1].canvasHeight + this.frameSprites[7].canvasHeight;
+          verticalPadding = 4;
+          fontHeight = this.font.maxDescent + this.font.maxAscent;
+          this.height = verticalPadding + (verticalBorderHeight + fontHeight);
           return;
         }
-        this.a(94, (byte) 54, -110);
-        var2Lifetime1 = this.field_f[5].canvasWidth + this.field_f[3].canvasWidth;
-        var3Lifetime1 = this.field_a.characterWidth(' ') << 1;
-        var4Lifetime1 = this.field_a.textWidth(this.field_d);
-        this.field_j = var3Lifetime1 + var2Lifetime1 + var4Lifetime1;
-        var5Lifetime1 = this.field_f[1].canvasHeight + this.field_f[7].canvasHeight;
-        var6Lifetime1 = 4;
-        var7Lifetime1 = this.field_a.maxDescent + this.field_a.maxAscent;
-        this.field_c = var6Lifetime1 + (var5Lifetime1 + var7Lifetime1);
+        this.setPosition(94, (byte) 54, -110);
+        alternateSideBorderWidth = this.frameSprites[5].canvasWidth + this.frameSprites[3].canvasWidth;
+        alternateSpacePadding = this.font.characterWidth(' ') << 1;
+        alternateTextWidth = this.font.textWidth(this.text);
+        this.width = alternateSpacePadding + alternateSideBorderWidth + alternateTextWidth;
+        alternateVerticalBorderHeight = this.frameSprites[1].canvasHeight + this.frameSprites[7].canvasHeight;
+        alternateVerticalPadding = 4;
+        alternateFontHeight = this.font.maxDescent + this.font.maxAscent;
+        this.height = alternateVerticalPadding + (alternateVerticalBorderHeight + alternateFontHeight);
     }
 
-    ia(RgbSprite[] param0, BinaryBitmapFont param1, int[] param2, String param3, int param4, int param5) {
+    SpriteFramedLabel(RgbSprite[] frameSprites, BinaryBitmapFont font, int[] colours, String text, int x, int y) {
         RuntimeException var7 = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
@@ -237,42 +237,42 @@ final class ia {
         String stackIn_15_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          this.field_a = param1;
-          this.field_f = param0;
-          this.field_h = param2;
-          this.a(param5, (byte) 112, param4);
-          this.a((byte) 20, param3);
-          this.e(15);
+          this.font = font;
+          this.frameSprites = frameSprites;
+          this.colours = colours;
+          this.setPosition(y, (byte) 112, x);
+          this.setText((byte) 20, text);
+          this.resetHighlight(15);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var7 = decompiledCaughtException;
           stackIn_5_0 = var7;
           stackIn_5_1 = new StringBuilder().append("ia.<init>(");
-          if (param0 == null) {
+          if (frameSprites == null) {
             stackIn_6_2 = "null";
           } else {
             stackIn_6_2 = "{...}";
           }
           stackIn_8_1 = ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(',');
-          if (param1 == null) {
+          if (font == null) {
             stackIn_9_2 = "null";
           } else {
             stackIn_9_2 = "{...}";
           }
           stackIn_11_1 = ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',');
-          if (param2 == null) {
+          if (colours == null) {
             stackIn_12_2 = "null";
           } else {
             stackIn_12_2 = "{...}";
           }
           stackIn_14_1 = ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',');
-          if (param3 == null) {
+          if (text == null) {
             stackIn_15_2 = "null";
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(x).append(',').append(y).append(')').toString());
         }
     }
 

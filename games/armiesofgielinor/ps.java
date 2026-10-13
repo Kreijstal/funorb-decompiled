@@ -130,7 +130,7 @@ final class ps extends BitmapTextWidgetPainter {
     final static void a(int param0, boolean param1) {
         int var2 = 0;
         int var3 = 0;
-        sh.field_l = param0;
+        UnitAnimationPreview.field_l = param0;
         if (TurnTimerDial.field_d != mj.field_c) {
           var2 = mj.field_c * mj.field_c;
           var3 = var2 - TurnTimerDial.field_d * TurnTimerDial.field_d;

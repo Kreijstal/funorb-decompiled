@@ -47,15 +47,15 @@ final class DelayedPacket extends IntrusiveNode {
         ii.campaignPacketWord1 = 4452;
         int turnsTaken = controller.battlefield.playerTurnCounts[controller.controlledPlayerId];
         int damageTaken = controller.battlefield.damageTakenByPlayer[controller.controlledPlayerId];
-        hc.campaignMetricMutationCounter = hc.campaignMetricMutationCounter + 1;
-        hc.campaignMetricMutationCounter = hc.campaignMetricMutationCounter + (ko.pointerY ^ AiPlanningStrategy.pointerX);
+        UnitModelViewer.campaignMetricMutationCounter = UnitModelViewer.campaignMetricMutationCounter + 1;
+        UnitModelViewer.campaignMetricMutationCounter = UnitModelViewer.campaignMetricMutationCounter + (ko.pointerY ^ AiPlanningStrategy.pointerX);
         if (obfuscationGuard <= 31) {
           DelayedPacket.defeatPlayerForConsole(-2, (byte) 45);
         }
-        hc.campaignMetricMutationCounter = Math.abs(hc.campaignMetricMutationCounter);
+        UnitModelViewer.campaignMetricMutationCounter = Math.abs(UnitModelViewer.campaignMetricMutationCounter);
         int turnDelta = turnsTaken + 0;
         int damageDelta = damageTaken - 0;
-        int mutationSelector = hc.campaignMetricMutationCounter % 4;
+        int mutationSelector = UnitModelViewer.campaignMetricMutationCounter % 4;
         int mutationVariant = mutationSelector;
         if (0 == mutationVariant) {
           kw.campaignPacketWord0 = kw.campaignPacketWord0 - damageDelta;

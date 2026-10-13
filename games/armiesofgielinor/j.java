@@ -71,7 +71,7 @@ final class j {
           DisplacedUnitMarker.field_t[19] = s.field_b;
           DisplacedUnitMarker.field_t[21] = ConsolePanel.field_r;
           DisplacedUnitMarker.field_t[26] = bj.field_l;
-          DisplacedUnitMarker.field_t[46] = hc.field_d;
+          DisplacedUnitMarker.field_t[46] = UnitModelViewer.field_d;
           DisplacedUnitMarker.field_t[17] = su.field_c;
           DisplacedUnitMarker.field_t[23] = ClientConnectionState.field_e;
           DisplacedUnitMarker.field_t[27] = NodeHashTable.field_b;
@@ -132,7 +132,7 @@ final class j {
           wb.field_b[2] = cw.field_b;
           wb.field_b[5] = SingleChildWidgetContainer.field_F;
           wb.field_b[24] = ConsoleEvaluationException.field_d;
-          wb.field_b[15] = hc.field_w;
+          wb.field_b[15] = UnitModelViewer.field_w;
           wb.field_b[26] = lb.field_d;
           wb.field_b[21] = ConsoleExpression.field_u;
           wb.field_b[7] = kw.field_N;

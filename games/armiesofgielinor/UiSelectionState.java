@@ -139,7 +139,7 @@ final class UiSelectionState {
         }
         stackIn_12_0 = ((OwnerChangeEvent.field_B &&
           ClientUiNode.field_w &&
-          sh.field_h &&
+          UnitAnimationPreview.field_h &&
           ve.field_b &&
           mv.field_b) ||
           DamageEvent.g(105));
@@ -176,7 +176,7 @@ final class UiSelectionState {
             TurnTimerDial.field_d = TurnTimerDial.field_d + 1;
           }
           if (EquipmentBattleTutorial.field_y != so.field_b.field_g) {
-            sh.field_l = sh.field_l + (-EquipmentBattleTutorial.field_y + so.field_b.field_g);
+            UnitAnimationPreview.field_l = UnitAnimationPreview.field_l + (-EquipmentBattleTutorial.field_y + so.field_b.field_g);
             EquipmentBattleTutorial.field_y = so.field_b.field_g;
           }
           if (TurnTimerDial.field_d <= 0) {
