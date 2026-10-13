@@ -128,7 +128,7 @@ final class CacheIoRequest extends ResourceRequest {
           kp.field_a = Rasterizer2D.width;
           IsaacGenerator.field_i = Rasterizer2D.height;
           if (!param1) {
-            stackIn_4_0 = eg.field_m;
+            stackIn_4_0 = TableDataRequest.field_m;
           } else {
             stackIn_4_0 = IntArrayRequest.field_j;
           }
@@ -254,7 +254,7 @@ final class CacheIoRequest extends ResourceRequest {
             }
           }
           wi.field_j.a(-10 + (-120 + Rasterizer2D.height) - 4 - 10, 10, -360 + Rasterizer2D.width >> 1, 360, (byte) 64);
-          pk.field_h.a(24, 0, 0, wi.field_j.field_Ib, (byte) 64);
+          TableNameEntry.field_h.a(24, 0, 0, wi.field_j.field_Ib, (byte) 64);
           MembershipBenefitsScreen.field_t.a(-24 + wi.field_j.field_cb, 24, 0, wi.field_j.field_Ib, (byte) 64);
           stackIn_78_0 = MembershipBenefitsScreen.field_t;
           stackIn_79_1 = !(param0);

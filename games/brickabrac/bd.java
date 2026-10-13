@@ -25,15 +25,15 @@ final class bd implements ub {
         field_b = null;
     }
 
-    final static void a(int param0, byte param1, sp param2) {
+    final static void submitTableRow(int opcode, byte obfuscationGuard, TableRowSubmission submission) {
         try {
-          tm.field_f.addLast(param2, (byte) 3);
-          if (param1 != 25) {
+          tm.pendingTableSubmissions.addLast(submission, (byte) 3);
+          if (obfuscationGuard != 25) {
             bd.a(20, false);
           }
-          AppletGameShell.a(param0, param2, param1 + 14964);
+          AppletGameShell.sendTableRow(opcode, submission, obfuscationGuard + 14964);
         } catch (RuntimeException runtimeException) {
-          throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "bd.F(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "bd.F(" + opcode + ',' + obfuscationGuard + ',' + (submission != null ? "{...}" : "null") + ')');
         }
     }
 

@@ -5,7 +5,7 @@ final class tm {
     private static long[] field_c;
     static boolean[] decodedSpriteHasAlpha;
     static String field_h;
-    static NodeDeque field_f;
+    static NodeDeque pendingTableSubmissions;
     static int field_a;
     static String field_e;
     static String field_d;
@@ -175,7 +175,7 @@ final class tm {
           return;
         }
         decodedSpriteHasAlpha = null;
-        field_f = null;
+        pendingTableSubmissions = null;
         field_e = null;
         field_d = null;
     }
@@ -216,7 +216,7 @@ final class tm {
         }
         field_h = "Ninja skills!";
         field_e = "Waiting for graphics";
-        field_f = new NodeDeque();
+        pendingTableSubmissions = new NodeDeque();
         field_d = "Strong: balls destroy bricks without bouncing.";
     }
 }

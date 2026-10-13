@@ -64,7 +64,7 @@ final class LevelList {
         sl.field_A[11] = tn.field_w;
         sl.field_A[5] = ef.field_c;
         sl.field_A[6] = ch.field_i;
-        sl.field_A[9] = mk.field_a;
+        sl.field_A[9] = SecondaryHashTable.field_a;
         sl.field_A[4] = tm.field_d;
         ag.buttonLabels[14] = pl.field_c[0];
         sl.field_A[3] = sj.field_e;
@@ -80,7 +80,7 @@ final class LevelList {
         ag.buttonLabels[28] = sn.field_r;
         ag.buttonLabels[19] = HighscorePackSelector.field_g;
         ag.buttonLabels[35] = LevelPackLoader.field_d;
-        ag.buttonLabels[20] = pn.field_q;
+        ag.buttonLabels[20] = LevelResultSubmission.field_q;
         ag.buttonLabels[33] = t.field_c;
         ag.buttonLabels[32] = hk.field_L;
         ag.buttonLabels[25] = ck.field_i;

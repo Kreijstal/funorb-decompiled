@@ -161,7 +161,7 @@ final class qi extends d {
             var5 = var14;
             var6 = ((PacketBuffer) ((Object) var5)).readUnsignedByte(255);
             for (var7 = 0; var6 > var7; var7++) {
-              var10[var7] = ((PacketBuffer) ((Object) var5)).readInt(pn.a(param0, -256));
+              var10[var7] = ((PacketBuffer) ((Object) var5)).readInt(LevelResultSubmission.a(param0, -256));
             }
             var13 = (al) (ej.field_F.first(param0 - 84));
             if (var13 == null) {

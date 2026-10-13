@@ -4,7 +4,7 @@
 final class OptionsScreen extends FramedMenuScreen {
     static int field_x;
     static mh field_u;
-    static int field_z;
+    static int resultCounterOne;
     static StringBuilder field_A;
     static String field_w;
     static IntArrayRequest[] progressRequests;

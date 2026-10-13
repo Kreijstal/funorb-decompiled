@@ -327,7 +327,7 @@ final class gq extends mh {
             var1_int = -62 / ((param0 + 18) / 47);
             return false;
           }
-          var12 = mk.earnedAchievementMask;
+          var12 = SecondaryHashTable.earnedAchievementMask;
           var10 = var12;
           var5 = var10;
           var1 = var5;

@@ -88,7 +88,7 @@ abstract class sl extends DualLinkNode {
           rg.field_b = param12;
           th.field_a = param3;
           aj.field_c = param1;
-          mk.field_c = param0;
+          SecondaryHashTable.field_c = param0;
           GzipInflater.field_c = param6;
           ff.field_i = param14;
           pf.field_i = param11;
@@ -234,11 +234,11 @@ abstract class sl extends DualLinkNode {
               } else {
                 var19_ref = null;
               }
-              if (mk.field_c != null) {
-                if (null == mk.field_c[var17_intLifetime3]) {
+              if (SecondaryHashTable.field_c != null) {
+                if (null == SecondaryHashTable.field_c[var17_intLifetime3]) {
                   var20 = null;
                 } else {
-                  var20 = mk.field_c[var17_intLifetime3][var18];
+                  var20 = SecondaryHashTable.field_c[var17_intLifetime3][var18];
                 }
               } else {
                 var20 = null;
@@ -285,7 +285,7 @@ abstract class sl extends DualLinkNode {
           MultiplayerMatch.field_d.a(pf.field_h, 0);
           MultiplayerMatch.field_d.a(dn.field_K, 0);
           MultiplayerMatch.field_d.a(AppletGameShell.field_e, 0);
-          pk.field_h = new mh(0L, rf.field_c, SecondaryNodeQueue.field_a.toUpperCase());
+          TableNameEntry.field_h = new mh(0L, rf.field_c, SecondaryNodeQueue.field_a.toUpperCase());
           nd.field_a = new mh(0L, GameUiController.field_b, fh.field_e.toUpperCase());
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -4,13 +4,13 @@
 final class qf extends lp implements en {
     private boolean field_Db;
     private dk field_Eb;
-    static int field_Cb;
+    static int tableSubmissionSequence;
     private boolean field_Fb;
 
     final static void a(int param0, RasterCacheSurface param1, int param2, RgbSprite param3, int param4, boolean param5) {
         try {
           if (param5) {
-            field_Cb = -58;
+            tableSubmissionSequence = -58;
           }
           IndexedSpriteGeometry.pushSpriteRaster(-77, param1.sprite);
           Rasterizer2D.fillVerticalGradient(0, 0, param1.width, param1.height, rm.field_d[param0], 22953);
@@ -43,7 +43,7 @@ final class qf extends lp implements en {
         if (param0 == 248) {
           return to.field_a + ((InstructionsScreen.field_v << 2) + (InstructionsScreen.field_r << 4));
         }
-        field_Cb = 19;
+        tableSubmissionSequence = 19;
         return to.field_a + ((InstructionsScreen.field_v << 2) + (InstructionsScreen.field_r << 4));
     }
 

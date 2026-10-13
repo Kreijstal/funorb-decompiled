@@ -24,7 +24,7 @@ final class br extends mh {
         om var7 = null;
         BitPacketBuffer var4 = null;
         if (MenuSelection.field_i != param2) {
-          var6 = (om) (pn.field_i.a((long)MenuSelection.field_i, -1));
+          var6 = (om) (LevelResultSubmission.field_i.get((long)MenuSelection.field_i, -1));
           var7 = var6;
           if (var7 != null) {
             var7.field_Qb = null;

@@ -5,7 +5,7 @@ final class BlankScreen extends GameScreen {
     static ni field_k;
     static String field_j;
     static String field_h;
-    static mk field_i;
+    static SecondaryHashTable field_i;
 
     BlankScreen() {
         super(-2);

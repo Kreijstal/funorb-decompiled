@@ -68,10 +68,10 @@ final class hn {
             param0.field_bb = new NodeDeque();
           }
           if (null == BlankScreen.field_i) {
-            BlankScreen.field_i = new mk(64);
+            BlankScreen.field_i = new SecondaryHashTable(64);
           }
           if (tf.field_d == null) {
-            tf.field_d = new mk(64);
+            tf.field_d = new SecondaryHashTable(64);
           }
           bf.field_N = param1.field_bb;
           CachedArchiveSource.field_n = param0.field_bb;

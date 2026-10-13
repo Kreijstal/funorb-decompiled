@@ -234,7 +234,7 @@ final class sq {
           discarded$10 = bj.field_P.field_l.append(" kB / ");
           DelegatingCanvas.a(-9, var1, bj.field_P.field_l);
           discarded$11 = bj.field_P.field_l.append(" kB");
-          mk.field_j = var5;
+          SecondaryHashTable.field_j = var5;
           RankingsScreen.field_u = var1;
           ff.field_d.addLast(bj.field_P, (byte) 3);
           if (!param0) {
@@ -261,7 +261,7 @@ final class sq {
           }
           return;
         }
-        if (mk.field_j == var5) {
+        if (SecondaryHashTable.field_j == var5) {
           ff.field_d.addLast(bj.field_P, (byte) 3);
           if (!param0) {
             if (GzipInflater.field_g) {
@@ -292,7 +292,7 @@ final class sq {
         discarded$16 = bj.field_P.field_l.append(" kB / ");
         DelegatingCanvas.a(-9, var1, bj.field_P.field_l);
         discarded$17 = bj.field_P.field_l.append(" kB");
-        mk.field_j = var5;
+        SecondaryHashTable.field_j = var5;
         RankingsScreen.field_u = var1;
         ff.field_d.addLast(bj.field_P, (byte) 3);
         if (!param0) {

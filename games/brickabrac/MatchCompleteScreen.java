@@ -130,7 +130,7 @@ final class MatchCompleteScreen extends MatchResultScreen {
         if (param0 != 96) {
           MatchCompleteScreen.a((byte) 62, 38L);
         }
-        return (id) (eq.field_m.a(param1, param0 ^ -97));
+        return (id) (eq.field_m.get(param1, param0 ^ -97));
     }
 
     static {

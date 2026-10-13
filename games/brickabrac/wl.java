@@ -345,7 +345,7 @@ final class wl extends d {
               if (vd.ensureGamePacketBytes(20, var10Lifetime1)) {
                 var11 = co.field_f.length;
                 for (var12 = 0; var11 > var12; var12++) {
-                  co.field_f[var12] = jl.incomingPackets.readPrefixedCp1252String(pn.a(param6, 251));
+                  co.field_f[var12] = jl.incomingPackets.readPrefixedCp1252String(LevelResultSubmission.a(param6, 251));
                 }
                 hn.a((byte) 79);
                 pf.field_d = false;

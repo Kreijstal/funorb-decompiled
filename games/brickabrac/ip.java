@@ -281,7 +281,7 @@ final class ip extends ki {
                 } else {
                   if (var6Lifetime1 == 0) {
                     if (var7 != -1) {
-                      rh.field_d[var7 / 8] = (byte)pn.a((int) rh.field_d[var7 / 8], 1 << ik.a(var7, 7));
+                      rh.field_d[var7 / 8] = (byte)LevelResultSubmission.a((int) rh.field_d[var7 / 8], 1 << ik.a(var7, 7));
                     } else {
                       var9 = 0;
                       while (!(var9 >= rh.field_d.length)) {
@@ -567,7 +567,7 @@ final class ip extends ki {
                         var18++;
                       }
                     } else {
-                      lj.field_p[(var9 + var6Lifetime2) / 8] = (byte)pn.a((int) lj.field_p[(var9 + var6Lifetime2) / 8], 1 << ik.a(7, var6Lifetime2 + var9));
+                      lj.field_p[(var9 + var6Lifetime2) / 8] = (byte)LevelResultSubmission.a((int) lj.field_p[(var9 + var6Lifetime2) / 8], 1 << ik.a(7, var6Lifetime2 + var9));
                     }
                     decompiledFrameRemainder1 = false;
                   }
@@ -585,11 +585,11 @@ final class ip extends ki {
                 }
                 if (var9 >= 0 &&
                   var17.field_G) {
-                  if (null == mk.field_c) {
+                  if (null == SecondaryHashTable.field_c) {
                     var18_ref = null;
                   } else {
-                    if (null != mk.field_c[var7]) {
-                      var18_ref = mk.field_c[var7][var9];
+                    if (null != SecondaryHashTable.field_c[var7]) {
+                      var18_ref = SecondaryHashTable.field_c[var7][var9];
                     } else {
                       var18_ref = null;
                     }

@@ -76,7 +76,7 @@ abstract class InteractiveGameClient extends GameConnectionShell implements vc {
         var4 = BrickABrac.field_J ? 1 : 0;
         var2 = gd.a((byte) 0);
         if (r.c((byte) -84)) {
-          pk.a((byte) 68, var2, LegacyUtf8Decoder.a((byte) -81));
+          TableNameEntry.a((byte) 68, var2, LegacyUtf8Decoder.a((byte) -81));
           return;
         }
         if (!un.field_f) {

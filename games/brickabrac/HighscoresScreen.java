@@ -676,14 +676,14 @@ final class HighscoresScreen extends MenuScreen {
         var2Lifetime1 = 5 * (nn.field_g.descent + nn.field_g.capHeight) / 2 + 187;
         var4 = null;
         if (rf.field_g != null &&
-          rf.field_g.field_o) {
-          if (null == rf.field_g.field_i) {
+          rf.field_g.complete) {
+          if (null == rf.field_g.names) {
             var4_ref = BoundedFile.field_d;
           } else {
             var4_ref = ArchiveNetworkRequest.field_J;
-            var5 = rf.field_g.field_i[this.scoreFilterIndex];
-            var13 = rf.field_g.field_n[this.scoreFilterIndex];
-            var7 = gj.a(rf.field_g, fj.field_Ub, -87, this.scoreFilterIndex);
+            var5 = rf.field_g.names[this.scoreFilterIndex];
+            var13 = rf.field_g.values[this.scoreFilterIndex];
+            var7 = gj.findTableRow(rf.field_g, fj.field_Ub, -87, this.scoreFilterIndex);
             for (var8 = 0; 10 > var8; var8++) {
               if (var5[var8] != null) {
                 stackIn_17_0 = (var7 == var8) ? 1 : 2;
@@ -701,7 +701,7 @@ final class HighscoresScreen extends MenuScreen {
             }
             if (fj.field_Ub != null &&
               var7 < 0) {
-              var16 = fj.field_Ub.field_i;
+              var16 = fj.field_Ub.values;
               var8Lifetime1 = var16[0];
               var9Lifetime1 = var16[1] >> 16 & 65535;
               var10Lifetime1 = 65535 & var16[1];
@@ -726,7 +726,7 @@ final class HighscoresScreen extends MenuScreen {
           return;
         }
         if (rf.field_g == null) {
-          rf.field_g = cp.b(-2, this.packIndex, 2, 10, 3);
+          rf.field_g = cp.requestTableData(-2, this.packIndex, 2, 10, 3);
         }
         this.packSelector.updatePointerSelection(111);
     }

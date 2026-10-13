@@ -282,7 +282,7 @@ final class nn {
                 }
                 var2 = nk.a("mu_chat_off", (byte) -122);
                 if (var2 != null) {
-                  sp.field_s = MenuButton.a(var2, (byte) 123);
+                  TableRowSubmission.field_s = MenuButton.a(var2, (byte) 123);
                 }
                 var2 = nk.a("mu_chat_lobby", (byte) -8);
                 if (null != var2) {
@@ -806,7 +806,7 @@ final class nn {
                 }
                 var2 = nk.a("spectate_xs_game", (byte) -122);
                 if (null != var2) {
-                  pn.field_s = MenuButton.a(var2, (byte) 81);
+                  LevelResultSubmission.field_s = MenuButton.a(var2, (byte) 81);
                 }
                 var2 = nk.a("hide_players_in_xs_game", (byte) 50);
                 if (var2 != null) {
@@ -1300,7 +1300,7 @@ final class nn {
                 }
                 var2 = nk.a("warning_ifyouquit", (byte) -107);
                 if (var2 != null) {
-                  pn.field_o = MenuButton.a(var2, (byte) 115);
+                  LevelResultSubmission.field_o = MenuButton.a(var2, (byte) 115);
                 }
                 var2 = nk.a("warning_ifyouquitorleavepage", (byte) -115);
                 if (var2 != null) {
@@ -1880,7 +1880,7 @@ final class nn {
                 }
                 var2 = nk.a("enterfriend_del", (byte) 37);
                 if (null != var2) {
-                  eg.field_j = MenuButton.a(var2, (byte) 111);
+                  TableDataRequest.field_j = MenuButton.a(var2, (byte) 111);
                 }
                 var2 = nk.a("enterignore_add", (byte) -115);
                 if (null != var2) {
@@ -2046,7 +2046,7 @@ final class nn {
                 }
                 var2 = nk.a("sound_colon", (byte) 48);
                 if (null != var2) {
-                  pn.field_q = MenuButton.a(var2, (byte) 111);
+                  LevelResultSubmission.field_q = MenuButton.a(var2, (byte) 111);
                 }
                 var2 = nk.a("music_colon", (byte) 3);
                 if (null != var2) {
@@ -2478,7 +2478,7 @@ final class nn {
                 }
                 var2 = nk.a("score_colon", (byte) -107);
                 if (var2 != null) {
-                  pn.field_j = MenuButton.a(var2, (byte) 98);
+                  LevelResultSubmission.field_j = MenuButton.a(var2, (byte) 98);
                 }
                 var2 = nk.a("mp_leavegame", (byte) 75);
                 if (var2 != null) {

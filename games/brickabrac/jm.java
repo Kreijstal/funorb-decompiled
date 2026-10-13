@@ -248,10 +248,10 @@ final class jm {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
         int var2 = 0;
-        int var3 = 0;
+        int requestId = 0;
         int var4 = 0;
         IntArrayRequest var4_ref_pe = null;
-        pn var5 = null;
+        LevelResultSubmission levelResult = null;
         int var5_int = 0;
         int[] var6 = null;
         int var8 = 0;
@@ -265,7 +265,7 @@ final class jm {
             field_l = (String) null;
           }
           var2 = var10.readUnsignedByte(255);
-          var3 = var10.readUnsignedByte(obfuscationGuard + 233);
+          requestId = var10.readUnsignedByte(obfuscationGuard + 233);
           if (var2 == 0) {
             var4_ref_pe = (IntArrayRequest) (ob.pendingIntArrayRequests.first(-37));
             if (var4_ref_pe == null) {
@@ -288,17 +288,17 @@ final class jm {
           }
           if (var2 == 1) {
             var4 = var10.readSignedSmart(-1342);
-            var5 = (pn) (qa.field_t.first(-19));
-            while (var5 != null) {
-              if (var3 != var5.field_p ||
-                var4 != var5.field_n) {
-                var5 = (pn) (qa.field_t.next((byte) 116));
+            levelResult = (LevelResultSubmission) (qa.pendingLevelResults.first(-19));
+            while (levelResult != null) {
+              if (requestId != levelResult.packId ||
+                var4 != levelResult.levelIndex) {
+                levelResult = (LevelResultSubmission) (qa.pendingLevelResults.next((byte) 116));
                 continue;
               }
               break;
             }
-            if (var5 != null) {
-              var5.unlink((byte) 111);
+            if (levelResult != null) {
+              levelResult.unlink((byte) 111);
               return;
             }
             hn.a((byte) 110);

@@ -34,7 +34,7 @@ final class gj {
         }
     }
 
-    final static int a(eg param0, sp param1, int param2, int param3) {
+    final static int findTableRow(TableDataRequest table, TableRowSubmission submission, int obfuscationGuard, int partition) {
         int var7 = 0;
         int stackIn_7_0 = 0;
         int stackIn_18_0 = 0;
@@ -53,18 +53,18 @@ final class gj {
         int var6Lifetime1;
         var8 = BrickABrac.field_J ? 1 : 0;
         try {
-          if (param0 != null &&
-            param0.field_n != null &&
-            param1 != null &&
-            param1.field_o == param0.field_l) {
-            var4_int = param1.field_i.length;
-            var5 = param0.field_n[param3].length / var4_int;
+          if (table != null &&
+            table.values != null &&
+            submission != null &&
+            submission.tableId == table.tableId) {
+            var4_int = submission.values.length;
+            var5 = table.values[partition].length / var4_int;
             for (var6 = 0; var5 > var6; var6++) {
               boolean decompiledFrameCompleted0 = true;
-              if (param1.field_p == param0.field_r[param3][var6] &&
-                ci.a(param0.field_i[param3][var6], -46)) {
+              if (submission.rowId == table.rowIds[partition][var6] &&
+                ci.a(table.names[partition][var6], -46)) {
                 for (var7 = 0; var7 < var4_int; var7++) {
-                  if (param1.field_i[var7] != param0.field_n[param3][var7 + var4_int * var6]) {
+                  if (submission.values[var7] != table.values[partition][var7 + var4_int * var6]) {
                     decompiledFrameCompleted0 = false;
                     break;
                   }
@@ -75,7 +75,7 @@ final class gj {
                 }
               }
             }
-            var6Lifetime1 = 127 / ((param2 - 59) / 36);
+            var6Lifetime1 = 127 / ((obfuscationGuard - 59) / 36);
             stackIn_21_0 = -1;
             return stackIn_21_0;
           }
@@ -86,18 +86,18 @@ final class gj {
           var4 = decompiledCaughtException;
           stackIn_24_0 = var4;
           stackIn_24_1 = new StringBuilder().append("gj.C(");
-          if (param0 == null) {
+          if (table == null) {
             stackIn_25_2 = "null";
           } else {
             stackIn_25_2 = "{...}";
           }
           stackIn_27_1 = ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',');
-          if (param1 == null) {
+          if (submission == null) {
             stackIn_28_2 = "null";
           } else {
             stackIn_28_2 = "{...}";
           }
-          throw qb.addExceptionContext((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw qb.addExceptionContext((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(',').append(obfuscationGuard).append(',').append(partition).append(')').toString());
         }
     }
 

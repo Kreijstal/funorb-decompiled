@@ -84,7 +84,7 @@ final class ResourceArchive {
           return;
         }
         if (!this.discardPackedGroups) {
-          this.packedGroups[groupId] = eg.storeArchiveBytes(obfuscationGuard - 39, this.source.getPackedGroup(groupId, (byte) -51), false);
+          this.packedGroups[groupId] = TableDataRequest.storeArchiveBytes(obfuscationGuard - 39, this.source.getPackedGroup(groupId, (byte) -51), false);
         } else {
           this.packedGroups[groupId] = this.source.getPackedGroup(groupId, (byte) -121);
         }
@@ -842,7 +842,7 @@ final class ResourceArchive {
                 if (this.decodedFilePolicy != 0) {
                   files[var18] = fileBytes[var17];
                 } else {
-                  files[var18] = eg.storeArchiveBytes(-128, fileBytes[var17], false);
+                  files[var18] = TableDataRequest.storeArchiveBytes(-128, fileBytes[var17], false);
                 }
               }
             }
@@ -853,7 +853,7 @@ final class ResourceArchive {
               var11 = presentFileIds[0];
             }
             if (0 == this.decodedFilePolicy) {
-              files[var11] = eg.storeArchiveBytes(-123, splitData, false);
+              files[var11] = TableDataRequest.storeArchiveBytes(-123, splitData, false);
             } else {
               files[var11] = uncompressedBytes;
             }

@@ -30,7 +30,7 @@ final class ac {
         if (param1 != 2) {
           return (id) null;
         }
-        return (id) (BrickABrac.field_F.a(param0, -1));
+        return (id) (BrickABrac.field_F.get(param0, -1));
     }
 
     final void a(boolean param0, int param1) {

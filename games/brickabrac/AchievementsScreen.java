@@ -82,17 +82,17 @@ final class AchievementsScreen extends AchievementBrowserScreen {
         if (param0 != 0) {
           return;
         }
-        if (pk.field_g != null) {
-          var2 = pk.field_g;
+        if (TableNameEntry.field_g != null) {
+          var2 = TableNameEntry.field_g;
           String var1 = var2;
           ag.a((byte) -83, rd.a(nf.field_T, new String[]{var2}, (byte) 103));
-          pk.field_g = null;
+          TableNameEntry.field_g = null;
         }
     }
 
     AchievementsScreen() {
         super(8, fr.field_l);
-        this.achievementMask = mk.earnedAchievementMask;
+        this.achievementMask = SecondaryHashTable.earnedAchievementMask;
     }
 
     public static void h(byte param0) {

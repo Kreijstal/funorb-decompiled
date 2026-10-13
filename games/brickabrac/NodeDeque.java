@@ -198,7 +198,7 @@ final class NodeDeque {
         qa.field_w.a(GameUiController.field_e, 0);
         wi.field_j = new mh(0L, MenuSelection.field_m);
         MembershipBenefitsScreen.field_t = new mh(0L, (mh) null);
-        wi.field_j.a(pk.field_h, 0);
+        wi.field_j.a(TableNameEntry.field_h, 0);
         wi.field_j.a(MembershipBenefitsScreen.field_t, 0);
         int var2 = -67 / ((1 - param1) / 63);
         MembershipBenefitsScreen.field_t.a(Ball.field_A, 0);

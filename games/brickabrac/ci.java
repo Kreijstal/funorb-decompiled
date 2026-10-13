@@ -18,7 +18,7 @@ final class ci extends ki {
               dp.a(1, 0, !param0 ? true : false, param3, ng.field_a, var8);
               var8.setCacheKeys(this.field_m, param3, (byte) 78);
             }
-            AchievementBrowserScreen.a(om.field_fc, param4, param1, param3, 640, 0, 0, var8.sprite, 1, pn.field_m, param2);
+            AchievementBrowserScreen.a(om.field_fc, param4, param1, param3, 640, 0, 0, var8.sprite, 1, LevelResultSubmission.field_m, param2);
           }
           return;
         }
@@ -32,7 +32,7 @@ final class ci extends ki {
           dp.a(1, 0, !param0 ? true : false, param3, ng.field_a, var7);
           var7.setCacheKeys(this.field_m, param3, (byte) 78);
         }
-        AchievementBrowserScreen.a(om.field_fc, param4, param1, param3, 640, 0, 0, var7.sprite, 1, pn.field_m, param2);
+        AchievementBrowserScreen.a(om.field_fc, param4, param1, param3, 640, 0, 0, var7.sprite, 1, LevelResultSubmission.field_m, param2);
     }
 
     final RgbSprite[] b(int param0) {
@@ -95,16 +95,16 @@ final class ci extends ki {
           return false;
         }
         om.field_fc = pl.loadRgbSpriteByName("space", "space_near", (byte) -91, AchievementIcon.field_m);
-        pn.field_m = pl.loadRgbSpriteByName("space", "space_mid", (byte) 115, AchievementIcon.field_m);
+        LevelResultSubmission.field_m = pl.loadRgbSpriteByName("space", "space_mid", (byte) 115, AchievementIcon.field_m);
         ng.field_a = pl.loadRgbSpriteByName("space", "space_far", (byte) -98, AchievementIcon.field_m);
         rf.field_a = pl.loadRgbSpriteByName("space", "space_small", (byte) -90, AchievementIcon.field_m);
         ng.field_a.bindRasterTarget();
         Rasterizer2D.a(7136, 6592, 1600, 128, sq.field_b);
         if (!param0) {
           kc.framebuffer.bindRaster((byte) 100);
-          pk.field_f = pl.loadRgbSpriteByName("space", "space_character", (byte) -50, AchievementIcon.field_m);
+          TableNameEntry.field_f = pl.loadRgbSpriteByName("space", "space_character", (byte) -50, AchievementIcon.field_m);
           jh.field_d = jh.a(0, om.field_fc);
-          lk.field_t = jh.a(0, pn.field_m);
+          lk.field_t = jh.a(0, LevelResultSubmission.field_m);
           NodeDequeCursor.field_b = jh.a(0, ng.field_a);
           b.field_b = cr.loadRgbSpritesByName("space", AchievementIcon.field_m, "space_lever", 2);
           return true;
@@ -120,9 +120,9 @@ final class ci extends ki {
         if (param0 > -74) {
           String var3 = (String) null;
           ci.a((String) null, -110);
-          return pk.field_f;
+          return TableNameEntry.field_f;
         }
-        return pk.field_f;
+        return TableNameEntry.field_f;
     }
 
     final boolean b(byte param0) {
@@ -131,28 +131,28 @@ final class ci extends ki {
           if (om.field_fc == null) {
             return false;
           }
-          if (null == pn.field_m) {
+          if (null == LevelResultSubmission.field_m) {
             return false;
           }
           if (null == ng.field_a) {
             return false;
           }
           if (rf.field_a != null) {
-            return null != pk.field_f ? true : false;
+            return null != TableNameEntry.field_f ? true : false;
           }
           return false;
         }
         if (om.field_fc == null) {
           return false;
         }
-        if (null == pn.field_m) {
+        if (null == LevelResultSubmission.field_m) {
           return false;
         }
         if (null == ng.field_a) {
           return false;
         }
         if (rf.field_a != null) {
-          return null != pk.field_f ? true : false;
+          return null != TableNameEntry.field_f ? true : false;
         }
         return false;
     }

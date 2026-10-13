@@ -34,8 +34,8 @@ final class sk extends h {
         var9 = BrickABrac.field_J ? 1 : 0;
         try {
           fj.field_Ub = null;
-          ep.field_i = 23;
-          OptionsScreen.field_z = 57;
+          ep.resultCounterTwo = 23;
+          OptionsScreen.resultCounterOne = 57;
           DelegatingCanvas.field_c = 13;
           if (param5 != -12665) {
             sk.a(122);
@@ -118,7 +118,7 @@ final class sk extends h {
           if (eb.field_l) {
             fj.field_Ub = null;
             lp.field_wb.clear((byte) -121);
-            var9 = mk.earnedAchievementMask;
+            var9 = SecondaryHashTable.earnedAchievementMask;
             var7 = var9;
             var4 = var7;
             var1 = var4;

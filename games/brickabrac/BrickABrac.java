@@ -4,7 +4,7 @@
 public final class BrickABrac extends InteractiveGameClient {
     static ResourceArchive field_I;
     static String field_G;
-    static mk field_F;
+    static SecondaryHashTable field_F;
     static int[] field_K;
     static String field_H;
     public static boolean field_J;
@@ -66,17 +66,17 @@ public final class BrickABrac extends InteractiveGameClient {
         int transitionActive;
         int var4;
         int clientBranchFlag;
-        pn var6;
+        LevelResultSubmission var6;
         clientBranchFlag = field_J ? 1 : 0;
         vd.a(-127);
         MembershipBenefitsScreen.clientTick = MembershipBenefitsScreen.clientTick + 1;
         if (!og.h(-26090)) {
           while (true) {
-            var6 = (pn) (IntNode.field_j.removeFirst(3));
+            var6 = (LevelResultSubmission) (IntNode.queuedLevelResults.removeFirst(3));
             if (var6 == null) {
               break;
             }
-            g.a(var6, 5, (byte) -116);
+            g.submitLevelResult(var6, 5, (byte) -116);
           }
         }
         if (hd.pendingScreen != null) {
@@ -255,7 +255,7 @@ public final class BrickABrac extends InteractiveGameClient {
             var26 = var34;
             var19 = var26;
             var5_arrayLifetime1 = var19;
-            var46 = mk.earnedAchievementMask;
+            var46 = SecondaryHashTable.earnedAchievementMask;
             for (var7 = 0; var7 < 8; var7++) {
               var19[var7] = ik.a(var34[var7], ~var46[var7]);
             }
@@ -267,7 +267,7 @@ public final class BrickABrac extends InteractiveGameClient {
                 }
               }
             }
-            var36 = mk.earnedAchievementMask;
+            var36 = SecondaryHashTable.earnedAchievementMask;
             var28 = var36;
             var21 = var28;
             var5_arrayLifetime2 = var21;
@@ -665,7 +665,7 @@ public final class BrickABrac extends InteractiveGameClient {
         am.k(8421504);
         id.h(-56);
         om.d((byte) -32);
-        mk.c((byte) 85);
+        SecondaryHashTable.c((byte) 85);
         ce.b(46);
         hn.a(122);
         GameplayAudioEvent.d(0);
@@ -862,11 +862,11 @@ public final class BrickABrac extends InteractiveGameClient {
         n.b(-2);
         DelayedPacket.a(-128);
         IntArrayRequest.a(112);
-        pn.a(-17432);
+        LevelResultSubmission.a(-17432);
         mp.h(-115);
-        eg.a(136);
-        sp.a(-241);
-        pk.a((byte) -105);
+        TableDataRequest.a(136);
+        TableRowSubmission.a(-241);
+        TableNameEntry.a((byte) -105);
         cq.a((byte) -105);
         hi.c((byte) -93);
         bb.a(false);

@@ -1,24 +1,24 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class eg extends IntrusiveNode {
-    long[][] field_r;
-    boolean field_o;
-    int[][] field_n;
-    int field_l;
+final class TableDataRequest extends IntrusiveNode {
+    long[][] rowIds;
+    boolean complete;
+    int[][] values;
+    int tableId;
     static String field_j;
     static int field_m;
     static boolean field_k;
-    int field_q;
-    String[][] field_i;
-    int field_p;
+    int rowLimit;
+    String[][] names;
+    int columnCount;
 
     final static void a(boolean param0, int param1) {
         uo.a(param0, false);
         cq.a(param0, (byte) -125);
         if (param1 < 10) {
           byte[] var3 = (byte[]) null;
-          eg.storeArchiveBytes(38, (byte[]) null, true);
+          TableDataRequest.storeArchiveBytes(38, (byte[]) null, true);
         }
     }
 
@@ -76,7 +76,7 @@ final class eg extends IntrusiveNode {
         }
     }
 
-    eg() {
+    TableDataRequest() {
     }
 
     static {

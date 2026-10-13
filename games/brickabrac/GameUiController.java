@@ -11,16 +11,16 @@ final class GameUiController implements GameUiLifecycle {
 
     private final boolean pollRequiredData(boolean obfuscationGuard) {
         if (rf.field_g == null) {
-          rf.field_g = cp.b(-2, 0, 2, 10, 3);
+          rf.field_g = cp.requestTableData(-2, 0, 2, 10, 3);
         }
         if (!obfuscationGuard) {
           return false;
         }
-        if (rf.field_g.field_o) {
+        if (rf.field_g.complete) {
           be.field_a = true;
           r.field_A = true;
-          if (null != rf.field_g.field_i &&
-            null != rf.field_g.field_i[1][0]) {
+          if (null != rf.field_g.names &&
+            null != rf.field_g.names[1][0]) {
             r.field_A = false;
             be.field_a = false;
             return true;
@@ -46,7 +46,7 @@ final class GameUiController implements GameUiLifecycle {
         oa.a(HighscorePackSelector.field_d, CircleBody.field_t, 2, PlayerBoard.field_jb, DualLinkNode.field_k, wn.field_c, (RgbSprite[][]) null, gq.field_Rb, true, 1, jb.field_I, PlayerBoard.field_jb, wd.field_C, qh.field_h, 22287);
         ea.field_g = true;
         c.field_e = er.field_b;
-        pn.b(-9, 200);
+        LevelResultSubmission.b(-9, 200);
         KeyboardInput.a(new sb(), 0);
         td.g(0);
         qn.a(240, 0, 640, 0, -6532);

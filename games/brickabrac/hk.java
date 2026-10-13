@@ -385,7 +385,7 @@ final class hk extends ib implements hf, en {
             this.field_O.field_z = ie.field_q;
           }
           if (this.field_K) {
-            this.field_M.field_z = pn.field_o;
+            this.field_M.field_z = LevelResultSubmission.field_o;
           } else {
             if (this.field_S) {
               this.field_M.field_z = wp.field_i;

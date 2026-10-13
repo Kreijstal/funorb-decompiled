@@ -228,7 +228,7 @@ final class sb implements vc {
                 if (this.d(-119)) {
                   NewAchievementsScreen.a(var3, var4 != 0, var5 != 0, -114);
                 }
-                eg.a(var2 != 0, 24);
+                TableDataRequest.a(var2 != 0, 24);
                 if (this.d(101)) {
                   stackIn_358_0 = ap.field_a;
                   stackIn_358_1 = 10;
@@ -244,7 +244,7 @@ final class sb implements vc {
                 if (this.d(-119)) {
                   NewAchievementsScreen.a(var3, var4 != 0, var5Lifetime8 != 0, -114);
                 }
-                eg.a(var2 != 0, 24);
+                TableDataRequest.a(var2 != 0, 24);
                 if (this.d(101)) {
                   stackIn_319_0 = ap.field_a;
                   stackIn_319_1 = 10;
@@ -259,7 +259,7 @@ final class sb implements vc {
                 if (this.d(-119)) {
                   NewAchievementsScreen.a(var3, var4 != 0, var5Lifetime9 != 0, -114);
                 }
-                eg.a(var2 != 0, 24);
+                TableDataRequest.a(var2 != 0, 24);
                 if (this.d(101)) {
                   stackIn_329_0 = ap.field_a;
                   stackIn_329_1 = 10;
@@ -274,7 +274,7 @@ final class sb implements vc {
                 if (this.d(-119)) {
                   NewAchievementsScreen.a(var3, var4 != 0, var5Lifetime10 != 0, -114);
                 }
-                eg.a(var2 != 0, 24);
+                TableDataRequest.a(var2 != 0, 24);
                 if (this.d(101)) {
                   stackIn_348_0 = ap.field_a;
                   stackIn_348_1 = 10;
@@ -288,7 +288,7 @@ final class sb implements vc {
               if (this.d(-119)) {
                 NewAchievementsScreen.a(var3, var4 != 0, var5Lifetime11 != 0, -114);
               }
-              eg.a(var2 != 0, 24);
+              TableDataRequest.a(var2 != 0, 24);
               if (this.d(101)) {
                 stackIn_339_0 = ap.field_a;
                 stackIn_339_1 = 10;
@@ -311,7 +311,7 @@ final class sb implements vc {
                 if (this.d(-119)) {
                   NewAchievementsScreen.a(var3, var4Lifetime7 != 0, var5Lifetime7 != 0, -114);
                 }
-                eg.a(var2 != 0, 24);
+                TableDataRequest.a(var2 != 0, 24);
                 if (this.d(101)) {
                   stackIn_378_0 = ap.field_a;
                   stackIn_378_1 = 10;
@@ -333,7 +333,7 @@ final class sb implements vc {
           if (this.d(-119)) {
             NewAchievementsScreen.a(var3, var4Lifetime7 != 0, var5Lifetime7 != 0, -114);
           }
-          eg.a(var2 != 0, 24);
+          TableDataRequest.a(var2 != 0, 24);
           if (this.d(101)) {
             stackIn_389_0 = ap.field_a;
             stackIn_389_1 = 10;
@@ -374,7 +374,7 @@ final class sb implements vc {
           if (this.d(-119)) {
             NewAchievementsScreen.a(var3Lifetime1, var4Lifetime1 != 0, var5Lifetime1 != 0, -114);
           }
-          eg.a(var2Lifetime1 != 0, 24);
+          TableDataRequest.a(var2Lifetime1 != 0, 24);
           if (this.d(101)) {
             stackIn_26_0 = ap.field_a;
             stackIn_26_1 = 10;
@@ -408,7 +408,7 @@ final class sb implements vc {
               if (this.d(-119)) {
                 NewAchievementsScreen.a(var3Lifetime2, var4Lifetime2 != 0, var5Lifetime2 != 0, -114);
               }
-              eg.a(var2Lifetime2 != 0, 24);
+              TableDataRequest.a(var2Lifetime2 != 0, 24);
               if (this.d(101)) {
                 stackIn_52_0 = ap.field_a;
                 stackIn_52_1 = 10;
@@ -429,7 +429,7 @@ final class sb implements vc {
             if (this.d(-119)) {
               NewAchievementsScreen.a(var3Lifetime2, var4Lifetime2Lifetime1 != 0, var5Lifetime2Lifetime1 != 0, -114);
             }
-            eg.a(var2Lifetime2 != 0, 24);
+            TableDataRequest.a(var2Lifetime2 != 0, 24);
             if (this.d(101)) {
               stackIn_108_0 = ap.field_a;
               stackIn_108_1 = 10;
@@ -444,7 +444,7 @@ final class sb implements vc {
               if (this.d(-119)) {
                 NewAchievementsScreen.a(var3Lifetime2, var4Lifetime2Lifetime1 != 0, var5Lifetime2Lifetime1 != 0, -114);
               }
-              eg.a(var2Lifetime2 != 0, 24);
+              TableDataRequest.a(var2Lifetime2 != 0, 24);
               if (this.d(101)) {
                 stackIn_69_0 = ap.field_a;
                 stackIn_69_1 = 10;
@@ -458,7 +458,7 @@ final class sb implements vc {
                 if (this.d(-119)) {
                   NewAchievementsScreen.a(var3Lifetime2, var4Lifetime2Lifetime1 != 0, var5Lifetime2Lifetime1 != 0, -114);
                 }
-                eg.a(var2Lifetime2 != 0, 24);
+                TableDataRequest.a(var2Lifetime2 != 0, 24);
                 if (this.d(101)) {
                   stackIn_79_0 = ap.field_a;
                   stackIn_79_1 = 10;
@@ -472,7 +472,7 @@ final class sb implements vc {
                   if (this.d(-119)) {
                     NewAchievementsScreen.a(var3Lifetime2, var4Lifetime2Lifetime1 != 0, var5Lifetime2Lifetime1 != 0, -114);
                   }
-                  eg.a(var2Lifetime2 != 0, 24);
+                  TableDataRequest.a(var2Lifetime2 != 0, 24);
                   if (this.d(101)) {
                     stackIn_98_0 = ap.field_a;
                     stackIn_98_1 = 10;
@@ -485,7 +485,7 @@ final class sb implements vc {
                   if (this.d(-119)) {
                     NewAchievementsScreen.a(var3Lifetime2, var4Lifetime2Lifetime1 != 0, var5Lifetime2Lifetime1 != 0, -114);
                   }
-                  eg.a(var2Lifetime2 != 0, 24);
+                  TableDataRequest.a(var2Lifetime2 != 0, 24);
                   if (this.d(101)) {
                     stackIn_89_0 = ap.field_a;
                     stackIn_89_1 = 10;
@@ -509,7 +509,7 @@ final class sb implements vc {
             if (this.d(-119)) {
               NewAchievementsScreen.a(var3Lifetime3, var4Lifetime3 != 0, var5Lifetime3 != 0, -114);
             }
-            eg.a(var2Lifetime3 != 0, 24);
+            TableDataRequest.a(var2Lifetime3 != 0, 24);
             if (this.d(101)) {
               stackIn_292_0 = ap.field_a;
               stackIn_292_1 = 10;
@@ -524,7 +524,7 @@ final class sb implements vc {
               if (this.d(-119)) {
                 NewAchievementsScreen.a(var3Lifetime3, var4Lifetime3 != 0, var5Lifetime3 != 0, -114);
               }
-              eg.a(var2Lifetime3 != 0, 24);
+              TableDataRequest.a(var2Lifetime3 != 0, 24);
               if (this.d(101)) {
                 stackIn_253_0 = ap.field_a;
                 stackIn_253_1 = 10;
@@ -538,7 +538,7 @@ final class sb implements vc {
                 if (this.d(-119)) {
                   NewAchievementsScreen.a(var3Lifetime3, var4Lifetime3 != 0, var5Lifetime3 != 0, -114);
                 }
-                eg.a(var2Lifetime3 != 0, 24);
+                TableDataRequest.a(var2Lifetime3 != 0, 24);
                 if (this.d(101)) {
                   stackIn_263_0 = ap.field_a;
                   stackIn_263_1 = 10;
@@ -552,7 +552,7 @@ final class sb implements vc {
                   if (this.d(-119)) {
                     NewAchievementsScreen.a(var3Lifetime3, var4Lifetime3 != 0, var5Lifetime3 != 0, -114);
                   }
-                  eg.a(var2Lifetime3 != 0, 24);
+                  TableDataRequest.a(var2Lifetime3 != 0, 24);
                   if (this.d(101)) {
                     stackIn_282_0 = ap.field_a;
                     stackIn_282_1 = 10;
@@ -565,7 +565,7 @@ final class sb implements vc {
                   if (this.d(-119)) {
                     NewAchievementsScreen.a(var3Lifetime3, var4Lifetime3 != 0, var5Lifetime3 != 0, -114);
                   }
-                  eg.a(var2Lifetime3 != 0, 24);
+                  TableDataRequest.a(var2Lifetime3 != 0, 24);
                   if (this.d(101)) {
                     stackIn_273_0 = ap.field_a;
                     stackIn_273_1 = 10;
@@ -587,7 +587,7 @@ final class sb implements vc {
             if (this.d(-119)) {
               NewAchievementsScreen.a(var3Lifetime3, var4Lifetime4 != 0, var5Lifetime4 != 0, -114);
             }
-            eg.a(var2Lifetime3 != 0, 24);
+            TableDataRequest.a(var2Lifetime3 != 0, 24);
             if (this.d(101)) {
               stackIn_165_0 = ap.field_a;
               stackIn_165_1 = 10;
@@ -602,7 +602,7 @@ final class sb implements vc {
               if (this.d(-119)) {
                 NewAchievementsScreen.a(var3Lifetime3, var4Lifetime4 != 0, var5Lifetime4 != 0, -114);
               }
-              eg.a(var2Lifetime3 != 0, 24);
+              TableDataRequest.a(var2Lifetime3 != 0, 24);
               if (this.d(101)) {
                 stackIn_126_0 = ap.field_a;
                 stackIn_126_1 = 10;
@@ -616,7 +616,7 @@ final class sb implements vc {
                 if (this.d(-119)) {
                   NewAchievementsScreen.a(var3Lifetime3, var4Lifetime4 != 0, var5Lifetime4 != 0, -114);
                 }
-                eg.a(var2Lifetime3 != 0, 24);
+                TableDataRequest.a(var2Lifetime3 != 0, 24);
                 if (this.d(101)) {
                   stackIn_136_0 = ap.field_a;
                   stackIn_136_1 = 10;
@@ -630,7 +630,7 @@ final class sb implements vc {
                   if (this.d(-119)) {
                     NewAchievementsScreen.a(var3Lifetime3, var4Lifetime4 != 0, var5Lifetime4 != 0, -114);
                   }
-                  eg.a(var2Lifetime3 != 0, 24);
+                  TableDataRequest.a(var2Lifetime3 != 0, 24);
                   if (this.d(101)) {
                     stackIn_155_0 = ap.field_a;
                     stackIn_155_1 = 10;
@@ -643,7 +643,7 @@ final class sb implements vc {
                   if (this.d(-119)) {
                     NewAchievementsScreen.a(var3Lifetime3, var4Lifetime4 != 0, var5Lifetime4 != 0, -114);
                   }
-                  eg.a(var2Lifetime3 != 0, 24);
+                  TableDataRequest.a(var2Lifetime3 != 0, 24);
                   if (this.d(101)) {
                     stackIn_146_0 = ap.field_a;
                     stackIn_146_1 = 10;
@@ -677,7 +677,7 @@ final class sb implements vc {
           if (this.d(-119)) {
             NewAchievementsScreen.a(var3Lifetime3, var4Lifetime5 != 0, var5Lifetime5 != 0, -114);
           }
-          eg.a(var2Lifetime3 != 0, 24);
+          TableDataRequest.a(var2Lifetime3 != 0, 24);
           if (this.d(101)) {
             stackIn_188_0 = ap.field_a;
             stackIn_188_1 = 10;
@@ -695,7 +695,7 @@ final class sb implements vc {
             if (this.d(-119)) {
               NewAchievementsScreen.a(var3Lifetime3, var4Lifetime6 != 0, var5Lifetime6 != 0, -114);
             }
-            eg.a(var2Lifetime3 != 0, 24);
+            TableDataRequest.a(var2Lifetime3 != 0, 24);
             if (this.d(101)) {
               stackIn_204_0 = ap.field_a;
               stackIn_204_1 = 10;
@@ -710,7 +710,7 @@ final class sb implements vc {
             if (this.d(-119)) {
               NewAchievementsScreen.a(var3Lifetime3, var4Lifetime6 != 0, var5Lifetime6 != 0, -114);
             }
-            eg.a(var2Lifetime3 != 0, 24);
+            TableDataRequest.a(var2Lifetime3 != 0, 24);
             if (this.d(101)) {
               stackIn_214_0 = ap.field_a;
               stackIn_214_1 = 10;
@@ -725,7 +725,7 @@ final class sb implements vc {
             if (this.d(-119)) {
               NewAchievementsScreen.a(var3Lifetime3, var4Lifetime6 != 0, var5Lifetime6 != 0, -114);
             }
-            eg.a(var2Lifetime3 != 0, 24);
+            TableDataRequest.a(var2Lifetime3 != 0, 24);
             if (this.d(101)) {
               stackIn_225_0 = ap.field_a;
               stackIn_225_1 = 10;
@@ -744,7 +744,7 @@ final class sb implements vc {
         if (this.d(-119)) {
           NewAchievementsScreen.a(var3Lifetime3, var4Lifetime6 != 0, var5Lifetime6 != 0, -114);
         }
-        eg.a(var2Lifetime3 != 0, 24);
+        TableDataRequest.a(var2Lifetime3 != 0, 24);
         if (this.d(101)) {
           stackIn_236_0 = ap.field_a;
           stackIn_236_1 = 10;

@@ -169,7 +169,7 @@ final class GameCanvas extends java.awt.Canvas implements java.awt.event.FocusLi
           if (var9 != null) {
             hj.a(0, var9);
           }
-          var8 = pn.c(-9235);
+          var8 = LevelResultSubmission.c(-9235);
           if (var8 == null) {
             return;
           }

@@ -21,7 +21,7 @@ final class jk extends ki {
           if (null == n.field_c) {
             return false;
           }
-          if (null == pk.field_a) {
+          if (null == TableNameEntry.field_a) {
             return false;
           }
           if (go.field_d == null) {
@@ -41,7 +41,7 @@ final class jk extends ki {
         if (null == n.field_c) {
           return false;
         }
-        if (null == pk.field_a) {
+        if (null == TableNameEntry.field_a) {
           return false;
         }
         if (go.field_d == null) {
@@ -62,7 +62,7 @@ final class jk extends ki {
           wm.field_b = pl.loadRgbSpriteByName("water", "water_near", (byte) 105, AchievementIcon.field_m);
           hk.field_Q = pl.loadRgbSpriteByName("water", "water_mid", (byte) 109, AchievementIcon.field_m);
           n.field_c = pl.loadRgbSpriteByName("water", "water_far", (byte) -121, AchievementIcon.field_m);
-          pk.field_a = pl.loadRgbSpriteByName("water", "water_small", (byte) 112, AchievementIcon.field_m);
+          TableNameEntry.field_a = pl.loadRgbSpriteByName("water", "water_small", (byte) 112, AchievementIcon.field_m);
           sn.field_t = pl.loadRgbSpriteByName("water", "water_character", (byte) -43, AchievementIcon.field_m);
           vj.field_b = new RgbSprite(n.field_c.canvasWidth, n.field_c.canvasHeight);
           IndexedSpriteGeometry.pushSpriteRaster(-49, vj.field_b);
@@ -182,7 +182,7 @@ final class jk extends ki {
         if (param1 <= -1) {
           Rasterizer2D.fillVerticalGradient(param2, param3, 153, 238, 16777215, 11184810);
           if (this.b((byte) -98)) {
-            pk.field_a.drawTransparent(param2, param3);
+            TableNameEntry.field_a.drawTransparent(param2, param3);
             var5 = 14 / ((param0 + 28) / 43);
             return;
           }
@@ -191,7 +191,7 @@ final class jk extends ki {
         }
         Rasterizer2D.fillVerticalGradient(param2, param3, 153, 238, um.field_u[param1], 928072);
         if (this.b((byte) -98)) {
-          pk.field_a.drawTransparent(param2, param3);
+          TableNameEntry.field_a.drawTransparent(param2, param3);
           var5Lifetime1 = 14 / ((param0 + 28) / 43);
           return;
         }

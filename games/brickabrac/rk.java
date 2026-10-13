@@ -113,14 +113,14 @@ final class rk extends mh {
             var8 = oh.a((byte) 13, "%40", var7, "@");
             var9 = oh.a((byte) 13, "%26", var8, "&");
             var10 = oh.a((byte) 13, "%23", var9, "#");
-            if (null == mk.field_i) {
+            if (null == SecondaryHashTable.field_i) {
               return;
             }
             stackIn_16_0 = LevelPackLoader.field_e;
             stackIn_16_1 = -49;
             stackIn_16_2 = null;
             stackIn_16_3 = null;
-            stackIn_16_4 = mk.field_i.getCodeBase();
+            stackIn_16_4 = SecondaryHashTable.field_i.getCodeBase();
             stackIn_16_5 = new StringBuilder().append("clienterror.ws?c=").append(oj.field_m).append("&u=");
             if (ua.field_a == null) {
               stackIn_17_2 = null;

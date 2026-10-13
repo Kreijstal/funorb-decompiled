@@ -65,10 +65,10 @@ final class gi extends ki {
           oc.field_x = jh.a(0, lj.field_q);
           pp.field_b = jh.a(0, OptionsScreen.field_B);
           GzipInflater.field_f[0] = cr.loadRgbSpritesByName("desert", AchievementIcon.field_m, "desert_caps", 2);
-          pk.field_e[0] = cr.loadRgbSpritesByName("desert", AchievementIcon.field_m, "desert_segs", 2);
+          TableNameEntry.field_e[0] = cr.loadRgbSpritesByName("desert", AchievementIcon.field_m, "desert_segs", 2);
           um.field_l[0] = pl.loadRgbSpriteByName("desert", "desert_centre", (byte) 110, AchievementIcon.field_m);
           GzipInflater.field_f[1] = ig.a(GzipInflater.field_f[0], param0);
-          pk.field_e[1] = ig.a(pk.field_e[0], false);
+          TableNameEntry.field_e[1] = ig.a(TableNameEntry.field_e[0], false);
           um.field_l[1] = pl.a(-16371, um.field_l[0]);
           return true;
         }
@@ -91,9 +91,9 @@ final class gi extends ki {
     final RgbSprite[] a(int param0, boolean param1) {
         if (!param1) {
           field_u = (String) null;
-          return pk.field_e[param0 - 1];
+          return TableNameEntry.field_e[param0 - 1];
         }
-        return pk.field_e[param0 - 1];
+        return TableNameEntry.field_e[param0 - 1];
     }
 
     public static void f(int param0) {
@@ -145,7 +145,7 @@ final class gi extends ki {
         try {
           GzipInflater.field_f = new RgbSprite[2][];
           um.field_l = new RgbSprite[2];
-          pk.field_e = new RgbSprite[2][];
+          TableNameEntry.field_e = new RgbSprite[2][];
         } catch (RuntimeException runtimeException) {
           throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "gi.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
@@ -169,7 +169,7 @@ final class gi extends ki {
           if (GzipInflater.field_f == null) {
             return false;
           }
-          if (pk.field_e != null) {
+          if (TableNameEntry.field_e != null) {
             return um.field_l != null ? true : false;
           }
           return false;
@@ -189,7 +189,7 @@ final class gi extends ki {
         if (GzipInflater.field_f == null) {
           return false;
         }
-        if (pk.field_e != null) {
+        if (TableNameEntry.field_e != null) {
           return um.field_l != null ? true : false;
         }
         return false;

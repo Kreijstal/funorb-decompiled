@@ -147,7 +147,7 @@ final class po {
           var5 = var4;
           ec.field_Q = oa.field_Sb;
           ci.field_r = IntArrayRequest.gameplayScreen.field_p;
-          eg.field_k = IntArrayRequest.gameplayScreen.c(124);
+          TableDataRequest.field_k = IntArrayRequest.gameplayScreen.c(124);
           cb.field_n = IntArrayRequest.gameplayScreen.field_n;
           sk.field_I = IntArrayRequest.gameplayScreen.match.playerCount;
           fh.field_h = new String[sk.field_I];
@@ -164,7 +164,7 @@ final class po {
           }
           stackIn_13_0 = !(ci.field_r);
           LevelMetadata.field_p = stackIn_13_0;
-          if (!eg.field_k) {
+          if (!TableDataRequest.field_k) {
             for (var2Lifetime3 = 0; BitPacketBuffer.field_o.length > var2Lifetime3; var2Lifetime3++) {
               stackIn_18_0 = LevelMetadata.field_p;
               stackIn_19_1 = (~IntArrayRequest.gameplayScreen.field_k == ~var5.field_m[var2Lifetime3]);

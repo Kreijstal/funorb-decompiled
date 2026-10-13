@@ -1,15 +1,15 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class pk {
-    String field_b;
+final class TableNameEntry {
+    String secondaryLabel;
     static RgbSprite[][] field_e;
-    boolean field_d;
+    boolean partitionSeen;
     static String field_g;
     static RgbSprite field_a;
     static RgbSprite field_f;
     static mh field_h;
-    String field_c;
+    String name;
 
     public static void a(byte param0) {
         field_h = null;

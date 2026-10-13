@@ -261,7 +261,7 @@ final class sj {
                   }
                 } else {
                   var8 = new id(var29, var30, var3);
-                  eq.field_m.a(var3, var8, 86);
+                  eq.field_m.put(var3, var8, 86);
                 }
                 var8.field_Xb = MonotonicTime.nowMillis(false) - (long)((PacketBuffer) ((Object) var1)).readInt(255);
                 var8.field_Wb = ((PacketBuffer) ((Object) var1)).readUnsignedShort(65280);
@@ -304,10 +304,10 @@ final class sj {
                 } else {
                   if (var2 == 8) {
                     var3_int = ((PacketBuffer) ((Object) var1)).readUnsignedShort(65280);
-                    var4_ref_om = (om) (pn.field_i.a((long)var3_int, -1));
+                    var4_ref_om = (om) (LevelResultSubmission.field_i.get((long)var3_int, -1));
                     if (var4_ref_om == null) {
                       var4_ref_om = new om(cq.field_p);
-                      pn.field_i.a((long)var3_int, var4_ref_om, 47);
+                      LevelResultSubmission.field_i.put((long)var3_int, var4_ref_om, 47);
                     }
                     eb.a(var4_ref_om, var1, 0, true);
                     ic.a(true, var4_ref_om);
@@ -315,7 +315,7 @@ final class sj {
                     if (9 == var2) {
                       var3_int = ((PacketBuffer) ((Object) var1)).readUnsignedShort(65280);
                       var4 = ((PacketBuffer) ((Object) var1)).readUnsignedByte(255);
-                      var32 = (om) (pn.field_i.a((long)var3_int, -1));
+                      var32 = (om) (LevelResultSubmission.field_i.get((long)var3_int, -1));
                       if ((var32 != null)) {
                         if (var4 == 0) {
                           var32.unlink((byte) 111);
@@ -339,7 +339,7 @@ final class sj {
                           if (var2 == 13) {
                             var3_int = ((PacketBuffer) ((Object) var1)).readUnsignedShort(65280);
                             var4 = ((PacketBuffer) ((Object) var1)).readUnsignedByte(255);
-                            var18_ref = (om) (pn.field_i.a((long)var3_int, param0 - 34));
+                            var18_ref = (om) (LevelResultSubmission.field_i.get((long)var3_int, param0 - 34));
                             if ((var18_ref != null)) {
                               var16 = var18_ref;
                               var6_ref = var16;
@@ -364,7 +364,7 @@ final class sj {
                                     var7 = ac.a(var3, 2);
                                     if (var7 == null) {
                                       var7 = new id(var26, var27, var3);
-                                      BrickABrac.field_F.a(var3, var7, 48);
+                                      BrickABrac.field_F.put(var3, var7, 48);
                                       o.field_e.field_cc = o.field_e.field_cc + 1;
                                     }
                                     var7.field_Wb = ((PacketBuffer) ((Object) var1)).readUnsignedShort(65280);
@@ -455,7 +455,7 @@ final class sj {
                           }
                         } else {
                           var3_int = ((PacketBuffer) ((Object) var1)).readUnsignedShort(65280);
-                          var20_ref = (om) (pn.field_i.a((long)var3_int, -1));
+                          var20_ref = (om) (LevelResultSubmission.field_i.get((long)var3_int, -1));
                           var23 = var20_ref;
                           if ((var23 != null)) {
                             if (var2 != 11) {
@@ -479,7 +479,7 @@ final class sj {
               var3_ref_id.unlinkSecondary(param0 - 30);
               var3_ref_id = (id) (mp.field_Tb.next((byte) 116));
             }
-            var3_ref_id = (id) (eq.field_m.b((byte) 89));
+            var3_ref_id = (id) (eq.field_m.first((byte) 89));
             while (var3_ref_id != null) {
               if (var3_ref_id.field_Qb ||
                 var3_ref_id.field_fc) {
@@ -490,11 +490,11 @@ final class sj {
                 }
                 wl.a(var3_ref_id, 17574);
               }
-              var3_ref_id = (id) (eq.field_m.a(false));
+              var3_ref_id = (id) (eq.field_m.next(false));
             }
             if (var2 == 1 &&
               o.field_e != null) {
-              pk.field_g = o.field_e.field_Fc;
+              TableNameEntry.field_g = o.field_e.field_Fc;
             }
             if (4 == var2) {
               var3_int = ((PacketBuffer) ((Object) var1)).readUnsignedShort(65280);

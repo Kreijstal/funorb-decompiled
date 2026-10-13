@@ -10,26 +10,26 @@ final class kp {
     static int field_a;
     static Vector field_d;
 
-    final static void a(int param0, byte param1, pn param2) {
-        BitPacketBuffer var6 = null;
-        int var5 = 0;
+    final static void sendLevelResult(int opcode, byte obfuscationGuard, LevelResultSubmission result) {
+        BitPacketBuffer packet = null;
+        int payloadStart = 0;
         try {
-          var6 = k.outgoingPackets;
-          int var4 = 107 / ((44 - param1) / 45);
-          var6.writeCipheredOpcode(-13413, param0);
-          var6.position = var6.position + 1;
-          var5 = var6.position;
-          var6.writeByte(-117, 1);
-          var6.writeByte(-99, param2.field_p);
-          var6.writeSignedSmart(param2.field_n, (byte) 117);
-          var6.writeInt(param2.field_t, (byte) -79);
-          var6.writeInt(param2.field_r, (byte) -79);
-          var6.writeInt(param2.field_l, (byte) -79);
-          var6.writeInt(param2.field_k, (byte) -79);
-          var6.appendCrc32(3, var5);
-          var6.backfillByteLength((byte) 124, -var5 + var6.position);
+          packet = k.outgoingPackets;
+          int var4 = 107 / ((44 - obfuscationGuard) / 45);
+          packet.writeCipheredOpcode(-13413, opcode);
+          packet.position = packet.position + 1;
+          payloadStart = packet.position;
+          packet.writeByte(-117, 1);
+          packet.writeByte(-99, result.packId);
+          packet.writeSignedSmart(result.levelIndex, (byte) 117);
+          packet.writeInt(result.resultWordOne, (byte) -79);
+          packet.writeInt(result.resultWordTwo, (byte) -79);
+          packet.writeInt(result.resultWordThree, (byte) -79);
+          packet.writeInt(result.resultWordFour, (byte) -79);
+          packet.appendCrc32(3, payloadStart);
+          packet.backfillByteLength((byte) 124, -payloadStart + packet.position);
         } catch (RuntimeException runtimeException) {
-          throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "kp.B(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "kp.B(" + opcode + ',' + obfuscationGuard + ',' + (result != null ? "{...}" : "null") + ')');
         }
     }
 

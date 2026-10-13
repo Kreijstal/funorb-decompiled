@@ -9,7 +9,7 @@ final class IntNode extends IntrusiveNode {
     static RgbSprite field_o;
     static String field_m;
     static String field_l;
-    static NodeDeque field_j;
+    static NodeDeque queuedLevelResults;
 
     public static void a(byte param0) {
         field_n = null;
@@ -18,7 +18,7 @@ final class IntNode extends IntrusiveNode {
         field_o = null;
         int var1 = 119 / ((param0 - 71) / 51);
         field_l = null;
-        field_j = null;
+        queuedLevelResults = null;
         field_i = null;
     }
 
@@ -206,6 +206,6 @@ final class IntNode extends IntrusiveNode {
         field_k = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
         field_m = "<%0> has not yet unlocked this option for use.";
         field_l = "Email (Login):";
-        field_j = new NodeDeque();
+        queuedLevelResults = new NodeDeque();
     }
 }

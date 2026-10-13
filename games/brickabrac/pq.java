@@ -110,8 +110,8 @@ final class pq extends IntrusiveNode {
             ml.field_b = ml.field_b - 1;
           } else {
             if (IntArrayRequest.field_j <= 0) {
-              if (eg.field_m > 0) {
-                eg.field_m = eg.field_m - 1;
+              if (TableDataRequest.field_m > 0) {
+                TableDataRequest.field_m = TableDataRequest.field_m - 1;
               }
             } else {
               IntArrayRequest.field_j = IntArrayRequest.field_j - 1;
@@ -124,8 +124,8 @@ final class pq extends IntrusiveNode {
               if (IntArrayRequest.field_j > 0) {
                 IntArrayRequest.field_j = IntArrayRequest.field_j - 1;
               } else {
-                if (eg.field_m > 0) {
-                  eg.field_m = eg.field_m - 1;
+                if (TableDataRequest.field_m > 0) {
+                  TableDataRequest.field_m = TableDataRequest.field_m - 1;
                 } else {
                   if (ml.field_b < hj.field_Yb) {
                     if (ml.field_b == 0) {
@@ -139,8 +139,8 @@ final class pq extends IntrusiveNode {
               if (ml.field_b > 0) {
                 ml.field_b = ml.field_b - 1;
               } else {
-                if (0 < eg.field_m) {
-                  eg.field_m = eg.field_m - 1;
+                if (0 < TableDataRequest.field_m) {
+                  TableDataRequest.field_m = TableDataRequest.field_m - 1;
                 } else {
                   if (hj.field_Yb > IntArrayRequest.field_j) {
                     if (IntArrayRequest.field_j == 0) {
@@ -154,11 +154,11 @@ final class pq extends IntrusiveNode {
           } else {
             if (ml.field_b <= 0) {
               if (0 >= IntArrayRequest.field_j) {
-                if (hj.field_Yb > eg.field_m) {
-                  if (eg.field_m == 0) {
+                if (hj.field_Yb > TableDataRequest.field_m) {
+                  if (TableDataRequest.field_m == 0) {
                     NodeDeque.a(false, -64);
                   }
-                  eg.field_m = eg.field_m + 1;
+                  TableDataRequest.field_m = TableDataRequest.field_m + 1;
                 }
               } else {
                 IntArrayRequest.field_j = IntArrayRequest.field_j - 1;

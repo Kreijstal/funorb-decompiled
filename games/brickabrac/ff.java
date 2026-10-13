@@ -75,24 +75,24 @@ abstract class ff {
 
     final static void a(byte param0, int param1) {
         int var3 = 0;
-        sp var4 = null;
-        eg var5 = null;
+        TableRowSubmission var4 = null;
+        TableDataRequest var5 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         var3 = BrickABrac.field_J ? 1 : 0;
         try {
-          var4 = (sp) (tm.field_f.first(-84));
+          var4 = (TableRowSubmission) (tm.pendingTableSubmissions.first(-84));
           while (var4 != null) {
-            AppletGameShell.a(param1, var4, 14989);
-            var4 = (sp) (tm.field_f.next((byte) 116));
+            AppletGameShell.sendTableRow(param1, var4, 14989);
+            var4 = (TableRowSubmission) (tm.pendingTableSubmissions.next((byte) 116));
           }
           if (param0 > -34) {
             return;
           }
-          var5 = (eg) (GameplayAudioEvent.field_n.first(-71));
+          var5 = (TableDataRequest) (GameplayAudioEvent.pendingTableRequests.first(-71));
           while (var5 != null) {
-            uo.a(var5, param1, (byte) 68);
-            var5 = (eg) (GameplayAudioEvent.field_n.next((byte) 116));
+            uo.sendTableRequest(var5, param1, (byte) 68);
+            var5 = (TableDataRequest) (GameplayAudioEvent.pendingTableRequests.next((byte) 116));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

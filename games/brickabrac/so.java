@@ -205,7 +205,7 @@ final class so {
             IntrusiveHashTable.achievementSourceIcons[var10_int].drawQuarter(0, 0);
             kc.framebuffer.bindRaster((byte) 101);
             e.field_l[var10_int] = p.a(-12, var20, 8, 9838226);
-            pa.field_h[var10_int] = p.a(pn.a(param3, -29147), var20, 12, 9838226);
+            pa.field_h[var10_int] = p.a(LevelResultSubmission.a(param3, -29147), var20, 12, 9838226);
           }
           CircleBody.field_t = new RgbSprite[lo.field_c.length][];
           var9 = null;
@@ -321,11 +321,11 @@ final class so {
           }
           BoundedFile.field_a = new RgbSprite[tf.field_g.length];
           for (var10_intLifetime12 = 0; BoundedFile.field_a.length > var10_intLifetime12; var10_intLifetime12++) {
-            BoundedFile.field_a[var10_intLifetime12] = p.a(pn.a(param3, -29147), tf.field_g[var10_intLifetime12], 14, 16755200);
+            BoundedFile.field_a[var10_intLifetime12] = p.a(LevelResultSubmission.a(param3, -29147), tf.field_g[var10_intLifetime12], 14, 16755200);
           }
           lk.field_n = new RgbSprite[tf.field_g.length];
           for (var10_intLifetime13 = 0; var10_intLifetime13 < lk.field_n.length; var10_intLifetime13++) {
-            lk.field_n[var10_intLifetime13] = DelayedPacket.a(tf.field_g[var10_intLifetime13], 20, pn.a(param3, -13351));
+            lk.field_n[var10_intLifetime13] = DelayedPacket.a(tf.field_g[var10_intLifetime13], 20, LevelResultSubmission.a(param3, -13351));
           }
           rk.field_Sb = ap.field_a.copy();
           rk.field_Sb.rotateCounterclockwise();
@@ -362,7 +362,7 @@ final class so {
           }
           ik.field_f = new RgbSprite[SaveResultsPromptScreen.packCardIcons.length];
           for (var11Lifetime3 = 0; var11Lifetime3 < SaveResultsPromptScreen.packCardIcons.length; var11Lifetime3++) {
-            ik.field_f[var11Lifetime3] = p.a(pn.a(param3, -29147), ArchiveNetworkRequest.packSelectorIcons[var11Lifetime3], 14, 16777215);
+            ik.field_f[var11Lifetime3] = p.a(LevelResultSubmission.a(param3, -29147), ArchiveNetworkRequest.packSelectorIcons[var11Lifetime3], 14, 16777215);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

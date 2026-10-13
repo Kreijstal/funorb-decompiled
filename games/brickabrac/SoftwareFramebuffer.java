@@ -8,7 +8,7 @@ abstract class SoftwareFramebuffer {
     int height;
     static int field_a;
     java.awt.Image image;
-    static pk[] field_b;
+    static TableNameEntry[] tableNameScratch;
 
     abstract void draw(int y, int x, int obfuscationGuard, java.awt.Graphics graphics);
 
@@ -28,7 +28,7 @@ abstract class SoftwareFramebuffer {
     }
 
     public static void a(int param0) {
-        field_b = null;
+        tableNameScratch = null;
         field_e = null;
         int var1 = 112 % ((param0 + 44) / 63);
     }
@@ -87,7 +87,7 @@ abstract class SoftwareFramebuffer {
           }
           if (var7 > 0 &&
             var6 > 0) {
-            sp.a(Rasterizer2D.pixels, var8, 0, var5, var6, var9, var7, -1, var4_int, param3.pixels);
+            TableRowSubmission.a(Rasterizer2D.pixels, var8, 0, var5, var6, var9, var7, -1, var4_int, param3.pixels);
             return;
           }
           return;
@@ -109,9 +109,9 @@ abstract class SoftwareFramebuffer {
 
     static {
         int var0 = 0;
-        field_b = new pk[255];
-        for (var0 = 0; var0 < field_b.length; var0++) {
-          field_b[var0] = new pk();
+        tableNameScratch = new TableNameEntry[255];
+        for (var0 = 0; var0 < tableNameScratch.length; var0++) {
+          tableNameScratch[var0] = new TableNameEntry();
         }
     }
 }

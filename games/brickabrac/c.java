@@ -96,7 +96,7 @@ final class c {
             if (0 < IntArrayRequest.field_j) {
               n.a(param2, param8, param3, (byte) -76);
             }
-            if (eg.field_m > 0) {
+            if (TableDataRequest.field_m > 0) {
               nh.a(true, param3, param8, param2, param7);
             }
             if (hc.field_c &&
@@ -119,7 +119,7 @@ final class c {
               if (0 < IntArrayRequest.field_j) {
                 n.a(param2, param8, param3, (byte) -76);
               }
-              if (eg.field_m > 0) {
+              if (TableDataRequest.field_m > 0) {
                 nh.a(true, param3, param8, param2, param7);
               }
               if (hc.field_c &&
@@ -138,7 +138,7 @@ final class c {
               if (0 < IntArrayRequest.field_j) {
                 n.a(param2, param8, param3, (byte) -76);
               }
-              if (eg.field_m > 0) {
+              if (TableDataRequest.field_m > 0) {
                 nh.a(true, param3, param8, param2, param7);
               }
               if (!hc.field_c) {
@@ -184,7 +184,7 @@ final class c {
               if (0 < IntArrayRequest.field_j) {
                 n.a(param2, param8, param3, (byte) -76);
               }
-              if (eg.field_m > 0) {
+              if (TableDataRequest.field_m > 0) {
                 nh.a(true, param3, param8, param2, param7);
               }
               if (hc.field_c &&
@@ -208,7 +208,7 @@ final class c {
               if (0 < IntArrayRequest.field_j) {
                 n.a(param2, param8, param3, (byte) -76);
               }
-              if (eg.field_m > 0) {
+              if (TableDataRequest.field_m > 0) {
                 nh.a(true, param3, param8, param2, param7);
               }
               if (!hc.field_c) {
@@ -251,7 +251,7 @@ final class c {
               if (0 < IntArrayRequest.field_j) {
                 n.a(param2, param8, param3, (byte) -76);
               }
-              if (eg.field_m > 0) {
+              if (TableDataRequest.field_m > 0) {
                 nh.a(true, param3, param8, param2, param7);
               }
               if (hc.field_c &&
@@ -274,7 +274,7 @@ final class c {
                 if (0 < IntArrayRequest.field_j) {
                   n.a(param2, param8, param3, (byte) -76);
                 }
-                if (eg.field_m > 0) {
+                if (TableDataRequest.field_m > 0) {
                   nh.a(true, param3, param8, param2, param7);
                 }
                 if (hc.field_c &&
@@ -293,7 +293,7 @@ final class c {
                 if (0 < IntArrayRequest.field_j) {
                   n.a(param2, param8, param3, (byte) -76);
                 }
-                if (eg.field_m > 0) {
+                if (TableDataRequest.field_m > 0) {
                   nh.a(true, param3, param8, param2, param7);
                 }
                 if (!hc.field_c) {

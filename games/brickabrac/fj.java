@@ -8,7 +8,7 @@ final class fj extends mh {
     private mh field_Yb;
     private mh field_Zb;
     static int[] field_Pb;
-    static sp field_Ub;
+    static TableRowSubmission field_Ub;
     private mh field_Vb;
     private mh field_Wb;
     static String field_Rb;
@@ -245,7 +245,7 @@ final class fj extends mh {
         if (param3 == 1) {
           return SpriteGeometry.a(param0, 1, 1, 9361, param2, 1, 3, param4, param1);
         }
-        field_Ub = (sp) null;
+        field_Ub = (TableRowSubmission) null;
         return SpriteGeometry.a(param0, 1, 1, 9361, param2, 1, 3, param4, param1);
     }
 

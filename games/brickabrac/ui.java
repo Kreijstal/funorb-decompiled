@@ -104,16 +104,16 @@ final class ui {
 
     final static void a(int param0, byte param1) {
         int var3 = 0;
-        pn var4 = null;
+        LevelResultSubmission var4 = null;
         IntArrayRequest var5 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         var3 = BrickABrac.field_J ? 1 : 0;
         try {
-          var4 = (pn) (qa.field_t.first(-14));
+          var4 = (LevelResultSubmission) (qa.pendingLevelResults.first(-14));
           while (var4 != null) {
-            kp.a(param0, (byte) 112, var4);
-            var4 = (pn) (qa.field_t.next((byte) 116));
+            kp.sendLevelResult(param0, (byte) 112, var4);
+            var4 = (LevelResultSubmission) (qa.pendingLevelResults.next((byte) 116));
           }
           var5 = (IntArrayRequest) (ob.pendingIntArrayRequests.first(-61));
           while (var5 != null) {

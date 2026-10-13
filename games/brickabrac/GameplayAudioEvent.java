@@ -5,7 +5,7 @@ import java.io.*;
 
 final class GameplayAudioEvent extends IntrusiveNode {
     static RgbSprite[] field_l;
-    static NodeDeque field_n;
+    static NodeDeque pendingTableRequests;
     static volatile boolean redrawRequested;
     static int mouseWheelDelta;
     int detailId;
@@ -55,7 +55,7 @@ final class GameplayAudioEvent extends IntrusiveNode {
     }
 
     public static void d(int param0) {
-        field_n = null;
+        pendingTableRequests = null;
         if (param0 != 0) {
           return;
         }
@@ -198,6 +198,6 @@ final class GameplayAudioEvent extends IntrusiveNode {
 
     static {
         redrawRequested = true;
-        field_n = new NodeDeque();
+        pendingTableRequests = new NodeDeque();
     }
 }

@@ -223,7 +223,7 @@ final class ArchiveNetworkClient extends ArchiveFetchClient {
                   this.transport.readFully(25826, this.currentResponse.packet.data, var6, this.currentResponse.packet.position);
                   if (this.xorKey != 0) {
                     for (var7 = 0; var7 < var6; var7++) {
-                      this.currentResponse.packet.data[var7 + this.currentResponse.packet.position] = (byte)pn.a((int) this.currentResponse.packet.data[var7 + this.currentResponse.packet.position], (int) this.xorKey);
+                      this.currentResponse.packet.data[var7 + this.currentResponse.packet.position] = (byte)LevelResultSubmission.a((int) this.currentResponse.packet.data[var7 + this.currentResponse.packet.position], (int) this.xorKey);
                     }
                   }
                   this.currentResponse.blockPosition = this.currentResponse.blockPosition + var6;
@@ -245,7 +245,7 @@ final class ArchiveNetworkClient extends ArchiveFetchClient {
                   this.transport.readFully(25826, this.responseHeader.data, var5, this.responseHeader.position);
                   if (0 != this.xorKey) {
                     for (var6 = 0; var6 < var5; var6++) {
-                      this.responseHeader.data[this.responseHeader.position + var6] = (byte)pn.a((int) this.responseHeader.data[this.responseHeader.position + var6], (int) this.xorKey);
+                      this.responseHeader.data[this.responseHeader.position + var6] = (byte)LevelResultSubmission.a((int) this.responseHeader.data[this.responseHeader.position + var6], (int) this.xorKey);
                     }
                   }
                   this.responseHeader.position = this.responseHeader.position + var5;

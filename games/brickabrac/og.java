@@ -1370,7 +1370,7 @@ final class og extends mh {
           }
           var2Lifetime162 = gr.a(true, "explain_wipeout");
           if (null != var2Lifetime162) {
-            mk.field_a = MenuButton.a(var2Lifetime162, (byte) 100);
+            SecondaryHashTable.field_a = MenuButton.a(var2Lifetime162, (byte) 100);
           }
           var2Lifetime163 = gr.a(!param0, "explain_multiball");
           if (null != var2Lifetime163) {

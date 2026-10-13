@@ -1,18 +1,18 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class sp extends IntrusiveNode {
-    int field_j;
+final class TableRowSubmission extends IntrusiveNode {
+    int resultWordFour;
     static int field_l;
-    int field_n;
-    long field_p;
+    int resultWordTwo;
+    long rowId;
     static String field_s;
-    int field_m;
-    int field_q;
-    int field_k;
-    int field_r;
-    int[] field_i;
-    int field_o;
+    int requestId;
+    int tableWord;
+    int resultWordOne;
+    int resultWordThree;
+    int[] values;
+    int tableId;
 
     public static void a(int param0) {
         field_s = null;
@@ -39,7 +39,7 @@ final class sp extends IntrusiveNode {
         var14 = BrickABrac.field_J ? 1 : 0;
         try {
           if (param7 != -1) {
-            sp.a(-117);
+            TableRowSubmission.a(-117);
           }
           for (var12 = -param4; var12 < 0; var12++) {
             for (var13 = -param6; var13 < 0; var13++) {
@@ -81,21 +81,21 @@ final class sp extends IntrusiveNode {
         }
     }
 
-    sp(int param0, int param1, int param2, int param3, int param4, int param5, int[] param6) {
+    TableRowSubmission(int tableId, int tableWord, int resultWordOne, int resultWordTwo, int resultWordThree, int resultWordFour, int[] values) {
         int fieldTemp$0 = 0;
         try {
-          this.field_o = param0;
-          this.field_n = param3;
-          this.field_r = param4;
-          this.field_j = param5;
-          this.field_k = param2;
-          this.field_q = param1;
-          this.field_i = param6;
-          fieldTemp$0 = qf.field_Cb;
-          qf.field_Cb = qf.field_Cb + 1;
-          this.field_m = 65535 & fieldTemp$0;
+          this.tableId = tableId;
+          this.resultWordTwo = resultWordTwo;
+          this.resultWordThree = resultWordThree;
+          this.resultWordFour = resultWordFour;
+          this.resultWordOne = resultWordOne;
+          this.tableWord = tableWord;
+          this.values = values;
+          fieldTemp$0 = qf.tableSubmissionSequence;
+          qf.tableSubmissionSequence = qf.tableSubmissionSequence + 1;
+          this.requestId = 65535 & fieldTemp$0;
         } catch (RuntimeException runtimeException) {
-          throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "sp.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + (param6 != null ? "{...}" : "null") + ')');
+          throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "sp.<init>(" + tableId + ',' + tableWord + ',' + resultWordOne + ',' + resultWordTwo + ',' + resultWordThree + ',' + resultWordFour + ',' + (values != null ? "{...}" : "null") + ')');
         }
     }
 

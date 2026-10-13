@@ -105,7 +105,7 @@ final class HighscorePackSelector {
             var6 = (String) null;
             HighscorePackSelector.a(-82, (String) null);
           }
-          var3 = (mp) (tf.field_d.a((long)var2.hashCode(), -1));
+          var3 = (mp) (tf.field_d.get((long)var2.hashCode(), -1));
           while (true) {
             if (var3 == null) {
               return null;
@@ -116,7 +116,7 @@ final class HighscorePackSelector {
               var4 = var3.field_Rb;
             }
             if (!var4.equals(var2)) {
-              var3 = (mp) (tf.field_d.a((byte) -43));
+              var3 = (mp) (tf.field_d.nextMatch((byte) -43));
               continue;
             }
             break;

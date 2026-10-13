@@ -879,12 +879,12 @@ final class PlayerBoard extends IntrusiveNode {
         int var5 = 0;
         if (100 < this.nextRandomBoundedInt(200, (byte) 62)) {
           var5 = points;
-          ep.field_i = ep.field_i + var5;
+          ep.resultCounterTwo = ep.resultCounterTwo + var5;
         } else {
           var5 = points;
           var6 = this.nextRandomBoundedInt(50, (byte) 62);
-          ep.field_i = ep.field_i - var6 * var5;
-          OptionsScreen.field_z = OptionsScreen.field_z + (1 + var6) * var5;
+          ep.resultCounterTwo = ep.resultCounterTwo - var6 * var5;
+          OptionsScreen.resultCounterOne = OptionsScreen.resultCounterOne + (1 + var6) * var5;
         }
         if (resetStateWord) {
           this.field_l = 1;

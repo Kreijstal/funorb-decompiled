@@ -80,10 +80,10 @@ final class GameplayScreen extends GameScreen {
     }
 
     private final boolean recordAchievement(int achievementId, int pendingBit) {
-        if (DirectByteStorage.isBitSet(mk.earnedAchievementMask, achievementId, (byte) -75)) {
+        if (DirectByteStorage.isBitSet(SecondaryHashTable.earnedAchievementMask, achievementId, (byte) -75)) {
           return true;
         }
-        int[] var5 = mk.earnedAchievementMask;
+        int[] var5 = SecondaryHashTable.earnedAchievementMask;
         int[] var3 = var5;
         int var4 = achievementId;
         var5[var4 >> 5] = LevelSelectScreen.d(var5[var4 >> 5], 1 << ik.a(31, var4));
@@ -162,12 +162,12 @@ final class GameplayScreen extends GameScreen {
         }
         if (!this.field_s) {
           var4 = this.match.playerBoards[0].score;
-          ep.field_i = ep.field_i - (var4 + this.field_t);
+          ep.resultCounterTwo = ep.resultCounterTwo - (var4 + this.field_t);
           var5 = this.match.playerBoards[0].levelIndex;
-          OptionsScreen.field_z = OptionsScreen.field_z + var5;
-          lp.field_wb.addLast(new e(param2, param0, OptionsScreen.field_z, ep.field_i, DelegatingCanvas.field_c, og.field_Wb), (byte) 3);
-          OptionsScreen.field_z = OptionsScreen.field_z + (var4 + this.field_t);
-          ep.field_i = ep.field_i - var5;
+          OptionsScreen.resultCounterOne = OptionsScreen.resultCounterOne + var5;
+          lp.field_wb.addLast(new e(param2, param0, OptionsScreen.resultCounterOne, ep.resultCounterTwo, DelegatingCanvas.field_c, og.field_Wb), (byte) 3);
+          OptionsScreen.resultCounterOne = OptionsScreen.resultCounterOne + (var4 + this.field_t);
+          ep.resultCounterTwo = ep.resultCounterTwo - var5;
         }
         if (param1 != 67) {
           this.field_i = 125;
@@ -308,43 +308,43 @@ final class GameplayScreen extends GameScreen {
         var6 = oo.field_w.nextBoundedInt(-37880252, 3);
         if (var5 == 0) {
           DelegatingCanvas.field_c = DelegatingCanvas.field_c + 1;
-          OptionsScreen.field_z = OptionsScreen.field_z + og.field_Wb;
+          OptionsScreen.resultCounterOne = OptionsScreen.resultCounterOne + og.field_Wb;
         }
         if (var5 == 1) {
           DelegatingCanvas.field_c = DelegatingCanvas.field_c - 2;
-          OptionsScreen.field_z = OptionsScreen.field_z - 2 * og.field_Wb;
+          OptionsScreen.resultCounterOne = OptionsScreen.resultCounterOne - 2 * og.field_Wb;
         }
         if (var5 == 2) {
-          OptionsScreen.field_z = OptionsScreen.field_z + 2 * DelegatingCanvas.field_c;
+          OptionsScreen.resultCounterOne = OptionsScreen.resultCounterOne + 2 * DelegatingCanvas.field_c;
           og.field_Wb = og.field_Wb + 2;
         }
         if (var5 == 3) {
           og.field_Wb = og.field_Wb - 1;
-          OptionsScreen.field_z = OptionsScreen.field_z - DelegatingCanvas.field_c;
+          OptionsScreen.resultCounterOne = OptionsScreen.resultCounterOne - DelegatingCanvas.field_c;
         }
         if (var5 == 4) {
           DelegatingCanvas.field_c = DelegatingCanvas.field_c + 1;
-          ep.field_i = ep.field_i + og.field_Wb;
+          ep.resultCounterTwo = ep.resultCounterTwo + og.field_Wb;
         }
         if (var5 == 5) {
-          ep.field_i = ep.field_i - og.field_Wb * 2;
+          ep.resultCounterTwo = ep.resultCounterTwo - og.field_Wb * 2;
           DelegatingCanvas.field_c = DelegatingCanvas.field_c - 2;
         }
         if (6 == var5) {
-          ep.field_i = ep.field_i + og.field_Wb;
+          ep.resultCounterTwo = ep.resultCounterTwo + og.field_Wb;
           DelegatingCanvas.field_c = DelegatingCanvas.field_c + 1;
         }
         if (var5 == 7) {
-          ep.field_i = ep.field_i - DelegatingCanvas.field_c * 2;
+          ep.resultCounterTwo = ep.resultCounterTwo - DelegatingCanvas.field_c * 2;
           og.field_Wb = og.field_Wb - 2;
         }
         if (var5 == 8) {
-          OptionsScreen.field_z = OptionsScreen.field_z + var6;
-          OptionsScreen.field_z = OptionsScreen.field_z - var6;
+          OptionsScreen.resultCounterOne = OptionsScreen.resultCounterOne + var6;
+          OptionsScreen.resultCounterOne = OptionsScreen.resultCounterOne - var6;
         }
         if (var5 == 9) {
-          ep.field_i = ep.field_i + var6;
-          OptionsScreen.field_z = OptionsScreen.field_z - var6;
+          ep.resultCounterTwo = ep.resultCounterTwo + var6;
+          OptionsScreen.resultCounterOne = OptionsScreen.resultCounterOne - var6;
         }
         var5Lifetime1 = oo.field_w.nextBoundedInt(-37880252, 5);
         if (var5Lifetime1 == 0) {
@@ -422,7 +422,7 @@ final class GameplayScreen extends GameScreen {
             this.a(gq.field_Yb, this.field_i, var9_long - fl.field_l, true, 1000);
             fl.field_l = var9_long;
             this.field_i = var20.levelIndex;
-            this.a(this.match.configuration.pack, var20.score, (byte) -125, var20.levelIndex);
+            this.queueLevelResult(this.match.configuration.pack, var20.score, (byte) -125, var20.levelIndex);
             if (this.field_i == 1 &&
               0 == this.match.configuration.pack.packId) {
               var11 = var20;
@@ -591,9 +591,9 @@ final class GameplayScreen extends GameScreen {
         }
         if (null == fj.field_Ub &&
           !(0 >= this.match.playerBoards[0].score)) {
-          fj.field_Ub = new sp(this.match.configuration.pack.completionWord, 65535 ^ this.match.configuration.pack.completionWord, OptionsScreen.field_z, ep.field_i, DelegatingCanvas.field_c, og.field_Wb, new int[]{this.match.playerBoards[0].score, this.field_t << 16 | this.field_r});
+          fj.field_Ub = new TableRowSubmission(this.match.configuration.pack.completionWord, 65535 ^ this.match.configuration.pack.completionWord, OptionsScreen.resultCounterOne, ep.resultCounterTwo, DelegatingCanvas.field_c, og.field_Wb, new int[]{this.match.playerBoards[0].score, this.field_t << 16 | this.field_r});
           if (!og.h(-26090)) {
-            bd.a(3, (byte) 25, fj.field_Ub);
+            bd.submitTableRow(3, (byte) 25, fj.field_Ub);
           }
         }
     }
@@ -775,47 +775,47 @@ final class GameplayScreen extends GameScreen {
         var4 = oo.field_w.nextBoundedInt(-37880252, 10);
         var5 = oo.field_w.nextBoundedInt(-37880252, 5);
         if (var4 == 0) {
-          OptionsScreen.field_z = OptionsScreen.field_z + og.field_Wb;
+          OptionsScreen.resultCounterOne = OptionsScreen.resultCounterOne + og.field_Wb;
           DelegatingCanvas.field_c = DelegatingCanvas.field_c + 1;
         }
         if (var4 == 1) {
-          OptionsScreen.field_z = OptionsScreen.field_z - og.field_Wb * 2;
+          OptionsScreen.resultCounterOne = OptionsScreen.resultCounterOne - og.field_Wb * 2;
           DelegatingCanvas.field_c = DelegatingCanvas.field_c - 2;
         }
         if (var4 == 2) {
           og.field_Wb = og.field_Wb + 2;
-          OptionsScreen.field_z = OptionsScreen.field_z + DelegatingCanvas.field_c * 2;
+          OptionsScreen.resultCounterOne = OptionsScreen.resultCounterOne + DelegatingCanvas.field_c * 2;
         }
         if (var4 == 3) {
           og.field_Wb = og.field_Wb - 1;
-          OptionsScreen.field_z = OptionsScreen.field_z - DelegatingCanvas.field_c;
+          OptionsScreen.resultCounterOne = OptionsScreen.resultCounterOne - DelegatingCanvas.field_c;
         }
         if (4 == var4) {
           DelegatingCanvas.field_c = DelegatingCanvas.field_c + 1;
-          ep.field_i = ep.field_i + og.field_Wb;
+          ep.resultCounterTwo = ep.resultCounterTwo + og.field_Wb;
         }
         if (var4 == 5) {
           DelegatingCanvas.field_c = DelegatingCanvas.field_c - 2;
-          ep.field_i = ep.field_i - 2 * og.field_Wb;
+          ep.resultCounterTwo = ep.resultCounterTwo - 2 * og.field_Wb;
         }
         if (obfuscationGuard <= 98) {
           return false;
         }
         if (6 == var4) {
-          ep.field_i = ep.field_i + og.field_Wb;
+          ep.resultCounterTwo = ep.resultCounterTwo + og.field_Wb;
           DelegatingCanvas.field_c = DelegatingCanvas.field_c + 1;
         }
         if (var4 == 7) {
           og.field_Wb = og.field_Wb - 2;
-          ep.field_i = ep.field_i - DelegatingCanvas.field_c * 2;
+          ep.resultCounterTwo = ep.resultCounterTwo - DelegatingCanvas.field_c * 2;
         }
         if (8 == var4) {
-          OptionsScreen.field_z = OptionsScreen.field_z + var5;
-          OptionsScreen.field_z = OptionsScreen.field_z - var5;
+          OptionsScreen.resultCounterOne = OptionsScreen.resultCounterOne + var5;
+          OptionsScreen.resultCounterOne = OptionsScreen.resultCounterOne - var5;
         }
         if (var4 == 9) {
-          ep.field_i = ep.field_i + var5;
-          OptionsScreen.field_z = OptionsScreen.field_z - var5;
+          ep.resultCounterTwo = ep.resultCounterTwo + var5;
+          OptionsScreen.resultCounterOne = OptionsScreen.resultCounterOne - var5;
         }
         var4Lifetime1 = oo.field_w.nextBoundedInt(-37880252, 5);
         if (var4Lifetime1 == 0) {
@@ -1065,11 +1065,11 @@ final class GameplayScreen extends GameScreen {
         if (!this.field_s) {
           var4 = this.match.playerBoards[0].score;
           var5 = this.match.playerBoards[0].levelIndex;
-          OptionsScreen.field_z = OptionsScreen.field_z - (this.field_t + var4);
-          ep.field_i = ep.field_i + (-this.field_t + var5);
-          lp.field_wb.addLast(new e(param2, param1, OptionsScreen.field_z, ep.field_i, DelegatingCanvas.field_c, og.field_Wb), (byte) 3);
-          OptionsScreen.field_z = OptionsScreen.field_z - (-this.field_t + var5);
-          ep.field_i = ep.field_i + (this.field_t + var4);
+          OptionsScreen.resultCounterOne = OptionsScreen.resultCounterOne - (this.field_t + var4);
+          ep.resultCounterTwo = ep.resultCounterTwo + (-this.field_t + var5);
+          lp.field_wb.addLast(new e(param2, param1, OptionsScreen.resultCounterOne, ep.resultCounterTwo, DelegatingCanvas.field_c, og.field_Wb), (byte) 3);
+          OptionsScreen.resultCounterOne = OptionsScreen.resultCounterOne - (-this.field_t + var5);
+          ep.resultCounterTwo = ep.resultCounterTwo + (this.field_t + var4);
         }
     }
 
@@ -1087,7 +1087,7 @@ final class GameplayScreen extends GameScreen {
           this.field_t = param1;
           this.field_i = param1;
           var3Lifetime1 = param1;
-          OptionsScreen.field_z = OptionsScreen.field_z + var3Lifetime1;
+          OptionsScreen.resultCounterOne = OptionsScreen.resultCounterOne + var3Lifetime1;
           w.field_r = lg.a(2, this.match.configuration.getLevelTitle(this.field_i, (byte) -122), -1);
         }
     }
@@ -1150,7 +1150,7 @@ final class GameplayScreen extends GameScreen {
         }
         if (this.match.playerCount == 1) {
           var3 = param0;
-          ep.field_i = ep.field_i - var3;
+          ep.resultCounterTwo = ep.resultCounterTwo - var3;
         }
         this.field_r = param0;
     }
@@ -1194,15 +1194,15 @@ final class GameplayScreen extends GameScreen {
         if (this.field_s) {
         } else {
           if (param1 == 7) {
-            OptionsScreen.field_z = OptionsScreen.field_z - this.field_t;
+            OptionsScreen.resultCounterOne = OptionsScreen.resultCounterOne - this.field_t;
           } else {
-            ep.field_i = ep.field_i - this.field_t;
+            ep.resultCounterTwo = ep.resultCounterTwo - this.field_t;
           }
-          lp.field_wb.addLast(new e(param1, param2, OptionsScreen.field_z, ep.field_i, DelegatingCanvas.field_c, og.field_Wb), (byte) 3);
+          lp.field_wb.addLast(new e(param1, param2, OptionsScreen.resultCounterOne, ep.resultCounterTwo, DelegatingCanvas.field_c, og.field_Wb), (byte) 3);
           if (param1 != 7) {
-            ep.field_i = ep.field_i + this.field_t;
+            ep.resultCounterTwo = ep.resultCounterTwo + this.field_t;
           } else {
-            OptionsScreen.field_z = OptionsScreen.field_z + this.field_t;
+            OptionsScreen.resultCounterOne = OptionsScreen.resultCounterOne + this.field_t;
           }
         }
     }
@@ -1446,8 +1446,8 @@ final class GameplayScreen extends GameScreen {
         }
     }
 
-    private final void a(LevelPack param0, int param1, byte param2, int param3) {
-        pn var5 = null;
+    private final void queueLevelResult(LevelPack pack, int resultIncrement, byte obfuscationGuard, int levelNumber) {
+        LevelResultSubmission var5 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;
@@ -1457,17 +1457,17 @@ final class GameplayScreen extends GameScreen {
           if (this.field_s) {
             return;
           }
-          ep.field_i = ep.field_i + (param3 + param0.scoreOffset);
-          if (param2 > -87) {
+          ep.resultCounterTwo = ep.resultCounterTwo + (levelNumber + pack.scoreOffset);
+          if (obfuscationGuard > -87) {
             this.field_p = true;
           }
-          OptionsScreen.field_z = OptionsScreen.field_z - (param1 + this.field_t);
-          var5 = new pn(param0.packId, -1 + param3, OptionsScreen.field_z, ep.field_i, DelegatingCanvas.field_c, og.field_Wb);
-          IntNode.field_j.addLast(var5, (byte) 3);
-          OptionsScreen.field_z = OptionsScreen.field_z - (param0.scoreOffset + param3);
-          ep.field_i = ep.field_i + (param1 + this.field_t);
-          if (hh.unlockedLevelCounts[param0.packId] < param3) {
-            hh.unlockedLevelCounts[param0.packId] = param3;
+          OptionsScreen.resultCounterOne = OptionsScreen.resultCounterOne - (resultIncrement + this.field_t);
+          var5 = new LevelResultSubmission(pack.packId, -1 + levelNumber, OptionsScreen.resultCounterOne, ep.resultCounterTwo, DelegatingCanvas.field_c, og.field_Wb);
+          IntNode.queuedLevelResults.addLast(var5, (byte) 3);
+          OptionsScreen.resultCounterOne = OptionsScreen.resultCounterOne - (pack.scoreOffset + levelNumber);
+          ep.resultCounterTwo = ep.resultCounterTwo + (resultIncrement + this.field_t);
+          if (hh.unlockedLevelCounts[pack.packId] < levelNumber) {
+            hh.unlockedLevelCounts[pack.packId] = levelNumber;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -1475,12 +1475,12 @@ final class GameplayScreen extends GameScreen {
           var5_ref = decompiledCaughtException;
           stackIn_9_0 = var5_ref;
           stackIn_9_1 = new StringBuilder().append("qj.AA(");
-          if (param0 == null) {
+          if (pack == null) {
             stackIn_10_2 = "null";
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw qb.addExceptionContext((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw qb.addExceptionContext((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(resultIncrement).append(',').append(obfuscationGuard).append(',').append(levelNumber).append(')').toString());
         }
     }
 
@@ -1867,7 +1867,7 @@ final class GameplayScreen extends GameScreen {
           GameClock.field_b = -1;
           if (ProducerFramebuffer.field_j == null) {
             ProducerFramebuffer.field_j = rd.a(cm.field_p, new String[]{""}, (byte) 103).toLowerCase();
-            ff.field_j = pn.field_j.toLowerCase();
+            ff.field_j = LevelResultSubmission.field_j.toLowerCase();
           }
           be.field_j = 0;
           KeyboardInput.field_a = false;

@@ -61,7 +61,7 @@ final class uo {
         nk.a((byte) -25, param0);
     }
 
-    final static void a(eg param0, int param1, byte param2) {
+    final static void sendTableRequest(TableDataRequest request, int opcode, byte obfuscationGuard) {
         BitPacketBuffer var3 = null;
         RuntimeException var3_ref = null;
         RuntimeException stackIn_5_0 = null;
@@ -70,13 +70,13 @@ final class uo {
         RuntimeException decompiledCaughtException = null;
         try {
           var3 = k.outgoingPackets;
-          var3.writeCipheredOpcode(-13413, param1);
+          var3.writeCipheredOpcode(-13413, opcode);
           var3.writeByte(58, 5);
-          var3.writeByte(param2 ^ -55, 0);
-          var3.writeShort((byte) 120, param0.field_l);
-          var3.writeByte(-116, param0.field_q);
-          var3.writeByte(-99, param0.field_p);
-          if (param2 == 68) {
+          var3.writeByte(obfuscationGuard ^ -55, 0);
+          var3.writeShort((byte) 120, request.tableId);
+          var3.writeByte(-116, request.rowLimit);
+          var3.writeByte(-99, request.columnCount);
+          if (obfuscationGuard == 68) {
             return;
           }
           field_d = (RgbSprite) null;
@@ -86,12 +86,12 @@ final class uo {
           var3_ref = decompiledCaughtException;
           stackIn_5_0 = var3_ref;
           stackIn_5_1 = new StringBuilder().append("uo.B(");
-          if (param0 == null) {
+          if (request == null) {
             stackIn_6_2 = "null";
           } else {
             stackIn_6_2 = "{...}";
           }
-          throw qb.addExceptionContext((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw qb.addExceptionContext((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(',').append(opcode).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 

@@ -3,7 +3,7 @@
  */
 final class qa extends ki {
     static String field_s;
-    static NodeDeque field_t;
+    static NodeDeque pendingLevelResults;
     static MouseWheelSource mouseWheelSource;
     static mh field_w;
     static RgbSprite field_y;
@@ -64,7 +64,7 @@ final class qa extends ki {
         field_v = null;
         mouseWheelSource = null;
         int var1 = -103 % ((-61 - param0) / 57);
-        field_t = null;
+        pendingLevelResults = null;
         field_w = null;
         field_y = null;
     }
@@ -220,7 +220,7 @@ final class qa extends ki {
 
     static {
         field_s = "We closed the connection because the game was left unattended for 20 minutes. Please feel free to reconnect immediately if you are there.";
-        field_t = new NodeDeque();
+        pendingLevelResults = new NodeDeque();
         field_v = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!#$%&'*+-/=?^_{}~";
     }
 }

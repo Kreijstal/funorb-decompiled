@@ -111,8 +111,8 @@ public abstract class AppletGameShell extends java.applet.Applet implements Runn
           try {
             try {
               if (so.field_f != null) {
-                sp.field_l = sp.field_l + 1;
-                if (sp.field_l < 3) {
+                TableRowSubmission.field_l = TableRowSubmission.field_l + 1;
+                if (TableRowSubmission.field_l < 3) {
                   this.getAppletContext().showDocument(this.getDocumentBase(), "_self");
                   return;
                 }
@@ -128,7 +128,7 @@ public abstract class AppletGameShell extends java.applet.Applet implements Runn
               oj.field_m = param4;
               be.field_g = param2;
               mc.field_d = param2;
-              mk.field_i = uc.e((byte) -64);
+              SecondaryHashTable.field_i = uc.e((byte) -64);
               dupTemp$0 = new PlatformServices(param0, param5, param6, true);
               lp.field_ub = dupTemp$0;
               LevelPackLoader.field_e = dupTemp$0;
@@ -940,7 +940,7 @@ public abstract class AppletGameShell extends java.applet.Applet implements Runn
         this.field_d = false;
     }
 
-    final static void a(int param0, sp param1, int param2) {
+    final static void sendTableRow(int opcode, TableRowSubmission submission, int obfuscationGuard) {
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
         String stackIn_16_2 = null;
@@ -953,24 +953,24 @@ public abstract class AppletGameShell extends java.applet.Applet implements Runn
         var6 = BrickABrac.field_J ? 1 : 0;
         try {
           var3 = k.outgoingPackets;
-          var3.writeCipheredOpcode(param2 ^ -3818, param0);
+          var3.writeCipheredOpcode(obfuscationGuard ^ -3818, opcode);
           var3.position = var3.position + 1;
           var4 = var3.position;
           var3.writeByte(106, 1);
-          var3.writeShort((byte) 116, param1.field_m);
-          var3.writeShort((byte) 112, param1.field_o);
-          var3.writeShort((byte) 127, param1.field_q);
-          var3.writeInt(param1.field_k, (byte) -79);
-          var3.writeInt(param1.field_n, (byte) -79);
-          var3.writeInt(param1.field_r, (byte) -79);
-          if (param2 != 14989) {
+          var3.writeShort((byte) 116, submission.requestId);
+          var3.writeShort((byte) 112, submission.tableId);
+          var3.writeShort((byte) 127, submission.tableWord);
+          var3.writeInt(submission.resultWordOne, (byte) -79);
+          var3.writeInt(submission.resultWordTwo, (byte) -79);
+          var3.writeInt(submission.resultWordThree, (byte) -79);
+          if (obfuscationGuard != 14989) {
             field_f = (String) null;
           }
-          var3.writeInt(param1.field_j, (byte) -79);
-          var3.writeByte(-28, param1.field_i.length);
+          var3.writeInt(submission.resultWordFour, (byte) -79);
+          var3.writeByte(-28, submission.values.length);
           var5 = 0;
-          while (var5 < param1.field_i.length) {
-            var3.writeInt(param1.field_i[var5], (byte) -79);
+          while (var5 < submission.values.length) {
+            var3.writeInt(submission.values[var5], (byte) -79);
             var5++;
             if (var6 != 0) {
               return;
@@ -983,13 +983,13 @@ public abstract class AppletGameShell extends java.applet.Applet implements Runn
           decompiledCaughtException = decompiledCaughtParameter0;
           var3_ref = decompiledCaughtException;
           stackIn_15_0 = var3_ref;
-          stackIn_15_1 = new StringBuilder().append("ke.Q(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_15_1 = new StringBuilder().append("ke.Q(").append(opcode).append(',');
+          if (submission == null) {
             stackIn_16_2 = "null";
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw qb.addExceptionContext((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param2).append(')').toString());
+          throw qb.addExceptionContext((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 

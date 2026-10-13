@@ -7,7 +7,7 @@ abstract class ep {
     ml[] field_c;
     static volatile int livePointerY;
     static String field_e;
-    static int field_i;
+    static int resultCounterTwo;
     static RgbSprite field_j;
     static RgbSprite field_h;
     static float field_a;

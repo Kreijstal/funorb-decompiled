@@ -8,7 +8,7 @@ final class tf {
     static byte[] cacheSectorScratch;
     static RgbSprite[] field_c;
     static int[] javaKeyCodeMap;
-    static mk field_d;
+    static SecondaryHashTable field_d;
     static String[] field_e;
     static boolean field_i;
 
@@ -112,7 +112,7 @@ final class tf {
           if (param0.field_Rb && (param0.field_wc == 2 ||
             !(kb.field_Yb < 2))) {
             var9 = bm.field_d;
-            var10 = rd.a(pn.field_s, new String[]{param3}, (byte) 103);
+            var10 = rd.a(LevelResultSubmission.field_s, new String[]{param3}, (byte) 103);
             var9.field_d.a(var10, 10, (byte) 91);
           }
           bm.field_d.a(true);

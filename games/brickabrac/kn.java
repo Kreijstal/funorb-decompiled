@@ -135,7 +135,7 @@ final class kn extends DualLinkNode {
     final static void a(boolean param0, java.awt.Canvas param1) {
         try {
           if (11 == AchievementIcon.field_j) {
-            mk.a(-1);
+            SecondaryHashTable.a(-1);
           }
           if (!param0) {
             kn.a((byte) -116);

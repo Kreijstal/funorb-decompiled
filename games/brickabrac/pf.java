@@ -50,7 +50,7 @@ final class pf implements ub {
             stackIn_10_0 = null;
             return (mp) (stackIn_10_0);
           }
-          var3 = (mp) (BlankScreen.field_i.a((long)var2.hashCode(), -1));
+          var3 = (mp) (BlankScreen.field_i.get((long)var2.hashCode(), -1));
           if (param0) {
             field_f = false;
           }
@@ -61,7 +61,7 @@ final class pf implements ub {
               stackIn_18_0 = var3;
               return stackIn_18_0;
             }
-            var3 = (mp) (BlankScreen.field_i.a((byte) 127));
+            var3 = (mp) (BlankScreen.field_i.nextMatch((byte) 127));
           }
           return null;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

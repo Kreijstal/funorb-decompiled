@@ -81,13 +81,13 @@ final class g extends k {
         }
     }
 
-    final static void a(pn param0, int param1, byte param2) {
+    final static void submitLevelResult(LevelResultSubmission result, int opcode, byte obfuscationGuard) {
         try {
-          qa.field_t.addLast(param0, (byte) 3);
-          kp.a(param1, (byte) -99, param0);
-          int var3_int = -88 % ((param2 + 37) / 48);
+          qa.pendingLevelResults.addLast(result, (byte) 3);
+          kp.sendLevelResult(opcode, (byte) -99, result);
+          int var3_int = -88 % ((obfuscationGuard + 37) / 48);
         } catch (RuntimeException runtimeException) {
-          throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "g.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "g.D(" + (result != null ? "{...}" : "null") + ',' + opcode + ',' + obfuscationGuard + ')');
         }
     }
 

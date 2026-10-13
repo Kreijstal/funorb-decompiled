@@ -129,7 +129,7 @@ final class oj extends ep {
               ((mh) (Object) stackIn_73_0).a(stackIn_73_1, stackIn_74_2);
             }
           } else {
-            if (eg.field_m > 0) {
+            if (TableDataRequest.field_m > 0) {
               if (null == c.field_e) {
                 stackIn_82_0 = qa.field_w;
                 stackIn_82_1 = true;
@@ -192,7 +192,7 @@ final class oj extends ep {
           var2Lifetime1 = -63 / ((70 - param1) / 49);
           return;
         }
-        if (eg.field_m <= 0) {
+        if (TableDataRequest.field_m <= 0) {
           sc.popRaster(-123);
           var2Lifetime2 = -63 / ((70 - param1) / 49);
           return;

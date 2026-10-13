@@ -560,7 +560,7 @@ abstract class GameConnectionShell extends AppletGameShell {
                 qi.a(-1);
               }
             } else {
-              f.a((byte) 7);
+              f.handleTableResponse((byte) 7);
             }
           }
           return;

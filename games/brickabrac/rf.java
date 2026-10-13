@@ -7,7 +7,7 @@ final class rf {
     static boolean field_f;
     static String field_e;
     static RgbSprite field_a;
-    static eg field_g;
+    static TableDataRequest field_g;
     static n field_b;
 
     final static void a(int param0, long param1, boolean param2) {

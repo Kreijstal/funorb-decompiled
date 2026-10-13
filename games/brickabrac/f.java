@@ -6,184 +6,184 @@ final class f {
     static mh field_a;
     static hj field_c;
 
-    final static void a(byte param0) {
-        int var8_int = 0;
+    final static void handleTableResponse(byte obfuscationGuard) {
+        int dictionaryIndex = 0;
         String[][] dupTemp$0 = null;
         long[][] dupTemp$1 = null;
         int[][] dupTemp$2 = null;
-        int var19 = 0;
-        int incrementValue$3 = 0;
-        int incrementValue$4 = 0;
-        int incrementValue$5 = 0;
+        int entryIndex = 0;
+        int firstPartitionValueIndex = 0;
+        int playerPartitionValueIndex = 0;
+        int distinctNameValueIndex = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
-        int var2 = 0;
-        int var3 = 0;
-        long var4 = 0L;
-        eg var4_ref_eg = null;
-        int var5 = 0;
-        sp var6 = null;
-        int var6_int = 0;
-        int var7 = 0;
-        String[][] var8 = null;
-        String[][] var9 = null;
-        long[][] var10 = null;
-        int[][] var11 = null;
-        int var12 = 0;
-        int var13 = 0;
-        int var14 = 0;
-        int var15 = 0;
-        int var16 = 0;
-        int var17 = 0;
-        int var18 = 0;
-        int var20 = 0;
-        String var21 = null;
-        long var22 = 0L;
-        int var24 = 0;
-        int var25 = 0;
-        int var26 = 0;
-        BitPacketBuffer var27 = null;
-        int var3Lifetime1;
-        int var25Lifetime1;
-        int var25Lifetime2;
-        var26 = BrickABrac.field_J ? 1 : 0;
+        int responseType = 0;
+        int tableId = 0;
+        long acknowledgedRowId = 0L;
+        TableDataRequest tableRequest = null;
+        int dictionarySize = 0;
+        TableRowSubmission rowSubmission = null;
+        int rowLimit = 0;
+        int columnCount = 0;
+        String[][] names = null;
+        String[][] secondaryLabels = null;
+        long[][] rowIds = null;
+        int[][] values = null;
+        int firstPartitionRows = 0;
+        int playerPartitionRows = 0;
+        int distinctNameRows = 0;
+        int firstPartitionValueOffset = 0;
+        int playerPartitionValueOffset = 0;
+        int distinctNameValueOffset = 0;
+        int entryCount = 0;
+        int nameIndex = 0;
+        String name = null;
+        long rowId = 0L;
+        int valuesStart = 0;
+        int columnIndex = 0;
+        int clientBranchFlag = 0;
+        BitPacketBuffer packet = null;
+        int submissionRequestId;
+        int playerColumnIndex;
+        int distinctNameColumnIndex;
+        clientBranchFlag = BrickABrac.field_J ? 1 : 0;
         try {
-          if (param0 != 7) {
+          if (obfuscationGuard != 7) {
             f.a(-30);
           }
-          var27 = jl.incomingPackets;
-          var2 = var27.readUnsignedByte(255);
-          if (0 == var2) {
-            var3 = var27.readUnsignedShort(65280);
-            var4_ref_eg = (eg) (GameplayAudioEvent.field_n.first(-105));
-            while (var4_ref_eg != null) {
-              if (var4_ref_eg.field_l != var3) {
-                var4_ref_eg = (eg) (GameplayAudioEvent.field_n.next((byte) 116));
+          packet = jl.incomingPackets;
+          responseType = packet.readUnsignedByte(255);
+          if (0 == responseType) {
+            tableId = packet.readUnsignedShort(65280);
+            tableRequest = (TableDataRequest) (GameplayAudioEvent.pendingTableRequests.first(-105));
+            while (tableRequest != null) {
+              if (tableRequest.tableId != tableId) {
+                tableRequest = (TableDataRequest) (GameplayAudioEvent.pendingTableRequests.next((byte) 116));
                 continue;
               }
               break;
             }
-            if (var4_ref_eg == null) {
+            if (tableRequest == null) {
               hn.a((byte) 127);
               return;
             }
-            var5 = var27.readUnsignedByte(param0 ^ 248);
-            if (var5 != 0) {
-              var6_int = var4_ref_eg.field_q;
-              SoftwareFramebuffer.field_b[0].field_b = null;
-              SoftwareFramebuffer.field_b[0].field_c = tb.field_cb;
-              var7 = var4_ref_eg.field_p;
-              SoftwareFramebuffer.field_b[0].field_d = false;
-              for (var8_int = 1; var5 > var8_int; var8_int++) {
-                SoftwareFramebuffer.field_b[var8_int].field_c = var27.readCp1252String(-1);
-                SoftwareFramebuffer.field_b[var8_int].field_d = false;
-                if (var27.readUnsignedByte(param0 ^ 248) == 1) {
-                  SoftwareFramebuffer.field_b[var8_int].field_b = var27.readCp1252String(-1);
+            dictionarySize = packet.readUnsignedByte(obfuscationGuard ^ 248);
+            if (dictionarySize != 0) {
+              rowLimit = tableRequest.rowLimit;
+              SoftwareFramebuffer.tableNameScratch[0].secondaryLabel = null;
+              SoftwareFramebuffer.tableNameScratch[0].name = tb.field_cb;
+              columnCount = tableRequest.columnCount;
+              SoftwareFramebuffer.tableNameScratch[0].partitionSeen = false;
+              for (dictionaryIndex = 1; dictionarySize > dictionaryIndex; dictionaryIndex++) {
+                SoftwareFramebuffer.tableNameScratch[dictionaryIndex].name = packet.readCp1252String(-1);
+                SoftwareFramebuffer.tableNameScratch[dictionaryIndex].partitionSeen = false;
+                if (packet.readUnsignedByte(obfuscationGuard ^ 248) == 1) {
+                  SoftwareFramebuffer.tableNameScratch[dictionaryIndex].secondaryLabel = packet.readCp1252String(-1);
                 } else {
-                  SoftwareFramebuffer.field_b[var8_int].field_b = null;
+                  SoftwareFramebuffer.tableNameScratch[dictionaryIndex].secondaryLabel = null;
                 }
               }
-              dupTemp$0 = new String[3][var6_int];
-              var4_ref_eg.field_i = dupTemp$0;
-              var8 = dupTemp$0;
-              var9 = new String[3][var6_int];
-              dupTemp$1 = new long[3][var6_int];
-              var4_ref_eg.field_r = dupTemp$1;
-              var10 = dupTemp$1;
-              dupTemp$2 = new int[3][var6_int * var7];
-              var4_ref_eg.field_n = dupTemp$2;
-              var11 = dupTemp$2;
-              var12 = 0;
-              var13 = 0;
-              var14 = 0;
-              var15 = 0;
-              var16 = 0;
-              var17 = 0;
-              var18 = var27.readUnsignedByte(param0 ^ 248);
-              if (0 < var18) {
-                for (var19 = 0; var19 < var18; var19++) {
-                  var20 = var27.readUnsignedByte(255);
-                  var21 = SoftwareFramebuffer.field_b[var20].field_c;
-                  var22 = var27.readLong(-32768);
-                  var24 = var27.position;
-                  if (var6_int > var19) {
-                    var8[0][var12] = var21;
-                    var9[0][var12] = SoftwareFramebuffer.field_b[var20].field_b;
-                    var10[0][var12] = var22;
-                    for (var25 = 0; var25 < var7; var25++) {
-                      incrementValue$3 = var15;
-                      var15++;
-                      var11[0][incrementValue$3] = var27.readInt(255);
+              dupTemp$0 = new String[3][rowLimit];
+              tableRequest.names = dupTemp$0;
+              names = dupTemp$0;
+              secondaryLabels = new String[3][rowLimit];
+              dupTemp$1 = new long[3][rowLimit];
+              tableRequest.rowIds = dupTemp$1;
+              rowIds = dupTemp$1;
+              dupTemp$2 = new int[3][rowLimit * columnCount];
+              tableRequest.values = dupTemp$2;
+              values = dupTemp$2;
+              firstPartitionRows = 0;
+              playerPartitionRows = 0;
+              distinctNameRows = 0;
+              firstPartitionValueOffset = 0;
+              playerPartitionValueOffset = 0;
+              distinctNameValueOffset = 0;
+              entryCount = packet.readUnsignedByte(obfuscationGuard ^ 248);
+              if (0 < entryCount) {
+                for (entryIndex = 0; entryIndex < entryCount; entryIndex++) {
+                  nameIndex = packet.readUnsignedByte(255);
+                  name = SoftwareFramebuffer.tableNameScratch[nameIndex].name;
+                  rowId = packet.readLong(-32768);
+                  valuesStart = packet.position;
+                  if (rowLimit > entryIndex) {
+                    names[0][firstPartitionRows] = name;
+                    secondaryLabels[0][firstPartitionRows] = SoftwareFramebuffer.tableNameScratch[nameIndex].secondaryLabel;
+                    rowIds[0][firstPartitionRows] = rowId;
+                    for (columnIndex = 0; columnIndex < columnCount; columnIndex++) {
+                      firstPartitionValueIndex = firstPartitionValueOffset;
+                      firstPartitionValueOffset++;
+                      values[0][firstPartitionValueIndex] = packet.readInt(255);
                     }
-                    var12++;
+                    firstPartitionRows++;
                   }
-                  if (var21 != null &&
-                    ci.a(var21, param0 ^ -88)) {
-                    var8[1][var13] = tb.field_cb;
-                    var9[1][var13] = null;
-                    var10[1][var13] = var22;
-                    var13++;
-                    var27.position = var24;
-                    for (var25Lifetime1 = 0; var25Lifetime1 < var7; var25Lifetime1++) {
-                      incrementValue$4 = var16;
-                      var16++;
-                      var11[1][incrementValue$4] = var27.readInt(255);
+                  if (name != null &&
+                    ci.a(name, obfuscationGuard ^ -88)) {
+                    names[1][playerPartitionRows] = tb.field_cb;
+                    secondaryLabels[1][playerPartitionRows] = null;
+                    rowIds[1][playerPartitionRows] = rowId;
+                    playerPartitionRows++;
+                    packet.position = valuesStart;
+                    for (playerColumnIndex = 0; playerColumnIndex < columnCount; playerColumnIndex++) {
+                      playerPartitionValueIndex = playerPartitionValueOffset;
+                      playerPartitionValueOffset++;
+                      values[1][playerPartitionValueIndex] = packet.readInt(255);
                     }
                   }
-                  if (var14 < var6_int &&
-                    !SoftwareFramebuffer.field_b[var20].field_d) {
-                    SoftwareFramebuffer.field_b[var20].field_d = true;
-                    var8[2][var14] = var21;
-                    var9[2][var14] = SoftwareFramebuffer.field_b[var20].field_b;
-                    var10[2][var14] = var22;
-                    var14++;
-                    var27.position = var24;
-                    for (var25Lifetime2 = 0; var7 > var25Lifetime2; var25Lifetime2++) {
-                      incrementValue$5 = var17;
-                      var17++;
-                      var11[2][incrementValue$5] = var27.readInt(255);
+                  if (distinctNameRows < rowLimit &&
+                    !SoftwareFramebuffer.tableNameScratch[nameIndex].partitionSeen) {
+                    SoftwareFramebuffer.tableNameScratch[nameIndex].partitionSeen = true;
+                    names[2][distinctNameRows] = name;
+                    secondaryLabels[2][distinctNameRows] = SoftwareFramebuffer.tableNameScratch[nameIndex].secondaryLabel;
+                    rowIds[2][distinctNameRows] = rowId;
+                    distinctNameRows++;
+                    packet.position = valuesStart;
+                    for (distinctNameColumnIndex = 0; columnCount > distinctNameColumnIndex; distinctNameColumnIndex++) {
+                      distinctNameValueIndex = distinctNameValueOffset;
+                      distinctNameValueOffset++;
+                      values[2][distinctNameValueIndex] = packet.readInt(255);
                     }
                   }
                 }
               }
             }
-            var4_ref_eg.field_o = true;
-            var4_ref_eg.unlink((byte) 111);
+            tableRequest.complete = true;
+            tableRequest.unlink((byte) 111);
             return;
           }
-          if (var2 == 1) {
-            var3Lifetime1 = var27.readUnsignedShort(param0 + 65273);
-            var4 = var27.readLong(-32768);
-            var6 = (sp) (tm.field_f.first(-60));
-            while (var6 != null) {
-              if (var6.field_m != var3Lifetime1) {
-                var6 = (sp) (tm.field_f.next((byte) 116));
+          if (responseType == 1) {
+            submissionRequestId = packet.readUnsignedShort(obfuscationGuard + 65273);
+            acknowledgedRowId = packet.readLong(-32768);
+            rowSubmission = (TableRowSubmission) (tm.pendingTableSubmissions.first(-60));
+            while (rowSubmission != null) {
+              if (rowSubmission.requestId != submissionRequestId) {
+                rowSubmission = (TableRowSubmission) (tm.pendingTableSubmissions.next((byte) 116));
                 continue;
               }
               break;
             }
-            if (var6 == null) {
+            if (rowSubmission == null) {
               hn.a((byte) 53);
               return;
             }
-            var6.field_p = var4;
-            var6.unlink((byte) 111);
+            rowSubmission.rowId = acknowledgedRowId;
+            rowSubmission.unlink((byte) 111);
             return;
           }
-          rk.a("HS1: " + eq.c((byte) -96), (Throwable) null, param0 ^ 102);
+          rk.a("HS1: " + eq.c((byte) -96), (Throwable) null, obfuscationGuard ^ 102);
           hn.a((byte) 70);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw qb.addExceptionContext((Throwable) ((Object) var1), "f.B(" + param0 + ')');
+          throw qb.addExceptionContext((Throwable) ((Object) var1), "f.B(" + obfuscationGuard + ')');
         }
     }
 
     public static void a(int param0) {
         field_c = null;
         if (param0 != 1) {
-          f.a((byte) 116);
+          f.handleTableResponse((byte) 116);
         }
         field_a = null;
         field_b = null;

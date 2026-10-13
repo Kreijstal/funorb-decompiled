@@ -132,15 +132,15 @@ final class uc extends k {
           LevelPackSelectScreen.field_w = 0;
           bf.field_N.clear((byte) -72);
           CachedArchiveSource.field_n.clear((byte) -92);
-          var2 = BlankScreen.field_i.b((byte) 74);
+          var2 = BlankScreen.field_i.first((byte) 74);
           while (var2 != null) {
             var2.unlinkSecondary(3);
-            var2 = BlankScreen.field_i.a(false);
+            var2 = BlankScreen.field_i.next(false);
           }
-          var2Lifetime1 = tf.field_d.b((byte) 122);
+          var2Lifetime1 = tf.field_d.first((byte) 122);
           while (var2Lifetime1 != null) {
             var2Lifetime1.unlinkSecondary(3);
-            var2Lifetime1 = tf.field_d.a(false);
+            var2Lifetime1 = tf.field_d.next(false);
           }
           LevelMetadata.field_m = 0;
         } catch (RuntimeException runtimeException) {

@@ -107,17 +107,17 @@ final class bf extends d {
             rq.field_a.clear((byte) -91);
             rq.field_a = null;
           }
-          pn.field_i = null;
+          LevelResultSubmission.field_i = null;
           if (null != mp.field_Tb) {
             mp.field_Tb.clear((byte) -84);
             mp.field_Tb = null;
           }
           BrickABrac.field_F = null;
           if (eq.field_m != null) {
-            var3 = (id) (eq.field_m.b((byte) 120));
+            var3 = (id) (eq.field_m.first((byte) 120));
             while (var3 != null) {
               var3.unlinkSecondary(3);
-              var3 = (id) (eq.field_m.a(false));
+              var3 = (id) (eq.field_m.next(false));
             }
             eq.field_m = null;
           }

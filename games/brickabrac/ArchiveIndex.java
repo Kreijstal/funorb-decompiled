@@ -247,8 +247,8 @@ final class ArchiveIndex {
           if (IntArrayRequest.field_j > 0) {
             IntArrayRequest.field_j = IntArrayRequest.field_j - 1;
           } else {
-            if (eg.field_m > 0) {
-              eg.field_m = eg.field_m - 1;
+            if (TableDataRequest.field_m > 0) {
+              TableDataRequest.field_m = TableDataRequest.field_m - 1;
             }
           }
         }
@@ -261,8 +261,8 @@ final class ArchiveIndex {
         if (!(IntArrayRequest.field_j <= 0)) {
           co.a(IntArrayRequest.field_j, false);
         }
-        if (eg.field_m > 0) {
-          co.a(eg.field_m, false);
+        if (TableDataRequest.field_m > 0) {
+          co.a(TableDataRequest.field_m, false);
         }
     }
 

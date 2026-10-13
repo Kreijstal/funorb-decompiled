@@ -378,26 +378,26 @@ final class cp extends h {
         }
     }
 
-    final static eg b(int param0, int param1, int param2, int param3, int param4) {
-        int var6 = BrickABrac.field_J ? 1 : 0;
-        eg var5 = (eg) (GameplayAudioEvent.field_n.first(-91));
-        while (var5 != null) {
-          if (~var5.field_l == ~param1) {
-            return var5;
+    final static TableDataRequest requestTableData(int obfuscationGuard, int tableId, int columnCount, int rowLimit, int opcode) {
+        int clientBranchFlag = BrickABrac.field_J ? 1 : 0;
+        TableDataRequest request = (TableDataRequest) (GameplayAudioEvent.pendingTableRequests.first(-91));
+        while (request != null) {
+          if (~request.tableId == ~tableId) {
+            return request;
           }
-          var5 = (eg) (GameplayAudioEvent.field_n.next((byte) 116));
+          request = (TableDataRequest) (GameplayAudioEvent.pendingTableRequests.next((byte) 116));
         }
-        eg var7 = new eg();
-        var5 = var7;
-        var7.field_q = param3;
-        var7.field_p = param2;
-        if (param0 != -2) {
-          return (eg) null;
+        TableDataRequest created = new TableDataRequest();
+        request = created;
+        created.rowLimit = rowLimit;
+        created.columnCount = columnCount;
+        if (obfuscationGuard != -2) {
+          return (TableDataRequest) null;
         }
-        var5.field_l = param1;
-        GameplayAudioEvent.field_n.addLast(var5, (byte) 3);
-        uo.a(var5, param4, (byte) 68);
-        return var5;
+        request.tableId = tableId;
+        GameplayAudioEvent.pendingTableRequests.addLast(request, (byte) 3);
+        uo.sendTableRequest(request, opcode, (byte) 68);
+        return request;
     }
 
     final oc h(byte param0) {

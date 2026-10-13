@@ -335,7 +335,7 @@ final class nh {
         var18 = null;
         var19 = BrickABrac.field_J ? 1 : 0;
         try {
-          stackIn_3_0 = eg.field_m;
+          stackIn_3_0 = TableDataRequest.field_m;
           stackIn_4_1 = !(param0);
           co.a(stackIn_3_0, stackIn_4_1);
           if (o.field_e != null) {

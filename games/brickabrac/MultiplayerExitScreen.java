@@ -37,12 +37,12 @@ final class MultiplayerExitScreen extends MatchResultScreen {
         int var3 = this.buttons[buttonIndex].actionId;
         if (obfuscationGuard < 80) {
           wallRollbackMillis = -10L;
-          if (eg.field_k) {
+          if (TableDataRequest.field_k) {
             return var3 != 12 ? true : false;
           }
           return true;
         }
-        if (!eg.field_k) {
+        if (!TableDataRequest.field_k) {
           return true;
         }
         if (var3 == 12) {

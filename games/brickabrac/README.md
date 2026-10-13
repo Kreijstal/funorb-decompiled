@@ -2,7 +2,7 @@
 
 Java here is the single published version. Rebuild with Deko’s `readable/reproduce-brickabrac.mjs`. The reverse dictionary is `../../decompilation/brickabrac-naming.json`.
 
-This pass reviews 126 class identities across 420 compiled classes. Other names remain unresolved. Numbered state masks/words identify observed storage without guessing server semantics. Identifiers have no opaque suffixes; reversal recovers original bytes.
+This pass reviews 131 class identities across 420 compiled classes. Other names remain unresolved. Numbered state masks/words identify observed storage without guessing server semantics. Identifiers have no opaque suffixes; reversal recovers original bytes.
 
 | Start here | Follow |
 | --- | --- |
@@ -48,6 +48,8 @@ This pass reviews 126 class identities across 420 compiled classes. Other names 
 | [HuffmanCodec](HuffmanCodec.java) / [NodeDequeCursor](NodeDequeCursor.java) | Prefix-code text compression and independent primary deque traversal. |
 | [SoftwareFramebuffer](SoftwareFramebuffer.java) / [BufferedImageFramebuffer](BufferedImageFramebuffer.java) / [ProducerFramebuffer](ProducerFramebuffer.java) | Shared software pixels, direct BufferedImage and single-consumer image producer. |
 | [IntArrayRequest](IntArrayRequest.java) | Pending integer-array response values, also used by saved-progress polling. |
+| [LevelResultSubmission](LevelResultSubmission.java) / [TableRowSubmission](TableRowSubmission.java) / [TableDataRequest](TableDataRequest.java) / [TableNameEntry](TableNameEntry.java) | Queued level results, table submissions, three response partitions and name dictionary. |
+| [SecondaryHashTable](SecondaryHashTable.java) | Secondary-link hash buckets, duplicate lookup and independent traversal. |
 
 | Registered menu ID | Screen |
 | --- | --- |
@@ -102,5 +104,7 @@ GameConnectionShell fields identify code-base host, ports, server/CRC/instance, 
 Huffman fixtures use independent prefix-interval allocation and per-bit packing, including all valid four-symbol tables with lengths0..4, sparse/irregular alphabets and32-bit codewords. They check source/destination offsets, byte consumption, caller length-array ownership, missing-symbol rejection and smart-length CP1252 text round trips, capped reads and Cabbage failure fallback. Code assignment follows symbol order rather than sorting by length. Cursor fixtures verify independent forward/reverse/inclusive traversal, retained ownership and the original repeated-exhaustion NullPointerException. Headless framebuffer fixtures verify reflective BufferedImage selection, shared pixel/raster/image storage, actual Graphics draws at y/x offsets, producer consumer pixels/completion/replacement/removal. The owned framebuffer factory class-name literal is rewritten and exercised. Malformed/oversubscribed Huffman tables, live server text, arbitrary cursor mutation, factory fallback selection, real image consumers/desktop presentation and presented FPS remain unverified.
 
 The earlier pollRequiredFonts name is corrected to pollSavedProgress: the helper requests two integer arrays and combines level metadata by pack ID. IntArrayRequest fixtures check encoded request type/ID, allocated values, FIFO response completion and ownership release, metadata flags and released progress requests. Pinned-source behavior is preserved: the response shift expression accumulates bytes rather than conventional32-bit words, and progress polling resets both counts after accumulating metadata. Original-JAR/server semantics remain unverified; these are observations of the fixed decompiled source.
+
+Result fixtures independently encode signed-smart boundaries, qualified result words and CRC32 frames, check gameplay counter capture/suppression and match acknowledgments by pack/level. Table fixtures cover wrapping16-bit submission IDs, caller-owned values, empty/nonempty row wires, returned64-bit row IDs, pending table-ID deduplication, optional dictionary labels, repeated names, all three name/ID/value partitions, zero-dictionary completion and row lookup/mismatches. Response counters and flattened offsets have reviewed names. Secondary labels are parsed into temporary arrays but not retained in TableDataRequest. Deterministic secondary-hash fixtures compare duplicate lookup, bucket traversal and ownership transfer against independent list models, including non-power-of-two masking, negative keys and separate lookup/traversal cursors; primary links remain intact. Counter words retain qualified meanings. Oversized table responses, invalid guards, active traversal mutation, missing-request disconnects, live server compatibility and original-JAR equivalence remain unverified.
 
 Decompiler source commit: 1d183d3ba75fc0a8cd3af1544591b8c463c0e1ff. Tracked-source Git tar SHA-256: 7230d95fc7b957c8c56c76ed8203e42c1808e0084711cfd0495f47d8a692e8cd. This identifies decompiler source, not a gamepack JAR.

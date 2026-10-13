@@ -1,17 +1,17 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class pn extends IntrusiveNode {
-    static mk field_i;
-    int field_k;
-    int field_n;
-    int field_p;
+final class LevelResultSubmission extends IntrusiveNode {
+    static SecondaryHashTable field_i;
+    int resultWordFour;
+    int levelIndex;
+    int packId;
     static RgbSprite field_m;
-    int field_l;
+    int resultWordThree;
     static String field_j;
-    int field_r;
+    int resultWordTwo;
     static String field_o;
-    int field_t;
+    int resultWordOne;
     static String field_q;
     static String field_s;
 
@@ -175,7 +175,7 @@ final class pn extends IntrusiveNode {
           field_o = null;
           field_j = null;
           if (param0 != -17432) {
-            pn.a(-11);
+            LevelResultSubmission.a(-11);
           }
         } catch (RuntimeException runtimeException) {
           throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "pn.C(" + param0 + ')');
@@ -190,7 +190,7 @@ final class pn extends IntrusiveNode {
           il.field_B = new int[3];
           mm.field_Sb = 0;
           if (param0 > -4) {
-            pn.c(104);
+            LevelResultSubmission.c(104);
           }
           jk.field_s = new gb[param1 * 15];
           return;
@@ -201,16 +201,16 @@ final class pn extends IntrusiveNode {
         }
     }
 
-    pn(int param0, int param1, int param2, int param3, int param4, int param5) {
+    LevelResultSubmission(int packId, int levelIndex, int resultWordOne, int resultWordTwo, int resultWordThree, int resultWordFour) {
         try {
-          this.field_t = param2;
-          this.field_n = param1;
-          this.field_r = param3;
-          this.field_p = param0;
-          this.field_l = param4;
-          this.field_k = param5;
+          this.resultWordOne = resultWordOne;
+          this.levelIndex = levelIndex;
+          this.resultWordTwo = resultWordTwo;
+          this.packId = packId;
+          this.resultWordThree = resultWordThree;
+          this.resultWordFour = resultWordFour;
         } catch (RuntimeException runtimeException) {
-          throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "pn.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+          throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "pn.<init>(" + packId + ',' + levelIndex + ',' + resultWordOne + ',' + resultWordTwo + ',' + resultWordThree + ',' + resultWordFour + ')');
         }
     }
 

@@ -44,7 +44,7 @@ final class ch {
           var2 = var1.readUnsignedByte(255);
           if (0 == var2) {
             if (null == tf.field_d) {
-              tf.field_d = new mk(128);
+              tf.field_d = new SecondaryHashTable(128);
               IsaacGenerator.field_h = 0;
             }
             stackIn_12_0 = (1 != var1.readUnsignedByte(255)) ? 0 : 1;
@@ -66,12 +66,12 @@ final class ch {
             if (null == var6) {
               var6 = HighscorePackSelector.a(0, var7_ref);
               if (null != var6) {
-                tf.field_d.a((long)var8.hashCode(), var6, 110);
+                tf.field_d.put((long)var8.hashCode(), var6, 110);
               }
             }
             if (var6 == null) {
               var6 = new mp();
-              tf.field_d.a((long)var8.hashCode(), var6, 120);
+              tf.field_d.put((long)var8.hashCode(), var6, 120);
               fieldTemp$1 = IsaacGenerator.field_h;
               IsaacGenerator.field_h = IsaacGenerator.field_h + 1;
               var6.field_Sb = fieldTemp$1;
@@ -111,7 +111,7 @@ final class ch {
             return;
           }
           if (null == BlankScreen.field_i) {
-            BlankScreen.field_i = new mk(128);
+            BlankScreen.field_i = new SecondaryHashTable(128);
             LevelPackSelectScreen.field_w = 0;
           }
           var3Lifetime1 = var1.readCp1252String(-1);
@@ -124,12 +124,12 @@ final class ch {
           if (var6Lifetime1 == null) {
             var6Lifetime1 = pf.a(false, var5Lifetime1);
             if (var6Lifetime1 != null) {
-              BlankScreen.field_i.a((long)gb.a((CharSequence) ((Object) var4_ref_StringLifetime1), 87).hashCode(), var6Lifetime1, 104);
+              BlankScreen.field_i.put((long)gb.a((CharSequence) ((Object) var4_ref_StringLifetime1), 87).hashCode(), var6Lifetime1, 104);
             }
           }
           if (var6Lifetime1 == null) {
             var6Lifetime1 = new mp();
-            BlankScreen.field_i.a((long)gb.a((CharSequence) ((Object) var4_ref_StringLifetime1), 116).hashCode(), var6Lifetime1, 101);
+            BlankScreen.field_i.put((long)gb.a((CharSequence) ((Object) var4_ref_StringLifetime1), 116).hashCode(), var6Lifetime1, 101);
             fieldTemp$0 = LevelPackSelectScreen.field_w;
             LevelPackSelectScreen.field_w = LevelPackSelectScreen.field_w + 1;
             var6Lifetime1.field_Sb = fieldTemp$0;
