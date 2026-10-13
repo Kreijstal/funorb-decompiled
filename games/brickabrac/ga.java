@@ -58,16 +58,16 @@ final class ga extends IntrusiveNode {
         int var1 = 0;
         int var1Lifetime1;
         int var1Lifetime2;
-        if (ki.field_d <= 32) {
+        if (ki.masterSoundGain <= 32) {
           h.a(13894, 0);
           var1 = -2 % ((-60 - param0) / 34);
           return;
         }
-        var1Lifetime1 = ki.field_d % 32;
+        var1Lifetime1 = ki.masterSoundGain % 32;
         if (0 == var1Lifetime1) {
           var1Lifetime1 = 32;
         }
-        h.a(13894, ki.field_d - var1Lifetime1);
+        h.a(13894, ki.masterSoundGain - var1Lifetime1);
         var1Lifetime2 = -2 % ((-60 - param0) / 34);
     }
 

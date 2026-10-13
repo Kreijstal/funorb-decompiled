@@ -92,11 +92,11 @@ final class ni extends mh {
         }
     }
 
-    final static ra h(int param0) {
+    final static AudioMixer h(int param0) {
         if (param0 < 91) {
           field_Pb = (String) null;
         }
-        return ob.field_J;
+        return ob.soundMixer;
     }
 
     public static void d(boolean param0) {

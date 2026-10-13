@@ -7,7 +7,7 @@ final class me {
     static tp[] field_a;
     static int[][] field_e;
     static boolean[] field_f;
-    static kl field_d;
+    static PcmStream field_d;
 
     final void a(int param0, java.applet.Applet param1) {
         try {

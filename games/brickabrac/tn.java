@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class tn extends qd {
+final class tn extends AudioStream {
     private int field_s;
     static int[] field_n;
     private boolean field_E;
@@ -23,11 +23,11 @@ final class tn extends qd {
     static volatile boolean field_A;
     static String field_w;
 
-    final qd d() {
+    final AudioStream nextSubStream() {
         return null;
     }
 
-    final void b(int[] param0, int param1, int param2) {
+    final void fill(int[] output, int offset, int frames) {
         int localTemp$0 = 0;
         int localTemp$1 = 0;
         int var10 = 0;
@@ -51,7 +51,7 @@ final class tn extends qd {
         var11 = BrickABrac.field_J ? 1 : 0;
         try {
           if (this.field_p <= 0) {
-            this.a(param2);
+            this.skip(frames);
             return;
           }
           if (this.field_v) {
@@ -72,7 +72,7 @@ final class tn extends qd {
           var4_int = (this.field_s >> 12) * this.field_p / 256;
           var5 = -var4_int + this.field_p;
           if (this.field_y != 0) {
-            this.field_s = this.field_s + this.field_y * param2;
+            this.field_s = this.field_s + this.field_y * frames;
             if (1048576 > this.field_s) {
               if (this.field_s <= 0) {
                 this.field_s = 0;
@@ -99,10 +99,10 @@ final class tn extends qd {
               }
             }
           }
-          if (!tj.field_g) {
-            stackIn_33_0 = param2;
+          if (!PcmPlayer.stereo) {
+            stackIn_33_0 = frames;
           } else {
-            stackIn_33_0 = param2 << 1;
+            stackIn_33_0 = frames << 1;
           }
           var6 = stackIn_33_0;
           if (this.field_u < 256 && (this.field_r != null ||
@@ -117,24 +117,24 @@ final class tn extends qd {
                   this.field_q = new int[var6];
                   this.field_G = new int[var6];
                 }
-                this.field_D.b(this.field_q, 0, param2);
-                this.field_x.b(this.field_G, 0, param2);
-                if (!tj.field_g) {
-                  stackIn_49_0 = param1;
+                this.field_D.fill(this.field_q, 0, frames);
+                this.field_x.fill(this.field_G, 0, frames);
+                if (!PcmPlayer.stereo) {
+                  stackIn_49_0 = offset;
                 } else {
-                  localTemp$0 = param1 << 1;
-                  param1 = localTemp$0;
+                  localTemp$0 = offset << 1;
+                  offset = localTemp$0;
                   stackIn_49_0 = localTemp$0;
                 }
                 var7 = stackIn_49_0;
                 for (var8 = 0; var8 < var6; var8++) {
-                  param0[var8 + var7] = param0[var8 + var7] + (var5 * this.field_G[var8] + this.field_q[var8] * var4_int >> 8);
+                  output[var8 + var7] = output[var8 + var7] + (var5 * this.field_G[var8] + this.field_q[var8] * var4_int >> 8);
                 }
               } else {
-                this.field_x.b(param0, param1, param2);
+                this.field_x.fill(output, offset, frames);
               }
             } else {
-              this.field_D.b(param0, param1, param2);
+              this.field_D.fill(output, offset, frames);
             }
           }
           if (null != this.field_t) {
@@ -148,19 +148,19 @@ final class tn extends qd {
               this.field_G = new int[var6];
               this.field_q = new int[var6];
             }
-            this.field_z.b(this.field_q, 0, param2);
-            if (tj.field_g) {
-              localTemp$1 = param1 << 1;
-              param1 = localTemp$1;
+            this.field_z.fill(this.field_q, 0, frames);
+            if (PcmPlayer.stereo) {
+              localTemp$1 = offset << 1;
+              offset = localTemp$1;
               stackIn_63_0 = localTemp$1;
             } else {
-              stackIn_63_0 = param1;
+              stackIn_63_0 = offset;
             }
             var7Lifetime1 = stackIn_63_0;
             var8Lifetime1 = this.field_u * this.field_p / 256;
             var9 = -var8Lifetime1 + this.field_p;
             for (var10 = 0; var6 > var10; var10++) {
-              param0[var10 + var7Lifetime1] = var8Lifetime1 * this.field_q[var10] + param0[var7Lifetime1 + var10] * var9 >> 8;
+              output[var10 + var7Lifetime1] = var8Lifetime1 * this.field_q[var10] + output[var7Lifetime1 + var10] * var9 >> 8;
             }
           }
           return;
@@ -169,33 +169,33 @@ final class tn extends qd {
           var4 = decompiledCaughtException;
           stackIn_69_0 = var4;
           stackIn_69_1 = new StringBuilder().append("tn.D(");
-          if (param0 == null) {
+          if (output == null) {
             stackIn_70_2 = "null";
           } else {
             stackIn_70_2 = "{...}";
           }
-          throw qb.a((Throwable) ((Object) stackIn_69_0), ((StringBuilder) (Object) stackIn_69_1).append(stackIn_70_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw qb.a((Throwable) ((Object) stackIn_69_0), ((StringBuilder) (Object) stackIn_69_1).append(stackIn_70_2).append(',').append(offset).append(',').append(frames).append(')').toString());
         }
     }
 
-    final qd a() {
+    final AudioStream firstSubStream() {
         return null;
     }
 
-    final synchronized void a(int param0) {
+    final synchronized void skip(int frames) {
         int var3;
         var3 = BrickABrac.field_J ? 1 : 0;
         if (this.field_s > 0 &&
           null != this.field_r) {
-          this.field_D.a(param0);
+          this.field_D.skip(frames);
         }
         if (this.field_s < 1048576 &&
           null != this.field_o) {
-          this.field_x.a(param0);
+          this.field_x.skip(frames);
         }
         if (this.field_u > 0 &&
           null != this.field_t) {
-          this.field_z.a(param0);
+          this.field_z.skip(frames);
         }
         if (this.field_v) {
           if (this.field_y > 0 &&
@@ -213,7 +213,7 @@ final class tn extends qd {
           }
         }
         if (this.field_y != 0) {
-          this.field_s = this.field_s + param0 * this.field_y;
+          this.field_s = this.field_s + frames * this.field_y;
           if (this.field_s < 1048576) {
             if (this.field_s <= 0) {
               this.field_s = 0;
@@ -298,7 +298,7 @@ final class tn extends qd {
             return;
           }
           if (param3 != 22) {
-            this.b();
+            this.getSchedulingCost();
           }
           if (this.field_r == null) {
             var7_int = 1;
@@ -354,7 +354,7 @@ final class tn extends qd {
         }
     }
 
-    final synchronized int b() {
+    final synchronized int getSchedulingCost() {
         return 2;
     }
 
@@ -371,7 +371,7 @@ final class tn extends qd {
     final synchronized void a(boolean param0, int param1) {
         this.field_p = param1;
         if (!param0) {
-          this.b();
+          this.getSchedulingCost();
         }
     }
 

@@ -663,12 +663,12 @@ final class PlayerBoard extends IntrusiveNode {
         }
     }
 
-    final static void a(oe param0, int param1, int param2) {
+    final static void a(PcmSound param0, int param1, int param2) {
         try {
           hm.a(0, param0, param2);
           if (param1 > -29) {
-            oe var4 = (oe) null;
-            PlayerBoard.a((oe) null, -15, 82);
+            PcmSound var4 = (PcmSound) null;
+            PlayerBoard.a((PcmSound) null, -15, 82);
           }
         } catch (RuntimeException runtimeException) {
           throw qb.a((Throwable) ((Object) runtimeException), "j.P(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');

@@ -1855,12 +1855,12 @@ final class GameplayScreen extends GameScreen {
             oo.field_w = new IsaacGenerator(new int[]{(int)ue.a(false)});
           }
           MenuScreen.field_i = 0;
-          to.field_k = kl.a(ta.field_e[2], 256, 0);
-          me.field_d = kl.a(ta.field_e[2], 256, 0);
-          to.field_k.f(-1);
-          me.field_d.f(-1);
-          sk.a((byte) 125, to.field_k);
-          sk.a((byte) 5, me.field_d);
+          to.field_k = PcmStream.createWithVolume(ta.uiSounds[2], 256, 0);
+          me.field_d = PcmStream.createWithVolume(ta.uiSounds[2], 256, 0);
+          to.field_k.setLoopCount(-1);
+          me.field_d.setLoopCount(-1);
+          sk.queueSoundPlayback((byte) 125, to.field_k);
+          sk.queueSoundPlayback((byte) 5, me.field_d);
           tn.field_C = 1;
           gr.b(tn.field_C, -28463);
           pg.field_m = -1;

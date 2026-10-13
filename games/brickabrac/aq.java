@@ -5,13 +5,13 @@ final class aq implements Runnable {
     volatile boolean field_b;
     volatile boolean field_a;
     tg field_c;
-    volatile tj[] field_d;
+    volatile PcmPlayer[] field_d;
     static int field_e;
     private static String field_z;
 
     public final void run() {
         int var1_int = 0;
-        tj var2 = null;
+        PcmPlayer var2 = null;
         int var4 = 0;
         Object var5 = null;
         int decompiledRegionSelector0 = 0;
@@ -70,7 +70,7 @@ final class aq implements Runnable {
     }
 
     aq() {
-        this.field_d = new tj[2];
+        this.field_d = new PcmPlayer[2];
         this.field_a = false;
         this.field_b = false;
     }

@@ -6,7 +6,7 @@ final class cg extends dj {
     static boolean field_l;
     static RgbSprite field_q;
     static ff field_s;
-    static oe[] field_p;
+    static PcmSound[] field_p;
     private long field_m;
     private long field_r;
     private int field_j;
@@ -228,6 +228,6 @@ final class cg extends dj {
 
     static {
         field_s = null;
-        field_p = new oe[4];
+        field_p = new PcmSound[4];
     }
 }

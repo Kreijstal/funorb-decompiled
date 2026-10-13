@@ -1,23 +1,23 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class tj {
-    int[] field_n;
+class PcmPlayer {
+    int[] samples;
     private int field_j;
-    static int field_q;
+    static int sampleRate;
     private long field_m;
-    private qd field_e;
+    private AudioStream rootStream;
     private static int field_l;
     private static aq field_c;
     private boolean field_d;
-    static boolean field_g;
+    static boolean stereo;
     private int field_i;
     private long field_r;
-    private qd[] field_p;
+    private AudioStream[] priorityHeads;
     private int field_f;
     private int field_h;
     private int field_o;
-    private qd[] field_u;
+    private AudioStream[] priorityTails;
     private int field_a;
     private long field_b;
     private int field_t;
@@ -44,7 +44,7 @@ class tj {
             }
             while (var1 > this.field_m + 5000L) {
               this.a(256);
-              this.field_m = this.field_m + (long)(256000 / field_q);
+              this.field_m = this.field_m + (long)(256000 / sampleRate);
               var1 = ue.a(false);
             }
           } catch (java.lang.Exception decompiledCaughtParameter0) {
@@ -52,7 +52,7 @@ class tj {
             var3 = (Exception) (Object) decompiledCaughtException;
             this.field_m = var1;
           }
-          if (this.field_n == null) {
+          if (this.samples == null) {
             return;
           }
           try {
@@ -87,7 +87,7 @@ class tj {
               }
             }
             while (var3_int < var4) {
-              this.a(this.field_n, 256);
+              this.a(this.samples, 256);
               this.e();
               var3_int += 256;
             }
@@ -130,31 +130,31 @@ class tj {
         int var7_int;
         Object var7;
         int var8_int;
-        qd[] var8;
+        AudioStream[] var8;
         int var9;
         Object var10;
-        qd var11;
-        el var12;
+        AudioStream var11;
+        AudioData var12;
         int var13;
-        qd var14;
+        AudioStream var14;
         int var15_int;
-        qd var15;
+        AudioStream var15;
         int var6Lifetime1;
         int var9Lifetime1;
         Object var10Lifetime1;
-        qd var14Lifetime1;
-        qd var14Lifetime2;
+        AudioStream var14Lifetime1;
+        AudioStream var14Lifetime2;
         var3 = param1;
-        if (field_g) {
+        if (stereo) {
           var3 = var3 << 1;
         }
         pm.a(param0, 0, var3);
         this.field_i = this.field_i - param1;
-        if (this.field_e != null &&
+        if (this.rootStream != null &&
           this.field_i <= 0) {
-          this.field_i = this.field_i + (field_q >> 4);
-          tj.a(this.field_e);
-          this.a(this.field_e, this.field_e.c());
+          this.field_i = this.field_i + (sampleRate >> 4);
+          PcmPlayer.resetSchedulingTree(this.rootStream);
+          this.enqueueStream(this.rootStream, this.rootStream.getPriority());
           var4 = 0;
           var5 = 255;
           var6 = 7;
@@ -172,44 +172,44 @@ class tj {
                 if ((var9 & 1) != 0) {
                   var5 = var5 & ~(1 << var7_int);
                   var10 = null;
-                  var11 = this.field_p[var7_int];
+                  var11 = this.priorityHeads[var7_int];
                   var14 = var11;
                   var14Lifetime1 = var11;
                   while (var11 != null) {
-                    var12 = var11.field_k;
+                    var12 = var11.data;
                     if (var12 != null &&
-                      var12.field_i > var8_int) {
+                      var12.schedulerUsage > var8_int) {
                       var5 = var5 | 1 << var7_int;
                       var10 = var11;
-                      var11 = var11.field_l;
+                      var11 = var11.schedulerNext;
                       continue;
                     }
-                    var11.field_j = true;
-                    var13 = var11.b();
+                    var11.enabled = true;
+                    var13 = var11.getSchedulingCost();
                     var4 = var4 + var13;
                     if (var12 != null) {
-                      var12.field_i = var12.field_i + var13;
+                      var12.schedulerUsage = var12.schedulerUsage + var13;
                     }
                     if (var4 >= this.field_j) {
                       break scanLoop1;
                     }
-                    var14Lifetime2 = var11.a();
+                    var14Lifetime2 = var11.firstSubStream();
                     if (var14Lifetime2 != null) {
-                      var15_int = var11.field_i;
+                      var15_int = var11.schedulerPriority;
                       while (var14Lifetime2 != null) {
-                        this.a(var14Lifetime2, var15_int * var14Lifetime2.c() >> 8);
-                        var14Lifetime2 = var11.d();
+                        this.enqueueStream(var14Lifetime2, var15_int * var14Lifetime2.getPriority() >> 8);
+                        var14Lifetime2 = var11.nextSubStream();
                       }
                     }
-                    var15 = var11.field_l;
-                    var11.field_l = null;
+                    var15 = var11.schedulerNext;
+                    var11.schedulerNext = null;
                     if (var10 != null) {
-                      ((qd) (var10)).field_l = var15;
+                      ((AudioStream) (var10)).schedulerNext = var15;
                     } else {
-                      this.field_p[var7_int] = var15;
+                      this.priorityHeads[var7_int] = var15;
                     }
                     if (var15 == null) {
-                      this.field_u[var7_int] = (qd) (var10);
+                      this.priorityTails[var7_int] = (AudioStream) (var10);
                     }
                     var11 = var15;
                   }
@@ -224,14 +224,14 @@ class tj {
             break;
           }
           for (var6Lifetime1 = 0; var6Lifetime1 < 8; var6Lifetime1++) {
-            var7 = this.field_p[var6Lifetime1];
-            var8 = this.field_p;
+            var7 = this.priorityHeads[var6Lifetime1];
+            var8 = this.priorityHeads;
             var9Lifetime1 = var6Lifetime1;
-            this.field_u[var6Lifetime1] = null;
+            this.priorityTails[var6Lifetime1] = null;
             var8[var9Lifetime1] = null;
             while (var7 != null) {
-              var10Lifetime1 = ((qd) (var7)).field_l;
-              ((qd) (var7)).field_l = null;
+              var10Lifetime1 = ((AudioStream) (var7)).schedulerNext;
+              ((AudioStream) (var7)).schedulerNext = null;
               var7 = var10Lifetime1;
             }
           }
@@ -239,8 +239,8 @@ class tj {
         if (this.field_i < 0) {
           this.field_i = 0;
         }
-        if (this.field_e != null) {
-          this.field_e.b(param0, 0, param1);
+        if (this.rootStream != null) {
+          this.rootStream.fill(param0, 0, param1);
         }
         this.field_m = ue.a(false);
     }
@@ -249,16 +249,16 @@ class tj {
         field_c = null;
     }
 
-    private final void a(qd param0, int param1) {
-        int var3 = param1 >> 5;
-        qd var4 = this.field_u[var3];
+    private final void enqueueStream(AudioStream stream, int priority) {
+        int var3 = priority >> 5;
+        AudioStream var4 = this.priorityTails[var3];
         if (var4 == null) {
-          this.field_p[var3] = param0;
+          this.priorityHeads[var3] = stream;
         } else {
-          var4.field_l = param0;
+          var4.schedulerNext = stream;
         }
-        this.field_u[var3] = param0;
-        param0.field_i = param1;
+        this.priorityTails[var3] = stream;
+        stream.schedulerPriority = priority;
     }
 
     final static void a(int param0, boolean param1, int param2) {
@@ -266,8 +266,8 @@ class tj {
           param0 > 48000) {
           throw new IllegalArgumentException();
         }
-        field_q = param0;
-        field_g = param1 ? true : false;
+        sampleRate = param0;
+        stereo = param1 ? true : false;
         field_l = param2;
     }
 
@@ -277,7 +277,7 @@ class tj {
     void e() throws Exception {
     }
 
-    final static tj a(tg param0, java.awt.Component param1, int param2, int param3) {
+    final static PcmPlayer a(tg param0, java.awt.Component param1, int param2, int param3) {
         try {
           pd var4 = null;
           Throwable var4_ref = null;
@@ -287,7 +287,7 @@ class tj {
           int stackIn_11_2 = 0;
           pd stackIn_21_0 = null;
           Throwable decompiledCaughtException = null;
-          if (field_q == 0) {
+          if (sampleRate == 0) {
             throw new IllegalStateException();
           }
           if (param2 >= 0 &&
@@ -300,19 +300,19 @@ class tj {
               var4 = var5;
               stackIn_10_0 = var4;
               stackIn_10_1 = 256;
-              if (!field_g) {
+              if (!stereo) {
                 stackIn_11_2 = 1;
               } else {
                 stackIn_11_2 = 2;
               }
-              ((tj) ((Object) stackIn_10_0)).field_n = new int[stackIn_10_1 * stackIn_11_2];
-              ((tj) ((Object) var4)).field_s = param3;
-              ((tj) ((Object) var4)).a(param1);
-              ((tj) ((Object) var4)).field_a = (param3 & -1024) + 1024;
-              if (((tj) ((Object) var4)).field_a > 16384) {
-                ((tj) ((Object) var4)).field_a = 16384;
+              ((PcmPlayer) ((Object) stackIn_10_0)).samples = new int[stackIn_10_1 * stackIn_11_2];
+              ((PcmPlayer) ((Object) var4)).field_s = param3;
+              ((PcmPlayer) ((Object) var4)).a(param1);
+              ((PcmPlayer) ((Object) var4)).field_a = (param3 & -1024) + 1024;
+              if (((PcmPlayer) ((Object) var4)).field_a > 16384) {
+                ((PcmPlayer) ((Object) var4)).field_a = 16384;
               }
-              ((tj) ((Object) var4)).b(((tj) ((Object) var4)).field_a);
+              ((PcmPlayer) ((Object) var4)).b(((PcmPlayer) ((Object) var4)).field_a);
               if (field_l > 0 &&
                 field_c == null) {
                 field_c = new aq();
@@ -323,14 +323,14 @@ class tj {
                 if (field_c.field_d[param2] != null) {
                   throw new IllegalArgumentException();
                 }
-                field_c.field_d[param2] = (tj) ((Object) var5);
+                field_c.field_d[param2] = (PcmPlayer) ((Object) var5);
               }
               stackIn_21_0 = var4;
-              return (tj) ((Object) stackIn_21_0);
+              return (PcmPlayer) ((Object) stackIn_21_0);
             } catch (java.lang.Throwable decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var4_ref = decompiledCaughtException;
-              return new tj();
+              return new PcmPlayer();
             }
           }
           throw new IllegalArgumentException();
@@ -341,23 +341,23 @@ class tj {
         }
     }
 
-    private final static void a(qd param0) {
-        param0.field_j = false;
-        if (param0.field_k != null) {
-          param0.field_k.field_i = 0;
+    private final static void resetSchedulingTree(AudioStream stream) {
+        stream.enabled = false;
+        if (stream.data != null) {
+          stream.data.schedulerUsage = 0;
         }
-        qd var1 = param0.a();
-        while (var1 != null) {
-          tj.a(var1);
-          var1 = param0.d();
+        AudioStream child = stream.firstSubStream();
+        while (child != null) {
+          PcmPlayer.resetSchedulingTree(child);
+          child = stream.nextSubStream();
         }
     }
 
     void d() {
     }
 
-    final synchronized void b(qd param0) {
-        this.field_e = param0;
+    final synchronized void setRootStream(AudioStream stream) {
+        this.rootStream = stream;
     }
 
     void b(int param0) throws Exception {
@@ -385,7 +385,7 @@ class tj {
           }
         }
         this.d();
-        this.field_n = null;
+        this.samples = null;
         this.field_d = true;
     }
 
@@ -394,8 +394,8 @@ class tj {
         if (this.field_i < 0) {
           this.field_i = 0;
         }
-        if (this.field_e != null) {
-          this.field_e.a(param0);
+        if (this.rootStream != null) {
+          this.rootStream.skip(param0);
           return;
         }
     }
@@ -420,14 +420,14 @@ class tj {
         }
     }
 
-    tj() {
+    PcmPlayer() {
         this.field_j = 32;
         this.field_d = false;
         this.field_m = ue.a(false);
         this.field_r = 0L;
-        this.field_p = new qd[8];
+        this.priorityHeads = new AudioStream[8];
         this.field_b = 0L;
-        this.field_u = new qd[8];
+        this.priorityTails = new AudioStream[8];
         this.field_i = 0;
         this.field_f = 0;
         this.field_k = true;

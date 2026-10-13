@@ -16,7 +16,7 @@ final class ka extends IntrusiveNode {
     int field_B;
     pq field_k;
     int field_p;
-    kl field_y;
+    PcmStream field_y;
     int field_v;
     int field_D;
     int field_w;
@@ -24,7 +24,7 @@ final class ka extends IntrusiveNode {
     int field_i;
     static int field_E;
     int field_m;
-    oe field_F;
+    PcmSound field_F;
     int field_j;
     int field_u;
 
@@ -386,7 +386,7 @@ final class ka extends IntrusiveNode {
               }
               var20 = var20 + np.field_a;
             }
-            var24 = l.a((byte) -110, var21, var13.field_kc);
+            var24 = SoundPlayback.a((byte) -110, var21, var13.field_kc);
             if (null != var24) {
               var25_intLifetime1 = var13.field_Tb.field_O.a(var24, -om.field_oc + var13.field_Ib - om.field_oc);
               var13.field_Tb.field_jb = var13.field_ic * 256 / cm.field_o;

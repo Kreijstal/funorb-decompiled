@@ -19,12 +19,12 @@ final class o {
     }
 
     final static void c(int param0) {
-        ta.field_e[2] = GameScreen.field_e.a("BaB_move_thruster_loop", "", (byte) 115);
-        ta.field_e[5] = GameScreen.field_e.a("BaB_plasma_ball_charged", "", (byte) 116);
-        ta.field_e[6] = GameScreen.field_e.a("BaB_plasma_ball_fire", "", (byte) 108);
-        ta.field_e[10] = GameScreen.field_e.a("BaB_teleport_00", "", (byte) 108);
-        ta.field_e[11] = GameScreen.field_e.a("BaB_transform_block", "", (byte) 111);
-        ta.field_e[13] = GameScreen.field_e.a("BaB_indestructable_block_destroy", "", (byte) 110);
+        ta.uiSounds[2] = GameScreen.field_e.a("BaB_move_thruster_loop", "", (byte) 115);
+        ta.uiSounds[5] = GameScreen.field_e.a("BaB_plasma_ball_charged", "", (byte) 116);
+        ta.uiSounds[6] = GameScreen.field_e.a("BaB_plasma_ball_fire", "", (byte) 108);
+        ta.uiSounds[10] = GameScreen.field_e.a("BaB_teleport_00", "", (byte) 108);
+        ta.uiSounds[11] = GameScreen.field_e.a("BaB_transform_block", "", (byte) 111);
+        ta.uiSounds[13] = GameScreen.field_e.a("BaB_indestructable_block_destroy", "", (byte) 110);
         cg.field_p[0] = GameScreen.field_e.a("BaB_indestructable_block_00", "", (byte) 124);
         cg.field_p[1] = GameScreen.field_e.a("BaB_indestructable_block_01", "", (byte) 108);
         cg.field_p[2] = GameScreen.field_e.a("BaB_indestructable_block_02", "", (byte) 117);
@@ -40,8 +40,8 @@ final class o {
         ef.field_a[14] = GameScreen.field_e.a("bab_powerup_stickypaddle_acquire", "", (byte) 121);
         ef.field_a[16] = GameScreen.field_e.a("bab_powerup_more_bricks", "", (byte) 109);
         ef.field_a[17] = GameScreen.field_e.a("bab_powerup_paddle_grow", "", (byte) 111);
-        ef.field_a[18] = ta.field_e[5];
-        ta.field_e[8] = GameScreen.field_e.a("bab_interface_pixeled_transition", "", (byte) 109);
+        ef.field_a[18] = ta.uiSounds[5];
+        ta.uiSounds[8] = GameScreen.field_e.a("bab_interface_pixeled_transition", "", (byte) 109);
         fr.field_e[0] = GameScreen.field_e.a((byte) -103, "bab_wall_generic_alt1_00", "");
         fr.field_e[1] = GameScreen.field_e.a((byte) 67, "bab_wall_generic_alt1_01", "");
         fr.field_e[2] = GameScreen.field_e.a((byte) 96, "bab_wall_generic_alt1_02", "");
@@ -65,13 +65,13 @@ final class o {
         ef.field_a[11] = GameScreen.field_e.a((byte) -108, "bab_powerup_more_speed", "");
         ef.field_a[13] = GameScreen.field_e.a((byte) -96, "bab_powerup_less_speed", "");
         ef.field_a[15] = GameScreen.field_e.a((byte) 127, "bab_powerup_weak_ball", "");
-        ta.field_e[7] = GameScreen.field_e.a((byte) -128, "BaB_ball_out_of_play", "");
-        ta.field_e[12] = GameScreen.field_e.a((byte) -112, "bab_powerup_stickypaddle_stick", "");
-        ta.field_e[0] = GameScreen.field_e.a((byte) -102, "bab_interface_mouseover", "");
-        ta.field_e[1] = GameScreen.field_e.a((byte) -116, "bab_interface_sfx_volume", "");
-        ta.field_e[9] = GameScreen.field_e.a((byte) -99, "bab_achievement", "");
-        ta.field_e[15] = GameScreen.field_e.a((byte) -104, "BaB_aaaaannnnd_go_FX", "");
-        ta.field_e[14] = GameScreen.field_e.a((byte) -105, "BaB_get_ready_FX", "");
+        ta.uiSounds[7] = GameScreen.field_e.a((byte) -128, "BaB_ball_out_of_play", "");
+        ta.uiSounds[12] = GameScreen.field_e.a((byte) -112, "bab_powerup_stickypaddle_stick", "");
+        ta.uiSounds[0] = GameScreen.field_e.a((byte) -102, "bab_interface_mouseover", "");
+        ta.uiSounds[1] = GameScreen.field_e.a((byte) -116, "bab_interface_sfx_volume", "");
+        ta.uiSounds[9] = GameScreen.field_e.a((byte) -99, "bab_achievement", "");
+        ta.uiSounds[15] = GameScreen.field_e.a((byte) -104, "BaB_aaaaannnnd_go_FX", "");
+        ta.uiSounds[14] = GameScreen.field_e.a((byte) -105, "BaB_get_ready_FX", "");
     }
 
     public static void b(int param0) {

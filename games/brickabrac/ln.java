@@ -75,7 +75,7 @@ final class ln extends IntrusiveNode {
             field_j = (RgbSprite[]) null;
           }
           mh.field_lb = param2;
-          l.field_m = param1;
+          SoundPlayback.field_m = param1;
           og.field_gc = param0;
           ji.field_a = param6;
           for (var7_int = 0; var7_int < 2; var7_int++) {

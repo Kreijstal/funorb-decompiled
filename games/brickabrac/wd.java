@@ -6,7 +6,7 @@ final class wd extends DualLinkNode {
     private int[][] field_A;
     private int[] field_B;
     private String[] field_y;
-    static NodeDeque field_v;
+    static NodeDeque soundPlaybacks;
     static mh field_E;
     static mh[] field_F;
     static String field_D;
@@ -31,7 +31,7 @@ final class wd extends DualLinkNode {
         field_F = null;
         field_E = null;
         field_x = null;
-        field_v = null;
+        soundPlaybacks = null;
         field_C = null;
         field_D = null;
         field_w = null;
@@ -263,7 +263,7 @@ final class wd extends DualLinkNode {
     }
 
     static {
-        field_v = new NodeDeque();
+        soundPlaybacks = new NodeDeque();
         field_D = "A detailed explanation of each rule can be found through the link on our website.<br>(in the Help Section)";
         field_x = "This option is restricted. Your rating is currently <%0>.<br>Can you achieve the qualifying rating of <%1>?";
     }

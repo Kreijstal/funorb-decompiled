@@ -2,7 +2,7 @@
 
 Java here is the single published version. Rebuild with Deko’s `readable/reproduce-brickabrac.mjs`. The reverse dictionary is `../../decompilation/brickabrac-naming.json`.
 
-This pass reviews 72 class identities across 420 compiled classes. Other names remain unresolved. Numbered state masks/words identify observed storage without guessing server semantics. Identifiers have no opaque suffixes; reversal recovers original bytes.
+This pass reviews 80 class identities across 420 compiled classes. Other names remain unresolved. Numbered state masks/words identify observed storage without guessing server semantics. Identifiers have no opaque suffixes; reversal recovers original bytes.
 
 | Start here | Follow |
 | --- | --- |
@@ -31,6 +31,8 @@ This pass reviews 72 class identities across 420 compiled classes. Other names r
 | [LevelPackSelectScreen](LevelPackSelectScreen.java) / [LevelPackCard](LevelPackCard.java) / [HighscorePackSelector](HighscorePackSelector.java) | Pack cards and keyboard/pointer pack selectors. |
 | [MatchResultScreen](MatchResultScreen.java) / [MultiplayerExitScreen](MultiplayerExitScreen.java) / [MatchCompleteScreen](MatchCompleteScreen.java) / [LevelCompleteScreen](LevelCompleteScreen.java) | Match results/exit/completion and single-player completion overlay. |
 | [AchievementIcon](AchievementIcon.java) / [TooltipSprite](TooltipSprite.java) / [IntrusiveHashTable](IntrusiveHashTable.java) | Pooled achievement icon movement/cache, sprite tooltips and intrusive hash buckets. |
+| [AudioData](AudioData.java) / [PcmSound](PcmSound.java) / [AudioStream](AudioStream.java) / [PcmStream](PcmStream.java) | Signed PCM data, audio stream contract, cursor/loop/gain/pan state and sample processing. |
+| [AudioMixer](AudioMixer.java) / [AudioMixerListener](AudioMixerListener.java) / [SoundPlayback](SoundPlayback.java) / [PcmPlayer](PcmPlayer.java) | Stream mixing/listeners, playback gain association and output/scheduling boundary. |
 
 | Registered menu ID | Screen |
 | --- | --- |
@@ -65,5 +67,7 @@ Keyboard fixtures anchor the AWT arrow translations:98/up,99/down,96/left and97/
 Screen roles follow registrations and executed draw/action methods with their localized labels; unrelated static strings do not determine a class role. Native fixtures instantiate/register all22 slots with controlled fonts/labels/icons and empty packs, check pause actions before/after refresh, result anchors and instruction return state. Pack fixtures check focus timing, keyboard bounds and pixel selection, retaining the prior selection on transparent misses. Achievement fixtures cover256-bit storage, duplicate awards, optional pending bits, notification order, BitSet comparisons and all eight save prompts. The initializer’s final client bootstrap, rendered panels, page-transition animation, authenticated scores and server persistence remain unverified.
 
 Icon fixtures cover signed rounded-quarter movement, delayed transition-bit clearing, hover/click state, cached thumbnail blits and reference cleanup/reuse. Recycling leaves transition bits unchanged; earlier cleanup-rule evidence is corrected. Clicks use an in-memory mixer and silent one-sample sound without playback. Tooltip fixtures cover measured text dimensions, pixel hits and sprite blits. Hash fixtures cover duplicate/colliding keys, primary ownership transfer, shared traversal and the original count-1 bit-mask indexing for non-power-of-two counts. Thumbnail regeneration, halos, tooltip text rendering, simultaneous page animations and audio playback remain unverified.
+
+Audio fixtures mix synthetic children and real PCM streams in memory. They cover fill versus skip, child traversal/removal and scheduling reset; sample ownership/rates, cursor clamping, mono/stereo forward/reverse aligned output, equal-power/negative pan, forward half-sample interpolation, finite/indefinite wrap and ping-pong loops, gain ramps/fade unlink, setters and master-gain associations. Integer.MIN_VALUE remains the fade sentinel. Listener callbacks, device I/O, MIDI synthesis, reverse interpolation, ramped output kernels and real playback remain unverified; the original listener private throwing constructor is retained.
 
 Decompiler source commit: 1d183d3ba75fc0a8cd3af1544591b8c463c0e1ff. Tracked-source Git tar SHA-256: 7230d95fc7b957c8c56c76ed8203e42c1808e0084711cfd0495f47d8a692e8cd. This identifies decompiler source, not a gamepack JAR.

@@ -5,7 +5,7 @@ final class jk extends ki {
     static String field_v;
     static int[] field_r;
     static RgbSprite field_t;
-    static tj field_w;
+    static PcmPlayer field_w;
     static gb[] field_s;
     static RgbSprite field_u;
 
@@ -149,7 +149,7 @@ final class jk extends ki {
     final void a(boolean param0, int param1, int param2, int param3, int param4) {
         pb var7 = null;
         if (!param0) {
-          field_w = (tj) null;
+          field_w = (PcmPlayer) null;
           if (!this.b((byte) -112)) {
             Rasterizer2D.fillVerticalGradient(param4, param2, 640, 480, um.field_u[param3], 928072);
             return;

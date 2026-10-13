@@ -4,7 +4,7 @@
 final class eo extends tl {
     static String field_h;
     static hk field_k;
-    static tj field_f;
+    static PcmPlayer field_f;
     static java.awt.Font field_g;
     static volatile int livePointerX;
     static String field_e;

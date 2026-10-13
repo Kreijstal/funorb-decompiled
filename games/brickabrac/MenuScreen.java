@@ -70,7 +70,7 @@ abstract class MenuScreen extends GameScreen {
     private final void c(boolean param0, int param1) {
         if (this.selection.selectedIndex != -1 &&
           param1 != this.selection.selectedIndex) {
-          PlayerBoard.a(ta.field_e[0], -106, FramedMenuScreen.g((byte) -44) / 4);
+          PlayerBoard.a(ta.uiSounds[0], -106, FramedMenuScreen.g((byte) -44) / 4);
         }
         if (!param0) {
           this.buttonLeft = -36;
@@ -153,7 +153,7 @@ abstract class MenuScreen extends GameScreen {
           this.handleNavigationKey(-120, obfuscationGuard, character);
           this.selection.pollKeyboardCode((byte) -124);
           if (this.a(false, (byte) 126)) {
-            wp.a(8, ta.field_e[0]);
+            wp.playUiSound(8, ta.uiSounds[0]);
           }
           this.c(true, var4);
         } else {
@@ -205,7 +205,7 @@ abstract class MenuScreen extends GameScreen {
           !ed.field_d) {
           this.selection.updatePointer(this.findButtonAt(po.pointerY, (byte) -106, pq.pointerX), 27479, this.findButtonAt(qo.pressY, (byte) -80, tb.pressX));
           if (this.a(true, (byte) -117)) {
-            wp.a(8, ta.field_e[0]);
+            wp.playUiSound(8, ta.uiSounds[0]);
           }
         }
         this.c(true, var4);
@@ -420,7 +420,7 @@ abstract class MenuScreen extends GameScreen {
                 }
                 if (((var7 != 0)) && ((!(this.selection.isHeld(false)) ||
                   !(MembershipBenefitsScreen.field_x <= ea.field_d)))) {
-                  wp.a(8, ta.field_e[1]);
+                  wp.playUiSound(8, ta.uiSounds[1]);
                   ea.field_d = MembershipBenefitsScreen.field_x + 20;
                 }
                 break regionExit1;

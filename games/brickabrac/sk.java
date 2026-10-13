@@ -180,28 +180,28 @@ final class sk extends h {
         field_G = null;
     }
 
-    final static l a(byte param0, kl param1) {
-        l var2 = null;
+    final static SoundPlayback queueSoundPlayback(byte obfuscationGuard, PcmStream stream) {
+        SoundPlayback var2 = null;
         RuntimeException var2_ref = null;
         int var3 = 0;
-        l stackIn_1_0 = null;
+        SoundPlayback stackIn_1_0 = null;
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
         String stackIn_5_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var2 = new l(param1, param1);
-          var3 = 30 % ((param0 - 58) / 43);
-          wd.field_v.addLast(var2, (byte) 3);
-          ob.field_J.b(param1);
+          var2 = new SoundPlayback(stream, stream);
+          var3 = 30 % ((obfuscationGuard - 58) / 43);
+          wd.soundPlaybacks.addLast(var2, (byte) 3);
+          ob.soundMixer.addStream(stream);
           stackIn_1_0 = var2;
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
           stackIn_4_0 = var2_ref;
-          stackIn_4_1 = new StringBuilder().append("sk.A(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_4_1 = new StringBuilder().append("sk.A(").append(obfuscationGuard).append(',');
+          if (stream == null) {
             stackIn_5_2 = "null";
           } else {
             stackIn_5_2 = "{...}";

@@ -167,7 +167,7 @@ final class AchievementIcon extends IntrusiveNode {
                 nf.selectedAchievementId = -1;
               }
               if (nf.selectedAchievementId != -1) {
-                wp.a(8, ta.field_e[0]);
+                wp.playUiSound(8, ta.uiSounds[0]);
               }
             }
           } else {
@@ -179,7 +179,7 @@ final class AchievementIcon extends IntrusiveNode {
                 nf.selectedAchievementId = -1;
               }
               if (nf.selectedAchievementId != -1) {
-                wp.a(8, ta.field_e[0]);
+                wp.playUiSound(8, ta.uiSounds[0]);
               }
             }
           }

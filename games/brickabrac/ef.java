@@ -6,7 +6,7 @@ import java.io.*;
 final class ef extends IOException {
     static String field_f;
     static RgbSprite[] field_b;
-    static oe[] field_a;
+    static PcmSound[] field_a;
     static RgbSprite[] field_e;
     static int[] keyEventCodes;
     static String field_c;
@@ -130,7 +130,7 @@ final class ef extends IOException {
     }
 
     static {
-        field_a = new oe[29];
+        field_a = new PcmSound[29];
         keyEventCodes = new int[128];
         field_c = "1-UP: an extra life.";
         field_f = "No players";

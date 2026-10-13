@@ -272,7 +272,7 @@ final class bm {
 
     final static void playGameplayAudioEvents(int volume, int tempoScale256, boolean alternateMusicTrack, int obfuscationGuard, NodeDeque events) {
         int stackIn_74_0 = 0;
-        kl stackIn_78_0 = null;
+        PcmStream stackIn_78_0 = null;
         RuntimeException stackIn_89_0 = null;
         StringBuilder stackIn_89_1 = null;
         String stackIn_90_2 = null;
@@ -280,10 +280,10 @@ final class bm {
         int var5_int = 0;
         RuntimeException var5 = null;
         GameplayAudioEvent var6 = null;
-        kl var6_ref = null;
+        PcmStream var6_ref = null;
         Object var7_ref = null;
         int var7 = 0;
-        oe[] var8_ref_oe__ = null;
+        PcmSound[] var8_ref_oe__ = null;
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
@@ -307,37 +307,37 @@ final class bm {
                   } else {
                     if (var6.eventCode != 4) {
                       if (var6.eventCode == 5) {
-                        var7_ref = ta.field_e[5];
+                        var7_ref = ta.uiSounds[5];
                       } else {
                         if (6 == var6.eventCode) {
-                          var7_ref = ta.field_e[6];
+                          var7_ref = ta.uiSounds[6];
                         } else {
                           if (var6.eventCode == 7) {
-                            var7_ref = ta.field_e[7];
+                            var7_ref = ta.uiSounds[7];
                           } else {
                             if (3 == var6.eventCode) {
                               var7_ref = ef.field_a[var6.detailId];
                             } else {
                               if (8 == var6.eventCode) {
-                                var7_ref = ta.field_e[10];
+                                var7_ref = ta.uiSounds[10];
                               } else {
                                 if (9 == var6.eventCode) {
-                                  var7_ref = ta.field_e[11];
+                                  var7_ref = ta.uiSounds[11];
                                 } else {
                                   if (var6.eventCode == 10) {
-                                    var7_ref = ta.field_e[12];
+                                    var7_ref = ta.uiSounds[12];
                                   } else {
                                     if (var6.eventCode == 11) {
                                       var7_ref = cg.field_p[oo.field_w.nextBoundedInt(-37880252, cg.field_p.length)];
                                     } else {
                                       if (var6.eventCode == 12) {
-                                        var7_ref = ta.field_e[13];
+                                        var7_ref = ta.uiSounds[13];
                                       } else {
                                         if (var6.eventCode == 14) {
-                                          var7_ref = ta.field_e[14];
+                                          var7_ref = ta.uiSounds[14];
                                         } else {
                                           if ((var6.eventCode == 13)) {
-                                            var7_ref = ta.field_e[15];
+                                            var7_ref = ta.uiSounds[15];
                                           }
                                         }
                                       }
@@ -367,7 +367,7 @@ final class bm {
                 }
               }
               if (null != var7_ref) {
-                PlayerBoard.a((oe) (var7_ref), -56, volume);
+                PlayerBoard.a((PcmSound) (var7_ref), -56, volume);
               }
               var6 = (GameplayAudioEvent) (events.next((byte) 116));
               continue;
@@ -384,7 +384,7 @@ final class bm {
           }
           var6_ref = stackIn_78_0;
           var7 = var5_int * tempoScale256;
-          var8 = var6_ref.h();
+          var8 = var6_ref.getVolume();
           var9 = var5_int + 1 << 2;
           if (var8 + var9 < var7) {
             var7 = var8 + var9;
@@ -392,7 +392,7 @@ final class bm {
           if ((var8 - var9) > var7) {
             var7 = var8 - var9;
           }
-          var6_ref.d(ki.field_d * var7 / 256);
+          var6_ref.setVolume(ki.masterSoundGain * var7 / 256);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

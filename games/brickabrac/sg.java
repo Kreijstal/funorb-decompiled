@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class sg extends k {
-    static ra field_l;
+    static AudioMixer field_l;
     static String field_m;
     static String field_k;
     static int field_n;
@@ -24,7 +24,7 @@ final class sg extends k {
           kb.pointerChanged = kn.livePointerChanged;
           kn.livePointerChanged = false;
           ki.pressedButton = mi.livePressedButton;
-          tb.pressX = l.livePressX;
+          tb.pressX = SoundPlayback.livePressX;
           qo.pressY = va.livePressY;
           mi.livePressedButton = 0;
           var2 = 54 / ((obfuscationGuard + 49) / 63);

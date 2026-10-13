@@ -65,7 +65,7 @@ class mh extends ba {
     int field_P;
     RgbSprite[] field_Jb;
     int field_C;
-    static oe[] field_ob;
+    static PcmSound[] field_ob;
     RgbSprite field_Hb;
 
     mh(long param0, mh param1) {
@@ -824,7 +824,7 @@ class mh extends ba {
         field_gb = -1;
         field_mb = "Log in / Create account";
         field_F = new int[9000];
-        field_ob = new oe[8];
+        field_ob = new PcmSound[8];
         field_ab = new tf();
     }
 }

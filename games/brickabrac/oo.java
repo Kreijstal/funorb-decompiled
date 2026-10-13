@@ -35,7 +35,7 @@ final class oo extends ki {
           }
           var7 = kd.a(this.field_m, param3, (byte) -50);
           if (!var7.a((byte) -84, param3, this.field_m)) {
-            l.a(-35, 26746, var7, param3, 2, rg.field_f);
+            SoundPlayback.a(-35, 26746, var7, param3, 2, rg.field_f);
             var7.a(this.field_m, param3, (byte) 78);
           } else {
             ua.a(th.field_i, param2, 306, param0, ek.field_hb, 79, var7.field_p, param4, param3, 2, up.field_w, -35);
@@ -50,7 +50,7 @@ final class oo extends ki {
         }
         pb var8 = kd.a(this.field_m, param3, (byte) -50);
         if (!var8.a((byte) -84, param3, this.field_m)) {
-          l.a(-35, 26746, var8, param3, 2, rg.field_f);
+          SoundPlayback.a(-35, 26746, var8, param3, 2, rg.field_f);
           var8.a(this.field_m, param3, (byte) 78);
         } else {
           ua.a(th.field_i, param2, 306, param0, ek.field_hb, 79, var8.field_p, param4, param3, 2, up.field_w, -35);
@@ -143,7 +143,7 @@ final class oo extends ki {
         if (this.b((byte) -112)) {
           var6 = PowerUp.a(this.field_m, param3, -20777);
           if (!var6.a((byte) -84, param3, this.field_m)) {
-            l.a(0, 26746, var6, param3, 1, rg.field_f);
+            SoundPlayback.a(0, 26746, var6, param3, 1, rg.field_f);
             var6.a(this.field_m, param3, (byte) 78);
           }
           ua.a(nl.field_d, param4, 640, param2, field_x, 95, var6.field_p, param1, param3, 1, ad.field_b, 0);

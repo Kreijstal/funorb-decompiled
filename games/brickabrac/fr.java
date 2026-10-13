@@ -43,7 +43,7 @@ final class fr {
     static int field_k;
     short[] field_B;
     static int[] field_l;
-    static oe[] field_e;
+    static PcmSound[] field_e;
     short[] field_t;
 
     final static boolean a(byte param0) {
@@ -269,7 +269,7 @@ final class fr {
 
     static {
         field_M = new NodeDeque();
-        field_e = new oe[8];
+        field_e = new PcmSound[8];
         field_l = new int[]{44, 45, 8, 23};
     }
 }

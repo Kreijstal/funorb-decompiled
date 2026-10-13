@@ -154,7 +154,7 @@ final class bk extends IntrusiveNode {
         }
     }
 
-    final oe c() {
+    final PcmSound c() {
         int var3 = 0;
         int var6 = 0;
         int incrementValue$0 = 0;
@@ -186,7 +186,7 @@ final class bk extends IntrusiveNode {
           }
         }
         this.field_y = null;
-        return new oe(this.field_j, var1, this.field_G, this.field_J, this.field_q);
+        return new PcmSound(this.field_j, var1, this.field_G, this.field_J, this.field_q);
     }
 
     final static void b(byte[] param0) {
@@ -305,7 +305,7 @@ final class bk extends IntrusiveNode {
         field_p = true;
     }
 
-    final oe a(int[] param0) {
+    final PcmSound a(int[] param0) {
         int var5 = 0;
         int incrementValue$0 = 0;
         int var3;
@@ -355,7 +355,7 @@ final class bk extends IntrusiveNode {
         this.field_y = null;
         var12 = this.field_m;
         this.field_m = null;
-        return new oe(this.field_j, var12, this.field_G, this.field_J, this.field_q);
+        return new PcmSound(this.field_j, var12, this.field_G, this.field_J, this.field_q);
     }
 
     public static void a() {

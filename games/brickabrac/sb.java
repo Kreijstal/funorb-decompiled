@@ -984,7 +984,7 @@ final class sb implements vc {
                   stackIn_33_0 = n.field_d;
                   stackIn_34_1 = (var4 != 0) ? 0 : 1;
                   if ((stackIn_33_0 ? 1 : 0) == stackIn_34_1) {
-                    wp.a(8, ta.field_e[0]);
+                    wp.playUiSound(8, ta.uiSounds[0]);
                   }
                 }
               }
@@ -1120,7 +1120,7 @@ final class sb implements vc {
               stackIn_134_11 = (so.a((byte) -35) <= 50) ? false : true;
               dc.a(stackIn_130_0, stackIn_131_1, stackIn_133_2, stackIn_133_3, stackIn_133_4, stackIn_133_5, stackIn_133_6, stackIn_133_7, stackIn_133_8 != 0, stackIn_133_9, stackIn_133_10, stackIn_134_11);
             } else {
-              wp.a(8, ta.field_e[0]);
+              wp.playUiSound(8, ta.uiSounds[0]);
               var5Lifetime3 = 400 - this.field_a * this.field_a;
               var6Lifetime2 = var5Lifetime3 * (480 - LevelPack.field_g) / 400 + LevelPack.field_g;
               sn.b((byte) -118, var6Lifetime2);
@@ -1187,7 +1187,7 @@ final class sb implements vc {
                 dc.a(stackIn_240_0, stackIn_241_1, stackIn_243_2, stackIn_243_3, stackIn_243_4, stackIn_243_5, stackIn_243_6, stackIn_243_7, stackIn_243_8 != 0, stackIn_243_9, stackIn_243_10, stackIn_244_11);
                 break regionExit1;
               }
-              wp.a(8, ta.field_e[0]);
+              wp.playUiSound(8, ta.uiSounds[0]);
             }
             var5Lifetime4 = 400 - this.field_a * this.field_a;
             var6Lifetime3 = var5Lifetime4 * (480 - LevelPack.field_g) / 400 + LevelPack.field_g;
@@ -1255,7 +1255,7 @@ final class sb implements vc {
                 }
                 return;
               }
-              wp.a(8, ta.field_e[0]);
+              wp.playUiSound(8, ta.uiSounds[0]);
             }
             var5Lifetime4 = 400 - this.field_a * this.field_a;
             var6Lifetime3 = var5Lifetime4 * (480 - LevelPack.field_g) / 400 + LevelPack.field_g;
@@ -1320,7 +1320,7 @@ final class sb implements vc {
                 }
                 return;
               }
-              wp.a(8, ta.field_e[0]);
+              wp.playUiSound(8, ta.uiSounds[0]);
             }
             var5Lifetime4 = 400 - this.field_a * this.field_a;
             var6Lifetime3 = var5Lifetime4 * (480 - LevelPack.field_g) / 400 + LevelPack.field_g;

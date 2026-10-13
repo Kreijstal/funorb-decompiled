@@ -195,13 +195,13 @@ final class mm extends mh {
     }
 
     final static void h(int param0) {
-        l var1 = null;
+        SoundPlayback var1 = null;
         int var2 = 0;
         String var3 = null;
         boolean stackIn_20_0 = false;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1_ref = null;
-        l var1Lifetime1;
+        SoundPlayback var1Lifetime1;
         var2 = BrickABrac.field_J ? 1 : 0;
         try {
           eo.field_f.c();
@@ -213,20 +213,20 @@ final class mm extends mh {
           bm.field_c = bm.field_c - 1;
           if (bm.field_c == 0) {
             bm.field_c = 200;
-            var1 = (l) (wd.field_v.first(-110));
+            var1 = (SoundPlayback) (wd.soundPlaybacks.first(-110));
             while (var1 != null) {
-              if (!var1.field_n.isLinked(0)) {
+              if (!var1.sourceNode.isLinked(0)) {
                 var1.unlink((byte) 111);
               }
-              var1 = (l) (wd.field_v.next((byte) 116));
+              var1 = (SoundPlayback) (wd.soundPlaybacks.next((byte) 116));
             }
             if (jc.field_M != null) {
-              var1Lifetime1 = (l) (jc.field_M.first(param0 + 29407));
+              var1Lifetime1 = (SoundPlayback) (jc.field_M.first(param0 + 29407));
               while (var1Lifetime1 != null) {
-                if (!var1Lifetime1.field_n.isLinked(0)) {
+                if (!var1Lifetime1.sourceNode.isLinked(0)) {
                   var1Lifetime1.unlink((byte) 111);
                 }
-                var1Lifetime1 = (l) (jc.field_M.next((byte) 116));
+                var1Lifetime1 = (SoundPlayback) (jc.field_M.next((byte) 116));
               }
             }
           }

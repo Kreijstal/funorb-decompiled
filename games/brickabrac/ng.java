@@ -24,7 +24,7 @@ final class ng {
           ng.requestScreen(true, 107, -22);
         }
         kh.field_a = 0;
-        wp.a(8, ta.field_e[8]);
+        wp.playUiSound(8, ta.uiSounds[8]);
     }
 
     public static void a(byte param0) {

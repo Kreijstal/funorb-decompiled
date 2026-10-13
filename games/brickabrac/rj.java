@@ -12,12 +12,12 @@ final class rj {
         }
     }
 
-    final static void a(byte param0, kl param1) {
+    final static void a(byte param0, PcmStream param1) {
         if (param0 != 80) {
           return;
         }
         try {
-          ob.field_J.a(param1);
+          ob.soundMixer.removeStream(param1);
         } catch (RuntimeException runtimeException) {
           throw qb.a((Throwable) ((Object) runtimeException), "rj.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

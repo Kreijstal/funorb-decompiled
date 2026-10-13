@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ie extends qd {
+final class ie extends AudioStream {
     private int[] field_z;
     int[] field_y;
     private int[] field_P;
@@ -87,9 +87,9 @@ final class ie extends qd {
         int var11 = 0;
         var11 = BrickABrac.field_J ? 1 : 0;
         try {
-          param3.field_z = tj.field_q / 100;
+          param3.field_z = PcmPlayer.sampleRate / 100;
           if (0 <= param3.field_x && (null == param3.field_y ||
-            param3.field_y.l())) {
+            param3.field_y.isOutOfRange())) {
             param3.a(param0 ^ -23346);
             param3.unlink((byte) 111);
             if (param3.field_q > 0) {
@@ -111,7 +111,7 @@ final class ie extends qd {
             }
             param3.field_o = var6_int;
           }
-          param3.field_y.c(this.a(-11, param3));
+          param3.field_y.setSpeed(this.a(-11, param3));
           var7 = param3.field_G;
           param3.field_v = param3.field_v + 1;
           var8 = 0;
@@ -166,17 +166,17 @@ final class ie extends qd {
             }
           }
           if (var8 == 0) {
-            param3.field_y.a(param3.field_z, this.b(param3, param0 - 29023), this.b(2, param3));
+            param3.field_y.rampGainAndPan(param3.field_z, this.b(param3, param0 - 29023), this.b(2, param3));
             return false;
           }
-          param3.field_y.g(param3.field_z);
+          param3.field_y.fadeOut(param3.field_z);
           if (param1 != null) {
-            param3.field_y.b(param1, param4, param2);
+            param3.field_y.fill(param1, param4, param2);
           } else {
-            param3.field_y.a(param2);
+            param3.field_y.skip(param2);
           }
-          if (param3.field_y.k()) {
-            this.field_C.field_m.b(param3.field_y);
+          if (param3.field_y.isRamping()) {
+            this.field_C.field_m.addStream(param3.field_y);
           }
           param3.a(-94);
           if (param3.field_x >= 0) {
@@ -232,7 +232,7 @@ final class ie extends qd {
         this.field_V[param0] = param1;
     }
 
-    final synchronized qd d() {
+    final synchronized AudioStream nextSubStream() {
         return null;
     }
 
@@ -315,7 +315,7 @@ final class ie extends qd {
         }
     }
 
-    final synchronized int b() {
+    final synchronized int getSchedulingCost() {
         return 0;
     }
 
@@ -449,7 +449,7 @@ final class ie extends qd {
         boolean stackIn_21_3;
         ka var5;
         int var6_int;
-        oe var6;
+        PcmSound var6;
         ka var7;
         ka var8;
         int var9;
@@ -502,7 +502,7 @@ final class ie extends qd {
         var7.field_A = 0;
         var7.field_x = -1;
         if (this.field_y[param0] != 0) {
-          var7.field_y = kl.a(var6, this.a(-11, var7), 0, this.b(2, var7));
+          var7.field_y = PcmStream.createWithGain(var6, this.a(-11, var7), 0, this.b(2, var7));
           stackIn_20_1 = false;
           stackIn_20_2 = var7;
           if (var11.field_j[param2] >= 0) {
@@ -514,10 +514,10 @@ final class ie extends qd {
           }
           this.a(stackIn_20_1, stackIn_20_2, stackIn_21_3);
         } else {
-          var7.field_y = kl.a(var6, this.a(-11, var7), this.b(var7, -5723), this.b(2, var7));
+          var7.field_y = PcmStream.createWithGain(var6, this.a(-11, var7), this.b(var7, -5723), this.b(2, var7));
         }
         if (var11.field_j[param2] < 0) {
-          var7.field_y.f(-1);
+          var7.field_y.setLoopCount(-1);
         }
         if (var7.field_q >= 0) {
           var8 = this.field_r[param0][var7.field_q];
@@ -588,9 +588,9 @@ final class ie extends qd {
           if (param1 < 0 ||
             var3.field_u == param1) {
             if (null != var3.field_y) {
-              var3.field_y.g(tj.field_q / 100);
-              if (var3.field_y.k()) {
-                this.field_C.field_m.b(var3.field_y);
+              var3.field_y.fadeOut(PcmPlayer.sampleRate / 100);
+              if (var3.field_y.isRamping()) {
+                this.field_C.field_m.addStream(var3.field_y);
               }
               var3.a(-95);
             }
@@ -603,8 +603,8 @@ final class ie extends qd {
         }
     }
 
-    final synchronized qd a() {
-        return (qd) ((Object) this.field_C);
+    final synchronized AudioStream firstSubStream() {
+        return (AudioStream) ((Object) this.field_C);
     }
 
     private final void c(int param0, int param1, int param2) {
@@ -674,20 +674,20 @@ final class ie extends qd {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var4 = null;
         try {
-          var4_int = param1.field_F.field_m.length;
+          var4_int = param1.field_F.samples.length;
           if (param2 &&
-            param1.field_F.field_j) {
-            var6 = var4_int - (-var4_int + param1.field_F.field_n);
+            param1.field_F.pingPong) {
+            var6 = var4_int - (-var4_int + param1.field_F.loopStart);
             var5 = (int)((long)this.field_y[param1.field_u] * (long)var6 >> 6);
             var4_int = var4_int << 8;
             if (var4_int <= var5) {
-              param1.field_y.b(true);
+              param1.field_y.setReverse(true);
               var5 = var4_int + var4_int + (-1 - var5);
             }
           } else {
             var5 = (int)((long)var4_int * (long)this.field_y[param1.field_u] >> 6);
           }
-          param1.field_y.h(var5);
+          param1.field_y.setPosition(var5);
           if (param0) {
             this.field_V = (int[]) null;
           }
@@ -1113,7 +1113,7 @@ final class ie extends qd {
         }
     }
 
-    final synchronized void b(int[] param0, int param1, int param2) {
+    final synchronized void fill(int[] output, int offset, int frames) {
         int var4_int = 0;
         long var5 = 0L;
         int var7 = 0;
@@ -1126,39 +1126,39 @@ final class ie extends qd {
         var8 = BrickABrac.field_J ? 1 : 0;
         try {
           if (this.field_K.c()) {
-            var4_int = this.field_K.field_d * this.field_t / tj.field_q;
+            var4_int = this.field_K.field_d * this.field_t / PcmPlayer.sampleRate;
             while (true) {
-              var5 = this.field_F + (long)var4_int * (long)param2;
+              var5 = this.field_F + (long)var4_int * (long)frames;
               if (-var5 + this.field_B >= 0L) {
                 this.field_F = var5;
                 break;
               }
               var7 = (int)(((long)var4_int + (-this.field_F + this.field_B) - 1L) / (long)var4_int);
               this.field_F = this.field_F + (long)var4_int * (long)var7;
-              this.field_C.b(param0, param1, var7);
-              param2 = param2 - var7;
+              this.field_C.fill(output, offset, var7);
+              frames = frames - var7;
               this.e(-2);
-              param1 = param1 + var7;
+              offset = offset + var7;
               if (this.field_K.c()) {
                 continue;
               }
-              this.field_C.b(param0, param1, param2);
+              this.field_C.fill(output, offset, frames);
               return;
             }
           }
-          this.field_C.b(param0, param1, param2);
+          this.field_C.fill(output, offset, frames);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
           stackIn_12_0 = var4;
           stackIn_12_1 = new StringBuilder().append("ie.D(");
-          if (param0 == null) {
+          if (output == null) {
             stackIn_13_2 = "null";
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw qb.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw qb.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(offset).append(',').append(frames).append(')').toString());
         }
     }
 
@@ -1231,7 +1231,7 @@ final class ie extends qd {
           if (param0 != -11) {
             this.field_N = true;
           }
-          var5Lifetime1 = (int)((double)(param1.field_F.field_l * 256) * Math.pow(2.0, 0.0003255208333333333 * (double)var3_int) / (double)tj.field_q + 0.5);
+          var5Lifetime1 = (int)((double)(param1.field_F.sampleRate * 256) * Math.pow(2.0, 0.0003255208333333333 * (double)var3_int) / (double)PcmPlayer.sampleRate + 0.5);
           stackIn_12_0 = (var5Lifetime1 >= 1) ? var5Lifetime1 : 1;
           return stackIn_12_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -1288,31 +1288,31 @@ final class ie extends qd {
         }
     }
 
-    final synchronized void a(int param0) {
+    final synchronized void skip(int frames) {
         int var2;
         long var3;
         int var5;
         int var6;
         var6 = BrickABrac.field_J ? 1 : 0;
         if (this.field_K.c()) {
-          var2 = this.field_K.field_d * this.field_t / tj.field_q;
+          var2 = this.field_K.field_d * this.field_t / PcmPlayer.sampleRate;
           while (true) {
-            var3 = (long)var2 * (long)param0 + this.field_F;
+            var3 = (long)var2 * (long)frames + this.field_F;
             if (-var3 + this.field_B >= 0L) {
               this.field_F = var3;
               break;
             }
             var5 = (int)((-1L + (-this.field_F + this.field_B) + (long)var2) / (long)var2);
             this.field_F = this.field_F + (long)var5 * (long)var2;
-            this.field_C.a(var5);
-            param0 = param0 - var5;
+            this.field_C.skip(var5);
+            frames = frames - var5;
             this.e(-2);
             if (!this.field_K.c()) {
               break;
             }
           }
         }
-        this.field_C.a(param0);
+        this.field_C.skip(frames);
     }
 
     private final synchronized void a(boolean param0, boolean param1, boolean param2, vm param3) {

@@ -199,7 +199,7 @@ class FramedMenuScreen extends MenuScreen {
         if (param0 != -44) {
           return 92;
         }
-        return ki.field_d;
+        return ki.masterSoundGain;
     }
 
     static {

@@ -14,9 +14,9 @@ final class dr {
         return new dr(new PacketBuffer(var3));
     }
 
-    final oe a() {
+    final PcmSound a() {
         byte[] var1 = this.b();
-        return new oe(22050, var1, 22050 * this.field_c / 1000, 22050 * this.field_a / 1000);
+        return new PcmSound(22050, var1, 22050 * this.field_c / 1000, 22050 * this.field_a / 1000);
     }
 
     private final byte[] b() {

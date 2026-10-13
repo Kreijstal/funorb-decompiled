@@ -225,9 +225,9 @@ final class ri extends ib implements en {
 
     final static void c(boolean param0) {
         int var1 = 0;
-        if (ki.field_d < 224) {
-          var1 = ki.field_d % 32;
-          h.a(13894, ki.field_d + (32 - var1));
+        if (ki.masterSoundGain < 224) {
+          var1 = ki.masterSoundGain % 32;
+          h.a(13894, ki.masterSoundGain + (32 - var1));
         } else {
           h.a(13894, 256);
         }

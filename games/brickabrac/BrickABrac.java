@@ -119,7 +119,7 @@ public final class BrickABrac extends sa {
           }
         }
         if (ok.field_c == 50) {
-          wp.a(8, ta.field_e[9]);
+          wp.playUiSound(8, ta.uiSounds[9]);
         }
         if (cf.a((byte) 62)) {
           sq.a(false);
@@ -709,7 +709,7 @@ public final class BrickABrac extends sa {
         dp.f(1);
         qb.f(0);
         qa.d((byte) -119);
-        tj.g();
+        PcmPlayer.g();
         tn.c(-52);
         ko.a((byte) 117);
         im.a(-32);
@@ -874,7 +874,7 @@ public final class BrickABrac extends sa {
         ob.b(-95);
         bd.a(true);
         sk.a(51550);
-        l.a((byte) 49);
+        SoundPlayback.a((byte) 49);
         po.b(-81);
         al.a(28391);
         e.a(105);

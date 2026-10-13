@@ -10,7 +10,7 @@ abstract class ki {
     static String field_o;
     static BlankScreen field_p;
     private int[] field_c;
-    private oe[] field_b;
+    private PcmSound[] field_b;
     private String[] field_j;
     boolean field_q;
     int field_l;
@@ -18,7 +18,7 @@ abstract class ki {
     static int[] field_i;
     static mf field_f;
     static RgbSprite[][] field_k;
-    static int field_d;
+    static int masterSoundGain;
 
     RgbSprite c(byte param0) {
         if (param0 > -74) {
@@ -27,17 +27,17 @@ abstract class ki {
         return kb.field_Ub[gb.field_n];
     }
 
-    final oe[] a(int param0) {
+    final PcmSound[] a(int param0) {
         String var3 = null;
         String var2 = null;
         if (this.field_l < this.field_b.length) {
           var3 = this.field_j[this.field_c[this.field_l]];
           var2 = var3;
           if (BrickABrac.field_I.a(var2, "", (byte) -121)) {
-            this.field_b[this.field_l] = l.field_m.a(var3, "", (byte) 122);
+            this.field_b[this.field_l] = SoundPlayback.field_m.a(var3, "", (byte) 122);
           }
           if (og.field_gc.a(var2, "", (byte) -121)) {
-            this.field_b[this.field_l] = l.field_m.a((byte) 28, var3, "");
+            this.field_b[this.field_l] = SoundPlayback.field_m.a((byte) 28, var3, "");
           }
           if (this.field_b[this.field_l] != null) {
             this.field_l = this.field_l + 1;
@@ -141,7 +141,7 @@ abstract class ki {
             return;
           }
         }
-        if (!m.field_f.a(param0 ^ -74, this.field_n, 22050, ji.field_a, l.field_m)) {
+        if (!m.field_f.a(param0 ^ -74, this.field_n, 22050, ji.field_a, SoundPlayback.field_m)) {
           return;
         }
         if (sk.field_H > 0) {
@@ -243,7 +243,7 @@ abstract class ki {
           this.field_h = param1;
           this.field_m = param0;
           this.field_j = param2;
-          this.field_b = new oe[this.field_j.length];
+          this.field_b = new PcmSound[this.field_j.length];
           this.field_c = new int[this.field_j.length];
           for (var4_int = 0; this.field_c.length > var4_int; var4_int++) {
             this.field_c[var4_int] = var4_int;
@@ -261,6 +261,6 @@ abstract class ki {
         pressedButton = 0;
         field_p = new BlankScreen();
         field_i = new int[5];
-        field_d = 256;
+        masterSoundGain = 256;
     }
 }

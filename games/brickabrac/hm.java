@@ -108,7 +108,7 @@ final class hm {
 
     final static int a(boolean param0, String param1, int param2) {
         RuntimeException var3 = null;
-        oe var4 = null;
+        PcmSound var4 = null;
         int stackIn_4_0 = 0;
         int stackIn_6_0 = 0;
         RuntimeException stackIn_9_0 = null;
@@ -117,8 +117,8 @@ final class hm {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param2 != 0) {
-            var4 = (oe) null;
-            hm.a(-91, (oe) null, 44);
+            var4 = (PcmSound) null;
+            hm.a(-91, (PcmSound) null, 44);
           }
           if (param0) {
             stackIn_6_0 = kp.field_b.c(param1);
@@ -140,9 +140,9 @@ final class hm {
         }
     }
 
-    final static l a(int param0, oe param1, int param2) {
+    final static SoundPlayback a(int param0, PcmSound param1, int param2) {
         RuntimeException var3 = null;
-        l stackIn_3_0 = null;
+        SoundPlayback stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -151,7 +151,7 @@ final class hm {
           if (param0 != 0) {
             field_b = (String[]) null;
           }
-          stackIn_3_0 = sk.a((byte) -9, kl.b(param1, 100, param2));
+          stackIn_3_0 = sk.queueSoundPlayback((byte) -9, PcmStream.createAtRate(param1, 100, param2));
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

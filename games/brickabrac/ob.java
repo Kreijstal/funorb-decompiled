@@ -3,7 +3,7 @@
  */
 final class ob extends r {
     static int field_I;
-    static ra field_J;
+    static AudioMixer soundMixer;
     static String field_H;
     static bi field_D;
     static NodeDeque field_E;
@@ -17,7 +17,7 @@ final class ob extends r {
           return;
         }
         field_H = null;
-        field_J = null;
+        soundMixer = null;
         field_D = null;
     }
 

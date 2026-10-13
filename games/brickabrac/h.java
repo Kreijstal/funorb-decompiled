@@ -47,37 +47,37 @@ abstract class h extends oc implements sd {
     }
 
     final static void a(int param0, int param1) {
-        l var2 = null;
+        SoundPlayback var2 = null;
         int var3 = 0;
         boolean stackIn_14_0 = false;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2_ref = null;
-        l var2Lifetime1;
+        SoundPlayback var2Lifetime1;
         var3 = BrickABrac.field_J ? 1 : 0;
         try {
-          ki.field_d = param1;
+          ki.masterSoundGain = param1;
           if (param0 != 13894) {
             h.a(-92, -23);
           }
-          var2 = (l) (wd.field_v.first(param0 ^ -13940));
+          var2 = (SoundPlayback) (wd.soundPlaybacks.first(param0 ^ -13940));
           while (var2 != null) {
-            if (!var2.field_n.isLinked(0)) {
+            if (!var2.sourceNode.isLinked(0)) {
               var2.unlink((byte) 111);
             } else {
-              var2.field_j.e(ki.field_d * var2.field_i + 128 >> 8);
+              var2.stream.setGain(ki.masterSoundGain * var2.baseGain + 128 >> 8);
             }
-            var2 = (l) (wd.field_v.next((byte) 116));
+            var2 = (SoundPlayback) (wd.soundPlaybacks.next((byte) 116));
           }
           if (jc.field_M != null) {
-            var2Lifetime1 = (l) (jc.field_M.first(param0 - 13977));
+            var2Lifetime1 = (SoundPlayback) (jc.field_M.first(param0 - 13977));
             while (var2Lifetime1 != null) {
-              stackIn_14_0 = var2Lifetime1.field_n.isLinked(0);
+              stackIn_14_0 = var2Lifetime1.sourceNode.isLinked(0);
               if (stackIn_14_0) {
-                var2Lifetime1.field_j.e(var2Lifetime1.field_i * ki.field_d + 128 >> 8);
+                var2Lifetime1.stream.setGain(var2Lifetime1.baseGain * ki.masterSoundGain + 128 >> 8);
               } else {
                 var2Lifetime1.unlink((byte) 111);
               }
-              var2Lifetime1 = (l) (jc.field_M.next((byte) 116));
+              var2Lifetime1 = (SoundPlayback) (jc.field_M.next((byte) 116));
             }
             return;
           }

@@ -5,7 +5,7 @@ class ta {
     private RgbSprite[] field_b;
     static int field_f;
     static String field_a;
-    static oe[] field_e;
+    static PcmSound[] uiSounds;
     static mf field_g;
     static String field_d;
     static String field_c;
@@ -56,7 +56,7 @@ class ta {
           return;
         }
         field_a = null;
-        field_e = null;
+        uiSounds = null;
     }
 
     void a(int param0, int param1, int param2, boolean param3, int param4) {
@@ -88,7 +88,7 @@ class ta {
     }
 
     static {
-        field_e = new oe[16];
+        uiSounds = new PcmSound[16];
         field_d = "Some players haven't unlocked the currently selected game options.<br>Please view the '<%0>' tab on the left for details.";
         field_a = "You need to play 1 more rated game to unlock this option.";
         field_c = "Disruptive behaviour";

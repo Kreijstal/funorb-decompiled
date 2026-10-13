@@ -11,7 +11,7 @@ final class to {
     static RgbSprite field_e;
     private DualLinkDeque field_j;
     static int[] field_f;
-    static kl field_k;
+    static PcmStream field_k;
     static String field_h;
     static int field_b;
     static int field_i;

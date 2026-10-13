@@ -1,13 +1,13 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class l extends IntrusiveNode {
+final class SoundPlayback extends IntrusiveNode {
     static wp field_m;
-    int field_i;
-    kl field_j;
+    int baseGain;
+    PcmStream stream;
     static volatile int livePressX;
     static String field_k;
-    IntrusiveNode field_n;
+    IntrusiveNode sourceNode;
 
     final static void a(int param0, int param1, pb param2, int param3, int param4, RgbSprite param5) {
         try {
@@ -16,7 +16,7 @@ final class l extends IntrusiveNode {
           sc.b(-95);
           if (param1 != 26746) {
             RgbSprite var7 = (RgbSprite) null;
-            l.a(-125, 69, (pb) null, 30, 70, (RgbSprite) null);
+            SoundPlayback.a(-125, 69, (pb) null, 30, 70, (RgbSprite) null);
           }
         } catch (RuntimeException runtimeException) {
           throw qb.a((Throwable) ((Object) runtimeException), "l.C(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ')');
@@ -127,14 +127,14 @@ final class l extends IntrusiveNode {
         }
     }
 
-    l(kl param0, IntrusiveNode param1) {
+    SoundPlayback(PcmStream stream, IntrusiveNode sourceNode) {
         try {
-          this.field_j = param0;
-          this.field_i = param0.g();
-          this.field_n = param1;
-          this.field_j.e(128 + this.field_i * ki.field_d >> 8);
+          this.stream = stream;
+          this.baseGain = stream.getGain();
+          this.sourceNode = sourceNode;
+          this.stream.setGain(128 + this.baseGain * ki.masterSoundGain >> 8);
         } catch (RuntimeException runtimeException) {
-          throw qb.a((Throwable) ((Object) runtimeException), "l.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw qb.a((Throwable) ((Object) runtimeException), "l.<init>(" + (stream != null ? "{...}" : "null") + ',' + (sourceNode != null ? "{...}" : "null") + ')');
         }
     }
 

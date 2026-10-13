@@ -12,7 +12,7 @@ final class pq extends IntrusiveNode {
     static String field_m;
     byte[] field_i;
     private int[] field_s;
-    oe[] field_t;
+    PcmSound[] field_t;
     static String field_n;
     byte[] field_r;
 
@@ -61,7 +61,7 @@ final class pq extends IntrusiveNode {
                   }
                 }
                 if (var7 != null) {
-                  this.field_t[var8] = (oe) (var7);
+                  this.field_t[var8] = (PcmSound) (var7);
                   this.field_s[var8] = 0;
                 }
               }
@@ -335,7 +335,7 @@ final class pq extends IntrusiveNode {
           this.field_p = new byte[128];
           this.field_j = new short[128];
           this.field_s = new int[128];
-          this.field_t = new oe[128];
+          this.field_t = new PcmSound[128];
           this.field_i = new byte[128];
           this.field_r = new byte[128];
           this.field_l = new jm[128];

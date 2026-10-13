@@ -65,13 +65,13 @@ final class wp {
         }
     }
 
-    private final oe a(int[] param0, String param1, int param2, String param3) {
+    private final PcmSound a(int[] param0, String param1, int param2, String param3) {
         int var5_int = 0;
         RuntimeException var5 = null;
         int var6 = 0;
         String var7 = null;
         Object stackIn_7_0 = null;
-        oe stackIn_9_0 = null;
+        PcmSound stackIn_9_0 = null;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
         String stackIn_13_2 = null;
@@ -95,7 +95,7 @@ final class wp {
             return stackIn_9_0;
           }
           stackIn_7_0 = null;
-          return (oe) (stackIn_7_0);
+          return (PcmSound) (stackIn_7_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
@@ -122,26 +122,26 @@ final class wp {
         }
     }
 
-    private final oe a(int param0, int param1, int[] param2, int param3) {
+    private final PcmSound a(int param0, int param1, int[] param2, int param3) {
         int var5_int = 0;
         RuntimeException var5 = null;
         long var6 = 0L;
-        oe var8 = null;
+        PcmSound var8 = null;
         bk var9 = null;
-        oe stackIn_2_0 = null;
+        PcmSound stackIn_2_0 = null;
         Object stackIn_8_0 = null;
         Object stackIn_17_0 = null;
-        oe stackIn_19_0 = null;
+        PcmSound stackIn_19_0 = null;
         RuntimeException stackIn_22_0 = null;
         StringBuilder stackIn_22_1 = null;
         String stackIn_23_2 = null;
         RuntimeException decompiledCaughtException = null;
-        oe var8Lifetime1;
+        PcmSound var8Lifetime1;
         try {
           var5_int = ((param1 & -536866817) << 4 | param1 >>> 12) ^ param0;
           var5_int = var5_int | param1 << 16;
           var6 = (long)var5_int ^ 4294967296L;
-          var8 = (oe) (this.field_e.get(-87, var6));
+          var8 = (PcmSound) (this.field_e.get(-87, var6));
           if (var8 != null) {
             stackIn_2_0 = var8;
             return stackIn_2_0;
@@ -152,7 +152,7 @@ final class wp {
           if (param2 != null &&
             param2[0] <= 0) {
             stackIn_8_0 = null;
-            return (oe) (stackIn_8_0);
+            return (PcmSound) (stackIn_8_0);
           }
           var9 = (bk) (this.field_a.get(-87, var6));
           if (var9 == null) {
@@ -165,7 +165,7 @@ final class wp {
           var8Lifetime1 = var9.a(param2);
           if (var8Lifetime1 == null) {
             stackIn_17_0 = null;
-            return (oe) (stackIn_17_0);
+            return (PcmSound) (stackIn_17_0);
           }
           var9.unlink((byte) 111);
           this.field_e.put(34, var8Lifetime1, var6);
@@ -448,12 +448,12 @@ final class wp {
         }
     }
 
-    private final oe a(String param0, byte param1, String param2, int[] param3) {
+    private final PcmSound a(String param0, byte param1, String param2, int[] param3) {
         int var5_int = 0;
         RuntimeException var5 = null;
         int var6 = 0;
         Object stackIn_7_0 = null;
-        oe stackIn_9_0 = null;
+        PcmSound stackIn_9_0 = null;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
         String stackIn_13_2 = null;
@@ -476,7 +476,7 @@ final class wp {
             return stackIn_9_0;
           }
           stackIn_7_0 = null;
-          return (oe) (stackIn_7_0);
+          return (PcmSound) (stackIn_7_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
@@ -503,22 +503,22 @@ final class wp {
         }
     }
 
-    final static void a(int param0, oe param1) {
-        if (param0 != 8) {
+    final static void playUiSound(int obfuscationGuard, PcmSound sound) {
+        if (obfuscationGuard != 8) {
           return;
         }
         try {
-          TimedSplashScreen.a(param0 ^ 100, param1);
+          TimedSplashScreen.playSound(obfuscationGuard ^ 100, sound);
         } catch (RuntimeException runtimeException) {
-          throw qb.a((Throwable) ((Object) runtimeException), "wp.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw qb.a((Throwable) ((Object) runtimeException), "wp.A(" + obfuscationGuard + ',' + (sound != null ? "{...}" : "null") + ')');
         }
     }
 
-    final oe a(String param0, String param1, byte param2) {
-        oe discarded$1 = null;
+    final PcmSound a(String param0, String param1, byte param2) {
+        PcmSound discarded$1 = null;
         RuntimeException var4 = null;
         String var5 = null;
-        oe stackIn_3_0 = null;
+        PcmSound stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -552,11 +552,11 @@ final class wp {
         }
     }
 
-    final oe a(int[] param0, int param1, int param2) {
+    final PcmSound a(int[] param0, int param1, int param2) {
         RuntimeException var4 = null;
-        oe stackIn_2_0 = null;
-        oe stackIn_5_0 = null;
-        oe stackIn_8_0 = null;
+        PcmSound stackIn_2_0 = null;
+        PcmSound stackIn_5_0 = null;
+        PcmSound stackIn_8_0 = null;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
         String stackIn_13_2 = null;
@@ -573,7 +573,7 @@ final class wp {
           if (param2 <= -124) {
             throw new RuntimeException();
           }
-          stackIn_8_0 = (oe) null;
+          stackIn_8_0 = (PcmSound) null;
           return stackIn_8_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -620,10 +620,10 @@ final class wp {
         }
     }
 
-    final oe a(int param0, int[] param1, int param2) {
+    final PcmSound a(int param0, int[] param1, int param2) {
         RuntimeException var4 = null;
-        oe stackIn_3_0 = null;
-        oe stackIn_6_0 = null;
+        PcmSound stackIn_3_0 = null;
+        PcmSound stackIn_6_0 = null;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
         String stackIn_13_2 = null;
@@ -668,10 +668,10 @@ final class wp {
         field_c = null;
     }
 
-    final oe a(byte param0, String param1, String param2) {
+    final PcmSound a(byte param0, String param1, String param2) {
         int var4_int = 0;
         RuntimeException var4 = null;
-        oe stackIn_1_0 = null;
+        PcmSound stackIn_1_0 = null;
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
         String stackIn_5_2 = null;
@@ -702,22 +702,22 @@ final class wp {
         }
     }
 
-    private final oe a(int param0, int param1, int param2, int[] param3) {
+    private final PcmSound a(int param0, int param1, int param2, int[] param3) {
         int var5_int = 0;
         RuntimeException var5 = null;
         long var6 = 0L;
-        oe var8 = null;
+        PcmSound var8 = null;
         dr var9 = null;
-        oe var10 = null;
-        oe stackIn_4_0 = null;
+        PcmSound var10 = null;
+        PcmSound stackIn_4_0 = null;
         Object stackIn_8_0 = null;
         Object stackIn_11_0 = null;
-        oe stackIn_15_0 = null;
+        PcmSound stackIn_15_0 = null;
         RuntimeException stackIn_18_0 = null;
         StringBuilder stackIn_18_1 = null;
         String stackIn_19_2 = null;
         RuntimeException decompiledCaughtException = null;
-        oe var8Lifetime1;
+        PcmSound var8Lifetime1;
         try {
           if (param1 != 0) {
             this.field_j = (mf) null;
@@ -725,7 +725,7 @@ final class wp {
           var5_int = param0 ^ (param2 >>> 12 | (-1342173185 & param2) << 4);
           var5_int = var5_int | param2 << 16;
           var6 = (long)var5_int;
-          var8 = (oe) (this.field_e.get(param1 ^ -88, var6));
+          var8 = (PcmSound) (this.field_e.get(param1 ^ -88, var6));
           if (var8 != null) {
             stackIn_4_0 = var8;
             return stackIn_4_0;
@@ -733,18 +733,18 @@ final class wp {
           if (param3 != null &&
             0 >= param3[0]) {
             stackIn_8_0 = null;
-            return (oe) (stackIn_8_0);
+            return (PcmSound) (stackIn_8_0);
           }
           var9 = dr.a(this.field_j, param2, param0);
           if (var9 == null) {
             stackIn_11_0 = null;
-            return (oe) (stackIn_11_0);
+            return (PcmSound) (stackIn_11_0);
           }
           var10 = var9.a();
           var8Lifetime1 = var10;
           this.field_e.put(param1 ^ 34, var8Lifetime1, var6);
           if (param3 != null) {
-            param3[0] = param3[0] - var10.field_m.length;
+            param3[0] = param3[0] - var10.samples.length;
           }
           stackIn_15_0 = var8Lifetime1;
           return stackIn_15_0;

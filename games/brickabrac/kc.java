@@ -37,12 +37,12 @@ final class kc extends IntrusiveNode {
         return fieldTemp$1 < 40 ? true : false;
     }
 
-    final static void a(mf param0, ra param1, int param2, int param3) {
+    final static void a(mf param0, AudioMixer param1, int param2, int param3) {
         try {
           rn.field_i = wn.a((byte) -98) * param2 / 1000;
           if (param3 < 91) {
-            ra var5 = (ra) null;
-            kc.a((mf) null, (ra) null, -127, -72);
+            AudioMixer var5 = (AudioMixer) null;
+            kc.a((mf) null, (AudioMixer) null, -127, -72);
           }
           ck.a(-2196, param0);
           bm.a((byte) -70, param0);

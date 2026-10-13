@@ -63,25 +63,25 @@ final class TimedSplashScreen extends MenuScreen {
         this.remainingTicks = 250;
     }
 
-    final static l a(int param0, oe param1) {
+    final static SoundPlayback playSound(int obfuscationGuard, PcmSound sound) {
         RuntimeException var2 = null;
-        l stackIn_3_0 = null;
+        SoundPlayback stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param0 < 75) {
+          if (obfuscationGuard < 75) {
             field_u = (mm) null;
           }
-          stackIn_3_0 = sk.a((byte) 117, kl.b(param1, 100, 96));
+          stackIn_3_0 = sk.queueSoundPlayback((byte) 117, PcmStream.createAtRate(sound, 100, 96));
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
           stackIn_6_0 = var2;
-          stackIn_6_1 = new StringBuilder().append("vp.B(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_6_1 = new StringBuilder().append("vp.B(").append(obfuscationGuard).append(',');
+          if (sound == null) {
             stackIn_7_2 = "null";
           } else {
             stackIn_7_2 = "{...}";
@@ -97,8 +97,8 @@ final class TimedSplashScreen extends MenuScreen {
           keyEventCharacters = null;
           return;
         }
-        oe var2 = (oe) null;
-        TimedSplashScreen.a(-53, (oe) null);
+        PcmSound var2 = (PcmSound) null;
+        TimedSplashScreen.playSound(-53, (PcmSound) null);
         field_s = null;
         keyEventCharacters = null;
     }
