@@ -265,7 +265,7 @@ final class ReportAbuseDialog extends ClientUiComponent {
         var3 = 80 / ((obfuscationGuard + 36) / 58);
         if (this.targetNameComponent != null) {
           this.targetNameComponent.text = this.targetName.toString();
-          this.targetNameComponent.x = (this.width - this.targetNameComponent.font.a(this.targetNameComponent.text)) / 2;
+          this.targetNameComponent.x = (this.width - this.targetNameComponent.font.textWidth(this.targetNameComponent.text)) / 2;
           this.targetNameComponent.width = -this.targetNameComponent.x + this.width;
           if (null != this.muteControl &&
             0 != this.muteControl.pressedButton) {
@@ -500,15 +500,15 @@ final class ReportAbuseDialog extends ClientUiComponent {
               discarded$0 = this.targetName.append(targetName);
             }
             var16Lifetime2 = 0;
-            var17 = titleStyle.font.a(is.field_g);
+            var17 = titleStyle.font.textWidth(is.field_g);
             if (var17 > var16Lifetime2) {
               var16Lifetime2 = var17;
             }
-            var17Lifetime2 = titleStyle.font.a(SpellCastAction.field_y);
+            var17Lifetime2 = titleStyle.font.textWidth(SpellCastAction.field_y);
             if (var17Lifetime2 > var16Lifetime2) {
               var16Lifetime2 = var17Lifetime2;
             }
-            var17Lifetime3 = titleStyle.font.a(op.field_d);
+            var17Lifetime3 = titleStyle.font.textWidth(op.field_d);
             if (var17Lifetime3 > var16Lifetime2) {
               var16Lifetime2 = var17Lifetime3;
             }
@@ -598,7 +598,7 @@ final class ReportAbuseDialog extends ClientUiComponent {
           this.content.addChild(this.instructions, 43);
           var15_int = 226;
           var16Lifetime1 = 10;
-          var17Lifetime1 = this.instructions.font.c(this.instructions.text, var15_int);
+          var17Lifetime1 = this.instructions.font.getLineCount(this.instructions.text, var15_int);
           this.instructions.setBounds(jn.field_d * var17Lifetime1, -20500, var15_int, var16Lifetime1, 13);
           var16Lifetime1 = var16Lifetime1 + jn.field_d * var17Lifetime1;
           this.content.setBounds(var16Lifetime1 + 10, -20500, 13 + (var15_int + 13), 24, 0);

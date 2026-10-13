@@ -51,7 +51,7 @@ final class or implements WidgetPainter {
           SoftwareRaster.h(var7, var8, var11Lifetime1 + var7, var8 + var12Lifetime1, 1);
           if (this.field_g != null) {
             var13 = this.field_h + var14.field_Q + var14.field_S;
-            this.field_g.a(widget.field_v, originX + widget.x + var13, this.field_d + originY + widget.y, widget.width - this.field_h - var13, widget.height - (this.field_h << 1), this.field_m, this.field_l, 1, 1, 0);
+            this.field_g.drawParagraph(widget.field_v, originX + widget.x + var13, this.field_d + originY + widget.y, widget.width - this.field_h - var13, widget.height - (this.field_h << 1), this.field_m, this.field_l, 1, 1, 0);
           }
         } catch (RuntimeException runtimeException) {
           throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "or.C(" + (widget != null ? "{...}" : "null") + ',' + originX + ',' + obfuscationGuard + ',' + renderFlag + ',' + originY + ')');

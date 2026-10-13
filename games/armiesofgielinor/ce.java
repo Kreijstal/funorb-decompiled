@@ -62,12 +62,12 @@ final class ce extends tj implements he {
         int var5 = param0 + this.x;
         int var6 = this.y + param1;
         if (param2 < -82) {
-          ArmiesOfGielinor.field_J.a(aq.field_a, 20 + var5, var6 + 20, -40 + this.width, -50 + this.height, 16777215, -1, 1, 0, ArmiesOfGielinor.field_J.field_H);
+          ArmiesOfGielinor.field_J.drawParagraph(aq.field_a, 20 + var5, var6 + 20, -40 + this.width, -50 + this.height, 16777215, -1, 1, 0, ArmiesOfGielinor.field_J.maxAscent);
           super.a(param0, param1, (byte) -107, param3);
           return;
         }
         field_F = (RgbSprite[]) null;
-        ArmiesOfGielinor.field_J.a(aq.field_a, 20 + var5, var6 + 20, -40 + this.width, -50 + this.height, 16777215, -1, 1, 0, ArmiesOfGielinor.field_J.field_H);
+        ArmiesOfGielinor.field_J.drawParagraph(aq.field_a, 20 + var5, var6 + 20, -40 + this.width, -50 + this.height, 16777215, -1, 1, 0, ArmiesOfGielinor.field_J.maxAscent);
         super.a(param0, param1, (byte) -107, param3);
     }
 

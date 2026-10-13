@@ -72,7 +72,7 @@ final class SocialListPanel extends ClientUiComponent {
 
     final static int k(int param0) {
         if (param0 <= -38) {
-          return nr.field_e.field_v - nr.field_e.field_L + (-(nr.field_e.field_H >> 1) + (nr.field_e.field_y >> 2) + 3);
+          return nr.field_e.baselineHeight - nr.field_e.maxDescent + (-(nr.field_e.maxAscent >> 1) + (nr.field_e.xHeight >> 2) + 3);
         }
         return 60;
     }

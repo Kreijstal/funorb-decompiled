@@ -59,7 +59,7 @@ final class SphinxActionRequest extends ActionRequest {
         String stackIn_37_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var5_ref = null;
-        tu var7 = null;
+        BinaryBitmapFont var7 = null;
         ClientUiComponent var8 = null;
         ClientUiComponent var9 = null;
         ClientUiComponent var10 = null;
@@ -116,9 +116,9 @@ final class SphinxActionRequest extends ActionRequest {
           var7 = DropdownArrowPainter.a("lobby", param1, param4, (byte) -53, "largefont");
           t.field_a = DropdownArrowPainter.a("lobby", param1, param4, (byte) -53, "generalfont");
           LeaderEscortCondition.field_f = DropdownArrowPainter.a("lobby", param1, param4, (byte) -53, "chatfont");
-          var7.a(var5, var24);
-          t.field_a.a(var5, var24);
-          LeaderEscortCondition.field_f.a(var5, var24);
+          var7.setInlineSprites(var5, var24);
+          t.field_a.setInlineSprites(var5, var24);
+          LeaderEscortCondition.field_f.setInlineSprites(var5, var24);
           var8 = new ClientUiComponent(0L, (ClientUiComponent) null);
           var8.font = (BitmapFont) ((Object) var7);
           var8.textColour = 16777215;

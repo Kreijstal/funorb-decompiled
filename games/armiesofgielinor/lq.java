@@ -9,11 +9,11 @@ final class lq {
     static String field_a;
     static String field_f;
 
-    final static nc a(byte[] param0, int param1) {
-        nc var2 = null;
+    final static AntialiasedBitmapFont a(byte[] param0, int param1) {
+        AntialiasedBitmapFont var2 = null;
         RuntimeException var2_ref = null;
-        nc stackIn_5_0 = null;
-        nc stackIn_7_0 = null;
+        AntialiasedBitmapFont stackIn_5_0 = null;
+        AntialiasedBitmapFont stackIn_7_0 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
@@ -22,9 +22,9 @@ final class lq {
           if (param0 == null) {
             return null;
           }
-          var2 = new nc(param0, j.decodedSpriteOffsetXs, CampaignMenuButton.decodedSpriteOffsetYs, qm.decodedSpriteWidths, c.decodedSpriteHeights, MovementPresentation.decodedSpritePalette, AnimationPlayer.decodedSpriteIndices);
+          var2 = new AntialiasedBitmapFont(param0, j.decodedSpriteOffsetXs, CampaignMenuButton.decodedSpriteOffsetYs, qm.decodedSpriteWidths, c.decodedSpriteHeights, MovementPresentation.decodedSpritePalette, AnimationPlayer.decodedSpriteIndices);
           if (param1 != 0) {
-            stackIn_5_0 = (nc) null;
+            stackIn_5_0 = (AntialiasedBitmapFont) null;
             return stackIn_5_0;
           }
           rj.releaseSpriteDecodeBuffers((byte) 117);

@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class LeaderEscortCondition implements MatchCondition {
-    static tu field_f;
+    static BinaryBitmapFont field_f;
     static String field_b;
     static String[] field_a;
     private Unit[] leaders;
@@ -12,10 +12,10 @@ final class LeaderEscortCondition implements MatchCondition {
     static int field_i;
     static String field_g;
 
-    final static d a(byte[] param0, int param1) {
-        d var2 = null;
+    final static PalettedBitmapFont a(byte[] param0, int param1) {
+        PalettedBitmapFont var2 = null;
         RuntimeException var2_ref = null;
-        d stackIn_6_0 = null;
+        PalettedBitmapFont stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;
@@ -25,9 +25,9 @@ final class LeaderEscortCondition implements MatchCondition {
             return null;
           }
           if (param1 < 71) {
-            field_f = (tu) null;
+            field_f = (BinaryBitmapFont) null;
           }
-          var2 = new d(param0, j.decodedSpriteOffsetXs, CampaignMenuButton.decodedSpriteOffsetYs, qm.decodedSpriteWidths, c.decodedSpriteHeights, MovementPresentation.decodedSpritePalette, AnimationPlayer.decodedSpriteIndices);
+          var2 = new PalettedBitmapFont(param0, j.decodedSpriteOffsetXs, CampaignMenuButton.decodedSpriteOffsetYs, qm.decodedSpriteWidths, c.decodedSpriteHeights, MovementPresentation.decodedSpritePalette, AnimationPlayer.decodedSpriteIndices);
           rj.releaseSpriteDecodeBuffers((byte) 107);
           stackIn_6_0 = var2;
           return stackIn_6_0;

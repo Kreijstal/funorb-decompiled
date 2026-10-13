@@ -48,7 +48,7 @@ final class sq extends IntrusiveNode {
           this.field_l > this.field_m) {
           var3 = (int)(127.0 * (1.0 - Math.cos((double)this.field_m * 3.141592653589793 / (double)(this.field_l / 2))));
           SoftwareRaster.a(-(this.field_p >> 1) + 320, param1 + (-this.field_m - 14), this.field_p, 20, 5, 0, var3);
-          rs.field_n.a(this.field_r, 320, param1 - this.field_m, 16777215, 0, var3);
+          rs.field_n.drawCenteredWithAlpha(this.field_r, 320, param1 - this.field_m, 16777215, 0, var3);
         }
         if (null != this.next &&
           this.next != this.field_q &&
@@ -74,7 +74,7 @@ final class sq extends IntrusiveNode {
         try {
           this.field_m = 0;
           this.field_r = param0;
-          this.field_p = 8 + rs.field_n.a(this.field_r);
+          this.field_p = 8 + rs.field_n.textWidth(this.field_r);
           this.field_q = param2.sentinel;
           this.field_l = !param1 ? 128 : 500;
         } catch (RuntimeException runtimeException) {

@@ -51,10 +51,10 @@ final class td implements WidgetPainter {
             stackIn_7_0 = 3249872;
           }
           var6_int = stackIn_7_0;
-          this.field_b.a("<u=" + Integer.toString(var6_int, 16) + ">" + widget.field_v + "</u>", widget.x + originX, widget.y + originY, widget.width, widget.height, var6_int, -1, this.field_e, this.field_c, this.field_b.field_H + this.field_b.field_L);
+          this.field_b.drawParagraph("<u=" + Integer.toString(var6_int, 16) + ">" + widget.field_v + "</u>", widget.x + originX, widget.y + originY, widget.width, widget.height, var6_int, -1, this.field_e, this.field_c, this.field_b.maxAscent + this.field_b.maxDescent);
           if (widget.a(false)) {
-            var7 = this.field_b.a(widget.field_v);
-            var8 = this.field_b.field_H + this.field_b.field_L;
+            var7 = this.field_b.textWidth(widget.field_v);
+            var8 = this.field_b.maxAscent + this.field_b.maxDescent;
             var9 = originX + widget.x;
             if (this.field_e == 2) {
               var9 = var9 + (-var7 + widget.width);

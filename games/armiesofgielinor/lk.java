@@ -188,15 +188,15 @@ class lk implements WidgetPainter, pm {
           var5 = this.c(83, param0);
           var7 = this.field_k;
           if (var7 == 0) {
-            var6 = this.field_q.field_H;
+            var6 = this.field_q.maxAscent;
           } else {
             if (var7 == 2) {
-              var6 = -this.field_q.field_L + var5;
+              var6 = -this.field_q.maxDescent + var5;
             } else {
               if (var7 != 3 &&
                 var7 == 1) {
               }
-              var6 = this.field_q.field_H + (-this.field_q.field_L + (var5 - this.field_q.field_H) >> 1);
+              var6 = this.field_q.maxAscent + (-this.field_q.maxDescent + (var5 - this.field_q.maxAscent) >> 1);
             }
           }
           var7Lifetime1 = this.field_n;
@@ -615,30 +615,30 @@ class lk implements WidgetPainter, pm {
                 if (var12 != 3 &&
                   var12 != 1) {
                 }
-                var11 = this.field_q.field_H + (-this.field_q.field_H + var10 - this.field_q.field_L >> 1);
+                var11 = this.field_q.maxAscent + (-this.field_q.maxAscent + var10 - this.field_q.maxDescent >> 1);
               } else {
-                var11 = -this.field_q.field_L + var10;
+                var11 = -this.field_q.maxDescent + var10;
               }
             } else {
-              var11 = this.field_q.field_H;
+              var11 = this.field_q.maxAscent;
             }
             var12Lifetime1 = this.field_n;
             if (0 != var12Lifetime1 &&
               var12Lifetime1 != 3) {
               if (var12Lifetime1 == 1) {
-                this.field_q.c(this.d(param7 ^ 2, param6), this.a(param2, param6, param0, -13) + (var9_int >> 1), var11 + this.a(param6, param4, 0, param1), param3, param5);
+                this.field_q.drawCentered(this.d(param7 ^ 2, param6), this.a(param2, param6, param0, -13) + (var9_int >> 1), var11 + this.a(param6, param4, 0, param1), param3, param5);
               } else {
                 if ((var12Lifetime1 == 2)) {
-                  this.field_q.a(this.d(param7 - 2, param6), var9_int + this.a(param2, param6, param0, -114), this.a(param6, param4, 0, param1) + var11, param3, param5);
+                  this.field_q.drawRightAligned(this.d(param7 - 2, param6), var9_int + this.a(param2, param6, param0, -114), this.a(param6, param4, 0, param1) + var11, param3, param5);
                 }
               }
               decompiledFrameRemainder0 = false;
             }
             else {
-              this.field_q.b(this.d(0, param6), this.a(param2, param6, param0, param7 + 67), var11 + this.a(param6, param4, param7 - 2, param1), param3, param5);
+              this.field_q.drawText(this.d(0, param6), this.a(param2, param6, param0, param7 + 67), var11 + this.a(param6, param4, param7 - 2, param1), param3, param5);
             }
           } else {
-            this.field_q.a(this.d(param7 ^ 2, param6), this.a(param2, param6, param0, 66), this.a(param6, param4, 0, param1), var9_int, var10, param3, param5, this.field_n, this.field_k, this.field_j);
+            this.field_q.drawParagraph(this.d(param7 ^ 2, param6), this.a(param2, param6, param0, 66), this.a(param6, param4, 0, param1), var9_int, var10, param3, param5, this.field_n, this.field_k, this.field_j);
           }
           QuickChatPhraseRepository.popRasterState(-18862);
           return;
@@ -687,7 +687,7 @@ class lk implements WidgetPainter, pm {
         if (!param0) {
           return -56;
         }
-        return this.field_q.field_L + this.field_q.field_H;
+        return this.field_q.maxDescent + this.field_q.maxAscent;
     }
 
     final static void a(int param0, java.awt.Canvas param1) {

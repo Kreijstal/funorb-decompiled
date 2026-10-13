@@ -13,7 +13,7 @@ final class wr extends hs implements he {
           Widget var6 = (Widget) null;
           this.a(51, -1, -80, (Widget) null);
         }
-        gl.field_e.b(QuickChatMenu.field_Nb, param0 - (-this.x - 4), 4 + (param1 + this.y) + gl.field_e.field_H, 16777215, -1);
+        gl.field_e.drawText(QuickChatMenu.field_Nb, param0 - (-this.x - 4), 4 + (param1 + this.y) + gl.field_e.maxAscent, 16777215, -1);
     }
 
     wr(int param0, int param1, int param2, int param3) {

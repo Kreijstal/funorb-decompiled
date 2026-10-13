@@ -5,7 +5,7 @@ final class SoftwareRaster {
     static int width;
     static int clipBottom;
     private static int[] field_b;
-    static int[] field_c;
+    static int[] scanlineMaskWidths;
     static int[] pixels;
     private static int[] field_i;
     static int height;
@@ -13,7 +13,7 @@ final class SoftwareRaster {
     static int clipLeft;
     private static int[] field_h;
     static int clipRight;
-    static int[] field_k;
+    static int[] scanlineMaskStarts;
 
     final static void b(int param0, int param1, int param2, int param3, int param4, int param5) {
         int var9 = 0;
@@ -974,8 +974,8 @@ final class SoftwareRaster {
 
     public static void d() {
         pixels = null;
-        field_k = null;
-        field_c = null;
+        scanlineMaskStarts = null;
+        scanlineMaskWidths = null;
         field_b = null;
         field_i = null;
         field_h = null;
@@ -1430,8 +1430,8 @@ final class SoftwareRaster {
     }
 
     private final static void c() {
-        field_k = null;
-        field_c = null;
+        scanlineMaskStarts = null;
+        scanlineMaskWidths = null;
     }
 
     final static void h(int param0, int param1, int param2, int param3, int param4) {

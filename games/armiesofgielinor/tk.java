@@ -113,7 +113,7 @@ final class tk implements WidgetPainter {
           }
           if (this.field_g != null) {
             var10 = this.field_a + this.field_h + this.field_i;
-            this.field_g.a(widget.field_v, originX + widget.x + var10, widget.y + originY + this.field_k, -this.field_a - var10 + widget.width, widget.height - (this.field_a << 1), this.field_b, this.field_c, this.field_d, this.field_e, 0);
+            this.field_g.drawParagraph(widget.field_v, originX + widget.x + var10, widget.y + originY + this.field_k, -this.field_a - var10 + widget.width, widget.height - (this.field_a << 1), this.field_b, this.field_c, this.field_d, this.field_e, 0);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

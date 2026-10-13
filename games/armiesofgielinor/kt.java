@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class kt extends mk {
-    static nc field_n;
+    static AntialiasedBitmapFont field_n;
     private String field_k;
     static String field_m;
     static boolean field_l;
@@ -69,7 +69,7 @@ final class kt extends mk {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 <= 89) {
-            field_n = (nc) null;
+            field_n = (AntialiasedBitmapFont) null;
           }
           if (this.field_q.a(-3137, param1) == rn.field_e) {
             stackIn_5_0 = this.field_q.a((byte) 126, param1);
@@ -98,7 +98,7 @@ final class kt extends mk {
     public static void g(int param0) {
         field_n = null;
         if (param0 < 91) {
-          field_n = (nc) null;
+          field_n = (AntialiasedBitmapFont) null;
           field_o = null;
           field_m = null;
           return;

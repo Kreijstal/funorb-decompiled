@@ -4,7 +4,7 @@
 import java.util.*;
 
 final class hc {
-    private tu field_l;
+    private BinaryBitmapFont field_l;
     private int field_h;
     static int[][] field_o;
     static String field_d;
@@ -100,9 +100,9 @@ final class hc {
           this.field_v = (RgbSprite[]) null;
         }
         int var2 = so.field_b.field_a >> 1;
-        int var3 = -this.field_l.field_H + (so.field_b.field_g - (this.field_l.field_L << 1));
+        int var3 = -this.field_l.maxAscent + (so.field_b.field_g - (this.field_l.maxDescent << 1));
         int var4 = this.field_j[0];
-        this.field_l.c("Press Esc to return to the main menu", var2, var3, var4, -1);
+        this.field_l.drawCentered("Press Esc to return to the main menu", var2, var3, var4, -1);
     }
 
     private final int a(byte param0, int param1) {
@@ -222,8 +222,8 @@ final class hc {
         SoftwareRaster.b();
         this.field_n.a(71);
         this.field_u.a(45);
-        this.field_l.c("shift: " + DiskCacheRequest.unitProjectionVariants[this.field_a], 480, 230, 16777215, -1);
-        this.field_l.c("model ID: " + sf.unitAnimationGroups[this.field_a], 480, 242, 16777215, -1);
+        this.field_l.drawCentered("shift: " + DiskCacheRequest.unitProjectionVariants[this.field_a], 480, 230, 16777215, -1);
+        this.field_l.drawCentered("model ID: " + sf.unitAnimationGroups[this.field_a], 480, 242, 16777215, -1);
         this.a(false);
         this.e((byte) -25);
         this.field_f.e((byte) 109);
@@ -400,7 +400,7 @@ final class hc {
         }
     }
 
-    hc(RgbSprite[] param0, RgbSprite[] param1, tu param2, int[] param3, int param4, int param5) {
+    hc(RgbSprite[] param0, RgbSprite[] param1, BinaryBitmapFont param2, int[] param3, int param4, int param5) {
         RuntimeException var7 = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;

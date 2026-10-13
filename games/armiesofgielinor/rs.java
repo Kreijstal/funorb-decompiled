@@ -9,7 +9,7 @@ final class rs extends IntrusiveNode {
     int field_w;
     int field_r;
     static String field_x;
-    static tu field_n;
+    static BinaryBitmapFont field_n;
     static RgbSprite field_o;
     int field_u;
     static int keyCode;

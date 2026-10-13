@@ -116,7 +116,7 @@ final class ta extends nl {
           stackIn_4_1 = (param5);
           this.field_J = stackIn_4_1;
           var12_int = this.field_S - this.field_H;
-          var13 = this.field_P.getParagraphHeight(param10, var12_int, this.field_P.field_H) + 2 * this.field_H;
+          var13 = this.field_P.getParagraphHeight(param10, var12_int, this.field_P.maxAscent) + 2 * this.field_H;
           if (param3 >= var13) {
             var13 = param3;
           } else {
@@ -164,7 +164,7 @@ final class ta extends nl {
           return;
         }
         int var7 = this.field_J ? -(2 * this.field_H) + (-this.field_S + this.width) : 0;
-        this.field_P.a(this.field_K, this.field_H + var7 + var5, this.field_H + var6, this.field_S - this.field_H, -(this.field_H * 2) + this.height, this.field_I, -1, !this.field_J ? 2 : 0, 1, this.field_P.field_H);
+        this.field_P.drawParagraph(this.field_K, this.field_H + var7 + var5, this.field_H + var6, this.field_S - this.field_H, -(this.field_H * 2) + this.height, this.field_I, -1, !this.field_J ? 2 : 0, 1, this.field_P.maxAscent);
         if (param2 <= -82) {
           return;
         }

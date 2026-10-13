@@ -192,7 +192,7 @@ final class qd extends tj implements nq, he {
           this.field_M.painter = (WidgetPainter) ((Object) new nu());
           var7 = fo.a(4800, MidiPcmStream.field_R, new String[]{this.a(-29442), this.a((byte) -117)});
           var3 = 20;
-          var4 = new lk(ArmiesOfGielinor.field_J, 0, 0, 0, 0, 16777215, -1, 3, 0, ArmiesOfGielinor.field_J.field_H, -1, 2147483647, true);
+          var4 = new lk(ArmiesOfGielinor.field_J, 0, 0, 0, 0, 16777215, -1, 3, 0, ArmiesOfGielinor.field_J.maxAscent, -1, 2147483647, true);
           this.field_F = new hv(var7, var4);
           this.field_F.field_s = "";
           this.field_F.a(DiskCacheRequest.field_I, false, 0);

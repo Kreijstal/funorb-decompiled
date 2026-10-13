@@ -183,7 +183,7 @@ final class VertexNormal {
             if (MapTile.field_f == param4) {
               var21 += 42;
             }
-            var33 = BitmapFont.a(var12.nameComponent.font, var32, var21);
+            var33 = BitmapFont.truncateWithEllipsis(var12.nameComponent.font, var32, var21);
             var20 = var33;
             stackIn_60_0 = (var33.equals(var12.displayName)) ? 0 : 1;
             var22 = stackIn_60_0;
@@ -289,7 +289,7 @@ final class VertexNormal {
             var25 = var30;
             var24Lifetime1 = var23;
             if (var23 != null) {
-              var24_intLifetime1 = var12.field_fc.font.c(var23, -MusicPatchNode.field_l + (var12.width - MusicPatchNode.field_l));
+              var24_intLifetime1 = var12.field_fc.font.getLineCount(var23, -MusicPatchNode.field_l + (var12.width - MusicPatchNode.field_l));
               var12.field_fc.textOpacity = var12.notificationTicks * 256 / qd.lobbyNotificationDuration;
               var12.field_fc.text = var23;
               var12.field_fc.setBounds(var24_intLifetime1 * jn.field_d, -20500, var12.width - 2 * MusicPatchNode.field_l, var19, MusicPatchNode.field_l);

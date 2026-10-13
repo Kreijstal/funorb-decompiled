@@ -15,8 +15,8 @@ final class op {
         int var8 = 0;
         int var2_int = AiPlanningStrategy.pointerX;
         int var3 = ko.pointerY;
-        int var4 = eq.field_h.font.c(param1, 500);
-        int var5 = 6 + eq.field_h.font.a(param1, 500);
+        int var4 = eq.field_h.font.getLineCount(param1, 500);
+        int var5 = 6 + eq.field_h.font.getWrappedWidth(param1, 500);
         int var6 = 2 + var4 * jn.field_d;
         if (param0 >= -105) {
           return;
@@ -26,7 +26,7 @@ final class op {
           var8 = pd.a(var6, 0, var3, 20);
           SoftwareRaster.b(var7, var8, var5, var6, 0);
           SoftwareRaster.f(1 + var7, var8 + 1, var5 - 2, -2 + var6, 16777088);
-          eq.field_h.font.a(param1, 3 + var7, -eq.field_h.font.field_H + is.field_b + (var8 + 1), 500, 1000, 0, -1, 0, 0, jn.field_d);
+          eq.field_h.font.drawParagraph(param1, 3 + var7, -eq.field_h.font.maxAscent + is.field_b + (var8 + 1), 500, 1000, 0, -1, 0, 0, jn.field_d);
         } catch (RuntimeException runtimeException) {
           throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "op.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

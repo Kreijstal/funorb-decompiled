@@ -60,13 +60,13 @@ final class MusicPatchEnvelope {
         RuntimeException var4 = null;
         var10 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          var4_int = rs.field_n.a(param1) + 8;
+          var4_int = rs.field_n.textWidth(param1) + 8;
           if (var4_int <= 200) {
             var5 = new String[]{param1};
           } else {
-            var11 = new String[rs.field_n.c(param1, 196)];
+            var11 = new String[rs.field_n.getLineCount(param1, 196)];
             var5 = var11;
-            rs.field_n.a(param1, new int[]{196}, var11);
+            rs.field_n.wrapLines(param1, new int[]{196}, var11);
           }
           var6 = var5;
           for (var7 = param2; var6.length > var7; var7++) {

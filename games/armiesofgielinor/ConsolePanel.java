@@ -100,7 +100,7 @@ abstract class ConsolePanel implements ap {
           suggestionIndex = 0;
           initialSuggestionIndex = suggestionIndex;
           while (this.suggestions.length > suggestionIndex) {
-            this.font.b(this.suggestions[suggestionIndex], 10 + this.suggestionBackdrop.screenX, suggestionY, 13421772, -1);
+            this.font.drawText(this.suggestions[suggestionIndex], 10 + this.suggestionBackdrop.screenX, suggestionY, 13421772, -1);
             suggestionY = suggestionY + this.lineHeight;
             suggestionIndex++;
           }
@@ -187,7 +187,7 @@ abstract class ConsolePanel implements ap {
           if (null != this.suggestions) {
             maximumSuggestionWidth = 0;
             for (suggestionIndex = 0; suggestionIndex < this.suggestions.length; suggestionIndex++) {
-              suggestionWidth = this.font.a(this.suggestions[suggestionIndex]);
+              suggestionWidth = this.font.textWidth(this.suggestions[suggestionIndex]);
               if (maximumSuggestionWidth < suggestionWidth) {
                 maximumSuggestionWidth = suggestionWidth;
               }
@@ -246,7 +246,7 @@ abstract class ConsolePanel implements ap {
           }
           for (lineIndex = 0; linesAlias.length > lineIndex; lineIndex++) {
             lineText = linesAlias[lineIndex];
-            if (maximumWidth <= this.font.a(lineText)) {
+            if (maximumWidth <= this.font.textWidth(lineText)) {
               wrappedLines = this.wrapOutputLine(lineText, maximumWidth, (byte) -98);
               wrappedLine = (ConsoleTextNode) (wrappedLines.first((byte) 123));
               while (wrappedLine != null) {
@@ -294,7 +294,7 @@ abstract class ConsolePanel implements ap {
           wrappedLines = new NodeDeque();
           while (remainingText != null) {
             boolean lineFitsWithoutSplit = true;
-            remainingWidth = this.font.a(remainingText);
+            remainingWidth = this.font.textWidth(remainingText);
             lineText = remainingText;
             if (maximumWidth < remainingWidth) {
               splitIndex = -1 + remainingText.length();
@@ -303,18 +303,18 @@ abstract class ConsolePanel implements ap {
                   remainingText.charAt(splitIndex) != 32) {
                   spaceScanIndex = splitIndex;
                   splitIndex--;
-                  remainingWidth = remainingWidth - this.font.a(remainingText.charAt(spaceScanIndex));
+                  remainingWidth = remainingWidth - this.font.characterWidth(remainingText.charAt(spaceScanIndex));
                   continue;
                 }
                 break;
               }
               if (splitIndex == 0) {
-                remainingWidth = this.font.a(remainingText);
+                remainingWidth = this.font.textWidth(remainingText);
                 splitIndex = remainingText.length() - 1;
                 while (maximumWidth < remainingWidth) {
                   hardSplitScanIndex = splitIndex;
                   splitIndex--;
-                  remainingWidth = remainingWidth - this.font.a(remainingText.charAt(hardSplitScanIndex));
+                  remainingWidth = remainingWidth - this.font.characterWidth(remainingText.charAt(hardSplitScanIndex));
                 }
               }
               lineText = remainingText.substring(0, splitIndex);
@@ -375,7 +375,7 @@ abstract class ConsolePanel implements ap {
           line = new ClientUiComponent(0L, (ClientUiComponent) null, text);
           line.textColour = textColour;
           line.font = this.font;
-          line.setBounds(this.lineHeight, -20500, this.font.a(line.text), 0, 5);
+          line.setBounds(this.lineHeight, -20500, this.font.textWidth(line.text), 0, 5);
           result = line;
           return result;
         } catch (java.lang.RuntimeException caughtParameter) {
@@ -550,7 +550,7 @@ abstract class ConsolePanel implements ap {
         this.openingTicksRemaining = 0;
         try {
           this.font = font;
-          this.lineHeight = this.font.field_H + this.font.field_L;
+          this.lineHeight = this.font.maxAscent + this.font.maxDescent;
           inputHeight = this.lineHeight + 4;
           solidStyle = this.createSolidStyle(true, 65793);
           panelStyle = solidStyle;

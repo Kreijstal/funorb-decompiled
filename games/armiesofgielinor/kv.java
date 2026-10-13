@@ -105,7 +105,7 @@ final class kv extends tj implements he {
           kv.b(true);
         }
         if (this.field_H != null) {
-          var5.a(we.field_i, param0 + this.x, param1 + this.y, this.width, 20, 16777215, -1, 0, 0, var5.field_L + var5.field_H);
+          var5.drawParagraph(we.field_i, param0 + this.x, param1 + this.y, this.width, 20, 16777215, -1, 0, 0, var5.maxDescent + var5.maxAscent);
         }
     }
 

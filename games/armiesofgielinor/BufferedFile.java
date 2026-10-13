@@ -167,10 +167,10 @@ final class BufferedFile {
         return param0 ^ param1;
     }
 
-    final static nc a(ResourceArchive param0, int param1, ResourceArchive param2, byte param3, int param4) {
+    final static AntialiasedBitmapFont a(ResourceArchive param0, int param1, ResourceArchive param2, byte param3, int param4) {
         RuntimeException var5 = null;
-        nc stackIn_2_0 = null;
-        nc stackIn_7_0 = null;
+        AntialiasedBitmapFont stackIn_2_0 = null;
+        AntialiasedBitmapFont stackIn_7_0 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
@@ -179,7 +179,7 @@ final class BufferedFile {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param3 >= -10) {
-            stackIn_2_0 = (nc) null;
+            stackIn_2_0 = (AntialiasedBitmapFont) null;
             return stackIn_2_0;
           }
           if (!kp.decodeSpriteSheetFromArchive(false, param1, param0, param4)) {

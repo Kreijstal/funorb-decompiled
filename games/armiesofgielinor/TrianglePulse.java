@@ -8,7 +8,7 @@ final class TrianglePulse {
     int maximum;
     static RgbSprite field_d;
     static String field_j;
-    static nc field_i;
+    static AntialiasedBitmapFont field_i;
     static int field_c;
     static int[] statusProtectionMasks;
     private int value;

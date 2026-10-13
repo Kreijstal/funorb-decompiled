@@ -23,9 +23,9 @@ final class DualNodeIterator implements Iterator {
         return (java.awt.Container) ((Object) CombatEvent.d((byte) -124));
     }
 
-    final static d a(ResourceArchive param0, int param1, int param2, int param3, ResourceArchive param4) {
+    final static PalettedBitmapFont a(ResourceArchive param0, int param1, int param2, int param3, ResourceArchive param4) {
         RuntimeException var5 = null;
-        d stackIn_6_0 = null;
+        PalettedBitmapFont stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;

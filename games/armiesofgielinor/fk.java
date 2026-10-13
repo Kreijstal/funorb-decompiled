@@ -178,10 +178,10 @@ final class fk implements WidgetPainter {
           var8 = this.field_c.optionList.getSelectedOption(-6508);
           if (var8 != null) {
             var9 = var8.toString();
-            this.field_c.font.b(var9, 2 + var6_int, -1 + var7 + (widget.height + this.field_c.font.field_H >> 1), 10000536, -1);
+            this.field_c.font.drawText(var9, 2 + var6_int, -1 + var7 + (widget.height + this.field_c.font.maxAscent >> 1), 10000536, -1);
             if (this.field_c.a(false) &&
               var9.startsWith(this.field_c.typedPrefix)) {
-              var10 = this.field_c.font.a(this.field_c.typedPrefix);
+              var10 = this.field_c.font.textWidth(this.field_c.typedPrefix);
               SoftwareRaster.b(var6_int + 2, 2 + var7, var10, -4 + widget.height, 2188450, 100);
             }
           }

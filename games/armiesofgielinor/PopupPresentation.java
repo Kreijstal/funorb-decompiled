@@ -526,7 +526,7 @@ final class PopupPresentation implements EventPresentation {
         if (param0 != 3) {
           this.drawBaseLayer((byte) -24);
         }
-        en.field_E.c(Integer.toString(this.field_m), this.presenter.screenX + 40, this.presenter.screenY - 15, 16777215, 0);
+        en.field_E.drawCentered(Integer.toString(this.field_m), this.presenter.screenX + 40, this.presenter.screenY - 15, 16777215, 0);
     }
 
     private final void g(int param0) {

@@ -3,7 +3,7 @@
  */
 class nr {
     static IndexedSprite[] activeFoliageSprites;
-    static d field_e;
+    static PalettedBitmapFont field_e;
     static int[] field_a;
     static String field_d;
     RgbSprite[] field_b;
@@ -157,7 +157,7 @@ class nr {
           field_f = null;
           return;
         }
-        field_e = (d) null;
+        field_e = (PalettedBitmapFont) null;
         field_e = null;
         field_f = null;
     }

@@ -336,7 +336,7 @@ final class oo {
             SoftwareRaster.setClip(param3, var9_int, param1, var9_int + 1);
             var10 = var9_int * param0.length / param6;
             var11 = param0[param0.length - var10 - 1];
-            param4.a(param2, param3, param7, param1, param6, var11, -1, 1, 1, 0);
+            param4.drawParagraph(param2, param3, param7, param1, param6, var11, -1, 1, 1, 0);
           }
           QuickChatPhraseRepository.popRasterState(-18862);
           if (param5 < 62) {
@@ -462,11 +462,11 @@ final class oo {
             }
           }
           this.field_m.g(16, 302);
-          VerticalScrollbar.field_Sb.a(this.field_k[this.field_n], 9, 257, 622, 33, 16754688, -1, 1, 1, 0);
+          VerticalScrollbar.field_Sb.drawParagraph(this.field_k[this.field_n], 9, 257, 622, 33, 16754688, -1, 1, 1, 0);
           UnitModelPreview.field_b.g(30, 330);
-          VerticalScrollbar.field_Sb.a(db.field_e[0], 17, 428, 111, 35, 16754688, -1, 1, 1, 0);
-          VerticalScrollbar.field_Sb.a(db.field_e[1], 138, 428, 111, 35, 16754688, -1, 1, 1, 0);
-          VerticalScrollbar.field_Sb.a(db.field_e[2], 259, 428, 111, 35, 16754688, -1, 1, 1, 0);
+          VerticalScrollbar.field_Sb.drawParagraph(db.field_e[0], 17, 428, 111, 35, 16754688, -1, 1, 1, 0);
+          VerticalScrollbar.field_Sb.drawParagraph(db.field_e[1], 138, 428, 111, 35, 16754688, -1, 1, 1, 0);
+          VerticalScrollbar.field_Sb.drawParagraph(db.field_e[2], 259, 428, 111, 35, 16754688, -1, 1, 1, 0);
           QuickChatPhrase.field_D.g((127 - QuickChatPhrase.field_D.canvasWidth) / 2 + 508, 315);
           if (0 != this.field_h.selectedIndex) {
             if (this.field_h.selectedIndex == 1) {
@@ -497,7 +497,7 @@ final class oo {
         try {
           if (null == this.field_i) {
             if (null != VerticalScrollbar.field_Sb) {
-              VerticalScrollbar.field_Sb.a(ConsoleParseException.field_a, 9, 58, 622, 196, 16754688, -1, 1, 1, 0);
+              VerticalScrollbar.field_Sb.drawParagraph(ConsoleParseException.field_a, 9, 58, 622, 196, 16754688, -1, 1, 1, 0);
             }
             return;
           }
@@ -508,7 +508,7 @@ final class oo {
           var2 = var6;
           if (var2 == null) {
             if (VerticalScrollbar.field_Sb != null) {
-              VerticalScrollbar.field_Sb.a(ConsoleParseException.field_a, 9, 58, 622, 196, 16754688, -1, 1, 1, 0);
+              VerticalScrollbar.field_Sb.drawParagraph(ConsoleParseException.field_a, 9, 58, 622, 196, 16754688, -1, 1, 1, 0);
             }
           } else {
             var6.draw(9, 58);
@@ -690,7 +690,7 @@ final class oo {
             var7 = AnimationFrameSet.field_B;
             this.a(var5, -16, 0, var6, kt.field_n, var10, -112, var5.pixelHeight, var5.pixelWidth, 0.5f);
             this.a(var5, 20, 0, var7, kt.field_n, var10, -123, var5.pixelHeight, var5.pixelWidth, 0.5f);
-            this.a(var5, 12 - kt.field_n.field_H + var5.pixelHeight / 2, 0, AnimationSequence.field_c[this.field_r], kt.field_n, var10, -125, var5.pixelHeight / 3, var5.pixelWidth, 0.699999988079071f);
+            this.a(var5, 12 - kt.field_n.maxAscent + var5.pixelHeight / 2, 0, AnimationSequence.field_c[this.field_r], kt.field_n, var10, -125, var5.pixelHeight / 3, var5.pixelWidth, 0.699999988079071f);
             QuickChatPhraseRepository.popRasterState(-18862);
             this.field_b = new RgbSprite(121, 122);
             CombatSandbox.a(this.field_b, 3);

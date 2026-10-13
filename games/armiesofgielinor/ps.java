@@ -111,7 +111,7 @@ final class ps extends lk {
           var12 = (-var10.pixelHeight + widget.height) / 2 + originY + widget.y;
           var13 = widget.x + (originX + widget.width / 2);
           var10.draw(var11, var12);
-          this.field_q.c(this.d(0, widget), var13, originY, var9, -1);
+          this.field_q.drawCentered(this.d(0, widget), var13, originY, var9, -1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

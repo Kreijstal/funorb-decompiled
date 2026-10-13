@@ -135,7 +135,7 @@ final class wm {
                 s.field_d = s.field_d + 1;
               }
               var10 = af.formatChatPrefix(var8_ref_mo, (byte) 103);
-              var11 = var10 + BitmapFont.c(var8_ref_mo.text);
+              var11 = var10 + BitmapFont.escapeMarkup(var8_ref_mo.text);
               var12 = PlayerProfile.a(var8_ref_mo, -5);
               var8_ref_mo.rowComponent = new ClientUiComponent(0L, SpellConfirmationDialog.field_i, var11);
               var8_ref_mo.rowComponent.heldPressTextColour = (SpellConfirmationDialog.field_i.heldPressTextColour >> 1 & 8355711) + (var12 - ((var12 & 16711423) >> 1));

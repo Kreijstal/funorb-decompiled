@@ -94,7 +94,7 @@ final class br {
           TaggedMapData.field_b = param0;
           AiInfluenceMap.field_h = param3;
           pt.c(SoftwareRaster.width / 2, SoftwareRaster.height / 2, 75);
-          uc.a(param0.field_L + param0.field_z, param0.field_z, param3.field_z, false, param3.field_L + param3.field_z);
+          uc.a(param0.maxDescent + param0.capitalHeight, param0.capitalHeight, param3.capitalHeight, false, param3.maxDescent + param3.capitalHeight);
           if (param2 != 333) {
             heldKeys = (boolean[]) null;
           }

@@ -41,10 +41,10 @@ final class cr extends sf {
 
     final void b(int param0, int param1, int param2) {
         super.b(param0, param1, param2);
-        CipherPacketBuffer.field_t.c(this.field_cb, (this.width >> 1) + param0, param2 + 103, 16777215, -1);
+        CipherPacketBuffer.field_t.drawCentered(this.field_cb, (this.width >> 1) + param0, param2 + 103, 16777215, -1);
         if (null != this.field_X) {
           SoftwareRaster.e(20 + param0, -7 + (120 + param2), 260, 8421504);
-          CipherPacketBuffer.field_t.a(this.field_X, 20 + param0, param2 + 120 + 8, 260, 100, 16777215, -1, 1, 0, CipherPacketBuffer.field_t.field_H);
+          CipherPacketBuffer.field_t.drawParagraph(this.field_X, 20 + param0, param2 + 120 + 8, 260, 100, 16777215, -1, 1, 0, CipherPacketBuffer.field_t.maxAscent);
         }
     }
 
@@ -120,7 +120,7 @@ final class cr extends sf {
         try {
           this.field_X = param1;
           if (this.field_X != null) {
-            var3_int = CipherPacketBuffer.field_t.getParagraphHeight(this.field_X, 260, CipherPacketBuffer.field_t.field_H);
+            var3_int = CipherPacketBuffer.field_t.getParagraphHeight(this.field_X, 260, CipherPacketBuffer.field_t.maxAscent);
             this.a(300, (byte) 100, 150 + var3_int);
           }
           this.field_Y = new rj(13, 50, 274, 30, 15, 2113632, 4210752);

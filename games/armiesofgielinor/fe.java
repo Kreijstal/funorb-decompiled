@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class fe {
-    private static d field_i;
+    private static PalettedBitmapFont field_i;
     static int field_b;
     private static String[] field_k;
     private static int field_a;
@@ -107,8 +107,8 @@ final class fe {
     final static void a(String param0, int param1, int param2, int param3, int[] param4, boolean param5, int param6, int param7) {
         int var12 = 0;
         field_d[0] = param3 << (param5 ? 1 : 0);
-        int var8 = field_i.a(param0, field_d, field_k);
-        int var9 = field_i.field_v >> (param5 ? 1 : 0);
+        int var8 = field_i.wrapLines(param0, field_d, field_k);
+        int var9 = field_i.baselineHeight >> (param5 ? 1 : 0);
         int var10 = var9 * var8;
         int var11 = 0;
         if (param7 == 1) {
@@ -124,7 +124,7 @@ final class fe {
     }
 
     final static void b(String param0, int param1, int param2, int[] param3, boolean param4) {
-        param1 = param1 - (field_i.a(param0) >> (param4 ? 1 : 0));
+        param1 = param1 - (field_i.textWidth(param0) >> (param4 ? 1 : 0));
         fe.a(param0, param1, param2, param3, param4);
     }
 
@@ -202,7 +202,7 @@ final class fe {
     }
 
     final static void a(String param0, int param1, int param2, boolean param3) {
-        int var4 = field_i.a(param0) + 40;
+        int var4 = field_i.textWidth(param0) + 40;
         if (param3) {
           var4 = var4 >> 1;
           param2 -= 26;
@@ -261,7 +261,7 @@ final class fe {
     }
 
     final static void c(String param0, int param1, int param2, int[] param3, boolean param4) {
-        param1 = param1 - (field_i.a(param0) >> (param4 ? 2 : 1));
+        param1 = param1 - (field_i.textWidth(param0) >> (param4 ? 2 : 1));
         fe.a(param0, param1, param2, param3, param4);
     }
 
@@ -296,14 +296,14 @@ final class fe {
           if (field_i == null) {
             return;
           }
-          param2 = param2 - (field_i.field_v - field_i.field_L);
-          var8 = field_i.a(param0);
+          param2 = param2 - (field_i.baselineHeight - field_i.maxDescent);
+          var8 = field_i.textWidth(param0);
           if ((var8 & 1) == 1) {
             var8++;
           }
           field_g.b();
           SoftwareRaster.b();
-          field_i.b(param0, 0, field_i.field_H + 3, 0, -1);
+          field_i.drawText(param0, 0, field_i.maxAscent + 3, 0, -1);
           SoftwareRaster.setTarget(var5, var6, var7);
           fe.c();
           if (param4) {
@@ -443,14 +443,14 @@ final class fe {
           if (field_i == null) {
             return;
           }
-          param2 = param2 - (field_i.field_H - field_i.field_L);
-          var8 = field_i.a(param0);
+          param2 = param2 - (field_i.maxAscent - field_i.maxDescent);
+          var8 = field_i.textWidth(param0);
           if ((var8 & 1) == 1) {
             var8++;
           }
           field_g.b();
           SoftwareRaster.b();
-          field_i.b(param0, 0, field_i.field_H + 3, 0, -1);
+          field_i.drawText(param0, 0, field_i.maxAscent + 3, 0, -1);
           SoftwareRaster.setTarget(var5, var6, var7);
           fe.c();
           if (param4) {
@@ -463,7 +463,7 @@ final class fe {
     }
 
     final static void d(String param0, int param1, int param2, int param3, boolean param4) {
-        param1 = param1 - (field_i.a(param0) >> (param4 ? 1 : 0));
+        param1 = param1 - (field_i.textWidth(param0) >> (param4 ? 1 : 0));
         fe.a(param0, param1, param2, param3, param4);
     }
 
@@ -813,7 +813,7 @@ final class fe {
     }
 
     final static void c(String param0, int param1, int param2, int param3, boolean param4) {
-        param1 = param1 - (field_i.a(param0) >> (param4 ? 2 : 1));
+        param1 = param1 - (field_i.textWidth(param0) >> (param4 ? 2 : 1));
         fe.a(param0, param1, param2, param3, param4);
     }
 
@@ -895,8 +895,8 @@ final class fe {
     final static void b(String param0, int param1, int param2, int param3, boolean param4) {
         int var7 = 0;
         field_d[0] = param3 << (param4 ? 1 : 0);
-        int var5 = field_i.a(param0, field_d, field_k);
-        int var6 = field_i.field_v >> (param4 ? 1 : 0);
+        int var5 = field_i.wrapLines(param0, field_d, field_k);
+        int var6 = field_i.baselineHeight >> (param4 ? 1 : 0);
         for (var7 = 0; var7 < var5; var7++) {
           fe.b(field_k[var7], param1, param2 + var6 * var7, param4);
         }
@@ -1106,8 +1106,8 @@ final class fe {
     final static void a(String param0, int param1, int param2, int param3, int param4, boolean param5) {
         int var8 = 0;
         field_d[0] = param3 << (param5 ? 1 : 0);
-        int var6 = field_i.a(param0, field_d, field_k);
-        int var7 = field_i.field_v >> (param5 ? 1 : 0);
+        int var6 = field_i.wrapLines(param0, field_d, field_k);
+        int var7 = field_i.baselineHeight >> (param5 ? 1 : 0);
         for (var8 = 0; var8 < var6; var8++) {
           fe.c(field_k[var8], param1, param2 + var7 * var8, param4, param5);
         }
@@ -1208,14 +1208,14 @@ final class fe {
     }
 
     final static void b(String param0, int param1, int param2, boolean param3) {
-        param1 = param1 - (field_i.a(param0) >> (param3 ? 2 : 1));
+        param1 = param1 - (field_i.textWidth(param0) >> (param3 ? 2 : 1));
         fe.a(param0, param1, param2, param3);
     }
 
-    final static void a(d param0) {
+    final static void a(PalettedBitmapFont param0) {
         field_i = param0;
         int var1 = 1000;
-        int var2 = field_i.field_v + field_i.field_L + 6;
+        int var2 = field_i.baselineHeight + field_i.maxDescent + 6;
         if ((var2 & 1) == 1) {
           var2++;
         }
@@ -1225,7 +1225,7 @@ final class fe {
     final static void a(int param0, int param1, int param2, int param3, RgbSprite[] param4, int[] param5, int param6, int param7, String param8, boolean param9, int[] param10) {
         fe.b(param0, param1, param2, param3, param4, param5, param6, param7);
         int var11 = param0 + param2 / 2;
-        int var12 = param1 + field_i.field_v / (param9 ? 2 : 1) - 4;
+        int var12 = param1 + field_i.baselineHeight / (param9 ? 2 : 1) - 4;
         fe.a(param8, var11, var12, param10, 1, param9);
     }
 
@@ -1234,7 +1234,7 @@ final class fe {
     }
 
     final static void b(String param0, int param1, int param2) {
-        param1 = param1 - (field_i.a(param0) >> 1);
+        param1 = param1 - (field_i.textWidth(param0) >> 1);
         fe.a(param0, param1, param2);
     }
 

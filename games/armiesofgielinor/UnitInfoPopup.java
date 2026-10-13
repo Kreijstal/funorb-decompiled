@@ -36,13 +36,13 @@ final class UnitInfoPopup extends IntrusiveNode {
         String var7 = null;
         int var8 = 0;
         int var13 = 0;
-        tu stackIn_3_0;
+        BinaryBitmapFont stackIn_3_0;
         String stackIn_3_1;
         int stackIn_3_2;
         int stackIn_3_3;
         int[][] stackIn_3_4;
         int stackIn_4_5 = 0;
-        tu stackIn_8_0;
+        BinaryBitmapFont stackIn_8_0;
         String stackIn_8_1;
         int stackIn_8_2;
         int stackIn_8_3;
@@ -80,7 +80,7 @@ final class UnitInfoPopup extends IntrusiveNode {
           } else {
             stackIn_4_5 = 0;
           }
-          ((tu) (Object) stackIn_3_0).b(stackIn_3_1, stackIn_3_2, stackIn_3_3, stackIn_3_4[stackIn_4_5][this.unit.ownerPlayer], -1);
+          ((BinaryBitmapFont) (Object) stackIn_3_0).drawText(stackIn_3_1, stackIn_3_2, stackIn_3_3, stackIn_3_4[stackIn_4_5][this.unit.ownerPlayer], -1);
           SoftwareRaster.a();
           var8 = this.unit.getEffectiveStrength((byte) 122);
           if (var8 < 0) {
@@ -96,7 +96,7 @@ final class UnitInfoPopup extends IntrusiveNode {
           } else {
             stackIn_9_5 = 1;
           }
-          ((tu) (Object) stackIn_8_0).a(stackIn_8_1, stackIn_8_2, stackIn_8_3, stackIn_8_4[stackIn_9_5][this.unit.ownerPlayer], -1);
+          ((BinaryBitmapFont) (Object) stackIn_8_0).drawRightAligned(stackIn_8_1, stackIn_8_2, stackIn_8_3, stackIn_8_4[stackIn_9_5][this.unit.ownerPlayer], -1);
           if (param1 == this.unit.ownerPlayer) {
             SoftwareRaster.b(99, 25, 30, 30, 0, 128);
             SoftwareRaster.b(53, 25, 30, 30, 0, 128);
@@ -112,7 +112,7 @@ final class UnitInfoPopup extends IntrusiveNode {
             }
           }
           ro.field_rb[this.unit.getUnitCategory(0)].draw(106, 32);
-          en.field_E.c(-param5.getDamageTakenPercent(param5.mapWidth * this.unit.tileY + this.unit.tileX, param2 - 9, this.unit) + 100 + "%", 20, 45, 16777215, -1);
+          en.field_E.drawCentered(-param5.getDamageTakenPercent(param5.mapWidth * this.unit.tileY + this.unit.tileX, param2 - 9, this.unit) + 100 + "%", 20, 45, 16777215, -1);
           EventPresenter.field_t.b(68, 60, ConsoleValue.field_b[-1 + ConsoleValue.field_b.length]);
           so.field_b.a(param2 + 5600);
           var9Lifetime1 = this.screenX - param3 - 75;
@@ -236,7 +236,7 @@ final class UnitInfoPopup extends IntrusiveNode {
           this.nameScrollOffset = 0;
           this.unit = param0;
           this.screenY = param2;
-          this.maximumNameScroll = -110 + rs.field_n.a(this.unit.displayName);
+          this.maximumNameScroll = -110 + rs.field_n.textWidth(this.unit.displayName);
           if (this.maximumNameScroll < 0) {
             this.maximumNameScroll = 0;
           }

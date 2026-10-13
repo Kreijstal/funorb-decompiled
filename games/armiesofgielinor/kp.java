@@ -66,7 +66,7 @@ final class kp implements WidgetPainter {
           if (null == this.field_a) {
             return;
           }
-          this.field_a.c(var12.field_v, var8 + var7 / 2, this.field_a.field_v + var9 + var12.field_S, this.field_g, this.field_i);
+          this.field_a.drawCentered(var12.field_v, var8 + var7 / 2, this.field_a.baselineHeight + var9 + var12.field_S, this.field_g, this.field_i);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

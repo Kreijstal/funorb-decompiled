@@ -188,11 +188,11 @@ final class GameplayController {
           var16 = this.battlefield.damageTakenByPlayer[var5.playerSlot];
           var10 -= 32;
           var11 += 42;
-          rs.field_n.b(RasterState.field_m, db.a(true, var10), MatchConditionEntry.a(var14, (byte) 94), 16777215, -1);
-          rs.field_n.a(Integer.toString(var15), db.a(true, var11), MatchConditionEntry.a(var14, (byte) 94), 16777215, -1);
+          rs.field_n.drawText(RasterState.field_m, db.a(true, var10), MatchConditionEntry.a(var14, (byte) 94), 16777215, -1);
+          rs.field_n.drawRightAligned(Integer.toString(var15), db.a(true, var11), MatchConditionEntry.a(var14, (byte) 94), 16777215, -1);
           var14 = var14 + var13;
-          rs.field_n.b(OwnerChangeEvent.field_y, db.a(true, var10), MatchConditionEntry.a(var14, (byte) 94), 16777215, -1);
-          rs.field_n.a(Integer.toString(var16), db.a(true, var11), MatchConditionEntry.a(var14, (byte) 94), 16777215, -1);
+          rs.field_n.drawText(OwnerChangeEvent.field_y, db.a(true, var10), MatchConditionEntry.a(var14, (byte) 94), 16777215, -1);
+          rs.field_n.drawRightAligned(Integer.toString(var16), db.a(true, var11), MatchConditionEntry.a(var14, (byte) 94), 16777215, -1);
           if (var6 == 0) {
             if (var9 != 0) {
               param0 -= 18;
@@ -212,7 +212,7 @@ final class GameplayController {
               var18.icon.g(db.a(true, 4 + var10 + 15), MatchConditionEntry.a(128 + param0 + 4, (byte) 94));
               km.field_h[2].g(db.a(true, var10 + 15), MatchConditionEntry.a(param0 + 128, (byte) 94));
               var19 = 10 + km.field_h[2].canvasWidth + (var10 + 15);
-              rs.field_n.a(var18.title, db.a(true, var19), MatchConditionEntry.a(132 + param0, (byte) 94), -var19 + var11, 32, 16777215, -1, 1, 1, 0);
+              rs.field_n.drawParagraph(var18.title, db.a(true, var19), MatchConditionEntry.a(132 + param0, (byte) 94), -var19 + var11, 32, 16777215, -1, 1, 1, 0);
             }
           }
           return;
@@ -224,13 +224,13 @@ final class GameplayController {
     }
 
     private final void a(int param0, boolean param1, int param2, int param3, byte param4, int param5, int param6) {
-        tu stackIn_7_0;
+        BinaryBitmapFont stackIn_7_0;
         String stackIn_7_1;
         int stackIn_7_2;
         int stackIn_7_3;
         int[][] stackIn_7_4;
         int stackIn_8_5 = 0;
-        tu stackIn_14_0;
+        BinaryBitmapFont stackIn_14_0;
         String stackIn_14_1;
         int stackIn_14_2;
         int stackIn_14_3;
@@ -238,7 +238,7 @@ final class GameplayController {
         int stackIn_15_5;
         boolean stackIn_19_5 = false;
         int stackIn_25_5 = 0;
-        tu stackIn_32_0 = null;
+        BinaryBitmapFont stackIn_32_0 = null;
         String stackIn_32_1 = null;
         int stackIn_32_2 = 0;
         int stackIn_32_3 = 0;
@@ -251,7 +251,7 @@ final class GameplayController {
         String var9_ref_String = null;
         int var9 = 0;
         int var10 = 0;
-        tu stackIn_32_0Lifetime1;
+        BinaryBitmapFont stackIn_32_0Lifetime1;
         String stackIn_32_1Lifetime1;
         int[][] stackIn_32_4Lifetime1;
         int stackIn_32_2Lifetime1;
@@ -268,7 +268,7 @@ final class GameplayController {
           boolean decompiledFrameRemainder0 = true;
           if (!this.battlefield.field_V) {
             var9_ref_String = ah.a(ConsoleExpression.field_m, (byte) 22, var8_int);
-            en.field_E.a(var9_ref_String);
+            en.field_E.textWidth(var9_ref_String);
             stackIn_7_0 = en.field_E;
             stackIn_7_1 = var9_ref_String;
             stackIn_7_2 = param3;
@@ -279,11 +279,11 @@ final class GameplayController {
             } else {
               stackIn_8_5 = 1;
             }
-            ((tu) (Object) stackIn_7_0).b(stackIn_7_1, stackIn_7_2, stackIn_7_3, stackIn_7_4[stackIn_8_5][param6], -1);
+            ((BinaryBitmapFont) (Object) stackIn_7_0).drawText(stackIn_7_1, stackIn_7_2, stackIn_7_3, stackIn_7_4[stackIn_8_5][param6], -1);
             decompiledFrameRemainder0 = (var10 != 0);
           }
           if (decompiledFrameRemainder0) {
-            en.field_E.a(var8_int + "/" + this.battlefield.turnLimit);
+            en.field_E.textWidth(var8_int + "/" + this.battlefield.turnLimit);
             stackIn_14_0 = en.field_E;
             stackIn_14_1 = var8_int + "/" + this.battlefield.turnLimit;
             stackIn_14_2 = param3;
@@ -294,7 +294,7 @@ final class GameplayController {
             } else {
               stackIn_15_5 = 0;
             }
-            ((tu) (Object) stackIn_14_0).b(stackIn_14_1, stackIn_14_2, stackIn_14_3, stackIn_14_4[stackIn_15_5][param6], -1);
+            ((BinaryBitmapFont) (Object) stackIn_14_0).drawText(stackIn_14_1, stackIn_14_2, stackIn_14_3, stackIn_14_4[stackIn_15_5][param6], -1);
           }
           var9 = 0;
           scanLoop1: while (true) {
@@ -309,7 +309,7 @@ final class GameplayController {
               stackIn_19_5 = stackOut_18_5;
               if (var10 != 0) {
                 while (true) {
-                  ((tu) (Object) stackIn_32_0).b(stackIn_32_1, stackIn_32_2, stackIn_32_3, stackIn_32_4[stackIn_32_5][this.battlefield.rankedParticipants[0]], -1);
+                  ((BinaryBitmapFont) (Object) stackIn_32_0).drawText(stackIn_32_1, stackIn_32_2, stackIn_32_3, stackIn_32_4[stackIn_32_5][this.battlefield.rankedParticipants[0]], -1);
                   var9++;
                   break scanLoop1;
                 }
@@ -319,7 +319,7 @@ final class GameplayController {
               } else {
                 stackIn_25_5 = 0;
               }
-              ((tu) (Object) stackIn_32_0).b(stackIn_32_1, stackIn_32_2, stackIn_32_3, stackIn_32_4[stackIn_25_5][param6], -1);
+              ((BinaryBitmapFont) (Object) stackIn_32_0).drawText(stackIn_32_1, stackIn_32_2, stackIn_32_3, stackIn_32_4[stackIn_25_5][param6], -1);
               var9++;
               if (var10 == 0) {
                 continue;
@@ -334,7 +334,7 @@ final class GameplayController {
                 stackIn_32_3Lifetime1 = param2 * var9 + param5;
                 stackIn_32_4Lifetime1 = op.field_c;
                 stackIn_32_5Lifetime1 = 0;
-                ((tu) (Object) stackIn_32_0Lifetime1).b(stackIn_32_1Lifetime1, stackIn_32_2Lifetime1, stackIn_32_3Lifetime1, stackIn_32_4Lifetime1[stackIn_32_5Lifetime1][this.battlefield.rankedParticipants[0]], -1);
+                ((BinaryBitmapFont) (Object) stackIn_32_0Lifetime1).drawText(stackIn_32_1Lifetime1, stackIn_32_2Lifetime1, stackIn_32_3Lifetime1, stackIn_32_4Lifetime1[stackIn_32_5Lifetime1][this.battlefield.rankedParticipants[0]], -1);
                 var9++;
                 if (var10 != 0) {
                   break scanLoop1;
@@ -376,7 +376,7 @@ final class GameplayController {
             if (this.battlefield.currentPlayer < 0) {
               stackIn_10_0 = "";
             } else {
-              stackIn_10_0 = BitmapFont.a(nr.field_e, this.battlefield.playerNames[this.battlefield.currentPlayer], 240);
+              stackIn_10_0 = BitmapFont.truncateWithEllipsis(nr.field_e, this.battlefield.playerNames[this.battlefield.currentPlayer], 240);
             }
             var2 = stackIn_10_0;
             if (this.battlefield.currentPlayer == this.controlledPlayerId) {
@@ -391,7 +391,7 @@ final class GameplayController {
           if (decompiledFrameRemainder0) {
             var2_int = this.battlefield.getPlayerTeamIndex(this.battlefield.currentPlayer, param0 - 25168);
             if (this.battlefield.currentPlayer >= 0) {
-              stackIn_19_0 = BitmapFont.a(nr.field_e, this.battlefield.teams[var2_int].getTeamName(param0 ^ 25164), 240);
+              stackIn_19_0 = BitmapFont.truncateWithEllipsis(nr.field_e, this.battlefield.teams[var2_int].getTeamName(param0 ^ 25164), 240);
             } else {
               stackIn_19_0 = "";
             }
@@ -1013,7 +1013,7 @@ final class GameplayController {
               stackIn_27_7 = true;
               stackIn_28_8 = (0 != (this.battlefield.inactivePlayerMask & 1 << var9));
               ((CoatOfArms) (Object) stackIn_19_0).a(stackIn_20_1, stackIn_23_2, stackIn_23_3, stackIn_24_4, stackIn_27_5, stackIn_27_6, stackIn_27_7, stackIn_28_8, false, -19744);
-              en.field_E.c(var10, db.a(true, var8 + 33), MatchConditionEntry.a(param1 + 125, (byte) 94), 16777215, -1);
+              en.field_E.drawCentered(var10, db.a(true, var8 + 33), MatchConditionEntry.a(param1 + 125, (byte) 94), 16777215, -1);
               stackIn_32_1 = (~this.field_Rb == ~var9);
               this.a(stackIn_32_1, var9, (byte) 116, var8 + 0, param1 + 128);
               var8 = var8 + var7;
@@ -1162,7 +1162,7 @@ final class GameplayController {
             stackIn_42_7 = true;
             stackIn_43_8 = ((1 << var7 & this.battlefield.inactivePlayerMask) != 0);
             ((CoatOfArms) (Object) stackIn_30_0).a(stackIn_31_1, stackIn_38_2, stackIn_38_3, stackIn_39_4, stackIn_42_5, stackIn_42_6, stackIn_42_7, stackIn_43_8, false, param2 + 1033);
-            en.field_E.c(var6, db.a(true, param0 + 129), MatchConditionEntry.a(17 + param3, (byte) 94), 16777215, -1);
+            en.field_E.drawCentered(var6, db.a(true, param0 + 129), MatchConditionEntry.a(17 + param3, (byte) 94), 16777215, -1);
             this.b(var7, param0 + 104, param3 + 21, -12857);
             stackIn_47_1 = (this.field_Rb == 2);
             this.a(stackIn_47_1, var7, (byte) 110, 280, param3 + 80);
@@ -2274,12 +2274,12 @@ final class GameplayController {
                 }
                 var8_ref_String = stackIn_60_0;
               }
-              var9 = nr.field_e.a(var8_ref_String) / 2;
+              var9 = nr.field_e.textWidth(var8_ref_String) / 2;
               var10 = -40;
               var11 = 0;
               var12 = 0;
               if (this.field_lb) {
-                var11 = nr.field_e.a(DisplacedUnitMarker.field_t[12]) / 2;
+                var11 = nr.field_e.textWidth(DisplacedUnitMarker.field_t[12]) / 2;
                 var12 = -65 - var11 + (rs.field_k - var9);
               }
               if (this.f(128, db.a(true, var12)) >= MatchConditionEntry.a(se.field_a, (byte) 94)) {
@@ -2785,7 +2785,7 @@ final class GameplayController {
           fe.b(db.a(true, param1), MatchConditionEntry.a(param0, (byte) 94), 223, 228, MusicPatch.field_m, TutorialController.field_e, 0, 180);
           var4_int = this.battlefield.rankedParticipants[this.field_Rb];
           var5 = this.battlefield.playerNames[var4_int];
-          var5 = BitmapFont.a(nr.field_e, var5, 400);
+          var5 = BitmapFont.truncateWithEllipsis(nr.field_e, var5, 400);
           if (pc.field_j == null) {
             var6 = 0;
             if (this.field_lb &&
@@ -2815,8 +2815,8 @@ final class GameplayController {
               var11 = stackIn_28_0;
               if (var11 != 0) {
                 var8 += 19;
-                en.field_E.c(du.field_g[var10], 109, var8, 16777215, -1);
-                var12 = (en.field_E.a(du.field_g[var10]) >> 1) + 3;
+                en.field_E.drawCentered(du.field_g[var10], 109, var8, 16777215, -1);
+                var12 = (en.field_E.textWidth(du.field_g[var10]) >> 1) + 3;
                 AttackEvent.field_O.f(-AttackEvent.field_O.pixelWidth + (109 - var12), -10 + var8);
                 AttackEvent.field_O.f(109 + var12, var8 - 10);
               }
@@ -4040,7 +4040,7 @@ final class GameplayController {
                 }
               }
             }
-            en.field_E.a(kp.field_k);
+            en.field_E.textWidth(kp.field_k);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -4248,8 +4248,8 @@ final class GameplayController {
           fe.a(-50 + var5_int, 35 + var6, 100, 15, jh.field_l, 128);
           SpellConfirmationDialog.field_j.b();
           SoftwareRaster.b();
-          en.field_E.a(ScrollContainer.unitDisplayNames[param1].toUpperCase(), -47 + param3, param0 - 48, 94, 30, 16763904, -1, 1, 1, 0);
-          en.field_E.b(UiSelectionState.field_d, param3 - 45, -4 + param0, 16777215, -1);
+          en.field_E.drawParagraph(ScrollContainer.unitDisplayNames[param1].toUpperCase(), -47 + param3, param0 - 48, 94, 30, 16763904, -1, 1, 1, 0);
+          en.field_E.drawText(UiSelectionState.field_d, param3 - 45, -4 + param0, 16777215, -1);
           var7 = (int)(Math.sin((double)uk.field_n / 3.141592653589793 / 2.0) * 64.0 + 128.0);
           var7 = var7 << 16 | 65283 & var7 << 6;
           stackIn_4_0 = bw.unitDefinitions[param1][2];
@@ -4263,40 +4263,40 @@ final class GameplayController {
           stackIn_13_0 = (bw.unitDefinitions[param1][8] <= this.battlefield.playerMana[this.controlledPlayerId]) ? 0 : 1;
           var9 = stackIn_13_0;
           if (var8 != 0) {
-            en.field_E.b(Integer.toString(bw.unitDefinitions[param1][2]), -13 + param3, param0 - 4, var7, -1);
+            en.field_E.drawText(Integer.toString(bw.unitDefinitions[param1][2]), -13 + param3, param0 - 4, var7, -1);
           }
           if (var8 == 0 ||
             var11 != 0) {
-            en.field_E.b(Integer.toString(bw.unitDefinitions[param1][2]), -13 + param3, -4 + param0, 7864064, -1);
+            en.field_E.drawText(Integer.toString(bw.unitDefinitions[param1][2]), -13 + param3, -4 + param0, 7864064, -1);
           }
-          en.field_E.a(bt.field_d, 45 + param3, param0 - 4, 16777215, -1);
+          en.field_E.drawRightAligned(bt.field_d, 45 + param3, param0 - 4, 16777215, -1);
           if (var9 == 0) {
-            en.field_E.a(Integer.toString(bw.unitDefinitions[param1][8]), 28 + param3, -4 + param0, 7864064, -1);
+            en.field_E.drawRightAligned(Integer.toString(bw.unitDefinitions[param1][8]), 28 + param3, -4 + param0, 7864064, -1);
           }
           if (var9 != 0 ||
             var11 != 0) {
-            en.field_E.a(Integer.toString(bw.unitDefinitions[param1][8]), 28 + param3, param0 - 4, var7, -1);
+            en.field_E.drawRightAligned(Integer.toString(bw.unitDefinitions[param1][8]), 28 + param3, param0 - 4, var7, -1);
           }
-          en.field_E.b(mk.field_i, param3 - 45, param0 + 12, 16777215, -1);
-          en.field_E.b(lq.field_a, param3 - 45, 29 + param0, 16777215, -1);
-          en.field_E.b(ChannelGainProfile.field_d, -45 + param3, param0 + 46, 16777215, -1);
-          en.field_E.a(Integer.toString(bw.unitDefinitions[param1][4] + this.battlefield.a((byte) 11, bw.unitDefinitions[param1][1], this.controlledPlayerId)), param3 + 45, 12 + param0, 16763904, -1);
-          en.field_E.a(Integer.toString(bw.unitDefinitions[param1][3]), param3 + 45, param0 + 29, 16763904, -1);
+          en.field_E.drawText(mk.field_i, param3 - 45, param0 + 12, 16777215, -1);
+          en.field_E.drawText(lq.field_a, param3 - 45, 29 + param0, 16777215, -1);
+          en.field_E.drawText(ChannelGainProfile.field_d, -45 + param3, param0 + 46, 16777215, -1);
+          en.field_E.drawRightAligned(Integer.toString(bw.unitDefinitions[param1][4] + this.battlefield.a((byte) 11, bw.unitDefinitions[param1][1], this.controlledPlayerId)), param3 + 45, 12 + param0, 16763904, -1);
+          en.field_E.drawRightAligned(Integer.toString(bw.unitDefinitions[param1][3]), param3 + 45, param0 + 29, 16763904, -1);
           if (34 != param1) {
             if (bw.unitDefinitions[param1][6] != bw.unitDefinitions[param1][7]) {
-              en.field_E.a(fo.a(4800, td.field_a, new String[]{Integer.toString(bw.unitDefinitions[param1][6]), Integer.toString(bw.unitDefinitions[param1][7])}), 45 + param3, param0 + 46, 16763904, -1);
+              en.field_E.drawRightAligned(fo.a(4800, td.field_a, new String[]{Integer.toString(bw.unitDefinitions[param1][6]), Integer.toString(bw.unitDefinitions[param1][7])}), 45 + param3, param0 + 46, 16763904, -1);
               if (var11 != 0) {
-                en.field_E.a(Integer.toString(bw.unitDefinitions[param1][6]), param3 + 45, 46 + param0, 16763904, -1);
-                en.field_E.a(fo.a(param2 ^ 4800, AiPlanningStrategy.field_e, new String[]{Integer.toString(bw.unitDefinitions[param1][6]), Integer.toString(bw.unitDefinitions[75][6]), Integer.toString(bw.unitDefinitions[75][7])}), param3 + 45, 46 + param0, 16763904, -1);
+                en.field_E.drawRightAligned(Integer.toString(bw.unitDefinitions[param1][6]), param3 + 45, 46 + param0, 16763904, -1);
+                en.field_E.drawRightAligned(fo.a(param2 ^ 4800, AiPlanningStrategy.field_e, new String[]{Integer.toString(bw.unitDefinitions[param1][6]), Integer.toString(bw.unitDefinitions[75][6]), Integer.toString(bw.unitDefinitions[75][7])}), param3 + 45, 46 + param0, 16763904, -1);
               }
             } else {
-              en.field_E.a(Integer.toString(bw.unitDefinitions[param1][6]), param3 + 45, 46 + param0, 16763904, -1);
+              en.field_E.drawRightAligned(Integer.toString(bw.unitDefinitions[param1][6]), param3 + 45, 46 + param0, 16763904, -1);
               if (var11 != 0) {
-                en.field_E.a(fo.a(param2 ^ 4800, AiPlanningStrategy.field_e, new String[]{Integer.toString(bw.unitDefinitions[param1][6]), Integer.toString(bw.unitDefinitions[75][6]), Integer.toString(bw.unitDefinitions[75][7])}), param3 + 45, 46 + param0, 16763904, -1);
+                en.field_E.drawRightAligned(fo.a(param2 ^ 4800, AiPlanningStrategy.field_e, new String[]{Integer.toString(bw.unitDefinitions[param1][6]), Integer.toString(bw.unitDefinitions[75][6]), Integer.toString(bw.unitDefinitions[75][7])}), param3 + 45, 46 + param0, 16763904, -1);
               }
             }
           } else {
-            en.field_E.a(fo.a(param2 ^ 4800, AiPlanningStrategy.field_e, new String[]{Integer.toString(bw.unitDefinitions[param1][6]), Integer.toString(bw.unitDefinitions[75][6]), Integer.toString(bw.unitDefinitions[75][7])}), param3 + 45, 46 + param0, 16763904, -1);
+            en.field_E.drawRightAligned(fo.a(param2 ^ 4800, AiPlanningStrategy.field_e, new String[]{Integer.toString(bw.unitDefinitions[param1][6]), Integer.toString(bw.unitDefinitions[75][6]), Integer.toString(bw.unitDefinitions[75][7])}), param3 + 45, 46 + param0, 16763904, -1);
           }
           so.field_b.a(5605);
           SpellConfirmationDialog.field_j.g(1);
@@ -4313,7 +4313,7 @@ final class GameplayController {
           if (null != bh.field_M[param1]) {
             var10 = en.field_E.getParagraphHeight(bh.field_M[param1], 220, 0);
             fe.b(-120 + var5_int, 130 + var6, 240, 20 + var10, MusicPatch.field_m, TutorialController.field_e, 0, 192);
-            en.field_E.a(bh.field_M[param1], var5_int - 110, 140 + var6, 220, 100, 16777215, -1, 1, 0, 0);
+            en.field_E.drawParagraph(bh.field_M[param1], var5_int - 110, 140 + var6, 220, 100, 16777215, -1, 1, 0, 0);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -4555,7 +4555,7 @@ final class GameplayController {
           stackIn_32_7 = true;
           stackIn_33_8 = (0 != (1 << var6 & this.battlefield.inactivePlayerMask));
           ((CoatOfArms) (Object) stackIn_20_0).a(stackIn_21_1, stackIn_28_2, stackIn_28_3, stackIn_29_4, stackIn_32_5, stackIn_32_6, stackIn_32_7, stackIn_33_8, false, -19744);
-          en.field_E.c(var7, db.a(true, 310), MatchConditionEntry.a(var5_int + 74, (byte) 94), 16777215, -1);
+          en.field_E.drawCentered(var7, db.a(true, 310), MatchConditionEntry.a(var5_int + 74, (byte) 94), 16777215, -1);
           this.b(var6, 285, 78 + var5_int, -12857);
           stackIn_37_1 = (~this.field_Rb == ~param3);
           this.a(stackIn_37_1, var6, (byte) -112, db.a(true, 280), MatchConditionEntry.a(var5_int + 137, (byte) 94));
@@ -5016,7 +5016,7 @@ final class GameplayController {
           this.field_fb = 0;
           if (null != this.selectedUnit) {
             var4 = this.selectedUnit.q((byte) 117);
-            this.field_mc = (nr.field_e.a(var4) >> 1) - 210;
+            this.field_mc = (nr.field_e.textWidth(var4) >> 1) - 210;
             if (this.field_mc < 0) {
               this.field_mc = 0;
             }
@@ -5088,7 +5088,7 @@ final class GameplayController {
           fe.b(param0, param2, 223, 228, MusicPatch.field_m, TutorialController.field_e, 0, 180);
           var4_int = this.field_Rb;
           var5 = this.battlefield.playerNames[var4_int];
-          var5 = BitmapFont.a(nr.field_e, var5, 400);
+          var5 = BitmapFont.truncateWithEllipsis(nr.field_e, var5, 400);
           if (null == pc.field_j) {
             var6 = 0;
             if (this.field_lb &&
@@ -5117,8 +5117,8 @@ final class GameplayController {
               var11 = stackIn_26_0;
               if (var11 != 0) {
                 var8 += 19;
-                en.field_E.c(du.field_g[var10], 109, var8, 16777215, -1);
-                var12 = 3 + (en.field_E.a(du.field_g[var10]) >> 1);
+                en.field_E.drawCentered(du.field_g[var10], 109, var8, 16777215, -1);
+                var12 = 3 + (en.field_E.textWidth(du.field_g[var10]) >> 1);
                 AttackEvent.field_O.f(109 - var12 - AttackEvent.field_O.pixelWidth, var8 - 10);
                 AttackEvent.field_O.f(109 + var12, -10 + var8);
               }
@@ -7183,7 +7183,7 @@ final class GameplayController {
               ((String) (var2)).length() > 0) {
               var6 = 10 + AiPlanningStrategy.pointerX;
               var7 = ko.pointerY + 30;
-              var8 = en.field_E.a((String) (var2));
+              var8 = en.field_E.textWidth((String) (var2));
               if (var4 != 0) {
                 var6 = var6 - (var8 + 12);
                 if (!(6 <= var6)) {
@@ -7210,7 +7210,7 @@ final class GameplayController {
               if (decompiledSharedTail0) {
                 SoftwareRaster.a(-6 + var6, var7 - 11, 12 + var8, 15, 5, 0, 128);
               }
-              en.field_E.b((String) (var2), var6, var7, var3, -1);
+              en.field_E.drawText((String) (var2), var6, var7, var3, -1);
             }
             return;
           }
@@ -7461,7 +7461,7 @@ final class GameplayController {
             fe.b(ph.field_b[param3], db.a(true, param1 + 67), MatchConditionEntry.a(param0 + 18, (byte) 94), true);
             fe.c(ph.field_b[param3], db.a(true, param1 + 67), MatchConditionEntry.a(18 + param0, (byte) 94), ConsoleValue.field_b, true);
           }
-          en.field_E.c(var7, db.a(true, param1 + 67), MatchConditionEntry.a(128 + param0, (byte) 94), 16777215, -1);
+          en.field_E.drawCentered(var7, db.a(true, param1 + 67), MatchConditionEntry.a(128 + param0, (byte) 94), 16777215, -1);
           this.b(var6_int, 35 + param1, 133 + param0, -12857);
           stackIn_29_1 = (~this.field_Rb == ~param4);
           this.a(stackIn_29_1, var6_int, (byte) 113, param1 + 35, param0 + 194);
@@ -7489,7 +7489,7 @@ final class GameplayController {
         int stackIn_150_3;
         int stackIn_226_0 = 0;
         int stackIn_233_0 = 0;
-        tu stackIn_238_0 = null;
+        BinaryBitmapFont stackIn_238_0 = null;
         StringBuilder stackIn_238_1 = null;
         boolean stackIn_239_2 = false;
         RuntimeException decompiledCaughtException = null;
@@ -7534,7 +7534,7 @@ final class GameplayController {
                 }
                 var4_ref_String = stackIn_25_0;
               }
-              var5 = nr.field_e.a(var4_ref_String) / 2;
+              var5 = nr.field_e.textWidth(var4_ref_String) / 2;
               var6 = 0;
               var7 = 0;
               if (this.field_lb) {
@@ -7554,7 +7554,7 @@ final class GameplayController {
                   stackIn_40_1 = 1;
                 }
                 ((RgbSprite) (Object) stackIn_39_0[stackIn_40_1]).g(28, var9 - 36);
-                var6 = nr.field_e.a(DisplacedUnitMarker.field_t[12]) / 2;
+                var6 = nr.field_e.textWidth(DisplacedUnitMarker.field_t[12]) / 2;
                 var7 = -65 - var5 - var6 + rs.field_k;
                 var9Lifetime1 = this.f(128, db.a(true, var7));
                 if (MatchConditionEntry.a(0, (byte) 94) + se.field_a > var9Lifetime1) {
@@ -7747,28 +7747,28 @@ final class GameplayController {
                   this.field_Ub.isEmpty(false)) {
                   var4Lifetime1 = 16711680;
                 }
-                en.field_E.c(Integer.toString(this.field_Bb), 180, 3 * en.field_E.field_H + 25, var4Lifetime1, 0);
+                en.field_E.drawCentered(Integer.toString(this.field_Bb), 180, 3 * en.field_E.maxAscent + 25, var4Lifetime1, 0);
               }
               if (this.field_lb) {
                 var4Lifetime1Lifetime1 = this.battlefield.computeStateChecksum(true, this.controlledPlayerId);
                 stackIn_226_0 = (RadialSummonMenu.field_d == var4Lifetime1Lifetime1) ? 0 : 1;
                 var5Lifetime1 = stackIn_226_0;
-                en.field_E.c(Integer.toString(var4Lifetime1Lifetime1, 16) + " (client)", 320, 40, 16777215, -1);
-                en.field_E.c(Integer.toString(RadialSummonMenu.field_d, 16) + " (server)", 320, en.field_E.field_H + 40, 16777215, -1);
+                en.field_E.drawCentered(Integer.toString(var4Lifetime1Lifetime1, 16) + " (client)", 320, 40, 16777215, -1);
+                en.field_E.drawCentered(Integer.toString(RadialSummonMenu.field_d, 16) + " (server)", 320, en.field_E.maxAscent + 40, 16777215, -1);
                 if (var5Lifetime1 != 0) {
                   stackIn_233_0 = (this.a((byte) 101)) ? 8421631 : 16711680;
                   var6Lifetime1 = stackIn_233_0;
-                  en.field_E.c(Integer.toString(var4Lifetime1Lifetime1 ^ RadialSummonMenu.field_d, 16) + " (diff)", 320, en.field_E.field_H * 2 + 40, var6Lifetime1, -1);
+                  en.field_E.drawCentered(Integer.toString(var4Lifetime1Lifetime1 ^ RadialSummonMenu.field_d, 16) + " (diff)", 320, en.field_E.maxAscent * 2 + 40, var6Lifetime1, -1);
                 }
-                en.field_E.c(Integer.toString(this.remainingTurnTicks), 64, 35 + en.field_E.field_H * 3, 16777215, -1);
-                en.field_E.b(Integer.toString(this.field_cc) + "," + Integer.toString(this.field_eb), 20, 150, 16777215, -1);
+                en.field_E.drawCentered(Integer.toString(this.remainingTurnTicks), 64, 35 + en.field_E.maxAscent * 3, 16777215, -1);
+                en.field_E.drawText(Integer.toString(this.field_cc) + "," + Integer.toString(this.field_eb), 20, 150, 16777215, -1);
               }
-              en.field_E.b(Integer.toString(this.selectedTileIndex), 20, 140, 16777215, -1);
+              en.field_E.drawText(Integer.toString(this.selectedTileIndex), 20, 140, 16777215, -1);
               stackIn_238_0 = en.field_E;
               stackIn_238_1 = new StringBuilder().append("total hurt: ").append(this.battlefield.damageTakenByPlayer[this.controlledPlayerId]).append(" lost a unit? ");
               stackIn_239_2 = !(0 >= this.battlefield.unitLossCounts[this.controlledPlayerId]);
-              ((tu) (Object) stackIn_238_0).b(((StringBuilder) (Object) stackIn_238_1).append(stackIn_239_2).toString(), 20, 460, 16777215, 1);
-              en.field_E.b("scroll lock? " + this.cameraFocusPending, 20, 470, 16777215, 1);
+              ((BinaryBitmapFont) (Object) stackIn_238_0).drawText(((StringBuilder) (Object) stackIn_238_1).append(stackIn_239_2).toString(), 20, 460, 16777215, 1);
+              en.field_E.drawText("scroll lock? " + this.cameraFocusPending, 20, 470, 16777215, 1);
               SoftwareRaster.b(150, 100, 434, 145, 16711935);
             }
             return;
@@ -10045,7 +10045,7 @@ final class GameplayController {
             var6++;
           } while (var7 == 0);
           while (var6 < 3) {
-            en.field_E.b(this.battlefield.teamStructureCounts[param0][var6] + "/" + this.battlefield.mapStructureTotals[var6], db.a(true, 40 + param1), MatchConditionEntry.a(-2 + param2 + (var6 + 1) * var5_int, (byte) 94), 38810, -1);
+            en.field_E.drawText(this.battlefield.teamStructureCounts[param0][var6] + "/" + this.battlefield.mapStructureTotals[var6], db.a(true, 40 + param1), MatchConditionEntry.a(-2 + param2 + (var6 + 1) * var5_int, (byte) 94), 38810, -1);
             var6++;
             if (var7 != 0) {
               return;
@@ -10180,7 +10180,7 @@ final class GameplayController {
         int stackIn_67_1 = 0;
         int stackIn_67_2 = 0;
         int stackIn_68_3 = 0;
-        tu stackIn_71_0;
+        BinaryBitmapFont stackIn_71_0;
         String stackIn_71_1;
         int stackIn_71_2;
         int stackIn_71_3;
@@ -10306,7 +10306,7 @@ final class GameplayController {
           } else {
             stackIn_72_4 = 7829367;
           }
-          ((tu) (Object) stackIn_71_0).c(stackIn_71_1, stackIn_71_2, stackIn_71_3, stackIn_72_4, 0);
+          ((BinaryBitmapFont) (Object) stackIn_71_0).drawCentered(stackIn_71_1, stackIn_71_2, stackIn_71_3, stackIn_72_4, 0);
           if (param1 <= 101) {
             return;
           }
@@ -10427,7 +10427,7 @@ final class GameplayController {
             this.field_l = false;
           }
           fe.b(param2 - (var6_int >> 1), -20 + param1 - var8 - var9, var6_int, var8 - (-var9 - 30), MusicPatch.field_m, param3, 0, 192);
-          en.field_E.a(var7, param2 - (var6_int >> 1) + 10, param1 - var8, var6_int - 20, var8, 16777215, -1, 1, 0, 0);
+          en.field_E.drawParagraph(var7, param2 - (var6_int >> 1) + 10, param1 - var8, var6_int - 20, var8, 16777215, -1, 1, 0, 0);
           fe.b(MusicPatchEnvelope.field_f[param0], param2, -3 - var8 + param1 - var9, var6_int - 20, true);
           fe.a(MusicPatchEnvelope.field_f[param0], param2, -3 - var9 + (-var8 + param1), -20 + var6_int, param3, true);
           return;
@@ -10470,7 +10470,7 @@ final class GameplayController {
           this.field_D = false;
           if (this.selectedTileIndex != -1) {
             var4 = this.battlefield.tiles[this.selectedTileIndex].getDisplayName((byte) 81);
-            this.field_mc = (nr.field_e.a(var4) >> 1) - 210;
+            this.field_mc = (nr.field_e.textWidth(var4) >> 1) - 210;
             if (this.field_mc < 0) {
               this.field_mc = 0;
             }
@@ -10893,7 +10893,7 @@ final class GameplayController {
           var7 = var6 - this.f(128, this.g(2));
           if (this.field_dc[2] < 256) {
             SoftwareRaster.b(0, 0, var5, var6, 0, (-var4[2] + 255) / 2);
-            rs.field_n.a(SummonAction.field_F, var5 / 2, -(var7 >> 1) + (-20 + var6 / 2), 16763904, 0, -var4[2] + 255);
+            rs.field_n.drawCenteredWithAlpha(SummonAction.field_F, var5 / 2, -(var7 >> 1) + (-20 + var6 / 2), 16763904, 0, -var4[2] + 255);
           }
           this.n(-12);
           var8 = 0;
@@ -11124,7 +11124,7 @@ final class GameplayController {
                   if (var3 != 0) {
                     SoftwareRaster.a(230 + (var2_int * 45 + this.field_g), -95 + this.o(param0 ^ 11484), 20, 0, 128);
                   }
-                  en.field_E.c(Integer.toString(var4), 231 - (-(var2_int * 45) - this.field_g), this.o(125) - 60, 16777215, 0);
+                  en.field_E.drawCentered(Integer.toString(var4), 231 - (-(var2_int * 45) - this.field_g), this.o(125) - 60, 16777215, 0);
                 }
               } else if (var2_int == 5) {
                 if (0 > this.field_g) {
@@ -11136,7 +11136,7 @@ final class GameplayController {
                   if (var3 != 0) {
                     SoftwareRaster.a(this.field_g + 230 + var2_int * 45, -95 + this.o(125), 20, 0, 128);
                   }
-                  en.field_E.c(Integer.toString(var4), this.field_g + 231 + 45 * var2_int, this.o(param0 ^ 11487) - 60, 16777215, 0);
+                  en.field_E.drawCentered(Integer.toString(var4), this.field_g + 231 + 45 * var2_int, this.o(param0 ^ 11487) - 60, 16777215, 0);
                 }
               } else {
                 if (var4 < BattleCharacter.field_h.length) {
@@ -11147,7 +11147,7 @@ final class GameplayController {
                 if (var3 != 0) {
                   SoftwareRaster.a(var2_int * 45 + (230 + this.field_g), this.o(127) - 95, 20, 0, 128);
                 }
-                en.field_E.a(Integer.toString(var4), this.field_g + (231 + 45 * var2_int), -60 + this.o(125), 16777215, 0, 256 - this.field_n);
+                en.field_E.drawCenteredWithAlpha(Integer.toString(var4), this.field_g + (231 + 45 * var2_int), -60 + this.o(125), 16777215, 0, 256 - this.field_n);
               }
               var2_int++;
             }
@@ -11252,7 +11252,7 @@ final class GameplayController {
               stackIn_37_7 = true;
               stackIn_38_8 = ((1 << var5 & this.battlefield.inactivePlayerMask) != 0);
               ((CoatOfArms) (Object) stackIn_25_0).a(stackIn_26_1, stackIn_33_2, stackIn_33_3, stackIn_34_4, stackIn_37_5, stackIn_37_6, stackIn_37_7, stackIn_38_8, false, -19744);
-              en.field_E.c(var6, db.a(true, 98 + var4_int), MatchConditionEntry.a(380, (byte) 94), 16777215, -1);
+              en.field_E.drawCentered(var6, db.a(true, 98 + var4_int), MatchConditionEntry.a(380, (byte) 94), 16777215, -1);
               stackIn_42_1 = (~this.field_Rb == ~var7);
               this.a(stackIn_42_1, var5, (byte) -64, 66 + var4_int, 385);
               param0++;
@@ -11891,10 +11891,10 @@ final class GameplayController {
           }
           fm.a(stackIn_22_0, var8, db.a(true, param3), MatchConditionEntry.a(param4, (byte) 94), -116);
           it.field_a.g(db.a(true, param3 + 9), MatchConditionEntry.a(6 + param4, (byte) 94));
-          rs.field_n.b(Integer.toString(var6_int), db.a(true, param3 + 35), MatchConditionEntry.a(16 + param4, (byte) 94), 104342, -1);
+          rs.field_n.drawText(Integer.toString(var6_int), db.a(true, param3 + 35), MatchConditionEntry.a(16 + param4, (byte) 94), 104342, -1);
           if (var7 != 0) {
             var10 = "(+" + Integer.toString(var7) + ")";
-            rs.field_n.a(var10, db.a(true, 88 + param3), MatchConditionEntry.a(param4 + 16, (byte) 94), 104342, -1);
+            rs.field_n.drawRightAligned(var10, db.a(true, 88 + param3), MatchConditionEntry.a(param4 + 16, (byte) 94), 104342, -1);
             if (param3 <= AiPlanningStrategy.pointerX &&
               (param3 + var8) > AiPlanningStrategy.pointerX &&
               ko.pointerY >= param4 &&
@@ -11902,10 +11902,10 @@ final class GameplayController {
               var11 = fo.a(4800, qf.field_b, new String[]{Integer.toString(var7 + pg.playerProfile.progressionCredit)});
               var12 = AiPlanningStrategy.pointerX;
               var13 = ko.pointerY;
-              var14 = en.field_E.a(var11, 320);
-              var15 = en.field_E.getParagraphHeight(var11, 320, en.field_E.field_H);
+              var14 = en.field_E.getWrappedWidth(var11, 320);
+              var15 = en.field_E.getParagraphHeight(var11, 320, en.field_E.maxAscent);
               SoftwareRaster.a(db.a(true, var12 - 3), MatchConditionEntry.a(-3 + var13, (byte) 94), var14 + 6, 6 + var15, 5, 0, 192);
-              en.field_E.a(var11, db.a(true, var12), MatchConditionEntry.a(var13, (byte) 94), var14, var15, 16777215, -1, 0, 0, en.field_E.field_H);
+              en.field_E.drawParagraph(var11, db.a(true, var12), MatchConditionEntry.a(var13, (byte) 94), var14, var15, 16777215, -1, 0, 0, en.field_E.maxAscent);
             }
           }
           return;

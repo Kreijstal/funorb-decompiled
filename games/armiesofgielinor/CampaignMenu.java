@@ -238,11 +238,11 @@ final class CampaignMenu {
           var6 = fo.a(4800, BufferedSocket.field_h, new String[]{var5});
           if (this.field_h == null) {
             var7 = 164;
-            var8 = nr.field_e.a(qf.field_c) / 2 + 26;
+            var8 = nr.field_e.textWidth(qf.field_c) / 2 + 26;
             if (var7 < var8) {
               var7 = var8;
             }
-            var9 = 26 + nr.field_e.a(lb.field_c) / 2;
+            var9 = 26 + nr.field_e.textWidth(lb.field_c) / 2;
             if (var7 < var9) {
               var7 = var9;
             }
@@ -267,7 +267,7 @@ final class CampaignMenu {
           }
           fe.a(this.selectedMissionEntry.title, db.a(true, var8Lifetime1 / 2 + var11), MatchConditionEntry.a(var16, (byte) 94), var8Lifetime1 - 20, ConsoleValue.field_b, true, 40, 1);
           var16 += 14;
-          rs.field_n.a(var6, db.a(true, var15), MatchConditionEntry.a(var16, (byte) 94), var14, var10, 16777215, 1, 1, 0, 0);
+          rs.field_n.drawParagraph(var6, db.a(true, var15), MatchConditionEntry.a(var16, (byte) 94), var14, var10, 16777215, 1, 1, 0, 0);
           var16 = var16 + (var9Lifetime1 + 30);
           if (this.field_h == null) {
             this.field_h = new CampaignMenuButton(qf.field_c, var15, var16, var7);
@@ -352,7 +352,7 @@ final class CampaignMenu {
             QuickChatPhraseRepository.popRasterState(param0 ^ -18466);
             var6 = 5;
             var7 = 5 + rs.field_n.getParagraphHeight(this.selectedCampaignEntry.description, 232, 0);
-            en.field_E.a(this.selectedCampaignEntry.description, var4 + var6, 200 + var5, -(2 * var6) + 236, var7, 16777215, -1, 1, 0, 0);
+            en.field_E.drawParagraph(this.selectedCampaignEntry.description, var4 + var6, 200 + var5, -(2 * var6) + 236, var7, 16777215, -1, 1, 0, 0);
           }
           if (param0 != 396) {
             return;
@@ -489,10 +489,10 @@ final class CampaignMenu {
           fe.b(stackIn_17_0, stackIn_17_1, stackIn_17_2, stackIn_17_3, stackIn_17_4, stackIn_18_5, 0, 0);
           if (null != param2.title) {
             var10 = db.a(true, param2.left + var7);
-            var11 = param2.height / 2 + param2.top + rs.field_n.field_v;
+            var11 = param2.height / 2 + param2.top + rs.field_n.baselineHeight;
             fe.a(param2.title, var10, MatchConditionEntry.a(8 + (param2.top + param2.height / 2), (byte) 94), true);
             fe.a(param2.title, var10, MatchConditionEntry.a(param2.height / 2 + param2.top + 8, (byte) 94), ConsoleValue.field_b, true);
-            rs.field_n.b(param2.statusText, var10, MatchConditionEntry.a(var11, (byte) 94), 12303291, 1);
+            rs.field_n.drawText(param2.statusText, var10, MatchConditionEntry.a(var11, (byte) 94), 12303291, 1);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -730,15 +730,15 @@ final class CampaignMenu {
           }
           if (decompiledSharedTail0) {
             var6 = 164;
-            var7 = nr.field_e.a(kd.field_Y) / 2 + 26;
+            var7 = nr.field_e.textWidth(kd.field_Y) / 2 + 26;
             if (var6 < var7) {
               var6 = var7;
             }
-            var8 = 26 + nr.field_e.a(PacketBuffer.field_r) / 2;
+            var8 = 26 + nr.field_e.textWidth(PacketBuffer.field_r) / 2;
             if (var6 < var8) {
               var6 = var8;
             }
-            var9 = 26 + nr.field_e.a(lb.field_c) / 2;
+            var9 = 26 + nr.field_e.textWidth(lb.field_c) / 2;
             if (var9 > var6) {
               var6 = var9;
             }
@@ -755,7 +755,7 @@ final class CampaignMenu {
           var15 = 30 + var11;
           fe.a(this.selectedMissionEntry.title, db.a(true, var10 + var7Lifetime1 / 2), MatchConditionEntry.a(var15, (byte) 94), var7Lifetime1 - 20, ConsoleValue.field_b, true, 40, 1);
           var15 += 14;
-          rs.field_n.a(var5, db.a(true, var14), MatchConditionEntry.a(var15, (byte) 94), var13, var9Lifetime1, 16777215, 1, 1, 0, 0);
+          rs.field_n.drawParagraph(var5, db.a(true, var14), MatchConditionEntry.a(var15, (byte) 94), var13, var9Lifetime1, 16777215, 1, 1, 0, 0);
           var15 = var15 + (30 + var8Lifetime1);
           if (null == this.field_c) {
             this.field_c = new CampaignMenuButton(kd.field_Y, var14, var15, var6);
@@ -973,11 +973,11 @@ final class CampaignMenu {
             }
             if (decompiledSharedTail0) {
               var2_int = 184;
-              var3 = 26 + nr.field_e.a(LineOfSightGrid.field_j) / 2;
+              var3 = 26 + nr.field_e.textWidth(LineOfSightGrid.field_j) / 2;
               if (var3 > var2_int) {
                 var2_int = var3;
               }
-              var4 = nr.field_e.a(pn.field_k) / 2 + 26;
+              var4 = nr.field_e.textWidth(pn.field_k) / 2 + 26;
               if (var2_int < var4) {
                 var2_int = var4;
               }
@@ -1047,8 +1047,8 @@ final class CampaignMenu {
               stackIn_31_0 = this.selectedMissionEntry;
             }
             var15 = stackIn_31_0.mission;
-            rs.field_n.a(AccountNameNormalizer.field_b + var15.difficulty, db.a(true, var5), MatchConditionEntry.a(var6Lifetime1, (byte) 94), var4Lifetime1, 472, 16776960, 1, 0, 0, 0);
-            var6Lifetime1 = var6Lifetime1 + rs.field_n.field_v;
+            rs.field_n.drawParagraph(AccountNameNormalizer.field_b + var15.difficulty, db.a(true, var5), MatchConditionEntry.a(var6Lifetime1, (byte) 94), var4Lifetime1, 472, 16776960, 1, 0, 0, 0);
+            var6Lifetime1 = var6Lifetime1 + rs.field_n.baselineHeight;
             var16Lifetime1 = 1;
             if (this.selectedMissionEntry.statusText != null) {
               array$0 = new String[1];
@@ -1064,25 +1064,25 @@ final class CampaignMenu {
               }
               stackIn_37_3[stackIn_37_4] = stackIn_38_5;
               var17_ref_String = fo.a(stackIn_37_0, stackIn_37_1, stackIn_37_2);
-              var16Lifetime1 = rs.field_n.a(var17_ref_String, db.a(true, var5), MatchConditionEntry.a(var6Lifetime1, (byte) 94), var4Lifetime1, 472, 16776960, 1, 0, 0, 0);
-              var18Lifetime1 = rs.field_n.a(var17_ref_String, var4Lifetime1);
+              var16Lifetime1 = rs.field_n.drawParagraph(var17_ref_String, db.a(true, var5), MatchConditionEntry.a(var6Lifetime1, (byte) 94), var4Lifetime1, 472, 16776960, 1, 0, 0, 0);
+              var18Lifetime1 = rs.field_n.getWrappedWidth(var17_ref_String, var4Lifetime1);
               var19_intLifetime1 = this.selectedMissionEntry.score;
               if (1000 >= var19_intLifetime1) {
                 if (var19_intLifetime1 > 500) {
-                  MoveAttackRequest.field_C[1].g(db.a(true, 5 + var18Lifetime1 + var5), MatchConditionEntry.a(var6Lifetime1 + rs.field_n.field_H - rs.field_n.field_z, (byte) 94));
+                  MoveAttackRequest.field_C[1].g(db.a(true, 5 + var18Lifetime1 + var5), MatchConditionEntry.a(var6Lifetime1 + rs.field_n.maxAscent - rs.field_n.capitalHeight, (byte) 94));
                 }
                 if ((!(var19_intLifetime1 > 500) ||
                   var29 != 0) &&
                   (!(10 >= var19_intLifetime1))) {
-                  MoveAttackRequest.field_C[2].g(db.a(true, var5 + var18Lifetime1 + 5), MatchConditionEntry.a(-rs.field_n.field_z + rs.field_n.field_H + var6Lifetime1, (byte) 94));
+                  MoveAttackRequest.field_C[2].g(db.a(true, var5 + var18Lifetime1 + 5), MatchConditionEntry.a(-rs.field_n.capitalHeight + rs.field_n.maxAscent + var6Lifetime1, (byte) 94));
                   if (var29 != 0) {
-                    MoveAttackRequest.field_C[0].g(db.a(true, var5 - (-var18Lifetime1 - 5)), MatchConditionEntry.a(-rs.field_n.field_z + rs.field_n.field_H + var6Lifetime1, (byte) 94));
+                    MoveAttackRequest.field_C[0].g(db.a(true, var5 - (-var18Lifetime1 - 5)), MatchConditionEntry.a(-rs.field_n.capitalHeight + rs.field_n.maxAscent + var6Lifetime1, (byte) 94));
                   }
                 }} else {
-                MoveAttackRequest.field_C[0].g(db.a(true, var5 - (-var18Lifetime1 - 5)), MatchConditionEntry.a(-rs.field_n.field_z + rs.field_n.field_H + var6Lifetime1, (byte) 94));
+                MoveAttackRequest.field_C[0].g(db.a(true, var5 - (-var18Lifetime1 - 5)), MatchConditionEntry.a(-rs.field_n.capitalHeight + rs.field_n.maxAscent + var6Lifetime1, (byte) 94));
               }
             }
-            var6Lifetime1 = var6Lifetime1 + rs.field_n.field_v * (-1 + var16Lifetime1);
+            var6Lifetime1 = var6Lifetime1 + rs.field_n.baselineHeight * (-1 + var16Lifetime1);
             var17Lifetime2 = 276;
             var5Lifetime1 = 18;
             var18Lifetime2 = var5Lifetime1;
@@ -1105,7 +1105,7 @@ final class CampaignMenu {
               if (var24_int >= var23.length) {
                 var5Lifetime1 = 18;
                 var6Lifetime1 += 16;
-                en.field_E.a(var15.description, db.a(true, var5Lifetime1), MatchConditionEntry.a(var6Lifetime1, (byte) 94), var4Lifetime1, 472, 16777215, 1, 0, 0, 12);
+                en.field_E.drawParagraph(var15.description, db.a(true, var5Lifetime1), MatchConditionEntry.a(var6Lifetime1, (byte) 94), var4Lifetime1, 472, 16777215, 1, 0, 0, 12);
                 stackIn_70_0 = 391;
                 break;
               }
@@ -1121,7 +1121,7 @@ final class CampaignMenu {
                   }
                   var27 = var18Lifetime2 + 60;
                   var28 = 5 + var4Lifetime1 - var27;
-                  rs.field_n.a(var26_ref_sd.displayName, db.a(true, var27), MatchConditionEntry.a(var17Lifetime2 + var22, (byte) 94), var28, 20, 16777215, 1, 0, 2, 0);
+                  rs.field_n.drawParagraph(var26_ref_sd.displayName, db.a(true, var27), MatchConditionEntry.a(var17Lifetime2 + var22, (byte) 94), var28, 20, 16777215, 1, 0, 2, 0);
                   var17Lifetime2 = var17Lifetime2 - var21;
                 }
                 var24_int++;
@@ -1143,16 +1143,16 @@ final class CampaignMenu {
               var27Lifetime1 = rs.field_n.getParagraphHeight(var23_ref.description, var25_intLifetime1, 0);
               var28Lifetime1 = var6Lifetime2 - var27Lifetime1 / 2;
               SoftwareRaster.b(db.a(true, var26), MatchConditionEntry.a(var28Lifetime1, (byte) 94), var25_intLifetime1, var27Lifetime1 + 2, 0, 128);
-              rs.field_n.a(var23_ref.description, db.a(true, var26), MatchConditionEntry.a(var28Lifetime1, (byte) 94), var25_intLifetime1, 472, 16777215, 1, 1, 0, 0);
+              rs.field_n.drawParagraph(var23_ref.description, db.a(true, var26), MatchConditionEntry.a(var28Lifetime1, (byte) 94), var25_intLifetime1, 472, 16777215, 1, 1, 0, 0);
             }
-            rs.field_n.a(IntPair.field_l + var23_ref.title, db.a(true, var23_ref.icon.canvasWidth + 31), MatchConditionEntry.a(-10 + var6Lifetime2, (byte) 94), -13 + (-var23_ref.icon.canvasWidth + var4Lifetime1), var23_ref.icon.canvasHeight, 16776960, 0, 0, 1, 0);
+            rs.field_n.drawParagraph(IntPair.field_l + var23_ref.title, db.a(true, var23_ref.icon.canvasWidth + 31), MatchConditionEntry.a(-10 + var6Lifetime2, (byte) 94), -13 + (-var23_ref.icon.canvasWidth + var4Lifetime1), var23_ref.icon.canvasHeight, 16776960, 0, 0, 1, 0);
             if (null != var19) {
               var25_intLifetime2 = 100;
               var26Lifetime1 = AiPlanningStrategy.pointerX;
               var27Lifetime2 = rs.field_n.getParagraphHeight(((CampaignParticipant) (var19)).displayName, var25_intLifetime2, 0);
               var28Lifetime2 = -(var27Lifetime2 / 2) + (25 + ko.pointerY);
               SoftwareRaster.b(db.a(true, var26Lifetime1), MatchConditionEntry.a(var28Lifetime2, (byte) 94), var25_intLifetime2, var27Lifetime2 + 2, 0, 255);
-              rs.field_n.a(((CampaignParticipant) (var19)).displayName, db.a(true, var26Lifetime1), MatchConditionEntry.a(var28Lifetime2, (byte) 94), var25_intLifetime2, 472, 16777215, 1, 1, 0, 0);
+              rs.field_n.drawParagraph(((CampaignParticipant) (var19)).displayName, db.a(true, var26Lifetime1), MatchConditionEntry.a(var28Lifetime2, (byte) 94), var25_intLifetime2, 472, 16777215, 1, 1, 0, 0);
             }
             var6Lifetime3 = 436;
             if (this.field_t == null) {
@@ -2258,7 +2258,7 @@ final class CampaignMenu {
           }
           if (decompiledNaturalLoopExit0) {
             if (null != var3) {
-              var5 = nr.field_e.a(((CampaignMenuEntry) (var3)).title) >> 2;
+              var5 = nr.field_e.textWidth(((CampaignMenuEntry) (var3)).title) >> 2;
               var6 = ((CampaignMenuEntry) (var3)).left;
               if (var5 + var6 > 630) {
                 var6 = -var5 + 630;

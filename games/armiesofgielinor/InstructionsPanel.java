@@ -651,8 +651,8 @@ final class InstructionsPanel {
         }
         try {
           SoftwareRaster.b(5, 25, 30, 30, 0, 192);
-          en.field_E.b(ScrollContainer.unitDisplayNames[param5.unitType], 10, 17, op.field_c[0][param5.ownerPlayer], -1);
-          en.field_E.a(param5.bonusStrength + param5.strength + "/" + param5.maximumStrength, 126, 18, op.field_c[0][param5.ownerPlayer], -1);
+          en.field_E.drawText(ScrollContainer.unitDisplayNames[param5.unitType], 10, 17, op.field_c[0][param5.ownerPlayer], -1);
+          en.field_E.drawRightAligned(param5.bonusStrength + param5.strength + "/" + param5.maximumStrength, 126, 18, op.field_c[0][param5.ownerPlayer], -1);
           if (param5.ownerPlayer == param2) {
             SoftwareRaster.b(99, 25, 30, 30, 0, 128);
             SoftwareRaster.b(52, 25, 30, 30, 0, 128);
@@ -668,7 +668,7 @@ final class InstructionsPanel {
             }
           }
           ro.field_rb[param5.getUnitCategory(0)].draw(106, 32);
-          en.field_E.c(100 - param3 + "%", 20, 45, 16777215, -1);
+          en.field_E.drawCentered(100 - param3 + "%", 20, 45, 16777215, -1);
           EventPresenter.field_t.b(68, 60, ConsoleValue.field_b[-1 + ConsoleValue.field_b.length]);
           so.field_b.a(5605);
           SpellConfirmationDialog.field_j.e(db.a(true, param1), MatchConditionEntry.a(param7, (byte) 94), -param0 + 32 << 3);
@@ -858,7 +858,7 @@ final class InstructionsPanel {
         if (param0 != 17) {
           this.getPanelStart((byte) -89);
         }
-        return rs.field_n.field_L + rs.field_n.field_H;
+        return rs.field_n.maxDescent + rs.field_n.maxAscent;
     }
 
     private final void c(int param0, int param1, int param2) {
@@ -1016,7 +1016,7 @@ final class InstructionsPanel {
         if (param0 != 21695) {
           return 113;
         }
-        return (nr.field_e.field_y >> 2) - nr.field_e.field_L + nr.field_e.field_v + (-(nr.field_e.field_H >> 1) + 3);
+        return (nr.field_e.xHeight >> 2) - nr.field_e.maxDescent + nr.field_e.baselineHeight + (-(nr.field_e.maxAscent >> 1) + 3);
     }
 
     private final void a(RgbSprite param0, int param1, int param2, RgbSprite param3, int param4, int param5) {
@@ -1142,7 +1142,7 @@ final class InstructionsPanel {
         if (param0 <= 14) {
           this.footerEnd = (IntPair) null;
         }
-        return nr.field_e.field_H + nr.field_e.field_L >> 1;
+        return nr.field_e.maxAscent + nr.field_e.maxDescent >> 1;
     }
 
     private final IntPair a(int param0, int param1, int param2) {
@@ -1329,14 +1329,14 @@ final class InstructionsPanel {
 
     private final int i(int param0) {
         int var2 = 32 % ((-32 - param0) / 59);
-        return rs.field_n.field_L + rs.field_n.field_H;
+        return rs.field_n.maxDescent + rs.field_n.maxAscent;
     }
 
     private final int h(int param0) {
         if (param0 != -2881) {
           return -79;
         }
-        return 3 + nr.field_e.field_v - nr.field_e.field_L - (nr.field_e.field_H >> 1);
+        return 3 + nr.field_e.baselineHeight - nr.field_e.maxDescent - (nr.field_e.maxAscent >> 1);
     }
 
     private final void j(int param0) {
@@ -1432,7 +1432,7 @@ final class InstructionsPanel {
         if (param0 >= -90) {
           InstructionsPanel.describeBattleVictoryConditions(117);
         }
-        return nr.field_e.field_v - nr.field_e.field_L - (nr.field_e.field_H - ((nr.field_e.field_y >> 1) + 3));
+        return nr.field_e.baselineHeight - nr.field_e.maxDescent - (nr.field_e.maxAscent - ((nr.field_e.xHeight >> 1) + 3));
     }
 
     private final void a(int param0, int param1, int param2, byte param3, int param4) {
@@ -1959,7 +1959,7 @@ final class InstructionsPanel {
         if (!param0) {
           field_D = 24;
         }
-        return nr.field_e.field_H >> 1;
+        return nr.field_e.maxAscent >> 1;
     }
 
     private final IntPair e(int param0, int param1) {
@@ -2740,7 +2740,7 @@ final class InstructionsPanel {
               var17 != null) {
               var23 = 1;
             }
-            rs.field_n.a(param2, db.a(true, var18Lifetime1), MatchConditionEntry.a(var19Lifetime1, (byte) 94), var20, var21, var22, -1, var23, 0, var15);
+            rs.field_n.drawParagraph(param2, db.a(true, var18Lifetime1), MatchConditionEntry.a(var19Lifetime1, (byte) 94), var20, var21, var22, -1, var23, 0, var15);
             var12 = var12 + var21;
             if (param1 != null) {
               var12 = var12 + this.field_g;
@@ -2758,7 +2758,7 @@ final class InstructionsPanel {
             while (param1.length > var25) {
               var22Lifetime1 = rs.field_n.getParagraphHeight(param1[var25], var20Lifetime1, var15);
               var23Lifetime1 = this.field_l;
-              rs.field_n.a(param1[var25], db.a(true, var18Lifetime2), MatchConditionEntry.a(var19Lifetime2, (byte) 94), var20Lifetime1, var22Lifetime1, var23Lifetime1, -1, 0, 0, var15);
+              rs.field_n.drawParagraph(param1[var25], db.a(true, var18Lifetime2), MatchConditionEntry.a(var19Lifetime2, (byte) 94), var20Lifetime1, var22Lifetime1, var23Lifetime1, -1, 0, 0, var15);
               var19Lifetime2 = var19Lifetime2 + var22Lifetime1;
               if ((-1 + param1.length) > var25) {
                 var19Lifetime2 = var19Lifetime2 + this.field_E;

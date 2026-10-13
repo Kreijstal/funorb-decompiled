@@ -24,7 +24,7 @@ final class r extends vt {
     static int field_u;
     static String field_I;
     static ClientUiComponent field_v;
-    private tu field_C;
+    private BinaryBitmapFont field_C;
     static String field_w;
 
     private final RgbSprite k(int param0) {
@@ -226,14 +226,14 @@ final class r extends vt {
 
     private final void e(byte param0) {
         int var2 = this.field_D[3].canvasWidth;
-        int var3 = this.field_C.a(' ');
+        int var3 = this.field_C.characterWidth(' ');
         int var4 = this.field_A - (-var2 - var3);
         int var5 = this.field_D[1].canvasHeight;
         if (param0 != 108) {
           this.field_L = -29;
         }
         int var6 = 2;
-        int var7 = this.field_C.field_H;
+        int var7 = this.field_C.maxAscent;
         int var8 = var5 + (this.field_K - (-var6 - var7));
         int var9 = this.field_q[0];
         if (this.field_r) {
@@ -243,7 +243,7 @@ final class r extends vt {
           var9 = this.field_q[1];
         }
         String var10 = this.field_z.a((byte) -96, this.field_L);
-        this.field_C.b(var10, var4, var8, var9, -1);
+        this.field_C.drawText(var10, var4, var8, var9, -1);
     }
 
     final int h(int param0) {
@@ -399,7 +399,7 @@ final class r extends vt {
         return var1;
     }
 
-    r(RgbSprite[] param0, RgbSprite[] param1, tu param2, int[] param3, String[] param4, int param5, int param6) {
+    r(RgbSprite[] param0, RgbSprite[] param1, BinaryBitmapFont param2, int[] param3, String[] param4, int param5, int param6) {
         RuntimeException var8 = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
@@ -481,11 +481,11 @@ final class r extends vt {
         var2 = 0;
         for (var3 = 0; this.field_z.u(117) > var3; var3++) {
           var4_ref_String = this.field_z.a((byte) -126, var3);
-          var5_int = this.field_C.a(var4_ref_String);
+          var5_int = this.field_C.textWidth(var4_ref_String);
           stackIn_7_0 = (var2 >= var5_int) ? var2 : var5_int;
           var2 = stackIn_7_0;
         }
-        var3Lifetime1 = this.field_C.a(' ') << 1;
+        var3Lifetime1 = this.field_C.characterWidth(' ') << 1;
         if (param0 != 10009) {
           return;
         }
@@ -493,7 +493,7 @@ final class r extends vt {
         var5 = this.k(3);
         var6 = var5.canvasWidth;
         this.field_t = var6 + var4 + var2 + var3Lifetime1;
-        var7 = this.field_C.field_L + this.field_C.field_H;
+        var7 = this.field_C.maxDescent + this.field_C.maxAscent;
         var8 = 4;
         var9 = var5.canvasHeight;
         this.field_o = var8 + var7;

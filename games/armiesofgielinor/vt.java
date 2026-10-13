@@ -94,7 +94,7 @@ abstract class vt extends IntrusiveNode {
     vt() {
     }
 
-    final static boolean a(int param0, tu param1, int param2, RgbSprite[] param3, String param4, int param5) {
+    final static boolean a(int param0, BinaryBitmapFont param1, int param2, RgbSprite[] param3, String param4, int param5) {
         int var6_int = 0;
         RuntimeException var6 = null;
         int var7 = 0;
@@ -109,7 +109,7 @@ abstract class vt extends IntrusiveNode {
         String stackIn_18_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var6_int = param1.a(param4) + (param3[0].canvasWidth << 1) >> 1;
+          var6_int = param1.textWidth(param4) + (param3[0].canvasWidth << 1) >> 1;
           if (param5 > -104) {
             field_m = (int[]) null;
           }

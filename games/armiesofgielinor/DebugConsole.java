@@ -260,7 +260,7 @@ final class DebugConsole extends ConsolePanel {
             if (rn.consoleCallKind == token.kind &&
               prefixLength > 0) {
               prefix = token.text.substring(0, Math.min(token.text.length(), prefixLength));
-              this.suggestionBackdrop.x = this.font.a(source.substring(0, token.sourceOffset));
+              this.suggestionBackdrop.x = this.font.textWidth(source.substring(0, token.sourceOffset));
             } else {
               backwardTokenIndex = tokenIndex;
               parenthesisDepth = 0;
@@ -280,7 +280,7 @@ final class DebugConsole extends ConsolePanel {
               if (0 < backwardTokenIndex &&
                 tokens[backwardTokenIndex - 1].kind == rn.consoleCallKind) {
                 prefix = tokens[-1 + backwardTokenIndex].text;
-                this.suggestionBackdrop.x = this.font.a(source.substring(0, tokens[-1 + backwardTokenIndex].sourceOffset));
+                this.suggestionBackdrop.x = this.font.textWidth(source.substring(0, tokens[-1 + backwardTokenIndex].sourceOffset));
               }
             }
           }

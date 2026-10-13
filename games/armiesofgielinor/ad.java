@@ -112,7 +112,7 @@ final class ad extends tj implements he {
           this.field_G = param2;
           this.field_L = param0;
           this.field_J = param1;
-          var4_int = this.field_G != null ? this.field_J.getParagraphHeight(this.field_G, 260, this.field_J.field_H) : 0;
+          var4_int = this.field_G != null ? this.field_J.getParagraphHeight(this.field_G, 260, this.field_J.maxAscent) : 0;
           this.setBounds(0, 288, 0, 8192, 22 + var4_int);
         } catch (RuntimeException runtimeException) {
           throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "ad.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
@@ -121,7 +121,7 @@ final class ad extends tj implements he {
 
     final void a(int param0, int param1, byte param2, int param3) {
         super.a(param0, param1, (byte) -123, param3);
-        this.field_J.a(this.field_G, 14 + param0 + this.x, this.y + param1 + 10, -28 + this.width, this.height, 16777215, -1, 0, 0, this.field_J.field_H);
+        this.field_J.drawParagraph(this.field_G, 14 + param0 + this.x, this.y + param1 + 10, -28 + this.width, this.height, 16777215, -1, 0, 0, this.field_J.maxAscent);
         if (param2 > -82) {
           ad.a((byte) 73);
         }

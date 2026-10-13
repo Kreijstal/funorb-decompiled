@@ -199,7 +199,7 @@ final class wd {
             if (var6 == 2) {
               var4 = fo.a(4800, ta.field_Q, new String[]{qd.chatRecipientName});
               var8 = fo.a(4800, ov.field_l, new String[]{var3});
-              var7 = rb.field_b.width + UpkeepEvent.field_z.width - 485 - (-IntrusiveNode.field_e.a(var8) + IntrusiveNode.field_e.a(var4));
+              var7 = rb.field_b.width + UpkeepEvent.field_z.width - 485 - (-IntrusiveNode.field_e.textWidth(var8) + IntrusiveNode.field_e.textWidth(var4));
               if (var7 < 0) {
                 var7 = 0;
               }
@@ -240,7 +240,7 @@ final class wd {
                 var5 = "";
                 var4 = "<col=999999>" + var4 + ps.field_z + "</col>";
               }
-              var9 = IntrusiveNode.field_e.a(var4);
+              var9 = IntrusiveNode.field_e.textWidth(var4);
               if (!us.a(true)) {
                 if (UpkeepEvent.field_z.heldButtonMatches &&
                   var9 > (-UpkeepEvent.field_z.screenX + AiPlanningStrategy.pointerX)) {
@@ -257,7 +257,7 @@ final class wd {
                 }
               }
             }
-            fs.a(CombatEvent.field_A[var6], var5, var4 + BitmapFont.c(UpkeepEvent.chatTextBuffer.toString()), 33, var7);
+            fs.a(CombatEvent.field_A[var6], var5, var4 + BitmapFont.escapeMarkup(UpkeepEvent.chatTextBuffer.toString()), 33, var7);
             if (!hf.textChatActive) {
               rb.field_b.heldButtonMatches = false;
             }

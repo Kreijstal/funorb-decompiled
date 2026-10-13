@@ -13,7 +13,7 @@ final class ng {
     private int field_z;
     static String field_s;
     private int field_h;
-    private tu field_e;
+    private BinaryBitmapFont field_e;
     private int field_a;
     private String[] field_A;
     private int field_w;
@@ -95,7 +95,7 @@ final class ng {
         }
         for (var3 = 0; var3 < this.field_r; var3++) {
           var4 = this.field_A[var3];
-          var5 = this.field_e.a(var4);
+          var5 = this.field_e.textWidth(var4);
           if (var2 < var5) {
             var2 = var5;
           }
@@ -129,7 +129,7 @@ final class ng {
 
     private final void t(int param0) {
         int var2 = this.o(114);
-        int var3 = this.field_e.a(' ') << 1;
+        int var3 = this.field_e.characterWidth(' ') << 1;
         int var4 = this.field_l[3].canvasWidth + this.field_l[5].canvasWidth;
         if (param0 != 0) {
           return;
@@ -346,7 +346,7 @@ final class ng {
         if (param0 >= -82) {
           this.field_u = 47;
         }
-        int var2 = this.field_e.field_L + this.field_e.field_H;
+        int var2 = this.field_e.maxDescent + this.field_e.maxAscent;
         int var3 = 4;
         int var4 = var3 + var2;
         return var4;
@@ -718,7 +718,7 @@ final class ng {
         SoftwareRaster.b(this.field_j);
         SoftwareRaster.b(var4, var2, var5, var3);
         var4 = -var6 + var4;
-        var2 = var2 + this.field_e.field_H;
+        var2 = var2 + this.field_e.maxAscent;
         int var7 = this.d((byte) -85);
         for (var8 = this.field_m; this.field_z > var8; var8++) {
           var9 = this.field_A[var8];
@@ -726,7 +726,7 @@ final class ng {
           if (var8 == this.field_u) {
             var10 = this.field_b[1];
           }
-          this.field_e.b(var9, var4, var2, var10, -1);
+          this.field_e.drawText(var9, var4, var2, var10, -1);
           var2 = var2 + var7;
         }
         SoftwareRaster.a(this.field_j);
@@ -831,7 +831,7 @@ final class ng {
         }
     }
 
-    ng(RgbSprite[] param0, RgbSprite[] param1, tu param2, int[] param3, String[] param4, int param5, int param6) {
+    ng(RgbSprite[] param0, RgbSprite[] param1, BinaryBitmapFont param2, int[] param3, String[] param4, int param5, int param6) {
         RuntimeException var8 = null;
         RgbSprite[] var9 = null;
         RuntimeException stackIn_5_0 = null;

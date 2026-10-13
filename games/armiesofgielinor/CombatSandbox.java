@@ -10,7 +10,7 @@ final class CombatSandbox {
     private ia field_d;
     private ia field_a;
     private r[] field_l;
-    private tu field_m;
+    private BinaryBitmapFont field_m;
     private ia field_h;
     static String field_g;
     static String field_e;
@@ -269,9 +269,9 @@ final class CombatSandbox {
 
     private final void a(int param0) {
         int var2 = so.field_b.field_a >> 1;
-        int var3 = -this.field_m.field_H + so.field_b.field_g - (this.field_m.field_L << 1);
+        int var3 = -this.field_m.maxAscent + so.field_b.field_g - (this.field_m.maxDescent << 1);
         int var4 = this.field_i[param0];
-        this.field_m.c("Press Esc to return to the main menu", var2, var3, var4, -1);
+        this.field_m.drawCentered("Press Esc to return to the main menu", var2, var3, var4, -1);
     }
 
     private final void a(byte param0, int param1, int param2) {
@@ -313,7 +313,7 @@ final class CombatSandbox {
         return;
     }
 
-    CombatSandbox(RgbSprite[] param0, RgbSprite[] param1, tu param2, int[] param3, int param4, int param5) {
+    CombatSandbox(RgbSprite[] param0, RgbSprite[] param1, BinaryBitmapFont param2, int[] param3, int param4, int param5) {
         this.field_c = 0;
         try {
           this.field_b = param0;

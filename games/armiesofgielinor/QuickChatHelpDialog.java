@@ -117,7 +117,7 @@ final class QuickChatHelpDialog extends ClientUiComponent {
           for (rowIndex = 0; AiUnitPlanner.quickChatShortcutDescriptions.length > rowIndex; rowIndex++) {
             shortcutLabel = new ClientUiComponent(0L, bodyStyle, bt.quickChatShortcutLabels[rowIndex]);
             descriptionLabel = new ClientUiComponent(0L, bodyStyle, AiUnitPlanner.quickChatShortcutDescriptions[rowIndex]);
-            descriptionWidth = bodyStyle.font.a(AiUnitPlanner.quickChatShortcutDescriptions[rowIndex]);
+            descriptionWidth = bodyStyle.font.textWidth(AiUnitPlanner.quickChatShortcutDescriptions[rowIndex]);
             if (maximumDescriptionWidth < descriptionWidth) {
               maximumDescriptionWidth = descriptionWidth;
             }

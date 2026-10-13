@@ -1723,7 +1723,7 @@ class BattleTutorial {
         }
         if (this.message != null) {
           SoftwareRaster.setClip(var2 - this.panelWidth, -this.panelHeight + var3, var2 - 10, var3 - 45);
-          rs.field_n.a(this.message, -this.panelWidth + var2, -this.panelHeight + var3, 220, 400, 16777215, -1, 0, 0, 0);
+          rs.field_n.drawParagraph(this.message, -this.panelWidth + var2, -this.panelHeight + var3, 220, 400, 16777215, -1, 0, 0, 0);
         }
         SoftwareRaster.a();
     }
@@ -1898,7 +1898,7 @@ class BattleTutorial {
         int var6Lifetime1;
         var13 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          var5_int = param3.a(param1);
+          var5_int = param3.textWidth(param1);
           if (param0 >= var5_int &&
             param1.indexOf("<br>") == -1) {
             param4[0] = param1;
@@ -1923,7 +1923,7 @@ class BattleTutorial {
               if (stackIn_21_0 == stackIn_21_1 ||
                 45 == var10) {
                 var11 = param1.substring(var7, var9 + 1).trim();
-                var12 = param3.a(var11);
+                var12 = param3.textWidth(var11);
                 if (var12 >= param0) {
                   incrementValue$0 = var6Lifetime1;
                   var6Lifetime1++;

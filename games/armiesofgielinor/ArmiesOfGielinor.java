@@ -1089,9 +1089,9 @@ public final class ArmiesOfGielinor extends wf {
           }
           if (BufferedSocket.field_j >= 2 &&
             CoatOfArms.field_e) {
-            rs.field_n.b(Integer.toString(UnitModelPreview.field_i), 8, 23, 16777215, 1);
-            rs.field_n.a((Runtime.getRuntime().totalMemory() - Runtime.getRuntime().freeMemory()) / 1024L + "kB", 500, 100, 16777215, 1);
-            rs.field_n.a(Runtime.getRuntime().totalMemory() / 1024L + "kB", 500, 120, 16777215, 1);
+            rs.field_n.drawText(Integer.toString(UnitModelPreview.field_i), 8, 23, 16777215, 1);
+            rs.field_n.drawRightAligned((Runtime.getRuntime().totalMemory() - Runtime.getRuntime().freeMemory()) / 1024L + "kB", 500, 100, 16777215, 1);
+            rs.field_n.drawRightAligned(Runtime.getRuntime().totalMemory() / 1024L + "kB", 500, 120, 16777215, 1);
           }
           ToggleTurnSkipConsoleCommand.h(2);
           pt.a(0, 12, var2, 0);
@@ -1728,11 +1728,11 @@ public final class ArmiesOfGielinor extends wf {
         }
     }
 
-    final static tu a(byte[] param0, boolean param1) {
-        tu var2 = null;
+    final static BinaryBitmapFont a(byte[] param0, boolean param1) {
+        BinaryBitmapFont var2 = null;
         RuntimeException var2_ref = null;
         Object stackIn_5_0 = null;
-        tu stackIn_7_0 = null;
+        BinaryBitmapFont stackIn_7_0 = null;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
         String stackIn_12_2 = null;
@@ -1743,9 +1743,9 @@ public final class ArmiesOfGielinor extends wf {
           }
           if (param0 == null) {
             stackIn_5_0 = null;
-            return (tu) (stackIn_5_0);
+            return (BinaryBitmapFont) (stackIn_5_0);
           }
-          var2 = new tu(param0, j.decodedSpriteOffsetXs, CampaignMenuButton.decodedSpriteOffsetYs, qm.decodedSpriteWidths, c.decodedSpriteHeights, AnimationPlayer.decodedSpriteIndices);
+          var2 = new BinaryBitmapFont(param0, j.decodedSpriteOffsetXs, CampaignMenuButton.decodedSpriteOffsetYs, qm.decodedSpriteWidths, c.decodedSpriteHeights, AnimationPlayer.decodedSpriteIndices);
           rj.releaseSpriteDecodeBuffers((byte) 124);
           stackIn_7_0 = var2;
           return stackIn_7_0;
@@ -2368,8 +2368,8 @@ public final class ArmiesOfGielinor extends wf {
           jt.field_a = 16;
           ClientConnectionState.a(50, true);
           QuickChatPhrase.a(param0 ^ -68, SocialListPanel.field_Ob);
-          DropdownSelector.a(128, 8, rs.field_n.field_z, rs.field_n.field_L + rs.field_n.field_z, rs.field_n, MusicPatch.field_m[0].pixelHeight, 8, 2, 16777215, 240, rs.field_n.field_z, -99, new pn(DisplacedUnitMarker.field_s, ConsoleValue.field_b, 0, 128, true), 255, new pn(DisplacedUnitMarker.field_s, ConsoleValue.field_b, 0, 128, true), 320, MusicPatch.field_m[0].pixelWidth, rs.field_n.field_z + rs.field_n.field_L, new pn(MusicPatch.field_m, ConsoleValue.field_b, 0, 224, false), rs.field_n);
-          wm.a(320, 128, 240, 16777215, rs.field_n.field_z + rs.field_n.field_L, rs.field_n.field_z, new pn(DisplacedUnitMarker.field_s, ConsoleValue.field_b, 0, 128, true), 8, (byte) 90, 480, 8, rs.field_n.field_L + rs.field_n.field_z, new pn(DisplacedUnitMarker.field_s, ConsoleValue.field_b, 0, 128, true), MusicPatch.field_m[0].pixelHeight, rs.field_n, 2, MusicPatch.field_m[0].pixelWidth, rs.field_n, 255, rs.field_n.field_z, new pn(MusicPatch.field_m, ConsoleValue.field_b, 0, 224, false));
+          DropdownSelector.a(128, 8, rs.field_n.capitalHeight, rs.field_n.maxDescent + rs.field_n.capitalHeight, rs.field_n, MusicPatch.field_m[0].pixelHeight, 8, 2, 16777215, 240, rs.field_n.capitalHeight, -99, new pn(DisplacedUnitMarker.field_s, ConsoleValue.field_b, 0, 128, true), 255, new pn(DisplacedUnitMarker.field_s, ConsoleValue.field_b, 0, 128, true), 320, MusicPatch.field_m[0].pixelWidth, rs.field_n.capitalHeight + rs.field_n.maxDescent, new pn(MusicPatch.field_m, ConsoleValue.field_b, 0, 224, false), rs.field_n);
+          wm.a(320, 128, 240, 16777215, rs.field_n.capitalHeight + rs.field_n.maxDescent, rs.field_n.capitalHeight, new pn(DisplacedUnitMarker.field_s, ConsoleValue.field_b, 0, 128, true), 8, (byte) 90, 480, 8, rs.field_n.maxDescent + rs.field_n.capitalHeight, new pn(DisplacedUnitMarker.field_s, ConsoleValue.field_b, 0, 128, true), MusicPatch.field_m[0].pixelHeight, rs.field_n, 2, MusicPatch.field_m[0].pixelWidth, rs.field_n, 255, rs.field_n.capitalHeight, new pn(MusicPatch.field_m, ConsoleValue.field_b, 0, 224, false));
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -2479,9 +2479,9 @@ public final class ArmiesOfGielinor extends wf {
                 var3 = 8;
               }
             }
-            fe.b(-5, var3 - 10, rs.field_n.a(so.field_a[var2.field_l]) + 62, 48, MusicPatch.field_m, ConsoleValue.field_b, 0, 128);
+            fe.b(-5, var3 - 10, rs.field_n.textWidth(so.field_a[var2.field_l]) + 62, 48, MusicPatch.field_m, ConsoleValue.field_b, 0, 128);
             DelayedPacket.field_k[var2.field_l].c(8, var3);
-            rs.field_n.b(so.field_a[var2.field_l], 42, var3 - (-5 - rs.field_n.field_H), 15658734, -1);
+            rs.field_n.drawText(so.field_a[var2.field_l], 42, var3 - (-5 - rs.field_n.maxAscent), 15658734, -1);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

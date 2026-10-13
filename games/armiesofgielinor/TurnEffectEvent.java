@@ -337,11 +337,11 @@ final class TurnEffectEvent extends GameEvent {
         }
     }
 
-    final static d a(String param0, ResourceArchive param1, ResourceArchive param2, String param3, int param4) {
+    final static PalettedBitmapFont a(String param0, ResourceArchive param1, ResourceArchive param2, String param3, int param4) {
         int var5_int = 0;
         RuntimeException var5 = null;
         int var6 = 0;
-        d stackIn_4_0 = null;
+        PalettedBitmapFont stackIn_4_0 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;

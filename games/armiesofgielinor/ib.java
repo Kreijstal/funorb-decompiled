@@ -380,7 +380,7 @@ final class ib extends mk {
               if (var12 != null) {
                 var19 = fo.a(4800, BattlefieldTheme.field_s, new String[]{(String) (var12)});
                 var12 = var19;
-                var13Lifetime1Lifetime1 = en.field_E.a(var19);
+                var13Lifetime1Lifetime1 = en.field_E.textWidth(var19);
                 if (var13Lifetime1Lifetime1 + param4 > db.a(true, 620)) {
                   param4 = db.a(true, 620) - var13Lifetime1Lifetime1;
                 }
@@ -388,7 +388,7 @@ final class ib extends mk {
                   param3 -= 30;
                 }
                 SoftwareRaster.a(-6 + param4, param3 - 11, var13Lifetime1Lifetime1 + 12, 15, 5, 0, 128);
-                en.field_E.b((String) (var12), param4, param3, 16777215, -1);
+                en.field_E.drawText((String) (var12), param4, param3, 16777215, -1);
               }
             }
           }

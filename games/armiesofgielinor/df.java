@@ -130,7 +130,7 @@ final class df extends tj implements fb, he {
           this.y = 15;
           var7 = ArmiesOfGielinor.field_J;
           if (null != this.field_I) {
-            this.y = this.y + (5 + var7.getParagraphHeight(this.field_I, this.width - 40, var7.field_H));
+            this.y = this.y + (5 + var7.getParagraphHeight(this.field_I, this.width - 40, var7.maxAscent));
           }
           var8 = bh.field_J;
           var9 = CommunityTabGroup.a(0, CombatEvent.d((byte) 34));
@@ -244,7 +244,7 @@ final class df extends tj implements fb, he {
           df.a(-77);
         }
         if (null != this.field_I) {
-          ArmiesOfGielinor.field_J.a(this.field_I, param0 - (-this.x - 20), 15 + param1 + this.y, -40 + this.width, this.height, 16777215, -1, 1, 0, ArmiesOfGielinor.field_J.field_H);
+          ArmiesOfGielinor.field_J.drawParagraph(this.field_I, param0 - (-this.x - 20), 15 + param1 + this.y, -40 + this.width, this.height, 16777215, -1, 1, 0, ArmiesOfGielinor.field_J.maxAscent);
         }
         if (this.field_R != null) {
           SoftwareRaster.e(10 + param0, 134 + param1, -20 + this.width, 4210752);

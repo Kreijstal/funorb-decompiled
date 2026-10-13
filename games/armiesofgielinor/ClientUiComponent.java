@@ -900,32 +900,32 @@ class ClientUiComponent extends ClientUiNode {
             null != this.blinkTextSuffix) {
             var23Lifetime2 = var26 + this.blinkTextSuffix;
           }
-          if (this.font.a(var23Lifetime2) <= this.width - 2 * this.textHorizontalPadding &&
+          if (this.font.textWidth(var23Lifetime2) <= this.width - 2 * this.textHorizontalPadding &&
             var23Lifetime2.indexOf("<br>") < 0) {
             if (this.verticalAlignment != 1) {
               if (this.verticalAlignment == 2) {
-                var22 = var22 + (-this.font.field_H + (-this.font.field_L + this.height));
+                var22 = var22 + (-this.font.maxAscent + (-this.font.maxDescent + this.height));
               }
             } else {
-              var22 = var22 + (-this.font.field_L + this.height - this.font.field_H) / 2;
+              var22 = var22 + (-this.font.maxDescent + this.height - this.font.maxAscent) / 2;
             }
             if (this.horizontalAlignment == 0) {
-              this.font.b(var23Lifetime2, this.textHorizontalPadding + this.screenX + var21, this.font.field_H + (this.screenY + var22), var18, -1, this.textOpacity);
+              this.font.drawTextWithAlpha(var23Lifetime2, this.textHorizontalPadding + this.screenX + var21, this.font.maxAscent + (this.screenY + var22), var18, -1, this.textOpacity);
             } else {
               if (this.horizontalAlignment == 1) {
-                this.font.a(var23Lifetime2, var21 + (this.screenX + this.textHorizontalPadding + (this.width - 2 * this.textHorizontalPadding) / 2), var22 + (this.screenY + this.font.field_H), var18, -1, this.textOpacity);
+                this.font.drawCenteredWithAlpha(var23Lifetime2, var21 + (this.screenX + this.textHorizontalPadding + (this.width - 2 * this.textHorizontalPadding) / 2), var22 + (this.screenY + this.font.maxAscent), var18, -1, this.textOpacity);
               } else {
                 if (2 != this.horizontalAlignment) {
-                  this.font.a(var23Lifetime2, this.screenX + this.textHorizontalPadding + var21, var22 + this.screenY, -(2 * this.textHorizontalPadding) + this.width, this.height, var18, -1, this.textOpacity, this.horizontalAlignment, this.verticalAlignment, this.textLineSpacing);
+                  this.font.drawParagraph(var23Lifetime2, this.screenX + this.textHorizontalPadding + var21, var22 + this.screenY, -(2 * this.textHorizontalPadding) + this.width, this.height, var18, -1, this.textOpacity, this.horizontalAlignment, this.verticalAlignment, this.textLineSpacing);
                 } else {
-                  this.font.c(var23Lifetime2, this.screenX + this.textHorizontalPadding + var21 - (-this.width + this.textHorizontalPadding * 2), var22 + this.screenY + this.font.field_H, var18, -1, this.textOpacity);
+                  this.font.drawRightAlignedWithAlpha(var23Lifetime2, this.screenX + this.textHorizontalPadding + var21 - (-this.width + this.textHorizontalPadding * 2), var22 + this.screenY + this.font.maxAscent, var18, -1, this.textOpacity);
                 }
               }
             }
             decompiledFrameRemainder0 = false;
           }
           else {
-            this.font.a(var23Lifetime2, this.textHorizontalPadding + this.screenX + var21, var22 + this.screenY, -(2 * this.textHorizontalPadding) + this.width, this.height, var18, -1, this.textOpacity, this.horizontalAlignment, this.verticalAlignment, this.textLineSpacing);
+            this.font.drawParagraph(var23Lifetime2, this.textHorizontalPadding + this.screenX + var21, var22 + this.screenY, -(2 * this.textHorizontalPadding) + this.width, this.height, var18, -1, this.textOpacity, this.horizontalAlignment, this.verticalAlignment, this.textLineSpacing);
           }
         }
         if (this.children != null) {
@@ -970,7 +970,7 @@ class ClientUiComponent extends ClientUiNode {
         int var3 = 0;
         if (null != this.text &&
           null != this.font) {
-          var4_int = this.font.a(this.text, maximumTextWidth);
+          var4_int = this.font.getWrappedWidth(this.text, maximumTextWidth);
           if (var3 < var4_int) {
             var3 = var4_int;
           }

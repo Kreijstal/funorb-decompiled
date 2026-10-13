@@ -369,7 +369,7 @@ final class jg extends IntrusiveNode {
               } else {
                 var12.field_Yb.setBounds(jn.field_d, -20500, 68, var31, 0);
               }
-              var12.ownerNameComponent.text = BitmapFont.a(var12.ownerNameComponent.font, var32, 78);
+              var12.ownerNameComponent.text = BitmapFont.truncateWithEllipsis(var12.ownerNameComponent.font, var32, 78);
               var12.ownerNameComponent.setBounds(jn.field_d, -20500, 78, var31, 70);
               if (var12.ownerNameComponent.heldButtonMatches &&
                 !var12.ownerNameComponent.text.equals(var32)) {
@@ -382,7 +382,7 @@ final class jg extends IntrusiveNode {
               } else {
                 var12.playerCountComponent.horizontalAlignment = 2;
                 var12.capacityComponent.text = "/" + var12.playerCapacity;
-                var33_int = (-var12.capacityComponent.font.a("/") + 348) / 2;
+                var33_int = (-var12.capacityComponent.font.textWidth("/") + 348) / 2;
                 var12.playerCountComponent.setBounds(jn.field_d, -20500, -150 + var33_int, var31, 150);
                 var12.capacityComponent.setBounds(jn.field_d, -20500, 198 - var33_int, var31, var33_int);
               }
@@ -486,7 +486,7 @@ final class jg extends IntrusiveNode {
                 }
                 var38 = var37.toString();
                 var12.field_Pb.text = var38;
-                var39Lifetime1 = var12.field_Pb.font.c(var38, var12.width - var12.field_Pb.textHorizontalPadding * 2);
+                var39Lifetime1 = var12.field_Pb.font.getLineCount(var38, var12.width - var12.field_Pb.textHorizontalPadding * 2);
                 var12.field_Pb.setBounds(var39Lifetime1 * jn.field_d, -20500, var12.width, var31, 0);
                 var31 = var31 + jn.field_d * var39Lifetime1;
               }
@@ -503,7 +503,7 @@ final class jg extends IntrusiveNode {
             }
             var33 = LeaderEscortCondition.a(var12.notificationCode, 6, var32);
             if (var33 != null) {
-              var34_intLifetime1 = var12.field_Wb.font.c(var33, var12.width - MusicPatchNode.field_l - MusicPatchNode.field_l);
+              var34_intLifetime1 = var12.field_Wb.font.getLineCount(var33, var12.width - MusicPatchNode.field_l - MusicPatchNode.field_l);
               var12.field_Wb.text = var33;
               var12.field_Wb.textOpacity = var12.notificationTicks * 256 / qd.lobbyNotificationDuration;
               var12.field_Wb.setBounds(jn.field_d * var34_intLifetime1, -20500, var12.width - MusicPatchNode.field_l * 2, var31, MusicPatchNode.field_l);

@@ -99,7 +99,7 @@ final class ip {
             } else {
               stackIn_26_8 = this.field_h;
             }
-            ((BitmapFont) (Object) stackIn_19_0).a(stackIn_19_1, stackIn_22_2, stackIn_25_3, stackIn_25_4, stackIn_25_5, stackIn_25_6, stackIn_25_7, stackIn_26_8, param4.field_n, param4.field_k, param4.field_j);
+            ((BitmapFont) (Object) stackIn_19_0).drawParagraph(stackIn_19_1, stackIn_22_2, stackIn_25_3, stackIn_25_4, stackIn_25_5, stackIn_25_6, stackIn_25_7, stackIn_26_8, param4.field_n, param4.field_k, param4.field_j);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -291,7 +291,7 @@ final class ip {
         }
     }
 
-    final static void a(int param0, int param1, boolean param2, int param3, tu param4, RgbSprite[] param5, int param6, String param7, int param8) {
+    final static void a(int param0, int param1, boolean param2, int param3, BinaryBitmapFont param4, RgbSprite[] param5, int param6, String param7, int param8) {
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
         String stackIn_13_2 = null;
@@ -305,7 +305,7 @@ final class ip {
         int var10 = 0;
         int var11 = 0;
         try {
-          var9_int = param4.a(param7) + (param5[0].pixelWidth << 1);
+          var9_int = param4.textWidth(param7) + (param5[0].pixelWidth << 1);
           if (param1 > -92) {
             field_c = (RgbSprite[]) null;
           }
@@ -319,7 +319,7 @@ final class ip {
             }
           }
           jp.a(-(var9_int >> 1) + param6, param8, var9_int, param5, param3, -8991);
-          param4.c(param7, param6, 2 + (param4.field_v + param8), param0, -1);
+          param4.drawCentered(param7, param6, 2 + (param4.baselineHeight + param8), param0, -1);
           if (!param2) {
             return;
           }

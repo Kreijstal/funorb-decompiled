@@ -41,7 +41,7 @@ final class ak extends ju {
         var15 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           if (param4 == 0) {
-            param4 = param7.field_v;
+            param4 = param7.baselineHeight;
           }
           if (param0 == null) {
             this.field_b = null;
@@ -69,38 +69,38 @@ final class ak extends ju {
           this.field_h = param0;
           this.field_g = false;
           this.field_k = param4;
-          var16 = new String[param7.c(param0, param6) + 1];
+          var16 = new String[param7.getLineCount(param0, param6) + 1];
           var17 = var16;
-          var10 = Math.max(1, param7.a(param0, new int[]{param6}, var17));
+          var10 = Math.max(1, param7.wrapLines(param0, new int[]{param6}, var17));
           if (this.field_f == 3 &&
             var10 == 1) {
             this.field_f = 1;
           }
           if (this.field_f != 0) {
             if (this.field_f == 1) {
-              var11 = param7.field_H + (this.field_l - this.field_k * var10 >> 1);
+              var11 = param7.maxAscent + (this.field_l - this.field_k * var10 >> 1);
             } else {
               if (2 == this.field_f) {
-                var11 = -(var10 * this.field_k) - param7.field_L + this.field_l;
+                var11 = -(var10 * this.field_k) - param7.maxDescent + this.field_l;
               } else {
                 var12 = (this.field_l - this.field_k * var10) / (1 + var10);
                 if (var12 < 0) {
                   var12 = 0;
                 }
                 this.field_k = this.field_k + var12;
-                var11 = var12 + param7.field_H;
+                var11 = var12 + param7.maxAscent;
               }
             }
           } else {
-            var11 = param7.field_H;
+            var11 = param7.maxAscent;
           }
           this.field_b = new ts[var10];
           for (var12Lifetime1 = 0; var10 > var12Lifetime1; var12Lifetime1++) {
             var13 = var16[var12Lifetime1];
             stackIn_36_0 = null;
             stackIn_36_1 = null;
-            stackIn_36_2 = -param7.field_H + var11;
-            stackIn_36_3 = param7.field_L + var11;
+            stackIn_36_2 = -param7.maxAscent + var11;
+            stackIn_36_3 = param7.maxDescent + var11;
             if (var13 == null) {
               stackIn_37_0 = null;
               stackIn_37_1 = null;
@@ -113,9 +113,9 @@ final class ak extends ju {
             var14 = new ts(stackIn_36_2, stackIn_36_3, stackIn_37_4);
             var14.field_i[0] = 0;
             if (var13 != null) {
-              var14.field_i[var13.length()] = param7.a(var13);
+              var14.field_i[var13.length()] = param7.textWidth(var13);
               if (param5 == 3) {
-                stackIn_41_0 = this.a(0, var13, param6, param7.a(var13));
+                stackIn_41_0 = this.a(0, var13, param6, param7.textWidth(var13));
               } else {
                 stackIn_41_0 = 0;
               }
@@ -167,7 +167,7 @@ final class ak extends ju {
           this.field_d = 2;
           var9 = this.a(param2, param1, (byte) 74, param4);
           var10 = var9;
-          var10.field_i[0] = param0 - param2.a(param1);
+          var10.field_i[0] = param0 - param2.textWidth(param1);
           var10.field_i[param1.length()] = param0;
           kd.a(0, param1, var10, param2, (byte) 97);
         } catch (RuntimeException runtimeException) {
@@ -247,7 +247,7 @@ final class ak extends ju {
           this.field_g = true;
           this.field_m = param2;
           var8 = this.a(param2, param3, (byte) 115, param0);
-          var7 = param2.a(param3);
+          var7 = param2.textWidth(param3);
           var8.field_i[0] = -(var7 >> 1) + param4;
           var8.field_i[param3.length()] = param4 + (var7 >> 1);
           kd.a(0, param3, var8, param2, (byte) 103);
@@ -299,7 +299,7 @@ final class ak extends ju {
           if (param2 < 2) {
             this.field_d = 62;
           }
-          var6 = new ts(-param0.field_H + param3, param3 + param0.field_L, param1.length());
+          var6 = new ts(-param0.maxAscent + param3, param3 + param0.maxDescent, param1.length());
           var5 = var6;
           this.field_b = new ts[]{var6};
           stackIn_3_0 = var5;
@@ -343,7 +343,7 @@ final class ak extends ju {
           var7 = this.a(param2, param0, (byte) 18, param3);
           var8 = var7;
           var7.field_i[0] = param4;
-          var8.field_i[param0.length()] = param4 + param2.a(param0);
+          var8.field_i[param0.length()] = param4 + param2.textWidth(param0);
           kd.a(0, param0, var8, param2, (byte) 83);
         } catch (RuntimeException runtimeException) {
           throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "ak.R(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');

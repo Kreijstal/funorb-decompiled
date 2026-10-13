@@ -35,7 +35,7 @@ final class TutorialController {
             return;
           }
           var5 = this.getItemText(var4_int, 29);
-          var6 = nr.field_e.a(var5) / 2;
+          var6 = nr.field_e.textWidth(var5) / 2;
           var7 = this.getItemLeftX(true, itemIndex);
           var8 = this.getItemRightX(itemIndex, -3858);
           var9 = this.getItemTopY(itemIndex, true);
@@ -117,7 +117,7 @@ final class TutorialController {
           var4 = pk.field_V;
           var4 = var4 + " " + ia.a(fo.a(param0 ^ 4800, QuickChatPhrase.a(var2_int != 0, false, (byte) -115, var3 != 0), new String[]{ConsolePanel.field_r}), '#', param0 ^ 3, "<br><br>");
           fe.b(40, 180, 560, 150, MusicPatch.field_m, ConsoleValue.field_b, param0, 128);
-          rs.field_n.a(var4, 80, 200, 480, 300, 16777215, -1, 1, 0, 30);
+          rs.field_n.drawParagraph(var4, 80, 200, 480, 300, 16777215, -1, 1, 0, 30);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -271,7 +271,7 @@ final class TutorialController {
                 if (DeployEvent.pointerPressButton == 2) {
                   return;
                 }
-                var2_int = (nr.field_e.a(AnimationSkeleton.field_m) >> 1) + 40;
+                var2_int = (nr.field_e.textWidth(AnimationSkeleton.field_m) >> 1) + 40;
                 stackIn_70_0 = -33;
                 stackIn_70_1 = db.a(true, 620 - var2_int);
                 stackIn_70_2 = db.a(true, 620);
@@ -533,7 +533,7 @@ final class TutorialController {
           fe.c(ov.field_f, db.a(true, 382), MatchConditionEntry.a(366, (byte) 94), ConsoleValue.field_b, true);
           fe.c(dd.a(pg.playerProfile.getAvailableRunes((byte) 45), param0 ^ -23666), db.a(true, 382), MatchConditionEntry.a(406, (byte) 94), ConsoleValue.field_b, true);
           if (BufferedSocket.field_j >= 2) {
-            rs.field_n.c(pg.playerProfile.getAvailableRunes((byte) 127) + "", db.a(true, 382), MatchConditionEntry.a(369, (byte) 94), 16777215, 0);
+            rs.field_n.drawCentered(pg.playerProfile.getAvailableRunes((byte) 127) + "", db.a(true, 382), MatchConditionEntry.a(369, (byte) 94), 16777215, 0);
           }
           fe.b(db.a(true, 465), MatchConditionEntry.a(330, (byte) 94), 145, 40, EffectPresentation.field_j, jh.field_k, 0, 128);
           fe.b(db.a(true, 465), MatchConditionEntry.a(380, (byte) 94), 145, 40, EffectPresentation.field_j, jh.field_k, 0, 128);
@@ -550,11 +550,11 @@ final class TutorialController {
           } while (var4 == 0);
           boolean decompiledSharedTail1 = !(pg.playerProfile.getUnlockLevel(0) <= ah.field_b);
           if (!decompiledSharedTail1) {
-            rs.field_n.a(fo.a(4800, SummonRequest.field_w, new String[]{this.c(param0 ^ 23558, var2_int), this.c(-38, var3)}), db.a(true, 320), MatchConditionEntry.a(200, (byte) 94), 280, 170, 16777215, 0, 1, 0, 0);
+            rs.field_n.drawParagraph(fo.a(4800, SummonRequest.field_w, new String[]{this.c(param0 ^ 23558, var2_int), this.c(-38, var3)}), db.a(true, 320), MatchConditionEntry.a(200, (byte) 94), 280, 170, 16777215, 0, 1, 0, 0);
             decompiledSharedTail1 = (var4 != 0);
           }
           if (decompiledSharedTail1) {
-            rs.field_n.a(fo.a(4800, gt.field_g, new String[]{this.c(-38, var2_int)}), db.a(true, 320), MatchConditionEntry.a(200, (byte) 94), 280, 170, 16777215, 0, 1, 0, 0);
+            rs.field_n.drawParagraph(fo.a(4800, gt.field_g, new String[]{this.c(-38, var2_int)}), db.a(true, 320), MatchConditionEntry.a(200, (byte) 94), 280, 170, 16777215, 0, 1, 0, 0);
           }
           if (pg.playerProfile.getUnlockLevel(param0 ^ param0) < NodeDeque.unlockLevelCosts.length) {
             fe.c(this.c(-38, NodeDeque.unlockLevelCosts[ah.field_b]), db.a(true, 537), MatchConditionEntry.a(366, (byte) 94), ConsoleValue.field_b, true);
@@ -712,7 +712,7 @@ final class TutorialController {
               }
               var10 = MoveEvent.tutorialStageItems[this.tutorialStage][var9];
               var11_ref_String = DisplacedUnitMarker.field_t[var10];
-              var8 = var8 + (nr.field_e.a(var11_ref_String) >> 1);
+              var8 = var8 + (nr.field_e.textWidth(var11_ref_String) >> 1);
               var9++;
             } while (var14 == 0);
             if (0 != param1) {
@@ -730,7 +730,7 @@ final class TutorialController {
               }
               var12 = MoveEvent.tutorialStageItems[this.tutorialStage][var11];
               var13 = DisplacedUnitMarker.field_t[var12];
-              var8 = var8 + (nr.field_e.a(var13) >> 1);
+              var8 = var8 + (nr.field_e.textWidth(var13) >> 1);
               var11++;
             } while (var14 == 0);
             stackIn_42_0 = var4_int + var11;
@@ -831,7 +831,7 @@ final class TutorialController {
           fe.c(ts.field_g, db.a(true, var3[2]), MatchConditionEntry.a(var4, (byte) 94), field_e, true);
           fe.c(vi.field_c, db.a(true, var3[3]), MatchConditionEntry.a(var4, (byte) 94), field_e, true);
           fe.c(hq.field_c, db.a(true, var3[4]), MatchConditionEntry.a(var4, (byte) 94), field_e, true);
-          var4 = var4 + (8 + rs.field_n.field_H);
+          var4 = var4 + (8 + rs.field_n.maxAscent);
           var6 = -100 / ((15 - param0) / 42);
           if (!AnimationFrameSet.field_z.field_l) {
             var7 = fm.field_c;
@@ -877,7 +877,7 @@ final class TutorialController {
               var7 = SocketResourceClient.field_s;
             }
           }
-          var4Lifetime1 = 275 + (rs.field_n.field_H + 110);
+          var4Lifetime1 = 275 + (rs.field_n.maxAscent + 110);
           if (var7 != null) {
             fe.c((String) (var7), SoftwareRaster.width / 2, SoftwareRaster.height / 2, field_e, true);
           }
@@ -2304,7 +2304,7 @@ final class TutorialController {
         int stackIn_16_1 = 0;
         int stackIn_16_2 = 0;
         int stackIn_17_3 = 0;
-        tu stackIn_24_0;
+        BinaryBitmapFont stackIn_24_0;
         String stackIn_24_1;
         int stackIn_24_2;
         int stackIn_24_3;
@@ -2387,9 +2387,9 @@ final class TutorialController {
           } else {
             stackIn_25_5 = 30;
           }
-          ((tu) (Object) stackIn_24_0).a(stackIn_24_1, stackIn_24_2, stackIn_24_3 - (stackIn_24_4 - stackIn_25_5), -20 + var8, var13, var14, var15, var16, var17, var9);
+          ((BinaryBitmapFont) (Object) stackIn_24_0).drawParagraph(stackIn_24_1, stackIn_24_2, stackIn_24_3 - (stackIn_24_4 - stackIn_25_5), -20 + var8, var13, var14, var15, var16, var17, var9);
           if (var7 == 0) {
-            en.field_E.a(fo.a(4800, SocketResourceClient.field_w, new String[]{Integer.toString(1 + uc.spellDefinitions[param1][1])}), 10, var11 + (52 - (-30 - var10)), var8 - 20, var13, var14, var15, var16, var17, var9);
+            en.field_E.drawParagraph(fo.a(4800, SocketResourceClient.field_w, new String[]{Integer.toString(1 + uc.spellDefinitions[param1][1])}), 10, var11 + (52 - (-30 - var10)), var8 - 20, var13, var14, var15, var16, var17, var9);
           }
           fe.a(var4, var8 >> 1, 35, -45 + var8, ConsoleValue.field_b, true);
           BattleCharacter.field_h[var6].g(-20 + (var8 >> 1), 12 + var11);
@@ -2831,7 +2831,7 @@ final class TutorialController {
           }
           var6 = stackIn_44_0;
           if (var6 == -1) {
-            rs.field_n.c(ck.field_a, db.a(true, 279) + 154, MatchConditionEntry.a(200, (byte) 94) + 112, 16777215, -1);
+            rs.field_n.drawCentered(ck.field_a, db.a(true, 279) + 154, MatchConditionEntry.a(200, (byte) 94) + 112, 16777215, -1);
             if (!DamageEvent.g(95)) {
               return;
             }
@@ -2840,16 +2840,16 @@ final class TutorialController {
               return;
             }
           }
-          var7 = rs.field_n.field_z + rs.field_n.field_L;
-          fe.a(so.field_a[var6], db.a(true, 272), MatchConditionEntry.a(260 - (rs.field_n.field_L - rs.field_n.field_v), (byte) 94), ConsoleValue.field_b, true);
+          var7 = rs.field_n.capitalHeight + rs.field_n.maxDescent;
+          fe.a(so.field_a[var6], db.a(true, 272), MatchConditionEntry.a(260 - (rs.field_n.maxDescent - rs.field_n.baselineHeight), (byte) 94), ConsoleValue.field_b, true);
           var8 = rb.a(var6, var5, 1) ? 1 : 0;
           var9 = MatchConditionEntry.a(288, (byte) 94);
           if (var8 != 0) {
-            rs.field_n.b(wd.field_f, db.a(true, 272), var9, 65280, -1);
+            rs.field_n.drawText(wd.field_f, db.a(true, 272), var9, 65280, -1);
           }
           if (var8 == 0 ||
             var17 != 0) {
-            rs.field_n.b(QuickChatCategoryRepository.field_g, db.a(true, 272), var9, 16711680, -1);
+            rs.field_n.drawText(QuickChatCategoryRepository.field_g, db.a(true, 272), var9, 16711680, -1);
           }
           var10 = MatchConditionEntry.a(260 + var7, (byte) 94);
           if (var8 != 0) {
@@ -2874,31 +2874,31 @@ final class TutorialController {
               DeathEvent.field_A.g(db.a(true, 82), -14 + var10);
             }
           }
-          var10 = var10 + rs.field_n.field_H;
-          var10 = var10 + rs.field_n.field_H;
+          var10 = var10 + rs.field_n.maxAscent;
+          var10 = var10 + rs.field_n.maxAscent;
           var11 = new String[16];
           var12 = UnitCycler.field_d;
           if (!cg.field_m[var6] ||
             var8 != 0) {
             var12 = oi.field_a[var6];
           }
-          var13 = rs.field_n.a(var12, new int[]{288}, var11);
+          var13 = rs.field_n.wrapLines(var12, new int[]{288}, var11);
           var7 += 3;
           var10 = MatchConditionEntry.a(314, (byte) 94);
           var14 = 0;
           do {
             if (var14 >= var13) {
               var10 = MatchConditionEntry.a(385, (byte) 94);
-              rs.field_n.b(rd.field_h + ps.field_D[var6], db.a(true, 272), var10, 16777215, -1);
-              rs.field_n.b(DiskCacheWorker.field_e, db.a(true, 392), var10, 16777215, -1);
-              var14 = db.a(true, rs.field_n.a(DiskCacheWorker.field_e) + 392);
+              rs.field_n.drawText(rd.field_h + ps.field_D[var6], db.a(true, 272), var10, 16777215, -1);
+              rs.field_n.drawText(DiskCacheWorker.field_e, db.a(true, 392), var10, 16777215, -1);
+              var14 = db.a(true, rs.field_n.textWidth(DiskCacheWorker.field_e) + 392);
               break;
             }
-            rs.field_n.b(var11[var14], db.a(true, 272), var10, 16777215, -1);
+            rs.field_n.drawText(var11[var14], db.a(true, 272), var10, 16777215, -1);
             var10 = var10 + var7;
             var14++;
           } while (var17 == 0);
-          var15 = var10 - (rs.field_n.field_H + CorpseConditionMarker.field_v.pixelHeight) / 2;
+          var15 = var10 - (rs.field_n.maxAscent + CorpseConditionMarker.field_v.pixelHeight) / 2;
           var16 = 0;
           while (true) {
             if (var16 >= na.field_J[var6]) {
@@ -3087,13 +3087,13 @@ final class TutorialController {
           var20 = 0;
           var21 = 0;
           var22 = 12;
-          en.field_E.a(param3, 0, 30, var7_int, var17, var18, var19, var20, var21, var22);
+          en.field_E.drawParagraph(param3, 0, 30, var7_int, var17, var18, var19, var20, var21, var22);
           if (-1 < param1) {
             ro.field_rb[param1].draw(0, var14 + 25);
-            en.field_E.b(BufferedSocket.field_m[param1], 23, 30 + var14 + 8, var18, var19);
+            en.field_E.drawText(BufferedSocket.field_m[param1], 23, 30 + var14 + 8, var18, var19);
           }
-          en.field_E.a(param0, 0, var14 + (30 + var9), var7_int, var17, var18, var19, var20, var21, var22);
-          en.field_E.a(param5, 0, var15 + (var14 + 30) + var9, var7_int, var17, var18, var19, var20, var21, var22);
+          en.field_E.drawParagraph(param0, 0, var14 + (30 + var9), var7_int, var17, var18, var19, var20, var21, var22);
+          en.field_E.drawParagraph(param5, 0, var15 + (var14 + 30) + var9, var7_int, var17, var18, var19, var20, var21, var22);
           fe.c(param2, var7_int >> 1, 30, ConsoleValue.field_b, true);
           so.field_b.a(5605);
           return;
@@ -3491,7 +3491,7 @@ final class TutorialController {
           var5Lifetime1 = 89;
           var6 = field_e;
           fe.c(bj.field_o, db.a(true, var3[4]), MatchConditionEntry.a(var5Lifetime1, (byte) 94), field_e, true);
-          var5Lifetime1 = var5Lifetime1 + (8 + rs.field_n.field_H);
+          var5Lifetime1 = var5Lifetime1 + (8 + rs.field_n.maxAscent);
           if (!TurnTimerDial.field_a.field_o) {
             var7 = fm.field_c;
             decompiledFrameRemainder0 = (var13 != 0);
@@ -3546,7 +3546,7 @@ final class TutorialController {
             fe.c((String) (stackIn_60_0), SoftwareRaster.width / 2, SoftwareRaster.height / 2, field_e, true);
           }
           var8 = 30 / ((param0 + 12) / 41);
-          var5Lifetime2 = 385 + rs.field_n.field_H;
+          var5Lifetime2 = 385 + rs.field_n.maxAscent;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -3772,11 +3772,11 @@ final class TutorialController {
             br.heldKeys[82] &&
             !(2 > BufferedSocket.field_j)) && ClientContextMenu.field_k == 0) {
             if (null == ts.currentSpellMenu.parent) {
-              rs.field_n.a(SocketResourceClient.field_x, db.a(true, 40), MatchConditionEntry.a(284, (byte) 94), 250, 55, 16777215, -1, var2_int + 256, 1, 1, 0);
+              rs.field_n.drawParagraph(SocketResourceClient.field_x, db.a(true, 40), MatchConditionEntry.a(284, (byte) 94), 250, 55, 16777215, -1, var2_int + 256, 1, 1, 0);
             }
             if (null != vu.field_O &&
               vu.field_O.parent == null) {
-              rs.field_n.a(SocketResourceClient.field_x, db.a(true, 40), MatchConditionEntry.a(284, (byte) 94), 250, 55, 16777215, -1, var2_int, 1, 1, 0);
+              rs.field_n.drawParagraph(SocketResourceClient.field_x, db.a(true, 40), MatchConditionEntry.a(284, (byte) 94), 250, 55, 16777215, -1, var2_int, 1, 1, 0);
             }
           }
           fe.b(cp.field_c, db.a(true, 460), MatchConditionEntry.a(76, (byte) 94), true);
@@ -3788,12 +3788,12 @@ final class TutorialController {
           fe.c(dd.a(pg.playerProfile.getAvailableRunes((byte) 48), 82), db.a(true, 382), MatchConditionEntry.a(406, (byte) 94), ConsoleValue.field_b, true);
           if (2 <= BufferedSocket.field_j &&
             CoatOfArms.field_e) {
-            rs.field_n.c(pg.playerProfile.getAvailableRunes((byte) 114) + "", db.a(true, 382), MatchConditionEntry.a(369, (byte) 94), 16777215, 0);
+            rs.field_n.drawCentered(pg.playerProfile.getAvailableRunes((byte) 114) + "", db.a(true, 382), MatchConditionEntry.a(369, (byte) 94), 16777215, 0);
           }
           fe.b(db.a(true, 465), MatchConditionEntry.a(330, (byte) 94), 145, 40, EffectPresentation.field_j, jh.field_k, 0, 128);
           fe.b(db.a(true, 465), MatchConditionEntry.a(380, (byte) 94), 145, 40, EffectPresentation.field_j, jh.field_k, 0, 128);
           this.g(ev.field_d, -118);
-          var5Lifetime1 = 40 + (nr.field_e.a(AnimationSkeleton.field_m) >> 1);
+          var5Lifetime1 = 40 + (nr.field_e.textWidth(AnimationSkeleton.field_m) >> 1);
           fm.a(e.field_b, var5Lifetime1, db.a(true, 620 - var5Lifetime1), MatchConditionEntry.a(19, (byte) 94), -104);
           fe.a(AnimationSkeleton.field_m, db.a(true, 640 - var5Lifetime1), MatchConditionEntry.a(49, (byte) 94), 16777215, true);
           if (IterableDualNodeDeque.isPointerInBounds(-33, db.a(true, 620 - var5Lifetime1), db.a(true, 620), MatchConditionEntry.a(19, (byte) 94), MatchConditionEntry.a(e.field_b[0].pixelHeight + 19, (byte) 94))) {
@@ -4328,7 +4328,7 @@ final class TutorialController {
           }
           if (stackIn_71_0 >= 2 &&
             CoatOfArms.field_e) {
-            rs.field_n.c(pg.playerProfile.getAvailableRunes((byte) 96) + "", db.a(true, 382), MatchConditionEntry.a(369, (byte) 94), 16777215, 0);
+            rs.field_n.drawCentered(pg.playerProfile.getAvailableRunes((byte) 96) + "", db.a(true, 382), MatchConditionEntry.a(369, (byte) 94), 16777215, 0);
           }
           fe.b(db.a(true, 465), MatchConditionEntry.a(330, (byte) 94), 145, 40, EffectPresentation.field_j, jh.field_k, 0, 128);
           fe.b(db.a(true, 465), MatchConditionEntry.a(380, (byte) 94), 145, 40, EffectPresentation.field_j, jh.field_k, 0, 128);
@@ -4457,7 +4457,7 @@ final class TutorialController {
           while (!(decompiledNaturalLoopExit0 = (var4_ref_int__.length <= var5))) {
             var6 = var4_ref_int__[var5];
             var7 = this.getItemText(var6, 29);
-            var8 = nr.field_e.a(var7) / 2 + 20;
+            var8 = nr.field_e.textWidth(var7) / 2 + 20;
             stackIn_20_0 = var2_int;
             stackIn_20_1 = var8;
             if (var9 == 0) {
@@ -4984,7 +4984,7 @@ final class TutorialController {
                 if (0 < var8 &&
                   var8 < 354) {
                   fe.c(param1.children[var7_int].label, db.a(true, 152), MatchConditionEntry.a(var8 + 55, (byte) 94), field_e, true);
-                  var9 = -30 + (270 + (-(nr.field_e.a(param1.children[var7_int].label) >> 1) - 25) >> 1);
+                  var9 = -30 + (270 + (-(nr.field_e.textWidth(param1.children[var7_int].label) >> 1) - 25) >> 1);
                   fm.a(wc.field_Q, var9, db.a(true, 50), MatchConditionEntry.a(38 + var8, (byte) 94), -66);
                   fm.a(wc.field_Q, var9, db.a(true, 255 - var9), MatchConditionEntry.a(var8 + 38, (byte) 94), -126);
                 }
@@ -5022,7 +5022,7 @@ final class TutorialController {
                   SoftwareRaster.f(stackIn_40_0, stackIn_40_1, stackIn_40_2, stackIn_40_3, stackIn_41_4);
                   BattleCharacter.field_h[uc.spellDefinitions[param1.spellIds[var8Lifetime1]][2]].g(db.a(true, 50 + (param3 & 3) * 58), MatchConditionEntry.a(63 + var9Lifetime1, (byte) 94));
                   km.field_h[0].g(db.a(true, (3 & param3) * 58 + 47), MatchConditionEntry.a(60 + var9Lifetime1, (byte) 94));
-                  en.field_E.c(Integer.toString(pg.playerProfile.spellQuantities[param1.spellIds[var8Lifetime1]]), db.a(true, 70 + (3 & param3) * 58), MatchConditionEntry.a(var9Lifetime1 + 60 + 55, (byte) 94), 16777215, 0);
+                  en.field_E.drawCentered(Integer.toString(pg.playerProfile.spellQuantities[param1.spellIds[var8Lifetime1]]), db.a(true, 70 + (3 & param3) * 58), MatchConditionEntry.a(var9Lifetime1 + 60 + 55, (byte) 94), 16777215, 0);
                   if (TabbedPanel.a(MatchConditionEntry.a(60 + var9Lifetime1 + 23, (byte) 94), db.a(true, 70 + (3 & param3) * 58), 22, false)) {
                     na.field_F = 200 + param1.spellIds[var8Lifetime1];
                   }
@@ -5037,7 +5037,7 @@ final class TutorialController {
           }
           if (stackIn_48_0 != 0) {
             if (param3 == 0) {
-              rs.field_n.a(QuickChatPhrase.field_x, db.a(true, 50), MatchConditionEntry.a(70 + param0, (byte) 94), 220, 324 - (param0 + 20), 16777215, -1, 1, 1, 0);
+              rs.field_n.drawParagraph(QuickChatPhrase.field_x, db.a(true, 50), MatchConditionEntry.a(70 + param0, (byte) 94), 220, 324 - (param0 + 20), 16777215, -1, 1, 1, 0);
             }
             stackIn_58_0 = ((3 & param3) != 0) ? 70 : 0;
             TrianglePulse.field_c = stackIn_58_0 + (param0 + 70 * (param3 >> 2));
@@ -5772,7 +5772,7 @@ final class TutorialController {
               if (this.tutorialStage != 11) {
                 return;
               }
-              TrianglePulse.field_i.a(PaletteRegionMap.field_i, MoveEvent.tutorialLayout.getLeftX(11, 29) + 20, 20 + MoveEvent.tutorialLayout.getTopY(11, (byte) -105), -40 + MoveEvent.tutorialLayout.getRightX((byte) 105, 11) - MoveEvent.tutorialLayout.getLeftX(11, 29), 1000, 16777215, -1, 0, 0, TrianglePulse.field_i.field_H);
+              TrianglePulse.field_i.drawParagraph(PaletteRegionMap.field_i, MoveEvent.tutorialLayout.getLeftX(11, 29) + 20, 20 + MoveEvent.tutorialLayout.getTopY(11, (byte) -105), -40 + MoveEvent.tutorialLayout.getRightX((byte) 105, 11) - MoveEvent.tutorialLayout.getLeftX(11, 29), 1000, 16777215, -1, 0, 0, TrianglePulse.field_i.maxAscent);
               if (var4 == 0) {
                 return;
               }

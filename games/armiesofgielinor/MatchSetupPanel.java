@@ -53,7 +53,7 @@ final class MatchSetupPanel {
         if (!param0) {
           this.itemStarts = (IntPair[]) null;
         }
-        return (nr.field_e.field_y >> 1) - nr.field_e.field_L + (nr.field_e.field_v - nr.field_e.field_H + 3);
+        return (nr.field_e.xHeight >> 1) - nr.field_e.maxDescent + (nr.field_e.baselineHeight - nr.field_e.maxAscent + 3);
     }
 
     private final void a(int param0, int param1, int param2, int param3, int param4, int param5) {
@@ -1160,7 +1160,7 @@ final class MatchSetupPanel {
               }
               if (var14 == 3 &&
                 !param4) {
-                var15 = BitmapFont.a(nr.field_e, param11, -10 + uh.field_e[var14][0] << 1);
+                var15 = BitmapFont.truncateWithEllipsis(nr.field_e, param11, -10 + uh.field_e[var14][0] << 1);
                 fe.c(var15, (uh.field_e[var14][0] >> 1) + EditableTextField.field_Vb[var14][0] + param8, 20 + (uh.field_e[var14][1] >> 1) + (EditableTextField.field_Vb[var14][1] + param10), 0, true);
               }
             }

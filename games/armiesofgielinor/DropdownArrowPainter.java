@@ -86,11 +86,11 @@ final class DropdownArrowPainter implements WidgetPainter {
         field_c = null;
     }
 
-    final static tu a(String param0, ResourceArchive param1, ResourceArchive param2, byte param3, String param4) {
+    final static BinaryBitmapFont a(String param0, ResourceArchive param1, ResourceArchive param2, byte param3, String param4) {
         int var5_int = 0;
         RuntimeException var5 = null;
         int var6 = 0;
-        tu stackIn_3_0 = null;
+        BinaryBitmapFont stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;

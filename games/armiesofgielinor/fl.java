@@ -51,19 +51,19 @@ final class fl {
         int var7 = 0;
         int var8 = 0;
         try {
-          var5_int = this.field_m.a(param3);
-          var6 = this.field_m.field_z + this.field_m.field_L;
+          var5_int = this.field_m.textWidth(param3);
+          var6 = this.field_m.capitalHeight + this.field_m.maxDescent;
           var7 = param1;
           if (var5_int + (var7 - param0) > SoftwareRaster.width) {
             var7 = -6 - var5_int + SoftwareRaster.width;
           }
-          var8 = 32 + (param2 - this.field_m.field_z);
+          var8 = 32 + (param2 - this.field_m.capitalHeight);
           if (SoftwareRaster.height < var6 + (var8 + 6)) {
             var8 = -6 - var6 + SoftwareRaster.height;
           }
           SoftwareRaster.b(var7, var8, 6 + var5_int, var6 + 6, this.field_v);
           SoftwareRaster.f(1 + var7, 1 + var8, 4 + var5_int, var6 + 4, this.field_c);
-          this.field_m.b(param3, var7 + 3, this.field_m.field_z + var8 + 3, this.field_v, -1);
+          this.field_m.drawText(param3, var7 + 3, this.field_m.capitalHeight + var8 + 3, this.field_v, -1);
         } catch (RuntimeException runtimeException) {
           throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "fl.J(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
@@ -135,11 +135,11 @@ final class fl {
           var6 = this.field_d + this.field_h;
           var7 = this.field_o;
           if (var7 == -1) {
-            var7 = this.field_m.field_H + this.field_m.field_L;
+            var7 = this.field_m.maxAscent + this.field_m.maxDescent;
           }
           var8 = SoftwareRaster.width >> 2;
-          var9 = this.field_m.a(param3);
-          var10 = this.field_m.field_L + this.field_m.field_H;
+          var9 = this.field_m.textWidth(param3);
+          var10 = this.field_m.maxDescent + this.field_m.maxAscent;
           var11 = 1;
           if (var9 > var8 ||
             param3.indexOf("<br>") != -1) {
@@ -152,11 +152,11 @@ final class fl {
               var13 = var9 / var8;
               var12 = var8 + (-1 + var9 % var8 + var13) / var13 * 2;
             }
-            var11Lifetime1 = this.field_m.a(param3, new int[]{var12}, MatchConditionRegistry.field_a);
+            var11Lifetime1 = this.field_m.wrapLines(param3, new int[]{var12}, MatchConditionRegistry.field_a);
             var10 = var10 + (-1 + var11Lifetime1) * var7;
             var9 = 0;
             for (var13Lifetime2 = 0; var11Lifetime1 > var13Lifetime2; var13Lifetime2++) {
-              var14 = this.field_m.a(MatchConditionRegistry.field_a[var13Lifetime2]);
+              var14 = this.field_m.textWidth(MatchConditionRegistry.field_a[var13Lifetime2]);
               if (var9 < var14) {
                 var9 = var14;
               }
@@ -169,13 +169,13 @@ final class fl {
           if (!param0) {
             this.field_w = (WidgetPainter) null;
           }
-          var13Lifetime1 = 32 + param1 - this.field_m.field_z;
+          var13Lifetime1 = 32 + param1 - this.field_m.capitalHeight;
           if (SoftwareRaster.height < var6 + var13Lifetime1 + var10) {
             var13Lifetime1 = -var10 + (param1 - var6);
           }
           SoftwareRaster.b(var12, var13Lifetime1, var9 + var5_int, var10 + var6, this.field_s);
           SoftwareRaster.f(var12 + 1, 1 + var13Lifetime1, var5_int + (var9 - 2), -2 + (var10 + var6), this.field_c);
-          this.field_m.a(param3, var12 + this.field_x, this.field_h + var13Lifetime1, var9, var10, this.field_v, -1, 0, 0, var7);
+          this.field_m.drawParagraph(param3, var12 + this.field_x, this.field_h + var13Lifetime1, var9, var10, this.field_v, -1, 0, 0, var7);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -234,7 +234,7 @@ final class fl {
         ao var14Lifetime1;
         ao var14Lifetime2;
         try {
-          var17 = new lk(param1, 2, 2, 2236962, 1, 1, 1, param1.field_L + (param1.field_H + 2));
+          var17 = new lk(param1, 2, 2, 2236962, 1, 1, 1, param1.maxDescent + (param1.maxAscent + 2));
           this.field_t = (WidgetPainter) ((Object) var17);
           var17.field_d = 16777215;
           var4 = new ao();

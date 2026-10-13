@@ -35,7 +35,7 @@ final class DropdownOptionList extends kq {
         try {
           this.font = font;
           this.selector = selector;
-          this.rowHeight = this.font.field_H + this.font.field_L;
+          this.rowHeight = this.font.maxAscent + this.font.maxDescent;
           this.setOptions(selectedIndex, 5526, options);
         } catch (RuntimeException runtimeException) {
           throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "pp.<init>(" + (selector != null ? "{...}" : "null") + ',' + (font != null ? "{...}" : "null") + ',' + (options != null ? "{...}" : "null") + ',' + selectedIndex + ')');
@@ -108,7 +108,7 @@ final class DropdownOptionList extends kq {
               SoftwareRaster.b(var5 + 2, 4 + var6, this.width - 4, this.rowHeight, 2188450, 128);
             }
             var6 = var6 + this.rowHeight;
-            this.font.b(var17, var5 + 2, var6, 10000536, -1);
+            this.font.drawText(var17, var5 + 2, var6, 10000536, -1);
           }
           return;
         }
@@ -129,7 +129,7 @@ final class DropdownOptionList extends kq {
             SoftwareRaster.b(var5 + 2, 4 + var6Lifetime1, this.width - 4, this.rowHeight, 2188450, 128);
           }
           var6Lifetime1 = var6Lifetime1 + this.rowHeight;
-          this.font.b(var15, var5 + 2, var6Lifetime1, 10000536, -1);
+          this.font.drawText(var15, var5 + 2, var6Lifetime1, 10000536, -1);
         }
     }
 

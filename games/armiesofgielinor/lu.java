@@ -6,7 +6,7 @@ class lu extends lk {
     static String field_v;
 
     lu(BitmapFont param0, int param1) {
-        super(param0, 4, 2, 2, 2, param1, -1, 0, 1, param0.field_H, -1, 2147483647, false);
+        super(param0, 4, 2, 2, 2, param1, -1, 0, 1, param0.maxAscent, -1, 2147483647, false);
     }
 
     public static void a(int param0) {

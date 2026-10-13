@@ -10,7 +10,7 @@ final class VerticalScrollbar extends ClientUiComponent {
     private ClientUiComponent pageDownArea;
     static String[][] field_Mb;
     static String field_Tb;
-    static tu field_Sb;
+    static BinaryBitmapFont field_Sb;
     private ClientUiComponent upButton;
     private ClientUiComponent pageUpArea;
     private ClientUiComponent track;

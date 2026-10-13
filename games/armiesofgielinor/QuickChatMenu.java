@@ -449,7 +449,7 @@ final class QuickChatMenu extends ClientUiComponent {
           this.itemCount = this.phraseIds.length;
           measurementFont = textStyle.font;
           rowFont = measurementFont;
-          this.rowHeight = rowFont.field_L + rowFont.field_H + 2;
+          this.rowHeight = rowFont.maxDescent + rowFont.maxAscent + 2;
           this.menuHeight = this.rowHeight * this.itemCount;
           this.contentWidth = 0;
           this.items = new IconTextComponent[this.itemCount];
@@ -466,7 +466,7 @@ final class QuickChatMenu extends ClientUiComponent {
             }
             this.items[itemIndex] = new IconTextComponent(0L, itemStyle, (ClientUiComponent) null, textStyle, (RgbSprite) (arrow), labels[itemIndex]);
             this.addChild(this.items[itemIndex], 55);
-            labelWidth = measurementFont.a(labels[itemIndex]);
+            labelWidth = measurementFont.textWidth(labels[itemIndex]);
             if (this.contentWidth < labelWidth) {
               this.contentWidth = labelWidth;
             }

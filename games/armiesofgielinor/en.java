@@ -3,7 +3,7 @@
  */
 abstract class en extends tj implements eg {
     private sb field_H;
-    static tu field_E;
+    static BinaryBitmapFont field_E;
     static int field_F;
     static String field_G;
 

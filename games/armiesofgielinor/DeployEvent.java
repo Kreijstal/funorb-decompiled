@@ -239,7 +239,7 @@ final class DeployEvent extends GameEvent {
             if (var10 <= 0) {
               stackIn_22_1 = var6.displayName;
             } else {
-              stackIn_22_1 = BitmapFont.a(var6.nameComponent.font, var6.displayName, var10);
+              stackIn_22_1 = BitmapFont.truncateWithEllipsis(var6.nameComponent.font, var6.displayName, var10);
             }
             stackIn_21_0.text = stackIn_22_1;
             stackIn_25_0 = (var6.nameComponent.text.equals(var6.displayName)) ? 0 : 1;

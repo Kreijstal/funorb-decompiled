@@ -261,7 +261,7 @@ final class MoveAttackAction extends PreparedAction {
         }
     }
 
-    final static void a(int param0, RgbSprite[] param1, tu param2, String param3, int param4, int param5, int param6) {
+    final static void a(int param0, RgbSprite[] param1, BinaryBitmapFont param2, String param3, int param4, int param5, int param6) {
         int var7_int = 0;
         int var8 = 0;
         int var9 = 0;
@@ -278,7 +278,7 @@ final class MoveAttackAction extends PreparedAction {
           if (param6 >= -33) {
             field_x = (int[]) null;
           }
-          var7_int = param2.a(param3) + (param1[0].pixelWidth << 1);
+          var7_int = param2.textWidth(param3) + (param1[0].pixelWidth << 1);
           var8 = -(var7_int >> 1) + param5;
           var9 = (var7_int >> 1) + param5;
           if (0 > var8) {

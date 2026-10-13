@@ -40,7 +40,7 @@ final class EditableTextField extends ClientUiComponent {
             if (textLength > characterIndex) {
               characterIndexBeforeIncrement = characterIndex;
               characterIndex++;
-              measuredWidth = measuredWidth + this.textComponent.font.a(this.textBuffer.charAt(characterIndexBeforeIncrement));
+              measuredWidth = measuredWidth + this.textComponent.font.characterWidth(this.textBuffer.charAt(characterIndexBeforeIncrement));
               continue;
             }
             break;
@@ -743,11 +743,11 @@ final class EditableTextField extends ClientUiComponent {
               this.selectionAnchor = unfocusedTextLength;
               this.caretIndex = unfocusedTextLength;
             }
-            this.caretComponent.x = this.textComponent.font.a(this.textBuffer.toString().substring(obfuscationGuard, this.caretIndex));
+            this.caretComponent.x = this.textComponent.font.textWidth(this.textBuffer.toString().substring(obfuscationGuard, this.caretIndex));
             if (this.selectionAnchor == this.caretIndex) {
               this.selectionComponent.setBounds(this.selectionHeight, -20500, 0, 2, this.caretComponent.x);
             } else {
-              anchorPixelX = this.textComponent.x + this.textComponent.font.a(this.textBuffer.toString().substring(0, this.selectionAnchor));
+              anchorPixelX = this.textComponent.x + this.textComponent.font.textWidth(this.textBuffer.toString().substring(0, this.selectionAnchor));
               if (this.caretComponent.x <= anchorPixelX) {
                 selectionLeftValue = this.caretComponent.x;
               } else {

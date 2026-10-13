@@ -5,7 +5,7 @@ final class ia {
     private int field_i;
     private int[] field_h;
     private boolean field_b;
-    private tu field_a;
+    private BinaryBitmapFont field_a;
     private int field_c;
     private String field_d;
     private RgbSprite[] field_f;
@@ -118,18 +118,18 @@ final class ia {
     private final void b(int param0) {
         int var9 = 0;
         int var2 = this.field_f[3].canvasWidth;
-        int var3 = this.field_a.a(' ');
+        int var3 = this.field_a.characterWidth(' ');
         int var4 = var3 + (var2 + this.field_e);
         int var5 = this.field_f[1].canvasHeight;
         int var6 = 2;
-        int var7 = this.field_a.field_H;
+        int var7 = this.field_a.maxAscent;
         int var8 = var5 + this.field_i - (-var6 - var7);
         if (param0 == -11727) {
           var9 = this.field_h[0];
           if (this.field_b) {
             var9 = this.field_h[1];
           }
-          this.field_a.b(this.field_d, var4, var8, var9, -1);
+          this.field_a.drawText(this.field_d, var4, var8, var9, -1);
           return;
         }
     }
@@ -204,27 +204,27 @@ final class ia {
         int var7Lifetime1;
         if (param0 < -92) {
           var2 = this.field_f[5].canvasWidth + this.field_f[3].canvasWidth;
-          var3 = this.field_a.a(' ') << 1;
-          var4 = this.field_a.a(this.field_d);
+          var3 = this.field_a.characterWidth(' ') << 1;
+          var4 = this.field_a.textWidth(this.field_d);
           this.field_j = var3 + var2 + var4;
           var5 = this.field_f[1].canvasHeight + this.field_f[7].canvasHeight;
           var6 = 4;
-          var7 = this.field_a.field_L + this.field_a.field_H;
+          var7 = this.field_a.maxDescent + this.field_a.maxAscent;
           this.field_c = var6 + (var5 + var7);
           return;
         }
         this.a(94, (byte) 54, -110);
         var2Lifetime1 = this.field_f[5].canvasWidth + this.field_f[3].canvasWidth;
-        var3Lifetime1 = this.field_a.a(' ') << 1;
-        var4Lifetime1 = this.field_a.a(this.field_d);
+        var3Lifetime1 = this.field_a.characterWidth(' ') << 1;
+        var4Lifetime1 = this.field_a.textWidth(this.field_d);
         this.field_j = var3Lifetime1 + var2Lifetime1 + var4Lifetime1;
         var5Lifetime1 = this.field_f[1].canvasHeight + this.field_f[7].canvasHeight;
         var6Lifetime1 = 4;
-        var7Lifetime1 = this.field_a.field_L + this.field_a.field_H;
+        var7Lifetime1 = this.field_a.maxDescent + this.field_a.maxAscent;
         this.field_c = var6Lifetime1 + (var5Lifetime1 + var7Lifetime1);
     }
 
-    ia(RgbSprite[] param0, tu param1, int[] param2, String param3, int param4, int param5) {
+    ia(RgbSprite[] param0, BinaryBitmapFont param1, int[] param2, String param3, int param4, int param5) {
         RuntimeException var7 = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;

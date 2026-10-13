@@ -133,7 +133,7 @@ abstract class AiPlanningStrategy {
                   if (var14 <= 0) {
                     stackIn_45_1 = var7.displayName;
                   } else {
-                    stackIn_45_1 = BitmapFont.a(var7.nameComponent.font, var7.displayName, var14);
+                    stackIn_45_1 = BitmapFont.truncateWithEllipsis(var7.nameComponent.font, var7.displayName, var14);
                   }
                   stackIn_44_0.text = stackIn_45_1;
                   var7.nameComponent.setBounds(jn.field_d, -20500, var14, var9, var13);

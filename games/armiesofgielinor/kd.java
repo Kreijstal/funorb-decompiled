@@ -129,7 +129,7 @@ final class kd extends tj implements nq, he, mf {
           for (var7 = 1; var7 < param1.length(); var7++) {
             var8 = param1.charAt(var7);
             if (var8 == 60) {
-              var6 = param2.field_i[0] + (var5_int >> 8) + param3.a(param1.substring(0, var7));
+              var6 = param2.field_i[0] + (var5_int >> 8) + param3.textWidth(param1.substring(0, var7));
             }
             if (var6 != -1) {
               param2.field_i[var7] = var6;
@@ -137,7 +137,7 @@ final class kd extends tj implements nq, he, mf {
               if (var8 == 32) {
                 var5_int = var5_int + param0;
               }
-              param2.field_i[var7] = (var5_int >> 8) + param2.field_i[0] - (-param3.a(param1.substring(0, 1 + var7)) + param3.a((char) var8));
+              param2.field_i[var7] = (var5_int >> 8) + param2.field_i[0] - (-param3.textWidth(param1.substring(0, 1 + var7)) + param3.characterWidth((char) var8));
             }
             if (var8 == 62) {
               var6 = -1;
@@ -218,7 +218,7 @@ final class kd extends tj implements nq, he, mf {
         ta var4 = new ta(46, var3, this.width - 90, 25, this.field_ab, true, this.width - 120, 5, gl.field_e, 11579568, IterableDualNodeDeque.field_c);
         this.a((byte) 10, (Widget) (var4));
         var3 = var3 + var4.height;
-        lk var5 = new lk(ArmiesOfGielinor.field_J, 0, 0, 0, 0, 16777215, -1, 0, 0, ArmiesOfGielinor.field_J.field_H, -1, 2147483647, true);
+        lk var5 = new lk(ArmiesOfGielinor.field_J, 0, 0, 0, 0, 16777215, -1, 0, 0, ArmiesOfGielinor.field_J.maxAscent, -1, 2147483647, true);
         this.field_W = new hv(var2, var5);
         this.field_W.field_s = "";
         this.field_W.a(DiskCacheRequest.field_I, false, 0);

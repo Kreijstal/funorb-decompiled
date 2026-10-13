@@ -48,10 +48,10 @@ final class cc {
         }
     }
 
-    final static tu a(ResourceArchive param0, int param1, ResourceArchive param2, boolean param3, int param4) {
+    final static BinaryBitmapFont a(ResourceArchive param0, int param1, ResourceArchive param2, boolean param3, int param4) {
         RuntimeException var5 = null;
         boolean stackIn_3_0 = false;
-        tu stackIn_9_0 = null;
+        BinaryBitmapFont stackIn_9_0 = null;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
         String stackIn_13_2 = null;

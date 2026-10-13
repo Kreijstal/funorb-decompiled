@@ -255,17 +255,17 @@ class ro extends pt implements he {
           var56 = (CharSequence) ((Object) qd.chatRecipientName);
           var20 = fo.a(4800, ta.field_Q, new String[]{ug.a(16, var56)});
           var8 = fo.a(4800, ov.field_l, new String[]{var16});
-          var9 = IntrusiveNode.field_e.a(var20);
-          var10 = IntrusiveNode.field_e.a(var8);
+          var9 = IntrusiveNode.field_e.textWidth(var20);
+          var10 = IntrusiveNode.field_e.textWidth(var8);
           if (var9 > var10) {
             var5Lifetime1 = var5Lifetime1 - var9;
-            if (IntrusiveNode.field_e.a(UpkeepEvent.chatTextBuffer.toString()) > var5Lifetime1) {
+            if (IntrusiveNode.field_e.textWidth(UpkeepEvent.chatTextBuffer.toString()) > var5Lifetime1) {
               PortalLossCondition.a(' ', UpkeepEvent.chatTextBuffer.length() - 1, UpkeepEvent.chatTextBuffer, true);
             }
             return true;
           }
           var5Lifetime1 = var5Lifetime1 - var10;
-          if (IntrusiveNode.field_e.a(UpkeepEvent.chatTextBuffer.toString()) <= var5Lifetime1) {
+          if (IntrusiveNode.field_e.textWidth(UpkeepEvent.chatTextBuffer.toString()) <= var5Lifetime1) {
             return true;
           }
           PortalLossCondition.a(' ', UpkeepEvent.chatTextBuffer.length() - 1, UpkeepEvent.chatTextBuffer, true);
@@ -274,8 +274,8 @@ class ro extends pt implements he {
         var7 = "";
         if (0 != rs.outgoingChatChannel) {
           var51 = var7 + var18 + ": ";
-          var5Lifetime1 = var5Lifetime1 - IntrusiveNode.field_e.a(var51);
-          if (IntrusiveNode.field_e.a(UpkeepEvent.chatTextBuffer.toString()) > var5Lifetime1) {
+          var5Lifetime1 = var5Lifetime1 - IntrusiveNode.field_e.textWidth(var51);
+          if (IntrusiveNode.field_e.textWidth(UpkeepEvent.chatTextBuffer.toString()) > var5Lifetime1) {
             PortalLossCondition.a(' ', UpkeepEvent.chatTextBuffer.length() - 1, UpkeepEvent.chatTextBuffer, true);
           }
           return true;
@@ -286,8 +286,8 @@ class ro extends pt implements he {
         }
         if (vu.currentRoom == null) {
           var54 = var7 + var18 + ": ";
-          var5Lifetime1 = var5Lifetime1 - IntrusiveNode.field_e.a(var54);
-          if (IntrusiveNode.field_e.a(UpkeepEvent.chatTextBuffer.toString()) > var5Lifetime1) {
+          var5Lifetime1 = var5Lifetime1 - IntrusiveNode.field_e.textWidth(var54);
+          if (IntrusiveNode.field_e.textWidth(UpkeepEvent.chatTextBuffer.toString()) > var5Lifetime1) {
             PortalLossCondition.a(' ', UpkeepEvent.chatTextBuffer.length() - 1, UpkeepEvent.chatTextBuffer, true);
           }
           return true;
@@ -295,8 +295,8 @@ class ro extends pt implements he {
         if (!TextCursor.field_f) {
           var7Lifetime1 = "[" + fo.a(param1 ^ -4859, CampaignMenu.field_m, new String[]{vu.currentRoom.ownerName}) + "] ";
           var54Lifetime1 = var7Lifetime1 + var18 + ": ";
-          var5Lifetime1 = var5Lifetime1 - IntrusiveNode.field_e.a(var54Lifetime1);
-          if (IntrusiveNode.field_e.a(UpkeepEvent.chatTextBuffer.toString()) > var5Lifetime1) {
+          var5Lifetime1 = var5Lifetime1 - IntrusiveNode.field_e.textWidth(var54Lifetime1);
+          if (IntrusiveNode.field_e.textWidth(UpkeepEvent.chatTextBuffer.toString()) > var5Lifetime1) {
             PortalLossCondition.a(' ', UpkeepEvent.chatTextBuffer.length() - 1, UpkeepEvent.chatTextBuffer, true);
           }
           return true;
@@ -304,16 +304,16 @@ class ro extends pt implements he {
         if (TeleportAction.field_C != null) {
           var52 = "[" + TeleportAction.field_C + "] ";
           var53 = var52 + var18 + ": ";
-          var5Lifetime1 = var5Lifetime1 - IntrusiveNode.field_e.a(var53);
-          if (IntrusiveNode.field_e.a(UpkeepEvent.chatTextBuffer.toString()) > var5Lifetime1) {
+          var5Lifetime1 = var5Lifetime1 - IntrusiveNode.field_e.textWidth(var53);
+          if (IntrusiveNode.field_e.textWidth(UpkeepEvent.chatTextBuffer.toString()) > var5Lifetime1) {
             PortalLossCondition.a(' ', UpkeepEvent.chatTextBuffer.length() - 1, UpkeepEvent.chatTextBuffer, true);
           }
           return true;
         }
         var7Lifetime2 = "[" + fo.a(param1 ^ -4859, CampaignMenu.field_m, new String[]{vu.currentRoom.ownerName}) + "] ";
         var54Lifetime2 = var7Lifetime2 + var18 + ": ";
-        var5Lifetime1 = var5Lifetime1 - IntrusiveNode.field_e.a(var54Lifetime2);
-        if (IntrusiveNode.field_e.a(UpkeepEvent.chatTextBuffer.toString()) > var5Lifetime1) {
+        var5Lifetime1 = var5Lifetime1 - IntrusiveNode.field_e.textWidth(var54Lifetime2);
+        if (IntrusiveNode.field_e.textWidth(UpkeepEvent.chatTextBuffer.toString()) > var5Lifetime1) {
           PortalLossCondition.a(' ', UpkeepEvent.chatTextBuffer.length() - 1, UpkeepEvent.chatTextBuffer, true);
         }
         return true;

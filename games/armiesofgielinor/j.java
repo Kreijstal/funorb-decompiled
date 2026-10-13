@@ -364,7 +364,7 @@ final class j {
               var9 = var16;
               var9 = var16;
               var9 = var16;
-              var10Lifetime1 = pi.field_N.font.a(var16) + 3 * pi.field_N.font.a('.');
+              var10Lifetime1 = pi.field_N.font.textWidth(var16) + 3 * pi.field_N.font.characterWidth('.');
               pi.field_N.textHorizontalPadding = (-var10Lifetime1 + pi.field_N.width) / 2;
               if ((KeyboardInputListener.field_b & 48) == 16) {
                 var9 = var16 + ".";

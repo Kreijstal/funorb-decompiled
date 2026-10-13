@@ -2,1004 +2,1004 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 abstract class BitmapFont extends DualLinkedNode {
-    private int[] field_A;
-    private int[] field_F;
-    private IndexedSpriteBase[] field_E;
-    private int[] field_M;
-    int field_H;
-    private byte[] field_K;
-    int field_y;
-    int field_L;
-    private int[] field_R;
-    private int[] field_C;
-    int field_v;
-    private int[] field_Q;
-    private static StringBuilder field_U;
-    int field_z;
-    private static int field_u;
-    private static int field_B;
-    private static int field_S;
-    private static int field_O;
-    private static int field_D;
-    private static int field_T;
-    private static int field_I;
-    private static int field_P;
-    private static String[] field_w;
-    private static int field_G;
-    private static int field_x;
+    private int[] glyphHeights;
+    private int[] advances;
+    private IndexedSpriteBase[] inlineSprites;
+    private int[] glyphWidths;
+    int maxAscent;
+    private byte[] kerning;
+    int xHeight;
+    int maxDescent;
+    private int[] glyphOffsetYs;
+    private int[] inlineSpriteBaselines;
+    int baselineHeight;
+    private int[] glyphOffsetXs;
+    private static StringBuilder wrapBuffer;
+    int capitalHeight;
+    private static int strikethroughColour;
+    private static int underlineColour;
+    private static int shadowColour;
+    private static int justificationRemainder;
+    private static int textColour;
+    private static int textAlpha;
+    private static int justificationStep;
+    private static int defaultTextColour;
+    private static String[] lineScratch;
+    private static int defaultShadowColour;
+    private static int defaultTextAlpha;
 
-    final static String c(String param0) {
-        int var3_int = 0;
-        StringBuilder discarded$0 = null;
-        StringBuilder discarded$1 = null;
-        StringBuilder discarded$2 = null;
-        int var1;
-        int var2;
-        int var4;
-        StringBuilder var3;
-        int var5;
-        int var4Lifetime1;
-        var1 = param0.length();
-        var2 = 0;
-        for (var3_int = 0; var3_int < var1; var3_int++) {
-          var4 = param0.charAt(var3_int);
-          if (var4 != 60) {
-            if (var4 == 62) {
-              var2 += 3;
+    final static String escapeMarkup(String text) {
+        int countIndex = 0;
+        StringBuilder characterAppendResult = null;
+        StringBuilder greaterAppendResult = null;
+        StringBuilder lessAppendResult = null;
+        int textLength;
+        int extraCapacity;
+        int character;
+        StringBuilder escaped;
+        int escapeCharacter;
+        int escapeIndex;
+        textLength = text.length();
+        extraCapacity = 0;
+        for (countIndex = 0; countIndex < textLength; countIndex++) {
+          character = text.charAt(countIndex);
+          if (character != 60) {
+            if (character == 62) {
+              extraCapacity += 3;
             }
           } else {
-            var2 += 3;
+            extraCapacity += 3;
           }
         }
-        var3 = new StringBuilder(var1 + var2);
-        for (var4Lifetime1 = 0; var4Lifetime1 < var1; var4Lifetime1++) {
-          var5 = param0.charAt(var4Lifetime1);
-          if (var5 != 60) {
-            if (var5 != 62) {
-              discarded$0 = var3.append((char) var5);
+        escaped = new StringBuilder(textLength + extraCapacity);
+        for (escapeIndex = 0; escapeIndex < textLength; escapeIndex++) {
+          escapeCharacter = text.charAt(escapeIndex);
+          if (escapeCharacter != 60) {
+            if (escapeCharacter != 62) {
+              characterAppendResult = escaped.append((char) escapeCharacter);
             } else {
-              discarded$1 = var3.append("<gt>");
+              greaterAppendResult = escaped.append("<gt>");
             }
           } else {
-            discarded$2 = var3.append("<lt>");
+            lessAppendResult = escaped.append("<lt>");
           }
         }
-        return var3.toString();
+        return escaped.toString();
     }
 
-    final int a(String param0) {
-        int var6 = 0;
-        Throwable decompiledCaughtException = null;
-        int var2 = 0;
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        int var7 = 0;
-        String var8 = null;
-        int var9_int = 0;
-        Exception var9 = null;
-        CharSequence var10 = null;
-        if (param0 == null) {
+    final int textWidth(String text) {
+        int characterIndex = 0;
+        Throwable caughtImageFailure = null;
+        int tagStart = 0;
+        int previousGlyph = 0;
+        int width = 0;
+        int textLength = 0;
+        int character = 0;
+        String tag = null;
+        int spriteIndex = 0;
+        Exception imageFailure = null;
+        CharSequence indexText = null;
+        if (text == null) {
           return 0;
         }
-        var2 = -1;
-        var3 = 0;
-        var4 = 0;
-        var5 = param0.length();
-        for (var6 = 0; var6 < var5; var6++) {
-          boolean decompiledFrameRemainder0 = true;
-          var7 = param0.charAt(var6);
-          if (var7 != 60) {
-            if (var7 == 62 &&
-              var2 != -1) {
-              var8 = param0.substring(var2 + 1, var6).toLowerCase();
-              var2 = -1;
-              if (!var8.equals("lt")) {
-                if (!var8.equals("gt")) {
-                  if (!var8.equals("nbsp")) {
-                    if (!var8.equals("shy")) {
-                      if (!var8.equals("times")) {
-                        if (!var8.equals("euro")) {
-                          if (!var8.equals("copy")) {
-                            if (!var8.equals("reg")) {
-                              if (!(!var8.startsWith("img="))) {
+        tagStart = -1;
+        previousGlyph = 0;
+        width = 0;
+        textLength = text.length();
+        for (characterIndex = 0; characterIndex < textLength; characterIndex++) {
+          boolean measureCharacter = true;
+          character = text.charAt(characterIndex);
+          if (character != 60) {
+            if (character == 62 &&
+              tagStart != -1) {
+              tag = text.substring(tagStart + 1, characterIndex).toLowerCase();
+              tagStart = -1;
+              if (!tag.equals("lt")) {
+                if (!tag.equals("gt")) {
+                  if (!tag.equals("nbsp")) {
+                    if (!tag.equals("shy")) {
+                      if (!tag.equals("times")) {
+                        if (!tag.equals("euro")) {
+                          if (!tag.equals("copy")) {
+                            if (!tag.equals("reg")) {
+                              if (!(!tag.startsWith("img="))) {
                                 try {
-                                  var10 = (CharSequence) ((Object) var8.substring(4));
-                                  var9_int = HuffmanCodec.a(49, var10);
-                                  var4 = var4 + this.field_E[var9_int].canvasWidth;
-                                  var3 = 0;
-                                } catch (java.lang.Exception decompiledCaughtParameter0) {
-                                  decompiledCaughtException = decompiledCaughtParameter0;
-                                  var9 = (Exception) (Object) decompiledCaughtException;
+                                  indexText = (CharSequence) ((Object) tag.substring(4));
+                                  spriteIndex = HuffmanCodec.a(49, indexText);
+                                  width = width + this.inlineSprites[spriteIndex].canvasWidth;
+                                  previousGlyph = 0;
+                                } catch (java.lang.Exception caughtParameter) {
+                                  caughtImageFailure = caughtParameter;
+                                  imageFailure = (Exception) (Object) caughtImageFailure;
                                 }
                               }
-                              decompiledFrameRemainder0 = false;
+                              measureCharacter = false;
                             }
                             else {
-                              var7 = 174;
+                              character = 174;
                             }
                           } else {
-                            var7 = 169;
+                            character = 169;
                           }
                         } else {
-                          var7 = 8364;
+                          character = 8364;
                         }
                       } else {
-                        var7 = 215;
+                        character = 215;
                       }
                     } else {
-                      var7 = 173;
+                      character = 173;
                     }
                   } else {
-                    var7 = 160;
+                    character = 160;
                   }
                 } else {
-                  var7 = 62;
+                  character = 62;
                 }
               } else {
-                var7 = 60;
+                character = 60;
               }
             }
-            if ((decompiledFrameRemainder0) &&
-              (var2 == -1)) {
-              var7 = (char)(kw.a((char) var7, 39) & 255);
-              var4 = var4 + this.field_F[var7];
-              if (this.field_K != null &&
-                var3 != 0) {
-                var4 = var4 + this.field_K[(var3 << 8) + var7];
+            if ((measureCharacter) &&
+              (tagStart == -1)) {
+              character = (char)(kw.a((char) character, 39) & 255);
+              width = width + this.advances[character];
+              if (this.kerning != null &&
+                previousGlyph != 0) {
+                width = width + this.kerning[(previousGlyph << 8) + character];
               }
-              var3 = var7;
+              previousGlyph = character;
             }
           } else {
-            var2 = var6;
+            tagStart = characterIndex;
           }
         }
-        return var4;
+        return width;
     }
 
-    final int a(String param0, int[] param1, String[] param2) {
-        int var13 = 0;
-        StringBuilder discarded$0 = null;
-        StringBuilder discarded$1 = null;
-        StringBuilder discarded$2 = null;
-        StringBuilder discarded$3 = null;
-        int stackIn_69_0 = 0;
-        int[] stackIn_69_1 = null;
-        int stackIn_70_2 = 0;
-        Throwable decompiledCaughtException = null;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
-        int var14 = 0;
-        String var15 = null;
-        int var16_int = 0;
-        Exception var16 = null;
-        Object var17 = null;
-        CharSequence var18 = null;
-        var17 = null;
-        if (param0 == null) {
+    final int wrapLines(String text, int[] maximumWidths, String[] lines) {
+        int characterIndex = 0;
+        StringBuilder openingAppendResult = null;
+        StringBuilder tagAppendResult = null;
+        StringBuilder closingAppendResult = null;
+        StringBuilder characterAppendResult = null;
+        int widthForLimit = 0;
+        int[] widthsForLimit = null;
+        int widthLimitIndex = 0;
+        Throwable caughtImageFailure = null;
+        int lineWidth = 0;
+        int lineStart = 0;
+        int breakPosition = 0;
+        int widthAtBreak = 0;
+        int breakCharacterCount = 0;
+        int tagStart = 0;
+        int previousGlyph = 0;
+        int lineCount = 0;
+        int textLength = 0;
+        int character = 0;
+        String tag = null;
+        int spriteIndex = 0;
+        Exception imageFailure = null;
+        Object unusedMarker = null;
+        CharSequence indexText = null;
+        unusedMarker = null;
+        if (text == null) {
           return 0;
         }
-        PortalLossCondition.a(' ', 0, field_U, true);
-        var4 = 0;
-        var5 = 0;
-        var6 = -1;
-        var7 = 0;
-        var8 = 0;
-        var9 = -1;
-        var10 = 0;
-        var11 = 0;
-        var12 = param0.length();
-        for (var13 = 0; var13 < var12; var13++) {
-          var14 = param0.charAt(var13);
-          if (var14 != 60) {
-            if (var14 == 62 &&
-              var9 != -1) {
-              var15 = param0.substring(var9 + 1, var13).toLowerCase();
-              var9 = -1;
-              discarded$0 = field_U.append('<');
-              discarded$1 = field_U.append(var15);
-              discarded$2 = field_U.append('>');
-              if (!var15.equals("br")) {
-                if (!var15.equals("lt")) {
-                  if (!var15.equals("gt")) {
-                    if (!var15.equals("nbsp")) {
-                      if (!var15.equals("shy")) {
-                        if (!var15.equals("times")) {
-                          if (!var15.equals("euro")) {
-                            if (!var15.equals("copy")) {
-                              if (!var15.equals("reg")) {
-                                if (var15.startsWith("img=")) {
+        PortalLossCondition.a(' ', 0, wrapBuffer, true);
+        lineWidth = 0;
+        lineStart = 0;
+        breakPosition = -1;
+        widthAtBreak = 0;
+        breakCharacterCount = 0;
+        tagStart = -1;
+        previousGlyph = 0;
+        lineCount = 0;
+        textLength = text.length();
+        for (characterIndex = 0; characterIndex < textLength; characterIndex++) {
+          character = text.charAt(characterIndex);
+          if (character != 60) {
+            if (character == 62 &&
+              tagStart != -1) {
+              tag = text.substring(tagStart + 1, characterIndex).toLowerCase();
+              tagStart = -1;
+              openingAppendResult = wrapBuffer.append('<');
+              tagAppendResult = wrapBuffer.append(tag);
+              closingAppendResult = wrapBuffer.append('>');
+              if (!tag.equals("br")) {
+                if (!tag.equals("lt")) {
+                  if (!tag.equals("gt")) {
+                    if (!tag.equals("nbsp")) {
+                      if (!tag.equals("shy")) {
+                        if (!tag.equals("times")) {
+                          if (!tag.equals("euro")) {
+                            if (!tag.equals("copy")) {
+                              if (!tag.equals("reg")) {
+                                if (tag.startsWith("img=")) {
                                   try {
-                                    var18 = (CharSequence) ((Object) var15.substring(4));
-                                    var16_int = HuffmanCodec.a(25, var18);
-                                    var4 = var4 + this.field_E[var16_int].canvasWidth;
-                                    var10 = 0;
-                                  } catch (java.lang.Exception decompiledCaughtParameter0) {
-                                    decompiledCaughtException = decompiledCaughtParameter0;
-                                    var16 = (Exception) (Object) decompiledCaughtException;
+                                    indexText = (CharSequence) ((Object) tag.substring(4));
+                                    spriteIndex = HuffmanCodec.a(25, indexText);
+                                    lineWidth = lineWidth + this.inlineSprites[spriteIndex].canvasWidth;
+                                    previousGlyph = 0;
+                                  } catch (java.lang.Exception caughtParameter) {
+                                    caughtImageFailure = caughtParameter;
+                                    imageFailure = (Exception) (Object) caughtImageFailure;
                                   }
                                 }
                               } else {
-                                var4 = var4 + this.a('®');
-                                if (this.field_K != null &&
-                                  var10 != 0) {
-                                  var4 = var4 + this.field_K[(var10 << 8) + 174];
+                                lineWidth = lineWidth + this.characterWidth('®');
+                                if (this.kerning != null &&
+                                  previousGlyph != 0) {
+                                  lineWidth = lineWidth + this.kerning[(previousGlyph << 8) + 174];
                                 }
-                                var10 = 174;
+                                previousGlyph = 174;
                               }
                             } else {
-                              var4 = var4 + this.a('©');
-                              if (this.field_K != null &&
-                                var10 != 0) {
-                                var4 = var4 + this.field_K[(var10 << 8) + 169];
+                              lineWidth = lineWidth + this.characterWidth('©');
+                              if (this.kerning != null &&
+                                previousGlyph != 0) {
+                                lineWidth = lineWidth + this.kerning[(previousGlyph << 8) + 169];
                               }
-                              var10 = 169;
+                              previousGlyph = 169;
                             }
                           } else {
-                            var4 = var4 + this.a('€');
-                            if (this.field_K != null &&
-                              var10 != 0) {
-                              var4 = var4 + this.field_K[(var10 << 8) + 128];
+                            lineWidth = lineWidth + this.characterWidth('€');
+                            if (this.kerning != null &&
+                              previousGlyph != 0) {
+                              lineWidth = lineWidth + this.kerning[(previousGlyph << 8) + 128];
                             }
-                            var10 = 8364;
+                            previousGlyph = 8364;
                           }
                         } else {
-                          var4 = var4 + this.a('×');
-                          if (this.field_K != null &&
-                            var10 != 0) {
-                            var4 = var4 + this.field_K[(var10 << 8) + 215];
+                          lineWidth = lineWidth + this.characterWidth('×');
+                          if (this.kerning != null &&
+                            previousGlyph != 0) {
+                            lineWidth = lineWidth + this.kerning[(previousGlyph << 8) + 215];
                           }
-                          var10 = 215;
+                          previousGlyph = 215;
                         }
                       } else {
-                        var4 = var4 + this.a('­');
-                        if (this.field_K != null &&
-                          var10 != 0) {
-                          var4 = var4 + this.field_K[(var10 << 8) + 173];
+                        lineWidth = lineWidth + this.characterWidth('­');
+                        if (this.kerning != null &&
+                          previousGlyph != 0) {
+                          lineWidth = lineWidth + this.kerning[(previousGlyph << 8) + 173];
                         }
-                        var10 = 173;
+                        previousGlyph = 173;
                       }
                     } else {
-                      var4 = var4 + this.a(' ');
-                      if (this.field_K != null &&
-                        var10 != 0) {
-                        var4 = var4 + this.field_K[(var10 << 8) + 160];
+                      lineWidth = lineWidth + this.characterWidth(' ');
+                      if (this.kerning != null &&
+                        previousGlyph != 0) {
+                        lineWidth = lineWidth + this.kerning[(previousGlyph << 8) + 160];
                       }
-                      var10 = 160;
+                      previousGlyph = 160;
                     }
                   } else {
-                    var4 = var4 + this.a('>');
-                    if (this.field_K != null &&
-                      var10 != 0) {
-                      var4 = var4 + this.field_K[(var10 << 8) + 62];
+                    lineWidth = lineWidth + this.characterWidth('>');
+                    if (this.kerning != null &&
+                      previousGlyph != 0) {
+                      lineWidth = lineWidth + this.kerning[(previousGlyph << 8) + 62];
                     }
-                    var10 = 62;
+                    previousGlyph = 62;
                   }
                 } else {
-                  var4 = var4 + this.a('<');
-                  if (this.field_K != null &&
-                    var10 != 0) {
-                    var4 = var4 + this.field_K[(var10 << 8) + 60];
+                  lineWidth = lineWidth + this.characterWidth('<');
+                  if (this.kerning != null &&
+                    previousGlyph != 0) {
+                    lineWidth = lineWidth + this.kerning[(previousGlyph << 8) + 60];
                   }
-                  var10 = 60;
+                  previousGlyph = 60;
                 }
               } else {
-                param2[var11] = field_U.toString().substring(var5, field_U.length());
-                var11++;
-                var5 = field_U.length();
-                var4 = 0;
-                var6 = -1;
-                var10 = 0;
+                lines[lineCount] = wrapBuffer.toString().substring(lineStart, wrapBuffer.length());
+                lineCount++;
+                lineStart = wrapBuffer.length();
+                lineWidth = 0;
+                breakPosition = -1;
+                previousGlyph = 0;
               }
-              var14 = 0;
+              character = 0;
             }
-            if (var9 == -1) {
-              if (var14 != 0) {
-                discarded$3 = field_U.append((char) var14);
-                var14 = (char)(kw.a((char) var14, 37) & 255);
-                var4 = var4 + this.field_F[var14];
-                if (this.field_K != null &&
-                  var10 != 0) {
-                  var4 = var4 + this.field_K[(var10 << 8) + var14];
+            if (tagStart == -1) {
+              if (character != 0) {
+                characterAppendResult = wrapBuffer.append((char) character);
+                character = (char)(kw.a((char) character, 37) & 255);
+                lineWidth = lineWidth + this.advances[character];
+                if (this.kerning != null &&
+                  previousGlyph != 0) {
+                  lineWidth = lineWidth + this.kerning[(previousGlyph << 8) + character];
                 }
-                var10 = var14;
+                previousGlyph = character;
               }
-              if (var14 == 32) {
-                var6 = field_U.length();
-                var7 = var4;
-                var8 = 1;
+              if (character == 32) {
+                breakPosition = wrapBuffer.length();
+                widthAtBreak = lineWidth;
+                breakCharacterCount = 1;
               }
-              if (param1 != null) {
-                stackIn_69_0 = var4;
-                stackIn_69_1 = (int[]) (param1);
-                if (var11 >= param1.length) {
-                  stackIn_70_2 = param1.length - 1;
+              if (maximumWidths != null) {
+                widthForLimit = lineWidth;
+                widthsForLimit = (int[]) (maximumWidths);
+                if (lineCount >= maximumWidths.length) {
+                  widthLimitIndex = maximumWidths.length - 1;
                 } else {
-                  stackIn_70_2 = var11;
+                  widthLimitIndex = lineCount;
                 }
-                if (stackIn_69_0 > stackIn_69_1[stackIn_70_2] &&
-                  var6 >= 0) {
-                  param2[var11] = field_U.toString().substring(var5, var6 - var8);
-                  var11++;
-                  var5 = var6;
-                  var6 = -1;
-                  var4 = var4 - var7;
-                  var10 = 0;
+                if (widthForLimit > widthsForLimit[widthLimitIndex] &&
+                  breakPosition >= 0) {
+                  lines[lineCount] = wrapBuffer.toString().substring(lineStart, breakPosition - breakCharacterCount);
+                  lineCount++;
+                  lineStart = breakPosition;
+                  breakPosition = -1;
+                  lineWidth = lineWidth - widthAtBreak;
+                  previousGlyph = 0;
                 }
               }
-              if (var14 == 45) {
-                var6 = field_U.length();
-                var7 = var4;
-                var8 = 0;
+              if (character == 45) {
+                breakPosition = wrapBuffer.length();
+                widthAtBreak = lineWidth;
+                breakCharacterCount = 0;
               }
             }
           } else {
-            var9 = var13;
+            tagStart = characterIndex;
           }
         }
-        if (field_U.length() > var5) {
-          param2[var11] = field_U.toString().substring(var5, field_U.length());
-          var11++;
+        if (wrapBuffer.length() > lineStart) {
+          lines[lineCount] = wrapBuffer.toString().substring(lineStart, wrapBuffer.length());
+          lineCount++;
         }
-        return var11;
+        return lineCount;
     }
 
-    final int a(char param0) {
-        return this.field_F[kw.a(param0, -106) & 255];
+    final int characterWidth(char character) {
+        return this.advances[kw.a(character, -106) & 255];
     }
 
-    private final void b(int param0, int param1) {
-        field_u = -1;
-        field_B = -1;
-        field_G = param1;
-        field_S = param1;
-        field_P = param0;
-        field_D = param0;
-        field_x = 256;
-        field_T = 256;
-        field_I = 0;
-        field_O = 0;
+    private final void resetStyle(int colour, int shadow) {
+        strikethroughColour = -1;
+        underlineColour = -1;
+        defaultShadowColour = shadow;
+        shadowColour = shadow;
+        defaultTextColour = colour;
+        textColour = colour;
+        defaultTextAlpha = 256;
+        textAlpha = 256;
+        justificationStep = 0;
+        justificationRemainder = 0;
     }
 
-    final int a(String param0, int param1) {
-        int var5 = 0;
-        int var3;
-        int var4;
-        int var6;
-        var3 = this.a(param0, new int[]{param1}, field_w);
-        var4 = 0;
-        for (var5 = 0; var5 < var3; var5++) {
-          var6 = this.a(field_w[var5]);
-          if (var6 > var4) {
-            var4 = var6;
+    final int getWrappedWidth(String text, int maximumWidth) {
+        int lineIndex = 0;
+        int lineCount;
+        int maximumLineWidth;
+        int lineWidth;
+        lineCount = this.wrapLines(text, new int[]{maximumWidth}, lineScratch);
+        maximumLineWidth = 0;
+        for (lineIndex = 0; lineIndex < lineCount; lineIndex++) {
+          lineWidth = this.textWidth(lineScratch[lineIndex]);
+          if (lineWidth > maximumLineWidth) {
+            maximumLineWidth = lineWidth;
           }
         }
-        return var4;
+        return maximumLineWidth;
     }
 
-    final void b(String param0, int param1, int param2, int param3, int param4) {
-        if (param0 == null) {
+    final void drawText(String text, int x, int baselineY, int colour, int shadow) {
+        if (text == null) {
           return;
         }
-        this.b(param3, param4);
-        this.b(param0, param1, param2);
+        this.resetStyle(colour, shadow);
+        this.drawStyledText(text, x, baselineY);
     }
 
-    private final void b(String param0) {
-        Throwable decompiledCaughtException = null;
-        Exception var2 = null;
-        CharSequence var3 = null;
-        CharSequence var4 = null;
-        CharSequence var5 = null;
-        CharSequence var6 = null;
-        CharSequence var7 = null;
+    private final void applyStyleTag(String tag) {
+        Throwable caughtTagFailure = null;
+        Exception tagFailure = null;
+        CharSequence colourText = null;
+        CharSequence alphaText = null;
+        CharSequence strikethroughText = null;
+        CharSequence underlineText = null;
+        CharSequence shadowText = null;
         try {
-          if (!param0.startsWith("col=")) {
-            if (!param0.equals("/col")) {
-              if (!param0.startsWith("trans=")) {
-                if (!param0.equals("/trans")) {
-                  if (!param0.startsWith("str=")) {
-                    if (!param0.equals("str")) {
-                      if (!param0.equals("/str")) {
-                        if (!param0.startsWith("u=")) {
-                          if (!param0.equals("u")) {
-                            if (!param0.equals("/u")) {
-                              if (!param0.startsWith("shad=")) {
-                                if (!param0.equals("shad")) {
-                                  if (!param0.equals("/shad")) {
-                                    if (param0.equals("br")) {
-                                      this.a(field_P, field_G, field_x);
+          if (!tag.startsWith("col=")) {
+            if (!tag.equals("/col")) {
+              if (!tag.startsWith("trans=")) {
+                if (!tag.equals("/trans")) {
+                  if (!tag.startsWith("str=")) {
+                    if (!tag.equals("str")) {
+                      if (!tag.equals("/str")) {
+                        if (!tag.startsWith("u=")) {
+                          if (!tag.equals("u")) {
+                            if (!tag.equals("/u")) {
+                              if (!tag.startsWith("shad=")) {
+                                if (!tag.equals("shad")) {
+                                  if (!tag.equals("/shad")) {
+                                    if (tag.equals("br")) {
+                                      this.resetStyle(defaultTextColour, defaultShadowColour, defaultTextAlpha);
                                     }
                                   } else {
-                                    field_S = field_G;
+                                    shadowColour = defaultShadowColour;
                                   }
                                 } else {
-                                  field_S = 0;
+                                  shadowColour = 0;
                                 }
                               } else {
-                                var7 = (CharSequence) ((Object) param0.substring(5));
-                                field_S = ju.a(0, 16, var7);
+                                shadowText = (CharSequence) ((Object) tag.substring(5));
+                                shadowColour = ju.a(0, 16, shadowText);
                               }
                             } else {
-                              field_B = -1;
+                              underlineColour = -1;
                             }
                           } else {
-                            field_B = 0;
+                            underlineColour = 0;
                           }
                         } else {
-                          var6 = (CharSequence) ((Object) param0.substring(2));
-                          field_B = ju.a(0, 16, var6);
+                          underlineText = (CharSequence) ((Object) tag.substring(2));
+                          underlineColour = ju.a(0, 16, underlineText);
                         }
                       } else {
-                        field_u = -1;
+                        strikethroughColour = -1;
                       }
                     } else {
-                      field_u = 8388608;
+                      strikethroughColour = 8388608;
                     }
                   } else {
-                    var5 = (CharSequence) ((Object) param0.substring(4));
-                    field_u = ju.a(0, 16, var5);
+                    strikethroughText = (CharSequence) ((Object) tag.substring(4));
+                    strikethroughColour = ju.a(0, 16, strikethroughText);
                   }
                 } else {
-                  field_T = field_x;
+                  textAlpha = defaultTextAlpha;
                 }
               } else {
-                var4 = (CharSequence) ((Object) param0.substring(6));
-                field_T = HuffmanCodec.a(34, var4);
+                alphaText = (CharSequence) ((Object) tag.substring(6));
+                textAlpha = HuffmanCodec.a(34, alphaText);
               }
             } else {
-              field_D = field_P;
+              textColour = defaultTextColour;
             }
           } else {
-            var3 = (CharSequence) ((Object) param0.substring(4));
-            field_D = ju.a(0, 16, var3);
+            colourText = (CharSequence) ((Object) tag.substring(4));
+            textColour = ju.a(0, 16, colourText);
           }
-        } catch (java.lang.Exception decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var2 = (Exception) (Object) decompiledCaughtException;
+        } catch (java.lang.Exception caughtParameter) {
+          caughtTagFailure = caughtParameter;
+          tagFailure = (Exception) (Object) caughtTagFailure;
         }
     }
 
-    final void c(String param0, int param1, int param2, int param3, int param4) {
-        if (param0 == null) {
+    final void drawCentered(String text, int x, int baselineY, int colour, int shadow) {
+        if (text == null) {
           return;
         }
-        this.b(param3, param4);
-        this.b(param0, param1 - this.a(param0) / 2, param2);
+        this.resetStyle(colour, shadow);
+        this.drawStyledText(text, x - this.textWidth(text) / 2, baselineY);
     }
 
     public static void a() {
-        field_U = null;
-        field_w = null;
+        wrapBuffer = null;
+        lineScratch = null;
     }
 
-    final void a(IndexedSpriteBase[] param0, int[] param1) {
-        if (param1 != null &&
-          param1.length != param0.length) {
+    final void setInlineSprites(IndexedSpriteBase[] sprites, int[] baselines) {
+        if (baselines != null &&
+          baselines.length != sprites.length) {
           throw new IllegalArgumentException();
         }
-        this.field_E = param0;
-        this.field_C = param1;
+        this.inlineSprites = sprites;
+        this.inlineSpriteBaselines = baselines;
     }
 
-    private final void a(int param0, int param1, int param2) {
-        field_u = -1;
-        field_B = -1;
-        field_G = param1;
-        field_S = param1;
-        field_P = param0;
-        field_D = param0;
-        field_x = param2;
-        field_T = param2;
-        field_I = 0;
-        field_O = 0;
+    private final void resetStyle(int colour, int shadow, int alpha) {
+        strikethroughColour = -1;
+        underlineColour = -1;
+        defaultShadowColour = shadow;
+        shadowColour = shadow;
+        defaultTextColour = colour;
+        textColour = colour;
+        defaultTextAlpha = alpha;
+        textAlpha = alpha;
+        justificationStep = 0;
+        justificationRemainder = 0;
     }
 
-    final void b(String param0, int param1, int param2, int param3, int param4, int param5) {
-        if (param0 == null) {
+    final void drawTextWithAlpha(String text, int x, int baselineY, int colour, int shadow, int alpha) {
+        if (text == null) {
           return;
         }
-        this.a(param3, param4, param5);
-        this.b(param0, param1, param2);
+        this.resetStyle(colour, shadow, alpha);
+        this.drawStyledText(text, x, baselineY);
     }
 
-    final void a(String param0, int param1, int param2, int param3, int param4) {
-        if (param0 == null) {
+    final void drawRightAligned(String text, int x, int baselineY, int colour, int shadow) {
+        if (text == null) {
           return;
         }
-        this.b(param3, param4);
-        this.b(param0, param1 - this.a(param0), param2);
+        this.resetStyle(colour, shadow);
+        this.drawStyledText(text, x - this.textWidth(text), baselineY);
     }
 
-    private final void b(String param0, int param1) {
-        int var6 = 0;
-        int var3;
-        int var4;
-        int var5;
-        int var7;
-        var3 = 0;
-        var4 = 0;
-        var5 = param0.length();
-        for (var6 = 0; var6 < var5; var6++) {
-          var7 = param0.charAt(var6);
-          if (var7 != 60) {
-            if (var7 != 62) {
-              if (var4 == 0 &&
-                var7 == 32) {
-                var3++;
+    private final void prepareJustification(String text, int targetWidth) {
+        int characterIndex = 0;
+        int spaceCount;
+        int inTag;
+        int textLength;
+        int character;
+        spaceCount = 0;
+        inTag = 0;
+        textLength = text.length();
+        for (characterIndex = 0; characterIndex < textLength; characterIndex++) {
+          character = text.charAt(characterIndex);
+          if (character != 60) {
+            if (character != 62) {
+              if (inTag == 0 &&
+                character == 32) {
+                spaceCount++;
               }
             } else {
-              var4 = 0;
+              inTag = 0;
             }
           } else {
-            var4 = 1;
+            inTag = 1;
           }
         }
-        if (var3 > 0) {
-          field_I = (param1 - this.a(param0) << 8) / var3;
+        if (spaceCount > 0) {
+          justificationStep = (targetWidth - this.textWidth(text) << 8) / spaceCount;
         }
     }
 
-    final int a(String param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10) {
-        int[] var12;
-        int var13;
-        int var14;
-        int var15;
-        int var15Lifetime1;
-        if (param0 == null) {
+    final int drawParagraph(String text, int left, int top, int width, int height, int colour, int shadow, int alpha, int horizontalAlignment, int verticalAlignment, int lineHeight) {
+        int[] maximumWidths;
+        int lineCount;
+        int baselineY;
+        int verticalGap;
+        int lineIndex;
+        if (text == null) {
           return 0;
         }
-        this.a(param5, param6, param7);
-        if (param10 == 0) {
-          param10 = this.field_v;
+        this.resetStyle(colour, shadow, alpha);
+        if (lineHeight == 0) {
+          lineHeight = this.baselineHeight;
         }
-        var12 = new int[]{param3};
-        if (param4 < this.field_H + this.field_L + param10 &&
-          param4 < param10 + param10) {
-          var12 = null;
+        maximumWidths = new int[]{width};
+        if (height < this.maxAscent + this.maxDescent + lineHeight &&
+          height < lineHeight + lineHeight) {
+          maximumWidths = null;
         }
-        var13 = this.a(param0, var12, field_w);
-        if (param9 == 3 &&
-          var13 == 1) {
-          param9 = 1;
+        lineCount = this.wrapLines(text, maximumWidths, lineScratch);
+        if (verticalAlignment == 3 &&
+          lineCount == 1) {
+          verticalAlignment = 1;
         }
-        if (param9 != 0) {
-          if (param9 != 1) {
-            if (param9 != 2) {
-              var15 = (param4 - this.field_H - this.field_L - (var13 - 1) * param10) / (var13 + 1);
-              if (var15 < 0) {
-                var15 = 0;
+        if (verticalAlignment != 0) {
+          if (verticalAlignment != 1) {
+            if (verticalAlignment != 2) {
+              verticalGap = (height - this.maxAscent - this.maxDescent - (lineCount - 1) * lineHeight) / (lineCount + 1);
+              if (verticalGap < 0) {
+                verticalGap = 0;
               }
-              var14 = param2 + this.field_H + var15;
-              param10 = param10 + var15;
+              baselineY = top + this.maxAscent + verticalGap;
+              lineHeight = lineHeight + verticalGap;
             } else {
-              var14 = param2 + param4 - this.field_L - (var13 - 1) * param10;
+              baselineY = top + height - this.maxDescent - (lineCount - 1) * lineHeight;
             }
           } else {
-            var14 = param2 + this.field_H + (param4 - this.field_H - this.field_L - (var13 - 1) * param10) / 2;
+            baselineY = top + this.maxAscent + (height - this.maxAscent - this.maxDescent - (lineCount - 1) * lineHeight) / 2;
           }
         } else {
-          var14 = param2 + this.field_H;
+          baselineY = top + this.maxAscent;
         }
-        for (var15Lifetime1 = 0; var15Lifetime1 < var13; var15Lifetime1++) {
-          if (param8 != 0) {
-            if (param8 != 1) {
-              if (param8 != 2) {
-                if (var15Lifetime1 != var13 - 1) {
-                  this.b(field_w[var15Lifetime1], param3);
-                  this.b(field_w[var15Lifetime1], param1, var14);
-                  field_I = 0;
+        for (lineIndex = 0; lineIndex < lineCount; lineIndex++) {
+          if (horizontalAlignment != 0) {
+            if (horizontalAlignment != 1) {
+              if (horizontalAlignment != 2) {
+                if (lineIndex != lineCount - 1) {
+                  this.prepareJustification(lineScratch[lineIndex], width);
+                  this.drawStyledText(lineScratch[lineIndex], left, baselineY);
+                  justificationStep = 0;
                 } else {
-                  this.b(field_w[var15Lifetime1], param1, var14);
+                  this.drawStyledText(lineScratch[lineIndex], left, baselineY);
                 }
-                var14 = var14 + param10;
+                baselineY = baselineY + lineHeight;
               } else {
-                this.b(field_w[var15Lifetime1], param1 + param3 - this.a(field_w[var15Lifetime1]), var14);
-                var14 = var14 + param10;
+                this.drawStyledText(lineScratch[lineIndex], left + width - this.textWidth(lineScratch[lineIndex]), baselineY);
+                baselineY = baselineY + lineHeight;
               }
             } else {
-              this.b(field_w[var15Lifetime1], param1 + (param3 - this.a(field_w[var15Lifetime1])) / 2, var14);
-              var14 = var14 + param10;
+              this.drawStyledText(lineScratch[lineIndex], left + (width - this.textWidth(lineScratch[lineIndex])) / 2, baselineY);
+              baselineY = baselineY + lineHeight;
             }
           } else {
-            this.b(field_w[var15Lifetime1], param1, var14);
-            var14 = var14 + param10;
+            this.drawStyledText(lineScratch[lineIndex], left, baselineY);
+            baselineY = baselineY + lineHeight;
           }
         }
-        return var13;
+        return lineCount;
     }
 
-    abstract void a(int param0, int param1, int param2, int param3, int param4, int param5, boolean param6);
+    abstract void drawGlyph(int glyph, int left, int top, int width, int height, int colour, boolean shadow);
 
-    final int c(String param0, int param1) {
-        return this.a(param0, new int[]{param1}, field_w);
+    final int getLineCount(String text, int maximumWidth) {
+        return this.wrapLines(text, new int[]{maximumWidth}, lineScratch);
     }
 
-    final static String a(BitmapFont param0, String param1, int param2) {
-        int var6 = 0;
-        int var3;
-        int var4;
-        int var5;
-        int var7;
-        if (param0.a(param1) <= param2) {
-          return param1;
+    final static String truncateWithEllipsis(BitmapFont font, String text, int maximumWidth) {
+        int characterIndex = 0;
+        int ellipsisWidth;
+        int availableWidth;
+        int prefixWidth;
+        int characterWidth;
+        if (font.textWidth(text) <= maximumWidth) {
+          return text;
         }
-        var3 = param0.a("...");
-        var4 = param2 - var3;
-        var5 = 0;
-        for (var6 = 0; var6 < param1.length(); var6++) {
-          var7 = param0.a(param1.charAt(var6));
-          if (var5 + var7 > var4) {
-            return param1.substring(0, var6 - 1) + "...";
+        ellipsisWidth = font.textWidth("...");
+        availableWidth = maximumWidth - ellipsisWidth;
+        prefixWidth = 0;
+        for (characterIndex = 0; characterIndex < text.length(); characterIndex++) {
+          characterWidth = font.characterWidth(text.charAt(characterIndex));
+          if (prefixWidth + characterWidth > availableWidth) {
+            return text.substring(0, characterIndex - 1) + "...";
           }
-          var5 = var5 + var7;
+          prefixWidth = prefixWidth + characterWidth;
         }
         return null;
     }
 
     final int getParagraphHeight(String text, int width, int lineHeight) {
         if (lineHeight == 0) {
-          lineHeight = this.field_v;
+          lineHeight = this.baselineHeight;
         }
-        int var4 = this.a(text, new int[]{width}, field_w);
-        int var5 = (var4 - 1) * lineHeight;
-        return this.field_H + var5 + this.field_L;
+        int lineCount = this.wrapLines(text, new int[]{width}, lineScratch);
+        int additionalLineHeight = (lineCount - 1) * lineHeight;
+        return this.maxAscent + additionalLineHeight + this.maxDescent;
     }
 
-    private final void a(byte[] param0) {
-        int var3_int = 0;
-        int incrementValue$6 = 0;
-        int incrementValue$5 = 0;
-        int incrementValue$4 = 0;
-        int var6_int = 0;
-        byte[] array$2 = null;
-        int incrementValue$3 = 0;
-        byte[] array$0 = null;
-        int var9 = 0;
-        int incrementValue$1 = 0;
-        int var2;
-        int[] var3;
-        int[] var4;
-        int var5_int;
-        byte[][] var5;
-        byte[][] var6;
-        int var7;
-        int var8;
-        int[] var10;
-        byte[][] var11;
-        byte[][] var12;
-        int[] var13;
-        int[] var14;
-        byte[][] var15;
-        byte[][] var16;
-        int[] var17;
-        int var5_intLifetime1;
-        int var8Lifetime1;
-        int var8Lifetime2;
-        int var7Lifetime1;
-        int var7Lifetime2;
-        this.field_F = new int[256];
-        if (param0.length == 257) {
-          for (var2 = 0; var2 < this.field_F.length; var2++) {
-            this.field_F[var2] = param0[var2] & 255;
+    private final void decodeMetrics(byte[] metrics) {
+        int advanceGlyph = 0;
+        int advanceOffset = 0;
+        int lengthOffset = 0;
+        int profileOffsetIndex = 0;
+        int leftGlyph = 0;
+        byte[] leftProfile = null;
+        int leftDeltaOffset = 0;
+        byte[] rightProfile = null;
+        int rightRow = 0;
+        int rightDeltaOffset = 0;
+        int cursor;
+        int[] profileLengths;
+        int[] profileOffsets;
+        int lengthGlyph;
+        byte[][] leftProfilesAlias;
+        byte[][] rightProfilesAlias;
+        int leftValue;
+        int leftRow;
+        int[] profileLengthsAlias;
+        byte[][] leftProfilesSecondAlias;
+        byte[][] rightProfilesSecondAlias;
+        int[] profileOffsetsAlias;
+        int[] profileLengthsSource;
+        byte[][] leftProfiles;
+        byte[][] rightProfiles;
+        int[] profileOffsetsSource;
+        int offsetGlyph;
+        int rightValue;
+        int nextGlyph;
+        int rightGlyph;
+        int previousGlyph;
+        this.advances = new int[256];
+        if (metrics.length == 257) {
+          for (cursor = 0; cursor < this.advances.length; cursor++) {
+            this.advances[cursor] = metrics[cursor] & 255;
           }
-          this.field_v = param0[256] & 255;
+          this.baselineHeight = metrics[256] & 255;
         } else {
-          var2 = 0;
-          for (var3_int = 0; var3_int < 256; var3_int++) {
-            incrementValue$6 = var2;
-            var2++;
-            this.field_F[var3_int] = param0[incrementValue$6] & 255;
+          cursor = 0;
+          for (advanceGlyph = 0; advanceGlyph < 256; advanceGlyph++) {
+            advanceOffset = cursor;
+            cursor++;
+            this.advances[advanceGlyph] = metrics[advanceOffset] & 255;
           }
-          var14 = new int[256];
-          var10 = var14;
-          var3 = var10;
-          var17 = new int[256];
-          var13 = var17;
-          var4 = var13;
-          for (var5_int = 0; var5_int < 256; var5_int++) {
-            incrementValue$5 = var2;
-            var2++;
-            var3[var5_int] = param0[incrementValue$5] & 255;
+          profileLengthsSource = new int[256];
+          profileLengthsAlias = profileLengthsSource;
+          profileLengths = profileLengthsAlias;
+          profileOffsetsSource = new int[256];
+          profileOffsetsAlias = profileOffsetsSource;
+          profileOffsets = profileOffsetsAlias;
+          for (lengthGlyph = 0; lengthGlyph < 256; lengthGlyph++) {
+            lengthOffset = cursor;
+            cursor++;
+            profileLengths[lengthGlyph] = metrics[lengthOffset] & 255;
           }
-          for (var5_intLifetime1 = 0; var5_intLifetime1 < 256; var5_intLifetime1++) {
-            incrementValue$4 = var2;
-            var2++;
-            var4[var5_intLifetime1] = param0[incrementValue$4] & 255;
+          for (offsetGlyph = 0; offsetGlyph < 256; offsetGlyph++) {
+            profileOffsetIndex = cursor;
+            cursor++;
+            profileOffsets[offsetGlyph] = metrics[profileOffsetIndex] & 255;
           }
-          var15 = new byte[256][];
-          var11 = var15;
-          var5 = var11;
-          for (var6_int = 0; var6_int < 256; var6_int++) {
-            array$2 = new byte[var14[var6_int]];
-            var5[var6_int] = array$2;
-            var7 = 0;
-            for (var8 = 0; var8 < var15[var6_int].length; var8++) {
-              incrementValue$3 = var2;
-              var2++;
-              var7 = (byte)(var7 + param0[incrementValue$3]);
-              var15[var6_int][var8] = (byte)var7;
+          leftProfiles = new byte[256][];
+          leftProfilesSecondAlias = leftProfiles;
+          leftProfilesAlias = leftProfilesSecondAlias;
+          for (leftGlyph = 0; leftGlyph < 256; leftGlyph++) {
+            leftProfile = new byte[profileLengthsSource[leftGlyph]];
+            leftProfilesAlias[leftGlyph] = leftProfile;
+            leftValue = 0;
+            for (leftRow = 0; leftRow < leftProfiles[leftGlyph].length; leftRow++) {
+              leftDeltaOffset = cursor;
+              cursor++;
+              leftValue = (byte)(leftValue + metrics[leftDeltaOffset]);
+              leftProfiles[leftGlyph][leftRow] = (byte)leftValue;
             }
           }
-          var16 = new byte[256][];
-          var12 = var16;
-          var6 = var12;
-          for (var7Lifetime1 = 0; var7Lifetime1 < 256; var7Lifetime1++) {
-            array$0 = new byte[var14[var7Lifetime1]];
-            var6[var7Lifetime1] = array$0;
-            var8Lifetime1 = 0;
-            for (var9 = 0; var9 < var16[var7Lifetime1].length; var9++) {
-              incrementValue$1 = var2;
-              var2++;
-              var8Lifetime1 = (byte)(var8Lifetime1 + param0[incrementValue$1]);
-              var16[var7Lifetime1][var9] = (byte)var8Lifetime1;
+          rightProfiles = new byte[256][];
+          rightProfilesSecondAlias = rightProfiles;
+          rightProfilesAlias = rightProfilesSecondAlias;
+          for (rightGlyph = 0; rightGlyph < 256; rightGlyph++) {
+            rightProfile = new byte[profileLengthsSource[rightGlyph]];
+            rightProfilesAlias[rightGlyph] = rightProfile;
+            rightValue = 0;
+            for (rightRow = 0; rightRow < rightProfiles[rightGlyph].length; rightRow++) {
+              rightDeltaOffset = cursor;
+              cursor++;
+              rightValue = (byte)(rightValue + metrics[rightDeltaOffset]);
+              rightProfiles[rightGlyph][rightRow] = (byte)rightValue;
             }
           }
-          this.field_K = new byte[65536];
-          for (var7Lifetime2 = 0; var7Lifetime2 < 256; var7Lifetime2++) {
-            if (var7Lifetime2 != 32 &&
-              var7Lifetime2 != 160) {
-              for (var8Lifetime2 = 0; var8Lifetime2 < 256; var8Lifetime2++) {
-                if (var8Lifetime2 != 32 &&
-                  var8Lifetime2 != 160) {
-                  this.field_K[(var7Lifetime2 << 8) + var8Lifetime2] = (byte)BitmapFont.a(var15, var16, var17, this.field_F, var14, var7Lifetime2, var8Lifetime2);
+          this.kerning = new byte[65536];
+          for (previousGlyph = 0; previousGlyph < 256; previousGlyph++) {
+            if (previousGlyph != 32 &&
+              previousGlyph != 160) {
+              for (nextGlyph = 0; nextGlyph < 256; nextGlyph++) {
+                if (nextGlyph != 32 &&
+                  nextGlyph != 160) {
+                  this.kerning[(previousGlyph << 8) + nextGlyph] = (byte)BitmapFont.calculatePairKerning(leftProfiles, rightProfiles, profileOffsetsSource, this.advances, profileLengthsSource, previousGlyph, nextGlyph);
                 }
               }
             }
           }
-          this.field_v = var17[32] + var14[32];
+          this.baselineHeight = profileOffsetsSource[32] + profileLengthsSource[32];
         }
     }
 
-    final int a(String param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
-        return this.a(param0, param1, param2, param3, param4, param5, param6, 256, param7, param8, param9);
+    final int drawParagraph(String text, int left, int top, int width, int height, int colour, int shadow, int horizontalAlignment, int verticalAlignment, int lineHeight) {
+        return this.drawParagraph(text, left, top, width, height, colour, shadow, 256, horizontalAlignment, verticalAlignment, lineHeight);
     }
 
-    abstract void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, boolean param7);
+    abstract void drawGlyphWithAlpha(int glyph, int left, int top, int width, int height, int colour, int alpha, boolean shadow);
 
-    final void a(String param0, int param1, int param2, int param3, int param4, int param5) {
-        if (param0 == null) {
+    final void drawCenteredWithAlpha(String text, int x, int baselineY, int colour, int shadow, int alpha) {
+        if (text == null) {
           return;
         }
-        this.a(param3, param4, param5);
-        this.b(param0, param1 - this.a(param0) / 2, param2);
+        this.resetStyle(colour, shadow, alpha);
+        this.drawStyledText(text, x - this.textWidth(text) / 2, baselineY);
     }
 
-    private final void b(String param0, int param1, int param2) {
-        int var7 = 0;
-        int stackIn_27_0 = 0;
-        Throwable decompiledCaughtException = null;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var8 = 0;
-        String var9_ref_String = null;
-        int var9 = 0;
-        int var10 = 0;
-        Exception var10_ref_Exception = null;
-        IndexedSpriteBase var11_ref_si = null;
-        int var11 = 0;
-        int var12 = 0;
-        CharSequence var13 = null;
-        param2 = param2 - this.field_v;
-        var4 = -1;
-        var5 = 0;
-        var6 = param0.length();
-        for (var7 = 0; var7 < var6; var7++) {
-          boolean decompiledFrameRemainder0 = true;
-          var8 = param0.charAt(var7);
-          if (var8 != 60) {
-            if (var8 == 62 &&
-              var4 != -1) {
-              var9_ref_String = param0.substring(var4 + 1, var7).toLowerCase();
-              var4 = -1;
-              if (!var9_ref_String.equals("lt")) {
-                if (!var9_ref_String.equals("gt")) {
-                  if (!var9_ref_String.equals("nbsp")) {
-                    if (!var9_ref_String.equals("shy")) {
-                      if (!var9_ref_String.equals("times")) {
-                        if (!var9_ref_String.equals("euro")) {
-                          if (!var9_ref_String.equals("copy")) {
-                            if (!var9_ref_String.equals("reg")) {
-                              if (!var9_ref_String.startsWith("img=")) {
-                                this.b(var9_ref_String);
+    private final void drawStyledText(String text, int left, int baselineY) {
+        int characterIndex = 0;
+        int spriteBaseline = 0;
+        Throwable caughtImageFailure = null;
+        int tagStart = 0;
+        int previousGlyph = 0;
+        int textLength = 0;
+        int character = 0;
+        String tag = null;
+        int glyphWidth = 0;
+        int glyphHeightOrSpriteIndex = 0;
+        Exception imageFailure = null;
+        IndexedSpriteBase sprite = null;
+        int glyphLeft = 0;
+        int imageBaseline = 0;
+        CharSequence indexText = null;
+        baselineY = baselineY - this.baselineHeight;
+        tagStart = -1;
+        previousGlyph = 0;
+        textLength = text.length();
+        for (characterIndex = 0; characterIndex < textLength; characterIndex++) {
+          boolean drawCharacter = true;
+          character = text.charAt(characterIndex);
+          if (character != 60) {
+            if (character == 62 &&
+              tagStart != -1) {
+              tag = text.substring(tagStart + 1, characterIndex).toLowerCase();
+              tagStart = -1;
+              if (!tag.equals("lt")) {
+                if (!tag.equals("gt")) {
+                  if (!tag.equals("nbsp")) {
+                    if (!tag.equals("shy")) {
+                      if (!tag.equals("times")) {
+                        if (!tag.equals("euro")) {
+                          if (!tag.equals("copy")) {
+                            if (!tag.equals("reg")) {
+                              if (!tag.startsWith("img=")) {
+                                this.applyStyleTag(tag);
                               } else {
                                 try {
-                                  var13 = (CharSequence) ((Object) var9_ref_String.substring(4));
-                                  var10 = HuffmanCodec.a(12, var13);
-                                  var11_ref_si = this.field_E[var10];
-                                  if (this.field_C == null) {
-                                    stackIn_27_0 = var11_ref_si.canvasHeight;
+                                  indexText = (CharSequence) ((Object) tag.substring(4));
+                                  glyphHeightOrSpriteIndex = HuffmanCodec.a(12, indexText);
+                                  sprite = this.inlineSprites[glyphHeightOrSpriteIndex];
+                                  if (this.inlineSpriteBaselines == null) {
+                                    spriteBaseline = sprite.canvasHeight;
                                   } else {
-                                    stackIn_27_0 = this.field_C[var10];
+                                    spriteBaseline = this.inlineSpriteBaselines[glyphHeightOrSpriteIndex];
                                   }
-                                  var12 = stackIn_27_0;
-                                  if (field_T != 256) {
-                                    var11_ref_si.drawAlpha(param1, param2 + this.field_v - var12, field_T);
+                                  imageBaseline = spriteBaseline;
+                                  if (textAlpha != 256) {
+                                    sprite.drawAlpha(left, baselineY + this.baselineHeight - imageBaseline, textAlpha);
                                   } else {
-                                    var11_ref_si.draw(param1, param2 + this.field_v - var12);
+                                    sprite.draw(left, baselineY + this.baselineHeight - imageBaseline);
                                   }
-                                  param1 = param1 + var11_ref_si.canvasWidth;
-                                  var5 = 0;
-                                } catch (java.lang.Exception decompiledCaughtParameter0) {
-                                  decompiledCaughtException = decompiledCaughtParameter0;
-                                  var10_ref_Exception = (Exception) (Object) decompiledCaughtException;
+                                  left = left + sprite.canvasWidth;
+                                  previousGlyph = 0;
+                                } catch (java.lang.Exception caughtParameter) {
+                                  caughtImageFailure = caughtParameter;
+                                  imageFailure = (Exception) (Object) caughtImageFailure;
                                 }
                               }
-                              decompiledFrameRemainder0 = false;
+                              drawCharacter = false;
                             }
                             else {
-                              var8 = 174;
+                              character = 174;
                             }
                           } else {
-                            var8 = 169;
+                            character = 169;
                           }
                         } else {
-                          var8 = 8364;
+                          character = 8364;
                         }
                       } else {
-                        var8 = 215;
+                        character = 215;
                       }
                     } else {
-                      var8 = 173;
+                      character = 173;
                     }
                   } else {
-                    var8 = 160;
+                    character = 160;
                   }
                 } else {
-                  var8 = 62;
+                  character = 62;
                 }
               } else {
-                var8 = 60;
+                character = 60;
               }
             }
-            if ((decompiledFrameRemainder0) &&
-              (var4 == -1)) {
-              var8 = (char)(kw.a((char) var8, 90) & 255);
-              if (this.field_K != null &&
-                var5 != 0) {
-                param1 = param1 + this.field_K[(var5 << 8) + var8];
+            if ((drawCharacter) &&
+              (tagStart == -1)) {
+              character = (char)(kw.a((char) character, 90) & 255);
+              if (this.kerning != null &&
+                previousGlyph != 0) {
+                left = left + this.kerning[(previousGlyph << 8) + character];
               }
-              var9 = this.field_M[var8];
-              var10 = this.field_A[var8];
-              var11 = param1;
-              if (var8 == 32) {
-                if (field_I > 0) {
-                  field_O = field_O + field_I;
-                  param1 = param1 + (field_O >> 8);
-                  field_O = field_O & 255;
+              glyphWidth = this.glyphWidths[character];
+              glyphHeightOrSpriteIndex = this.glyphHeights[character];
+              glyphLeft = left;
+              if (character == 32) {
+                if (justificationStep > 0) {
+                  justificationRemainder = justificationRemainder + justificationStep;
+                  left = left + (justificationRemainder >> 8);
+                  justificationRemainder = justificationRemainder & 255;
                 }
               } else {
-                if (field_T != 256) {
-                  if (field_S != -1) {
-                    this.a(var8, param1 + this.field_Q[var8] + 1, param2 + this.field_R[var8] + 1, var9, var10, field_S, field_T, true);
+                if (textAlpha != 256) {
+                  if (shadowColour != -1) {
+                    this.drawGlyphWithAlpha(character, left + this.glyphOffsetXs[character] + 1, baselineY + this.glyphOffsetYs[character] + 1, glyphWidth, glyphHeightOrSpriteIndex, shadowColour, textAlpha, true);
                   }
-                  this.a(var8, param1 + this.field_Q[var8], param2 + this.field_R[var8], var9, var10, field_D, field_T, false);
+                  this.drawGlyphWithAlpha(character, left + this.glyphOffsetXs[character], baselineY + this.glyphOffsetYs[character], glyphWidth, glyphHeightOrSpriteIndex, textColour, textAlpha, false);
                 } else {
-                  if (field_S != -1) {
-                    this.a(var8, param1 + this.field_Q[var8] + 1, param2 + this.field_R[var8] + 1, var9, var10, field_S, true);
+                  if (shadowColour != -1) {
+                    this.drawGlyph(character, left + this.glyphOffsetXs[character] + 1, baselineY + this.glyphOffsetYs[character] + 1, glyphWidth, glyphHeightOrSpriteIndex, shadowColour, true);
                   }
-                  this.a(var8, param1 + this.field_Q[var8], param2 + this.field_R[var8], var9, var10, field_D, false);
+                  this.drawGlyph(character, left + this.glyphOffsetXs[character], baselineY + this.glyphOffsetYs[character], glyphWidth, glyphHeightOrSpriteIndex, textColour, false);
                 }
               }
-              param1 = param1 + this.field_F[var8];
-              if (field_u != -1) {
-                SoftwareRaster.e(var11, param2 + (int)((double)this.field_v * 0.7), param1 - var11, field_u);
+              left = left + this.advances[character];
+              if (strikethroughColour != -1) {
+                SoftwareRaster.e(glyphLeft, baselineY + (int)((double)this.baselineHeight * 0.7), left - glyphLeft, strikethroughColour);
               }
-              if (field_B != -1) {
-                SoftwareRaster.e(var11, param2 + this.field_v + 1, param1 - var11, field_B);
+              if (underlineColour != -1) {
+                SoftwareRaster.e(glyphLeft, baselineY + this.baselineHeight + 1, left - glyphLeft, underlineColour);
               }
-              var5 = var8;
+              previousGlyph = character;
             }
           } else {
-            var4 = var7;
+            tagStart = characterIndex;
           }
         }
     }
 
-    final void c(String param0, int param1, int param2, int param3, int param4, int param5) {
-        if (param0 == null) {
+    final void drawRightAlignedWithAlpha(String text, int x, int baselineY, int colour, int shadow, int alpha) {
+        if (text == null) {
           return;
         }
-        this.a(param3, param4, param5);
-        this.b(param0, param1 - this.a(param0), param2);
+        this.resetStyle(colour, shadow, alpha);
+        this.drawStyledText(text, x - this.textWidth(text), baselineY);
     }
 
-    BitmapFont(byte[] param0, int[] param1, int[] param2, int[] param3, int[] param4) {
-        int var8 = 0;
-        int var6;
-        int var7;
-        this.field_v = 0;
-        this.field_Q = param1;
-        this.field_R = param2;
-        this.field_M = param3;
-        this.field_A = param4;
-        this.a(param0);
-        var6 = 2147483647;
-        var7 = -2147483648;
-        for (var8 = 0; var8 < 256; var8++) {
-          if (this.field_R[var8] < var6 &&
-            this.field_A[var8] != 0) {
-            var6 = this.field_R[var8];
+    BitmapFont(byte[] metrics, int[] glyphOffsetXs, int[] glyphOffsetYs, int[] glyphWidths, int[] glyphHeights) {
+        int glyph = 0;
+        int minimumInkY;
+        int maximumInkEndY;
+        this.baselineHeight = 0;
+        this.glyphOffsetXs = glyphOffsetXs;
+        this.glyphOffsetYs = glyphOffsetYs;
+        this.glyphWidths = glyphWidths;
+        this.glyphHeights = glyphHeights;
+        this.decodeMetrics(metrics);
+        minimumInkY = 2147483647;
+        maximumInkEndY = -2147483648;
+        for (glyph = 0; glyph < 256; glyph++) {
+          if (this.glyphOffsetYs[glyph] < minimumInkY &&
+            this.glyphHeights[glyph] != 0) {
+            minimumInkY = this.glyphOffsetYs[glyph];
           }
-          if (this.field_R[var8] + this.field_A[var8] > var7) {
-            var7 = this.field_R[var8] + this.field_A[var8];
+          if (this.glyphOffsetYs[glyph] + this.glyphHeights[glyph] > maximumInkEndY) {
+            maximumInkEndY = this.glyphOffsetYs[glyph] + this.glyphHeights[glyph];
           }
         }
-        this.field_H = this.field_v - var6;
-        this.field_L = var7 - this.field_v;
-        this.field_z = this.field_v - this.field_R[88];
-        this.field_y = this.field_v - this.field_R[120];
+        this.maxAscent = this.baselineHeight - minimumInkY;
+        this.maxDescent = maximumInkEndY - this.baselineHeight;
+        this.capitalHeight = this.baselineHeight - this.glyphOffsetYs[88];
+        this.xHeight = this.baselineHeight - this.glyphOffsetYs[120];
     }
 
-    private final static int a(byte[][] param0, byte[][] param1, int[] param2, int[] param3, int[] param4, int param5, int param6) {
-        int var18 = 0;
-        int incrementValue$6 = 0;
-        int incrementValue$7 = 0;
-        int var7;
-        int var8;
-        int var9;
-        int var10;
-        int var11;
-        int var12;
-        int var13;
-        byte[] var14;
-        byte[] var15;
-        int var16;
-        int var17;
-        int var19;
-        var7 = param2[param5];
-        var8 = var7 + param4[param5];
-        var9 = param2[param6];
-        var10 = var9 + param4[param6];
-        var11 = var7;
-        if (var9 > var7) {
-          var11 = var9;
+    private final static int calculatePairKerning(byte[][] leftProfiles, byte[][] rightProfiles, int[] profileOffsets, int[] advances, int[] profileLengths, int previousGlyph, int nextGlyph) {
+        int profileY = 0;
+        int previousRow = 0;
+        int nextRow = 0;
+        int previousStart;
+        int previousEnd;
+        int nextStart;
+        int nextEnd;
+        int overlapStart;
+        int overlapEnd;
+        int minimumSpacing;
+        byte[] previousRightProfile;
+        byte[] nextLeftProfile;
+        int previousProfileIndex;
+        int nextProfileIndex;
+        int profileSpacing;
+        previousStart = profileOffsets[previousGlyph];
+        previousEnd = previousStart + profileLengths[previousGlyph];
+        nextStart = profileOffsets[nextGlyph];
+        nextEnd = nextStart + profileLengths[nextGlyph];
+        overlapStart = previousStart;
+        if (nextStart > previousStart) {
+          overlapStart = nextStart;
         }
-        var12 = var8;
-        if (var10 < var8) {
-          var12 = var10;
+        overlapEnd = previousEnd;
+        if (nextEnd < previousEnd) {
+          overlapEnd = nextEnd;
         }
-        var13 = param3[param5];
-        if (param3[param6] < var13) {
-          var13 = param3[param6];
+        minimumSpacing = advances[previousGlyph];
+        if (advances[nextGlyph] < minimumSpacing) {
+          minimumSpacing = advances[nextGlyph];
         }
-        var14 = param1[param5];
-        var15 = param0[param6];
-        var16 = var11 - var7;
-        var17 = var11 - var9;
-        for (var18 = var11; var18 < var12; var18++) {
-          incrementValue$6 = var16;
-          var16++;
-          incrementValue$7 = var17;
-          var17++;
-          var19 = var14[incrementValue$6] + var15[incrementValue$7];
-          if (var19 < var13) {
-            var13 = var19;
+        previousRightProfile = rightProfiles[previousGlyph];
+        nextLeftProfile = leftProfiles[nextGlyph];
+        previousProfileIndex = overlapStart - previousStart;
+        nextProfileIndex = overlapStart - nextStart;
+        for (profileY = overlapStart; profileY < overlapEnd; profileY++) {
+          previousRow = previousProfileIndex;
+          previousProfileIndex++;
+          nextRow = nextProfileIndex;
+          nextProfileIndex++;
+          profileSpacing = previousRightProfile[previousRow] + nextLeftProfile[nextRow];
+          if (profileSpacing < minimumSpacing) {
+            minimumSpacing = profileSpacing;
           }
         }
-        return -var13;
+        return -minimumSpacing;
     }
 
     static {
-        field_U = new StringBuilder(100);
-        field_B = -1;
-        field_O = 0;
-        field_T = 256;
-        field_S = -1;
-        field_u = -1;
-        field_D = 0;
-        field_I = 0;
-        field_G = -1;
-        field_P = 0;
-        field_w = new String[100];
-        field_x = 256;
+        wrapBuffer = new StringBuilder(100);
+        underlineColour = -1;
+        justificationRemainder = 0;
+        textAlpha = 256;
+        shadowColour = -1;
+        strikethroughColour = -1;
+        textColour = 0;
+        justificationStep = 0;
+        defaultShadowColour = -1;
+        defaultTextColour = 0;
+        lineScratch = new String[100];
+        defaultTextAlpha = 256;
     }
 }
