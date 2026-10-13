@@ -157,7 +157,7 @@ final class AchievementIcon extends IntrusiveNode {
           this.x = this.x + offsetStep;
         } else {
           rk.achievementTransitionMask = rk.achievementTransitionMask & this.transitionKeepMask;
-          if (bg.containsRectanglePoint(this.x, this.height, this.width, (byte) 47, po.pointerY, pq.pointerX, this.y)) {
+          if (bg.containsRectanglePoint(this.x, this.height, this.width, (byte) 47, po.pointerY, MusicPatch.pointerX, this.y)) {
             nf.hoveredAchievementId = this.achievementId;
             if (1 == BackgroundScene.pressedButton &&
               bg.containsRectanglePoint(this.x, this.height, this.width, (byte) 33, qo.pressY, tb.pressX, this.y)) {
@@ -167,7 +167,7 @@ final class AchievementIcon extends IntrusiveNode {
                 nf.selectedAchievementId = -1;
               }
               if (nf.selectedAchievementId != -1) {
-                wp.playUiSound(8, ta.uiSounds[0]);
+                SoundCache.playUiSound(8, ta.uiSounds[0]);
               }
             }
           } else {
@@ -179,7 +179,7 @@ final class AchievementIcon extends IntrusiveNode {
                 nf.selectedAchievementId = -1;
               }
               if (nf.selectedAchievementId != -1) {
-                wp.playUiSound(8, ta.uiSounds[0]);
+                SoundCache.playUiSound(8, ta.uiSounds[0]);
               }
             }
           }

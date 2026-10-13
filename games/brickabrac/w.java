@@ -106,12 +106,12 @@ final class w {
               IsaacGenerator.field_n < this.field_j &&
               qo.pressY > 257 &&
               qo.pressY < 290) {
-              if (pq.pointerX > 9 &&
-                pq.pointerX < 82) {
+              if (MusicPatch.pointerX > 9 &&
+                MusicPatch.pointerX < 82) {
                 this.field_j = IsaacGenerator.field_n;
               }
-              if (pq.pointerX > 558 &&
-                pq.pointerX < 631) {
+              if (MusicPatch.pointerX > 558 &&
+                MusicPatch.pointerX < 631) {
                 this.field_j = IsaacGenerator.field_n;
               }
             }
@@ -120,7 +120,7 @@ final class w {
             stackIn_89_0 = 0;
             return stackIn_89_0;
           }
-          this.field_g.updatePointer(this.a(po.pointerY, -636, pq.pointerX), 27479, this.a(qo.pressY, -636, tb.pressX));
+          this.field_g.updatePointer(this.a(po.pointerY, -636, MusicPatch.pointerX), 27479, this.a(qo.pressY, -636, tb.pressX));
           var4Lifetime1 = 0;
           if (this.field_g.isActivated((byte) 113)) {
             if (this.field_g.selectedIndex == 0) {
@@ -223,12 +223,12 @@ final class w {
             Rasterizer2D.fillVerticalGradient(0, 0, 622, 47, 4540749, 65793);
             var2_int = 16448250;
             var3 = 10068666;
-            var16 = lk.a(param0 - 580, var2_int, var3);
+            var16 = MusicVoiceMixer.a(param0 - 580, var2_int, var3);
             this.a(47, 0, this.field_f, var16, co.field_j, 622, 0, 0);
             sc.popRaster(param0 - 592);
             this.field_e = new RgbSprite(param0, 24);
             this.a(co.field_j, -4, 0.75f, (byte) 124, 475, va.field_c, var16, 24, this.field_e, 0);
-            var17 = lk.a(-124, 526344, 526344);
+            var17 = MusicVoiceMixer.a(-124, 526344, 526344);
             var5 = new RgbSprite(121, 122);
             IndexedSpriteGeometry.pushSpriteRaster(param0 ^ -388, var5);
             Rasterizer2D.fillVerticalGradient(0, 0, var5.width, var5.height / 2, 16180917, 16306250);
@@ -319,15 +319,15 @@ final class w {
               po.pointerY < 290) {
               var2_intLifetime2 = 40 + (di.a((byte) 124, this.field_i << 4) * 40 >> 16);
               if (0 < var2_intLifetime2) {
-                if (9 < pq.pointerX &&
-                  pq.pointerX < 82) {
+                if (9 < MusicPatch.pointerX &&
+                  MusicPatch.pointerX < 82) {
                   ll.field_c.f(8, 256, var2_intLifetime2);
                   ll.field_c.f(10, 256, var2_intLifetime2);
                   ll.field_c.f(8, 258, var2_intLifetime2);
                   ll.field_c.f(10, 258, var2_intLifetime2);
                 } else {
-                  if (558 < pq.pointerX &&
-                    pq.pointerX < 631) {
+                  if (558 < MusicPatch.pointerX &&
+                    MusicPatch.pointerX < 631) {
                     ll.field_c.flipHorizontal();
                     ll.field_c.f(557, 256, var2_intLifetime2);
                     ll.field_c.f(559, 256, var2_intLifetime2);

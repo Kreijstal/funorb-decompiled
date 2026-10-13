@@ -6,7 +6,7 @@ abstract class BackgroundScene {
     int sceneId;
     static int field_a;
     static String field_g;
-    vm musicData;
+    MusicTrack musicData;
     static String field_o;
     static BlankScreen field_p;
     private int[] soundEffectOrder;
@@ -34,10 +34,10 @@ abstract class BackgroundScene {
           var3 = this.soundEffectNames[this.soundEffectOrder[this.loadedSoundCount]];
           var2 = var3;
           if (BrickABrac.field_I.hasFileName(var2, "", (byte) -121)) {
-            this.soundEffects[this.loadedSoundCount] = SoundPlayback.field_m.a(var3, "", (byte) 122);
+            this.soundEffects[this.loadedSoundCount] = SoundPlayback.soundCache.getSoundEffectByName(var3, "", (byte) 122);
           }
           if (og.field_gc.hasFileName(var2, "", (byte) -121)) {
-            this.soundEffects[this.loadedSoundCount] = SoundPlayback.field_m.a((byte) 28, var3, "");
+            this.soundEffects[this.loadedSoundCount] = SoundPlayback.soundCache.getMusicSampleByName((byte) 28, var3, "");
           }
           if (this.soundEffects[this.loadedSoundCount] != null) {
             this.loadedSoundCount = this.loadedSoundCount + 1;
@@ -132,23 +132,23 @@ abstract class BackgroundScene {
     }
 
     final void pollMusicPreparation(int obfuscationGuard) {
-        vm dupTemp$0 = null;
+        MusicTrack dupTemp$0 = null;
         int fieldTemp$1 = 0;
         if (this.musicData == null) {
-          dupTemp$0 = vm.a(mh.field_lb, "", this.musicName);
+          dupTemp$0 = MusicTrack.load(mh.field_lb, "", this.musicName);
           this.musicData = dupTemp$0;
           if (dupTemp$0 == null) {
             return;
           }
         }
-        if (!m.field_f.a(obfuscationGuard ^ -74, this.musicData, 22050, ji.field_a, SoundPlayback.field_m)) {
+        if (!m.musicSynthesizer.prepareTrack(obfuscationGuard ^ -74, this.musicData, 22050, ji.field_a, SoundPlayback.soundCache)) {
           return;
         }
         if (sk.pendingMusicLoads > 0) {
           fieldTemp$1 = sk.pendingMusicLoads - 1;
           sk.pendingMusicLoads = sk.pendingMusicLoads - 1;
           if (0 == fieldTemp$1) {
-            m.field_f.a((byte) 118);
+            m.musicSynthesizer.a((byte) 118);
           }
         }
         this.musicReady = true;

@@ -535,7 +535,7 @@ final class JungleBackground extends BackgroundScene {
                     qo.field_J = new byte[cq.field_p];
                   }
                   dc.field_g = false;
-                  lk.field_s = false;
+                  MusicVoiceMixer.field_s = false;
                   var17_int = 0;
                   while (true) {
                     if (var7 > var17_int) {
@@ -663,7 +663,7 @@ final class JungleBackground extends BackgroundScene {
                     !dc.field_g) {
                     var22 = null;
                     var23 = 0;
-                    if (lk.field_s) {
+                    if (MusicVoiceMixer.field_s) {
                       var22 = "</col>" + og.field_ac + "<col=A00000>";
                       var25Lifetime1 = var22;
                       var22 = var25Lifetime1;

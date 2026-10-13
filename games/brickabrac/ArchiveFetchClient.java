@@ -163,7 +163,7 @@ abstract class ArchiveFetchClient {
           return;
         }
         try {
-          pq.a(0, ep.field_d, param0);
+          MusicPatch.a(0, ep.field_d, param0);
         } catch (RuntimeException runtimeException) {
           throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "ih.T(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }

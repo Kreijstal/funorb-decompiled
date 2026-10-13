@@ -12,7 +12,7 @@ final class m {
     private boolean field_g;
     static String field_d;
     static qh field_c;
-    static ie field_f;
+    static MidiSynthesizer musicSynthesizer;
     static String field_e;
 
     final static boolean a(int param0) {
@@ -131,13 +131,13 @@ final class m {
         field_d = null;
         field_k = null;
         if (param0 == 2) {
-          field_f = null;
+          musicSynthesizer = null;
           field_e = null;
           field_c = null;
           return;
         }
         m.c(1);
-        field_f = null;
+        musicSynthesizer = null;
         field_e = null;
         field_c = null;
     }

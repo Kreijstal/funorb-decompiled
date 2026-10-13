@@ -61,7 +61,7 @@ final class he extends ib implements en {
     public he() {
         super(0, 0, 476, 225, (ub) null);
         this.field_I = new d(bd.field_a, (uh) null);
-        this.field_K = new d(se.field_l, (uh) null);
+        this.field_K = new d(ByteArrayNode.field_l, (uh) null);
         this.field_J = new d(nd.field_d, (uh) null);
         hi var1 = new hi();
         this.field_I.field_l = (ub) ((Object) var1);
@@ -75,9 +75,9 @@ final class he extends ib implements en {
         this.field_I.a(30, this.field_t - var3 >> 1, this.field_s - (78 + var2 * 2), (byte) -119, var3);
         this.field_K.field_i = (uh) (this);
         this.field_I.field_i = (uh) (this);
-        this.field_I.field_z = ie.field_q;
+        this.field_I.field_z = MidiSynthesizer.field_q;
         this.field_J.field_i = (uh) (this);
-        this.field_J.field_z = wp.field_i;
+        this.field_J.field_z = SoundCache.field_i;
         this.a(this.field_K, true);
         this.a(this.field_I, true);
         this.a(this.field_J, true);

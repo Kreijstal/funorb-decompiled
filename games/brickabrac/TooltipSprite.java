@@ -35,7 +35,7 @@ final class TooltipSprite extends IntrusiveNode {
         try {
           nf.field_W = cr.loadRgbSpritesByName("commonui", param3, "frame_top", param2 ^ -57);
           GameplayAudioEvent.field_l = cr.loadRgbSpritesByName("commonui", param3, "frame_bottom", 2);
-          ka.field_n = pl.loadRgbSpriteByName("commonui", "jagex_logo_grey", (byte) -110, param3);
+          MusicVoice.field_n = pl.loadRgbSpriteByName("commonui", "jagex_logo_grey", (byte) -110, param3);
           sf.field_U = cr.loadRgbSpritesByName("commonui", param3, "button", 2);
           df.field_a = bd.loadRgbSpritesByName("commonui", "validation", param3, (byte) -8);
           og.field_Yb = (TextFont) ((Object) IntrusiveHashTable.a((byte) -118, "commonui", "arezzo12", param3, param0));
@@ -94,8 +94,8 @@ final class TooltipSprite extends IntrusiveNode {
         if (obfuscationGuard != 0) {
           return;
         }
-        this.hovered = oh.a(pq.pointerX, po.pointerY, (byte) -24, this.y, this.x, this.sprite);
-        this.hovered = this.sprite.containsPixel(this.x, this.y, pq.pointerX, po.pointerY);
+        this.hovered = oh.a(MusicPatch.pointerX, po.pointerY, (byte) -24, this.y, this.x, this.sprite);
+        this.hovered = this.sprite.containsPixel(this.x, this.y, MusicPatch.pointerX, po.pointerY);
     }
 
     final static void e(int param0) {
@@ -231,7 +231,7 @@ final class TooltipSprite extends IntrusiveNode {
           return;
         }
         if (this.hovered) {
-          hj.a(-IntKeyIndex.field_b + pq.pointerX, -BackgroundScene.field_a + po.pointerY, this.tooltipHeight, this.tooltipWidth, this.tooltipText, 16777215);
+          hj.a(-IntKeyIndex.field_b + MusicPatch.pointerX, -BackgroundScene.field_a + po.pointerY, this.tooltipHeight, this.tooltipWidth, this.tooltipText, 16777215);
         }
     }
 

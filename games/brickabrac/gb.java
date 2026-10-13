@@ -131,7 +131,7 @@ final class gb {
     }
 
     gb(boolean param0) {
-        this.field_o = ka.field_E;
+        this.field_o = MusicVoice.field_E;
         this.field_f = field_h;
         if (param0) {
           this.field_g = BoundedFile.field_m;

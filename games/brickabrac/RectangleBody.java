@@ -308,8 +308,8 @@ class RectangleBody extends MovingBody {
         if (ej.field_I != null) {
           ej.field_I.m(17);
         }
-        pq.field_o = new qo();
-        rj.field_c.b((byte) 110, pq.field_o);
+        MusicPatch.field_o = new qo();
+        rj.field_c.b((byte) 110, MusicPatch.field_o);
     }
 
     int computeSyncChecksum(int obfuscationGuard, StringBuilder diagnostics) {

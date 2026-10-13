@@ -220,7 +220,7 @@ final class kf extends k {
                   }
                   if (2 <= var5 &&
                     !param0) {
-                    stackIn_31_0 = pq.field_n;
+                    stackIn_31_0 = MusicPatch.field_n;
                     return stackIn_31_0;
                   }
                 }

@@ -280,10 +280,10 @@ final class LevelSelectScreen extends MenuScreen {
     }
 
     final static String d(boolean param0) {
-        if (jm.field_f == ik.field_g) {
+        if (MusicEnvelope.field_f == ik.field_g) {
           return VolcanicBackground.field_w;
         }
-        if (ka.field_l == jm.field_f) {
+        if (MusicVoice.field_l == MusicEnvelope.field_f) {
           return om.field_pc;
         }
         if (!param0) {

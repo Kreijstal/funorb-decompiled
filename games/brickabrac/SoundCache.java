@@ -1,16 +1,16 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class wp {
+final class SoundCache {
     static String field_i;
-    private ResourceArchive field_j;
+    private ResourceArchive soundEffectArchive;
     static TextFont field_c;
     static mh field_k;
-    private ResourceArchive field_g;
+    private ResourceArchive musicSampleArchive;
     static NodeDeque field_f;
-    private IntrusiveHashTable field_a;
+    private IntrusiveHashTable pendingMusicSamples;
     static char field_h;
-    private IntrusiveHashTable field_e;
+    private IntrusiveHashTable decodedSounds;
     static String field_b;
     static String field_d;
 
@@ -53,7 +53,7 @@ final class wp {
               }
               if (var6Lifetime1 != null) {
                 var7 = (String) null;
-                wp.a((byte) 92, 0, (String) null, (String) (var6Lifetime1), var5, 2);
+                SoundCache.a((byte) 92, 0, (String) null, (String) (var6Lifetime1), var5, 2);
               }
               GameUiController.field_d = -1;
               tn.field_m = null;
@@ -65,7 +65,7 @@ final class wp {
         }
     }
 
-    private final PcmSound a(int[] param0, String param1, int param2, String param3) {
+    private final PcmSound getSoundEffectByName(int[] budget, String fileName, int obfuscationGuard, String groupName) {
         int var5_int = 0;
         RuntimeException var5 = null;
         int var6 = 0;
@@ -81,17 +81,17 @@ final class wp {
         String stackIn_19_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var5_int = this.field_j.getGroupId(param3, false);
+          var5_int = this.soundEffectArchive.getGroupId(groupName, false);
           if (var5_int < 0) {
             return null;
           }
-          if (param2 != 2) {
+          if (obfuscationGuard != 2) {
             var7 = (String) null;
-            this.a((byte) -29, (String) null, (String) null);
+            this.getMusicSampleByName((byte) -29, (String) null, (String) null);
           }
-          var6 = this.field_j.getFileId(var5_int, -100, param1);
+          var6 = this.soundEffectArchive.getFileId(var5_int, -100, fileName);
           if (var6 >= 0) {
-            stackIn_9_0 = this.a(var6, 0, var5_int, param0);
+            stackIn_9_0 = this.getSoundEffect(var6, 0, var5_int, budget);
             return stackIn_9_0;
           }
           stackIn_7_0 = null;
@@ -101,19 +101,19 @@ final class wp {
           var5 = decompiledCaughtException;
           stackIn_12_0 = var5;
           stackIn_12_1 = new StringBuilder().append("wp.E(");
-          if (param0 == null) {
+          if (budget == null) {
             stackIn_13_2 = "null";
           } else {
             stackIn_13_2 = "{...}";
           }
           stackIn_15_1 = ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',');
-          if (param1 == null) {
+          if (fileName == null) {
             stackIn_16_2 = "null";
           } else {
             stackIn_16_2 = "{...}";
           }
-          stackIn_18_1 = ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param2).append(',');
-          if (param3 == null) {
+          stackIn_18_1 = ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(obfuscationGuard).append(',');
+          if (groupName == null) {
             stackIn_19_2 = "null";
           } else {
             stackIn_19_2 = "{...}";
@@ -122,7 +122,7 @@ final class wp {
         }
     }
 
-    private final PcmSound a(int param0, int param1, int[] param2, int param3) {
+    private final PcmSound getMusicSample(int fileId, int groupId, int[] budget, int obfuscationGuard) {
         int var5_int = 0;
         RuntimeException var5 = null;
         long var6 = 0L;
@@ -138,57 +138,57 @@ final class wp {
         RuntimeException decompiledCaughtException = null;
         PcmSound var8Lifetime1;
         try {
-          var5_int = ((param1 & -536866817) << 4 | param1 >>> 12) ^ param0;
-          var5_int = var5_int | param1 << 16;
+          var5_int = ((groupId & -536866817) << 4 | groupId >>> 12) ^ fileId;
+          var5_int = var5_int | groupId << 16;
           var6 = (long)var5_int ^ 4294967296L;
-          var8 = (PcmSound) (this.field_e.get(-87, var6));
+          var8 = (PcmSound) (this.decodedSounds.get(-87, var6));
           if (var8 != null) {
             stackIn_2_0 = var8;
             return stackIn_2_0;
           }
-          if (param3 != 0) {
+          if (obfuscationGuard != 0) {
             field_d = (String) null;
           }
-          if (param2 != null &&
-            param2[0] <= 0) {
+          if (budget != null &&
+            budget[0] <= 0) {
             stackIn_8_0 = null;
             return (PcmSound) (stackIn_8_0);
           }
-          var9 = (bk) (this.field_a.get(-87, var6));
+          var9 = (bk) (this.pendingMusicSamples.get(-87, var6));
           if (var9 == null) {
-            var9 = bk.a(this.field_g, param1, param0);
+            var9 = bk.a(this.musicSampleArchive, groupId, fileId);
             if (var9 == null) {
               return null;
             }
-            this.field_a.put(34, var9, var6);
+            this.pendingMusicSamples.put(34, var9, var6);
           }
-          var8Lifetime1 = var9.a(param2);
+          var8Lifetime1 = var9.a(budget);
           if (var8Lifetime1 == null) {
             stackIn_17_0 = null;
             return (PcmSound) (stackIn_17_0);
           }
           var9.unlink((byte) 111);
-          this.field_e.put(34, var8Lifetime1, var6);
+          this.decodedSounds.put(34, var8Lifetime1, var6);
           stackIn_19_0 = var8Lifetime1;
           return stackIn_19_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
           stackIn_22_0 = var5;
-          stackIn_22_1 = new StringBuilder().append("wp.K(").append(param0).append(',').append(param1).append(',');
-          if (param2 == null) {
+          stackIn_22_1 = new StringBuilder().append("wp.K(").append(fileId).append(',').append(groupId).append(',');
+          if (budget == null) {
             stackIn_23_2 = "null";
           } else {
             stackIn_23_2 = "{...}";
           }
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param3).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 
     final static void a(int param0, int param1) {
         ScorePopup.field_p = param1;
-        if (null != m.field_f) {
-          m.field_f.a(param1, false);
+        if (null != m.musicSynthesizer) {
+          m.musicSynthesizer.setMasterGain(param1, false);
         }
         if (null != dc.field_e) {
           dc.field_e.a(true, param1);
@@ -439,7 +439,7 @@ final class wp {
         gb var6 = null;
         try {
           if (param0 != 92) {
-            wp.a(100, 53);
+            SoundCache.a(100, 53);
           }
           var6 = new gb(param5, param4, param1, param2, param3);
           n.a(0, var6);
@@ -448,7 +448,7 @@ final class wp {
         }
     }
 
-    private final PcmSound a(String param0, byte param1, String param2, int[] param3) {
+    private final PcmSound getMusicSampleByName(String groupName, byte obfuscationGuard, String fileName, int[] budget) {
         int var5_int = 0;
         RuntimeException var5 = null;
         int var6 = 0;
@@ -463,16 +463,16 @@ final class wp {
         String stackIn_19_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var5_int = this.field_g.getGroupId(param0, false);
+          var5_int = this.musicSampleArchive.getGroupId(groupName, false);
           if (var5_int < 0) {
             return null;
           }
-          if (param1 >= -45) {
+          if (obfuscationGuard >= -45) {
             field_i = (String) null;
           }
-          var6 = this.field_g.getFileId(var5_int, -67, param2);
+          var6 = this.musicSampleArchive.getFileId(var5_int, -67, fileName);
           if (var6 >= 0) {
-            stackIn_9_0 = this.a(var6, var5_int, param3, 0);
+            stackIn_9_0 = this.getMusicSample(var6, var5_int, budget, 0);
             return stackIn_9_0;
           }
           stackIn_7_0 = null;
@@ -482,19 +482,19 @@ final class wp {
           var5 = decompiledCaughtException;
           stackIn_12_0 = var5;
           stackIn_12_1 = new StringBuilder().append("wp.O(");
-          if (param0 == null) {
+          if (groupName == null) {
             stackIn_13_2 = "null";
           } else {
             stackIn_13_2 = "{...}";
           }
-          stackIn_15_1 = ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(',');
-          if (param2 == null) {
+          stackIn_15_1 = ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(obfuscationGuard).append(',');
+          if (fileName == null) {
             stackIn_16_2 = "null";
           } else {
             stackIn_16_2 = "{...}";
           }
           stackIn_18_1 = ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',');
-          if (param3 == null) {
+          if (budget == null) {
             stackIn_19_2 = "null";
           } else {
             stackIn_19_2 = "{...}";
@@ -514,7 +514,7 @@ final class wp {
         }
     }
 
-    final PcmSound a(String param0, String param1, byte param2) {
+    final PcmSound getSoundEffectByName(String fileName, String groupName, byte obfuscationGuard) {
         PcmSound discarded$1 = null;
         RuntimeException var4 = null;
         String var5 = null;
@@ -526,33 +526,33 @@ final class wp {
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param2 < 107) {
+          if (obfuscationGuard < 107) {
             var5 = (String) null;
-            discarded$1 = this.a((int[]) null, (String) null, 67, (String) null);
+            discarded$1 = this.getSoundEffectByName((int[]) null, (String) null, 67, (String) null);
           }
-          stackIn_3_0 = this.a((int[]) null, param0, 2, param1);
+          stackIn_3_0 = this.getSoundEffectByName((int[]) null, fileName, 2, groupName);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
           stackIn_6_0 = var4;
           stackIn_6_1 = new StringBuilder().append("wp.I(");
-          if (param0 == null) {
+          if (fileName == null) {
             stackIn_7_2 = "null";
           } else {
             stackIn_7_2 = "{...}";
           }
           stackIn_9_1 = ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',');
-          if (param1 == null) {
+          if (groupName == null) {
             stackIn_10_2 = "null";
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param2).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 
-    final PcmSound a(int[] param0, int param1, int param2) {
+    final PcmSound getSoundEffectById(int[] budget, int id, int obfuscationGuard) {
         RuntimeException var4 = null;
         PcmSound stackIn_2_0 = null;
         PcmSound stackIn_5_0 = null;
@@ -562,15 +562,15 @@ final class wp {
         String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (this.field_j.getGroupCapacity(-97) == 1) {
-            stackIn_2_0 = this.a(param1, 0, 0, param0);
+          if (this.soundEffectArchive.getGroupCapacity(-97) == 1) {
+            stackIn_2_0 = this.getSoundEffect(id, 0, 0, budget);
             return stackIn_2_0;
           }
-          if (this.field_j.getFileCapacity(-80, param1) == 1) {
-            stackIn_5_0 = this.a(0, 0, param1, param0);
+          if (this.soundEffectArchive.getFileCapacity(-80, id) == 1) {
+            stackIn_5_0 = this.getSoundEffect(0, 0, id, budget);
             return stackIn_5_0;
           }
-          if (param2 <= -124) {
+          if (obfuscationGuard <= -124) {
             throw new RuntimeException();
           }
           stackIn_8_0 = (PcmSound) null;
@@ -580,12 +580,12 @@ final class wp {
           var4 = decompiledCaughtException;
           stackIn_12_0 = var4;
           stackIn_12_1 = new StringBuilder().append("wp.J(");
-          if (param0 == null) {
+          if (budget == null) {
             stackIn_13_2 = "null";
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(id).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 
@@ -620,7 +620,7 @@ final class wp {
         }
     }
 
-    final PcmSound a(int param0, int[] param1, int param2) {
+    final PcmSound getMusicSampleById(int id, int[] budget, int obfuscationGuard) {
         RuntimeException var4 = null;
         PcmSound stackIn_3_0 = null;
         PcmSound stackIn_6_0 = null;
@@ -629,29 +629,29 @@ final class wp {
         String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (this.field_g.getGroupCapacity(-124) == 1) {
-            stackIn_3_0 = this.a(param0, 0, param1, 0);
+          if (this.musicSampleArchive.getGroupCapacity(-124) == 1) {
+            stackIn_3_0 = this.getMusicSample(id, 0, budget, 0);
             return stackIn_3_0;
           }
-          if (1 == this.field_g.getFileCapacity(-90, param0)) {
-            stackIn_6_0 = this.a(0, param0, param1, 0);
+          if (1 == this.musicSampleArchive.getFileCapacity(-90, id)) {
+            stackIn_6_0 = this.getMusicSample(0, id, budget, 0);
             return stackIn_6_0;
           }
-          if (param2 <= 48) {
-            wp.a(-14, -17);
+          if (obfuscationGuard <= 48) {
+            SoundCache.a(-14, -17);
           }
           throw new RuntimeException();
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
           stackIn_12_0 = var4;
-          stackIn_12_1 = new StringBuilder().append("wp.M(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_12_1 = new StringBuilder().append("wp.M(").append(id).append(',');
+          if (budget == null) {
             stackIn_13_2 = "null";
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param2).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 
@@ -662,13 +662,13 @@ final class wp {
         field_k = null;
         if (param0 >= -99) {
           String var2 = (String) null;
-          wp.a((String) null, true, true, true, -106, (String) null);
+          SoundCache.a((String) null, true, true, true, -106, (String) null);
         }
         field_b = null;
         field_c = null;
     }
 
-    final PcmSound a(byte param0, String param1, String param2) {
+    final PcmSound getMusicSampleByName(byte obfuscationGuard, String fileName, String groupName) {
         int var4_int = 0;
         RuntimeException var4 = null;
         PcmSound stackIn_1_0 = null;
@@ -679,21 +679,21 @@ final class wp {
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var4_int = 11 / ((param0 + 37) / 59);
-          stackIn_1_0 = this.a(param2, (byte) -109, param1, (int[]) null);
+          var4_int = 11 / ((obfuscationGuard + 37) / 59);
+          stackIn_1_0 = this.getMusicSampleByName(groupName, (byte) -109, fileName, (int[]) null);
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
           stackIn_4_0 = var4;
-          stackIn_4_1 = new StringBuilder().append("wp.C(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_4_1 = new StringBuilder().append("wp.C(").append(obfuscationGuard).append(',');
+          if (fileName == null) {
             stackIn_5_2 = "null";
           } else {
             stackIn_5_2 = "{...}";
           }
           stackIn_7_1 = ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',');
-          if (param2 == null) {
+          if (groupName == null) {
             stackIn_8_2 = "null";
           } else {
             stackIn_8_2 = "{...}";
@@ -702,7 +702,7 @@ final class wp {
         }
     }
 
-    private final PcmSound a(int param0, int param1, int param2, int[] param3) {
+    private final PcmSound getSoundEffect(int fileId, int obfuscationGuard, int groupId, int[] budget) {
         int var5_int = 0;
         RuntimeException var5 = null;
         long var6 = 0L;
@@ -719,32 +719,32 @@ final class wp {
         RuntimeException decompiledCaughtException = null;
         PcmSound var8Lifetime1;
         try {
-          if (param1 != 0) {
-            this.field_j = (ResourceArchive) null;
+          if (obfuscationGuard != 0) {
+            this.soundEffectArchive = (ResourceArchive) null;
           }
-          var5_int = param0 ^ (param2 >>> 12 | (-1342173185 & param2) << 4);
-          var5_int = var5_int | param2 << 16;
+          var5_int = fileId ^ (groupId >>> 12 | (-1342173185 & groupId) << 4);
+          var5_int = var5_int | groupId << 16;
           var6 = (long)var5_int;
-          var8 = (PcmSound) (this.field_e.get(param1 ^ -88, var6));
+          var8 = (PcmSound) (this.decodedSounds.get(obfuscationGuard ^ -88, var6));
           if (var8 != null) {
             stackIn_4_0 = var8;
             return stackIn_4_0;
           }
-          if (param3 != null &&
-            0 >= param3[0]) {
+          if (budget != null &&
+            0 >= budget[0]) {
             stackIn_8_0 = null;
             return (PcmSound) (stackIn_8_0);
           }
-          var9 = dr.a(this.field_j, param2, param0);
+          var9 = dr.a(this.soundEffectArchive, groupId, fileId);
           if (var9 == null) {
             stackIn_11_0 = null;
             return (PcmSound) (stackIn_11_0);
           }
           var10 = var9.a();
           var8Lifetime1 = var10;
-          this.field_e.put(param1 ^ 34, var8Lifetime1, var6);
-          if (param3 != null) {
-            param3[0] = param3[0] - var10.samples.length;
+          this.decodedSounds.put(obfuscationGuard ^ 34, var8Lifetime1, var6);
+          if (budget != null) {
+            budget[0] = budget[0] - var10.samples.length;
           }
           stackIn_15_0 = var8Lifetime1;
           return stackIn_15_0;
@@ -752,8 +752,8 @@ final class wp {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
           stackIn_18_0 = var5;
-          stackIn_18_1 = new StringBuilder().append("wp.H(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
-          if (param3 == null) {
+          stackIn_18_1 = new StringBuilder().append("wp.H(").append(fileId).append(',').append(obfuscationGuard).append(',').append(groupId).append(',');
+          if (budget == null) {
             stackIn_19_2 = "null";
           } else {
             stackIn_19_2 = "{...}";
@@ -762,14 +762,14 @@ final class wp {
         }
     }
 
-    wp(ResourceArchive param0, ResourceArchive param1) {
-        this.field_a = new IntrusiveHashTable(256);
-        this.field_e = new IntrusiveHashTable(256);
+    SoundCache(ResourceArchive soundEffectArchive, ResourceArchive musicSampleArchive) {
+        this.pendingMusicSamples = new IntrusiveHashTable(256);
+        this.decodedSounds = new IntrusiveHashTable(256);
         try {
-          this.field_j = param0;
-          this.field_g = param1;
+          this.soundEffectArchive = soundEffectArchive;
+          this.musicSampleArchive = musicSampleArchive;
         } catch (RuntimeException runtimeException) {
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "wp.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "wp.<init>(" + (soundEffectArchive != null ? "{...}" : "null") + ',' + (musicSampleArchive != null ? "{...}" : "null") + ')');
         }
     }
 

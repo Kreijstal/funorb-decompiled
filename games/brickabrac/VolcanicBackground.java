@@ -37,7 +37,7 @@ final class VolcanicBackground extends BackgroundScene {
         if (null == cp.volcanicMidSprite) {
           return false;
         }
-        if (null == se.volcanicFarSprite) {
+        if (null == ByteArrayNode.volcanicFarSprite) {
           return false;
         }
         if (mc.volcanicSmallSprite == null) {
@@ -52,11 +52,11 @@ final class VolcanicBackground extends BackgroundScene {
         }
         RasterCacheSurface.volcanicNearSprite = pl.loadRgbSpriteByName("volcanic", "volcanic_near", (byte) -127, AchievementIcon.field_m);
         cp.volcanicMidSprite = pl.loadRgbSpriteByName("volcanic", "volcanic_mid", (byte) -73, AchievementIcon.field_m);
-        se.volcanicFarSprite = pl.loadRgbSpriteByName("volcanic", "volcanic_far", (byte) -125, AchievementIcon.field_m);
+        ByteArrayNode.volcanicFarSprite = pl.loadRgbSpriteByName("volcanic", "volcanic_far", (byte) -125, AchievementIcon.field_m);
         mc.volcanicSmallSprite = pl.loadRgbSpriteByName("volcanic", "volcanic_small", (byte) -77, AchievementIcon.field_m);
         NanoGameClock.field_q = jh.a(0, RasterCacheSurface.volcanicNearSprite);
         gq.field_Sb = jh.a(0, cp.volcanicMidSprite);
-        RectangleBody.field_p = jh.a(0, se.volcanicFarSprite);
+        RectangleBody.field_p = jh.a(0, ByteArrayNode.volcanicFarSprite);
         CacheIoWorker.volcanicCapsSprites[0] = cr.loadRgbSpritesByName("volcanic", AchievementIcon.field_m, "volcanic_caps", 2);
         np.volcanicSegsSprites[0] = cr.loadRgbSpritesByName("volcanic", AchievementIcon.field_m, "volcanic_segs", 2);
         LevelList.volcanicCentreSprites[0] = pl.loadRgbSpriteByName("volcanic", "volcanic_centre", (byte) -67, AchievementIcon.field_m);
@@ -101,7 +101,7 @@ final class VolcanicBackground extends BackgroundScene {
         } else {
           var6 = PowerUp.a(this.sceneId, colorIndex, -20777);
           if (!var6.matchesCacheKeys((byte) -84, colorIndex, this.sceneId)) {
-            BitPacketBuffer.a(se.volcanicFarSprite, var6, colorIndex, 1, (byte) 18, 0);
+            BitPacketBuffer.a(ByteArrayNode.volcanicFarSprite, var6, colorIndex, 1, (byte) 18, 0);
             var6.setCacheKeys(this.sceneId, colorIndex, (byte) 78);
           }
           ArchiveIndex.a(-91, -7, RasterCacheSurface.volcanicNearSprite, scroll16, var6.sprite, colorIndex, 640, 1, destinationX, destinationY, cp.volcanicMidSprite);

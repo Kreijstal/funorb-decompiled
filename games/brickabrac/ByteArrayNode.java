@@ -1,10 +1,10 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class se extends IntrusiveNode {
+final class ByteArrayNode extends IntrusiveNode {
     static int[] field_j;
     static String field_l;
-    byte[] field_i;
+    byte[] bytes;
     static RgbSprite volcanicFarSprite;
 
     final static RgbSprite[] a(int param0, byte param1, int param2) {
@@ -12,7 +12,7 @@ final class se extends IntrusiveNode {
           return hn.a(param2, param0, 1, param1 ^ 24);
         }
         CharSequence var4 = (CharSequence) null;
-        se.a(21, (CharSequence) null);
+        ByteArrayNode.a(21, (CharSequence) null);
         return hn.a(param2, param0, 1, param1 ^ 24);
     }
 
@@ -32,7 +32,7 @@ final class se extends IntrusiveNode {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != 17165) {
-            se.a(-74, (byte) 25, 127);
+            ByteArrayNode.a(-74, (byte) 25, 127);
           }
           stackIn_3_0 = jd.a((byte) 122, false, param1);
           return stackIn_3_0;
@@ -50,11 +50,11 @@ final class se extends IntrusiveNode {
         }
     }
 
-    se(byte[] param0) {
+    ByteArrayNode(byte[] bytes) {
         try {
-          this.field_i = param0;
+          this.bytes = bytes;
         } catch (RuntimeException runtimeException) {
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "se.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "se.<init>(" + (bytes != null ? "{...}" : "null") + ')');
         }
     }
 

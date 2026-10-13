@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class IsaacGenerator {
-    static vm field_a;
+    static MusicTrack field_a;
     private int accumulator;
     private int[] results;
     private int remaining;
@@ -58,7 +58,7 @@ final class IsaacGenerator {
         return;
     }
 
-    final static void a(vm param0, int param1) {
+    final static void a(MusicTrack param0, int param1) {
         if (param1 != 0) {
           return;
         }

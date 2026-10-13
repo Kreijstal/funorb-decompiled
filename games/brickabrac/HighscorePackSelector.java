@@ -169,19 +169,19 @@ final class HighscorePackSelector {
         } else {
           var7 = this.owner.buttons[this.buttonIndex];
           if (!this.keyboardSelection ||
-            pq.pointerX != this.lastPointerX ||
+            MusicPatch.pointerX != this.lastPointerX ||
             this.lastPointerY != po.pointerY) {
             var3 = var7.x;
             var4 = var7.y;
             for (var5 = 0; this.packCount > var5; var5++) {
-              if (ArchiveNetworkRequest.packSelectorIcons[var5].containsPixel(var3, var4, pq.pointerX, po.pointerY)) {
+              if (ArchiveNetworkRequest.packSelectorIcons[var5].containsPixel(var3, var4, MusicPatch.pointerX, po.pointerY)) {
                 this.selectedPackIndex = var5;
                 break;
               }
               var4 = var4 + (ArchiveNetworkRequest.packSelectorIcons[var5].canvasHeight + 20);
             }
           }
-          this.lastPointerX = pq.pointerX;
+          this.lastPointerX = MusicPatch.pointerX;
           this.lastPointerY = po.pointerY;
         }
         if (obfuscationGuard <= 84) {
@@ -202,7 +202,7 @@ final class HighscorePackSelector {
     final void selectRelativeToEnd(int offset) {
         this.selectedPackIndex = offset + this.packCount;
         this.lastPointerY = po.pointerY;
-        this.lastPointerX = pq.pointerX;
+        this.lastPointerX = MusicPatch.pointerX;
         this.keyboardSelection = true;
     }
 
@@ -212,7 +212,7 @@ final class HighscorePackSelector {
         if (obfuscationGuard <= 32) {
           return;
         }
-        this.lastPointerX = pq.pointerX;
+        this.lastPointerX = MusicPatch.pointerX;
         this.selectedPackIndex = 0;
     }
 

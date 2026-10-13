@@ -48,7 +48,7 @@ final class qf extends lp implements en {
     }
 
     qf(cp param0, dk param1) {
-        super(param0, wm.field_a, ie.field_o, false, false);
+        super(param0, wm.field_a, MidiSynthesizer.field_o, false, false);
         try {
           this.field_Eb = param1;
         } catch (RuntimeException runtimeException) {

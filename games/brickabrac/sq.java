@@ -178,7 +178,7 @@ final class sq {
           var4_ref_nnLifetime1.field_d.a(var6, -98, 0, 0, var5);
         }
         int var4 = -44 % ((-3 - param2) / 50);
-        jm.a(param0, true, param1);
+        MusicEnvelope.a(param0, true, param1);
     }
 
     final static void a(boolean param0) {

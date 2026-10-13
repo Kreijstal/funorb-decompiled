@@ -80,12 +80,12 @@ final class mi {
         }
     }
 
-    final static pq a(ResourceArchive param0, int param1, int param2) {
+    final static MusicPatch a(ResourceArchive param0, int param1, int param2) {
         byte[] var3 = null;
         RuntimeException var3_ref = null;
         byte[] var4 = null;
-        pq stackIn_2_0 = null;
-        pq stackIn_7_0 = null;
+        MusicPatch stackIn_2_0 = null;
+        MusicPatch stackIn_7_0 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
@@ -94,13 +94,13 @@ final class mi {
           var4 = param0.takeFlatFile(param1, (byte) 113);
           var3 = var4;
           if (param2 != 8) {
-            stackIn_2_0 = (pq) null;
+            stackIn_2_0 = (MusicPatch) null;
             return stackIn_2_0;
           }
           if (var4 == null) {
             return null;
           }
-          stackIn_7_0 = new pq(var4);
+          stackIn_7_0 = new MusicPatch(var4);
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

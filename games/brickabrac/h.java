@@ -454,7 +454,7 @@ abstract class h extends oc implements sd {
             cr.f((byte) -124);
             param5 = false;
           }
-          wp.a(124, param1, param5);
+          SoundCache.a(124, param1, param5);
           Paddle.a(param2, param5, 124);
           param5 = false;
         }

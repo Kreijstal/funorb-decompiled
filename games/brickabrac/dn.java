@@ -159,7 +159,7 @@ final class dn extends h {
           if ((!(this.field_E instanceof d) ||
             ((d) (this.field_E)).field_J) &&
             1 == this.field_n) {
-            var5_int = pq.pointerX - this.field_G - param2;
+            var5_int = MusicPatch.pointerX - this.field_G - param2;
             var6 = po.pointerY + (-this.field_H - param3);
             if (this.field_o == var5_int &&
               var6 == this.field_w) {

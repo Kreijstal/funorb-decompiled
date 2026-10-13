@@ -1,17 +1,17 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class jm {
+final class MusicEnvelope {
     static String field_l;
-    int field_d;
+    int vibratoRate;
     int field_h;
-    byte[] field_c;
-    int field_e;
-    int field_j;
+    byte[] releaseEnvelope;
+    int vibratoDelay;
+    int decayRate;
     int field_b;
-    int field_a;
+    int vibratoDepth;
     static tq field_f;
-    byte[] field_g;
+    byte[] volumeEnvelope;
     static String field_i;
     int field_k;
 
@@ -32,7 +32,7 @@ final class jm {
           try {
             if (obfuscationGuard != -2414) {
               var6 = (java.awt.Component) null;
-              jm.createFramebuffer((java.awt.Component) null, 85, -118, 37);
+              MusicEnvelope.createFramebuffer((java.awt.Component) null, 85, -118, 37);
             }
             try {
               implementationClass = Class.forName("BufferedImageFramebuffer");

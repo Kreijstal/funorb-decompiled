@@ -4,7 +4,7 @@
 final class cd {
     static ta field_c;
     static mh field_d;
-    static vm field_g;
+    static MusicTrack field_g;
     static String field_f;
     static IndexedSprite[] field_b;
     int field_a;

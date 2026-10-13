@@ -407,7 +407,7 @@ final class GameplayScreen extends GameScreen {
               jc.a(var18.controlMask, 0, (byte) -85);
             }
             if (var18.boardState == 0 ||
-              !ka.a((byte) 62)) {
+              !MusicVoice.a((byte) 62)) {
               stackIn_116_0 = (!this.advanceMatch(var7, true, var19)) ? 0 : 1;
               var5Lifetime4 = stackIn_116_0;
             }
@@ -880,7 +880,7 @@ final class GameplayScreen extends GameScreen {
         }
         if (this.match.playerCount == 1 &&
           r.field_A &&
-          ka.a((byte) 113)) {
+          MusicVoice.a((byte) 113)) {
           if (84 == keyCode) {
             GzipInflater.b(-8);
           }
@@ -1746,7 +1746,7 @@ final class GameplayScreen extends GameScreen {
           nh.a(125, 9, -40, 516, cd.field_h, 229);
           ArchiveNetworkClient.a(640, this.match, var7_ref_j);
           if (r.field_A &&
-            ka.a((byte) 124)) {
+            MusicVoice.a((byte) 124)) {
             ui.a(tb.field_eb + ro.field_v, ob.field_D, 6, c.field_i, 100, 621, 1729, 340, 230, 0);
           } else {
             if (null != var7_ref_j.displayedMessage) {

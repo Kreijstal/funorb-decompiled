@@ -329,7 +329,7 @@ final class bq {
             var4Lifetime3++;
           }
           if (ArchiveFetchClient.field_p != 2) {
-            mh.field_H.initializeSelection(qo.b(120, po.pointerY, pq.pointerX), 0, param0, (byte) -127);
+            mh.field_H.initializeSelection(qo.b(120, po.pointerY, MusicPatch.pointerX), 0, param0, (byte) -127);
           } else {
             mh.field_H.initializeSelection(-1, -1, param0, (byte) -128);
           }

@@ -143,10 +143,10 @@ abstract class GameClock {
               decompiledCaughtException = decompiledCaughtParameter0;
               var2 = decompiledCaughtException;
             }
-            if (wp.field_d == null) {
+            if (SoundCache.field_d == null) {
               return param1.getParameter("settings");
             }
-            stackIn_15_0 = wp.field_d;
+            stackIn_15_0 = SoundCache.field_d;
             return stackIn_15_0;
           } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
             decompiledCaughtException = decompiledCaughtParameter1;

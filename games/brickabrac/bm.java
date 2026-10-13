@@ -408,7 +408,7 @@ final class bm {
         }
     }
 
-    final static void a(ResourceArchive param0, ResourceArchive param1, int param2, ResourceArchive param3, wp param4, ResourceArchive param5, ResourceArchive param6) {
+    final static void a(ResourceArchive param0, ResourceArchive param1, int param2, ResourceArchive param3, SoundCache param4, ResourceArchive param5, ResourceArchive param6) {
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
         String stackIn_15_2 = null;

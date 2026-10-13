@@ -104,7 +104,7 @@ final class hi extends um {
         var11 = BrickABrac.field_J ? 1 : 0;
         var3 = 1;
         if (!nd.field_b &&
-          null == wp.field_k) {
+          null == SoundCache.field_k) {
           var3 = 0;
         }
         if (param0) {
@@ -128,10 +128,10 @@ final class hi extends um {
                 if (mm.a(var4_ref_String, (byte) -128)) {
                   var13 = (String) null;
                   var12 = (String) null;
-                  wp.a((byte) 92, 0, (String) null, ck.field_j, (String) null, 2);
+                  SoundCache.a((byte) 92, 0, (String) null, ck.field_j, (String) null, 2);
                   var15 = (String) null;
                   var14 = (String) null;
-                  wp.a((byte) 92, 0, (String) null, w.field_m, (String) null, 2);
+                  SoundCache.a((byte) 92, 0, (String) null, w.field_m, (String) null, 2);
                 } else {
                   var5 = ng.field_b;
                   if (var5 == 0 &&
@@ -234,10 +234,10 @@ final class hi extends um {
                   if (mm.a(var4_ref_StringLifetime1, (byte) -128)) {
                     var13Lifetime1 = (String) null;
                     var12Lifetime1 = (String) null;
-                    wp.a((byte) 92, 0, (String) null, ck.field_j, (String) null, 2);
+                    SoundCache.a((byte) 92, 0, (String) null, ck.field_j, (String) null, 2);
                     var15Lifetime1 = (String) null;
                     var14Lifetime1 = (String) null;
-                    wp.a((byte) 92, 0, (String) null, w.field_m, (String) null, 2);
+                    SoundCache.a((byte) 92, 0, (String) null, w.field_m, (String) null, 2);
                     fl.b(true);
                   } else {
                     var5Lifetime1 = ng.field_b;
@@ -343,10 +343,10 @@ final class hi extends um {
               if (mm.a(var4_ref_StringLifetime2, (byte) -128)) {
                 var13Lifetime2 = (String) null;
                 var12Lifetime2 = (String) null;
-                wp.a((byte) 92, 0, (String) null, ck.field_j, (String) null, 2);
+                SoundCache.a((byte) 92, 0, (String) null, ck.field_j, (String) null, 2);
                 var15Lifetime2 = (String) null;
                 var14Lifetime2 = (String) null;
-                wp.a((byte) 92, 0, (String) null, w.field_m, (String) null, 2);
+                SoundCache.a((byte) 92, 0, (String) null, w.field_m, (String) null, 2);
               } else {
                 var5Lifetime2 = ng.field_b;
                 if (var5Lifetime2 == 0 &&

@@ -19,7 +19,7 @@ final class sg extends k {
         synchronized (var1) {
           cb.heldButton = kb.liveHeldButton;
           gr.pointerIdleTicks = gr.pointerIdleTicks + 1;
-          pq.pointerX = DirectByteStorage.livePointerX;
+          MusicPatch.pointerX = DirectByteStorage.livePointerX;
           po.pointerY = ep.livePointerY;
           kb.pointerChanged = kn.livePointerChanged;
           kn.livePointerChanged = false;

@@ -219,7 +219,7 @@ abstract class GameConnectionShell extends AppletGameShell {
         if (n.field_e) {
           return -1;
         }
-        int var2 = wp.a(LevelSelectScreen.d(true), true, true, this.jagexHost, this.affiliateId, MotionWaypoint.b(false));
+        int var2 = SoundCache.a(LevelSelectScreen.d(true), true, true, this.jagexHost, this.affiliateId, MotionWaypoint.b(false));
         if (var2 == param0) {
           return -1;
         }
@@ -253,7 +253,7 @@ abstract class GameConnectionShell extends AppletGameShell {
         if (var2 == 0 ||
           var2 == 1) {
           if (uf.enabledCommonPackets[1]) {
-            ie.a(2, (byte) -46);
+            MidiSynthesizer.a(2, (byte) -46);
           }
           if (uf.enabledCommonPackets[2]) {
             ff.a((byte) -61, 3);
@@ -358,7 +358,7 @@ abstract class GameConnectionShell extends AppletGameShell {
               pp.a((byte) 79);
             }
             if (!param2) {
-              var5_intLifetime2 = wp.a(LevelSelectScreen.d(true), false, true, this.jagexHost, this.affiliateId, MotionWaypoint.b(false));
+              var5_intLifetime2 = SoundCache.a(LevelSelectScreen.d(true), false, true, this.jagexHost, this.affiliateId, MotionWaypoint.b(false));
               if (var5_intLifetime2 != -1) {
                 if (var5_intLifetime2 != 0) {
                   tf.a(DirectByteStorage.field_e, (byte) -77, var5_intLifetime2);
@@ -510,7 +510,7 @@ abstract class GameConnectionShell extends AppletGameShell {
             if (var2 != 2) {
               if (var2 != 3) {
                 if (var2 == 4) {
-                  jm.handleCommonDataResponse((byte) 22);
+                  MusicEnvelope.handleCommonDataResponse((byte) 22);
                 } else {
                   if (var2 != 5) {
                     if (var2 != 6) {

@@ -119,7 +119,7 @@ public final class BrickABrac extends InteractiveGameClient {
           }
         }
         if (ok.achievementNotificationTick == 50) {
-          wp.playUiSound(8, ta.uiSounds[9]);
+          SoundCache.playUiSound(8, ta.uiSounds[9]);
         }
         if (cf.a((byte) 62)) {
           sq.a(false);
@@ -620,8 +620,8 @@ public final class BrickABrac extends InteractiveGameClient {
         SpriteGeometry.f(2);
         DualLinkNode.a(-2);
         un.a(!obfuscationGuard ? true : false);
-        ie.c(-1);
-        wp.a((byte) -117);
+        MidiSynthesizer.c(-1);
+        SoundCache.a((byte) -117);
         RectangleBody.d((byte) -106);
         MovingBody.a(34);
         CircleBody.d((byte) 97);
@@ -794,9 +794,9 @@ public final class BrickABrac extends InteractiveGameClient {
         wd.f(32463);
         to.a(-125);
         IntrusiveHashTable.a(120);
-        ka.c((byte) 67);
-        hr.g();
-        lk.c(2143);
+        MusicVoice.c((byte) 67);
+        MidiFileReader.g();
+        MusicVoiceMixer.c(2143);
         dl.b(-9125);
         ef.b(10);
         NanoGameClock.f((byte) -124);
@@ -806,9 +806,9 @@ public final class BrickABrac extends InteractiveGameClient {
         IntHistoryBuffer.a(67108864);
         va.a(-15504);
         jh.a((byte) -123);
-        se.a(84);
-        pq.a((byte) 118);
-        jm.b((byte) 31);
+        ByteArrayNode.a(84);
+        MusicPatch.a((byte) 118);
+        MusicEnvelope.b((byte) 31);
         qq.a();
         bm.a((byte) -116);
         ar.a(-1);

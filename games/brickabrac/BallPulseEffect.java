@@ -124,10 +124,10 @@ final class BallPulseEffect extends IntrusiveNode {
         }
         if (1 != gj.field_a &&
           4 != gj.field_a) {
-          ka.field_E = 0;
+          MusicVoice.field_E = 0;
           sl.field_y = null;
         } else {
-          ka.field_E = var8.readUnsignedShort(param0 ^ 65347);
+          MusicVoice.field_E = var8.readUnsignedShort(param0 ^ 65347);
           sl.field_y = var8.readCp1252String(-1);
         }
         if (!param1) {
@@ -209,10 +209,10 @@ final class BallPulseEffect extends IntrusiveNode {
         }
         if (1 != gj.field_a &&
           4 != gj.field_a) {
-          ka.field_E = 0;
+          MusicVoice.field_E = 0;
           sl.field_y = null;
         } else {
-          ka.field_E = var8.readUnsignedShort(param0 ^ 65347);
+          MusicVoice.field_E = var8.readUnsignedShort(param0 ^ 65347);
           sl.field_y = var8.readCp1252String(-1);
         }
         if (!param1) {

@@ -147,7 +147,7 @@ class mh extends ba {
             this.field_Ob = 0;
           }
         }
-        stackIn_31_1 = (!NinjaBackground.field_u) && (Rasterizer2D.clipLeft <= pq.pointerX) && (Rasterizer2D.clipRight > pq.pointerX) && (po.pointerY >= Rasterizer2D.clipTop) && (Rasterizer2D.clipBottom > po.pointerY);
+        stackIn_31_1 = (!NinjaBackground.field_u) && (Rasterizer2D.clipLeft <= MusicPatch.pointerX) && (Rasterizer2D.clipRight > MusicPatch.pointerX) && (po.pointerY >= Rasterizer2D.clipTop) && (Rasterizer2D.clipBottom > po.pointerY);
         this.field_G = stackIn_31_1;
         if (0 == cb.heldButton) {
           this.field_Ob = 0;
@@ -171,7 +171,7 @@ class mh extends ba {
         if (this.field_Ob != 0 &&
           this.field_nb) {
           this.field_zb = po.pointerY - this.field_yb - param4;
-          this.field_P = -this.field_U + pq.pointerX - param2;
+          this.field_P = -this.field_U + MusicPatch.pointerX - param2;
           if (0 > this.field_P) {
             this.field_P = 0;
           }

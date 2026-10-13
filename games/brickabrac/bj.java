@@ -237,7 +237,7 @@ abstract class bj extends jc {
         if (param1 != 274) {
           field_P = (ck) null;
         }
-        ka.field_n.drawTransparent(param0 + this.field_t - 90, 10 + param2);
+        MusicVoice.field_n.drawTransparent(param0 + this.field_t - 90, 10 + param2);
         fq.a(this.field_t - 10, 35 + param2, param1 ^ 1013, nf.field_W, 5 + param0);
         fq.a(this.field_t, -22 + param2 + this.field_s, param1 + 469, GameplayAudioEvent.field_l, param0);
         var5Lifetime2 = 169;

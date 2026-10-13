@@ -280,7 +280,7 @@ final class kb extends mh {
         try {
           pf.a(48, param0);
           int var2_int = 81 % ((param1 - 86) / 38);
-          pq.a(0, ep.field_d, false);
+          MusicPatch.a(0, ep.field_d, false);
         } catch (RuntimeException runtimeException) {
           throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "kb.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
@@ -322,7 +322,7 @@ final class kb extends mh {
           }
           if (var4_int == 0 &&
             param3.boardState == 2 && (!r.field_A ||
-            !ka.a((byte) 93))) {
+            !MusicVoice.a((byte) 93))) {
             if ((1 & param3.controlMask) != 0 &&
               (-2 & param3.controlMask) == 0) {
               stackIn_13_0 = 0;

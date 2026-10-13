@@ -57,7 +57,7 @@ class ba extends DualLinkNode {
     }
 
     final static void f(int param0) {
-        fa var1 = (fa) (wp.field_f.first(-39));
+        fa var1 = (fa) (SoundCache.field_f.first(-39));
         if (var1 == null) {
           hn.a((byte) 106);
           return;

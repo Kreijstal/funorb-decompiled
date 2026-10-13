@@ -7,16 +7,16 @@ final class tn extends AudioStream {
     private boolean field_E;
     static int field_C;
     private int[] field_q;
-    private vm field_o;
+    private MusicTrack field_o;
     private int field_u;
-    private vm field_r;
-    private vm field_t;
-    private ie field_D;
+    private MusicTrack field_r;
+    private MusicTrack field_t;
+    private MidiSynthesizer field_D;
     private int field_p;
-    private ie field_z;
+    private MidiSynthesizer field_z;
     private int[] field_G;
     private int field_y;
-    private ie field_x;
+    private MidiSynthesizer field_x;
     static String field_B;
     private boolean field_v;
     static gq field_m;
@@ -56,13 +56,13 @@ final class tn extends AudioStream {
           }
           if (this.field_v) {
             if (this.field_y > 0 &&
-              !this.field_D.d(-1)) {
+              !this.field_D.hasMidiData(-1)) {
               this.field_r = null;
               this.field_v = false;
               this.field_y = -this.field_y;
             } else {
               if (this.field_y < 0 &&
-                !this.field_x.d(-1)) {
+                !this.field_x.hasMidiData(-1)) {
                 this.field_y = -this.field_y;
                 this.field_o = null;
                 this.field_v = false;
@@ -199,13 +199,13 @@ final class tn extends AudioStream {
         }
         if (this.field_v) {
           if (this.field_y > 0 &&
-            !this.field_D.d(-1)) {
+            !this.field_D.hasMidiData(-1)) {
             this.field_v = false;
             this.field_r = null;
             this.field_y = -this.field_y;
           } else {
             if (0 > this.field_y &&
-              !this.field_x.d(-1)) {
+              !this.field_x.hasMidiData(-1)) {
               this.field_v = false;
               this.field_y = -this.field_y;
               this.field_o = null;
@@ -242,15 +242,15 @@ final class tn extends AudioStream {
         }
     }
 
-    final synchronized void a(int param0, boolean param1, int param2, byte param3, int param4, vm param5) {
+    final synchronized void a(int param0, boolean param1, int param2, byte param3, int param4, MusicTrack param5) {
         boolean stackIn_20_1 = false;
         int stackIn_33_0 = 0;
-        ie stackIn_42_0 = null;
-        vm stackIn_42_1 = null;
+        MidiSynthesizer stackIn_42_0 = null;
+        MusicTrack stackIn_42_1 = null;
         int stackIn_42_2 = 0;
         boolean stackIn_43_3;
-        ie stackIn_52_0 = null;
-        vm stackIn_52_1 = null;
+        MidiSynthesizer stackIn_52_0 = null;
+        MusicTrack stackIn_52_1 = null;
         int stackIn_52_2 = 0;
         boolean stackIn_53_3;
         RuntimeException stackIn_58_0 = null;
@@ -270,7 +270,7 @@ final class tn extends AudioStream {
               }
               this.field_r = param5;
               if (param5 != null) {
-                this.field_D.a(param5, 127, false);
+                this.field_D.playTrack(param5, 127, false);
                 this.a(param0, false, this.field_D, param4);
               }
             } else {
@@ -279,7 +279,7 @@ final class tn extends AudioStream {
               }
               this.field_o = param5;
               if (param5 != null) {
-                this.field_x.a(param5, -66, false);
+                this.field_x.playTrack(param5, -66, false);
                 this.a(param0, false, this.field_x, param4);
               }
             }
@@ -317,10 +317,10 @@ final class tn extends AudioStream {
             this.field_r = param5;
             if (param5 != null) {
               stackIn_52_0 = this.field_D;
-              stackIn_52_1 = (vm) (param5);
+              stackIn_52_1 = (MusicTrack) (param5);
               stackIn_52_2 = 126;
               stackIn_53_3 = !(param1);
-              ((ie) (Object) stackIn_52_0).a(stackIn_52_1, stackIn_52_2, stackIn_53_3);
+              ((MidiSynthesizer) (Object) stackIn_52_0).playTrack(stackIn_52_1, stackIn_52_2, stackIn_53_3);
               this.a(param0, false, this.field_D, param4);
             }
             this.field_y = param2;
@@ -331,10 +331,10 @@ final class tn extends AudioStream {
             this.field_o = param5;
             if (param5 != null) {
               stackIn_42_0 = this.field_x;
-              stackIn_42_1 = (vm) (param5);
+              stackIn_42_1 = (MusicTrack) (param5);
               stackIn_42_2 = 126;
               stackIn_43_3 = !(param1);
-              ((ie) (Object) stackIn_42_0).a(stackIn_42_1, stackIn_42_2, stackIn_43_3);
+              ((MidiSynthesizer) (Object) stackIn_42_0).playTrack(stackIn_42_1, stackIn_42_2, stackIn_43_3);
               this.a(param0, false, this.field_x, param4);
             }
             this.field_y = -param2;
@@ -375,10 +375,10 @@ final class tn extends AudioStream {
         }
     }
 
-    private final void a(int param0, boolean param1, ie param2, int param3) {
+    private final void a(int param0, boolean param1, MidiSynthesizer param2, int param3) {
         try {
-          param2.e(param0, -1, 16);
-          param2.b(param3, -606970073);
+          param2.setChannelGain(param0, -1, 16);
+          param2.setTempoScale(param3, -606970073);
           if (param1) {
             this.field_E = false;
           }

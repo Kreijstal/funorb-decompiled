@@ -68,13 +68,13 @@ final class LevelResultSubmission extends IntrusiveNode {
               var2 = rd.a(kk.field_c, new String[]{DualLinkNode.field_p}, (byte) 103);
             }
             if (TooltipSprite.field_p) {
-              wp.a((byte) 92, 0, (String) null, (String) (var2), (String) null, 2);
+              SoundCache.a((byte) 92, 0, (String) null, (String) (var2), (String) null, 2);
               th.b(1);
             }
           }
           if (null == var2 &&
             !nd.field_b &&
-            null == wp.field_k) {
+            null == SoundCache.field_k) {
             var2 = un.field_h;
           }
           if (null != var2) {
@@ -135,7 +135,7 @@ final class LevelResultSubmission extends IntrusiveNode {
               var9 = CachedArchiveSource.field_y.measureText(var4);
               if (!ri.a(-112)) {
                 if (g.field_n.field_kb &&
-                  (-g.field_n.field_Eb + pq.pointerX) < var9) {
+                  (-g.field_n.field_Eb + MusicPatch.pointerX) < var9) {
                   if (!um.field_e) {
                     var1 = MainMenuScreen.field_y;
                   } else {

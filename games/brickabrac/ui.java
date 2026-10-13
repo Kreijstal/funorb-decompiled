@@ -152,7 +152,7 @@ final class ui {
           String var5Lifetime5;
           String var5Lifetime6;
           try {
-            wp.field_d = param2;
+            SoundCache.field_d = param2;
             try {
               var6 = param1.getParameter("cookieprefix");
               var5 = var6;

@@ -513,7 +513,7 @@ final class HuffmanCodec {
           try {
             var4_int = 60 / ((1 - param0) / 62);
             if (PlatformServices.osNameLowercase.startsWith("win") &&
-              ie.a(param2, false)) {
+              MidiSynthesizer.a(param2, false)) {
               return;
             }
             try {

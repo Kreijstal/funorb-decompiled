@@ -170,10 +170,10 @@ final class hj extends mh {
           if (param1 != 0) {
             return;
           }
-          var4 = (ln) (ie.field_v.first(-28));
+          var4 = (ln) (MidiSynthesizer.field_v.first(-28));
           while (var4 != null) {
             MultiplayerExitScreen.a(param0, 125, var4);
-            var4 = (ln) (ie.field_v.next((byte) 116));
+            var4 = (ln) (MidiSynthesizer.field_v.next((byte) 116));
           }
           var2 = uc.field_q.first(-54);
           while (var2 != null) {
@@ -192,7 +192,7 @@ final class hj extends mh {
         try {
           Rasterizer2D.a(param0, -param2 + param1, param3, param2, 3, 0, 196);
           Rasterizer2D.c(param0, -param2 + param1, param3, param2, 3, param5);
-          ob.field_D.drawLeft(param4, pq.pointerX, -1 + (-ob.field_D.descent + po.pointerY - ob.field_D.descent), 2, -1);
+          ob.field_D.drawLeft(param4, MusicPatch.pointerX, -1 + (-ob.field_D.descent + po.pointerY - ob.field_D.descent), 2, -1);
         } catch (RuntimeException runtimeException) {
           throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "hj.F(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ')');
         }

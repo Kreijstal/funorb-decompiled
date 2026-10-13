@@ -12,7 +12,7 @@ final class MotionWaypoint extends MovingBody {
         if (param0) {
           return (String) null;
         }
-        if (jm.field_f == ik.field_g) {
+        if (MusicEnvelope.field_f == ik.field_g) {
           return fj.field_Qb;
         }
         return dl.field_e;

@@ -87,7 +87,7 @@ final class MenuButton {
                 if (!be.field_a) {
                   stackIn_37_4 = BufferedFile.field_q;
                 } else {
-                  stackIn_37_4 = lk.field_q;
+                  stackIn_37_4 = MusicVoiceMixer.field_q;
                 }
                 stackIn_36_2[stackIn_36_3] = stackIn_37_4;
                 var4 = rd.a(stackIn_36_0, stackIn_36_1, (byte) 103);
@@ -232,7 +232,7 @@ final class MenuButton {
         }
         if (this.actionId == 29 ||
           30 == this.actionId) {
-          stackIn_12_1 = (var2.isHeld(false)) && (this.containsPoint(pq.pointerX, po.pointerY, -56));
+          stackIn_12_1 = (var2.isHeld(false)) && (this.containsPoint(MusicPatch.pointerX, po.pointerY, -56));
           this.pressed = stackIn_12_1;
         }
     }

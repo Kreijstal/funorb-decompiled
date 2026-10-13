@@ -98,7 +98,7 @@ final class wj extends IntrusiveNode {
         }
     }
 
-    final static void a(int param0, boolean param1, int param2, boolean param3, int param4, vm param5, boolean param6) {
+    final static void a(int param0, boolean param1, int param2, boolean param3, int param4, MusicTrack param5, boolean param6) {
         Object var7 = null;
         Throwable var8 = null;
         Object stackIn_11_0 = null;
@@ -108,7 +108,7 @@ final class wj extends IntrusiveNode {
         try {
           var7 = DirectByteStorage.field_f;
           synchronized (var7) {
-            m.field_f.e(param2, -1, 16);
+            m.musicSynthesizer.setChannelGain(param2, -1, 16);
             if (param3) {
               return;
             }

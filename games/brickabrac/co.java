@@ -191,7 +191,7 @@ final class co {
         }
     }
 
-    final static void a(byte param0, vm param1) {
+    final static void a(byte param0, MusicTrack param1) {
         try {
           IsaacGenerator.a(param1, 0);
           if (param0 >= -74) {
@@ -206,7 +206,7 @@ final class co {
         if (param0 != -53) {
           field_j = (AlphaFont) null;
         }
-        return lk.field_p - LevelPack.field_k;
+        return MusicVoiceMixer.field_p - LevelPack.field_k;
     }
 
     static {

@@ -198,7 +198,7 @@ final class SaveResultsPromptScreen extends MenuScreen {
         RuntimeException var3_ref = null;
         var4 = BrickABrac.field_J ? 1 : 0;
         try {
-          wp.a(param1, (byte) -51);
+          SoundCache.a(param1, (byte) -51);
           if (!param0) {
             field_y = (String) null;
           }

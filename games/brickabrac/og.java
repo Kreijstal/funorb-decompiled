@@ -456,7 +456,7 @@ final class og extends mh {
           while (!(decompiledNaturalLoopExit0 = (var13 >= this.field_cc))) {
             if (var16 == 0) {
               if (this.field_fc[var13] > 0) {
-                param6[var13] = var11 + jm.a(true, this.field_fc[var13]).toUpperCase() + ": " + var12 + param6[var13];
+                param6[var13] = var11 + MusicEnvelope.a(true, this.field_fc[var13]).toUpperCase() + ": " + var12 + param6[var13];
               }
               var14 = null;
               if (null != this.field_bc[var13] ||
@@ -1402,7 +1402,7 @@ final class og extends mh {
           }
           var2Lifetime170 = gr.a(true, "explain_grow");
           if (var2Lifetime170 != null) {
-            pq.field_q = MenuButton.a(var2Lifetime170, (byte) 102);
+            MusicPatch.field_q = MenuButton.a(var2Lifetime170, (byte) 102);
           }
           var2Lifetime171 = gr.a(true, "explain_plasma");
           if (null != var2Lifetime171) {
@@ -1557,7 +1557,7 @@ final class og extends mh {
           boolean decompiledFrameCompleted0 = true;
           var5 = go.currentKeyCharacter;
           if (var5 > 0) {
-            if (~wp.field_h == ~var5) {
+            if (~SoundCache.field_h == ~var5) {
               var5 = 63;
             }
             var6 = 0;

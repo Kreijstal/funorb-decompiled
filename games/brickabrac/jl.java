@@ -73,11 +73,11 @@ final class jl {
           var7Lifetime1 = 0;
           var8Lifetime1 = InteractiveGameClient.sine8192(var6Lifetime1, -4097) >> 8;
           var9Lifetime1 = BrickABrac.c(2048, var6Lifetime1) >> 8;
-          if (-1 != pq.pointerX &&
+          if (-1 != MusicPatch.pointerX &&
             -1 != po.pointerY) {
             var8Lifetime1 = -po.pointerY + 240;
             var9Lifetime1 = -128;
-            var7Lifetime1 = pq.pointerX - 320;
+            var7Lifetime1 = MusicPatch.pointerX - 320;
           }
           var10 = 256.0 / Math.sqrt((double)(var9Lifetime1 * var9Lifetime1 + var8Lifetime1 * var8Lifetime1 + var7Lifetime1 * var7Lifetime1));
           var9Lifetime1 = (int)((double)var9Lifetime1 * var10);
@@ -106,7 +106,7 @@ final class jl {
             for (var18 = 0; var18 < 3; var18++) {
               MatchResultScreen.field_w[var18] = MatchResultScreen.field_w[var18] + BoundedFile.field_e[var15][var18];
             }
-            ka.a(kk.field_e, -16283, MatchResultScreen.field_w, false, true, var17, false);
+            MusicVoice.a(kk.field_e, -16283, MatchResultScreen.field_w, false, true, var17, false);
             mp.a(var14, var7Lifetime1, var12Lifetime1, var9Lifetime1, var17, (byte) -105, var13Lifetime1, var8Lifetime1);
           }
           return;

@@ -62,7 +62,7 @@ final class IntKeyIndex {
         t.field_g = false;
         NanoGameClock.field_l = false;
         bd.a(param0, true);
-        ka.field_l = ej.field_P;
+        MusicVoice.field_l = ej.field_P;
         ik.field_g = ej.field_P;
     }
 

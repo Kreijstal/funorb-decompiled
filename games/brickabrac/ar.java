@@ -70,7 +70,7 @@ final class ar {
                         h.field_D[var13_int] = true;
                       }
                     } else {
-                      lk.field_s = true;
+                      MusicVoiceMixer.field_s = true;
                     }
                   }
                   break scanLoop1;

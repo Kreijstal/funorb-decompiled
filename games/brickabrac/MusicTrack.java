@@ -1,18 +1,18 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class vm extends IntrusiveNode {
-    byte[] field_j;
-    IntrusiveHashTable field_i;
+final class MusicTrack extends IntrusiveNode {
+    byte[] midiBytes;
+    IntrusiveHashTable instrumentUsage;
 
-    final void a() {
-        this.field_i = null;
+    final void releaseInstrumentUsage() {
+        this.instrumentUsage = null;
     }
 
-    final void b() {
+    final void buildInstrumentUsage() {
         int[] var1;
         int[] var2;
-        hr var4;
+        MidiFileReader var4;
         int var5;
         int var6;
         int var7;
@@ -22,7 +22,7 @@ final class vm extends IntrusiveNode {
         int var11;
         int var12;
         int var13;
-        se var14;
+        ByteArrayNode var14;
         int[] var15;
         int[] var17;
         int[] var18;
@@ -34,10 +34,10 @@ final class vm extends IntrusiveNode {
         int var11Lifetime1;
         int var11Lifetime2;
         int var12Lifetime1;
-        if (this.field_i != null) {
+        if (this.instrumentUsage != null) {
           return;
         }
-        this.field_i = new IntrusiveHashTable(16);
+        this.instrumentUsage = new IntrusiveHashTable(16);
         var20 = new int[16];
         var17 = var20;
         var1 = var17;
@@ -47,26 +47,26 @@ final class vm extends IntrusiveNode {
         var22 = var1;
         var18[9] = 128;
         var22[9] = 128;
-        var4 = new hr(this.field_j);
-        var5 = var4.e();
+        var4 = new MidiFileReader(this.midiBytes);
+        var5 = var4.getTrackCount();
         for (var6 = 0; var6 < var5; var6++) {
-          var4.a(var6);
-          var4.f(var6);
-          var4.b(var6);
+          var4.seekTrack(var6);
+          var4.readTrackDelta(var6);
+          var4.saveTrackPosition(var6);
         }
         while (true) {
-          var6Lifetime1 = var4.a();
-          var7 = var4.field_f[var6Lifetime1];
+          var6Lifetime1 = var4.nextTrack();
+          var7 = var4.trackTicks[var6Lifetime1];
           while (true) {
-            if (var4.field_f[var6Lifetime1] != var7) {
+            if (var4.trackTicks[var6Lifetime1] != var7) {
               break;
             }
-            var4.a(var6Lifetime1);
-            var8 = var4.e(var6Lifetime1);
+            var4.seekTrack(var6Lifetime1);
+            var8 = var4.readMessage(var6Lifetime1);
             if (var8 == 1) {
-              var4.b();
-              var4.b(var6Lifetime1);
-              if (var4.f()) {
+              var4.markTrackEnded();
+              var4.saveTrackPosition(var6Lifetime1);
+              if (var4.isDone()) {
                 return;
               }
               break;
@@ -94,29 +94,29 @@ final class vm extends IntrusiveNode {
               var12Lifetime1 = var8 >> 16 & 127;
               if (var12Lifetime1 > 0) {
                 var13 = var18[var10Lifetime2];
-                var14 = (se) (this.field_i.get(-103, (long)var13));
+                var14 = (ByteArrayNode) (this.instrumentUsage.get(-103, (long)var13));
                 if (var14 == null) {
-                  var14 = new se(new byte[128]);
-                  this.field_i.put(34, var14, (long)var13);
+                  var14 = new ByteArrayNode(new byte[128]);
+                  this.instrumentUsage.put(34, var14, (long)var13);
                 }
-                var14.field_i[var11Lifetime2] = (byte) 1;
+                var14.bytes[var11Lifetime2] = (byte) 1;
               }
             }
-            var4.f(var6Lifetime1);
-            var4.b(var6Lifetime1);
+            var4.readTrackDelta(var6Lifetime1);
+            var4.saveTrackPosition(var6Lifetime1);
           }
         }
     }
 
-    final static vm a(ResourceArchive param0, String param1, String param2) {
-        byte[] var3 = param0.takeFileByName(113, param1, param2);
+    final static MusicTrack load(ResourceArchive archive, String fileName, String groupName) {
+        byte[] var3 = archive.takeFileByName(113, fileName, groupName);
         if (var3 == null) {
           return null;
         }
-        return new vm(new PacketBuffer(var3));
+        return new MusicTrack(new PacketBuffer(var3));
     }
 
-    private vm(PacketBuffer param0) {
+    private MusicTrack(PacketBuffer packedTrack) {
         int incrementValue$0 = 0;
         int incrementValue$25 = 0;
         int incrementValue$26 = 0;
@@ -220,11 +220,11 @@ final class vm extends IntrusiveNode {
         int var15Lifetime2;
         int var28Lifetime1;
         int var29Lifetime1;
-        param0.position = param0.data.length - 3;
-        var2 = param0.readUnsignedByte(255);
-        var3 = param0.readUnsignedShort(65280);
+        packedTrack.position = packedTrack.data.length - 3;
+        var2 = packedTrack.readUnsignedByte(255);
+        var3 = packedTrack.readUnsignedShort(65280);
         var4 = 14 + var2 * 10;
-        param0.position = 0;
+        packedTrack.position = 0;
         var5 = 0;
         var6 = 0;
         var7 = 0;
@@ -237,7 +237,7 @@ final class vm extends IntrusiveNode {
         while (var13 < var2) {
           var14 = -1;
           while (true) {
-            var15 = param0.readUnsignedByte(255);
+            var15 = packedTrack.readUnsignedByte(255);
             if (var15 != var14) {
               var4++;
             }
@@ -283,13 +283,13 @@ final class vm extends IntrusiveNode {
         var4 = var4 + 5 * var5;
         var4 = var4 + 2 * (var7 + var8 + var6 + var9 + var11);
         var4 = var4 + (var10 + var12);
-        var13Lifetime1 = param0.position;
+        var13Lifetime1 = packedTrack.position;
         var14Lifetime1 = var2 + var5 + var6 + var7 + var8 + var9 + var10 + var11 + var12;
         for (var15Lifetime1 = 0; var15Lifetime1 < var14Lifetime1; var15Lifetime1++) {
-          param0.readVarInt((byte) 101);
+          packedTrack.readVarInt((byte) 101);
         }
-        var4 = var4 + (param0.position - var13Lifetime1);
-        var15Lifetime2 = param0.position;
+        var4 = var4 + (packedTrack.position - var13Lifetime1);
+        var15Lifetime2 = packedTrack.position;
         var16 = 0;
         var17 = 0;
         var18 = 0;
@@ -304,7 +304,7 @@ final class vm extends IntrusiveNode {
         var27 = 0;
         var28 = 0;
         for (var29 = 0; var29 < var6; var29++) {
-          var28 = var28 + param0.readUnsignedByte(255) & 127;
+          var28 = var28 + packedTrack.readUnsignedByte(255) & 127;
           if (var28 != 0) {
             if (var28 != 32) {
               if (var28 != 1) {
@@ -376,50 +376,50 @@ final class vm extends IntrusiveNode {
           }
         }
         var29Lifetime1 = 0;
-        var30 = param0.position;
-        param0.position = param0.position + var26;
-        var31 = param0.position;
-        param0.position = param0.position + var11;
-        var32 = param0.position;
-        param0.position = param0.position + var10;
-        var33 = param0.position;
-        param0.position = param0.position + var9;
-        var34 = param0.position;
-        param0.position = param0.position + var16;
-        var35 = param0.position;
-        param0.position = param0.position + var18;
-        var36 = param0.position;
-        param0.position = param0.position + var20;
-        var37 = param0.position;
-        param0.position = param0.position + (var7 + var8 + var11);
-        var38 = param0.position;
-        param0.position = param0.position + var7;
-        var39 = param0.position;
-        param0.position = param0.position + var27;
-        var40 = param0.position;
-        param0.position = param0.position + var8;
-        var41 = param0.position;
-        param0.position = param0.position + var17;
-        var42 = param0.position;
-        param0.position = param0.position + var19;
-        var43 = param0.position;
-        param0.position = param0.position + var21;
-        var44 = param0.position;
-        param0.position = param0.position + var12;
-        var45 = param0.position;
-        param0.position = param0.position + var9;
-        var46 = param0.position;
-        param0.position = param0.position + var22;
-        var47 = param0.position;
-        param0.position = param0.position + var23;
-        var48 = param0.position;
-        param0.position = param0.position + var24;
-        var49 = param0.position;
-        param0.position = param0.position + var25;
-        var50 = param0.position;
-        param0.position = param0.position + var5 * 3;
-        this.field_j = new byte[var4];
-        var51 = new PacketBuffer(this.field_j);
+        var30 = packedTrack.position;
+        packedTrack.position = packedTrack.position + var26;
+        var31 = packedTrack.position;
+        packedTrack.position = packedTrack.position + var11;
+        var32 = packedTrack.position;
+        packedTrack.position = packedTrack.position + var10;
+        var33 = packedTrack.position;
+        packedTrack.position = packedTrack.position + var9;
+        var34 = packedTrack.position;
+        packedTrack.position = packedTrack.position + var16;
+        var35 = packedTrack.position;
+        packedTrack.position = packedTrack.position + var18;
+        var36 = packedTrack.position;
+        packedTrack.position = packedTrack.position + var20;
+        var37 = packedTrack.position;
+        packedTrack.position = packedTrack.position + (var7 + var8 + var11);
+        var38 = packedTrack.position;
+        packedTrack.position = packedTrack.position + var7;
+        var39 = packedTrack.position;
+        packedTrack.position = packedTrack.position + var27;
+        var40 = packedTrack.position;
+        packedTrack.position = packedTrack.position + var8;
+        var41 = packedTrack.position;
+        packedTrack.position = packedTrack.position + var17;
+        var42 = packedTrack.position;
+        packedTrack.position = packedTrack.position + var19;
+        var43 = packedTrack.position;
+        packedTrack.position = packedTrack.position + var21;
+        var44 = packedTrack.position;
+        packedTrack.position = packedTrack.position + var12;
+        var45 = packedTrack.position;
+        packedTrack.position = packedTrack.position + var9;
+        var46 = packedTrack.position;
+        packedTrack.position = packedTrack.position + var22;
+        var47 = packedTrack.position;
+        packedTrack.position = packedTrack.position + var23;
+        var48 = packedTrack.position;
+        packedTrack.position = packedTrack.position + var24;
+        var49 = packedTrack.position;
+        packedTrack.position = packedTrack.position + var25;
+        var50 = packedTrack.position;
+        packedTrack.position = packedTrack.position + var5 * 3;
+        this.midiBytes = new byte[var4];
+        var51 = new PacketBuffer(this.midiBytes);
         var51.writeInt(1297377380, (byte) -79);
         var51.writeInt(6, (byte) -79);
         stackIn_84_0 = var51;
@@ -432,7 +432,7 @@ final class vm extends IntrusiveNode {
         ((PacketBuffer) (Object) stackIn_84_0).writeShort((byte) stackIn_84_1, stackIn_85_2);
         var51.writeShort((byte) 124, var2);
         var51.writeShort((byte) 110, var3);
-        param0.position = var13Lifetime1;
+        packedTrack.position = var13Lifetime1;
         var52 = 0;
         var53 = 0;
         var54 = 0;
@@ -452,11 +452,11 @@ final class vm extends IntrusiveNode {
           var61 = var51.position;
           var62 = -1;
           while (true) {
-            var63 = param0.readVarInt((byte) 104);
+            var63 = packedTrack.readVarInt((byte) 104);
             var51.writeVarInt((byte) -83, var63);
             incrementValue$0 = var29Lifetime1;
             var29Lifetime1++;
-            var64 = param0.data[incrementValue$0] & 255;
+            var64 = packedTrack.data[incrementValue$0] & 255;
             stackIn_91_0 = (var64 == var62) ? 0 : 1;
             var65 = stackIn_91_0;
             var62 = var64 & 15;
@@ -478,13 +478,13 @@ final class vm extends IntrusiveNode {
               var51.writeByte(-12, 3);
               incrementValue$25 = var50;
               var50++;
-              var51.writeByte(-107, (int) param0.data[incrementValue$25]);
+              var51.writeByte(-107, (int) packedTrack.data[incrementValue$25]);
               incrementValue$26 = var50;
               var50++;
-              var51.writeByte(58, (int) param0.data[incrementValue$26]);
+              var51.writeByte(58, (int) packedTrack.data[incrementValue$26]);
               incrementValue$27 = var50;
               var50++;
-              var51.writeByte(-112, (int) param0.data[incrementValue$27]);
+              var51.writeByte(-112, (int) packedTrack.data[incrementValue$27]);
               continue;
             }
             var52 = var52 ^ var64 >> 4;
@@ -494,10 +494,10 @@ final class vm extends IntrusiveNode {
               }
               incrementValue$23 = var37;
               var37++;
-              var53 = var53 + param0.data[incrementValue$23];
+              var53 = var53 + packedTrack.data[incrementValue$23];
               incrementValue$24 = var38;
               var38++;
-              var54 = var54 + param0.data[incrementValue$24];
+              var54 = var54 + packedTrack.data[incrementValue$24];
               var51.writeByte(-128, var53 & 127);
               var51.writeByte(118, var54 & 127);
               continue;
@@ -508,10 +508,10 @@ final class vm extends IntrusiveNode {
               }
               incrementValue$21 = var37;
               var37++;
-              var53 = var53 + param0.data[incrementValue$21];
+              var53 = var53 + packedTrack.data[incrementValue$21];
               incrementValue$22 = var40;
               var40++;
-              var55 = var55 + param0.data[incrementValue$22];
+              var55 = var55 + packedTrack.data[incrementValue$22];
               var51.writeByte(-121, var53 & 127);
               var51.writeByte(-120, var55 & 127);
               continue;
@@ -523,10 +523,10 @@ final class vm extends IntrusiveNode {
                 }
                 incrementValue$5 = var45;
                 var45++;
-                var56 = var56 + param0.data[incrementValue$5];
+                var56 = var56 + packedTrack.data[incrementValue$5];
                 incrementValue$6 = var33;
                 var33++;
-                var56 = var56 + (param0.data[incrementValue$6] << 7);
+                var56 = var56 + (packedTrack.data[incrementValue$6] << 7);
                 var51.writeByte(-125, var56 & 127);
                 var51.writeByte(94, var56 >> 7 & 127);
                 continue;
@@ -537,7 +537,7 @@ final class vm extends IntrusiveNode {
                 }
                 incrementValue$4 = var32;
                 var32++;
-                var57 = var57 + param0.data[incrementValue$4];
+                var57 = var57 + packedTrack.data[incrementValue$4];
                 var51.writeByte(1, var57 & 127);
                 continue;
               }
@@ -550,7 +550,7 @@ final class vm extends IntrusiveNode {
                 }
                 incrementValue$1 = var44;
                 var44++;
-                var51.writeByte(29, (int) param0.data[incrementValue$1]);
+                var51.writeByte(29, (int) packedTrack.data[incrementValue$1]);
                 continue;
               }
               if (var65 != 0) {
@@ -558,10 +558,10 @@ final class vm extends IntrusiveNode {
               }
               incrementValue$2 = var37;
               var37++;
-              var53 = var53 + param0.data[incrementValue$2];
+              var53 = var53 + packedTrack.data[incrementValue$2];
               incrementValue$3 = var31;
               var31++;
-              var58 = var58 + param0.data[incrementValue$3];
+              var58 = var58 + packedTrack.data[incrementValue$3];
               var51.writeByte(-104, var53 & 127);
               var51.writeByte(25, var58 & 127);
               continue;
@@ -571,50 +571,50 @@ final class vm extends IntrusiveNode {
             }
             incrementValue$7 = var15Lifetime2;
             var15Lifetime2++;
-            var28Lifetime1 = var28Lifetime1 + param0.data[incrementValue$7] & 127;
+            var28Lifetime1 = var28Lifetime1 + packedTrack.data[incrementValue$7] & 127;
             var51.writeByte(-21, var28Lifetime1);
             if (var28Lifetime1 != 0 &&
               var28Lifetime1 != 32) {
               if (var28Lifetime1 == 1) {
                 incrementValue$19 = var34;
                 var34++;
-                var66 = param0.data[incrementValue$19];
+                var66 = packedTrack.data[incrementValue$19];
               } else if (var28Lifetime1 == 33) {
                 incrementValue$18 = var41;
                 var41++;
-                var66 = param0.data[incrementValue$18];
+                var66 = packedTrack.data[incrementValue$18];
               } else if (var28Lifetime1 == 7) {
                 incrementValue$17 = var35;
                 var35++;
-                var66 = param0.data[incrementValue$17];
+                var66 = packedTrack.data[incrementValue$17];
               } else if (var28Lifetime1 == 39) {
                 incrementValue$16 = var42;
                 var42++;
-                var66 = param0.data[incrementValue$16];
+                var66 = packedTrack.data[incrementValue$16];
               } else if (var28Lifetime1 == 10) {
                 incrementValue$15 = var36;
                 var36++;
-                var66 = param0.data[incrementValue$15];
+                var66 = packedTrack.data[incrementValue$15];
               } else if (var28Lifetime1 == 42) {
                 incrementValue$14 = var43;
                 var43++;
-                var66 = param0.data[incrementValue$14];
+                var66 = packedTrack.data[incrementValue$14];
               } else if (var28Lifetime1 == 99) {
                 incrementValue$13 = var46;
                 var46++;
-                var66 = param0.data[incrementValue$13];
+                var66 = packedTrack.data[incrementValue$13];
               } else if (var28Lifetime1 == 98) {
                 incrementValue$12 = var47;
                 var47++;
-                var66 = param0.data[incrementValue$12];
+                var66 = packedTrack.data[incrementValue$12];
               } else if (var28Lifetime1 == 101) {
                 incrementValue$11 = var48;
                 var48++;
-                var66 = param0.data[incrementValue$11];
+                var66 = packedTrack.data[incrementValue$11];
               } else if (var28Lifetime1 == 100) {
                 incrementValue$10 = var49;
                 var49++;
-                var66 = param0.data[incrementValue$10];
+                var66 = packedTrack.data[incrementValue$10];
               } else if (var28Lifetime1 != 64 &&
                 var28Lifetime1 != 65 &&
                 var28Lifetime1 != 120 &&
@@ -622,16 +622,16 @@ final class vm extends IntrusiveNode {
                 var28Lifetime1 != 123) {
                 incrementValue$8 = var39;
                 var39++;
-                var66 = param0.data[incrementValue$8];
+                var66 = packedTrack.data[incrementValue$8];
               } else {
                 incrementValue$9 = var30;
                 var30++;
-                var66 = param0.data[incrementValue$9];
+                var66 = packedTrack.data[incrementValue$9];
               }
             } else {
               incrementValue$20 = var44;
               var44++;
-              var66 = param0.data[incrementValue$20];
+              var66 = packedTrack.data[incrementValue$20];
             }
             var66 = var66 + var70[var28Lifetime1];
             var70[var28Lifetime1] = var66;

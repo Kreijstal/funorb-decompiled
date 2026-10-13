@@ -103,9 +103,9 @@ final class LevelList {
         eh.field_e = new String[]{ag.field_C, bh.field_ub, qo.field_P, bq.field_f, jh.field_c};
         ar.field_a = new String[]{kk.field_a};
         sl.field_A[15] = MatchCompleteScreen.field_F;
-        ArchiveFetchClient.field_j = new String[]{ff.field_g, pq.field_m, bm.field_b, RectangleBody.field_t};
+        ArchiveFetchClient.field_j = new String[]{ff.field_g, MusicPatch.field_m, bm.field_b, RectangleBody.field_t};
         ml.field_e = new String[]{qi.field_N, bg.field_o, MonotonicTime.field_a, eb.field_m, ch.field_j, vg.field_a, nk.field_f, tm.field_h};
-        sl.field_A[17] = pq.field_q;
+        sl.field_A[17] = MusicPatch.field_q;
         sl.field_A[14] = vh.field_V;
         sl.field_A[18] = GameScreen.field_g;
     }
@@ -175,7 +175,7 @@ final class LevelList {
     }
 
     final void selectFirst(byte obfuscationGuard) {
-        this.lastPointerX = pq.pointerX;
+        this.lastPointerX = MusicPatch.pointerX;
         this.scrollOffset = 0;
         this.lastPointerY = po.pointerY;
         this.keyboardSelection = true;
@@ -254,7 +254,7 @@ final class LevelList {
           this.scrollBy(47, false);
         }
         this.lastPointerY = po.pointerY;
-        this.lastPointerX = pq.pointerX;
+        this.lastPointerX = MusicPatch.pointerX;
     }
 
     final void setScrollOffset(int offsetPixels) {
@@ -271,7 +271,7 @@ final class LevelList {
           this.scrollBy(GameplayAudioEvent.mouseWheelDelta * this.scrollStep, true);
           this.keyboardSelection = this.keyboardSelection & (GameplayAudioEvent.mouseWheelDelta == 0 ? true : false);
           if (!this.keyboardSelection ||
-            pq.pointerX != this.lastPointerX ||
+            MusicPatch.pointerX != this.lastPointerX ||
             this.lastPointerY != po.pointerY) {
             this.selectedLevelIndex = df.divideFloorPositive(this.rowSpacing, (byte) 15, po.pointerY - (this.viewport.y - (-this.rowGap + this.scrollOffset)));
             if (this.selectedLevelIndex < 0) {
@@ -282,7 +282,7 @@ final class LevelList {
             }
           }
           this.lastPointerY = po.pointerY;
-          this.lastPointerX = pq.pointerX;
+          this.lastPointerX = MusicPatch.pointerX;
         }
         if (obfuscationGuard) {
           this.viewport = (MenuButton) null;

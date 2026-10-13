@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class SoundPlayback extends IntrusiveNode {
-    static wp field_m;
+    static SoundCache soundCache;
     int baseGain;
     PcmStream stream;
     static volatile int livePressX;
@@ -38,9 +38,9 @@ final class SoundPlayback extends IntrusiveNode {
     }
 
     public static void a(byte param0) {
-        field_m = null;
+        soundCache = null;
         if (param0 <= 22) {
-          field_m = (wp) null;
+          soundCache = (SoundCache) null;
           field_k = null;
           return;
         }

@@ -44,7 +44,7 @@ final class tb extends bj {
             pressX = -88;
           }
           if (ln.decodeSpritesFromArchive(-104, param4, param2, param1)) {
-            stackIn_6_0 = jm.a(param3.takeFile(param4, param1, 4), (byte) -14);
+            stackIn_6_0 = MusicEnvelope.a(param3.takeFile(param4, param1, 4), (byte) -14);
             return stackIn_6_0;
           }
           stackIn_4_0 = null;

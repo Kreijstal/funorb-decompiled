@@ -64,7 +64,7 @@ final class ScorePopup extends IntrusiveNode {
         return hj.a(1, (byte) -110, param1, param3, param0);
     }
 
-    final static void a(int param0, vm param1, int param2, boolean param3, int param4) {
+    final static void a(int param0, MusicTrack param1, int param2, boolean param3, int param4) {
         try {
           dc.field_e.a(param2, !param3 ? true : false, param0, (byte) 22, 1000000, param1);
           int var5_int = 88 / ((-16 - param4) / 38);

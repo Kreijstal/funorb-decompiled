@@ -108,7 +108,7 @@ class oc extends IntrusiveNode {
         try {
           if (param4.playerCount == 1) {
             if (r.field_A) {
-              stackIn_8_0 = (ka.a((byte) 88)) ? 1 : 0;
+              stackIn_8_0 = (MusicVoice.a((byte) 88)) ? 1 : 0;
             } else {
               stackIn_8_0 = 0;
             }
@@ -238,25 +238,25 @@ class oc extends IntrusiveNode {
           if (var5 == 0) {
             var6 = -57 % ((56 - param2) / 43);
             hj.field_Pb = cb.heldButton;
-            ka.a(this.d(15), 22546);
+            MusicVoice.a(this.d(15), 22546);
             return param3;
           }
           if (BackgroundScene.pressedButton == 0) {
             var6Lifetime6 = -57 % ((56 - param2) / 43);
             hj.field_Pb = cb.heldButton;
-            ka.a(this.d(15), 22546);
+            MusicVoice.a(this.d(15), 22546);
             return param3;
           }
           this.b(false);
           if (var7 == 0) {
             var6Lifetime7 = -57 % ((56 - param2) / 43);
             hj.field_Pb = cb.heldButton;
-            ka.a(this.d(15), 22546);
+            MusicVoice.a(this.d(15), 22546);
             return param3;
           }
           if (0 != GameplayAudioEvent.mouseWheelDelta &&
             var5 != 0) {
-            this.a(GameplayAudioEvent.mouseWheelDelta, pq.pointerX, param0, -127, po.pointerY, this, param1);
+            this.a(GameplayAudioEvent.mouseWheelDelta, MusicPatch.pointerX, param0, -127, po.pointerY, this, param1);
           }
           if (BackgroundScene.pressedButton != 0) {
             if (this.a(this, tb.pressX, param1, param0, BackgroundScene.pressedButton, qo.pressY, 0)) {
@@ -267,16 +267,16 @@ class oc extends IntrusiveNode {
           if (0 != cb.heldButton) {
             var6Lifetime8 = -57 % ((56 - param2) / 43);
             hj.field_Pb = cb.heldButton;
-            ka.a(this.d(15), 22546);
+            MusicVoice.a(this.d(15), 22546);
             return param3;
           }
           if (hj.field_Pb == 0) {
             var6Lifetime9 = -57 % ((56 - param2) / 43);
             hj.field_Pb = cb.heldButton;
-            ka.a(this.d(15), 22546);
+            MusicVoice.a(this.d(15), 22546);
             return param3;
           }
-          this.a(po.pointerY, pq.pointerX, param0, this, 19223, param1);
+          this.a(po.pointerY, MusicPatch.pointerX, param0, this, 19223, param1);
           var8 = gd.field_c;
           if (var8 != null) {
             if (var8.field_i instanceof em) {
@@ -286,7 +286,7 @@ class oc extends IntrusiveNode {
           }
           var6Lifetime10 = -57 % ((56 - param2) / 43);
           hj.field_Pb = cb.heldButton;
-          ka.a(this.d(15), 22546);
+          MusicVoice.a(this.d(15), 22546);
           return param3;
         }
         if (0 != GameplayAudioEvent.mouseWheelDelta) {
@@ -301,7 +301,7 @@ class oc extends IntrusiveNode {
                 }
                 if (0 == cb.heldButton &&
                   hj.field_Pb != 0) {
-                  this.a(po.pointerY, pq.pointerX, param0, this, 19223, param1);
+                  this.a(po.pointerY, MusicPatch.pointerX, param0, this, 19223, param1);
                   var9 = gd.field_c;
                   if (var9 != null) {
                     if (!(var9.field_i instanceof em)) {
@@ -314,23 +314,23 @@ class oc extends IntrusiveNode {
                 }
                 var6Lifetime1 = -57 % ((56 - param2) / 43);
                 hj.field_Pb = cb.heldButton;
-                ka.a(this.d(15), 22546);
+                MusicVoice.a(this.d(15), 22546);
                 return param3;
               }
             }
             if (0 != cb.heldButton) {
               var6Lifetime1Lifetime1 = -57 % ((56 - param2) / 43);
               hj.field_Pb = cb.heldButton;
-              ka.a(this.d(15), 22546);
+              MusicVoice.a(this.d(15), 22546);
               return param3;
             }
             if (hj.field_Pb == 0) {
               var6Lifetime1Lifetime2 = -57 % ((56 - param2) / 43);
               hj.field_Pb = cb.heldButton;
-              ka.a(this.d(15), 22546);
+              MusicVoice.a(this.d(15), 22546);
               return param3;
             }
-            this.a(po.pointerY, pq.pointerX, param0, this, 19223, param1);
+            this.a(po.pointerY, MusicPatch.pointerX, param0, this, 19223, param1);
             var10 = gd.field_c;
             if (var10 != null) {
               if (var10.field_i instanceof em) {
@@ -340,10 +340,10 @@ class oc extends IntrusiveNode {
             }
             var6Lifetime1Lifetime3 = -57 % ((56 - param2) / 43);
             hj.field_Pb = cb.heldButton;
-            ka.a(this.d(15), 22546);
+            MusicVoice.a(this.d(15), 22546);
             return param3;
           }
-          this.a(GameplayAudioEvent.mouseWheelDelta, pq.pointerX, param0, -127, po.pointerY, this, param1);
+          this.a(GameplayAudioEvent.mouseWheelDelta, MusicPatch.pointerX, param0, -127, po.pointerY, this, param1);
         }
         regionExit2: {
           if (BackgroundScene.pressedButton != 0) {
@@ -357,35 +357,35 @@ class oc extends IntrusiveNode {
               if (0 != cb.heldButton) {
                 var6Lifetime2 = -57 % ((56 - param2) / 43);
                 hj.field_Pb = cb.heldButton;
-                ka.a(this.d(15), 22546);
+                MusicVoice.a(this.d(15), 22546);
                 return param3;
               }
               if (hj.field_Pb == 0) {
                 var6Lifetime2Lifetime1 = -57 % ((56 - param2) / 43);
                 hj.field_Pb = cb.heldButton;
-                ka.a(this.d(15), 22546);
+                MusicVoice.a(this.d(15), 22546);
                 return param3;
               }
-              this.a(po.pointerY, pq.pointerX, param0, this, 19223, param1);
+              this.a(po.pointerY, MusicPatch.pointerX, param0, this, 19223, param1);
               var11 = gd.field_c;
               if (var11 == null) {
                 var6Lifetime2Lifetime2 = -57 % ((56 - param2) / 43);
                 hj.field_Pb = cb.heldButton;
-                ka.a(this.d(15), 22546);
+                MusicVoice.a(this.d(15), 22546);
                 return param3;
               }
               if (!(var11.field_i instanceof em)) {
                 gd.field_c = null;
                 var6Lifetime2Lifetime3 = -57 % ((56 - param2) / 43);
                 hj.field_Pb = cb.heldButton;
-                ka.a(this.d(15), 22546);
+                MusicVoice.a(this.d(15), 22546);
                 return param3;
               }
               ((em) (var11.field_i)).a(-24178, var11, (jb) null);
               gd.field_c = null;
               var6Lifetime2Lifetime4 = -57 % ((56 - param2) / 43);
               hj.field_Pb = cb.heldButton;
-              ka.a(this.d(15), 22546);
+              MusicVoice.a(this.d(15), 22546);
               return param3;
             }
             this.b(false);
@@ -394,16 +394,16 @@ class oc extends IntrusiveNode {
         if (0 != cb.heldButton) {
           var6Lifetime3 = -57 % ((56 - param2) / 43);
           hj.field_Pb = cb.heldButton;
-          ka.a(this.d(15), 22546);
+          MusicVoice.a(this.d(15), 22546);
           return param3;
         }
         if (hj.field_Pb == 0) {
           var6Lifetime4 = -57 % ((56 - param2) / 43);
           hj.field_Pb = cb.heldButton;
-          ka.a(this.d(15), 22546);
+          MusicVoice.a(this.d(15), 22546);
           return param3;
         }
-        this.a(po.pointerY, pq.pointerX, param0, this, 19223, param1);
+        this.a(po.pointerY, MusicPatch.pointerX, param0, this, 19223, param1);
         var12 = gd.field_c;
         if (var12 != null) {
           if (var12.field_i instanceof em) {
@@ -413,7 +413,7 @@ class oc extends IntrusiveNode {
         }
         var6Lifetime5 = -57 % ((56 - param2) / 43);
         hj.field_Pb = cb.heldButton;
-        ka.a(this.d(15), 22546);
+        MusicVoice.a(this.d(15), 22546);
         return param3;
     }
 
@@ -445,7 +445,7 @@ class oc extends IntrusiveNode {
 
     final static void a(int param0, TextFont param1) {
         try {
-          wp.field_c = param1;
+          SoundCache.field_c = param1;
           bq.field_b = new ck();
           bj.field_P = new ck();
           if (param0 != 1) {
@@ -609,7 +609,7 @@ class oc extends IntrusiveNode {
 
     final static void a(PlatformServices param0, byte param1, java.awt.Canvas param2) {
         try {
-          sj.field_f = new ie();
+          sj.field_f = new MidiSynthesizer();
           sj.field_f.b(0, 9, 128);
           tq.a(22050, true, sj.field_f, param0, 1024, (java.awt.Component) ((Object) param2));
           if (param1 != 60) {
@@ -819,7 +819,7 @@ class oc extends IntrusiveNode {
           if (param1 != 0) {
             field_u = (String) null;
           }
-          var5_int = this.a(po.pointerY, param3, param2, 3, pq.pointerX) ? 1 : 0;
+          var5_int = this.a(po.pointerY, param3, param2, 3, MusicPatch.pointerX) ? 1 : 0;
           if ((this.field_q ? 1 : 0) != var5_int) {
             stackIn_7_1 = (var5_int != 0);
             this.field_q = stackIn_7_1;

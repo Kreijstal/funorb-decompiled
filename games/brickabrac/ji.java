@@ -18,8 +18,8 @@ final class ji implements Iterable {
         field_g = null;
         field_b = null;
         if (param0 != 24968) {
-          vm var2 = (vm) null;
-          ji.a(-14, true, (vm) null, -51, -100, true);
+          MusicTrack var2 = (MusicTrack) null;
+          ji.a(-14, true, (MusicTrack) null, -51, -100, true);
           packetDelayRandom = null;
           return;
         }
@@ -79,7 +79,7 @@ final class ji implements Iterable {
         return (Iterator) ((Object) new ik(this));
     }
 
-    final static void a(int param0, boolean param1, vm param2, int param3, int param4, boolean param5) {
+    final static void a(int param0, boolean param1, MusicTrack param2, int param3, int param4, boolean param5) {
         Object var6 = null;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
@@ -98,7 +98,7 @@ final class ji implements Iterable {
             }
             IsaacGenerator.field_a = param2;
             if (IsaacGenerator.field_a != null) {
-              m.field_f.a(param4, IsaacGenerator.field_a, param3, param1, param0 - 25460, param5);
+              m.musicSynthesizer.a(param4, IsaacGenerator.field_a, param3, param1, param0 - 25460, param5);
             }
           }
           return;

@@ -323,9 +323,9 @@ final class so {
           for (var10_intLifetime12 = 0; BoundedFile.field_a.length > var10_intLifetime12; var10_intLifetime12++) {
             BoundedFile.field_a[var10_intLifetime12] = PlayerInputBatch.a(LevelResultSubmission.a(param3, -29147), tf.trackHeads[var10_intLifetime12], 14, 16755200);
           }
-          lk.field_n = new RgbSprite[tf.trackHeads.length];
-          for (var10_intLifetime13 = 0; var10_intLifetime13 < lk.field_n.length; var10_intLifetime13++) {
-            lk.field_n[var10_intLifetime13] = DelayedPacket.a(tf.trackHeads[var10_intLifetime13], 20, LevelResultSubmission.a(param3, -13351));
+          MusicVoiceMixer.field_n = new RgbSprite[tf.trackHeads.length];
+          for (var10_intLifetime13 = 0; var10_intLifetime13 < MusicVoiceMixer.field_n.length; var10_intLifetime13++) {
+            MusicVoiceMixer.field_n[var10_intLifetime13] = DelayedPacket.a(tf.trackHeads[var10_intLifetime13], 20, LevelResultSubmission.a(param3, -13351));
           }
           rk.field_Sb = ap.field_a.copy();
           rk.field_Sb.rotateCounterclockwise();

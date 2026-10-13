@@ -277,7 +277,7 @@ final class RankingsScreen extends MenuScreen {
     }
 
     final void refreshMenu(int obfuscationGuard) {
-        this.initializeButtons(se.field_j, 0);
+        this.initializeButtons(ByteArrayNode.field_j, 0);
         this.markButton(true, 0);
         if (obfuscationGuard >= -60) {
           this.sortIndex = -47;

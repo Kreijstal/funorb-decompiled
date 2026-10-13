@@ -39,7 +39,7 @@ final class InstructionsScreen extends MenuScreen {
             var8 = (java.awt.Component) null;
             InstructionsScreen.attachKeyboardInput(22, (java.awt.Component) null);
           }
-          mh.field_H.updatePointer(qo.b(120, po.pointerY, pq.pointerX), param0 + 27355, qo.b(param0 - 4, qo.pressY, tb.pressX));
+          mh.field_H.updatePointer(qo.b(120, po.pointerY, MusicPatch.pointerX), param0 + 27355, qo.b(param0 - 4, qo.pressY, tb.pressX));
           if (mh.field_H.isActivated((byte) 113)) {
             var1_int = 1;
           }
@@ -420,8 +420,8 @@ final class InstructionsScreen extends MenuScreen {
           if (null != o.field_c) {
             o.field_c.field_K.a((byte) -94, args);
           }
-          if (pq.field_o != null) {
-            pq.field_o.field_R.a((byte) 102, args);
+          if (MusicPatch.field_o != null) {
+            MusicPatch.field_o.field_R.a((byte) 102, args);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

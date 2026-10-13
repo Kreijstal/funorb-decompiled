@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 abstract class GameScreen {
-    static wp field_e;
+    static SoundCache field_e;
     int screenId;
     static String field_d;
     static n field_c;

@@ -88,7 +88,7 @@ final class ef extends IOException {
             var6 = (String[]) null;
             ef.a((String) null, 72, 40, (String[]) null);
           }
-          ka.field_l = up.field_v;
+          MusicVoice.field_l = up.field_v;
           if (param2 != 255) {
             if (param2 < 100) {
               he.field_H = AchievementIcon.a(param2, -60, param0);

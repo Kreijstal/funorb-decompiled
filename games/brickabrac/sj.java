@@ -3,7 +3,7 @@
  */
 final class sj {
     static String field_g;
-    static ie field_f;
+    static MidiSynthesizer field_f;
     static String field_e;
     static mh field_a;
     static String[] field_c;
@@ -97,7 +97,7 @@ final class sj {
         }
         if (MatchResultScreen.field_s) {
           stackIn_42_0 = null;
-          stackIn_42_1 = wp.field_k;
+          stackIn_42_1 = SoundCache.field_k;
           if (stackIn_42_0 != stackIn_42_1) {
             nd.field_b = true;
           }

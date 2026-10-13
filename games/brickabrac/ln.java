@@ -48,7 +48,7 @@ final class ln extends IntrusiveNode {
         int var1 = -16 % ((62 - param0) / 48);
     }
 
-    final static void a(ResourceArchive param0, wp param1, ResourceArchive param2, ResourceArchive param3, ResourceArchive param4, int param5, ResourceArchive param6) {
+    final static void a(ResourceArchive param0, SoundCache param1, ResourceArchive param2, ResourceArchive param3, ResourceArchive param4, int param5, ResourceArchive param6) {
         int var7_int = 0;
         int var8 = 0;
         RuntimeException stackIn_12_0 = null;
@@ -75,7 +75,7 @@ final class ln extends IntrusiveNode {
             field_j = (RgbSprite[]) null;
           }
           mh.field_lb = param2;
-          SoundPlayback.field_m = param1;
+          SoundPlayback.soundCache = param1;
           og.field_gc = param0;
           ji.field_a = param6;
           for (var7_int = 0; var7_int < 2; var7_int++) {

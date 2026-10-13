@@ -35,14 +35,14 @@ final class GameUiController implements GameUiLifecycle {
         NodeDeque.a(127, 50);
         pa var2 = new pa(cd.field_h);
         RgbSprite[] var3 = (RgbSprite[]) null;
-        ie.a(1, (RgbSprite[]) null, Ball.field_G, 240, AchievementBrowserScreen.field_A, 8, 2, nn.field_g, 0, 2, 100, 8, 0, 320, 0);
+        MidiSynthesizer.a(1, (RgbSprite[]) null, Ball.field_G, 240, AchievementBrowserScreen.field_A, 8, 2, nn.field_g, 0, 2, 100, 8, 0, 320, 0);
         hd.a(93, var2, 20, 20);
         if (obfuscationGuard) {
           discarded$0 = this.pollSavedProgress((byte) -1);
         }
         RgbSprite[] var4 = (RgbSprite[]) null;
         nh.a((RgbSprite[]) null, 240, 8, 320, 0, nn.field_g, 2, 0, 1, AchievementBrowserScreen.field_A, 0, Ball.field_G, 2, (byte) -110, 8);
-        ka.a(20, -97, 20, var2);
+        MusicVoice.a(20, -97, 20, var2);
         oa.a(HighscorePackSelector.field_d, CircleBody.field_t, 2, PlayerBoard.field_jb, DualLinkNode.field_k, wn.field_c, (RgbSprite[][]) null, gq.field_Rb, true, 1, jb.field_I, PlayerBoard.field_jb, wd.field_C, qh.field_h, 22287);
         ea.field_g = true;
         c.field_e = er.field_b;

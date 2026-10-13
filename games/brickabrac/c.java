@@ -9,7 +9,7 @@ final class c {
     static ta field_l;
     private int field_h;
     private int[] field_k;
-    static vm field_j;
+    static MusicTrack field_j;
     static th field_m;
     private int field_b;
     static int cyclesDue;
@@ -87,7 +87,7 @@ final class c {
         if (param3) {
           if (param3) {
             qh.field_f = id.field_Pb;
-            pq.a(-128, param3);
+            MusicPatch.a(-128, param3);
             if (ml.field_b > 0) {
               na.a(param8, param3, -94, param2);
             }
@@ -107,11 +107,11 @@ final class c {
             } else {
               IsaacGenerator.field_b.field_Qb.field_Mb = null;
               Ball.field_A.field_eb = true;
-              ka.a(param4, IsaacGenerator.field_b, param2, param0, -108);
+              MusicVoice.a(param4, IsaacGenerator.field_b, param2, param0, -108);
             }
           } else {
             qh.field_f = (kp.field_a - 640) / 2;
-            pq.a(-128, param3);
+            MusicPatch.a(-128, param3);
             if (ml.field_b > 0) {
               na.a(param8, param3, -94, param2);
               AppletGameShell.field_e.field_S = 1;
@@ -130,7 +130,7 @@ final class c {
               } else {
                 IsaacGenerator.field_b.field_Qb.field_Mb = null;
                 Ball.field_A.field_eb = true;
-                ka.a(param4, IsaacGenerator.field_b, param2, param0, -108);
+                MusicVoice.a(param4, IsaacGenerator.field_b, param2, param0, -108);
               }
             } else {
               AppletGameShell.field_e.field_S = 1;
@@ -144,12 +144,12 @@ final class c {
               if (!hc.field_c) {
                 IsaacGenerator.field_b.field_Qb.field_Mb = null;
                 Ball.field_A.field_eb = true;
-                ka.a(param4, IsaacGenerator.field_b, param2, param0, -108);
+                MusicVoice.a(param4, IsaacGenerator.field_b, param2, param0, -108);
               } else {
                 if (o.field_e.field_jc > o.field_e.field_cc) {
                   IsaacGenerator.field_b.field_Qb.field_Mb = null;
                   Ball.field_A.field_eb = true;
-                  ka.a(param4, IsaacGenerator.field_b, param2, param0, -108);
+                  MusicVoice.a(param4, IsaacGenerator.field_b, param2, param0, -108);
                 } else {
                   IsaacGenerator.field_b.field_Qb.field_Mb = GameCanvas.field_d;
                   Ball.field_A.field_eb = false;
@@ -175,7 +175,7 @@ final class c {
             }
             if (param3) {
               qh.field_f = id.field_Pb;
-              pq.a(-128, param3);
+              MusicPatch.a(-128, param3);
               if (ml.field_b > 0) {
                 na.a(param8, param3, -94, param2);
               }
@@ -195,11 +195,11 @@ final class c {
               } else {
                 IsaacGenerator.field_b.field_Qb.field_Mb = null;
                 Ball.field_A.field_eb = true;
-                ka.a(param4, IsaacGenerator.field_b, param2, param0, -108);
+                MusicVoice.a(param4, IsaacGenerator.field_b, param2, param0, -108);
               }
             } else {
               qh.field_f = (kp.field_a - 640) / 2;
-              pq.a(-128, param3);
+              MusicPatch.a(-128, param3);
               if (ml.field_b > 0) {
                 na.a(param8, param3, -94, param2);
               }
@@ -214,12 +214,12 @@ final class c {
               if (!hc.field_c) {
                 IsaacGenerator.field_b.field_Qb.field_Mb = null;
                 Ball.field_A.field_eb = true;
-                ka.a(param4, IsaacGenerator.field_b, param2, param0, -108);
+                MusicVoice.a(param4, IsaacGenerator.field_b, param2, param0, -108);
               } else {
                 if (o.field_e.field_jc > o.field_e.field_cc) {
                   IsaacGenerator.field_b.field_Qb.field_Mb = null;
                   Ball.field_A.field_eb = true;
-                  ka.a(param4, IsaacGenerator.field_b, param2, param0, -108);
+                  MusicVoice.a(param4, IsaacGenerator.field_b, param2, param0, -108);
                 } else {
                   IsaacGenerator.field_b.field_Qb.field_Mb = GameCanvas.field_d;
                   Ball.field_A.field_eb = false;
@@ -242,7 +242,7 @@ final class c {
             }
             if (param3) {
               qh.field_f = id.field_Pb;
-              pq.a(-128, param3);
+              MusicPatch.a(-128, param3);
               if (ml.field_b > 0) {
                 na.a(param8, param3, -94, param2);
               }
@@ -262,11 +262,11 @@ final class c {
               } else {
                 IsaacGenerator.field_b.field_Qb.field_Mb = null;
                 Ball.field_A.field_eb = true;
-                ka.a(param4, IsaacGenerator.field_b, param2, param0, -108);
+                MusicVoice.a(param4, IsaacGenerator.field_b, param2, param0, -108);
               }
             } else {
               qh.field_f = (kp.field_a - 640) / 2;
-              pq.a(-128, param3);
+              MusicPatch.a(-128, param3);
               if (ml.field_b > 0) {
                 na.a(param8, param3, -94, param2);
                 AppletGameShell.field_e.field_S = 1;
@@ -285,7 +285,7 @@ final class c {
                 } else {
                   IsaacGenerator.field_b.field_Qb.field_Mb = null;
                   Ball.field_A.field_eb = true;
-                  ka.a(param4, IsaacGenerator.field_b, param2, param0, -108);
+                  MusicVoice.a(param4, IsaacGenerator.field_b, param2, param0, -108);
                 }
               } else {
                 AppletGameShell.field_e.field_S = 1;
@@ -299,12 +299,12 @@ final class c {
                 if (!hc.field_c) {
                   IsaacGenerator.field_b.field_Qb.field_Mb = null;
                   Ball.field_A.field_eb = true;
-                  ka.a(param4, IsaacGenerator.field_b, param2, param0, -108);
+                  MusicVoice.a(param4, IsaacGenerator.field_b, param2, param0, -108);
                 } else {
                   if (o.field_e.field_jc > o.field_e.field_cc) {
                     IsaacGenerator.field_b.field_Qb.field_Mb = null;
                     Ball.field_A.field_eb = true;
-                    ka.a(param4, IsaacGenerator.field_b, param2, param0, -108);
+                    MusicVoice.a(param4, IsaacGenerator.field_b, param2, param0, -108);
                   } else {
                     IsaacGenerator.field_b.field_Qb.field_Mb = GameCanvas.field_d;
                     Ball.field_A.field_eb = false;
@@ -316,7 +316,7 @@ final class c {
           }
         }
         um.a(param6, param9, param4, param0, param2, param1, (byte) -114);
-        ka.a(param4, TimedSplashScreen.field_u, param2, param0, 121);
+        MusicVoice.a(param4, TimedSplashScreen.field_u, param2, param0, 121);
         if (param5 <= 6) {
           field_g = -90;
         }

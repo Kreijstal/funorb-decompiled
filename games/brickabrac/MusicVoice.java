@@ -1,32 +1,32 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ka extends IntrusiveNode {
-    int field_x;
-    int field_r;
-    int field_s;
-    int field_z;
+final class MusicVoice extends IntrusiveNode {
+    int releaseProgress;
+    int portamentoDelta;
+    int volumeEnvelopeProgress;
+    int updateFrames;
     static tq field_l;
     static RgbSprite field_n;
-    int field_o;
+    int portamentoScale;
     static String field_C;
-    jm field_G;
-    int field_A;
-    int field_q;
-    int field_B;
-    pq field_k;
-    int field_p;
-    PcmStream field_y;
-    int field_v;
-    int field_D;
-    int field_w;
-    int field_t;
-    int field_i;
+    MusicEnvelope envelope;
+    int volumeEnvelopeIndex;
+    int exclusiveGroup;
+    int note;
+    MusicPatch patch;
+    int basePitch256;
+    PcmStream pcmStream;
+    int ageTicks;
+    int releaseEnvelopeIndex;
+    int decayProgress;
+    int notePan;
+    int vibratoPhase;
     static int field_E;
-    int field_m;
-    PcmSound field_F;
+    int velocityGain;
+    PcmSound sample;
     int field_j;
-    int field_u;
+    int channel;
 
     final static void a(String param0, int param1) {
         int stackIn_28_0 = 0;
@@ -42,7 +42,7 @@ final class ka extends IntrusiveNode {
           go.field_e = go.field_e + 1;
           if (-1 == ChocolateBackground.field_v &&
             ll.field_b == -1) {
-            ChocolateBackground.field_v = pq.pointerX;
+            ChocolateBackground.field_v = MusicPatch.pointerX;
             ll.field_b = po.pointerY;
           }
           if (param1 != 22546) {
@@ -537,7 +537,7 @@ final class ka extends IntrusiveNode {
                     if (var27Lifetime1 == 0) {
                       var25 = (String) (var25) + "<br>" + rd.a(ProducerFramebuffer.field_k, new String[]{(String) (var26)}, (byte) 103);
                     } else {
-                      var25 = (String) (var25) + "<br>" + jm.field_l + (String) (var26);
+                      var25 = (String) (var25) + "<br>" + MusicEnvelope.field_l + (String) (var26);
                     }
                   } else {
                     if (var27Lifetime1 == 0) {
@@ -591,17 +591,17 @@ final class ka extends IntrusiveNode {
         }
     }
 
-    final void a(int param0) {
-        this.field_y = null;
-        this.field_F = null;
-        this.field_k = null;
-        if (param0 > -39) {
+    final void releaseResources(int obfuscationGuard) {
+        this.pcmStream = null;
+        this.sample = null;
+        this.patch = null;
+        if (obfuscationGuard > -39) {
           return;
         }
         try {
-          this.field_G = null;
+          this.envelope = null;
         } catch (RuntimeException runtimeException) {
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "ka.B(" + param0 + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "ka.B(" + obfuscationGuard + ')');
         }
     }
 
@@ -862,7 +862,7 @@ final class ka extends IntrusiveNode {
         }
     }
 
-    ka() {
+    MusicVoice() {
     }
 
     static {

@@ -55,7 +55,7 @@ final class SpaceBackground extends BackgroundScene {
               HalloweenBackground.a(2, 0, false, colorIndex, NodeDequeCursor.field_b, var8);
               var8.setCacheKeys(this.sceneId, colorIndex, (byte) 78);
             }
-            AchievementBrowserScreen.a(jh.field_d, destinationX, scroll16, colorIndex, 306, 0, 0, var8.sprite, 2, lk.field_t, destinationY);
+            AchievementBrowserScreen.a(jh.field_d, destinationX, scroll16, colorIndex, 306, 0, 0, var8.sprite, 2, MusicVoiceMixer.field_t, destinationY);
           }
           return;
         }
@@ -68,7 +68,7 @@ final class SpaceBackground extends BackgroundScene {
             HalloweenBackground.a(2, 0, false, colorIndex, NodeDequeCursor.field_b, var7);
             var7.setCacheKeys(this.sceneId, colorIndex, (byte) 78);
           }
-          AchievementBrowserScreen.a(jh.field_d, destinationX, scroll16, colorIndex, 306, 0, 0, var7.sprite, 2, lk.field_t, destinationY);
+          AchievementBrowserScreen.a(jh.field_d, destinationX, scroll16, colorIndex, 306, 0, 0, var7.sprite, 2, MusicVoiceMixer.field_t, destinationY);
         }
     }
 
@@ -104,7 +104,7 @@ final class SpaceBackground extends BackgroundScene {
           BallPulseEffect.framebuffer.bindRaster((byte) 100);
           TableNameEntry.spaceCharacterSprite = pl.loadRgbSpriteByName("space", "space_character", (byte) -50, AchievementIcon.field_m);
           jh.field_d = jh.a(0, om.spaceNearSprite);
-          lk.field_t = jh.a(0, LevelResultSubmission.spaceMidSprite);
+          MusicVoiceMixer.field_t = jh.a(0, LevelResultSubmission.spaceMidSprite);
           NodeDequeCursor.field_b = jh.a(0, ng.spaceFarSprite);
           b.spaceLeverSprites = cr.loadRgbSpritesByName("space", AchievementIcon.field_m, "space_lever", 2);
           return true;

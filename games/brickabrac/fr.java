@@ -179,7 +179,7 @@ final class fr {
                 ag.buttonLabels[12] = bm.field_b;
               }
             } else {
-              ag.buttonLabels[12] = pq.field_m;
+              ag.buttonLabels[12] = MusicPatch.field_m;
             }
           }
         }

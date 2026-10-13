@@ -30,15 +30,15 @@ abstract class ug extends ib implements je {
         RuntimeException decompiledCaughtException = null;
         try {
           var13 = new mh(0L, (mh) null);
-          var13.field_Jb = se.a(param0, (byte) -18, param3);
-          var13.field_Gb = se.a(param12, (byte) -18, param7);
-          var13.field_D = se.a(param11, (byte) -18, param1);
-          var13.field_pb = se.a(param5, (byte) -18, param4);
+          var13.field_Jb = ByteArrayNode.a(param0, (byte) -18, param3);
+          var13.field_Gb = ByteArrayNode.a(param12, (byte) -18, param7);
+          var13.field_D = ByteArrayNode.a(param11, (byte) -18, param1);
+          var13.field_pb = ByteArrayNode.a(param5, (byte) -18, param4);
           if (param2 < 96) {
             var14 = (TextFont) null;
             ug.a(-26, -58, (byte) 79, 5, 18, -27, 69, 4, (TextFont) null, 4, -79, 47, -32);
           }
-          var13.field_Ab = se.a(param6, (byte) -18, param10);
+          var13.field_Ab = ByteArrayNode.a(param6, (byte) -18, param10);
           var13.field_X = param9;
           var13.field_O = param8;
           stackIn_3_0 = var13;

@@ -158,7 +158,7 @@ abstract class MovingBody extends IntrusiveNode {
             stackIn_11_0 = 3;
             return stackIn_11_0;
           }
-          if (ka.field_l == jm.field_f) {
+          if (MusicVoice.field_l == MusicEnvelope.field_f) {
             stackIn_15_0 = 1;
             return stackIn_15_0;
           }
@@ -166,7 +166,7 @@ abstract class MovingBody extends IntrusiveNode {
             stackIn_18_0 = 1;
             return stackIn_18_0;
           }
-          if (ik.field_g != jm.field_f) {
+          if (ik.field_g != MusicEnvelope.field_f) {
             stackIn_23_0 = -1;
             return stackIn_23_0;
           }

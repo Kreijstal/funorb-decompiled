@@ -434,7 +434,7 @@ class ib extends oc implements sd {
         param6 = param6 + (-(var9.canvasWidth / 2) + var7);
         param5 = param5 + (-(var9.canvasHeight / 2) + var8);
         if (param4) {
-          SoftwareFramebuffer.a(-111, param5, param6, lk.field_n[param0]);
+          SoftwareFramebuffer.a(-111, param5, param6, MusicVoiceMixer.field_n[param0]);
           BoundedFile.field_a[param0].f(param6, param5, 256);
         }
         var9.drawTransparent(param6, param5);

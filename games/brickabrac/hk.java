@@ -382,13 +382,13 @@ final class hk extends ib implements hf, en {
           }
           this.field_P.field_z = sf.field_X;
           if (this.field_O != null) {
-            this.field_O.field_z = ie.field_q;
+            this.field_O.field_z = MidiSynthesizer.field_q;
           }
           if (this.field_K) {
             this.field_M.field_z = LevelResultSubmission.field_o;
           } else {
             if (this.field_S) {
-              this.field_M.field_z = wp.field_i;
+              this.field_M.field_z = SoundCache.field_i;
               this.field_M.field_l = (ub) ((Object) new bb());
             } else {
               this.field_M.field_l = (ub) ((Object) new bb());

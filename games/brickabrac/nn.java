@@ -298,7 +298,7 @@ final class nn {
                 }
                 var2 = nk.a("mu_chat_tips", (byte) 35);
                 if (var2 != null) {
-                  ie.field_u = MenuButton.a(var2, (byte) 89);
+                  MidiSynthesizer.field_u = MenuButton.a(var2, (byte) 89);
                 }
                 var2 = nk.a("mu_chat_game", (byte) 126);
                 if (null != var2) {
@@ -870,7 +870,7 @@ final class nn {
                 }
                 var2 = nk.a("dob_enterforchat", (byte) 71);
                 if (var2 != null) {
-                  jm.field_i = MenuButton.a(var2, (byte) 108);
+                  MusicEnvelope.field_i = MenuButton.a(var2, (byte) 108);
                 }
                 var2 = nk.a("tab_hidechattemporarily", (byte) -11);
                 if (null != var2) {
@@ -922,7 +922,7 @@ final class nn {
                 }
                 var2 = nk.a("runescapeclan", (byte) -112);
                 if (null != var2) {
-                  wp.field_b = MenuButton.a(var2, (byte) 95);
+                  SoundCache.field_b = MenuButton.a(var2, (byte) 95);
                 }
                 var2 = nk.a("rated_membersonly", (byte) -106);
                 if (var2 != null) {
@@ -1014,7 +1014,7 @@ final class nn {
                 }
                 var2 = nk.a("gameopt_needchanging2", (byte) 121);
                 if (var2 != null) {
-                  jm.field_l = MenuButton.a(var2, (byte) 122);
+                  MusicEnvelope.field_l = MenuButton.a(var2, (byte) 122);
                 }
                 var2 = nk.a("gameopt_mightchange", (byte) 97);
                 if (var2 != null) {
@@ -1224,7 +1224,7 @@ final class nn {
                 }
                 var2 = nk.a("goback", (byte) -120);
                 if (var2 != null) {
-                  se.field_l = MenuButton.a(var2, (byte) 96);
+                  ByteArrayNode.field_l = MenuButton.a(var2, (byte) 96);
                 }
                 var2 = nk.a("otheroptions", (byte) -118);
                 if (null != var2) {
@@ -1460,7 +1460,7 @@ final class nn {
                 }
                 var2 = nk.a("creatingyouraccount", (byte) -116);
                 if (null != var2) {
-                  ie.field_o = MenuButton.a(var2, (byte) 88);
+                  MidiSynthesizer.field_o = MenuButton.a(var2, (byte) 88);
                 }
                 var2 = nk.a("create_youmustaccept", (byte) 36);
                 if (null != var2) {
@@ -1648,11 +1648,11 @@ final class nn {
                 }
                 var2 = nk.a("login_create_tooltip", (byte) 97);
                 if (var2 != null) {
-                  ie.field_q = MenuButton.a(var2, (byte) 80);
+                  MidiSynthesizer.field_q = MenuButton.a(var2, (byte) 80);
                 }
                 var2 = nk.a("login_justplay_tooltip", (byte) -128);
                 if (null != var2) {
-                  wp.field_i = MenuButton.a(var2, (byte) 111);
+                  SoundCache.field_i = MenuButton.a(var2, (byte) 111);
                 }
                 var2 = nk.a("login_back_tooltip", (byte) 41);
                 if (null != var2) {
@@ -1752,7 +1752,7 @@ final class nn {
                 }
                 var2 = nk.a("create_alert_doublespace", (byte) -126);
                 if (null != var2) {
-                  pq.field_n = MenuButton.a(var2, (byte) 99);
+                  MusicPatch.field_n = MenuButton.a(var2, (byte) 99);
                 }
                 var2 = nk.a("create_alert_passchars", (byte) -109);
                 if (var2 != null) {
@@ -1852,7 +1852,7 @@ final class nn {
                 }
                 var2 = nk.a("friendnotfound", (byte) 56);
                 if (null != var2) {
-                  ka.field_C = MenuButton.a(var2, (byte) 109);
+                  MusicVoice.field_C = MenuButton.a(var2, (byte) 109);
                 }
                 var2 = nk.a("ignorelistfull", (byte) 40);
                 if (null != var2) {
@@ -2182,7 +2182,7 @@ final class nn {
                 }
                 var2 = nk.a("on", (byte) -127);
                 if (var2 != null) {
-                  lk.field_q = MenuButton.a(var2, (byte) 80);
+                  MusicVoiceMixer.field_q = MenuButton.a(var2, (byte) 80);
                 }
                 var2 = nk.a("off", (byte) 125);
                 if (var2 != null) {
@@ -2494,7 +2494,7 @@ final class nn {
                 }
                 var2 = nk.a("mp_acceptrematch", (byte) -114);
                 if (var2 != null) {
-                  pq.field_m = MenuButton.a(var2, (byte) 83);
+                  MusicPatch.field_m = MenuButton.a(var2, (byte) 83);
                 }
                 var2 = nk.a("mp_acceptrematch_unrated", (byte) 12);
                 if (null != var2) {
@@ -2674,7 +2674,7 @@ final class nn {
                 }
                 var2 = nk.a("keychar_the_character_under_questionmark", (byte) 109);
                 if (null != var2) {
-                  wp.field_h = cq.a((byte) -99, var2[0]);
+                  SoundCache.field_h = cq.a((byte) -99, var2[0]);
                 }
                 var2 = nk.a("rating_noratings", (byte) -116);
                 if (null != var2) {
@@ -3423,7 +3423,7 @@ final class nn {
             }
           }
           if (var4_ref != null) {
-            wp.a((byte) 92, 0, (String) null, var4_ref, this.field_e, 2);
+            SoundCache.a((byte) 92, 0, (String) null, var4_ref, this.field_e, 2);
           }
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

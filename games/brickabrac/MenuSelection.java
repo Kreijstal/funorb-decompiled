@@ -264,10 +264,10 @@ final class MenuSelection {
           if (0 != var2) {
             if (var2 == 1) {
               var3 = var9.readInt(255);
-              var4 = (ln) (ie.field_v.first(-37));
+              var4 = (ln) (MidiSynthesizer.field_v.first(-37));
               while (var4 != null) {
                 if (var3 != var4.field_m) {
-                  var4 = (ln) (ie.field_v.next((byte) 116));
+                  var4 = (ln) (MidiSynthesizer.field_v.next((byte) 116));
                   continue;
                 }
                 break;

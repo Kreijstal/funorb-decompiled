@@ -36,13 +36,13 @@ abstract class IndexedSpriteGeometry {
         if (param0 <= 6) {
           return (String) null;
         }
-        if (ik.field_g == jm.field_f) {
+        if (ik.field_g == MusicEnvelope.field_f) {
           return am.field_cc;
         }
         if (!ma.field_I.b(96)) {
           return ma.field_I.a(0);
         }
-        if (ka.field_l == jm.field_f) {
+        if (MusicVoice.field_l == MusicEnvelope.field_f) {
           return ma.field_I.a(0);
         }
         return GameScreen.field_d;

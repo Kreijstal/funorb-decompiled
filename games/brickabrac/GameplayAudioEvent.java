@@ -22,21 +22,21 @@ final class GameplayAudioEvent extends IntrusiveNode {
         String stackIn_15_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (ka.field_l == jm.field_f) {
+          if (MusicVoice.field_l == MusicEnvelope.field_f) {
             return null;
           }
           if (param1 != 0) {
             stackIn_5_0 = (oh) null;
             return stackIn_5_0;
           }
-          if (up.field_v == ka.field_l &&
+          if (up.field_v == MusicVoice.field_l &&
             param0.equals(om.field_pc)) {
-            ka.field_l = ej.field_P;
+            MusicVoice.field_l = ej.field_P;
             stackIn_9_0 = he.field_H;
             return stackIn_9_0;
           }
           he.field_H = null;
-          ka.field_l = jm.field_f;
+          MusicVoice.field_l = MusicEnvelope.field_f;
           om.field_pc = param0;
           stackIn_11_0 = null;
           return (oh) (stackIn_11_0);

@@ -36,7 +36,7 @@ abstract class ArchiveSource {
             return true;
           }
           VolcanicBackground.field_w = param0;
-          ik.field_g = jm.field_f;
+          ik.field_g = MusicEnvelope.field_f;
           tf.field_i = param6;
           fj.field_Qb = param1;
           am.field_cc = param2;

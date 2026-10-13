@@ -24,9 +24,9 @@ abstract class ag extends oc implements sd {
           if (0 == var1) {
             var1 = 32;
           }
-          wp.a(1, -var1 + ScorePopup.field_p);
+          SoundCache.a(1, -var1 + ScorePopup.field_p);
         } else {
-          wp.a(1, 0);
+          SoundCache.a(1, 0);
         }
         var1Lifetime1 = -4 % ((73 - param0) / 40);
     }

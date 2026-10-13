@@ -102,7 +102,7 @@ final class dk extends ib implements ha, en, vf {
               var7Lifetime1 = var9Lifetime1;
             }
           }
-          lk.field_p = var7Lifetime1 + (NewAchievementsScreen.field_J - (var7Lifetime1 >> 1));
+          MusicVoiceMixer.field_p = var7Lifetime1 + (NewAchievementsScreen.field_J - (var7Lifetime1 >> 1));
           bg.field_r = ArcticBackground.field_r.itemCount * (GameCanvas.field_f + GameClock.field_g << 1);
           LevelPack.field_k = NewAchievementsScreen.field_J - (var7Lifetime1 >> 1);
           var8Lifetime2 = 0;
@@ -118,7 +118,7 @@ final class dk extends ib implements ha, en, vf {
             var8Lifetime2++;
           }
           mi.field_d = ea.field_e - (bg.field_r >> 1);
-          ArcticBackground.field_r.initializeSelection(aj.a(param4 - 46, po.pointerY, pq.pointerX), 0, param3, (byte) -127);
+          ArcticBackground.field_r.initializeSelection(aj.a(param4 - 46, po.pointerY, MusicPatch.pointerX), 0, param3, (byte) -127);
           if (param4 != 46) {
             field_R = (RgbSprite) null;
             return;
@@ -590,7 +590,7 @@ final class dk extends ib implements ha, en, vf {
         int var1 = 1;
         this.field_N = new bf("", (uh) null, var1 != 0);
         this.field_Q = new d(c.field_d, (uh) null);
-        this.field_P = new d(se.field_l, (uh) null);
+        this.field_P = new d(ByteArrayNode.field_l, (uh) null);
         this.field_J.field_z = hh.field_a;
         this.field_M.field_z = rf.field_d;
         this.field_H.field_z = ResourceArchive.field_e;

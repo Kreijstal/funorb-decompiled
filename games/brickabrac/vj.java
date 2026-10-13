@@ -33,14 +33,14 @@ final class vj {
           field_b = null;
           return;
         }
-        vm var2 = (vm) null;
-        vj.a(true, 99, (byte) -104, (vm) null);
+        MusicTrack var2 = (MusicTrack) null;
+        vj.a(true, 99, (byte) -104, (MusicTrack) null);
         field_f = null;
         field_a = null;
         field_b = null;
     }
 
-    final static void a(boolean param0, int param1, byte param2, vm param3) {
+    final static void a(boolean param0, int param1, byte param2, MusicTrack param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         Object var5 = null;
@@ -54,20 +54,20 @@ final class vj {
           if (null != dc.field_e) {
             ScorePopup.a(1048576, param3, param1, param0, -104);
           }
-          if (null == m.field_f) {
+          if (null == m.musicSynthesizer) {
             return;
           }
           var5 = DirectByteStorage.field_f;
           synchronized (var5) {
-            m.field_f.e(param1, -1, 16);
+            m.musicSynthesizer.setChannelGain(param1, -1, 16);
             if (param3 == IsaacGenerator.field_a) {
               return;
             }
-            m.field_f.f(-24774);
+            m.musicSynthesizer.f(-24774);
             DirectByteStorage.field_f.b();
             IsaacGenerator.field_a = param3;
             if (null != IsaacGenerator.field_a) {
-              m.field_f.a(IsaacGenerator.field_a, 127, param0);
+              m.musicSynthesizer.playTrack(IsaacGenerator.field_a, 127, param0);
             }
           }
           return;

@@ -264,7 +264,7 @@ final class n {
                   qo.field_J = new byte[cq.field_p];
                   h.field_D = new boolean[cq.field_p];
                 }
-                lk.field_s = false;
+                MusicVoiceMixer.field_s = false;
                 dc.field_g = false;
                 var13 = 0;
                 var9_intLifetime1 = var13;
@@ -282,7 +282,7 @@ final class n {
                 dn.field_K.field_eb = false;
                 if (dn.field_K.field_G) {
                   var9 = null;
-                  if (lk.field_s) {
+                  if (MusicVoiceMixer.field_s) {
                     var9 = "<col=A00000>" + og.field_ac + "</col>";
                     var11 = var9;
                     var9 = var11;

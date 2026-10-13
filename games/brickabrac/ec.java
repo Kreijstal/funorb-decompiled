@@ -81,7 +81,7 @@ final class ec extends ib implements en {
         if (param0 != 6846) {
           ec.a(-62);
         }
-        pq.a(0, GameScreen.field_b, false);
+        MusicPatch.a(0, GameScreen.field_b, false);
     }
 
     final void a(int param0, int param1, int param2, byte param3) {

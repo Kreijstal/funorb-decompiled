@@ -1252,7 +1252,7 @@ class um implements ub, qe {
               if (var13.field_kc != 1) {
                 var35Lifetime2 = AchievementsScreen.field_H[var13.field_kc];
               } else {
-                var35Lifetime2 = wp.field_b;
+                var35Lifetime2 = SoundCache.field_b;
               }
               ep.field_e = FarmBackground.field_s + " - " + var35Lifetime2;
             }

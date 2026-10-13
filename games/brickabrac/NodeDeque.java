@@ -192,7 +192,7 @@ final class NodeDeque {
     }
 
     final static void a(boolean param0, int param1) {
-        sb.field_c = !param0 ? new vj(mh.field_Z, ji.field_b) : new vj(ie.field_u, t.field_f);
+        sb.field_c = !param0 ? new vj(mh.field_Z, ji.field_b) : new vj(MidiSynthesizer.field_u, t.field_f);
         NinjaBackground.field_w = new mh(0L, (mh) null);
         NinjaBackground.field_w.a(sb.field_c.field_d, 0);
         NinjaBackground.field_w.a(GameUiController.field_e, 0);
@@ -361,7 +361,7 @@ final class NodeDeque {
         return null;
     }
 
-    final static void a(vm param0, int param1, boolean param2) {
+    final static void a(MusicTrack param0, int param1, boolean param2) {
         try {
           vj.a(param2, 256, (byte) 121, param0);
           if (param1 != -27300) {

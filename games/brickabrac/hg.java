@@ -28,9 +28,9 @@ final class hg {
           if (param2 != -1) {
             field_b = (String) null;
           }
-          if (null != wp.field_d &&
-            !wp.field_d.equals(param0.getParameter("settings"))) {
-            var3 = wp.field_d;
+          if (null != SoundCache.field_d &&
+            !SoundCache.field_d.equals(param0.getParameter("settings"))) {
+            var3 = SoundCache.field_d;
             var4 = var3;
             var4Lifetime2 = var3;
           }

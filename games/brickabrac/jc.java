@@ -230,7 +230,7 @@ abstract class jc extends ib {
             }
             if (pp.field_a != 0 &&
               pp.field_a != 1) {
-              if (!ka.a((byte) 91)) {
+              if (!MusicVoice.a((byte) 91)) {
                 return;
               }
               if (ga.field_i == 0) {

@@ -34,7 +34,7 @@ final class KeyboardInput implements java.awt.event.KeyListener, java.awt.event.
           }
           var8 = pf.a(param1, param2);
           if (var8 == null) {
-            stackIn_9_0 = rd.a(ka.field_C, new String[]{param2}, (byte) 103);
+            stackIn_9_0 = rd.a(MusicVoice.field_C, new String[]{param2}, (byte) 103);
             return stackIn_9_0;
           }
           bf.field_N.a((byte) 107, var8);

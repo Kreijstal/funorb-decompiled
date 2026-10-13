@@ -230,8 +230,8 @@ final class mm extends mh {
               }
             }
           }
-          if (null != m.field_f) {
-            stackIn_20_0 = m.field_f.d(-1);
+          if (null != m.musicSynthesizer) {
+            stackIn_20_0 = m.musicSynthesizer.hasMidiData(-1);
             if (!stackIn_20_0) {
               IsaacGenerator.field_a = null;
               return;

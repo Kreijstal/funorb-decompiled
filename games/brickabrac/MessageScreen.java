@@ -5,7 +5,7 @@ final class MessageScreen extends MenuScreen {
     static mh field_r;
     static String field_u;
     static mh field_s;
-    static vm field_t;
+    static MusicTrack field_t;
 
     public static void f(byte param0) {
         field_t = null;

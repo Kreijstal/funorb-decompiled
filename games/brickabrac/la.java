@@ -465,7 +465,7 @@ final class la {
         if (param0 < 117) {
           return true;
         }
-        return ka.field_l == jm.field_f ? true : false;
+        return MusicVoice.field_l == MusicEnvelope.field_f ? true : false;
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int[] param5, int param6) {

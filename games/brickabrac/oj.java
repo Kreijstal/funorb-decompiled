@@ -8,7 +8,7 @@ final class oj extends ep {
     private int field_n;
     private int field_l;
     static java.awt.Image field_r;
-    static vm field_q;
+    static MusicTrack field_q;
     static String field_o;
     private boolean field_x;
     static long lastGameReadMillis;

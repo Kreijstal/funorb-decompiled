@@ -189,7 +189,7 @@ class vb extends d {
           if (this.field_n == 1) {
             if (this.field_l instanceof qe) {
               var7 = (qe) ((Object) this.field_l);
-              var6 = var7.a((oc) (this), pq.pointerX, true, param3, po.pointerY, param2);
+              var6 = var7.a((oc) (this), MusicPatch.pointerX, true, param3, po.pointerY, param2);
               if (var6 != -1) {
                 if (this.field_M &&
                   this.field_R > var6 &&
@@ -532,7 +532,7 @@ class vb extends d {
           if (!(this.field_l instanceof qe)) {
             return false;
           }
-          var8_int = ((qe) ((Object) this.field_l)).a((oc) (this), pq.pointerX, true, param3, po.pointerY, param2);
+          var8_int = ((qe) ((Object) this.field_l)).a((oc) (this), MusicPatch.pointerX, true, param3, po.pointerY, param2);
           if (var8_int == -1) {
             stackIn_7_1 = 0;
           } else {

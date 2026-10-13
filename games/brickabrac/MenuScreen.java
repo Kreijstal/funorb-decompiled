@@ -153,7 +153,7 @@ abstract class MenuScreen extends GameScreen {
           this.handleNavigationKey(-120, keyCode, character);
           this.selection.pollKeyboardCode((byte) -124);
           if (this.a(false, (byte) 126)) {
-            wp.playUiSound(8, ta.uiSounds[0]);
+            SoundCache.playUiSound(8, ta.uiSounds[0]);
           }
           this.c(true, var4);
         } else {
@@ -203,9 +203,9 @@ abstract class MenuScreen extends GameScreen {
         if (inputEnabled &&
           !vh.field_L &&
           !ed.field_d) {
-          this.selection.updatePointer(this.findButtonAt(po.pointerY, (byte) -106, pq.pointerX), 27479, this.findButtonAt(qo.pressY, (byte) -80, tb.pressX));
+          this.selection.updatePointer(this.findButtonAt(po.pointerY, (byte) -106, MusicPatch.pointerX), 27479, this.findButtonAt(qo.pressY, (byte) -80, tb.pressX));
           if (this.a(true, (byte) -117)) {
-            wp.playUiSound(8, ta.uiSounds[0]);
+            SoundCache.playUiSound(8, ta.uiSounds[0]);
           }
         }
         this.c(true, var4);
@@ -405,7 +405,7 @@ abstract class MenuScreen extends GameScreen {
                 }
                 if (this.selection.isHeld(false)) {
                   var8 = -120 + var5.width + var5.x + var5.x + dg.field_d >> 1;
-                  var9 = pq.pointerX - var8;
+                  var9 = MusicPatch.pointerX - var8;
                   var10 = var9 * MenuSelection.e((byte) 51) / 120;
                   if (var10 <= 0) {
                     ma.a((byte) -114, 0);
@@ -420,7 +420,7 @@ abstract class MenuScreen extends GameScreen {
                 }
                 if (((var7 != 0)) && ((!(this.selection.isHeld(false)) ||
                   !(MembershipBenefitsScreen.clientTick <= ea.field_d)))) {
-                  wp.playUiSound(8, ta.uiSounds[1]);
+                  SoundCache.playUiSound(8, ta.uiSounds[1]);
                   ea.field_d = MembershipBenefitsScreen.clientTick + 20;
                 }
                 break regionExit1;
@@ -440,7 +440,7 @@ abstract class MenuScreen extends GameScreen {
                 }
                 if (!(!this.selection.isHeld(false))) {
                   var8 = -120 + (dg.field_d + (var5.x + var5.width) + var5.x) >> 1;
-                  var9 = -var8 + pq.pointerX;
+                  var9 = -var8 + MusicPatch.pointerX;
                   var10 = 256 * var9 / 120;
                   if (var10 <= 0) {
                     BubbleDistortion.a((byte) 86, 0);
@@ -709,7 +709,7 @@ abstract class MenuScreen extends GameScreen {
         if (obfuscationGuard <= 96) {
           this.handleKey('F', -76, -96);
         }
-        this.selection.initializeSelection(this.findButtonAt(po.pointerY, (byte) -106, pq.pointerX), initialSelection, usePointer, (byte) -127);
+        this.selection.initializeSelection(this.findButtonAt(po.pointerY, (byte) -106, MusicPatch.pointerX), initialSelection, usePointer, (byte) -127);
     }
 
     void onExit(byte obfuscationGuard) {
