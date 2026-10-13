@@ -59,7 +59,7 @@ final class SaveResultsPromptScreen extends MenuScreen {
         var4.backfillByteLength((byte) 121, -var5 + var4.position);
     }
 
-    final static og a(int[] param0, mh param1, mh param2, mh param3, byte param4) {
+    final static og a(int[] param0, UiComponent param1, UiComponent param2, UiComponent param3, byte param4) {
         int var10_int = 0;
         Object stackIn_9_0 = null;
         og stackIn_11_0 = null;
@@ -82,14 +82,14 @@ final class SaveResultsPromptScreen extends MenuScreen {
         Exception var10 = null;
         wd var11 = null;
         int var12 = 0;
-        mh var13 = null;
+        UiComponent var13 = null;
         char[] var14 = null;
         char[] var15 = null;
         var12 = BrickABrac.field_J ? 1 : 0;
         try {
           if (param4 != -78) {
-            var13 = (mh) null;
-            SaveResultsPromptScreen.a((int[]) null, (mh) null, (mh) null, (mh) null, (byte) -45);
+            var13 = (UiComponent) null;
+            SaveResultsPromptScreen.a((int[]) null, (UiComponent) null, (UiComponent) null, (UiComponent) null, (byte) -45);
           }
           var5_int = param0.length;
           var6 = new String[var5_int];

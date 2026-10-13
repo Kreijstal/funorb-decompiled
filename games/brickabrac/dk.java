@@ -46,7 +46,7 @@ final class dk extends ib implements ha, en, vf {
           if (!param1) {
             stackIn_4_0 = g.field_q;
           } else {
-            stackIn_4_0 = mh.field_mb;
+            stackIn_4_0 = UiComponent.field_mb;
           }
           var6 = stackIn_4_0;
           if (LevelSelectScreen.field_v == 0) {

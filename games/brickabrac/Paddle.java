@@ -7,7 +7,7 @@ final class Paddle extends RectangleBody {
     int controlMode;
     int field_w;
     int boardSpan256;
-    static mh field_C;
+    static UiComponent field_C;
     static int field_x;
     private int centerX256;
     static int[] projectedVertexDepth;
@@ -107,7 +107,7 @@ final class Paddle extends RectangleBody {
         if (this.reboundSpeedStage != 8) {
           this.reboundSpeedStage = this.reboundSpeedStage + 1;
           if (!obfuscationGuard) {
-            field_C = (mh) null;
+            field_C = (UiComponent) null;
           }
           return;
         }

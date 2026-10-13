@@ -5,7 +5,7 @@ final class ll {
     static String field_a;
     static me field_d;
     static int field_b;
-    static mh field_e;
+    static UiComponent field_e;
     static RgbSprite field_c;
 
     final static boolean a(String param0, byte param1, String param2) {
@@ -22,7 +22,7 @@ final class ll {
           param2 = wj.a(-1, param2, '_', "");
           var3 = w.a(73, param0);
           if (param1 <= 117) {
-            field_e = (mh) null;
+            field_e = (UiComponent) null;
           }
           stackIn_7_0 = (-1 != param2.indexOf(param0)) || (param2.indexOf(var3) != -1);
           return stackIn_7_0;

@@ -1,28 +1,28 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class id extends mh {
+final class id extends UiComponent {
     static int field_Pb;
     long field_gc;
     String field_hc;
     boolean field_Qb;
-    mh field_Tb;
-    mh field_Rb;
+    UiComponent field_Tb;
+    UiComponent field_Rb;
     static String field_bc;
     long field_Xb;
-    mh field_cc;
+    UiComponent field_cc;
     boolean field_ec;
     int field_Wb;
     int field_kc;
     static String field_jc;
-    mh field_Vb;
+    UiComponent field_Vb;
     int field_ac;
     int field_Zb;
     String field_Yb;
     boolean field_fc;
     static String field_Sb;
     int field_Ub;
-    mh field_dc;
+    UiComponent field_dc;
     int field_ic;
 
     public static void h(int param0) {
@@ -49,7 +49,7 @@ final class id extends mh {
     }
 
     id(String param0, String param1, long param2) {
-        super(0L, (mh) null);
+        super(0L, (UiComponent) null);
         CharSequence var6 = null;
         try {
           this.field_hc = param0;

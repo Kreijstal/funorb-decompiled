@@ -8,7 +8,7 @@ final class ok {
     static RgbSprite field_g;
     static String field_e;
     static int field_f;
-    static mh field_d;
+    static UiComponent field_d;
 
     final static void a(int param0) {
         if (!LevelPackSelectScreen.field_s) {

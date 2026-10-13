@@ -5,11 +5,11 @@ final class NinjaBackground extends BackgroundScene {
     static String field_s;
     static NodeDeque pendingLevelResults;
     static MouseWheelSource mouseWheelSource;
-    static mh field_w;
+    static UiComponent field_w;
     static RgbSprite parisNearSprite;
     static boolean frameFocus;
     static String field_v;
-    static boolean field_u;
+    static boolean uiHoverClaimed;
 
     final RgbSprite c(byte param0) {
         if (param0 >= -74) {

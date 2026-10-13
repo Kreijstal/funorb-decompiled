@@ -4,7 +4,7 @@
 final class MotionWaypoint extends MovingBody {
     static RgbSprite halloweenMoonSprite;
     static int field_q;
-    static mh field_s;
+    static UiComponent field_s;
     int durationTicks;
     static boolean[][] field_r;
 
@@ -66,7 +66,7 @@ final class MotionWaypoint extends MovingBody {
           Mesh3D.a(true, (String) null, "");
           return;
         }
-        field_s = (mh) null;
+        field_s = (UiComponent) null;
         var2Lifetime1 = (String) null;
         Mesh3D.a(true, (String) null, "");
     }
@@ -80,7 +80,7 @@ final class MotionWaypoint extends MovingBody {
         RuntimeException decompiledCaughtException = null;
         try {
           if (obfuscationGuard < 79) {
-            field_s = (mh) null;
+            field_s = (UiComponent) null;
           }
           stackIn_3_0 = 1734820418 ^ super.computeSyncChecksum(99, diagnostics) ^ 101 * this.durationTicks + 42148 << 2;
           return stackIn_3_0;

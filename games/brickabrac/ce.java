@@ -50,16 +50,16 @@ final class ce {
         if (!TooltipSprite.field_p) {
           return;
         }
-        wd.field_w.a(param0, -15211);
+        wd.field_w.updateRoot(param0, -15211);
         var4 = hd.field_a.i(28) ? 1 : 0;
         if (0 != BackgroundScene.pressedButton) {
           if (var4 != 0) {
             if (!param0) {
-              wd.field_w.a(param0, -15211);
+              wd.field_w.updateRoot(param0, -15211);
               if (param2 < 89) {
                 field_e = (PaletteFont) null;
               }
-              var5 = hd.field_a.e((byte) -92) + hd.field_a.field_Eb;
+              var5 = hd.field_a.e((byte) -92) + hd.field_a.screenX;
               if (var5 > 640) {
                 HighscoresScreen.field_v = HighscoresScreen.field_v + 5;
                 return;
@@ -74,9 +74,9 @@ final class ce {
               return;
             }
             hd.field_a.a(38, param3, param1);
-            wd.field_w.a(param0, -15211);
+            wd.field_w.updateRoot(param0, -15211);
             if (param2 >= 89) {
-              var5Lifetime2 = hd.field_a.e((byte) -92) + hd.field_a.field_Eb;
+              var5Lifetime2 = hd.field_a.e((byte) -92) + hd.field_a.screenX;
               if (var5Lifetime2 > 640) {
                 HighscoresScreen.field_v = HighscoresScreen.field_v + 5;
                 return;
@@ -91,7 +91,7 @@ final class ce {
               return;
             }
             field_e = (PaletteFont) null;
-            var5Lifetime3 = hd.field_a.e((byte) -92) + hd.field_a.field_Eb;
+            var5Lifetime3 = hd.field_a.e((byte) -92) + hd.field_a.screenX;
             if (var5Lifetime3 <= 640) {
               if (635 <= var5Lifetime3) {
                 return;
@@ -112,12 +112,12 @@ final class ce {
           hd.field_a.a(38, param3, param1);
         }
         if (var4 != 0) {
-          wd.field_w.a(param0, -15211);
+          wd.field_w.updateRoot(param0, -15211);
         }
         if (param2 < 89) {
           field_e = (PaletteFont) null;
         }
-        var5Lifetime1 = hd.field_a.e((byte) -92) + hd.field_a.field_Eb;
+        var5Lifetime1 = hd.field_a.e((byte) -92) + hd.field_a.screenX;
         if (var5Lifetime1 > 640) {
           HighscoresScreen.field_v = HighscoresScreen.field_v + 5;
           return;

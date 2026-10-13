@@ -6,7 +6,7 @@ import java.util.*;
 final class DualLinkDeque implements Iterable {
     static KeyboardInput keyboardInput;
     DualLinkNode sentinel;
-    static mh field_d;
+    static UiComponent field_d;
     static int field_b;
 
     final static boolean a(byte param0, String param1) {
@@ -93,7 +93,7 @@ final class DualLinkDeque implements Iterable {
           }
           node.secondaryNext = this.sentinel;
           if (obfuscationGuard > -112) {
-            field_d = (mh) null;
+            field_d = (UiComponent) null;
           }
           node.secondaryPrevious = this.sentinel.secondaryPrevious;
           node.secondaryPrevious.secondaryNext = node;
@@ -140,8 +140,8 @@ final class DualLinkDeque implements Iterable {
         }
         oj.a(param0, (byte) 123);
         if (nf.field_V) {
-          Rasterizer2D.darkenRectangle(sb.field_c.field_d.field_P, sb.field_c.field_d.field_zb, sb.field_c.field_d.field_Ib, sb.field_c.field_d.field_cb);
-          sb.field_c.field_d.a(true, param0);
+          Rasterizer2D.darkenRectangle(sb.field_c.field_d.localX, sb.field_c.field_d.localY, sb.field_c.field_d.width, sb.field_c.field_d.height);
+          sb.field_c.field_d.drawRoot(true, param0);
         }
         if (!param1) {
           IntrusiveHashTable.a(7070, param0);

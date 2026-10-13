@@ -69,7 +69,7 @@ final class LevelList {
         ag.buttonLabels[14] = pl.field_c[0];
         sl.field_A[3] = sj.field_e;
         ag.buttonLabels[39] = BackgroundScene.field_o;
-        ag.buttonLabels[23] = mh.field_mb;
+        ag.buttonLabels[23] = UiComponent.field_mb;
         ag.buttonLabels[21] = ArchiveNetworkClient.field_r;
         ag.buttonLabels[17] = LevelCompleteScreen.field_E[0];
         ag.buttonLabels[38] = kk.field_a;

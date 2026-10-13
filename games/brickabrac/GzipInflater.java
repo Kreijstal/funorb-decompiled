@@ -8,7 +8,7 @@ final class GzipInflater {
     private java.util.zip.Inflater inflater;
     static RgbSprite[] field_a;
     static boolean field_g;
-    static mh field_d;
+    static UiComponent field_d;
     static int field_e;
     static RgbSprite[][] desertCapsSprites;
     static String[] field_c;

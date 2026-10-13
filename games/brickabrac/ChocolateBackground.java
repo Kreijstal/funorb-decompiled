@@ -5,7 +5,7 @@ final class ChocolateBackground extends BackgroundScene {
     static String field_y;
     static IsaacGenerator field_w;
     static String field_t;
-    static mh field_u;
+    static UiComponent field_u;
     static String field_s;
     static boolean field_r;
     private static RgbSprite chocolateMidSprite;

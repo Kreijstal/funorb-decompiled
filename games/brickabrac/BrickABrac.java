@@ -658,7 +658,7 @@ public final class BrickABrac extends InteractiveGameClient {
         ni.d(true);
         fj.e((byte) 33);
         ba.a((byte) -115);
-        mh.c((byte) 88);
+        UiComponent.c((byte) 88);
         br.h(21);
         hj.h(-48);
         nn.a(0);

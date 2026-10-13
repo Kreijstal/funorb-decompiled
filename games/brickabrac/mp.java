@@ -1,12 +1,12 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class mp extends mh {
+final class mp extends UiComponent {
     String field_Rb;
-    mh field_Wb;
+    UiComponent field_Wb;
     int field_Sb;
     static String field_Pb;
-    mh field_Xb;
+    UiComponent field_Xb;
     static NodeDeque field_Tb;
     String field_Ub;
     String field_Qb;
@@ -14,7 +14,7 @@ final class mp extends mh {
     String field_ac;
     static RgbSprite[] field_Vb;
     static RgbSprite field_Zb;
-    mh field_Yb;
+    UiComponent field_Yb;
 
     final static void shadeAndDrawMesh(int highlightZ, int diffuseX, int highlightX, int diffuseZ, Mesh3D mesh, byte obfuscationGuard, int highlightY, int diffuseY) {
         int diffuseResponse = 0;
@@ -227,7 +227,7 @@ final class mp extends mh {
     }
 
     mp() {
-        super(0L, (mh) null);
+        super(0L, (UiComponent) null);
     }
 
     final static void a(int param0, ff param1, boolean param2, boolean param3, boolean param4) {

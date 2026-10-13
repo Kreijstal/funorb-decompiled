@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class og extends mh {
+final class og extends UiComponent {
     private int field_Xb;
     static int field_Wb;
     private int field_dc;
@@ -157,7 +157,7 @@ final class og extends mh {
           while (var5 < this.field_cc) {
             var3_int = var5 * this.field_dc;
             var4 = this.field_ec * this.field_ec;
-            this.field_Qb[var5].field_zb = (var4 * (-this.field_db + this.field_Sb) + var3_int * (144 - var4)) / 144;
+            this.field_Qb[var5].localY = (var4 * (-this.screenY + this.field_Sb) + var3_int * (144 - var4)) / 144;
             var5++;
             if (var6 != 0) {
               return;
@@ -192,13 +192,13 @@ final class og extends mh {
           while (!(decompiledNaturalLoopExit0 = (this.field_Qb.length <= var4_int))) {
             var5 = this.field_Qb[var4_int];
             stackIn_17_0 = -2;
-            stackIn_17_1 = ~var5.field_L;
+            stackIn_17_1 = ~var5.pressedButton;
             if (var6 == 0) {
               if (stackIn_17_0 == stackIn_17_1) {
                 this.a(param2, var4_int, param0 ^ 38, param1);
                 stackIn_13_0 = var5;
                 stackIn_14_1 = (this.field_Tb == var4_int);
-                stackIn_13_0.field_Nb = stackIn_14_1;
+                stackIn_13_0.selected = stackIn_14_1;
               }
               var4_int++;
               continue;
@@ -260,8 +260,8 @@ final class og extends mh {
           scanLoop1: while (true) {
             if (var3 < var2.length) {
               var4 = var2[var3];
-              var4.field_L = 0;
-              var4.field_Nb = false;
+              var4.pressedButton = 0;
+              var4.selected = false;
               var3++;
               if (var5 == 0) {
                 continue;
@@ -312,7 +312,7 @@ final class og extends mh {
               stackIn_17_0 = var2_int;
               stackIn_17_1 = -1;
               if (var6 == 0) {
-                if (stackIn_17_1 == ~var5.field_L) {
+                if (stackIn_17_1 == ~var5.pressedButton) {
                   stackIn_13_1 = 0;
                 } else {
                   stackIn_13_1 = 1;
@@ -411,7 +411,7 @@ final class og extends mh {
         }
     }
 
-    og(long param0, mh param1, mh param2, mh param3, og[] param4, int[] param5, String[] param6, char[] param7) {
+    og(long param0, UiComponent param1, UiComponent param2, UiComponent param3, og[] param4, int[] param5, String[] param6, char[] param7) {
         super(param0, param1);
         RuntimeException stackIn_25_0 = null;
         StringBuilder stackIn_25_1 = null;
@@ -444,7 +444,7 @@ final class og extends mh {
           this.field_Ub = param5;
           this.field_fc = param7;
           this.field_cc = this.field_Ub.length;
-          var10 = param3.field_O;
+          var10 = param3.font;
           this.field_dc = var10.descent + (var10.ascent + 2);
           this.field_Pb = this.field_dc * this.field_cc;
           this.field_Rb = 0;
@@ -463,8 +463,8 @@ final class og extends mh {
                 this.field_Ub[var13] == -1) {
                 var14 = uf.field_e;
               }
-              this.field_Qb[var13] = new rk(0L, param2, (mh) null, param3, (RgbSprite) (var14), param6[var13]);
-              this.a(this.field_Qb[var13], 0);
+              this.field_Qb[var13] = new rk(0L, param2, (UiComponent) null, param3, (RgbSprite) (var14), param6[var13]);
+              this.addChild(this.field_Qb[var13], 0);
               var15 = var10.measureText(param6[var13]);
               if (var15 > this.field_Rb) {
                 this.field_Rb = var15;
@@ -1460,14 +1460,14 @@ final class og extends mh {
         var9 = BrickABrac.field_J ? 1 : 0;
         try {
           this.field_Xb = this.field_Rb + 2 * param4;
-          this.a(this.field_Pb, -this.field_Pb + param2, param1, this.field_Xb, (byte) 64);
+          this.setBounds(this.field_Pb, -this.field_Pb + param2, param1, this.field_Xb, (byte) 64);
           if (param5 != this.field_Sb) {
             this.field_Sb = param5;
             this.a(this.field_ec, (byte) -81);
           }
           var7_int = param0;
           while (var7_int < this.field_cc) {
-            this.field_Qb[var7_int].a(-10411, this.field_Qb[var7_int].field_zb, param4, param3, 0, this.field_dc, this.field_Xb);
+            this.field_Qb[var7_int].a(-10411, this.field_Qb[var7_int].localY, param4, param3, 0, this.field_dc, this.field_Xb);
             var7_int++;
             if (var9 != 0) {
               return;
@@ -1476,14 +1476,14 @@ final class og extends mh {
           if (this.field_Tb != -1 &&
             this.field_bc[this.field_Tb] != null) {
             var7_intLifetime1 = this.field_bc[this.field_Tb].field_cc;
-            var8 = this.field_zb + (var7_intLifetime1 + this.field_Tb) * this.field_dc;
+            var8 = this.localY + (var7_intLifetime1 + this.field_Tb) * this.field_dc;
             while (param2 < var8) {
               var8 = var8 - this.field_dc;
               if (var9 != 0) {
                 return;
               }
             }
-            this.field_bc[this.field_Tb].a(0, this.field_Xb + param1, var8, param3, param4, this.field_Qb[this.field_Tb].field_db);
+            this.field_bc[this.field_Tb].a(0, this.field_Xb + param1, var8, param3, param4, this.field_Qb[this.field_Tb].screenY);
             return;
           }
           return;

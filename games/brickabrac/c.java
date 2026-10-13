@@ -91,8 +91,8 @@ final class c {
             if (ml.field_b > 0) {
               na.a(param8, param3, -94, param2);
             }
-            AppletGameShell.field_e.field_S = 1;
-            AppletGameShell.field_e.field_V = Paddle.field_C.field_V;
+            AppletGameShell.field_e.horizontalAlignment = 1;
+            AppletGameShell.field_e.textInset = Paddle.field_C.textInset;
             if (0 < IntArrayRequest.field_j) {
               n.a(param2, param8, param3, (byte) -76);
             }
@@ -101,12 +101,12 @@ final class c {
             }
             if (hc.field_c &&
               o.field_e.field_jc <= o.field_e.field_cc) {
-              IsaacGenerator.field_b.field_Qb.field_Mb = GameCanvas.field_d;
-              Ball.field_A.field_eb = false;
+              IsaacGenerator.field_b.field_Qb.text = GameCanvas.field_d;
+              Ball.field_A.enabled = false;
               jh.a(true, IsaacGenerator.field_b.field_Rb);
             } else {
-              IsaacGenerator.field_b.field_Qb.field_Mb = null;
-              Ball.field_A.field_eb = true;
+              IsaacGenerator.field_b.field_Qb.text = null;
+              Ball.field_A.enabled = true;
               MusicVoice.a(param4, IsaacGenerator.field_b, param2, param0, -108);
             }
           } else {
@@ -114,8 +114,8 @@ final class c {
             MusicPatch.a(-128, param3);
             if (ml.field_b > 0) {
               na.a(param8, param3, -94, param2);
-              AppletGameShell.field_e.field_S = 1;
-              AppletGameShell.field_e.field_V = Paddle.field_C.field_V;
+              AppletGameShell.field_e.horizontalAlignment = 1;
+              AppletGameShell.field_e.textInset = Paddle.field_C.textInset;
               if (0 < IntArrayRequest.field_j) {
                 n.a(param2, param8, param3, (byte) -76);
               }
@@ -124,17 +124,17 @@ final class c {
               }
               if (hc.field_c &&
                 o.field_e.field_jc <= o.field_e.field_cc) {
-                IsaacGenerator.field_b.field_Qb.field_Mb = GameCanvas.field_d;
-                Ball.field_A.field_eb = false;
+                IsaacGenerator.field_b.field_Qb.text = GameCanvas.field_d;
+                Ball.field_A.enabled = false;
                 jh.a(true, IsaacGenerator.field_b.field_Rb);
               } else {
-                IsaacGenerator.field_b.field_Qb.field_Mb = null;
-                Ball.field_A.field_eb = true;
+                IsaacGenerator.field_b.field_Qb.text = null;
+                Ball.field_A.enabled = true;
                 MusicVoice.a(param4, IsaacGenerator.field_b, param2, param0, -108);
               }
             } else {
-              AppletGameShell.field_e.field_S = 1;
-              AppletGameShell.field_e.field_V = Paddle.field_C.field_V;
+              AppletGameShell.field_e.horizontalAlignment = 1;
+              AppletGameShell.field_e.textInset = Paddle.field_C.textInset;
               if (0 < IntArrayRequest.field_j) {
                 n.a(param2, param8, param3, (byte) -76);
               }
@@ -142,17 +142,17 @@ final class c {
                 nh.a(true, param3, param8, param2, param7);
               }
               if (!hc.field_c) {
-                IsaacGenerator.field_b.field_Qb.field_Mb = null;
-                Ball.field_A.field_eb = true;
+                IsaacGenerator.field_b.field_Qb.text = null;
+                Ball.field_A.enabled = true;
                 MusicVoice.a(param4, IsaacGenerator.field_b, param2, param0, -108);
               } else {
                 if (o.field_e.field_jc > o.field_e.field_cc) {
-                  IsaacGenerator.field_b.field_Qb.field_Mb = null;
-                  Ball.field_A.field_eb = true;
+                  IsaacGenerator.field_b.field_Qb.text = null;
+                  Ball.field_A.enabled = true;
                   MusicVoice.a(param4, IsaacGenerator.field_b, param2, param0, -108);
                 } else {
-                  IsaacGenerator.field_b.field_Qb.field_Mb = GameCanvas.field_d;
-                  Ball.field_A.field_eb = false;
+                  IsaacGenerator.field_b.field_Qb.text = GameCanvas.field_d;
+                  Ball.field_A.enabled = false;
                   jh.a(true, IsaacGenerator.field_b.field_Rb);
                 }
               }
@@ -179,8 +179,8 @@ final class c {
               if (ml.field_b > 0) {
                 na.a(param8, param3, -94, param2);
               }
-              AppletGameShell.field_e.field_S = 1;
-              AppletGameShell.field_e.field_V = Paddle.field_C.field_V;
+              AppletGameShell.field_e.horizontalAlignment = 1;
+              AppletGameShell.field_e.textInset = Paddle.field_C.textInset;
               if (0 < IntArrayRequest.field_j) {
                 n.a(param2, param8, param3, (byte) -76);
               }
@@ -189,12 +189,12 @@ final class c {
               }
               if (hc.field_c &&
                 o.field_e.field_jc <= o.field_e.field_cc) {
-                IsaacGenerator.field_b.field_Qb.field_Mb = GameCanvas.field_d;
-                Ball.field_A.field_eb = false;
+                IsaacGenerator.field_b.field_Qb.text = GameCanvas.field_d;
+                Ball.field_A.enabled = false;
                 jh.a(true, IsaacGenerator.field_b.field_Rb);
               } else {
-                IsaacGenerator.field_b.field_Qb.field_Mb = null;
-                Ball.field_A.field_eb = true;
+                IsaacGenerator.field_b.field_Qb.text = null;
+                Ball.field_A.enabled = true;
                 MusicVoice.a(param4, IsaacGenerator.field_b, param2, param0, -108);
               }
             } else {
@@ -203,8 +203,8 @@ final class c {
               if (ml.field_b > 0) {
                 na.a(param8, param3, -94, param2);
               }
-              AppletGameShell.field_e.field_S = 1;
-              AppletGameShell.field_e.field_V = Paddle.field_C.field_V;
+              AppletGameShell.field_e.horizontalAlignment = 1;
+              AppletGameShell.field_e.textInset = Paddle.field_C.textInset;
               if (0 < IntArrayRequest.field_j) {
                 n.a(param2, param8, param3, (byte) -76);
               }
@@ -212,17 +212,17 @@ final class c {
                 nh.a(true, param3, param8, param2, param7);
               }
               if (!hc.field_c) {
-                IsaacGenerator.field_b.field_Qb.field_Mb = null;
-                Ball.field_A.field_eb = true;
+                IsaacGenerator.field_b.field_Qb.text = null;
+                Ball.field_A.enabled = true;
                 MusicVoice.a(param4, IsaacGenerator.field_b, param2, param0, -108);
               } else {
                 if (o.field_e.field_jc > o.field_e.field_cc) {
-                  IsaacGenerator.field_b.field_Qb.field_Mb = null;
-                  Ball.field_A.field_eb = true;
+                  IsaacGenerator.field_b.field_Qb.text = null;
+                  Ball.field_A.enabled = true;
                   MusicVoice.a(param4, IsaacGenerator.field_b, param2, param0, -108);
                 } else {
-                  IsaacGenerator.field_b.field_Qb.field_Mb = GameCanvas.field_d;
-                  Ball.field_A.field_eb = false;
+                  IsaacGenerator.field_b.field_Qb.text = GameCanvas.field_d;
+                  Ball.field_A.enabled = false;
                   jh.a(true, IsaacGenerator.field_b.field_Rb);
                 }
               }
@@ -246,8 +246,8 @@ final class c {
               if (ml.field_b > 0) {
                 na.a(param8, param3, -94, param2);
               }
-              AppletGameShell.field_e.field_S = 1;
-              AppletGameShell.field_e.field_V = Paddle.field_C.field_V;
+              AppletGameShell.field_e.horizontalAlignment = 1;
+              AppletGameShell.field_e.textInset = Paddle.field_C.textInset;
               if (0 < IntArrayRequest.field_j) {
                 n.a(param2, param8, param3, (byte) -76);
               }
@@ -256,12 +256,12 @@ final class c {
               }
               if (hc.field_c &&
                 o.field_e.field_jc <= o.field_e.field_cc) {
-                IsaacGenerator.field_b.field_Qb.field_Mb = GameCanvas.field_d;
-                Ball.field_A.field_eb = false;
+                IsaacGenerator.field_b.field_Qb.text = GameCanvas.field_d;
+                Ball.field_A.enabled = false;
                 jh.a(true, IsaacGenerator.field_b.field_Rb);
               } else {
-                IsaacGenerator.field_b.field_Qb.field_Mb = null;
-                Ball.field_A.field_eb = true;
+                IsaacGenerator.field_b.field_Qb.text = null;
+                Ball.field_A.enabled = true;
                 MusicVoice.a(param4, IsaacGenerator.field_b, param2, param0, -108);
               }
             } else {
@@ -269,8 +269,8 @@ final class c {
               MusicPatch.a(-128, param3);
               if (ml.field_b > 0) {
                 na.a(param8, param3, -94, param2);
-                AppletGameShell.field_e.field_S = 1;
-                AppletGameShell.field_e.field_V = Paddle.field_C.field_V;
+                AppletGameShell.field_e.horizontalAlignment = 1;
+                AppletGameShell.field_e.textInset = Paddle.field_C.textInset;
                 if (0 < IntArrayRequest.field_j) {
                   n.a(param2, param8, param3, (byte) -76);
                 }
@@ -279,17 +279,17 @@ final class c {
                 }
                 if (hc.field_c &&
                   o.field_e.field_jc <= o.field_e.field_cc) {
-                  IsaacGenerator.field_b.field_Qb.field_Mb = GameCanvas.field_d;
-                  Ball.field_A.field_eb = false;
+                  IsaacGenerator.field_b.field_Qb.text = GameCanvas.field_d;
+                  Ball.field_A.enabled = false;
                   jh.a(true, IsaacGenerator.field_b.field_Rb);
                 } else {
-                  IsaacGenerator.field_b.field_Qb.field_Mb = null;
-                  Ball.field_A.field_eb = true;
+                  IsaacGenerator.field_b.field_Qb.text = null;
+                  Ball.field_A.enabled = true;
                   MusicVoice.a(param4, IsaacGenerator.field_b, param2, param0, -108);
                 }
               } else {
-                AppletGameShell.field_e.field_S = 1;
-                AppletGameShell.field_e.field_V = Paddle.field_C.field_V;
+                AppletGameShell.field_e.horizontalAlignment = 1;
+                AppletGameShell.field_e.textInset = Paddle.field_C.textInset;
                 if (0 < IntArrayRequest.field_j) {
                   n.a(param2, param8, param3, (byte) -76);
                 }
@@ -297,17 +297,17 @@ final class c {
                   nh.a(true, param3, param8, param2, param7);
                 }
                 if (!hc.field_c) {
-                  IsaacGenerator.field_b.field_Qb.field_Mb = null;
-                  Ball.field_A.field_eb = true;
+                  IsaacGenerator.field_b.field_Qb.text = null;
+                  Ball.field_A.enabled = true;
                   MusicVoice.a(param4, IsaacGenerator.field_b, param2, param0, -108);
                 } else {
                   if (o.field_e.field_jc > o.field_e.field_cc) {
-                    IsaacGenerator.field_b.field_Qb.field_Mb = null;
-                    Ball.field_A.field_eb = true;
+                    IsaacGenerator.field_b.field_Qb.text = null;
+                    Ball.field_A.enabled = true;
                     MusicVoice.a(param4, IsaacGenerator.field_b, param2, param0, -108);
                   } else {
-                    IsaacGenerator.field_b.field_Qb.field_Mb = GameCanvas.field_d;
-                    Ball.field_A.field_eb = false;
+                    IsaacGenerator.field_b.field_Qb.text = GameCanvas.field_d;
+                    Ball.field_A.enabled = false;
                     jh.a(true, IsaacGenerator.field_b.field_Rb);
                   }
                 }

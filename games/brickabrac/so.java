@@ -269,8 +269,8 @@ final class so {
           PlayerInputBatch.field_i = new RgbSprite(MenuSelection.field_k.canvasWidth / 2, MenuSelection.field_k.canvasHeight / 2);
           PlayerInputBatch.field_i.bindRasterTarget();
           MenuSelection.field_k.a(0, 0);
-          mh.field_ib = new RgbSprite(Ball.field_D.canvasWidth / 2, Ball.field_D.canvasHeight / 2);
-          mh.field_ib.bindRasterTarget();
+          UiComponent.field_ib = new RgbSprite(Ball.field_D.canvasWidth / 2, Ball.field_D.canvasHeight / 2);
+          UiComponent.field_ib.bindRasterTarget();
           Ball.field_D.a(0, 0);
           ch.field_k = new RgbSprite[gg.field_p.length];
           if (param3 != 29137) {

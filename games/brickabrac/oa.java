@@ -1,13 +1,13 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class oa extends mh {
+final class oa extends UiComponent {
     static long[][] field_Wb;
-    private mh field_Yb;
+    private UiComponent field_Yb;
     static long[] field_Xb;
     int field_Vb;
-    private mh[] field_Rb;
-    private mh[] field_Qb;
+    private UiComponent[] field_Rb;
+    private UiComponent[] field_Qb;
     static String field_Pb;
     static int field_Ub;
     static BackgroundScene currentBackground;
@@ -122,7 +122,7 @@ final class oa extends mh {
     }
 
     private final void a(int param0, int param1, int param2) {
-        mh dupTemp$0 = null;
+        UiComponent dupTemp$0 = null;
         int var4;
         int var5;
         int var6;
@@ -132,36 +132,36 @@ final class oa extends mh {
         int var5Lifetime1;
         var7 = BrickABrac.field_J ? 1 : 0;
         for (var4 = 0; this.field_Rb.length > var4; var4++) {
-          var5 = var4 * this.field_Ib / this.field_Rb.length;
-          var6 = this.field_Ib * (1 + var4) / this.field_Rb.length;
-          this.field_Rb[var4].field_P = var5;
-          this.field_Rb[var4].field_zb = 0;
-          this.field_Rb[var4].field_Ib = var6 - var5;
-          this.field_Rb[var4].field_cb = param0;
+          var5 = var4 * this.width / this.field_Rb.length;
+          var6 = this.width * (1 + var4) / this.field_Rb.length;
+          this.field_Rb[var4].localX = var5;
+          this.field_Rb[var4].localY = 0;
+          this.field_Rb[var4].width = var6 - var5;
+          this.field_Rb[var4].height = param0;
         }
-        this.field_Yb.a(-param0 + this.field_cb, param0, 0, this.field_Ib, (byte) 64);
+        this.field_Yb.setBounds(-param0 + this.height, param0, 0, this.width, (byte) 64);
         var4Lifetime1 = 65 / ((param2 + 35) / 58);
         var8 = 0;
         var5Lifetime1 = var8;
         while (this.field_Qb.length > var8) {
-          this.field_Qb[var8].a(this.field_Yb.field_cb - param1 * 2, param1, param1, this.field_Yb.field_Ib - param1 * 2, (byte) 64);
+          this.field_Qb[var8].setBounds(this.field_Yb.height - param1 * 2, param1, param1, this.field_Yb.width - param1 * 2, (byte) 64);
           if (this.field_Vb != var8) {
             dupTemp$0 = this.field_Qb[var8];
-            dupTemp$0.field_P = dupTemp$0.field_P + 10000;
+            dupTemp$0.localX = dupTemp$0.localX + 10000;
           }
           var8++;
         }
     }
 
     final void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
-        this.field_Ib = param2;
-        this.field_zb = param5;
-        this.field_P = param1;
+        this.width = param2;
+        this.localY = param5;
+        this.localX = param1;
         if (param6 < 44) {
           TextFont var9 = (TextFont) null;
           oa.a(23, 14, 2, 105, -34, -65, 67, 44, -119, (RgbSprite[]) null, (TextFont) null, (RgbSprite[]) null, -66, -50, -90, false, 92, (RgbSprite[]) null, (TextFont) null, -101);
         }
-        this.field_cb = param4;
+        this.height = param4;
         this.a(param3, param0, -117);
     }
 
@@ -176,26 +176,26 @@ final class oa extends mh {
 
     final void i(int param0) {
         int var2 = 0;
-        mh dupTemp$0 = null;
-        mh dupTemp$1 = null;
+        UiComponent dupTemp$0 = null;
+        UiComponent dupTemp$1 = null;
         int var3;
         var3 = BrickABrac.field_J ? 1 : 0;
         for (var2 = param0; var2 < this.field_Rb.length; var2++) {
           if (var2 != this.field_Vb &&
-            this.field_Rb[var2].field_L != 0) {
-            this.field_Rb[this.field_Vb].field_Nb = false;
+            this.field_Rb[var2].pressedButton != 0) {
+            this.field_Rb[this.field_Vb].selected = false;
             dupTemp$0 = this.field_Qb[this.field_Vb];
-            dupTemp$0.field_P = dupTemp$0.field_P + 10000;
+            dupTemp$0.localX = dupTemp$0.localX + 10000;
             this.field_Vb = var2;
-            this.field_Rb[var2].field_Nb = true;
+            this.field_Rb[var2].selected = true;
             dupTemp$1 = this.field_Qb[var2];
-            dupTemp$1.field_P = dupTemp$1.field_P - 10000;
+            dupTemp$1.localX = dupTemp$1.localX - 10000;
           }
         }
     }
 
-    oa(long param0, mh param1, String[] param2, mh param3, mh[] param4, int param5) {
-        super(param0, (mh) null);
+    oa(long param0, UiComponent param1, String[] param2, UiComponent param3, UiComponent[] param4, int param5) {
+        super(param0, (UiComponent) null);
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
         String stackIn_12_2 = null;
@@ -208,28 +208,28 @@ final class oa extends mh {
         RuntimeException decompiledCaughtException = null;
         int var8_int = 0;
         RuntimeException var8 = null;
-        mh var9 = null;
+        UiComponent var9 = null;
         int var11 = 0;
         int var8_intLifetime1;
         try {
-          this.field_Rb = new mh[param2.length];
-          this.field_Yb = new mh(0L, param3);
+          this.field_Rb = new UiComponent[param2.length];
+          this.field_Yb = new UiComponent(0L, param3);
           this.field_Qb = param4;
           for (var8_int = 0; var8_int < param2.length; var8_int++) {
-            var9 = new mh(0L, param1);
-            var9.field_Mb = param2[var8_int];
+            var9 = new UiComponent(0L, param1);
+            var9.text = param2[var8_int];
             this.field_Rb[var8_int] = var9;
-            this.a(var9, 0);
+            this.addChild(var9, 0);
           }
-          this.a(this.field_Yb, 0);
+          this.addChild(this.field_Yb, 0);
           var11 = 0;
           var8_intLifetime1 = var11;
           while (param4.length > var11) {
-            this.field_Yb.a(param4[var11], 0);
+            this.field_Yb.addChild(param4[var11], 0);
             var11++;
           }
           this.field_Vb = param5;
-          this.field_Rb[param5].field_Nb = true;
+          this.field_Rb[param5].selected = true;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

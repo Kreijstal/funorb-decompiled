@@ -5,7 +5,7 @@ final class MainMenuScreen extends MenuScreen {
     static String field_r;
     static RgbSprite field_s;
     private NodeDeque tooltipSprites;
-    static mh field_t;
+    static UiComponent field_t;
     static int field_x;
     static RgbSprite field_w;
     static String field_z;
@@ -15,7 +15,7 @@ final class MainMenuScreen extends MenuScreen {
     final int getButtonTop(int buttonIndex, int obfuscationGuard) {
         int var3 = this.buttons[buttonIndex].actionId;
         if (obfuscationGuard != 1) {
-          field_t = (mh) null;
+          field_t = (UiComponent) null;
         }
         if (var3 == 42) {
           return super.getButtonTop(7, 1);

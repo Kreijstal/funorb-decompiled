@@ -10,7 +10,7 @@ final class GameplayScreen extends GameScreen {
     int field_r;
     private int field_i;
     int loadedBoardSnapshots;
-    static mh field_u;
+    static UiComponent field_u;
     boolean field_n;
     static int field_j;
     int localPlayerId;
@@ -723,7 +723,7 @@ final class GameplayScreen extends GameScreen {
           this.match.playerBoards[var3_int].resultWord = packet.readMedium(48);
           this.match.playerMaskOne = this.match.playerMaskOne | 1 << var3_int;
           if (obfuscationGuard != 18504) {
-            field_u = (mh) null;
+            field_u = (UiComponent) null;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class nh {
-    static mh field_a;
+    static UiComponent field_a;
     static String field_d;
     static int field_b;
     static rg field_c;
@@ -274,7 +274,7 @@ final class nh {
     final static void a(boolean param0, boolean param1, boolean param2, int param3, boolean param4) {
         int stackIn_3_0 = 0;
         boolean stackIn_4_1 = false;
-        mh stackIn_23_0 = null;
+        UiComponent stackIn_23_0 = null;
         boolean stackIn_24_1 = false;
         int stackIn_39_0 = 0;
         int stackIn_39_1 = 0;
@@ -287,19 +287,19 @@ final class nh {
         int stackIn_87_0 = 0;
         boolean stackIn_133_0 = false;
         int stackIn_153_0 = 0;
-        mh stackIn_174_0 = null;
+        UiComponent stackIn_174_0 = null;
         boolean stackIn_175_1 = false;
-        mh stackIn_179_0 = null;
+        UiComponent stackIn_179_0 = null;
         boolean stackIn_180_1 = false;
-        mh stackIn_184_0 = null;
+        UiComponent stackIn_184_0 = null;
         boolean stackIn_185_1 = false;
         RuntimeException decompiledCaughtException = null;
         boolean stackOut_80_0;
         boolean stackOut_132_0;
         RuntimeException var5 = null;
-        mh var6 = null;
-        mh var7 = null;
-        mh var8 = null;
+        UiComponent var6 = null;
+        UiComponent var7 = null;
+        UiComponent var8 = null;
         String var9_ref_String = null;
         int var9 = 0;
         String var10_ref_String = null;
@@ -322,11 +322,11 @@ final class nh {
         int var19 = 0;
         RgbSprite[] var20 = null;
         int[] var21 = null;
-        mh var23 = null;
+        UiComponent var23 = null;
         int[] var24 = null;
         String var25 = null;
         int[] var26 = null;
-        mh var27 = null;
+        UiComponent var27 = null;
         int stackIn_58_0Lifetime1;
         int stackIn_58_1Lifetime1;
         int stackIn_67_0Lifetime1;
@@ -340,41 +340,41 @@ final class nh {
           co.a(stackIn_3_0, stackIn_4_1);
           if (o.field_e != null) {
             boolean decompiledFrameRemainder1 = true;
-            GameUiController.field_e.field_eb = true;
+            GameUiController.field_e.enabled = true;
             var23 = pf.field_h;
             var27 = var23;
-            pf.field_h.field_cb = 0;
-            var27.field_Ib = 0;
-            dn.field_K.field_cb = 0;
+            pf.field_h.height = 0;
+            var27.width = 0;
+            dn.field_K.height = 0;
             var6 = dn.field_K;
-            var6.field_Ib = 0;
+            var6.width = 0;
             var7 = AppletGameShell.field_e;
-            AppletGameShell.field_e.field_cb = 0;
-            var7.field_Ib = 0;
+            AppletGameShell.field_e.height = 0;
+            var7.width = 0;
             if (!hn.b((byte) 7)) {
               var9_ref_String = o.field_e.field_Fc;
-              ba.field_v.field_Mb = rd.a(fm.field_a, new String[]{var9_ref_String}, (byte) 103).toUpperCase();
-              AppletGameShell.field_e.a(40, MultiplayerMatch.field_d.field_cb - 40, 0, MultiplayerMatch.field_d.field_Ib, (byte) 64);
-              AppletGameShell.field_e.field_Mb = rd.a(IntrusiveNode.field_a, new String[]{var9_ref_String}, (byte) 103);
+              ba.field_v.text = rd.a(fm.field_a, new String[]{var9_ref_String}, (byte) 103).toUpperCase();
+              AppletGameShell.field_e.setBounds(40, MultiplayerMatch.field_d.height - 40, 0, MultiplayerMatch.field_d.width, (byte) 64);
+              AppletGameShell.field_e.text = rd.a(IntrusiveNode.field_a, new String[]{var9_ref_String}, (byte) 103);
               var8 = AppletGameShell.field_e;
               decompiledFrameRemainder1 = (var19 != 0);
             }
             if (decompiledFrameRemainder1) {
-              ba.field_v.field_Mb = ba.field_x.toUpperCase();
-              var9 = (MultiplayerMatch.field_d.field_Ib + 2) / 2;
-              pf.field_h.a(40, MultiplayerMatch.field_d.field_cb - 40, 0, -2 + var9, (byte) 64);
+              ba.field_v.text = ba.field_x.toUpperCase();
+              var9 = (MultiplayerMatch.field_d.width + 2) / 2;
+              pf.field_h.setBounds(40, MultiplayerMatch.field_d.height - 40, 0, -2 + var9, (byte) 64);
               if (o.field_e.field_jc <= o.field_e.field_cc) {
-                pf.field_h.field_Mb = GameCanvas.field_d.toUpperCase();
-                pf.field_h.field_eb = false;
+                pf.field_h.text = GameCanvas.field_d.toUpperCase();
+                pf.field_h.enabled = false;
                 if (var19 != 0) {
-                  pf.field_h.field_Mb = SecondaryNodeQueue.field_a.toUpperCase();
-                  pf.field_h.field_eb = true;
+                  pf.field_h.text = SecondaryNodeQueue.field_a.toUpperCase();
+                  pf.field_h.enabled = true;
                 }
               } else {
-                pf.field_h.field_Mb = SecondaryNodeQueue.field_a.toUpperCase();
-                pf.field_h.field_eb = true;
+                pf.field_h.text = SecondaryNodeQueue.field_a.toUpperCase();
+                pf.field_h.enabled = true;
               }
-              pf.field_h.field_Jb = fm.field_b.field_Jb;
+              pf.field_h.frameSprites = fm.field_b.frameSprites;
               if (uf.field_c > 0) {
                 boolean decompiledSharedTail1 = (uf.field_c != 1);
                 if (!decompiledSharedTail1) {
@@ -384,18 +384,18 @@ final class nh {
                 if (decompiledSharedTail1) {
                   var10_ref_String = rd.a(LevelPackLoader.field_h, new String[]{Integer.toString(uf.field_c)}, (byte) 103);
                 }
-                pf.field_h.field_Mb = pf.field_h.field_Mb + "<br>" + var10_ref_String;
+                pf.field_h.text = pf.field_h.text + "<br>" + var10_ref_String;
                 if ((an.field_h & 16) == 0 &&
                   !hc.field_c) {
-                  pf.field_h.field_Jb = fm.field_b.field_Gb;
+                  pf.field_h.frameSprites = fm.field_b.activeFrameSprites;
                 }
               }
-              dn.field_K.a(40, MultiplayerMatch.field_d.field_cb - 40, var9, MultiplayerMatch.field_d.field_Ib - var9, (byte) 64);
-              dn.field_K.field_Mb = ConstructionBackground.field_r.toUpperCase();
+              dn.field_K.setBounds(40, MultiplayerMatch.field_d.height - 40, var9, MultiplayerMatch.field_d.width - var9, (byte) 64);
+              dn.field_K.text = ConstructionBackground.field_r.toUpperCase();
               var8 = dn.field_K;
               stackIn_23_0 = dn.field_K;
               stackIn_24_1 = (param4) && (ic.field_b == 0L);
-              stackIn_23_0.field_eb = stackIn_24_1;
+              stackIn_23_0.enabled = stackIn_24_1;
               var10 = 2;
               if (null != br.field_bc) {
                 if (qo.field_J == null) {
@@ -495,8 +495,8 @@ final class nh {
                 }
               }
               if (var10 < 2) {
-                dn.field_K.field_eb = false;
-                decompiledFrameRemainder1 = !(!dn.field_K.field_G);
+                dn.field_K.enabled = false;
+                decompiledFrameRemainder1 = !(!dn.field_K.hovered);
                 if (decompiledFrameRemainder1) {
                   var11_ref = null;
                   var12 = 0;
@@ -601,7 +601,7 @@ final class nh {
                 if (decompiledNaturalLoopExit0) {
                   var16 = 0;
                 }
-                var17 = TimedSplashScreen.field_u.field_Rb.field_bb;
+                var17 = TimedSplashScreen.field_u.field_Rb.children;
                 var18_ref = (id) (var17.first(-97));
                 scanLoop3: while (true) {
                   boolean decompiledFrameRemainder0 = true;
@@ -657,10 +657,10 @@ final class nh {
                   var16 = 0;
                 }
                 if (var16 != 0) {
-                  dn.field_K.field_eb = false;
-                  if (dn.field_K.field_G) {
+                  dn.field_K.enabled = false;
+                  if (dn.field_K.hovered) {
                     if (sb.field_c.field_d.field_Vb != 0) {
-                      ep.field_e = rd.a(ta.field_d, new String[]{mh.field_Z}, (byte) 103);
+                      ep.field_e = rd.a(ta.field_d, new String[]{UiComponent.field_Z}, (byte) 103);
                       if (var19 != 0) {
                         ep.field_e = ei.field_a;
                       }
@@ -677,35 +677,35 @@ final class nh {
               if (1 > var9) {
                 var9 = 1;
               }
-              var8.field_Mb = rd.a(SpriteGeometry.field_w, new String[]{Integer.toString(var9)}, (byte) 103);
+              var8.text = rd.a(SpriteGeometry.field_w, new String[]{Integer.toString(var9)}, (byte) 103);
             }
-            um.field_b.field_Mb = rd.a(rl.field_d, new String[]{Integer.toString(o.field_e.field_cc), Integer.toString(o.field_e.field_jc)}, (byte) 103);
+            um.field_b.text = rd.a(rl.field_d, new String[]{Integer.toString(o.field_e.field_cc), Integer.toString(o.field_e.field_jc)}, (byte) 103);
           }
           stackIn_174_0 = NinjaBackground.field_w;
           stackIn_175_1 = (param2) && (!param1) && (!hc.field_c);
-          ((mh) (Object) stackIn_174_0).a(stackIn_175_1, -15211);
+          ((UiComponent) (Object) stackIn_174_0).updateRoot(stackIn_175_1, -15211);
           stackIn_179_0 = MultiplayerMatch.field_d;
           stackIn_180_1 = (param2) && (!param1) && (!hc.field_c);
-          ((mh) (Object) stackIn_179_0).a(stackIn_180_1, -15211);
+          ((UiComponent) (Object) stackIn_179_0).updateRoot(stackIn_180_1, -15211);
           stackIn_184_0 = wi.field_j;
           stackIn_185_1 = (param2) && (!param1) && (hc.field_c);
-          ((mh) (Object) stackIn_184_0).a(stackIn_185_1, -15211);
+          ((UiComponent) (Object) stackIn_184_0).updateRoot(stackIn_185_1, -15211);
           if (!param0) {
             var20 = (RgbSprite[]) null;
             nh.a(-9, -55, 119, -100, (RgbSprite[]) null, -102);
           }
           sb.field_c.field_d.i(0);
           if (null != o.field_e) {
-            if (GameUiController.field_e.field_L != 0) {
+            if (GameUiController.field_e.pressedButton != 0) {
               vg.a(o.field_e.e((byte) 123), false, param3);
             }
-            if (pf.field_h.field_L != 0) {
+            if (pf.field_h.pressedButton != 0) {
               hc.field_c = true;
             }
-            if (dn.field_K.field_L != 0) {
+            if (dn.field_K.pressedButton != 0) {
               sl.field_w = true;
             }
-            if (0 != nd.field_a.field_L) {
+            if (0 != nd.field_a.pressedButton) {
               hc.field_c = false;
             }
             JungleBackground.a(param3, o.field_e, false, false);

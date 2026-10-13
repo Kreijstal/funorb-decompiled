@@ -15,9 +15,9 @@ final class wn {
         boolean stackIn_4_5;
         boolean stackIn_5_6 = false;
         mp stackIn_12_0 = null;
-        mh stackIn_33_0 = null;
+        UiComponent stackIn_33_0 = null;
         String stackIn_34_1 = null;
-        mh stackIn_37_0 = null;
+        UiComponent stackIn_37_0 = null;
         String stackIn_38_1 = null;
         int stackIn_42_0 = 0;
         Object stackIn_101_0 = null;
@@ -57,12 +57,12 @@ final class wn {
             wn.a((byte) 96);
           }
           boolean decompiledFrameCompleted0 = true;
-          var4 = GameScreen.field_f.field_Xb.field_bb;
+          var4 = GameScreen.field_f.field_Xb.children;
           var5 = null;
           if (LevelMetadata.field_m == 2) {
-            rg.field_c.field_eb = true;
-            sj.field_d.field_Mb = rd.a(LevelDecoder.field_c, new String[]{rk.field_Tb}, (byte) 103);
-            GameScreen.field_f.field_Qb.field_Qb.field_Mb = null;
+            rg.field_c.enabled = true;
+            sj.field_d.text = rd.a(LevelDecoder.field_c, new String[]{rk.field_Tb}, (byte) 103);
+            GameScreen.field_f.field_Qb.field_Qb.text = null;
             var6 = null;
             var7 = (mp) (var4.first(-76));
             while (var7 != null) {
@@ -74,18 +74,18 @@ final class wn {
                 decompiledFrameCompleted0 = false;
                 break;
               }
-              if (stackIn_12_0.field_bb == null) {
-                var7.field_Xb = new mh(0L, vb.field_K);
-                var7.a(var7.field_Xb, 0);
-                var7.field_Wb = new mh(0L, OptionsScreen.field_v);
-                var7.a(var7.field_Wb, 0);
-                var7.field_Yb = new mh(0L, vb.field_K);
-                var7.a(var7.field_Yb, 0);
-                var7.field_Wb.field_S = 2;
+              if (stackIn_12_0.children == null) {
+                var7.field_Xb = new UiComponent(0L, vb.field_K);
+                var7.addChild(var7.field_Xb, 0);
+                var7.field_Wb = new UiComponent(0L, OptionsScreen.field_v);
+                var7.addChild(var7.field_Wb, 0);
+                var7.field_Yb = new UiComponent(0L, vb.field_K);
+                var7.addChild(var7.field_Yb, 0);
+                var7.field_Wb.horizontalAlignment = 2;
                 var8 = 1;
-                var7.c(true);
+                var7.markDescendantsToInheritVisualState(true);
               }
-              var7.field_Ib = GameScreen.field_f.field_Xb.field_Ib;
+              var7.width = GameScreen.field_f.field_Xb.width;
               var9 = 0;
               if (var7.field_Ub == null) {
                 var10 = 13369344;
@@ -100,56 +100,56 @@ final class wn {
               var12 = 0;
               if (null != var7.field_Qb &&
                 !var7.field_Qb.equals("")) {
-                var7.field_Yb.field_wb = ok.field_g;
-                var7.field_Yb.field_Y = var11;
-                var7.field_Yb.a(np.field_a, var9, 0, 3 + ok.field_g.canvasWidth, (byte) 64);
+                var7.field_Yb.sprite = ok.field_g;
+                var7.field_Yb.activeTextColor = var11;
+                var7.field_Yb.setBounds(np.field_a, var9, 0, 3 + ok.field_g.canvasWidth, (byte) 64);
                 var12 = 1;
               }
-              var7.field_Wb.field_Fb = var11;
-              var7.field_Xb.field_Fb = var11;
-              var7.field_Wb.field_vb = var11;
-              var7.field_Xb.field_vb = var11;
-              var7.field_Wb.field_Y = var11;
-              var7.field_Xb.field_Y = var11;
-              var7.field_Wb.field_X = var10;
-              var7.field_Xb.field_X = var10;
+              var7.field_Wb.capturedTextColor = var11;
+              var7.field_Xb.capturedTextColor = var11;
+              var7.field_Wb.selectedTextColor = var11;
+              var7.field_Xb.selectedTextColor = var11;
+              var7.field_Wb.activeTextColor = var11;
+              var7.field_Xb.activeTextColor = var11;
+              var7.field_Wb.textColor = var10;
+              var7.field_Xb.textColor = var10;
               var13 = 0;
-              var14 = -80 + (var7.field_Ib - 2);
+              var14 = -80 + (var7.width - 2);
               if (var12 != 0) {
                 var13 = 3 + ok.field_g.canvasWidth;
                 var14 = var14 - var13;
               }
               stackIn_33_0 = var7.field_Xb;
               if (var14 > 0) {
-                stackIn_34_1 = TextFont.truncateText(var7.field_Xb.field_O, var7.field_Rb, var14);
+                stackIn_34_1 = TextFont.truncateText(var7.field_Xb.font, var7.field_Rb, var14);
               } else {
                 stackIn_34_1 = var7.field_Rb;
               }
-              stackIn_33_0.field_Mb = stackIn_34_1;
-              var7.field_Xb.a(np.field_a, var9, var13, var14, (byte) 64);
+              stackIn_33_0.text = stackIn_34_1;
+              var7.field_Xb.setBounds(np.field_a, var9, var13, var14, (byte) 64);
               stackIn_37_0 = var7.field_Wb;
               if (var7.field_Ub != null) {
                 stackIn_38_1 = var7.field_Ub;
               } else {
                 stackIn_38_1 = ec.field_S;
               }
-              stackIn_37_0.field_Mb = stackIn_38_1;
-              var7.field_Wb.a(np.field_a, var9, -80 + var7.field_Ib, 80, (byte) 64);
-              stackIn_42_0 = (var7.field_Xb.field_Mb.equals(var7.field_Rb)) ? 0 : 1;
+              stackIn_37_0.text = stackIn_38_1;
+              var7.field_Wb.setBounds(np.field_a, var9, -80 + var7.width, 80, (byte) 64);
+              stackIn_42_0 = (var7.field_Xb.text.equals(var7.field_Rb)) ? 0 : 1;
               var15 = stackIn_42_0;
               var9 = var9 + np.field_a;
               if (var3_int == 0) {
-                var7.field_C = var9 - var7.field_cb;
+                var7.remainingHeight = var9 - var7.height;
               }
               if (var8 != 0) {
-                GameScreen.field_f.field_Xb.a((mh) (var6), 2, var7, 17290);
+                GameScreen.field_f.field_Xb.placeBelow((UiComponent) (var6), 2, var7, 17290);
               }
               var6 = var7;
               if (null != var7.field_Yb &&
-                var7.field_Yb.field_kb) {
+                var7.field_Yb.activeInside) {
                 ep.field_e = var7.field_Qb;
-              } else if (0 == var7.field_L) {
-                if (var7.field_Xb.field_kb &&
+              } else if (0 == var7.pressedButton) {
+                if (var7.field_Xb.activeInside &&
                   var15 != 0) {
                   ep.field_e = var7.field_Rb;
                 }
@@ -173,25 +173,25 @@ final class wn {
               var7 = (mp) (var4.next((byte) 116));
             }
             if (decompiledFrameCompleted0) {
-              if (GameScreen.field_f.field_Tb.field_L != 0) {
-                MusicCrossfadeStream.field_m = new gq(GameScreen.field_f.field_Tb.field_Eb, GameScreen.field_f.field_Tb.field_db, GameScreen.field_f.field_Tb.field_Ib, GameScreen.field_f.field_Tb.field_cb, ArchiveNetworkClient.field_t, GameUiController.field_c, CappedUrlRequest.field_l, CappedUrlRequest.field_l);
+              if (GameScreen.field_f.field_Tb.pressedButton != 0) {
+                MusicCrossfadeStream.field_m = new gq(GameScreen.field_f.field_Tb.screenX, GameScreen.field_f.field_Tb.screenY, GameScreen.field_f.field_Tb.width, GameScreen.field_f.field_Tb.height, ArchiveNetworkClient.field_t, GameUiController.field_c, CappedUrlRequest.field_l, CappedUrlRequest.field_l);
                 GameUiController.field_d = 0;
               }
-              if (0 != GameScreen.field_f.field_Wb.field_L) {
-                MusicCrossfadeStream.field_m = new gq(GameScreen.field_f.field_Wb.field_Eb, GameScreen.field_f.field_Wb.field_db, GameScreen.field_f.field_Wb.field_Ib, GameScreen.field_f.field_Wb.field_cb, TableDataRequest.field_j, GameUiController.field_c, CappedUrlRequest.field_l, CappedUrlRequest.field_l);
+              if (0 != GameScreen.field_f.field_Wb.pressedButton) {
+                MusicCrossfadeStream.field_m = new gq(GameScreen.field_f.field_Wb.screenX, GameScreen.field_f.field_Wb.screenY, GameScreen.field_f.field_Wb.width, GameScreen.field_f.field_Wb.height, TableDataRequest.field_j, GameUiController.field_c, CappedUrlRequest.field_l, CappedUrlRequest.field_l);
                 GameUiController.field_d = 1;
               }
             }
           } else {
-            sj.field_d.field_Mb = kd.field_a;
-            rg.field_c.field_eb = false;
+            sj.field_d.text = kd.field_a;
+            rg.field_c.enabled = false;
             if (LevelMetadata.field_m == 1) {
-              GameScreen.field_f.field_Qb.field_Qb.field_Mb = cd.field_f;
+              GameScreen.field_f.field_Qb.field_Qb.text = cd.field_f;
               if (var19 != 0) {
-                GameScreen.field_f.field_Qb.field_Qb.field_Mb = cm.field_t;
+                GameScreen.field_f.field_Qb.field_Qb.text = cm.field_t;
               }
             } else {
-              GameScreen.field_f.field_Qb.field_Qb.field_Mb = cm.field_t;
+              GameScreen.field_f.field_Qb.field_Qb.text = cm.field_t;
             }
             jh.a(true, GameScreen.field_f.field_Xb);
           }

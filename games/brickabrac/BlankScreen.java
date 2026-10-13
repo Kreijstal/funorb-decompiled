@@ -39,7 +39,7 @@ final class BlankScreen extends GameScreen {
           if (param0 != -2) {
             BlankScreen.d((byte) 104);
           }
-          wd.field_w.a(param1, 0);
+          wd.field_w.addChild(param1, 0);
         } catch (RuntimeException runtimeException) {
           throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "of.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

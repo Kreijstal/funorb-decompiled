@@ -5,7 +5,7 @@ final class AchievementMaskRequest extends IntrusiveNode {
     int[] achievementMask;
     static NodeDeque delayedPackets;
     boolean complete;
-    static mh field_n;
+    static UiComponent field_n;
     static GameUiLifecycle uiLifecycle;
     static String field_l;
 

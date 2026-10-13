@@ -2,12 +2,12 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class HalloweenBackground extends BackgroundScene {
-    static mh field_x;
+    static UiComponent field_x;
     static String field_s;
     static int[] field_r;
     static String field_t;
     private static RgbSprite field_u;
-    static mh[] field_w;
+    static UiComponent[] field_w;
     static boolean field_y;
     static co field_v;
 
@@ -240,7 +240,7 @@ final class HalloweenBackground extends BackgroundScene {
         field_v = null;
         field_x = null;
         if (param0 != 1) {
-          field_w = (mh[]) null;
+          field_w = (UiComponent[]) null;
         }
     }
 

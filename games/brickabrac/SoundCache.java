@@ -5,7 +5,7 @@ final class SoundCache {
     static String field_i;
     private ResourceArchive soundEffectArchive;
     static TextFont field_c;
-    static mh field_k;
+    static UiComponent field_k;
     private ResourceArchive musicSampleArchive;
     static NodeDeque field_f;
     private IntrusiveHashTable pendingMusicSamples;
@@ -28,14 +28,14 @@ final class SoundCache {
           var4 = MusicCrossfadeStream.field_m.a(param2, (byte) 95);
           if (var4 != 0) {
             if (2 == var4 &&
-              MusicCrossfadeStream.field_m.field_Mb != null &&
-              !MusicCrossfadeStream.field_m.field_Mb.equals("")) {
-              if (MusicCrossfadeStream.field_m.field_Mb.charAt(0) == 91) {
-                var5 = MusicCrossfadeStream.field_m.field_Mb;
+              MusicCrossfadeStream.field_m.text != null &&
+              !MusicCrossfadeStream.field_m.text.equals("")) {
+              if (MusicCrossfadeStream.field_m.text.charAt(0) == 91) {
+                var5 = MusicCrossfadeStream.field_m.text;
                 var6 = var5;
                 var6Lifetime2 = var5;
               } else {
-                var8 = (CharSequence) ((Object) MusicCrossfadeStream.field_m.field_Mb);
+                var8 = (CharSequence) ((Object) MusicCrossfadeStream.field_m.text);
                 var5 = gb.a(var8, 57);
               }
               var6Lifetime1 = null;

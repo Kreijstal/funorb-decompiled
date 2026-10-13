@@ -17,7 +17,7 @@ final class MenuSelection {
     static RgbSprite field_k;
     private boolean pointerDriven;
     static String[] field_p;
-    static mh field_m;
+    static UiComponent field_m;
     private int heldCode;
     int selectedIndex;
 

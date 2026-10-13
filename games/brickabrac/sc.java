@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class sc {
-    static mh field_b;
+    static UiComponent field_b;
     static String field_a;
     static boolean field_c;
 

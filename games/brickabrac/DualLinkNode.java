@@ -3,7 +3,7 @@
  */
 class DualLinkNode extends IntrusiveNode {
     static String field_o;
-    static mh field_t;
+    static UiComponent field_t;
     static int field_q;
     static RgbSprite[][] jungleCapsSprites;
     static int field_r;

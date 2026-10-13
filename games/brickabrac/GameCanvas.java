@@ -125,7 +125,7 @@ final class GameCanvas extends java.awt.Canvas implements java.awt.event.FocusLi
         int var4_int = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var4 = null;
-        mh var5 = null;
+        UiComponent var5 = null;
         int var6 = 0;
         int var7 = 0;
         String var8 = null;
@@ -143,10 +143,10 @@ final class GameCanvas extends java.awt.Canvas implements java.awt.event.FocusLi
             return;
           }
           ef.a(param2 - 123);
-          DualLinkDeque.field_d.a(param3, -15211);
+          DualLinkDeque.field_d.updateRoot(param3, -15211);
           if (null != vd.field_a) {
             if (um.field_e) {
-              vd.field_a.a(DualLinkDeque.field_d.field_db, DualLinkDeque.field_d.field_Eb, 116, param3);
+              vd.field_a.a(DualLinkDeque.field_d.screenY, DualLinkDeque.field_d.screenX, 116, param3);
             } else {
               vd.field_a = null;
             }
@@ -154,16 +154,16 @@ final class GameCanvas extends java.awt.Canvas implements java.awt.event.FocusLi
           for (var4_int = 0; 5 > var4_int; var4_int++) {
             var5 = ik.field_i[var4_int];
             if (var5 != null) {
-              if (var5.field_L != 0) {
+              if (var5.pressedButton != 0) {
                 wd.a(784, var4_int, var5);
               }
               var6 = tm.a(var4_int, (byte) 18);
-              vj.field_a[var4_int].field_wb = ef.field_b[var6];
-              wd.field_F[var4_int].field_Mb = rh.field_e[var6];
+              vj.field_a[var4_int].sprite = ef.field_b[var6];
+              wd.field_F[var4_int].text = rh.field_e[var6];
             }
           }
-          if (LegacyUtf8Decoder.field_c.field_L != 0) {
-            CircleBody.field_p = new am(LegacyUtf8Decoder.field_c.field_Eb, LegacyUtf8Decoder.field_c.field_db, LegacyUtf8Decoder.field_c.field_Ib, LegacyUtf8Decoder.field_c.field_cb, param1, MenuSelection.field_m, rf.field_c, am.field_Zb, CappedUrlRequest.field_l, BlankScreen.field_k, DualLinkNode.field_t, (String) null, 0L);
+          if (LegacyUtf8Decoder.field_c.pressedButton != 0) {
+            CircleBody.field_p = new am(LegacyUtf8Decoder.field_c.screenX, LegacyUtf8Decoder.field_c.screenY, LegacyUtf8Decoder.field_c.width, LegacyUtf8Decoder.field_c.height, param1, MenuSelection.field_m, rf.field_c, am.field_Zb, CappedUrlRequest.field_l, BlankScreen.field_k, DualLinkNode.field_t, (String) null, 0L);
           }
           var9 = sj.a(om.field_oc, np.field_a, -13294, param0);
           if (var9 != null) {

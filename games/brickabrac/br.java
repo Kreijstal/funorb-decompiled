@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class br extends mh {
+final class br extends UiComponent {
     private int field_Vb;
     private int field_dc;
     private RgbSprite[] field_Tb;
@@ -16,8 +16,8 @@ final class br extends mh {
     private int[] field_cc;
     static String field_Ub;
     static String field_Rb;
-    private mh field_ec;
-    private mh field_Pb;
+    private UiComponent field_ec;
+    private UiComponent field_Pb;
 
     final static void a(int param0, byte param1, int param2) {
         om var6 = null;
@@ -41,11 +41,11 @@ final class br extends mh {
 
     final void a(String param0, int param1, byte param2) {
         try {
-          this.field_Xb[this.field_Wb] = new rk(0L, (mh) null, (mh) null, this.field_ec, (RgbSprite) null, param0);
-          this.field_Xb[this.field_Wb].field_Gb = this.field_Tb;
-          this.field_Xb[this.field_Wb].field_Lb = true;
-          this.field_Xb[this.field_Wb].field_Q = 1;
-          this.a(this.field_Xb[this.field_Wb], 0);
+          this.field_Xb[this.field_Wb] = new rk(0L, (UiComponent) null, (UiComponent) null, this.field_ec, (RgbSprite) null, param0);
+          this.field_Xb[this.field_Wb].activeFrameSprites = this.field_Tb;
+          this.field_Xb[this.field_Wb].useParentFrameBounds = true;
+          this.field_Xb[this.field_Wb].verticalAlignment = 1;
+          this.addChild(this.field_Xb[this.field_Wb], 0);
           if (param2 < 70) {
             this.field_Xb = (rk[]) null;
           }
@@ -59,13 +59,13 @@ final class br extends mh {
     final int a(byte param0, boolean param1) {
         int var4 = 0;
         int var5 = BrickABrac.field_J ? 1 : 0;
-        this.a(param1, -15211);
+        this.updateRoot(param1, -15211);
         if (!param1) {
           return -2;
         }
         int var3 = -36 / ((param0 - 13) / 63);
         for (var4 = 0; this.field_Wb > var4; var4++) {
-          if (this.field_Xb[var4].field_L != 0) {
+          if (this.field_Xb[var4].pressedButton != 0) {
             return this.field_cc[var4];
           }
         }
@@ -77,11 +77,11 @@ final class br extends mh {
 
     final void a(String param0, int param1, int param2, RgbSprite param3) {
         try {
-          this.field_Xb[this.field_Wb] = new rk(0L, (mh) null, (mh) null, this.field_ec, param3, param0);
-          this.field_Xb[this.field_Wb].field_Gb = this.field_Tb;
-          this.field_Xb[this.field_Wb].field_Lb = true;
-          this.field_Xb[this.field_Wb].field_Q = 1;
-          this.a(this.field_Xb[this.field_Wb], 0);
+          this.field_Xb[this.field_Wb] = new rk(0L, (UiComponent) null, (UiComponent) null, this.field_ec, param3, param0);
+          this.field_Xb[this.field_Wb].activeFrameSprites = this.field_Tb;
+          this.field_Xb[this.field_Wb].useParentFrameBounds = true;
+          this.field_Xb[this.field_Wb].verticalAlignment = 1;
+          this.addChild(this.field_Xb[this.field_Wb], 0);
           this.field_cc[this.field_Wb] = param2;
           this.field_Wb = this.field_Wb + 1;
           if (param1 < 62) {
@@ -117,7 +117,7 @@ final class br extends mh {
         return Rasterizer2D.height - param0;
     }
 
-    br(mh param0, RgbSprite[] param1, mh param2, mh param3, int param4, int param5, int param6, int param7, int param8) {
+    br(UiComponent param0, RgbSprite[] param1, UiComponent param2, UiComponent param3, int param4, int param5, int param6, int param7, int param8) {
         super(0L, param0);
         this.field_Xb = new rk[256];
         this.field_dc = -2;
@@ -185,7 +185,7 @@ final class br extends mh {
             var7Lifetime4 = this.field_Zb * this.field_Wb + this.field_Sb + this.field_Sb;
             var8Lifetime4 = OptionsScreen.a(-1, var6, param4, param3);
             var9 = br.a(var7Lifetime4, param0, param2, 122);
-            this.a(var7Lifetime4, var9, var8Lifetime4, var6, (byte) 64);
+            this.setBounds(var7Lifetime4, var9, var8Lifetime4, var6, (byte) 64);
             for (var10 = 0; var10 < this.field_Wb; var10++) {
               this.field_Xb[var10].a(-10411, this.field_Zb * var10 + this.field_Sb, this.field_Qb, this.field_Yb, this.field_Vb, this.field_Zb, var6 - 2 * this.field_Vb);
             }
@@ -202,15 +202,15 @@ final class br extends mh {
           var7Lifetime3 = this.field_Zb * this.field_Wb + this.field_Sb + this.field_Sb;
           var8Lifetime3 = OptionsScreen.a(-1, var6, param4, param3);
           var9Lifetime2 = br.a(var7Lifetime3, param0, param2, 122);
-          this.a(var7Lifetime3, var9Lifetime2, var8Lifetime3, var6, (byte) 64);
+          this.setBounds(var7Lifetime3, var9Lifetime2, var8Lifetime3, var6, (byte) 64);
           for (var10Lifetime2 = 0; var10Lifetime2 < this.field_Wb; var10Lifetime2++) {
             this.field_Xb[var10Lifetime2].a(-10411, this.field_Zb * var10Lifetime2 + this.field_Sb, this.field_Qb, this.field_Yb, this.field_Vb, this.field_Zb, var6 - 2 * this.field_Vb);
           }
           return;
         }
-        this.field_Xb[this.field_Wb] = new rk(0L, (mh) null, (mh) null, this.field_Pb, (RgbSprite) null, gg.field_m);
-        this.field_Xb[this.field_Wb].field_Q = 1;
-        this.a(this.field_Xb[this.field_Wb], 0);
+        this.field_Xb[this.field_Wb] = new rk(0L, (UiComponent) null, (UiComponent) null, this.field_Pb, (RgbSprite) null, gg.field_m);
+        this.field_Xb[this.field_Wb].verticalAlignment = 1;
+        this.addChild(this.field_Xb[this.field_Wb], 0);
         this.field_cc[this.field_Wb] = -1;
         this.field_Wb = this.field_Wb + 1;
         var6Lifetime1 = 0;
@@ -225,7 +225,7 @@ final class br extends mh {
           var7Lifetime1 = this.field_Zb * this.field_Wb + this.field_Sb + this.field_Sb;
           var8Lifetime1 = OptionsScreen.a(-1, var6Lifetime1, param4, param3);
           var9Lifetime1 = br.a(var7Lifetime1, param0, param2, 122);
-          this.a(var7Lifetime1, var9Lifetime1, var8Lifetime1, var6Lifetime1, (byte) 64);
+          this.setBounds(var7Lifetime1, var9Lifetime1, var8Lifetime1, var6Lifetime1, (byte) 64);
           for (var10Lifetime1 = 0; var10Lifetime1 < this.field_Wb; var10Lifetime1++) {
             this.field_Xb[var10Lifetime1].a(-10411, this.field_Zb * var10Lifetime1 + this.field_Sb, this.field_Qb, this.field_Yb, this.field_Vb, this.field_Zb, var6Lifetime1 - 2 * this.field_Vb);
           }
@@ -241,7 +241,7 @@ final class br extends mh {
           var7Lifetime1 = this.field_Zb * this.field_Wb + this.field_Sb + this.field_Sb;
           var8Lifetime1 = OptionsScreen.a(-1, var6Lifetime1, param4, param3);
           var9Lifetime1 = br.a(var7Lifetime1, param0, param2, 122);
-          this.a(var7Lifetime1, var9Lifetime1, var8Lifetime1, var6Lifetime1, (byte) 64);
+          this.setBounds(var7Lifetime1, var9Lifetime1, var8Lifetime1, var6Lifetime1, (byte) 64);
           for (var10Lifetime1 = 0; var10Lifetime1 < this.field_Wb; var10Lifetime1++) {
             this.field_Xb[var10Lifetime1].a(-10411, this.field_Zb * var10Lifetime1 + this.field_Sb, this.field_Qb, this.field_Yb, this.field_Vb, this.field_Zb, var6Lifetime1 - 2 * this.field_Vb);
           }

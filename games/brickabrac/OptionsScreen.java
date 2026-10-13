@@ -3,12 +3,12 @@
  */
 final class OptionsScreen extends FramedMenuScreen {
     static int field_x;
-    static mh field_u;
+    static UiComponent field_u;
     static int resultCounterOne;
     static StringBuilder field_A;
     static String field_w;
     static IntArrayRequest[] progressRequests;
-    static mh field_v;
+    static UiComponent field_v;
     static RgbSprite desertFarSprite;
 
     final static RgbSprite a(int param0, int param1, String param2, boolean param3) {

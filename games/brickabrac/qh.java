@@ -3,7 +3,7 @@
  */
 final class qh {
     static int field_a;
-    static mh field_j;
+    static UiComponent field_j;
     static LevelPack field_b;
     static int field_d;
     static byte[] field_h;

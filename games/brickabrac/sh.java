@@ -5,7 +5,7 @@ final class sh {
     static String field_b;
     static String field_c;
     static int field_a;
-    static mh field_d;
+    static UiComponent field_d;
 
     final static eh a(byte param0) {
         int var1 = 0;
@@ -149,7 +149,7 @@ final class sh {
         field_c = null;
         field_d = null;
         if (param0 <= 110) {
-          field_d = (mh) null;
+          field_d = (UiComponent) null;
         }
     }
 

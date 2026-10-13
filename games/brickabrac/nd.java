@@ -7,7 +7,7 @@ final class nd {
     static String field_d;
     static boolean field_b;
     static int field_c;
-    static mh field_a;
+    static UiComponent field_a;
     static String field_g;
 
     public static void a(byte param0) {

@@ -135,7 +135,7 @@ abstract class BackgroundScene {
         MusicTrack dupTemp$0 = null;
         int fieldTemp$1 = 0;
         if (this.musicData == null) {
-          dupTemp$0 = MusicTrack.load(mh.field_lb, "", this.musicName);
+          dupTemp$0 = MusicTrack.load(UiComponent.field_lb, "", this.musicName);
           this.musicData = dupTemp$0;
           if (dupTemp$0 == null) {
             return;

@@ -9,7 +9,7 @@ final class PowerUpWarning extends IntrusiveNode {
     static byte[] field_p;
     static int[] field_l;
     static MouseInput mouseInput;
-    static mh field_k;
+    static UiComponent field_k;
     static TextFont field_r;
     static int field_i;
 

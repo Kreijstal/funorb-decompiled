@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ap {
-    static mh field_e;
+    static UiComponent field_e;
     static RgbSprite[] halloweenCentreSprites;
     static RgbSprite field_a;
     static RgbSprite ninjaMidSprite;
@@ -13,7 +13,7 @@ final class ap {
         ll.field_b = param1;
         ChocolateBackground.field_v = param0;
         if (param2 < 72) {
-          field_e = (mh) null;
+          field_e = (UiComponent) null;
         }
     }
 

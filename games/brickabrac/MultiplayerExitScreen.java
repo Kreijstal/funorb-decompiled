@@ -114,11 +114,11 @@ final class MultiplayerExitScreen extends MatchResultScreen {
 
     final int getResultBottom(int obfuscationGuard) {
         if (obfuscationGuard == -6) {
-          return DualLinkDeque.field_d.field_db;
+          return DualLinkDeque.field_d.screenY;
         }
         ResourceArchive var3 = (ResourceArchive) null;
         MultiplayerExitScreen.a(false, (ResourceArchive) null, (ResourceArchive) null, (ResourceArchive) null, 63);
-        return DualLinkDeque.field_d.field_db;
+        return DualLinkDeque.field_d.screenY;
     }
 
     final void navigateBack(int obfuscationGuard) {

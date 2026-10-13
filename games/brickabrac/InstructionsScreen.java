@@ -26,8 +26,8 @@ final class InstructionsScreen extends MenuScreen {
           var1_int = 0;
           var2 = 0;
           while (jl.pollKeyEvent((byte) 5)) {
-            mh.field_H.navigateVertical(-1);
-            if (mh.field_H.isActivated((byte) 113)) {
+            UiComponent.field_H.navigateVertical(-1);
+            if (UiComponent.field_H.isActivated((byte) 113)) {
               var1_int = 1;
             }
             if (MeshAttributeRecord.currentKeyCode != 13) {
@@ -39,14 +39,14 @@ final class InstructionsScreen extends MenuScreen {
             var8 = (java.awt.Component) null;
             InstructionsScreen.attachKeyboardInput(22, (java.awt.Component) null);
           }
-          mh.field_H.updatePointer(qo.b(120, po.pointerY, MusicPatch.pointerX), param0 + 27355, qo.b(param0 - 4, qo.pressY, tb.pressX));
-          if (mh.field_H.isActivated((byte) 113)) {
+          UiComponent.field_H.updatePointer(qo.b(120, po.pointerY, MusicPatch.pointerX), param0 + 27355, qo.b(param0 - 4, qo.pressY, tb.pressX));
+          if (UiComponent.field_H.isActivated((byte) 113)) {
             var1_int = 1;
           }
           var3 = 0;
           if (var1_int != 0 &&
-            mh.field_H.selectedIndex >= 0) {
-            var3 = ri.field_I[mh.field_H.selectedIndex];
+            UiComponent.field_H.selectedIndex >= 0) {
+            var3 = ri.field_I[UiComponent.field_H.selectedIndex];
             if (var3 == 2) {
               w.c((byte) 3);
             } else if (5 == var3) {

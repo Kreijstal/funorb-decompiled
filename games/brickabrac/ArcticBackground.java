@@ -5,7 +5,7 @@ final class ArcticBackground extends BackgroundScene {
     static MenuSelection field_r;
     static String field_u;
     static int[] faceDepthBucketCounts;
-    static mh field_s;
+    static UiComponent field_s;
     static int field_t;
     static String field_v;
 

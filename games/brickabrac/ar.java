@@ -175,9 +175,9 @@ final class ar {
               } else {
                 var13 = var8[1 + var11];
                 if (param0) {
-                  if (!var13.field_Nb) {
+                  if (!var13.selected) {
                     if (var9 != 0) {
-                      stackIn_78_0 = (var13.field_eb) ? 1 : 0;
+                      stackIn_78_0 = (var13.enabled) ? 1 : 0;
                     } else {
                       stackIn_78_0 = 0;
                     }

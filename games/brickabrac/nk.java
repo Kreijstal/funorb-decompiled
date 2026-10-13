@@ -6,10 +6,10 @@ final class nk {
     static String field_d;
     static String field_f;
     static String field_i;
-    static mh field_a;
+    static UiComponent field_a;
     static RgbSprite field_h;
     static String field_b;
-    static mh field_g;
+    static UiComponent field_g;
     static RgbSprite field_c;
 
     final static void a(int param0) {

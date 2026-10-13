@@ -2,9 +2,9 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class MessageScreen extends MenuScreen {
-    static mh field_r;
+    static UiComponent field_r;
     static String field_u;
-    static mh field_s;
+    static UiComponent field_s;
     static MusicTrack field_t;
 
     public static void f(byte param0) {

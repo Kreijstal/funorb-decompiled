@@ -356,7 +356,7 @@ final class bm {
                   unusedRemainder = false;
                 }
                 else {
-                  sound = mh.field_ob[ChocolateBackground.field_w.nextBoundedInt(-37880252, mh.field_ob.length)];
+                  sound = UiComponent.field_ob[ChocolateBackground.field_w.nextBoundedInt(-37880252, UiComponent.field_ob.length)];
                 }
               } else {
                 if (oa.currentBackground != null) {

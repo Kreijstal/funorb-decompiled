@@ -11,7 +11,7 @@ final class HighscorePackSelector {
     private int lastPointerX;
     static String field_g;
     private int packCount;
-    static mh field_k;
+    static UiComponent field_k;
     private boolean keyboardSelection;
 
     final boolean handleNavigationKey(int keyCode, char character, int obfuscationGuard) {

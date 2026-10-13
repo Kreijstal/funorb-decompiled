@@ -19,28 +19,28 @@ abstract class ug extends ib implements je {
         super(param0, param1, param2, param3, param4);
     }
 
-    final static mh a(int param0, int param1, byte param2, int param3, int param4, int param5, int param6, int param7, TextFont param8, int param9, int param10, int param11, int param12) {
-        mh var13 = null;
+    final static UiComponent a(int param0, int param1, byte param2, int param3, int param4, int param5, int param6, int param7, TextFont param8, int param9, int param10, int param11, int param12) {
+        UiComponent var13 = null;
         RuntimeException var13_ref = null;
         TextFont var14 = null;
-        mh stackIn_3_0 = null;
+        UiComponent stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var13 = new mh(0L, (mh) null);
-          var13.field_Jb = ByteArrayNode.a(param0, (byte) -18, param3);
-          var13.field_Gb = ByteArrayNode.a(param12, (byte) -18, param7);
-          var13.field_D = ByteArrayNode.a(param11, (byte) -18, param1);
-          var13.field_pb = ByteArrayNode.a(param5, (byte) -18, param4);
+          var13 = new UiComponent(0L, (UiComponent) null);
+          var13.frameSprites = ByteArrayNode.a(param0, (byte) -18, param3);
+          var13.activeFrameSprites = ByteArrayNode.a(param12, (byte) -18, param7);
+          var13.capturedFrameSprites = ByteArrayNode.a(param11, (byte) -18, param1);
+          var13.selectedFrameSprites = ByteArrayNode.a(param5, (byte) -18, param4);
           if (param2 < 96) {
             var14 = (TextFont) null;
             ug.a(-26, -58, (byte) 79, 5, 18, -27, 69, 4, (TextFont) null, 4, -79, 47, -32);
           }
-          var13.field_Ab = ByteArrayNode.a(param6, (byte) -18, param10);
-          var13.field_X = param9;
-          var13.field_O = param8;
+          var13.disabledFrameSprites = ByteArrayNode.a(param6, (byte) -18, param10);
+          var13.textColor = param9;
+          var13.font = param8;
           stackIn_3_0 = var13;
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

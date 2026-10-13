@@ -5,7 +5,7 @@ final class nn {
     static PaletteFont field_g;
     private long field_i;
     private int[] field_c;
-    mh field_j;
+    UiComponent field_j;
     int field_b;
     private String field_k;
     static String field_f;
@@ -158,7 +158,7 @@ final class nn {
 
     final void a(byte param0, boolean param1) {
         try {
-          this.field_d.a(true, param1);
+          this.field_d.drawRoot(true, param1);
           int var3_int = 11 % ((param0 + 91) / 34);
         } catch (RuntimeException runtimeException) {
           throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "nn.H(" + param0 + ',' + param1 + ')');
@@ -302,7 +302,7 @@ final class nn {
                 }
                 var2 = nk.a("mu_chat_game", (byte) 126);
                 if (null != var2) {
-                  mh.field_Z = MenuButton.a(var2, (byte) 97);
+                  UiComponent.field_Z = MenuButton.a(var2, (byte) 97);
                 }
                 var2 = nk.a("mu_chat_private", (byte) 45);
                 if (var2 != null) {
@@ -2090,7 +2090,7 @@ final class nn {
                 }
                 var2 = nk.a("login_createaccount", (byte) -121);
                 if (var2 != null) {
-                  mh.field_mb = MenuButton.a(var2, (byte) 103);
+                  UiComponent.field_mb = MenuButton.a(var2, (byte) 103);
                 }
                 var2 = nk.a("tohighscores", (byte) 25);
                 if (var2 != null) {
@@ -3508,7 +3508,7 @@ final class nn {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 == 17) {
-            CircleBody.field_p = new am(this.field_j.field_Eb, this.field_j.field_db, this.field_j.field_Ib, this.field_j.field_cb, param2, MenuSelection.field_m, rf.field_c, am.field_Zb, CappedUrlRequest.field_l, BlankScreen.field_k, DualLinkNode.field_t, this.field_e, this.field_i);
+            CircleBody.field_p = new am(this.field_j.screenX, this.field_j.screenY, this.field_j.width, this.field_j.height, param2, MenuSelection.field_m, rf.field_c, am.field_Zb, CappedUrlRequest.field_l, BlankScreen.field_k, DualLinkNode.field_t, this.field_e, this.field_i);
             return true;
           }
           if (param0 < 121) {
@@ -3522,7 +3522,7 @@ final class nn {
         }
     }
 
-    nn(mh param0, long param1, String param2, String param3, int param4, int param5, int[] param6) {
+    nn(UiComponent param0, long param1, String param2, String param3, int param4, int param5, int[] param6) {
         RuntimeException runtimeException = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -3541,7 +3541,7 @@ final class nn {
           this.field_a = param5;
           this.field_b = param4;
           this.field_e = param2;
-          param0.field_Nb = true;
+          param0.selected = true;
           this.field_c = param6;
           this.field_k = param3;
           return;

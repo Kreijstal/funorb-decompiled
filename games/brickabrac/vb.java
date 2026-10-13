@@ -8,7 +8,7 @@ class vb extends d {
     private int field_L;
     static int field_S;
     private int field_T;
-    static mh field_K;
+    static UiComponent field_K;
     private boolean field_N;
     private int field_R;
     private long field_O;

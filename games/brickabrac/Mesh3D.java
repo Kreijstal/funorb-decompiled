@@ -65,36 +65,36 @@ final class Mesh3D {
     }
 
     final static void a(ResourceArchive param0, byte param1) {
-        mh var5 = null;
-        mh var6 = null;
-        mh var3 = null;
+        UiComponent var5 = null;
+        UiComponent var6 = null;
+        UiComponent var3 = null;
         try {
           ok.field_g = pl.loadRgbSpriteByName("basic", "display_name_changed", (byte) 109, param0);
           GameScreen.field_f = new hj(0L, rq.field_b, hk.field_J, ChocolateBackground.field_y);
           f.field_c = new hj(0L, rq.field_b, MatchCompleteScreen.field_z, ng.field_e);
-          rg.field_c = new mh(0L, (mh) null);
-          sj.field_d = new mh(0L, CappedUrlRequest.field_l);
-          sj.field_d.field_S = 1;
-          MouseWheelSource.field_c = new mh(0L, MainMenuScreen.field_t, n.field_a);
-          GameplayScreen.field_u = new mh(0L, ik.field_a, ArchiveSource.field_c);
-          mo.field_R = new mh(0L, DualLinkNode.field_t);
-          rg.field_c.a(sj.field_d, 0);
-          rg.field_c.a(MouseWheelSource.field_c, 0);
-          rg.field_c.a(GameplayScreen.field_u, 0);
-          rg.field_c.a(GameScreen.field_f, 0);
-          rg.field_c.a(mo.field_R, 0);
-          GameScreen.field_f.field_Qb.field_Qb.a((byte) -102, CappedUrlRequest.field_l);
+          rg.field_c = new UiComponent(0L, (UiComponent) null);
+          sj.field_d = new UiComponent(0L, CappedUrlRequest.field_l);
+          sj.field_d.horizontalAlignment = 1;
+          MouseWheelSource.field_c = new UiComponent(0L, MainMenuScreen.field_t, n.field_a);
+          GameplayScreen.field_u = new UiComponent(0L, ik.field_a, ArchiveSource.field_c);
+          mo.field_R = new UiComponent(0L, DualLinkNode.field_t);
+          rg.field_c.addChild(sj.field_d, 0);
+          rg.field_c.addChild(MouseWheelSource.field_c, 0);
+          rg.field_c.addChild(GameplayScreen.field_u, 0);
+          rg.field_c.addChild(GameScreen.field_f, 0);
+          rg.field_c.addChild(mo.field_R, 0);
+          GameScreen.field_f.field_Qb.field_Qb.copyStyle((byte) -102, CappedUrlRequest.field_l);
           var5 = GameScreen.field_f.field_Qb.field_Qb;
           var6 = var5;
-          GameScreen.field_f.field_Qb.field_Qb.field_Q = 1;
+          GameScreen.field_f.field_Qb.field_Qb.verticalAlignment = 1;
           if (param1 <= 58) {
             field_k = 109;
           }
-          var6.field_S = 1;
-          f.field_c.field_Qb.field_Qb.a((byte) -115, CappedUrlRequest.field_l);
+          var6.horizontalAlignment = 1;
+          f.field_c.field_Qb.field_Qb.copyStyle((byte) -115, CappedUrlRequest.field_l);
           var3 = f.field_c.field_Qb.field_Qb;
-          f.field_c.field_Qb.field_Qb.field_Q = 1;
-          var3.field_S = 1;
+          f.field_c.field_Qb.field_Qb.verticalAlignment = 1;
+          var3.horizontalAlignment = 1;
         } catch (RuntimeException runtimeException) {
           throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "fr.I(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

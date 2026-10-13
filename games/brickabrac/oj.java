@@ -46,58 +46,58 @@ final class oj extends ep {
     }
 
     final static void a(boolean param0, byte param1) {
-        mh stackIn_7_0 = null;
+        UiComponent stackIn_7_0 = null;
         boolean stackIn_7_1 = false;
         boolean stackIn_8_2 = false;
-        mh stackIn_11_0 = null;
+        UiComponent stackIn_11_0 = null;
         boolean stackIn_11_1 = false;
         boolean stackIn_12_2 = false;
-        mh stackIn_17_0 = null;
+        UiComponent stackIn_17_0 = null;
         boolean stackIn_17_1 = false;
         boolean stackIn_18_2 = false;
-        mh stackIn_21_0 = null;
+        UiComponent stackIn_21_0 = null;
         boolean stackIn_21_1 = false;
         boolean stackIn_22_2 = false;
-        mh stackIn_26_0 = null;
+        UiComponent stackIn_26_0 = null;
         boolean stackIn_26_1 = false;
         boolean stackIn_27_2 = false;
-        mh stackIn_30_0 = null;
+        UiComponent stackIn_30_0 = null;
         boolean stackIn_30_1 = false;
         boolean stackIn_31_2 = false;
-        mh stackIn_39_0 = null;
+        UiComponent stackIn_39_0 = null;
         boolean stackIn_39_1 = false;
         boolean stackIn_40_2 = false;
-        mh stackIn_43_0 = null;
+        UiComponent stackIn_43_0 = null;
         boolean stackIn_43_1 = false;
         boolean stackIn_44_2 = false;
-        mh stackIn_48_0 = null;
+        UiComponent stackIn_48_0 = null;
         boolean stackIn_48_1 = false;
         boolean stackIn_49_2 = false;
-        mh stackIn_52_0 = null;
+        UiComponent stackIn_52_0 = null;
         boolean stackIn_52_1 = false;
         boolean stackIn_53_2 = false;
-        mh stackIn_60_0 = null;
+        UiComponent stackIn_60_0 = null;
         boolean stackIn_60_1 = false;
         boolean stackIn_61_2 = false;
-        mh stackIn_64_0 = null;
+        UiComponent stackIn_64_0 = null;
         boolean stackIn_64_1 = false;
         boolean stackIn_65_2 = false;
-        mh stackIn_69_0 = null;
+        UiComponent stackIn_69_0 = null;
         boolean stackIn_69_1 = false;
         boolean stackIn_70_2 = false;
-        mh stackIn_73_0 = null;
+        UiComponent stackIn_73_0 = null;
         boolean stackIn_73_1 = false;
         boolean stackIn_74_2 = false;
-        mh stackIn_82_0 = null;
+        UiComponent stackIn_82_0 = null;
         boolean stackIn_82_1 = false;
         boolean stackIn_83_2 = false;
-        mh stackIn_86_0 = null;
+        UiComponent stackIn_86_0 = null;
         boolean stackIn_86_1 = false;
         boolean stackIn_87_2 = false;
-        mh stackIn_91_0 = null;
+        UiComponent stackIn_91_0 = null;
         boolean stackIn_91_1 = false;
         boolean stackIn_92_2 = false;
-        mh stackIn_95_0 = null;
+        UiComponent stackIn_95_0 = null;
         boolean stackIn_95_1 = false;
         boolean stackIn_96_2 = false;
         int var2;
@@ -112,21 +112,21 @@ final class oj extends ep {
               stackIn_60_0 = NinjaBackground.field_w;
               stackIn_60_1 = true;
               stackIn_61_2 = (param0) && (!hc.field_c);
-              ((mh) (Object) stackIn_60_0).a(stackIn_60_1, stackIn_61_2);
+              ((UiComponent) (Object) stackIn_60_0).drawRoot(stackIn_60_1, stackIn_61_2);
               stackIn_64_0 = MultiplayerMatch.field_d;
               stackIn_64_1 = true;
               stackIn_65_2 = (param0) && (!hc.field_c);
-              ((mh) (Object) stackIn_64_0).a(stackIn_64_1, stackIn_65_2);
+              ((UiComponent) (Object) stackIn_64_0).drawRoot(stackIn_64_1, stackIn_65_2);
             } else {
-              c.field_e.drawAt(NinjaBackground.field_w.field_P, 0);
+              c.field_e.drawAt(NinjaBackground.field_w.localX, 0);
               stackIn_69_0 = NinjaBackground.field_w;
               stackIn_69_1 = true;
               stackIn_70_2 = (param0) && (!hc.field_c);
-              ((mh) (Object) stackIn_69_0).a(stackIn_69_1, stackIn_70_2);
+              ((UiComponent) (Object) stackIn_69_0).drawRoot(stackIn_69_1, stackIn_70_2);
               stackIn_73_0 = MultiplayerMatch.field_d;
               stackIn_73_1 = true;
               stackIn_74_2 = (param0) && (!hc.field_c);
-              ((mh) (Object) stackIn_73_0).a(stackIn_73_1, stackIn_74_2);
+              ((UiComponent) (Object) stackIn_73_0).drawRoot(stackIn_73_1, stackIn_74_2);
             }
           } else {
             if (TableDataRequest.field_m > 0) {
@@ -134,21 +134,21 @@ final class oj extends ep {
                 stackIn_82_0 = NinjaBackground.field_w;
                 stackIn_82_1 = true;
                 stackIn_83_2 = (param0) && (!hc.field_c);
-                ((mh) (Object) stackIn_82_0).a(stackIn_82_1, stackIn_83_2);
+                ((UiComponent) (Object) stackIn_82_0).drawRoot(stackIn_82_1, stackIn_83_2);
                 stackIn_86_0 = MultiplayerMatch.field_d;
                 stackIn_86_1 = true;
                 stackIn_87_2 = (param0) && (!hc.field_c);
-                ((mh) (Object) stackIn_86_0).a(stackIn_86_1, stackIn_87_2);
+                ((UiComponent) (Object) stackIn_86_0).drawRoot(stackIn_86_1, stackIn_87_2);
               } else {
-                c.field_e.drawAt(NinjaBackground.field_w.field_P, 0);
+                c.field_e.drawAt(NinjaBackground.field_w.localX, 0);
                 stackIn_91_0 = NinjaBackground.field_w;
                 stackIn_91_1 = true;
                 stackIn_92_2 = (param0) && (!hc.field_c);
-                ((mh) (Object) stackIn_91_0).a(stackIn_91_1, stackIn_92_2);
+                ((UiComponent) (Object) stackIn_91_0).drawRoot(stackIn_91_1, stackIn_92_2);
                 stackIn_95_0 = MultiplayerMatch.field_d;
                 stackIn_95_1 = true;
                 stackIn_96_2 = (param0) && (!hc.field_c);
-                ((mh) (Object) stackIn_95_0).a(stackIn_95_1, stackIn_96_2);
+                ((UiComponent) (Object) stackIn_95_0).drawRoot(stackIn_95_1, stackIn_96_2);
               }
             }
           }
@@ -157,36 +157,36 @@ final class oj extends ep {
           return;
         }
         if (null != c.field_e) {
-          c.field_e.drawAt(fe.field_gb.field_P, 0);
+          c.field_e.drawAt(fe.field_gb.localX, 0);
         }
         stackIn_7_0 = fe.field_gb;
         stackIn_7_1 = true;
         stackIn_8_2 = (param0) && (!sc.field_c);
-        ((mh) (Object) stackIn_7_0).a(stackIn_7_1, stackIn_8_2);
+        ((UiComponent) (Object) stackIn_7_0).drawRoot(stackIn_7_1, stackIn_8_2);
         stackIn_11_0 = rm.field_a;
         stackIn_11_1 = true;
         stackIn_12_2 = (param0) && (!sc.field_c);
-        ((mh) (Object) stackIn_11_0).a(stackIn_11_1, stackIn_12_2);
+        ((UiComponent) (Object) stackIn_11_0).drawRoot(stackIn_11_1, stackIn_12_2);
         if (IntArrayRequest.field_j > 0) {
           if (null == c.field_e) {
             stackIn_17_0 = NinjaBackground.field_w;
             stackIn_17_1 = true;
             stackIn_18_2 = (param0) && (!hc.field_c);
-            ((mh) (Object) stackIn_17_0).a(stackIn_17_1, stackIn_18_2);
+            ((UiComponent) (Object) stackIn_17_0).drawRoot(stackIn_17_1, stackIn_18_2);
             stackIn_21_0 = MultiplayerMatch.field_d;
             stackIn_21_1 = true;
             stackIn_22_2 = (param0) && (!hc.field_c);
-            ((mh) (Object) stackIn_21_0).a(stackIn_21_1, stackIn_22_2);
+            ((UiComponent) (Object) stackIn_21_0).drawRoot(stackIn_21_1, stackIn_22_2);
           } else {
-            c.field_e.drawAt(NinjaBackground.field_w.field_P, 0);
+            c.field_e.drawAt(NinjaBackground.field_w.localX, 0);
             stackIn_26_0 = NinjaBackground.field_w;
             stackIn_26_1 = true;
             stackIn_27_2 = (param0) && (!hc.field_c);
-            ((mh) (Object) stackIn_26_0).a(stackIn_26_1, stackIn_27_2);
+            ((UiComponent) (Object) stackIn_26_0).drawRoot(stackIn_26_1, stackIn_27_2);
             stackIn_30_0 = MultiplayerMatch.field_d;
             stackIn_30_1 = true;
             stackIn_31_2 = (param0) && (!hc.field_c);
-            ((mh) (Object) stackIn_30_0).a(stackIn_30_1, stackIn_31_2);
+            ((UiComponent) (Object) stackIn_30_0).drawRoot(stackIn_30_1, stackIn_31_2);
           }
           sc.popRaster(-123);
           var2Lifetime1 = -63 / ((70 - param1) / 49);
@@ -201,24 +201,24 @@ final class oj extends ep {
           stackIn_39_0 = NinjaBackground.field_w;
           stackIn_39_1 = true;
           stackIn_40_2 = (param0) && (!hc.field_c);
-          ((mh) (Object) stackIn_39_0).a(stackIn_39_1, stackIn_40_2);
+          ((UiComponent) (Object) stackIn_39_0).drawRoot(stackIn_39_1, stackIn_40_2);
           stackIn_43_0 = MultiplayerMatch.field_d;
           stackIn_43_1 = true;
           stackIn_44_2 = (param0) && (!hc.field_c);
-          ((mh) (Object) stackIn_43_0).a(stackIn_43_1, stackIn_44_2);
+          ((UiComponent) (Object) stackIn_43_0).drawRoot(stackIn_43_1, stackIn_44_2);
           sc.popRaster(-123);
           var2Lifetime3 = -63 / ((70 - param1) / 49);
           return;
         }
-        c.field_e.drawAt(NinjaBackground.field_w.field_P, 0);
+        c.field_e.drawAt(NinjaBackground.field_w.localX, 0);
         stackIn_48_0 = NinjaBackground.field_w;
         stackIn_48_1 = true;
         stackIn_49_2 = (param0) && (!hc.field_c);
-        ((mh) (Object) stackIn_48_0).a(stackIn_48_1, stackIn_49_2);
+        ((UiComponent) (Object) stackIn_48_0).drawRoot(stackIn_48_1, stackIn_49_2);
         stackIn_52_0 = MultiplayerMatch.field_d;
         stackIn_52_1 = true;
         stackIn_53_2 = (param0) && (!hc.field_c);
-        ((mh) (Object) stackIn_52_0).a(stackIn_52_1, stackIn_53_2);
+        ((UiComponent) (Object) stackIn_52_0).drawRoot(stackIn_52_1, stackIn_53_2);
         sc.popRaster(-123);
         var2Lifetime4 = -63 / ((70 - param1) / 49);
         return;

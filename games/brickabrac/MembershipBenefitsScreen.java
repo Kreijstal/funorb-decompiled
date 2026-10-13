@@ -4,7 +4,7 @@
 final class MembershipBenefitsScreen extends MenuScreen {
     static cd field_v;
     private IndexedSprite[] screenshots;
-    static mh field_t;
+    static UiComponent field_t;
     private ResourceArchive archive;
     static int clientTick;
     static RgbSprite field_s;
@@ -38,13 +38,13 @@ final class MembershipBenefitsScreen extends MenuScreen {
     final static void a(boolean param0, boolean param1) {
         if (!param1) {
           if (null != MusicCrossfadeStream.field_m) {
-            MusicCrossfadeStream.field_m.a(true, param0);
+            MusicCrossfadeStream.field_m.drawRoot(true, param0);
           }
           return;
         }
         MembershipBenefitsScreen.f(-8);
         if (null != MusicCrossfadeStream.field_m) {
-          MusicCrossfadeStream.field_m.a(true, param0);
+          MusicCrossfadeStream.field_m.drawRoot(true, param0);
         }
     }
 

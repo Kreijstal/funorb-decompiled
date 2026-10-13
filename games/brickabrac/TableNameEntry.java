@@ -8,7 +8,7 @@ final class TableNameEntry {
     static String field_g;
     static RgbSprite waterSmallSprite;
     static RgbSprite spaceCharacterSprite;
-    static mh field_h;
+    static UiComponent field_h;
     String name;
 
     public static void a(byte param0) {

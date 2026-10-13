@@ -5,7 +5,7 @@ abstract class MouseWheelSource {
     static int resizeFrameCounter;
     static String field_d;
     static String field_b;
-    static mh field_c;
+    static UiComponent field_c;
 
     abstract void detach(java.awt.Component component, int obfuscationGuard);
 

@@ -1,17 +1,17 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class kb extends mh {
+final class kb extends UiComponent {
     static boolean pointerChanged;
     static String field_Wb;
     static String field_Rb;
-    private mh field_ac;
+    private UiComponent field_ac;
     static volatile int liveHeldButton;
     static boolean field_Sb;
     static String field_Tb;
     static RgbSprite[] field_Ub;
     static int field_Yb;
-    static mh field_Vb;
+    static UiComponent field_Vb;
     static long field_Zb;
     static String field_Qb;
 
@@ -63,23 +63,23 @@ final class kb extends mh {
     final boolean a(byte param0, boolean param1) {
         if (param0 < 63) {
           kb.h(-91);
-          this.a(true, -15211);
+          this.updateRoot(true, -15211);
           if (BackgroundScene.pressedButton == 0) {
-            return this.field_ac.field_L != 0 ? true : false;
+            return this.field_ac.pressedButton != 0 ? true : false;
           }
-          if (this.field_L != 0) {
-            return this.field_ac.field_L != 0 ? true : false;
+          if (this.pressedButton != 0) {
+            return this.field_ac.pressedButton != 0 ? true : false;
           }
           return true;
         }
-        this.a(true, -15211);
+        this.updateRoot(true, -15211);
         if (BackgroundScene.pressedButton != 0) {
-          if (this.field_L == 0) {
+          if (this.pressedButton == 0) {
             return true;
           }
-          return this.field_ac.field_L != 0 ? true : false;
+          return this.field_ac.pressedButton != 0 ? true : false;
         }
-        if (this.field_ac.field_L == 0) {
+        if (this.field_ac.pressedButton == 0) {
           return false;
         }
         return true;
@@ -162,7 +162,7 @@ final class kb extends mh {
         }
     }
 
-    kb(mh param0, mh param1, mh param2, mh param3, mh param4, mh param5) {
+    kb(UiComponent param0, UiComponent param1, UiComponent param2, UiComponent param3, UiComponent param4, UiComponent param5) {
         int var12 = 0;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
@@ -179,50 +179,50 @@ final class kb extends mh {
         String stackIn_26_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var7 = null;
-        mh var8 = null;
-        mh var9 = null;
+        UiComponent var8 = null;
+        UiComponent var9 = null;
         int var10 = 0;
         int var11 = 0;
-        mh var13 = null;
-        mh var14 = null;
+        UiComponent var13 = null;
+        UiComponent var14 = null;
         int var15 = 0;
-        mh var17 = null;
+        UiComponent var17 = null;
         int var10Lifetime1;
         try {
-          var17 = new mh(0L, param1, ng.field_c.toUpperCase());
-          var17.field_S = 1;
-          this.field_ac = new mh(0L, param2);
-          var8 = new mh(0L, param3);
-          var9 = new mh(0L, param3, DelegatingCanvas.field_b);
-          var9.field_S = 1;
+          var17 = new UiComponent(0L, param1, ng.field_c.toUpperCase());
+          var17.horizontalAlignment = 1;
+          this.field_ac = new UiComponent(0L, param2);
+          var8 = new UiComponent(0L, param3);
+          var9 = new UiComponent(0L, param3, DelegatingCanvas.field_b);
+          var9.horizontalAlignment = 1;
           var10 = 50;
           var11 = 0;
           for (var12 = 0; MenuSelection.field_p.length > var12; var12++) {
-            var13 = new mh(0L, param3, qo.field_M[var12]);
-            var14 = new mh(0L, param3, MenuSelection.field_p[var12]);
-            var15 = param3.field_O.measureText(MenuSelection.field_p[var12]);
-            var13.a(15, var10, 20, 65, (byte) 64);
+            var13 = new UiComponent(0L, param3, qo.field_M[var12]);
+            var14 = new UiComponent(0L, param3, MenuSelection.field_p[var12]);
+            var15 = param3.font.measureText(MenuSelection.field_p[var12]);
+            var13.setBounds(15, var10, 20, 65, (byte) 64);
             if (var15 > var11) {
               var11 = var15;
             }
-            var14.a(15, var10, 90, 640, (byte) 64);
-            var8.a(var13, 0);
-            var8.a(var14, 0);
+            var14.setBounds(15, var10, 90, 640, (byte) 64);
+            var8.addChild(var13, 0);
+            var8.addChild(var14, 0);
             var10 += 30;
           }
-          var17.a(24, 0, 0, 20 + var11 + 90, (byte) 64);
+          var17.setBounds(24, 0, 0, 20 + var11 + 90, (byte) 64);
           var10 += 15;
-          this.a(var17.field_cb + var10, 100, 100, var17.field_Ib, (byte) 64);
-          this.field_ac.a(15, 5, -20 + var17.field_Ib, 15, (byte) 64);
-          var8.a(this.field_cb - var17.field_cb, var17.field_cb, 0, this.field_Ib, (byte) 64);
-          var9.a(15, 20, 0, this.field_Ib, (byte) 64);
-          var8.field_Jb = na.a(false, 8421504, 3, 11579568, var8.field_cb, 2105376);
-          var17.a(this.field_ac, 0);
-          var8.a(var9, 0);
-          this.a(var17, 0);
-          this.a(var8, 0);
-          this.field_P = -(this.field_Ib >> 1) + 320;
-          var10Lifetime1 = 240 - (this.field_cb >> 1);
+          this.setBounds(var17.height + var10, 100, 100, var17.width, (byte) 64);
+          this.field_ac.setBounds(15, 5, -20 + var17.width, 15, (byte) 64);
+          var8.setBounds(this.height - var17.height, var17.height, 0, this.width, (byte) 64);
+          var9.setBounds(15, 20, 0, this.width, (byte) 64);
+          var8.frameSprites = na.a(false, 8421504, 3, 11579568, var8.height, 2105376);
+          var17.addChild(this.field_ac, 0);
+          var8.addChild(var9, 0);
+          this.addChild(var17, 0);
+          this.addChild(var8, 0);
+          this.localX = -(this.width >> 1) + 320;
+          var10Lifetime1 = 240 - (this.height >> 1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -268,9 +268,9 @@ final class kb extends mh {
         }
     }
 
-    final static mh h(int param0) {
+    final static UiComponent h(int param0) {
         if (param0 != 2) {
-          field_Vb = (mh) null;
+          field_Vb = (UiComponent) null;
           return GameScreen.field_f.field_Xb;
         }
         return GameScreen.field_f.field_Xb;

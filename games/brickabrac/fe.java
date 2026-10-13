@@ -6,7 +6,7 @@ abstract class fe extends bj {
     private int field_cb;
     static int field_ob;
     private int field_fb;
-    static mh field_gb;
+    static UiComponent field_gb;
     static ResourceArchive field_jb;
     static String field_ib;
     private oc field_eb;

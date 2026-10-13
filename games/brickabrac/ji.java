@@ -11,7 +11,7 @@ final class ji implements Iterable {
     IntrusiveNode[] field_d;
     int field_c;
     static ResourceArchive field_a;
-    static mh field_b;
+    static UiComponent field_b;
 
     public static void a(int param0) {
         field_a = null;

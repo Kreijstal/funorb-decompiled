@@ -3,7 +3,7 @@
  */
 final class LegacyUtf8Decoder {
     static RgbSprite ninjaNearSprite;
-    static mh field_c;
+    static UiComponent field_c;
     static String field_b;
     static String field_a;
 

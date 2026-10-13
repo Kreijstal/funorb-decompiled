@@ -1,40 +1,40 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class fj extends mh {
-    private mh field_ac;
+final class fj extends UiComponent {
+    private UiComponent field_ac;
     static String field_Qb;
     private int field_Tb;
-    private mh field_Yb;
-    private mh field_Zb;
+    private UiComponent field_Yb;
+    private UiComponent field_Zb;
     static int[] field_Pb;
     static TableRowSubmission field_Ub;
-    private mh field_Vb;
-    private mh field_Wb;
+    private UiComponent field_Vb;
+    private UiComponent field_Wb;
     static String field_Rb;
-    private mh field_Xb;
+    private UiComponent field_Xb;
     static int[] ninjaBackgroundColors;
 
     final void a(int param0, int param1, int param2, byte param3, int param4, int param5, int param6, int param7) {
         int var9 = -128 % ((-55 - param3) / 47);
-        this.field_cb = param2;
-        this.field_Ib = param4;
-        this.field_zb = param7;
-        this.field_P = param0;
+        this.height = param2;
+        this.width = param4;
+        this.localY = param7;
+        this.localX = param0;
         this.a(-98, param6, param5, param1);
     }
 
     final boolean j(int param0) {
-        if (this.field_Zb.field_L != 0) {
+        if (this.field_Zb.pressedButton != 0) {
           this.field_Tb = 20;
           return true;
         }
-        if (0 != this.field_Zb.field_Ob) {
+        if (0 != this.field_Zb.capturedButton) {
           if (this.field_Tb > 0) {
             this.field_Tb = this.field_Tb - 1;
           }
           if (this.field_Tb == 0 &&
-            this.field_Vb.field_db + this.field_Vb.field_Db > po.pointerY) {
+            this.field_Vb.screenY + this.field_Vb.remainingY > po.pointerY) {
             this.field_Tb = 3;
             return true;
           }
@@ -47,7 +47,7 @@ final class fj extends mh {
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5, byte param6) {
-        wd.field_w.a(param2, param5, param1, param3, (byte) 64);
+        wd.field_w.setBounds(param2, param5, param1, param3, (byte) 64);
         if (param6 == 94) {
           if (null != hd.field_a) {
             hd.field_a.a(param6 ^ 94, -HighscoresScreen.field_v + param4, param2, param0, param4, param2);
@@ -58,11 +58,11 @@ final class fj extends mh {
 
     final boolean d(byte param0) {
         int var2 = -127 % ((-24 - param0) / 34);
-        if (this.field_ac.field_L != 0) {
+        if (this.field_ac.pressedButton != 0) {
           this.field_Tb = 20;
           return true;
         }
-        if (0 == this.field_ac.field_Ob) {
+        if (0 == this.field_ac.capturedButton) {
           return false;
         }
         if (0 < this.field_Tb) {
@@ -70,7 +70,7 @@ final class fj extends mh {
           if (this.field_Tb != 0) {
             return false;
           }
-          if (this.field_Vb.field_C + this.field_Vb.field_cb + (this.field_Vb.field_db + this.field_Vb.field_Db) <= po.pointerY) {
+          if (this.field_Vb.remainingHeight + this.field_Vb.height + (this.field_Vb.screenY + this.field_Vb.remainingY) <= po.pointerY) {
             this.field_Tb = 3;
             return true;
           }
@@ -79,7 +79,7 @@ final class fj extends mh {
         if (this.field_Tb != 0) {
           return false;
         }
-        if (this.field_Vb.field_C + this.field_Vb.field_cb + (this.field_Vb.field_db + this.field_Vb.field_Db) <= po.pointerY) {
+        if (this.field_Vb.remainingHeight + this.field_Vb.height + (this.field_Vb.screenY + this.field_Vb.remainingY) <= po.pointerY) {
           this.field_Tb = 3;
           return true;
         }
@@ -101,11 +101,11 @@ final class fj extends mh {
         if (param0 != 57) {
           return false;
         }
-        return this.field_Vb.field_Ob != 0 ? true : false;
+        return this.field_Vb.capturedButton != 0 ? true : false;
     }
 
-    fj(long param0, mh param1, mh param2, mh param3, mh param4) {
-        super(param0, (mh) null);
+    fj(long param0, UiComponent param1, UiComponent param2, UiComponent param3, UiComponent param4) {
+        super(param0, (UiComponent) null);
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
         String stackIn_6_2 = null;
@@ -117,26 +117,26 @@ final class fj extends mh {
         String stackIn_15_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var7 = null;
-        mh var9 = null;
-        mh var10 = null;
+        UiComponent var9 = null;
+        UiComponent var10 = null;
         try {
-          this.field_Yb = new mh(0L, param1);
-          this.field_Wb = new mh(0L, param2);
-          this.a(this.field_Yb, 0);
-          this.a(this.field_Wb, 0);
-          this.field_Xb = new mh(0L, (mh) null);
-          this.a(this.field_Xb, 0);
-          this.field_Zb = new mh(0L, param3);
-          this.field_ac = new mh(0L, param3);
-          this.field_ac.field_Lb = true;
+          this.field_Yb = new UiComponent(0L, param1);
+          this.field_Wb = new UiComponent(0L, param2);
+          this.addChild(this.field_Yb, 0);
+          this.addChild(this.field_Wb, 0);
+          this.field_Xb = new UiComponent(0L, (UiComponent) null);
+          this.addChild(this.field_Xb, 0);
+          this.field_Zb = new UiComponent(0L, param3);
+          this.field_ac = new UiComponent(0L, param3);
+          this.field_ac.useParentFrameBounds = true;
           var9 = this.field_Zb;
           var10 = var9;
-          var10.field_Lb = true;
-          this.field_Xb.a(this.field_Zb, 0);
-          this.field_Xb.a(this.field_ac, 0);
-          this.field_Vb = new mh(0L, param4);
-          this.field_Vb.field_nb = true;
-          this.field_Xb.a(this.field_Vb, 0);
+          var10.useParentFrameBounds = true;
+          this.field_Xb.addChild(this.field_Zb, 0);
+          this.field_Xb.addChild(this.field_ac, 0);
+          this.field_Vb = new UiComponent(0L, param4);
+          this.field_Vb.draggable = true;
+          this.field_Xb.addChild(this.field_Vb, 0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -171,11 +171,11 @@ final class fj extends mh {
     }
 
     final boolean h(int param0) {
-        if (param0 != this.field_Yb.field_L) {
+        if (param0 != this.field_Yb.pressedButton) {
           this.field_Tb = 20;
           return true;
         }
-        if (this.field_Yb.field_Ob == 0) {
+        if (this.field_Yb.capturedButton == 0) {
           return false;
         }
         if (0 < this.field_Tb) {
@@ -216,9 +216,9 @@ final class fj extends mh {
         int var9 = 0;
         int var5 = 0;
         int var7 = -116 % ((49 - param2) / 47);
-        int var6 = -this.field_Vb.field_cb + this.field_Xb.field_cb;
+        int var6 = -this.field_Vb.height + this.field_Xb.height;
         if (0 < var6) {
-          var8 = this.field_Vb.field_zb;
+          var8 = this.field_Vb.localY;
           var9 = -param1 + param0;
           var5 = (var6 / 2 + var8 * var9) / var6;
         }
@@ -256,28 +256,28 @@ final class fj extends mh {
         int var10 = 0;
         int var11 = 0;
         int var12 = 0;
-        mh var14 = null;
-        mh var15 = null;
-        mh var16 = null;
-        mh var17 = null;
-        mh var18 = null;
-        mh var19 = null;
-        mh var14Lifetime1;
-        mh var15Lifetime1;
-        mh var16Lifetime1;
-        mh var17Lifetime1;
-        mh var18Lifetime1;
-        mh var19Lifetime1;
+        UiComponent var14 = null;
+        UiComponent var15 = null;
+        UiComponent var16 = null;
+        UiComponent var17 = null;
+        UiComponent var18 = null;
+        UiComponent var19 = null;
+        UiComponent var14Lifetime1;
+        UiComponent var15Lifetime1;
+        UiComponent var16Lifetime1;
+        UiComponent var17Lifetime1;
+        UiComponent var18Lifetime1;
+        UiComponent var19Lifetime1;
         int var9Lifetime1;
         int var10Lifetime1;
         int var11Lifetime1;
         int var12Lifetime1;
-        if (this.field_Ib * 2 <= this.field_cb) {
-          var5 = this.field_Ib;
-          var6 = this.field_cb - this.field_Ib;
+        if (this.width * 2 <= this.height) {
+          var5 = this.width;
+          var6 = this.height - this.width;
         } else {
-          var6 = this.field_cb / 2;
-          var5 = this.field_cb / 2;
+          var6 = this.height / 2;
+          var5 = this.height / 2;
         }
         int var7 = -var5 + var6;
         int var8 = var7;
@@ -290,46 +290,46 @@ final class fj extends mh {
           }
           var12 = var11 + var8 / 2;
           var14 = this.field_Yb;
-          var14.field_zb = 0;
-          var14.field_cb = var5;
-          var14.field_Ib = this.field_Ib;
-          var14.field_P = 0;
+          var14.localY = 0;
+          var14.height = var5;
+          var14.width = this.width;
+          var14.localX = 0;
           var15 = this.field_Wb;
-          var15.field_zb = var6;
-          var15.field_cb = this.field_cb - var6;
-          var15.field_P = 0;
-          var15.field_Ib = this.field_Ib;
+          var15.localY = var6;
+          var15.height = this.height - var6;
+          var15.localX = 0;
+          var15.width = this.width;
           var16 = this.field_Xb;
-          var16.field_zb = var5;
-          var16.field_cb = var7;
-          var16.field_P = 0;
-          var16.field_Ib = this.field_Ib;
+          var16.localY = var5;
+          var16.height = var7;
+          var16.localX = 0;
+          var16.width = this.width;
           var17 = this.field_Zb;
-          var17.field_Ib = this.field_Ib;
-          var17.field_cb = var12;
-          var17.field_P = 0;
-          var17.field_zb = 0;
+          var17.width = this.width;
+          var17.height = var12;
+          var17.localX = 0;
+          var17.localY = 0;
           var18 = this.field_ac;
-          var18.field_Ib = this.field_Ib;
+          var18.width = this.width;
           if (param0 <= -75) {
-            var18.field_cb = var7 - var12;
-            var18.field_zb = var12;
-            var18.field_P = 0;
+            var18.height = var7 - var12;
+            var18.localY = var12;
+            var18.localX = 0;
             var19 = this.field_Vb;
-            var19.field_zb = var11;
-            this.field_Xb.field_eb = param1 > param3 ? true : false;
-            this.field_Wb.field_eb = param1 > param3 ? true : false;
-            this.field_Yb.field_eb = param1 > param3 ? true : false;
-            var19.field_cb = var8;
-            var19.field_Ib = this.field_Ib;
-            var19.field_P = 0;
+            var19.localY = var11;
+            this.field_Xb.enabled = param1 > param3 ? true : false;
+            this.field_Wb.enabled = param1 > param3 ? true : false;
+            this.field_Yb.enabled = param1 > param3 ? true : false;
+            var19.height = var8;
+            var19.width = this.width;
+            var19.localX = 0;
             return;
           }
           return;
         }
         var8 = var8 * param3 / param1;
-        if (this.field_Ib > var8) {
-          var8 = this.field_Ib;
+        if (this.width > var8) {
+          var8 = this.width;
         }
         if (var7 < var8) {
           var8 = var7;
@@ -342,39 +342,39 @@ final class fj extends mh {
         }
         var12Lifetime1 = var11Lifetime1 + var8 / 2;
         var14Lifetime1 = this.field_Yb;
-        var14Lifetime1.field_zb = 0;
-        var14Lifetime1.field_cb = var5;
-        var14Lifetime1.field_Ib = this.field_Ib;
-        var14Lifetime1.field_P = 0;
+        var14Lifetime1.localY = 0;
+        var14Lifetime1.height = var5;
+        var14Lifetime1.width = this.width;
+        var14Lifetime1.localX = 0;
         var15Lifetime1 = this.field_Wb;
-        var15Lifetime1.field_zb = var6;
-        var15Lifetime1.field_cb = this.field_cb - var6;
-        var15Lifetime1.field_P = 0;
-        var15Lifetime1.field_Ib = this.field_Ib;
+        var15Lifetime1.localY = var6;
+        var15Lifetime1.height = this.height - var6;
+        var15Lifetime1.localX = 0;
+        var15Lifetime1.width = this.width;
         var16Lifetime1 = this.field_Xb;
-        var16Lifetime1.field_zb = var5;
-        var16Lifetime1.field_cb = var7;
-        var16Lifetime1.field_P = 0;
-        var16Lifetime1.field_Ib = this.field_Ib;
+        var16Lifetime1.localY = var5;
+        var16Lifetime1.height = var7;
+        var16Lifetime1.localX = 0;
+        var16Lifetime1.width = this.width;
         var17Lifetime1 = this.field_Zb;
-        var17Lifetime1.field_Ib = this.field_Ib;
-        var17Lifetime1.field_cb = var12Lifetime1;
-        var17Lifetime1.field_P = 0;
-        var17Lifetime1.field_zb = 0;
+        var17Lifetime1.width = this.width;
+        var17Lifetime1.height = var12Lifetime1;
+        var17Lifetime1.localX = 0;
+        var17Lifetime1.localY = 0;
         var18Lifetime1 = this.field_ac;
-        var18Lifetime1.field_Ib = this.field_Ib;
+        var18Lifetime1.width = this.width;
         if (param0 <= -75) {
-          var18Lifetime1.field_cb = var7 - var12Lifetime1;
-          var18Lifetime1.field_zb = var12Lifetime1;
-          var18Lifetime1.field_P = 0;
+          var18Lifetime1.height = var7 - var12Lifetime1;
+          var18Lifetime1.localY = var12Lifetime1;
+          var18Lifetime1.localX = 0;
           var19Lifetime1 = this.field_Vb;
-          var19Lifetime1.field_zb = var11Lifetime1;
-          this.field_Xb.field_eb = param1 > param3 ? true : false;
-          this.field_Wb.field_eb = param1 > param3 ? true : false;
-          this.field_Yb.field_eb = param1 > param3 ? true : false;
-          var19Lifetime1.field_cb = var8;
-          var19Lifetime1.field_Ib = this.field_Ib;
-          var19Lifetime1.field_P = 0;
+          var19Lifetime1.localY = var11Lifetime1;
+          this.field_Xb.enabled = param1 > param3 ? true : false;
+          this.field_Wb.enabled = param1 > param3 ? true : false;
+          this.field_Yb.enabled = param1 > param3 ? true : false;
+          var19Lifetime1.height = var8;
+          var19Lifetime1.width = this.width;
+          var19Lifetime1.localX = 0;
           return;
         }
     }
@@ -391,14 +391,14 @@ final class fj extends mh {
     }
 
     final boolean i(int param0) {
-        if (0 != this.field_Wb.field_L) {
+        if (0 != this.field_Wb.pressedButton) {
           this.field_Tb = 20;
           return true;
         }
         if (param0 != 2) {
           return true;
         }
-        if (this.field_Wb.field_Ob == 0) {
+        if (this.field_Wb.capturedButton == 0) {
           return false;
         }
         if (this.field_Tb > 0) {

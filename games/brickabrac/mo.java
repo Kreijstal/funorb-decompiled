@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class mo extends ag implements en {
-    static mh field_R;
+    static UiComponent field_R;
     static String field_O;
     private na field_P;
     static String field_N;

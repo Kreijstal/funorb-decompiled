@@ -74,7 +74,7 @@ final class ln extends IntrusiveNode {
           if (param5 != -10) {
             field_j = (RgbSprite[]) null;
           }
-          mh.field_lb = param2;
+          UiComponent.field_lb = param2;
           SoundPlayback.soundCache = param1;
           og.field_gc = param0;
           ji.field_a = param6;

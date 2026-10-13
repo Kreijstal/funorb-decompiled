@@ -185,67 +185,67 @@ final class na extends ug {
 
     final static void a(int param0, String param1, String param2, int param3, int param4) {
         try {
-          g.field_n.field_X = param4;
-          g.field_n.field_Cb = param1;
-          g.field_n.field_Mb = param2;
-          g.field_n.field_Ib = g.field_n.field_Ib + ap.field_e.field_Ib;
-          ap.field_e.field_P = ap.field_e.field_P + ap.field_e.field_Ib;
-          ap.field_e.field_Ib = param3;
+          g.field_n.textColor = param4;
+          g.field_n.textSuffix = param1;
+          g.field_n.text = param2;
+          g.field_n.width = g.field_n.width + ap.field_e.width;
+          ap.field_e.localX = ap.field_e.localX + ap.field_e.width;
+          ap.field_e.width = param3;
           if (param0 >= -72) {
             na.a(true, true, 77, -47);
           }
-          g.field_n.field_Ib = g.field_n.field_Ib - ap.field_e.field_Ib;
-          ap.field_e.field_P = ap.field_e.field_P - ap.field_e.field_Ib;
+          g.field_n.width = g.field_n.width - ap.field_e.width;
+          ap.field_e.localX = ap.field_e.localX - ap.field_e.width;
         } catch (RuntimeException runtimeException) {
           throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "na.G(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
         }
     }
 
     final static void a(boolean param0, boolean param1, int param2, int param3) {
-        mh stackIn_7_0 = null;
+        UiComponent stackIn_7_0 = null;
         boolean stackIn_8_1 = false;
-        mh stackIn_14_0 = null;
+        UiComponent stackIn_14_0 = null;
         boolean stackIn_15_1 = false;
-        mh stackIn_19_0 = null;
+        UiComponent stackIn_19_0 = null;
         boolean stackIn_20_1 = false;
-        mh stackIn_48_0 = null;
+        UiComponent stackIn_48_0 = null;
         boolean stackIn_49_1 = false;
-        mh stackIn_55_0 = null;
+        UiComponent stackIn_55_0 = null;
         boolean stackIn_56_1 = false;
-        mh stackIn_60_0 = null;
+        UiComponent stackIn_60_0 = null;
         boolean stackIn_61_1 = false;
         int var4;
         Brick.e(-79);
         if (m.field_h >= 0) {
-          dn.field_N.field_Mb = rd.a(rm.field_c, new String[]{Integer.toString(m.field_h)}, (byte) 103);
+          dn.field_N.text = rd.a(rm.field_c, new String[]{Integer.toString(m.field_h)}, (byte) 103);
           var4 = 34 / ((-10 - param2) / 53);
           stackIn_48_0 = fe.field_gb;
           stackIn_49_1 = (param0) && (!param1) && (!sc.field_c) && (null == o.field_e) && (nl.field_f == null);
-          ((mh) (Object) stackIn_48_0).a(stackIn_49_1, -15211);
+          ((UiComponent) (Object) stackIn_48_0).updateRoot(stackIn_49_1, -15211);
           stackIn_55_0 = rm.field_a;
           stackIn_56_1 = (param0) && (!param1) && (!sc.field_c) && (o.field_e == null) && (null == nl.field_f);
-          ((mh) (Object) stackIn_55_0).a(stackIn_56_1, -15211);
+          ((UiComponent) (Object) stackIn_55_0).updateRoot(stackIn_56_1, -15211);
           stackIn_60_0 = qp.field_f;
           stackIn_61_1 = (param0) && (!param1) && (sc.field_c);
-          ((mh) (Object) stackIn_60_0).a(stackIn_61_1, -15211);
+          ((UiComponent) (Object) stackIn_60_0).updateRoot(stackIn_61_1, -15211);
         } else {
-          dn.field_N.field_Mb = null;
+          dn.field_N.text = null;
           var4 = 34 / ((-10 - param2) / 53);
           stackIn_7_0 = fe.field_gb;
           stackIn_8_1 = (param0) && (!param1) && (!sc.field_c) && (null == o.field_e) && (nl.field_f == null);
-          ((mh) (Object) stackIn_7_0).a(stackIn_8_1, -15211);
+          ((UiComponent) (Object) stackIn_7_0).updateRoot(stackIn_8_1, -15211);
           stackIn_14_0 = rm.field_a;
           stackIn_15_1 = (param0) && (!param1) && (!sc.field_c) && (o.field_e == null) && (null == nl.field_f);
-          ((mh) (Object) stackIn_14_0).a(stackIn_15_1, -15211);
+          ((UiComponent) (Object) stackIn_14_0).updateRoot(stackIn_15_1, -15211);
           stackIn_19_0 = qp.field_f;
           stackIn_20_1 = (param0) && (!param1) && (sc.field_c);
-          ((mh) (Object) stackIn_19_0).a(stackIn_20_1, -15211);
+          ((UiComponent) (Object) stackIn_19_0).updateRoot(stackIn_20_1, -15211);
         }
         ap.field_b.field_d.i(0);
-        if (HighscorePackSelector.field_k.field_L != 0) {
+        if (HighscorePackSelector.field_k.pressedButton != 0) {
           tq.field_c = true;
         }
-        if (gj.field_b.field_L != 0) {
+        if (gj.field_b.pressedButton != 0) {
           if (ea.field_g) {
             ml.a(param3, -1);
           } else {
@@ -259,14 +259,14 @@ final class na extends ug {
             }
           }
         }
-        if (VolcanicBackground.field_v.field_L != 0) {
+        if (VolcanicBackground.field_v.pressedButton != 0) {
           if (1 == w.field_n.length &&
             pf.field_i != w.field_n[0]) {
             pf.field_i = w.field_n[0];
           }
           pl.a(param3, Brick.field_O, pf.field_i, true, 0, (byte) -102);
         }
-        if (0 != nh.field_a.field_L) {
+        if (0 != nh.field_a.pressedButton) {
           sc.field_c = false;
         }
     }

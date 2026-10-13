@@ -4,7 +4,7 @@
 class ba extends DualLinkNode {
     static th field_B;
     static String field_x;
-    static mh field_v;
+    static UiComponent field_v;
     static RgbSprite halloweenCharacterSprite;
     static String field_z;
     static int field_w;

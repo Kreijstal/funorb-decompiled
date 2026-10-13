@@ -7,9 +7,9 @@ final class gb {
     static int[] field_i;
     int field_o;
     int field_d;
-    mh field_b;
+    UiComponent field_b;
     int[] field_g;
-    static mh[] field_l;
+    static UiComponent[] field_l;
     String field_q;
     String field_m;
     int field_c;

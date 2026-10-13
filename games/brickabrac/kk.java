@@ -4,7 +4,7 @@
 final class kk {
     static int[] bitMasks;
     static String field_a;
-    static mh field_b;
+    static UiComponent field_b;
     static int[] field_e;
     static String field_c;
     static String field_d;

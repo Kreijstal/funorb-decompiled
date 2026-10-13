@@ -73,7 +73,7 @@ final class gr {
         MusicCrossfadeStream.field_C = param0;
         if (MusicCrossfadeStream.field_C != 1) {
           ArchiveNetworkClient.field_s = ln.field_j;
-          jc.field_J = mh.field_ib;
+          jc.field_J = UiComponent.field_ib;
           tf.field_c = kp.field_e;
           field_c = PlayerInputBatch.field_i;
           Ball.field_w = cq.field_o;

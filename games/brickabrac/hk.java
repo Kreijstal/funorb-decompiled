@@ -90,7 +90,7 @@ final class hk extends ib implements hf, en {
         var9 = BrickABrac.field_J ? 1 : 0;
         try {
           var3_int = cd.field_e;
-          wd.field_w = new mh(0L, (mh) null);
+          wd.field_w = new UiComponent(0L, (UiComponent) null);
           if (param2 == null) {
             rk.a("QC1", (Throwable) null, param1 ^ 118);
             return;
@@ -122,7 +122,7 @@ final class hk extends ib implements hf, en {
           }
           Rasterizer2D.bind(var14, var5, var6);
           fe.field_kb = AchievementSubmission.a(SoftwareFramebuffer.field_e, ArchiveIndex.field_j, var4, 4, cp.field_K);
-          wd.field_w.field_bb = new NodeDeque();
+          wd.field_w.children = new NodeDeque();
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

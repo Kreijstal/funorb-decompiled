@@ -3,7 +3,7 @@
  */
 final class qp {
     static String field_a;
-    static mh field_f;
+    static UiComponent field_f;
     static IndexedSprite[] field_e;
     static int[] decodedSpritePalette;
     static String field_b;

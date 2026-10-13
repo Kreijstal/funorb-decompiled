@@ -2,12 +2,12 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class GameUiController implements GameUiLifecycle {
-    static mh field_b;
+    static UiComponent field_b;
     static int field_d;
-    static mh field_c;
-    static mh field_e;
+    static UiComponent field_c;
+    static UiComponent field_e;
     static String field_f;
-    static mh field_a;
+    static UiComponent field_a;
 
     private final boolean pollRequiredData(boolean obfuscationGuard) {
         if (rf.field_g == null) {
@@ -66,7 +66,7 @@ final class GameUiController implements GameUiLifecycle {
           return (GameScreen) ((Object) BackgroundScene.field_p);
         }
         if (obfuscationGuard > -5) {
-          field_e = (mh) null;
+          field_e = (UiComponent) null;
         }
         return (GameScreen) ((Object) bq.a(screenId, 28472));
     }
@@ -225,7 +225,7 @@ final class GameUiController implements GameUiLifecycle {
         if (obfuscationGuard < -41) {
           return false;
         }
-        field_a = (mh) null;
+        field_a = (UiComponent) null;
         return false;
     }
 

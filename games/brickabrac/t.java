@@ -8,7 +8,7 @@ final class t {
     static String field_e;
     static String field_c;
     static RgbSprite field_a;
-    static mh field_f;
+    static UiComponent field_f;
     static boolean field_g;
 
     public static void a(int param0) {

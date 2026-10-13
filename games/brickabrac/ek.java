@@ -73,7 +73,7 @@ final class ek extends bj implements en {
         oc var4 = null;
         try {
           var3 = null;
-          if (mh.field_ab == param1) {
+          if (UiComponent.field_ab == param1) {
             var3 = df.field_d;
           } else {
             if (ch.field_a != param1) {

@@ -4,7 +4,7 @@
 abstract class SoftwareFramebuffer {
     int[] pixels;
     int width;
-    static mh field_e;
+    static UiComponent field_e;
     int height;
     static int field_a;
     java.awt.Image image;

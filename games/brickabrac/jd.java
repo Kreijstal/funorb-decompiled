@@ -3,7 +3,7 @@
  */
 final class jd {
     static String field_b;
-    static mh field_a;
+    static UiComponent field_a;
 
     public static void a(int param0) {
         field_a = null;
@@ -80,7 +80,7 @@ final class jd {
             return false;
           }
           for (var3_int = 0; param2.length() > var3_int; var3_int++) {
-            if (!mh.a(true, param2.charAt(var3_int))) {
+            if (!UiComponent.a(true, param2.charAt(var3_int))) {
               return false;
             }
           }

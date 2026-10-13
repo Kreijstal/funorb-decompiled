@@ -9,7 +9,7 @@ class um implements ub, qe {
     TextFont field_k;
     int field_h;
     int field_c;
-    static mh field_b;
+    static UiComponent field_b;
     static RgbSprite field_p;
     static boolean field_t;
     int field_r;
@@ -396,7 +396,7 @@ class um implements ub, qe {
 
     final static void a(int param0, int param1) {
         if (param0 != 200) {
-          field_b = (mh) null;
+          field_b = (UiComponent) null;
         }
         BitPacketBuffer var2 = k.outgoingPackets;
         var2.writeCipheredOpcode(param0 ^ -13485, param1);
@@ -751,7 +751,7 @@ class um implements ub, qe {
     final static void a(boolean param0, int param1, boolean param2, int param3, int param4, int param5, byte param6) {
         int var19_int = 0;
         int var23_int = 0;
-        mh dupTemp$0 = null;
+        UiComponent dupTemp$0 = null;
         StringBuilder discarded$1 = null;
         StringBuilder discarded$2 = null;
         StringBuilder discarded$3 = null;
@@ -766,19 +766,19 @@ class um implements ub, qe {
         int stackIn_8_0 = 0;
         int stackIn_8_1 = 0;
         om stackIn_10_0;
-        mh stackIn_10_1;
-        mh stackIn_10_2;
+        UiComponent stackIn_10_1;
+        UiComponent stackIn_10_2;
         long stackIn_10_3;
-        mh stackIn_11_1 = null;
-        mh stackIn_11_2 = null;
-        mh stackIn_11_4 = null;
+        UiComponent stackIn_11_1 = null;
+        UiComponent stackIn_11_2 = null;
+        UiComponent stackIn_11_4 = null;
         om stackIn_27_0;
-        mh stackIn_27_1;
-        mh stackIn_27_2;
+        UiComponent stackIn_27_1;
+        UiComponent stackIn_27_2;
         long stackIn_27_3;
-        mh stackIn_28_1;
-        mh stackIn_28_2;
-        mh stackIn_28_4;
+        UiComponent stackIn_28_1;
+        UiComponent stackIn_28_2;
+        UiComponent stackIn_28_4;
         int stackIn_32_0 = 0;
         int stackIn_66_0 = 0;
         int stackIn_77_0 = 0;
@@ -799,19 +799,19 @@ class um implements ub, qe {
         om var13 = null;
         int var14 = 0;
         int var15 = 0;
-        mh var19 = null;
-        mh var20 = null;
-        mh var21 = null;
-        mh var22 = null;
-        mh var23 = null;
-        mh var24 = null;
-        mh var25 = null;
-        mh var26 = null;
-        mh var27 = null;
-        mh var28 = null;
-        mh var29 = null;
-        mh var30 = null;
-        mh var31 = null;
+        UiComponent var19 = null;
+        UiComponent var20 = null;
+        UiComponent var21 = null;
+        UiComponent var22 = null;
+        UiComponent var23 = null;
+        UiComponent var24 = null;
+        UiComponent var25 = null;
+        UiComponent var26 = null;
+        UiComponent var27 = null;
+        UiComponent var28 = null;
+        UiComponent var29 = null;
+        UiComponent var30 = null;
+        UiComponent var31 = null;
         int var32 = 0;
         String var33 = null;
         int var34_int = 0;
@@ -828,13 +828,13 @@ class um implements ub, qe {
         int var41 = 0;
         int var42 = 0;
         RgbSprite var43 = null;
-        mh var44 = null;
-        mh var45 = null;
-        mh var46 = null;
-        mh var47 = null;
-        mh var48 = null;
-        mh var49 = null;
-        mh var50 = null;
+        UiComponent var44 = null;
+        UiComponent var45 = null;
+        UiComponent var46 = null;
+        UiComponent var47 = null;
+        UiComponent var48 = null;
+        UiComponent var49 = null;
+        UiComponent var50 = null;
         Object var51 = null;
         RgbSprite var51_ref = null;
         Object var52 = null;
@@ -869,31 +869,31 @@ class um implements ub, qe {
           stackIn_3_5 = param2;
           stackIn_4_6 = (rl.field_e == o.field_b);
           var7_int = ((mm) (Object) stackIn_3_0).a(stackIn_3_1, stackIn_3_2, stackIn_3_3, stackIn_3_4, stackIn_3_5, stackIn_4_6) ? 1 : 0;
-          var8 = rl.field_e.field_Rb.field_bb;
+          var8 = rl.field_e.field_Rb.children;
           var9 = MonotonicTime.nowMillis(false);
           var12 = -30 / ((param6 + 26) / 55);
           var11 = null;
           var13 = (om) (var8.first(-64));
           while (var13 != null) {
             var14 = 0;
-            if (null == var13.field_bb) {
-              var13.field_Ac = new mh(0L, OptionsScreen.field_v);
+            if (null == var13.children) {
+              var13.field_Ac = new UiComponent(0L, OptionsScreen.field_v);
               stackIn_8_0 = param1;
               stackIn_8_1 = param5;
               var15 = stackIn_8_0 | stackIn_8_1;
-              var13.a(var13.field_Ac, 0);
-              var13.field_Ac.field_S = 1;
-              var13.field_Vb = new mh(0L, vb.field_K);
-              var13.a(var13.field_Vb, 0);
-              var13.field_tc = new mh(0L, OptionsScreen.field_v);
-              var13.a(var13.field_tc, 0);
-              var13.field_tc.field_V = 0;
-              var13.field_Cc = new mh(0L, OptionsScreen.field_v);
-              var13.a(var13.field_Cc, 0);
-              var13.field_Cc.field_V = 0;
-              var13.field_mc = new mh(0L, vb.field_K);
-              var13.a(var13.field_mc, 0);
-              var13.field_mc.field_S = 2;
+              var13.addChild(var13.field_Ac, 0);
+              var13.field_Ac.horizontalAlignment = 1;
+              var13.field_Vb = new UiComponent(0L, vb.field_K);
+              var13.addChild(var13.field_Vb, 0);
+              var13.field_tc = new UiComponent(0L, OptionsScreen.field_v);
+              var13.addChild(var13.field_tc, 0);
+              var13.field_tc.textInset = 0;
+              var13.field_Cc = new UiComponent(0L, OptionsScreen.field_v);
+              var13.addChild(var13.field_Cc, 0);
+              var13.field_Cc.textInset = 0;
+              var13.field_mc = new UiComponent(0L, vb.field_K);
+              var13.addChild(var13.field_mc, 0);
+              var13.field_mc.horizontalAlignment = 2;
               stackIn_10_0 = var13;
               stackIn_10_1 = null;
               stackIn_10_2 = null;
@@ -907,38 +907,38 @@ class um implements ub, qe {
                 stackIn_11_2 = null;
                 stackIn_11_4 = vb.field_K;
               }
-              stackIn_10_0.field_ec = new mh(stackIn_10_3, stackIn_11_4);
-              var13.a(var13.field_ec, 0);
-              var13.field_Ec = new mh[cq.field_p];
-              var13.field_sc = new mh(0L, (mh) null);
+              stackIn_10_0.field_ec = new UiComponent(stackIn_10_3, stackIn_11_4);
+              var13.addChild(var13.field_ec, 0);
+              var13.field_Ec = new UiComponent[cq.field_p];
+              var13.field_sc = new UiComponent(0L, (UiComponent) null);
               if ((1 << BackgroundRegistry.field_c & var15) != 0) {
-                var13.field_ec.a(var13.field_sc, 0);
+                var13.field_ec.addChild(var13.field_sc, 0);
               }
-              var13.field_Yb = new mh(0L, (mh) null);
+              var13.field_Yb = new UiComponent(0L, (UiComponent) null);
               if ((1 << MotionWaypoint.field_q & var15) != 0) {
-                var13.field_ec.a(var13.field_Yb, 0);
+                var13.field_ec.addChild(var13.field_Yb, 0);
               }
-              var13.field_Bc = new mh(0L, (mh) null);
+              var13.field_Bc = new UiComponent(0L, (UiComponent) null);
               if ((1 << u.field_a & var15) != 0) {
-                var13.field_ec.a(var13.field_Bc, 0);
+                var13.field_ec.addChild(var13.field_Bc, 0);
               }
-              var13.field_lc = new mh(0L, (mh) null);
+              var13.field_lc = new UiComponent(0L, (UiComponent) null);
               if ((1 << mm.field_Pb & var15) != 0) {
-                var13.field_ec.a(var13.field_lc, 0);
+                var13.field_ec.addChild(var13.field_lc, 0);
               }
               var46 = var13.field_sc;
               var45 = var13.field_lc;
               var44 = var13.field_Yb;
-              var13.field_Bc.field_Q = 1;
-              var44.field_Q = 1;
-              var45.field_Q = 1;
-              var46.field_Q = 1;
+              var13.field_Bc.verticalAlignment = 1;
+              var44.verticalAlignment = 1;
+              var45.verticalAlignment = 1;
+              var46.verticalAlignment = 1;
               for (var19_int = 0; cq.field_p > var19_int; var19_int++) {
-                var13.field_Ec[var19_int] = new mh(0L, (mh) null);
+                var13.field_Ec[var19_int] = new UiComponent(0L, (UiComponent) null);
                 if ((var15 & 1 << jc.field_K + var19_int) != 0) {
-                  var13.field_ec.a(var13.field_Ec[var19_int], 0);
+                  var13.field_ec.addChild(var13.field_Ec[var19_int], 0);
                 }
-                var13.field_Ec[var19_int].field_Q = 1;
+                var13.field_Ec[var19_int].verticalAlignment = 1;
               }
               stackIn_27_0 = var13;
               stackIn_27_1 = null;
@@ -953,95 +953,95 @@ class um implements ub, qe {
                 stackIn_28_2 = null;
                 stackIn_28_4 = OptionsScreen.field_v;
               }
-              stackIn_27_0.field_zc = new mh(stackIn_27_3, stackIn_28_4);
-              var13.a(var13.field_zc, 0);
-              var13.field_zc.field_S = 2;
-              var13.field_Ub = new mh(0L, vb.field_K);
-              var13.a(var13.field_Ub, 0);
-              var13.field_ic = new mh(0L, DualLinkNode.field_t);
-              var13.a(var13.field_ic, 0);
-              var13.field_Sb = new mh(0L, DualLinkNode.field_t);
-              var13.a(var13.field_Sb, 0);
-              var13.field_gc = new mh(0L, CappedUrlRequest.field_l);
-              var13.a(var13.field_gc, 0);
-              var13.c(true);
-              var13.field_nc = new mh(0L, ok.field_d);
+              stackIn_27_0.field_zc = new UiComponent(stackIn_27_3, stackIn_28_4);
+              var13.addChild(var13.field_zc, 0);
+              var13.field_zc.horizontalAlignment = 2;
+              var13.field_Ub = new UiComponent(0L, vb.field_K);
+              var13.addChild(var13.field_Ub, 0);
+              var13.field_ic = new UiComponent(0L, DualLinkNode.field_t);
+              var13.addChild(var13.field_ic, 0);
+              var13.field_Sb = new UiComponent(0L, DualLinkNode.field_t);
+              var13.addChild(var13.field_Sb, 0);
+              var13.field_gc = new UiComponent(0L, CappedUrlRequest.field_l);
+              var13.addChild(var13.field_gc, 0);
+              var13.markDescendantsToInheritVisualState(true);
+              var13.field_nc = new UiComponent(0L, ok.field_d);
               var14 = 1;
-              var13.a(var13.field_nc, 0);
+              var13.addChild(var13.field_nc, 0);
             }
-            var13.field_Ac.field_Mb = null;
+            var13.field_Ac.text = null;
             stackIn_32_0 = (!var13.field_Rb) ? param5 : param1;
             var15Lifetime1 = stackIn_32_0;
-            var13.field_Ac.field_cb = 0;
+            var13.field_Ac.height = 0;
             var47 = var13.field_Ac;
-            var47.field_Ib = 0;
-            var13.field_nc.field_Mb = null;
-            var13.field_nc.field_cb = 0;
+            var47.width = 0;
+            var13.field_nc.text = null;
+            var13.field_nc.height = 0;
             var48 = var13.field_nc;
-            var48.field_Ib = 0;
-            var13.field_Vb.field_Mb = null;
+            var48.width = 0;
+            var13.field_Vb.text = null;
             var49 = var13.field_Vb;
-            var13.field_Vb.field_cb = 0;
-            var49.field_Ib = 0;
-            var13.field_tc.field_Mb = null;
+            var13.field_Vb.height = 0;
+            var49.width = 0;
+            var13.field_tc.text = null;
             var19 = var13.field_tc;
-            var13.field_tc.field_cb = 0;
-            var13.field_Cc.field_Mb = null;
-            var19.field_Ib = 0;
-            var13.field_Cc.field_cb = 0;
+            var13.field_tc.height = 0;
+            var13.field_Cc.text = null;
+            var19.width = 0;
+            var13.field_Cc.height = 0;
             var20 = var13.field_Cc;
-            var13.field_mc.field_Mb = null;
-            var20.field_Ib = 0;
-            var13.field_mc.field_cb = 0;
+            var13.field_mc.text = null;
+            var20.width = 0;
+            var13.field_mc.height = 0;
             var21 = var13.field_mc;
-            var21.field_Ib = 0;
-            var13.field_ec.field_Mb = null;
+            var21.width = 0;
+            var13.field_ec.text = null;
             var22 = var13.field_ec;
-            var13.field_ec.field_cb = 0;
-            var22.field_Ib = 0;
+            var13.field_ec.height = 0;
+            var22.width = 0;
             for (var23_int = 0; cq.field_p > var23_int; var23_int++) {
-              var13.field_Ec[var23_int].field_wb = null;
+              var13.field_Ec[var23_int].sprite = null;
               var24 = var13.field_Ec[var23_int];
-              var13.field_Ec[var23_int].field_cb = 0;
-              var24.field_Ib = 0;
+              var13.field_Ec[var23_int].height = 0;
+              var24.width = 0;
             }
-            var13.field_sc.field_wb = null;
+            var13.field_sc.sprite = null;
             var23 = var13.field_sc;
-            var13.field_sc.field_cb = 0;
-            var13.field_lc.field_wb = null;
-            var23.field_Ib = 0;
+            var13.field_sc.height = 0;
+            var13.field_lc.sprite = null;
+            var23.width = 0;
             var50 = var13.field_lc;
-            var13.field_lc.field_cb = 0;
-            var50.field_Ib = 0;
-            var13.field_Yb.field_wb = null;
-            var13.field_Yb.field_cb = 0;
+            var13.field_lc.height = 0;
+            var50.width = 0;
+            var13.field_Yb.sprite = null;
+            var13.field_Yb.height = 0;
             var25 = var13.field_Yb;
-            var13.field_Bc.field_wb = null;
-            var25.field_Ib = 0;
+            var13.field_Bc.sprite = null;
+            var25.width = 0;
             var26 = var13.field_Bc;
-            var13.field_Bc.field_cb = 0;
-            var26.field_Ib = 0;
-            var13.field_zc.field_Mb = null;
+            var13.field_Bc.height = 0;
+            var26.width = 0;
+            var13.field_zc.text = null;
             var27 = var13.field_zc;
-            var13.field_zc.field_cb = 0;
-            var27.field_Ib = 0;
-            var13.field_Ub.field_Mb = null;
-            var13.field_Ub.field_cb = 0;
+            var13.field_zc.height = 0;
+            var27.width = 0;
+            var13.field_Ub.text = null;
+            var13.field_Ub.height = 0;
             var28 = var13.field_Ub;
-            var28.field_Ib = 0;
-            var13.field_ic.field_Mb = null;
+            var28.width = 0;
+            var13.field_ic.text = null;
             var29 = var13.field_ic;
-            var13.field_ic.field_cb = 0;
-            var29.field_Ib = 0;
-            var13.field_Sb.field_Mb = null;
+            var13.field_ic.height = 0;
+            var29.width = 0;
+            var13.field_Sb.text = null;
             var30 = var13.field_Sb;
-            var13.field_Sb.field_cb = 0;
-            var30.field_Ib = 0;
-            var13.field_gc.field_Mb = null;
+            var13.field_Sb.height = 0;
+            var30.width = 0;
+            var13.field_gc.text = null;
             var31 = var13.field_gc;
-            var13.field_gc.field_cb = 0;
-            var31.field_Ib = 0;
-            var13.field_Ib = rl.field_e.field_Rb.field_Ib;
+            var13.field_gc.height = 0;
+            var31.width = 0;
+            var13.width = rl.field_e.field_Rb.width;
             var32 = 0;
             var33 = var13.field_Fc;
             if (!var13.h(107)) {
@@ -1050,65 +1050,65 @@ class um implements ub, qe {
                 if (!var13.field_uc &&
                   !var13.field_Pb) {
                   if (!var13.field_bc) {
-                    var13.field_Ac.field_Mb = hm.field_a;
+                    var13.field_Ac.text = hm.field_a;
                   } else {
-                    var13.field_Ac.field_Mb = IntArrayRequest.field_p;
+                    var13.field_Ac.text = IntArrayRequest.field_p;
                   }
                   decompiledFrameRemainder1 = false;
                 }
                 else {
-                  var13.field_nc.field_Mb = TooltipSprite.field_k;
+                  var13.field_nc.text = TooltipSprite.field_k;
                 }
               } else {
                 if (var13.field_yc < 0) {
                   if (var13.field_Dc && (var13.field_uc ||
                     var13.field_Pb)) {
-                    var13.field_nc.field_Mb = TooltipSprite.field_k;
+                    var13.field_nc.text = TooltipSprite.field_k;
                     decompiledFrameRemainder1 = false;
                   }
                   else {
                     if (var13.field_wc != 2) {
-                      var13.field_Ac.field_Mb = qn.field_o;
+                      var13.field_Ac.text = qn.field_o;
                     } else {
-                      var13.field_nc.field_Mb = ag.field_I;
+                      var13.field_nc.text = ag.field_I;
                     }
                   }
                 } else {
-                  var13.field_Ac.field_Mb = id.field_Sb;
+                  var13.field_Ac.text = id.field_Sb;
                 }
               }
-              if (null == var13.field_nc.field_Mb) {
-                var13.field_Ac.a(np.field_a, var32, 0, 68, (byte) 64);
+              if (null == var13.field_nc.text) {
+                var13.field_Ac.setBounds(np.field_a, var32, 0, 68, (byte) 64);
               } else {
-                var13.field_nc.a(np.field_a, var32, 0, 68, (byte) 64);
+                var13.field_nc.setBounds(np.field_a, var32, 0, 68, (byte) 64);
               }
-              var13.field_Vb.field_Mb = TextFont.truncateText(var13.field_Vb.field_O, var33, 78);
-              var13.field_Vb.a(np.field_a, var32, 70, 78, (byte) 64);
-              if (var13.field_Vb.field_kb &&
-                !var13.field_Vb.field_Mb.equals(var33)) {
+              var13.field_Vb.text = TextFont.truncateText(var13.field_Vb.font, var33, 78);
+              var13.field_Vb.setBounds(np.field_a, var32, 70, 78, (byte) 64);
+              if (var13.field_Vb.activeInside &&
+                !var13.field_Vb.text.equals(var33)) {
                 ep.field_e = var33;
               }
-              var13.field_tc.field_Mb = Integer.toString(var13.field_cc);
+              var13.field_tc.text = Integer.toString(var13.field_cc);
               if (!var13.field_Dc) {
-                var13.field_tc.field_S = 1;
-                var13.field_tc.a(np.field_a, var32, 150, 48, (byte) 64);
+                var13.field_tc.horizontalAlignment = 1;
+                var13.field_tc.setBounds(np.field_a, var32, 150, 48, (byte) 64);
               } else {
-                var13.field_Cc.field_Mb = "/" + var13.field_jc;
-                var13.field_tc.field_S = 2;
-                var34_int = (348 - var13.field_Cc.field_O.measureText("/")) / 2;
-                var13.field_tc.a(np.field_a, var32, 150, -150 + var34_int, (byte) 64);
-                var13.field_Cc.a(np.field_a, var32, var34_int, 198 - var34_int, (byte) 64);
+                var13.field_Cc.text = "/" + var13.field_jc;
+                var13.field_tc.horizontalAlignment = 2;
+                var34_int = (348 - var13.field_Cc.font.measureText("/")) / 2;
+                var13.field_tc.setBounds(np.field_a, var32, 150, -150 + var34_int, (byte) 64);
+                var13.field_Cc.setBounds(np.field_a, var32, var34_int, 198 - var34_int, (byte) 64);
               }
-              var13.field_mc.field_Mb = Integer.toString(var13.field_vc);
-              var13.field_mc.a(np.field_a, var32, 200, 48, (byte) 64);
+              var13.field_mc.text = Integer.toString(var13.field_vc);
+              var13.field_mc.setBounds(np.field_a, var32, 200, 48, (byte) 64);
               stackIn_66_0 = (!vd.field_e) ? 200 : 250;
               var34_intLifetime1 = stackIn_66_0;
-              var13.field_ec.a(np.field_a, var32, var34_intLifetime1, -2 + (365 - var34_intLifetime1), (byte) 64);
+              var13.field_ec.setBounds(np.field_a, var32, var34_intLifetime1, -2 + (365 - var34_intLifetime1), (byte) 64);
               var35_int = kn.field_z;
               if ((var15Lifetime1 & 1 << BackgroundRegistry.field_c) != 0) {
                 var51_ref = GameClock.field_f[var13.field_kc];
-                var13.field_sc.field_wb = var51_ref;
-                var13.field_sc.a(var13.field_ec.field_cb, 0, var35_int, var51_ref.canvasWidth, (byte) 64);
+                var13.field_sc.sprite = var51_ref;
+                var13.field_sc.setBounds(var13.field_ec.height, 0, var35_int, var51_ref.canvasWidth, (byte) 64);
                 var35_int = var35_int + (var51_ref.canvasWidth + kn.field_z);
               }
               if ((var15Lifetime1 & 1 << MotionWaypoint.field_q) != 0) {
@@ -1125,14 +1125,14 @@ class um implements ub, qe {
                   stackIn_80_1 = 1;
                 }
                 var52_ref = stackIn_79_0[stackIn_80_1];
-                var13.field_Yb.field_wb = var52_ref;
-                var13.field_Yb.a(var13.field_ec.field_cb, 0, var35_int, var52_ref.canvasWidth, (byte) 64);
+                var13.field_Yb.sprite = var52_ref;
+                var13.field_Yb.setBounds(var13.field_ec.height, 0, var35_int, var52_ref.canvasWidth, (byte) 64);
                 var35_int = var35_int + (var52_ref.canvasWidth + kn.field_z);
               }
               if ((1 << u.field_a & var15Lifetime1) != 0) {
                 var53_ref = Ball.field_K[var13.field_wc - 1];
-                var13.field_Bc.field_wb = var53_ref;
-                var13.field_Bc.a(var13.field_ec.field_cb, 0, var35_int, var53_ref.canvasWidth, (byte) 64);
+                var13.field_Bc.sprite = var53_ref;
+                var13.field_Bc.setBounds(var13.field_ec.height, 0, var35_int, var53_ref.canvasWidth, (byte) 64);
                 var35_int = var35_int + (var53_ref.canvasWidth + kn.field_z);
               }
               if ((var15Lifetime1 & 1 << mm.field_Pb) != 0) {
@@ -1143,8 +1143,8 @@ class um implements ub, qe {
                   stackIn_88_1 = 0;
                 }
                 var54_ref = stackIn_87_0[stackIn_88_1];
-                var13.field_lc.field_wb = var54_ref;
-                var13.field_lc.a(var13.field_ec.field_cb, 0, var35_int, var54_ref.canvasWidth, (byte) 64);
+                var13.field_lc.sprite = var54_ref;
+                var13.field_lc.setBounds(var13.field_ec.height, 0, var35_int, var54_ref.canvasWidth, (byte) 64);
                 var35_int = var35_int + (kn.field_z + var54_ref.canvasWidth);
               }
               if (null != aj.field_c) {
@@ -1153,21 +1153,21 @@ class um implements ub, qe {
                     (1 << var37Lifetime1 + jc.field_K & var15Lifetime1) != 0) {
                     var43 = aj.field_c[var37Lifetime1][255 & var13.field_Tb[var37Lifetime1]];
                     var55 = var43;
-                    var13.field_Ec[var37Lifetime1].field_wb = var43;
-                    var13.field_Ec[var37Lifetime1].a(var13.field_ec.field_cb, 0, var35_int, var55.canvasWidth, (byte) 64);
+                    var13.field_Ec[var37Lifetime1].sprite = var43;
+                    var13.field_Ec[var37Lifetime1].setBounds(var13.field_ec.height, 0, var35_int, var55.canvasWidth, (byte) 64);
                     var35_int = var35_int + (kn.field_z + var55.canvasWidth);
                   }
                 }
               }
-              var37Lifetime2 = (var13.field_ec.field_Ib - var35_int) / 2;
+              var37Lifetime2 = (var13.field_ec.width - var35_int) / 2;
               if (var37Lifetime2 > 0) {
-                var13.field_sc.field_P = var13.field_sc.field_P + var37Lifetime2;
-                var13.field_Yb.field_P = var13.field_Yb.field_P + var37Lifetime2;
-                var13.field_Bc.field_P = var13.field_Bc.field_P + var37Lifetime2;
-                var13.field_lc.field_P = var13.field_lc.field_P + var37Lifetime2;
+                var13.field_sc.localX = var13.field_sc.localX + var37Lifetime2;
+                var13.field_Yb.localX = var13.field_Yb.localX + var37Lifetime2;
+                var13.field_Bc.localX = var13.field_Bc.localX + var37Lifetime2;
+                var13.field_lc.localX = var13.field_lc.localX + var37Lifetime2;
                 for (var38_int = 0; cq.field_p > var38_int; var38_int++) {
                   dupTemp$0 = var13.field_Ec[var38_int];
-                  dupTemp$0.field_P = dupTemp$0.field_P + var37Lifetime2;
+                  dupTemp$0.localX = dupTemp$0.localX + var37Lifetime2;
                 }
               }
               if (var13.field_Rb) {
@@ -1181,12 +1181,12 @@ class um implements ub, qe {
                 if (var40 >= 60) {
                   var41 = var40 / 60;
                   var40 = var40 % 60;
-                  var13.field_zc.field_Mb = var41 + ":" + var40 / 10 + var40 % 10 + ":" + var39_int / 10 + var39_int % 10;
+                  var13.field_zc.text = var41 + ":" + var40 / 10 + var40 % 10 + ":" + var39_int / 10 + var39_int % 10;
                 } else {
-                  var13.field_zc.field_Mb = var40 + ":" + var39_int / 10 + var39_int % 10;
+                  var13.field_zc.text = var40 + ":" + var39_int / 10 + var39_int % 10;
                 }
               }
-              var13.field_zc.a(np.field_a, var32, 365, var13.field_Ib - 365, (byte) 64);
+              var13.field_zc.setBounds(np.field_a, var32, 365, var13.width - 365, (byte) 64);
               var32 = var32 + np.field_a;
               if (var13.field_Qb != null) {
                 var32 += 2;
@@ -1198,19 +1198,19 @@ class um implements ub, qe {
                   discarded$4 = var38.append(var13.field_Qb[var39_intLifetime1]);
                 }
                 var39 = var38.toString();
-                var13.field_Ub.field_Mb = var39;
-                var40Lifetime1 = var13.field_Ub.field_O.countWrappedLines(var39, var13.field_Ib - var13.field_Ub.field_V * 2);
-                var13.field_Ub.a(np.field_a * var40Lifetime1, var32, 0, var13.field_Ib, (byte) 64);
+                var13.field_Ub.text = var39;
+                var40Lifetime1 = var13.field_Ub.font.countWrappedLines(var39, var13.width - var13.field_Ub.textInset * 2);
+                var13.field_Ub.setBounds(np.field_a * var40Lifetime1, var32, 0, var13.width, (byte) 64);
                 var32 = var32 + np.field_a * var40Lifetime1;
               }
               if (var13.field_Pb) {
-                var13.field_ic.field_Mb = rd.a(r.field_y, new String[]{var33}, (byte) 103);
-                var13.field_ic.a(np.field_a, var32, om.field_oc, -(om.field_oc * 2) + var13.field_Ib, (byte) 64);
+                var13.field_ic.text = rd.a(r.field_y, new String[]{var33}, (byte) 103);
+                var13.field_ic.setBounds(np.field_a, var32, om.field_oc, -(om.field_oc * 2) + var13.width, (byte) 64);
                 var32 = var32 + np.field_a;
               }
               if (var13.field_dc) {
-                var13.field_Sb.field_Mb = rd.a(aj.field_b, new String[]{var33}, (byte) 103);
-                var13.field_Sb.a(np.field_a, var32, om.field_oc, -(om.field_oc * 2) + var13.field_Ib, (byte) 64);
+                var13.field_Sb.text = rd.a(aj.field_b, new String[]{var33}, (byte) 103);
+                var13.field_Sb.setBounds(np.field_a, var32, om.field_oc, -(om.field_oc * 2) + var13.width, (byte) 64);
                 var32 = var32 + np.field_a;
               }
             }
@@ -1218,20 +1218,20 @@ class um implements ub, qe {
             var35 = var34;
             var35Lifetime1 = var34;
             if (var34 != null) {
-              var35_intLifetime1 = var13.field_gc.field_O.countWrappedLines(var34, -om.field_oc + (var13.field_Ib - om.field_oc));
-              var13.field_gc.field_Mb = var34;
-              var13.field_gc.field_jb = var13.field_Wb * 256 / cm.field_o;
-              var13.field_gc.a(np.field_a * var35_intLifetime1, var32, om.field_oc, var13.field_Ib - 2 * om.field_oc, (byte) 64);
+              var35_intLifetime1 = var13.field_gc.font.countWrappedLines(var34, -om.field_oc + (var13.width - om.field_oc));
+              var13.field_gc.text = var34;
+              var13.field_gc.textAlpha256 = var13.field_Wb * 256 / cm.field_o;
+              var13.field_gc.setBounds(np.field_a * var35_intLifetime1, var32, om.field_oc, var13.width - 2 * om.field_oc, (byte) 64);
               var32 = var32 + np.field_a * var35_intLifetime1;
             }
             if (var7_int == 0) {
-              var13.field_C = -var13.field_cb + var32;
+              var13.remainingHeight = -var13.height + var32;
             }
             if (var14 != 0) {
-              rl.field_e.field_Rb.a((mh) (var11), 2, var13, 17290);
+              rl.field_e.field_Rb.placeBelow((UiComponent) (var11), 2, var13, 17290);
             }
             for (var35_intLifetime2 = 0; cq.field_p > var35_intLifetime2; var35_intLifetime2++) {
-              if (var13.field_Ec[var35_intLifetime2].field_kb) {
+              if (var13.field_Ec[var35_intLifetime2].activeInside) {
                 if (null == ff.field_i) {
                   var36 = null;
                 } else {
@@ -1248,7 +1248,7 @@ class um implements ub, qe {
                 }
               }
             }
-            if (var13.field_sc.field_kb) {
+            if (var13.field_sc.activeInside) {
               if (var13.field_kc != 1) {
                 var35Lifetime2 = AchievementsScreen.field_H[var13.field_kc];
               } else {
@@ -1256,7 +1256,7 @@ class um implements ub, qe {
               }
               ep.field_e = FarmBackground.field_s + " - " + var35Lifetime2;
             }
-            if (var13.field_lc.field_kb) {
+            if (var13.field_lc.activeInside) {
               if (var13.field_ac) {
                 stackIn_148_0 = DelayedPacket.field_n;
               } else {
@@ -1264,7 +1264,7 @@ class um implements ub, qe {
               }
               ep.field_e = stackIn_148_0;
             }
-            if (var13.field_Yb.field_kb) {
+            if (var13.field_Yb.activeInside) {
               if (!var13.field_uc &&
                 !var13.field_Pb) {
                 if (!var13.field_Dc) {
@@ -1277,7 +1277,7 @@ class um implements ub, qe {
               }
               ep.field_e = stackIn_158_0;
             }
-            if (var13.field_Bc.field_kb) {
+            if (var13.field_Bc.activeInside) {
               if (2 != var13.field_wc) {
                 stackIn_164_0 = cm.field_q;
               } else {
@@ -1286,12 +1286,12 @@ class um implements ub, qe {
               ep.field_e = stackIn_164_0;
             }
             boolean decompiledFrameRemainder0 = true;
-            if (var13.field_L != 0) {
+            if (var13.pressedButton != 0) {
               if (var13.h(109)) {
                 var13 = (om) (var8.next((byte) 116));
                 continue;
               }
-              if (var13.field_nc.field_L == 0) {
+              if (var13.field_nc.pressedButton == 0) {
                 tf.a(var13, param0, (byte) -71, var33);
               } else {
                 if (var13.field_Rb && (!var13.field_Dc ||
@@ -1481,7 +1481,7 @@ class um implements ub, qe {
         field_p = null;
         quarterSineQ16 = null;
         if (param0 != 31292) {
-          field_b = (mh) null;
+          field_b = (UiComponent) null;
         }
         underwaterBackgroundColors = null;
         meshAttributeRecords = null;

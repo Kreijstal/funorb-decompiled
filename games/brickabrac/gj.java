@@ -3,7 +3,7 @@
  */
 final class gj {
     static int field_a;
-    static mh field_b;
+    static UiComponent field_b;
     static String field_d;
     static RgbSprite[] field_c;
 

@@ -3,7 +3,7 @@
  */
 final class Ball extends CircleBody {
     static RgbSprite field_w;
-    static mh field_A;
+    static UiComponent field_A;
     static String field_H;
     int brickBounceCount;
     static java.math.BigInteger field_F;
@@ -46,7 +46,7 @@ final class Ball extends CircleBody {
           }
           return null;
         }
-        field_A = (mh) null;
+        field_A = (UiComponent) null;
         var5Lifetime1 = SecondaryNodeQueue.b(0);
         var2Lifetime1 = var5Lifetime1;
         for (var3Lifetime1 = 0; var5Lifetime1.length > var3Lifetime1; var3Lifetime1++) {

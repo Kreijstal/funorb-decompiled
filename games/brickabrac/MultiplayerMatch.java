@@ -6,7 +6,7 @@ final class MultiplayerMatch {
     static String field_e;
     int playerMaskOne;
     int playerCount;
-    static mh field_d;
+    static UiComponent field_d;
     boolean resultsReady;
     int[] resultOrder;
     int field_n;

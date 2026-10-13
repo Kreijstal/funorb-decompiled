@@ -92,10 +92,10 @@ final class CacheIoRequest extends ResourceRequest {
 
     final static void a(boolean param0, boolean param1) {
         int var6 = 0;
-        mh dupTemp$0 = null;
+        UiComponent dupTemp$0 = null;
         int var11 = 0;
         int stackIn_4_0 = 0;
-        mh stackIn_6_0;
+        UiComponent stackIn_6_0;
         int stackIn_6_1;
         int stackIn_6_2;
         int stackIn_6_3;
@@ -104,7 +104,7 @@ final class CacheIoRequest extends ResourceRequest {
         Object stackIn_37_0 = null;
         rk stackIn_37_1 = null;
         int stackIn_52_0 = 0;
-        mh stackIn_78_0 = null;
+        UiComponent stackIn_78_0 = null;
         boolean stackIn_79_1 = false;
         RuntimeException decompiledCaughtException = null;
         int var2_int = 0;
@@ -112,17 +112,17 @@ final class CacheIoRequest extends ResourceRequest {
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
-        mh var7 = null;
+        UiComponent var7 = null;
         int var7_int = 0;
         int var8 = 0;
-        mh var8_ref_mh = null;
+        UiComponent var8_ref_mh = null;
         rk var9 = null;
         int var9_int = 0;
         int var10 = 0;
         rk var10_ref_rk = null;
         int var12 = 0;
         int var13 = 0;
-        mh var14 = null;
+        UiComponent var14 = null;
         var13 = BrickABrac.field_J ? 1 : 0;
         try {
           kp.field_a = Rasterizer2D.width;
@@ -133,27 +133,27 @@ final class CacheIoRequest extends ResourceRequest {
             stackIn_4_0 = IntArrayRequest.field_j;
           }
           co.a(stackIn_4_0, false);
-          sb.field_c.a(NinjaBackground.field_w.field_Ib, 0, 88, 0, -40 + NinjaBackground.field_w.field_cb - 2);
-          um.field_b.a(np.field_a, 0, 0, ji.field_b.field_Ib, (byte) 64);
+          sb.field_c.a(NinjaBackground.field_w.width, 0, 88, 0, -40 + NinjaBackground.field_w.height - 2);
+          um.field_b.setBounds(np.field_a, 0, 0, ji.field_b.width, (byte) 64);
           stackIn_6_0 = BoundedFile.field_g;
           stackIn_6_1 = 18;
           stackIn_6_2 = np.field_a + 2;
           stackIn_6_3 = 0;
-          stackIn_6_4 = ji.field_b.field_Ib;
+          stackIn_6_4 = ji.field_b.width;
           if (!vd.field_e) {
             stackIn_7_5 = 0;
           } else {
             stackIn_7_5 = 4 + (ec.field_J + 40);
           }
-          ((mh) (Object) stackIn_6_0).a(stackIn_6_1, stackIn_6_2, stackIn_6_3, stackIn_6_4 - stackIn_7_5, (byte) 64);
+          ((UiComponent) (Object) stackIn_6_0).setBounds(stackIn_6_1, stackIn_6_2, stackIn_6_3, stackIn_6_4 - stackIn_7_5, (byte) 64);
           if (!param0) {
             field_D = (java.awt.Canvas) null;
           }
-          wd.field_E.a(18, np.field_a + 2, -40 + (-2 + ji.field_b.field_Ib) - ec.field_J, 42 + ec.field_J, (byte) 64);
-          TimedSplashScreen.field_u.a(2, (byte) -109, ji.field_b.field_Ib, 0, np.field_a + 2 + 20, ec.field_J, -2 + ji.field_b.field_cb - (np.field_a + 20));
-          GameUiController.field_e.a(40, -40 + NinjaBackground.field_w.field_cb, 0, NinjaBackground.field_w.field_Ib, (byte) 64);
-          ba.field_v.a(30, 0, 0, MultiplayerMatch.field_d.field_Ib, (byte) 64);
-          rg.field_e.a(-2 + (-40 + MultiplayerMatch.field_d.field_cb) - 30, 30, 0, MultiplayerMatch.field_d.field_Ib, (byte) 64);
+          wd.field_E.setBounds(18, np.field_a + 2, -40 + (-2 + ji.field_b.width) - ec.field_J, 42 + ec.field_J, (byte) 64);
+          TimedSplashScreen.field_u.a(2, (byte) -109, ji.field_b.width, 0, np.field_a + 2 + 20, ec.field_J, -2 + ji.field_b.height - (np.field_a + 20));
+          GameUiController.field_e.setBounds(40, -40 + NinjaBackground.field_w.height, 0, NinjaBackground.field_w.width, (byte) 64);
+          ba.field_v.setBounds(30, 0, 0, MultiplayerMatch.field_d.width, (byte) 64);
+          rg.field_e.setBounds(-2 + (-40 + MultiplayerMatch.field_d.height) - 30, 30, 0, MultiplayerMatch.field_d.width, (byte) 64);
           var2_int = cq.field_p + 3;
           if (w.field_n.length < 2) {
             var2_int--;
@@ -161,15 +161,15 @@ final class CacheIoRequest extends ResourceRequest {
           if (param1) {
             var2_int--;
           }
-          var3 = -2 + (2 + (-15 + (rg.field_e.field_cb - (5 - (var2_int + 1) / 2)))) / (1 + var2_int);
+          var3 = -2 + (2 + (-15 + (rg.field_e.height - (5 - (var2_int + 1) / 2)))) / (1 + var2_int);
           if (var3 > 30) {
             var3 = 30;
           }
-          var4 = -5 + (rg.field_e.field_cb - (5 + (2 + var3) * var2_int));
+          var4 = -5 + (rg.field_e.height - (5 + (2 + var3) * var2_int));
           if (var4 > 40) {
             var4 = 40;
           }
-          jd.field_a.a(var4, 5, 5, -5 + (-5 + rg.field_e.field_Ib), (byte) 64);
+          jd.field_a.setBounds(var4, 5, 5, -5 + (-5 + rg.field_e.width), (byte) 64);
           var5 = 5 + var4 + 2;
           for (var6 = 0; 4 + cq.field_p > var6; var6++) {
             if ((var6 != 1 ||
@@ -180,27 +180,27 @@ final class CacheIoRequest extends ResourceRequest {
                 dupTemp$0 = gb.field_l[var6];
                 var14 = dupTemp$0;
                 var7 = dupTemp$0;
-                gb.field_l[var6].field_cb = 0;
-                var14.field_Ib = 0;
+                gb.field_l[var6].height = 0;
+                var14.width = 0;
                 for (var8 = 0; MatchCompleteScreen.field_A[var6].length > var8; var8++) {
                   if (null != MatchCompleteScreen.field_A[var6][var8]) {
                     var9 = MatchCompleteScreen.field_A[var6][var8];
-                    MatchCompleteScreen.field_A[var6][var8].field_cb = 0;
-                    var9.field_Ib = 0;
+                    MatchCompleteScreen.field_A[var6][var8].height = 0;
+                    var9.width = 0;
                   }
                 }
               } else if (param1 &&
                 0 == var6) {
                 var7 = gb.field_l[var6];
-                gb.field_l[var6].field_cb = 0;
-                var7.field_Ib = 0;
+                gb.field_l[var6].height = 0;
+                var7.width = 0;
                 for (var8 = 0; var8 < MatchCompleteScreen.field_A[var6].length; var8++) {
                   stackIn_37_0 = null;
                   stackIn_37_1 = MatchCompleteScreen.field_A[var6][var8];
                   if (stackIn_37_0 != stackIn_37_1) {
                     var9 = MatchCompleteScreen.field_A[var6][var8];
-                    MatchCompleteScreen.field_A[var6][var8].field_cb = 0;
-                    var9.field_Ib = 0;
+                    MatchCompleteScreen.field_A[var6][var8].height = 0;
+                    var9.width = 0;
                   }
                 }
               } else {
@@ -220,29 +220,29 @@ final class CacheIoRequest extends ResourceRequest {
                 var7_int = stackIn_52_0;
                 if (var7_int != 0) {
                   var8_ref_mh = gb.field_l[var6];
-                  gb.field_l[var6].field_cb = 0;
-                  var8_ref_mh.field_Ib = 0;
+                  gb.field_l[var6].height = 0;
+                  var8_ref_mh.width = 0;
                   for (var9_int = 0; MatchCompleteScreen.field_A[var6].length > var9_int; var9_int++) {
                     if (MatchCompleteScreen.field_A[var6][var9_int] != null) {
                       var10_ref_rk = MatchCompleteScreen.field_A[var6][var9_int];
-                      MatchCompleteScreen.field_A[var6][var9_int].field_cb = 0;
-                      var10_ref_rk.field_Ib = 0;
+                      MatchCompleteScreen.field_A[var6][var9_int].height = 0;
+                      var10_ref_rk.width = 0;
                     }
                   }
                 } else {
-                  gb.field_l[var6].a(var3, var5, 5, 103, (byte) 64);
+                  gb.field_l[var6].setBounds(var3, var5, 5, 103, (byte) 64);
                   var8 = 110;
                   if (!param1) {
                     if (null != MatchCompleteScreen.field_A[var6][0]) {
                       var9 = MatchCompleteScreen.field_A[var6][0];
-                      MatchCompleteScreen.field_A[var6][0].field_cb = 0;
-                      var9.field_Ib = 0;
+                      MatchCompleteScreen.field_A[var6][0].height = 0;
+                      var9.width = 0;
                     }
                   } else {
                     MatchCompleteScreen.field_A[var6][0].a(-10411, var5, 2, kn.field_z, var8, var3, 38);
                     var8 += 40;
                   }
-                  var9_int = 2 + (MultiplayerMatch.field_d.field_Ib - (5 + var8));
+                  var9_int = 2 + (MultiplayerMatch.field_d.width - (5 + var8));
                   var10 = MatchCompleteScreen.field_A[var6].length - 1;
                   for (var11 = 0; var10 > var11; var11++) {
                     var12 = var11 * var9_int / var10;
@@ -253,14 +253,14 @@ final class CacheIoRequest extends ResourceRequest {
               }
             }
           }
-          wi.field_j.a(-10 + (-120 + Rasterizer2D.height) - 4 - 10, 10, -360 + Rasterizer2D.width >> 1, 360, (byte) 64);
-          TableNameEntry.field_h.a(24, 0, 0, wi.field_j.field_Ib, (byte) 64);
-          MembershipBenefitsScreen.field_t.a(-24 + wi.field_j.field_cb, 24, 0, wi.field_j.field_Ib, (byte) 64);
+          wi.field_j.setBounds(-10 + (-120 + Rasterizer2D.height) - 4 - 10, 10, -360 + Rasterizer2D.width >> 1, 360, (byte) 64);
+          TableNameEntry.field_h.setBounds(24, 0, 0, wi.field_j.width, (byte) 64);
+          MembershipBenefitsScreen.field_t.setBounds(-24 + wi.field_j.height, 24, 0, wi.field_j.width, (byte) 64);
           stackIn_78_0 = MembershipBenefitsScreen.field_t;
           stackIn_79_1 = !(param0);
-          stackIn_78_0.field_Jb = na.a(stackIn_79_1, 8421504, 3, 11579568, MembershipBenefitsScreen.field_t.field_cb, 1);
-          Ball.field_A.a(MembershipBenefitsScreen.field_t.field_cb - 10 - 26, 5, 5, -10 + MembershipBenefitsScreen.field_t.field_Ib, (byte) 64);
-          nd.field_a.a(24, -29 + MembershipBenefitsScreen.field_t.field_cb, (MembershipBenefitsScreen.field_t.field_Ib - 80) / 2, 80, (byte) 64);
+          stackIn_78_0.frameSprites = na.a(stackIn_79_1, 8421504, 3, 11579568, MembershipBenefitsScreen.field_t.height, 1);
+          Ball.field_A.setBounds(MembershipBenefitsScreen.field_t.height - 10 - 26, 5, 5, -10 + MembershipBenefitsScreen.field_t.width, (byte) 64);
+          nd.field_a.setBounds(24, -29 + MembershipBenefitsScreen.field_t.height, (MembershipBenefitsScreen.field_t.width - 80) / 2, 80, (byte) 64);
           s.b(125);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

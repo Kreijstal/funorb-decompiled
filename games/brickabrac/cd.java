@@ -3,7 +3,7 @@
  */
 final class cd {
     static ta field_c;
-    static mh field_d;
+    static UiComponent field_d;
     static MusicTrack field_g;
     static String field_f;
     static IndexedSprite[] field_b;
@@ -47,7 +47,7 @@ final class cd {
           GameplayScreen.field_h = GameplayScreen.field_h + 1;
           return true;
         }
-        field_d = (mh) null;
+        field_d = (UiComponent) null;
         var1Lifetime1 = MonotonicTime.nowMillis(false);
         var3Lifetime1 = -ob.field_G + var1Lifetime1;
         if (var3Lifetime1 > 30000L) {

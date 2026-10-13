@@ -11,7 +11,7 @@ final class ArchiveIndex {
     static int field_e;
     int[] groupIds;
     int[] fileCapacities;
-    static mh field_j;
+    static UiComponent field_j;
     int[] groupVersions;
     IntKeyIndex[] fileNameIndexes;
     int[] groupCrcs;

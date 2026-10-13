@@ -16,7 +16,7 @@ final class BufferedSocket implements Runnable {
     private InputStream input;
     private PlatformTask writerTask;
     private int bufferCapacity;
-    static mh field_h;
+    static UiComponent field_h;
 
     final int readByte(int obfuscationGuard) throws IOException {
         if (obfuscationGuard != 0) {
@@ -269,7 +269,7 @@ final class BufferedSocket implements Runnable {
         }
         if (TooltipSprite.field_p) {
           Rasterizer2D.darkenRectangle(Rasterizer2D.clipLeft, Rasterizer2D.clipTop, -Rasterizer2D.clipLeft + Rasterizer2D.clipRight, -Rasterizer2D.clipTop + Rasterizer2D.clipBottom);
-          wd.field_w.a(true, false);
+          wd.field_w.drawRoot(true, false);
         }
     }
 

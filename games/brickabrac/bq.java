@@ -264,7 +264,7 @@ final class bq {
             }
             un.field_g = MonotonicTime.nowMillis(false);
           }
-          mh.field_H.itemCount = ri.field_I.length;
+          UiComponent.field_H.itemCount = ri.field_I.length;
           var3_intLifetime1 = 0;
           if (param2 != 104) {
             return;
@@ -295,7 +295,7 @@ final class bq {
               }
             }
           }
-          jj.field_c = mh.field_H.itemCount * (kn.field_y + jb.field_H << 1);
+          jj.field_c = UiComponent.field_H.itemCount * (kn.field_y + jb.field_H << 1);
           np.field_b = wi.field_k - (var3_intLifetime1 >> 1);
           SpaceBackground.field_u = -(var3_intLifetime1 >> 1) + (var3_intLifetime1 + wi.field_k);
           for (var4Lifetime2 = 0; qh.field_i.length > var4Lifetime2; var4Lifetime2++) {
@@ -329,9 +329,9 @@ final class bq {
             var4Lifetime3++;
           }
           if (ArchiveFetchClient.field_p != 2) {
-            mh.field_H.initializeSelection(qo.b(120, po.pointerY, MusicPatch.pointerX), 0, param0, (byte) -127);
+            UiComponent.field_H.initializeSelection(qo.b(120, po.pointerY, MusicPatch.pointerX), 0, param0, (byte) -127);
           } else {
-            mh.field_H.initializeSelection(-1, -1, param0, (byte) -128);
+            UiComponent.field_H.initializeSelection(-1, -1, param0, (byte) -128);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

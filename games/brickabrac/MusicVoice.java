@@ -124,7 +124,7 @@ final class MusicVoice extends IntrusiveNode {
         boolean stackIn_68_5;
         boolean stackIn_69_6;
         int stackIn_90_0 = 0;
-        mh stackIn_155_0;
+        UiComponent stackIn_155_0;
         int stackIn_155_1;
         int stackIn_155_2;
         int stackIn_155_3;
@@ -145,11 +145,11 @@ final class MusicVoice extends IntrusiveNode {
         Object var12 = null;
         id var13 = null;
         int var14 = 0;
-        mh var15 = null;
-        mh var16 = null;
-        mh var17 = null;
-        mh var18 = null;
-        mh var19 = null;
+        UiComponent var15 = null;
+        UiComponent var16 = null;
+        UiComponent var17 = null;
+        UiComponent var18 = null;
+        UiComponent var19 = null;
         int var20 = 0;
         String var21 = null;
         int var22 = 0;
@@ -236,7 +236,7 @@ final class MusicVoice extends IntrusiveNode {
             stackIn_69_6 = (param1 == o.field_b);
             var9 = ((mm) (Object) stackIn_68_0).a(stackIn_68_1, stackIn_68_2, stackIn_68_3, stackIn_68_4, stackIn_68_5, stackIn_69_6) ? 1 : 0;
           }
-          var10 = param1.field_Rb.field_bb;
+          var10 = param1.field_Rb.children;
           var11Lifetime1 = 73 % ((param4 - 41) / 57);
           var12 = null;
           var13 = (id) (var10.first(-67));
@@ -245,51 +245,51 @@ final class MusicVoice extends IntrusiveNode {
             if (var32 != 0) {
               return;
             }
-            if (null == var13.field_bb) {
-              var13.field_Rb = new mh(0L, vb.field_K);
-              var13.a(var13.field_Rb, 0);
-              var13.field_dc = new mh(0L, OptionsScreen.field_v);
+            if (null == var13.children) {
+              var13.field_Rb = new UiComponent(0L, vb.field_K);
+              var13.addChild(var13.field_Rb, 0);
+              var13.field_dc = new UiComponent(0L, OptionsScreen.field_v);
               if (vd.field_e) {
-                var13.a(var13.field_dc, 0);
+                var13.addChild(var13.field_dc, 0);
               }
-              var13.field_dc.field_S = 2;
-              var13.field_Tb = new mh(0L, CappedUrlRequest.field_l);
-              var13.a(var13.field_Tb, 0);
-              var13.c(true);
-              var13.field_Vb = new mh(0L, ok.field_d);
-              var13.a(var13.field_Vb, 0);
-              var13.field_cc = new mh(0L, MotionWaypoint.field_s);
-              var13.a(var13.field_cc, 0);
+              var13.field_dc.horizontalAlignment = 2;
+              var13.field_Tb = new UiComponent(0L, CappedUrlRequest.field_l);
+              var13.addChild(var13.field_Tb, 0);
+              var13.markDescendantsToInheritVisualState(true);
+              var13.field_Vb = new UiComponent(0L, ok.field_d);
+              var13.addChild(var13.field_Vb, 0);
+              var13.field_cc = new UiComponent(0L, MotionWaypoint.field_s);
+              var13.addChild(var13.field_cc, 0);
               var14 = 1;
             }
-            var13.field_Rb.field_Mb = null;
+            var13.field_Rb.text = null;
             var15 = var13.field_Rb;
-            var13.field_Rb.field_cb = 0;
-            var15.field_Ib = 0;
-            var13.field_dc.field_Mb = null;
-            var13.field_dc.field_cb = 0;
+            var13.field_Rb.height = 0;
+            var15.width = 0;
+            var13.field_dc.text = null;
+            var13.field_dc.height = 0;
             var16 = var13.field_dc;
-            var16.field_Ib = 0;
-            var13.field_Vb.field_Mb = null;
+            var16.width = 0;
+            var13.field_Vb.text = null;
             var17 = var13.field_Vb;
-            var13.field_Vb.field_cb = 0;
-            var13.field_cc.field_Mb = null;
-            var17.field_Ib = 0;
+            var13.field_Vb.height = 0;
+            var13.field_cc.text = null;
+            var17.width = 0;
             var18 = var13.field_cc;
-            var13.field_cc.field_cb = 0;
-            var18.field_Ib = 0;
-            var13.field_Tb.field_Mb = null;
+            var13.field_cc.height = 0;
+            var18.width = 0;
+            var13.field_Tb.text = null;
             var19 = var13.field_Tb;
-            var13.field_Tb.field_cb = 0;
-            var19.field_Ib = 0;
-            var13.field_Ib = param1.field_Rb.field_Ib;
+            var13.field_Tb.height = 0;
+            var19.width = 0;
+            var13.width = param1.field_Rb.width;
             var20 = 0;
             var21 = var13.field_Yb;
             var22 = 72;
             if (param1 == IsaacGenerator.field_b) {
               var22 += 42;
             }
-            var21 = TextFont.truncateText(var13.field_Rb.field_O, var21, var22);
+            var21 = TextFont.truncateText(var13.field_Rb.font, var21, var22);
             stackIn_90_0 = (var21.equals(var13.field_Yb)) ? 0 : 1;
             var23 = stackIn_90_0;
             if (4 <= var13.field_Zb) {
@@ -299,7 +299,7 @@ final class MusicVoice extends IntrusiveNode {
                 var21 = "<img=" + (-1 + var13.field_Zb) + ">" + var21;
               }
             }
-            var13.field_Rb.field_Mb = var21;
+            var13.field_Rb.text = var21;
             if (!var13.i(0)) {
               var24_int = 16764006;
               var25_int = 16777215;
@@ -311,50 +311,50 @@ final class MusicVoice extends IntrusiveNode {
                 var25_int = 8421504;
                 var24_int = 8414771;
               }
-              var13.field_Rb.field_vb = var25_int;
-              var13.field_Rb.field_Fb = var25_int;
-              var13.field_Rb.field_Y = var25_int;
-              var13.field_Vb.field_X = var24_int;
-              var13.field_dc.field_X = var24_int;
-              var13.field_Rb.field_X = var24_int;
-              var13.field_dc.field_vb = var25_int;
-              var13.field_dc.field_Fb = var25_int;
-              var13.field_dc.field_Y = var25_int;
-              var13.field_Vb.field_vb = var25_int;
-              var13.field_Vb.field_Fb = var25_int;
-              var13.field_Vb.field_Y = var25_int;
+              var13.field_Rb.selectedTextColor = var25_int;
+              var13.field_Rb.capturedTextColor = var25_int;
+              var13.field_Rb.activeTextColor = var25_int;
+              var13.field_Vb.textColor = var24_int;
+              var13.field_dc.textColor = var24_int;
+              var13.field_Rb.textColor = var24_int;
+              var13.field_dc.selectedTextColor = var25_int;
+              var13.field_dc.capturedTextColor = var25_int;
+              var13.field_dc.activeTextColor = var25_int;
+              var13.field_Vb.selectedTextColor = var25_int;
+              var13.field_Vb.capturedTextColor = var25_int;
+              var13.field_Vb.activeTextColor = var25_int;
               if (param1 == TimedSplashScreen.field_u) {
                 if (!o.field_e.field_Rb) {
-                  var13.field_cc.field_Mb = LegacyUtf8Decoder.field_b;
+                  var13.field_cc.text = LegacyUtf8Decoder.field_b;
                 }
               } else if (!var13.field_Qb) {
                 if (!var13.field_fc) {
-                  var13.field_Vb.field_Mb = ea.field_f;
+                  var13.field_Vb.text = ea.field_f;
                 } else {
-                  var13.field_Rb.field_Mb = rd.a(ce.field_g, new String[]{var21}, (byte) 103);
-                  var13.field_Vb.field_Mb = JungleBackground.field_t;
-                  var13.field_cc.field_Mb = gq.field_Wb;
+                  var13.field_Rb.text = rd.a(ce.field_g, new String[]{var21}, (byte) 103);
+                  var13.field_Vb.text = JungleBackground.field_t;
+                  var13.field_cc.text = gq.field_Wb;
                 }
               } else {
-                var13.field_Rb.field_Mb = rd.a(ll.field_a, new String[]{var21}, (byte) 103);
-                var13.field_cc.field_Mb = wl.field_L;
+                var13.field_Rb.text = rd.a(ll.field_a, new String[]{var21}, (byte) 103);
+                var13.field_cc.text = wl.field_L;
               }
               var26_int = 0;
               if (null != o.field_e &&
                 hn.b((byte) 7) &&
                 ~oc.field_p != ~var13.field_gc) {
-                if (null != var13.field_Vb.field_Mb) {
-                  var27 = var13.field_Vb.g(123) + 2 * om.field_oc;
-                  var13.field_Vb.a(np.field_a, var20, var26_int, var27, (byte) 64);
+                if (null != var13.field_Vb.text) {
+                  var27 = var13.field_Vb.getContentWidth(123) + 2 * om.field_oc;
+                  var13.field_Vb.setBounds(np.field_a, var20, var26_int, var27, (byte) 64);
                   var26_int = var26_int + var27;
                 }
-                if (var13.field_cc.field_Mb != null) {
+                if (var13.field_cc.text != null) {
                   if (TimedSplashScreen.field_u == param1) {
                     var27Lifetime2 = 40;
                   } else {
-                    var27Lifetime2 = var13.field_cc.g(99) + 2 * om.field_oc;
+                    var27Lifetime2 = var13.field_cc.getContentWidth(99) + 2 * om.field_oc;
                   }
-                  var13.field_cc.a(np.field_a, var20, var26_int, var27Lifetime2, (byte) 64);
+                  var13.field_cc.setBounds(np.field_a, var20, var26_int, var27Lifetime2, (byte) 64);
                   var26_int = var26_int + var27Lifetime2;
                 }
               }
@@ -367,10 +367,10 @@ final class MusicVoice extends IntrusiveNode {
               } else {
                 stackIn_156_4 = 0;
               }
-              ((mh) (Object) stackIn_155_0).a(stackIn_155_1, stackIn_155_2, stackIn_155_3, -stackIn_156_4 + var13.field_Ib - var26_int, (byte) 64);
-              var13.field_dc.field_Mb = Integer.toString(var13.field_Wb);
-              var13.field_dc.a(np.field_a, var20, -40 + var13.field_Ib, 40, (byte) 64);
-              if (var13.field_Rb.field_kb &&
+              ((UiComponent) (Object) stackIn_155_0).setBounds(stackIn_155_1, stackIn_155_2, stackIn_155_3, -stackIn_156_4 + var13.width - var26_int, (byte) 64);
+              var13.field_dc.text = Integer.toString(var13.field_Wb);
+              var13.field_dc.setBounds(np.field_a, var20, -40 + var13.width, 40, (byte) 64);
+              if (var13.field_Rb.activeInside &&
                 var23 != 0) {
                 ep.field_e = var13.field_Yb;
                 if (null != PacketBuffer.field_i &&
@@ -378,7 +378,7 @@ final class MusicVoice extends IntrusiveNode {
                   ep.field_e = ep.field_e + " - " + PacketBuffer.field_i[var13.field_Zb];
                 }
               } else {
-                if (var13.field_Rb.field_kb &&
+                if (var13.field_Rb.activeInside &&
                   null != PacketBuffer.field_i &&
                   PacketBuffer.field_i[var13.field_Zb] != null) {
                   ep.field_e = PacketBuffer.field_i[var13.field_Zb];
@@ -388,23 +388,23 @@ final class MusicVoice extends IntrusiveNode {
             }
             var24 = SoundPlayback.a((byte) -110, var21, var13.field_kc);
             if (null != var24) {
-              var25_intLifetime1 = var13.field_Tb.field_O.countWrappedLines(var24, -om.field_oc + var13.field_Ib - om.field_oc);
-              var13.field_Tb.field_jb = var13.field_ic * 256 / cm.field_o;
-              var13.field_Tb.field_Mb = var24;
-              var13.field_Tb.a(var25_intLifetime1 * np.field_a, var20, om.field_oc, var13.field_Ib - 2 * om.field_oc, (byte) 64);
+              var25_intLifetime1 = var13.field_Tb.font.countWrappedLines(var24, -om.field_oc + var13.width - om.field_oc);
+              var13.field_Tb.textAlpha256 = var13.field_ic * 256 / cm.field_o;
+              var13.field_Tb.text = var24;
+              var13.field_Tb.setBounds(var25_intLifetime1 * np.field_a, var20, om.field_oc, var13.width - 2 * om.field_oc, (byte) 64);
               var20 = var20 + np.field_a * var25_intLifetime1;
             }
             if (var9 == 0) {
-              var13.field_C = var20 - var13.field_cb;
+              var13.remainingHeight = var20 - var13.height;
             }
             if (var14 != 0) {
-              param1.field_Rb.a((mh) (var12), 2, var13, 17290);
+              param1.field_Rb.placeBelow((UiComponent) (var12), 2, var13, 17290);
             }
             boolean decompiledFrameRemainder0 = true;
-            if (var13.field_L != 0 &&
+            if (var13.pressedButton != 0 &&
               !var13.i(0)) {
-              if (0 == var13.field_Vb.field_L) {
-                if (var13.field_cc.field_L != 0) {
+              if (0 == var13.field_Vb.pressedButton) {
+                if (var13.field_cc.pressedButton != 0) {
                   rf.a(param2, var13.field_gc, true);
                 } else {
                   SpriteGeometry.a(0, qo.pressY, var13, param1, (byte) 58, tb.pressX, 0);
@@ -416,7 +416,7 @@ final class MusicVoice extends IntrusiveNode {
               }
             }
             var12 = var13;
-            if (var13.field_G &&
+            if (var13.hovered &&
               !var13.i(0)) {
               var25 = null;
               if (~var13.field_gc == ~oc.field_p) {

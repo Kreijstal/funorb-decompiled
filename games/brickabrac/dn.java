@@ -4,13 +4,13 @@
 import java.util.*;
 
 final class dn extends h {
-    static mh field_K;
+    static UiComponent field_K;
     private int field_H;
     static String field_J;
     private int field_O;
     private int field_G;
     private int field_I;
-    static mh field_N;
+    static UiComponent field_N;
     private boolean field_L;
     private boolean field_M;
 
@@ -74,7 +74,7 @@ final class dn extends h {
           var5_int = 0;
           var6 = -1;
           if (param0 != 25293) {
-            field_N = (mh) null;
+            field_N = (UiComponent) null;
           }
           for (var7 = 1; var7 < param1.length(); var7++) {
             var8 = param1.charAt(var7);

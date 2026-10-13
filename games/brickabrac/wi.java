@@ -9,10 +9,10 @@ final class wi extends dl {
     static int field_m;
     static th field_i;
     private java.net.ProxySelector field_l;
-    static mh field_n;
+    static UiComponent field_n;
     static int field_k;
     static boolean field_g;
-    static mh field_j;
+    static UiComponent field_j;
 
     final java.net.Socket a(int param0) throws IOException {
         int var9 = 0;
@@ -342,7 +342,7 @@ final class wi extends dl {
 
     final static int c(int param0) {
         if (param0 != 1) {
-          field_j = (mh) null;
+          field_j = (UiComponent) null;
           return PowerUp.keyboardIdleTicks;
         }
         return PowerUp.keyboardIdleTicks;

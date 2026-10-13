@@ -15,7 +15,7 @@ final class pf implements ub {
     static boolean field_p;
     private int field_k;
     static boolean field_d;
-    static mh field_h;
+    static UiComponent field_h;
     private int field_n;
     static boolean field_f;
 

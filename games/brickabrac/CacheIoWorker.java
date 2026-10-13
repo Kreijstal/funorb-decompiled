@@ -114,34 +114,34 @@ final class CacheIoWorker implements Runnable {
         var15 = BrickABrac.field_J ? 1 : 0;
         try {
           var6_int = 485 + param1 + 8 - (-2 - param4) + 8;
-          sh.field_d.a(-6 + DualLinkDeque.field_d.field_cb, 3, 3, -6 + var6_int, (byte) 64);
-          var7 = -5 + sh.field_d.field_cb;
-          BallPulseEffect.field_n.a(param3, -param3 + var7, 5, param4 + 485 + param1 + 2, (byte) 64);
-          g.field_n.a(param3, 0, param1, -ap.field_e.field_Ib - param1 + BallPulseEffect.field_n.field_Ib, (byte) 64);
+          sh.field_d.setBounds(-6 + DualLinkDeque.field_d.height, 3, 3, -6 + var6_int, (byte) 64);
+          var7 = -5 + sh.field_d.height;
+          BallPulseEffect.field_n.setBounds(param3, -param3 + var7, 5, param4 + 485 + param1 + 2, (byte) 64);
+          g.field_n.setBounds(param3, 0, param1, -ap.field_e.width - param1 + BallPulseEffect.field_n.width, (byte) 64);
           var8 = 3 / ((49 - param0) / 40);
-          ap.field_e.a(param3, 0, param1 + g.field_n.field_Ib, ap.field_e.field_Ib, (byte) 64);
+          ap.field_e.setBounds(param3, 0, param1 + g.field_n.width, ap.field_e.width, (byte) 64);
           var7 = var7 - (param3 + 2);
           AchievementIcon.field_q.a(2, (byte) -110, 2 + (485 + param1) + param4, 5, 5, param4, var7 - 5);
           if (null != vd.field_a) {
-            vd.field_a.a(AchievementIcon.field_q.field_cb, AchievementIcon.field_q.field_P, AchievementIcon.field_q.field_zb, (byte) -119, AchievementIcon.field_q.field_Ib);
+            vd.field_a.a(AchievementIcon.field_q.height, AchievementIcon.field_q.localX, AchievementIcon.field_q.localY, (byte) -119, AchievementIcon.field_q.width);
           }
-          var9 = -param1 + (DualLinkDeque.field_d.field_Ib - var6_int);
+          var9 = -param1 + (DualLinkDeque.field_d.width - var6_int);
           var10 = var9 / 2;
           var11 = param1 + var10 + param2;
           var12 = 0;
           for (var13 = 0; 6 > var13; var13++) {
             if (var13 >= 5 ||
               null != ik.field_i[var13]) {
-              var14 = 3 + (2 + DualLinkDeque.field_d.field_cb - 6) * var12 / (fe.field_pb + 1);
+              var14 = 3 + (2 + DualLinkDeque.field_d.height - 6) * var12 / (fe.field_pb + 1);
               var12++;
-              var7Lifetime1 = -var14 + 3 + (var12 * (2 + (DualLinkDeque.field_d.field_cb - 6)) / (fe.field_pb + 1) - 2);
+              var7Lifetime1 = -var14 + 3 + (var12 * (2 + (DualLinkDeque.field_d.height - 6)) / (fe.field_pb + 1) - 2);
               if (5 > var13) {
-                ik.field_i[var13].a(var7Lifetime1, var14, var6_int, var9, (byte) 64);
-                HalloweenBackground.field_w[var13].a(var7Lifetime1, 0, param1, -param1 + var10, (byte) 64);
-                vj.field_a[var13].a(-param5 + (var7Lifetime1 - param5), param5, var10, param2, (byte) 64);
-                wd.field_F[var13].a(-param5 - param5 + var7Lifetime1, param5, var11, -var11 + var9 - param1, (byte) 64);
+                ik.field_i[var13].setBounds(var7Lifetime1, var14, var6_int, var9, (byte) 64);
+                HalloweenBackground.field_w[var13].setBounds(var7Lifetime1, 0, param1, -param1 + var10, (byte) 64);
+                vj.field_a[var13].setBounds(-param5 + (var7Lifetime1 - param5), param5, var10, param2, (byte) 64);
+                wd.field_F[var13].setBounds(-param5 - param5 + var7Lifetime1, param5, var11, -var11 + var9 - param1, (byte) 64);
               } else {
-                LegacyUtf8Decoder.field_c.a(var7Lifetime1, var14, var6_int, var9, (byte) 64);
+                LegacyUtf8Decoder.field_c.setBounds(var7Lifetime1, var14, var6_int, var9, (byte) 64);
               }
             }
           }

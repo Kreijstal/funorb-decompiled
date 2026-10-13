@@ -120,7 +120,7 @@ final class ParisBackground extends BackgroundScene {
           BallPulseEffect.parisCharacterSprite = pl.loadRgbSpriteByName("paris", "paris_character", (byte) -43, AchievementIcon.field_m);
           IntrusiveHashTable.field_i = jh.a(0, NinjaBackground.parisNearSprite);
           if (obfuscationGuard) {
-            ParisBackground.a((mh) null, (TextFont) null, (mh) null, (mh) null, (mh) null, (mh) null, (mh) null, (mh) null, (byte) 19, false, (fj) null, (mh) null);
+            ParisBackground.a((UiComponent) null, (TextFont) null, (UiComponent) null, (UiComponent) null, (UiComponent) null, (UiComponent) null, (UiComponent) null, (UiComponent) null, (byte) 19, false, (fj) null, (UiComponent) null);
           }
           UnderwaterBackground.field_t = jh.a(0, th.parisMidSprite);
           MembershipBenefitsScreen.field_s = jh.a(0, bf.parisFarSprite);
@@ -198,7 +198,7 @@ final class ParisBackground extends BackgroundScene {
         }
     }
 
-    final static void a(mh param0, TextFont param1, mh param2, mh param3, mh param4, mh param5, mh param6, mh param7, byte param8, boolean param9, fj param10, mh param11) {
+    final static void a(UiComponent param0, TextFont param1, UiComponent param2, UiComponent param3, UiComponent param4, UiComponent param5, UiComponent param6, UiComponent param7, byte param8, boolean param9, fj param10, UiComponent param11) {
         String stackIn_30_0 = null;
         int stackIn_34_0 = 0;
         RuntimeException stackIn_44_0 = null;
@@ -229,7 +229,7 @@ final class ParisBackground extends BackgroundScene {
         int[] var14 = null;
         int[] var15 = null;
         RgbSprite[] var16 = null;
-        mh var17 = null;
+        UiComponent var17 = null;
         int var18 = 0;
         String var19 = null;
         int var20 = 0;
@@ -249,7 +249,7 @@ final class ParisBackground extends BackgroundScene {
           r.field_C[3] = 16736511;
           r.field_C[0] = 16764000;
           if (param8 != 61) {
-            ParisBackground.a((mh) null, (TextFont) null, (mh) null, (mh) null, (mh) null, (mh) null, (mh) null, (mh) null, (byte) 97, false, (fj) null, (mh) null);
+            ParisBackground.a((UiComponent) null, (TextFont) null, (UiComponent) null, (UiComponent) null, (UiComponent) null, (UiComponent) null, (UiComponent) null, (UiComponent) null, (byte) 97, false, (fj) null, (UiComponent) null);
           }
           r.field_C[1] = 6356832;
           var12 = new RgbSprite(4, 4);
@@ -262,26 +262,26 @@ final class ParisBackground extends BackgroundScene {
           var14[5] = 7368816;
           var16 = new RgbSprite[9];
           var16[4] = var12;
-          DualLinkDeque.field_d = new mh(0L, param0);
-          sh.field_d = new mh(0L, param2);
-          DualLinkDeque.field_d.a(sh.field_d, 0);
-          var17 = new mh(0L, (mh) null);
-          var17.field_bb = new NodeDeque();
+          DualLinkDeque.field_d = new UiComponent(0L, param0);
+          sh.field_d = new UiComponent(0L, param2);
+          DualLinkDeque.field_d.addChild(sh.field_d, 0);
+          var17 = new UiComponent(0L, (UiComponent) null);
+          var17.children = new NodeDeque();
           AchievementIcon.field_q = new mm(0L, var17, param5, param10);
-          sh.field_d.a(AchievementIcon.field_q, param8 - 61);
-          BallPulseEffect.field_n = new mh(0L, param3);
-          sh.field_d.a(BallPulseEffect.field_n, 0);
-          g.field_n = new mh(0L, param7);
-          g.field_n.field_O = CachedArchiveSource.field_y;
-          BallPulseEffect.field_n.a(g.field_n, 0);
-          BallPulseEffect.field_n.c(true);
-          ap.field_e = new mh(0L, (mh) null);
-          ap.field_e.field_Jb = var16;
-          BallPulseEffect.field_n.a(ap.field_e, 0);
-          HalloweenBackground.field_w = new mh[5];
-          vj.field_a = new mh[5];
-          wd.field_F = new mh[5];
-          ik.field_i = new mh[5];
+          sh.field_d.addChild(AchievementIcon.field_q, param8 - 61);
+          BallPulseEffect.field_n = new UiComponent(0L, param3);
+          sh.field_d.addChild(BallPulseEffect.field_n, 0);
+          g.field_n = new UiComponent(0L, param7);
+          g.field_n.font = CachedArchiveSource.field_y;
+          BallPulseEffect.field_n.addChild(g.field_n, 0);
+          BallPulseEffect.field_n.markDescendantsToInheritVisualState(true);
+          ap.field_e = new UiComponent(0L, (UiComponent) null);
+          ap.field_e.frameSprites = var16;
+          BallPulseEffect.field_n.addChild(ap.field_e, 0);
+          HalloweenBackground.field_w = new UiComponent[5];
+          vj.field_a = new UiComponent[5];
+          wd.field_F = new UiComponent[5];
+          ik.field_i = new UiComponent[5];
           var18 = 0;
           boolean decompiledNaturalLoopExit0 = false;
           while (!(decompiledNaturalLoopExit0 = (var18 >= 5))) {
@@ -296,7 +296,7 @@ final class ParisBackground extends BackgroundScene {
                     var19 = fe.field_hb;
                   }
                 } else {
-                  var19 = mh.field_Z;
+                  var19 = UiComponent.field_Z;
                 }
               } else {
                 if (!th.field_d) {
@@ -307,17 +307,17 @@ final class ParisBackground extends BackgroundScene {
                 var19 = stackIn_30_0;
               }
               if (decompiledFrameRemainder0) {
-                ik.field_i[var18] = new mh(0L, param11);
-                HalloweenBackground.field_w[var18] = new mh(0L, sj.field_a, var19);
-                vj.field_a[var18] = new mh(0L, (mh) null);
-                vj.field_a[var18].field_Q = 1;
-                wd.field_F[var18] = new mh(0L, sj.field_a);
-                wd.field_F[var18].field_Q = 1;
-                ik.field_i[var18].a(HalloweenBackground.field_w[var18], 0);
-                ik.field_i[var18].a(vj.field_a[var18], 0);
-                ik.field_i[var18].a(wd.field_F[var18], 0);
-                ik.field_i[var18].c(true);
-                DualLinkDeque.field_d.a(ik.field_i[var18], 0);
+                ik.field_i[var18] = new UiComponent(0L, param11);
+                HalloweenBackground.field_w[var18] = new UiComponent(0L, sj.field_a, var19);
+                vj.field_a[var18] = new UiComponent(0L, (UiComponent) null);
+                vj.field_a[var18].verticalAlignment = 1;
+                wd.field_F[var18] = new UiComponent(0L, sj.field_a);
+                wd.field_F[var18].verticalAlignment = 1;
+                ik.field_i[var18].addChild(HalloweenBackground.field_w[var18], 0);
+                ik.field_i[var18].addChild(vj.field_a[var18], 0);
+                ik.field_i[var18].addChild(wd.field_F[var18], 0);
+                ik.field_i[var18].markDescendantsToInheritVisualState(true);
+                DualLinkDeque.field_d.addChild(ik.field_i[var18], 0);
                 fe.field_pb = fe.field_pb + 1;
               }
               var18++;
@@ -326,9 +326,9 @@ final class ParisBackground extends BackgroundScene {
             break;
           }
           if (decompiledNaturalLoopExit0) {
-            LegacyUtf8Decoder.field_c = new mh(0L, param4);
-            LegacyUtf8Decoder.field_c.field_Mb = vh.field_Y;
-            DualLinkDeque.field_d.a(LegacyUtf8Decoder.field_c, 0);
+            LegacyUtf8Decoder.field_c = new UiComponent(0L, param4);
+            LegacyUtf8Decoder.field_c.text = vh.field_Y;
+            DualLinkDeque.field_d.addChild(LegacyUtf8Decoder.field_c, 0);
             stackIn_34_0 = ik.a(false) ? 1 : 0;
           }
           if (stackIn_34_0 != 0 &&

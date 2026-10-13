@@ -1,21 +1,21 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class am extends mh {
-    private mh field_Xb;
+final class am extends UiComponent {
+    private UiComponent field_Xb;
     long field_Wb;
     static String field_cc;
-    private mh[] field_Sb;
-    private mh field_Ub;
+    private UiComponent[] field_Sb;
+    private UiComponent field_Ub;
     private ni field_bc;
-    private mh field_Pb;
+    private UiComponent field_Pb;
     private int field_ac;
-    static mh field_Qb;
-    private mh field_Vb;
-    private mh field_Yb;
-    static mh field_Zb;
+    static UiComponent field_Qb;
+    private UiComponent field_Vb;
+    private UiComponent field_Yb;
+    static UiComponent field_Zb;
     private StringBuilder field_Tb;
-    private mh field_Rb;
+    private UiComponent field_Rb;
 
     final static boolean i(int param0) {
         if (param0 != 0) {
@@ -25,8 +25,8 @@ final class am extends mh {
         return true;
     }
 
-    private final int a(int param0, mh param1, int param2, String param3, mh param4, byte param5) {
-        mh var7 = null;
+    private final int a(int param0, UiComponent param1, int param2, String param3, UiComponent param4, byte param5) {
+        UiComponent var7 = null;
         RuntimeException var7_ref = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;
@@ -41,9 +41,9 @@ final class am extends mh {
           if (param5 != -53) {
             this.b(true, -62);
           }
-          var7 = new mh(0L, param1, 0, param0, param2, 24, param3);
+          var7 = new UiComponent(0L, param1, 0, param0, param2, 24, param3);
           param0 += 32;
-          param4.a(var7, 0);
+          param4.addChild(var7, 0);
           stackIn_3_0 = param0;
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -85,7 +85,7 @@ final class am extends mh {
         return true;
     }
 
-    private final int a(mh param0, byte param1, int param2, mh param3, int param4) {
+    private final int a(UiComponent param0, byte param1, int param2, UiComponent param3, int param4) {
         int var6_int = 0;
         RuntimeException var6 = null;
         int var7 = 0;
@@ -99,9 +99,9 @@ final class am extends mh {
         try {
           param2 += 8;
           var6_int = -87 / ((param1 + 73) / 46);
-          var7 = param3.field_O.measureWrappedHeight(param3.field_Mb, param4 - param3.field_V * 2, param3.field_R);
-          param3.a(var7, param2, 0, param4, (byte) 64);
-          param0.a(param3, 0);
+          var7 = param3.font.measureWrappedHeight(param3.text, param4 - param3.textInset * 2, param3.lineSpacing);
+          param3.setBounds(var7, param2, 0, param4, (byte) 64);
+          param0.addChild(param3, 0);
           param2 = param2 + (0 + var7);
           stackIn_1_0 = param2;
           return stackIn_1_0;
@@ -144,17 +144,17 @@ final class am extends mh {
     final boolean j(int param0) {
         boolean stackIn_6_0 = false;
         if (param0 != 72) {
-          this.field_Sb = (mh[]) null;
+          this.field_Sb = (UiComponent[]) null;
         }
-        stackIn_6_0 = (this.field_bc != null) && (this.field_bc.field_Nb);
+        stackIn_6_0 = (this.field_bc != null) && (this.field_bc.selected);
         return stackIn_6_0;
     }
 
-    am(int param0, int param1, int param2, int param3, int param4, mh param5, mh param6, mh param7, mh param8, ni param9, mh param10, String param11, long param12) {
+    am(int param0, int param1, int param2, int param3, int param4, UiComponent param5, UiComponent param6, UiComponent param7, UiComponent param8, ni param9, UiComponent param10, String param11, long param12) {
         super(0L, param5);
         StringBuilder discarded$1 = null;
         int var15_int = 0;
-        mh[] var15 = null;
+        UiComponent[] var15 = null;
         int var16 = 0;
         int var17 = 0;
         int var18 = 0;
@@ -166,7 +166,7 @@ final class am extends mh {
         int var24 = 0;
         int var25 = 0;
         int var26 = 0;
-        mh[] var28 = null;
+        UiComponent[] var28 = null;
         Object stackIn_8_0;
         ni stackIn_8_1;
         ni stackIn_8_2;
@@ -176,7 +176,7 @@ final class am extends mh {
         ni stackIn_9_1;
         ni stackIn_9_2;
         String stackIn_9_5;
-        mh stackIn_15_0 = null;
+        UiComponent stackIn_15_0 = null;
         boolean stackIn_16_1 = false;
         RuntimeException stackIn_51_0 = null;
         StringBuilder stackIn_51_1 = null;
@@ -221,26 +221,26 @@ final class am extends mh {
         this.field_ac = -2;
         try {
           this.field_Wb = param12;
-          this.field_Ub = new mh(0L, param6, r.field_B.toUpperCase());
-          this.field_Ub.field_S = 1;
-          this.a(this.field_Ub, 0);
-          this.field_Vb = new mh(0L, param7);
-          this.field_Ub.a(this.field_Vb, 0);
-          this.field_Xb = new mh(0L, (mh) null);
-          this.a(this.field_Xb, 0);
+          this.field_Ub = new UiComponent(0L, param6, r.field_B.toUpperCase());
+          this.field_Ub.horizontalAlignment = 1;
+          this.addChild(this.field_Ub, 0);
+          this.field_Vb = new UiComponent(0L, param7);
+          this.field_Ub.addChild(this.field_Vb, 0);
+          this.field_Xb = new UiComponent(0L, (UiComponent) null);
+          this.addChild(this.field_Xb, 0);
           if (param11 != null) {
-            this.field_Rb = new mh(0L, param8, om.field_rc);
-            this.field_Rb.field_S = 1;
-            this.field_Rb.field_X = 11184810;
-            this.field_Xb.a(this.field_Rb, 0);
-            this.field_Pb = new mh(0L, param8, wd.field_D);
-            this.field_Pb.field_S = 1;
-            this.field_Pb.field_X = 11184810;
-            this.field_Xb.a(this.field_Pb, 0);
-            this.field_Yb = new mh(0L, param8);
-            this.field_Yb.field_X = 16764006;
-            this.field_Xb.a(this.field_Yb, 0);
-            this.field_Yb.field_Cb = "|";
+            this.field_Rb = new UiComponent(0L, param8, om.field_rc);
+            this.field_Rb.horizontalAlignment = 1;
+            this.field_Rb.textColor = 11184810;
+            this.field_Xb.addChild(this.field_Rb, 0);
+            this.field_Pb = new UiComponent(0L, param8, wd.field_D);
+            this.field_Pb.horizontalAlignment = 1;
+            this.field_Pb.textColor = 11184810;
+            this.field_Xb.addChild(this.field_Pb, 0);
+            this.field_Yb = new UiComponent(0L, param8);
+            this.field_Yb.textColor = 16764006;
+            this.field_Xb.addChild(this.field_Yb, 0);
+            this.field_Yb.textSuffix = "|";
             if (!(gh.field_f < 5) ||
               !(kb.field_Yb < 2)) {
               regionExit1: {
@@ -267,25 +267,25 @@ final class am extends mh {
                 stackIn_9_5 = ek.field_gb;
               }
               this.field_bc = new ni(stackIn_8_3, stackIn_8_4, stackIn_9_5);
-              this.field_Xb.a(this.field_bc, 0);
+              this.field_Xb.addChild(this.field_bc, 0);
             }
-            var28 = new mh[3];
+            var28 = new UiComponent[3];
             var15 = var28;
-            var28[0] = new mh(0L, (mh) null);
-            this.field_Xb.a(var28[0], 0);
-            var28[1] = new mh(0L, (mh) null);
-            this.field_Xb.a(var28[1], 0);
-            var28[2] = new mh(0L, (mh) null);
-            this.field_Xb.a(var28[2], 0);
-            this.field_Sb = new mh[rg.field_a];
+            var28[0] = new UiComponent(0L, (UiComponent) null);
+            this.field_Xb.addChild(var28[0], 0);
+            var28[1] = new UiComponent(0L, (UiComponent) null);
+            this.field_Xb.addChild(var28[1], 0);
+            var28[2] = new UiComponent(0L, (UiComponent) null);
+            this.field_Xb.addChild(var28[2], 0);
+            this.field_Sb = new UiComponent[rg.field_a];
             for (var16 = 0; var16 < rg.field_a; var16++) {
               if (kd.field_d[var16] != null) {
-                this.field_Sb[var16] = new mh(0L, param10, kd.field_d[var16]);
-                this.field_Sb[var16].field_S = 0;
+                this.field_Sb[var16] = new UiComponent(0L, param10, kd.field_d[var16]);
+                this.field_Sb[var16].horizontalAlignment = 0;
                 stackIn_15_0 = this.field_Sb[var16];
                 stackIn_16_1 = (param11 != null);
-                stackIn_15_0.field_eb = stackIn_16_1;
-                this.field_Xb.a(this.field_Sb[var16], 0);
+                stackIn_15_0.enabled = stackIn_16_1;
+                this.field_Xb.addChild(this.field_Sb[var16], 0);
               }
             }
             this.field_Tb = new StringBuilder(12);
@@ -293,21 +293,21 @@ final class am extends mh {
               discarded$1 = this.field_Tb.append(param11);
             }
             var16Lifetime2 = 0;
-            var17 = param6.field_O.measureText(DualLinkNode.field_o);
+            var17 = param6.font.measureText(DualLinkNode.field_o);
             if (var17 > var16Lifetime2) {
               var16Lifetime2 = var17;
             }
-            var17Lifetime2 = param6.field_O.measureText(SaveResultsPromptScreen.field_r);
+            var17Lifetime2 = param6.font.measureText(SaveResultsPromptScreen.field_r);
             if (var16Lifetime2 < var17Lifetime2) {
               var16Lifetime2 = var17Lifetime2;
             }
-            var17Lifetime3 = param6.field_O.measureText(nh.field_d);
+            var17Lifetime3 = param6.font.measureText(nh.field_d);
             if (var16Lifetime2 < var17Lifetime3) {
               var16Lifetime2 = var17Lifetime3;
             }
             for (var17Lifetime4 = 0; var17Lifetime4 < rg.field_a; var17Lifetime4++) {
               if (null != this.field_Sb[var17Lifetime4]) {
-                var18 = this.field_Sb[var17Lifetime4].g(95);
+                var18 = this.field_Sb[var17Lifetime4].getContentWidth(95);
                 if (var16Lifetime2 < var18) {
                   var16Lifetime2 = var18;
                 }
@@ -348,7 +348,7 @@ final class am extends mh {
               var17Lifetime5 = var18Lifetime5;
             }
             var19 = 26 + var16Lifetime2 * 3;
-            var20 = this.field_Ub.g(87);
+            var20 = this.field_Ub.getContentWidth(87);
             if (var19 < var20) {
               var19 = var20;
             }
@@ -358,49 +358,49 @@ final class am extends mh {
                 var19 = var20Lifetime2;
               }
             }
-            this.field_Ub.a(24, 0, 0, var19 + 13 + 13, (byte) 64);
-            this.field_Vb.a(15, 5, this.field_Ub.field_Ib - 20, 15, (byte) 64);
+            this.field_Ub.setBounds(24, 0, 0, var19 + 13 + 13, (byte) 64);
+            this.field_Vb.setBounds(15, 5, this.field_Ub.width - 20, 15, (byte) 64);
             var21 = 10;
-            this.field_Rb.a(np.field_a * 2, var21, 13, var19, (byte) 64);
+            this.field_Rb.setBounds(np.field_a * 2, var21, 13, var19, (byte) 64);
             var21 = var21 + np.field_a * 2;
-            this.field_Pb.a(2 * np.field_a, var21, 13, var19, (byte) 64);
+            this.field_Pb.setBounds(2 * np.field_a, var21, 13, var19, (byte) 64);
             var21 = var21 + (np.field_a * 2 + 10);
-            this.field_Yb.a(np.field_a, var21, 0, 0, (byte) 64);
+            this.field_Yb.setBounds(np.field_a, var21, 0, 0, (byte) 64);
             var21 = var21 + (10 + np.field_a);
             if (this.field_bc != null) {
               var20Lifetime3 = this.field_bc.a((byte) 11, 4);
               this.field_bc.a(var20Lifetime3, 4, np.field_a, var21, true, (-var20Lifetime3 + var19) / 2 + 13);
               var21 = var21 + (np.field_a + 10);
             }
-            var28[0].a(var17Lifetime5, var21, 13, var16Lifetime2, (byte) 64);
-            var28[1].a(var17Lifetime5, var21, var16Lifetime2 + 13 + 13, var16Lifetime2, (byte) 64);
-            var28[2].a(var17Lifetime5, var21, 39 + var16Lifetime2 * 2, var16Lifetime2, (byte) 64);
+            var28[0].setBounds(var17Lifetime5, var21, 13, var16Lifetime2, (byte) 64);
+            var28[1].setBounds(var17Lifetime5, var21, var16Lifetime2 + 13 + 13, var16Lifetime2, (byte) 64);
+            var28[2].setBounds(var17Lifetime5, var21, 39 + var16Lifetime2 * 2, var16Lifetime2, (byte) 64);
             var22 = var21;
-            this.field_Xb.a(var22 + var17Lifetime5 + 10, 24, 0, 13 + (var19 + 13), (byte) 64);
-            this.field_Xb.field_Jb = na.a(false, 8421504, 3, 11579568, this.field_Xb.field_cb, 2105376);
+            this.field_Xb.setBounds(var22 + var17Lifetime5 + 10, 24, 0, 13 + (var19 + 13), (byte) 64);
+            this.field_Xb.frameSprites = na.a(false, 8421504, 3, 11579568, this.field_Xb.height, 2105376);
             var23 = 13 + var19 + 13;
             var24 = 10 + var22 + 24 + var17Lifetime5;
             var25 = OptionsScreen.a(-1, var23, param0, param2);
             var26 = br.a(var24, param1, param3, 120);
-            this.a(var24, var26, var25, var23, (byte) 64);
+            this.setBounds(var24, var26, var25, var23, (byte) 64);
             return;
           }
-          this.field_Rb = new mh(0L, param8, br.field_Ub);
-          this.field_Rb.field_X = 11184810;
-          this.field_Rb.field_S = 1;
-          this.field_Xb.a(this.field_Rb, 0);
+          this.field_Rb = new UiComponent(0L, param8, br.field_Ub);
+          this.field_Rb.textColor = 11184810;
+          this.field_Rb.horizontalAlignment = 1;
+          this.field_Xb.addChild(this.field_Rb, 0);
           var15_int = 226;
           var16Lifetime1 = 10;
-          var17Lifetime1 = this.field_Rb.field_O.countWrappedLines(this.field_Rb.field_Mb, var15_int);
-          this.field_Rb.a(np.field_a * var17Lifetime1, var16Lifetime1, 13, var15_int, (byte) 64);
+          var17Lifetime1 = this.field_Rb.font.countWrappedLines(this.field_Rb.text, var15_int);
+          this.field_Rb.setBounds(np.field_a * var17Lifetime1, var16Lifetime1, 13, var15_int, (byte) 64);
           var16Lifetime1 = var16Lifetime1 + var17Lifetime1 * np.field_a;
-          this.field_Xb.a(10 + var16Lifetime1, 24, 0, 13 + (var15_int + 13), (byte) 64);
-          this.field_Xb.field_Jb = na.a(false, 8421504, 3, 11579568, this.field_Xb.field_cb, 2105376);
+          this.field_Xb.setBounds(10 + var16Lifetime1, 24, 0, 13 + (var15_int + 13), (byte) 64);
+          this.field_Xb.frameSprites = na.a(false, 8421504, 3, 11579568, this.field_Xb.height, 2105376);
           var18Lifetime1 = var15_int + 13 + 13;
           var19Lifetime1 = var16Lifetime1 + 34;
           var20Lifetime1 = OptionsScreen.a(-1, var18Lifetime1, param0, param2);
           var21Lifetime1 = br.a(var19Lifetime1, param1, param3, -93);
-          this.a(var19Lifetime1, var21Lifetime1, var20Lifetime1, var18Lifetime1, (byte) 64);
+          this.setBounds(var19Lifetime1, var21Lifetime1, var20Lifetime1, var18Lifetime1, (byte) 64);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -477,42 +477,42 @@ final class am extends mh {
         int var3 = 0;
         ni stackIn_9_0 = null;
         boolean stackIn_10_1 = false;
-        mh stackIn_18_0 = null;
+        UiComponent stackIn_18_0 = null;
         boolean stackIn_19_1 = false;
         int var4;
         var4 = BrickABrac.field_J ? 1 : 0;
         if (param1 != 8421504) {
-          field_Qb = (mh) null;
+          field_Qb = (UiComponent) null;
         }
-        this.a(param0, -15211);
+        this.updateRoot(param0, -15211);
         if (this.field_Yb != null) {
-          this.field_Yb.field_Mb = this.field_Tb.toString();
-          this.field_Yb.field_P = (this.field_Ib - this.field_Yb.field_O.measureText(this.field_Yb.field_Mb)) / 2;
-          this.field_Yb.field_Ib = -this.field_Yb.field_P + this.field_Ib;
+          this.field_Yb.text = this.field_Tb.toString();
+          this.field_Yb.localX = (this.width - this.field_Yb.font.measureText(this.field_Yb.text)) / 2;
+          this.field_Yb.width = -this.field_Yb.localX + this.width;
           if (null != this.field_bc &&
-            0 != this.field_bc.field_L) {
+            0 != this.field_bc.pressedButton) {
             stackIn_9_0 = this.field_bc;
-            stackIn_10_1 = !(this.field_bc.field_Nb);
-            stackIn_9_0.field_Nb = stackIn_10_1;
+            stackIn_10_1 = !(this.field_bc.selected);
+            stackIn_9_0.selected = stackIn_10_1;
           }
           for (var3 = 0; var3 < rg.field_a; var3++) {
             if (null != this.field_Sb[var3]) {
               stackIn_18_0 = this.field_Sb[var3];
               stackIn_19_1 = !(this.field_Tb.length() <= 0);
-              stackIn_18_0.field_eb = stackIn_19_1;
-              if (this.field_Sb[var3].field_eb &&
-                this.field_Sb[var3].field_L != 0) {
+              stackIn_18_0.enabled = stackIn_19_1;
+              if (this.field_Sb[var3].enabled &&
+                this.field_Sb[var3].pressedButton != 0) {
                 return var3;
               }
             }
           }
         }
-        if (this.field_Vb.field_L != 0) {
+        if (this.field_Vb.pressedButton != 0) {
           return -1;
         }
         if (param0 &&
           0 != BackgroundScene.pressedButton &&
-          this.field_L == 0) {
+          this.pressedButton == 0) {
           return -1;
         }
         return this.field_ac;

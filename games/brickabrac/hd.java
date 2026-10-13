@@ -3,7 +3,7 @@
  */
 final class hd {
     static GameScreen pendingScreen;
-    static mh field_c;
+    static UiComponent field_c;
     static og field_a;
     static String field_b;
 

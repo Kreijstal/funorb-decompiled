@@ -133,21 +133,21 @@ final class n {
 
     final static void a(int param0, boolean param1, boolean param2, byte param3) {
         int stackIn_13_0 = 0;
-        mh stackIn_28_0 = null;
+        UiComponent stackIn_28_0 = null;
         String stackIn_29_1 = null;
-        mh stackIn_31_0 = null;
+        UiComponent stackIn_31_0 = null;
         String stackIn_32_1 = null;
         String stackIn_61_0 = null;
-        mh stackIn_73_0 = null;
+        UiComponent stackIn_73_0 = null;
         boolean stackIn_74_1 = false;
-        mh stackIn_78_0 = null;
+        UiComponent stackIn_78_0 = null;
         boolean stackIn_79_1 = false;
-        mh stackIn_83_0 = null;
+        UiComponent stackIn_83_0 = null;
         boolean stackIn_84_1 = false;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var4 = null;
-        mh var5 = null;
-        mh var6 = null;
+        UiComponent var5 = null;
+        UiComponent var6 = null;
         int var7 = 0;
         int var8 = 0;
         int var9_int = 0;
@@ -158,9 +158,9 @@ final class n {
         String var11_ref = null;
         int var12 = 0;
         int var13 = 0;
-        mh var15 = null;
+        UiComponent var15 = null;
         String var16 = null;
-        mh var17 = null;
+        UiComponent var17 = null;
         Object var11Lifetime1;
         int var9_intLifetime1;
         int var10Lifetime1;
@@ -173,18 +173,18 @@ final class n {
           if (nl.field_f != null) {
             var15 = pf.field_h;
             var17 = var15;
-            pf.field_h.field_cb = 0;
-            var17.field_Ib = 0;
+            pf.field_h.height = 0;
+            var17.width = 0;
             var5 = dn.field_K;
-            dn.field_K.field_cb = 0;
-            var5.field_Ib = 0;
+            dn.field_K.height = 0;
+            var5.width = 0;
             var6 = AppletGameShell.field_e;
-            AppletGameShell.field_e.field_cb = 0;
-            var6.field_Ib = 0;
-            ba.field_v.field_Mb = DelayedPacket.field_n.toUpperCase();
-            var7 = (MultiplayerMatch.field_d.field_Ib + 2) / 2;
-            AppletGameShell.field_e.a(40, -40 + MultiplayerMatch.field_d.field_cb, 0, var7 - 2, (byte) 64);
-            dn.field_K.a(40, MultiplayerMatch.field_d.field_cb - 40, var7, MultiplayerMatch.field_d.field_Ib - var7, (byte) 64);
+            AppletGameShell.field_e.height = 0;
+            var6.width = 0;
+            ba.field_v.text = DelayedPacket.field_n.toUpperCase();
+            var7 = (MultiplayerMatch.field_d.width + 2) / 2;
+            AppletGameShell.field_e.setBounds(40, -40 + MultiplayerMatch.field_d.height, 0, var7 - 2, (byte) 64);
+            dn.field_K.setBounds(40, MultiplayerMatch.field_d.height - 40, var7, MultiplayerMatch.field_d.width - var7, (byte) 64);
             if (1 == w.field_n.length &&
               w.field_n[0] == 2) {
               var8 = 0;
@@ -214,10 +214,10 @@ final class n {
                 break;
               }
             }
-            dn.field_K.field_eb = true;
+            dn.field_K.enabled = true;
             if (fh.field_d) {
-              GameUiController.field_e.field_eb = false;
-              t.field_f.field_Mb = gh.field_a;
+              GameUiController.field_e.enabled = false;
+              t.field_f.text = gh.field_a;
               if (var8 != 0) {
                 stackIn_61_0 = nj.field_F;
               } else {
@@ -227,20 +227,20 @@ final class n {
               var9 = var16;
               var9 = var16;
               var9 = var16;
-              var10Lifetime1 = AppletGameShell.field_e.field_O.measureText(var16) + AppletGameShell.field_e.field_O.getAdvance('.') * 3;
-              AppletGameShell.field_e.field_S = 0;
+              var10Lifetime1 = AppletGameShell.field_e.font.measureText(var16) + AppletGameShell.field_e.font.getAdvance('.') * 3;
+              AppletGameShell.field_e.horizontalAlignment = 0;
               if (16 == (an.field_h & 48)) {
                 var9 = var16 + ".";
               }
-              AppletGameShell.field_e.field_V = (-var10Lifetime1 + AppletGameShell.field_e.field_Ib) / 2;
+              AppletGameShell.field_e.textInset = (-var10Lifetime1 + AppletGameShell.field_e.width) / 2;
               if ((48 & an.field_h) == 32) {
                 var9 = (String) (var9) + "..";
               }
               if ((an.field_h & 48) == 48) {
                 var9 = (String) (var9) + "...";
               }
-              AppletGameShell.field_e.field_Mb = (String) (var9);
-              dn.field_K.field_Mb = wl.field_L.toUpperCase();
+              AppletGameShell.field_e.text = (String) (var9);
+              dn.field_K.text = wl.field_L.toUpperCase();
             } else {
               stackIn_28_0 = dn.field_K;
               if (var8 == 0) {
@@ -248,17 +248,17 @@ final class n {
               } else {
                 stackIn_29_1 = ag.field_J;
               }
-              stackIn_28_0.field_Mb = ((String) (Object) stackIn_29_1).toUpperCase();
+              stackIn_28_0.text = ((String) (Object) stackIn_29_1).toUpperCase();
               stackIn_31_0 = t.field_f;
               if (var8 == 0) {
                 stackIn_32_1 = go.field_f;
               } else {
                 stackIn_32_1 = ma.field_G;
               }
-              stackIn_31_0.field_Mb = rd.a(stackIn_32_1, new String[]{dn.field_K.field_Mb}, (byte) 103);
+              stackIn_31_0.text = rd.a(stackIn_32_1, new String[]{dn.field_K.text}, (byte) 103);
               MeshAttributeRecord.field_g = true;
-              AppletGameShell.field_e.field_Mb = mp.field_Pb;
-              GameUiController.field_e.field_eb = true;
+              AppletGameShell.field_e.text = mp.field_Pb;
+              GameUiController.field_e.enabled = true;
               if (br.field_bc != null) {
                 if (null == qo.field_J) {
                   qo.field_J = new byte[cq.field_p];
@@ -279,8 +279,8 @@ final class n {
                 }
               }
               if (!MeshAttributeRecord.field_g) {
-                dn.field_K.field_eb = false;
-                if (dn.field_K.field_G) {
+                dn.field_K.enabled = false;
+                if (dn.field_K.hovered) {
                   var9 = null;
                   if (MusicVoiceMixer.field_s) {
                     var9 = "<col=A00000>" + og.field_ac + "</col>";
@@ -308,19 +308,19 @@ final class n {
           }
           stackIn_73_0 = NinjaBackground.field_w;
           stackIn_74_1 = (param1) && (!param2) && (!hc.field_c);
-          ((mh) (Object) stackIn_73_0).a(stackIn_74_1, -15211);
+          ((UiComponent) (Object) stackIn_73_0).updateRoot(stackIn_74_1, -15211);
           stackIn_78_0 = MultiplayerMatch.field_d;
           stackIn_79_1 = (param1) && (!param2) && (!hc.field_c);
-          ((mh) (Object) stackIn_78_0).a(stackIn_79_1, -15211);
+          ((UiComponent) (Object) stackIn_78_0).updateRoot(stackIn_79_1, -15211);
           stackIn_83_0 = wi.field_j;
           stackIn_84_1 = (param1) && (!param2) && (hc.field_c);
-          ((mh) (Object) stackIn_83_0).a(stackIn_84_1, -15211);
+          ((UiComponent) (Object) stackIn_83_0).updateRoot(stackIn_84_1, -15211);
           sb.field_c.field_d.i(0);
           if (nl.field_f != null) {
-            if (GameUiController.field_e.field_L != 0) {
+            if (GameUiController.field_e.pressedButton != 0) {
               ef.a(-22809, param0);
             }
-            if (dn.field_K.field_L != 0) {
+            if (dn.field_K.pressedButton != 0) {
               if (!fh.field_d) {
                 UnderwaterBackground.a(param0, (byte) 98);
               } else {

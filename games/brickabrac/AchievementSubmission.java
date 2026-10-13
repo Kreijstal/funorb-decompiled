@@ -12,7 +12,7 @@ final class AchievementSubmission extends IntrusiveNode {
     int submissionByte;
     static RgbSprite[] field_q;
 
-    final static og a(mh param0, mh param1, kn param2, int param3, mh param4) {
+    final static og a(UiComponent param0, UiComponent param1, kn param2, int param3, UiComponent param4) {
         int var14 = 0;
         Object stackIn_3_0 = null;
         int stackIn_7_0 = 0;

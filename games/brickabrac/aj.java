@@ -27,7 +27,7 @@ final class aj {
         return go.a(false, param0, false, 1, true, true);
     }
 
-    final static mh a(int param0) {
+    final static UiComponent a(int param0) {
         if (param0 != 1345) {
           aj.b(94);
           return rl.field_e.field_Rb;

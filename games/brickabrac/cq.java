@@ -60,7 +60,7 @@ final class cq extends IntrusiveNode {
           }
           MembershipBenefitsScreen.a(param0, false);
           if (null != CircleBody.field_p) {
-            CircleBody.field_p.a(true, param0);
+            CircleBody.field_p.drawRoot(true, param0);
           }
           eh.a(param0, true);
           return;
@@ -75,7 +75,7 @@ final class cq extends IntrusiveNode {
         }
         MembershipBenefitsScreen.a(param0, false);
         if (null != CircleBody.field_p) {
-          CircleBody.field_p.a(true, param0);
+          CircleBody.field_p.drawRoot(true, param0);
         }
         eh.a(param0, true);
         return;

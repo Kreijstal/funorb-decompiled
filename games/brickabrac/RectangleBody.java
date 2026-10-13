@@ -6,7 +6,7 @@ class RectangleBody extends MovingBody {
     static String field_t;
     static RgbSprite field_p;
     int width256;
-    static mh field_q;
+    static UiComponent field_q;
     static PacketBuffer field_r;
 
     boolean resolveCircleCollision(CircleBody circle, byte obfuscationGuard) {

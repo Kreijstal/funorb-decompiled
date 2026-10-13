@@ -2,12 +2,12 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class VolcanicBackground extends BackgroundScene {
-    static mh field_t;
+    static UiComponent field_t;
     static String field_r;
     static String field_w;
     static int[] field_s;
     static int field_u;
-    static mh field_v;
+    static UiComponent field_v;
 
     final RgbSprite a(boolean param0, int param1) {
         if (!param0) {
@@ -107,7 +107,7 @@ final class VolcanicBackground extends BackgroundScene {
           ArchiveIndex.a(-91, -7, RasterCacheSurface.volcanicNearSprite, scroll16, var6.sprite, colorIndex, 640, 1, destinationX, destinationY, cp.volcanicMidSprite);
         }
         if (!obfuscationGuard) {
-          field_v = (mh) null;
+          field_v = (UiComponent) null;
           return;
         }
     }
@@ -198,7 +198,7 @@ final class VolcanicBackground extends BackgroundScene {
           ArchiveIndex.a(-113, -14, NanoGameClock.field_q, scroll16, var6.sprite, colorIndex, 306, 2, destinationX, destinationY, gq.field_Sb);
         }
         if (obfuscationGuard >= -84) {
-          field_v = (mh) null;
+          field_v = (UiComponent) null;
           return;
         }
     }
@@ -214,8 +214,8 @@ final class VolcanicBackground extends BackgroundScene {
         try {
           var4 = new IsaacGenerator(new int[]{(int)MonotonicTime.nowMillis(false)});
           var1 = var4;
-          for (var2 = param0; var2 < mh.field_F.length; var2++) {
-            mh.field_F[var2] = var4.nextInt(101);
+          for (var2 = param0; var2 < UiComponent.field_F.length; var2++) {
+            UiComponent.field_F[var2] = var4.nextInt(101);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

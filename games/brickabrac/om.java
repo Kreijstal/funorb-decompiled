@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class om extends mh {
+final class om extends UiComponent {
     boolean field_bc;
     int field_Zb;
     static String field_rc;
@@ -9,42 +9,42 @@ final class om extends mh {
     int field_cc;
     static int field_oc;
     int field_yc;
-    mh field_Vb;
+    UiComponent field_Vb;
     static String field_Xb;
-    mh field_sc;
+    UiComponent field_sc;
     byte[] field_Tb;
     boolean field_dc;
-    mh field_tc;
+    UiComponent field_tc;
     int field_vc;
     static String field_pc;
-    mh field_nc;
-    mh field_lc;
+    UiComponent field_nc;
+    UiComponent field_lc;
     long field_qc;
     boolean field_ac;
-    mh field_Bc;
-    mh field_zc;
+    UiComponent field_Bc;
+    UiComponent field_zc;
     String[] field_Qb;
-    mh field_ic;
+    UiComponent field_ic;
     boolean field_Dc;
-    mh[] field_Ec;
-    mh field_Cc;
-    mh field_Ac;
+    UiComponent[] field_Ec;
+    UiComponent field_Cc;
+    UiComponent field_Ac;
     int field_Wb;
     String field_Fc;
-    mh field_Ub;
+    UiComponent field_Ub;
     boolean field_Pb;
     int field_kc;
-    mh field_mc;
+    UiComponent field_mc;
     static RgbSprite spaceNearSprite;
     static int field_hc;
-    mh field_gc;
-    mh field_ec;
-    mh field_Yb;
+    UiComponent field_gc;
+    UiComponent field_ec;
+    UiComponent field_Yb;
     int field_wc;
     long field_xc;
     int field_jc;
     boolean field_Rb;
-    mh field_Sb;
+    UiComponent field_Sb;
 
     final boolean h(int param0) {
         int var2 = -35 / ((74 - param0) / 32);
@@ -292,7 +292,7 @@ final class om extends mh {
     }
 
     om(int param0) {
-        super(0L, (mh) null);
+        super(0L, (UiComponent) null);
         this.field_Tb = new byte[param0];
     }
 

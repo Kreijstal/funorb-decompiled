@@ -1,12 +1,12 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class hj extends mh {
-    mh field_Wb;
+final class hj extends UiComponent {
+    UiComponent field_Wb;
     static th field_Sb;
     mm field_Qb;
-    mh field_Xb;
-    mh field_Tb;
+    UiComponent field_Xb;
+    UiComponent field_Tb;
     static int field_Pb;
     static String field_Rb;
     static String field_Ub;
@@ -37,7 +37,7 @@ final class hj extends mh {
 
     final static void a(int param0, gb param1) {
         int stackIn_2_0;
-        mh stackIn_2_1;
+        UiComponent stackIn_2_1;
         Object stackIn_2_2;
         Object stackIn_2_3;
         String stackIn_2_4;
@@ -120,18 +120,18 @@ final class hj extends mh {
         }
     }
 
-    hj(long param0, mh param1, mh param2, fj param3, mh param4, String param5, String param6) {
+    hj(long param0, UiComponent param1, UiComponent param2, fj param3, UiComponent param4, String param5, String param6) {
         super(param0, param1);
         try {
-          this.field_Xb = new mh(0L, (mh) null);
+          this.field_Xb = new UiComponent(0L, (UiComponent) null);
           this.field_Qb = new mm(0L, this.field_Xb, param2, param3);
-          this.field_Tb = new mh(0L, param4);
-          this.field_Wb = new mh(0L, param4);
-          this.field_Tb.field_Mb = param5;
-          this.field_Wb.field_Mb = param6;
-          this.a(this.field_Qb, 0);
-          this.a(this.field_Tb, 0);
-          this.a(this.field_Wb, 0);
+          this.field_Tb = new UiComponent(0L, param4);
+          this.field_Wb = new UiComponent(0L, param4);
+          this.field_Tb.text = param5;
+          this.field_Wb.text = param6;
+          this.addChild(this.field_Qb, 0);
+          this.addChild(this.field_Tb, 0);
+          this.addChild(this.field_Wb, 0);
         } catch (RuntimeException runtimeException) {
           throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "hj.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ',' + (param6 != null ? "{...}" : "null") + ')');
         }
@@ -141,10 +141,10 @@ final class hj extends mh {
         if (!param0) {
           return;
         }
-        this.field_Ib = param2;
-        this.field_cb = param7;
-        this.field_P = param3;
-        this.field_zb = param4;
+        this.width = param2;
+        this.height = param7;
+        this.localX = param3;
+        this.localY = param4;
         this.a(param6, -779, param5, param1);
     }
 
@@ -456,19 +456,19 @@ final class hj extends mh {
     }
 
     final void a(int param0, int param1, int param2, int param3) {
-        int var5 = (param3 + this.field_Ib) / 2;
-        int var6 = -param0 + this.field_cb;
-        this.field_Qb.a(param3, (byte) -111, this.field_Ib, 0, 0, param2, var6 - param3);
-        this.field_Tb.field_cb = param0;
-        this.field_Tb.field_P = 0;
-        this.field_Tb.field_Ib = -param3 + var5;
-        this.field_Tb.field_zb = var6;
-        this.field_Wb.field_zb = var6;
-        this.field_Wb.field_Ib = -var5 + this.field_Ib;
-        this.field_Wb.field_P = var5;
-        this.field_Wb.field_cb = param0;
+        int var5 = (param3 + this.width) / 2;
+        int var6 = -param0 + this.height;
+        this.field_Qb.a(param3, (byte) -111, this.width, 0, 0, param2, var6 - param3);
+        this.field_Tb.height = param0;
+        this.field_Tb.localX = 0;
+        this.field_Tb.width = -param3 + var5;
+        this.field_Tb.localY = var6;
+        this.field_Wb.localY = var6;
+        this.field_Wb.width = -var5 + this.width;
+        this.field_Wb.localX = var5;
+        this.field_Wb.height = param0;
         if (param1 != -779) {
-          this.field_Tb = (mh) null;
+          this.field_Tb = (UiComponent) null;
         }
     }
 

@@ -57,7 +57,7 @@ final class eq {
         if (param0 >= -58) {
           eq.c((byte) -29);
         }
-        var6 = "(" + r.thirdPreviousPacketOpcode + " " + we.secondPreviousPacketOpcode + " " + mh.previousPacketOpcode + ") " + IntrusiveHashTable.currentPacketOpcode;
+        var6 = "(" + r.thirdPreviousPacketOpcode + " " + we.secondPreviousPacketOpcode + " " + UiComponent.previousPacketOpcode + ") " + IntrusiveHashTable.currentPacketOpcode;
         var1 = var6;
         if (ga.incomingPacketLength > 0) {
           var1 = var6 + ":";

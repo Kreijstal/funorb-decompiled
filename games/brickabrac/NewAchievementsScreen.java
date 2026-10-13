@@ -36,8 +36,8 @@ final class NewAchievementsScreen extends AchievementBrowserScreen {
         int var4 = IntrusiveHashTable.field_l + nn.field_g.measureText(nn.field_f);
         KeyboardInput.a(1, qi.field_K, var4, 6, LevelSelectScreen.field_w, !param2 ? 196 : 256, -5 - LevelSelectScreen.field_w + param0);
         Rasterizer2D.saveClip(LevelPackSelectScreen.field_v);
-        Rasterizer2D.intersectClip(qi.field_K[0].width - 1, DualLinkDeque.field_d.field_db + (-LevelSelectScreen.field_w - qi.field_K[0].height), 1 - (-var4 + qi.field_K[0].width), -qi.field_K[0].height + DualLinkDeque.field_d.field_db);
-        nn.field_g.c(nn.field_f, qi.field_K[0].width + 1, -5 - qi.field_K[6].height + (DualLinkDeque.field_d.field_db + 2), !param1 ? 1 : 0, -1, !param2 ? 196 : 256);
+        Rasterizer2D.intersectClip(qi.field_K[0].width - 1, DualLinkDeque.field_d.screenY + (-LevelSelectScreen.field_w - qi.field_K[0].height), 1 - (-var4 + qi.field_K[0].width), -qi.field_K[0].height + DualLinkDeque.field_d.screenY);
+        nn.field_g.c(nn.field_f, qi.field_K[0].width + 1, -5 - qi.field_K[6].height + (DualLinkDeque.field_d.screenY + 2), !param1 ? 1 : 0, -1, !param2 ? 196 : 256);
         if (param3 > -105) {
           viewFacePointThreeY = (int[]) null;
         } else {

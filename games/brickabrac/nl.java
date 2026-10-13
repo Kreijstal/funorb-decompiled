@@ -56,8 +56,8 @@ final class nl {
                 jl.incomingPackets.data[queuedByteIndex] = queuedPacket.data[queuedByteIndex];
               }
               r.thirdPreviousPacketOpcode = we.secondPreviousPacketOpcode;
-              we.secondPreviousPacketOpcode = mh.previousPacketOpcode;
-              mh.previousPacketOpcode = IntrusiveHashTable.currentPacketOpcode;
+              we.secondPreviousPacketOpcode = UiComponent.previousPacketOpcode;
+              UiComponent.previousPacketOpcode = IntrusiveHashTable.currentPacketOpcode;
               IntrusiveHashTable.currentPacketOpcode = queuedPacket.opcode;
               return true;
             }
@@ -77,8 +77,8 @@ final class nl {
             }
             if (MonotonicTime.packetDelayMillis == 0) {
               r.thirdPreviousPacketOpcode = we.secondPreviousPacketOpcode;
-              we.secondPreviousPacketOpcode = mh.previousPacketOpcode;
-              mh.previousPacketOpcode = IntrusiveHashTable.currentPacketOpcode;
+              we.secondPreviousPacketOpcode = UiComponent.previousPacketOpcode;
+              UiComponent.previousPacketOpcode = IntrusiveHashTable.currentPacketOpcode;
               IntrusiveHashTable.currentPacketOpcode = ob.pendingPacketOpcode;
               ob.pendingPacketOpcode = -1;
               return true;

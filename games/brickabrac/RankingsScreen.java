@@ -6,7 +6,7 @@ final class RankingsScreen extends MenuScreen {
     private int sortIndex;
     static IndexedSprite field_t;
     static int[] field_r;
-    static mh field_s;
+    static UiComponent field_s;
 
     final int getButtonTop(int buttonIndex, int obfuscationGuard) {
         if (obfuscationGuard != 1) {
@@ -108,7 +108,7 @@ final class RankingsScreen extends MenuScreen {
     final void onExit(byte obfuscationGuard) {
         ch.field_h = null;
         if (obfuscationGuard != 79) {
-          field_s = (mh) null;
+          field_s = (UiComponent) null;
         }
     }
 

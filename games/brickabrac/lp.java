@@ -9,7 +9,7 @@ class lp extends fe implements en {
     private cr field_qb;
     private boolean field_zb;
     static RgbSprite[] field_yb;
-    static mh field_Ab;
+    static UiComponent field_Ab;
     static qh field_xb;
     private TextFont field_sb;
     static GameScreen currentScreen;

@@ -20,7 +20,7 @@ final class Brick extends RectangleBody {
     static int field_E;
     static CacheIoWorker field_x;
     static byte[] field_O;
-    static mh field_A;
+    static UiComponent field_A;
     static String field_z;
     int pendingTypeId;
     int destinationWaypointIndex;
@@ -392,11 +392,11 @@ final class Brick extends RectangleBody {
         int var1 = (-640 + kp.field_a) / 2;
         int var2 = hj.field_Yb * hj.field_Yb;
         int var3 = var2 - ml.field_b * ml.field_b;
-        fe.field_gb.a(-124 + (Rasterizer2D.height - 90), 90, -(199 * var3 / var2) + var1, 199, (byte) 64);
+        fe.field_gb.setBounds(-124 + (Rasterizer2D.height - 90), 90, -(199 * var3 / var2) + var1, 199, (byte) 64);
         if (param0 >= -50) {
           Brick.d(61);
         }
-        rm.field_a.a(-4 + Rasterizer2D.height - 120, 0, 438 * var3 / var2 + (var1 + 202), 438, (byte) 64);
+        rm.field_a.setBounds(-4 + Rasterizer2D.height - 120, 0, 438 * var3 / var2 + (var1 + 202), 438, (byte) 64);
     }
 
     Brick(int param0, int param1, int param2, int param3, int param4) {

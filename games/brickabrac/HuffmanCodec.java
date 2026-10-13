@@ -150,8 +150,8 @@ final class HuffmanCodec {
             String var3 = (String) null;
             HuffmanCodec.a((byte) 84, (java.applet.Applet) null, (String) null, false);
           }
-          wd.field_w.field_bb.clear((byte) -72);
-          wd.field_w.a(hd.field_a, 0);
+          wd.field_w.children.clear((byte) -72);
+          wd.field_w.addChild(hd.field_a, 0);
           TooltipSprite.field_p = true;
         } catch (RuntimeException runtimeException) {
           throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "fk.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');

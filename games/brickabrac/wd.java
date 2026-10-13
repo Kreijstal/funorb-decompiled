@@ -7,12 +7,12 @@ final class wd extends DualLinkNode {
     private int[] field_B;
     private String[] field_y;
     static NodeDeque soundPlaybacks;
-    static mh field_E;
-    static mh[] field_F;
+    static UiComponent field_E;
+    static UiComponent[] field_F;
     static String field_D;
     static String field_x;
     static int field_z;
-    static mh field_w;
+    static UiComponent field_w;
     static ResourceArchive field_C;
 
     final void g(int param0) {
@@ -159,7 +159,7 @@ final class wd extends DualLinkNode {
         }
     }
 
-    final static void a(int param0, int param1, mh param2) {
+    final static void a(int param0, int param1, UiComponent param2) {
         nn var9 = null;
         RgbSprite var11 = null;
         String var10 = null;
@@ -245,14 +245,14 @@ final class wd extends DualLinkNode {
           var33.field_d.a(var34, param0 - 708, 13, var35);
         }
         nn var36 = bm.field_d;
-        int var4 = param2.field_Eb;
-        int var5 = param2.field_db;
+        int var4 = param2.screenX;
+        int var5 = param2.screenY;
         if (param0 != 784) {
           return;
         }
         try {
-          var6 = param2.field_Ib;
-          var7 = param2.field_cb;
+          var6 = param2.width;
+          var7 = param2.height;
           var36.field_d.a(var5, -124, var7, var6, var4);
         } catch (RuntimeException runtimeException) {
           throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "wd.C(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');

@@ -89,7 +89,7 @@ final class LevelResultSubmission extends IntrusiveNode {
             if (2 == var6) {
               var4 = rd.a(SaveResultsPromptScreen.field_x, new String[]{DualLinkNode.field_p}, (byte) 103);
               var8 = rd.a(ek.field_fb, new String[]{var3}, (byte) 103);
-              var7 = -485 + g.field_n.field_Ib + ap.field_e.field_Ib - (-CachedArchiveSource.field_y.measureText(var8) + CachedArchiveSource.field_y.measureText(var4));
+              var7 = -485 + g.field_n.width + ap.field_e.width - (-CachedArchiveSource.field_y.measureText(var8) + CachedArchiveSource.field_y.measureText(var4));
               if (0 > var7) {
                 var7 = 0;
               }
@@ -134,16 +134,16 @@ final class LevelResultSubmission extends IntrusiveNode {
               }
               var9 = CachedArchiveSource.field_y.measureText(var4);
               if (!ri.a(-112)) {
-                if (g.field_n.field_kb &&
-                  (-g.field_n.field_Eb + MusicPatch.pointerX) < var9) {
+                if (g.field_n.activeInside &&
+                  (-g.field_n.screenX + MusicPatch.pointerX) < var9) {
                   if (!um.field_e) {
                     var1 = MainMenuScreen.field_y;
                   } else {
                     var1 = "Broken!";
                   }
                 }
-                if (g.field_n.field_L != 0 &&
-                  var9 > g.field_n.field_U &&
+                if (g.field_n.pressedButton != 0 &&
+                  var9 > g.field_n.pressLocalX &&
                   !um.field_e) {
                   LevelPackLoader.a(param0 ^ -13455);
                 }
@@ -151,9 +151,9 @@ final class LevelResultSubmission extends IntrusiveNode {
             }
             na.a(param0 + 9132, var5, var4 + TextFont.escapeAngles(OptionsScreen.field_A.toString()), var7, BackgroundScene.field_i[var6]);
             if (!MatchResultScreen.field_s) {
-              ap.field_e.field_kb = false;
+              ap.field_e.activeInside = false;
             }
-            if (ap.field_e.field_kb) {
+            if (ap.field_e.activeInside) {
               var1 = rd.a(df.field_b, new String[]{var3, DualLinkNode.field_p}, (byte) 103);
             }
           }

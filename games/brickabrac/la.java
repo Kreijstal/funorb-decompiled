@@ -3,7 +3,7 @@
  */
 final class la {
     static lo field_a;
-    static mh field_b;
+    static UiComponent field_b;
     static boolean field_c;
 
     private final static void b(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12, int param13) {
@@ -515,22 +515,22 @@ final class la {
             Rasterizer2D.a(var15, var16, var11 >> 1, var10 >> 1, param5);
             for (var18 = 0; var18 < var17; var18++) {
               var8 = var8 % pa.field_i.length;
-              param6 = param6 % mh.field_F.length;
+              param6 = param6 % UiComponent.field_F.length;
               incrementValue$3 = var8;
               var8++;
               incrementValue$4 = param6;
               param6++;
-              pa.field_i[incrementValue$3] = var15 + (var11 * InteractiveGameClient.sine8192(mh.field_F[incrementValue$4], -4097) >> 16);
+              pa.field_i[incrementValue$3] = var15 + (var11 * InteractiveGameClient.sine8192(UiComponent.field_F[incrementValue$4], -4097) >> 16);
               incrementValue$5 = var8;
               var8++;
               incrementValue$6 = param6;
               param6++;
-              pa.field_i[incrementValue$5] = var16 + (var11 * BrickABrac.cosine8192(2048, mh.field_F[incrementValue$6]) >> 16);
+              pa.field_i[incrementValue$5] = var16 + (var11 * BrickABrac.cosine8192(2048, UiComponent.field_F[incrementValue$6]) >> 16);
               incrementValue$7 = var8;
               var8++;
               incrementValue$8 = param6;
               param6++;
-              pa.field_i[incrementValue$7] = 1 + er.nonnegativeRemainder(-1560508993, param4, mh.field_F[incrementValue$8]);
+              pa.field_i[incrementValue$7] = 1 + er.nonnegativeRemainder(-1560508993, param4, UiComponent.field_F[incrementValue$8]);
             }
           }
           var9 = var13;

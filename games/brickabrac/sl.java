@@ -32,12 +32,12 @@ abstract class sl extends DualLinkNode {
         rk[] array$1 = null;
         rk[] array$2 = null;
         int var19 = 0;
-        mh stackIn_6_0;
-        mh stackIn_6_1;
+        UiComponent stackIn_6_0;
+        UiComponent stackIn_6_1;
         long stackIn_6_2;
-        mh stackIn_6_3;
-        mh stackIn_7_0 = null;
-        mh stackIn_7_1 = null;
+        UiComponent stackIn_6_3;
+        UiComponent stackIn_7_0 = null;
+        UiComponent stackIn_7_1 = null;
         String stackIn_7_4 = null;
         RuntimeException stackIn_77_0 = null;
         StringBuilder stackIn_77_1 = null;
@@ -64,15 +64,15 @@ abstract class sl extends DualLinkNode {
         String stackIn_108_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var15 = null;
-        mh var16 = null;
+        UiComponent var16 = null;
         int var17_int = 0;
-        mh var17 = null;
+        UiComponent var17 = null;
         int var18 = 0;
         Object var19_ref = null;
         Object var20 = null;
         int var21 = 0;
-        mh var23 = null;
-        mh var24 = null;
+        UiComponent var23 = null;
+        UiComponent var24 = null;
         int var18Lifetime1;
         int var18Lifetime2;
         int var17_intLifetime1;
@@ -103,34 +103,34 @@ abstract class sl extends DualLinkNode {
           AchievementsScreen.field_H[2] = ji.field_g;
           AchievementsScreen.field_H[4] = bq.field_a;
           AchievementsScreen.field_H[0] = MainMenuScreen.field_r;
-          Ball.field_A = new mh(0L, (mh) null);
-          FarmBackground.field_v = new mh(0L, MainMenuScreen.field_t, n.field_a);
-          GameUiController.field_a = new mh(0L, ik.field_a, pf.field_c);
-          IsaacGenerator.field_b = new mm(0L, new mh(0L, (mh) null), am.field_Qb, ic.field_c);
-          Ball.field_A.a(FarmBackground.field_v, 0);
+          Ball.field_A = new UiComponent(0L, (UiComponent) null);
+          FarmBackground.field_v = new UiComponent(0L, MainMenuScreen.field_t, n.field_a);
+          GameUiController.field_a = new UiComponent(0L, ik.field_a, pf.field_c);
+          IsaacGenerator.field_b = new mm(0L, new UiComponent(0L, (UiComponent) null), am.field_Qb, ic.field_c);
+          Ball.field_A.addChild(FarmBackground.field_v, 0);
           if (vd.field_e) {
-            Ball.field_A.a(GameUiController.field_a, 0);
+            Ball.field_A.addChild(GameUiController.field_a, 0);
           }
-          Ball.field_A.a(IsaacGenerator.field_b, 0);
-          IsaacGenerator.field_b.field_Qb.a((byte) -74, CappedUrlRequest.field_l);
-          IsaacGenerator.field_b.field_Qb.field_Q = 1;
+          Ball.field_A.addChild(IsaacGenerator.field_b, 0);
+          IsaacGenerator.field_b.field_Qb.copyStyle((byte) -74, CappedUrlRequest.field_l);
+          IsaacGenerator.field_b.field_Qb.verticalAlignment = 1;
           var23 = IsaacGenerator.field_b.field_Qb;
           var24 = var23;
-          var24.field_S = 1;
-          dn.field_N = new mh(0L, CappedUrlRequest.field_l);
-          dn.field_N.field_S = 1;
-          HighscorePackSelector.field_k = new mh(0L, MatchCompleteScreen.field_x, fj.field_Rb.toUpperCase());
-          sc.field_b = new mh(0L, qh.field_j, rl.field_c.toUpperCase());
-          ll.field_e = new mh(0L, FarmBackground.field_x);
-          nk.field_g = new mh(0L, MainMenuScreen.field_t, nk.field_b);
-          nk.field_a = new mh(0L, cd.field_d, VolcanicBackground.field_r);
-          kk.field_b = new mh(0L, cd.field_d, ch.field_d);
-          la.field_b = new mh(0L, cd.field_d, BallPulseEffect.field_o);
-          BufferedSocket.field_h = new mh(0L, cd.field_d, r.field_v);
-          HalloweenBackground.field_x = new mh(0L, ik.field_a, ByteStorage.field_d);
-          rl.field_e = new mm(0L, new mh(0L, (mh) null), am.field_Qb, ic.field_c);
-          gj.field_b = new mh(0L, fm.field_b, ua.field_e.toUpperCase());
-          gj.field_b.field_eb = vd.field_e;
+          var24.horizontalAlignment = 1;
+          dn.field_N = new UiComponent(0L, CappedUrlRequest.field_l);
+          dn.field_N.horizontalAlignment = 1;
+          HighscorePackSelector.field_k = new UiComponent(0L, MatchCompleteScreen.field_x, fj.field_Rb.toUpperCase());
+          sc.field_b = new UiComponent(0L, qh.field_j, rl.field_c.toUpperCase());
+          ll.field_e = new UiComponent(0L, FarmBackground.field_x);
+          nk.field_g = new UiComponent(0L, MainMenuScreen.field_t, nk.field_b);
+          nk.field_a = new UiComponent(0L, cd.field_d, VolcanicBackground.field_r);
+          kk.field_b = new UiComponent(0L, cd.field_d, ch.field_d);
+          la.field_b = new UiComponent(0L, cd.field_d, BallPulseEffect.field_o);
+          BufferedSocket.field_h = new UiComponent(0L, cd.field_d, r.field_v);
+          HalloweenBackground.field_x = new UiComponent(0L, ik.field_a, ByteStorage.field_d);
+          rl.field_e = new mm(0L, new UiComponent(0L, (UiComponent) null), am.field_Qb, ic.field_c);
+          gj.field_b = new UiComponent(0L, fm.field_b, ua.field_e.toUpperCase());
+          gj.field_b.enabled = vd.field_e;
           stackIn_6_0 = null;
           stackIn_6_1 = null;
           stackIn_6_2 = 0L;
@@ -144,86 +144,86 @@ abstract class sl extends DualLinkNode {
             stackIn_7_1 = null;
             stackIn_7_4 = UnderwaterBackground.field_v;
           }
-          VolcanicBackground.field_v = new mh(stackIn_6_2, stackIn_6_3, ((String) (Object) stackIn_7_4).toUpperCase());
-          rm.field_a = new mh(0L, (mh) null);
-          rm.field_a.a(sc.field_b, 0);
-          rm.field_a.a(ll.field_e, 0);
-          ll.field_e.a(nk.field_g, 0);
+          VolcanicBackground.field_v = new UiComponent(stackIn_6_2, stackIn_6_3, ((String) (Object) stackIn_7_4).toUpperCase());
+          rm.field_a = new UiComponent(0L, (UiComponent) null);
+          rm.field_a.addChild(sc.field_b, 0);
+          rm.field_a.addChild(ll.field_e, 0);
+          ll.field_e.addChild(nk.field_g, 0);
           if (param2 < 13) {
             return;
           }
-          ll.field_e.a(nk.field_a, 0);
-          ll.field_e.a(kk.field_b, 0);
+          ll.field_e.addChild(nk.field_a, 0);
+          ll.field_e.addChild(kk.field_b, 0);
           if (vd.field_e) {
-            ll.field_e.a(la.field_b, 0);
+            ll.field_e.addChild(la.field_b, 0);
           }
-          ll.field_e.a(BufferedSocket.field_h, 0);
-          ll.field_e.a(HalloweenBackground.field_x, 0);
-          ll.field_e.a(rl.field_e, 0);
+          ll.field_e.addChild(BufferedSocket.field_h, 0);
+          ll.field_e.addChild(HalloweenBackground.field_x, 0);
+          ll.field_e.addChild(rl.field_e, 0);
           if (vd.field_e) {
-            rm.field_a.a(gj.field_b, 0);
+            rm.field_a.addChild(gj.field_b, 0);
           }
-          rm.field_a.a(VolcanicBackground.field_v, 0);
-          Brick.field_A = new mh(0L, CappedUrlRequest.field_l);
-          Brick.field_A.field_S = 1;
-          Brick.field_A.field_Q = 0;
-          nh.field_a = new mh(0L, GameUiController.field_b, k.field_j.toUpperCase());
-          qp.field_f = new mh(0L, MenuSelection.field_m);
-          qp.field_f.a(Brick.field_A, 0);
-          qp.field_f.a(nh.field_a, 0);
-          t.field_f = new mh(0L, am.field_Qb);
-          t.field_f.a((byte) -83, CappedUrlRequest.field_l);
-          t.field_f.field_Q = 1;
+          rm.field_a.addChild(VolcanicBackground.field_v, 0);
+          Brick.field_A = new UiComponent(0L, CappedUrlRequest.field_l);
+          Brick.field_A.horizontalAlignment = 1;
+          Brick.field_A.verticalAlignment = 0;
+          nh.field_a = new UiComponent(0L, GameUiController.field_b, k.field_j.toUpperCase());
+          qp.field_f = new UiComponent(0L, MenuSelection.field_m);
+          qp.field_f.addChild(Brick.field_A, 0);
+          qp.field_f.addChild(nh.field_a, 0);
+          t.field_f = new UiComponent(0L, am.field_Qb);
+          t.field_f.copyStyle((byte) -83, CappedUrlRequest.field_l);
+          t.field_f.verticalAlignment = 1;
           var16 = t.field_f;
-          var16.field_S = 1;
-          ji.field_b = new mh(0L, (mh) null);
-          um.field_b = new mh(0L, CappedUrlRequest.field_l);
-          um.field_b.field_S = 1;
-          BoundedFile.field_g = new mh(0L, MainMenuScreen.field_t, n.field_a);
-          wd.field_E = new mh(0L, ik.field_a, pf.field_c);
-          TimedSplashScreen.field_u = new mm(0L, new mh(0L, (mh) null), am.field_Qb, ic.field_c);
-          ji.field_b.a(um.field_b, 0);
-          ji.field_b.a(BoundedFile.field_g, 0);
+          var16.horizontalAlignment = 1;
+          ji.field_b = new UiComponent(0L, (UiComponent) null);
+          um.field_b = new UiComponent(0L, CappedUrlRequest.field_l);
+          um.field_b.horizontalAlignment = 1;
+          BoundedFile.field_g = new UiComponent(0L, MainMenuScreen.field_t, n.field_a);
+          wd.field_E = new UiComponent(0L, ik.field_a, pf.field_c);
+          TimedSplashScreen.field_u = new mm(0L, new UiComponent(0L, (UiComponent) null), am.field_Qb, ic.field_c);
+          ji.field_b.addChild(um.field_b, 0);
+          ji.field_b.addChild(BoundedFile.field_g, 0);
           if (vd.field_e) {
-            ji.field_b.a(wd.field_E, 0);
+            ji.field_b.addChild(wd.field_E, 0);
           }
-          ji.field_b.a(TimedSplashScreen.field_u, 0);
-          GameUiController.field_e = new mh(0L, MatchCompleteScreen.field_x, di.field_a.toUpperCase());
-          ba.field_v = new mh(0L, qh.field_j);
-          rg.field_e = new mh(0L, FarmBackground.field_x);
-          jd.field_a = new mh(0L, PowerUpWarning.field_k, ArchiveSource.field_b.toUpperCase());
-          gb.field_l = new mh[4 + param13];
+          ji.field_b.addChild(TimedSplashScreen.field_u, 0);
+          GameUiController.field_e = new UiComponent(0L, MatchCompleteScreen.field_x, di.field_a.toUpperCase());
+          ba.field_v = new UiComponent(0L, qh.field_j);
+          rg.field_e = new UiComponent(0L, FarmBackground.field_x);
+          jd.field_a = new UiComponent(0L, PowerUpWarning.field_k, ArchiveSource.field_b.toUpperCase());
+          gb.field_l = new UiComponent[4 + param13];
           MatchCompleteScreen.field_A = new rk[4 + param13][];
-          gb.field_l[0] = new mh(0L, wi.field_n, ro.field_H);
+          gb.field_l[0] = new UiComponent(0L, wi.field_n, ro.field_H);
           MatchCompleteScreen.field_A[0] = new rk[6];
           for (var17_int = 0; var17_int < 5; var17_int++) {
-            MatchCompleteScreen.field_A[0][1 + var17_int] = new rk(0L, AchievementMaskRequest.field_n, (mh) null, DualLinkNode.field_t, GameClock.field_f[var17_int], AchievementsScreen.field_H[var17_int]);
+            MatchCompleteScreen.field_A[0][1 + var17_int] = new rk(0L, AchievementMaskRequest.field_n, (UiComponent) null, DualLinkNode.field_t, GameClock.field_f[var17_int], AchievementsScreen.field_H[var17_int]);
           }
           if (2 <= w.field_n.length) {
-            gb.field_l[1] = new mh(0L, wi.field_n, og.field_ac);
+            gb.field_l[1] = new UiComponent(0L, wi.field_n, og.field_ac);
             array$0 = new rk[1 + w.field_n.length];
             MatchCompleteScreen.field_A[1] = array$0;
-            MatchCompleteScreen.field_A[1][0] = new rk(0L, AchievementMaskRequest.field_n, (mh) null, DualLinkNode.field_t, (RgbSprite) null, ni.field_Pb);
+            MatchCompleteScreen.field_A[1][0] = new rk(0L, AchievementMaskRequest.field_n, (UiComponent) null, DualLinkNode.field_t, (RgbSprite) null, ni.field_Pb);
             for (var17_intLifetime1 = 0; var17_intLifetime1 < w.field_n.length; var17_intLifetime1++) {
-              MatchCompleteScreen.field_A[1][var17_intLifetime1 + 1] = new rk(0L, AchievementMaskRequest.field_n, (mh) null, DualLinkNode.field_t, (RgbSprite) null, Integer.toString(w.field_n[var17_intLifetime1]));
+              MatchCompleteScreen.field_A[1][var17_intLifetime1 + 1] = new rk(0L, AchievementMaskRequest.field_n, (UiComponent) null, DualLinkNode.field_t, (RgbSprite) null, Integer.toString(w.field_n[var17_intLifetime1]));
             }
           }
-          gb.field_l[2] = new mh(0L, wi.field_n, PlayerInputBatch.field_j);
-          MatchCompleteScreen.field_A[2] = new rk[]{new rk(0L, AchievementMaskRequest.field_n, (mh) null, DualLinkNode.field_t, (RgbSprite) null, ni.field_Pb), new rk(0L, AchievementMaskRequest.field_n, (mh) null, DualLinkNode.field_t, Ball.field_K[0], MenuSelection.field_a), new rk(0L, AchievementMaskRequest.field_n, (mh) null, DualLinkNode.field_t, Ball.field_K[1], hh.field_f)};
+          gb.field_l[2] = new UiComponent(0L, wi.field_n, PlayerInputBatch.field_j);
+          MatchCompleteScreen.field_A[2] = new rk[]{new rk(0L, AchievementMaskRequest.field_n, (UiComponent) null, DualLinkNode.field_t, (RgbSprite) null, ni.field_Pb), new rk(0L, AchievementMaskRequest.field_n, (UiComponent) null, DualLinkNode.field_t, Ball.field_K[0], MenuSelection.field_a), new rk(0L, AchievementMaskRequest.field_n, (UiComponent) null, DualLinkNode.field_t, Ball.field_K[1], hh.field_f)};
           if (1 < IntArrayRequest.field_t) {
-            gb.field_l[3] = new mh(0L, wi.field_n, uc.field_r);
+            gb.field_l[3] = new UiComponent(0L, wi.field_n, uc.field_r);
             array$1 = new rk[IntArrayRequest.field_t + 1];
             MatchCompleteScreen.field_A[3] = array$1;
-            MatchCompleteScreen.field_A[3][0] = new rk(0L, AchievementMaskRequest.field_n, (mh) null, DualLinkNode.field_t, (RgbSprite) null, ni.field_Pb);
+            MatchCompleteScreen.field_A[3][0] = new rk(0L, AchievementMaskRequest.field_n, (UiComponent) null, DualLinkNode.field_t, (RgbSprite) null, ni.field_Pb);
             for (var17_intLifetime2 = 0; var17_intLifetime2 < IntArrayRequest.field_t; var17_intLifetime2++) {
-              MatchCompleteScreen.field_A[3][var17_intLifetime2 + 1] = new rk(0L, AchievementMaskRequest.field_n, (mh) null, DualLinkNode.field_t, (RgbSprite) null, GzipInflater.field_c[var17_intLifetime2]);
+              MatchCompleteScreen.field_A[3][var17_intLifetime2 + 1] = new rk(0L, AchievementMaskRequest.field_n, (UiComponent) null, DualLinkNode.field_t, (RgbSprite) null, GzipInflater.field_c[var17_intLifetime2]);
             }
           }
           for (var17_intLifetime3 = 0; param13 > var17_intLifetime3; var17_intLifetime3++) {
-            gb.field_l[var17_intLifetime3 + 4] = new mh(0L, wi.field_n, rg.field_b[var17_intLifetime3]);
+            gb.field_l[var17_intLifetime3 + 4] = new UiComponent(0L, wi.field_n, rg.field_b[var17_intLifetime3]);
             array$2 = new rk[ik.a((int) MouseInput.field_c[var17_intLifetime3], 255) + 1];
             MatchCompleteScreen.field_A[4 + var17_intLifetime3] = array$2;
-            MatchCompleteScreen.field_A[4 + var17_intLifetime3][0] = new rk(0L, AchievementMaskRequest.field_n, (mh) null, DualLinkNode.field_t, (RgbSprite) null, ni.field_Pb);
+            MatchCompleteScreen.field_A[4 + var17_intLifetime3][0] = new rk(0L, AchievementMaskRequest.field_n, (UiComponent) null, DualLinkNode.field_t, (RgbSprite) null, ni.field_Pb);
             for (var18 = 0; (255 & MouseInput.field_c[var17_intLifetime3]) > var18; var18++) {
               if (BackgroundScene.field_k != null) {
                 if (BackgroundScene.field_k[var17_intLifetime3] == null) {
@@ -243,50 +243,50 @@ abstract class sl extends DualLinkNode {
               } else {
                 var20 = null;
               }
-              MatchCompleteScreen.field_A[4 + var17_intLifetime3][var18 + 1] = new rk(0L, AchievementMaskRequest.field_n, (mh) null, DualLinkNode.field_t, (RgbSprite) (var19_ref), (String) (var20));
+              MatchCompleteScreen.field_A[4 + var17_intLifetime3][var18 + 1] = new rk(0L, AchievementMaskRequest.field_n, (UiComponent) null, DualLinkNode.field_t, (RgbSprite) (var19_ref), (String) (var20));
             }
           }
           for (var17_intLifetime4 = 0; 4 + param13 > var17_intLifetime4; var17_intLifetime4++) {
             if (gb.field_l[var17_intLifetime4] != null) {
-              gb.field_l[var17_intLifetime4].field_R = 11;
+              gb.field_l[var17_intLifetime4].lineSpacing = 11;
             }
             if (null != MatchCompleteScreen.field_A[var17_intLifetime4]) {
               for (var18Lifetime1 = 0; var18Lifetime1 < MatchCompleteScreen.field_A[var17_intLifetime4].length; var18Lifetime1++) {
                 if (null != MatchCompleteScreen.field_A[var17_intLifetime4][var18Lifetime1] &&
                   null != MatchCompleteScreen.field_A[var17_intLifetime4][var18Lifetime1].field_Rb) {
-                  MatchCompleteScreen.field_A[var17_intLifetime4][var18Lifetime1].field_Rb.field_R = 11;
+                  MatchCompleteScreen.field_A[var17_intLifetime4][var18Lifetime1].field_Rb.lineSpacing = 11;
                 }
               }
             }
           }
-          pf.field_h = new mh(0L, fm.field_b);
-          dn.field_K = new mh(0L, fm.field_b);
-          AppletGameShell.field_e = new mh(0L, Paddle.field_C);
-          AppletGameShell.field_e.a((byte) -125, CappedUrlRequest.field_l);
+          pf.field_h = new UiComponent(0L, fm.field_b);
+          dn.field_K = new UiComponent(0L, fm.field_b);
+          AppletGameShell.field_e = new UiComponent(0L, Paddle.field_C);
+          AppletGameShell.field_e.copyStyle((byte) -125, CappedUrlRequest.field_l);
           var17 = AppletGameShell.field_e;
-          AppletGameShell.field_e.field_Q = 1;
-          var17.field_S = 1;
-          MultiplayerMatch.field_d = new mh(0L, (mh) null);
-          MultiplayerMatch.field_d.a(ba.field_v, 0);
-          MultiplayerMatch.field_d.a(rg.field_e, 0);
-          rg.field_e.a(jd.field_a, 0);
+          AppletGameShell.field_e.verticalAlignment = 1;
+          var17.horizontalAlignment = 1;
+          MultiplayerMatch.field_d = new UiComponent(0L, (UiComponent) null);
+          MultiplayerMatch.field_d.addChild(ba.field_v, 0);
+          MultiplayerMatch.field_d.addChild(rg.field_e, 0);
+          rg.field_e.addChild(jd.field_a, 0);
           for (var18Lifetime2 = 0; param13 + 4 > var18Lifetime2; var18Lifetime2++) {
             if ((var18Lifetime2 != 1 ||
               !(w.field_n.length < 2)) && (var18Lifetime2 != 3 ||
               !(IntArrayRequest.field_t <= 1))) {
-              rg.field_e.a(gb.field_l[var18Lifetime2], 0);
+              rg.field_e.addChild(gb.field_l[var18Lifetime2], 0);
               for (var19 = 0; MatchCompleteScreen.field_A[var18Lifetime2].length > var19; var19++) {
                 if (MatchCompleteScreen.field_A[var18Lifetime2][var19] != null) {
-                  rg.field_e.a(MatchCompleteScreen.field_A[var18Lifetime2][var19], 0);
+                  rg.field_e.addChild(MatchCompleteScreen.field_A[var18Lifetime2][var19], 0);
                 }
               }
             }
           }
-          MultiplayerMatch.field_d.a(pf.field_h, 0);
-          MultiplayerMatch.field_d.a(dn.field_K, 0);
-          MultiplayerMatch.field_d.a(AppletGameShell.field_e, 0);
-          TableNameEntry.field_h = new mh(0L, rf.field_c, SecondaryNodeQueue.field_a.toUpperCase());
-          nd.field_a = new mh(0L, GameUiController.field_b, fh.field_e.toUpperCase());
+          MultiplayerMatch.field_d.addChild(pf.field_h, 0);
+          MultiplayerMatch.field_d.addChild(dn.field_K, 0);
+          MultiplayerMatch.field_d.addChild(AppletGameShell.field_e, 0);
+          TableNameEntry.field_h = new UiComponent(0L, rf.field_c, SecondaryNodeQueue.field_a.toUpperCase());
+          nd.field_a = new UiComponent(0L, GameUiController.field_b, fh.field_e.toUpperCase());
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

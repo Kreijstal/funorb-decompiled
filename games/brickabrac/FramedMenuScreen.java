@@ -35,7 +35,7 @@ class FramedMenuScreen extends MenuScreen {
         GzipInflater.a(30 + (-this.buttonLeft + this.buttonRight), 0, -var2.y + var4.height + (var4.y + 30), 0, -15 + var2.y, (byte) -88, -15 + this.buttonLeft);
     }
 
-    final static mh f(int param0) {
+    final static UiComponent f(int param0) {
         if (param0 <= 94) {
           field_t = (String) null;
           return f.field_c.field_Xb;

@@ -15,7 +15,7 @@ final class CappedUrlRequest implements Runnable {
     private PlatformTask urlTask;
     static int field_j;
     private PlatformTask socketTask;
-    static mh field_l;
+    static UiComponent field_l;
 
     protected final void finalize() {
         if (this.urlTask != null) {
@@ -77,7 +77,7 @@ final class CappedUrlRequest implements Runnable {
               stackIn_11_0 = (!param0) ? -1 : -2;
               r.thirdPreviousPacketOpcode = stackIn_11_0;
               we.secondPreviousPacketOpcode = stackIn_11_0;
-              mh.previousPacketOpcode = stackIn_11_0;
+              UiComponent.previousPacketOpcode = stackIn_11_0;
               rf.field_b = BitPacketBuffer.field_u;
               var5.position = 0;
               c.a(ArchiveIndex.field_e, 12, IntArrayRequest.field_r, fe.field_ob, k.outgoingPackets);

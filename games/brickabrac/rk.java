@@ -3,11 +3,11 @@
  */
 import java.io.*;
 
-final class rk extends mh {
-    mh field_Rb;
+final class rk extends UiComponent {
+    UiComponent field_Rb;
     static String field_Tb;
     static RgbSprite field_Sb;
-    private mh field_Pb;
+    private UiComponent field_Pb;
     static int achievementTransitionMask;
 
     private final void b(int param0, int param1, int param2) {
@@ -18,34 +18,34 @@ final class rk extends mh {
         var4 = -param2;
         var5 = -param2;
         if (this.field_Pb != null) {
-          var4 = this.field_Pb.g(71);
+          var4 = this.field_Pb.getContentWidth(71);
         }
         if (null != this.field_Rb) {
-          var5 = this.field_Rb.a(-param1 + (-param1 + this.field_Ib) - (var4 + param2), 0);
+          var5 = this.field_Rb.measureContentWidth(-param1 + (-param1 + this.width) - (var4 + param2), 0);
         }
         var7 = 40 / ((-47 - param0) / 42);
         var6 = param2 + var4 + param1 + (var5 + param1);
-        if (this.field_Ib < var6) {
-          var5 = var5 + (this.field_Ib - var6);
-          var6 = this.field_Ib;
+        if (this.width < var6) {
+          var5 = var5 + (this.width - var6);
+          var6 = this.width;
         }
-        if (this.field_S == 1) {
-          param1 = param1 + (this.field_Ib - var6) / 2;
+        if (this.horizontalAlignment == 1) {
+          param1 = param1 + (this.width - var6) / 2;
         }
-        if (2 == this.field_S) {
-          param1 = param1 + (-var6 + this.field_Ib);
+        if (2 == this.horizontalAlignment) {
+          param1 = param1 + (-var6 + this.width);
         }
         if (null != this.field_Pb) {
-          this.field_Pb.a(this.field_cb, 0, param1, var4, (byte) 64);
-          this.field_Pb.field_Q = this.field_Q;
+          this.field_Pb.setBounds(this.height, 0, param1, var4, (byte) 64);
+          this.field_Pb.verticalAlignment = this.verticalAlignment;
         }
         if (null != this.field_Rb) {
-          this.field_Rb.a(this.field_cb, 0, param2 + (param1 + var4), var5, (byte) 64);
-          this.field_Rb.field_Q = this.field_Q;
+          this.field_Rb.setBounds(this.height, 0, param2 + (param1 + var4), var5, (byte) 64);
+          this.field_Rb.verticalAlignment = this.verticalAlignment;
           if (null != this.field_Pb) {
-            this.field_Rb.field_S = 0;
+            this.field_Rb.horizontalAlignment = 0;
           } else {
-            this.field_Rb.field_S = this.field_S;
+            this.field_Rb.horizontalAlignment = this.horizontalAlignment;
           }
         }
     }
@@ -157,11 +157,11 @@ final class rk extends mh {
         }
         int var4 = -param0;
         if (this.field_Pb != null) {
-          var4 = this.field_Pb.g(107);
+          var4 = this.field_Pb.getContentWidth(107);
         }
         int var5 = -param0;
         if (null != this.field_Rb) {
-          var5 = this.field_Rb.g(64);
+          var5 = this.field_Rb.getContentWidth(64);
         }
         return param2 + var4 + (param0 + var5) + param2;
     }
@@ -171,11 +171,11 @@ final class rk extends mh {
           Throwable var9 = (Throwable) null;
           rk.a((String) null, (Throwable) null, 64);
         }
-        this.a(param5, param1, param4, param6, (byte) 64);
+        this.setBounds(param5, param1, param4, param6, (byte) 64);
         this.b(param0 ^ 10436, param2, param3);
     }
 
-    rk(long param0, mh param1, mh param2, mh param3, RgbSprite param4, String param5) {
+    rk(long param0, UiComponent param1, UiComponent param2, UiComponent param3, RgbSprite param4, String param5) {
         super(param0, param1);
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
@@ -192,16 +192,16 @@ final class rk extends mh {
         RuntimeException var8 = null;
         try {
           if (param4 != null) {
-            this.field_Pb = new mh(0L, param2);
-            this.field_Pb.field_wb = param4;
-            this.a(this.field_Pb, 0);
+            this.field_Pb = new UiComponent(0L, param2);
+            this.field_Pb.sprite = param4;
+            this.addChild(this.field_Pb, 0);
           }
           if (param5 != null) {
-            this.field_Rb = new mh(0L, param3, param5);
-            this.a(this.field_Rb, 0);
-            this.c(true);
+            this.field_Rb = new UiComponent(0L, param3, param5);
+            this.addChild(this.field_Rb, 0);
+            this.markDescendantsToInheritVisualState(true);
           } else {
-            this.c(true);
+            this.markDescendantsToInheritVisualState(true);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

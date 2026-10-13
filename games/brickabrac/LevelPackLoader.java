@@ -93,9 +93,9 @@ final class LevelPackLoader {
         return uo.a(uc.e((byte) -95), (byte) 14);
     }
 
-    final static mh c(int param0) {
+    final static UiComponent c(int param0) {
         if (param0 != 0) {
-          return (mh) null;
+          return (UiComponent) null;
         }
         return IsaacGenerator.field_b.field_Rb;
     }

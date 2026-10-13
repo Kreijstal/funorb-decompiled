@@ -140,7 +140,7 @@ final class ConstructionBackground extends BackgroundScene {
           var3 = var2 - hc.field_f * hc.field_f;
           param1 = param1 + var3 * (ej.field_O - param1) / var2;
         }
-        DualLinkDeque.field_d.a(120, param1, qh.field_f, 640, (byte) 64);
+        DualLinkDeque.field_d.setBounds(120, param1, qh.field_f, 640, (byte) 64);
         fj.a(kn.field_z, 5, ej.field_O - 24, 640, om.field_oc, 0, (byte) 94);
         if (param0 > -70) {
           RgbSprite var4 = (RgbSprite) null;

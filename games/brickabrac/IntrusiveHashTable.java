@@ -176,7 +176,7 @@ final class IntrusiveHashTable {
     }
 
     final static void a(int param0, boolean param1) {
-        DualLinkDeque.field_d.a(true, param1);
+        DualLinkDeque.field_d.drawRoot(true, param1);
         if (param0 != 7070) {
           return;
         }
@@ -184,7 +184,7 @@ final class IntrusiveHashTable {
         if (var2 == null) {
           return;
         }
-        var2.a(DualLinkDeque.field_d.field_Eb, DualLinkDeque.field_d.field_db, 0);
+        var2.a(DualLinkDeque.field_d.screenX, DualLinkDeque.field_d.screenY, 0);
     }
 
     final static void a(int param0, byte param1, int param2, int param3) {

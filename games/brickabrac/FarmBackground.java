@@ -4,8 +4,8 @@
 final class FarmBackground extends BackgroundScene {
     static ResourceArchive field_r;
     static boolean field_u;
-    static mh field_x;
-    static mh field_v;
+    static UiComponent field_x;
+    static UiComponent field_v;
     static String field_y;
     static String field_s;
     static int field_w;
@@ -14,7 +14,7 @@ final class FarmBackground extends BackgroundScene {
     final void drawSplitBackground(int destinationY, byte obfuscationGuard, int destinationX, int colorIndex, int scroll16) {
         RasterCacheSurface var6 = null;
         if (obfuscationGuard >= -84) {
-          field_v = (mh) null;
+          field_v = (UiComponent) null;
         }
         if (this.hasSprites((byte) -122)) {
           var6 = kd.a(this.sceneId, colorIndex, (byte) -36);

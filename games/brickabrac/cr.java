@@ -138,7 +138,7 @@ final class cr extends oc {
     final static void f(byte param0) {
         if (null != bm.field_d &&
           bm.field_d.field_j != null) {
-          bm.field_d.field_j.field_Nb = false;
+          bm.field_d.field_j.selected = false;
         }
         if (param0 >= -39) {
           cr.a(0, 110);

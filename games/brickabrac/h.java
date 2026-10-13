@@ -625,18 +625,18 @@ abstract class h extends oc implements sd {
     }
 
     final static void g(byte param0) {
-        RectangleBody.field_q = new mh(0L, (mh) null);
+        RectangleBody.field_q = new UiComponent(0L, (UiComponent) null);
         if (param0 != -24) {
           return;
         }
         if (vd.field_e) {
-          RectangleBody.field_q.a(dn.field_N, 0);
+          RectangleBody.field_q.addChild(dn.field_N, 0);
         }
-        RectangleBody.field_q.a(Ball.field_A, 0);
+        RectangleBody.field_q.addChild(Ball.field_A, 0);
         ap.field_b = new vj(ArcticBackground.field_u, RectangleBody.field_q);
-        fe.field_gb = new mh(0L, (mh) null);
-        fe.field_gb.a(ap.field_b.field_d, 0);
-        fe.field_gb.a(HighscorePackSelector.field_k, 0);
+        fe.field_gb = new UiComponent(0L, (UiComponent) null);
+        fe.field_gb.addChild(ap.field_b.field_d, 0);
+        fe.field_gb.addChild(HighscorePackSelector.field_k, 0);
         NanoGameClock.b(param0 + 44);
     }
 

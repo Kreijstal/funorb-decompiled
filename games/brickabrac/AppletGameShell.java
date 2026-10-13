@@ -4,7 +4,7 @@
 import java.util.*;
 
 public abstract class AppletGameShell extends java.applet.Applet implements Runnable, java.awt.event.FocusListener, java.awt.event.WindowListener {
-    static mh field_e;
+    static UiComponent field_e;
     static String field_k;
     boolean field_d;
     private static Calendar field_n;
@@ -701,7 +701,7 @@ public abstract class AppletGameShell extends java.applet.Applet implements Runn
         RuntimeException decompiledCaughtException = null;
         try {
           if (obfuscationGuard) {
-            field_e = (mh) null;
+            field_e = (UiComponent) null;
           }
           var2_int = data.length;
           var3 = new byte[var2_int];

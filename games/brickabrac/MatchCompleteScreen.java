@@ -8,7 +8,7 @@ final class MatchCompleteScreen extends MatchResultScreen {
     static String field_F;
     static int field_E;
     static rk[][] field_A;
-    static mh field_x;
+    static UiComponent field_x;
 
     public static void f(byte param0) {
         field_z = null;

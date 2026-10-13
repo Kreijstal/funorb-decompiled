@@ -14,7 +14,7 @@ final class eh {
     int field_f;
     int field_j;
     static int field_k;
-    static mh field_n;
+    static UiComponent field_n;
     ub field_b;
     ub field_r;
     int field_a;
@@ -405,7 +405,7 @@ final class eh {
     final static void a(boolean param0, boolean param1) {
         if (sq.field_c != null) {
           Rasterizer2D.darkenRectangle(Rasterizer2D.clipLeft, Rasterizer2D.clipTop, Rasterizer2D.clipRight - Rasterizer2D.clipLeft, Rasterizer2D.clipBottom - Rasterizer2D.clipTop);
-          sq.field_c.a(true, param0);
+          sq.field_c.drawRoot(true, param0);
         }
         if (!param1) {
           field_k = -26;

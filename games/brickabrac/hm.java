@@ -15,7 +15,7 @@ final class hm {
         field_c = null;
     }
 
-    final static void a(mh param0, byte param1, byte[] param2, mh param3, int param4, int param5, mh param6, int param7, int param8, int param9) {
+    final static void a(UiComponent param0, byte param1, byte[] param2, UiComponent param3, int param4, int param5, UiComponent param6, int param7, int param8, int param9) {
         int var11 = 0;
         RuntimeException stackIn_19_0 = null;
         StringBuilder stackIn_19_1 = null;
@@ -46,26 +46,26 @@ final class hm {
           }
           var10_int = (7 + var10_int) / 8;
           PowerUpWarning.field_p = new byte[var10_int];
-          if (param3.field_bb == null) {
-            param3.field_bb = new NodeDeque();
+          if (param3.children == null) {
+            param3.children = new NodeDeque();
           }
-          ua.field_c = param3.field_bb;
+          ua.field_c = param3.children;
           ua.field_c.clear((byte) -60);
           eq.field_m = new SecondaryHashTable(param5);
           m.field_h = -1;
           MenuSelection.field_i = 0;
           uf.field_c = 0;
           ArchiveIndex.field_s = -1;
-          if (param6.field_bb == null) {
-            param6.field_bb = new NodeDeque();
+          if (param6.children == null) {
+            param6.children = new NodeDeque();
           }
-          rq.field_a = param6.field_bb;
+          rq.field_a = param6.children;
           rq.field_a.clear((byte) -48);
           LevelResultSubmission.field_i = new SecondaryHashTable(param8);
-          if (param0.field_bb == null) {
-            param0.field_bb = new NodeDeque();
+          if (param0.children == null) {
+            param0.children = new NodeDeque();
           }
-          mp.field_Tb = param0.field_bb;
+          mp.field_Tb = param0.children;
           mp.field_Tb.clear((byte) -61);
           if (param1 != 86) {
             return;

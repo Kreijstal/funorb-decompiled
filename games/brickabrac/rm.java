@@ -3,7 +3,7 @@
  */
 final class rm implements bp {
     static String field_b;
-    static mh field_a;
+    static UiComponent field_a;
     static RgbSprite farmMidSprite;
     static int[] farmBackgroundColors;
     static String field_c;

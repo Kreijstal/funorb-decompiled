@@ -5,13 +5,13 @@ import java.util.*;
 
 final class ik implements Iterator {
     static boolean field_j;
-    static mh field_a;
+    static UiComponent field_a;
     private ji field_e;
     private int field_d;
     static tq field_g;
     private IntrusiveNode field_h;
     private IntrusiveNode field_k;
-    static mh[] field_i;
+    static UiComponent[] field_i;
     static RgbSprite[] field_f;
     static String[] field_b;
     static RgbSprite field_c;

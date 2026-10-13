@@ -3,7 +3,7 @@
  */
 final class rf {
     static String field_d;
-    static mh field_c;
+    static UiComponent field_c;
     static boolean field_f;
     static String field_e;
     static RgbSprite spaceSmallSprite;

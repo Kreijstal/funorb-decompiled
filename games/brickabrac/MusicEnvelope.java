@@ -75,7 +75,7 @@ final class MusicEnvelope {
         int stackIn_3_4;
         boolean stackIn_3_5;
         boolean stackIn_4_6 = false;
-        mh stackIn_20_0 = null;
+        UiComponent stackIn_20_0 = null;
         String stackIn_21_1 = null;
         int stackIn_24_0 = 0;
         RuntimeException decompiledCaughtException = null;
@@ -105,73 +105,73 @@ final class MusicEnvelope {
           stackIn_3_5 = param0;
           stackIn_4_6 = (o.field_b == f.field_c.field_Qb);
           var3_int = ((mm) (Object) stackIn_3_0).a(stackIn_3_1, stackIn_3_2, stackIn_3_3, stackIn_3_4, stackIn_3_5, stackIn_4_6) ? 1 : 0;
-          var4 = f.field_c.field_Xb.field_bb;
+          var4 = f.field_c.field_Xb.children;
           if (!param1) {
             return;
           }
           if (LevelMetadata.field_m != 2 &&
             LevelMetadata.field_m != 1) {
-            f.field_c.field_eb = false;
-            f.field_c.field_Qb.field_Qb.field_Mb = cm.field_t;
+            f.field_c.enabled = false;
+            f.field_c.field_Qb.field_Qb.text = cm.field_t;
             jh.a(param1, f.field_c.field_Xb);
             return;
           }
-          f.field_c.field_eb = true;
-          f.field_c.field_Qb.field_Qb.field_Mb = null;
+          f.field_c.enabled = true;
+          f.field_c.field_Qb.field_Qb.text = null;
           var5 = null;
           var6 = (mp) (var4.first(-57));
           while (var6 != null) {
             var7 = 0;
-            if (null == var6.field_bb) {
-              var6.field_Xb = new mh(0L, vb.field_K);
-              var6.a(var6.field_Xb, 0);
-              var6.field_Yb = new mh(0L, vb.field_K);
-              var6.a(var6.field_Yb, 0);
-              var6.c(param1);
+            if (null == var6.children) {
+              var6.field_Xb = new UiComponent(0L, vb.field_K);
+              var6.addChild(var6.field_Xb, 0);
+              var6.field_Yb = new UiComponent(0L, vb.field_K);
+              var6.addChild(var6.field_Yb, 0);
+              var6.markDescendantsToInheritVisualState(param1);
               var7 = 1;
             }
-            var6.field_Ib = f.field_c.field_Xb.field_Ib;
-            var6.field_Xb.a(np.field_a, 0, 0, var6.field_Ib, (byte) 64);
+            var6.width = f.field_c.field_Xb.width;
+            var6.field_Xb.setBounds(np.field_a, 0, 0, var6.width, (byte) 64);
             var8 = 0;
             if (null != var6.field_Qb &&
               !var6.field_Qb.equals("")) {
-              var6.field_Yb.field_wb = ok.field_g;
-              var6.field_Yb.field_Y = 16737894;
+              var6.field_Yb.sprite = ok.field_g;
+              var6.field_Yb.activeTextColor = 16737894;
               var8 = 1;
-              var6.field_Yb.a(np.field_a, 0, 0, ok.field_g.canvasWidth + 3, (byte) 64);
+              var6.field_Yb.setBounds(np.field_a, 0, 0, ok.field_g.canvasWidth + 3, (byte) 64);
             }
             var9 = 0;
-            var10 = var6.field_Ib;
+            var10 = var6.width;
             if (var8 != 0) {
               var9 = ok.field_g.canvasWidth + 3;
               var10 = var10 - var9;
             }
             stackIn_20_0 = var6.field_Xb;
             if (0 < var10) {
-              stackIn_21_1 = TextFont.truncateText(var6.field_Xb.field_O, var6.field_Rb, var10);
+              stackIn_21_1 = TextFont.truncateText(var6.field_Xb.font, var6.field_Rb, var10);
             } else {
               stackIn_21_1 = var6.field_Rb;
             }
-            stackIn_20_0.field_Mb = stackIn_21_1;
-            stackIn_24_0 = (var6.field_Xb.field_Mb.equals(var6.field_Rb)) ? 0 : 1;
+            stackIn_20_0.text = stackIn_21_1;
+            stackIn_24_0 = (var6.field_Xb.text.equals(var6.field_Rb)) ? 0 : 1;
             var11 = stackIn_24_0;
-            var6.field_Xb.a(np.field_a, 0, var9, var10, (byte) 64);
+            var6.field_Xb.setBounds(np.field_a, 0, var9, var10, (byte) 64);
             if (var3_int == 0) {
-              var6.field_C = np.field_a - var6.field_cb;
+              var6.remainingHeight = np.field_a - var6.height;
             }
             if (var7 != 0) {
-              f.field_c.field_Xb.a((mh) (var5), 2, var6, 17290);
+              f.field_c.field_Xb.placeBelow((UiComponent) (var5), 2, var6, 17290);
             }
             if (null != var6.field_Yb &&
-              var6.field_Yb.field_kb) {
+              var6.field_Yb.activeInside) {
               ep.field_e = var6.field_Qb;
             } else {
-              if (var6.field_Xb.field_kb &&
+              if (var6.field_Xb.activeInside &&
                 var11 != 0) {
                 ep.field_e = var6.field_Rb;
               }
             }
-            if (var6.field_L != 0) {
+            if (var6.pressedButton != 0) {
               SpriteGeometry.a(-1, var6, f.field_c.field_Qb, (int[]) null, var6.field_ac, -1, (byte) -58, 0L, var6.field_Rb);
               var16 = bm.field_d;
               var13_ref_String = ng.field_e;
@@ -184,14 +184,14 @@ final class MusicEnvelope {
             var5 = var6;
             var6 = (mp) (var4.next((byte) 116));
           }
-          if (f.field_c.field_Tb.field_L != 0) {
-            MusicCrossfadeStream.field_m = new gq(f.field_c.field_Tb.field_Eb, f.field_c.field_Tb.field_db, f.field_c.field_Tb.field_Ib, f.field_c.field_Tb.field_cb, CacheIoWorker.field_e, GameUiController.field_c, CappedUrlRequest.field_l, CappedUrlRequest.field_l);
+          if (f.field_c.field_Tb.pressedButton != 0) {
+            MusicCrossfadeStream.field_m = new gq(f.field_c.field_Tb.screenX, f.field_c.field_Tb.screenY, f.field_c.field_Tb.width, f.field_c.field_Tb.height, CacheIoWorker.field_e, GameUiController.field_c, CappedUrlRequest.field_l, CappedUrlRequest.field_l);
             GameUiController.field_d = 2;
           }
-          if (0 == f.field_c.field_Wb.field_L) {
+          if (0 == f.field_c.field_Wb.pressedButton) {
             return;
           }
-          MusicCrossfadeStream.field_m = new gq(f.field_c.field_Wb.field_Eb, f.field_c.field_Wb.field_db, f.field_c.field_Wb.field_Ib, f.field_c.field_Wb.field_cb, MultiplayerExitScreen.field_A, GameUiController.field_c, CappedUrlRequest.field_l, CappedUrlRequest.field_l);
+          MusicCrossfadeStream.field_m = new gq(f.field_c.field_Wb.screenX, f.field_c.field_Wb.screenY, f.field_c.field_Wb.width, f.field_c.field_Wb.height, MultiplayerExitScreen.field_A, GameUiController.field_c, CappedUrlRequest.field_l, CappedUrlRequest.field_l);
           GameUiController.field_d = 3;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

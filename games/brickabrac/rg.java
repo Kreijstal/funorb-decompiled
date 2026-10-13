@@ -8,11 +8,11 @@ final class rg {
     private to field_h;
     static String[] field_k;
     static int field_a;
-    static mh field_e;
+    static UiComponent field_e;
     private ResourceArchive field_j;
     static RgbSprite chocolateFarSprite;
     static int[] field_g;
-    static mh field_c;
+    static UiComponent field_c;
 
     final wd a(int param0, boolean param1) {
         byte[] var4 = null;

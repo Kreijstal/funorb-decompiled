@@ -5,7 +5,7 @@ final class g extends k {
     private vb field_p;
     private vb field_k;
     static String field_m;
-    static mh field_n;
+    static UiComponent field_n;
     static RgbSprite[] field_l;
     static String field_q;
     static int[] field_o;

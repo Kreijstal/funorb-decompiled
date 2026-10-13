@@ -1,13 +1,13 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class gq extends mh {
+final class gq extends UiComponent {
     static RgbSprite field_Sb;
     static String field_Wb;
-    private mh field_Qb;
+    private UiComponent field_Qb;
     static mi field_Xb;
     private StringBuilder field_Vb;
-    private mh field_Pb;
+    private UiComponent field_Pb;
     private int field_Tb;
     static int field_Yb;
     static RgbSprite[] chocLeverSprites;
@@ -23,26 +23,26 @@ final class gq extends mh {
         if (param1 < 88) {
           return 77;
         }
-        this.a(param0, -15211);
+        this.updateRoot(param0, -15211);
         if (!param0) {
-          this.field_Qb.field_Mb = this.field_Vb.toString();
+          this.field_Qb.text = this.field_Vb.toString();
           if (param0 &&
             BackgroundScene.pressedButton != 0 &&
-            this.field_L == 0) {
+            this.pressedButton == 0) {
             this.field_Tb = 1;
           }
           return this.field_Tb;
         }
         while (true) {
           if (!jl.pollKeyEvent((byte) 5)) {
-            this.field_Qb.field_Mb = this.field_Vb.toString();
+            this.field_Qb.text = this.field_Vb.toString();
             if (!param0) {
               return this.field_Tb;
             }
             if (BackgroundScene.pressedButton == 0) {
               return this.field_Tb;
             }
-            if (this.field_L != 0) {
+            if (this.pressedButton != 0) {
               return this.field_Tb;
             }
             this.field_Tb = 1;
@@ -80,7 +80,7 @@ final class gq extends mh {
         if (0 >= this.field_Vb.length()) {
           return 1;
         }
-        this.field_Mb = this.field_Vb.toString();
+        this.text = this.field_Vb.toString();
         return 2;
     }
 
@@ -114,7 +114,7 @@ final class gq extends mh {
               discarded$7 = this.field_Vb.append((char) var2);
               if (MeshAttributeRecord.currentKeyCode == 84) {
                 if (this.field_Vb.length() > 0) {
-                  this.field_Mb = this.field_Vb.toString();
+                  this.text = this.field_Vb.toString();
                   this.field_Tb = 2;
                 } else {
                   this.field_Tb = 1;
@@ -130,7 +130,7 @@ final class gq extends mh {
               discarded$8 = this.field_Vb.append((char) var2);
               if (MeshAttributeRecord.currentKeyCode == 84) {
                 if (this.field_Vb.length() > 0) {
-                  this.field_Mb = this.field_Vb.toString();
+                  this.text = this.field_Vb.toString();
                   this.field_Tb = 2;
                 } else {
                   this.field_Tb = 1;
@@ -146,7 +146,7 @@ final class gq extends mh {
             if (this.field_Vb.length() <= 0) {
               this.field_Tb = 1;
             } else {
-              this.field_Mb = this.field_Vb.toString();
+              this.text = this.field_Vb.toString();
               this.field_Tb = 2;
             }
           }
@@ -169,7 +169,7 @@ final class gq extends mh {
               discarded$4 = this.field_Vb.append((char) var2Lifetime1);
               if (MeshAttributeRecord.currentKeyCode == 84) {
                 if (this.field_Vb.length() > 0) {
-                  this.field_Mb = this.field_Vb.toString();
+                  this.text = this.field_Vb.toString();
                   this.field_Tb = 2;
                 } else {
                   this.field_Tb = 1;
@@ -185,7 +185,7 @@ final class gq extends mh {
               discarded$5 = this.field_Vb.append((char) var2Lifetime1);
               if (MeshAttributeRecord.currentKeyCode == 84) {
                 if (this.field_Vb.length() > 0) {
-                  this.field_Mb = this.field_Vb.toString();
+                  this.text = this.field_Vb.toString();
                   this.field_Tb = 2;
                 } else {
                   this.field_Tb = 1;
@@ -201,7 +201,7 @@ final class gq extends mh {
             if (this.field_Vb.length() <= 0) {
               this.field_Tb = 1;
             } else {
-              this.field_Mb = this.field_Vb.toString();
+              this.text = this.field_Vb.toString();
               this.field_Tb = 2;
             }
           }
@@ -216,7 +216,7 @@ final class gq extends mh {
             if (this.field_Vb.length() <= 0) {
               this.field_Tb = 1;
             } else {
-              this.field_Mb = this.field_Vb.toString();
+              this.text = this.field_Vb.toString();
               this.field_Tb = 2;
             }
           }
@@ -238,7 +238,7 @@ final class gq extends mh {
           discarded$2 = this.field_Vb.append((char) var2Lifetime2);
           if (MeshAttributeRecord.currentKeyCode == 84) {
             if (this.field_Vb.length() > 0) {
-              this.field_Mb = this.field_Vb.toString();
+              this.text = this.field_Vb.toString();
               this.field_Tb = 2;
             } else {
               this.field_Tb = 1;
@@ -259,7 +259,7 @@ final class gq extends mh {
               }
               return true;
             }
-            this.field_Mb = this.field_Vb.toString();
+            this.text = this.field_Vb.toString();
             this.field_Tb = 2;
           }
           if (MeshAttributeRecord.currentKeyCode != param0) {
@@ -272,7 +272,7 @@ final class gq extends mh {
           if (this.field_Vb.length() <= 0) {
             this.field_Tb = 1;
           } else {
-            this.field_Mb = this.field_Vb.toString();
+            this.text = this.field_Vb.toString();
             this.field_Tb = 2;
           }
         }
@@ -374,7 +374,7 @@ final class gq extends mh {
         return false;
     }
 
-    gq(int param0, int param1, int param2, int param3, String param4, mh param5, mh param6, mh param7) {
+    gq(int param0, int param1, int param2, int param3, String param4, UiComponent param5, UiComponent param6, UiComponent param7) {
         super(0L, param5);
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
@@ -394,21 +394,21 @@ final class gq extends mh {
         int var13 = 0;
         this.field_Tb = 0;
         try {
-          this.field_Pb = new mh(0L, param6, param4);
-          this.a(this.field_Pb, 0);
-          this.field_Qb = new mh(0L, param7);
-          this.field_Qb.field_X = 16764006;
-          this.a(this.field_Qb, 0);
-          this.field_Qb.field_Cb = "|";
+          this.field_Pb = new UiComponent(0L, param6, param4);
+          this.addChild(this.field_Pb, 0);
+          this.field_Qb = new UiComponent(0L, param7);
+          this.field_Qb.textColor = 16764006;
+          this.addChild(this.field_Qb, 0);
+          this.field_Qb.textSuffix = "|";
           this.field_Vb = new StringBuilder(12);
-          var9_int = this.field_Pb.g(81);
-          this.field_Pb.a(np.field_a, 3, 5, var9_int, (byte) 64);
-          this.field_Qb.a(np.field_a, np.field_a + 3, 5, var9_int, (byte) 64);
+          var9_int = this.field_Pb.getContentWidth(81);
+          this.field_Pb.setBounds(np.field_a, 3, 5, var9_int, (byte) 64);
+          this.field_Qb.setBounds(np.field_a, np.field_a + 3, 5, var9_int, (byte) 64);
           var10 = 10 + var9_int;
           var11 = 3 + np.field_a * 2 + 3;
           var12 = OptionsScreen.a(-1, var10, param0, param2);
           var13 = br.a(var11, param1, param3, 121);
-          this.a(var11, var13, var12, var10, (byte) 64);
+          this.setBounds(var11, var13, var12, var10, (byte) 64);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

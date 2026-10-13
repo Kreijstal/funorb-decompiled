@@ -3,7 +3,7 @@
  */
 final class f {
     static String field_b;
-    static mh field_a;
+    static UiComponent field_a;
     static hj field_c;
 
     final static void handleTableResponse(byte obfuscationGuard) {

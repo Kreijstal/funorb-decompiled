@@ -10,7 +10,7 @@ final class BoundedFile {
     static int field_c;
     static String field_d;
     static int field_l;
-    static mh field_g;
+    static UiComponent field_g;
     static int field_i;
     static boolean field_n;
     static String field_b;

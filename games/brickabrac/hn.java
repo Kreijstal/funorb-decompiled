@@ -58,14 +58,14 @@ final class hn {
         }
     }
 
-    final static void a(mh param0, mh param1, int param2) {
+    final static void a(UiComponent param0, UiComponent param1, int param2) {
         try {
-          if (param1.field_bb == null) {
-            param1.field_bb = new NodeDeque();
+          if (param1.children == null) {
+            param1.children = new NodeDeque();
           }
           int var3_int = -102 / ((param2 + 58) / 50);
-          if (param0.field_bb == null) {
-            param0.field_bb = new NodeDeque();
+          if (param0.children == null) {
+            param0.children = new NodeDeque();
           }
           if (null == BlankScreen.field_i) {
             BlankScreen.field_i = new SecondaryHashTable(64);
@@ -73,8 +73,8 @@ final class hn {
           if (tf.field_d == null) {
             tf.field_d = new SecondaryHashTable(64);
           }
-          bf.field_N = param1.field_bb;
-          CachedArchiveSource.field_n = param0.field_bb;
+          bf.field_N = param1.children;
+          CachedArchiveSource.field_n = param0.children;
           uc.e(108);
         } catch (RuntimeException runtimeException) {
           throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "hn.E(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');

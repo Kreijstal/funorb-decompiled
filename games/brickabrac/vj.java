@@ -6,7 +6,7 @@ final class vj {
     oa field_d;
     static int field_c;
     static RgbSprite field_b;
-    static mh[] field_a;
+    static UiComponent[] field_a;
     static int[] field_f;
 
     final void a(int param0, int param1, int param2, int param3, int param4) {
@@ -16,10 +16,10 @@ final class vj {
           var6 = 24;
           var7 = 5;
           this.field_d.a(var7, param1, param0, var6, param4, param3, 75);
-          sj.field_d.a(np.field_a, 0, 0, rg.field_c.field_Ib, (byte) 64);
-          MouseWheelSource.field_c.a(18, 2 + np.field_a, 0, -82 + (rg.field_c.field_Ib - ec.field_J - 2), (byte) 64);
-          GameplayScreen.field_u.a(18, 2 + np.field_a, -2 + (-ec.field_J + (rg.field_c.field_Ib - 80)), 82 + ec.field_J, (byte) 64);
-          GameScreen.field_f.a(true, 2, rg.field_c.field_Ib, 0, 20 + (np.field_a + 2), ec.field_J, 20, -2 + (-np.field_a + rg.field_c.field_cb) - 20);
+          sj.field_d.setBounds(np.field_a, 0, 0, rg.field_c.width, (byte) 64);
+          MouseWheelSource.field_c.setBounds(18, 2 + np.field_a, 0, -82 + (rg.field_c.width - ec.field_J - 2), (byte) 64);
+          GameplayScreen.field_u.setBounds(18, 2 + np.field_a, -2 + (-ec.field_J + (rg.field_c.width - 80)), 82 + ec.field_J, (byte) 64);
+          GameScreen.field_f.a(true, 2, rg.field_c.width, 0, 20 + (np.field_a + 2), ec.field_J, 20, -2 + (-np.field_a + rg.field_c.height) - 20);
           f.field_c.a(20, -779, ec.field_J, 2);
           return;
         }
@@ -85,12 +85,12 @@ final class vj {
         }
     }
 
-    vj(String param0, mh param1) {
+    vj(String param0, UiComponent param1) {
         String[] var3 = null;
-        mh[] var4 = null;
+        UiComponent[] var4 = null;
         try {
           var3 = new String[]{param0, AchievementSubmission.field_j, pl.field_e};
-          var4 = new mh[]{param1, rg.field_c, (mh) ((Object) f.field_c)};
+          var4 = new UiComponent[]{param1, rg.field_c, (UiComponent) ((Object) f.field_c)};
           this.field_d = new oa(0L, eh.field_n, var3, hd.field_c, var4, 0);
         } catch (RuntimeException runtimeException) {
           throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "vj.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');

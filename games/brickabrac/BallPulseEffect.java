@@ -9,7 +9,7 @@ final class BallPulseEffect extends IntrusiveNode {
     static RgbSprite parisCharacterSprite;
     static SoftwareFramebuffer framebuffer;
     static ResourceArchive field_j;
-    static mh field_n;
+    static UiComponent field_n;
     private int x256;
     static String field_o;
 

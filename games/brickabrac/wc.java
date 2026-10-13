@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class wc {
-    static boolean field_d;
+    static boolean uiPressClaimed;
     static int field_e;
     static boolean field_b;
     static String field_a;
@@ -56,7 +56,7 @@ final class wc {
           ResourceArchive.field_f.a(0, 0, param1 + 1);
           return;
         }
-        field_d = false;
+        uiPressClaimed = false;
         ResourceArchive.field_f.a(0, 0, param1 + 1);
     }
 
