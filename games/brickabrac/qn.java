@@ -15,7 +15,7 @@ final class qn {
     static int field_f;
     private int field_x;
     static long field_n;
-    static String[] field_u;
+    static String[] packNames;
     private int field_q;
     private int field_m;
     private int field_s;
@@ -24,7 +24,7 @@ final class qn {
     private int field_l;
     private int field_a;
     static String field_o;
-    static String field_p;
+    static String messageText;
     private boolean field_b;
 
     final void c(int param0) {
@@ -112,7 +112,7 @@ final class qn {
           }
           var4 = (cq) (fk.field_f.first(-99));
           while (var4 != null) {
-            gn.a(-21167, var4, param1);
+            MultiplayerExitScreen.a(-21167, var4, param1);
             var4 = (cq) (fk.field_f.next((byte) 116));
           }
           return;
@@ -136,12 +136,12 @@ final class qn {
 
     final static void a(int param0, int param1, int param2, int param3, int param4) {
         ip.field_r = new IsaacGenerator(new int[]{(int)ue.a(false)});
-        oq.field_x = param1;
+        PauseMenuScreen.field_x = param1;
         if (param4 == -6532) {
           fr.field_k = param3;
           lg.field_L = param2;
           wo.field_a = param0;
-          qb.field_w = lg.field_L - oq.field_x;
+          qb.field_w = lg.field_L - PauseMenuScreen.field_x;
           ag.field_E = -fr.field_k + wo.field_a;
           return;
         }
@@ -149,7 +149,7 @@ final class qn {
         fr.field_k = param3;
         lg.field_L = param2;
         wo.field_a = param0;
-        qb.field_w = lg.field_L - oq.field_x;
+        qb.field_w = lg.field_L - PauseMenuScreen.field_x;
         ag.field_E = -fr.field_k + wo.field_a;
     }
 
@@ -167,16 +167,16 @@ final class qn {
 
     public static void b(int param0) {
         if (param0 == 0) {
-          field_u = null;
+          packNames = null;
           field_o = null;
-          field_p = null;
+          messageText = null;
           field_k = null;
           return;
         }
         qn.b(-47);
-        field_u = null;
+        packNames = null;
         field_o = null;
-        field_p = null;
+        messageText = null;
         field_k = null;
     }
 

@@ -66,7 +66,7 @@ final class me {
             stackIn_9_0 = df.field_c;
             return stackIn_9_0;
           }
-          if (af.a(124, param0)) {
+          if (AchievementBrowserScreen.a(124, param0)) {
             stackIn_12_0 = rd.a(dn.field_J, new String[]{param0}, (byte) 103);
             return stackIn_12_0;
           }

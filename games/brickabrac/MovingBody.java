@@ -556,7 +556,7 @@ abstract class MovingBody extends IntrusiveNode {
     }
 
     final static void a(byte param0, int param1, int param2, int param3, int param4) {
-        jf.d(-99);
+        HighscorePackSelector.d(-99);
         Rasterizer2D.intersectClip(param2, param3, param1, param4);
         if (param0 < 68) {
           field_n = (String) null;

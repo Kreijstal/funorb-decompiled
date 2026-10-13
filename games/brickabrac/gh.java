@@ -84,7 +84,7 @@ final class gh {
     }
 
     final static void a(int param0, boolean param1) {
-        hq.b(true, param1, 0);
+        SaveResultsPromptScreen.b(true, param1, 0);
         if (param0 < 119) {
           gh.a(35);
         }

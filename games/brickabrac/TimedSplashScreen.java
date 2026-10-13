@@ -52,10 +52,10 @@ final class TimedSplashScreen extends MenuScreen {
     final void onExit(byte obfuscationGuard) {
         if (obfuscationGuard != 79) {
           field_s = (String) null;
-          lf.field_t = null;
+          RankingsScreen.field_t = null;
           return;
         }
-        lf.field_t = null;
+        RankingsScreen.field_t = null;
     }
 
     TimedSplashScreen() {
@@ -107,7 +107,7 @@ final class TimedSplashScreen extends MenuScreen {
         if (obfuscationGuard >= -14) {
           return;
         }
-        lf.field_t.b(0, 0);
+        RankingsScreen.field_t.b(0, 0);
         pg.d(0);
         MovingBody.a((byte) -115);
     }

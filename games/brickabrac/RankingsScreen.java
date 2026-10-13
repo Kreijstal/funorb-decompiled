@@ -1,9 +1,9 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class lf extends MenuScreen {
+final class RankingsScreen extends MenuScreen {
     static long field_u;
-    private int field_v;
+    private int sortIndex;
     static tp field_t;
     static int[] field_r;
     static mh field_s;
@@ -95,7 +95,7 @@ final class lf extends MenuScreen {
         try {
           fc.a(-59, param0.field_p);
           if (param5 < 39) {
-            lf.a(true, 49, true);
+            RankingsScreen.a(true, 49, true);
           }
           Rasterizer2D.fillVerticalGradient(0, 0, param0.field_i, param0.field_q, kg.field_i[param4], 16777215);
           param3.b((-param3.canvasWidth + param0.field_i) / 2 - 50 / param1, -(189 / param1) + (-param3.canvasHeight + param0.field_q) + param2, 55, 83);
@@ -119,7 +119,7 @@ final class lf extends MenuScreen {
         }
     }
 
-    lf() {
+    RankingsScreen() {
         super(6, 38, 460, 402, 35, td.field_s);
         int var2;
         int var3;
@@ -129,7 +129,7 @@ final class lf extends MenuScreen {
         String[] var8;
         String[] var9;
         int var6Lifetime1;
-        this.field_v = 0;
+        this.sortIndex = 0;
         qo.field_N = 10 + ob.field_D.c("10. ");
         var8 = new String[]{so.field_e, NodeDeque.field_c, be.field_e, hj.field_Vb, jg.field_p};
         var9 = var8;
@@ -155,14 +155,14 @@ final class lf extends MenuScreen {
     final static void f(int param0) {
         if (param0 != -1) {
           RgbSprite var2 = (RgbSprite) null;
-          lf.a((pb) null, -117, -10, (RgbSprite) null, -120, 52);
+          RankingsScreen.a((pb) null, -117, -10, (RgbSprite) null, -120, 52);
         }
         ag.f((byte) 122);
     }
 
     final static void a(boolean param0, int param1, boolean param2) {
         if (param1 >= -51) {
-          lf.a((byte) -69, false);
+          RankingsScreen.a((byte) -69, false);
         }
         if (param2) {
           Rasterizer2D.fillRectangleAlpha(0, 0, Rasterizer2D.width, Rasterizer2D.height, 0, 192);
@@ -188,13 +188,13 @@ final class lf extends MenuScreen {
             return super.handleMenuAction(buttonIndex, inputFlag, (byte) 123);
           }
           if (this.selection.isActivated((byte) 113)) {
-            this.field_v = 1;
+            this.sortIndex = 1;
             this.markButton(true, buttonIndex);
             var4 = 1;
           }
         } else {
           if (this.selection.isActivated((byte) 113)) {
-            this.field_v = 0;
+            this.sortIndex = 0;
             this.markButton(true, buttonIndex);
             var4 = 1;
           }
@@ -245,8 +245,8 @@ final class lf extends MenuScreen {
             var4Lifetime1 = rn.field_d;
           } else {
             var4Lifetime1 = ef.field_f;
-            var5 = ch.field_h.field_r[this.field_v];
-            var6 = ch.field_h.field_u[this.field_v];
+            var5 = ch.field_h.field_r[this.sortIndex];
+            var6 = ch.field_h.field_u[this.sortIndex];
             var7 = 0;
             for (var8 = 0; var8 < 10; var8++) {
               if (var5[var8] != null) {
@@ -280,7 +280,7 @@ final class lf extends MenuScreen {
         this.initializeButtons(se.field_j, 0);
         this.markButton(true, 0);
         if (obfuscationGuard >= -60) {
-          this.field_v = -47;
+          this.sortIndex = -47;
         }
     }
 
@@ -308,10 +308,10 @@ final class lf extends MenuScreen {
           }
           if (keyCode == 99) {
             if (0 > this.selection.selectedIndex) {
-              this.selection.setSelectedIndex(false, this.field_v);
+              this.selection.setSelectedIndex(false, this.sortIndex);
             } else {
               if (1 < this.selection.selectedIndex) {
-                this.selection.setSelectedIndex(false, this.field_v);
+                this.selection.setSelectedIndex(false, this.sortIndex);
               } else {
                 this.selection.setSelectedIndex(false, 2);
               }
@@ -321,7 +321,7 @@ final class lf extends MenuScreen {
             if (this.selection.selectedIndex != 2) {
               this.selection.setSelectedIndex(false, 2);
             } else {
-              this.selection.setSelectedIndex(false, this.field_v);
+              this.selection.setSelectedIndex(false, this.sortIndex);
             }
           }
           this.selection.pollKeyboardCode((byte) -124);
@@ -329,7 +329,7 @@ final class lf extends MenuScreen {
           this.selection.navigateHorizontal(0, -1);
         }
         if (obfuscationGuard != -120) {
-          lf.f(0);
+          RankingsScreen.f(0);
         }
     }
 

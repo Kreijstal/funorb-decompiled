@@ -210,7 +210,7 @@ class lg extends d {
           if (param2 != -1) {
             field_L = -26;
           }
-          stackIn_3_0 = fp.a(2, param0, param1, false);
+          stackIn_3_0 = OptionsScreen.a(2, param0, param1, false);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

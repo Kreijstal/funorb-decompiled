@@ -44,7 +44,7 @@ final class im {
             k.field_h = new BitPacketBuffer(param5);
             fe.field_ob = param6;
             tq.field_h = param1;
-            lh.field_s = param8;
+            FramedMenuScreen.field_s = param8;
             ko.field_e = param0;
             qb.field_u = param2;
             MainMenuScreen.field_x = param7;
@@ -56,11 +56,11 @@ final class im {
             ec.field_O = param10;
             LevelSelectScreen.field_E = param11;
             pe.field_r = param3;
-            if (null == lh.field_s.field_k) {
+            if (null == FramedMenuScreen.field_s.field_k) {
               return;
             }
             try {
-              go.field_a = new jg(lh.field_s.field_k, 64, 0);
+              go.field_a = new jg(FramedMenuScreen.field_s.field_k, 64, 0);
               return;
             } catch (java.io.IOException decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;

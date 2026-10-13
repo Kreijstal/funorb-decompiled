@@ -140,7 +140,7 @@ final class kn extends DualLinkNode {
           if (!param0) {
             kn.a((byte) -116);
           }
-          bf.a(ri.field_N, 8192, ep.field_a, vq.field_C);
+          bf.a(ri.field_N, 8192, ep.field_a, LevelCompleteScreen.field_C);
           ck.a(param1, 0, 14209, 0);
         } catch (RuntimeException runtimeException) {
           throw qb.a((Throwable) ((Object) runtimeException), "kn.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');

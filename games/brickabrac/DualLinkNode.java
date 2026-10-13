@@ -186,9 +186,9 @@ class DualLinkNode extends IntrusiveNode {
           !(ec.field_N.length >= param1)) {
           ec.field_N = new int[param1 * 2];
         }
-        if (lf.field_r == null ||
-          !(lf.field_r.length >= param1)) {
-          lf.field_r = new int[param1 * 2];
+        if (RankingsScreen.field_r == null ||
+          !(RankingsScreen.field_r.length >= param1)) {
+          RankingsScreen.field_r = new int[param1 * 2];
         }
         if (ObjectHistoryBuffer.field_p == null ||
           !(param1 <= ObjectHistoryBuffer.field_p.length)) {

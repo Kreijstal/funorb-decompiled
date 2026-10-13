@@ -178,14 +178,14 @@ final class e extends IntrusiveNode {
           var3 = var2.width;
           int var5 = -121 % ((-17 - param1) / 52);
           var4 = var2.height;
-          jf.d(-99);
-          vq.field_I = new RgbSprite(var3, var4 * 3 / 4);
-          vq.field_I.bindRasterTarget();
+          HighscorePackSelector.d(-99);
+          LevelCompleteScreen.field_I = new RgbSprite(var3, var4 * 3 / 4);
+          LevelCompleteScreen.field_I.bindRasterTarget();
           var2.drawAt(0, 0);
-          BitPacketBuffer.field_t = new RgbSprite(var3, -vq.field_I.height + var4);
+          BitPacketBuffer.field_t = new RgbSprite(var3, -LevelCompleteScreen.field_I.height + var4);
           BitPacketBuffer.field_t.bindRasterTarget();
-          var2.drawAt(0, -vq.field_I.height);
-          BitPacketBuffer.field_t.offsetY = vq.field_I.height;
+          var2.drawAt(0, -LevelCompleteScreen.field_I.height);
+          BitPacketBuffer.field_t.offsetY = LevelCompleteScreen.field_I.height;
           sc.b(-104);
         } catch (RuntimeException runtimeException) {
           throw qb.a((Throwable) ((Object) runtimeException), "e.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');

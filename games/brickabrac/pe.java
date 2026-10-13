@@ -5,7 +5,7 @@ final class pe extends IntrusiveNode {
     static String field_p;
     static boolean field_i;
     static int field_u;
-    static GameplayScreen field_o;
+    static GameplayScreen gameplayScreen;
     static boolean[] heldKeys;
     static int field_t;
     static int field_q;
@@ -22,13 +22,13 @@ final class pe extends IntrusiveNode {
         heldKeys = null;
         if (param0 == 112) {
           field_p = null;
-          field_o = null;
+          gameplayScreen = null;
           field_k = null;
           return;
         }
         pe.a((byte) 91);
         field_p = null;
-        field_o = null;
+        gameplayScreen = null;
         field_k = null;
     }
 

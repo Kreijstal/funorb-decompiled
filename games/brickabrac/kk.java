@@ -39,14 +39,14 @@ final class kk {
         bitMasks = null;
     }
 
-    final static void a(boolean param0, String param1) {
+    final static void setMessageText(boolean obfuscationGuard, String text) {
         try {
-          if (!param0) {
+          if (!obfuscationGuard) {
             field_a = (String) null;
           }
-          qn.field_p = param1;
+          qn.messageText = text;
         } catch (RuntimeException runtimeException) {
-          throw qb.a((Throwable) ((Object) runtimeException), "kk.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw qb.a((Throwable) ((Object) runtimeException), "kk.A(" + obfuscationGuard + ',' + (text != null ? "{...}" : "null") + ')');
         }
     }
 

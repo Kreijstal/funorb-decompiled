@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class uk extends MenuScreen {
+final class MessageScreen extends MenuScreen {
     static mh field_r;
     static String field_u;
     static mh field_s;
@@ -15,7 +15,7 @@ final class uk extends MenuScreen {
         if (param0 == 88) {
           return;
         }
-        uk.a((String) null, -65L, 54);
+        MessageScreen.a((String) null, -65L, 54);
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5) {
@@ -38,7 +38,7 @@ final class uk extends MenuScreen {
             if (pe.field_u > param0) {
               ba.field_w = param0;
             }
-            lf.field_r[wi.field_m] = param5;
+            RankingsScreen.field_r[wi.field_m] = param5;
             ObjectHistoryBuffer.field_p[wi.field_m] = param1;
             ib.field_D[wi.field_m] = param4;
             var6 = param1 + param5 + param4;
@@ -62,7 +62,7 @@ final class uk extends MenuScreen {
           if (pe.field_u > param0) {
             ba.field_w = param0;
           }
-          lf.field_r[wi.field_m] = param5;
+          RankingsScreen.field_r[wi.field_m] = param5;
           ObjectHistoryBuffer.field_p[wi.field_m] = param1;
           ib.field_D[wi.field_m] = param4;
           var6Lifetime2 = param1 + param5 + param4;
@@ -83,7 +83,7 @@ final class uk extends MenuScreen {
           return;
         }
         var8 = (StringBuilder) null;
-        uk.a('￰', (StringBuilder) null, -124, false);
+        MessageScreen.a('￰', (StringBuilder) null, -124, false);
         cf.field_c[wi.field_m] = param2;
         fj.field_Pb[wi.field_m] = wi.field_m;
         ec.field_N[wi.field_m] = param0;
@@ -91,7 +91,7 @@ final class uk extends MenuScreen {
           if (pe.field_u > param0) {
             ba.field_w = param0;
           }
-          lf.field_r[wi.field_m] = param5;
+          RankingsScreen.field_r[wi.field_m] = param5;
           ObjectHistoryBuffer.field_p[wi.field_m] = param1;
           ib.field_D[wi.field_m] = param4;
           var6Lifetime1 = param1 + param5 + param4;
@@ -106,7 +106,7 @@ final class uk extends MenuScreen {
           if (pe.field_u > param0) {
             ba.field_w = param0;
           }
-          lf.field_r[wi.field_m] = param5;
+          RankingsScreen.field_r[wi.field_m] = param5;
           ObjectHistoryBuffer.field_p[wi.field_m] = param1;
           ib.field_D[wi.field_m] = param4;
           var6Lifetime1 = param1 + param5 + param4;
@@ -136,13 +136,13 @@ final class uk extends MenuScreen {
           var5 = (CharSequence) ((Object) param0);
           kb.field_Qb = gb.a(var5, param2 ^ 103);
           qn.field_n = param1;
-          ld.field_s = true;
+          MatchResultScreen.field_s = true;
         } catch (RuntimeException runtimeException) {
           throw qb.a((Throwable) ((Object) runtimeException), "uk.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
-    uk() {
+    MessageScreen() {
         super(11, 180, 460, 402, 0, new int[]{7});
     }
 
@@ -152,7 +152,7 @@ final class uk extends MenuScreen {
           return;
         }
         StringBuilder var5 = (StringBuilder) null;
-        uk.a('3', (StringBuilder) null, 57, true);
+        MessageScreen.a('3', (StringBuilder) null, 57, true);
         super.onEnter(usePointer, initialSelection, 103);
     }
 
@@ -199,7 +199,7 @@ final class uk extends MenuScreen {
     final void drawScreen(byte obfuscationGuard) {
         super.drawScreen((byte) -50);
         im.a(550, 5, 243, 5, 140, (byte) -107, 45);
-        nn.field_g.a(qn.field_p, 54, 149, 532, 225, 2, -1, 1, 1, 22);
+        nn.field_g.a(qn.messageText, 54, 149, 532, 225, 2, -1, 1, 1, 22);
         if (obfuscationGuard < -14) {
           this.a(0);
           return;
@@ -211,12 +211,12 @@ final class uk extends MenuScreen {
         if (obfuscationGuard) {
           return;
         }
-        uk.f((byte) -66);
+        MessageScreen.f((byte) -66);
     }
 
     final int getButtonTop(int buttonIndex, int obfuscationGuard) {
         if (obfuscationGuard != 1) {
-          uk.f((byte) 127);
+          MessageScreen.f((byte) 127);
           return this.buttonTop;
         }
         return this.buttonTop;

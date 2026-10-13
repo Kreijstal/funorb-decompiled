@@ -240,12 +240,12 @@ final class cp extends h {
           for (var3 = 0; qh.field_i.length > var3; var3++) {
             var4 = BrickABrac.field_K[var3];
             if (var4 < 0) {
-              var5 = cc.field_H;
+              var5 = NewAchievementsScreen.field_H;
             } else {
               if (mh.field_H.selectedIndex != var4) {
                 var5 = eb.field_n;
               } else {
-                var5 = vq.field_A;
+                var5 = LevelCompleteScreen.field_A;
               }
             }
             var6 = qh.field_i[var3];

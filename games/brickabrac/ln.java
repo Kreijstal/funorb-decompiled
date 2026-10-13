@@ -184,7 +184,7 @@ final class ln extends IntrusiveNode {
             return false;
           }
           if (wd.field_z == 2 &&
-            !LevelSelectScreen.a(gn.field_E, ba.field_z, param1 ^ -106)) {
+            !LevelSelectScreen.a(MultiplayerExitScreen.field_E, ba.field_z, param1 ^ -106)) {
             return false;
           }
           if (wd.field_z != 2 &&

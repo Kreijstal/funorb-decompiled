@@ -19,10 +19,10 @@ final class hk extends ib implements hf, en {
     private vb field_T;
 
     final static void a(byte param0) {
-        if (ld.field_t != -rn.field_i + 0 &&
-          -rn.field_i + 250 != ld.field_t) {
+        if (MatchResultScreen.field_t != -rn.field_i + 0 &&
+          -rn.field_i + 250 != MatchResultScreen.field_t) {
         }
-        ld.field_t = ld.field_t + 1;
+        MatchResultScreen.field_t = MatchResultScreen.field_t + 1;
         int var1 = -127 / ((29 - param0) / 32);
     }
 
@@ -206,26 +206,26 @@ final class hk extends ib implements hf, en {
         try {
           pg.menuScreens = new MenuScreen[22];
           GameCanvas.registerMenuScreen(-74, new MainMenuScreen());
-          GameCanvas.registerMenuScreen(-68, cf.a(1, -2635));
-          GameCanvas.registerMenuScreen(-90, cf.a(2, -2635));
-          GameCanvas.registerMenuScreen(-111, cf.a(3, -2635));
-          GameCanvas.registerMenuScreen(-109, cf.a(4, -2635));
-          GameCanvas.registerMenuScreen(-93, new ah());
-          GameCanvas.registerMenuScreen(-114, new lf());
-          GameCanvas.registerMenuScreen(-114, new md());
-          GameCanvas.registerMenuScreen(-104, new bl());
-          GameCanvas.registerMenuScreen(-66, new cc());
-          GameCanvas.registerMenuScreen(-55, new hq());
-          GameCanvas.registerMenuScreen(-75, new uk());
+          GameCanvas.registerMenuScreen(-68, cf.createPauseMenu(1, -2635));
+          GameCanvas.registerMenuScreen(-90, cf.createPauseMenu(2, -2635));
+          GameCanvas.registerMenuScreen(-111, cf.createPauseMenu(3, -2635));
+          GameCanvas.registerMenuScreen(-109, cf.createPauseMenu(4, -2635));
+          GameCanvas.registerMenuScreen(-93, new HighscoresScreen());
+          GameCanvas.registerMenuScreen(-114, new RankingsScreen());
+          GameCanvas.registerMenuScreen(-114, new InstructionsScreen());
+          GameCanvas.registerMenuScreen(-104, new AchievementsScreen());
+          GameCanvas.registerMenuScreen(-66, new NewAchievementsScreen());
+          GameCanvas.registerMenuScreen(-55, new SaveResultsPromptScreen());
+          GameCanvas.registerMenuScreen(-75, new MessageScreen());
           GameCanvas.registerMenuScreen(-63, new MembershipBenefitsScreen(archive));
           GameCanvas.registerMenuScreen(-60, new LevelSelectScreen(13, 0));
-          GameCanvas.registerMenuScreen(-105, new fp());
+          GameCanvas.registerMenuScreen(-105, new OptionsScreen());
           GameCanvas.registerMenuScreen(-69, new LevelSelectScreen(15, 1));
-          GameCanvas.registerMenuScreen(-71, new ol());
-          GameCanvas.registerMenuScreen(-54, cf.a(17, -2635));
-          GameCanvas.registerMenuScreen(-70, new vq());
-          GameCanvas.registerMenuScreen(-63, new gn());
-          GameCanvas.registerMenuScreen(-91, new ab());
+          GameCanvas.registerMenuScreen(-71, new LevelPackSelectScreen());
+          GameCanvas.registerMenuScreen(-54, cf.createPauseMenu(17, -2635));
+          GameCanvas.registerMenuScreen(-70, new LevelCompleteScreen());
+          GameCanvas.registerMenuScreen(-63, new MultiplayerExitScreen());
+          GameCanvas.registerMenuScreen(-91, new MatchCompleteScreen());
           int var2_int = -5 / ((obfuscationGuard - 70) / 42);
           GameCanvas.registerMenuScreen(-73, new TimedSplashScreen());
           si.field_k = rd.a(0, (byte) 19);
@@ -487,7 +487,7 @@ final class hk extends ib implements hf, en {
         if (fr.a((byte) 114) ||
           !(this.field_P.field_A.length() <= 0) &&
           !(0 >= this.field_T.field_A.length())) {
-          ah.a(this.field_P.field_A, 11455, this.field_T.field_A);
+          HighscoresScreen.a(this.field_P.field_A, 11455, this.field_T.field_A);
         }
         if (param0 != 25) {
           this.field_O = (d) null;

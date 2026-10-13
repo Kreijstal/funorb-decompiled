@@ -49,7 +49,7 @@ final class kc extends IntrusiveNode {
           e.a(param0, 115);
           ScorePopup.a(-37);
           fl.e(-41);
-          ld.field_t = -rn.field_i + 0;
+          MatchResultScreen.field_t = -rn.field_i + 0;
         } catch (RuntimeException runtimeException) {
           throw qb.a((Throwable) ((Object) runtimeException), "kc.D(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
         }
@@ -109,10 +109,10 @@ final class kc extends IntrusiveNode {
         an.field_k = var8.readLong(-32768);
         if (gj.field_a == 2) {
           gb.field_h = var8.readUnsignedShort(65280);
-          vq.field_H = var8.readUnsignedMedium((byte) -34);
+          LevelCompleteScreen.field_H = var8.readUnsignedMedium((byte) -34);
         } else {
           gb.field_h = 0;
-          vq.field_H = 0;
+          LevelCompleteScreen.field_H = 0;
         }
         stackIn_11_0 = (var8.readUnsignedByte(255) != 1) ? 0 : 1;
         var4 = stackIn_11_0;
@@ -194,10 +194,10 @@ final class kc extends IntrusiveNode {
         an.field_k = var8.readLong(-32768);
         if (gj.field_a == 2) {
           gb.field_h = var8.readUnsignedShort(65280);
-          vq.field_H = var8.readUnsignedMedium((byte) -34);
+          LevelCompleteScreen.field_H = var8.readUnsignedMedium((byte) -34);
         } else {
           gb.field_h = 0;
-          vq.field_H = 0;
+          LevelCompleteScreen.field_H = 0;
         }
         stackIn_11_0 = (var8.readUnsignedByte(255) != 1) ? 0 : 1;
         var4 = stackIn_11_0;

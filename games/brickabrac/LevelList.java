@@ -59,7 +59,7 @@ final class LevelList {
         ag.buttonLabels[6] = rd.field_b;
         ag.buttonLabels[8] = null;
         ag.buttonLabels[13] = di.field_a;
-        ag.buttonLabels[27] = ld.field_r;
+        ag.buttonLabels[27] = MatchResultScreen.field_r;
         ag.buttonLabels[2] = pj.field_e;
         sl.field_A[11] = tn.field_w;
         sl.field_A[5] = ef.field_c;
@@ -71,14 +71,14 @@ final class LevelList {
         ag.buttonLabels[39] = ki.field_o;
         ag.buttonLabels[23] = mh.field_mb;
         ag.buttonLabels[21] = a.field_r;
-        ag.buttonLabels[17] = vq.field_E[0];
+        ag.buttonLabels[17] = LevelCompleteScreen.field_E[0];
         ag.buttonLabels[38] = kk.field_a;
         if (param0 != -1) {
           return;
         }
         ag.buttonLabels[34] = f.field_b;
         ag.buttonLabels[28] = sn.field_r;
-        ag.buttonLabels[19] = jf.field_g;
+        ag.buttonLabels[19] = HighscorePackSelector.field_g;
         ag.buttonLabels[35] = LevelPackLoader.field_d;
         ag.buttonLabels[20] = pn.field_q;
         ag.buttonLabels[33] = t.field_c;
@@ -88,21 +88,21 @@ final class LevelList {
         ag.buttonLabels[42] = oc.field_u;
         ag.buttonLabels[37] = LevelPackLoader.field_i;
         sl.field_A[7] = ke.field_f;
-        sl.field_A[8] = oq.field_v;
+        sl.field_A[8] = PauseMenuScreen.field_v;
         ag.buttonLabels[15] = pl.field_c[1];
         ag.buttonLabels[16] = pl.field_c[2];
         sl.field_A[12] = uo.field_b;
         sl.field_A[10] = eh.field_d;
-        ag.buttonLabels[18] = vq.field_E[1];
-        ag.buttonLabels[26] = oq.field_u;
+        ag.buttonLabels[18] = LevelCompleteScreen.field_E[1];
+        ag.buttonLabels[26] = PauseMenuScreen.field_u;
         ag.buttonLabels[22] = d.field_D;
         sl.field_A[13] = TimedSplashScreen.field_s;
         hm.field_b = new String[]{mi.field_a, qm.field_c, oa.field_Pb, s.field_a};
         sl.field_A[16] = dc.field_d;
-        qn.field_u = new String[]{vh.field_T, oc.field_u};
+        qn.packNames = new String[]{vh.field_T, oc.field_u};
         eh.field_e = new String[]{ag.field_C, bh.field_ub, qo.field_P, bq.field_f, jh.field_c};
         ar.field_a = new String[]{kk.field_a};
-        sl.field_A[15] = ab.field_F;
+        sl.field_A[15] = MatchCompleteScreen.field_F;
         ih.field_j = new String[]{ff.field_g, pq.field_m, bm.field_b, RectangleBody.field_t};
         ml.field_e = new String[]{qi.field_N, bg.field_o, ue.field_a, eb.field_m, ch.field_j, vg.field_a, nk.field_f, tm.field_h};
         sl.field_A[17] = pq.field_q;

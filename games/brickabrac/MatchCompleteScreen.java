@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ab extends ld {
+final class MatchCompleteScreen extends MatchResultScreen {
     static int[][] field_C;
     static String field_z;
     static String[] field_y;
@@ -23,14 +23,14 @@ final class ab extends ld {
     final void handleNavigationKey(int obfuscationGuard, int keyCode, char character) {
         if (obfuscationGuard != -120) {
           String var5 = (String) null;
-          ab.a((String) null, 111);
+          MatchCompleteScreen.a((String) null, 111);
         }
         this.selection.navigateHorizontal(0, -1);
     }
 
-    final int f(int param0) {
-        if (param0 != -6) {
-          ab.f((byte) -118);
+    final int getResultBottom(int obfuscationGuard) {
+        if (obfuscationGuard != -6) {
+          MatchCompleteScreen.f((byte) -118);
         }
         return 480;
     }
@@ -44,7 +44,7 @@ final class ab extends ld {
         String stackIn_34_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (ab.a(param1, 0)) {
+          if (MatchCompleteScreen.a(param1, 0)) {
             return false;
           }
           if (DualLinkDeque.a((byte) 54, param1)) {
@@ -89,7 +89,7 @@ final class ab extends ld {
         }
     }
 
-    ab() {
+    MatchCompleteScreen() {
         super(20, lo.field_a);
     }
 
@@ -128,7 +128,7 @@ final class ab extends ld {
 
     final static id a(byte param0, long param1) {
         if (param0 != 96) {
-          ab.a((byte) 62, 38L);
+          MatchCompleteScreen.a((byte) 62, 38L);
         }
         return (id) (eq.field_m.a(param1, param0 ^ -97));
     }

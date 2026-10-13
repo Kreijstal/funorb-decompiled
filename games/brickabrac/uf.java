@@ -216,7 +216,7 @@ final class uf {
         var3 = BrickABrac.field_J ? 1 : 0;
         try {
           for (var2_int = param1; var2_int < param0; var2_int++) {
-            vq.a(5 + ip.field_r.nextBoundedInt(-37880252, 2), 1273378209, ip.field_r.nextBoundedInt(-37880252, 3) + 9);
+            LevelCompleteScreen.a(5 + ip.field_r.nextBoundedInt(-37880252, 2), 1273378209, ip.field_r.nextBoundedInt(-37880252, 3) + 9);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -253,7 +253,7 @@ final class uf {
             stackIn_6_0 = hd.field_b;
             return stackIn_6_0;
           }
-          var8 = jf.a(0, param2);
+          var8 = HighscorePackSelector.a(0, param2);
           var5 = 42 / ((15 - param3) / 34);
           if (var8 == null) {
             stackIn_9_0 = rd.a(to.field_h, new String[]{param2}, (byte) 103);

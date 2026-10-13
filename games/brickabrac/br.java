@@ -183,7 +183,7 @@ final class br extends mh {
             }
             var6 = var6 + this.field_Vb * 2;
             var7Lifetime4 = this.field_Zb * this.field_Wb + this.field_Sb + this.field_Sb;
-            var8Lifetime4 = fp.a(-1, var6, param4, param3);
+            var8Lifetime4 = OptionsScreen.a(-1, var6, param4, param3);
             var9 = br.a(var7Lifetime4, param0, param2, 122);
             this.a(var7Lifetime4, var9, var8Lifetime4, var6, (byte) 64);
             for (var10 = 0; var10 < this.field_Wb; var10++) {
@@ -200,7 +200,7 @@ final class br extends mh {
           }
           var6 = var6 + this.field_Vb * 2;
           var7Lifetime3 = this.field_Zb * this.field_Wb + this.field_Sb + this.field_Sb;
-          var8Lifetime3 = fp.a(-1, var6, param4, param3);
+          var8Lifetime3 = OptionsScreen.a(-1, var6, param4, param3);
           var9Lifetime2 = br.a(var7Lifetime3, param0, param2, 122);
           this.a(var7Lifetime3, var9Lifetime2, var8Lifetime3, var6, (byte) 64);
           for (var10Lifetime2 = 0; var10Lifetime2 < this.field_Wb; var10Lifetime2++) {
@@ -223,7 +223,7 @@ final class br extends mh {
           }
           var6Lifetime1 = var6Lifetime1 + this.field_Vb * 2;
           var7Lifetime1 = this.field_Zb * this.field_Wb + this.field_Sb + this.field_Sb;
-          var8Lifetime1 = fp.a(-1, var6Lifetime1, param4, param3);
+          var8Lifetime1 = OptionsScreen.a(-1, var6Lifetime1, param4, param3);
           var9Lifetime1 = br.a(var7Lifetime1, param0, param2, 122);
           this.a(var7Lifetime1, var9Lifetime1, var8Lifetime1, var6Lifetime1, (byte) 64);
           for (var10Lifetime1 = 0; var10Lifetime1 < this.field_Wb; var10Lifetime1++) {
@@ -239,7 +239,7 @@ final class br extends mh {
           }
           var6Lifetime1 = var6Lifetime1 + this.field_Vb * 2;
           var7Lifetime1 = this.field_Zb * this.field_Wb + this.field_Sb + this.field_Sb;
-          var8Lifetime1 = fp.a(-1, var6Lifetime1, param4, param3);
+          var8Lifetime1 = OptionsScreen.a(-1, var6Lifetime1, param4, param3);
           var9Lifetime1 = br.a(var7Lifetime1, param0, param2, 122);
           this.a(var7Lifetime1, var9Lifetime1, var8Lifetime1, var6Lifetime1, (byte) 64);
           for (var10Lifetime1 = 0; var10Lifetime1 < this.field_Wb; var10Lifetime1++) {

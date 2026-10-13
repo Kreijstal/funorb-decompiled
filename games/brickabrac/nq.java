@@ -67,7 +67,7 @@ final class nq extends IntrusiveNode {
             }
           }
           var9Lifetime1 = var17.height;
-          jf.d(param2 ^ 88);
+          HighscorePackSelector.d(param2 ^ 88);
           var17.bindRasterTarget();
           Rasterizer2D.grayscaleRectangle(0, 0, Rasterizer2D.width, Rasterizer2D.height);
           var15 = new RgbSprite(var9Lifetime1, var9Lifetime1);
@@ -122,7 +122,7 @@ final class nq extends IntrusiveNode {
         if (param0 != 2) {
           field_i = 90;
         }
-        ld.field_s = true;
+        MatchResultScreen.field_s = true;
         ng.field_b = 0;
     }
 

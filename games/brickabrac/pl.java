@@ -3,7 +3,7 @@
  */
 final class pl {
     static tp[] field_f;
-    static int[] field_b;
+    static int[] pendingAchievementMask;
     static String field_e;
     static String[] field_c;
     static RgbSprite field_a;
@@ -55,7 +55,7 @@ final class pl {
           var6.writeByte(15, 4);
           var6.writeByte(81, param2);
           if (param5 >= -55) {
-            field_b = (int[]) null;
+            pendingAchievementMask = (int[]) null;
           }
           var8 = param4;
           if (param3) {
@@ -78,7 +78,7 @@ final class pl {
         field_c = null;
         field_a = null;
         field_e = null;
-        field_b = null;
+        pendingAchievementMask = null;
     }
 
     final static void a(RgbSprite param0, int param1) {
@@ -262,7 +262,7 @@ final class pl {
 
     static {
         field_e = "Ignore";
-        field_b = Ball.d(8);
+        pendingAchievementMask = Ball.d(8);
         keyChangeWriteIndex = 0;
         field_c = new String[]{"All scores", "My scores", "Best each"};
     }

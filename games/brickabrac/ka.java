@@ -50,9 +50,9 @@ final class ka extends IntrusiveNode {
           }
           boolean decompiledFrameRemainder0 = true;
           if (param0 == null) {
-            decompiledFrameRemainder0 = (null == vq.field_J);
+            decompiledFrameRemainder0 = (null == LevelCompleteScreen.field_J);
           } else {
-            decompiledFrameRemainder0 = !(param0.equals(vq.field_J));
+            decompiledFrameRemainder0 = !(param0.equals(LevelCompleteScreen.field_J));
           }
           if (decompiledFrameRemainder0) {
             if (!th.field_h &&
@@ -85,7 +85,7 @@ final class ka extends IntrusiveNode {
             }
             b.field_a = oo.field_v;
           }
-          vq.field_J = param0;
+          LevelCompleteScreen.field_J = param0;
           if (!th.field_h &&
             go.field_e < ue.field_e &&
             kb.pointerChanged) {
@@ -94,7 +94,7 @@ final class ka extends IntrusiveNode {
             ad.field_j = ll.field_b;
           }
           if (th.field_h &&
-            go.field_e == ol.field_y) {
+            go.field_e == LevelPackSelectScreen.field_y) {
             th.field_h = false;
             go.field_e = 0;
           }
@@ -182,8 +182,8 @@ final class ka extends IntrusiveNode {
           var7 = 0;
           var8 = 0;
           if (o.field_e != null && (null != NodeDeque.field_a ||
-            null != bl.field_F ||
-            null != ld.field_v ||
+            null != AchievementsScreen.field_F ||
+            null != MatchResultScreen.field_v ||
             null != me.field_e)) {
             var9 = 0;
             while (!(var9 >= cq.field_p)) {
@@ -197,9 +197,9 @@ final class ka extends IntrusiveNode {
                 NodeDeque.field_a[var9][var10_int]) {
                 var5_int = 1;
               }
-              if (bl.field_F != null &&
-                bl.field_F[var9] != null) {
-                var11 = bl.field_F[var9][var10_int];
+              if (AchievementsScreen.field_F != null &&
+                AchievementsScreen.field_F[var9] != null) {
+                var11 = AchievementsScreen.field_F[var9][var10_int];
                 if (var11 != 0 &&
                   !ea.field_g) {
                   var5_int = 1;
@@ -212,9 +212,9 @@ final class ka extends IntrusiveNode {
                 null != me.field_e[var9]) {
                 var8 = var8 | me.field_e[var9][var10_int];
               }
-              if (null != ld.field_v &&
-                ld.field_v[var9] != null) {
-                var11Lifetime2 = ld.field_v[var9][var10_int];
+              if (null != MatchResultScreen.field_v &&
+                MatchResultScreen.field_v[var9] != null) {
+                var11Lifetime2 = MatchResultScreen.field_v[var9][var10_int];
                 if (var11Lifetime2 != 0 &&
                   !ea.field_g) {
                   var5_int = 1;
@@ -248,7 +248,7 @@ final class ka extends IntrusiveNode {
             if (null == var13.field_bb) {
               var13.field_Rb = new mh(0L, vb.field_K);
               var13.a(var13.field_Rb, 0);
-              var13.field_dc = new mh(0L, fp.field_v);
+              var13.field_dc = new mh(0L, OptionsScreen.field_v);
               if (vd.field_e) {
                 var13.a(var13.field_dc, 0);
               }
@@ -442,7 +442,7 @@ final class ka extends IntrusiveNode {
                   } else {
                     var26_int = -var13.field_ac + var7;
                     if (var26_int == 1) {
-                      var25 = hq.field_w;
+                      var25 = SaveResultsPromptScreen.field_w;
                     }
                     var25 = rd.a(Brick.field_F, new String[]{null, Integer.toString(var26_int)}, (byte) 103);
                   }
@@ -491,9 +491,9 @@ final class ka extends IntrusiveNode {
                       !var13.field_ec) {
                       var30 = 1;
                     }
-                    if (null != bl.field_F &&
-                      bl.field_F[var28_int] != null) {
-                      var31_int = bl.field_F[var28_int][var29];
+                    if (null != AchievementsScreen.field_F &&
+                      AchievementsScreen.field_F[var28_int] != null) {
+                      var31_int = AchievementsScreen.field_F[var28_int][var29];
                       if (var31_int != 0 &&
                         !ea.field_g &&
                         !var13.field_ec) {
@@ -503,9 +503,9 @@ final class ka extends IntrusiveNode {
                         var30 = 1;
                       }
                     }
-                    if (null != ld.field_v &&
-                      null != ld.field_v[var28_int]) {
-                      var31_intLifetime1 = ld.field_v[var28_int][var29];
+                    if (null != MatchResultScreen.field_v &&
+                      null != MatchResultScreen.field_v[var28_int]) {
+                      var31_intLifetime1 = MatchResultScreen.field_v[var28_int][var29];
                       if (var31_intLifetime1 != 0 &&
                         !ea.field_g &&
                         !var13.field_ec) {
@@ -726,8 +726,8 @@ final class ka extends IntrusiveNode {
           var21Lifetime1 = param2[0] - param0[0];
           var22Lifetime1 = param2[1] - param0[1];
           var23Lifetime1 = -param0[2] + param2[2];
-          var9 = param0[4] * var22Lifetime1 + var21Lifetime1 * param0[3] + var23Lifetime1 * param0[5] >> -lc.field_k + 16;
-          var10 = var23Lifetime1 * param0[8] + (param0[7] * var22Lifetime1 + var21Lifetime1 * param0[6]) >> -lc.field_k + 16;
+          var9 = param0[4] * var22Lifetime1 + var21Lifetime1 * param0[3] + var23Lifetime1 * param0[5] >> -LevelPackCard.field_k + 16;
+          var10 = var23Lifetime1 * param0[8] + (param0[7] * var22Lifetime1 + var21Lifetime1 * param0[6]) >> -LevelPackCard.field_k + 16;
           var11 = param0[11] * var23Lifetime1 + (var21Lifetime1 * param0[9] + var22Lifetime1 * param0[10]) >> 16;
           var21Lifetime2 = mg.field_d;
           var22Lifetime2 = mg.field_a;
@@ -737,8 +737,8 @@ final class ka extends IntrusiveNode {
               var24Lifetime1 = param5.field_B[var23Lifetime2];
               var25Lifetime1 = param5.field_Q[var23Lifetime2];
               var26Lifetime1 = param5.field_P[var23Lifetime2];
-              var27Lifetime1 = var9 + (var24Lifetime1 * var12 + var15 * var25Lifetime1 + var26Lifetime1 * var18 >> -lc.field_k + 16);
-              var28Lifetime1 = var10 + (var26Lifetime1 * var19 + var24Lifetime1 * var13 + var25Lifetime1 * var16 >> -lc.field_k + 16);
+              var27Lifetime1 = var9 + (var24Lifetime1 * var12 + var15 * var25Lifetime1 + var26Lifetime1 * var18 >> -LevelPackCard.field_k + 16);
+              var28Lifetime1 = var10 + (var26Lifetime1 * var19 + var24Lifetime1 * var13 + var25Lifetime1 * var16 >> -LevelPackCard.field_k + 16);
               var29Lifetime1 = var11 + (var24Lifetime1 * var14 + var17 * var25Lifetime1 + var26Lifetime1 * var20 >> 16);
               stackIn_65_0 = ~var29Lifetime1;
               stackIn_65_1 = -51;
@@ -757,8 +757,8 @@ final class ka extends IntrusiveNode {
                   Paddle.field_v[var23Lifetime2] = -2147483648;
                 }
                 if (param3) {
-                  fh.field_f[var23Lifetime2] = var27Lifetime1 >> lc.field_k;
-                  ep.field_f[var23Lifetime2] = var28Lifetime1 >> lc.field_k;
+                  fh.field_f[var23Lifetime2] = var27Lifetime1 >> LevelPackCard.field_k;
+                  ep.field_f[var23Lifetime2] = var28Lifetime1 >> LevelPackCard.field_k;
                   ml.field_c[var23Lifetime2] = var29Lifetime1;
                 }
                 var23Lifetime2++;
@@ -785,14 +785,14 @@ final class ka extends IntrusiveNode {
                   var24Lifetime1 = param5.field_I[var23Lifetime2];
                   var25Lifetime1 = param5.field_D[var23Lifetime2];
                   var26Lifetime1 = param5.field_u[var23Lifetime2];
-                  lc.field_l[var23Lifetime2] = (var24Lifetime1 * var12 + var25Lifetime1 * var15 + var18 * var26Lifetime1 >> 16) + var9;
+                  LevelPackCard.field_l[var23Lifetime2] = (var24Lifetime1 * var12 + var25Lifetime1 * var15 + var18 * var26Lifetime1 >> 16) + var9;
                   bf.field_M[var23Lifetime2] = var10 + (var19 * var26Lifetime1 + (var13 * var24Lifetime1 + var16 * var25Lifetime1) >> 16);
-                  vq.field_G[var23Lifetime2] = (var26Lifetime1 * var20 + (var24Lifetime1 * var14 + var25Lifetime1 * var17) >> 16) + var11;
+                  LevelCompleteScreen.field_G[var23Lifetime2] = (var26Lifetime1 * var20 + (var24Lifetime1 * var14 + var25Lifetime1 * var17) >> 16) + var11;
                   var24Lifetime1 = param5.field_g[var23Lifetime2];
                   var25Lifetime1 = param5.field_s[var23Lifetime2];
                   var26Lifetime1 = param5.field_i[var23Lifetime2];
                   vd.field_b[var23Lifetime2] = var9 + (var25Lifetime1 * var15 + (var24Lifetime1 * var12 + var26Lifetime1 * var18) >> 16);
-                  cc.field_I[var23Lifetime2] = var10 + (var19 * var26Lifetime1 + var13 * var24Lifetime1 + var16 * var25Lifetime1 >> 16);
+                  NewAchievementsScreen.field_I[var23Lifetime2] = var10 + (var19 * var26Lifetime1 + var13 * var24Lifetime1 + var16 * var25Lifetime1 >> 16);
                   il.field_D[var23Lifetime2] = (var14 * var24Lifetime1 - (-(var17 * var25Lifetime1) - var26Lifetime1 * var20) >> 16) + var11;
                   var23Lifetime2++;
                   if (var30 != 0) {

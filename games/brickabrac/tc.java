@@ -88,7 +88,7 @@ final class tc {
         var3 = param0.field_p;
         var4 = param0.field_G;
         var5 = param0.field_k;
-        var15 = ah.field_u;
+        var15 = HighscoresScreen.field_u;
         var14 = var15;
         var6 = var14;
         var7 = param0.field_g;
@@ -190,7 +190,7 @@ final class tc {
         param0.field_p = var3;
         param0.field_G = var4;
         param0.field_k = var5;
-        ah.field_u = var6;
+        HighscoresScreen.field_u = var6;
         param0.field_g = var7;
         param0.field_K = var8;
         param0.field_j = var9;
@@ -262,8 +262,8 @@ final class tc {
         var24 = null;
         var25 = null;
         param0.field_u = 1;
-        if (ah.field_u == null) {
-          ah.field_u = new int[param0.field_u * 100000];
+        if (HighscoresScreen.field_u == null) {
+          HighscoresScreen.field_u = new int[param0.field_u * 100000];
         }
         var26 = 1;
         while (true) {
@@ -434,14 +434,14 @@ final class tc {
                 param0.field_i[var4] = param0.field_i[var4] + param0.field_i[var4 - 1];
               }
               for (var4 = 0; var4 < var14; var4++) {
-                var1 = (byte)(ah.field_u[var4] & 255);
+                var1 = (byte)(HighscoresScreen.field_u[var4] & 255);
                 dupTemp$1 = param0.field_i[var1 & 255];
-                ah.field_u[dupTemp$1] = ah.field_u[dupTemp$1] | var4 << 8;
+                HighscoresScreen.field_u[dupTemp$1] = HighscoresScreen.field_u[dupTemp$1] | var4 << 8;
                 param0.field_i[var1 & 255] = param0.field_i[var1 & 255] + 1;
               }
-              param0.field_g = ah.field_u[param0.field_D] >> 8;
+              param0.field_g = HighscoresScreen.field_u[param0.field_D] >> 8;
               param0.field_G = 0;
-              param0.field_g = ah.field_u[param0.field_g];
+              param0.field_g = HighscoresScreen.field_u[param0.field_g];
               param0.field_k = (byte)(param0.field_g & 255);
               param0.field_g = param0.field_g >> 8;
               param0.field_G = param0.field_G + 1;
@@ -505,7 +505,7 @@ final class tc {
               }
               dupTemp$0 = param0.field_I[var1 & 255] & 255;
               param0.field_c[dupTemp$0] = param0.field_c[dupTemp$0] + 1;
-              ah.field_u[var14] = param0.field_I[var1 & 255] & 255;
+              HighscoresScreen.field_u[var14] = param0.field_I[var1 & 255] & 255;
               var14++;
               if (var12 == 0) {
                 var11++;
@@ -562,7 +562,7 @@ final class tc {
             var1 = param0.field_I[param0.field_o[param0.field_C[0]] & 255];
             param0.field_c[var1 & 255] = param0.field_c[var1 & 255] + var15;
             while (var15 > 0) {
-              ah.field_u[var14] = var1 & 255;
+              HighscoresScreen.field_u[var14] = var1 & 255;
               var14++;
               var15--;
             }

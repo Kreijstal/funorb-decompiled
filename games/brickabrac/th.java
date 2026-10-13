@@ -44,7 +44,7 @@ final class th {
           var7 = (CharSequence) ((Object) param4);
           kb.field_Qb = gb.a(var7, 64);
           qn.field_n = param1;
-          var6 = hq.a(param0, cp.field_K, ko.field_j, nb.field_e, (byte) -78);
+          var6 = SaveResultsPromptScreen.a(param0, cp.field_K, ko.field_j, nb.field_e, (byte) -78);
           if (param3) {
             field_f = (String) null;
           }
@@ -91,7 +91,7 @@ final class th {
           if (param1 >= -81) {
             th.a((byte) -77);
           }
-          stackIn_3_0 = bl.a(0, false, param0);
+          stackIn_3_0 = AchievementsScreen.a(0, false, param0);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

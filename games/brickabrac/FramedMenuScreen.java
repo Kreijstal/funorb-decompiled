@@ -1,19 +1,19 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class lh extends MenuScreen {
+class FramedMenuScreen extends MenuScreen {
     static String field_r;
     static String field_t;
     static tg field_s;
 
-    lh(int param0, int param1, int param2, int param3, int param4, int[] param5) {
-        super(param0, param1, param2, param3, param4, param5);
+    FramedMenuScreen(int screenId, int buttonLeft, int buttonRight, int buttonTop, int buttonSpacing, int[] actionIds) {
+        super(screenId, buttonLeft, buttonRight, buttonTop, buttonSpacing, actionIds);
     }
 
     public static void f(byte param0) {
         field_t = null;
         if (param0 >= -64) {
-          lh.f(72);
+          FramedMenuScreen.f(72);
           field_s = null;
           field_r = null;
           return;
@@ -22,10 +22,10 @@ class lh extends MenuScreen {
         field_r = null;
     }
 
-    final void g(int param0) {
+    final void drawMenuFrame(int obfuscationGuard) {
         MenuButton var5 = null;
         MenuButton var2 = this.buttons[0];
-        if (param0 > 34) {
+        if (obfuscationGuard > 34) {
           var5 = this.buttons[this.selection.itemCount - 1];
           im.a(30 + (-this.buttonLeft + this.buttonRight), 0, -var2.y + var5.height + (var5.y + 30), 0, -15 + var2.y, (byte) -88, -15 + this.buttonLeft);
           return;
@@ -79,7 +79,7 @@ class lh extends MenuScreen {
             var5 = param4.getFile();
             var6 = 0;
             if (param1 != 60) {
-              lh.f((byte) 78);
+              FramedMenuScreen.f((byte) 78);
             }
             while (true) {
               if (var5.regionMatches(var6, "/l=", 0, 3)) {

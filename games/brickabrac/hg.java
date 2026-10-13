@@ -39,7 +39,7 @@ final class hg {
             !sk.field_G.equals(param0.getParameter("session"))) {
             var4Lifetime1 = sk.field_G;
           }
-          stackIn_11_0 = lh.a((String) (var3), (byte) 60, (String) (var4Lifetime1), -1, param1);
+          stackIn_11_0 = FramedMenuScreen.a((String) (var3), (byte) 60, (String) (var4Lifetime1), -1, param1);
           return stackIn_11_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

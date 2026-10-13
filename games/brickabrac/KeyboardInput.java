@@ -48,7 +48,7 @@ final class KeyboardInput implements java.awt.event.KeyListener, java.awt.event.
           }
           var8.unlink((byte) 111);
           var8.unlinkSecondary(3);
-          ol.field_w = ol.field_w - 1;
+          LevelPackSelectScreen.field_w = LevelPackSelectScreen.field_w - 1;
           var9 = k.field_h;
           var9.writeCipheredOpcode(-13413, param0);
           var9.position = var9.position + 1;
@@ -351,7 +351,7 @@ final class KeyboardInput implements java.awt.event.KeyListener, java.awt.event.
           vc var3 = (vc) null;
           KeyboardInput.a((vc) null, -56);
         }
-        return rd.a(lh.field_t, new String[]{(param1 >= 10 ? "" : "0") + Integer.toString(param1)}, (byte) 103).toLowerCase();
+        return rd.a(FramedMenuScreen.field_t, new String[]{(param1 >= 10 ? "" : "0") + Integer.toString(param1)}, (byte) 103).toLowerCase();
     }
 
     public static void a(byte param0) {

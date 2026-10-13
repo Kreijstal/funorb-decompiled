@@ -106,7 +106,7 @@ final class cq extends IntrusiveNode {
           stackIn_2_1[stackIn_2_2] = stackIn_3_3;
           var5 = stackIn_2_0;
           DelegatingCanvas.field_c = 13;
-          fp.field_z = 57;
+          OptionsScreen.field_z = 57;
           og.field_Wb = 3;
           ep.field_i = 23;
           hg.field_e = 51550 + (hi.field_w.nextInt(92) << 16);

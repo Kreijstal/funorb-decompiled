@@ -13,7 +13,7 @@ abstract class fc {
 
     final static void a(int param0, RgbSprite param1) {
         try {
-          jf.d(-99);
+          HighscorePackSelector.d(-99);
           Rasterizer2D.bind(param1.pixels, param1.canvasWidth, param1.canvasHeight);
           if (param0 > -46) {
             tp[] var3 = (tp[]) null;

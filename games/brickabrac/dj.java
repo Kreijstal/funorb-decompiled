@@ -182,7 +182,7 @@ abstract class dj {
         kd.field_d[17] = pb.field_l;
         kd.field_d[19] = tq.field_g;
         kd.field_d[param0] = ed.field_a;
-        kd.field_d[11] = bl.field_I;
+        kd.field_d[11] = AchievementsScreen.field_I;
     }
 
     static {

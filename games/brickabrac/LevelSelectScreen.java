@@ -96,8 +96,8 @@ final class LevelSelectScreen extends MenuScreen {
         im.a(550, 5, 33, 5, 140, (byte) -106, 45);
         im.a(160, 5, 243, 5, 178, (byte) -88, 45);
         im.a(385, 5, 243, 5, 178, (byte) -124, 210);
-        nn.field_g.b(qn.field_u[this.pack.packId], 320, 1 + (178 - nn.field_g.field_L), 0, -1);
-        da.field_E[this.pack.packId].e(565, 140, -2048, 4096);
+        nn.field_g.b(qn.packNames[this.pack.packId], 320, 1 + (178 - nn.field_g.field_L), 0, -1);
+        da.packSelectorIcons[this.pack.packId].e(565, 140, -2048, 4096);
         if (this.levelList.selectedLevelIndex >= 0 &&
           this.levelList.selectedLevelIndex < this.pack.levelCount) {
           var2 = nn.field_g.field_B + 2;
@@ -129,7 +129,7 @@ final class LevelSelectScreen extends MenuScreen {
               }
               Rasterizer2D.fillRectangleAlpha(stackIn_17_0, stackIn_17_1, stackIn_17_2, stackIn_17_3, stackIn_17_4, stackIn_18_5);
             }
-            var4 = vq.field_F;
+            var4 = LevelCompleteScreen.field_F;
             var5 = 210 + (385 - var4.canvasWidth) / 2;
             var6 = (243 - var4.canvasHeight) / 2 + 178;
             var4.b(var5, var6, 196);

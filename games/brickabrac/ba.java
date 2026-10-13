@@ -92,7 +92,7 @@ class ba extends DualLinkNode {
             ba.b(false);
           }
           for (var5 = param2; param3 > var5; var5++) {
-            var4_int = vq.field_D[(var4_int ^ param0[var5]) & 255] ^ var4_int >>> 8;
+            var4_int = LevelCompleteScreen.field_D[(var4_int ^ param0[var5]) & 255] ^ var4_int >>> 8;
           }
           var4_int = ~var4_int;
           stackIn_7_0 = var4_int;

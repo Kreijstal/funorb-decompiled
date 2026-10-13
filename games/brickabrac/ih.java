@@ -42,7 +42,7 @@ abstract class ih {
             var6 = param0;
           } else {
             var8 = (CharSequence) ((Object) param0);
-            var4_long = ah.a(false, var8);
+            var4_long = HighscoresScreen.a(false, var8);
           }
           stackIn_4_0 = he.a(var4_long, 20, param1, param2, (String) (var6));
           return stackIn_4_0;
@@ -181,10 +181,10 @@ abstract class ih {
     final static void a(byte param0, boolean param1) {
         if (param0 > -16) {
           ih.c(-18);
-          lf.a(param1, -58, true);
+          RankingsScreen.a(param1, -58, true);
           return;
         }
-        lf.a(param1, -58, true);
+        RankingsScreen.a(param1, -58, true);
     }
 
     ih() {

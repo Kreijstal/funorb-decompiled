@@ -228,14 +228,14 @@ final class sq {
         var5 = (-var3 + var1) / 1024L;
         var3 = var3 / 1024L;
         var1 = var1 / 1024L;
-        if (~lf.field_u != ~var1) {
+        if (~RankingsScreen.field_u != ~var1) {
           bj.field_P.field_l.setLength(0);
           DelegatingCanvas.a(-9, var5, bj.field_P.field_l);
           discarded$10 = bj.field_P.field_l.append(" kB / ");
           DelegatingCanvas.a(-9, var1, bj.field_P.field_l);
           discarded$11 = bj.field_P.field_l.append(" kB");
           mk.field_j = var5;
-          lf.field_u = var1;
+          RankingsScreen.field_u = var1;
           ff.field_d.addLast(bj.field_P, (byte) 3);
           if (!param0) {
             if (im.field_g) {
@@ -293,7 +293,7 @@ final class sq {
         DelegatingCanvas.a(-9, var1, bj.field_P.field_l);
         discarded$17 = bj.field_P.field_l.append(" kB");
         mk.field_j = var5;
-        lf.field_u = var1;
+        RankingsScreen.field_u = var1;
         ff.field_d.addLast(bj.field_P, (byte) 3);
         if (!param0) {
           if (im.field_g) {

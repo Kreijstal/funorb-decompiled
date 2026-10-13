@@ -102,9 +102,9 @@ final class dk extends ib implements ha, en, vf {
               var7Lifetime1 = var9Lifetime1;
             }
           }
-          lk.field_p = var7Lifetime1 + (cc.field_J - (var7Lifetime1 >> 1));
+          lk.field_p = var7Lifetime1 + (NewAchievementsScreen.field_J - (var7Lifetime1 >> 1));
           bg.field_r = fi.field_r.itemCount * (GameCanvas.field_f + dj.field_g << 1);
-          LevelPack.field_k = cc.field_J - (var7Lifetime1 >> 1);
+          LevelPack.field_k = NewAchievementsScreen.field_J - (var7Lifetime1 >> 1);
           var8Lifetime2 = 0;
           while (kn.field_E.length > var8Lifetime2) {
             stackIn_38_0 = bg.field_r;
@@ -621,10 +621,10 @@ final class dk extends ib implements ha, en, vf {
         var3 = var3 + this.a(IntNode.field_l, this.field_M, var3, 37, 170);
         var3 = var3 + (this.a(this.field_H, var3, "", 20, 170, pg.field_o, 170) + 5);
         var3 = var3 + this.a(wc.field_c, this.field_O, var3, 84, 170);
-        var3 = var3 + (this.a(170, md.field_x, cp.field_G, -3, this.field_L, var3) + 5);
+        var3 = var3 + (this.a(170, InstructionsScreen.field_x, cp.field_G, -3, this.field_L, var3) + 5);
         var3 = var3 + (this.a(170, dj.field_h, BlankScreen.field_j, -3, this.field_J, var3) + 5);
         var3 = var3 + this.a(this.field_S, fk.field_d, 170, 111, var3);
-        ma var4 = new ma(46, var3, this.field_t - 90, 25, this.field_N, true, -120 + this.field_t, 5, og.field_Yb, 11579568, vq.field_z);
+        ma var4 = new ma(46, var3, this.field_t - 90, 25, this.field_N, true, -120 + this.field_t, 5, og.field_Yb, 11579568, LevelCompleteScreen.field_z);
         this.a(var4, true);
         var3 = var3 + var4.field_s;
         um var5 = new um(a.field_u, 0, 0, 0, 0, 16777215, -1, 0, 0, a.field_u.field_F, -1, 2147483647, true);

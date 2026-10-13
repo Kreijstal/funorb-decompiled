@@ -35,15 +35,15 @@ final class ij implements wb {
         NodeDeque.a(127, 50);
         pa var2 = new pa(cd.field_h);
         RgbSprite[] var3 = (RgbSprite[]) null;
-        ie.a(1, (RgbSprite[]) null, Ball.field_G, 240, af.field_A, 8, 2, nn.field_g, 0, 2, 100, 8, 0, 320, 0);
+        ie.a(1, (RgbSprite[]) null, Ball.field_G, 240, AchievementBrowserScreen.field_A, 8, 2, nn.field_g, 0, 2, 100, 8, 0, 320, 0);
         hd.a(93, var2, 20, 20);
         if (param0) {
           discarded$0 = this.b((byte) -1);
         }
         RgbSprite[] var4 = (RgbSprite[]) null;
-        nh.a((RgbSprite[]) null, 240, 8, 320, 0, nn.field_g, 2, 0, 1, af.field_A, 0, Ball.field_G, 2, (byte) -110, 8);
+        nh.a((RgbSprite[]) null, 240, 8, 320, 0, nn.field_g, 2, 0, 1, AchievementBrowserScreen.field_A, 0, Ball.field_G, 2, (byte) -110, 8);
         ka.a(20, -97, 20, var2);
-        oa.a(jf.field_d, CircleBody.field_t, 2, PlayerBoard.field_jb, DualLinkNode.field_k, wn.field_c, (RgbSprite[][]) null, gq.field_Rb, true, 1, jb.field_I, PlayerBoard.field_jb, wd.field_C, qh.field_h, 22287);
+        oa.a(HighscorePackSelector.field_d, CircleBody.field_t, 2, PlayerBoard.field_jb, DualLinkNode.field_k, wn.field_c, (RgbSprite[][]) null, gq.field_Rb, true, 1, jb.field_I, PlayerBoard.field_jb, wd.field_C, qh.field_h, 22287);
         ea.field_g = true;
         c.field_e = er.field_b;
         pn.b(-9, 200);
@@ -60,7 +60,7 @@ final class ij implements wb {
 
     final static GameScreen a(int param0, byte param1) {
         if (-1 == param0) {
-          return (GameScreen) ((Object) pe.field_o);
+          return (GameScreen) ((Object) pe.gameplayScreen);
         }
         if (param0 == -2) {
           return (GameScreen) ((Object) ki.field_p);
@@ -106,10 +106,10 @@ final class ij implements wb {
         int var4;
         int var2Lifetime1;
         var4 = BrickABrac.field_J ? 1 : 0;
-        if (null == fp.field_y) {
-          fp.field_y = new pe[2];
+        if (null == OptionsScreen.field_y) {
+          OptionsScreen.field_y = new pe[2];
           for (var2 = 0; var2 < 2; var2++) {
-            fp.field_y[var2] = fa.a(1, (byte) -72, var2, 5);
+            OptionsScreen.field_y[var2] = fa.a(1, (byte) -72, var2, 5);
           }
         }
         var2Lifetime1 = 1;
@@ -118,12 +118,12 @@ final class ij implements wb {
           return true;
         }
         while (var3 < 2) {
-          if (fp.field_y[var3] != null) {
-            if (!fp.field_y[var3].field_v) {
+          if (OptionsScreen.field_y[var3] != null) {
+            if (!OptionsScreen.field_y[var3].field_v) {
               var2Lifetime1 = 0;
             } else {
-              if (fp.field_y[var3].field_m[0] > hh.field_b[var3]) {
-                hh.field_b[var3] = fp.field_y[var3].field_m[0];
+              if (OptionsScreen.field_y[var3].field_m[0] > hh.field_b[var3]) {
+                hh.field_b[var3] = OptionsScreen.field_y[var3].field_m[0];
               }
               jj.field_d = jj.field_d | ln.a(na.field_L[var3], 0, true, hh.field_b[var3]);
               if (!pg.c(param0 ^ 27)) {
@@ -136,7 +136,7 @@ final class ij implements wb {
           var3++;
         }
         if (var2Lifetime1 != 0) {
-          fp.field_y = null;
+          OptionsScreen.field_y = null;
         }
         return var2Lifetime1 != 0;
     }
@@ -199,7 +199,7 @@ final class ij implements wb {
                   uf.field_a = null;
                 }
               } else {
-                ai.a((byte) 24, 90.0f, uk.field_u);
+                ai.a((byte) 24, 90.0f, MessageScreen.field_u);
                 sl.field_C.g(106);
                 so.a(ki.field_f, gq.field_Rb, ScorePopup.field_l, 29137, wn.field_c);
               }

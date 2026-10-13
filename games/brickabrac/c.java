@@ -48,7 +48,7 @@ final class c {
             var9.writeCp1252String(param1, -1);
           }
           if (param5 != null) {
-            md.a(26152, param5, var9);
+            InstructionsScreen.a(26152, param5, var9);
           } else {
             var9.writeShort((byte) 123, param0);
           }

@@ -884,7 +884,7 @@ final class PlayerBoard extends IntrusiveNode {
           var5 = points;
           var6 = this.nextRandomBoundedInt(50, (byte) 62);
           ep.field_i = ep.field_i - var6 * var5;
-          fp.field_z = fp.field_z + (1 + var6) * var5;
+          OptionsScreen.field_z = OptionsScreen.field_z + (1 + var6) * var5;
         }
         if (resetStateWord) {
           this.field_l = 1;
@@ -939,18 +939,18 @@ final class PlayerBoard extends IntrusiveNode {
         this.snapshotHistory = new ObjectHistoryBuffer(500);
         this.b(16387, 0);
         this.field_H = initialState;
-        if (ah.field_w == null) {
-          ah.field_w = new int[2][3];
-          ah.field_w[0][2] = aq.field_e;
-          ah.field_w[0][0] = ac.field_f;
-          ah.field_w[0][1] = fq.field_b;
-          ah.field_w[1][2] = td.field_u;
-          ah.field_w[1][1] = ce.field_d;
-          ah.field_w[1][0] = jl.field_b;
+        if (HighscoresScreen.field_w == null) {
+          HighscoresScreen.field_w = new int[2][3];
+          HighscoresScreen.field_w[0][2] = aq.field_e;
+          HighscoresScreen.field_w[0][0] = ac.field_f;
+          HighscoresScreen.field_w[0][1] = fq.field_b;
+          HighscoresScreen.field_w[1][2] = td.field_u;
+          HighscoresScreen.field_w[1][1] = ce.field_d;
+          HighscoresScreen.field_w[1][0] = jl.field_b;
         }
-        this.field_bb = ah.field_w[paletteVariant][0];
-        this.field_j = ah.field_w[paletteVariant][1];
-        this.field_I = ah.field_w[paletteVariant][2];
+        this.field_bb = HighscoresScreen.field_w[paletteVariant][0];
+        this.field_j = HighscoresScreen.field_w[paletteVariant][1];
+        this.field_I = HighscoresScreen.field_w[paletteVariant][2];
     }
 
     static {

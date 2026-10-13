@@ -99,17 +99,17 @@ final class dg implements ub {
         int var6Lifetime3;
         int var7Lifetime3;
         var8 = BrickABrac.field_J ? 1 : 0;
-        if (0 > ld.field_t) {
+        if (0 > MatchResultScreen.field_t) {
           return;
         }
         var3 = param2 - 135;
         var4 = param1 - 35;
         var5 = 256;
-        if (ld.field_t < 75) {
-          var5 = (ld.field_t << 8) / 75;
+        if (MatchResultScreen.field_t < 75) {
+          var5 = (MatchResultScreen.field_t << 8) / 75;
         }
-        if (ld.field_t > 200) {
-          var5 = (-ld.field_t + 250 << 8) / 50;
+        if (MatchResultScreen.field_t > 200) {
+          var5 = (-MatchResultScreen.field_t + 250 << 8) / 50;
         }
         fc.a(-90, me.field_b);
         mg.c();
@@ -120,12 +120,12 @@ final class dg implements ub {
             Rasterizer2D.fillRectangleAlpha(0, 0, Rasterizer2D.width, Rasterizer2D.height, 0, 256 - var5);
           }
           sc.b(-96);
-          if (ld.field_t < 150) {
+          if (MatchResultScreen.field_t < 150) {
             me.field_b.a(var3, var4);
           } else {
-            vq.field_I.b(var3 + 15, 10 + var4, var5);
+            LevelCompleteScreen.field_I.b(var3 + 15, 10 + var4, var5);
           }
-          var6 = -125 + ld.field_t;
+          var6 = -125 + MatchResultScreen.field_t;
           if (var6 > 0 &&
             var6 < 50) {
             if (20 <= var6) {
@@ -140,7 +140,7 @@ final class dg implements ub {
               aa.field_b.f(var3, var4, var7);
             }
           }
-          var6Lifetime3 = -140 + ld.field_t;
+          var6Lifetime3 = -140 + MatchResultScreen.field_t;
           if (var6Lifetime3 > 0) {
             var7Lifetime3 = 256;
             if (var6Lifetime3 < 20) {
@@ -157,12 +157,12 @@ final class dg implements ub {
           Rasterizer2D.fillRectangleAlpha(0, 0, Rasterizer2D.width, Rasterizer2D.height, 0, 256 - var5);
         }
         sc.b(-96);
-        if (ld.field_t < 150) {
+        if (MatchResultScreen.field_t < 150) {
           me.field_b.a(var3, var4);
         } else {
-          vq.field_I.b(var3 + 15, 10 + var4, var5);
+          LevelCompleteScreen.field_I.b(var3 + 15, 10 + var4, var5);
         }
-        var6Lifetime1 = -125 + ld.field_t;
+        var6Lifetime1 = -125 + MatchResultScreen.field_t;
         if (var6Lifetime1 > 0 &&
           var6Lifetime1 < 50) {
           if (20 > var6Lifetime1) {
@@ -177,7 +177,7 @@ final class dg implements ub {
             }
           }
         }
-        var6Lifetime2 = -140 + ld.field_t;
+        var6Lifetime2 = -140 + MatchResultScreen.field_t;
         if (var6Lifetime2 > 0) {
           var7Lifetime2 = 256;
           if (var6Lifetime2 < 20) {

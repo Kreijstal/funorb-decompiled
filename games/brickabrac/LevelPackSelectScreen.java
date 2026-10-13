@@ -1,13 +1,13 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ol extends MenuScreen {
-    private lc field_u;
+final class LevelPackSelectScreen extends MenuScreen {
+    private LevelPackCard firstPackCard;
     static String field_x;
     static RgbSprite[] field_z;
     static RgbSprite field_r;
     static int[] field_v;
-    private lc field_t;
+    private LevelPackCard secondPackCard;
     static int field_y;
     static int field_w;
     static boolean field_s;
@@ -140,7 +140,7 @@ final class ol extends MenuScreen {
         }
         var8 = this.buttons[1];
         var12 = var8;
-        var8.width = hq.field_s[0].canvasWidth + 60;
+        var8.width = SaveResultsPromptScreen.packCardIcons[0].canvasWidth + 60;
         var12.height = var12.width;
         var12.x = (600 - 2 * var12.width) / 2;
         var12.y = (523 - var12.height) / 2;
@@ -152,10 +152,10 @@ final class ol extends MenuScreen {
         return;
     }
 
-    ol() {
+    LevelPackSelectScreen() {
         super(16, 180, 460, 402, 35, ag.field_L);
-        this.field_u = new lc((MenuScreen) (this), this.buttons[1], 1, 0);
-        this.field_t = new lc((MenuScreen) (this), this.buttons[2], 2, 1);
+        this.firstPackCard = new LevelPackCard((MenuScreen) (this), this.buttons[1], 1, 0);
+        this.secondPackCard = new LevelPackCard((MenuScreen) (this), this.buttons[2], 2, 1);
     }
 
     final void drawScreen(byte obfuscationGuard) {
@@ -163,8 +163,8 @@ final class ol extends MenuScreen {
         al.a(this.screenId, 19);
         im.a(550, 5, 243, 5, 140, (byte) -91, 45);
         this.a(0);
-        this.field_u.a((byte) 105);
-        this.field_t.a((byte) 116);
+        this.firstPackCard.draw((byte) 105);
+        this.secondPackCard.draw((byte) 116);
         if (obfuscationGuard >= -14) {
           field_z = (RgbSprite[]) null;
         }
@@ -172,8 +172,8 @@ final class ol extends MenuScreen {
 
     final void advanceScreen(boolean updateFlag, boolean inputEnabled, int obfuscationGuard) {
         super.advanceScreen(updateFlag, inputEnabled, -118);
-        this.field_u.b((byte) -75);
-        this.field_t.b((byte) -75);
+        this.firstPackCard.updateFocus((byte) -75);
+        this.secondPackCard.updateFocus((byte) -75);
         if (obfuscationGuard > -52) {
           field_r = (RgbSprite) null;
         }

@@ -54,7 +54,7 @@ final class pk {
             kn.a(true, param1);
             return;
           }
-          lf.a(param2, -71, false);
+          RankingsScreen.a(param2, -71, false);
           ck.a(param1, 0, 14209, 0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

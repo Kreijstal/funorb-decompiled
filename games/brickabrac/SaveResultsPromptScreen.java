@@ -1,15 +1,15 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class hq extends MenuScreen {
+final class SaveResultsPromptScreen extends MenuScreen {
     static String field_r;
-    private String field_v;
+    private String promptText;
     static mf field_t;
     static String field_w;
     static qh field_z;
     static String field_x;
     static String[] field_u;
-    static RgbSprite[] field_s;
+    static RgbSprite[] packCardIcons;
     static String field_y;
 
     final void layoutButtons(boolean obfuscationGuard) {
@@ -32,7 +32,7 @@ final class hq extends MenuScreen {
         super.drawScreen((byte) -39);
         im.a(550, 5, 243, 5, 140, (byte) -81, 45);
         if (obfuscationGuard <= -14) {
-          nn.field_g.a(this.field_v, 54, 149, 532, 225, 2, -1, 1, 1, 22);
+          nn.field_g.a(this.promptText, 54, 149, 532, 225, 2, -1, 1, 1, 22);
           this.a(0);
           return;
         }
@@ -54,7 +54,7 @@ final class hq extends MenuScreen {
           var4.backfillByteLength((byte) 121, -var5 + var4.position);
           return;
         }
-        field_s = (RgbSprite[]) null;
+        packCardIcons = (RgbSprite[]) null;
         var4.writeShort((byte) 127, param3);
         var4.backfillByteLength((byte) 121, -var5 + var4.position);
     }
@@ -89,7 +89,7 @@ final class hq extends MenuScreen {
         try {
           if (param4 != -78) {
             var13 = (mh) null;
-            hq.a((int[]) null, (mh) null, (mh) null, (mh) null, (byte) -45);
+            SaveResultsPromptScreen.a((int[]) null, (mh) null, (mh) null, (mh) null, (byte) -45);
           }
           var5_int = param0.length;
           var6 = new String[var5_int];
@@ -177,16 +177,16 @@ final class hq extends MenuScreen {
         }
     }
 
-    hq() {
+    SaveResultsPromptScreen() {
         super(10, 180, 460, 402, 35, new int[]{23, 24});
     }
 
     final void onEnter(boolean usePointer, int initialSelection, int obfuscationGuard) {
         int var5 = 0;
-        int var4 = ib.a(pl.field_b, -1) ? 1 : 0;
+        int var4 = ib.a(pl.pendingAchievementMask, -1) ? 1 : 0;
         if (obfuscationGuard >= 96) {
           var5 = null != fj.field_Ub ? 1 : 0;
-          this.field_v = oq.field_w + " " + wj.a(-1, rd.a(af.a(var4 != 0, var5 != 0, false, 126), new String[]{gi.field_r}, (byte) 103), '#', "<br><br>");
+          this.promptText = PauseMenuScreen.field_w + " " + wj.a(-1, rd.a(AchievementBrowserScreen.buildSavePrompt(var4 != 0, var5 != 0, false, 126), new String[]{gi.field_r}, (byte) 103), '#', "<br><br>");
           return;
         }
     }
@@ -218,7 +218,7 @@ final class hq extends MenuScreen {
     final void navigateBack(int obfuscationGuard) {
         if (obfuscationGuard != -1) {
           fa var3 = (fa) null;
-          hq.a((fa) null, -66, -20);
+          SaveResultsPromptScreen.a((fa) null, -66, -20);
         }
     }
 
@@ -228,14 +228,14 @@ final class hq extends MenuScreen {
         field_x = null;
         field_y = null;
         if (param0 == 550) {
-          field_s = null;
+          packCardIcons = null;
           field_r = null;
           field_t = null;
           field_w = null;
           return;
         }
         field_w = (String) null;
-        field_s = null;
+        packCardIcons = null;
         field_r = null;
         field_t = null;
         field_w = null;

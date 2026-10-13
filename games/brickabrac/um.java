@@ -877,7 +877,7 @@ class um implements ub, qe {
           while (var13 != null) {
             var14 = 0;
             if (null == var13.field_bb) {
-              var13.field_Ac = new mh(0L, fp.field_v);
+              var13.field_Ac = new mh(0L, OptionsScreen.field_v);
               stackIn_8_0 = param1;
               stackIn_8_1 = param5;
               var15 = stackIn_8_0 | stackIn_8_1;
@@ -885,10 +885,10 @@ class um implements ub, qe {
               var13.field_Ac.field_S = 1;
               var13.field_Vb = new mh(0L, vb.field_K);
               var13.a(var13.field_Vb, 0);
-              var13.field_tc = new mh(0L, fp.field_v);
+              var13.field_tc = new mh(0L, OptionsScreen.field_v);
               var13.a(var13.field_tc, 0);
               var13.field_tc.field_V = 0;
-              var13.field_Cc = new mh(0L, fp.field_v);
+              var13.field_Cc = new mh(0L, OptionsScreen.field_v);
               var13.a(var13.field_Cc, 0);
               var13.field_Cc.field_V = 0;
               var13.field_mc = new mh(0L, vb.field_K);
@@ -901,7 +901,7 @@ class um implements ub, qe {
               if (vd.field_e) {
                 stackIn_11_1 = null;
                 stackIn_11_2 = null;
-                stackIn_11_4 = fp.field_v;
+                stackIn_11_4 = OptionsScreen.field_v;
               } else {
                 stackIn_11_1 = null;
                 stackIn_11_2 = null;
@@ -951,7 +951,7 @@ class um implements ub, qe {
               } else {
                 stackIn_28_1 = null;
                 stackIn_28_2 = null;
-                stackIn_28_4 = fp.field_v;
+                stackIn_28_4 = OptionsScreen.field_v;
               }
               stackIn_27_0.field_zc = new mh(stackIn_27_3, stackIn_28_4);
               var13.a(var13.field_zc, 0);
@@ -1250,7 +1250,7 @@ class um implements ub, qe {
             }
             if (var13.field_sc.field_kb) {
               if (var13.field_kc != 1) {
-                var35Lifetime2 = bl.field_H[var13.field_kc];
+                var35Lifetime2 = AchievementsScreen.field_H[var13.field_kc];
               } else {
                 var35Lifetime2 = wp.field_b;
               }
@@ -1268,7 +1268,7 @@ class um implements ub, qe {
               if (!var13.field_uc &&
                 !var13.field_Pb) {
                 if (!var13.field_Dc) {
-                  stackIn_158_0 = bl.field_K;
+                  stackIn_158_0 = AchievementsScreen.field_K;
                 } else {
                   stackIn_158_0 = be.field_n;
                 }

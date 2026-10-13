@@ -9,7 +9,7 @@ final class fl extends k {
 
     final static void f(byte param0) {
         int var1 = 50 / ((31 - param0) / 52);
-        vq.field_J = null;
+        LevelCompleteScreen.field_J = null;
         go.field_e = 0;
         th.field_h = false;
         b.field_a = -1;
@@ -27,7 +27,7 @@ final class fl extends k {
           fc.a(-89, var1);
           mg.c();
           Rasterizer2D.clear();
-          ld.field_t = 0;
+          MatchResultScreen.field_t = 0;
           jl.b(-115);
           var3 = var1.copy();
           for (var4 = 0; 15 > var4; var4++) {
@@ -99,11 +99,11 @@ final class fl extends k {
     final static void b(boolean param0) {
         if (!param0) {
           fl.f((byte) -72);
-          fp.field_A.setLength(0);
+          OptionsScreen.field_A.setLength(0);
           ng.field_b = 0;
           return;
         }
-        fp.field_A.setLength(0);
+        OptionsScreen.field_A.setLength(0);
         ng.field_b = 0;
     }
 
@@ -148,7 +148,7 @@ final class fl extends k {
               this.field_k = param0;
               this.field_n = var3.field_c;
             } else {
-              stackIn_11_0 = hq.field_z;
+              stackIn_11_0 = SaveResultsPromptScreen.field_z;
               return stackIn_11_0;
             }
           }

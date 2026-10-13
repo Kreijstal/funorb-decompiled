@@ -76,7 +76,7 @@ final class fk {
         int var6;
         var6 = BrickABrac.field_J ? 1 : 0;
         var2 = 0;
-        var3 = ld.field_t;
+        var3 = MatchResultScreen.field_t;
         if (param1 != 77) {
           return;
         }
@@ -136,7 +136,7 @@ final class fk {
           var4 = 1;
           var5 = 1;
         }
-        ld.field_w = e.a(var4 * var2, 0, var2 * var5);
+        MatchResultScreen.field_w = e.a(var4 * var2, 0, var2 * var5);
         return;
     }
 
@@ -271,7 +271,7 @@ final class fk {
             fieldTemp$0 = var1.position + 1;
             var1.position = var1.position + 1;
             var2 = fieldTemp$0;
-            ah.a(var1, (byte) 9);
+            HighscoresScreen.a(var1, (byte) 9);
             k.field_h.backfillByteLength((byte) 118, -var2 + var1.position);
           }
           return;

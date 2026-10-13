@@ -366,11 +366,11 @@ class vb extends d {
     }
 
     final static void k(int param0) {
-        if (!ol.field_s) {
+        if (!LevelPackSelectScreen.field_s) {
           throw new IllegalStateException();
         }
         ci.field_t = true;
-        lf.a((byte) -71, true);
+        RankingsScreen.a((byte) -71, true);
         i.field_j = param0;
     }
 

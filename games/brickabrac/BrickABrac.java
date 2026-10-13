@@ -34,7 +34,7 @@ public final class BrickABrac extends sa {
         } else {
           lp.currentScreen.drawScreen((byte) -63);
         }
-        var3 = (IntNode) (kp.field_c.first(-123));
+        var3 = (IntNode) (kp.achievementNotifications.first(-123));
         if (param0 != 16769381) {
           field_I = (mf) null;
         }
@@ -50,7 +50,7 @@ public final class BrickABrac extends sa {
             }
           }
           si.field_c[var3.value].c(8, var4);
-          nn.field_g.c(af.field_s[var3.value], 48, var4 + nn.field_g.field_F, 0, -1);
+          nn.field_g.c(AchievementBrowserScreen.field_s[var3.value], 48, var4 + nn.field_g.field_F, 0, -1);
         }
         if (cf.a((byte) 62)) {
           rd.b(-79);
@@ -85,8 +85,8 @@ public final class BrickABrac extends sa {
           stackIn_10_0 = 0;
         }
         var3 = stackIn_10_0;
-        if (pe.field_o != lp.currentScreen ||
-          pe.field_o.field_p ||
+        if (pe.gameplayScreen != lp.currentScreen ||
+          pe.gameplayScreen.field_p ||
           var3 == 0) {
           stackIn_17_0 = lp.currentScreen;
           stackIn_17_1 = true;
@@ -94,8 +94,8 @@ public final class BrickABrac extends sa {
           ((GameScreen) (Object) stackIn_17_0).advanceScreen(stackIn_17_1, stackIn_18_2, -104);
         }
         if (var3 != 0) {
-          if ((pe.field_o != hd.pendingScreen ||
-            pe.field_o.field_p) &&
+          if ((pe.gameplayScreen != hd.pendingScreen ||
+            pe.gameplayScreen.field_p) &&
             hd.pendingScreen != null) {
             hd.pendingScreen.advanceScreen(false, false, -82);
           }
@@ -104,18 +104,18 @@ public final class BrickABrac extends sa {
             sk.i((byte) -126);
           }
         } else {
-          if (pe.field_o != null &&
-            lp.currentScreen != pe.field_o &&
-            pe.field_o.field_p) {
-            pe.field_o.advanceScreen(false, false, -81);
+          if (pe.gameplayScreen != null &&
+            lp.currentScreen != pe.gameplayScreen &&
+            pe.gameplayScreen.field_p) {
+            pe.gameplayScreen.advanceScreen(false, false, -81);
           }
         }
-        if (null != kp.field_c.first(-8)) {
+        if (null != kp.achievementNotifications.first(-8)) {
           fieldTemp$0 = ok.field_c + 1;
           ok.field_c = ok.field_c + 1;
           if (fieldTemp$0 == 335) {
             ok.field_c = 0;
-            kp.field_c.removeFirst(3);
+            kp.achievementNotifications.removeFirst(3);
           }
         }
         if (ok.field_c == 50) {
@@ -209,13 +209,13 @@ public final class BrickABrac extends sa {
             sk.i((byte) -113);
             vh.field_L = false;
             ng.requestScreen(false, param1 + 66, 11);
-            kk.a(true, param0.readCp1252String(-1));
+            kk.setMessageText(true, param0.readCp1252String(-1));
             return true;
           }
           if (14 == param2) {
             sk.i((byte) -116);
             hm.a(LevelPack.c(param1 ^ -71), (byte) 86, qh.field_h, LevelPackLoader.c(0), 150, fj.a(2000, (byte) -54), aj.a(1345), fj.a(8, (byte) -53), 1024, jb.field_I.length);
-            hn.a(lh.f(115), kb.h(param1 - 45), param1 ^ 12);
+            hn.a(FramedMenuScreen.f(115), kb.h(param1 - 45), param1 ^ 12);
             vh.field_L = false;
             ue.field_c = true;
             ng.requestScreen(false, 113, -2);
@@ -227,7 +227,7 @@ public final class BrickABrac extends sa {
               an.d((byte) -56);
               ng.requestScreen(false, param1 + 43, 0);
               ue.field_c = false;
-              cc.field_G = true;
+              NewAchievementsScreen.field_G = true;
               dp.field_y = true;
             }
             ed.field_d = false;
@@ -255,19 +255,19 @@ public final class BrickABrac extends sa {
             var26 = var34;
             var19 = var26;
             var5_arrayLifetime1 = var19;
-            var46 = mk.field_b;
+            var46 = mk.earnedAchievementMask;
             for (var7 = 0; var7 < 8; var7++) {
               var19[var7] = ik.a(var34[var7], ~var46[var7]);
             }
             if (hb.field_y) {
               var5_int = ea.a(true, var35);
               for (var6 = 0; var6 <= var5_int; var6++) {
-                if (eo.a(var35, var6, (byte) -75)) {
-                  kp.field_c.addLast(new IntNode(var6), (byte) 3);
+                if (eo.isBitSet(var35, var6, (byte) -75)) {
+                  kp.achievementNotifications.addLast(new IntNode(var6), (byte) 3);
                 }
               }
             }
-            var36 = mk.field_b;
+            var36 = mk.earnedAchievementMask;
             var28 = var36;
             var21 = var28;
             var5_arrayLifetime2 = var21;
@@ -275,7 +275,7 @@ public final class BrickABrac extends sa {
             for (var7 = 0; var7 < 8; var7++) {
               var21[var7] = LevelSelectScreen.d(var36[var7], var47[var7]);
             }
-            var37 = pl.field_b;
+            var37 = pl.pendingAchievementMask;
             var29 = var37;
             var23 = var29;
             var5_arrayLifetime3 = var23;
@@ -288,35 +288,35 @@ public final class BrickABrac extends sa {
           if (si.field_a != 64 &&
             65 != si.field_a) {
             if (79 == si.field_a) {
-              if (pe.field_o == null) {
+              if (pe.gameplayScreen == null) {
                 return true;
               }
-              if (pe.field_o.field_q) {
+              if (pe.gameplayScreen.field_q) {
                 rk.a("T3", (Throwable) null, 44);
               } else {
-                fieldTemp$0 = pe.field_o.field_x;
-                pe.field_o.field_x = pe.field_o.field_x + 1;
-                pe.field_o.match.playerBoards[fieldTemp$0].a(false, param0, pe.field_o.match.playerCount);
-                stackIn_74_0 = pe.field_o;
-                stackIn_75_1 = (pe.field_o.field_x == pe.field_o.match.playerCount);
+                fieldTemp$0 = pe.gameplayScreen.field_x;
+                pe.gameplayScreen.field_x = pe.gameplayScreen.field_x + 1;
+                pe.gameplayScreen.match.playerBoards[fieldTemp$0].a(false, param0, pe.gameplayScreen.match.playerCount);
+                stackIn_74_0 = pe.gameplayScreen;
+                stackIn_75_1 = (pe.gameplayScreen.field_x == pe.gameplayScreen.match.playerCount);
                 stackIn_74_0.field_q = stackIn_75_1;
-                if (pe.field_o.field_q) {
-                  if (pe.field_o.c(103)) {
+                if (pe.gameplayScreen.field_q) {
+                  if (pe.gameplayScreen.c(103)) {
                     return true;
                   }
-                  pe.field_o.match.playerBoards[pe.field_o.field_k].field_E = pe.field_o.match.playerBoards[pe.field_o.field_k].simulationTick - 50;
+                  pe.gameplayScreen.match.playerBoards[pe.gameplayScreen.field_k].field_E = pe.gameplayScreen.match.playerBoards[pe.gameplayScreen.field_k].simulationTick - 50;
                 }
               }
               return true;
             }
             if (66 == si.field_a) {
-              if (pe.field_o != null) {
+              if (pe.gameplayScreen != null) {
                 sk.i((byte) -123);
-                if (!pe.field_o.c(123)) {
-                  pe.field_o.a((byte) 40, false);
+                if (!pe.gameplayScreen.c(123)) {
+                  pe.gameplayScreen.a((byte) 40, false);
                 }
-                pe.field_o.a(false, (byte) 69);
-                cc.field_G = true;
+                pe.gameplayScreen.a(false, (byte) 69);
+                NewAchievementsScreen.field_G = true;
                 pf.field_p = true;
                 Brick.field_E = 0;
                 ng.requestScreen(false, 125, -2);
@@ -325,51 +325,51 @@ public final class BrickABrac extends sa {
               return true;
             }
             boolean decompiledFrameRemainder0 = true;
-            if (null != pe.field_o) {
+            if (null != pe.gameplayScreen) {
               if (76 == si.field_a) {
-                pe.field_o.a(param0, (byte) 74);
+                pe.gameplayScreen.a(param0, (byte) 74);
                 return true;
               }
               if (73 != si.field_a &&
                 si.field_a != 74) {
                 if (si.field_a == 75) {
-                  pe.field_o.a((byte) 33, param0);
+                  pe.gameplayScreen.a((byte) 33, param0);
                   return true;
                 }
                 if (77 == si.field_a) {
-                  pe.field_o.a(param0, false, 87);
+                  pe.gameplayScreen.a(param0, false, 87);
                   return true;
                 }
                 if (si.field_a == 78) {
-                  pe.field_o.a(param0, true, 118);
+                  pe.gameplayScreen.a(param0, true, 118);
                   return true;
                 }
                 if (si.field_a == 67) {
-                  pe.field_o.a(param0, param1 - 47);
+                  pe.gameplayScreen.a(param0, param1 - 47);
                   return true;
                 }
                 if (si.field_a == 69) {
-                  pe.field_o.a(18504, param0);
+                  pe.gameplayScreen.a(18504, param0);
                   return true;
                 }
                 if (si.field_a == 70) {
-                  pe.field_o.match.field_j = param0.readUnsignedByte(255);
-                  if (pe.field_o != null) {
+                  pe.gameplayScreen.match.field_j = param0.readUnsignedByte(255);
+                  if (pe.gameplayScreen != null) {
                     fr.a(1);
                   }
                   return true;
                 }
                 decompiledFrameRemainder0 = (si.field_a == 71);
                 if (decompiledFrameRemainder0) {
-                  pe.field_o.field_v = param0.readUnsignedByte(255);
-                  if (pe.field_o != null) {
+                  pe.gameplayScreen.field_v = param0.readUnsignedByte(255);
+                  if (pe.gameplayScreen != null) {
                     fr.a(1);
                   }
                   return true;
                 }
               }
               if (decompiledFrameRemainder0) {
-                stackIn_99_0 = pe.field_o;
+                stackIn_99_0 = pe.gameplayScreen;
                 stackIn_99_1 = -15;
                 stackIn_99_2 = (BitPacketBuffer) (param0);
                 stackIn_100_3 = (si.field_a == 74);
@@ -415,12 +415,12 @@ public final class BrickABrac extends sa {
             stackIn_56_0 = 0;
           }
           var15 = stackIn_56_0;
-          pe.field_o = new GameplayScreen(true, var4_int != 0, var30, var6Lifetime1, var15, var12, var39, var50);
-          stackIn_58_0 = pe.field_o;
+          pe.gameplayScreen = new GameplayScreen(true, var4_int != 0, var30, var6Lifetime1, var15, var12, var39, var50);
+          stackIn_58_0 = pe.gameplayScreen;
           stackIn_59_1 = (param0.readUnsignedByte(255) == 0);
           stackIn_58_0.field_q = stackIn_59_1;
-          if (!pe.field_o.field_q) {
-            pe.field_o.field_x = 0;
+          if (!pe.gameplayScreen.field_q) {
+            pe.gameplayScreen.field_x = 0;
           }
           if (si.field_a == 64) {
             i.c((byte) 32);
@@ -463,7 +463,7 @@ public final class BrickABrac extends sa {
           return;
         }
         if (lp.currentScreen.screenId == 9 &&
-          !ib.a(pl.field_b, -1)) {
+          !ib.a(pl.pendingAchievementMask, -1)) {
           ng.requestScreen(false, 69, 5);
         } else {
           if (sl.field_z != 2147483647) {
@@ -487,10 +487,10 @@ public final class BrickABrac extends sa {
         if (param1 != param0) {
           if (ue.field_c) {
             dp.field_y = true;
-            cc.field_G = true;
-            if (pe.field_o != null &&
-              !pe.field_o.c(param1 + 94)) {
-              kk.a(true, sg.field_k);
+            NewAchievementsScreen.field_G = true;
+            if (pe.gameplayScreen != null &&
+              !pe.gameplayScreen.c(param1 + 94)) {
+              kk.setMessageText(true, sg.field_k);
               ng.requestScreen(false, param1 ^ 118, 11);
             } else {
               ng.requestScreen(false, 120, 0);
@@ -561,9 +561,9 @@ public final class BrickABrac extends sa {
         fd.a(0);
         LevelSequence.a((byte) 70);
         MenuScreen.b(-107);
-        uk.f((byte) 88);
+        MessageScreen.f((byte) 88);
         LevelSelectScreen.f((byte) -115);
-        ld.g(-25617);
+        MatchResultScreen.g(-25617);
         la.a((byte) -75);
         v.a(false);
         KeyboardInput.a((byte) -42);
@@ -715,15 +715,15 @@ public final class BrickABrac extends sa {
         im.a(-32);
         bc.a((byte) -59);
         MainMenuScreen.c(!param0 ? true : false);
-        lh.f((byte) -101);
-        ah.f(-5);
-        lf.g(-118);
-        md.g((byte) 121);
-        af.f((byte) -106);
+        FramedMenuScreen.f((byte) -101);
+        HighscoresScreen.f(-5);
+        RankingsScreen.g(-118);
+        InstructionsScreen.g((byte) 121);
+        AchievementBrowserScreen.f((byte) -106);
         di.a(8070);
-        hq.f(550);
+        SaveResultsPromptScreen.f(550);
         MembershipBenefitsScreen.g(2);
-        ol.f(14529);
+        LevelPackSelectScreen.f(14529);
         TimedSplashScreen.f(0);
         ta.a(0);
         np.a(true);
@@ -856,8 +856,8 @@ public final class BrickABrac extends sa {
         LevelMetadata.a((byte) 127);
         LevelPack.a(0);
         LevelList.a(true);
-        ab.f((byte) -112);
-        gn.i(61);
+        MatchCompleteScreen.f((byte) -112);
+        MultiplayerExitScreen.i(61);
         ac.c(0);
         n.b(-2);
         pg.a(-128);
@@ -890,14 +890,14 @@ public final class BrickABrac extends sa {
         ii.a(20888);
         ck.a(30850);
         nq.a((byte) -77);
-        fp.c(false);
-        vq.h(-257);
-        oq.h((byte) -34);
-        jf.a(false);
+        OptionsScreen.c(false);
+        LevelCompleteScreen.h(-257);
+        PauseMenuScreen.h((byte) -34);
+        HighscorePackSelector.a(false);
         i.d(0);
-        cc.g(6);
-        bl.h((byte) -124);
-        lc.a(32156);
+        NewAchievementsScreen.g(6);
+        AchievementsScreen.h((byte) -124);
+        LevelPackCard.a(32156);
         ec.a(0);
         tf.a(6);
         ln.a((byte) -46);

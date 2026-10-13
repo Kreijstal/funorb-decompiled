@@ -12,7 +12,7 @@ final class gi extends ki {
         if (this.b((byte) -127)) {
           var6 = PowerUp.a(this.field_m, param3, -20777);
           if (!var6.a((byte) -84, param3, this.field_m)) {
-            lf.a(var6, 1, 0, fp.field_B, param3, 100);
+            RankingsScreen.a(var6, 1, 0, OptionsScreen.field_B, param3, 100);
             var6.a(this.field_m, param3, (byte) 78);
             sa.a((byte) 119, wn.field_b, param2, 1, lj.field_q, var6.field_p, param1, 640, 0, param4);
             if (!param0) {
@@ -59,11 +59,11 @@ final class gi extends ki {
         if (i.field_m.a("desert", -28138)) {
           wn.field_b = pl.a("desert", "desert_near", (byte) 107, i.field_m);
           lj.field_q = pl.a("desert", "desert_mid", (byte) -121, i.field_m);
-          fp.field_B = pl.a("desert", "desert_far", (byte) 122, i.field_m);
+          OptionsScreen.field_B = pl.a("desert", "desert_far", (byte) 122, i.field_m);
           ce.field_c = pl.a("desert", "desert_small", (byte) 99, i.field_m);
           lq.field_d = jh.a(0, wn.field_b);
           oc.field_x = jh.a(0, lj.field_q);
-          pp.field_b = jh.a(0, fp.field_B);
+          pp.field_b = jh.a(0, OptionsScreen.field_B);
           im.field_f[0] = cr.a("desert", i.field_m, "desert_caps", 2);
           pk.field_e[0] = cr.a("desert", i.field_m, "desert_segs", 2);
           um.field_l[0] = pl.a("desert", "desert_centre", (byte) 110, i.field_m);
@@ -116,7 +116,7 @@ final class gi extends ki {
           }
           var7 = kd.a(this.field_m, param3, (byte) -74);
           if (!var7.a((byte) -84, param3, this.field_m)) {
-            lf.a(var7, 2, -13, pp.field_b, param3, 102);
+            RankingsScreen.a(var7, 2, -13, pp.field_b, param3, 102);
             var7.a(this.field_m, param3, (byte) 78);
           } else {
             sa.a((byte) 86, lq.field_d, param0, 2, oc.field_x, var7.field_p, param4, 306, -13, param2);
@@ -131,7 +131,7 @@ final class gi extends ki {
         }
         pb var8 = kd.a(this.field_m, param3, (byte) -74);
         if (!var8.a((byte) -84, param3, this.field_m)) {
-          lf.a(var8, 2, -13, pp.field_b, param3, 102);
+          RankingsScreen.a(var8, 2, -13, pp.field_b, param3, 102);
           var8.a(this.field_m, param3, (byte) 78);
         } else {
           sa.a((byte) 86, lq.field_d, param0, 2, oc.field_x, var8.field_p, param4, 306, -13, param2);
@@ -160,7 +160,7 @@ final class gi extends ki {
           if (null == lj.field_q) {
             return false;
           }
-          if (null == fp.field_B) {
+          if (null == OptionsScreen.field_B) {
             return false;
           }
           if (ce.field_c == null) {
@@ -180,7 +180,7 @@ final class gi extends ki {
         if (null == lj.field_q) {
           return false;
         }
-        if (null == fp.field_B) {
+        if (null == OptionsScreen.field_B) {
           return false;
         }
         if (ce.field_c == null) {

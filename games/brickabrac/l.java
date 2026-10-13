@@ -12,7 +12,7 @@ final class l extends IntrusiveNode {
     final static void a(int param0, int param1, pb param2, int param3, int param4, RgbSprite param5) {
         try {
           fc.a(-89, param2.field_p);
-          la.a(param5, (-param5.canvasWidth + param2.field_i) / 2, -param5.canvasHeight + (param0 + param2.field_q), ab.field_C[param3]);
+          la.a(param5, (-param5.canvasWidth + param2.field_i) / 2, -param5.canvasHeight + (param0 + param2.field_q), MatchCompleteScreen.field_C[param3]);
           sc.b(-95);
           if (param1 != 26746) {
             RgbSprite var7 = (RgbSprite) null;
@@ -70,7 +70,7 @@ final class l extends IntrusiveNode {
             return stackIn_2_0;
           }
           if (param2 == 2) {
-            stackIn_5_0 = rd.a(md.field_w, new String[]{param1}, (byte) 103);
+            stackIn_5_0 = rd.a(InstructionsScreen.field_w, new String[]{param1}, (byte) 103);
             return stackIn_5_0;
           }
           if (param2 == 3) {

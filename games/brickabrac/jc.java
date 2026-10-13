@@ -264,14 +264,14 @@ abstract class jc extends ib {
             return;
           }
           if (1 == param1) {
-            ab.field_E = ab.field_E + 1;
+            MatchCompleteScreen.field_E = MatchCompleteScreen.field_E + 1;
             if ((param0 & 2) != 0) {
               dj.field_d = dj.field_d + 1;
             }
             if (pp.field_a != 3) {
               return;
             }
-            if (ab.field_E <= 2 &&
+            if (MatchCompleteScreen.field_E <= 2 &&
               dj.field_d <= 0) {
               return;
             }

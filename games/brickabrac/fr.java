@@ -71,7 +71,7 @@ final class fr {
         try {
           ok.field_g = pl.a("basic", "display_name_changed", (byte) 109, param0);
           GameScreen.field_f = new hj(0L, rq.field_b, hk.field_J, oo.field_y);
-          f.field_c = new hj(0L, rq.field_b, ab.field_z, ng.field_e);
+          f.field_c = new hj(0L, rq.field_b, MatchCompleteScreen.field_z, ng.field_e);
           rg.field_c = new mh(0L, (mh) null);
           sj.field_d = new mh(0L, ad.field_l);
           sj.field_d.field_S = 1;
@@ -148,20 +148,20 @@ final class fr {
     final static void a(int param0) {
         int var2;
         var2 = BrickABrac.field_J ? 1 : 0;
-        if (pe.field_o.c(124)) {
+        if (pe.gameplayScreen.c(124)) {
           return;
         }
         if (param0 != 1) {
           field_M = (NodeDeque) null;
         }
-        if (pe.field_o.field_n) {
-          if ((pe.field_o.match.field_j & 1 << pe.field_o.field_k) != 0) {
+        if (pe.gameplayScreen.field_n) {
+          if ((pe.gameplayScreen.match.field_j & 1 << pe.gameplayScreen.field_k) != 0) {
             ag.buttonLabels[12] = mi.field_a;
           } else {
-            if (pe.field_o.match.field_j != 0) {
+            if (pe.gameplayScreen.match.field_j != 0) {
               ag.buttonLabels[12] = qm.field_c;
             } else {
-              if ((1 << pe.field_o.field_k | pe.field_o.field_v) != (1 << pe.field_o.match.playerCount) - 1) {
+              if ((1 << pe.gameplayScreen.field_k | pe.gameplayScreen.field_v) != (1 << pe.gameplayScreen.match.playerCount) - 1) {
                 ag.buttonLabels[12] = s.field_a;
               } else {
                 ag.buttonLabels[12] = oa.field_Pb;
@@ -169,11 +169,11 @@ final class fr {
             }
           }
         } else {
-          if ((1 << pe.field_o.field_k & pe.field_o.match.field_j) != 0) {
+          if ((1 << pe.gameplayScreen.field_k & pe.gameplayScreen.match.field_j) != 0) {
             ag.buttonLabels[12] = ff.field_g;
           } else {
-            if (0 == pe.field_o.match.field_j) {
-              if ((pe.field_o.field_v | 1 << pe.field_o.field_k) != -1 + (1 << pe.field_o.match.playerCount)) {
+            if (0 == pe.gameplayScreen.match.field_j) {
+              if ((pe.gameplayScreen.field_v | 1 << pe.gameplayScreen.field_k) != -1 + (1 << pe.gameplayScreen.match.playerCount)) {
                 ag.buttonLabels[12] = RectangleBody.field_t;
               } else {
                 ag.buttonLabels[12] = bm.field_b;

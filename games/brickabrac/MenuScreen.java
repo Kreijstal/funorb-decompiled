@@ -70,7 +70,7 @@ abstract class MenuScreen extends GameScreen {
     private final void c(boolean param0, int param1) {
         if (this.selection.selectedIndex != -1 &&
           param1 != this.selection.selectedIndex) {
-          PlayerBoard.a(ta.field_e[0], -106, lh.g((byte) -44) / 4);
+          PlayerBoard.a(ta.field_e[0], -106, FramedMenuScreen.g((byte) -44) / 4);
         }
         if (!param0) {
           this.buttonLeft = -36;
@@ -261,7 +261,7 @@ abstract class MenuScreen extends GameScreen {
           }
           if (var2 != null) {
             var3 = (CharSequence) ((Object) var2);
-            if (0L != ah.a(false, var3)) {
+            if (0L != HighscoresScreen.a(false, var3)) {
               return;
             }
           }
@@ -384,22 +384,22 @@ abstract class MenuScreen extends GameScreen {
               if (var8 == 20) {
                 var7 = 0;
                 if (this.selection.isHomeKey(-103) &&
-                  lh.g((byte) -44) > 0) {
+                  FramedMenuScreen.g((byte) -44) > 0) {
                   ma.a((byte) -113, 0);
                   var7 = 1;
                 }
                 if (this.selection.isEndKey(-1) &&
-                  lh.g((byte) -44) < MenuSelection.e((byte) 44)) {
+                  FramedMenuScreen.g((byte) -44) < MenuSelection.e((byte) 44)) {
                   ma.a((byte) 47, MenuSelection.e((byte) 31));
                   var7 = 1;
                 }
                 if (this.selection.isLeftArrow((byte) -57) &&
-                  lh.g((byte) -44) > 0) {
+                  FramedMenuScreen.g((byte) -44) > 0) {
                   k.d((byte) 116);
                   var7 = 1;
                 }
                 if (this.selection.isRightArrow(-98) &&
-                  lh.g((byte) -44) < MenuSelection.e((byte) 90)) {
+                  FramedMenuScreen.g((byte) -44) < MenuSelection.e((byte) 90)) {
                   var7 = 1;
                   th.a((byte) -63);
                 }
@@ -433,7 +433,7 @@ abstract class MenuScreen extends GameScreen {
                   il.a((byte) 86, 256);
                 }
                 if (this.selection.isLeftArrow((byte) -57)) {
-                  lf.f(-1);
+                  RankingsScreen.f(-1);
                 }
                 if (this.selection.isRightArrow(obfuscationGuard ^ -27)) {
                   nf.a((byte) 109);
@@ -467,21 +467,21 @@ abstract class MenuScreen extends GameScreen {
               }
               if (var8 == 9) {
                 if (!(!this.selection.isActivated((byte) 113))) {
-                  pe.field_o.a((byte) 40, inputFlag);
-                  cc.field_G = true;
+                  pe.gameplayScreen.a((byte) 40, inputFlag);
+                  NewAchievementsScreen.field_G = true;
                 }
                 break regionExit1;
               }
               if (var8 == 11) {
                 if (!(!this.selection.isActivated((byte) 113))) {
-                  pe.field_o.b(29);
+                  pe.gameplayScreen.b(29);
                   ng.requestScreen(inputFlag, 73, -1);
                 }
                 break regionExit1;
               }
               if (var8 == 12) {
                 if (!(!this.selection.isActivated((byte) 113))) {
-                  pe.field_o.f(69);
+                  pe.gameplayScreen.f(69);
                 }
                 break regionExit1;
               }
@@ -499,7 +499,7 @@ abstract class MenuScreen extends GameScreen {
                   } else {
                     var12 = (String) null;
                     he.a((String) null, true, (byte) 123);
-                    if (ib.a(pl.field_b, -1)) {
+                    if (ib.a(pl.pendingAchievementMask, -1)) {
                       sl.field_z = 9;
                     } else {
                       stackIn_143_0 = (null != fj.field_Ub) ? 5 : 0;
@@ -524,7 +524,7 @@ abstract class MenuScreen extends GameScreen {
               }
               if (var8 == 33) {
                 if (!(!this.selection.isActivated((byte) 113))) {
-                  cq.a(16727, inputFlag, pe.field_o.field_r, pe.field_o.match.configuration);
+                  cq.a(16727, inputFlag, pe.gameplayScreen.field_r, pe.gameplayScreen.match.configuration);
                 }
                 break regionExit1;
               }
@@ -535,7 +535,7 @@ abstract class MenuScreen extends GameScreen {
                     var8 = 15;
                   }
                   ng.requestScreen(inputFlag, obfuscationGuard ^ 25, var8);
-                  cc.field_G = true;
+                  NewAchievementsScreen.field_G = true;
                 }
                 break regionExit1;
               }
@@ -544,8 +544,8 @@ abstract class MenuScreen extends GameScreen {
                   if (!this.selection.isActivated((byte) 113)) {
                     break regionExit1;
                   }
-                  pe.field_o.a(inputFlag, (byte) 69);
-                  cc.field_G = true;
+                  pe.gameplayScreen.a(inputFlag, (byte) 69);
+                  NewAchievementsScreen.field_G = true;
                   break regionExit1;
                 default:
                   break regionExit1;
@@ -564,7 +564,7 @@ abstract class MenuScreen extends GameScreen {
                   be.field_a = stackIn_165_0;
                   r.field_A = stackIn_165_0;
                   if (r.field_A &&
-                    pe.field_o != null) {
+                    pe.gameplayScreen != null) {
                     hd.a(true);
                   }
                   var4 = 1;
@@ -685,7 +685,7 @@ abstract class MenuScreen extends GameScreen {
           ep.field_k = param0;
           bo.field_l = true;
           wd.field_z = param4;
-          gn.field_E = param2;
+          MultiplayerExitScreen.field_E = param2;
           ba.field_z = param3;
           if (param1 != 29295) {
             MenuScreen.b(48);

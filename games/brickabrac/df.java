@@ -80,8 +80,8 @@ final class df {
     }
 
     final static Boolean a(int param0) {
-        Boolean var1 = af.field_r;
-        af.field_r = null;
+        Boolean var1 = AchievementBrowserScreen.field_r;
+        AchievementBrowserScreen.field_r = null;
         if (param0 != 0) {
           return (Boolean) null;
         }

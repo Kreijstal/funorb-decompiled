@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class fp extends lh {
+final class OptionsScreen extends FramedMenuScreen {
     static int field_x;
     static mh field_u;
     static int field_z;
@@ -82,7 +82,7 @@ final class fp extends lh {
         return Rasterizer2D.width - param1;
     }
 
-    fp() {
+    OptionsScreen() {
         super(14, 180, 460, 155, 35, be.field_o);
     }
 
@@ -92,7 +92,7 @@ final class fp extends lh {
           return;
         }
         al.a(this.screenId, 19);
-        this.g(68);
+        this.drawMenuFrame(68);
         this.a(0);
     }
 

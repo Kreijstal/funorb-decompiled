@@ -76,7 +76,7 @@ final class hj extends mh {
             nl.field_f == null) {
             if (!qo.field_I) {
               var5 = bm.field_d;
-              var6 = ol.field_x;
+              var6 = LevelPackSelectScreen.field_x;
               var5.field_d.a(var6, 14, (byte) 84);
             }
             var7 = bm.field_d;
@@ -93,7 +93,7 @@ final class hj extends mh {
               var9.field_d.a(var10, 14, (byte) 120);
             }
             var11 = bm.field_d;
-            var12 = gn.field_y;
+            var12 = MultiplayerExitScreen.field_y;
             var11.field_d.a(var12, 20, (byte) 103);
           }
           bm.field_d.a(true);
@@ -172,7 +172,7 @@ final class hj extends mh {
           }
           var4 = (ln) (ie.field_v.first(-28));
           while (var4 != null) {
-            gn.a(param0, 125, var4);
+            MultiplayerExitScreen.a(param0, 125, var4);
             var4 = (ln) (ie.field_v.next((byte) 116));
           }
           var2 = uc.field_q.first(-54);

@@ -145,7 +145,7 @@ final class cb extends k {
         if (param0 >= -90) {
           return false;
         }
-        if (!ld.field_s) {
+        if (!MatchResultScreen.field_s) {
           return false;
         }
         if (ng.field_b == 0) {

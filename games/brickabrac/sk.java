@@ -35,7 +35,7 @@ final class sk extends h {
         try {
           fj.field_Ub = null;
           ep.field_i = 23;
-          fp.field_z = 57;
+          OptionsScreen.field_z = 57;
           DelegatingCanvas.field_c = 13;
           if (param5 != -12665) {
             sk.a(122);
@@ -53,11 +53,11 @@ final class sk extends h {
             var7[var8] = hi.field_w.nextInt(97);
           }
           var15 = id.a(hi.field_w, false);
-          pe.field_o = new GameplayScreen(args, -1, var6_int, param2, var12, var15);
-          pe.field_o.a((byte) 119, param1);
-          pe.field_o.field_q = true;
-          stackIn_10_0 = pe.field_o;
-          stackIn_10_1 = pe.field_o.field_s;
+          pe.gameplayScreen = new GameplayScreen(args, -1, var6_int, param2, var12, var15);
+          pe.gameplayScreen.a((byte) 119, param1);
+          pe.gameplayScreen.field_q = true;
+          stackIn_10_0 = pe.gameplayScreen;
+          stackIn_10_1 = pe.gameplayScreen.field_s;
           stackIn_11_2 = (kb.field_Yb >= 2) && (param3 == 1) && (qg.field_t);
           stackIn_10_0.field_s = stackIn_10_1 | stackIn_11_2;
           ng.requestScreen(param4, 103, -1);
@@ -108,9 +108,9 @@ final class sk extends h {
           lp.currentScreen = hd.pendingScreen;
           hd.pendingScreen = null;
           kh.field_a = 0;
-          if (cc.field_G) {
-            cc.field_G = false;
-            pe.field_o = null;
+          if (NewAchievementsScreen.field_G) {
+            NewAchievementsScreen.field_G = false;
+            pe.gameplayScreen = null;
           }
           if (param0 > -112) {
             field_J = (RgbSprite[]) null;
@@ -118,14 +118,14 @@ final class sk extends h {
           if (eb.field_l) {
             fj.field_Ub = null;
             lp.field_wb.clear((byte) -121);
-            var9 = mk.field_b;
+            var9 = mk.earnedAchievementMask;
             var7 = var9;
             var4 = var7;
             var1 = var4;
             for (var2 = 0; var2 < 8; var2++) {
               var9[var2] = 0;
             }
-            var10 = pl.field_b;
+            var10 = pl.pendingAchievementMask;
             var8 = var10;
             var5 = var8;
             var1Lifetime1 = var5;

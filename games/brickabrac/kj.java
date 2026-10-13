@@ -182,10 +182,10 @@ final class kj extends hb {
                 var7 = dupTemp$0;
                 gb.field_l[var6].field_cb = 0;
                 var14.field_Ib = 0;
-                for (var8 = 0; ab.field_A[var6].length > var8; var8++) {
-                  if (null != ab.field_A[var6][var8]) {
-                    var9 = ab.field_A[var6][var8];
-                    ab.field_A[var6][var8].field_cb = 0;
+                for (var8 = 0; MatchCompleteScreen.field_A[var6].length > var8; var8++) {
+                  if (null != MatchCompleteScreen.field_A[var6][var8]) {
+                    var9 = MatchCompleteScreen.field_A[var6][var8];
+                    MatchCompleteScreen.field_A[var6][var8].field_cb = 0;
                     var9.field_Ib = 0;
                   }
                 }
@@ -194,12 +194,12 @@ final class kj extends hb {
                 var7 = gb.field_l[var6];
                 gb.field_l[var6].field_cb = 0;
                 var7.field_Ib = 0;
-                for (var8 = 0; var8 < ab.field_A[var6].length; var8++) {
+                for (var8 = 0; var8 < MatchCompleteScreen.field_A[var6].length; var8++) {
                   stackIn_37_0 = null;
-                  stackIn_37_1 = ab.field_A[var6][var8];
+                  stackIn_37_1 = MatchCompleteScreen.field_A[var6][var8];
                   if (stackIn_37_0 != stackIn_37_1) {
-                    var9 = ab.field_A[var6][var8];
-                    ab.field_A[var6][var8].field_cb = 0;
+                    var9 = MatchCompleteScreen.field_A[var6][var8];
+                    MatchCompleteScreen.field_A[var6][var8].field_cb = 0;
                     var9.field_Ib = 0;
                   }
                 }
@@ -222,10 +222,10 @@ final class kj extends hb {
                   var8_ref_mh = gb.field_l[var6];
                   gb.field_l[var6].field_cb = 0;
                   var8_ref_mh.field_Ib = 0;
-                  for (var9_int = 0; ab.field_A[var6].length > var9_int; var9_int++) {
-                    if (ab.field_A[var6][var9_int] != null) {
-                      var10_ref_rk = ab.field_A[var6][var9_int];
-                      ab.field_A[var6][var9_int].field_cb = 0;
+                  for (var9_int = 0; MatchCompleteScreen.field_A[var6].length > var9_int; var9_int++) {
+                    if (MatchCompleteScreen.field_A[var6][var9_int] != null) {
+                      var10_ref_rk = MatchCompleteScreen.field_A[var6][var9_int];
+                      MatchCompleteScreen.field_A[var6][var9_int].field_cb = 0;
                       var10_ref_rk.field_Ib = 0;
                     }
                   }
@@ -233,20 +233,20 @@ final class kj extends hb {
                   gb.field_l[var6].a(var3, var5, 5, 103, (byte) 64);
                   var8 = 110;
                   if (!param1) {
-                    if (null != ab.field_A[var6][0]) {
-                      var9 = ab.field_A[var6][0];
-                      ab.field_A[var6][0].field_cb = 0;
+                    if (null != MatchCompleteScreen.field_A[var6][0]) {
+                      var9 = MatchCompleteScreen.field_A[var6][0];
+                      MatchCompleteScreen.field_A[var6][0].field_cb = 0;
                       var9.field_Ib = 0;
                     }
                   } else {
-                    ab.field_A[var6][0].a(-10411, var5, 2, kn.field_z, var8, var3, 38);
+                    MatchCompleteScreen.field_A[var6][0].a(-10411, var5, 2, kn.field_z, var8, var3, 38);
                     var8 += 40;
                   }
                   var9_int = 2 + (MultiplayerMatch.field_d.field_Ib - (5 + var8));
-                  var10 = ab.field_A[var6].length - 1;
+                  var10 = MatchCompleteScreen.field_A[var6].length - 1;
                   for (var11 = 0; var10 > var11; var11++) {
                     var12 = var11 * var9_int / var10;
-                    ab.field_A[var6][1 + var11].a(-10411, var5, 2, kn.field_z, var12 + var8, var3, var9_int * (var11 + 1) / var10 - 2 - var12);
+                    MatchCompleteScreen.field_A[var6][1 + var11].a(-10411, var5, 2, kn.field_z, var12 + var8, var3, var9_int * (var11 + 1) / var10 - 2 - var12);
                   }
                   var5 = var5 + (var3 + 2);
                 }

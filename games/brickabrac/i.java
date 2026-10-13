@@ -4,7 +4,7 @@
 final class i extends IntrusiveNode {
     static mf field_s;
     int field_i;
-    af field_t;
+    AchievementBrowserScreen field_t;
     private RgbSprite field_k;
     int field_u;
     int field_w;
@@ -192,11 +192,11 @@ final class i extends IntrusiveNode {
 
     final static void c(byte param0) {
         int var2 = BrickABrac.field_J ? 1 : 0;
-        if (pe.field_o.c(116)) {
+        if (pe.gameplayScreen.c(116)) {
           return;
         }
-        if ((1 << pe.field_o.field_k & pe.field_o.match.field_n) == 0) {
-          if (pe.field_o.match.field_n != 0) {
+        if ((1 << pe.gameplayScreen.field_k & pe.gameplayScreen.match.field_n) == 0) {
+          if (pe.gameplayScreen.match.field_n != 0) {
             ag.buttonLabels[10] = er.field_a;
             if (param0 != 32) {
               field_o = (String) null;
@@ -276,7 +276,7 @@ final class i extends IntrusiveNode {
         tp var12;
         tp var13;
         var3 = BrickABrac.field_J ? 1 : 0;
-        if (eo.a(this.field_t.field_t, this.field_r, (byte) -75)) {
+        if (eo.isBitSet(this.field_t.achievementMask, this.field_r, (byte) -75)) {
           if (this.field_r == nf.field_P) {
             pa.field_h[this.field_r].f(this.field_i, this.field_n, 384);
             if (this.field_k == null ||
@@ -316,7 +316,7 @@ final class i extends IntrusiveNode {
           if (nf.field_P != this.field_r) {
             if (nf.field_Y != this.field_r) {
               if (this.field_k == null) {
-                var6 = vq.field_F;
+                var6 = LevelCompleteScreen.field_F;
                 this.field_k = new RgbSprite(var6.canvasWidth / 4, var6.canvasHeight / 4);
                 fc.a(-76, this.field_k);
                 var6.e(0, 0);
@@ -324,7 +324,7 @@ final class i extends IntrusiveNode {
                 this.field_v = true;
               } else {
                 if (!this.field_v) {
-                  var7 = vq.field_F;
+                  var7 = LevelCompleteScreen.field_F;
                   this.field_k = new RgbSprite(var7.canvasWidth / 4, var7.canvasHeight / 4);
                   fc.a(-76, this.field_k);
                   var7.e(0, 0);
@@ -343,7 +343,7 @@ final class i extends IntrusiveNode {
             qh.field_c.f(this.field_i, this.field_n, 384);
           }
           if (this.field_k == null) {
-            var10 = vq.field_F;
+            var10 = LevelCompleteScreen.field_F;
             this.field_k = new RgbSprite(var10.canvasWidth / 4, var10.canvasHeight / 4);
             fc.a(-76, this.field_k);
             var10.e(0, 0);
@@ -351,7 +351,7 @@ final class i extends IntrusiveNode {
             this.field_v = true;
           } else {
             if (!this.field_v) {
-              var10 = vq.field_F;
+              var10 = LevelCompleteScreen.field_F;
               this.field_k = new RgbSprite(var10.canvasWidth / 4, var10.canvasHeight / 4);
               fc.a(-76, this.field_k);
               var10.e(0, 0);

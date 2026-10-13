@@ -181,7 +181,7 @@ abstract class sa extends qg implements vc {
         if (!m.a(2)) {
           if (lg.a(9)) {
             if (!me.b(126)) {
-              var3 = md.f((byte) 124);
+              var3 = InstructionsScreen.f((byte) 124);
               switch (var3) {
                 case 3:
                   cp.a(true, 21543);

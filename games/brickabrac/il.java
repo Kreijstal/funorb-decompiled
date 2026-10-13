@@ -211,7 +211,7 @@ final class il extends CircleBody {
           eo.field_f = tj.a(param1, param6, 0, param4);
           jk.field_w = tj.a(param1, param6, 1, param3);
           ob.field_J = new ra();
-          af.field_u = param5 * param3 / param2;
+          AchievementBrowserScreen.field_u = param5 * param3 / param2;
           jk.field_w.b(ob.field_J);
           m.field_f = param0;
           m.field_f.a(ScorePopup.field_p, false);
@@ -300,11 +300,11 @@ final class il extends CircleBody {
 
     final static boolean e(byte param0) {
         if (param0 < -77) {
-          return ld.field_t > 250 ? true : false;
+          return MatchResultScreen.field_t > 250 ? true : false;
         }
         RgbSprite var2 = (RgbSprite) null;
         il.a(-62, (RgbSprite) null, (RgbSprite) null, 105, -38, (RgbSprite) null, 49, -61, 61, -69, (RgbSprite) null, 126);
-        return ld.field_t > 250 ? true : false;
+        return MatchResultScreen.field_t > 250 ? true : false;
     }
 
     static {

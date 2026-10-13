@@ -5,7 +5,7 @@ final class da extends hb {
     static byte[][] field_L;
     PacketBuffer field_D;
     static int field_G;
-    static RgbSprite[] field_E;
+    static RgbSprite[] packSelectorIcons;
     static int[] field_C;
     static int[] field_M;
     int field_K;
@@ -25,18 +25,18 @@ final class da extends hb {
     }
 
     final static void f(byte param0) {
-        if (!pe.field_o.c(95)) {
+        if (!pe.gameplayScreen.c(95)) {
           vg.a(o.field_e.e((byte) 31), false, 11);
           ed.field_d = true;
           if (param0 != 122) {
-            field_E = (RgbSprite[]) null;
+            packSelectorIcons = (RgbSprite[]) null;
             return;
           }
           return;
         }
         dn.b(0, -108, 11);
         if (param0 != 122) {
-          field_E = (RgbSprite[]) null;
+          packSelectorIcons = (RgbSprite[]) null;
           return;
         }
     }
@@ -104,7 +104,7 @@ final class da extends hb {
         field_C = null;
         int var1 = -85 / ((4 - param0) / 55);
         field_H = null;
-        field_E = null;
+        packSelectorIcons = null;
         field_L = (byte[][]) null;
     }
 

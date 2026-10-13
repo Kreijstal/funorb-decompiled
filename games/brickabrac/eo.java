@@ -40,14 +40,14 @@ final class eo extends tl {
 
     final static void a(int param0, int param1, int param2, int param3) {
         if (param3 == param0 &&
-          md.field_r != param2) {
+          InstructionsScreen.field_r != param2) {
           LevelSequence.field_d = true;
-          md.field_r = param2;
+          InstructionsScreen.field_r = param2;
           eh.a(true, param1);
         }
         if (param3 == 1 &&
-          md.field_v != param2) {
-          md.field_v = param2;
+          InstructionsScreen.field_v != param2) {
+          InstructionsScreen.field_v = param2;
           LevelSequence.field_d = true;
           eh.a(true, param1);
         }
@@ -86,7 +86,7 @@ final class eo extends tl {
         return (byte[]) null;
     }
 
-    final static boolean a(int[] param0, int param1, byte param2) {
+    final static boolean isBitSet(int[] words, int bitIndex, byte obfuscationGuard) {
         RuntimeException var3 = null;
         boolean stackIn_6_0 = false;
         RuntimeException stackIn_9_0 = null;
@@ -94,8 +94,8 @@ final class eo extends tl {
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param2 == -75) {
-            stackIn_6_0 = ((param0[param1 >> 5] & 1 << (param1 & 31)) != 0);
+          if (obfuscationGuard == -75) {
+            stackIn_6_0 = ((words[bitIndex >> 5] & 1 << (bitIndex & 31)) != 0);
             return stackIn_6_0;
           }
           return false;
@@ -104,12 +104,12 @@ final class eo extends tl {
           var3 = decompiledCaughtException;
           stackIn_9_0 = var3;
           stackIn_9_1 = new StringBuilder().append("eo.C(");
-          if (param0 == null) {
+          if (words == null) {
             stackIn_10_2 = "null";
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw qb.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw qb.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(bitIndex).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 

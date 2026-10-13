@@ -11,11 +11,11 @@ final class ok {
     static mh field_d;
 
     final static void a(int param0) {
-        if (!ol.field_s) {
+        if (!LevelPackSelectScreen.field_s) {
           throw new IllegalStateException();
         }
         ci.field_t = true;
-        lf.a((byte) -78, false);
+        RankingsScreen.a((byte) -78, false);
         i.field_j = param0;
     }
 

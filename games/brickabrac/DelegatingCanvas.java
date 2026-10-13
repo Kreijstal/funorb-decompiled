@@ -38,7 +38,7 @@ final class DelegatingCanvas extends java.awt.Canvas {
                 jl.field_a = jl.field_a - 1;
                 if (0 == fieldTemp$0) {
                   SpriteGeometry.field_v = MembershipBenefitsScreen.field_x;
-                  tb.field_eb = hq.field_y;
+                  tb.field_eb = SaveResultsPromptScreen.field_y;
                   pp.field_a = -1;
                   jl.field_a = 250;
                   ga.field_i = 0;

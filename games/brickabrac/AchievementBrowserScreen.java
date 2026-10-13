@@ -1,41 +1,41 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class af extends MenuScreen {
+abstract class AchievementBrowserScreen extends MenuScreen {
     static char[] field_B;
     static int field_u;
     static Boolean field_r;
     static RgbSprite[] field_A;
-    private String[] field_E;
+    private String[] descriptionLines;
     static String[] field_s;
-    private NodeDeque field_C;
-    int[] field_t;
-    private NodeDeque field_v;
+    private NodeDeque visibleIcons;
+    int[] achievementMask;
+    private NodeDeque departingIcons;
     static RgbSprite field_D;
-    private int[] field_y;
-    private NodeDeque[] field_z;
-    private int field_x;
-    private int field_w;
+    private int[] descriptionWidths;
+    private NodeDeque[] achievementPages;
+    private int pageCount;
+    private int pageIndex;
 
     final void advanceScreen(boolean updateFlag, boolean inputEnabled, int obfuscationGuard) {
         int var5 = BrickABrac.field_J ? 1 : 0;
         super.advanceScreen(updateFlag, inputEnabled, -89);
         nf.field_Y = -1;
-        i var4 = (i) (this.field_C.first(-117));
+        i var4 = (i) (this.visibleIcons.first(-117));
         if (obfuscationGuard > -52) {
           field_u = 41;
         }
         while (var4 != null) {
           var4.a(-127);
-          var4 = (i) (this.field_C.next((byte) 116));
+          var4 = (i) (this.visibleIcons.next((byte) 116));
         }
-        var4 = (i) (this.field_v.first(-113));
+        var4 = (i) (this.departingIcons.first(-113));
         while (var4 != null) {
           var4.a(-128);
           if (var4.field_p == 0) {
             var4.c(1);
           }
-          var4 = (i) (this.field_v.next((byte) 116));
+          var4 = (i) (this.departingIcons.next((byte) 116));
         }
     }
 
@@ -65,15 +65,15 @@ abstract class af extends MenuScreen {
         super.drawScreen((byte) -104);
         im.a(550, 5, 88, 5, 140, (byte) -72, 45);
         MovingBody.a((byte) 98, 560, 80, 140, 228);
-        var17 = (i) (this.field_C.first(-94));
+        var17 = (i) (this.visibleIcons.first(-94));
         while (var17 != null) {
           var17.a((byte) 103);
-          var17 = (i) (this.field_C.next((byte) 116));
+          var17 = (i) (this.visibleIcons.next((byte) 116));
         }
-        var15 = (i) (this.field_v.first(-43));
+        var15 = (i) (this.departingIcons.first(-43));
         while (var15 != null) {
           var15.a((byte) 107);
-          var15 = (i) (this.field_v.next((byte) 116));
+          var15 = (i) (this.departingIcons.next((byte) 116));
         }
         sc.b(-81);
         im.a(146, 5, 146, 5, 233, (byte) -87, 45);
@@ -90,7 +90,7 @@ abstract class af extends MenuScreen {
         var4 = ob.field_D.field_P + ob.field_D.field_B;
         var5 = nn.field_g.field_B + nn.field_g.field_P;
         if (-1 != var3) {
-          stackIn_17_0 = (!eo.a(this.field_t, var3, (byte) -75)) ? 0 : 1;
+          stackIn_17_0 = (!eo.isBitSet(this.achievementMask, var3, (byte) -75)) ? 0 : 1;
           var6 = stackIn_17_0;
           nn.field_g.c(field_s[var3], 209, nn.field_g.field_B + 246, 1, -1);
           stackIn_19_0 = nn.field_g;
@@ -103,14 +103,14 @@ abstract class af extends MenuScreen {
           if (var6 != 0) {
             si.field_c[var3].a(54, 242);
           } else {
-            vq.field_F.drawTransparent(54, 242);
+            LevelCompleteScreen.field_F.drawTransparent(54, 242);
           }
           var7 = 246 + 5 * var5 / 2;
           var8 = var7 + var5;
           var9 = var7 - (-(7 * var4) + ob.field_D.field_F);
-          var10 = ob.field_D.a(rd.a(mp.field_bc[var3], new String[]{nl.a(true, true, 0, (long)dp.field_r[var3], cd.field_e)}, (byte) 103), this.field_y, this.field_E);
+          var10 = ob.field_D.a(rd.a(mp.field_bc[var3], new String[]{nl.a(true, true, 0, (long)dp.field_r[var3], cd.field_e)}, (byte) 103), this.descriptionWidths, this.descriptionLines);
           for (var11 = 0; var11 < var10; var11++) {
-            ob.field_D.c(this.field_E[var11], 209, var8, 2, -1);
+            ob.field_D.c(this.descriptionLines[var11], 209, var8, 2, -1);
             var8 = var8 + var4;
           }
           ob.field_D.c(LevelPackLoader.field_c + Brick.field_D[var3], 209, var9 + (-(2 * ob.field_D.field_P) - nj.field_z.height / 2), 2, -1);
@@ -132,19 +132,19 @@ abstract class af extends MenuScreen {
         this.a(0);
     }
 
-    final static String a(boolean param0, boolean param1, boolean param2, int param3) {
+    final static String buildSavePrompt(boolean hasAchievements, boolean hasScore, boolean hasProgress, int obfuscationGuard) {
         int var4 = 0;
-        if (param0) {
+        if (hasAchievements) {
           var4 += 4;
         }
-        int var5 = 66 % ((38 - param3) / 57);
-        if (param1) {
+        int var5 = 66 % ((38 - obfuscationGuard) / 57);
+        if (hasScore) {
           var4 += 2;
         }
-        if (param2) {
+        if (hasProgress) {
           var4++;
         }
-        return gn.field_D[var4];
+        return MultiplayerExitScreen.savePrompts[var4];
     }
 
     final void handleNavigationKey(int obfuscationGuard, int keyCode, char character) {
@@ -223,7 +223,7 @@ abstract class af extends MenuScreen {
         }
         if (obfuscationGuard != -120) {
           var6 = (RgbSprite) null;
-          af.a((RgbSprite) null, -23, 26, 101, 46, -121, -33, (RgbSprite) null, 118, (RgbSprite) null, -100);
+          AchievementBrowserScreen.a((RgbSprite) null, -23, 26, 101, 46, -121, -33, (RgbSprite) null, 118, (RgbSprite) null, -100);
         }
     }
 
@@ -238,7 +238,7 @@ abstract class af extends MenuScreen {
           if (param0 <= 118) {
             field_B = (char[]) null;
           }
-          stackIn_5_0 = (jf.a(0, param1) != null);
+          stackIn_5_0 = (HighscorePackSelector.a(0, param1) != null);
           return stackIn_5_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -254,7 +254,7 @@ abstract class af extends MenuScreen {
         }
     }
 
-    abstract boolean a(int param0, byte param1);
+    abstract boolean isAchievementExcluded(int achievementId, byte obfuscationGuard);
 
     public static void f(byte param0) {
         field_A = null;
@@ -287,20 +287,20 @@ abstract class af extends MenuScreen {
         }
     }
 
-    af(int param0, int[] param1) {
-        super(param0, 38, 460, 402, 35, param1);
+    AchievementBrowserScreen(int screenId, int[] actionIds) {
+        super(screenId, 38, 460, 402, 35, actionIds);
         int var3_int = 0;
-        this.field_E = new String[24];
-        this.field_C = new NodeDeque();
-        this.field_v = new NodeDeque();
+        this.descriptionLines = new String[24];
+        this.visibleIcons = new NodeDeque();
+        this.departingIcons = new NodeDeque();
         try {
-          this.field_z = new NodeDeque[1 + field_s.length / 16];
-          for (var3_int = 0; this.field_z.length > var3_int; var3_int++) {
-            this.field_z[var3_int] = new NodeDeque();
+          this.achievementPages = new NodeDeque[1 + field_s.length / 16];
+          for (var3_int = 0; this.achievementPages.length > var3_int; var3_int++) {
+            this.achievementPages[var3_int] = new NodeDeque();
           }
-          this.field_y = new int[]{373};
+          this.descriptionWidths = new int[]{373};
         } catch (RuntimeException runtimeException) {
-          throw qb.a((Throwable) ((Object) runtimeException), "af.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw qb.a((Throwable) ((Object) runtimeException), "af.<init>(" + screenId + ',' + (actionIds != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -312,28 +312,28 @@ abstract class af extends MenuScreen {
     }
 
     final void onExit(byte obfuscationGuard) {
-        this.g((byte) -121);
+        this.clearIconQueues((byte) -121);
         if (obfuscationGuard != 79) {
-          this.field_E = (String[]) null;
+          this.descriptionLines = (String[]) null;
         }
     }
 
-    private final void g(byte param0) {
-        if (param0 > -42) {
+    private final void clearIconQueues(byte obfuscationGuard) {
+        if (obfuscationGuard > -42) {
           return;
         }
-        this.a(32367, this.field_C);
-        this.a(32367, this.field_v);
+        this.clearIcons(32367, this.visibleIcons);
+        this.clearIcons(32367, this.departingIcons);
     }
 
     final boolean isButtonEnabled(byte obfuscationGuard, int buttonIndex) {
         int var3 = this.buttons[buttonIndex].actionId;
         if (var3 == 44 &&
-          this.field_w == 0) {
+          this.pageIndex == 0) {
           return false;
         }
         if (var3 == 45 &&
-          this.field_x - 1 <= this.field_w) {
+          this.pageCount - 1 <= this.pageIndex) {
           return false;
         }
         if (obfuscationGuard < 80) {
@@ -350,35 +350,35 @@ abstract class af extends MenuScreen {
         int var6;
         var6 = BrickABrac.field_J ? 1 : 0;
         super.onEnter(usePointer, 2, 110);
-        this.field_w = 0;
-        this.field_x = 0;
+        this.pageIndex = 0;
+        this.pageCount = 0;
         nf.field_Y = -1;
         nf.field_P = -1;
-        this.field_z[this.field_x].clear((byte) -114);
+        this.achievementPages[this.pageCount].clear((byte) -114);
         if (obfuscationGuard <= 96) {
           return;
         }
         var4 = 0;
         for (var5 = 0; var5 < field_s.length; var5++) {
-          if (!this.a(var5, (byte) 38)) {
-            this.field_z[this.field_x].addLast(new IntNode(var5), (byte) 3);
+          if (!this.isAchievementExcluded(var5, (byte) 38)) {
+            this.achievementPages[this.pageCount].addLast(new IntNode(var5), (byte) 3);
             var4++;
             if (var4 == 16) {
               var4 = 0;
-              fieldTemp$0 = this.field_x + 1;
-              this.field_x = this.field_x + 1;
-              this.field_z[fieldTemp$0].clear((byte) -46);
+              fieldTemp$0 = this.pageCount + 1;
+              this.pageCount = this.pageCount + 1;
+              this.achievementPages[fieldTemp$0].clear((byte) -46);
             }
           }
         }
-        if (!this.field_z[this.field_x].isEmpty(false)) {
-          this.field_x = this.field_x + 1;
+        if (!this.achievementPages[this.pageCount].isEmpty(false)) {
+          this.pageCount = this.pageCount + 1;
         }
-        this.a(2, 0, this.field_z[this.field_w]);
+        this.showAchievementPage(2, 0, this.achievementPages[this.pageIndex]);
         return;
     }
 
-    private final void a(int param0, int param1, NodeDeque param2) {
+    private final void showAchievementPage(int columnDivisor, int transitionDirection, NodeDeque achievementIds) {
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
         String stackIn_13_2 = null;
@@ -395,24 +395,24 @@ abstract class af extends MenuScreen {
         var11 = BrickABrac.field_J ? 1 : 0;
         try {
           nf.field_P = -1;
-          var4_int = 640 * param1;
-          this.a(32367, this.field_v);
-          var5 = (i) (this.field_C.removeFirst(3));
+          var4_int = 640 * transitionDirection;
+          this.clearIcons(32367, this.departingIcons);
+          var5 = (i) (this.visibleIcons.removeFirst(3));
           while (var5 != null) {
             var5.field_x = -1;
             var5.field_p = -var4_int;
-            this.field_v.addLast(var5, (byte) 3);
-            var5 = (i) (this.field_C.removeFirst(3));
+            this.departingIcons.addLast(var5, (byte) 3);
+            var5 = (i) (this.visibleIcons.removeFirst(3));
           }
           var6 = 82;
-          var7 = (24 + var6 * 2) / param0;
+          var7 = (24 + var6 * 2) / columnDivisor;
           var8 = 150;
-          var9 = (IntNode) (param2.first(-74));
+          var9 = (IntNode) (achievementIds.first(-74));
           var10 = 0;
           while (var9 != null) {
-            this.field_C.addLast(cn.a(-var4_int, var8, 32, this, 32, var10, var4_int + var7, var9.value, param0 - 1), (byte) 3);
+            this.visibleIcons.addLast(cn.a(-var4_int, var8, 32, this, 32, var10, var4_int + var7, var9.value, columnDivisor - 1), (byte) 3);
             rk.field_Qb = rk.field_Qb | 1 << var10;
-            var9 = (IntNode) (param2.next((byte) 116));
+            var9 = (IntNode) (achievementIds.next((byte) 116));
             var10++;
             if (var10 != 8) {
               var7 += 56;
@@ -426,8 +426,8 @@ abstract class af extends MenuScreen {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
           stackIn_12_0 = var4;
-          stackIn_12_1 = new StringBuilder().append("af.RA(").append(param0).append(',').append(param1).append(',');
-          if (param2 == null) {
+          stackIn_12_1 = new StringBuilder().append("af.RA(").append(columnDivisor).append(',').append(transitionDirection).append(',');
+          if (achievementIds == null) {
             stackIn_13_2 = "null";
           } else {
             stackIn_13_2 = "{...}";
@@ -436,7 +436,7 @@ abstract class af extends MenuScreen {
         }
     }
 
-    private final void a(int param0, NodeDeque param1) {
+    private final void clearIcons(int obfuscationGuard, NodeDeque icons) {
         int var4 = 0;
         i var5 = null;
         RuntimeException stackIn_9_0 = null;
@@ -446,21 +446,21 @@ abstract class af extends MenuScreen {
         RuntimeException var3 = null;
         var4 = BrickABrac.field_J ? 1 : 0;
         try {
-          if (param0 != 32367) {
-            this.field_C = (NodeDeque) null;
+          if (obfuscationGuard != 32367) {
+            this.visibleIcons = (NodeDeque) null;
           }
-          var5 = (i) (param1.removeFirst(param0 - 32364));
+          var5 = (i) (icons.removeFirst(obfuscationGuard - 32364));
           while (var5 != null) {
             var5.c(1);
-            var5 = (i) (param1.removeFirst(3));
+            var5 = (i) (icons.removeFirst(3));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
           stackIn_9_0 = var3;
-          stackIn_9_1 = new StringBuilder().append("af.G(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_9_1 = new StringBuilder().append("af.G(").append(obfuscationGuard).append(',');
+          if (icons == null) {
             stackIn_10_2 = "null";
           } else {
             stackIn_10_2 = "{...}";
@@ -490,12 +490,12 @@ abstract class af extends MenuScreen {
           if (this.selection.isActivated((byte) 113) &&
             this.isButtonEnabled((byte) 90, buttonIndex) &&
             rk.field_Qb == 0) {
-            fieldTemp$0 = this.field_w + 1;
-            this.field_w = this.field_w + 1;
-            if (fieldTemp$0 >= this.field_x) {
-              this.field_w = this.field_x - 1;
+            fieldTemp$0 = this.pageIndex + 1;
+            this.pageIndex = this.pageIndex + 1;
+            if (fieldTemp$0 >= this.pageCount) {
+              this.pageIndex = this.pageCount - 1;
             }
-            this.a(2, 1, this.field_z[this.field_w]);
+            this.showAchievementPage(2, 1, this.achievementPages[this.pageIndex]);
             if (!this.isButtonEnabled((byte) 86, 1)) {
               this.selection.setSelectedIndex(false, 0);
             }
@@ -507,12 +507,12 @@ abstract class af extends MenuScreen {
             if (rk.field_Qb != 0) {
               return false;
             }
-            fieldTemp$1 = this.field_w - 1;
-            this.field_w = this.field_w - 1;
+            fieldTemp$1 = this.pageIndex - 1;
+            this.pageIndex = this.pageIndex - 1;
             if (fieldTemp$1 < 0) {
-              this.field_w = 0;
+              this.pageIndex = 0;
             }
-            this.a(2, -1, this.field_z[this.field_w]);
+            this.showAchievementPage(2, -1, this.achievementPages[this.pageIndex]);
             if (!this.isButtonEnabled((byte) 83, 0)) {
               this.selection.setSelectedIndex(false, 1);
             }

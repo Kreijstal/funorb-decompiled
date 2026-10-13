@@ -69,7 +69,7 @@ class r extends um {
           if (!kb.i(7457)) {
             return true;
           }
-          if (fp.field_x <= 0) {
+          if (OptionsScreen.field_x <= 0) {
             return false;
           }
           if (!am.i(0)) {
@@ -83,7 +83,7 @@ class r extends um {
         if (!kb.i(7457)) {
           return true;
         }
-        if (fp.field_x <= 0) {
+        if (OptionsScreen.field_x <= 0) {
           return false;
         }
         if (!am.i(0)) {

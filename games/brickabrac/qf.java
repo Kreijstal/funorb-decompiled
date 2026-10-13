@@ -41,10 +41,10 @@ final class qf extends lp implements en {
 
     final static int p(int param0) {
         if (param0 == 248) {
-          return to.field_a + ((md.field_v << 2) + (md.field_r << 4));
+          return to.field_a + ((InstructionsScreen.field_v << 2) + (InstructionsScreen.field_r << 4));
         }
         field_Cb = 19;
-        return to.field_a + ((md.field_v << 2) + (md.field_r << 4));
+        return to.field_a + ((InstructionsScreen.field_v << 2) + (InstructionsScreen.field_r << 4));
     }
 
     qf(cp param0, dk param1) {
@@ -93,7 +93,7 @@ final class qf extends lp implements en {
         try {
           this.field_Db = true;
           if (param1.field_c) {
-            var4 = lh.field_r;
+            var4 = FramedMenuScreen.field_r;
           } else {
             if (null != param1.field_e) {
               var4 = ng.field_f;

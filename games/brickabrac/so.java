@@ -142,7 +142,7 @@ final class so {
         int var11Lifetime3;
         var12 = BrickABrac.field_J ? 1 : 0;
         try {
-          lf.field_t = uo.a((byte) 29, param0, "splash", "basic");
+          RankingsScreen.field_t = uo.a((byte) 29, param0, "splash", "basic");
           er.field_b = pl.a("basic", "lobby_game_logo", (byte) 110, param0);
           var21 = param2.a(-86, "basic", "gamefont");
           var15 = var21;
@@ -177,11 +177,11 @@ final class so {
           var7 = cd.field_h;
           var7[4] = null;
           pl.a("basic", "frame_bracket", (byte) 106, param0);
-          af.field_A = kf.a("button_frame", "basic", param0, -91);
+          AchievementBrowserScreen.field_A = kf.a("button_frame", "basic", param0, -91);
           Ball.field_G = kf.a("button_raised", "basic", param0, 103);
           pe.field_k = kf.a("button_depressed", "basic", param0, -104);
           si.field_c = PacketBuffer.a("basic", param0, "achievements_large", -946715356);
-          vq.field_F = pl.a("basic", "unachieved", (byte) 97, param1);
+          LevelCompleteScreen.field_F = pl.a("basic", "unachieved", (byte) 97, param1);
           pg.field_p = pl.a("basic", "orbcoin", (byte) 122, param1);
           pl.a("basic", "locked", (byte) -45, param1);
           nj.field_z = new RgbSprite(32, 32);
@@ -189,16 +189,16 @@ final class so {
           pg.field_p.c(0, 0, 32, 32);
           kc.field_q.a((byte) 91);
           pg.field_p = null;
-          var19 = new RgbSprite(vq.field_F.canvasWidth / 4, vq.field_F.canvasHeight / 4);
+          var19 = new RgbSprite(LevelCompleteScreen.field_F.canvasWidth / 4, LevelCompleteScreen.field_F.canvasHeight / 4);
           var19.bindRasterTarget();
-          vq.field_F.e(0, 0);
+          LevelCompleteScreen.field_F.e(0, 0);
           kc.field_q.a((byte) 113);
           bf.field_L = p.a(-12, var19, 8, 9838226);
           qh.field_c = p.a(-12, var19, 12, 9838226);
           var8 = null;
           e.field_l = new RgbSprite[si.field_c.length];
           pa.field_h = new RgbSprite[si.field_c.length];
-          var20 = new RgbSprite(vq.field_F.canvasWidth / 4, vq.field_F.canvasHeight / 4);
+          var20 = new RgbSprite(LevelCompleteScreen.field_F.canvasWidth / 4, LevelCompleteScreen.field_F.canvasHeight / 4);
           for (var10_int = 0; var10_int < si.field_c.length; var10_int++) {
             var20.bindRasterTarget();
             Rasterizer2D.clear();
@@ -219,7 +219,7 @@ final class so {
           qg.field_D = cr.a("basic", param0, "paddleseg", 2);
           dk.field_R = pl.a("basic", "paddlecentre", (byte) 100, param0);
           gg.field_p = cr.a("basic", param0, "powerup", 2);
-          ol.field_r = pl.a("basic", "powerupbar", (byte) 104, param0);
+          LevelPackSelectScreen.field_r = pl.a("basic", "powerupbar", (byte) 104, param0);
           ch.field_l = pl.a("basic", "heart", (byte) -108, param0);
           kb.field_Ub = cr.a("basic", param0, "characters_fm", 2);
           im.field_a = cr.a("basic", param0, "lever_game", param3 - 29135);
@@ -257,10 +257,10 @@ final class so {
             kp.field_e[var10_intLifetime4].bindRasterTarget();
             dg.field_b[var10_intLifetime4].a(0, 0);
           }
-          ol.field_z = new RgbSprite[qg.field_D.length];
+          LevelPackSelectScreen.field_z = new RgbSprite[qg.field_D.length];
           for (var10_intLifetime5 = 0; qg.field_D.length > var10_intLifetime5; var10_intLifetime5++) {
-            ol.field_z[var10_intLifetime5] = new RgbSprite(qg.field_D[var10_intLifetime5].canvasWidth / 2, qg.field_D[var10_intLifetime5].canvasHeight / 2);
-            ol.field_z[var10_intLifetime5].bindRasterTarget();
+            LevelPackSelectScreen.field_z[var10_intLifetime5] = new RgbSprite(qg.field_D[var10_intLifetime5].canvasWidth / 2, qg.field_D[var10_intLifetime5].canvasHeight / 2);
+            LevelPackSelectScreen.field_z[var10_intLifetime5].bindRasterTarget();
             qg.field_D[var10_intLifetime5].a(0, 0);
           }
           ep.field_j = new RgbSprite(dk.field_R.canvasWidth / 2, dk.field_R.canvasHeight / 2);
@@ -317,7 +317,7 @@ final class so {
           v.field_b = lg.a(2, ci.field_s.toUpperCase(), -1);
           ed.field_b = new RgbSprite[3];
           for (var10_intLifetime11 = 0; var10_intLifetime11 < ed.field_b.length; var10_intLifetime11++) {
-            ed.field_b[var10_intLifetime11] = fp.a(2, 2, Integer.toString(-var10_intLifetime11 + 3), true);
+            ed.field_b[var10_intLifetime11] = OptionsScreen.a(2, 2, Integer.toString(-var10_intLifetime11 + 3), true);
           }
           rn.field_a = new RgbSprite[tf.field_g.length];
           for (var10_intLifetime12 = 0; rn.field_a.length > var10_intLifetime12; var10_intLifetime12++) {
@@ -348,21 +348,21 @@ final class so {
             hc.field_a[1][var11] = hc.field_a[0][var11].copyFlippedHorizontal();
           }
           kc.field_q.a((byte) 127);
-          hq.field_s = bd.a("basic", "expansion_icons", param0, (byte) -8);
-          da.field_E = new RgbSprite[hq.field_s.length];
-          for (var11Lifetime1 = 0; var11Lifetime1 < hq.field_s.length; var11Lifetime1++) {
-            da.field_E[var11Lifetime1] = new RgbSprite(hq.field_s[var11Lifetime1].canvasWidth / 2, hq.field_s[var11Lifetime1].canvasHeight / 2);
-            fc.a(-59, da.field_E[var11Lifetime1]);
-            hq.field_s[var11Lifetime1].a(0, 0);
+          SaveResultsPromptScreen.packCardIcons = bd.a("basic", "expansion_icons", param0, (byte) -8);
+          da.packSelectorIcons = new RgbSprite[SaveResultsPromptScreen.packCardIcons.length];
+          for (var11Lifetime1 = 0; var11Lifetime1 < SaveResultsPromptScreen.packCardIcons.length; var11Lifetime1++) {
+            da.packSelectorIcons[var11Lifetime1] = new RgbSprite(SaveResultsPromptScreen.packCardIcons[var11Lifetime1].canvasWidth / 2, SaveResultsPromptScreen.packCardIcons[var11Lifetime1].canvasHeight / 2);
+            fc.a(-59, da.packSelectorIcons[var11Lifetime1]);
+            SaveResultsPromptScreen.packCardIcons[var11Lifetime1].a(0, 0);
             sc.b(-89);
           }
-          cm.field_r = new RgbSprite[hq.field_s.length];
-          for (var11Lifetime2 = 0; hq.field_s.length > var11Lifetime2; var11Lifetime2++) {
-            cm.field_r[var11Lifetime2] = pg.a(da.field_E[var11Lifetime2], 20, -17912);
+          cm.field_r = new RgbSprite[SaveResultsPromptScreen.packCardIcons.length];
+          for (var11Lifetime2 = 0; SaveResultsPromptScreen.packCardIcons.length > var11Lifetime2; var11Lifetime2++) {
+            cm.field_r[var11Lifetime2] = pg.a(da.packSelectorIcons[var11Lifetime2], 20, -17912);
           }
-          ik.field_f = new RgbSprite[hq.field_s.length];
-          for (var11Lifetime3 = 0; var11Lifetime3 < hq.field_s.length; var11Lifetime3++) {
-            ik.field_f[var11Lifetime3] = p.a(pn.a(param3, -29147), da.field_E[var11Lifetime3], 14, 16777215);
+          ik.field_f = new RgbSprite[SaveResultsPromptScreen.packCardIcons.length];
+          for (var11Lifetime3 = 0; var11Lifetime3 < SaveResultsPromptScreen.packCardIcons.length; var11Lifetime3++) {
+            ik.field_f[var11Lifetime3] = p.a(pn.a(param3, -29147), da.packSelectorIcons[var11Lifetime3], 14, 16777215);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

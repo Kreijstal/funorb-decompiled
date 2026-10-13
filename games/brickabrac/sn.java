@@ -103,7 +103,7 @@ final class sn extends ki {
             tf.a(0, param3, var6, 1, 114, sf.field_cb);
             var6.a(this.field_m, param3, (byte) 78);
           }
-          sn.a(sf.field_Y, 1, param1, 640, 0, af.field_D, param4, 5, param2, 480, IntNode.field_o, param3, var6.field_p);
+          sn.a(sf.field_Y, 1, param1, 640, 0, AchievementBrowserScreen.field_D, param4, 5, param2, 480, IntNode.field_o, param3, var6.field_p);
         }
     }
 
@@ -112,12 +112,12 @@ final class sn extends ki {
           return false;
         }
         sf.field_Y = pl.a("construct", "construction_near", (byte) 124, i.field_m);
-        af.field_D = pl.a("construct", "construction_mid", (byte) 102, i.field_m);
+        AchievementBrowserScreen.field_D = pl.a("construct", "construction_mid", (byte) 102, i.field_m);
         sf.field_cb = pl.a("construct", "construction_far", (byte) -93, i.field_m);
         IntNode.field_o = pl.a("construct", "construction_smoke", (byte) -128, i.field_m);
         MenuSelection.field_h = pl.a("construct", "construction_small", (byte) -74, i.field_m);
         t.field_a = jh.a(0, sf.field_Y);
-        IntrusiveNode.field_d = jh.a(0, af.field_D);
+        IntrusiveNode.field_d = jh.a(0, AchievementBrowserScreen.field_D);
         hg.field_g = jh.a(0, sf.field_cb);
         er.field_d = jh.a(0, IntNode.field_o);
         rd.field_d[0] = cr.a("construct", i.field_m, "construction_caps", 2);
@@ -200,7 +200,7 @@ final class sn extends ki {
         if (param0 >= -91) {
           this.a((byte) -78, -121);
         }
-        stackIn_9_0 = (null != sf.field_Y) && (af.field_D != null) && (null != sf.field_cb) && (null != IntNode.field_o) && (MenuSelection.field_h != null);
+        stackIn_9_0 = (null != sf.field_Y) && (AchievementBrowserScreen.field_D != null) && (null != sf.field_cb) && (null != IntNode.field_o) && (MenuSelection.field_h != null);
         return stackIn_9_0;
     }
 

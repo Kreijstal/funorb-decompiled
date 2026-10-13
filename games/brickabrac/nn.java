@@ -25,7 +25,7 @@ final class nn {
           }
           boolean decompiledFrameRemainder0 = true;
           if (8 == param2) {
-            uk.a(this.field_e, this.field_i, 2);
+            MessageScreen.a(this.field_e, this.field_i, 2);
           }
           if (8 != param2 ||
             var5 != 0) {
@@ -191,7 +191,7 @@ final class nn {
                 this.var4 = 0;
             }
             void runChunk0() throws java.lang.RuntimeException {
-                jf.field_c = param0;
+                HighscorePackSelector.field_c = param0;
                 var2 = nk.a("loginm3", (byte) 107);
                 if (var2 != null) {
                   hg.field_b = MenuButton.a(var2, (byte) 126);
@@ -314,7 +314,7 @@ final class nn {
                 }
                 var2 = nk.a("mu_x_joined_your_game", (byte) 98);
                 if (var2 != null) {
-                  md.field_w = MenuButton.a(var2, (byte) 119);
+                  InstructionsScreen.field_w = MenuButton.a(var2, (byte) 119);
                 }
                 var2 = nk.a("mu_x_entered_other_game", (byte) -126);
                 if (null != var2) {
@@ -362,7 +362,7 @@ final class nn {
                 }
                 var2 = nk.a("mu_game_has_started", (byte) 25);
                 if (var2 != null) {
-                  fp.field_w = MenuButton.a(var2, (byte) 89);
+                  OptionsScreen.field_w = MenuButton.a(var2, (byte) 89);
                 }
                 var2 = nk.a("mu_you_declined_invite", (byte) -117);
                 if (var2 != null) {
@@ -402,7 +402,7 @@ final class nn {
                 }
                 var2 = nk.a("mu_lobby_name_add", (byte) -19);
                 if (null != var2) {
-                  ab.field_z = MenuButton.a(var2, (byte) 84);
+                  MatchCompleteScreen.field_z = MenuButton.a(var2, (byte) 84);
                 }
                 var2 = nk.a("mu_lobby_name_rm", (byte) -117);
                 if (var2 != null) {
@@ -650,7 +650,7 @@ final class nn {
                 }
                 var2 = nk.a("find_opponent_singular", (byte) 23);
                 if (null != var2) {
-                  cc.field_F = MenuButton.a(var2, (byte) 96);
+                  NewAchievementsScreen.field_F = MenuButton.a(var2, (byte) 96);
                 }
                 var2 = nk.a("find_opponents_plural", (byte) -127);
                 if (null != var2) {
@@ -702,7 +702,7 @@ final class nn {
                 }
                 var2 = nk.a("message_lobby", (byte) -109);
                 if (null != var2) {
-                  ol.field_x = MenuButton.a(var2, (byte) 72);
+                  LevelPackSelectScreen.field_x = MenuButton.a(var2, (byte) 72);
                 }
                 var2 = nk.a("quickchat_lobby", (byte) 75);
                 if (null != var2) {
@@ -718,7 +718,7 @@ final class nn {
                 }
                 var2 = nk.a("quickchat_game", (byte) 41);
                 if (null != var2) {
-                  gn.field_y = MenuButton.a(var2, (byte) 89);
+                  MultiplayerExitScreen.field_y = MenuButton.a(var2, (byte) 89);
                 }
                 var2 = nk.a("kick", (byte) -113);
                 if (var2 != null) {
@@ -794,7 +794,7 @@ final class nn {
                 }
                 var2 = nk.a("you_cannot_join_in_progress", (byte) 68);
                 if (var2 != null) {
-                  bl.field_K = MenuButton.a(var2, (byte) 85);
+                  AchievementsScreen.field_K = MenuButton.a(var2, (byte) 85);
                 }
                 var2 = nk.a("you_can_spectate", (byte) 105);
                 if (null != var2) {
@@ -890,7 +890,7 @@ final class nn {
                 }
                 var2 = nk.a("privatequickchat_to_x", (byte) -111);
                 if (var2 != null) {
-                  hq.field_x = MenuButton.a(var2, (byte) 82);
+                  SaveResultsPromptScreen.field_x = MenuButton.a(var2, (byte) 82);
                 }
                 var2 = nk.a("privatechat_blankarea_explanation", (byte) 122);
                 if (var2 != null) {
@@ -950,7 +950,7 @@ final class nn {
                 }
                 var2 = nk.a("gameopt_notunlocked", (byte) -110);
                 if (var2 != null) {
-                  md.field_t = MenuButton.a(var2, (byte) 80);
+                  InstructionsScreen.field_t = MenuButton.a(var2, (byte) 80);
                 }
                 var2 = nk.a("gameopt_cannotbecombined1", (byte) 55);
                 if (null != var2) {
@@ -990,7 +990,7 @@ final class nn {
                 }
                 var2 = nk.a("gameopt_youneed1ratedgame", (byte) -120);
                 if (var2 != null) {
-                  hq.field_w = MenuButton.a(var2, (byte) 126);
+                  SaveResultsPromptScreen.field_w = MenuButton.a(var2, (byte) 126);
                 }
                 var2 = nk.a("gameopt_playerhasntunlocked", (byte) 21);
                 if (var2 != null) {
@@ -1060,7 +1060,7 @@ final class nn {
                 }
                 var2 = nk.a("gameopt_pleasetrychanging", (byte) 36);
                 if (var2 != null) {
-                  bl.field_G = MenuButton.a(var2, (byte) 75);
+                  AchievementsScreen.field_G = MenuButton.a(var2, (byte) 75);
                 }
                 var2 = nk.a("ra_title", (byte) 119);
                 if (var2 != null) {
@@ -1116,7 +1116,7 @@ final class nn {
                 }
                 var2 = nk.a("rule_pillar_1", (byte) 51);
                 if (null != var2) {
-                  hq.field_r = MenuButton.a(var2, (byte) 117);
+                  SaveResultsPromptScreen.field_r = MenuButton.a(var2, (byte) 117);
                 }
                 var2 = nk.a("rule_1_0", (byte) 87);
                 if (null != var2) {
@@ -1152,7 +1152,7 @@ final class nn {
                 }
                 var2 = nk.a("rule_2_2", (byte) -15);
                 if (null != var2) {
-                  bl.field_I = MenuButton.a(var2, (byte) 123);
+                  AchievementsScreen.field_I = MenuButton.a(var2, (byte) 123);
                 }
                 var2 = nk.a("createafreeaccount", (byte) 55);
                 if (var2 != null) {
@@ -1612,7 +1612,7 @@ final class nn {
                 }
                 var2 = nk.a("create_optin_news", (byte) -15);
                 if (var2 != null) {
-                  vq.field_z = MenuButton.a(var2, (byte) 74);
+                  LevelCompleteScreen.field_z = MenuButton.a(var2, (byte) 74);
                 }
                 var2 = nk.a("create_agreeterms", (byte) -120);
                 if (null != var2) {
@@ -1684,7 +1684,7 @@ final class nn {
                 }
                 var2 = nk.a("create_password_hint", (byte) -128);
                 if (var2 != null) {
-                  md.field_x = MenuButton.a(var2, (byte) 111);
+                  InstructionsScreen.field_x = MenuButton.a(var2, (byte) 111);
                 }
                 var2 = nk.a("create_password_confirm_tooltip", (byte) 21);
                 if (var2 != null) {
@@ -1816,7 +1816,7 @@ final class nn {
                 }
                 var2 = nk.a("create_account_success", (byte) -126);
                 if (var2 != null) {
-                  lh.field_r = MenuButton.a(var2, (byte) 101);
+                  FramedMenuScreen.field_r = MenuButton.a(var2, (byte) 101);
                 }
                 var2 = nk.a("invalid_name", (byte) -113);
                 if (null != var2) {
@@ -1888,7 +1888,7 @@ final class nn {
                 }
                 var2 = nk.a("enterignore_del", (byte) -107);
                 if (var2 != null) {
-                  gn.field_A = MenuButton.a(var2, (byte) 96);
+                  MultiplayerExitScreen.field_A = MenuButton.a(var2, (byte) 96);
                 }
                 var2 = nk.a("text_removed_from_game", (byte) 25);
                 if (null != var2) {
@@ -2002,7 +2002,7 @@ final class nn {
                 }
                 var2 = nk.a("unpacking_graphics", (byte) 53);
                 if (var2 != null) {
-                  uk.field_u = MenuButton.a(var2, (byte) 97);
+                  MessageScreen.field_u = MenuButton.a(var2, (byte) 97);
                 }
                 var2 = nk.a("unpacking_models", (byte) -128);
                 if (null != var2) {
@@ -2086,7 +2086,7 @@ final class nn {
                 }
                 var2 = nk.a("quit", (byte) 118);
                 if (var2 != null) {
-                  jf.field_g = MenuButton.a(var2, (byte) 97);
+                  HighscorePackSelector.field_g = MenuButton.a(var2, (byte) 97);
                 }
                 var2 = nk.a("login_createaccount", (byte) -121);
                 if (var2 != null) {
@@ -2198,7 +2198,7 @@ final class nn {
                 }
                 var2 = nk.a("next", (byte) 9);
                 if (null != var2) {
-                  oq.field_u = MenuButton.a(var2, (byte) 84);
+                  PauseMenuScreen.field_u = MenuButton.a(var2, (byte) 84);
                 }
                 var2 = nk.a("graphics_colon", (byte) -122);
                 if (var2 != null) {
@@ -2206,7 +2206,7 @@ final class nn {
                 }
                 var2 = nk.a("hotseatmultiplayer", (byte) 118);
                 if (null != var2) {
-                  ld.field_r = MenuButton.a(var2, (byte) 121);
+                  MatchResultScreen.field_r = MenuButton.a(var2, (byte) 121);
                 }
                 var2 = nk.a("entermultiplayerlobby", (byte) 104);
                 if (var2 != null) {
@@ -2714,15 +2714,15 @@ final class nn {
                 }
                 var2 = nk.a("members_expansion_benefits,0", (byte) -116);
                 if (var2 != null) {
-                  ab.field_y[0] = MenuButton.a(var2, (byte) 89);
+                  MatchCompleteScreen.field_y[0] = MenuButton.a(var2, (byte) 89);
                 }
                 var2 = nk.a("members_expansion_benefits,1", (byte) -10);
                 if (null != var2) {
-                  ab.field_y[1] = MenuButton.a(var2, (byte) 74);
+                  MatchCompleteScreen.field_y[1] = MenuButton.a(var2, (byte) 74);
                 }
                 var2 = nk.a("members_expansion_benefits,2", (byte) -122);
                 if (var2 != null) {
-                  ab.field_y[2] = MenuButton.a(var2, (byte) 103);
+                  MatchCompleteScreen.field_y[2] = MenuButton.a(var2, (byte) 103);
                 }
                 var2 = nk.a("members_expansion_price_top", (byte) -121);
                 if (null != var2) {
@@ -2924,11 +2924,11 @@ final class nn {
                 }
                 var2 = nk.a("rating_mode_name,0", (byte) -112);
                 if (null != var2) {
-                  vq.field_E[0] = MenuButton.a(var2, (byte) 74);
+                  LevelCompleteScreen.field_E[0] = MenuButton.a(var2, (byte) 74);
                 }
                 var2 = nk.a("rating_mode_name,1", (byte) 95);
                 if (var2 != null) {
-                  vq.field_E[1] = MenuButton.a(var2, (byte) 100);
+                  LevelCompleteScreen.field_E[1] = MenuButton.a(var2, (byte) 100);
                 }
                 var2 = nk.a("rating_mode_long_name,0", (byte) -122);
                 if (null != var2) {
@@ -3088,38 +3088,38 @@ final class nn {
                 }
                 var2 = nk.a("mustlogin_notloggedin", (byte) -119);
                 if (null != var2) {
-                  oq.field_w = MenuButton.a(var2, (byte) 118);
+                  PauseMenuScreen.field_w = MenuButton.a(var2, (byte) 118);
                 }
                 var2 = nk.a("mustlogin_alternate,1", (byte) 95);
                 if (var2 != null) {
-                  gn.field_D[1] = MenuButton.a(var2, (byte) 88);
+                  MultiplayerExitScreen.savePrompts[1] = MenuButton.a(var2, (byte) 88);
                 }
                 var2 = nk.a("mustlogin_alternate,2", (byte) 33);
                 if (var2 != null) {
-                  gn.field_D[2] = MenuButton.a(var2, (byte) 81);
+                  MultiplayerExitScreen.savePrompts[2] = MenuButton.a(var2, (byte) 81);
                 }
                 if (param1 <= 89) {
                   nn.a((mf) null, -113);
                 }
                 var2 = nk.a("mustlogin_alternate,3", (byte) -120);
                 if (null != var2) {
-                  gn.field_D[3] = MenuButton.a(var2, (byte) 124);
+                  MultiplayerExitScreen.savePrompts[3] = MenuButton.a(var2, (byte) 124);
                 }
                 var2 = nk.a("mustlogin_alternate,4", (byte) 122);
                 if (var2 != null) {
-                  gn.field_D[4] = MenuButton.a(var2, (byte) 110);
+                  MultiplayerExitScreen.savePrompts[4] = MenuButton.a(var2, (byte) 110);
                 }
                 var2 = nk.a("mustlogin_alternate,5", (byte) -8);
                 if (null != var2) {
-                  gn.field_D[5] = MenuButton.a(var2, (byte) 120);
+                  MultiplayerExitScreen.savePrompts[5] = MenuButton.a(var2, (byte) 120);
                 }
                 var2 = nk.a("mustlogin_alternate,6", (byte) -127);
                 if (null != var2) {
-                  gn.field_D[6] = MenuButton.a(var2, (byte) 104);
+                  MultiplayerExitScreen.savePrompts[6] = MenuButton.a(var2, (byte) 104);
                 }
                 var2 = nk.a("mustlogin_alternate,7", (byte) 100);
                 if (var2 != null) {
-                  gn.field_D[7] = MenuButton.a(var2, (byte) 113);
+                  MultiplayerExitScreen.savePrompts[7] = MenuButton.a(var2, (byte) 113);
                 }
                 var2 = nk.a("subscription_cost_monthly,0", (byte) -116);
                 if (null != var2) {
@@ -3177,7 +3177,7 @@ final class nn {
                 if (var2 != null) {
                   MenuButton.a(var2, (byte) 87);
                 }
-                jf.field_c = null;
+                HighscorePackSelector.field_c = null;
             }
             void run() {
                 var3 = BrickABrac.field_J ? 1 : 0;
@@ -3227,7 +3227,7 @@ final class nn {
             param2 == 2) && 2 == LevelMetadata.field_m) {
             var4 = this.c(-12688);
             var5 = pf.a(false, this.field_e);
-            var6 = af.a(121, this.field_e) ? 1 : 0;
+            var6 = AchievementBrowserScreen.a(121, this.field_e) ? 1 : 0;
             if (var5 == null &&
               var6 == 0) {
               this.field_d.a(rd.a(al.field_l, new String[]{var4}, (byte) 103), 4, (byte) 105);
@@ -3291,7 +3291,7 @@ final class nn {
             ~oc.field_p != ~this.field_i &&
             null != o.field_e &&
             hn.b((byte) 7)) {
-            var3 = ab.a((byte) 96, this.field_i);
+            var3 = MatchCompleteScreen.a((byte) 96, this.field_i);
             var4 = ac.a(this.field_i, 2);
             var5 = this.c(-12688);
             if (var4 != null) {
@@ -3589,7 +3589,7 @@ final class nn {
           }
           this.field_a = param0.field_c;
           if (param0.field_c == 0) {
-            if (md.field_r == 0) {
+            if (InstructionsScreen.field_r == 0) {
               this.field_d.a(ii.field_l, 12, (byte) 81);
             }
             this.field_d.a(co.field_e, 13, (byte) 87);
@@ -3598,7 +3598,7 @@ final class nn {
             return;
           }
           if (param0.field_c == 1) {
-            if (md.field_v == 0) {
+            if (InstructionsScreen.field_v == 0) {
               this.field_d.a(ej.field_K, 12, (byte) 107);
             }
             this.field_d.a(kg.field_b, 13, (byte) 82);

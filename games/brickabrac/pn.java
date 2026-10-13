@@ -87,7 +87,7 @@ final class pn extends IntrusiveNode {
             var6 = ng.field_b;
             var7 = 0;
             if (2 == var6) {
-              var4 = rd.a(hq.field_x, new String[]{DualLinkNode.field_p}, (byte) 103);
+              var4 = rd.a(SaveResultsPromptScreen.field_x, new String[]{DualLinkNode.field_p}, (byte) 103);
               var8 = rd.a(ek.field_fb, new String[]{var3}, (byte) 103);
               var7 = -485 + g.field_n.field_Ib + ap.field_e.field_Ib - (-jq.field_y.c(var8) + jq.field_y.c(var4));
               if (0 > var7) {
@@ -149,8 +149,8 @@ final class pn extends IntrusiveNode {
                 }
               }
             }
-            na.a(param0 + 9132, var5, var4 + dh.b(fp.field_A.toString()), var7, ki.field_i[var6]);
-            if (!ld.field_s) {
+            na.a(param0 + 9132, var5, var4 + dh.b(OptionsScreen.field_A.toString()), var7, ki.field_i[var6]);
+            if (!MatchResultScreen.field_s) {
               ap.field_e.field_kb = false;
             }
             if (ap.field_e.field_kb) {

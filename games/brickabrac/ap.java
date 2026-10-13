@@ -29,7 +29,7 @@ final class ap {
           if (!param0) {
             ap.a(-35, 121, (byte) -8);
           }
-          var2 = GameplayAudioEvent.a(ah.a(!param0, param1), (byte) 3);
+          var2 = GameplayAudioEvent.a(HighscoresScreen.a(!param0, param1), (byte) 3);
           if (var2 == null) {
             var2 = "";
           }
@@ -116,7 +116,7 @@ final class ap {
           if (param0 != 117) {
             ap.a(32, 14);
           }
-          md.attachKeyboardInput(-118, (java.awt.Component) ((Object) param1));
+          InstructionsScreen.attachKeyboardInput(-118, (java.awt.Component) ((Object) param1));
           pl.a((java.awt.Component) ((Object) param1), 7282);
           if (null == qa.mouseWheelSource) {
             return;

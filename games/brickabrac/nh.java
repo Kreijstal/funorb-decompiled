@@ -549,8 +549,8 @@ final class nh {
                 }
               }
               if ((decompiledFrameRemainder1) && (!(var10 < 2) || var19 != 0) && (null != NodeDeque.field_a ||
-                bl.field_F != null ||
-                ld.field_v != null ||
+                AchievementsScreen.field_F != null ||
+                MatchResultScreen.field_v != null ||
                 null != me.field_e)) {
                 var11 = 0;
                 var12 = 0;
@@ -567,9 +567,9 @@ final class nh {
                       NodeDeque.field_a[var16][var17_int]) {
                       var11 = 1;
                     }
-                    if (bl.field_F != null &&
-                      null != bl.field_F[var16]) {
-                      var18_int = bl.field_F[var16][var17_int];
+                    if (AchievementsScreen.field_F != null &&
+                      null != AchievementsScreen.field_F[var16]) {
+                      var18_int = AchievementsScreen.field_F[var16][var17_int];
                       if (var18_int != 0 &&
                         !ea.field_g) {
                         var11 = 1;
@@ -578,9 +578,9 @@ final class nh {
                         var13Lifetime1 = var18_int;
                       }
                     }
-                    if (ld.field_v != null &&
-                      ld.field_v[var16] != null) {
-                      var18_intLifetime1 = ld.field_v[var16][var17_int];
+                    if (MatchResultScreen.field_v != null &&
+                      MatchResultScreen.field_v[var16] != null) {
+                      var18_intLifetime1 = MatchResultScreen.field_v[var16][var17_int];
                       if (var18_intLifetime1 != 0 &&
                         !ea.field_g) {
                         var11 = 1;

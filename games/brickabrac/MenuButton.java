@@ -64,7 +64,7 @@ final class MenuButton {
             if (!focused) {
               var3 = Ball.field_G;
             } else {
-              var3 = af.field_A;
+              var3 = AchievementBrowserScreen.field_A;
             }
           } else {
             var3 = pe.field_k;
@@ -120,7 +120,7 @@ final class MenuButton {
                 if (20 != this.actionId) {
                   stackIn_56_0 = qi.i(-29946) * 120 / 256;
                 } else {
-                  stackIn_56_0 = lh.g((byte) -44) * 120 / MenuSelection.e((byte) 43);
+                  stackIn_56_0 = FramedMenuScreen.g((byte) -44) * 120 / MenuSelection.e((byte) 43);
                 }
                 var8 = stackIn_56_0;
                 if (!focused) {

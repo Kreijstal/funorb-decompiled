@@ -248,7 +248,7 @@ final class ie extends qd {
           }
           var4 = (fa) (wp.field_f.first(-33));
           while (var4 != null) {
-            hq.a(var4, param0, 49);
+            SaveResultsPromptScreen.a(var4, param0, 49);
             var4 = (fa) (wp.field_f.next((byte) 116));
           }
           return;

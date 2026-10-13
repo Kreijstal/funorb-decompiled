@@ -121,7 +121,7 @@ final class g extends k {
             stackIn_6_0 = sc.field_a;
             return stackIn_6_0;
           }
-          if (ab.a(var6, 0)) {
+          if (MatchCompleteScreen.a(var6, 0)) {
             stackIn_10_0 = fk.field_c;
             return stackIn_10_0;
           }
@@ -196,7 +196,7 @@ final class g extends k {
             stackIn_4_0 = lp.field_xb;
             return stackIn_4_0;
           }
-          if (!ab.a((byte) -120, var4, var3)) {
+          if (!MatchCompleteScreen.a((byte) -120, var4, var3)) {
             stackIn_8_0 = lp.field_xb;
             return stackIn_8_0;
           }

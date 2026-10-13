@@ -210,7 +210,7 @@ final class nk {
         RuntimeException decompiledCaughtException = null;
         try {
           var2_int = -66 / ((-63 - param1) / 43);
-          stackIn_1_0 = jf.field_c.a(124, "", param0);
+          stackIn_1_0 = HighscorePackSelector.field_c.a(124, "", param0);
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

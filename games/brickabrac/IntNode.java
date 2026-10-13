@@ -118,7 +118,7 @@ final class IntNode extends IntrusiveNode {
             if (!param0.field_e) {
               if (param0.field_f == 0 &&
                 param0.field_d == 0) {
-                var4_ref = rd.a(hq.field_x, new String[]{(String) (var2)}, (byte) 103);
+                var4_ref = rd.a(SaveResultsPromptScreen.field_x, new String[]{(String) (var2)}, (byte) 103);
               } else {
                 var4_ref = rd.a(ek.field_fb, new String[]{(String) (var2)}, (byte) 103);
               }

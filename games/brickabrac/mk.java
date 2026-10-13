@@ -9,7 +9,7 @@ final class mk {
     private DualLinkNode[] field_e;
     static long field_j;
     private DualLinkNode field_d;
-    static int[] field_b;
+    static int[] earnedAchievementMask;
     static String[][] field_c;
     static java.applet.Applet field_i;
     static String field_a;
@@ -179,7 +179,7 @@ final class mk {
     public static void c(byte param0) {
         field_i = null;
         field_c = (String[][]) null;
-        field_b = null;
+        earnedAchievementMask = null;
         field_a = null;
         if (param0 > 47) {
           return;
@@ -204,7 +204,7 @@ final class mk {
     }
 
     static {
-        field_b = Ball.d(8);
+        earnedAchievementMask = Ball.d(8);
         field_a = "Wipe out: cancels out any positive power-ups.";
     }
 }

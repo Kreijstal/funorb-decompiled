@@ -94,7 +94,7 @@ final class m {
         String stackIn_16_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (!ld.field_s) {
+          if (!MatchResultScreen.field_s) {
             return false;
           }
           if (ng.field_b == 2 &&

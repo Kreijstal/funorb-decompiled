@@ -143,13 +143,13 @@ final class po {
         int var2Lifetime4;
         var3 = BrickABrac.field_J ? 1 : 0;
         try {
-          var4 = pe.field_o.match;
+          var4 = pe.gameplayScreen.match;
           var5 = var4;
           ec.field_Q = oa.field_Sb;
-          ci.field_r = pe.field_o.field_p;
-          eg.field_k = pe.field_o.c(124);
-          cb.field_n = pe.field_o.field_n;
-          sk.field_I = pe.field_o.match.playerCount;
+          ci.field_r = pe.gameplayScreen.field_p;
+          eg.field_k = pe.gameplayScreen.c(124);
+          cb.field_n = pe.gameplayScreen.field_n;
+          sk.field_I = pe.gameplayScreen.match.playerCount;
           fh.field_h = new String[sk.field_I];
           for (var2 = 0; var2 < sk.field_I; var2++) {
             fh.field_h[var2] = var4.playerNames[var2];
@@ -167,7 +167,7 @@ final class po {
           if (!eg.field_k) {
             for (var2Lifetime3 = 0; BitPacketBuffer.field_o.length > var2Lifetime3; var2Lifetime3++) {
               stackIn_18_0 = LevelMetadata.field_p;
-              stackIn_19_1 = (~pe.field_o.field_k == ~var5.field_m[var2Lifetime3]);
+              stackIn_19_1 = (~pe.gameplayScreen.field_k == ~var5.field_m[var2Lifetime3]);
               LevelMetadata.field_p = stackIn_18_0 | stackIn_19_1;
             }
           }

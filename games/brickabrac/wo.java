@@ -45,8 +45,8 @@ final class wo {
             var1Lifetime3 = stackIn_77_0;
           } else {
             if (1 == var2) {
-              uk.field_t = vm.a(kc.field_j, "", "BaB_panic");
-              stackIn_85_0 = (uk.field_t == null) ? 0 : 1;
+              MessageScreen.field_t = vm.a(kc.field_j, "", "BaB_panic");
+              stackIn_85_0 = (MessageScreen.field_t == null) ? 0 : 1;
               var1Lifetime3 = stackIn_85_0;
             } else {
               if (var2 == 2) {
@@ -64,7 +64,7 @@ final class wo {
                     var1Lifetime3 = stackIn_103_0;
                   } else {
                     if (var2 == 5) {
-                      stackIn_132_0 = (!m.field_f.a(-112, uk.field_t, 22050, ic.field_a, GameScreen.field_e)) ? 0 : 1;
+                      stackIn_132_0 = (!m.field_f.a(-112, MessageScreen.field_t, 22050, ic.field_a, GameScreen.field_e)) ? 0 : 1;
                       var1Lifetime3 = stackIn_132_0;
                     } else {
                       if (6 == var2) {
@@ -98,8 +98,8 @@ final class wo {
           var1Lifetime2 = stackIn_5_0;
         } else {
           if (1 == var2Lifetime1) {
-            uk.field_t = vm.a(kc.field_j, "", "BaB_panic");
-            stackIn_13_0 = (uk.field_t == null) ? 0 : 1;
+            MessageScreen.field_t = vm.a(kc.field_j, "", "BaB_panic");
+            stackIn_13_0 = (MessageScreen.field_t == null) ? 0 : 1;
             var1Lifetime2 = stackIn_13_0;
           } else {
             if (var2Lifetime1 == 2) {
@@ -117,7 +117,7 @@ final class wo {
                   var1Lifetime2 = stackIn_31_0;
                 } else {
                   if (var2Lifetime1 == 5) {
-                    stackIn_60_0 = (!m.field_f.a(-112, uk.field_t, 22050, ic.field_a, GameScreen.field_e)) ? 0 : 1;
+                    stackIn_60_0 = (!m.field_f.a(-112, MessageScreen.field_t, 22050, ic.field_a, GameScreen.field_e)) ? 0 : 1;
                     var1Lifetime2 = stackIn_60_0;
                   } else {
                     if (6 == var2Lifetime1) {

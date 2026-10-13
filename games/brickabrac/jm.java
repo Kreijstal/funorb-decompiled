@@ -191,7 +191,7 @@ final class jm {
           if (0 == f.field_c.field_Wb.field_L) {
             return;
           }
-          tn.field_m = new gq(f.field_c.field_Wb.field_Eb, f.field_c.field_Wb.field_db, f.field_c.field_Wb.field_Ib, f.field_c.field_Wb.field_cb, gn.field_A, ij.field_c, ad.field_l, ad.field_l);
+          tn.field_m = new gq(f.field_c.field_Wb.field_Eb, f.field_c.field_Wb.field_db, f.field_c.field_Wb.field_Ib, f.field_c.field_Wb.field_cb, MultiplayerExitScreen.field_A, ij.field_c, ad.field_l, ad.field_l);
           ij.field_d = 3;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

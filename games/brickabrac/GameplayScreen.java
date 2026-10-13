@@ -79,19 +79,19 @@ final class GameplayScreen extends GameScreen {
         la.field_c = stackIn_30_0;
     }
 
-    private final boolean a(int param0, int param1) {
-        if (eo.a(mk.field_b, param0, (byte) -75)) {
+    private final boolean recordAchievement(int achievementId, int pendingBit) {
+        if (eo.isBitSet(mk.earnedAchievementMask, achievementId, (byte) -75)) {
           return true;
         }
-        int[] var5 = mk.field_b;
+        int[] var5 = mk.earnedAchievementMask;
         int[] var3 = var5;
-        int var4 = param0;
+        int var4 = achievementId;
         var5[var4 >> 5] = LevelSelectScreen.d(var5[var4 >> 5], 1 << ik.a(31, var4));
-        int[] var6 = pl.field_b;
+        int[] var6 = pl.pendingAchievementMask;
         var3 = var6;
-        var4 = param0;
-        var6[var4 >> 5] = LevelSelectScreen.d(var6[var4 >> 5], param1 << ik.a(var4, 31));
-        kp.field_c.addLast(new IntNode(param0), (byte) 3);
+        var4 = achievementId;
+        var6[var4 >> 5] = LevelSelectScreen.d(var6[var4 >> 5], pendingBit << ik.a(var4, 31));
+        kp.achievementNotifications.addLast(new IntNode(achievementId), (byte) 3);
         return false;
     }
 
@@ -157,16 +157,16 @@ final class GameplayScreen extends GameScreen {
     private final void a(int param0, int param1, int param2) {
         int var4 = 0;
         int var5 = 0;
-        if (this.a(param2, 1)) {
+        if (this.recordAchievement(param2, 1)) {
           return;
         }
         if (!this.field_s) {
           var4 = this.match.playerBoards[0].score;
           ep.field_i = ep.field_i - (var4 + this.field_t);
           var5 = this.match.playerBoards[0].levelIndex;
-          fp.field_z = fp.field_z + var5;
-          lp.field_wb.addLast(new e(param2, param0, fp.field_z, ep.field_i, DelegatingCanvas.field_c, og.field_Wb), (byte) 3);
-          fp.field_z = fp.field_z + (var4 + this.field_t);
+          OptionsScreen.field_z = OptionsScreen.field_z + var5;
+          lp.field_wb.addLast(new e(param2, param0, OptionsScreen.field_z, ep.field_i, DelegatingCanvas.field_c, og.field_Wb), (byte) 3);
+          OptionsScreen.field_z = OptionsScreen.field_z + (var4 + this.field_t);
           ep.field_i = ep.field_i - var5;
         }
         if (param1 != 67) {
@@ -259,7 +259,7 @@ final class GameplayScreen extends GameScreen {
         } else {
           if (!this.match.field_c) {
             if (var4Lifetime1 != 0) {
-              ji.a(25459, true, uk.field_t, 1, 1, true);
+              ji.a(25459, true, MessageScreen.field_t, 1, 1, true);
             } else {
               if (oa.field_Sb != null &&
                 oa.field_Sb.field_q) {
@@ -288,7 +288,7 @@ final class GameplayScreen extends GameScreen {
             po.a((byte) -97);
             if (!this.field_p) {
               ng.requestScreen(false, 62, 20);
-              cc.field_G = true;
+              NewAchievementsScreen.field_G = true;
             } else {
               if (KeyboardInput.field_a) {
                 if (null == hd.pendingScreen ||
@@ -308,19 +308,19 @@ final class GameplayScreen extends GameScreen {
         var6 = oo.field_w.nextBoundedInt(-37880252, 3);
         if (var5 == 0) {
           DelegatingCanvas.field_c = DelegatingCanvas.field_c + 1;
-          fp.field_z = fp.field_z + og.field_Wb;
+          OptionsScreen.field_z = OptionsScreen.field_z + og.field_Wb;
         }
         if (var5 == 1) {
           DelegatingCanvas.field_c = DelegatingCanvas.field_c - 2;
-          fp.field_z = fp.field_z - 2 * og.field_Wb;
+          OptionsScreen.field_z = OptionsScreen.field_z - 2 * og.field_Wb;
         }
         if (var5 == 2) {
-          fp.field_z = fp.field_z + 2 * DelegatingCanvas.field_c;
+          OptionsScreen.field_z = OptionsScreen.field_z + 2 * DelegatingCanvas.field_c;
           og.field_Wb = og.field_Wb + 2;
         }
         if (var5 == 3) {
           og.field_Wb = og.field_Wb - 1;
-          fp.field_z = fp.field_z - DelegatingCanvas.field_c;
+          OptionsScreen.field_z = OptionsScreen.field_z - DelegatingCanvas.field_c;
         }
         if (var5 == 4) {
           DelegatingCanvas.field_c = DelegatingCanvas.field_c + 1;
@@ -339,12 +339,12 @@ final class GameplayScreen extends GameScreen {
           og.field_Wb = og.field_Wb - 2;
         }
         if (var5 == 8) {
-          fp.field_z = fp.field_z + var6;
-          fp.field_z = fp.field_z - var6;
+          OptionsScreen.field_z = OptionsScreen.field_z + var6;
+          OptionsScreen.field_z = OptionsScreen.field_z - var6;
         }
         if (var5 == 9) {
           ep.field_i = ep.field_i + var6;
-          fp.field_z = fp.field_z - var6;
+          OptionsScreen.field_z = OptionsScreen.field_z - var6;
         }
         var5Lifetime1 = oo.field_w.nextBoundedInt(-37880252, 5);
         if (var5Lifetime1 == 0) {
@@ -439,7 +439,7 @@ final class GameplayScreen extends GameScreen {
             }
             if ((this.field_i > 1 ||
               this.match.configuration.pack.packId == 1) &&
-              (lc.a(0, -119) &&
+              (LevelPackCard.a(0, -119) &&
               oa.field_Sb instanceof dp)) {
               this.a(false, 239, 16);
             }
@@ -591,7 +591,7 @@ final class GameplayScreen extends GameScreen {
         }
         if (null == fj.field_Ub &&
           !(0 >= this.match.playerBoards[0].score)) {
-          fj.field_Ub = new sp(this.match.configuration.pack.completionWord, 65535 ^ this.match.configuration.pack.completionWord, fp.field_z, ep.field_i, DelegatingCanvas.field_c, og.field_Wb, new int[]{this.match.playerBoards[0].score, this.field_t << 16 | this.field_r});
+          fj.field_Ub = new sp(this.match.configuration.pack.completionWord, 65535 ^ this.match.configuration.pack.completionWord, OptionsScreen.field_z, ep.field_i, DelegatingCanvas.field_c, og.field_Wb, new int[]{this.match.playerBoards[0].score, this.field_t << 16 | this.field_r});
           if (!og.h(-26090)) {
             bd.a(3, (byte) 25, fj.field_Ub);
           }
@@ -640,14 +640,14 @@ final class GameplayScreen extends GameScreen {
           return;
         }
         if (og.h(-26090)) {
-          if (!ib.a(pl.field_b, -1) &&
+          if (!ib.a(pl.pendingAchievementMask, -1) &&
             fj.field_Ub == null) {
             ng.requestScreen(param0, 121, 0);
           } else {
             ng.requestScreen(param0, 68, 10);
           }
         } else {
-          if (!ib.a(pl.field_b, -1)) {
+          if (!ib.a(pl.pendingAchievementMask, -1)) {
             if (fj.field_Ub != null) {
               ng.requestScreen(param0, 68, 5);
             } else {
@@ -775,20 +775,20 @@ final class GameplayScreen extends GameScreen {
         var4 = oo.field_w.nextBoundedInt(-37880252, 10);
         var5 = oo.field_w.nextBoundedInt(-37880252, 5);
         if (var4 == 0) {
-          fp.field_z = fp.field_z + og.field_Wb;
+          OptionsScreen.field_z = OptionsScreen.field_z + og.field_Wb;
           DelegatingCanvas.field_c = DelegatingCanvas.field_c + 1;
         }
         if (var4 == 1) {
-          fp.field_z = fp.field_z - og.field_Wb * 2;
+          OptionsScreen.field_z = OptionsScreen.field_z - og.field_Wb * 2;
           DelegatingCanvas.field_c = DelegatingCanvas.field_c - 2;
         }
         if (var4 == 2) {
           og.field_Wb = og.field_Wb + 2;
-          fp.field_z = fp.field_z + DelegatingCanvas.field_c * 2;
+          OptionsScreen.field_z = OptionsScreen.field_z + DelegatingCanvas.field_c * 2;
         }
         if (var4 == 3) {
           og.field_Wb = og.field_Wb - 1;
-          fp.field_z = fp.field_z - DelegatingCanvas.field_c;
+          OptionsScreen.field_z = OptionsScreen.field_z - DelegatingCanvas.field_c;
         }
         if (4 == var4) {
           DelegatingCanvas.field_c = DelegatingCanvas.field_c + 1;
@@ -810,12 +810,12 @@ final class GameplayScreen extends GameScreen {
           ep.field_i = ep.field_i - DelegatingCanvas.field_c * 2;
         }
         if (8 == var4) {
-          fp.field_z = fp.field_z + var5;
-          fp.field_z = fp.field_z - var5;
+          OptionsScreen.field_z = OptionsScreen.field_z + var5;
+          OptionsScreen.field_z = OptionsScreen.field_z - var5;
         }
         if (var4 == 9) {
           ep.field_i = ep.field_i + var5;
-          fp.field_z = fp.field_z - var5;
+          OptionsScreen.field_z = OptionsScreen.field_z - var5;
         }
         var4Lifetime1 = oo.field_w.nextBoundedInt(-37880252, 5);
         if (var4Lifetime1 == 0) {
@@ -1039,7 +1039,7 @@ final class GameplayScreen extends GameScreen {
           }
           param1 = param1 + param0 * 1000;
           var7 = param3 ? 1 : 0;
-          hq.a(param1, var7, param4 - 468, ((int)param2 + 500) / param4);
+          SaveResultsPromptScreen.a(param1, var7, param4 - 468, ((int)param2 + 500) / param4);
           return;
         }
     }
@@ -1056,7 +1056,7 @@ final class GameplayScreen extends GameScreen {
     private final void a(boolean param0, int param1, int param2) {
         int var4 = 0;
         int var5 = 0;
-        if (this.a(param2, 1)) {
+        if (this.recordAchievement(param2, 1)) {
           return;
         }
         if (param0) {
@@ -1065,10 +1065,10 @@ final class GameplayScreen extends GameScreen {
         if (!this.field_s) {
           var4 = this.match.playerBoards[0].score;
           var5 = this.match.playerBoards[0].levelIndex;
-          fp.field_z = fp.field_z - (this.field_t + var4);
+          OptionsScreen.field_z = OptionsScreen.field_z - (this.field_t + var4);
           ep.field_i = ep.field_i + (-this.field_t + var5);
-          lp.field_wb.addLast(new e(param2, param1, fp.field_z, ep.field_i, DelegatingCanvas.field_c, og.field_Wb), (byte) 3);
-          fp.field_z = fp.field_z - (-this.field_t + var5);
+          lp.field_wb.addLast(new e(param2, param1, OptionsScreen.field_z, ep.field_i, DelegatingCanvas.field_c, og.field_Wb), (byte) 3);
+          OptionsScreen.field_z = OptionsScreen.field_z - (-this.field_t + var5);
           ep.field_i = ep.field_i + (this.field_t + var4);
         }
     }
@@ -1087,7 +1087,7 @@ final class GameplayScreen extends GameScreen {
           this.field_t = param1;
           this.field_i = param1;
           var3Lifetime1 = param1;
-          fp.field_z = fp.field_z + var3Lifetime1;
+          OptionsScreen.field_z = OptionsScreen.field_z + var3Lifetime1;
           w.field_r = lg.a(2, this.match.configuration.getLevelTitle(this.field_i, (byte) -122), -1);
         }
     }
@@ -1161,7 +1161,7 @@ final class GameplayScreen extends GameScreen {
         int var7 = 0;
         int var4 = 0;
         int var4Lifetime1;
-        if (this.a(param0, 1)) {
+        if (this.recordAchievement(param0, 1)) {
           return;
         }
         if (!this.field_s) {
@@ -1185,7 +1185,7 @@ final class GameplayScreen extends GameScreen {
 
     private final void a(byte param0, int param1, int param2) {
         int var5 = BrickABrac.field_J ? 1 : 0;
-        if (this.a(param1, 1)) {
+        if (this.recordAchievement(param1, 1)) {
           return;
         }
         if (param0 <= 17) {
@@ -1194,15 +1194,15 @@ final class GameplayScreen extends GameScreen {
         if (this.field_s) {
         } else {
           if (param1 == 7) {
-            fp.field_z = fp.field_z - this.field_t;
+            OptionsScreen.field_z = OptionsScreen.field_z - this.field_t;
           } else {
             ep.field_i = ep.field_i - this.field_t;
           }
-          lp.field_wb.addLast(new e(param1, param2, fp.field_z, ep.field_i, DelegatingCanvas.field_c, og.field_Wb), (byte) 3);
+          lp.field_wb.addLast(new e(param1, param2, OptionsScreen.field_z, ep.field_i, DelegatingCanvas.field_c, og.field_Wb), (byte) 3);
           if (param1 != 7) {
             ep.field_i = ep.field_i + this.field_t;
           } else {
-            fp.field_z = fp.field_z + this.field_t;
+            OptionsScreen.field_z = OptionsScreen.field_z + this.field_t;
           }
         }
     }
@@ -1398,7 +1398,7 @@ final class GameplayScreen extends GameScreen {
                 var6.field_Z == 9) {
                 this.a((byte) 40, false);
                 if (8 != var6.field_Z) {
-                  cc.field_G = true;
+                  NewAchievementsScreen.field_G = true;
                 }
               }
             } else {
@@ -1461,10 +1461,10 @@ final class GameplayScreen extends GameScreen {
           if (param2 > -87) {
             this.field_p = true;
           }
-          fp.field_z = fp.field_z - (param1 + this.field_t);
-          var5 = new pn(param0.packId, -1 + param3, fp.field_z, ep.field_i, DelegatingCanvas.field_c, og.field_Wb);
+          OptionsScreen.field_z = OptionsScreen.field_z - (param1 + this.field_t);
+          var5 = new pn(param0.packId, -1 + param3, OptionsScreen.field_z, ep.field_i, DelegatingCanvas.field_c, og.field_Wb);
           IntNode.field_j.addLast(var5, (byte) 3);
-          fp.field_z = fp.field_z - (param0.scoreOffset + param3);
+          OptionsScreen.field_z = OptionsScreen.field_z - (param0.scoreOffset + param3);
           ep.field_i = ep.field_i + (param1 + this.field_t);
           if (hh.field_b[param0.packId] < param3) {
             hh.field_b[param0.packId] = param3;
@@ -1524,13 +1524,13 @@ final class GameplayScreen extends GameScreen {
           }
           if (this.match.playerCount == 1 ||
             this.field_p) {
-            if (pe.heldKeys[ah.field_w[1][0]]) {
+            if (pe.heldKeys[HighscoresScreen.field_w[1][0]]) {
               param1.field_db = param1.field_db | 1;
             }
-            if (pe.heldKeys[ah.field_w[1][1]]) {
+            if (pe.heldKeys[HighscoresScreen.field_w[1][1]]) {
               param1.field_db = param1.field_db | 2;
             }
-            if (!pe.heldKeys[ah.field_w[1][2]]) {
+            if (!pe.heldKeys[HighscoresScreen.field_w[1][2]]) {
               return;
             }
             param1.field_db = param1.field_db | 4;
@@ -1827,7 +1827,7 @@ final class GameplayScreen extends GameScreen {
           this.field_k = param3;
           stackIn_10_1 = !(kb.field_Yb < 2);
           this.field_y = stackIn_10_1;
-          var14 = pl.field_b;
+          var14 = pl.pendingAchievementMask;
           var13 = var14;
           var12 = var13;
           var9 = var12;

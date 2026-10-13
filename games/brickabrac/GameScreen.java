@@ -60,7 +60,7 @@ abstract class GameScreen {
           var6.field_s = param2;
           var6.field_m = param1;
           fk.field_f.addLast(var6, (byte) 3);
-          gn.a(-21167, var6, param0);
+          MultiplayerExitScreen.a(-21167, var6, param0);
           return var6;
         }
         GameScreen.c((byte) -109);
@@ -75,7 +75,7 @@ abstract class GameScreen {
         var7.field_s = param2;
         var7.field_m = param1;
         fk.field_f.addLast(var7, (byte) 3);
-        gn.a(-21167, var7, param0);
+        MultiplayerExitScreen.a(-21167, var7, param0);
         return var7;
     }
 

@@ -64,7 +64,7 @@ final class BlankScreen extends GameScreen {
           return null;
         }
         if (go.field_e < jh.field_a + ue.field_e) {
-          return vq.field_J;
+          return LevelCompleteScreen.field_J;
         }
         return null;
     }

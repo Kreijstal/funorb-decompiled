@@ -244,7 +244,7 @@ final class n {
             } else {
               stackIn_28_0 = dn.field_K;
               if (var8 == 0) {
-                stackIn_29_1 = cc.field_F;
+                stackIn_29_1 = NewAchievementsScreen.field_F;
               } else {
                 stackIn_29_1 = ag.field_J;
               }
@@ -301,7 +301,7 @@ final class n {
                       }
                     }
                   }
-                  ep.field_e = "<col=A00000>" + pf.field_a + "<br>" + bl.field_G + (String) (var9);
+                  ep.field_e = "<col=A00000>" + pf.field_a + "<br>" + AchievementsScreen.field_G + (String) (var9);
                 }
               }
             }

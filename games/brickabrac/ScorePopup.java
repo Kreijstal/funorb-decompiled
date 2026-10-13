@@ -25,7 +25,7 @@ final class ScorePopup extends IntrusiveNode {
         var5 = BrickABrac.field_J ? 1 : 0;
         try {
           mg.c();
-          lc.field_k = 11;
+          LevelPackCard.field_k = 11;
           v.field_a = new int[260];
           var2 = -120 / ((param0 - 32) / 49);
           for (var1_int = 0; var1_int < 256; var1_int++) {

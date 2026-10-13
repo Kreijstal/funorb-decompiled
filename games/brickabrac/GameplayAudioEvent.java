@@ -178,7 +178,7 @@ final class GameplayAudioEvent extends IntrusiveNode {
         while (param0 != 0L) {
           var7 = param0;
           param0 = param0 / 37L;
-          var9 = af.field_B[(int)(var7 - 37L * param0)];
+          var9 = AchievementBrowserScreen.field_B[(int)(var7 - 37L * param0)];
           if (var9 == 95) {
             var10 = var6.length() - 1;
             var9 = 160;

@@ -636,7 +636,7 @@ abstract class h extends oc implements sd {
         ap.field_b = new vj(fi.field_u, RectangleBody.field_q);
         fe.field_gb = new mh(0L, (mh) null);
         fe.field_gb.a(ap.field_b.field_d, 0);
-        fe.field_gb.a(jf.field_k, 0);
+        fe.field_gb.a(HighscorePackSelector.field_k, 0);
         cg.b(param0 + 44);
     }
 

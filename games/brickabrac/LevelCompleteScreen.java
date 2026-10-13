@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class vq extends oq {
+final class LevelCompleteScreen extends PauseMenuScreen {
     static int field_H;
     static int field_A;
     static int[] field_D;
@@ -16,7 +16,7 @@ final class vq extends oq {
 
     public static void h(int param0) {
         if (param0 != -257) {
-          vq.h(-94);
+          LevelCompleteScreen.h(-94);
         }
         field_D = null;
         field_F = null;
@@ -34,22 +34,22 @@ final class vq extends oq {
         }
         int var3 = 4 + ip.field_r.nextBoundedInt(-37880252, -4 + param0);
         int var4 = ip.field_r.nextBoundedInt(-37880252, -8 + param2) + 8;
-        ob.field_E.addLast(new nj(var3, var4, oq.field_x + ip.field_r.nextBoundedInt(-37880252, qb.field_w), fr.field_k + ip.field_r.nextBoundedInt(-37880252, ag.field_E)), (byte) 3);
+        ob.field_E.addLast(new nj(var3, var4, PauseMenuScreen.field_x + ip.field_r.nextBoundedInt(-37880252, qb.field_w), fr.field_k + ip.field_r.nextBoundedInt(-37880252, ag.field_E)), (byte) 3);
         dl.field_f = dl.field_f + 1;
     }
 
     final void drawScreen(byte obfuscationGuard) {
-        pe.field_o.drawScreen((byte) -19);
+        pe.gameplayScreen.drawScreen((byte) -19);
         if (obfuscationGuard > -14) {
           field_J = (String) null;
         }
         Rasterizer2D.darkenRectangle(0, 0, 640, 480);
-        this.g(124);
+        this.drawMenuFrame(124);
         pg.d(0);
         this.a(0);
     }
 
-    vq() {
+    LevelCompleteScreen() {
         super(18, gb.field_i, gb.field_i);
     }
 

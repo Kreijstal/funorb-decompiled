@@ -76,7 +76,7 @@ final class gb {
           for (var6 = var2_int; var6 < var3; var6++) {
             var7 = param0.charAt(var6);
             if (m.a(true, (char) var7)) {
-              var8 = ah.a(207, (char) var7);
+              var8 = HighscoresScreen.a(207, (char) var7);
               if (0 != var8) {
                 discarded$0 = var5.append((char) var8);
               }
@@ -146,7 +146,7 @@ final class gb {
         this.field_e = ji.field_f;
         this.field_j = gd.field_d;
         this.field_c = gj.field_a;
-        this.field_d = vq.field_H;
+        this.field_d = LevelCompleteScreen.field_H;
     }
 
     gb(int param0, String param1, int param2, String param3, String param4) {

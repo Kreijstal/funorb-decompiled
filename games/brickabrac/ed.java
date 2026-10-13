@@ -12,13 +12,13 @@ final class ed {
     final static void a(int param0, int param1) {
         si.field_k.a(true, MouseInput.field_b, 0, param1, param0);
         if (si.field_k.field_m == 7) {
-          hq.b(true, true, param0);
+          SaveResultsPromptScreen.b(true, true, param0);
         }
     }
 
     final static void a(boolean param0, mf param1, mf param2, byte param3) {
         try {
-          ai.a(lp.field_Ab, ScorePopup.field_m, f.field_a, Paddle.field_C, im.field_d, wi.field_n, DualLinkNode.field_t, ad.field_l, (byte) 61, param0, ic.field_c, fp.field_u);
+          ai.a(lp.field_Ab, ScorePopup.field_m, f.field_a, Paddle.field_C, im.field_d, wi.field_n, DualLinkNode.field_t, ad.field_l, (byte) 61, param0, ic.field_c, OptionsScreen.field_u);
           if (param3 < 74) {
             ed.b(2, -57);
           }

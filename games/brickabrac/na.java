@@ -242,7 +242,7 @@ final class na extends ug {
           ((mh) (Object) stackIn_19_0).a(stackIn_20_1, -15211);
         }
         ap.field_b.field_d.i(0);
-        if (jf.field_k.field_L != 0) {
+        if (HighscorePackSelector.field_k.field_L != 0) {
           tq.field_c = true;
         }
         if (gj.field_b.field_L != 0) {

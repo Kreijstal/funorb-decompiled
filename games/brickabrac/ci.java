@@ -18,7 +18,7 @@ final class ci extends ki {
               dp.a(1, 0, !param0 ? true : false, param3, ng.field_a, var8);
               var8.a(this.field_m, param3, (byte) 78);
             }
-            af.a(om.field_fc, param4, param1, param3, 640, 0, 0, var8.field_p, 1, pn.field_m, param2);
+            AchievementBrowserScreen.a(om.field_fc, param4, param1, param3, 640, 0, 0, var8.field_p, 1, pn.field_m, param2);
           }
           return;
         }
@@ -32,7 +32,7 @@ final class ci extends ki {
           dp.a(1, 0, !param0 ? true : false, param3, ng.field_a, var7);
           var7.a(this.field_m, param3, (byte) 78);
         }
-        af.a(om.field_fc, param4, param1, param3, 640, 0, 0, var7.field_p, 1, pn.field_m, param2);
+        AchievementBrowserScreen.a(om.field_fc, param4, param1, param3, 640, 0, 0, var7.field_p, 1, pn.field_m, param2);
     }
 
     final RgbSprite[] b(int param0) {
@@ -55,7 +55,7 @@ final class ci extends ki {
               dp.a(2, 0, false, param3, kh.field_b, var8);
               var8.a(this.field_m, param3, (byte) 78);
             }
-            af.a(jh.field_d, param2, param4, param3, 306, 0, 0, var8.field_p, 2, lk.field_t, param0);
+            AchievementBrowserScreen.a(jh.field_d, param2, param4, param3, 306, 0, 0, var8.field_p, 2, lk.field_t, param0);
           }
           return;
         }
@@ -68,7 +68,7 @@ final class ci extends ki {
             dp.a(2, 0, false, param3, kh.field_b, var7);
             var7.a(this.field_m, param3, (byte) 78);
           }
-          af.a(jh.field_d, param2, param4, param3, 306, 0, 0, var7.field_p, 2, lk.field_t, param0);
+          AchievementBrowserScreen.a(jh.field_d, param2, param4, param3, 306, 0, 0, var7.field_p, 2, lk.field_t, param0);
         }
     }
 

@@ -8,7 +8,7 @@ final class cn {
     static int field_d;
     static String field_b;
 
-    final static i a(int param0, int param1, int param2, af param3, int param4, int param5, int param6, int param7, int param8) {
+    final static i a(int param0, int param1, int param2, AchievementBrowserScreen param3, int param4, int param5, int param6, int param7, int param8) {
         i var9 = null;
         RuntimeException var9_ref = null;
         i stackIn_3_0 = null;

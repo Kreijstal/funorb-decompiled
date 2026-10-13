@@ -51,7 +51,7 @@ final class cg extends dj {
         int var1 = np.field_a + 2;
         Ball.field_A.a(-(!vd.field_e ? 0 : var1) + RectangleBody.field_q.field_cb, !vd.field_e ? 0 : var1, 0, RectangleBody.field_q.field_Ib, (byte) 64);
         s.b(124);
-        jf.field_k.a(40, fe.field_gb.field_cb - 40, 0, fe.field_gb.field_Ib, (byte) 64);
+        HighscorePackSelector.field_k.a(40, fe.field_gb.field_cb - 40, 0, fe.field_gb.field_Ib, (byte) 64);
         sc.field_b.a(30, 0, 0, rm.field_a.field_Ib, (byte) 64);
         ll.field_e.a(-72 + rm.field_a.field_cb, 30, 0, rm.field_a.field_Ib, (byte) 64);
         nk.field_g.a(30, 5, 5, 68, (byte) 64);

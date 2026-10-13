@@ -120,7 +120,7 @@ final class pg extends IntrusiveNode {
           var4 = ad.field_l.field_O.a(param1, 500);
           var5 = ad.field_l.field_O.b(param1, 500) + 6;
           var6 = 2 + np.field_a * var4;
-          var7 = fp.a(-1, var5, var2_int, 12);
+          var7 = OptionsScreen.a(-1, var5, var2_int, 12);
           var8 = br.a(var6, var3, 20, -30);
           Rasterizer2D.drawRectangle(var7, var8, var5, var6, 0);
           Rasterizer2D.fillRectangle(var7 + 1, 1 + var8, -2 + var5, var6 - 2, 16777088);

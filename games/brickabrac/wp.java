@@ -332,7 +332,7 @@ final class wp {
               tb.field_cb = jl.field_e.readCp1252String(-1);
               var12 = (CharSequence) ((Object) tb.field_cb);
               ih.field_d = gb.a(var12, 65);
-              fp.field_x = jl.field_e.readUnsignedByte(255);
+              OptionsScreen.field_x = jl.field_e.readUnsignedByte(255);
               rf.field_b = MenuButton.field_i;
               if (cg.field_s.a(13) == vh.field_X) {
                 uc.field_k.a(100, uc.e((byte) -66));
@@ -364,11 +364,11 @@ final class wp {
               if (go.field_c > 0) {
                 qb.field_u = true;
               }
-              k.field_h.initializeOpcodeCipher(lc.field_a, -98);
+              k.field_h.initializeOpcodeCipher(LevelPackCard.field_a, -98);
               for (var8Lifetime1 = 0; var8Lifetime1 < 4; var8Lifetime1++) {
-                lc.field_a[var8Lifetime1] = lc.field_a[var8Lifetime1] + 50;
+                LevelPackCard.field_a[var8Lifetime1] = LevelPackCard.field_a[var8Lifetime1] + 50;
               }
-              jl.field_e.initializeOpcodeCipher(lc.field_a, -62);
+              jl.field_e.initializeOpcodeCipher(LevelPackCard.field_a, -62);
               stackIn_81_0 = si.field_a;
               return stackIn_81_0;
             }

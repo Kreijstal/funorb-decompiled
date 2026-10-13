@@ -30,7 +30,7 @@ final class wl extends d {
         var6 = (this.field_s >> 1) + (this.field_w + param0);
         var8 = this.field_M.b((byte) -31);
         if (var8 != m.field_c &&
-          hq.field_z != var8) {
+          SaveResultsPromptScreen.field_z != var8) {
           if (lp.field_xb == var8) {
             var13 = df.field_a[2];
             var13.f(-(var13.width >> 1) + var5, -(var13.height >> 1) + var6, 256);
@@ -132,10 +132,10 @@ final class wl extends d {
           }
           var4 = var14.readUnsignedByte(255);
           if (var4 != 0) {
-            vq.field_B[0] = tb.field_cb;
+            LevelCompleteScreen.field_B[0] = tb.field_cb;
             var5 = var3.field_s;
             for (var6_int = 1; var4 > var6_int; var6_int++) {
-              vq.field_B[var6_int] = var14.readCp1252String(-1);
+              LevelCompleteScreen.field_B[var6_int] = var14.readCp1252String(-1);
             }
             DualLinkNode.a((byte) 75, var4, var5);
             for (var6_intLifetime1 = 0; var4 > var6_intLifetime1; var6_intLifetime1++) {
@@ -145,9 +145,9 @@ final class wl extends d {
                 var3.field_n = vj.field_c;
                 var3.field_j = sf.field_Z;
                 var3.field_l = vh.field_U;
-                uk.a(vj.field_c, fh.field_c, var6_intLifetime1, -19824, sf.field_Z, vh.field_U);
+                MessageScreen.a(vj.field_c, fh.field_c, var6_intLifetime1, -19824, sf.field_Z, vh.field_U);
               } else {
-                uk.a(vj.field_c, fh.field_c, var6_intLifetime1, -19824, sf.field_Z, vh.field_U);
+                MessageScreen.a(vj.field_c, fh.field_c, var6_intLifetime1, -19824, sf.field_Z, vh.field_U);
               }
             }
             gr.a(12429, var5);
@@ -162,13 +162,13 @@ final class wl extends d {
             var10 = 0;
             while (var9 < var8) {
               var11 = fj.field_Pb[var9];
-              var6[0][var10] = vq.field_B[var11];
+              var6[0][var10] = LevelCompleteScreen.field_B[var11];
               var7[0][4 * var10] = ec.field_N[var11];
-              var7[0][var10 * 4 + 1] = lf.field_r[var11];
+              var7[0][var10 * 4 + 1] = RankingsScreen.field_r[var11];
               var7[0][2 + var10 * 4] = ObjectHistoryBuffer.field_p[var11];
               var7[0][4 * var10 + 3] = ib.field_D[var11];
-              if (ci.a(vq.field_B[var11], -40) &&
-                0 == ObjectHistoryBuffer.field_p[var11] + lf.field_r[var11] + ib.field_D[var11]) {
+              if (ci.a(LevelCompleteScreen.field_B[var11], -40) &&
+                0 == ObjectHistoryBuffer.field_p[var11] + RankingsScreen.field_r[var11] + ib.field_D[var11]) {
                 var6[0][var10] = null;
                 var10--;
               }
@@ -180,13 +180,13 @@ final class wl extends d {
             var10Lifetime1 = var13;
             while (var8 > var9Lifetime1) {
               var11Lifetime1 = fj.field_Pb[var9Lifetime1 + var5];
-              var6[1][var13] = vq.field_B[var11Lifetime1];
+              var6[1][var13] = LevelCompleteScreen.field_B[var11Lifetime1];
               var7[1][var13 * 4] = ec.field_N[var11Lifetime1];
-              var7[1][1 + var13 * 4] = lf.field_r[var11Lifetime1];
+              var7[1][1 + var13 * 4] = RankingsScreen.field_r[var11Lifetime1];
               var7[1][2 + 4 * var13] = ObjectHistoryBuffer.field_p[var11Lifetime1];
               var7[1][var13 * 4 + 3] = ib.field_D[var11Lifetime1];
-              if (ci.a(vq.field_B[var11Lifetime1], -31) &&
-                lf.field_r[var11Lifetime1] + ObjectHistoryBuffer.field_p[var11Lifetime1] + ib.field_D[var11Lifetime1] == 0) {
+              if (ci.a(LevelCompleteScreen.field_B[var11Lifetime1], -31) &&
+                RankingsScreen.field_r[var11Lifetime1] + ObjectHistoryBuffer.field_p[var11Lifetime1] + ib.field_D[var11Lifetime1] == 0) {
                 var6[1][var13] = null;
                 var13--;
               }
@@ -254,7 +254,7 @@ final class wl extends d {
           }
           if (rf.field_b == BitPacketBuffer.field_u) {
             k.field_h.position = 0;
-            af.field_r = null;
+            AchievementBrowserScreen.field_r = null;
             if (param0 != null) {
               var9 = 0;
               if (param1) {
@@ -328,7 +328,7 @@ final class wl extends d {
               }
               if (var9Lifetime1 == 99) {
                 vd.a(20, oc.d((byte) -59));
-                af.field_r = new Boolean(kd.a(-2, jl.field_e));
+                AchievementBrowserScreen.field_r = new Boolean(kd.a(-2, jl.field_e));
                 jl.field_e.position = 0;
               } else {
                 si.field_a = var9Lifetime1;

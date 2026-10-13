@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class ld extends MenuScreen {
+abstract class MatchResultScreen extends MenuScreen {
     static int[] field_w;
     static String field_r;
     static boolean field_u;
@@ -9,7 +9,7 @@ abstract class ld extends MenuScreen {
     static boolean field_s;
     static int[][] field_v;
 
-    abstract int f(int param0);
+    abstract int getResultBottom(int obfuscationGuard);
 
     final void layoutButtons(boolean obfuscationGuard) {
         int var7 = 0;
@@ -39,11 +39,11 @@ abstract class ld extends MenuScreen {
         }
         var3 += 20;
         if (!obfuscationGuard) {
-          ld.g(102);
+          MatchResultScreen.g(102);
         }
         var4Lifetime1 = 5 * var2 - (5 - var2 * var3);
         var5Lifetime1 = (-var4Lifetime1 + 640) / 2;
-        var6 = this.h(6175);
+        var6 = this.getResultButtonTop(6175);
         for (var7 = 0; var7 < this.buttons.length; var7++) {
           var8 = this.buttons[var7];
           var8.x = var7 * var3 + var5Lifetime1 + 5 * var7;
@@ -82,7 +82,7 @@ abstract class ld extends MenuScreen {
           var12.drawTransparent((640 - var12.canvasWidth) / 2, 20);
         }
         var2 = -qp.field_e[0].field_h + 480;
-        var3 = this.f(-6);
+        var3 = this.getResultBottom(-6);
         for (var4 = 0; var4 < 3; var4++) {
           var5_ref_tp = qp.field_e[var4];
           var5_ref_tp.a((640 - var5_ref_tp.field_f) / 2, -((-var3 + 480) / ((1 + var4) * 2)) + var2);
@@ -148,13 +148,13 @@ abstract class ld extends MenuScreen {
         return;
     }
 
-    ld(int param0, int[] param1) {
-        super(param0, 180, 460, 150, 35, param1);
+    MatchResultScreen(int screenId, int[] actionIds) {
+        super(screenId, 180, 460, 150, 35, actionIds);
     }
 
     final void onEnter(boolean usePointer, int initialSelection, int obfuscationGuard) {
         if (obfuscationGuard < 96) {
-          this.f(66);
+          this.getResultBottom(66);
         }
         super.onEnter(usePointer, initialSelection, 100);
         this.layoutButtons(true);
@@ -167,11 +167,11 @@ abstract class ld extends MenuScreen {
         this.selection.navigateHorizontal(0, -1);
     }
 
-    private final int h(int param0) {
-        if (param0 != 6175) {
+    private final int getResultButtonTop(int obfuscationGuard) {
+        if (obfuscationGuard != 6175) {
           return 116;
         }
-        return (284 + this.f(param0 - 6181)) / 2;
+        return (284 + this.getResultBottom(obfuscationGuard - 6181)) / 2;
     }
 
     final void advanceScreen(boolean updateFlag, boolean inputEnabled, int obfuscationGuard) {
@@ -181,7 +181,7 @@ abstract class ld extends MenuScreen {
           this.advanceScreen(false, false, -123);
         }
         super.advanceScreen(updateFlag, inputEnabled, -121);
-        int var4 = this.h(6175);
+        int var4 = this.getResultButtonTop(6175);
         for (var5 = 0; var5 < this.buttons.length; var5++) {
           this.buttons[var5].y = var4;
         }

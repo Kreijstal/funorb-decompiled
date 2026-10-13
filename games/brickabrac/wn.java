@@ -77,7 +77,7 @@ final class wn {
               if (stackIn_12_0.field_bb == null) {
                 var7.field_Xb = new mh(0L, vb.field_K);
                 var7.a(var7.field_Xb, 0);
-                var7.field_Wb = new mh(0L, fp.field_v);
+                var7.field_Wb = new mh(0L, OptionsScreen.field_v);
                 var7.a(var7.field_Wb, 0);
                 var7.field_Yb = new mh(0L, vb.field_K);
                 var7.a(var7.field_Yb, 0);
@@ -379,13 +379,13 @@ final class wn {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         try {
-          md.field_r = param1 >> 4 & 3;
-          md.field_v = (param1 & 12) >> 2;
-          if (md.field_r > 2) {
-            md.field_r = 2;
+          InstructionsScreen.field_r = param1 >> 4 & 3;
+          InstructionsScreen.field_v = (param1 & 12) >> 2;
+          if (InstructionsScreen.field_r > 2) {
+            InstructionsScreen.field_r = 2;
           }
-          if (md.field_v > param0) {
-            md.field_v = 2;
+          if (InstructionsScreen.field_v > param0) {
+            InstructionsScreen.field_v = 2;
           }
           to.field_a = 3 & param1;
           if (to.field_a > 2) {

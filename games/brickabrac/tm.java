@@ -183,14 +183,14 @@ final class tm {
     final static int a(int param0, byte param1) {
         int var2 = 0;
         if (param0 == 0) {
-          var2 = md.field_r;
+          var2 = InstructionsScreen.field_r;
         }
         if (param1 != 18) {
           java.math.BigInteger var3 = (java.math.BigInteger) null;
           tm.a((PacketBuffer) null, 46, (byte) -64, (java.math.BigInteger) null, -75, (byte[]) null, (java.math.BigInteger) null);
         }
         if (param0 == 1) {
-          var2 = md.field_v;
+          var2 = InstructionsScreen.field_v;
         }
         if (param0 == 2) {
           var2 = to.field_a;

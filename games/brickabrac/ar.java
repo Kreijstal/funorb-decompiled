@@ -103,7 +103,7 @@ final class ar {
           }
           if ((decompiledFrameCompleted2) &&
             (decompiledFrameCompleted1)) {
-            stackIn_33_0 = ab.field_A;
+            stackIn_33_0 = MatchCompleteScreen.field_A;
             if (param4 == -1) {
               stackIn_34_1 = 1;
             } else {
@@ -226,7 +226,7 @@ final class ar {
         if (param0 != 120) {
           return 9;
         }
-        return af.field_u;
+        return AchievementBrowserScreen.field_u;
     }
 
     public static void a(int param0) {

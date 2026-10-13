@@ -50,7 +50,7 @@ final class gq extends mh {
           }
           if (dc.currentKeyCode == 85 &&
             this.field_Vb.length() > 0) {
-            uk.a(' ', this.field_Vb, -1 + this.field_Vb.length(), false);
+            MessageScreen.a(' ', this.field_Vb, -1 + this.field_Vb.length(), false);
           }
           if (nk.a(go.currentKeyCharacter, (CharSequence) ((Object) this.field_Vb), false)) {
             discarded$0 = this.field_Vb.append(go.currentKeyCharacter);
@@ -210,7 +210,7 @@ final class gq extends mh {
           }
           return true;
         }
-        uk.a(' ', this.field_Vb, -1 + this.field_Vb.length(), false);
+        MessageScreen.a(' ', this.field_Vb, -1 + this.field_Vb.length(), false);
         if (12 <= this.field_Vb.length()) {
           if (dc.currentKeyCode == 84) {
             if (this.field_Vb.length() <= 0) {
@@ -327,7 +327,7 @@ final class gq extends mh {
             var1_int = -62 / ((param0 + 18) / 47);
             return false;
           }
-          var12 = mk.field_b;
+          var12 = mk.earnedAchievementMask;
           var10 = var12;
           var5 = var10;
           var1 = var5;
@@ -335,7 +335,7 @@ final class gq extends mh {
           for (var3 = 0; 8 > var3; var3++) {
             var5[var3] = LevelSelectScreen.d(var12[var3], var16[var3]);
           }
-          var13 = pl.field_b;
+          var13 = pl.pendingAchievementMask;
           var11 = var13;
           var7 = var11;
           var1Lifetime1 = var7;
@@ -406,7 +406,7 @@ final class gq extends mh {
           this.field_Qb.a(np.field_a, np.field_a + 3, 5, var9_int, (byte) 64);
           var10 = 10 + var9_int;
           var11 = 3 + np.field_a * 2 + 3;
-          var12 = fp.a(-1, var10, param0, param2);
+          var12 = OptionsScreen.a(-1, var10, param0, param2);
           var13 = br.a(var11, param1, param3, 121);
           this.a(var11, var13, var12, var10, (byte) 64);
           return;

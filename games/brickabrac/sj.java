@@ -42,7 +42,7 @@ final class sj {
             var5 < eh.field_k) {
             var10_int = tm.a(var8_ref_gb.field_c, (byte) 18);
             if (var10_int <= var8_ref_gb.a(true) && (var8_ref_gb.field_e ||
-              !af.a(125, var8_ref_gb.field_m))) {
+              !AchievementBrowserScreen.a(125, var8_ref_gb.field_m))) {
               var9 = 1;
             }
           }
@@ -95,7 +95,7 @@ final class sj {
         if (param2 != -13294) {
           field_d = (mh) null;
         }
-        if (ld.field_s) {
+        if (MatchResultScreen.field_s) {
           stackIn_42_0 = null;
           stackIn_42_1 = wp.field_k;
           if (stackIn_42_0 != stackIn_42_1) {
@@ -251,7 +251,7 @@ final class sj {
                 var29 = ((PacketBuffer) ((Object) var1)).readCp1252String(-1);
                 var6 = ((PacketBuffer) ((Object) var1)).readCp1252String(-1);
                 var30 = ((PacketBuffer) ((Object) var1)).readCp1252String(-1);
-                var31 = ab.a((byte) 96, var3);
+                var31 = MatchCompleteScreen.a((byte) 96, var3);
                 var8 = var31;
                 stackIn_133_0 = (var6.equals("")) ? 0 : 1;
                 var9 = stackIn_133_0;
@@ -278,7 +278,7 @@ final class sj {
               if (var2 == 6) {
                 var3 = ((PacketBuffer) ((Object) var1)).readLong(param0 ^ -32735);
                 var5 = ((PacketBuffer) ((Object) var1)).readUnsignedByte(255);
-                var21 = ab.a((byte) 96, var3);
+                var21 = MatchCompleteScreen.a((byte) 96, var3);
                 if ((var21 != null)) {
                   if (var21.field_fc) {
                     uf.field_c = uf.field_c - 1;
@@ -420,7 +420,7 @@ final class sj {
                               }
                               var3 = ((PacketBuffer) ((Object) var1)).readLong(-32768);
                               var5 = ((PacketBuffer) ((Object) var1)).readUnsignedByte(param0 ^ 222);
-                              var15 = ab.a((byte) 96, var3);
+                              var15 = MatchCompleteScreen.a((byte) 96, var3);
                               var28 = var15;
                               if ((var15 != null)) {
                                 if (15 != var2) {
@@ -439,7 +439,7 @@ final class sj {
                               }
                             } else {
                               var3 = ((PacketBuffer) ((Object) var1)).readLong(param0 ^ -32735);
-                              var24 = ab.a((byte) 96, var3);
+                              var24 = MatchCompleteScreen.a((byte) 96, var3);
                               if ((var24 != null)) {
                                 if (var2 != 14) {
                                   if (!var24.field_fc) {

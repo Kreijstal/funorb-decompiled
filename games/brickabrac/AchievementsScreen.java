@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class bl extends af {
+final class AchievementsScreen extends AchievementBrowserScreen {
     static int[][] field_F;
     static String[] field_H;
     static tp field_J;
@@ -11,7 +11,7 @@ final class bl extends af {
 
     final void refreshMenu(int obfuscationGuard) {
         if (obfuscationGuard > -60) {
-          this.a(-74, (byte) 4);
+          this.isAchievementExcluded(-74, (byte) 4);
         }
         this.initializeButtons(mi.field_b, 0);
     }
@@ -55,19 +55,19 @@ final class bl extends af {
         }
     }
 
-    final boolean a(int param0, byte param1) {
+    final boolean isAchievementExcluded(int achievementId, byte obfuscationGuard) {
         boolean stackIn_13_0 = false;
-        if (eo.a(this.field_t, param0, (byte) -75)) {
+        if (eo.isBitSet(this.achievementMask, achievementId, (byte) -75)) {
           return false;
         }
-        if (param1 != 38) {
+        if (obfuscationGuard != 38) {
           return false;
         }
         boolean decompiledFrameRemainder0 = true;
-        if (param0 != 22 &&
-          26 != param0 && (lc.a(0, -93) ||
-          param0 != 16 &&
-          param0 != 41)) {
+        if (achievementId != 22 &&
+          26 != achievementId && (LevelPackCard.a(0, -93) ||
+          achievementId != 16 &&
+          achievementId != 41)) {
           stackIn_13_0 = false;
           decompiledFrameRemainder0 = false;
         }
@@ -90,9 +90,9 @@ final class bl extends af {
         }
     }
 
-    bl() {
+    AchievementsScreen() {
         super(8, fr.field_l);
-        this.field_t = mk.field_b;
+        this.achievementMask = mk.earnedAchievementMask;
     }
 
     public static void h(byte param0) {

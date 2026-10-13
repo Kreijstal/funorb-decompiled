@@ -39,7 +39,7 @@ final class uc extends k {
           if (!param0.equals(this.field_n)) {
             var3 = hg.a(0, param0);
             if (!var3.b(96)) {
-              stackIn_8_0 = hq.field_z;
+              stackIn_8_0 = SaveResultsPromptScreen.field_z;
               return stackIn_8_0;
             }
             this.field_n = param0;
@@ -129,7 +129,7 @@ final class uc extends k {
           int var1_int = 9 % ((-59 - param0) / 35);
           rk.field_Tb = null;
           IsaacGenerator.field_h = 0;
-          ol.field_w = 0;
+          LevelPackSelectScreen.field_w = 0;
           bf.field_N.clear((byte) -72);
           jq.field_n.clear((byte) -92);
           var2 = BlankScreen.field_i.b((byte) 74);

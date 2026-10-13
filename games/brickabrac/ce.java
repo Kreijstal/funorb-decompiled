@@ -61,16 +61,16 @@ final class ce {
               }
               var5 = hd.field_a.e((byte) -92) + hd.field_a.field_Eb;
               if (var5 > 640) {
-                ah.field_v = ah.field_v + 5;
+                HighscoresScreen.field_v = HighscoresScreen.field_v + 5;
                 return;
               }
               if (635 <= var5) {
                 return;
               }
-              if (ah.field_v <= 0) {
+              if (HighscoresScreen.field_v <= 0) {
                 return;
               }
-              ah.field_v = ah.field_v - 5;
+              HighscoresScreen.field_v = HighscoresScreen.field_v - 5;
               return;
             }
             hd.field_a.a(38, param3, param1);
@@ -78,16 +78,16 @@ final class ce {
             if (param2 >= 89) {
               var5Lifetime2 = hd.field_a.e((byte) -92) + hd.field_a.field_Eb;
               if (var5Lifetime2 > 640) {
-                ah.field_v = ah.field_v + 5;
+                HighscoresScreen.field_v = HighscoresScreen.field_v + 5;
                 return;
               }
               if (635 <= var5Lifetime2) {
                 return;
               }
-              if (ah.field_v <= 0) {
+              if (HighscoresScreen.field_v <= 0) {
                 return;
               }
-              ah.field_v = ah.field_v - 5;
+              HighscoresScreen.field_v = HighscoresScreen.field_v - 5;
               return;
             }
             field_e = (bi) null;
@@ -96,12 +96,12 @@ final class ce {
               if (635 <= var5Lifetime3) {
                 return;
               }
-              if (ah.field_v <= 0) {
+              if (HighscoresScreen.field_v <= 0) {
                 return;
               }
-              ah.field_v = ah.field_v - 5;
+              HighscoresScreen.field_v = HighscoresScreen.field_v - 5;
             } else {
-              ah.field_v = ah.field_v + 5;
+              HighscoresScreen.field_v = HighscoresScreen.field_v + 5;
             }
             return;
           }
@@ -119,14 +119,14 @@ final class ce {
         }
         var5Lifetime1 = hd.field_a.e((byte) -92) + hd.field_a.field_Eb;
         if (var5Lifetime1 > 640) {
-          ah.field_v = ah.field_v + 5;
+          HighscoresScreen.field_v = HighscoresScreen.field_v + 5;
           return;
         }
         if (635 > var5Lifetime1) {
-          if (ah.field_v <= 0) {
+          if (HighscoresScreen.field_v <= 0) {
             return;
           }
-          ah.field_v = ah.field_v - 5;
+          HighscoresScreen.field_v = HighscoresScreen.field_v - 5;
         }
         return;
     }

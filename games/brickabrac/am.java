@@ -297,7 +297,7 @@ final class am extends mh {
             if (var17 > var16Lifetime2) {
               var16Lifetime2 = var17;
             }
-            var17Lifetime2 = param6.field_O.c(hq.field_r);
+            var17Lifetime2 = param6.field_O.c(SaveResultsPromptScreen.field_r);
             if (var16Lifetime2 < var17Lifetime2) {
               var16Lifetime2 = var17Lifetime2;
             }
@@ -330,7 +330,7 @@ final class am extends mh {
               var17Lifetime5 = var18Lifetime3;
             }
             var18Lifetime4 = 0;
-            var18Lifetime4 = this.a(var18Lifetime4, param6, var16Lifetime2, hq.field_r, var28[1], (byte) -53);
+            var18Lifetime4 = this.a(var18Lifetime4, param6, var16Lifetime2, SaveResultsPromptScreen.field_r, var28[1], (byte) -53);
             var18Lifetime4 = this.a(var28[1], (byte) 117, var18Lifetime4, this.field_Sb[16], var16Lifetime2);
             var18Lifetime4 = this.a(var28[1], (byte) 36, var18Lifetime4, this.field_Sb[17], var16Lifetime2);
             var18Lifetime4 = this.a(var28[1], (byte) -2, var18Lifetime4, this.field_Sb[18], var16Lifetime2);
@@ -380,7 +380,7 @@ final class am extends mh {
             this.field_Xb.field_Jb = na.a(false, 8421504, 3, 11579568, this.field_Xb.field_cb, 2105376);
             var23 = 13 + var19 + 13;
             var24 = 10 + var22 + 24 + var17Lifetime5;
-            var25 = fp.a(-1, var23, param0, param2);
+            var25 = OptionsScreen.a(-1, var23, param0, param2);
             var26 = br.a(var24, param1, param3, 120);
             this.a(var24, var26, var25, var23, (byte) 64);
             return;
@@ -398,7 +398,7 @@ final class am extends mh {
           this.field_Xb.field_Jb = na.a(false, 8421504, 3, 11579568, this.field_Xb.field_cb, 2105376);
           var18Lifetime1 = var15_int + 13 + 13;
           var19Lifetime1 = var16Lifetime1 + 34;
-          var20Lifetime1 = fp.a(-1, var18Lifetime1, param0, param2);
+          var20Lifetime1 = OptionsScreen.a(-1, var18Lifetime1, param0, param2);
           var21Lifetime1 = br.a(var19Lifetime1, param1, param3, -93);
           this.a(var19Lifetime1, var21Lifetime1, var20Lifetime1, var18Lifetime1, (byte) 64);
           return;

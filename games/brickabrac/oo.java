@@ -20,7 +20,7 @@ final class oo extends ki {
         if (-1 >= param1) {
           u.field_c.drawTransparent(param2, param3);
         } else {
-          la.a(u.field_c, param2, param3, ab.field_C[param1]);
+          la.a(u.field_c, param2, param3, MatchCompleteScreen.field_C[param1]);
         }
         dj.field_a.drawTransparent(param2, param3);
     }

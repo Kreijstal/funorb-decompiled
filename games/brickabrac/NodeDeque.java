@@ -52,7 +52,7 @@ final class NodeDeque {
             return stackIn_5_0;
           }
           if (param0 == 7) {
-            stackIn_9_0 = fp.field_w;
+            stackIn_9_0 = OptionsScreen.field_w;
             return stackIn_9_0;
           }
           if (param0 == 8) {

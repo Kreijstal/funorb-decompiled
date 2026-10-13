@@ -131,13 +131,13 @@ class oc extends IntrusiveNode {
           }
           param2 += 7;
           param0--;
-          var8 = ol.field_r.width + param2 - 5;
-          Rasterizer2D.fillRectangle(var8, param0 + 1, 4, ol.field_r.height - 2, 16777215);
+          var8 = LevelPackSelectScreen.field_r.width + param2 - 5;
+          Rasterizer2D.fillRectangle(var8, param0 + 1, 4, LevelPackSelectScreen.field_r.height - 2, 16777215);
           if (param5 <= 106) {
             oc.a(120, (dh) null);
           }
           var9 = param3.field_cb[param1] >> 8;
-          var10 = ol.field_r.height + (param0 - 1);
+          var10 = LevelPackSelectScreen.field_r.height + (param0 - 1);
           if (var9 > 0) {
             stackIn_22_0 = (var9 <= 3) ? var9 : 3;
             var11 = stackIn_22_0;
@@ -174,11 +174,11 @@ class oc extends IntrusiveNode {
             Rasterizer2D.fillRectangle(var8, var10 - var11Lifetime3, 4, var11Lifetime3, 13245286);
           }
           if (var9 >= 20) {
-            Rasterizer2D.fillRectangleAlpha(var8, param0 + ol.field_r.height - 21, 4, 20, 16777215, (sa.a(200 * MembershipBenefitsScreen.field_x, -4097) >> 10) + 64);
+            Rasterizer2D.fillRectangleAlpha(var8, param0 + LevelPackSelectScreen.field_r.height - 21, 4, 20, 16777215, (sa.a(200 * MembershipBenefitsScreen.field_x, -4097) >> 10) + 64);
           }
-          ol.field_r.drawTransparent(param2, param0);
+          LevelPackSelectScreen.field_r.drawTransparent(param2, param0);
           if (var6_intLifetime1 != 0) {
-            ol.field_r.f(param2, param0, (sa.a(400 * var7, -4097) >> 10) + 64);
+            LevelPackSelectScreen.field_r.f(param2, param0, (sa.a(400 * var7, -4097) >> 10) + 64);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -87,7 +87,7 @@ final class ei implements ub {
         if (cg.field_l) {
           ej.field_I.i((byte) -104);
         } else {
-          var1 = fp.field_x;
+          var1 = OptionsScreen.field_x;
           if (var1 > 0) {
             if (var1 != 1) {
               ke.field_b = rd.a(ed.field_c, new String[]{Integer.toString(var1)}, (byte) 103);

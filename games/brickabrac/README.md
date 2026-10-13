@@ -2,7 +2,7 @@
 
 Java here is the single published version. Rebuild with Deko’s `readable/reproduce-brickabrac.mjs`. The reverse dictionary is `../../decompilation/brickabrac-naming.json`.
 
-This pass reviews 51 class identities across 420 compiled classes. Other names remain unresolved. Numbered state masks/words identify observed storage without guessing server semantics. Identifiers have no opaque suffixes; reversal recovers original bytes.
+This pass reviews 69 class identities across 420 compiled classes. Other names remain unresolved. Numbered state masks/words identify observed storage without guessing server semantics. Identifiers have no opaque suffixes; reversal recovers original bytes.
 
 | Start here | Follow |
 | --- | --- |
@@ -24,6 +24,32 @@ This pass reviews 51 class identities across 420 compiled classes. Other names r
 | [GameCanvas](GameCanvas.java) / [DelegatingCanvas](DelegatingCanvas.java) | Canvas focus boundary, screen registry and delegated paint/update. |
 | [LevelList](LevelList.java) / [MouseInput](MouseInput.java) / [MouseWheelSource](MouseWheelSource.java) / [MouseWheelInput](MouseWheelInput.java) | Level-number scrolling/selection, mouse snapshots and accumulated wheel input. |
 | [KeyboardInput](KeyboardInput.java) | Java key translation, held-state change ring and frame-bounded key/character events. |
+| [FramedMenuScreen](FramedMenuScreen.java) / [PauseMenuScreen](PauseMenuScreen.java) / [OptionsScreen](OptionsScreen.java) | Menu framing, pause overlays, retained action sets and options. |
+| [HighscoresScreen](HighscoresScreen.java) / [RankingsScreen](RankingsScreen.java) / [InstructionsScreen](InstructionsScreen.java) | Score/ranking filters and numbered instructions with return-screen state. |
+| [AchievementBrowserScreen](AchievementBrowserScreen.java) / [AchievementsScreen](AchievementsScreen.java) / [NewAchievementsScreen](NewAchievementsScreen.java) | Achievement pages, displayed/departing icons and earned/pending masks. |
+| [SaveResultsPromptScreen](SaveResultsPromptScreen.java) / [MessageScreen](MessageScreen.java) | Login/save prompt and externally supplied messages. |
+| [LevelPackSelectScreen](LevelPackSelectScreen.java) / [LevelPackCard](LevelPackCard.java) / [HighscorePackSelector](HighscorePackSelector.java) | Pack cards and keyboard/pointer pack selectors. |
+| [MatchResultScreen](MatchResultScreen.java) / [MultiplayerExitScreen](MultiplayerExitScreen.java) / [MatchCompleteScreen](MatchCompleteScreen.java) / [LevelCompleteScreen](LevelCompleteScreen.java) | Match results/exit/completion and single-player completion overlay. |
+
+| Registered menu ID | Screen |
+| --- | --- |
+| 0 | [MainMenuScreen](MainMenuScreen.java) |
+| 1–4,17 | [PauseMenuScreen](PauseMenuScreen.java) |
+| 5 | [HighscoresScreen](HighscoresScreen.java) |
+| 6 | [RankingsScreen](RankingsScreen.java) |
+| 7 | [InstructionsScreen](InstructionsScreen.java) |
+| 8 | [AchievementsScreen](AchievementsScreen.java) |
+| 9 | [NewAchievementsScreen](NewAchievementsScreen.java) |
+| 10 | [SaveResultsPromptScreen](SaveResultsPromptScreen.java) |
+| 11 | [MessageScreen](MessageScreen.java) |
+| 12 | [MembershipBenefitsScreen](MembershipBenefitsScreen.java) |
+| 13,15 | [LevelSelectScreen](LevelSelectScreen.java) |
+| 14 | [OptionsScreen](OptionsScreen.java) |
+| 16 | [LevelPackSelectScreen](LevelPackSelectScreen.java) |
+| 18 | [LevelCompleteScreen](LevelCompleteScreen.java) |
+| 19 | [MultiplayerExitScreen](MultiplayerExitScreen.java) |
+| 20 | [MatchCompleteScreen](MatchCompleteScreen.java) |
+| 21 | [TimedSplashScreen](TimedSplashScreen.java) |
 
 Focused raw/named probes check body geometry, paddle sizes, player masks, deque ownership, histories, power-ups, waypoint motion, selected contacts, packet operations and body/path snapshots. ISAAC fixtures use an independent unsigned-word model anchored to [Bob Jenkins’s published vectors](https://burtleburtle.net/bob/rand/randvect.txt), then compare seeded words/state, refill/counter boundaries, bounded rejection, shuffling, board random-call accounting and opcode bytes. Audio fixtures check event construction; playback remains unverified. The client flag uses a headless Applet-compatible shim and board/match construction is bypassed. Full board snapshots, swept collision detection, gameplay, score accounting, live multiplayer and browser/phone behavior remain unverified.
 
@@ -34,5 +60,7 @@ Pixel fixtures check clipped solid/alpha fills and lines, darkening/grayscale, c
 Menu fixtures check a real base-menu subclass, button rectangles/lookup/markers, entry selection, key-code predicates, vertical/horizontal wrap/fallback and held suppression, direct selection and registry bounds. Blank/benefits/splash constructors retain their IDs; canvas focus-loss callbacks retain their latch. Other screen roles come from registration and inspected callers. Level-list fixtures preserve row geometry, unclamped/direct and clamped/delta scrolling, first/last selection, numeric key navigation and pointer-selection sentinels. Mouse fixtures exercise AWT callbacks, frame latches, wheel polling and the reflective wheel factory (including its owned class-name literal). Preview fixtures bypass screen construction and check decoding/path attachment, fixed8 bounds, excluded/border bricks, stationary preview velocity and repeated clearing. Font metrics are controlled; OS event dispatch, list rendering, full menu startup, action dispatch, transition installation and rendered menu flows remain unverified.
 
 Keyboard fixtures anchor the AWT arrow translations:98/up,99/down,96/left and97/right. Earlier horizontal/vertical method labels were reversed and are corrected; the96/97/102/103 predicates now name left/right/Home/End from the same translation table. Probes check held-state changes, overflow/focus reset,127-event capacity, per-frame cutoffs, callbacks, consumption, and listener attachment/detachment/disable. Legacy character filtering matches Java Windows-1252 for every UTF-16 code unit with zero excluded. OS dispatch and complete keyboard-driven gameplay remain unverified. Canvas probes verify paint/update forwarding. Secondary-deque probes cover ownership/order/iterator removal with primary links intact. Original iterator exhaustion is retained: an exhausted next returns null, hasNext becomes true and the following next throws NullPointerException.
+
+Screen roles follow registrations and executed draw/action methods with their localized labels; unrelated static strings do not determine a class role. Native fixtures instantiate/register all22 slots with controlled fonts/labels/icons and empty packs, check pause actions before/after refresh, result anchors and instruction return state. Pack fixtures check focus timing, keyboard bounds and pixel selection, retaining the prior selection on transparent misses. Achievement fixtures cover256-bit storage, duplicate awards, optional pending bits, notification order, BitSet comparisons and all eight save prompts. The initializer’s final client bootstrap, rendered panels, page-transition animation, authenticated scores and server persistence remain unverified.
 
 Decompiler source commit: 1d183d3ba75fc0a8cd3af1544591b8c463c0e1ff. Tracked-source Git tar SHA-256: 7230d95fc7b957c8c56c76ed8203e42c1808e0084711cfd0495f47d8a692e8cd. This identifies decompiler source, not a gamepack JAR.

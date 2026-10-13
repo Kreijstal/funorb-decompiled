@@ -188,7 +188,7 @@ final class ui {
         if (param0) {
           field_b = (String) null;
         }
-        stackIn_7_0 = (i.field_j >= 10) && (!ol.field_s) && (!ik.a(false));
+        stackIn_7_0 = (i.field_j >= 10) && (!LevelPackSelectScreen.field_s) && (!ik.a(false));
         return stackIn_7_0;
     }
 

@@ -3,13 +3,13 @@
  */
 import java.io.*;
 
-final class ah extends MenuScreen {
+final class HighscoresScreen extends MenuScreen {
     static int field_v;
     static int[][] field_w;
-    private int field_s;
-    private jf field_r;
+    private int packIndex;
+    private HighscorePackSelector packSelector;
     static int[] field_u;
-    private int field_t;
+    private int scoreFilterIndex;
 
     final void onEnter(boolean usePointer, int initialSelection, int obfuscationGuard) {
         LevelSequence var4;
@@ -18,12 +18,12 @@ final class ah extends MenuScreen {
         }
         super.onEnter(usePointer, initialSelection, 101);
         rf.field_g = null;
-        this.field_s = 0;
-        if (pe.field_o != null &&
-          !pe.field_o.field_p) {
-          var4 = pe.field_o.match.configuration;
+        this.packIndex = 0;
+        if (pe.gameplayScreen != null &&
+          !pe.gameplayScreen.field_p) {
+          var4 = pe.gameplayScreen.match.configuration;
           if (var4.pack.packId == 1) {
-            this.field_s = 1;
+            this.packIndex = 1;
           }
         }
     }
@@ -43,7 +43,7 @@ final class ah extends MenuScreen {
     final void onExit(byte obfuscationGuard) {
         rf.field_g = null;
         if (obfuscationGuard != 79) {
-          this.field_s = -114;
+          this.packIndex = -114;
         }
     }
 
@@ -86,9 +86,9 @@ final class ah extends MenuScreen {
           if (keyCode == 99) {
             if (this.selection.selectedIndex < 4) {
               this.selection.setSelectedIndex(false, 4);
-              this.field_r.a((byte) 108);
+              this.packSelector.selectFirst((byte) 108);
             } else {
-              if (this.field_r.a(keyCode, character, -94)) {
+              if (this.packSelector.handleNavigationKey(keyCode, character, -94)) {
                 this.selection.setSelectedIndex(false, 0);
               }
             }
@@ -96,12 +96,12 @@ final class ah extends MenuScreen {
           if (keyCode == 98) {
             if (4 > this.selection.selectedIndex) {
               this.selection.setSelectedIndex(false, 4);
-              this.field_r.c(obfuscationGuard ^ 119);
+              this.packSelector.selectRelativeToEnd(obfuscationGuard ^ 119);
               this.selection.pollKeyboardCode((byte) -124);
               decompiledFrameRemainder0 = false;
             }
             else {
-              if (this.field_r.a(keyCode, character, -67)) {
+              if (this.packSelector.handleNavigationKey(keyCode, character, -67)) {
                 this.selection.setSelectedIndex(false, 0);
                 this.selection.pollKeyboardCode((byte) -124);
                 decompiledFrameRemainder0 = false;
@@ -270,8 +270,8 @@ final class ah extends MenuScreen {
           var8 = this.buttons[this.buttons.length - 1];
           var10 = var8;
           var5 = var10;
-          var8.width = hq.field_s[0].canvasWidth;
-          var8.height = hq.field_s[0].canvasHeight * 2;
+          var8.width = SaveResultsPromptScreen.packCardIcons[0].canvasWidth;
+          var8.height = SaveResultsPromptScreen.packCardIcons[0].canvasHeight * 2;
           var5.x = (-var10.width + 240) / 4;
           var5.y = 140;
         } else {
@@ -463,7 +463,7 @@ final class ah extends MenuScreen {
               }
             }
             if (param1 != 9) {
-              ah.a(-62, '&');
+              HighscoresScreen.a(-62, '&');
             }
             param0.appendCrc32(3, var4);
             var17.unlink((byte) 111);
@@ -491,7 +491,7 @@ final class ah extends MenuScreen {
         field_u = null;
         if (param0 != -5) {
           String var2 = (String) null;
-          ah.a((String) null, -31, (String) null);
+          HighscoresScreen.a((String) null, -31, (String) null);
         }
         field_w = (int[][]) null;
     }
@@ -513,14 +513,14 @@ final class ah extends MenuScreen {
         if (14 != var7) {
           if (var7 == 15) {
             if (this.selection.isActivated((byte) 113)) {
-              this.field_t = 1;
+              this.scoreFilterIndex = 1;
               this.markButton(true, buttonIndex);
               var4 = 1;
             }
           } else {
             if (var7 == 16) {
               if (this.selection.isActivated((byte) 113)) {
-                this.field_t = 2;
+                this.scoreFilterIndex = 2;
                 var4 = 1;
                 this.markButton(true, buttonIndex);
               }
@@ -529,16 +529,16 @@ final class ah extends MenuScreen {
                 return super.handleMenuAction(buttonIndex, inputFlag, (byte) 123);
               }
               if (this.selection.isActivated((byte) 113) &&
-                this.field_r.field_i != -1) {
+                this.packSelector.selectedPackIndex != -1) {
                 rf.field_g = null;
                 var4 = 1;
-                this.field_s = this.field_r.field_i;
+                this.packIndex = this.packSelector.selectedPackIndex;
               }
             }
           }
         } else {
           if (this.selection.isActivated((byte) 113)) {
-            this.field_t = 0;
+            this.scoreFilterIndex = 0;
             this.markButton(true, buttonIndex);
             var4 = 1;
           }
@@ -546,24 +546,24 @@ final class ah extends MenuScreen {
         return var4 != 0;
     }
 
-    ah() {
+    HighscoresScreen() {
         super(5, 38, 460, 402, 35, LevelPack.field_a);
-        this.field_s = 0;
-        this.field_t = 0;
+        this.packIndex = 0;
+        this.scoreFilterIndex = 0;
         fk.field_g = ob.field_D.c("10. ") + 10;
         lq.field_b = new int[4];
         lq.field_b[2] = 125 + fk.field_g + 330;
         lq.field_b[1] = 125 + fk.field_g + 240;
         lq.field_b[0] = 125 + fk.field_g;
         lq.field_b[3] = 50 - (-fk.field_g - 500);
-        this.field_r = new jf(this, ObjectHistoryBuffer.field_k.length - 1, 2);
+        this.packSelector = new HighscorePackSelector(this, ObjectHistoryBuffer.field_k.length - 1, 2);
     }
 
     final void refreshMenu(int obfuscationGuard) {
         this.initializeButtons(ObjectHistoryBuffer.field_k, 0);
         this.markButton(true, 1);
         if (obfuscationGuard >= -60) {
-          ah.f(-46);
+          HighscoresScreen.f(-46);
         }
     }
 
@@ -661,8 +661,8 @@ final class ah extends MenuScreen {
           return;
         }
         im.a(475, 5, 33, 5, 140, (byte) -101, 120);
-        nn.field_g.b(qn.field_u[this.field_s], 357, 1 + (-nn.field_g.field_L + 178), 0, -1);
-        da.field_E[this.field_s].e(565, 140, -2048, 4096);
+        nn.field_g.b(qn.packNames[this.packIndex], 357, 1 + (-nn.field_g.field_L + 178), 0, -1);
+        da.packSelectorIcons[this.packIndex].e(565, 140, -2048, 4096);
         if (obfuscationGuard >= -14) {
           field_v = -65;
         }
@@ -681,9 +681,9 @@ final class ah extends MenuScreen {
             var4_ref = rn.field_d;
           } else {
             var4_ref = da.field_J;
-            var5 = rf.field_g.field_i[this.field_t];
-            var13 = rf.field_g.field_n[this.field_t];
-            var7 = gj.a(rf.field_g, fj.field_Ub, -87, this.field_t);
+            var5 = rf.field_g.field_i[this.scoreFilterIndex];
+            var13 = rf.field_g.field_n[this.scoreFilterIndex];
+            var7 = gj.a(rf.field_g, fj.field_Ub, -87, this.scoreFilterIndex);
             for (var8 = 0; 10 > var8; var8++) {
               if (var5[var8] != null) {
                 stackIn_17_0 = (var7 == var8) ? 1 : 2;
@@ -714,7 +714,7 @@ final class ah extends MenuScreen {
         if (var4_ref != null) {
           sa.a(178, nn.field_g, var4_ref, 357, 243, 2, 15);
         }
-        this.field_r.b(117);
+        this.packSelector.draw(117);
     }
 
     final void advanceScreen(boolean updateFlag, boolean inputEnabled, int obfuscationGuard) {
@@ -726,9 +726,9 @@ final class ah extends MenuScreen {
           return;
         }
         if (rf.field_g == null) {
-          rf.field_g = cp.b(-2, this.field_s, 2, 10, 3);
+          rf.field_g = cp.b(-2, this.packIndex, 2, 10, 3);
         }
-        this.field_r.a(111);
+        this.packSelector.updatePointerSelection(111);
     }
 
     static {

@@ -196,26 +196,26 @@ final class ip extends ki {
                 stackIn_40_0 = var4_int;
                 if (var26 == 0) {
                   if (stackIn_40_0 != 0 &&
-                    ab.field_A[0][1 + var6].field_L != 0 &&
+                    MatchCompleteScreen.field_A[0][1 + var6].field_L != 0 &&
                     param1.field_kc != var6) {
                     param1.field_kc = var6;
                     var5 = 1;
                   }
-                  stackIn_28_0 = ab.field_A[0][var6 + 1];
+                  stackIn_28_0 = MatchCompleteScreen.field_A[0][var6 + 1];
                   stackIn_29_1 = (var4_int != 0);
                   stackIn_28_0.field_eb = stackIn_29_1;
                   if (!vd.field_e &&
                     var6 == 3) {
-                    ab.field_A[0][var6 + 1].field_eb = false;
+                    MatchCompleteScreen.field_A[0][var6 + 1].field_eb = false;
                   }
-                  stackIn_37_0 = ab.field_A[0][var6 + 1];
+                  stackIn_37_0 = MatchCompleteScreen.field_A[0][var6 + 1];
                   stackIn_38_1 = (var6 == param1.field_kc);
                   stackIn_37_0.field_Nb = stackIn_38_1;
                   var6++;
                   continue;
                 }
               } else {
-                stackIn_40_0 = ab.field_A[0][2].field_G ? 1 : 0;
+                stackIn_40_0 = MatchCompleteScreen.field_A[0][2].field_G ? 1 : 0;
               }
               if (stackIn_40_0 == 0) {
                 break;
@@ -271,7 +271,7 @@ final class ip extends ki {
               }
               var8_intLifetime1 = stackIn_71_0;
               if (var4_int != 0 &&
-                ab.field_A[1][1 + var7].field_L != 0) {
+                MatchCompleteScreen.field_A[1][1 + var7].field_L != 0) {
                 if (!param2) {
                   var9 = w.field_n[var7];
                   if (param1.field_jc != var9) {
@@ -294,14 +294,14 @@ final class ip extends ki {
               }
               if (!param2) {
                 var9 = w.field_n[var7];
-                stackIn_92_0 = ab.field_A[1][1 + var7];
+                stackIn_92_0 = MatchCompleteScreen.field_A[1][1 + var7];
                 stackIn_93_1 = (var9 == param1.field_jc);
                 stackIn_92_0.field_Nb = stackIn_93_1;
               } else if (var7 == -1) {
-                ab.field_A[1][1 + var7].field_Nb = true;
+                MatchCompleteScreen.field_A[1][1 + var7].field_Nb = true;
                 var9 = 0;
                 while (w.field_n.length > var9) {
-                  dupTemp$0 = ab.field_A[1][var7 + 1];
+                  dupTemp$0 = MatchCompleteScreen.field_A[1][var7 + 1];
                   stackIn_105_0 = dupTemp$0;
                   stackOut_97_1 = dupTemp$0.field_Nb;
                   stackIn_105_1 = stackOut_97_1 ? 1 : 0;
@@ -323,7 +323,7 @@ final class ip extends ki {
                   var9++;
                 }
               } else {
-                stackIn_105_0 = ab.field_A[1][1 + var7];
+                stackIn_105_0 = MatchCompleteScreen.field_A[1][1 + var7];
                 stackIn_105_1 = 0;
                 stackIn_105_2 = rh.field_d[var7 / 8];
                 stackIn_105_3 = 1 << (var7 & 7);
@@ -337,7 +337,7 @@ final class ip extends ki {
                 }
                 stackIn_109_0.field_Nb = stackIn_109_1;
               }
-              stackIn_114_0 = ab.field_A[1][var7 + 1];
+              stackIn_114_0 = MatchCompleteScreen.field_A[1][var7 + 1];
               stackIn_115_1 = (var4_int != 0) && (var8_intLifetime1 == 0);
               stackIn_114_0.field_eb = stackIn_115_1;
               var7++;
@@ -350,7 +350,7 @@ final class ip extends ki {
           var6Lifetime2 = stackIn_121_0;
           boolean decompiledNaturalLoopExit0 = false;
           while (!(decompiledNaturalLoopExit0 = (var6Lifetime2 >= 3))) {
-            var28 = ab.field_A[2][var6Lifetime2];
+            var28 = MatchCompleteScreen.field_A[2][var6Lifetime2];
             stackIn_157_0 = var4_int;
             if (var26 == 0) {
               boolean decompiledFrameRemainder2 = true;
@@ -400,7 +400,7 @@ final class ip extends ki {
             pe.field_t > 1) {
             var6Lifetime2 = 0;
             while (!(var6Lifetime2 >= pe.field_t + 1)) {
-              var29 = ab.field_A[3][var6Lifetime2];
+              var29 = MatchCompleteScreen.field_A[3][var6Lifetime2];
               stackIn_184_0 = var4_int;
               if (var26 != 0) {
                 decompiledFrameCompleted2 = false;
@@ -438,7 +438,7 @@ final class ip extends ki {
           var7 = stackIn_184_0;
           scanLoop1: while (true) {
             if (cq.field_p > var7) {
-              dupTemp$1 = ab.field_A[var7 + 4];
+              dupTemp$1 = MatchCompleteScreen.field_A[var7 + 4];
               var27 = dupTemp$1;
               var8_array = dupTemp$1;
               stackOut_186_0 = param2;
@@ -471,9 +471,9 @@ final class ip extends ki {
                     NodeDeque.field_a[var7][var9]) {
                     var10 = 1;
                   }
-                  if (null != bl.field_F &&
-                    bl.field_F[var7] != null) {
-                    var16 = bl.field_F[var7][var9];
+                  if (null != AchievementsScreen.field_F &&
+                    AchievementsScreen.field_F[var7] != null) {
+                    var16 = AchievementsScreen.field_F[var7][var9];
                     if (var16 != 0 &&
                       !ea.field_g &&
                       go.field_c <= 0) {
@@ -484,9 +484,9 @@ final class ip extends ki {
                       var12 = 1;
                     }
                   }
-                  if (null != ld.field_v &&
-                    ld.field_v[var7] != null) {
-                    var16Lifetime2 = ld.field_v[var7][var9];
+                  if (null != MatchResultScreen.field_v &&
+                    MatchResultScreen.field_v[var7] != null) {
+                    var16Lifetime2 = MatchResultScreen.field_v[var7][var9];
                     if (0 < var16Lifetime2 &&
                       ko.field_s < var16Lifetime2) {
                       var11 = 1;
@@ -612,7 +612,7 @@ final class ip extends ki {
                   if (var13 == 0) {
                     if (var10 == 0) {
                       if (var11 != 0) {
-                        var22_int = ld.field_v[var7][var9] - ko.field_s;
+                        var22_int = MatchResultScreen.field_v[var7][var9] - ko.field_s;
                         if (var22_int != 1) {
                           var21 = rd.a(tq.field_e, new String[]{Integer.toString(var22_int)}, (byte) 103);
                         } else {
@@ -620,7 +620,7 @@ final class ip extends ki {
                         }
                       }
                       if (var12 != 0) {
-                        var30 = rd.a(wd.field_x, new String[]{Integer.toString(m.field_h), Integer.toString(bl.field_F[var7][var9])}, (byte) 103);
+                        var30 = rd.a(wd.field_x, new String[]{Integer.toString(m.field_h), Integer.toString(AchievementsScreen.field_F[var7][var9])}, (byte) 103);
                         var21 = var30;
                         var21 = var30;
                         if (null == var21) {
@@ -630,7 +630,7 @@ final class ip extends ki {
                         }
                       }
                       if (var14 != 0) {
-                        var22 = md.field_t;
+                        var22 = InstructionsScreen.field_t;
                         if (var15 > 0 &&
                           eb.field_p != null &&
                           eb.field_p.length >= var15 &&

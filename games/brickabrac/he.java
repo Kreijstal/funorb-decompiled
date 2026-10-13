@@ -265,7 +265,7 @@ final class he extends ib implements en {
               fr.d(-1);
             } else {
               if (param4 == this.field_J) {
-                cc.f(967);
+                NewAchievementsScreen.f(967);
               }
             }
           }

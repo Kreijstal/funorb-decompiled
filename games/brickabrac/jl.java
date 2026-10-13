@@ -61,15 +61,15 @@ final class jl {
             var8 = kk.field_e[9] >> 2;
             var9 = kk.field_e[10] >> 2;
             var10_int = kk.field_e[11] >> 2;
-            var11 = var10_int * ld.field_w[5] + (ld.field_w[4] * var9 + ld.field_w[3] * var8) >> 14;
-            var12 = var8 * ld.field_w[6] + (var9 * ld.field_w[7] + var10_int * ld.field_w[8]) >> 14;
-            var13 = var9 * ld.field_w[10] + (var8 * ld.field_w[9] + ld.field_w[11] * var10_int) >> 14;
+            var11 = var10_int * MatchResultScreen.field_w[5] + (MatchResultScreen.field_w[4] * var9 + MatchResultScreen.field_w[3] * var8) >> 14;
+            var12 = var8 * MatchResultScreen.field_w[6] + (var9 * MatchResultScreen.field_w[7] + var10_int * MatchResultScreen.field_w[8]) >> 14;
+            var13 = var9 * MatchResultScreen.field_w[10] + (var8 * MatchResultScreen.field_w[9] + MatchResultScreen.field_w[11] * var10_int) >> 14;
             var2[var3] = var7 * var13 + var12 * var6 + var5 * var11 >> 16;
           }
           var3Lifetime1 = kk.field_e[9] >> 8;
           var4 = kk.field_e[10] >> 8;
           var5Lifetime1 = kk.field_e[11] >> 8;
-          var6Lifetime1 = ld.field_t << 4;
+          var6Lifetime1 = MatchResultScreen.field_t << 4;
           var7Lifetime1 = 0;
           var8Lifetime1 = sa.a(var6Lifetime1, -4097) >> 8;
           var9Lifetime1 = BrickABrac.c(2048, var6Lifetime1) >> 8;
@@ -104,9 +104,9 @@ final class jl {
             var17 = gg.field_i[var16];
             fk.a(var16, (byte) 77);
             for (var18 = 0; var18 < 3; var18++) {
-              ld.field_w[var18] = ld.field_w[var18] + rn.field_e[var15][var18];
+              MatchResultScreen.field_w[var18] = MatchResultScreen.field_w[var18] + rn.field_e[var15][var18];
             }
-            ka.a(kk.field_e, -16283, ld.field_w, false, true, var17, false);
+            ka.a(kk.field_e, -16283, MatchResultScreen.field_w, false, true, var17, false);
             mp.a(var14, var7Lifetime1, var12Lifetime1, var9Lifetime1, var17, (byte) -105, var13Lifetime1, var8Lifetime1);
           }
           return;
@@ -183,16 +183,16 @@ final class jl {
             stackIn_14_0 = rd.a(gh.field_d, new String[]{param1}, (byte) 103);
             return stackIn_14_0;
           }
-          if (ol.field_w >= 100 &&
+          if (LevelPackSelectScreen.field_w >= 100 &&
             go.field_c <= 0) {
             stackIn_18_0 = er.field_e;
             return stackIn_18_0;
           }
-          if (200 <= ol.field_w) {
+          if (200 <= LevelPackSelectScreen.field_w) {
             stackIn_21_0 = er.field_e;
             return stackIn_21_0;
           }
-          if (af.a(121, param1)) {
+          if (AchievementBrowserScreen.a(121, param1)) {
             stackIn_24_0 = rd.a(sn.field_u, new String[]{param1}, (byte) 103);
             return stackIn_24_0;
           }

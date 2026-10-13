@@ -435,7 +435,7 @@ final class bm {
           fd.field_d[8] = (ki) ((Object) new ci(8, "BaB_space", "BaB_block_space", 8));
           fd.field_d[9] = (ki) ((Object) new td(9, "BaB_volcano", "BaB_block_volcano", 6));
           fd.field_d[10] = (ki) ((Object) new jk(10, "BaB_underthesea", "BaB_block_underwater", 5));
-          boolean decompiledSharedTail0 = !(!lc.a(0, param2 ^ -24881));
+          boolean decompiledSharedTail0 = !(!LevelPackCard.a(0, param2 ^ -24881));
           if (!decompiledSharedTail0) {
             fd.field_d[5] = (ki) ((Object) new qb(5, "BaB_farmyard", "BaB_block_farmyard", 7));
             decompiledSharedTail0 = (BrickABrac.field_J);

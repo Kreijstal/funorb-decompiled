@@ -240,15 +240,15 @@ final class mp extends mh {
         int var6 = 0;
         String var7 = null;
         try {
-          lc.field_a[0] = ji.field_e.nextInt();
-          lc.field_a[1] = ji.field_e.nextInt();
+          LevelPackCard.field_a[0] = ji.field_e.nextInt();
+          LevelPackCard.field_a[1] = ji.field_e.nextInt();
           tq.field_f.position = 0;
-          lc.field_a[3] = (int)bj.field_ab;
-          lc.field_a[2] = (int)(bj.field_ab >> 32);
-          tq.field_f.writeInt(lc.field_a[0], (byte) -79);
-          tq.field_f.writeInt(lc.field_a[1], (byte) -79);
-          tq.field_f.writeInt(lc.field_a[2], (byte) -79);
-          tq.field_f.writeInt(lc.field_a[3], (byte) -79);
+          LevelPackCard.field_a[3] = (int)bj.field_ab;
+          LevelPackCard.field_a[2] = (int)(bj.field_ab >> 32);
+          tq.field_f.writeInt(LevelPackCard.field_a[0], (byte) -79);
+          tq.field_f.writeInt(LevelPackCard.field_a[1], (byte) -79);
+          tq.field_f.writeInt(LevelPackCard.field_a[2], (byte) -79);
+          tq.field_f.writeInt(LevelPackCard.field_a[3], (byte) -79);
           he.a(tq.field_f, (byte) -95);
           tq.field_f.writeShort((byte) 113, param0);
           param1.a(0, tq.field_f);

@@ -1,13 +1,13 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class md extends MenuScreen {
+final class InstructionsScreen extends MenuScreen {
     static int field_r;
-    private int field_u;
+    private int pageIndex;
     static int field_v;
     static String field_x;
     static String field_t;
-    private int field_s;
+    private int parentScreenId;
     static String field_w;
 
     final static int f(byte param0) {
@@ -37,7 +37,7 @@ final class md extends MenuScreen {
           }
           if (param0 != 124) {
             var8 = (java.awt.Component) null;
-            md.attachKeyboardInput(22, (java.awt.Component) null);
+            InstructionsScreen.attachKeyboardInput(22, (java.awt.Component) null);
           }
           mh.field_H.updatePointer(qo.b(120, po.pointerY, pq.pointerX), param0 + 27355, qo.b(param0 - 4, qo.pressY, tb.pressX));
           if (mh.field_H.isActivated((byte) 113)) {
@@ -125,7 +125,7 @@ final class md extends MenuScreen {
         if (!obfuscationGuard) {
           return 71;
         }
-        return this.field_s;
+        return this.parentScreenId;
     }
 
     final boolean isButtonEnabled(byte obfuscationGuard, int buttonIndex) {
@@ -141,17 +141,17 @@ final class md extends MenuScreen {
         }
         var3 = this.buttons[buttonIndex].actionId;
         if (var3 == 25) {
-          stackIn_20_0 = !(0 >= this.field_u);
+          stackIn_20_0 = !(0 >= this.pageIndex);
           return stackIn_20_0;
         }
         if (26 == var3) {
-          stackIn_10_0 = !(gh.field_b.length - 1 <= this.field_u);
+          stackIn_10_0 = !(gh.field_b.length - 1 <= this.pageIndex);
           return stackIn_10_0;
         }
         if (var3 != 37) {
           return true;
         }
-        stackIn_16_0 = (gh.field_b.length - 1 == this.field_u) && (!lm.a((byte) -10));
+        stackIn_16_0 = (gh.field_b.length - 1 == this.pageIndex) && (!lm.a((byte) -10));
         return stackIn_16_0;
     }
 
@@ -206,8 +206,8 @@ final class md extends MenuScreen {
         }
     }
 
-    md() {
-        super(7, 38, 460, 402, 35, lc.field_n);
+    InstructionsScreen() {
+        super(7, 38, 460, 402, 35, LevelPackCard.field_n);
         m.field_j = ob.field_D.field_F + ob.field_D.field_P + 1;
     }
 
@@ -225,7 +225,7 @@ final class md extends MenuScreen {
         int var5Lifetime1;
         var9 = BrickABrac.field_J ? 1 : 0;
         super.onEnter(usePointer, 2, 98);
-        this.field_u = 0;
+        this.pageIndex = 0;
         var4 = 0;
         for (var5 = 0; var5 < this.buttons.length; var5++) {
           var6_ref_q = this.buttons[var5];
@@ -254,7 +254,7 @@ final class md extends MenuScreen {
             var6 = var6 + (var8.width + 10);
           }
         }
-        this.field_s = lp.currentScreen.screenId;
+        this.parentScreenId = lp.currentScreen.screenId;
     }
 
     public static void g(byte param0) {
@@ -279,12 +279,12 @@ final class md extends MenuScreen {
         super.drawScreen((byte) -27);
         im.a(550, 5, 243, 5, 140, (byte) -101, 45);
         al.a(this.screenId, 19);
-        if (this.field_u != 0) {
+        if (this.pageIndex != 0) {
           ob.field_D.a(h.field_C, nd.field_f);
         } else {
           ob.field_D.a(un.field_e, vj.field_f);
         }
-        var2 = ob.field_D.a(gh.field_b[this.field_u], jq.field_t, ok.field_b);
+        var2 = ob.field_D.a(gh.field_b[this.pageIndex], jq.field_t, ok.field_b);
         var3 = 145 - (-m.field_j - 4);
         for (var4 = 0; var2 > var4; var4++) {
           var5 = ob.field_D;
@@ -323,9 +323,9 @@ final class md extends MenuScreen {
           var3 = var3 + (m.field_j + var8);
         }
         if (obfuscationGuard >= -14) {
-          md.g((byte) 61);
+          InstructionsScreen.g((byte) 61);
         }
-        nn.field_g.a(pb.a(this.field_u, 4), 581, -12 + (nn.field_g.field_B + 373), 0, -1);
+        nn.field_g.a(pb.a(this.pageIndex, 4), 581, -12 + (nn.field_g.field_B + 373), 0, -1);
         this.a(0);
     }
 
@@ -343,7 +343,7 @@ final class md extends MenuScreen {
     final String e(byte param0) {
         if (param0 < 53) {
           java.awt.Component var3 = (java.awt.Component) null;
-          md.attachKeyboardInput(-108, (java.awt.Component) null);
+          InstructionsScreen.attachKeyboardInput(-108, (java.awt.Component) null);
         }
         return ag.buttonLabels[7];
     }
@@ -367,10 +367,10 @@ final class md extends MenuScreen {
         if (26 == var7) {
           if (this.selection.isActivated((byte) 113) &&
             this.isButtonEnabled((byte) 106, buttonIndex)) {
-            fieldTemp$1 = this.field_u + 1;
-            this.field_u = this.field_u + 1;
+            fieldTemp$1 = this.pageIndex + 1;
+            this.pageIndex = this.pageIndex + 1;
             if (fieldTemp$1 >= gh.field_b.length) {
-              this.field_u = gh.field_b.length - 1;
+              this.pageIndex = gh.field_b.length - 1;
             }
             if (!this.isButtonEnabled((byte) 123, 2)) {
               this.selection.setSelectedIndex(false, 3);
@@ -386,10 +386,10 @@ final class md extends MenuScreen {
           }
           if (this.selection.isActivated((byte) 113) &&
             this.isButtonEnabled((byte) 91, buttonIndex)) {
-            fieldTemp$2 = this.field_u - 1;
-            this.field_u = this.field_u - 1;
+            fieldTemp$2 = this.pageIndex - 1;
+            this.pageIndex = this.pageIndex - 1;
             if (0 > fieldTemp$2) {
-              this.field_u = 0;
+              this.pageIndex = 0;
             }
             var4 = 1;
             if (!this.isButtonEnabled((byte) 86, 0)) {

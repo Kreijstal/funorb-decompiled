@@ -1,34 +1,34 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class jf {
+final class HighscorePackSelector {
     static String[] field_d;
-    private int field_h;
-    private int field_j;
-    int field_i;
+    private int buttonIndex;
+    private int lastPointerY;
+    int selectedPackIndex;
     static mf field_c;
-    private ah field_a;
-    private int field_e;
+    private HighscoresScreen owner;
+    private int lastPointerX;
     static String field_g;
-    private int field_f;
+    private int packCount;
     static mh field_k;
-    private boolean field_b;
+    private boolean keyboardSelection;
 
-    final boolean a(int param0, char param1, int param2) {
-        int var4 = 107 / ((0 - param2) / 63);
-        if (99 == param0) {
-          this.field_i = this.field_i + 1;
-          this.field_b = true;
+    final boolean handleNavigationKey(int keyCode, char character, int obfuscationGuard) {
+        int var4 = 107 / ((0 - obfuscationGuard) / 63);
+        if (99 == keyCode) {
+          this.selectedPackIndex = this.selectedPackIndex + 1;
+          this.keyboardSelection = true;
         } else {
-          if (param0 == 98) {
-            this.field_i = this.field_i - 1;
-            this.field_b = true;
+          if (keyCode == 98) {
+            this.selectedPackIndex = this.selectedPackIndex - 1;
+            this.keyboardSelection = true;
           }
         }
-        if (this.field_i < 0 ||
-          this.field_i >= this.field_f) {
-          this.field_i = -1;
-          this.field_b = false;
+        if (this.selectedPackIndex < 0 ||
+          this.selectedPackIndex >= this.packCount) {
+          this.selectedPackIndex = -1;
+          this.keyboardSelection = false;
           return true;
         }
         return false;
@@ -103,7 +103,7 @@ final class jf {
           }
           if (param0 != 0) {
             var6 = (String) null;
-            jf.a(-82, (String) null);
+            HighscorePackSelector.a(-82, (String) null);
           }
           var3 = (mp) (tf.field_d.a((long)var2.hashCode(), -1));
           while (true) {
@@ -137,55 +137,55 @@ final class jf {
         }
     }
 
-    final void b(int param0) {
+    final void draw(int obfuscationGuard) {
         int var6 = 0;
         int var7 = BrickABrac.field_J ? 1 : 0;
-        int var3 = 26 % ((param0 - 50) / 56);
-        MenuButton var2 = this.field_a.buttons[this.field_h];
+        int var3 = 26 % ((obfuscationGuard - 50) / 56);
+        MenuButton var2 = this.owner.buttons[this.buttonIndex];
         int var4 = var2.x;
         int var5 = var2.y;
-        for (var6 = 0; var6 < this.field_f; var6++) {
-          if (this.field_i == var6) {
+        for (var6 = 0; var6 < this.packCount; var6++) {
+          if (this.selectedPackIndex == var6) {
             nb.a(-111, var5, var4, cm.field_r[var6]);
             ik.field_f[var6].f(var4, var5 - 1, 256);
           }
-          da.field_E[var6].drawTransparent(var4, var5);
-          var5 = var5 + (20 + da.field_E[var6].canvasHeight);
+          da.packSelectorIcons[var6].drawTransparent(var4, var5);
+          var5 = var5 + (20 + da.packSelectorIcons[var6].canvasHeight);
         }
     }
 
-    final void a(int param0) {
+    final void updatePointerSelection(int obfuscationGuard) {
         int var5 = 0;
         int var3;
         int var4;
         int var6;
         MenuButton var7;
         var6 = BrickABrac.field_J ? 1 : 0;
-        if (this.field_a.selection.selectedIndex != this.field_h) {
-          this.field_e = -1;
-          this.field_b = false;
-          this.field_j = -1;
-          this.field_i = -1;
+        if (this.owner.selection.selectedIndex != this.buttonIndex) {
+          this.lastPointerX = -1;
+          this.keyboardSelection = false;
+          this.lastPointerY = -1;
+          this.selectedPackIndex = -1;
         } else {
-          var7 = this.field_a.buttons[this.field_h];
-          if (!this.field_b ||
-            pq.pointerX != this.field_e ||
-            this.field_j != po.pointerY) {
+          var7 = this.owner.buttons[this.buttonIndex];
+          if (!this.keyboardSelection ||
+            pq.pointerX != this.lastPointerX ||
+            this.lastPointerY != po.pointerY) {
             var3 = var7.x;
             var4 = var7.y;
-            for (var5 = 0; this.field_f > var5; var5++) {
-              if (da.field_E[var5].containsPixel(var3, var4, pq.pointerX, po.pointerY)) {
-                this.field_i = var5;
+            for (var5 = 0; this.packCount > var5; var5++) {
+              if (da.packSelectorIcons[var5].containsPixel(var3, var4, pq.pointerX, po.pointerY)) {
+                this.selectedPackIndex = var5;
                 break;
               }
-              var4 = var4 + (da.field_E[var5].canvasHeight + 20);
+              var4 = var4 + (da.packSelectorIcons[var5].canvasHeight + 20);
             }
           }
-          this.field_e = pq.pointerX;
-          this.field_j = po.pointerY;
+          this.lastPointerX = pq.pointerX;
+          this.lastPointerY = po.pointerY;
         }
-        if (param0 <= 84) {
-          this.field_h = 25;
+        if (obfuscationGuard <= 84) {
+          this.buttonIndex = 25;
         }
     }
 
@@ -199,31 +199,31 @@ final class jf {
         field_g = null;
     }
 
-    final void c(int param0) {
-        this.field_i = param0 + this.field_f;
-        this.field_j = po.pointerY;
-        this.field_e = pq.pointerX;
-        this.field_b = true;
+    final void selectRelativeToEnd(int offset) {
+        this.selectedPackIndex = offset + this.packCount;
+        this.lastPointerY = po.pointerY;
+        this.lastPointerX = pq.pointerX;
+        this.keyboardSelection = true;
     }
 
-    final void a(byte param0) {
-        this.field_b = true;
-        this.field_j = po.pointerY;
-        if (param0 <= 32) {
+    final void selectFirst(byte obfuscationGuard) {
+        this.keyboardSelection = true;
+        this.lastPointerY = po.pointerY;
+        if (obfuscationGuard <= 32) {
           return;
         }
-        this.field_e = pq.pointerX;
-        this.field_i = 0;
+        this.lastPointerX = pq.pointerX;
+        this.selectedPackIndex = 0;
     }
 
-    jf(ah param0, int param1, int param2) {
-        this.field_i = -1;
+    HighscorePackSelector(HighscoresScreen owner, int buttonIndex, int packCount) {
+        this.selectedPackIndex = -1;
         try {
-          this.field_f = param2;
-          this.field_h = param1;
-          this.field_a = param0;
+          this.packCount = packCount;
+          this.buttonIndex = buttonIndex;
+          this.owner = owner;
         } catch (RuntimeException runtimeException) {
-          throw qb.a((Throwable) ((Object) runtimeException), "jf.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw qb.a((Throwable) ((Object) runtimeException), "jf.<init>(" + (owner != null ? "{...}" : "null") + ',' + buttonIndex + ',' + packCount + ')');
         }
     }
 

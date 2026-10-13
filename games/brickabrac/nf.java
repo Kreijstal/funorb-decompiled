@@ -178,7 +178,7 @@ final class nf extends lg {
             var9 = param1 + this.field_o;
             var10 = var18_ref.a(param0, (byte) -107, (oc) (this)) + (var18_ref.c((oc) (this), param3 ^ 32).a(0) >> 1);
             if (var6 != m.field_c &&
-              var6 != hq.field_z) {
+              var6 != SaveResultsPromptScreen.field_z) {
               if (lp.field_xb == var6) {
                 var19 = df.field_a[2];
                 var19.f(var9, var10 - (var19.height >> 1), 256);
@@ -214,7 +214,7 @@ final class nf extends lg {
           var9Lifetime5 = param1 + this.field_o;
           var10Lifetime5 = var22_ref.a(param0, (byte) -107, (oc) (this)) + (var22_ref.c((oc) (this), param3 ^ 32).a(0) >> 1);
           if (var6 != m.field_c &&
-            var6 != hq.field_z) {
+            var6 != SaveResultsPromptScreen.field_z) {
             if (lp.field_xb == var6) {
               var23 = df.field_a[2];
               var23.f(var9Lifetime5, var10Lifetime5 - (var23.height >> 1), 256);
@@ -252,7 +252,7 @@ final class nf extends lg {
           this.field_X.f(-(var25.canvasWidth >> 1) + var9Lifetime5, -var25.canvasHeight + var10Lifetime5, 256);
           return;
         }
-        if (var6 == hq.field_z) {
+        if (var6 == SaveResultsPromptScreen.field_z) {
           var26 = jb.field_G;
           if (!var26.equals(this.field_A)) {
             this.field_A = var26;
@@ -263,7 +263,7 @@ final class nf extends lg {
             var9Lifetime1 = param1 + this.field_o;
             var10Lifetime1 = var27_ref.a(param0, (byte) -107, (oc) (this)) + (var27_ref.c((oc) (this), param3 ^ 32).a(0) >> 1);
             if (var6 != m.field_c &&
-              var6 != hq.field_z) {
+              var6 != SaveResultsPromptScreen.field_z) {
               if (lp.field_xb == var6) {
                 var28 = df.field_a[2];
                 var28.f(var9Lifetime1, var10Lifetime1 - (var28.height >> 1), 256);
@@ -299,7 +299,7 @@ final class nf extends lg {
           var9Lifetime1Lifetime1 = param1 + this.field_o;
           var10Lifetime1Lifetime1 = var31_ref.a(param0, (byte) -107, (oc) (this)) + (var31_ref.c((oc) (this), param3 ^ 32).a(0) >> 1);
           if (var6 != m.field_c &&
-            var6 != hq.field_z) {
+            var6 != SaveResultsPromptScreen.field_z) {
             if (lp.field_xb == var6) {
               var32 = df.field_a[2];
               var32.f(var9Lifetime1Lifetime1, var10Lifetime1Lifetime1 - (var32.height >> 1), 256);
@@ -346,7 +346,7 @@ final class nf extends lg {
             var9Lifetime2 = param1 + this.field_o;
             var10Lifetime2 = var50_ref.a(param0, (byte) -107, (oc) (this)) + (var50_ref.c((oc) (this), param3 ^ 32).a(0) >> 1);
             if (var6Lifetime1 != m.field_c &&
-              var6Lifetime1 != hq.field_z) {
+              var6Lifetime1 != SaveResultsPromptScreen.field_z) {
               if (lp.field_xb == var6Lifetime1) {
                 var51 = df.field_a[2];
                 var51.f(var9Lifetime2, var10Lifetime2 - (var51.height >> 1), 256);
@@ -384,7 +384,7 @@ final class nf extends lg {
           var9Lifetime2Lifetime1 = param1 + this.field_o;
           var10Lifetime2Lifetime1 = var44_ref.a(param0, (byte) -107, (oc) (this)) + (var44_ref.c((oc) (this), param3 ^ 32).a(0) >> 1);
           if (var6Lifetime1Lifetime1 != m.field_c &&
-            var6Lifetime1Lifetime1 != hq.field_z) {
+            var6Lifetime1Lifetime1 != SaveResultsPromptScreen.field_z) {
             if (lp.field_xb == var6Lifetime1Lifetime1) {
               var45 = df.field_a[2];
               var45.f(var9Lifetime2Lifetime1, var10Lifetime2Lifetime1 - (var45.height >> 1), 256);
@@ -434,7 +434,7 @@ final class nf extends lg {
           var9Lifetime3 = param1 + this.field_o;
           var10Lifetime3 = var36_ref.a(param0, (byte) -107, (oc) (this)) + (var36_ref.c((oc) (this), param3 ^ 32).a(0) >> 1);
           if (var6Lifetime2 != m.field_c &&
-            var6Lifetime2 != hq.field_z) {
+            var6Lifetime2 != SaveResultsPromptScreen.field_z) {
             if (lp.field_xb == var6Lifetime2) {
               var37 = df.field_a[2];
               var37.f(var9Lifetime3, var10Lifetime3 - (var37.height >> 1), 256);
@@ -470,7 +470,7 @@ final class nf extends lg {
         var9Lifetime4 = param1 + this.field_o;
         var10Lifetime4 = var40_ref.a(param0, (byte) -107, (oc) (this)) + (var40_ref.c((oc) (this), param3 ^ 32).a(0) >> 1);
         if (var6Lifetime3 != m.field_c &&
-          var6Lifetime3 != hq.field_z) {
+          var6Lifetime3 != SaveResultsPromptScreen.field_z) {
           if (lp.field_xb == var6Lifetime3) {
             var41 = df.field_a[2];
             var41.f(var9Lifetime4, var10Lifetime4 - (var41.height >> 1), 256);

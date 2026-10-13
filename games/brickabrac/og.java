@@ -52,7 +52,7 @@ final class og extends mh {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var17 = null;
         try {
-          lc.a(param15, param1, (byte) 47, (String[]) null, param6, args, param11, param12, param8, param10, param14, param7, param9, param16, param3, param4, param2, param5, param13);
+          LevelPackCard.a(param15, param1, (byte) 47, (String[]) null, param6, args, param11, param12, param8, param10, param14, param7, param9, param16, param3, param4, param2, param5, param13);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -234,7 +234,7 @@ final class og extends mh {
           if (param0 != -26090) {
             field_Zb = -8;
           }
-          stackIn_4_0 = ol.field_s;
+          stackIn_4_0 = LevelPackSelectScreen.field_s;
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -716,30 +716,30 @@ final class og extends mh {
         byte[] var2Lifetime177;
         var3 = BrickABrac.field_J ? 1 : 0;
         try {
-          hq.field_t = param1;
+          SaveResultsPromptScreen.field_t = param1;
           var2 = gr.a(true, "text_game_name");
           if (null != var2) {
             MenuButton.a(var2, (byte) 71);
           }
           var2Lifetime1 = gr.a(true, "expansion_text,0");
           if (var2Lifetime1 != null) {
-            hq.field_u[0] = MenuButton.a(var2Lifetime1, (byte) 116);
+            SaveResultsPromptScreen.field_u[0] = MenuButton.a(var2Lifetime1, (byte) 116);
           }
           var2Lifetime2 = gr.a(true, "expansion_text,1");
           if (null != var2Lifetime2) {
-            hq.field_u[1] = MenuButton.a(var2Lifetime2, (byte) 118);
+            SaveResultsPromptScreen.field_u[1] = MenuButton.a(var2Lifetime2, (byte) 118);
           }
           var2Lifetime3 = gr.a(true, "expansion_text,2");
           if (var2Lifetime3 != null) {
-            hq.field_u[2] = MenuButton.a(var2Lifetime3, (byte) 115);
+            SaveResultsPromptScreen.field_u[2] = MenuButton.a(var2Lifetime3, (byte) 115);
           }
           var2Lifetime4 = gr.a(true, "expansion_text,3");
           if (null != var2Lifetime4) {
-            hq.field_u[3] = MenuButton.a(var2Lifetime4, (byte) 91);
+            SaveResultsPromptScreen.field_u[3] = MenuButton.a(var2Lifetime4, (byte) 91);
           }
           var2Lifetime5 = gr.a(true, "expansion_text,4");
           if (null != var2Lifetime5) {
-            hq.field_u[4] = MenuButton.a(var2Lifetime5, (byte) 101);
+            SaveResultsPromptScreen.field_u[4] = MenuButton.a(var2Lifetime5, (byte) 101);
           }
           var2Lifetime6 = gr.a(true, "expansion_installed");
           if (var2Lifetime6 != null) {
@@ -747,174 +747,174 @@ final class og extends mh {
           }
           var2Lifetime7 = gr.a(true, "achievement_names,0");
           if (var2Lifetime7 != null) {
-            af.field_s[0] = MenuButton.a(var2Lifetime7, (byte) 114);
+            AchievementBrowserScreen.field_s[0] = MenuButton.a(var2Lifetime7, (byte) 114);
           }
           var2Lifetime8 = gr.a(true, "achievement_names,1");
           if (null != var2Lifetime8) {
-            af.field_s[1] = MenuButton.a(var2Lifetime8, (byte) 72);
+            AchievementBrowserScreen.field_s[1] = MenuButton.a(var2Lifetime8, (byte) 72);
           }
           var2Lifetime9 = gr.a(true, "achievement_names,2");
           if (var2Lifetime9 != null) {
-            af.field_s[2] = MenuButton.a(var2Lifetime9, (byte) 97);
+            AchievementBrowserScreen.field_s[2] = MenuButton.a(var2Lifetime9, (byte) 97);
           }
           var2Lifetime10 = gr.a(true, "achievement_names,3");
           if (null != var2Lifetime10) {
-            af.field_s[3] = MenuButton.a(var2Lifetime10, (byte) 108);
+            AchievementBrowserScreen.field_s[3] = MenuButton.a(var2Lifetime10, (byte) 108);
           }
           var2Lifetime11 = gr.a(true, "achievement_names,4");
           if (null != var2Lifetime11) {
-            af.field_s[4] = MenuButton.a(var2Lifetime11, (byte) 88);
+            AchievementBrowserScreen.field_s[4] = MenuButton.a(var2Lifetime11, (byte) 88);
           }
           var2Lifetime12 = gr.a(true, "achievement_names,5");
           if (null != var2Lifetime12) {
-            af.field_s[5] = MenuButton.a(var2Lifetime12, (byte) 124);
+            AchievementBrowserScreen.field_s[5] = MenuButton.a(var2Lifetime12, (byte) 124);
           }
           var2Lifetime13 = gr.a(true, "achievement_names,6");
           if (null != var2Lifetime13) {
-            af.field_s[6] = MenuButton.a(var2Lifetime13, (byte) 90);
+            AchievementBrowserScreen.field_s[6] = MenuButton.a(var2Lifetime13, (byte) 90);
           }
           var2Lifetime14 = gr.a(true, "achievement_names,7");
           if (var2Lifetime14 != null) {
-            af.field_s[7] = MenuButton.a(var2Lifetime14, (byte) 115);
+            AchievementBrowserScreen.field_s[7] = MenuButton.a(var2Lifetime14, (byte) 115);
           }
           var2Lifetime15 = gr.a(true, "achievement_names,8");
           if (null != var2Lifetime15) {
-            af.field_s[8] = MenuButton.a(var2Lifetime15, (byte) 99);
+            AchievementBrowserScreen.field_s[8] = MenuButton.a(var2Lifetime15, (byte) 99);
           }
           var2Lifetime16 = gr.a(true, "achievement_names,9");
           if (var2Lifetime16 != null) {
-            af.field_s[9] = MenuButton.a(var2Lifetime16, (byte) 94);
+            AchievementBrowserScreen.field_s[9] = MenuButton.a(var2Lifetime16, (byte) 94);
           }
           var2Lifetime17 = gr.a(!param0, "achievement_names,10");
           if (var2Lifetime17 != null) {
-            af.field_s[10] = MenuButton.a(var2Lifetime17, (byte) 114);
+            AchievementBrowserScreen.field_s[10] = MenuButton.a(var2Lifetime17, (byte) 114);
           }
           var2Lifetime18 = gr.a(!param0, "achievement_names,11");
           if (var2Lifetime18 != null) {
-            af.field_s[11] = MenuButton.a(var2Lifetime18, (byte) 97);
+            AchievementBrowserScreen.field_s[11] = MenuButton.a(var2Lifetime18, (byte) 97);
           }
           var2Lifetime19 = gr.a(!param0, "achievement_names,12");
           if (null != var2Lifetime19) {
-            af.field_s[12] = MenuButton.a(var2Lifetime19, (byte) 121);
+            AchievementBrowserScreen.field_s[12] = MenuButton.a(var2Lifetime19, (byte) 121);
           }
           var2Lifetime20 = gr.a(true, "achievement_names,13");
           if (var2Lifetime20 != null) {
-            af.field_s[13] = MenuButton.a(var2Lifetime20, (byte) 77);
+            AchievementBrowserScreen.field_s[13] = MenuButton.a(var2Lifetime20, (byte) 77);
           }
           var2Lifetime21 = gr.a(true, "achievement_names,14");
           if (var2Lifetime21 != null) {
-            af.field_s[14] = MenuButton.a(var2Lifetime21, (byte) 100);
+            AchievementBrowserScreen.field_s[14] = MenuButton.a(var2Lifetime21, (byte) 100);
           }
           var2Lifetime22 = gr.a(true, "achievement_names,15");
           if (null != var2Lifetime22) {
-            af.field_s[15] = MenuButton.a(var2Lifetime22, (byte) 97);
+            AchievementBrowserScreen.field_s[15] = MenuButton.a(var2Lifetime22, (byte) 97);
           }
           var2Lifetime23 = gr.a(true, "achievement_names,16");
           if (var2Lifetime23 != null) {
-            af.field_s[16] = MenuButton.a(var2Lifetime23, (byte) 83);
+            AchievementBrowserScreen.field_s[16] = MenuButton.a(var2Lifetime23, (byte) 83);
           }
           var2Lifetime24 = gr.a(true, "achievement_names,17");
           if (null != var2Lifetime24) {
-            af.field_s[17] = MenuButton.a(var2Lifetime24, (byte) 85);
+            AchievementBrowserScreen.field_s[17] = MenuButton.a(var2Lifetime24, (byte) 85);
           }
           var2Lifetime25 = gr.a(true, "achievement_names,18");
           if (null != var2Lifetime25) {
-            af.field_s[18] = MenuButton.a(var2Lifetime25, (byte) 79);
+            AchievementBrowserScreen.field_s[18] = MenuButton.a(var2Lifetime25, (byte) 79);
           }
           var2Lifetime26 = gr.a(true, "achievement_names,19");
           if (null != var2Lifetime26) {
-            af.field_s[19] = MenuButton.a(var2Lifetime26, (byte) 118);
+            AchievementBrowserScreen.field_s[19] = MenuButton.a(var2Lifetime26, (byte) 118);
           }
           var2Lifetime27 = gr.a(true, "achievement_names,20");
           if (var2Lifetime27 != null) {
-            af.field_s[20] = MenuButton.a(var2Lifetime27, (byte) 124);
+            AchievementBrowserScreen.field_s[20] = MenuButton.a(var2Lifetime27, (byte) 124);
           }
           var2Lifetime28 = gr.a(true, "achievement_names,21");
           if (null != var2Lifetime28) {
-            af.field_s[21] = MenuButton.a(var2Lifetime28, (byte) 122);
+            AchievementBrowserScreen.field_s[21] = MenuButton.a(var2Lifetime28, (byte) 122);
           }
           var2Lifetime29 = gr.a(true, "achievement_names,22");
           if (var2Lifetime29 != null) {
-            af.field_s[22] = MenuButton.a(var2Lifetime29, (byte) 79);
+            AchievementBrowserScreen.field_s[22] = MenuButton.a(var2Lifetime29, (byte) 79);
           }
           var2Lifetime30 = gr.a(true, "achievement_names,23");
           if (null != var2Lifetime30) {
-            af.field_s[23] = MenuButton.a(var2Lifetime30, (byte) 105);
+            AchievementBrowserScreen.field_s[23] = MenuButton.a(var2Lifetime30, (byte) 105);
           }
           var2Lifetime31 = gr.a(!param0, "achievement_names,24");
           if (null != var2Lifetime31) {
-            af.field_s[24] = MenuButton.a(var2Lifetime31, (byte) 94);
+            AchievementBrowserScreen.field_s[24] = MenuButton.a(var2Lifetime31, (byte) 94);
           }
           var2Lifetime32 = gr.a(!param0, "achievement_names,25");
           if (var2Lifetime32 != null) {
-            af.field_s[25] = MenuButton.a(var2Lifetime32, (byte) 76);
+            AchievementBrowserScreen.field_s[25] = MenuButton.a(var2Lifetime32, (byte) 76);
           }
           var2Lifetime33 = gr.a(true, "achievement_names,26");
           if (null != var2Lifetime33) {
-            af.field_s[26] = MenuButton.a(var2Lifetime33, (byte) 115);
+            AchievementBrowserScreen.field_s[26] = MenuButton.a(var2Lifetime33, (byte) 115);
           }
           var2Lifetime34 = gr.a(true, "achievement_names,27");
           if (null != var2Lifetime34) {
-            af.field_s[27] = MenuButton.a(var2Lifetime34, (byte) 118);
+            AchievementBrowserScreen.field_s[27] = MenuButton.a(var2Lifetime34, (byte) 118);
           }
           var2Lifetime35 = gr.a(true, "achievement_names,28");
           if (null != var2Lifetime35) {
-            af.field_s[28] = MenuButton.a(var2Lifetime35, (byte) 86);
+            AchievementBrowserScreen.field_s[28] = MenuButton.a(var2Lifetime35, (byte) 86);
           }
           var2Lifetime36 = gr.a(!param0, "achievement_names,29");
           if (null != var2Lifetime36) {
-            af.field_s[29] = MenuButton.a(var2Lifetime36, (byte) 72);
+            AchievementBrowserScreen.field_s[29] = MenuButton.a(var2Lifetime36, (byte) 72);
           }
           var2Lifetime37 = gr.a(true, "achievement_names,30");
           if (var2Lifetime37 != null) {
-            af.field_s[30] = MenuButton.a(var2Lifetime37, (byte) 118);
+            AchievementBrowserScreen.field_s[30] = MenuButton.a(var2Lifetime37, (byte) 118);
           }
           if (param0) {
             og.h(67);
           }
           var2Lifetime38 = gr.a(true, "achievement_names,31");
           if (var2Lifetime38 != null) {
-            af.field_s[31] = MenuButton.a(var2Lifetime38, (byte) 85);
+            AchievementBrowserScreen.field_s[31] = MenuButton.a(var2Lifetime38, (byte) 85);
           }
           var2Lifetime39 = gr.a(true, "achievement_names,32");
           if (var2Lifetime39 != null) {
-            af.field_s[32] = MenuButton.a(var2Lifetime39, (byte) 89);
+            AchievementBrowserScreen.field_s[32] = MenuButton.a(var2Lifetime39, (byte) 89);
           }
           var2Lifetime40 = gr.a(!param0, "achievement_names,33");
           if (var2Lifetime40 != null) {
-            af.field_s[33] = MenuButton.a(var2Lifetime40, (byte) 108);
+            AchievementBrowserScreen.field_s[33] = MenuButton.a(var2Lifetime40, (byte) 108);
           }
           var2Lifetime41 = gr.a(true, "achievement_names,34");
           if (var2Lifetime41 != null) {
-            af.field_s[34] = MenuButton.a(var2Lifetime41, (byte) 111);
+            AchievementBrowserScreen.field_s[34] = MenuButton.a(var2Lifetime41, (byte) 111);
           }
           var2Lifetime42 = gr.a(true, "achievement_names,35");
           if (var2Lifetime42 != null) {
-            af.field_s[35] = MenuButton.a(var2Lifetime42, (byte) 78);
+            AchievementBrowserScreen.field_s[35] = MenuButton.a(var2Lifetime42, (byte) 78);
           }
           var2Lifetime43 = gr.a(true, "achievement_names,36");
           if (var2Lifetime43 != null) {
-            af.field_s[36] = MenuButton.a(var2Lifetime43, (byte) 75);
+            AchievementBrowserScreen.field_s[36] = MenuButton.a(var2Lifetime43, (byte) 75);
           }
           var2Lifetime44 = gr.a(!param0, "achievement_names,37");
           if (var2Lifetime44 != null) {
-            af.field_s[37] = MenuButton.a(var2Lifetime44, (byte) 71);
+            AchievementBrowserScreen.field_s[37] = MenuButton.a(var2Lifetime44, (byte) 71);
           }
           var2Lifetime45 = gr.a(true, "achievement_names,38");
           if (null != var2Lifetime45) {
-            af.field_s[38] = MenuButton.a(var2Lifetime45, (byte) 120);
+            AchievementBrowserScreen.field_s[38] = MenuButton.a(var2Lifetime45, (byte) 120);
           }
           var2Lifetime46 = gr.a(true, "achievement_names,39");
           if (var2Lifetime46 != null) {
-            af.field_s[39] = MenuButton.a(var2Lifetime46, (byte) 117);
+            AchievementBrowserScreen.field_s[39] = MenuButton.a(var2Lifetime46, (byte) 117);
           }
           var2Lifetime47 = gr.a(true, "achievement_names,40");
           if (var2Lifetime47 != null) {
-            af.field_s[40] = MenuButton.a(var2Lifetime47, (byte) 95);
+            AchievementBrowserScreen.field_s[40] = MenuButton.a(var2Lifetime47, (byte) 95);
           }
           var2Lifetime48 = gr.a(true, "achievement_names,41");
           if (var2Lifetime48 != null) {
-            af.field_s[41] = MenuButton.a(var2Lifetime48, (byte) 75);
+            AchievementBrowserScreen.field_s[41] = MenuButton.a(var2Lifetime48, (byte) 75);
           }
           var2Lifetime49 = gr.a(!param0, "achievement_criteria,0");
           if (var2Lifetime49 != null) {
@@ -1090,7 +1090,7 @@ final class og extends mh {
           }
           var2Lifetime92 = gr.a(true, "gameoptlabels,0");
           if (var2Lifetime92 != null) {
-            jf.field_d[0] = MenuButton.a(var2Lifetime92, (byte) 111);
+            HighscorePackSelector.field_d[0] = MenuButton.a(var2Lifetime92, (byte) 111);
           }
           var2Lifetime93 = gr.a(!param0, "gameoptnames,0,0");
           if (null != var2Lifetime93) {
@@ -1278,7 +1278,7 @@ final class og extends mh {
           }
           var2Lifetime139 = gr.a(true, "menu_level_label");
           if (var2Lifetime139 != null) {
-            lh.field_t = MenuButton.a(var2Lifetime139, (byte) 119);
+            FramedMenuScreen.field_t = MenuButton.a(var2Lifetime139, (byte) 119);
           }
           var2Lifetime140 = gr.a(!param0, "please_select_a_level");
           if (null != var2Lifetime140) {
@@ -1302,7 +1302,7 @@ final class og extends mh {
           }
           var2Lifetime145 = gr.a(true, "explain_lateral_move");
           if (var2Lifetime145 != null) {
-            hq.field_y = MenuButton.a(var2Lifetime145, (byte) 73);
+            SaveResultsPromptScreen.field_y = MenuButton.a(var2Lifetime145, (byte) 73);
           }
           var2Lifetime146 = gr.a(true, "explain_launch");
           if (null != var2Lifetime146) {
@@ -1366,7 +1366,7 @@ final class og extends mh {
           }
           var2Lifetime161 = gr.a(true, "explain_trampoline");
           if (var2Lifetime161 != null) {
-            oq.field_v = MenuButton.a(var2Lifetime161, (byte) 85);
+            PauseMenuScreen.field_v = MenuButton.a(var2Lifetime161, (byte) 85);
           }
           var2Lifetime162 = gr.a(true, "explain_wipeout");
           if (null != var2Lifetime162) {
@@ -1394,7 +1394,7 @@ final class og extends mh {
           }
           var2Lifetime168 = gr.a(true, "explain_unsuper_ball");
           if (null != var2Lifetime168) {
-            ab.field_F = MenuButton.a(var2Lifetime168, (byte) 73);
+            MatchCompleteScreen.field_F = MenuButton.a(var2Lifetime168, (byte) 73);
           }
           var2Lifetime169 = gr.a(true, "explain_extra_bricks");
           if (var2Lifetime169 != null) {
@@ -1429,7 +1429,7 @@ final class og extends mh {
             ce.field_d = 255 & var2Lifetime176[0];
           }
           var2Lifetime177 = gr.a(!param0, "keycode_player1_launch");
-          hq.field_t = null;
+          SaveResultsPromptScreen.field_t = null;
           if (var2Lifetime177 != null) {
             td.field_u = var2Lifetime177[0] & 255;
           }

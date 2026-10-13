@@ -295,7 +295,7 @@ final class w {
             fe.field_jb.a((byte) -127) &&
             fe.field_jb.a("arialish12", -28138) &&
             fe.field_jb.a("pump32", -28138)) {
-            bl.field_J = uo.a((byte) 29, jg.field_d, "frame", "members_expansion_screen");
+            AchievementsScreen.field_J = uo.a((byte) 29, jg.field_d, "frame", "members_expansion_screen");
             ll.field_c = pl.a("members_expansion_screen", "arrow", (byte) 111, jg.field_d);
             ch.field_c = nq.a((byte) -37, "arialish12", jg.field_d, fe.field_jb, "");
             co.field_j = si.a((byte) -107, "pump32", "", jg.field_d, fe.field_jb);
@@ -306,12 +306,12 @@ final class w {
             jg.field_d = null;
           }
           this.a(475);
-          if (null == bl.field_J) {
+          if (null == AchievementsScreen.field_J) {
             return;
           }
           this.field_p.drawTransparent(376, 339);
           this.field_l.drawTransparent(9, 9);
-          bl.field_J.a(0, 0);
+          AchievementsScreen.field_J.a(0, 0);
           if (null != ll.field_c) {
             ll.field_c.drawTransparent(9, 257);
             ll.field_c.f(558, 257);
@@ -342,9 +342,9 @@ final class w {
           this.field_e.drawTransparent(16, 302);
           ch.field_c.a(this.field_d[this.field_h], 9, 257, 622, 33, 16754688, -1, 1, 1, 0);
           MainMenuScreen.field_u.drawTransparent(30, 330);
-          ch.field_c.a(ab.field_y[0], 17, 428, 111, 35, 16754688, -1, 1, 1, 0);
-          ch.field_c.a(ab.field_y[1], 138, 428, 111, 35, 16754688, -1, 1, 1, 0);
-          ch.field_c.a(ab.field_y[2], 259, 428, 111, 35, 16754688, -1, 1, 1, 0);
+          ch.field_c.a(MatchCompleteScreen.field_y[0], 17, 428, 111, 35, 16754688, -1, 1, 1, 0);
+          ch.field_c.a(MatchCompleteScreen.field_y[1], 138, 428, 111, 35, 16754688, -1, 1, 1, 0);
+          ch.field_c.a(MatchCompleteScreen.field_y[2], 259, 428, 111, 35, 16754688, -1, 1, 1, 0);
           LevelPack.field_e.drawTransparent((-LevelPack.field_e.canvasWidth + 127) / 2 + 508, 315);
           if (0 == this.field_g.selectedIndex) {
             sf.field_V[0].drawTransparent(508, 299);
@@ -686,7 +686,7 @@ final class w {
         RuntimeException var9 = null;
         var12 = BrickABrac.field_J ? 1 : 0;
         try {
-          jf.d(-99);
+          HighscorePackSelector.d(-99);
           if (param7 != 0) {
             return;
           }
@@ -738,7 +738,7 @@ final class w {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var4 = null;
         try {
-          if (null == bl.field_J) {
+          if (null == AchievementsScreen.field_J) {
             stackIn_4_0 = -1;
             return stackIn_4_0;
           }

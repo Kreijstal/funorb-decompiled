@@ -16,7 +16,7 @@ final class rd {
         if (param0 != ~ng.field_b) {
           fl.b(true);
         }
-        ah.field_v = 0;
+        HighscoresScreen.field_v = 0;
     }
 
     final static void b(int param0) {

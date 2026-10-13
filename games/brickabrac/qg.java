@@ -73,7 +73,7 @@ abstract class qg extends ke {
         qa.mouseWheelSource = ea.createMouseWheelSource(60);
         ap.a((byte) 117, kj.field_D);
         nd.field_c = param4;
-        lc.field_i = param5;
+        LevelPackCard.field_i = param5;
         PacketBuffer.field_j = param1;
         o.field_f = param6;
         ea.field_c = param2;
@@ -302,7 +302,7 @@ abstract class qg extends ke {
     }
 
     final static void a(int param0, int param1, byte param2) {
-        cc.field_J = param0;
+        NewAchievementsScreen.field_J = param0;
         ea.field_e = param1;
         if (param2 > -110) {
           field_z = (String) null;
@@ -367,7 +367,7 @@ abstract class qg extends ke {
                   sb.field_e = sl.field_v;
                   ei.b(0);
                   i.field_j = 10;
-                  ol.field_s = false;
+                  LevelPackSelectScreen.field_s = false;
                 }
               }
             } else {
@@ -377,7 +377,7 @@ abstract class qg extends ke {
           if (4 == var4) {
             if (!qb.field_u) {
               i.field_j = 10;
-              ol.field_s = true;
+              LevelPackSelectScreen.field_s = true;
             } else {
               jc.a(uc.e((byte) -97), (byte) 97);
             }
@@ -614,7 +614,7 @@ abstract class qg extends ke {
             if (var9 != null) {
               this.field_C = Integer.parseInt(var9);
             }
-            ld.field_u = Boolean.valueOf(this.getParameter("simplemode")).booleanValue();
+            MatchResultScreen.field_u = Boolean.valueOf(this.getParameter("simplemode")).booleanValue();
             this.a(32, 123, param4, param3, this.field_o, param1, param2);
           } catch (java.lang.Exception decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
@@ -805,7 +805,7 @@ abstract class qg extends ke {
         }
         if (tm.field_a == 0 &&
           !ui.a(false)) {
-          vq.field_C = false;
+          LevelCompleteScreen.field_C = false;
         }
         if (0 == field_A &&
           o.d(param1 ^ -572695520)) {
@@ -846,15 +846,15 @@ abstract class qg extends ke {
           kg.a(param1 + 21677);
           ci.field_t = false;
           ri.field_N = cm.field_t;
-          gn.a(qb.field_u, ja.field_c, ma.field_P, vh.field_S, param1 ^ 23);
+          MultiplayerExitScreen.a(qb.field_u, ja.field_c, ma.field_P, vh.field_S, param1 ^ 23);
           if (cb.field_k ||
             null != LevelDecoder.field_a) {
             stackIn_99_0 = !(cb.field_k);
             stackIn_102_1 = !(cb.field_k);
             bf.a(stackIn_99_0, stackIn_102_1, param1 ^ -15948, LevelDecoder.field_a);
           }
-          if (ld.field_u) {
-            cc.f(967);
+          if (MatchResultScreen.field_u) {
+            NewAchievementsScreen.f(967);
           }
           if (null == sg.field_l) {
             sg.field_l = ni.h(114);
@@ -870,7 +870,7 @@ abstract class qg extends ke {
         }
         if (10 == field_A) {
           if (0 != cd.field_e) {
-            GameplayAudioEvent.field_k = aj.a(lc.field_i, true);
+            GameplayAudioEvent.field_k = aj.a(LevelPackCard.field_i, true);
           }
           field_A = 11;
         }

@@ -99,7 +99,7 @@ final class ef extends IOException {
               return;
             }
             var8 = param3;
-            md.a(var8, true);
+            InstructionsScreen.a(var8, true);
             he.field_H = lm.a(param1 ^ 2167, param3);
             return;
           }
@@ -107,7 +107,7 @@ final class ef extends IOException {
           stackIn_7_1 = !(Paddle.field_x >= 13);
           he.field_H = cd.a(stackIn_6_0, stackIn_7_1);
           var7 = (String[]) null;
-          md.a((String[]) null, true);
+          InstructionsScreen.a((String[]) null, true);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

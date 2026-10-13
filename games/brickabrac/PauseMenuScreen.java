@@ -1,8 +1,8 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class oq extends lh {
-    private int[] field_y;
+class PauseMenuScreen extends FramedMenuScreen {
+    private int[] refreshedActionIds;
     static String field_u;
     static int field_x;
     static String field_w;
@@ -18,7 +18,7 @@ class oq extends lh {
     }
 
     final void refreshMenu(int obfuscationGuard) {
-        this.initializeButtons(this.field_y, 0);
+        this.initializeButtons(this.refreshedActionIds, 0);
         if (obfuscationGuard > -60) {
           field_u = (String) null;
         }
@@ -41,19 +41,19 @@ class oq extends lh {
         return -1;
     }
 
-    oq(int param0, int[] param1, int[] param2) {
-        super(param0, 180, 460, 150, 35, param1);
+    PauseMenuScreen(int screenId, int[] initialActionIds, int[] refreshedActionIds) {
+        super(screenId, 180, 460, 150, 35, initialActionIds);
         try {
-          this.field_y = param2;
+          this.refreshedActionIds = refreshedActionIds;
         } catch (RuntimeException runtimeException) {
-          throw qb.a((Throwable) ((Object) runtimeException), "oq.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw qb.a((Throwable) ((Object) runtimeException), "oq.<init>(" + screenId + ',' + (initialActionIds != null ? "{...}" : "null") + ',' + (refreshedActionIds != null ? "{...}" : "null") + ')');
         }
     }
 
     void drawScreen(byte obfuscationGuard) {
-        pe.field_o.drawScreen((byte) -116);
+        pe.gameplayScreen.drawScreen((byte) -116);
         Rasterizer2D.darkenRectangle(0, 0, 640, 480);
-        this.g(102);
+        this.drawMenuFrame(102);
         pg.d(0);
         if (obfuscationGuard <= -14) {
           this.a(0);

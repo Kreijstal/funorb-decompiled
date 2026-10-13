@@ -123,8 +123,8 @@ final class hi extends um {
                 fl.b(!param0);
               }
             } else {
-              if (fp.field_A.length() > 0) {
-                var4_ref_String = fp.field_A.toString();
+              if (OptionsScreen.field_A.length() > 0) {
+                var4_ref_String = OptionsScreen.field_A.toString();
                 if (mm.a(var4_ref_String, (byte) -128)) {
                   var13 = (String) null;
                   var12 = (String) null;
@@ -150,8 +150,8 @@ final class hi extends um {
           }
           if (85 == dc.currentKeyCode) {
             if (var3 != 0 &&
-              fp.field_A.length() > 0) {
-              uk.a(' ', fp.field_A, -1 + fp.field_A.length(), false);
+              OptionsScreen.field_A.length() > 0) {
+              MessageScreen.a(' ', OptionsScreen.field_A, -1 + OptionsScreen.field_A.length(), false);
             }
             return true;
           }
@@ -163,10 +163,10 @@ final class hi extends um {
           if (var3 == 0) {
             return true;
           }
-          if (fp.field_A.length() >= 80) {
+          if (OptionsScreen.field_A.length() >= 80) {
             return true;
           }
-          discarded$2 = fp.field_A.append((char) var4);
+          discarded$2 = OptionsScreen.field_A.append((char) var4);
           var5Lifetime4 = 485;
           var17 = tb.field_cb;
           var7 = var17;
@@ -197,7 +197,7 @@ final class hi extends um {
             var5Lifetime4 = var5Lifetime4 - jq.field_y.c(var20);
           } else {
             var24 = (CharSequence) ((Object) DualLinkNode.field_p);
-            var18 = rd.a(hq.field_x, new String[]{ap.a(true, var24)}, (byte) 103);
+            var18 = rd.a(SaveResultsPromptScreen.field_x, new String[]{ap.a(true, var24)}, (byte) 103);
             var7Lifetime15 = var18;
             var7Lifetime15 = var18;
             var8 = rd.a(ek.field_fb, new String[]{var16}, (byte) 103);
@@ -211,10 +211,10 @@ final class hi extends um {
               var5Lifetime4 = var5Lifetime4 - var10;
             }
           }
-          if (var5Lifetime4 >= jq.field_y.c(fp.field_A.toString())) {
+          if (var5Lifetime4 >= jq.field_y.c(OptionsScreen.field_A.toString())) {
             return true;
           }
-          uk.a(' ', fp.field_A, -1 + fp.field_A.length(), false);
+          MessageScreen.a(' ', OptionsScreen.field_A, -1 + OptionsScreen.field_A.length(), false);
           return true;
         }
         if (ng.field_b == 0) {
@@ -229,8 +229,8 @@ final class hi extends um {
                   fl.b(!param0);
                 }
               } else {
-                if (fp.field_A.length() > 0) {
-                  var4_ref_StringLifetime1 = fp.field_A.toString();
+                if (OptionsScreen.field_A.length() > 0) {
+                  var4_ref_StringLifetime1 = OptionsScreen.field_A.toString();
                   if (mm.a(var4_ref_StringLifetime1, (byte) -128)) {
                     var13Lifetime1 = (String) null;
                     var12Lifetime1 = (String) null;
@@ -259,8 +259,8 @@ final class hi extends um {
             }
             if (85 == dc.currentKeyCode) {
               if (var3 != 0 &&
-                fp.field_A.length() > 0) {
-                uk.a(' ', fp.field_A, -1 + fp.field_A.length(), false);
+                OptionsScreen.field_A.length() > 0) {
+                MessageScreen.a(' ', OptionsScreen.field_A, -1 + OptionsScreen.field_A.length(), false);
               }
               return true;
             }
@@ -270,8 +270,8 @@ final class hi extends um {
               return false;
             }
             if (var3 != 0 &&
-              fp.field_A.length() < 80) {
-              discarded$0 = fp.field_A.append((char) var4Lifetime1);
+              OptionsScreen.field_A.length() < 80) {
+              discarded$0 = OptionsScreen.field_A.append((char) var4Lifetime1);
               var5Lifetime1Lifetime1 = 485;
               var17Lifetime1 = tb.field_cb;
               var7Lifetime1 = var17Lifetime1;
@@ -304,7 +304,7 @@ final class hi extends um {
                 var5Lifetime1Lifetime1 = var5Lifetime1Lifetime1 - jq.field_y.c(var20Lifetime1);
               } else {
                 var25 = (CharSequence) ((Object) DualLinkNode.field_p);
-                var18Lifetime1 = rd.a(hq.field_x, new String[]{ap.a(true, var25)}, (byte) 103);
+                var18Lifetime1 = rd.a(SaveResultsPromptScreen.field_x, new String[]{ap.a(true, var25)}, (byte) 103);
                 var7Lifetime1Lifetime6 = var18Lifetime1;
                 var7Lifetime1Lifetime6 = var18Lifetime1;
                 var8Lifetime1 = rd.a(ek.field_fb, new String[]{var16}, (byte) 103);
@@ -318,8 +318,8 @@ final class hi extends um {
                   var5Lifetime1Lifetime1 = var5Lifetime1Lifetime1 - var10Lifetime1;
                 }
               }
-              if (var5Lifetime1Lifetime1 < jq.field_y.c(fp.field_A.toString())) {
-                uk.a(' ', fp.field_A, -1 + fp.field_A.length(), false);
+              if (var5Lifetime1Lifetime1 < jq.field_y.c(OptionsScreen.field_A.toString())) {
+                MessageScreen.a(' ', OptionsScreen.field_A, -1 + OptionsScreen.field_A.length(), false);
               }
             }
             return true;
@@ -336,8 +336,8 @@ final class hi extends um {
               fl.b(!param0);
             }
           } else {
-            if (fp.field_A.length() > 0) {
-              var4_ref_StringLifetime2 = fp.field_A.toString();
+            if (OptionsScreen.field_A.length() > 0) {
+              var4_ref_StringLifetime2 = OptionsScreen.field_A.toString();
               var7Lifetime2 = var4_ref_StringLifetime2;
               var7Lifetime2Lifetime1 = var4_ref_StringLifetime2;
               if (mm.a(var4_ref_StringLifetime2, (byte) -128)) {
@@ -367,10 +367,10 @@ final class hi extends um {
           if (var3 == 0) {
             return true;
           }
-          if (fp.field_A.length() <= 0) {
+          if (OptionsScreen.field_A.length() <= 0) {
             return true;
           }
-          uk.a(' ', fp.field_A, -1 + fp.field_A.length(), false);
+          MessageScreen.a(' ', OptionsScreen.field_A, -1 + OptionsScreen.field_A.length(), false);
           return true;
         }
         var4Lifetime2 = go.currentKeyCharacter;
@@ -381,10 +381,10 @@ final class hi extends um {
         if (var3 == 0) {
           return true;
         }
-        if (fp.field_A.length() >= 80) {
+        if (OptionsScreen.field_A.length() >= 80) {
           return true;
         }
-        discarded$1 = fp.field_A.append((char) var4Lifetime2);
+        discarded$1 = OptionsScreen.field_A.append((char) var4Lifetime2);
         var5Lifetime3 = 485;
         var17Lifetime2 = tb.field_cb;
         var7Lifetime3 = var17Lifetime2;
@@ -402,8 +402,8 @@ final class hi extends um {
             var7Lifetime9 = var20Lifetime2;
             var7Lifetime9 = var20Lifetime2;
             var5Lifetime3 = var5Lifetime3 - jq.field_y.c(var20Lifetime2);
-            if (var5Lifetime3 < jq.field_y.c(fp.field_A.toString())) {
-              uk.a(' ', fp.field_A, -1 + fp.field_A.length(), false);
+            if (var5Lifetime3 < jq.field_y.c(OptionsScreen.field_A.toString())) {
+              MessageScreen.a(' ', OptionsScreen.field_A, -1 + OptionsScreen.field_A.length(), false);
             }
             return true;
           }
@@ -414,8 +414,8 @@ final class hi extends um {
           if (null == o.field_e) {
             var20Lifetime2Lifetime1 = var7Lifetime9 + var19Lifetime2 + ": ";
             var5Lifetime3 = var5Lifetime3 - jq.field_y.c(var20Lifetime2Lifetime1);
-            if (var5Lifetime3 < jq.field_y.c(fp.field_A.toString())) {
-              uk.a(' ', fp.field_A, -1 + fp.field_A.length(), false);
+            if (var5Lifetime3 < jq.field_y.c(OptionsScreen.field_A.toString())) {
+              MessageScreen.a(' ', OptionsScreen.field_A, -1 + OptionsScreen.field_A.length(), false);
             }
             return true;
           }
@@ -423,8 +423,8 @@ final class hi extends um {
             var7Lifetime9 = "[" + rd.a(fm.field_a, new String[]{o.field_e.field_Fc}, (byte) 103) + "] ";
             var20Lifetime2Lifetime2 = var7Lifetime9 + var19Lifetime2 + ": ";
             var5Lifetime3 = var5Lifetime3 - jq.field_y.c(var20Lifetime2Lifetime2);
-            if (var5Lifetime3 < jq.field_y.c(fp.field_A.toString())) {
-              uk.a(' ', fp.field_A, -1 + fp.field_A.length(), false);
+            if (var5Lifetime3 < jq.field_y.c(OptionsScreen.field_A.toString())) {
+              MessageScreen.a(' ', OptionsScreen.field_A, -1 + OptionsScreen.field_A.length(), false);
             }
             return true;
           }
@@ -432,8 +432,8 @@ final class hi extends um {
             var7Lifetime9 = "[" + rd.a(fm.field_a, new String[]{o.field_e.field_Fc}, (byte) 103) + "] ";
             var20Lifetime2Lifetime3 = var7Lifetime9 + var19Lifetime2 + ": ";
             var5Lifetime3 = var5Lifetime3 - jq.field_y.c(var20Lifetime2Lifetime3);
-            if (var5Lifetime3 < jq.field_y.c(fp.field_A.toString())) {
-              uk.a(' ', fp.field_A, -1 + fp.field_A.length(), false);
+            if (var5Lifetime3 < jq.field_y.c(OptionsScreen.field_A.toString())) {
+              MessageScreen.a(' ', OptionsScreen.field_A, -1 + OptionsScreen.field_A.length(), false);
             }
             return true;
           }
@@ -442,7 +442,7 @@ final class hi extends um {
           var5Lifetime3 = var5Lifetime3 - jq.field_y.c(var20Lifetime2Lifetime4);
         } else {
           var26 = (CharSequence) ((Object) DualLinkNode.field_p);
-          var18Lifetime2 = rd.a(hq.field_x, new String[]{ap.a(true, var26)}, (byte) 103);
+          var18Lifetime2 = rd.a(SaveResultsPromptScreen.field_x, new String[]{ap.a(true, var26)}, (byte) 103);
           var7Lifetime9 = var18Lifetime2;
           var7Lifetime9 = var18Lifetime2;
           var8Lifetime2 = rd.a(ek.field_fb, new String[]{var16}, (byte) 103);
@@ -456,10 +456,10 @@ final class hi extends um {
             var5Lifetime3 = var5Lifetime3 - var10Lifetime2;
           }
         }
-        if (var5Lifetime3 >= jq.field_y.c(fp.field_A.toString())) {
+        if (var5Lifetime3 >= jq.field_y.c(OptionsScreen.field_A.toString())) {
           return true;
         }
-        uk.a(' ', fp.field_A, -1 + fp.field_A.length(), false);
+        MessageScreen.a(' ', OptionsScreen.field_A, -1 + OptionsScreen.field_A.length(), false);
         return true;
     }
 

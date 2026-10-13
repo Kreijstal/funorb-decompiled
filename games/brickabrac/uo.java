@@ -169,7 +169,7 @@ final class uo {
         }
     }
 
-    final static boolean a(int param0, byte param1, int[] param2) {
+    final static boolean isBitClear(int bitIndex, byte obfuscationGuard, int[] words) {
         int var3_int = 0;
         RuntimeException var3 = null;
         boolean stackIn_3_0 = false;
@@ -178,15 +178,15 @@ final class uo {
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var3_int = 93 % ((param1 + 19) / 40);
-          stackIn_3_0 = (0 == (param2[param0 >> 5] & 1 << (31 & param0)));
+          var3_int = 93 % ((obfuscationGuard + 19) / 40);
+          stackIn_3_0 = (0 == (words[bitIndex >> 5] & 1 << (31 & bitIndex)));
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
           stackIn_6_0 = var3;
-          stackIn_6_1 = new StringBuilder().append("uo.C(").append(param0).append(',').append(param1).append(',');
-          if (param2 == null) {
+          stackIn_6_1 = new StringBuilder().append("uo.C(").append(bitIndex).append(',').append(obfuscationGuard).append(',');
+          if (words == null) {
             stackIn_7_2 = "null";
           } else {
             stackIn_7_2 = "{...}";

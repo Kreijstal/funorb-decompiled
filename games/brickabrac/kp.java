@@ -4,7 +4,7 @@
 import java.util.*;
 
 final class kp {
-    static NodeDeque field_c;
+    static NodeDeque achievementNotifications;
     static dh field_b;
     static RgbSprite[] field_e;
     static int field_a;
@@ -35,13 +35,13 @@ final class kp {
 
     public static void a(int param0) {
         int var1 = 10 % ((param0 + 8) / 43);
-        field_c = null;
+        achievementNotifications = null;
         field_e = null;
         field_d = null;
         field_b = null;
     }
 
     static {
-        field_c = new NodeDeque();
+        achievementNotifications = new NodeDeque();
     }
 }

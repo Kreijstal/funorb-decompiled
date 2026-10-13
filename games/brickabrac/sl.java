@@ -97,12 +97,12 @@ abstract class sl extends DualLinkNode {
           bq.field_c = cr.a("lobby", param7, "ratedgame", 2);
           uo.field_c = cr.a("lobby", param7, "opentome", 2);
           Ball.field_K = cr.a("lobby", param7, "allowspectators", 2);
-          bl.field_H = new String[5];
-          bl.field_H[3] = cm.field_u;
-          bl.field_H[1] = t.field_e;
-          bl.field_H[2] = ji.field_g;
-          bl.field_H[4] = bq.field_a;
-          bl.field_H[0] = MainMenuScreen.field_r;
+          AchievementsScreen.field_H = new String[5];
+          AchievementsScreen.field_H[3] = cm.field_u;
+          AchievementsScreen.field_H[1] = t.field_e;
+          AchievementsScreen.field_H[2] = ji.field_g;
+          AchievementsScreen.field_H[4] = bq.field_a;
+          AchievementsScreen.field_H[0] = MainMenuScreen.field_r;
           Ball.field_A = new mh(0L, (mh) null);
           qb.field_v = new mh(0L, MainMenuScreen.field_t, n.field_a);
           ij.field_a = new mh(0L, ik.field_a, pf.field_c);
@@ -119,7 +119,7 @@ abstract class sl extends DualLinkNode {
           var24.field_S = 1;
           dn.field_N = new mh(0L, ad.field_l);
           dn.field_N.field_S = 1;
-          jf.field_k = new mh(0L, ab.field_x, fj.field_Rb.toUpperCase());
+          HighscorePackSelector.field_k = new mh(0L, MatchCompleteScreen.field_x, fj.field_Rb.toUpperCase());
           sc.field_b = new mh(0L, qh.field_j, rl.field_c.toUpperCase());
           ll.field_e = new mh(0L, qb.field_x);
           nk.field_g = new mh(0L, MainMenuScreen.field_t, nk.field_b);
@@ -188,42 +188,42 @@ abstract class sl extends DualLinkNode {
             ji.field_b.a(wd.field_E, 0);
           }
           ji.field_b.a(TimedSplashScreen.field_u, 0);
-          ij.field_e = new mh(0L, ab.field_x, di.field_a.toUpperCase());
+          ij.field_e = new mh(0L, MatchCompleteScreen.field_x, di.field_a.toUpperCase());
           ba.field_v = new mh(0L, qh.field_j);
           rg.field_e = new mh(0L, qb.field_x);
           jd.field_a = new mh(0L, lj.field_k, bc.field_b.toUpperCase());
           gb.field_l = new mh[4 + param13];
-          ab.field_A = new rk[4 + param13][];
+          MatchCompleteScreen.field_A = new rk[4 + param13][];
           gb.field_l[0] = new mh(0L, wi.field_n, ro.field_H);
-          ab.field_A[0] = new rk[6];
+          MatchCompleteScreen.field_A[0] = new rk[6];
           for (var17_int = 0; var17_int < 5; var17_int++) {
-            ab.field_A[0][1 + var17_int] = new rk(0L, al.field_n, (mh) null, DualLinkNode.field_t, dj.field_f[var17_int], bl.field_H[var17_int]);
+            MatchCompleteScreen.field_A[0][1 + var17_int] = new rk(0L, al.field_n, (mh) null, DualLinkNode.field_t, dj.field_f[var17_int], AchievementsScreen.field_H[var17_int]);
           }
           if (2 <= w.field_n.length) {
             gb.field_l[1] = new mh(0L, wi.field_n, og.field_ac);
             array$0 = new rk[1 + w.field_n.length];
-            ab.field_A[1] = array$0;
-            ab.field_A[1][0] = new rk(0L, al.field_n, (mh) null, DualLinkNode.field_t, (RgbSprite) null, ni.field_Pb);
+            MatchCompleteScreen.field_A[1] = array$0;
+            MatchCompleteScreen.field_A[1][0] = new rk(0L, al.field_n, (mh) null, DualLinkNode.field_t, (RgbSprite) null, ni.field_Pb);
             for (var17_intLifetime1 = 0; var17_intLifetime1 < w.field_n.length; var17_intLifetime1++) {
-              ab.field_A[1][var17_intLifetime1 + 1] = new rk(0L, al.field_n, (mh) null, DualLinkNode.field_t, (RgbSprite) null, Integer.toString(w.field_n[var17_intLifetime1]));
+              MatchCompleteScreen.field_A[1][var17_intLifetime1 + 1] = new rk(0L, al.field_n, (mh) null, DualLinkNode.field_t, (RgbSprite) null, Integer.toString(w.field_n[var17_intLifetime1]));
             }
           }
           gb.field_l[2] = new mh(0L, wi.field_n, p.field_j);
-          ab.field_A[2] = new rk[]{new rk(0L, al.field_n, (mh) null, DualLinkNode.field_t, (RgbSprite) null, ni.field_Pb), new rk(0L, al.field_n, (mh) null, DualLinkNode.field_t, Ball.field_K[0], MenuSelection.field_a), new rk(0L, al.field_n, (mh) null, DualLinkNode.field_t, Ball.field_K[1], hh.field_f)};
+          MatchCompleteScreen.field_A[2] = new rk[]{new rk(0L, al.field_n, (mh) null, DualLinkNode.field_t, (RgbSprite) null, ni.field_Pb), new rk(0L, al.field_n, (mh) null, DualLinkNode.field_t, Ball.field_K[0], MenuSelection.field_a), new rk(0L, al.field_n, (mh) null, DualLinkNode.field_t, Ball.field_K[1], hh.field_f)};
           if (1 < pe.field_t) {
             gb.field_l[3] = new mh(0L, wi.field_n, uc.field_r);
             array$1 = new rk[pe.field_t + 1];
-            ab.field_A[3] = array$1;
-            ab.field_A[3][0] = new rk(0L, al.field_n, (mh) null, DualLinkNode.field_t, (RgbSprite) null, ni.field_Pb);
+            MatchCompleteScreen.field_A[3] = array$1;
+            MatchCompleteScreen.field_A[3][0] = new rk(0L, al.field_n, (mh) null, DualLinkNode.field_t, (RgbSprite) null, ni.field_Pb);
             for (var17_intLifetime2 = 0; var17_intLifetime2 < pe.field_t; var17_intLifetime2++) {
-              ab.field_A[3][var17_intLifetime2 + 1] = new rk(0L, al.field_n, (mh) null, DualLinkNode.field_t, (RgbSprite) null, im.field_c[var17_intLifetime2]);
+              MatchCompleteScreen.field_A[3][var17_intLifetime2 + 1] = new rk(0L, al.field_n, (mh) null, DualLinkNode.field_t, (RgbSprite) null, im.field_c[var17_intLifetime2]);
             }
           }
           for (var17_intLifetime3 = 0; param13 > var17_intLifetime3; var17_intLifetime3++) {
             gb.field_l[var17_intLifetime3 + 4] = new mh(0L, wi.field_n, rg.field_b[var17_intLifetime3]);
             array$2 = new rk[ik.a((int) MouseInput.field_c[var17_intLifetime3], 255) + 1];
-            ab.field_A[4 + var17_intLifetime3] = array$2;
-            ab.field_A[4 + var17_intLifetime3][0] = new rk(0L, al.field_n, (mh) null, DualLinkNode.field_t, (RgbSprite) null, ni.field_Pb);
+            MatchCompleteScreen.field_A[4 + var17_intLifetime3] = array$2;
+            MatchCompleteScreen.field_A[4 + var17_intLifetime3][0] = new rk(0L, al.field_n, (mh) null, DualLinkNode.field_t, (RgbSprite) null, ni.field_Pb);
             for (var18 = 0; (255 & MouseInput.field_c[var17_intLifetime3]) > var18; var18++) {
               if (ki.field_k != null) {
                 if (ki.field_k[var17_intLifetime3] == null) {
@@ -243,18 +243,18 @@ abstract class sl extends DualLinkNode {
               } else {
                 var20 = null;
               }
-              ab.field_A[4 + var17_intLifetime3][var18 + 1] = new rk(0L, al.field_n, (mh) null, DualLinkNode.field_t, (RgbSprite) (var19_ref), (String) (var20));
+              MatchCompleteScreen.field_A[4 + var17_intLifetime3][var18 + 1] = new rk(0L, al.field_n, (mh) null, DualLinkNode.field_t, (RgbSprite) (var19_ref), (String) (var20));
             }
           }
           for (var17_intLifetime4 = 0; 4 + param13 > var17_intLifetime4; var17_intLifetime4++) {
             if (gb.field_l[var17_intLifetime4] != null) {
               gb.field_l[var17_intLifetime4].field_R = 11;
             }
-            if (null != ab.field_A[var17_intLifetime4]) {
-              for (var18Lifetime1 = 0; var18Lifetime1 < ab.field_A[var17_intLifetime4].length; var18Lifetime1++) {
-                if (null != ab.field_A[var17_intLifetime4][var18Lifetime1] &&
-                  null != ab.field_A[var17_intLifetime4][var18Lifetime1].field_Rb) {
-                  ab.field_A[var17_intLifetime4][var18Lifetime1].field_Rb.field_R = 11;
+            if (null != MatchCompleteScreen.field_A[var17_intLifetime4]) {
+              for (var18Lifetime1 = 0; var18Lifetime1 < MatchCompleteScreen.field_A[var17_intLifetime4].length; var18Lifetime1++) {
+                if (null != MatchCompleteScreen.field_A[var17_intLifetime4][var18Lifetime1] &&
+                  null != MatchCompleteScreen.field_A[var17_intLifetime4][var18Lifetime1].field_Rb) {
+                  MatchCompleteScreen.field_A[var17_intLifetime4][var18Lifetime1].field_Rb.field_R = 11;
                 }
               }
             }
@@ -275,9 +275,9 @@ abstract class sl extends DualLinkNode {
               !(w.field_n.length < 2)) && (var18Lifetime2 != 3 ||
               !(pe.field_t <= 1))) {
               rg.field_e.a(gb.field_l[var18Lifetime2], 0);
-              for (var19 = 0; ab.field_A[var18Lifetime2].length > var19; var19++) {
-                if (ab.field_A[var18Lifetime2][var19] != null) {
-                  rg.field_e.a(ab.field_A[var18Lifetime2][var19], 0);
+              for (var19 = 0; MatchCompleteScreen.field_A[var18Lifetime2].length > var19; var19++) {
+                if (MatchCompleteScreen.field_A[var18Lifetime2][var19] != null) {
+                  rg.field_e.a(MatchCompleteScreen.field_A[var18Lifetime2][var19], 0);
                 }
               }
             }

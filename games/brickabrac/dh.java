@@ -581,7 +581,7 @@ abstract class dh extends DualLinkNode {
         if (param0 == null) {
           return 0;
         }
-        uk.a(' ', field_y, 0, false);
+        MessageScreen.a(' ', field_y, 0, false);
         var4 = 0;
         var5 = 0;
         var6 = -1;

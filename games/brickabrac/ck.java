@@ -83,7 +83,7 @@ final class ck extends IntrusiveNode {
     final static void a(byte param0) {
         wc.field_b = false;
         ga.field_i = 13;
-        ab.field_E = 0;
+        MatchCompleteScreen.field_E = 0;
         tb.field_eb = null;
         dj.field_d = 0;
         c.field_i = un.field_e;

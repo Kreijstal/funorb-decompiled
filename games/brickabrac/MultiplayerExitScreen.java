@@ -1,12 +1,12 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class gn extends ld {
+final class MultiplayerExitScreen extends MatchResultScreen {
     static long field_C;
     static int[] field_x;
     static String field_A;
     static RgbSprite field_z;
-    static String[] field_D;
+    static String[] savePrompts;
     static String field_y;
     static long field_E;
 
@@ -16,7 +16,7 @@ final class gn extends ld {
         field_A = null;
         field_x = null;
         field_z = null;
-        field_D = null;
+        savePrompts = null;
     }
 
     final static void a(int param0, cq param1, int param2) {
@@ -80,7 +80,7 @@ final class gn extends ld {
           if (param1 > 113) {
             return;
           }
-          gn.i(-46);
+          MultiplayerExitScreen.i(-46);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -101,7 +101,7 @@ final class gn extends ld {
           ma.field_I = rm.a("", 16711935);
           ma.field_I.a(false, 20892);
           if (param4 <= 11) {
-            field_D = (String[]) null;
+            savePrompts = (String[]) null;
           }
           nq.a(param3, param1, (byte) -59, param2);
           np.b(false);
@@ -112,30 +112,30 @@ final class gn extends ld {
         }
     }
 
-    final int f(int param0) {
-        if (param0 == -6) {
+    final int getResultBottom(int obfuscationGuard) {
+        if (obfuscationGuard == -6) {
           return DualLinkDeque.field_d.field_db;
         }
         mf var3 = (mf) null;
-        gn.a(false, (mf) null, (mf) null, (mf) null, 63);
+        MultiplayerExitScreen.a(false, (mf) null, (mf) null, (mf) null, 63);
         return DualLinkDeque.field_d.field_db;
     }
 
     final void navigateBack(int obfuscationGuard) {
         if (obfuscationGuard != -1) {
-          gn.i(-22);
+          MultiplayerExitScreen.i(-22);
           da.f((byte) 122);
           return;
         }
         da.f((byte) 122);
     }
 
-    gn() {
+    MultiplayerExitScreen() {
         super(19, ff.field_h);
     }
 
     static {
-        field_D = new String[]{null, "To store your progress, you must log in or create a free account.#Alternatively, click <%0> to discard it and continue.", "To store your score, you must log in or create a free account.#Alternatively, click <%0> to discard it and continue.", "To store your score and progress, you must log in or create a free account.#Alternatively, click <%0> to discard them and continue.", "To store your achievements, you must log in or create a free account.#Alternatively, click <%0> to discard them and continue.", "To store your achievements and progress, you must log in or create a free account.#Alternatively, click <%0> to discard them and continue.", "To store your achievements and score, you must log in or create a free account.#Alternatively, click <%0> to discard them and continue.", "To store your achievements, score and progress, you must log in or create a free account.#Alternatively, click <%0> to discard them and continue."};
+        savePrompts = new String[]{null, "To store your progress, you must log in or create a free account.#Alternatively, click <%0> to discard it and continue.", "To store your score, you must log in or create a free account.#Alternatively, click <%0> to discard it and continue.", "To store your score and progress, you must log in or create a free account.#Alternatively, click <%0> to discard them and continue.", "To store your achievements, you must log in or create a free account.#Alternatively, click <%0> to discard them and continue.", "To store your achievements and progress, you must log in or create a free account.#Alternatively, click <%0> to discard them and continue.", "To store your achievements and score, you must log in or create a free account.#Alternatively, click <%0> to discard them and continue.", "To store your achievements, score and progress, you must log in or create a free account.#Alternatively, click <%0> to discard them and continue."};
         field_y = "Quick Chat game";
         field_A = "Enter name of player to delete from list";
     }

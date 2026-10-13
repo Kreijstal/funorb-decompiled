@@ -61,7 +61,7 @@ final class jq extends bc {
           if (param0 != -16085) {
             return;
           }
-          LevelPack.field_k = cc.field_J - (var1_int >> 1);
+          LevelPack.field_k = NewAchievementsScreen.field_J - (var1_int >> 1);
           mi.field_d = ea.field_e - (bg.field_r >> 1);
           lk.field_p = var1_int + LevelPack.field_k;
           var2 = mi.field_d;
@@ -81,7 +81,7 @@ final class jq extends bc {
             stackIn_12_1 = var6;
             stackIn_13_2 = !(var4 < 0);
             var7 = pl.a(stackIn_12_0, stackIn_12_1, stackIn_13_2);
-            var8 = cc.field_J - (var7 >> 1);
+            var8 = NewAchievementsScreen.field_J - (var7 >> 1);
             if (var4 >= 0) {
               var2 = var2 + dj.field_g;
               if (fi.field_r.selectedIndex != var4) {

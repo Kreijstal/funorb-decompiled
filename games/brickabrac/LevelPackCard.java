@@ -1,21 +1,21 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class lc {
+final class LevelPackCard {
     static int[] field_a;
-    private int field_f;
+    private int focusStartTick;
     static int[] field_l;
     static int field_k;
-    private MenuButton field_d;
+    private MenuButton viewport;
     static int[] field_n;
-    private boolean field_g;
+    private boolean focused;
     static RgbSprite field_e;
-    private int field_m;
-    private MenuScreen field_h;
-    private int field_b;
-    private RgbSprite field_j;
+    private int packIndex;
+    private MenuScreen owner;
+    private int buttonIndex;
+    private RgbSprite icon;
     static int field_i;
-    private String field_c;
+    private String caption;
 
     final static boolean a(int param0, int param1) {
         if (param1 >= -26) {
@@ -70,7 +70,7 @@ final class lc {
           pf.a(param18, param15, param8, param3, -27460, param13, param14, param7, param12, param10, (String[]) null, param11, param1, 1, param16, param0, param5, param6, param17, param9);
           if (param2 != 47) {
             var20 = (int[]) null;
-            lc.a((String[][]) null, (tp[]) null, (byte) -33, (String[]) null, 104, (String[]) null, (String[][]) null, (mf) null, (mf) null, (mf) null, (int[]) null, (RgbSprite[][]) null, 5, true, (RgbSprite[][]) null, (byte[]) null, (byte[]) null, (int[]) null, -25);
+            LevelPackCard.a((String[][]) null, (tp[]) null, (byte) -33, (String[]) null, 104, (String[]) null, (String[][]) null, (mf) null, (mf) null, (mf) null, (int[]) null, (RgbSprite[][]) null, 5, true, (RgbSprite[][]) null, (byte[]) null, (byte[]) null, (int[]) null, -25);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -165,23 +165,23 @@ final class lc {
         }
     }
 
-    final void a(byte param0) {
+    final void draw(byte obfuscationGuard) {
         int var2 = 0;
         int var2Lifetime1;
-        if (param0 > 89) {
-          var2 = sa.a(100 * (-this.field_f + MembershipBenefitsScreen.field_x), -4097) + 65536 >> 12;
-          Rasterizer2D.a(this.field_d.x - 2, -2 + this.field_d.y, 4 + this.field_d.width, this.field_d.height + 4, 20, 16777215, (this.field_g ? var2 : 0) + 32);
-          Rasterizer2D.b(this.field_d.x, this.field_d.y, this.field_d.width, this.field_d.height, 20, 0);
-          this.field_j.drawTransparent(this.field_d.x + 30, this.field_d.y + 20);
-          nn.field_g.b(this.field_c, (this.field_d.width + this.field_d.x * 2) / 2, this.field_d.y - (-this.field_d.height + 13), !this.field_g ? 0 : 1, -1);
+        if (obfuscationGuard > 89) {
+          var2 = sa.a(100 * (-this.focusStartTick + MembershipBenefitsScreen.field_x), -4097) + 65536 >> 12;
+          Rasterizer2D.a(this.viewport.x - 2, -2 + this.viewport.y, 4 + this.viewport.width, this.viewport.height + 4, 20, 16777215, (this.focused ? var2 : 0) + 32);
+          Rasterizer2D.b(this.viewport.x, this.viewport.y, this.viewport.width, this.viewport.height, 20, 0);
+          this.icon.drawTransparent(this.viewport.x + 30, this.viewport.y + 20);
+          nn.field_g.b(this.caption, (this.viewport.width + this.viewport.x * 2) / 2, this.viewport.y - (-this.viewport.height + 13), !this.focused ? 0 : 1, -1);
           return;
         }
-        this.field_d = (MenuButton) null;
-        var2Lifetime1 = sa.a(100 * (-this.field_f + MembershipBenefitsScreen.field_x), -4097) + 65536 >> 12;
-        Rasterizer2D.a(this.field_d.x - 2, -2 + this.field_d.y, 4 + this.field_d.width, this.field_d.height + 4, 20, 16777215, (this.field_g ? var2Lifetime1 : 0) + 32);
-        Rasterizer2D.b(this.field_d.x, this.field_d.y, this.field_d.width, this.field_d.height, 20, 0);
-        this.field_j.drawTransparent(this.field_d.x + 30, this.field_d.y + 20);
-        nn.field_g.b(this.field_c, (this.field_d.width + this.field_d.x * 2) / 2, this.field_d.y - (-this.field_d.height + 13), !this.field_g ? 0 : 1, -1);
+        this.viewport = (MenuButton) null;
+        var2Lifetime1 = sa.a(100 * (-this.focusStartTick + MembershipBenefitsScreen.field_x), -4097) + 65536 >> 12;
+        Rasterizer2D.a(this.viewport.x - 2, -2 + this.viewport.y, 4 + this.viewport.width, this.viewport.height + 4, 20, 16777215, (this.focused ? var2Lifetime1 : 0) + 32);
+        Rasterizer2D.b(this.viewport.x, this.viewport.y, this.viewport.width, this.viewport.height, 20, 0);
+        this.icon.drawTransparent(this.viewport.x + 30, this.viewport.y + 20);
+        nn.field_g.b(this.caption, (this.viewport.width + this.viewport.x * 2) / 2, this.viewport.y - (-this.viewport.height + 13), !this.focused ? 0 : 1, -1);
     }
 
     public static void a(int param0) {
@@ -192,37 +192,37 @@ final class lc {
           field_e = null;
           return;
         }
-        lc.a(-115);
+        LevelPackCard.a(-115);
         field_l = null;
         field_e = null;
     }
 
-    final void b(byte param0) {
-        if (param0 != -75) {
+    final void updateFocus(byte obfuscationGuard) {
+        if (obfuscationGuard != -75) {
           return;
         }
-        if (this.field_h.selection.selectedIndex != this.field_b) {
-          this.field_g = false;
+        if (this.owner.selection.selectedIndex != this.buttonIndex) {
+          this.focused = false;
           return;
         }
-        if (this.field_g) {
-          this.field_g = true;
+        if (this.focused) {
+          this.focused = true;
           return;
         }
-        this.field_f = MembershipBenefitsScreen.field_x;
-        this.field_g = true;
+        this.focusStartTick = MembershipBenefitsScreen.field_x;
+        this.focused = true;
     }
 
-    lc(MenuScreen param0, MenuButton param1, int param2, int param3) {
+    LevelPackCard(MenuScreen owner, MenuButton viewport, int buttonIndex, int packIndex) {
         try {
-          this.field_m = param3;
-          this.field_b = param2;
-          this.field_d = param1;
-          this.field_h = param0;
-          this.field_c = qn.field_u[this.field_m].toLowerCase();
-          this.field_j = hq.field_s[this.field_m];
+          this.packIndex = packIndex;
+          this.buttonIndex = buttonIndex;
+          this.viewport = viewport;
+          this.owner = owner;
+          this.caption = qn.packNames[this.packIndex].toLowerCase();
+          this.icon = SaveResultsPromptScreen.packCardIcons[this.packIndex];
         } catch (RuntimeException runtimeException) {
-          throw qb.a((Throwable) ((Object) runtimeException), "lc.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
+          throw qb.a((Throwable) ((Object) runtimeException), "lc.<init>(" + (owner != null ? "{...}" : "null") + ',' + (viewport != null ? "{...}" : "null") + ',' + buttonIndex + ',' + packIndex + ')');
         }
     }
 

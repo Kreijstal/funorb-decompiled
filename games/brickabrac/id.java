@@ -76,7 +76,7 @@ final class id extends mh {
         var5 = BrickABrac.field_J ? 1 : 0;
         try {
           var2_int = tf.field_g.length;
-          if (!lc.a(0, -107)) {
+          if (!LevelPackCard.a(0, -107)) {
             var2_int--;
           }
           var3 = new int[var2_int];

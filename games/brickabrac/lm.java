@@ -70,7 +70,7 @@ final class lm {
         if (param0 != -10) {
           lm.a((byte) 35);
         }
-        return null != pe.field_o ? true : false;
+        return null != pe.gameplayScreen ? true : false;
     }
 
     final int a(int param0, byte param1) {
