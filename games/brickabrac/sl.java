@@ -125,7 +125,7 @@ abstract class sl extends DualLinkNode {
           nk.field_g = new mh(0L, MainMenuScreen.field_t, nk.field_b);
           nk.field_a = new mh(0L, cd.field_d, td.field_r);
           kk.field_b = new mh(0L, cd.field_d, ch.field_d);
-          la.field_b = new mh(0L, cd.field_d, kc.field_o);
+          la.field_b = new mh(0L, cd.field_d, BallPulseEffect.field_o);
           BufferedSocket.field_h = new mh(0L, cd.field_d, r.field_v);
           dp.field_x = new mh(0L, ik.field_a, ByteStorage.field_d);
           rl.field_e = new mm(0L, new mh(0L, (mh) null), am.field_Qb, ic.field_c);
@@ -208,7 +208,7 @@ abstract class sl extends DualLinkNode {
               MatchCompleteScreen.field_A[1][var17_intLifetime1 + 1] = new rk(0L, al.field_n, (mh) null, DualLinkNode.field_t, (RgbSprite) null, Integer.toString(w.field_n[var17_intLifetime1]));
             }
           }
-          gb.field_l[2] = new mh(0L, wi.field_n, p.field_j);
+          gb.field_l[2] = new mh(0L, wi.field_n, PlayerInputBatch.field_j);
           MatchCompleteScreen.field_A[2] = new rk[]{new rk(0L, al.field_n, (mh) null, DualLinkNode.field_t, (RgbSprite) null, ni.field_Pb), new rk(0L, al.field_n, (mh) null, DualLinkNode.field_t, Ball.field_K[0], MenuSelection.field_a), new rk(0L, al.field_n, (mh) null, DualLinkNode.field_t, Ball.field_K[1], hh.field_f)};
           if (1 < IntArrayRequest.field_t) {
             gb.field_l[3] = new mh(0L, wi.field_n, uc.field_r);

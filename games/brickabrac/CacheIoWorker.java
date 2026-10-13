@@ -116,8 +116,8 @@ final class CacheIoWorker implements Runnable {
           var6_int = 485 + param1 + 8 - (-2 - param4) + 8;
           sh.field_d.a(-6 + DualLinkDeque.field_d.field_cb, 3, 3, -6 + var6_int, (byte) 64);
           var7 = -5 + sh.field_d.field_cb;
-          kc.field_n.a(param3, -param3 + var7, 5, param4 + 485 + param1 + 2, (byte) 64);
-          g.field_n.a(param3, 0, param1, -ap.field_e.field_Ib - param1 + kc.field_n.field_Ib, (byte) 64);
+          BallPulseEffect.field_n.a(param3, -param3 + var7, 5, param4 + 485 + param1 + 2, (byte) 64);
+          g.field_n.a(param3, 0, param1, -ap.field_e.field_Ib - param1 + BallPulseEffect.field_n.field_Ib, (byte) 64);
           var8 = 3 / ((49 - param0) / 40);
           ap.field_e.a(param3, 0, param1 + g.field_n.field_Ib, ap.field_e.field_Ib, (byte) 64);
           var7 = var7 - (param3 + 2);

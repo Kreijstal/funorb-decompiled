@@ -1,34 +1,34 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class p extends IntrusiveNode {
-    private int field_o;
+final class PlayerInputBatch extends IntrusiveNode {
+    private int readIndex;
     static String field_p;
-    boolean field_l;
+    boolean hasChecksum;
     static String field_j;
-    int[] field_n;
-    int field_k;
+    int[] controlMasks;
+    int positionWord;
     static RgbSprite field_i;
-    int field_m;
+    int maskedChecksum;
 
-    final boolean c(int param0) {
-        if (param0 != 1) {
+    final boolean isConsumed(int obfuscationGuard) {
+        if (obfuscationGuard != 1) {
           return true;
         }
-        return this.field_n.length == this.field_o ? true : false;
+        return this.controlMasks.length == this.readIndex ? true : false;
     }
 
-    final int a(byte param0) {
+    final int nextControlMask(byte obfuscationGuard) {
         int fieldTemp$0 = 0;
-        if (param0 == -104) {
-          fieldTemp$0 = this.field_o;
-          this.field_o = this.field_o + 1;
-          return this.field_n[fieldTemp$0];
+        if (obfuscationGuard == -104) {
+          fieldTemp$0 = this.readIndex;
+          this.readIndex = this.readIndex + 1;
+          return this.controlMasks[fieldTemp$0];
         }
-        p.b(true);
-        int fieldTemp$1 = this.field_o;
-        this.field_o = this.field_o + 1;
-        return this.field_n[fieldTemp$1];
+        PlayerInputBatch.b(true);
+        int fieldTemp$1 = this.readIndex;
+        this.readIndex = this.readIndex + 1;
+        return this.controlMasks[fieldTemp$1];
     }
 
     final static boolean a(byte param0, int param1, int param2, int param3) {
@@ -80,7 +80,7 @@ final class p extends IntrusiveNode {
         field_i = null;
         field_p = null;
         if (param0) {
-          p.b(true);
+          PlayerInputBatch.b(true);
         }
     }
 
@@ -102,7 +102,7 @@ final class p extends IntrusiveNode {
             param1.d(param2 - param1.offsetX, -param1.offsetY + param2, param3);
             Rasterizer2D.e(1, 1, 0, 0, var7.width, var7.height);
           }
-          kc.framebuffer.bindRaster((byte) 104);
+          BallPulseEffect.framebuffer.bindRaster((byte) 104);
           var7.offsetY = -param2 + param1.offsetY;
           if (param0 != -12) {
             field_j = (String) null;
@@ -124,9 +124,9 @@ final class p extends IntrusiveNode {
         }
     }
 
-    public p() {
-        this.field_n = new int[5];
-        this.field_o = 0;
+    public PlayerInputBatch() {
+        this.controlMasks = new int[5];
+        this.readIndex = 0;
     }
 
     static {

@@ -37,7 +37,7 @@ final class ai extends ki {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 < -74) {
-            stackIn_4_0 = kc.field_p;
+            stackIn_4_0 = BallPulseEffect.field_p;
             return stackIn_4_0;
           }
           stackIn_2_0 = (RgbSprite) null;
@@ -117,7 +117,7 @@ final class ai extends ki {
           th.field_c = pl.loadRgbSpriteByName("paris", "paris_mid", (byte) 98, AchievementIcon.field_m);
           bf.field_K = pl.loadRgbSpriteByName("paris", "paris_far", (byte) -100, AchievementIcon.field_m);
           pl.field_a = pl.loadRgbSpriteByName("paris", "paris_small", (byte) 108, AchievementIcon.field_m);
-          kc.field_p = pl.loadRgbSpriteByName("paris", "paris_character", (byte) -43, AchievementIcon.field_m);
+          BallPulseEffect.field_p = pl.loadRgbSpriteByName("paris", "paris_character", (byte) -43, AchievementIcon.field_m);
           IntrusiveHashTable.field_i = jh.a(0, qa.field_y);
           if (param0) {
             ai.a((mh) null, (TextFont) null, (mh) null, (mh) null, (mh) null, (mh) null, (mh) null, (mh) null, (byte) 19, false, (fj) null, (mh) null);
@@ -177,7 +177,7 @@ final class ai extends ki {
           if (param0 >= -91) {
             this.a(false, 87, -76, -86, -25);
           }
-          stackIn_19_0 = (qa.field_y != null) && (null != th.field_c) && (bf.field_K != null) && (pl.field_a != null) && (null != kc.field_p);
+          stackIn_19_0 = (qa.field_y != null) && (null != th.field_c) && (bf.field_K != null) && (pl.field_a != null) && (null != BallPulseEffect.field_p);
           return stackIn_19_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -269,15 +269,15 @@ final class ai extends ki {
           var17.field_bb = new NodeDeque();
           AchievementIcon.field_q = new mm(0L, var17, param5, param10);
           sh.field_d.a(AchievementIcon.field_q, param8 - 61);
-          kc.field_n = new mh(0L, param3);
-          sh.field_d.a(kc.field_n, 0);
+          BallPulseEffect.field_n = new mh(0L, param3);
+          sh.field_d.a(BallPulseEffect.field_n, 0);
           g.field_n = new mh(0L, param7);
           g.field_n.field_O = CachedArchiveSource.field_y;
-          kc.field_n.a(g.field_n, 0);
-          kc.field_n.c(true);
+          BallPulseEffect.field_n.a(g.field_n, 0);
+          BallPulseEffect.field_n.c(true);
           ap.field_e = new mh(0L, (mh) null);
           ap.field_e.field_Jb = var16;
-          kc.field_n.a(ap.field_e, 0);
+          BallPulseEffect.field_n.a(ap.field_e, 0);
           dp.field_w = new mh[5];
           vj.field_a = new mh[5];
           wd.field_F = new mh[5];

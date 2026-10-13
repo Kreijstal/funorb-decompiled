@@ -163,7 +163,7 @@ final class ProducerFramebuffer extends SoftwareFramebuffer implements java.awt.
           var10 = new RgbSprite(nj.field_l[0].canvasWidth, nj.field_l[0].canvasHeight);
           var10.bindRasterTarget();
           nj.field_l[24].c(0, 0, ScorePopup.a(255, param1.simulationTick % 360 << 8));
-          kc.framebuffer.bindRaster((byte) 105);
+          BallPulseEffect.framebuffer.bindRaster((byte) 105);
           Rasterizer2D.restoreClip(var24);
           stackIn_6_0 = ((1 << param2 & (param3.playerMaskThree | (param3.playerMaskOne | param3.playerMaskTwo))) != 0) ? 0 : 1;
           var11 = stackIn_6_0;
@@ -191,8 +191,8 @@ final class ProducerFramebuffer extends SoftwareFramebuffer implements java.awt.
                 if (var14.pendingTypeId < 0) {
                   if (param3.playerCount != 1 &&
                     var11 == 0) {
-                    if (!(param1.field_U >= 50)) {
-                      var16.b(var7_int, var8, (-(256 * param1.field_U) + 12800) / 50);
+                    if (!(param1.maskedTicks >= 50)) {
+                      var16.b(var7_int, var8, (-(256 * param1.maskedTicks) + 12800) / 50);
                     }
                     decompiledFrameRemainder0 = false;
                   }
@@ -210,7 +210,7 @@ final class ProducerFramebuffer extends SoftwareFramebuffer implements java.awt.
                   var17 = var14.transitionCode;
                   var18 = -(var14.stateWord * 16) + 256;
                   if (var11 == 0) {
-                    var19 = var14.stateWord + param1.field_U;
+                    var19 = var14.stateWord + param1.maskedTicks;
                     stackIn_35_0 = 256;
                     stackIn_35_1 = 16;
                     if (16 >= var19) {

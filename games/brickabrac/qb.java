@@ -67,7 +67,7 @@ final class qb extends ki {
           for (var4 = 0; param2 > var4; var4++) {
             param0.drawTransparent(param0.canvasWidth * var4, 0);
           }
-          kc.framebuffer.bindRaster((byte) 116);
+          BallPulseEffect.framebuffer.bindRaster((byte) 116);
           stackIn_8_0 = var3;
           return stackIn_8_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

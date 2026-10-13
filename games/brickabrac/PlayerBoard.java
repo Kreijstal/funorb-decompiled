@@ -4,23 +4,23 @@
 import java.util.*;
 
 final class PlayerBoard extends IntrusiveNode {
-    NodeDeque field_eb;
+    NodeDeque incomingInputBatches;
     int simulationTick;
-    int[] field_vb;
+    int[] outgoingInputMasks;
     static String[][] field_jb;
-    int field_db;
-    int field_bb;
-    int field_j;
+    int controlMask;
+    int leftKeyCode;
+    int rightKeyCode;
     NodeDeque scorePopups;
     int lives;
     int score;
-    int field_I;
-    int field_q;
+    int actionKeyCode;
+    int bufferedInputTicks;
     private ObjectHistoryBuffer snapshotHistory;
     Paddle paddle;
     NodeDeque queuedBalls;
     NodeDeque activeBalls;
-    NodeDeque field_x;
+    NodeDeque ballPulses;
     int field_A;
     NodeDeque fallingPowerUps;
     NodeDeque bubbles;
@@ -50,7 +50,7 @@ final class PlayerBoard extends IntrusiveNode {
     int field_wb;
     int field_J;
     boolean field_tb;
-    int field_p;
+    int positionWord;
     int field_H;
     int bubbleTick;
     int messageTicks;
@@ -58,11 +58,11 @@ final class PlayerBoard extends IntrusiveNode {
     PowerUpWarning pendingWarning;
     int flaggedBrickTypeMask;
     int field_r;
-    int field_E;
+    int receivedInputTick;
     String pendingMessage;
     int[] field_cb;
     int field_ib;
-    int field_U;
+    int maskedTicks;
     PowerUpWarning displayedWarning;
     int bubbleSeed;
     int field_y;
@@ -72,8 +72,8 @@ final class PlayerBoard extends IntrusiveNode {
     int field_M;
     String displayedMessage;
     int[] field_xb;
-    int field_V;
-    int field_zb;
+    int resultWord;
+    int resultCode;
 
     final void installLevelBricks(NodeDeque paths, int obfuscationGuard, NodeDeque[] groups) {
         int incrementValue$0 = 0;
@@ -227,7 +227,7 @@ final class PlayerBoard extends IntrusiveNode {
           return new PowerUpWarning(7);
         }
         if (obfuscationGuard >= -81) {
-          this.field_E = 12;
+          this.receivedInputTick = 12;
         }
         if (this.ticksUntilPendingPowerUp(11, 33, 25) != -1) {
           return new PowerUpWarning(11);
@@ -342,7 +342,7 @@ final class PlayerBoard extends IntrusiveNode {
             discarded$9 = diagnostics.append("5. " + Integer.toString(var4, 16) + "\n");
           }
           if (var3_int != 0) {
-            discarded$10 = diagnostics.append("Keys and time: " + this.field_db + " " + this.simulationTick + "\n");
+            discarded$10 = diagnostics.append("Keys and time: " + this.controlMask + " " + this.simulationTick + "\n");
           }
           var4 = var4 ^ 21879 + this.simulationTick * 23 << 12;
           if (var3_int != 0) {
@@ -531,7 +531,7 @@ final class PlayerBoard extends IntrusiveNode {
           this.lives = packet.readUnsignedByte(255);
           this.field_m = packet.readUnsignedShort(65280);
           this.field_Q = packet.readUnsignedShort(65280);
-          this.field_p = packet.readUnsignedShort(65280);
+          this.positionWord = packet.readUnsignedShort(65280);
           this.randomCallCount = 0;
           var4_int = 0;
           var5_int = packet.readInt(255);
@@ -594,8 +594,8 @@ final class PlayerBoard extends IntrusiveNode {
           }
           this.field_r = packet.readUnsignedShort(65280);
           this.field_M = packet.readUnsignedShort(65280);
-          this.field_p = packet.readInt(255);
-          this.field_G = this.field_p + this.boardOffset << 8;
+          this.positionWord = packet.readInt(255);
+          this.field_G = this.positionWord + this.boardOffset << 8;
           stackIn_30_0 = (1 == boardMode) ? 15 : 9;
           CacheIoRequest.addBoardBorders(stackIn_30_0, this.brickGroups[2], 16);
           return;
@@ -686,7 +686,7 @@ final class PlayerBoard extends IntrusiveNode {
         this.fallingPowerUps.clear((byte) -92);
         this.activeBalls.clear((byte) -88);
         if (obfuscationGuard != 85) {
-          this.field_j = 84;
+          this.rightKeyCode = 84;
         }
     }
 
@@ -906,16 +906,16 @@ final class PlayerBoard extends IntrusiveNode {
         return this.field_o[param1] == 0 ? true : false;
     }
 
-    PlayerBoard(int boardWidth, int initialBoardOffset, int paletteVariant, int randomSeed, int initialState) {
-        this.field_vb = new int[5];
-        this.field_db = 0;
-        this.field_eb = new NodeDeque();
+    PlayerBoard(int boardWidth, int initialBoardOffset, int controlSet, int randomSeed, int initialState) {
+        this.outgoingInputMasks = new int[5];
+        this.controlMask = 0;
+        this.incomingInputBatches = new NodeDeque();
         this.lives = 4;
         this.score = 0;
         this.scorePopups = new NodeDeque();
         this.queuedBalls = new NodeDeque();
         this.activeBalls = new NodeDeque();
-        this.field_x = new NodeDeque();
+        this.ballPulses = new NodeDeque();
         this.fallingPowerUps = new NodeDeque();
         this.bubbles = new NodeDeque();
         this.powerUpHistory = new ObjectHistoryBuffer(500);
@@ -948,9 +948,9 @@ final class PlayerBoard extends IntrusiveNode {
           HighscoresScreen.field_w[1][1] = ce.field_d;
           HighscoresScreen.field_w[1][0] = jl.field_b;
         }
-        this.field_bb = HighscoresScreen.field_w[paletteVariant][0];
-        this.field_j = HighscoresScreen.field_w[paletteVariant][1];
-        this.field_I = HighscoresScreen.field_w[paletteVariant][2];
+        this.leftKeyCode = HighscoresScreen.field_w[controlSet][0];
+        this.rightKeyCode = HighscoresScreen.field_w[controlSet][1];
+        this.actionKeyCode = HighscoresScreen.field_w[controlSet][2];
     }
 
     static {

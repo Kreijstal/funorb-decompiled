@@ -155,13 +155,13 @@ final class fr {
           rasterSnapshotPool = (NodeDeque) null;
         }
         if (IntArrayRequest.gameplayScreen.field_n) {
-          if ((IntArrayRequest.gameplayScreen.match.field_j & 1 << IntArrayRequest.gameplayScreen.field_k) != 0) {
+          if ((IntArrayRequest.gameplayScreen.match.field_j & 1 << IntArrayRequest.gameplayScreen.localPlayerId) != 0) {
             ag.buttonLabels[12] = mi.field_a;
           } else {
             if (IntArrayRequest.gameplayScreen.match.field_j != 0) {
               ag.buttonLabels[12] = qm.field_c;
             } else {
-              if ((1 << IntArrayRequest.gameplayScreen.field_k | IntArrayRequest.gameplayScreen.field_v) != (1 << IntArrayRequest.gameplayScreen.match.playerCount) - 1) {
+              if ((1 << IntArrayRequest.gameplayScreen.localPlayerId | IntArrayRequest.gameplayScreen.field_v) != (1 << IntArrayRequest.gameplayScreen.match.playerCount) - 1) {
                 ag.buttonLabels[12] = s.field_a;
               } else {
                 ag.buttonLabels[12] = oa.field_Pb;
@@ -169,11 +169,11 @@ final class fr {
             }
           }
         } else {
-          if ((1 << IntArrayRequest.gameplayScreen.field_k & IntArrayRequest.gameplayScreen.match.field_j) != 0) {
+          if ((1 << IntArrayRequest.gameplayScreen.localPlayerId & IntArrayRequest.gameplayScreen.match.field_j) != 0) {
             ag.buttonLabels[12] = ff.field_g;
           } else {
             if (0 == IntArrayRequest.gameplayScreen.match.field_j) {
-              if ((IntArrayRequest.gameplayScreen.field_v | 1 << IntArrayRequest.gameplayScreen.field_k) != -1 + (1 << IntArrayRequest.gameplayScreen.match.playerCount)) {
+              if ((IntArrayRequest.gameplayScreen.field_v | 1 << IntArrayRequest.gameplayScreen.localPlayerId) != -1 + (1 << IntArrayRequest.gameplayScreen.match.playerCount)) {
                 ag.buttonLabels[12] = RectangleBody.field_t;
               } else {
                 ag.buttonLabels[12] = bm.field_b;

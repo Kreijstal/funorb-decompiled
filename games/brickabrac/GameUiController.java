@@ -168,7 +168,7 @@ final class GameUiController implements GameUiLifecycle {
         bh.field_tb.a(vh.field_P, "kartika13", 127, m.field_k, wn.field_c);
         bh.field_tb.a(qb.field_r, false, MovingBody.field_n, wl.field_Q);
         bh.field_tb.a(AchievementIcon.field_s, false, MovingBody.field_n, wl.field_Q);
-        bh.field_tb.a(LevelList.field_o, false, kc.field_i, sg.field_m);
+        bh.field_tb.a(LevelList.field_o, false, BallPulseEffect.field_i, sg.field_m);
         bh.field_tb.a(NodeDequeCursor.field_i, false, cm.field_n, bb.field_a);
         bh.field_tb.a(nl.field_a, false, fa.field_j, uo.field_a);
         bh.field_tb.a(IntHistoryBuffer.field_i, false, fa.field_j, uo.field_a);

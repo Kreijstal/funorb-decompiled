@@ -101,7 +101,7 @@ final class ci extends ki {
         ng.field_a.bindRasterTarget();
         Rasterizer2D.a(7136, 6592, 1600, 128, sq.field_b);
         if (!param0) {
-          kc.framebuffer.bindRaster((byte) 100);
+          BallPulseEffect.framebuffer.bindRaster((byte) 100);
           TableNameEntry.field_f = pl.loadRgbSpriteByName("space", "space_character", (byte) -50, AchievementIcon.field_m);
           jh.field_d = jh.a(0, om.field_fc);
           lk.field_t = jh.a(0, LevelResultSubmission.field_m);

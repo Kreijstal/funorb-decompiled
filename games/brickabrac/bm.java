@@ -226,10 +226,10 @@ final class bm {
         double var9 = 0.0;
         int var11 = 0;
         try {
-          if (param3.field_U < 50) {
+          if (param3.maskedTicks < 50) {
             return;
           }
-          var8_int = -50 + param3.field_U;
+          var8_int = -50 + param3.maskedTicks;
           var9 = 250.0 * Math.abs(Math.cos(0.1 * (double)var8_int)) * Math.exp((double)(-var8_int) / 40.0);
           if (param7 < 69) {
             field_c = -9;

@@ -535,12 +535,12 @@ abstract class ag extends oc implements sd {
         int var5 = 0;
         Brick.field_A.field_Mb = param1;
         sc.field_c = true;
-        int var2_int = kc.framebuffer.width;
+        int var2_int = BallPulseEffect.framebuffer.width;
         if (param0 != -83) {
           return;
         }
         try {
-          var3 = kc.framebuffer.height;
+          var3 = BallPulseEffect.framebuffer.height;
           var4 = Brick.field_A.field_O.measureWrappedHeight(param1, 272, Brick.field_A.field_R);
           var5 = -(var4 / 2) + var3 / 2 - 103;
           qp.field_f.a(-(2 * var5) + (-120 + var3), var5, (var2_int - 320) / 2, 320, (byte) 64);

@@ -119,7 +119,7 @@ final class SecondaryNodeQueue {
 
     final static void a(ResourceArchive param0, ResourceArchive param1, byte param2, ResourceArchive param3, ResourceArchive param4) {
         try {
-          kc.field_j = param1;
+          BallPulseEffect.field_j = param1;
           ta.field_g = param3;
           ic.field_a = param0;
           ag.field_G = param4;

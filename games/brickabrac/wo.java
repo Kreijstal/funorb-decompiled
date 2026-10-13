@@ -40,22 +40,22 @@ final class wo {
           var1 = 1;
           var2 = m.field_i;
           if (var2 == 0) {
-            cd.field_g = vm.a(kc.field_j, "", "BaB_title_music");
+            cd.field_g = vm.a(BallPulseEffect.field_j, "", "BaB_title_music");
             stackIn_77_0 = (null == cd.field_g) ? 0 : 1;
             var1Lifetime3 = stackIn_77_0;
           } else {
             if (1 == var2) {
-              MessageScreen.field_t = vm.a(kc.field_j, "", "BaB_panic");
+              MessageScreen.field_t = vm.a(BallPulseEffect.field_j, "", "BaB_panic");
               stackIn_85_0 = (MessageScreen.field_t == null) ? 0 : 1;
               var1Lifetime3 = stackIn_85_0;
             } else {
               if (var2 == 2) {
-                c.field_j = vm.a(kc.field_j, "", "BaB_game_completed");
+                c.field_j = vm.a(BallPulseEffect.field_j, "", "BaB_game_completed");
                 stackIn_124_0 = (null == c.field_j) ? 0 : 1;
                 var1Lifetime3 = stackIn_124_0;
               } else {
                 if (var2 == 3) {
-                  oj.field_q = vm.a(kc.field_j, "", "BaB_podium");
+                  oj.field_q = vm.a(BallPulseEffect.field_j, "", "BaB_podium");
                   stackIn_95_0 = (null == oj.field_q) ? 0 : 1;
                   var1Lifetime3 = stackIn_95_0;
                 } else {
@@ -93,22 +93,22 @@ final class wo {
         var1Lifetime1 = 1;
         var2Lifetime1 = m.field_i;
         if (var2Lifetime1 == 0) {
-          cd.field_g = vm.a(kc.field_j, "", "BaB_title_music");
+          cd.field_g = vm.a(BallPulseEffect.field_j, "", "BaB_title_music");
           stackIn_5_0 = (null == cd.field_g) ? 0 : 1;
           var1Lifetime2 = stackIn_5_0;
         } else {
           if (1 == var2Lifetime1) {
-            MessageScreen.field_t = vm.a(kc.field_j, "", "BaB_panic");
+            MessageScreen.field_t = vm.a(BallPulseEffect.field_j, "", "BaB_panic");
             stackIn_13_0 = (MessageScreen.field_t == null) ? 0 : 1;
             var1Lifetime2 = stackIn_13_0;
           } else {
             if (var2Lifetime1 == 2) {
-              c.field_j = vm.a(kc.field_j, "", "BaB_game_completed");
+              c.field_j = vm.a(BallPulseEffect.field_j, "", "BaB_game_completed");
               stackIn_52_0 = (null == c.field_j) ? 0 : 1;
               var1Lifetime2 = stackIn_52_0;
             } else {
               if (var2Lifetime1 == 3) {
-                oj.field_q = vm.a(kc.field_j, "", "BaB_podium");
+                oj.field_q = vm.a(BallPulseEffect.field_j, "", "BaB_podium");
                 stackIn_23_0 = (null == oj.field_q) ? 0 : 1;
                 var1Lifetime2 = stackIn_23_0;
               } else {

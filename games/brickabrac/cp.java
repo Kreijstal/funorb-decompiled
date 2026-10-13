@@ -331,10 +331,10 @@ final class cp extends h {
         RgbSprite var9 = null;
         int var8Lifetime1;
         try {
-          if (param4.field_U < 50) {
+          if (param4.maskedTicks < 50) {
             return;
           }
-          var7_int = param4.field_U - 50;
+          var7_int = param4.maskedTicks - 50;
           var8 = var7_int * 96 / 100;
           if (var8 > 96) {
             var8 = 96;
@@ -349,14 +349,14 @@ final class cp extends h {
           }
           Rasterizer2D.fillRectangleAlpha(stackIn_7_0, stackIn_7_1, stackIn_7_2, -stackIn_8_3 + param2 / param6, 0, var8);
           if (150 < var7_int * 2 &&
-            param4.field_zb > 0 &&
-            param4.field_zb - 1 < ArchiveNetworkClient.field_s.length) {
+            param4.resultCode > 0 &&
+            param4.resultCode - 1 < ArchiveNetworkClient.field_s.length) {
             var8Lifetime1 = -75 + var7_int;
             if (50 < var8Lifetime1) {
               var8Lifetime1 = 50;
             }
             var8Lifetime1 = 256 * var8Lifetime1 / 50;
-            var9 = ArchiveNetworkClient.field_s[param4.field_zb - 1];
+            var9 = ArchiveNetworkClient.field_s[param4.resultCode - 1];
             var9.b(param0 + (param1 - param6 * var9.canvasWidth) / (param6 * 2), param5 + (param2 - var9.canvasHeight * param6) / (param6 * 2), var8Lifetime1);
             lo.a(param1, var8Lifetime1, 60, param0, param6, param5, param2, param4);
           }

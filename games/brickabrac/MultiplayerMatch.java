@@ -7,8 +7,8 @@ final class MultiplayerMatch {
     int playerMaskOne;
     int playerCount;
     static mh field_d;
-    boolean field_c;
-    int[] field_m;
+    boolean resultsReady;
+    int[] resultOrder;
     int field_n;
     int field_h;
     String[] playerNames;
@@ -86,11 +86,11 @@ final class MultiplayerMatch {
         return var2;
     }
 
-    final void a(boolean param0) {
-        if (param0) {
+    final void markResultsReady(boolean obfuscationGuard) {
+        if (obfuscationGuard) {
           this.getStateSevenPlayerMask(-32);
         }
-        this.field_c = true;
+        this.resultsReady = true;
     }
 
     final int getStateSevenPlayerMask(int obfuscationGuard) {
@@ -154,7 +154,7 @@ final class MultiplayerMatch {
         StringBuilder stackIn_394_1 = null;
         String stackIn_395_2 = null;
         RuntimeException decompiledCaughtException = null;
-        kc var5 = null;
+        BallPulseEffect var5 = null;
         RuntimeException var5_ref = null;
         ScorePopup scorePopup = null;
         Paddle paddle = null;
@@ -235,12 +235,12 @@ final class MultiplayerMatch {
               board.b(16387, 0);
             }
           }
-          var5 = (kc) (board.field_x.first(-58));
+          var5 = (BallPulseEffect) (board.ballPulses.first(-58));
           while (var5 != null) {
-            if (!var5.c((byte) 69)) {
+            if (!var5.advance((byte) 69)) {
               var5.unlink((byte) 111);
             }
-            var5 = (kc) (board.field_x.next((byte) 116));
+            var5 = (BallPulseEffect) (board.ballPulses.next((byte) 116));
           }
           scorePopup = (ScorePopup) (board.scorePopups.first(-85));
           while (scorePopup != null) {
@@ -252,20 +252,20 @@ final class MultiplayerMatch {
           paddle = board.paddle;
           if (board.boardState == 2) {
             if (audioEvents != null &&
-              0 != (3 & board.field_db) &&
-              3 != board.field_db) {
+              0 != (3 & board.controlMask) &&
+              3 != board.controlMask) {
               audioEvents.addLast(new GameplayAudioEvent(4), (byte) 3);
             }
             if (0 < paddle.field_w) {
-              board.field_db = board.field_db ^ 3;
+              board.controlMask = board.controlMask ^ 3;
             }
-            if ((board.field_db & 2) != 0) {
+            if ((board.controlMask & 2) != 0) {
               paddle.velocityX256 = 2048;
             }
-            if ((board.field_db & 1) != 0) {
+            if ((board.controlMask & 1) != 0) {
               paddle.velocityX256 = paddle.velocityX256 - 2048;
             }
-            if ((board.field_db & 4) != 0) {
+            if ((board.controlMask & 4) != 0) {
               var8 = 0;
               if (!board.activeBalls.isEmpty(false)) {
                 var9 = (Ball) (board.activeBalls.first(-76));
@@ -276,7 +276,7 @@ final class MultiplayerMatch {
                     }
                     var8 = 1;
                     var9.contactCount = 0;
-                    board.field_x.addLast(new kc(var9.x256, var9.y256), (byte) 3);
+                    board.ballPulses.addLast(new BallPulseEffect(var9.x256, var9.y256), (byte) 3);
                     board.field_l = 0;
                     var20 = new CircleBody(var9.radius256 + var9.x256, var9.radius256 + var9.y256, 0, 0, 15360, 0);
                     var11 = 0;
@@ -918,7 +918,7 @@ final class MultiplayerMatch {
         }
         for (var4 = 0; var4 < this.playerCount; var4++) {
           if (((this.playerMaskOne | (this.playerMaskThree | this.playerMaskTwo)) & 1 << var4) == 0) {
-            var5 = this.playerBoards[var4].field_p + this.playerBoards[var4].boardOffset;
+            var5 = this.playerBoards[var4].positionWord + this.playerBoards[var4].boardOffset;
             var6 = 0;
             var7 = (var4 + 1) % this.playerCount;
             while (this.playerCount - 1 > var6) {
@@ -928,7 +928,7 @@ final class MultiplayerMatch {
                 var6++;
                 continue;
               }
-              var8 = this.playerBoards[var7].boardOffset + this.playerBoards[var7].field_p;
+              var8 = this.playerBoards[var7].boardOffset + this.playerBoards[var7].positionWord;
               if (var7 < var4) {
                 var8 = var8 + var3;
               }
@@ -949,7 +949,7 @@ final class MultiplayerMatch {
         int var5;
         var5 = BrickABrac.field_J ? 1 : 0;
         if (obfuscationGuard < 81) {
-          this.field_c = true;
+          this.resultsReady = true;
         }
         board = this.playerBoards[playerId];
         while (board.nextPowerUpIndex <= board.powerUpHistory.latestIndex) {
@@ -1161,15 +1161,15 @@ final class MultiplayerMatch {
         }
         var2 = ~(this.playerMaskTwo | this.playerMaskThree | this.playerMaskOne) & -1 + (1 << this.playerCount);
         if (var2 == 0) {
-          this.a(false);
+          this.markResultsReady(false);
         } else {
           if (wn.a(var2, (byte) -6)) {
             this.field_h = ed.b(9, var2 - 1);
             this.playerMaskThree = this.playerMaskThree | 1 << this.field_h;
-            this.a(false);
+            this.markResultsReady(false);
           }
         }
-        return this.field_c;
+        return this.resultsReady;
     }
 
     MultiplayerMatch(String[] param0, int param1, LevelSequence param2, int[] param3, int[] param4) {
@@ -1211,7 +1211,7 @@ final class MultiplayerMatch {
               var7++;
             }
           }
-          this.field_m = new int[this.playerCount];
+          this.resultOrder = new int[this.playerCount];
           this.field_h = -1;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

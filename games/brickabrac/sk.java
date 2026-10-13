@@ -55,11 +55,11 @@ final class sk extends h {
           var15 = id.a(hi.field_w, false);
           IntArrayRequest.gameplayScreen = new GameplayScreen(args, -1, var6_int, param2, var12, var15);
           IntArrayRequest.gameplayScreen.a((byte) 119, param1);
-          IntArrayRequest.gameplayScreen.field_q = true;
+          IntArrayRequest.gameplayScreen.snapshotsReady = true;
           stackIn_10_0 = IntArrayRequest.gameplayScreen;
-          stackIn_10_1 = IntArrayRequest.gameplayScreen.field_s;
+          stackIn_10_1 = IntArrayRequest.gameplayScreen.suppressResultSubmission;
           stackIn_11_2 = (kb.field_Yb >= 2) && (param3 == 1) && (GameConnectionShell.field_t);
-          stackIn_10_0.field_s = stackIn_10_1 | stackIn_11_2;
+          stackIn_10_0.suppressResultSubmission = stackIn_10_1 | stackIn_11_2;
           ng.requestScreen(param4, 103, -1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

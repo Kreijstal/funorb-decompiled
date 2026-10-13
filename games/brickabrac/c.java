@@ -161,8 +161,8 @@ final class c {
         } else {
           if (Rasterizer2D.width == kp.field_a) {
             if (Rasterizer2D.height != IsaacGenerator.field_i &&
-              Rasterizer2D.height == kc.framebuffer.height &&
-              Rasterizer2D.width == kc.framebuffer.width) {
+              Rasterizer2D.height == BallPulseEffect.framebuffer.height &&
+              Rasterizer2D.width == BallPulseEffect.framebuffer.width) {
               if (o.field_e != null) {
                 CacheIoRequest.a(true, false);
               } else {
@@ -228,8 +228,8 @@ final class c {
               }
             }
           } else {
-            if (Rasterizer2D.height == kc.framebuffer.height &&
-              Rasterizer2D.width == kc.framebuffer.width) {
+            if (Rasterizer2D.height == BallPulseEffect.framebuffer.height &&
+              Rasterizer2D.width == BallPulseEffect.framebuffer.width) {
               if (o.field_e != null) {
                 CacheIoRequest.a(true, false);
               } else {

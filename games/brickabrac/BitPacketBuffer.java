@@ -96,7 +96,7 @@ final class BitPacketBuffer extends PacketBuffer {
         PlayerBoard var24 = null;
         Object var25 = null;
         Ball var26 = null;
-        kc var27 = null;
+        BallPulseEffect var27 = null;
         ScorePopup var28 = null;
         var22 = null;
         var23 = null;
@@ -177,10 +177,10 @@ final class BitPacketBuffer extends PacketBuffer {
             var10 == 0) {
             oj.a(kb.a(match, playerId, 127, var24), var7, scaleDivisor, destinationY, (byte) 107, var24, destinationX);
           }
-          var27 = (kc) (var24.field_x.first(-30));
+          var27 = (BallPulseEffect) (var24.ballPulses.first(-30));
           while (var27 != null) {
-            var27.a(scaleDivisor, destinationX, destinationY, true);
-            var27 = (kc) (var24.field_x.next((byte) 116));
+            var27.draw(scaleDivisor, destinationX, destinationY, true);
+            var27 = (BallPulseEffect) (var24.ballPulses.next((byte) 116));
           }
           if (match.playerCount == 1 &&
             var24.boardState == 1) {

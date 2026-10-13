@@ -54,7 +54,7 @@ final class DelayedPacket extends IntrusiveNode {
           }
           var6.replaceZeroWithOne();
           param0.d(-param0.offsetX + param1, param1 - param0.offsetY, 0);
-          kc.framebuffer.bindRaster((byte) 109);
+          BallPulseEffect.framebuffer.bindRaster((byte) 109);
           var6.offsetY = param0.offsetY - param1;
           var6.offsetX = -param1 + param0.offsetX;
           stackIn_7_0 = var6;

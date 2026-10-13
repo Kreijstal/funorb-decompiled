@@ -229,10 +229,10 @@ final class om extends mh {
             param4.displayedMessage == null) {
             if (param0 &&
               var9_int != 0) {
-              if (param4.field_V < 0) {
-                var15_ref = Integer.toString(param4.field_V);
+              if (param4.resultWord < 0) {
+                var15_ref = Integer.toString(param4.resultWord);
               } else {
-                var15_ref = rd.a(hh.field_e, new String[]{Integer.toString(param4.field_V)}, (byte) 103);
+                var15_ref = rd.a(hh.field_e, new String[]{Integer.toString(param4.resultWord)}, (byte) 103);
               }
             } else {
               if (!param8.configuration.repeats) {
@@ -378,10 +378,10 @@ final class om extends mh {
             param4.displayedMessage == null) {
             if (param0 &&
               var9_int != 0) {
-              if (param4.field_V < 0) {
-                var15_ref = Integer.toString(param4.field_V);
+              if (param4.resultWord < 0) {
+                var15_ref = Integer.toString(param4.resultWord);
               } else {
-                var15_ref = rd.a(hh.field_e, new String[]{Integer.toString(param4.field_V)}, (byte) 103);
+                var15_ref = rd.a(hh.field_e, new String[]{Integer.toString(param4.resultWord)}, (byte) 103);
               }
             } else {
               if (!param8.configuration.repeats) {

@@ -31,12 +31,12 @@ final class lo {
         RuntimeException decompiledCaughtException = null;
         try {
           var8 = null;
-          if (param7.field_V != 0 &&
+          if (param7.resultWord != 0 &&
             1 != param4) {
-            if (param7.field_V < 0) {
-              stackIn_6_0 = Integer.toString(param7.field_V);
+            if (param7.resultWord < 0) {
+              stackIn_6_0 = Integer.toString(param7.resultWord);
             } else {
-              stackIn_6_0 = rd.a(hh.field_e, new String[]{Integer.toString(param7.field_V)}, (byte) 103);
+              stackIn_6_0 = rd.a(hh.field_e, new String[]{Integer.toString(param7.resultWord)}, (byte) 103);
             }
             var8_ref = stackIn_6_0;
             ce.field_e.drawCenteredAlpha(var8_ref, param3 + param0 / (param4 * 2), 60 / param4 + (param5 + (param6 / (param4 * 2) + ce.field_e.ascent)), 2, -1, param1);

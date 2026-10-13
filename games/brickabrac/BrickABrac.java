@@ -86,7 +86,7 @@ public final class BrickABrac extends InteractiveGameClient {
         }
         transitionActive = stackIn_10_0;
         if (IntArrayRequest.gameplayScreen != lp.currentScreen ||
-          IntArrayRequest.gameplayScreen.field_p ||
+          IntArrayRequest.gameplayScreen.networkedMatch ||
           transitionActive == 0) {
           stackIn_17_0 = lp.currentScreen;
           stackIn_17_1 = true;
@@ -95,7 +95,7 @@ public final class BrickABrac extends InteractiveGameClient {
         }
         if (transitionActive != 0) {
           if ((IntArrayRequest.gameplayScreen != hd.pendingScreen ||
-            IntArrayRequest.gameplayScreen.field_p) &&
+            IntArrayRequest.gameplayScreen.networkedMatch) &&
             hd.pendingScreen != null) {
             hd.pendingScreen.advanceScreen(false, false, -82);
           }
@@ -106,7 +106,7 @@ public final class BrickABrac extends InteractiveGameClient {
         } else {
           if (IntArrayRequest.gameplayScreen != null &&
             lp.currentScreen != IntArrayRequest.gameplayScreen &&
-            IntArrayRequest.gameplayScreen.field_p) {
+            IntArrayRequest.gameplayScreen.networkedMatch) {
             IntArrayRequest.gameplayScreen.advanceScreen(false, false, -81);
           }
         }
@@ -291,20 +291,20 @@ public final class BrickABrac extends InteractiveGameClient {
               if (IntArrayRequest.gameplayScreen == null) {
                 return true;
               }
-              if (IntArrayRequest.gameplayScreen.field_q) {
+              if (IntArrayRequest.gameplayScreen.snapshotsReady) {
                 rk.a("T3", (Throwable) null, 44);
               } else {
-                fieldTemp$0 = IntArrayRequest.gameplayScreen.field_x;
-                IntArrayRequest.gameplayScreen.field_x = IntArrayRequest.gameplayScreen.field_x + 1;
+                fieldTemp$0 = IntArrayRequest.gameplayScreen.loadedBoardSnapshots;
+                IntArrayRequest.gameplayScreen.loadedBoardSnapshots = IntArrayRequest.gameplayScreen.loadedBoardSnapshots + 1;
                 IntArrayRequest.gameplayScreen.match.playerBoards[fieldTemp$0].readBoardSnapshot(false, packet, IntArrayRequest.gameplayScreen.match.playerCount);
                 stackIn_74_0 = IntArrayRequest.gameplayScreen;
-                stackIn_75_1 = (IntArrayRequest.gameplayScreen.field_x == IntArrayRequest.gameplayScreen.match.playerCount);
-                stackIn_74_0.field_q = stackIn_75_1;
-                if (IntArrayRequest.gameplayScreen.field_q) {
+                stackIn_75_1 = (IntArrayRequest.gameplayScreen.loadedBoardSnapshots == IntArrayRequest.gameplayScreen.match.playerCount);
+                stackIn_74_0.snapshotsReady = stackIn_75_1;
+                if (IntArrayRequest.gameplayScreen.snapshotsReady) {
                   if (IntArrayRequest.gameplayScreen.c(103)) {
                     return true;
                   }
-                  IntArrayRequest.gameplayScreen.match.playerBoards[IntArrayRequest.gameplayScreen.field_k].field_E = IntArrayRequest.gameplayScreen.match.playerBoards[IntArrayRequest.gameplayScreen.field_k].simulationTick - 50;
+                  IntArrayRequest.gameplayScreen.match.playerBoards[IntArrayRequest.gameplayScreen.localPlayerId].receivedInputTick = IntArrayRequest.gameplayScreen.match.playerBoards[IntArrayRequest.gameplayScreen.localPlayerId].simulationTick - 50;
                 }
               }
               return true;
@@ -327,29 +327,29 @@ public final class BrickABrac extends InteractiveGameClient {
             boolean decompiledFrameRemainder0 = true;
             if (null != IntArrayRequest.gameplayScreen) {
               if (76 == IntrusiveHashTable.currentPacketOpcode) {
-                IntArrayRequest.gameplayScreen.a(packet, (byte) 74);
+                IntArrayRequest.gameplayScreen.readScheduledPowerUp(packet, (byte) 74);
                 return true;
               }
               if (73 != IntrusiveHashTable.currentPacketOpcode &&
                 IntrusiveHashTable.currentPacketOpcode != 74) {
                 if (IntrusiveHashTable.currentPacketOpcode == 75) {
-                  IntArrayRequest.gameplayScreen.a((byte) 33, packet);
+                  IntArrayRequest.gameplayScreen.readPositionCorrection((byte) 33, packet);
                   return true;
                 }
                 if (77 == IntrusiveHashTable.currentPacketOpcode) {
-                  IntArrayRequest.gameplayScreen.a(packet, false, 87);
+                  IntArrayRequest.gameplayScreen.readMaskedPlayerResult(packet, false, 87);
                   return true;
                 }
                 if (IntrusiveHashTable.currentPacketOpcode == 78) {
-                  IntArrayRequest.gameplayScreen.a(packet, true, 118);
+                  IntArrayRequest.gameplayScreen.readMaskedPlayerResult(packet, true, 118);
                   return true;
                 }
                 if (IntrusiveHashTable.currentPacketOpcode == 67) {
-                  IntArrayRequest.gameplayScreen.a(packet, obfuscationGuard - 47);
+                  IntArrayRequest.gameplayScreen.readResultOrder(packet, obfuscationGuard - 47);
                   return true;
                 }
                 if (IntrusiveHashTable.currentPacketOpcode == 69) {
-                  IntArrayRequest.gameplayScreen.a(18504, packet);
+                  IntArrayRequest.gameplayScreen.readMaskOnePlayerResult(18504, packet);
                   return true;
                 }
                 if (IntrusiveHashTable.currentPacketOpcode == 70) {
@@ -373,7 +373,7 @@ public final class BrickABrac extends InteractiveGameClient {
                 stackIn_99_1 = -15;
                 stackIn_99_2 = (BitPacketBuffer) (packet);
                 stackIn_100_3 = (IntrusiveHashTable.currentPacketOpcode == 74);
-                ((GameplayScreen) (Object) stackIn_99_0).a((byte) stackIn_99_1, stackIn_99_2, stackIn_100_3);
+                ((GameplayScreen) (Object) stackIn_99_0).readInputBatch((byte) stackIn_99_1, stackIn_99_2, stackIn_100_3);
                 return true;
               }
             }
@@ -418,9 +418,9 @@ public final class BrickABrac extends InteractiveGameClient {
           IntArrayRequest.gameplayScreen = new GameplayScreen(true, var4_int != 0, var30, var6Lifetime1, var15, var12, var39, var50);
           stackIn_58_0 = IntArrayRequest.gameplayScreen;
           stackIn_59_1 = (packet.readUnsignedByte(255) == 0);
-          stackIn_58_0.field_q = stackIn_59_1;
-          if (!IntArrayRequest.gameplayScreen.field_q) {
-            IntArrayRequest.gameplayScreen.field_x = 0;
+          stackIn_58_0.snapshotsReady = stackIn_59_1;
+          if (!IntArrayRequest.gameplayScreen.snapshotsReady) {
+            IntArrayRequest.gameplayScreen.loadedBoardSnapshots = 0;
           }
           if (IntrusiveHashTable.currentPacketOpcode == 64) {
             AchievementIcon.c((byte) 32);
@@ -671,13 +671,13 @@ public final class BrickABrac extends InteractiveGameClient {
         GameplayAudioEvent.d(0);
         Ball.c(122);
         BubbleDistortion.c(124);
-        kc.a(95);
+        BallPulseEffect.a(95);
         Paddle.e(-77);
         PowerUp.c(6);
         PowerUpWarning.b(false);
         ScorePopup.a((byte) -73);
         MultiplayerMatch.d(-19537);
-        p.b(false);
+        PlayerInputBatch.b(false);
         vd.a(true);
         TextFont.a();
         rf.a((byte) 98);

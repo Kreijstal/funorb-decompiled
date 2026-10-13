@@ -64,7 +64,7 @@ final class fi extends ki {
           if (null == s.field_d) {
             return false;
           }
-          if (kc.field_r == null) {
+          if (BallPulseEffect.field_r == null) {
             return false;
           }
           if (null == hk.field_I) {
@@ -78,7 +78,7 @@ final class fi extends ki {
         if (null == s.field_d) {
           return false;
         }
-        if (kc.field_r == null) {
+        if (BallPulseEffect.field_r == null) {
           return false;
         }
         if (null == hk.field_I) {
@@ -147,14 +147,14 @@ final class fi extends ki {
           dk.a(1, param3, var6, 0, 23275, hk.field_I);
           var6.setCacheKeys(this.field_m, param3, (byte) 78);
         } else {
-          SpriteGeometry.a(var6.sprite, 640, param2, param4, param3, param1, s.field_d, 1, kc.field_r, 1, 0);
+          SpriteGeometry.a(var6.sprite, 640, param2, param4, param3, param1, s.field_d, 1, BallPulseEffect.field_r, 1, 0);
           if (!param0) {
             this.a(false);
             return;
           }
           return;
         }
-        SpriteGeometry.a(var6.sprite, 640, param2, param4, param3, param1, s.field_d, 1, kc.field_r, 1, 0);
+        SpriteGeometry.a(var6.sprite, 640, param2, param4, param3, param1, s.field_d, 1, BallPulseEffect.field_r, 1, 0);
         if (param0) {
           return;
         }
@@ -164,11 +164,11 @@ final class fi extends ki {
     final boolean a(boolean param0) {
         if (AchievementIcon.field_m.ensureGroupAvailableByName("arctic", -28138)) {
           s.field_d = pl.loadRgbSpriteByName("arctic", "arctic_near", (byte) 117, AchievementIcon.field_m);
-          kc.field_r = pl.loadRgbSpriteByName("arctic", "arctic_mid", (byte) -79, AchievementIcon.field_m);
+          BallPulseEffect.field_r = pl.loadRgbSpriteByName("arctic", "arctic_mid", (byte) -79, AchievementIcon.field_m);
           hk.field_I = pl.loadRgbSpriteByName("arctic", "arctic_far", (byte) 112, AchievementIcon.field_m);
           be.field_d = pl.loadRgbSpriteByName("arctic", "arctic_small", (byte) -44, AchievementIcon.field_m);
           un.field_d = jh.a(0, s.field_d);
-          jl.field_d = jh.a(0, kc.field_r);
+          jl.field_d = jh.a(0, BallPulseEffect.field_r);
           Brick.field_K = jh.a(0, hk.field_I);
           ObjectHistoryBuffer.field_o[0] = cr.loadRgbSpritesByName("arctic", AchievementIcon.field_m, "arctic_caps", 2);
           ja.field_a[0] = cr.loadRgbSpritesByName("arctic", AchievementIcon.field_m, "arctic_segs", 2);

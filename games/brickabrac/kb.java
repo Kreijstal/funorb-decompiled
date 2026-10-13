@@ -323,13 +323,13 @@ final class kb extends mh {
           if (var4_int == 0 &&
             param3.boardState == 2 && (!r.field_A ||
             !ka.a((byte) 93))) {
-            if ((1 & param3.field_db) != 0 &&
-              (-2 & param3.field_db) == 0) {
+            if ((1 & param3.controlMask) != 0 &&
+              (-2 & param3.controlMask) == 0) {
               stackIn_13_0 = 0;
               return stackIn_13_0;
             }
-            if ((param3.field_db & 2) != 0) {
-              if ((param3.field_db & -3) != 0) {
+            if ((param3.controlMask & 2) != 0) {
+              if ((param3.controlMask & -3) != 0) {
                 return 1;
               }
               stackIn_18_0 = 2;

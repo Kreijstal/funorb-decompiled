@@ -195,7 +195,7 @@ final class AchievementIcon extends IntrusiveNode {
         if (IntArrayRequest.gameplayScreen.c(116)) {
           return;
         }
-        if ((1 << IntArrayRequest.gameplayScreen.field_k & IntArrayRequest.gameplayScreen.match.field_n) == 0) {
+        if ((1 << IntArrayRequest.gameplayScreen.localPlayerId & IntArrayRequest.gameplayScreen.match.field_n) == 0) {
           if (IntArrayRequest.gameplayScreen.match.field_n != 0) {
             ag.buttonLabels[10] = er.field_a;
             if (param0 != 32) {

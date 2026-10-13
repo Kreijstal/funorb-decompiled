@@ -75,7 +75,7 @@ final class gr {
           ArchiveNetworkClient.field_s = ln.field_j;
           jc.field_J = mh.field_ib;
           tf.field_c = kp.field_e;
-          field_c = p.field_i;
+          field_c = PlayerInputBatch.field_i;
           Ball.field_w = cq.field_o;
           we.field_b = ch.field_k;
           bq.field_e = hc.field_a;

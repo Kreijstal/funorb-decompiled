@@ -88,8 +88,8 @@ final class eh {
           var6.field_f = 0;
           var7 = new up(var4, true);
           var7.field_f = 0;
-          var7.a(kc.a(8947848, false), false);
-          var7.b(1, 110).a(kc.a(11184810, false), param1 + 2134061876).a(false, 2236962);
+          var7.a(BallPulseEffect.a(8947848, false), false);
+          var7.b(1, 110).a(BallPulseEffect.a(11184810, false), param1 + 2134061876).a(false, 2236962);
           this.field_o = (ub) ((Object) new ei(param0, 2, 2, 16777215, -1, 5, 5, 15, 15, 4473924));
           discarded$0 = new pf(param0, 2, 2, 16777215, -1, 16777215, 16729156, 4473924);
           discarded$1 = new dg(param0, 16777215, -1, 125269879, 4473924, 3, 268435455);

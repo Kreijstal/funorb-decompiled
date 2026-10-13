@@ -146,7 +146,7 @@ final class po {
           var4 = IntArrayRequest.gameplayScreen.match;
           var5 = var4;
           ec.field_Q = oa.field_Sb;
-          ci.field_r = IntArrayRequest.gameplayScreen.field_p;
+          ci.field_r = IntArrayRequest.gameplayScreen.networkedMatch;
           TableDataRequest.field_k = IntArrayRequest.gameplayScreen.c(124);
           cb.field_n = IntArrayRequest.gameplayScreen.field_n;
           sk.field_I = IntArrayRequest.gameplayScreen.match.playerCount;
@@ -154,9 +154,9 @@ final class po {
           for (var2 = 0; var2 < sk.field_I; var2++) {
             fh.field_h[var2] = var4.playerNames[var2];
           }
-          BitPacketBuffer.field_o = new int[var5.field_m.length];
-          for (var2Lifetime1 = 0; var5.field_m.length > var2Lifetime1; var2Lifetime1++) {
-            BitPacketBuffer.field_o[var2Lifetime1] = var5.field_m[var2Lifetime1];
+          BitPacketBuffer.field_o = new int[var5.resultOrder.length];
+          for (var2Lifetime1 = 0; var5.resultOrder.length > var2Lifetime1; var2Lifetime1++) {
+            BitPacketBuffer.field_o[var2Lifetime1] = var5.resultOrder[var2Lifetime1];
           }
           ArchiveNetworkRequest.field_C = new int[sk.field_I];
           for (var2Lifetime2 = 0; var2Lifetime2 < sk.field_I; var2Lifetime2++) {
@@ -167,7 +167,7 @@ final class po {
           if (!TableDataRequest.field_k) {
             for (var2Lifetime3 = 0; BitPacketBuffer.field_o.length > var2Lifetime3; var2Lifetime3++) {
               stackIn_18_0 = LevelMetadata.field_p;
-              stackIn_19_1 = (~IntArrayRequest.gameplayScreen.field_k == ~var5.field_m[var2Lifetime3]);
+              stackIn_19_1 = (~IntArrayRequest.gameplayScreen.localPlayerId == ~var5.resultOrder[var2Lifetime3]);
               LevelMetadata.field_p = stackIn_18_0 | stackIn_19_1;
             }
           }

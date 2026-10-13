@@ -27,7 +27,7 @@ final class sb implements vc {
         if (null == IntArrayRequest.gameplayScreen) {
           return false;
         }
-        if (!IntArrayRequest.gameplayScreen.field_p) {
+        if (!IntArrayRequest.gameplayScreen.networkedMatch) {
           return false;
         }
         var3 = IntArrayRequest.gameplayScreen;
@@ -35,10 +35,10 @@ final class sb implements vc {
         if (var3.c(99)) {
           return true;
         }
-        if (var3.match.field_c) {
+        if (var3.match.resultsReady) {
           return true;
         }
-        stackIn_18_0 = (((var4.playerMaskThree | var4.playerMaskTwo | var4.playerMaskOne) & var3.field_o) != 0);
+        stackIn_18_0 = (((var4.playerMaskThree | var4.playerMaskTwo | var4.playerMaskOne) & var3.localPlayerMask) != 0);
         return stackIn_18_0;
     }
 
@@ -269,7 +269,7 @@ final class sb implements vc {
                 }
                 return;
               }
-              if (IntArrayRequest.gameplayScreen.match.field_c) {
+              if (IntArrayRequest.gameplayScreen.match.resultsReady) {
                 var5Lifetime10 = 1;
                 if (this.d(-119)) {
                   NewAchievementsScreen.a(var3, var4 != 0, var5Lifetime10 != 0, -114);
@@ -306,7 +306,7 @@ final class sb implements vc {
           if (var4Lifetime7 == 0) {
             if (!pf.field_p) {
               if (IntArrayRequest.gameplayScreen != null &&
-                IntArrayRequest.gameplayScreen.match.field_c) {
+                IntArrayRequest.gameplayScreen.match.resultsReady) {
                 var5Lifetime7 = 1;
                 if (this.d(-119)) {
                   NewAchievementsScreen.a(var3, var4Lifetime7 != 0, var5Lifetime7 != 0, -114);
@@ -362,7 +362,7 @@ final class sb implements vc {
           } else {
             if (!pf.field_p) {
               if (IntArrayRequest.gameplayScreen != null) {
-                stackIn_20_0 = (IntArrayRequest.gameplayScreen.match.field_c) ? 1 : 0;
+                stackIn_20_0 = (IntArrayRequest.gameplayScreen.match.resultsReady) ? 1 : 0;
               } else {
                 stackIn_20_0 = 0;
               }
@@ -396,7 +396,7 @@ final class sb implements vc {
               } else {
                 if (!pf.field_p) {
                   if (IntArrayRequest.gameplayScreen != null) {
-                    stackIn_46_0 = (IntArrayRequest.gameplayScreen.match.field_c) ? 1 : 0;
+                    stackIn_46_0 = (IntArrayRequest.gameplayScreen.match.resultsReady) ? 1 : 0;
                   } else {
                     stackIn_46_0 = 0;
                   }
@@ -467,7 +467,7 @@ final class sb implements vc {
                   ((RgbSprite) (Object) stackIn_79_0).b(stackIn_79_1, stackIn_79_2, stackIn_80_3);
                 }
               } else {
-                if (IntArrayRequest.gameplayScreen.match.field_c) {
+                if (IntArrayRequest.gameplayScreen.match.resultsReady) {
                   var5Lifetime2Lifetime1 = 1;
                   if (this.d(-119)) {
                     NewAchievementsScreen.a(var3Lifetime2, var4Lifetime2Lifetime1 != 0, var5Lifetime2Lifetime1 != 0, -114);
@@ -547,7 +547,7 @@ final class sb implements vc {
                   ((RgbSprite) (Object) stackIn_263_0).b(stackIn_263_1, stackIn_263_2, stackIn_264_3);
                 }
               } else {
-                if (!IntArrayRequest.gameplayScreen.match.field_c) {
+                if (!IntArrayRequest.gameplayScreen.match.resultsReady) {
                   var5Lifetime3 = 0;
                   if (this.d(-119)) {
                     NewAchievementsScreen.a(var3Lifetime3, var4Lifetime3 != 0, var5Lifetime3 != 0, -114);
@@ -625,7 +625,7 @@ final class sb implements vc {
                   ((RgbSprite) (Object) stackIn_136_0).b(stackIn_136_1, stackIn_136_2, stackIn_137_3);
                 }
               } else {
-                if (IntArrayRequest.gameplayScreen.match.field_c) {
+                if (IntArrayRequest.gameplayScreen.match.resultsReady) {
                   var5Lifetime4 = 1;
                   if (this.d(-119)) {
                     NewAchievementsScreen.a(var3Lifetime3, var4Lifetime4 != 0, var5Lifetime4 != 0, -114);
@@ -662,7 +662,7 @@ final class sb implements vc {
           if (var4Lifetime5 == 0) {
             if (!pf.field_p) {
               if (IntArrayRequest.gameplayScreen != null) {
-                stackIn_181_0 = (IntArrayRequest.gameplayScreen.match.field_c) ? 1 : 0;
+                stackIn_181_0 = (IntArrayRequest.gameplayScreen.match.resultsReady) ? 1 : 0;
               } else {
                 stackIn_181_0 = 0;
               }
@@ -720,7 +720,7 @@ final class sb implements vc {
             }
             return;
           }
-          if (IntArrayRequest.gameplayScreen.match.field_c) {
+          if (IntArrayRequest.gameplayScreen.match.resultsReady) {
             var5Lifetime6 = 1;
             if (this.d(-119)) {
               NewAchievementsScreen.a(var3Lifetime3, var4Lifetime6 != 0, var5Lifetime6 != 0, -114);

@@ -20,7 +20,7 @@ final class jh {
           var2 = new RgbSprite(param1.canvasWidth / 2, param1.canvasHeight / 2);
           var2.bindRasterTarget();
           param1.a(param0, 0, param1.canvasWidth / 2, param1.canvasHeight / 2);
-          kc.framebuffer.bindRaster((byte) 102);
+          BallPulseEffect.framebuffer.bindRaster((byte) 102);
           stackIn_1_0 = var2;
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

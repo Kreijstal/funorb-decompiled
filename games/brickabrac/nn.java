@@ -430,7 +430,7 @@ final class nn {
                 }
                 var2 = nk.a("mu_gamelist_avg_rating", (byte) 125);
                 if (var2 != null) {
-                  kc.field_o = MenuButton.a(var2, (byte) 103);
+                  BallPulseEffect.field_o = MenuButton.a(var2, (byte) 103);
                 }
                 var2 = nk.a("mu_gamelist_options", (byte) -112);
                 if (null != var2) {
@@ -466,7 +466,7 @@ final class nn {
                 }
                 var2 = nk.a("mu_options_allow_spectate", (byte) -107);
                 if (var2 != null) {
-                  p.field_j = MenuButton.a(var2, (byte) 85);
+                  PlayerInputBatch.field_j = MenuButton.a(var2, (byte) 85);
                 }
                 var2 = nk.a("mu_options_ratedgametype", (byte) -114);
                 if (null != var2) {
@@ -1624,7 +1624,7 @@ final class nn {
                 }
                 var2 = nk.a("login_username_email", (byte) -128);
                 if (var2 != null) {
-                  p.field_p = MenuButton.a(var2, (byte) 93);
+                  PlayerInputBatch.field_p = MenuButton.a(var2, (byte) 93);
                 }
                 var2 = nk.a("login_username", (byte) 66);
                 if (var2 != null) {
@@ -1930,7 +1930,7 @@ final class nn {
                 }
                 var2 = nk.a("waitingfor_music", (byte) 18);
                 if (var2 != null) {
-                  kc.field_i = MenuButton.a(var2, (byte) 116);
+                  BallPulseEffect.field_i = MenuButton.a(var2, (byte) 116);
                 }
                 var2 = nk.a("waitingfor_instruments", (byte) 41);
                 if (null != var2) {

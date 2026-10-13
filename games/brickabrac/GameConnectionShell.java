@@ -539,7 +539,7 @@ abstract class GameConnectionShell extends AppletGameShell {
                             }
                             stackIn_31_0 = 67;
                             stackIn_32_1 = (var2 == 12);
-                            var3 = kc.$cfr$intArgs$a$a948187ac0af(stackIn_31_0, stackIn_32_1);
+                            var3 = BallPulseEffect.$cfr$intArgs$a$a948187ac0af(stackIn_31_0, stackIn_32_1);
                             PowerUpWarning.a(var3, 79);
                           }
                         } else {
@@ -860,7 +860,7 @@ abstract class GameConnectionShell extends AppletGameShell {
             sg.field_l = ni.h(114);
             ri.field_M = ar.a((byte) 120);
           }
-          kc.a(ja.field_c, sg.field_l, ri.field_M, 107);
+          BallPulseEffect.a(ja.field_c, sg.field_l, ri.field_M, 107);
           vh.field_S = null;
           ma.field_P = null;
           ja.field_c = null;

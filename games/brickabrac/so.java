@@ -187,14 +187,14 @@ final class so {
           nj.field_z = new RgbSprite(32, 32);
           nj.field_z.bindRasterTarget();
           DelayedPacket.field_p.c(0, 0, 32, 32);
-          kc.framebuffer.bindRaster((byte) 91);
+          BallPulseEffect.framebuffer.bindRaster((byte) 91);
           DelayedPacket.field_p = null;
           var19 = new RgbSprite(LevelCompleteScreen.field_F.canvasWidth / 4, LevelCompleteScreen.field_F.canvasHeight / 4);
           var19.bindRasterTarget();
           LevelCompleteScreen.field_F.e(0, 0);
-          kc.framebuffer.bindRaster((byte) 113);
-          bf.field_L = p.a(-12, var19, 8, 9838226);
-          qh.field_c = p.a(-12, var19, 12, 9838226);
+          BallPulseEffect.framebuffer.bindRaster((byte) 113);
+          bf.field_L = PlayerInputBatch.a(-12, var19, 8, 9838226);
+          qh.field_c = PlayerInputBatch.a(-12, var19, 12, 9838226);
           var8 = null;
           e.field_l = new RgbSprite[IntrusiveHashTable.achievementSourceIcons.length];
           pa.field_h = new RgbSprite[IntrusiveHashTable.achievementSourceIcons.length];
@@ -203,9 +203,9 @@ final class so {
             var20.bindRasterTarget();
             Rasterizer2D.clear();
             IntrusiveHashTable.achievementSourceIcons[var10_int].drawQuarter(0, 0);
-            kc.framebuffer.bindRaster((byte) 101);
-            e.field_l[var10_int] = p.a(-12, var20, 8, 9838226);
-            pa.field_h[var10_int] = p.a(LevelResultSubmission.a(param3, -29147), var20, 12, 9838226);
+            BallPulseEffect.framebuffer.bindRaster((byte) 101);
+            e.field_l[var10_int] = PlayerInputBatch.a(-12, var20, 8, 9838226);
+            pa.field_h[var10_int] = PlayerInputBatch.a(LevelResultSubmission.a(param3, -29147), var20, 12, 9838226);
           }
           CircleBody.field_t = new RgbSprite[lo.field_c.length][];
           var9 = null;
@@ -266,8 +266,8 @@ final class so {
           ep.field_j = new RgbSprite(dk.field_R.canvasWidth / 2, dk.field_R.canvasHeight / 2);
           ep.field_j.bindRasterTarget();
           dk.field_R.a(0, 0);
-          p.field_i = new RgbSprite(MenuSelection.field_k.canvasWidth / 2, MenuSelection.field_k.canvasHeight / 2);
-          p.field_i.bindRasterTarget();
+          PlayerInputBatch.field_i = new RgbSprite(MenuSelection.field_k.canvasWidth / 2, MenuSelection.field_k.canvasHeight / 2);
+          PlayerInputBatch.field_i.bindRasterTarget();
           MenuSelection.field_k.a(0, 0);
           mh.field_ib = new RgbSprite(Ball.field_D.canvasWidth / 2, Ball.field_D.canvasHeight / 2);
           mh.field_ib.bindRasterTarget();
@@ -281,7 +281,7 @@ final class so {
             ch.field_k[var10_intLifetime6].bindRasterTarget();
             gg.field_p[var10_intLifetime6].a(0, 0);
           }
-          kc.framebuffer.bindRaster((byte) 79);
+          BallPulseEffect.framebuffer.bindRaster((byte) 79);
           for (var10_intLifetime7 = 0; var10_intLifetime7 < ln.field_j.length; var10_intLifetime7++) {
             ln.field_j[var10_intLifetime7].trimTransparentBorders();
           }
@@ -321,7 +321,7 @@ final class so {
           }
           BoundedFile.field_a = new RgbSprite[tf.field_g.length];
           for (var10_intLifetime12 = 0; BoundedFile.field_a.length > var10_intLifetime12; var10_intLifetime12++) {
-            BoundedFile.field_a[var10_intLifetime12] = p.a(LevelResultSubmission.a(param3, -29147), tf.field_g[var10_intLifetime12], 14, 16755200);
+            BoundedFile.field_a[var10_intLifetime12] = PlayerInputBatch.a(LevelResultSubmission.a(param3, -29147), tf.field_g[var10_intLifetime12], 14, 16755200);
           }
           lk.field_n = new RgbSprite[tf.field_g.length];
           for (var10_intLifetime13 = 0; var10_intLifetime13 < lk.field_n.length; var10_intLifetime13++) {
@@ -333,7 +333,7 @@ final class so {
           cq.field_o = new RgbSprite(dg.field_e.canvasWidth / 2, dg.field_e.canvasHeight / 2);
           cq.field_o.bindRasterTarget();
           dg.field_e.a(0, 0);
-          kc.framebuffer.bindRaster((byte) 118);
+          BallPulseEffect.framebuffer.bindRaster((byte) 118);
           var10 = pl.loadRgbSpriteByName("basic", "flame", (byte) 107, param0);
           hc.field_a = new RgbSprite[2][4];
           ip.field_v = new RgbSprite[2][4];
@@ -347,7 +347,7 @@ final class so {
             var10.a(0, 0, ip.field_v[0][var11].canvasWidth / 2, ip.field_v[0][var11].canvasHeight / 2);
             hc.field_a[1][var11] = hc.field_a[0][var11].copyFlippedHorizontal();
           }
-          kc.framebuffer.bindRaster((byte) 127);
+          BallPulseEffect.framebuffer.bindRaster((byte) 127);
           SaveResultsPromptScreen.packCardIcons = bd.loadRgbSpritesByName("basic", "expansion_icons", param0, (byte) -8);
           ArchiveNetworkRequest.packSelectorIcons = new RgbSprite[SaveResultsPromptScreen.packCardIcons.length];
           for (var11Lifetime1 = 0; var11Lifetime1 < SaveResultsPromptScreen.packCardIcons.length; var11Lifetime1++) {
@@ -362,7 +362,7 @@ final class so {
           }
           ik.field_f = new RgbSprite[SaveResultsPromptScreen.packCardIcons.length];
           for (var11Lifetime3 = 0; var11Lifetime3 < SaveResultsPromptScreen.packCardIcons.length; var11Lifetime3++) {
-            ik.field_f[var11Lifetime3] = p.a(LevelResultSubmission.a(param3, -29147), ArchiveNetworkRequest.packSelectorIcons[var11Lifetime3], 14, 16777215);
+            ik.field_f[var11Lifetime3] = PlayerInputBatch.a(LevelResultSubmission.a(param3, -29147), ArchiveNetworkRequest.packSelectorIcons[var11Lifetime3], 14, 16777215);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

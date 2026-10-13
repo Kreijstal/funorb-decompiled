@@ -399,7 +399,7 @@ final class hk extends ib implements hf, en {
           if (this.field_N != null) {
             this.field_w = this.field_w + (5 + var7.measureWrappedHeight(this.field_N, -40 + this.field_t, var7.ascent));
           }
-          var8 = p.field_p;
+          var8 = PlayerInputBatch.field_p;
           var9 = qi.a(uc.e((byte) -115), -28432);
           if (uc.field_k == var9) {
             var8 = sq.field_a;

@@ -3,7 +3,7 @@
  */
 final class KeyboardInput implements java.awt.event.KeyListener, java.awt.event.FocusListener {
     static String field_b;
-    static boolean field_a;
+    static boolean hasNonnegativeResult;
 
     final static String a(int param0, boolean param1, String param2) {
         RuntimeException var3 = null;
@@ -357,7 +357,7 @@ final class KeyboardInput implements java.awt.event.KeyListener, java.awt.event.
     public static void a(byte param0) {
         field_b = null;
         if (param0 != -42) {
-          field_a = false;
+          hasNonnegativeResult = false;
         }
     }
 

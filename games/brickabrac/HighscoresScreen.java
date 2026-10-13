@@ -20,7 +20,7 @@ final class HighscoresScreen extends MenuScreen {
         rf.field_g = null;
         this.packIndex = 0;
         if (IntArrayRequest.gameplayScreen != null &&
-          !IntArrayRequest.gameplayScreen.field_p) {
+          !IntArrayRequest.gameplayScreen.networkedMatch) {
           var4 = IntArrayRequest.gameplayScreen.match.configuration;
           if (var4.pack.packId == 1) {
             this.packIndex = 1;

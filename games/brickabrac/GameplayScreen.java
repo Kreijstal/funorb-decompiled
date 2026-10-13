@@ -2,23 +2,23 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class GameplayScreen extends GameScreen {
-    boolean field_p;
+    boolean networkedMatch;
     static int field_h;
     MultiplayerMatch match;
     static RgbSprite field_l;
     int field_v;
     int field_r;
     private int field_i;
-    int field_x;
+    int loadedBoardSnapshots;
     static mh field_u;
     boolean field_n;
     static int field_j;
-    int field_k;
-    boolean field_s;
-    private int field_m;
+    int localPlayerId;
+    boolean suppressResultSubmission;
+    private int viewedPlayerId;
     private boolean field_y;
-    boolean field_q;
-    int field_o;
+    boolean snapshotsReady;
+    int localPlayerMask;
     private int field_t;
 
     private final void a(int param0) {
@@ -42,15 +42,15 @@ final class GameplayScreen extends GameScreen {
         var2 = stackIn_6_0;
         if (param0 != -1) {
           var3 = (PlayerBoard) null;
-          this.a((byte) -2, (PlayerBoard) null);
+          this.readLocalControls((byte) -2, (PlayerBoard) null);
         }
         stackIn_10_0 = var2;
-        stackIn_11_1 = ((this.field_o & (this.match.playerMaskOne | this.match.playerMaskTwo | this.match.playerMaskThree)) != this.field_o) ? 0 : 1;
+        stackIn_11_1 = ((this.localPlayerMask & (this.match.playerMaskOne | this.match.playerMaskTwo | this.match.playerMaskThree)) != this.localPlayerMask) ? 0 : 1;
         boolean decompiledFrameRemainder0 = true;
         var2Lifetime1 = stackIn_10_0 & stackIn_11_1;
         stackIn_16_0 = var2Lifetime1;
-        if (2 < this.match.playerCount && (this.field_k < 0 ||
-          !(this.match.playerBoards[this.field_k].field_U < 50))) {
+        if (2 < this.match.playerCount && (this.localPlayerId < 0 ||
+          !(this.match.playerBoards[this.localPlayerId].maskedTicks < 50))) {
           stackIn_17_1 = 1;
           decompiledFrameRemainder0 = false;
         }
@@ -63,16 +63,16 @@ final class GameplayScreen extends GameScreen {
           if (!IntArrayRequest.heldKeys[fq.field_b] &&
             !IntArrayRequest.heldKeys[td.field_u]) {
             if (!(!IntArrayRequest.heldKeys[ac.field_f])) {
-              fieldTemp$0 = this.field_m - 1;
-              this.field_m = this.field_m - 1;
-              this.field_m = (this.match.playerCount + fieldTemp$0) % this.match.playerCount;
+              fieldTemp$0 = this.viewedPlayerId - 1;
+              this.viewedPlayerId = this.viewedPlayerId - 1;
+              this.viewedPlayerId = (this.match.playerCount + fieldTemp$0) % this.match.playerCount;
             }
             decompiledFrameRemainder1 = false;
           }
           else {
-            fieldTemp$1 = this.field_m + 1;
-            this.field_m = this.field_m + 1;
-            this.field_m = fieldTemp$1 % this.match.playerCount;
+            fieldTemp$1 = this.viewedPlayerId + 1;
+            this.viewedPlayerId = this.viewedPlayerId + 1;
+            this.viewedPlayerId = fieldTemp$1 % this.match.playerCount;
           }
         }
         stackIn_30_0 = (IntArrayRequest.heldKeys[fq.field_b]) || (IntArrayRequest.heldKeys[ac.field_f]) || (IntArrayRequest.heldKeys[td.field_u]);
@@ -97,7 +97,7 @@ final class GameplayScreen extends GameScreen {
 
     final void drawScreen(byte obfuscationGuard) {
         Rasterizer2D.resetClip();
-        if (!this.field_q) {
+        if (!this.snapshotsReady) {
           return;
         }
         if (obfuscationGuard > -14) {
@@ -106,7 +106,7 @@ final class GameplayScreen extends GameScreen {
         this.g(41);
     }
 
-    final void a(BitPacketBuffer param0, boolean param1, int param2) {
+    final void readMaskedPlayerResult(BitPacketBuffer packet, boolean maskThree, int obfuscationGuard) {
         int var4_int = 0;
         int var5 = 0;
         RuntimeException stackIn_6_0 = null;
@@ -115,11 +115,11 @@ final class GameplayScreen extends GameScreen {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var4 = null;
         try {
-          var4_int = param0.readUnsignedByte(255);
-          this.match.playerBoards[var4_int].field_V = param0.readMedium(48);
-          var5 = -101 % ((param2 - 26) / 60);
-          if (param1) {
-            this.match.playerBoards[var4_int].field_zb = param0.readUnsignedByte(255);
+          var4_int = packet.readUnsignedByte(255);
+          this.match.playerBoards[var4_int].resultWord = packet.readMedium(48);
+          var5 = -101 % ((obfuscationGuard - 26) / 60);
+          if (maskThree) {
+            this.match.playerBoards[var4_int].resultCode = packet.readUnsignedByte(255);
             this.match.playerMaskThree = this.match.playerMaskThree | 1 << var4_int;
           } else {
             this.match.playerMaskTwo = this.match.playerMaskTwo | 1 << var4_int;
@@ -130,27 +130,27 @@ final class GameplayScreen extends GameScreen {
           var4 = decompiledCaughtException;
           stackIn_6_0 = var4;
           stackIn_6_1 = new StringBuilder().append("qj.A(");
-          if (param0 == null) {
+          if (packet == null) {
             stackIn_7_2 = "null";
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw qb.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw qb.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(maskThree).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 
-    final void a(byte param0, BitPacketBuffer param1) {
+    final void readPositionCorrection(byte obfuscationGuard, BitPacketBuffer packet) {
         PlayerBoard dupTemp$0 = null;
         try {
-          dupTemp$0 = this.match.playerBoards[this.field_k];
-          dupTemp$0.field_E = dupTemp$0.field_E + 5;
-          this.match.playerBoards[this.field_k].field_p = param1.readUnsignedShort(65280);
-          if (param0 != 33) {
+          dupTemp$0 = this.match.playerBoards[this.localPlayerId];
+          dupTemp$0.receivedInputTick = dupTemp$0.receivedInputTick + 5;
+          this.match.playerBoards[this.localPlayerId].positionWord = packet.readUnsignedShort(65280);
+          if (obfuscationGuard != 33) {
             PlayerBoard var4 = (PlayerBoard) null;
-            this.a((byte) 15, (PlayerBoard) null);
+            this.readLocalControls((byte) 15, (PlayerBoard) null);
           }
         } catch (RuntimeException runtimeException) {
-          throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "qj.M(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "qj.M(" + obfuscationGuard + ',' + (packet != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -160,7 +160,7 @@ final class GameplayScreen extends GameScreen {
         if (this.recordAchievement(param2, 1)) {
           return;
         }
-        if (!this.field_s) {
+        if (!this.suppressResultSubmission) {
           var4 = this.match.playerBoards[0].score;
           ep.resultCounterTwo = ep.resultCounterTwo - (var4 + this.field_t);
           var5 = this.match.playerBoards[0].levelIndex;
@@ -216,7 +216,7 @@ final class GameplayScreen extends GameScreen {
         PlayerBoard var17Lifetime1;
         PlayerBoard var17Lifetime2;
         var14 = BrickABrac.field_J ? 1 : 0;
-        if (!this.field_q) {
+        if (!this.snapshotsReady) {
           return;
         }
         if (null != oa.field_Sb) {
@@ -242,12 +242,12 @@ final class GameplayScreen extends GameScreen {
             }
           }
         }
-        stackIn_15_0 = (this.match.playerBoards[this.field_m].field_M == -1) ? 0 : 1;
+        stackIn_15_0 = (this.match.playerBoards[this.viewedPlayerId].field_M == -1) ? 0 : 1;
         var4 = stackIn_15_0;
         stackIn_19_0 = var4;
-        if (!this.field_p &&
+        if (!this.networkedMatch &&
           this.match.playerCount == 2 &&
-          -1 != this.match.playerBoards[-this.field_m + 1].field_M) {
+          -1 != this.match.playerBoards[-this.viewedPlayerId + 1].field_M) {
           stackIn_20_1 = 1;
         } else {
           stackIn_20_1 = 0;
@@ -257,7 +257,7 @@ final class GameplayScreen extends GameScreen {
           this.match.playerBoards[0].boardState == 5) {
           ji.a(25459, true, c.field_j, 1, 1, true);
         } else {
-          if (!this.match.field_c) {
+          if (!this.match.resultsReady) {
             if (var4Lifetime1 != 0) {
               ji.a(25459, true, MessageScreen.field_t, 1, 1, true);
             } else {
@@ -272,7 +272,7 @@ final class GameplayScreen extends GameScreen {
             ji.a(25459, true, oj.field_q, 1, 1, true);
           }
         }
-        if (this.match.field_c &&
+        if (this.match.resultsReady &&
           this.match.playerCount > 1) {
           fieldTemp$2 = be.field_j + 1;
           be.field_j = be.field_j + 1;
@@ -280,17 +280,17 @@ final class GameplayScreen extends GameScreen {
             if (m.field_a) {
               fieldTemp$3 = ml.field_f + 1;
               ml.field_f = ml.field_f + 1;
-              System.out.println("Concluded " + fieldTemp$3 + " games (" + cf.field_a + " errors)");
-              if ((1 << this.field_k & this.match.field_j) == 0) {
+              System.out.println("Concluded " + fieldTemp$3 + " games (" + cf.checksumMismatchCount + " errors)");
+              if ((1 << this.localPlayerId & this.match.field_j) == 0) {
                 this.f(87);
               }
             }
             po.a((byte) -97);
-            if (!this.field_p) {
+            if (!this.networkedMatch) {
               ng.requestScreen(false, 62, 20);
               NewAchievementsScreen.discardGameplayOnTransition = true;
             } else {
-              if (KeyboardInput.field_a) {
+              if (KeyboardInput.hasNonnegativeResult) {
                 if (null == hd.pendingScreen ||
                   hd.pendingScreen.screenId != -2) {
                   ng.requestScreen(false, 101, 19);
@@ -366,14 +366,14 @@ final class GameplayScreen extends GameScreen {
           ek.field_kb = ek.field_kb + qm.field_a;
           tm.field_g = tm.field_g + 1;
         }
-        if (this.field_p) {
+        if (this.networkedMatch) {
           for (var5Lifetime2 = 0; this.match.playerCount > var5Lifetime2; var5Lifetime2++) {
-            if ((this.field_o & 1 << var5Lifetime2) != 0) {
+            if ((this.localPlayerMask & 1 << var5Lifetime2) != 0) {
               var15 = this.match.playerBoards[var5Lifetime2];
               var17 = var15;
               var17Lifetime2 = var15;
               var16 = var15;
-              var16.field_vb[var15.simulationTick % 5] = 0;
+              var16.outgoingInputMasks[var15.simulationTick % 5] = 0;
             }
           }
         }
@@ -381,15 +381,15 @@ final class GameplayScreen extends GameScreen {
           this.a(-1);
         }
         for (var5Lifetime3 = 0; var5Lifetime3 < this.match.playerCount; var5Lifetime3++) {
-          if ((this.field_o & 1 << var5Lifetime3) != 0) {
+          if ((this.localPlayerMask & 1 << var5Lifetime3) != 0) {
             var17Lifetime1 = this.match.playerBoards[var5Lifetime3];
             if (inputEnabled) {
-              this.a((byte) 73, var17Lifetime1);
+              this.readLocalControls((byte) 73, var17Lifetime1);
             } else {
-              var17Lifetime1.field_db = 0;
+              var17Lifetime1.controlMask = 0;
             }
-            if (this.field_p) {
-              var17Lifetime1.field_vb[var17Lifetime1.simulationTick % 5] = var17Lifetime1.field_db;
+            if (this.networkedMatch) {
+              var17Lifetime1.outgoingInputMasks[var17Lifetime1.simulationTick % 5] = var17Lifetime1.controlMask;
             }
           }
         }
@@ -397,18 +397,18 @@ final class GameplayScreen extends GameScreen {
         var19 = new NodeDeque();
         var7 = new NodeDeque();
         if (!r.field_A) {
-          stackIn_120_0 = (!this.a(var7, true, var19)) ? 0 : 1;
+          stackIn_120_0 = (!this.advanceMatch(var7, true, var19)) ? 0 : 1;
           var5Lifetime4 = stackIn_120_0;
         } else {
           if (MenuScreen.field_i == 0) {
             DelegatingCanvas.a((byte) 32);
             var18 = this.match.playerBoards[0];
             if (2 == var18.boardState) {
-              jc.a(var18.field_db, 0, (byte) -85);
+              jc.a(var18.controlMask, 0, (byte) -85);
             }
             if (var18.boardState == 0 ||
               !ka.a((byte) 62)) {
-              stackIn_116_0 = (!this.a(var7, true, var19)) ? 0 : 1;
+              stackIn_116_0 = (!this.advanceMatch(var7, true, var19)) ? 0 : 1;
               var5Lifetime4 = stackIn_116_0;
             }
           }
@@ -451,7 +451,7 @@ final class GameplayScreen extends GameScreen {
             var9_int = (33423360 - 2 * (var20.paddle.x256 + var20.paddle.width256 / 2 << 8)) / 510;
             nk.field_c.bindRasterTarget();
             oa.field_Sb.a(true, var9_int, 0, 0, 0);
-            kc.framebuffer.bindRaster((byte) 78);
+            BallPulseEffect.framebuffer.bindRaster((byte) 78);
             ArchiveFetchClient.field_k = oa.field_Sb.c((byte) -116);
             fq.field_c = oa.field_Sb.b(-102);
             oa.field_Sb = rd.a(var20.levelState.value, (byte) 19);
@@ -549,10 +549,10 @@ final class GameplayScreen extends GameScreen {
             SecondaryNodeQueue.field_e = stackIn_210_0;
           }
         }
-        if (this.field_p &&
-          this.field_o != 0) {
+        if (this.networkedMatch &&
+          this.localPlayerMask != 0) {
           for (var8 = 0; var8 < this.match.playerCount; var8++) {
-            if ((this.field_o & 1 << var8) != 0 &&
+            if ((this.localPlayerMask & 1 << var8) != 0 &&
               ((this.match.playerMaskOne | (this.match.playerMaskThree | this.match.playerMaskTwo)) & 1 << var8) == 0) {
               var21 = this.match.playerBoards[var8];
               if (var5Lifetime4 != 0 &&
@@ -566,7 +566,7 @@ final class GameplayScreen extends GameScreen {
                   stackIn_231_0 = this;
                   stackIn_231_3 = true;
                 }
-                this.a((byte) stackIn_230_1, stackIn_230_2, stackIn_231_3);
+                this.sendInputBatch((byte) stackIn_230_1, stackIn_230_2, stackIn_231_3);
               }
             }
           }
@@ -579,14 +579,14 @@ final class GameplayScreen extends GameScreen {
         if (param0 < 93) {
           this.a(false, (byte) -87);
         }
-        return this.field_k == -2 ? true : false;
+        return this.localPlayerId == -2 ? true : false;
     }
 
     private final void e(int param0) {
         if (param0 != 0) {
-          this.field_q = true;
+          this.snapshotsReady = true;
         }
-        if (this.field_s) {
+        if (this.suppressResultSubmission) {
           return;
         }
         if (null == fj.field_Ub &&
@@ -600,9 +600,9 @@ final class GameplayScreen extends GameScreen {
 
     final void a(byte param0, boolean param1) {
         boolean stackIn_8_0 = false;
-        if (!this.field_p) {
+        if (!this.networkedMatch) {
           if (1 == this.match.playerCount &&
-            !this.field_s) {
+            !this.suppressResultSubmission) {
             this.a(pp.a(this.match.playerBoards[0], (byte) 115, this.match), false);
             this.e(0);
             this.a(gq.field_Yb, this.field_r, -fl.field_l + MonotonicTime.nowMillis(false), false, 1000);
@@ -633,7 +633,7 @@ final class GameplayScreen extends GameScreen {
           9 != this.match.playerBoards[0].boardState) {
           ji.a(25459, true, cd.field_g, 1, 1, true);
         }
-        if (this.field_p) {
+        if (this.networkedMatch) {
           return;
         }
         if (param1 != 69) {
@@ -659,59 +659,59 @@ final class GameplayScreen extends GameScreen {
         }
     }
 
-    final void a(byte param0, BitPacketBuffer param1, boolean param2) {
-        int var6_int = 0;
+    final void readInputBatch(byte obfuscationGuard, BitPacketBuffer packet, boolean hasChecksum) {
+        int maskIndex = 0;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
         String stackIn_16_2 = null;
         RuntimeException decompiledCaughtException = null;
-        int var4_int = 0;
+        int playerId = 0;
         RuntimeException var4 = null;
-        p var5 = null;
-        PlayerBoard var6 = null;
-        int var7 = 0;
-        var7 = BrickABrac.field_J ? 1 : 0;
+        PlayerInputBatch batch = null;
+        PlayerBoard board = null;
+        int clientBranchFlag = 0;
+        clientBranchFlag = BrickABrac.field_J ? 1 : 0;
         try {
-          var4_int = param1.readUnsignedByte(255);
-          if (this.match.playerCount <= var4_int) {
-            rk.a("K1: (" + var4_int + "/" + param1.position + ") " + eq.c((byte) -110), (Throwable) null, param0 + 125);
+          playerId = packet.readUnsignedByte(255);
+          if (this.match.playerCount <= playerId) {
+            rk.a("K1: (" + playerId + "/" + packet.position + ") " + eq.c((byte) -110), (Throwable) null, obfuscationGuard + 125);
             hn.a((byte) 89);
             return;
           }
-          var5 = new p();
-          var5.field_k = param1.readUnsignedShort(65280);
-          param1.beginBitRead(-79);
-          for (var6_int = 0; var6_int < 5; var6_int++) {
-            var5.field_n[var6_int] = param1.readBits(3, (byte) 117);
+          batch = new PlayerInputBatch();
+          batch.positionWord = packet.readUnsignedShort(65280);
+          packet.beginBitRead(-79);
+          for (maskIndex = 0; maskIndex < 5; maskIndex++) {
+            batch.controlMasks[maskIndex] = packet.readBits(3, (byte) 117);
           }
-          if (param0 != -15) {
+          if (obfuscationGuard != -15) {
             this.b(-25, 35, 50);
           }
-          param1.finishBitRead((byte) 100);
-          if (param2) {
-            var5.field_m = param1.readInt(255);
-            var5.field_l = true;
+          packet.finishBitRead((byte) 100);
+          if (hasChecksum) {
+            batch.maskedChecksum = packet.readInt(255);
+            batch.hasChecksum = true;
           }
-          var6 = this.match.playerBoards[var4_int];
-          var6.field_E = var6.field_E + 5;
-          var6.field_q = var6.field_q + 5;
-          var6.field_eb.addLast(var5, (byte) 3);
+          board = this.match.playerBoards[playerId];
+          board.receivedInputTick = board.receivedInputTick + 5;
+          board.bufferedInputTicks = board.bufferedInputTicks + 5;
+          board.incomingInputBatches.addLast(batch, (byte) 3);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
           stackIn_15_0 = var4;
-          stackIn_15_1 = new StringBuilder().append("qj.B(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_15_1 = new StringBuilder().append("qj.B(").append(obfuscationGuard).append(',');
+          if (packet == null) {
             stackIn_16_2 = "null";
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw qb.addExceptionContext((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param2).append(')').toString());
+          throw qb.addExceptionContext((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(hasChecksum).append(')').toString());
         }
     }
 
-    final void a(int param0, BitPacketBuffer param1) {
+    final void readMaskOnePlayerResult(int obfuscationGuard, BitPacketBuffer packet) {
         int var3_int = 0;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
@@ -719,10 +719,10 @@ final class GameplayScreen extends GameScreen {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
         try {
-          var3_int = param1.readUnsignedByte(param0 ^ 18615);
-          this.match.playerBoards[var3_int].field_V = param1.readMedium(48);
+          var3_int = packet.readUnsignedByte(obfuscationGuard ^ 18615);
+          this.match.playerBoards[var3_int].resultWord = packet.readMedium(48);
           this.match.playerMaskOne = this.match.playerMaskOne | 1 << var3_int;
-          if (param0 != 18504) {
+          if (obfuscationGuard != 18504) {
             field_u = (mh) null;
           }
           return;
@@ -730,8 +730,8 @@ final class GameplayScreen extends GameScreen {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
           stackIn_5_0 = var3;
-          stackIn_5_1 = new StringBuilder().append("qj.CA(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_5_1 = new StringBuilder().append("qj.CA(").append(obfuscationGuard).append(',');
+          if (packet == null) {
             stackIn_6_2 = "null";
           } else {
             stackIn_6_2 = "{...}";
@@ -740,18 +740,18 @@ final class GameplayScreen extends GameScreen {
         }
     }
 
-    private final void a(byte param0, int param1, boolean param2) {
+    private final void sendInputBatch(byte obfuscationGuard, int playerId, boolean hasChecksum) {
         int var6 = 0;
         int var7 = BrickABrac.field_J ? 1 : 0;
-        int var4 = 17 % ((29 - param0) / 57);
-        k.outgoingPackets.writeCipheredOpcode(-13413, !param2 ? 68 : 69);
+        int var4 = 17 % ((29 - obfuscationGuard) / 57);
+        k.outgoingPackets.writeCipheredOpcode(-13413, !hasChecksum ? 68 : 69);
         k.outgoingPackets.beginBitWrite(62);
-        PlayerBoard var5 = this.match.playerBoards[param1];
+        PlayerBoard var5 = this.match.playerBoards[playerId];
         for (var6 = 0; var6 < 5; var6++) {
-          k.outgoingPackets.writeBits(3, -17566, var5.field_vb[var6]);
+          k.outgoingPackets.writeBits(3, -17566, var5.outgoingInputMasks[var6]);
         }
         k.outgoingPackets.finishBitWrite(-105);
-        if (param2) {
+        if (hasChecksum) {
           k.outgoingPackets.writeInt(var5.computeBoardChecksum(true, (StringBuilder) null) ^ var5.nextRandomInt(122), (byte) -79);
         }
     }
@@ -840,12 +840,12 @@ final class GameplayScreen extends GameScreen {
         if (keyCode == 13) {
           boolean decompiledFrameRemainder0 = true;
           var4Lifetime2 = 1;
-          if (this.field_p) {
+          if (this.networkedMatch) {
             if (this.c(113)) {
               var4Lifetime2 = 4;
             } else {
-              if (!this.match.field_c &&
-                ((this.match.playerMaskThree | (this.match.playerMaskOne | this.match.playerMaskTwo)) & 1 << this.field_k) == 0) {
+              if (!this.match.resultsReady &&
+                ((this.match.playerMaskThree | (this.match.playerMaskOne | this.match.playerMaskTwo)) & 1 << this.localPlayerId) == 0) {
                 var4Lifetime2 = 2;
               } else {
                 var4Lifetime2 = 3;
@@ -868,7 +868,7 @@ final class GameplayScreen extends GameScreen {
             }
           }
           if (this.match.playerCount != 1 &&
-            this.match.field_c) {
+            this.match.resultsReady) {
             if (!(200 >= be.field_j)) {
               be.field_j = 299;
               return true;
@@ -891,37 +891,37 @@ final class GameplayScreen extends GameScreen {
           var7 = this.match.playerBoards[0];
           var8 = var7;
           if (48 == keyCode) {
-            this.field_s = true;
+            this.suppressResultSubmission = true;
             var7.field_m = dp.field_r[0] - 5;
             return true;
           }
           if (keyCode == 68) {
             var7.field_m = dp.field_r[1] - 5;
-            this.field_s = true;
+            this.suppressResultSubmission = true;
             return true;
           }
           if (66 == keyCode) {
             var7.field_m = -5 + dp.field_r[2];
-            this.field_s = true;
+            this.suppressResultSubmission = true;
             return true;
           }
           if (keyCode == 50) {
             this.field_t = -dp.field_r[3] + (var8.levelIndex + 1);
-            this.field_s = true;
+            this.suppressResultSubmission = true;
             return true;
           }
           if (keyCode == 34) {
-            this.field_s = true;
+            this.suppressResultSubmission = true;
             this.field_t = var7.levelIndex + 1 - dp.field_r[4];
             return true;
           }
           if (51 == keyCode) {
             var7.score = dp.field_r[7] - 20;
-            this.field_s = true;
+            this.suppressResultSubmission = true;
             return true;
           }
           if (keyCode == 52) {
-            this.field_s = true;
+            this.suppressResultSubmission = true;
             var7.score = -20 + dp.field_r[8];
           }
           if (keyCode == 53) {
@@ -930,7 +930,7 @@ final class GameplayScreen extends GameScreen {
               var5_ref_vn.brickBounceCount = dp.field_r[9] - 2;
               var5_ref_vn = (Ball) (var8.activeBalls.next((byte) 116));
             }
-            this.field_s = true;
+            this.suppressResultSubmission = true;
             return true;
           }
           if (keyCode == 39) {
@@ -939,7 +939,7 @@ final class GameplayScreen extends GameScreen {
               var5_ref_vnLifetime1.brickBounceCount = dp.field_r[10] - 2;
               var5_ref_vnLifetime1 = (Ball) (var8.activeBalls.next((byte) 116));
             }
-            this.field_s = true;
+            this.suppressResultSubmission = true;
             return true;
           }
           if (keyCode == 54) {
@@ -950,7 +950,7 @@ final class GameplayScreen extends GameScreen {
             } else {
               var8.boardState = 5;
             }
-            this.field_s = true;
+            this.suppressResultSubmission = true;
             var8.stateTicks = 0;
             return true;
           }
@@ -960,18 +960,18 @@ final class GameplayScreen extends GameScreen {
                 var7.field_o[var5Lifetime2] = (byte)(-1 + to.field_f[var5Lifetime2]);
               }
             }
-            this.field_s = true;
+            this.suppressResultSubmission = true;
             return true;
           }
           if (keyCode == 56) {
             var8.lives = 5;
-            this.field_s = true;
+            this.suppressResultSubmission = true;
             return true;
           }
           if (keyCode >= 16 &&
             25 >= keyCode) {
             var5Lifetime2Lifetime1 = -16 - (-keyCode - 1);
-            this.field_s = true;
+            this.suppressResultSubmission = true;
             if (IntArrayRequest.heldKeys[81]) {
               var5Lifetime2Lifetime1 += 10;
             }
@@ -982,47 +982,47 @@ final class GameplayScreen extends GameScreen {
           }
           if (70 == keyCode) {
             var8.field_l = 6;
-            this.field_s = true;
+            this.suppressResultSubmission = true;
             return true;
           }
           if (keyCode == 69) {
-            this.field_s = true;
+            this.suppressResultSubmission = true;
             var7.field_hb = -1 + dp.field_r[29];
             return true;
           }
           if (keyCode == 40) {
             var7.field_u = -1 + dp.field_r[30];
-            this.field_s = true;
+            this.suppressResultSubmission = true;
             return true;
           }
           if (41 == keyCode) {
             var7.field_u = dp.field_r[31] - 1;
-            this.field_s = true;
+            this.suppressResultSubmission = true;
             return true;
           }
           if (keyCode == 32) {
             var7.field_N = dp.field_r[32] - 1;
-            this.field_s = true;
+            this.suppressResultSubmission = true;
             return true;
           }
           if (keyCode == 35) {
             var7.field_N = -1 + dp.field_r[33];
-            this.field_s = true;
+            this.suppressResultSubmission = true;
             return true;
           }
           if (49 == keyCode) {
-            this.field_s = true;
+            this.suppressResultSubmission = true;
             var7.field_m = dp.field_r[39] - 5;
             return true;
           }
           if (keyCode == 36) {
-            this.field_s = true;
+            this.suppressResultSubmission = true;
             var7.score = dp.field_r[40] - 20;
             return true;
           }
           if (38 == keyCode) {
             var8.boardState = 0;
-            this.field_s = true;
+            this.suppressResultSubmission = true;
             var8.stateTicks = 0;
             return true;
           }
@@ -1033,7 +1033,7 @@ final class GameplayScreen extends GameScreen {
 
     private final void a(int param0, int param1, long param2, boolean param3, int param4) {
         int var7 = 0;
-        if (!this.field_s) {
+        if (!this.suppressResultSubmission) {
           if (og.h(-26090)) {
             return;
           }
@@ -1045,10 +1045,10 @@ final class GameplayScreen extends GameScreen {
     }
 
     final void b(int param0) {
-        if (!this.field_p) {
+        if (!this.networkedMatch) {
           throw new IllegalStateException();
         }
-        this.match.playerMaskOne = this.match.playerMaskOne | 1 << this.field_k;
+        this.match.playerMaskOne = this.match.playerMaskOne | 1 << this.localPlayerId;
         int var2 = 116 % ((param0 + 55) / 62);
         k.outgoingPackets.writeCipheredOpcode(-13413, 66);
     }
@@ -1060,9 +1060,9 @@ final class GameplayScreen extends GameScreen {
           return;
         }
         if (param0) {
-          this.field_q = true;
+          this.snapshotsReady = true;
         }
-        if (!this.field_s) {
+        if (!this.suppressResultSubmission) {
           var4 = this.match.playerBoards[0].score;
           var5 = this.match.playerBoards[0].levelIndex;
           OptionsScreen.resultCounterOne = OptionsScreen.resultCounterOne - (this.field_t + var4);
@@ -1101,7 +1101,7 @@ final class GameplayScreen extends GameScreen {
         sk.a(var3, 0, var4, 2, param1, -12665);
     }
 
-    final void a(BitPacketBuffer param0, int param1) {
+    final void readResultOrder(BitPacketBuffer packet, int startIndex) {
         int var3_int = 0;
         byte dupTemp$0 = 0;
         boolean stackIn_5_0 = false;
@@ -1114,26 +1114,26 @@ final class GameplayScreen extends GameScreen {
         int var4 = 0;
         var4 = BrickABrac.field_J ? 1 : 0;
         try {
-          for (var3_int = param1; this.match.playerCount > var3_int; var3_int++) {
-            dupTemp$0 = param0.readByte(true);
-            this.match.field_m[var3_int] = dupTemp$0;
-            stackIn_5_0 = KeyboardInput.field_a;
+          for (var3_int = startIndex; this.match.playerCount > var3_int; var3_int++) {
+            dupTemp$0 = packet.readByte(true);
+            this.match.resultOrder[var3_int] = dupTemp$0;
+            stackIn_5_0 = KeyboardInput.hasNonnegativeResult;
             stackIn_6_1 = !(0 > dupTemp$0);
-            KeyboardInput.field_a = stackIn_5_0 | stackIn_6_1;
+            KeyboardInput.hasNonnegativeResult = stackIn_5_0 | stackIn_6_1;
           }
-          this.match.a(false);
+          this.match.markResultsReady(false);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
           stackIn_11_0 = var3;
           stackIn_11_1 = new StringBuilder().append("qj.Q(");
-          if (param0 == null) {
+          if (packet == null) {
             stackIn_12_2 = "null";
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw qb.addExceptionContext((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(')').toString());
+          throw qb.addExceptionContext((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(startIndex).append(')').toString());
         }
     }
 
@@ -1164,7 +1164,7 @@ final class GameplayScreen extends GameScreen {
         if (this.recordAchievement(param0, 1)) {
           return;
         }
-        if (!this.field_s) {
+        if (!this.suppressResultSubmission) {
           var4 = param0;
           var5 = param2;
           if ((255 ^ var5) != var4) {
@@ -1191,7 +1191,7 @@ final class GameplayScreen extends GameScreen {
         if (param0 <= 17) {
           return;
         }
-        if (this.field_s) {
+        if (this.suppressResultSubmission) {
         } else {
           if (param1 == 7) {
             OptionsScreen.resultCounterOne = OptionsScreen.resultCounterOne - this.field_t;
@@ -1207,7 +1207,7 @@ final class GameplayScreen extends GameScreen {
         }
     }
 
-    private final boolean a(NodeDeque param0, boolean param1, NodeDeque param2) {
+    private final boolean advanceMatch(NodeDeque remoteAudioEvents, boolean obfuscationGuard, NodeDeque localAudioEvents) {
         NodeDeque stackIn_4_0 = null;
         int stackIn_107_0 = 0;
         RuntimeException stackIn_110_0 = null;
@@ -1216,25 +1216,25 @@ final class GameplayScreen extends GameScreen {
         StringBuilder stackIn_113_1 = null;
         String stackIn_114_2 = null;
         RuntimeException decompiledCaughtException = null;
-        int var4_int = 0;
+        int advancedLocalTick = 0;
         RuntimeException var4 = null;
-        NodeDeque var5 = null;
-        int var6_int = 0;
+        NodeDeque collectedPowerUps = null;
+        int playerId = 0;
         PlayerBoard var6 = null;
         int var7 = 0;
-        int var8_int = 0;
+        int catchUpTicks = 0;
         PlayerBoard var8 = null;
-        PowerUp var9_ref_ge = null;
-        int var9 = 0;
+        PowerUp fallingPowerUp = null;
+        int consumedTicks = 0;
         int var10 = 0;
-        p var10_ref_p = null;
+        PlayerInputBatch inputBatch = null;
         Object var11 = null;
-        int var12 = 0;
-        int var13 = 0;
+        int expectedChecksum = 0;
+        int clientBranchFlag = 0;
         int var15 = 0;
-        PlayerBoard var16 = null;
-        PlayerBoard var17 = null;
-        PlayerBoard var18 = null;
+        PlayerBoard inputBoard = null;
+        PlayerBoard effectBoard = null;
+        PlayerBoard displayBoard = null;
         int var6_intLifetime1;
         int var6_intLifetime2;
         int var6_intLifetime3;
@@ -1243,120 +1243,120 @@ final class GameplayScreen extends GameScreen {
         int var8_intLifetime1;
         int var8_intLifetime2;
         int var9Lifetime1;
-        var13 = BrickABrac.field_J ? 1 : 0;
+        clientBranchFlag = BrickABrac.field_J ? 1 : 0;
         try {
-          var4_int = 0;
-          if (!this.field_p) {
+          advancedLocalTick = 0;
+          if (!this.networkedMatch) {
             stackIn_4_0 = new NodeDeque();
           } else {
             stackIn_4_0 = null;
           }
-          var5 = stackIn_4_0;
-          for (var6_int = 0; var6_int < this.match.playerCount; var6_int++) {
-            var16 = this.match.playerBoards[var6_int];
-            if ((1 << var6_int & (this.match.playerMaskOne | (this.match.playerMaskTwo | this.match.playerMaskThree))) != 0) {
-              var16.field_U = var16.field_U + 1;
+          collectedPowerUps = stackIn_4_0;
+          for (playerId = 0; playerId < this.match.playerCount; playerId++) {
+            inputBoard = this.match.playerBoards[playerId];
+            if ((1 << playerId & (this.match.playerMaskOne | (this.match.playerMaskTwo | this.match.playerMaskThree))) != 0) {
+              inputBoard.maskedTicks = inputBoard.maskedTicks + 1;
             }
             boolean decompiledFrameRemainder0 = true;
-            if ((1 << var6_int & this.field_o) == 0) {
-              decompiledFrameRemainder0 = (var16.field_q != 0);
+            if ((1 << playerId & this.localPlayerMask) == 0) {
+              decompiledFrameRemainder0 = (inputBoard.bufferedInputTicks != 0);
               if (decompiledFrameRemainder0) {
-                var8_int = 1;
-                if (var16.field_q > 25) {
-                  var8_int = 3;
+                catchUpTicks = 1;
+                if (inputBoard.bufferedInputTicks > 25) {
+                  catchUpTicks = 3;
                 }
-                if (50 < var16.field_q) {
-                  var8_int = -25 + var16.field_q;
+                if (50 < inputBoard.bufferedInputTicks) {
+                  catchUpTicks = -25 + inputBoard.bufferedInputTicks;
                 }
-                var9 = 0;
-                var10_ref_p = (p) (var16.field_eb.first(-84));
-                while (var9 < var8_int) {
-                  this.match.applyPendingPowerUps((byte) 120, var6_int);
-                  var16.field_db = var10_ref_p.a((byte) -104);
-                  this.match.advanceBoard(var16, param0, var5, 0);
-                  var16.simulationTick = var16.simulationTick + 1;
-                  if (var10_ref_p.c(1)) {
-                    var10_ref_p.unlink((byte) 111);
-                    var16.field_p = var10_ref_p.field_k;
-                    if (var10_ref_p.field_l) {
+                consumedTicks = 0;
+                inputBatch = (PlayerInputBatch) (inputBoard.incomingInputBatches.first(-84));
+                while (consumedTicks < catchUpTicks) {
+                  this.match.applyPendingPowerUps((byte) 120, playerId);
+                  inputBoard.controlMask = inputBatch.nextControlMask((byte) -104);
+                  this.match.advanceBoard(inputBoard, remoteAudioEvents, collectedPowerUps, 0);
+                  inputBoard.simulationTick = inputBoard.simulationTick + 1;
+                  if (inputBatch.isConsumed(1)) {
+                    inputBatch.unlink((byte) 111);
+                    inputBoard.positionWord = inputBatch.positionWord;
+                    if (inputBatch.hasChecksum) {
                       var11 = null;
-                      var12 = var16.computeBoardChecksum(param1, (StringBuilder) (var11)) ^ var16.nextRandomInt(120);
-                      if (var10_ref_p.field_m != var12) {
+                      expectedChecksum = inputBoard.computeBoardChecksum(obfuscationGuard, (StringBuilder) (var11)) ^ inputBoard.nextRandomInt(120);
+                      if (inputBatch.maskedChecksum != expectedChecksum) {
                         hn.a((byte) 91);
-                        rk.a("T2 " + var10_ref_p.field_m + " " + var12 + " ", (Throwable) null, 54);
-                        cf.field_a = cf.field_a + 1;
+                        rk.a("T2 " + inputBatch.maskedChecksum + " " + expectedChecksum + " ", (Throwable) null, 54);
+                        cf.checksumMismatchCount = cf.checksumMismatchCount + 1;
                       }
                     }
-                    var10_ref_p = (p) (var16.field_eb.first(-21));
+                    inputBatch = (PlayerInputBatch) (inputBoard.incomingInputBatches.first(-21));
                   }
-                  var9++;
-                  var16.field_q = var16.field_q - 1;
+                  consumedTicks++;
+                  inputBoard.bufferedInputTicks = inputBoard.bufferedInputTicks - 1;
                 }
               }
             } else {
-              if (this.field_p) {
-                var8_int = var16.simulationTick - var16.field_E;
-                decompiledFrameRemainder0 = (!(var8_int > 30) ||
+              if (this.networkedMatch) {
+                catchUpTicks = inputBoard.simulationTick - inputBoard.receivedInputTick;
+                decompiledFrameRemainder0 = (!(catchUpTicks > 30) ||
                   0 != MembershipBenefitsScreen.clientTick % 10);
                 if ((decompiledFrameRemainder0) &&
-                  (decompiledFrameRemainder0 = (!(40 < var8_int) ||
+                  (decompiledFrameRemainder0 = (!(40 < catchUpTicks) ||
                   0 != MembershipBenefitsScreen.clientTick % 5))) {
-                  decompiledFrameRemainder0 = (50 != var8_int);
+                  decompiledFrameRemainder0 = (50 != catchUpTicks);
                 }
               }
               if ((decompiledFrameRemainder0) &&
-                (decompiledFrameRemainder0 = (((this.match.playerMaskThree | (this.match.playerMaskTwo | this.match.playerMaskOne)) & 1 << var6_int) == 0))) {
-                this.match.applyPendingPowerUps((byte) 127, var6_int);
-                this.match.advanceBoard(var16, param2, var5, 0);
-                if (!this.field_p) {
-                  this.match.distributeQueuedAttacks(var6_int, 1, var5, (byte) -122);
-                  var16.field_p = var16.field_Q;
+                (decompiledFrameRemainder0 = (((this.match.playerMaskThree | (this.match.playerMaskTwo | this.match.playerMaskOne)) & 1 << playerId) == 0))) {
+                this.match.applyPendingPowerUps((byte) 127, playerId);
+                this.match.advanceBoard(inputBoard, localAudioEvents, collectedPowerUps, 0);
+                if (!this.networkedMatch) {
+                  this.match.distributeQueuedAttacks(playerId, 1, collectedPowerUps, (byte) -122);
+                  inputBoard.positionWord = inputBoard.field_Q;
                 }
-                var4_int = var4_int | 1;
-                var16.simulationTick = var16.simulationTick + 1;
+                advancedLocalTick = advancedLocalTick | 1;
+                inputBoard.simulationTick = inputBoard.simulationTick + 1;
               }
             }
             if (decompiledFrameRemainder0) {
-              if (var5 != null) {
-                var5.clear((byte) -110);
+              if (collectedPowerUps != null) {
+                collectedPowerUps.clear((byte) -110);
               }
-              var16.advancePowerUpWarnings(-101);
+              inputBoard.advancePowerUpWarnings(-101);
             }
           }
           var6_intLifetime1 = 0;
-          if (!param1) {
-            this.field_k = 29;
+          if (!obfuscationGuard) {
+            this.localPlayerId = 29;
           }
           while (this.match.playerCount > var6_intLifetime1) {
-            var17 = this.match.playerBoards[var6_intLifetime1];
+            effectBoard = this.match.playerBoards[var6_intLifetime1];
             var8_intLifetime1 = 0;
-            var9_ref_ge = (PowerUp) (var17.fallingPowerUps.first(-48));
-            while (var9_ref_ge != null) {
-              var8_intLifetime1 = var8_intLifetime1 | 1 << var9_ref_ge.typeId;
-              var9_ref_ge = (PowerUp) (var17.fallingPowerUps.next((byte) 116));
+            fallingPowerUp = (PowerUp) (effectBoard.fallingPowerUps.first(-48));
+            while (fallingPowerUp != null) {
+              var8_intLifetime1 = var8_intLifetime1 | 1 << fallingPowerUp.typeId;
+              fallingPowerUp = (PowerUp) (effectBoard.fallingPowerUps.next((byte) 116));
             }
             var15 = 0;
             var9Lifetime1 = var15;
             while (var15 < 29) {
               if (to.field_f[var15] >= 1) {
-                var10 = (20 * var17.field_o[var15] << 8) / to.field_f[var15];
+                var10 = (20 * effectBoard.field_o[var15] << 8) / to.field_f[var15];
                 if ((1 << var15 & var8_intLifetime1) != 0) {
                   var10 = 5120;
                 }
-                var17.field_xb[var15] = var17.field_xb[var15] + (-var17.field_cb[var15] + var10) / 100;
-                var17.field_xb[var15] = 7 * var17.field_xb[var15] / 8;
-                if (512 < var17.field_xb[var15]) {
-                  var17.field_xb[var15] = 512;
+                effectBoard.field_xb[var15] = effectBoard.field_xb[var15] + (-effectBoard.field_cb[var15] + var10) / 100;
+                effectBoard.field_xb[var15] = 7 * effectBoard.field_xb[var15] / 8;
+                if (512 < effectBoard.field_xb[var15]) {
+                  effectBoard.field_xb[var15] = 512;
                 }
-                if (var17.field_xb[var15] < -512) {
-                  var17.field_xb[var15] = -512;
+                if (effectBoard.field_xb[var15] < -512) {
+                  effectBoard.field_xb[var15] = -512;
                 }
-                var17.field_cb[var15] = var17.field_cb[var15] + var17.field_xb[var15];
-                if (var17.field_xb[var15] > 0 &&
-                  var17.field_cb[var15] > var10 ||
-                  !(var17.field_xb[var15] >= 0) &&
-                  !(var10 <= var17.field_cb[var15])) {
-                  var17.field_cb[var15] = var10;
+                effectBoard.field_cb[var15] = effectBoard.field_cb[var15] + effectBoard.field_xb[var15];
+                if (effectBoard.field_xb[var15] > 0 &&
+                  effectBoard.field_cb[var15] > var10 ||
+                  !(effectBoard.field_xb[var15] >= 0) &&
+                  !(var10 <= effectBoard.field_cb[var15])) {
+                  effectBoard.field_cb[var15] = var10;
                 }
               }
               var15++;
@@ -1365,16 +1365,16 @@ final class GameplayScreen extends GameScreen {
           }
           if (this.match.playerCount > 1) {
             for (var6_intLifetime2 = 0; var6_intLifetime2 < this.match.playerCount; var6_intLifetime2++) {
-              var18 = this.match.playerBoards[var6_intLifetime2];
-              var8_intLifetime2 = var18.field_p + var18.boardOffset << 8;
-              var18.field_J = var18.field_J + (var8_intLifetime2 - var18.field_G) / 100;
-              var18.field_J = 7 * var18.field_J / 8;
-              if (var18.field_J > 1280) {
-                var18.field_J = 1280;
+              displayBoard = this.match.playerBoards[var6_intLifetime2];
+              var8_intLifetime2 = displayBoard.positionWord + displayBoard.boardOffset << 8;
+              displayBoard.field_J = displayBoard.field_J + (var8_intLifetime2 - displayBoard.field_G) / 100;
+              displayBoard.field_J = 7 * displayBoard.field_J / 8;
+              if (displayBoard.field_J > 1280) {
+                displayBoard.field_J = 1280;
               }
-              var18.field_G = var18.field_G + var18.field_J;
-              if (var18.field_G > var8_intLifetime2) {
-                var18.field_G = var8_intLifetime2;
+              displayBoard.field_G = displayBoard.field_G + displayBoard.field_J;
+              if (displayBoard.field_G > var8_intLifetime2) {
+                displayBoard.field_G = var8_intLifetime2;
               }
             }
           }
@@ -1391,7 +1391,7 @@ final class GameplayScreen extends GameScreen {
               }
             }
           }
-          if (!this.field_p) {
+          if (!this.networkedMatch) {
             if (this.match.playerCount == 1) {
               var6 = this.match.playerBoards[0];
               if (var6.boardState == 8 ||
@@ -1402,7 +1402,7 @@ final class GameplayScreen extends GameScreen {
                 }
               }
             } else {
-              if (!this.match.field_c) {
+              if (!this.match.resultsReady) {
                 this.match.playerMaskThree = this.match.playerMaskThree | this.match.getStateSevenPlayerMask(-17566);
                 this.match.playerMaskTwo = this.match.playerMaskTwo | this.match.getStateZeroPlayerMask((byte) -92);
                 if (this.match.b(82)) {
@@ -1414,30 +1414,30 @@ final class GameplayScreen extends GameScreen {
                   if ((this.match.playerMaskThree & 1 << var7Lifetime1) != 0) {
                     var6_intLifetime4 = var7Lifetime1;
                   }
-                  this.match.playerBoards[var6_intLifetime4].field_zb = 1;
-                  this.match.field_m[0] = var6_intLifetime4;
-                  this.match.playerBoards[-var6_intLifetime4 + 1].field_zb = 2;
-                  this.match.field_m[1] = 1 - var6_intLifetime4;
-                  this.match.a(false);
-                  KeyboardInput.field_a = true;
+                  this.match.playerBoards[var6_intLifetime4].resultCode = 1;
+                  this.match.resultOrder[0] = var6_intLifetime4;
+                  this.match.playerBoards[-var6_intLifetime4 + 1].resultCode = 2;
+                  this.match.resultOrder[1] = 1 - var6_intLifetime4;
+                  this.match.markResultsReady(false);
+                  KeyboardInput.hasNonnegativeResult = true;
                 }
               }
             }
           }
-          stackIn_107_0 = var4_int;
+          stackIn_107_0 = advancedLocalTick;
           return stackIn_107_0 != 0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
           stackIn_110_0 = var4;
           stackIn_110_1 = new StringBuilder().append("qj.P(");
-          if (param0 == null) {
+          if (remoteAudioEvents == null) {
             stackIn_111_2 = "null";
           } else {
             stackIn_111_2 = "{...}";
           }
-          stackIn_113_1 = ((StringBuilder) (Object) stackIn_110_1).append(stackIn_111_2).append(',').append(param1).append(',');
-          if (param2 == null) {
+          stackIn_113_1 = ((StringBuilder) (Object) stackIn_110_1).append(stackIn_111_2).append(',').append(obfuscationGuard).append(',');
+          if (localAudioEvents == null) {
             stackIn_114_2 = "null";
           } else {
             stackIn_114_2 = "{...}";
@@ -1454,12 +1454,12 @@ final class GameplayScreen extends GameScreen {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var5_ref = null;
         try {
-          if (this.field_s) {
+          if (this.suppressResultSubmission) {
             return;
           }
           ep.resultCounterTwo = ep.resultCounterTwo + (levelNumber + pack.scoreOffset);
           if (obfuscationGuard > -87) {
-            this.field_p = true;
+            this.networkedMatch = true;
           }
           OptionsScreen.resultCounterOne = OptionsScreen.resultCounterOne - (resultIncrement + this.field_t);
           var5 = new LevelResultSubmission(pack.packId, -1 + levelNumber, OptionsScreen.resultCounterOne, ep.resultCounterTwo, DelegatingCanvas.field_c, og.field_Wb);
@@ -1484,64 +1484,64 @@ final class GameplayScreen extends GameScreen {
         }
     }
 
-    final void a(BitPacketBuffer param0, byte param1) {
+    final void readScheduledPowerUp(BitPacketBuffer packet, byte obfuscationGuard) {
         int var3_int = 0;
         int var4 = 0;
         int var5 = 0;
         PowerUp var6 = null;
         try {
-          var3_int = param0.readUnsignedByte(255);
-          var4 = param0.readUnsignedByte(255);
-          var5 = param0.readInt(255);
+          var3_int = packet.readUnsignedByte(255);
+          var4 = packet.readUnsignedByte(255);
+          var5 = packet.readInt(255);
           var6 = new PowerUp(0, 0, var4);
-          int var7 = 102 / ((-65 - param1) / 34);
+          int var7 = 102 / ((-65 - obfuscationGuard) / 34);
           var6.activationTick = var5;
           this.match.playerBoards[var3_int].powerUpHistory.append(var6, (byte) -39);
         } catch (RuntimeException runtimeException) {
-          throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "qj.G(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "qj.G(" + (packet != null ? "{...}" : "null") + ',' + obfuscationGuard + ')');
         }
     }
 
-    private final void a(byte param0, PlayerBoard param1) {
+    private final void readLocalControls(byte obfuscationGuard, PlayerBoard board) {
         RuntimeException stackIn_22_0 = null;
         StringBuilder stackIn_22_1 = null;
         String stackIn_23_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
         try {
-          param1.field_db = 0;
-          if (IntArrayRequest.heldKeys[param1.field_bb]) {
-            param1.field_db = param1.field_db | 1;
+          board.controlMask = 0;
+          if (IntArrayRequest.heldKeys[board.leftKeyCode]) {
+            board.controlMask = board.controlMask | 1;
           }
-          if (IntArrayRequest.heldKeys[param1.field_j]) {
-            param1.field_db = param1.field_db | 2;
+          if (IntArrayRequest.heldKeys[board.rightKeyCode]) {
+            board.controlMask = board.controlMask | 2;
           }
-          if (IntArrayRequest.heldKeys[param1.field_I]) {
-            param1.field_db = param1.field_db | 4;
+          if (IntArrayRequest.heldKeys[board.actionKeyCode]) {
+            board.controlMask = board.controlMask | 4;
           }
-          if (param0 <= 50) {
+          if (obfuscationGuard <= 50) {
             this.b(60);
           }
           if (this.match.playerCount == 1 ||
-            this.field_p) {
+            this.networkedMatch) {
             if (IntArrayRequest.heldKeys[HighscoresScreen.field_w[1][0]]) {
-              param1.field_db = param1.field_db | 1;
+              board.controlMask = board.controlMask | 1;
             }
             if (IntArrayRequest.heldKeys[HighscoresScreen.field_w[1][1]]) {
-              param1.field_db = param1.field_db | 2;
+              board.controlMask = board.controlMask | 2;
             }
             if (!IntArrayRequest.heldKeys[HighscoresScreen.field_w[1][2]]) {
               return;
             }
-            param1.field_db = param1.field_db | 4;
+            board.controlMask = board.controlMask | 4;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
           stackIn_22_0 = var3;
-          stackIn_22_1 = new StringBuilder().append("qj.GA(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_22_1 = new StringBuilder().append("qj.GA(").append(obfuscationGuard).append(',');
+          if (board == null) {
             stackIn_23_2 = "null";
           } else {
             stackIn_23_2 = "{...}";
@@ -1618,7 +1618,7 @@ final class GameplayScreen extends GameScreen {
         var15 = NodeDequeCursor.field_e[this.match.playerCount - 1];
         var3 = var15;
         var5 = NodeDequeCursor.field_h[-1 + this.match.playerCount];
-        var6 = this.field_m;
+        var6 = this.viewedPlayerId;
         if (null != oa.field_Sb) {
           for (var7 = 0; var7 < this.match.playerCount; var7++) {
             var13 = this.match.playerBoards[var6].paddle;
@@ -1664,7 +1664,7 @@ final class GameplayScreen extends GameScreen {
             }
           }
         }
-        var6Lifetime1 = this.field_m;
+        var6Lifetime1 = this.viewedPlayerId;
         for (var7Lifetime2 = 0; var7Lifetime2 < this.match.playerCount; var7Lifetime2++) {
           if (~tn.field_C != ~var5[var7Lifetime2]) {
             gr.b(var5[var7Lifetime2], -28463);
@@ -1683,31 +1683,31 @@ final class GameplayScreen extends GameScreen {
             var2 = var16;
             nh.a(169, 482, -40, -1, cd.field_h, -1);
             nh.a(169, 482, -40, 472, cd.field_h, -1);
-            stackIn_83_0 = ((this.field_o & 1 << this.field_m) == 0) ? 0 : 1;
+            stackIn_83_0 = ((this.localPlayerMask & 1 << this.viewedPlayerId) == 0) ? 0 : 1;
             var7Lifetime3 = stackIn_83_0;
             stackIn_86_0 = this.field_n;
             stackIn_86_1 = -103;
             stackIn_86_2 = var21[0];
-            stackIn_88_3 = (var7Lifetime3 != 0) || (0 == this.field_o);
-            om.$cfr$intArgs$a$687785aae666(stackIn_86_0, stackIn_86_1, stackIn_86_2, stackIn_88_3, this.match.playerBoards[this.field_m], var22[0], this.field_m, var7Lifetime3 != 0, this.match);
+            stackIn_88_3 = (var7Lifetime3 != 0) || (0 == this.localPlayerMask);
+            om.$cfr$intArgs$a$687785aae666(stackIn_86_0, stackIn_86_1, stackIn_86_2, stackIn_88_3, this.match.playerBoards[this.viewedPlayerId], var22[0], this.viewedPlayerId, var7Lifetime3 != 0, this.match);
             nh.a(169, 9, -40, -1, cd.field_h, 0 + (var22[2] - 3));
             nh.a(169, 9, -40, 472, cd.field_h, -3 + var22[2] - 0);
           } else {
-            stackIn_44_0 = (this.field_p) ? 0 : 1;
+            stackIn_44_0 = (this.networkedMatch) ? 0 : 1;
             var7Lifetime3 = stackIn_44_0;
-            if (this.field_p) {
-              stackIn_50_0 = (this.field_o == 0) ? 1 : 0;
+            if (this.networkedMatch) {
+              stackIn_50_0 = (this.localPlayerMask == 0) ? 1 : 0;
             } else {
               stackIn_50_0 = 1;
             }
             var8_int = stackIn_50_0;
-            if (this.field_p) {
-              stackIn_53_0 = this.field_m;
+            if (this.networkedMatch) {
+              stackIn_53_0 = this.viewedPlayerId;
             } else {
               stackIn_53_0 = 1;
             }
             var9Lifetime1 = stackIn_53_0;
-            stackIn_56_0 = ((this.field_o & 1 << var9Lifetime1) == 0) ? 0 : 1;
+            stackIn_56_0 = ((this.localPlayerMask & 1 << var9Lifetime1) == 0) ? 0 : 1;
             var10Lifetime1 = stackIn_56_0;
             stackIn_59_0 = this.field_n;
             stackIn_59_1 = -103;
@@ -1719,7 +1719,7 @@ final class GameplayScreen extends GameScreen {
             stackIn_66_7 = (var7Lifetime3 != 0) || (var10Lifetime1 != 0);
             om.$cfr$intArgs$a$687785aae666(stackIn_59_0, stackIn_59_1, stackIn_59_2, stackIn_61_3, stackIn_64_4, stackIn_64_5, stackIn_64_6, stackIn_66_7, this.match);
             var9Lifetime1 = 1 - var9Lifetime1;
-            stackIn_69_0 = (0 == (1 << var9Lifetime1 & this.field_o)) ? 0 : 1;
+            stackIn_69_0 = (0 == (1 << var9Lifetime1 & this.localPlayerMask)) ? 0 : 1;
             var10Lifetime1Lifetime1 = stackIn_69_0;
             stackIn_72_0 = this.field_n;
             stackIn_72_1 = -103;
@@ -1756,15 +1756,15 @@ final class GameplayScreen extends GameScreen {
           }
         }
         if (this.match.playerCount > 1 &&
-          ((this.match.playerMaskTwo | this.match.playerMaskOne) & 1 << this.field_m) == 0) {
-          ClientException.a(var2[0], 424, false, this.match, this.field_m, var3[0]);
+          ((this.match.playerMaskTwo | this.match.playerMaskOne) & 1 << this.viewedPlayerId) == 0) {
+          ClientException.a(var2[0], 424, false, this.match, this.viewedPlayerId, var3[0]);
         }
         if (this.match.playerCount == 2 &&
-          0 == (1 << 1 - this.field_m & (this.match.playerMaskTwo | this.match.playerMaskOne))) {
-          ClientException.a(var2[1], 424, false, this.match, 1 - this.field_m, var3[1]);
+          0 == (1 << 1 - this.viewedPlayerId & (this.match.playerMaskTwo | this.match.playerMaskOne))) {
+          ClientException.a(var2[1], 424, false, this.match, 1 - this.viewedPlayerId, var3[1]);
         }
         var19 = NodeDequeCursor.field_e[this.match.playerCount - 1];
-        var6Lifetime2 = this.field_m;
+        var6Lifetime2 = this.viewedPlayerId;
         var18 = NodeDequeCursor.field_c[this.match.playerCount - 1];
         for (var7Lifetime4 = 0; this.match.playerCount > var7Lifetime4; var7Lifetime4++) {
           if (var5[var7Lifetime4] == 2) {
@@ -1785,7 +1785,7 @@ final class GameplayScreen extends GameScreen {
     }
 
     final void f(int param0) {
-        if (!this.field_p) {
+        if (!this.networkedMatch) {
           throw new IllegalStateException();
         }
         k.outgoingPackets.writeCipheredOpcode(-13413, 67);
@@ -1816,15 +1816,15 @@ final class GameplayScreen extends GameScreen {
         int[] var13 = null;
         int[] var14 = null;
         int var10Lifetime1;
-        this.field_x = 0;
-        this.field_s = false;
+        this.loadedBoardSnapshots = 0;
+        this.suppressResultSubmission = false;
         try {
           stackIn_4_1 = (param1);
           this.field_n = stackIn_4_1;
           stackIn_7_1 = (param0);
-          this.field_p = stackIn_7_1;
-          this.field_o = param4;
-          this.field_k = param3;
+          this.networkedMatch = stackIn_7_1;
+          this.localPlayerMask = param4;
+          this.localPlayerId = param3;
           stackIn_10_1 = !(kb.field_Yb < 2);
           this.field_y = stackIn_10_1;
           var14 = pl.pendingAchievementMask;
@@ -1834,23 +1834,23 @@ final class GameplayScreen extends GameScreen {
           for (var10 = 0; 8 > var10; var10++) {
             var14[var10] = 0;
           }
-          this.match = new MultiplayerMatch(param2, this.field_o, param5, param6, param7);
+          this.match = new MultiplayerMatch(param2, this.localPlayerMask, param5, param6, param7);
           var9_int = 0;
           for (var10Lifetime1 = 0; this.match.playerCount > var10Lifetime1; var10Lifetime1++) {
-            if ((this.field_o & 1 << var10Lifetime1) != 0) {
+            if ((this.localPlayerMask & 1 << var10Lifetime1) != 0) {
               var9_int++;
             }
           }
           if (var9_int == 2) {
             stackIn_23_1 = 1;
           } else {
-            if (this.field_k < 0) {
+            if (this.localPlayerId < 0) {
               stackIn_23_1 = 0;
             } else {
-              stackIn_23_1 = this.field_k;
+              stackIn_23_1 = this.localPlayerId;
             }
           }
-          this.field_m = stackIn_23_1;
+          this.viewedPlayerId = stackIn_23_1;
           if (oo.field_w == null) {
             oo.field_w = new IsaacGenerator(new int[]{(int)MonotonicTime.nowMillis(false)});
           }
@@ -1870,7 +1870,7 @@ final class GameplayScreen extends GameScreen {
             ff.field_j = LevelResultSubmission.field_j.toLowerCase();
           }
           be.field_j = 0;
-          KeyboardInput.field_a = false;
+          KeyboardInput.hasNonnegativeResult = false;
           fl.field_l = MonotonicTime.nowMillis(false);
           gq.field_Yb = param5.pack.packId;
           DualLinkNode.field_q = param5.getPeriod(96);

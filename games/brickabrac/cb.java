@@ -20,7 +20,7 @@ final class cb extends k {
           return;
         }
         if (null == ej.field_I) {
-          var1 = p.a(-123);
+          var1 = PlayerInputBatch.a(-123);
           DirectByteStorage.field_k = new hk(var1, (String) null, true, false, false);
           ResourceArchive.field_f.a(-126, rj.field_c);
           rj.field_c.b((byte) 108, DirectByteStorage.field_k);
@@ -28,7 +28,7 @@ final class cb extends k {
           return;
         }
         ej.field_I.m(17);
-        var1Lifetime1 = p.a(-123);
+        var1Lifetime1 = PlayerInputBatch.a(-123);
         DirectByteStorage.field_k = new hk(var1Lifetime1, (String) null, true, false, false);
         ResourceArchive.field_f.a(-126, rj.field_c);
         rj.field_c.b((byte) 108, DirectByteStorage.field_k);

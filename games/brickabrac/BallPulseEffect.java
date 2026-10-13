@@ -1,16 +1,16 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class kc extends IntrusiveNode {
+final class BallPulseEffect extends IntrusiveNode {
     static String field_i;
-    private int field_l;
-    private int field_k;
+    private int y256;
+    private int ageTicks;
     static RgbSprite field_r;
     static RgbSprite field_p;
     static SoftwareFramebuffer framebuffer;
     static ResourceArchive field_j;
     static mh field_n;
-    private int field_m;
+    private int x256;
     static String field_o;
 
     public static void a(int param0) {
@@ -24,16 +24,16 @@ final class kc extends IntrusiveNode {
         framebuffer = null;
     }
 
-    final boolean c(byte param0) {
+    final boolean advance(byte obfuscationGuard) {
         int fieldTemp$0 = 0;
-        if (param0 >= 47) {
-          fieldTemp$0 = this.field_k + 1;
-          this.field_k = this.field_k + 1;
+        if (obfuscationGuard >= 47) {
+          fieldTemp$0 = this.ageTicks + 1;
+          this.ageTicks = this.ageTicks + 1;
           return fieldTemp$0 < 40 ? true : false;
         }
         field_o = (String) null;
-        int fieldTemp$1 = this.field_k + 1;
-        this.field_k = this.field_k + 1;
+        int fieldTemp$1 = this.ageTicks + 1;
+        this.ageTicks = this.ageTicks + 1;
         return fieldTemp$1 < 40 ? true : false;
     }
 
@@ -42,7 +42,7 @@ final class kc extends IntrusiveNode {
           BoundedFile.field_i = wn.a((byte) -98) * param2 / 1000;
           if (param3 < 91) {
             AudioMixer var5 = (AudioMixer) null;
-            kc.a((ResourceArchive) null, (AudioMixer) null, -127, -72);
+            BallPulseEffect.a((ResourceArchive) null, (AudioMixer) null, -127, -72);
           }
           ck.a(-2196, param0);
           bm.a((byte) -70, param0);
@@ -55,14 +55,14 @@ final class kc extends IntrusiveNode {
         }
     }
 
-    final void a(int param0, int param1, int param2, boolean param3) {
-        int var5 = (int)((Math.exp((double)((float)(-this.field_k) / 20.0f)) - Math.exp(-2.0)) * 200.0);
-        int var6 = this.a((byte) 116);
-        al.a(param2 + (this.field_l >> 8) / param0, var6 / (param0 << 1), (-this.field_k + 40 << 8) / 40, var5, -94, var6 / param0, (this.field_m >> 8) / param0 + param1);
-        if (param3) {
+    final void draw(int scaleDivisor, int destinationX, int destinationY, boolean obfuscationGuard) {
+        int var5 = (int)((Math.exp((double)((float)(-this.ageTicks) / 20.0f)) - Math.exp(-2.0)) * 200.0);
+        int var6 = this.pulseSize((byte) 116);
+        al.a(destinationY + (this.y256 >> 8) / scaleDivisor, var6 / (scaleDivisor << 1), (-this.ageTicks + 40 << 8) / 40, var5, -94, var6 / scaleDivisor, (this.x256 >> 8) / scaleDivisor + destinationX);
+        if (obfuscationGuard) {
           return;
         }
-        this.c((byte) -61);
+        this.advance((byte) -61);
     }
 
     final static RgbSprite[] a(int param0, boolean param1) {
@@ -72,14 +72,14 @@ final class kc extends IntrusiveNode {
           var3[4] = hd.a(param0, 64, (byte) -6);
           return var2;
         }
-        kc.$cfr$intArgs$a$a948187ac0af(-5, false);
+        BallPulseEffect.$cfr$intArgs$a$a948187ac0af(-5, false);
         var3[4] = hd.a(param0, 64, (byte) -6);
         return var2;
     }
 
-    private final int a(byte param0) {
-        int var2 = -80 / ((param0 - 72) / 33);
-        return this.field_k * (-this.field_k + 100) / 20 - 5;
+    private final int pulseSize(byte obfuscationGuard) {
+        int var2 = -80 / ((obfuscationGuard - 72) / 33);
+        return this.ageTicks * (-this.ageTicks + 100) / 20 - 5;
     }
 
     final static gb a(byte param0, boolean param1) {
@@ -101,7 +101,7 @@ final class kc extends IntrusiveNode {
         var3 = var8.readUnsignedByte(param0 + 188);
         gj.field_a = 127 & var3;
         if (param0 != 67) {
-          kc.a(73, true);
+          BallPulseEffect.a(73, true);
         }
         stackIn_5_0 = ((var3 & 128) != 0);
         ji.field_f = stackIn_5_0;
@@ -156,9 +156,9 @@ final class kc extends IntrusiveNode {
         return new gb(param1);
     }
 
-    kc(int param0, int param1) {
-        this.field_m = param0;
-        this.field_l = param1;
+    BallPulseEffect(int x256, int y256) {
+        this.x256 = x256;
+        this.y256 = y256;
     }
 
     static {
@@ -186,7 +186,7 @@ final class kc extends IntrusiveNode {
         var3 = var8.readUnsignedByte(param0 + 188);
         gj.field_a = 127 & var3;
         if (param0 != 67) {
-          kc.a(73, true);
+          BallPulseEffect.a(73, true);
         }
         stackIn_5_0 = ((var3 & 128) != 0);
         ji.field_f = stackIn_5_0;

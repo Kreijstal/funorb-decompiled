@@ -46,7 +46,7 @@ final class an extends pj implements hf, ph {
             stackIn_9_0 = lp.field_xb;
             return stackIn_9_0;
           }
-          if (!p.a((byte) -49, var2_int, var4, var3)) {
+          if (!PlayerInputBatch.a((byte) -49, var2_int, var4, var3)) {
             stackIn_13_0 = lp.field_xb;
             return stackIn_13_0;
           }
@@ -100,7 +100,7 @@ final class an extends pj implements hf, ph {
           var5 = un.a(1);
           if (var4 >= 1890 &&
             var5 - 3 >= var4) {
-            if (p.a((byte) -49, var2_int, var4, var3)) {
+            if (PlayerInputBatch.a((byte) -49, var2_int, var4, var3)) {
               stackIn_10_0 = null;
               return (String) (stackIn_10_0);
             }

@@ -4,7 +4,7 @@
 final class cf {
     static byte[][] field_b;
     static int decodedCanvasWidth;
-    static int field_a;
+    static int checksumMismatchCount;
     static int[] field_c;
 
     final static PauseMenuScreen createPauseMenu(int screenId, int obfuscationGuard) {
