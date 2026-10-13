@@ -22,7 +22,7 @@ final class no extends en {
         NumberFormatException var3 = null;
         var2 = 47 % ((param0 + 30) / 36);
         try {
-          stackIn_2_0 = Integer.parseInt(this.field_L.field_v);
+          stackIn_2_0 = Integer.parseInt(this.field_L.text);
           return stackIn_2_0;
         } catch (java.lang.NumberFormatException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -32,19 +32,19 @@ final class no extends en {
     }
 
     final boolean k(int param0) {
-        if (null == this.field_L.field_v) {
+        if (null == this.field_L.text) {
           return true;
         }
-        if (0 == this.field_L.field_v.length()) {
+        if (0 == this.field_L.text.length()) {
           return true;
         }
-        if (null != this.field_Q.field_v &&
-          this.field_Q.field_v.length() != 0) {
+        if (null != this.field_Q.text &&
+          this.field_Q.text.length() != 0) {
           if (param0 != -22339) {
             return false;
           }
-          if (null != this.field_O.field_v &&
-            this.field_O.field_v.length() != 0) {
+          if (null != this.field_O.text &&
+            this.field_O.text.length() != 0) {
             return false;
           }
           return true;
@@ -142,7 +142,7 @@ final class no extends en {
           return -46;
         }
         try {
-          stackIn_3_0 = Integer.parseInt(this.field_Q.field_v) - 1;
+          stackIn_3_0 = Integer.parseInt(this.field_Q.text) - 1;
           return stackIn_3_0;
         } catch (java.lang.NumberFormatException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -169,7 +169,7 @@ final class no extends en {
           return var2;
         }
         if (this.field_t) {
-          return this.field_s == null ? this.field_v : this.field_s;
+          return this.field_s == null ? this.text : this.field_s;
         }
         if (param0 != 21384) {
           roomSetup = (LobbyRoom) null;
@@ -259,7 +259,7 @@ final class no extends en {
           return -48;
         }
         try {
-          stackIn_3_0 = Integer.parseInt(this.field_O.field_v);
+          stackIn_3_0 = Integer.parseInt(this.field_O.text);
           return stackIn_3_0;
         } catch (java.lang.NumberFormatException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

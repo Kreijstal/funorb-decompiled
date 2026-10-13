@@ -24,14 +24,14 @@ final class cs extends sf implements he {
           var3.height = 100;
           var3.width = this.width;
           var3.x = 0;
-          var3.painter = (WidgetPainter) ((Object) new lk(gl.field_e, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
+          var3.painter = (WidgetPainter) ((Object) new BitmapTextWidgetPainter(gl.field_e, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
           this.a((byte) 10, var3);
           this.field_ab = new Widget(ro.field_vb, (qo) null);
           this.field_ab.width = this.width;
           this.field_ab.x = 0;
           this.field_ab.y = 20 + (var3.y + var3.height);
           this.field_ab.height = 80;
-          this.field_ab.painter = (WidgetPainter) ((Object) new lk(CipherPacketBuffer.field_t, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
+          this.field_ab.painter = (WidgetPainter) ((Object) new BitmapTextWidgetPainter(CipherPacketBuffer.field_t, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
           this.a((byte) 10, this.field_ab);
           this.field_Z = this.a(DualNodeDeque.field_e, -63, (qo) (this));
           this.field_gb = this.a(WeightedScoreStrategy.field_m, -74, (qo) (this));
@@ -116,7 +116,7 @@ final class cs extends sf implements he {
         int var7 = 0;
         try {
           super.a(param0, param1, param2, param3);
-          if (lk.pointerChangedSnapshot) {
+          if (BitmapTextWidgetPainter.pointerChangedSnapshot) {
             param3.f(param0 - 32721);
           }
           var5_long = vi.monotonicMillis(92) - this.field_fb;
@@ -126,7 +126,7 @@ final class cs extends sf implements he {
             this.n(10);
             this.field_G.a(new ud(this.field_G, tn.field_cb), 0);
           } else {
-            this.field_ab.field_v = "" + var7;
+            this.field_ab.text = "" + var7;
           }
           if (this.field_L &&
             null == FixedQuaternion.field_a) {

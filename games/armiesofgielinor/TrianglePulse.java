@@ -65,7 +65,7 @@ final class TrianglePulse {
           return;
         }
         try {
-          lk.musicCrossfadeStream.selectTrack(256, !loop ? true : false, track, -1, fadeRate, 1000000);
+          BitmapTextWidgetPainter.musicCrossfadeStream.selectTrack(256, !loop ? true : false, track, -1, fadeRate, 1000000);
         } catch (RuntimeException runtimeException) {
           throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "hh.H(" + obfuscationGuard + ',' + fadeRate + ',' + (track != null ? "{...}" : "null") + ',' + loop + ')');
         }

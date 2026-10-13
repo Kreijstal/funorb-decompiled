@@ -76,7 +76,7 @@ final class CampaignMenu {
         try {
           var2 = ku.getStoredQuicksave(124);
           var3 = QuickChatPhrase.getCampaignMission(var2.campaignIndex, var2.missionId, 0);
-          ts.startCampaignMission(var3, -1, var2);
+          TextLineLayout.startCampaignMission(var3, -1, var2);
           var4 = var3.playerSlot;
           var5 = rd.gameplayController.battlefield.playerTurnCounts[var4];
           if (~var5 < obfuscationGuard) {
@@ -848,7 +848,7 @@ final class CampaignMenu {
               targetGains[targetChannel] = targetGain;
               enabledChannelIndex++;
             }
-            ((AdaptiveMidiPcmStream) (lk.musicCrossfadeStream.selectedSequencer)).rampToProfile((byte) 48, wf.musicProfileTransitionMillis, profile);
+            ((AdaptiveMidiPcmStream) (BitmapTextWidgetPainter.musicCrossfadeStream.selectedSequencer)).rampToProfile((byte) 48, wf.musicProfileTransitionMillis, profile);
             return;
           }
           return;
@@ -2119,8 +2119,8 @@ final class CampaignMenu {
             stackIn_46_0 = (!br.heldKeys[81]) ? 256 : 0;
             var5Lifetime1 = stackIn_46_0;
             if (var4_int != -2) {
-              lk.musicCrossfadeStream.firstSequencer.setChannelGain(var5Lifetime1, var4_int, (byte) -52);
-              lk.musicCrossfadeStream.secondSequencer.setChannelGain(var5Lifetime1, var4_int, (byte) -116);
+              BitmapTextWidgetPainter.musicCrossfadeStream.firstSequencer.setChannelGain(var5Lifetime1, var4_int, (byte) -52);
+              BitmapTextWidgetPainter.musicCrossfadeStream.secondSequencer.setChannelGain(var5Lifetime1, var4_int, (byte) -116);
             }
           }
           return;

@@ -651,7 +651,7 @@ final class CampaignUnitOverride {
                 }
                 var2 = NodeIterator.a(param0 + 132, "you_can_spectate");
                 if (null != var2) {
-                  ak.field_e = uu.a(var2, (byte) -115);
+                  BitmapTextLayout.field_e = uu.a(var2, (byte) -115);
                 }
                 var2 = NodeIterator.a(50, "you_can_not_spectate");
                 if (var2 != null) {
@@ -1657,7 +1657,7 @@ final class CampaignUnitOverride {
                 }
                 var2 = NodeIterator.a(param0 ^ -100, "create_alert_mismatch");
                 if (var2 != null) {
-                  ak.field_j = uu.a(var2, (byte) -106);
+                  BitmapTextLayout.field_j = uu.a(var2, (byte) -106);
                 }
                 var2 = NodeIterator.a(50, "create_passwordvalid");
                 if (var2 != null) {
@@ -1713,7 +1713,7 @@ final class CampaignUnitOverride {
                 }
                 var2 = NodeIterator.a(50, "ignorelistdupe");
                 if (null != var2) {
-                  ts.field_k = uu.a(var2, (byte) 121);
+                  TextLineLayout.field_k = uu.a(var2, (byte) 121);
                 }
                 var2 = NodeIterator.a(50, "ignorenotfound");
                 if (null != var2) {
@@ -2350,7 +2350,7 @@ final class CampaignUnitOverride {
                 }
                 var2 = NodeIterator.a(50, "mp_acceptrematch");
                 if (null != var2) {
-                  lk.field_s = uu.a(var2, (byte) -94);
+                  BitmapTextWidgetPainter.field_s = uu.a(var2, (byte) -94);
                 }
                 var2 = NodeIterator.a(param0 + 132, "mp_acceptrematch_unrated");
                 if (null != var2) {
@@ -2546,7 +2546,7 @@ final class CampaignUnitOverride {
                 }
                 var2 = NodeIterator.a(50, "rating_won");
                 if (var2 != null) {
-                  ts.field_g = uu.a(var2, (byte) 29);
+                  TextLineLayout.field_g = uu.a(var2, (byte) 29);
                 }
                 var2 = NodeIterator.a(50, "rating_lost");
                 if (var2 != null) {
@@ -2670,7 +2670,7 @@ final class CampaignUnitOverride {
                 }
                 var2 = NodeIterator.a(param0 ^ -100, "fs_accept_aftercancel");
                 if (null != var2) {
-                  ts.field_f = uu.a(var2, (byte) 79);
+                  TextLineLayout.field_f = uu.a(var2, (byte) 79);
                 }
                 var2 = NodeIterator.a(50, "fs_accept_countdown_sing");
                 if (null != var2) {

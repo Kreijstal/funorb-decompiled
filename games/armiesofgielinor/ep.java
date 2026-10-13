@@ -139,7 +139,7 @@ final class ep {
           SoftwareRaster.b();
           var12 = new String[10];
           var13 = var12;
-          var3_int = nr.field_e.wrapLines(ts.field_b, new int[]{1000}, var13);
+          var3_int = nr.field_e.wrapLines(TextLineLayout.field_b, new int[]{1000}, var13);
           for (var4 = 0; var4 < var3_int; var4++) {
             var5 = this.a((byte) -90, var4 * 20 + 200);
             fe.c(var12[var4], this.a(320, 4592), var5, ConsoleValue.field_b, true);
@@ -387,7 +387,7 @@ final class ep {
               }
             }
             if (4 == ta.field_N) {
-              ai.field_T.attachTransport(jj.field_g, ts.field_m, -68);
+              ai.field_T.attachTransport(jj.field_g, TextLineLayout.field_m, -68);
               kd.field_R = null;
               ta.field_N = 0;
               jj.field_g = null;

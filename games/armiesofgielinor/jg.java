@@ -434,11 +434,11 @@ final class jg extends IntrusiveNode {
                 var12.ratedIcon.setBounds(var12.optionIconContainer.height, -20500, var53_ref.canvasWidth, 0, var34_int);
                 var34_int = var34_int + (MusicPatch.field_n + var53_ref.canvasWidth);
               }
-              if (ju.field_a != null) {
+              if (TextLayout.field_a != null) {
                 for (var36Lifetime1 = 0; var36Lifetime1 < tq.gameOptionCount; var36Lifetime1++) {
-                  if (ju.field_a[var36Lifetime1] != null &&
+                  if (TextLayout.field_a[var36Lifetime1] != null &&
                     (1 << var36Lifetime1 + na.field_E & var14Lifetime1) != 0) {
-                    var42 = ju.field_a[var36Lifetime1][var12.gameOptions[var36Lifetime1] & 255];
+                    var42 = TextLayout.field_a[var36Lifetime1][var12.gameOptions[var36Lifetime1] & 255];
                     var54 = var42;
                     var12.optionIcons[var36Lifetime1].sprite = var42;
                     var12.optionIcons[var36Lifetime1].setBounds(var12.optionIconContainer.height, -20500, var54.canvasWidth, 0, var34_int);
@@ -566,7 +566,7 @@ final class jg extends IntrusiveNode {
               if (var12.spectatorMode != 2) {
                 stackIn_171_0 = jj.field_d;
               } else {
-                stackIn_171_0 = ak.field_e;
+                stackIn_171_0 = BitmapTextLayout.field_e;
               }
               ad.field_I = stackIn_171_0;
             }

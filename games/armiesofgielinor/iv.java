@@ -421,7 +421,7 @@ public abstract class iv extends java.applet.Applet implements Runnable, java.aw
         try {
           boolean decompiledFrameRemainder0 = true;
           if (StrongCacheEntry.field_E >= 10) {
-            if (lk.b(true)) {
+            if (BitmapTextWidgetPainter.b(true)) {
               if (SoundCache.field_b == 0) {
                 tq.a(param1, false, 112);
                 pt.a(0, 12, param2, 0);

@@ -36,7 +36,7 @@ final class ToggleTurnSkipConsoleCommand extends ConsoleCommand {
         try {
           if (track != null) {
             TrianglePulse.selectMusicTrackWithDefaultGain(-16147, 50, track, true);
-            ((AdaptiveMidiPcmStream) (lk.musicCrossfadeStream.selectedSequencer)).rampToProfile((byte) -111, 1, CorpseConditionMarker.defaultMusicProfile);
+            ((AdaptiveMidiPcmStream) (BitmapTextWidgetPainter.musicCrossfadeStream.selectedSequencer)).rampToProfile((byte) -111, 1, CorpseConditionMarker.defaultMusicProfile);
           }
           int var2_int = 100 / ((-17 - obfuscationGuard) / 33);
         } catch (RuntimeException runtimeException) {

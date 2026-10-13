@@ -399,7 +399,7 @@ final class MapRepository {
                 var24 = param0.field_N[var23];
                 var25 = param0.field_a[var23];
                 var26 = param0.field_n[var23];
-                ju.field_c[var23] = (var18 * var26 + (var12 * var24 + var15 * var25) >> 16) + var9;
+                TextLayout.field_c[var23] = (var18 * var26 + (var12 * var24 + var15 * var25) >> 16) + var9;
                 ji.field_c[var23] = var10 + (var13 * var24 + (var16 * var25 + var26 * var19) >> 16);
                 fl.field_f[var23] = (var26 * var20 + var24 * var14 + var25 * var17 >> 16) + var11;
                 var24 = param0.field_m[var23];

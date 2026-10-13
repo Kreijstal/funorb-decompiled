@@ -17,7 +17,7 @@ final class na extends tj implements mf, he {
     public na() {
         super(0, 0, 496, 0, (WidgetPainter) null);
         this.field_P = new ma("", (qo) null, 12);
-        lk var1 = new lk(gl.field_e, 0, 0, 0, 0, 16777215, -1, 3, 0, ArmiesOfGielinor.field_J.maxAscent, -1, 2147483647, true);
+        BitmapTextWidgetPainter var1 = new BitmapTextWidgetPainter(gl.field_e, 0, 0, 0, 0, 16777215, -1, 3, 0, ArmiesOfGielinor.field_J.maxAscent, -1, 2147483647, true);
         Widget var2 = new Widget(BattleTutorial.field_u, var1, (qo) null);
         this.field_O = new fw(LineOfSightGrid.field_f, (qo) null);
         this.field_L = new fw(ac.field_s, (qo) null);
@@ -151,7 +151,7 @@ final class na extends tj implements mf, he {
         if (!this.a(-29967)) {
           return;
         }
-        TelepopEvent.a(param0, this.field_P.field_v);
+        TelepopEvent.a(param0, this.field_P.text);
     }
 
     final static void c(int param0, int param1, int param2, int param3, int param4) {

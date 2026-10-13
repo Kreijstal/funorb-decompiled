@@ -104,69 +104,69 @@ final class kd extends tj implements nq, he, mf {
         }
     }
 
-    final static void a(int param0, String param1, ts param2, BitmapFont param3, byte param4) {
-        int var7 = 0;
-        RuntimeException stackIn_20_0 = null;
-        StringBuilder stackIn_20_1 = null;
-        String stackIn_21_2 = null;
-        StringBuilder stackIn_23_1 = null;
-        String stackIn_24_2 = null;
-        StringBuilder stackIn_26_1 = null;
-        String stackIn_27_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        int var5_int = 0;
-        RuntimeException var5 = null;
-        int var6 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        var9 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+    final static void computeCaretPositions(int justificationStep, String text, TextLineLayout line, BitmapFont font, byte obfuscationGuard) {
+        int characterIndex = 0;
+        RuntimeException failureForContext = null;
+        StringBuilder errorContext = null;
+        String textDescription = null;
+        StringBuilder errorContextWithText = null;
+        String lineDescription = null;
+        StringBuilder errorContextWithLine = null;
+        String fontDescription = null;
+        RuntimeException caughtFailure = null;
+        int spacingAccumulator = 0;
+        RuntimeException failure = null;
+        int tagX = 0;
+        int character = 0;
+        int obfuscationControl = 0;
+        obfuscationControl = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          if (param4 <= 78) {
+          if (obfuscationGuard <= 78) {
             return;
           }
-          var5_int = 0;
-          var6 = -1;
-          for (var7 = 1; var7 < param1.length(); var7++) {
-            var8 = param1.charAt(var7);
-            if (var8 == 60) {
-              var6 = param2.field_i[0] + (var5_int >> 8) + param3.textWidth(param1.substring(0, var7));
+          spacingAccumulator = 0;
+          tagX = -1;
+          for (characterIndex = 1; characterIndex < text.length(); characterIndex++) {
+            character = text.charAt(characterIndex);
+            if (character == 60) {
+              tagX = line.caretXs[0] + (spacingAccumulator >> 8) + font.textWidth(text.substring(0, characterIndex));
             }
-            if (var6 != -1) {
-              param2.field_i[var7] = var6;
+            if (tagX != -1) {
+              line.caretXs[characterIndex] = tagX;
             } else {
-              if (var8 == 32) {
-                var5_int = var5_int + param0;
+              if (character == 32) {
+                spacingAccumulator = spacingAccumulator + justificationStep;
               }
-              param2.field_i[var7] = (var5_int >> 8) + param2.field_i[0] - (-param3.textWidth(param1.substring(0, 1 + var7)) + param3.characterWidth((char) var8));
+              line.caretXs[characterIndex] = (spacingAccumulator >> 8) + line.caretXs[0] - (-font.textWidth(text.substring(0, 1 + characterIndex)) + font.characterWidth((char) character));
             }
-            if (var8 == 62) {
-              var6 = -1;
+            if (character == 62) {
+              tagX = -1;
             }
           }
           return;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var5 = decompiledCaughtException;
-          stackIn_20_0 = var5;
-          stackIn_20_1 = new StringBuilder().append("kd.D(").append(param0).append(',');
-          if (param1 == null) {
-            stackIn_21_2 = "null";
+        } catch (java.lang.RuntimeException caughtParameter) {
+          caughtFailure = caughtParameter;
+          failure = caughtFailure;
+          failureForContext = failure;
+          errorContext = new StringBuilder().append("kd.D(").append(justificationStep).append(',');
+          if (text == null) {
+            textDescription = "null";
           } else {
-            stackIn_21_2 = "{...}";
+            textDescription = "{...}";
           }
-          stackIn_23_1 = ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',');
-          if (param2 == null) {
-            stackIn_24_2 = "null";
+          errorContextWithText = ((StringBuilder) (Object) errorContext).append(textDescription).append(',');
+          if (line == null) {
+            lineDescription = "null";
           } else {
-            stackIn_24_2 = "{...}";
+            lineDescription = "{...}";
           }
-          stackIn_26_1 = ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(',');
-          if (param3 == null) {
-            stackIn_27_2 = "null";
+          errorContextWithLine = ((StringBuilder) (Object) errorContextWithText).append(lineDescription).append(',');
+          if (font == null) {
+            fontDescription = "null";
           } else {
-            stackIn_27_2 = "{...}";
+            fontDescription = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(',').append(param4).append(')').toString());
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) failureForContext), ((StringBuilder) (Object) errorContextWithLine).append(fontDescription).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 
@@ -218,7 +218,7 @@ final class kd extends tj implements nq, he, mf {
         ta var4 = new ta(46, var3, this.width - 90, 25, this.field_ab, true, this.width - 120, 5, gl.field_e, 11579568, IterableDualNodeDeque.field_c);
         this.a((byte) 10, (Widget) (var4));
         var3 = var3 + var4.height;
-        lk var5 = new lk(ArmiesOfGielinor.field_J, 0, 0, 0, 0, 16777215, -1, 0, 0, ArmiesOfGielinor.field_J.maxAscent, -1, 2147483647, true);
+        BitmapTextWidgetPainter var5 = new BitmapTextWidgetPainter(ArmiesOfGielinor.field_J, 0, 0, 0, 0, 16777215, -1, 0, 0, ArmiesOfGielinor.field_J.maxAscent, -1, 2147483647, true);
         this.field_W = new hv(var2, var5);
         this.field_W.field_s = "";
         this.field_W.a(DiskCacheRequest.field_I, false, 0);
@@ -319,13 +319,13 @@ final class kd extends tj implements nq, he, mf {
             field_F = (ClientUiComponent) null;
           }
           if (0 == param0) {
-            ak.a("terms.ws", (byte) -106);
+            BitmapTextLayout.a("terms.ws", (byte) -106);
           } else {
             if (param0 == 1) {
-              ak.a("privacy.ws", (byte) -81);
+              BitmapTextLayout.a("privacy.ws", (byte) -81);
             } else {
               if (param0 == 2) {
-                ak.a("conduct.ws", (byte) -98);
+                BitmapTextLayout.a("conduct.ws", (byte) -98);
               }
             }
           }
@@ -678,10 +678,10 @@ final class kd extends tj implements nq, he, mf {
         }
         int var2 = param0;
         try {
-          var2 = Integer.parseInt(this.field_N.field_v);
+          var2 = Integer.parseInt(this.field_N.text);
         } catch (NumberFormatException numberFormatException) {
         }
-        return BattleUnitRenderer.a(this.field_ab.field_K, this, this.field_V.field_v, this.field_I.field_v, var2, (byte) -110, this.field_O.field_v);
+        return BattleUnitRenderer.a(this.field_ab.field_K, this, this.field_V.text, this.field_I.text, var2, (byte) -110, this.field_O.text);
     }
 
     static {

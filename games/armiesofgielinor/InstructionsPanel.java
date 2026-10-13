@@ -2377,7 +2377,7 @@ final class InstructionsPanel {
             }
             if (mh.field_a == ov.connectionState &&
               ConsoleTokenCursor.receivePacketBytes(-115, 8)) {
-              ts.field_h = ByteStorage.incomingPacket.readLong((byte) -2);
+              TextLineLayout.field_h = ByteStorage.incomingPacket.readLong((byte) -2);
               ByteStorage.incomingPacket.position = 0;
               bk.a(param2, param5, CampaignRewardPreview.field_g, 0, param1);
               ov.connectionState = NetworkResourceRequest.field_D;
@@ -2515,7 +2515,7 @@ final class InstructionsPanel {
               if (MusicCrossfadeStream.deliveredOpcode == 7) {
                 MusicCrossfadeStream.deliveredOpcode = 3;
               }
-              lk.field_r = ByteStorage.incomingPacket.readNullTerminatedString(1);
+              BitmapTextWidgetPainter.field_r = ByteStorage.incomingPacket.readNullTerminatedString(1);
               ev.field_b = false;
               stackIn_99_0 = MusicCrossfadeStream.deliveredOpcode;
               return stackIn_99_0;
@@ -2523,9 +2523,9 @@ final class InstructionsPanel {
             if (null == MoveAttackRequest.sessionSocket) {
               if (ev.field_b) {
                 if (TileMetadata.b(0) <= 30000L) {
-                  lk.field_r = DamageEvent.field_y;
+                  BitmapTextWidgetPainter.field_r = DamageEvent.field_y;
                 } else {
-                  lk.field_r = gu.field_a;
+                  BitmapTextWidgetPainter.field_r = gu.field_a;
                 }
                 ev.field_b = false;
                 stackIn_109_0 = 3;

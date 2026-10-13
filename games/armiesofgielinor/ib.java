@@ -29,7 +29,7 @@ final class ib extends mk {
           if (param0 < 89) {
             ib.a(false, -126, -33, 30, 79, -34, 49, -91, -77);
           }
-          var6 = this.field_l.field_v.toLowerCase();
+          var6 = this.field_l.text.toLowerCase();
           var4 = param1.toLowerCase();
           if (0 == var4.length()) {
             stackIn_4_0 = null;
@@ -96,7 +96,7 @@ final class ib extends mk {
         String stackIn_16_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var3 = this.field_l.field_v.toLowerCase();
+          var3 = this.field_l.text.toLowerCase();
           var4 = param1.toLowerCase();
           if (var4.length() == 0) {
             stackIn_3_0 = rn.field_e;
@@ -414,7 +414,7 @@ final class ib extends mk {
         String stackIn_17_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var3 = this.field_k.field_v.toLowerCase();
+          var3 = this.field_k.text.toLowerCase();
           var4 = param0.toLowerCase();
           var5 = 53 / ((82 - param1) / 44);
           if (var3.length() > 0) {

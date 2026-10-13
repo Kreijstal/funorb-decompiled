@@ -38,7 +38,7 @@ final class bw {
             DisplacedUnitMarker.field_t[12] = is.field_c;
           } else {
             if (rd.gameplayController.battlefield.field_i != 0) {
-              DisplacedUnitMarker.field_t[12] = lk.field_s;
+              DisplacedUnitMarker.field_t[12] = BitmapTextWidgetPainter.field_s;
             } else {
               if (-1 + (1 << rd.gameplayController.battlefield.playerCount) != (1 << rd.gameplayController.controlledPlayerId | rd.gameplayController.field_hb)) {
                 DisplacedUnitMarker.field_t[12] = db.field_h;

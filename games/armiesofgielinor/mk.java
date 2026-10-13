@@ -13,10 +13,10 @@ abstract class mk extends rb implements fb {
         if (param0 < 12) {
           return true;
         }
-        if (null == this.field_g.field_v) {
+        if (null == this.field_g.text) {
           return true;
         }
-        if (this.field_g.field_v.length() != 0) {
+        if (this.field_g.text.length() != 0) {
           return false;
         }
         return true;
@@ -45,15 +45,15 @@ abstract class mk extends rb implements fb {
 
     final String b(byte param0) {
         if (param0 == -71) {
-          return this.a((byte) 115, this.field_g.field_v);
+          return this.a((byte) 115, this.field_g.text);
         }
         field_h = false;
-        return this.a((byte) 115, this.field_g.field_v);
+        return this.a((byte) 115, this.field_g.text);
     }
 
     final gu c(int param0) {
         int var2 = 85 / ((56 - param0) / 32);
-        return this.a(-3137, this.field_g.field_v);
+        return this.a(-3137, this.field_g.text);
     }
 
     public final void a(fn param0, int param1) {

@@ -184,7 +184,7 @@ final class MusicCrossfadeStream extends PcmStream {
           if (obfuscationGuard != 41) {
             field_u = (String) null;
           }
-          if (lk.musicCrossfadeStream != null) {
+          if (BitmapTextWidgetPainter.musicCrossfadeStream != null) {
             bk.selectMusicTrack(channelGain, 1048576, track, obfuscationGuard + 20566, loop);
           }
           if (null != LobbyRoom.directMusicSequencer) {
@@ -479,9 +479,9 @@ final class MusicCrossfadeStream extends PcmStream {
         if (!(0 >= PreparedAction.field_r) ||
           !(InstructionsPanel.field_D <= 0)) {
           if (dh.field_k != null) {
-            dh.field_k.f(lk.field_a.x, 0);
+            dh.field_k.f(BitmapTextWidgetPainter.field_a.x, 0);
           }
-          stackIn_23_0 = lk.field_a;
+          stackIn_23_0 = BitmapTextWidgetPainter.field_a;
           stackIn_24_1 = (param1) && (!ChannelGainProfile.field_f);
           ((ClientUiComponent) (Object) stackIn_23_0).draw(stackIn_24_1, 20);
           stackIn_27_0 = pd.field_c;

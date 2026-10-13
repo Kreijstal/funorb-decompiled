@@ -49,8 +49,8 @@ final class NetworkResourceRequest extends ResourceRequest {
           if (null != LobbyRoom.directMusicSequencer) {
             LobbyRoom.directMusicSequencer.setMasterVolume(-122, param0);
           }
-          if (null != lk.musicCrossfadeStream) {
-            lk.musicCrossfadeStream.setMasterGain(param0, 6);
+          if (null != BitmapTextWidgetPainter.musicCrossfadeStream) {
+            BitmapTextWidgetPainter.musicCrossfadeStream.setMasterGain(param0, 6);
           }
           return;
         }
@@ -58,8 +58,8 @@ final class NetworkResourceRequest extends ResourceRequest {
         if (null != LobbyRoom.directMusicSequencer) {
           LobbyRoom.directMusicSequencer.setMasterVolume(-122, param0);
         }
-        if (null != lk.musicCrossfadeStream) {
-          lk.musicCrossfadeStream.setMasterGain(param0, 6);
+        if (null != BitmapTextWidgetPainter.musicCrossfadeStream) {
+          BitmapTextWidgetPainter.musicCrossfadeStream.setMasterGain(param0, 6);
         }
     }
 

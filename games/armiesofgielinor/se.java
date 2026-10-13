@@ -45,7 +45,7 @@ final class se {
             return stackIn_11_0;
           }
           if (IndexedSpriteBase.isIgnoredAccount(name, -3404)) {
-            stackIn_14_0 = fo.a(4800, ts.field_k, new String[]{name});
+            stackIn_14_0 = fo.a(4800, TextLineLayout.field_k, new String[]{name});
             return stackIn_14_0;
           }
           if (vg.ignoreCount >= 100) {

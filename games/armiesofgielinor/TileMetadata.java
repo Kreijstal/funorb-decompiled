@@ -103,9 +103,9 @@ final class TileMetadata implements TaggedFieldReader {
             field_a = (int[]) null;
           }
           TextCursor.effectsPlayer.setStream(AnimationSkeleton.effectsMixer);
-          lk.musicCrossfadeStream = musicStream;
-          lk.musicCrossfadeStream.setMasterGain(SoundPlaybackHandle.musicGain, -120);
-          l.musicPlayer.setStream(lk.musicCrossfadeStream);
+          BitmapTextWidgetPainter.musicCrossfadeStream = musicStream;
+          BitmapTextWidgetPainter.musicCrossfadeStream.setMasterGain(SoundPlaybackHandle.musicGain, -120);
+          l.musicPlayer.setStream(BitmapTextWidgetPainter.musicCrossfadeStream);
         } catch (RuntimeException runtimeException) {
           throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "ca.F(" + (component != null ? "{...}" : "null") + ',' + effectsLatencyFrames + ',' + (platformTasks != null ? "{...}" : "null") + ',' + stereo + ',' + obfuscationGuard + ',' + (musicStream != null ? "{...}" : "null") + ',' + musicLatencyFrames + ',' + sampleRate + ')');
         }

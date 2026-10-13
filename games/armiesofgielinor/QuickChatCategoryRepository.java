@@ -29,7 +29,7 @@ final class QuickChatCategoryRepository {
           return null;
         }
         if (!(ps.field_E + NodeIterator.field_c <= ev.field_a)) {
-          return ts.field_a;
+          return TextLineLayout.field_a;
         }
         return null;
     }

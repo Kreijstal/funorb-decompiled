@@ -250,7 +250,7 @@ final class CipherPacketBuffer extends PacketBuffer {
                 if (!MusicCrossfadeStream.a(param1, true)) {
                   if (jt.field_a == 16) {
                     RasterState.a((byte) 111);
-                    ts.a((byte) -41);
+                    TextLineLayout.a((byte) -41);
                     vr.a(iw.field_l, 18);
                   }
                   jt.field_a = param1;
@@ -289,7 +289,7 @@ final class CipherPacketBuffer extends PacketBuffer {
                 }
                 if (jt.field_a == 16) {
                   RasterState.a((byte) 111);
-                  ts.a((byte) -41);
+                  TextLineLayout.a((byte) -41);
                   vr.a(iw.field_l, 18);
                 }
                 jt.field_a = param1;
@@ -334,7 +334,7 @@ final class CipherPacketBuffer extends PacketBuffer {
         }
         if (jt.field_a == 16) {
           RasterState.a((byte) 111);
-          ts.a((byte) -41);
+          TextLineLayout.a((byte) -41);
           vr.a(iw.field_l, 18);
         }
         jt.field_a = param1;

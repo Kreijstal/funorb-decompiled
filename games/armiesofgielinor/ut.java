@@ -201,7 +201,7 @@ final class ut extends sf implements he {
             var7.x = 0;
             var7.width = this.width;
             var7.height = 80;
-            var7.painter = (WidgetPainter) ((Object) new lk(ArmiesOfGielinor.field_J, 20, 20, 0, 10, 16777215, -1, 0, 0, 16, 0, 0, true));
+            var7.painter = (WidgetPainter) ((Object) new BitmapTextWidgetPainter(ArmiesOfGielinor.field_J, 20, 20, 0, 10, 16777215, -1, 0, 0, 16, 0, 0, true));
             this.a((byte) 10, var7);
           }
           this.field_nb = false;
@@ -618,7 +618,7 @@ final class ut extends sf implements he {
         var8 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           super.a(param0, param1, param2, param3);
-          if (lk.pointerChangedSnapshot) {
+          if (BitmapTextWidgetPainter.pointerChangedSnapshot) {
             param3.f(1);
             var9 = this.field_kb;
             var5 = var9;

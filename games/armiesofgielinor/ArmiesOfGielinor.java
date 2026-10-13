@@ -87,9 +87,9 @@ public final class ArmiesOfGielinor extends wf {
           stackIn_10_1 = 127;
           stackIn_11_2 = (FixedQuaternion.field_a != null);
           this.a(stackIn_10_1, stackIn_11_2);
-          if (ts.field_l) {
+          if (TextLineLayout.field_l) {
             this.p(17);
-            ts.field_l = false;
+            TextLineLayout.field_l = false;
           }
           uk.field_n = uk.field_n + 1;
           if (param0 > -111) {
@@ -955,7 +955,7 @@ public final class ArmiesOfGielinor extends wf {
             } else {
               stackIn_197_2 = ku.getStoredQuicksave(127);
             }
-            ts.startCampaignMission(stackIn_196_0, stackIn_196_1, stackIn_197_2);
+            TextLineLayout.startCampaignMission(stackIn_196_0, stackIn_196_1, stackIn_197_2);
             if (jt.field_a == -10) {
               qh.requestDeleteQuicksave((byte) 27);
             }
@@ -1372,10 +1372,10 @@ public final class ArmiesOfGielinor extends wf {
           ao.b((byte) -120);
           or.a(false);
           kp.a(2);
-          lk.a((byte) 58);
+          BitmapTextWidgetPainter.a((byte) 58);
           Widget.c((byte) -124);
           nl.i(-98);
-          ju.a(param0 - 51);
+          TextLayout.a(param0 - 51);
           ut.p(0);
           ls.a(-121);
           vq.a((byte) 107);
@@ -1497,7 +1497,7 @@ public final class ArmiesOfGielinor extends wf {
           nb.d((byte) 68);
           DirectByteStorage.c(1);
           fh.a((byte) -28);
-          ak.c(true);
+          BitmapTextLayout.c(true);
           wc.j(0);
           ku.k(param0 ^ -36);
           cs.b(true);
@@ -1577,7 +1577,7 @@ public final class ArmiesOfGielinor extends wf {
           rs.a((byte) -121);
           jl.a(-125);
           ip.a(param0 ^ 36);
-          ts.b(param0 ^ 26972);
+          TextLineLayout.b(param0 ^ 26972);
           DropdownArrowPainter.a((byte) 86);
           fc.a(param0 ^ 43);
           fk.a(true);
@@ -1624,7 +1624,7 @@ public final class ArmiesOfGielinor extends wf {
           var5 = 0;
           do {
             if (!(CorpseConditionMarker.defaultMusicProfile.gains.length > var5)) {
-              lk.a(IntPair.field_m, 22050, var4, (byte) 68, true, (java.awt.Component) ((Object) IndexedSpriteBase.field_b));
+              BitmapTextWidgetPainter.a(IntPair.field_m, 22050, var4, (byte) 68, true, (java.awt.Component) ((Object) IndexedSpriteBase.field_b));
               Widget.field_o = new int[7];
               break;
             }
@@ -2105,7 +2105,7 @@ public final class ArmiesOfGielinor extends wf {
               ConsoleEvaluationException.field_a[var5_int] = MusicTrack.load(SummonAction.field_w, "", "attack" + (var5_int + 1));
               var5_int++;
             } while (var18 == 0);
-            var5 = lk.musicCrossfadeStream.firstSequencer;
+            var5 = BitmapTextWidgetPainter.musicCrossfadeStream.firstSequencer;
             var5.prepareTrackSamples(jl.field_d, ep.field_b, 0, SocialListPanel.field_Ob, (byte) 86);
             var5.prepareTrackSamples(jl.field_d, ep.field_b, 0, DeployRequest.field_B, (byte) 86);
             var5.prepareTrackSamples(jl.field_d, ep.field_b, 0, ChannelBaseVolumeConsoleCommand.field_K, (byte) 86);

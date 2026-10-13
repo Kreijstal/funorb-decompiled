@@ -8781,7 +8781,7 @@ final class GameplayController {
               }
             }
           }
-          if (lk.pointerChangedSnapshot) {
+          if (BitmapTextWidgetPainter.pointerChangedSnapshot) {
             this.field_C = AiPlanningStrategy.pointerX;
             this.field_Zb = ko.pointerY;
           }

@@ -23,8 +23,8 @@ final class CombatSandbox {
         this.field_l = new r[6];
         this.field_l[0] = new r(this.field_b, this.field_f, this.field_m, this.field_i, af.field_a, 0, 0);
         this.field_l[1] = new r(this.field_b, this.field_f, this.field_m, this.field_i, af.field_a, 0, 0);
-        this.field_l[2] = new r(this.field_b, this.field_f, this.field_m, this.field_i, ts.field_d, 0, 0);
-        this.field_l[3] = new r(this.field_b, this.field_f, this.field_m, this.field_i, ts.field_d, 0, 0);
+        this.field_l[2] = new r(this.field_b, this.field_f, this.field_m, this.field_i, TextLineLayout.field_d, 0, 0);
+        this.field_l[3] = new r(this.field_b, this.field_f, this.field_m, this.field_i, TextLineLayout.field_d, 0, 0);
         this.field_l[4] = new r(this.field_b, this.field_f, this.field_m, this.field_i, PlayerProfile.field_i, 0, 0);
         if (param0 != -49) {
           this.field_a = (ia) null;

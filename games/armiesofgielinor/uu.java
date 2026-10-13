@@ -419,7 +419,7 @@ final class uu {
             }
             PrintVictoryConditionsConsoleCommand.field_E.text = fo.a(4800, ws.field_T, new String[]{Integer.toString(vu.currentRoom.playerCount), Integer.toString(vu.currentRoom.playerCapacity)});
           }
-          stackIn_173_0 = lk.field_a;
+          stackIn_173_0 = BitmapTextWidgetPainter.field_a;
           stackIn_173_1 = true;
           stackIn_174_2 = (param0) && (!param1) && (!ChannelGainProfile.field_f);
           ((ClientUiComponent) (Object) stackIn_173_0).updateInput(stackIn_173_1, stackIn_174_2);

@@ -249,7 +249,7 @@ final class UiSelectionState {
           this.pressedPointerButton = 0;
         }
         if (this.pressedPointerButton == 0 && (this.pointerDrivenSelection ||
-          lk.pointerChangedSnapshot)) {
+          BitmapTextWidgetPainter.pointerChangedSnapshot)) {
           if (0 > hoverIndex) {
             if (this.pointerDrivenSelection) {
               this.selectedIndex = -1;

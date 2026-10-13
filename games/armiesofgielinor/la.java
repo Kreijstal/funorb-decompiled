@@ -133,7 +133,7 @@ final class la {
         if (obfuscationGuard != 30) {
           la.openPublicTextChat(104);
         }
-        lk.chatHistorySize = 0;
+        BitmapTextWidgetPainter.chatHistorySize = 0;
         MoveAttackRequest.chatHistoryPriorityCounts = new int[3];
         DefeatPlayerConsoleCommand.chatHistory = new ChatMessage[categoryLimit * 15];
         AnimationPlayer.chatHistoryCategoryLimit = categoryLimit;

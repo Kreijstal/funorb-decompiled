@@ -36,7 +36,7 @@ final class DeployEvent extends GameEvent {
         no.field_T = new ClientUiComponent(0L, (ClientUiComponent) null);
         no.field_T.addChild(SpellCastEvent.field_E.tabs, 127);
         no.field_T.addChild(cp.field_d, 39);
-        ak.b(false);
+        BitmapTextLayout.b(false);
     }
 
     final String describeEvent(byte obfuscationGuard, boolean verbose) {

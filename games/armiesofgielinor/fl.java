@@ -38,11 +38,11 @@ final class fl {
         }
     }
 
-    final void a(int param0, int param1, int param2, byte param3, int param4, int param5) {
-        if (param3 < 44) {
+    final void drawLine(int colour, int endY, int startX, byte obfuscationGuard, int startY, int endX) {
+        if (obfuscationGuard < 44) {
           this.a(69, 37, 82, 84, -66);
         }
-        SoftwareRaster.h(param2, param4, param5, param1, param0);
+        SoftwareRaster.h(startX, startY, endX, endY, colour);
     }
 
     private final void a(int param0, int param1, int param2, String param3) {
@@ -196,9 +196,9 @@ final class fl {
         int var6 = 26 / ((param3 + 48) / 53);
     }
 
-    final void a(int param0, int param1, int param2, boolean param3, int param4, int param5, int param6) {
-        SoftwareRaster.b(param1, param2, param5, param4, param6, param0);
-        if (!param3) {
+    final void fillRectangle(int alpha, int left, int top, boolean obfuscationGuard, int height, int width, int colour) {
+        SoftwareRaster.b(left, top, width, height, colour, alpha);
+        if (!obfuscationGuard) {
           fl.a((byte) 3);
         }
     }
@@ -211,7 +211,7 @@ final class fl {
     }
 
     final void a(int param0, BitmapFont param1) {
-        lk var17 = null;
+        BitmapTextWidgetPainter var17 = null;
         ao var4 = null;
         RgbSprite[] var5 = null;
         nj var16 = null;
@@ -234,22 +234,22 @@ final class fl {
         ao var14Lifetime1;
         ao var14Lifetime2;
         try {
-          var17 = new lk(param1, 2, 2, 2236962, 1, 1, 1, param1.maxDescent + (param1.maxAscent + 2));
+          var17 = new BitmapTextWidgetPainter(param1, 2, 2, 2236962, 1, 1, 1, param1.maxDescent + (param1.maxAscent + 2));
           this.field_t = (WidgetPainter) ((Object) var17);
-          var17.field_d = 16777215;
+          var17.textColour = 16777215;
           var4 = new ao();
-          var17.a(var4, 24978);
+          var17.copyStyleTo(var4, 24978);
           this.field_o = -1;
           this.field_x = 3;
           this.field_h = 3;
           this.field_m = param1;
-          var4.field_l = 11711154;
+          var4.selectionColour = 11711154;
           this.field_s = 15658734;
           this.field_d = 3;
           this.field_c = 5592405;
           this.field_v = 15658734;
           this.field_r = 3;
-          var4.field_o = 15658734;
+          var4.caretColour = 15658734;
           var4.a(0, (byte) -102).a(15658734, (byte) -108).a(BufferedFile.a(10066329, 8947848, 1, 7829367), 53);
           var4.a(1, (byte) -119).a(BufferedFile.a(10066329, 11184810, 1, 13421772), 31);
           var4.a(3, (byte) -128).a(BufferedFile.a(7829367, 8947848, 1, 10066329), -128).a(1, 1).a((byte) 81, 1);
@@ -264,16 +264,16 @@ final class fl {
           var4.a(5, (byte) -113).a(ByteStorage.a(65793, 0, (byte) -125, 0, 0), -126).a(true, (byte) 121).a(-1, (byte) -109);
           this.field_j = (WidgetPainter) ((Object) var4);
           var6 = new ao(var4, true);
-          var6.field_n = 0;
+          var6.horizontalAlignment = 0;
           var7 = new ao(var4, true);
-          var7.field_n = 0;
-          var7.a(-128, ak.b(8947848, 5));
-          var7.a(1, (byte) -85).a(ak.b(11184810, 5), 67).a(2236962, (byte) -127);
+          var7.horizontalAlignment = 0;
+          var7.a(-128, BitmapTextLayout.b(8947848, 5));
+          var7.a(1, (byte) -85).a(BitmapTextLayout.b(11184810, 5), 67).a(2236962, (byte) -127);
           this.field_i = (WidgetPainter) ((Object) new tk(param1, 2, 2, 16777215, -1, 5, 5, 15, 15, 4473924));
           discarded$0 = new or(param1, 2, 2, 16777215, -1, 16777215, 16729156, 4473924);
           discarded$1 = new kp(param1, 16777215, -1, 125269879, 4473924, 3, 268435455);
           var8 = new ao();
-          var17.a(var8, param0 ^ 13413726);
+          var17.copyStyleTo(var8, param0 ^ 13413726);
           var8.a(0, (byte) -128).a(BufferedFile.a(7829367, 15658734, param0 ^ 13421773, 10066329), 36).a(1118481, (byte) 27).b(-1, param0 ^ 13421751);
           var8.a(4, (byte) -108).a(true, (byte) 104).a(var5, -126);
           this.field_w = (WidgetPainter) ((Object) var8);

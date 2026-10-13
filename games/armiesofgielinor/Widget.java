@@ -11,15 +11,15 @@ class Widget extends IntrusiveNode {
     static QuickChatCommandDefinition field_y;
     boolean field_t;
     int width;
-    int field_z;
+    int contentOffsetY;
     WidgetPainter painter;
     int height;
     int field_q;
     int x;
-    ju field_u;
+    TextLayout textLayout;
     String field_s;
-    String field_v;
-    int field_r;
+    String text;
+    int contentOffsetX;
     static int field_n;
     static int[] field_m;
 
@@ -88,8 +88,8 @@ class Widget extends IntrusiveNode {
         var6 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           discarded$0 = param3.append(this.getClass().getName()).append("[0x").append(Integer.toHexString(this.hashCode())).append("] @").append(this.x).append(",").append(this.y).append(" ").append(this.width).append("x").append(this.height);
-          if (this.field_v != null) {
-            discarded$1 = param3.append(" text=\"").append(this.field_v).append('"');
+          if (this.text != null) {
+            discarded$1 = param3.append(" text=\"").append(this.text).append('"');
           }
           if (this.field_t) {
             discarded$2 = param3.append(" mouseover");
@@ -687,7 +687,7 @@ class Widget extends IntrusiveNode {
           if (param3 == -12215) {
             return false;
           }
-          this.field_z = -5;
+          this.contentOffsetY = -5;
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -826,13 +826,13 @@ class Widget extends IntrusiveNode {
     }
 
     protected Widget() {
-        this.field_z = 0;
-        this.field_r = 0;
+        this.contentOffsetY = 0;
+        this.contentOffsetX = 0;
     }
 
     Widget(String param0, WidgetPainter param1, qo param2) {
         RuntimeException runtimeException = null;
-        pm var4 = null;
+        TextWidgetPainter var4 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -841,16 +841,16 @@ class Widget extends IntrusiveNode {
         StringBuilder stackIn_12_1 = null;
         String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
-        this.field_z = 0;
-        this.field_r = 0;
+        this.contentOffsetY = 0;
+        this.contentOffsetX = 0;
         try {
           this.painter = param1;
-          this.field_v = param0;
+          this.text = param0;
           this.field_x = param2;
-          if (this.painter instanceof pm) {
-            var4 = (pm) ((Object) this.painter);
-            this.width = var4.a(this, (byte) -120);
-            this.height = var4.a(this, -2);
+          if (this.painter instanceof TextWidgetPainter) {
+            var4 = (TextWidgetPainter) ((Object) this.painter);
+            this.width = var4.getPreferredWidth(this, (byte) -120);
+            this.height = var4.getPreferredHeight(this, -2);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -880,8 +880,8 @@ class Widget extends IntrusiveNode {
     }
 
     Widget(int x, int y, int width, int height, WidgetPainter painter, qo listener) {
-        this.field_z = 0;
-        this.field_r = 0;
+        this.contentOffsetY = 0;
+        this.contentOffsetX = 0;
         try {
           this.x = x;
           this.y = y;

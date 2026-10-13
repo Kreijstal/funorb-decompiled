@@ -61,7 +61,7 @@ final class pk extends hv {
         String var5;
         gu var6;
         int var13;
-        pm var8;
+        TextWidgetPainter var8;
         int var9;
         int var10;
         int var11;
@@ -85,8 +85,8 @@ final class pk extends hv {
         } else {
           var5 = gt.field_h;
         }
-        if (!var5.equals(this.field_v)) {
-          this.field_v = var5;
+        if (!var5.equals(this.text)) {
+          this.text = var5;
           this.a(-128);
         }
         super.a(param0, param1, (byte) -114, param3);
@@ -94,9 +94,9 @@ final class pk extends hv {
           field_W = (String) null;
         }
         var6Lifetime1 = this.field_Z.a(false);
-        var8 = (pm) ((Object) this.painter);
+        var8 = (TextWidgetPainter) ((Object) this.painter);
         var9 = param0 + this.x;
-        var10 = var8.a(-18033, param1, (Widget) (this)) + (var8.a(-69, (Widget) (this)).a((byte) 27) >> 1);
+        var10 = var8.getTextTop(-18033, param1, (Widget) (this)) + (var8.getTextLayout(-69, (Widget) (this)).getHeight((byte) 27) >> 1);
         if (var6Lifetime1 == ad.field_K) {
           var18 = db.field_a[0];
           var11 = var18.canvasWidth << 1;

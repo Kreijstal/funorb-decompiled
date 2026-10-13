@@ -142,7 +142,7 @@ final class ud extends sf implements he {
           var4.y = 50;
           var4.width = this.width;
           var4.height = 80;
-          var4.painter = (WidgetPainter) ((Object) new lk(gl.field_e, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
+          var4.painter = (WidgetPainter) ((Object) new BitmapTextWidgetPainter(gl.field_e, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
           this.a((byte) 10, var4);
           this.field_bb = this.a(pd.field_f, (qo) (this), 93);
           return;

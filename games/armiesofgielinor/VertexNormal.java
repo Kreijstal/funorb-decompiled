@@ -7,7 +7,7 @@ final class VertexNormal {
     static int field_c;
     static String field_h;
     int y;
-    static lk field_f;
+    static BitmapTextWidgetPainter field_f;
     int z;
     int contributions;
 

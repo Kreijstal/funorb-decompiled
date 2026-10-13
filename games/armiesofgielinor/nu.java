@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class nu extends lk {
+final class nu extends BitmapTextWidgetPainter {
     private RgbSprite[] field_v;
     private int field_y;
     private int field_x;
@@ -185,7 +185,7 @@ final class nu extends lk {
           stackIn_19_0 = (!renderFlag) ? 7105644 : 16777215;
           var8 = stackIn_19_0;
           AdaptiveMidiPcmStream.a(var7, this.field_v, widget.width, originX + widget.x, widget.y + originY + (-this.field_v[0].canvasHeight + widget.height >> 1), -3225);
-          this.field_q.drawParagraph(widget.field_v, widget.x + originX, originY + widget.y - 2, widget.width, widget.height, var8, -1, 1, 1, this.field_q.maxAscent);
+          this.font.drawParagraph(widget.text, widget.x + originX, originY + widget.y - 2, widget.width, widget.height, var8, -1, 1, 1, this.font.maxAscent);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -205,7 +205,7 @@ final class nu extends lk {
         this.field_x = param0;
         this.field_v = NodeIterator.field_b;
         this.field_u = param1;
-        this.field_q = CipherPacketBuffer.field_t;
+        this.font = CipherPacketBuffer.field_t;
         this.field_y = param2;
     }
 

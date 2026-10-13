@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ps extends lk {
+final class ps extends BitmapTextWidgetPainter {
     static ResourceArchive field_u;
     static int field_E;
     static RgbSprite[] field_w;
@@ -111,7 +111,7 @@ final class ps extends lk {
           var12 = (-var10.pixelHeight + widget.height) / 2 + originY + widget.y;
           var13 = widget.x + (originX + widget.width / 2);
           var10.draw(var11, var12);
-          this.field_q.drawCentered(this.d(0, widget), var13, originY, var9, -1);
+          this.font.drawCentered(this.getDisplayText(0, widget), var13, originY, var9, -1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -159,7 +159,7 @@ final class ps extends lk {
     ps(IndexedSprite[] param0) {
         try {
           this.field_B = param0;
-          this.field_q = ArmiesOfGielinor.field_J;
+          this.font = ArmiesOfGielinor.field_J;
         } catch (RuntimeException runtimeException) {
           throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "ps.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }

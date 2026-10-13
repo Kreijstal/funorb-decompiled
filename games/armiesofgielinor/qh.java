@@ -125,7 +125,7 @@ final class qh {
             if (no.roomSetup != null) {
               ClientUiComponent.a(108, true);
             } else {
-              ak.b(false);
+              BitmapTextLayout.b(false);
             }
           }
           if (!param9) {
@@ -236,7 +236,7 @@ final class qh {
         lq.field_e = -1;
         ev.field_a = 0;
         BoundedFile.field_b = false;
-        ts.field_a = null;
+        TextLineLayout.field_a = null;
         int var1 = 110 % ((66 - param0) / 44);
         cc.field_b = -1;
     }

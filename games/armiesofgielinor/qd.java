@@ -42,14 +42,14 @@ final class qd extends tj implements nq, he {
         try {
           if (param0 != 0) {
             if (param0 == 1) {
-              ak.a("privacy.ws", (byte) -77);
+              BitmapTextLayout.a("privacy.ws", (byte) -77);
             } else {
               if (param0 == 2) {
-                ak.a("conduct.ws", (byte) -117);
+                BitmapTextLayout.a("conduct.ws", (byte) -117);
               }
             }
           } else {
-            ak.a("terms.ws", (byte) -98);
+            BitmapTextLayout.a("terms.ws", (byte) -98);
           }
           if (param2 > 102) {
             return;
@@ -183,7 +183,7 @@ final class qd extends tj implements nq, he {
         super(0, 0, 288, 0, (WidgetPainter) null);
         String var7 = null;
         int var3 = 0;
-        lk var4 = null;
+        BitmapTextWidgetPainter var4 = null;
         int var5 = 0;
         int var6 = 0;
         try {
@@ -192,7 +192,7 @@ final class qd extends tj implements nq, he {
           this.field_M.painter = (WidgetPainter) ((Object) new nu());
           var7 = fo.a(4800, MidiPcmStream.field_R, new String[]{this.a(-29442), this.a((byte) -117)});
           var3 = 20;
-          var4 = new lk(ArmiesOfGielinor.field_J, 0, 0, 0, 0, 16777215, -1, 3, 0, ArmiesOfGielinor.field_J.maxAscent, -1, 2147483647, true);
+          var4 = new BitmapTextWidgetPainter(ArmiesOfGielinor.field_J, 0, 0, 0, 0, 16777215, -1, 3, 0, ArmiesOfGielinor.field_J.maxAscent, -1, 2147483647, true);
           this.field_F = new hv(var7, var4);
           this.field_F.field_s = "";
           this.field_F.a(DiskCacheRequest.field_I, false, 0);

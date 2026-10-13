@@ -72,7 +72,7 @@ abstract class vt extends IntrusiveNode {
         RuntimeException decompiledCaughtException = null;
         try {
           if (obfuscationGuard == -9202) {
-            stackIn_4_0 = ju.a(packet, 1 << shortBits, 1 << longBits, longBits, (byte) -122, shortBits);
+            stackIn_4_0 = TextLayout.a(packet, 1 << shortBits, 1 << longBits, longBits, (byte) -122, shortBits);
             return stackIn_4_0;
           }
           stackIn_2_0 = 101;

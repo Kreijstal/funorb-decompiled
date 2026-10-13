@@ -50,33 +50,33 @@ final class ip {
           ReportAbuseDialog.drawNineSlice(this.field_d, param0.height, param0.x + param3, (byte) -47, param2 + param0.y, param0.width);
           if (null != this.field_j) {
             var6_int = this.field_i + param0.x + param3;
-            if (1 == param4.field_n) {
+            if (1 == param4.horizontalAlignment) {
               var6_int = var6_int + (param0.width - this.field_j.canvasWidth) / 2;
             }
             var7 = this.field_a + (param2 + param0.y);
-            if (param4.field_k == 1) {
+            if (param4.verticalAlignment == 1) {
               var7 = var7 + (-this.field_j.canvasHeight + param0.height) / 2;
             }
-            if (param4.field_n == 2) {
+            if (param4.horizontalAlignment == 2) {
               var6_int = var6_int + (param0.width - this.field_j.canvasWidth);
             }
-            if (param4.field_k == 2) {
+            if (param4.verticalAlignment == 2) {
               var7 = var7 + (param0.height - this.field_j.canvasHeight);
             }
             this.field_j.g(var6_int, var7);
           }
-          var6 = param4.d(0, param0);
+          var6 = param4.getDisplayText(0, param0);
           if (param1 < 44) {
             this.a(-101, 108);
           }
           if (var6 != null &&
-            param4.field_q != null) {
+            param4.font != null) {
             if (0 > this.field_b) {
               return;
             }
-            stackIn_19_0 = param4.field_q;
+            stackIn_19_0 = param4.font;
             stackIn_19_1 = var6;
-            stackIn_19_2 = param4.field_i + param3;
+            stackIn_19_2 = param4.paddingLeft + param3;
             stackIn_19_3 = param0.x;
             if (-2147483648 != this.field_i) {
               stackIn_20_4 = this.field_i;
@@ -89,9 +89,9 @@ final class ip {
             } else {
               stackIn_23_3 = this.field_a;
             }
-            stackIn_25_3 = stackIn_23_3 + param4.field_g + (param2 + param0.y);
-            stackIn_25_4 = -param4.field_t - param4.field_i + param0.width;
-            stackIn_25_5 = -param4.field_g + param0.height - param4.field_m;
+            stackIn_25_3 = stackIn_23_3 + param4.paddingTop + (param2 + param0.y);
+            stackIn_25_4 = -param4.paddingRight - param4.paddingLeft + param0.width;
+            stackIn_25_5 = -param4.paddingTop + param0.height - param4.paddingBottom;
             stackIn_25_6 = this.field_b;
             stackIn_25_7 = this.field_g;
             if (-2147483648 == this.field_h) {
@@ -99,7 +99,7 @@ final class ip {
             } else {
               stackIn_26_8 = this.field_h;
             }
-            ((BitmapFont) (Object) stackIn_19_0).drawParagraph(stackIn_19_1, stackIn_22_2, stackIn_25_3, stackIn_25_4, stackIn_25_5, stackIn_25_6, stackIn_25_7, stackIn_26_8, param4.field_n, param4.field_k, param4.field_j);
+            ((BitmapFont) (Object) stackIn_19_0).drawParagraph(stackIn_19_1, stackIn_22_2, stackIn_25_3, stackIn_25_4, stackIn_25_5, stackIn_25_6, stackIn_25_7, stackIn_26_8, param4.horizontalAlignment, param4.verticalAlignment, param4.lineHeight);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

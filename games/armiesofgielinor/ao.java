@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ao extends lk {
+final class ao extends BitmapTextWidgetPainter {
     private ip[] field_w;
     static String field_u;
     static String field_x;
@@ -296,7 +296,7 @@ final class ao extends lk {
             var8 = (ao) null;
             this.a(false, (ao) null, 119);
           }
-          super.a(param1, 24978);
+          super.copyStyleTo(param1, 24978);
           if (param0) {
             for (var4_int = 0; var4_int < 6; var4_int++) {
               var5 = this.field_w[var4_int];

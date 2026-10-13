@@ -476,7 +476,7 @@ abstract class AiPlanningStrategy {
             }
             if (null != FixedQuaternion.field_a) {
               var2_int = 2;
-              lk.a(77, FixedQuaternion.field_a);
+              BitmapTextWidgetPainter.a(77, FixedQuaternion.field_a);
               if (var3 != 0) {
                 var2_int = 3;
               }

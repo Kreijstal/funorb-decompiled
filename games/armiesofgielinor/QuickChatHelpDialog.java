@@ -51,13 +51,13 @@ final class QuickChatHelpDialog extends ClientUiComponent {
               }
               handle = (SoundPlaybackHandle) (QuickChatCategoryRepository.soundHandles.next((byte) 123));
             }
-            if (null != ts.additionalSoundHandles) {
-              additionalHandle = (SoundPlaybackHandle) (ts.additionalSoundHandles.first((byte) 120));
+            if (null != TextLineLayout.additionalSoundHandles) {
+              additionalHandle = (SoundPlaybackHandle) (TextLineLayout.additionalSoundHandles.first((byte) 120));
               while (additionalHandle != null) {
                 if (!additionalHandle.lifetimeNode.isLinked(65280)) {
                   additionalHandle.unlink(-126);
                 }
-                additionalHandle = (SoundPlaybackHandle) (ts.additionalSoundHandles.next((byte) 123));
+                additionalHandle = (SoundPlaybackHandle) (TextLineLayout.additionalSoundHandles.next((byte) 123));
               }
             }
           }

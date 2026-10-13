@@ -87,7 +87,7 @@ final class SectorCacheStore {
           for (priorityIndex = 0; priorityIndex < 3; priorityIndex++) {
             MoveAttackRequest.chatHistoryPriorityCounts[priorityIndex] = 0;
           }
-          for (countIndex = 0; countIndex < lk.chatHistorySize; countIndex++) {
+          for (countIndex = 0; countIndex < BitmapTextWidgetPainter.chatHistorySize; countIndex++) {
             if (message.channelId == DefeatPlayerConsoleCommand.chatHistory[countIndex].channelId) {
               existingPriority = DefeatPlayerConsoleCommand.chatHistory[countIndex].getFilterPriority(true);
               MoveAttackRequest.chatHistoryPriorityCounts[existingPriority] = MoveAttackRequest.chatHistoryPriorityCounts[existingPriority] + 1;
@@ -96,7 +96,7 @@ final class SectorCacheStore {
           incomingPriority = message.getFilterPriority(true);
           MoveAttackRequest.chatHistoryPriorityCounts[incomingPriority] = MoveAttackRequest.chatHistoryPriorityCounts[incomingPriority] + 1;
           writeIndex = 0;
-          for (readIndex = 0; readIndex < lk.chatHistorySize; readIndex++) {
+          for (readIndex = 0; readIndex < BitmapTextWidgetPainter.chatHistorySize; readIndex++) {
             boolean decompiledFrameRemainder0 = true;
             if (~message.channelId == ~DefeatPlayerConsoleCommand.chatHistory[readIndex].channelId) {
               messagePriority = DefeatPlayerConsoleCommand.chatHistory[readIndex].getFilterPriority(true);
@@ -111,12 +111,12 @@ final class SectorCacheStore {
               DefeatPlayerConsoleCommand.chatHistory[destinationIndex] = DefeatPlayerConsoleCommand.chatHistory[readIndex];
             }
           }
-          lk.chatHistorySize = writeIndex;
+          BitmapTextWidgetPainter.chatHistorySize = writeIndex;
           if (obfuscationGuard != 3208) {
             field_k = (String) null;
           }
-          appendIndex = lk.chatHistorySize;
-          lk.chatHistorySize = lk.chatHistorySize + 1;
+          appendIndex = BitmapTextWidgetPainter.chatHistorySize;
+          BitmapTextWidgetPainter.chatHistorySize = BitmapTextWidgetPainter.chatHistorySize + 1;
           DefeatPlayerConsoleCommand.chatHistory[appendIndex] = message;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

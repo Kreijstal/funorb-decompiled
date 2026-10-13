@@ -44,7 +44,7 @@ final class ConsoleParseException extends Exception {
           if (!hf.textChatActive) {
             return;
           }
-          ts.a(param7, param2, param4, 20, param0, param0, param5, 15676, param6);
+          TextLineLayout.a(param7, param2, param4, 20, param0, param0, param5, 15676, param6);
           UnitCycler.field_g.updateInput(true, param3);
           if (param3) {
             if (qf.field_e.pressedButton != 0) {

@@ -37,10 +37,10 @@ abstract class wf extends iv {
         qf.a(ConsoleExpression.field_m, this.field_p, this.field_G, (byte) 103, this.field_C, param6, this.field_E, this.field_t, IntPair.field_m);
         QuickChatPhraseRepository.configurePunctuationKeys((byte) 112);
         CampaignMission.field_I = jk.b(68);
-        lk.a(101, IndexedSpriteBase.field_b);
+        BitmapTextWidgetPainter.a(101, IndexedSpriteBase.field_b);
         ChatMessage.field_c = param7;
         on.field_n = param5;
-        lk.field_p = param0;
+        BitmapTextWidgetPainter.field_p = param0;
         wl.field_E = param1;
         DualLinkedNode.field_t = param4;
         this.f((byte) -51);
@@ -118,7 +118,7 @@ abstract class wf extends iv {
             this.a("reconnect", (byte) -81);
           }
           er.b(-11);
-          wv.a(lk.field_r, 10, var2);
+          wv.a(BitmapTextWidgetPainter.field_r, 10, var2);
           ol.field_C = true;
           jl.field_a = vi.monotonicMillis(-111) + 15000L;
         } else {
@@ -221,8 +221,8 @@ abstract class wf extends iv {
           if (1 == var4) {
             var5_int = ClientConnectionState.a(false, CampaignMission.c((byte) -27), IconLabelControl.l(-117));
             if (var5_int != -1) {
-              AiPlanningStrategy.a(103, br.field_b, lk.field_r, var5_int);
-              lk.field_r = null;
+              AiPlanningStrategy.a(103, br.field_b, BitmapTextWidgetPainter.field_r, var5_int);
+              BitmapTextWidgetPainter.field_r = null;
               br.field_b = null;
             }
             var11 = r.l(-11506);
@@ -233,8 +233,8 @@ abstract class wf extends iv {
           if (2 == var4) {
             var5_intLifetime1 = DiskCacheWorker.a((byte) -46, CombatPresentation.i(-4938), cn.e(488997228), lb.b(0), this.field_n, DefeatPlayerWithMetricsConsoleCommand.e((byte) -127), RadialSummonItem.a(-1));
             if (var5_intLifetime1 != -1) {
-              CampaignMenuEntry.a(lk.field_r, -14, br.field_b, var5_intLifetime1);
-              lk.field_r = null;
+              CampaignMenuEntry.a(BitmapTextWidgetPainter.field_r, -14, br.field_b, var5_intLifetime1);
+              BitmapTextWidgetPainter.field_r = null;
               br.field_b = null;
             }
           }
@@ -250,8 +250,8 @@ abstract class wf extends iv {
               var5_intLifetime2 = InstructionsPanel.a((byte) -53, this.field_n, this.field_w, RadialSummonItem.a(-1), CombatPresentation.i(-4938), false);
               if (var5_intLifetime2 != -1) {
                 if (var5_intLifetime2 != 0) {
-                  wv.a(lk.field_r, 10, var5_intLifetime2);
-                  lk.field_r = null;
+                  wv.a(BitmapTextWidgetPainter.field_r, 10, var5_intLifetime2);
+                  BitmapTextWidgetPainter.field_r = null;
                 } else {
                   ck.field_b = dc.field_o;
                   DualLinkedNode.e(112);
@@ -376,7 +376,7 @@ abstract class wf extends iv {
         }
         if (!wd.a((byte) 60)) {
           if (StrongCacheEntry.field_E >= 10) {
-            if (!lk.b(true)) {
+            if (!BitmapTextWidgetPainter.b(true)) {
               StateChangeEvent.e((byte) -84);
             } else {
               if (SoundCache.field_b == 0) {
@@ -685,7 +685,7 @@ abstract class wf extends iv {
         }
         if (StrongCacheEntry.field_E == 10) {
           if (0 != ConsoleExpression.field_m) {
-            RegionAnchor.field_o = nu.a(lk.field_p, true);
+            RegionAnchor.field_o = nu.a(BitmapTextWidgetPainter.field_p, true);
           }
           StrongCacheEntry.field_E = 11;
         }
@@ -697,12 +697,12 @@ abstract class wf extends iv {
             decompiledFrameRemainder0 = false;
           }
           else {
-            ts.field_l = true;
+            TextLineLayout.field_l = true;
             StrongCacheEntry.field_E = 12;
           }
         }
         if (StrongCacheEntry.field_E == 12 &&
-          !ts.field_l) {
+          !TextLineLayout.field_l) {
           StrongCacheEntry.field_E = 13;
         }
         if (13 == StrongCacheEntry.field_E) {
@@ -720,7 +720,7 @@ abstract class wf extends iv {
           tq.field_a) {
           dt.a(IndexedSpriteBase.field_b, 23678);
           this.c((byte) 87);
-          lk.a(123, IndexedSpriteBase.field_b);
+          BitmapTextWidgetPainter.a(123, IndexedSpriteBase.field_b);
         }
         if (tk.field_f[8]) {
           pu.b(28704);

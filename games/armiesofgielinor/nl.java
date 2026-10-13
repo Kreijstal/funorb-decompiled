@@ -307,7 +307,7 @@ abstract class nl extends Widget implements gw {
           BoundedFile.field_h = param14;
           MusicPatchNode.field_r = param0;
           jn.field_b = param8;
-          ju.field_a = param9;
+          TextLayout.field_a = param9;
           TextCursor.field_d = param2;
           rs.field_p = fk.loadRgbSpritesByName("gameprivacy", (byte) -128, param7, "lobby");
           ResourceProtocolClient.field_d = fk.loadRgbSpritesByName("ratedgame", (byte) -125, param7, "lobby");

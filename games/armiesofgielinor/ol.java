@@ -10,7 +10,7 @@ final class ol extends lu {
     static String field_x;
     static boolean field_C;
 
-    final String d(int param0, Widget param1) {
+    final String getDisplayText(int obfuscationGuard, Widget widget) {
         RuntimeException var3 = null;
         String stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
@@ -18,17 +18,17 @@ final class ol extends lu {
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param0 != 0) {
+          if (obfuscationGuard != 0) {
             ol.b((byte) 38);
           }
-          stackIn_3_0 = no.a('*', true, param1.field_v.length());
+          stackIn_3_0 = no.a('*', true, widget.text.length());
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
           stackIn_6_0 = var3;
-          stackIn_6_1 = new StringBuilder().append("ol.AA(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_6_1 = new StringBuilder().append("ol.AA(").append(obfuscationGuard).append(',');
+          if (widget == null) {
             stackIn_7_2 = "null";
           } else {
             stackIn_7_2 = "{...}";

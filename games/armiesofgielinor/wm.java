@@ -117,7 +117,7 @@ final class wm {
         var4 = null;
         var5 = 0;
         var6 = 0;
-        for (var7 = -1 + lk.chatHistorySize; var7 >= 0; var7--) {
+        for (var7 = -1 + BitmapTextWidgetPainter.chatHistorySize; var7 >= 0; var7--) {
           var8_ref_mo = DefeatPlayerConsoleCommand.chatHistory[var7];
           var9 = 0;
           if (!NodeIterator.field_a &&
@@ -154,7 +154,7 @@ final class wm {
         if (param2 <= 126) {
           wm.a(44);
         }
-        while (lk.chatHistorySize > var8) {
+        while (BitmapTextWidgetPainter.chatHistorySize > var8) {
           var9_ref_mo = DefeatPlayerConsoleCommand.chatHistory[var8];
           if (null != var9_ref_mo.rowComponent) {
             vq.field_a.content.addChild(var9_ref_mo.rowComponent, 65);

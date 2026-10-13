@@ -25,15 +25,15 @@ final class mh {
             }
             handle = (SoundPlaybackHandle) (QuickChatCategoryRepository.soundHandles.next((byte) 123));
           }
-          if (ts.additionalSoundHandles != null) {
-            additionalHandle = (SoundPlaybackHandle) (ts.additionalSoundHandles.first((byte) 95));
+          if (TextLineLayout.additionalSoundHandles != null) {
+            additionalHandle = (SoundPlaybackHandle) (TextLineLayout.additionalSoundHandles.first((byte) 95));
             while (additionalHandle != null) {
               if (!additionalHandle.lifetimeNode.isLinked(65280)) {
                 additionalHandle.unlink(47);
               } else {
                 additionalHandle.stream.setVolume(128 + ResourceProtocolClient.effectsGain * additionalHandle.unscaledVolume >> 8);
               }
-              additionalHandle = (SoundPlaybackHandle) (ts.additionalSoundHandles.next((byte) 123));
+              additionalHandle = (SoundPlaybackHandle) (TextLineLayout.additionalSoundHandles.next((byte) 123));
             }
           }
           if (obfuscationGuard < -26) {

@@ -48,16 +48,16 @@ final class ji {
         }
     }
 
-    final static lk a(boolean param0) {
+    final static BitmapTextWidgetPainter a(boolean param0) {
         if (param0) {
           if (VertexNormal.field_f == null) {
-            VertexNormal.field_f = new lk(gl.field_e, 20, 0, 0, 0, 11579568, -1, 0, 0, gl.field_e.maxAscent, -1, 2147483647, true);
+            VertexNormal.field_f = new BitmapTextWidgetPainter(gl.field_e, 20, 0, 0, 0, 11579568, -1, 0, 0, gl.field_e.maxAscent, -1, 2147483647, true);
           }
           return VertexNormal.field_f;
         }
         ji.a(false);
         if (VertexNormal.field_f == null) {
-          VertexNormal.field_f = new lk(gl.field_e, 20, 0, 0, 0, 11579568, -1, 0, 0, gl.field_e.maxAscent, -1, 2147483647, true);
+          VertexNormal.field_f = new BitmapTextWidgetPainter(gl.field_e, 20, 0, 0, 0, 11579568, -1, 0, 0, gl.field_e.maxAscent, -1, 2147483647, true);
         }
         return VertexNormal.field_f;
     }

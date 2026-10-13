@@ -210,7 +210,7 @@ final class vq {
             MusicPatchNode.field_G[1] = 2;
             AnimationFrameSet.field_v[5] = "";
             MusicPatchNode.field_G[0] = 5;
-            AnimationFrameSet.field_v[4] = ts.field_f;
+            AnimationFrameSet.field_v[4] = TextLineLayout.field_f;
             AnimationFrameSet.field_v[2] = od.field_e;
             AnimationFrameSet.field_v[3] = WeightedScoreStrategy.field_m;
             TileMetadata.field_h[3] = 1;

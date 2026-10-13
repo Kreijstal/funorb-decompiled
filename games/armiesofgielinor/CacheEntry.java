@@ -118,7 +118,7 @@ abstract class CacheEntry extends DualLinkedNode {
             } else {
               if (var9Lifetime1 == 248) {
                 tf.a((byte) -99, CombatEvent.d((byte) -127));
-                lk.field_r = CampaignMission.field_s;
+                BitmapTextWidgetPainter.field_r = CampaignMission.field_s;
                 dj.a((byte) -128);
                 ev.field_b = false;
                 stackIn_31_0 = var9Lifetime1;
@@ -160,7 +160,7 @@ abstract class CacheEntry extends DualLinkedNode {
                 ph.a(var9_ref_String, CombatEvent.d((byte) -5), false);
               }
             } else {
-              lk.field_r = ByteStorage.incomingPacket.readNullTerminatedString(1);
+              BitmapTextWidgetPainter.field_r = ByteStorage.incomingPacket.readNullTerminatedString(1);
             }
             dj.a((byte) -127);
             ev.field_b = false;
@@ -173,9 +173,9 @@ abstract class CacheEntry extends DualLinkedNode {
           if (MoveAttackRequest.sessionSocket == null) {
             if (ev.field_b) {
               if (TileMetadata.b(0) > 30000L) {
-                lk.field_r = gu.field_a;
+                BitmapTextWidgetPainter.field_r = gu.field_a;
               } else {
-                lk.field_r = DamageEvent.field_y;
+                BitmapTextWidgetPainter.field_r = DamageEvent.field_y;
               }
               ev.field_b = false;
               stackIn_62_0 = 249;

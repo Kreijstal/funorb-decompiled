@@ -244,9 +244,9 @@ final class OwnerChangeEvent extends GameEvent {
           }
           boolean decompiledFrameRemainder0 = true;
           if (param1 == null) {
-            decompiledFrameRemainder0 = (ts.field_a == null);
+            decompiledFrameRemainder0 = (TextLineLayout.field_a == null);
           } else {
-            decompiledFrameRemainder0 = !(param1.equals(ts.field_a));
+            decompiledFrameRemainder0 = !(param1.equals(TextLineLayout.field_a));
           }
           if (decompiledFrameRemainder0) {
             if (!BoundedFile.field_b) {
@@ -284,12 +284,12 @@ final class OwnerChangeEvent extends GameEvent {
           }
           if (!BoundedFile.field_b &&
             ev.field_a < NodeIterator.field_c &&
-            lk.pointerChangedSnapshot) {
+            BitmapTextWidgetPainter.pointerChangedSnapshot) {
             cc.field_b = LobbyPlayer.field_Ib;
             lq.field_e = QuickChatCommandDefinition.field_e;
             ev.field_a = 0;
           }
-          ts.field_a = param1;
+          TextLineLayout.field_a = param1;
           QuickChatCommandDefinition.field_e = param0;
           LobbyPlayer.field_Ib = -1;
           if (BoundedFile.field_b &&

@@ -331,13 +331,13 @@ final class df extends tj implements fb, he {
     }
 
     final String m(int param0) {
-        if (this.field_Q.field_v == null) {
+        if (this.field_Q.text == null) {
           return "";
         }
         if (param0 != -15056) {
           return (String) null;
         }
-        return this.field_Q.field_v;
+        return this.field_Q.text;
     }
 
     private final void c(boolean param0) {
@@ -345,9 +345,9 @@ final class df extends tj implements fb, he {
           return;
         }
         if (df.k(30) ||
-          !(0 >= this.field_Q.field_v.length()) &&
-          !(0 >= this.field_S.field_v.length())) {
-          CampaignProgress.a(this.field_S.field_v, 0, this.field_Q.field_v);
+          !(0 >= this.field_Q.text.length()) &&
+          !(0 >= this.field_S.text.length())) {
+          CampaignProgress.a(this.field_S.text, 0, this.field_Q.text);
         }
     }
 

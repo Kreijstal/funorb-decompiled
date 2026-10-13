@@ -3407,7 +3407,7 @@ final class TickCounter {
                 }
                 var2 = fk.a(false, "INTRO_0");
                 if (var2 != null) {
-                  ts.field_b = uu.a(var2, (byte) -119);
+                  TextLineLayout.field_b = uu.a(var2, (byte) -119);
                 }
                 var2 = fk.a(false, "INTRO_1");
                 if (null != var2) {

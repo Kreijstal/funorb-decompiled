@@ -36,7 +36,7 @@ final class tn extends sf implements he {
           var2.width = this.width;
           var2.x = 0;
           var2.y = 50;
-          var2.painter = (WidgetPainter) ((Object) new lk(gl.field_e, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
+          var2.painter = (WidgetPainter) ((Object) new BitmapTextWidgetPainter(gl.field_e, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
           this.a((byte) 10, var2);
           if (DamageEvent.g(98)) {
             this.field_fb = this.a((qo) (this), true, ClientContextMenu.field_j);

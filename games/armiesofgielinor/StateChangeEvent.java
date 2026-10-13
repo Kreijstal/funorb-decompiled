@@ -244,7 +244,7 @@ final class StateChangeEvent extends GameEvent {
           }
           MoveEvent.matchSetupPanel.initializePanel(param0 + 0);
           MoveEvent.matchSetupPanel.loadItemLabels((byte) 97);
-          ts.currentSpellMenu = CachedArchiveProvider.spellMenuRoot;
+          TextLineLayout.currentSpellMenu = CachedArchiveProvider.spellMenuRoot;
           if (param0 != 1) {
             field_A = (String) null;
           }

@@ -25,7 +25,7 @@ final class ds {
           av.pointerIdleTicks = av.pointerIdleTicks + 1;
           AiPlanningStrategy.pointerX = DiskCacheRequest.livePointerX;
           ko.pointerY = ResourceArchive.livePointerY;
-          lk.pointerChangedSnapshot = ku.pointerChanged;
+          BitmapTextWidgetPainter.pointerChangedSnapshot = ku.pointerChanged;
           var2 = 48 / ((36 - obfuscationGuard) / 56);
           ku.pointerChanged = false;
           DeployEvent.pointerPressButton = ArchiveIndex.pressedPointerButton;

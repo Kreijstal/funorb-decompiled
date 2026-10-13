@@ -25,15 +25,15 @@ class hv extends fw {
         int stackIn_9_0 = 0;
         int stackIn_14_0 = 0;
         int var2;
-        pm var3;
-        ju var4;
+        TextWidgetPainter var3;
+        TextLayout var4;
         int var5;
         String var6;
         int var7;
         int var8;
         int var9;
         Object var10;
-        ts var12;
+        TextLineLayout var12;
         int var13;
         int var14;
         ct var15;
@@ -42,42 +42,42 @@ class hv extends fw {
         var16 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         this.field_P = new NodeDeque();
         var2 = 0;
-        var3 = (pm) ((Object) this.painter);
-        var4 = var3.a(-77, (Widget) (this));
+        var3 = (TextWidgetPainter) ((Object) this.painter);
+        var4 = var3.getTextLayout(-77, (Widget) (this));
         if (param0 > -115) {
           return;
         }
         while (true) {
-          var5 = this.field_v.indexOf("<hotspot=", var2);
+          var5 = this.text.indexOf("<hotspot=", var2);
           if (var5 == -1) {
             return;
           }
-          var7 = this.field_v.indexOf(">", var5);
-          var6 = this.field_v.substring(var5 + 9, var7);
+          var7 = this.text.indexOf(">", var5);
+          var6 = this.text.substring(var5 + 9, var7);
           var7Lifetime1 = Integer.parseInt(var6);
-          var2 = this.field_v.indexOf("</hotspot>", var5);
-          var8 = var4.a(0, var5);
-          var9 = var4.a(0, var2);
+          var2 = this.text.indexOf("</hotspot>", var5);
+          var8 = var4.getLineIndex(0, var5);
+          var9 = var4.getLineIndex(0, var2);
           var10 = null;
           for (var11 = var8; var9 >= var11; var11++) {
-            var12 = var4.field_b[var11];
+            var12 = var4.lines[var11];
             if (~var8 != ~var11) {
-              stackIn_9_0 = var12.field_i[0];
+              stackIn_9_0 = var12.caretXs[0];
             } else {
-              stackIn_9_0 = var4.a((byte) -66, var5);
+              stackIn_9_0 = var4.getCaretX((byte) -66, var5);
             }
             var13 = stackIn_9_0;
             if (var11 != var9) {
               if (var12 == null) {
                 stackIn_14_0 = 0;
               } else {
-                stackIn_14_0 = var12.field_i[-1 + var12.field_i.length];
+                stackIn_14_0 = var12.caretXs[-1 + var12.caretXs.length];
               }
             } else {
-              stackIn_14_0 = var4.a((byte) -66, var2);
+              stackIn_14_0 = var4.getCaretX((byte) -66, var2);
             }
             var14 = stackIn_14_0;
-            var15 = new ct(var7Lifetime1, var13, var12.field_n, -var13 + var14, Math.max(var3.a(true), var12.field_c - var12.field_n));
+            var15 = new ct(var7Lifetime1, var13, var12.top, -var13 + var14, Math.max(var3.getLineInkHeight(true), var12.bottom - var12.top));
             if (var10 != null) {
               ((ct) (var10)).field_k = var15;
             }
@@ -244,7 +244,7 @@ class hv extends fw {
     }
 
     final void a(int param0, int param1, int param2, int param3) {
-        this.setBounds(param2, param0, param3, 8192, ((pm) ((Object) this.painter)).a((Widget) (this), -2));
+        this.setBounds(param2, param0, param3, 8192, ((TextWidgetPainter) ((Object) this.painter)).getPreferredHeight((Widget) (this), -2));
         if (param1 != 9567) {
           this.field_P = (NodeDeque) null;
         }
@@ -257,15 +257,15 @@ class hv extends fw {
         if (param3 != 0) {
           return;
         }
-        pm var10 = (pm) ((Object) this.painter);
+        TextWidgetPainter var10 = (TextWidgetPainter) ((Object) this.painter);
         if (param2 > -82) {
           Widget var9 = (Widget) null;
           this.a(-37, (Widget) null);
         }
         ct var6 = this.field_M;
         if (var6 != null) {
-          var7 = var10.a((Widget) (this), param0, (byte) -123);
-          var8 = var10.a(-18033, param1, (Widget) (this));
+          var7 = var10.getTextLeft((Widget) (this), param0, (byte) -123);
+          var8 = var10.getTextTop(-18033, param1, (Widget) (this));
           do {
             na.c(2 + var6.field_p, var7 - (-var6.field_r + 2), 116, 2 + var6.field_q, -2 + (var6.field_l + var8));
             var6 = var6.field_k;

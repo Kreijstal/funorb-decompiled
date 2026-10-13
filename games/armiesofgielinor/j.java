@@ -383,7 +383,7 @@ final class j {
           if (param0 != 1) {
             j.b((byte) 20);
           }
-          stackIn_66_0 = lk.field_a;
+          stackIn_66_0 = BitmapTextWidgetPainter.field_a;
           stackIn_66_1 = true;
           stackIn_67_2 = (param2) && (!param1) && (!ChannelGainProfile.field_f);
           ((ClientUiComponent) (Object) stackIn_66_0).updateInput(stackIn_66_1, stackIn_67_2);

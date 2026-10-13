@@ -20,7 +20,7 @@ class fn extends fw {
         }
         int var2 = this.field_O > this.field_L ? this.field_L : this.field_O;
         int var3 = this.field_O > this.field_L ? this.field_O : this.field_L;
-        return this.field_v.substring(var2, var3);
+        return this.text.substring(var2, var3);
     }
 
     private final int e(byte param0) {
@@ -34,7 +34,7 @@ class fn extends fw {
         var2 = -1 + this.field_O;
         var3 = -88 / ((param0 - 11) / 55);
         while (0 < var2) {
-          if (this.field_v.charAt(var2 - 1) != 32) {
+          if (this.text.charAt(var2 - 1) != 32) {
             var2--;
             continue;
           }
@@ -62,21 +62,21 @@ class fn extends fw {
           var3 = this.field_O <= this.field_L ? this.field_L : this.field_O;
           this.field_L = var2;
           this.field_O = var2;
-          this.field_v = this.field_v.substring(0, var2) + this.field_v.substring(var3, this.field_v.length());
+          this.text = this.text.substring(0, var2) + this.text.substring(var3, this.text.length());
           this.d((byte) -123);
         }
     }
 
     void a(int param0, int param1, int param2, Widget param3) {
-        pm var5 = null;
+        TextWidgetPainter var5 = null;
         int var6 = 0;
         try {
           super.a(param0, param1, param2, param3);
           this.l(param0 - 32722);
           if (1 == this.field_q) {
-            if (this.painter instanceof pm) {
-              var5 = (pm) ((Object) this.painter);
-              var6 = var5.a((Widget) (this), AiPlanningStrategy.pointerX, 113, param2, ko.pointerY, param1);
+            if (this.painter instanceof TextWidgetPainter) {
+              var5 = (TextWidgetPainter) ((Object) this.painter);
+              var6 = var5.hitTestCharacter((Widget) (this), AiPlanningStrategy.pointerX, 113, param2, ko.pointerY, param1);
               if (var6 != -1) {
                 if (this.field_P &&
                   this.field_V > var6 &&
@@ -117,13 +117,13 @@ class fn extends fw {
           if (param1 == null) {
             param1 = "";
           }
-          this.field_v = param1;
+          this.text = param1;
           var4_int = param1.length();
           if (this.field_R != -1 &&
             var4_int > this.field_R) {
-            this.field_v = this.field_v.substring(0, this.field_R);
+            this.text = this.text.substring(0, this.field_R);
           }
-          dupTemp$1 = this.field_v.length();
+          dupTemp$1 = this.text.length();
           this.field_L = dupTemp$1;
           this.field_O = dupTemp$1;
           if (!param0) {
@@ -239,14 +239,14 @@ class fn extends fw {
                 this.j(1000);
               }
               if (this.field_R == -1 ||
-                !(this.field_v.length() >= this.field_R)) {
-                if (this.field_O >= this.field_v.length()) {
-                  this.field_v = this.field_v + param2;
-                  dupTemp$0 = this.field_v.length();
+                !(this.text.length() >= this.field_R)) {
+                if (this.field_O >= this.text.length()) {
+                  this.text = this.text + param2;
+                  dupTemp$0 = this.text.length();
                   this.field_O = dupTemp$0;
                   this.field_L = dupTemp$0;
                 } else {
-                  this.field_v = this.field_v.substring(0, this.field_O) + param2 + this.field_v.substring(this.field_O, this.field_v.length());
+                  this.text = this.text.substring(0, this.field_O) + param2 + this.text.substring(this.field_O, this.text.length());
                   this.field_O = this.field_O + 1;
                   this.field_L = this.field_O;
                 }
@@ -271,7 +271,7 @@ class fn extends fw {
                 this.j(1000);
                 return true;
               }
-              if (this.field_O < this.field_v.length()) {
+              if (this.field_O < this.text.length()) {
                 this.field_L = 1 + this.field_O;
                 this.j(1000);
                 return true;
@@ -288,7 +288,7 @@ class fn extends fw {
                     return true;
                   }
                   if (103 == param1) {
-                    this.a(this.field_v.length(), (byte) -59);
+                    this.a(this.text.length(), (byte) -59);
                     return true;
                   }
                   if (param1 == 84) {
@@ -311,7 +311,7 @@ class fn extends fw {
                     return true;
                   }
                 } else {
-                  if (this.field_O < this.field_v.length()) {
+                  if (this.field_O < this.text.length()) {
                     if (!br.heldKeys[82]) {
                       stackIn_34_1 = this.field_O + 1;
                     } else {
@@ -446,56 +446,56 @@ class fn extends fw {
     final void k(int param0) {
         this.field_O = 0;
         this.field_L = 0;
-        this.field_v = "";
+        this.text = "";
         int var2 = 26 % ((33 - param0) / 36);
         this.d((byte) -126);
     }
 
     private final void l(int param0) {
         int discarded$0 = 0;
-        ju var3;
+        TextLayout var3;
         int var4;
         int var5;
         int var6;
         int var7;
         int var8;
-        pm var9;
+        TextWidgetPainter var9;
         var8 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         if (!this.field_N) {
-          this.field_r = 0;
-          this.field_z = 0;
+          this.contentOffsetX = 0;
+          this.contentOffsetY = 0;
           return;
         }
-        if (!(this.painter instanceof pm)) {
+        if (!(this.painter instanceof TextWidgetPainter)) {
           return;
         }
-        var9 = (pm) ((Object) this.painter);
-        var3 = var9.a(-100, (Widget) (this));
+        var9 = (TextWidgetPainter) ((Object) this.painter);
+        var3 = var9.getTextLayout(-100, (Widget) (this));
         if (param0 != 0) {
           discarded$0 = this.e((byte) -33);
         }
-        var4 = var3.a(false);
-        var5 = var9.b(66, (Widget) (this));
-        var6 = var9.a(true) >> 1;
+        var4 = var3.getRightExtent(false);
+        var5 = var9.getContentWidth(66, (Widget) (this));
+        var6 = var9.getLineInkHeight(true) >> 1;
         if (-var6 + var5 > var4) {
-          this.field_z = 0;
-          this.field_r = 0;
+          this.contentOffsetY = 0;
+          this.contentOffsetX = 0;
           return;
         }
-        var7 = this.field_r + var3.a((byte) -66, this.field_O);
+        var7 = this.contentOffsetX + var3.getCaretX((byte) -66, this.field_O);
         if (var5 - var6 < var7) {
-          this.field_r = this.field_r - var7 - var6 + var5;
+          this.contentOffsetX = this.contentOffsetX - var7 - var6 + var5;
         } else {
           if (var7 < var6) {
-            this.field_r = this.field_r + (-var7 + var6);
+            this.contentOffsetX = this.contentOffsetX + (-var7 + var6);
           }
         }
-        if (this.field_r <= 0) {
-          if (var6 - var5 > this.field_r) {
-            this.field_r = var6 - var5;
+        if (this.contentOffsetX <= 0) {
+          if (var6 - var5 > this.contentOffsetX) {
+            this.contentOffsetX = var6 - var5;
           }
         } else {
-          this.field_r = 0;
+          this.contentOffsetX = 0;
         }
         return;
     }
@@ -546,10 +546,10 @@ class fn extends fw {
           if (!super.a(param0, param1, param2, 119, param4, param5, param6)) {
             return false;
           }
-          if (!(this.painter instanceof pm)) {
+          if (!(this.painter instanceof TextWidgetPainter)) {
             return false;
           }
-          var8_int = ((pm) ((Object) this.painter)).a((Widget) (this), AiPlanningStrategy.pointerX, 87, param2, ko.pointerY, param1);
+          var8_int = ((TextWidgetPainter) ((Object) this.painter)).hitTestCharacter((Widget) (this), AiPlanningStrategy.pointerX, 87, param2, ko.pointerY, param1);
           if (var8_int != -1) {
             stackIn_9_1 = var8_int;
           } else {
@@ -563,7 +563,7 @@ class fn extends fw {
             this.field_L = this.e((byte) -85);
             this.field_O = this.p(-89);
             if (this.field_O > 0 &&
-              this.field_v.charAt(this.field_O - 1) == 32) {
+              this.text.charAt(this.field_O - 1) == 32) {
               this.field_O = this.field_O - 1;
             }
             this.field_V = this.field_O;
@@ -593,7 +593,7 @@ class fn extends fw {
     }
 
     final void a(int param0, int param1, byte param2, int param3) {
-        pm var8 = null;
+        TextWidgetPainter var8 = null;
         long var6 = 0L;
         if (param2 > -82) {
           return;
@@ -601,14 +601,14 @@ class fn extends fw {
         if (this.painter != null &&
           param3 == 0) {
           this.painter.paintWidget((Widget) (this), param0, -128, this.field_I, param1);
-          if (this.painter instanceof pm) {
-            var8 = (pm) ((Object) this.painter);
+          if (this.painter instanceof TextWidgetPainter) {
+            var8 = (TextWidgetPainter) ((Object) this.painter);
             if (this.field_O != this.field_L) {
-              var8.a(-21259, this.field_O, this.field_L, (Widget) (this), param1, param0);
+              var8.drawSelection(-21259, this.field_O, this.field_L, (Widget) (this), param1, param0);
             }
             var6 = vi.monotonicMillis(-126);
             if ((var6 - this.field_U) % 1000L < 500L) {
-              var8.a(param1, 1024, param0, (Widget) (this), this.field_O);
+              var8.drawCaret(param1, 1024, param0, (Widget) (this), this.field_O);
             }
           }
         }
@@ -648,16 +648,16 @@ class fn extends fw {
         RuntimeException var3 = null;
         try {
           if (this.field_R != -1) {
-            var3_int = this.field_R - this.field_v.length();
+            var3_int = this.field_R - this.text.length();
             if (var3_int >= 0) {
               return;
             }
             param0 = param0.substring(0, var3_int);
           }
-          if (this.field_O != this.field_v.length()) {
-            this.field_v = this.field_v.substring(0, this.field_O) + param0 + this.field_v.substring(this.field_O, this.field_v.length());
+          if (this.field_O != this.text.length()) {
+            this.text = this.text.substring(0, this.field_O) + param0 + this.text.substring(this.field_O, this.text.length());
           } else {
-            this.field_v = this.field_v + param0;
+            this.text = this.text + param0;
           }
           this.field_O = this.field_O + param0.length();
           this.field_L = this.field_O;
@@ -690,12 +690,12 @@ class fn extends fw {
         if (param0 > -10) {
           return -64;
         }
-        var2 = this.field_v.length();
+        var2 = this.text.length();
         if (this.field_O == var2) {
           return this.field_O;
         }
         for (var3 = this.field_O + 1; var3 < var2; var3++) {
-          if (this.field_v.charAt(-1 + var3) != 32) {
+          if (this.text.charAt(-1 + var3) != 32) {
             continue;
           }
           break;

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class lu extends lk {
+class lu extends BitmapTextWidgetPainter {
     static ClientUiComponent field_u;
     static String field_v;
 

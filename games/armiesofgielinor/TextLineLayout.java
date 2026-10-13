@@ -1,48 +1,48 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ts {
+final class TextLineLayout {
     static String field_k;
     static String field_a;
     static boolean field_m;
     static String field_g;
     static NodeDeque additionalSoundHandles;
-    int field_n;
-    int[] field_i;
+    int top;
+    int[] caretXs;
     static long field_h;
     static SpellMenuGroup currentSpellMenu;
     static String field_f;
-    int field_c;
+    int bottom;
     static boolean field_l;
     static String field_b;
     static String[] field_d;
 
-    final int a(int param0, byte param1) {
-        int var3;
-        int var4;
-        int var3Lifetime1;
-        var4 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
-        if (null == this.field_i) {
+    final int nearestCaret(int x, byte obfuscationGuard) {
+        int caretIndex;
+        int obfuscationControl;
+        int guardedCaretIndex;
+        obfuscationControl = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        if (null == this.caretXs) {
           return 0;
         }
-        if (0 == this.field_i.length) {
+        if (0 == this.caretXs.length) {
           return 0;
         }
-        if (param1 == 29) {
-          for (var3 = 1; this.field_i.length > var3; var3++) {
-            if ((this.field_i[var3] + this.field_i[-1 + var3] >> 1) > param0) {
-              return -1 + var3;
+        if (obfuscationGuard == 29) {
+          for (caretIndex = 1; this.caretXs.length > caretIndex; caretIndex++) {
+            if ((this.caretXs[caretIndex] + this.caretXs[-1 + caretIndex] >> 1) > x) {
+              return -1 + caretIndex;
             }
           }
-          return -1 + this.field_i.length;
+          return -1 + this.caretXs.length;
         }
-        ts.a((String) null, 64, -17, 10, 101, -122, -53, 45, 110);
-        for (var3Lifetime1 = 1; this.field_i.length > var3Lifetime1; var3Lifetime1++) {
-          if ((this.field_i[var3Lifetime1] + this.field_i[-1 + var3Lifetime1] >> 1) > param0) {
-            return -1 + var3Lifetime1;
+        TextLineLayout.a((String) null, 64, -17, 10, 101, -122, -53, 45, 110);
+        for (guardedCaretIndex = 1; this.caretXs.length > guardedCaretIndex; guardedCaretIndex++) {
+          if ((this.caretXs[guardedCaretIndex] + this.caretXs[-1 + guardedCaretIndex] >> 1) > x) {
+            return -1 + guardedCaretIndex;
           }
         }
-        return -1 + this.field_i.length;
+        return -1 + this.caretXs.length;
     }
 
     final static void a(String param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
@@ -67,7 +67,7 @@ final class ts {
           var11 = ed.field_e.getPreferredWidth(param7 ^ 15717);
           ed.field_e.setBounds(param4, -20500, var11, var10, -5 + (var9_int - var11));
           if (param7 != 15676) {
-            ts.b(-109);
+            TextLineLayout.b(-109);
           }
           sb.field_i.setBounds(param3, -20500, var9_int, 0, 0);
           var12 = 5 + param4 + var10;
@@ -92,15 +92,15 @@ final class ts {
         td.field_f.loadBasicSprites(0);
     }
 
-    final int a(int param0) {
-        if (param0 != 0) {
+    final int getRightEdge(int obfuscationGuard) {
+        if (obfuscationGuard != 0) {
           return -103;
         }
-        if (this.field_i == null) {
+        if (this.caretXs == null) {
           return 0;
         }
-        if (this.field_i.length != 0) {
-          return this.field_i[this.field_i.length - 1];
+        if (this.caretXs.length != 0) {
+          return this.caretXs[this.caretXs.length - 1];
         }
         return 0;
     }
@@ -257,10 +257,10 @@ final class ts {
         field_b = null;
     }
 
-    ts(int param0, int param1, int param2) {
-        this.field_n = param0;
-        this.field_i = new int[1 + param2];
-        this.field_c = param1;
+    TextLineLayout(int top, int bottom, int characterCount) {
+        this.top = top;
+        this.caretXs = new int[1 + characterCount];
+        this.bottom = bottom;
     }
 
     static {

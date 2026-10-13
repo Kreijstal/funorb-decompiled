@@ -67,7 +67,7 @@ final class wr extends hs implements he {
           return;
         }
         try {
-          ak.a(this.field_M.l(param1 ^ 35), this.field_M.m(-26458), this.field_M.a((byte) -77), 30);
+          BitmapTextLayout.a(this.field_M.l(param1 ^ 35), this.field_M.m(-26458), this.field_M.a((byte) -77), 30);
         } catch (RuntimeException runtimeException) {
           throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "wr.N(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');
         }

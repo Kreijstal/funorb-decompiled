@@ -24,8 +24,8 @@ final class bk {
           CombatEvent.field_L[0] = CampaignMenuButton.connectionRandom.nextInt();
           CombatEvent.field_L[1] = CampaignMenuButton.connectionRandom.nextInt();
           vd.field_b.position = 0;
-          CombatEvent.field_L[3] = (int)ts.field_h;
-          CombatEvent.field_L[2] = (int)(ts.field_h >> 32);
+          CombatEvent.field_L[3] = (int)TextLineLayout.field_h;
+          CombatEvent.field_L[2] = (int)(TextLineLayout.field_h >> 32);
           vd.field_b.writeInt((byte) -69, CombatEvent.field_L[0]);
           vd.field_b.writeInt((byte) -69, CombatEvent.field_L[1]);
           vd.field_b.writeInt((byte) -125, CombatEvent.field_L[2]);
@@ -299,7 +299,7 @@ final class bk {
         RuntimeException caughtFailure = null;
         RuntimeException failure = null;
         try {
-          crossfadeStream = lk.musicCrossfadeStream;
+          crossfadeStream = BitmapTextWidgetPainter.musicCrossfadeStream;
           gainToApply = channelGain;
           returnAfterTrack = !(loop);
           ((MusicCrossfadeStream) (Object) crossfadeStream).selectTrack(gainToApply, returnAfterTrack, track, obfuscationGuard - 20608, fadeRate, 1000000);

@@ -209,7 +209,7 @@ final class TutorialController {
               if (MidiPcmStream.field_p != null &&
                 ClientContextMenu.field_k == 0) {
                 KingBlackDragonEvent.field_A = 0;
-                ts.currentSpellMenu = MidiPcmStream.field_p;
+                TextLineLayout.currentSpellMenu = MidiPcmStream.field_p;
                 wj.field_q = 0;
               }
               RadialSummonMenu.playDefaultSoundWithIntGuard(123, ClientUiNode.field_v[2]);
@@ -247,7 +247,7 @@ final class TutorialController {
                       if (ClientContextMenu.field_k != 0) {
                         ab.field_a = ev.field_d;
                         ev.field_d = pg.playerProfile.equippedSpellIds[var2_int];
-                        ts.currentSpellMenu = ct.spellMenuById[ev.field_d];
+                        TextLineLayout.currentSpellMenu = ct.spellMenuById[ev.field_d];
                         this.a((byte) 96, ev.field_d, (SpellMenuGroup) null);
                         return;
                       }
@@ -256,7 +256,7 @@ final class TutorialController {
                       ev.field_d = pg.playerProfile.equippedSpellIds[var2_int];
                       MidiPcmStream.field_p = ct.spellMenuById[ev.field_d];
                       this.a((byte) 88, ev.field_d, (SpellMenuGroup) null);
-                      if (ts.currentSpellMenu != MidiPcmStream.field_p) {
+                      if (TextLineLayout.currentSpellMenu != MidiPcmStream.field_p) {
                         RadialSummonMenu.playDefaultSoundWithIntGuard(127, MoveAttackRequest.field_v[44]);
                         return;
                       }
@@ -297,12 +297,12 @@ final class TutorialController {
                   return;
                 }
                 if (TabbedPanel.a(MatchConditionEntry.a(212, (byte) 94), db.a(true, 165), 20, false)) {
-                  if (null != ts.currentSpellMenu.parent) {
-                    vu.field_O = ts.currentSpellMenu;
+                  if (null != TextLineLayout.currentSpellMenu.parent) {
+                    vu.field_O = TextLineLayout.currentSpellMenu;
                     wj.field_q = 248;
                     KingBlackDragonEvent.field_A = -248;
-                    ts.currentSpellMenu = ts.currentSpellMenu.parent;
-                    this.a((byte) 51, -1, ts.currentSpellMenu);
+                    TextLineLayout.currentSpellMenu = TextLineLayout.currentSpellMenu.parent;
+                    this.a((byte) 51, -1, TextLineLayout.currentSpellMenu);
                     RadialSummonMenu.playDefaultSoundWithIntGuard(118, MoveAttackRequest.field_v[43]);
                     ab.field_a = ev.field_d;
                     ev.field_d = -1;
@@ -312,8 +312,8 @@ final class TutorialController {
                 boolean decompiledFrameCompleted1 = true;
                 boolean decompiledFrameCompleted0 = true;
                 boolean decompiledFrameRemainder0 = true;
-                if (ts.currentSpellMenu.children != null) {
-                  var3 = ts.currentSpellMenu.children.length;
+                if (TextLineLayout.currentSpellMenu.children != null) {
+                  var3 = TextLineLayout.currentSpellMenu.children.length;
                   var4 = 0;
                   while (var3 > var4) {
                     var5 = 165 + (int)(Math.sin(6.283185307179586 * (double)var4 / (double)var3) * 90.0);
@@ -326,11 +326,11 @@ final class TutorialController {
                       break;
                     }
                     if (stackIn_103_0) {
-                      vu.field_O = ts.currentSpellMenu;
-                      ts.currentSpellMenu = ts.currentSpellMenu.children[var4];
+                      vu.field_O = TextLineLayout.currentSpellMenu;
+                      TextLineLayout.currentSpellMenu = TextLineLayout.currentSpellMenu.children[var4];
                       wj.field_q = 248;
                       KingBlackDragonEvent.field_A = 248;
-                      this.a((byte) 92, -1, ts.currentSpellMenu);
+                      this.a((byte) 92, -1, TextLineLayout.currentSpellMenu);
                       RadialSummonMenu.playDefaultSoundWithIntGuard(79, MoveAttackRequest.field_v[42]);
                       ab.field_a = ev.field_d;
                       ev.field_d = -1;
@@ -344,8 +344,8 @@ final class TutorialController {
                 }
                 if ((decompiledFrameRemainder0) &&
                   (decompiledFrameCompleted1) &&
-                  (ts.currentSpellMenu.spellIds != null)) {
-                  var3Lifetime2 = ts.currentSpellMenu.spellIds.length;
+                  (TextLineLayout.currentSpellMenu.spellIds != null)) {
+                  var3Lifetime2 = TextLineLayout.currentSpellMenu.spellIds.length;
                   var4Lifetime3 = 0;
                   while (var4Lifetime3 < var3Lifetime2) {
                     var5Lifetime1 = (int)(Math.sin(6.283185307179586 * (double)var4Lifetime3 / (double)var3Lifetime2) * 90.0) + 165;
@@ -362,7 +362,7 @@ final class TutorialController {
                       continue;
                     }
                     ab.field_a = ev.field_d;
-                    ev.field_d = ts.currentSpellMenu.spellIds[var4Lifetime3];
+                    ev.field_d = TextLineLayout.currentSpellMenu.spellIds[var4Lifetime3];
                     wj.field_q = 248;
                     TelepopEvent.field_D = true;
                     this.a((byte) 90, ev.field_d, (SpellMenuGroup) null);
@@ -373,7 +373,7 @@ final class TutorialController {
                 }
                 if ((decompiledFrameCompleted1) &&
                   (decompiledFrameCompleted0)) {
-                  stackIn_123_0Lifetime1 = this.a(ts.currentSpellMenu, (byte) 83);
+                  stackIn_123_0Lifetime1 = this.a(TextLineLayout.currentSpellMenu, (byte) 83);
                 }
                 if (var7 == 0) {
                   break;
@@ -828,7 +828,7 @@ final class TutorialController {
           var5 = field_e;
           fe.c(CampaignQuicksave.field_i, db.a(true, var3[0]), MatchConditionEntry.a(var4, (byte) 94), field_e, true);
           fe.c(MapRepository.field_f, db.a(true, var3[1]), MatchConditionEntry.a(var4, (byte) 94), field_e, true);
-          fe.c(ts.field_g, db.a(true, var3[2]), MatchConditionEntry.a(var4, (byte) 94), field_e, true);
+          fe.c(TextLineLayout.field_g, db.a(true, var3[2]), MatchConditionEntry.a(var4, (byte) 94), field_e, true);
           fe.c(vi.field_c, db.a(true, var3[3]), MatchConditionEntry.a(var4, (byte) 94), field_e, true);
           fe.c(hq.field_c, db.a(true, var3[4]), MatchConditionEntry.a(var4, (byte) 94), field_e, true);
           var4 = var4 + (8 + rs.field_n.maxAscent);
@@ -974,7 +974,7 @@ final class TutorialController {
               ab.field_a = ev.field_d;
               ev.field_d = param0.spellIds[var7_intLifetime1];
               TelepopEvent.field_D = true;
-              ts.currentSpellMenu = param0;
+              TextLineLayout.currentSpellMenu = param0;
               this.a((byte) 62, ev.field_d, (SpellMenuGroup) null);
               RadialSummonMenu.playDefaultSoundWithIntGuard(59, MoveAttackRequest.field_v[45]);
               RadialSummonMenu.playDefaultSoundWithIntGuard(38, ClientUiNode.field_v[12]);
@@ -2238,7 +2238,7 @@ final class TutorialController {
             if (!this.selectionState.hasActivationInput((byte) 88)) {
               return;
             }
-            this.a((byte) 93, ev.field_d, ts.currentSpellMenu);
+            this.a((byte) 93, ev.field_d, TextLineLayout.currentSpellMenu);
             var6Lifetime2 = param0 ? 1 : 0;
             CipherPacketBuffer.a(var6Lifetime2 != 0, 18, 1, 0);
             if (var9 == 0) {
@@ -3650,12 +3650,12 @@ final class TutorialController {
           if (ClientContextMenu.field_k == 0) {
             SoftwareRaster.setClip(db.a(true, 34), MatchConditionEntry.a(64, (byte) 94), db.a(true, 296), MatchConditionEntry.a(380, (byte) 94));
             if (vu.field_O == null ||
-              ts.currentSpellMenu == vu.field_O.parent ||
-              vu.field_O == ts.currentSpellMenu.parent) {
+              TextLineLayout.currentSpellMenu == vu.field_O.parent ||
+              vu.field_O == TextLineLayout.currentSpellMenu.parent) {
               if (0 < var2_int) {
-                na.field_F = vu.field_O.drawRadialMenu(-256 + var2_int, var3, 0, 40, this, na.field_F, ts.currentSpellMenu.indexInParent);
+                na.field_F = vu.field_O.drawRadialMenu(-256 + var2_int, var3, 0, 40, this, na.field_F, TextLineLayout.currentSpellMenu.indexInParent);
               }
-              stackIn_56_0 = ts.currentSpellMenu;
+              stackIn_56_0 = TextLineLayout.currentSpellMenu;
               stackIn_56_1 = var2_int;
               stackIn_56_2 = var3;
               stackIn_56_3 = 0;
@@ -3674,28 +3674,28 @@ final class TutorialController {
                   if (0 < var2_int) {
                     na.field_F = vu.field_O.drawRadialMenu(0, var3, var2_int - 256, 40, this, na.field_F, -1);
                   }
-                  ts.currentSpellMenu.drawRadialMenu(0, var3, var2_int, param0 ^ 76, this, na.field_F, -1);
+                  TextLineLayout.currentSpellMenu.drawRadialMenu(0, var3, var2_int, param0 ^ 76, this, na.field_F, -1);
                 }
               }
             } else {
               if (0 < var2_int) {
                 na.field_F = vu.field_O.drawRadialMenu(0, var3, var2_int - 256, 40, this, na.field_F, -1);
               }
-              ts.currentSpellMenu.drawRadialMenu(0, var3, var2_int, param0 ^ 76, this, na.field_F, -1);
+              TextLineLayout.currentSpellMenu.drawRadialMenu(0, var3, var2_int, param0 ^ 76, this, na.field_F, -1);
             }
             SoftwareRaster.a();
             fe.b(l.field_e, db.a(true, 165), MatchConditionEntry.a(76, (byte) 94), 230, true);
             fe.a(l.field_e, db.a(true, 165), MatchConditionEntry.a(76, (byte) 94), 230, ConsoleValue.field_b, true);
             if (var2_int >= 0) {
-              discarded$1 = this.a(ts.currentSpellMenu, true, -125, -var2_int + 256);
+              discarded$1 = this.a(TextLineLayout.currentSpellMenu, true, -125, -var2_int + 256);
             }
             if (var2_int < 0 ||
               var8 != 0) {
               discarded$2 = this.a(vu.field_O, true, -127, -var2_int);
             }
             if (vi.field_f == null) {
-              fe.b(ts.currentSpellMenu.label, db.a(true, 165), MatchConditionEntry.a(100, (byte) 94), 230, true);
-              fe.a(ts.currentSpellMenu.label, db.a(true, 165), MatchConditionEntry.a(100, (byte) 94), 230, field_e, true);
+              fe.b(TextLineLayout.currentSpellMenu.label, db.a(true, 165), MatchConditionEntry.a(100, (byte) 94), 230, true);
+              fe.a(TextLineLayout.currentSpellMenu.label, db.a(true, 165), MatchConditionEntry.a(100, (byte) 94), 230, field_e, true);
               decompiledFrameRemainder0 = (var8 != 0);
             }
             if (decompiledFrameRemainder0) {
@@ -3771,7 +3771,7 @@ final class TutorialController {
           if ((stackIn_111_0 != 0 ||
             br.heldKeys[82] &&
             !(2 > BufferedSocket.field_j)) && ClientContextMenu.field_k == 0) {
-            if (null == ts.currentSpellMenu.parent) {
+            if (null == TextLineLayout.currentSpellMenu.parent) {
               rs.field_n.drawParagraph(SocketResourceClient.field_x, db.a(true, 40), MatchConditionEntry.a(284, (byte) 94), 250, 55, 16777215, -1, var2_int + 256, 1, 1, 0);
             }
             if (null != vu.field_O &&
@@ -4787,7 +4787,7 @@ final class TutorialController {
                     if (0 == KingBlackDragonEvent.field_A) {
                       vu.field_O = null;
                       if (MidiPcmStream.field_p != null) {
-                        if (ts.currentSpellMenu == MidiPcmStream.field_p) {
+                        if (TextLineLayout.currentSpellMenu == MidiPcmStream.field_p) {
                           MidiPcmStream.field_p = null;
                           decompiledFrameRemainder2 = (var4 != 0);
                         }
@@ -4798,7 +4798,7 @@ final class TutorialController {
                             boolean decompiledFrameRemainder0 = true;
                             if (var3_ref_rg != null) {
                               stackIn_284_0 = var3_ref_rg.parent;
-                              stackIn_284_1 = ts.currentSpellMenu;
+                              stackIn_284_1 = TextLineLayout.currentSpellMenu;
                               decompiledFrameRemainder0 = (var4 == 0);
                               if ((decompiledFrameRemainder0) &&
                                 (stackIn_284_0 != stackIn_284_1)) {
@@ -4808,10 +4808,10 @@ final class TutorialController {
                             }
                             if ((decompiledFrameRemainder0) &&
                               (decompiledFrameRemainder1 = (var3_ref_rg != null))) {
-                              vu.field_O = ts.currentSpellMenu;
-                              ts.currentSpellMenu = var3_ref_rg;
+                              vu.field_O = TextLineLayout.currentSpellMenu;
+                              TextLineLayout.currentSpellMenu = var3_ref_rg;
                               KingBlackDragonEvent.field_A = 240;
-                              stackIn_284_0 = ts.currentSpellMenu;
+                              stackIn_284_0 = TextLineLayout.currentSpellMenu;
                               stackIn_284_1 = MidiPcmStream.field_p;
                             }
                             if (decompiledFrameRemainder1) {
@@ -4827,8 +4827,8 @@ final class TutorialController {
                                 break;
                               }
                             }
-                            vu.field_O = ts.currentSpellMenu;
-                            ts.currentSpellMenu = ts.currentSpellMenu.parent;
+                            vu.field_O = TextLineLayout.currentSpellMenu;
+                            TextLineLayout.currentSpellMenu = TextLineLayout.currentSpellMenu.parent;
                             KingBlackDragonEvent.field_A = -240;
                             RadialSummonMenu.playDefaultSoundWithIntGuard(41, MoveAttackRequest.field_v[45]);
                             break;

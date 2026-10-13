@@ -44,7 +44,7 @@ final class di extends mk {
           if (param0 != -3137) {
             field_l = (ClientUiComponent) null;
           }
-          if (!param1.equals(this.field_k.field_v)) {
+          if (!param1.equals(this.field_k.text)) {
             stackIn_11_0 = rn.field_e;
           } else {
             stackIn_11_0 = oo.field_g;
@@ -88,8 +88,8 @@ final class di extends mk {
             var3 = ((eg) ((Object) this.field_k)).a(-918933630);
             if (var3 != null) {
               if (var3.a(false) == oo.field_g &&
-                !param1.equals(this.field_k.field_v)) {
-                stackIn_7_0 = ak.field_j;
+                !param1.equals(this.field_k.text)) {
+                stackIn_7_0 = BitmapTextLayout.field_j;
                 return stackIn_7_0;
               }
               stackIn_9_0 = var3.a((byte) 55);
@@ -99,10 +99,10 @@ final class di extends mk {
           if (param0 <= 89) {
             di.c((byte) 94);
           }
-          if (param1.equals(this.field_k.field_v)) {
+          if (param1.equals(this.field_k.text)) {
             return null;
           }
-          stackIn_15_0 = ak.field_j;
+          stackIn_15_0 = BitmapTextLayout.field_j;
           return stackIn_15_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

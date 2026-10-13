@@ -425,7 +425,7 @@ abstract class BitmapFont extends DualLinkedNode {
                                 }
                               } else {
                                 shadowText = (CharSequence) ((Object) tag.substring(5));
-                                shadowColour = ju.a(0, 16, shadowText);
+                                shadowColour = TextLayout.parseRadixInt(0, 16, shadowText);
                               }
                             } else {
                               underlineColour = -1;
@@ -435,7 +435,7 @@ abstract class BitmapFont extends DualLinkedNode {
                           }
                         } else {
                           underlineText = (CharSequence) ((Object) tag.substring(2));
-                          underlineColour = ju.a(0, 16, underlineText);
+                          underlineColour = TextLayout.parseRadixInt(0, 16, underlineText);
                         }
                       } else {
                         strikethroughColour = -1;
@@ -445,7 +445,7 @@ abstract class BitmapFont extends DualLinkedNode {
                     }
                   } else {
                     strikethroughText = (CharSequence) ((Object) tag.substring(4));
-                    strikethroughColour = ju.a(0, 16, strikethroughText);
+                    strikethroughColour = TextLayout.parseRadixInt(0, 16, strikethroughText);
                   }
                 } else {
                   textAlpha = defaultTextAlpha;
@@ -459,7 +459,7 @@ abstract class BitmapFont extends DualLinkedNode {
             }
           } else {
             colourText = (CharSequence) ((Object) tag.substring(4));
-            textColour = ju.a(0, 16, colourText);
+            textColour = TextLayout.parseRadixInt(0, 16, colourText);
           }
         } catch (java.lang.Exception caughtParameter) {
           caughtTagFailure = caughtParameter;
