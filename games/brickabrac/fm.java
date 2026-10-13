@@ -4,7 +4,7 @@
 final class fm {
     static mh field_b;
     static String field_a;
-    static int field_d;
+    static int keyEventFrameEnd;
     static String field_c;
     private static String field_z;
 
@@ -22,7 +22,7 @@ final class fm {
 
     static {
         field_z = "fm.A(";
-        field_d = 0;
+        keyEventFrameEnd = 0;
         field_c = "All players have left <%0>'s game.";
         field_a = "<%0>'s game";
     }

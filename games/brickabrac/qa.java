@@ -200,7 +200,7 @@ final class qa extends ki {
 
     final static boolean a(int param0, int param1, byte param2, int param3) {
         if (um.field_e) {
-          return vd.field_a.a(go.field_b, dc.field_b, true);
+          return vd.field_a.a(go.currentKeyCharacter, dc.currentKeyCode, true);
         }
         if (nq.field_p) {
           return sa.a(param1, 102, param0);

@@ -25,19 +25,19 @@ final class md extends MenuScreen {
         try {
           var1_int = 0;
           var2 = 0;
-          while (jl.a((byte) 5)) {
-            mh.field_H.navigateHorizontal(-1);
+          while (jl.pollKeyEvent((byte) 5)) {
+            mh.field_H.navigateVertical(-1);
             if (mh.field_H.isActivated((byte) 113)) {
               var1_int = 1;
             }
-            if (dc.field_b != 13) {
+            if (dc.currentKeyCode != 13) {
               continue;
             }
             var2 = 1;
           }
           if (param0 != 124) {
             var8 = (java.awt.Component) null;
-            md.a(22, (java.awt.Component) null);
+            md.attachKeyboardInput(22, (java.awt.Component) null);
           }
           mh.field_H.updatePointer(qo.b(120, po.pointerY, pq.pointerX), param0 + 27355, qo.b(param0 - 4, qo.pressY, tb.pressX));
           if (mh.field_H.isActivated((byte) 113)) {
@@ -329,21 +329,21 @@ final class md extends MenuScreen {
         this.a(0);
     }
 
-    final static void a(int param0, java.awt.Component param1) {
+    final static void attachKeyboardInput(int obfuscationGuard, java.awt.Component component) {
         try {
-          int var2_int = -107 / ((param0 + 53) / 50);
-          param1.setFocusTraversalKeysEnabled(false);
-          param1.addKeyListener(gp.field_c);
-          param1.addFocusListener(gp.field_c);
+          int var2_int = -107 / ((obfuscationGuard + 53) / 50);
+          component.setFocusTraversalKeysEnabled(false);
+          component.addKeyListener(DualLinkDeque.keyboardInput);
+          component.addFocusListener(DualLinkDeque.keyboardInput);
         } catch (RuntimeException runtimeException) {
-          throw qb.a((Throwable) ((Object) runtimeException), "md.G(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw qb.a((Throwable) ((Object) runtimeException), "md.G(" + obfuscationGuard + ',' + (component != null ? "{...}" : "null") + ')');
         }
     }
 
     final String e(byte param0) {
         if (param0 < 53) {
           java.awt.Component var3 = (java.awt.Component) null;
-          md.a(-108, (java.awt.Component) null);
+          md.attachKeyboardInput(-108, (java.awt.Component) null);
         }
         return ag.buttonLabels[7];
     }

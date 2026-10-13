@@ -262,9 +262,9 @@ final class ai extends ki {
           var14[5] = 7368816;
           var16 = new RgbSprite[9];
           var16[4] = var12;
-          gp.field_d = new mh(0L, param0);
+          DualLinkDeque.field_d = new mh(0L, param0);
           sh.field_d = new mh(0L, param2);
-          gp.field_d.a(sh.field_d, 0);
+          DualLinkDeque.field_d.a(sh.field_d, 0);
           var17 = new mh(0L, (mh) null);
           var17.field_bb = new NodeDeque();
           i.field_q = new mm(0L, var17, param5, param10);
@@ -317,7 +317,7 @@ final class ai extends ki {
                 ik.field_i[var18].a(vj.field_a[var18], 0);
                 ik.field_i[var18].a(wd.field_F[var18], 0);
                 ik.field_i[var18].c(true);
-                gp.field_d.a(ik.field_i[var18], 0);
+                DualLinkDeque.field_d.a(ik.field_i[var18], 0);
                 fe.field_pb = fe.field_pb + 1;
               }
               var18++;
@@ -328,7 +328,7 @@ final class ai extends ki {
           if (decompiledNaturalLoopExit0) {
             LegacyUtf8Decoder.field_c = new mh(0L, param4);
             LegacyUtf8Decoder.field_c.field_Mb = vh.field_Y;
-            gp.field_d.a(LegacyUtf8Decoder.field_c, 0);
+            DualLinkDeque.field_d.a(LegacyUtf8Decoder.field_c, 0);
             stackIn_34_0 = ik.a(false) ? 1 : 0;
           }
           if (stackIn_34_0 != 0 &&

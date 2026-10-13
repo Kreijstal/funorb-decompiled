@@ -5,22 +5,22 @@ final class PowerUp extends CircleBody {
     int activationTick;
     static boolean field_v;
     static String field_x;
-    static volatile int field_w;
+    static volatile int keyboardIdleTicks;
 
     PowerUp(PowerUp source, int activationTick) {
         this(source.x256, source.y256, source.typeId, activationTick);
     }
 
-    final static void a(int param0, java.awt.Component param1) {
+    final static void detachKeyboardInput(int obfuscationGuard, java.awt.Component component) {
         try {
-          param1.removeKeyListener(gp.field_c);
-          param1.removeFocusListener(gp.field_c);
-          if (param0 != -2846) {
+          component.removeKeyListener(DualLinkDeque.keyboardInput);
+          component.removeFocusListener(DualLinkDeque.keyboardInput);
+          if (obfuscationGuard != -2846) {
             PowerUp.c(91);
           }
-          pl.field_d = -1;
+          pl.keyChangeWriteIndex = -1;
         } catch (RuntimeException runtimeException) {
-          throw qb.a((Throwable) ((Object) runtimeException), "ge.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw qb.a((Throwable) ((Object) runtimeException), "ge.F(" + obfuscationGuard + ',' + (component != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -43,7 +43,7 @@ final class PowerUp extends CircleBody {
     final static pb a(int param0, int param1, int param2) {
         if (param2 != -20777) {
           java.awt.Component var4 = (java.awt.Component) null;
-          PowerUp.a(58, (java.awt.Component) null);
+          PowerUp.detachKeyboardInput(58, (java.awt.Component) null);
         }
         return so.a(param2 ^ -20777, param1, param0, ip.field_s);
     }
@@ -287,7 +287,7 @@ final class PowerUp extends CircleBody {
 
     static {
         field_x = "If you do nothing the game will revert to normal view in <%0> second.";
-        field_w = 0;
+        keyboardIdleTicks = 0;
         field_v = false;
     }
 }

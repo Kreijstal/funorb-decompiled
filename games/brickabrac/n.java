@@ -274,7 +274,7 @@ final class n {
                 }
                 ar.a(true, nl.field_f, -1, -1, -1, 0, cq.field_p, 0);
                 if (!(kb.field_Yb < 2) &&
-                  pe.field_l[12]) {
+                  pe.heldKeys[12]) {
                   dc.field_g = true;
                 }
               }

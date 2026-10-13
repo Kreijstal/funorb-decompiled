@@ -114,7 +114,7 @@ final class kg implements Runnable {
         var15 = BrickABrac.field_J ? 1 : 0;
         try {
           var6_int = 485 + param1 + 8 - (-2 - param4) + 8;
-          sh.field_d.a(-6 + gp.field_d.field_cb, 3, 3, -6 + var6_int, (byte) 64);
+          sh.field_d.a(-6 + DualLinkDeque.field_d.field_cb, 3, 3, -6 + var6_int, (byte) 64);
           var7 = -5 + sh.field_d.field_cb;
           kc.field_n.a(param3, -param3 + var7, 5, param4 + 485 + param1 + 2, (byte) 64);
           g.field_n.a(param3, 0, param1, -ap.field_e.field_Ib - param1 + kc.field_n.field_Ib, (byte) 64);
@@ -125,16 +125,16 @@ final class kg implements Runnable {
           if (null != vd.field_a) {
             vd.field_a.a(i.field_q.field_cb, i.field_q.field_P, i.field_q.field_zb, (byte) -119, i.field_q.field_Ib);
           }
-          var9 = -param1 + (gp.field_d.field_Ib - var6_int);
+          var9 = -param1 + (DualLinkDeque.field_d.field_Ib - var6_int);
           var10 = var9 / 2;
           var11 = param1 + var10 + param2;
           var12 = 0;
           for (var13 = 0; 6 > var13; var13++) {
             if (var13 >= 5 ||
               null != ik.field_i[var13]) {
-              var14 = 3 + (2 + gp.field_d.field_cb - 6) * var12 / (fe.field_pb + 1);
+              var14 = 3 + (2 + DualLinkDeque.field_d.field_cb - 6) * var12 / (fe.field_pb + 1);
               var12++;
-              var7Lifetime1 = -var14 + 3 + (var12 * (2 + (gp.field_d.field_cb - 6)) / (fe.field_pb + 1) - 2);
+              var7Lifetime1 = -var14 + 3 + (var12 * (2 + (DualLinkDeque.field_d.field_cb - 6)) / (fe.field_pb + 1) - 2);
               if (5 > var13) {
                 ik.field_i[var13].a(var7Lifetime1, var14, var6_int, var9, (byte) 64);
                 dp.field_w[var13].a(var7Lifetime1, 0, param1, -param1 + var10, (byte) 64);

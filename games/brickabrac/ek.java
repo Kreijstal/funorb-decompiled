@@ -7,7 +7,7 @@ final class ek extends bj implements en {
     static int field_lb;
     static int field_kb;
     static String field_gb;
-    static int field_cb;
+    static int keyChangeReadIndex;
     static int field_db;
     static RgbSprite field_hb;
     private d field_ib;
@@ -146,7 +146,7 @@ final class ek extends bj implements en {
           this.a(var4, true);
           this.e(1);
           if (param1 < 23) {
-            field_cb = -75;
+            keyChangeReadIndex = -75;
           }
           stackIn_3_0 = var4;
           return stackIn_3_0;
@@ -258,7 +258,7 @@ final class ek extends bj implements en {
     static {
         field_gb = "Mute this player for 48 hours";
         field_bb = 20;
-        field_cb = 0;
+        keyChangeReadIndex = 0;
         field_jb = new int[16384];
         field_eb = new String[]{"Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"};
         field_fb = "From <%0>: ";

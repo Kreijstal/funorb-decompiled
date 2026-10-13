@@ -34,7 +34,7 @@ final class wl extends d {
           if (lp.field_xb == var8) {
             var13 = df.field_a[2];
             var13.f(-(var13.width >> 1) + var5, -(var13.height >> 1) + var6, 256);
-          } else if (ae.field_c == var8) {
+          } else if (DualLinkIterator.field_c == var8) {
             var14 = df.field_a[1];
             var14.f(var5 - (var14.width >> 1), -(var14.height >> 1) + var6, 256);
           }

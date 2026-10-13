@@ -566,7 +566,7 @@ class ib extends oc implements sd {
           if (var6 != 80) {
             return false;
           }
-          if (pe.field_l[81]) {
+          if (pe.heldKeys[81]) {
             stackIn_17_0 = this.b(param2, (byte) -118);
           } else {
             stackIn_17_0 = this.a(param2, (byte) -128);

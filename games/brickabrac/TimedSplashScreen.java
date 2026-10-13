@@ -4,7 +4,7 @@
 final class TimedSplashScreen extends MenuScreen {
     static mm field_u;
     static String field_s;
-    static char[] field_r;
+    static char[] keyEventCharacters;
     private int remainingTicks;
 
     final void advanceScreen(boolean updateFlag, boolean inputEnabled, int obfuscationGuard) {
@@ -94,13 +94,13 @@ final class TimedSplashScreen extends MenuScreen {
         field_u = null;
         if (param0 == 0) {
           field_s = null;
-          field_r = null;
+          keyEventCharacters = null;
           return;
         }
         oe var2 = (oe) null;
         TimedSplashScreen.a(-53, (oe) null);
         field_s = null;
-        field_r = null;
+        keyEventCharacters = null;
     }
 
     final void drawScreen(byte obfuscationGuard) {
@@ -170,6 +170,6 @@ final class TimedSplashScreen extends MenuScreen {
 
     static {
         field_s = "Speed down: decreases the speed of any ball in play.";
-        field_r = new char[128];
+        keyEventCharacters = new char[128];
     }
 }

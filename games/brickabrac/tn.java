@@ -393,7 +393,7 @@ final class tn extends qd {
           return;
         }
         so.field_b = param0;
-        ae.field_f = param3;
+        DualLinkIterator.field_f = param3;
         pe.field_s = param4;
     }
 

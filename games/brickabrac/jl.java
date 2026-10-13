@@ -117,23 +117,23 @@ final class jl {
         }
     }
 
-    final static boolean a(byte param0) {
+    final static boolean pollKeyEvent(byte obfuscationGuard) {
         Object var1 = null;
-        Object var1_ref = null;
+        Object keyboardMonitor = null;
         Throwable var2 = null;
         boolean stackIn_8_0 = false;
         Throwable decompiledCaughtException = null;
-        var1_ref = gp.field_c;
-        synchronized (var1_ref) {
-          if (si.field_m == fm.field_d) {
+        keyboardMonitor = DualLinkDeque.keyboardInput;
+        synchronized (keyboardMonitor) {
+          if (si.keyEventReadIndex == fm.keyEventFrameEnd) {
             return false;
           }
-          dc.field_b = ef.field_d[si.field_m];
-          go.field_b = TimedSplashScreen.field_r[si.field_m];
-          if (param0 != 5) {
+          dc.currentKeyCode = ef.keyEventCodes[si.keyEventReadIndex];
+          go.currentKeyCharacter = TimedSplashScreen.keyEventCharacters[si.keyEventReadIndex];
+          if (obfuscationGuard != 5) {
             return true;
           }
-          si.field_m = si.field_m + 1 & 127;
+          si.keyEventReadIndex = si.keyEventReadIndex + 1 & 127;
           stackIn_8_0 = true;
         }
         return stackIn_8_0;

@@ -58,7 +58,7 @@ final class sg extends k {
           stackIn_5_0 = (null != cp.a(param0, (byte) -24)) ? 0 : 1;
           var3_int = stackIn_5_0;
           if (var3_int != 0) {
-            return ae.field_c;
+            return DualLinkIterator.field_c;
           }
           stackIn_8_0 = lp.field_xb;
           return stackIn_8_0;

@@ -262,7 +262,7 @@ final class qo extends ib implements vf, en {
           if (param0 > -64) {
             field_J = (byte[]) null;
           }
-          stackIn_9_0 = (var4 == ae.field_c);
+          stackIn_9_0 = (var4 == DualLinkIterator.field_c);
           return stackIn_9_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

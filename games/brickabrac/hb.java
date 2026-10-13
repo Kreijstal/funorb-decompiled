@@ -5,7 +5,7 @@ abstract class hb extends DualLinkNode {
     static boolean field_y;
     static long field_x;
     static int[] field_z;
-    static int field_w;
+    static int keyEventWriteIndex;
     boolean field_B;
     static String field_A;
     volatile boolean field_u;
@@ -79,7 +79,7 @@ abstract class hb extends DualLinkNode {
 
     static {
         field_x = 20000000L;
-        field_w = 0;
+        keyEventWriteIndex = 0;
         field_A = "Invite <%0> to this game";
     }
 }

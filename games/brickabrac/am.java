@@ -76,7 +76,7 @@ final class am extends mh {
         if (this.field_ac != -2) {
           return false;
         }
-        if (dc.field_b == 13) {
+        if (dc.currentKeyCode == 13) {
           this.field_ac = -1;
         }
         if (param0 < 61) {

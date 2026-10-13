@@ -30,10 +30,10 @@ final class uf {
         if (param0 > -84) {
           return true;
         }
-        if (pe.field_l[82]) {
+        if (pe.heldKeys[82]) {
           return false;
         }
-        if (pe.field_l[86]) {
+        if (pe.heldKeys[86]) {
           return false;
         }
         if (param1 >= 16) {

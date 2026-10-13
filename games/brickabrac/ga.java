@@ -16,7 +16,7 @@ final class ga extends IntrusiveNode {
           (decompiledFrameRemainder0 = (!(pe.field_j <= 0) ||
           !(0 >= eg.field_m))) &&
           (decompiledFrameRemainder0 = !(!hc.field_c))) {
-          Rasterizer2D.darkenRectangle(0, 0, Rasterizer2D.width, gp.field_d.field_db);
+          Rasterizer2D.darkenRectangle(0, 0, Rasterizer2D.width, DualLinkDeque.field_d.field_db);
           wi.field_j.a(true, param0);
           if (param1 >= -106) {
             field_l = (boolean[]) null;
@@ -25,24 +25,24 @@ final class ga extends IntrusiveNode {
         }
         if (decompiledFrameRemainder0) {
           if (sc.field_c) {
-            Rasterizer2D.darkenRectangle(0, 0, Rasterizer2D.width, gp.field_d.field_db);
+            Rasterizer2D.darkenRectangle(0, 0, Rasterizer2D.width, DualLinkDeque.field_d.field_db);
             qp.field_f.a(true, param0);
             if ((!(pe.field_j <= 0) ||
               !(0 >= eg.field_m)) &&
               hc.field_c) {
-              Rasterizer2D.darkenRectangle(0, 0, Rasterizer2D.width, gp.field_d.field_db);
+              Rasterizer2D.darkenRectangle(0, 0, Rasterizer2D.width, DualLinkDeque.field_d.field_db);
               wi.field_j.a(true, param0);
             }
           } else {
             if (pe.field_j > 0) {
               if (hc.field_c) {
-                Rasterizer2D.darkenRectangle(0, 0, Rasterizer2D.width, gp.field_d.field_db);
+                Rasterizer2D.darkenRectangle(0, 0, Rasterizer2D.width, DualLinkDeque.field_d.field_db);
                 wi.field_j.a(true, param0);
               }
             } else {
               if (0 < eg.field_m &&
                 hc.field_c) {
-                Rasterizer2D.darkenRectangle(0, 0, Rasterizer2D.width, gp.field_d.field_db);
+                Rasterizer2D.darkenRectangle(0, 0, Rasterizer2D.width, DualLinkDeque.field_d.field_db);
                 wi.field_j.a(true, param0);
               }
             }

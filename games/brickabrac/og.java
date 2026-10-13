@@ -1254,7 +1254,7 @@ final class og extends mh {
           }
           var2Lifetime133 = gr.a(!param0, "name");
           if (null != var2Lifetime133) {
-            ae.field_i = MenuButton.a(var2Lifetime133, (byte) 79);
+            DualLinkIterator.field_i = MenuButton.a(var2Lifetime133, (byte) 79);
           }
           var2Lifetime134 = gr.a(true, "from_level");
           if (var2Lifetime134 != null) {
@@ -1310,7 +1310,7 @@ final class og extends mh {
           }
           var2Lifetime147 = gr.a(true, "explain_objective");
           if (null != var2Lifetime147) {
-            op.field_b = MenuButton.a(var2Lifetime147, (byte) 99);
+            KeyboardInput.field_b = MenuButton.a(var2Lifetime147, (byte) 99);
           }
           var2Lifetime148 = gr.a(true, "explain_powerup_bricks");
           if (null != var2Lifetime148) {
@@ -1505,7 +1505,7 @@ final class og extends mh {
           if (null != kj.field_D) {
             t.a(false, kj.field_D);
           }
-          ic.a((byte) -79);
+          ic.disableKeyboardInput((byte) -79);
           ve.a(5);
           GameplayAudioEvent.a(param0 + 14569);
           if (vg.a(param0 - 104)) {
@@ -1533,7 +1533,7 @@ final class og extends mh {
         int var7 = 0;
         var7 = BrickABrac.field_J ? 1 : 0;
         try {
-          stackIn_5_0 = (dc.field_b != 85) ? 0 : 1;
+          stackIn_5_0 = (dc.currentKeyCode != 85) ? 0 : 1;
           var4_int = stackIn_5_0;
           if (this.field_Vb != null) {
             if (var4_int != 0 &&
@@ -1555,7 +1555,7 @@ final class og extends mh {
             this.field_Ub = (int[]) null;
           }
           boolean decompiledFrameCompleted0 = true;
-          var5 = go.field_b;
+          var5 = go.currentKeyCharacter;
           if (var5 > 0) {
             if (~wp.field_h == ~var5) {
               var5 = 63;

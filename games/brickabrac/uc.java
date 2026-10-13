@@ -48,7 +48,7 @@ final class uc extends k {
           if (!this.field_o) {
             stackIn_13_0 = lp.field_xb;
           } else {
-            stackIn_13_0 = ae.field_c;
+            stackIn_13_0 = DualLinkIterator.field_c;
           }
           return stackIn_13_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

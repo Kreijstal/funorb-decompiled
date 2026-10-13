@@ -47,7 +47,7 @@ final class ij implements wb {
         ea.field_g = true;
         c.field_e = er.field_b;
         pn.b(-9, 200);
-        op.a(new sb(), 0);
+        KeyboardInput.a(new sb(), 0);
         td.g(0);
         qn.a(240, 0, 640, 0, -6532);
         bm.a(kh.field_i, qb.field_r, 24876, LevelList.field_o, GameScreen.field_e, ki.field_f, i.field_s);

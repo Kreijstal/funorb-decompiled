@@ -235,7 +235,7 @@ final class Brick extends RectangleBody {
             if (sh.field_a != 8 &&
               sh.field_a != 4) {
               var7.velocityY256 = -var7.velocityY256;
-              var5 = ae.field_b * (this.velocityY256 - var7.velocityY256);
+              var5 = DualLinkIterator.field_b * (this.velocityY256 - var7.velocityY256);
               if (var5 < 0) {
                 var7.velocityY256 = this.velocityY256;
               }

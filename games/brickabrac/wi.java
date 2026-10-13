@@ -343,9 +343,9 @@ final class wi extends dl {
     final static int c(int param0) {
         if (param0 != 1) {
           field_j = (mh) null;
-          return PowerUp.field_w;
+          return PowerUp.keyboardIdleTicks;
         }
-        return PowerUp.field_w;
+        return PowerUp.keyboardIdleTicks;
     }
 
     static {

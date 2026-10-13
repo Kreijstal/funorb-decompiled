@@ -39,7 +39,7 @@ final class nk {
             if (fj.field_Ub != null) {
               bd.a(3, (byte) 25, fj.field_Ub);
             }
-            ae.b((byte) 117);
+            DualLinkIterator.b((byte) 117);
             if (wi.field_g) {
               wi.field_g = false;
               cp.a(false, 21543);
@@ -88,7 +88,7 @@ final class nk {
     }
 
     final static void a(byte param0, boolean param1) {
-        if (gp.a(-4858)) {
+        if (DualLinkDeque.a(-4858)) {
           param1 = false;
         }
         ga.a(param1, -124);

@@ -184,7 +184,7 @@ final class nf extends lg {
                 var19.f(var9, var10 - (var19.height >> 1), 256);
                 return;
               }
-              if (ae.field_c != var6) {
+              if (DualLinkIterator.field_c != var6) {
                 return;
               }
               var20 = df.field_a[1];
@@ -220,7 +220,7 @@ final class nf extends lg {
               var23.f(var9Lifetime5, var10Lifetime5 - (var23.height >> 1), 256);
               return;
             }
-            if (ae.field_c != var6) {
+            if (DualLinkIterator.field_c != var6) {
               return;
             }
             var24 = df.field_a[1];
@@ -269,7 +269,7 @@ final class nf extends lg {
                 var28.f(var9Lifetime1, var10Lifetime1 - (var28.height >> 1), 256);
                 return;
               }
-              if (ae.field_c != var6) {
+              if (DualLinkIterator.field_c != var6) {
                 return;
               }
               var29 = df.field_a[1];
@@ -305,7 +305,7 @@ final class nf extends lg {
               var32.f(var9Lifetime1Lifetime1, var10Lifetime1Lifetime1 - (var32.height >> 1), 256);
               return;
             }
-            if (ae.field_c != var6) {
+            if (DualLinkIterator.field_c != var6) {
               return;
             }
             var33 = df.field_a[1];
@@ -352,7 +352,7 @@ final class nf extends lg {
                 var51.f(var9Lifetime2, var10Lifetime2 - (var51.height >> 1), 256);
                 return;
               }
-              if (ae.field_c != var6Lifetime1) {
+              if (DualLinkIterator.field_c != var6Lifetime1) {
                 return;
               }
               var52 = df.field_a[1];
@@ -390,7 +390,7 @@ final class nf extends lg {
               var45.f(var9Lifetime2Lifetime1, var10Lifetime2Lifetime1 - (var45.height >> 1), 256);
               return;
             }
-            if (ae.field_c != var6Lifetime1Lifetime1) {
+            if (DualLinkIterator.field_c != var6Lifetime1Lifetime1) {
               return;
             }
             var46 = df.field_a[1];
@@ -440,7 +440,7 @@ final class nf extends lg {
               var37.f(var9Lifetime3, var10Lifetime3 - (var37.height >> 1), 256);
               return;
             }
-            if (ae.field_c != var6Lifetime2) {
+            if (DualLinkIterator.field_c != var6Lifetime2) {
               return;
             }
             var38 = df.field_a[1];
@@ -476,7 +476,7 @@ final class nf extends lg {
             var41.f(var9Lifetime4, var10Lifetime4 - (var41.height >> 1), 256);
             return;
           }
-          if (ae.field_c != var6Lifetime3) {
+          if (DualLinkIterator.field_c != var6Lifetime3) {
             return;
           }
           var42 = df.field_a[1];

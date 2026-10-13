@@ -3,9 +3,9 @@
  */
 import java.util.*;
 
-final class gp implements Iterable {
-    static op field_c;
-    DualLinkNode field_a;
+final class DualLinkDeque implements Iterable {
+    static KeyboardInput keyboardInput;
+    DualLinkNode sentinel;
     static mh field_d;
     static int field_b;
 
@@ -46,7 +46,7 @@ final class gp implements Iterable {
 
     final static boolean a(int param0) {
         if (param0 != -4858) {
-          gp.a(-58, 65, -66, 54, -73);
+          DualLinkDeque.a(-58, 65, -66, 54, -73);
           if (null != bm.field_d) {
             return true;
           }
@@ -86,56 +86,56 @@ final class gp implements Iterable {
         la.a(Rasterizer2D.pixels, var5, 0, 0, 0, param3, param2, param0, var6);
     }
 
-    final void a(DualLinkNode param0, byte param1) {
+    final void addLast(DualLinkNode node, byte obfuscationGuard) {
         try {
-          if (null != param0.secondaryPrevious) {
-            param0.unlinkSecondary(3);
+          if (null != node.secondaryPrevious) {
+            node.unlinkSecondary(3);
           }
-          param0.secondaryNext = this.field_a;
-          if (param1 > -112) {
+          node.secondaryNext = this.sentinel;
+          if (obfuscationGuard > -112) {
             field_d = (mh) null;
           }
-          param0.secondaryPrevious = this.field_a.secondaryPrevious;
-          param0.secondaryPrevious.secondaryNext = param0;
-          param0.secondaryNext.secondaryPrevious = param0;
+          node.secondaryPrevious = this.sentinel.secondaryPrevious;
+          node.secondaryPrevious.secondaryNext = node;
+          node.secondaryNext.secondaryPrevious = node;
         } catch (RuntimeException runtimeException) {
-          throw qb.a((Throwable) ((Object) runtimeException), "gp.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw qb.a((Throwable) ((Object) runtimeException), "gp.E(" + (node != null ? "{...}" : "null") + ',' + obfuscationGuard + ')');
         }
     }
 
     public final Iterator iterator() {
-        return (Iterator) ((Object) new ae(this));
+        return (Iterator) ((Object) new DualLinkIterator(this));
     }
 
-    gp() {
-        this.field_a = new DualLinkNode();
-        this.field_a.secondaryPrevious = this.field_a;
-        this.field_a.secondaryNext = this.field_a;
+    DualLinkDeque() {
+        this.sentinel = new DualLinkNode();
+        this.sentinel.secondaryPrevious = this.sentinel;
+        this.sentinel.secondaryNext = this.sentinel;
     }
 
     public static void b(int param0) {
         field_d = null;
-        field_c = null;
+        keyboardInput = null;
         if (param0 != 2) {
-          gp.a(-125, -106, -42, 126, 57);
+          DualLinkDeque.a(-125, -106, -42, 126, 57);
         }
     }
 
-    final DualLinkNode a(boolean param0) {
-        DualLinkNode var2 = this.field_a.secondaryNext;
-        if (var2 == this.field_a) {
+    final DualLinkNode removeFirst(boolean obfuscationGuard) {
+        DualLinkNode node = this.sentinel.secondaryNext;
+        if (node == this.sentinel) {
           return null;
         }
-        var2.unlinkSecondary(3);
-        if (!param0) {
-          return var2;
+        node.unlinkSecondary(3);
+        if (!obfuscationGuard) {
+          return node;
         }
-        gp.a(-105, -93, 51, -34, -59);
-        return var2;
+        DualLinkDeque.a(-105, -93, 51, -34, -59);
+        return node;
     }
 
     final static void a(boolean param0, boolean param1) {
-        if (gp.a(-4858)) {
+        if (DualLinkDeque.a(-4858)) {
           param0 = false;
         }
         oj.a(param0, (byte) 123);
@@ -150,6 +150,6 @@ final class gp implements Iterable {
     }
 
     static {
-        field_c = new op();
+        keyboardInput = new KeyboardInput();
     }
 }

@@ -143,10 +143,10 @@ final class GameCanvas extends java.awt.Canvas implements java.awt.event.FocusLi
             return;
           }
           ef.a(param2 - 123);
-          gp.field_d.a(param3, -15211);
+          DualLinkDeque.field_d.a(param3, -15211);
           if (null != vd.field_a) {
             if (um.field_e) {
-              vd.field_a.a(gp.field_d.field_db, gp.field_d.field_Eb, 116, param3);
+              vd.field_a.a(DualLinkDeque.field_d.field_db, DualLinkDeque.field_d.field_Eb, 116, param3);
             } else {
               vd.field_a = null;
             }

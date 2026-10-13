@@ -34,7 +34,7 @@ final class gq extends mh {
           return this.field_Tb;
         }
         while (true) {
-          if (!jl.a((byte) 5)) {
+          if (!jl.pollKeyEvent((byte) 5)) {
             this.field_Qb.field_Mb = this.field_Vb.toString();
             if (!param0) {
               return this.field_Tb;
@@ -48,29 +48,29 @@ final class gq extends mh {
             this.field_Tb = 1;
             return this.field_Tb;
           }
-          if (dc.field_b == 85 &&
+          if (dc.currentKeyCode == 85 &&
             this.field_Vb.length() > 0) {
             uk.a(' ', this.field_Vb, -1 + this.field_Vb.length(), false);
           }
-          if (nk.a(go.field_b, (CharSequence) ((Object) this.field_Vb), false)) {
-            discarded$0 = this.field_Vb.append(go.field_b);
+          if (nk.a(go.currentKeyCharacter, (CharSequence) ((Object) this.field_Vb), false)) {
+            discarded$0 = this.field_Vb.append(go.currentKeyCharacter);
           } else {
             if (this.field_Vb.length() == 0 &&
-              go.field_b == 91) {
-              discarded$1 = this.field_Vb.append(go.field_b);
+              go.currentKeyCharacter == 91) {
+              discarded$1 = this.field_Vb.append(go.currentKeyCharacter);
             } else {
               if (this.field_Vb.length() == 1 &&
-                go.field_b == 35) {
-                discarded$2 = this.field_Vb.append(go.field_b);
+                go.currentKeyCharacter == 35) {
+                discarded$2 = this.field_Vb.append(go.currentKeyCharacter);
               } else {
-                if (go.field_b == 93) {
-                  discarded$3 = this.field_Vb.append(go.field_b);
+                if (go.currentKeyCharacter == 93) {
+                  discarded$3 = this.field_Vb.append(go.currentKeyCharacter);
                 }
               }
             }
           }
-          if (dc.field_b != 84) {
-            if (dc.field_b == 13) {
+          if (dc.currentKeyCode != 84) {
+            if (dc.currentKeyCode == 13) {
               return 1;
             }
             continue;
@@ -100,9 +100,9 @@ final class gq extends mh {
         if (this.field_Tb != 0) {
           return false;
         }
-        if (dc.field_b != 85) {
+        if (dc.currentKeyCode != 85) {
           if (12 > this.field_Vb.length()) {
-            var2 = Character.toLowerCase(go.field_b);
+            var2 = Character.toLowerCase(go.currentKeyCharacter);
             if (var2 == 32) {
               var2 = 95;
             }
@@ -112,7 +112,7 @@ final class gq extends mh {
             }
             if (ni.b(true, (char) var2)) {
               discarded$7 = this.field_Vb.append((char) var2);
-              if (dc.field_b == 84) {
+              if (dc.currentKeyCode == 84) {
                 if (this.field_Vb.length() > 0) {
                   this.field_Mb = this.field_Vb.toString();
                   this.field_Tb = 2;
@@ -120,7 +120,7 @@ final class gq extends mh {
                   this.field_Tb = 1;
                 }
               }
-              if (dc.field_b != param0) {
+              if (dc.currentKeyCode != param0) {
                 return true;
               }
               this.field_Tb = 1;
@@ -128,7 +128,7 @@ final class gq extends mh {
             }
             if (eh.a((char) var2, (byte) 83)) {
               discarded$8 = this.field_Vb.append((char) var2);
-              if (dc.field_b == 84) {
+              if (dc.currentKeyCode == 84) {
                 if (this.field_Vb.length() > 0) {
                   this.field_Mb = this.field_Vb.toString();
                   this.field_Tb = 2;
@@ -136,13 +136,13 @@ final class gq extends mh {
                   this.field_Tb = 1;
                 }
               }
-              if (dc.field_b == param0) {
+              if (dc.currentKeyCode == param0) {
                 this.field_Tb = 1;
               }
               return true;
             }
           }
-          if (dc.field_b == 84) {
+          if (dc.currentKeyCode == 84) {
             if (this.field_Vb.length() <= 0) {
               this.field_Tb = 1;
             } else {
@@ -150,14 +150,14 @@ final class gq extends mh {
               this.field_Tb = 2;
             }
           }
-          if (dc.field_b == param0) {
+          if (dc.currentKeyCode == param0) {
             this.field_Tb = 1;
           }
           return true;
         }
         if (this.field_Vb.length() <= 0) {
           if (12 > this.field_Vb.length()) {
-            var2Lifetime1 = Character.toLowerCase(go.field_b);
+            var2Lifetime1 = Character.toLowerCase(go.currentKeyCharacter);
             if (var2Lifetime1 == 32) {
               var2Lifetime1 = 95;
             }
@@ -167,7 +167,7 @@ final class gq extends mh {
             }
             if (ni.b(true, (char) var2Lifetime1)) {
               discarded$4 = this.field_Vb.append((char) var2Lifetime1);
-              if (dc.field_b == 84) {
+              if (dc.currentKeyCode == 84) {
                 if (this.field_Vb.length() > 0) {
                   this.field_Mb = this.field_Vb.toString();
                   this.field_Tb = 2;
@@ -175,7 +175,7 @@ final class gq extends mh {
                   this.field_Tb = 1;
                 }
               }
-              if (dc.field_b != param0) {
+              if (dc.currentKeyCode != param0) {
                 return true;
               }
               this.field_Tb = 1;
@@ -183,7 +183,7 @@ final class gq extends mh {
             }
             if (eh.a((char) var2Lifetime1, (byte) 83)) {
               discarded$5 = this.field_Vb.append((char) var2Lifetime1);
-              if (dc.field_b == 84) {
+              if (dc.currentKeyCode == 84) {
                 if (this.field_Vb.length() > 0) {
                   this.field_Mb = this.field_Vb.toString();
                   this.field_Tb = 2;
@@ -191,13 +191,13 @@ final class gq extends mh {
                   this.field_Tb = 1;
                 }
               }
-              if (dc.field_b == param0) {
+              if (dc.currentKeyCode == param0) {
                 this.field_Tb = 1;
               }
               return true;
             }
           }
-          if (dc.field_b == 84) {
+          if (dc.currentKeyCode == 84) {
             if (this.field_Vb.length() <= 0) {
               this.field_Tb = 1;
             } else {
@@ -205,14 +205,14 @@ final class gq extends mh {
               this.field_Tb = 2;
             }
           }
-          if (dc.field_b == param0) {
+          if (dc.currentKeyCode == param0) {
             this.field_Tb = 1;
           }
           return true;
         }
         uk.a(' ', this.field_Vb, -1 + this.field_Vb.length(), false);
         if (12 <= this.field_Vb.length()) {
-          if (dc.field_b == 84) {
+          if (dc.currentKeyCode == 84) {
             if (this.field_Vb.length() <= 0) {
               this.field_Tb = 1;
             } else {
@@ -220,13 +220,13 @@ final class gq extends mh {
               this.field_Tb = 2;
             }
           }
-          if (dc.field_b != param0) {
+          if (dc.currentKeyCode != param0) {
             return true;
           }
           this.field_Tb = 1;
           return true;
         }
-        var2Lifetime2 = Character.toLowerCase(go.field_b);
+        var2Lifetime2 = Character.toLowerCase(go.currentKeyCharacter);
         if (var2Lifetime2 == 32) {
           var2Lifetime2 = 95;
         }
@@ -236,7 +236,7 @@ final class gq extends mh {
         }
         if (ni.b(true, (char) var2Lifetime2)) {
           discarded$2 = this.field_Vb.append((char) var2Lifetime2);
-          if (dc.field_b == 84) {
+          if (dc.currentKeyCode == 84) {
             if (this.field_Vb.length() > 0) {
               this.field_Mb = this.field_Vb.toString();
               this.field_Tb = 2;
@@ -244,17 +244,17 @@ final class gq extends mh {
               this.field_Tb = 1;
             }
           }
-          if (dc.field_b == param0) {
+          if (dc.currentKeyCode == param0) {
             this.field_Tb = 1;
           }
           return true;
         }
         if (eh.a((char) var2Lifetime2, (byte) 83)) {
           discarded$1 = this.field_Vb.append((char) var2Lifetime2);
-          if (dc.field_b == 84) {
+          if (dc.currentKeyCode == 84) {
             if (this.field_Vb.length() <= 0) {
               this.field_Tb = 1;
-              if (dc.field_b == param0) {
+              if (dc.currentKeyCode == param0) {
                 this.field_Tb = 1;
               }
               return true;
@@ -262,13 +262,13 @@ final class gq extends mh {
             this.field_Mb = this.field_Vb.toString();
             this.field_Tb = 2;
           }
-          if (dc.field_b != param0) {
+          if (dc.currentKeyCode != param0) {
             return true;
           }
           this.field_Tb = 1;
           return true;
         }
-        if (dc.field_b == 84) {
+        if (dc.currentKeyCode == 84) {
           if (this.field_Vb.length() <= 0) {
             this.field_Tb = 1;
           } else {
@@ -276,7 +276,7 @@ final class gq extends mh {
             this.field_Tb = 2;
           }
         }
-        if (dc.field_b != param0) {
+        if (dc.currentKeyCode != param0) {
           return true;
         }
         this.field_Tb = 1;

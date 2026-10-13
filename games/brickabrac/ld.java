@@ -164,7 +164,7 @@ abstract class ld extends MenuScreen {
         if (obfuscationGuard != -120) {
           field_w = (int[]) null;
         }
-        this.selection.navigateVertical(0, -1);
+        this.selection.navigateHorizontal(0, -1);
     }
 
     private final int h(int param0) {

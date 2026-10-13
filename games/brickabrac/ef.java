@@ -8,7 +8,7 @@ final class ef extends IOException {
     static RgbSprite[] field_b;
     static oe[] field_a;
     static RgbSprite[] field_e;
-    static int[] field_d;
+    static int[] keyEventCodes;
     static String field_c;
 
     final static void a(int param0, int param1) {
@@ -27,7 +27,7 @@ final class ef extends IOException {
         if (param0 != 10) {
           return;
         }
-        field_d = null;
+        keyEventCodes = null;
         field_e = null;
         field_a = null;
         field_b = null;
@@ -58,13 +58,13 @@ final class ef extends IOException {
         int var3Lifetime1;
         if (param0 < -27) {
           var3 = (-rn.field_h + ej.field_O) * var2 / var1 + rn.field_h;
-          gp.field_d.a(120, var3, qh.field_f, 640, (byte) 64);
+          DualLinkDeque.field_d.a(120, var3, qh.field_f, 640, (byte) 64);
           fj.a(kn.field_z, 5, ej.field_O - 24, 640, om.field_oc, 0, (byte) 94);
           return;
         }
-        field_d = (int[]) null;
+        keyEventCodes = (int[]) null;
         var3Lifetime1 = (-rn.field_h + ej.field_O) * var2 / var1 + rn.field_h;
-        gp.field_d.a(120, var3Lifetime1, qh.field_f, 640, (byte) 64);
+        DualLinkDeque.field_d.a(120, var3Lifetime1, qh.field_f, 640, (byte) 64);
         fj.a(kn.field_z, 5, ej.field_O - 24, 640, om.field_oc, 0, (byte) 94);
     }
 
@@ -131,7 +131,7 @@ final class ef extends IOException {
 
     static {
         field_a = new oe[29];
-        field_d = new int[128];
+        keyEventCodes = new int[128];
         field_c = "1-UP: an extra life.";
         field_f = "No players";
     }

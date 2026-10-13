@@ -43,7 +43,7 @@ final class wp {
                 var6Lifetime1 = jl.a(24943, var5, param1);
               }
               if (ij.field_d == 1) {
-                var6Lifetime1 = op.a(param1, false, var5);
+                var6Lifetime1 = KeyboardInput.a(param1, false, var5);
               }
               if (ij.field_d == 2) {
                 var6Lifetime1 = me.a(var5, param1, 2);

@@ -662,7 +662,7 @@ public abstract class ke extends java.applet.Applet implements Runnable, java.aw
             var2 = fd.field_e;
           }
           ((java.awt.Container) (var2)).setLayout((java.awt.LayoutManager) null);
-          kj.field_D = (java.awt.Canvas) ((Object) new od((java.awt.Component) (this)));
+          kj.field_D = (java.awt.Canvas) ((Object) new DelegatingCanvas((java.awt.Component) (this)));
           ((java.awt.Container) (var2)).add((java.awt.Component) ((Object) kj.field_D));
           kj.field_D.setSize(to.field_b, be.field_g);
           kj.field_D.setVisible(true);

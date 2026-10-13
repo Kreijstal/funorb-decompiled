@@ -25,7 +25,7 @@ final class LevelMetadata extends IntrusiveNode {
             this.attributeWord = -16;
           }
           this.levelId = packet.readUnsignedShort(obfuscationGuard ^ -52668);
-          this.numberLabel = op.a(false, 1 + this.levelId);
+          this.numberLabel = KeyboardInput.a(false, 1 + this.levelId);
           this.resourceIndex = packet.readInt(255);
           this.attributeByte = packet.readUnsignedByte(255);
           this.attributeWord = packet.readInt(obfuscationGuard ^ -12869);

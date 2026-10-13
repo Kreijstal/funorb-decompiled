@@ -125,7 +125,7 @@ final class g extends k {
             stackIn_10_0 = fk.field_c;
             return stackIn_10_0;
           }
-          if (gp.a((byte) 65, var6)) {
+          if (DualLinkDeque.a((byte) 65, var6)) {
             stackIn_14_0 = eq.field_i;
             return stackIn_14_0;
           }
@@ -201,7 +201,7 @@ final class g extends k {
             return stackIn_8_0;
           }
           if (!this.b(0, param0)) {
-            stackIn_13_0 = ae.field_c;
+            stackIn_13_0 = DualLinkIterator.field_c;
             return stackIn_13_0;
           }
           stackIn_11_0 = lp.field_xb;

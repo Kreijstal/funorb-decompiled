@@ -4,7 +4,7 @@
 import java.io.*;
 
 final class go {
-    static char field_b;
+    static char currentKeyCharacter;
     static String field_f;
     static int field_c;
     static int field_e;
@@ -16,7 +16,7 @@ final class go {
         field_a = null;
         field_d = null;
         if (param0 != -7393) {
-          field_b = '￾';
+          currentKeyCharacter = '￾';
         }
     }
 

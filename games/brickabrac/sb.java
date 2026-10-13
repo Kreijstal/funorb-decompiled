@@ -217,7 +217,7 @@ final class sb implements vc {
             stackIn_300_0 = 0;
           }
           var2 = stackIn_300_0;
-          var3 = gp.field_d.field_db;
+          var3 = DualLinkDeque.field_d.field_db;
           if (!n.field_d) {
             if (0 < Brick.field_E &&
               20 > MembershipBenefitsScreen.field_x % 40) {
@@ -346,7 +346,7 @@ final class sb implements vc {
         this.field_a = 50;
         if (!LegacyUtf8Decoder.a((byte) 121)) {
           var2Lifetime1 = 0;
-          var3Lifetime1 = gp.field_d.field_db;
+          var3Lifetime1 = DualLinkDeque.field_d.field_db;
           if (!n.field_d) {
             if (0 < Brick.field_E) {
               stackIn_10_0 = (20 > MembershipBenefitsScreen.field_x % 40) ? 1 : 0;
@@ -386,7 +386,7 @@ final class sb implements vc {
         }
         if (!lp.n(param0 - 16769386)) {
           var2Lifetime2 = 0;
-          var3Lifetime2 = gp.field_d.field_db;
+          var3Lifetime2 = DualLinkDeque.field_d.field_db;
           if (!n.field_d) {
             if (0 < Brick.field_E &&
               20 > MembershipBenefitsScreen.field_x % 40) {
@@ -500,7 +500,7 @@ final class sb implements vc {
           return;
         }
         var2Lifetime3 = 1;
-        var3Lifetime3 = gp.field_d.field_db;
+        var3Lifetime3 = DualLinkDeque.field_d.field_db;
         if (n.field_d) {
           var4Lifetime3 = 1;
           if (var4Lifetime3 != 0) {
@@ -967,7 +967,7 @@ final class sb implements vc {
               n.field_d = false;
               if (this.d(76)) {
                 var5 = si.field_l + nn.field_g.c(nn.field_f);
-                stackIn_22_0 = (0 <= pq.pointerX) && (pq.pointerX < var5) && (gp.field_d.field_db - LevelSelectScreen.field_w <= po.pointerY) && (gp.field_d.field_db > po.pointerY);
+                stackIn_22_0 = (0 <= pq.pointerX) && (pq.pointerX < var5) && (DualLinkDeque.field_d.field_db - LevelSelectScreen.field_w <= po.pointerY) && (DualLinkDeque.field_d.field_db > po.pointerY);
                 n.field_d = stackIn_22_0;
                 if (n.field_d &&
                   ki.pressedButton == 1) {
@@ -1065,7 +1065,7 @@ final class sb implements vc {
           return;
         }
         var5Lifetime2 = si.field_l + nn.field_g.c(nn.field_f);
-        stackIn_80_0 = (0 <= pq.pointerX) && (pq.pointerX < var5Lifetime2) && (gp.field_d.field_db - LevelSelectScreen.field_w <= po.pointerY) && (gp.field_d.field_db > po.pointerY);
+        stackIn_80_0 = (0 <= pq.pointerX) && (pq.pointerX < var5Lifetime2) && (DualLinkDeque.field_d.field_db - LevelSelectScreen.field_w <= po.pointerY) && (DualLinkDeque.field_d.field_db > po.pointerY);
         n.field_d = stackIn_80_0;
         if (!n.field_d) {
           if (!n.field_d) {

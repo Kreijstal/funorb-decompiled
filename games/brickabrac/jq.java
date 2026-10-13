@@ -99,7 +99,7 @@ final class jq extends bc {
               lj.field_r.c(var6, var8, lj.field_i + var2, var5, -1);
               var2 = var2 + (nq.field_i + dj.field_g + GameCanvas.field_f);
             } else {
-              oc.field_m.c(var6, var8, gp.field_b + var2, var5, -1);
+              oc.field_m.c(var6, var8, DualLinkDeque.field_b + var2, var5, -1);
               var2 = var2 + wh.field_m;
             }
           }

@@ -9,7 +9,7 @@ final class to {
     static String field_l;
     private ji field_c;
     static RgbSprite field_e;
-    private gp field_j;
+    private DualLinkDeque field_j;
     static int[] field_f;
     static kl field_k;
     static String field_h;
@@ -29,13 +29,13 @@ final class to {
           return null;
         }
         if (!var4.b(param1)) {
-          this.field_j.a(var4, (byte) -126);
+          this.field_j.addLast(var4, (byte) -126);
           var4.secondaryKey = 0L;
           return var5;
         }
         ej var6 = new ej(var5, var4.field_u);
         this.field_c.a((byte) 44, var4.key, var6);
-        this.field_j.a(var6, (byte) -119);
+        this.field_j.addLast(var6, (byte) -119);
         ((sl) ((Object) var6)).secondaryKey = 0L;
         var4.unlink((byte) 111);
         var4.unlinkSecondary(3);
@@ -61,12 +61,12 @@ final class to {
         this.a(param1, 38);
         this.field_d = this.field_d - param2;
         while (this.field_d < 0) {
-          var6 = (sl) (this.field_j.a(false));
+          var6 = (sl) (this.field_j.removeFirst(false));
           this.a(false, var6);
         }
         ej var6_ref = new ej(param3, param2);
         this.field_c.a((byte) 79, param1, var6_ref);
-        this.field_j.a(var6_ref, (byte) -123);
+        this.field_j.addLast(var6_ref, (byte) -123);
         if (param0 != -1) {
           return;
         }
@@ -140,7 +140,7 @@ final class to {
 
     private to(int param0, int param1) {
         int var3;
-        this.field_j = new gp();
+        this.field_j = new DualLinkDeque();
         this.field_m = param0;
         this.field_d = param0;
         var3 = 1;

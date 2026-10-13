@@ -173,7 +173,7 @@ abstract class MenuScreen extends GameScreen {
     }
 
     void handleNavigationKey(int obfuscationGuard, int keyCode, char character) {
-        this.selection.navigateHorizontal(obfuscationGuard + 119);
+        this.selection.navigateVertical(obfuscationGuard + 119);
         if (obfuscationGuard != -120) {
           this.c(true, 117);
         }
@@ -383,22 +383,22 @@ abstract class MenuScreen extends GameScreen {
               }
               if (var8 == 20) {
                 var7 = 0;
-                if (this.selection.isKey102(-103) &&
+                if (this.selection.isHomeKey(-103) &&
                   lh.g((byte) -44) > 0) {
                   ma.a((byte) -113, 0);
                   var7 = 1;
                 }
-                if (this.selection.isKey103(-1) &&
+                if (this.selection.isEndKey(-1) &&
                   lh.g((byte) -44) < MenuSelection.e((byte) 44)) {
                   ma.a((byte) 47, MenuSelection.e((byte) 31));
                   var7 = 1;
                 }
-                if (this.selection.isKey96((byte) -57) &&
+                if (this.selection.isLeftArrow((byte) -57) &&
                   lh.g((byte) -44) > 0) {
                   k.d((byte) 116);
                   var7 = 1;
                 }
-                if (this.selection.isKey97(-98) &&
+                if (this.selection.isRightArrow(-98) &&
                   lh.g((byte) -44) < MenuSelection.e((byte) 90)) {
                   var7 = 1;
                   th.a((byte) -63);
@@ -426,16 +426,16 @@ abstract class MenuScreen extends GameScreen {
                 break regionExit1;
               }
               if (var8 == 21) {
-                if (this.selection.isKey102(obfuscationGuard ^ -30)) {
+                if (this.selection.isHomeKey(obfuscationGuard ^ -30)) {
                   il.a((byte) 86, 0);
                 }
-                if (this.selection.isKey103(-1)) {
+                if (this.selection.isEndKey(-1)) {
                   il.a((byte) 86, 256);
                 }
-                if (this.selection.isKey96((byte) -57)) {
+                if (this.selection.isLeftArrow((byte) -57)) {
                   lf.f(-1);
                 }
-                if (this.selection.isKey97(obfuscationGuard ^ -27)) {
+                if (this.selection.isRightArrow(obfuscationGuard ^ -27)) {
                   nf.a((byte) 109);
                 }
                 if (!(!this.selection.isHeld(false))) {

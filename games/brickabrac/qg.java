@@ -69,7 +69,7 @@ abstract class qg extends ke {
         hk.a(cd.field_e, (byte) 125);
         im.a(param7, this.field_x, this.field_q, this.field_B, 5000, 5000, cd.field_e, this.field_o, lp.field_ub, (byte) 123, param3, this.field_w, this.field_p, this.field_v);
         cr.a(param7, cd.field_e, param0 + 3, this.field_v, lp.field_ub, this.field_x, this.field_p, this.field_o, this.field_B);
-        rn.a(59);
+        rn.patchJavaKeyCodeMap(59);
         qa.mouseWheelSource = ea.createMouseWheelSource(60);
         ap.a((byte) 117, kj.field_D);
         nd.field_c = param4;
@@ -709,7 +709,7 @@ abstract class qg extends ke {
           }
           jj.field_a.c(param1 + 118);
         }
-        wn.b((byte) -97);
+        wn.snapshotKeyboardInput((byte) -97);
         sg.snapshotMouseInput(70);
         if (!r.c((byte) -114) &&
           i.field_j != 11) {

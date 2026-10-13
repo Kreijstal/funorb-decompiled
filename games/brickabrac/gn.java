@@ -114,11 +114,11 @@ final class gn extends ld {
 
     final int f(int param0) {
         if (param0 == -6) {
-          return gp.field_d.field_db;
+          return DualLinkDeque.field_d.field_db;
         }
         mf var3 = (mf) null;
         gn.a(false, (mf) null, (mf) null, (mf) null, 63);
-        return gp.field_d.field_db;
+        return DualLinkDeque.field_d.field_db;
     }
 
     final void navigateBack(int obfuscationGuard) {

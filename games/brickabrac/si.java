@@ -6,7 +6,7 @@ final class si {
     private IntrusiveNode field_h;
     static int field_a;
     static th field_o;
-    static int field_m;
+    static int keyEventReadIndex;
     private int field_f;
     private int field_g;
     static char[] field_n;
@@ -176,7 +176,7 @@ final class si {
     }
 
     final static void a(int param0, boolean param1) {
-        gp.field_d.a(true, param1);
+        DualLinkDeque.field_d.a(true, param1);
         if (param0 != 7070) {
           return;
         }
@@ -184,7 +184,7 @@ final class si {
         if (var2 == null) {
           return;
         }
-        var2.a(gp.field_d.field_Eb, gp.field_d.field_db, 0);
+        var2.a(DualLinkDeque.field_d.field_Eb, DualLinkDeque.field_d.field_db, 0);
     }
 
     final static void a(int param0, byte param1, int param2, int param3) {
@@ -276,7 +276,7 @@ final class si {
     }
 
     static {
-        field_m = 0;
+        keyEventReadIndex = 0;
         field_a = -1;
         field_n = new char[]{(char)91, (char)93, (char)35};
         field_o = new th(13, 0, 1, 0);

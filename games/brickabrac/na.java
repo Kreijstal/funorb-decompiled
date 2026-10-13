@@ -253,7 +253,7 @@ final class na extends ug {
               ml.a(param3, -1);
             } else {
               if (kb.field_Yb >= 2 &&
-                pe.field_l[12]) {
+                pe.heldKeys[12]) {
                 ml.a(param3, -1);
               }
             }

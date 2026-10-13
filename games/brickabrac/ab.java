@@ -25,7 +25,7 @@ final class ab extends ld {
           String var5 = (String) null;
           ab.a((String) null, 111);
         }
-        this.selection.navigateVertical(0, -1);
+        this.selection.navigateHorizontal(0, -1);
     }
 
     final int f(int param0) {
@@ -47,7 +47,7 @@ final class ab extends ld {
           if (ab.a(param1, 0)) {
             return false;
           }
-          if (gp.a((byte) 54, param1)) {
+          if (DualLinkDeque.a((byte) 54, param1)) {
             return false;
           }
           if (pp.a(param1, true)) {

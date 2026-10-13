@@ -566,7 +566,7 @@ public final class BrickABrac extends sa {
         ld.g(-25617);
         la.a((byte) -75);
         v.a(false);
-        op.a((byte) -42);
+        KeyboardInput.a((byte) -42);
         IntNode.a((byte) -115);
         NodeDeque.b((byte) 100);
         IsaacGenerator.a(2);
@@ -775,7 +775,7 @@ public final class BrickABrac extends sa {
         h.f((byte) -102);
         qm.a((byte) -120);
         pl.a(0);
-        od.a(!param0 ? true : false);
+        DelegatingCanvas.a(!param0 ? true : false);
         nd.a((byte) 121);
         lm.a(true);
         tl.a(10);
@@ -840,7 +840,7 @@ public final class BrickABrac extends sa {
         qi.j(18724);
         oj.a((byte) -51);
         ji.a(24968);
-        gp.b(2);
+        DualLinkDeque.b(2);
         sl.f(31434);
         dn.a(1);
         jb.i((byte) -116);
@@ -852,7 +852,7 @@ public final class BrickABrac extends sa {
         ho.a();
         ja.a(2);
         ik.c(-93);
-        ae.a((byte) 84);
+        DualLinkIterator.a((byte) 84);
         LevelMetadata.a((byte) 127);
         LevelPack.a(0);
         LevelList.a(true);

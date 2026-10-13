@@ -132,7 +132,7 @@ final class w {
             }
           }
           if (ea.field_a) {
-            while (jl.a((byte) 5)) {
+            while (jl.pollKeyEvent((byte) 5)) {
               var5 = this.a((byte) -120);
               if (var5 == 0) {
                 continue;
@@ -392,7 +392,7 @@ final class w {
         int var2_int = 0;
         RuntimeException var2 = null;
         try {
-          this.field_g.navigateHorizontal(-1);
+          this.field_g.navigateVertical(-1);
           if (this.field_g.isActivated((byte) 113)) {
             if (this.field_g.selectedIndex == 0) {
               this.b((byte) 125);
@@ -405,7 +405,7 @@ final class w {
             }
           }
           var2_int = 83 % ((param0 + 17) / 51);
-          if (13 != dc.field_b) {
+          if (13 != dc.currentKeyCode) {
             stackIn_15_0 = 0;
             return stackIn_15_0;
           }

@@ -111,7 +111,7 @@ final class hg {
         SpriteGeometry.field_A = 0;
         dj.field_c = null;
         ea.field_b = 0;
-        ae.field_b = 0;
+        DualLinkIterator.field_b = 0;
         sh.field_a = 0;
     }
 

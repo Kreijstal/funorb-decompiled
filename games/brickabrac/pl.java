@@ -7,7 +7,7 @@ final class pl {
     static String field_e;
     static String[] field_c;
     static RgbSprite field_a;
-    static int field_d;
+    static int keyChangeWriteIndex;
 
     final static RgbSprite a(int param0, RgbSprite param1) {
         RgbSprite var2 = null;
@@ -263,7 +263,7 @@ final class pl {
     static {
         field_e = "Ignore";
         field_b = Ball.d(8);
-        field_d = 0;
+        keyChangeWriteIndex = 0;
         field_c = new String[]{"All scores", "My scores", "Best each"};
     }
 }

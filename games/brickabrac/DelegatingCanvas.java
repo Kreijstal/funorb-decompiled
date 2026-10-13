@@ -1,24 +1,24 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class od extends java.awt.Canvas {
+final class DelegatingCanvas extends java.awt.Canvas {
     static String field_b;
-    private java.awt.Component field_a;
+    private java.awt.Component delegate;
     static int field_c;
 
-    od(java.awt.Component param0) {
+    DelegatingCanvas(java.awt.Component delegate) {
         try {
-          this.field_a = param0;
+          this.delegate = delegate;
         } catch (RuntimeException runtimeException) {
-          throw qb.a((Throwable) ((Object) runtimeException), "od.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw qb.a((Throwable) ((Object) runtimeException), "od.<init>(" + (delegate != null ? "{...}" : "null") + ')');
         }
     }
 
-    public final void paint(java.awt.Graphics param0) {
+    public final void paint(java.awt.Graphics graphics) {
         try {
-          this.field_a.paint(param0);
+          this.delegate.paint(graphics);
         } catch (RuntimeException runtimeException) {
-          throw qb.a((Throwable) ((Object) runtimeException), "od.paint(" + (param0 != null ? "{...}" : "null") + ')');
+          throw qb.a((Throwable) ((Object) runtimeException), "od.paint(" + (graphics != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -66,7 +66,7 @@ final class od extends java.awt.Canvas {
                       fieldTemp$2 = jl.field_a - 1;
                       jl.field_a = jl.field_a - 1;
                       if (0 == fieldTemp$2) {
-                        tb.field_eb = op.field_b;
+                        tb.field_eb = KeyboardInput.field_b;
                         pp.field_a = -1;
                         ga.field_i = 3;
                       }
@@ -128,15 +128,15 @@ final class od extends java.awt.Canvas {
         }
     }
 
-    public final void update(java.awt.Graphics param0) {
+    public final void update(java.awt.Graphics graphics) {
         try {
-          this.field_a.update(param0);
+          this.delegate.update(graphics);
         } catch (RuntimeException runtimeException) {
-          throw qb.a((Throwable) ((Object) runtimeException), "od.update(" + (param0 != null ? "{...}" : "null") + ')');
+          throw qb.a((Throwable) ((Object) runtimeException), "od.update(" + (graphics != null ? "{...}" : "null") + ')');
         }
     }
 
-    final static boolean a(char param0, int param1) {
+    final static boolean isLegacyInputCharacter(char character, int obfuscationGuard) {
         char[] var2 = null;
         RuntimeException var2_ref = null;
         int var3 = 0;
@@ -146,41 +146,41 @@ final class od extends java.awt.Canvas {
         RuntimeException decompiledCaughtException = null;
         var5 = BrickABrac.field_J ? 1 : 0;
         try {
-          if (0 < param0 &&
-            param0 < 128) {
+          if (0 < character &&
+            character < 128) {
             return true;
           }
-          if (param0 >= 160 &&
-            param0 <= 255) {
+          if (character >= 160 &&
+            character <= 255) {
             return true;
           }
-          if (param0 != 0) {
+          if (character != 0) {
             var6 = ai.cp1252Extensions;
             var2 = var6;
             var3 = 0;
             while (var3 < var6.length) {
               var4 = var6[var3];
-              if (var4 != param0) {
+              if (var4 != character) {
                 var3++;
                 continue;
               }
               return true;
             }
           }
-          if (param1 != -12) {
+          if (obfuscationGuard != -12) {
             field_c = -78;
           }
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw qb.a((Throwable) ((Object) var2_ref), "od.D(" + param0 + ',' + param1 + ')');
+          throw qb.a((Throwable) ((Object) var2_ref), "od.D(" + character + ',' + obfuscationGuard + ')');
         }
     }
 
     public static void a(boolean param0) {
         if (param0) {
-          od.a((byte) 23);
+          DelegatingCanvas.a((byte) 23);
         }
         field_b = null;
     }

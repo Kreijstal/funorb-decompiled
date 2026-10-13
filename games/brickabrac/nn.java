@@ -2622,7 +2622,7 @@ final class nn {
                 }
                 var2 = nk.a("quickchat_help_title", (byte) 63);
                 if (null != var2) {
-                  od.field_b = MenuButton.a(var2, (byte) 100);
+                  DelegatingCanvas.field_b = MenuButton.a(var2, (byte) 100);
                 }
                 var2 = nk.a("quickchat_shortcut_help,0", (byte) -117);
                 if (null != var2) {
@@ -3410,7 +3410,7 @@ final class nn {
             var4_ref = jl.a(param0 ^ -24878, this.field_e, param2);
           } else {
             if (param1 == 5) {
-              var4_ref = op.a(param2, false, this.field_e);
+              var4_ref = KeyboardInput.a(param2, false, this.field_e);
             } else {
               if (6 == param1) {
                 var4_ref = me.a(this.field_e, param2, 2);

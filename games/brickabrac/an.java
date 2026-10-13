@@ -55,7 +55,7 @@ final class an extends pj implements hf, ph {
           var2 = (NumberFormatException) (Object) decompiledCaughtException;
           return lp.field_xb;
         }
-        return ae.field_c;
+        return DualLinkIterator.field_c;
     }
 
     public final void a(vb param0, int param1) {

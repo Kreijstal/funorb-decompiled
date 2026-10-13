@@ -45,11 +45,11 @@ abstract class sa extends qg implements vc {
 
     final static boolean a(int param0, int param1, int param2) {
         boolean stackIn_10_0 = false;
-        if (dc.field_b == 13) {
+        if (dc.currentKeyCode == 13) {
           th.b(param1 ^ 103);
           return true;
         }
-        if (dc.field_b == param1) {
+        if (dc.currentKeyCode == param1) {
           hd.field_a.f((byte) 41);
           return true;
         }
@@ -132,7 +132,7 @@ abstract class sa extends qg implements vc {
             ch.field_g[9] = -1;
             ch.field_g[10] = -1;
             kp.field_d = new Vector();
-            op.a((vc) (this), 0);
+            KeyboardInput.a((vc) (this), 0);
           } catch (RuntimeException runtimeException) {
             throw qb.a((Throwable) ((Object) runtimeException), "sa.HB(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
           }
@@ -241,9 +241,9 @@ abstract class sa extends qg implements vc {
                   var2 = 1;
                   var3 = -1;
                   while (true) {
-                    stackIn_39_0 = jl.a((byte) 5);
+                    stackIn_39_0 = jl.pollKeyEvent((byte) 5);
                     if (stackIn_39_0) {
-                      stackIn_76_0 = dc.field_b;
+                      stackIn_76_0 = dc.currentKeyCode;
                       stackIn_76_1 = -1;
                       if (var5 != 0) {
                         if (stackIn_76_0 < stackIn_76_1) {
@@ -256,20 +256,20 @@ abstract class sa extends qg implements vc {
                         break;
                       }
                       if (stackIn_76_0 == stackIn_76_1) {
-                        if (-1 == dc.field_b &&
+                        if (-1 == dc.currentKeyCode &&
                           var3 != -1) {
-                          dc.field_b = var3;
+                          dc.currentKeyCode = var3;
                           var3 = -1;
                         }
                       } else {
-                        if (uf.b(-102, dc.field_b)) {
-                          var3 = dc.field_b;
+                        if (uf.b(-102, dc.currentKeyCode)) {
+                          var3 = dc.currentKeyCode;
                           continue;
                         }
                       }
                       var4 = 0;
                       while (var4 < kp.field_d.size()) {
-                        stackIn_39_0 = ((vc) (kp.field_d.elementAt(var4))).a(dc.field_b, go.field_b, -81);
+                        stackIn_39_0 = ((vc) (kp.field_d.elementAt(var4))).a(dc.currentKeyCode, go.currentKeyCharacter, -81);
                         if (!stackIn_39_0) {
                           var4++;
                           continue;

@@ -36,7 +36,7 @@ final class sk extends h {
           fj.field_Ub = null;
           ep.field_i = 23;
           fp.field_z = 57;
-          od.field_c = 13;
+          DelegatingCanvas.field_c = 13;
           if (param5 != -12665) {
             sk.a(122);
           }

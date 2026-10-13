@@ -39,7 +39,7 @@ final class fp extends lh {
           var7 = new RgbSprite(var4_int * param1, var5 * param1);
           var7.bindRasterTarget();
           var6.a(0, 0, param1 * var4_int, param1 * var5);
-          gp.a(var5 * param1, 0, param1 * var4_int, param0 ^ 2, 0);
+          DualLinkDeque.a(var5 * param1, 0, param1 * var4_int, param0 ^ 2, 0);
           kc.field_q.a((byte) 126);
           if (param3) {
             var8 = var7.width;

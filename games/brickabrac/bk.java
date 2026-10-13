@@ -252,7 +252,7 @@ final class bk extends IntrusiveNode {
           var9 = new int[var5];
           var10 = ed.b(9, var5 - 1);
           for (var11 = 0; var11 < var5; var11++) {
-            var9[var11] = op.a(var10, var11, -1);
+            var9[var11] = KeyboardInput.a(var10, var11, -1);
           }
           if (var1 == 0) {
             field_n = var6_ref_float__;

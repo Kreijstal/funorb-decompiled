@@ -193,7 +193,7 @@ final class kb extends mh {
           var17.field_S = 1;
           this.field_ac = new mh(0L, param2);
           var8 = new mh(0L, param3);
-          var9 = new mh(0L, param3, od.field_b);
+          var9 = new mh(0L, param3, DelegatingCanvas.field_b);
           var9.field_S = 1;
           var10 = 50;
           var11 = 0;

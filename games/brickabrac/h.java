@@ -111,7 +111,7 @@ abstract class h extends oc implements sd {
             field_C = (tp[]) null;
             return false;
           }
-          if (pe.field_l[81]) {
+          if (pe.heldKeys[81]) {
             stackIn_9_0 = this.a(param2, (byte) -35);
           } else {
             stackIn_9_0 = this.b(true, param2);
@@ -447,7 +447,7 @@ abstract class h extends oc implements sd {
         if (param3 > -122) {
           return true;
         }
-        if (gp.a(-4858)) {
+        if (DualLinkDeque.a(-4858)) {
           hc.a(param5, -7812, param4, param1);
           if (bm.field_d != null &&
             bm.field_d.a(-2, param1, param6, param0, param5)) {

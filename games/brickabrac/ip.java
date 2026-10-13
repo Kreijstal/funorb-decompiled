@@ -508,7 +508,7 @@ final class ip extends ki {
                   var13 = stackIn_248_0;
                 }
                 if (kb.field_Yb >= 2 &&
-                  pe.field_l[12]) {
+                  pe.heldKeys[12]) {
                   var11 = 0;
                   var12 = 0;
                   var10 = 0;
@@ -545,7 +545,7 @@ final class ip extends ki {
                     }
                     ar.a(param2, param1, var9, -1, -1, 0, var7, 0);
                     if (2 <= kb.field_Yb &&
-                      pe.field_l[12]) {
+                      pe.heldKeys[12]) {
                       dc.field_g = true;
                     }
                     if (dc.field_g) {
@@ -813,7 +813,7 @@ final class ip extends ki {
           var3 = (om) null;
           ip.a(81, (om) null, true, true);
         }
-        stackIn_13_0 = (null != ch.field_f) && (null != dg.field_g) && (np.field_d != null) && (null != Brick.field_w) && (null != ep.field_h) && (DualLinkNode.field_l != null) && (ae.field_g != null) && (null != up.field_A);
+        stackIn_13_0 = (null != ch.field_f) && (null != dg.field_g) && (np.field_d != null) && (null != Brick.field_w) && (null != ep.field_h) && (DualLinkNode.field_l != null) && (DualLinkIterator.field_g != null) && (null != up.field_A);
         return stackIn_13_0;
     }
 
@@ -831,7 +831,7 @@ final class ip extends ki {
         try {
           DualLinkNode.field_l = new RgbSprite[2][];
           up.field_A = new RgbSprite[2];
-          ae.field_g = new RgbSprite[2][];
+          DualLinkIterator.field_g = new RgbSprite[2][];
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -860,7 +860,7 @@ final class ip extends ki {
         if (!param1) {
           field_t = (String) null;
         }
-        return ae.field_g[param0 - 1];
+        return DualLinkIterator.field_g[param0 - 1];
     }
 
     final void a(byte param0, int param1, int param2, int param3) {
@@ -934,10 +934,10 @@ final class ip extends ki {
         ib.field_E = jh.a(0, np.field_d);
         ep.field_h = pl.a("jungle", "jungle_character", (byte) -119, i.field_m);
         DualLinkNode.field_l[0] = cr.a("jungle", i.field_m, "jungle_caps", 2);
-        ae.field_g[0] = cr.a("jungle", i.field_m, "jungle_segs", 2);
+        DualLinkIterator.field_g[0] = cr.a("jungle", i.field_m, "jungle_segs", 2);
         up.field_A[0] = pl.a("jungle", "jungle_centre", (byte) -110, i.field_m);
         DualLinkNode.field_l[1] = ig.a(DualLinkNode.field_l[0], false);
-        ae.field_g[1] = ig.a(ae.field_g[0], param0);
+        DualLinkIterator.field_g[1] = ig.a(DualLinkIterator.field_g[0], param0);
         up.field_A[1] = pl.a(-16371, up.field_A[0]);
         return true;
     }

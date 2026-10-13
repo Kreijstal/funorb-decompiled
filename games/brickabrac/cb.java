@@ -50,7 +50,7 @@ final class cb extends k {
           if (this.field_m instanceof je) {
             var3 = ((je) ((Object) this.field_m)).a(-11011);
             if (var3 != null) {
-              if (var3.b((byte) -31) == ae.field_c &&
+              if (var3.b((byte) -31) == DualLinkIterator.field_c &&
                 !param1.equals(this.field_m.field_A)) {
                 stackIn_6_0 = bh.field_sb;
                 return stackIn_6_0;
@@ -107,13 +107,13 @@ final class cb extends k {
           if (this.field_m instanceof je) {
             var3 = ((je) ((Object) this.field_m)).a(param1 - 11117);
             if (var3 != null &&
-              var3.b((byte) -31) != ae.field_c) {
+              var3.b((byte) -31) != DualLinkIterator.field_c) {
               stackIn_7_0 = lp.field_xb;
               return stackIn_7_0;
             }
           }
           if (param0.equals(this.field_m.field_A)) {
-            stackIn_11_0 = ae.field_c;
+            stackIn_11_0 = DualLinkIterator.field_c;
           } else {
             stackIn_11_0 = lp.field_xb;
           }

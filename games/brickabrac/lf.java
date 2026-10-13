@@ -228,7 +228,7 @@ final class lf extends MenuScreen {
         }
         var2 = 149 + nn.field_g.field_B;
         var3 = 0;
-        nn.field_g.c(ae.field_i, 66, var2, var3, -1);
+        nn.field_g.c(DualLinkIterator.field_i, 66, var2, var3, -1);
         nn.field_g.a(so.field_e, mf.field_d[0], var2, var3, -1);
         nn.field_g.a(NodeDeque.field_c, mf.field_d[1], var2, var3, -1);
         if (obfuscationGuard >= -14) {
@@ -326,7 +326,7 @@ final class lf extends MenuScreen {
           }
           this.selection.pollKeyboardCode((byte) -124);
         } else {
-          this.selection.navigateVertical(0, -1);
+          this.selection.navigateHorizontal(0, -1);
         }
         if (obfuscationGuard != -120) {
           lf.f(0);

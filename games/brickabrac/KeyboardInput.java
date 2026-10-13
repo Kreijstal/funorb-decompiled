@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class op implements java.awt.event.KeyListener, java.awt.event.FocusListener {
+final class KeyboardInput implements java.awt.event.KeyListener, java.awt.event.FocusListener {
     static String field_b;
     static boolean field_a;
 
@@ -235,40 +235,40 @@ final class op implements java.awt.event.KeyListener, java.awt.event.FocusListen
         }
     }
 
-    public final synchronized void keyReleased(java.awt.event.KeyEvent param0) {
-        int var2_int = 0;
+    public final synchronized void keyReleased(java.awt.event.KeyEvent event) {
+        int mappedKeyCode = 0;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
         String stackIn_16_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         try {
-          if (null != gp.field_c) {
-            PowerUp.field_w = 0;
-            var2_int = param0.getKeyCode();
-            if (var2_int >= 0 &&
-              tf.field_a.length > var2_int) {
-              var2_int = -129 & tf.field_a[var2_int];
+          if (null != DualLinkDeque.keyboardInput) {
+            PowerUp.keyboardIdleTicks = 0;
+            mappedKeyCode = event.getKeyCode();
+            if (mappedKeyCode >= 0 &&
+              tf.javaKeyCodeMap.length > mappedKeyCode) {
+              mappedKeyCode = -129 & tf.javaKeyCodeMap[mappedKeyCode];
             } else {
-              var2_int = -1;
+              mappedKeyCode = -1;
             }
-            if (pl.field_d >= 0 &&
-              var2_int >= 0) {
-              lo.field_b[pl.field_d] = ~var2_int;
-              pl.field_d = 1 + pl.field_d & 127;
-              if (ek.field_cb == pl.field_d) {
-                pl.field_d = -1;
+            if (pl.keyChangeWriteIndex >= 0 &&
+              mappedKeyCode >= 0) {
+              lo.keyChangeQueue[pl.keyChangeWriteIndex] = ~mappedKeyCode;
+              pl.keyChangeWriteIndex = 1 + pl.keyChangeWriteIndex & 127;
+              if (ek.keyChangeReadIndex == pl.keyChangeWriteIndex) {
+                pl.keyChangeWriteIndex = -1;
               }
             }
           }
-          param0.consume();
+          event.consume();
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
           stackIn_15_0 = var2;
           stackIn_15_1 = new StringBuilder().append("op.keyReleased(");
-          if (param0 == null) {
+          if (event == null) {
             stackIn_16_2 = "null";
           } else {
             stackIn_16_2 = "{...}";
@@ -277,51 +277,51 @@ final class op implements java.awt.event.KeyListener, java.awt.event.FocusListen
         }
     }
 
-    public final synchronized void keyPressed(java.awt.event.KeyEvent param0) {
-        int var2_int = 0;
-        int var3 = 0;
+    public final synchronized void keyPressed(java.awt.event.KeyEvent event) {
+        int mappedKeyCode = 0;
+        int nextWriteIndex = 0;
         RuntimeException stackIn_22_0 = null;
         StringBuilder stackIn_22_1 = null;
         String stackIn_23_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
-        int var3Lifetime1;
+        int modifiers;
         try {
-          if (null != gp.field_c) {
-            PowerUp.field_w = 0;
-            var2_int = param0.getKeyCode();
-            if (0 <= var2_int &&
-              var2_int < tf.field_a.length) {
-              var2_int = tf.field_a[var2_int];
-              if (0 != (128 & var2_int)) {
-                var2_int = -1;
+          if (null != DualLinkDeque.keyboardInput) {
+            PowerUp.keyboardIdleTicks = 0;
+            mappedKeyCode = event.getKeyCode();
+            if (0 <= mappedKeyCode &&
+              mappedKeyCode < tf.javaKeyCodeMap.length) {
+              mappedKeyCode = tf.javaKeyCodeMap[mappedKeyCode];
+              if (0 != (128 & mappedKeyCode)) {
+                mappedKeyCode = -1;
               }
             } else {
-              var2_int = -1;
+              mappedKeyCode = -1;
             }
-            if (pl.field_d >= 0 &&
-              var2_int >= 0) {
-              lo.field_b[pl.field_d] = var2_int;
-              pl.field_d = 127 & 1 + pl.field_d;
-              if (pl.field_d == ek.field_cb) {
-                pl.field_d = -1;
+            if (pl.keyChangeWriteIndex >= 0 &&
+              mappedKeyCode >= 0) {
+              lo.keyChangeQueue[pl.keyChangeWriteIndex] = mappedKeyCode;
+              pl.keyChangeWriteIndex = 127 & 1 + pl.keyChangeWriteIndex;
+              if (pl.keyChangeWriteIndex == ek.keyChangeReadIndex) {
+                pl.keyChangeWriteIndex = -1;
               }
             }
-            if (var2_int >= 0) {
-              var3 = 127 & hb.field_w + 1;
-              if (si.field_m != var3) {
-                ef.field_d[hb.field_w] = var2_int;
-                TimedSplashScreen.field_r[hb.field_w] = (char)0;
-                hb.field_w = var3;
+            if (mappedKeyCode >= 0) {
+              nextWriteIndex = 127 & hb.keyEventWriteIndex + 1;
+              if (si.keyEventReadIndex != nextWriteIndex) {
+                ef.keyEventCodes[hb.keyEventWriteIndex] = mappedKeyCode;
+                TimedSplashScreen.keyEventCharacters[hb.keyEventWriteIndex] = (char)0;
+                hb.keyEventWriteIndex = nextWriteIndex;
               }
             }
-            var3Lifetime1 = param0.getModifiers();
-            if ((var3Lifetime1 & 10) == 0 &&
-              var2_int != 85 &&
-              var2_int != 10) {
+            modifiers = event.getModifiers();
+            if ((modifiers & 10) == 0 &&
+              mappedKeyCode != 85 &&
+              mappedKeyCode != 10) {
               return;
             }
-            param0.consume();
+            event.consume();
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -329,7 +329,7 @@ final class op implements java.awt.event.KeyListener, java.awt.event.FocusListen
           var2 = decompiledCaughtException;
           stackIn_22_0 = var2;
           stackIn_22_1 = new StringBuilder().append("op.keyPressed(");
-          if (param0 == null) {
+          if (event == null) {
             stackIn_23_2 = "null";
           } else {
             stackIn_23_2 = "{...}";
@@ -349,7 +349,7 @@ final class op implements java.awt.event.KeyListener, java.awt.event.FocusListen
     final static String a(boolean param0, int param1) {
         if (param0) {
           vc var3 = (vc) null;
-          op.a((vc) null, -56);
+          KeyboardInput.a((vc) null, -56);
         }
         return rd.a(lh.field_t, new String[]{(param1 >= 10 ? "" : "0") + Integer.toString(param1)}, (byte) 103).toLowerCase();
     }
@@ -361,25 +361,25 @@ final class op implements java.awt.event.KeyListener, java.awt.event.FocusListen
         }
     }
 
-    public final void keyTyped(java.awt.event.KeyEvent param0) {
-        int var2_int = 0;
-        int var3 = 0;
+    public final void keyTyped(java.awt.event.KeyEvent event) {
+        int characterCode = 0;
+        int nextWriteIndex = 0;
         try {
-          if (gp.field_c != null) {
-            var2_int = param0.getKeyChar();
-            if (0 != var2_int && var2_int != 65535 &&
-              od.a((char) var2_int, -12)) {
-              var3 = 127 & hb.field_w + 1;
-              if (si.field_m != var3) {
-                ef.field_d[hb.field_w] = -1;
-                TimedSplashScreen.field_r[hb.field_w] = (char)var2_int;
-                hb.field_w = var3;
+          if (DualLinkDeque.keyboardInput != null) {
+            characterCode = event.getKeyChar();
+            if (0 != characterCode && characterCode != 65535 &&
+              DelegatingCanvas.isLegacyInputCharacter((char) characterCode, -12)) {
+              nextWriteIndex = 127 & hb.keyEventWriteIndex + 1;
+              if (si.keyEventReadIndex != nextWriteIndex) {
+                ef.keyEventCodes[hb.keyEventWriteIndex] = -1;
+                TimedSplashScreen.keyEventCharacters[hb.keyEventWriteIndex] = (char)characterCode;
+                hb.keyEventWriteIndex = nextWriteIndex;
               }
             }
           }
-          param0.consume();
+          event.consume();
         } catch (RuntimeException runtimeException) {
-          throw qb.a((Throwable) ((Object) runtimeException), "op.keyTyped(" + (param0 != null ? "{...}" : "null") + ')');
+          throw qb.a((Throwable) ((Object) runtimeException), "op.keyTyped(" + (event != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -411,17 +411,17 @@ final class op implements java.awt.event.KeyListener, java.awt.event.FocusListen
         }
     }
 
-    public final synchronized void focusLost(java.awt.event.FocusEvent param0) {
+    public final synchronized void focusLost(java.awt.event.FocusEvent event) {
         try {
-          if (gp.field_c != null) {
-            pl.field_d = -1;
+          if (DualLinkDeque.keyboardInput != null) {
+            pl.keyChangeWriteIndex = -1;
           }
         } catch (RuntimeException runtimeException) {
-          throw qb.a((Throwable) ((Object) runtimeException), "op.focusLost(" + (param0 != null ? "{...}" : "null") + ')');
+          throw qb.a((Throwable) ((Object) runtimeException), "op.focusLost(" + (event != null ? "{...}" : "null") + ')');
         }
     }
 
-    public final void focusGained(java.awt.event.FocusEvent param0) {
+    public final void focusGained(java.awt.event.FocusEvent event) {
     }
 
     static {

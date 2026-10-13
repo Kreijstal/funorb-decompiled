@@ -144,8 +144,8 @@ abstract class MovingBody extends IntrusiveNode {
         try {
           mf.field_f.a(v.field_e, DualLinkNode.field_r, -114, true);
           mf.field_f.i(79);
-          while (jl.a((byte) 5)) {
-            mf.field_f.a(go.field_b, dc.field_b, true);
+          while (jl.pollKeyEvent((byte) 5)) {
+            mf.field_f.a(go.currentKeyCharacter, dc.currentKeyCode, true);
           }
           var1_int = -30 % ((55 - param0) / 43);
           if (ch.field_b != -1) {

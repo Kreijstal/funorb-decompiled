@@ -5,7 +5,7 @@ final class dc {
     static n field_f;
     int field_a;
     static tn field_e;
-    static int field_b;
+    static int currentKeyCode;
     static RgbSprite field_c;
     static String field_d;
     static boolean field_g;

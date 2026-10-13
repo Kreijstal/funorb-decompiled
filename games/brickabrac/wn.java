@@ -206,70 +206,70 @@ final class wn {
         }
     }
 
-    final static void b(byte param0) {
-        int var2 = 0;
-        int var4 = 0;
+    final static void snapshotKeyboardInput(byte obfuscationGuard) {
+        int keyIndex = 0;
+        int clientBranchFlag = 0;
         int stackIn_27_0 = 0;
         Throwable decompiledCaughtException = null;
-        Object var1 = null;
+        Object keyboardMonitor = null;
         RuntimeException var1_ref = null;
-        int var2Lifetime1;
-        var4 = BrickABrac.field_J ? 1 : 0;
+        int keyChange;
+        clientBranchFlag = BrickABrac.field_J ? 1 : 0;
         try {
-          var1 = gp.field_c;
-          synchronized (var1) {
-            if (param0 != -97) {
+          keyboardMonitor = DualLinkDeque.keyboardInput;
+          synchronized (keyboardMonitor) {
+            if (obfuscationGuard != -97) {
               wn.a(-86, (byte) 78);
             }
             boolean decompiledFrameCompleted0 = true;
             boolean decompiledFrameRemainder0 = true;
-            si.field_m = fm.field_d;
-            PowerUp.field_w = PowerUp.field_w + 1;
-            if (pl.field_d < 0) {
-              var2 = 0;
+            si.keyEventReadIndex = fm.keyEventFrameEnd;
+            PowerUp.keyboardIdleTicks = PowerUp.keyboardIdleTicks + 1;
+            if (pl.keyChangeWriteIndex < 0) {
+              keyIndex = 0;
               while (true) {
-                if (112 > var2) {
-                  pe.field_l[var2] = false;
-                  var2++;
-                  if (var4 == 0) {
+                if (112 > keyIndex) {
+                  pe.heldKeys[keyIndex] = false;
+                  keyIndex++;
+                  if (clientBranchFlag == 0) {
                     continue;
                   }
                 } else {
-                  pl.field_d = ek.field_cb;
+                  pl.keyChangeWriteIndex = ek.keyChangeReadIndex;
                 }
                 break;
               }
-              decompiledFrameRemainder0 = (var4 != 0);
+              decompiledFrameRemainder0 = (clientBranchFlag != 0);
             }
             if (decompiledFrameRemainder0) {
               while (true) {
-                if (~pl.field_d == ~ek.field_cb) {
+                if (~pl.keyChangeWriteIndex == ~ek.keyChangeReadIndex) {
                   break;
                 }
-                var2Lifetime1 = lo.field_b[ek.field_cb];
-                ek.field_cb = ek.field_cb + 1 & 127;
-                stackIn_27_0 = var2Lifetime1;
-                if (var4 != 0) {
+                keyChange = lo.keyChangeQueue[ek.keyChangeReadIndex];
+                ek.keyChangeReadIndex = ek.keyChangeReadIndex + 1 & 127;
+                stackIn_27_0 = keyChange;
+                if (clientBranchFlag != 0) {
                   decompiledFrameCompleted0 = false;
                   break;
                 }
                 if (stackIn_27_0 < 0) {
-                  pe.field_l[~var2Lifetime1] = false;
+                  pe.heldKeys[~keyChange] = false;
                 } else {
-                  pe.field_l[var2Lifetime1] = true;
+                  pe.heldKeys[keyChange] = true;
                 }
               }
             }
             if (decompiledFrameCompleted0) {
-              stackIn_27_0 = hb.field_w;
+              stackIn_27_0 = hb.keyEventWriteIndex;
             }
-            fm.field_d = stackIn_27_0;
+            fm.keyEventFrameEnd = stackIn_27_0;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = (RuntimeException) (Object) decompiledCaughtException;
-          throw qb.a((Throwable) ((Object) var1_ref), "wn.E(" + param0 + ')');
+          throw qb.a((Throwable) ((Object) var1_ref), "wn.E(" + obfuscationGuard + ')');
         }
     }
 

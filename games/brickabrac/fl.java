@@ -155,7 +155,7 @@ final class fl extends k {
           if (!this.field_n) {
             stackIn_16_0 = lp.field_xb;
           } else {
-            stackIn_16_0 = ae.field_c;
+            stackIn_16_0 = DualLinkIterator.field_c;
           }
           return stackIn_16_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

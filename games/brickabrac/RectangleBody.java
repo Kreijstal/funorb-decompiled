@@ -193,7 +193,7 @@ class RectangleBody extends MovingBody {
           oh.field_f = var13Lifetime1 - circle.radius256;
           ea.field_b = var10Lifetime1;
           SpriteGeometry.field_A = var31;
-          ae.field_b = var32;
+          DualLinkIterator.field_b = var32;
           dj.field_c = this;
           sh.field_a = var15Lifetime1;
           mm.field_Tb = -circle.radius256 + var14Lifetime1;

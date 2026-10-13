@@ -35,16 +35,16 @@ final class MenuSelection {
         }
     }
 
-    final void navigateVertical(int fallbackIndex, int obfuscationGuard) {
+    final void navigateHorizontal(int fallbackIndex, int obfuscationGuard) {
         this.pressCode = 0;
         this.keyCode = 0;
         this.activationCode = 0;
         if (~this.heldCode == obfuscationGuard) {
-          this.keyCode = dc.field_b;
+          this.keyCode = dc.currentKeyCode;
         }
         if (0 != this.heldCode) {
           if (this.heldCode == 0 &&
-            dc.field_b == 97) {
+            dc.currentKeyCode == 97) {
             this.selectedIndex = this.selectedIndex + 1;
             this.pointerDriven = false;
             if (this.itemCount <= this.selectedIndex) {
@@ -52,11 +52,11 @@ final class MenuSelection {
             }
           }
         } else {
-          if (96 != dc.field_b) {
+          if (96 != dc.currentKeyCode) {
             if (this.heldCode != 0) {
               if (this.heldCode == 0) {
-                if (dc.field_b != 98 &&
-                  dc.field_b != 99) {
+                if (dc.currentKeyCode != 98 &&
+                  dc.currentKeyCode != 99) {
                   return;
                 }
                 this.pointerDriven = false;
@@ -66,10 +66,10 @@ final class MenuSelection {
               }
               return;
             }
-            if (dc.field_b != 97) {
+            if (dc.currentKeyCode != 97) {
               if (this.heldCode == 0) {
-                if (dc.field_b != 98 &&
-                  dc.field_b != 99) {
+                if (dc.currentKeyCode != 98 &&
+                  dc.currentKeyCode != 99) {
                   return;
                 }
                 this.pointerDriven = false;
@@ -85,8 +85,8 @@ final class MenuSelection {
               this.selectedIndex = 0;
             }
             if (this.heldCode == 0) {
-              if (dc.field_b != 98 &&
-                dc.field_b != 99) {
+              if (dc.currentKeyCode != 98 &&
+                dc.currentKeyCode != 99) {
                 return;
               }
               this.pointerDriven = false;
@@ -100,7 +100,7 @@ final class MenuSelection {
             this.selectedIndex = this.selectedIndex - 1;
             this.pointerDriven = false;
             if (this.heldCode == 0 &&
-              dc.field_b == 97) {
+              dc.currentKeyCode == 97) {
               this.selectedIndex = this.selectedIndex + 1;
               this.pointerDriven = false;
               if (this.itemCount <= this.selectedIndex) {
@@ -108,8 +108,8 @@ final class MenuSelection {
               }
             }
             if (this.heldCode == 0) {
-              if (dc.field_b != 98 &&
-                dc.field_b != 99) {
+              if (dc.currentKeyCode != 98 &&
+                dc.currentKeyCode != 99) {
                 return;
               }
               this.pointerDriven = false;
@@ -126,7 +126,7 @@ final class MenuSelection {
             if (this.heldCode != 0) {
               return;
             }
-            if (dc.field_b == 98) {
+            if (dc.currentKeyCode == 98) {
               this.pointerDriven = false;
               if (0 <= this.selectedIndex) {
                 return;
@@ -134,7 +134,7 @@ final class MenuSelection {
               this.selectedIndex = fallbackIndex;
               return;
             }
-            if (dc.field_b != 99) {
+            if (dc.currentKeyCode != 99) {
               return;
             }
             this.pointerDriven = false;
@@ -143,11 +143,11 @@ final class MenuSelection {
             }
             return;
           }
-          if (dc.field_b != 97) {
+          if (dc.currentKeyCode != 97) {
             if (this.heldCode != 0) {
               return;
             }
-            if (dc.field_b == 98) {
+            if (dc.currentKeyCode == 98) {
               this.pointerDriven = false;
               if (0 <= this.selectedIndex) {
                 return;
@@ -155,7 +155,7 @@ final class MenuSelection {
               this.selectedIndex = fallbackIndex;
               return;
             }
-            if (dc.field_b != 99) {
+            if (dc.currentKeyCode != 99) {
               return;
             }
             this.pointerDriven = false;
@@ -168,8 +168,8 @@ final class MenuSelection {
           this.pointerDriven = false;
           if (this.itemCount > this.selectedIndex) {
             if (this.heldCode == 0) {
-              if (dc.field_b != 98 &&
-                dc.field_b != 99) {
+              if (dc.currentKeyCode != 98 &&
+                dc.currentKeyCode != 99) {
                 return;
               }
               this.pointerDriven = false;
@@ -184,8 +184,8 @@ final class MenuSelection {
         if (this.heldCode != 0) {
           return;
         }
-        if (dc.field_b != 98 &&
-          dc.field_b != 99) {
+        if (dc.currentKeyCode != 98 &&
+          dc.currentKeyCode != 99) {
           return;
         }
         this.pointerDriven = false;
@@ -195,15 +195,15 @@ final class MenuSelection {
         this.selectedIndex = fallbackIndex;
     }
 
-    final void navigateHorizontal(int obfuscationGuard) {
+    final void navigateVertical(int obfuscationGuard) {
         this.pressCode = 0;
         this.activationCode = 0;
         this.keyCode = 0;
         if (this.heldCode == 0) {
-          this.keyCode = dc.field_b;
+          this.keyCode = dc.currentKeyCode;
         }
         if (obfuscationGuard == ~this.heldCode &&
-          dc.field_b == 98) {
+          dc.currentKeyCode == 98) {
           if (this.selectedIndex <= 0) {
             this.selectedIndex = this.itemCount;
           }
@@ -213,7 +213,7 @@ final class MenuSelection {
         if (this.heldCode != 0) {
           return;
         }
-        if (dc.field_b != 99) {
+        if (dc.currentKeyCode != 99) {
           return;
         }
         this.selectedIndex = this.selectedIndex + 1;
@@ -309,7 +309,7 @@ final class MenuSelection {
         }
     }
 
-    final boolean isKey97(int obfuscationGuard) {
+    final boolean isRightArrow(int obfuscationGuard) {
         if (obfuscationGuard == -98) {
           return this.keyCode == 97 ? true : false;
         }
@@ -576,7 +576,7 @@ final class MenuSelection {
           this.pressCode = 0;
           this.activationCode = 0;
           if (this.heldCode == 0) {
-            this.keyCode = dc.field_b;
+            this.keyCode = dc.currentKeyCode;
             return;
           }
           return;
@@ -587,7 +587,7 @@ final class MenuSelection {
         if (this.heldCode != 0) {
           return;
         }
-        this.keyCode = dc.field_b;
+        this.keyCode = dc.currentKeyCode;
     }
 
     final static int e(byte param0) {
@@ -612,7 +612,7 @@ final class MenuSelection {
         return true;
     }
 
-    final boolean isKey103(int obfuscationGuard) {
+    final boolean isEndKey(int obfuscationGuard) {
         if (obfuscationGuard != -1) {
           return false;
         }
@@ -623,11 +623,11 @@ final class MenuSelection {
         if (!obfuscationGuard) {
           return this.heldCode != 0 ? true : false;
         }
-        this.navigateHorizontal(-91);
+        this.navigateVertical(-91);
         return this.heldCode != 0 ? true : false;
     }
 
-    final boolean isKey96(byte obfuscationGuard) {
+    final boolean isLeftArrow(byte obfuscationGuard) {
         if (obfuscationGuard == -57) {
           return this.keyCode == 96 ? true : false;
         }
@@ -651,7 +651,7 @@ final class MenuSelection {
         this.keyCode = -38;
     }
 
-    final boolean isKey102(int obfuscationGuard) {
+    final boolean isHomeKey(int obfuscationGuard) {
         if (obfuscationGuard == -103) {
           return this.keyCode == 102 ? true : false;
         }

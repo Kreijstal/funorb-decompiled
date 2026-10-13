@@ -117,7 +117,7 @@ final class hi extends um {
             !ve.b(-21835160)) {
             var3 = 0;
           }
-          if (dc.field_b == 84) {
+          if (dc.currentKeyCode == 84) {
             if (var3 == 0) {
               if (ng.field_b != 0) {
                 fl.b(!param0);
@@ -148,14 +148,14 @@ final class hi extends um {
             }
             return true;
           }
-          if (85 == dc.field_b) {
+          if (85 == dc.currentKeyCode) {
             if (var3 != 0 &&
               fp.field_A.length() > 0) {
               uk.a(' ', fp.field_A, -1 + fp.field_A.length(), false);
             }
             return true;
           }
-          var4 = go.field_b;
+          var4 = go.currentKeyCharacter;
           stackIn_41_0 = !param0;
           if (!ii.a(stackIn_41_0, (char) var4)) {
             return false;
@@ -223,7 +223,7 @@ final class hi extends um {
               !ve.b(-21835160)) {
               var3 = 0;
             }
-            if (dc.field_b == 84) {
+            if (dc.currentKeyCode == 84) {
               if (var3 == 0) {
                 if (ng.field_b != 0) {
                   fl.b(!param0);
@@ -257,14 +257,14 @@ final class hi extends um {
               }
               return true;
             }
-            if (85 == dc.field_b) {
+            if (85 == dc.currentKeyCode) {
               if (var3 != 0 &&
                 fp.field_A.length() > 0) {
                 uk.a(' ', fp.field_A, -1 + fp.field_A.length(), false);
               }
               return true;
             }
-            var4Lifetime1 = go.field_b;
+            var4Lifetime1 = go.currentKeyCharacter;
             stackIn_103_0 = !param0;
             if (!ii.a(stackIn_103_0, (char) var4Lifetime1)) {
               return false;
@@ -330,7 +330,7 @@ final class hi extends um {
           !ve.b(-21835160)) {
           var3 = 0;
         }
-        if (dc.field_b == 84) {
+        if (dc.currentKeyCode == 84) {
           if (var3 == 0) {
             if (ng.field_b != 0) {
               fl.b(!param0);
@@ -363,7 +363,7 @@ final class hi extends um {
           }
           return true;
         }
-        if (85 == dc.field_b) {
+        if (85 == dc.currentKeyCode) {
           if (var3 == 0) {
             return true;
           }
@@ -373,7 +373,7 @@ final class hi extends um {
           uk.a(' ', fp.field_A, -1 + fp.field_A.length(), false);
           return true;
         }
-        var4Lifetime2 = go.field_b;
+        var4Lifetime2 = go.currentKeyCharacter;
         stackIn_160_0 = !param0;
         if (!ii.a(stackIn_160_0, (char) var4Lifetime2)) {
           return false;

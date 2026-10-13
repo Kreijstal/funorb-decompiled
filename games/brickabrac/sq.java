@@ -203,7 +203,7 @@ final class sq {
             if (im.field_g) {
               if (d.field_H != rn.field_c) {
                 bq.field_b.field_l.setLength(0);
-                od.a(-9, (long)d.field_H, bq.field_b.field_l);
+                DelegatingCanvas.a(-9, (long)d.field_H, bq.field_b.field_l);
                 discarded$9 = bq.field_b.field_l.append(" fps");
                 rn.field_c = d.field_H;
               }
@@ -214,7 +214,7 @@ final class sq {
             if (im.field_g) {
               if (d.field_H != rn.field_c) {
                 bq.field_b.field_l.setLength(0);
-                od.a(-9, (long)d.field_H, bq.field_b.field_l);
+                DelegatingCanvas.a(-9, (long)d.field_H, bq.field_b.field_l);
                 discarded$8 = bq.field_b.field_l.append(" fps");
                 rn.field_c = d.field_H;
               }
@@ -230,9 +230,9 @@ final class sq {
         var1 = var1 / 1024L;
         if (~lf.field_u != ~var1) {
           bj.field_P.field_l.setLength(0);
-          od.a(-9, var5, bj.field_P.field_l);
+          DelegatingCanvas.a(-9, var5, bj.field_P.field_l);
           discarded$10 = bj.field_P.field_l.append(" kB / ");
-          od.a(-9, var1, bj.field_P.field_l);
+          DelegatingCanvas.a(-9, var1, bj.field_P.field_l);
           discarded$11 = bj.field_P.field_l.append(" kB");
           mk.field_j = var5;
           lf.field_u = var1;
@@ -241,7 +241,7 @@ final class sq {
             if (im.field_g) {
               if (d.field_H != rn.field_c) {
                 bq.field_b.field_l.setLength(0);
-                od.a(-9, (long)d.field_H, bq.field_b.field_l);
+                DelegatingCanvas.a(-9, (long)d.field_H, bq.field_b.field_l);
                 discarded$13 = bq.field_b.field_l.append(" fps");
                 rn.field_c = d.field_H;
               }
@@ -252,7 +252,7 @@ final class sq {
             if (im.field_g) {
               if (d.field_H != rn.field_c) {
                 bq.field_b.field_l.setLength(0);
-                od.a(-9, (long)d.field_H, bq.field_b.field_l);
+                DelegatingCanvas.a(-9, (long)d.field_H, bq.field_b.field_l);
                 discarded$12 = bq.field_b.field_l.append(" fps");
                 rn.field_c = d.field_H;
               }
@@ -267,7 +267,7 @@ final class sq {
             if (im.field_g) {
               if (d.field_H != rn.field_c) {
                 bq.field_b.field_l.setLength(0);
-                od.a(-9, (long)d.field_H, bq.field_b.field_l);
+                DelegatingCanvas.a(-9, (long)d.field_H, bq.field_b.field_l);
                 discarded$14 = bq.field_b.field_l.append(" fps");
                 rn.field_c = d.field_H;
               }
@@ -278,7 +278,7 @@ final class sq {
             if (im.field_g) {
               if (d.field_H != rn.field_c) {
                 bq.field_b.field_l.setLength(0);
-                od.a(-9, (long)d.field_H, bq.field_b.field_l);
+                DelegatingCanvas.a(-9, (long)d.field_H, bq.field_b.field_l);
                 discarded$15 = bq.field_b.field_l.append(" fps");
                 rn.field_c = d.field_H;
               }
@@ -288,9 +288,9 @@ final class sq {
           return;
         }
         bj.field_P.field_l.setLength(0);
-        od.a(-9, var5, bj.field_P.field_l);
+        DelegatingCanvas.a(-9, var5, bj.field_P.field_l);
         discarded$16 = bj.field_P.field_l.append(" kB / ");
-        od.a(-9, var1, bj.field_P.field_l);
+        DelegatingCanvas.a(-9, var1, bj.field_P.field_l);
         discarded$17 = bj.field_P.field_l.append(" kB");
         mk.field_j = var5;
         lf.field_u = var1;
@@ -299,7 +299,7 @@ final class sq {
           if (im.field_g) {
             if (d.field_H != rn.field_c) {
               bq.field_b.field_l.setLength(0);
-              od.a(-9, (long)d.field_H, bq.field_b.field_l);
+              DelegatingCanvas.a(-9, (long)d.field_H, bq.field_b.field_l);
               discarded$18 = bq.field_b.field_l.append(" fps");
               rn.field_c = d.field_H;
             }
@@ -310,7 +310,7 @@ final class sq {
           if (im.field_g) {
             if (d.field_H != rn.field_c) {
               bq.field_b.field_l.setLength(0);
-              od.a(-9, (long)d.field_H, bq.field_b.field_l);
+              DelegatingCanvas.a(-9, (long)d.field_H, bq.field_b.field_l);
               discarded$19 = bq.field_b.field_l.append(" fps");
               rn.field_c = d.field_H;
             }

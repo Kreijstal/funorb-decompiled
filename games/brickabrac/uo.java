@@ -57,7 +57,7 @@ final class uo {
     }
 
     final static void a(boolean param0, boolean param1) {
-        gp.a(param0, param1);
+        DualLinkDeque.a(param0, param1);
         nk.a((byte) -25, param0);
     }
 

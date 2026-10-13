@@ -102,9 +102,9 @@ final class i extends IntrusiveNode {
               if (var3 == 1) {
                 tc.a(var13, var5, param1, var4, 9);
               } else {
-                var7 = ae.field_d;
+                var7 = DualLinkIterator.field_d;
                 synchronized (var7) {
-                  ae.field_d.a(var13, -20555, var9);
+                  DualLinkIterator.field_d.a(var13, -20555, var9);
                 }
               }
               stackIn_23_0 = var6;

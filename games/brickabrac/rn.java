@@ -58,19 +58,19 @@ final class rn {
         }
     }
 
-    final static void a(int param0) {
-        tf.field_a[param0] = 57;
-        tf.field_a[93] = 43;
-        tf.field_a[91] = 42;
-        tf.field_a[47] = 73;
-        tf.field_a[46] = 72;
-        tf.field_a[61] = 27;
-        tf.field_a[92] = 74;
-        tf.field_a[44] = 71;
-        tf.field_a[45] = 26;
-        tf.field_a[192] = 28;
-        tf.field_a[520] = 59;
-        tf.field_a[222] = 58;
+    final static void patchJavaKeyCodeMap(int keyCodeFor57) {
+        tf.javaKeyCodeMap[keyCodeFor57] = 57;
+        tf.javaKeyCodeMap[93] = 43;
+        tf.javaKeyCodeMap[91] = 42;
+        tf.javaKeyCodeMap[47] = 73;
+        tf.javaKeyCodeMap[46] = 72;
+        tf.javaKeyCodeMap[61] = 27;
+        tf.javaKeyCodeMap[92] = 74;
+        tf.javaKeyCodeMap[44] = 71;
+        tf.javaKeyCodeMap[45] = 26;
+        tf.javaKeyCodeMap[192] = 28;
+        tf.javaKeyCodeMap[520] = 59;
+        tf.javaKeyCodeMap[222] = 58;
     }
 
     final void a(int param0, byte param1, byte[] param2, int param3) throws IOException {

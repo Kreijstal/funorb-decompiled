@@ -3,13 +3,13 @@
  */
 import java.util.*;
 
-final class ae implements Iterator {
-    private DualLinkNode field_e;
+final class DualLinkIterator implements Iterator {
+    private DualLinkNode nextNode;
     static int field_b;
     static im field_d;
-    private gp field_a;
+    private DualLinkDeque owner;
     static String field_i;
-    private DualLinkNode field_h;
+    private DualLinkNode lastReturned;
     static qh field_c;
     static RgbSprite[][] field_g;
     static int field_f;
@@ -27,32 +27,32 @@ final class ae implements Iterator {
     final static void b(byte param0) {
         va.field_a = false;
         if (param0 < 97) {
-          ae.a((byte) -19);
+          DualLinkIterator.a((byte) -19);
         }
     }
 
     public final void remove() {
-        if (null == this.field_h) {
+        if (null == this.lastReturned) {
           throw new IllegalStateException();
         }
-        this.field_h.unlinkSecondary(3);
-        this.field_h = null;
+        this.lastReturned.unlinkSecondary(3);
+        this.lastReturned = null;
     }
 
     public final Object next() {
-        Object var1 = this.field_e;
-        if (this.field_a.field_a == var1) {
-          var1 = null;
-          this.field_e = null;
+        Object node = this.nextNode;
+        if (this.owner.sentinel == node) {
+          node = null;
+          this.nextNode = null;
         } else {
-          this.field_e = ((DualLinkNode) (var1)).secondaryNext;
+          this.nextNode = ((DualLinkNode) (node)).secondaryNext;
         }
-        this.field_h = (DualLinkNode) (var1);
-        return var1;
+        this.lastReturned = (DualLinkNode) (node);
+        return node;
     }
 
     public final boolean hasNext() {
-        return this.field_a.field_a != this.field_e;
+        return this.owner.sentinel != this.nextNode;
     }
 
     final static RgbSprite[] a(int param0, int param1, int param2, mf param3) {
@@ -65,7 +65,7 @@ final class ae implements Iterator {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 != -23176) {
-            ae.a((byte) -84);
+            DualLinkIterator.a((byte) -84);
           }
           if (ln.a(-107, param0, param3, param2)) {
             stackIn_6_0 = rd.c(117);
@@ -87,14 +87,14 @@ final class ae implements Iterator {
         }
     }
 
-    ae(gp param0) {
-        this.field_h = null;
+    DualLinkIterator(DualLinkDeque owner) {
+        this.lastReturned = null;
         try {
-          this.field_a = param0;
-          this.field_e = this.field_a.field_a.secondaryNext;
-          this.field_h = null;
+          this.owner = owner;
+          this.nextNode = this.owner.sentinel.secondaryNext;
+          this.lastReturned = null;
         } catch (RuntimeException runtimeException) {
-          throw qb.a((Throwable) ((Object) runtimeException), "ae.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw qb.a((Throwable) ((Object) runtimeException), "ae.<init>(" + (owner != null ? "{...}" : "null") + ')');
         }
     }
 

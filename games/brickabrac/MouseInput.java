@@ -10,7 +10,7 @@ final class MouseInput implements java.awt.event.MouseListener, java.awt.event.M
     static int field_b;
     static byte[] field_c;
 
-    public final synchronized void mousePressed(java.awt.event.MouseEvent param0) {
+    public final synchronized void mousePressed(java.awt.event.MouseEvent event) {
         int var2_int = 0;
         RuntimeException var2 = null;
         RuntimeException stackIn_14_0 = null;
@@ -20,17 +20,17 @@ final class MouseInput implements java.awt.event.MouseListener, java.awt.event.M
         try {
           if (lj.mouseInput != null) {
             gr.pointerIdleTicks = 0;
-            l.livePressX = param0.getX();
-            va.livePressY = param0.getY();
+            l.livePressX = event.getX();
+            va.livePressY = event.getY();
             ue.a(false);
-            if (javax.swing.SwingUtilities.isRightMouseButton(param0)) {
+            if (javax.swing.SwingUtilities.isRightMouseButton(event)) {
               mi.livePressedButton = 2;
               kb.liveHeldButton = 2;
             } else {
               mi.livePressedButton = 1;
               kb.liveHeldButton = 1;
             }
-            var2_int = param0.getModifiers();
+            var2_int = event.getModifiers();
             kn.livePointerChanged = true;
             if ((8 & var2_int) == 0) {
             }
@@ -39,17 +39,17 @@ final class MouseInput implements java.awt.event.MouseListener, java.awt.event.M
             if ((16 & var2_int) == 0) {
             }
           }
-          if (!param0.isPopupTrigger()) {
+          if (!event.isPopupTrigger()) {
             return;
           }
-          param0.consume();
+          event.consume();
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
           stackIn_14_0 = var2;
           stackIn_14_1 = new StringBuilder().append("dm.mousePressed(");
-          if (param0 == null) {
+          if (event == null) {
             stackIn_15_2 = "null";
           } else {
             stackIn_15_2 = "{...}";
@@ -58,7 +58,7 @@ final class MouseInput implements java.awt.event.MouseListener, java.awt.event.M
         }
     }
 
-    public final synchronized void mouseDragged(java.awt.event.MouseEvent param0) {
+    public final synchronized void mouseDragged(java.awt.event.MouseEvent event) {
         RuntimeException var2 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -69,8 +69,8 @@ final class MouseInput implements java.awt.event.MouseListener, java.awt.event.M
             return;
           }
           gr.pointerIdleTicks = 0;
-          eo.livePointerX = param0.getX();
-          ep.livePointerY = param0.getY();
+          eo.livePointerX = event.getX();
+          ep.livePointerY = event.getY();
           kn.livePointerChanged = true;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -78,7 +78,7 @@ final class MouseInput implements java.awt.event.MouseListener, java.awt.event.M
           var2 = decompiledCaughtException;
           stackIn_6_0 = var2;
           stackIn_6_1 = new StringBuilder().append("dm.mouseDragged(");
-          if (param0 == null) {
+          if (event == null) {
             stackIn_7_2 = "null";
           } else {
             stackIn_7_2 = "{...}";
@@ -87,7 +87,7 @@ final class MouseInput implements java.awt.event.MouseListener, java.awt.event.M
         }
     }
 
-    public final synchronized void focusLost(java.awt.event.FocusEvent param0) {
+    public final synchronized void focusLost(java.awt.event.FocusEvent event) {
         RuntimeException var2 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -104,7 +104,7 @@ final class MouseInput implements java.awt.event.MouseListener, java.awt.event.M
           var2 = decompiledCaughtException;
           stackIn_6_0 = var2;
           stackIn_6_1 = new StringBuilder().append("dm.focusLost(");
-          if (param0 == null) {
+          if (event == null) {
             stackIn_7_2 = "null";
           } else {
             stackIn_7_2 = "{...}";
@@ -125,7 +125,7 @@ final class MouseInput implements java.awt.event.MouseListener, java.awt.event.M
         }
     }
 
-    public final synchronized void mouseExited(java.awt.event.MouseEvent param0) {
+    public final synchronized void mouseExited(java.awt.event.MouseEvent event) {
         try {
           if (lj.mouseInput != null) {
             gr.pointerIdleTicks = 0;
@@ -134,11 +134,11 @@ final class MouseInput implements java.awt.event.MouseListener, java.awt.event.M
             kn.livePointerChanged = true;
           }
         } catch (RuntimeException runtimeException) {
-          throw qb.a((Throwable) ((Object) runtimeException), "dm.mouseExited(" + (param0 != null ? "{...}" : "null") + ')');
+          throw qb.a((Throwable) ((Object) runtimeException), "dm.mouseExited(" + (event != null ? "{...}" : "null") + ')');
         }
     }
 
-    public final synchronized void mouseReleased(java.awt.event.MouseEvent param0) {
+    public final synchronized void mouseReleased(java.awt.event.MouseEvent event) {
         int var2_int = 0;
         RuntimeException var2 = null;
         RuntimeException stackIn_10_0 = null;
@@ -150,7 +150,7 @@ final class MouseInput implements java.awt.event.MouseListener, java.awt.event.M
             gr.pointerIdleTicks = 0;
             kb.liveHeldButton = 0;
             kn.livePointerChanged = true;
-            var2_int = param0.getModifiers();
+            var2_int = event.getModifiers();
             if ((var2_int & 8) != 0) {
             }
             if (0 == (var2_int & 16)) {
@@ -158,17 +158,17 @@ final class MouseInput implements java.awt.event.MouseListener, java.awt.event.M
             if (0 == (4 & var2_int)) {
             }
           }
-          if (!param0.isPopupTrigger()) {
+          if (!event.isPopupTrigger()) {
             return;
           }
-          param0.consume();
+          event.consume();
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
           stackIn_10_0 = var2;
           stackIn_10_1 = new StringBuilder().append("dm.mouseReleased(");
-          if (param0 == null) {
+          if (event == null) {
             stackIn_11_2 = "null";
           } else {
             stackIn_11_2 = "{...}";
@@ -177,24 +177,24 @@ final class MouseInput implements java.awt.event.MouseListener, java.awt.event.M
         }
     }
 
-    public final void mouseClicked(java.awt.event.MouseEvent param0) {
+    public final void mouseClicked(java.awt.event.MouseEvent event) {
         RuntimeException var2 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (!param0.isPopupTrigger()) {
+          if (!event.isPopupTrigger()) {
             return;
           }
-          param0.consume();
+          event.consume();
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
           stackIn_6_0 = var2;
           stackIn_6_1 = new StringBuilder().append("dm.mouseClicked(");
-          if (param0 == null) {
+          if (event == null) {
             stackIn_7_2 = "null";
           } else {
             stackIn_7_2 = "{...}";
@@ -221,7 +221,7 @@ final class MouseInput implements java.awt.event.MouseListener, java.awt.event.M
         return (var6Lifetime1 * var4 >> 16) + var5Lifetime1 * var4 + var3 * param0;
     }
 
-    public final synchronized void mouseEntered(java.awt.event.MouseEvent param0) {
+    public final synchronized void mouseEntered(java.awt.event.MouseEvent event) {
         RuntimeException var2 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -232,8 +232,8 @@ final class MouseInput implements java.awt.event.MouseListener, java.awt.event.M
             return;
           }
           gr.pointerIdleTicks = 0;
-          eo.livePointerX = param0.getX();
-          ep.livePointerY = param0.getY();
+          eo.livePointerX = event.getX();
+          ep.livePointerY = event.getY();
           kn.livePointerChanged = true;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -241,7 +241,7 @@ final class MouseInput implements java.awt.event.MouseListener, java.awt.event.M
           var2 = decompiledCaughtException;
           stackIn_6_0 = var2;
           stackIn_6_1 = new StringBuilder().append("dm.mouseEntered(");
-          if (param0 == null) {
+          if (event == null) {
             stackIn_7_2 = "null";
           } else {
             stackIn_7_2 = "{...}";
@@ -250,7 +250,7 @@ final class MouseInput implements java.awt.event.MouseListener, java.awt.event.M
         }
     }
 
-    public final synchronized void mouseMoved(java.awt.event.MouseEvent param0) {
+    public final synchronized void mouseMoved(java.awt.event.MouseEvent event) {
         RuntimeException var2 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -261,8 +261,8 @@ final class MouseInput implements java.awt.event.MouseListener, java.awt.event.M
             return;
           }
           gr.pointerIdleTicks = 0;
-          eo.livePointerX = param0.getX();
-          ep.livePointerY = param0.getY();
+          eo.livePointerX = event.getX();
+          ep.livePointerY = event.getY();
           kn.livePointerChanged = true;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -270,7 +270,7 @@ final class MouseInput implements java.awt.event.MouseListener, java.awt.event.M
           var2 = decompiledCaughtException;
           stackIn_6_0 = var2;
           stackIn_6_1 = new StringBuilder().append("dm.mouseMoved(");
-          if (param0 == null) {
+          if (event == null) {
             stackIn_7_2 = "null";
           } else {
             stackIn_7_2 = "{...}";
@@ -279,7 +279,7 @@ final class MouseInput implements java.awt.event.MouseListener, java.awt.event.M
         }
     }
 
-    public final void focusGained(java.awt.event.FocusEvent param0) {
+    public final void focusGained(java.awt.event.FocusEvent event) {
     }
 
     static {

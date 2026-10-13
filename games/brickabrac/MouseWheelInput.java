@@ -22,9 +22,9 @@ final class MouseWheelInput extends MouseWheelSource implements java.awt.event.M
         component.addMouseWheelListener((java.awt.event.MouseWheelListener) (this));
     }
 
-    public final synchronized void mouseWheelMoved(java.awt.event.MouseWheelEvent param0) {
-        this.pendingRotation = this.pendingRotation + param0.getWheelRotation();
-        param0.consume();
+    public final synchronized void mouseWheelMoved(java.awt.event.MouseWheelEvent event) {
+        this.pendingRotation = this.pendingRotation + event.getWheelRotation();
+        event.consume();
     }
 
     final void detach(java.awt.Component component, int obfuscationGuard) {

@@ -3,7 +3,7 @@
  */
 final class lo {
     static String[] field_c;
-    static int[] field_b;
+    static int[] keyChangeQueue;
     static int[] field_a;
     static boolean field_d;
 
@@ -16,7 +16,7 @@ final class lo {
           return;
         }
         field_c = null;
-        field_b = null;
+        keyChangeQueue = null;
         field_a = null;
     }
 
@@ -63,6 +63,6 @@ final class lo {
     static {
         field_c = new String[]{"levels_icons"};
         field_a = new int[]{7, 38};
-        field_b = new int[128];
+        keyChangeQueue = new int[128];
     }
 }

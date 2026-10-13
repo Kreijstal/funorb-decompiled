@@ -56,18 +56,18 @@ final class ic {
         field_c = null;
     }
 
-    final static void a(byte param0) {
+    final static void disableKeyboardInput(byte obfuscationGuard) {
         Object var1 = null;
         Throwable var2 = null;
         om var3 = null;
         Throwable decompiledCaughtException = null;
-        if (gp.field_c != null) {
-          var1 = gp.field_c;
+        if (DualLinkDeque.keyboardInput != null) {
+          var1 = DualLinkDeque.keyboardInput;
           synchronized (var1) {
-            gp.field_c = null;
+            DualLinkDeque.keyboardInput = null;
           }
         }
-        if (param0 > -63) {
+        if (obfuscationGuard > -63) {
           var3 = (om) null;
           ic.a(true, (om) null);
         }

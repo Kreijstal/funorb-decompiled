@@ -116,7 +116,7 @@ final class ap {
           if (param0 != 117) {
             ap.a(32, 14);
           }
-          md.a(-118, (java.awt.Component) ((Object) param1));
+          md.attachKeyboardInput(-118, (java.awt.Component) ((Object) param1));
           pl.a((java.awt.Component) ((Object) param1), 7282);
           if (null == qa.mouseWheelSource) {
             return;

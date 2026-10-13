@@ -260,7 +260,7 @@ final class cr extends oc {
           }
           var4_int = param1.a(param0, false);
           var5 = param1.a(var4_int, param3 ^ -31, param2);
-          stackIn_3_0 = ae.a(var5, param3 ^ -23174, var4_int, param1);
+          stackIn_3_0 = DualLinkIterator.a(var5, param3 ^ -23174, var4_int, param1);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

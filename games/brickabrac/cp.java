@@ -304,7 +304,7 @@ final class cp extends h {
               kp.field_b.c(var6, var8Lifetime1, var1_int + so.field_b, var5, -1);
               var1_int = var1_int + (jb.field_H + (kn.field_y + b.field_c));
             } else {
-              ni.field_Wb.c(var6, var8Lifetime1, var1_int + ae.field_f, var5, -1);
+              ni.field_Wb.c(var6, var8Lifetime1, var1_int + DualLinkIterator.field_f, var5, -1);
               var1_int = var1_int + pe.field_s;
             }
           }

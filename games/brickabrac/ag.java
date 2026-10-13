@@ -220,7 +220,7 @@ abstract class ag extends oc implements sd {
           if (var5_int != 80) {
             return false;
           }
-          if (pe.field_l[81]) {
+          if (pe.heldKeys[81]) {
             stackIn_20_0 = this.a(1, param2);
           } else {
             stackIn_20_0 = this.b(true, param2);

@@ -120,7 +120,7 @@ final class kf extends k {
           }
           if (var3_int > 0 &&
             var3_int <= 130) {
-            return ae.field_c;
+            return DualLinkIterator.field_c;
           }
           stackIn_9_0 = lp.field_xb;
           return stackIn_9_0;

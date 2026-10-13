@@ -97,8 +97,8 @@ final class vh extends d {
         var3 = BrickABrac.field_J ? 1 : 0;
         try {
           var1_int = 0;
-          while (jl.a((byte) 5)) {
-            fi.field_r.navigateHorizontal(param0 - 1);
+          while (jl.pollKeyEvent((byte) 5)) {
+            fi.field_r.navigateVertical(param0 - 1);
             if (!fi.field_r.isActivated((byte) 113)) {
               continue;
             }
@@ -113,7 +113,7 @@ final class vh extends d {
             fi.field_r.selectedIndex >= 0) {
             var2 = hi.field_A[fi.field_r.selectedIndex];
             if (var2 == 2) {
-              ae.b((byte) 99);
+              DualLinkIterator.b((byte) 99);
             }
           }
           stackIn_14_0 = var2;

@@ -164,7 +164,7 @@ final class ln extends IntrusiveNode {
 
     final static boolean a(int param0, int param1, int param2) {
         int var3 = null != nl.field_f ? 1 : 0;
-        if (dc.field_b == 9 &&
+        if (dc.currentKeyCode == 9 &&
           kb.a(kb.field_Zb, -3, ig.field_K, hb.field_z, r.field_x)) {
           if (r.field_x != 2 &&
             var3 != 0) {
@@ -172,14 +172,14 @@ final class ln extends IntrusiveNode {
           }
           return th.a(hb.field_z, kb.field_Zb, r.field_x, false, ig.field_K);
         }
-        if (10 == dc.field_b) {
+        if (10 == dc.currentKeyCode) {
           if (var3 != 0) {
             return false;
           }
           LevelPackLoader.a(4252);
           return true;
         }
-        if (dc.field_b == param1) {
+        if (dc.currentKeyCode == param1) {
           if (!bo.field_l) {
             return false;
           }
